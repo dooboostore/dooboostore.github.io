@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "inner",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪnə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "안의, 안쪽의(opp. outer)",
+              "examples": [
+                {
+                  "text": "an <b>inner</b> court",
+                  "translatedText": "안뜰"
+                }
+              ],
+              "originalMeaning": "안의, 안쪽의(opp. outer)"
+            },
+            {
+              "meaning": "보다 친한, 개인적인",
+              "examples": [],
+              "originalMeaning": "보다 친한, 개인적인"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "과녁의 내권 ((과녁의 중심(bull’s eye)과 외권(外圈) 사이의 부분))",
+              "examples": [],
+              "originalMeaning": "과녁의 내권 ((과녁의 중심(bull’s eye)과 외권(外圈) 사이의 부분))"
+            },
+            {
+              "meaning": "내권 명중(탄)",
+              "examples": [],
+              "originalMeaning": "내권 명중(탄)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2ccadb3ff9864d5686928edb5f8f43d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2ccadb3ff9864d5686928edb5f8f43d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "87b7df9f1eae8a0330d9753f89112513",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀에게는 남모르는 걱정이 있었다",
+      "text": "She had <b>inner</b> troubles. or She had secret troubles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 젊었을 때 내몽고 탐험을 시도했다",
+      "text": "When young he undertook an expedition to <b>Inner</b> Mongolia."
+    }
+  ],
+  "isWordType": true
+}

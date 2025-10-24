@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "threatened",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "θrétnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<야생 동물의 종(種)이> 멸종할 위기에 직면한",
+              "examples": [
+                {
+                  "text": "<b>threatened</b> species",
+                  "translatedText": "절멸 위기 종(種)"
+                }
+              ],
+              "originalMeaning": "<야생 동물의 종(種)이> 멸종할 위기에 직면한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8828aa16ffe44ba0ad114549dbd01ae0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8828aa16ffe44ba0ad114549dbd01ae0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e77b60596b342bf80fd98d41adc5a9f0",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "threaten",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈθretn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위협[협박]하다",
+              "examples": [
+                {
+                  "text": "He <b>threatened</b> me with death[<b>threatened</b> to kill me].",
+                  "translatedText": "그는 나를 죽인다고 협박하였다."
+                }
+              ],
+              "originalMeaning": "위협[협박]하다"
+            },
+            {
+              "meaning": "<위험·재앙 등이> …에게 임박하다, (…으로) 위협을 주다 ((with))",
+              "examples": [
+                {
+                  "text": "a tribe <b>threatened</b> with extinction",
+                  "translatedText": "멸종에 직면한 부족"
+                }
+              ],
+              "originalMeaning": "<위험·재앙 등이> …에게 임박하다, (…으로) 위협을 주다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<위험 등이> 임박하다, …할 듯하다",
+              "examples": [
+                {
+                  "text": "A storm threatens.",
+                  "translatedText": "폭풍우가 올 것 같다."
+                }
+              ],
+              "originalMeaning": "<위험 등이> 임박하다, …할 듯하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7b9bb5c6289d4af29587caef5c4dae9e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7b9bb5c6289d4af29587caef5c4dae9e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "threatens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9d44d944eb2f6089ed70b6d1769e0ff7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금방 비가 올 듯하다",
+      "text": "It threatens to rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 쏟아질 것 같다.",
+      "text": "It threatens (to) rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나를 죽이겠다고 위협하였다",
+      "text": "He <b>threatened</b> to kill me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금방이라도 비가 쏟아질 듯하였다",
+      "text": "It was threatening to rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기근이 그 지방을 위협하고 있다",
+      "text": "Famine threatens the district."
+    }
+  ],
+  "isWordType": true
+}

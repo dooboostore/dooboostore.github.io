@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "bunch",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bʌntʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(포도 등의) 송이; (꽃·열쇠 등의) 다발, 묶음(cluster), (=bundle)",
+              "examples": [
+                {
+                  "text": "a <b>bunch</b> of grapes[keys]",
+                  "translatedText": "한 송이의 포도[한 묶음의 열쇠]"
+                }
+              ],
+              "originalMeaning": "(포도 등의) 송이; (꽃·열쇠 등의) 다발, 묶음(cluster), (=<span class='related_word' lang='en' >bundle</span>)"
+            },
+            {
+              "meaning": "[구어] 한패, 떼거리, 동아리; [미] 마소의 떼",
+              "examples": [],
+              "originalMeaning": "[구어] 한패, 떼거리, 동아리; [미] 마소의 떼"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다발로 묶다",
+              "examples": [],
+              "originalMeaning": "다발로 묶다"
+            },
+            {
+              "meaning": "<가축을> 한 떼로 모으다",
+              "examples": [],
+              "originalMeaning": "<가축을> 한 떼로 모으다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "다발이 되다",
+              "examples": [],
+              "originalMeaning": "다발이 되다"
+            },
+            {
+              "meaning": "한 떼가 되다, 모이다 ((up))",
+              "examples": [],
+              "originalMeaning": "한 떼가 되다, 모이다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/48c0314c17d24eafa6143228f4c2418a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/48c0314c17d24eafa6143228f4c2418a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bunches"
+        },
+        {
+          "type": "과거형",
+          "value": "bunched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bunching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bunched"
+        }
+      ],
+      "aliasConjugation": "bunches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5e7425813a86b024864e706bd210b2c1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "닭들이 건초 더미를 허적거리고 있다",
+      "text": "Chickens are scattering a <b>bunch</b> of hay."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주머니에 1달러짜리 지폐를 잔뜩 넣고 다니는 게 낫겠다",
+      "text": "I think I'd better carry a <b>bunch</b> of singles in my pocket."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 아이들을 오롱이조롱이 데리고 내 집에 왔다",
+      "text": "She came to my house with the whole <b>bunch</b> of her children."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "chicken",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtʃɪkɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "닭(fowl)",
+              "examples": [],
+              "originalMeaning": "닭(fowl)"
+            },
+            {
+              "meaning": "새 새끼, 영계 ((chick보다 큰 것)) (→cock)",
+              "examples": [],
+              "originalMeaning": "새 새끼, 영계 ((chick보다 큰 것)) (→<span class='related_word' lang='en' >cock</span>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "닭고기의",
+              "examples": [],
+              "originalMeaning": "닭고기의"
+            },
+            {
+              "meaning": "어린애의, 어린",
+              "examples": [
+                {
+                  "text": "a <b>chicken</b> lobster",
+                  "translatedText": "어린 새우"
+                }
+              ],
+              "originalMeaning": "어린애의, 어린"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[다음 성구로]",
+              "examples": [],
+              "originalMeaning": "[다음 성구로]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/166d0a4f888a4036acaa722d0ea32194",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/166d0a4f888a4036acaa722d0ea32194",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "chickens"
+        },
+        {
+          "type": "과거형",
+          "value": "chickened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "chickening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "chickened"
+        }
+      ],
+      "aliasConjugation": "chickens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "893c21e0546ad323040d2685515ae542",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 이젠 어린애가 아니다.",
+      "text": "She is no <b>chicken</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그와 싸우려 했으나 막판에 꽁무니를 뺐다",
+      "text": "I was going to fight with him, but I chickened out of it at the last minute."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 이제 어린이가 아니란 말야",
+      "text": "I'm no longer a <b>chicken</b>[child]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이거 안 하고 싶어―이제 와서 겁먹고 물러서지 마 I don't want to do this.─",
+      "text": "Don't <b>chicken</b> out now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "닭들이 건초 더미를 허적거리고 있다",
+      "text": "Chickens are scattering a bunch of hay."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "yourself",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "jər│self ; jɔːr│self ; jʊr│self"
+        }
+      ],
+      "pos": [
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[강조 용법] 당신 자신(이)",
+              "examples": [
+                {
+                  "text": "You <b>yourself</b> said so.",
+                  "translatedText": "자네 자신이 그렇게 말하였지."
+                }
+              ],
+              "originalMeaning": "[강조 용법] 당신 자신(이)"
+            },
+            {
+              "meaning": "[재귀 용법] 당신 자신을[에게]",
+              "examples": [],
+              "originalMeaning": "[재귀 용법] 당신 자신을[에게]"
+            },
+            {
+              "meaning": "[동사의 목적어]",
+              "examples": [
+                {
+                  "text": "Know <b>yourself</b>.",
+                  "translatedText": "네 자신을 알라."
+                }
+              ],
+              "originalMeaning": "[동사의 목적어]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/397ff5c5be544edeae9a996f4358451d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/397ff5c5be544edeae9a996f4358451d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c766874e8f0ca3a4d316e7d058f68fc2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자네 자신이 그렇게 말하였지.",
+      "text": "You <b>yourself</b> said so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무쪼록 자중 자애 하십시오",
+      "text": "Please take good care of <b>yourself</b>. or I pray that you may get on well and strong[be good for <b>yourself</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너무 젠체 하지 마라",
+      "text": "Don't give <b>yourself</b> such airs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 등 달지 않아도 돼",
+      "text": "Don't fret <b>yourself</b> like that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일로 걱정하지 마라",
+      "text": "Don't worry <b>yourself</b> about that."
+    }
+  ],
+  "isWordType": true
+}

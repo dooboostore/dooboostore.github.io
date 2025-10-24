@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "apologize",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ə│pɑːlədʒaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사과하다, 사죄하다 ((to, for))",
+              "examples": [
+                {
+                  "text": "If I have offended you, I <b>apologize</b> .",
+                  "translatedText": "기분을 상하게 해드렸다면 사과드립니다."
+                }
+              ],
+              "originalMeaning": "사과하다, 사죄하다 ((to, for))"
+            },
+            {
+              "meaning": "변명하다, 변호하다(defend)",
+              "examples": [],
+              "originalMeaning": "변명하다, 변호하다(defend)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d863042fb1c64bd0841b328d937eb877",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d863042fb1c64bd0841b328d937eb877",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "apologizes"
+        },
+        {
+          "type": "과거형",
+          "value": "apologized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "apologizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "apologized"
+        }
+      ],
+      "aliasConjugation": "apologizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2d6525e84bfc31434b3b58db167f2ac9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지각할 때에는 언제나 사과를 한다.",
+      "text": "If I am late, I <b>apologize</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 한 일을 사과합니다",
+      "text": "I <b>apologize</b> for what I did."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오랫동안 편지 못 드려 죄송합니다",
+      "text": "I must <b>apologize</b> for my long silence. or I <b>apologize</b> to you for having not written to you for so long."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나야말로 용서를 빌어야 하겠습니다",
+      "text": "It is I who must <b>apologize</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "적어도 사과쯤은 해도 좋을 텐데.",
+      "text": "You might at least <b>apologize</b>."
+    }
+  ],
+  "isWordType": true
+}

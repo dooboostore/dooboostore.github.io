@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "curtain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɜːrtn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "커튼, (문의) 휘장; 접는 식의 가리개",
+              "examples": [],
+              "originalMeaning": "커튼, (문의) 휘장; 접는 식의 가리개"
+            },
+            {
+              "meaning": "(극장의) 막, 휘장; 개막 시간; 종막; 끝내기 효과[대사]",
+              "examples": [
+                {
+                  "text": "The <b>curtain</b> rises[falls].",
+                  "translatedText": "막이 오른다[내린다]."
+                }
+              ],
+              "originalMeaning": "(극장의) 막, 휘장; 개막 시간; 종막; 끝내기 효과[대사]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "막[커튼]을 치다[장식하다]",
+              "examples": [
+                {
+                  "text": "curtained windows",
+                  "translatedText": "커튼을 친 창"
+                }
+              ],
+              "originalMeaning": "막[커튼]을 치다[장식하다]"
+            },
+            {
+              "meaning": "막[커튼]으로 가리다[막다] ((off))",
+              "examples": [
+                {
+                  "text": "The part of the room has been curtained off.",
+                  "translatedText": "방의 그 부분은 커튼으로 칸막이가 되어 있다."
+                }
+              ],
+              "originalMeaning": "막[커튼]으로 가리다[막다] ((off))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/478716195d8443dc8ebc135e36042bc8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/478716195d8443dc8ebc135e36042bc8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "curtains"
+        },
+        {
+          "type": "과거형",
+          "value": "curtained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "curtaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "curtained"
+        }
+      ],
+      "aliasConjugation": "curtains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aa777f71ac98780a829543e41b03026b",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Curtain!",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "여기서 막! ((다음은 상상해 보시라, 관객의 주의를 끌기 위한 말))",
+              "examples": [],
+              "originalMeaning": "여기서 막! ((다음은 상상해 보시라, 관객의 주의를 끌기 위한 말))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39a56aeaaf7e4595890b573f121544e5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39a56aeaaf7e4595890b573f121544e5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1b6a0319d99a4a611f4d3f2a520d8842",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "햇볕에 커튼의 색이 바랬다",
+      "text": "The sun has faded the <b>curtains</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "커튼이 바람에 나부끼고 있다",
+      "text": "The <b>curtain</b> flutters in the breeze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "양탄자와 커튼이 잘 어울린다",
+      "text": "The carpet and <b>curtain</b> are a good match."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "창문에는 커튼이 걸려 있었다",
+      "text": "There were <b>curtains</b> hanging over the window."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "햇볕이 강해서 커튼의 빛깔이 날았다",
+      "text": "The strong sunlight had faded the <b>curtains</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "review",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈvjuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "평론, 비평, 논평; 평론 잡지",
+              "examples": [
+                {
+                  "text": "a literary <b>review</b>",
+                  "translatedText": "문예 평론지"
+                }
+              ],
+              "originalMeaning": "평론, 비평, 논평; 평론 잡지"
+            },
+            {
+              "meaning": "[U] 재조사, 재검토, 재고; [C] 관찰",
+              "examples": [],
+              "originalMeaning": "[U] 재조사, 재검토, 재고; [C] 관찰"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 조사하다, 정밀하게 살피다, 관찰하다",
+              "examples": [
+                {
+                  "text": "<b>review</b> the situation",
+                  "translatedText": "상황을 살피다"
+                }
+              ],
+              "originalMeaning": "다시 조사하다, 정밀하게 살피다, 관찰하다"
+            },
+            {
+              "meaning": "<학과를> 복습하다( revise)",
+              "examples": [],
+              "originalMeaning": "<학과를> 복습하다( revise)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "평론을 쓰다, 비평하다 ((for))",
+              "examples": [],
+              "originalMeaning": "평론을 쓰다, 비평하다 ((for))"
+            },
+            {
+              "meaning": "돌이켜 보다, 회고하다; 재검토하다",
+              "examples": [],
+              "originalMeaning": "돌이켜 보다, 회고하다; 재검토하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5ec8d04653724751aab6f3c3107cc192",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5ec8d04653724751aab6f3c3107cc192",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reviews"
+        },
+        {
+          "type": "과거형",
+          "value": "reviewed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reviewing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reviewed"
+        }
+      ],
+      "aliasConjugation": "reviews",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2a78b5dab1e8a288088408c100f04379",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배운 것을 복습해 보자",
+      "text": "Let's <b>review</b> what you learned."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "재론할 거리조차 안 되는 안건이다",
+      "text": "The topic is not worth reviewing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 나중에 재검토하자",
+      "text": "Let's reexamine[<b>review</b>] the matter later."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요전 과의 복습부터 시작합시다.",
+      "text": "Let’s begin by reviewing the last lesson."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 최신작은 호평을 받았다.",
+      "text": "His most recent works were favorably reviewed."
+    }
+  ],
+  "isWordType": true
+}

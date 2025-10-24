@@ -1,0 +1,55 @@
+<div class="breadcrumb">
+  <span dr-for-of="@this@.items">
+    <!-- Single item case -->
+    <span dr-if="@this@.isItem(#it#)">
+      <a
+        dr-if="@this@.getSingleItem(#it#).link && #index# < @this@.items.length - 1"
+        href="${@this@.getSingleItem(#it#).link}$" 
+        class="breadcrumb-item"
+        dr-event-click="@this@.handleItemClick(@this@.getSingleItem(#it#), $event)"
+      >
+        ${@this@.getSingleItem(#it#).text}$
+      </a>
+      <span 
+        dr-if="!@this@.getSingleItem(#it#).link || #index# === @this@.items.length - 1"
+        class="breadcrumb-current"
+        dr-event-click="@this@.handleItemClick(@this@.getSingleItem(#it#), $event)"
+      >
+        ${@this@.getSingleItem(#it#).text}$
+      </span>
+    </span>
+
+    <!-- Dropdown case -->
+    <span dr-if="@this@.isDropdownInComponent(#it#)">
+      <dr-select class="breadcrumb-select" changeSelected="${(data) => @this@?.handleSelectChange?.(data, #it#)}$">
+        <dr-select-summary class="breadcrumb-select-summary">
+          <dr-select-summary-placeholder>
+            <span class="${#index# === @this@.items.length - 1 ? 'breadcrumb-current breadcrumb-dropdown' : 'breadcrumb-item breadcrumb-dropdown'}$">
+              ${@this@.getSingleItem(#it#)?.text??''}$ ▼
+            </span>
+          </dr-select-summary-placeholder>
+          <dr-select-summary-selected>
+            <span class="${#index# === @this@.items.length - 1 ? 'breadcrumb-current breadcrumb-dropdown' : 'breadcrumb-item breadcrumb-dropdown'}$">
+                ${#it#.selected.text}$ ▼
+            </span>
+          </dr-select-summary-selected>
+        </dr-select-summary>
+
+        <dr-select-body float="bottom-left" class="breadcrumb-select-body">
+          <dr-select-option
+            dr-for-of="@this@.getArrayItems(#it#)"
+            value="${#nearForOfIt#.uuid}$"
+            class="breadcrumb-select-option"
+          >
+              <div class="breadcrumb-option-content">
+                ${#it#.text}$
+              </div>
+          </dr-select-option>
+        </dr-select-body>
+      </dr-select>
+    </span>
+
+    <!-- Separator -->
+    <span dr-if="#index# < @this@.items.length - 1" class="breadcrumb-separator">/</span>
+  </span>
+</div>

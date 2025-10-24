@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "transfer",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "옮기다, 나르다, 건네다 ((from; to)); 전임시키다, 전학시키다; [영] <럭비·축구의 선수 등을> 이적하다",
+              "examples": [
+                {
+                  "text": "<b>transfer</b> a boy toanother school",
+                  "translatedText": "소년을 전학시키다"
+                }
+              ],
+              "originalMeaning": "옮기다, 나르다, 건네다 ((from; to)); 전임시키다, 전학시키다; [영] <럭비·축구의 선수 등을> 이적하다"
+            },
+            {
+              "meaning": "<사상 등을 남에게> 전하다, 전달[전승]하다; <감정 등을> 사람에게 이입하다; <책임 등을> 전가하다; 융통하다",
+              "examples": [
+                {
+                  "text": "The baby transferred its affection toits new mother.",
+                  "translatedText": "그 젖먹이는 새어머니에게 정이 들었다."
+                }
+              ],
+              "originalMeaning": "<사상 등을 남에게> 전하다, 전달[전승]하다; <감정 등을> 사람에게 이입하다; <책임 등을> 전가하다; 융통하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이동하다, 전학(轉學)하다; 전임하다; [영] <축구 선수 등이> 이적하다",
+              "examples": [
+                {
+                  "text": "He has transferred to Harvard.",
+                  "translatedText": "그는 하버드 대학으로 전학했다."
+                }
+              ],
+              "originalMeaning": "이동하다, 전학(轉學)하다; 전임하다; [영] <축구 선수 등이> 이적하다"
+            },
+            {
+              "meaning": "<사람이> 갈아타다",
+              "examples": [
+                {
+                  "text": "<b>transfer</b> from a train to a bus",
+                  "translatedText": "기차에서 버스로 갈아타다"
+                }
+              ],
+              "originalMeaning": "<사람이> 갈아타다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 이전(移轉), 이동, 전임; 이동 수단[방법]",
+              "examples": [],
+              "originalMeaning": "[UC/] 이전(移轉), 이동, 전임; 이동 수단[방법]"
+            },
+            {
+              "meaning": "[법] [U] (권리·증권 등의) 이전, 양도, [C] 양도 증서",
+              "examples": [],
+              "originalMeaning": "[법] [U] (권리·증권 등의) 이전, 양도, [C] 양도 증서"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9463268bebc7487e802e391b243ea206",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9463268bebc7487e802e391b243ea206",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "transfers"
+        },
+        {
+          "type": "과거형",
+          "value": "transferred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "transferring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "transferred"
+        }
+      ],
+      "aliasConjugation": "transfers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e4d8b548ae2f7af835a43f3b1fb11527",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 하바드 대학으로 전학했다.",
+      "text": "He has transferred to Harvard."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 부산 전임은 영전이다",
+      "text": "His <b>transfer</b> to Busan is a change for the better."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집의 소유권은 그에게로 넘어갔다",
+      "text": "The owenership of the house was transferred to him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기의 죄를 나한테 전가시켰다.",
+      "text": "He transferred the blame from his shoulders to mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 해외 지사로의 전근을 신청했다",
+      "text": "I've put in for a <b>transfer</b> to one of our overseas branches."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "college",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːlɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "((일반적으로)) 대학, 칼리지",
+              "examples": [
+                {
+                  "text": "a <b>college</b> student",
+                  "translatedText": "대학생"
+                }
+              ],
+              "originalMeaning": "((일반적으로)) 대학, 칼리지"
+            },
+            {
+              "meaning": "(Oxford, Cambridge 등의 대학교의 자치 조직이며 전통적 특색을 가진) 칼리지",
+              "examples": [],
+              "originalMeaning": "(Oxford, Cambridge 등의 대학교의 자치 조직이며 전통적 특색을 가진) 칼리지"
+            },
+            {
+              "meaning": "(종합 대학(university)의) 학부, (university의 한 기관으로서의) 연구소, 단과 대학",
+              "examples": [],
+              "originalMeaning": "(종합 대학(university)의) 학부, (university의 한 기관으로서의) 연구소, 단과 대학"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/181fa5f3a7594aa6af03b92ddbf4454f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/181fa5f3a7594aa6af03b92ddbf4454f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ca7a1e112a4cd775da9820315dde4bc3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대학을 다니고 있다",
+      "text": "He is in a university[in <b>college</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 대학은 남녀 공학이다",
+      "text": "That <b>college</b> is coeducational."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결국 대학에는 못 가고 말았다.",
+      "text": "I never got to go to <b>college</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 법률[대학] 교육을 받고 있다.",
+      "text": "He is educated in law[at a <b>college</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대학교 때의 고우이다",
+      "text": "He is an old <b>college</b> buddy of mine."
+    }
+  ],
+  "isWordType": true
+}

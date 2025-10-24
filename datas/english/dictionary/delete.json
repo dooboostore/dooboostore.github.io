@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "delete",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈliːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "삭제하다, 지우다 ((from))",
+              "examples": [],
+              "originalMeaning": "삭제하다, 지우다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "삭제되다",
+              "examples": [],
+              "originalMeaning": "삭제되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d40bc537ff144ceb0399b6c5870432f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d40bc537ff144ceb0399b6c5870432f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "deletes"
+        },
+        {
+          "type": "과거형",
+          "value": "deleted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "deleting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "deleted"
+        }
+      ],
+      "aliasConjugation": "deletes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1ea05d9024bf4c811e4206f8e4f00ad0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 명령은 디렉토리에서 파일을 빼라는 것이다",
+      "text": "This command means to <b>delete</b> files from the directory."
+    }
+  ],
+  "isWordType": true
+}

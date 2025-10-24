@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "seem",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "siːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "…처럼 보이다, 보기에 …하다; …인 듯하다[것 같다]",
+              "examples": [
+                {
+                  "text": "He seems(to be) young.",
+                  "translatedText": "그는 젊어 보인다."
+                }
+              ],
+              "originalMeaning": "…처럼 보이다, 보기에 …하다; …인 듯하다[것 같다]"
+            },
+            {
+              "meaning": "…인 것처럼 생각되다, …인 것 같은 생각이 들다",
+              "examples": [
+                {
+                  "text": "( <b>seem</b>+to do) I <b>seem</b> unable to please her.",
+                  "translatedText": "나로서는 그녀를 기쁘게 할 수가 없을 것 같다."
+                }
+              ],
+              "originalMeaning": "…인 것처럼 생각되다, …인 것 같은 생각이 들다"
+            },
+            {
+              "meaning": "[it을 주어로 하여] …인 것 같다, …인 듯하다",
+              "examples": [
+                {
+                  "text": "It seems likely to rain.",
+                  "translatedText": "비가 올 듯하다."
+                }
+              ],
+              "originalMeaning": "[it을 주어로 하여] …인 것 같다, …인 듯하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8706f57208fd40648e0044c056522725",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8706f57208fd40648e0044c056522725",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "seems"
+        },
+        {
+          "type": "과거형",
+          "value": "seemed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "seeming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "seemed"
+        }
+      ],
+      "aliasConjugation": "seems",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "107f189e900f5c8b65d68d2b310a5d6f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 죽은 듯이 보였다",
+      "text": "He seemed as if dead."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어째 기운이 없어 보이는군.",
+      "text": "You <b>seem</b> rather down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "넌 이것을 즐기는 것 같아",
+      "text": "You <b>seem</b> to enjoy this. or You <b>seem</b> to take pleasure in doing this. or You <b>seem</b> to have fun doing this."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어디 아픈가 보다",
+      "text": "He seems ill. or He seems to be ill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일이 될 법하다",
+      "text": "It seems likely to succeed."
+    }
+  ],
+  "isWordType": true
+}

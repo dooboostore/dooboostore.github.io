@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "entry": "fake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "féik"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위조하다(counterfeit); (되는 대로) 꾸며내다, 날조하다(fabricate) ((up))",
+              "examples": [
+                {
+                  "text": "<b>fake</b> (up) news",
+                  "translatedText": "기사를 날조하다"
+                }
+              ],
+              "originalMeaning": "위조하다(counterfeit); (되는 대로) 꾸며내다, 날조하다(fabricate) ((up))"
+            },
+            {
+              "meaning": "속이다(deceive); 좀도둑질하다, 훔치다; 윤색하다",
+              "examples": [],
+              "originalMeaning": "속이다(deceive); 좀도둑질하다, 훔치다; 윤색하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "위조하다, 속이다",
+              "examples": [],
+              "originalMeaning": "위조하다, 속이다"
+            },
+            {
+              "meaning": "페인트하다",
+              "examples": [],
+              "originalMeaning": "페인트하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모조품, 위조품, 가짜(sham); 사기; 맹랑한 거짓말, 헛소문",
+              "examples": [],
+              "originalMeaning": "모조품, 위조품, 가짜(sham); 사기; 맹랑한 거짓말, 헛소문"
+            },
+            {
+              "meaning": "사기꾼(swindler)",
+              "examples": [],
+              "originalMeaning": "사기꾼(swindler)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aba3226e0f924a52be1838a84ae0097b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aba3226e0f924a52be1838a84ae0097b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fakes"
+        },
+        {
+          "type": "과거형",
+          "value": "faked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "faking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "faked"
+        }
+      ],
+      "aliasConjugation": "fakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1c5c833b50b427fbbb51e4a7d09315ba",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "fake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<밧줄을> 첩첩이 사리다",
+              "examples": [],
+              "originalMeaning": "<밧줄을> 첩첩이 사리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(첩첩으로 사려 놓은) 밧줄의 한 사리",
+              "examples": [],
+              "originalMeaning": "(첩첩으로 사려 놓은) 밧줄의 한 사리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bfa2b478694b4141a4b42fc6f1ccd461",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bfa2b478694b4141a4b42fc6f1ccd461",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "fakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "55f4decbc478b8a1698ba4d26b1b9021",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 가짜를 속아 샀다",
+      "text": "He was cheated into buying a <b>fake</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "병이라던 것은 멀쩡한 거짓말이었다",
+      "text": "His illness was a perfect <b>fake</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 요란한 옷에다가 모조 보석을 하고 있다",
+      "text": "She wears garish clothing and <b>fake</b> jewelry."
+    }
+  ],
+  "isWordType": true
+}

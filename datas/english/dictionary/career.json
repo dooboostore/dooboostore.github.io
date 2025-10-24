@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "career",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kəˈrɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(전문적인) 직업",
+              "examples": [
+                {
+                  "text": "He sought a <b>career</b> as a lawyer.",
+                  "translatedText": "그는 변호사를 평생의 직업으로 하려고 했다."
+                }
+              ],
+              "originalMeaning": "(전문적인) 직업"
+            },
+            {
+              "meaning": "경력, 이력, 생애",
+              "examples": [
+                {
+                  "text": "a <b>career</b> in law",
+                  "translatedText": "법률가로서의 경력"
+                }
+              ],
+              "originalMeaning": "경력, 이력, 생애"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 직업적인, 전문적인; 생애[통산]의",
+              "examples": [
+                {
+                  "text": "a <b>career</b> diplomat",
+                  "translatedText": "직업 외교관"
+                }
+              ],
+              "originalMeaning": "[A] 직업적인, 전문적인; 생애[통산]의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "질주하다 ((along, down, through))",
+              "examples": [],
+              "originalMeaning": "질주하다 ((along, down, through))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/41277da6ef7e4f14a20b7a1fb49e7671",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/41277da6ef7e4f14a20b7a1fb49e7671",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "careers"
+        },
+        {
+          "type": "과거형",
+          "value": "careered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "careering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "careered"
+        }
+      ],
+      "aliasConjugation": "careers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b45f9b74ce4cc88eaf0c270d8140a247",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "버스가 가파른 언덕을 폭주했다",
+      "text": "The bus careered down the steep hill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 변호사를 평생의 직업으로 하려고 했다.",
+      "text": "He sought a <b>career</b> as a lawyer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 내 생애의 전기가 됐다",
+      "text": "That was the turning point of my <b>career</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 사람의 경력은 어슷비슷하다",
+      "text": "There is a parallel point in their careers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 내력에는 파란이 많았다",
+      "text": "His <b>career</b> was checkered by success and failure."
+    }
+  ],
+  "isWordType": true
+}

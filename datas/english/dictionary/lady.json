@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "lady",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈleɪdi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[woman에 대한 정중한 대용어] 여자, 여성; 부인",
+              "examples": [],
+              "originalMeaning": "[woman에 대한 정중한 대용어] 여자, 여성; 부인"
+            },
+            {
+              "meaning": "귀부인, 숙녀",
+              "examples": [
+                {
+                  "text": "She is a <b>lady</b> by birth.",
+                  "translatedText": "그녀는 좋은 집안에서 태어났다."
+                }
+              ],
+              "originalMeaning": "귀부인, 숙녀"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "여성 …, 여(류)…",
+              "examples": [
+                {
+                  "text": "a <b>lady</b> aviator",
+                  "translatedText": "여류 비행가"
+                }
+              ],
+              "originalMeaning": "여성 …, 여(류)…"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a11b13401164caebd1183f5091d0037",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a11b13401164caebd1183f5091d0037",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "Ladies, ladies"
+        }
+      ],
+      "aliasConjugation": "Ladies, ladies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "7709dd189a7284c23b38badf4da7d085",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여자가 잘 따른다",
+      "text": "He is a ladies' man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 좋은 집안에서 태어났다.",
+      "text": "She is a <b>lady</b> by birth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 어디까지나 숙녀이다",
+      "text": "She is every inch a <b>lady</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아주머니, 거기는 주차 금지예요!",
+      "text": "Hey, <b>lady</b>, no parking there!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여성들 사이에 평판이 좋다",
+      "text": "He is popular among ladies."
+    }
+  ],
+  "isWordType": true
+}

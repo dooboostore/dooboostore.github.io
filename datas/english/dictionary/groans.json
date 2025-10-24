@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "groan",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡroʊn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(고통·비탄 등으로 인한) 신음[끙끙거리는] 소리",
+              "examples": [
+                {
+                  "text": "give a <b>groan</b>",
+                  "translatedText": "신음 소리를 내다"
+                }
+              ],
+              "originalMeaning": "(고통·비탄 등으로 인한) 신음[끙끙거리는] 소리"
+            },
+            {
+              "meaning": "불평하는 소리, (연설자에 대한) 불찬성[불만]을 표시하는 욕설",
+              "examples": [],
+              "originalMeaning": "불평하는 소리, (연설자에 대한) 불찬성[불만]을 표시하는 욕설"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "신음하다, 끙끙거리다; 괴로워하다, 번민하다 ((in, with))",
+              "examples": [
+                {
+                  "text": "<b>groan</b> in wordless grief",
+                  "translatedText": "말할 수 없는 슬픔으로 신음하다"
+                }
+              ],
+              "originalMeaning": "신음하다, 끙끙거리다; 괴로워하다, 번민하다 ((in, with))"
+            },
+            {
+              "meaning": "(식탁·시렁 등에) 삐걱댈 정도로 무거운 짐이 얹혀 있다 ((with))",
+              "examples": [
+                {
+                  "text": "The table literally groaned with food.",
+                  "translatedText": "상다리가 휘어지도록 성찬이 차려져 있었다."
+                }
+              ],
+              "originalMeaning": "(식탁·시렁 등에) 삐걱댈 정도로 무거운 짐이 얹혀 있다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "신음하는 듯한 소리로 말하다 ((out))",
+              "examples": [
+                {
+                  "text": "The invalid <b>groan</b> ed out a request.",
+                  "translatedText": "환자는 신음하듯이 부탁의 말을 했다."
+                }
+              ],
+              "originalMeaning": "신음하는 듯한 소리로 말하다 ((out))"
+            },
+            {
+              "meaning": "으르렁대어 침묵시키다[말을 막다] ((down))",
+              "examples": [],
+              "originalMeaning": "으르렁대어 침묵시키다[말을 막다] ((down))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0109d641fe11481b966fdf458d33a441",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0109d641fe11481b966fdf458d33a441",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "groans"
+        },
+        {
+          "type": "과거형",
+          "value": "groaned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "groaning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "groaned"
+        }
+      ],
+      "aliasConjugation": "groans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0dce0677fd7c38915f7efb841d56929d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "환자는 신음하듯이 부탁의 말을 했다.",
+      "text": "The invalid groaned out a request."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 죽을 듯이 신음했다",
+      "text": "She groaned as if she were going to die."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상다리가 휘어지도록 성찬이 차려져 있었다.",
+      "text": "The table literally groaned with food."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상에는 산해의 진미가 가득 차려져 있다",
+      "text": "The table <b>groans</b> with dainties of many kinds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나의 체중으로 그 낡은 집의 계단이 삐걱거렸다.",
+      "text": "The steps of the old house groaned under my weight."
+    }
+  ],
+  "isWordType": true
+}

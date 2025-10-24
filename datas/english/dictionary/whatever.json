@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "whatever",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "wət│evə(r); wɑːt│evə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[선행사를 포함하는 부정 관계대명사] (…하는) 것[일]은 무엇이든지, (…하는) 것[일]은 모두",
+              "examples": [
+                {
+                  "text": "Do <b>whatever</b> you like.",
+                  "translatedText": "무엇이든지 하고 싶은 것을 해라."
+                }
+              ],
+              "originalMeaning": "[선행사를 포함하는 부정 관계대명사] (…하는) 것[일]은 무엇이든지, (…하는) 것[일]은 모두"
+            },
+            {
+              "meaning": "[양보절을 이끌어] 어떠한 일[것]이[을] …일지라도, 아무리 …이라도",
+              "examples": [
+                {
+                  "text": "<b>Whatever</b> happens, I will do it.",
+                  "translatedText": "무슨 일이 일어나도 그것을 하겠다."
+                }
+              ],
+              "originalMeaning": "[양보절을 이끌어] 어떠한 일[것]이[을] …일지라도, 아무리 …이라도"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[관계사 what의 강조형] 어떠한 …이라도, 얼마간의 …이라도(no matter what)",
+              "examples": [
+                {
+                  "text": "You can have <b>whatever</b> magazine you like.",
+                  "translatedText": "네가 좋아하는 어떤 잡지라도 너에게 주겠다."
+                }
+              ],
+              "originalMeaning": "[관계사 what의 강조형] 어떠한 …이라도, 얼마간의 …이라도(no matter what)"
+            },
+            {
+              "meaning": "[양보절을 이끌어] 어떠한 …이라도",
+              "examples": [
+                {
+                  "text": "<b>Whatever</b> results follow, I will go.",
+                  "translatedText": "어떠한 결과가 되든 가겠다."
+                }
+              ],
+              "originalMeaning": "[양보절을 이끌어] 어떠한 …이라도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/059ae3bdf51940bab8d13552894431c5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/059ae3bdf51940bab8d13552894431c5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "627c217d2401d98d396267cef53df75e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무엇이든 할 바에는 잘 해라",
+      "text": "<b>Whatever</b> you do, do it well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떠한 결과가 되든 가겠다.",
+      "text": "<b>Whatever</b> results follow, I will go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무슨 일이 일어나도 그것을 하겠다.",
+      "text": "<b>Whatever</b> happens, I will do it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느 것이나 좋은 것을 가져라",
+      "text": "Take whichever[<b>whatever</b>] you like."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무슨 일이 일어나든 준비는 돼 있다.",
+      "text": "I am ready for <b>whatever</b> comes."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "dawdle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdɔːdl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빈둥거리다, 빈둥빈둥 시간을 보내다 ((along, over))",
+              "examples": [
+                {
+                  "text": "<b>dawdle</b> along a street",
+                  "translatedText": "거리를 어슬렁어슬렁 걷다"
+                }
+              ],
+              "originalMeaning": "빈둥거리다, 빈둥빈둥 시간을 보내다 ((along, over))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<시간을> 낭비하다 ((away))",
+              "examples": [
+                {
+                  "text": "He dawdled away his time.",
+                  "translatedText": "그는 시간을 헛되이 보냈다."
+                }
+              ],
+              "originalMeaning": "<시간을> 낭비하다 ((away))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "빈둥거림, 시간 낭비",
+              "examples": [],
+              "originalMeaning": "빈둥거림, 시간 낭비"
+            },
+            {
+              "meaning": "굼벵이, 게으름뱅이",
+              "examples": [],
+              "originalMeaning": "굼벵이, 게으름뱅이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/856dd8a3216a4a6898f875ebb4fca9ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/856dd8a3216a4a6898f875ebb4fca9ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dawdles"
+        },
+        {
+          "type": "과거형",
+          "value": "dawdled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dawdling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dawdled"
+        }
+      ],
+      "aliasConjugation": "dawdles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "161223fd497a9a90c31c673f39d6cc37",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "께지럭거리지 말고 빨리 먹어라",
+      "text": "Stop picking at[dawdling over] your food;eat it up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시간을 헛되이 보냈다.",
+      "text": "He dawdled away his time."
+    }
+  ],
+  "isWordType": true
+}

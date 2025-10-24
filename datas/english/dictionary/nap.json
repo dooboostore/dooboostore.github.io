@@ -1,0 +1,176 @@
+{
+  "items": [
+    {
+      "entry": "nap",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "nǽp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "낮잠, 선잠(short sleep)",
+              "examples": [],
+              "originalMeaning": "낮잠, 선잠(short sleep)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잠깐 졸다, 선잠 자다",
+              "examples": [],
+              "originalMeaning": "잠깐 졸다, 선잠 자다"
+            },
+            {
+              "meaning": "방심하다, 멍하니 가만있다",
+              "examples": [],
+              "originalMeaning": "방심하다, 멍하니 가만있다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "졸면서 <시간을> 보내다 ((away))",
+              "examples": [
+                {
+                  "text": "I napped the afternoon away.",
+                  "translatedText": "나는 오후를 졸면서 보냈다."
+                }
+              ],
+              "originalMeaning": "졸면서 <시간을> 보내다 ((away))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/05ac78131b154c9ba42881c917f5aabe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/05ac78131b154c9ba42881c917f5aabe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "naps"
+        },
+        {
+          "type": "과거형",
+          "value": "napped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "napping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "napped"
+        }
+      ],
+      "aliasConjugation": "naps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c8d97a52b673cbdc478be3d39b348da7",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "nap",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[또는 a ~] (나사 등의) 보풀",
+              "examples": [],
+              "originalMeaning": "[또는 a ~] (나사 등의) 보풀"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "보풀을 세우다",
+              "examples": [],
+              "originalMeaning": "보풀을 세우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d3effb6181754580b6e48088ab742cdd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d3effb6181754580b6e48088ab742cdd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "naps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3c6ebb41df915c4e591ffc5264f6bac0",
+      "expEntrySuperscript": "2"
+    },
+    {
+      "entry": "NAP",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "naval aviation pilot",
+              "examples": [],
+              "originalMeaning": "naval aviation pilot"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8cd525485a2543ddb188fe53930e5490",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8cd525485a2543ddb188fe53930e5490",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4d1a6faa78d762927562fe0e4425a5f4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 오후를 졸면서 보냈다.",
+      "text": "I napped the afternoon away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "점심 식사 후에 그는 흔히 낮잠을 잤다.",
+      "text": "After lunch he would take a <b>nap</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "졸다가 두 정거장이나 지나 버렸다",
+      "text": "I was carried two stops beyond my destination while napping."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낮잠을 자야겠어",
+      "text": "I am going to take a <b>nap</b>[some Zs]."
+    }
+  ],
+  "isWordType": true
+}

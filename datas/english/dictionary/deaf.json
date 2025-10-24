@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "deaf",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "def"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "청각 장애가 있는, 귀가 먼",
+              "examples": [
+                {
+                  "text": "a <b>deaf</b> person",
+                  "translatedText": "청각 장애인"
+                }
+              ],
+              "originalMeaning": "청각 장애가 있는, 귀가 먼"
+            },
+            {
+              "meaning": "무관심한, <탄원·충고 등에> 귀를 기울이지 않는 ((to))",
+              "examples": [],
+              "originalMeaning": "무관심한, <탄원·충고 등에> 귀를 기울이지 않는 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~, 명사적, 복수 취급] 청각 장애인들",
+              "examples": [],
+              "originalMeaning": "[the ~, 명사적, 복수 취급] 청각 장애인들"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b18d13717dbf4055ba86a7c5b4df3da4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b18d13717dbf4055ba86a7c5b4df3da4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "deafer"
+        },
+        {
+          "type": "최상급",
+          "value": "deafest"
+        }
+      ],
+      "aliasConjugation": "deafer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "c5c3b42cf7c5ef1fab04205eb98394ce",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 한쪽 귀가 안 들린다",
+      "text": "He is <b>deaf</b> of one ear."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 말해도 그에게는 마이동풍이었다",
+      "text": "All my words fell on <b>deaf</b>[heedless] ears. or All my advice was just so much sound to him. or All my words fell flat upon[were unheeded by] him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "더군다나 그는 한쪽 귀가 먹었다",
+      "text": "Added to that, he is <b>deaf</b> of[in] one ear."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 음치라서 노래를 제대로 못한다",
+      "text": "He is tone-<b>deaf</b> and cannot carry a tone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 조금도 정실을 허용치 않는다",
+      "text": "He is <b>deaf</b> to all private considerations."
+    }
+  ],
+  "isWordType": true
+}

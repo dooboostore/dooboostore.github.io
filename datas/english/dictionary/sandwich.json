@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "sandwich",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│sænwɪtʃ; │sænwɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "샌드위치, 샌드위치 모양의 것",
+              "examples": [],
+              "originalMeaning": "샌드위치, 샌드위치 모양의 것"
+            },
+            {
+              "meaning": "샌드위치 케이크 ((잼·크림 등을 사이에 끼운 케이크))",
+              "examples": [],
+              "originalMeaning": "샌드위치 케이크 ((잼·크림 등을 사이에 끼운 케이크))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "샌드위치 속에 끼우다",
+              "examples": [],
+              "originalMeaning": "샌드위치 속에 끼우다"
+            },
+            {
+              "meaning": "(억지로) 끼워 넣다, 사이에 끼우다 ((종종 in))",
+              "examples": [
+                {
+                  "text": "<b>sandwich</b> an appointment in between two board meetings",
+                  "translatedText": "두 임원 회의 사이에 약속을 끼워 넣다"
+                }
+              ],
+              "originalMeaning": "(억지로) 끼워 넣다, 사이에 끼우다 ((종종 in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bc21d0819c864510acef38ad4b776b70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bc21d0819c864510acef38ad4b776b70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sandwiches"
+        },
+        {
+          "type": "과거형",
+          "value": "sandwiched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sandwiching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sandwiched"
+        }
+      ],
+      "aliasConjugation": "sandwiches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "eee48e1e90d715a9c919ae2f3654b580",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 커피와 샌드위치를 내주었다",
+      "text": "She served me coffee and sandwiches."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 뚱뚱한 두 남자 사이에 끼었다",
+      "text": "I was sandwiched between two fat men."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바구니 속에 샌드위치가 남아 있다",
+      "text": "There are still some sandwiches left over in the basket."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나라는 양대국 사이에 끼여 있다",
+      "text": "The nation is sandwiched in between the two great powers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "작은 나라를 사이에 두고 두 강대국이 연해 있다",
+      "text": "The small country is sandwiched in between two great powers."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,99 @@
+@keyframes flash {
+  from {
+    background-color: #777;
+  }
+  to {
+    background-color: #0d5126;
+  }
+}
+
+/* Code Snippet Container - 기존 code-example 스타일 기반 */
+.code-snippet-container {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    /*margin-bottom: 1.5rem;*/
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2a2a2a;
+    padding: 0;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.code-copy-btn {
+    background: #575757;
+    color: #d8d8d8;
+    border: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin: 0.3rem;
+    flex-shrink: 0;
+}
+
+.code-copy-btn:active {
+    transform: scale(0.95);
+}
+
+.code-copy-btn.copied {
+    background-color: #0d5126;
+    animation: flash 0.4s ease-out;
+}
+
+/* 탭 스타일 - 헤더 안에 배치 */
+.code-tabs {
+    display: flex;
+    background: transparent;
+    overflow-x: auto;
+    flex: 1;
+}
+
+.tab-btn {
+    background: #2a2a2a;
+    color: #9ca3af;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-right: 1px solid #222;
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.tab-btn:hover {
+    background: #3a3a3a;
+    color: #e5e5e5;
+}
+
+.tab-btn.active {
+    background: #1a1a1a;
+    color: #e5e5e5;
+    border-bottom-color: #0366d6;
+    font-weight: 500;
+}
+
+.code-content {
+    position: relative;
+    background: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .code-tabs {
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+    
+    .tab-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "bought",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "BUY의 과거·과거분사",
+              "examples": [],
+              "originalMeaning": "<b>BUY</b>의 과거·과거분사"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/191d31700520488da7d095e9148fac14",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/191d31700520488da7d095e9148fac14",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ec6676d100fbc5c64b7f618ff602adf4",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "buy",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "baɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "사다, 구입하다(opp. sell)",
+              "examples": [
+                {
+                  "text": "<b>buy</b> him a book = <b>buy</b> a book for him",
+                  "translatedText": "그에게 책을 사 주다"
+                }
+              ],
+              "originalMeaning": "사다, 구입하다(opp. sell)"
+            },
+            {
+              "meaning": "<…에게> <음식을> 한턱 내다",
+              "examples": [
+                {
+                  "text": "Please let me <b>buy</b> you a drink.",
+                  "translatedText": "내가 한 잔 사겠소."
+                }
+              ],
+              "originalMeaning": "<…에게> <음식을> 한턱 내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사다, 쇼핑하다; 사는 쪽이 되다",
+              "examples": [],
+              "originalMeaning": "사다, 쇼핑하다; 사는 쪽이 되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[구어][보통 a ~] 사기, 구입(purchase), 불법 매입; 싸게 산 좋은 물건",
+              "examples": [
+                {
+                  "text": "It's a <b>buy</b> .",
+                  "translatedText": "그건 잘 산 물건이다."
+                }
+              ],
+              "originalMeaning": "[구어][보통 a ~] 사기, 구입(purchase), 불법 매입; 싸게 산 좋은 물건"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/73dd4372fb2d41ec9d4420fd8d891bb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/73dd4372fb2d41ec9d4420fd8d891bb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "buys",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7e9b97acd20969feb001c68cffc9deee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 옷을 50달러에 샀다.",
+      "text": "I <b>bought</b> this dress for $50."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사 두었더라면 좋았을 텐데.",
+      "text": "I wish I had <b>bought</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책을 사려고 했는데 다른 사람한테 꼭뒤 질렸다",
+      "text": "I was going to <b>buy</b> the book, but I got beaten to it[someone <b>bought</b> it ahead of me]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 한 잔 사겠소.",
+      "text": "Please let me <b>buy</b> you a drink."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "책을 사 가지고 왔다",
+      "text": "I <b>bought</b> a book and came home."
+    }
+  ],
+  "isWordType": true
+}

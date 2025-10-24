@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "outfit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈaʊtfɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(여행 등의) 채비, 여장; 의상 한 벌; (배의) 의장(艤裝)",
+              "examples": [
+                {
+                  "text": "a new spring <b>outfit</b>",
+                  "translatedText": "새 봄의 의상 한 벌"
+                }
+              ],
+              "originalMeaning": "(여행 등의) 채비, 여장; 의상 한 벌; (배의) 의장(艤裝)"
+            },
+            {
+              "meaning": "용품; 장사 도구, 도구 한 벌; (여행·탐험대의) 장비 한 벌",
+              "examples": [
+                {
+                  "text": "a barbecue <b>outfit</b>",
+                  "translatedText": "바비큐 도구 한 벌"
+                }
+              ],
+              "originalMeaning": "용품; 장사 도구, 도구 한 벌; (여행·탐험대의) 장비 한 벌"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "공급하다, 갖추어 주다, …에게 채비를 차려 주다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>outfit</b> a person with money for his trip",
+                  "translatedText": "…에게 여비를 마련해 주다"
+                }
+              ],
+              "originalMeaning": "공급하다, 갖추어 주다, …에게 채비를 차려 주다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "준비하다, 몸차림을 하다",
+              "examples": [],
+              "originalMeaning": "준비하다, 몸차림을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9743fa50f2834cf79024be336074e1be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9743fa50f2834cf79024be336074e1be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "outfits"
+        },
+        {
+          "type": "과거형",
+          "value": "outfitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "outfitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "outfitted"
+        }
+      ],
+      "aliasConjugation": "outfits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f929d4b01654b093fa97bfd420429c02",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네가 입고 있는 그 옷 참 멋있다",
+      "text": "That's a stylish <b>outfit</b> you have on."
+    }
+  ],
+  "isWordType": true
+}

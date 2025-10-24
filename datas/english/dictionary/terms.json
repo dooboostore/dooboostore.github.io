@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "term",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tɜːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(일정한) 기간, 기한; 임기",
+              "examples": [
+                {
+                  "text": "a one year <b>term</b> of office",
+                  "translatedText": "일 년 임기"
+                }
+              ],
+              "originalMeaning": "(일정한) 기간, 기한; 임기"
+            },
+            {
+              "meaning": "학기, 형기",
+              "examples": [],
+              "originalMeaning": "학기, 형기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이름 짓다, 칭하다, 부르다(call, name)",
+              "examples": [],
+              "originalMeaning": "이름 짓다, 칭하다, 부르다(call, name)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/34e9b0271dd14689bd2e30834fcf38dc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/34e9b0271dd14689bd2e30834fcf38dc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "terms"
+        },
+        {
+          "type": "과거형",
+          "value": "termed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "terming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "termed"
+        }
+      ],
+      "aliasConjugation": "terms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fe0a8671f2c33b39f252560587f8bf36",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "term.",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "terminal, termination",
+              "examples": [],
+              "originalMeaning": "terminal, termination"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cecf5896f3a047889ea2adfdf1b2b02f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cecf5896f3a047889ea2adfdf1b2b02f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "terms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f52b5ee7e8d4ba3a802b1bc3a229bb68",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "계약 조건은 양측에 이롭다",
+      "text": "The <b>terms</b> of the agreement are favorable to both sides."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 서로 내왕하는 사이다",
+      "text": "They are on visiting <b>terms</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그와는 아주 친한 터이다",
+      "text": "I'm on very close <b>terms</b> with him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그와 왕래가 있다",
+      "text": "I am on visiting <b>terms</b> with him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이 가스를 아르곤이라고 불렀다",
+      "text": "He termed this gas argon."
+    }
+  ],
+  "isWordType": true
+}

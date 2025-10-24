@@ -1,0 +1,18 @@
+<div class="code-snippet-container">
+    <div class="code-header">
+        <div class="code-tabs" dr-query="tabs">
+            <button dr-for-of="@this@.childSnippetComponents"
+                    class="tab-btn"
+                    data-uuid="${#nearForOfIt#.uuid}$"
+                    dr-event-click="@this@.activateSnippet(#nearForOfIt#.uuid)"
+            >
+                ${#it#.name}$
+            </button>
+        </div>
+
+        <button class="code-copy-btn" dr-event-click="@this@.copyCode($element)"><i class="fa-solid fa-floppy-disk"></i></button>
+    </div>
+    <div class="code-content" dr-query="content">
+        #innerHTML#
+    </div>
+</div>

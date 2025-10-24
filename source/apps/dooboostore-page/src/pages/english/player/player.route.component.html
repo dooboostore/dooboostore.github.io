@@ -1,0 +1,143 @@
+<div class="player-container" dr-attr="{class: 'player-container' + (@this@.isSwapped ? ' swapped' : '')}">
+    <div class="dictionary-section">
+        <!-- Dictionary Loading -->
+        <div class="loading-container" dr-if="@this@.isLoadingDictionaries">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading dictionary...</div>
+        </div>
+        <!-- <button dr-event-click="@this@.test()">zzzzzzzzzzzzzzz</button> -->
+        <div class="dictionary-content" dr-if="@this@.dictionaries && !@this@.isLoadingDictionaries">
+            <div class="dictionary-item" dr-for-of="@this@.dictionaries" dr-option-item-variable-name="dict"
+                dr-attr="{'data-original-word': #dict#.originalWord, 'data-match-type': #dict#?.items?.[0].matchType}">
+                <div class="word-items" dr-for-of="#dict#.items" dr-option-item-variable-name="item">
+                    <div class="word-entry">
+                        <div class="entry-header">
+                            <h3 class="entry-title clickable-title"
+                                dr-event-click="@this@.onEntryTitleClick($element, $event)">
+                                ${#item#.entry}$</h3>
+                            <label class="favorite-checkbox-label" title="즐겨찾기에 추가/제거" dr-if="#item#.entry">
+                                <input type="checkbox" class="favorite-checkbox"
+                                    dr-attr="{checked: @this@.checkWordFavorite(#item#.entry || '') ? 'checked' : null}"
+                                    dr-event-change="@this@.toggleFavorite(#item#.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#.entry || '')">
+                                <i class="fas fa-star favorite-icon"></i>
+                            </label>
+                        </div>
+                        <div class="pos-list" dr-for-of="#item#.pos" dr-option-item-variable-name="pos">
+                            <div class="pos-type" dr-attr="{class: 'pos-type' + (#pos#.type ? '' : ' pos-type-null')}">
+                                ${#pos#.type || '기타'}$</div>
+                            <div class="meanings" dr-for-of="#pos#.meanings" dr-option-item-variable-name="meaning">
+                                <div class="meaning-item">
+                                    <div class="meaning-text">${#meaning#.meaning}$</div>
+                                    <div class="examples" dr-if="#meaning#.examples.length > 0"
+                                        dr-for-of="#meaning#.examples" dr-option-item-variable-name="example">
+                                        <div class="example-item">
+                                            <div class="example-text clickable-example"
+                                                dr-event-click="@this@.onExampleClick($element, $event)">
+                                                #{#example#.text}#</div>
+                                            <div class="example-translation">#{#example#.translatedText}#</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dictionary Examples Section -->
+                    <details class="examples-section" dr-if="#dict#?.examples && #dict#?.examples.length > 0">
+                        <summary class="examples-summary">
+                            <i class="fas fa-book-open"></i>
+                            예문 보기 (${#dict#?.examples.length}$개)
+                        </summary>
+                        <div class="examples-content">
+                            <div class="example-item" dr-for-of="#dict#?.examples"
+                                dr-option-item-variable-name="example">
+                                <div class="example-text clickable-example"
+                                    dr-event-click="@this@.onExampleClick($element, $event)">
+                                    #{#example#.text}#</div>
+                                <div class="example-translation">#{#example#.translatedText}#</div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scripts-section">
+        <!-- Scripts Loading -->
+        <div class="loading-container" dr-if="@this@.isLoadingScripts">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading scripts...</div>
+        </div>
+
+        <!-- YouTube Video Section (only for YouTube content) -->
+        <div class="youtube-section" dr-if="@this@.currentItem?.type === 'youtube'">
+            <div id="youtube-player-container">
+                <!-- YouTube iframe will be inserted here -->
+            </div>
+        </div>
+
+
+
+
+        <form class="scripts-content" dr-if="@this@.scripts" dr-event-change="@this@.onScriptSelectionChange($event)"
+            dr-attr="{class: 'scripts-content' + (@this@.currentItem?.type === 'youtube' ? ' with-youtube' : '')}">
+            <!--                       
+            <div class="script-item" dr-for-of="@this@.scripts" dr-option-item-variable-name="script">
+                ${#script#.e}$
+            </div> -->
+            <div class="script-item" dr-for-of="@this@.scripts" dr-option-item-variable-name="script"
+                dr-option-item-index-variable-name="index" dr-attr="{'data-index': #index#}">
+                <label class="script-block">
+                    <input type="radio" name="selectedScript" class="script-radio" dr-attr="{value: #index#}">
+
+                    <div class="script-content">
+                        <!-- English text - always rendered -->
+                        <div class="english-text">
+                            ${#script#.e}$
+                        </div>
+                        <!-- Korean text - always rendered, visibility controlled by CSS -->
+                        <div class="korean-text">
+                            ${#script#.k}$
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Swap Button -->
+<!-- <button class="swap-button" dr-event-click="@this@.swapSections()" title="섹션 위치 바꾸기">
+    <i class="fas fa-rotate"></i>
+</button> -->
+
+<!-- Floating Controller -->
+<div class="floating-controller" style="display: none;">
+    <div class="controller-content">
+        <button class="control-btn prev-btn" dr-event-click="@this@.previousScript()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <button class="control-btn translation-btn" dr-event-click="@this@.toggleTranslation()">
+            <i class="fas fa-language"></i>
+        </button>
+
+        <button class="control-btn sound-btn" dr-event-click="@this@.toggleSound()">
+            <i class="fas fa-volume-up"></i>
+        </button>
+
+        <button class="control-btn play-btn" dr-event-click="@this@.playCurrentScript()">
+            <i class="fas fa-play"></i>
+        </button>
+
+        <div class="word-slider-container">
+            <input type="range" class="word-slider" min="-1" max="0" value="-1"
+                dr-event-input="@this@.setWordIndex(parseInt(event.target.value))">
+        </div>
+
+        <button class="control-btn next-btn" dr-event-click="@this@.nextScript()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>

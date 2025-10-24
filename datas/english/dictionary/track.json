@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "track",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(둑 등에서) <배를> 밧줄로 끌다(tow)",
+              "examples": [],
+              "originalMeaning": "(둑 등에서) <배를> 밧줄로 끌다(tow)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<배가> 밧줄로 끌려가다",
+              "examples": [],
+              "originalMeaning": "<배가> 밧줄로 끌려가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/54cb92ed06fa42189c5786e4043f8c66",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/54cb92ed06fa42189c5786e4043f8c66",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tracks"
+        },
+        {
+          "type": "과거형",
+          "value": "tracked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tracking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tracked"
+        }
+      ],
+      "aliasConjugation": "tracks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "702bf5cb9345cfbd3698545bd8676e17",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 그를 뒤쫓고 있다",
+      "text": "The police are on his <b>track</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰에서는 범인을 수색하고 있다",
+      "text": "The police are on the trail[<b>track</b>] of the culprit. or The offender is wanted by the police."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이렇게 시간이 흘렀는지 몰랐어요",
+      "text": "I have lost <b>track</b> of time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일이 궤도에 오를 때까지는 참고 고생할 상황이다",
+      "text": "It's a situation I'll just have to put up with until the work gets on the <b>track</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 출세 가도를 달리고 있다",
+      "text": "He is on the promotional <b>track</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,5 @@
+packages:
+  - 'apps/**'
+  - 'packages/**'
+  - '!packages/**/dist/**' # Exclude dist directories under packages
+  - '!apps/**/dist/**'     # Exclude dist directories under apps

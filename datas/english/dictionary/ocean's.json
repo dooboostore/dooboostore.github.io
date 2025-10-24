@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "ocean",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈoʊʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 대양, 해양; 외양(外洋)",
+              "examples": [
+                {
+                  "text": "<b>ocean</b> bed",
+                  "translatedText": "해저"
+                }
+              ],
+              "originalMeaning": "[the ~] 대양, 해양; 외양(外洋)"
+            },
+            {
+              "meaning": "[the … O~] (5대양의 하나인) …양(洋)",
+              "examples": [
+                {
+                  "text": "the Atlantic <b>Ocean</b>",
+                  "translatedText": "대서양"
+                }
+              ],
+              "originalMeaning": "[the … O~] (5대양의 하나인) …양(洋)"
+            },
+            {
+              "meaning": "[the ~] 바다(sea)",
+              "examples": [
+                {
+                  "text": "go swimming in the <b>ocean</b>",
+                  "translatedText": "해수욕을 가다"
+                }
+              ],
+              "originalMeaning": "[the ~] 바다(sea)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e00afecfd153479f80ffe245bcc1108e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e00afecfd153479f80ffe245bcc1108e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "212ce22f8f9615c6afe6668e66019b9b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집은 바다를 향해 있다.",
+      "text": "The house has an <b>ocean</b> frontage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이번 주말에 해수욕하러 가자",
+      "text": "Let's go swimming in the <b>ocean</b> this weekend."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 강은 태평양으로 흘러 들어간다.",
+      "text": "The river discharges into the Pacific <b>Ocean</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해저에는 많은 종류의 생물이 서식하고 있다",
+      "text": "Many forms of life exist on the <b>ocean</b> floor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "북극해에서는 배가 때때로 얼어붙을 때가 있다",
+      "text": "Sometimes ships are icebound in the Arctic <b>Ocean</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "glass",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡlæs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 유리, [C] 창유리",
+              "examples": [
+                {
+                  "text": "as clear as <b>glass</b>",
+                  "translatedText": "유리같이 투명한"
+                }
+              ],
+              "originalMeaning": "[U] 유리, [C] 창유리"
+            },
+            {
+              "meaning": "[UC/] 유리질의 것, 흑요석",
+              "examples": [],
+              "originalMeaning": "[UC/] 유리질의 것, 흑요석"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "유리의, 유리 같은, 유리로 만든",
+              "examples": [
+                {
+                  "text": "a <b>glass</b> tray",
+                  "translatedText": "유리 쟁반"
+                }
+              ],
+              "originalMeaning": "유리의, 유리 같은, 유리로 만든"
+            },
+            {
+              "meaning": "유리를 끼운, 유리로 덮은",
+              "examples": [
+                {
+                  "text": "a <b>glass</b> door",
+                  "translatedText": "유리문"
+                }
+              ],
+              "originalMeaning": "유리를 끼운, 유리로 덮은"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "유리를 끼우다, 유리로 덮다(glaze)",
+              "examples": [
+                {
+                  "text": "<b>glass</b> a window",
+                  "translatedText": "창에 유리를 끼우다"
+                }
+              ],
+              "originalMeaning": "유리를 끼우다, 유리로 덮다(glaze)"
+            },
+            {
+              "meaning": "유리같이 만들다",
+              "examples": [],
+              "originalMeaning": "유리같이 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e3061432247d4659ba897034818b236b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e3061432247d4659ba897034818b236b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "glasses"
+        },
+        {
+          "type": "과거형",
+          "value": "glassed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "glassing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "glassed"
+        }
+      ],
+      "aliasConjugation": "glasses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1f53f847e1d04de607c129fb3d2d2338",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 유리잔은 변두리가 깨졌다",
+      "text": "This <b>glass</b> is chipped."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "얇은 유리는 깨지기 쉽다",
+      "text": "Thin <b>glasses</b> are brittle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 안경에 김이 서렸다",
+      "text": "His <b>glasses</b> were fogged up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "냉수 한 잔 주세요",
+      "text": "Can[May] I have a <b>glass</b> of cold water?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "미안하지만 물 한 잔 주십시오",
+      "text": "Give me a <b>glass</b> of water, please."
+    }
+  ],
+  "isWordType": true
+}

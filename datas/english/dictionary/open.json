@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "open",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│oʊpən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "열린, 연",
+              "examples": [
+                {
+                  "text": "an <b>open</b> window",
+                  "translatedText": "열린 창"
+                }
+              ],
+              "originalMeaning": "열린, 연"
+            },
+            {
+              "meaning": "<꽃이> 핀, <신문 등이> 펼쳐진",
+              "examples": [],
+              "originalMeaning": "<꽃이> 핀, <신문 등이> 펼쳐진"
+            },
+            {
+              "meaning": "덮개[지붕]가 없는, 울타리가 없는; 널따란",
+              "examples": [
+                {
+                  "text": "<b>open</b> country",
+                  "translatedText": "널따란 땅"
+                }
+              ],
+              "originalMeaning": "덮개[지붕]가 없는, 울타리가 없는; 널따란"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "열다, 펴다(unfold)",
+              "examples": [
+                {
+                  "text": "<b>open</b> a window",
+                  "translatedText": "창문을 열다"
+                }
+              ],
+              "originalMeaning": "열다, 펴다(unfold)"
+            },
+            {
+              "meaning": "개척하다, 개발하다",
+              "examples": [
+                {
+                  "text": "<b>open</b> ground",
+                  "translatedText": "개간하다"
+                }
+              ],
+              "originalMeaning": "개척하다, 개발하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<문·창·대문 등이> 열리다; <종기 등이> 터지다, 갈라지다, 찢어지다, 트이다",
+              "examples": [
+                {
+                  "text": "The door won't <b>open</b>.",
+                  "translatedText": "그 문은 도무지 열리지 않는다."
+                }
+              ],
+              "originalMeaning": "<문·창·대문 등이> 열리다; <종기 등이> 터지다, 갈라지다, 찢어지다, 트이다"
+            },
+            {
+              "meaning": "<방·문 등이> (…에) 면하다; 통하다, 향해 있다, 내다보다 ((to, into, upon))",
+              "examples": [
+                {
+                  "text": "<b>open</b> upon a little garden",
+                  "translatedText": "작은 정원 쪽을 향해 있다"
+                }
+              ],
+              "originalMeaning": "<방·문 등이> (…에) 면하다; 통하다, 향해 있다, 내다보다 ((to, into, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3de779f9b2e84c5590f9b5e021327e45",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3de779f9b2e84c5590f9b5e021327e45",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "opens"
+        },
+        {
+          "type": "과거형",
+          "value": "opened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "opening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "opened"
+        }
+      ],
+      "aliasConjugation": "opens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "64737186a8568b8982777aded5af0334",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 바지 지퍼가 열렸어",
+      "text": "Your fly is <b>open</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "문이 조금씩 움직여 열렸다.",
+      "text": "The door inched <b>open</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "암만해도 문이 안 열린다",
+      "text": "The door will not <b>open</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 문을 밀어 열었다.",
+      "text": "He shoved <b>open</b> the door."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 책을 탁 펼쳤다.",
+      "text": "He flicked <b>open</b> the book."
+    }
+  ],
+  "isWordType": true
+}

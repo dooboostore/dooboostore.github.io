@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "elbow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│elboʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "팔꿈치, (옷의) 팔꿈치",
+              "examples": [],
+              "originalMeaning": "팔꿈치, (옷의) 팔꿈치"
+            },
+            {
+              "meaning": "팔꿈치[L자] 모양의 것; (팔꿈치 모양의) 굽은 관(管); (팔꿈치 모양의) 굽은 이음매; 팔걸이; (팔꿈치 모양의) 굴곡, (하천·도로 등의) 급한 굽이",
+              "examples": [],
+              "originalMeaning": "팔꿈치[L자] 모양의 것; (팔꿈치 모양의) 굽은 관(管); (팔꿈치 모양의) 굽은 이음매; 팔걸이; (팔꿈치 모양의) 굴곡, (하천·도로 등의) 급한 굽이"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "팔꿈치로 쿡 찌르다[떼밀다]",
+              "examples": [
+                {
+                  "text": "<b>elbow</b> people aside[off]",
+                  "translatedText": "사람들을 팔꿈치로 밀어제치다"
+                }
+              ],
+              "originalMeaning": "팔꿈치로 쿡 찌르다[떼밀다]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "밀어제치고 나아가다",
+              "examples": [],
+              "originalMeaning": "밀어제치고 나아가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/006aca7dcbb54b218187222589c2fbae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/006aca7dcbb54b218187222589c2fbae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "elbows"
+        },
+        {
+          "type": "과거형",
+          "value": "elbowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "elbowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "elbowed"
+        }
+      ],
+      "aliasConjugation": "elbows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ff83aa9e39b2591bfa4d46073f3944f0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 군중을 밀치며 나아갔다",
+      "text": "I pushed[elbowed] my way through the crowd."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 팔꿈치를 무릎 위에 올려놓았다.",
+      "text": "She poised her <b>elbow</b> on her knee."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사람들을 떠다밀고 지나갔다",
+      "text": "He elbowed his way through a crowd."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 옷의 팔꿈치가 닳아 뚫어졌다.",
+      "text": "His <b>elbow</b> has worked through the sleeve."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "팔꿈치로 사람들을 떼밀고 지나갔다",
+      "text": "I jostled along[elbowed my way] through the crowd."
+    }
+  ],
+  "isWordType": true
+}

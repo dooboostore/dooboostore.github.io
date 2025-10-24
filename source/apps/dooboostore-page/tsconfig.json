@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext", "WebWorker"],
+    "moduleResolution": "node",
+    "composite": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "noEmit": true,
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@back-end/*": ["back-end/*"],
+      "@front-end/*": ["front-end/*"],
+      "@dooboostore/simple-boot": ["../../packages/@dooboostore/simple-boot/src/*"],
+      "@dooboostore/simple-boot-http-server": ["../../packages/@dooboostore/simple-boot-http-server/src/*"],
+      "@dooboostore/simple-boot-http-server-ssr": ["../../packages/@dooboostore/simple-boot-http-server-ssr/src/*"],
+      "@dooboostore/simple-boot-front": ["../../packages/@dooboostore/simple-boot-front/src/*"],
+      "@dooboostore/core": ["../../packages/@dooboostore/core/src/*"],
+//      "@dooboostore/core": ["../../packages/@dooboostore/core/src/*"],
+      "@dooboostore/core-node": ["../../packages/@dooboostore/core-node/src/*"],
+      "@dooboostore/core-web": ["../../packages/@dooboostore/core-web/src/*"],
+      "@dooboostore/dom-render": ["../../packages/@dooboostore/dom-render/src/*"]
+
+    }
+  },
+  "typeRoots": [
+    "./types", "./node_modules/@types"],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

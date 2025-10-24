@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "city",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(town보다 큰) 도시, 도회",
+              "examples": [
+                {
+                  "text": "do the <b>city</b>",
+                  "translatedText": "시내를 구경하다"
+                }
+              ],
+              "originalMeaning": "(town보다 큰) 도시, 도회"
+            },
+            {
+              "meaning": "시장 또는 시의회의 행정하에 있는 자치체",
+              "examples": [],
+              "originalMeaning": "시장 또는 시의회의 행정하에 있는 자치체"
+            },
+            {
+              "meaning": "cathedral 또는 칙허장(勅許狀)이 있는 도시",
+              "examples": [],
+              "originalMeaning": "cathedral 또는 칙허장(勅許狀)이 있는 도시"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/217c3fde234a487c88fea283abd96f48",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/217c3fde234a487c88fea283abd96f48",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "cities"
+        }
+      ],
+      "aliasConjugation": "cities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "e177c1d77fed6569169761349c4e06d7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시내 각처에 물난리가 났다",
+      "text": "The <b>city</b> was flooded in various places. or There were floods in various parts of the <b>city</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 도시는 폐허가 되었다",
+      "text": "The <b>city</b> is now in ruins."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 도시는 급수가 충분하다.",
+      "text": "This <b>city</b> is well watered."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 마을은 범죄가 빈발하고 있다.",
+      "text": "Crime is rife in our <b>city</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 길은 그 도시로 통하고 있다.",
+      "text": "This road leads to the <b>city</b>."
+    }
+  ],
+  "isWordType": true
+}

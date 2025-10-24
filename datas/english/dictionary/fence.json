@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "fence",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fens"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(대지 등을 구획하는) 울, 둘러막는 것, [영] (목제 등의) 울타리; [미] (벽돌·돌·철제의) 담(cf. HEDGE, PALING)",
+              "examples": [
+                {
+                  "text": "put a high <b>fence</b> around",
+                  "translatedText": "…을 높은 담으로 두르다"
+                }
+              ],
+              "originalMeaning": "(대지 등을 구획하는) 울, 둘러막는 것, [영] (목제 등의) 울타리; [미] (벽돌·돌·철제의) 담(cf. HEDGE, PALING)"
+            },
+            {
+              "meaning": "(마술(馬術) 경기 등의) 장애물(hurdle)",
+              "examples": [
+                {
+                  "text": "put a horse at[to] the <b>fence</b>",
+                  "translatedText": "말에 박차를 가해 장애물을 뛰어넘게 하다"
+                }
+              ],
+              "originalMeaning": "(마술(馬術) 경기 등의) 장애물(hurdle)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 울타리[담]를 치다, 둘러막다 ((around, round)); 담[울타리]으로 분리하다 ((in, off))",
+              "examples": [],
+              "originalMeaning": "…에 울타리[담]를 치다, 둘러막다 ((around, round)); 담[울타리]으로 분리하다 ((in, off))"
+            },
+            {
+              "meaning": "막다, 방호하다(protect) ((from, against))",
+              "examples": [
+                {
+                  "text": "<b>fence</b> a garden from the children",
+                  "translatedText": "아이들이 못 들어오게 정원에 울타리를 두르다"
+                }
+              ],
+              "originalMeaning": "막다, 방호하다(protect) ((from, against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "펜싱하다, 검술을 하다",
+              "examples": [],
+              "originalMeaning": "펜싱하다, 검술을 하다"
+            },
+            {
+              "meaning": "(잘) 얼버무리다, 잘 받아넘기다(parry) ((with))",
+              "examples": [
+                {
+                  "text": "<b>fence</b> with a question",
+                  "translatedText": "질문을 받아넘기다"
+                }
+              ],
+              "originalMeaning": "(잘) 얼버무리다, 잘 받아넘기다(parry) ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bbb29dc9f3ff4cb7a0bd51f6ec9be657",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bbb29dc9f3ff4cb7a0bd51f6ec9be657",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fences"
+        },
+        {
+          "type": "과거형",
+          "value": "fenced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fenced"
+        }
+      ],
+      "aliasConjugation": "fences",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "154ad65e967b9db657e90541f4c3fa7b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 항상 형세를 관망하고 있다",
+      "text": "He always sits on the <b>fence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "말이 마지막 울타리를 넘었다",
+      "text": "The horse cleared the last <b>fence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개는 쇠사슬로 울에 매여 있었다.",
+      "text": "The dog was chained to the <b>fence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산들이 그 골짜기를 에워싸고 있다.",
+      "text": "The mountains <b>fence</b> in the valley."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들이 울타리를 때려 부수었다.",
+      "text": "The children smashed down the <b>fence</b>."
+    }
+  ],
+  "isWordType": true
+}

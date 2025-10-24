@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "reservation",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│rezər│veɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 보류; [UC/] [법] 유보(留保) (조항), 유보권; 제외",
+              "examples": [
+                {
+                  "text": "the <b>reservation</b> of rights",
+                  "translatedText": "권리의 유보"
+                }
+              ],
+              "originalMeaning": "[U] 보류; [UC/] [법] 유보(留保) (조항), 유보권; 제외"
+            },
+            {
+              "meaning": "[종종 pl.] (방·좌석 등의) 예약(booking), 지정, (승차권·입장권 등의) 예약; 예약석[실]([영] booking)",
+              "examples": [
+                {
+                  "text": "a dinner <b>reservation</b>",
+                  "translatedText": "저녁 식사 예약"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] (방·좌석 등의) 예약(booking), 지정, (승차권·입장권 등의) 예약; 예약석[실]([영] booking)"
+            },
+            {
+              "meaning": "제한, 조건, 단서",
+              "examples": [
+                {
+                  "text": "accept a proposal without <b>reservation</b>",
+                  "translatedText": "조건 없이 제안을 수리하다"
+                }
+              ],
+              "originalMeaning": "제한, 조건, 단서"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08d97fa66bd64c19a95816697661fdbc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08d97fa66bd64c19a95816697661fdbc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "53980446d69f64783ab8838908811442",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "베이커 씨께서 오늘 날짜로 예약은 하셨는데 아직 들어오시지 않았습니다",
+      "text": "Mr. Baker made a <b>reservation</b> for today, but he hasn't checked in yet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수요일 오후 1시 30분 로스엔젤레스를 출발해서 목요일 6시 30분 서울에 도착하는 012편에 예약이 되셨습니다",
+      "text": "Your <b>reservation</b> is confirmed for flight 012 departing from Los Angeles at 1:30 p.m. Wednesday and arriving in Seoul at 6:30 p.m. Thursday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "호텔 예약을 확인했다.",
+      "text": "I confirmed our reservations at the hotel."
+    }
+  ],
+  "isWordType": true
+}

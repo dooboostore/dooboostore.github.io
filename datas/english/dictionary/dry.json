@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "entry": "dry",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "draɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "마른, 물기 없는(opp. wet); 말린 <목재 등>; 마른 것으로 만든; 건성(乾性)의, 가래가 나오지 않는",
+              "examples": [
+                {
+                  "text": "a <b>dry</b> house",
+                  "translatedText": "습기 없는 집"
+                }
+              ],
+              "originalMeaning": "마른, 물기 없는(opp. wet); 말린 <목재 등>; 마른 것으로 만든; 건성(乾性)의, 가래가 나오지 않는"
+            },
+            {
+              "meaning": "가문; 건조성의; 갈수(渴水)의, <우물 등이> 말라붙은; <젖소 등이> 젖이 안 나오는; 고체의(cf. LIQUID)",
+              "examples": [
+                {
+                  "text": "a <b>dry</b> season",
+                  "translatedText": "건기(乾期), 갈수기"
+                }
+              ],
+              "originalMeaning": "가문; 건조성의; 갈수(渴水)의, <우물 등이> 말라붙은; <젖소 등이> 젖이 안 나오는; 고체의(cf. LIQUID)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "말리다, 건조시키다; 탈수하다",
+              "examples": [],
+              "originalMeaning": "말리다, 건조시키다; 탈수하다"
+            },
+            {
+              "meaning": "닦아 말리다; <눈물을> 닦아내다, 훔치다",
+              "examples": [
+                {
+                  "text": "<b>dry</b> oneself",
+                  "translatedText": "몸의 물기를 닦다"
+                }
+              ],
+              "originalMeaning": "닦아 말리다; <눈물을> 닦아내다, 훔치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "마르다, 물기가 빠지다; 고갈되다, 바싹 마르다; <소가> 젖이 마르다",
+              "examples": [],
+              "originalMeaning": "마르다, 물기가 빠지다; 고갈되다, 바싹 마르다; <소가> 젖이 마르다"
+            },
+            {
+              "meaning": "<배우가> 대사를 잊다",
+              "examples": [],
+              "originalMeaning": "<배우가> 대사를 잊다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e4078a93cddd40e9a9b0c2514a98938c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e4078a93cddd40e9a9b0c2514a98938c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "drier"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dries"
+        },
+        {
+          "type": "최상급",
+          "value": "driest"
+        },
+        {
+          "type": "복수형",
+          "value": "drys, dries"
+        },
+        {
+          "type": "과거형",
+          "value": "dried"
+        },
+        {
+          "type": "현재 분사",
+          "value": "drying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dried"
+        }
+      ],
+      "aliasConjugation": "drier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "479b1b5a62d53433301ebc26111e5e23",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 빼빼 마른 사람이다",
+      "text": "She's a bag of bones[a <b>dry</b>-bone]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마른 나무가 불이 잘 댕긴다",
+      "text": "<b>Dry</b> wood catches fire easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마른 오징어가 잘 그슬린다",
+      "text": "A dried cuttlefish toasts well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구두를 말릴 때 햇볕을 쐬면 안 된다",
+      "text": "When you <b>dry</b> your shoes, you must not expose them to the sun[must keep them out of the sun]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일로 그는 진이 빠지고 말 것이다.",
+      "text": "The work will drain him <b>dry</b>."
+    }
+  ],
+  "isWordType": true
+}

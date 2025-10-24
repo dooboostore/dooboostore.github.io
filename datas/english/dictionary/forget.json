@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "forget",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fər│ɡet"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "잊다, 망각하다(opp. remember); 생각이 안 나다",
+              "examples": [
+                {
+                  "text": "I'm sorry I've forgotten your name.",
+                  "translatedText": "죄송하지만, 당신의 이름이 생각나지 않습니다."
+                }
+              ],
+              "originalMeaning": "잊다, 망각하다(opp. remember); 생각이 안 나다"
+            },
+            {
+              "meaning": "<…할 것을> 잊다, 게을리하다",
+              "examples": [
+                {
+                  "text": "<b>forget</b> one's duties",
+                  "translatedText": "자기의 직무를 잊다[게을리하다]"
+                }
+              ],
+              "originalMeaning": "<…할 것을> 잊다, 게을리하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잊다, 깜빡 잊다",
+              "examples": [
+                {
+                  "text": "<b>Forget</b> about it.",
+                  "translatedText": "그 일은 잊어 주시오."
+                }
+              ],
+              "originalMeaning": "잊다, 깜빡 잊다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4eb7f8b8d9ce4da5b47ce97fbaba95fc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4eb7f8b8d9ce4da5b47ce97fbaba95fc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "forgets"
+        },
+        {
+          "type": "과거형",
+          "value": "forgot"
+        },
+        {
+          "type": "현재 분사",
+          "value": "forgetting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "forgotten"
+        }
+      ],
+      "aliasConjugation": "forgets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d0895c1d8ee18895356de6aef9c0f3e8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 잊어 주면 좋겠네.",
+      "text": "I wish that forgotten."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아 이런, 열쇠를 두고 왔네",
+      "text": "Dear me! I forgot my key."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 일은 염두에 두지 말라",
+      "text": "Don't think[care] about it. or Dismiss it from your mind. or You had better <b>forget</b> about it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "허! 하마터면 깜빡할 뻔했네",
+      "text": "Oh! I'd almost forgotten ti."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대문 잠그는 것을 잊었다.",
+      "text": "I forgot to lock the gate."
+    }
+  ],
+  "isWordType": true
+}

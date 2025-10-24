@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "room",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ruːm; rʊm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "방, 실(室)",
+              "examples": [
+                {
+                  "text": "a dining <b>room</b>",
+                  "translatedText": "식당"
+                }
+              ],
+              "originalMeaning": "방, 실(室)"
+            },
+            {
+              "meaning": "[pl.] (한 조(組)의) 방, 하숙방, 셋방",
+              "examples": [
+                {
+                  "text": "take <b>rooms</b>",
+                  "translatedText": "방을 빌리다"
+                }
+              ],
+              "originalMeaning": "[pl.] (한 조(組)의) 방, 하숙방, 셋방"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "방을 함께 차지하다, 동거하다 ((together))",
+              "examples": [
+                {
+                  "text": "The students <b>room</b> together in the dormitory.",
+                  "translatedText": "학생들은 기숙사에 함께 살고 있다."
+                }
+              ],
+              "originalMeaning": "방을 함께 차지하다, 동거하다 ((together))"
+            },
+            {
+              "meaning": "(남과) 동숙[합숙]하다 ((with)); (장소에) 묵다, 유숙하다, 하숙하다 ((at))",
+              "examples": [
+                {
+                  "text": "I used to <b>room</b> with my friend in London.",
+                  "translatedText": "런던에서 나는 친구와 함께 하숙하고 있었다."
+                }
+              ],
+              "originalMeaning": "(남과) 동숙[합숙]하다 ((with)); (장소에) 묵다, 유숙하다, 하숙하다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[미] <손님을> 재우다, <하숙인에게> 방을 빌려 주다; <손님 등을> 방으로 안내하다[묵게 하다]",
+              "examples": [],
+              "originalMeaning": "[미] <손님을> 재우다, <하숙인에게> 방을 빌려 주다; <손님 등을> 방으로 안내하다[묵게 하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/14c2f43e33b742e29c6f89b41ad4dbca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/14c2f43e33b742e29c6f89b41ad4dbca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rooms"
+        },
+        {
+          "type": "과거형",
+          "value": "roomed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rooming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "roomed"
+        }
+      ],
+      "aliasConjugation": "rooms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c04a4f1dd39e2a996a2a425678214d30",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 방 청소는 네 책임이다",
+      "text": "You are responsible for the sweeping of this <b>room</b>. or It is your duty to sweep this <b>room</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방이 텅텅 비어 있다",
+      "text": "The <b>room</b> is all empty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 방은 참 덥다",
+      "text": "This <b>room</b> is really hot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 방은 세들려는 사람이 많다.",
+      "text": "The <b>room</b> lets well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 방은 항상 춥다",
+      "text": "It's always cold in this <b>room</b>."
+    }
+  ],
+  "isWordType": true
+}

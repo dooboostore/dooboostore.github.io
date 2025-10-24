@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "join",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dʒɔɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "결합하다, 맞붙이다, 단단히 고정시키다, 접합하다(fasten) ((together, up, to)), (=unite)",
+              "examples": [
+                {
+                  "text": "<b>join</b> one thing to another",
+                  "translatedText": "어떤 것을 딴 것과 결합하다"
+                }
+              ],
+              "originalMeaning": "결합하다, 맞붙이다, 단단히 고정시키다, 접합하다(fasten) ((together, up, to)), (=<span class='related_word' lang='en' >unite</span>)"
+            },
+            {
+              "meaning": "연결하다, 잇다, 갖다 붙이다(connect) ((to)); 연락하다",
+              "examples": [
+                {
+                  "text": "<b>join</b> end to end",
+                  "translatedText": "끝과 끝을 잇다"
+                }
+              ],
+              "originalMeaning": "연결하다, 잇다, 갖다 붙이다(connect) ((to)); 연락하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연결[결합]되다, 합쳐지다(meet, come together)",
+              "examples": [],
+              "originalMeaning": "연결[결합]되다, 합쳐지다(meet, come together)"
+            },
+            {
+              "meaning": "<터 등이> 인접하다, 접하다",
+              "examples": [
+                {
+                  "text": "Our land joins along the brook.",
+                  "translatedText": "우리 땅은 개천에 접해 있다."
+                }
+              ],
+              "originalMeaning": "<터 등이> 인접하다, 접하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "접합, 합류, 연결",
+              "examples": [],
+              "originalMeaning": "접합, 합류, 연결"
+            },
+            {
+              "meaning": "이은 자리[점, 선, 면], 이음매(joint), 합류 지점",
+              "examples": [],
+              "originalMeaning": "이은 자리[점, 선, 면], 이음매(joint), 합류 지점"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/205c70d20a634ff18caa132885d8aff6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/205c70d20a634ff18caa132885d8aff6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "joins"
+        },
+        {
+          "type": "과거형",
+          "value": "joined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "joining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "joined"
+        }
+      ],
+      "aliasConjugation": "joins",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "72bc5aec22c674393a26046c6a6b2d16",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 땅과 내 땅은 만난다",
+      "text": "His land joins mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나도 일행에 넣어 주시오",
+      "text": "Please let me <b>join</b> you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 집 뜰은 우리집 뜰과 인접해 있다.",
+      "text": "His yard joins mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 강은 한강과 합류한다",
+      "text": "That river joins the Han river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 땅은 개천에 접해 있다.",
+      "text": "Our land joins along the brook."
+    }
+  ],
+  "isWordType": true
+}

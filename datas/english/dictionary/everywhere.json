@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "everywhere",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│evriwer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "어디에나, 도처에",
+              "examples": [],
+              "originalMeaning": "어디에나, 도처에"
+            },
+            {
+              "meaning": "[접속사적으로] 어디에 …라도",
+              "examples": [
+                {
+                  "text": "<b>Everywhere</b> we go, people are much the same.",
+                  "translatedText": "어디를 가든지 인간은 별 차이가 없다."
+                }
+              ],
+              "originalMeaning": "[접속사적으로] 어디에 …라도"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모든 곳",
+              "examples": [],
+              "originalMeaning": "모든 곳"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d787922336564a049168ed381379bd98",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d787922336564a049168ed381379bd98",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "055f1df015d8f02218e5a7637e71bd2c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 아무 데나 있다",
+      "text": "<b>Everywhere</b> you go, you will find it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 개는 아무데서나 대소변을 봐",
+      "text": "My dog has a pee and pooh <b>everywhere</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 개는 어디를 가나 나를 따라온다",
+      "text": "This dog follows me <b>everywhere</b> I go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어디를 가든지 인간은 별 차이가 없다.",
+      "text": "<b>Everywhere</b> we go, people are much the same."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어디에 가나 인정에는 변함이 없다",
+      "text": "Human nature is the same <b>everywhere</b>[all over]."
+    }
+  ],
+  "isWordType": true
+}
