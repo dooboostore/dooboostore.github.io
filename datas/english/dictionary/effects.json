@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "effect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈfekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "결과(consequence), (=result)",
+              "examples": [
+                {
+                  "text": "cause and <b>effect</b>",
+                  "translatedText": "원인과 결과, 인과"
+                }
+              ],
+              "originalMeaning": "결과(consequence), (=<span class='related_word' lang='en' >result</span>)"
+            },
+            {
+              "meaning": "[UC/] 효과, 영향; (법률 등의) 효력; (약 등의) 효험, 효능",
+              "examples": [
+                {
+                  "text": "side <b>effect</b> s",
+                  "translatedText": "부작용"
+                }
+              ],
+              "originalMeaning": "[UC/] 효과, 영향; (법률 등의) 효력; (약 등의) 효험, 효능"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<변화 등을> 초래하다; <목적·계획 등을> 달성하다, 이루다",
+              "examples": [],
+              "originalMeaning": "<변화 등을> 초래하다; <목적·계획 등을> 달성하다, 이루다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e7c00d2dc6904d878203587e4d73154a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e7c00d2dc6904d878203587e4d73154a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "effects"
+        },
+        {
+          "type": "과거형",
+          "value": "effected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "effecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "effected"
+        }
+      ],
+      "aliasConjugation": "effects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d6c1f92cfb4242851ab2d934e5bf0e80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 술은 뒤끝이 좋지 않다",
+      "text": "This liquor has[leaves] nasty aftereffects. or This liquor gives a head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 잘 들었다",
+      "text": "This medicine has taken <b>effect</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "약이 듣지 않게 됐다",
+      "text": "The drug has lost its <b>effect</b> on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그렇게 하면 전치될 것입니다",
+      "text": "It will <b>effect</b> a complete cure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "원인 없이 결과가 생기지 않는다",
+      "text": "An <b>effect</b> presupposes a cause."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "symbolize",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪmbəlaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "상징하다, …의 부호[표상]이다",
+              "examples": [
+                {
+                  "text": "A lily symbolizes purity.",
+                  "translatedText": "백합은 순결을 상징한다."
+                }
+              ],
+              "originalMeaning": "상징하다, …의 부호[표상]이다"
+            },
+            {
+              "meaning": "부호[기호]로 나타내다, 상징[표상]화하다",
+              "examples": [
+                {
+                  "text": "<b>symbolize</b> speech sounds",
+                  "translatedText": "언어음을 기호화하다"
+                }
+              ],
+              "originalMeaning": "부호[기호]로 나타내다, 상징[표상]화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "상징을 사용하다",
+              "examples": [],
+              "originalMeaning": "상징을 사용하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/747249b3dd2940f1896ba7838e7b65eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/747249b3dd2940f1896ba7838e7b65eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "symbolizes"
+        },
+        {
+          "type": "과거형",
+          "value": "symbolized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "symbolizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "symbolized"
+        }
+      ],
+      "aliasConjugation": "symbolizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "69e00b54e4fa42a318ac5cb0639072ba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국에서는 소나무가 선비의 절개를 나타낸다",
+      "text": "In Korea, the pine symbolizes scholarly fidelity."
+    }
+  ],
+  "isWordType": true
+}

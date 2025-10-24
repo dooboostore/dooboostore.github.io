@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "partner",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɑːrtnə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "동료, 협력자 ((in, of))",
+              "examples": [
+                {
+                  "text": "a <b>partner</b> in crime",
+                  "translatedText": "공범자"
+                }
+              ],
+              "originalMeaning": "동료, 협력자 ((in, of))"
+            },
+            {
+              "meaning": "(댄스 등의) 상대, 파트너; (게임의) 자기편, 한 패",
+              "examples": [],
+              "originalMeaning": "(댄스 등의) 상대, 파트너; (게임의) 자기편, 한 패"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "제휴[협력]하다, 동료로서 함께 일하다; 사귀다, 어울리다, 짝짓다 ((up, with)); …의 조합원[사원]이다",
+              "examples": [],
+              "originalMeaning": "제휴[협력]하다, 동료로서 함께 일하다; 사귀다, 어울리다, 짝짓다 ((up, with)); …의 조합원[사원]이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "짝[파트너]이 되다 ((up, with))",
+              "examples": [],
+              "originalMeaning": "짝[파트너]이 되다 ((up, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3e03c9f6b0bf452394af04640d11aad4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3e03c9f6b0bf452394af04640d11aad4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "partners"
+        },
+        {
+          "type": "과거형",
+          "value": "partnered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "partnering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "partnered"
+        }
+      ],
+      "aliasConjugation": "partners",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0f7e54c83851a97eda3fda793031774e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "역시 결혼 상대는 성격을 보고 골라야 한다",
+      "text": "When all is said and done, one's choice of a marriage <b>partner</b> should be based on character."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람들이 쌍쌍이 끼고 춤을 추었다",
+      "text": "They danced holding their partners each."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자신의 과실을 동업자 탓으로 돌리고 발뺌했다",
+      "text": "He made an excuse for his fault by blaming his <b>partner</b>."
+    }
+  ],
+  "isWordType": true
+}

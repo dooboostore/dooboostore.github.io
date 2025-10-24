@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "something",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌmθɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "무엇인가, 어떤 것, 어떤 일; 마실 것, 먹을 것 ((",
+              "examples": [
+                {
+                  "text": "<b>something</b> of the kind[sort]",
+                  "translatedText": "뭔가 그런 것"
+                }
+              ],
+              "originalMeaning": "무엇인가, 어떤 것, 어떤 일; 마실 것, 먹을 것 (("
+            },
+            {
+              "meaning": "어떤 진리, 다소의 가치[의의], (고려·주목·흥미에 해당하는) 무언가",
+              "examples": [
+                {
+                  "text": "There's <b>something</b> in[to] what he says.",
+                  "translatedText": "그의 말에는 일리가 있다."
+                }
+              ],
+              "originalMeaning": "어떤 진리, 다소의 가치[의의], (고려·주목·흥미에 해당하는) 무언가"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "얼마간, 다소, 조금",
+              "examples": [
+                {
+                  "text": "It cost <b>something</b> over $10.",
+                  "translatedText": "10달러 좀 더 들었다."
+                }
+              ],
+              "originalMeaning": "얼마간, 다소, 조금"
+            },
+            {
+              "meaning": "꽤, 상당히",
+              "examples": [
+                {
+                  "text": "The engine sounds <b>something</b> awful.",
+                  "translatedText": "이 엔진은 정말 요란한 소리를 낸다."
+                }
+              ],
+              "originalMeaning": "꽤, 상당히"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[구어] 중요한 것[사람], 다행한 일",
+              "examples": [
+                {
+                  "text": "He thinks he is <b>something</b>.",
+                  "translatedText": "그는 자기를 상당한 사람이라고 생각하고 있다."
+                }
+              ],
+              "originalMeaning": "[구어] 중요한 것[사람], 다행한 일"
+            },
+            {
+              "meaning": "[a ~, ~s] 어떤 것",
+              "examples": [
+                {
+                  "text": "an indefinable <b>something</b>",
+                  "translatedText": "무어라 형언하기 어려운 것"
+                }
+              ],
+              "originalMeaning": "[a ~, ~s] 어떤 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/204e45d17ca046d0bb4562485616cf2f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/204e45d17ca046d0bb4562485616cf2f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3f6a045b434fcd2ca9b6be4637b42ef4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 가지 소청이 있습니다",
+      "text": "There is <b>something</b> I want to ask you. or I have a request to make of you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "10 달러 좀 더 들었다.",
+      "text": "It cost <b>something</b> over $10."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아프거나 무슨 일이 있다.",
+      "text": "He is ill or <b>something</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너에게 할 말이 있다.",
+      "text": "I have <b>something</b> to tell ye."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잘못된 일을 해 놓았다",
+      "text": "I have done <b>something</b> wrong."
+    }
+  ],
+  "isWordType": true
+}

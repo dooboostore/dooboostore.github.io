@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "seek",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "siːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "찾다, 찾으러 가다; 조사[탐사]하다, 모색하다, 탐구하다; 찾아내다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>seek</b> the truth",
+                  "translatedText": "진리를 탐구하다"
+                }
+              ],
+              "originalMeaning": "찾다, 찾으러 가다; 조사[탐사]하다, 모색하다, 탐구하다; 찾아내다 ((out))"
+            },
+            {
+              "meaning": "<부·명성 등을> 추구하다, 얻으려고 하다, <충고 등을> 구하다, <설명 등을> 요구하다",
+              "examples": [
+                {
+                  "text": "<b>seek</b> one's[a] fortune",
+                  "translatedText": "한 재산 모으려 하다"
+                }
+              ],
+              "originalMeaning": "<부·명성 등을> 추구하다, 얻으려고 하다, <충고 등을> 구하다, <설명 등을> 요구하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "수색하다, 탐색하다, 찾다 ((for)), 샅샅이 찾다[뒤지다] ((through))",
+              "examples": [
+                {
+                  "text": "He is <b>seeking</b> for employment.",
+                  "translatedText": "그는 일자리를 찾고 있다."
+                }
+              ],
+              "originalMeaning": "수색하다, 탐색하다, 찾다 ((for)), 샅샅이 찾다[뒤지다] ((through))"
+            },
+            {
+              "meaning": "추구하다, 얻으려 하다, 구하다 ((for, after))",
+              "examples": [
+                {
+                  "text": "He is always <b>seeking</b> for[after] power.",
+                  "translatedText": "그는 항상 권력을 추구하고 있다."
+                }
+              ],
+              "originalMeaning": "추구하다, 얻으려 하다, 구하다 ((for, after))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(열·소리·광선·방사선 등의) 목표물 탐색; [컴퓨터] 시크, 탐색 ((디스크 기억장치의 읽기·쓰기 헤드를 특정 위치로 이동시킴))",
+              "examples": [],
+              "originalMeaning": "(열·소리·광선·방사선 등의) 목표물 탐색; [컴퓨터] 시크, 탐색 ((디스크 기억장치의 읽기·쓰기 헤드를 특정 위치로 이동시킴))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/462418af30974b7487fbbfbbf95c8235",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/462418af30974b7487fbbfbbf95c8235",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "seeks"
+        },
+        {
+          "type": "과거형",
+          "value": "sought"
+        },
+        {
+          "type": "현재 분사",
+          "value": "seeking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sought"
+        }
+      ],
+      "aliasConjugation": "seeks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "63fe2f8244588300110f65e1a591996c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 약초를 찾아 숲으로 갔다.",
+      "text": "He sought the woods for herbs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 우리집으로 피난을 왔다",
+      "text": "They sought shelter at my house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 사람은 흔하지 않다",
+      "text": "You will have to <b>seek</b> far and wide to find such a man. or A man of his kind is rarely to be met with."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 언제나 노는 데 급급하다",
+      "text": "He is always busy <b>seeking</b> pleasure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 항상 권력을 추구하고 있다.",
+      "text": "He is always <b>seeking</b> for[after] power."
+    }
+  ],
+  "isWordType": true
+}

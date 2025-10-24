@@ -1,0 +1,23 @@
+<section class="content-section" dr-if="@this@.personas && @this@.personas.length > 0">
+    <h2 class="section-title">
+        <i class="fa-brands fa-youtube"></i>
+        YouTube Personas
+    </h2>
+    <div class="persona-grid">
+        <div class="persona-card" dr-for-of="@this@.personas" dr-option-item-variable-name="persona">
+            <dr-a href="${'/youtube-persona/' + encodeURIComponent(#persona#.persona)}$" class="persona-link">
+                <div class="persona-emojis">
+                    <span dr-for-of="#persona#.categoryEmojis" dr-option-item-variable-name="emoji" class="emoji">${#emoji#}$</span>
+                </div>
+                <h3 class="persona-title">${#persona#.persona}$</h3>
+                <div class="persona-keywords">
+                    <span dr-for-of="#persona#.keywords" dr-option-item-variable-name="keyword" class="keyword">${#keyword#}$</span>
+                </div>
+            </dr-a>
+        </div>
+    </div>
+</section>
+
+<section class="content-section" dr-if="!@this@.personas || @this@.personas.length === 0">
+    <div class="loading">Loading personas...</div>
+</section>

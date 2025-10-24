@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "confuse",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈfjuːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "혼동하다, 헛갈리게 하다, 잘못 구별하다",
+              "examples": [
+                {
+                  "text": "<b>confuse</b> liberty with license",
+                  "translatedText": "자유를 방종과 혼동하다"
+                }
+              ],
+              "originalMeaning": "혼동하다, 헛갈리게 하다, 잘못 구별하다"
+            },
+            {
+              "meaning": "어리둥절하게 하다(perplex), 당황하게 하다 (→confused)",
+              "examples": [],
+              "originalMeaning": "어리둥절하게 하다(perplex), 당황하게 하다 (→<span class='related_word' lang='en' >confused</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구별[식별]하지 못하다, 혼동하다",
+              "examples": [],
+              "originalMeaning": "구별[식별]하지 못하다, 혼동하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c7f787bebb5b4ee48770b30095ae9815",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c7f787bebb5b4ee48770b30095ae9815",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "confuses"
+        },
+        {
+          "type": "과거형",
+          "value": "confused"
+        },
+        {
+          "type": "현재 분사",
+          "value": "confusing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "confused"
+        }
+      ],
+      "aliasConjugation": "confuses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "60e99dcad8b94ccd5b7d7cea0fa9ec73",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "뜻밖의 질문을 받고 나는 당황했다",
+      "text": "I got confused at the unexpected question."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 태도가 돌변해서 나는 당혹했다",
+      "text": "I was confused[puzzled] by his sudden change of attitude."
+    }
+  ],
+  "isWordType": true
+}

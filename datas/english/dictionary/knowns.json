@@ -1,0 +1,171 @@
+{
+  "items": [
+    {
+      "entry": "known",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "noʊn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "KNOW의 과거분사",
+              "examples": [],
+              "originalMeaning": "KNOW의 과거분사"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 알려진, 이미 알고 있는",
+              "examples": [
+                {
+                  "text": "a <b>known</b> number",
+                  "translatedText": "[수학] 기지수"
+                }
+              ],
+              "originalMeaning": "[A] 알려진, 이미 알고 있는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기지수(known quantity)",
+              "examples": [],
+              "originalMeaning": "기지수(<b>known</b> quantity)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2003eb709193452dafd77c4b54d882b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2003eb709193452dafd77c4b54d882b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "130295d0a80ea7c08928ee1b93957bc3",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "know",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "noʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "알다, 알고 있다, 이해하다",
+              "examples": [
+                {
+                  "text": "She is <b>known</b> as a pop singer.",
+                  "translatedText": "그녀는 팝송 가수로 알려져 있다."
+                }
+              ],
+              "originalMeaning": "알다, 알고 있다, 이해하다"
+            },
+            {
+              "meaning": "(잘) 알고 있다, …에 정통하다",
+              "examples": [
+                {
+                  "text": "know French very well",
+                  "translatedText": "프랑스어가 유창하다"
+                }
+              ],
+              "originalMeaning": "(잘) 알고 있다, …에 정통하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(틀림없이) 알고 있다 ((about, of))",
+              "examples": [],
+              "originalMeaning": "(틀림없이) 알고 있다 ((about, of))"
+            },
+            {
+              "meaning": "알다, (상황·일어난 일 등을) 인식하다",
+              "examples": [
+                {
+                  "text": "I don't know about that.",
+                  "translatedText": "그 일에 관해서는 모른다."
+                }
+              ],
+              "originalMeaning": "알다, (상황·일어난 일 등을) 인식하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지식(knowledge), 숙지(熟知)",
+              "examples": [],
+              "originalMeaning": "지식(knowledge), 숙지(熟知)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92c64abe5fd64b4d94ba0a899078b98f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92c64abe5fd64b4d94ba0a899078b98f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "knows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b88cb63ba4b6aa930962661259791c8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 집안은 좋은 집안이다",
+      "text": "He is from a well-<b>known</b> family."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 학자로서 영명이 높다",
+      "text": "He is distinguished[well-<b>known</b>] as a scholar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 미술 방면에서는 매우 유명하다",
+      "text": "She is quite well-<b>known</b> in the field of art."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 유명 작가의 소설을 대작했다",
+      "text": "He ghostwrote a book for a well-<b>known</b> novelist."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 신랄한 비평으로 유명하다",
+      "text": "He is well-<b>known</b> for his sharp[harsh, severe] criticism."
+    }
+  ],
+  "isWordType": true
+}

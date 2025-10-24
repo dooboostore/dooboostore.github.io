@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "blanket",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈblæŋkɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "담요, 모포",
+              "examples": [],
+              "originalMeaning": "담요, 모포"
+            },
+            {
+              "meaning": "(말·개 등의) 덮개(covering)",
+              "examples": [],
+              "originalMeaning": "(말·개 등의) 덮개(covering)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "총괄적인, 포괄적인, 전면적인, 전체에 통하는",
+              "examples": [
+                {
+                  "text": "a <b>blanket</b> bill[clause]",
+                  "translatedText": "총괄적 의안[조항]"
+                }
+              ],
+              "originalMeaning": "총괄적인, 포괄적인, 전면적인, 전체에 통하는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "담요로 덮다",
+              "examples": [],
+              "originalMeaning": "담요로 덮다"
+            },
+            {
+              "meaning": "[보통 수동형으로] 온통 뒤덮다 ((with, in))",
+              "examples": [
+                {
+                  "text": "The room was blanketed with dust.",
+                  "translatedText": "그 방은 먼지투성이였다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] 온통 뒤덮다 ((with, in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6706b500b42b4b178333807369f3052a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6706b500b42b4b178333807369f3052a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blankets"
+        },
+        {
+          "type": "과거형",
+          "value": "blanketed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blanketing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blanketed"
+        }
+      ],
+      "aliasConjugation": "blankets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7fa8de0fc66c14aabc5bf7800b387ddd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 웃옷은 담요도 된다",
+      "text": "His coat doubles as a <b>blanket</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물과 담요를 더 보내주시오.",
+      "text": "Send us more water and blankets."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "눈이 땅 위에 하얗게 덮여 있다",
+      "text": "A <b>blanket</b> of snow lay on the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 산의 중복은 눈으로 덮여 있다",
+      "text": "The upper half of the mountain is enveloped[blanketed] in snow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수재민들에게 모포가 무상으로 배급되었다",
+      "text": "Blankets were distributed free of charge to flood victims."
+    }
+  ],
+  "isWordType": true
+}

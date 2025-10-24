@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "publish",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpʌblɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발표[공표]하다, 널리 알리다, <소문 등을> 퍼뜨리다",
+              "examples": [
+                {
+                  "text": "<b>publish</b> his marriage",
+                  "translatedText": "그의 결혼을 발표하다"
+                }
+              ],
+              "originalMeaning": "발표[공표]하다, 널리 알리다, <소문 등을> 퍼뜨리다"
+            },
+            {
+              "meaning": "<법령 등을> 공포하다",
+              "examples": [
+                {
+                  "text": "<b>publish</b> an edict[a law]",
+                  "translatedText": "칙령[법령]을 공포하다"
+                }
+              ],
+              "originalMeaning": "<법령 등을> 공포하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "출판하다",
+              "examples": [],
+              "originalMeaning": "출판하다"
+            },
+            {
+              "meaning": "<작품이> 출판되다",
+              "examples": [],
+              "originalMeaning": "<작품이> 출판되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/181814bf55cd48e3baeb23e6d54a4fb9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/181814bf55cd48e3baeb23e6d54a4fb9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "publishes"
+        },
+        {
+          "type": "과거형",
+          "value": "published"
+        },
+        {
+          "type": "현재 분사",
+          "value": "publishing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "published"
+        }
+      ],
+      "aliasConjugation": "publishes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "38e5d8edf6e4cc9f65cbf5f4fb7dc9b5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "작년에 그들은 50가지를 출판했다.",
+      "text": "They <b>published</b> 50 titles last year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 연구의 결과를 내놓았다",
+      "text": "He <b>published</b> the result of his research."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사전은 내달에 발간된다",
+      "text": "The dictionary will be <b>published</b> next month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 잡지는 한 달에 두 번 발행된다.",
+      "text": "This magazine is <b>published</b> twice a month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 모 일간 신문에 연재되었다",
+      "text": "It was <b>published</b> serially in a daily newspaper."
+    }
+  ],
+  "isWordType": true
+}

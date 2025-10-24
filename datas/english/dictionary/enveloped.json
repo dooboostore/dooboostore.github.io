@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "envelop",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈveləp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[문어] 싸다(wrap); 봉하다, 덮어싸다; 감추다(hide, conceal) ((in))",
+              "examples": [
+                {
+                  "text": "The long cape <b>enveloped</b> the baby completely.",
+                  "translatedText": "긴 케이프로 아기를 폭 쌌다."
+                }
+              ],
+              "originalMeaning": "[문어] 싸다(wrap); 봉하다, 덮어싸다; 감추다(hide, conceal) ((in))"
+            },
+            {
+              "meaning": "[군사] <적을> 포위하다(surround), 공격하다",
+              "examples": [],
+              "originalMeaning": "[군사] <적을> 포위하다(surround), 공격하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=ENVELOPE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>ENVELOPE</b></span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f4139f90c0e84a26abb2f92720edd6ea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f4139f90c0e84a26abb2f92720edd6ea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "envelops"
+        },
+        {
+          "type": "과거형",
+          "value": "enveloped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "enveloping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "enveloped"
+        }
+      ],
+      "aliasConjugation": "envelops",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8d16973b1c58d8795097353ce618256b",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "envelope",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│envəloʊp; │ɑːnvəloʊp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "봉투",
+              "examples": [],
+              "originalMeaning": "봉투"
+            },
+            {
+              "meaning": "싸개, 씌우개; 외피(外皮)",
+              "examples": [],
+              "originalMeaning": "싸개, 씌우개; 외피(外皮)"
+            },
+            {
+              "meaning": "(기구의) 기낭(氣囊)(gasbag), 기낭 외피, [전자] 진공관을 싸는 기밀(氣密)의 금속 또는 유리",
+              "examples": [],
+              "originalMeaning": "(기구의) 기낭(氣囊)(gasbag), 기낭 외피, [전자] 진공관을 싸는 기밀(氣密)의 금속 또는 유리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/94b49d1d35f343c9945cb513582ddbe5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/94b49d1d35f343c9945cb513582ddbe5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "770e11bdb5276de4e65d55029aeb2a55",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 문제는 신비에 싸여 있다",
+      "text": "The subject is <b>enveloped</b>[veiled] in mystery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "긴 케이프로 아기를 폭 쌌다.",
+      "text": "The long cape <b>enveloped</b> the baby completely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "봉투에 넣을 편지지가 많이 있다",
+      "text": "I have a lot of leaflets to stuff into envelopes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 산의 중복은 눈으로 덮여 있다",
+      "text": "The upper half of the mountain is <b>enveloped</b>[blanketed] in snow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "반송용 봉투를 다음 주소로 부쳐라",
+      "text": "Send a stamped self-addressed <b>envelope</b> to the following address."
+    }
+  ],
+  "isWordType": true
+}

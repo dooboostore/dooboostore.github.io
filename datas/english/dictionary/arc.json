@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "entry": "arc",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɑːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[기하] 호(弧), 원호(圓弧); 호형(弧形), 궁형(弓形)",
+              "examples": [],
+              "originalMeaning": "[기하] 호(弧), 원호(圓弧); 호형(弧形), 궁형(弓形)"
+            },
+            {
+              "meaning": "전호(電弧), 아크",
+              "examples": [],
+              "originalMeaning": "전호(電弧), 아크"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "호광(弧光)을 발하다",
+              "examples": [],
+              "originalMeaning": "호광(弧光)을 발하다"
+            },
+            {
+              "meaning": "호상(弧狀)[궁상]을 그리다, 호(弧)를 이루어 움직이다",
+              "examples": [],
+              "originalMeaning": "호상(弧狀)[궁상]을 그리다, 호(弧)를 이루어 움직이다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "아크[전호]의",
+              "examples": [],
+              "originalMeaning": "아크[전호]의"
+            },
+            {
+              "meaning": "<사인·코사인 등 삼각 함수가> 역의",
+              "examples": [],
+              "originalMeaning": "<사인·코사인 등 삼각 함수가> 역의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/602c3a2fa095430d80aecfa168eacb2b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/602c3a2fa095430d80aecfa168eacb2b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "arcs"
+        },
+        {
+          "type": "과거형",
+          "value": "arced, arcked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "arcing, arcking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "arced, arcked"
+        }
+      ],
+      "aliasConjugation": "arcs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6ac67fcf579ee80ceb13470cbdd657f5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "ARC",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "[병리] AIDS-related complex[condition], American Red Cross",
+              "examples": [],
+              "originalMeaning": "[병리] AIDS-related complex[condition], American Red Cross"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/94909e8634304ba7999a8fce24335917",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/94909e8634304ba7999a8fce24335917",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5fb8dc5b3974171d5cd337fd6be3069c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파리의 개선문으로부터 수많은 도로가 사통팔달해 있다",
+      "text": "A number of avenues radiate from the <b>Arc</b> de Triomphe in Paris."
+    }
+  ],
+  "isWordType": true
+}

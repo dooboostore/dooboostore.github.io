@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "sense",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sens"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "감각, 오감(五感)의 하나, 감각 기관",
+              "examples": [
+                {
+                  "text": "the (five) <b>senses</b>",
+                  "translatedText": "오감"
+                }
+              ],
+              "originalMeaning": "감각, 오감(五感)의 하나, 감각 기관"
+            },
+            {
+              "meaning": "[the ~, a ~] (막연한) 느낌, 기분, 인상, …감, 심정, 지각",
+              "examples": [
+                {
+                  "text": "She had a <b>sense</b> that the baby was in danger.",
+                  "translatedText": "그녀는 아기가 위험하다고 느꼈다."
+                }
+              ],
+              "originalMeaning": "[the ~, a ~] (막연한) 느낌, 기분, 인상, …감, 심정, 지각"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "느끼다, 감각으로 분별하다",
+              "examples": [
+                {
+                  "text": "He vaguely sensed that danger was approaching.",
+                  "translatedText": "그는 위험이 다가오고 있음을 어렴풋이 느꼈다."
+                }
+              ],
+              "originalMeaning": "느끼다, 감각으로 분별하다"
+            },
+            {
+              "meaning": "납득하다, 알아채다, 깨닫다(understand)",
+              "examples": [
+                {
+                  "text": "The president sensed the grave national danger.",
+                  "translatedText": "대통령은 국가적 중대 위기를 깨달았다."
+                }
+              ],
+              "originalMeaning": "납득하다, 알아채다, 깨닫다(understand)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/961ce4775cfd45f39d617ef49ace31d3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/961ce4775cfd45f39d617ef49ace31d3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "senses"
+        },
+        {
+          "type": "과거형",
+          "value": "sensed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sensing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sensed"
+        }
+      ],
+      "aliasConjugation": "senses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7609cdd7e291f102b333e29d51ecb3bd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 통 분별이 없다.",
+      "text": "He hasn’t a grain of <b>sense</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그에게도 더러 염치는 있다",
+      "text": "He has some <b>sense</b> of honor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "낯간지러워서 그런 말은 못하겠다",
+      "text": "I am ashamed to say such a thing. Or My <b>sense</b> of shame forbids me to say such a thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 방향 감각이 없다",
+      "text": "I have a poor <b>sense</b> of direction."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어지간히 이해력이 좋다",
+      "text": "He has a fair amount of <b>sense</b>."
+    }
+  ],
+  "isWordType": true
+}

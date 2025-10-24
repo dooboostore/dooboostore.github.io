@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "lounge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "laʊndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "어슬렁어슬렁 거닐다 ((around, along))",
+              "examples": [
+                {
+                  "text": "<b>lounge</b> around the hotel lobby",
+                  "translatedText": "호텔 로비를 어슬렁거리다"
+                }
+              ],
+              "originalMeaning": "어슬렁어슬렁 거닐다 ((around, along))"
+            },
+            {
+              "meaning": "빈둥빈둥 놀고 지내다(idle) ((about, around))",
+              "examples": [],
+              "originalMeaning": "빈둥빈둥 놀고 지내다(idle) ((about, around))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 ~ away로] <시간을> 빈둥빈둥 보내다 ((away, out))",
+              "examples": [
+                {
+                  "text": "We lounged awaythe afternoon at the seashore.",
+                  "translatedText": "우리들은 바닷가에서 오후 시간을 빈둥빈둥 보냈다."
+                }
+              ],
+              "originalMeaning": "[보통 ~ away로] <시간을> 빈둥빈둥 보내다 ((away, out))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "어슬렁어슬렁 거닒, 만보(漫步)",
+              "examples": [],
+              "originalMeaning": "어슬렁어슬렁 거닒, 만보(漫步)"
+            },
+            {
+              "meaning": "(호텔 등의) 로비, 사교실, (여관·클럽 등의) 휴게실; 거실; (공항 등의) 대합실",
+              "examples": [
+                {
+                  "text": "<b>lounge</b> hall",
+                  "translatedText": "(개인 집의) 오락실"
+                }
+              ],
+              "originalMeaning": "(호텔 등의) 로비, 사교실, (여관·클럽 등의) 휴게실; 거실; (공항 등의) 대합실"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e3e4c181461e48b19697c4e795d29abd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e3e4c181461e48b19697c4e795d29abd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lounges"
+        },
+        {
+          "type": "과거형",
+          "value": "lounged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lounging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lounged"
+        }
+      ],
+      "aliasConjugation": "lounges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "24430096c07a9cea2b5a66f2aaed7439",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 거실에서 빈둥거리고 있다",
+      "text": "He just lounges around in the living room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리들은 바닷가에서 오후 시간을 빈둥빈둥 보냈다.",
+      "text": "We lounged away the afternoon at the seashore."
+    }
+  ],
+  "isWordType": true
+}

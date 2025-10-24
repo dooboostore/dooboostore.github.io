@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "heat",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hiːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "열, 뜨거움, 더움; 더위, 더운 기운; [물리] 열",
+              "examples": [
+                {
+                  "text": "in the <b>heat</b> of the day",
+                  "translatedText": "한낮에; 염천(炎天)하에서"
+                }
+              ],
+              "originalMeaning": "열, 뜨거움, 더움; 더위, 더운 기운; [물리] 열"
+            },
+            {
+              "meaning": "열도, 온도 ((of))",
+              "examples": [
+                {
+                  "text": "moderate <b>heat</b>",
+                  "translatedText": "적당한 온도"
+                }
+              ],
+              "originalMeaning": "열도, 온도 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "뜨겁게 하다, 가열하다",
+              "examples": [
+                {
+                  "text": "<b>heat</b> the water to 40 degrees",
+                  "translatedText": "물을 40도까지 데우다"
+                }
+              ],
+              "originalMeaning": "뜨겁게 하다, 가열하다"
+            },
+            {
+              "meaning": "[보통 수동형으로] 흥분시키다(excite), 격분시키다",
+              "examples": [
+                {
+                  "text": "be <b>heat</b> ed with argument",
+                  "translatedText": "논쟁으로 격해 있다"
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] 흥분시키다(excite), 격분시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뜨거워지다, 따뜻해지다; 흥분하다",
+              "examples": [],
+              "originalMeaning": "뜨거워지다, 따뜻해지다; 흥분하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19e3ea4c103f4e0a81b436f89d75c182",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19e3ea4c103f4e0a81b436f89d75c182",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "heats"
+        },
+        {
+          "type": "과거형",
+          "value": "heated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "heating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "heated"
+        }
+      ],
+      "aliasConjugation": "heats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "884acbb1fa369d7670934a147e1c729a",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "HEAT",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대전차(對戰車) 고성능 유탄(榴彈)",
+              "examples": [],
+              "originalMeaning": "대전차(對戰車) 고성능 유탄(榴彈)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/29a1a6f182614406b530adfabcf4f7f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/29a1a6f182614406b530adfabcf4f7f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1f902b030b51420cf9e4be84a60c2bcd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "양초를 불에 대면 물러진다",
+      "text": "Wax softens in <b>heat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "더위가 그에게 탈나게 했다.",
+      "text": "The <b>heat</b> told on him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 더위 때문에 기절했다.",
+      "text": "I fainted from the <b>heat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수은은 열을 가하면 팽창한다",
+      "text": "Mercury expands by <b>heat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 금속은 열에 녹는다",
+      "text": "This metal melts with <b>heat</b>."
+    }
+  ],
+  "isWordType": true
+}

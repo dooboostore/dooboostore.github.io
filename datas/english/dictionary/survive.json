@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "survive",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sər│vaɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "살아남다, …보다 오래 살다, …후까지 생존하다",
+              "examples": [
+                {
+                  "text": "<b>survive</b> one's children",
+                  "translatedText": "자식들보다 오래 살다"
+                }
+              ],
+              "originalMeaning": "살아남다, …보다 오래 살다, …후까지 생존하다"
+            },
+            {
+              "meaning": "…에도 불구하고 살아 있다, …에서 살아나다",
+              "examples": [
+                {
+                  "text": "<b>survive</b> all perils",
+                  "translatedText": "온갖 위험 에도 불구하고 아직 살아 있다"
+                }
+              ],
+              "originalMeaning": "…에도 불구하고 살아 있다, …에서 살아나다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "생존하다, 살아남다; 잔존하다; (불행 등에) 아랑곳하지 않다",
+              "examples": [],
+              "originalMeaning": "생존하다, 살아남다; 잔존하다; (불행 등에) 아랑곳하지 않다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/947ed5f754c2425eb27145c63609ab0b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/947ed5f754c2425eb27145c63609ab0b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "survives"
+        },
+        {
+          "type": "과거형",
+          "value": "survived"
+        },
+        {
+          "type": "현재 분사",
+          "value": "surviving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "survived"
+        }
+      ],
+      "aliasConjugation": "survives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1d58e0e51f7be26fb071557d278a5ff8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 도로가 여전히 남아 있다",
+      "text": "Many roads still <b>survive</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 두 번의 이혼을 이겨냈다.",
+      "text": "She survived two divorces."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일행 중 겨우 두 사람이 살아남았다",
+      "text": "Only two of the party survived."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 이혼의 어려움을 잘 넘었다",
+      "text": "She has survived after the divorce."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다행히도 그는 그 사고에서 살아남았다.",
+      "text": "Mercifully, he survived the accident."
+    }
+  ],
+  "isWordType": true
+}

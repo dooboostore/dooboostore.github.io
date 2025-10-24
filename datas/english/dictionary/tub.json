@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "tub",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʌb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "통, 물통, 함지; 통[함지] 하나 가득",
+              "examples": [],
+              "originalMeaning": "통, 물통, 함지; 통[함지] 하나 가득"
+            },
+            {
+              "meaning": "목욕통, 욕조(bathtub); [영·구어] 목욕",
+              "examples": [
+                {
+                  "text": "take a cold <b>tub</b> every morning",
+                  "translatedText": "매일 아침 냉수욕을 하다"
+                }
+              ],
+              "originalMeaning": "목욕통, 욕조(bathtub); [영·구어] 목욕"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "통에 넣다[저장하다], 통에 심다",
+              "examples": [],
+              "originalMeaning": "통에 넣다[저장하다], 통에 심다"
+            },
+            {
+              "meaning": "목욕시키다, …을 통에서 씻다",
+              "examples": [],
+              "originalMeaning": "목욕시키다, …을 통에서 씻다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "목욕통에서 몸을 씻다, 목욕하다",
+              "examples": [],
+              "originalMeaning": "목욕통에서 몸을 씻다, 목욕하다"
+            },
+            {
+              "meaning": "연습용 보트로 연습하다",
+              "examples": [],
+              "originalMeaning": "연습용 보트로 연습하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce82c27c7c614836965c1fd581555e31",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce82c27c7c614836965c1fd581555e31",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tubs"
+        },
+        {
+          "type": "과거형",
+          "value": "tubbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tubbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tubbed"
+        }
+      ],
+      "aliasConjugation": "tubs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ffaefcaaf8d0b6646961679e0aa9740f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "통의 안쪽을 깨끗이 해라",
+      "text": "Clean the inside of the <b>tub</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "천천히 목욕이라도 하고 식사한다면 다시 기력이 생길 것이다",
+      "text": "After a leisurely soak in the <b>tub</b> and dinner, you'll perk up again."
+    }
+  ],
+  "isWordType": true
+}

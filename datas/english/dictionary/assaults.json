@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "assault",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈsɔːlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(갑작스런) 습격, 급습, 강습, 맹습(violent attack) ((on)); (말로써의) (…에의) 격한 공격, 비난 ((on))",
+              "examples": [],
+              "originalMeaning": "(갑작스런) 습격, 급습, 강습, 맹습(violent attack) ((on)); (말로써의) (…에의) 격한 공격, 비난 ((on))"
+            },
+            {
+              "meaning": "접근전, 돌격",
+              "examples": [],
+              "originalMeaning": "접근전, 돌격"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "급습하다, 구타하다",
+              "examples": [],
+              "originalMeaning": "급습하다, 구타하다"
+            },
+            {
+              "meaning": "[법] 폭행하다; <여자를> 성폭행하다, 강간하다",
+              "examples": [
+                {
+                  "text": "sexually <b>assault</b>",
+                  "translatedText": "성폭행하다"
+                }
+              ],
+              "originalMeaning": "[법] 폭행하다; <여자를> 성폭행하다, 강간하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "덮치다, 공격하다",
+              "examples": [],
+              "originalMeaning": "덮치다, 공격하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8a3fec144747403fa14f0fd495423738",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8a3fec144747403fa14f0fd495423738",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assaults"
+        },
+        {
+          "type": "과거형",
+          "value": "assaulted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assaulting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assaulted"
+        }
+      ],
+      "aliasConjugation": "assaults",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f8670e3da346c92290523ad6521371d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 폭행죄로 3년형을 살았다.",
+      "text": "He did three years for <b>assault</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 자기네 고장을 습격으로부터 지켰다.",
+      "text": "They secured their town from an <b>assault</b>."
+    }
+  ],
+  "isWordType": true
+}

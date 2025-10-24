@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "prevent",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prɪˈvent"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…의 발생을) 막다, 방해하다; 방해하여 …하지 못하게 하다 ((from))",
+              "examples": [
+                {
+                  "text": "The snow prevented him from goingout[his goingout, him goingout].",
+                  "translatedText": "눈 때문에 그는 외출할 수 없었다."
+                }
+              ],
+              "originalMeaning": "(…의 발생을) 막다, 방해하다; 방해하여 …하지 못하게 하다 ((from))"
+            },
+            {
+              "meaning": "예방하다, 방지하다, 지키다, 보호하다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>prevent</b> an accident",
+                  "translatedText": "사고를 방지하다"
+                }
+              ],
+              "originalMeaning": "예방하다, 방지하다, 지키다, 보호하다 ((from))"
+            },
+            {
+              "meaning": "<희망·의문에> 앞서서 처리하다, 선수를 쓰다, 기선을 제하다(anticipate)",
+              "examples": [],
+              "originalMeaning": "<희망·의문에> 앞서서 처리하다, 선수를 쓰다, 기선을 제하다(anticipate)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/22949ab477034338bbd4fb54eacd7e70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/22949ab477034338bbd4fb54eacd7e70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "prevents"
+        },
+        {
+          "type": "과거형",
+          "value": "prevented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "preventing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "prevented"
+        }
+      ],
+      "aliasConjugation": "prevents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "092321c77df39d8fadfeda0407f42b42",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무것도 그것을 막을 수 없다",
+      "text": "Nothing can <b>prevent</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 폭풍우로 출발을 못한다",
+      "text": "The storm prevents us from starting."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "눋지 않도록 자꾸 저어라",
+      "text": "Stir it constantly to <b>prevent</b> burning[scorching]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전염 예방을 위해서 격리되었다",
+      "text": "He was isolated to <b>prevent</b> infection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지장이 있어서 오늘 못 떠났다",
+      "text": "Something prevented me from leaving today."
+    }
+  ],
+  "isWordType": true
+}

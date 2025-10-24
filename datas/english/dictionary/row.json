@@ -1,0 +1,201 @@
+{
+  "items": [
+    {
+      "entry": "row",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "róu"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "열, 줄",
+              "examples": [
+                {
+                  "text": "a <b>row</b> of beautiful teeth",
+                  "translatedText": "아름다운 치열(齒列)"
+                }
+              ],
+              "originalMeaning": "열, 줄"
+            },
+            {
+              "meaning": "(극장·교실 등의) 좌석 줄",
+              "examples": [
+                {
+                  "text": "in the front <b>row</b>",
+                  "translatedText": "앞줄에"
+                }
+              ],
+              "originalMeaning": "(극장·교실 등의) 좌석 줄"
+            },
+            {
+              "meaning": "(양쪽에 집이 늘어선) 거리, 가(街); …거리 (( [영] 흔히 동네 이름으로서))",
+              "examples": [],
+              "originalMeaning": "(양쪽에 집이 늘어선) 거리, 가(街); …거리 (( [영] 흔히 동네 이름으로서))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bdcd8dde6b4049869803c46926cc7428",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bdcd8dde6b4049869803c46926cc7428",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rows, rows"
+        },
+        {
+          "type": "과거형",
+          "value": "rowed, rowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rowing, rowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rowed, rowed"
+        }
+      ],
+      "aliasConjugation": "rows, rows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "31a42304d6c5610056543b4aeabd0624",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "row",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "róu"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(노를 써서) 배를 젓다, <배가> 저어지다",
+              "examples": [
+                {
+                  "text": "We rowed out.",
+                  "translatedText": "우리는 배를 저어 나갔다."
+                }
+              ],
+              "originalMeaning": "(노를 써서) 배를 젓다, <배가> 저어지다"
+            },
+            {
+              "meaning": "보트레이스에 참가하다, (…와) 보트레이스를 하다",
+              "examples": [
+                {
+                  "text": "They rowed against the Oxford crew.",
+                  "translatedText": "그들은 옥스퍼드 대학팀과 보트레이스를 했다."
+                }
+              ],
+              "originalMeaning": "보트레이스에 참가하다, (…와) 보트레이스를 하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<배를> 젓다",
+              "examples": [
+                {
+                  "text": "<b>row</b> 30 to the minute",
+                  "translatedText": "1분간에 30피치로 젓다"
+                }
+              ],
+              "originalMeaning": "<배를> 젓다"
+            },
+            {
+              "meaning": "저어 나르다, 저어서 …하다",
+              "examples": [
+                {
+                  "text": "He rowedusup[down] (the river).",
+                  "translatedText": "그는 우리들을 위하여 배를 저어 (강을) 올라[내려]갔다."
+                }
+              ],
+              "originalMeaning": "저어 나르다, 저어서 …하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "젓는 거리[시간]",
+              "examples": [],
+              "originalMeaning": "젓는 거리[시간]"
+            },
+            {
+              "meaning": "노젓기, 보트놀이",
+              "examples": [
+                {
+                  "text": "go for a <b>row</b>",
+                  "translatedText": "보트 타러 가다"
+                }
+              ],
+              "originalMeaning": "노젓기, 보트놀이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1310fa7353f6480bbbc0b4f90125d139",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1310fa7353f6480bbbc0b4f90125d139",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "rows, rows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e57d5a294b5bbbf41e9163b78d8f472a",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 보트를 젓기 시작했다.",
+      "text": "He rowed off the boat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 배를 저어 강을 내려갔다.",
+      "text": "He rowed down the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 기슭에까지 배를 얻어 탔다.",
+      "text": "He was rowed to the shore."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다섯 집이 한 줄로 늘어서 있다",
+      "text": "Five houses stand in a <b>row</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우리들을 위하여 배를 저어  올라[내려]갔다.",
+      "text": "He rowed us up[down] (the river)."
+    }
+  ],
+  "isWordType": true
+}

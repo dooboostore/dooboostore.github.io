@@ -1,0 +1,45 @@
+<section class="content-section">
+<!--    <div class="header">-->
+<!--&lt;!&ndash;        <dr-a href="/youtube-persona" class="back-link">&ndash;&gt;-->
+<!--&lt;!&ndash;            <i class="fa-solid fa-arrow-left"></i> Back to Personas&ndash;&gt;-->
+<!--&lt;!&ndash;        </dr-a>&ndash;&gt;-->
+<!--        <h2 class="section-title">-->
+<!--            <span class="persona-emoji" dr-if="@this@.persona && @this@.persona.categoryEmojis && @this@.persona.categoryEmojis.length > 0">${@this@.persona.categoryEmojis[0]}$</span>-->
+<!--            ${@this@.personaName}$-->
+<!--        </h2>-->
+<!--    </div>-->
+
+    <div class="video-grid" dr-if="@this@.videos && @this@.videos.length > 0">
+        <div class="video-card" dr-for-of="@this@.videos" dr-option-item-variable-name="video">
+            <a dr-attr="{href: #video#.url}" target="_blank" rel="noopener noreferrer" class="video-link">
+                <div class="video-thumbnail">
+                    <img dr-attr="{src: #video#.thumbnail, alt: #video#.title}" />
+                    <div class="play-overlay">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">${#video#.title}$</h3>
+                    <div class="channel-info">
+                        <img dr-if="#video#.channelThumbnail" dr-attr="{src: #video#.channelThumbnail, alt: #video#.channel}" class="channel-avatar" />
+                        <span class="channel-name">${#video#.channel}$</span>
+                    </div>
+                    <div class="video-meta">
+                        <span dr-if="#video#.viewCount">${#video#.viewCount}$</span>
+                        <span dr-if="#video#.viewCount && #video#.publishedTime"> • </span>
+                        <span dr-if="#video#.publishedTime">${#video#.publishedTime}$</span>
+                    </div>
+                    <p class="video-description" dr-if="#video#.description">${#video#.description}$</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="loading" dr-if="!@this@.videos">
+        Loading videos...
+    </div>
+
+    <div class="empty" dr-if="@this@.videos && @this@.videos.length === 0">
+        No videos found for this persona.
+    </div>
+</section>

@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "agent",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈeɪdʒənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대리인, 대행자; 특약점, 중개상; 알선인, 관리자",
+              "examples": [
+                {
+                  "text": "a commission <b>agent</b>",
+                  "translatedText": "위탁 판매인"
+                }
+              ],
+              "originalMeaning": "대리인, 대행자; 특약점, 중개상; 알선인, 관리자"
+            },
+            {
+              "meaning": "외판원(traveling salesman)",
+              "examples": [],
+              "originalMeaning": "외판원(traveling salesman)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대리인으로서 (사람·사물을) 대표하다, …에 관한 대리인으로서 행동하다 ((for))",
+              "examples": [],
+              "originalMeaning": "대리인으로서 (사람·사물을) 대표하다, …에 관한 대리인으로서 행동하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aa013c92aa74489aa243074c36104171",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aa013c92aa74489aa243074c36104171",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0c1a9e54dead0a9cca2e091350dabc80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 가게의 관리를 대리인에게 맡기고 있다.",
+      "text": "He invests the management of the store in his <b>agent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 첩자로 판명되었다",
+      "text": "He is identified as an <b>agent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전기는 중요한 동인이다.",
+      "text": "Electricity is an important <b>agent</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "substitute",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sʌbstɪtuːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…에게) 대리를 시키다, 대신으로 쓰다, 대용하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>substitute</b> nylon for silk = <b>substitute</b> silk by[with] nylon",
+                  "translatedText": "명주 대신에 나일론을 쓰다"
+                }
+              ],
+              "originalMeaning": "(…에게) 대리를 시키다, 대신으로 쓰다, 대용하다 ((for))"
+            },
+            {
+              "meaning": "…와 바꾸다, …의 대신을 하다",
+              "examples": [],
+              "originalMeaning": "…와 바꾸다, …의 대신을 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대신하다, 대리하다, 대용하다",
+              "examples": [
+                {
+                  "text": "He <b>substituted</b> for the manager who was in hospital.",
+                  "translatedText": "그는 입원 중인 지배인의 대리 근무를 하였다."
+                }
+              ],
+              "originalMeaning": "대신하다, 대리하다, 대용하다"
+            },
+            {
+              "meaning": "치환하다",
+              "examples": [],
+              "originalMeaning": "치환하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(…의) 대리인, 보결(자); 보결 선수 ((for)); (연극의) 대역(代役) ((for)); 대용(식)품 ((for))",
+              "examples": [
+                {
+                  "text": "There's no <b>substitute</b> for parents.",
+                  "translatedText": "부모를 대신할 만한 자는 없다."
+                }
+              ],
+              "originalMeaning": "(…의) 대리인, 보결(자); 보결 선수 ((for)); (연극의) 대역(代役) ((for)); 대용(식)품 ((for))"
+            },
+            {
+              "meaning": "용병",
+              "examples": [],
+              "originalMeaning": "용병"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5fb36eaf87524fdb992fed29180393d0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5fb36eaf87524fdb992fed29180393d0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "substitutes"
+        },
+        {
+          "type": "과거형",
+          "value": "substituted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "substituting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "substituted"
+        }
+      ],
+      "aliasConjugation": "substitutes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "83d935c41705b996fcdad5c707830a09",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "부모를 대신할 만한 자는 없다.",
+      "text": "There’s no <b>substitute</b> for parents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "버터 대신 마가린을 쓸 수 있다",
+      "text": "You can <b>substitute</b> margarine for butter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것으로도 임시변통이 될 것이다",
+      "text": "That will serve as a stopgap[temporary <b>substitute</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "플라스틱은 고무의 대용품으로 쓸 수 있다",
+      "text": "Plastic can be used as a <b>substitute</b> for rubber."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 입원 중인 지배인의 대리 근무를 하였다.",
+      "text": "He <b>substituted</b> for the manager who was in hospital."
+    }
+  ],
+  "isWordType": true
+}

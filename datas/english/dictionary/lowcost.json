@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "entry": "low-cost",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˌloʊ ˈkɔːst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "비용이 적게 드는, 값싼",
+              "examples": [],
+              "originalMeaning": "비용이 적게 드는, 값싼"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea3e3849a9ee44cc872221296fa5f2d9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea3e3849a9ee44cc872221296fa5f2d9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "330362ba928ffcd01e2d93615bdc6888",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "최소의 비용을 들여 최대의 이익을 남기는 것, 그것이 문제의 핵심이다",
+      "text": "Making the most profit at the lowest <b>cost</b>, that's the name of the game."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.333333",
+      "translatedText": "그 신기술은 생산 원가를 낮추게 된다",
+      "text": "The new technique will lower[reduce] the <b>cost</b> of production."
+    }
+  ],
+  "isWordType": true
+}

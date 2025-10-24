@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "impute",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "impjú:t"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<죄·불명예 등을> …에게 돌리다, 씌우다, 전가하다, …의 탓으로 하다(ascribe) ((to))",
+              "examples": [
+                {
+                  "text": "The police  <b>impute</b>  the accident to the bus driver's carelessness.",
+                  "translatedText": "경찰은 사고의 원인을 버스 운전사의 부주의로 돌리고 있다."
+                }
+              ],
+              "originalMeaning": "<죄·불명예 등을> …에게 돌리다, 씌우다, 전가하다, …의 탓으로 하다(ascribe) ((to))"
+            },
+            {
+              "meaning": "<성질·속성 등을> (…에게) 있다고 생각하다, 귀속시키다 ((to))",
+              "examples": [
+                {
+                  "text": "They  imputed magical powers to the old woman.",
+                  "translatedText": "그들은 그 노파에게 마법의 힘이 있다고 믿었다."
+                }
+              ],
+              "originalMeaning": "<성질·속성 등을> (…에게) 있다고 생각하다, 귀속시키다 ((to))"
+            },
+            {
+              "meaning": "<사람에게> (타인의 행위에 대해 감독 책임자로서) 대리 책임을 지우다",
+              "examples": [],
+              "originalMeaning": "<사람에게> (타인의 행위에 대해 감독 책임자로서) 대리 책임을 지우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9310da0031794f139f1937b784e165c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9310da0031794f139f1937b784e165c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fde40af3036cafd0387787270fb5eb2c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 노파에게 마법의 힘이 있다고 믿었다.",
+      "text": "They imputed magical powers to the old woman."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 사고의 원인을 버스 운전사의 부주의로 돌리고 있다.",
+      "text": "The police <b>impute</b> the accident to the bus driver’s carelessness."
+    }
+  ],
+  "isWordType": true
+}

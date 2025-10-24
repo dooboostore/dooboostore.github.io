@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "recommendation",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌrekəmenˈdeɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 추천, 천거, 권장; 권고, 충고",
+              "examples": [
+                {
+                  "text": "on the <b>recommendation</b> of one's closest aids",
+                  "translatedText": "가까운 측근의 추천으로"
+                }
+              ],
+              "originalMeaning": "[U] 추천, 천거, 권장; 권고, 충고"
+            },
+            {
+              "meaning": "추천장(a letter of recommendation)",
+              "examples": [],
+              "originalMeaning": "추천장(a letter of <b>recommendation</b>)"
+            },
+            {
+              "meaning": "장점, 좋은 점",
+              "examples": [
+                {
+                  "text": "her <b>recommendations</b> for the job",
+                  "translatedText": "그 직업에 어울리는 그녀의 장점"
+                }
+              ],
+              "originalMeaning": "장점, 좋은 점"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ac444b9f86ae4f0a8f6e30ff602f686b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ac444b9f86ae4f0a8f6e30ff602f686b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0eed9be9144494ec5a88605f78c13997",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 삼촌의 알선으로 직장을 구했다",
+      "text": "I got a job on my uncle's <b>recommendation</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신의 추천이 영향을 주어 그는 아주 유리하게 되어 있다.",
+      "text": "Your <b>recommendation</b> weighs heavily in my favor."
+    }
+  ],
+  "isWordType": true
+}

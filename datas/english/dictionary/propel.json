@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "propel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈpel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "추진하다, 나아가게 하다; 몰아대다 (=push)",
+              "examples": [
+                {
+                  "text": "propelling power",
+                  "translatedText": "추진력"
+                }
+              ],
+              "originalMeaning": "추진하다, 나아가게 하다; 몰아대다 (=<span class='related_word' lang='en' >push</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dae1a97ab809408ab5dd8b2c70d251a1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dae1a97ab809408ab5dd8b2c70d251a1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "propels"
+        },
+        {
+          "type": "과거형",
+          "value": "propelled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "propelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "propelled"
+        }
+      ],
+      "aliasConjugation": "propels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fe71d7ff49984689d663d860c451707a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나라는 내전으로 치닫고 있었다.",
+      "text": "The country was being propelled towards civil war."
+    }
+  ],
+  "isWordType": true
+}

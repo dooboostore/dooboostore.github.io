@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "tour",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tʊr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "관광 여행하다, 유람(遊覽)하다, 여행하다 ((about, in, through, to))",
+              "examples": [
+                {
+                  "text": "<b>tour</b> Canada",
+                  "translatedText": "캐나다를 여행하다"
+                }
+              ],
+              "originalMeaning": "관광 여행하다, 유람(遊覽)하다, 여행하다 ((about, in, through, to))"
+            },
+            {
+              "meaning": "<미술관 등을> 견학하다",
+              "examples": [
+                {
+                  "text": "<b>tour</b> the factory",
+                  "translatedText": "공장을 견학하다"
+                }
+              ],
+              "originalMeaning": "<미술관 등을> 견학하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "관광 여행하다, 유람하다, 잠시 여행하다",
+              "examples": [
+                {
+                  "text": "<b>tour</b> in Mexico",
+                  "translatedText": "멕시코를 여행하다"
+                }
+              ],
+              "originalMeaning": "관광 여행하다, 유람하다, 잠시 여행하다"
+            },
+            {
+              "meaning": "걸어 돌아다니다",
+              "examples": [],
+              "originalMeaning": "걸어 돌아다니다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "관광 여행, 유람; (시찰·순유(巡遊) 등의) 짧은 여행; (공장·시설·집 등의) 시찰, 견학 (=travel)",
+              "examples": [
+                {
+                  "text": "a cycling <b>tour</b>",
+                  "translatedText": "자전거 여행"
+                }
+              ],
+              "originalMeaning": "관광 여행, 유람; (시찰·순유(巡遊) 등의) 짧은 여행; (공장·시설·집 등의) 시찰, 견학 (=<span class='related_word' lang='en' >travel</span>)"
+            },
+            {
+              "meaning": "(극단의) 순회 공연; (스포츠팀의) 해외 원정, 투어; (정부 고관 등의) 역방(歷訪), 순회 방문",
+              "examples": [],
+              "originalMeaning": "(극단의) 순회 공연; (스포츠팀의) 해외 원정, 투어; (정부 고관 등의) 역방(歷訪), 순회 방문"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/453c21ea0b8442c1b17e8cce3027d9ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/453c21ea0b8442c1b17e8cce3027d9ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tours"
+        },
+        {
+          "type": "과거형",
+          "value": "toured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "touring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "toured"
+        }
+      ],
+      "aliasConjugation": "tours",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d4e4efbbe65d59f649eba1bdf5109bd9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 견문을 넓히려 여행에 나섰다",
+      "text": "He went on a <b>tour</b> to see more of the world."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "총리 자신이 유세에 나섰다",
+      "text": "The Prime Minister himself set out on a stump <b>tour</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 미국 여행을 끝내고 귀국했다",
+      "text": "He has lately returned from[after completing] his <b>tour</b> of America."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여름 휴가를 이용해서 유럽을 여행했다",
+      "text": "I made a <b>tour</b> of Europe, availing myself of the summer vacation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "작년 여름 우리들은 남미를 두루 여행하며 돌아다녔다",
+      "text": "Last summer we traveled around[made a <b>tour</b> of] South America."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,181 @@
+{
+  "items": [
+    {
+      "entry": "lock",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "lɑ́k"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "자물쇠",
+              "examples": [
+                {
+                  "text": "Please check the <b>lock</b>.",
+                  "translatedText": "자물쇠가 잠겨져 있는지 점검해 주세요."
+                }
+              ],
+              "originalMeaning": "자물쇠"
+            },
+            {
+              "meaning": "((일반적으로)) 고정하는 장치, (자동차의) 제륜(制輪) 장치",
+              "examples": [],
+              "originalMeaning": "((일반적으로)) 고정하는 장치, (자동차의) 제륜(制輪) 장치"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자물쇠를 채우다; 잠그다, 닫다(shut)",
+              "examples": [
+                {
+                  "text": "<b>lock</b> the stable door after the steed is stolen",
+                  "translatedText": "[속담] 소 잃고 외양간 고치다"
+                }
+              ],
+              "originalMeaning": "자물쇠를 채우다; 잠그다, 닫다(shut)"
+            },
+            {
+              "meaning": "<물건을> 챙겨 넣다 ((away)), 가두어 넣다 ((up; in, into))",
+              "examples": [
+                {
+                  "text": "<b>lock</b> up a prisoner in a cell",
+                  "translatedText": "죄수를 독방에 가두다"
+                }
+              ],
+              "originalMeaning": "<물건을> 챙겨 넣다 ((away)), 가두어 넣다 ((up; in, into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "자물쇠가 잠기다, 닫히다",
+              "examples": [
+                {
+                  "text": "The door locks automatically.",
+                  "translatedText": "그 문은 자동적으로 잠겨진다."
+                }
+              ],
+              "originalMeaning": "자물쇠가 잠기다, 닫히다"
+            },
+            {
+              "meaning": "움직이지 않게 되다, 고착되다",
+              "examples": [],
+              "originalMeaning": "움직이지 않게 되다, 고착되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a9061b73705d4413915f098c566226bd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a9061b73705d4413915f098c566226bd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "locks"
+        },
+        {
+          "type": "과거형",
+          "value": "locked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "locking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "locked"
+        }
+      ],
+      "aliasConjugation": "locks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0558549cd4eb36bc90388ce3d51589ad",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "lock",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(머리의) 타래, 머리채",
+              "examples": [],
+              "originalMeaning": "(머리의) 타래, 머리채"
+            },
+            {
+              "meaning": "[pl.] 머리털",
+              "examples": [],
+              "originalMeaning": "[pl.] 머리털"
+            },
+            {
+              "meaning": "(양모·마른 풀 등의) 약간의 양, 한 줌",
+              "examples": [],
+              "originalMeaning": "(양모·마른 풀 등의) 약간의 양, 한 줌"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0616dd0dfc14144b74852775c800c6b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0616dd0dfc14144b74852775c800c6b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "locks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2a4573e5bbb39034853151ff89bab773",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자물쇠가 잘 안 잠긴다",
+      "text": "The <b>lock</b> won't catch."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자물쇠를 비틀어 열었다",
+      "text": "He picked a <b>lock</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대문 잠그는 것을 잊었다.",
+      "text": "I forgot to <b>lock</b> the gate."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자물쇠가 잠겨져 있는지 점검해 주세요.",
+      "text": "Please check the <b>lock</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 문 잠그는 것을 잊었다.",
+      "text": "He omitted locking the door."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "await",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈweɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 기다리다, 대기하다(wait for)(cf. WAIT)",
+              "examples": [
+                {
+                  "text": "<b>Awaiting</b> to hear from you soon.",
+                  "translatedText": "조속히 회답 있기를 고대하면서. ((편지의 맺음말))"
+                }
+              ],
+              "originalMeaning": "<사람이> 기다리다, 대기하다(wait for)(cf. WAIT)"
+            },
+            {
+              "meaning": "<사물이> 기다리고[준비되어] 있다",
+              "examples": [],
+              "originalMeaning": "<사물이> 기다리고[준비되어] 있다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(기대하고) 기다리다, <사물이> 대기하다",
+              "examples": [],
+              "originalMeaning": "(기대하고) 기다리다, <사물이> 대기하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/752590a62bf0431582bf37e49143fe9a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/752590a62bf0431582bf37e49143fe9a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "awaits"
+        },
+        {
+          "type": "과거형",
+          "value": "awaited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "awaiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "awaited"
+        }
+      ],
+      "aliasConjugation": "awaits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f6894c5fad8f21a3e5aafe41f562669b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차는 밖에서 기다리고 있다.",
+      "text": "The car awaits without."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "죽음이 우리 모두를 기다리고 있다.",
+      "text": "Death awaits us all."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "뒷갈망이 아직도 되어 있지 않다",
+      "text": "The matter awaits winding-up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조속히 회답 있기를 고대하면서.",
+      "text": "<b>Awaiting</b> to hear from you soon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "무엇이 나를 기다리고 있는지 나는 조금도 몰랐다.",
+      "text": "I little knew what awaited me."
+    }
+  ],
+  "isWordType": true
+}

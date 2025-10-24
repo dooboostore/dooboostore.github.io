@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "loan",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lóun"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대부(貸付), 대여",
+              "examples": [
+                {
+                  "text": "get a <b>loan</b> of money from a person",
+                  "translatedText": "…에게서 돈을 빌리다"
+                }
+              ],
+              "originalMeaning": "대부(貸付), 대여"
+            },
+            {
+              "meaning": "대부금; 공채, 차관",
+              "examples": [
+                {
+                  "text": "a <b>loan</b> insurance",
+                  "translatedText": "대부금 보험"
+                }
+              ],
+              "originalMeaning": "대부금; 공채, 차관"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "대부하다, 빌려 주다 ((to)), (=borrow)",
+              "examples": [],
+              "originalMeaning": "대부하다, 빌려 주다 ((to)), (=<span class='related_word' lang='en' >borrow</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f9381fc86ea0432f9870980aac1711a9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f9381fc86ea0432f9870980aac1711a9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "loans"
+        },
+        {
+          "type": "과거형",
+          "value": "loaned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "loaning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "loaned"
+        }
+      ],
+      "aliasConjugation": "loans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3e65f9a865af7832c4bc40a77aca72fc",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "loan",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=LOANING)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >LOANING</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a877032f4d974d908b1235c8c232bf7d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a877032f4d974d908b1235c8c232bf7d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "loans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "68370f27248b0b0fb4ee9e705c8cf715",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 대부에는 9%의 이자가 붙는다.",
+      "text": "The <b>loan</b> carries 9% interest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 돈 꾸느라고 욕봤다",
+      "text": "I had a hell of a time getting a <b>loan</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자동차 대금 지불이 밀렸다",
+      "text": "I am behind in my auto <b>loan</b> payments."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "은행은 대출 요청을 응낙했다",
+      "text": "The bank okayed my request for a <b>loan</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 마침내 대출을 신청해야만 했다.",
+      "text": "He finally had to go ask for a <b>loan</b>."
+    }
+  ],
+  "isWordType": true
+}

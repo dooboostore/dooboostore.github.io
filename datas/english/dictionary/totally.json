@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "totally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│toʊtəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "전적으로, 아주",
+              "examples": [
+                {
+                  "text": "in a <b>totally</b> different way",
+                  "translatedText": "완전히 다른 방법으로"
+                }
+              ],
+              "originalMeaning": "전적으로, 아주"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fcd132c254ca4343b37202c9a2abbdf8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fcd132c254ca4343b37202c9a2abbdf8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e3dba3d6f4728eb13853a151fc77f47f",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "total",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈtoʊtl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전체의, 총계의, 총…(opp. partial), (=whole)",
+              "examples": [
+                {
+                  "text": "the <b>total</b> cost",
+                  "translatedText": "전체 비용"
+                }
+              ],
+              "originalMeaning": "전체의, 총계의, 총…(opp. partial), (=<span class='related_word' lang='en' >whole</span>)"
+            },
+            {
+              "meaning": "절대적인, 전적인, 완전한",
+              "examples": [
+                {
+                  "text": "<b>total</b> darkness",
+                  "translatedText": "암흑"
+                }
+              ],
+              "originalMeaning": "절대적인, 전적인, 완전한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 grand ~] 합계, 총계, 총액 (=sum)",
+              "examples": [
+                {
+                  "text": "a <b>total</b> of $10,000",
+                  "translatedText": "총액 1만 달러"
+                }
+              ],
+              "originalMeaning": "[종종 grand ~] 합계, 총계, 총액 (=<span class='related_word' lang='en' >sum</span>)"
+            },
+            {
+              "meaning": "전부, 전체",
+              "examples": [],
+              "originalMeaning": "전부, 전체"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "합계하다, 총계하다",
+              "examples": [],
+              "originalMeaning": "합계하다, 총계하다"
+            },
+            {
+              "meaning": "총계가 …이 되다, …에 이르다[달하다]",
+              "examples": [
+                {
+                  "text": "The casualties <b>total</b> ed 100.",
+                  "translatedText": "사상자는 합계 100명이었다."
+                }
+              ],
+              "originalMeaning": "총계가 …이 되다, …에 이르다[달하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c1073771726e43e69ca7b9d1d2744edc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c1073771726e43e69ca7b9d1d2744edc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "totals",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c91cb7155d044e407fd2653a29e89273",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "총계하면 약 7만 원이 된다",
+      "text": "The <b>total</b> amounts[comes] to about seventy thousand won. or It makes a <b>total</b> of seventy thousand won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "밑도 끝도 없이 그런 말이 나오니 내가 난처하네",
+      "text": "What you are saying is <b>totally</b> out of the blue and I'm at a loss what to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 운동을 전혀 하지 못한다",
+      "text": "I'm a <b>total</b> klutz at sports."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그와는 전혀 안면이 없다",
+      "text": "He is a <b>total</b> stranger to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "합계하면 20,000원 이상이나 됩니다",
+      "text": "It totals more than 20,000 won."
+    }
+  ],
+  "isWordType": true
+}

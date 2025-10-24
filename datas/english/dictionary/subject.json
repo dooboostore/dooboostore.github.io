@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "subject",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(토론·연구·이야기 등의) 주제(主題), 당면 과제, 문제; 연제(演題)",
+              "examples": [],
+              "originalMeaning": "(토론·연구·이야기 등의) 주제(主題), 당면 과제, 문제; 연제(演題)"
+            },
+            {
+              "meaning": "(학교의) 학과, (시험) 과목",
+              "examples": [],
+              "originalMeaning": "(학교의) 학과, (시험) 과목"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[P] (…의) 영향을 받는[받기 쉬운], (…에) 의존하는; (피해 등을) 입기 쉬운 ((to))",
+              "examples": [
+                {
+                  "text": "The prices are <b>subject</b> to change.",
+                  "translatedText": "가격은 바뀌는 수가 있습니다."
+                }
+              ],
+              "originalMeaning": "[P] (…의) 영향을 받는[받기 쉬운], (…에) 의존하는; (피해 등을) 입기 쉬운 ((to))"
+            },
+            {
+              "meaning": "[문어] [A] (군주·국가 등의) 지배를 받는, 복종하는; 종속하는, 속국[속령]의 ((to))",
+              "examples": [],
+              "originalMeaning": "[문어] [A] (군주·국가 등의) 지배를 받는, 복종하는; 종속하는, 속국[속령]의 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…에) 복종[종속]시키다, <사람·정신 등을> 지배하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>subject</b> a nation to one's rule",
+                  "translatedText": "국민을 자기 통치하에 복종시키다"
+                }
+              ],
+              "originalMeaning": "(…에) 복종[종속]시키다, <사람·정신 등을> 지배하다 ((to))"
+            },
+            {
+              "meaning": "(…에) 제시하다, 위임하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>subject</b> new policies to public discussion",
+                  "translatedText": "새로운 정책을 대중의 토의에 부치다"
+                }
+              ],
+              "originalMeaning": "(…에) 제시하다, 위임하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1cfdf4ccab7b46788a1fd240e903fe01",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1cfdf4ccab7b46788a1fd240e903fe01",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "subjects"
+        },
+        {
+          "type": "과거형",
+          "value": "subjected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "subjecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "subjected"
+        }
+      ],
+      "aliasConjugation": "subjects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c3f1f03c6cb8636bf415d9a0ca8e7887",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감기에 잘 걸린다.",
+      "text": "He is <b>subject</b> to colds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 잘 모른다.",
+      "text": "I am unfamiliar with the <b>subject</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가격은 변동될 수 있습니다.",
+      "text": "Prices are <b>subject</b> to variation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떤 한 가지 일에 전념하십시오",
+      "text": "Devote yourself to some <b>subject</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 문제에 몰두하고 있었다.",
+      "text": "He was engrossed in the <b>subject</b>."
+    }
+  ],
+  "isWordType": true
+}

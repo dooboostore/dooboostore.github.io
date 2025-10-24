@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "species",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈspiːʃiːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(분류상의) 종(種) (cf. CLASSIFICATION 1)",
+              "examples": [
+                {
+                  "text": "birds of many <b>species</b>",
+                  "translatedText": "많은 종의 새"
+                }
+              ],
+              "originalMeaning": "(분류상의) 종(種) (cf. CLASSIFICATION 1)"
+            },
+            {
+              "meaning": "종류 ((of))",
+              "examples": [
+                {
+                  "text": "I felt a <b>species</b> of shame.",
+                  "translatedText": "일종의 수치심 같은 것을 느꼈다."
+                }
+              ],
+              "originalMeaning": "종류 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "야생종의",
+              "examples": [
+                {
+                  "text": "a <b>species</b> rose",
+                  "translatedText": "야생종의 장미"
+                }
+              ],
+              "originalMeaning": "야생종의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6c4e12e7f06446bfb6bd2719130cc844",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6c4e12e7f06446bfb6bd2719130cc844",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e1207d9f32c6e75f9d4029589bc688fe",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "specie",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "spí:ʃi:,-si:"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "정금(正金), 정화(正貨)(opp. paper money)",
+              "examples": [
+                {
+                  "text": "a <b>specie</b> bank",
+                  "translatedText": "정금 은행"
+                }
+              ],
+              "originalMeaning": "정금(正金), 정화(正貨)(opp. paper money)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c1d7a2797ead4b8e89a983ff249f37ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c1d7a2797ead4b8e89a983ff249f37ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "015e5e6c20b7b9b935d0abe3b2c8527d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일종의 수치심 같은 것을 느꼈다.",
+      "text": "I felt a <b>species</b> of shame."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해초는 5,000 종류가 있다",
+      "text": "There are 5,000 different <b>species</b> of seaweed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "종의 기원",
+      "text": "The Origin of <b>Species</b>(저서명)"
+    }
+  ],
+  "isWordType": true
+}

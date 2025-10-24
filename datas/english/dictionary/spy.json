@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "entry": "spy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "스파이, 간첩, (군사) 탐정",
+              "examples": [],
+              "originalMeaning": "스파이, 간첩, (군사) 탐정"
+            },
+            {
+              "meaning": "스파이 행위",
+              "examples": [],
+              "originalMeaning": "스파이 행위"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "염탐하다, 몰래 조사하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>spy</b> out a secret",
+                  "translatedText": "비밀을 염탐하여 캐내다"
+                }
+              ],
+              "originalMeaning": "염탐하다, 몰래 조사하다 ((out))"
+            },
+            {
+              "meaning": "(찾다가) 알아내다, 찾아내다, 발견하다",
+              "examples": [
+                {
+                  "text": "He spied a stranger entering the yard.",
+                  "translatedText": "그는 낯선 사람이 구내에 들어서는 것을 알아차렸다."
+                }
+              ],
+              "originalMeaning": "(찾다가) 알아내다, 찾아내다, 발견하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "스파이짓을 하다, 염탐하다, 몰래 조사하다; 감시하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>spy</b> for the enemy",
+                  "translatedText": "적의 스파이 노릇을 하다"
+                }
+              ],
+              "originalMeaning": "스파이짓을 하다, 염탐하다, 몰래 조사하다; 감시하다 ((on, upon))"
+            },
+            {
+              "meaning": "조사하여 찾아내다 ((out))",
+              "examples": [],
+              "originalMeaning": "조사하여 찾아내다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b7fabac779e04f078c42f56d72a059ae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b7fabac779e04f078c42f56d72a059ae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "spies"
+        },
+        {
+          "type": "복수형",
+          "value": "spies"
+        },
+        {
+          "type": "과거형",
+          "value": "spied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "spying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "spied"
+        }
+      ],
+      "aliasConjugation": "spies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f0986b504c0143442553d1709f52817f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나의 행동을 몰래 살펴보고 있었다",
+      "text": "He was spying on my movements."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들이 내 행동을 탐정하고 있는 것 같다",
+      "text": "They seem to be spying on my movements."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 간첩은 경찰에 자수했다",
+      "text": "The <b>spy</b> surrendered[delivered] himself to the police."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 간첩 혐의로 잡혔다",
+      "text": "He was arrested under suspicion of being a <b>spy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 낯선 사람이 구내에 들어서는 것을 알아차렸다.",
+      "text": "He spied a stranger entering the yard."
+    }
+  ],
+  "isWordType": true
+}

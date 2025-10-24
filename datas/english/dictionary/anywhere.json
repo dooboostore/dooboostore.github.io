@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "anywhere",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│eniwer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[긍정문에서] 어디(로)든지",
+              "examples": [
+                {
+                  "text": "You can go <b>anywhere</b> .",
+                  "translatedText": "어디든지 가도 좋다."
+                }
+              ],
+              "originalMeaning": "[긍정문에서] 어디(로)든지"
+            },
+            {
+              "meaning": "[부정문에서] 아무데도",
+              "examples": [
+                {
+                  "text": "I did not go <b>anywhere</b> yesterday.",
+                  "translatedText": "어제는 아무데도 가지 않았다."
+                }
+              ],
+              "originalMeaning": "[부정문에서] 아무데도"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "어디, 임의의 장소",
+              "examples": [],
+              "originalMeaning": "어디, 임의의 장소"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c2fad4f08db54a2a97eaf58f0d027ac9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c2fad4f08db54a2a97eaf58f0d027ac9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2de42c76f6eef566dd44f3f4cc013bbb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무 짝에도 못 쓴다",
+      "text": "It is no good <b>anywhere</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무 데도 안 간다",
+      "text": "I am not going <b>anywhere</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어제는 아무데도 가지 않았다.",
+      "text": "I did not go <b>anywhere</b> yesterday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 도처에서 사고를 일으킨다",
+      "text": "He makes troubles <b>anywhere</b> he goes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저희보다 더 싸게 파는 데는 없습니다",
+      "text": "This is the lowest price <b>anywhere</b>."
+    }
+  ],
+  "isWordType": true
+}

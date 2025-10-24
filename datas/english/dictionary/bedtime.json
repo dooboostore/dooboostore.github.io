@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "entry": "bedtime",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbedtaɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "취침 시간, 잘 시간",
+              "examples": [
+                {
+                  "text": "It's past your <b>bedtime</b> .",
+                  "translatedText": "잠잘 시간이 지났다."
+                }
+              ],
+              "originalMeaning": "취침 시간, 잘 시간"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08943c69f89c4c54bc13e210e311f68a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08943c69f89c4c54bc13e210e311f68a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "99b6b75d7344f00e1ed692d80c73e452",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 아기는 잘 때만 되면 잠투정한다",
+      "text": "The baby gets cranky at <b>bedtime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가서 자거라",
+      "text": "It's time to go to bed. or Off to bed now. or It's <b>bedtime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거의 잠 잘 시간이다.",
+      "text": "It’s well-nigh <b>bedtime</b>."
+    }
+  ],
+  "isWordType": true
+}

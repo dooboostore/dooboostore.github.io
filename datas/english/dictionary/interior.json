@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "interior",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪn│tɪriə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "안의[에 있는], 내부의, 안쪽의(opp. exterior)",
+              "examples": [
+                {
+                  "text": "an <b>interior</b> view of a house",
+                  "translatedText": "집안 풍경"
+                }
+              ],
+              "originalMeaning": "안의[에 있는], 내부의, 안쪽의(opp. exterior)"
+            },
+            {
+              "meaning": "내륙의, 내지의",
+              "examples": [
+                {
+                  "text": "the <b>interior</b> towns of a country",
+                  "translatedText": "(한 나라의) 내륙에 있는 도시들"
+                }
+              ],
+              "originalMeaning": "내륙의, 내지의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 내부, 안쪽; 실내(도)",
+              "examples": [],
+              "originalMeaning": "[the ~] 내부, 안쪽; 실내(도)"
+            },
+            {
+              "meaning": "[the ~] 내지, 오지",
+              "examples": [],
+              "originalMeaning": "[the ~] 내지, 오지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2da810f8875648cfaf3cbe693765de09",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2da810f8875648cfaf3cbe693765de09",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "138185ff8835fccda468f029dfb78475",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 차는 외장은 좋지만 내장이 좀 빈약하다",
+      "text": "The trim on this car is fine, but the <b>interior</b> is rather poor."
+    }
+  ],
+  "isWordType": true
+}

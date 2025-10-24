@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "reopen",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│riː│oʊpən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 열다",
+              "examples": [],
+              "originalMeaning": "다시 열다"
+            },
+            {
+              "meaning": "다시 시작하다, 재개하다",
+              "examples": [
+                {
+                  "text": "<b>reopen</b> an argument",
+                  "translatedText": "논쟁을 재개하다"
+                }
+              ],
+              "originalMeaning": "다시 시작하다, 재개하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "다시 열리다, 재개되다",
+              "examples": [],
+              "originalMeaning": "다시 열리다, 재개되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0825e88511f04851bb7b6e15e1f079e9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0825e88511f04851bb7b6e15e1f079e9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reopens"
+        },
+        {
+          "type": "과거형",
+          "value": "reopened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reopening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reopened"
+        }
+      ],
+      "aliasConjugation": "reopens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7954fb99e996e39d1a6ee2fc048f22f4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "6월 1일에 신장 개업합니다",
+      "text": "Completely remodeled. <b>Reopening</b> June 1."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 교섭을 재개할 용의가 있다",
+      "text": "We are ready to <b>reopen</b> the negotiations."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "불통 구간은 5시간 후 개통됐다",
+      "text": "The damaged section was restored[reopened to traffic] five hours later."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철도는 곧 복구된다",
+      "text": "The railway will be shortly reopened to traffic. or The trains will resume normal services."
+    }
+  ],
+  "isWordType": true
+}

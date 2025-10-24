@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "false",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fɔːls"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "그릇된, 잘못된, 틀린",
+              "examples": [
+                {
+                  "text": "a <b>false</b> account",
+                  "translatedText": "그릇된 계산[보고]"
+                }
+              ],
+              "originalMeaning": "그릇된, 잘못된, 틀린"
+            },
+            {
+              "meaning": "거짓의, 허위의(opp. true), 가장된",
+              "examples": [
+                {
+                  "text": "a <b>false</b> charge",
+                  "translatedText": "[법] 무고(誣告)"
+                }
+              ],
+              "originalMeaning": "거짓의, 허위의(opp. true), 가장된"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "거짓으로, 부실하게, 부정하게, 불성실하게",
+              "examples": [],
+              "originalMeaning": "거짓으로, 부실하게, 부정하게, 불성실하게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a7223c71090244fd94beaf2507dd981a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a7223c71090244fd94beaf2507dd981a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "falser"
+        },
+        {
+          "type": "최상급",
+          "value": "falsest"
+        }
+      ],
+      "aliasConjugation": "falser",
+      "aliasConjugationPos": "비교급",
+      "gdid": "558f352f94522d213026bb02e2eb4faa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 애매하게 죄를 썼다",
+      "text": "He was falsely charged[accused]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 결국 거짓으로 드러났다",
+      "text": "It came down to be <b>false</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 동전은 소리가 진짜로[가짜로] 들렸다.",
+      "text": "The coin rang true[<b>false</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 말하는 건 태반이 거짓말이다",
+      "text": "What he says is largely <b>false</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 보도가 허위임이 판명되었다",
+      "text": "The report turned out (to be) <b>false</b>."
+    }
+  ],
+  "isWordType": true
+}

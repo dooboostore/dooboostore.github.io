@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "mesh",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "meʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 그물코, 체눈",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 그물코, 체눈"
+            },
+            {
+              "meaning": "망상 직물[편물]; 그물 세공; [pl.] 그물, 망, 그물실",
+              "examples": [],
+              "originalMeaning": "망상 직물[편물]; 그물 세공; [pl.] 그물, 망, 그물실"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "그물코의",
+              "examples": [
+                {
+                  "text": "<b>mesh</b> shoes",
+                  "translatedText": "망사 구두"
+                }
+              ],
+              "originalMeaning": "그물코의"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "그물로 잡다, 그물에 걸리다; [기계] <톱니바퀴를> 맞물리다, <톱니바퀴가> 맞물다 ((with))",
+              "examples": [],
+              "originalMeaning": "그물로 잡다, 그물에 걸리다; [기계] <톱니바퀴를> 맞물리다, <톱니바퀴가> 맞물다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fd25e53732404dfb9cd5433e9bcd2489",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fd25e53732404dfb9cd5433e9bcd2489",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "meshes"
+        },
+        {
+          "type": "과거형",
+          "value": "meshed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "meshing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "meshed"
+        }
+      ],
+      "aliasConjugation": "meshes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2334b78b0dc05ff15f8c59d291f4da05",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그물코가 뙨다",
+      "text": "The <b>mesh</b> of a net breaks off."
+    }
+  ],
+  "isWordType": true
+}

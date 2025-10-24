@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "screw",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skruː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "나사, 나사못, 볼트",
+              "examples": [
+                {
+                  "text": "a male[female] <b>screw</b>",
+                  "translatedText": "수[암]나사"
+                }
+              ],
+              "originalMeaning": "나사, 나사못, 볼트"
+            },
+            {
+              "meaning": "나사 모양의 물건, 기계의 나선부(螺旋部), 코르크 마개뽑이, (배의) 스크루, (비행기의) 프로펠러",
+              "examples": [],
+              "originalMeaning": "나사 모양의 물건, 기계의 나선부(螺旋部), 코르크 마개뽑이, (배의) 스크루, (비행기의) 프로펠러"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "나사로 죄다[박다, 조정하다, 고정시키다] ((up, down))",
+              "examples": [
+                {
+                  "text": "<b>screw</b> down a lid",
+                  "translatedText": "뚜껑을 나사로 죄다"
+                }
+              ],
+              "originalMeaning": "나사로 죄다[박다, 조정하다, 고정시키다] ((up, down))"
+            },
+            {
+              "meaning": "(비)틀다, 죄다, 구부리다",
+              "examples": [
+                {
+                  "text": "<b>screw</b> a person's arm",
+                  "translatedText": "…의 팔을 비틀다"
+                }
+              ],
+              "originalMeaning": "(비)틀다, 죄다, 구부리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<나사가> 돌다, 나사 모양으로 돌다",
+              "examples": [],
+              "originalMeaning": "<나사가> 돌다, 나사 모양으로 돌다"
+            },
+            {
+              "meaning": "(…에) 비틀리어 고정되다 ((on))",
+              "examples": [],
+              "originalMeaning": "(…에) 비틀리어 고정되다 ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e6fd0d36bce743fbb9f66b59bcf8d412",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e6fd0d36bce743fbb9f66b59bcf8d412",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "screws"
+        },
+        {
+          "type": "과거형",
+          "value": "screwed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "screwing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "screwed"
+        }
+      ],
+      "aliasConjugation": "screws",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e1744c905dd7f5f0a139f45ca5b765fd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나사가 노니 단단히 죄라",
+      "text": "The <b>screw</b> is loose and tighten it firmly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "스크류가 굉장한 속력으로 회전했다",
+      "text": "The <b>screw</b> went round at a very great speed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 짓을 하다니 그는 나사가 빠졌음에 틀림없다",
+      "text": "He must have a <b>screw</b> loose to do such a thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 요리 값으로 마지못해 오만 원을 지불했다.",
+      "text": "He screwed out fifty thousand won for the dish."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경첩의 나사가 낡아 문이 어긋나 있다",
+      "text": "The screws on the hinge are loose, so the door's out of line."
+    }
+  ],
+  "isWordType": true
+}

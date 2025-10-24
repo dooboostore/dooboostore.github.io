@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "raid",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "reɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(점령할 목적이 아니라 상대방에게 타격을 주기 위한 갑작스런) 습격, 급습, 기습; 공습(= air ~) ((on, upon))",
+              "examples": [],
+              "originalMeaning": "(점령할 목적이 아니라 상대방에게 타격을 주기 위한 갑작스런) 습격, 급습, 기습; 공습(= air ~) ((on, upon))"
+            },
+            {
+              "meaning": "(경찰의) 현장 급습, 불시 단속, 일제 검거",
+              "examples": [
+                {
+                  "text": "a police <b>raid</b> on a narcotics ring",
+                  "translatedText": "마약 범죄단에 대한 경찰의 급습"
+                }
+              ],
+              "originalMeaning": "(경찰의) 현장 급습, 불시 단속, 일제 검거"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "침입하다, 급습[공습]하다",
+              "examples": [],
+              "originalMeaning": "침입하다, 급습[공습]하다"
+            },
+            {
+              "meaning": "<경찰이> 불시 단속하다, 급습하여 빼앗다",
+              "examples": [],
+              "originalMeaning": "<경찰이> 불시 단속하다, 급습하여 빼앗다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "급습[공격]하다 ((on, upon))",
+              "examples": [],
+              "originalMeaning": "급습[공격]하다 ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/766a1376041d4a869e5c7d09bae39362",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/766a1376041d4a869e5c7d09bae39362",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "raids"
+        },
+        {
+          "type": "과거형",
+          "value": "raided"
+        },
+        {
+          "type": "현재 분사",
+          "value": "raiding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "raided"
+        }
+      ],
+      "aliasConjugation": "raids",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "14b2ea21da042040dae027561458a8d0",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "RAID",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "[컴퓨터] redundant array of independent disks 효율화·사고 대책을 위한 하드 디스크의 중복 배열, redundant array of inexpensive disks",
+              "examples": [],
+              "originalMeaning": "[컴퓨터] redundant array of independent disks 효율화·사고 대책을 위한 하드 디스크의 중복 배열, redundant array of inexpensive disks"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5c39e1bcef004115b704d51d7d90fec9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5c39e1bcef004115b704d51d7d90fec9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "128264faa7d6e842f91aeb6f8027c33f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해적 떼가 상선을 급습했다",
+      "text": "A wave of pirate raided on merchant ships."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 어젯밤 도박장을 급습했다",
+      "text": "The police made a <b>raid</b> on[upon] the gambling house last night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공습 경보가 나자 사람들은 모두 지하도로 대피하였다",
+      "text": "People took shelter in the underground passage at the air-<b>raid</b> alarm."
+    }
+  ],
+  "isWordType": true
+}

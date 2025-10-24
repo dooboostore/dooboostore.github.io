@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "sleepy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsliːpi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "졸리는, 졸음이 오는; 졸리는 듯한; 잠결의",
+              "examples": [],
+              "originalMeaning": "졸리는, 졸음이 오는; 졸리는 듯한; 잠결의"
+            },
+            {
+              "meaning": "잠자는 듯한, 활기 없는, 멍한",
+              "examples": [
+                {
+                  "text": "a <b>sleepy</b> gesture",
+                  "translatedText": "활기 없는 몸짓"
+                }
+              ],
+              "originalMeaning": "잠자는 듯한, 활기 없는, 멍한"
+            },
+            {
+              "meaning": "<움직임·흐름이> 느린",
+              "examples": [],
+              "originalMeaning": "<움직임·흐름이> 느린"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cc853b74e2e840a685d9d7de06ab4312",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cc853b74e2e840a685d9d7de06ab4312",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "sleepier"
+        },
+        {
+          "type": "최상급",
+          "value": "sleepiest"
+        }
+      ],
+      "aliasConjugation": "sleepier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "fce964451e308e5eb906ee6bb98505c9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 피로하다 게다가 졸린다",
+      "text": "I'm tired, besides, I am <b>sleepy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 졸렸지만 억지로 눈을 뜨고 있었다",
+      "text": "Though he was <b>sleepy</b>, he willed[forced] himself to stay awake."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너무 졸려서 가장 재미있는 장면을 지내보고 말았다",
+      "text": "I was so <b>sleepy</b> that I lost sight of the most interesting scene. or I was so <b>sleepy</b> that I missed seeing the most interesting scene."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "block",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "blɑːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(돌·나무·금속 등의) (큰) 덩어리, 토막 ((of)); 각석(角石), 각재(角材); (건축용) 블록",
+              "examples": [
+                {
+                  "text": "a <b>block</b> of stone",
+                  "translatedText": "석재(石材)"
+                }
+              ],
+              "originalMeaning": "(돌·나무·금속 등의) (큰) 덩어리, 토막 ((of)); 각석(角石), 각재(角材); (건축용) 블록"
+            },
+            {
+              "meaning": "(완구의) 블록(building block, brick)",
+              "examples": [],
+              "originalMeaning": "(완구의) 블록(building <b>block</b>, brick)"
+            },
+            {
+              "meaning": "받침나무, 받침 ((도마·모탕·승마대·단두대·조선대·경매대·구두닦이의 발판 등)); 모자골; [인쇄], 인재(印材); [제본] 판(版)",
+              "examples": [],
+              "originalMeaning": "받침나무, 받침 ((도마·모탕·승마대·단두대·조선대·경매대·구두닦이의 발판 등)); 모자골; [인쇄], 인재(印材); [제본] 판(版)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<길 등을> 막다, 폐색[봉쇄]하다, 방해하다",
+              "examples": [
+                {
+                  "text": "(Road) Blocked!",
+                  "translatedText": "[게시] 통행 금지!"
+                }
+              ],
+              "originalMeaning": "<길 등을> 막다, 폐색[봉쇄]하다, 방해하다"
+            },
+            {
+              "meaning": "<모자·옷 등의> 본을 뜨다(shape)",
+              "examples": [],
+              "originalMeaning": "<모자·옷 등의> 본을 뜨다(shape)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "상대방을 방해하다",
+              "examples": [],
+              "originalMeaning": "상대방을 방해하다"
+            },
+            {
+              "meaning": "(극장·막·장 등을) 연출하다",
+              "examples": [],
+              "originalMeaning": "(극장·막·장 등을) 연출하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a8c1057fe2164d36bf7cd5d569a72793",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a8c1057fe2164d36bf7cd5d569a72793",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blocks"
+        },
+        {
+          "type": "과거형",
+          "value": "blocked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blocking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blocked"
+        }
+      ],
+      "aliasConjugation": "blocks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "56e7ab18aca69034dd8f418b483eb292",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 블록 떨어져 있다.",
+      "text": "It’s two <b>blocks</b> away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아버지를 꼭 닮았다",
+      "text": "He is the perfect image of his father. or He is the spit of his father. or He looks like his father, a chip off the old <b>block</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "댐에 가로막혀 경치가 보이지 않는다",
+      "text": "The dam <b>blocks</b> the scenery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "커다란 곰이 우리 길을 막았다",
+      "text": "A great big bear blocked our path."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "온 도로가 콱 막혀 있다",
+      "text": "The entire roads have been blocked up."
+    }
+  ],
+  "isWordType": true
+}

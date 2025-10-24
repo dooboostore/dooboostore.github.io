@@ -1,0 +1,170 @@
+{
+  "items": [
+    {
+      "entry": "story",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stɔ́ːri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "이야기(tale), 동화(fairy tale)",
+              "examples": [
+                {
+                  "text": "a ghost <b>story</b>",
+                  "translatedText": "유령 이야기"
+                }
+              ],
+              "originalMeaning": "이야기(tale), 동화(fairy tale)"
+            },
+            {
+              "meaning": "소설, ((특히)) 단편 소설 (=fiction)",
+              "examples": [
+                {
+                  "text": "a detective <b>story</b>",
+                  "translatedText": "탐정 소설"
+                }
+              ],
+              "originalMeaning": "소설, ((특히)) 단편 소설 (=<span class='related_word' lang='en' >fiction</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이야기[역사적 그림]로 꾸미다, [고어] 이야기하다",
+              "examples": [],
+              "originalMeaning": "이야기[역사적 그림]로 꾸미다, [고어] 이야기하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이야기를 하다, 거짓말을 하다",
+              "examples": [],
+              "originalMeaning": "이야기를 하다, 거짓말을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea20b5efa157433f9743cf86101e2926",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea20b5efa157433f9743cf86101e2926",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stories"
+        },
+        {
+          "type": "복수형",
+          "value": "stories"
+        },
+        {
+          "type": "과거형",
+          "value": "storied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "storying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "storied"
+        }
+      ],
+      "aliasConjugation": "stories",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6526c1901a2789d7b2db36eb1dacf5b7",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "story",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stɔ́:ri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(건물의) 층",
+              "examples": [
+                {
+                  "text": "a house of one <b>story</b>",
+                  "translatedText": "단층집"
+                }
+              ],
+              "originalMeaning": "(건물의) 층"
+            },
+            {
+              "meaning": "[집합적] 같은 층의 방",
+              "examples": [],
+              "originalMeaning": "[집합적] 같은 층의 방"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8bf2d9ec159a4a52810ed2e038ec0846",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8bf2d9ec159a4a52810ed2e038ec0846",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "stories",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6c8d2049a505f3abf74a05383e45c4fa",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 이야기가 너무 웃겨서 우리는 모두 포복절도했다",
+      "text": "Her <b>story</b> was so funny that we were all in convulsions. or Her <b>story</b> was so funny that we all laughed till our sides began to ache."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 얘기를 퍼뜨렸다",
+      "text": "He spread the <b>story</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내게 이야기를 들려주었다.",
+      "text": "He told me a <b>story</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이젠 그것도 다 옛이야기이다",
+      "text": "It is now an old <b>story</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이야기는 신용할 수 없다.",
+      "text": "His <b>story</b> won’t wash."
+    }
+  ],
+  "isWordType": true
+}

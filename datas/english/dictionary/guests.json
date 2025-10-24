@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "guest",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(초대받은) 손님, 내빈(opp. host; cf. CLIENT, CUSTOMER); 객원(客員), 임시 회원 (=visitor)",
+              "examples": [
+                {
+                  "text": "the <b>guest</b> of honor",
+                  "translatedText": "(만찬회 등의) 주빈"
+                }
+              ],
+              "originalMeaning": "(초대받은) 손님, 내빈(opp. host; cf. CLIENT, CUSTOMER); 객원(客員), 임시 회원 (=<span class='related_word' lang='en' >visitor</span>)"
+            },
+            {
+              "meaning": "(여관·하숙의) 숙박인",
+              "examples": [
+                {
+                  "text": "paying <b>guest</b>",
+                  "translatedText": "(개인 집의) 하숙인"
+                }
+              ],
+              "originalMeaning": "(여관·하숙의) 숙박인"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 손님용의, 빈객으로서 행하는, 초대[초빙]받은",
+              "examples": [
+                {
+                  "text": "a <b>guest</b> member",
+                  "translatedText": "객원, 임시 회원"
+                }
+              ],
+              "originalMeaning": "[A] 손님용의, 빈객으로서 행하는, 초대[초빙]받은"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(방송에) 게스트로 출연하다 ((on))",
+              "examples": [],
+              "originalMeaning": "(방송에) 게스트로 출연하다 ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/857c30be4eb4449ca8217b7c545cbfef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/857c30be4eb4449ca8217b7c545cbfef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "guests"
+        },
+        {
+          "type": "과거형",
+          "value": "guested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "guesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "guested"
+        }
+      ],
+      "aliasConjugation": "guests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a3dd3f6d95e3e5c8f4795a4b16db5869",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 손님을 묵게 했다",
+      "text": "She took her <b>guest</b> in."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 호텔은 300인의 숙박 설비가 있다.",
+      "text": "The hotel sleeps 300 <b>guests</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 첫번째로 도착한 손이다.",
+      "text": "I was the first <b>guest</b> to arrive."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "초대받지 않은 손님은 정말 골칫거리다.",
+      "text": "Uninvited <b>guests</b> are a plague."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "손님들이 하나 둘씩 방에서 나갔다.",
+      "text": "The <b>guests</b> trickled out of the room."
+    }
+  ],
+  "isWordType": true
+}

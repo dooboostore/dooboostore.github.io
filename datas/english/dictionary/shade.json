@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "shade",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃeɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "그늘, 응달, 음지, 그늘진 곳(cf. SHADOW)",
+              "examples": [
+                {
+                  "text": "The tree makes a pleasant <b>shade</b>.",
+                  "translatedText": "그 나무는 기분 좋은 그늘을 만들어 준다."
+                }
+              ],
+              "originalMeaning": "그늘, 응달, 음지, 그늘진 곳(cf. SHADOW)"
+            },
+            {
+              "meaning": "[pl.] 땅거미, 어스름, 어둠",
+              "examples": [],
+              "originalMeaning": "[pl.] 땅거미, 어스름, 어둠"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "그늘지게 하다, …위에 그늘을 만들다",
+              "examples": [],
+              "originalMeaning": "그늘지게 하다, …위에 그늘을 만들다"
+            },
+            {
+              "meaning": "어둡게 하다, 흐리게 하다(darken) ((with))",
+              "examples": [
+                {
+                  "text": "A sullen look shaded his face.",
+                  "translatedText": "못마땅한 빛이 그의 얼굴을 어둡게 했다."
+                }
+              ],
+              "originalMeaning": "어둡게 하다, 흐리게 하다(darken) ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<빛깔·의견·방법·뜻 등이> 차츰 변화하다 ((away, off, into))",
+              "examples": [],
+              "originalMeaning": "<빛깔·의견·방법·뜻 등이> 차츰 변화하다 ((away, off, into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7e89206e79ee44eaa0a4cbdb3ae62cfe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7e89206e79ee44eaa0a4cbdb3ae62cfe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shades"
+        },
+        {
+          "type": "과거형",
+          "value": "shaded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shaded"
+        }
+      ],
+      "aliasConjugation": "shades",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "84f99dcf989635235b6ee0f9d589f0af",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해가 들지 않은 곳에 두어라",
+      "text": "Put it in the <b>shade</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나무가 있어 집에 응달이 잘 진다",
+      "text": "The trees <b>shade</b> the house nicely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나무는 기분 좋은 그늘을 이루어 준다.",
+      "text": "The tree makes a pleasant <b>shade</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모직이니까 그늘에서 말려 주세요",
+      "text": "Since it's wool, please dry it in the <b>shade</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 블라인드로 햇빛을 가렸다",
+      "text": "She drew the blind to <b>shade</b> off the sunlight."
+    }
+  ],
+  "isWordType": true
+}

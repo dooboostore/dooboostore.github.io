@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "result",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈzʌlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 결과(opp. cause), 성과, 귀착, 결말; [보통 pl.] (시험·경기 등의) 성적, 최종 득점",
+              "examples": [
+                {
+                  "text": "meet with good results",
+                  "translatedText": "좋은 결과를 얻다"
+                }
+              ],
+              "originalMeaning": "[UC/] 결과(opp. cause), 성과, 귀착, 결말; [보통 pl.] (시험·경기 등의) 성적, 최종 득점"
+            },
+            {
+              "meaning": "결과, 답",
+              "examples": [],
+              "originalMeaning": "결과, 답"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결과로서 생기다, 기인[유래]하다 ((from))",
+              "examples": [
+                {
+                  "text": "War is sure to <b>result</b>.",
+                  "translatedText": "그 결과는 반드시 전쟁이 된다."
+                }
+              ],
+              "originalMeaning": "결과로서 생기다, 기인[유래]하다 ((from))"
+            },
+            {
+              "meaning": "귀착하다, 끝나다(end) ((in))",
+              "examples": [
+                {
+                  "text": "<b>result</b> in heavy loss",
+                  "translatedText": "큰 손실로 끝나다"
+                }
+              ],
+              "originalMeaning": "귀착하다, 끝나다(end) ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea27ce9d881d4e6e9f5a6240c23736a6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea27ce9d881d4e6e9f5a6240c23736a6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "results"
+        },
+        {
+          "type": "과거형",
+          "value": "resulted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "resulting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "resulted"
+        }
+      ],
+      "aliasConjugation": "results",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c67581746b88106534466142bce78249",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 결과는 반드시 전쟁이 된다.",
+      "text": "War is sure to <b>result</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결과는 여전히 마음놓을 수 없다.",
+      "text": "The <b>result</b> remains dubious."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떠한 결과가 되든 가겠다.",
+      "text": "Whatever results follow, I will go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 결과에 어찌할 바를 모르겠다.",
+      "text": "I am perplexed at the <b>result</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그 결과에 만족하고 있다.",
+      "text": "I am gratified with[at] the <b>result</b>."
+    }
+  ],
+  "isWordType": true
+}

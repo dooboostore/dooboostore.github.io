@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "lately",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈleɪtli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "요즈음, 최근에, 근래(of late)",
+              "examples": [],
+              "originalMeaning": "요즈음, 최근에, 근래(of <b>late</b>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e556866fb80d4effb609df168f1c938e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e556866fb80d4effb609df168f1c938e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "722ab9c6370f6a1ef619e9dab779dabf",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "late",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "leɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "늦은, 지각한, 더딘",
+              "examples": [
+                {
+                  "text": "be <b>late</b> for[at] school",
+                  "translatedText": "학교에 지각하다"
+                }
+              ],
+              "originalMeaning": "늦은, 지각한, 더딘"
+            },
+            {
+              "meaning": "여느 때보다 늦은, 밤이 된 후의, 철 늦은(backward)",
+              "examples": [
+                {
+                  "text": "a <b>late</b> dinner",
+                  "translatedText": "늦은 만찬"
+                }
+              ],
+              "originalMeaning": "여느 때보다 늦은, 밤이 된 후의, 철 늦은(backward)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "늦게, 뒤늦게; 지각하여, 너무 늦어(too late)",
+              "examples": [
+                {
+                  "text": "We arrived an hour[one train] <b>late</b>.",
+                  "translatedText": "한 시간[한 열차] 뒤늦게 도착했다."
+                }
+              ],
+              "originalMeaning": "늦게, 뒤늦게; 지각하여, 너무 늦어(too <b>late</b>)"
+            },
+            {
+              "meaning": "(시각이) 늦어져, 날이 저물어; 밤이 깊어[깊도록]",
+              "examples": [
+                {
+                  "text": "dine <b>late</b>",
+                  "translatedText": "늦게 정찬을 들다"
+                }
+              ],
+              "originalMeaning": "(시각이) 늦어져, 날이 저물어; 밤이 깊어[깊도록]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[다음 성구로]",
+              "examples": [],
+              "originalMeaning": "[다음 성구로]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6879d189823b4d8893c89c35989bea28",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6879d189823b4d8893c89c35989bea28",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "later",
+      "aliasConjugationPos": "비교급",
+      "gdid": "42baf00f0bacf287f1b83f1e20bbd784",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자는 지각을 잘한다",
+      "text": "She is often <b>late</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 하루 늦게 왔다",
+      "text": "He came a day too <b>late</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "요새 그를 보지 못했다",
+      "text": "I haven't seen him <b>lately</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조만간에 나는 면직될 것이다",
+      "text": "I am going to be fired sooner or later. or My dismissal is a question of time now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대금 후불로 하고 값을 부르시오.",
+      "text": "Charge now, pay later."
+    }
+  ],
+  "isWordType": true
+}

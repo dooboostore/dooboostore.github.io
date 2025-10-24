@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "wonder",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈwʌndə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경탄할 만한[불가사의한] 것[사람, 사건]; 신동",
+              "examples": [
+                {
+                  "text": "The child is a <b>wonder</b>.",
+                  "translatedText": "그 아이는 신동이다."
+                }
+              ],
+              "originalMeaning": "경탄할 만한[불가사의한] 것[사람, 사건]; 신동"
+            },
+            {
+              "meaning": "경이, 경탄, 놀라움",
+              "examples": [
+                {
+                  "text": "in <b>wonder</b>",
+                  "translatedText": "놀라서"
+                }
+              ],
+              "originalMeaning": "경이, 경탄, 놀라움"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이상하게 여기다, (…에[…을 보고]) 놀라다, 경탄하다 ((at, to do))",
+              "examples": [
+                {
+                  "text": "I shouldn't <b>wonder</b> if he fails in the examination.",
+                  "translatedText": "그가 시험에 실패한다 해도 놀라지 않는다."
+                }
+              ],
+              "originalMeaning": "이상하게 여기다, (…에[…을 보고]) 놀라다, 경탄하다 ((at, to do))"
+            },
+            {
+              "meaning": "의아하게 여기다, 의심하다; 호기심을 가지다, 알고 싶어하다",
+              "examples": [
+                {
+                  "text": "What are you <b>wonder</b> ing about?",
+                  "translatedText": "뭐가 의심스럽니?"
+                }
+              ],
+              "originalMeaning": "의아하게 여기다, 의심하다; 호기심을 가지다, 알고 싶어하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…이 아닐까 생각하다, …인가 하고 생각하다",
+              "examples": [
+                {
+                  "text": "I <b>wonder</b> who that man is.",
+                  "translatedText": "저 남자는 누구일까?"
+                }
+              ],
+              "originalMeaning": "…이 아닐까 생각하다, …인가 하고 생각하다"
+            },
+            {
+              "meaning": "…을 이상하게 여기다, …이라니 놀랍다",
+              "examples": [
+                {
+                  "text": "I <b>wonder</b> (that) you were able to escape.",
+                  "translatedText": "용케 빠져나왔군."
+                }
+              ],
+              "originalMeaning": "…을 이상하게 여기다, …이라니 놀랍다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/be0aa2ece3ff4c3b92fc3d3c1a7e8cc2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/be0aa2ece3ff4c3b92fc3d3c1a7e8cc2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wonders"
+        },
+        {
+          "type": "과거형",
+          "value": "wondered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wondering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wondered"
+        }
+      ],
+      "aliasConjugation": "wonders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7705147203ee2abfb205fc5c8e85f60a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기가 차서 말을 못하겠구나.",
+      "text": "I <b>wonder</b> at you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "별로 놀랄 것이 못 된다",
+      "text": "Well, that's no <b>wonder</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 누구인지 잘 모르겠다",
+      "text": "I <b>wonder</b> who he is."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 일에는 놀라지 않는다",
+      "text": "I shouldn't <b>wonder</b> at it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 어째 늦는지 모르겠다",
+      "text": "I <b>wonder</b> why he is late."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "entry": "read",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ríːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<책·편지 등을> 읽다, …의 작품을 읽다; 음독하다, 낭독하다, 읽어서 들려주다 ((out, aloud))",
+              "examples": [
+                {
+                  "text": "<b>read</b> a book[letter]",
+                  "translatedText": "책[편지]을 읽다"
+                }
+              ],
+              "originalMeaning": "<책·편지 등을> 읽다, …의 작품을 읽다; 음독하다, 낭독하다, 읽어서 들려주다 ((out, aloud))"
+            },
+            {
+              "meaning": "읽어서 …하게 하다",
+              "examples": [
+                {
+                  "text": "<b>read</b> a child to sleep",
+                  "translatedText": "책을 읽어 주어 어린애를 잠들게 하다"
+                }
+              ],
+              "originalMeaning": "읽어서 …하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "읽다, 독서하다; 음독하다, 낭독하다; 강독하다(lecture)",
+              "examples": [
+                {
+                  "text": "<b>read</b> aloud",
+                  "translatedText": "낭독하다"
+                }
+              ],
+              "originalMeaning": "읽다, 독서하다; 음독하다, 낭독하다; 강독하다(lecture)"
+            },
+            {
+              "meaning": "독해하다, 의미를 이해하다; 읽어서 알다 ((of, about))",
+              "examples": [
+                {
+                  "text": "Iread of his death in yesterday's newspaper.",
+                  "translatedText": "어제 신문을 읽고 그의 죽음을 알았다."
+                }
+              ],
+              "originalMeaning": "독해하다, 의미를 이해하다; 읽어서 알다 ((of, about))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~] (1회의) 독서 (시간)",
+              "examples": [],
+              "originalMeaning": "[a ~] (1회의) 독서 (시간)"
+            },
+            {
+              "meaning": "읽을거리",
+              "examples": [],
+              "originalMeaning": "읽을거리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bd05900d81014dabaac361d17cdc53ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bd05900d81014dabaac361d17cdc53ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reads"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reading"
+        }
+      ],
+      "aliasConjugation": "reads",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "98751de38cb1b7db58494f5f0075872a",
+      "expEntrySuperscript": "1"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문구는 다음과 같다.",
+      "text": "It reads as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신의 편지를 기쁘게 읽었습니다",
+      "text": "I have <b>read</b> your letter with great pleasure. or I was very pleased to <b>read</b> your letter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 악보를 볼 줄 모른다.",
+      "text": "I can’t <b>read</b> music."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 책을 읽고 있다",
+      "text": "I am reading a book now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "단서 조항을 읽어 봐요",
+      "text": "<b>Read</b> the fine[small] print."
+    }
+  ],
+  "isWordType": true
+}

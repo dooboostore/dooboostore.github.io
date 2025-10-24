@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "matter",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmætə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "물질, 물체(opp. spirit); 성분, 요소 (=substance)",
+              "examples": [],
+              "originalMeaning": "물질, 물체(opp. spirit); 성분, 요소 (=<span class='related_word' lang='en' >substance</span>)"
+            },
+            {
+              "meaning": "재료(material); [수식어와 함께] …질(質), …소(素), …체(體)",
+              "examples": [
+                {
+                  "text": "animal <b>matter</b>",
+                  "translatedText": "동물질"
+                }
+              ],
+              "originalMeaning": "재료(material); [수식어와 함께] …질(質), …소(素), …체(體)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[주로 의문·부정·조건문에서 it을 주어로] 문제가 되다, 중요하다",
+              "examples": [
+                {
+                  "text": "What does it <b>matter</b>?",
+                  "translatedText": "그것이 뭐가 문제가 되냐? ((중요하지 않다는 의미))"
+                }
+              ],
+              "originalMeaning": "[주로 의문·부정·조건문에서 it을 주어로] 문제가 되다, 중요하다"
+            },
+            {
+              "meaning": "<상처가> 곪다, 고름이 나오다",
+              "examples": [],
+              "originalMeaning": "<상처가> 곪다, 고름이 나오다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/86d58d774f20445fa961a6bc0bf68aff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/86d58d774f20445fa961a6bc0bf68aff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "matters"
+        },
+        {
+          "type": "과거형",
+          "value": "mattered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mattering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mattered"
+        }
+      ],
+      "aliasConjugation": "matters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "11a46f7e247a500c07717601287a1f80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일은 나는 모른다",
+      "text": "I have nothing to do with the <b>matter</b>. or It's no concern of mine. or That's none of my business. or I can't help what you have done."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그까짓 일은 아무래도 좋다",
+      "text": "That does not <b>matter</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "되어가는 대로 내버려 두어라.",
+      "text": "Let the <b>matter</b> ride."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 문제에 관한 너의 의견을 말해 달라",
+      "text": "Tell me what you think about this <b>matter</b>. or I want to hear your view on this <b>matter</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 분초를 다투는 문제이다",
+      "text": "It is a <b>matter</b> of great urgency. or It admits of no delay. or It is very urgent."
+    }
+  ],
+  "isWordType": true
+}

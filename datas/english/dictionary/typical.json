@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "typical",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtɪpɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전형적인, 대표적인",
+              "examples": [
+                {
+                  "text": "the <b>typical</b> businessman",
+                  "translatedText": "전형적인 실업가"
+                }
+              ],
+              "originalMeaning": "전형적인, 대표적인"
+            },
+            {
+              "meaning": "상징적인, 표상(表象)하는 ((of))",
+              "examples": [
+                {
+                  "text": "This action is <b>typical</b> of him.",
+                  "translatedText": "이러한 행동은 그가 함직한 일이다."
+                }
+              ],
+              "originalMeaning": "상징적인, 표상(表象)하는 ((of))"
+            },
+            {
+              "meaning": "[해부·화학] 정형(定型)적인; 특징을 나타내는, 특유한",
+              "examples": [],
+              "originalMeaning": "[해부·화학] 정형(定型)적인; 특징을 나타내는, 특유한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/06915a0d78b4475d8cf63a8fc2aa80ef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/06915a0d78b4475d8cf63a8fc2aa80ef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f6c48e794d5eaa727aea5d34718688f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이러한 행동은 그가 함직한 일이다.",
+      "text": "This action is <b>typical</b> of him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우등생의 표본이다",
+      "text": "He is a <b>typical</b> honor student. or He is a <b>typical</b> sample of an honor student."
+    }
+  ],
+  "isWordType": true
+}

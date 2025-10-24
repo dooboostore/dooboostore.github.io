@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "cash",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kǽʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "현금, 돈 ((지폐·경화의 통화)), [증권] 현물",
+              "examples": [
+                {
+                  "text": "<b>cash</b> in the bank",
+                  "translatedText": "은행 예금"
+                }
+              ],
+              "originalMeaning": "현금, 돈 ((지폐·경화의 통화)), [증권] 현물"
+            },
+            {
+              "meaning": "(대금 지불 때의) 현찰, 수표, 즉시불, 맞돈",
+              "examples": [
+                {
+                  "text": "pay in <b>cash</b>",
+                  "translatedText": "현금으로 지불하다"
+                }
+              ],
+              "originalMeaning": "(대금 지불 때의) 현찰, 수표, 즉시불, 맞돈"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 현금의, 맞돈의, 현금 거래의; 현금 결제의",
+              "examples": [
+                {
+                  "text": "a <b>cash</b> price",
+                  "translatedText": "현금 가격"
+                }
+              ],
+              "originalMeaning": "[A] 현금의, 맞돈의, 현금 거래의; 현금 결제의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<어음 등을> 현금으로 바꾸다, 현금화하다; 환금해 주다",
+              "examples": [],
+              "originalMeaning": "<어음 등을> 현금으로 바꾸다, 현금화하다; 환금해 주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/704c8fb78da74a95b0c378c34f5e9f88",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/704c8fb78da74a95b0c378c34f5e9f88",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cashes"
+        },
+        {
+          "type": "과거형",
+          "value": "cashed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cashing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cashed"
+        }
+      ],
+      "aliasConjugation": "cashes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5aeefb948926bd84eef00b4071f42247",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "cash",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(중국·인도의) 소액 동전, (옛날의) 엽전 ((구멍 뚫린 동전))",
+              "examples": [],
+              "originalMeaning": "(중국·인도의) 소액 동전, (옛날의) 엽전 ((구멍 뚫린 동전))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3dfa75930eca4f28ad35d13c1b5a2c37",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3dfa75930eca4f28ad35d13c1b5a2c37",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "cashes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d5c6a037ec1867f127ef2228b001f0b5",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 돈이 다 떨어졌다",
+      "text": "I'm strapped for <b>cash</b>. or I'm short of <b>cash</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 현찰 선불로 지불했다",
+      "text": "I paid in <b>cash</b> up front."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 수표를 현금으로 바꾸고 싶은데요",
+      "text": "I'd like to <b>cash</b> this check."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 환을 현금으로 바꾸어야겠다",
+      "text": "I shall have this money order cashed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "현금을 몽땅 이 두 살짜리 말에 거시오.",
+      "text": "Get all the <b>cash</b> down on this two-year-old."
+    }
+  ],
+  "isWordType": true
+}

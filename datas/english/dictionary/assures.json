@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "assure",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ə│ʃʊr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "보증하다, 보장하다 ((of)); 책임지다, 확실히 …이라고 말하다; (보증하여) 안심[납득]시키다(convince), 확신시키다 ((of))",
+              "examples": [
+                {
+                  "text": "I <b>assure</b> you of his innocence. = I <b>assure</b> you that he is innocent.",
+                  "translatedText": "나는 그의 결백을 보증합니다."
+                }
+              ],
+              "originalMeaning": "보증하다, 보장하다 ((of)); 책임지다, 확실히 …이라고 말하다; (보증하여) 안심[납득]시키다(convince), 확신시키다 ((of))"
+            },
+            {
+              "meaning": "[~ oneself로] 납득하다, 확신하다, 확인하다 ((of, that)) (→assured)",
+              "examples": [
+                {
+                  "text": "I assured myself that she was safe.",
+                  "translatedText": "그녀가 안전하다는 것을 확신했다."
+                }
+              ],
+              "originalMeaning": "[~ oneself로] 납득하다, 확신하다, 확인하다 ((of, that)) (→<span class='related_word' lang='en' >assured</span>)"
+            },
+            {
+              "meaning": "확실하게 하다(ensure)",
+              "examples": [
+                {
+                  "text": "This <b>assures</b> our success.",
+                  "translatedText": "이것으로 성공은 확실하다."
+                }
+              ],
+              "originalMeaning": "확실하게 하다(ensure)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f9844632286141e7a6ef603a739e9354",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f9844632286141e7a6ef603a739e9354",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assures"
+        },
+        {
+          "type": "과거형",
+          "value": "assured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assuring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assured"
+        }
+      ],
+      "aliasConjugation": "assures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e94eedaf4a6f97407fdf190f3f77b4fe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것이 사실이라는 것은 내가 보증한다",
+      "text": "I <b>assure</b> you, it is true."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀가 안전하다는 것을 확신했다.",
+      "text": "I assured myself that she was safe."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그의 결백을 보증합니다.",
+      "text": "I <b>assure</b> you of his innocence.=I <b>assure</b> you that he is innocent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 올 것만은 확실하다",
+      "text": "I can <b>assure</b> you of one thing. It is going to rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내일은 날씨가 좋을 것이라고 단언했다",
+      "text": "He assured us that it would be fine tomorrow."
+    }
+  ],
+  "isWordType": true
+}

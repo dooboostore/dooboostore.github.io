@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "ail",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "eɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[비인칭 구문으로] 괴롭히다, 고통을 주다(afflict)",
+              "examples": [
+                {
+                  "text": "What ails you?",
+                  "translatedText": "왜 그러느냐, 어디가 아프냐?"
+                }
+              ],
+              "originalMeaning": "[비인칭 구문으로] 괴롭히다, 고통을 주다(afflict)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보통 진행형으로] 병을 앓다",
+              "examples": [
+                {
+                  "text": "The child is ailing.",
+                  "translatedText": "애가 아프다."
+                }
+              ],
+              "originalMeaning": "[보통 진행형으로] 병을 앓다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c241dcf41af24574a45071de14601b30",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c241dcf41af24574a45071de14601b30",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ails"
+        },
+        {
+          "type": "과거형",
+          "value": "ailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ailed"
+        }
+      ],
+      "aliasConjugation": "ails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "eb55810ef90dadc8a36b5fe0b3e9e6c6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정부는 침체된 경제에 활력을 불어넣기 위해 과감한 조치를 취해야 한다",
+      "text": "The Government should take some drastic measures to revitalize the ailing economy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "애가 아프다.",
+      "text": "The child is ailing."
+    }
+  ],
+  "isWordType": true
+}

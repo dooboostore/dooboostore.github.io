@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "chart",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tʃɑːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "해도(海圖), 수로도(水路圖); (항공용) 차트 (=map)",
+              "examples": [],
+              "originalMeaning": "해도(海圖), 수로도(水路圖); (항공용) 차트 (=<span class='related_word' lang='en' >map</span>)"
+            },
+            {
+              "meaning": "도표(圖表), 그래프, 표",
+              "examples": [
+                {
+                  "text": "a statistical <b>chart</b>",
+                  "translatedText": "통계표"
+                }
+              ],
+              "originalMeaning": "도표(圖表), 그래프, 표"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<해역·수로 등을> 해도에 기입하다, <자료를> 도표로 만들다",
+              "examples": [],
+              "originalMeaning": "<해역·수로 등을> 해도에 기입하다, <자료를> 도표로 만들다"
+            },
+            {
+              "meaning": "계획하다(plan)",
+              "examples": [],
+              "originalMeaning": "계획하다(plan)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b5c3a6aa3b74a9c988e09d172e94b33",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b5c3a6aa3b74a9c988e09d172e94b33",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "charts"
+        },
+        {
+          "type": "과거형",
+          "value": "charted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "charting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "charted"
+        }
+      ],
+      "aliasConjugation": "charts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2849d8af6a62e19c5f7e768671cda2e3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 지도는 몇 배로 확대되었다.",
+      "text": "The <b>chart</b> was magnified several times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들의 앨범은 금주의 히트 차트에서 3위이다.",
+      "text": "Their album is number three on the <b>charts</b> this week."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "murder",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɜːrdə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 살인, 모살(謀殺); 살인 사건",
+              "examples": [
+                {
+                  "text": "a case of <b>murder</b>",
+                  "translatedText": "살인 사건"
+                }
+              ],
+              "originalMeaning": "[U] 살인, 모살(謀殺); 살인 사건"
+            },
+            {
+              "meaning": "[U] [구어] 매우 위험한[어려운, 불쾌한] 일[상황], 「지옥」; 완고하고 엄격한 사람",
+              "examples": [
+                {
+                  "text": "That test was <b>murder</b>.",
+                  "translatedText": "그 시험은 지옥이었다."
+                }
+              ],
+              "originalMeaning": "[U] [구어] 매우 위험한[어려운, 불쾌한] 일[상황], 「지옥」; 완고하고 엄격한 사람"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람을> (고의로) 죽이다, 살해하다; 참살하다 (=kill)",
+              "examples": [],
+              "originalMeaning": "<사람을> (고의로) 죽이다, 살해하다; 참살하다 (=<span class='related_word' lang='en' >kill</span>)"
+            },
+            {
+              "meaning": "<남에게> 심하게 굴다, 괴롭히다",
+              "examples": [],
+              "originalMeaning": "<남에게> 심하게 굴다, 괴롭히다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "살인하다",
+              "examples": [],
+              "originalMeaning": "살인하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/535e0d252194496c8fba101841e2e656",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/535e0d252194496c8fba101841e2e656",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "여성 명사",
+          "value": "murderess"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "murders"
+        },
+        {
+          "type": "과거형",
+          "value": "murdered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "murdering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "murdered"
+        }
+      ],
+      "aliasConjugation": "murderess",
+      "aliasConjugationPos": "여성 명사",
+      "gdid": "1b237c6a22ed01a466ec4e1c76e861eb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 가수가 노래를 망쳤다.",
+      "text": "The singer murdered the song."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 살인 사건을 담당하고 있다.",
+      "text": "We’re on a <b>murder</b> case."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 그에게 살인 혐의를 두어 왔다.",
+      "text": "We have suspected him of <b>murder</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀가 살인을 했다고 한다",
+      "text": "She was alleged to have committed <b>murder</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 살인 사건은 완전히 묻혀 버렸다",
+      "text": "That <b>murder</b> case has been covered up."
+    }
+  ],
+  "isWordType": true
+}

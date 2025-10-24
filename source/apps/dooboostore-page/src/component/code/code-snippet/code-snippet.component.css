@@ -1,0 +1,54 @@
+/* Code Snippet - 기존 code-example 스타일과 일치 */
+
+
+/* 언어 표시 floating 요소 */
+.language-type-indicator {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #9ca3af;
+    padding: 0rem 0.2rem;
+    border-radius: 4px;
+    font-size: 0.5rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.language-type-indicator:hover {
+    opacity: 1;
+}
+.language-result-indicator {
+    position: absolute;
+    bottom: 0rem;
+    right: 0.1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #9ca3af;
+    padding: 0rem 0.2rem;
+    border-radius: 4px;
+    font-size: 0.5rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.language-result-indicator:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+}

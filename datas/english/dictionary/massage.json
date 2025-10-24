@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "massage",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "məˈsɑːʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "마사지, 안마(按摩), 안마 치료",
+              "examples": [],
+              "originalMeaning": "마사지, 안마(按摩), 안마 치료"
+            },
+            {
+              "meaning": "(숫자·데이터 등의) 조작",
+              "examples": [],
+              "originalMeaning": "(숫자·데이터 등의) 조작"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 마사지하다",
+              "examples": [],
+              "originalMeaning": "…에게 마사지하다"
+            },
+            {
+              "meaning": "<…의 긴장·편견 등을> 풀어주다, 완화하다; …의 비위를 맞추다",
+              "examples": [],
+              "originalMeaning": "<…의 긴장·편견 등을> 풀어주다, 완화하다; …의 비위를 맞추다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e0fe63436d7c4ec385659bbb67099b73",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e0fe63436d7c4ec385659bbb67099b73",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "massages"
+        },
+        {
+          "type": "과거형",
+          "value": "massaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "massaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "massaged"
+        }
+      ],
+      "aliasConjugation": "massages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4c7ae514e8b08afb779f54a5f39b7b65",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 어깨 좀 주물러 다오",
+      "text": "Give me a shoulder <b>massage</b>."
+    }
+  ],
+  "isWordType": true
+}

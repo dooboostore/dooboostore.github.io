@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "deflate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<타이어·공 등에서> 공기[가스]를 빼다",
+              "examples": [],
+              "originalMeaning": "<타이어·공 등에서> 공기[가스]를 빼다"
+            },
+            {
+              "meaning": "<가격·통화를> 수축시키다(opp. inflate)",
+              "examples": [],
+              "originalMeaning": "<가격·통화를> 수축시키다(opp. inflate)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "공기가 빠지다, 통화가 수축하다, 자신을 잃다",
+              "examples": [],
+              "originalMeaning": "공기가 빠지다, 통화가 수축하다, 자신을 잃다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4aef674f33814c9d9199282b57a2d392",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4aef674f33814c9d9199282b57a2d392",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "deflates"
+        },
+        {
+          "type": "과거형",
+          "value": "deflated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "deflating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "deflated"
+        }
+      ],
+      "aliasConjugation": "deflates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b4260f42f9596e4058d158d3cbf3e32c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풍선이 쪼그라들었다",
+      "text": "The balloon deflated[shriveled]."
+    }
+  ],
+  "isWordType": true
+}

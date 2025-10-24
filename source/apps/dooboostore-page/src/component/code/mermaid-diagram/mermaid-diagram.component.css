@@ -1,0 +1,175 @@
+@keyframes flash {
+  from {
+    background-color: #777;
+  }
+  to {
+    background-color: #22c55e;
+  }
+}
+
+/* Code Examples */
+
+/* Code Examples */
+.code-example {
+    background: #1a1a1a;
+    /*width: 500px;*/
+    /*height: 500px;*/
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+.code-example {
+    overflow-x: auto;
+}
+
+.code-example svg {
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2a2a2a;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.code-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e5e5;
+}
+
+.code-example pre {
+    padding: 1.5rem;
+    margin: 0;
+    overflow-x: auto;
+    background: transparent;
+}
+
+.code-example code {
+    color: #e5e5e5;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+
+.code-copy-btn {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.code-copy-btn:active {
+    transform: scale(0.95);
+}
+
+.code-copy-btn.copied {
+    background-color: #22c55e;
+    animation: flash 0.4s ease-out;
+}
+
+
+
+.actor {
+    stroke: #ccccff;
+    fill: #ececff;
+}
+text.actor {
+    fill: black;
+    stroke: none;
+    font-family: Helvetica;
+}
+
+.actor-line {
+    stroke: #c3c3c3;
+}
+
+.messageLine0 {
+    stroke-width: 1.5;
+    stroke-dasharray: '2 2';
+    marker-end: 'url(#arrowhead)';
+    stroke: #d1d1d1;
+}
+
+.messageLine1 {
+    stroke-width: 1.5;
+    stroke-dasharray: '2 2';
+    stroke: #e4e4e4;
+}
+
+#arrowhead {
+    fill: #b3b3b3;
+}
+
+.messageText {
+    fill: #d3d3d3;
+    stroke: none;
+    font-family: 'trebuchet ms', verdana, arial;
+    font-size: 14px;
+}
+
+.labelBox {
+    stroke: #ccccff;
+    fill: #ececff;
+}
+
+.labelText {
+    fill: #d7d7d7;
+    stroke: none;
+    font-family: 'trebuchet ms', verdana, arial;
+}
+
+.loopText {
+    fill: #c5c5c5;
+    stroke: none;
+    font-family: 'trebuchet ms', verdana, arial;
+}
+
+.loopLine {
+    stroke-width: 2;
+    stroke-dasharray: '2 2';
+    marker-end: 'url(#arrowhead)';
+    stroke: #ccccff;
+}
+
+.note {
+    stroke: #decc93;
+    fill: #fff5ad;
+}
+
+.noteText {
+    fill: #c8c8c8;
+    stroke: none;
+    font-family: 'trebuchet ms', verdana, arial;
+    font-size: 14px;
+}
+
+/*.mermaid .customEdge path {*/
+/*    stroke: #ff0000; !* 라인 색상 *!*/
+/*    fill: #ff0000; !* 화살표 채우기 색상 *!*/
+/*}*/
+/*.mermaid .customEdge marker path {*/
+/*    fill: #ff0000; !* 화살표 마커의 채우기 색상 *!*/
+/*}*/
+/*.link, .link path,*/
+/*.edgePath path {*/
+/*    stroke: #b10606 !important;  !* 🔸 원하는 색상 *!*/
+/*    stroke-width: 2px !important;*/
+/*}*/
+@media (max-width: 768px) {
+    .code-example pre {
+        padding: 1rem;
+        overflow-x: auto;
+        font-size: 0.8rem;
+    }
+}

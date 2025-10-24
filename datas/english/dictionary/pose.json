@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "pose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "póuz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사진·초상화를 위한) 자세, 포즈; (사진·회화에 나타난) 인물의 위치[자세]",
+              "examples": [],
+              "originalMeaning": "(사진·초상화를 위한) 자세, 포즈; (사진·회화에 나타난) 인물의 위치[자세]"
+            },
+            {
+              "meaning": "마음가짐(mental attitude), 정신 상태",
+              "examples": [],
+              "originalMeaning": "마음가짐(mental attitude), 정신 상태"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "자세[포즈]를 취하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>pose</b> for a picture",
+                  "translatedText": "사진을 위해 포즈를 취하다"
+                }
+              ],
+              "originalMeaning": "자세[포즈]를 취하다 ((for))"
+            },
+            {
+              "meaning": "꾸민 태도를 취하다, (…처럼) 보이려고 애쓰다, (…인) 체하다 ((as))",
+              "examples": [
+                {
+                  "text": "<b>pose</b> as an actress",
+                  "translatedText": "여배우인 체하다"
+                }
+              ],
+              "originalMeaning": "꾸민 태도를 취하다, (…처럼) 보이려고 애쓰다, (…인) 체하다 ((as))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(그림·사진을 위해) 자세를 취하게 하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>pose</b> a model for a picture",
+                  "translatedText": "그림을 그리기 위해 모델에게 포즈를 취하게 하다"
+                }
+              ],
+              "originalMeaning": "(그림·사진을 위해) 자세를 취하게 하다 ((for))"
+            },
+            {
+              "meaning": "<요구 등을> 주장하다; <문제를> 제출하다; <위험성을> 내포하다, 지니다",
+              "examples": [
+                {
+                  "text": "<b>pose</b> a question",
+                  "translatedText": "문제를 내다"
+                }
+              ],
+              "originalMeaning": "<요구 등을> 주장하다; <문제를> 제출하다; <위험성을> 내포하다, 지니다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4727a4858a8f45f9ba1e922c79893037",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4727a4858a8f45f9ba1e922c79893037",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "poses"
+        },
+        {
+          "type": "과거형",
+          "value": "posed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "posing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "posed"
+        }
+      ],
+      "aliasConjugation": "poses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c7d9bbef2002589371085af71c54e74b",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "pose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(어려운 질문으로) 괴롭히다, 쩔쩔매게 하다",
+              "examples": [],
+              "originalMeaning": "(어려운 질문으로) 괴롭히다, 쩔쩔매게 하다"
+            },
+            {
+              "meaning": "질문해서 조사하다[심문하다]",
+              "examples": [],
+              "originalMeaning": "질문해서 조사하다[심문하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f9862bcedf92477686b043fea3b8c2cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f9862bcedf92477686b043fea3b8c2cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "poses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2637ee153c337e4607f77124280b65cf",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 친절한 태도는 단지 포즈일 뿐이다",
+      "text": "His friendly manner is merely a <b>pose</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 면허증도 없이 버젓하게 의사인 체한다",
+      "text": "He poses as a doctor though he has no license."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "factor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfæktə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(어떤 현상의) 요인, 요소, 원인 ((of, in))",
+              "examples": [
+                {
+                  "text": "a <b>factor</b> of happiness",
+                  "translatedText": "행복의 요인(⇒ element [유의어/])"
+                }
+              ],
+              "originalMeaning": "(어떤 현상의) 요인, 요소, 원인 ((of, in))"
+            },
+            {
+              "meaning": "[수학] 인수, 인자(因子); [기계] 계수(係數), 율(率); [생물] 인자, 유전 인자(gene)",
+              "examples": [
+                {
+                  "text": "a common <b>factor</b>",
+                  "translatedText": "공통 인수, 공약수"
+                }
+              ],
+              "originalMeaning": "[수학] 인수, 인자(因子); [기계] 계수(係數), 율(率); [생물] 인자, 유전 인자(gene)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "인수 분해하다",
+              "examples": [],
+              "originalMeaning": "인수 분해하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "채권을 싸게 매입하다, 대리상(商)으로 일하다",
+              "examples": [],
+              "originalMeaning": "채권을 싸게 매입하다, 대리상(商)으로 일하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f95938d2b038407cac3262a56af74b87",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f95938d2b038407cac3262a56af74b87",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "factors"
+        },
+        {
+          "type": "과거형",
+          "value": "factored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "factoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "factored"
+        }
+      ],
+      "aliasConjugation": "factors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9a8c7e2538b04c898926d7c04be4cf3b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "운동은 체중을 줄이는 데 유인이 된다",
+      "text": "Taking exercise is a contributory cause[<b>factor</b>] in losing weight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 주전 선수의 부상은 그 시합의 결정적 변수가 될 수 있다",
+      "text": "The injury to the key player could be a decisive <b>factor</b> in the game."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 모든 점을 종합한 후에 이런 결론에 도달했다",
+      "text": "After considering all the factors[After taking everything into consideration], we reached this conclusion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "항혈우병 인자 <b>factor</b> Ⅷ",
+      "text": "[eight]"
+    }
+  ],
+  "isWordType": true
+}

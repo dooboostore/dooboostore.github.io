@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "replace",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈpleɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "제자리에 놓다, 되돌리다",
+              "examples": [
+                {
+                  "text": "<b>Replace</b> phone when finished.",
+                  "translatedText": "통화가 끝난 후에는 제자리에 놓으세요."
+                }
+              ],
+              "originalMeaning": "제자리에 놓다, 되돌리다"
+            },
+            {
+              "meaning": "대신하다, …의 후임자가 되다",
+              "examples": [
+                {
+                  "text": "TVs have replaced radios.",
+                  "translatedText": "TV가 라디오를 대체했다."
+                }
+              ],
+              "originalMeaning": "대신하다, …의 후임자가 되다"
+            },
+            {
+              "meaning": "바꾸다, 대체하다, 갈다, 교환하다 ((by, with))",
+              "examples": [
+                {
+                  "text": "<b>replace</b> a worn tire by[with] a new one",
+                  "translatedText": "헌 타이어를 새것으로 갈다"
+                }
+              ],
+              "originalMeaning": "바꾸다, 대체하다, 갈다, 교환하다 ((by, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/179d8c7dd2f84e20b21cd57fcee4b5b9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/179d8c7dd2f84e20b21cd57fcee4b5b9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "replaces"
+        },
+        {
+          "type": "과거형",
+          "value": "replaced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "replacing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "replaced"
+        }
+      ],
+      "aliasConjugation": "replaces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f0d941a94c9edeb4bdd108bfe8f12f97",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "A가 B를 대신하여 투수가 된다.",
+      "text": "A replaces B as pitcher."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "통화가 끝난 후에는 수화기를 제자리에 놓으세요",
+      "text": "<b>Replace</b> phone when finished."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "낡은 카펫을 새것으로 교체했다",
+      "text": "I replaced the old carpet with a new one."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "버터를 마가린으로 바꾸어 먹었다",
+      "text": "I substituted margarine for the butter. or I replaced butter with margarine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "동력 자원으로서 석유와 전력이 석탄과 대치되었다",
+      "text": "As the source of power, petroleum and electricity have now replaced coal."
+    }
+  ],
+  "isWordType": true
+}

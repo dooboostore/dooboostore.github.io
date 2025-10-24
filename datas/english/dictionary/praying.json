@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "pray",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "preɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(신에게) 빌다, 기원하다 ((to, for)); 간청하다, 탄원하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>pray</b> for pardon",
+                  "translatedText": "용서를 빌다"
+                }
+              ],
+              "originalMeaning": "(신에게) 빌다, 기원하다 ((to, for)); 간청하다, 탄원하다 ((for))"
+            },
+            {
+              "meaning": "[I ~ you의 생략] 제발(please), 바라건대, 여봐요",
+              "examples": [
+                {
+                  "text": "<b>Pray</b> come with me.",
+                  "translatedText": "저와 함께 가 주십시오."
+                }
+              ],
+              "originalMeaning": "[I ~ you의 생략] 제발(please), 바라건대, 여봐요"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기원하다, 간절히 바라다 ((for)); 희구하다",
+              "examples": [
+                {
+                  "text": "She prayed God for forgiveness. = She prayed God to forgive her. = She prayed (God) that she might be forgiven.",
+                  "translatedText": "그녀는 하느님께 용서를 빌었다."
+                }
+              ],
+              "originalMeaning": "기원하다, 간절히 바라다 ((for)); 희구하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb04c1806a104f069a94a3fdcef39f02",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb04c1806a104f069a94a3fdcef39f02",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "prays"
+        },
+        {
+          "type": "과거형",
+          "value": "prayed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "praying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "prayed"
+        }
+      ],
+      "aliasConjugation": "prays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b5e6732dacf41bc8c0ade1164d6a4274",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저와 함께 가 주십시오.",
+      "text": "<b>Pray</b> come with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 하느님께 용서를 빌었다.",
+      "text": "She prayed God for forgiveness.=She prayed God to forgive her.=She prayed (God) that she might be forgiven."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 비를 내려달라고 빌었다.",
+      "text": "They prayed for rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "제발 그렇게 큰소리를 내지 마십시오.",
+      "text": "<b>Pray</b> don’t speak so loud."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아, 하늘에 계신 우리 아버지",
+      "text": "Oh, Father in heaven, we <b>pray</b> thee…"
+    }
+  ],
+  "isWordType": true
+}

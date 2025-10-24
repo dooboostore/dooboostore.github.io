@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "egg",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "éɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "알; 달걀, 계란",
+              "examples": [
+                {
+                  "text": "a raw <b>egg</b>",
+                  "translatedText": "날달걀"
+                }
+              ],
+              "originalMeaning": "알; 달걀, 계란"
+            },
+            {
+              "meaning": "(=EGG CELL)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>EGG</b> CELL</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "달걀로 요리하다, [구어] 달걀을 내던지다",
+              "examples": [],
+              "originalMeaning": "달걀로 요리하다, [구어] 달걀을 내던지다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "새알을 채집하다",
+              "examples": [],
+              "originalMeaning": "새알을 채집하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/950c4491d5cb420194fd277a695e5df5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/950c4491d5cb420194fd277a695e5df5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "eggs"
+        },
+        {
+          "type": "과거형",
+          "value": "egged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "egging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "egged"
+        }
+      ],
+      "aliasConjugation": "eggs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8a84c1c1fd39588851deab92ef2f07f0",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "egg",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "선동하다, 충동하다, 부추기다, 격려하다(incite) ((on))",
+              "examples": [],
+              "originalMeaning": "선동하다, 충동하다, 부추기다, 격려하다(incite) ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4e37ecd5163f44b7ba1777d964c3d010",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4e37ecd5163f44b7ba1777d964c3d010",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "eggs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ea5663fcb030d154b6bfe4e82ad0f8ac",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "알이 고른 달걀이 있다",
+      "text": "There are even-sized <b>eggs</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달걀을 잘 휘저어야 한다",
+      "text": "You must beat[whip] up an <b>egg</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "암탉이 알을 안고 있다",
+      "text": "The hen is sitting[brooding] on <b>eggs</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 삶은 달걀을 더 좋아했다.",
+      "text": "She preferred the <b>eggs</b> boiled."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지금 달걀 값이 놀랄 정도로 싸다",
+      "text": "<b>Eggs</b> are wonderfully cheap now."
+    }
+  ],
+  "isWordType": true
+}

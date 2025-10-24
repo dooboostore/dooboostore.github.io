@@ -1,0 +1,65 @@
+<!-- Fixed Header -->
+<header class="english-header">
+    <div class="header-content">
+        <div class="header-left">
+            <!-- Show home button when in sub-route (always at the left edge) -->
+            <dr-a href="/english/" class="home-btn" dr-if="@this@.isInSubRoute" title="홈으로 이동">
+                <i class="fas fa-home"></i>
+            </dr-a>
+            
+            <!-- Show title when on main page -->
+            <h1 class="header-title" dr-if="!@this@.isInSubRoute">English Learning</h1>
+            
+            <!-- Show current item info when in sub-route -->
+            <div class="current-item-info" dr-if="@this@.currentItem">
+                <img class="item-image" dr-attr="{src: @this@.currentItem.img}" alt="Item image">
+                <div class="item-details">
+                    <span class="item-name">${@this@.currentItem.name}$</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-menu">
+            <div>
+                <img alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io.svg?style=plastic&amp;">
+            </div>
+            <button class="menu-btn favorites-btn" dr-event-click="@this@.toggleFavorites()">
+                <i class="fas fa-star"></i>
+                <span>즐겨찾기</span>
+                <span class="favorites-count"
+                    dr-if="@this@.favoriteWords.length > 0">${@this@.favoriteWords.length}$</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Favorites Panel -->
+    <div class="favorites-panel" dr-if="@this@.showFavorites"
+        dr-attr="{class: 'favorites-panel' + (@this@.showFavorites ? ' show' : '')}">
+        <div class="panel-header">
+            <h3>즐겨찾기 단어</h3>
+            <button class="close-btn" dr-event-click="@this@.toggleFavorites()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="favorites-content">
+            <div class="empty-message" dr-if="@this@.favoriteWords.length === 0">
+                아직 즐겨찾기한 단어가 없습니다.
+            </div>
+
+            <div class="favorite-item" dr-for-of="@this@.favoriteWords" dr-option-item-variable-name="word">
+                <div class="word-info" dr-event-click="@this@.onFavoriteWordClick(#word#.text, $event)">
+                    <span class="word-text clickable-word">${#word#.text}$</span>
+                    <span class="word-meaning">${#word#.meaning}$</span>
+                </div>
+                <button class="remove-btn" dr-event-click="@this@.removeFavorite(#word#.text)">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="english-main">
+    <dr-router-outlet createArguments="${@this@.getChildArguments()}$"></dr-router-outlet>
+</main>

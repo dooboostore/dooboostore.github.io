@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "mind",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "maɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(body와 대비하여) 마음, 정신",
+              "examples": [
+                {
+                  "text": "<b>mind</b> and body",
+                  "translatedText": "심신(心身)"
+                }
+              ],
+              "originalMeaning": "(body와 대비하여) 마음, 정신"
+            },
+            {
+              "meaning": "(heart와 대비하여) 지성, 지력(知力)",
+              "examples": [
+                {
+                  "text": "will, emotion and <b>mind</b>",
+                  "translatedText": "의지, 감정 및 지성"
+                }
+              ],
+              "originalMeaning": "(heart와 대비하여) 지성, 지력(知力)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[종종 명령문] 주의하다, 유의하다, 염두에 두다, 조심하다",
+              "examples": [
+                {
+                  "text": "<b>Mind</b> the step.",
+                  "translatedText": "발밑을 조심하시오."
+                }
+              ],
+              "originalMeaning": "[종종 명령문] 주의하다, 유의하다, 염두에 두다, 조심하다"
+            },
+            {
+              "meaning": "돌보다, 지키다",
+              "examples": [
+                {
+                  "text": "<b>Mind</b> the house[children] while I'm out.",
+                  "translatedText": "내가 외출한 동안 집[아이들]을 봐주십시오."
+                }
+              ],
+              "originalMeaning": "돌보다, 지키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주의하다, 조심하다",
+              "examples": [
+                {
+                  "text": "<b>Mind</b>! You'll slip.",
+                  "translatedText": "조심하시오, 미끄러집니다."
+                }
+              ],
+              "originalMeaning": "주의하다, 조심하다"
+            },
+            {
+              "meaning": "말을 잘 듣다, <명령 등을> 잘 따르다",
+              "examples": [
+                {
+                  "text": "This dog <b>minds</b> well.",
+                  "translatedText": "이 개는 말을 잘 듣는다."
+                }
+              ],
+              "originalMeaning": "말을 잘 듣다, <명령 등을> 잘 따르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fbec6672fedd401f879478018d4ac5c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fbec6672fedd401f879478018d4ac5c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "minds"
+        },
+        {
+          "type": "과거형",
+          "value": "minded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "minding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "minded"
+        }
+      ],
+      "aliasConjugation": "minds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3682e5c9342d63655667e2a3cb1ae25d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정신 일도 하사 불성",
+      "text": "Nothing is impossible to a determined <b>mind</b>. or Where there is a will, there is a way."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 말을 잘 들어라.",
+      "text": "<b>Mind</b> what I tell you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "반드시 그렇게 해야 돼.",
+      "text": "<b>Mind</b> (that) you do so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 개는 말을 잘 듣는다.",
+      "text": "This dog <b>minds</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그에게 마음 쓰지 마라",
+      "text": "Don't pay him any <b>mind</b>."
+    }
+  ],
+  "isWordType": true
+}

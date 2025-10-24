@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "literal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪtərəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "글자대로의(opp. figurative)",
+              "examples": [
+                {
+                  "text": "the <b>literal</b> meaning of a word",
+                  "translatedText": "말의 문자 그대로의 의미"
+                }
+              ],
+              "originalMeaning": "글자대로의(opp. figurative)"
+            },
+            {
+              "meaning": "<번역·해석 등이> 원문 어구에 충실한(opp. free)",
+              "examples": [
+                {
+                  "text": "a <b>literal</b> translation",
+                  "translatedText": "직역"
+                }
+              ],
+              "originalMeaning": "<번역·해석 등이> 원문 어구에 충실한(opp. free)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "오자(誤字), 오식(誤植)",
+              "examples": [],
+              "originalMeaning": "오자(誤字), 오식(誤植)"
+            },
+            {
+              "meaning": "리터럴, 상수",
+              "examples": [],
+              "originalMeaning": "리터럴, 상수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a8ccb6ae18704d78acb0cc405f4138c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a8ccb6ae18704d78acb0cc405f4138c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0e4f8ace98224eaf07edbe0e47bc0e2e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자구에 충실한[구애되지 않는] 번역",
+      "text": "(a) <b>literal</b>[free] translation"
+    }
+  ],
+  "isWordType": true
+}

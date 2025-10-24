@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "imprint",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "누른[박은, 찍은] 자국, 인장 자국; 흔적",
+              "examples": [
+                {
+                  "text": "the <b>imprint</b> of a foot",
+                  "translatedText": "발자국"
+                }
+              ],
+              "originalMeaning": "누른[박은, 찍은] 자국, 인장 자국; 흔적"
+            },
+            {
+              "meaning": "인상, 모습",
+              "examples": [],
+              "originalMeaning": "인상, 모습"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<도장 등을> 누르다, 찍다(stamp)",
+              "examples": [
+                {
+                  "text": "<b>imprint</b> a postmark ona letter = <b>imprint</b> a letter witha postmark",
+                  "translatedText": "편지에 소인(消印)을 찍다"
+                }
+              ],
+              "originalMeaning": "<도장 등을> 누르다, 찍다(stamp)"
+            },
+            {
+              "meaning": "(마음·기억 등에) 명기(銘記)시키다, 감명시키다(impress)",
+              "examples": [
+                {
+                  "text": "He imprintedhis words uponmy memory.",
+                  "translatedText": "그는 자기의 말을 내 기억에 강하게 남겼다."
+                }
+              ],
+              "originalMeaning": "(마음·기억 등에) 명기(銘記)시키다, 감명시키다(impress)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "인상을 주다, 영향을 미치다",
+              "examples": [],
+              "originalMeaning": "인상을 주다, 영향을 미치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0e294247b0c4a1fb50c2ce647dd3cef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0e294247b0c4a1fb50c2ce647dd3cef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "imprints"
+        },
+        {
+          "type": "과거형",
+          "value": "imprinted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "imprinting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "imprinted"
+        }
+      ],
+      "aliasConjugation": "imprints",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cc9aaa6c06c4b691f5c2677d386cf811",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기의 말을 내 기억에 강하게 남겼다.",
+      "text": "He imprinted his words upon my memory."
+    }
+  ],
+  "isWordType": true
+}

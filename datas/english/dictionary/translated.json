@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "translate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "træns│leɪt; trænz│leɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "번역하다, 옮기다",
+              "examples": [
+                {
+                  "text": "<b>translate</b> an English sentenceinto Korean",
+                  "translatedText": "영문을 한국어로 번역하다"
+                }
+              ],
+              "originalMeaning": "번역하다, 옮기다"
+            },
+            {
+              "meaning": "(다른 꼴·상태·성질로) 바꾸다, 고치다; 변형하다",
+              "examples": [
+                {
+                  "text": "<b>translate</b> promises intoaction",
+                  "translatedText": "약속을 실행에 옮기다"
+                }
+              ],
+              "originalMeaning": "(다른 꼴·상태·성질로) 바꾸다, 고치다; 변형하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "번역하다, 통역하다, <시 등이> 번역되다",
+              "examples": [
+                {
+                  "text": "His novels <b>translate</b> well.",
+                  "translatedText": "그의 소설은 번역하기 쉽다."
+                }
+              ],
+              "originalMeaning": "번역하다, 통역하다, <시 등이> 번역되다"
+            },
+            {
+              "meaning": "(결과로서) …가 되다; 변화하다, 변형하다 ((into))",
+              "examples": [],
+              "originalMeaning": "(결과로서) …가 되다; 변화하다, 변형하다 ((into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3372eec7fbe64610ba1f0f41b4d0fb87",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3372eec7fbe64610ba1f0f41b4d0fb87",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "translates"
+        },
+        {
+          "type": "과거형",
+          "value": "translated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "translating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "translated"
+        }
+      ],
+      "aliasConjugation": "translates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4c39d9ecdce4ee65063bd78bdbea0f4a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 소설은 번역하기 쉽다.",
+      "text": "His novels <b>translate</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "A 교수 역주의 햄릿",
+      "text": "Hamlet <b>translated</b> and annotated by Prof. A"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책은 국역하기 어렵다.",
+      "text": "This book can’t <b>translate</b> into Korean."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그녀의 침묵을 거절로 해석했다.",
+      "text": "I <b>translated</b> her silence as a refusal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다음 문장을 우리말로 옮기시오",
+      "text": "<b>Translate</b>[Put] the following sentences into Korean."
+    }
+  ],
+  "isWordType": true
+}

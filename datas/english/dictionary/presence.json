@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "presence",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈprezns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "존재, 현존, 실재 (實在)",
+              "examples": [],
+              "originalMeaning": "존재, 현존, 실재 (實在)"
+            },
+            {
+              "meaning": "[UC/] 출석, 임석, 참석(opp. absence); [C] (군대 등의) 주둔",
+              "examples": [
+                {
+                  "text": "Your <b>presence</b> is requested.",
+                  "translatedText": "참석하시기 바랍니다."
+                }
+              ],
+              "originalMeaning": "[UC/] 출석, 임석, 참석(opp. absence); [C] (군대 등의) 주둔"
+            },
+            {
+              "meaning": "[the ~, one’s ~] 면전, 목전, 남이 있는 자리",
+              "examples": [],
+              "originalMeaning": "[the ~, one’s ~] 면전, 목전, 남이 있는 자리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2d9036ea023b42bfa57ce168dd7b8b56",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2d9036ea023b42bfa57ce168dd7b8b56",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4a7a0907a9d9516b6a471aac352fb5ba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 출석하지 않아도 좋다.",
+      "text": "We will excuse your <b>presence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네가 있으면 이 집이 더러워진다",
+      "text": "Your <b>presence</b> pollutes the house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그분 앞에서는 주눅이 들어 말하기 두렵다.",
+      "text": "I fear to speak in his <b>presence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 참석으로 파티가 즐거워졌다.",
+      "text": "His <b>presence</b> brightened up the party."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "참석하여 주셔서 무한한 영광입니다.",
+      "text": "Your <b>presence</b> is a great compliment."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "argue",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːrɡjuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "논하다, 논의하다; 논쟁하다(dispute) ((about, on, upon))",
+              "examples": [
+                {
+                  "text": "<b>argue</b> along lines",
+                  "translatedText": "일정한 줄거리를 따라 논하다"
+                }
+              ],
+              "originalMeaning": "논하다, 논의하다; 논쟁하다(dispute) ((about, on, upon))"
+            },
+            {
+              "meaning": "언쟁하다, 말다툼하다 ((about, over))",
+              "examples": [
+                {
+                  "text": "The kids were arguing over which TV program to watch.",
+                  "translatedText": "아이들은 어느 TV 프로를 볼 것인가에 대해서 말싸움을 하고 있었다."
+                }
+              ],
+              "originalMeaning": "언쟁하다, 말다툼하다 ((about, over))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "논하다, 논의하다 (=discuss)",
+              "examples": [],
+              "originalMeaning": "논하다, 논의하다 (=<span class='related_word' lang='en' >discuss</span>)"
+            },
+            {
+              "meaning": "(이론적으로) <…이라고> 주장하다(maintain)",
+              "examples": [
+                {
+                  "text": "He is always arguing that honesty is not the best policy.",
+                  "translatedText": "그는 정직이 최선의 방책은 아니라고 언제나 주장하고 있다."
+                }
+              ],
+              "originalMeaning": "(이론적으로) <…이라고> 주장하다(maintain)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b528747ad2c49cd9f33786edda8880f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b528747ad2c49cd9f33786edda8880f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "argues"
+        },
+        {
+          "type": "과거형",
+          "value": "argued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "arguing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "argued"
+        }
+      ],
+      "aliasConjugation": "argues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4edd84494c9d00a302345794116e97a7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 주인을 말로 해냈다",
+      "text": "He argued his master down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그를 설득해서 담배를 끊게 했다.",
+      "text": "I argued him out of smoking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 따지는 것은 무의미하다",
+      "text": "There is little point in arguing about it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 행동으로 보아 그가 나쁜 놈인 것이 분명하다.",
+      "text": "His action <b>argues</b> him (to be) a rogue."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아버지와 그 일에 대해 논의하였다.",
+      "text": "He argued with his father about[on] the matter."
+    }
+  ],
+  "isWordType": true
+}

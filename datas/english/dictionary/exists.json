@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "exist",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪɡˈzɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[명령형·진행형 없음] 존재하다, 현존하다, 실존하다",
+              "examples": [
+                {
+                  "text": "cease to <b>exist</b>",
+                  "translatedText": "소멸[절멸]하다"
+                }
+              ],
+              "originalMeaning": "[명령형·진행형 없음] 존재하다, 현존하다, 실존하다"
+            },
+            {
+              "meaning": "(특수한 조건 또는 장소에) 있다, 존재하다, 나타나다(be, occur)",
+              "examples": [
+                {
+                  "text": "Salt <b>exists</b> in the sea.",
+                  "translatedText": "소금은 바닷물 속에 있다."
+                }
+              ],
+              "originalMeaning": "(특수한 조건 또는 장소에) 있다, 존재하다, 나타나다(be, occur)"
+            },
+            {
+              "meaning": "(음식·급료 등에 의하여) 생존하다, 살아 있다, 살아가다 ((on))",
+              "examples": [
+                {
+                  "text": "<b>exist</b> on a meager salary",
+                  "translatedText": "박봉으로 살아가다"
+                }
+              ],
+              "originalMeaning": "(음식·급료 등에 의하여) 생존하다, 살아 있다, 살아가다 ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/251c147f3f6f46f8b01cae51502e35a4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/251c147f3f6f46f8b01cae51502e35a4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exists"
+        },
+        {
+          "type": "과거형",
+          "value": "existed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "existing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "existed"
+        }
+      ],
+      "aliasConjugation": "exists",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b36b4009f83a849416cbe4d97ad061ea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소금은 바닷물 속에 있다.",
+      "text": "Salt <b>exists</b> in the sea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 장소는 존재하지 않는다.",
+      "text": "No such place <b>exists</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지옥도 극락도 이승에 있다",
+      "text": "Heaven and hell <b>exist</b> in this world. or Heaven and hell are but the two phases of life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "인간은 공기 없이는 살아갈 수 없다.",
+      "text": "Man cannot <b>exist</b> without air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재래의 것과는 전혀 다르다",
+      "text": "It is very different in nature from the existing kind."
+    }
+  ],
+  "isWordType": true
+}

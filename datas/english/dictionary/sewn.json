@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "sewn",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "SEW의 과거분사",
+              "examples": [],
+              "originalMeaning": "<b>SEW</b>의 과거분사"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3df2ad29d7a14c1e8fe49eea6546a640",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3df2ad29d7a14c1e8fe49eea6546a640",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2e81b5b5600febf7011f09c1e945da76",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "sew",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "soʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "바느질하다, 꿰매다, 깁다; 꿰매어 달다; 박다; 꿰매어 맞추다 ((up))",
+              "examples": [
+                {
+                  "text": "<b>sew</b> cloth",
+                  "translatedText": "천을 바느질하다"
+                }
+              ],
+              "originalMeaning": "바느질하다, 꿰매다, 깁다; 꿰매어 달다; 박다; 꿰매어 맞추다 ((up))"
+            },
+            {
+              "meaning": "재봉하여 만들다",
+              "examples": [
+                {
+                  "text": "<b>sew</b> a shirt",
+                  "translatedText": "셔츠를 재봉하여 만들다"
+                }
+              ],
+              "originalMeaning": "재봉하여 만들다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "바느질[재봉]하다, 재봉틀로 박다",
+              "examples": [],
+              "originalMeaning": "바느질[재봉]하다, 재봉틀로 박다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3bab409f210f44fe941651aba47246c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3bab409f210f44fe941651aba47246c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "sews",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "28d4e59ee96e6d47bb2f300a4656ffea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나로서는 도저히 꿰맬 수 있을 것 같지 않다.",
+      "text": "I couldn’t <b>sew</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 단추 하나도 달 줄 모르는구나",
+      "text": "You can't even <b>sew</b> on a button."
+    }
+  ],
+  "isWordType": true
+}

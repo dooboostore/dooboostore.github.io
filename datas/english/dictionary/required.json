@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "required",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rikwáiərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<학과가> 필수(必修)의(compulsory)(opp. elective)",
+              "examples": [
+                {
+                  "text": "a <b>required</b> subject",
+                  "translatedText": "(미국 대학의) 필수 과목"
+                }
+              ],
+              "originalMeaning": "<학과가> 필수(必修)의(compulsory)(opp. elective)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ee05dc7efb544295bcd6fc6dad11686d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ee05dc7efb544295bcd6fc6dad11686d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "antonymWordList": [
+        {
+          "entry": "optional",
+          "link": "https://en.dict.naver.com/#/search?range=all&query=optional"
+        },
+        {
+          "entry": "inessential",
+          "link": "https://en.dict.naver.com/#/search?range=all&query=inessential"
+        }
+      ],
+      "gdid": "bd536de8cd1d5f7dc99afc306ef555b9",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "require",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈkwaɪə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "필요로 하다; …할[될] 필요가 있다, …을 요하다 ((need보다 딱딱한 말))",
+              "examples": [
+                {
+                  "text": "He requires medical care.",
+                  "translatedText": "그는 치료를 받을 필요가 있다."
+                }
+              ],
+              "originalMeaning": "필요로 하다; …할[될] 필요가 있다, …을 요하다 ((need보다 딱딱한 말))"
+            },
+            {
+              "meaning": "(권리·권력으로) …을 요구하다; <법·규칙 등이> …을 명하다, 명령하다; (사람에게) …을 요청하다(cf. DEMAND, CLAIM)",
+              "examples": [
+                {
+                  "text": "( <b>require</b>+[목]+to do) <b>require</b> an agent to account for money spent",
+                  "translatedText": "대리인에게 돈의 사용 용도의 설명을 요구하다"
+                }
+              ],
+              "originalMeaning": "(권리·권력으로) …을 요구하다; <법·규칙 등이> …을 명하다, 명령하다; (사람에게) …을 요청하다(cf. DEMAND, CLAIM)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[드물게] 요구하다; 필요하다, 명령하다",
+              "examples": [],
+              "originalMeaning": "[드물게] 요구하다; 필요하다, 명령하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/86432c830ea84175a144607c9088d2db",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/86432c830ea84175a144607c9088d2db",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "requires",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "de42aa5fbc4cfc54f3796569cde47be5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 정도의 돈이라면 어떻게 되겠지",
+      "text": "If that is all the money <b>required</b>, I think I can manage (to raise) it for you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "더 연구할 필요가 있다",
+      "text": "It requires further research."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 입원 치료를 요한다",
+      "text": "He requires hospital treatment."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 그것을 알 필요가 있다.",
+      "text": "We <b>require</b> to know it.=We <b>require</b> knowing it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 손이 많이 가야 한다",
+      "text": "It requires a great deal of care."
+    }
+  ],
+  "isWordType": true
+}

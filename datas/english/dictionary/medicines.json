@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "medicine",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│medsn; │medɪsn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 약, ((특히)) 내복약",
+              "examples": [
+                {
+                  "text": "a patent <b>medicine</b>",
+                  "translatedText": "특허 의약품; 매약(賣藥)"
+                }
+              ],
+              "originalMeaning": "[UC/] 약, ((특히)) 내복약"
+            },
+            {
+              "meaning": "[U] 의학, 의술; 의업, 의사직",
+              "examples": [
+                {
+                  "text": "clinical <b>medicine</b>",
+                  "translatedText": "임상 의학"
+                }
+              ],
+              "originalMeaning": "[U] 의학, 의술; 의업, 의사직"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 약을 주다, 투약하다",
+              "examples": [],
+              "originalMeaning": "…에게 약을 주다, 투약하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bc84031db9ec4d378440f66c17c9d745",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bc84031db9ec4d378440f66c17c9d745",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fe3ab577073e48b1c21b0b8014111a5b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 잘 듣는다.",
+      "text": "This <b>medicine</b> acts well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 졸리게 한다.",
+      "text": "This <b>medicine</b> induces sleep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 잘 들었다",
+      "text": "This <b>medicine</b> has taken effect."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 복용하기 좋다.",
+      "text": "This <b>medicine</b> is nice to take."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 잠을 오게 한다",
+      "text": "This <b>medicine</b> will induce sleep."
+    }
+  ],
+  "isWordType": true
+}

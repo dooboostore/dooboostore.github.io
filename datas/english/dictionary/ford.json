@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "ford",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɔːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여울, (도보·말·차 등이 건널 수 있는) 얕은 물[곳]",
+              "examples": [],
+              "originalMeaning": "여울, (도보·말·차 등이 건널 수 있는) 얕은 물[곳]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<개울·강을> 걸어서 건너다",
+              "examples": [],
+              "originalMeaning": "<개울·강을> 걸어서 건너다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4b4f7506512f453fa196dcf1e9b6a7ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4b4f7506512f453fa196dcf1e9b6a7ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fords"
+        },
+        {
+          "type": "과거형",
+          "value": "forded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fording"
+        },
+        {
+          "type": "과거 분사",
+          "value": "forded"
+        }
+      ],
+      "aliasConjugation": "fords",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bfc465e6d959a40544ad135f4547daa1",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Ford",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "포드 Henry ~ (1863-1947) ((미국의 자동차왕))",
+              "examples": [],
+              "originalMeaning": "포드 Henry ~ (1863-1947) ((미국의 자동차왕))"
+            },
+            {
+              "meaning": "포드형 자동차",
+              "examples": [],
+              "originalMeaning": "포드형 자동차"
+            },
+            {
+              "meaning": "포드 Gerald R ~ (1913-2006) ((미국의 제38대 대통령(1974-77)))",
+              "examples": [],
+              "originalMeaning": "포드 Gerald R ~ (1913-2006) ((미국의 제38대 대통령(1974-77)))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/95326119cdc04a1a892f452e4a6d857e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/95326119cdc04a1a892f452e4a6d857e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "de82b045bcdc96d562130e7b176e53d1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "헨리 포드는 자동차 생산에 컨베이어 시스템을 창출했다",
+      "text": "Henry <b>Ford</b> created the conveyor belt system for manufacturing cars."
+    }
+  ],
+  "isWordType": true
+}

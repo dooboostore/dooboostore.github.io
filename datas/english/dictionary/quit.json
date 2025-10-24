@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "quit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kwɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<일 등을> 그만두다, 중지하다(stop), 그치다(give up)",
+              "examples": [
+                {
+                  "text": "<b>quit</b> drinking",
+                  "translatedText": "술을 끊다"
+                }
+              ],
+              "originalMeaning": "<일 등을> 그만두다, 중지하다(stop), 그치다(give up)"
+            },
+            {
+              "meaning": "<사람·장소를> 떠나다(leave), …에서 물러나다, 내놓다, 사직하다",
+              "examples": [
+                {
+                  "text": "<b>quit</b> one's job",
+                  "translatedText": "사직하다"
+                }
+              ],
+              "originalMeaning": "<사람·장소를> 떠나다(leave), …에서 물러나다, 내놓다, 사직하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "일을 중지하다, 그만두다; [미·구어] 사직하다(resign)",
+              "examples": [
+                {
+                  "text": "<b>quit</b> on life",
+                  "translatedText": "삶을 포기하다"
+                }
+              ],
+              "originalMeaning": "일을 중지하다, 그만두다; [미·구어] 사직하다(resign)"
+            },
+            {
+              "meaning": "떠나가다(go away), <터[집]를 빌렸던 사람 등이> 비우고 나가다",
+              "examples": [
+                {
+                  "text": "receive notice to <b>quit</b>",
+                  "translatedText": "퇴거 통고를 받다"
+                }
+              ],
+              "originalMeaning": "떠나가다(go away), <터[집]를 빌렸던 사람 등이> 비우고 나가다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "용서받아, 석방되어(free)",
+              "examples": [],
+              "originalMeaning": "용서받아, 석방되어(free)"
+            },
+            {
+              "meaning": "면하여, 청산되어(rid) ((of))",
+              "examples": [
+                {
+                  "text": "I gave him money to be <b>quit</b> of him.",
+                  "translatedText": "그에게 돈을 주고 손을 끊었다."
+                }
+              ],
+              "originalMeaning": "면하여, 청산되어(rid) ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f3d6775ae7aa402591305a3be037e1b8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f3d6775ae7aa402591305a3be037e1b8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "quits"
+        },
+        {
+          "type": "과거형",
+          "value": "quitted, quit"
+        },
+        {
+          "type": "현재 분사",
+          "value": "quitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "quitted, quit"
+        }
+      ],
+      "aliasConjugation": "quits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "96b54cba75c3d63137b5e4994a96028c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그거 그만둘 거야",
+      "text": "I'm calling it quits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 공포를 제거해 주었다.",
+      "text": "I quitted her of fear."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 떠나라는 통지를 받았다.",
+      "text": "He was noticed to <b>quit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언제든지 그 일을 그만둘 수 있다.",
+      "text": "You can always <b>quit</b> the job."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 돈을 주고 손을 끊었다.",
+      "text": "I gave him money to be <b>quit</b> of him."
+    }
+  ],
+  "isWordType": true
+}

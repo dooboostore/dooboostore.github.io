@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "centered",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "séntərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "중심에 있는, 중심이 있는, [건축] 심원이 있는",
+              "examples": [],
+              "originalMeaning": "중심에 있는, 중심이 있는, [건축] 심원이 있는"
+            },
+            {
+              "meaning": "(어떤 것을) 관심·활동의 주된 대상으로 한",
+              "examples": [
+                {
+                  "text": "consumer-<b>centered</b>",
+                  "translatedText": "소비자 위주의"
+                }
+              ],
+              "originalMeaning": "(어떤 것을) 관심·활동의 주된 대상으로 한"
+            },
+            {
+              "meaning": "중앙에 붙은",
+              "examples": [],
+              "originalMeaning": "중앙에 붙은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/03d11b00588d470baa3ee5ddf54c8356",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/03d11b00588d470baa3ee5ddf54c8356",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d1dc5cc548f86f74786c2763be422d30",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "center",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "séntər"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] (원·구·다각형의) 중심, (회전의) 중심점, [물리] 중심 (=middle)",
+              "examples": [],
+              "originalMeaning": "[보통 the ~] (원·구·다각형의) 중심, (회전의) 중심점, [물리] 중심 (=<span class='related_word' lang='en' >middle</span>)"
+            },
+            {
+              "meaning": "[the ~] (장소의)  중앙 , 한가운데",
+              "examples": [],
+              "originalMeaning": "[the ~] (장소의)  중앙 , 한가운데"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…의) 중심[중앙]에 두다 ((in, on))",
+              "examples": [],
+              "originalMeaning": "(…의) 중심[중앙]에 두다 ((in, on))"
+            },
+            {
+              "meaning": "(…에) 중심을 두다, 집중시키다 ((on, upon))",
+              "examples": [],
+              "originalMeaning": "(…에) 중심을 두다, 집중시키다 ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "중심(점)에 있다; 집중하다 ((on, upon, around, round)) ((격식을 차리지 않는 어법에서는 about, in, at도 씀)); [스포츠] 공을 중심부로 패스하다",
+              "examples": [],
+              "originalMeaning": "중심(점)에 있다; 집중하다 ((on, upon, around, round)) ((격식을 차리지 않는 어법에서는 about, in, at도 씀)); [스포츠] 공을 중심부로 패스하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/74e9000bc53d4f59a0a8ac72cf890af7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/74e9000bc53d4f59a0a8ac72cf890af7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "89778e5390ef07e937ffcddc3fa930ca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 사람들의 시선이 그에게 모였다",
+      "text": "All eyes were <b>centered</b> on him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "논의는 그 점에 집중되었다",
+      "text": "The discussion <b>centered</b> on that point."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 문제에 주의를 집중시켰다.",
+      "text": "He <b>centered</b> his attention on the problem."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 시계를 벽난로 선반의 중앙에 놓았다.",
+      "text": "She <b>centered</b> the clock on the mantelpiece."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세상 사람들의 동정이 흡연히 그에게로 집중되었다",
+      "text": "The sympathy of the whole community was <b>centered</b> upon him. or He captured the sympathy of the world ."
+    }
+  ],
+  "isWordType": true
+}

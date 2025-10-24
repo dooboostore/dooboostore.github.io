@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "intimidate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈtɪmɪdeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "겁주다",
+              "examples": [],
+              "originalMeaning": "겁주다"
+            },
+            {
+              "meaning": "협박하다, 위협하여 …을 시키다 ((into doing)), (=threaten)",
+              "examples": [
+                {
+                  "text": "<b>intimidate</b> a person into doing something",
+                  "translatedText": "…을 위협하여 어떤 일을 하게 하다"
+                }
+              ],
+              "originalMeaning": "협박하다, 위협하여 …을 시키다 ((into doing)), (=<span class='related_word' lang='en' >threaten</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2e1f4a212a6041969f1f64f535e5cbdd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2e1f4a212a6041969f1f64f535e5cbdd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "intimidates"
+        },
+        {
+          "type": "과거형",
+          "value": "intimidated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "intimidating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "intimidated"
+        }
+      ],
+      "aliasConjugation": "intimidates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "67558cfb608c8dba9b372431a0970b5b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 엄포는 겁나지 않아",
+      "text": "I won't be intimidated by such a bluff."
+    }
+  ],
+  "isWordType": true
+}

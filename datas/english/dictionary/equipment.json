@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "equipment",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈkwɪpmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적] 장비, 비품, 설비; [C] (개개의) 장치, 용품",
+              "examples": [
+                {
+                  "text": "a soldier's <b>equipment</b>",
+                  "translatedText": "군인[병사]의 장비"
+                }
+              ],
+              "originalMeaning": "[집합적] 장비, 비품, 설비; [C] (개개의) 장치, 용품"
+            },
+            {
+              "meaning": "준비, 채비",
+              "examples": [
+                {
+                  "text": "with elaborate <b>equipment</b>",
+                  "translatedText": "공들여 준비하여"
+                }
+              ],
+              "originalMeaning": "준비, 채비"
+            },
+            {
+              "meaning": "(일에 필요한) 지식, 기술, 능력",
+              "examples": [],
+              "originalMeaning": "(일에 필요한) 지식, 기술, 능력"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cd0e0eede1de43128f701226d5dab64f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cd0e0eede1de43128f701226d5dab64f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "807c061a203936357036f9b072d372c1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 장비의 비용에 대한 송장을 보내겠다",
+      "text": "I'll invoice you for the cost of the <b>equipment</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 체육관에는 운동 설비가 완비되어 있다",
+      "text": "This gym has a full range of sports <b>equipment</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "운동 기구들이 차고에서 놀고 있다",
+      "text": "Exercise equipments lie gathering dust in the garage."
+    }
+  ],
+  "isWordType": true
+}

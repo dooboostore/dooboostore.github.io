@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "iron",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈaɪərn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 철, 쇠 ((금속 원소; 기호 Fe, 번호 26))",
+              "examples": [
+                {
+                  "text": "malleable[pig, wrought] <b>iron</b>",
+                  "translatedText": "가단[선, 연]철"
+                }
+              ],
+              "originalMeaning": "[U] 철, 쇠 ((금속 원소; 기호 Fe, 번호 26))"
+            },
+            {
+              "meaning": "(철과 같이) 단단하고 강한 것, 무정[냉혹]한 것",
+              "examples": [
+                {
+                  "text": "a man of <b>iron</b>",
+                  "translatedText": "의지가 강한 사람; 냉혹한 사람"
+                }
+              ],
+              "originalMeaning": "(철과 같이) 단단하고 강한 것, 무정[냉혹]한 것"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "철의, 철을 함유하는, 철제의",
+              "examples": [
+                {
+                  "text": "an <b>iron</b> gate",
+                  "translatedText": "철문"
+                }
+              ],
+              "originalMeaning": "철의, 철을 함유하는, 철제의"
+            },
+            {
+              "meaning": "쇠 같은, 쇠같이 단단한[강한]",
+              "examples": [
+                {
+                  "text": "an <b>iron</b> will",
+                  "translatedText": "철석같은 의지"
+                }
+              ],
+              "originalMeaning": "쇠 같은, 쇠같이 단단한[강한]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다림질하다(press)",
+              "examples": [
+                {
+                  "text": "Won't you <b>iron</b> me this suit? = Won't you <b>iron</b> this suit for me?",
+                  "translatedText": "이 옷을 다려 주지 않겠소?"
+                }
+              ],
+              "originalMeaning": "다림질하다(press)"
+            },
+            {
+              "meaning": "수갑[족쇄]을 채우다",
+              "examples": [],
+              "originalMeaning": "수갑[족쇄]을 채우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fc178768a34a450fbbb4257422bfd484",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fc178768a34a450fbbb4257422bfd484",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "irons"
+        },
+        {
+          "type": "과거형",
+          "value": "ironed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ironing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ironed"
+        }
+      ],
+      "aliasConjugation": "irons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9b02e60868ced817a840dda7bb2b783f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 천은 다림질에 잘 퍼진다",
+      "text": "The cloth <b>irons</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 셔츠는 다림질하기가 쉽다.",
+      "text": "This shirt <b>irons</b> easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철은 소리를 잘 전달한다.",
+      "text": "<b>Iron</b> propagates sound well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 쇠같이 굳은 의지를 가진 사람이다",
+      "text": "He is a man of <b>iron</b> will."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "세부적 문제를 해결해야 한다",
+      "text": "You should <b>iron</b> out the details."
+    }
+  ],
+  "isWordType": true
+}

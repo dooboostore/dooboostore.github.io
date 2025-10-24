@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "entry": "vanity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvænəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "허영심, 자만심",
+              "examples": [
+                {
+                  "text": "the pomps and <b>vanity</b> of this wicked world",
+                  "translatedText": "속세의 영화의 꿈"
+                }
+              ],
+              "originalMeaning": "허영심, 자만심"
+            },
+            {
+              "meaning": "공허, 허무함, 덧없음, 무상(無常)",
+              "examples": [],
+              "originalMeaning": "공허, 허무함, 덧없음, 무상(無常)"
+            },
+            {
+              "meaning": "자랑거리, 자만하는 것",
+              "examples": [],
+              "originalMeaning": "자랑거리, 자만하는 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9d734ae1de4b4274b7df7b6a2ef4c4b1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9d734ae1de4b4274b7df7b6a2ef4c4b1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "vanities"
+        }
+      ],
+      "aliasConjugation": "vanities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "fba366e1d0d0d4e53046b2f0a6b9be8d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인생은 뜬구름과 같은 것이다",
+      "text": "Nothing is certain in this world. or All is <b>vanity</b> in life. or Life is an empty dream."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인생은 허무하다",
+      "text": "All is <b>vanity</b> in life. or Life is but an empty dream."
+    }
+  ],
+  "isWordType": true
+}

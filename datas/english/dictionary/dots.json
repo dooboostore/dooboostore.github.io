@@ -1,0 +1,175 @@
+{
+  "items": [
+    {
+      "entry": "dot",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(작고 둥근) 점 ((i나 j의 점; 모스 부호의 점 등)); 소수점 ((단, 읽을 때는 point라 함)); [음악] 부점(附點) ((음표나 쉼표의 오른쪽에 붙여 1/2만큼 음을 길게 함을 표시하는))",
+              "examples": [],
+              "originalMeaning": "(작고 둥근) 점 ((i나 j의 점; 모스 부호의 점 등)); 소수점 ((단, 읽을 때는 point라 함)); [음악] 부점(附點) ((음표나 쉼표의 오른쪽에 붙여 1/2만큼 음을 길게 함을 표시하는))"
+            },
+            {
+              "meaning": "점같이 작은 것, 꼬마",
+              "examples": [
+                {
+                  "text": "a mere <b>dot</b> of a child",
+                  "translatedText": "조그만 아이"
+                }
+              ],
+              "originalMeaning": "점같이 작은 것, 꼬마"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 점을 찍다, 점점으로 표시하다",
+              "examples": [
+                {
+                  "text": "<b>dot</b> an ‘i' i",
+                  "translatedText": "에 점을 찍다"
+                }
+              ],
+              "originalMeaning": "…에 점을 찍다, 점점으로 표시하다"
+            },
+            {
+              "meaning": "<장소에> 점재하다 ((with))",
+              "examples": [
+                {
+                  "text": "Cows <b>dot</b> ted the field.",
+                  "translatedText": "소들이 들에 점재하고 있었다."
+                }
+              ],
+              "originalMeaning": "<장소에> 점재하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "점을 찍다",
+              "examples": [],
+              "originalMeaning": "점을 찍다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e8a1eea4016a4246b030464feb74c64f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e8a1eea4016a4246b030464feb74c64f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dots"
+        },
+        {
+          "type": "과거형",
+          "value": "dotted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dotting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dotted"
+        }
+      ],
+      "aliasConjugation": "dots",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ade01135df05eeffd03509875f43bb3c",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "dot",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɑ́t, dɔ́ːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(아내의) 지참금(dowry)",
+              "examples": [],
+              "originalMeaning": "(아내의) 지참금(dowry)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e773c1b6e240466c804f1debcc0e785f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e773c1b6e240466c804f1debcc0e785f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "dots",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e212c1b9cf99e4c6e51d2a04e0fd5b5c",
+      "expEntrySuperscript": "2"
+    },
+    {
+      "entry": "Dot",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여자 이름 ((Dorothea, Dorothy의 애칭))",
+              "examples": [],
+              "originalMeaning": "여자 이름 ((Dorothea, Dorothy의 애칭))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ee5dba8e98d44ce49ea21f16ee701990",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ee5dba8e98d44ce49ea21f16ee701990",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "38113fa4fc9251dc6d37724d36cdd3d6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소들이 들에 점재하고 있었다.",
+      "text": "Cows dotted the field."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 늘 정각에 나타난다",
+      "text": "He always shows up right on the <b>dot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 약속했던 대로 정확하게 여섯 시에 왔다",
+      "text": "He came punctually[precisely] at six, just as he had promised. or He came at six on the <b>dot</b> as he had promised."
+    }
+  ],
+  "isWordType": true
+}

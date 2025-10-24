@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "medical",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmedɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "의학의, 의료의, 의사의; 의약의",
+              "examples": [
+                {
+                  "text": "<b>medical</b> equipment",
+                  "translatedText": "의료 기구"
+                }
+              ],
+              "originalMeaning": "의학의, 의료의, 의사의; 의약의"
+            },
+            {
+              "meaning": "건강 진단의",
+              "examples": [
+                {
+                  "text": "a <b>medical</b> certificate",
+                  "translatedText": "진단서"
+                }
+              ],
+              "originalMeaning": "건강 진단의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "개업의(醫)",
+              "examples": [],
+              "originalMeaning": "개업의(醫)"
+            },
+            {
+              "meaning": "의대생, 의학 시험",
+              "examples": [],
+              "originalMeaning": "의대생, 의학 시험"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c06f9dc6e09342fb925f9680af48470f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c06f9dc6e09342fb925f9680af48470f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "eaf4fc124083a50f37516c46ee02f4dc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "환자는 의약을 쓰기엔 때가 늦었다",
+      "text": "The patient is past <b>medical</b> care."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 딸은 의과 대학으로 진학할 겁니다",
+      "text": "My daughter is going on to <b>medical</b> school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의료 개선은 화급을 요한다",
+      "text": "An improvement in <b>medical</b> services is urgently needed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국 의학은 놀랄 만큼 발전했다",
+      "text": "Korea has made remarkable progress in <b>medical</b> science."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 의료 서비스가 드문 시대의 일이었다.",
+      "text": "It was in the days when <b>medical</b> services were rare."
+    }
+  ],
+  "isWordType": true
+}

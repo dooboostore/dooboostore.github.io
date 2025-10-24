@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "taste",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "teɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~, one’s ~] 미각, 맛, 미감(味感), 풍미 ((of)), (=flavor)",
+              "examples": [
+                {
+                  "text": "an unpleasant <b>taste</b>",
+                  "translatedText": "좋지 않은 맛"
+                }
+              ],
+              "originalMeaning": "[the ~, one’s ~] 미각, 맛, 미감(味感), 풍미 ((of)), (=<span class='related_word' lang='en' >flavor</span>)"
+            },
+            {
+              "meaning": "시식, 맛보기",
+              "examples": [],
+              "originalMeaning": "시식, 맛보기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<음식을> 맛보다, 시식하다",
+              "examples": [
+                {
+                  "text": "<b>taste</b> tea",
+                  "translatedText": "차의 맛을 보다"
+                }
+              ],
+              "originalMeaning": "<음식을> 맛보다, 시식하다"
+            },
+            {
+              "meaning": "(한 입) 먹다, 마시다",
+              "examples": [
+                {
+                  "text": "I have not tasted food today.",
+                  "translatedText": "오늘은 아직 음식을 맛도 못 보았다."
+                }
+              ],
+              "originalMeaning": "(한 입) 먹다, 마시다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "맛을 보다, 음미하다 ((of)); [문어] 겪다, 경험하다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>taste</b> of the joys of life",
+                  "translatedText": "인생의 기쁨을 맛보다"
+                }
+              ],
+              "originalMeaning": "맛을 보다, 음미하다 ((of)); [문어] 겪다, 경험하다 ((of))"
+            },
+            {
+              "meaning": "조금 먹다[마시다] ((of))",
+              "examples": [
+                {
+                  "text": "<b>taste</b> of whiskey",
+                  "translatedText": "위스키를 조금 마시다"
+                }
+              ],
+              "originalMeaning": "조금 먹다[마시다] ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aa840926a49242d0937d1783e3170c35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aa840926a49242d0937d1783e3170c35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tastes"
+        },
+        {
+          "type": "과거형",
+          "value": "tasted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tasting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tasted"
+        }
+      ],
+      "aliasConjugation": "tastes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6c66b254e0dae2efe4006ae0fa9f85c3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 마늘 맛이 난다.",
+      "text": "I <b>taste</b> garlic in it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너 매를 아직 설맞았구나",
+      "text": "You have just had a <b>taste</b> of the beating you deserve. or You need a little more."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 과자는 탄내가 난다",
+      "text": "The cake tastes scorched."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 수프는 양파 맛이 난다.",
+      "text": "The soup tastes of onion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 술은 김이 빠졌다",
+      "text": "This liquor tastes insipid."
+    }
+  ],
+  "isWordType": true
+}

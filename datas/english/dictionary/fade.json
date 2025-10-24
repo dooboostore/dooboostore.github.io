@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "fade",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "feɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<빛깔이> 바래다; <소리가> 사라지다; <안색이> 나빠지다; <꽃이> 시들다(wither), 쭈그러들다; <기력이> 쇠퇴하다(droop); <기억·감정 등이> 희미해지다, 꺼져가다 ((away, out)), (=vanish)",
+              "examples": [
+                {
+                  "text": "His eyesight faded.",
+                  "translatedText": "그의 시력이 약해졌다."
+                }
+              ],
+              "originalMeaning": "<빛깔이> 바래다; <소리가> 사라지다; <안색이> 나빠지다; <꽃이> 시들다(wither), 쭈그러들다; <기력이> 쇠퇴하다(droop); <기억·감정 등이> 희미해지다, 꺼져가다 ((away, out)), (=<span class='related_word' lang='en' >vanish</span>)"
+            },
+            {
+              "meaning": "[미] <사람이> 자취를 감추다, 어딘가로 가버리다; <물건이> 차츰 안 보이게 되다; <희망이> 사라지다 ((away, out))",
+              "examples": [],
+              "originalMeaning": "[미] <사람이> 자취를 감추다, 어딘가로 가버리다; <물건이> 차츰 안 보이게 되다; <희망이> 사라지다 ((away, out))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "시들게 하다, 쭈그러들게 하다, 노쇠케 하다",
+              "examples": [],
+              "originalMeaning": "시들게 하다, 쭈그러들게 하다, 노쇠케 하다"
+            },
+            {
+              "meaning": "색깔이 바래게 하다",
+              "examples": [
+                {
+                  "text": "Sunshine faded the drapes.",
+                  "translatedText": "햇빛이 커튼을 바래게 했다."
+                }
+              ],
+              "originalMeaning": "색깔이 바래게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=FADE-IN, FADE-OUT)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>FADE</b>-IN, <b>FADE</b>-OUT</span>)"
+            },
+            {
+              "meaning": "사라져 감",
+              "examples": [],
+              "originalMeaning": "사라져 감"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/01942d452fa6449182c98456bb0f5665",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/01942d452fa6449182c98456bb0f5665",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fades"
+        },
+        {
+          "type": "과거형",
+          "value": "faded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "faded"
+        }
+      ],
+      "aliasConjugation": "fades",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f34d3111ca88a4c19b597a56a5eb585a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 노여움은 점점 약해졌다.",
+      "text": "His anger faded away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "햇빛이 커튼을 바래게 했다.",
+      "text": "Sunshine faded the drapes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "햇볕에 커튼의 색이 바랬다",
+      "text": "The sun has faded the curtains."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 체력은 쇠미해 가고 있다",
+      "text": "His physical strength is fading away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노병은 죽지 않고 다만 사라질 뿐이다",
+      "text": "Old soldiers never die;they just <b>fade</b> away."
+    }
+  ],
+  "isWordType": true
+}

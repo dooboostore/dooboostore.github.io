@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "pair",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "per"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(두 개로 된) 한 쌍; (두 부분으로 되어 분리할 수 없는) 한 벌, 한 개 ((of))",
+              "examples": [
+                {
+                  "text": "three <b>pair</b>(s) of shoes",
+                  "translatedText": "구두 세 켤레"
+                }
+              ],
+              "originalMeaning": "(두 개로 된) 한 쌍; (두 부분으로 되어 분리할 수 없는) 한 벌, 한 개 ((of))"
+            },
+            {
+              "meaning": "한 쌍의 남녀; ((특히)) 부부, 약혼자",
+              "examples": [
+                {
+                  "text": "the happy <b>pair</b>",
+                  "translatedText": "신랑 신부"
+                }
+              ],
+              "originalMeaning": "한 쌍의 남녀; ((특히)) 부부, 약혼자"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<물건·사람을> 둘씩 조로 나누다; 한 쌍으로 만들다, <두 사람·두 개를> 짝으로 만들다 ((with))",
+              "examples": [],
+              "originalMeaning": "<물건·사람을> 둘씩 조로 나누다; 한 쌍으로 만들다, <두 사람·두 개를> 짝으로 만들다 ((with))"
+            },
+            {
+              "meaning": "결혼시키다, 짝지우다 ((with))",
+              "examples": [],
+              "originalMeaning": "결혼시키다, 짝지우다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "둘씩 조가 되다, 한 쌍이 되다",
+              "examples": [],
+              "originalMeaning": "둘씩 조가 되다, 한 쌍이 되다"
+            },
+            {
+              "meaning": "결혼하다",
+              "examples": [],
+              "originalMeaning": "결혼하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d356a21003545e5af1b21bfda3fcf67",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d356a21003545e5af1b21bfda3fcf67",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pairs"
+        },
+        {
+          "type": "복수형",
+          "value": "pairs, pair"
+        },
+        {
+          "type": "과거형",
+          "value": "paired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pairing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "paired"
+        }
+      ],
+      "aliasConjugation": "pairs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7b569252848db0da51143be78479b0b5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "댄서들은 두 사람씩 짝 지어졌다",
+      "text": "The dancers were paired off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 아주 별다른 일이다",
+      "text": "That is quite another <b>pair</b> of shoes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 구두는 주문해서 만든 것이다",
+      "text": "This <b>pair</b> of shoes is made to order."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 사람은 팔짱을 서로 끼고 걷고 있었다",
+      "text": "The <b>pair</b> were walking arm in arm."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "춤추기 위해 이분들을 짝 지어 주시오",
+      "text": "Just <b>pair</b> those people for the dance."
+    }
+  ],
+  "isWordType": true
+}

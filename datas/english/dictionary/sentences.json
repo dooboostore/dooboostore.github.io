@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "sentence",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsentəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "문장, 글",
+              "examples": [
+                {
+                  "text": "a <b>sentence</b> word",
+                  "translatedText": "문장 상당어 ((Come!, Yes! 등))"
+                }
+              ],
+              "originalMeaning": "문장, 글"
+            },
+            {
+              "meaning": "(형사상의) 판결, 선고, 처형, 형벌, 처벌",
+              "examples": [
+                {
+                  "text": "be under <b>sentence</b> of",
+                  "translatedText": "…의 선고를 받다, …형에 처해지다"
+                }
+              ],
+              "originalMeaning": "(형사상의) 판결, 선고, 처형, 형벌, 처벌"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[종종 수동형으로] 선고하다, 판결하다; 형에 처하다",
+              "examples": [
+                {
+                  "text": "<b>sentence</b> a person to death",
+                  "translatedText": "…에게 사형을 선고하다"
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 선고하다, 판결하다; 형에 처하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1bee82dafd4547ec8d4b6b312deedc83",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1bee82dafd4547ec8d4b6b312deedc83",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sentences"
+        },
+        {
+          "type": "과거형",
+          "value": "sentenced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sentencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sentenced"
+        }
+      ],
+      "aliasConjugation": "sentences",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7634c33156780ba712e16ec1eb0ab03c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "5 번의 문을 읽으시오.",
+      "text": "Read the <b>sentence</b> under No. 5."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 짤막짤막하게 글을 썼다",
+      "text": "He wrote choppy <b>sentences</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 위증죄의 판결을 받았다.",
+      "text": "He was sentenced for perjury."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 5년 징역형을 선고받았다",
+      "text": "He was sentenced to five years' imprisonment with hard labor. or He was sentenced to five year's penal servitude."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 살인범은 사형을 받았다",
+      "text": "The murderer was sentenced to death."
+    }
+  ],
+  "isWordType": true
+}

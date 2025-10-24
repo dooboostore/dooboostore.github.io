@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "increase",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<수량이> 늘다, 불어나다, 증가[증대, 증진]하다; <정도가> 커지다, 강해지다 ((in))(opp. decrease)",
+              "examples": [
+                {
+                  "text": "<b>increase</b> in number[power]",
+                  "translatedText": "수가[힘이] 증가하다"
+                }
+              ],
+              "originalMeaning": "<수량이> 늘다, 불어나다, 증가[증대, 증진]하다; <정도가> 커지다, 강해지다 ((in))(opp. decrease)"
+            },
+            {
+              "meaning": "번식하다, 증식하다",
+              "examples": [
+                {
+                  "text": "Her family <b>increased</b>.",
+                  "translatedText": "그녀의 가족이 늘었다."
+                }
+              ],
+              "originalMeaning": "번식하다, 증식하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<수량·범위·정도 등을> 늘리다, 불리다, 증가시키다(opp. diminish)",
+              "examples": [
+                {
+                  "text": "<b>increase</b> one's efforts",
+                  "translatedText": "노력을 더하다"
+                }
+              ],
+              "originalMeaning": "<수량·범위·정도 등을> 늘리다, 불리다, 증가시키다(opp. diminish)"
+            },
+            {
+              "meaning": "<영토 등을> 확장하다, 증강하다, <국제 긴장 등을> 고조시키다",
+              "examples": [],
+              "originalMeaning": "<영토 등을> 확장하다, 증강하다, <국제 긴장 등을> 고조시키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(수·크기·양·강도 등의) 증가, 증대, 증진 ((in, of))",
+              "examples": [
+                {
+                  "text": "the <b>increase</b> of crime",
+                  "translatedText": "범죄의 증가"
+                }
+              ],
+              "originalMeaning": "(수·크기·양·강도 등의) 증가, 증대, 증진 ((in, of))"
+            },
+            {
+              "meaning": "[C] 증가액, 증대량; 증가 요인 ((in, of))",
+              "examples": [
+                {
+                  "text": "a tax <b>increase</b> of 10 percent",
+                  "translatedText": "10퍼센트의 세금 인상액"
+                }
+              ],
+              "originalMeaning": "[C] 증가액, 증대량; 증가 요인 ((in, of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72eb028f437d49008206285c29868b8d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72eb028f437d49008206285c29868b8d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "increases"
+        },
+        {
+          "type": "과거형",
+          "value": "increased"
+        },
+        {
+          "type": "현재 분사",
+          "value": "increasing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "increased"
+        }
+      ],
+      "aliasConjugation": "increases",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b67052ac99cb29167a49ee0679fb9af",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "임금 인상은 5 퍼센트로 묶였다",
+      "text": "Pay <b>increase</b> was pegged at 5%."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 나라의 수출은 증가하고 있다",
+      "text": "Our exports are increasing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "땅 값이 등귀하고 있다",
+      "text": "Land values are on the <b>increase</b>[rise]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "청소년 범죄가 늘고 있다",
+      "text": "Juvenile crime is on the <b>increase</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수입이 증가하는 데 따라서",
+      "text": "(in proportion) as one's income increases"
+    }
+  ],
+  "isWordType": true
+}

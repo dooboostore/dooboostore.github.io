@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "legend",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈledʒənd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전설, [U] 전설 문학",
+              "examples": [
+                {
+                  "text": "the legends of King Arthur and his knights",
+                  "translatedText": "아더 왕과 그 기사들의 전설"
+                }
+              ],
+              "originalMeaning": "전설, [U] 전설 문학"
+            },
+            {
+              "meaning": "(기념비·문장(紋章)·그림 등의) 제명, 제목; 설명(문)(caption)",
+              "examples": [],
+              "originalMeaning": "(기념비·문장(紋章)·그림 등의) 제명, 제목; 설명(문)(caption)"
+            },
+            {
+              "meaning": "(도서·도표 등의) 범례 ((사용 부호의 설명))",
+              "examples": [],
+              "originalMeaning": "(도서·도표 등의) 범례 ((사용 부호의 설명))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/191e0265900f4373a7b7dec65d6cc2ab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/191e0265900f4373a7b7dec65d6cc2ab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b0e3ef3790e31293cf4f6a928a83f91b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 생존시 이미 전설적인 인물이 되었다.",
+      "text": "He became a <b>legend</b> in his own lifetime."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 전설의 마지막 부분은 후에 덧붙여진 것이다.",
+      "text": "The last part of the <b>legend</b> is a later accretion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아서 왕의 전설은 거의 15세기 동안이나 지속되어 왔다.",
+      "text": "The <b>legend</b> of King Arthur has persisted for nearly fifteen centuries."
+    }
+  ],
+  "isWordType": true
+}

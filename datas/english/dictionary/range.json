@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "range",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "reɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "열, 줄; 잇닿음, 줄지음, 계속",
+              "examples": [
+                {
+                  "text": "the first <b>range</b> of soldiers",
+                  "translatedText": "제1열의 병사들"
+                }
+              ],
+              "originalMeaning": "열, 줄; 잇닿음, 줄지음, 계속"
+            },
+            {
+              "meaning": "산맥",
+              "examples": [
+                {
+                  "text": "the Cascade <b>Range</b>",
+                  "translatedText": "캐스케이드 산맥"
+                }
+              ],
+              "originalMeaning": "산맥"
+            },
+            {
+              "meaning": "연속 ((같은 종류의 것의)), 조(組), 모임",
+              "examples": [
+                {
+                  "text": "a complete <b>range</b> of electrical goods",
+                  "translatedText": "전기 제품의 전 기종"
+                }
+              ],
+              "originalMeaning": "연속 ((같은 종류의 것의)), 조(組), 모임"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가지런히 하다, 정렬시키다; 늘어놓다, 배치하다 ((on, in, along))",
+              "examples": [
+                {
+                  "text": "<b>range</b> books on a shelf",
+                  "translatedText": "책을 선반에 가지런히 놓다"
+                }
+              ],
+              "originalMeaning": "가지런히 하다, 정렬시키다; 늘어놓다, 배치하다 ((on, in, along))"
+            },
+            {
+              "meaning": "<머리카락을> 매만지다",
+              "examples": [],
+              "originalMeaning": "<머리카락을> 매만지다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "한 줄로 늘어서다",
+              "examples": [],
+              "originalMeaning": "한 줄로 늘어서다"
+            },
+            {
+              "meaning": "<산맥 등이> 연해 있다, 뻗다",
+              "examples": [
+                {
+                  "text": "a boundary that <b>range</b> s northand south",
+                  "translatedText": "남북으로 뻗은 경계선"
+                }
+              ],
+              "originalMeaning": "<산맥 등이> 연해 있다, 뻗다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6344ba5135964e2599b92fe09113ccbd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6344ba5135964e2599b92fe09113ccbd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ranges"
+        },
+        {
+          "type": "과거형",
+          "value": "ranged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ranging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ranged"
+        }
+      ],
+      "aliasConjugation": "ranges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f05378c1276fd33ff5365aec09ae2458",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 포의 사정 거리는 8마일이다.",
+      "text": "This gun ranges 8 miles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산이 줄기줄기 뻗어 있다",
+      "text": "A mountain spreads out into ranges."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가격은 20달러에서 50달러까지 여러가지이다.",
+      "text": "Prices <b>range</b> from $20 to $50."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 곡사포는 사정이 30마일이다",
+      "text": "This howitzer ranges thirty miles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 포의 착탄 거리는 6마일이다",
+      "text": "This gun has the <b>range</b> of 6 miles."
+    }
+  ],
+  "isWordType": true
+}

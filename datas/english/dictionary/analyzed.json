@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "analyse",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈænəlaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(=ANALYZE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >ANALYZE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7f1d93c2f3254dc2827baefdb240dc39",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7f1d93c2f3254dc2827baefdb240dc39",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "analyses"
+        },
+        {
+          "type": "과거형",
+          "value": "analysed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "analysing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "analysed"
+        }
+      ],
+      "aliasConjugation": "analyses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "500b426f84ee68479c08ce20e1d99f01",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "analyze",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ǽnəlàiz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[물리·화학]  분석하다 , 분해하다; [수학] 해석하다",
+              "examples": [],
+              "originalMeaning": "[물리·화학]  분석하다 , 분해하다; [수학] 해석하다"
+            },
+            {
+              "meaning": "분석적으로 검토하다, 분석하다",
+              "examples": [],
+              "originalMeaning": "분석적으로 검토하다, 분석하다"
+            },
+            {
+              "meaning": "[문법] <문(文)을> 해부하다, 분석하다; 검토하다",
+              "examples": [],
+              "originalMeaning": "[문법] <문(文)을> 해부하다, 분석하다; 검토하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6ab728e4f6b4e0c9a1af9a343dc9eb7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6ab728e4f6b4e0c9a1af9a343dc9eb7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b577b8e64f31b3bd6238bbb434f3c72b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "물은 산소와 수소로 분해할 수 있다.",
+      "text": "Water can be <b>analyzed</b> into oxygen and hydrogen."
+    }
+  ],
+  "isWordType": true
+}

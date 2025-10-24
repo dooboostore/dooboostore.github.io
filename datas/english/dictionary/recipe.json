@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "entry": "recipe",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈresəpi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(요리의) 조리법, 요리법 ((for))",
+              "examples": [
+                {
+                  "text": "a <b>recipe</b> for a cake",
+                  "translatedText": "케이크 만드는 법"
+                }
+              ],
+              "originalMeaning": "(요리의) 조리법, 요리법 ((for))"
+            },
+            {
+              "meaning": "(약 따위의) 처방(전)",
+              "examples": [],
+              "originalMeaning": "(약 따위의) 처방(전)"
+            },
+            {
+              "meaning": "방법, 비결, 비방, 비책 ((for))",
+              "examples": [
+                {
+                  "text": "the <b>recipe</b> forsuccess in business",
+                  "translatedText": "사업에서의 성공의 비결"
+                }
+              ],
+              "originalMeaning": "방법, 비결, 비방, 비책 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a27300d77a924a569f1fd9ef908ebfe1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a27300d77a924a569f1fd9ef908ebfe1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "aa6f52b9afd3d31bb0f1f9e8a112661d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 요리책을 집필하고 있다",
+      "text": "She is writing a <b>recipe</b> book."
+    }
+  ],
+  "isWordType": true
+}

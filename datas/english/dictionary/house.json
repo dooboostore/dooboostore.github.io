@@ -1,0 +1,162 @@
+{
+  "items": [
+    {
+      "entry": "house",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "집, 가옥, 주택 (=home)",
+              "examples": [
+                {
+                  "text": "the Johnson <b>house</b>",
+                  "translatedText": "존슨네 집"
+                }
+              ],
+              "originalMeaning": "집, 가옥, 주택 (=<span class='related_word' lang='en' >home</span>)"
+            },
+            {
+              "meaning": "가정(home, household); 일가(一家), 가족(family)",
+              "examples": [
+                {
+                  "text": "the whole <b>house</b>",
+                  "translatedText": "온 가족"
+                }
+              ],
+              "originalMeaning": "가정(home, household); 일가(一家), 가족(family)"
+            },
+            {
+              "meaning": "[종종 H~] 가계(家系), 혈통",
+              "examples": [
+                {
+                  "text": "the <b>House</b> of Windsor",
+                  "translatedText": "윈저 집안 ((영국 왕실))"
+                }
+              ],
+              "originalMeaning": "[종종 H~] 가계(家系), 혈통"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "집의, 집을 위한; 집에서 기르는",
+              "examples": [
+                {
+                  "text": "a <b>house</b> cat",
+                  "translatedText": "고양이"
+                }
+              ],
+              "originalMeaning": "집의, 집을 위한; 집에서 기르는"
+            },
+            {
+              "meaning": "판매점의 상표가 붙은, 자가제(自家製)의",
+              "examples": [
+                {
+                  "text": "the store's own <b>house</b> brand",
+                  "translatedText": "그 가게의 고유 상표"
+                }
+              ],
+              "originalMeaning": "판매점의 상표가 붙은, 자가제(自家製)의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에게> 집을 주다, 주거를 제공하다; (일이나 공부할) 장소를 제공하다; 재우다, 숙박시키다",
+              "examples": [
+                {
+                  "text": "<b>house</b> a traveler",
+                  "translatedText": "나그네를 머무르게 하다"
+                }
+              ],
+              "originalMeaning": "<…에게> 집을 주다, 주거를 제공하다; (일이나 공부할) 장소를 제공하다; 재우다, 숙박시키다"
+            },
+            {
+              "meaning": "<물건을> 간수하다, 수용[수납]하다",
+              "examples": [
+                {
+                  "text": "<b>house</b> garden tools in a shed",
+                  "translatedText": "원예용 연장을 헛간에 넣어 두다"
+                }
+              ],
+              "originalMeaning": "<물건을> 간수하다, 수용[수납]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/49688a5175c344ff858fbfc6006d8d73",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/49688a5175c344ff858fbfc6006d8d73",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "houses"
+        },
+        {
+          "type": "복수형",
+          "value": "houses"
+        },
+        {
+          "type": "과거형",
+          "value": "housed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "housing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "housed"
+        }
+      ],
+      "aliasConjugation": "houses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d1cbd1fcef7199c740caca922093ff4a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 집은 내주장이 강하다",
+      "text": "The wife is the ruler in that <b>house</b>. or The wife wears the trousers in that <b>house</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "집안은 대소동이 일어나고 있다",
+      "text": "All is confusion in the <b>house</b>. or The <b>house</b> is topsy-turvy[in a great bustle, in a turmoil]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집에는 도깨비가 나온다",
+      "text": "The <b>house</b> is haunted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 내 소유의 집입니다.",
+      "text": "This is my own <b>house</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 내 이웃에서 산다",
+      "text": "She lives near my <b>house</b>."
+    }
+  ],
+  "isWordType": true
+}

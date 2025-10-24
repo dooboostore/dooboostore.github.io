@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "pardon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈpɑːrdn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "용서, 허용, 관대",
+              "examples": [
+                {
+                  "text": "ask for <b>pardon</b>",
+                  "translatedText": "용서를 빌다"
+                }
+              ],
+              "originalMeaning": "용서, 허용, 관대"
+            },
+            {
+              "meaning": "특사, 사면",
+              "examples": [
+                {
+                  "text": "(a) special[general] <b>pardon</b>",
+                  "translatedText": "특사[대사(大赦)]"
+                }
+              ],
+              "originalMeaning": "특사, 사면"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "용서하다, 눈감아주다; <질문 등을> 인정하다 (=forgive)",
+              "examples": [
+                {
+                  "text": "<b>pardon</b> theft[a thief]",
+                  "translatedText": "절도[도둑]를 눈감아주다"
+                }
+              ],
+              "originalMeaning": "용서하다, 눈감아주다; <질문 등을> 인정하다 (=<span class='related_word' lang='en' >forgive</span>)"
+            },
+            {
+              "meaning": "사면[특사]하다",
+              "examples": [
+                {
+                  "text": "<b>pardon</b> a person an offense",
+                  "translatedText": "…의 죄를 용서하다"
+                }
+              ],
+              "originalMeaning": "사면[특사]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e8cf379f0e8641d99e7693a998a9db48",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e8cf379f0e8641d99e7693a998a9db48",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pardons"
+        },
+        {
+          "type": "과거형",
+          "value": "pardoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pardoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pardoned"
+        }
+      ],
+      "aliasConjugation": "pardons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3b4228df9bbf491927357f6a4d91ef2e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다시 한 번 말해 주시오",
+      "text": "Excuse me? or <b>Pardon</b> me? or I beg your <b>pardon</b>. or What was that again? or Come again?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파티에서의 제 무례를 용서해 주십시오.",
+      "text": "Please <b>pardon</b> me my misbehavior at the party."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일신상의 문제에 대해 언급하는 것을 용서해 주십시오",
+      "text": "You will <b>pardon</b> the personal reference."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "편지를 드리는 실례를 용서해 주십시오.",
+      "text": "Please <b>pardon</b> my presumption in writing to you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대사를 받아 출옥했다",
+      "text": "He was released from prison on a general <b>pardon</b>[under an amnesty]."
+    }
+  ],
+  "isWordType": true
+}

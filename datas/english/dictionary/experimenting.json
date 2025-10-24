@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "experiment",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈsperɪmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(과학상의) 실험 ((in, on, with)); (실지로) 해봄(test)",
+              "examples": [
+                {
+                  "text": "a chemical <b>experiment</b>",
+                  "translatedText": "화학 실험"
+                }
+              ],
+              "originalMeaning": "(과학상의) 실험 ((in, on, with)); (실지로) 해봄(test)"
+            },
+            {
+              "meaning": "실험 장치",
+              "examples": [],
+              "originalMeaning": "실험 장치"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[ekspérəmènt, iks-|iks-] 실험하다 ((on, upon, with))",
+              "examples": [
+                {
+                  "text": "<b>experiment</b> on animals with a new medicine",
+                  "translatedText": "신약을 갖고 동물 실험을 하다"
+                }
+              ],
+              "originalMeaning": "[ekspérəmènt, iks-|iks-] 실험하다 ((on, upon, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/628efc16824a4bd0a5af445dd01bb0cc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/628efc16824a4bd0a5af445dd01bb0cc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "experiments"
+        },
+        {
+          "type": "과거형",
+          "value": "experimented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "experimenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "experimented"
+        }
+      ],
+      "aliasConjugation": "experiments",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1554db31d10a83f913f328b9ffc7fbb5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "실험 결과는 도로 아미타불이었다",
+      "text": "The <b>experiment</b> proved a failure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이론은 실험으로 확증되었다",
+      "text": "His theory has been confirmed by an <b>experiment</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "notice",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│noʊtɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 통지, 통보; 고지(告知), 정식의 통고; [미] 성적 불량의 통지",
+              "examples": [
+                {
+                  "text": "The whistle blew to give <b>notice</b> that the boat was about to leave.",
+                  "translatedText": "기적이 울려 배가 떠나려는 것을 알렸다."
+                }
+              ],
+              "originalMeaning": "[UC/] 통지, 통보; 고지(告知), 정식의 통고; [미] 성적 불량의 통지"
+            },
+            {
+              "meaning": "[U] 주의, 주목; 인지(認知)",
+              "examples": [
+                {
+                  "text": "Please take <b>notice</b> that your manuscript shall be sent to us by the appointed day.",
+                  "translatedText": "원고를 기일까지 보내 주시도록 유념해 주시기 바랍니다."
+                }
+              ],
+              "originalMeaning": "[U] 주의, 주목; 인지(認知)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "주의하다, 주목하다",
+              "examples": [
+                {
+                  "text": "( <b>notice</b>+wh. to do) <b>Notice</b> how to make it.",
+                  "translatedText": "그것을 어떻게 만드는지에 주의하시오."
+                }
+              ],
+              "originalMeaning": "주의하다, 주목하다"
+            },
+            {
+              "meaning": "알아채다, 인지하다",
+              "examples": [
+                {
+                  "text": "I did not <b>notice</b> him.",
+                  "translatedText": "나는 그를 알아보지 못했다."
+                }
+              ],
+              "originalMeaning": "알아채다, 인지하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/07fdeadb459340ac927517b4527c0e73",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/07fdeadb459340ac927517b4527c0e73",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "notices"
+        },
+        {
+          "type": "과거형",
+          "value": "noticed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "noticing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "noticed"
+        }
+      ],
+      "aliasConjugation": "notices",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "31638ab7921128db96c1012d93d4d063",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그를 알아보지 못했다.",
+      "text": "I did not <b>notice</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 떠나라는 통지를 받았다.",
+      "text": "He was noticed to quit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아까 자고 있더라",
+      "text": "I found him sleeping a little while ago. or He was noticed to be sleeping a while ago."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 어떻게 만드는지에 주의하시오.",
+      "text": "<b>Notice</b> how to make it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "연락만 주시면 즉시 갈 수 있습니다",
+      "text": "I can come on instant's <b>notice</b>."
+    }
+  ],
+  "isWordType": true
+}

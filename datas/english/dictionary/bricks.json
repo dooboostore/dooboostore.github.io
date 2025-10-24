@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "brick",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "brɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 벽돌 (한 개), [U] [집합적] 벽돌",
+              "examples": [
+                {
+                  "text": "a fire[dressed] <b>brick</b>",
+                  "translatedText": "내화[화장] 벽돌"
+                }
+              ],
+              "originalMeaning": "[UC/] 벽돌 (한 개), [U] [집합적] 벽돌"
+            },
+            {
+              "meaning": "벽돌 모양의 덩어리",
+              "examples": [
+                {
+                  "text": "a <b>brick</b> of ice cream",
+                  "translatedText": "직사각형의 아이스크림"
+                }
+              ],
+              "originalMeaning": "벽돌 모양의 덩어리"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 벽돌의, 벽돌로 지은, 빨간 벽돌색의",
+              "examples": [],
+              "originalMeaning": "[A] 벽돌의, 벽돌로 지은, 빨간 벽돌색의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 벽돌을 깔다[쌓다], 벽돌로 둘러싸다 ((in)), 벽돌로 막다 ((up))",
+              "examples": [
+                {
+                  "text": "<b>brick</b> up a window",
+                  "translatedText": "창문을 벽돌로 막다"
+                }
+              ],
+              "originalMeaning": "…에 벽돌을 깔다[쌓다], 벽돌로 둘러싸다 ((in)), 벽돌로 막다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2727fdf065004e89b4d9e7251323cfbc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2727fdf065004e89b4d9e7251323cfbc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bricks"
+        },
+        {
+          "type": "과거형",
+          "value": "bricked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bricking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bricked"
+        }
+      ],
+      "aliasConjugation": "bricks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5be45b5cd9e1bfb8e039463113e22322",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 놀랄 만한 통찰력을 갖고 있다",
+      "text": "He can see through a <b>brick</b> wall."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "벽돌집이 길가에 죽 늘어서 있다.",
+      "text": "<b>Brick</b> houses range along the road."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "인부들은 벽돌을 한 짐 짊어진다",
+      "text": "Workers shoulder a load of <b>bricks</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 예산 문제에서 벽에 부딪쳤다",
+      "text": "We ran up against a <b>brick</b> wall over budgeting costs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나무[통풍] 벽돌",
+      "text": "(a) wood[an air] <b>brick</b>"
+    }
+  ],
+  "isWordType": true
+}

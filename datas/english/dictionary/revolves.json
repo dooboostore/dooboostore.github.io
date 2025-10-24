@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "revolve",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪˈvɑːlv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "회전하다, 선회(旋回)하다(rotate); (…을 축으로) 돌다 ((on)), (=turn)",
+              "examples": [
+                {
+                  "text": "The earth <b>revolve</b> s on its axis.",
+                  "translatedText": "지구는 지축을 중심으로 자전한다."
+                }
+              ],
+              "originalMeaning": "회전하다, 선회(旋回)하다(rotate); (…을 축으로) 돌다 ((on)), (=<span class='related_word' lang='en' >turn</span>)"
+            },
+            {
+              "meaning": "<천체가> 공전(公轉)하다, 운행하다, 주전(周轉)하다 ((around, about))",
+              "examples": [
+                {
+                  "text": "The moon <b>revolves</b> around the earth.",
+                  "translatedText": "달은 지구의 주위를 운행한다."
+                }
+              ],
+              "originalMeaning": "<천체가> 공전(公轉)하다, 운행하다, 주전(周轉)하다 ((around, about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "회전시키다, 원을 그리듯이 움직이게 만들다 (=turn)",
+              "examples": [],
+              "originalMeaning": "회전시키다, 원을 그리듯이 움직이게 만들다 (=<span class='related_word' lang='en' >turn</span>)"
+            },
+            {
+              "meaning": "운행시키다",
+              "examples": [],
+              "originalMeaning": "운행시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cec2f45b3af4437bb748fbfb16639ae5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cec2f45b3af4437bb748fbfb16639ae5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "revolves"
+        },
+        {
+          "type": "과거형",
+          "value": "revolved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "revolving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "revolved"
+        }
+      ],
+      "aliasConjugation": "revolves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f83bd10fd3c88ea86e6211c2b6fc897c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지구는 태양 주위를 돈다",
+      "text": "The earth <b>revolves</b>[goes] round the sun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달은 지구의 주위를 운행한다.",
+      "text": "The moon <b>revolves</b> around the earth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지구는 태양의 주위를 회전한다",
+      "text": "The earth moves[<b>revolves</b>] around the sun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "컴팩트 디스크가 빠른 속도로 회전한다",
+      "text": "Compact discs <b>revolve</b> at high speed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "바람개비가 바람에 돈다 The vane is turning with the wind. or",
+      "text": "The pinwheel whirls[<b>revolves</b>] in the breeze."
+    }
+  ],
+  "isWordType": true
+}

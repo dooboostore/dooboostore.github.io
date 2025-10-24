@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "orchard",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɔːrtʃərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "과수원, [집합적] (과수원의) 과수",
+              "examples": [
+                {
+                  "text": "an apple <b>orchard</b>",
+                  "translatedText": "사과 과수원"
+                }
+              ],
+              "originalMeaning": "과수원, [집합적] (과수원의) 과수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/65c92e897777427aaebe1577b0a9a404",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/65c92e897777427aaebe1577b0a9a404",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4a70f8aaefbc2b75af27ca5a49565964",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과수원은 지금 꽃이 만발해 있다.",
+      "text": "The <b>orchard</b> is now pranked with blossoms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 과수원으로 통하는 언덕 사면에 층층대를 만들었다.",
+      "text": "He stepped the hillside leading to the <b>orchard</b>."
+    }
+  ],
+  "isWordType": true
+}

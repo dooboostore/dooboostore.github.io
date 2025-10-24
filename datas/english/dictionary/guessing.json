@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "guess",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡes"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "짐작하다, 추측하다, 추정하다 (=imagine)",
+              "examples": [
+                {
+                  "text": "<b>guess</b> the woman's age at 25",
+                  "translatedText": "그 여자의 나이를 25세로 추측하다"
+                }
+              ],
+              "originalMeaning": "짐작하다, 추측하다, 추정하다 (=<span class='related_word' lang='en' >imagine</span>)"
+            },
+            {
+              "meaning": "알아맞히다, (충분한 근거 없이) 억측하다, 짐작해서 말하다",
+              "examples": [
+                {
+                  "text": "<b>Guess</b> which hand holds a coin.",
+                  "translatedText": "어느 쪽 손에 동전이 들었는지 맞춰 봐."
+                }
+              ],
+              "originalMeaning": "알아맞히다, (충분한 근거 없이) 억측하다, 짐작해서 말하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "추측하다, 미루어서 살피다, 짐작하다; 알아맞히다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>guess</b> right[wrong]",
+                  "translatedText": "바로[잘못] 맞히다"
+                }
+              ],
+              "originalMeaning": "추측하다, 미루어서 살피다, 짐작하다; 알아맞히다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "추측, 짐작, 억측",
+              "examples": [
+                {
+                  "text": "give[make] a <b>guess</b>",
+                  "translatedText": "추측하다, 억측하다"
+                }
+              ],
+              "originalMeaning": "추측, 짐작, 억측"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea7a59612c5f40fc997ecfd91db38c4a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea7a59612c5f40fc997ecfd91db38c4a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "guesses"
+        },
+        {
+          "type": "과거형",
+          "value": "guessed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "guessing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "guessed"
+        }
+      ],
+      "aliasConjugation": "guesses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "01180381de9b1a611142465ea0d525f3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나 어디 있는지 맞춰 봐!",
+      "text": "<b>Guess</b> where I am!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "단지 추측할 수 밖에 없다.",
+      "text": "You can only <b>guess</b>[<b>guess</b> only]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "에, 그래, 아마 그럴 거야.",
+      "text": "Why, yes, I <b>guess</b> so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 짐작은 크게 빗나갔다.",
+      "text": "My <b>guess</b> was way out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 내가 대충 짐작한 것이다",
+      "text": "That's my random <b>guess</b>."
+    }
+  ],
+  "isWordType": true
+}

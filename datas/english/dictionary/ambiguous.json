@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "entry": "ambiguous",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "æmˈbɪɡjuəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "두 가지 이상의 뜻으로 해석할 수 있는, 다의(多義)의 (=vague)",
+              "examples": [],
+              "originalMeaning": "두 가지 이상의 뜻으로 해석할 수 있는, 다의(多義)의 (=<span class='related_word' lang='en' >vague</span>)"
+            },
+            {
+              "meaning": "모호한, 분명하지 않은, 확실치 않은",
+              "examples": [
+                {
+                  "text": "an <b>ambiguous</b> reply",
+                  "translatedText": "애매모호한 대답"
+                }
+              ],
+              "originalMeaning": "모호한, 분명하지 않은, 확실치 않은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/67e247e0b5bd4606af2b14261fcf5d2f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/67e247e0b5bd4606af2b14261fcf5d2f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "541b1d90c7e0ac1b51c0b18a6ad708cf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 서류는 애매하여 명확하게 할 필요가 있다",
+      "text": "This document is <b>ambiguous</b> and in need of clarification."
+    }
+  ],
+  "isWordType": true
+}

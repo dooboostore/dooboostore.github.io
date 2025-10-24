@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "distance",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdɪstəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "거리, 간격, 노정(路程)",
+              "examples": [],
+              "originalMeaning": "거리, 간격, 노정(路程)"
+            },
+            {
+              "meaning": "[sing.] 먼 거리, 먼 곳; [경마] 240야드의 거리; [회화] 원경(遠景)",
+              "examples": [
+                {
+                  "text": "India is a great <b>distance</b> away[off].",
+                  "translatedText": "인도는 아주 멀다."
+                }
+              ],
+              "originalMeaning": "[sing.] 먼 거리, 먼 곳; [경마] 240야드의 거리; [회화] 원경(遠景)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "간격을 두다, 멀리 놓다",
+              "examples": [],
+              "originalMeaning": "간격을 두다, 멀리 놓다"
+            },
+            {
+              "meaning": "(경기에서) 앞서다, 멀리 떼어놓다",
+              "examples": [],
+              "originalMeaning": "(경기에서) 앞서다, 멀리 떼어놓다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/00719f15df794567b869e1eb968ceb7b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/00719f15df794567b869e1eb968ceb7b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "distances"
+        },
+        {
+          "type": "과거형",
+          "value": "distanced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "distancing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "distanced"
+        }
+      ],
+      "aliasConjugation": "distances",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d6e0c7cb0f7aabba8fad4f73345bdb92",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "좀 떨어져서 보면 더 좋게 보인다",
+      "text": "It looks better at a <b>distance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "성공이 눈 앞에 있다.",
+      "text": "Success is within hailing <b>distance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 거리를 6마일로 어림잡는다.",
+      "text": "I put the <b>distance</b> at six miles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "먼 곳에 빛이 희미하게 보인다",
+      "text": "A light glimmers in the <b>distance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 산은 상당히 먼 거리에 있다.",
+      "text": "The mountain is some <b>distance</b> away."
+    }
+  ],
+  "isWordType": true
+}

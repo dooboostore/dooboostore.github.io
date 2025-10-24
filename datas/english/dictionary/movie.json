@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "movie",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmuːvi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "영화",
+              "examples": [
+                {
+                  "text": "a war <b>movie</b>",
+                  "translatedText": "전쟁 영화"
+                }
+              ],
+              "originalMeaning": "영화"
+            },
+            {
+              "meaning": "[종종 the ~] 영화관",
+              "examples": [],
+              "originalMeaning": "[종종 the ~] 영화관"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "영화의",
+              "examples": [
+                {
+                  "text": "a <b>movie</b> fan",
+                  "translatedText": "영화 팬"
+                }
+              ],
+              "originalMeaning": "영화의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8ea2d6a1f71443e48113494d2c83ca82",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8ea2d6a1f71443e48113494d2c83ca82",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1b896534721863e6f0baf0f4c8be4de3",
+      "expEntrySuperscript": "1"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 영화는 우리를 흥분시켰다.",
+      "text": "The <b>movie</b> excited us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영화나 보러 갈까 봐",
+      "text": "I think I'll go to see a <b>movie</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 극장에 잘 간다",
+      "text": "He goes to the movies a lot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 영화 퍽 재미있습디다",
+      "text": "I enjoyed the <b>movie</b> very much."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 책을 영화화했다.",
+      "text": "They did the book into a <b>movie</b>."
+    }
+  ],
+  "isWordType": true
+}

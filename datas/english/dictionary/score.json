@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "score",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skɔː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 sing.] (경기·시합의) 득점; 총득점, 득점 기록, 스코어",
+              "examples": [
+                {
+                  "text": "keep (the) <b>score</b>",
+                  "translatedText": "득점을 기록하다"
+                }
+              ],
+              "originalMeaning": "[보통 sing.] (경기·시합의) 득점; 총득점, 득점 기록, 스코어"
+            },
+            {
+              "meaning": "(시험의) 점수, 성적",
+              "examples": [
+                {
+                  "text": "the average <b>score</b>",
+                  "translatedText": "평균점"
+                }
+              ],
+              "originalMeaning": "(시험의) 점수, 성적"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "득점하다, <…>점이 되다, <심판이> <득점을> 주다",
+              "examples": [
+                {
+                  "text": "<b>score</b> a century at cricket",
+                  "translatedText": "크리켓에서 100점을 따다"
+                }
+              ],
+              "originalMeaning": "득점하다, <…>점이 되다, <심판이> <득점을> 주다"
+            },
+            {
+              "meaning": "채점하다",
+              "examples": [
+                {
+                  "text": "<b>score</b> a test",
+                  "translatedText": "시험 채점을 하다"
+                }
+              ],
+              "originalMeaning": "채점하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "득점하다; 득점을 기록하다, 점수를 계산하다; (…보다) 낫다, 뛰어나다 ((against, over))",
+              "examples": [],
+              "originalMeaning": "득점하다; 득점을 기록하다, 점수를 계산하다; (…보다) 낫다, 뛰어나다 ((against, over))"
+            },
+            {
+              "meaning": "[야구] <주자가> 홈인하다, [경마] <경주마가> 레이스에서 이기다",
+              "examples": [],
+              "originalMeaning": "[야구] <주자가> 홈인하다, [경마] <경주마가> 레이스에서 이기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/56cde3909547492cb1f941f42d43aba0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/56cde3909547492cb1f941f42d43aba0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "scores"
+        },
+        {
+          "type": "과거형",
+          "value": "scored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scored"
+        }
+      ],
+      "aliasConjugation": "scores",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d86f014fb36c9fe90b7f58b994039851",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 점을 선취하다 <b>score</b> the first run",
+      "text": ";<b>score</b> the first one point"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 점에 대해서는 염려할 것 없다",
+      "text": "Make your mind easy on that <b>score</b>. or You have nothing to worry about on that point."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 야구팀은 5점을 올렸다",
+      "text": "Our team scored five points[runs]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "2대 2의 타이스코어를 이루고 있다",
+      "text": "The <b>score</b> is tied at 2 to 2."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 화학에서 백점을 받았다",
+      "text": "I got a perfect <b>score</b> in chemistry."
+    }
+  ],
+  "isWordType": true
+}

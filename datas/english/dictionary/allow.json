@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "allow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈlaʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "허락하다, 허가하다; …하게 두다, …하는 대로 두다, 묵인하다(permit), (=let)",
+              "examples": [
+                {
+                  "text": "Smoking is not allowed here.",
+                  "translatedText": "금연."
+                }
+              ],
+              "originalMeaning": "허락하다, 허가하다; …하게 두다, …하는 대로 두다, 묵인하다(permit), (=<span class='related_word' lang='en' >let</span>)"
+            },
+            {
+              "meaning": "(정기적으로) 주다, 지급하다(grant)",
+              "examples": [
+                {
+                  "text": "<b>allow</b> him 50,000 won a month",
+                  "translatedText": "그에게 월 5만 원을 지급하다"
+                }
+              ],
+              "originalMeaning": "(정기적으로) 주다, 지급하다(grant)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "인정하다, 허용하다(permit, admit); …의 여지가 있다",
+              "examples": [
+                {
+                  "text": "<b>allow</b> of no delay",
+                  "translatedText": "조금도 지체할 수 없다"
+                }
+              ],
+              "originalMeaning": "인정하다, 허용하다(permit, admit); …의 여지가 있다"
+            },
+            {
+              "meaning": "(사정 등을) 참작하다, 계산[고려]에 넣다; …의 여유를 생각해 두다",
+              "examples": [
+                {
+                  "text": "We must <b>allow</b> for some delay.",
+                  "translatedText": "다소의 지연을 생각해 두어야 한다."
+                }
+              ],
+              "originalMeaning": "(사정 등을) 참작하다, 계산[고려]에 넣다; …의 여유를 생각해 두다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4c738fcb451843b3be45262197c03ea4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4c738fcb451843b3be45262197c03ea4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "allows"
+        },
+        {
+          "type": "과거형",
+          "value": "allowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "allowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "allowed"
+        }
+      ],
+      "aliasConjugation": "allows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b96598d9ce99cabb40246bfa87d02a53",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것에 손 대면 안 된다",
+      "text": "Don't touch it. or You must not touch it. or You are not allowed[forbidden] to touch it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 허용되어서는 안 된다.",
+      "text": "It ought not to be allowed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내일 낚시질하러 갈 작정이다.",
+      "text": "I <b>allow</b> to go fishing tomorrow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다소의 지연을 생각해 두어야 한다.",
+      "text": "We must <b>allow</b> for some delay."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 아주 옳다고 생각한다.",
+      "text": "I <b>allow</b> that it’s quite right."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "currency",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɜːrənsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 통화, 통화 유통액; 지폐; 화폐 대용물",
+              "examples": [
+                {
+                  "text": "foreign <b>currency</b>",
+                  "translatedText": "외화"
+                }
+              ],
+              "originalMeaning": "[UC/] 통화, 통화 유통액; 지폐; 화폐 대용물"
+            },
+            {
+              "meaning": "[U] (화폐 등의) 유통, 통용; (사상 등의) 용인, 수용; 보급, 유포, 유행; (정보 등의) 전달(성)",
+              "examples": [],
+              "originalMeaning": "[U] (화폐 등의) 유통, 통용; (사상 등의) 용인, 수용; 보급, 유포, 유행; (정보 등의) 전달(성)"
+            },
+            {
+              "meaning": "통용[유행] 기간",
+              "examples": [],
+              "originalMeaning": "통용[유행] 기간"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b12076d2cb4c4c87b729b357b99afc84",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b12076d2cb4c4c87b729b357b99afc84",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "currencies"
+        }
+      ],
+      "aliasConjugation": "currencies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "543e87a846758d17af3efbdc0ff92ab0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새 돈이 지난 6월 1일부터 돌았다",
+      "text": "The new <b>currency</b> has been circulated since June 1."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "유럽 통일의 장애물은 일반 통화의 문제이다",
+      "text": "The obstacle to European unity is the question of a common <b>currency</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "보유 외화",
+      "text": "(Korea's) foreign-<b>currency</b> holdings[foreign-exchange reserves]"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "통화 가치의 절하",
+      "text": "(<b>currency</b>) devaluation"
+    }
+  ],
+  "isWordType": true
+}

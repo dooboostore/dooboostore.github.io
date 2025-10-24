@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "fashion",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfæʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[sing.] [UC/] 방법, 방식, …하는 식[투](manner), …풍(風); [선행하는 명사·형용사와 복합어를 이루어; 부사적] …처럼, …식으로",
+              "examples": [
+                {
+                  "text": "the <b>fashion</b> of his speech",
+                  "translatedText": "그의 말투"
+                }
+              ],
+              "originalMeaning": "[sing.] [UC/] 방법, 방식, …하는 식[투](manner), …풍(風); [선행하는 명사·형용사와 복합어를 이루어; 부사적] …처럼, …식으로"
+            },
+            {
+              "meaning": "[UC/] 유행(vogue), (여성복의) 패션; 풍조, 시류",
+              "examples": [
+                {
+                  "text": "the latest <b>fashion</b> in boots",
+                  "translatedText": "부츠의 최신 유행형"
+                }
+              ],
+              "originalMeaning": "[UC/] 유행(vogue), (여성복의) 패션; 풍조, 시류"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(재료를 써서 어떤 모양으로) 만들어내다, <성격 등을> 형성하다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>fashion</b> clay into a vase",
+                  "translatedText": "진흙으로 꽃병을 만들다"
+                }
+              ],
+              "originalMeaning": "(재료를 써서 어떤 모양으로) 만들어내다, <성격 등을> 형성하다 ((into))"
+            },
+            {
+              "meaning": "맞추다, 적합[적응]시키다(fit) ((to))",
+              "examples": [
+                {
+                  "text": "<b>fashion</b> a theory to general understanding",
+                  "translatedText": "모두 이해할 수 있도록 이론을 펴다"
+                }
+              ],
+              "originalMeaning": "맞추다, 적합[적응]시키다(fit) ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f9dbca91199477ba12ab113020ccbfd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f9dbca91199477ba12ab113020ccbfd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fashions"
+        },
+        {
+          "type": "과거형",
+          "value": "fashioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fashioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fashioned"
+        }
+      ],
+      "aliasConjugation": "fashions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ce5a81391e21a96df96faee26de054e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 요즈음 한창 인기다.",
+      "text": "He is the <b>fashion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "…하는 것이 지금 유행이다",
+      "text": "It is the <b>fashion</b> to"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 옷은 이제는 구식이다",
+      "text": "The clothes are out of style[<b>fashion</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 모자가 유행하고 있다[유행하기 시작했다]",
+      "text": "This hat is in <b>fashion</b>[has come into <b>fashion</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 결혼에 대해 묵은 생각을 갖고 있다",
+      "text": "They are old-fashioned about marriage."
+    }
+  ],
+  "isWordType": true
+}

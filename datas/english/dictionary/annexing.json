@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "annex",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈneks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "부가하다, 첨부하다; <서명·도장 등을> (문서에) 첨가해 쓰다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>annex</b> notes to a book",
+                  "translatedText": "책에 주를 달다"
+                }
+              ],
+              "originalMeaning": "부가하다, 첨부하다; <서명·도장 등을> (문서에) 첨가해 쓰다 ((to))"
+            },
+            {
+              "meaning": "<소국·영토 등을> 합병하다",
+              "examples": [
+                {
+                  "text": "Britain annexed the Malta in 1814.",
+                  "translatedText": "영국은 몰타 섬을 1814년에 합병했다."
+                }
+              ],
+              "originalMeaning": "<소국·영토 등을> 합병하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부가물, 부속물, 부가 조건",
+              "examples": [],
+              "originalMeaning": "부가물, 부속물, 부가 조건"
+            },
+            {
+              "meaning": "별관, 별채, 증축[부속] 건물 ((to))",
+              "examples": [],
+              "originalMeaning": "별관, 별채, 증축[부속] 건물 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3560043a98ca44b294fdbaa8485bb74b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3560043a98ca44b294fdbaa8485bb74b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "annexes"
+        },
+        {
+          "type": "과거형",
+          "value": "annexed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "annexing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "annexed"
+        }
+      ],
+      "aliasConjugation": "annexes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1cfc8030a337df9cef8370add1cc900c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "영국은 말타 섬을 1814년에 합병했다.",
+      "text": "Britain annexed the Malta in 1814."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "텍사스는 1845년 미합중국에 합병되었다.",
+      "text": "Texas was annexed to the United States in 1845."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가난에 불행이 반드시 동반되는 것은 아니다.",
+      "text": "Unhappiness is not necessarily annexed to poverty."
+    }
+  ],
+  "isWordType": true
+}

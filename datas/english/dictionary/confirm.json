@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "confirm",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kən│fɜːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<결심 등을> 굳게 하다(fortify), <습관·의지·신앙 등을> 굳게 하다 ((in))",
+              "examples": [
+                {
+                  "text": "His advice confirmed my decision to go abroad.",
+                  "translatedText": "그의 조언으로 나는 해외로 갈 결심을 굳혔다."
+                }
+              ],
+              "originalMeaning": "<결심 등을> 굳게 하다(fortify), <습관·의지·신앙 등을> 굳게 하다 ((in))"
+            },
+            {
+              "meaning": "<진술·증거·소문 등을> 확인하다(make firm), 확증하다",
+              "examples": [
+                {
+                  "text": "I confirmed our reservations at the hotel.",
+                  "translatedText": "호텔 예약을 확인했다."
+                }
+              ],
+              "originalMeaning": "<진술·증거·소문 등을> 확인하다(make firm), 확증하다"
+            },
+            {
+              "meaning": "[법] (재가·비준 등으로) 승인[확인]하다(ratify), 추인(追認)하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>confirm</b> an agreement[a treaty]",
+                  "translatedText": "협정[조약]을 승인하다"
+                }
+              ],
+              "originalMeaning": "[법] (재가·비준 등으로) 승인[확인]하다(ratify), 추인(追認)하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c7f99796fb274db893391d737566216b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c7f99796fb274db893391d737566216b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "confirms"
+        },
+        {
+          "type": "과거형",
+          "value": "confirmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "confirming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "confirmed"
+        }
+      ],
+      "aliasConjugation": "confirms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5c5f43d42ef08b105de01bf673b353f4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 더욱 결심을 굳게 했다.",
+      "text": "He was confirmed in his decision."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 보도는 아직 확인되지 않았다",
+      "text": "The report has not been confirmed yet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그의 말이 사실임을 확인해 주었다",
+      "text": "She confirmed[verified] his statement."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 거처가 확실히 판명되었다",
+      "text": "The location of his residence is confirmed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 긍정도 부정도 하지 않았다",
+      "text": "He refused to deny or <b>confirm</b>. or He made no comment either way. or He said neither “yes” or “no”."
+    }
+  ],
+  "isWordType": true
+}

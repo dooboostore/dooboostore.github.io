@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "suspect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "짐작하다, (어렴풋이) 알아채다, 낌새채다 (=doubt)",
+              "examples": [],
+              "originalMeaning": "짐작하다, (어렴풋이) 알아채다, 낌새채다 (=<span class='related_word' lang='en' >doubt</span>)"
+            },
+            {
+              "meaning": "…이 아닌가 하고 생각하다",
+              "examples": [
+                {
+                  "text": "I <b>suspect</b> him to be a liar.",
+                  "translatedText": "나는 그가 거짓말쟁이가 아닌가 생각된다."
+                }
+              ],
+              "originalMeaning": "…이 아닌가 하고 생각하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "의심을 두다[품다], 수상쩍어하다",
+              "examples": [],
+              "originalMeaning": "의심을 두다[품다], 수상쩍어하다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "의심스러운, 혐의를 받은, 수상한",
+              "examples": [],
+              "originalMeaning": "의심스러운, 혐의를 받은, 수상한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/95df4ec35dc042eb83375e86ab065ccb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/95df4ec35dc042eb83375e86ab065ccb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "suspects"
+        },
+        {
+          "type": "과거형",
+          "value": "suspected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "suspecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "suspected"
+        }
+      ],
+      "aliasConjugation": "suspects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "af300cc11645dd691f20bcae0fe82129",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무래도 무슨 농간이 있는 것 같다",
+      "text": "I <b>suspect</b> some tricks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "음모가 있으리라고는 알지 못했다",
+      "text": "I little <b>suspected</b> a plot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "계략이 있을 줄은 조금도 몰랐다",
+      "text": "I little <b>suspected</b> the plot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그가 거짓말쟁이가 아닌가 생각된다.",
+      "text": "I <b>suspect</b> him to be a liar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 이심을 품고 있지 않은지 의심스럽다",
+      "text": "I <b>suspect</b> him of duplicity."
+    }
+  ],
+  "isWordType": true
+}

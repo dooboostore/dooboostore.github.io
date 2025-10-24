@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "model",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈmɑːdl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모형, 모델, 원형; 설계도",
+              "examples": [
+                {
+                  "text": "a <b>model</b> in clay",
+                  "translatedText": "점토로 만든 모형"
+                }
+              ],
+              "originalMeaning": "모형, 모델, 원형; 설계도"
+            },
+            {
+              "meaning": "꼭 닮은 사람[것]",
+              "examples": [],
+              "originalMeaning": "꼭 닮은 사람[것]"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "모형의, 모델이 되는",
+              "examples": [
+                {
+                  "text": "a <b>model</b> car",
+                  "translatedText": "모형 자동차"
+                }
+              ],
+              "originalMeaning": "모형의, 모델이 되는"
+            },
+            {
+              "meaning": "모범[귀감]이 되는, 모범적인; 완벽한",
+              "examples": [
+                {
+                  "text": "a <b>model</b> father",
+                  "translatedText": "모범적인 아버지"
+                }
+              ],
+              "originalMeaning": "모범[귀감]이 되는, 모범적인; 완벽한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 모형을 만들다",
+              "examples": [],
+              "originalMeaning": "…의 모형을 만들다"
+            },
+            {
+              "meaning": "(본에 맞추어) 만들다; 모양으로 나타내다, 설계하다",
+              "examples": [
+                {
+                  "text": "<b>model</b> animals in clay",
+                  "translatedText": "점토로 동물을 만들다"
+                }
+              ],
+              "originalMeaning": "(본에 맞추어) 만들다; 모양으로 나타내다, 설계하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ddc5f81475ee49318f111f59000821f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ddc5f81475ee49318f111f59000821f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "models"
+        },
+        {
+          "type": "과거형",
+          "value": "modelled, modeled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "modelling, modeling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "modelled, modeled"
+        }
+      ],
+      "aliasConjugation": "models",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1392ea67d9cbde2d8c64ef10340e2018",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 신형 모델은 잘 팔리고 있다.",
+      "text": "That new <b>model</b> is moving well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "화가는 모델에게 포즈를 취하게 하였다.",
+      "text": "The painter postured his <b>model</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모형 비행기는 강 저편으로 날아갔다.",
+      "text": "The <b>model</b> plane flew over the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모형 비행기에 날개를 붙였다.",
+      "text": "He glued the wings onto the <b>model</b> airplane."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 소설의 주인공은 A씨가 모델이다",
+      "text": "The hero of this novel is modelled after Mr. A."
+    }
+  ],
+  "isWordType": true
+}

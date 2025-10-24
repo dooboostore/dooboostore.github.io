@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "structure",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈstrʌktʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "구조, 기구, 조직, 구성, 조립",
+              "examples": [
+                {
+                  "text": "the <b>structure</b> of a government",
+                  "translatedText": "정치 기구"
+                }
+              ],
+              "originalMeaning": "구조, 기구, 조직, 구성, 조립"
+            },
+            {
+              "meaning": "건물, 건조물",
+              "examples": [],
+              "originalMeaning": "건물, 건조물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<생각·계획 등을> 구성하다, 조직화하다",
+              "examples": [],
+              "originalMeaning": "<생각·계획 등을> 구성하다, 조직화하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f1b2847deeaf4c949e93940f500cd5b8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f1b2847deeaf4c949e93940f500cd5b8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "structures"
+        },
+        {
+          "type": "과거형",
+          "value": "structured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "structuring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "structured"
+        }
+      ],
+      "aliasConjugation": "structures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "21c747b7b1226f7ec8831f30a7237f44",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 시간을 효과적으로 짜야 한다",
+      "text": "You have to <b>structure</b> your time effectively."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "은행 체계의 뼈대는 변하고 있다",
+      "text": "The <b>structure</b> of the banking system is changing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 역은 르네상스식의 훌륭한 건물이다",
+      "text": "The station is a fine specimen of Renaissance <b>structure</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국식 구조이다",
+      "text": "It is Korean in <b>structure</b>[style]."
+    }
+  ],
+  "isWordType": true
+}

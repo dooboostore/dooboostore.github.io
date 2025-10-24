@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "analysis",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈnæləsɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "분석, 해석; 분해; (opp. synthesis)",
+              "examples": [
+                {
+                  "text": "make[do] an <b>analysis</b> of the poison",
+                  "translatedText": "독물을 분석하다"
+                }
+              ],
+              "originalMeaning": "분석, 해석; 분해; (opp. synthesis)"
+            },
+            {
+              "meaning": "분석적 검토",
+              "examples": [],
+              "originalMeaning": "분석적 검토"
+            },
+            {
+              "meaning": "(문의) 해부, 분석",
+              "examples": [],
+              "originalMeaning": "(문의) 해부, 분석"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d9b15100f0c34ffba1b184f66b570f3f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d9b15100f0c34ffba1b184f66b570f3f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "analyses"
+        }
+      ],
+      "aliasConjugation": "analyses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "10a1aa422a7fce78c971a2769cbd96d2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 세밀한 분석이 필요하다",
+      "text": "It requires a detailed <b>analysis</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방송 프로그램 시청률 조사",
+      "text": "Cooperative <b>Analysis</b> of Broadcasting Rating"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 상황 분석은 너무 피상적이다",
+      "text": "His <b>analysis</b> of the situation is too superficial[shallow]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "분석 결과 비타민 A가 다량 함유되어 있음이 밝혀졌다",
+      "text": "<b>Analysis</b> showed that it contained much vitamin A."
+    }
+  ],
+  "isWordType": true
+}

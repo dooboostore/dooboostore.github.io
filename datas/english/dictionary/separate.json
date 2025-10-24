@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "separate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가르다, 떼다, 분리하다, 잘라서 떼어 놓다 ((from))",
+              "examples": [
+                {
+                  "text": "A hedge separates the two gardens.",
+                  "translatedText": "산울타리가 두 정원을 가르고 있다."
+                }
+              ],
+              "originalMeaning": "가르다, 떼다, 분리하다, 잘라서 떼어 놓다 ((from))"
+            },
+            {
+              "meaning": "<사람을> 떼어놓다, 헤어지게 하다, 별거시키다; <친구 등을> 이간하다",
+              "examples": [
+                {
+                  "text": "<b>separate</b> the two boys who are fighting",
+                  "translatedText": "싸우고 있는 두 소년을 떼어놓다"
+                }
+              ],
+              "originalMeaning": "<사람을> 떼어놓다, 헤어지게 하다, 별거시키다; <친구 등을> 이간하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "갈라지다, 끊어지다; 떨어지다, 관계를 끊다, 탈퇴하다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>separate</b> from the mother country",
+                  "translatedText": "모국으로부터 독립하다"
+                }
+              ],
+              "originalMeaning": "갈라지다, 끊어지다; 떨어지다, 관계를 끊다, 탈퇴하다 ((from))"
+            },
+            {
+              "meaning": "나뉘다 ((into))",
+              "examples": [
+                {
+                  "text": "The party separated(up)into three cars.",
+                  "translatedText": "일행은 3대의 자동차에 나눠 탔다."
+                }
+              ],
+              "originalMeaning": "나뉘다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "갈라진, 잘라진, 떨어진, (서로) 연관없는, 분리된",
+              "examples": [
+                {
+                  "text": "<b>separate</b> volumes",
+                  "translatedText": "별책"
+                }
+              ],
+              "originalMeaning": "갈라진, 잘라진, 떨어진, (서로) 연관없는, 분리된"
+            },
+            {
+              "meaning": "따로따로의, 개별적인; 단독의, 독립[격리]된 ((from))",
+              "examples": [
+                {
+                  "text": "a <b>separate</b> peace",
+                  "translatedText": "단독 강화"
+                }
+              ],
+              "originalMeaning": "따로따로의, 개별적인; 단독의, 독립[격리]된 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/272bc6d29f0f4a26b2354ed9535b0af1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/272bc6d29f0f4a26b2354ed9535b0af1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "separates"
+        },
+        {
+          "type": "과거형",
+          "value": "separated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "separating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "separated"
+        }
+      ],
+      "aliasConjugation": "separates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c018f6aaf67e2097bfdd0cc8dfa79a01",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저녁 식사 후 우리는 헤어졌다.",
+      "text": "After dinner, we separated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산울타리가 두 정원을 가르고 있다.",
+      "text": "A hedge separates the two gardens."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 부부는 전쟁으로 생이별했다",
+      "text": "The couple were separated by the war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일행은 3대의 자동차에 나뉘어 탔다.",
+      "text": "The party separated (up) into three cars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 전집은 분매하지 않습니다",
+      "text": "This complete set cannot be sold separately."
+    }
+  ],
+  "isWordType": true
+}

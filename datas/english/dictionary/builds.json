@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "build",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "짓다, 세우다, 건축[건조, 건설]하다, 부설하다",
+              "examples": [
+                {
+                  "text": "The house is built of wood.",
+                  "translatedText": "그 집은 목조이다."
+                }
+              ],
+              "originalMeaning": "짓다, 세우다, 건축[건조, 건설]하다, 부설하다"
+            },
+            {
+              "meaning": "<기계 따위를> 조립하다(construct), <새가> <둥지를> 틀다, <불을> 피우다",
+              "examples": [
+                {
+                  "text": "<b>build</b> a nest of dead leaves",
+                  "translatedText": "마른 잎으로 둥지를 틀다"
+                }
+              ],
+              "originalMeaning": "<기계 따위를> 조립하다(construct), <새가> <둥지를> 틀다, <불을> 피우다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "건축하다, 건축[건설]업에 종사하다",
+              "examples": [],
+              "originalMeaning": "건축하다, 건축[건설]업에 종사하다"
+            },
+            {
+              "meaning": "<사람이> (…을) 바탕으로 하다, 이용하다; 기대하다, 의지하다 ((on))",
+              "examples": [
+                {
+                  "text": "<b>build</b> on a person's promise",
+                  "translatedText": "약속을 믿다"
+                }
+              ],
+              "originalMeaning": "<사람이> (…을) 바탕으로 하다, 이용하다; 기대하다, 의지하다 ((on))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "체격",
+              "examples": [
+                {
+                  "text": "of sturdy <b>build</b>",
+                  "translatedText": "근골이 억센"
+                }
+              ],
+              "originalMeaning": "체격"
+            },
+            {
+              "meaning": "(배 등의) 만듦새, 구조, 얼개",
+              "examples": [],
+              "originalMeaning": "(배 등의) 만듦새, 구조, 얼개"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/492df83076d04b63842b226fcce98bcf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/492df83076d04b63842b226fcce98bcf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "builds"
+        },
+        {
+          "type": "과거형",
+          "value": "built"
+        },
+        {
+          "type": "현재 분사",
+          "value": "building"
+        },
+        {
+          "type": "과거 분사",
+          "value": "built"
+        }
+      ],
+      "aliasConjugation": "builds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f97e50ea709d1f566356ebed8a36aa40",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새벽달 보자고 초저녁부터 기다린다",
+      "text": "Don't <b>build</b> the sty before the litter comes. or Boil not pap before the child is born."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 몹시 가냘픈 체격이다.",
+      "text": "He is very slightly built."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 체격이 운동선수 같다",
+      "text": "He has the <b>build</b> of an athlete."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 피로가 쌓여 있다",
+      "text": "You've just let your fatigue <b>build</b> up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아버지는 내게 집을 지어 주셨다.",
+      "text": "My father has built me a house."
+    }
+  ],
+  "isWordType": true
+}

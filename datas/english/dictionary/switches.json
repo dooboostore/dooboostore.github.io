@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "switch",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "swɪtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[전기] 스위치, 개폐기; 스위치의 개폐 (조작); 전화 교환대",
+              "examples": [
+                {
+                  "text": "turn off[on] the <b>switch</b>",
+                  "translatedText": "스위치를 끄다[켜다]"
+                }
+              ],
+              "originalMeaning": "[전기] 스위치, 개폐기; 스위치의 개폐 (조작); 전화 교환대"
+            },
+            {
+              "meaning": "(예기치 않은) 전환, 변경",
+              "examples": [
+                {
+                  "text": "a <b>switch</b> of plans",
+                  "translatedText": "계획의 변경"
+                }
+              ],
+              "originalMeaning": "(예기치 않은) 전환, 변경"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[전기] …의 스위치를 넣다, 켜다 ((on)); <전등 등을> 스위치로 끄다 ((off))",
+              "examples": [],
+              "originalMeaning": "[전기] …의 스위치를 넣다, 켜다 ((on)); <전등 등을> 스위치로 끄다 ((off))"
+            },
+            {
+              "meaning": "전철(轉轍)하다",
+              "examples": [],
+              "originalMeaning": "전철(轉轍)하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "스위치를 돌리다 ((on, off))",
+              "examples": [],
+              "originalMeaning": "스위치를 돌리다 ((on, off))"
+            },
+            {
+              "meaning": "전환하다, 교환하다; [미] [철도] 전철하다([영] shunt)",
+              "examples": [],
+              "originalMeaning": "전환하다, 교환하다; [미] [철도] 전철하다([영] shunt)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cda1764ad8714e4bb1874c459c706ed1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cda1764ad8714e4bb1874c459c706ed1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "switches"
+        },
+        {
+          "type": "과거형",
+          "value": "switched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "switching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "switched"
+        }
+      ],
+      "aliasConjugation": "switches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7902a805984ea031745a9375b19ef0e6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 자동으로 스위치가 꺼진다",
+      "text": "It <b>switches</b> itself off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소가 꼬리를 흔들고 있었다.",
+      "text": "The cow was switching its tail."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내 손에서 편지를 홱 낚아챘다.",
+      "text": "He switched the letter out of my hand."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 에어컨은 타이머로 작동한다",
+      "text": "This air conditioner works on a time <b>switch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람은 자작나무 회초리로 노예를 때렸다.",
+      "text": "The man switched the slave with a birch."
+    }
+  ],
+  "isWordType": true
+}

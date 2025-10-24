@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "warn",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경고하다, 조심시키다, 경고하여 피하게 하다, 훈계하여 그만두게 하다",
+              "examples": [
+                {
+                  "text": "The Coast Guard warned all ships of the hurricane.",
+                  "translatedText": "해안 경비대는 모든 선박들에 대해 태풍 경보를 발했다."
+                }
+              ],
+              "originalMeaning": "경고하다, 조심시키다, 경고하여 피하게 하다, 훈계하여 그만두게 하다"
+            },
+            {
+              "meaning": "…에게 통지[통고]하다, 예고하다",
+              "examples": [
+                {
+                  "text": "( <b>warn</b>+[목]+to do) <b>warn</b> a person to appear in court",
+                  "translatedText": "…에게 법정 출두를 통고하다"
+                }
+              ],
+              "originalMeaning": "…에게 통지[통고]하다, 예고하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…의) 경고를 하다, 주의하다, 경보를 울리다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>warn</b> of danger",
+                  "translatedText": "위험을 경고하다"
+                }
+              ],
+              "originalMeaning": "(…의) 경고를 하다, 주의하다, 경보를 울리다 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4295441db189440297e5b0fd5e6a3698",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4295441db189440297e5b0fd5e6a3698",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "warns"
+        },
+        {
+          "type": "과거형",
+          "value": "warned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "warning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "warned"
+        }
+      ],
+      "aliasConjugation": "warns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4f90981474d1b2438ada96a5999dfd07",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 번 다시 경고하지 않겠다!",
+      "text": "I shall not <b>warn</b> you again!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나에게 문에서 떨어지라고 경고했다",
+      "text": "He warned me off the gate."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 현대에 대한 경종이다",
+      "text": "It is a warning to the present age."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파랑 주의보가 제주도에 내려졌다",
+      "text": "A heavy sea warning is in force for Jeju-do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시기를 보아서 그에게 충고하시오",
+      "text": "You may take occasion to give him a warning."
+    }
+  ],
+  "isWordType": true
+}

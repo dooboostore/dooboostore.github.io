@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "return",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪˈtɜːrn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(본래의 장소·상태·화제 등으로) 되돌아가다, 돌아가다[오다]; 회복하다",
+              "examples": [
+                {
+                  "text": "<b>return</b> to New York",
+                  "translatedText": "뉴욕으로 돌아가다"
+                }
+              ],
+              "originalMeaning": "(본래의 장소·상태·화제 등으로) 되돌아가다, 돌아가다[오다]; 회복하다"
+            },
+            {
+              "meaning": "<재산 등이> (소유자에게) 다시 (찾아) 오다, <병 등이> 재발하다",
+              "examples": [
+                {
+                  "text": "The fever <b>return</b> ed.",
+                  "translatedText": "열이 다시 났다."
+                }
+              ],
+              "originalMeaning": "<재산 등이> (소유자에게) 다시 (찾아) 오다, <병 등이> 재발하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "돌려주다[보내다], 되돌려 놓다, 도로 보내다, 반환하다 ((",
+              "examples": [
+                {
+                  "text": "<b>Return</b> this book to the shelf.",
+                  "translatedText": "이 책을 서가에 도로 갖다 두시오."
+                }
+              ],
+              "originalMeaning": "돌려주다[보내다], 되돌려 놓다, 도로 보내다, 반환하다 (("
+            },
+            {
+              "meaning": "갚다, 보답하다, 답례하다 ((for)); (받은 것과 같은[유사한] 것으로) 응하다",
+              "examples": [
+                {
+                  "text": "<b>return</b> a favor",
+                  "translatedText": "호의를 호의로 답하다"
+                }
+              ],
+              "originalMeaning": "갚다, 보답하다, 답례하다 ((for)); (받은 것과 같은[유사한] 것으로) 응하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "귀환, 귀가, 귀국, 귀향",
+              "examples": [],
+              "originalMeaning": "귀환, 귀가, 귀국, 귀향"
+            },
+            {
+              "meaning": "[UC/] 순환, 회귀(回歸); 복귀; 재발",
+              "examples": [
+                {
+                  "text": "the <b>return</b> of the season",
+                  "translatedText": "계절의 순환"
+                }
+              ],
+              "originalMeaning": "[UC/] 순환, 회귀(回歸); 복귀; 재발"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ac21382224c94b049ecf3ec8cab4d14a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ac21382224c94b049ecf3ec8cab4d14a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "returns"
+        },
+        {
+          "type": "과거형",
+          "value": "returned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "returning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "returned"
+        }
+      ],
+      "aliasConjugation": "returns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aa2f6aeea4d2ab5b13eb0473b3700f34",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 여자한테 실연당했다",
+      "text": "He was disappointed in love for the girl. or His love for the girl was not requited[returned]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 그가 돌아올 줄 믿고 있다",
+      "text": "She expects him to <b>return</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 떠나간 후 다시는 돌아오지 않았다",
+      "text": "He left never to <b>return</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 돌아오지 않을 모양이다",
+      "text": "There is no sign of his <b>return</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책을 서가에 도로 갖다 두시오.",
+      "text": "<b>Return</b> this book to the shelf."
+    }
+  ],
+  "isWordType": true
+}

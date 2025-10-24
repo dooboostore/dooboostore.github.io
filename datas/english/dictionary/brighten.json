@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "brighten",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbraɪtn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "빛나게 하다, 빛내다, 밝게 하다",
+              "examples": [
+                {
+                  "text": "Sunlight <b>brighten</b> ed the room.",
+                  "translatedText": "햇빛이 방을 밝게 했다."
+                }
+              ],
+              "originalMeaning": "빛나게 하다, 빛내다, 밝게 하다"
+            },
+            {
+              "meaning": "<기분을> 밝게 하다, 명랑하게 하다; 환하게 하다, 유망하게 하다 ((up))",
+              "examples": [
+                {
+                  "text": "His presence <b>brighten</b> ed up the party.",
+                  "translatedText": "그의 참석으로 파티가 즐거워졌다."
+                }
+              ],
+              "originalMeaning": "<기분을> 밝게 하다, 명랑하게 하다; 환하게 하다, 유망하게 하다 ((up))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "밝아지다, 빛나다",
+              "examples": [],
+              "originalMeaning": "밝아지다, 빛나다"
+            },
+            {
+              "meaning": "<사람(의 얼굴)이> 밝아지다, 명랑해지다, 행복해지다",
+              "examples": [
+                {
+                  "text": "His face <b>brighten</b> ed (up) at the news.",
+                  "translatedText": "그 소식을 듣고 그의 표정이 밝아졌다."
+                }
+              ],
+              "originalMeaning": "<사람(의 얼굴)이> 밝아지다, 명랑해지다, 행복해지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2b8b060c236b44748ca325a8e8390f12",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2b8b060c236b44748ca325a8e8390f12",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "brightens"
+        },
+        {
+          "type": "과거형",
+          "value": "brightened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "brightening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "brightened"
+        }
+      ],
+      "aliasConjugation": "brightens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ff31de6013764b08dafa585882f44721",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 얼굴 표정이 밝아졌다",
+      "text": "His face brightened[lit] up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "햇빛이 방을 밝게 했다.",
+      "text": "Sunlight brightened the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식을 듣고 그의 표정이 밝아졌다.",
+      "text": "His face brightened (up) at the news."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 참석으로 파티가 즐거워졌다.",
+      "text": "His presence brightened up the party."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "동쪽 하늘이 벌게진다",
+      "text": "The eastern sky brightens[gleams]."
+    }
+  ],
+  "isWordType": true
+}

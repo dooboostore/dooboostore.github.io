@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "monster",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɑːnstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "괴물, 도깨비",
+              "examples": [],
+              "originalMeaning": "괴물, 도깨비"
+            },
+            {
+              "meaning": "기형 동물[식물], [의학] 기형(아), 괴상한[거대한] 것",
+              "examples": [
+                {
+                  "text": "a <b>monster</b> of a dog",
+                  "translatedText": "거대한 개"
+                }
+              ],
+              "originalMeaning": "기형 동물[식물], [의학] 기형(아), 괴상한[거대한] 것"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "거대한(gigantic)",
+              "examples": [
+                {
+                  "text": "a <b>monster</b> ship",
+                  "translatedText": "엄청나게 큰 배"
+                }
+              ],
+              "originalMeaning": "거대한(gigantic)"
+            },
+            {
+              "meaning": "<마약이> 강한, 중독성의",
+              "examples": [
+                {
+                  "text": "<b>monster</b> weed",
+                  "translatedText": "강력한 마리화나"
+                }
+              ],
+              "originalMeaning": "<마약이> 강한, 중독성의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f334a392b4894100adc27aaa8bde2c56",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f334a392b4894100adc27aaa8bde2c56",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2a16c20a7c1a300594853652f85a139b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것 참 엄청나게 큰 개구리인데!",
+      "text": "What a <b>monster</b> of a frog this is!"
+    }
+  ],
+  "isWordType": true
+}

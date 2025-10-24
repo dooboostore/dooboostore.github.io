@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "minimum",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmɪnɪməm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "최소[최저] 한도, 최저액, 최저치, 최소량",
+              "examples": [
+                {
+                  "text": "an annual bonus of $4,000 <b>minimum</b>",
+                  "translatedText": "연간 최저 4,000달러의 보너스"
+                }
+              ],
+              "originalMeaning": "최소[최저] 한도, 최저액, 최저치, 최소량"
+            },
+            {
+              "meaning": "극소",
+              "examples": [],
+              "originalMeaning": "극소"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "최소의, 최소[최저]한의",
+              "examples": [
+                {
+                  "text": "a <b>minimum</b> price",
+                  "translatedText": "최저 가격"
+                }
+              ],
+              "originalMeaning": "최소의, 최소[최저]한의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6531d8e7e5c4e4c9fc611914586edb6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6531d8e7e5c4e4c9fc611914586edb6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "minimums, minima"
+        }
+      ],
+      "aliasConjugation": "minimums, minima",
+      "aliasConjugationPos": "복수형",
+      "gdid": "6f1fee0751a351bf7fec030a096a936b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한달에 만원이나마 저축하고 싶다",
+      "text": "I wish to save money, say a <b>minimum</b> of ten thousand won a month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 한 달에 만 원만이라도 저축하고 싶다",
+      "text": "I wish to save a <b>minimum</b> of ten thousand won a month."
+    }
+  ],
+  "isWordType": true
+}

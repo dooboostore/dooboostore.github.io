@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "past",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pæst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "지나간, 과거의, 여태까지의",
+              "examples": [
+                {
+                  "text": "<b>past</b> civilizations",
+                  "translatedText": "과거의 여러 문명"
+                }
+              ],
+              "originalMeaning": "지나간, 과거의, 여태까지의"
+            },
+            {
+              "meaning": "끝난, 지난",
+              "examples": [
+                {
+                  "text": "My youth is <b>past</b>.",
+                  "translatedText": "내 청춘은 끝났다."
+                }
+              ],
+              "originalMeaning": "끝난, 지난"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] 과거(opp. present)",
+              "examples": [],
+              "originalMeaning": "[보통 the ~] 과거(opp. present)"
+            },
+            {
+              "meaning": "(국가·물건 등의) 역사, (사람의) 이력",
+              "examples": [],
+              "originalMeaning": "(국가·물건 등의) 역사, (사람의) 이력"
+            }
+          ]
+        },
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "<시간이> 지나서, <몇 시가> 지나( after)",
+              "examples": [
+                {
+                  "text": "<b>past</b> three o'clock",
+                  "translatedText": "3시 지나서"
+                }
+              ],
+              "originalMeaning": "<시간이> 지나서, <몇 시가> 지나( after)"
+            },
+            {
+              "meaning": "<장소·위치를> 지난 곳에; <사람·건물 등을> 지나쳐서, …옆을 지나서",
+              "examples": [
+                {
+                  "text": "the house just <b>past</b> the church",
+                  "translatedText": "교회를 조금 지난 곳에 있는 집"
+                }
+              ],
+              "originalMeaning": "<장소·위치를> 지난 곳에; <사람·건물 등을> 지나쳐서, …옆을 지나서"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0a5d81761718481fbdb6d33d6bd97624",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0a5d81761718481fbdb6d33d6bd97624",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cf125f5e3659b9ad82317d7af7ad9580",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 고난은 과거의 일이 되었다.",
+      "text": "The troubles are <b>past</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도저히 추상할 수 없다",
+      "text": "It is <b>past</b> all conjecture."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 내 옆을 스쳐 갔다",
+      "text": "She went <b>past</b>[brushed] by me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과거는 다시 경험할 수 없다.",
+      "text": "You can’t repeat the <b>past</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 보니 옛날 생각이 난다",
+      "text": "That reminds me of the <b>past</b>."
+    }
+  ],
+  "isWordType": true
+}

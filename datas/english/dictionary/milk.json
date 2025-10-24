@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "milk",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "mɪlk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "젖, 우유",
+              "examples": [
+                {
+                  "text": "a glass of <b>milk</b>",
+                  "translatedText": "우유 한 잔"
+                }
+              ],
+              "originalMeaning": "젖, 우유"
+            },
+            {
+              "meaning": "[식물] 유액, 수액(樹液); (약용) 유제(乳劑)",
+              "examples": [
+                {
+                  "text": "coconut <b>milk</b>",
+                  "translatedText": "코코넛 열매의 유액"
+                }
+              ],
+              "originalMeaning": "[식물] 유액, 수액(樹液); (약용) 유제(乳劑)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 젖을 짜다",
+              "examples": [
+                {
+                  "text": "<b>milk</b> a cow",
+                  "translatedText": "우유를 짜다"
+                }
+              ],
+              "originalMeaning": "…의 젖을 짜다"
+            },
+            {
+              "meaning": "(뱀·나무 등에서) 독[즙]을 뽑다",
+              "examples": [],
+              "originalMeaning": "(뱀·나무 등에서) 독[즙]을 뽑다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "젖을 짜다, 젖이 나다",
+              "examples": [],
+              "originalMeaning": "젖을 짜다, 젖이 나다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/53ba25d1f15745089e23291262bab7bd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/53ba25d1f15745089e23291262bab7bd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "milks"
+        },
+        {
+          "type": "과거형",
+          "value": "milked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "milking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "milked"
+        }
+      ],
+      "aliasConjugation": "milks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1772ce6971847bf15fa99cb06b382e40",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "암소는 우리에게 우유를 공급한다.",
+      "text": "Cows supply us <b>milk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우유는 젖먹이의 영양이 된다.",
+      "text": "<b>Milk</b> nourishes a baby."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 소는 젖이 잘 난다",
+      "text": "Our cows are milking well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "끓인 우유에 더껑이가 생긴다.",
+      "text": "The boiled <b>milk</b> skims over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "천둥이 치면 우유가 상한다.",
+      "text": "Thunder turns the <b>milk</b> (sour)."
+    }
+  ],
+  "isWordType": true
+}

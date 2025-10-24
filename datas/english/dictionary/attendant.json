@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "attendant",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈtendənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "시중드는 사람, 수행원; (호텔·주차장 등의) 안내원, 접객 담당자; (미술관 등의) 안내원; 점원, 종업원",
+              "examples": [],
+              "originalMeaning": "시중드는 사람, 수행원; (호텔·주차장 등의) 안내원, 접객 담당자; (미술관 등의) 안내원; 점원, 종업원"
+            },
+            {
+              "meaning": "부수물, 수반물; 필연적 결과",
+              "examples": [],
+              "originalMeaning": "부수물, 수반물; 필연적 결과"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "시중드는, 수행하는",
+              "examples": [
+                {
+                  "text": "an <b>attendant</b> nurse",
+                  "translatedText": "수행 간호사"
+                }
+              ],
+              "originalMeaning": "시중드는, 수행하는"
+            },
+            {
+              "meaning": "따르는; 부수적인, 부대적인",
+              "examples": [
+                {
+                  "text": "<b>attendant</b> circumstances",
+                  "translatedText": "부대 상황"
+                }
+              ],
+              "originalMeaning": "따르는; 부수적인, 부대적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9cd2c2968880488e804e5cf2729fe059",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9cd2c2968880488e804e5cf2729fe059",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "00ff8e7bd9bf1a6a94da9dbfd4a1fde9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "악덕에는 불행이 따른다.",
+      "text": "Miseries are <b>attendant</b> on[upon] vice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다수의 참회자가 있었다",
+      "text": "There was a large attendance. or There were a large number of attendants."
+    }
+  ],
+  "isWordType": true
+}

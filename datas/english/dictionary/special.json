@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "special",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈspeʃl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "특별한, 특수한(opp. general), 각별한 (=particular)",
+              "examples": [
+                {
+                  "text": "a <b>special</b> agency",
+                  "translatedText": "특별 대리점"
+                }
+              ],
+              "originalMeaning": "특별한, 특수한(opp. general), 각별한 (=<span class='related_word' lang='en' >particular</span>)"
+            },
+            {
+              "meaning": "독특한, 고유의; 전용의",
+              "examples": [
+                {
+                  "text": "a <b>special</b> flavor",
+                  "translatedText": "독특한 향기"
+                }
+              ],
+              "originalMeaning": "독특한, 고유의; 전용의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "특별한 사람[것], 임시의 사람[것]; 특파원, 특사(特使); [영] = SPECIAL CONSTABLE",
+              "examples": [],
+              "originalMeaning": "특별한 사람[것], 임시의 사람[것]; 특파원, 특사(特使); [영] = <b>SPECIAL</b> CONSTABLE"
+            },
+            {
+              "meaning": "특별 시험; 특별[임시] 열차[버스 ((등))]; 특별 통신, 특전(特電), 호외, 임시 증간호; [영화] 특작(特作); (라디오·TV의) 특별 프로",
+              "examples": [],
+              "originalMeaning": "특별 시험; 특별[임시] 열차[버스 ((등))]; 특별 통신, 특전(特電), 호외, 임시 증간호; [영화] 특작(特作); (라디오·TV의) 특별 프로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0d0b8490d0694476938a2a53719d991d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0d0b8490d0694476938a2a53719d991d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "specials"
+        },
+        {
+          "type": "과거형",
+          "value": "specialled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "specialling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "specialled"
+        }
+      ],
+      "aliasConjugation": "specials",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cc251f3e0ef87c0c252c3788e1f5d2dc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 점은 역설할 필요가 있다",
+      "text": "It deserves <b>special</b> emphasis."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 특사의 은전을 입었다",
+      "text": "They were favored with <b>special</b> amnesty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 집은 귀빈을 위한 것이다.",
+      "text": "The house is reserved for <b>special</b> guests."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "각별히 청하고자 하는 일이 있습니다",
+      "text": "I have a <b>special</b> favor to ask (of) you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모처럼 초대해 주셔서 감사합니다",
+      "text": "Thank you for your kind[<b>special</b>] invitation."
+    }
+  ],
+  "isWordType": true
+}

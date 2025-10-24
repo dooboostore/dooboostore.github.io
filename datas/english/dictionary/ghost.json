@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "entry": "ghost",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡoʊst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "유령, 망령, 원혼, 원령",
+              "examples": [
+                {
+                  "text": "the <b>ghost</b> of his dead father",
+                  "translatedText": "그의 망부의 영혼"
+                }
+              ],
+              "originalMeaning": "유령, 망령, 원혼, 원령"
+            },
+            {
+              "meaning": "환영, 환상, 허깨비",
+              "examples": [],
+              "originalMeaning": "환영, 환상, 허깨비"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책·서류 등을> 대작(代作)하다(ghostwrite)",
+              "examples": [],
+              "originalMeaning": "<책·서류 등을> 대작(代作)하다(ghostwrite)"
+            },
+            {
+              "meaning": "(유령처럼) …에 붙어다니다, 나타나다",
+              "examples": [],
+              "originalMeaning": "(유령처럼) …에 붙어다니다, 나타나다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대작하다",
+              "examples": [],
+              "originalMeaning": "대작하다"
+            },
+            {
+              "meaning": "(유령처럼) 소리 없이 움직이다, <범선이> 바람이 없는데도 움직이다",
+              "examples": [],
+              "originalMeaning": "(유령처럼) 소리 없이 움직이다, <범선이> 바람이 없는데도 움직이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/81291ffa641049bebe55f5d12043674c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/81291ffa641049bebe55f5d12043674c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ghosts"
+        },
+        {
+          "type": "과거형",
+          "value": "ghosted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ghosting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ghosted"
+        }
+      ],
+      "aliasConjugation": "ghosts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "585441cd64a0fda2015f890a8e0f2936",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "GHOST",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지구 수평 탐측 기술",
+              "examples": [],
+              "originalMeaning": "지구 수평 탐측 기술"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2f6f71cf1dd74fd39edd66b1312357ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2f6f71cf1dd74fd39edd66b1312357ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "aa9569fc15ddd6eb1f898f84b8a493f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집에는 귀신이 나온다",
+      "text": "A <b>ghost</b> haunts the house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너, 안색이 아주 창백하구나",
+      "text": "You're as white as a sheet[<b>ghost</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 마치 유령이라도 본 것처럼 보인다",
+      "text": "She looks as if she had seen the <b>ghost</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금의 그에게서 옛 모습은 희미하게 남아 있을 뿐이다.",
+      "text": "He is a mere <b>ghost</b> of his former self."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 회복할 가망이 전혀 없다",
+      "text": "There is not the <b>ghost</b> of a chance of his recovery."
+    }
+  ],
+  "isWordType": true
+}

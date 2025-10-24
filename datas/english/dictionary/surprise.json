@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "surprise",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sər│praɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…로) 놀라게 하다, 경악하게 하다(shock), 의외로 생각케 하다 ((with, by)) (→surprised)",
+              "examples": [
+                {
+                  "text": "His strange question surprised all of us.",
+                  "translatedText": "그의 별난 질문에 우리는 모두 놀랐다."
+                }
+              ],
+              "originalMeaning": "(…로) 놀라게 하다, 경악하게 하다(shock), 의외로 생각케 하다 ((with, by)) (→<span class='related_word' lang='en' >surprised</span>)"
+            },
+            {
+              "meaning": "허를 찔러 …에게 (…)시키다, 놀래 주어 (…)하게 하다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>surprise</b> someone into telling the truth",
+                  "translatedText": "…의 허를 찔러 사실을 말하게 하다"
+                }
+              ],
+              "originalMeaning": "허를 찔러 …에게 (…)시키다, 놀래 주어 (…)하게 하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "놀람, 경악",
+              "examples": [],
+              "originalMeaning": "놀람, 경악"
+            },
+            {
+              "meaning": "불시에 치기, 기습",
+              "examples": [],
+              "originalMeaning": "불시에 치기, 기습"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b50920dfe2f04794837d763210d51cd1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b50920dfe2f04794837d763210d51cd1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "surprises"
+        },
+        {
+          "type": "과거형",
+          "value": "surprised"
+        },
+        {
+          "type": "현재 분사",
+          "value": "surprising"
+        },
+        {
+          "type": "과거 분사",
+          "value": "surprised"
+        }
+      ],
+      "aliasConjugation": "surprises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2aca0282860f93dfff946a6cbbbe081c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이곳에서 너를 만나다니 참으로 의외이다",
+      "text": "It's quite a <b>surprise</b> to see you here. or I little expected that I should see you here. or You are the last person I expected to see here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신을 여기서 만나다니 참으로 뜻밖이다",
+      "text": "It's quite a <b>surprise</b> to see you here. or You are the last man I expected to meet here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 놀라게 하여 동의시켰다.",
+      "text": "He surprised me into consent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 보고 오죽이나 놀랐겠니!",
+      "text": "What was his <b>surprise</b> to see that!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자네를 깜짝 놀래줄 일이 있다",
+      "text": "I have a <b>surprise</b> (in store) for you."
+    }
+  ],
+  "isWordType": true
+}

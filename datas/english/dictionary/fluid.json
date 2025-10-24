@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "fluid",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfluːɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "유동성의(liquid)(cf. SOLID)",
+              "examples": [
+                {
+                  "text": "<b>fluid</b> substances",
+                  "translatedText": "유동 물질"
+                }
+              ],
+              "originalMeaning": "유동성의(liquid)(cf. SOLID)"
+            },
+            {
+              "meaning": "<의견 등이> 곧잘 변하는, 유동적인, 불안정한",
+              "examples": [
+                {
+                  "text": "a <b>fluid</b> situation",
+                  "translatedText": "유동적인 사태"
+                }
+              ],
+              "originalMeaning": "<의견 등이> 곧잘 변하는, 유동적인, 불안정한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "유동체, 유체 ((액체·기체의 총칭))",
+              "examples": [],
+              "originalMeaning": "유동체, 유체 ((액체·기체의 총칭))"
+            },
+            {
+              "meaning": "유동물",
+              "examples": [],
+              "originalMeaning": "유동물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f88d9af14de8487db9f123479161728f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f88d9af14de8487db9f123479161728f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8ede368130b617cbf4998eec8845045a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정세는 아직도 매우 유동적이다",
+      "text": "The situation is still highly <b>fluid</b>."
+    }
+  ],
+  "isWordType": true
+}

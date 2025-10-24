@@ -1,0 +1,33 @@
+/* Code Snippet - 기존 code-example 스타일과 일치 */
+:host {
+    display: block;
+}
+
+.code-snippet-pre {
+    padding: 1rem;
+    margin: 0;
+    overflow-x: auto;
+    background: #1a1a1a;
+    position: relative;
+}
+
+code {
+    color: #e5e5e5;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.language-indicator:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .code-snippet-pre {
+        padding: 1rem;
+        overflow-x: auto;
+        font-size: 0.8rem;
+    }
+    
+
+}

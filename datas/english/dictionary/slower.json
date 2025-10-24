@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "slow",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[시간·속도]",
+              "examples": [],
+              "originalMeaning": "[시간·속도]"
+            },
+            {
+              "meaning": "느린, 늦은, 느릿느릿한(opp. fast, quick)",
+              "examples": [
+                {
+                  "text": "a <b>slow</b> train",
+                  "translatedText": "완행 열차"
+                }
+              ],
+              "originalMeaning": "느린, 늦은, 느릿느릿한(opp. fast, quick)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "느리게, 천천히",
+              "examples": [],
+              "originalMeaning": "느리게, 천천히"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "늦게 하다, 늦추다; <자동차 등의> 속력을 떨어뜨리다[늦추다] ((down, up))",
+              "examples": [],
+              "originalMeaning": "늦게 하다, 늦추다; <자동차 등의> 속력을 떨어뜨리다[늦추다] ((down, up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4376cb3e89744ef29ed52afafbe7bb63",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4376cb3e89744ef29ed52afafbe7bb63",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "slower"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "slows"
+        },
+        {
+          "type": "최상급",
+          "value": "slowest"
+        },
+        {
+          "type": "과거형",
+          "value": "slowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "slowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "slowed"
+        }
+      ],
+      "aliasConjugation": "slower",
+      "aliasConjugationPos": "비교급",
+      "gdid": "a1bd97babb6fb620bf78994bc35146c1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 계산이 뜬 편이다",
+      "text": "I am <b>slow</b> at accounts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 좀처럼 오지 않았다.",
+      "text": "She was <b>slow</b> to come."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 도착이 늦어지고 있다.",
+      "text": "She is <b>slow</b> in arriving."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오늘은 큰 뉴스가 없는 날입니다",
+      "text": "Today is a <b>slow</b> news day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "먹은 것이 잘 안 내려간다",
+      "text": "The food is <b>slow</b> of digestion."
+    }
+  ],
+  "isWordType": true
+}

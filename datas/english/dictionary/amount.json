@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "amount",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əmáunt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 총액, 총계; (대부금의) 원리 합계(total) ((of)), (=sum)",
+              "examples": [],
+              "originalMeaning": "[the ~] 총액, 총계; (대부금의) 원리 합계(total) ((of)), (=<span class='related_word' lang='en' >sum</span>)"
+            },
+            {
+              "meaning": "양(quantity), 액수(sum)",
+              "examples": [
+                {
+                  "text": "a large[small] <b>amount</b> of sugar",
+                  "translatedText": "다량[소량]의 설탕"
+                }
+              ],
+              "originalMeaning": "양(quantity), 액수(sum)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "총계가 …에 이르다, <금액이> (얼마가) 되다, 달하다(add up) ((to))",
+              "examples": [
+                {
+                  "text": "The annual net profit amounts to ten million dollars.",
+                  "translatedText": "연간 순익금이 1,000만 달러에 달한다."
+                }
+              ],
+              "originalMeaning": "총계가 …에 이르다, <금액이> (얼마가) 되다, 달하다(add up) ((to))"
+            },
+            {
+              "meaning": "결과적으로 …이 되다, …에 해당[상당]하다, …와 매한가지이다[같다] ((to))",
+              "examples": [
+                {
+                  "text": "This answer amounts to a refusal.",
+                  "translatedText": "이 대답은 거절이나 마찬가지다."
+                }
+              ],
+              "originalMeaning": "결과적으로 …이 되다, …에 해당[상당]하다, …와 매한가지이다[같다] ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/afab0c13283d40f9a7c4a49380911f23",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/afab0c13283d40f9a7c4a49380911f23",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4f2e229064fb5732e7bed0db036fb7c0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 결국 이런 결론이 된다",
+      "text": "It amounts to this[that]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 말은 협박이나 다름없다",
+      "text": "This amounts to a threat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 돈은 얼마든지 있다.",
+      "text": "He has any <b>amount</b> of money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "죄다해서 만 원이 된다",
+      "text": "It amounts to ten thousand won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "총계하면 약 7만 원이 된다",
+      "text": "The total amounts[comes] to about seventy thousand won. or It makes a total of seventy thousand won."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "lose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "luːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "잃다, 상실[분실]하다",
+              "examples": [
+                {
+                  "text": "<b>lose</b> one's life",
+                  "translatedText": "목숨을 잃다, 죽다"
+                }
+              ],
+              "originalMeaning": "잃다, 상실[분실]하다"
+            },
+            {
+              "meaning": "유지[지속]할 수 없게 되다, <건강·능력·신용 등을> 잃다 ((by doing))(opp. control)",
+              "examples": [],
+              "originalMeaning": "유지[지속]할 수 없게 되다, <건강·능력·신용 등을> 잃다 ((by doing))(opp. control)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "손해를 입다, 손해 보다 ((by))",
+              "examples": [],
+              "originalMeaning": "손해를 입다, 손해 보다 ((by))"
+            },
+            {
+              "meaning": "지다, 실패하다(fail)",
+              "examples": [
+                {
+                  "text": "<b>lose</b> at cards",
+                  "translatedText": "카드놀이에서 지다"
+                }
+              ],
+              "originalMeaning": "지다, 실패하다(fail)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f97f782fefb348c194936c94dc5e6945",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f97f782fefb348c194936c94dc5e6945",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "loses"
+        },
+        {
+          "type": "과거형",
+          "value": "lost"
+        },
+        {
+          "type": "현재 분사",
+          "value": "losing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lost"
+        }
+      ],
+      "aliasConjugation": "loses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "09946ca52ee9683694e93d896272c506",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 값에 팔면 제가 밑집니다",
+      "text": "I will be losing money if I sell it at that price. or But I'm losing by it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사장 눈에 벗어났다",
+      "text": "He is out of favor in the eyes of the boss. or He lost favor with the boss."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 1점 차로 졌다",
+      "text": "We lost by one run."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 800표 차이로 패했다",
+      "text": "He lost by 800 votes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 병자는 쇠약해지고 있다.",
+      "text": "The invalid is losing."
+    }
+  ],
+  "isWordType": true
+}

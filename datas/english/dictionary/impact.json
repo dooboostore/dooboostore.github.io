@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "impact",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(물체와 물체의) 충돌(collision), 격돌 ((against)); 충격",
+              "examples": [],
+              "originalMeaning": "(물체와 물체의) 충돌(collision), 격돌 ((against)); 충격"
+            },
+            {
+              "meaning": "[비유] 충격, 충격력; (강한) 영향(력)(influence), 감화, 효과(effect) ((on, upon))",
+              "examples": [
+                {
+                  "text": "have[make] a considerable <b>impact</b> on",
+                  "translatedText": "…에 상당한 영향을 주다"
+                }
+              ],
+              "originalMeaning": "[비유] 충격, 충격력; (강한) 영향(력)(influence), 감화, 효과(effect) ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "꽉 밀어 넣다, 채워 넣다, 밀착시키다, …와 충돌하다, <장소를> 채우다, …에 강한 영향[충격]을 주다",
+              "examples": [
+                {
+                  "text": "The decision may <b>impact</b> your whole career.",
+                  "translatedText": "그 결정은 당신의 일생에 영향을 줄지도 모른다."
+                }
+              ],
+              "originalMeaning": "꽉 밀어 넣다, 채워 넣다, 밀착시키다, …와 충돌하다, <장소를> 채우다, …에 강한 영향[충격]을 주다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "강한 충격을 주다, 격돌하다, 부딪치다 ((on, upon, against))",
+              "examples": [],
+              "originalMeaning": "강한 충격을 주다, 격돌하다, 부딪치다 ((on, upon, against))"
+            },
+            {
+              "meaning": "강한 영향을 주다 ((on, upon))",
+              "examples": [],
+              "originalMeaning": "강한 영향을 주다 ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4fea5469d0e47c8b2c2776c8ccb4c59",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4fea5469d0e47c8b2c2776c8ccb4c59",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "impacts"
+        },
+        {
+          "type": "과거형",
+          "value": "impacted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "impacting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "impacted"
+        }
+      ],
+      "aliasConjugation": "impacts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c9fa62ba16b57657624fc5176765a6e7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 결정은 당신의 일생에 영향을 줄지도 모른다.",
+      "text": "The decision may <b>impact</b> your whole career."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘 경기에서 그가 가장 큰 활약을 했다",
+      "text": "He made the biggest <b>impact</b>[was the outstanding player] in today's game."
+    }
+  ],
+  "isWordType": true
+}

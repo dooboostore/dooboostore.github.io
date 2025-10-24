@@ -1,0 +1,33 @@
+<!-- Fixed Header -->
+<header class="english-header">
+    <div class="header-content">
+        <div class="header-left">
+            <!-- Show home button when in sub-route (always at the left edge) -->
+            <dr-a href="/finance/" class="home-btn" dr-if="@this@.isInSubRoute" title="홈으로 이동">
+                <i class="fas fa-home"></i>
+            </dr-a>
+            
+            <!-- Show title when on main page -->
+            <h1 class="header-title" dr-if="!@this@.isInSubRoute">Finance</h1>
+            
+            <!-- Show current item info when in sub-route -->
+            <div class="current-item-info" dr-if="@this@.currentItem">
+                <img class="item-image" dr-attr="{src: '/datas/finance/item/'+@this@.currentItem.symbol +'.png'}" alt="Item image">
+                <div class="item-details">
+                    <span class="item-name">${@this@.currentItem.label}$</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-menu">
+            <div>
+                <img alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io_finance.svg?style=plastic&amp;">
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main class="english-main">
+    <dr-router-outlet createArguments="${@this@.getChildArguments()}$"></dr-router-outlet>
+</main>

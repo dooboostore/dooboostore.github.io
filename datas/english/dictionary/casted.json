@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "entry": "cast",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kæst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "던지다; 내던지다 ((from)); <주사위를> 던지다; <그물을> 던지다, 치다; <낚싯줄을> 던지다; <닻·측연을> 던져 내리다; <표를> 던지다 (=throw)",
+              "examples": [
+                {
+                  "text": "<b>cast</b> a dice",
+                  "translatedText": "주사위를 던지다"
+                }
+              ],
+              "originalMeaning": "던지다; 내던지다 ((from)); <주사위를> 던지다; <그물을> 던지다, 치다; <낚싯줄을> 던지다; <닻·측연을> 던져 내리다; <표를> 던지다 (=<span class='related_word' lang='en' >throw</span>)"
+            },
+            {
+              "meaning": "<눈·시선을> (…로) 던지다, 향하다 ((at)); <빛·그림자·의혹 등을> (…에) 던지다 ((on)); <마법 등을> (사람에게) 걸다, 저주하다; <마음·생각을> 기울이다 ((over)); <비난·모욕을> 퍼붓다, 가하다; <명예·치욕·축복 등을> 주다",
+              "examples": [
+                {
+                  "text": "<b>cast</b> a glance at",
+                  "translatedText": "…을 흘끗 보다"
+                }
+              ],
+              "originalMeaning": "<눈·시선을> (…로) 던지다, 향하다 ((at)); <빛·그림자·의혹 등을> (…에) 던지다 ((on)); <마법 등을> (사람에게) 걸다, 저주하다; <마음·생각을> 기울이다 ((over)); <비난·모욕을> 퍼붓다, 가하다; <명예·치욕·축복 등을> 주다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "물건을 던지다, 낚싯줄을 던지다, 투망을 던지다",
+              "examples": [],
+              "originalMeaning": "물건을 던지다, 낚싯줄을 던지다, 투망을 던지다"
+            },
+            {
+              "meaning": "[양태 부사와 함께] 주조되다",
+              "examples": [],
+              "originalMeaning": "[양태 부사와 함께] 주조되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "던지기, 던지는 거리, (그물·측연의) 투하, 낚싯줄을 던지기, 주사위를 던지기, 운수 점치기",
+              "examples": [],
+              "originalMeaning": "던지기, 던지는 거리, (그물·측연의) 투하, 낚싯줄을 던지기, 주사위를 던지기, 운수 점치기"
+            },
+            {
+              "meaning": "던져진[버림받은, 벗어버린] 것; (뱀·벌레의) 허물",
+              "examples": [],
+              "originalMeaning": "던져진[버림받은, 벗어버린] 것; (뱀·벌레의) 허물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/105997be4d674b239ca1a5c268ddec68",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/105997be4d674b239ca1a5c268ddec68",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "casts"
+        },
+        {
+          "type": "현재 분사",
+          "value": "casting"
+        }
+      ],
+      "aliasConjugation": "casts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4ffb67a3eeb26114e3f5249c449f1aca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그녀를 흘끗 보았다.",
+      "text": "He <b>cast</b> her a glance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 상은 청동으로 만든 것이다.",
+      "text": "The statue is <b>cast</b> in bronze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사슴은 가을에 뿔을 간다.",
+      "text": "A deer casts its horn in autumn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 왼쪽이 약간 사팔눈이다",
+      "text": "He has a <b>cast</b> in the left eye."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 오셀로 역을 맡았다.",
+      "text": "He was <b>cast</b> for the part of Othello."
+    }
+  ],
+  "isWordType": true
+}

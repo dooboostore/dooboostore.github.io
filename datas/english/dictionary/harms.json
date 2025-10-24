@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "harm",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hɑːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "해, 해악, 위해(危害)",
+              "examples": [
+                {
+                  "text": "bodily <b>harm</b>",
+                  "translatedText": "육체적 위해"
+                }
+              ],
+              "originalMeaning": "해, 해악, 위해(危害)"
+            },
+            {
+              "meaning": "손해, 손상; 불편, 난처함",
+              "examples": [
+                {
+                  "text": "There's no <b>harm</b> in trying.",
+                  "translatedText": "해보는 데에 손해 볼 것은 없다."
+                }
+              ],
+              "originalMeaning": "손해, 손상; 불편, 난처함"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·평판·사물 등을> 해치다, 상하게 하다, 훼손하다(opp. help)",
+              "examples": [
+                {
+                  "text": "<b>harm</b> one's reputation",
+                  "translatedText": "평판을 훼손하다"
+                }
+              ],
+              "originalMeaning": "<사람·평판·사물 등을> 해치다, 상하게 하다, 훼손하다(opp. help)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a018ae019c114efdaf04d70c78e901ad",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a018ae019c114efdaf04d70c78e901ad",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "harms"
+        },
+        {
+          "type": "과거형",
+          "value": "harmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "harming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "harmed"
+        }
+      ],
+      "aliasConjugation": "harms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b99235fd291053279e36f14e1826d39f",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "HARM",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공대지(空對地) 고속 대 레이더 미사일",
+              "examples": [],
+              "originalMeaning": "공대지(空對地) 고속 대 레이더 미사일"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/188b528631f1439aa60a0399a33121b5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/188b528631f1439aa60a0399a33121b5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "44b0572ab5d95e0b6eae13b7928854ed",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "악의로 한[말한] 것은 아니다.",
+      "text": "I meant no <b>harm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 벌레도 안 죽인다.",
+      "text": "He won’t <b>harm</b> a fly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해보는 데에 손해 볼 것은 없다.",
+      "text": "There’s no <b>harm</b> in trying."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "작물에는 거의 해가 없었다",
+      "text": "The crops suffered little <b>harm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "술은 양을 넘으면 해롭다",
+      "text": "Excessive drinking does one <b>harm</b>."
+    }
+  ],
+  "isWordType": true
+}

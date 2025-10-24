@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "bulb",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bʌlb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(양파 등의) 구근(球根), 알뿌리, 비늘줄기; 구근 식물",
+              "examples": [],
+              "originalMeaning": "(양파 등의) 구근(球根), 알뿌리, 비늘줄기; 구근 식물"
+            },
+            {
+              "meaning": "공 모양의 물건[부분]",
+              "examples": [],
+              "originalMeaning": "공 모양의 물건[부분]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구근이 되다, 둥글게 부풀다",
+              "examples": [],
+              "originalMeaning": "구근이 되다, 둥글게 부풀다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/13b3745829fe4962a366e1a241173870",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/13b3745829fe4962a366e1a241173870",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "15aae77ad0b9938efbb280fda464292e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전구 하나가 나갔다",
+      "text": "One of the bulbs has burned out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전구가 산산조각이 났다",
+      "text": "The electric <b>bulb</b> was smashed to smithereens."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전구가 끊어졌다.",
+      "text": "The <b>bulb</b> has gone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전구선이 끊겼다",
+      "text": "The filament has broken[burnt out]. or The electric <b>bulb</b> snapped."
+    }
+  ],
+  "isWordType": true
+}

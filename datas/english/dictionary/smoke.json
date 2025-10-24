@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "smoke",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "smoʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "연기",
+              "examples": [
+                {
+                  "text": "give off <b>smoke</b>",
+                  "translatedText": "연기를 내다"
+                }
+              ],
+              "originalMeaning": "연기"
+            },
+            {
+              "meaning": "연기 같은 것; 안개; 물보라(spray), 김, 증기",
+              "examples": [],
+              "originalMeaning": "연기 같은 것; 안개; 물보라(spray), 김, 증기"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연기를 내다, 연기를 뿜다; 연기처럼 퍼지다[솟아오르다]",
+              "examples": [],
+              "originalMeaning": "연기를 내다, 연기를 뿜다; 연기처럼 퍼지다[솟아오르다]"
+            },
+            {
+              "meaning": "연기가 나다, 내가 나다, 그을다",
+              "examples": [
+                {
+                  "text": "The stove smokes badly.",
+                  "translatedText": "그 난로는 연기가 몹시 난다."
+                }
+              ],
+              "originalMeaning": "연기가 나다, 내가 나다, 그을다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<담배·아편 등을> 피우다",
+              "examples": [
+                {
+                  "text": "<b>smoke</b> a pipe",
+                  "translatedText": "파이프 담배를 피우다"
+                }
+              ],
+              "originalMeaning": "<담배·아편 등을> 피우다"
+            },
+            {
+              "meaning": "담배를 피워 …하게 하다",
+              "examples": [
+                {
+                  "text": "<b>smoke</b> oneself sick[silly]",
+                  "translatedText": "담배를 피워서 속이 메스꺼워지다"
+                }
+              ],
+              "originalMeaning": "담배를 피워 …하게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b9f161cb4fd4d83a887b393d6a0d640",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b9f161cb4fd4d83a887b393d6a0d640",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "smokes"
+        },
+        {
+          "type": "과거형",
+          "value": "smoked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "smoking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "smoked"
+        }
+      ],
+      "aliasConjugation": "smokes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c65636410d34836f8c27b19b99836ad1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 담배 피우기를 좋아한다.",
+      "text": "He likes smoking[to <b>smoke</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "담배를 피우면 인이 박이어 끊기 어렵다",
+      "text": "Once smoking becomes a habit, you can hardly give it up. or The smoking habit stays with you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 끊임없이 담배를 피워댄다.",
+      "text": "He is always smoking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 난로는 연기가 몹시 난다.",
+      "text": "The stove smokes badly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아니 땐 굴뚝에 연기 날까",
+      "text": "No <b>smoke</b> without fire. or No fire, no <b>smoke</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "sponge",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "스펀지, 해면 ((해면동물의 섬유 조직))",
+              "examples": [],
+              "originalMeaning": "스펀지, 해면 ((해면동물의 섬유 조직))"
+            },
+            {
+              "meaning": "효모로 부풀린 반죽빵",
+              "examples": [],
+              "originalMeaning": "효모로 부풀린 반죽빵"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "해면으로 닦다 ((down, off, over, with))",
+              "examples": [
+                {
+                  "text": "<b>sponge</b> the baby's face",
+                  "translatedText": "갓난아기의 얼굴을 스펀지로 닦다"
+                }
+              ],
+              "originalMeaning": "해면으로 닦다 ((down, off, over, with))"
+            },
+            {
+              "meaning": "(해면으로) 빨아들이다 ((up, with))",
+              "examples": [
+                {
+                  "text": "<b>sponge</b> up spilled ink",
+                  "translatedText": "엎질러진 잉크를 스펀지로 빨아들이다"
+                }
+              ],
+              "originalMeaning": "(해면으로) 빨아들이다 ((up, with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<해면 등이> 액체를 흡수하다",
+              "examples": [],
+              "originalMeaning": "<해면 등이> 액체를 흡수하다"
+            },
+            {
+              "meaning": "해면을 채집하다",
+              "examples": [],
+              "originalMeaning": "해면을 채집하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e035a657c1f34ea0a76ddbc4c7091dce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e035a657c1f34ea0a76ddbc4c7091dce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sponges"
+        },
+        {
+          "type": "과거형",
+          "value": "sponged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sponging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sponged"
+        }
+      ],
+      "aliasConjugation": "sponges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "205e3a8ae0cdc81003c0afcc817814a4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 부모님에게 신세를 지고 싶지 않다",
+      "text": "I don’t want <b>sponge</b> off my parents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 생활비를 숙부에게 의존하려 했다.",
+      "text": "He tried to <b>sponge</b> on his uncle for living expenses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "스펀지는 물을 흡수한다.",
+      "text": "A <b>sponge</b> drinks water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해면은 물을 흡수한다",
+      "text": "A <b>sponge</b> absorbs water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "스펀지는 물을 들이빤다",
+      "text": "A <b>sponge</b> sucks up water."
+    }
+  ],
+  "isWordType": true
+}

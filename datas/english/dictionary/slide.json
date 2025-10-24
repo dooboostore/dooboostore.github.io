@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "entry": "slide",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "slaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "미끄러지다 ((on, upon, over)); 살금살금 걷다, 남몰래 움직이다; <피스톤 등이> 미끄러져 움직이다 ((up, down)), (=slip)",
+              "examples": [
+                {
+                  "text": "<b>slide</b> down the slope of a hill",
+                  "translatedText": "언덕의 비탈길을 미끄러져 내려가다"
+                }
+              ],
+              "originalMeaning": "미끄러지다 ((on, upon, over)); 살금살금 걷다, 남몰래 움직이다; <피스톤 등이> 미끄러져 움직이다 ((up, down)), (=<span class='related_word' lang='en' >slip</span>)"
+            },
+            {
+              "meaning": "활주하다, 얼음을 지치다; [야구] 슬라이딩하다; [음악] (어떤 음에서 다른 음으로) 부드럽게 옮아가다",
+              "examples": [
+                {
+                  "text": "<b>slide</b> on ice",
+                  "translatedText": "얼음을 지치다"
+                }
+              ],
+              "originalMeaning": "활주하다, 얼음을 지치다; [야구] 슬라이딩하다; [음악] (어떤 음에서 다른 음으로) 부드럽게 옮아가다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "미끄러지게 하다, 활주시키다 ((down, on, upon, up))",
+              "examples": [
+                {
+                  "text": "<b>slide</b> a glass across the table",
+                  "translatedText": "유리잔이 테이블 위를 가로질러 미끄러져 가게 하다"
+                }
+              ],
+              "originalMeaning": "미끄러지게 하다, 활주시키다 ((down, on, upon, up))"
+            },
+            {
+              "meaning": "살짝 넣다, 미끄러져 들어가게 하다, 술술 움직이다, 살그머니 들여보내다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>slide</b> a letter into a person's hand",
+                  "translatedText": "편지를 손에 슬쩍 쥐어 주다"
+                }
+              ],
+              "originalMeaning": "살짝 넣다, 미끄러져 들어가게 하다, 술술 움직이다, 살그머니 들여보내다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "미끄러짐, 한 번 미끄러지기, 미끄럼 타기, 활주",
+              "examples": [],
+              "originalMeaning": "미끄러짐, 한 번 미끄러지기, 미끄럼 타기, 활주"
+            },
+            {
+              "meaning": "활주장, 활주대, (어린이용의) 미끄럼틀",
+              "examples": [
+                {
+                  "text": "a ski <b>slide</b>",
+                  "translatedText": "스키 활주장"
+                }
+              ],
+              "originalMeaning": "활주장, 활주대, (어린이용의) 미끄럼틀"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b77af0316a64f02b692d5a93fbbb61a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b77af0316a64f02b692d5a93fbbb61a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "slides"
+        },
+        {
+          "type": "과거형",
+          "value": "slid"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sliding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "slid, slidden"
+        }
+      ],
+      "aliasConjugation": "slides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6d4fe5ee50af06cee1b662a5d00cfc2f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주자는 2루에 슬라이딩해 들어갔다.",
+      "text": "The runner slid into second base."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 아무도 보지 않을 때 슬그머니 방을 떴다",
+      "text": "She slid out of the room when no one was looking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느덧 세월이 흘렀다.",
+      "text": "The years slid past[away]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빙상 활주",
+      "text": "(ice-)skating;sliding;glissading"
+    }
+  ],
+  "isWordType": true
+}

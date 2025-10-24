@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "window",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈwɪndoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "창문, 창; 창가",
+              "examples": [
+                {
+                  "text": "look out of the <b>window</b>",
+                  "translatedText": "창밖을 내다보다"
+                }
+              ],
+              "originalMeaning": "창문, 창; 창가"
+            },
+            {
+              "meaning": "창틀, 창유리",
+              "examples": [
+                {
+                  "text": "break a <b>window</b>",
+                  "translatedText": "창유리를 깨다"
+                }
+              ],
+              "originalMeaning": "창틀, 창유리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 창을 내다",
+              "examples": [],
+              "originalMeaning": "…에 창을 내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5a1ae2cdad844232bc82b5f9f6ebd277",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5a1ae2cdad844232bc82b5f9f6ebd277",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3518ad051189c396d8f06080c2357984",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세 번 고함을 지르니 그는 그제야 내다보았다",
+      "text": "He did not look out of the <b>window</b> until I had shouted three times. or He looked out of the <b>window</b> only after I had shouted three times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "창문이 모두 열려 있다",
+      "text": "All the windows are open."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "창문이 좀처럼 닫히지 않는다.",
+      "text": "The <b>window</b> will not close."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 창문은 꼭 닫히지 않는다",
+      "text": "This <b>window</b> doesn't shut tight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "창문을 열어 놓고 자거라",
+      "text": "Sleep with the windows open."
+    }
+  ],
+  "isWordType": true
+}

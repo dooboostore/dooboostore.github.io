@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "prepared",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prɪ│perd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "준비[각오]가 되어 있는, <의자 따위가> (인체에 맞게) 설계되어 있는 ((for))",
+              "examples": [
+                {
+                  "text": "a <b>prepared</b> statement",
+                  "translatedText": "준비된 성명"
+                }
+              ],
+              "originalMeaning": "준비[각오]가 되어 있는, <의자 따위가> (인체에 맞게) 설계되어 있는 ((for))"
+            },
+            {
+              "meaning": "<음식물이> 조리된, 조제된",
+              "examples": [],
+              "originalMeaning": "<음식물이> 조리된, 조제된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b871f1f8b6d647d08c82eb94ad98822e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b871f1f8b6d647d08c82eb94ad98822e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8d095f1baa2d5a6cf2beef4b9389d468",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "prepare",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prɪ│per"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "준비하다, 마련하다, 채비를 갖추다 ((for)); 준비시키다, …의 채비를 하게 하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>prepare</b> a lecture",
+                  "translatedText": "강의 준비를 하다"
+                }
+              ],
+              "originalMeaning": "준비하다, 마련하다, 채비를 갖추다 ((for)); 준비시키다, …의 채비를 하게 하다 ((for))"
+            },
+            {
+              "meaning": "각오시키다 ((for)) (→prepared)",
+              "examples": [
+                {
+                  "text": "<b>prepare</b> children for unhappy news",
+                  "translatedText": "아이들에게 불행한 소식을 들을 각오를 시키다"
+                }
+              ],
+              "originalMeaning": "각오시키다 ((for)) (→<span class='related_word' lang='en' ><b>prepared</b></span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "준비하다 ((for, against)); 각오하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>prepare</b> for examinations",
+                  "translatedText": "시험 준비를 하다"
+                }
+              ],
+              "originalMeaning": "준비하다 ((for, against)); 각오하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d41ff5c5114749f3928b5856f00a34b0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d41ff5c5114749f3928b5856f00a34b0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "prepares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8cfd00cb5bcd2e069f395c3ec7476634",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 이 일에 마음의 준비를 하고 있는 것은 긴요한 일이다.",
+      "text": "It is essential that he should be <b>prepared</b> for this."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 죽음을 각오하고 있다",
+      "text": "He is <b>prepared</b> for death."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "최악의 사태를 각오하고 있다.",
+      "text": "I am <b>prepared</b> for the worst."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어떤 일이 일어나도 나는 태세가 돼 있다",
+      "text": "I am <b>prepared</b> for anything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 해외 여행 준비를 하고 있다",
+      "text": "He is preparing for a trip abroad."
+    }
+  ],
+  "isWordType": true
+}

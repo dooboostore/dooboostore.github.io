@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "brand",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "brænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상표(trademark), 브랜드; 품질 ((of)); (상표가 나타내는) 특정 제품, (특별한) 종류",
+              "examples": [
+                {
+                  "text": "<b>brand</b> loyalty",
+                  "translatedText": "상표 충성도"
+                }
+              ],
+              "originalMeaning": "상표(trademark), 브랜드; 품질 ((of)); (상표가 나타내는) 특정 제품, (특별한) 종류"
+            },
+            {
+              "meaning": "(상품·가축 등에 찍는) 소인",
+              "examples": [],
+              "originalMeaning": "(상품·가축 등에 찍는) 소인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<죄인·가축에> 소인을 찍다",
+              "examples": [],
+              "originalMeaning": "<죄인·가축에> 소인을 찍다"
+            },
+            {
+              "meaning": "…에게 오명을 씌우다, …에게 낙인을 찍다",
+              "examples": [
+                {
+                  "text": "be branded as a traitor",
+                  "translatedText": "반역자의 오명을 쓰다"
+                }
+              ],
+              "originalMeaning": "…에게 오명을 씌우다, …에게 낙인을 찍다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3884d6591fe24f92839c5f5b6af8d260",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3884d6591fe24f92839c5f5b6af8d260",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "brands"
+        },
+        {
+          "type": "과거형",
+          "value": "branded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "branding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "branded"
+        }
+      ],
+      "aliasConjugation": "brands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "89eb14fd0f230a93f93c565812b8b571",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 반역자란 낙인이 찍혔다",
+      "text": "He was branded as a traitor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 광경은 나의 기억에 생생하게 새겨져 있다.",
+      "text": "The scene is branded on[in] my memory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 반역자라고 극언했다",
+      "text": "He went so far as to <b>brand</b> me as a traitor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장교가 신무기 사용법을 자세히 설명했다",
+      "text": "The officer gave full and detailed instructions on the <b>brand</b>-new firearms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "큰 목장에서는 소유자를 나타내기 위해서 소나 말에 낙인을 찍는다",
+      "text": "Cattle and horses on big ranches are marked with brands to show who owns them."
+    }
+  ],
+  "isWordType": true
+}

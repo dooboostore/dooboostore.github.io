@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "machinery",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "məˈʃiːnəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적] 기계류(machines)",
+              "examples": [
+                {
+                  "text": "<b>machinery</b> insurance",
+                  "translatedText": "기계 보험"
+                }
+              ],
+              "originalMeaning": "[집합적] 기계류(machines)"
+            },
+            {
+              "meaning": "(기계의) 장치",
+              "examples": [
+                {
+                  "text": "the <b>machinery</b> of a watch",
+                  "translatedText": "시계의 기계 장치"
+                }
+              ],
+              "originalMeaning": "(기계의) 장치"
+            },
+            {
+              "meaning": "(사회·정치 등의) 조직, 기구, 기관",
+              "examples": [
+                {
+                  "text": "the <b>machinery</b> of government",
+                  "translatedText": "정부 기구"
+                }
+              ],
+              "originalMeaning": "(사회·정치 등의) 조직, 기구, 기관"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a53ec6b93cc84fc38dfb3fc118dee340",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a53ec6b93cc84fc38dfb3fc118dee340",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "machineries"
+        }
+      ],
+      "aliasConjugation": "machineries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "6400fa80d2ba4655833a8799894740ea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기계는 많은 노력을 던다",
+      "text": "<b>Machinery</b> dispenses with much labor."
+    }
+  ],
+  "isWordType": true
+}

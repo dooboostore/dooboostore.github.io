@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "want",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "wɑːnt; wɔːnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "원하다, 바라다(wish), 갖고 싶다",
+              "examples": [
+                {
+                  "text": "I badly <b>want</b> a new car.",
+                  "translatedText": "새 차를 몹시 갖고 싶다."
+                }
+              ],
+              "originalMeaning": "원하다, 바라다(wish), 갖고 싶다"
+            },
+            {
+              "meaning": "[보통 수동형으로] …에게 볼일이 있다, <고용자가> <사람을> 찾다, <경찰이> 지명 수배하다 ((for))",
+              "examples": [
+                {
+                  "text": "You are wanted on the phone.",
+                  "translatedText": "너에게 전화가 왔다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] …에게 볼일이 있다, <고용자가> <사람을> 찾다, <경찰이> 지명 수배하다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "원하다, 바라다(wish, like)",
+              "examples": [
+                {
+                  "text": "You may stay if you <b>want</b>.",
+                  "translatedText": "원한다면 머물러도 좋다."
+                }
+              ],
+              "originalMeaning": "원하다, 바라다(wish, like)"
+            },
+            {
+              "meaning": "없다, 모자라다, 부족하다 ((in, for)); 곤궁하다, 궁핍하다",
+              "examples": [
+                {
+                  "text": "<b>want</b> formoney",
+                  "translatedText": "돈이 부족[필요]하다"
+                }
+              ],
+              "originalMeaning": "없다, 모자라다, 부족하다 ((in, for)); 곤궁하다, 궁핍하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 필요, 소용; 욕구;[주로 pl.] 필수품, 가지고 싶은 물건, 탐나는 것",
+              "examples": [
+                {
+                  "text": "a long-felt <b>want</b>",
+                  "translatedText": "오랫동안 필요를 느껴온 것"
+                }
+              ],
+              "originalMeaning": "[U] 필요, 소용; 욕구;[주로 pl.] 필수품, 가지고 싶은 물건, 탐나는 것"
+            },
+            {
+              "meaning": "[U] 결핍, 부족 ((of)); (사람의) 결점 (=lack)",
+              "examples": [
+                {
+                  "text": "be in <b>want</b> of food",
+                  "translatedText": "먹을 것이 없다"
+                }
+              ],
+              "originalMeaning": "[U] 결핍, 부족 ((of)); (사람의) 결점 (=<span class='related_word' lang='en' >lack</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e7570c49c7904cb7b687e30ee19a3431",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e7570c49c7904cb7b687e30ee19a3431",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wants"
+        },
+        {
+          "type": "과거형",
+          "value": "wanted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wanting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wanted"
+        }
+      ],
+      "aliasConjugation": "wants",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6f72df4509348820c1abd4535e1db3a8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 남자는 좀 모자란다",
+      "text": "He wants two pence in the pound. or He is a little wanting[somewhat weak in the head]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 가지 소청이 있습니다",
+      "text": "There is something I <b>want</b> to ask you. or I have a request to make of you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그것 전부를 원한다.",
+      "text": "I <b>want</b> all of it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 가고 싶지 않다",
+      "text": "I do not <b>want</b> to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 심장이 너무 약해",
+      "text": "You <b>want</b> more nerve."
+    }
+  ],
+  "isWordType": true
+}

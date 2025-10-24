@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "lost",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "lɔːst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "LOSE의 과거·과거분사",
+              "examples": [],
+              "originalMeaning": "<b>LOSE</b>의 과거·과거분사"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "잃은, 분실한; 행방불명의(missing)",
+              "examples": [
+                {
+                  "text": "<b>lost</b> territory",
+                  "translatedText": "실지(失地)"
+                }
+              ],
+              "originalMeaning": "잃은, 분실한; 행방불명의(missing)"
+            },
+            {
+              "meaning": "길을 잃은, 당황[방황]하는",
+              "examples": [
+                {
+                  "text": "a <b>lost</b> child",
+                  "translatedText": "미아(迷兒)"
+                }
+              ],
+              "originalMeaning": "길을 잃은, 당황[방황]하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7f47c7487028486d92dca0d1cb88777f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7f47c7487028486d92dca0d1cb88777f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d2b2749cfa05b79d8429597dd09451ca",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "lose",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "luːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "잃다, 상실[분실]하다",
+              "examples": [
+                {
+                  "text": "<b>lose</b> one's life",
+                  "translatedText": "목숨을 잃다, 죽다"
+                }
+              ],
+              "originalMeaning": "잃다, 상실[분실]하다"
+            },
+            {
+              "meaning": "유지[지속]할 수 없게 되다, <건강·능력·신용 등을> 잃다 ((by doing))(opp. control)",
+              "examples": [],
+              "originalMeaning": "유지[지속]할 수 없게 되다, <건강·능력·신용 등을> 잃다 ((by doing))(opp. control)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "손해를 입다, 손해 보다 ((by))",
+              "examples": [],
+              "originalMeaning": "손해를 입다, 손해 보다 ((by))"
+            },
+            {
+              "meaning": "지다, 실패하다(fail)",
+              "examples": [
+                {
+                  "text": "<b>lose</b> at cards",
+                  "translatedText": "카드놀이에서 지다"
+                }
+              ],
+              "originalMeaning": "지다, 실패하다(fail)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f97f782fefb348c194936c94dc5e6945",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f97f782fefb348c194936c94dc5e6945",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "loses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "09946ca52ee9683694e93d896272c506",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "설마 열쇠를 분실한 건 아니겠지.",
+      "text": "You have never <b>lost</b> the key!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "썩 물러가거라!",
+      "text": "Get away immediately! or Get <b>lost</b>! or Get out (of here)!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꺼져!",
+      "text": "Beat it! or Get <b>lost</b>! or Scram! or Split! or Buzz off! or Take a walk!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 분실물은 찾아가는 사람이 없다",
+      "text": "No one claims the <b>lost</b> article."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 값에 팔면 제가 밑집니다",
+      "text": "I will be losing money if I sell it at that price. or But I'm losing by it."
+    }
+  ],
+  "isWordType": true
+}

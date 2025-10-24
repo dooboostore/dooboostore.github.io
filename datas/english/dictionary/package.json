@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "package",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpækɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "꾸러미, 소포, 작은 짐, 패키지; [U] 짐꾸리기, 포장",
+              "examples": [
+                {
+                  "text": "<b>package</b> paper",
+                  "translatedText": "포장지"
+                }
+              ],
+              "originalMeaning": "꾸러미, 소포, 작은 짐, 패키지; [U] 짐꾸리기, 포장"
+            },
+            {
+              "meaning": "포장한 상품, 포장지[용기], 포장비",
+              "examples": [],
+              "originalMeaning": "포장한 상품, 포장지[용기], 포장비"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<제안·계획 등이> 포괄적인, 일괄의, <여행 등이> 패키지의",
+              "examples": [
+                {
+                  "text": "a <b>package</b> proposal",
+                  "translatedText": "일괄 제안"
+                }
+              ],
+              "originalMeaning": "<제안·계획 등이> 포괄적인, 일괄의, <여행 등이> 패키지의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<식품을> (슈퍼마켓에서 팔기 위해) 패키지에 넣다",
+              "examples": [],
+              "originalMeaning": "<식품을> (슈퍼마켓에서 팔기 위해) 패키지에 넣다"
+            },
+            {
+              "meaning": "<상품을> 포장하다, 꾸리다",
+              "examples": [],
+              "originalMeaning": "<상품을> 포장하다, 꾸리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a2a948695054bd9bd14c6fce3236ff2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a2a948695054bd9bd14c6fce3236ff2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "packages"
+        },
+        {
+          "type": "과거형",
+          "value": "packaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "packaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "packaged"
+        }
+      ],
+      "aliasConjugation": "packages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e8abe959e02a4e0a2a57b7a5c17432bf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 꾸러미를 털썩 내려놓았다.",
+      "text": "He planked down the <b>package</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 소포의 포장지를 잡아뜯었다.",
+      "text": "He tore at the wrappings of the <b>package</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 손에 든 짐들은 모두 가분가분하다",
+      "text": "All the packages in his hands are light."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소포가 우체국에서 심하게 쭈그러졌다",
+      "text": "The <b>package</b> has been badly crushed in the post."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소포는 8파운드 내지 10파운드의 무게가 있다.",
+      "text": "The <b>package</b> weighs between eight and ten pounds."
+    }
+  ],
+  "isWordType": true
+}

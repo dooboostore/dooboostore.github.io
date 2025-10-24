@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "entry": "moist",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "mɔɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "축축한, 습한, 습기 있는; <음식 등이> 알맞게 물기가 있는; <계절·지역 등이> 비가 많은(rainy), (=wet)",
+              "examples": [
+                {
+                  "text": "leaves <b>moist</b> with dew",
+                  "translatedText": "이슬에 젖은 잎"
+                }
+              ],
+              "originalMeaning": "축축한, 습한, 습기 있는; <음식 등이> 알맞게 물기가 있는; <계절·지역 등이> 비가 많은(rainy), (=<span class='related_word' lang='en' >wet</span>)"
+            },
+            {
+              "meaning": "눈물 젖은, 눈물이 글썽한",
+              "examples": [
+                {
+                  "text": "eyes <b>moist</b> with tears",
+                  "translatedText": "눈물 젖은 눈"
+                }
+              ],
+              "originalMeaning": "눈물 젖은, 눈물이 글썽한"
+            },
+            {
+              "meaning": "<병이> 습성의, 분비물이 많은",
+              "examples": [],
+              "originalMeaning": "<병이> 습성의, 분비물이 많은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b635171fde14ad9b2c2cd2da5413e6c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b635171fde14ad9b2c2cd2da5413e6c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "moister"
+        },
+        {
+          "type": "최상급",
+          "value": "moistest"
+        }
+      ],
+      "aliasConjugation": "moister",
+      "aliasConjugationPos": "비교급",
+      "gdid": "d39e4f6fa31c4ba54092a9257f9cd9ad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빨래가 이슬에 축축하다",
+      "text": "The laundry is <b>moist</b> with dew."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 눈물이 글썽글썽했다",
+      "text": "Her eyes swam[were filled] with tears. or Tears stood[gathered] in her eyes. or Her eyes were wet[<b>moist</b>] with tears."
+    }
+  ],
+  "isWordType": true
+}

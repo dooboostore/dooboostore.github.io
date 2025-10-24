@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "source",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sɔːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "원천(spring), 수원(지)",
+              "examples": [
+                {
+                  "text": "the <b>source</b> s of the Nile",
+                  "translatedText": "나일 강의 수원"
+                }
+              ],
+              "originalMeaning": "원천(spring), 수원(지)"
+            },
+            {
+              "meaning": "근원, 근본, 원인 ((of))",
+              "examples": [
+                {
+                  "text": "the <b>source</b> of revenue[wealth]",
+                  "translatedText": "재원(財源)[부원(富源)]"
+                }
+              ],
+              "originalMeaning": "근원, 근본, 원인 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<인용문의> 출처를 명시하다",
+              "examples": [],
+              "originalMeaning": "<인용문의> 출처를 명시하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb2a147697dc413ba45ff1b6c96852ab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb2a147697dc413ba45ff1b6c96852ab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sources"
+        },
+        {
+          "type": "과거형",
+          "value": "sourced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sourcing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sourced"
+        }
+      ],
+      "aliasConjugation": "sources",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f1d7e92c386a633c7e67de73ee4b41c2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 글의 출전을 써라",
+      "text": "Write the <b>source</b> of this article."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "애증은 근본을 따져보면 같은 것이다",
+      "text": "Love and hatred are one and the same thing. or Love and hate spring from the same <b>source</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소문의 출처를 규명해라.",
+      "text": "Run that report back to its <b>source</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "믿을 만한 소식통에게서 그것을 입수했다.",
+      "text": "I had it from a reliable <b>source</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "게으른 내 아들이 두통거리다",
+      "text": "My lazy son is a <b>source</b> of worry[concern] to me."
+    }
+  ],
+  "isWordType": true
+}

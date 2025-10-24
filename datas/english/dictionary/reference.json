@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "reference",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈrefrəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(서적 등의) 참조, 대조 ((to))",
+              "examples": [
+                {
+                  "text": "a library for <b>reference</b>",
+                  "translatedText": "참고 도서관"
+                }
+              ],
+              "originalMeaning": "(서적 등의) 참조, 대조 ((to))"
+            },
+            {
+              "meaning": "(인물·기량 등에 관한) 문의, 조회 ((to))",
+              "examples": [],
+              "originalMeaning": "(인물·기량 등에 관한) 문의, 조회 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "참고의, 참고용의",
+              "examples": [],
+              "originalMeaning": "참고의, 참고용의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<서적·논문 등에> 참조표[참조 사항]를 달다, 참조문으로 인용하다",
+              "examples": [],
+              "originalMeaning": "<서적·논문 등에> 참조표[참조 사항]를 달다, 참조문으로 인용하다"
+            },
+            {
+              "meaning": "<표 등에> 참조하기 쉽도록 싣다",
+              "examples": [],
+              "originalMeaning": "<표 등에> 참조하기 쉽도록 싣다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cde4c59a2aef4c32b8727bdb6814ad0d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cde4c59a2aef4c32b8727bdb6814ad0d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "references"
+        },
+        {
+          "type": "과거형",
+          "value": "referenced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "referencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "referenced"
+        }
+      ],
+      "aliasConjugation": "references",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ddd7e85a9156e31b0125b66e21f261b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 도서관에는 참고 서적이 많다",
+      "text": "This library contains many <b>reference</b> books."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "타임지는 그 사건에 관하여 논급하였다",
+      "text": "<b>Reference</b> was made to the event in the Times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일신상의 문제에 대해 언급하는 것을 용서해 주십시오",
+      "text": "You will pardon the personal <b>reference</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 카드는 참고용으로 철해 두어야 한다",
+      "text": "These cards should be kept on file for <b>reference</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신이 한 일에 대해서 참고의 말을 해 줄 수 있는 사람들의 이름을 좀 적어 주십시오",
+      "text": "Give me some references on your work, please."
+    }
+  ],
+  "isWordType": true
+}

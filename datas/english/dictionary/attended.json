@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "attend",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈtend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에> 출석하다, <의식에> 참석하다(be present at); <학교·교회에> 다니다",
+              "examples": [
+                {
+                  "text": "<b>attend</b> a meeting",
+                  "translatedText": "모임에 참석하다"
+                }
+              ],
+              "originalMeaning": "<…에> 출석하다, <의식에> 참석하다(be present at); <학교·교회에> 다니다"
+            },
+            {
+              "meaning": "(결과로서) …에 수반하다 ((with, by))",
+              "examples": [
+                {
+                  "text": "The enterprise was <b>attended</b> with much difficulty.",
+                  "translatedText": "그 사업에는 많은 애로가 따랐다."
+                }
+              ],
+              "originalMeaning": "(결과로서) …에 수반하다 ((with, by))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "보살피다, 돌보다 ((to)); 간호하다 ((to, on, upon))",
+              "examples": [
+                {
+                  "text": "The nurses <b>attended</b> on the sick day and night.",
+                  "translatedText": "간호사들은 밤낮으로 환자들을 간호했다."
+                }
+              ],
+              "originalMeaning": "보살피다, 돌보다 ((to)); 간호하다 ((to, on, upon))"
+            },
+            {
+              "meaning": "(일 등에) 전념하다, 정성을 들이다, 종사하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>attend</b> to one's business[lesson]",
+                  "translatedText": "일[학업]에 정성을 들이다"
+                }
+              ],
+              "originalMeaning": "(일 등에) 전념하다, 정성을 들이다, 종사하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0d3ccdb2216456f904fa540f4df8d91",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0d3ccdb2216456f904fa540f4df8d91",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "attends"
+        },
+        {
+          "type": "과거형",
+          "value": "attended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "attending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "attended"
+        }
+      ],
+      "aliasConjugation": "attends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1f9629bd2f23fa4a62b298bcd6e2cd95",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네 할 일이나 해라.",
+      "text": "<b>Attend</b> to[Mind] your own affair."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "많은 사람이 참석하지 못했다.",
+      "text": "Many were unable to <b>attend</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "거기에는 여러 가지 폐단이 따른다",
+      "text": "It is <b>attended</b> by many evils."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "점원이 손님을 받고 있다",
+      "text": "A clerk is attending to customers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일에는 으레 위험이 따른다",
+      "text": "It is invariably <b>attended</b> by danger."
+    }
+  ],
+  "isWordType": true
+}

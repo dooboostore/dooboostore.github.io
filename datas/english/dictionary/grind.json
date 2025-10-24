@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "grind",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡraɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(맷돌로) 타다, 찧다, 빻다, 갈아 가루로 만들다, 씹어 으깨다, <돌 등을> 잘게 부수다; 마멸시키다(wear away)",
+              "examples": [
+                {
+                  "text": "<b>grind</b> something to powder",
+                  "translatedText": "…을 가루로 빻다"
+                }
+              ],
+              "originalMeaning": "(맷돌로) 타다, 찧다, 빻다, 갈아 가루로 만들다, 씹어 으깨다, <돌 등을> 잘게 부수다; 마멸시키다(wear away)"
+            },
+            {
+              "meaning": "[종종 수동형으로] 아주 지치게 하다(wear out), (특히 착취 등으로) 괴롭히다, 학대[압박]하다, 짓밟다 ((down))",
+              "examples": [
+                {
+                  "text": "<b>grind</b> the poor",
+                  "translatedText": "빈민을 못살게 하다"
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 아주 지치게 하다(wear out), (특히 착취 등으로) 괴롭히다, 학대[압박]하다, 짓밟다 ((down))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빻음질하다, 맷돌질하다",
+              "examples": [],
+              "originalMeaning": "빻음질하다, 맷돌질하다"
+            },
+            {
+              "meaning": "빻아지다, 가루가 되다",
+              "examples": [
+                {
+                  "text": "This wheat <b>grind</b> s well.",
+                  "translatedText": "이 밀은 잘 갈아진다."
+                }
+              ],
+              "originalMeaning": "빻아지다, 가루가 되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "갈기, 빻기, 찧기, 가루로 만들기, 으깨기; 그 소리",
+              "examples": [],
+              "originalMeaning": "갈기, 빻기, 찧기, 가루로 만들기, 으깨기; 그 소리"
+            },
+            {
+              "meaning": "[구어] 고되고 단조로운 일, 지루하고 하기 싫은 공부; [영·속어] 운동[건강]을 위한 산책",
+              "examples": [],
+              "originalMeaning": "[구어] 고되고 단조로운 일, 지루하고 하기 싫은 공부; [영·속어] 운동[건강]을 위한 산책"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f8aa7fcd0e104e40a42f9dd25066b270",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f8aa7fcd0e104e40a42f9dd25066b270",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "grinds"
+        },
+        {
+          "type": "과거형",
+          "value": "ground"
+        },
+        {
+          "type": "현재 분사",
+          "value": "grinding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ground"
+        }
+      ],
+      "aliasConjugation": "grinds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9c9082d855c4b1220d87fcb94aaf732c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 와서 땅이 우물졌다",
+      "text": "The rain formed small hollows in the ground. or The rain formed a pool in the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 밀은 잘 갈린다",
+      "text": "This wheat grinds[is ground] well[fine]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너쯤 거꾸러뜨리기는 쉬운 일이야",
+      "text": "It's a cinch to get you down. or It's an easy job to throw you to the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 밀은 잘 갈아진다.",
+      "text": "This wheat grinds well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 땅은 써레질이 잘 된다.",
+      "text": "This ground harrows well."
+    }
+  ],
+  "isWordType": true
+}

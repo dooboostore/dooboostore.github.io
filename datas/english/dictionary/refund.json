@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "refund",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rifʌ́nd, ríːfʌ̀nd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<금전을> 갚다(reimburse), 반제[상환]하다, 환불하다",
+              "examples": [
+                {
+                  "text": "They refunded his deposit.",
+                  "translatedText": "그들은 그의 계약금을 돌려 주었다."
+                }
+              ],
+              "originalMeaning": "<금전을> 갚다(reimburse), 반제[상환]하다, 환불하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "반제(返濟)하다, 반환[상환]하다",
+              "examples": [],
+              "originalMeaning": "반제(返濟)하다, 반환[상환]하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 반제, 환불, 상환; 상환액",
+              "examples": [
+                {
+                  "text": "receive a full <b>refund</b>",
+                  "translatedText": "전액을 환불 받다"
+                }
+              ],
+              "originalMeaning": "[UC/] 반제, 환불, 상환; 상환액"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4a3d0c3e603145a69fb1ad78adb3169f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4a3d0c3e603145a69fb1ad78adb3169f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "refunds"
+        },
+        {
+          "type": "과거형",
+          "value": "refunded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "refunding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "refunded"
+        }
+      ],
+      "aliasConjugation": "refunds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a1d5a573fe87992d6d765f588fad18c5",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "refund",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rìːfʌ́nd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "새로 적립하다",
+              "examples": [],
+              "originalMeaning": "새로 적립하다"
+            },
+            {
+              "meaning": "[금융] <회사채·공채·채무 등을> 차환(借換)하다, <구 증서를> 새 증서와 교환하다",
+              "examples": [],
+              "originalMeaning": "[금융] <회사채·공채·채무 등을> 차환(借換)하다, <구 증서를> 새 증서와 교환하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d01af7d987ea46e2918f83fd2be43cc7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d01af7d987ea46e2918f83fd2be43cc7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "refunds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ca434fb83eca8888366c9a45f1bd5677",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 제품에 하자가 있으면 대금은 즉시 돌려받을 수 있습니다",
+      "text": "If the product is defective, your money will be immediately refunded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년에는 세금을 환불받았다",
+      "text": "I received a tax <b>refund</b> this year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전액 환불",
+      "text": "(a) repayment in full;a full <b>refund</b>"
+    }
+  ],
+  "isWordType": true
+}

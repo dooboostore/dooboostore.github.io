@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "space",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "speɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공간",
+              "examples": [
+                {
+                  "text": "vanish into <b>space</b>",
+                  "translatedText": "허공으로 사라지다"
+                }
+              ],
+              "originalMeaning": "공간"
+            },
+            {
+              "meaning": "(지구 대기권 밖의) 우주(= outer ~)",
+              "examples": [
+                {
+                  "text": "launch a spaceship into <b>space</b>",
+                  "translatedText": "우주로 우주선을 발사하다"
+                }
+              ],
+              "originalMeaning": "(지구 대기권 밖의) 우주(= outer ~)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 우주의, 공간의, 우주 탐사[개발]용의",
+              "examples": [
+                {
+                  "text": "a <b>space</b> mission",
+                  "translatedText": "우주 비행 임무"
+                }
+              ],
+              "originalMeaning": "[A] 우주의, 공간의, 우주 탐사[개발]용의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 공간[장소]을 정하다, 구분하다",
+              "examples": [],
+              "originalMeaning": "…의 공간[장소]을 정하다, 구분하다"
+            },
+            {
+              "meaning": "…에 일정한 간격[거리]을 두다 ((out))",
+              "examples": [],
+              "originalMeaning": "…에 일정한 간격[거리]을 두다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08c219f018174dc8a0a27f3312928051",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08c219f018174dc8a0a27f3312928051",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "spaces"
+        },
+        {
+          "type": "과거형",
+          "value": "spaced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "spacing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "spaced"
+        }
+      ],
+      "aliasConjugation": "spaces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1c8c6bf65a33198c0a88a9aa878c5029",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사람은 우주에서는 무중력 상태가 된다.",
+      "text": "Man is weightless in <b>space</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "100대의 차가 넉넉히 주차할 수 있다",
+      "text": "There's enough <b>space</b> for 100 cars to park."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책장은 자리를 너무 잡아먹는다",
+      "text": "This bookshelf takes up too much <b>space</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 건물은 건평이 55평이다",
+      "text": "The building has a floor <b>space</b> of 55 pyeong"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 집 사이가 좁다",
+      "text": "There is not enough <b>space</b> between the two houses."
+    }
+  ],
+  "isWordType": true
+}

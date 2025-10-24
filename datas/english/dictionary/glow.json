@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "glow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "백열, 작열; 백열광, 불꽃 없이 타는 빛",
+              "examples": [
+                {
+                  "text": "the <b>glow</b> of coals in the fireplace",
+                  "translatedText": "난로 안에서 벌겋게 달아오른 석탄(불)"
+                }
+              ],
+              "originalMeaning": "백열, 작열; 백열광, 불꽃 없이 타는 빛"
+            },
+            {
+              "meaning": "타오르는 듯한 빛깔; 밝음, 선명함; 새빨감",
+              "examples": [
+                {
+                  "text": "the <b>glow</b> of sunset",
+                  "translatedText": "저녁놀"
+                }
+              ],
+              "originalMeaning": "타오르는 듯한 빛깔; 밝음, 선명함; 새빨감"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<쇠 등이> 백열하다, 시뻘겋게 되다; <등불·반딧불이 등이> 빛을 내다, 빛나다",
+              "examples": [
+                {
+                  "text": "a Christmas tree glowing with many colored lights",
+                  "translatedText": "많은 색전구로 빛을 내고 있는 크리스마스 트리"
+                }
+              ],
+              "originalMeaning": "<쇠 등이> 백열하다, 시뻘겋게 되다; <등불·반딧불이 등이> 빛을 내다, 빛나다"
+            },
+            {
+              "meaning": "<빛깔이> 타오르는 듯하다; <뺨이> 홍조를 띠다, <몸이> 달아오르다, 혈색이 좋다",
+              "examples": [
+                {
+                  "text": "Her face <b>glow</b> ed with joy.",
+                  "translatedText": "기뻐서 그녀의 얼굴은 홍조를 띠었다."
+                }
+              ],
+              "originalMeaning": "<빛깔이> 타오르는 듯하다; <뺨이> 홍조를 띠다, <몸이> 달아오르다, 혈색이 좋다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f1a01a344c9d45d2a815003752e80f6f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f1a01a344c9d45d2a815003752e80f6f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "glows"
+        },
+        {
+          "type": "과거형",
+          "value": "glowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "glowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "glowed"
+        }
+      ],
+      "aliasConjugation": "glows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "49fad5c87fcbbdbca38c9a2b971823b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기뻐서 그녀의 얼굴은 홍조를 띠었다.",
+      "text": "Her face glowed with joy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어둠 속에서 반딧불이 반짝인다",
+      "text": "Fireflies <b>glow</b> in the dark."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 생각이 나자 그의 얼굴은 빛났다.",
+      "text": "His face glowed at the idea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 얼굴을 붉혔다",
+      "text": "A pink <b>glow</b> mounted to her cheeks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 맥주를 한잔 마시고 나서 온몸이 화끈 달았다",
+      "text": "Her body was in a <b>glow</b> after drinking a glass of beer."
+    }
+  ],
+  "isWordType": true
+}

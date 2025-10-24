@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "pressure",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpreʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "누르기, 내리밀기; 밀어닥침 ((of))",
+              "examples": [],
+              "originalMeaning": "누르기, 내리밀기; 밀어닥침 ((of))"
+            },
+            {
+              "meaning": "압력, [물리] 압(력)도 ((기호 P))",
+              "examples": [
+                {
+                  "text": "the <b>pressure</b> of gas",
+                  "translatedText": "가스의 압력"
+                }
+              ],
+              "originalMeaning": "압력, [물리] 압(력)도 ((기호 P))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<남에게> 압력을 가하다, 강제하다",
+              "examples": [],
+              "originalMeaning": "<남에게> 압력을 가하다, 강제하다"
+            },
+            {
+              "meaning": "(=PRESSURIZE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >PRESSURIZE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f75b85dda564f83bf57589fb12eedba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f75b85dda564f83bf57589fb12eedba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pressures"
+        },
+        {
+          "type": "과거형",
+          "value": "pressured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pressuring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pressured"
+        }
+      ],
+      "aliasConjugation": "pressures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "58e279969769320b5d81076bdaa44ebc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 혈압이 이제는 안정이 되었다",
+      "text": "His blood <b>pressure</b> is now stable."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구두가 째서 발이 아프다",
+      "text": "I feel the <b>pressure</b> of the shoes on my feet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우리에게 더 많은 일을 하도록 시켰다",
+      "text": "He put <b>pressure</b> on us to do more work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저기압이 남동으로 진행하고 있다",
+      "text": "A low <b>pressure</b> area is traveling southeast."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외몽고는 고기압에 덮여 있다",
+      "text": "High atmospheric <b>pressure</b> overlies Outer Mongolia."
+    }
+  ],
+  "isWordType": true
+}

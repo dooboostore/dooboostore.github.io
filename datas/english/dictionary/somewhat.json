@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "somewhat",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sʌmwʌt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "얼마간, 약간, 다소, 좀",
+              "examples": [
+                {
+                  "text": "It's <b>somewhat</b> different.",
+                  "translatedText": "그건 다소 다르다."
+                }
+              ],
+              "originalMeaning": "얼마간, 약간, 다소, 좀"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "다소, 어느 정도",
+              "examples": [],
+              "originalMeaning": "다소, 어느 정도"
+            }
+          ]
+        },
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[~ of…로] 약간, 다소",
+              "examples": [],
+              "originalMeaning": "[~ of…로] 약간, 다소"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/51c774c1c0114ce1929c6633038c1189",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/51c774c1c0114ce1929c6633038c1189",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4dc8a0f941c4c0e56d9f18a82b382372",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 남자는 좀 모자란다",
+      "text": "He wants two pence in the pound. or He is a little wanting[<b>somewhat</b> weak in the head]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 좀 난처한 표정이었다.",
+      "text": "He looked <b>somewhat</b> annoyed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모자를 비뚜름히 썼다",
+      "text": "His hat is on <b>somewhat</b> askew."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 눈치가 좀 이상하다",
+      "text": "He is <b>somewhat</b> strange in his manners."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 용태는 오늘 아침에 다소 악화되어 있다.",
+      "text": "He is <b>somewhat</b> worse this morning."
+    }
+  ],
+  "isWordType": true
+}

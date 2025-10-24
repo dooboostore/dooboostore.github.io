@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "incentive",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈsentɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "격려, 자극, 유인(誘因), 동기 ((to)); 장려금, 보상물 (=motive)",
+              "examples": [
+                {
+                  "text": "financial[tax] incentives",
+                  "translatedText": "재정적인[세제상의] 포상"
+                }
+              ],
+              "originalMeaning": "격려, 자극, 유인(誘因), 동기 ((to)); 장려금, 보상물 (=<span class='related_word' lang='en' >motive</span>)"
+            },
+            {
+              "meaning": "[보통 부정문에서] (하고자 하는) 의욕, 열의",
+              "examples": [
+                {
+                  "text": "He had not much incentiveto study any longer.",
+                  "translatedText": "그는 더 이상 연구하고자 하는 의욕이 별로 없었다."
+                }
+              ],
+              "originalMeaning": "[보통 부정문에서] (하고자 하는) 의욕, 열의"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "자극적인, 고무하는, (능률 향상 등을) 격려하는, 보상의(encouraging)",
+              "examples": [
+                {
+                  "text": "an <b>incentive</b> speech",
+                  "translatedText": "격려사"
+                }
+              ],
+              "originalMeaning": "자극적인, 고무하는, (능률 향상 등을) 격려하는, 보상의(encouraging)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/29fb13502e4340549481999619b52249",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/29fb13502e4340549481999619b52249",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "eb0b8e04d3048f3d6f4a2222cc82c9bf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 더 이상 연구할 의욕이 별로 없었다.",
+      "text": "He had not much <b>incentive</b> to study any longer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사랑에 실패하여 자포자기가 되었다",
+      "text": "Disappointed in love, he lost all <b>incentive</b> to self-esteem."
+    }
+  ],
+  "isWordType": true
+}

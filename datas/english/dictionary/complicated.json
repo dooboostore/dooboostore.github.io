@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "complicated",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːmplɪkeɪtɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "복잡한, 뒤얽힌, 풀기[이해하기] 어려운 (=complex)",
+              "examples": [
+                {
+                  "text": "a <b>complicated</b> machine",
+                  "translatedText": "복잡한 기계"
+                }
+              ],
+              "originalMeaning": "복잡한, 뒤얽힌, 풀기[이해하기] 어려운 (=<span class='related_word' lang='en' >complex</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/828ef75000564462a6f053fb81004322",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/828ef75000564462a6f053fb81004322",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8e0207273ed1841efae3c47a120898f1",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "complicate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːmplɪkeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "복잡하게 하다, 뒤얽히게 만들다 ((with)); 이해하기 어렵게 하다",
+              "examples": [
+                {
+                  "text": "<b>complicate</b> matters",
+                  "translatedText": "사태를 복잡하게 만들다"
+                }
+              ],
+              "originalMeaning": "복잡하게 하다, 뒤얽히게 만들다 ((with)); 이해하기 어렵게 하다"
+            },
+            {
+              "meaning": "[보통 수동형으로] <병을> 악화시키다",
+              "examples": [],
+              "originalMeaning": "[보통 수동형으로] <병을> 악화시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<일이> 복잡하게 되다",
+              "examples": [],
+              "originalMeaning": "<일이> 복잡하게 되다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<곤충의 날개·식물의 잎 등이> 접힌; 복잡한, 뒤얽힌",
+              "examples": [],
+              "originalMeaning": "<곤충의 날개·식물의 잎 등이> 접힌; 복잡한, 뒤얽힌"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/521760b6665346f891f8ffc01abbad40",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/521760b6665346f891f8ffc01abbad40",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "complicates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2d6ec7b405082257dfe7e3c64a7e0869",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "문제들이 복잡하게 뒤얽혀 있다",
+      "text": "Problems are connected with each other complicatedly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 그 짓을 한 이유는 복잡하다.",
+      "text": "The reason why he did it is <b>complicated</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것이 이토록 복잡하리라고는 예기치 못했다.",
+      "text": "I didn’t expect it to be this <b>complicated</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "분규가 심해 수습할 길이 없다",
+      "text": "The affair has become too <b>complicated</b> for us to manage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 문제의 이면에는 복잡한 사정이 있다",
+      "text": "There are <b>complicated</b> circumstances behind the matter."
+    }
+  ],
+  "isWordType": true
+}

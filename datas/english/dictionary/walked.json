@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "walk",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɔːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "걷다(cf. RUN); 걸어가다, 도보로 가다",
+              "examples": [
+                {
+                  "text": "She generally walks to school.",
+                  "translatedText": "그녀는 대개 걸어서 학교에 간다."
+                }
+              ],
+              "originalMeaning": "걷다(cf. RUN); 걸어가다, 도보로 가다"
+            },
+            {
+              "meaning": "거닐다, 배회하다(roam); <유령이> 나오다",
+              "examples": [
+                {
+                  "text": "Ghostswalk at midnight.",
+                  "translatedText": "유령은 한밤중에 나온다."
+                }
+              ],
+              "originalMeaning": "거닐다, 배회하다(roam); <유령이> 나오다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<길 등을> 걷다, 걸어가다",
+              "examples": [],
+              "originalMeaning": "<길 등을> 걷다, 걸어가다"
+            },
+            {
+              "meaning": "<말을> 걸리다, 보통 걸음으로 걷게 하다",
+              "examples": [],
+              "originalMeaning": "<말을> 걸리다, 보통 걸음으로 걷게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 a ~] 보행, 걷기; (말의) 보통 걸음",
+              "examples": [
+                {
+                  "text": "go at a <b>walk</b>",
+                  "translatedText": " 보통 걸음으로 가다"
+                }
+              ],
+              "originalMeaning": "[보통 a ~] 보행, 걷기; (말의) 보통 걸음"
+            },
+            {
+              "meaning": "[보통 a ~] 걸음걸이, 걸음새",
+              "examples": [
+                {
+                  "text": "I can recognize him by his <b>walk</b>.",
+                  "translatedText": "걸음걸이로 그를 알아볼 수 있다."
+                }
+              ],
+              "originalMeaning": "[보통 a ~] 걸음걸이, 걸음새"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1ebb48df0c6b406d8a957396a164aad4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1ebb48df0c6b406d8a957396a164aad4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "walks"
+        },
+        {
+          "type": "과거형",
+          "value": "walked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "walking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "walked"
+        }
+      ],
+      "aliasConjugation": "walks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dfb4a9ebab175757d9686d530b38e511",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어제는 날씨가 어찌나 좋은지 산책에 나섰다",
+      "text": "It was so fine yesterday (that) I went out for a <b>walk</b>. or It was such a fine day yesterday (that) I went out for a <b>walk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 더 걸어야 한다.",
+      "text": "You ought to <b>walk</b> more."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 몸을 흔들면서 걷는다.",
+      "text": "He rolls in his <b>walk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "걸어서 20분이면 갈 수 있다",
+      "text": "It's only 20 minutes' <b>walk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 몹시 조심스레 걸었다.",
+      "text": "He <b>walked</b> very carefully."
+    }
+  ],
+  "isWordType": true
+}

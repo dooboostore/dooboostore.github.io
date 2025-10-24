@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "corner",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɔːrnə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모퉁이, 모(angle), 길모퉁이",
+              "examples": [
+                {
+                  "text": "at[on] a street <b>corner</b>",
+                  "translatedText": "거리의 모퉁이에(서)"
+                }
+              ],
+              "originalMeaning": "모퉁이, 모(angle), 길모퉁이"
+            },
+            {
+              "meaning": "구석, 귀퉁이; 우묵한 곳",
+              "examples": [
+                {
+                  "text": "the <b>corner</b> of a room",
+                  "translatedText": "방구석"
+                }
+              ],
+              "originalMeaning": "구석, 귀퉁이; 우묵한 곳"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "길모퉁이의[에 있는]",
+              "examples": [],
+              "originalMeaning": "길모퉁이의[에 있는]"
+            },
+            {
+              "meaning": "구석에 두는, 구석용의",
+              "examples": [],
+              "originalMeaning": "구석에 두는, 구석용의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "모(서리)를 내다",
+              "examples": [
+                {
+                  "text": "<b>corner</b> walls with stone",
+                  "translatedText": "벽의 모서리를 돌로 하다"
+                }
+              ],
+              "originalMeaning": "모(서리)를 내다"
+            },
+            {
+              "meaning": "…을 구석으로 몰다, 궁지에 빠뜨리다",
+              "examples": [],
+              "originalMeaning": "…을 구석으로 몰다, 궁지에 빠뜨리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/582926dcccc14545abd7147d5348000e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/582926dcccc14545abd7147d5348000e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "corners"
+        },
+        {
+          "type": "과거형",
+          "value": "cornered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cornering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cornered"
+        }
+      ],
+      "aliasConjugation": "corners",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2b6defb6bc6491f17205ace7492ac62c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 코너에서 백을 잘못해 운전 시험에서 떨어졌다",
+      "text": "I failed my driving test because I was no good at backing round <b>corners</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 후딱 모퉁이를 돌았다.",
+      "text": "He popped around the <b>corner</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책상은 모서리가 각이 져 있다.",
+      "text": "The desk has sharp <b>corners</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "창문은 저쪽 코너에 있다.",
+      "text": "The window is in the far <b>corner</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집은 모퉁이에 있습니다",
+      "text": "The house stands on the <b>corner</b>."
+    }
+  ],
+  "isWordType": true
+}

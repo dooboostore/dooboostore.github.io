@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "interrupted",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ìntərʌ́ptid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "가로막힌, 중단된, 중절된; 단속적인",
+              "examples": [],
+              "originalMeaning": "가로막힌, 중단된, 중절된; 단속적인"
+            },
+            {
+              "meaning": "비연속성의",
+              "examples": [],
+              "originalMeaning": "비연속성의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f9bfbe59ee90450391c2bef718a81dbe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f9bfbe59ee90450391c2bef718a81dbe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c4755d998f0c54a2b1d4164056ea9987",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "interrupt",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌɪntəˈrʌpt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<흐름·진행 등을> 가로막다, 저지하다; <말 등을> 도중에서 방해하다; <일 등을> 중단하다; [컴퓨터] (다른 프로그램 수행을 위해) 일시적으로 중단하다",
+              "examples": [
+                {
+                  "text": "<b>interrupt</b> an electric current",
+                  "translatedText": "전류를 차단하다"
+                }
+              ],
+              "originalMeaning": "<흐름·진행 등을> 가로막다, 저지하다; <말 등을> 도중에서 방해하다; <일 등을> 중단하다; [컴퓨터] (다른 프로그램 수행을 위해) 일시적으로 중단하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "방해하다, 중단하다",
+              "examples": [],
+              "originalMeaning": "방해하다, 중단하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "인터럽트",
+              "examples": [],
+              "originalMeaning": "인터럽트"
+            },
+            {
+              "meaning": "중단, 방해",
+              "examples": [],
+              "originalMeaning": "중단, 방해"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e281fc4093d4427c8d01339a078ffe52",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e281fc4093d4427c8d01339a078ffe52",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "interrupts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "462d80c92520b21860bcc98d3b4d7e98",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 하던 일을 중단하고 전화를 받았다",
+      "text": "She <b>interrupted</b> her work to answer the phone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 연설은 관중들의 야유로 중단되었다",
+      "text": "His speech was <b>interrupted</b> by boos and hisses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내 이야기를 가로채고 자기 이야기를 시작했다",
+      "text": "Interrupting my speech[me], he started talking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "남이 이야기하고 있는데 말허리를 꺾는 것은 실례가 된다",
+      "text": "It's rude to <b>interrupt</b> when someone else is speaking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 전화는 불통이다",
+      "text": "This telephone line is <b>interrupted</b>. or The telephone is out of order. or The wire[line] is dead."
+    }
+  ],
+  "isWordType": true
+}

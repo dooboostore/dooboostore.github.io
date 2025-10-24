@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "common",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɑːmən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "공통의, 공동의, 공유의; 단결한, 일치된",
+              "examples": [
+                {
+                  "text": "a <b>common</b> language",
+                  "translatedText": "공통의 언어"
+                }
+              ],
+              "originalMeaning": "공통의, 공동의, 공유의; 단결한, 일치된"
+            },
+            {
+              "meaning": "사회 일반의(general), 공중의, 공공의(public)",
+              "examples": [
+                {
+                  "text": "a <b>common</b> belief",
+                  "translatedText": "일반화되어 있는 신앙"
+                }
+              ],
+              "originalMeaning": "사회 일반의(general), 공중의, 공공의(public)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[때로 pl.] (마을 등의) 공유지, 공용지, (공유하는) 목초지, 황무지, 공원 ((울타리 없는 황무지 등))",
+              "examples": [],
+              "originalMeaning": "[때로 pl.] (마을 등의) 공유지, 공용지, (공유하는) 목초지, 황무지, 공원 ((울타리 없는 황무지 등))"
+            },
+            {
+              "meaning": "(목초지 등의) 공유권(= right of ~)",
+              "examples": [],
+              "originalMeaning": "(목초지 등의) 공유권(= right of ~)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/770f1a623d61425ba98c50967e1785da",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/770f1a623d61425ba98c50967e1785da",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "more common, commoner"
+        },
+        {
+          "type": "최상급",
+          "value": "most common, commonest"
+        }
+      ],
+      "aliasConjugation": "more common, commoner",
+      "aliasConjugationPos": "비교급",
+      "gdid": "8d45f4fff4b221fa2a515b3ae61e12ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여간한 사람이 아니다",
+      "text": "He is no ordinary[<b>common</b>] man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "…은 흔히들 하는 말이다",
+      "text": "It’s a <b>common</b> saying that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "누구든지 돈을 탐하는 법이다",
+      "text": "Love of money is <b>common</b> to all."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 둘은 공통점이 많다",
+      "text": "We two have many things in <b>common</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어딘지 남다른 데가 있다",
+      "text": "He has something out of the <b>common</b>."
+    }
+  ],
+  "isWordType": true
+}

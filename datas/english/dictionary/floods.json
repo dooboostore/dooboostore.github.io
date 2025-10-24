@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "flood",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "flʌd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 홍수, 큰물(inundation)",
+              "examples": [
+                {
+                  "text": "<b>flood</b> damage[hazard]",
+                  "translatedText": "수해"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] 홍수, 큰물(inundation)"
+            },
+            {
+              "meaning": "[a ~ 또는 pl.] 다수[대량](의 것·사람), (엄청나게) 쏟아짐, (감정·빛 등의) 충만, 쇄도 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>flood</b> of tears",
+                  "translatedText": "마구 쏟아지는 눈물"
+                }
+              ],
+              "originalMeaning": "[a ~ 또는 pl.] 다수[대량](의 것·사람), (엄청나게) 쏟아짐, (감정·빛 등의) 충만, 쇄도 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<비·강 등이> 범람시키다, <강 등이 지역을> 홍수지게 하다, 물에 잠기게 하다; 넘치게 하다",
+              "examples": [
+                {
+                  "text": "The river <b>flood</b> ed our fields.",
+                  "translatedText": "강이 범람하여 우리 논밭이 물에 잠겼다."
+                }
+              ],
+              "originalMeaning": "<비·강 등이> 범람시키다, <강 등이 지역을> 홍수지게 하다, 물에 잠기게 하다; 넘치게 하다"
+            },
+            {
+              "meaning": "관개하다(irrigate), …에 물을 가득 채우다",
+              "examples": [],
+              "originalMeaning": "관개하다(irrigate), …에 물을 가득 채우다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<강·토지가> 범람하다, 홍수지다 ((in, into))",
+              "examples": [],
+              "originalMeaning": "<강·토지가> 범람하다, 홍수지다 ((in, into))"
+            },
+            {
+              "meaning": "<조수가> 밀려오다",
+              "examples": [],
+              "originalMeaning": "<조수가> 밀려오다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a9976ed2d4db40f8a806f2b64e17cd2d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a9976ed2d4db40f8a806f2b64e17cd2d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "floods"
+        },
+        {
+          "type": "과거형",
+          "value": "flooded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "flooding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "flooded"
+        }
+      ],
+      "aliasConjugation": "floods",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "66fe8fbba6551e5e686ad1dc9b0802ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시내 각처에 물난리가 났다",
+      "text": "The city was flooded in various places. or There were <b>floods</b> in various parts of the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "홍수가 많은 집을 몰아갔다",
+      "text": "The <b>flood</b> washed many houses away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "삼년마다 한 번씩 홍수가 난다",
+      "text": "We have <b>floods</b> every three years."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "햇빛이 방 안으로 환히 들이 비쳤다.",
+      "text": "Sunlight flooded into the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "강이 범람하여 우리 논밭이 물에 잠겼다.",
+      "text": "The river flooded our fields."
+    }
+  ],
+  "isWordType": true
+}

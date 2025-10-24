@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "entry": "soy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sɔ́i"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 간장( = ~ sauce); [C] [식물] 콩, 대두(soybean)",
+              "examples": [],
+              "originalMeaning": "[U] 간장( = ~ sauce); [C] [식물] 콩, 대두(soybean)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b813e010d55e40309ee4338874c738a1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b813e010d55e40309ee4338874c738a1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e742f5a906fd461b25833ad5e64e3fbf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "간장은 메주콩과 소금으로 만든다",
+      "text": "<b>Soy</b> sauce is made from <b>soy</b> beans and salt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "콩으로 간장을 담근다",
+      "text": "Soybean is made into <b>soy</b> sauce."
+    }
+  ],
+  "isWordType": true
+}

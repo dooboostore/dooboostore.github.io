@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "negotiate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "nɪ│ɡoʊʃieɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "협상[교섭]하다, (교섭으로) 협정하다, 결정하다",
+              "examples": [
+                {
+                  "text": "<b>negotiate</b> a loan",
+                  "translatedText": "차관 협정하다"
+                }
+              ],
+              "originalMeaning": "협상[교섭]하다, (교섭으로) 협정하다, 결정하다"
+            },
+            {
+              "meaning": "<어음·증권·수표 등을> 유통시키다, 돈으로 바꾸다, 양도하다",
+              "examples": [
+                {
+                  "text": "<b>negotiate</b> securities",
+                  "translatedText": "증권을 양도하다"
+                }
+              ],
+              "originalMeaning": "<어음·증권·수표 등을> 유통시키다, 돈으로 바꾸다, 양도하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교섭[협상]하다",
+              "examples": [
+                {
+                  "text": "<b>negotiate</b> with a person for a matter",
+                  "translatedText": "어떤 문제로 …와 교섭하다"
+                }
+              ],
+              "originalMeaning": "교섭[협상]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f6645dc76d5d40dba223406f64217fb0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f6645dc76d5d40dba223406f64217fb0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "negotiates"
+        },
+        {
+          "type": "과거형",
+          "value": "negotiated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "negotiating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "negotiated"
+        }
+      ],
+      "aliasConjugation": "negotiates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "487c83dd2ac3c0a9f867d42167c64a2a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 지금 새 계약을 협상 중이다",
+      "text": "I'm <b>negotiating</b> for a new contract at the moment."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국 정부는 언제라도 새 협정에 대한 교섭을 할 용의가 있다",
+      "text": "The government of Korea is ready at any time to <b>negotiate</b> a new agreement."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "pursue",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pərˈsuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "쫓다, 추적[추격]하다, 몰다",
+              "examples": [
+                {
+                  "text": "<b>pursue</b> a prey[fugitive]",
+                  "translatedText": "사냥감[도망자]을 쫓다"
+                }
+              ],
+              "originalMeaning": "쫓다, 추적[추격]하다, 몰다"
+            },
+            {
+              "meaning": "추구하다, 따라다니다",
+              "examples": [
+                {
+                  "text": "<b>pursue</b> pleasure",
+                  "translatedText": "쾌락을 추구하다"
+                }
+              ],
+              "originalMeaning": "추구하다, 따라다니다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "쫓아가다 ((after))",
+              "examples": [],
+              "originalMeaning": "쫓아가다 ((after))"
+            },
+            {
+              "meaning": "고소하다 ((for))",
+              "examples": [],
+              "originalMeaning": "고소하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a51d31ab1bed474faf5e116cc1a96d90",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a51d31ab1bed474faf5e116cc1a96d90",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pursues"
+        },
+        {
+          "type": "과거형",
+          "value": "pursued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pursuing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pursued"
+        }
+      ],
+      "aliasConjugation": "pursues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1318e37a891228bf476ef097600e6087",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 뒤미처 도둑의 뒤를 좇았다",
+      "text": "He lost no time in pursuing the thief."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 전속력으로 그를 뒤좇았다",
+      "text": "I made after[ran after, pursued, chased] him as fast as I could."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쾌락을 추구하는 것이 인정이다",
+      "text": "The desire to <b>pursue</b> pleasure is but natural to the human mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 모두 이욕과 명성을 얻기에 골몰하고 있다",
+      "text": "They are all absorbed in pursuing worldly fame and gain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쾌락을 추구하는 것이 인간의 상정이다",
+      "text": "The desire to <b>pursue</b> pleasure is but too natural to the human nature."
+    }
+  ],
+  "isWordType": true
+}

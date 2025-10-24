@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "make",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "meɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "만들다, 짓다, 제작 [제조]하다, 조립하다, 건설[건조]하다; <관계를> 이루다; 창조하다; 창작하다, 저작하다; 작성하다; 제정하다 (=build)",
+              "examples": [
+                {
+                  "text": "God made man.",
+                  "translatedText": "신이 인간을 창조했다."
+                }
+              ],
+              "originalMeaning": "만들다, 짓다, 제작 [제조]하다, 조립하다, 건설[건조]하다; <관계를> 이루다; 창조하다; 창작하다, 저작하다; 작성하다; 제정하다 (=<span class='related_word' lang='en' >build</span>)"
+            },
+            {
+              "meaning": "만들어 내다, 달성하다, 이룩하다, 발달시키다",
+              "examples": [
+                {
+                  "text": "<b>make</b> one's own life",
+                  "translatedText": "생활 방침[일생의 운명]을 정하다"
+                }
+              ],
+              "originalMeaning": "만들어 내다, 달성하다, 이룩하다, 발달시키다"
+            },
+            {
+              "meaning": "고안하다, 안출하다; (마음에) 작정하다; [상업] <값을> 정하다(fix); <일시를> 정하다",
+              "examples": [],
+              "originalMeaning": "고안하다, 안출하다; (마음에) 작정하다; [상업] <값을> 정하다(fix); <일시를> 정하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…으로) 하다, (…상태로) 하다",
+              "examples": [
+                {
+                  "text": "<b>make</b> sure",
+                  "translatedText": "확인하다"
+                }
+              ],
+              "originalMeaning": "(…으로) 하다, (…상태로) 하다"
+            },
+            {
+              "meaning": "(…처럼) 행동하다, (…하는) 체하다",
+              "examples": [],
+              "originalMeaning": "(…처럼) 행동하다, (…하는) 체하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "만듦새, 지음새, …제; 제작법; 모양, 형(型), 꼴, 형상",
+              "examples": [
+                {
+                  "text": "the newest <b>make</b> of car",
+                  "translatedText": "최신형 자동차"
+                }
+              ],
+              "originalMeaning": "만듦새, 지음새, …제; 제작법; 모양, 형(型), 꼴, 형상"
+            },
+            {
+              "meaning": "구조, 구성, 조직",
+              "examples": [],
+              "originalMeaning": "구조, 구성, 조직"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/709704f406b34bf0bfb901813db33c0c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/709704f406b34bf0bfb901813db33c0c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "makes"
+        },
+        {
+          "type": "과거형",
+          "value": "made"
+        },
+        {
+          "type": "현재 분사",
+          "value": "making"
+        },
+        {
+          "type": "과거 분사",
+          "value": "made"
+        }
+      ],
+      "aliasConjugation": "makes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "075d3b9ae94de76500750c58477d011d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것 때문에 하품이 나온다",
+      "text": "It <b>makes</b> me yawn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "성공하든지 실패하든지 어떻든지 좋다",
+      "text": "Success or failure <b>makes</b> no difference to me. or Success and failure are alike indifferent to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "생각만 해도 등골이 오싹한다",
+      "text": "The mere thought of it <b>makes</b> me shudder[sends a chill through me]. or It gives me the shivers[creeps] when I think of it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘 가나 내일 가나 한가지다",
+      "text": "It <b>makes</b> no difference whether I go today or tomorrow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결국은 같다",
+      "text": "It really <b>makes</b> no difference."
+    }
+  ],
+  "isWordType": true
+}

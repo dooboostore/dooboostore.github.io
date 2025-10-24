@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "discuss",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈskʌs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "논의[심의]하다, 토론[토의]하다(debate); 상의하다(talk over); 검토하다, (책 등에서 상세히) 논하다",
+              "examples": [
+                {
+                  "text": "<b>discuss</b> the world situation",
+                  "translatedText": "세계 정세를 논하다"
+                }
+              ],
+              "originalMeaning": "논의[심의]하다, 토론[토의]하다(debate); 상의하다(talk over); 검토하다, (책 등에서 상세히) 논하다"
+            },
+            {
+              "meaning": "<음식 등을> 즐기며[맛있게] 먹다(enjoy)",
+              "examples": [
+                {
+                  "text": "<b>discuss</b> a bottle of wine",
+                  "translatedText": "포도주를 즐기며 마시다"
+                }
+              ],
+              "originalMeaning": "<음식 등을> 즐기며[맛있게] 먹다(enjoy)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "토의하다",
+              "examples": [],
+              "originalMeaning": "토의하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6dca3b8ef9f4ababfae42ecaf28fbe4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6dca3b8ef9f4ababfae42ecaf28fbe4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "discusses"
+        },
+        {
+          "type": "과거형",
+          "value": "discussed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "discussing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "discussed"
+        }
+      ],
+      "aliasConjugation": "discusses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b26116439426a40b4efc5ab29ac756db",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 문제를 토론할 생각은 없다.",
+      "text": "I am not for discussing it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "더 이상 의논하지 말자.",
+      "text": "Let’s not <b>discuss</b> it further."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오늘은 아무 의제도 없다",
+      "text": "There is nothing to <b>discuss</b> today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그와 그 문제를 논의했다.",
+      "text": "I <b>discussed</b> the problem with him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 교회간의 결속을 논하고 있다",
+      "text": "They are discussing church unity."
+    }
+  ],
+  "isWordType": true
+}

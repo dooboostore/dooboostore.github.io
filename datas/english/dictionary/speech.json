@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "speech",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spiːtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "말, ((일반적으로)) 언어",
+              "examples": [],
+              "originalMeaning": "말, ((일반적으로)) 언어"
+            },
+            {
+              "meaning": "담화, 회화",
+              "examples": [],
+              "originalMeaning": "담화, 회화"
+            },
+            {
+              "meaning": "말하기, 발언",
+              "examples": [
+                {
+                  "text": "freedom of <b>speech</b>",
+                  "translatedText": "언론의 자유"
+                }
+              ],
+              "originalMeaning": "말하기, 발언"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0a1c9174c87a4a72939dd6169175e040",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0a1c9174c87a4a72939dd6169175e040",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cacea1af49d72629453853292028de3b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 연설은 박력이 모자란다.",
+      "text": "Her <b>speech</b> wants punch."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그의 말에 감격했다",
+      "text": "She was moved by his <b>speech</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "만찬 뒤에 연설이 있다.",
+      "text": "The <b>speech</b> follows the dinner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 연설은 때때로 탈선한다",
+      "text": "His <b>speech</b> is apt to ramble."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 연설할 것을 승낙했다.",
+      "text": "He consented to make a <b>speech</b>."
+    }
+  ],
+  "isWordType": true
+}

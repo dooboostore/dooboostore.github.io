@@ -1,0 +1,186 @@
+{
+  "items": [
+    {
+      "entry": "soaking",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│soʊkɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "흠뻑 젖는[적시는]",
+              "examples": [
+                {
+                  "text": "a <b>soaking</b> downpour",
+                  "translatedText": "호우"
+                }
+              ],
+              "originalMeaning": "흠뻑 젖는[적시는]"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "흠뻑 젖어서",
+              "examples": [
+                {
+                  "text": "get <b>soaking</b> wet",
+                  "translatedText": "흠뻑 젖다"
+                }
+              ],
+              "originalMeaning": "흠뻑 젖어서"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흠뻑 젖음",
+              "examples": [],
+              "originalMeaning": "흠뻑 젖음"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e6b7ced9489940af97470439ad5fbd76",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e6b7ced9489940af97470439ad5fbd76",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c2abb2edc8a8461304228ae2087b9316",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "soak",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "soʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "적시다, 담그다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>soak</b> bread in milk",
+                  "translatedText": "빵을 우유에 적시다"
+                }
+              ],
+              "originalMeaning": "적시다, 담그다 ((in))"
+            },
+            {
+              "meaning": "배어들게 하다, 푹 젖게 하다 (→soaked)",
+              "examples": [
+                {
+                  "text": "The water soaks the earth.",
+                  "translatedText": "물이 지면에 스며든다."
+                }
+              ],
+              "originalMeaning": "배어들게 하다, 푹 젖게 하다 (→<span class='related_word' lang='en' >soaked</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "젖다, 잠기다 ((in)); 흠뻑 젖다",
+              "examples": [
+                {
+                  "text": "The clothes to be washed have been <b>soaking</b> in water for an hour.",
+                  "translatedText": "세탁물은 한 시간이나 물에 담겨져 있다."
+                }
+              ],
+              "originalMeaning": "젖다, 잠기다 ((in)); 흠뻑 젖다"
+            },
+            {
+              "meaning": "스며들다[나오다] ((in, into, through))",
+              "examples": [
+                {
+                  "text": "Water has soaked into[through] the mat.",
+                  "translatedText": "물이 매트에 스며들었다."
+                }
+              ],
+              "originalMeaning": "스며들다[나오다] ((in, into, through))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "적심, 담금, 흠뻑 젖기, 배어들기, 침투(浸透)",
+              "examples": [],
+              "originalMeaning": "적심, 담금, 흠뻑 젖기, 배어들기, 침투(浸透)"
+            },
+            {
+              "meaning": "침액(浸液), 담근 국물",
+              "examples": [],
+              "originalMeaning": "침액(浸液), 담근 국물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cd093de643364708b0d07b57cabec82b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cd093de643364708b0d07b57cabec82b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "soaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e6aadde91c4f3c5066d3ffb041f41f89",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "술을 지나치게 마시지 마라",
+      "text": "Don't <b>soak</b> up the booze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네 셔츠에 땀이 내밴다",
+      "text": "Your shirt is <b>soaking</b> wet with sweat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쌀이 물에 불어 흐무러진다",
+      "text": "Rice gets very soft <b>soaking</b> up water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잉크 묻은 천을 잉크가 우러나게 물에 담그었다",
+      "text": "The ink-stained cloth was put in water for the stain to <b>soak</b> out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "세탁물은 한 시간이나 물에 담겨져 있다.",
+      "text": "The clothes to be washed have been <b>soaking</b> in water for an hour."
+    }
+  ],
+  "isWordType": true
+}

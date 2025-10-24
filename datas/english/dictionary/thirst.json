@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "thirst",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "θɜːrst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "갈증, 목마름",
+              "examples": [],
+              "originalMeaning": "갈증, 목마름"
+            },
+            {
+              "meaning": "수분 부족, 탈수 상태",
+              "examples": [],
+              "originalMeaning": "수분 부족, 탈수 상태"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "목마르다 ((for))",
+              "examples": [],
+              "originalMeaning": "목마르다 ((for))"
+            },
+            {
+              "meaning": "갈망하다 ((for, after))",
+              "examples": [
+                {
+                  "text": "<b>thirst</b> for fame",
+                  "translatedText": "명성을 갈망하다"
+                }
+              ],
+              "originalMeaning": "갈망하다 ((for, after))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ff383e262c044d693544d2712f3c95e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ff383e262c044d693544d2712f3c95e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "thirsts"
+        },
+        {
+          "type": "과거형",
+          "value": "thirsted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "thirsting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "thirsted"
+        }
+      ],
+      "aliasConjugation": "thirsts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e4a2b2c1e7f0024c6e87751be4de2f95",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "술 마시고 싶은 것을 꾹 참았다",
+      "text": "I forbore my <b>thirst</b> for drink."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다 뛰고 나니 목이 몹시 컬컬했다",
+      "text": "I've got a terrible <b>thirst</b> after all that running."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "mirror",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmɪrə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "거울, 반사경",
+              "examples": [
+                {
+                  "text": "a three-folded <b>mirror</b>",
+                  "translatedText": "삼면경"
+                }
+              ],
+              "originalMeaning": "거울, 반사경"
+            },
+            {
+              "meaning": "있는 그대로 반영하는 것",
+              "examples": [
+                {
+                  "text": "Literature is a <b>mirror</b> of society.",
+                  "translatedText": "문학은 사회상을 반영한다."
+                }
+              ],
+              "originalMeaning": "있는 그대로 반영하는 것"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(거울처럼) 비추다, 반사하다, 반영하다",
+              "examples": [],
+              "originalMeaning": "(거울처럼) 비추다, 반사하다, 반영하다"
+            },
+            {
+              "meaning": "…와 흡사하다",
+              "examples": [],
+              "originalMeaning": "…와 흡사하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/44fafba256f8439fb57cf3aa5b1f6225",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/44fafba256f8439fb57cf3aa5b1f6225",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mirrors"
+        },
+        {
+          "type": "과거형",
+          "value": "mirrored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mirroring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mirrored"
+        }
+      ],
+      "aliasConjugation": "mirrors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "38f86f2db516d2be8626f78ec5fbf8a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마음이 명경 지수와 같다",
+      "text": "The mind is as bright and clean as a stainless <b>mirror</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 거울을 보면서 화장을 손질하느라 바쁘다",
+      "text": "She's busy touching up her make-up in the <b>mirror</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거울은 빛을 반사한다.",
+      "text": "A <b>mirror</b> glints back light."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거울은 얼굴을 비친다.",
+      "text": "A <b>mirror</b> reflects your face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "문학은 사회상을 반영한다.",
+      "text": "Literature is a <b>mirror</b> of society."
+    }
+  ],
+  "isWordType": true
+}

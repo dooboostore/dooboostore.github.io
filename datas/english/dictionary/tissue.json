@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "tissue",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtɪʃuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조직",
+              "examples": [
+                {
+                  "text": "connective[muscular, nervous] <b>tissue</b>",
+                  "translatedText": "결체(結締)[근육, 신경] 조직"
+                }
+              ],
+              "originalMeaning": "조직"
+            },
+            {
+              "meaning": "[CU] (얇은) 직물; ((특히)) 얇은 명주; 얇은 가제형의 종이, 종이 손수건",
+              "examples": [],
+              "originalMeaning": "[CU] (얇은) 직물; ((특히)) 얇은 명주; 얇은 가제형의 종이, 종이 손수건"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<화장·세안 크림 등을> 화장지로 닦아내다 ((off))",
+              "examples": [],
+              "originalMeaning": "<화장·세안 크림 등을> 화장지로 닦아내다 ((off))"
+            },
+            {
+              "meaning": "얇은 직물에 짜넣다",
+              "examples": [],
+              "originalMeaning": "얇은 직물에 짜넣다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b4f543e0332c40eda354a7920530d65a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b4f543e0332c40eda354a7920530d65a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f6299e975c9587f3a5d91d47840e713e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 휴지로 코를 풀었다",
+      "text": "He blew his nose in(to)[on] a <b>tissue</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인체의 조직은 7년마다 완전히 일신된다",
+      "text": "The tissues of the human body are completely renewed every seven years."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "empower",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪmˈpaʊə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(법률상) …에게 권능[권한]을 부여하다, …할 권력을 위임하다(authorize)",
+              "examples": [
+                {
+                  "text": "( <b>empower</b>+[목]+to do) The President is empowered to veto a bill which has passed through Congress.",
+                  "translatedText": "대통령은 의회를 통과한 법안을 거부할 권한이 부여되어 있다."
+                }
+              ],
+              "originalMeaning": "(법률상) …에게 권능[권한]을 부여하다, …할 권력을 위임하다(authorize)"
+            },
+            {
+              "meaning": "…할 수 있도록 하다(enable), …할 능력[자격]을 주다, (…할 것을) …에게 허용하다",
+              "examples": [
+                {
+                  "text": "( <b>empower</b>+[목]+to do) Science empowers men to control natural forces.",
+                  "translatedText": "과학은 인간에게 자연의 힘을 조절할 능력을 부여한다."
+                }
+              ],
+              "originalMeaning": "…할 수 있도록 하다(enable), …할 능력[자격]을 주다, (…할 것을) …에게 허용하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6aed5f909cfc43ef912d01d0eeefb4ab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6aed5f909cfc43ef912d01d0eeefb4ab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "empowers"
+        },
+        {
+          "type": "과거형",
+          "value": "empowered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "empowering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "empowered"
+        }
+      ],
+      "aliasConjugation": "empowers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b7b0ffee1aae00cb05e706d5b3a6810",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과학은 인간에게 자연의 힘을 조절할 능력을 부여한다.",
+      "text": "Science empowers men to control natural forces."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대통령은 의회를 통과한 법안을 거부할 권한이 부여되어 있다.",
+      "text": "The President is empowered to veto a bill which has passed through Congress."
+    }
+  ],
+  "isWordType": true
+}

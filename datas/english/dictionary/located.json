@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "locate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈloʊkeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<상점·사무소 등을> (어떤 장소에) 정하다, (…에) 차리다[두다] ((on, in))",
+              "examples": [
+                {
+                  "text": "<b>locate</b> one's office on Main Street[in Chicago]",
+                  "translatedText": "사무실을 중심가[시카고]에 차리다"
+                }
+              ],
+              "originalMeaning": "<상점·사무소 등을> (어떤 장소에) 정하다, (…에) 차리다[두다] ((on, in))"
+            },
+            {
+              "meaning": "<물건의 위치 등을> 알아내다, 밝혀내다, 발견하다",
+              "examples": [
+                {
+                  "text": "<b>Locate</b> Seoul on a map.",
+                  "translatedText": "지도에서 서울의 위치를 찾아라."
+                }
+              ],
+              "originalMeaning": "<물건의 위치 등을> 알아내다, 밝혀내다, 발견하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "거처를 정하다(settle)",
+              "examples": [],
+              "originalMeaning": "거처를 정하다(settle)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/392b5474ec33495598492f083acdc2d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/392b5474ec33495598492f083acdc2d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "locates"
+        },
+        {
+          "type": "과거형",
+          "value": "located"
+        },
+        {
+          "type": "현재 분사",
+          "value": "locating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "located"
+        }
+      ],
+      "aliasConjugation": "locates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7a2e79f867d944bfd7602ba4bc8fe5f3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지도에서 서울의 위치를 찾아라.",
+      "text": "<b>Locate</b> Seoul on a map."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "탐정은 그 여자의 행방을 알아냈다",
+      "text": "The detective <b>located</b> her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "집은 작으나마 자리가 좋다",
+      "text": "The house may be small, but it's nicely <b>located</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사무실은 파리의 중심부에 있다.",
+      "text": "The office is centrally <b>located</b> in Paris."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사무실을 찾는 데 꽤 시간이 걸렸다",
+      "text": "I had quite a time locating your office."
+    }
+  ],
+  "isWordType": true
+}

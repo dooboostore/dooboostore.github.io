@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "crew",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "krúː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(승객을 제외한 배·비행기·열차의) 승무원 전원",
+              "examples": [],
+              "originalMeaning": "(승객을 제외한 배·비행기·열차의) 승무원 전원"
+            },
+            {
+              "meaning": "(고급 선원을 제외한) 일반 선원들, (비행기에서 운항 승무원 이외의) 승무원",
+              "examples": [],
+              "originalMeaning": "(고급 선원을 제외한) 일반 선원들, (비행기에서 운항 승무원 이외의) 승무원"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "…의 승무원의 일원으로서 일하다",
+              "examples": [],
+              "originalMeaning": "…의 승무원의 일원으로서 일하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a80adf4381c04cef923f394cd0d7eb02",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a80adf4381c04cef923f394cd0d7eb02",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "crews"
+        },
+        {
+          "type": "과거형",
+          "value": "crewed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "crewing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "crewed"
+        }
+      ],
+      "aliasConjugation": "crews",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "426d01ae671acb9f30e1aab8344c8751",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "crew",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "CROW의 과거",
+              "examples": [],
+              "originalMeaning": "CROW의 과거"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d4fefcfc6094b23866ca7ff072135b8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d4fefcfc6094b23866ca7ff072135b8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "crews",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b63e8e0b0b7dfcf540e81d9694a8c3e7",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 선원들을 태운 채 침몰했다.",
+      "text": "Ship and <b>crew</b> were lost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 배는 승무원이 적다",
+      "text": "This ship carries a small <b>crew</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "선원들 사이에 흑사병이 발생했다",
+      "text": "Plague has broken out among the <b>crew</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 옥스퍼드 대학팀과 보트레이스를 했다.",
+      "text": "They rowed against the Oxford <b>crew</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 배는 승무원을 태운 채 서서히 침몰했다",
+      "text": "The ship went down slowly with her <b>crew</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "contract",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "계약, 약정; [미·구어] 청부",
+              "examples": [
+                {
+                  "text": "a verbal[oral] <b>contract</b>",
+                  "translatedText": "구두 계약, 언약"
+                }
+              ],
+              "originalMeaning": "계약, 약정; [미·구어] 청부"
+            },
+            {
+              "meaning": "[속어] 살인 청부, 계약서, 계약법, (정치상) 뇌물 수수(bribe)",
+              "examples": [],
+              "originalMeaning": "[속어] 살인 청부, 계약서, 계약법, (정치상) 뇌물 수수(bribe)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(계약에 의해) 일을 청부맡은",
+              "examples": [],
+              "originalMeaning": "(계약에 의해) 일을 청부맡은"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[kɑ́ntrækt|kɔ́n-] 계약하다, 청부[도급]맡다 (→contracted)",
+              "examples": [
+                {
+                  "text": "<b>contract</b> a work to the construction company",
+                  "translatedText": "그 토건 회사에 공사를 도급 주다"
+                }
+              ],
+              "originalMeaning": "[kɑ́ntrækt|kɔ́n-] 계약하다, 청부[도급]맡다 (→<span class='related_word' lang='en' >contracted</span>)"
+            },
+            {
+              "meaning": "(…와) 약혼시키다 ((to, with)); <친교 등을> 맺다 ((to, with)) (→contracted)",
+              "examples": [
+                {
+                  "text": "be <b>contract</b> to",
+                  "translatedText": "…와 약혼이 되어 있다"
+                }
+              ],
+              "originalMeaning": "(…와) 약혼시키다 ((to, with)); <친교 등을> 맺다 ((to, with)) (→<span class='related_word' lang='en' >contracted</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ee949a7a065d4a5a88940e5c670101c1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ee949a7a065d4a5a88940e5c670101c1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "contracts"
+        },
+        {
+          "type": "과거형",
+          "value": "contracted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "contracting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "contracted"
+        }
+      ],
+      "aliasConjugation": "contracts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "48d43e21454bdfcc20981bb69c59f817",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 계약은 계속하기로 되어 있다",
+      "text": "The <b>contract</b> is to run."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "계약서에 서명해 주어야 되겠소.",
+      "text": "You shall sign the <b>contract</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 소송은 계약에 관한 것이다.",
+      "text": "His action sounds in <b>contract</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 계약의 기한은 1년간이다",
+      "text": "The <b>contract</b> holds good for a year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "계약은 증서로 해 주시오",
+      "text": "I want to have the <b>contract</b> in writing."
+    }
+  ],
+  "isWordType": true
+}

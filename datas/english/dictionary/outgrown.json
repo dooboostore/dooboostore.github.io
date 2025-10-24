@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "outgrow",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│aʊt│ɡroʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "…보다 더 커지다[빨리 자라다], 자라서 <옷을> 못 입게 되다",
+              "examples": [
+                {
+                  "text": "<b>outgrow</b> one's brother",
+                  "translatedText": "형보다 커지다"
+                }
+              ],
+              "originalMeaning": "…보다 더 커지다[빨리 자라다], 자라서 <옷을> 못 입게 되다"
+            },
+            {
+              "meaning": "(성장하여) <습관·취미 등을> 벗어나다, 벗어 버리다; …의 고통에서 벗어나다",
+              "examples": [
+                {
+                  "text": "<b>outgrow</b> a fear of the dark",
+                  "translatedText": "나이가 들면서 어둠이 무섭지 않게 되다"
+                }
+              ],
+              "originalMeaning": "(성장하여) <습관·취미 등을> 벗어나다, 벗어 버리다; …의 고통에서 벗어나다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<잎 등이> 뻗어 나오다",
+              "examples": [],
+              "originalMeaning": "<잎 등이> 뻗어 나오다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/29066065087d490c9033adc10d938edd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/29066065087d490c9033adc10d938edd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "outgrows"
+        },
+        {
+          "type": "과거형",
+          "value": "outgrew"
+        },
+        {
+          "type": "현재 분사",
+          "value": "outgrowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "outgrown"
+        }
+      ],
+      "aliasConjugation": "outgrows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d45a785b54a2db4da80f2a6619495b4c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자라서 옷을 못 입게 되었다.",
+      "text": "He has <b>outgrown</b> his clothes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아이가 커서 입던 옷이 작아졌다",
+      "text": "The child has <b>outgrown</b>[grown out of] his garments."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "옷이 어린애에게 작아졌다",
+      "text": "The child has <b>outgrown</b> its clothes."
+    }
+  ],
+  "isWordType": true
+}

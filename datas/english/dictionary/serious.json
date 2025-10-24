@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "serious",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sɪriəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "진지한; 진담의, 진정의, 농담 아닌, 엄숙한; 생각이 깊은",
+              "examples": [
+                {
+                  "text": "a <b>serious</b> look",
+                  "translatedText": "심각한 얼굴"
+                }
+              ],
+              "originalMeaning": "진지한; 진담의, 진정의, 농담 아닌, 엄숙한; 생각이 깊은"
+            },
+            {
+              "meaning": "중대한, 심각한; 방심할 수 없는, 용이치 않은; 중요한; <병 등이> 중한, 심한, 위독한, 위험한",
+              "examples": [
+                {
+                  "text": "<b>serious</b> damage",
+                  "translatedText": "중대한 손해"
+                }
+              ],
+              "originalMeaning": "중대한, 심각한; 방심할 수 없는, 용이치 않은; 중요한; <병 등이> 중한, 심한, 위독한, 위험한"
+            },
+            {
+              "meaning": "<문학·음악 등이> 딱딱한, 따분한; [고어] 경건한, 종교[도덕 ((등))]에 관한",
+              "examples": [
+                {
+                  "text": "<b>serious</b> literature",
+                  "translatedText": "순수 문학"
+                }
+              ],
+              "originalMeaning": "<문학·음악 등이> 딱딱한, 따분한; [고어] 경건한, 종교[도덕 ((등))]에 관한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0eed338e444641f6b84201c7f739d3cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0eed338e444641f6b84201c7f739d3cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "more serious"
+        },
+        {
+          "type": "최상급",
+          "value": "most serious"
+        }
+      ],
+      "aliasConjugation": "more serious",
+      "aliasConjugationPos": "비교급",
+      "gdid": "e988256f22b036d2e63f67d047520bb4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너무 중대하게 생각하지 마라",
+      "text": "Don't take it too seriously."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 심한 상처를 입었다",
+      "text": "He was terribly[seriously] wounded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내 농담을 진담으로 곧이들었다",
+      "text": "He took my joke seriously."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 신변에 큰일이 생겼다",
+      "text": "A <b>serious</b> matter happened to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "취담이니 나쁘게 생각하지 마오",
+      "text": "Don't take me seriously. I am drunk."
+    }
+  ],
+  "isWordType": true
+}

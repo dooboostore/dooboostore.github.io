@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "circle",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsɜːrkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "원, 원주(cf. SPHERE)",
+              "examples": [],
+              "originalMeaning": "원, 원주(cf. SPHERE)"
+            },
+            {
+              "meaning": "[종종 pl.] (동일한 이해·직업 등의) 집단, 사회, 서클, …계(界)",
+              "examples": [
+                {
+                  "text": "the upper <b>circles</b>",
+                  "translatedText": "상류 사회"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] (동일한 이해·직업 등의) 집단, 사회, 서클, …계(界)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "선회하다, …의 둘레를 돌다, 일주하다, 회전하다; 피해서 지나가다, 우회하다",
+              "examples": [
+                {
+                  "text": "The earth <b>circle</b> s the sun.",
+                  "translatedText": "지구는 태양의 둘레를 돈다."
+                }
+              ],
+              "originalMeaning": "선회하다, …의 둘레를 돌다, 일주하다, 회전하다; 피해서 지나가다, 우회하다"
+            },
+            {
+              "meaning": "에워싸다, 둘러싸다",
+              "examples": [
+                {
+                  "text": "The enemy circled the hill.",
+                  "translatedText": "적이 그 언덕을 에워쌌다."
+                }
+              ],
+              "originalMeaning": "에워싸다, 둘러싸다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<비행기 등이> 선회하다, 돌다, 회전하다 ((around, round, over))",
+              "examples": [],
+              "originalMeaning": "<비행기 등이> 선회하다, 돌다, 회전하다 ((around, round, over))"
+            },
+            {
+              "meaning": "<화면 영상이> 크게[작게] 되면서 영상이 나오다[꺼지다]",
+              "examples": [],
+              "originalMeaning": "<화면 영상이> 크게[작게] 되면서 영상이 나오다[꺼지다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cd03d3e2b638422fafae3704095ce0e8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cd03d3e2b638422fafae3704095ce0e8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "circles"
+        },
+        {
+          "type": "과거형",
+          "value": "circled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "circling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "circled"
+        }
+      ],
+      "aliasConjugation": "circles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5da36e29ac33cd295817c1de5c6f1ba5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "적이 그 언덕을 에워쌌다.",
+      "text": "The enemy circled the hill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "솔개가 원을 그리며 날고 있다",
+      "text": "A kite is flying in a <b>circle</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 교제 범위가 넓다",
+      "text": "He has a large (<b>circle</b> of) acquaintance(s)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 개의 원은 두 지점에서 만난다",
+      "text": "The two <b>circles</b> intersect in two places."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비행기가 배의 상공을 선회했다",
+      "text": "An airplane circled round above the ship."
+    }
+  ],
+  "isWordType": true
+}

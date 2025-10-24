@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "probability",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│prɑːbə│bɪləti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 있을 법함, 있음 직함, 그럴듯함; [C] 있음직한 일; 가망, 공산(公算)",
+              "examples": [
+                {
+                  "text": "The probabilities are against us[in our favor].",
+                  "translatedText": "우리에게 불리[유리]할 듯하다."
+                }
+              ],
+              "originalMeaning": "[U] 있을 법함, 있음 직함, 그럴듯함; [C] 있음직한 일; 가망, 공산(公算)"
+            },
+            {
+              "meaning": "개연성(蓋然性)",
+              "examples": [],
+              "originalMeaning": "개연성(蓋然性)"
+            },
+            {
+              "meaning": "[수학] 확률, [U] 확률론",
+              "examples": [],
+              "originalMeaning": "[수학] 확률, [U] 확률론"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6fb405e7edf24455bc63eed2da73ea9c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6fb405e7edf24455bc63eed2da73ea9c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "probabilities"
+        }
+      ],
+      "aliasConjugation": "probabilities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "786b30d67ccfd882d207a05779b8f925",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "…은 매우 있음직한[있을 수 없는] 일이다",
+      "text": "There is every[no] <b>probability</b> of[that] ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "성공할 확률은 4분의 1이다",
+      "text": "The <b>probability</b> of success is one in four."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금주 중에 두 나라가 합의에 이를 확률이 매우 높다",
+      "text": "There is a strong <b>probability</b> that the two countries will come to an agreement within the week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사실로 보면 그 이야기는 있음직한 일로 생각된다.",
+      "text": "This fact lends <b>probability</b> to the story."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 모험이 성공할 공산은 극히 작다",
+      "text": "There is very little <b>probability</b> that the venture will succeed. or There is a very slim chance of the venture succeeding."
+    }
+  ],
+  "isWordType": true
+}

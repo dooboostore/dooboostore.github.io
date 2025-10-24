@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "majority",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mə│dʒɔːrəti; mə│dʒɑːrəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 복수 취급, 때로 단수 취급] 대부분, 대다수, 태반 ((of))",
+              "examples": [
+                {
+                  "text": "The <b>majority</b> of people prefer peace to war.",
+                  "translatedText": "대다수 사람들은 전쟁보다 평화를 좋아한다."
+                }
+              ],
+              "originalMeaning": "[보통 복수 취급, 때로 단수 취급] 대부분, 대다수, 태반 ((of))"
+            },
+            {
+              "meaning": "과반수, 절대다수",
+              "examples": [
+                {
+                  "text": "an absolute <b>majority</b>",
+                  "translatedText": "절대다수"
+                }
+              ],
+              "originalMeaning": "과반수, 절대다수"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "다수의, 과반수의",
+              "examples": [
+                {
+                  "text": "a <b>majority</b> decision",
+                  "translatedText": "다수결(에 의한 결정)"
+                }
+              ],
+              "originalMeaning": "다수의, 과반수의"
+            },
+            {
+              "meaning": "다수파의, 여당의",
+              "examples": [],
+              "originalMeaning": "다수파의, 여당의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4f3043ac663d4367909125bcf2aa7754",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4f3043ac663d4367909125bcf2aa7754",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "majorities"
+        }
+      ],
+      "aliasConjugation": "majorities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "93ec2ac223a9279336a6518e8e7e2dec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 근소한 차로 선출되었다",
+      "text": "He was elected by a small <b>majority</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "투표는 과반수에 3표 부족했다.",
+      "text": "The vote lacked three of (being) a <b>majority</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과반수의 찬성으로 그 법은 통과되었다",
+      "text": "The bill was passed by a <b>majority</b> vote."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 위원회는 다수결로 운영한다",
+      "text": "This commision operates under <b>majority</b> rule."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결의안은 절대 다수로 통과되었다",
+      "text": "The resolution was carried by a large <b>majority</b>."
+    }
+  ],
+  "isWordType": true
+}

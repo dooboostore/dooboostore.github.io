@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "version",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│vɜːrʒn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "번역, 번역문",
+              "examples": [
+                {
+                  "text": "the English <b>version</b> of the original",
+                  "translatedText": "원전의 영역(英譯)"
+                }
+              ],
+              "originalMeaning": "번역, 번역문"
+            },
+            {
+              "meaning": "(개인적 또는 특수한 입장에 의한) 설명, 설(說), 이설(異說), 견해",
+              "examples": [
+                {
+                  "text": "two different versions of the accident",
+                  "translatedText": "그 사고에 관한 두 가지 다른 설명"
+                }
+              ],
+              "originalMeaning": "(개인적 또는 특수한 입장에 의한) 설명, 설(說), 이설(異說), 견해"
+            },
+            {
+              "meaning": "(원형·원물에 대한) 이형, 변형; 개작, 개조; (연주자·배우 등의 독자적인) 해석, 연주, 연출; (소설의) 개작, 각색, 번안 ((of))",
+              "examples": [
+                {
+                  "text": "a stage <b>version</b> of a novel",
+                  "translatedText": "소설을 극화한 것"
+                }
+              ],
+              "originalMeaning": "(원형·원물에 대한) 이형, 변형; 개작, 개조; (연주자·배우 등의 독자적인) 해석, 연주, 연출; (소설의) 개작, 각색, 번안 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5bbf77fb5a3a4ae7848f4638b3ef69c5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5bbf77fb5a3a4ae7848f4638b3ef69c5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3d7a9757144f30e87ccaa1157eda4f26",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그것을 노컷으로 보았다",
+      "text": "I saw it in an uncut <b>version</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "재녹음한 것 말고 오리지널을 주시오",
+      "text": "I want it not in dubbed but original <b>version</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일설에는 …라고 한다",
+      "text": "One <b>version</b> says that..."
+    }
+  ],
+  "isWordType": true
+}

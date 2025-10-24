@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "inference",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪnfərəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 추론, 추리; [C] 추론의 결과; 추정, 결론",
+              "examples": [
+                {
+                  "text": "the deductive[inductive] <b>inference</b>",
+                  "translatedText": "연역[귀납] 추리"
+                }
+              ],
+              "originalMeaning": "[U] 추론, 추리; [C] 추론의 결과; 추정, 결론"
+            },
+            {
+              "meaning": "함축된 의미(implication)",
+              "examples": [],
+              "originalMeaning": "함축된 의미(implication)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2ddb0274ea504ce0a21269b93b4c0085",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2ddb0274ea504ce0a21269b93b4c0085",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "afb5ecb429e58e3b4fdf3bdfb272f827",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 추론은 그럴듯해 보인다",
+      "text": "Your <b>inference</b>[reasoning] seems plausible."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이들 사실로부터의 추단은 극히 명확하다",
+      "text": "The <b>inference</b> from these facts is quite[perfectly] obvious."
+    }
+  ],
+  "isWordType": true
+}

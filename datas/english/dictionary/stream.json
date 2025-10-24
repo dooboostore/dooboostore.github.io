@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "stream",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "striːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흐름, 내, 시내, 개울 (=river)",
+              "examples": [],
+              "originalMeaning": "흐름, 내, 시내, 개울 (=<span class='related_word' lang='en' >river</span>)"
+            },
+            {
+              "meaning": "유출, 분류(奔流)",
+              "examples": [],
+              "originalMeaning": "유출, 분류(奔流)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "흐르다, 흘러가다, 흘러나오다(pour out)",
+              "examples": [
+                {
+                  "text": "A brook streams by our house.",
+                  "translatedText": "시내가 우리집 옆을 흐른다."
+                }
+              ],
+              "originalMeaning": "흐르다, 흘러가다, 흘러나오다(pour out)"
+            },
+            {
+              "meaning": "<눈물 등이> 흘러내리다 ((down))",
+              "examples": [
+                {
+                  "text": "A flood of tears streamed down from her eyes.",
+                  "translatedText": "눈물이 그녀의 눈에서 넘쳐흘렀다."
+                }
+              ],
+              "originalMeaning": "<눈물 등이> 흘러내리다 ((down))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "흘리다, 흘러나오게 하다, 유출시키다",
+              "examples": [
+                {
+                  "text": "His eyes streamed tears.",
+                  "translatedText": "그의 눈에서 눈물이 흘러나왔다."
+                }
+              ],
+              "originalMeaning": "흘리다, 흘러나오게 하다, 유출시키다"
+            },
+            {
+              "meaning": "<깃발 등을> 나부끼게 하다",
+              "examples": [],
+              "originalMeaning": "<깃발 등을> 나부끼게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d3964bc79034ebda04a326c5f1d1f30",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d3964bc79034ebda04a326c5f1d1f30",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "streams"
+        },
+        {
+          "type": "과거형",
+          "value": "streamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "streaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "streamed"
+        }
+      ],
+      "aliasConjugation": "streams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "daec8af1853322de4b51f8ddbba3a197",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 개울은 고기가 잘 낚인다.",
+      "text": "This <b>stream</b> fishes well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 눈에서 눈물이 흘러나왔다.",
+      "text": "His eyes streamed tears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꽃잎이 냇물 위로 흐른다",
+      "text": "Petals float down the <b>stream</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시내가 우리집 옆을 흐른다.",
+      "text": "A brook streams by our house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 철벅철벅 개울을 건너갔다.",
+      "text": "They splashed across the <b>stream</b>."
+    }
+  ],
+  "isWordType": true
+}

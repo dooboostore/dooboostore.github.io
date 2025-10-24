@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "water",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│wɔːtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "물, 음료수",
+              "examples": [
+                {
+                  "text": "fresh[salt] <b>water</b>",
+                  "translatedText": "담[염]수"
+                }
+              ],
+              "originalMeaning": "물, 음료수"
+            },
+            {
+              "meaning": "(수도 등의) 물, 용수;[pl.] 광천수, 탄산수",
+              "examples": [
+                {
+                  "text": "tap <b>water</b>",
+                  "translatedText": "수돗물"
+                }
+              ],
+              "originalMeaning": "(수도 등의) 물, 용수;[pl.] 광천수, 탄산수"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 물을 끼얹다[뿌리다], 물을 대다",
+              "examples": [
+                {
+                  "text": "<b>water</b> the flowers",
+                  "translatedText": "꽃에 물을 주다"
+                }
+              ],
+              "originalMeaning": "…에 물을 끼얹다[뿌리다], 물을 대다"
+            },
+            {
+              "meaning": "물을 타다, 물을 타서 묽게 하다; 품질을 떨어뜨리다 ((down))",
+              "examples": [],
+              "originalMeaning": "물을 타다, 물을 타서 묽게 하다; 품질을 떨어뜨리다 ((down))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "분비액이 나오다, 눈물[침]이 나다, 침을 흘리다",
+              "examples": [
+                {
+                  "text": "His eyes watered from the smoke.",
+                  "translatedText": "그는 연기 때문에 눈물이 나왔다."
+                }
+              ],
+              "originalMeaning": "분비액이 나오다, 눈물[침]이 나다, 침을 흘리다"
+            },
+            {
+              "meaning": "<짐승이> 물을 마시다",
+              "examples": [],
+              "originalMeaning": "<짐승이> 물을 마시다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9c4b4cfa908547cfa7c4bd26447cd77e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9c4b4cfa908547cfa7c4bd26447cd77e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "waters"
+        },
+        {
+          "type": "과거형",
+          "value": "watered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "watering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "watered"
+        }
+      ],
+      "aliasConjugation": "waters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "80c6ddbd5b6197827c576828aeb87641",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물이 펄펄 끓고 있다",
+      "text": "The <b>water</b> is boiling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "얼음은 녹아서 물이 된다.",
+      "text": "Ice melts into <b>water</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기름은  물 위에 뜬다.",
+      "text": "Oil will float on <b>water</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물이 우르르 끓고 있다",
+      "text": "The <b>water</b> is simmering."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물은 수평으로 되게 마련이다.",
+      "text": "<b>Water</b> finds its level."
+    }
+  ],
+  "isWordType": true
+}

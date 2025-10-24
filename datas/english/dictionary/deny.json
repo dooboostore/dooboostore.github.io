@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "deny",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈnaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "부인[부정]하다",
+              "examples": [
+                {
+                  "text": "<b>deny</b> a rumor",
+                  "translatedText": "소문을 부정하다"
+                }
+              ],
+              "originalMeaning": "부인[부정]하다"
+            },
+            {
+              "meaning": "<요구 등을> 거절하다, <…에게 줄 것을> 주지 않다",
+              "examples": [
+                {
+                  "text": "She denies her son nothing. = She denies nothing to her son.",
+                  "translatedText": "그녀는 아들의 요구는 무엇이든지 들어 준다."
+                }
+              ],
+              "originalMeaning": "<요구 등을> 거절하다, <…에게 줄 것을> 주지 않다"
+            },
+            {
+              "meaning": "<방문자에게> 면회 사절로 하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>deny</b> oneself to a visitor",
+                  "translatedText": "면회를 사절하다"
+                }
+              ],
+              "originalMeaning": "<방문자에게> 면회 사절로 하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/71ccc83e337d4bb292057b2bb6216e23",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/71ccc83e337d4bb292057b2bb6216e23",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "denies"
+        },
+        {
+          "type": "과거형",
+          "value": "denied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "denying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "denied"
+        }
+      ],
+      "aliasConjugation": "denies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1a2291241559223af5ed6ce0633f466f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그런 말을 하지 않았다고 했다.",
+      "text": "He denied having said so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기가 지은 것이 아니라고 말했다",
+      "text": "He denied the authorship."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 끝끝내 모른다고 버티었다",
+      "text": "He persisted in asserting his innocence. or He persisted to the last, denying his knowledge (of it)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대담하게도 그는 그것을 부인했다.",
+      "text": "He had the confidence to <b>deny</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 예심에서 이를 부인했다",
+      "text": "In the pretrial interrogation he denied it."
+    }
+  ],
+  "isWordType": true
+}

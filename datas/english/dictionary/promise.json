@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "promise",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│prɑːmɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "약속, 서약, 계약",
+              "examples": [
+                {
+                  "text": "( <b>promise</b>+to do) He broke his <b>promise</b> to give the book back to me within a week.",
+                  "translatedText": "그는 1주일 안에 그 책을 돌려 주겠다던 약속을 어겼다."
+                }
+              ],
+              "originalMeaning": "약속, 서약, 계약"
+            },
+            {
+              "meaning": "보증",
+              "examples": [],
+              "originalMeaning": "보증"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "약속[서약]하다, 주기로 약속하다",
+              "examples": [
+                {
+                  "text": "He promised me the book. = He promised the book to me.",
+                  "translatedText": "그는 나에게 그 책을 주겠다고 약속했다."
+                }
+              ],
+              "originalMeaning": "약속[서약]하다, 주기로 약속하다"
+            },
+            {
+              "meaning": "…의 가망[희망]이 있다, …할 듯하다",
+              "examples": [
+                {
+                  "text": "The sky promised rain.",
+                  "translatedText": "하늘을 보니 비가 올 것 같았다."
+                }
+              ],
+              "originalMeaning": "…의 가망[희망]이 있다, …할 듯하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "약속[계약]하다",
+              "examples": [
+                {
+                  "text": "I cannot positively <b>promise</b>.",
+                  "translatedText": "확약할 수 없다."
+                }
+              ],
+              "originalMeaning": "약속[계약]하다"
+            },
+            {
+              "meaning": "[종종 well, fair와 함께] 가망[희망]이 있다",
+              "examples": [
+                {
+                  "text": "The crops <b>promise</b> well.",
+                  "translatedText": "풍작이 될 것 같다."
+                }
+              ],
+              "originalMeaning": "[종종 well, fair와 함께] 가망[희망]이 있다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c55faf76202b4d82a542056107b33ada",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c55faf76202b4d82a542056107b33ada",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "promises"
+        },
+        {
+          "type": "과거형",
+          "value": "promised"
+        },
+        {
+          "type": "현재 분사",
+          "value": "promising"
+        },
+        {
+          "type": "과거 분사",
+          "value": "promised"
+        }
+      ],
+      "aliasConjugation": "promises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "356f5ff4c82fd5184c2ed3815f314fa8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풍작이 될 것 같다.",
+      "text": "The crops <b>promise</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하늘을 보니 비가 올 것 같았다.",
+      "text": "The sky promised rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 장래가 촉망되는 사람이다",
+      "text": "He is a man of <b>promise</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전도가 유망한 청년이다",
+      "text": "He is a promising young man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "확약은 할 수 없다",
+      "text": "I cannot make a definite <b>promise</b>."
+    }
+  ],
+  "isWordType": true
+}

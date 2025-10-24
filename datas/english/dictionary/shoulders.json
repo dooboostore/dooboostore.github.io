@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "shoulder",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʃoʊldə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "어깨, 견갑(肩胛) 관절, [군사] 어깨총의 자세",
+              "examples": [],
+              "originalMeaning": "어깨, 견갑(肩胛) 관절, [군사] 어깨총의 자세"
+            },
+            {
+              "meaning": "어깨살 ((식용 짐승의 앞다리·전신부(前身部)))",
+              "examples": [],
+              "originalMeaning": "어깨살 ((식용 짐승의 앞다리·전신부(前身部)))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을 어깨로 밀다[밀치다], 어깨로 밀고[밀어 헤치고] 나아가다",
+              "examples": [
+                {
+                  "text": "<b>shoulder</b> a person out of the way",
+                  "translatedText": "…을 어깨로 밀어 제치다"
+                }
+              ],
+              "originalMeaning": "…을 어깨로 밀다[밀치다], 어깨로 밀고[밀어 헤치고] 나아가다"
+            },
+            {
+              "meaning": "짊어지다, 메다",
+              "examples": [
+                {
+                  "text": "<b>shoulder</b> a knapsack",
+                  "translatedText": "배낭을 메다"
+                }
+              ],
+              "originalMeaning": "짊어지다, 메다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "어깨로 밀다",
+              "examples": [],
+              "originalMeaning": "어깨로 밀다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea26e36eb4cd46f9b861a33c602d183a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea26e36eb4cd46f9b861a33c602d183a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shoulders"
+        },
+        {
+          "type": "과거형",
+          "value": "shouldered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shouldering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shouldered"
+        }
+      ],
+      "aliasConjugation": "shoulders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "19c5f67d945e2167137089156c38ecb3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 단연 두각을 나타내고 있다",
+      "text": "He is head and <b>shoulders</b> above his fellows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우리 학급에서도 각별히 뛰어났다",
+      "text": "In my class he was head and <b>shoulders</b> above everyone else."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나를 못 본 체했다",
+      "text": "He cut me cold on the street. or He gave me the cold <b>shoulder</b> on the street."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 길에서 나를 본체만체했다",
+      "text": "He gave me the cold <b>shoulder</b> in the street. or He cut me cold in the street."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 어깨 좀 주물러 다오",
+      "text": "Give me a <b>shoulder</b> massage."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "reason",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈriːzn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "이유, 까닭, 동기(cause)",
+              "examples": [
+                {
+                  "text": "for reasons of",
+                  "translatedText": "…의 이유로, …인 까닭에"
+                }
+              ],
+              "originalMeaning": "이유, 까닭, 동기(cause)"
+            },
+            {
+              "meaning": "변명, 핑계, 구실, 해명 ((to do))",
+              "examples": [
+                {
+                  "text": "<b>reason</b>(s) of State",
+                  "translatedText": "국가적 이유 ((종종 위정자의 구실))"
+                }
+              ],
+              "originalMeaning": "변명, 핑계, 구실, 해명 ((to do))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "추리[추론]하다, 논리적으로 생각하다, 판단을 내리다 ((about, of, on, upon))",
+              "examples": [
+                {
+                  "text": "<b>reason</b> badly[soundly]",
+                  "translatedText": "그릇되게[올바르게] 추론하다"
+                }
+              ],
+              "originalMeaning": "추리[추론]하다, 논리적으로 생각하다, 판단을 내리다 ((about, of, on, upon))"
+            },
+            {
+              "meaning": "이치를 따지다[밝히다], 설득[설명]하다 ((with))",
+              "examples": [
+                {
+                  "text": "I reasoned with him on the matter.",
+                  "translatedText": "나는 그 문제에 대해 그와 논의했다."
+                }
+              ],
+              "originalMeaning": "이치를 따지다[밝히다], 설득[설명]하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이론적으로 생각해 내다[해결하다] ((out))",
+              "examples": [
+                {
+                  "text": "<b>reason</b> out the answer to the question",
+                  "translatedText": "그 문제에 답을 생각해 내다"
+                }
+              ],
+              "originalMeaning": "이론적으로 생각해 내다[해결하다] ((out))"
+            },
+            {
+              "meaning": "논하다, 논증[판단]하다",
+              "examples": [
+                {
+                  "text": "Let's <b>reason</b> whether your answer is correct or not.",
+                  "translatedText": "너의 답이 옳은지 그른지 논해 보자."
+                }
+              ],
+              "originalMeaning": "논하다, 논증[판단]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ed90d3314a1438aac764ed46d993270",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ed90d3314a1438aac764ed46d993270",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reasons"
+        },
+        {
+          "type": "과거형",
+          "value": "reasoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reasoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reasoned"
+        }
+      ],
+      "aliasConjugation": "reasons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9979c44e49206111f0faae214bb2b5ee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 그 게임에서 질까 보냐",
+      "text": "There is no <b>reason</b> why I can't win the game. or It can't be possible that I lose the game."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "칸트의 순수 이성 비판",
+      "text": "Kant's Critique of Pure <b>Reason</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이성으로 그 일을 해결해라",
+      "text": "<b>Reason</b> it out for yourself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인간은 이성을 지니고 있다",
+      "text": "Man is endowed with <b>reason</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것이 그가 온 이유이다.",
+      "text": "This is the <b>reason</b> that he came."
+    }
+  ],
+  "isWordType": true
+}

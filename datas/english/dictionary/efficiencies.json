@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "efficiency",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈfɪʃnsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "능력, 능률",
+              "examples": [
+                {
+                  "text": "<b>efficiency</b> wages",
+                  "translatedText": "능률급(給)"
+                }
+              ],
+              "originalMeaning": "능력, 능률"
+            },
+            {
+              "meaning": "능률, 효율",
+              "examples": [
+                {
+                  "text": "<b>efficiency</b> test",
+                  "translatedText": "능률 시험"
+                }
+              ],
+              "originalMeaning": "능률, 효율"
+            },
+            {
+              "meaning": "(=EFFICIENCY APARTMENT)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>EFFICIENCY</b> APARTMENT</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d647a377310484986689b44e180f94f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d647a377310484986689b44e180f94f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "efficiencies"
+        }
+      ],
+      "aliasConjugation": "efficiencies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "62a50f97fa11e8fa938b0a15cb7e77b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이렇게 하면 능률이 올라간다",
+      "text": "This will make for[conduce to] <b>efficiency</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "인원은 많지만 능률이 올라가지 않는다",
+      "text": "Sufficient <b>efficiency</b> is not obtained in spite of the large numbers of workers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "효과가 그야말로 100퍼센트다",
+      "text": "It is certainly one-hundred percent <b>efficiency</b>."
+    }
+  ],
+  "isWordType": true
+}

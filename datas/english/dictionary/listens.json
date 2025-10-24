@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "listen",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪsn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "듣다, 귀를 기울이다, 귀담아듣다 ((to)); 주의하다 (=hear)",
+              "examples": [
+                {
+                  "text": "<b>listen</b> to the band playing",
+                  "translatedText": "악단이 연주하는 것을 듣다"
+                }
+              ],
+              "originalMeaning": "듣다, 귀를 기울이다, 귀담아듣다 ((to)); 주의하다 (=<span class='related_word' lang='en' >hear</span>)"
+            },
+            {
+              "meaning": "들어주다, (충고·요구 등을) 듣다, 따르다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>listen</b> toadvice[reason]",
+                  "translatedText": "충고[이성]에 따르다"
+                }
+              ],
+              "originalMeaning": "들어주다, (충고·요구 등을) 듣다, 따르다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경청하다, …에 귀를 기울이다",
+              "examples": [],
+              "originalMeaning": "경청하다, …에 귀를 기울이다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "듣기",
+              "examples": [
+                {
+                  "text": "Have a <b>listen</b>.",
+                  "translatedText": "들어 보시오."
+                }
+              ],
+              "originalMeaning": "듣기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a94344e7f23e4cecb933c049919426af",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a94344e7f23e4cecb933c049919426af",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "listens"
+        },
+        {
+          "type": "과거형",
+          "value": "listened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "listening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "listened"
+        }
+      ],
+      "aliasConjugation": "listens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8ccdb6bb12d34036b0b1c4cb86b87214",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자, 내 말 좀 들어보게.",
+      "text": "Now, <b>listen</b> to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 말을 주의해서 들으시오.",
+      "text": "<b>Listen</b> to me carefully."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "귀로 들어서 알게[배우게] 된다.",
+      "text": "We learn by listening."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무쪼록 내 말을 들어주시오",
+      "text": "I beg you to <b>listen</b> to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "주의깊게 듣는 여성은 기억도 잘한다.",
+      "text": "She who <b>listens</b> learns."
+    }
+  ],
+  "isWordType": true
+}

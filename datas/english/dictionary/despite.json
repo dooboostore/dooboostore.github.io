@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "despite",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈspaɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "…에도 불구하고",
+              "examples": [
+                {
+                  "text": "They went for a walk <b>despite</b> the rain.",
+                  "translatedText": "그들은 비가 오는 데도 불구하고 산책을 나갔다."
+                }
+              ],
+              "originalMeaning": "…에도 불구하고"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 무례; 위해(危害); [고어] 악의, 경멸",
+              "examples": [],
+              "originalMeaning": "[U] 무례; 위해(危害); [고어] 악의, 경멸"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/761ed6e2da904b1e9db15caa327124a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/761ed6e2da904b1e9db15caa327124a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "36bbb0c74a48ab0082526aa052541164",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그녀의 결점에도 불구하고 그녀를 사랑한다",
+      "text": "I love her <b>despite</b> her faults."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 비가 오는 데도 불구하고 산책을 나갔다.",
+      "text": "They went for a walk <b>despite</b> the rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 분명히 피로한데도 불구하고 일을 계속했다.",
+      "text": "<b>Despite</b> his evident distress, he went on working."
+    }
+  ],
+  "isWordType": true
+}

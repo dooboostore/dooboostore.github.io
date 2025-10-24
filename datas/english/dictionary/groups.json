@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "group",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡruːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "떼, 그룹, 무리, 집단 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>group</b> of people",
+                  "translatedText": "한 무리의 사람들"
+                }
+              ],
+              "originalMeaning": "떼, 그룹, 무리, 집단 ((of))"
+            },
+            {
+              "meaning": "(물건의) 집단, 덩어리, 모임 ((of))",
+              "examples": [],
+              "originalMeaning": "(물건의) 집단, 덩어리, 모임 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "집단의, 단체의",
+              "examples": [
+                {
+                  "text": "a <b>group</b> discussion",
+                  "translatedText": "집단 토론"
+                }
+              ],
+              "originalMeaning": "집단의, 단체의"
+            },
+            {
+              "meaning": "어군으로 된",
+              "examples": [
+                {
+                  "text": "a <b>group</b> verb",
+                  "translatedText": "군(群)동사"
+                }
+              ],
+              "originalMeaning": "어군으로 된"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "불러 모으다, 무리를 짓게 하다; 집단으로 만들다",
+              "examples": [],
+              "originalMeaning": "불러 모으다, 무리를 짓게 하다; 집단으로 만들다"
+            },
+            {
+              "meaning": "(계통적으로) 분류하다 ((into, under))",
+              "examples": [
+                {
+                  "text": "<b>group</b> … into ",
+                  "translatedText": " …으로 분류하다"
+                }
+              ],
+              "originalMeaning": "(계통적으로) 분류하다 ((into, under))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/db89d0ea37024f05bdcc905ef2ca0c1b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/db89d0ea37024f05bdcc905ef2ca0c1b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "groups"
+        },
+        {
+          "type": "과거형",
+          "value": "grouped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "grouping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "grouped"
+        }
+      ],
+      "aliasConjugation": "groups",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7705d0480a340eb68526b3b63ed001d7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 그룹의 리더이다",
+      "text": "He is the leader of the <b>group</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 작은 그룹으로 갈라졌다.",
+      "text": "They divided (up) into small <b>groups</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "마을 사람들은 떼지어 모여들었다.",
+      "text": "The villagers gathered in <b>groups</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "탑은 나무들과 잘 조화돼 있다.",
+      "text": "The tower <b>groups</b> well with the trees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "뭇 짐승이 떼를 지어 다닌다",
+      "text": "All sorts of animals move around in <b>groups</b>."
+    }
+  ],
+  "isWordType": true
+}

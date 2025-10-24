@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "entry": "yell",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "jel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "큰소리를 지르다, 소리치다(cry), 찢어지는 듯한 소리를 내다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>yell</b> for help",
+                  "translatedText": "도와달라고 외치다"
+                }
+              ],
+              "originalMeaning": "큰소리를 지르다, 소리치다(cry), 찢어지는 듯한 소리를 내다 ((with))"
+            },
+            {
+              "meaning": "(…에게) 응원의 함성을 보내다 ((for))",
+              "examples": [],
+              "originalMeaning": "(…에게) 응원의 함성을 보내다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "외쳐 말하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>yell</b> out an oath",
+                  "translatedText": "큰소리로 악담을 하다"
+                }
+              ],
+              "originalMeaning": "외쳐 말하다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고함 소리, 외침; (고통 등의) 부르짖음",
+              "examples": [
+                {
+                  "text": "raise the <b>yell</b>",
+                  "translatedText": "[속어] 항의하다"
+                }
+              ],
+              "originalMeaning": "고함 소리, 외침; (고통 등의) 부르짖음"
+            },
+            {
+              "meaning": "(자기편 선수 응원용) 함성(cheer)",
+              "examples": [],
+              "originalMeaning": "(자기편 선수 응원용) 함성(cheer)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5f09733b15204cc68aecea545d7fbe8e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5f09733b15204cc68aecea545d7fbe8e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "yells"
+        },
+        {
+          "type": "과거형",
+          "value": "yelled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "yelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "yelled"
+        }
+      ],
+      "aliasConjugation": "yells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7c19024257536896e36b80d39d63eaaa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 기쁜 나머지 소리질렀다.",
+      "text": "She <b>yelled</b> with delight."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "circuit",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsɜːrkɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "순회, 순회 여행",
+              "examples": [
+                {
+                  "text": "make[go] the <b>circuit</b> of",
+                  "translatedText": "…을 한 바퀴 돌다"
+                }
+              ],
+              "originalMeaning": "순회, 순회 여행"
+            },
+            {
+              "meaning": "빙 둘러서 감, 우회; 우회로[코스]",
+              "examples": [],
+              "originalMeaning": "빙 둘러서 감, 우회; 우회로[코스]"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "일주(一周)하다, 순회하다",
+              "examples": [],
+              "originalMeaning": "일주(一周)하다, 순회하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fa0bd348edd44733a8c29472c348ee4f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fa0bd348edd44733a8c29472c348ee4f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "56f8e276944221fb7cb7f95c471f0bd7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "합선이 되어 퓨즈가 나갔다",
+      "text": "A fuse blew because of a short <b>circuit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지구가 태양 주위를 일주하는 데는 약 365일이 걸린다.",
+      "text": "The earth’s <b>circuit</b> of the sun takes about 365 days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화재는 누전으로 일어났다",
+      "text": "The fire was started by a short <b>circuit</b>. or The fire was caused by a leakage of electricity."
+    }
+  ],
+  "isWordType": true
+}

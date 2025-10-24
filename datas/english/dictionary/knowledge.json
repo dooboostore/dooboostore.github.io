@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "knowledge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nɑːlɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지식, 아는 바",
+              "examples": [
+                {
+                  "text": "scientific <b>knowledge</b>",
+                  "translatedText": "과학 지식"
+                }
+              ],
+              "originalMeaning": "지식, 아는 바"
+            },
+            {
+              "meaning": "학식, 견문(見聞), 학문",
+              "examples": [
+                {
+                  "text": "a good <b>knowledge</b> of physics",
+                  "translatedText": "물리학에 관한 깊은 학식"
+                }
+              ],
+              "originalMeaning": "학식, 견문(見聞), 학문"
+            },
+            {
+              "meaning": "숙지(熟知), 정통(精通)",
+              "examples": [],
+              "originalMeaning": "숙지(熟知), 정통(精通)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/853f5eb1957f4240ad14ca9cda7c35f5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/853f5eb1957f4240ad14ca9cda7c35f5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "527593c13fa7a43b322432f1e3d04924",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 지식에 있어서 나보다 낫다.",
+      "text": "He surpasses me in <b>knowledge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영어에 관해서 조금은 알고 있다.",
+      "text": "I have a <b>knowledge</b> of English."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 끝끝내 모른다고 버티었다",
+      "text": "He persisted in asserting his innocence. or He persisted to the last, denying his <b>knowledge</b> (of it)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 변변히 문법도 모른다",
+      "text": "He has little <b>knowledge</b> of grammar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 기계에 대해서 모른다",
+      "text": "He has little mechanical <b>knowledge</b>."
+    }
+  ],
+  "isWordType": true
+}

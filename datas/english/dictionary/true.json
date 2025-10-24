@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "true",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "truː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "정말의, 진실의, 참된(opp. false)",
+              "examples": [],
+              "originalMeaning": "정말의, 진실의, 참된(opp. false)"
+            },
+            {
+              "meaning": "<사람의 행동 등이> 예측한 대로, 이전 그대로의; <치수 등이> 정확한, 조금도 틀림없는 ((to)); 박진(迫眞)의",
+              "examples": [
+                {
+                  "text": "<b>true</b> to life[nature]",
+                  "translatedText": "실물 그대로의[박진한]"
+                }
+              ],
+              "originalMeaning": "<사람의 행동 등이> 예측한 대로, 이전 그대로의; <치수 등이> 정확한, 조금도 틀림없는 ((to)); 박진(迫眞)의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[고어] 진실로(truly), 참으로; 올바르게",
+              "examples": [],
+              "originalMeaning": "[고어] 진실로(truly), 참으로; 올바르게"
+            },
+            {
+              "meaning": "정확하게",
+              "examples": [],
+              "originalMeaning": "정확하게"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "정확한 상태[위치, 조정]",
+              "examples": [],
+              "originalMeaning": "정확한 상태[위치, 조정]"
+            },
+            {
+              "meaning": "[the ~] 진실함, 진리",
+              "examples": [],
+              "originalMeaning": "[the ~] 진실함, 진리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/756c0aa099c24e82a0d18c616725e4a4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/756c0aa099c24e82a0d18c616725e4a4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "truer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "trues"
+        },
+        {
+          "type": "최상급",
+          "value": "truest"
+        },
+        {
+          "type": "과거형",
+          "value": "trued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "truing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "trued"
+        }
+      ],
+      "aliasConjugation": "truer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "a272d17bba12ab452ac635efffbc6582",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 말에는 거짓이 없다",
+      "text": "All he said is <b>true</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사실일지도 모른다, 아마 사실일 것이다.",
+      "text": "It may be <b>true</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 진실일 리가 만무하다",
+      "text": "That cannot be <b>true</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것이 어쩌면 정말일지도 모른다.",
+      "text": "That could be <b>true</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정말인지 그에게 물어 봐라.",
+      "text": "Ask him if it is <b>true</b>."
+    }
+  ],
+  "isWordType": true
+}

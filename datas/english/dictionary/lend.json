@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "lend",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "빌려 주다, 빌리다, 대여하다 ((to)); (이자를 받고) <돈을> 대출[대부]하다 (opp. borrow) ((at, on)), (=borrow)",
+              "examples": [
+                {
+                  "text": "<b>lend</b> a book",
+                  "translatedText": "책을 빌려 주다"
+                }
+              ],
+              "originalMeaning": "빌려 주다, 빌리다, 대여하다 ((to)); (이자를 받고) <돈을> 대출[대부]하다 (opp. borrow) ((at, on)), (=<span class='related_word' lang='en' >borrow</span>)"
+            },
+            {
+              "meaning": "<원조 등을> 제공하다, 주다; 보태다, 더하다(impart) ((to))",
+              "examples": [
+                {
+                  "text": "<b>lend</b> (one's) support[assistance, aid] to a person",
+                  "translatedText": "…을 도와주다, …에게 원조를 제공하다"
+                }
+              ],
+              "originalMeaning": "<원조 등을> 제공하다, 주다; 보태다, 더하다(impart) ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "돈을 빌려 주다, 융자하다",
+              "examples": [],
+              "originalMeaning": "돈을 빌려 주다, 융자하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(일시적인) 대여, 차용",
+              "examples": [],
+              "originalMeaning": "(일시적인) 대여, 차용"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3b4d78c079d3406fb269e26591829ae3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3b4d78c079d3406fb269e26591829ae3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lends"
+        },
+        {
+          "type": "과거형",
+          "value": "lent"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lent"
+        }
+      ],
+      "aliasConjugation": "lends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0952019db5319be3c921bf1c2897c6c3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "5 센트 빌려 줘.",
+      "text": "<b>Lend</b> me a nickel."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 책 좀 빌려 다오",
+      "text": "<b>Lend</b> me your book."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 빌려 줄 수 없다.",
+      "text": "I can’t <b>lend</b> it to you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 노트 좀 빌려 줘",
+      "text": "<b>Lend</b> me your lecture notes, will you?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 빌려 주었던 돈이 떴다",
+      "text": "The money I lent him is gone."
+    }
+  ],
+  "isWordType": true
+}

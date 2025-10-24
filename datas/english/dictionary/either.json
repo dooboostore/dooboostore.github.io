@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "either",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈaɪðə(r); ˈiːðə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[긍정문에서] (둘 중) 어느 한쪽[하나]의, 어느 쪽의 …이든지",
+              "examples": [
+                {
+                  "text": "You may sit at <b>either</b> end of the table.",
+                  "translatedText": "테이블의 어느 끝쪽에든 앉으시오."
+                }
+              ],
+              "originalMeaning": "[긍정문에서] (둘 중) 어느 한쪽[하나]의, 어느 쪽의 …이든지"
+            },
+            {
+              "meaning": "[부정문에서] (둘 중) 어느 쪽의 …도 (…않다)",
+              "examples": [
+                {
+                  "text": "I don't know <b>either</b> boy.",
+                  "translatedText": "어느 쪽 소년도 모른다. ((I know neither boy.로 바꾸어 쓸 수 있음))"
+                }
+              ],
+              "originalMeaning": "[부정문에서] (둘 중) 어느 쪽의 …도 (…않다)"
+            }
+          ]
+        },
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[긍정문에서] (둘 중의) 어느 한쪽, 어느 쪽도",
+              "examples": [
+                {
+                  "text": "<b>Either</b> will do.",
+                  "translatedText": "어느 쪽이든 좋다."
+                }
+              ],
+              "originalMeaning": "[긍정문에서] (둘 중의) 어느 한쪽, 어느 쪽도"
+            },
+            {
+              "meaning": "[부정문에서] (둘 중) 어느 쪽도",
+              "examples": [
+                {
+                  "text": "I don't know <b>either</b>.",
+                  "translatedText": "어느 쪽도 모른다. ((I know neither.로 바꾸어 쓸 수 있음))"
+                }
+              ],
+              "originalMeaning": "[부정문에서] (둘 중) 어느 쪽도"
+            }
+          ]
+        },
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "[either … or …의 형태로] …거나 …거나 (어느 하나가[것이라도])",
+              "examples": [
+                {
+                  "text": "<b>Either</b> he or I am to blame.",
+                  "translatedText": "그나 나나 둘 중 하나가 잘못한 것이다. ((★ 동사는 일반적으로 뒤의 주어와 호응함; 그러나 어조가 좋지 않으므로 <b>Either</b> he is to blame or I am.이라고 하는 일이 많음))"
+                }
+              ],
+              "originalMeaning": "[<b>either</b> … or …의 형태로] …거나 …거나 (어느 하나가[것이라도])"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/32055a7915c24330bd683fbbac1651ea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/32055a7915c24330bd683fbbac1651ea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fb29109af3ddb9498d0c2c4464e86ab7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "둘 중 어느 쪽에나 앉으십시오",
+      "text": "Sit on <b>either</b> side."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느 쪽 소년도 모른다.",
+      "text": "I don’t know <b>either</b> boy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너 아니면 그가 잘못이다",
+      "text": "<b>Either</b> you or he is wrong."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 군이나 내가 가야 한다",
+      "text": "<b>Either</b> Mr. Lee or I must go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실은 나도 잘 모르겠어",
+      "text": "I must confess I don't know <b>either</b>."
+    }
+  ],
+  "isWordType": true
+}

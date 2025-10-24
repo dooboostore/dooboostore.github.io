@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "ancestor",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈænsestə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조상, 선조(opp. descendant)",
+              "examples": [
+                {
+                  "text": "be <b>ancestor</b> to",
+                  "translatedText": "…의 조상이다"
+                }
+              ],
+              "originalMeaning": "조상, 선조(opp. descendant)"
+            },
+            {
+              "meaning": "시조, 원종",
+              "examples": [],
+              "originalMeaning": "시조, 원종"
+            },
+            {
+              "meaning": "원형, 선구자",
+              "examples": [
+                {
+                  "text": "The balloon is an <b>ancestor</b> of the modern dirigible.",
+                  "translatedText": "기구(氣球)는 현대 비행선의 원형이다."
+                }
+              ],
+              "originalMeaning": "원형, 선구자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/186e3d20d5844f2598b28bca736d173f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/186e3d20d5844f2598b28bca736d173f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "여성 명사",
+          "value": "ancestress"
+        }
+      ],
+      "aliasConjugation": "ancestress",
+      "aliasConjugationPos": "여성 명사",
+      "gdid": "be79d12ddd0cd2cb16da47b7726137a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 조상은 공동 묘지에 묻혀 있다.",
+      "text": "His <b>ancestors</b> lie in the cemetery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기구는 현대 비행선의 원형이다.",
+      "text": "The balloon is an <b>ancestor</b> of the modern dirigible."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 풍습은 우리 선조로부터 전해내려온 것이다",
+      "text": "The custom has come down to us from our <b>ancestors</b>."
+    }
+  ],
+  "isWordType": true
+}

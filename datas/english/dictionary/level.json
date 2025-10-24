@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "level",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlevl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수평; 수평면, 평면; 수평선",
+              "examples": [
+                {
+                  "text": "the <b>level</b> of the sea",
+                  "translatedText": "해면"
+                }
+              ],
+              "originalMeaning": "수평; 수평면, 평면; 수평선"
+            },
+            {
+              "meaning": "[기계] 수준기, (통신·측량의) 레벨 수준 측정",
+              "examples": [
+                {
+                  "text": "take a <b>level</b>",
+                  "translatedText": "(두 지점의) 고도차를 재다"
+                }
+              ],
+              "originalMeaning": "[기계] 수준기, (통신·측량의) 레벨 수준 측정"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "수평의(horizontal), 요철[기복]이 없는, 평평한, 평탄한",
+              "examples": [
+                {
+                  "text": "two <b>level</b> tablespoonfuls of sugar",
+                  "translatedText": "찻숟가락 2개에 깎아 담은 분량의 설탕"
+                }
+              ],
+              "originalMeaning": "수평의(horizontal), 요철[기복]이 없는, 평평한, 평탄한"
+            },
+            {
+              "meaning": "같은 수준[높이]의, 동등한(equal) ((with, to))",
+              "examples": [
+                {
+                  "text": "a <b>level</b> race",
+                  "translatedText": "막상막하의 경주"
+                }
+              ],
+              "originalMeaning": "같은 수준[높이]의, 동등한(equal) ((with, to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<표면 등을> 평평하게 하다, 고르다",
+              "examples": [
+                {
+                  "text": "<b>level</b> the ground",
+                  "translatedText": "땅을 고르다"
+                }
+              ],
+              "originalMeaning": "<표면 등을> 평평하게 하다, 고르다"
+            },
+            {
+              "meaning": "수평으로 놓다, 같은 높이로 하다 ((up, down))",
+              "examples": [
+                {
+                  "text": "<b>level</b> a road up[down] before building",
+                  "translatedText": "공사를 하기 전에 도로를 평평하게 돋우다[깎다]"
+                }
+              ],
+              "originalMeaning": "수평으로 놓다, 같은 높이로 하다 ((up, down))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e0e129ae069a4ce29a3570eb79a497ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e0e129ae069a4ce29a3570eb79a497ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "levels"
+        },
+        {
+          "type": "과거형",
+          "value": "levelled, leveled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "levelling, leveling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "levelled, leveled"
+        }
+      ],
+      "aliasConjugation": "levels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f54310eeb9cc521b89f404eb3d99d189",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "죽음은 만인을 평등하게 한다",
+      "text": "Death levels all men."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물은 수평으로 되게 마련이다.",
+      "text": "Water finds its <b>level</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 독해력은 중학 수준이다.",
+      "text": "He reads at a junior high school <b>level</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지위가 낮은 사람들의 임금은 낮다",
+      "text": "Wages for those below <b>level</b> are very low."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제트기는 만 피트에서 수평을 잡았다",
+      "text": "The jet levelled off[out] at ten thousand feet."
+    }
+  ],
+  "isWordType": true
+}

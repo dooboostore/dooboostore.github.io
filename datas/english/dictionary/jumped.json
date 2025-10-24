@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "jump",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dʒʌmp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뛰다, 뛰어오르다, 도약하다(leap); (갑자기 또는 빠르게) 이동하다, 움직이다; <동물이> 장애물을 뛰어넘다",
+              "examples": [
+                {
+                  "text": "<b>jump</b> down",
+                  "translatedText": "뛰어내리다"
+                }
+              ],
+              "originalMeaning": "뛰다, 뛰어오르다, 도약하다(leap); (갑자기 또는 빠르게) 이동하다, 움직이다; <동물이> 장애물을 뛰어넘다"
+            },
+            {
+              "meaning": "약동하다, 뛰놀다; 소스라치다; 꿈틀하다; (놀라서) 움찔하다 ((at)); <충치 등이> 쑤시다",
+              "examples": [
+                {
+                  "text": "My heart <b>jumped</b> at the unexpected news.",
+                  "translatedText": "그 뜻밖의 소식을 듣고 소스라쳤다."
+                }
+              ],
+              "originalMeaning": "약동하다, 뛰놀다; 소스라치다; 꿈틀하다; (놀라서) 움찔하다 ((at)); <충치 등이> 쑤시다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "뛰어넘다, 뛰어넘게 하다",
+              "examples": [
+                {
+                  "text": "<b>jump</b> a narrow stream",
+                  "translatedText": "좁은 개울을 뛰어넘다"
+                }
+              ],
+              "originalMeaning": "뛰어넘다, 뛰어넘게 하다"
+            },
+            {
+              "meaning": "건너뛰다, 피하다, 우회하다(bypass)",
+              "examples": [],
+              "originalMeaning": "건너뛰다, 피하다, 우회하다(bypass)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "뜀, 뛰어오름, 도약, 점프 경기(leap)(cf. BROAD[LONG, POLE, (RUNNING) HIGH] JUMP)",
+              "examples": [],
+              "originalMeaning": "뜀, 뛰어오름, 도약, 점프 경기(leap)(cf. BROAD[LONG, POLE, (RUNNING) HIGH] <b>JUMP</b>)"
+            },
+            {
+              "meaning": "낙하산 강하",
+              "examples": [],
+              "originalMeaning": "낙하산 강하"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/db97109799d84ae9a0f72d400c94bb01",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/db97109799d84ae9a0f72d400c94bb01",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "jumps"
+        },
+        {
+          "type": "과거형",
+          "value": "jumped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "jumping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "jumped"
+        }
+      ],
+      "aliasConjugation": "jumps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0375e7ee425d83cca609ff07446c0dd1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네가 나보다 한발 앞질렀구나",
+      "text": "You've beaten me to it. or You've edged out me. or You've gotten[had] the <b>jump</b> on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몸을 굽혀라 내가 뛰어넘을 테니.",
+      "text": "Bend down, I’ll <b>jump</b> over you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 수는 3,000으로 격증하였다",
+      "text": "The number leaped[<b>jumped</b>] to 3,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고양이는 테이블 위로 뛰어 올랐다.",
+      "text": "The cat <b>jumped</b> onto the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "성급하게 단정해서는 안 된다",
+      "text": "We must not <b>jump</b> to a conclusion."
+    }
+  ],
+  "isWordType": true
+}

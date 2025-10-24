@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "assign",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈsaɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<일·사물·방 등을> 할당하다, 배당하다(allot) ((to))",
+              "examples": [
+                {
+                  "text": "<b>assign</b> work to each man",
+                  "translatedText": "각자에게 작업을 할당하다"
+                }
+              ],
+              "originalMeaning": "<일·사물·방 등을> 할당하다, 배당하다(allot) ((to))"
+            },
+            {
+              "meaning": "<사람을 임무·직책 등에> 임명하다, 선임하다(appoint), 선정하다 ((for, to)); <남에게 …하도록> 명하다, 임명하다",
+              "examples": [
+                {
+                  "text": "<b>assign</b> a person for a guard",
+                  "translatedText": "…을 수위[경호원]로 임명하다"
+                }
+              ],
+              "originalMeaning": "<사람을 임무·직책 등에> 임명하다, 선임하다(appoint), 선정하다 ((for, to)); <남에게 …하도록> 명하다, 임명하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(채권자를 위해 타인에게) 재산을 위탁하다",
+              "examples": [],
+              "originalMeaning": "(채권자를 위해 타인에게) 재산을 위탁하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 양수인, 수탁인(assignee)",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 양수인, 수탁인(assignee)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b0aef3cd8b5c4d0b87d6c4a0d79ad919",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b0aef3cd8b5c4d0b87d6c4a0d79ad919",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assigns"
+        },
+        {
+          "type": "과거형",
+          "value": "assigned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assigning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assigned"
+        }
+      ],
+      "aliasConjugation": "assigns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "49f1fa9c83d85232043b6396301e3720",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 런던 지점 근무를 명받았다",
+      "text": "I was <b>assigned</b> to work in the London branch office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리들에게 그 호텔에서 가장 좋은 방을 할당해 주었다.",
+      "text": "He <b>assigned</b> us the best room of the hotel."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나의 소속은 아직 미정이다",
+      "text": "I am not yet <b>assigned</b> any post. or I am still free from any affiliation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 신체검사에 합격하여 보병에 편입되었다",
+      "text": "He passed the physical examination and was <b>assigned</b> to the infantry."
+    }
+  ],
+  "isWordType": true
+}

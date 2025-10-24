@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "entry": "usage",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│juːsɪdʒ; │juːzɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 관습(habit), 관례, 관행; [법] 관습(법)",
+              "examples": [
+                {
+                  "text": "social <b>usage</b>",
+                  "translatedText": "사회적 관습"
+                }
+              ],
+              "originalMeaning": "[UC/] 관습(habit), 관례, 관행; [법] 관습(법)"
+            },
+            {
+              "meaning": "[UC/] (언어의) 관용법; 언어 용법, 어법",
+              "examples": [
+                {
+                  "text": "American <b>usage</b>",
+                  "translatedText": "미국 어법"
+                }
+              ],
+              "originalMeaning": "[UC/] (언어의) 관용법; 언어 용법, 어법"
+            },
+            {
+              "meaning": "[U] 사용(법)(use), 용법, 쓰임새; 사용량",
+              "examples": [
+                {
+                  "text": "annual <b>usage</b>",
+                  "translatedText": "연간 사용량"
+                }
+              ],
+              "originalMeaning": "[U] 사용(법)(use), 용법, 쓰임새; 사용량"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e01568d765c5459cb303730b1b89d800",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e01568d765c5459cb303730b1b89d800",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ec4cb4caa72acb65429bc5d5b8611172",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 영어 교수법은 널리 쓰이고 있다.",
+      "text": "This teaching method of English has wide <b>usage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "관행으로 허용되어 있다",
+      "text": "It is sanctioned by <b>usage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영어의 어법",
+      "text": "English <b>usage</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "미국 어법",
+      "text": "American <b>usage</b>"
+    }
+  ],
+  "isWordType": true
+}

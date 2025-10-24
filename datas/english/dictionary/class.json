@@ -1,0 +1,165 @@
+{
+  "items": [
+    {
+      "entry": "class",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "klæs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(공통적 성질을 가진) 종류(kind), 부류",
+              "examples": [],
+              "originalMeaning": "(공통적 성질을 가진) 종류(kind), 부류"
+            },
+            {
+              "meaning": "[CU] (학교의) 클래스, 학급, 반(cf. FORM); (클래스의) 학습 시간, 수업; (편물·요리 등의) 강습",
+              "examples": [
+                {
+                  "text": "in[after] <b>class</b>",
+                  "translatedText": "수업 중[방과 후]에"
+                }
+              ],
+              "originalMeaning": "[CU] (학교의) 클래스, 학급, 반(cf. FORM); (클래스의) 학습 시간, 수업; (편물·요리 등의) 강습"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "계급의, 계급적인",
+              "examples": [],
+              "originalMeaning": "계급의, 계급적인"
+            },
+            {
+              "meaning": "학급의, 반의",
+              "examples": [],
+              "originalMeaning": "학급의, 반의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "분류하다(classify), 등급[품등]을 정하다(size up)",
+              "examples": [
+                {
+                  "text": "<b>class</b> samples",
+                  "translatedText": "표본을 분류하다"
+                }
+              ],
+              "originalMeaning": "분류하다(classify), 등급[품등]을 정하다(size up)"
+            },
+            {
+              "meaning": "<학생을> 조(組)로 나누다, <학생을> …의 반에 두다",
+              "examples": [],
+              "originalMeaning": "<학생을> 조(組)로 나누다, <학생을> …의 반에 두다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/42c196e1eee34b568da7ab4b7d36c050",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/42c196e1eee34b568da7ab4b7d36c050",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "classes"
+        },
+        {
+          "type": "복수형",
+          "value": "classes"
+        },
+        {
+          "type": "과거형",
+          "value": "classed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "classing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "classed"
+        }
+      ],
+      "aliasConjugation": "classes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2f9a77bf029ea3d34c52aad78301207e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "class.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "classic(al), classification, classified",
+              "examples": [],
+              "originalMeaning": "classic(al), classification, classified"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/79c59be0e01042d1acd48c5ab1a5b482",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/79c59be0e01042d1acd48c5ab1a5b482",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "classes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1aee74f2bd5c61c7280069fc516c8e70",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수업 중에 이야기하지 마라",
+      "text": "Don't gossip in the <b>class</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 인원이 많은 학급을 가르치고 있다.",
+      "text": "He teaches a large <b>class</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영어는 그가 반에서 으뜸이다",
+      "text": "He leads his <b>class</b> in English."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "김 선생은 수업 중이다",
+      "text": "Mr. Kim is now teaching (his <b>class</b>)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 수업 중에 자꾸 잠만 잔다",
+      "text": "He frequently sleeps in <b>class</b>."
+    }
+  ],
+  "isWordType": true
+}

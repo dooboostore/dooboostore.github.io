@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "entertainment",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│entər│teɪnmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "환대, 대접(hospitality)",
+              "examples": [
+                {
+                  "text": "<b>entertainment</b> expenses",
+                  "translatedText": "접대비"
+                }
+              ],
+              "originalMeaning": "환대, 대접(hospitality)"
+            },
+            {
+              "meaning": "주연, 연회",
+              "examples": [],
+              "originalMeaning": "주연, 연회"
+            },
+            {
+              "meaning": "[U] 오락(amusement), 기분 전환; [C] 연예, 여흥",
+              "examples": [
+                {
+                  "text": "a dramatic[theatrical] <b>entertainment</b>",
+                  "translatedText": "연예, 연극"
+                }
+              ],
+              "originalMeaning": "[U] 오락(amusement), 기분 전환; [C] 연예, 여흥"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b0766d514f964a3dbd2b45830236c4a2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b0766d514f964a3dbd2b45830236c4a2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a0fa4a5dbe8bb0eb256bfeb4c93b63b8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여흥으로 그 모임의 분위기가 흥겨워졌다.",
+      "text": "<b>Entertainment</b> enlivened the meeting."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여흥으로 춤과 노래가 있었다",
+      "text": "For <b>entertainment</b>, dances and songs were presented."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교제비는 임금에서 공제되었다",
+      "text": "The <b>entertainment</b> expenses were deducted from wages."
+    }
+  ],
+  "isWordType": true
+}

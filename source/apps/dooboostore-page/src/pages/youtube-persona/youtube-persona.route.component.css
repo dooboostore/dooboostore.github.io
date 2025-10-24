@@ -1,0 +1,151 @@
+.content-section {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-title i {
+    color: #ff0000;
+}
+
+.persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.persona-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.persona-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.persona-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem;
+}
+
+.persona-emojis {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.emoji {
+    animation: float 3s ease-in-out infinite;
+}
+
+.emoji:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.emoji:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.emoji:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.emoji:nth-child(5) {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.persona-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #222;
+}
+
+.persona-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.keyword {
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .section-title {
+        color: #e0e0e0;
+    }
+    
+    .persona-card {
+        background: #2a2a2a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .persona-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+    
+    .persona-title {
+        color: #e0e0e0;
+    }
+    
+    .keyword {
+        background: #3a3a3a;
+        color: #b0b0b0;
+    }
+    
+    .loading {
+        color: #b0b0b0;
+    }
+}
+
+@media (max-width: 768px) {
+    .persona-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .content-section {
+        padding: 1rem;
+    }
+}

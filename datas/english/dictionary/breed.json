@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "breed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "briːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<동물이> <새끼를> 낳다, <새가> <알을> 까다",
+              "examples": [],
+              "originalMeaning": "<동물이> <새끼를> 낳다, <새가> <알을> 까다"
+            },
+            {
+              "meaning": "사육하다, 번식시키다; <새 품종을> 만들어 내다, <품종을> 개량하다, 교배시키다",
+              "examples": [
+                {
+                  "text": "He <b>breed</b> s cattle for the market.",
+                  "translatedText": "그는 시장에 내다 팔 소를 사육한다."
+                }
+              ],
+              "originalMeaning": "사육하다, 번식시키다; <새 품종을> 만들어 내다, <품종을> 개량하다, 교배시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<동물이> 새끼를 낳다; 번식하다, 자라다",
+              "examples": [],
+              "originalMeaning": "<동물이> 새끼를 낳다; 번식하다, 자라다"
+            },
+            {
+              "meaning": "동물[식물]을 번식시키다",
+              "examples": [],
+              "originalMeaning": "동물[식물]을 번식시키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(동식물의) 품종, 종속, 종류, 타입, 계통(lineage)",
+              "examples": [
+                {
+                  "text": "a new <b>breed</b> of cattle",
+                  "translatedText": "소의 신품종"
+                }
+              ],
+              "originalMeaning": "(동식물의) 품종, 종속, 종류, 타입, 계통(lineage)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/076460d5eec74835819882d7b436fbd5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/076460d5eec74835819882d7b436fbd5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "breeds"
+        },
+        {
+          "type": "과거형",
+          "value": "bred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "breeding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bred"
+        }
+      ],
+      "aliasConjugation": "breeds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f0559c4279b5e671f1875c98eb7b8fe3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 집안도 좋고 교양도 있다",
+      "text": "He is well-born and well-bred."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토끼는 새끼를 매우 빨리[자주] 낳는다",
+      "text": "Rabbits <b>breed</b> very quickly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 입이 걸어 남의 욕을 잘한다",
+      "text": "His mouth breeds ready slander."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 목장에서 말을 사육한다",
+      "text": "He breeds[raises] horses on his ranch."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파리는 폐물 속에서 번식한다",
+      "text": "Flies <b>breed</b> among waste material."
+    }
+  ],
+  "isWordType": true
+}

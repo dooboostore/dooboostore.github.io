@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "purse",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɜːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[영] 지갑([미] wallet), 돈주머니, 동전 지갑; [미] (어깨끈이 없는) 핸드백",
+              "examples": [
+                {
+                  "text": "Who holds the <b>purse</b> rules the house.",
+                  "translatedText": "[속담] 돈이 제갈량. ((세상 일이 돈으로 좌우됨을 비유))"
+                }
+              ],
+              "originalMeaning": "[영] 지갑([미] wallet), 돈주머니, 동전 지갑; [미] (어깨끈이 없는) 핸드백"
+            },
+            {
+              "meaning": "금전; 자금, 재원, 재산",
+              "examples": [],
+              "originalMeaning": "금전; 자금, 재원, 재산"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<입술 등을> 오므리다, <눈쌀을> 찌푸리다 ((up)), 지갑에 넣다 ((up))",
+              "examples": [],
+              "originalMeaning": "<입술 등을> 오므리다, <눈쌀을> 찌푸리다 ((up)), 지갑에 넣다 ((up))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "오므라지다, 주름지다",
+              "examples": [],
+              "originalMeaning": "오므라지다, 주름지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c5596827dd742009c89e6b031f25ffe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c5596827dd742009c89e6b031f25ffe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "purses"
+        },
+        {
+          "type": "과거형",
+          "value": "pursed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pursing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pursed"
+        }
+      ],
+      "aliasConjugation": "purses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "be9c767b15a1570e390a06e85dce1eaf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지갑이 없어진 것을 알았다.",
+      "text": "I found my <b>purse</b> gone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 지갑을 도둑 맞았다.",
+      "text": "She had her <b>purse</b> lifted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 지갑에 100,000원이 들어 있다",
+      "text": "This <b>purse</b> has 100,000 won in it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 내 지갑을 홱 가져가 버렸다[잡아챘다].",
+      "text": "She whipped my <b>purse</b> away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소매치기가 지갑을 채 갔다",
+      "text": "A pickpocket walked[made] off with the <b>purse</b>."
+    }
+  ],
+  "isWordType": true
+}

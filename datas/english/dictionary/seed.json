@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "seed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "siːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "씨, 열매, 종자",
+              "examples": [
+                {
+                  "text": "grain seeds",
+                  "translatedText": "곡물의 종자"
+                }
+              ],
+              "originalMeaning": "씨, 열매, 종자"
+            },
+            {
+              "meaning": "종자가 되는 것; (종자로 쓰는) 괴경(塊莖), 구근(球根)",
+              "examples": [],
+              "originalMeaning": "종자가 되는 것; (종자로 쓰는) 괴경(塊莖), 구근(球根)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "씨의, 종자용의",
+              "examples": [
+                {
+                  "text": "<b>seed</b> potatoes",
+                  "translatedText": "씨감자"
+                }
+              ],
+              "originalMeaning": "씨의, 종자용의"
+            },
+            {
+              "meaning": "알이 작은",
+              "examples": [
+                {
+                  "text": "a <b>seed</b> egg",
+                  "translatedText": "작은 알"
+                }
+              ],
+              "originalMeaning": "알이 작은"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "씨를 뿌리다",
+              "examples": [],
+              "originalMeaning": "씨를 뿌리다"
+            },
+            {
+              "meaning": "씨를 맺다, 씨가 생기다; 종자를 떨어뜨리다",
+              "examples": [],
+              "originalMeaning": "씨를 맺다, 씨가 생기다; 종자를 떨어뜨리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2fe1c952ea584620bd7d99adcaef9930",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2fe1c952ea584620bd7d99adcaef9930",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "seeds"
+        },
+        {
+          "type": "과거형",
+          "value": "seeded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "seeding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "seeded"
+        }
+      ],
+      "aliasConjugation": "seeds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ee1a81b37d1cea9706b61968388d2248",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대부분의 식물은 종자에 의해 번식한다.",
+      "text": "Most plants reproduce by <b>seed</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나쁜 씨에서는 나쁜 열매가 맺게 마련이다.",
+      "text": "Bad <b>seed</b> must produce bad corn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "농부들은 주로 봄에 파종한다",
+      "text": "Farmers plant seeds mainly in the spring."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "씨 위에 살짝 흙을 덮어 주어라",
+      "text": "Cover the seeds with a thin layer of soil[earth]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 장차 화근이 될 것이다",
+      "text": "It will be the cause of trouble[sow the seeds of trouble] in the future."
+    }
+  ],
+  "isWordType": true
+}

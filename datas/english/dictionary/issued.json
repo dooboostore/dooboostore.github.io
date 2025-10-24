@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "issue",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪʃuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "발행물; (특히 출판물의) 발행 부수, (제…)판[쇄]",
+              "examples": [
+                {
+                  "text": "the current <b>issue</b>",
+                  "translatedText": "최신[금월, 금주]호"
+                }
+              ],
+              "originalMeaning": "발행물; (특히 출판물의) 발행 부수, (제…)판[쇄]"
+            },
+            {
+              "meaning": "[UC/] 발행, 발포 ((of)); (어음 등의) 발행",
+              "examples": [
+                {
+                  "text": "the <b>issue</b> of an order",
+                  "translatedText": "명령의 발포"
+                }
+              ],
+              "originalMeaning": "[UC/] 발행, 발포 ((of)); (어음 등의) 발행"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "나오다, 나서다, 유출하다, 분출하다 ((forth, out))",
+              "examples": [
+                {
+                  "text": "smokeissuing forth from a volcano",
+                  "translatedText": "화산에서 분출되고 있는 연기"
+                }
+              ],
+              "originalMeaning": "나오다, 나서다, 유출하다, 분출하다 ((forth, out))"
+            },
+            {
+              "meaning": "(결과로) 끝나다, 결국 (…로) 되다(end) ((in))",
+              "examples": [
+                {
+                  "text": "The attempt <b>issue</b> d in failure.",
+                  "translatedText": "그 시도는 실패로 끝났다."
+                }
+              ],
+              "originalMeaning": "(결과로) 끝나다, 결국 (…로) 되다(end) ((in))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<명령·면허증 등을> 내다, 내리다, 발행하다, 발포(發布)하다",
+              "examples": [
+                {
+                  "text": "<b>issue</b> an order to soldiers",
+                  "translatedText": "병사에게 명령을 내리다"
+                }
+              ],
+              "originalMeaning": "<명령·면허증 등을> 내다, 내리다, 발행하다, 발포(發布)하다"
+            },
+            {
+              "meaning": "배급[지급]하다, 넘겨주다",
+              "examples": [
+                {
+                  "text": "<b>issue</b> ammunition to troops",
+                  "translatedText": "군대에 탄약을 지급하다"
+                }
+              ],
+              "originalMeaning": "배급[지급]하다, 넘겨주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/642b4b7cc721444fa9afbae822737eb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/642b4b7cc721444fa9afbae822737eb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "issues"
+        },
+        {
+          "type": "과거형",
+          "value": "issued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "issuing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "issued"
+        }
+      ],
+      "aliasConjugation": "issues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "30865bcc4d52f8d930dbce18e18fb66e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 신문을 또바기 매일 읽는다",
+      "text": "He never misses an <b>issue</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 시도는 실패로 끝났다.",
+      "text": "The attempt <b>issued</b> in failure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "통용 기간은 당일 한",
+      "text": "Good[Valid] for the day of <b>issue</b> only."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "왕은 노예를 석방하라는 어명을 내렸다.",
+      "text": "The king <b>issued</b> a command for the slave to be[a command that the slave (should) be] set free."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 30년 전에 처음 나왔다",
+      "text": "The book was first <b>issued</b> 30 years ago."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "cabin",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkæbɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(통나무) 오두막집(hut)",
+              "examples": [],
+              "originalMeaning": "(통나무) 오두막집(hut)"
+            },
+            {
+              "meaning": "선실, 객실 ((상선의 1·2등 객실))",
+              "examples": [
+                {
+                  "text": "a <b>cabin</b> deluxe",
+                  "translatedText": "특등 선실"
+                }
+              ],
+              "originalMeaning": "선실, 객실 ((상선의 1·2등 객실))"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "(배의) 특별 2등으로",
+              "examples": [
+                {
+                  "text": "travel <b>cabin</b>",
+                  "translatedText": "특별 2등으로 배 여행을 하다"
+                }
+              ],
+              "originalMeaning": "(배의) 특별 2등으로"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "오두막집[좁은 곳]에서 살다[틀어박히다]",
+              "examples": [],
+              "originalMeaning": "오두막집[좁은 곳]에서 살다[틀어박히다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f79ee76d62a749b299cfc1c6af6c436c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f79ee76d62a749b299cfc1c6af6c436c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f0b32bd34ad166b3e81eb4e76e4e7d1f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 근처 오두막으로 피난했다.",
+      "text": "We took shelter in a nearby <b>cabin</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무선 전신실 a wireless <b>cabin</b>",
+      "text": ";a radioroom"
+    }
+  ],
+  "isWordType": true
+}

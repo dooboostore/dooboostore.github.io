@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "entry": "Paul",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pɔ́:l"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "남자 이름",
+              "examples": [],
+              "originalMeaning": "남자 이름"
+            },
+            {
+              "meaning": "[성서] Saint ~(사도) 바울(?-67?) ((그리스도의 제자, 신약 성서의 저자 중의 한 사람))",
+              "examples": [],
+              "originalMeaning": "[성서] Saint ~(사도) 바울(?-67?) ((그리스도의 제자, 신약 성서의 저자 중의 한 사람))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/da6c794adae24d3c9807bc43eb1a52e0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/da6c794adae24d3c9807bc43eb1a52e0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2bd32c2982b2bb8ef1041467b9cd918f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 이쪽 빚으로 저쪽 빚을 갚고 있다",
+      "text": "I'm robbing Peter to pay <b>Paul</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "Ⅱ 교황 바오로 2세",
+      "text": "Pope <b>Paul</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": null,
+      "text": "St. <b>Paul</b>"
+    }
+  ],
+  "isWordType": true
+}

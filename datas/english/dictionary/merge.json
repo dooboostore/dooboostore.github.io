@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "merge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mɜːrdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<2개(이상)의 것을> 합병하다, 병합하다 ((together, in, into, with))",
+              "examples": [
+                {
+                  "text": "mergethe two companies (together)",
+                  "translatedText": "그 두 회사를 합병하다"
+                }
+              ],
+              "originalMeaning": "<2개(이상)의 것을> 합병하다, 병합하다 ((together, in, into, with))"
+            },
+            {
+              "meaning": "(서서히) 바꾸다; 녹아들게 하다, 융합시키다, 몰입(沒入)시키다 ((in, into, with)), (=mix)",
+              "examples": [
+                {
+                  "text": "<b>merge</b> one's views with another's",
+                  "translatedText": "자신의 생각을 남의 생각에 맞춰 동화시키다"
+                }
+              ],
+              "originalMeaning": "(서서히) 바꾸다; 녹아들게 하다, 융합시키다, 몰입(沒入)시키다 ((in, into, with)), (=<span class='related_word' lang='en' >mix</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 합병[병합]하다 ((together, with)); <도로·강 등이> 합류하다 ((together))",
+              "examples": [
+                {
+                  "text": "<b>Merge</b>.",
+                  "translatedText": "[게시] (전방에) 도로 합류 (주의)."
+                }
+              ],
+              "originalMeaning": "(…와) 합병[병합]하다 ((together, with)); <도로·강 등이> 합류하다 ((together))"
+            },
+            {
+              "meaning": "<2개(이상)의 것이> 융합하다 ((together)); (…으로) 녹아들다, (녹아들듯) 차츰 …이 되다 ((in, into))",
+              "examples": [
+                {
+                  "text": "Dawnmerged intoday.",
+                  "translatedText": "차차 날이 밝아졌다."
+                }
+              ],
+              "originalMeaning": "<2개(이상)의 것이> 융합하다 ((together)); (…으로) 녹아들다, (녹아들듯) 차츰 …이 되다 ((in, into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92396e44a97f4b6b8e6835c5de3490ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92396e44a97f4b6b8e6835c5de3490ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "merges"
+        },
+        {
+          "type": "과거형",
+          "value": "merged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "merging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "merged"
+        }
+      ],
+      "aliasConjugation": "merges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2d7e218333cea59c3c1746ef6207027c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "exact:example",
+      "translatedText": "도로 합류 .",
+      "text": "<b>Merge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "차차 날이 밝아졌다.",
+      "text": "Dawn merged into day."
+    }
+  ],
+  "isWordType": true
+}

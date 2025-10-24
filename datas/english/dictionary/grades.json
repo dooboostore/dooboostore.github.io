@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "grade",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡreɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "등급, 계급, 등위, 품등(step, degree), (식품의) 품질 등급; (숙달·지능·과정 등의) 정도 ((of))",
+              "examples": [
+                {
+                  "text": "<b>Grade</b> A milk A",
+                  "translatedText": "등급의 우유"
+                }
+              ],
+              "originalMeaning": "등급, 계급, 등위, 품등(step, degree), (식품의) 품질 등급; (숙달·지능·과정 등의) 정도 ((of))"
+            },
+            {
+              "meaning": "동일 계급[학년, 정도, 등급]에 속하는 자; [주로 미] [군사] 계급",
+              "examples": [],
+              "originalMeaning": "동일 계급[학년, 정도, 등급]에 속하는 자; [주로 미] [군사] 계급"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을 등급별로 나누다, 유별(類別)하다, 선별하다",
+              "examples": [],
+              "originalMeaning": "…을 등급별로 나누다, 유별(類別)하다, 선별하다"
+            },
+            {
+              "meaning": "…의 등급[격]을 매기다[정하다]",
+              "examples": [
+                {
+                  "text": "<b>grade</b> apples for their size",
+                  "translatedText": "크기로 사과의 등급을 매기다"
+                }
+              ],
+              "originalMeaning": "…의 등급[격]을 매기다[정하다]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "…등급이다",
+              "examples": [
+                {
+                  "text": "This pen <b>grade</b> s B.",
+                  "translatedText": "이 펜은 B급이다."
+                }
+              ],
+              "originalMeaning": "…등급이다"
+            },
+            {
+              "meaning": "점차 변화하다 ((into))",
+              "examples": [],
+              "originalMeaning": "점차 변화하다 ((into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fcf90f5f219b4a49af85f9262dbfe5be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fcf90f5f219b4a49af85f9262dbfe5be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "grades"
+        },
+        {
+          "type": "과거형",
+          "value": "graded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "grading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "graded"
+        }
+      ],
+      "aliasConjugation": "grades",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "02119a6f5beb20ef791c104435c93293",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "학교 성적이 뚝 떨어졌다",
+      "text": "My <b>grades</b> really fell."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이번 학기에는 석차가 내려갔다",
+      "text": "My <b>grades</b> went down this term."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이번 학기의 영어 점수는 좋았다",
+      "text": "His semester <b>grade</b> in English was good."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 성적이 떨어져서 엄마는 몹시 화가 나셨다",
+      "text": "My mom's mad because my <b>grades</b> went down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 독본은 2학년 학생에게는 무리다",
+      "text": "This reader is too difficult for second-year <b>grade</b> pupils."
+    }
+  ],
+  "isWordType": true
+}

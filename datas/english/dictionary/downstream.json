@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "downstream",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌdaʊnˈstriːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사, 부사",
+          "meanings": [
+            {
+              "meaning": "하류의[에], 강 아래의[로](opp. upstream)",
+              "examples": [],
+              "originalMeaning": "하류의[에], 강 아래의[로](opp. upstream)"
+            },
+            {
+              "meaning": "(석유 산업의) 하류 부문의[에서] ((수송·정제·판매의 단계))",
+              "examples": [],
+              "originalMeaning": "(석유 산업의) 하류 부문의[에서] ((수송·정제·판매의 단계))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(산업에서) 하류 부분, 판매 부분",
+              "examples": [],
+              "originalMeaning": "(산업에서) 하류 부분, 판매 부분"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7bfc33e26eb244edab5ef00d29081afd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7bfc33e26eb244edab5ef00d29081afd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1b0de700cd02fba164b73ba4ff536fbc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "3마일 하류에 한 마을이 있다",
+      "text": "There is a village three miles <b>downstream</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물살이 보트를 하류로 떠내려가게 했다.",
+      "text": "The current drifted the boat <b>downstream</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "threat",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "θret"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "위협, 협박",
+              "examples": [
+                {
+                  "text": "make a <b>threat</b>",
+                  "translatedText": "으르다, 협박하다"
+                }
+              ],
+              "originalMeaning": "위협, 협박"
+            },
+            {
+              "meaning": "[a ~] 흉조(凶兆), 조짐, 징후 ((of))",
+              "examples": [
+                {
+                  "text": "There is a <b>threat</b> of rain.",
+                  "translatedText": "비가 올 징후가 있다."
+                }
+              ],
+              "originalMeaning": "[a ~] 흉조(凶兆), 조짐, 징후 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "(=THREATEN)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >THREATEN</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9cf3b519523f408189e216363b5cdc3b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9cf3b519523f408189e216363b5cdc3b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9c9254935431b4f6603a11733165231e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "thereat",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "-ǽt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "그곳에(서), 그때",
+              "examples": [],
+              "originalMeaning": "그곳에(서), 그때"
+            },
+            {
+              "meaning": "그 때문에",
+              "examples": [],
+              "originalMeaning": "그 때문에"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a176d75bfe2b4a28ad93ef2d725898a8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a176d75bfe2b4a28ad93ef2d725898a8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "62c56eb8c38b4cef171dae7eeffefb67",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 올 징후가 있다.",
+      "text": "There is a <b>threat</b> of rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 말은 협박이나 다름없다",
+      "text": "This amounts to a <b>threat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 협박을 하여 그로 하여금 말하게 했다",
+      "text": "They compelled him to talk with threats."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 위협은 군중에게 크게 주효했다",
+      "text": "This <b>threat</b> had a noticeable effect on the crowd."
+    }
+  ],
+  "isWordType": true
+}

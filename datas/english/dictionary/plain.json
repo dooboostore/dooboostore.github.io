@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "plain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pléin"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "명백한, 분명한, 똑똑히 보이는[들리는], 명료한; 쉬운, 평이한, 간단한, 알기 쉬운 (=evident)",
+              "examples": [
+                {
+                  "text": "in <b>plain</b> English",
+                  "translatedText": "쉬운 영어로, 쉽게 말하자면"
+                }
+              ],
+              "originalMeaning": "명백한, 분명한, 똑똑히 보이는[들리는], 명료한; 쉬운, 평이한, 간단한, 알기 쉬운 (=<span class='related_word' lang='en' >evident</span>)"
+            },
+            {
+              "meaning": "순전한, 철저한",
+              "examples": [
+                {
+                  "text": "<b>plain</b> madness",
+                  "translatedText": "광기의 극치"
+                }
+              ],
+              "originalMeaning": "순전한, 철저한"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "또렷이 <발음하다 ((등))>, 분명하게, 알기 쉽게; 솔직히",
+              "examples": [],
+              "originalMeaning": "또렷이 <발음하다 ((등))>, 분명하게, 알기 쉽게; 솔직히"
+            },
+            {
+              "meaning": "아주, 전적으로",
+              "examples": [
+                {
+                  "text": "<b>plain</b> stubborn",
+                  "translatedText": "아주 완고한"
+                }
+              ],
+              "originalMeaning": "아주, 전적으로"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 평지, 평원, 벌판, 광야; [pl.] [미] 대초원 ((북미 로키 산맥 동부의)); [시어] 싸움터",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 평지, 평원, 벌판, 광야; [pl.] [미] 대초원 ((북미 로키 산맥 동부의)); [시어] 싸움터"
+            },
+            {
+              "meaning": "[the P~] 평원당 ((프랑스 혁명시대, 국민 의회의 온건파))",
+              "examples": [],
+              "originalMeaning": "[the P~] 평원당 ((프랑스 혁명시대, 국민 의회의 온건파))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/714f100e502b459ab68fdea0aff18f30",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/714f100e502b459ab68fdea0aff18f30",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "plainer"
+        },
+        {
+          "type": "최상급",
+          "value": "plainest"
+        }
+      ],
+      "aliasConjugation": "plainer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "e097fdfdd533aa8eb32c38c609c14047",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "plain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[고어·방언] 한탄하다, 슬퍼하다; 푸념하다",
+              "examples": [],
+              "originalMeaning": "[고어·방언] 한탄하다, 슬퍼하다; 푸념하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/291a77434fdc4a88a06d0f02dc0106e4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/291a77434fdc4a88a06d0f02dc0106e4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "plainer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "e681ff32510aa3e11f6c223f85ce8d79",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그를 뚜렷이 볼 수가 있었다",
+      "text": "I could see him plainly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 뜻은 아주 뚜렷하다",
+      "text": "The meaning is quite <b>plain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "들에 나무들이 산재해 있다",
+      "text": "The <b>plain</b> is dotted with trees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "눈앞에 넓은 평원이 펼쳐졌다.",
+      "text": "A broad <b>plain</b> spread before us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "솔직히 말하면 네 잘못이다",
+      "text": "To be <b>plain</b> with you, you are to blame."
+    }
+  ],
+  "isWordType": true
+}

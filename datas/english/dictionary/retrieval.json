@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "entry": "retrieval",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈtriːvl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "회복, 복구, 만회",
+              "examples": [],
+              "originalMeaning": "회복, 복구, 만회"
+            },
+            {
+              "meaning": "수선, 수정, 정정",
+              "examples": [],
+              "originalMeaning": "수선, 수정, 정정"
+            },
+            {
+              "meaning": "벌충, 보상(補償)",
+              "examples": [],
+              "originalMeaning": "벌충, 보상(補償)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f8883017af53450aa7dad108b8201cf7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f8883017af53450aa7dad108b8201cf7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f071a0c9d2541184a3f99c83eba8e2f3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 회수 불가능하게 바다 밑으로 가라앉았다",
+      "text": "The ship was sunken, beyond <b>retrieval</b>, at the bottom of the sea."
+    }
+  ],
+  "isWordType": true
+}

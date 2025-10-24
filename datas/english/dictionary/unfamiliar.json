@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "unfamiliar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌʌnfəˈmɪliə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 익숙지 못한, 잘 모르는, 정통하지 못한, 경험이 없는 ((with))",
+              "examples": [
+                {
+                  "text": "I am <b>unfamiliar</b> with the subject.",
+                  "translatedText": "그 문제는 잘 모른다."
+                }
+              ],
+              "originalMeaning": "<사람이> 익숙지 못한, 잘 모르는, 정통하지 못한, 경험이 없는 ((with))"
+            },
+            {
+              "meaning": "생소한, 낯선, 눈[귀]선, 드문",
+              "examples": [
+                {
+                  "text": "<b>unfamiliar</b> faces",
+                  "translatedText": "낯선 얼굴들"
+                }
+              ],
+              "originalMeaning": "생소한, 낯선, 눈[귀]선, 드문"
+            },
+            {
+              "meaning": "이상한, 다른",
+              "examples": [],
+              "originalMeaning": "이상한, 다른"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/365150ff99b14701bf73708b298934db",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/365150ff99b14701bf73708b298934db",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7963a5e69bde4898ec939112ba16775f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 잘 모른다.",
+      "text": "I am <b>unfamiliar</b> with the subject."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 길은 내 발씨에 서투르다",
+      "text": "This road is <b>unfamiliar</b> to me[to my feet]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 낯선 광경이었다",
+      "text": "It was a scene <b>unfamiliar</b> to me."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "illustrate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪləstreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "설명하다, 예증(例證)하다",
+              "examples": [
+                {
+                  "text": "<b>illustrate</b> something fromone's experience",
+                  "translatedText": "…을 경험에 의해 설명하다"
+                }
+              ],
+              "originalMeaning": "설명하다, 예증(例證)하다"
+            },
+            {
+              "meaning": "<책 등에> 삽화[도판]를 넣다, 도해하다 (→illustrated)",
+              "examples": [
+                {
+                  "text": "<b>illustrate</b> a book",
+                  "translatedText": "책에 삽화를 넣다"
+                }
+              ],
+              "originalMeaning": "<책 등에> 삽화[도판]를 넣다, 도해하다 (→<span class='related_word' lang='en' >illustrated</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "예를 들어 설명하다, 예증[예시]하다",
+              "examples": [],
+              "originalMeaning": "예를 들어 설명하다, 예증[예시]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/deccbb8b07b94a8488057093360401bf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/deccbb8b07b94a8488057093360401bf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "illustrates"
+        },
+        {
+          "type": "과거형",
+          "value": "illustrated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "illustrating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "illustrated"
+        }
+      ],
+      "aliasConjugation": "illustrates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "02cca34bc2300d96c29decc5516a79a4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쪽마다 멋진 삽화가 들어 있다",
+      "text": "Every page is illustrated attractively."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책에는 삽화가 많이 들어 있다",
+      "text": "This book is profusely illustrated[illustrated with pictures]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "영어 철자의 법칙에 대해 설명하겠다",
+      "text": "I will <b>illustrate</b> the spelling rules of English."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사건은 교육의 필요성을 표시하고 있다",
+      "text": "The incident <b>illustrates</b> the need for education."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국세 조사의 수치는 그 나라가 어떻게 성장했는가를 보여준다.",
+      "text": "The census figures <b>illustrate</b> how the nation has grown."
+    }
+  ],
+  "isWordType": true
+}

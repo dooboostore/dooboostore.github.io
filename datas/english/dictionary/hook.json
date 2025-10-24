@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "hook",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "갈고리; 갈고리쇠, 훅; 자재(自在)고리",
+              "examples": [
+                {
+                  "text": "hooks and eyes",
+                  "translatedText": "(옷의) 훅 단추 ((거는 것과 걸리는 것))"
+                }
+              ],
+              "originalMeaning": "갈고리; 갈고리쇠, 훅; 자재(自在)고리"
+            },
+            {
+              "meaning": "낚싯바늘(fishhook), 코바늘, 올가미(snare)",
+              "examples": [],
+              "originalMeaning": "낚싯바늘(fishhook), 코바늘, 올가미(snare)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "갈고리로[에] 걸다, 훅으로 잠그다",
+              "examples": [
+                {
+                  "text": "<b>hook</b> a dress up",
+                  "translatedText": "드레스를 훅으로 잠그다"
+                }
+              ],
+              "originalMeaning": "갈고리로[에] 걸다, 훅으로 잠그다"
+            },
+            {
+              "meaning": "낚시에 걸다",
+              "examples": [
+                {
+                  "text": "<b>hook</b> a big trout",
+                  "translatedText": "큰 송어를 낚다"
+                }
+              ],
+              "originalMeaning": "낚시에 걸다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "훅으로 채워지다[잠기다]",
+              "examples": [
+                {
+                  "text": "a dress that hooks at the back",
+                  "translatedText": "등에서 훅으로 채우는 옷"
+                }
+              ],
+              "originalMeaning": "훅으로 채워지다[잠기다]"
+            },
+            {
+              "meaning": "갈고리 모양으로 구부러지다, 만곡되다",
+              "examples": [],
+              "originalMeaning": "갈고리 모양으로 구부러지다, 만곡되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7b4d92d0f1c5431d90f46b3ef49dbeff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7b4d92d0f1c5431d90f46b3ef49dbeff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hooks"
+        },
+        {
+          "type": "과거형",
+          "value": "hooked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hooking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hooked"
+        }
+      ],
+      "aliasConjugation": "hooks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "561db2d7f76e48d3727fc53e5f6045c4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제발 이 곤경에서 벗어나게 해 줘",
+      "text": "Please get[let] me off the <b>hook</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "문의 안쪽에서 열쇠가 잠겨 있다",
+      "text": "The door hooks on the inside."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "코트가 갈고리 못에 걸려 있다",
+      "text": "The coat is hanging on the <b>hook</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 옷은 뒤에서  잠그게 되어 있다.",
+      "text": "This dress is hooked at the back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물고기가 낚시에 걸려 팔딱거린다",
+      "text": "A fish struggles caught on the <b>hook</b>."
+    }
+  ],
+  "isWordType": true
+}

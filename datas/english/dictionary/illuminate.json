@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "illuminate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈluːmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "조명하다, 비추다, 밝게 하다; …에 등불을 켜다",
+              "examples": [],
+              "originalMeaning": "조명하다, 비추다, 밝게 하다; …에 등불을 켜다"
+            },
+            {
+              "meaning": "…에 조명 장식을 달다, 조명등으로 장식하다 ((with)) (→illuminated)",
+              "examples": [],
+              "originalMeaning": "…에 조명 장식을 달다, 조명등으로 장식하다 ((with)) (→<span class='related_word' lang='en' >illuminated</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "밝아지다(light up), 조명을 달다",
+              "examples": [],
+              "originalMeaning": "밝아지다(light up), 조명을 달다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e4d07dbc7a434794b13c1938a80647b9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e4d07dbc7a434794b13c1938a80647b9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "illuminates"
+        },
+        {
+          "type": "과거형",
+          "value": "illuminated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "illuminating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "illuminated"
+        }
+      ],
+      "aliasConjugation": "illuminates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e85c3f95a2f9b96cfd0a84f3021e892e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "미소로 그녀의 얼굴은 빛났다.",
+      "text": "A smile illuminated her face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "밤엔 전도시가 불야성을 이룬다",
+      "text": "At night the whole city is brilliantly illuminated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조명이 좋지 않다",
+      "text": "It is poorly lighted[illuminated]."
+    }
+  ],
+  "isWordType": true
+}

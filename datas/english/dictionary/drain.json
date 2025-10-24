@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "drain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dreɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "배수[방수]하다, <토지에> 배수 시설을 하다",
+              "examples": [
+                {
+                  "text": "a well-drainedcity",
+                  "translatedText": "배수 시설이 잘된 도시"
+                }
+              ],
+              "originalMeaning": "배수[방수]하다, <토지에> 배수 시설을 하다"
+            },
+            {
+              "meaning": "고름을 짜다",
+              "examples": [],
+              "originalMeaning": "고름을 짜다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<액체가> 흘러 나가다, (흘러) 빠지다 ((off, away))",
+              "examples": [
+                {
+                  "text": "The water drained through a small hole.",
+                  "translatedText": "물은 작은 구멍에서 줄줄 흘러 나왔다."
+                }
+              ],
+              "originalMeaning": "<액체가> 흘러 나가다, (흘러) 빠지다 ((off, away))"
+            },
+            {
+              "meaning": "<땅이> 배수되다, <늪 등이> 말라버리다, <젖은 해면·천 등이> 물기가 가시고 마르다",
+              "examples": [
+                {
+                  "text": "The plain drains into the lake.",
+                  "translatedText": "이 들판의 물은 그 호수로 흘러든다."
+                }
+              ],
+              "originalMeaning": "<땅이> 배수되다, <늪 등이> 말라버리다, <젖은 해면·천 등이> 물기가 가시고 마르다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "배수로, 방수로, 하수구(sewer);[pl.] 하수 (시설)",
+              "examples": [],
+              "originalMeaning": "배수로, 방수로, 하수구(sewer);[pl.] 하수 (시설)"
+            },
+            {
+              "meaning": "배수(관), [의학] 배농관(排膿管)",
+              "examples": [],
+              "originalMeaning": "배수(관), [의학] 배농관(排膿管)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4041dc579273421092cd476c15e42fc2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4041dc579273421092cd476c15e42fc2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "drains"
+        },
+        {
+          "type": "과거형",
+          "value": "drained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "draining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "drained"
+        }
+      ],
+      "aliasConjugation": "drains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "597af7bdbf3fa05e234374ed7e80342f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하수구 물이 잘 안 빠진다",
+      "text": "It does not <b>drain</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 땅은 배수가 잘 된다",
+      "text": "The ground is well drained."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "십 년 공부 도로 아미타불",
+      "text": "Ten year's study down the <b>drain</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 배꼽을 잡고 웃었다",
+      "text": "I laughed my head off. or I split[burst] my sides laughing[with laughter]. or I laughed like a <b>drain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식을 듣고 그는 아연실색했다",
+      "text": "Color drained from his face when he heard the news. or At the news he changed color."
+    }
+  ],
+  "isWordType": true
+}

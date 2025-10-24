@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "refer",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rifə́:r"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<…을> <…에게> 알아보도록 하다, 조회하다",
+              "examples": [
+                {
+                  "text": "He referred me to the secretary for information.",
+                  "translatedText": "그는 나한테 비서에게 문의하라고 했다."
+                }
+              ],
+              "originalMeaning": "<…을> <…에게> 알아보도록 하다, 조회하다"
+            },
+            {
+              "meaning": "<서적 등을> 참조하게 하다",
+              "examples": [
+                {
+                  "text": "<b>refer</b> a student to a dictionary",
+                  "translatedText": "학생에게 사전을 찾아보게 하다"
+                }
+              ],
+              "originalMeaning": "<서적 등을> 참조하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "지시하다, 나타내다; 주목시키다 ((to))",
+              "examples": [
+                {
+                  "text": "The asterisk refers to a footnote.",
+                  "translatedText": "별표는 각주의 표시이다."
+                }
+              ],
+              "originalMeaning": "지시하다, 나타내다; 주목시키다 ((to))"
+            },
+            {
+              "meaning": "참고[참조]하다, (메모 등에) 의지하다, (사전을) 조사하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>refer</b> to  one's watch for the exact time",
+                  "translatedText": "정확한 시간을 알려고 시계를 보다"
+                }
+              ],
+              "originalMeaning": "참고[참조]하다, (메모 등에) 의지하다, (사전을) 조사하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/118f1eb63bd8468185b1a1cf612d0c6a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/118f1eb63bd8468185b1a1cf612d0c6a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e670233f215a57e3a5bf485776d11fd5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 규칙은 이 경우에 적용된다.",
+      "text": "This rule refers to this case."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나에 관해서는 A씨에게 조회하시오",
+      "text": "I <b>refer</b> you to Mr. A as to my character."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 그림은 6세기 것으로 되어 있다.",
+      "text": "This picture is referred to the sixth century."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비서에게 문의해 보라는 것이었다.",
+      "text": "I was referred to the secretary for information."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자세한 것은 별지를 참조해 주십시오",
+      "text": "Please <b>refer</b> to the attached sheet for details."
+    }
+  ],
+  "isWordType": true
+}

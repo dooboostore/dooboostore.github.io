@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "weigh",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "weɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 무게를 달다, 저울에 달다, 손에 들어 무게를 달아 보다",
+              "examples": [
+                {
+                  "text": "<b>weigh</b> potatoes",
+                  "translatedText": "감자의 무게를 달다"
+                }
+              ],
+              "originalMeaning": "…의 무게를 달다, 저울에 달다, 손에 들어 무게를 달아 보다"
+            },
+            {
+              "meaning": "심사숙고하다, 고찰하다, 평가하다, 비교 검토하다 ((against))",
+              "examples": [
+                {
+                  "text": "You must <b>weigh</b> your words before speaking.",
+                  "translatedText": "말하기 전에 신중히 생각하고 말해야 한다."
+                }
+              ],
+              "originalMeaning": "심사숙고하다, 고찰하다, 평가하다, 비교 검토하다 ((against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "무게를 달다[재다], 무게가 … 나가다, …(만큼) 무겁다",
+              "examples": [
+                {
+                  "text": "He <b>weigh</b> s 160 pounds.",
+                  "translatedText": "그의 체중은 160파운드이다."
+                }
+              ],
+              "originalMeaning": "무게를 달다[재다], 무게가 … 나가다, …(만큼) 무겁다"
+            },
+            {
+              "meaning": "큰 무게를 가지다, 중요시되다, 중요하다; 영향을 주다 ((in, with))",
+              "examples": [
+                {
+                  "text": "His opinion doesn't <b>weigh</b> with me at all.",
+                  "translatedText": "그의 의견 따위는 내게 아무런 의미도 없다."
+                }
+              ],
+              "originalMeaning": "큰 무게를 가지다, 중요시되다, 중요하다; 영향을 주다 ((in, with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "무게 달기, 계량, 검량(檢量)",
+              "examples": [],
+              "originalMeaning": "무게 달기, 계량, 검량(檢量)"
+            },
+            {
+              "meaning": "[항해] (배의) 속도; 진행, 항행",
+              "examples": [],
+              "originalMeaning": "[항해] (배의) 속도; 진행, 항행"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/60c3e0d415cd425dbd1740d823b24420",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/60c3e0d415cd425dbd1740d823b24420",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "weighs"
+        },
+        {
+          "type": "과거형",
+          "value": "weighed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "weighing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "weighed"
+        }
+      ],
+      "aliasConjugation": "weighs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0cfbea15981b8703e36e7328d14465a3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "손으로 그것의 무게를 가늠해 보아라.",
+      "text": "<b>Weigh</b> it in your hand."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 입을 경하게 놀리지 않는다",
+      "text": "He weighs[picks] his words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 일로 속을 끓였다",
+      "text": "This <b>weighed</b>[pressed] heavy on my mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 그의 양심을 괴롭혔다",
+      "text": "It <b>weighed</b> upon his conscience."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 허투루 말하는 사람이 아니다",
+      "text": "He weighs his words carefully."
+    }
+  ],
+  "isWordType": true
+}

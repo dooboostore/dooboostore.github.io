@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "opinion",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈpɪnjən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 의견, 견해(view); [보통 pl.] 지론, 소신",
+              "examples": [
+                {
+                  "text": "public <b>opinion</b>",
+                  "translatedText": "여론"
+                }
+              ],
+              "originalMeaning": "[UC/] 의견, 견해(view); [보통 pl.] 지론, 소신"
+            },
+            {
+              "meaning": "(…에 대한) 판단, 평가, 평판 ((of))",
+              "examples": [
+                {
+                  "text": "be in high <b>opinion</b>",
+                  "translatedText": "평판이 높다"
+                }
+              ],
+              "originalMeaning": "(…에 대한) 판단, 평가, 평판 ((of))"
+            },
+            {
+              "meaning": "[보통 부정문에서] 호의적인 견해, 호평, 존경",
+              "examples": [],
+              "originalMeaning": "[보통 부정문에서] 호의적인 견해, 호평, 존경"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b6aed18cc5a242e285b5b59cb05cb3aa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b6aed18cc5a242e285b5b59cb05cb3aa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "014257ff54ff2502c7edc81d3c2b9e7d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 의견이 서로 갈렸다",
+      "text": "Their <b>opinions</b> are divided."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 당신의 의견에 반대합니다.",
+      "text": "I object to your <b>opinion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 의견에는 무게가 있었다",
+      "text": "His <b>opinion</b> carried weight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 보는 사람에 따라 다르다",
+      "text": "It is a matter of <b>opinion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 완미하여 여론의 동향을 깨닫지 못한다",
+      "text": "He is so bigoted in his views that he is blind to the tide of public <b>opinion</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "fee",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fiː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보수, 사례금 ((의사·변호사·가정교사 등 전문직에 대한)); 수수료, 납부금, 요금; 수업료; 수험료; 입회금, 입장료; 공공요금 (=pay)",
+              "examples": [
+                {
+                  "text": "school[tuition] fees",
+                  "translatedText": "수업료"
+                }
+              ],
+              "originalMeaning": "보수, 사례금 ((의사·변호사·가정교사 등 전문직에 대한)); 수수료, 납부금, 요금; 수업료; 수험료; 입회금, 입장료; 공공요금 (=<span class='related_word' lang='en' >pay</span>)"
+            },
+            {
+              "meaning": "팁(tip), 행하(行下)",
+              "examples": [],
+              "originalMeaning": "팁(tip), 행하(行下)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에(게) 요금을 치르다, 사례하다, 팁을 주다",
+              "examples": [],
+              "originalMeaning": "…에(게) 요금을 치르다, 사례하다, 팁을 주다"
+            },
+            {
+              "meaning": "고용하다",
+              "examples": [],
+              "originalMeaning": "고용하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9a318cc5b2c3465fb1222929b8d8bdb1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9a318cc5b2c3465fb1222929b8d8bdb1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fees"
+        },
+        {
+          "type": "과거형",
+          "value": "feed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "feeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "feed"
+        }
+      ],
+      "aliasConjugation": "fees",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "154758bf48aa73173315ce4b927b76f3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수업료는 납기 내에 납입할 것",
+      "text": "School fees should be paid by the due date."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회비 5,000원은 당일 지참할 것",
+      "text": "You are requested to pay a <b>fee</b> of five thousand won on that day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의사의 왕진료는 50달러다",
+      "text": "The doctor's <b>fee</b> for a visit will be fifty dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회비는 한달에 10,000원이다",
+      "text": "The membership <b>fee</b> is ten thousand won a month."
+    }
+  ],
+  "isWordType": true
+}

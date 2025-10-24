@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "confidential",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːnfɪ│denʃl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "기밀의, 내밀한(secret)",
+              "examples": [
+                {
+                  "text": "<b>Confidential</b>",
+                  "translatedText": "친전(親展) ((편지 겉봉에 쓰는 말))"
+                }
+              ],
+              "originalMeaning": "기밀의, 내밀한(secret)"
+            },
+            {
+              "meaning": "심복의, 신임이 두터운, 신뢰할 수 있는(trustworthy)",
+              "examples": [
+                {
+                  "text": "a <b>confidential</b> secretary",
+                  "translatedText": "심복 비서"
+                }
+              ],
+              "originalMeaning": "심복의, 신임이 두터운, 신뢰할 수 있는(trustworthy)"
+            },
+            {
+              "meaning": "[P] 속내를 터놓는 ((with)), 친숙한",
+              "examples": [
+                {
+                  "text": "become <b>confidential</b> with strangers",
+                  "translatedText": "낯선 사람과 친밀한[속내를 터놓는] 사이가 되다"
+                }
+              ],
+              "originalMeaning": "[P] 속내를 터놓는 ((with)), 친숙한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/30e968faddbb4d65ba0dd63af4eae955",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/30e968faddbb4d65ba0dd63af4eae955",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7d4e94bd6559e4f5a5f23fa58c09474f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 대외비다",
+      "text": "That is strictly <b>confidential</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "타견을 불허한다",
+      "text": "This must be kept strictly secret. or Strictly <b>confidential</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "극비",
+      "text": "Strictly <b>confidential</b>"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,25 @@
+<!-- YouTube Section -->
+<section class="content-section" dr-if="@this@.youtubeItems && @this@.youtubeItems.length > 0">
+    <h2 class="section-title">
+        <i class="fab fa-youtube"></i>
+        YouTube Videos
+    </h2>
+    <div class="movie-grid">
+        <div class="movie-card" dr-for-of="@this@.youtubeItems" dr-option-item-variable-name="item">
+            <dr-a dr-if="#item#" href="${'/english/' + #item#.name}$" class="movie-poster-link">
+                <div class="movie-poster youtube">
+                    <img dr-attr="{src: #item#.img, alt: #item#.name}" />
+                    <div class="movie-actions" dr-if="#item#.link">
+                        <a dr-attr="{href: #item#.link}" target="_blank" rel="noopener noreferrer"
+                            class="external-link">
+                            <i class="fa-solid fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <h3 class="movie-title">${#item#.name}$</h3>
+            </dr-a>
+            <iframe dr-if="!#item#" src="https://lazycollect.com/assets/dooboostore/adfit/255x255.html" style="width: 100%; height: 100%; overflow: hidden" scrolling="false" frameborder="0"></iframe>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "default",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪ│fɔːlt; │diːfɔːlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "태만, 불이행(neglect); [법] 채무 불이행; (법정에의) 결석",
+              "examples": [
+                {
+                  "text": "judgment by <b>default</b>",
+                  "translatedText": "결석 재판"
+                }
+              ],
+              "originalMeaning": "태만, 불이행(neglect); [법] 채무 불이행; (법정에의) 결석"
+            },
+            {
+              "meaning": "부족(lack)",
+              "examples": [],
+              "originalMeaning": "부족(lack)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "디폴트의, 내정값의",
+              "examples": [],
+              "originalMeaning": "디폴트의, 내정값의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "의무를 게을리하다",
+              "examples": [],
+              "originalMeaning": "의무를 게을리하다"
+            },
+            {
+              "meaning": "채무를 이행하지 않다 ((in, on))",
+              "examples": [
+                {
+                  "text": "<b>default</b> on a debt",
+                  "translatedText": "빚을 갚지 않다"
+                }
+              ],
+              "originalMeaning": "채무를 이행하지 않다 ((in, on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b294d5c458f142c3a9f1c23de4c11567",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b294d5c458f142c3a9f1c23de4c11567",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "defaults"
+        },
+        {
+          "type": "과거형",
+          "value": "defaulted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "defaulting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "defaulted"
+        }
+      ],
+      "aliasConjugation": "defaults",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8957b2fa10f86236055c09dcdb132065",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 재해는 주지사의 태만에서 일어났다",
+      "text": "This evil has happened through the governor's <b>default</b>."
+    }
+  ],
+  "isWordType": true
+}

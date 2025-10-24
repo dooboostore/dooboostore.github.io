@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "renewed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪˈnuːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "새롭게 한, 다시 시작한, 회복[부흥]된",
+              "examples": [],
+              "originalMeaning": "새롭게 한, 다시 시작한, 회복[부흥]된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d70987aed5e644f9ab759e477bff4520",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d70987aed5e644f9ab759e477bff4520",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8dfd46021df4bc2f9d0d50e20d7c01be",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "renew",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪ│nuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "새롭게 하다, 일신하다",
+              "examples": [
+                {
+                  "text": "The old walls have been <b>renew</b> ed by plastering.",
+                  "translatedText": "낡은 벽이 회반죽을 발라 새로워졌다."
+                }
+              ],
+              "originalMeaning": "새롭게 하다, 일신하다"
+            },
+            {
+              "meaning": "다시 시작하다, 재개하다",
+              "examples": [
+                {
+                  "text": "<b>renew</b> a battle",
+                  "translatedText": "전투를 재개하다"
+                }
+              ],
+              "originalMeaning": "다시 시작하다, 재개하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "다시 시작되다[일어나다]",
+              "examples": [],
+              "originalMeaning": "다시 시작되다[일어나다]"
+            },
+            {
+              "meaning": "<계약 등을> 갱신[계속]하다",
+              "examples": [],
+              "originalMeaning": "<계약 등을> 갱신[계속]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/713fe9ae8f8143e9ac64e63926859b93",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/713fe9ae8f8143e9ac64e63926859b93",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "renews",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8913e575404fa0e773aa8c306dc508b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "박수 갈채가 다시 일어났다",
+      "text": "The cheering was <b>renewed</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "운전 면허증을 갱신해야 한다",
+      "text": "I must <b>renew</b> my driver's license."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "면허증은 2년마다 경신해야 한다",
+      "text": "The license must be <b>renewed</b> every two years."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "낡은 벽이 회반죽을 발라 새로와졌다.",
+      "text": "The old walls have been <b>renewed</b> by plastering."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "면허증을 경신할 시기가 되었다",
+      "text": "It's time to <b>renew</b> my license. or My license has come up for renewal."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "afternoon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│æftər│nuːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "오후 ((정오에서 일몰까지))",
+              "examples": [
+                {
+                  "text": "this[tomorrow, yesterday] <b>afternoon</b>",
+                  "translatedText": "오늘[내일, 어제] 오후"
+                }
+              ],
+              "originalMeaning": "오후 ((정오에서 일몰까지))"
+            },
+            {
+              "meaning": "[the ~] 후반, 후기 ((of))",
+              "examples": [
+                {
+                  "text": "the <b>afternoon</b> of life",
+                  "translatedText": "만년, 늘그막"
+                }
+              ],
+              "originalMeaning": "[the ~] 후반, 후기 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "오후의, 오후에 쓰는[하는]",
+              "examples": [
+                {
+                  "text": "an <b>afternoon</b> farmer",
+                  "translatedText": "게으름쟁이"
+                }
+              ],
+              "originalMeaning": "오후의, 오후에 쓰는[하는]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/baab8e099c504d19b575e82b8458e683",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/baab8e099c504d19b575e82b8458e683",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "48c964090c127f9999365c12ff3b3492",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 오후를 졸면서 보냈다.",
+      "text": "I napped the <b>afternoon</b> away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오후에는 비가 오기 쉽겠다",
+      "text": "It is likely to rain this <b>afternoon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 토요일 오후에 해외에 나갑니다",
+      "text": "I'm going overseas Saturday <b>afternoon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내일 오후의 좌석을 예약합니다",
+      "text": "Keep me a seat for tomorrow <b>afternoon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오후 내내 비가 억수로 내렸다.",
+      "text": "The rain poured down all the <b>afternoon</b>."
+    }
+  ],
+  "isWordType": true
+}

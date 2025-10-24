@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "sign",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "saɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(수학·음악 등의) 기호, 부호",
+              "examples": [
+                {
+                  "text": "the negative[minus] <b>sign</b>",
+                  "translatedText": "마이너스 부호 ((－))"
+                }
+              ],
+              "originalMeaning": "(수학·음악 등의) 기호, 부호"
+            },
+            {
+              "meaning": "신호; 암호(말), 군호 (=signal)",
+              "examples": [],
+              "originalMeaning": "신호; 암호(말), 군호 (=<span class='related_word' lang='en' >signal</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "서명하다, 사인하다, 서명 날인하다; 서명하여 승인[보증]하다",
+              "examples": [
+                {
+                  "text": "<b>sign</b> a letter",
+                  "translatedText": "편지에 서명하다"
+                }
+              ],
+              "originalMeaning": "서명하다, 사인하다, 서명 날인하다; 서명하여 승인[보증]하다"
+            },
+            {
+              "meaning": "<권리·재산 등을> 서명하여 처분[양도]하다; (증서를 써서) 매도하다, 인도하다 ((away, off, over))",
+              "examples": [
+                {
+                  "text": "She signed over the property to me.",
+                  "translatedText": "그녀는 재산을 나에게 양도했다."
+                }
+              ],
+              "originalMeaning": "<권리·재산 등을> 서명하여 처분[양도]하다; (증서를 써서) 매도하다, 인도하다 ((away, off, over))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "서명하다",
+              "examples": [],
+              "originalMeaning": "서명하다"
+            },
+            {
+              "meaning": "서명하여 받다[수취하다]",
+              "examples": [],
+              "originalMeaning": "서명하여 받다[수취하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f29e540cbcbd4d6aba785555d20419d2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f29e540cbcbd4d6aba785555d20419d2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "signs"
+        },
+        {
+          "type": "과거형",
+          "value": "signed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "signing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "signed"
+        }
+      ],
+      "aliasConjugation": "signs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3b4de4d2fbe5c27dc58607c8e4bcf910",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "적의 편영도 볼 수가 없었다",
+      "text": "Not a <b>sign</b> of the enemy was to be found. or There was no <b>sign</b> of the enemy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 올 것 같지는 않다.",
+      "text": "I see no <b>sign</b> of rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "계약서에 서명해 주어야 되겠소.",
+      "text": "You shall <b>sign</b> the contract."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "먹구름은 비가 올 징후이다",
+      "text": "A dark cloud is a <b>sign</b> of rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "끄덕거리는 것은 동의의 표시다",
+      "text": "A nod is a <b>sign</b> of agreement."
+    }
+  ],
+  "isWordType": true
+}

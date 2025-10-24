@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "reach",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "riːtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 도착[도달]하다(arrive in[at])",
+              "examples": [
+                {
+                  "text": "<b>reach</b> London",
+                  "translatedText": "런던에 도착하다"
+                }
+              ],
+              "originalMeaning": "…에 도착[도달]하다(arrive in[at])"
+            },
+            {
+              "meaning": "…에 닿다",
+              "examples": [
+                {
+                  "text": "Your letter reached me yesterday.",
+                  "translatedText": "네 편지는 어제 받았다."
+                }
+              ],
+              "originalMeaning": "…에 닿다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "손을 뻗다 ((for, out for, after, toward)); 발돋움하다; <손·발이> 앞으로 나오다, 뻗다; <식물이> (한 방향으로) 뻗다, 향하다",
+              "examples": [
+                {
+                  "text": "A hand reached out and held me.",
+                  "translatedText": "한 손이 뻗어 나와 나를 잡았다."
+                }
+              ],
+              "originalMeaning": "손을 뻗다 ((for, out for, after, toward)); 발돋움하다; <손·발이> 앞으로 나오다, 뻗다; <식물이> (한 방향으로) 뻗다, 향하다"
+            },
+            {
+              "meaning": "얻으려고[이룩하려고] 힘쓰다[노력하다] ((at, after, for))",
+              "examples": [
+                {
+                  "text": "<b>reach</b> after happiness",
+                  "translatedText": "행복을 추구하다"
+                }
+              ],
+              "originalMeaning": "얻으려고[이룩하려고] 힘쓰다[노력하다] ((at, after, for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(팔이) 미치는 범위(range), 리치, 팔의 길이; 착탄 거리, 손쉽게 갈 수 있는 거리",
+              "examples": [
+                {
+                  "text": "CAUTION:keep out of <b>reach</b> of children.",
+                  "translatedText": "주의:아이들 손이 닿지 않는 곳에 두시오."
+                }
+              ],
+              "originalMeaning": "(팔이) 미치는 범위(range), 리치, 팔의 길이; 착탄 거리, 손쉽게 갈 수 있는 거리"
+            },
+            {
+              "meaning": "(잡으려고) 손을 뻗음",
+              "examples": [
+                {
+                  "text": "make a <b>reach</b> for a gun",
+                  "translatedText": "손을 뻗어 총을 잡다"
+                }
+              ],
+              "originalMeaning": "(잡으려고) 손을 뻗음"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0ec12e402d184e4f975c605a3bca8a19",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0ec12e402d184e4f975c605a3bca8a19",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reaches"
+        },
+        {
+          "type": "과거형",
+          "value": "reached"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reaching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reached"
+        }
+      ],
+      "aliasConjugation": "reaches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "628ea1d1aa99a30838e90f32fa059751",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "연필 좀 집어 주시오",
+      "text": "Please <b>reach</b> me the pencil."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책 좀 집어 주십시오.",
+      "text": "Please <b>reach</b> me that book."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내일 그곳에 도착할 것이다.",
+      "text": "I’ll <b>reach</b> there tomorrow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기 집에 무사히 귀착했다",
+      "text": "He reached home in safety."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자랄 대로 자랐다",
+      "text": "He has reached his full growth."
+    }
+  ],
+  "isWordType": true
+}

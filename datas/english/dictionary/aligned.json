@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "align",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "일직선으로 하다, 정렬시키다, <표적과 총의 조준을> 일직선에 맞추다",
+              "examples": [],
+              "originalMeaning": "일직선으로 하다, 정렬시키다, <표적과 총의 조준을> 일직선에 맞추다"
+            },
+            {
+              "meaning": "…에게 같은 태도를 취하게 하다, …을 …와 제휴시키다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>align</b> oneself with others",
+                  "translatedText": "남과 동조하다[공동 전선을 펴다]"
+                }
+              ],
+              "originalMeaning": "…에게 같은 태도를 취하게 하다, …을 …와 제휴시키다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "한 줄이 되다, 정렬하다",
+              "examples": [
+                {
+                  "text": "The troops <b>aligned</b>.",
+                  "translatedText": "부대가 정렬했다."
+                }
+              ],
+              "originalMeaning": "한 줄이 되다, 정렬하다"
+            },
+            {
+              "meaning": "(어떤 목적으로) 결합하다, 제휴[약속]하다",
+              "examples": [],
+              "originalMeaning": "(어떤 목적으로) 결합하다, 제휴[약속]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/79ec87a6063145fe9fe2ee2b18dc668d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/79ec87a6063145fe9fe2ee2b18dc668d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "aligns"
+        },
+        {
+          "type": "과거형",
+          "value": "aligned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "aligning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "aligned"
+        }
+      ],
+      "aliasConjugation": "aligns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "550ed80b9cb62c75e9611ab03ada4ffe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "부대가 정렬했다.",
+      "text": "The troops <b>aligned</b>."
+    }
+  ],
+  "isWordType": true
+}

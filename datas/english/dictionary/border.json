@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "border",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│bɔːrdə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가장자리, 변두리, 가",
+              "examples": [
+                {
+                  "text": "the <b>border</b> of a lake",
+                  "translatedText": "호숫가"
+                }
+              ],
+              "originalMeaning": "가장자리, 변두리, 가"
+            },
+            {
+              "meaning": "경계, 국경(선), 국경 지방(frontier); [미국] 변경(邊境); [the ~] [미국] 멕시코와 미국과의 국경; [the B~(s)] [영국] 잉글랜드와 스코틀랜드의 경계 (지대), (=boundary)",
+              "examples": [],
+              "originalMeaning": "경계, 국경(선), 국경 지방(frontier); [미국] 변경(邊境); [the ~] [미국] 멕시코와 미국과의 국경; [the B~(s)] [영국] 잉글랜드와 스코틀랜드의 경계 (지대), (=<span class='related_word' lang='en' >boundary</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "접경하다, 접하다, 면하다",
+              "examples": [],
+              "originalMeaning": "접경하다, 접하다, 면하다"
+            },
+            {
+              "meaning": "단을 대다, 테를 두르다 ((with))",
+              "examples": [],
+              "originalMeaning": "단을 대다, 테를 두르다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "인접하다 ((on, upon))",
+              "examples": [],
+              "originalMeaning": "인접하다 ((on, upon))"
+            },
+            {
+              "meaning": "근사(近似)하다, 가깝다, 마치 …같다 ((on, upon))",
+              "examples": [],
+              "originalMeaning": "근사(近似)하다, 가깝다, 마치 …같다 ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15ca42dca66046469fdd0c37063cb378",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15ca42dca66046469fdd0c37063cb378",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "borders"
+        },
+        {
+          "type": "과거형",
+          "value": "bordered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bordering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bordered"
+        }
+      ],
+      "aliasConjugation": "borders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a12743b1951c6ae1e6971ac8c9a0851b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 열정은 광기에 가깝다",
+      "text": "His zeal verges[borders] on madness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 땅은 도로에 붙어 있다",
+      "text": "His land lot borders on the road."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "긴장이 국경에서 늘어 가고 있었다",
+      "text": "Tension was mounting on the <b>border</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국은 북쪽으로 만주와 접한다",
+      "text": "To the north Korea borders on Manchuria."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "터키는 동쪽으로 이란과 경계를 이루고 있다.",
+      "text": "Turkey borders on Iran to the east."
+    }
+  ],
+  "isWordType": true
+}

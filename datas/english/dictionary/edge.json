@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "edge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "edʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가장자리, 모; 끝, 가, 언저리, 변두리; (봉우리·지붕 등의) 등, 등성마루(crest)",
+              "examples": [
+                {
+                  "text": "the water's <b>edge</b>",
+                  "translatedText": "물가"
+                }
+              ],
+              "originalMeaning": "가장자리, 모; 끝, 가, 언저리, 변두리; (봉우리·지붕 등의) 등, 등성마루(crest)"
+            },
+            {
+              "meaning": "(날붙이의) 날, (날의) 날카로움 (=blade)",
+              "examples": [
+                {
+                  "text": "have no <b>edge</b>",
+                  "translatedText": "날이 들지 않다"
+                }
+              ],
+              "originalMeaning": "(날붙이의) 날, (날의) 날카로움 (=<span class='related_word' lang='en' >blade</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<칼에> 날을 세우다, 날카롭게 하다(sharpen)",
+              "examples": [
+                {
+                  "text": "<b>edge</b> a knife sharp",
+                  "translatedText": "칼을 날카롭게 갈다"
+                }
+              ],
+              "originalMeaning": "<칼에> 날을 세우다, 날카롭게 하다(sharpen)"
+            },
+            {
+              "meaning": "…에 테를 달다, …을 (…으로) 가두르다 ((with)); (언덕 등이 …의) 언저리가 되다",
+              "examples": [
+                {
+                  "text": "Hills <b>edge</b> the village.",
+                  "translatedText": "마을은 언덕에 둘러싸여 있다."
+                }
+              ],
+              "originalMeaning": "…에 테를 달다, …을 (…으로) 가두르다 ((with)); (언덕 등이 …의) 언저리가 되다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(일정한 방향으로) 비스듬히 나아가다, 조금씩 나아가다",
+              "examples": [
+                {
+                  "text": "<b>edge</b> along a cliff",
+                  "translatedText": "벼랑을 따라 조금씩 나아가다"
+                }
+              ],
+              "originalMeaning": "(일정한 방향으로) 비스듬히 나아가다, 조금씩 나아가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b614f7e26cd04d82bbecd23bbdca40e6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b614f7e26cd04d82bbecd23bbdca40e6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "edges"
+        },
+        {
+          "type": "과거형",
+          "value": "edged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "edging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "edged"
+        }
+      ],
+      "aliasConjugation": "edges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4b1580dc2655dd65f4eeb7834eea55e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네가 나보다 한발 앞질렀구나",
+      "text": "You've beaten me to it. or You've edged out me. or You've gotten[had] the jump on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마을은 언덕에 둘러싸여 있다.",
+      "text": "Hills <b>edge</b> the village."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 칼은 날이 잘 선다",
+      "text": "This knife takes a nice <b>edge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강철은 갈려서 날카로운 날이 된다",
+      "text": "Steel grinds to a fine <b>edge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 군중을 헤치고 나아갔다.",
+      "text": "He edged his way through the crowd."
+    }
+  ],
+  "isWordType": true
+}

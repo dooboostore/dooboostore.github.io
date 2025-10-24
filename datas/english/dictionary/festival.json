@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "festival",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfestɪvl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "축제, 축전(祝典), 제전, 축하",
+              "examples": [
+                {
+                  "text": "the <b>festival</b> of Christmas",
+                  "translatedText": "크리스마스 축제"
+                }
+              ],
+              "originalMeaning": "축제, 축전(祝典), 제전, 축하"
+            },
+            {
+              "meaning": "축일, 축제일",
+              "examples": [],
+              "originalMeaning": "축일, 축제일"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "축제[축일, 축하]의; 즐거운",
+              "examples": [],
+              "originalMeaning": "축제[축일, 축하]의; 즐거운"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/467eb87f2ca5459ab45daf4fd6ecaec1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/467eb87f2ca5459ab45daf4fd6ecaec1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b37f4d4d2e4b51a32dc7d86a95643cff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "성탄절과 부활절은 교회의 큰 제전이다",
+      "text": "Christmas and Easter are important church festivals."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국에선 설을 쇱니다",
+      "text": "New Year's Day is kept as a <b>festival</b> in Korea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "크리스마스의 축전",
+      "text": "Christmas festivities;the <b>festival</b> of Christmas"
+    }
+  ],
+  "isWordType": true
+}

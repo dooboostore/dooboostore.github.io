@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "schedule",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈskedʒuːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 예정(표), 계획, 스케줄, 일정, 기일; [컴퓨터] 일정",
+              "examples": [
+                {
+                  "text": "a publishing <b>schedule</b>",
+                  "translatedText": "출판 일정"
+                }
+              ],
+              "originalMeaning": "[UC/] 예정(표), 계획, 스케줄, 일정, 기일; [컴퓨터] 일정"
+            },
+            {
+              "meaning": "[미] 시간표, 시각표(timetable); 표, 일람표; 목록",
+              "examples": [
+                {
+                  "text": "a train <b>schedule</b>",
+                  "translatedText": "열차 시각표"
+                }
+              ],
+              "originalMeaning": "[미] 시간표, 시각표(timetable); 표, 일람표; 목록"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "예정에 넣다; …의 표[일람표, 목록, 명세서, 시간표]를 작성하다; …에 기재하다",
+              "examples": [],
+              "originalMeaning": "예정에 넣다; …의 표[일람표, 목록, 명세서, 시간표]를 작성하다; …에 기재하다"
+            },
+            {
+              "meaning": "[흔히 수동형으로] (어떤 기일로) <사물을> 예정하다",
+              "examples": [
+                {
+                  "text": "The general meeting is scheduled for December[Monday, five o'clock].",
+                  "translatedText": "총회는 12월[월요일, 5시]에 있을 예정이다."
+                }
+              ],
+              "originalMeaning": "[흔히 수동형으로] (어떤 기일로) <사물을> 예정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/23f82c2554f4428d94a18e6cf0fb4d1d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/23f82c2554f4428d94a18e6cf0fb4d1d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "schedules"
+        },
+        {
+          "type": "과거형",
+          "value": "scheduled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scheduling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scheduled"
+        }
+      ],
+      "aliasConjugation": "schedules",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "43c3ada1a77e28c4d97437f016054d22",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사고로 우리 예정을 잡쳤다",
+      "text": "The accident messed up our <b>schedule</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 스케줄은 하루하루 달라질 수 있다",
+      "text": "My <b>schedule</b> can vary from day to day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내일 여기에 도착할 예정이다.",
+      "text": "He is scheduled to arrive here tomorrow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 배는 오늘 입항할 예정이었다",
+      "text": "The boat was scheduled to make port today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일은 스케줄대로 진행되고 있다",
+      "text": "The work is all right and according to <b>schedule</b>."
+    }
+  ],
+  "isWordType": true
+}

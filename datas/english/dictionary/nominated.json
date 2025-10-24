@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "nominate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nɑːmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(선거·임명의 후보자로서) 지명하다, 지명 천거하다 ((for))",
+              "examples": [
+                {
+                  "text": "He was <b>nominated</b> for President.",
+                  "translatedText": "그는 대통령 선거의 후보자로 지명되었다."
+                }
+              ],
+              "originalMeaning": "(선거·임명의 후보자로서) 지명하다, 지명 천거하다 ((for))"
+            },
+            {
+              "meaning": "임명하다",
+              "examples": [
+                {
+                  "text": "The mayor <b>nominated</b> Mr. Brown as police chief.",
+                  "translatedText": "시장은 브라운씨를 경찰서장에 임명했다."
+                }
+              ],
+              "originalMeaning": "임명하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "선거에 출마하다",
+              "examples": [],
+              "originalMeaning": "선거에 출마하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/01e17accc51c449c9f981949ad1783a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/01e17accc51c449c9f981949ad1783a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "nominates"
+        },
+        {
+          "type": "과거형",
+          "value": "nominated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "nominating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "nominated"
+        }
+      ],
+      "aliasConjugation": "nominates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7d9e0f029fbef412d02061f66297b29a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어떤 관직에 임명되었다.",
+      "text": "He was <b>nominated</b> for[to] a post."
+    }
+  ],
+  "isWordType": true
+}

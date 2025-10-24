@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "book",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "책, 서적, 도서, 단행본; 저서, 저작; 저술",
+              "examples": [],
+              "originalMeaning": "책, 서적, 도서, 단행본; 저서, 저작; 저술"
+            },
+            {
+              "meaning": "잡지, 만화 잡지(comic book)",
+              "examples": [],
+              "originalMeaning": "잡지, 만화 잡지(comic <b>book</b>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "책[서점]의",
+              "examples": [],
+              "originalMeaning": "책[서점]의"
+            },
+            {
+              "meaning": "책에서 얻은, 책에 기초한[근거한]",
+              "examples": [],
+              "originalMeaning": "책에서 얻은, 책에 기초한[근거한]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<이름·주문 등을> 기입[기장]하다, <예약자>의 이름을 기입하다, …에게 표를 예매하다",
+              "examples": [],
+              "originalMeaning": "<이름·주문 등을> 기입[기장]하다, <예약자>의 이름을 기입하다, …에게 표를 예매하다"
+            },
+            {
+              "meaning": "<좌석·객실·표 등을> 예약하다( reserve)",
+              "examples": [
+                {
+                  "text": "He booked a ticket for Paris.",
+                  "translatedText": "그는 파리행 차표를 예매했다."
+                }
+              ],
+              "originalMeaning": "<좌석·객실·표 등을> 예약하다( reserve)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/af1044f545c24383a5386dc7cdb06c6f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/af1044f545c24383a5386dc7cdb06c6f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "books"
+        },
+        {
+          "type": "과거형",
+          "value": "booked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "booking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "booked"
+        }
+      ],
+      "aliasConjugation": "books",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "92c324be37ac89a739c3f3120d8ed8fa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책은 그의 것이다.",
+      "text": "That <b>book</b> is his."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 책 좀 빌려 다오",
+      "text": "Lend me your <b>book</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책은 지금 대출 중입니다",
+      "text": "The <b>book</b> is out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책은 잘 팔린다.",
+      "text": "The <b>book</b> sells well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책은 주문 중이다",
+      "text": "The <b>book</b> is in order."
+    }
+  ],
+  "isWordType": true
+}

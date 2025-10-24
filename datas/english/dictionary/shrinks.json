@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "shrink",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃrɪŋk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<천 등이> 오그라들다, 줄어들다; 주름이 잡히다",
+              "examples": [
+                {
+                  "text": "<b>shrink</b> in the wash[with water]",
+                  "translatedText": " 세탁하면[물에 담그면] 오그라들다"
+                }
+              ],
+              "originalMeaning": "<천 등이> 오그라들다, 줄어들다; 주름이 잡히다"
+            },
+            {
+              "meaning": "<양이> 줄다, 작아[적어]지다",
+              "examples": [
+                {
+                  "text": "<b>shrink</b> fromdrought",
+                  "translatedText": " 가뭄으로 줄다"
+                }
+              ],
+              "originalMeaning": "<양이> 줄다, 작아[적어]지다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "축소시키다; 줄어들게 하다(reduce); 찌푸리다, 움츠리게 하다",
+              "examples": [
+                {
+                  "text": "<b>shrink</b> up the shoulders",
+                  "translatedText": "어깨를 으쓱하다 (( at ))"
+                }
+              ],
+              "originalMeaning": "축소시키다; 줄어들게 하다(reduce); 찌푸리다, 움츠리게 하다"
+            },
+            {
+              "meaning": "<천 등을> 방축(防縮) 가공하다",
+              "examples": [],
+              "originalMeaning": "<천 등을> 방축(防縮) 가공하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "뒷걸음질, 움츠러들기, 위축(recoil)",
+              "examples": [],
+              "originalMeaning": "뒷걸음질, 움츠러들기, 위축(recoil)"
+            },
+            {
+              "meaning": "수축",
+              "examples": [],
+              "originalMeaning": "수축"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/535e1a28f1d248909183266157f006fe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/535e1a28f1d248909183266157f006fe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shrinks"
+        },
+        {
+          "type": "과거형",
+          "value": "shrank, shrunk"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shrinking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shrunk"
+        }
+      ],
+      "aliasConjugation": "shrinks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b33924084d34e6ce66ab13a4fb532e17",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 셔츠는 빨래해서 줄었다",
+      "text": "This shirts shrank in the wash."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "농촌의 노동 인구가 감소하고 있다",
+      "text": "The workforce is shrinking in rural areas."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "줄어들지는 않지만 빨면 색이 빠질지도 모른다",
+      "text": "It won't <b>shrink</b> but the color may run if washed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 항상 어려운 일을 하는 데에 꽁무니를 뺀다",
+      "text": "He always <b>shrinks</b> from doing what is difficult."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "병으로 그의 건강했던 몸이 쪼그라들었다",
+      "text": "His previously healthy body shrank away through disease."
+    }
+  ],
+  "isWordType": true
+}

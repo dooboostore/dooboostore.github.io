@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "entry": "scarcity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│skersəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부족(lack), 결핍 ((of))",
+              "examples": [
+                {
+                  "text": "an energy <b>scarcity</b>",
+                  "translatedText": "에너지 부족"
+                }
+              ],
+              "originalMeaning": "부족(lack), 결핍 ((of))"
+            },
+            {
+              "meaning": "식량난, 기근(dearth)",
+              "examples": [],
+              "originalMeaning": "식량난, 기근(dearth)"
+            },
+            {
+              "meaning": "드묾, 품귀(品貴), 희귀(rarity)",
+              "examples": [],
+              "originalMeaning": "드묾, 품귀(品貴), 희귀(rarity)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce08eccddab64b42b97eddba537c7368",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce08eccddab64b42b97eddba537c7368",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "scarcities"
+        }
+      ],
+      "aliasConjugation": "scarcities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "08ee273d852cd99557bd0715c030c21c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잇따른 흉어로 어부들이 죽을 지경이다",
+      "text": "Fishermen are hard hit by the prolonged <b>scarcity</b> of fish."
+    }
+  ],
+  "isWordType": true
+}

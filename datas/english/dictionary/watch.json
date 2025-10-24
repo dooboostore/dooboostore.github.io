@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "watch",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "wɑːtʃ; wɔːtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "지켜보다, 주시하다, 주목[관찰]하다",
+              "examples": [
+                {
+                  "text": "<b>watch</b> while an experiment is performed",
+                  "translatedText": "실험이 진행되는 동안 관찰하다"
+                }
+              ],
+              "originalMeaning": "지켜보다, 주시하다, 주목[관찰]하다"
+            },
+            {
+              "meaning": "기다리다, 기대하다 ((for))",
+              "examples": [
+                {
+                  "text": "( <b>watch</b>+[전]+[명]+todo) We watched for the processionto go by.",
+                  "translatedText": "우리는 행렬이 지나가기를 기다리고 있었다."
+                }
+              ],
+              "originalMeaning": "기다리다, 기대하다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "지켜보다, 주시하다, 주의하다 (=look)",
+              "examples": [
+                {
+                  "text": "I <b>watch</b> television every evening.",
+                  "translatedText": "나는 매일 저녁 텔레비전을 시청한다."
+                }
+              ],
+              "originalMeaning": "지켜보다, 주시하다, 주의하다 (=<span class='related_word' lang='en' >look</span>)"
+            },
+            {
+              "meaning": "망보다, 감시하다, 경계하다",
+              "examples": [
+                {
+                  "text": "<b>watch</b> the prisoner",
+                  "translatedText": "죄수를 감시하다"
+                }
+              ],
+              "originalMeaning": "망보다, 감시하다, 경계하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 경계, 망보기, 감시; 조심, 주의",
+              "examples": [
+                {
+                  "text": "keep a <b>watch</b> for the train",
+                  "translatedText": "기차가 오는 쪽을 계속 바라보다"
+                }
+              ],
+              "originalMeaning": "[U] 경계, 망보기, 감시; 조심, 주의"
+            },
+            {
+              "meaning": "회중[손목]시계(cf. clock)",
+              "examples": [],
+              "originalMeaning": "회중[손목]시계(cf. clock)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b438027de66e4652be645d976790ce84",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b438027de66e4652be645d976790ce84",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "watches"
+        },
+        {
+          "type": "과거형",
+          "value": "watched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "watching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "watched"
+        }
+      ],
+      "aliasConjugation": "watches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1ec004a994c16a3253c0a4b1008fbef2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시계를  고쳐 달라고 해라.",
+      "text": "Get your <b>watch</b> mended."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 시계는 10시를 가리키고 있다.",
+      "text": "My <b>watch</b> shows ten."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 시계는 정확하지 않다.",
+      "text": "My <b>watch</b> isn’t right."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 시계는 태엽이 잘 감긴다.",
+      "text": "This <b>watch</b> winds easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 시계는 움직이지 않는다",
+      "text": "This <b>watch</b> does not go[run]."
+    }
+  ],
+  "isWordType": true
+}

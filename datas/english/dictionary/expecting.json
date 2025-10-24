@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "expecting",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ikspéktiŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "임신한(pregnant)",
+              "examples": [
+                {
+                  "text": "My wife is <b>expecting</b> again.",
+                  "translatedText": "아내는 또 임신했다."
+                }
+              ],
+              "originalMeaning": "임신한(pregnant)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2161e67e776241c7bcc46ce33202a9f8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2161e67e776241c7bcc46ce33202a9f8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a26c11ee27c0e077db5047f844057135",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "expect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈspekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기대하다, 예상[예기]하다, 기다리다; …할 작정이다 (=want)",
+              "examples": [
+                {
+                  "text": "I shall <b>expect</b> you (next week).",
+                  "translatedText": "(내주에) 기다리고 있겠습니다."
+                }
+              ],
+              "originalMeaning": "기대하다, 예상[예기]하다, 기다리다; …할 작정이다 (=<span class='related_word' lang='en' >want</span>)"
+            },
+            {
+              "meaning": "(당연한 일로서) 기대하다, (…하기를) 바라다, 요구하다 ((of, from))",
+              "examples": [
+                {
+                  "text": "I <b>expect</b> your obedience. = I <b>expect</b> you to obey. = I <b>expect</b> that you will obey.",
+                  "translatedText": "자네는 말을 잘 들으리라 생각한다."
+                }
+              ],
+              "originalMeaning": "(당연한 일로서) 기대하다, (…하기를) 바라다, 요구하다 ((of, from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[진행형으로] 임신 중이다 ((be pregnant의 완곡한 말)), 출산 예정이다",
+              "examples": [
+                {
+                  "text": "His wife is <b>expect</b> ing next month.",
+                  "translatedText": "그의 아내는 다음 달 출산 예정이다."
+                }
+              ],
+              "originalMeaning": "[진행형으로] 임신 중이다 ((be pregnant의 완곡한 말)), 출산 예정이다"
+            },
+            {
+              "meaning": "(아마 그렇다고) 생각하다",
+              "examples": [],
+              "originalMeaning": "(아마 그렇다고) 생각하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25a8366080094dfd9ab6c32c3e365f48",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25a8366080094dfd9ab6c32c3e365f48",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "expects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6ab727e6e9c0ef30554d71081a02cec0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몸 풀 때가 가까웠다",
+      "text": "She is nearing her confinement. or She is going to have a child shortly. or She is soon to become a mother. or She is <b>expecting</b> soon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이곳에서 너를 만나다니 참으로 의외이다",
+      "text": "It's quite a surprise to see you here. or I little expected that I should see you here. or You are the last person I expected to see here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그를 만날 셈이었다",
+      "text": "I expected to see him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그한테 너무 바라지 마라",
+      "text": "Don't <b>expect</b> too much of him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "과대한 기대를 하지 마세요",
+      "text": "Don't <b>expect</b> too much of me."
+    }
+  ],
+  "isWordType": true
+}

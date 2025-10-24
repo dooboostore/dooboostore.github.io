@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "strike",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "straɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "치다, 때리다(hit)",
+              "examples": [
+                {
+                  "text": "<b>strike</b> a person dead",
+                  "translatedText": "…을 때려 죽이다"
+                }
+              ],
+              "originalMeaning": "치다, 때리다(hit)"
+            },
+            {
+              "meaning": "공격하다(attack)",
+              "examples": [
+                {
+                  "text": "<b>strike</b> the fort",
+                  "translatedText": "요새를 공격하다"
+                }
+              ],
+              "originalMeaning": "공격하다(attack)"
+            },
+            {
+              "meaning": "찌르다, 꿰찌르다(thrust)",
+              "examples": [
+                {
+                  "text": "<b>strike</b> a person to the heart with a jackknife = <b>strike</b> a jackknife into a person's heart",
+                  "translatedText": "잭나이프로 …의 심장을 푹 찌르다"
+                }
+              ],
+              "originalMeaning": "찌르다, 꿰찌르다(thrust)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…을) 치다, 때리다; 공격[습격]하다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>strike</b> at the enemy",
+                  "translatedText": "적을 공격하다"
+                }
+              ],
+              "originalMeaning": "(…을) 치다, 때리다; 공격[습격]하다 ((at))"
+            },
+            {
+              "meaning": "두드리다, <심장이> 뛰다",
+              "examples": [],
+              "originalMeaning": "두드리다, <심장이> 뛰다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "치기, 타격, 구타; (…에 대한) 공격 ((on, against))",
+              "examples": [],
+              "originalMeaning": "치기, 타격, 구타; (…에 대한) 공격 ((on, against))"
+            },
+            {
+              "meaning": "동맹 파업, 스트라이크, (노동) 쟁의",
+              "examples": [
+                {
+                  "text": "a general <b>strike</b>",
+                  "translatedText": "총파업"
+                }
+              ],
+              "originalMeaning": "동맹 파업, 스트라이크, (노동) 쟁의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ccf6a97c62e146c58c7a055870f5e2ea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ccf6a97c62e146c58c7a055870f5e2ea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "strikes"
+        },
+        {
+          "type": "과거형",
+          "value": "struck"
+        },
+        {
+          "type": "현재 분사",
+          "value": "striking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stricken, struck"
+        }
+      ],
+      "aliasConjugation": "strikes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0d8ef7147b7a96cf96d326e209492157",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떤 아이디어가 문득 떠올랐다.",
+      "text": "An idea struck me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바람이 살을 에듯 차가웠다.",
+      "text": "The wind struck cold."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사실은 급소를 찔렀다.",
+      "text": "The truth struck home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 임종이 왔다[수명이 다했다].",
+      "text": "His hour has struck."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금 세 시를 쳤다",
+      "text": "It struck three just now."
+    }
+  ],
+  "isWordType": true
+}

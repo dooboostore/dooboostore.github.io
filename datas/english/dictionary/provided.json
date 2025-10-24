@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "provided",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈvaɪdɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "…을 조건으로 하여 ((that…)), 만일 …이라면(if)",
+              "examples": [],
+              "originalMeaning": "…을 조건으로 하여 ((that…)), 만일 …이라면(if)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "준비된, 제공[공급]된; 규정[규약]된; 예비의",
+              "examples": [],
+              "originalMeaning": "준비된, 제공[공급]된; 규정[규약]된; 예비의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e88b8da1b17d4a7dbc4f5a1577948650",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e88b8da1b17d4a7dbc4f5a1577948650",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7d65b90fda603999784d0910eefe4cc4",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "provide",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈvaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람에게 필요한 물건을> 대주다, 공급하다, 지급하다(supply), 제공하다 ((with, for, [미] to)); …을 장치하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>provide</b> oneself",
+                  "translatedText": "스스로 마련하다"
+                }
+              ],
+              "originalMeaning": "<사람에게 필요한 물건을> 대주다, 공급하다, 지급하다(supply), 제공하다 ((with, for, [미] to)); …을 장치하다 ((with))"
+            },
+            {
+              "meaning": "준비하다, 대비하다 ((for, against))",
+              "examples": [
+                {
+                  "text": "<b>provide</b> food for a voyage",
+                  "translatedText": "항해를 위해 식량을 준비하다"
+                }
+              ],
+              "originalMeaning": "준비하다, 대비하다 ((for, against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(미리) 준비하다, 대비하다 ((for, against))",
+              "examples": [
+                {
+                  "text": "<b>provide</b> for old age",
+                  "translatedText": "노후에 대비하다"
+                }
+              ],
+              "originalMeaning": "(미리) 준비하다, 대비하다 ((for, against))"
+            },
+            {
+              "meaning": "예방 수단을 취하다 ((against))",
+              "examples": [],
+              "originalMeaning": "예방 수단을 취하다 ((against))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f4ce0251a6484e25a724bae000f10c1e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f4ce0251a6484e25a724bae000f10c1e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "provides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4d2545cd73a1f4ecab8b81029d62253b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "규칙은 법률로 규정되어 있다.",
+      "text": "The rules are <b>provided</b> in the law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집에는 목욕탕이 있다",
+      "text": "The house is <b>provided</b> with a bathroom."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "만일을 위해서 준비해 두어야 한다",
+      "text": "We must <b>provide</b> against a rainy day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "많은 식구를 거느리고 있다",
+      "text": "He has a large family to support[<b>provide</b> for]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 클럽은 다양한 활동을 제공한다",
+      "text": "The club provides a wide variety of activities."
+    }
+  ],
+  "isWordType": true
+}

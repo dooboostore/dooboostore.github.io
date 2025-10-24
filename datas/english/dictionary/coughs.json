@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "cough",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɔːf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기침하다, 기침 소리를 내다, 헛기침하다",
+              "examples": [],
+              "originalMeaning": "기침하다, 기침 소리를 내다, 헛기침하다"
+            },
+            {
+              "meaning": "<내연 기관이> 불연소음을 내다",
+              "examples": [],
+              "originalMeaning": "<내연 기관이> 불연소음을 내다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기침하여 …을 내뱉다 ((up, out))",
+              "examples": [
+                {
+                  "text": "<b>cough</b> up phlegm",
+                  "translatedText": "기침해서 가래를 내뱉다"
+                }
+              ],
+              "originalMeaning": "기침하여 …을 내뱉다 ((up, out))"
+            },
+            {
+              "meaning": "기침하여 …이 되게 하다",
+              "examples": [
+                {
+                  "text": "<b>cough</b> oneself hoarse",
+                  "translatedText": "기침을 하여 목이 쉬다"
+                }
+              ],
+              "originalMeaning": "기침하여 …이 되게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기침, 헛기침",
+              "examples": [
+                {
+                  "text": "give a slight <b>cough</b>",
+                  "translatedText": "가벼운 기침을 하다"
+                }
+              ],
+              "originalMeaning": "기침, 헛기침"
+            },
+            {
+              "meaning": "기침병",
+              "examples": [
+                {
+                  "text": "whooping <b>cough</b>",
+                  "translatedText": "백일해"
+                }
+              ],
+              "originalMeaning": "기침병"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3910f2e7109340dc824bc0471cdbf02c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3910f2e7109340dc824bc0471cdbf02c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "coughs"
+        },
+        {
+          "type": "과거형",
+          "value": "coughed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coughing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coughed"
+        }
+      ],
+      "aliasConjugation": "coughs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "875aae52b423dc212638bbc5eea1afaf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기침이 자꾸 나와 곤란하다",
+      "text": "I am troubled with bad <b>cough</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 기침을 하고 방에 들어섰다",
+      "text": "He entered the room with a <b>cough</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열은 내렸는데 아직 기침이 심하다",
+      "text": "My fever's down, but I still have a bad <b>cough</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아기는 꿱꿱거리며 음식을 토할 정도로 기침을 했다",
+      "text": "The baby was coughing so much that she brought all her food up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 기침이 심하다",
+      "text": "I have a bad <b>cough</b>."
+    }
+  ],
+  "isWordType": true
+}

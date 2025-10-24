@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "balance",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbæləns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[또는 a ~] 균형, 평균, 평형, 조화",
+              "examples": [
+                {
+                  "text": "a <b>balance</b> of mind and body",
+                  "translatedText": "심신의 조화"
+                }
+              ],
+              "originalMeaning": "[또는 a ~] 균형, 평균, 평형, 조화"
+            },
+            {
+              "meaning": "(정서의) 안정, 평정(opp. imbalance, unbalance)",
+              "examples": [],
+              "originalMeaning": "(정서의) 안정, 평정(opp. imbalance, unbalance)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 평형[균형]을 잡다[맞추다], 균형이 잡히게 하다",
+              "examples": [
+                {
+                  "text": "<b>balance</b> oneself",
+                  "translatedText": "몸의 균형을 잡다"
+                }
+              ],
+              "originalMeaning": "…의 평형[균형]을 잡다[맞추다], 균형이 잡히게 하다"
+            },
+            {
+              "meaning": "비교하여 헤아리다, 가늠하다, 비교 평가하다",
+              "examples": [
+                {
+                  "text": "<b>balance</b> probabilities",
+                  "translatedText": "여러 가능성을 가늠해 보다"
+                }
+              ],
+              "originalMeaning": "비교하여 헤아리다, 가늠하다, 비교 평가하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<무게·액수·값 등이> 맞다, 균형[평형]이 잡히다, 평균을 이루다; 몸의 균형을 잡다 ((on))",
+              "examples": [
+                {
+                  "text": "<b>balance</b> on one leg",
+                  "translatedText": "한쪽 다리로 균형을 잡다"
+                }
+              ],
+              "originalMeaning": "<무게·액수·값 등이> 맞다, 균형[평형]이 잡히다, 평균을 이루다; 몸의 균형을 잡다 ((on))"
+            },
+            {
+              "meaning": "<계산·장부 잔액이> 맞아떨어지다 ((out))",
+              "examples": [
+                {
+                  "text": "The account doesn't <b>balance</b> .",
+                  "translatedText": "대차 잔액이 맞아떨어지지 않는다."
+                }
+              ],
+              "originalMeaning": "<계산·장부 잔액이> 맞아떨어지다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1bc87090f02e4a0992d0b048f03d8e17",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1bc87090f02e4a0992d0b048f03d8e17",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "balances"
+        },
+        {
+          "type": "과거형",
+          "value": "balanced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "balancing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "balanced"
+        }
+      ],
+      "aliasConjugation": "balances",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "12ece4bdd1db557b306099b580fab2e9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직 예금이 남아 있다",
+      "text": "I still have a <b>balance</b> at my bank."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "편식을 하지 않도록 해야 합니다",
+      "text": "You must have a balanced diet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 아직 공떠 있다",
+      "text": "The matter still hangs in the <b>balance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 중심을 잃고 넘어졌다",
+      "text": "She lost her <b>balance</b> and tumbled over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "계정 잔액은 나에게 적자[흑자]이다.",
+      "text": "The <b>balance</b> of the account is against[for] me."
+    }
+  ],
+  "isWordType": true
+}

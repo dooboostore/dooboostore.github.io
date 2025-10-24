@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "knock",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "nɑːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<머리·공 등을> 치다, 때리다, <문을> 두드리다 (=strike)",
+              "examples": [
+                {
+                  "text": "<b>knock</b> the door",
+                  "translatedText": "문을 두드리다"
+                }
+              ],
+              "originalMeaning": "<머리·공 등을> 치다, 때리다, <문을> 두드리다 (=<span class='related_word' lang='en' >strike</span>)"
+            },
+            {
+              "meaning": "쳐서 …이 되게 하다[을 만들다]",
+              "examples": [
+                {
+                  "text": "<b>knock</b> a hole in the door",
+                  "translatedText": "쳐서 문에 구멍을 내다"
+                }
+              ],
+              "originalMeaning": "쳐서 …이 되게 하다[을 만들다]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "때리다(beat, rap), 노크하다",
+              "examples": [
+                {
+                  "text": "<b>knock</b> at[on]the door",
+                  "translatedText": "문을 (똑똑) 두드리다"
+                }
+              ],
+              "originalMeaning": "때리다(beat, rap), 노크하다"
+            },
+            {
+              "meaning": "부딪히다, 충돌하다(bump); …와 우연히 마주치다 ((against))",
+              "examples": [
+                {
+                  "text": "The waves <b>knocked</b> against the rocks.",
+                  "translatedText": "파도가 바위에 부딪쳤다."
+                }
+              ],
+              "originalMeaning": "부딪히다, 충돌하다(bump); …와 우연히 마주치다 ((against))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "두드리기,[종종 a ~] (문의) 노크 (소리)",
+              "examples": [],
+              "originalMeaning": "두드리기,[종종 a ~] (문의) 노크 (소리)"
+            },
+            {
+              "meaning": "구타(blow) ((on)), 타격",
+              "examples": [],
+              "originalMeaning": "구타(blow) ((on)), 타격"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c7ec874098574676b020c2eaf3f81416",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c7ec874098574676b020c2eaf3f81416",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "knocks"
+        },
+        {
+          "type": "과거형",
+          "value": "knocked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "knocking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "knocked"
+        }
+      ],
+      "aliasConjugation": "knocks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "81fe6992c535736f89d936ddc6da06c1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 문을 두드렸지만 응답이 없었다",
+      "text": "I was unable to get a response to my knocking. or I <b>knocked</b> the door but there was no answer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 대 맞고 기절했다",
+      "text": "The blow <b>knocked</b> him senseless."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 계속 문을 뚝뚝 두드렸다",
+      "text": "He kept knocking at the door."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "문에 세 번 노크가 있었다.",
+      "text": "There was a treble <b>knock</b> at the door."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 때려 실신시켰다.",
+      "text": "They <b>knocked</b> him senseless[unconscious]."
+    }
+  ],
+  "isWordType": true
+}

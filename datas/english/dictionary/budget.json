@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "budget",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbʌdʒɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "예산, 예산안[액]",
+              "examples": [
+                {
+                  "text": "a <b>budget</b> bill",
+                  "translatedText": "예산안"
+                }
+              ],
+              "originalMeaning": "예산, 예산안[액]"
+            },
+            {
+              "meaning": "예산 집행 계획[안]",
+              "examples": [],
+              "originalMeaning": "예산 집행 계획[안]"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "싸게 잘 산, 품질에 비해 값이 싼",
+              "examples": [],
+              "originalMeaning": "싸게 잘 산, 품질에 비해 값이 싼"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "예산에 계상(計上)하다, 예산[자금 계획]을 세우다 ((for))",
+              "examples": [],
+              "originalMeaning": "예산에 계상(計上)하다, 예산[자금 계획]을 세우다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a79eaada558e4110bbb203098320746e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a79eaada558e4110bbb203098320746e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "budgets"
+        },
+        {
+          "type": "과거형",
+          "value": "budgeted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "budgeting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "budgeted"
+        }
+      ],
+      "aliasConjugation": "budgets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "82fdc41b955c43916cd75979f154997d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예산이 백만 불 축소되었다",
+      "text": "The <b>budget</b> had been trimmed by one million dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 예산 초과로 펑크 났다",
+      "text": "The plan fell through because it went over the <b>budget</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 예산 문제에서 벽에 부딪쳤다",
+      "text": "We ran up against a brick wall over budgeting costs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예산안은 75 대 48의 표결로 통과되었다",
+      "text": "The <b>budget</b> bill was approved by an 75-48 vote[75 votes to 48]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년도 예산이 어제 성립됐다",
+      "text": "The <b>budget</b> for the current fiscal year was given the Assembly's final approval yesterday."
+    }
+  ],
+  "isWordType": true
+}

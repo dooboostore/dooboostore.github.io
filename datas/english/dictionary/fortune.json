@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "fortune",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│fɔːrtʃuːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 부(富)(wealth); (많은) 재산, 큰 재물",
+              "examples": [
+                {
+                  "text": "a man of <b>fortune</b>",
+                  "translatedText": "재산가"
+                }
+              ],
+              "originalMeaning": "[CU] 부(富)(wealth); (많은) 재산, 큰 재물"
+            },
+            {
+              "meaning": "운(chance)",
+              "examples": [
+                {
+                  "text": "have good[bad] <b>fortune</b>",
+                  "translatedText": "운이 좋다[나쁘다]"
+                }
+              ],
+              "originalMeaning": "운(chance)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[it을 주어로 하여] 우연히 일어나다(happen), 우연히 만나다",
+              "examples": [
+                {
+                  "text": "It <b>fortune</b> d that …",
+                  "translatedText": "우연히 …한 일이 일어났다"
+                }
+              ],
+              "originalMeaning": "[it을 주어로 하여] 우연히 일어나다(happen), 우연히 만나다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<남에게> 재산을 주다",
+              "examples": [],
+              "originalMeaning": "<남에게> 재산을 주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b600b3f6c6d14b708af072dc587dca61",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b600b3f6c6d14b708af072dc587dca61",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6ed597cbfa509cd00cbdd3b5a6a3c17a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 운이 트이기 시작했다",
+      "text": "<b>Fortune</b> has begun to smile upon him. or The wheel of <b>Fortune</b> has begun to roll his way[to turn in his favor]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 가산이 기울기 시작했다",
+      "text": "His <b>fortune</b> began to ebb."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 재산은 나의 갑절이나 된다",
+      "text": "His <b>fortune</b> doubles mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "운명의 여신은 용감한 자의 편이다.",
+      "text": "<b>Fortune</b> favors the brave."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 재산을 다 털어 먹었다",
+      "text": "He ran through his fortunes."
+    }
+  ],
+  "isWordType": true
+}

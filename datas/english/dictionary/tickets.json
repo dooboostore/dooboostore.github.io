@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "ticket",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtɪkɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "표, 입장권, 승차권",
+              "examples": [
+                {
+                  "text": "a concert <b>ticket</b>",
+                  "translatedText": "음악회 입장권"
+                }
+              ],
+              "originalMeaning": "표, 입장권, 승차권"
+            },
+            {
+              "meaning": "호출장 ((특히 교통 위반자에 대한)), (위반) 딱지",
+              "examples": [
+                {
+                  "text": "a parking <b>ticket</b>",
+                  "translatedText": "주차 위반 딱지"
+                }
+              ],
+              "originalMeaning": "호출장 ((특히 교통 위반자에 대한)), (위반) 딱지"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "표[딱지]를 붙이다, <상품에> 정가표를 달다; (…라고) 칭하다, 딱지 붙이다",
+              "examples": [
+                {
+                  "text": "<b>ticket</b> a person as a boaster",
+                  "translatedText": "…에게 허풍쟁이라는 딱지를 붙이다"
+                }
+              ],
+              "originalMeaning": "표[딱지]를 붙이다, <상품에> 정가표를 달다; (…라고) 칭하다, 딱지 붙이다"
+            },
+            {
+              "meaning": "차표를 팔다, 표를 발행하다",
+              "examples": [],
+              "originalMeaning": "차표를 팔다, 표를 발행하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6d23b1486bb0412ea2a9b9d7db68a1d5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6d23b1486bb0412ea2a9b9d7db68a1d5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tickets"
+        },
+        {
+          "type": "과거형",
+          "value": "ticketed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ticketing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ticketed"
+        }
+      ],
+      "aliasConjugation": "tickets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "68e37faa752ca1f8f0121b18c5188aa6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 파리행 차표를 미리 샀다.",
+      "text": "He booked a <b>ticket</b> for Paris."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 표로 홀에 들어갈 수 있다.",
+      "text": "This <b>ticket</b> admits to the hall."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 표로 두 사람이 입장할 수 있다.",
+      "text": "This <b>ticket</b> admits two persons."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대전까지의 왕복 차표를 주시오",
+      "text": "Give me a return <b>ticket</b> for Daejeon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "목소리는 그녀의 유일한 수입원이다",
+      "text": "Her voice is her only meal <b>ticket</b>."
+    }
+  ],
+  "isWordType": true
+}

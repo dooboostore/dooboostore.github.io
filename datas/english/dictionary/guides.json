@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "guide",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람을> 안내하다, 인도하다 (=lead)",
+              "examples": [
+                {
+                  "text": "<b>guide</b> sightseers",
+                  "translatedText": "관광객을 안내하다"
+                }
+              ],
+              "originalMeaning": "<사람을> 안내하다, 인도하다 (=<span class='related_word' lang='en' >lead</span>)"
+            },
+            {
+              "meaning": "지도하다, (깨우쳐) 가르치다; 조언하다",
+              "examples": [
+                {
+                  "text": "<b>guide</b> students in their studies",
+                  "translatedText": "학생들에게 공부를 지도하다"
+                }
+              ],
+              "originalMeaning": "지도하다, (깨우쳐) 가르치다; 조언하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "안내자, 길잡이, 안내업자, 가이드",
+              "examples": [],
+              "originalMeaning": "안내자, 길잡이, 안내업자, 가이드"
+            },
+            {
+              "meaning": "[군사] 향도(嚮導), [항해] 향도함(艦),[pl.] 정찰대",
+              "examples": [],
+              "originalMeaning": "[군사] 향도(嚮導), [항해] 향도함(艦),[pl.] 정찰대"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/110f8b62cd88439badd25bbdddfb103d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/110f8b62cd88439badd25bbdddfb103d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "guides"
+        },
+        {
+          "type": "과거형",
+          "value": "guided"
+        },
+        {
+          "type": "현재 분사",
+          "value": "guiding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "guided"
+        }
+      ],
+      "aliasConjugation": "guides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "690241ea2ce7eacc5fcaff9a07842cc0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 별들의 안내를 받아서 돌아왔다.",
+      "text": "The stars guided us back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 하녀의 인도를 받아 응접실에 들어갔다",
+      "text": "He was guided by a maidservant into the drawing room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너를 길잡이로 데려가지",
+      "text": "I'll take you along as <b>guide</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이기적인 사람이다",
+      "text": "He is guided by self-interest."
+    }
+  ],
+  "isWordType": true
+}

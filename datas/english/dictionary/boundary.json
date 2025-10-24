@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "boundary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbaʊndri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경계(선), 경계표",
+              "examples": [
+                {
+                  "text": "a <b>boundary</b> line",
+                  "translatedText": "경계선"
+                }
+              ],
+              "originalMeaning": "경계(선), 경계표"
+            },
+            {
+              "meaning": "한계, 한도",
+              "examples": [],
+              "originalMeaning": "한계, 한도"
+            },
+            {
+              "meaning": "경계선 타(打)(에 의한 득점)",
+              "examples": [],
+              "originalMeaning": "경계선 타(打)(에 의한 득점)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b607c62e18ea4e63a894fc04c0014aa1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b607c62e18ea4e63a894fc04c0014aa1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "boundaries"
+        }
+      ],
+      "aliasConjugation": "boundaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "cd265d74ef0de2a5c67a2abe551fa15d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그가 사는 주 경계 안에 있어야 한다",
+      "text": "He has to stay within his state <b>boundary</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 우리 지식의 한계 밖에 있다",
+      "text": "It lies beyond the boundaries of our knowledge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "울타리 문제로 심히 다투었다",
+      "text": "The neighbors had a violent dispute on[about] the <b>boundary</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전문 영역간의 경계가 무너지고 있다",
+      "text": "The boundaries between specialties are collapsing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 울타리는 나의 토지와 그의 토지의 경계를 나타낸다",
+      "text": "The fence marks the <b>boundary</b> between my land and hers."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "phase",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "feɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(변화하는 것의) 상(相), 면, 양상, 현상",
+              "examples": [
+                {
+                  "text": "a problem with many phases",
+                  "translatedText": "많은 면을 가진 문제"
+                }
+              ],
+              "originalMeaning": "(변화하는 것의) 상(相), 면, 양상, 현상"
+            },
+            {
+              "meaning": "(천체의) 상(象), (달의) 상(相)",
+              "examples": [],
+              "originalMeaning": "(천체의) 상(象), (달의) 상(相)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "단계적으로 실행하다, 조정하다, 정리하다, 예정을 짜다",
+              "examples": [],
+              "originalMeaning": "단계적으로 실행하다, 조정하다, 정리하다, 예정을 짜다"
+            },
+            {
+              "meaning": "상관시키다, 동조시키다, 동시성을 갖게 하다(synchronize)",
+              "examples": [],
+              "originalMeaning": "상관시키다, 동조시키다, 동시성을 갖게 하다(synchronize)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/643cabc07e5549ddac3e8df6ffb92ae2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/643cabc07e5549ddac3e8df6ffb92ae2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "phases"
+        },
+        {
+          "type": "과거형",
+          "value": "phased"
+        },
+        {
+          "type": "현재 분사",
+          "value": "phasing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "phased"
+        }
+      ],
+      "aliasConjugation": "phases",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b6b9b6e786faedb5df15df4034b0b442",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지옥도 극락도 이승에 있다",
+      "text": "Heaven and hell exist in this world. or Heaven and hell are but the two phases of life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "혁명은 새로운 단계에 들어갔다",
+      "text": "The revolution entered a new <b>phase</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여론은 이미 이 단계를 지났다",
+      "text": "Public opinion has already passed this <b>phase</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정부는 간접세를 단계적으로 도입[폐지]할 예정이다",
+      "text": "The government intends to <b>phase</b> in[out] the indirect tax."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전쟁의 국면이 일변했다",
+      "text": "The war now entered on its new <b>phase</b>."
+    }
+  ],
+  "isWordType": true
+}

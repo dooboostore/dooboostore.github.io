@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "safe",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "seɪf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "안전한, 위험이 없는(opp. dangerous)",
+              "examples": [
+                {
+                  "text": "a <b>safe</b> place",
+                  "translatedText": "안전한 장소"
+                }
+              ],
+              "originalMeaning": "안전한, 위험이 없는(opp. dangerous)"
+            },
+            {
+              "meaning": "[arrive, be, bring, come, see, keep 등의 보어로서] 안전히, 무사히[하여]",
+              "examples": [
+                {
+                  "text": "arrive <b>safe</b>",
+                  "translatedText": "안착하다"
+                }
+              ],
+              "originalMeaning": "[arrive, be, bring, come, see, keep 등의 보어로서] 안전히, 무사히[하여]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "금고(金庫)",
+              "examples": [],
+              "originalMeaning": "금고(金庫)"
+            },
+            {
+              "meaning": "(=MEAT SAFE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >MEAT <b>SAFE</b></span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ae6dd79b1a024ad496ac235793d57381",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ae6dd79b1a024ad496ac235793d57381",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "safer"
+        },
+        {
+          "type": "최상급",
+          "value": "safest"
+        }
+      ],
+      "aliasConjugation": "safer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "2d09ec714ae7dfbd0155eac62c17cc9a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 단단히 간수해 둬라",
+      "text": "Keep it in a <b>safe</b> place."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 무난한 화제를 꺼냈다",
+      "text": "I introduced a <b>safe</b> topic."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금고 속의 돈이 없어졌다",
+      "text": "The money in the <b>safe</b> is gone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "발견될 염려가 없어서 안심입니다",
+      "text": "I feel <b>safe</b> from discovery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 금고는 불에도 견딘다",
+      "text": "The <b>safe</b> is proof against fire."
+    }
+  ],
+  "isWordType": true
+}

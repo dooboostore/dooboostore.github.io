@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "entry": "ratio",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│reɪʃioʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] [수학] 비(比), 비율(cf. PROPORTION); [금융] (복본위제(複本位制)에서) 금은비가(金銀比價) ((금과 은의 상대적 가치))",
+              "examples": [
+                {
+                  "text": "the <b>ratio</b> of 5 to 2",
+                  "translatedText": "5대 2의 비율"
+                }
+              ],
+              "originalMeaning": "[UC/] [수학] 비(比), 비율(cf. PROPORTION); [금융] (복본위제(複本位制)에서) 금은비가(金銀比價) ((금과 은의 상대적 가치))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff17f85812ae495ea45ec5443e4fd6df",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff17f85812ae495ea45ec5443e4fd6df",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "ratios"
+        }
+      ],
+      "aliasConjugation": "ratios",
+      "aliasConjugationPos": "복수형",
+      "gdid": "926b90ead2ed7cef86cde074660e2aca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 학급은 여학생 2명에 대하여 남학생 1명의 비율이다.",
+      "text": "There is a <b>ratio</b> of two girls to one boy in this class."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "율이 1퍼센트 올랐다",
+      "text": "The <b>ratio</b> went up one percent. or The percentage was raised one point."
+    }
+  ],
+  "isWordType": true
+}

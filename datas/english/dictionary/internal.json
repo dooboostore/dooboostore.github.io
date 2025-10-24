@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "internal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪnˈtɜːrnl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "내부의, 체내의",
+              "examples": [
+                {
+                  "text": "<b>internal</b> troubles",
+                  "translatedText": "내분"
+                }
+              ],
+              "originalMeaning": "내부의, 체내의"
+            },
+            {
+              "meaning": "내면적인, 내재적인, 본질적인(opp. external); 정신적인, 심적인",
+              "examples": [
+                {
+                  "text": "<b>internal</b> evidence",
+                  "translatedText": "내재적 증거"
+                }
+              ],
+              "originalMeaning": "내면적인, 내재적인, 본질적인(opp. external); 정신적인, 심적인"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사물의) 본질, 실질",
+              "examples": [],
+              "originalMeaning": "(사물의) 본질, 실질"
+            },
+            {
+              "meaning": "[pl.] 내장(內臟)",
+              "examples": [],
+              "originalMeaning": "[pl.] 내장(內臟)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dd9e1ae1f31f411084c199c53befbea4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dd9e1ae1f31f411084c199c53befbea4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "003135a11f6f68e8bf56e995172a7ab9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내장에 병이 있을지도 모릅니다",
+      "text": "You may have some kind of <b>internal</b> disease."
+    }
+  ],
+  "isWordType": true
+}

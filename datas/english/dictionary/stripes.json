@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "entry": "stripe",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "straɪp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "줄무늬, 줄",
+              "examples": [],
+              "originalMeaning": "줄무늬, 줄"
+            },
+            {
+              "meaning": "[군사] 수장(袖章); [구어] 공적, 계급; 해군 사관",
+              "examples": [
+                {
+                  "text": "get one's <b>stripes</b>",
+                  "translatedText": "승진하다"
+                }
+              ],
+              "originalMeaning": "[군사] 수장(袖章); [구어] 공적, 계급; 해군 사관"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "줄무늬를 넣다, 채찍질하다",
+              "examples": [],
+              "originalMeaning": "줄무늬를 넣다, 채찍질하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bd7cd76b6c594e1a80f5a40e11527c38",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bd7cd76b6c594e1a80f5a40e11527c38",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "de42534d25e88193c498e695b89eb837",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 제복은 빨간 선이 들어 있어 아주 멋있다",
+      "text": "His uniform looks very smart with the red <b>stripe</b> in it."
+    }
+  ],
+  "isWordType": true
+}

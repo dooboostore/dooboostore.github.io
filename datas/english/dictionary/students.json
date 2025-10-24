@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "student",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│stuːdnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "학생 ((미국에서는 중·고등학교 학생 이상, 영국에서는 대학생; cf. SCHOLAR, PUPIL))",
+              "examples": [
+                {
+                  "text": "a high school <b>student</b>",
+                  "translatedText": "[미] 고등학생"
+                }
+              ],
+              "originalMeaning": "학생 ((미국에서는 중·고등학교 학생 이상, 영국에서는 대학생; cf. SCHOLAR, PUPIL))"
+            },
+            {
+              "meaning": "연구가, 학자",
+              "examples": [],
+              "originalMeaning": "연구가, 학자"
+            },
+            {
+              "meaning": "(대학·연구소 등의) 연구생",
+              "examples": [],
+              "originalMeaning": "(대학·연구소 등의) 연구생"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bdaeb806a5d64a1db6cc7dca9facb173",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bdaeb806a5d64a1db6cc7dca9facb173",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "634d0e34081fdfe873eeafd0dc551432",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 예일 대학 학생이다.",
+      "text": "He is a <b>student</b> at Yale."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 학생회에 속해 있다",
+      "text": "I am in the <b>students</b>' union."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책의 독자는 주로 학생들이다",
+      "text": "Most of the readers of this book are <b>students</b>. or The readers of this book are mostly <b>students</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "학생에 한해서 입장 허가",
+      "text": "Admission to <b>students</b> only."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 언제나 학생들을 심하게 통제했다",
+      "text": "He always kept his <b>students</b> on a tight rein. or He always kept a tight rein on his <b>students</b>."
+    }
+  ],
+  "isWordType": true
+}

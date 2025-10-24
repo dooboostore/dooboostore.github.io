@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "slam",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "slæm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<문 등을> 탕[쾅] 닫다 ((down, on))",
+              "examples": [
+                {
+                  "text": "<b>slam</b> down the lid of the box",
+                  "translatedText": "상자 뚜껑을 쾅 닫다"
+                }
+              ],
+              "originalMeaning": "<문 등을> 탕[쾅] 닫다 ((down, on))"
+            },
+            {
+              "meaning": "털썩 내려놓다 ((down, on))",
+              "examples": [
+                {
+                  "text": "He <b>slam</b> med his books on the desk.",
+                  "translatedText": "그는 책을 책상 위에 털썩 내려놓았다."
+                }
+              ],
+              "originalMeaning": "털썩 내려놓다 ((down, on))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<문 등이> 쾅 닫히다",
+              "examples": [],
+              "originalMeaning": "<문 등이> 쾅 닫히다"
+            },
+            {
+              "meaning": "소리내어 (…에 세게) 부딪다",
+              "examples": [],
+              "originalMeaning": "소리내어 (…에 세게) 부딪다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쾅[탕, 철썩] (하는 소리)",
+              "examples": [
+                {
+                  "text": "with a <b>slam</b>",
+                  "translatedText": "쾅[탕] 하고; 사정없이"
+                }
+              ],
+              "originalMeaning": "쾅[탕, 철썩] (하는 소리)"
+            },
+            {
+              "meaning": "혹평",
+              "examples": [],
+              "originalMeaning": "혹평"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/82b26513d4464e8fbd235b85ef113c52",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/82b26513d4464e8fbd235b85ef113c52",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "slams"
+        },
+        {
+          "type": "과거형",
+          "value": "slammed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "slamming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "slammed"
+        }
+      ],
+      "aliasConjugation": "slams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "afe71532330d5d08d0869c800a18bef1",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "slam",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(카드놀이에서) …에 전승하다",
+              "examples": [],
+              "originalMeaning": "(카드놀이에서) …에 전승하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전승",
+              "examples": [],
+              "originalMeaning": "전승"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bb3b6c4b3773437993e125e0976ccae7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bb3b6c4b3773437993e125e0976ccae7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "slams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ccf26035c6391aabd1ec3b429be0b012",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 문을 쾅 닫았다",
+      "text": "He <b>slammed</b>[shut] the door with a bang."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 책을 책상 위에 털썩 내려놓았다.",
+      "text": "He <b>slammed</b> his books on the desk."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 여자 테니스 선수권을 싹쓸이했다",
+      "text": "She made a clean[grand-<b>slam</b>] sweep of all women's tennis titles."
+    }
+  ],
+  "isWordType": true
+}

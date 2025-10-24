@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "attack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈtæk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<적군·논적·언행 등을> 공격하다, 습격하다; 비난하다(opp. defend)",
+              "examples": [],
+              "originalMeaning": "<적군·논적·언행 등을> 공격하다, 습격하다; 비난하다(opp. defend)"
+            },
+            {
+              "meaning": "<일을> (정력적으로) 착수하다, <식사 등을> 왕성하게 하기 시작하다",
+              "examples": [],
+              "originalMeaning": "<일을> (정력적으로) 착수하다, <식사 등을> 왕성하게 하기 시작하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "공격하다, 습격하다",
+              "examples": [],
+              "originalMeaning": "공격하다, 습격하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공격, 습격; 비난",
+              "examples": [
+                {
+                  "text": "deliver[make] an <b>attack</b>",
+                  "translatedText": "공격(을 가)하다 (( against, on ))"
+                }
+              ],
+              "originalMeaning": "공격, 습격; 비난"
+            },
+            {
+              "meaning": "발병, (병의) 발작 ((of))",
+              "examples": [
+                {
+                  "text": "have an <b>attack</b> of fever",
+                  "translatedText": "열병에 걸리다"
+                }
+              ],
+              "originalMeaning": "발병, (병의) 발작 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ec840392bd4e44bd95b86af0e5304862",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ec840392bd4e44bd95b86af0e5304862",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "attacks"
+        },
+        {
+          "type": "과거형",
+          "value": "attacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "attacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "attacked"
+        }
+      ],
+      "aliasConjugation": "attacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9bb2040de4fc8205cbc74410b8ef221c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 심장 발작을 일으켰다.",
+      "text": "He had a heart <b>attack</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 가벼운 감기가 들었다",
+      "text": "She had a slight <b>attack</b> of influenza."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 방침에 대한 비난의 소리가 높다",
+      "text": "The policy is loudly attacked[censured]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공격을 받을 때마다 그도 되갈겼다.",
+      "text": "To every <b>attack</b> he reciprocated with a blow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 공격은 사전 경고 없이 일어났다",
+      "text": "The <b>attack</b> occurred without advance warning."
+    }
+  ],
+  "isWordType": true
+}

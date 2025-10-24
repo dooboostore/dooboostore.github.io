@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "evolve",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "iˈvɑːlv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<논리·의견·계획 등을> 서서히 발전[전개]시키다, <결론·법칙 등을> 끌어내다",
+              "examples": [
+                {
+                  "text": "<b>evolve</b> a scheme",
+                  "translatedText": "계획을 서서히 전개시키다"
+                }
+              ],
+              "originalMeaning": "<논리·의견·계획 등을> 서서히 발전[전개]시키다, <결론·법칙 등을> 끌어내다"
+            },
+            {
+              "meaning": "진화[발달]시키다",
+              "examples": [],
+              "originalMeaning": "진화[발달]시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "서서히 발전[전개]하다, 점진적으로 변화하다",
+              "examples": [],
+              "originalMeaning": "서서히 발전[전개]하다, 점진적으로 변화하다"
+            },
+            {
+              "meaning": "진화하다",
+              "examples": [
+                {
+                  "text": "<b>evolve</b> into",
+                  "translatedText": "…으로 진화하다"
+                }
+              ],
+              "originalMeaning": "진화하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/51bde212777e4afa9deba5fb828341d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/51bde212777e4afa9deba5fb828341d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "evolves"
+        },
+        {
+          "type": "과거형",
+          "value": "evolved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "evolving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "evolved"
+        }
+      ],
+      "aliasConjugation": "evolves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "77eee63b8f31803592f87120bc922c5c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람은 원숭이로부터 진화했다",
+      "text": "Man has evolved from the ape."
+    }
+  ],
+  "isWordType": true
+}

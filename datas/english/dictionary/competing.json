@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "compete",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəmˈpiːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "경쟁하다, 겨루다, 경합하다, 맞서다 ((with, for)); (경기에) 참가하다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>compete</b> with others for a prize",
+                  "translatedText": "상을 타려고 남과 겨루다"
+                }
+              ],
+              "originalMeaning": "경쟁하다, 겨루다, 경합하다, 맞서다 ((with, for)); (경기에) 참가하다 ((in))"
+            },
+            {
+              "meaning": "[보통 부정문] 필적하다, 비견하다 ((with))",
+              "examples": [
+                {
+                  "text": "No painting can <b>compete</b> with this one.",
+                  "translatedText": "이것에 필적할 만한 그림은 없다."
+                }
+              ],
+              "originalMeaning": "[보통 부정문] 필적하다, 비견하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2e1c0e453bbf4b879d8d96a82b6b4067",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2e1c0e453bbf4b879d8d96a82b6b4067",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "competes"
+        },
+        {
+          "type": "과거형",
+          "value": "competed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "competing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "competed"
+        }
+      ],
+      "aliasConjugation": "competes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1bb60202014dc62a66050464993f692b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 나라와 견줄 만한 나라는 없다",
+      "text": "No country can <b>compete</b> with this one."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "영어에서는 아무도 그를 따라갈 수 없다",
+      "text": "No one can equal[rival, <b>compete</b> with] him in English."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "부상 때문에 존은 결승전에 출전하지 못했다.",
+      "text": "An injury prevented John from <b>competing</b> in the final race."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몇몇 회사가 그 계약을 따기 위해 서로 경쟁하고 있다",
+      "text": "Several companies are <b>competing</b> against[with] each other for the contract[to gain the contract]."
+    }
+  ],
+  "isWordType": true
+}

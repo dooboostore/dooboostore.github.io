@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "bail",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "béil"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보석금",
+              "examples": [
+                {
+                  "text": "pay the <b>bail</b>",
+                  "translatedText": "보석금을 지불하다"
+                }
+              ],
+              "originalMeaning": "보석금"
+            },
+            {
+              "meaning": "보석 보증인(cf. SURETY)",
+              "examples": [],
+              "originalMeaning": "보석 보증인(cf. SURETY)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(보석금을 내어) 보석받게 하다 ((out)), <판사가> <피고의> 보석을 허가하다",
+              "examples": [
+                {
+                  "text": "He offered to <b>bail</b> his son out.",
+                  "translatedText": "그는 아들의 보석을 신청했다."
+                }
+              ],
+              "originalMeaning": "(보석금을 내어) 보석받게 하다 ((out)), <판사가> <피고의> 보석을 허가하다"
+            },
+            {
+              "meaning": "<회사·사람 등을> (돈을 지원하여 어려움에서) 구출하다",
+              "examples": [
+                {
+                  "text": "<b>bail</b> a person out of financial trouble",
+                  "translatedText": "…을 재정 곤란에서 구해내다"
+                }
+              ],
+              "originalMeaning": "<회사·사람 등을> (돈을 지원하여 어려움에서) 구출하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/482693f8b02f4cf8b7779a028757d6c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/482693f8b02f4cf8b7779a028757d6c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bails"
+        },
+        {
+          "type": "과거형",
+          "value": "bailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bailed"
+        }
+      ],
+      "aliasConjugation": "bails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6ef6fee0dbbbf9b374175b47236b4855",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "bail",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "삼주문(三柱門)에 얹는 가로장",
+              "examples": [],
+              "originalMeaning": "삼주문(三柱門)에 얹는 가로장"
+            },
+            {
+              "meaning": "(마구간의) 칸막이 가로장",
+              "examples": [],
+              "originalMeaning": "(마구간의) 칸막이 가로장"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/74f9feec1b7d43e2b590f3815ce393a6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/74f9feec1b7d43e2b590f3815ce393a6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "bails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "67d5fac426174174734cc60d9cd9a8b7",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아들의 보석을 신청했다.",
+      "text": "He offered to <b>bail</b> his son out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "부친이 그의 보석 보증인이 되었다.",
+      "text": "His father went <b>bail</b> for him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 보석 중이다",
+      "text": "He is under <b>bail</b>[free on bonds]."
+    }
+  ],
+  "isWordType": true
+}

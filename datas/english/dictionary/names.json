@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "name",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "neɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "이름, 성명; 명칭",
+              "examples": [
+                {
+                  "text": "a common <b>name</b>",
+                  "translatedText": "통칭"
+                }
+              ],
+              "originalMeaning": "이름, 성명; 명칭"
+            },
+            {
+              "meaning": "명성",
+              "examples": [],
+              "originalMeaning": "명성"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "유명한, 일류의",
+              "examples": [
+                {
+                  "text": "a <b>name</b> author",
+                  "translatedText": "일류 작가"
+                }
+              ],
+              "originalMeaning": "유명한, 일류의"
+            },
+            {
+              "meaning": "이름을 기입하기 위한",
+              "examples": [],
+              "originalMeaning": "이름을 기입하기 위한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "명명하다, …에(게) 이름을 붙이다[짓다]",
+              "examples": [
+                {
+                  "text": "<b>name</b> a newborn child",
+                  "translatedText": "갓난아이의 이름을 짓다"
+                }
+              ],
+              "originalMeaning": "명명하다, …에(게) 이름을 붙이다[짓다]"
+            },
+            {
+              "meaning": "지명하다, 지명하여 부르다, 임명하다",
+              "examples": [
+                {
+                  "text": "<b>name</b> a person for monitor",
+                  "translatedText": "…을 반장으로 임명하다"
+                }
+              ],
+              "originalMeaning": "지명하다, 지명하여 부르다, 임명하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3721f5e57d3a468987e7cc5648804d52",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3721f5e57d3a468987e7cc5648804d52",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "names"
+        },
+        {
+          "type": "과거형",
+          "value": "named"
+        },
+        {
+          "type": "현재 분사",
+          "value": "naming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "named"
+        }
+      ],
+      "aliasConjugation": "names",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2fff255a18c32e32df6d0a660c292c03",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사람은 죽어도 이름은 남는다",
+      "text": "Man lives but for one generation, his <b>name</b> for many. or A man dies but his <b>name</b> remains."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이름이 금방 생각나지 않는군",
+      "text": "I can't remember his <b>name</b> off the top of my head. or I don't know offhand what his <b>name</b> is."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "누구한테도 욕을 하지 마라",
+      "text": "Don't call anyone <b>names</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이름[얼굴]은 알고 있다.",
+      "text": "I know him by <b>name</b>[sight]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람의 이름만 알고 있다",
+      "text": "I only know him by <b>name</b>."
+    }
+  ],
+  "isWordType": true
+}

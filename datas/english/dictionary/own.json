@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "own",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "oʊn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[소유의 뜻을 강조하여] 자기 자신의; [독자성을 강조하여] 고유한, 개인적인, 독특한",
+              "examples": [
+                {
+                  "text": "This is my <b>own</b> house.",
+                  "translatedText": "이것은 내 소유의 집입니다."
+                }
+              ],
+              "originalMeaning": "[소유의 뜻을 강조하여] 자기 자신의; [독자성을 강조하여] 고유한, 개인적인, 독특한"
+            },
+            {
+              "meaning": "[자력성을 강조하여] 스스로 하는, 남의 힘을 빌지 않는, 간섭받지 않는, 독자의",
+              "examples": [
+                {
+                  "text": "He cooks his <b>own</b> meals.",
+                  "translatedText": "그는 자취하고 있다."
+                }
+              ],
+              "originalMeaning": "[자력성을 강조하여] 스스로 하는, 남의 힘을 빌지 않는, 간섭받지 않는, 독자의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(법적 권리에 따라) 소유[소지]하다",
+              "examples": [
+                {
+                  "text": "Who <b>own</b> s this land?",
+                  "translatedText": "이 땅은 누구 소유인가?"
+                }
+              ],
+              "originalMeaning": "(법적 권리에 따라) 소유[소지]하다"
+            },
+            {
+              "meaning": "…의 작가[부친, 소유자]임을 인정하다, …의 존재[가치, 진실]를 승인하다; 자인하다; <죄·사실 등을> 인정하다, 고백하다",
+              "examples": [
+                {
+                  "text": "He <b>own</b> s himself indebted[beaten].",
+                  "translatedText": "그는 자신이 은혜를 입었다[졌다]고 말한다."
+                }
+              ],
+              "originalMeaning": "…의 작가[부친, 소유자]임을 인정하다, …의 존재[가치, 진실]를 승인하다; 자인하다; <죄·사실 등을> 인정하다, 고백하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(결점·죄 등을) 인정하다, 자백하다 ((to))",
+              "examples": [
+                {
+                  "text": "I <b>own</b> to being at fault.",
+                  "translatedText": "나는 내가 잘못했다는 것을 인정한다."
+                }
+              ],
+              "originalMeaning": "(결점·죄 등을) 인정하다, 자백하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2bf7522752914630a28231232d79d5cc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2bf7522752914630a28231232d79d5cc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "owns"
+        },
+        {
+          "type": "과거형",
+          "value": "owned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "owning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "owned"
+        }
+      ],
+      "aliasConjugation": "owns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c4c09a700cbc28755b6830b4b5da4761",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 제 앞만 차린다",
+      "text": "He is out for his <b>own</b> interest only. or He is out to feather his <b>own</b> nest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 내 소유의 집입니다.",
+      "text": "This is my <b>own</b> house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 내 방식대로 하겠다",
+      "text": "I'll do it in my <b>own</b> way."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 할 일이나 해라.",
+      "text": "Attend to[Mind] your <b>own</b> affair."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공사로 다망하여 영일이 없다",
+      "text": "Pressed by official business, I have hardly a minute to call my <b>own</b>[a day to idle away]."
+    }
+  ],
+  "isWordType": true
+}

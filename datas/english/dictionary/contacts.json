@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "contact",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːntækt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "접촉, 맞닿음(touching) ((with))",
+              "examples": [
+                {
+                  "text": "body <b>contact</b>",
+                  "translatedText": "신체 접촉"
+                }
+              ],
+              "originalMeaning": "접촉, 맞닿음(touching) ((with))"
+            },
+            {
+              "meaning": "[종종 pl.] [미] 교제, 친교(associations); 연락(을 취함); [구어] 연고, 연줄(connection)",
+              "examples": [
+                {
+                  "text": "get in <b>contact</b> with",
+                  "translatedText": "…와 접촉[연락]하다"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] [미] 교제, 친교(associations); 연락(을 취함); [구어] 연고, 연줄(connection)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 접촉의[에 의한], <토지 따위가> 접하고 있는, [항공] 접촉[시계(視界)] 비행의, 교제의",
+              "examples": [],
+              "originalMeaning": "[A] 접촉의[에 의한], <토지 따위가> 접하고 있는, [항공] 접촉[시계(視界)] 비행의, 교제의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "접촉[시계] 비행으로",
+              "examples": [],
+              "originalMeaning": "접촉[시계] 비행으로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a24abbfc4cdb4bfdb5d7cc5d5c86c230",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a24abbfc4cdb4bfdb5d7cc5d5c86c230",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "contacts"
+        },
+        {
+          "type": "과거형",
+          "value": "contacted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "contacting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "contacted"
+        }
+      ],
+      "aliasConjugation": "contacts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "244aa443d003daace090dec77aae23b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 바이러스는 신체적 접촉을 통하여 감염된다",
+      "text": "The virus is transmitted via physical <b>contact</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자세한 내용은 총무부에 문의하십시오",
+      "text": "For further information, please <b>contact</b> the general affairs department."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 아버지가 이 교류 계획의 창구 역할을 하고 있다",
+      "text": "His father is the man to <b>contact</b> about this exchange program."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사업상 여러 층의 사람들과 접촉한다",
+      "text": "The nature of his business throws him into <b>contact</b> with all sorts of men."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "A를 B에 접촉시키다",
+      "text": "bring A into <b>contact</b> with B"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "brittle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbrɪtl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "부서지기 쉬운(fragile), 깨지기 쉬운",
+              "examples": [
+                {
+                  "text": "a <b>brittle</b> glass",
+                  "translatedText": "깨지기 쉬운 유리잔"
+                }
+              ],
+              "originalMeaning": "부서지기 쉬운(fragile), 깨지기 쉬운"
+            },
+            {
+              "meaning": "[비유] 상처입기 쉬운; 불안정한, 덧없는(frail)",
+              "examples": [
+                {
+                  "text": "a <b>brittle</b> marriage",
+                  "translatedText": "덧없는 결혼 생활"
+                }
+              ],
+              "originalMeaning": "[비유] 상처입기 쉬운; 불안정한, 덧없는(frail)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "견과류를 섞은 납작한 과자",
+              "examples": [],
+              "originalMeaning": "견과류를 섞은 납작한 과자"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "쉽게 부서지다[깨지다], 무르게 되다",
+              "examples": [],
+              "originalMeaning": "쉽게 부서지다[깨지다], 무르게 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cd3bb102b9ac4d7f90f54bccd6f1d56d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cd3bb102b9ac4d7f90f54bccd6f1d56d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "brittler"
+        },
+        {
+          "type": "최상급",
+          "value": "brittlest"
+        }
+      ],
+      "aliasConjugation": "brittler",
+      "aliasConjugationPos": "비교급",
+      "gdid": "753a1bab68f23322e58caed8e5b05951",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "얇은 유리는 깨지기 쉽다",
+      "text": "Thin glasses are <b>brittle</b>."
+    }
+  ],
+  "isWordType": true
+}

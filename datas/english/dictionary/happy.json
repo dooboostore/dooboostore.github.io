@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "happy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhæpi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "행복한, 기쁜, 반가운; 즐거운; 만족한",
+              "examples": [
+                {
+                  "text": "have a <b>happy</b> time",
+                  "translatedText": "행복하게 지내다"
+                }
+              ],
+              "originalMeaning": "행복한, 기쁜, 반가운; 즐거운; 만족한"
+            },
+            {
+              "meaning": "행운의, 다행한(lucky)",
+              "examples": [
+                {
+                  "text": "a <b>happy</b> event",
+                  "translatedText": "경사(스러운) 일"
+                }
+              ],
+              "originalMeaning": "행운의, 다행한(lucky)"
+            },
+            {
+              "meaning": "행복을 더하는, 행복을 낳는, 경사스러운",
+              "examples": [],
+              "originalMeaning": "행복을 더하는, 행복을 낳는, 경사스러운"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f911a14df2f41058da8b2fa90795966",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f911a14df2f41058da8b2fa90795966",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "happier"
+        },
+        {
+          "type": "최상급",
+          "value": "happiest"
+        }
+      ],
+      "aliasConjugation": "happier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "05d7ec751de80e4b7ce43933d7412558",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새해 복 많이 받으십시오.",
+      "text": "(A) <b>Happy</b> New Year!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대단히 기쁘신 것 같습니다",
+      "text": "You look so <b>happy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 결코 행복하지 않았다",
+      "text": "She is never <b>happy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 내가 행복하다고 생각한다.",
+      "text": "I count myself <b>happy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "좋은 생각이 문득 떠올랐다.",
+      "text": "A <b>happy</b> idea flashed on me."
+    }
+  ],
+  "isWordType": true
+}

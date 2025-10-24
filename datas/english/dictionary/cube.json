@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "cube",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kjuːb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "입방체, 정육면체; 입방꼴을 한 것 ((주사위·깔림돌·나무 벽돌 등))",
+              "examples": [],
+              "originalMeaning": "입방체, 정육면체; 입방꼴을 한 것 ((주사위·깔림돌·나무 벽돌 등))"
+            },
+            {
+              "meaning": "입방, 세제곱",
+              "examples": [
+                {
+                  "text": "6 feet <b>cube</b> 6",
+                  "translatedText": "피트 입방"
+                }
+              ],
+              "originalMeaning": "입방, 세제곱"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<수를> 세제곱하다, 체적[부피]을 구하다",
+              "examples": [],
+              "originalMeaning": "<수를> 세제곱하다, 체적[부피]을 구하다"
+            },
+            {
+              "meaning": "입방꼴로 자르다(dice)",
+              "examples": [],
+              "originalMeaning": "입방꼴로 자르다(dice)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f5af2ed03c3740619461423de6bb2d5b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f5af2ed03c3740619461423de6bb2d5b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cubes"
+        },
+        {
+          "type": "과거형",
+          "value": "cubed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cubing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cubed"
+        }
+      ],
+      "aliasConjugation": "cubes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "70a36ac80b62adb92bf9020e2c08f863",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "71 의 세제곱근을 구하여라.",
+      "text": "Find the <b>cube</b> root of 71."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "2의 세제곱은 8이다",
+      "text": "The <b>cube</b> of 2 is 8."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "입방체는 6면을 갖는다",
+      "text": "A <b>cube</b> has six sides[faces]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정육면체는 6면이다.",
+      "text": "A <b>cube</b> has six faces."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "6 피트 입방",
+      "text": "6 feet <b>cube</b>"
+    }
+  ],
+  "isWordType": true
+}

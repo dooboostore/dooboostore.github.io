@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "compare",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kəm│per"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(둘을) 비교하다, 견주다 ((with, to))",
+              "examples": [
+                {
+                  "text": "<b>compare</b> two pieces of furniture",
+                  "translatedText": "가구 2점을 비교하다"
+                }
+              ],
+              "originalMeaning": "(둘을) 비교하다, 견주다 ((with, to))"
+            },
+            {
+              "meaning": "비유하다(liken), …에 비기다 ((to))",
+              "examples": [
+                {
+                  "text": "Shakespeare <b>compared</b> the world to a stage.",
+                  "translatedText": "셰익스피어는 세상을 무대에 비유하였다."
+                }
+              ],
+              "originalMeaning": "비유하다(liken), …에 비기다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보통 부정·의문문에서] 견주다, 필적하다, 맞먹다 ((with))",
+              "examples": [],
+              "originalMeaning": "[보통 부정·의문문에서] 견주다, 필적하다, 맞먹다 ((with))"
+            },
+            {
+              "meaning": "[favorably, poorly와 함께] (…와) 비교하여 …하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>compare</b> poorly[favorably] with his work",
+                  "translatedText": "그의 작품보다 형편없다[뛰어나다]"
+                }
+              ],
+              "originalMeaning": "[favorably, poorly와 함께] (…와) 비교하여 …하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "비교, 비길 것",
+              "examples": [],
+              "originalMeaning": "비교, 비길 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/631341ade9c443cc99cbcc2fc7619667",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/631341ade9c443cc99cbcc2fc7619667",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "compares"
+        },
+        {
+          "type": "과거형",
+          "value": "compared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "comparing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "compared"
+        }
+      ],
+      "aliasConjugation": "compares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8f939250bfea5e5e40f538572d7ea0d4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인생은 항해에 비유할 수 있으리라.",
+      "text": "Life may be <b>compared</b> to a voyage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 새장에 갇힌 새 격이다",
+      "text": "She can be <b>compared</b> to a caged bird."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 시계는 이것과는 비교할 것이 못된다.",
+      "text": "That watch is not to be <b>compared</b> with this one."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 말하자면 새장에 든 새다",
+      "text": "She may be likened[<b>compared</b>] to a caged bird."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "셰익스피어는 세상을 무대에 비유하였다.",
+      "text": "Shakespeare <b>compared</b> the world to a stage."
+    }
+  ],
+  "isWordType": true
+}

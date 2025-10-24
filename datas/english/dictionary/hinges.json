@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "hinge",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경첩, 돌쩌귀; 관절(ginglymus)",
+              "examples": [],
+              "originalMeaning": "경첩, 돌쩌귀; 관절(ginglymus)"
+            },
+            {
+              "meaning": "사북, 요점, 요체(要諦), 중심점",
+              "examples": [],
+              "originalMeaning": "사북, 요점, 요체(要諦), 중심점"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[종종 수동형으로] …에 경첩[돌쩌귀]을 달다",
+              "examples": [],
+              "originalMeaning": "[종종 수동형으로] …에 경첩[돌쩌귀]을 달다"
+            },
+            {
+              "meaning": "조건으로 삼다, …에 의해 정하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "I will <b>hinge</b> my participation on her approval.",
+                  "translatedText": "그녀의 승인이 있으면 참가하겠다."
+                }
+              ],
+              "originalMeaning": "조건으로 삼다, …에 의해 정하다 ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<문 등이> 경첩[돌쩌귀]식으로 움직이다",
+              "examples": [],
+              "originalMeaning": "<문 등이> 경첩[돌쩌귀]식으로 움직이다"
+            },
+            {
+              "meaning": "…여하에 달려 있다, …에 따라 정해지다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "Everything <b>hinges</b> on her decision.",
+                  "translatedText": "만사는 그녀의 결단에 달려 있다."
+                }
+              ],
+              "originalMeaning": "…여하에 달려 있다, …에 따라 정해지다 ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2ce24b764cbf4e97bc2f38477ac83fea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2ce24b764cbf4e97bc2f38477ac83fea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hinges"
+        },
+        {
+          "type": "과거형",
+          "value": "hinged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hinging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hinged"
+        }
+      ],
+      "aliasConjugation": "hinges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1947cf436ab15801b8725b3fec408312",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "만사는 그녀의 결단에 달려 있다.",
+      "text": "Everything <b>hinges</b> on her decision."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "문의 경첩이 녹슬어 삐걱거렸다.",
+      "text": "The door grated on its rusty <b>hinges</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 승낙은 조건 여하에 따라 결정될 것이다.",
+      "text": "His acceptance will <b>hinge</b> on the terms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 승인이 있으면 참가하겠다.",
+      "text": "I will <b>hinge</b> my participation on her approval."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경첩의 나사가 낡아 문이 어긋나 있다",
+      "text": "The screws on the <b>hinge</b> are loose, so the door's out of line."
+    }
+  ],
+  "isWordType": true
+}

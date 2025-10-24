@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "accord",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈkɔːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "일치[조화, 화합]하다 ((with))",
+              "examples": [
+                {
+                  "text": "The theory accords with the known facts.",
+                  "translatedText": "그 이론은 알려진 사실과 일치한다."
+                }
+              ],
+              "originalMeaning": "일치[조화, 화합]하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…을> 조화[일치, 적응]시키다",
+              "examples": [],
+              "originalMeaning": "<…을> 조화[일치, 적응]시키다"
+            },
+            {
+              "meaning": "<…에게 허가·칭찬·명예 등을> 주다, 허용하다(grant), 수여하다(bestow), 용인하다(concede) ((to))",
+              "examples": [
+                {
+                  "text": "<b>accord</b> due praise",
+                  "translatedText": "마땅한 칭찬을 하다"
+                }
+              ],
+              "originalMeaning": "<…에게 허가·칭찬·명예 등을> 주다, 허용하다(grant), 수여하다(bestow), 용인하다(concede) ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일치, 조화",
+              "examples": [],
+              "originalMeaning": "일치, 조화"
+            },
+            {
+              "meaning": "(색·음 등의) 조화",
+              "examples": [],
+              "originalMeaning": "(색·음 등의) 조화"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3da516e1508448fb85087fc0f4e57644",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3da516e1508448fb85087fc0f4e57644",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accords"
+        },
+        {
+          "type": "과거형",
+          "value": "accorded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "according"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accorded"
+        }
+      ],
+      "aliasConjugation": "accords",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bd2e11745fd23134230e18a508cea1c5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가격은 물건에 따라 다르다",
+      "text": "Prices differ <b>according</b> to quality."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "순번표에 따르면 이번에는 네 차례다",
+      "text": "<b>According</b> to the rota, it's your turn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "품질은 값에 따라 다르다",
+      "text": "Quality varies with[<b>according</b> to] the prices."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신분에 상응한 생활을 해라",
+      "text": "Cut your coat <b>according</b> to your cloth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일이 각본대로 진행되고 있다",
+      "text": "Everything is going <b>according</b> to plan."
+    }
+  ],
+  "isWordType": true
+}

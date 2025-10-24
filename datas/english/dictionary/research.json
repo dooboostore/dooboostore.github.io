@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "entry": "research",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] (학술) 연구, 과학적 탐구, 학술 조사 ((into, on))",
+              "examples": [
+                {
+                  "text": "space <b>research</b>",
+                  "translatedText": "우주 탐구"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] (학술) 연구, 과학적 탐구, 학술 조사 ((into, on))"
+            },
+            {
+              "meaning": "(신중한) 수색, 탐구, 조사 ((for, after))",
+              "examples": [],
+              "originalMeaning": "(신중한) 수색, 탐구, 조사 ((for, after))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연구하다, 조사하다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>research</b> into a matter thoroughly",
+                  "translatedText": "문제를 철저하게 조사하다"
+                }
+              ],
+              "originalMeaning": "연구하다, 조사하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "연구하다, 조사하다 (=examine)",
+              "examples": [
+                {
+                  "text": "<b>research</b> cancer",
+                  "translatedText": "암을 연구하다"
+                }
+              ],
+              "originalMeaning": "연구하다, 조사하다 (=<span class='related_word' lang='en' >examine</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/49ec374febe24115a4b5072b883a3f5d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/49ec374febe24115a4b5072b883a3f5d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "researches"
+        },
+        {
+          "type": "과거형",
+          "value": "researched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "researching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "researched"
+        }
+      ],
+      "aliasConjugation": "researches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9d79f0cfcae0771dfaba13da316ff3d2",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-search",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:sə́:rtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "다시 찾다, 재탐색하다",
+              "examples": [],
+              "originalMeaning": "다시 찾다, 재탐색하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15cb96b900e04b7b9d7fa253c74382a2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15cb96b900e04b7b9d7fa253c74382a2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3cea36961a178f657955455d55d2d8b4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "더 연구할 필요가 있다",
+      "text": "It requires further <b>research</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 연구 계획에 종사했다.",
+      "text": "He dealt in the <b>research</b> project."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 연구는 이제 끝난 것과 같다",
+      "text": "Our <b>research</b> is now practically over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 연구의 결과를 내놓았다",
+      "text": "He published the result of his <b>research</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 중국 역사를 연구하고 있다",
+      "text": "He is making researches in Chinese history."
+    }
+  ],
+  "isWordType": true
+}

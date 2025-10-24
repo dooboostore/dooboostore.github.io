@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "portion",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈpɔːrʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일부, 부분 (=part)",
+              "examples": [
+                {
+                  "text": "a <b>portion</b> of land",
+                  "translatedText": "약간의 토지; 한 구획의 토지"
+                }
+              ],
+              "originalMeaning": "일부, 부분 (=<span class='related_word' lang='en' >part</span>)"
+            },
+            {
+              "meaning": "(음식의) 1인분",
+              "examples": [
+                {
+                  "text": "order two portions of chicken",
+                  "translatedText": "닭고기 2인분을 주문하다"
+                }
+              ],
+              "originalMeaning": "(음식의) 1인분"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "분할하다, 분배하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>portion</b> out land",
+                  "translatedText": "토지를 분배하다"
+                }
+              ],
+              "originalMeaning": "분할하다, 분배하다 ((out))"
+            },
+            {
+              "meaning": "몫으로 주다 ((to)), 분배 재산[지참금]을 주다 ((with))",
+              "examples": [
+                {
+                  "text": "He portioned his estate to his son-in-law.",
+                  "translatedText": "그는 사위에게 재산을 나눠 주었다."
+                }
+              ],
+              "originalMeaning": "몫으로 주다 ((to)), 분배 재산[지참금]을 주다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50c9ed2bef8c435c969e6a2b0082a49f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50c9ed2bef8c435c969e6a2b0082a49f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "portions"
+        },
+        {
+          "type": "과거형",
+          "value": "portioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "portioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "portioned"
+        }
+      ],
+      "aliasConjugation": "portions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "786153d54ac996f84b34b0d254aa3157",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사위에게 재산을 나눠 주었다.",
+      "text": "He portioned his estate to his son-in-law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "짧은 생애가 그녀에게 주어진 운명이었다.",
+      "text": "A brief life in this world was her <b>portion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 생애의 거지반을 동양에서 보냈다",
+      "text": "He lived in the Orient for a great <b>portion</b> of his life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 일생을 뒤돌아보니 그리 즐겁지 않은 일도 있었다",
+      "text": "One <b>portion</b> of my life is not very pleasant to look back to."
+    }
+  ],
+  "isWordType": true
+}

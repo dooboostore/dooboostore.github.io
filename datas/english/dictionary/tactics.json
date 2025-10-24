@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "tactics",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tǽktiks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[단수 취급] 전술(학), 병법, 용병 (→strategy)",
+              "examples": [
+                {
+                  "text": "Strategy wins wars, <b>tactics</b> wins battles.",
+                  "translatedText": "전략은 전쟁의 승리를 가져오고, 전술은 전투의 승리를 가져온다."
+                }
+              ],
+              "originalMeaning": "[단수 취급] 전술(학), 병법, 용병 (→<span class='related_word' lang='en' >strategy</span>)"
+            },
+            {
+              "meaning": "[복수 취급] 작전 행동",
+              "examples": [],
+              "originalMeaning": "[복수 취급] 작전 행동"
+            },
+            {
+              "meaning": "[단수 취급] 술책, 책략",
+              "examples": [
+                {
+                  "text": "change one's <b>tactics</b>",
+                  "translatedText": "작전을 바꾸다"
+                }
+              ],
+              "originalMeaning": "[단수 취급] 술책, 책략"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9a1804e4429b4831996e054e324234c1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9a1804e4429b4831996e054e324234c1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "06bbc9e96e500d9fe980046a50f120cd",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "tactic",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtæktɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=TACTICS)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>TACTICS</b></span>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(=TACTICAL)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >TACTICAL</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25522544560f4edf82aba507f539e321",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25522544560f4edf82aba507f539e321",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "dc5201109db305859d6eda8e54de5677",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 불필요한 압제적 책략이다",
+      "text": "This is an unnecessary strong-arm <b>tactic</b>[method]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 난폭한 방식에는 찬성할 수 없다",
+      "text": "I can't go along with strong-arm <b>tactics</b> like that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전략은 전쟁의 승리를 가져오고, 전술은 전투의 승리를 가져온다.",
+      "text": "Strategy wins wars, <b>tactics</b> wins battles."
+    }
+  ],
+  "isWordType": true
+}

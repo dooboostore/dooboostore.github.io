@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "curtail",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɜːr│teɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "짧게 줄이다(shorten); 단축하다, 생략하다",
+              "examples": [],
+              "originalMeaning": "짧게 줄이다(shorten); 단축하다, 생략하다"
+            },
+            {
+              "meaning": "<비용 등을> 삭감하다",
+              "examples": [
+                {
+                  "text": "We are curtailed of our expenses.",
+                  "translatedText": "우리는 경비를 삭감당하였다."
+                }
+              ],
+              "originalMeaning": "<비용 등을> 삭감하다"
+            },
+            {
+              "meaning": "<권리 등을> 축소하다, 줄이다(reduce); 박탈하다(deprive) ((of))",
+              "examples": [
+                {
+                  "text": "<b>curtail</b> a person of his privileges",
+                  "translatedText": "…의 권리를 박탈하다"
+                }
+              ],
+              "originalMeaning": "<권리 등을> 축소하다, 줄이다(reduce); 박탈하다(deprive) ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/09b4a4aa333f4800a6406b7064854fec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/09b4a4aa333f4800a6406b7064854fec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "curtails"
+        },
+        {
+          "type": "과거형",
+          "value": "curtailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "curtailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "curtailed"
+        }
+      ],
+      "aliasConjugation": "curtails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d261260b12618bc3fd05f30654a0d865",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경비를 삭감당하였다.",
+      "text": "We are curtailed of our expenses."
+    }
+  ],
+  "isWordType": true
+}

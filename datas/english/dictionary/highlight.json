@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "highlight",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhaɪlaɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] (역사·이야기의) 가장 중요한[두드러진] 부분[장면], 빛나는 장면; 가장 흥미 있는 사건, 인기의 초점, 인기물, 압권",
+              "examples": [
+                {
+                  "text": "the <b>highlight</b> of his talk",
+                  "translatedText": "그의 이야기 중 가장 인상적인 부분"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] (역사·이야기의) 가장 중요한[두드러진] 부분[장면], 빛나는 장면; 가장 흥미 있는 사건, 인기의 초점, 인기물, 압권"
+            },
+            {
+              "meaning": "가장 밝은 부분",
+              "examples": [
+                {
+                  "text": "the highlights and shadows in a picture",
+                  "translatedText": "그림[사진]의 명암부"
+                }
+              ],
+              "originalMeaning": "가장 밝은 부분"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<화면의 일부를> 특히 밝게 하다",
+              "examples": [],
+              "originalMeaning": "<화면의 일부를> 특히 밝게 하다"
+            },
+            {
+              "meaning": "돋보이게 하다, 눈에 띄게 하다; 강조하다(emphasize), …에 흥미를 집중시키다",
+              "examples": [
+                {
+                  "text": "<b>highlight</b> his good point",
+                  "translatedText": "그의 장점을 강조하다"
+                }
+              ],
+              "originalMeaning": "돋보이게 하다, 눈에 띄게 하다; 강조하다(emphasize), …에 흥미를 집중시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/214e580a50f94caf92ecb47db99c2584",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/214e580a50f94caf92ecb47db99c2584",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "highlights"
+        },
+        {
+          "type": "과거형",
+          "value": "highlighted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "highlighting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "highlighted"
+        }
+      ],
+      "aliasConjugation": "highlights",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9e56c8d1dcbb92bdc694a05219ebe476",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 그날 밤 행사의 압권이었다",
+      "text": "It was the <b>highlight</b> of the evening."
+    }
+  ],
+  "isWordType": true
+}

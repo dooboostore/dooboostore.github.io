@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "follow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈfɑːloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(순서로서) …의 뒤를 잇다, …의 뒤[다음]에 오다; (결과로서) …의 뒤에 일어나다(result from)",
+              "examples": [
+                {
+                  "text": "The speech <b>follow</b> s the dinner.",
+                  "translatedText": "만찬 뒤에 연설이 있다."
+                }
+              ],
+              "originalMeaning": "(순서로서) …의 뒤를 잇다, …의 뒤[다음]에 오다; (결과로서) …의 뒤에 일어나다(result from)"
+            },
+            {
+              "meaning": "따라가다[오다], 뒤따르다; 수행하다(accompany)",
+              "examples": [
+                {
+                  "text": "<b>follow</b> a person in[out]",
+                  "translatedText": "…을 따라 들어가다[나가다]"
+                }
+              ],
+              "originalMeaning": "따라가다[오다], 뒤따르다; 수행하다(accompany)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잇따라 일어나다(ensue)",
+              "examples": [
+                {
+                  "text": "I want to know if anything followed after it.",
+                  "translatedText": "나는 그 뒤에 무슨 일이 일어났는지 알고 싶다."
+                }
+              ],
+              "originalMeaning": "잇따라 일어나다(ensue)"
+            },
+            {
+              "meaning": "뒤따라가다[오다]; 뒤따르다, 수행하다, 동행하다",
+              "examples": [
+                {
+                  "text": "<b>Follow</b> after me.",
+                  "translatedText": "뒤따라오시오."
+                }
+              ],
+              "originalMeaning": "뒤따라가다[오다]; 뒤따르다, 수행하다, 동행하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 뒤따름, 추적; 추종; 추구",
+              "examples": [],
+              "originalMeaning": "[U] 뒤따름, 추적; 추종; 추구"
+            },
+            {
+              "meaning": "(=FOLLOW SHOT)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>FOLLOW</b> SHOT</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6cd520526d3641dab173a04a88be5435",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6cd520526d3641dab173a04a88be5435",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "follows"
+        },
+        {
+          "type": "과거형",
+          "value": "followed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "following"
+        },
+        {
+          "type": "과거 분사",
+          "value": "followed"
+        }
+      ],
+      "aliasConjugation": "follows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "582342277881211fba08ab3590d992fe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문구는 다음과 같다.",
+      "text": "It reads as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 다음과 같이 말하였다",
+      "text": "He spoke as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다음 빈 칸을 메우시오",
+      "text": "Fill in the following blanks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아들을 뒤따라 서울로 갔다",
+      "text": "I followed my son to Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "만찬 뒤에 연설이 있다.",
+      "text": "The speech follows the dinner."
+    }
+  ],
+  "isWordType": true
+}

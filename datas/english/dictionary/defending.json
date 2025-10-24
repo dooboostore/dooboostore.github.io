@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "defend",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈfend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "방어하다, 지키다 ((from, against)), (=protect)",
+              "examples": [
+                {
+                  "text": "<b>defend</b> a city against an attack",
+                  "translatedText": "도시를 공격에서 지키다"
+                }
+              ],
+              "originalMeaning": "방어하다, 지키다 ((from, against)), (=<span class='related_word' lang='en' >protect</span>)"
+            },
+            {
+              "meaning": "(언론 등에서) 옹호하다",
+              "examples": [],
+              "originalMeaning": "(언론 등에서) 옹호하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "방어[변호]하다, [스포츠] 수비하다",
+              "examples": [],
+              "originalMeaning": "방어[변호]하다, [스포츠] 수비하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/79b343ae29b34460b111080054e8994b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/79b343ae29b34460b111080054e8994b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "defends"
+        },
+        {
+          "type": "과거형",
+          "value": "defended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "defending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "defended"
+        }
+      ],
+      "aliasConjugation": "defends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e2504f09cfb1e26a20b63a35dcb78ea9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "병사들은 요새를 방어할 준비가 되어 있었다.",
+      "text": "The soldiers were ready to <b>defend</b> the fortress."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공동의 이익을 지키기 위해서 힘을 합했다",
+      "text": "They joined forces[united their efforts] to <b>defend</b> their common interests."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 심사 위원들 앞에서 자기 논문의 정당성을 주장해야 했다",
+      "text": "He had to <b>defend</b> his dissertation before a panel of examiners."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 성을 고수했다",
+      "text": "They stubbornly defended the castle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 보신에 급급하다",
+      "text": "He thinks only of self-protection[<b>defending</b> his own interests]."
+    }
+  ],
+  "isWordType": true
+}

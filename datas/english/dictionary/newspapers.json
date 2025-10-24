@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "newspaper",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nuːzpeɪpə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "신문",
+              "examples": [
+                {
+                  "text": "a daily[weekly] <b>newspaper</b>",
+                  "translatedText": "일간[주간] 신문"
+                }
+              ],
+              "originalMeaning": "신문"
+            },
+            {
+              "meaning": "신문지, 신문 인쇄 용지(newsprint)",
+              "examples": [
+                {
+                  "text": "collect <b>newspaper</b> s for recycle",
+                  "translatedText": "재생을 위해 신문지를 모으다 ((★ 각종 신문이란 뜻으로 [C] ))"
+                }
+              ],
+              "originalMeaning": "신문지, 신문 인쇄 용지(newsprint)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "신문 업무에 종사하다",
+              "examples": [],
+              "originalMeaning": "신문 업무에 종사하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3e8c583164584f05b98d7ae32f4e53d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3e8c583164584f05b98d7ae32f4e53d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ede8ec22cb4974805ae1fde2fb894b49",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 신문사에 근무하고 있다.",
+      "text": "He is in the <b>newspaper</b> game."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 신문 보도는 편향되고 있다",
+      "text": "The <b>newspaper</b> report is slanted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신문은 일기 예보를 싣고 있다.",
+      "text": "<b>Newspapers</b> carry weather reports."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람은 신문 업무에 종사하고 있습니다",
+      "text": "He is engaged in <b>newspaper</b> work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 추문이 신문에 올랐다",
+      "text": "Her scandal is reported in a <b>newspaper</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "projection",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈdʒekʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "돌출(부), 돌출물, 돌기(突起)",
+              "examples": [
+                {
+                  "text": "a <b>projection</b> on a bone",
+                  "translatedText": "뼈의 돌기부"
+                }
+              ],
+              "originalMeaning": "돌출(부), 돌출물, 돌기(突起)"
+            },
+            {
+              "meaning": "투사, 발사, 방사(放射)",
+              "examples": [],
+              "originalMeaning": "투사, 발사, 방사(放射)"
+            },
+            {
+              "meaning": "투영(도), 투영법",
+              "examples": [],
+              "originalMeaning": "투영(도), 투영법"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/00ced651778848e5938acd4493e0d823",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/00ced651778848e5938acd4493e0d823",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4858161a2b2dc93bf8f4a40665588660",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 숫자들은 한 달간의 예상 매출을 나타낸 것이다",
+      "text": "These figures are monthly sales projections in a month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들의 예측은 빗나갔다",
+      "text": "Their projections were way off."
+    }
+  ],
+  "isWordType": true
+}

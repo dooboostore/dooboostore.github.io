@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "advance",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əd│væns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "나아가게 하다(move forward), 전진시키다, 진격시키다, 진보시키다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>advance</b> the hour hand",
+                  "translatedText": "시침을 앞으로 돌리다"
+                }
+              ],
+              "originalMeaning": "나아가게 하다(move forward), 전진시키다, 진격시키다, 진보시키다 ((to))"
+            },
+            {
+              "meaning": "진척시키다, 촉진하다(help on)",
+              "examples": [
+                {
+                  "text": "<b>advance</b> the growth of plants",
+                  "translatedText": "식물의 생장을 촉진하다"
+                }
+              ],
+              "originalMeaning": "진척시키다, 촉진하다(help on)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "나아가다, 전진하다; <시간이> 경과하다, <밤·계절이> 깊어가다; <나이를> 먹다 ((in))",
+              "examples": [
+                {
+                  "text": "as the night <b>advance</b> d",
+                  "translatedText": "밤이 깊어짐에 따라"
+                }
+              ],
+              "originalMeaning": "나아가다, 전진하다; <시간이> 경과하다, <밤·계절이> 깊어가다; <나이를> 먹다 ((in))"
+            },
+            {
+              "meaning": "<지식·연구·출세 등이> 진보[향상, 숙달]하다, 출세하다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>advance</b> in knowledge",
+                  "translatedText": "지식이 향상하다"
+                }
+              ],
+              "originalMeaning": "<지식·연구·출세 등이> 진보[향상, 숙달]하다, 출세하다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 sing.] 전진, 진군",
+              "examples": [],
+              "originalMeaning": "[보통 sing.] 전진, 진군"
+            },
+            {
+              "meaning": "(때의) 진행",
+              "examples": [],
+              "originalMeaning": "(때의) 진행"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/414888996acc452591abc270378ab106",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/414888996acc452591abc270378ab106",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "advances"
+        },
+        {
+          "type": "과거형",
+          "value": "advanced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "advancing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "advanced"
+        }
+      ],
+      "aliasConjugation": "advances",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "176bfb1584c9ff6c3c6d26cc6193ddd0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "짐은 미리 부쳐 두십시오",
+      "text": "Send your baggage in <b>advance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사람에게는 선불로 받으세요",
+      "text": "Have this man pay in <b>advance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "밤이 이슥하도록 잠이 오지 않았다",
+      "text": "Sleep did not come to me till late at night. or I couldn't sleep till the night was far advanced."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이제 그 계획은 상당히 진척되어 있다.",
+      "text": "The plan is now well advanced."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "부동산 가격이 급격히 올랐다",
+      "text": "Property values went up[advanced] rapidly."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "incapacitate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌɪnkəˈpæsɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "무능력[무력, 부적격]하게 하다",
+              "examples": [
+                {
+                  "text": "His illness incapacitated him from working. = His illness incapacitated him for work.",
+                  "translatedText": "그는 병들어 일할 수 없게 되었다."
+                }
+              ],
+              "originalMeaning": "무능력[무력, 부적격]하게 하다"
+            },
+            {
+              "meaning": "…에게서 (법적인) 자격을 박탈하다, 실격시키다(disqualify)",
+              "examples": [
+                {
+                  "text": "He was incapacitated from voting[being elected].",
+                  "translatedText": "그는 선거권[피선거권]을 잃었다."
+                }
+              ],
+              "originalMeaning": "…에게서 (법적인) 자격을 박탈하다, 실격시키다(disqualify)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/794e9b2ce51c48298f16b791937765c8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/794e9b2ce51c48298f16b791937765c8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "incapacitates"
+        },
+        {
+          "type": "과거형",
+          "value": "incapacitated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "incapacitating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "incapacitated"
+        }
+      ],
+      "aliasConjugation": "incapacitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "254eb8f38e2a85d896b0954342fb4e79",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 병들어 일할 수 없게 되었다.",
+      "text": "His illness incapacitated him from working.=His illness incapacitated him for work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 선거권[피선거권]을 잃었다.",
+      "text": "He was incapacitated from voting[being elected]."
+    }
+  ],
+  "isWordType": true
+}

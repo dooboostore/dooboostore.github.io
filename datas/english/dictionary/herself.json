@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "herself",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hɜːr│self; hər│self"
+        }
+      ],
+      "pos": [
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[강조 용법] 그 여자 자신",
+              "examples": [
+                {
+                  "text": "She <b>herself</b> told me the news. = She told me the news <b>herself</b>.",
+                  "translatedText": "그녀 자신이 그 소식을 내게 전했다."
+                }
+              ],
+              "originalMeaning": "[강조 용법] 그 여자 자신"
+            },
+            {
+              "meaning": "[재귀 용법] 그 여자 자신을[에게]",
+              "examples": [
+                {
+                  "text": "She tired <b>herself</b> out.",
+                  "translatedText": "그녀는 녹초가 되도록 지쳤다."
+                }
+              ],
+              "originalMeaning": "[재귀 용법] 그 여자 자신을[에게]"
+            },
+            {
+              "meaning": "정상적인[평상시와 같은] 그녀, 본래의 그녀",
+              "examples": [
+                {
+                  "text": "She is not <b>herself</b> today.",
+                  "translatedText": "오늘은 평소의 그녀와는 다르다."
+                }
+              ],
+              "originalMeaning": "정상적인[평상시와 같은] 그녀, 본래의 그녀"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2e102601403f4275ab1fa60fde4ec418",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2e102601403f4275ab1fa60fde4ec418",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fb13a7fab189777b6a8e944512cc76e3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 녹초가 되도록 지쳤다.",
+      "text": "She tired <b>herself</b> out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 말쑥하게 몸치장했다",
+      "text": "She trimmed <b>herself</b> up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘은 평소의 그녀와는 다르다.",
+      "text": "She is not <b>herself</b> today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 말을 많이 해서 목이 쉬었다.",
+      "text": "She talked <b>herself</b> hoarse."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어머니는 과로로 병이 나셨다.",
+      "text": "My mother worked <b>herself</b> ill."
+    }
+  ],
+  "isWordType": true
+}

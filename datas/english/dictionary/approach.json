@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "approach",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈproʊtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 다가가다, 가까이 가다, 접근하다",
+              "examples": [
+                {
+                  "text": "<b>approach</b> the moon",
+                  "translatedText": "달에 접근하다"
+                }
+              ],
+              "originalMeaning": "…에 다가가다, 가까이 가다, 접근하다"
+            },
+            {
+              "meaning": "<성질·시간·상태 등이> …에 가까워지다, …와 비슷하게 되다",
+              "examples": [
+                {
+                  "text": "<b>approach</b> completion",
+                  "translatedText": "완성에 가까워지다"
+                }
+              ],
+              "originalMeaning": "<성질·시간·상태 등이> …에 가까워지다, …와 비슷하게 되다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람·물건·때 등이> 다가오다, 가까워지다",
+              "examples": [
+                {
+                  "text": "Spring approaches.",
+                  "translatedText": "봄이 다가온다."
+                }
+              ],
+              "originalMeaning": "<사람·물건·때 등이> 다가오다, 가까워지다"
+            },
+            {
+              "meaning": "<성질·금액 등이> …에 가깝다, 거의 …와 같다(amount) ((to))",
+              "examples": [
+                {
+                  "text": "This reply <b>approach</b> es to a denial.",
+                  "translatedText": "이 대답은 거절이나 다름없다."
+                }
+              ],
+              "originalMeaning": "<성질·금액 등이> …에 가깝다, 거의 …와 같다(amount) ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 다가옴[감], 접근 ((of, to)); (성질·정도 등의) 가까움, 근사 ((to))",
+              "examples": [
+                {
+                  "text": "the <b>approach</b> of winter",
+                  "translatedText": "겨울철이 다가옴"
+                }
+              ],
+              "originalMeaning": "[U] 다가옴[감], 접근 ((of, to)); (성질·정도 등의) 가까움, 근사 ((to))"
+            },
+            {
+              "meaning": "가까이 가는 길, 입구, 출입로, 접근로(access)",
+              "examples": [],
+              "originalMeaning": "가까이 가는 길, 입구, 출입로, 접근로(access)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/360b9a78907f4dea8fb0ef8bff4bdcb3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/360b9a78907f4dea8fb0ef8bff4bdcb3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "approaches"
+        },
+        {
+          "type": "과거형",
+          "value": "approached"
+        },
+        {
+          "type": "현재 분사",
+          "value": "approaching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "approached"
+        }
+      ],
+      "aliasConjugation": "approaches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e2830da5c737e5cf66d062c1eda57815",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배 한 척이 접근해 왔다",
+      "text": "A boat approached[drew near]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수가 500 가까이 된다",
+      "text": "The number approaches five hundred."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 대답은 거절이나 다름없다.",
+      "text": "This reply approaches to a denial."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 위험이 닥쳐오는 것을 깨달았다",
+      "text": "He sensed the approaching danger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여러분, 곧 뉴욕시에 도착하겠습니다",
+      "text": "Folks, we are now approaching New York City."
+    }
+  ],
+  "isWordType": true
+}

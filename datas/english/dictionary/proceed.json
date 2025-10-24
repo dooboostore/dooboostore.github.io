@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "proceed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "proʊ│siːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "나아가다, 가다 ((to, into))",
+              "examples": [
+                {
+                  "text": "<b>proceed</b> to university",
+                  "translatedText": "대학에 진학하다"
+                }
+              ],
+              "originalMeaning": "나아가다, 가다 ((to, into))"
+            },
+            {
+              "meaning": "(잠깐 멈춘 후 다음 단계로) 속행하다, 계속하다 ((with)); (다른 제목 등으로) 옮아가다, 나아가다 ((to))",
+              "examples": [
+                {
+                  "text": "The speaker drank a glass of water and then proceeded with his speech.",
+                  "translatedText": "연사는 물을 한 잔 마시고 나서 또 연설을 계속했다."
+                }
+              ],
+              "originalMeaning": "(잠깐 멈춘 후 다음 단계로) 속행하다, 계속하다 ((with)); (다른 제목 등으로) 옮아가다, 나아가다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] = PROCEEDS",
+              "examples": [],
+              "originalMeaning": "[pl.] = PROCEEDS"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fd1a41ed818640c894f53a11fd20ddbb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fd1a41ed818640c894f53a11fd20ddbb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "proceeds"
+        },
+        {
+          "type": "과거형",
+          "value": "proceeded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "proceeding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "proceeded"
+        }
+      ],
+      "aliasConjugation": "proceeds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f87950660dc0ee16476a2df37caa1d14",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 무지에서 생긴 것이다.",
+      "text": "This proceeded from ignorance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달에서는 열이 발생하지 않는다.",
+      "text": "Heat does not <b>proceed</b> from the moon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그러고 나서 그는 만찬을 들기 시작했다.",
+      "text": "Then, he proceeded to eat his dinner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공사는 굼벵이 기어가듯 진행하고 있다",
+      "text": "The work is proceeding at a snail's pace."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "협상은 난항을 겪고 있다",
+      "text": "The negotiations are proceeding with difficulty[having a hard going]."
+    }
+  ],
+  "isWordType": true
+}

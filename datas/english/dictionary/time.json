@@ -1,0 +1,169 @@
+{
+  "items": [
+    {
+      "entry": "time",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 시간, 때; 때의 흐름, 세월",
+              "examples": [
+                {
+                  "text": "Father <b>Time</b>",
+                  "translatedText": "때의 신 ((낫과 각루(hourglass)를 든 노인으로 표현됨))"
+                }
+              ],
+              "originalMeaning": "[U] 시간, 때; 때의 흐름, 세월"
+            },
+            {
+              "meaning": "[때로 T~] (시간·시각의 기준이 되는) 표준시",
+              "examples": [
+                {
+                  "text": "standard <b>time</b>",
+                  "translatedText": "표준시"
+                }
+              ],
+              "originalMeaning": "[때로 T~] (시간·시각의 기준이 되는) 표준시"
+            },
+            {
+              "meaning": "동안(period)",
+              "examples": [],
+              "originalMeaning": "동안(period)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "시간의, 시간을 기록하는",
+              "examples": [],
+              "originalMeaning": "시간의, 시간을 기록하는"
+            },
+            {
+              "meaning": "시한 장치의 <폭탄 등>",
+              "examples": [],
+              "originalMeaning": "시한 장치의 <폭탄 등>"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<경주 등의> 시간을 재다",
+              "examples": [
+                {
+                  "text": "<b>time</b> a race[runner]",
+                  "translatedText": "레이스[러너]의 시간을 재다"
+                }
+              ],
+              "originalMeaning": "<경주 등의> 시간을 재다"
+            },
+            {
+              "meaning": "시기에 맞추다, 좋은 시기에 하다; 시간을 지정하다",
+              "examples": [
+                {
+                  "text": "( <b>time</b>+[목]+to do) You should <b>time</b> your visit to fit his convenience.",
+                  "translatedText": "그의 형편이 좋은 때에 시간을 맞추어 방문하도록 해야 한다."
+                }
+              ],
+              "originalMeaning": "시기에 맞추다, 좋은 시기에 하다; 시간을 지정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/10e3592c6ce64b908968c7e4ab6fa04c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/10e3592c6ce64b908968c7e4ab6fa04c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "times"
+        },
+        {
+          "type": "과거형",
+          "value": "timed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "timing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "timed"
+        }
+      ],
+      "aliasConjugation": "times",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "019de0a48c85ffb6cf1132992649f666",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Time",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "타임 ((미국의 시사 주간지, 1923년에 창간))",
+              "examples": [],
+              "originalMeaning": "타임 ((미국의 시사 주간지, 1923년에 창간))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/432120396bda4646b04601c9e44aea39",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/432120396bda4646b04601c9e44aea39",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e30c4c2b6058e02494277073b19c44c7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 정치가요 또한 시인이기도 했다",
+      "text": "He was a statesman and poet. or He was at once a statesman and a poet. or He was a statesman and at the same <b>time</b> a poet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 5회 해 보시오",
+      "text": "Do it five times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이제 가야 할 시간이다.",
+      "text": "It is <b>time</b> to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "백 번 듣는 것이 한 번 보는 것보다 못하다",
+      "text": "It is better to see a thing one <b>time</b> than to hear about it a hundred times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 네게 큰 신세를 졌다",
+      "text": "I owe you big <b>time</b>."
+    }
+  ],
+  "isWordType": true
+}

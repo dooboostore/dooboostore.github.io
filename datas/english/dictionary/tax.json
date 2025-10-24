@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "tax",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tæks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "세, 세금, 조세",
+              "examples": [
+                {
+                  "text": "income <b>tax</b>",
+                  "translatedText": "소득세"
+                }
+              ],
+              "originalMeaning": "세, 세금, 조세"
+            },
+            {
+              "meaning": "무거운 부담, 무리한 요구, 가혹한 의무 ((on))",
+              "examples": [
+                {
+                  "text": "a <b>tax</b> on one's health",
+                  "translatedText": "건강에 무리한 부담"
+                }
+              ],
+              "originalMeaning": "무거운 부담, 무리한 요구, 가혹한 의무 ((on))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "세금을 부과하다, 과세하다",
+              "examples": [
+                {
+                  "text": "<b>tax</b> a person's property",
+                  "translatedText": "…의 재산에 과세하다"
+                }
+              ],
+              "originalMeaning": "세금을 부과하다, 과세하다"
+            },
+            {
+              "meaning": "무거운 부담을 지우다, 혹사하다",
+              "examples": [
+                {
+                  "text": "<b>tax</b> one's eyes",
+                  "translatedText": "눈을 혹사하다"
+                }
+              ],
+              "originalMeaning": "무거운 부담을 지우다, 혹사하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e1a25d0eec834ed2ad3f4c4375d01359",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e1a25d0eec834ed2ad3f4c4375d01359",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "taxes"
+        },
+        {
+          "type": "과거형",
+          "value": "taxed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "taxing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "taxed"
+        }
+      ],
+      "aliasConjugation": "taxes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cb3a8d37366056a1ec54e6b8e3181a52",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정가는 세금[우편료] 포함 10달러임",
+      "text": "Price 10 dollars, <b>tax</b>[postage] included."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세금을 내는 것이 나의 의무라고 생각한다.",
+      "text": "I hold it my duty to pay the <b>tax</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 탈세 혐의로 기소되었다",
+      "text": "He was indicted on charges of <b>tax</b> evasion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "중세가 막대한 이익을 빨아들인다.",
+      "text": "Heavy taxes siphon off the huge profits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "술과 담배에 중세가 과해져 있다.",
+      "text": "Heavy taxes are laid on wine and tobacco."
+    }
+  ],
+  "isWordType": true
+}

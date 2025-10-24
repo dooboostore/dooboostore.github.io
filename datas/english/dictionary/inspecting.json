@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "inspect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈspekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "면밀하게 살피다, 점검[검사]하다",
+              "examples": [
+                {
+                  "text": "<b>inspect</b> every part of the motor",
+                  "translatedText": "모터의 모든 부분을 점검하다"
+                }
+              ],
+              "originalMeaning": "면밀하게 살피다, 점검[검사]하다"
+            },
+            {
+              "meaning": "시찰하다, 검열하다, 사열하다",
+              "examples": [
+                {
+                  "text": "<b>inspect</b> troops",
+                  "translatedText": "군대를 사열하다"
+                }
+              ],
+              "originalMeaning": "시찰하다, 검열하다, 사열하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/54b124fb34fc474dba6ade47caeee499",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/54b124fb34fc474dba6ade47caeee499",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "inspects"
+        },
+        {
+          "type": "과거형",
+          "value": "inspected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "inspecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "inspected"
+        }
+      ],
+      "aliasConjugation": "inspects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cc8845c616268b07daa6f4ead918ca6e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사령관은 부대를 검열했다",
+      "text": "The commander inspected the troops."
+    }
+  ],
+  "isWordType": true
+}

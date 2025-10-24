@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "lecture",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlektʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "강의, 강연, 강화(講話) ((on, about)); 강의[강연]의 원고",
+              "examples": [],
+              "originalMeaning": "강의, 강연, 강화(講話) ((on, about)); 강의[강연]의 원고"
+            },
+            {
+              "meaning": "설교, 잔소리, 꾸지람, 훈계 ((on, about))",
+              "examples": [],
+              "originalMeaning": "설교, 잔소리, 꾸지람, 훈계 ((on, about))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "강의[강연]를 하다 ((on, about))",
+              "examples": [
+                {
+                  "text": "<b>lecture</b> on foreign affairs",
+                  "translatedText": "외교 문제에 관하여 강의를 하다"
+                }
+              ],
+              "originalMeaning": "강의[강연]를 하다 ((on, about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 강의하다",
+              "examples": [],
+              "originalMeaning": "…에게 강의하다"
+            },
+            {
+              "meaning": "설교하다, 훈계하다, 나무라다, 잔소리하다 ((for))",
+              "examples": [],
+              "originalMeaning": "설교하다, 훈계하다, 나무라다, 잔소리하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6a8cbea733f04c00a7669b964856ca47",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6a8cbea733f04c00a7669b964856ca47",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lectures"
+        },
+        {
+          "type": "과거형",
+          "value": "lectured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lecturing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lectured"
+        }
+      ],
+      "aliasConjugation": "lectures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d5526a4746c8c45f26fc55c41a44a1ad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강연은 꼭 1시간이 걸렸다",
+      "text": "The <b>lecture</b> lasted for just[exactly] an hour. or The <b>lecture</b> lasted for one hour to the minute."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 노트 좀 빌려 줘",
+      "text": "Lend me your <b>lecture</b> notes, will you?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 강연에 우리는 실망했다.",
+      "text": "His <b>lecture</b> disappointed us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 강연은 아주 좋았다",
+      "text": "His <b>lecture</b> went down very well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강연은 두 시간 계속되었다.",
+      "text": "The <b>lecture</b> lasted (for) two hours."
+    }
+  ],
+  "isWordType": true
+}

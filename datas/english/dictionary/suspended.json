@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "suspend",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səˈspend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "매달다, 걸다, 달다",
+              "examples": [
+                {
+                  "text": "<b>suspend</b> a ball by a thread",
+                  "translatedText": "공을 실로 매달다"
+                }
+              ],
+              "originalMeaning": "매달다, 걸다, 달다"
+            },
+            {
+              "meaning": "[보통 수동형으로] <먼지·미립자 등을> (공중·수중에) 떠 있게 하다, 부유(浮遊)시키다",
+              "examples": [
+                {
+                  "text": "dust <b>suspend</b> ed in the air",
+                  "translatedText": "공기 중에 떠도는 먼지"
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] <먼지·미립자 등을> (공중·수중에) 떠 있게 하다, 부유(浮遊)시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(일시) 정지하다, 중지되다",
+              "examples": [],
+              "originalMeaning": "(일시) 정지하다, 중지되다"
+            },
+            {
+              "meaning": "지불을 정지하다, 업무를 정지하다, <은행·회사 등이> 부채를 갚지 못하게 되다",
+              "examples": [],
+              "originalMeaning": "지불을 정지하다, 업무를 정지하다, <은행·회사 등이> 부채를 갚지 못하게 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c94a521a71ba4707b2b90dd87fa29a31",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c94a521a71ba4707b2b90dd87fa29a31",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "suspends"
+        },
+        {
+          "type": "과거형",
+          "value": "suspended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "suspending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "suspended"
+        }
+      ],
+      "aliasConjugation": "suspends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b05ed05147f755b2b5087b0b9f4807c0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 정학 처분을 받았다",
+      "text": "He was <b>suspended</b> from school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "큰 샹들리에가 천장에 달려 있다",
+      "text": "The big chandelier is <b>suspended</b> from the ceiling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 무기정학 처분을 받았다",
+      "text": "She was <b>suspended</b> from school for an indefinite period."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 징역 1년에 집행 유예 2년을 선고받았다",
+      "text": "He was given a one-year jail sentence <b>suspended</b> for two years."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "짙은 안개 때문에 모든 열차의 운전이 중지되었다",
+      "text": "The railway service has been <b>suspended</b> owing to the deep fog."
+    }
+  ],
+  "isWordType": true
+}

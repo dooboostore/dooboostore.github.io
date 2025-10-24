@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "philosopher",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fə│lɑːsəfə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "철학자",
+              "examples": [
+                {
+                  "text": "a moral <b>philosopher</b>",
+                  "translatedText": "윤리학자"
+                }
+              ],
+              "originalMeaning": "철학자"
+            },
+            {
+              "meaning": "철인, 현인; 달관자",
+              "examples": [],
+              "originalMeaning": "철인, 현인; 달관자"
+            },
+            {
+              "meaning": "(곤란할 때에도) 냉철한 사람, [구어] 사물을 깊이 생각하는 사람",
+              "examples": [],
+              "originalMeaning": "(곤란할 때에도) 냉철한 사람, [구어] 사물을 깊이 생각하는 사람"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dcc783f9c7454a40915f9033603c4499",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dcc783f9c7454a40915f9033603c4499",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "adb317611aa761b145e9e41a820f44b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모든 것을 달관한 사람이다",
+      "text": "He is a <b>philosopher</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "둘은 같은 철학자이지만 학풍이 다르다",
+      "text": "Philosophers as they both are, they belong to different schools."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 사상은 철학자들에게 좋은 영향을 끼쳤다",
+      "text": "His thought exerted a favorable influence upon the philosopheres."
+    }
+  ],
+  "isWordType": true
+}

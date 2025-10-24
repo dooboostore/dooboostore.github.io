@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "factory",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│fæktri; │fæktəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공장, 제조소(works)",
+              "examples": [
+                {
+                  "text": "an iron <b>factory</b>",
+                  "translatedText": "철공소"
+                }
+              ],
+              "originalMeaning": "공장, 제조소(works)"
+            },
+            {
+              "meaning": "(=FACTORY SHIP)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>FACTORY</b> SHIP</span>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "공장의",
+              "examples": [
+                {
+                  "text": "a <b>factory</b> girl",
+                  "translatedText": "여공, 여직공"
+                }
+              ],
+              "originalMeaning": "공장의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39184bc607c84353b6a71c29bb55ff91",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39184bc607c84353b6a71c29bb55ff91",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "factories"
+        }
+      ],
+      "aliasConjugation": "factories",
+      "aliasConjugationPos": "복수형",
+      "gdid": "9ddf94a7a3149edd86c62201b55f91cb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 공장은 놀고 있다",
+      "text": "The <b>factory</b> is lying idle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 공장은 아직도 휴업 중이다",
+      "text": "The <b>factory</b> still remains idle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "예컨대 공장 노동자를 예로 들자.",
+      "text": "Take your <b>factory</b> worker, for instance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "노동자들이 줄줄이 공장에서 나왔다.",
+      "text": "Workmen streamed from the <b>factory</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공장 가동이 아직은 저조하다",
+      "text": "The <b>factories</b> now operate at a whisper."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "illiterate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈlɪtərət"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "글자를 모르는, 문맹의, 읽기·쓰기를 못하는 (=ignorant)",
+              "examples": [],
+              "originalMeaning": "글자를 모르는, 문맹의, 읽기·쓰기를 못하는 (=<span class='related_word' lang='en' >ignorant</span>)"
+            },
+            {
+              "meaning": "무식한, (언어·문학 등의) 교양이 없는",
+              "examples": [
+                {
+                  "text": "an <b>illiterate</b> magazine",
+                  "translatedText": "저속한 잡지"
+                }
+              ],
+              "originalMeaning": "무식한, (언어·문학 등의) 교양이 없는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "문맹자, 무교육자; 무식자; 교양 없는 사람",
+              "examples": [],
+              "originalMeaning": "문맹자, 무교육자; 무식자; 교양 없는 사람"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d2c1047ec4104175b311c06dc0c7698d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d2c1047ec4104175b311c06dc0c7698d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "674f76d7b1673218410d11dab0d99ed9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 교육은 받지 못했으나 상식은 풍부한 사람이다",
+      "text": "He is <b>illiterate</b>, but a man of strong mother wit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 눈뜬장님이다",
+      "text": "He is an <b>illiterate</b>. or He cannot read or write."
+    }
+  ],
+  "isWordType": true
+}

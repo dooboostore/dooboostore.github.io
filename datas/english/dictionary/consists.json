@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "consist",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(부분·요소로) 되어[이루어져] 있다(be made up) ((of))",
+              "examples": [
+                {
+                  "text": "Water <b>consists</b> of hydrogen and oxygen.",
+                  "translatedText": "물은 수소와 산소로 되어 있다."
+                }
+              ],
+              "originalMeaning": "(부분·요소로) 되어[이루어져] 있다(be made up) ((of))"
+            },
+            {
+              "meaning": "(…에) 있다(lie), (…에) 존재하다 ((in))",
+              "examples": [
+                {
+                  "text": "Happiness <b>consists</b> in contentment.",
+                  "translatedText": "행복은 만족에 있다."
+                }
+              ],
+              "originalMeaning": "(…에) 있다(lie), (…에) 존재하다 ((in))"
+            },
+            {
+              "meaning": "(…와) 양립[일치]하다 ((with, together))",
+              "examples": [
+                {
+                  "text": "The information <b>consists</b> with his accounts.",
+                  "translatedText": "그 정보는 그의 설명과 일치한다."
+                }
+              ],
+              "originalMeaning": "(…와) 양립[일치]하다 ((with, together))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/650303f9bf7f4209837d22d92dfc1970",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/650303f9bf7f4209837d22d92dfc1970",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "consists"
+        },
+        {
+          "type": "과거형",
+          "value": "consisted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "consisting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "consisted"
+        }
+      ],
+      "aliasConjugation": "consists",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "35813b05c23d0d7f6c7a863a65b228cb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 학급은 40명으로 편성되어 있다",
+      "text": "A class <b>consists</b> of forty pupils."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 물질은 단일 성분이다",
+      "text": "This substance <b>consists</b> of one element."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "초판의 발행 부수는 3,000부였다",
+      "text": "The first edition consisted of 3,000 copies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 신문은 1면이 10단이다",
+      "text": "This paper <b>consists</b> of ten columns a page."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국회는 양원으로 되어 있다",
+      "text": "The National Assembly <b>consists</b> of two Houses."
+    }
+  ],
+  "isWordType": true
+}

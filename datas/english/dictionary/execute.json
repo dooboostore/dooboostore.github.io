@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "execute",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈeksɪkjuːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<직무·계획·명령 등을> 실행[수행, 달성]하다",
+              "examples": [
+                {
+                  "text": "He is in charge of executing the plan.",
+                  "translatedText": "그는 그 계획을 실행하는 책임자이다."
+                }
+              ],
+              "originalMeaning": "<직무·계획·명령 등을> 실행[수행, 달성]하다"
+            },
+            {
+              "meaning": "<법률·판결·유언 등을> 집행하다, <행동 등을> 행하다",
+              "examples": [],
+              "originalMeaning": "<법률·판결·유언 등을> 집행하다, <행동 등을> 행하다"
+            },
+            {
+              "meaning": "사형에 처하다, 처형하다, <사람을> 죽이다",
+              "examples": [
+                {
+                  "text": "<b>execute</b> a person for murder",
+                  "translatedText": "…을 살인죄로 처형하다"
+                }
+              ],
+              "originalMeaning": "사형에 처하다, 처형하다, <사람을> 죽이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bca0f8f1a6844d9a8da4f30af3ff40b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bca0f8f1a6844d9a8da4f30af3ff40b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "executes"
+        },
+        {
+          "type": "과거형",
+          "value": "executed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "executing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "executed"
+        }
+      ],
+      "aliasConjugation": "executes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "36da4e38e7aef702dd47bcbcfcfa3b5c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 실행할 시기에 이르렀다.",
+      "text": "The plan is ripe to be executed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 계획을 실행하는 책임자이다.",
+      "text": "He is in charge of executing the plan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "법정은 그를 사형에 처할 것을 명령했다",
+      "text": "The court ordered that he should be executed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 주문은 다소를 불문하고 신속하게 처리해 드리겠습니다",
+      "text": "All orders, large or small, will be promptly executed."
+    }
+  ],
+  "isWordType": true
+}

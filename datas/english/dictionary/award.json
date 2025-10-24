@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "award",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈwɔːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람에게 상·장학금 등을> (심사하여) 수여하다, 주다(adjudge, grant), (=give)",
+              "examples": [
+                {
+                  "text": "<b>award</b> a person a prize = <b>award</b> a prize to a person",
+                  "translatedText": "…에게 상을 주다"
+                }
+              ],
+              "originalMeaning": "<사람에게 상·장학금 등을> (심사하여) 수여하다, 주다(adjudge, grant), (=<span class='related_word' lang='en' >give</span>)"
+            },
+            {
+              "meaning": "(중재·재판 등에서) 재정(裁定)하다, 사정(査定)하다; …에게 <배상금 등을> 인정하다, 주다 ((to))",
+              "examples": [],
+              "originalMeaning": "(중재·재판 등에서) 재정(裁定)하다, 사정(査定)하다; …에게 <배상금 등을> 인정하다, 주다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상, 상금, 상패",
+              "examples": [],
+              "originalMeaning": "상, 상금, 상패"
+            },
+            {
+              "meaning": "심판, 판정; 재정",
+              "examples": [],
+              "originalMeaning": "심판, 판정; 재정"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b0cf7fed32ad49cba18f605d103aa6d3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b0cf7fed32ad49cba18f605d103aa6d3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "awards"
+        },
+        {
+          "type": "과거형",
+          "value": "awarded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "awarding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "awarded"
+        }
+      ],
+      "aliasConjugation": "awards",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4efe844b759fb0a7601befd39d30b066",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그에게 지도자 상을 수여했다.",
+      "text": "They honored him with the leadership <b>award</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 훌륭한 연주로 금메달을 받았다.",
+      "text": "He was awarded a gold medal for his excellent performance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부대장은 그를 포상했다",
+      "text": "The commanding officer awarded him a prize. or The commanding officer gave him an <b>award</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아카데미상",
+      "text": "Academy <b>Award</b>"
+    }
+  ],
+  "isWordType": true
+}

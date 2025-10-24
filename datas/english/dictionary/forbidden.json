@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "forbidden",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fər│bɪdn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "FORBID의 과거분사",
+              "examples": [],
+              "originalMeaning": "<b>FORBID</b>의 과거분사"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(규칙·종교 등으로) 금지된, 금제의, 금단의",
+              "examples": [
+                {
+                  "text": "a <b>forbidden</b> place to children",
+                  "translatedText": "어린이에게 금지된 곳"
+                }
+              ],
+              "originalMeaning": "(규칙·종교 등으로) 금지된, 금제의, 금단의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/13514db44c3242218fae5135681ffefa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/13514db44c3242218fae5135681ffefa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6e488dd1cc90275c2ca9705cd847f76a",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "forbid",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fər│bɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<행위·소지·출입 등을> 금하다(prohibit)",
+              "examples": [
+                {
+                  "text": "His doctor forbade him alcohol.",
+                  "translatedText": "의사는 그에게 알코올 음료를 금했다."
+                }
+              ],
+              "originalMeaning": "<행위·소지·출입 등을> 금하다(prohibit)"
+            },
+            {
+              "meaning": "(규칙·법률로써) 금지하다",
+              "examples": [
+                {
+                  "text": "Wine is <b>forbidden</b>.",
+                  "translatedText": "음주는 금지되어 있다."
+                }
+              ],
+              "originalMeaning": "(규칙·법률로써) 금지하다"
+            },
+            {
+              "meaning": "<사정·경우 등이> 허락[용납]하지 않다; <사정 등이> (…하는 것을) 불가능하게 하다, 방해하다",
+              "examples": [
+                {
+                  "text": "( <b>forbid</b>+[목]+to do) The storm forbidsus to proceed.",
+                  "translatedText": "폭풍 때문에 우리들은 앞으로 나아가지 못한다."
+                }
+              ],
+              "originalMeaning": "<사정·경우 등이> 허락[용납]하지 않다; <사정 등이> (…하는 것을) 불가능하게 하다, 방해하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1eebf8b2af9343fdbf95777d79f2df1d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1eebf8b2af9343fdbf95777d79f2df1d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "forbids",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "427f0a3ceaf8921d1bb4bfe20c24b3d7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것에 손 대면 안 된다",
+      "text": "Don't touch it. or You must not touch it. or You are not allowed[<b>forbidden</b>] to touch it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가면 안 돼, 이상이다.",
+      "text": "I <b>forbid</b> you to go, period."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "낯간지러워서 그런 말은 못하겠다",
+      "text": "I am ashamed to say such a thing. Or My sense of shame forbids me to say such a thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "의사는 그에게 알코올 음료를 금했다.",
+      "text": "His doctor forbade him alcohol."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 언급해서는 안 되는 문제이다",
+      "text": "It's a <b>forbidden</b> ground[territory]."
+    }
+  ],
+  "isWordType": true
+}

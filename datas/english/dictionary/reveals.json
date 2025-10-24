@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "reveal",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈviːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "드러내다, 적발[폭로]하다(disclose); 밝히다, <비밀 등을> 누설하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>reveal</b> a secret",
+                  "translatedText": "비밀을 폭로하다"
+                }
+              ],
+              "originalMeaning": "드러내다, 적발[폭로]하다(disclose); 밝히다, <비밀 등을> 누설하다 ((to))"
+            },
+            {
+              "meaning": "<숨겨져 있던 것을> 보이다, 나타내다",
+              "examples": [
+                {
+                  "text": "The fog cleared and revealed a distant view to our sight.",
+                  "translatedText": "안개가 걷히고 원경이 모습을 드러냈다."
+                }
+              ],
+              "originalMeaning": "<숨겨져 있던 것을> 보이다, 나타내다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 시현(示現), 계시, 묵시; 폭로",
+              "examples": [],
+              "originalMeaning": "[U] 시현(示現), 계시, 묵시; 폭로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ec2b14d680e43dc9dc4599f55d3b5bf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ec2b14d680e43dc9dc4599f55d3b5bf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reveals"
+        },
+        {
+          "type": "과거형",
+          "value": "revealed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "revealing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "revealed"
+        }
+      ],
+      "aliasConjugation": "reveals",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1f00dd28c734e0e109d2f749882c8e5b",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "reveal",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[건축] 문설주, (자동차의) 창틀",
+              "examples": [],
+              "originalMeaning": "[건축] 문설주, (자동차의) 창틀"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2a09b170480b4d83a04f93b49b7f57f9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2a09b170480b4d83a04f93b49b7f57f9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "reveals",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f1f5557fc27df15ec89790a44cb8f04e",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "술에 취하면 본성이 나타난다",
+      "text": "Wine <b>reveals</b> the true man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 몸을 내놓는 옷이다",
+      "text": "It is kind of a revealing dress."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 작품에는 그의 체취가 풍긴다",
+      "text": "His work <b>reveals</b> his idiosyncrasy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그의 신분을 밝히기를 거부했다",
+      "text": "He refused to <b>reveal</b> his identity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자가 웃자 옥같이 흰 이가 보였다",
+      "text": "Her laugh revealed her pearl-white teeth."
+    }
+  ],
+  "isWordType": true
+}

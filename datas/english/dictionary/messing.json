@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "mess",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "난잡, 뒤죽박죽, 엉망진창; [a ~] 난잡해진[어질러 놓은] 것",
+              "examples": [
+                {
+                  "text": "make a <b>mess</b> in the kitchen",
+                  "translatedText": "부엌을 어질러 놓다"
+                }
+              ],
+              "originalMeaning": "난잡, 뒤죽박죽, 엉망진창; [a ~] 난잡해진[어질러 놓은] 것"
+            },
+            {
+              "meaning": "[a ~] 난처한 처지, 곤경, 분규, 궁지",
+              "examples": [
+                {
+                  "text": "We are in a <b>mess</b>.",
+                  "translatedText": "우리는 궁지에 빠져 있다."
+                }
+              ],
+              "originalMeaning": "[a ~] 난처한 처지, 곤경, 분규, 궁지"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "난잡하게 하다, 어질러 놓다, 더럽히다 ((up)); 망쳐 놓다 ((up))",
+              "examples": [],
+              "originalMeaning": "난잡하게 하다, 어질러 놓다, 더럽히다 ((up)); 망쳐 놓다 ((up))"
+            },
+            {
+              "meaning": "거칠게 다루다",
+              "examples": [],
+              "originalMeaning": "거칠게 다루다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "회식하다 ((with, together))",
+              "examples": [],
+              "originalMeaning": "회식하다 ((with, together))"
+            },
+            {
+              "meaning": "엉망으로 만들다, 더럽히다",
+              "examples": [],
+              "originalMeaning": "엉망으로 만들다, 더럽히다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6d235a9839104aa483c063d40d1418c1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6d235a9839104aa483c063d40d1418c1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "messes"
+        },
+        {
+          "type": "과거형",
+          "value": "messed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "messing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "messed"
+        }
+      ],
+      "aliasConjugation": "messes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b509be7e783d1beb46b8570c88455bd5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 궁지에 빠져 있다.",
+      "text": "We are in a <b>mess</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아직 모든 것이 어수선하다",
+      "text": "Everything's still a <b>mess</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "형편없는 지경이 되고 말았구나!",
+      "text": "What a jolly <b>mess</b> I am in!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 궁지에서 벗어나고 싶다",
+      "text": "I want to get out of this <b>mess</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아뿔싸, 이렇게 하는 것이 아닌데",
+      "text": "Oh, dear! I have made a <b>mess</b> of it."
+    }
+  ],
+  "isWordType": true
+}

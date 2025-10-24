@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "elastic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈlæstɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "탄력 있는, 탄성의, 신축성이 있는; 휘기 쉬운, 낭창낭창한, 나긋나긋한 (=flexible)",
+              "examples": [
+                {
+                  "text": "an <b>elastic</b> string[cord, tape]",
+                  "translatedText": "고무끈[줄, 테이프]"
+                }
+              ],
+              "originalMeaning": "탄력 있는, 탄성의, 신축성이 있는; 휘기 쉬운, 낭창낭창한, 나긋나긋한 (=<span class='related_word' lang='en' >flexible</span>)"
+            },
+            {
+              "meaning": "반발력이 있는; 활달한, 쾌활한; 융통성[순응성]이 있는",
+              "examples": [
+                {
+                  "text": "an <b>elastic</b> conscience",
+                  "translatedText": "융통성이 있는 양심"
+                }
+              ],
+              "originalMeaning": "반발력이 있는; 활달한, 쾌활한; 융통성[순응성]이 있는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고무 끈, 고무줄이 든 천",
+              "examples": [],
+              "originalMeaning": "고무 끈, 고무줄이 든 천"
+            },
+            {
+              "meaning": "고리 모양의 고무줄",
+              "examples": [],
+              "originalMeaning": "고리 모양의 고무줄"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/47ee84f325e9405d878c07e5f48579be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/47ee84f325e9405d878c07e5f48579be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fc92ffdac2af68e270826f2f99c31196",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고무 밴드는 신축성이 있다",
+      "text": "A rubber band is <b>elastic</b>."
+    }
+  ],
+  "isWordType": true
+}

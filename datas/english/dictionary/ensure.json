@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "ensure",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪn│ʃʊr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "안전하게 하다, 지키다(guard) ((against, from))",
+              "examples": [
+                {
+                  "text": "<b>ensure</b> a person against danger",
+                  "translatedText": "위험으로부터 …을 지키다"
+                }
+              ],
+              "originalMeaning": "안전하게 하다, 지키다(guard) ((against, from))"
+            },
+            {
+              "meaning": "<성공 등을> 확실하게 하다, 보증하다, <지위 등을> 확보하다",
+              "examples": [
+                {
+                  "text": "It will <b>ensure</b> your success.",
+                  "translatedText": "그것으로 너의 성공은 확실하다."
+                }
+              ],
+              "originalMeaning": "<성공 등을> 확실하게 하다, 보증하다, <지위 등을> 확보하다"
+            },
+            {
+              "meaning": "보험에 들다(insure)",
+              "examples": [],
+              "originalMeaning": "보험에 들다(insure)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/57d61423b4084a6d884e773f245f1d1e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/57d61423b4084a6d884e773f245f1d1e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ensures"
+        },
+        {
+          "type": "과거형",
+          "value": "ensured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ensuring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ensured"
+        }
+      ],
+      "aliasConjugation": "ensures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "800654d16d695210778dc002b8730cc3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것으로 너의 성공은 확실하다.",
+      "text": "It will <b>ensure</b> your success."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 약속을 지킬 것이라고 보증할 수 없다.",
+      "text": "I cannot <b>ensure</b> that he will keep his word."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 아이들의 유망한 장래를 위해서 노심초사해 왔다",
+      "text": "She has focused her all energies to <b>ensure</b> a good future for her children."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "summon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌmən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<증인 등을> (…에) 소환하다, 호출하다(call) ((to)); (법원에의) 출두를 명하다 ((to, into))",
+              "examples": [
+                {
+                  "text": "<b>summon</b> a witness",
+                  "translatedText": "목격자에게 출두를 명하다"
+                }
+              ],
+              "originalMeaning": "<증인 등을> (…에) 소환하다, 호출하다(call) ((to)); (법원에의) 출두를 명하다 ((to, into))"
+            },
+            {
+              "meaning": "<의회 등을> 소집하다",
+              "examples": [
+                {
+                  "text": "<b>summon</b> parliament",
+                  "translatedText": "의회를 소집하다"
+                }
+              ],
+              "originalMeaning": "<의회 등을> 소집하다"
+            },
+            {
+              "meaning": "…에게 (의무·일 등을) 명하다, (…할 것을) 요구하다 ((to, to do))",
+              "examples": [],
+              "originalMeaning": "…에게 (의무·일 등을) 명하다, (…할 것을) 요구하다 ((to, to do))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3f35a374f00d48dea71c20a029d5be60",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3f35a374f00d48dea71c20a029d5be60",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "summons"
+        },
+        {
+          "type": "과거형",
+          "value": "summoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "summoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "summoned"
+        }
+      ],
+      "aliasConjugation": "summons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bd117265a74a4723babcc445b5d67084",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신의 부르심",
+      "text": "God's calling;a divine summons[call];a vocation"
+    }
+  ],
+  "isWordType": true
+}

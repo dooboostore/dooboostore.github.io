@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "cooperate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "koʊ│ɑːpəreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "협력하다, 협동하다 ((with; in, for))",
+              "examples": [
+                {
+                  "text": "<b>cooperate</b> with a person for",
+                  "translatedText": "…을 위해 …와 협력하다"
+                }
+              ],
+              "originalMeaning": "협력하다, 협동하다 ((with; in, for))"
+            },
+            {
+              "meaning": "<사정 등이> 서로 돕다(contribute)",
+              "examples": [
+                {
+                  "text": "( <b>cooperate</b> +to do) All these things cooperated to make this work a success.",
+                  "translatedText": "이들 사정이 함께 작용하여 이 사업은 성공을 거두었다."
+                }
+              ],
+              "originalMeaning": "<사정 등이> 서로 돕다(contribute)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d0f5b1512794c899781be0614521a15",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d0f5b1512794c899781be0614521a15",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cooperates"
+        },
+        {
+          "type": "과거형",
+          "value": "cooperated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cooperating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cooperated"
+        }
+      ],
+      "aliasConjugation": "cooperates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "65beb34143d67d7404b02425b918b3df",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 친구들과 협력해서 그 일을 했다",
+      "text": "I cooperated with my friends in doing the work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이들 사정이 함께 작용하여 이 사업은 성공을 거두었다.",
+      "text": "All these things cooperated to make this work a success."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리의 바람은 이 시점에서 모든 당사자들이 협력해야 한다는 것이다.",
+      "text": "Our hope is that at this time all parties will <b>cooperate</b>."
+    }
+  ],
+  "isWordType": true
+}

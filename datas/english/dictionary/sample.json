@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "sample",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsæmpl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "견본, 샘플, 표본, 시료(試料); 실례(實例)(illustration)",
+              "examples": [
+                {
+                  "text": "buy by <b>sample</b>",
+                  "translatedText": "견본을 보고 사다"
+                }
+              ],
+              "originalMeaning": "견본, 샘플, 표본, 시료(試料); 실례(實例)(illustration)"
+            },
+            {
+              "meaning": "[의학] 시료(試料), (검사용) 오줌",
+              "examples": [],
+              "originalMeaning": "[의학] 시료(試料), (검사용) 오줌"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "견본의",
+              "examples": [
+                {
+                  "text": "a <b>sample</b> copy",
+                  "translatedText": "신간 견본"
+                }
+              ],
+              "originalMeaning": "견본의"
+            },
+            {
+              "meaning": "실험의",
+              "examples": [],
+              "originalMeaning": "실험의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 견본[표본]을 만들다, (견본으로 질을) 시험하다",
+              "examples": [],
+              "originalMeaning": "…의 견본[표본]을 만들다, (견본으로 질을) 시험하다"
+            },
+            {
+              "meaning": "시식[시음]하다",
+              "examples": [
+                {
+                  "text": "<b>sample</b> wine",
+                  "translatedText": "포도주를 시음하다"
+                }
+              ],
+              "originalMeaning": "시식[시음]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f992f4ebb4b04f21a6a25fa6821d4c47",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f992f4ebb4b04f21a6a25fa6821d4c47",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "samples"
+        },
+        {
+          "type": "과거형",
+          "value": "sampled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sampling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sampled"
+        }
+      ],
+      "aliasConjugation": "samples",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d1afc30448767a78cc3ce425ba26be69",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 견본에 비해 질이 떨어진다",
+      "text": "This does not come up to the <b>sample</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신청 즉시 내용 견본 무료 우송함",
+      "text": "<b>Sample</b> pages will be sent free on[upon] request."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 잡지의 견본을 1부 보내 주십시오",
+      "text": "Will you send me a <b>sample</b> copy of the magazine?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "현물이 견본보다 조금 크다",
+      "text": "The actual article is a little larger than the <b>sample</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "샘플을 보여 주시오",
+      "text": "Show me a <b>sample</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,169 @@
+{
+  "items": [
+    {
+      "entry": "cook",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "요리사 ((남녀))",
+              "examples": [
+                {
+                  "text": "a good[bad] <b>cook</b>",
+                  "translatedText": "요리 솜씨가 좋은[없는] 사람"
+                }
+              ],
+              "originalMeaning": "요리사 ((남녀))"
+            },
+            {
+              "meaning": "리더, 지도자",
+              "examples": [],
+              "originalMeaning": "리더, 지도자"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "요리[조리]하다, 음식을 만들다; (…에게) …을 요리해 주다 ((for))",
+              "examples": [],
+              "originalMeaning": "요리[조리]하다, 음식을 만들다; (…에게) …을 요리해 주다 ((for))"
+            },
+            {
+              "meaning": "<이야기 등을> 지어내다, 꾸미다, 조작하다(concoct) ((up)); <장부 등을> 조작하다, 속이다(falsify)",
+              "examples": [
+                {
+                  "text": "<b>cook</b> up a story[report]",
+                  "translatedText": "이야기[보고]를 날조하다"
+                }
+              ],
+              "originalMeaning": "<이야기 등을> 지어내다, 꾸미다, 조작하다(concoct) ((up)); <장부 등을> 조작하다, 속이다(falsify)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "요리하다, 식사를 준비하다",
+              "examples": [
+                {
+                  "text": "<b>cook</b> out",
+                  "translatedText": "야외에서 요리해 먹다"
+                }
+              ],
+              "originalMeaning": "요리하다, 식사를 준비하다"
+            },
+            {
+              "meaning": "<음식물이> 요리되다, 삶아지다, 구워지다",
+              "examples": [
+                {
+                  "text": "This meat cooks quite well.",
+                  "translatedText": "이 고기는 아주 잘 구워진다."
+                }
+              ],
+              "originalMeaning": "<음식물이> 요리되다, 삶아지다, 구워지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4d57ccd0776f42708a5af6a437e72eb9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4d57ccd0776f42708a5af6a437e72eb9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cooks"
+        },
+        {
+          "type": "과거형",
+          "value": "cooked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cooking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cooked"
+        }
+      ],
+      "aliasConjugation": "cooks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dd9cb2a49e05ce70ffba8c138c716ba8",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Cook",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쿡 Captain James ~ (1728-79) ((영국의 항해가))",
+              "examples": [],
+              "originalMeaning": "쿡 Captain James ~ (1728-79) ((영국의 항해가))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b40cc25f2b543dca4db0a79823caa01",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b40cc25f2b543dca4db0a79823caa01",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ddc0355e7d84b26e5968cde2518bd41e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 요리 솜씨는 그만이다",
+      "text": "She is a perfect <b>cook</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 고기는 아주 잘 구워진다.",
+      "text": "This meat cooks quite well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자의 요리 솜씨는 더할 나위 없다",
+      "text": "She cooks to perfection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 내가 요리하는 것을 거들어 주었다.",
+      "text": "She aided me to <b>cook</b>[in cooking]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사고 때문에 그의 계획이 좌절되었다",
+      "text": "That accident has <b>cooked</b> his goose."
+    }
+  ],
+  "isWordType": true
+}

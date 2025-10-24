@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "assume",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈsuːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(증거는 없으나) 사실이라고 보다[생각하다], 당연한 일로 치다, 추정[추측]하다",
+              "examples": [
+                {
+                  "text": "Let's <b>assume</b> what he says to be true.",
+                  "translatedText": "그가 말하는 것을 사실이라고 생각하자."
+                }
+              ],
+              "originalMeaning": "(증거는 없으나) 사실이라고 보다[생각하다], 당연한 일로 치다, 추정[추측]하다"
+            },
+            {
+              "meaning": "[보통 assuming의 형태로] (…이라고) 가정하여[하면] ((that))",
+              "examples": [
+                {
+                  "text": "Assuming that …",
+                  "translatedText": "…이라고 가정하여, …이라고 한다면"
+                }
+              ],
+              "originalMeaning": "[보통 assuming의 형태로] (…이라고) 가정하여[하면] ((that))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주제넘게 나서다, 거만한 태도를 취하다; …체하다",
+              "examples": [],
+              "originalMeaning": "주제넘게 나서다, 거만한 태도를 취하다; …체하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ef30d845629c48f8941fc3106ba350eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ef30d845629c48f8941fc3106ba350eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assumes"
+        },
+        {
+          "type": "과거형",
+          "value": "assumed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assuming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assumed"
+        }
+      ],
+      "aliasConjugation": "assumes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "50a55a39b0f4351491d9f1f55eecadaf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 모든 책임을 지겠습니다",
+      "text": "I <b>assume</b> all responsibility."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 얼굴은 노한 빛을 띠고 있었다.",
+      "text": "His face assumed a look of anger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 말하는 것을 사실이라고 생각하자.",
+      "text": "Let’s <b>assume</b> what he says to be true."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 시험삼아 가명으로 써내어 보았다.",
+      "text": "He tried writing under an assumed name."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그런 책임을 감당할 능력이 없다.",
+      "text": "She is unfit to <b>assume</b> such a responsibility."
+    }
+  ],
+  "isWordType": true
+}

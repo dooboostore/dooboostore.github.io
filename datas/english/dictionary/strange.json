@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "strange",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "streɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "이상한, 야릇한, 묘한, 색다른, 별스러운; 예상 밖의",
+              "examples": [
+                {
+                  "text": "a <b>strange</b> accident",
+                  "translatedText": "이상한 사건"
+                }
+              ],
+              "originalMeaning": "이상한, 야릇한, 묘한, 색다른, 별스러운; 예상 밖의"
+            },
+            {
+              "meaning": "<사람·장소가> 모르는, 미지의, 낯선, 눈[귀]에 선",
+              "examples": [
+                {
+                  "text": "a <b>strange</b> face",
+                  "translatedText": "낯선 얼굴"
+                }
+              ],
+              "originalMeaning": "<사람·장소가> 모르는, 미지의, 낯선, 눈[귀]에 선"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[구어] 이상하게, 묘하게; 서먹하게",
+              "examples": [
+                {
+                  "text": "act <b>strange</b>",
+                  "translatedText": "이상한 행동을 하다"
+                }
+              ],
+              "originalMeaning": "[구어] 이상하게, 묘하게; 서먹하게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/84e8c42f12c145d2b89a29d1ba3837d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/84e8c42f12c145d2b89a29d1ba3837d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "stranger"
+        },
+        {
+          "type": "최상급",
+          "value": "strangest"
+        }
+      ],
+      "aliasConjugation": "stranger",
+      "aliasConjugationPos": "비교급",
+      "gdid": "ea87c0a972ea8645cb63df19cbf58df1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낯선 사람이 내게로 다가왔다.",
+      "text": "A stranger came up to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낯선 사람이 말을 걸어 왔다",
+      "text": "A stranger spoke[called] to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그와는 전혀 안면이 없다",
+      "text": "He is a total stranger to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 이 부근의 지리에 어둡다",
+      "text": "I am a stranger around here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개가 낯선 사람에게 으르렁거린다",
+      "text": "The dog snarls at a stranger."
+    }
+  ],
+  "isWordType": true
+}

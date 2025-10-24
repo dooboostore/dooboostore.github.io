@@ -1,0 +1,7 @@
+[
+  {"symbol":"BOJ_FIXED_INTEREST_RATE", "label":  "일본금리 확정, 지수", "symbols":  ["^KQ11", "^KS11", "^SOX", "^SPX", "^NDX", "^RUT", "^DJI"], "events":  ["BOJ_FIXED_INTEREST_RATE"], "normalize": true},
+  {"symbol":"MEMORY_RATE", "label":  "MEMORY", "symbols":  ["000660.KS", "005930.KS", "AVGO", "MU"], "events":  [], "normalize": true},
+  {"symbol":"CAR_RATE", "label":  "CAR", "symbols":  ["GM", "F", "TSLA", "005380.KS"], "events":  [], "normalize": true},
+  {"symbol":"SHIP_RATE", "label":  "SHIP", "symbols":  ["HII", "GD", "042660.KS"], "events":  [], "normalize": true},
+  {"symbol":"NUCLEAR_ENERGY_RATE", "label":  "NUCLEAR 에너지", "symbols":  ["034020.KS",    "SMR",     "UEC",     "CEG",    "OKLO"], "events":  [], "normalize": true}
+]

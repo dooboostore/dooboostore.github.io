@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "preface",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈprefəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "서문, 서언, 머리말 ((to)), (=introduction)",
+              "examples": [
+                {
+                  "text": "write a <b>preface</b> to a book",
+                  "translatedText": "책의 머리말을 쓰다"
+                }
+              ],
+              "originalMeaning": "서문, 서언, 머리말 ((to)), (=<span class='related_word' lang='en' >introduction</span>)"
+            },
+            {
+              "meaning": "(연설 따위의) 서론, 머리말 ((to))",
+              "examples": [],
+              "originalMeaning": "(연설 따위의) 서론, 머리말 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책 등에> 서문을 쓰다 ((by, with; by doing))",
+              "examples": [],
+              "originalMeaning": "<책 등에> 서문을 쓰다 ((by, with; by doing))"
+            },
+            {
+              "meaning": "<사건 등이> …의 단서가 되다, …의 발단이 되다; <말·글 등을> (…으로) 시작하다",
+              "examples": [
+                {
+                  "text": "He prefaced his speech with an apology.",
+                  "translatedText": "그는 먼저 사과를 하고 연설을 시작했다."
+                }
+              ],
+              "originalMeaning": "<사건 등이> …의 단서가 되다, …의 발단이 되다; <말·글 등을> (…으로) 시작하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "서문을 쓰다, 미리 일러두다",
+              "examples": [],
+              "originalMeaning": "서문을 쓰다, 미리 일러두다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bd9cc47f4467472ebd6288dde4802fcc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bd9cc47f4467472ebd6288dde4802fcc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "prefaces"
+        },
+        {
+          "type": "과거형",
+          "value": "prefaced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "prefacing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "prefaced"
+        }
+      ],
+      "aliasConjugation": "prefaces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ca2585f715fe893c0995042a5583fb49",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 먼저 사과를 하고 연설을 시작했다.",
+      "text": "He prefaced his speech with an apology."
+    }
+  ],
+  "isWordType": true
+}

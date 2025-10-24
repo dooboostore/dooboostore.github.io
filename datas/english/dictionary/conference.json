@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "conference",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːnfərəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "협의, 상의(相議)",
+              "examples": [],
+              "originalMeaning": "협의, 상의(相議)"
+            },
+            {
+              "meaning": "회의, 협의회 (=meeting)",
+              "examples": [
+                {
+                  "text": "a <b>conference</b> on disarmament",
+                  "translatedText": "군축 회의"
+                }
+              ],
+              "originalMeaning": "회의, 협의회 (=<span class='related_word' lang='en' >meeting</span>)"
+            },
+            {
+              "meaning": "해운 동맹, [미] 경기 연맹",
+              "examples": [],
+              "originalMeaning": "해운 동맹, [미] 경기 연맹"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6bd1ff6d682d44988a625a49398d64e5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6bd1ff6d682d44988a625a49398d64e5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e7be4aab0ec360a2773c46b7e1302fef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회의는 아무 성과 없이 끝났다",
+      "text": "The <b>conference</b> broke up resultless."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "평의한 결과 결정을 내렸다",
+      "text": "The <b>conference</b> has come to a decision."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 회의는 토요일까지 계속되었다.",
+      "text": "The <b>conference</b> extended into Saturday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "유엔 환경 개발 회의",
+      "text": "UN <b>Conference</b> on Environment and Development"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이번 회의는 기간이 짧다",
+      "text": "The present <b>conference</b> is of short duration."
+    }
+  ],
+  "isWordType": true
+}

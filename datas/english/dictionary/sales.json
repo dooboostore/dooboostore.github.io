@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "entry": "sales",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "séilz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "판매(상)의",
+              "examples": [
+                {
+                  "text": "a <b>sales</b> manager",
+                  "translatedText": "판매 부장"
+                }
+              ],
+              "originalMeaning": "판매(상)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eae4cb6191ec4f688d9c0900cd8174ea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eae4cb6191ec4f688d9c0900cd8174ea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "aed716bf1206148d297712114a502c3d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "sale",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 판매, 매각, 매도(selling); 매매, 거래",
+              "examples": [
+                {
+                  "text": "a cash <b>sale</b> = a salefor cash",
+                  "translatedText": "현금 판매"
+                }
+              ],
+              "originalMeaning": "[UC/] 판매, 매각, 매도(selling); 매매, 거래"
+            },
+            {
+              "meaning": "[C] 팔림새, 판매 성적, 수요; [종종 pl.] 매상(고), 매출액",
+              "examples": [
+                {
+                  "text": "<b>sales</b> of air conditioners",
+                  "translatedText": "에어컨의 매출액"
+                }
+              ],
+              "originalMeaning": "[C] 팔림새, 판매 성적, 수요; [종종 pl.] 매상(고), 매출액"
+            },
+            {
+              "meaning": "[C] 특매, 염매; 재고 정리 판매(= clearance ~)",
+              "examples": [
+                {
+                  "text": "a summer <b>sale</b>",
+                  "translatedText": "여름 상품 대매출"
+                }
+              ],
+              "originalMeaning": "[C] 특매, 염매; 재고 정리 판매(= clearance ~)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5fa0f8aa7ee741bca8f61c2fbcf51617",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5fa0f8aa7ee741bca8f61c2fbcf51617",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f8ead92dafa637ca5c38b4310fbb3528",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 판매 부문에서 일하고 있다.",
+      "text": "He works in <b>sales</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 판매 수익을 올렸다",
+      "text": "They made a profit on <b>sale</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "매출액은 다시 올라갈지도 모른다.",
+      "text": "The <b>sales</b> may go up again."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 곧 발매된다",
+      "text": "The book will be put on <b>sale</b> soon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 매상에서 삥땅을 했다",
+      "text": "He pocketed a kickback from the <b>sale</b>."
+    }
+  ],
+  "isWordType": true
+}

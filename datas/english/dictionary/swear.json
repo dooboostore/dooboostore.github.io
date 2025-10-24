@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "swear",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "swer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(…에 걸고) 맹세하다, 선서하다, 엄숙히 선언하다",
+              "examples": [
+                {
+                  "text": "<b>swear</b> by[before, to] God",
+                  "translatedText": "신에게 걸고 맹세하다"
+                }
+              ],
+              "originalMeaning": "(…에 걸고) 맹세하다, 선서하다, 엄숙히 선언하다"
+            },
+            {
+              "meaning": "(…에게) 욕을 하다 ((at)), 신의 이름을 더럽히다, 불경한[벌받을] 말을 하다",
+              "examples": [
+                {
+                  "text": "<b>swear</b> like a pirate[trooper]",
+                  "translatedText": "욕을 마구 퍼붓다"
+                }
+              ],
+              "originalMeaning": "(…에게) 욕을 하다 ((at)), 신의 이름을 더럽히다, 불경한[벌받을] 말을 하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "맹세하다, 선서하다; …할 것을 맹세하다",
+              "examples": [
+                {
+                  "text": "He swore that he would be revenged on her.",
+                  "translatedText": "그는 그녀에 대한 복수를 맹세했다."
+                }
+              ],
+              "originalMeaning": "맹세하다, 선서하다; …할 것을 맹세하다"
+            },
+            {
+              "meaning": "(…라고) 단언하다, 주장하다",
+              "examples": [],
+              "originalMeaning": "(…라고) 단언하다, 주장하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "맹세, 선서, 서약",
+              "examples": [],
+              "originalMeaning": "맹세, 선서, 서약"
+            },
+            {
+              "meaning": "저주(의 말), 욕, 욕설, 악담(swearword)",
+              "examples": [],
+              "originalMeaning": "저주(의 말), 욕, 욕설, 악담(swearword)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1b95b0b65fb4aa194a44fa2c924f527",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1b95b0b65fb4aa194a44fa2c924f527",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "swears"
+        },
+        {
+          "type": "과거형",
+          "value": "swore"
+        },
+        {
+          "type": "현재 분사",
+          "value": "swearing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sworn"
+        }
+      ],
+      "aliasConjugation": "swears",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "771fc327bc072b204f39a8cf81c85eb4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "성서에 손을 얹고 맹세합니다.",
+      "text": "I <b>swear</b> on the Bible."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아이들에게 욕을 퍼부었다.",
+      "text": "He swore at his children."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 진실을 말할 것을 맹세했다.",
+      "text": "She swore to tell the truth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "증인은 성경에 대고 맹세했다",
+      "text": "The witness swore on the Bible."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결코 너를 떠나지 않을 것을 맹세한다",
+      "text": "I <b>swear</b> I will never leave you."
+    }
+  ],
+  "isWordType": true
+}

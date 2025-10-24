@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "literally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪtərəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "글자 뜻대로; 축어적으로, 글자 한 자 한 자씩; 문자에 구애되어",
+              "examples": [
+                {
+                  "text": "translate <b>literally</b>",
+                  "translatedText": "직역하다"
+                }
+              ],
+              "originalMeaning": "글자 뜻대로; 축어적으로, 글자 한 자 한 자씩; 문자에 구애되어"
+            },
+            {
+              "meaning": "[강조하여] 사실상, 정말로, 완전히, 실제로",
+              "examples": [
+                {
+                  "text": "be <b>literally</b> destroyed",
+                  "translatedText": "완전히 파괴되다"
+                }
+              ],
+              "originalMeaning": "[강조하여] 사실상, 정말로, 완전히, 실제로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/353d4be406b145b9be12fce765a9be38",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/353d4be406b145b9be12fce765a9be38",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c9cebd56a5ae9439fe889bdf497a2a0e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "literal",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪtərəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "글자대로의(opp. figurative)",
+              "examples": [
+                {
+                  "text": "the <b>literal</b> meaning of a word",
+                  "translatedText": "말의 문자 그대로의 의미"
+                }
+              ],
+              "originalMeaning": "글자대로의(opp. figurative)"
+            },
+            {
+              "meaning": "<번역·해석 등이> 원문 어구에 충실한(opp. free)",
+              "examples": [
+                {
+                  "text": "a <b>literal</b> translation",
+                  "translatedText": "직역"
+                }
+              ],
+              "originalMeaning": "<번역·해석 등이> 원문 어구에 충실한(opp. free)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "오자(誤字), 오식(誤植)",
+              "examples": [],
+              "originalMeaning": "오자(誤字), 오식(誤植)"
+            },
+            {
+              "meaning": "리터럴, 상수",
+              "examples": [],
+              "originalMeaning": "리터럴, 상수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a8ccb6ae18704d78acb0cc405f4138c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a8ccb6ae18704d78acb0cc405f4138c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0e4f8ace98224eaf07edbe0e47bc0e2e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상다리가 휘어지도록 성찬이 차려져 있었다.",
+      "text": "The table <b>literally</b> groaned with food."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 도수공권으로 미국에 건너갔다",
+      "text": "He was <b>literally</b> penniless when he went over to America."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자구에 충실한[구애되지 않는] 번역",
+      "text": "(a) <b>literal</b>[free] translation"
+    }
+  ],
+  "isWordType": true
+}

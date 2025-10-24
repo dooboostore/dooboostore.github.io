@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "slight",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "slaɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "근소한, 약간의, 적은",
+              "examples": [
+                {
+                  "text": "a <b>slight</b> increase",
+                  "translatedText": "근소한 증가"
+                }
+              ],
+              "originalMeaning": "근소한, 약간의, 적은"
+            },
+            {
+              "meaning": "[최상급으로, 부정문에서] 조금도 (…않다)",
+              "examples": [
+                {
+                  "text": "There is not the slightest doubt about it.",
+                  "translatedText": "거기에는 조금도 의심스러운 점이 없다."
+                }
+              ],
+              "originalMeaning": "[최상급으로, 부정문에서] 조금도 (…않다)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경시하다, 무시하다(disregard); 모욕하다",
+              "examples": [
+                {
+                  "text": "I felt <b>slight</b> ed.",
+                  "translatedText": "나는 무시당한 느낌이 들었다."
+                }
+              ],
+              "originalMeaning": "경시하다, 무시하다(disregard); 모욕하다"
+            },
+            {
+              "meaning": "<일 등을> 등한히[아무렇게나] 하다",
+              "examples": [],
+              "originalMeaning": "<일 등을> 등한히[아무렇게나] 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경멸(contempt), 얕봄, 멸시, 무례, 모욕(affront), 냉담 ((to, upon))",
+              "examples": [],
+              "originalMeaning": "경멸(contempt), 얕봄, 멸시, 무례, 모욕(affront), 냉담 ((to, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce747da12b5348a58871a2e949c31753",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce747da12b5348a58871a2e949c31753",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "slighter"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "slights"
+        },
+        {
+          "type": "최상급",
+          "value": "slightest"
+        },
+        {
+          "type": "과거형",
+          "value": "slighted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "slighting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "slighted"
+        }
+      ],
+      "aliasConjugation": "slighter",
+      "aliasConjugationPos": "비교급",
+      "gdid": "28420fff5f744cf9d7952e629b99fbf6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 병이 조금 나아졌다",
+      "text": "He is slightly better."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "문이 조금 열려 있다",
+      "text": "The door is ajar[slightly open]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 몹시 가냘픈 체격이다.",
+      "text": "He is very slightly built."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 총은 반동이 적다",
+      "text": "This gun kicks only slightly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 몸이 수척하고 구부정하다",
+      "text": "He is slender and slightly bent."
+    }
+  ],
+  "isWordType": true
+}

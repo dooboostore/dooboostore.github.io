@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "coat",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "koʊt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(방한·외출용의) 코트",
+              "examples": [],
+              "originalMeaning": "(방한·외출용의) 코트"
+            },
+            {
+              "meaning": "(양복의) 상의(上衣)(cf. OVERCOAT, GREATCOAT); (여성·어린이의) 긴 웃옷; 여성 외투",
+              "examples": [],
+              "originalMeaning": "(양복의) 상의(上衣)(cf. OVERCOAT, GREATCOAT); (여성·어린이의) 긴 웃옷; 여성 외투"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "웃옷으로 덮다[을 입히다]",
+              "examples": [],
+              "originalMeaning": "웃옷으로 덮다[을 입히다]"
+            },
+            {
+              "meaning": "<페인트 등을> 칠하다, <주석 등을> 입히다, <먼지 등이> 뒤덮다",
+              "examples": [
+                {
+                  "text": "<b>coat</b> the wall with paint",
+                  "translatedText": "벽에 페인트를 칠하다"
+                }
+              ],
+              "originalMeaning": "<페인트 등을> 칠하다, <주석 등을> 입히다, <먼지 등이> 뒤덮다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e8f0b6fa65c3488995f228722a45bf5c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e8f0b6fa65c3488995f228722a45bf5c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "coats"
+        },
+        {
+          "type": "과거형",
+          "value": "coated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coated"
+        }
+      ],
+      "aliasConjugation": "coats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9b826f579d111cf9ba4f80c49c18620e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 옷은 품이 솔다",
+      "text": "This <b>coat</b> is tight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 웃옷을 입고 있었다.",
+      "text": "He was plus a <b>coat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "누가 내 코트를 훔쳐 갔다",
+      "text": "My <b>coat</b> was stolen."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것에는 금이 입혀져 있다.",
+      "text": "It is coated with gold."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "￡20. 이 윗옷은 20 파운드 들었다.",
+      "text": "This <b>coat</b> stood me (in)"
+    }
+  ],
+  "isWordType": true
+}

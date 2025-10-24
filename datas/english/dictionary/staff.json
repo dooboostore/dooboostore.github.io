@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "entry": "staff",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "직원, 부[국]직원, 사무국 직원; (학교의) 교직원; 간부",
+              "examples": [],
+              "originalMeaning": "직원, 부[국]직원, 사무국 직원; (학교의) 교직원; 간부"
+            },
+            {
+              "meaning": "참모, 막료(幕僚)",
+              "examples": [],
+              "originalMeaning": "참모, 막료(幕僚)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 직원[부원]을 두다, …의 직원으로서 근무하다",
+              "examples": [],
+              "originalMeaning": "…에 직원[부원]을 두다, …의 직원으로서 근무하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/52f562691825400096bd4ffdfe44ca55",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/52f562691825400096bd4ffdfe44ca55",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "staffs"
+        },
+        {
+          "type": "복수형",
+          "value": "staffs, staves"
+        },
+        {
+          "type": "과거형",
+          "value": "staffed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "staffing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "staffed"
+        }
+      ],
+      "aliasConjugation": "staffs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "41d9bbf4dc9c126fa377e78ad895f1fa",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "staff",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "삼 부스러기 등을 섞은 석고 ((일시적 건조물에 사용함))",
+              "examples": [],
+              "originalMeaning": "삼 부스러기 등을 섞은 석고 ((일시적 건조물에 사용함))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e7f70eba67304a5780bedc0d016b7fa1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e7f70eba67304a5780bedc0d016b7fa1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "staffs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3a4071547d297233cab563c9f2a1f273",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 기를 깃대에 말았다.",
+      "text": "He rolled the flag round its <b>staff</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 직원을 더 두지 않을 것이다",
+      "text": "We're not taking on any more <b>staff</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 직원들에게 아주 박절하게 대한다",
+      "text": "He treats his <b>staff</b> like dirt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 중학교의 직원이다",
+      "text": "He is on the <b>staff</b> of the middle school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소령은 하사의 경례에 답했다",
+      "text": "The major returned the <b>staff</b> sergeant's salute."
+    }
+  ],
+  "isWordType": true
+}

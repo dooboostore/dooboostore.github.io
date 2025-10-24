@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "describe",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈskraɪb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<특징 등을> 묘사하다, 기술하다, 말로 설명하다",
+              "examples": [
+                {
+                  "text": "Words cannot <b>describe</b> the scene.",
+                  "translatedText": "말로는 그 광경을 설명할 수 없다."
+                }
+              ],
+              "originalMeaning": "<특징 등을> 묘사하다, 기술하다, 말로 설명하다"
+            },
+            {
+              "meaning": "<사람을> …라고 칭하다, 평하다 ((as))",
+              "examples": [
+                {
+                  "text": "He <b>describes</b> himself as a great statesman.",
+                  "translatedText": "그는 자신을 위대한 정치가라고 말한다."
+                }
+              ],
+              "originalMeaning": "<사람을> …라고 칭하다, 평하다 ((as))"
+            },
+            {
+              "meaning": "표시하다, <선·도형을> 그리다 ((draw쪽이 일반적)), <천체가> <어떤 도형을> 그리며 운행하다",
+              "examples": [],
+              "originalMeaning": "표시하다, <선·도형을> 그리다 ((draw쪽이 일반적)), <천체가> <어떤 도형을> 그리며 운행하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b2b34cc4ad3c4b308d01c5b0f1cf94e3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b2b34cc4ad3c4b308d01c5b0f1cf94e3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "describes"
+        },
+        {
+          "type": "과거형",
+          "value": "described"
+        },
+        {
+          "type": "현재 분사",
+          "value": "describing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "described"
+        }
+      ],
+      "aliasConjugation": "describes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d7ce4c516195e6d345beae5d69fd0f74",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "말로는 그 광경을 설명할 수 없다.",
+      "text": "Words cannot <b>describe</b> the scene."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "주인공의 성격이 잘 묘사되어 있다",
+      "text": "The character of the hero is well described."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 사건을 일어난 그대로 묘사했다.",
+      "text": "She described the accident as it occurred."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자신을 위대한 정치가라고 말한다.",
+      "text": "He <b>describes</b> himself as a great statesman."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 감동은 도저히 말로 나타낼 수 없다",
+      "text": "I can't find the words to <b>describe</b> how moving it was."
+    }
+  ],
+  "isWordType": true
+}

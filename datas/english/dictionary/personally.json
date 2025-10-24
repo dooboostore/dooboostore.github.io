@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "entry": "personally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɜːrsənəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "몸소, 스스로, 친히, 직접(in person)",
+              "examples": [
+                {
+                  "text": "I thanked them <b>personally</b>.",
+                  "translatedText": "직접 그들에게 감사했다."
+                }
+              ],
+              "originalMeaning": "몸소, 스스로, 친히, 직접(in person)"
+            },
+            {
+              "meaning": "[문중·문미에서] 개인적으로; 하나의 인간으로서, 인품으로서",
+              "examples": [
+                {
+                  "text": "I like him <b>personally</b>, but not as a boss.",
+                  "translatedText": "그는 개인적으로는 좋아하지만, 상사로서는 마음에 들지 않는다."
+                }
+              ],
+              "originalMeaning": "[문중·문미에서] 개인적으로; 하나의 인간으로서, 인품으로서"
+            },
+            {
+              "meaning": "[보통 문두에 써서] 자기로서(는)(for one’s own part)",
+              "examples": [
+                {
+                  "text": "<b>Personally</b>, I don't care to go.",
+                  "translatedText": "나로서는 가고 싶지 않다."
+                }
+              ],
+              "originalMeaning": "[보통 문두에 써서] 자기로서(는)(for one’s own part)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e6e4f6a8b2bc4078862cfcd650c9facc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e6e4f6a8b2bc4078862cfcd650c9facc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "69a533f68348b993efe8e67b807db41f",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "personal",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɜːrsənl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "개인의, 자신의, 일신상의, 사적인; 개인용의, (특정) 개인을 위한",
+              "examples": [
+                {
+                  "text": "a <b>personal</b> opinion",
+                  "translatedText": "사적인 의견"
+                }
+              ],
+              "originalMeaning": "개인의, 자신의, 일신상의, 사적인; 개인용의, (특정) 개인을 위한"
+            },
+            {
+              "meaning": "<편지 등이> 개인 앞으로의, 친전(親展)의",
+              "examples": [
+                {
+                  "text": "a <b>personal</b> letter",
+                  "translatedText": "친전 편지"
+                }
+              ],
+              "originalMeaning": "<편지 등이> 개인 앞으로의, 친전(親展)의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] 동산(動産)(= ~ property)",
+              "examples": [],
+              "originalMeaning": "[pl.] 동산(動産)(= ~ property)"
+            },
+            {
+              "meaning": "(신문의) 인사[개인 소식]란(= ~ column)",
+              "examples": [],
+              "originalMeaning": "(신문의) 인사[개인 소식]란(= ~ column)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/69b4bd41a47b4d358aa6bbbaaa00a58c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/69b4bd41a47b4d358aa6bbbaaa00a58c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "622490de5274f2bd7c2ea0bdf20451ad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "개인적인 질문을 하지 마라",
+      "text": "Don't ask <b>personal</b> questions."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나로서는 가고 싶지 않다.",
+      "text": "<b>Personally</b>, I don’t care to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신상에 관한 질문은 하지 마라",
+      "text": "Don’t ask <b>personal</b> questions."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사사로운 청이 있어 왔습니다",
+      "text": "I came to ask you a <b>personal</b> favor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그의 이력을 알고 있다",
+      "text": "I know his antecedents[<b>personal</b> history]."
+    }
+  ],
+  "isWordType": true
+}

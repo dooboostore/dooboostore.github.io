@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "coal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "koʊl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "석탄",
+              "examples": [
+                {
+                  "text": "brown <b>coal</b>",
+                  "translatedText": "갈탄"
+                }
+              ],
+              "originalMeaning": "석탄"
+            },
+            {
+              "meaning": "[pl.] (연료용으로 부순) 작은 석탄 덩이",
+              "examples": [
+                {
+                  "text": "a ton of coals",
+                  "translatedText": "쇄탄(碎炭) 1톤"
+                }
+              ],
+              "originalMeaning": "[pl.] (연료용으로 부순) 작은 석탄 덩이"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "태워서 숯으로 만들다",
+              "examples": [],
+              "originalMeaning": "태워서 숯으로 만들다"
+            },
+            {
+              "meaning": "<배 등에> 석탄을 보급하다[싣다]",
+              "examples": [],
+              "originalMeaning": "<배 등에> 석탄을 보급하다[싣다]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<배 등이> 석탄을 싣다",
+              "examples": [],
+              "originalMeaning": "<배 등이> 석탄을 싣다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ed9b6cd87725456cb27849147ff25413",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ed9b6cd87725456cb27849147ff25413",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "539157c4b0f08d657d2ca8cc13295dae",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "석탄이 조금 남아 있다.",
+      "text": "There is some <b>coal</b> left."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 석탄을 연료로 삼는다",
+      "text": "They use <b>coal</b> as fuel."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "석탄 생산이 활발치 못하다",
+      "text": "<b>Coal</b> production is lagging."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 엔진에는 석탄이 많이 쓰인다",
+      "text": "This engine consumes much <b>coal</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 지방은 철과 석탄이 풍성하다",
+      "text": "This district is rich in iron and <b>coal</b>."
+    }
+  ],
+  "isWordType": true
+}

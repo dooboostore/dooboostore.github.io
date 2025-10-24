@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "sour",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsaʊə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "신, 시큼한",
+              "examples": [
+                {
+                  "text": "a <b>sour</b> apple",
+                  "translatedText": "신[덜 익은] 사과"
+                }
+              ],
+              "originalMeaning": "신, 시큼한"
+            },
+            {
+              "meaning": "시어진 <우유 등>, 신내가 나는",
+              "examples": [
+                {
+                  "text": "<b>sour</b> milk",
+                  "translatedText": "신 우유"
+                }
+              ],
+              "originalMeaning": "시어진 <우유 등>, 신내가 나는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "시게 하다",
+              "examples": [],
+              "originalMeaning": "시게 하다"
+            },
+            {
+              "meaning": "<과일 등을> 썩게 하다",
+              "examples": [],
+              "originalMeaning": "<과일 등을> 썩게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "시어지다",
+              "examples": [],
+              "originalMeaning": "시어지다"
+            },
+            {
+              "meaning": "불쾌해지다, <성미가> 까다로워지다",
+              "examples": [],
+              "originalMeaning": "불쾌해지다, <성미가> 까다로워지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7e617498bb9d4c22bae70f9203dc52cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7e617498bb9d4c22bae70f9203dc52cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "sourer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sours"
+        },
+        {
+          "type": "최상급",
+          "value": "sourest"
+        },
+        {
+          "type": "과거형",
+          "value": "soured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "souring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "soured"
+        }
+      ],
+      "aliasConjugation": "sourer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "f5bb99ee7c141768ab4d9710ceb0dfe5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "천둥이 치면 우유가 상한다.",
+      "text": "Thunder turns the milk (<b>sour</b>)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "레몬은 특유의 신맛을 가지고 있다",
+      "text": "The lemon has a <b>sour</b> taste of its own."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사과는 새금하다",
+      "text": "This apple tastes a bit <b>sour</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "김치 맛이 갔다",
+      "text": "This kimchi has gone bad[turned <b>sour</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 포도는 달콤새콤하다",
+      "text": "These grapes taste sweet and <b>sour</b>."
+    }
+  ],
+  "isWordType": true
+}

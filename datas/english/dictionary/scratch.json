@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "scratch",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skrætʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "할퀴다, 할퀴어 상처를 내다",
+              "examples": [
+                {
+                  "text": "<b>Scratch</b> a Russian, and you will find a Tartar.",
+                  "translatedText": "[속담] 문명인도 한 꺼풀 벗기면 야만인."
+                }
+              ],
+              "originalMeaning": "할퀴다, 할퀴어 상처를 내다"
+            },
+            {
+              "meaning": "<가려운 데를> 긁다; 슬근슬근 긁다, 비비다, 간질이다",
+              "examples": [
+                {
+                  "text": "<b>scratch</b> one's head",
+                  "translatedText": "(난처해서) 머리를 긁다"
+                }
+              ],
+              "originalMeaning": "<가려운 데를> 긁다; 슬근슬근 긁다, 비비다, 간질이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "할퀴다, 긁다, 할퀴어 상처를 내다",
+              "examples": [
+                {
+                  "text": "<b>scratch</b> on the door",
+                  "translatedText": "문을 긁다"
+                }
+              ],
+              "originalMeaning": "할퀴다, 긁다, 할퀴어 상처를 내다"
+            },
+            {
+              "meaning": "긁어 파다, 파헤쳐 찾다",
+              "examples": [],
+              "originalMeaning": "긁어 파다, 파헤쳐 찾다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "할큄, 긁음; 할퀸 상처[자국]; 생채기, 찰과상",
+              "examples": [
+                {
+                  "text": "a <b>scratch</b> on the face",
+                  "translatedText": "얼굴의 생채기"
+                }
+              ],
+              "originalMeaning": "할큄, 긁음; 할퀸 상처[자국]; 생채기, 찰과상"
+            },
+            {
+              "meaning": "휘갈겨 씀[쓰기], 일필(一筆); [미·속어] 메모지; (신문 등에서) 한마디 하기",
+              "examples": [],
+              "originalMeaning": "휘갈겨 씀[쓰기], 일필(一筆); [미·속어] 메모지; (신문 등에서) 한마디 하기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b6b6eee631a3455e895698bc9e2dc1d9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b6b6eee631a3455e895698bc9e2dc1d9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "scratches"
+        },
+        {
+          "type": "과거형",
+          "value": "scratched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scratching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scratched"
+        }
+      ],
+      "aliasConjugation": "scratches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ec50c62388b9cab418c7d4728855575a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 항아리는 얼이 있다",
+      "text": "The jar has a <b>scratch</b> on it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 작품은 좀 빠진다",
+      "text": "His work simply isn't up to <b>scratch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 작품은 탐탁하지 않다",
+      "text": "His work is not up to <b>scratch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "처음부터 다시 시작해야 합니다",
+      "text": "I have to start from <b>scratch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대리석이 물러서 칼로 잘 버진다",
+      "text": "Marble is soft, and can be scratched with a knife."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "tension",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtenʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(정신적) 긴장(strain), 불안, 흥분",
+              "examples": [
+                {
+                  "text": "a headache caused by <b>tension</b>",
+                  "translatedText": "긴장으로 인한 두통"
+                }
+              ],
+              "originalMeaning": "(정신적) 긴장(strain), 불안, 흥분"
+            },
+            {
+              "meaning": "(정세·관계 등의) 긴박, 긴장 상태",
+              "examples": [],
+              "originalMeaning": "(정세·관계 등의) 긴박, 긴장 상태"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "팽팽하게 하다, 긴장시키다",
+              "examples": [],
+              "originalMeaning": "팽팽하게 하다, 긴장시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/813dd89495584c7482ff080d68fad6f2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/813dd89495584c7482ff080d68fad6f2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tensions"
+        },
+        {
+          "type": "과거형",
+          "value": "tensioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tensioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tensioned"
+        }
+      ],
+      "aliasConjugation": "tensions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "63ee25ea2a3bae3fb883788f31bd5ae8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "긴장이 국경에서 늘어 가고 있었다",
+      "text": "<b>Tension</b> was mounting on the border."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "계속된 긴장이 나의 에너지를 뺐다",
+      "text": "The constant <b>tension</b> sapped my energy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 잔의 커피로 긴장이 풀렸다",
+      "text": "A cup of coffee took the edge off my <b>tension</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들의 얼굴에는 긴장하는 빛이 보였다",
+      "text": "They were all flushed with seriousness[<b>tension</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "끊임없는 긴장으로 나의 체력은 쇠약해졌다",
+      "text": "The constant <b>tension</b> was sap my strength."
+    }
+  ],
+  "isWordType": true
+}

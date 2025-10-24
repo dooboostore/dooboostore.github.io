@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "hazard",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│hæzərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "위험, 위난; 모험; 위험 요소[원인], 해악, 해독, 장해물 ((to)), (=danger)",
+              "examples": [
+                {
+                  "text": "a <b>hazard</b> to health",
+                  "translatedText": "건강에 유해할 우려가 있는 것"
+                }
+              ],
+              "originalMeaning": "위험, 위난; 모험; 위험 요소[원인], 해악, 해독, 장해물 ((to)), (=<span class='related_word' lang='en' >danger</span>)"
+            },
+            {
+              "meaning": "[CU] 우연, 운; 불확실함; 운에 맡기고 해보기",
+              "examples": [],
+              "originalMeaning": "[CU] 우연, 운; 불확실함; 운에 맡기고 해보기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위험을 무릅쓰고 하다, 운에 맡기고 해보다; 과감히 발언[추측]하다, …을 걸다",
+              "examples": [
+                {
+                  "text": "<b>hazard</b> a guess",
+                  "translatedText": "추측하다, 감히 말하다"
+                }
+              ],
+              "originalMeaning": "위험을 무릅쓰고 하다, 운에 맡기고 해보다; 과감히 발언[추측]하다, …을 걸다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/524f18518fa249619444b5f40fe5f30e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/524f18518fa249619444b5f40fe5f30e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hazards"
+        },
+        {
+          "type": "과거형",
+          "value": "hazarded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hazarding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hazarded"
+        }
+      ],
+      "aliasConjugation": "hazards",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9c9673f6118881baaf2cb24a96e8f09d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "간접 흡연은 건강에 매우 해롭다",
+      "text": "Second-hand smoking is a big health <b>hazard</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무도 자신을 운에 맡기려고는 하지 않을 것이다.",
+      "text": "No one would recommend himself to <b>hazard</b>."
+    }
+  ],
+  "isWordType": true
+}

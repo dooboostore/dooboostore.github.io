@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "sigh",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "saɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "한숨 쉬다, 탄식하다, 한탄하다(lament); 애석해하다, 아까워하다",
+              "examples": [
+                {
+                  "text": "<b>sigh</b> for grief",
+                  "translatedText": "탄식하다"
+                }
+              ],
+              "originalMeaning": "한숨 쉬다, 탄식하다, 한탄하다(lament); 애석해하다, 아까워하다"
+            },
+            {
+              "meaning": "사모하다, 그리워하다, 동경하다(long) ((for))",
+              "examples": [
+                {
+                  "text": "She sighed for the happy old days.",
+                  "translatedText": "그녀는 즐거웠던 옛 시절을 그리워했다."
+                }
+              ],
+              "originalMeaning": "사모하다, 그리워하다, 동경하다(long) ((for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "한숨지으며[탄식하며] 말하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>sigh</b> out one's grief",
+                  "translatedText": "한탄하며 슬픔을 토로하다"
+                }
+              ],
+              "originalMeaning": "한숨지으며[탄식하며] 말하다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "한숨, 탄식, (바람의) 산들거리는 소리",
+              "examples": [
+                {
+                  "text": "give a <b>sigh</b> of relief",
+                  "translatedText": "안도의 한숨을 쉬다"
+                }
+              ],
+              "originalMeaning": "한숨, 탄식, (바람의) 산들거리는 소리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/36f20f194268474d9a1be9150606ab5a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/36f20f194268474d9a1be9150606ab5a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sighs"
+        },
+        {
+          "type": "과거형",
+          "value": "sighed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sighing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sighed"
+        }
+      ],
+      "aliasConjugation": "sighs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "afd1570269afe3b8876aa7eded4433ab",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 입에서 한숨이 불쑥 새어 나왔다.",
+      "text": "A <b>sigh</b> dropped from his lips."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 긴 신음을 내며 한숨을 쉬었다",
+      "text": "She sighed, letting out a long moan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 즐거웠던 옛 시절을 그리워했다.",
+      "text": "She sighed for the happy old days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모두들 안도의 한숨을 쉬었다",
+      "text": "Every one breathed[gave, heaved, let out] a <b>sigh</b> of relief."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 비보에 접하여 일동은 깊이 탄식했다",
+      "text": "The sad news drew deep <b>sighs</b> from all the present."
+    }
+  ],
+  "isWordType": true
+}

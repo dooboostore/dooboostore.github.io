@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "garden",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɡɑːrdn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 뜰, 정원; 화원, 과수원, 채소밭 (=yard)",
+              "examples": [
+                {
+                  "text": "a back[a front] <b>garden</b>",
+                  "translatedText": "뒤[앞]뜰"
+                }
+              ],
+              "originalMeaning": "[CU] 뜰, 정원; 화원, 과수원, 채소밭 (=<span class='related_word' lang='en' >yard</span>)"
+            },
+            {
+              "meaning": "[종종 pl.] 유원지, 공원(park); (의자·테이블이 있는) 야외 (식당) 시설",
+              "examples": [
+                {
+                  "text": "botanical[zoological] gardens",
+                  "translatedText": "식물[동물]원"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] 유원지, 공원(park); (의자·테이블이 있는) 야외 (식당) 시설"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "정원의, 정원용의; 정원 재배의",
+              "examples": [
+                {
+                  "text": "a <b>garden</b> flower",
+                  "translatedText": "정원용[재배용] 꽃"
+                }
+              ],
+              "originalMeaning": "정원의, 정원용의; 정원 재배의"
+            },
+            {
+              "meaning": "흔히 있는(garden-variety)",
+              "examples": [],
+              "originalMeaning": "흔히 있는(<b>garden</b>-variety)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "정원을 가꾸다, 원예를 하다",
+              "examples": [],
+              "originalMeaning": "정원을 가꾸다, 원예를 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/18009ac9a73041f4b0348faf1f8dfb1f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/18009ac9a73041f4b0348faf1f8dfb1f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gardens"
+        },
+        {
+          "type": "과거형",
+          "value": "gardened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gardening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gardened"
+        }
+      ],
+      "aliasConjugation": "gardens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "66610a6aaec069ea7e5c2914242916cd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뜰의 잡초를 뽑지 않으면 안 된다",
+      "text": "The <b>garden</b> needs weeding."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 정원 가꾸기를 매우 좋아한다.",
+      "text": "He delights in gardening."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뜰에는 라일락 꽃 향기가 풍긴다.",
+      "text": "The <b>garden</b> smells of lilacs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 문은 마당으로 통한다",
+      "text": "This door leads[opens] to the <b>garden</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나무는 앞뜰에 있었다.",
+      "text": "The tree was in the front <b>garden</b>."
+    }
+  ],
+  "isWordType": true
+}

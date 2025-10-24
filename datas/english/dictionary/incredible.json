@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "incredible",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈkredəbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "놀라운, (믿기 어려울 만큼) 훌륭한, 대단한, 굉장한",
+              "examples": [
+                {
+                  "text": "an <b>incredible</b> memory",
+                  "translatedText": "굉장한 기억력"
+                }
+              ],
+              "originalMeaning": "놀라운, (믿기 어려울 만큼) 훌륭한, 대단한, 굉장한"
+            },
+            {
+              "meaning": "믿어지지 않는, 의심스러운",
+              "examples": [
+                {
+                  "text": "an <b>incredible</b> story",
+                  "translatedText": "믿어지지 않는 이야기"
+                }
+              ],
+              "originalMeaning": "믿어지지 않는, 의심스러운"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d86f942011fa44448a2f5be04e284f6e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d86f942011fa44448a2f5be04e284f6e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c7435966cf3f197ab3894953c8943143",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 값이 엄청나게 비싼 그림이다.",
+      "text": "This is the picture of which the price is incredibly high.=This is the picture the price of which is incredibly high."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 놀라운 경험이었다",
+      "text": "This was an <b>incredible</b> experience."
+    }
+  ],
+  "isWordType": true
+}

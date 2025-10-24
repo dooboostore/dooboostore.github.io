@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "premature",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│priːmə│tʃʊr; │priːmə│tʊr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "조숙한, 올된; 시기상조의, 조급한, 너무 이른; 때 아닌",
+              "examples": [
+                {
+                  "text": "a <b>premature</b> death",
+                  "translatedText": "요절"
+                }
+              ],
+              "originalMeaning": "조숙한, 올된; 시기상조의, 조급한, 너무 이른; 때 아닌"
+            },
+            {
+              "meaning": "조산의",
+              "examples": [
+                {
+                  "text": "a <b>premature</b> birth[baby]",
+                  "translatedText": "조산[조산아]"
+                }
+              ],
+              "originalMeaning": "조산의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조산아",
+              "examples": [],
+              "originalMeaning": "조산아"
+            },
+            {
+              "meaning": "(포탄의) 조발(早發)",
+              "examples": [],
+              "originalMeaning": "(포탄의) 조발(早發)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bdf08edecd30461d84bd7cedd148ec9f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bdf08edecd30461d84bd7cedd148ec9f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b423f224b583b4bf4db0dee39bb77cfd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 생각하는 것은 조계이다",
+      "text": "This is too hasty a conclusion. or Don't jump to that conclusion. or It would be <b>premature</b> to think so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획을 실행하기에는 아직 시기가 빠르다",
+      "text": "It is <b>premature</b> to carry out the plan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아들의 성급한 시도를 경솔하다고 비난했다.",
+      "text": "He deprecated his son’s <b>premature</b> attempt as improvident."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 생각하기에는 시기상조다",
+      "text": "It would be <b>premature</b>[rash] to think so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 갑자기 요절했다.",
+      "text": "He was snatched away by <b>premature</b> death."
+    }
+  ],
+  "isWordType": true
+}

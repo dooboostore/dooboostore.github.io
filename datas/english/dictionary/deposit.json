@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "deposit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│pɑːzɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "두다(place), 아래에 놓다",
+              "examples": [
+                {
+                  "text": "<b>deposit</b> books on the floor",
+                  "translatedText": "책을 바닥에 놓다"
+                }
+              ],
+              "originalMeaning": "두다(place), 아래에 놓다"
+            },
+            {
+              "meaning": "<동전을> 집어넣다 ((자동판매기 등에))",
+              "examples": [
+                {
+                  "text": "<b>Deposit</b> a dime and dial your number.",
+                  "translatedText": "10센트를 넣고 번호를 돌리시오."
+                }
+              ],
+              "originalMeaning": "<동전을> 집어넣다 ((자동판매기 등에))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "놓여지다; 예금되다; 보증금으로 치르다; 쌓이다, 침적되다",
+              "examples": [
+                {
+                  "text": "<b>deposit</b> directly into one's bank accounts",
+                  "translatedText": "은행 계좌로 바로 입금시키다"
+                }
+              ],
+              "originalMeaning": "놓여지다; 예금되다; 보증금으로 치르다; 쌓이다, 침적되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "침전물, 퇴적물; 광상(鑛床), 매장물",
+              "examples": [
+                {
+                  "text": "oil deposits",
+                  "translatedText": "석유 매장량"
+                }
+              ],
+              "originalMeaning": "침전물, 퇴적물; 광상(鑛床), 매장물"
+            },
+            {
+              "meaning": "탁란된 알",
+              "examples": [],
+              "originalMeaning": "탁란된 알"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/395455a3a1794aa5a9edf810021d3cc3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/395455a3a1794aa5a9edf810021d3cc3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "deposits"
+        },
+        {
+          "type": "과거형",
+          "value": "deposited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "depositing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "deposited"
+        }
+      ],
+      "aliasConjugation": "deposits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d34ef5bf7bd4d01feaa1fca9c48b98d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 책을 나에게 맡겼다.",
+      "text": "He deposited the book with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돌이 무더기무더기 쌓여 있다",
+      "text": "Stones are deposited in heaps."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "10 센트를 넣고 번호를 돌리시오.",
+      "text": "<b>Deposit</b> a dime and dial your number."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바닥에 무엇인가 침전되어 있다",
+      "text": "Something is deposited at the bottom."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 저금은 7 퍼센트의 이자를 낳는다",
+      "text": "This <b>deposit</b> bears[yields] 7 percent interest."
+    }
+  ],
+  "isWordType": true
+}

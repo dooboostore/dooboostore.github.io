@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "comprehend",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːmprɪ│hend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이해하다, 파악[인식]하다 (=understand)",
+              "examples": [
+                {
+                  "text": "They did not <b>comprehend</b> the significance of his remark.",
+                  "translatedText": "그들은 그의 말의 중요성을 이해하지 못했다."
+                }
+              ],
+              "originalMeaning": "이해하다, 파악[인식]하다 (=<span class='related_word' lang='en' >understand</span>)"
+            },
+            {
+              "meaning": "포함하다, 함축[의미]하다",
+              "examples": [
+                {
+                  "text": "Science comprehends many disciplines.",
+                  "translatedText": "과학에는 여러 분야가 있다."
+                }
+              ],
+              "originalMeaning": "포함하다, 함축[의미]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1b42ed08fb304f96832977aa376c03e0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1b42ed08fb304f96832977aa376c03e0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "comprehends"
+        },
+        {
+          "type": "과거형",
+          "value": "comprehended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "comprehending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "comprehended"
+        }
+      ],
+      "aliasConjugation": "comprehends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "307f2c7eec3cf8a03271cebea71f49c1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과학에는 여러 분야가 있다.",
+      "text": "Science comprehends many disciplines."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그의 말의 중요성을 이해하지 못했다.",
+      "text": "They did not <b>comprehend</b> the significance of his remark."
+    }
+  ],
+  "isWordType": true
+}

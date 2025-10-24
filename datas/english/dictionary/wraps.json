@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "wrap",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ræp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(감)싸다, 입다 ((up, in, with))",
+              "examples": [
+                {
+                  "text": "He wrapped himself (up)in his cloak.",
+                  "translatedText": "그는 망토로 몸을 감쌌다."
+                }
+              ],
+              "originalMeaning": "(감)싸다, 입다 ((up, in, with))"
+            },
+            {
+              "meaning": "(둘레에) 두르다, 감다; <손톱을> 실크[리넨]천으로 싸다 ((around, round, about))",
+              "examples": [
+                {
+                  "text": "<b>wrap</b> a rubber band round a parcel",
+                  "translatedText": "꾸러미에 고무 밴드를 감다"
+                }
+              ],
+              "originalMeaning": "(둘레에) 두르다, 감다; <손톱을> 실크[리넨]천으로 싸다 ((around, round, about))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "둘러입다, 몸을 감싸다 ((up, in))",
+              "examples": [
+                {
+                  "text": "<b>Wrap</b> up well when you go out.",
+                  "translatedText": "외출할 때는 옷을 따뜻하게 입도록 해라."
+                }
+              ],
+              "originalMeaning": "둘러입다, 몸을 감싸다 ((up, in))"
+            },
+            {
+              "meaning": "감기다",
+              "examples": [
+                {
+                  "text": "A vine <b>wraps</b> round the pillar.",
+                  "translatedText": "덩굴이 기둥을 감고 있다."
+                }
+              ],
+              "originalMeaning": "감기다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "싸개, 외피(外皮); 덮개",
+              "examples": [],
+              "originalMeaning": "싸개, 외피(外皮); 덮개"
+            },
+            {
+              "meaning": "[보통 pl.] 숄, 목도리, 무릎 싸개, 외투",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 숄, 목도리, 무릎 싸개, 외투"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/da67f342c6084bfca273ee65ea1e5a51",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/da67f342c6084bfca273ee65ea1e5a51",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wraps"
+        },
+        {
+          "type": "과거형",
+          "value": "wrapped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wrapping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wrapped"
+        }
+      ],
+      "aliasConjugation": "wraps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "731ebff5f9d2a2b8da881de5eddafb8f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사건은 신비에 싸여 있다.",
+      "text": "The affair is wrapped in mystery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 망토로 몸을 감쌌다.",
+      "text": "He wrapped himself (up) in his cloak."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 아기를 숄로 감쌌다.",
+      "text": "She wrapped the baby in her shawl."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "외출할 때는 옷을 따뜻하게 입도록 해라.",
+      "text": "<b>Wrap</b> up well when you go out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산꼭대기가 안개에 싸여 있다",
+      "text": "The mountaintop is wrapped in mist."
+    }
+  ],
+  "isWordType": true
+}

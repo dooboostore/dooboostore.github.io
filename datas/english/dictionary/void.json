@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "void",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "vɔɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "빈, 헛된, 공허한(empty)",
+              "examples": [
+                {
+                  "text": "a <b>void</b> space",
+                  "translatedText": "공간; 진공"
+                }
+              ],
+              "originalMeaning": "빈, 헛된, 공허한(empty)"
+            },
+            {
+              "meaning": "무익한, 쓸모 없는; [법] 무효의(opp. valid), 법적 구속력이 없는",
+              "examples": [],
+              "originalMeaning": "무익한, 쓸모 없는; [법] 무효의(opp. valid), 법적 구속력이 없는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] (우주의) 공간, 허공, 무(無)",
+              "examples": [],
+              "originalMeaning": "[the ~] (우주의) 공간, 허공, 무(無)"
+            },
+            {
+              "meaning": "[a ~] 빈 곳[틈]",
+              "examples": [],
+              "originalMeaning": "[a ~] 빈 곳[틈]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<계약 등을> 무효로 하다, 취소하다(nullify)",
+              "examples": [],
+              "originalMeaning": "<계약 등을> 무효로 하다, 취소하다(nullify)"
+            },
+            {
+              "meaning": "방출[배설]하다",
+              "examples": [],
+              "originalMeaning": "방출[배설]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3e7e554660584899be3a362ba127696b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3e7e554660584899be3a362ba127696b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "voids"
+        },
+        {
+          "type": "과거형",
+          "value": "voided"
+        },
+        {
+          "type": "현재 분사",
+          "value": "voiding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "voided"
+        }
+      ],
+      "aliasConjugation": "voids",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "be562b8aeb689a95242b8add09e97137",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "유언은 무효[유효]의 재결을 받았다.",
+      "text": "The will was adjudged (to be) <b>void</b>[valid].=They adjudged that the will was <b>void</b>[valid]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "효력이 없다 be ineffective[inefficacious, null and <b>void</b>",
+      "text": ";do no good"
+    }
+  ],
+  "isWordType": true
+}

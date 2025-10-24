@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "elevate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈelɪveɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사물을> 올리다, 들어 올리다(raise); <소리를> 높이다; [가톨릭] <성체를> 거양(擧揚)하다",
+              "examples": [
+                {
+                  "text": "<b>elevate</b> a gun",
+                  "translatedText": "포구(砲口)를 올리다"
+                }
+              ],
+              "originalMeaning": "<사물을> 올리다, 들어 올리다(raise); <소리를> 높이다; [가톨릭] <성체를> 거양(擧揚)하다"
+            },
+            {
+              "meaning": "<사람을> 승진시키다, 등용하다(exalt) ((to))",
+              "examples": [
+                {
+                  "text": "<b>elevate</b> a person to the section chief",
+                  "translatedText": "…을 과장으로 승진시키다"
+                }
+              ],
+              "originalMeaning": "<사람을> 승진시키다, 등용하다(exalt) ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "품성[지성]을 향상시키다, 올라가다",
+              "examples": [],
+              "originalMeaning": "품성[지성]을 향상시키다, 올라가다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "높여진",
+              "examples": [],
+              "originalMeaning": "높여진"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/faf4d1a2448c46a388a29ce9c45ce5d4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/faf4d1a2448c46a388a29ce9c45ce5d4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "elevates"
+        },
+        {
+          "type": "과거형",
+          "value": "elevated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "elevating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "elevated"
+        }
+      ],
+      "aliasConjugation": "elevates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0bba90dab531a26a0182fe9e3567f8c5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사회적으로나 정치적으로나 여성의 지위를 더 높여야 된다",
+      "text": "The position of women should be elevated[raised] higher both socially and politically."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고가 철도 열차 an elevated train ;an L train",
+      "text": "; an overhead railway train"
+    }
+  ],
+  "isWordType": true
+}

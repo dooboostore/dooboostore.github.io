@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "rob",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɑːb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<사람에게서> (물건을) 강탈하다, 약탈하다, 빼앗다 ((of)), (=steal)",
+              "examples": [
+                {
+                  "text": "I was robbed of my purse.",
+                  "translatedText": "나는 지갑을 털렸다."
+                }
+              ],
+              "originalMeaning": "<사람에게서> (물건을) 강탈하다, 약탈하다, 빼앗다 ((of)), (=<span class='related_word' lang='en' >steal</span>)"
+            },
+            {
+              "meaning": "<집·가게 등을> 털다, 훔치다",
+              "examples": [
+                {
+                  "text": "<b>rob</b> a bank",
+                  "translatedText": "은행을 털다, 은행 강도짓을 하다"
+                }
+              ],
+              "originalMeaning": "<집·가게 등을> 털다, 훔치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "강도질[도둑질]을 하다, 약탈을 하다(plunder)",
+              "examples": [
+                {
+                  "text": "He said he would not <b>rob</b> again.",
+                  "translatedText": "그는 다시는 강도질을 않겠다고 말했다."
+                }
+              ],
+              "originalMeaning": "강도질[도둑질]을 하다, 약탈을 하다(plunder)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4cf1cb21bff844e882fce2ddcf6cc0dd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4cf1cb21bff844e882fce2ddcf6cc0dd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "robs"
+        },
+        {
+          "type": "과거형",
+          "value": "robbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "robbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "robbed"
+        }
+      ],
+      "aliasConjugation": "robs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "17bf8b2c0cdb5fd8110be4344f93555d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Rob",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "남자 이름 ((Robert의 애칭))",
+              "examples": [],
+              "originalMeaning": "남자 이름 ((Robert의 애칭))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8d99ad0846f945c8a2de550dfdb0f24f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8d99ad0846f945c8a2de550dfdb0f24f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4e862a7633048571e08db4e812137daa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "로브 로이를 아비로 가진 저스티스",
+      "text": "Justice by <b>Rob</b> Roy"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 이쪽 빚으로 저쪽 빚을 갚고 있다",
+      "text": "I'm robbing Peter to pay Paul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 다시는 강도질을 않겠다고 말했다.",
+      "text": "He said he would not <b>rob</b> again."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "톰은 어젯밤 어떤 남자에게 돈을 빼앗겼다.",
+      "text": "Tom had a man <b>rob</b> him last night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노상 강도가 여행자에게서 돈을 강탈했다.",
+      "text": "A highwayman robbed the traveler of his money."
+    }
+  ],
+  "isWordType": true
+}

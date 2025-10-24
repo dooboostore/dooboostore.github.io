@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "extract",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<이빨·총알 등을> 뽑다, 뽑아내다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>extract</b> a tooth",
+                  "translatedText": "이를 뽑다"
+                }
+              ],
+              "originalMeaning": "<이빨·총알 등을> 뽑다, 뽑아내다 ((from))"
+            },
+            {
+              "meaning": "<정수(精粹) 등을> 추출하다, 증류해 내다, 짜내다",
+              "examples": [
+                {
+                  "text": "<b>extract</b> the juice from a fruit",
+                  "translatedText": "과일에서 즙을 짜내다"
+                }
+              ],
+              "originalMeaning": "<정수(精粹) 등을> 추출하다, 증류해 내다, 짜내다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 추출물; [U] 달여낸 즙, 엑스, 정제(精劑)",
+              "examples": [
+                {
+                  "text": "<b>extract</b> of beef",
+                  "translatedText": "쇠고기 엑스"
+                }
+              ],
+              "originalMeaning": "[UC/] 추출물; [U] 달여낸 즙, 엑스, 정제(精劑)"
+            },
+            {
+              "meaning": "발췌, 인용구; 초본",
+              "examples": [],
+              "originalMeaning": "발췌, 인용구; 초본"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5e2726a85ce14f1eb1ecf618d91994fa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5e2726a85ce14f1eb1ecf618d91994fa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "extracts"
+        },
+        {
+          "type": "과거형",
+          "value": "extracted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "extracting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "extracted"
+        }
+      ],
+      "aliasConjugation": "extracts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f2043c1951c403c196fcea4df69bf22b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그에게서 약속을 받아냈다.",
+      "text": "I extracted a promise from him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "올리브에서 기름을 추출한다",
+      "text": "We <b>extract</b> oil from olives."
+    }
+  ],
+  "isWordType": true
+}

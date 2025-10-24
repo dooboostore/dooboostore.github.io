@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "exchange",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪksˈtʃeɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "교환하다, 환전하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>exchange</b> a thing",
+                  "translatedText": "물건을 바꾸다"
+                }
+              ],
+              "originalMeaning": "교환하다, 환전하다 ((for))"
+            },
+            {
+              "meaning": "교역하다(barter) ((with))",
+              "examples": [
+                {
+                  "text": "<b>exchange</b> goods with foreign countries",
+                  "translatedText": "외국과 상품을 교역하다"
+                }
+              ],
+              "originalMeaning": "교역하다(barter) ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교환하다, 교체하다 ((from A into B)), 환전되다 ((for))",
+              "examples": [
+                {
+                  "text": "A dollar exchanges for less than 1,300 won.",
+                  "translatedText": "1달러는 1,300원 이하로 환전된다."
+                }
+              ],
+              "originalMeaning": "교환하다, 교체하다 ((from A into B)), 환전되다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 교환; 주고받음, 교역",
+              "examples": [
+                {
+                  "text": "<b>exchange</b> of gold for silver",
+                  "translatedText": "금과 은의 교환"
+                }
+              ],
+              "originalMeaning": "[UC/] 교환; 주고받음, 교역"
+            },
+            {
+              "meaning": "바꾼 것, 교환물",
+              "examples": [],
+              "originalMeaning": "바꾼 것, 교환물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/73eb9ed9fa62413d8e39cf3d40d7ca9b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/73eb9ed9fa62413d8e39cf3d40d7ca9b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exchanges"
+        },
+        {
+          "type": "과거형",
+          "value": "exchanged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exchanging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exchanged"
+        }
+      ],
+      "aliasConjugation": "exchanges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3772d8327450f93ef201153d63d8f6c3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 손바닥을 마주치며 인사를 나누었다",
+      "text": "We exchanged a high-five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "둘은 심한 언쟁을 했다",
+      "text": "High words exchanged between them."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1 달러는 1,300원 이하로 환전된다.",
+      "text": "A dollar exchanges for less than 1,300 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꿀은 옥수수 한 자루와 교환되었다.",
+      "text": "The honey exchanged for a bag of corn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 이웃과 몇 마디 나누었다",
+      "text": "I exchanged a few words with my neighbor."
+    }
+  ],
+  "isWordType": true
+}
