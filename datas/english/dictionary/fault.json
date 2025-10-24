@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "fault",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fɔːlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "결점, 흠, 단점, 결함(defect)",
+              "examples": [
+                {
+                  "text": "a <b>fault</b> in a person's character",
+                  "translatedText": "…의 성격(상)의 결함"
+                }
+              ],
+              "originalMeaning": "결점, 흠, 단점, 결함(defect)"
+            },
+            {
+              "meaning": "과실, 잘못, 허물, 실책, 실수; 비행; 위반",
+              "examples": [
+                {
+                  "text": "faults of[in] grammar",
+                  "translatedText": "문법상의 잘못"
+                }
+              ],
+              "originalMeaning": "과실, 잘못, 허물, 실책, 실수; 비행; 위반"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형으로] 단층이 생기게 하다",
+              "examples": [],
+              "originalMeaning": "[보통 수동형으로] 단층이 생기게 하다"
+            },
+            {
+              "meaning": "[보통 부정문·의문문으로] …의 흠을 찾다, 비난하다",
+              "examples": [],
+              "originalMeaning": "[보통 부정문·의문문으로] …의 흠을 찾다, 비난하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "단층이 생기다",
+              "examples": [],
+              "originalMeaning": "단층이 생기다"
+            },
+            {
+              "meaning": "서브에 실패하다",
+              "examples": [],
+              "originalMeaning": "서브에 실패하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ccadb919d9dc4a49ad0748052a38a18b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ccadb919d9dc4a49ad0748052a38a18b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "faults"
+        },
+        {
+          "type": "과거형",
+          "value": "faulted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "faulting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "faulted"
+        }
+      ],
+      "aliasConjugation": "faults",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "88935e05d94ca2bc8d9817ad1c6b71c4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람은 너무 점잖다",
+      "text": "He is gentle to a <b>fault</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 탈 잡을 데가 없다",
+      "text": "He has no <b>fault</b> to find with."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 내가 잘못했다는 것을 인정한다.",
+      "text": "I own to being at <b>fault</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 전연 너의 잘못이다",
+      "text": "That is entirely your <b>fault</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결점이 없는 사람은 없다.",
+      "text": "No man is without his faults."
+    }
+  ],
+  "isWordType": true
+}

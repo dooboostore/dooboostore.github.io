@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "laboratory",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈlæbrətɔːri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "실험실, 시험소",
+              "examples": [],
+              "originalMeaning": "실험실, 시험소"
+            },
+            {
+              "meaning": "(교육·사회 과학 등에서 설비가 갖추어진) 실습실, 연습실(演習室), 연구실[소], 랩(lab)",
+              "examples": [
+                {
+                  "text": "a language <b>laboratory</b>",
+                  "translatedText": "어학 연습실"
+                }
+              ],
+              "originalMeaning": "(교육·사회 과학 등에서 설비가 갖추어진) 실습실, 연습실(演習室), 연구실[소], 랩(lab)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "실험실(용)의",
+              "examples": [
+                {
+                  "text": "a <b>laboratory</b> animal",
+                  "translatedText": "실험용 동물"
+                }
+              ],
+              "originalMeaning": "실험실(용)의"
+            },
+            {
+              "meaning": "실습의, 연습의",
+              "examples": [
+                {
+                  "text": "a <b>laboratory</b> course",
+                  "translatedText": "실습 코스"
+                }
+              ],
+              "originalMeaning": "실습의, 연습의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ad6193097044cdcbe956049a07de58b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ad6193097044cdcbe956049a07de58b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "laboratories"
+        }
+      ],
+      "aliasConjugation": "laboratories",
+      "aliasConjugationPos": "복수형",
+      "gdid": "b84ade08973db1e9f8a38433ebdf331b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실험실에서 암모니아 냄새가 난다",
+      "text": "The <b>laboratory</b> reeks of ammonia."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 연구소에서는 벼의 품종을 개량하고 있다",
+      "text": "They are breeding improved varieties of rice in this <b>laboratory</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "감식 결과 피해자의 혈액형은 B형으로 밝혀졌다",
+      "text": "The <b>laboratory</b> investigation made it clear[showed] that the victim's blood type was B."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "stow",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "stoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[항해] (화물칸 등에) <짐을> 실어 넣다; <물건을> 싣다, 집어넣다 ((away; in, into))",
+              "examples": [
+                {
+                  "text": "<b>stow</b> goods in a hold = <b>stow</b> a hold with goods",
+                  "translatedText": "화물칸에 화물을 싣다[집어넣다]"
+                }
+              ],
+              "originalMeaning": "[항해] (화물칸 등에) <짐을> 실어 넣다; <물건을> 싣다, 집어넣다 ((away; in, into))"
+            },
+            {
+              "meaning": "<장소·그릇 등을> 가득 채우다, 채워 넣다; <장소·그릇 등이> …을 넣을 여지가 있다",
+              "examples": [],
+              "originalMeaning": "<장소·그릇 등을> 가득 채우다, 채워 넣다; <장소·그릇 등이> …을 넣을 여지가 있다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "채워 넣다, 싣다",
+              "examples": [],
+              "originalMeaning": "채워 넣다, 싣다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/920fb8e58dc448d7a16fad9b7c24302e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/920fb8e58dc448d7a16fad9b7c24302e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stows"
+        },
+        {
+          "type": "과거형",
+          "value": "stowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stowed"
+        }
+      ],
+      "aliasConjugation": "stows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8950e3daddd8651be4e8095fb2b061f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 내 짐을 선반에 두었다",
+      "text": "I <b>stowed</b> my luggage on the rack."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "포개서 쌓지 마시오",
+      "text": "Do not stack. or Not to be <b>stowed</b> below another."
+    }
+  ],
+  "isWordType": true
+}

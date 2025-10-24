@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "screen",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skriːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "병풍, 휘장, 막, 발, 가리개; (창문 등의) 방충망",
+              "examples": [
+                {
+                  "text": "a sliding <b>screen</b>",
+                  "translatedText": "미닫이"
+                }
+              ],
+              "originalMeaning": "병풍, 휘장, 막, 발, 가리개; (창문 등의) 방충망"
+            },
+            {
+              "meaning": "칸막이, (교회의) 본당 칸막이",
+              "examples": [],
+              "originalMeaning": "칸막이, (교회의) 본당 칸막이"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가리다, <방·창 등에> 망을 달다[치다]",
+              "examples": [
+                {
+                  "text": "<b>screen</b> windows",
+                  "translatedText": "창문에 방충망을 달다"
+                }
+              ],
+              "originalMeaning": "가리다, <방·창 등에> 망을 달다[치다]"
+            },
+            {
+              "meaning": "칸막이하다, 구분하다 ((off, from))",
+              "examples": [
+                {
+                  "text": "One corner of the room was screened off.",
+                  "translatedText": "방의 한구석이 칸막이되어 있었다."
+                }
+              ],
+              "originalMeaning": "칸막이하다, 구분하다 ((off, from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "영화로[화면에] 나타나다, 상영[영사]되다; <배우·책 등이> 영화에 알맞다",
+              "examples": [
+                {
+                  "text": "He screens well[badly].",
+                  "translatedText": "그는 영화에 맞는다[맞지 않는다]."
+                }
+              ],
+              "originalMeaning": "영화로[화면에] 나타나다, 상영[영사]되다; <배우·책 등이> 영화에 알맞다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e30e35cde6f442de97b43ca0d4183852",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e30e35cde6f442de97b43ca0d4183852",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "screens"
+        },
+        {
+          "type": "과거형",
+          "value": "screened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "screening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "screened"
+        }
+      ],
+      "aliasConjugation": "screens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c40bbc71dc41f0eb3deacb5c5c83c786",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책 페이지가 컴퓨터 스크린에 활자화될 수 있다",
+      "text": "Pages can be typeset on-<b>screen</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소설은 영화[연극]로 각색되었다",
+      "text": "The novel was adapted for the <b>screen</b>[stage]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 그들을 위험으로부터 지켜주어야[보호해야] 한다.",
+      "text": "We must <b>screen</b> them from danger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나무들이 남의 눈으로부터 그의 집을 가리고 있다.",
+      "text": "The trees <b>screen</b> his house from public view."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 이들 사건을 영화에서 사실적으로 나타내려고 하였다.",
+      "text": "He tried to realize these events on <b>screen</b>."
+    }
+  ],
+  "isWordType": true
+}

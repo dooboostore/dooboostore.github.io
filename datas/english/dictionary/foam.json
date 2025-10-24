@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "foam",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "foʊm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(액체 표면의 작은) 거품, 물거품, 포말(泡沫)(froth)",
+              "examples": [
+                {
+                  "text": "<b>foam</b> on a glass of beer",
+                  "translatedText": "맥주잔의 거품"
+                }
+              ],
+              "originalMeaning": "(액체 표면의 작은) 거품, 물거품, 포말(泡沫)(froth)"
+            },
+            {
+              "meaning": "(말 등의) 비지땀",
+              "examples": [],
+              "originalMeaning": "(말 등의) 비지땀"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<맥주 등이> 거품이 일다",
+              "examples": [],
+              "originalMeaning": "<맥주 등이> 거품이 일다"
+            },
+            {
+              "meaning": "거품을 내며 흐르다 ((along, down, over)); 거품이 되어 사라지다 ((off, away))",
+              "examples": [],
+              "originalMeaning": "거품을 내며 흐르다 ((along, down, over)); 거품이 되어 사라지다 ((off, away))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "거품을 일게 하다",
+              "examples": [],
+              "originalMeaning": "거품을 일게 하다"
+            },
+            {
+              "meaning": "거품으로 두르다",
+              "examples": [],
+              "originalMeaning": "거품으로 두르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e020cfce0b6d44e39d19aa48d0d5d1aa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e020cfce0b6d44e39d19aa48d0d5d1aa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "foams"
+        },
+        {
+          "type": "과거형",
+          "value": "foamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "foaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "foamed"
+        }
+      ],
+      "aliasConjugation": "foams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a688df6ce7761642edaaeac71dfde952",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "말의 아가리는 게거품 투성이였다",
+      "text": "The horse was <b>foam</b>-flecked."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 말할 때 입에서 게거품을 낸다",
+      "text": "He foams[froths] at the mouth when talking."
+    }
+  ],
+  "isWordType": true
+}

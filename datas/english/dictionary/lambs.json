@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "lamb",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "læm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "새끼 양 (→sheep)",
+              "examples": [],
+              "originalMeaning": "새끼 양 (→<span class='related_word' lang='en' >sheep</span>)"
+            },
+            {
+              "meaning": "새끼 양의 고기",
+              "examples": [],
+              "originalMeaning": "새끼 양의 고기"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<양이> 새끼를 낳다",
+              "examples": [],
+              "originalMeaning": "<양이> 새끼를 낳다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<새끼 양을> 낳다",
+              "examples": [],
+              "originalMeaning": "<새끼 양을> 낳다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4d88611aaaaf45778dede0d6ea61c1c9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4d88611aaaaf45778dede0d6ea61c1c9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lambs"
+        },
+        {
+          "type": "과거형",
+          "value": "lambed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lambing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lambed"
+        }
+      ],
+      "aliasConjugation": "lambs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dc531e75dcc08e2101018fd81a46505d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Lamb",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "램 Charles ~ (1775-1834) ((영국의 수필가·비평가, 필명 Elia))",
+              "examples": [],
+              "originalMeaning": "램 Charles ~ (1775-1834) ((영국의 수필가·비평가, 필명 Elia))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/346fcafff3be4eb59b34999b56740c2e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/346fcafff3be4eb59b34999b56740c2e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8ef447b855fa7bb6ea4f57e23f25eb5b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새끼 양들이 들에서 뛰논다",
+      "text": "<b>Lambs</b> are skipping about in the field."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 양처럼 순하다",
+      "text": "She is as innocent as a <b>lamb</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "양처럼 순한",
+      "text": "(as) gentle as a <b>lamb</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "매우 온화한",
+      "text": "(as) mild as a <b>lamb</b>[a dove, May, milk]"
+    }
+  ],
+  "isWordType": true
+}

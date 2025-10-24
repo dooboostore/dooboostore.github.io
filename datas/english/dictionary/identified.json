@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "identify",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "aɪˈdentɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…을> (…가 틀림없다고) 확인하다; <…임을> 알다, 감정하다, 증명하다, 식별하다",
+              "examples": [
+                {
+                  "text": "<b>identify</b> a body",
+                  "translatedText": "시체를 감정[확인]하다"
+                }
+              ],
+              "originalMeaning": "<…을> (…가 틀림없다고) 확인하다; <…임을> 알다, 감정하다, 증명하다, 식별하다"
+            },
+            {
+              "meaning": "동일시하다, 동일하다고 간주하다, …를 그 자체로 취급하다",
+              "examples": [
+                {
+                  "text": "<b>identify</b> A with B",
+                  "translatedText": "A와 B를 동일시하다"
+                }
+              ],
+              "originalMeaning": "동일시하다, 동일하다고 간주하다, …를 그 자체로 취급하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 자기를 동일시[동화]하다 ((with))",
+              "examples": [
+                {
+                  "text": "The audience <b>identified</b> with the play's character.",
+                  "translatedText": "관객은 그 연극의 등장인물이 된 듯한 기분이었다."
+                }
+              ],
+              "originalMeaning": "(…와) 자기를 동일시[동화]하다 ((with))"
+            },
+            {
+              "meaning": "일체감을 가지다, 공명하다 ((with))",
+              "examples": [],
+              "originalMeaning": "일체감을 가지다, 공명하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fbc0170d7e4a4811a0d45ae9c32109c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fbc0170d7e4a4811a0d45ae9c32109c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "identifies"
+        },
+        {
+          "type": "과거형",
+          "value": "identified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "identifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "identified"
+        }
+      ],
+      "aliasConjugation": "identifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9b079b67d7fcb1741108321e4d9aff1e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "익사자가 누군지 알 수 없다",
+      "text": "The drowned man is not <b>identified</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 아이는 이름표를 달고 있지 않았다",
+      "text": "The child wore no tag to <b>identify</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 아이가 누구인가는 옷으로 확인되었다.",
+      "text": "The child was <b>identified</b> by its clothes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 모자가 자기 아들의 것임을 확인했다.",
+      "text": "He <b>identified</b> the cap as that of his son."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "관객은 그 연극의 등장인물이 된 듯한 기분이었다.",
+      "text": "The audience <b>identified</b> with the play’s character."
+    }
+  ],
+  "isWordType": true
+}

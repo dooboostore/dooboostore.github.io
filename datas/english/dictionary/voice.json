@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "voice",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "vɔɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 목소리, 음성, (어떤 사람의) 음성; (새·곤충의) 울음소리; 음질",
+              "examples": [
+                {
+                  "text": "in a deep[low, soft] <b>voice</b>",
+                  "translatedText": "힘찬 저음의[낮은, 부드러운] 목소리로"
+                }
+              ],
+              "originalMeaning": "[CU] 목소리, 음성, (어떤 사람의) 음성; (새·곤충의) 울음소리; 음질"
+            },
+            {
+              "meaning": "[UC/] [음악] 성부(聲部), 발성, 가수(singer), 발성법",
+              "examples": [],
+              "originalMeaning": "[UC/] [음악] 성부(聲部), 발성, 가수(singer), 발성법"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<감정·의견 등을> (강력히) 말로 나타내다, 표명하다, 선언하다",
+              "examples": [],
+              "originalMeaning": "<감정·의견 등을> (강력히) 말로 나타내다, 표명하다, 선언하다"
+            },
+            {
+              "meaning": "유성음화하다",
+              "examples": [],
+              "originalMeaning": "유성음화하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/76846d1b43f74b0eb893ad6f1147de06",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/76846d1b43f74b0eb893ad6f1147de06",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "voices"
+        },
+        {
+          "type": "과거형",
+          "value": "voiced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "voicing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "voiced"
+        }
+      ],
+      "aliasConjugation": "voices",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "186de4dc1afdf604da5e46ed853bbbe5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "옥을 굴리는 듯한 목소리",
+      "text": "(in) a silvery <b>voice</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쉿! 목소리를 내지 마라!",
+      "text": "Hush! Don't make a <b>voice</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 목소리는 잘 들린다.",
+      "text": "His <b>voice</b> carries well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 목이 쉬었었다",
+      "text": "Her <b>voice</b> sounded husky."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전화가 잘 들리지 않는다",
+      "text": "The <b>voice</b> is not distinct."
+    }
+  ],
+  "isWordType": true
+}

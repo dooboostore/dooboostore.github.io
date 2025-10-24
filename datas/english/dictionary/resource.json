@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "resource",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│riːsɔːrs; rɪ│sɔːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] (한 나라의) 자원, 재원, 자력(資力), 자산; (공급·원조의) 원천, 공급원, 물자",
+              "examples": [
+                {
+                  "text": "natural resources",
+                  "translatedText": "천연자원"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] (한 나라의) 자원, 재원, 자력(資力), 자산; (공급·원조의) 원천, 공급원, 물자"
+            },
+            {
+              "meaning": "(대처하는) 수단, (만일의 경우에) 의지할 수 있는 것, 방편, 방책(shift)",
+              "examples": [
+                {
+                  "text": "We had no other <b>resource</b> but to wait and see.",
+                  "translatedText": "기다리면서 관망하는 것 밖에 다른 방법이 없었다."
+                }
+              ],
+              "originalMeaning": "(대처하는) 수단, (만일의 경우에) 의지할 수 있는 것, 방편, 방책(shift)"
+            },
+            {
+              "meaning": "기략(機略), 변통하는 재주, 기지(wit)",
+              "examples": [],
+              "originalMeaning": "기략(機略), 변통하는 재주, 기지(wit)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6544812ba5294ccbbb4c7b405457f6a8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6544812ba5294ccbbb4c7b405457f6a8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "resources"
+        },
+        {
+          "type": "과거형",
+          "value": "resourced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "resourcing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "resourced"
+        }
+      ],
+      "aliasConjugation": "resources",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1f57db8f4a1c364b2aaab6476d41af7e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내빼는 것 밖에는 수단이 없었다",
+      "text": "Flight was my only <b>resource</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "좋은 꾀가 생각나지 않는다",
+      "text": "I can't think of any clever resources."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 네 모든 능력을 발휘해야 한다",
+      "text": "You have to use all your resources."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자원은 아직 개발되지 않았다",
+      "text": "These resources are as yet undeveloped."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전쟁으로 그 나라의 자원은 다 없어졌다",
+      "text": "The war exhausted the resources of the country."
+    }
+  ],
+  "isWordType": true
+}

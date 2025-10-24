@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "heir",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "er"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[법] 상속인, 법정 상속인; 후사(後嗣) ((to))",
+              "examples": [
+                {
+                  "text": "an <b>heir</b> to property[an estate]",
+                  "translatedText": "유산[재산] 상속인"
+                }
+              ],
+              "originalMeaning": "[법] 상속인, 법정 상속인; 후사(後嗣) ((to))"
+            },
+            {
+              "meaning": "후계자, 계승자, 전승자 ((of, to))",
+              "examples": [
+                {
+                  "text": "an <b>heir</b> to the throne",
+                  "translatedText": "왕위 계승자"
+                }
+              ],
+              "originalMeaning": "후계자, 계승자, 전승자 ((of, to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "상속하다(inherit)",
+              "examples": [],
+              "originalMeaning": "상속하다(inherit)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/737cbcbce64f4a92906425d26d4513fa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/737cbcbce64f4a92906425d26d4513fa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3b6cfcca82f5816d665d8d8379c701a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기 뒤를 이을 자손이 없다",
+      "text": "He has no <b>heir</b>. or There is no one to carry on his family[to inherit his property]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 고인의 법적 상속인으로 승인받았다",
+      "text": "He was recognized[acknowledged] as a lawful <b>heir</b> to the deceased."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 아버지의 지능과 어머니의 우아함을 이어받았다",
+      "text": "She was an <b>heir</b> to her father's intelligence and her mother's grace."
+    }
+  ],
+  "isWordType": true
+}

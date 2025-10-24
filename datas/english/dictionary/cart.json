@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "cart",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(말·나귀·소가 끄는) 짐수레 ((주로 이륜, 때로 사륜))",
+              "examples": [],
+              "originalMeaning": "(말·나귀·소가 끄는) 짐수레 ((주로 이륜, 때로 사륜))"
+            },
+            {
+              "meaning": "(말 한 필이 끄는) 이륜 경마차",
+              "examples": [],
+              "originalMeaning": "(말 한 필이 끄는) 이륜 경마차"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "짐수레로 나르다; <사람을> 차로 나르다, <짐 등을> (애써) 나르다",
+              "examples": [
+                {
+                  "text": "a bus to <b>cart</b> the kids to and from school",
+                  "translatedText": "아이들을 통학시켜 주는 버스"
+                }
+              ],
+              "originalMeaning": "짐수레로 나르다; <사람을> 차로 나르다, <짐 등을> (애써) 나르다"
+            },
+            {
+              "meaning": "<사람을> (강제로, 난폭하게) 끌고 가다, 연행해 가다",
+              "examples": [
+                {
+                  "text": "<b>cart</b> a criminal off[away] to jail",
+                  "translatedText": "범인을 교도소에 처넣다"
+                }
+              ],
+              "originalMeaning": "<사람을> (강제로, 난폭하게) 끌고 가다, 연행해 가다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "짐수레로 나르다, [크리켓] 강타하다",
+              "examples": [],
+              "originalMeaning": "짐수레로 나르다, [크리켓] 강타하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d5dfd15246142a3a3a3ea6c220e9de1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d5dfd15246142a3a3a3ea6c220e9de1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "carts"
+        },
+        {
+          "type": "과거형",
+          "value": "carted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "carting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "carted"
+        }
+      ],
+      "aliasConjugation": "carts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ff7357388a1ce24f762a626b06f68492",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마부가 말을 짐마차에 맸다.",
+      "text": "The driver put the horse to his <b>cart</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이건 주객이 전도된 거다",
+      "text": "The tables are turned. or That is putting the <b>cart</b> before the horse. or That is contrary to the usual order."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자네는 일을 거꾸로 하고 있네",
+      "text": "You are putting the <b>cart</b> before the horse there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 마차에 나무 한 바리를 실었다",
+      "text": "He put a load of wood in the <b>cart</b>. or He loaded the <b>cart</b> with wood."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "짐차는 그런 중량[짐]을 모두 싣다가는 짜부러지고 말 것이다.",
+      "text": "The <b>cart</b> will collapse under all that weight[those things]."
+    }
+  ],
+  "isWordType": true
+}

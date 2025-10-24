@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "damage",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdæmɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "손해, 손상, 피해",
+              "examples": [
+                {
+                  "text": "flood <b>damage</b>",
+                  "translatedText": "홍수 피해"
+                }
+              ],
+              "originalMeaning": "손해, 손상, 피해"
+            },
+            {
+              "meaning": "[the ~] [속어] 비용, 대가(cost) ((for)); [pl.] [속어] (식당의) 청구서",
+              "examples": [
+                {
+                  "text": "What's the <b>damage</b> ?",
+                  "translatedText": "비용이 얼마요? ((식당 등에서 「계산은 얼마요?」하는 것을 익살스럽게 하는 말))"
+                }
+              ],
+              "originalMeaning": "[the ~] [속어] 비용, 대가(cost) ((for)); [pl.] [속어] (식당의) 청구서"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "손해[피해]를 입히다, 못쓰게 만들다 (=injure)",
+              "examples": [],
+              "originalMeaning": "손해[피해]를 입히다, 못쓰게 만들다 (=<span class='related_word' lang='en' >injure</span>)"
+            },
+            {
+              "meaning": "<명예를> 손상시키다",
+              "examples": [],
+              "originalMeaning": "<명예를> 손상시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "다치다, 아픔을 느끼다",
+              "examples": [],
+              "originalMeaning": "다치다, 아픔을 느끼다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e3f9fc2af37545788e265a60fed02e79",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e3f9fc2af37545788e265a60fed02e79",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "damages"
+        },
+        {
+          "type": "과거형",
+          "value": "damaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "damaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "damaged"
+        }
+      ],
+      "aliasConjugation": "damages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5e5cae0bc2b84f74c216c8cb02d16d58",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭풍으로 많은 피해가 났다.",
+      "text": "The storm wrought much <b>damage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "흡연은 건강에 지장을 준다",
+      "text": "Smoking can <b>damage</b> your health."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "트렁크가 운반 도중에 상했다",
+      "text": "My trunk was damaged in transit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "심한 서리로 곡식이 상했다",
+      "text": "The crop was damaged by a heavy frost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지진은 그다지 큰 피해를 주지 않았다",
+      "text": "The earthquake didn't do much <b>damage</b>."
+    }
+  ],
+  "isWordType": true
+}

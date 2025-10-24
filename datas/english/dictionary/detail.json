@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "detail",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdiːteɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "세부, 세목, 항목(item); 지엽적(枝葉的)인 일, 사소한 일(trifle); [pl.] 상세한 설명[기술]",
+              "examples": [
+                {
+                  "text": "But that is a (mere) <b>detail</b> .",
+                  "translatedText": "[종종 비꼬아서] 하지만 그것은 사소한 일이잖아요."
+                }
+              ],
+              "originalMeaning": "세부, 세목, 항목(item); 지엽적(枝葉的)인 일, 사소한 일(trifle); [pl.] 상세한 설명[기술]"
+            },
+            {
+              "meaning": "[UC/] [건축·미술] 세부 (묘사), [건축·기계] 상세도(= ~ drawing)",
+              "examples": [],
+              "originalMeaning": "[UC/] [건축·미술] 세부 (묘사), [건축·기계] 상세도(= ~ drawing)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "상술(詳述)하다, 열거하다",
+              "examples": [],
+              "originalMeaning": "상술(詳述)하다, 열거하다"
+            },
+            {
+              "meaning": "분견하다, 특파하다",
+              "examples": [
+                {
+                  "text": "( <b>detail</b> +[목]+to do) They were detailed to search the chapel.",
+                  "translatedText": "그들은 예배당을 수색하도록 파견되었다."
+                }
+              ],
+              "originalMeaning": "분견하다, 특파하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "상세도를 만들다",
+              "examples": [],
+              "originalMeaning": "상세도를 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e0e898cc9dac42c8819c10ef655d9a1b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e0e898cc9dac42c8819c10ef655d9a1b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "details"
+        },
+        {
+          "type": "과거형",
+          "value": "detailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "detailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "detailed"
+        }
+      ],
+      "aliasConjugation": "details",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "166b6e180f0e86db85f15638427c26be",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람은 성격이 매우 예민하다",
+      "text": "He's very careful about details."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세부적 문제를 해결해야 한다",
+      "text": "You should iron out the details."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "상세한 것은 다음 표와 같다",
+      "text": "Details are tabulated as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 세밀한 분석이 필요하다",
+      "text": "It requires a detailed analysis."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "종종 비꼬아서] 하지만 그것은 사소한 일이잖아요.",
+      "text": "But that is a (mere) <b>detail</b>. ["
+    }
+  ],
+  "isWordType": true
+}

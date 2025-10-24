@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "dividend",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdɪvɪdend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "피제수(被除數), 나뉨수(opp. divisor)",
+              "examples": [],
+              "originalMeaning": "피제수(被除數), 나뉨수(opp. divisor)"
+            },
+            {
+              "meaning": "공채 이자; (주식·보험의) 이익 배당, 배당금; (파산 청산의) 분배금 ((in))",
+              "examples": [],
+              "originalMeaning": "공채 이자; (주식·보험의) 이익 배당, 배당금; (파산 청산의) 분배금 ((in))"
+            },
+            {
+              "meaning": "배당률, 배당액",
+              "examples": [],
+              "originalMeaning": "배당률, 배당액"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15371eebf2a9435a92451bec03970709",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15371eebf2a9435a92451bec03970709",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "708476fb72464654eb72a01f3dee8643",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "보통주에 대하여 6부의 이익 배당을 했다",
+      "text": "A <b>dividend</b> of 6 percent on the common shares was paid."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공든 탑이 무너지랴",
+      "text": "Hard work always pays dividends."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무배당이다",
+      "text": "No <b>dividend</b> is paid ."
+    }
+  ],
+  "isWordType": true
+}

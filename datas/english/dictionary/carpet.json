@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "carpet",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɑːrpɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "카펫, 양탄자, 융단; 깔개(cf. RUG)",
+              "examples": [
+                {
+                  "text": "a Persian <b>carpet</b>",
+                  "translatedText": "페르시아 융단"
+                }
+              ],
+              "originalMeaning": "카펫, 양탄자, 융단; 깔개(cf. RUG)"
+            },
+            {
+              "meaning": "융단 천",
+              "examples": [],
+              "originalMeaning": "융단 천"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 양탄자를 깔다, [보통 수동형으로] (양탄자를 깐 듯이) 온통 뒤덮다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>carpet</b> the stairs",
+                  "translatedText": "계단에 양탄자를 깔다"
+                }
+              ],
+              "originalMeaning": "…에 양탄자를 깔다, [보통 수동형으로] (양탄자를 깐 듯이) 온통 뒤덮다 ((with))"
+            },
+            {
+              "meaning": "<하인을> (불러) 꾸짖다",
+              "examples": [],
+              "originalMeaning": "<하인을> (불러) 꾸짖다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f694005e4bbf4068a550c34624248bf7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f694005e4bbf4068a550c34624248bf7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "carpets"
+        },
+        {
+          "type": "과거형",
+          "value": "carpeted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "carpeting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "carpeted"
+        }
+      ],
+      "aliasConjugation": "carpets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6f58aab445a5135b42b4cdac4b89ed8a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개가 양탄자에 오줌을 쌌다.",
+      "text": "The dog had wet the <b>carpet</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "카펫이 그것들의 소리를 죽였다.",
+      "text": "The carpets muted their sound."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마루에는 두꺼운 모전이 깔려 있다",
+      "text": "The floor is thickly carpeted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 융숭한 대접을 받았다",
+      "text": "We were treated to the red <b>carpet</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "양탄자와 커튼이 잘 어울린다",
+      "text": "The <b>carpet</b> and curtain are a good match."
+    }
+  ],
+  "isWordType": true
+}

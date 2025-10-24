@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "brag",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bræɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "자랑하다, 뽐내다, 허풍 떨다 ((about, of))",
+              "examples": [
+                {
+                  "text": "He always brags about how rich father is.",
+                  "translatedText": "그는 아버지가 얼마나 부자인지 항상 자랑하고 다닌다."
+                }
+              ],
+              "originalMeaning": "자랑하다, 뽐내다, 허풍 떨다 ((about, of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자랑하다, 자랑하며 말하다",
+              "examples": [
+                {
+                  "text": "( that [절] ) He bragged that he had won.",
+                  "translatedText": "그는 자기가 승리했다고 자랑했다."
+                }
+              ],
+              "originalMeaning": "자랑하다, 자랑하며 말하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "허풍, 자랑",
+              "examples": [],
+              "originalMeaning": "허풍, 자랑"
+            },
+            {
+              "meaning": "자랑거리",
+              "examples": [],
+              "originalMeaning": "자랑거리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0fa6e5cc32c745fca3a2faf0ac641e92",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0fa6e5cc32c745fca3a2faf0ac641e92",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "brags"
+        },
+        {
+          "type": "과거형",
+          "value": "bragged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bragging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bragged"
+        }
+      ],
+      "aliasConjugation": "brags",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1e2d2f3ed63f08d9862d5d62526f2220",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기의 기술을 입찬소리로 지껄였다",
+      "text": "He bragged about his skill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 부자인 아버지를 자랑한다.",
+      "text": "He brags about his rich father."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 언제나 풍만 떤다",
+      "text": "He is always bragging[boasting, talking big]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대학에 들어갈 자신이 있다고 땅땅거리고 있다",
+      "text": "He is bragging that he is confident to pass the college entrance exam."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 허풍만 떤다",
+      "text": "He is full of <b>brag</b>."
+    }
+  ],
+  "isWordType": true
+}

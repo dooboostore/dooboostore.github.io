@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "because",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɪ│kɔːz; bɪ│kʌz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "[Why로 시작되는 의문문의 대답의 첫머리에 써서] 왜냐하면",
+              "examples": [
+                {
+                  "text": "“Why were you absent from class again?” ─ “ <b>Because</b> I was sick in bed.”",
+                  "translatedText": "왜 수업을 또 빼먹었니? ─ 앓아 누워 있었기 때문입니다."
+                }
+              ],
+              "originalMeaning": "[Why로 시작되는 의문문의 대답의 첫머리에 써서] 왜냐하면"
+            },
+            {
+              "meaning": "[앞에 콤마가 있는 경우, 보통 앞에서부터 번역하여] (왜냐하면) …때문에",
+              "examples": [
+                {
+                  "text": "I could not go to the concert, <b>because</b> I had to take care of the baby.",
+                  "translatedText": "나는 음악회에 갈 수가 없었다, (왜냐하면) 아기를 돌봐야 했기 때문이다."
+                }
+              ],
+              "originalMeaning": "[앞에 콤마가 있는 경우, 보통 앞에서부터 번역하여] (왜냐하면) …때문에"
+            },
+            {
+              "meaning": "[앞에 콤마가 없는 경우, 보통 뒤에서부터 번역하여] …때문에, …이니까",
+              "examples": [
+                {
+                  "text": "We didn't stay outside long <b>because</b> it was too cold. = <b>Because</b> it was too cold, we didn't stay outside long.",
+                  "translatedText": "너무나 추웠기 때문에 우리는 밖에 오래 머물지 못했다."
+                }
+              ],
+              "originalMeaning": "[앞에 콤마가 없는 경우, 보통 뒤에서부터 번역하여] …때문에, …이니까"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5c714b04f5a24cca8fef45a9eff33308",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5c714b04f5a24cca8fef45a9eff33308",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "83656af06c5c28051de67b17dfdd71f9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아파서 일을 쉬고 있다.",
+      "text": "He is out <b>because</b> of sickness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람 때문에 모처럼의 상담이 틀어진 것 같다",
+      "text": "<b>Because</b> of him, the deal we've gone to so much trouble for is about to fall through."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "합선이 되어 퓨즈가 나갔다",
+      "text": "A fuse blew <b>because</b> of a short circuit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 가난하다고 해서 얕보아서는 안 된다",
+      "text": "You should not despise him <b>because</b> he is poor. or You should not look down upon him <b>because</b> he is poor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그로 인해 모든 것이 비틀어졌다",
+      "text": "Everything went wrong <b>because</b> of him."
+    }
+  ],
+  "isWordType": true
+}

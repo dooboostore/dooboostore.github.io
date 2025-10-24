@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "simple",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪmpl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "간단한, 단순한, 쉬운",
+              "examples": [
+                {
+                  "text": "a <b>simple</b> problem",
+                  "translatedText": "쉬운 문제"
+                }
+              ],
+              "originalMeaning": "간단한, 단순한, 쉬운"
+            },
+            {
+              "meaning": "간결한(plain), 꾸밈없는",
+              "examples": [],
+              "originalMeaning": "간결한(plain), 꾸밈없는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "단일 성분의 것, 단일물, 단순물; 단체, 원소",
+              "examples": [],
+              "originalMeaning": "단일 성분의 것, 단일물, 단순물; 단체, 원소"
+            },
+            {
+              "meaning": "[고어] 약초, 약초 제제(製劑)",
+              "examples": [],
+              "originalMeaning": "[고어] 약초, 약초 제제(製劑)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0393c11fcdad45699101b8e0a591f542",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0393c11fcdad45699101b8e0a591f542",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "simpler"
+        },
+        {
+          "type": "최상급",
+          "value": "simplest"
+        }
+      ],
+      "aliasConjugation": "simpler",
+      "aliasConjugationPos": "비교급",
+      "gdid": "e870712bcc5e5a46b93edd9529d8a01c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 작품은 좀 빠진다",
+      "text": "His work simply isn't up to scratch."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "난 절대로 그것을 믿지 않는다.",
+      "text": "I simply don’t believe it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들이란 가만히 있으려 하지 않는다",
+      "text": "Kids simply won't stay put."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 병은 순전히 신경성이다",
+      "text": "Your illness is simply imaginary."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "보톡스 주사 맞기는 아주 간단하다.",
+      "text": "Getting Botoxed is pretty <b>simple</b>."
+    }
+  ],
+  "isWordType": true
+}

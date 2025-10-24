@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "form",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɔːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 꼴, 형상, 형태(shape); 모습, 외관 (=figure)",
+              "examples": [],
+              "originalMeaning": "[CU] 꼴, 형상, 형태(shape); 모습, 외관 (=<span class='related_word' lang='en' >figure</span>)"
+            },
+            {
+              "meaning": "사람 모습, 인체, 물체",
+              "examples": [],
+              "originalMeaning": "사람 모습, 인체, 물체"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "형성하다(shape), 꼴을 이루다, …로 만들다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>form</b> a figure out of clay",
+                  "translatedText": "점토로 상(像)을 만들다"
+                }
+              ],
+              "originalMeaning": "형성하다(shape), 꼴을 이루다, …로 만들다 ((into))"
+            },
+            {
+              "meaning": "<인물·능력·품성을> 만들어 내다(build up), 단련하다(train)",
+              "examples": [],
+              "originalMeaning": "<인물·능력·품성을> 만들어 내다(build up), 단련하다(train)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<물건이> 형체를 이루다, 형성되다",
+              "examples": [],
+              "originalMeaning": "<물건이> 형체를 이루다, 형성되다"
+            },
+            {
+              "meaning": "<생각·신념·희망 등이> 생기다",
+              "examples": [],
+              "originalMeaning": "<생각·신념·희망 등이> 생기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d608308288e54d47a65b4f783e7b03ad",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d608308288e54d47a65b4f783e7b03ad",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "forms"
+        },
+        {
+          "type": "과거형",
+          "value": "formed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "forming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "formed"
+        }
+      ],
+      "aliasConjugation": "forms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f6bf241ad5f9291cfa944013bd311a75",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 와서 땅이 우물졌다",
+      "text": "The rain formed small hollows in the ground. or The rain formed a pool in the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 용지에 기입해 주십시오",
+      "text": "Fill this <b>form</b> out, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사례는 일절 받지 않습니다",
+      "text": "I decline any <b>form</b> of reward."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "의회는 아직 구성되지 않았다.",
+      "text": "The House is not yet formed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 수영 폼은 훌륭하다",
+      "text": "His swimming <b>form</b> is excellent."
+    }
+  ],
+  "isWordType": true
+}

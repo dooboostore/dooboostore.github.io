@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "access",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈækses"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (장소·사람 등에의) 접근, 면회, 출입; (자료 등의) 입수, 이용 ((to))",
+              "examples": [
+                {
+                  "text": "a man of difficult[easy] <b>access</b>",
+                  "translatedText": "접근하기 어려운[쉬운] 사람"
+                }
+              ],
+              "originalMeaning": "[U] (장소·사람 등에의) 접근, 면회, 출입; (자료 등의) 입수, 이용 ((to))"
+            },
+            {
+              "meaning": "접근[입수] 방법, 이용[참가]할 권리",
+              "examples": [],
+              "originalMeaning": "접근[입수] 방법, 이용[참가]할 권리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "입수[이용]하다",
+              "examples": [],
+              "originalMeaning": "입수[이용]하다"
+            },
+            {
+              "meaning": "[컴퓨터] 기억 장치로부터 <정보를> 호출하다, 기억 장치에 <정보를> 입력하다",
+              "examples": [],
+              "originalMeaning": "[컴퓨터] 기억 장치로부터 <정보를> 호출하다, 기억 장치에 <정보를> 입력하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4c9726ca413421b884ce157bf719b5e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4c9726ca413421b884ce157bf719b5e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accesses"
+        },
+        {
+          "type": "과거형",
+          "value": "accessed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accessing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accessed"
+        }
+      ],
+      "aliasConjugation": "accesses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dcdf984649cbe39c939cfc859fc4d2ab",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 마을은 교통편이 좋다",
+      "text": "The town has easy <b>access</b> to."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 수도 시설이 없다",
+      "text": "They do not have <b>access</b> to a water supply."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 학생에게 도서관 출입을 허용함",
+      "text": "Free <b>access</b> is allowed to the library to any student."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "암호 없이는 이 계좌에 접근할 수 없습니다",
+      "text": "You cannot <b>access</b> this account without a password."
+    }
+  ],
+  "isWordType": true
+}

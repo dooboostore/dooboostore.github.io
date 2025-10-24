@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "luckily",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lʌ́kili"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "운 좋게",
+              "examples": [],
+              "originalMeaning": "운 좋게"
+            },
+            {
+              "meaning": "[문장이나 절을 수식하여] 다행히도",
+              "examples": [],
+              "originalMeaning": "[문장이나 절을 수식하여] 다행히도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/916cfc53977645dd88235fcfe1f7e165",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/916cfc53977645dd88235fcfe1f7e165",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5c82830ea1471fb2613a3f3fae1be8b1",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "lucky",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlʌki"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "행운의, 운수 좋은 (=happy)",
+              "examples": [
+                {
+                  "text": "a <b>lucky</b> beggar[dog]",
+                  "translatedText": "행운아"
+                }
+              ],
+              "originalMeaning": "행운의, 운수 좋은 (=<span class='related_word' lang='en' >happy</span>)"
+            },
+            {
+              "meaning": "행운을 가져오는",
+              "examples": [
+                {
+                  "text": "a <b>lucky</b> penny",
+                  "translatedText": "행운의 동전"
+                }
+              ],
+              "originalMeaning": "행운을 가져오는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "운이 좋은 것, 행운을 가져오는 것",
+              "examples": [],
+              "originalMeaning": "운이 좋은 것, 행운을 가져오는 것"
+            },
+            {
+              "meaning": "도망(escape)",
+              "examples": [],
+              "originalMeaning": "도망(escape)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/668a582d78384c03af77d139f1abc552",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/668a582d78384c03af77d139f1abc552",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "luckier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "7fd0c553b18d4c3655d251ef8bd353b2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 개는 러키라고 한다",
+      "text": "The dog is called <b>Lucky</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다행히도 그녀는 집에 있었다.",
+      "text": "<b>Luckily</b> she was at home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다행히 폭탄이 폭발하지 않았다",
+      "text": "<b>Luckily</b> the bomb didn't go off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그때 그녀는 완전히 운이 좋았다.",
+      "text": "She was regularly <b>lucky</b> then."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다행히 승객들은 다치지 않았다",
+      "text": "<b>Luckily</b>, the passengers were unhurt."
+    }
+  ],
+  "isWordType": true
+}

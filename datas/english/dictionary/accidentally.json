@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "entry": "accidentally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "æ̀ksədéntəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "우연히, 뜻하지 않게(by chance); 잘못하여",
+              "examples": [],
+              "originalMeaning": "우연히, 뜻하지 않게(by chance); 잘못하여"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a46b4ddb88b14fd087de38dc8c2e3941",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a46b4ddb88b14fd087de38dc8c2e3941",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "antonymWordList": [
+        {
+          "entry": "deliberately",
+          "link": "https://en.dict.naver.com/#/search?range=all&query=deliberately"
+        }
+      ],
+      "gdid": "745d2e78edf6ce90bab202e5eb7f3a8d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "accidental",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌæksɪˈdentl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "우연한",
+              "examples": [
+                {
+                  "text": "an <b>accidental</b> death",
+                  "translatedText": "사고사"
+                }
+              ],
+              "originalMeaning": "우연한"
+            },
+            {
+              "meaning": "비본질적인, 부수적인",
+              "examples": [],
+              "originalMeaning": "비본질적인, 부수적인"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "우발적인 사물, 비본질적인 사물",
+              "examples": [],
+              "originalMeaning": "우발적인 사물, 비본질적인 사물"
+            },
+            {
+              "meaning": "임시음[기호]",
+              "examples": [],
+              "originalMeaning": "임시음[기호]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c2732513985f4a42a81d65a720483669",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c2732513985f4a42a81d65a720483669",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b77a28e7ff309018e24cb0b9f6c0a469",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리가 만난 것은 순전히 우연이었다",
+      "text": "Our meeting was quite <b>accidental</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그를 서울에서 우연히 만났다",
+      "text": "I met him in Seoul <b>accidentally</b>[by chance]. or I came across him in Seoul. or I happened[chanced] to meet him in Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아이들이 실수로 차고에 불을 질렀다",
+      "text": "The kids <b>accidentally</b> started a fire in the garage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경찰은 과실 치사 혐의로 그를 입건했다",
+      "text": "Police booked him on a charge of <b>accidental</b> homicide."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 잘못하여 판자를 빗먹게 잘랐다",
+      "text": "He <b>accidentally</b> sawed away the plank at the wrong angle."
+    }
+  ],
+  "isWordType": true
+}

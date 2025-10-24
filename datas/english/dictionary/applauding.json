@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "applaud",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈplɔːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "박수치다(clap), 성원하다(cf. CHEER) ((보통은 갈채가 포함되지 않음)); 칭찬하다",
+              "examples": [
+                {
+                  "text": "The audience <b>applaud</b> ed.",
+                  "translatedText": "청중은 박수를 보냈다."
+                }
+              ],
+              "originalMeaning": "박수치다(clap), 성원하다(cf. CHEER) ((보통은 갈채가 포함되지 않음)); 칭찬하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 박수치다, 박수를 보내다; 칭찬하다, 절찬하다(praise)",
+              "examples": [
+                {
+                  "text": "( <b>applaud</b> +[목](+[전]+[명])) I <b>applaud</b> you (for your decision).",
+                  "translatedText": "그 결심 잘 하셨습니다."
+                }
+              ],
+              "originalMeaning": "…에게 박수치다, 박수를 보내다; 칭찬하다, 절찬하다(praise)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0f73f2d9106f4479b706a2d33fd40211",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0f73f2d9106f4479b706a2d33fd40211",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "applauds"
+        },
+        {
+          "type": "과거형",
+          "value": "applauded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "applauding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "applauded"
+        }
+      ],
+      "aliasConjugation": "applauds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bd85ab929d4fb500efe178b1dc280820",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "청중은 열광적으로 박수 갈채하였다",
+      "text": "The audience applauded frantically."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "청중은 박수를 보냈다.",
+      "text": "The audience applauded."
+    }
+  ],
+  "isWordType": true
+}

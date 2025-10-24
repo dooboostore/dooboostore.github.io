@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "desk",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "desk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "책상, 공부[사무] 책상",
+              "examples": [],
+              "originalMeaning": "책상, 공부[사무] 책상"
+            },
+            {
+              "meaning": "[미] 설교단, [the ~] 성직(聖職)",
+              "examples": [],
+              "originalMeaning": "[미] 설교단, [the ~] 성직(聖職)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 탁상용의; 사무의, 내근의",
+              "examples": [
+                {
+                  "text": "a <b>desk</b> calendar[telephone]",
+                  "translatedText": "탁상 달력[전화기]"
+                }
+              ],
+              "originalMeaning": "[A] 탁상용의; 사무의, 내근의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f8a8f6ee221a46779a181335cd7eb12c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f8a8f6ee221a46779a181335cd7eb12c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "094bb6631bef6de39015b9a3646171b4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상 위에 책이  있다.",
+      "text": "There is a book on the <b>desk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상 위에 책이 있다.",
+      "text": "There’s a book on the <b>desk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책상은 잘 기운다.",
+      "text": "The <b>desk</b> is apt to tilt over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책상은 모서리가 각이 져 있다.",
+      "text": "The <b>desk</b> has sharp corners."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 책상에 책을 내던졌다.",
+      "text": "He flung his books on the <b>desk</b>."
+    }
+  ],
+  "isWordType": true
+}

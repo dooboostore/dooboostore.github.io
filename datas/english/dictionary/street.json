@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "street",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "striːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "거리, 가로(街路), 시가",
+              "examples": [],
+              "originalMeaning": "거리, 가로(街路), 시가"
+            },
+            {
+              "meaning": "…가(街), …로(路)",
+              "examples": [
+                {
+                  "text": "Oxford St.",
+                  "translatedText": "옥스퍼드가"
+                }
+              ],
+              "originalMeaning": "…가(街), …로(路)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "거리[가로]의",
+              "examples": [
+                {
+                  "text": "a <b>street</b> map[plan]",
+                  "translatedText": "시가도(市街圖)"
+                }
+              ],
+              "originalMeaning": "거리[가로]의"
+            },
+            {
+              "meaning": "<옷이> 외출용의, 거리에 어울리는",
+              "examples": [],
+              "originalMeaning": "<옷이> 외출용의, 거리에 어울리는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f52c3f2ac5e04738beca2737a3feb56b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f52c3f2ac5e04738beca2737a3feb56b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "19dd3e995ae9fe31bfc1098d2b0da6f4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 못 본 체했다",
+      "text": "He cut me cold on the <b>street</b>. or He gave me the cold shoulder on the <b>street</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 길에서 나를 본체만체했다",
+      "text": "He gave me the cold shoulder in the <b>street</b>. or He cut me cold in the <b>street</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "차도에서 놀아서는 안 된다.",
+      "text": "Don’t play in the <b>street</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가스등이 거리를 비추고 있었다.",
+      "text": "Gas lamps lit the streets."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 길을 깡충깡충 뛰어갔다.",
+      "text": "He skipped along the <b>street</b>."
+    }
+  ],
+  "isWordType": true
+}

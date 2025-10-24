@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "breath",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "breθ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "숨, 호흡",
+              "examples": [
+                {
+                  "text": "bad <b>breath</b>",
+                  "translatedText": "입내, 구취(口臭)"
+                }
+              ],
+              "originalMeaning": "숨, 호흡"
+            },
+            {
+              "meaning": "생명, 생명력, 활력",
+              "examples": [],
+              "originalMeaning": "생명, 생명력, 활력"
+            },
+            {
+              "meaning": "호흡 능력",
+              "examples": [],
+              "originalMeaning": "호흡 능력"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/252602b44dfb4fd58e79be5e331dc845",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/252602b44dfb4fd58e79be5e331dc845",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2ecb1e5fba35fac704a731984842bd57",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바람이 한 점도 없다",
+      "text": "There is not a <b>breath</b> of air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 입에서 구린내가 난다",
+      "text": "He has bad <b>breath</b>. or His <b>breath</b> smells (bad)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 입에서 구취가 난다",
+      "text": "He has foul <b>breath</b> (in his mouth)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 아름다움에 숨이 막혔다",
+      "text": "Her beauty took my <b>breath</b> away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잠깐 숨을 쉬지 마세요",
+      "text": "Please hold your <b>breath</b> for a moment."
+    }
+  ],
+  "isWordType": true
+}

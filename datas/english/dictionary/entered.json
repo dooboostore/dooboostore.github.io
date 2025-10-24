@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "enter",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈentə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 들어가다",
+              "examples": [
+                {
+                  "text": "<b>enter</b> a room",
+                  "translatedText": "방에 들어가다"
+                }
+              ],
+              "originalMeaning": "…에 들어가다"
+            },
+            {
+              "meaning": "<가시·탄알 등이 몸 속 등에> 박히다; 넣다, 꽂아[끼워] 넣다(insert)",
+              "examples": [
+                {
+                  "text": "The bullets <b>entered</b> the wall.",
+                  "translatedText": "총탄이 벽에 박혔다."
+                }
+              ],
+              "originalMeaning": "<가시·탄알 등이 몸 속 등에> 박히다; 넣다, 꽂아[끼워] 넣다(insert)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "들어가다, 들다 ((at, by, through))",
+              "examples": [
+                {
+                  "text": "May I <b>enter</b>?",
+                  "translatedText": "들어가도 좋습니까?"
+                }
+              ],
+              "originalMeaning": "들어가다, 들다 ((at, by, through))"
+            },
+            {
+              "meaning": "[3인칭 명령법] 등장하라",
+              "examples": [
+                {
+                  "text": "<b>Enter</b> Hamlet.",
+                  "translatedText": "햄릿 등장."
+                }
+              ],
+              "originalMeaning": "[3인칭 명령법] 등장하라"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/44bb6657895d471ca546dfe7ec6bb43d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/44bb6657895d471ca546dfe7ec6bb43d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "enters"
+        },
+        {
+          "type": "과거형",
+          "value": "entered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "entering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "entered"
+        }
+      ],
+      "aliasConjugation": "enters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2e881f9ae961539d76965989b8941ce1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "좋은 생각이 그의 머리에 떠올랐다.",
+      "text": "A good idea <b>entered</b> his head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 기침을 하고 방에 들어섰다",
+      "text": "He <b>entered</b> the room with a cough."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 들어오도록 난 옆으로 비켜섰다.",
+      "text": "I stood aside for him to <b>enter</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그러한 일은 엄두도 못 냈다",
+      "text": "Such a thing never <b>entered</b> my head[mind]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "혁명은 새로운 단계에 들어갔다",
+      "text": "The revolution <b>entered</b> a new phase."
+    }
+  ],
+  "isWordType": true
+}

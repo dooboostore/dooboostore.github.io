@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "robe",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "roʊb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 예복, 관복; 법복(法服)",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 예복, 관복; 법복(法服)"
+            },
+            {
+              "meaning": "[pl.] 옷, 의복",
+              "examples": [],
+              "originalMeaning": "[pl.] 옷, 의복"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "예복[관복 등]을 입히다, 덮개 등으로 덮다, 장식하다",
+              "examples": [
+                {
+                  "text": "The professors were robed in gowns.",
+                  "translatedText": "교수들은 가운을 몸에 걸치고 있었다."
+                }
+              ],
+              "originalMeaning": "예복[관복 등]을 입히다, 덮개 등으로 덮다, 장식하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "예복[관복]을 입다",
+              "examples": [],
+              "originalMeaning": "예복[관복]을 입다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2d2f94e6512b4460b3f1e32093a43c05",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2d2f94e6512b4460b3f1e32093a43c05",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "robes"
+        },
+        {
+          "type": "과거형",
+          "value": "robed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "robing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "robed"
+        }
+      ],
+      "aliasConjugation": "robes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bbe04e3bc4981c8192df2cc4dacbd6c8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교수들은 가운을 몸에 걸치고 있었다.",
+      "text": "The professors were robed in gowns."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 모두 예복을 차려 입고 있었다.",
+      "text": "They all arrayed themselves[were all arrayed] in ceremonial robes."
+    }
+  ],
+  "isWordType": true
+}

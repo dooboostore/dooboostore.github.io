@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "lapse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "læps"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(기억·말 등의 사소한) 착오, 실수, 잘못(slip)",
+              "examples": [
+                {
+                  "text": "a <b>lapse</b> of the pen[tongue]",
+                  "translatedText": "오기(誤記)[실언]"
+                }
+              ],
+              "originalMeaning": "(기억·말 등의 사소한) 착오, 실수, 잘못(slip)"
+            },
+            {
+              "meaning": "(자신 등의) 상실; (관습 등의) 쇠퇴, 폐지",
+              "examples": [],
+              "originalMeaning": "(자신 등의) 상실; (관습 등의) 쇠퇴, 폐지"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(정도에서) 벗어나다, (나쁜 길로) 빠지다, 타락하다; 실수하다",
+              "examples": [
+                {
+                  "text": "<b>lapse</b> into a bad habit",
+                  "translatedText": "나쁜 버릇이 붙다"
+                }
+              ],
+              "originalMeaning": "(정도에서) 벗어나다, (나쁜 길로) 빠지다, 타락하다; 실수하다"
+            },
+            {
+              "meaning": "멈추다, 끝내다(come to an end)",
+              "examples": [],
+              "originalMeaning": "멈추다, 끝내다(come to an end)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/21677f037d39434b9b1b41436f4c78d3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/21677f037d39434b9b1b41436f4c78d3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lapses"
+        },
+        {
+          "type": "과거형",
+          "value": "lapsed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lapsing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lapsed"
+        }
+      ],
+      "aliasConjugation": "lapses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "505649d85c70c51d17f3b2c594745773",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "겸손이 지나치면 비굴이 된다",
+      "text": "Excessive modesty lapses into servility."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "날이 갈수록 확신이 굳어졌다",
+      "text": "I was confirmed in my belief with the <b>lapse</b> of time."
+    }
+  ],
+  "isWordType": true
+}

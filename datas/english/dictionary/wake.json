@@ -1,0 +1,186 @@
+{
+  "items": [
+    {
+      "entry": "wake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wéik"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "잠이 깨다, 눈을 뜨다",
+              "examples": [
+                {
+                  "text": "He woke up at five.",
+                  "translatedText": "그는 5시에 잠이 깼다."
+                }
+              ],
+              "originalMeaning": "잠이 깨다, 눈을 뜨다"
+            },
+            {
+              "meaning": "<자연물이> 활기를 띠다, 소생하다",
+              "examples": [
+                {
+                  "text": "The flowers <b>wake</b> in spring.",
+                  "translatedText": "꽃은 봄에 소생한다."
+                }
+              ],
+              "originalMeaning": "<자연물이> 활기를 띠다, 소생하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "깨우다, …의 눈을 뜨게 하다",
+              "examples": [
+                {
+                  "text": "Please <b>wake</b> me up at seven.",
+                  "translatedText": "7시에 깨워 주십시오."
+                }
+              ],
+              "originalMeaning": "깨우다, …의 눈을 뜨게 하다"
+            },
+            {
+              "meaning": "각성시키다, 고무하다, 깨닫게 하다",
+              "examples": [
+                {
+                  "text": "The event may <b>wake</b> her up.",
+                  "translatedText": "그 사건으로 그녀는 정신 차리겠지."
+                }
+              ],
+              "originalMeaning": "각성시키다, 고무하다, 깨닫게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[역사] 철야제(徹夜祭) ((헌당식(獻堂式) 등의)), 철야제의 기념 연회 또는 축제",
+              "examples": [],
+              "originalMeaning": "[역사] 철야제(徹夜祭) ((헌당식(獻堂式) 등의)), 철야제의 기념 연회 또는 축제"
+            },
+            {
+              "meaning": "(초상집에서의) 밤샘, 경야(經夜)",
+              "examples": [
+                {
+                  "text": "hold a <b>wake</b>",
+                  "translatedText": "경야를 치르다"
+                }
+              ],
+              "originalMeaning": "(초상집에서의) 밤샘, 경야(經夜)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0bbe603bdb5f4aa9aecb434aab517370",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0bbe603bdb5f4aa9aecb434aab517370",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wakes"
+        },
+        {
+          "type": "과거형",
+          "value": "woke"
+        },
+        {
+          "type": "현재 분사",
+          "value": "waking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "woken"
+        }
+      ],
+      "aliasConjugation": "wakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6f4cb9bff36dd26d1c1b5697ff92cc9b",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "wake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "배가 지나간 자리, 항적(航跡)",
+              "examples": [
+                {
+                  "text": "no-<b>wake</b> speed",
+                  "translatedText": "항적이 생기지 않을 정도의 느린 속도"
+                }
+              ],
+              "originalMeaning": "배가 지나간 자리, 항적(航跡)"
+            },
+            {
+              "meaning": "(물건의) 지나간 자국, 흔적",
+              "examples": [],
+              "originalMeaning": "(물건의) 지나간 자국, 흔적"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4aa1518d2854f2991ab1302587f82b6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4aa1518d2854f2991ab1302587f82b6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "wakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "63c6921125f34123c1d7aa66e0100d02",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 5시에 잠이 깼다.",
+      "text": "He woke up at five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 발의 총성이 숲의 정적을 깨뜨렸다.",
+      "text": "A shot woke the wood."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "7 시에 깨워 주십시오.",
+      "text": "Please <b>wake</b> me up at seven."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사건으로 그녀는 정신차리겠지.",
+      "text": "The event may <b>wake</b> her up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "갑자기 그는 잠에서 깨어났다.",
+      "text": "Suddenly he woke from sleep."
+    }
+  ],
+  "isWordType": true
+}

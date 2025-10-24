@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "patrol",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pəˈtroʊl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "순찰병, 척후, 경비병; 순찰 경관; [집합적] 경비대, 순찰대",
+              "examples": [],
+              "originalMeaning": "순찰병, 척후, 경비병; 순찰 경관; [집합적] 경비대, 순찰대"
+            },
+            {
+              "meaning": "순찰, 순시, 감시, 정찰, 패트롤",
+              "examples": [
+                {
+                  "text": "a <b>patrol</b> boat[ship]",
+                  "translatedText": "초계정(哨戒艇), 순시선"
+                }
+              ],
+              "originalMeaning": "순찰, 순시, 감시, 정찰, 패트롤"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<지역을> 순찰[순시, 순회]하다",
+              "examples": [],
+              "originalMeaning": "<지역을> 순찰[순시, 순회]하다"
+            },
+            {
+              "meaning": "<거리 등을> 행진하다, 무리지어 걸어가다",
+              "examples": [],
+              "originalMeaning": "<거리 등을> 행진하다, 무리지어 걸어가다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "순찰[순시]하다",
+              "examples": [],
+              "originalMeaning": "순찰[순시]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/065673b4e5d84f2a9694b22e500a7ad2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/065673b4e5d84f2a9694b22e500a7ad2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "patrols"
+        },
+        {
+          "type": "과거형",
+          "value": "patrolled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "patrolling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "patrolled"
+        }
+      ],
+      "aliasConjugation": "patrols",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a8348c11aa165068e5f704c3df3dcf42",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수 명의 경찰이 그 지역을 순찰하고 있다",
+      "text": "Several police are patrolling the neighborhood."
+    }
+  ],
+  "isWordType": true
+}

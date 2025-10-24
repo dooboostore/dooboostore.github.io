@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../dist-generator",
+    "baseUrl": "./",
+    "strict": true,
+    "sourceMap": true,
+    "paths": {
+      "@back-end/*": ["../back-end/*"],
+      "@front-end/*": ["../front-end/*"],
+      "@src/*": ["../src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist-backend"]
+}

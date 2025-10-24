@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "headquarters",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈhedkwɔːrtərz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "본부, 본영(本營); (군의) 사령부; 본사, 본국(本局), 본서(本署) ((略 hdqrs.))",
+              "examples": [
+                {
+                  "text": "general <b>headquarters</b>",
+                  "translatedText": "총사령부"
+                }
+              ],
+              "originalMeaning": "본부, 본영(本營); (군의) 사령부; 본사, 본국(本局), 본서(本署) ((略 hdqrs.))"
+            },
+            {
+              "meaning": "[집합적] 사령부원",
+              "examples": [
+                {
+                  "text": "a <b>headquarters</b> company",
+                  "translatedText": "[군사] (대대 이상의) 본부 중대"
+                }
+              ],
+              "originalMeaning": "[집합적] 사령부원"
+            },
+            {
+              "meaning": "(…의) 활동의 중심(지) ((for))",
+              "examples": [],
+              "originalMeaning": "(…의) 활동의 중심(지) ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3921583e0e184d2aa6000f2dfa331621",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3921583e0e184d2aa6000f2dfa331621",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9bfcf97a4a39f01f7ee2f626e332a417",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "특별 수사본부가 설치되었다",
+      "text": "A special investigation <b>headquarters</b> was established."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울특별시 경찰국",
+      "text": "Seoul Metropolitan Police Bureau[<b>Headquarters</b>]"
+    }
+  ],
+  "isWordType": true
+}

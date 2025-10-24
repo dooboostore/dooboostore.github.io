@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "brain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "breɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "뇌, 뇌수",
+              "examples": [
+                {
+                  "text": "<b>brain</b> cells",
+                  "translatedText": "뇌세포"
+                }
+              ],
+              "originalMeaning": "뇌, 뇌수"
+            },
+            {
+              "meaning": "[보통 pl.] 두뇌, 지능, 지력(知力)",
+              "examples": [
+                {
+                  "text": "have (good) <b>brain</b> s",
+                  "translatedText": "머리가 좋다"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 두뇌, 지능, 지력(知力)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 머리통을 때려 부수다",
+              "examples": [],
+              "originalMeaning": "…의 머리통을 때려 부수다"
+            },
+            {
+              "meaning": "…의 머리를 때리다",
+              "examples": [],
+              "originalMeaning": "…의 머리를 때리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c79e99dc15d5461f861fe0a49bbbae3f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c79e99dc15d5461f861fe0a49bbbae3f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "brains"
+        },
+        {
+          "type": "과거형",
+          "value": "brained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "braining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "brained"
+        }
+      ],
+      "aliasConjugation": "brains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a821b4c989862d94ae0ad3fd306b71d8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 머리가 좋지 못하다.",
+      "text": "He hasn’t much <b>brains</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일은 머리가 필요하다",
+      "text": "The job requires a lot of <b>brains</b>[intelligence]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "과학 두뇌가 미국으로 흘러 들어왔다.",
+      "text": "Scientific <b>brains</b> flowed into America."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 머리로 짜낸 아이디어가 이것이다",
+      "text": "This is an idea I've cudgeled out of my <b>brain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자기 일에 온 능력을 쏟았다",
+      "text": "He put all of his <b>brain</b> power into his work."
+    }
+  ],
+  "isWordType": true
+}

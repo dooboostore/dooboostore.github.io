@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "instance",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪnstəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보기(example), 사례, 경우, 실례, 실증",
+              "examples": [
+                {
+                  "text": "in most instances",
+                  "translatedText": "대개의 경우에는"
+                }
+              ],
+              "originalMeaning": "보기(example), 사례, 경우, 실례, 실증"
+            },
+            {
+              "meaning": "단계, 경우(case)",
+              "examples": [],
+              "originalMeaning": "단계, 경우(case)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "보기로 들다, 예거하다; [보통 수동형으로] 예증하다 (exemplify)",
+              "examples": [],
+              "originalMeaning": "보기로 들다, 예거하다; [보통 수동형으로] 예증하다 (exemplify)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ec04d7feb2cf4c29a5426c9b5d7d860f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ec04d7feb2cf4c29a5426c9b5d7d860f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "instances"
+        },
+        {
+          "type": "과거형",
+          "value": "instanced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "instancing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "instanced"
+        }
+      ],
+      "aliasConjugation": "instances",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b303587c7c43f0066a776915387befe3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예를 들다 give examples[an example]",
+      "text": ";cite[give, draw] an <b>instance</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비슷한 예가 생각나지 않는다.",
+      "text": "I cannot cite a like <b>instance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 곤충의 예로 파리를 들었다",
+      "text": "He instanced the fly as an insect."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예컨대 공장 노동자를 예로 들자.",
+      "text": "Take your factory worker, for <b>instance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 일례를 든 데 불과하다",
+      "text": "This is only an <b>instance</b> out of[among] many."
+    }
+  ],
+  "isWordType": true
+}

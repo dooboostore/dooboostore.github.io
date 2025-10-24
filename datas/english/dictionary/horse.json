@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "horse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hɔːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "말, (성장한) 수말",
+              "examples": [
+                {
+                  "text": "eat like a <b>horse</b>",
+                  "translatedText": "많이 먹다"
+                }
+              ],
+              "originalMeaning": "말, (성장한) 수말"
+            },
+            {
+              "meaning": "경주마(racehorse)",
+              "examples": [],
+              "originalMeaning": "경주마(racehorse)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "말의, 말에 붙이는",
+              "examples": [
+                {
+                  "text": "a <b>horse</b> blanket",
+                  "translatedText": "말 담요"
+                }
+              ],
+              "originalMeaning": "말의, 말에 붙이는"
+            },
+            {
+              "meaning": "말이 끄는",
+              "examples": [],
+              "originalMeaning": "말이 끄는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<마차에> 말을 매다",
+              "examples": [
+                {
+                  "text": "<b>horse</b> a carriage",
+                  "translatedText": "마차에 말을 매다"
+                }
+              ],
+              "originalMeaning": "<마차에> 말을 매다"
+            },
+            {
+              "meaning": "말에 태우다, …에게 말을 공급하다, 짊어지다",
+              "examples": [],
+              "originalMeaning": "말에 태우다, …에게 말을 공급하다, 짊어지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2cff1c193ccb4d2eb5ead869464a463f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2cff1c193ccb4d2eb5ead869464a463f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "horses"
+        },
+        {
+          "type": "과거형",
+          "value": "horsed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "horsing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "horsed"
+        }
+      ],
+      "aliasConjugation": "horses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "19a7ec6d6699eb8a75eb3b48068597b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 말은  잘 끈다.",
+      "text": "This <b>horse</b> draws well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 말은 다루기 쉽다.",
+      "text": "This <b>horse</b> leads easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경마에서 돈을 상당히 잃었다",
+      "text": "He lost a large amount of money in <b>horse</b> racing. or He suffered a heavy loss in <b>horse</b> races."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 자기 말을 잘 탄다.",
+      "text": "She sits her <b>horse</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 고삐를 당겨 말을 세웠다.",
+      "text": "He reined up his <b>horse</b>."
+    }
+  ],
+  "isWordType": true
+}

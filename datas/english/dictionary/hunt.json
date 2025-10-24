@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "hunt",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hʌnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "사냥하다, 수렵하다, 유렵하다",
+              "examples": [
+                {
+                  "text": "<b>hunt</b> big game",
+                  "translatedText": "큰 짐승을 사냥하다"
+                }
+              ],
+              "originalMeaning": "사냥하다, 수렵하다, 유렵하다"
+            },
+            {
+              "meaning": "<말·사냥개 등을> 사냥에 쓰다",
+              "examples": [],
+              "originalMeaning": "<말·사냥개 등을> 사냥에 쓰다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사냥하다",
+              "examples": [
+                {
+                  "text": "go out hunting",
+                  "translatedText": "사냥하러 나가다"
+                }
+              ],
+              "originalMeaning": "사냥하다"
+            },
+            {
+              "meaning": "여우 사냥하다",
+              "examples": [],
+              "originalMeaning": "여우 사냥하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사냥, 수렵",
+              "examples": [
+                {
+                  "text": "have a <b>hunt</b>",
+                  "translatedText": "사냥을 하다"
+                }
+              ],
+              "originalMeaning": "사냥, 수렵"
+            },
+            {
+              "meaning": "추적, 수색, 추구; 탐구 ((for))",
+              "examples": [
+                {
+                  "text": "a <b>hunt</b> for profit",
+                  "translatedText": "이윤의 추구"
+                }
+              ],
+              "originalMeaning": "추적, 수색, 추구; 탐구 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/993c007c3da548f9b025395628939f20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/993c007c3da548f9b025395628939f20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hunts"
+        },
+        {
+          "type": "과거형",
+          "value": "hunted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hunting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hunted"
+        }
+      ],
+      "aliasConjugation": "hunts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "557359c9c2bc1bcc88bd564b1ad25b62",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경찰에 쫓기고 있다",
+      "text": "He is hunted[chased] by the police."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일자리를 찾는 데는 많은 노력이 든다",
+      "text": "Job hunting takes a lot of effort."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도둑이 몰려서 골목으로 도망했다",
+      "text": "The hunted thief rushed into an alley."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토끼가 개한테 몰리고 있다",
+      "text": "A rabbit is chased[hunted up, coursed] by a dog."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 고양이를 내쫓았다[정원에서 쫓아냈다].",
+      "text": "I hunted the cat away[out of the garden]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "hump",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hʌmp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(잔등의) 혹; (낙타 등의) 혹, 육봉(肉峰)",
+              "examples": [
+                {
+                  "text": "a camel with two humps",
+                  "translatedText": "쌍봉 낙타"
+                }
+              ],
+              "originalMeaning": "(잔등의) 혹; (낙타 등의) 혹, 육봉(肉峰)"
+            },
+            {
+              "meaning": "둥근 언덕(hummock)",
+              "examples": [],
+              "originalMeaning": "둥근 언덕(hummock)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<등을> 구부리다(hunch) ((up))",
+              "examples": [
+                {
+                  "text": "The cat <b>hump</b> ed (up) its back.",
+                  "translatedText": "고양이가 등을 둥글게 구부렸다."
+                }
+              ],
+              "originalMeaning": "<등을> 구부리다(hunch) ((up))"
+            },
+            {
+              "meaning": "[~ oneself로] [속어] 노력하다, 분투하다; 서두르다",
+              "examples": [],
+              "originalMeaning": "[~ oneself로] [속어] 노력하다, 분투하다; 서두르다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "등을 구부리다, 둥글게 부풀다",
+              "examples": [],
+              "originalMeaning": "등을 구부리다, 둥글게 부풀다"
+            },
+            {
+              "meaning": "노력[분투]하다",
+              "examples": [],
+              "originalMeaning": "노력[분투]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/862226139e4148359e0389cfdae96a2b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/862226139e4148359e0389cfdae96a2b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "humps"
+        },
+        {
+          "type": "과거형",
+          "value": "humped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "humping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "humped"
+        }
+      ],
+      "aliasConjugation": "humps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dbd9e7bac1fd276e0e937da49c5c34f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고양이가 등을 둥글게 구부렸다.",
+      "text": "The cat humped (up) its back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "보릿고개가 지났다",
+      "text": "The barley <b>hump</b> is over."
+    }
+  ],
+  "isWordType": true
+}

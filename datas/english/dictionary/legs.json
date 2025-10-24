@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "leg",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "leɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "다리 ((엉덩이부터 발목까지, 넓게는 foot도 포함)); (식용 동물의) 다리; 다리 고기; 의족(義足)",
+              "examples": [
+                {
+                  "text": "an artificial <b>leg</b>",
+                  "translatedText": "의족"
+                }
+              ],
+              "originalMeaning": "다리 ((엉덩이부터 발목까지, 넓게는 foot도 포함)); (식용 동물의) 다리; 다리 고기; 의족(義足)"
+            },
+            {
+              "meaning": "다리 ((무릎부터 발목까지))",
+              "examples": [],
+              "originalMeaning": "다리 ((무릎부터 발목까지))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보통 ~ it으로] [구어] 걷다; 달리다, 도망치다; 분발하다 ((for))",
+              "examples": [],
+              "originalMeaning": "[보통 ~ it으로] [구어] 걷다; 달리다, 도망치다; 분발하다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발로 <배를> 움직여서 운하의 터널을 빠져나가다",
+              "examples": [],
+              "originalMeaning": "발로 <배를> 움직여서 운하의 터널을 빠져나가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/981684770cc041ff987b7ebfe36bf103",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/981684770cc041ff987b7ebfe36bf103",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "legs"
+        },
+        {
+          "type": "과거형",
+          "value": "legged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "legging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "legged"
+        }
+      ],
+      "aliasConjugation": "legs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ea0621890da8153c64b655a4ac70a462",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "leg.",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "legal, legate, legato, legend, legislation, legislative, legislature",
+              "examples": [],
+              "originalMeaning": "legal, legate, legato, legend, legislation, legislative, legislature"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bcd1de330eff485c9033b3577e0c0fb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bcd1de330eff485c9033b3577e0c0fb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "legs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "18f05aa1a578746b156e9c1fb2397da3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "돈이 많이 들 것이다",
+      "text": "It will cost you an arm and a <b>leg</b>. or It will cost you a fortune. or It will cost you a mint. or It will cost you a pretty penny. or It will cost you a bundle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다리를 넓게 벌리고 서라",
+      "text": "Stand with your <b>legs</b> wide apart."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "개가 내 왼쪽 다리를 물었다.",
+      "text": "The dog bit me in the left <b>leg</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자네에게 끌려다니다가 녹초가 되겠네.",
+      "text": "You’ll run me off my <b>legs</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 다친 다리를 끌며 걸었다.",
+      "text": "He trailed along his wounded <b>leg</b>."
+    }
+  ],
+  "isWordType": true
+}

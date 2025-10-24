@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "entry": "motto",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈmɑːtoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "좌우명, 표어, 모토",
+              "examples": [
+                {
+                  "text": "a school <b>motto</b>",
+                  "translatedText": "교훈"
+                }
+              ],
+              "originalMeaning": "좌우명, 표어, 모토"
+            },
+            {
+              "meaning": "(방패·문장(紋章)의) 제명(題銘)",
+              "examples": [],
+              "originalMeaning": "(방패·문장(紋章)의) 제명(題銘)"
+            },
+            {
+              "meaning": "금언, 격언, 처세훈(maxim)",
+              "examples": [],
+              "originalMeaning": "금언, 격언, 처세훈(maxim)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/31673d8f8be54f8aa8e6443dc8399056",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/31673d8f8be54f8aa8e6443dc8399056",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "mottoes, mottos"
+        }
+      ],
+      "aliasConjugation": "mottoes, mottos",
+      "aliasConjugationPos": "복수형",
+      "gdid": "91ead11f492cfd1a6b78a5ba850070f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "품질 본위가 폐점의 방침입니다 “",
+      "text": "Quality first” is our <b>motto</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "남에게 기대지 않겠다는 것이 그의 주의였다",
+      "text": "Self-help[-reliance] was his <b>motto</b>. or He made it a rule not to depend upon others."
+    }
+  ],
+  "isWordType": true
+}

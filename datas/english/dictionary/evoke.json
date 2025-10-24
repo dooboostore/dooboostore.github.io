@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "evoke",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪˈvoʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<감정·기억 등을> 일깨우다, 환기시키다",
+              "examples": [],
+              "originalMeaning": "<감정·기억 등을> 일깨우다, 환기시키다"
+            },
+            {
+              "meaning": "<웃음·갈채 등을> 자아내다",
+              "examples": [],
+              "originalMeaning": "<웃음·갈채 등을> 자아내다"
+            },
+            {
+              "meaning": "<죽은 사람의 영혼 등을> 불러내다",
+              "examples": [
+                {
+                  "text": "<b>evoke</b> spirits from the other world",
+                  "translatedText": "영혼을 저승에서 불러내다"
+                }
+              ],
+              "originalMeaning": "<죽은 사람의 영혼 등을> 불러내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bf9076e56b0343eea25ce738781dfc15",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bf9076e56b0343eea25ce738781dfc15",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "evokes"
+        },
+        {
+          "type": "과거형",
+          "value": "evoked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "evoking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "evoked"
+        }
+      ],
+      "aliasConjugation": "evokes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "78758333e754a6393fa2bda16683dc71",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 논단을 떠들썩하게 하였다",
+      "text": "The question evoked much controversy among the publicists."
+    }
+  ],
+  "isWordType": true
+}

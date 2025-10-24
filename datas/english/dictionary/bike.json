@@ -1,0 +1,145 @@
+{
+  "items": [
+    {
+      "entry": "bike",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "báik"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "자전거",
+              "examples": [],
+              "originalMeaning": "자전거"
+            },
+            {
+              "meaning": "(소형) 오토바이(motorbike)",
+              "examples": [],
+              "originalMeaning": "(소형) 오토바이(motorbike)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "자전거[오토바이]를 타고 가다",
+              "examples": [],
+              "originalMeaning": "자전거[오토바이]를 타고 가다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자전거[오토바이]로 나르다[갖다 주다]",
+              "examples": [],
+              "originalMeaning": "자전거[오토바이]로 나르다[갖다 주다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce890d3258d3489cb86eb243c0e6f5dd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce890d3258d3489cb86eb243c0e6f5dd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bikes"
+        },
+        {
+          "type": "과거형",
+          "value": "biked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "biking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "biked"
+        }
+      ],
+      "aliasConjugation": "bikes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "da53158ae3d66438056910cd8dea9463",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "bike",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(야생의) 벌집, (사람의) 무리",
+              "examples": [],
+              "originalMeaning": "(야생의) 벌집, (사람의) 무리"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(벌처럼) 무리 짓다, 모여들다",
+              "examples": [],
+              "originalMeaning": "(벌처럼) 무리 짓다, 모여들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/feed14e047034e0ea58d9ab810cb765d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/feed14e047034e0ea58d9ab810cb765d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "bikes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "facfbeb17e8de3ac25f6b90753f3d44f",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자전거를 잃어버려서 정말 아쉽다",
+      "text": "I'm kicking myself for missing my <b>bike</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자전거 고치는 것을 속성으로 마쳤다",
+      "text": "He made short work of fixing the <b>bike</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자전거를 벽에 대고 안으로 뛰어 들어갔다",
+      "text": "He propped his <b>bike</b> against the wall and ran inside."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자전거가 나무에 충돌했다",
+      "text": "The <b>bike</b> collided into a tree."
+    }
+  ],
+  "isWordType": true
+}

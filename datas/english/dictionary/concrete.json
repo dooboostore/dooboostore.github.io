@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "concrete",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːŋkriːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "구체적인, 구상적인, 유형(有形)의(opp. abstract)",
+              "examples": [
+                {
+                  "text": "a <b>concrete</b> example",
+                  "translatedText": "구체적인 예"
+                }
+              ],
+              "originalMeaning": "구체적인, 구상적인, 유형(有形)의(opp. abstract)"
+            },
+            {
+              "meaning": "현실의, 실제의; 명확한",
+              "examples": [],
+              "originalMeaning": "현실의, 실제의; 명확한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "콘크리트",
+              "examples": [],
+              "originalMeaning": "콘크리트"
+            },
+            {
+              "meaning": "콘크리트 포장면",
+              "examples": [],
+              "originalMeaning": "콘크리트 포장면"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "콘크리트를 바르다[로 굳히다], 콘크리트를 쓰다",
+              "examples": [],
+              "originalMeaning": "콘크리트를 바르다[로 굳히다], 콘크리트를 쓰다"
+            },
+            {
+              "meaning": "[kənkríːt] …을 응결시키다, 굳히다(solidify)",
+              "examples": [],
+              "originalMeaning": "[kənkríːt] …을 응결시키다, 굳히다(solidify)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/05b6fe88231a4b05a399b2148dcd431c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/05b6fe88231a4b05a399b2148dcd431c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "concretes"
+        },
+        {
+          "type": "과거형",
+          "value": "concreted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "concreting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "concreted"
+        }
+      ],
+      "aliasConjugation": "concretes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ddda7a6a4b92e982b76558ccefca9a64",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 건물은 콘크리트 벽을 기초로 하고 있다.",
+      "text": "The building stays <b>concrete</b> blocks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구체안을 제시하시오",
+      "text": "Show me a <b>concrete</b> plan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실제의 real;true;actual;<b>concrete</b>",
+      "text": ";practical;effective"
+    }
+  ],
+  "isWordType": true
+}

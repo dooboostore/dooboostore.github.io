@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "know",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "noʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "알다, 알고 있다, 이해하다",
+              "examples": [
+                {
+                  "text": "She is known as a pop singer.",
+                  "translatedText": "그녀는 팝송 가수로 알려져 있다."
+                }
+              ],
+              "originalMeaning": "알다, 알고 있다, 이해하다"
+            },
+            {
+              "meaning": "(잘) 알고 있다, …에 정통하다",
+              "examples": [
+                {
+                  "text": "<b>know</b> French very well",
+                  "translatedText": "프랑스어가 유창하다"
+                }
+              ],
+              "originalMeaning": "(잘) 알고 있다, …에 정통하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(틀림없이) 알고 있다 ((about, of))",
+              "examples": [],
+              "originalMeaning": "(틀림없이) 알고 있다 ((about, of))"
+            },
+            {
+              "meaning": "알다, (상황·일어난 일 등을) 인식하다",
+              "examples": [
+                {
+                  "text": "I don't <b>know</b> about that.",
+                  "translatedText": "그 일에 관해서는 모른다."
+                }
+              ],
+              "originalMeaning": "알다, (상황·일어난 일 등을) 인식하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지식(knowledge), 숙지(熟知)",
+              "examples": [],
+              "originalMeaning": "지식(knowledge), 숙지(熟知)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92c64abe5fd64b4d94ba0a899078b98f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92c64abe5fd64b4d94ba0a899078b98f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "knows"
+        },
+        {
+          "type": "과거형",
+          "value": "knew"
+        },
+        {
+          "type": "현재 분사",
+          "value": "knowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "known"
+        }
+      ],
+      "aliasConjugation": "knows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b88cb63ba4b6aa930962661259791c8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 한때 유명했으나 지금은 아무도 모른다",
+      "text": "She was famous once, but nobody <b>knows</b> her today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부앙하여 천지에 부끄러움이 없다",
+      "text": "My conscience is quite clear. or God <b>knows</b> I am innocent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신사의 정의는 예의를 아는 사람인 것이다",
+      "text": "A gentleman is defined as one who <b>knows</b> manners. or Good manners define the gentleman."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 것은 상식이다",
+      "text": "Everybody <b>knows</b> that. or It's a matter of common knowledge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "재회는 기약하기 어렵다",
+      "text": "We may not meet again. or God <b>knows</b> when we may be brought together again."
+    }
+  ],
+  "isWordType": true
+}

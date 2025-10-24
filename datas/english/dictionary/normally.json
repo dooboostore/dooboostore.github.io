@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "entry": "normally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nɔːrməli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "정상적으로, 순리적으로, 정상 상태로는, 정규(正規)로",
+              "examples": [],
+              "originalMeaning": "정상적으로, 순리적으로, 정상 상태로는, 정규(正規)로"
+            },
+            {
+              "meaning": "[문장 전체를 수식하여] 보통은",
+              "examples": [
+                {
+                  "text": "<b>Normally</b>, it takes me twenty minutes to get to work.",
+                  "translatedText": "출근하는 데 보통 20분 걸린다."
+                }
+              ],
+              "originalMeaning": "[문장 전체를 수식하여] 보통은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/406bfb31d8ba4dd89fda5c383659318c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/406bfb31d8ba4dd89fda5c383659318c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "187c9d653de7ae0eb8d5478863446096",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "normal",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈnɔːrml"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "표준의, 규격대로의, 정규의(opp. abnormal), 전형적인; 상태(常態)의, 보통의; 평균의",
+              "examples": [
+                {
+                  "text": "a <b>normal</b> temperature of the human body",
+                  "translatedText": "인체의 평온(平溫)"
+                }
+              ],
+              "originalMeaning": "표준의, 규격대로의, 정규의(opp. abnormal), 전형적인; 상태(常態)의, 보통의; 평균의"
+            },
+            {
+              "meaning": "<사람이> 정상인",
+              "examples": [],
+              "originalMeaning": "<사람이> 정상인"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "표준, 기준; 평균; 정상, 상태(常態)",
+              "examples": [],
+              "originalMeaning": "표준, 기준; 평균; 정상, 상태(常態)"
+            },
+            {
+              "meaning": "[수학] 법선(法線), 수직선; [물리] 평균량[가]",
+              "examples": [],
+              "originalMeaning": "[수학] 법선(法線), 수직선; [물리] 평균량[가]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2fbc4f2893af4edb991437673e8e169f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2fbc4f2893af4edb991437673e8e169f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f7d3167e75fc48e84a6635aa52f7f8d1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "맥박과 체온에는 이상이 없다",
+      "text": "Your pulse and temperature are <b>normal</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "강물은 평상시보다 5피트 불었다",
+      "text": "The river rose five feet high above <b>normal</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "출근하는 데 보통 20분 걸린다.",
+      "text": "<b>Normally</b>, it takes me twenty minutes to get to work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철도는 평상시 상태로 복구되었다",
+      "text": "The railroad service has been restored to <b>normal</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신의 혈압은 정상보다 훨씬 높다",
+      "text": "Your blood pressure is far higher than is <b>normal</b>."
+    }
+  ],
+  "isWordType": true
+}

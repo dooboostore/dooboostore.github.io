@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "boil",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɔ́il"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "끓다, 비등하다",
+              "examples": [],
+              "originalMeaning": "끓다, 비등하다"
+            },
+            {
+              "meaning": "<물 등이> 분출하다",
+              "examples": [],
+              "originalMeaning": "<물 등이> 분출하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "끓이다, 비등시키다",
+              "examples": [
+                {
+                  "text": "<b>boil</b> a kettle",
+                  "translatedText": "주전자의 물을 끓이다"
+                }
+              ],
+              "originalMeaning": "끓이다, 비등시키다"
+            },
+            {
+              "meaning": "삶다, <밥을> 짓다 (=cook)",
+              "examples": [
+                {
+                  "text": "<b>boil</b> rice",
+                  "translatedText": "밥을 짓다"
+                }
+              ],
+              "originalMeaning": "삶다, <밥을> 짓다 (=<span class='related_word' lang='en' >cook</span>)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "비등, 끓임, 삶음; 비등점",
+              "examples": [],
+              "originalMeaning": "비등, 끓임, 삶음; 비등점"
+            },
+            {
+              "meaning": "(급류의) 소용돌이 거품이 이는 곳",
+              "examples": [],
+              "originalMeaning": "(급류의) 소용돌이 거품이 이는 곳"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/28438f359a6e4e319eae35f681ba1bcc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/28438f359a6e4e319eae35f681ba1bcc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "boils"
+        },
+        {
+          "type": "과거형",
+          "value": "boiled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "boiling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "boiled"
+        }
+      ],
+      "aliasConjugation": "boils",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "825f335039b3ee83838fb81d2e59ecf4",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "boil",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "종기(腫氣), 부스럼(furuncle)",
+              "examples": [],
+              "originalMeaning": "종기(腫氣), 부스럼(furuncle)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ff618eb88b84926b7c144e0f66a4009",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ff618eb88b84926b7c144e0f66a4009",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "boils",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "79f7625374d711a59821596d7bf5675d",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "물이 펄펄 끓고 있다",
+      "text": "The water is boiling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "종기가 씻은 듯이 낫다",
+      "text": "A <b>boil</b> is all healed up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새벽달 보자고 초저녁부터 기다린다",
+      "text": "Don't build the sty before the litter comes. or <b>Boil</b> not pap before the child is born."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "끓인 우유에 더껑이가 생긴다.",
+      "text": "The boiled milk skims over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 삶은 달걀을 더 좋아했다.",
+      "text": "She preferred the eggs boiled."
+    }
+  ],
+  "isWordType": true
+}

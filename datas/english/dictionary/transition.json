@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "transition",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "træn│zɪʃn; træn│sɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "변천, 이행, 변화 ((from; to))",
+              "examples": [
+                {
+                  "text": "the <b>transition</b> from adolescence to adulthood",
+                  "translatedText": "청춘기에서 성인기로의 이행"
+                }
+              ],
+              "originalMeaning": "변천, 이행, 변화 ((from; to))"
+            },
+            {
+              "meaning": "과도기(= ~ period), 변환기",
+              "examples": [],
+              "originalMeaning": "과도기(= ~ period), 변환기"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이행[변천]하다",
+              "examples": [],
+              "originalMeaning": "이행[변천]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5a7dd0891ee24fe4a67f2e14533e6996",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5a7dd0891ee24fe4a67f2e14533e6996",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4d124601aba52d2226a3bcebbc823a95",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 과도기에 있다",
+      "text": "We are in a time of <b>transition</b>[<b>transition</b> stage]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전환기의 한국",
+      "text": "Korea in <b>transition</b>"
+    }
+  ],
+  "isWordType": true
+}

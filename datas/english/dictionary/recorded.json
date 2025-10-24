@@ -1,0 +1,176 @@
+{
+  "items": [
+    {
+      "entry": "record",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rikɔ́ːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기록하다, 적어 놓다; 기록에 남기다",
+              "examples": [
+                {
+                  "text": "<b>record</b> history in books",
+                  "translatedText": "역사를 책에 기록하다"
+                }
+              ],
+              "originalMeaning": "기록하다, 적어 놓다; 기록에 남기다"
+            },
+            {
+              "meaning": "녹음[녹화]하다",
+              "examples": [
+                {
+                  "text": "<b>record</b> the violin solo",
+                  "translatedText": "바이올린 독주를 녹음하다"
+                }
+              ],
+              "originalMeaning": "녹음[녹화]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기록하다",
+              "examples": [],
+              "originalMeaning": "기록하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/80c84ee101624831a93e87a19f393cdc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/80c84ee101624831a93e87a19f393cdc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "records"
+        },
+        {
+          "type": "과거형",
+          "value": "recorded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recording"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recorded"
+        }
+      ],
+      "aliasConjugation": "records",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5552bf22ad103a9eefded21c54792abb",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "record",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rékərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 기록, 등록, 등기; 증거, 증언, 설명",
+              "examples": [
+                {
+                  "text": "escape <b>record</b>",
+                  "translatedText": "기록에서 빠지다"
+                }
+              ],
+              "originalMeaning": "[UC/] 기록, 등록, 등기; 증거, 증언, 설명"
+            },
+            {
+              "meaning": "기록 (문서); 의사록(議事錄), 공판 기록",
+              "examples": [
+                {
+                  "text": "a <b>record</b> of accidents",
+                  "translatedText": "사고 기록"
+                }
+              ],
+              "originalMeaning": "기록 (문서); 의사록(議事錄), 공판 기록"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "기록적인",
+              "examples": [
+                {
+                  "text": "a <b>record</b> crop",
+                  "translatedText": "(기록적인) 대풍작"
+                }
+              ],
+              "originalMeaning": "기록적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6f913a54ec8e40f999bf18709b451fd4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6f913a54ec8e40f999bf18709b451fd4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "records",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0bd63a4d4d85e51faaf60836abb2c16d",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 좋은 경력을 가지고 있다",
+      "text": "He has a good <b>record</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 기록을 깰 만한 사람이 없다",
+      "text": "No one is beyond his <b>record</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 신간 레코드가 최근에 나왔다",
+      "text": "His new[latest] <b>record</b> is just out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 레코드는 톱텐에 낀다.",
+      "text": "That <b>record</b> numbers among the top ten."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 학교 성적은 상에 속한다",
+      "text": "His school work[<b>record</b>] is rather good."
+    }
+  ],
+  "isWordType": true
+}

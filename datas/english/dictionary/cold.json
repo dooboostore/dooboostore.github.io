@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "entry": "cold",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "koʊld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "추운, 찬, 차가운; 차게 한, 식은(채 먹는)",
+              "examples": [
+                {
+                  "text": "a <b>cold</b> wind",
+                  "translatedText": "찬 바람"
+                }
+              ],
+              "originalMeaning": "추운, 찬, 차가운; 차게 한, 식은(채 먹는)"
+            },
+            {
+              "meaning": "냉담한 ((in)), 쌀쌀한(unfriendly), 무정한",
+              "examples": [
+                {
+                  "text": "a <b>cold</b> heart",
+                  "translatedText": "냉정한 마음, 무정"
+                }
+              ],
+              "originalMeaning": "냉담한 ((in)), 쌀쌀한(unfriendly), 무정한"
+            },
+            {
+              "meaning": "냉철한(calm), 신중한",
+              "examples": [],
+              "originalMeaning": "냉철한(calm), 신중한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 추위, 냉기; 빙점 이하의 추위(frost)",
+              "examples": [
+                {
+                  "text": "die from <b>cold</b>",
+                  "translatedText": "얼어 죽다"
+                }
+              ],
+              "originalMeaning": "[U] 추위, 냉기; 빙점 이하의 추위(frost)"
+            },
+            {
+              "meaning": "[때때로 a ~] 감기, 고뿔",
+              "examples": [
+                {
+                  "text": "a head <b>cold</b> = a <b>cold</b> in the head[nose]",
+                  "translatedText": "코감기"
+                }
+              ],
+              "originalMeaning": "[때때로 a ~] 감기, 고뿔"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "완전히, 모두",
+              "examples": [],
+              "originalMeaning": "완전히, 모두"
+            },
+            {
+              "meaning": "갑자기, 예고 없이",
+              "examples": [],
+              "originalMeaning": "갑자기, 예고 없이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0f8ab7690dc7415ebcbbfb984d08e090",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0f8ab7690dc7415ebcbbfb984d08e090",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "colder"
+        },
+        {
+          "type": "최상급",
+          "value": "coldest"
+        }
+      ],
+      "aliasConjugation": "colder",
+      "aliasConjugationPos": "비교급",
+      "gdid": "5ac28952935432c2ca63ebd70d9562d4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 못 본 체했다",
+      "text": "He cut me <b>cold</b> on the street. or He gave me the <b>cold</b> shoulder on the street."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 길에서 나를 본체만체했다",
+      "text": "He gave me the <b>cold</b> shoulder in the street. or He cut me <b>cold</b> in the street."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아, 시원한 음료가 먹고 싶다!",
+      "text": "Oh for a <b>cold</b> drink!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "날씨가 점점 더 추워지고 있다.",
+      "text": "It is getting colder and colder."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바람이 살을 에듯 차가웠다.",
+      "text": "The wind struck <b>cold</b>."
+    }
+  ],
+  "isWordType": true
+}

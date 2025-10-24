@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "traffic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtræfɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사람·차·배·비행기 등의) 교통, 왕래, 통행; 교통량, 수송량",
+              "examples": [
+                {
+                  "text": "control[regulate] <b>traffic</b>",
+                  "translatedText": "교통을 정리하다"
+                }
+              ],
+              "originalMeaning": "(사람·차·배·비행기 등의) 교통, 왕래, 통행; 교통량, 수송량"
+            },
+            {
+              "meaning": "[집합적] (통행하는) 사람, 자동차",
+              "examples": [],
+              "originalMeaning": "[집합적] (통행하는) 사람, 자동차"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "매매[거래, 무역]하다 ((with)); (특히 불법적인) 거래를 하다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>traffic</b> in drugs",
+                  "translatedText": "마약을 밀매하다"
+                }
+              ],
+              "originalMeaning": "매매[거래, 무역]하다 ((with)); (특히 불법적인) 거래를 하다 ((in))"
+            },
+            {
+              "meaning": "교섭을 갖다(deal) ((with))",
+              "examples": [],
+              "originalMeaning": "교섭을 갖다(deal) ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "장사[매매, 교환]하다, (부정) 거래하다",
+              "examples": [],
+              "originalMeaning": "장사[매매, 교환]하다, (부정) 거래하다"
+            },
+            {
+              "meaning": "희생시키다, <명예 등을> 팔다 ((away))",
+              "examples": [],
+              "originalMeaning": "희생시키다, <명예 등을> 팔다 ((away))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3c28b70dda6a4147a5c93de82271a8b1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3c28b70dda6a4147a5c93de82271a8b1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "traffics"
+        },
+        {
+          "type": "과거형",
+          "value": "trafficked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "trafficking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "trafficked"
+        }
+      ],
+      "aliasConjugation": "traffics",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cf6ede0ad2a4e36f9980a7e2f86f72d2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 교통 규칙 위반이다",
+      "text": "This is against <b>traffic</b> rules."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교통이 몹시 정체되어 있었다.",
+      "text": "The <b>traffic</b> was very congested."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금 교통의 흐름은 순조롭다",
+      "text": "<b>Traffic</b> is now flowing smoothly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도시의 교통 소음이 크다",
+      "text": "The sound of city <b>traffic</b> is loud."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교통 법규는 꼭 지켜야 한다",
+      "text": "You must obey <b>traffic</b> regulations."
+    }
+  ],
+  "isWordType": true
+}

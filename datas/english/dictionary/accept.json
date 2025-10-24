@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "accept",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əkˈsept"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<선물 등을 기꺼이> 받아들이다, 받다; <여자가 남자의> 구혼에 응하다 (=receive)",
+              "examples": [],
+              "originalMeaning": "<선물 등을 기꺼이> 받아들이다, 받다; <여자가 남자의> 구혼에 응하다 (=<span class='related_word' lang='en' >receive</span>)"
+            },
+            {
+              "meaning": "<초대·신청·임명 등을> 수락하다, 받아들이다",
+              "examples": [],
+              "originalMeaning": "<초대·신청·임명 등을> 수락하다, 받아들이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(초대·제의 등을) 수락하다, 받아들이다 ((of))",
+              "examples": [
+                {
+                  "text": "The envoys accepted of the terms offered.",
+                  "translatedText": "그 사절은 제시된 조건을 수락했다."
+                }
+              ],
+              "originalMeaning": "(초대·제의 등을) 수락하다, 받아들이다 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a678096358aa4a329d4b95ee8068d803",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a678096358aa4a329d4b95ee8068d803",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accepts"
+        },
+        {
+          "type": "과거형",
+          "value": "accepted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accepting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accepted"
+        }
+      ],
+      "aliasConjugation": "accepts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1319b9c12160219054b8bfd5f0e7fbca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 받아들이고 싶지 않다.",
+      "text": "I hate to <b>accept</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그것을 받아들이지 않을 수 없다",
+      "text": "I cannot but <b>accept</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 생각은 사회적 통념이다",
+      "text": "The idea is universally accepted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 제의의 수락에 동의합니다.",
+      "text": "I am agreed to <b>accept</b> the offer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 슬그머니 뇌물을 받았다",
+      "text": "He accepted bribes on the quiet."
+    }
+  ],
+  "isWordType": true
+}

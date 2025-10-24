@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "occasion",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkeɪʒn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 on … ~으로] (특수한) 경우, 때 ((of, for))",
+              "examples": [
+                {
+                  "text": "on this happy[sad] <b>occasion</b>",
+                  "translatedText": "이토록 즐거운[슬픈] 때에"
+                }
+              ],
+              "originalMeaning": "[보통 on … ~으로] (특수한) 경우, 때 ((of, for))"
+            },
+            {
+              "meaning": "특별한 일, 행사, 경사; 제전, 의식",
+              "examples": [
+                {
+                  "text": "on this annual <b>occasion</b>",
+                  "translatedText": "해마다 있는 이 축전에"
+                }
+              ],
+              "originalMeaning": "특별한 일, 행사, 경사; 제전, 의식"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "생기게 하다, …의 원인이 되다, 야기시키다",
+              "examples": [
+                {
+                  "text": "His impolite remarks <b>occasion</b> ed the quarrel.",
+                  "translatedText": "그의 버릇없는 말이 말다툼을 야기시켰다."
+                }
+              ],
+              "originalMeaning": "생기게 하다, …의 원인이 되다, 야기시키다"
+            },
+            {
+              "meaning": "…에게 <걱정 등을> 끼치다, …에게 …시키다",
+              "examples": [
+                {
+                  "text": "The boy's behavior occasioned his parents much anxiety.",
+                  "translatedText": "소년의 행동이 부모에게 많은 걱정을 끼쳤다."
+                }
+              ],
+              "originalMeaning": "…에게 <걱정 등을> 끼치다, …에게 …시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ed54fe25074e498d9f55063a87ab4824",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ed54fe25074e498d9f55063a87ab4824",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "occasions"
+        },
+        {
+          "type": "과거형",
+          "value": "occasioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "occasioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "occasioned"
+        }
+      ],
+      "aliasConjugation": "occasions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "829ecd371fbebd67d598a7b673276f72",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 세 번 만난 적이 있다.",
+      "text": "We met on three occasions."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이야기가 그 경우에 꼭 들어맞았다.",
+      "text": "The story came pat to the <b>occasion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 다음 기회로 미루겠습니다",
+      "text": "I will reserve it for another <b>occasion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 무엇을 맡겨도 능히 감당해 낼 것이다",
+      "text": "He will rise[be equal] to any <b>occasion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 기회를 이용하여 한마디 하겠다",
+      "text": "I take this opportunity[<b>occasion</b>] to say a word."
+    }
+  ],
+  "isWordType": true
+}

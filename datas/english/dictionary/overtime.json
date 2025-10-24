@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "overtime",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│oʊvərtaɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "규정 외 노동 시간; 시간 외 노동, 초과 근무, 잔업",
+              "examples": [
+                {
+                  "text": "be paid extra for <b>overtime</b>",
+                  "translatedText": "잔업 수당을 받다"
+                }
+              ],
+              "originalMeaning": "규정 외 노동 시간; 시간 외 노동, 초과 근무, 잔업"
+            },
+            {
+              "meaning": "초과 근무 수당",
+              "examples": [],
+              "originalMeaning": "초과 근무 수당"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "규정 시간 외에",
+              "examples": [
+                {
+                  "text": "work <b>overtime</b>",
+                  "translatedText": "잔업하다, 시간 외로 일하다"
+                }
+              ],
+              "originalMeaning": "규정 시간 외에"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "시간 외의, 초과 근무의",
+              "examples": [
+                {
+                  "text": "<b>overtime</b> work[pay]",
+                  "translatedText": "초과 근무[근무 수당]"
+                }
+              ],
+              "originalMeaning": "시간 외의, 초과 근무의"
+            },
+            {
+              "meaning": "규정 시간을 넘은",
+              "examples": [],
+              "originalMeaning": "규정 시간을 넘은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/52719b2035c141e1a9c214e9a04e848a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/52719b2035c141e1a9c214e9a04e848a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d05257a271d3183374ddce2b28d66287",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시간 외 근무에는 초과 수당을 받는다",
+      "text": "You are paid extra for <b>overtime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요즘 연장 근무가 많군요",
+      "text": "Lately you've been putting in a lot of <b>overtime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 코치에 대한 초과 수당의 지급을 중단하였다.",
+      "text": "They have ceased to pay coaches for <b>overtime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "게임은 연장전으로 들어갔다.",
+      "text": "The game went (into) <b>overtime</b>."
+    }
+  ],
+  "isWordType": true
+}

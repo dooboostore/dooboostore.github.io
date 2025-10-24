@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "otherwise",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈʌðərwaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[접속사적으로] 만약 그렇지 않으면(else, or)",
+              "examples": [
+                {
+                  "text": "Start at once, <b>otherwise</b> you will be late.",
+                  "translatedText": "곧 떠나지 않으면 늦는다."
+                }
+              ],
+              "originalMeaning": "[접속사적으로] 만약 그렇지 않으면(else, or)"
+            },
+            {
+              "meaning": "다른 방법으로 ((than)); 그렇지 않게, 다른 상태로, 다르게, 달리",
+              "examples": [
+                {
+                  "text": "unless <b>otherwise</b> noted",
+                  "translatedText": "달리 언급이 없으면"
+                }
+              ],
+              "originalMeaning": "다른 방법으로 ((than)); 그렇지 않게, 다른 상태로, 다르게, 달리"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "다른",
+              "examples": [
+                {
+                  "text": "Some are wise, some are <b>otherwise</b>.",
+                  "translatedText": "[속담] 약은 자도 있고 그렇지 않은 자도 있다."
+                }
+              ],
+              "originalMeaning": "다른"
+            },
+            {
+              "meaning": "그렇지 않았더라면 …인[일지도 모르는]",
+              "examples": [
+                {
+                  "text": "his <b>otherwise</b> equals",
+                  "translatedText": "다른 점에서는 그에게 필적하는 사람들"
+                }
+              ],
+              "originalMeaning": "그렇지 않았더라면 …인[일지도 모르는]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0cb23e8c6bea4c4a8cf6879aa95a277b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0cb23e8c6bea4c4a8cf6879aa95a277b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "588fad366de8980319407cc8e550cdf0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돈이 있었기에망정이지 아니면 창피당할 뻔했다",
+      "text": "It was good that I had money with me, <b>otherwise</b> I would have been put to shame."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조건이 달랐더라면 그는 이겼을지도 몰라.",
+      "text": "<b>Otherwise</b> he might have won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "곧 떠나지 않으면 늦는다.",
+      "text": "Start at once, <b>otherwise</b> you will be late."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "약은 자도 있고 그렇지 않은 자도 있다.",
+      "text": "Some are wise, some are <b>otherwise</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 될 수 밖에 없는 일도 있다.",
+      "text": "Some things can’t be <b>otherwise</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "producer",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prə│duːsə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "생산자(opp. consumer), 제작자",
+              "examples": [
+                {
+                  "text": "producers'price",
+                  "translatedText": "생산자 가격"
+                }
+              ],
+              "originalMeaning": "생산자(opp. consumer), 제작자"
+            },
+            {
+              "meaning": "(극·영화·TV의) 프로듀서, 제작자",
+              "examples": [],
+              "originalMeaning": "(극·영화·TV의) 프로듀서, 제작자"
+            },
+            {
+              "meaning": "[영] [연극] 연출가([미] director); [미] (극장의) 경영자, 흥행주(主)",
+              "examples": [],
+              "originalMeaning": "[영] [연극] 연출가([미] director); [미] (극장의) 경영자, 흥행주(主)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a2f98512e1314209a5b15759396ae642",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a2f98512e1314209a5b15759396ae642",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e0c3092016e67afb6f46dc7f85b0ffa3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제작자와 연출가의 1인 2역을 한다.",
+      "text": "He doubles as <b>producer</b> and director."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국은 세계 제일의 인삼의 산지이다",
+      "text": "Korea is the greatest <b>producer</b> of ginseng in the world."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "생산자는 값이 오를 것을 예상하여 매석하고 있다",
+      "text": "Producers are holding off selling in anticipation of a rise in price."
+    }
+  ],
+  "isWordType": true
+}

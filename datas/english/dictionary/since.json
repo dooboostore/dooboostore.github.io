@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "since",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sɪns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "[종종 ever ~로, 계속을 나타내는 완료형의 동사를 가진 주절 뒤에서] …이래 (죽), …한 때부터 내내, 하고 나서는 내내",
+              "examples": [
+                {
+                  "text": "I have known her <b>since</b> she was a child.",
+                  "translatedText": "어린이였을 때부터 그녀를 죽 알고 있다."
+                }
+              ],
+              "originalMeaning": "[종종 ever ~로, 계속을 나타내는 완료형의 동사를 가진 주절 뒤에서] …이래 (죽), …한 때부터 내내, 하고 나서는 내내"
+            },
+            {
+              "meaning": "[보통 경험을 나타내는 완료형의 동사를 가진 주절에 뒤이어] …한 때부터(지금[그때]까지 사이에) ((",
+              "examples": [
+                {
+                  "text": "He has learned a lot <b>since</b> he has been here.",
+                  "translatedText": "그는 이곳에 오고 나서부터는 많은 것을 배웠다. ((★ <b>since</b> 절 안의 완료형은 현재도 거기에 살고 있음을 나타냄))"
+                }
+              ],
+              "originalMeaning": "[보통 경험을 나타내는 완료형의 동사를 가진 주절에 뒤이어] …한 때부터(지금[그때]까지 사이에) (("
+            }
+          ]
+        },
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "[종종 ever ~로, 보통 계속을 나타내는 완료형의 동사와 함께] …이래 (죽), …부터 (내내)",
+              "examples": [
+                {
+                  "text": "He hasn't eaten anything <b>since</b> yesterday.",
+                  "translatedText": "그는 어제부터 아무것도 먹지 않았다."
+                }
+              ],
+              "originalMeaning": "[종종 ever ~로, 보통 계속을 나타내는 완료형의 동사와 함께] …이래 (죽), …부터 (내내)"
+            },
+            {
+              "meaning": "[It is … ~ …의 구문으로] …이래 (…의 시간[기간]이 되다)",
+              "examples": [
+                {
+                  "text": "It's a long time <b>since</b> her death.",
+                  "translatedText": "그녀가 죽은 지 꽤 오래되었다."
+                }
+              ],
+              "originalMeaning": "[It is … ~ …의 구문으로] …이래 (…의 시간[기간]이 되다)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[대개 완료형의 동사와 함께]",
+              "examples": [],
+              "originalMeaning": "[대개 완료형의 동사와 함께]"
+            },
+            {
+              "meaning": "[종종 ever ~로] (그때) 이래 (죽), 그 뒤[후] 줄곧",
+              "examples": [
+                {
+                  "text": "He went over to Italy five years ago and I haven't heard from him (ever) <b>since</b>.",
+                  "translatedText": "그는 5년 전에 이탈리아로 건너갔는데 그 이후로는 그에게서 소식을 들은 적이 없다."
+                }
+              ],
+              "originalMeaning": "[종종 ever ~로] (그때) 이래 (죽), 그 뒤[후] 줄곧"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b9941d7a1fd444baf8af2c581c907e0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b9941d7a1fd444baf8af2c581c907e0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "461a76170e4900ec3d7fb6848a73e1f0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다름 아닌 당신의 부탁이니까 최선을 다하지요",
+      "text": "<b>Since</b> it is you who ask it, I will try my best. or <b>Since</b> the request comes from you (and none other), I will try my best."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 후로는 그를 만나지 못했다",
+      "text": "I haven't seen him <b>since</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전과 다름이 없었다",
+      "text": "He has not changed <b>since</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 후 내내 여기서 살고 있다",
+      "text": "I've lived here ever <b>since</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 후로 그를 만나지 못했다.",
+      "text": "I have not seen him <b>since</b>."
+    }
+  ],
+  "isWordType": true
+}

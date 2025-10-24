@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "subscribe",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səbˈskraɪb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<어떤 금액을> (…에) 기부할 것을 약속[서약]하다, 기부하다(contribute); 출자하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>subscribe</b> a large sum to charities",
+                  "translatedText": "자선 사업에 큰 금액을 기부하다"
+                }
+              ],
+              "originalMeaning": "<어떤 금액을> (…에) 기부할 것을 약속[서약]하다, 기부하다(contribute); 출자하다 ((to))"
+            },
+            {
+              "meaning": "…에 서명하여 동의[증명]하다",
+              "examples": [
+                {
+                  "text": "<b>subscribe</b> a contract",
+                  "translatedText": "계약서에 서명하다"
+                }
+              ],
+              "originalMeaning": "…에 서명하여 동의[증명]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(서명하여) (…에) 기부를 약속하다, 기부를 하다 ((to, for)); (주식 등을) 청약하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>subscribe</b> for ten dollars",
+                  "translatedText": "10달러를 기부하다"
+                }
+              ],
+              "originalMeaning": "(서명하여) (…에) 기부를 약속하다, 기부를 하다 ((to, for)); (주식 등을) 청약하다 ((for))"
+            },
+            {
+              "meaning": "(의견 등에) (서명하여) 동의[찬성, 증명]하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>subscribe</b> to a person's opinion",
+                  "translatedText": "…의 의견에 찬동하다"
+                }
+              ],
+              "originalMeaning": "(의견 등에) (서명하여) 동의[찬성, 증명]하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a39987048e3c4dc28f7203cc4fcd0675",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a39987048e3c4dc28f7203cc4fcd0675",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "subscribes"
+        },
+        {
+          "type": "과거형",
+          "value": "subscribed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "subscribing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "subscribed"
+        }
+      ],
+      "aliasConjugation": "subscribes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4e9d386af08b2cdac26cb1bd91720c91",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 잡지를 몇 가지 예약했다",
+      "text": "We have <b>subscribed</b> for several magazines."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "세상의 잘못된 생각에 동참할 생각은 없다.",
+      "text": "I will not <b>subscribe</b> to popular fallacies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 백만 달러어치의 주식을 청약할 수 있다",
+      "text": "You may <b>subscribe</b> for one million dollars' worth of shares."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너의 의견에 동의한다",
+      "text": "I <b>subscribe</b> to your opinion. or I agree with you."
+    }
+  ],
+  "isWordType": true
+}

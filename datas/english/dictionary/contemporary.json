@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "entry": "contemporary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kən│tempəreri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "같은 시대의 ((with)), 그 당시의",
+              "examples": [
+                {
+                  "text": "<b>contemporary</b> writers",
+                  "translatedText": "동시대의 작가들"
+                }
+              ],
+              "originalMeaning": "같은 시대의 ((with)), 그 당시의"
+            },
+            {
+              "meaning": "현대의, 당대의(modern) ((보통은 예술이나 추상적인 것에 관해서 씀))",
+              "examples": [
+                {
+                  "text": "<b>contemporary</b> literature[writers]",
+                  "translatedText": "현대 문학[작가들]"
+                }
+              ],
+              "originalMeaning": "현대의, 당대의(modern) ((보통은 예술이나 추상적인 것에 관해서 씀))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "같은 시대의 사람, 현대인",
+              "examples": [],
+              "originalMeaning": "같은 시대의 사람, 현대인"
+            },
+            {
+              "meaning": "동기생, 동년배의 사람",
+              "examples": [],
+              "originalMeaning": "동기생, 동년배의 사람"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0b8a6515040740058a5a141399cac1bd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0b8a6515040740058a5a141399cac1bd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "contemporaries"
+        }
+      ],
+      "aliasConjugation": "contemporaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "8fccce950a0005ff54f16fd94244d58b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모차르트는 하이든과 동시대의 사람이다",
+      "text": "Mozart was a <b>contemporary</b> of Haydn."
+    }
+  ],
+  "isWordType": true
+}

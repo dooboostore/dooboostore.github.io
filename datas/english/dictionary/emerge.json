@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "emerge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "iˈmɜːrdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(물속·어둠 속 등에서) 나오다, 나타나다(appear) ((from))",
+              "examples": [
+                {
+                  "text": "The full moon will soon <b>emerge</b> from behind the clouds.",
+                  "translatedText": "보름달이 곧 구름 뒤에서 나타날 것이다."
+                }
+              ],
+              "originalMeaning": "(물속·어둠 속 등에서) 나오다, 나타나다(appear) ((from))"
+            },
+            {
+              "meaning": "(빈곤·낮은 신분 등에서) 벗어나다, 빠져 나오다(come out) ((from))",
+              "examples": [
+                {
+                  "text": "<b>emerge</b> frompoverty[difficulty]",
+                  "translatedText": "빈곤에서 벗어나다[곤란에서 빠져 나오다]"
+                }
+              ],
+              "originalMeaning": "(빈곤·낮은 신분 등에서) 벗어나다, 빠져 나오다(come out) ((from))"
+            },
+            {
+              "meaning": "<새로운 사실 등이> (조사 결과 등에서) 드러나다, 알려지다, 판명되다; <곤란·문제 등이> 일어나다(arise)",
+              "examples": [],
+              "originalMeaning": "<새로운 사실 등이> (조사 결과 등에서) 드러나다, 알려지다, 판명되다; <곤란·문제 등이> 일어나다(arise)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f27f828474424afabe5aa7d9cff5589a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f27f828474424afabe5aa7d9cff5589a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "emerges"
+        },
+        {
+          "type": "과거형",
+          "value": "emerged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "emerging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "emerged"
+        }
+      ],
+      "aliasConjugation": "emerges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6d1ae8b5a2ffef8aee503cff28dcabc6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해가 구름 사이에서 나왔다",
+      "text": "The sun emerged from behind the clouds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달이 구름 사이로 나타났다",
+      "text": "The moon came out[emerged] from behind the cloud."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기차가 터널에서 나왔다",
+      "text": "The train emerged from a tunnel."
+    }
+  ],
+  "isWordType": true
+}

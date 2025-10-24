@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "library",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│laɪbreri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "도서관, 도서실",
+              "examples": [
+                {
+                  "text": "a traveling <b>library</b>",
+                  "translatedText": "순회 문고[도서관]"
+                }
+              ],
+              "originalMeaning": "도서관, 도서실"
+            },
+            {
+              "meaning": "(신문사 등의) 자료실(morgue)",
+              "examples": [],
+              "originalMeaning": "(신문사 등의) 자료실(morgue)"
+            },
+            {
+              "meaning": "장서, (개인의) 문고, 서재",
+              "examples": [
+                {
+                  "text": "a private <b>library</b>",
+                  "translatedText": "개인 장서"
+                }
+              ],
+              "originalMeaning": "장서, (개인의) 문고, 서재"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d7394d6b2b88470cbaeec8c60d7f1f2a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d7394d6b2b88470cbaeec8c60d7f1f2a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "libraries"
+        }
+      ],
+      "aliasConjugation": "libraries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "02411fd7b8cb7bc3b7cb78d00ffeeffb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도서관은 9시에 문을 연다",
+      "text": "The <b>library</b> opens at 9 o'clock."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "형은 책을 많이 가지고 있다",
+      "text": "My brother has a large <b>library</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 서재를 마음대로 이용하십시오",
+      "text": "My <b>library</b> is at your disposal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도서관은 여기서 가마아득히 멀다",
+      "text": "The <b>library</b> is far away from here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 도서관에는 참고 서적이 많다",
+      "text": "This <b>library</b> contains many reference books."
+    }
+  ],
+  "isWordType": true
+}

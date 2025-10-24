@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "investigate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈvestɪɡeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "조사하다, 수사하다, 연구하다 (=examine)",
+              "examples": [
+                {
+                  "text": "The police <b>investigate</b> d the cause of the car accident.",
+                  "translatedText": "경찰은 그 자동차 사고의 원인을 조사했다."
+                }
+              ],
+              "originalMeaning": "조사하다, 수사하다, 연구하다 (=<span class='related_word' lang='en' >examine</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2a6524318cc3448ba917df0d0a1df550",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2a6524318cc3448ba917df0d0a1df550",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "investigates"
+        },
+        {
+          "type": "과거형",
+          "value": "investigated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "investigating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "investigated"
+        }
+      ],
+      "aliasConjugation": "investigates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f5cd5f15eec7728e189f1fd4fab69856",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "원인은 철저히 구명되야 한다",
+      "text": "The cause should be thoroughly investigated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 탐정에게 그를 수사하도록 했다.",
+      "text": "They had him investigated by a detective."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 그 자동차 사고의 원인을 조사했다.",
+      "text": "The police investigated the cause of the car accident."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기자는 슬럼가의 환경을 탐방했다",
+      "text": "The reporter looked into[investigated] the conditions in the slums."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사건을 수사하기 위해서 경찰관이 총동원되었다",
+      "text": "All the policemen were called out[mobilized] to <b>investigate</b> the case."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "agency",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈeɪdʒənsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대리점, 특약점, (타인의 일의) 대행 회사; 알선소, 알선업자",
+              "examples": [
+                {
+                  "text": "a general <b>agency</b>",
+                  "translatedText": "총대리점"
+                }
+              ],
+              "originalMeaning": "대리점, 특약점, (타인의 일의) 대행 회사; 알선소, 알선업자"
+            },
+            {
+              "meaning": "[U] 대리, 대행; (…의) 대리권 ((for)); 대리업[행위]",
+              "examples": [],
+              "originalMeaning": "[U] 대리, 대행; (…의) 대리권 ((for)); 대리업[행위]"
+            },
+            {
+              "meaning": "[종종 A~] (정부) 기관, …청(廳), …국(局)",
+              "examples": [],
+              "originalMeaning": "[종종 A~] (정부) 기관, …청(廳), …국(局)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19a4adb62af543818cbf26b759f10c08",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19a4adb62af543818cbf26b759f10c08",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "agencies"
+        }
+      ],
+      "aliasConjugation": "agencies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "96811570be1ee6ab8b9fcb984e03bb19",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국제 투자 보증 기구",
+      "text": "Multilateral Investment Guarantee <b>Agency</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 이사는 낙하산 인사 중의 한 사람이다",
+      "text": "He is one of the executives sent from the government <b>agency</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우주 개발 사업단",
+      "text": "National Space Development <b>Agency</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "환경 보호국",
+      "text": "Environmental Protection <b>Agency</b>"
+    }
+  ],
+  "isWordType": true
+}

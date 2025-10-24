@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "picture",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpɪktʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "그림, 회화, 초상화",
+              "examples": [
+                {
+                  "text": "hang a <b>picture</b> on the wall",
+                  "translatedText": "벽에 그림을 걸다"
+                }
+              ],
+              "originalMeaning": "그림, 회화, 초상화"
+            },
+            {
+              "meaning": "사진",
+              "examples": [
+                {
+                  "text": "wedding <b>picture</b> s",
+                  "translatedText": "결혼 사진"
+                }
+              ],
+              "originalMeaning": "사진"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "그리다, 그림으로 그리다, 묘사하다",
+              "examples": [
+                {
+                  "text": "<b>picture</b> the scene",
+                  "translatedText": "그 광경을 그림으로 그리다"
+                }
+              ],
+              "originalMeaning": "그리다, 그림으로 그리다, 묘사하다"
+            },
+            {
+              "meaning": "마음에 그리다, 상상하다",
+              "examples": [
+                {
+                  "text": "I could not <b>picture</b> myself doing such a thing.",
+                  "translatedText": "나 자신이 그런 일을 하리라곤 상상할 수 없었다."
+                }
+              ],
+              "originalMeaning": "마음에 그리다, 상상하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b261f93ebf94a85a8cc9114e615e535",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b261f93ebf94a85a8cc9114e615e535",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pictures"
+        },
+        {
+          "type": "과거형",
+          "value": "pictured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "picturing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pictured"
+        }
+      ],
+      "aliasConjugation": "pictures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "99f5e93cce6be7574ad9b78df06c4fd9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 영화, 참 신나더라",
+      "text": "The <b>picture</b> thrilled[excited] me a great deal. or I’ve got a much of fun out of the <b>picture</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 그림에는 기백이 없다.",
+      "text": "His <b>picture</b> lacks soul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그림이 비뚜름하게 걸려 있다",
+      "text": "The <b>picture</b> hung askew."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 개의 사진을 찍었다",
+      "text": "I took a <b>picture</b> of my dog."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 그림을 볼 줄 안다",
+      "text": "She has an eye for <b>pictures</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "dominate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│dɑːmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "지배[위압]하다",
+              "examples": [
+                {
+                  "text": "a communist-dominated organization",
+                  "translatedText": "공산주의자가 지배하는 단체"
+                }
+              ],
+              "originalMeaning": "지배[위압]하다"
+            },
+            {
+              "meaning": "<격정 등을> 억누르다, 조절하다",
+              "examples": [],
+              "originalMeaning": "<격정 등을> 억누르다, 조절하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "지배력을 발휘하다, 위압하다, 우위를 차지하다 ((over))",
+              "examples": [],
+              "originalMeaning": "지배력을 발휘하다, 위압하다, 우위를 차지하다 ((over))"
+            },
+            {
+              "meaning": "우뚝 솟다, 탁월하다",
+              "examples": [],
+              "originalMeaning": "우뚝 솟다, 탁월하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a1e78e38f396487fb2be3b1a4c65499b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a1e78e38f396487fb2be3b1a4c65499b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dominates"
+        },
+        {
+          "type": "과거형",
+          "value": "dominated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dominating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dominated"
+        }
+      ],
+      "aliasConjugation": "dominates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "195633e448ad81df1b2ce496f4158043",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 동상은 도시에 우뚝 서 있었다",
+      "text": "The statue dominated the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 정당은 우익계가 지배한다",
+      "text": "The party is dominated by its right wing."
+    }
+  ],
+  "isWordType": true
+}

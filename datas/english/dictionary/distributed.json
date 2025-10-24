@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "distributed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "distríbju:tid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(널리) 분포된, 광범위한, [언어] 광역성의, [컴퓨터] 분산된 ((다수의 컴퓨터로 분산 처리되는))",
+              "examples": [],
+              "originalMeaning": "(널리) 분포된, 광범위한, [언어] 광역성의, [컴퓨터] 분산된 ((다수의 컴퓨터로 분산 처리되는))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8e404ac9b4044e19af19071e0bc9aebd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8e404ac9b4044e19af19071e0bc9aebd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9441bd8f08c1f1b2ea0fa792894464d3",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "distribute",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈstrɪbjuːt; ˈdɪstrɪbjuːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "분배하다, 배분하다, 배당하다, 벼르다; 배포하다, 배급하다 ((among, to)); <상품 등을> 유통시키다, 공급하다",
+              "examples": [
+                {
+                  "text": "<b>distribute</b> pamphlets to the audience[among those present]",
+                  "translatedText": "청중[참석자들]에게 소책자를 배포하다"
+                }
+              ],
+              "originalMeaning": "분배하다, 배분하다, 배당하다, 벼르다; 배포하다, 배급하다 ((among, to)); <상품 등을> 유통시키다, 공급하다"
+            },
+            {
+              "meaning": "살포하다 ((at)), 분포시키다 ((over)), (골고루) 퍼뜨리다, 뿌리다; [보통 수동형으로] <인종·동식물이> 분포되다 ((over, through)) (→distributed)",
+              "examples": [
+                {
+                  "text": "<b>distribute</b> ashes over a field",
+                  "translatedText": "밭에 재를 뿌리다"
+                }
+              ],
+              "originalMeaning": "살포하다 ((at)), 분포시키다 ((over)), (골고루) 퍼뜨리다, 뿌리다; [보통 수동형으로] <인종·동식물이> 분포되다 ((over, through)) (→<span class='related_word' lang='en' ><b>distributed</b></span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "분배하다, 살포하다",
+              "examples": [],
+              "originalMeaning": "분배하다, 살포하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9d909d5c198f4776a03e89991e51b33a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9d909d5c198f4776a03e89991e51b33a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "distributes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e05c6bfaca8d7b0f0d05a405896e64ff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 식물은 광범위하게 분포되어 있다",
+      "text": "This plant grows[is <b>distributed</b>] over a wide area."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 곤충은 온 세계에 널리 분포되어 있다.",
+      "text": "The insect is <b>distributed</b> widely throughout the world."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수재민들에게 모포가 무상으로 배급되었다",
+      "text": "Blankets were <b>distributed</b> free of charge to flood victims."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열흘치 쌀이 배급되었다",
+      "text": "Ten days' ration of rice was <b>distributed</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "유산은 형제들에게 균분되었다",
+      "text": "The inheritance was equally <b>distributed</b> between[among] the brothers."
+    }
+  ],
+  "isWordType": true
+}

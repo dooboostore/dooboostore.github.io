@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "entry": "birthplace",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│bɜːrθpleɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "출생지, 고향; 발상지, 근원지 ((of))",
+              "examples": [],
+              "originalMeaning": "출생지, 고향; 발상지, 근원지 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ae94368aaa904969afb954467d1139c5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ae94368aaa904969afb954467d1139c5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f255db02941232f023c4f97732e1f385",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울은 내가 난 본고장이다",
+      "text": "Seoul is my <b>birthplace</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영국은 의회 정치의 본바닥이다",
+      "text": "England is the <b>birthplace</b> of parliamentary government."
+    }
+  ],
+  "isWordType": true
+}

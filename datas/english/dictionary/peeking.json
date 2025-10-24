@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "peek",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "piːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "살짝 들여다보다, 엿보다(peep) ((in, out, at, through))",
+              "examples": [],
+              "originalMeaning": "살짝 들여다보다, 엿보다(peep) ((in, out, at, through))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "엿봄",
+              "examples": [
+                {
+                  "text": "steal a <b>peek</b>",
+                  "translatedText": "살짝 엿보다"
+                }
+              ],
+              "originalMeaning": "엿봄"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7121e290fadb4e5cbba739ac604817b6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7121e290fadb4e5cbba739ac604817b6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "peeks"
+        },
+        {
+          "type": "과거형",
+          "value": "peeked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "peeking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "peeked"
+        }
+      ],
+      "aliasConjugation": "peeks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9b78ef6b3ec01063dee2051cbaa5a6b8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이불귀가 떠들썩하기에 들여다보니 고양이가 자고 있었다",
+      "text": "Wondering why the end of the quilt was raised, I peeked in and found a cat sleeping under it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조금 전에 슬며시 영업부를 들여다보았다",
+      "text": "I took a casual <b>peek</b> into the sales department a short while ago."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "selected",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "siléktid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "선택된(chosen), 선발된(picked out), 정선[엄선]된",
+              "examples": [],
+              "originalMeaning": "선택된(chosen), 선발된(picked out), 정선[엄선]된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5c62bf0208764dbf859f80ba39dbf903",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5c62bf0208764dbf859f80ba39dbf903",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4f7bc77933dee9b914f95786498f3925",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "select",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sɪˈlekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고르다, 선택하다, 선발하다; 발탁[발췌]하다; 뽑다, 선출하다 (=choose)",
+              "examples": [
+                {
+                  "text": "<b>select</b> the best out of[from, among] many books",
+                  "translatedText": "많은 책 중에서 가장 좋은 것을 고르다"
+                }
+              ],
+              "originalMeaning": "고르다, 선택하다, 선발하다; 발탁[발췌]하다; 뽑다, 선출하다 (=<span class='related_word' lang='en' >choose</span>)"
+            },
+            {
+              "meaning": "분리하다",
+              "examples": [],
+              "originalMeaning": "분리하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고르다, 선택하다",
+              "examples": [],
+              "originalMeaning": "고르다, 선택하다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "고른, 가려낸, 추려낸; 정선(精選)한, 극상의; 발췌한",
+              "examples": [
+                {
+                  "text": "<b>select</b> books",
+                  "translatedText": "정선 도서"
+                }
+              ],
+              "originalMeaning": "고른, 가려낸, 추려낸; 정선(精選)한, 극상의; 발췌한"
+            },
+            {
+              "meaning": "<회·학교 등이> 입회[입학] 조건이 까다로운",
+              "examples": [
+                {
+                  "text": "a <b>select</b> club",
+                  "translatedText": "입회 조건이 까다로운 클럽"
+                }
+              ],
+              "originalMeaning": "<회·학교 등이> 입회[입학] 조건이 까다로운"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/81de2fe56ab9496392bb7d4125890b94",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/81de2fe56ab9496392bb7d4125890b94",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "selects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "271109827e66184765958fed877c2a8c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 가장 큰 진주를 골라냈다.",
+      "text": "She <b>selected</b> out the biggest pearl."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소설은 평범한 이야기였는데 왜 그 작품이 뽑혔는지 모르겠다",
+      "text": "The novel was such a run-of-the-mill story it's a wonder to me why it was ever <b>selected</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "farm",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɑːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "농장, 농지, 농원(cf. RANCH)",
+              "examples": [
+                {
+                  "text": "a dairy <b>farm</b>",
+                  "translatedText": "낙농장"
+                }
+              ],
+              "originalMeaning": "농장, 농지, 농원(cf. RANCH)"
+            },
+            {
+              "meaning": "사육장, 양식장",
+              "examples": [
+                {
+                  "text": "a chicken[poultry] <b>farm</b>",
+                  "translatedText": "양계장"
+                }
+              ],
+              "originalMeaning": "사육장, 양식장"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<토지를> 경작하다(cultivate), <농지·점포를> 임대차하다, 소작하다, 사육[양식]하다",
+              "examples": [],
+              "originalMeaning": "<토지를> 경작하다(cultivate), <농지·점포를> 임대차하다, 소작하다, 사육[양식]하다"
+            },
+            {
+              "meaning": "<조세·요금 등의 징수를> 청부 맡다, <단체·시설 등의> 관리를 청부 맡다",
+              "examples": [
+                {
+                  "text": "a county that farms its poor",
+                  "translatedText": "빈민 관리를 맡는 군(郡)"
+                }
+              ],
+              "originalMeaning": "<조세·요금 등의 징수를> 청부 맡다, <단체·시설 등의> 관리를 청부 맡다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "경작하다, 농사짓다, 농장을 경영하다",
+              "examples": [],
+              "originalMeaning": "경작하다, 농사짓다, 농장을 경영하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ca6bf883694a413e99d8677bf066d9ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ca6bf883694a413e99d8677bf066d9ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "farms"
+        },
+        {
+          "type": "과거형",
+          "value": "farmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "farming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "farmed"
+        }
+      ],
+      "aliasConjugation": "farms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9f23453e96d83743f9dfb24c4fa7d77e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "농장은 강을 지나 멀다",
+      "text": "The <b>farm</b> is way out past the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 토지는 농작에는 적당하지 않다.",
+      "text": "This land is unfit for farming."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 농장을 팔기로 결정했다.",
+      "text": "They’ve concluded to sell their <b>farm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "살 사람이 없어서 그는 농장을 세주었다.",
+      "text": "Failing a purchaser, he rented the <b>farm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 농장의 동쪽은 우리 농장과 경계를 접하고 있다.",
+      "text": "His <b>farm</b> touches ours to the east."
+    }
+  ],
+  "isWordType": true
+}

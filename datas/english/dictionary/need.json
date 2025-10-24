@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "need",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "niːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "필요, 소요, 요구 ((for, of))",
+              "examples": [
+                {
+                  "text": "the <b>need</b> for stricter regulation",
+                  "translatedText": "보다 엄한 규제의 필요성"
+                }
+              ],
+              "originalMeaning": "필요, 소요, 요구 ((for, of))"
+            },
+            {
+              "meaning": "<…할> 필요, 의무, 책임",
+              "examples": [
+                {
+                  "text": "( <b>need</b>+to do) the <b>need</b> to pay taxes",
+                  "translatedText": "납세의 의무"
+                }
+              ],
+              "originalMeaning": "<…할> 필요, 의무, 책임"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·물건 등이> <…을> 필요로 하다, <…이> 필요하다",
+              "examples": [
+                {
+                  "text": "I <b>need</b> money badly.",
+                  "translatedText": "돈이 몹시 필요하다."
+                }
+              ],
+              "originalMeaning": "<사람·물건 등이> <…을> 필요로 하다, <…이> 필요하다"
+            },
+            {
+              "meaning": "<…할> 필요가 있다, <…> 해야 하다, …하지 않으면 안 되다",
+              "examples": [
+                {
+                  "text": "( <b>need</b>+to do) I <b>need</b> to mow the lawn.",
+                  "translatedText": "나는 잔디를 깎아야 한다."
+                }
+              ],
+              "originalMeaning": "<…할> 필요가 있다, <…> 해야 하다, …하지 않으면 안 되다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "궁핍하다, 궁하다",
+              "examples": [
+                {
+                  "text": "You should give to those who <b>need</b>.",
+                  "translatedText": "어려운 사람에게는 베풀어야 한다."
+                }
+              ],
+              "originalMeaning": "궁핍하다, 궁하다"
+            },
+            {
+              "meaning": "[주로 비인칭 구문에서] 필요하다",
+              "examples": [
+                {
+                  "text": "more than needs",
+                  "translatedText": "필요 이상으로"
+                }
+              ],
+              "originalMeaning": "[주로 비인칭 구문에서] 필요하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0df0c4931c924b07be3db9f79f6f819c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0df0c4931c924b07be3db9f79f6f819c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "needs"
+        },
+        {
+          "type": "과거형",
+          "value": "needed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "needing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "needed"
+        }
+      ],
+      "aliasConjugation": "needs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "03e8d1a3703cb5ca78c8c174867c2c82",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너 매를 아직 설맞았구나",
+      "text": "You have just had a taste of the beating you deserve. or You <b>need</b> a little more."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 필요한 것이 별로 없었다.",
+      "text": "His needs were few."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 조언이 꼭 필요하다.",
+      "text": "He needs advice badly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저다지 울 필요가 없다",
+      "text": "She needn't cry like that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 잔디를 깎아야 한다.",
+      "text": "I <b>need</b> to mow the lawn."
+    }
+  ],
+  "isWordType": true
+}

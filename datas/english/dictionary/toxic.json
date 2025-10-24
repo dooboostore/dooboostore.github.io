@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "entry": "toxic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│tɑːksɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "유독한(poisonous), 치명적인; 중독(성)의",
+              "examples": [
+                {
+                  "text": "<b>toxic</b> epilepsy",
+                  "translatedText": "중독성 간질병"
+                }
+              ],
+              "originalMeaning": "유독한(poisonous), 치명적인; 중독(성)의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "유독 화학 약품",
+              "examples": [],
+              "originalMeaning": "유독 화학 약품"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3a7ec6f320ce408ebad775d2428040bc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3a7ec6f320ce408ebad775d2428040bc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c3d6e2a47501013c2f41efdcd1c5cfb6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 짙은 유독 가스로 숨이 막히는 듯했다",
+      "text": "I felt myself being choked by thick <b>toxic</b> fumes."
+    }
+  ],
+  "isWordType": true
+}

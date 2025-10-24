@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "keep",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kiːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(계속) 보유하다, 계속 갖고 있다(reserve); 자기 것으로 갖다, 차지하다; 보존하다, 간직하다, 간수하다",
+              "examples": [
+                {
+                  "text": "<b>keep</b> meat",
+                  "translatedText": "고기를 (썩지 않게) 보존하다"
+                }
+              ],
+              "originalMeaning": "(계속) 보유하다, 계속 갖고 있다(reserve); 자기 것으로 갖다, 차지하다; 보존하다, 간직하다, 간수하다"
+            },
+            {
+              "meaning": "<어떤 상태·동작을> 계속하다",
+              "examples": [
+                {
+                  "text": "<b>keep</b> watch",
+                  "translatedText": "계속 감시하다"
+                }
+              ],
+              "originalMeaning": "<어떤 상태·동작을> 계속하다"
+            },
+            {
+              "meaning": "<어떤 위치·관계·상태에> 두다, …하여 두다, 유지하다",
+              "examples": [
+                {
+                  "text": "<b>keep</b> a razor sharp",
+                  "translatedText": "면도칼을 예리하게 손질해 두다"
+                }
+              ],
+              "originalMeaning": "<어떤 위치·관계·상태에> 두다, …하여 두다, 유지하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보어와 함께] <어떤 상태·위치에> 있다, 죽 …하고 있다; 계속해서 …하다",
+              "examples": [
+                {
+                  "text": "<b>keep</b> at home",
+                  "translatedText": "(나가지 않고) 집에 있다"
+                }
+              ],
+              "originalMeaning": "[보어와 함께] <어떤 상태·위치에> 있다, 죽 …하고 있다; 계속해서 …하다"
+            },
+            {
+              "meaning": "(특정한 장소에) 머물러 있다, 틀어박히다",
+              "examples": [],
+              "originalMeaning": "(특정한 장소에) 머물러 있다, 틀어박히다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지님; 보존, 유지, 관리; 관리인, 감시인",
+              "examples": [],
+              "originalMeaning": "지님; 보존, 유지, 관리; 관리인, 감시인"
+            },
+            {
+              "meaning": "생활 필수품, 식량, 양식; 생활비; (동물의) 사육비; (마소 등의) 사료의 저장",
+              "examples": [],
+              "originalMeaning": "생활 필수품, 식량, 양식; 생활비; (동물의) 사육비; (마소 등의) 사료의 저장"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19254479a3d2452bbbccaf69434de5db",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19254479a3d2452bbbccaf69434de5db",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "keeps"
+        },
+        {
+          "type": "과거형",
+          "value": "kept"
+        },
+        {
+          "type": "현재 분사",
+          "value": "keeping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "kept"
+        }
+      ],
+      "aliasConjugation": "keeps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f4a814f0017907a8b60081cdd1d7e059",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서류는 A군이 보관하고 있다",
+      "text": "The papers are in the custody of Mr. A. or The papers are in Mr. A's keeping."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 일에서 빠져 주시오",
+      "text": "<b>Keep</b> out of this."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이한테 절대 눈을 떼지 마라",
+      "text": "You must <b>keep</b> an eye on your child. or You can't take your eyes off your child."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잔디밭에 들어가지 말 것.",
+      "text": "<b>Keep</b> off the lawn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 잉어를 살려 둬라",
+      "text": "<b>Keep</b> the carp alive."
+    }
+  ],
+  "isWordType": true
+}

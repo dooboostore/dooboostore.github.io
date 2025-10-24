@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "entry": "frost",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "frɔːst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "서리, 서릿발",
+              "examples": [
+                {
+                  "text": "The trees were white with <b>frost</b>.",
+                  "translatedText": "나무들이 서리로 하얗게 되었다."
+                }
+              ],
+              "originalMeaning": "서리, 서릿발"
+            },
+            {
+              "meaning": "[UC/] 결빙, 동결(freezing); 서리 내리는 추위; 빙점하의 온도",
+              "examples": [
+                {
+                  "text": "five degrees of <b>frost</b>",
+                  "translatedText": "[영] 영하 5도 ((of <b>frost</b>는 화씨 빙점인 32 이하의 온도를 말하므로 화씨로는 27도, 섭씨로는 약 영하 3도에 해당))"
+                }
+              ],
+              "originalMeaning": "[UC/] 결빙, 동결(freezing); 서리 내리는 추위; 빙점하의 온도"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[it을 주어로 하여] 서리가 내리다, 얼다",
+              "examples": [],
+              "originalMeaning": "[it을 주어로 하여] 서리가 내리다, 얼다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "서리로 덮다 ((over))",
+              "examples": [],
+              "originalMeaning": "서리로 덮다 ((over))"
+            },
+            {
+              "meaning": "<유리·금속의> 윤을 지우다",
+              "examples": [],
+              "originalMeaning": "<유리·금속의> 윤을 지우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7dfd8a168ee44ddf996aff84b27219e9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7dfd8a168ee44ddf996aff84b27219e9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "frosts"
+        },
+        {
+          "type": "과거형",
+          "value": "frosted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "frosting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "frosted"
+        }
+      ],
+      "aliasConjugation": "frosts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b70b195a237f7671e51b303f435e21d5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Frost",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "프로스트 Robert  ~ (1874-1963) ((미국의 시인))",
+              "examples": [],
+              "originalMeaning": "프로스트 Robert  ~ (1874-1963) ((미국의 시인))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2291d972f8fb413283aa8842c14412f2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2291d972f8fb413283aa8842c14412f2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "162e07b62d490c23c2b6e783c240d9f3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서리를 맞아 꽃이 시들어 버렸다",
+      "text": "The <b>frost</b> killed the flowers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서리가 하루 종일 녹지 않았다",
+      "text": "The <b>frost</b> did not give all day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "심한 서리로 곡식이 상했다",
+      "text": "The crop was damaged by a heavy <b>frost</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 머리가 희끗희끗해지기 시작한다",
+      "text": "His hair is beginning to <b>frost</b> a little."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마당에 서리가 내렸다",
+      "text": "There is <b>frost</b> on the ground."
+    }
+  ],
+  "isWordType": true
+}

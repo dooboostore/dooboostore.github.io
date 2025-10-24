@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "coin",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kɔɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(지폐에 대해서) 경화(硬貨), 주화(鑄貨)",
+              "examples": [
+                {
+                  "text": "a copper[silver, gold] <b>coin</b>",
+                  "translatedText": "동[은, 금]화"
+                }
+              ],
+              "originalMeaning": "(지폐에 대해서) 경화(硬貨), 주화(鑄貨)"
+            },
+            {
+              "meaning": "[집합적] 경화, 동전; 돈, 금전",
+              "examples": [
+                {
+                  "text": "Much <b>coin</b> , much care.",
+                  "translatedText": "[속담] 돈이 많으면 걱정도 많다."
+                }
+              ],
+              "originalMeaning": "[집합적] 경화, 동전; 돈, 금전"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<화폐를> 주조하다(mint)",
+              "examples": [],
+              "originalMeaning": "<화폐를> 주조하다(mint)"
+            },
+            {
+              "meaning": "<신어 등을> 만들어 내다",
+              "examples": [
+                {
+                  "text": "a coined word",
+                  "translatedText": "신조어(新造語)"
+                }
+              ],
+              "originalMeaning": "<신어 등을> 만들어 내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "화폐를 주조하다",
+              "examples": [],
+              "originalMeaning": "화폐를 주조하다"
+            },
+            {
+              "meaning": "가짜돈을 만들다",
+              "examples": [],
+              "originalMeaning": "가짜돈을 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d7b9a036f1f4903b37648889b976c6c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d7b9a036f1f4903b37648889b976c6c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "coins"
+        },
+        {
+          "type": "과거형",
+          "value": "coined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coined"
+        }
+      ],
+      "aliasConjugation": "coins",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0949d55b785e857784d1a11b671b8885",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "COIN",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사, 형용사",
+          "meanings": [
+            {
+              "meaning": "(=COUNTERINSURGENCY)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >COUNTERINSURGENCY</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3b5579e541334bf0aa11e7ebc110bb4d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3b5579e541334bf0aa11e7ebc110bb4d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "847c23b9d2a3fc8fc98b01426d2a3817",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돈이 많으면 걱정도 많다",
+      "text": "Much <b>coin</b>, much care."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 동전은 소리가 진짜로[가짜로] 들렸다.",
+      "text": "The <b>coin</b> rang true[false]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느 쪽 손에 동전이 들었는지 맞춰 봐.",
+      "text": "Guess which hand holds a <b>coin</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "동전을 삼켜 갓난아이가 거의 질식할 뻔했다.",
+      "text": "A <b>coin</b> almost choked the baby."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 거지에게 동전을 던져 주었다.",
+      "text": "She tossed the beggar a <b>coin</b>.=She tossed a <b>coin</b> to the beggar."
+    }
+  ],
+  "isWordType": true
+}

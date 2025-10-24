@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "condition",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈdɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (사람·물건·재정 등의) 상태 ((of)); 건강 상태, 컨디션 ((to do)), (=state)",
+              "examples": [
+                {
+                  "text": "the <b>condition</b> of weightlessness",
+                  "translatedText": "무중력 상태"
+                }
+              ],
+              "originalMeaning": "[U] (사람·물건·재정 등의) 상태 ((of)); 건강 상태, 컨디션 ((to do)), (=<span class='related_word' lang='en' >state</span>)"
+            },
+            {
+              "meaning": "(사회적) 신분(rank), 지위(position), 처지(station)",
+              "examples": [
+                {
+                  "text": "people of every <b>condition</b>",
+                  "translatedText": "모든 계층의 사람들"
+                }
+              ],
+              "originalMeaning": "(사회적) 신분(rank), 지위(position), 처지(station)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…이라는) 조건을 붙이다",
+              "examples": [
+                {
+                  "text": "<b>condition</b> that they (should) marry",
+                  "translatedText": "그들이 결혼하는 것을 조건으로 하다"
+                }
+              ],
+              "originalMeaning": "(…이라는) 조건을 붙이다"
+            },
+            {
+              "meaning": "<사물이> …의 요건[조건]을 이루다, …의 생존에 절대 필요하다; <사정 등이> 결정[좌우]하다",
+              "examples": [
+                {
+                  "text": "Ability and effort <b>condition</b> success.",
+                  "translatedText": "능력과 노력이 성공의 조건이다."
+                }
+              ],
+              "originalMeaning": "<사물이> …의 요건[조건]을 이루다, …의 생존에 절대 필요하다; <사정 등이> 결정[좌우]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3a138fe5d3d349fdbedef4c82c0f6793",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3a138fe5d3d349fdbedef4c82c0f6793",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "conditions"
+        },
+        {
+          "type": "과거형",
+          "value": "conditioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "conditioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "conditioned"
+        }
+      ],
+      "aliasConjugation": "conditions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "51c8848a0733d815aae1419c3629d771",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전쟁이 날 것 같은 정세이다.",
+      "text": "Conditions look toward war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 피아노는 상태가 좋다",
+      "text": "The piano is in good <b>condition</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 병상에는 변화가 없다",
+      "text": "There is no change in his <b>condition</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "성공은 그의 노력 나름이다.",
+      "text": "Success is conditional on his efforts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 한국의 국정에 맞지 않는다",
+      "text": "It is against the customs of Korea. or It does not harmonize with the actual <b>condition</b> of Korea."
+    }
+  ],
+  "isWordType": true
+}

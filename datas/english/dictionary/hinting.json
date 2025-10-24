@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "hint",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hɪnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "힌트, 암시(suggestion), 넌지시 알림, 시사, 단서, 귀띔; [종종 pl.] (간단하게 적은) 요령, 지시, 조언 ((on))",
+              "examples": [
+                {
+                  "text": "a broad <b>hint</b>",
+                  "translatedText": "노골적인 암시"
+                }
+              ],
+              "originalMeaning": "힌트, 암시(suggestion), 넌지시 알림, 시사, 단서, 귀띔; [종종 pl.] (간단하게 적은) 요령, 지시, 조언 ((on))"
+            },
+            {
+              "meaning": "(…한) 기미, 기색;[a ~] 극소량, 조금, 미량(의…) ((of))",
+              "examples": [
+                {
+                  "text": "a <b>hint</b> of garlic",
+                  "translatedText": "마늘 조금"
+                }
+              ],
+              "originalMeaning": "(…한) 기미, 기색;[a ~] 극소량, 조금, 미량(의…) ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "넌지시 말하다; 암시하다, 빗대어 말하다, 비치다 (=suggest)",
+              "examples": [
+                {
+                  "text": "gray skies <b>hinting</b> a possible snowfall",
+                  "translatedText": "눈이 올 듯한 잿빛 하늘"
+                }
+              ],
+              "originalMeaning": "넌지시 말하다; 암시하다, 빗대어 말하다, 비치다 (=<span class='related_word' lang='en' >suggest</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "넌지시 말하다[비치다], 암시하다 ((at))",
+              "examples": [
+                {
+                  "text": "He hinted at my foolishness.",
+                  "translatedText": "그는 나의 어리석음을 넌지시 비쳤다."
+                }
+              ],
+              "originalMeaning": "넌지시 말하다[비치다], 암시하다 ((at))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cea3615ec5ac47af9b5d92dcf27377f8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cea3615ec5ac47af9b5d92dcf27377f8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hints"
+        },
+        {
+          "type": "과거형",
+          "value": "hinted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hinting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hinted"
+        }
+      ],
+      "aliasConjugation": "hints",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "21962b618c5130570dfe4e8471a21ad3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나의 어리석음을 넌지시 비쳤다.",
+      "text": "He hinted at my foolishness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 정체에 대한 힌트를 달라.",
+      "text": "Give me a <b>hint</b> as to his identity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "무슨 뜻인지 알 수가 없었다",
+      "text": "I didn't get the message. or I didn't take the <b>hint</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그만두게 될지도 모른다는 것을 귀띔해 주었다",
+      "text": "I gave him a <b>hint</b> that I might resign."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사실들은 그 문제의 해결을 암시했다.",
+      "text": "The facts hinted at a solution to the problem."
+    }
+  ],
+  "isWordType": true
+}

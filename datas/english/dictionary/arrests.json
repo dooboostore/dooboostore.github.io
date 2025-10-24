@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "arrest",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈrest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[법] 체포하다 ((for)); 검거[구속]하다, 억류하다",
+              "examples": [
+                {
+                  "text": "an arrested vessel",
+                  "translatedText": "억류되어 있는 배"
+                }
+              ],
+              "originalMeaning": "[법] 체포하다 ((for)); 검거[구속]하다, 억류하다"
+            },
+            {
+              "meaning": "<주의·이목·흥미 등을> 끌다(attract)",
+              "examples": [
+                {
+                  "text": "<b>arrest</b> attention[his eyes]",
+                  "translatedText": "주의[그의 시선]를 끌다"
+                }
+              ],
+              "originalMeaning": "<주의·이목·흥미 등을> 끌다(attract)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 심장 박동이 정지되다",
+              "examples": [],
+              "originalMeaning": "<사람이> 심장 박동이 정지되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[법] 체포, 검거, 구속, 구인; 억류",
+              "examples": [],
+              "originalMeaning": "[법] 체포, 검거, 구속, 구인; 억류"
+            },
+            {
+              "meaning": "정지, 저지",
+              "examples": [],
+              "originalMeaning": "정지, 저지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9a064a9ad74c470880c9421890d85756",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9a064a9ad74c470880c9421890d85756",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "arrests"
+        },
+        {
+          "type": "과거형",
+          "value": "arrested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "arresting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "arrested"
+        }
+      ],
+      "aliasConjugation": "arrests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1a5c697b64ba448eafd22b11e23a3255",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 몇 번이나 체포된 경력이 있다.",
+      "text": "He has a pattern of <b>arrests</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 체포되었다는 소문이 왜자하다",
+      "text": "A rumor of his <b>arrest</b> is rife."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 절도 혐의로 잡혔다",
+      "text": "He was arrested on the suspicion of theft."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "도둑이 경찰에 때어 들어갔다",
+      "text": "The thief was seized[arrested] by the police."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 서울을 탈출했으나 체포되었다",
+      "text": "He absconded from Seoul, but was arrested."
+    }
+  ],
+  "isWordType": true
+}

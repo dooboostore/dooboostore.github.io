@@ -1,0 +1,160 @@
+{
+  "items": [
+    {
+      "entry": "ally",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əlái"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형, 때로 ~ oneself로] <…을> 동맹[결연, 연합, 제휴]시키다(unite) ((with, to))",
+              "examples": [
+                {
+                  "text": "He allied himself with a wealthy family by marriage.",
+                  "translatedText": "그는 부유한 집안과 혼인을 맺었다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형, 때로 ~ oneself로] <…을> 동맹[결연, 연합, 제휴]시키다(unite) ((with, to))"
+            },
+            {
+              "meaning": "<…을> 결합시키다, 동류(同類)에 속하게 하다(associate) ((to)) (→allied)",
+              "examples": [],
+              "originalMeaning": "<…을> 결합시키다, 동류(同類)에 속하게 하다(associate) ((to)) (→<span class='related_word' lang='en' >allied</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "동맹[결연, 연합, 제휴]하다",
+              "examples": [],
+              "originalMeaning": "동맹[결연, 연합, 제휴]하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "동맹국, 맹방; 동맹자, 맹우(盟友), 자기편; [the Allies] (세계 대전 중의) 연합국(cf. AXIS)",
+              "examples": [],
+              "originalMeaning": "동맹국, 맹방; 동맹자, 맹우(盟友), 자기편; [the <b>Allies</b>] (세계 대전 중의) 연합국(cf. AXIS)"
+            },
+            {
+              "meaning": "동류[동속, 동종]의 것",
+              "examples": [],
+              "originalMeaning": "동류[동속, 동종]의 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/60ceec8058994a718a6db80035f49a32",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/60ceec8058994a718a6db80035f49a32",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "allies"
+        },
+        {
+          "type": "복수형",
+          "value": "allies"
+        },
+        {
+          "type": "과거형",
+          "value": "allied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "allying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "allied"
+        }
+      ],
+      "aliasConjugation": "allies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5fb6fcdf0d4069f94b4d3770176500c8",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "ally",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ǽli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=ALLEY)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >ALLEY</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/22df3caf051f4c629e35a7d054646cd0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/22df3caf051f4c629e35a7d054646cd0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "allies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7c74aad3db51892fdaa4d0f468e10b82",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "베를린은 연합군 측에 함락되었다.",
+      "text": "Berlin fell to the <b>Allies</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 부유한 집안과 혼인을 맺었다.",
+      "text": "He allied himself with a wealthy family by marriage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "개는 늑대와 동류이다.",
+      "text": "Dogs are allied to wolves."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "원숭이는 사람에 가깝다",
+      "text": "The ape is closely allied to man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "연합군은 총공격을 개시했다",
+      "text": "The allied forces launched an all-out attack."
+    }
+  ],
+  "isWordType": true
+}

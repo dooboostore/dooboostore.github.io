@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "birth",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɜːrθ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 탄생, 출생; 신생",
+              "examples": [
+                {
+                  "text": "the date of one's <b>birth</b>",
+                  "translatedText": "생년월일"
+                }
+              ],
+              "originalMeaning": "[UC/] 탄생, 출생; 신생"
+            },
+            {
+              "meaning": "출산, 분만",
+              "examples": [
+                {
+                  "text": "She had two at a <b>birth</b> .",
+                  "translatedText": "그녀는 쌍둥이를 낳았다."
+                }
+              ],
+              "originalMeaning": "출산, 분만"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<아이를> 낳다",
+              "examples": [],
+              "originalMeaning": "<아이를> 낳다"
+            },
+            {
+              "meaning": "<임부의> 해산을 돕다",
+              "examples": [],
+              "originalMeaning": "<임부의> 해산을 돕다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "아이를 낳다",
+              "examples": [],
+              "originalMeaning": "아이를 낳다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5bc2f91f6bd2448f8329ee48e98c535a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5bc2f91f6bd2448f8329ee48e98c535a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a208ad8ea01fb75f4126ab952d2d992e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 좋은 집안에서 태어났다.",
+      "text": "She is a lady by <b>birth</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 유서 깊은 가문에서 태어났다",
+      "text": "He is of gentle[good] <b>birth</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 문벌도 재산도 없다",
+      "text": "He has neither <b>birth</b> nor money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 지천한 집안에서 태어난 사람이다",
+      "text": "He is a man of very humble <b>birth</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달이 차서 여자 아이를 낳았다",
+      "text": "At (full) term she gave <b>birth</b> to a girl."
+    }
+  ],
+  "isWordType": true
+}

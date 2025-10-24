@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "meat",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고기, 식육",
+              "examples": [
+                {
+                  "text": "chilled <b>meat</b>",
+                  "translatedText": "냉장육"
+                }
+              ],
+              "originalMeaning": "고기, 식육"
+            },
+            {
+              "meaning": "(게·새우·조개·달걀·밤 등의) 살, 속, 과육(果肉)",
+              "examples": [
+                {
+                  "text": "the <b>meat</b> of a walnut",
+                  "translatedText": "호두 속"
+                }
+              ],
+              "originalMeaning": "(게·새우·조개·달걀·밤 등의) 살, 속, 과육(果肉)"
+            },
+            {
+              "meaning": "[the ~] 알맹이, 요점, 골자",
+              "examples": [
+                {
+                  "text": "the <b>meat</b> of a story",
+                  "translatedText": "이야기의 골자"
+                }
+              ],
+              "originalMeaning": "[the ~] 알맹이, 요점, 골자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08d0dfcb8e8a46928d37264b6727ee13",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08d0dfcb8e8a46928d37264b6727ee13",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ada1aca6fa206738fae8830d92288761",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 고기는 덜 익혔다",
+      "text": "This <b>meat</b> is underdone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 고기는 너무 구워졌다",
+      "text": "This <b>meat</b> is overdone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 고기를 먹지 않는다.",
+      "text": "He doesn’t eat <b>meat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 고기는 아주 잘 구워진다.",
+      "text": "This <b>meat</b> cooks quite well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 호두는 살이 많다",
+      "text": "This walnut has a lot of <b>meat</b>."
+    }
+  ],
+  "isWordType": true
+}

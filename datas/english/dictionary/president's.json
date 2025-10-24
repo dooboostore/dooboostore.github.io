@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "president",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈprezɪdənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(공화국의) 대통령 ((사람의 직위를 말할 때는 the President, President Bush와 같이 대문자로 씀))",
+              "examples": [
+                {
+                  "text": "the <b>President</b> of the United States of America",
+                  "translatedText": "미합중국 대통령"
+                }
+              ],
+              "originalMeaning": "(공화국의) 대통령 ((사람의 직위를 말할 때는 the <b>President</b>, <b>President</b> Bush와 같이 대문자로 씀))"
+            },
+            {
+              "meaning": "장(長); (관청의) 총재; (대학의) 학장, 총장; (학술회의·협회 등의) 회장; [미] (은행·회사의) 행장, 사장",
+              "examples": [],
+              "originalMeaning": "장(長); (관청의) 총재; (대학의) 학장, 총장; (학술회의·협회 등의) 회장; [미] (은행·회사의) 행장, 사장"
+            },
+            {
+              "meaning": "사회자, 의장",
+              "examples": [],
+              "originalMeaning": "사회자, 의장"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/85df2316af1841548cbf976c80ff4ab0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/85df2316af1841548cbf976c80ff4ab0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c47ca74e8451b5952de58ee16273a5ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.285714",
+      "translatedText": "그녀는 사장 비서이다",
+      "text": "She is[acts as] (a, the) secretary to the <b>president</b>. or She is the <b>president's</b> secretary."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 회장 선거에 나갔다",
+      "text": "He ran[stood] for <b>president</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 대통령 앞에 섰다.",
+      "text": "He stood before the <b>President</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "1860 년 링컨은 대통령이 되었다.",
+      "text": "In 1860, Lincoln became <b>President</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사장 자리를 차지하려고 노력했다.",
+      "text": "He tried for post of a <b>president</b>."
+    }
+  ],
+  "isWordType": true
+}

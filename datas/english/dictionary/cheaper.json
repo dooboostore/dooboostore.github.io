@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "entry": "cheap",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃiːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "싼, 값이 싼; <가게 등이> 싸게 파는, 물건이 싼; [영] 할인의(opp. dear)",
+              "examples": [
+                {
+                  "text": "a <b>cheap</b> car[ticket]",
+                  "translatedText": "싼 차[표]"
+                }
+              ],
+              "originalMeaning": "싼, 값이 싼; <가게 등이> 싸게 파는, 물건이 싼; [영] 할인의(opp. dear)"
+            },
+            {
+              "meaning": "<돈이> 저리(低利)의, (인플레이션으로) <통화가> 구매력[가치]이 저하한",
+              "examples": [],
+              "originalMeaning": "<돈이> 저리(低利)의, (인플레이션으로) <통화가> 구매력[가치]이 저하한"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "싸게",
+              "examples": [
+                {
+                  "text": "buy <b>cheap</b>",
+                  "translatedText": "싸게 사다"
+                }
+              ],
+              "originalMeaning": "싸게"
+            },
+            {
+              "meaning": "저속하게",
+              "examples": [
+                {
+                  "text": "act <b>cheap</b>",
+                  "translatedText": "천하게 굴다"
+                }
+              ],
+              "originalMeaning": "저속하게"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[다음 성구로]",
+              "examples": [],
+              "originalMeaning": "[다음 성구로]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5641a8f3e33e479ab7141247c771aa22",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5641a8f3e33e479ab7141247c771aa22",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "cheaper"
+        },
+        {
+          "type": "최상급",
+          "value": "cheapest"
+        }
+      ],
+      "aliasConjugation": "cheaper",
+      "aliasConjugationPos": "비교급",
+      "gdid": "c5572ce51e0df2381258359b034966ba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집은 아주 싸게 팔렸다.",
+      "text": "The house went very cheaply[<b>cheap</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "결국 그것이 싸게 먹힌다",
+      "text": "That is <b>cheaper</b> in the end."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 모피 코트는 엄청나게 싸다",
+      "text": "This fur coat is dirt <b>cheap</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 이 소파를 아주 싸게 샀어",
+      "text": "We bought the sofa dirt <b>cheap</b>[<b>cheap</b> as dirt]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "책이 싸기에 한 권을 샀다",
+      "text": "As the book was <b>cheap</b>, I bought a copy."
+    }
+  ],
+  "isWordType": true
+}

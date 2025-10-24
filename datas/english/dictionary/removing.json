@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "remove",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈmuːv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "치우다(take away); <모자 등을> 벗다, 떼다, 벗기다(take off); 제거하다, 없애다, 삭제하다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>remove</b> one's coat",
+                  "translatedText": "웃옷을 벗다"
+                }
+              ],
+              "originalMeaning": "치우다(take away); <모자 등을> 벗다, 떼다, 벗기다(take off); 제거하다, 없애다, 삭제하다 ((from))"
+            },
+            {
+              "meaning": "옮기다, 이동시키다 ((from, to))",
+              "examples": [
+                {
+                  "text": "<b>remove</b> a desk to another room",
+                  "translatedText": "책상을 다른 방으로 옮기다"
+                }
+              ],
+              "originalMeaning": "옮기다, 이동시키다 ((from, to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이동하다, 이사하다 ((to, into))",
+              "examples": [
+                {
+                  "text": "<b>remove</b> to New York",
+                  "translatedText": "뉴욕으로 이사하다"
+                }
+              ],
+              "originalMeaning": "이동하다, 이사하다 ((to, into))"
+            },
+            {
+              "meaning": "떠나가다, 사라지다",
+              "examples": [],
+              "originalMeaning": "떠나가다, 사라지다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[고어] 이동, 이전(move), 이사; 퇴거, 철수",
+              "examples": [],
+              "originalMeaning": "[고어] 이동, 이전(move), 이사; 퇴거, 철수"
+            },
+            {
+              "meaning": "거리, 간격 ((from))",
+              "examples": [],
+              "originalMeaning": "거리, 간격 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c38d301541649508b3527f19d9c8dfc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c38d301541649508b3527f19d9c8dfc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "removes"
+        },
+        {
+          "type": "과거형",
+          "value": "removed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "removing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "removed"
+        }
+      ],
+      "aliasConjugation": "removes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e3da3969aa146cd0262a448f6d18f021",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 뇌물 수수로 면직되었다.",
+      "text": "He was removed for grafting."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금년에는 꼴찌라는 오명을 씻도록 하자",
+      "text": "Let's <b>remove</b> this year the stigma of the tailender."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "3개월 만에 상처는 완치되었다",
+      "text": "At the end of three months the last bandages were removed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금번 표기 장소로 전거하였습니다",
+      "text": "I have lately removed to the address given on the front."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정부는 금의 수출을 해금했다",
+      "text": "The Government lifted[removed] the embargo on the export of gold."
+    }
+  ],
+  "isWordType": true
+}

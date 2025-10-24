@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "entry": "wall",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɔ́ːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "벽, 담 ((돌·벽돌 등의)), (=fence)",
+              "examples": [
+                {
+                  "text": "a stone[brick] <b>wall</b>",
+                  "translatedText": "돌[벽돌]담"
+                }
+              ],
+              "originalMeaning": "벽, 담 ((돌·벽돌 등의)), (=<span class='related_word' lang='en' >fence</span>)"
+            },
+            {
+              "meaning": "[보통 pl.] 성벽, 방벽",
+              "examples": [
+                {
+                  "text": "town[city] walls",
+                  "translatedText": "도시의 성벽"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 성벽, 방벽"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "벽[담]으로 둘러싸다",
+              "examples": [],
+              "originalMeaning": "벽[담]으로 둘러싸다"
+            },
+            {
+              "meaning": "성벽으로 두르다[방어하다]",
+              "examples": [],
+              "originalMeaning": "성벽으로 두르다[방어하다]"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "벽[담]의, 벽에 붙어 사는 <식물>, 벽에 거는",
+              "examples": [],
+              "originalMeaning": "벽[담]의, 벽에 붙어 사는 <식물>, 벽에 거는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e3ef349fe9a4b978b102c8ec4a6936c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e3ef349fe9a4b978b102c8ec4a6936c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "walls"
+        },
+        {
+          "type": "과거형",
+          "value": "walled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "walling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "walled"
+        }
+      ],
+      "aliasConjugation": "walls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "63896462ac91e596c3d0406d90126e1f",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "wall",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<눈알을> 굴리다",
+              "examples": [],
+              "originalMeaning": "<눈알을> 굴리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<눈알이> 구르다",
+              "examples": [],
+              "originalMeaning": "<눈알이> 구르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d133477ff3e74f5bb13dd1c2ea189927",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d133477ff3e74f5bb13dd1c2ea189927",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "walls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c6f5df9dfe31aa990b0fc1115cc2863b",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 차가 담에 부딪쳤다.",
+      "text": "His car ran into a <b>wall</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 벽에 몸을 의지한다",
+      "text": "He leans against the <b>wall</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "담쟁이가 담을 기어 올라갔다",
+      "text": "Ivy trailed over the <b>wall</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "탄환이 벽을 벌집처럼 뚫어 놓았다",
+      "text": "Bullets riddled the <b>wall</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소년은 벽에 낙서를 했다.",
+      "text": "The boy scrawled over the <b>wall</b>."
+    }
+  ],
+  "isWordType": true
+}

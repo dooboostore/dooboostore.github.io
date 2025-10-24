@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "value",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvæljuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [때로 a ~] 가치, 값어치, 진가(眞價); 유용성",
+              "examples": [
+                {
+                  "text": "the <b>value</b> of a college education",
+                  "translatedText": "대학 교육의 가치"
+                }
+              ],
+              "originalMeaning": "[U] [때로 a ~] 가치, 값어치, 진가(眞價); 유용성"
+            },
+            {
+              "meaning": "가격, 값, (금전적) 가치",
+              "examples": [
+                {
+                  "text": "exchange(able) <b>value</b> = <b>value</b> in exchange",
+                  "translatedText": "교환 가치"
+                }
+              ],
+              "originalMeaning": "가격, 값, (금전적) 가치"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(금전으로) 평가하다, 값을 매기다, <…의 값을> 어림하다 ((at))",
+              "examples": [
+                {
+                  "text": "The actor's property was valued at $3,000,000.",
+                  "translatedText": "그 배우의 재산은 3백만 달러로 평가되었다."
+                }
+              ],
+              "originalMeaning": "(금전으로) 평가하다, 값을 매기다, <…의 값을> 어림하다 ((at))"
+            },
+            {
+              "meaning": "높이 평가하다, 존중하다, 소중히 하다",
+              "examples": [
+                {
+                  "text": "He values your friendship.",
+                  "translatedText": "그는 자네의 우정을 존중한다."
+                }
+              ],
+              "originalMeaning": "높이 평가하다, 존중하다, 소중히 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/be44fd45d8b14aef95b3a0e4930287ee",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/be44fd45d8b14aef95b3a0e4930287ee",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "values"
+        },
+        {
+          "type": "과거형",
+          "value": "valued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "valuing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "valued"
+        }
+      ],
+      "aliasConjugation": "values",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c3202f912471bca3de03ecadcefc97e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "2일 때 2의 값은 4이다.",
+      "text": "The <b>value</b> of 2 at 2 is 4."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자네의 우정을 존중한다.",
+      "text": "He values your friendship."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 목숨보다 명예를 존중한다.",
+      "text": "I <b>value</b> honor above life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금은 은보다 값어치가 있다.",
+      "text": "Gold exceeds silver in <b>value</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "땅 값이 등귀하고 있다",
+      "text": "Land values are on the increase[rise]."
+    }
+  ],
+  "isWordType": true
+}

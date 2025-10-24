@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "message",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmesɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "통신, 메시지; 전갈, 전언; 서신, 전보",
+              "examples": [
+                {
+                  "text": "a congratulatory <b>message</b>",
+                  "translatedText": "축전, 축사"
+                }
+              ],
+              "originalMeaning": "통신, 메시지; 전갈, 전언; 서신, 전보"
+            },
+            {
+              "meaning": "(TV·라디오의) 광고 방송(commercial)",
+              "examples": [],
+              "originalMeaning": "(TV·라디오의) 광고 방송(commercial)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "통신[신호]하다, 통신으로 보내다[명령하다]",
+              "examples": [],
+              "originalMeaning": "통신[신호]하다, 통신으로 보내다[명령하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/668a1021ea2c450ca72a85842fcc3d74",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/668a1021ea2c450ca72a85842fcc3d74",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "messages"
+        },
+        {
+          "type": "과거형",
+          "value": "messaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "messaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "messaged"
+        }
+      ],
+      "aliasConjugation": "messages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "acb29bba9fa1e449bc887889cd31acff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 사람에게 전언이 있다",
+      "text": "I have a <b>message</b> for him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나에게 그 메시지를 전했다.",
+      "text": "He carried the <b>message</b> to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 말을 그에게 전하시오",
+      "text": "Please convey this <b>message</b> to him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무슨 뜻인지 알 수가 없었다",
+      "text": "I didn't get the <b>message</b>. or I didn't take the hint."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 전갈에 대해서 그에게서는 한 마디의 회답도 없었다",
+      "text": "No word came from him in answer to my <b>message</b>."
+    }
+  ],
+  "isWordType": true
+}

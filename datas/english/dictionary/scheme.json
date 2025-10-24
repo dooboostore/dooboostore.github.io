@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "scheme",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skiːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "계획, 안(案), 설계 ((for)); [영] (정부 등의) 사업 계획",
+              "examples": [
+                {
+                  "text": "adopt a <b>scheme</b>",
+                  "translatedText": "계획을 채택하다"
+                }
+              ],
+              "originalMeaning": "계획, 안(案), 설계 ((for)); [영] (정부 등의) 사업 계획"
+            },
+            {
+              "meaning": "음모, 책략, 계략",
+              "examples": [
+                {
+                  "text": "( <b>scheme</b>+to do) Their schemes to evade taxes were very crafty.",
+                  "translatedText": "그들의 탈세 음모는 매우 교활한 것이었다."
+                }
+              ],
+              "originalMeaning": "음모, 책략, 계략"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "계획하다, 입안하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>scheme</b> (out) a new airline",
+                  "translatedText": "새로운 항공 노선을 계획하다"
+                }
+              ],
+              "originalMeaning": "계획하다, 입안하다 ((out))"
+            },
+            {
+              "meaning": "모의하다, 책동하다",
+              "examples": [
+                {
+                  "text": "( <b>scheme</b>+to do) They schemed to overthrow the Cabinet.",
+                  "translatedText": "그들은 내각 타도의 음모를 꾸몄다."
+                }
+              ],
+              "originalMeaning": "모의하다, 책동하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "계획을 세우다; 음모를 꾸미다, 책동하다",
+              "examples": [],
+              "originalMeaning": "계획을 세우다; 음모를 꾸미다, 책동하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a46d5f81278343d28b66a8fdbd4bc72c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a46d5f81278343d28b66a8fdbd4bc72c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "schemes"
+        },
+        {
+          "type": "과거형",
+          "value": "schemed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scheming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "schemed"
+        }
+      ],
+      "aliasConjugation": "schemes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f67755b7a895646c2f4fa324a34ea246",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그의 꾀에 넘어갔다",
+      "text": "She fell a victim to his schemes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 실패하게 마련이다",
+      "text": "The <b>scheme</b> is doomed to failure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 영리적인 계획이 아니다",
+      "text": "This is not a moneymaking <b>scheme</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 내각 타도의 음모를 꾸몄다.",
+      "text": "They schemed to overthrow the Cabinet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들의 도로 건설 계획은 실패로 돌아갔다.",
+      "text": "Their <b>scheme</b> of building the road has failed."
+    }
+  ],
+  "isWordType": true
+}

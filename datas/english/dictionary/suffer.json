@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "suffer",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌfə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<고통·상해·손해·슬픔 등을> 경험하다, 겪다, 입다, 받다, 당하다",
+              "examples": [
+                {
+                  "text": "<b>suffer</b> great losses",
+                  "translatedText": "큰 손해를 입다"
+                }
+              ],
+              "originalMeaning": "<고통·상해·손해·슬픔 등을> 경험하다, 겪다, 입다, 받다, 당하다"
+            },
+            {
+              "meaning": "[주로 부정문에서] 견디다, 참다 (=endure)",
+              "examples": [
+                {
+                  "text": "I cannot <b>suffer</b> his insolence.",
+                  "translatedText": "나는 그의 무례함을 참을 수 없다."
+                }
+              ],
+              "originalMeaning": "[주로 부정문에서] 견디다, 참다 (=<span class='related_word' lang='en' >endure</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…로) 괴로워하다, 고민하다, 고생하다, 고통을 겪다 ((from, for, with))",
+              "examples": [],
+              "originalMeaning": "(…로) 괴로워하다, 고민하다, 고생하다, 고통을 겪다 ((from, for, with))"
+            },
+            {
+              "meaning": "(…을) 앓다, 병들다 ((from, with))",
+              "examples": [
+                {
+                  "text": "<b>suffer</b> from a bad headache",
+                  "translatedText": "심한 두통을 앓다"
+                }
+              ],
+              "originalMeaning": "(…을) 앓다, 병들다 ((from, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/797115e343ff4cb6852ac6b63f47e71e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/797115e343ff4cb6852ac6b63f47e71e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "suffers"
+        },
+        {
+          "type": "과거형",
+          "value": "suffered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "suffering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "suffered"
+        }
+      ],
+      "aliasConjugation": "suffers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ddd9c4ec22a9f35177e578ab6f833a38",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 안질을 앓고 있다",
+      "text": "He is suffering from an affection of the eyes. or He is afflicted with an eye disease."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 치명적인 타격을 받았다",
+      "text": "He suffered a fatal blow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 고생한 보람이 있었다",
+      "text": "You have not suffered in vain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 폐병을 앓고 있다",
+      "text": "He is suffering from consumption."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "작물에는 거의 해가 없었다",
+      "text": "The crops suffered little harm."
+    }
+  ],
+  "isWordType": true
+}

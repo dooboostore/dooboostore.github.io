@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "influence",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪnfluəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 영향, 감화; 작용, 효과; 설득 ((of; on, upon))",
+              "examples": [
+                {
+                  "text": "the <b>influence</b> ofthe mind on[upon]the body",
+                  "translatedText": "육체에 미치는 정신의 영향"
+                }
+              ],
+              "originalMeaning": "[UC/] 영향, 감화; 작용, 효과; 설득 ((of; on, upon))"
+            },
+            {
+              "meaning": "[U] 영향력, 감화력; 세력, 지배력; 명망(名望), 위력; 설득력 ((over, with))",
+              "examples": [
+                {
+                  "text": "the sphere of <b>influence</b>",
+                  "translatedText": "세력 범위"
+                }
+              ],
+              "originalMeaning": "[U] 영향력, 감화력; 세력, 지배력; 명망(名望), 위력; 설득력 ((over, with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에(게) 영향을 끼치다, 감화를 주다; 좌우하다, 움직이다",
+              "examples": [
+                {
+                  "text": "Outside factors <b>influence</b> dher to resign.",
+                  "translatedText": "외부 요인들로 인해 그녀는 사직했다."
+                }
+              ],
+              "originalMeaning": "…에(게) 영향을 끼치다, 감화를 주다; 좌우하다, 움직이다"
+            },
+            {
+              "meaning": "뇌물을 바치다, 매수하다(bribe)",
+              "examples": [],
+              "originalMeaning": "뇌물을 바치다, 매수하다(bribe)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d61f0de71d64818af82546d7958469b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d61f0de71d64818af82546d7958469b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "influences"
+        },
+        {
+          "type": "과거형",
+          "value": "influenced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "influencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "influenced"
+        }
+      ],
+      "aliasConjugation": "influences",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "073a73d2172040c168a1421451ac6fbc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "젊은이는 외국 문화에 물들기 쉽다",
+      "text": "Young people are apt to be <b>influenced</b> by foreign culture."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 영향력은 점차 감소하고 있다",
+      "text": "His <b>influence</b> is on the ebb."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 영향력은 서서히 줄었다.",
+      "text": "His <b>influence</b> slowly decreased."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "환경이 주는 영향은 크다",
+      "text": "Environment is a potent <b>influence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 남을 선도하는 데 영향력이 큰 사람이다.",
+      "text": "He’s an <b>influence</b> for (the) good."
+    }
+  ],
+  "isWordType": true
+}

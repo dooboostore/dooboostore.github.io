@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "furlough",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈfɜːrloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] (군인·공무원의) 휴가(증); (조업 단축 등에 의한) 일시 해고, 일시 휴가",
+              "examples": [
+                {
+                  "text": "two weeks' <b>furlough</b>",
+                  "translatedText": "2주간의 휴가"
+                }
+              ],
+              "originalMeaning": "[UC/] (군인·공무원의) 휴가(증); (조업 단축 등에 의한) 일시 해고, 일시 휴가"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 휴가를 주다, (일시적으로) 해고하다",
+              "examples": [],
+              "originalMeaning": "…에게 휴가를 주다, (일시적으로) 해고하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "휴가를 보내다",
+              "examples": [],
+              "originalMeaning": "휴가를 보내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ab3f2972be9742e3ab02eb6ad0554e54",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ab3f2972be9742e3ab02eb6ad0554e54",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "be216c152f82085c0292424be2cb0fa7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 휴가로 귀국해 있다",
+      "text": "He is home on leave[<b>furlough</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 말미를 얻어 고향에 돌아갔다",
+      "text": "He went home on <b>furlough</b>[leave]."
+    }
+  ],
+  "isWordType": true
+}

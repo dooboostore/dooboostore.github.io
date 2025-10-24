@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "element",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈelɪmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(전체 중의 필요한) 요소, 성분, 구성 요소",
+              "examples": [
+                {
+                  "text": "the chief <b>element</b> of success",
+                  "translatedText": "성공의 주요 요인"
+                }
+              ],
+              "originalMeaning": "(전체 중의 필요한) 요소, 성분, 구성 요소"
+            },
+            {
+              "meaning": "원소",
+              "examples": [
+                {
+                  "text": "Gold, silver and copper are <b>element</b> s.",
+                  "translatedText": "금, 은, 동은 원소이다."
+                }
+              ],
+              "originalMeaning": "원소"
+            },
+            {
+              "meaning": "[전기] 전지, 전극",
+              "examples": [],
+              "originalMeaning": "[전기] 전지, 전극"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d3876c5f2bcb47f497056e349aa7f108",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d3876c5f2bcb47f497056e349aa7f108",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "50ce664caaf50ea5e53c49df3a7312e6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금, 은, 동은 원소이다.",
+      "text": "Gold, silver and copper are elements."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세포는 생체의 기본 요소이다.",
+      "text": "Cells are elements of living bodies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 물질은 단일 성분이다",
+      "text": "This substance consists of one <b>element</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 말에 일리가 있다.",
+      "text": "There is an <b>element</b> of truth in what you say."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "화합물은 그 원소로 환원된다",
+      "text": "The compound resolves itself into its elements."
+    }
+  ],
+  "isWordType": true
+}

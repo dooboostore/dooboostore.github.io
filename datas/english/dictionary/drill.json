@@ -1,0 +1,165 @@
+{
+  "items": [
+    {
+      "entry": "drill",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dríl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "송곳, 천공기; 착암기",
+              "examples": [],
+              "originalMeaning": "송곳, 천공기; 착암기"
+            },
+            {
+              "meaning": "[UC/] 엄격한 훈련[연습], 반복 연습 ((in)); [군사] 교련, 훈련; [C] [속어] = DRILLMASTER (=exercise)",
+              "examples": [],
+              "originalMeaning": "[UC/] 엄격한 훈련[연습], 반복 연습 ((in)); [군사] 교련, 훈련; [C] [속어] = DRILLMASTER (=<span class='related_word' lang='en' >exercise</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 구멍을 뚫다",
+              "examples": [],
+              "originalMeaning": "…에 구멍을 뚫다"
+            },
+            {
+              "meaning": "교련하다",
+              "examples": [],
+              "originalMeaning": "교련하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구멍을 뚫다 ((through)), <총알·공 등이> 빨리 직진하다",
+              "examples": [],
+              "originalMeaning": "구멍을 뚫다 ((through)), <총알·공 등이> 빨리 직진하다"
+            },
+            {
+              "meaning": "교련을 받다",
+              "examples": [],
+              "originalMeaning": "교련을 받다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/97e70df732764eeb95057947f27c3e8c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/97e70df732764eeb95057947f27c3e8c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "drills"
+        },
+        {
+          "type": "과거형",
+          "value": "drilled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "drilling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "drilled"
+        }
+      ],
+      "aliasConjugation": "drills",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2cf752366cfc92d64786a3767c8e857f",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "drill",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조파기(條播機)",
+              "examples": [
+                {
+                  "text": "<b>drill</b> husbandry",
+                  "translatedText": "조파법"
+                }
+              ],
+              "originalMeaning": "조파기(條播機)"
+            },
+            {
+              "meaning": "파종골, 이랑(에 심은 농작물의 줄)",
+              "examples": [],
+              "originalMeaning": "파종골, 이랑(에 심은 농작물의 줄)"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "이랑에 씨를 뿌리다[심다]",
+              "examples": [],
+              "originalMeaning": "이랑에 씨를 뿌리다[심다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb33dd6d64e44f14bdbb80a3e97cc63c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb33dd6d64e44f14bdbb80a3e97cc63c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "drills",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d89a9fb9b25ec86bfca9f8dfb19168bb",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 송곳은 안 뚫어진다",
+      "text": "This <b>drill</b> won't bore."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "군대가 훈련을 받고 있다",
+      "text": "The troops are in training[being drilled]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 대규모의 방공 연습을 실시했다",
+      "text": "They staged a full-scale air defense <b>drill</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마침내 그 철판에 구멍을 뚫어뜨렸다",
+      "text": "Finally I have drilled out a hole through the iron plate."
+    }
+  ],
+  "isWordType": true
+}

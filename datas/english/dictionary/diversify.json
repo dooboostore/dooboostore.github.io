@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "diversify",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│vɜːrsɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "여러 가지로 변화시키다[만들다], 다양화하다; <투자 대상을> 분산시키다; <사업을> 다각화하다",
+              "examples": [],
+              "originalMeaning": "여러 가지로 변화시키다[만들다], 다양화하다; <투자 대상을> 분산시키다; <사업을> 다각화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<기업이> 다각[다양]화하다, 투자를 분산하다",
+              "examples": [],
+              "originalMeaning": "<기업이> 다각[다양]화하다, 투자를 분산하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8bcaefc5f59549609b4c9df834c8a613",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8bcaefc5f59549609b4c9df834c8a613",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "diversifies"
+        },
+        {
+          "type": "과거형",
+          "value": "diversified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "diversifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "diversified"
+        }
+      ],
+      "aliasConjugation": "diversifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a29a2c4e997d83e2fdd9dfb4215f52e6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수익을 늘리기 위해 경영의 다각화가 필요하다",
+      "text": "To increase a profit, management should be diversified."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새로운 수요에 대응하여 제품을 다각화 할 필요가 있다",
+      "text": "We need to <b>diversify</b> our products so as to meet new demands."
+    }
+  ],
+  "isWordType": true
+}

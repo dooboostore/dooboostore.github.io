@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "trend",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "trend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경향, 동향, 추세 ((of, in))",
+              "examples": [],
+              "originalMeaning": "경향, 동향, 추세 ((of, in))"
+            },
+            {
+              "meaning": "유행(의 스타일)",
+              "examples": [
+                {
+                  "text": "set[follow] a[the] <b>trend</b>",
+                  "translatedText": "유행을 창출하다[따르다]"
+                }
+              ],
+              "originalMeaning": "유행(의 스타일)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "…의 방향으로 가다, 흐르다, 기울다, 향하다 ((to, toward))",
+              "examples": [
+                {
+                  "text": "The coastline trends south[to the south].",
+                  "translatedText": "해안선은 남쪽을 향하고 있다."
+                }
+              ],
+              "originalMeaning": "…의 방향으로 가다, 흐르다, 기울다, 향하다 ((to, toward))"
+            },
+            {
+              "meaning": "어떤 방향으로 쏠리다, 기울다, …하는 추세[경향]이다",
+              "examples": [
+                {
+                  "text": "Things are trending toward nationalism.",
+                  "translatedText": "추세는 차츰 민족주의로 기울고 있다."
+                }
+              ],
+              "originalMeaning": "어떤 방향으로 쏠리다, 기울다, …하는 추세[경향]이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1e2f397ecf2456696f387dc86abdc9e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1e2f397ecf2456696f387dc86abdc9e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "63f8323b55f4144827365982ce6c6e06",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해안선은 남쪽을 향하고 있다.",
+      "text": "The coastline trends south[to the south]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불신 풍조가 만연하고 있다",
+      "text": "The <b>trend</b> of mutual distrust is prevalent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "현 추세는 임시직 고용으로 향하고 있다",
+      "text": "The current <b>trend</b> is towards part-time employment."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 벽지에도 시대의 물결이 밀려왔다",
+      "text": "The <b>trend</b> of the times has reached even a remote place like this."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경제계는 요즘 침체 상태에 있다",
+      "text": "The latest economical status shows a downward <b>trend</b>. or Business is stagnant[depressed, slack] recently."
+    }
+  ],
+  "isWordType": true
+}

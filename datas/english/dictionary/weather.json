@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "weather",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈweðə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "날씨, 일기, 기상(氣象), (=climate)",
+              "examples": [
+                {
+                  "text": "<b>weather</b> observation",
+                  "translatedText": "기상 관측"
+                }
+              ],
+              "originalMeaning": "날씨, 일기, 기상(氣象), (=<span class='related_word' lang='en' >climate</span>)"
+            },
+            {
+              "meaning": "[종종 the ~] 사나운[거친, 고약한] 날씨, 악천후",
+              "examples": [],
+              "originalMeaning": "[종종 the ~] 사나운[거친, 고약한] 날씨, 악천후"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[항해] 바람 불어오는 쪽의(opp. lee), 바람을 안고 가는",
+              "examples": [],
+              "originalMeaning": "[항해] 바람 불어오는 쪽의(opp. lee), 바람을 안고 가는"
+            },
+            {
+              "meaning": "비바람에 노출된",
+              "examples": [],
+              "originalMeaning": "비바람에 노출된"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "비바람을 맞게 하다, 바깥 공기에 쏘이다; 널어서 말리다",
+              "examples": [
+                {
+                  "text": "<b>weather</b> timber",
+                  "translatedText": "목재를 바깥 공기에 쐬다"
+                }
+              ],
+              "originalMeaning": "비바람을 맞게 하다, 바깥 공기에 쏘이다; 널어서 말리다"
+            },
+            {
+              "meaning": "풍화(風化)시키다",
+              "examples": [
+                {
+                  "text": "These rocks have been weathered for some centuries.",
+                  "translatedText": "이 바위들은 수세기 동안 풍화되어 왔다."
+                }
+              ],
+              "originalMeaning": "풍화(風化)시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2243095f32ae47cfb1976a4492dcd5b0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2243095f32ae47cfb1976a4492dcd5b0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "weathers"
+        },
+        {
+          "type": "과거형",
+          "value": "weathered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "weathering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "weathered"
+        }
+      ],
+      "aliasConjugation": "weathers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "605090276c3a412bb920c7a7374601ce",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "안개는 좋은 날씨의 징조이다",
+      "text": "Fog indicates fine <b>weather</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "봄 날씨는 고르지 못하다",
+      "text": "Spring <b>weather</b> is changeable."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘은 봄 날씨 같군요",
+      "text": "It is spring <b>weather</b> today, isn't it?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 무더위는 배겨낼 수가 없다.",
+      "text": "I cannot stand this hot <b>weather</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가을 날씨가 안정되어 맑아졌다.",
+      "text": "The autumn <b>weather</b> has set fair."
+    }
+  ],
+  "isWordType": true
+}

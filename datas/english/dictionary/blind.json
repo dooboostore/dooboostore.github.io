@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "blind",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "blaɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "눈먼, 장님인; (…이) 잘 안 보이는 ((in, [문어] of)); 맹인(용)의(cf. DEAF, DUMB); [the ~; 명사적; 복수 취급] 눈먼 사람들, 맹인들",
+              "examples": [
+                {
+                  "text": "<b>blind</b> of an eye = <b>blind</b> in[of] one eye",
+                  "translatedText": "한쪽 눈이 안 보이는, 애꾸인"
+                }
+              ],
+              "originalMeaning": "눈먼, 장님인; (…이) 잘 안 보이는 ((in, [문어] of)); 맹인(용)의(cf. DEAF, DUMB); [the ~; 명사적; 복수 취급] 눈먼 사람들, 맹인들"
+            },
+            {
+              "meaning": "<결점·미점·이해 등을> 알아보는 눈이 없는, 안목이 없는 ((to))",
+              "examples": [
+                {
+                  "text": "<b>blind</b> to all arguments",
+                  "translatedText": "논리가 전혀 통하지 않는"
+                }
+              ],
+              "originalMeaning": "<결점·미점·이해 등을> 알아보는 눈이 없는, 안목이 없는 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "눈멀게 하다",
+              "examples": [
+                {
+                  "text": "He was blinded in a car crash.",
+                  "translatedText": "그는 자동차 충돌 사고로 시력을 잃었다."
+                }
+              ],
+              "originalMeaning": "눈멀게 하다"
+            },
+            {
+              "meaning": "…의 눈을 (일시적으로) 보이지 않게 하다",
+              "examples": [
+                {
+                  "text": "The bright sun blinded me for a moment.",
+                  "translatedText": "밝은 햇빛에 잠시 앞이 안 보였다."
+                }
+              ],
+              "originalMeaning": "…의 눈을 (일시적으로) 보이지 않게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 블라인드, 차일( shade)",
+              "examples": [
+                {
+                  "text": "draw[pull down] the <b>blind</b> (s)",
+                  "translatedText": "창문의 블라인드를 닫다[내리다]"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] 블라인드, 차일( shade)"
+            },
+            {
+              "meaning": "[보통 sing.] 눈을 속이는 것, 눈가림; 구실; 미끼",
+              "examples": [],
+              "originalMeaning": "[보통 sing.] 눈을 속이는 것, 눈가림; 구실; 미끼"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8628e5544ec34b49a9ff9987c2b021f4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8628e5544ec34b49a9ff9987c2b021f4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blinds"
+        },
+        {
+          "type": "과거형",
+          "value": "blinded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blinding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blinded"
+        }
+      ],
+      "aliasConjugation": "blinds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fc6e49b0504facc417e8861b658d9375",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 한쪽 눈이 보이지 않는다.",
+      "text": "He is <b>blind</b> in one eye."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 돈에 눈이 어두워졌다",
+      "text": "She was blinded by money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "블라인드는 전부 내려져 있었다.",
+      "text": "All the blinds were down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 완미하여 여론의 동향을 깨닫지 못한다",
+      "text": "He is so bigoted in his views that he is <b>blind</b> to the tide of public opinion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "맹인들은 많은 것을 느낌에 의존한다",
+      "text": "<b>Blind</b> people rely a lot on touch."
+    }
+  ],
+  "isWordType": true
+}

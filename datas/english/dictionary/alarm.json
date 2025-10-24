@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "alarm",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈlɑːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "놀람, 공포, 겁, 불안",
+              "examples": [],
+              "originalMeaning": "놀람, 공포, 겁, 불안"
+            },
+            {
+              "meaning": "경보, 비상 경보",
+              "examples": [],
+              "originalMeaning": "경보, 비상 경보"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경보하다, 위급을 알리다; 놀라게 하다; 경보기를 설치하다, 경보 장치를 갖추다",
+              "examples": [
+                {
+                  "text": "Don't <b>alarm</b> yourself.",
+                  "translatedText": "놀라지 마라."
+                }
+              ],
+              "originalMeaning": "경보하다, 위급을 알리다; 놀라게 하다; 경보기를 설치하다, 경보 장치를 갖추다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3bf535bbf1fe403398a55ca49629052d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3bf535bbf1fe403398a55ca49629052d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "alarms"
+        },
+        {
+          "type": "과거형",
+          "value": "alarmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "alarming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "alarmed"
+        }
+      ],
+      "aliasConjugation": "alarms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0f6dfdaa51cead36a6834f46f08f4d12",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "닭이 놀라서 꼬르륵 댔다",
+      "text": "The hens cackled in <b>alarm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 갑자기 난 소리에 혼났다",
+      "text": "I was alarmed at the sudden noise."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자명종을 5시에 맞춰 놓았다",
+      "text": "I set the <b>alarm</b> to wake me at five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경보가 나자 사람들은 곧 집합하였다",
+      "text": "People gathered quickly at the <b>alarm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 뉴스는 널리 국민들에게 경종을 울렸다",
+      "text": "The news caused widespread public <b>alarm</b>."
+    }
+  ],
+  "isWordType": true
+}

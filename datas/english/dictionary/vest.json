@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "vest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "vest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[미] (양복의) 조끼([영]waistcoat) (([영]에서는 상점 용어))",
+              "examples": [],
+              "originalMeaning": "[미] (양복의) 조끼([영]waistcoat) (([영]에서는 상점 용어))"
+            },
+            {
+              "meaning": "방탄 조끼, 구명조끼",
+              "examples": [
+                {
+                  "text": "a bulletproof <b>vest</b>",
+                  "translatedText": "방탄조끼"
+                }
+              ],
+              "originalMeaning": "방탄 조끼, 구명조끼"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "의복을 입히다, <제복(制服)을> 입게 하다",
+              "examples": [],
+              "originalMeaning": "의복을 입히다, <제복(制服)을> 입게 하다"
+            },
+            {
+              "meaning": "<권리를> 주다, 부여하다; [법] 소유권[행사권]을 귀속시키다 ((in; with))",
+              "examples": [
+                {
+                  "text": "<b>vest</b> an estate[a title] in a person",
+                  "translatedText": "…에게 재산[칭호]을 주다"
+                }
+              ],
+              "originalMeaning": "<권리를> 주다, 부여하다; [법] 소유권[행사권]을 귀속시키다 ((in; with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "의복을 입다, 제복을 입다",
+              "examples": [],
+              "originalMeaning": "의복을 입다, 제복을 입다"
+            },
+            {
+              "meaning": "<권리·재산 등이> 확정되다, 귀속하다 ((in))",
+              "examples": [],
+              "originalMeaning": "<권리·재산 등이> 확정되다, 귀속하다 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ac6f358690a949a595cfe2a4fb3a8c3d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ac6f358690a949a595cfe2a4fb3a8c3d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "vests"
+        },
+        {
+          "type": "과거형",
+          "value": "vested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "vesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "vested"
+        }
+      ],
+      "aliasConjugation": "vests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0bef19dad6a5adc5357622d8e2d984e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 이 권한을 부여한다",
+      "text": "We <b>vest</b> this authority in him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대사는 조약 체결의 전권을 띠고 있다",
+      "text": "The ambassador is vested with full powers to conclude the treaty."
+    }
+  ],
+  "isWordType": true
+}

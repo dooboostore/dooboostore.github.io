@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "bury",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "묻다",
+              "examples": [
+                {
+                  "text": "<b>bury</b> one's hand in sand",
+                  "translatedText": "손을 모래 속에 묻다"
+                }
+              ],
+              "originalMeaning": "묻다"
+            },
+            {
+              "meaning": "파묻다, 매장하다(inter; cf. CREMATE); <성직자가> 매장식을 하다; 사별(死別)하다; (묻어버리듯이) 잊어버리다",
+              "examples": [
+                {
+                  "text": "<b>bury</b> one's wife",
+                  "translatedText": "상처(喪妻)하다"
+                }
+              ],
+              "originalMeaning": "파묻다, 매장하다(inter; cf. CREMATE); <성직자가> 매장식을 하다; 사별(死別)하다; (묻어버리듯이) 잊어버리다"
+            },
+            {
+              "meaning": "<손 등을> 찔러 넣다, <나이프 등을> 푹 찌르다 ((in, into))",
+              "examples": [
+                {
+                  "text": "<b>bury</b> one's hands in one's pockets",
+                  "translatedText": "양손을 주머니에 넣다"
+                }
+              ],
+              "originalMeaning": "<손 등을> 찔러 넣다, <나이프 등을> 푹 찌르다 ((in, into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50c79746d4ce4459a50034b81ff04d46",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50c79746d4ce4459a50034b81ff04d46",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "buries"
+        },
+        {
+          "type": "과거형",
+          "value": "buried"
+        },
+        {
+          "type": "현재 분사",
+          "value": "burying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "buried"
+        }
+      ],
+      "aliasConjugation": "buries",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4dca1904ab4bf781267a2fead32fee00",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산사태로 한 가족이 모두 생매장되었다",
+      "text": "All the family were <b>buried</b> alive by a landslide."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 눈 속에 매몰되었다",
+      "text": "They were <b>buried</b> under snow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사실을 직시하지 않고 있다",
+      "text": "He buries his head in the sand."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 웨스트민스터 사원에 묻혀 있다",
+      "text": "He lies <b>buried</b> at Westminster."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 유해는 여기에 매장된다",
+      "text": "His remains will be <b>buried</b>[interred] here."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "dawn",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɔːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "새벽, 동틀녘, 여명(daybreak)",
+              "examples": [
+                {
+                  "text": "at <b>dawn</b>",
+                  "translatedText": "새벽녘에"
+                }
+              ],
+              "originalMeaning": "새벽, 동틀녘, 여명(daybreak)"
+            },
+            {
+              "meaning": "[the ~] (일의) 시초, 조짐, 서광 ((of))",
+              "examples": [
+                {
+                  "text": "at the <b>dawn</b> of the 21st century",
+                  "translatedText": "21세기의 시초에"
+                }
+              ],
+              "originalMeaning": "[the ~] (일의) 시초, 조짐, 서광 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[종종 it을 주어로] 날이 새다, <하늘이> 밝아지다",
+              "examples": [
+                {
+                  "text": "It[Day, Morning] dawns.",
+                  "translatedText": "날이 샌다."
+                }
+              ],
+              "originalMeaning": "[종종 it을 주어로] 날이 새다, <하늘이> 밝아지다"
+            },
+            {
+              "meaning": "(서서히) 발달하기 시작하다; <사물이> 나타나기 시작하다, 보이기 시작하다",
+              "examples": [],
+              "originalMeaning": "(서서히) 발달하기 시작하다; <사물이> 나타나기 시작하다, 보이기 시작하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0e816acb5bd54f049a67388e7b4ee752",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0e816acb5bd54f049a67388e7b4ee752",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dawns"
+        },
+        {
+          "type": "과거형",
+          "value": "dawned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dawning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dawned"
+        }
+      ],
+      "aliasConjugation": "dawns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "98db08237ef44e2561a0df9721f4ac4a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "…을 그가 알기 시작했다",
+      "text": "It dawned on him that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어제 저녁은 밤새껏 마시며 놀았다",
+      "text": "Last night we caroused around till <b>dawn</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "상륙 부대는 새벽에 해안에 도착했다.",
+      "text": "The landing troops hit the beach at <b>dawn</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "르네상스는 근대 문명의 여명이다",
+      "text": "Renaissance is the <b>dawn</b> of modern civilization."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "동녘 하늘이 밝아 온다",
+      "text": "Day[Morning] dawns. or The light of day is peeping in the east."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "gamble",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɡæmbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "노름[도박]을 하다, 내기를 하다 ((on, at))",
+              "examples": [
+                {
+                  "text": "<b>gamble</b> at cards",
+                  "translatedText": "내기 카드놀이를 하다"
+                }
+              ],
+              "originalMeaning": "노름[도박]을 하다, 내기를 하다 ((on, at))"
+            },
+            {
+              "meaning": "투기를 하다 ((on, in)); 성패를 건 모험을 하다, (…에) 금품[명예 ((등))]을 걸다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>gamble</b> in sugar",
+                  "translatedText": "설탕 투기를 하다"
+                }
+              ],
+              "originalMeaning": "투기를 하다 ((on, in)); 성패를 건 모험을 하다, (…에) 금품[명예 ((등))]을 걸다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "노름으로 잃다",
+              "examples": [
+                {
+                  "text": "<b>gamble</b> away one's fortune",
+                  "translatedText": "노름으로 가산을 탕진하다"
+                }
+              ],
+              "originalMeaning": "노름으로 잃다"
+            },
+            {
+              "meaning": "<…을> 걸다, …의 위험을 무릅쓰다 ((on))",
+              "examples": [
+                {
+                  "text": "<b>gamble</b> one's reputation on",
+                  "translatedText": "…에 명성을 걸다"
+                }
+              ],
+              "originalMeaning": "<…을> 걸다, …의 위험을 무릅쓰다 ((on))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "노름, 도박; 모험, 투기",
+              "examples": [],
+              "originalMeaning": "노름, 도박; 모험, 투기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/222e661df8f346a4b2236565eeea2e46",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/222e661df8f346a4b2236565eeea2e46",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gambles"
+        },
+        {
+          "type": "과거형",
+          "value": "gambled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gambling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gambled"
+        }
+      ],
+      "aliasConjugation": "gambles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cbd0747f0f8f13544e9c54818f8d40ca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 도박으로 돈을 잃었다",
+      "text": "He gambled away his money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 도박 빚을 떼어먹고 도망쳤다.",
+      "text": "He welshed on his gambling debts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장래를 거는 무모한 모험을 하지 마라.",
+      "text": "Don’t <b>gamble</b> with your future."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 노름하는 버릇이 있었다.",
+      "text": "He had a disposition to do gambling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "라스베이거스에서는 어디서나 도박을 할 수 있다.",
+      "text": "Las Vegas offers wall-to-wall gambling."
+    }
+  ],
+  "isWordType": true
+}

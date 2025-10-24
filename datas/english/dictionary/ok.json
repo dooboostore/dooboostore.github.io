@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "OK",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "oʊ│keɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "좋은, 괜찮은, 지장 없는",
+              "examples": [
+                {
+                  "text": "It's OKwith[by] me.",
+                  "translatedText": "난 괜찮아. ((허락한다는 뜻))"
+                }
+              ],
+              "originalMeaning": "좋은, 괜찮은, 지장 없는"
+            },
+            {
+              "meaning": "타당한, 적절한; 허용할 수 있는; 틀림없는 ((with, by))",
+              "examples": [],
+              "originalMeaning": "타당한, 적절한; 허용할 수 있는; 틀림없는 ((with, by))"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "틀림없이, 순조롭게",
+              "examples": [],
+              "originalMeaning": "틀림없이, 순조롭게"
+            },
+            {
+              "meaning": "좋아, 됐어, 오케이(all right)",
+              "examples": [
+                {
+                  "text": "<b>OK</b>, I'll do it.",
+                  "translatedText": "좋아, 내가 해 보지."
+                }
+              ],
+              "originalMeaning": "좋아, 됐어, 오케이(all right)"
+            }
+          ]
+        },
+        {
+          "type": "감탄사",
+          "meanings": [
+            {
+              "meaning": "[동의·납득·승인의 뜻을 나타내어] 좋아, 알았다, 오케이",
+              "examples": [
+                {
+                  "text": "<b>OK</b>, I'll get it for you.",
+                  "translatedText": "좋아, 사다 줄게."
+                }
+              ],
+              "originalMeaning": "[동의·납득·승인의 뜻을 나타내어] 좋아, 알았다, 오케이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2021364a1484484c9381c66fdc667ae0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2021364a1484484c9381c66fdc667ae0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "OK's"
+        },
+        {
+          "type": "과거형",
+          "value": "OK'd"
+        },
+        {
+          "type": "현재 분사",
+          "value": "OK'ing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "OK'd"
+        }
+      ],
+      "aliasConjugation": "OK's",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9162625060b901ceac190ae6ccdbe225",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "OK",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "Oklahoma",
+              "examples": [],
+              "originalMeaning": "Oklahoma"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e0664ca0d74a40219fd4fc2cae731ef1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e0664ca0d74a40219fd4fc2cae731ef1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "OK's",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "69a347f2f0173cd58b2996c7ddcbd1a3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "별일 없이 잘 지냅니다",
+      "text": "I am getting along <b>OK</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나의 제안에 동의했다.",
+      "text": "He <b>OK</b>’d my proposal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "미안해 할 것 없소",
+      "text": "Don't give it a second thought. or Don't worry about it. or It doesn't matter. or That's all right[<b>OK</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "좋아, 사다 줄게.",
+      "text": "<b>OK</b>, I’ll get it for you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "난 괜찮아.",
+      "text": "It’s <b>OK</b> with[by] me."
+    }
+  ],
+  "isWordType": true
+}

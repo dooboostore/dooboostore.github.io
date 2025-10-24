@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "fur",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fɜː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(토끼·담비·비버 등의) 부드러운 털",
+              "examples": [],
+              "originalMeaning": "(토끼·담비·비버 등의) 부드러운 털"
+            },
+            {
+              "meaning": "[집합적] 모피 동물",
+              "examples": [
+                {
+                  "text": "hunt <b>fur</b>",
+                  "translatedText": "토끼 사냥을 하다"
+                }
+              ],
+              "originalMeaning": "[집합적] 모피 동물"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "모피(제)의",
+              "examples": [
+                {
+                  "text": "a <b>fur</b> coat",
+                  "translatedText": "모피 코트"
+                }
+              ],
+              "originalMeaning": "모피(제)의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "부드러운 모피를 붙이다, 모피로 덮다, 모피로 안[가장자리]을 대다",
+              "examples": [],
+              "originalMeaning": "부드러운 모피를 붙이다, 모피로 덮다, 모피로 안[가장자리]을 대다"
+            },
+            {
+              "meaning": "백태가 끼게 하다; <물주전자 안 등에> 물때가 앉게 하다, 오물[침전물]로 덮다; [건축] 붙임대를 붙이다",
+              "examples": [],
+              "originalMeaning": "백태가 끼게 하다; <물주전자 안 등에> 물때가 앉게 하다, 오물[침전물]로 덮다; [건축] 붙임대를 붙이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4f1b17139ce8417f9db268a8c30845a1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4f1b17139ce8417f9db268a8c30845a1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "furs"
+        },
+        {
+          "type": "과거형",
+          "value": "furred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "furring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "furred"
+        }
+      ],
+      "aliasConjugation": "furs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9e315058ab572adbfffab7e494c17927",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "fur.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "furlong, furnished, further",
+              "examples": [],
+              "originalMeaning": "furlong, furnished, further"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0b4d35b1c5cf4863a4a483cb825e8870",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0b4d35b1c5cf4863a4a483cb825e8870",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "furs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bdd46159b7cdb86d286b704653e0d435",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 모피 코트는 엄청나게 싸다",
+      "text": "This <b>fur</b> coat is dirt cheap."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 외투에는 모피 안감이 붙어 있다",
+      "text": "Her overcoat is lined with <b>fur</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "혀에 설태가 끼었다",
+      "text": "The tongue has become furred."
+    }
+  ],
+  "isWordType": true
+}

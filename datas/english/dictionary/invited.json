@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "invite",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "초청하다, 초대하다(ask)",
+              "examples": [
+                {
+                  "text": "<b>invite</b> a person to one's house",
+                  "translatedText": "…을 집에 초대하다"
+                }
+              ],
+              "originalMeaning": "초청하다, 초대하다(ask)"
+            },
+            {
+              "meaning": "<…에게> <…할 것을> 권하다; 안내하다 ((in, into))",
+              "examples": [
+                {
+                  "text": "( <b>invite</b>+[목]+todo) He <b>invited</b> us to be seated.",
+                  "translatedText": "그는 우리에게 앉을 것을 권했다."
+                }
+              ],
+              "originalMeaning": "<…에게> <…할 것을> 권하다; 안내하다 ((in, into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "초대하다; 매혹하다, 끌다, 유혹하다",
+              "examples": [],
+              "originalMeaning": "초대하다; 매혹하다, 끌다, 유혹하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "초대(장) in·vi·tee[ìnvitíː, -vai-|-vai-], in·vít·er, in·ví·tor",
+              "examples": [],
+              "originalMeaning": "초대(장) in·vi·tee[ìnvitíː, -vai-|-vai-], in·vít·er, in·ví·tor"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/54edf7af2a0944f7ad2ec480f37b0ac7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/54edf7af2a0944f7ad2ec480f37b0ac7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "invites"
+        },
+        {
+          "type": "과거형",
+          "value": "invited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "inviting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "invited"
+        }
+      ],
+      "aliasConjugation": "invites",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "58f1c537e2beffeffdebecadad1b8ce0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리에게 앉을 것을 권했다.",
+      "text": "He <b>invited</b> us to be seated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "초청해 주셔서 대단히 감사합니다.",
+      "text": "It is good of you to <b>invite</b> me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소녀를 포함해서 6명이 초대되었다",
+      "text": "Six were <b>invited</b>, including the girl."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신교사 건축 입찰을 받음",
+      "text": "Tenders[Bids] are <b>invited</b> for the new schoolbuilding."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어느 장면이나 다 보는 사람의 눈을 매혹한다.",
+      "text": "Every scene invites the ravished eye."
+    }
+  ],
+  "isWordType": true
+}

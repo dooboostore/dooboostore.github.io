@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "electricity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˌlekˈtrɪsəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전기",
+              "examples": [
+                {
+                  "text": "atmospheric <b>electricity</b>",
+                  "translatedText": "공중 전기"
+                }
+              ],
+              "originalMeaning": "전기"
+            },
+            {
+              "meaning": "전류, (공급) 전력",
+              "examples": [
+                {
+                  "text": "install <b>electricity</b>",
+                  "translatedText": "전기 장치를 하다"
+                }
+              ],
+              "originalMeaning": "전류, (공급) 전력"
+            },
+            {
+              "meaning": "전기학",
+              "examples": [],
+              "originalMeaning": "전기학"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0622dfe6c535493a874189cab4b0f870",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0622dfe6c535493a874189cab4b0f870",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ccb7034645654fa92e7d3ffaf15beecd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 기관차들은 전기로 움직인다.",
+      "text": "Those locomotives are driven by <b>electricity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 기계는 전기[압축 공기]로 움직인다.",
+      "text": "The machine is driven by <b>electricity</b>[compressed air]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마을에 곧 전기를 끌어들인다",
+      "text": "The <b>electricity</b> will soon be brought into the village."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우선 컴퓨터를 전원에 연결하시오.",
+      "text": "Connect the computer (up) to the <b>electricity</b> supply first."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 전선에는 전기가 통해 있다",
+      "text": "This wire is live. or This wire is charged with <b>electricity</b>."
+    }
+  ],
+  "isWordType": true
+}

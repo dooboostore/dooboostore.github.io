@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "collect",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈlekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "모으다, 수집하다",
+              "examples": [],
+              "originalMeaning": "모으다, 수집하다"
+            },
+            {
+              "meaning": "<세금·집세 등을> 징수하다, <기부금을> 모집하다, [미] <뇌물을> 정기적으로 받다, [주로 영] 손에 넣다",
+              "examples": [
+                {
+                  "text": "<b>collect</b> taxes",
+                  "translatedText": "세금을 징수하다"
+                }
+              ],
+              "originalMeaning": "<세금·집세 등을> 징수하다, <기부금을> 모집하다, [미] <뇌물을> 정기적으로 받다, [주로 영] 손에 넣다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "모이다",
+              "examples": [],
+              "originalMeaning": "모이다"
+            },
+            {
+              "meaning": "<눈·먼지 등이> 쌓이다",
+              "examples": [],
+              "originalMeaning": "<눈·먼지 등이> 쌓이다"
+            }
+          ]
+        },
+        {
+          "type": "형용사, 부사",
+          "meanings": [
+            {
+              "meaning": "수취인[수신자] 지불의[로]( carriage forward)",
+              "examples": [
+                {
+                  "text": "call a person <b>collect</b>",
+                  "translatedText": "…에게 수신자 지불로 전화를 걸다"
+                }
+              ],
+              "originalMeaning": "수취인[수신자] 지불의[로]( carriage forward)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d5735eca9de04e729f9198aa0bf55e65",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d5735eca9de04e729f9198aa0bf55e65",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "collects"
+        },
+        {
+          "type": "과거형",
+          "value": "collected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "collecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "collected"
+        }
+      ],
+      "aliasConjugation": "collects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "65fa14096ef3d1bde4875535ee11af14",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "collect",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɑ́lekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(가톨릭의) 본기도, (영국 국교회에서) 특도(特禱) ((짧은 기도문))",
+              "examples": [],
+              "originalMeaning": "(가톨릭의) 본기도, (영국 국교회에서) 특도(特禱) ((짧은 기도문))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92d20e6c9d194568aae6630482ff4071",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92d20e6c9d194568aae6630482ff4071",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "collects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "85c34e77e591cffc9c70cc0e6e2a26f4",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상 위에 먼지가 들이쌓인다",
+      "text": "Dust collects[is thick] on the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 와서 구덩이에 물이 고였다",
+      "text": "The rain water has collected in a depression. or The rain has formed a pool in a sunken place."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수금된 돈은 합계 2,000달러가 되었다.",
+      "text": "The money collected aggregated $2,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람들은 대개 수집욕이 있다.",
+      "text": "Most people have a desire to <b>collect</b> things."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 일요일마다 곤충을 채집하러 간다",
+      "text": "He goes collecting insects every Sunday."
+    }
+  ],
+  "isWordType": true
+}

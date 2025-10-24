@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "cover",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "덮다; <물건에> 뚜껑을 덮다; 싸다, 씌우다, <머리에> 모자를 씌우다[쓰다]; 감싸다 ((with))",
+              "examples": [
+                {
+                  "text": "Snow <b>cover</b> ed the highway. = The highway was covered with snow.",
+                  "translatedText": "간선 도로는 눈으로 덮였다."
+                }
+              ],
+              "originalMeaning": "덮다; <물건에> 뚜껑을 덮다; 싸다, 씌우다, <머리에> 모자를 씌우다[쓰다]; 감싸다 ((with))"
+            },
+            {
+              "meaning": "<…에> (벽지 등을) 바르다, …의 겉을 붙이다[바르다], 표지를 달다, <…에> (페인트 등을) 칠하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>cover</b> a wall with paper[paint]",
+                  "translatedText": "벽에 벽지를 바르다[페인트를 칠하다]"
+                }
+              ],
+              "originalMeaning": "<…에> (벽지 등을) 바르다, …의 겉을 붙이다[바르다], 표지를 달다, <…에> (페인트 등을) 칠하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(부재자를) 대신하여 일하다 ((for))",
+              "examples": [],
+              "originalMeaning": "(부재자를) 대신하여 일하다 ((for))"
+            },
+            {
+              "meaning": "(남의) 비밀 등을 감싸서 숨기다 ((for)), 알리바이 제공을 하다",
+              "examples": [],
+              "originalMeaning": "(남의) 비밀 등을 감싸서 숨기다 ((for)), 알리바이 제공을 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "덮개, 커버; 뚜껑;[pl.] (침구용의) 커버, 침대보, 담요; 싸는 물건",
+              "examples": [],
+              "originalMeaning": "덮개, 커버; 뚜껑;[pl.] (침구용의) 커버, 침대보, 담요; 싸는 물건"
+            },
+            {
+              "meaning": "(책의) 표지 ((for)) (cf. JACKET), 포장지, 봉투",
+              "examples": [],
+              "originalMeaning": "(책의) 표지 ((for)) (cf. JACKET), 포장지, 봉투"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c131f15440514290bde6395e5a6bcb55",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c131f15440514290bde6395e5a6bcb55",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "covers"
+        },
+        {
+          "type": "과거형",
+          "value": "covered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "covering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "covered"
+        }
+      ],
+      "aliasConjugation": "covers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1a70f84e3cc1ea3aac899c960f978965",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "10 인분의 식기가 놓였다.",
+      "text": "Covers were laid for ten."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 법칙은 모든 경우에 적용된다.",
+      "text": "The rule covers all cases."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모든 일을 숨길 수는 없다",
+      "text": "You can't <b>cover</b> up the whole thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어둠이 산을 감추어 버렸다",
+      "text": "Darkness has covered the hills."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산은 눈으로 덮여 있다.",
+      "text": "The mountain is covered with snow."
+    }
+  ],
+  "isWordType": true
+}

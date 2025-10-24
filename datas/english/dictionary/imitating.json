@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "imitate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪmɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "모방하다, 흉내내다(mimic); 본받다, 본보기로 하다, 배우려 하다",
+              "examples": [
+                {
+                  "text": "<b>imitate</b> an author's style",
+                  "translatedText": "어떤 작가의 문체를 본받다"
+                }
+              ],
+              "originalMeaning": "모방하다, 흉내내다(mimic); 본받다, 본보기로 하다, 배우려 하다"
+            },
+            {
+              "meaning": "모사(模寫)[모조]하다, …와 비슷하게 하다, 위조하다",
+              "examples": [
+                {
+                  "text": "fabrics that <b>imitate</b> leather",
+                  "translatedText": "피혁을 모조한 직물"
+                }
+              ],
+              "originalMeaning": "모사(模寫)[모조]하다, …와 비슷하게 하다, 위조하다"
+            },
+            {
+              "meaning": "<동물 등이> 닮다",
+              "examples": [],
+              "originalMeaning": "<동물 등이> 닮다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ef9cad0c94648e38fd646e4bbf47743",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ef9cad0c94648e38fd646e4bbf47743",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "imitates"
+        },
+        {
+          "type": "과거형",
+          "value": "imitated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "imitating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "imitated"
+        }
+      ],
+      "aliasConjugation": "imitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dac7dab871d2ec09ea673cee5b2e50f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "앵무새는 인간의 말을 흉내낸다.",
+      "text": "Parrots <b>imitate</b> human speech."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자연계에는 인공으로 모방할 수 없는 것이 많다",
+      "text": "There are many things in nature which defy human ingenuity to <b>imitate</b> them."
+    }
+  ],
+  "isWordType": true
+}

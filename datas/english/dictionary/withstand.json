@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "withstand",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɪð│stænd; wɪθ│stænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<사람·힘·곤란 등에> 저항하다, 버티다 (=oppose)",
+              "examples": [
+                {
+                  "text": "<b>withstand</b> temptation",
+                  "translatedText": "유혹에 저항하다"
+                }
+              ],
+              "originalMeaning": "<사람·힘·곤란 등에> 저항하다, 버티다 (=<span class='related_word' lang='en' >oppose</span>)"
+            },
+            {
+              "meaning": "<물건 등이> <마찰·혹사에> 견디어 내다, 잘 견디다",
+              "examples": [],
+              "originalMeaning": "<물건 등이> <마찰·혹사에> 견디어 내다, 잘 견디다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[주로 시어] 저항[반항]하다, 견디다",
+              "examples": [],
+              "originalMeaning": "[주로 시어] 저항[반항]하다, 견디다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/58adea3388bc4933abcbd4e39867574b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/58adea3388bc4933abcbd4e39867574b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "withstands"
+        },
+        {
+          "type": "과거형",
+          "value": "withstood"
+        },
+        {
+          "type": "현재 분사",
+          "value": "withstanding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "withstood"
+        }
+      ],
+      "aliasConjugation": "withstands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e129a56aefac045b6b6aa80dba05fdac",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지진에도 그 집은 꿈쩍없었다",
+      "text": "The house withstood the earthquake perfectly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 건물은 지진에도 끄떡없었다",
+      "text": "The building perfectly withstood the earthquake."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 건물은 강한 지진에 버틸 수 있도록 건축되었다",
+      "text": "This house is so constructed as to <b>withstand</b> a violent oscillation in an earthquake."
+    }
+  ],
+  "isWordType": true
+}

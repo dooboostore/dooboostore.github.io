@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "legal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈliːɡl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "법률(상)의, 법률에 관한 (=lawful)",
+              "examples": [
+                {
+                  "text": "the <b>legal</b> profession",
+                  "translatedText": "법조(계)"
+                }
+              ],
+              "originalMeaning": "법률(상)의, 법률에 관한 (=<span class='related_word' lang='en' >lawful</span>)"
+            },
+            {
+              "meaning": "합법의(lawful)",
+              "examples": [],
+              "originalMeaning": "합법의(lawful)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "법을 준수하는 사람",
+              "examples": [],
+              "originalMeaning": "법을 준수하는 사람"
+            },
+            {
+              "meaning": "합법적 입국자",
+              "examples": [],
+              "originalMeaning": "합법적 입국자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bea3cbb10fb046da97270611e325eedf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bea3cbb10fb046da97270611e325eedf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "707cf275cd887191ac090c0ffad04391",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "게다가 또 합법적이 아니다.",
+      "text": "And, again, it is not strictly <b>legal</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너의 요구는 법적 근거가 없다",
+      "text": "Your demand has no <b>legal</b> basis."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수년간의 소송 끝에 마침내 원고측에 유리한 판결이 내려졌다",
+      "text": "After several years of <b>legal</b> proceedings judgment has at last been given[passed] in favor of the plaintiff."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "film",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fɪlm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 a ~] (표면에 생기는) 엷은 막, 박막, 엷은 껍질; 엷은 잎; 피막(被膜)",
+              "examples": [
+                {
+                  "text": "a <b>film</b> of dust",
+                  "translatedText": "엷게 앉은 먼지"
+                }
+              ],
+              "originalMeaning": "[보통 a ~] (표면에 생기는) 엷은 막, 박막, 엷은 껍질; 엷은 잎; 피막(被膜)"
+            },
+            {
+              "meaning": "가는 실, (공중의) 거미줄",
+              "examples": [],
+              "originalMeaning": "가는 실, (공중의) 거미줄"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "영화의",
+              "examples": [
+                {
+                  "text": "a <b>film</b> actor",
+                  "translatedText": "영화 배우"
+                }
+              ],
+              "originalMeaning": "영화의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "엷은 껍질로[막으로] 덮다",
+              "examples": [],
+              "originalMeaning": "엷은 껍질로[막으로] 덮다"
+            },
+            {
+              "meaning": "필름에 찍다[담다]",
+              "examples": [],
+              "originalMeaning": "필름에 찍다[담다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4837fe2ec6c4dd6aac7545099cfdd80",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4837fe2ec6c4dd6aac7545099cfdd80",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "films"
+        },
+        {
+          "type": "과거형",
+          "value": "filmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "filming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "filmed"
+        }
+      ],
+      "aliasConjugation": "films",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d0abc9737f2d394e5cb11f22e09f7e5e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자는 영화계에서 유명해졌다",
+      "text": "She rose to <b>film</b> fame."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 영화는 아주 재미없어!",
+      "text": "That <b>film</b> was bloody terrible!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 영화는 내 취향이 아니었다",
+      "text": "The <b>film</b> wasn't to my taste."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 눈은 눈물로 흐려졌다.",
+      "text": "Her eyes filmed with tears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "영화가 막 시작하려 하고 있다.",
+      "text": "The <b>film</b> is about to begin."
+    }
+  ],
+  "isWordType": true
+}

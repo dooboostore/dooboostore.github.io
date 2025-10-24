@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "wreck",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rek"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "난파, 파선, 조난(shipwreck); (열차·자동차 등의) 충돌, 파괴",
+              "examples": [
+                {
+                  "text": "save a ship from (a) <b>wreck</b>",
+                  "translatedText": "조난당한 배를 구조하다"
+                }
+              ],
+              "originalMeaning": "난파, 파선, 조난(shipwreck); (열차·자동차 등의) 충돌, 파괴"
+            },
+            {
+              "meaning": "파멸, 좌절",
+              "examples": [
+                {
+                  "text": "the <b>wreck</b> of one's life",
+                  "translatedText": "인생의 파멸"
+                }
+              ],
+              "originalMeaning": "파멸, 좌절"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[종종 수동형으로] <배를> 난파시키다, <선원을> 조난시키다",
+              "examples": [
+                {
+                  "text": "The ship was wrecked.",
+                  "translatedText": "그 배는 난파했다."
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] <배를> 난파시키다, <선원을> 조난시키다"
+            },
+            {
+              "meaning": "<건물·차 등을> 엉망으로 파괴하다 (=destroy)",
+              "examples": [
+                {
+                  "text": "The car was wrecked by the mob.",
+                  "translatedText": "차는 폭도에 의해서 엉망으로 파괴되었다."
+                }
+              ],
+              "originalMeaning": "<건물·차 등을> 엉망으로 파괴하다 (=<span class='related_word' lang='en' >destroy</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "난파하다, 파멸하다",
+              "examples": [],
+              "originalMeaning": "난파하다, 파멸하다"
+            },
+            {
+              "meaning": "난파선을 구조하러 가다, (사고를 당한 차 등의) 잔해를 제거하다",
+              "examples": [],
+              "originalMeaning": "난파선을 구조하러 가다, (사고를 당한 차 등의) 잔해를 제거하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d01368a440914602bc79f072a237244d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d01368a440914602bc79f072a237244d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wrecks"
+        },
+        {
+          "type": "과거형",
+          "value": "wrecked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wrecking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wrecked"
+        }
+      ],
+      "aliasConjugation": "wrecks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0d4c10a6b970a4c5b63b2e7f7c4ecc11",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 차는 충돌 사고를 당했다.",
+      "text": "His car was in a <b>wreck</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 차는 무참한 꼴이 되어 있었다.",
+      "text": "My car was a worthless <b>wreck</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 암초에 걸려 부서졌다",
+      "text": "The ship was wrecked on a rock[reef]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 암초에 걸려 파선했다",
+      "text": "The ship wrecked on a sunken rock."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너 때문에 내 인생은 결딴났다",
+      "text": "You have made a <b>wreck</b> of my life."
+    }
+  ],
+  "isWordType": true
+}

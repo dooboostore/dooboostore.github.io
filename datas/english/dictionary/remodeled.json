@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "remodel",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│riː│mɑːdl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 형(型)을 고치다, 개작[개조, 개축]하다; <행실 등을> 고치다",
+              "examples": [
+                {
+                  "text": "<b>remodel</b> a building into an apartment house",
+                  "translatedText": "건물을 아파트로 개조하다"
+                }
+              ],
+              "originalMeaning": "…의 형(型)을 고치다, 개작[개조, 개축]하다; <행실 등을> 고치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e445c3d7e7c54c8d99071d743c883aa0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e445c3d7e7c54c8d99071d743c883aa0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "remodels"
+        },
+        {
+          "type": "과거형",
+          "value": "remodelled, remodeled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "remodelling, remodeling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "remodelled, remodeled"
+        }
+      ],
+      "aliasConjugation": "remodels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f5e4b76d0d63d3f4381428276a24e369",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "6월 1일에 신장 개업합니다",
+      "text": "Completely <b>remodeled</b>. Reopening June 1."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "집을 개조하는 일에 손댈 것이다",
+      "text": "I'll undertake the task of remodeling the house."
+    }
+  ],
+  "isWordType": true
+}

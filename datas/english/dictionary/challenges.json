@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "challenge",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtʃæləndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "도전 ((to)), (결투·시합 등의) 신청, 도전장 ((to))",
+              "examples": [
+                {
+                  "text": "a <b>challenge</b> to violence",
+                  "translatedText": "폭력에의 도전"
+                }
+              ],
+              "originalMeaning": "도전 ((to)), (결투·시합 등의) 신청, 도전장 ((to))"
+            },
+            {
+              "meaning": "수하(誰何) ((보초의 ‘Halt! Who goes there?’ 「정지! 누구냐?」))",
+              "examples": [],
+              "originalMeaning": "수하(誰何) ((보초의 ‘Halt! Who goes there?’ 「정지! 누구냐?」))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "도전하다; <논쟁·시합 등을> 걸다, <결투를> 신청하다; …에게 대답을 요구하다",
+              "examples": [
+                {
+                  "text": "<b>challenge</b> criticism",
+                  "translatedText": "비평할 테면 해보라고 하다"
+                }
+              ],
+              "originalMeaning": "도전하다; <논쟁·시합 등을> 걸다, <결투를> 신청하다; …에게 대답을 요구하다"
+            },
+            {
+              "meaning": "…의 진실·정당성 등을 의심하다, …에 이의를 제기하다",
+              "examples": [],
+              "originalMeaning": "…의 진실·정당성 등을 의심하다, …에 이의를 제기하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "도전하다",
+              "examples": [],
+              "originalMeaning": "도전하다"
+            },
+            {
+              "meaning": "<사냥개가> 냄새를 맡고 짖다",
+              "examples": [],
+              "originalMeaning": "<사냥개가> 냄새를 맡고 짖다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b6cda88753dd4795b1c741221d608f8a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b6cda88753dd4795b1c741221d608f8a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "challenges"
+        },
+        {
+          "type": "과거형",
+          "value": "challenged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "challenging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "challenged"
+        }
+      ],
+      "aliasConjugation": "challenges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "73d250597b9697d97b0e2f2181670cc2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 어떠한 임무도 모두 도전이라고 생각한다.",
+      "text": "I regard every assignment as a <b>challenge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 한번은 대학 진학을 포기했었는데 입시에 재도전했다",
+      "text": "For a time he gave up the idea of going to college, but eventually he took up the <b>challenge</b> of retaking the entrance examination."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그자 같은 하찮은 상대가 겨루겠다니 가소롭다",
+      "text": "It is ridiculous that a little squirt like him should <b>challenge</b> me to a game."
+    }
+  ],
+  "isWordType": true
+}

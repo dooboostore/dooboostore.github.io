@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "belief",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪˈliːf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "믿음, 확신, 신념, 소신",
+              "examples": [
+                {
+                  "text": "My <b>belief</b> is that …",
+                  "translatedText": "내 생각에는 …"
+                }
+              ],
+              "originalMeaning": "믿음, 확신, 신념, 소신"
+            },
+            {
+              "meaning": "신뢰, 신용 ((in))",
+              "examples": [],
+              "originalMeaning": "신뢰, 신용 ((in))"
+            },
+            {
+              "meaning": "[UC/] 신앙 ((in)), 종교; [pl.] (종교·정치상의) 신조, 교의; [the B~] 사도신경(the Apostles’ Creed)",
+              "examples": [],
+              "originalMeaning": "[UC/] 신앙 ((in)), 종교; [pl.] (종교·정치상의) 신조, 교의; [the B~] 사도신경(the Apostles’ Creed)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3af32b77a62c40c69281db6987bab389",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3af32b77a62c40c69281db6987bab389",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "978d3852dc043d7879ea1d882bc6938f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "날이 갈수록 확신이 굳어졌다",
+      "text": "I was confirmed in my <b>belief</b> with the lapse of time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 생각에는 …",
+      "text": "My <b>belief</b> is that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지식은 힘이라고 확신한다",
+      "text": "I firmly believe[It is my firm <b>belief</b>] that knowledge is power."
+    }
+  ],
+  "isWordType": true
+}

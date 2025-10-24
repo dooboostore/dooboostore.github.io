@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "paragraph",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pærəɡræf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(문장의) 절(節), 단락, 패러그래프",
+              "examples": [],
+              "originalMeaning": "(문장의) 절(節), 단락, 패러그래프"
+            },
+            {
+              "meaning": "패러그래프[단락] 부호((¶))",
+              "examples": [],
+              "originalMeaning": "패러그래프[단락] 부호((¶))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<문장을> 절[단락]로 나누다",
+              "examples": [],
+              "originalMeaning": "<문장을> 절[단락]로 나누다"
+            },
+            {
+              "meaning": "<신문 등에> 짧은 기사를 쓰다, 기삿거리로 하다",
+              "examples": [],
+              "originalMeaning": "<신문 등에> 짧은 기사를 쓰다, 기삿거리로 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea1f166e20934d0998d85196f1dd8cf4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea1f166e20934d0998d85196f1dd8cf4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "081cfa0e9b5c7f625005079e45a56a89",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "절의 첫행을 들여 쓰시오.",
+      "text": "Indent the first line of a <b>paragraph</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 단락은 너무 길어서 이해가 잘 안 된다",
+      "text": "This <b>paragraph</b> is too long to follow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 한 문장을 한 단락으로 늘여라.",
+      "text": "Expand this one sentence into a <b>paragraph</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 대목에는 좀더 살을 붙여야겠다",
+      "text": "This <b>paragraph</b> needs a little more expatiation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 절은 다른 절과 연결되지 않는다.",
+      "text": "This <b>paragraph</b> doesn’t connect with the others."
+    }
+  ],
+  "isWordType": true
+}

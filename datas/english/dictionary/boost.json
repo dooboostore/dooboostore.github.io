@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "boost",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "buːst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "밀어올림",
+              "examples": [],
+              "originalMeaning": "밀어올림"
+            },
+            {
+              "meaning": "후원, 격려; 경기 부양(浮揚)",
+              "examples": [],
+              "originalMeaning": "후원, 격려; 경기 부양(浮揚)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "밀어 올리다",
+              "examples": [],
+              "originalMeaning": "밀어 올리다"
+            },
+            {
+              "meaning": "후원하다, 밀어주다; …의 경기를 부양하다, 선전하다 ((up))",
+              "examples": [
+                {
+                  "text": "<b>boost</b> the budget of the mobile device division",
+                  "translatedText": "휴대 기기 부서의 예산을 증액하다"
+                }
+              ],
+              "originalMeaning": "후원하다, 밀어주다; …의 경기를 부양하다, 선전하다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6ef71a3faae04999982f9881f7d69072",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6ef71a3faae04999982f9881f7d69072",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "boosts"
+        },
+        {
+          "type": "과거형",
+          "value": "boosted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "boosting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "boosted"
+        }
+      ],
+      "aliasConjugation": "boosts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b39391481801362285fdae1487e7108b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가가 천정부지로 치솟고 있다",
+      "text": "Prices are skyrocketing. or Prices are being boosted to the sky. or Prices go on soaring[zooming]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사기를 고무하다",
+      "text": "<b>boost</b>[raise] morale"
+    }
+  ],
+  "isWordType": true
+}

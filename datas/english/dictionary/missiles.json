@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "missile",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈmɪsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "미사일, 유도탄; 날아가는 무기 ((화살·탄환·돌 등))",
+              "examples": [
+                {
+                  "text": "a guided[cruise] <b>missile</b>",
+                  "translatedText": "유도[순항] 미사일"
+                }
+              ],
+              "originalMeaning": "미사일, 유도탄; 날아가는 무기 ((화살·탄환·돌 등))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 발사할 수 있는, 유도탄(용)의",
+              "examples": [
+                {
+                  "text": "a <b>missile</b> base[site]",
+                  "translatedText": "미사일 기지"
+                }
+              ],
+              "originalMeaning": "[A] 발사할 수 있는, 유도탄(용)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ae0ca7dc1b304219baeadc27cfa1edd6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ae0ca7dc1b304219baeadc27cfa1edd6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8c8aa67496a173ac77ea361940624710",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 전투기는 미사일을 탑재하고 있었다",
+      "text": "The fighter was carrying a <b>missile</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 미사일의 탄착 거리는 3,000km이다",
+      "text": "The <b>missile</b> has a range of 3,000 kilometers."
+    }
+  ],
+  "isWordType": true
+}

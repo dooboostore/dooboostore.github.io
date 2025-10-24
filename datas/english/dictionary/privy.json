@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "privy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈprɪvi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "비밀히 관여하는[통지받는] ((to))",
+              "examples": [
+                {
+                  "text": "I was made <b>privy</b> to it.",
+                  "translatedText": "나는 내밀히 그 사정에 대하여 통고받고 있었다."
+                }
+              ],
+              "originalMeaning": "비밀히 관여하는[통지받는] ((to))"
+            },
+            {
+              "meaning": "[고어] 숨은, 은밀한",
+              "examples": [],
+              "originalMeaning": "[고어] 숨은, 은밀한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "당사자, 이해 관계인",
+              "examples": [],
+              "originalMeaning": "당사자, 이해 관계인"
+            },
+            {
+              "meaning": "옥외 변소(outhouse)",
+              "examples": [],
+              "originalMeaning": "옥외 변소(outhouse)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d65e122f43b348b2b49df72626d2acc5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d65e122f43b348b2b49df72626d2acc5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "privier"
+        },
+        {
+          "type": "최상급",
+          "value": "priviest"
+        },
+        {
+          "type": "복수형",
+          "value": "privies"
+        }
+      ],
+      "aliasConjugation": "privier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "f52c9d8b78f8ff65be1cae70a0c6cf03",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 음모에 한몫 끼었다",
+      "text": "He was <b>privy</b>[a party] to the plot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 내밀히 그 사정에 대하여 통고받고 있었다.",
+      "text": "I was made <b>privy</b> to it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 음모에 가담했다",
+      "text": "He was <b>privy</b> to the plot."
+    }
+  ],
+  "isWordType": true
+}

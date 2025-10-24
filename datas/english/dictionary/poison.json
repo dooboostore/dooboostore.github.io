@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "poison",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpɔɪzn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "독(약), 독물",
+              "examples": [
+                {
+                  "text": "take <b>poison</b>",
+                  "translatedText": "음독하다"
+                }
+              ],
+              "originalMeaning": "독(약), 독물"
+            },
+            {
+              "meaning": "[구어] 해독, 폐해; 해로운 주의[설, 영향] ((to))",
+              "examples": [
+                {
+                  "text": "Pornography is <b>poison</b> to young minds.",
+                  "translatedText": "포르노는 젊은이의 마음에 해독이 된다."
+                }
+              ],
+              "originalMeaning": "[구어] 해독, 폐해; 해로운 주의[설, 영향] ((to))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "독 있는, 해로운",
+              "examples": [],
+              "originalMeaning": "독 있는, 해로운"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "독을 넣다[바르다], 독살하다",
+              "examples": [
+                {
+                  "text": "a poisoned sword",
+                  "translatedText": "독을 바른 검"
+                }
+              ],
+              "originalMeaning": "독을 넣다[바르다], 독살하다"
+            },
+            {
+              "meaning": "편견을 품게 하다 ((against)); 몹쓸 풍조에 물들게 하다, 타락시키다; 못 쓰게 만들다",
+              "examples": [],
+              "originalMeaning": "편견을 품게 하다 ((against)); 몹쓸 풍조에 물들게 하다, 타락시키다; 못 쓰게 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/77333a03b9ef4df49634c20de5236384",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/77333a03b9ef4df49634c20de5236384",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "poisons"
+        },
+        {
+          "type": "과거형",
+          "value": "poisoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "poisoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "poisoned"
+        }
+      ],
+      "aliasConjugation": "poisons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b1c11da9e4fd38c0781afbde4d77c3ac",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "독 기운이 전신에 돌았다",
+      "text": "The <b>poison</b> has passed into one's system."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "독이 온 몸에 번진다",
+      "text": "The <b>poison</b> runs[spreads] all through the body."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가스는 방 안의 공기를 탁하게 한다",
+      "text": "Gas spoils[poisons] the air of a room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "갑에게는 약이고 을에게는 독이다",
+      "text": "One man's meat is another man's <b>poison</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "포르노는 젊은이의 마음에 해독이 된다.",
+      "text": "Pornography is <b>poison</b> to young minds."
+    }
+  ],
+  "isWordType": true
+}

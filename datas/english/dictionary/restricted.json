@@ -1,0 +1,129 @@
+{
+  "items": [
+    {
+      "entry": "restricted",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈstrɪktɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "제한된, 한정된, 제약된(limited)",
+              "examples": [
+                {
+                  "text": "have a <b>restricted</b> application",
+                  "translatedText": "응용 범위가 제한되어 있다"
+                }
+              ],
+              "originalMeaning": "제한된, 한정된, 제약된(limited)"
+            },
+            {
+              "meaning": "대외비의, 기밀의 <문서 등>",
+              "examples": [
+                {
+                  "text": "a <b>restricted</b> document",
+                  "translatedText": "기밀 문서"
+                }
+              ],
+              "originalMeaning": "대외비의, 기밀의 <문서 등>"
+            },
+            {
+              "meaning": "특정 집단[계층]에 한정된, ((특히)) 백인 그리스도 교도에게 한정된",
+              "examples": [
+                {
+                  "text": "a <b>restricted</b> hotel",
+                  "translatedText": "백인 전용 호텔 ((인종 차별론자의 완곡한 용법))"
+                }
+              ],
+              "originalMeaning": "특정 집단[계층]에 한정된, ((특히)) 백인 그리스도 교도에게 한정된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/20b2ece01ad34b2484b0b3719b358371",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/20b2ece01ad34b2484b0b3719b358371",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a9d8f2450166218ce10c54eebfad916c",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "restrict",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈstrɪkt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "제한하다, 한정하다 ((to, within))",
+              "examples": [
+                {
+                  "text": "be <b>restricted</b> within narrow limits",
+                  "translatedText": "좁은 범위에 한하다"
+                }
+              ],
+              "originalMeaning": "제한하다, 한정하다 ((to, within))"
+            },
+            {
+              "meaning": "<자유·활동 등을> 금지[제한]하다",
+              "examples": [
+                {
+                  "text": "<b>restrict</b> freedom of speech",
+                  "translatedText": "언론의 자유를 제한하다"
+                }
+              ],
+              "originalMeaning": "<자유·활동 등을> 금지[제한]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/03bcb2edf0b84fc6ba1f1052968c18ee",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/03bcb2edf0b84fc6ba1f1052968c18ee",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "restricts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4e3d8e8e1c9b13ffaf7bbab5f9d63512",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 식사는 빵과 물만으로 제한되었다",
+      "text": "His food was <b>restricted</b> to bread and water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여기서 속도는 시속 30킬로로 제한되어 있다.",
+      "text": "The speed is <b>restricted</b> to 30 kilometers an hour here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공급이 부실하다",
+      "text": "The supply is <b>restricted</b>."
+    }
+  ],
+  "isWordType": true
+}

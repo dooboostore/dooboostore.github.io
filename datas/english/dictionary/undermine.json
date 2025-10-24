@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "undermine",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʌndər│maɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 밑을 파다, …의 밑에 갱도를 파다",
+              "examples": [
+                {
+                  "text": "<b>undermine</b> a wall",
+                  "translatedText": "성벽 밑에 땅굴을 파다"
+                }
+              ],
+              "originalMeaning": "…의 밑을 파다, …의 밑에 갱도를 파다"
+            },
+            {
+              "meaning": "(침식 작용으로) …의 뿌리[토대]를 침식하다",
+              "examples": [
+                {
+                  "text": "The sea had undermined the cliff.",
+                  "translatedText": "바닷물이 절벽 아래를 침식하고 있었다."
+                }
+              ],
+              "originalMeaning": "(침식 작용으로) …의 뿌리[토대]를 침식하다"
+            },
+            {
+              "meaning": "<건강 등을> 모르는 사이에 해치다",
+              "examples": [
+                {
+                  "text": "My father's health wasundermined by drink.",
+                  "translatedText": "아버지의 건강은 술로 손상되었다."
+                }
+              ],
+              "originalMeaning": "<건강 등을> 모르는 사이에 해치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/55a72c1f440b4b58b8983f8d454663fb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/55a72c1f440b4b58b8983f8d454663fb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "undermines"
+        },
+        {
+          "type": "과거형",
+          "value": "undermined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "undermining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "undermined"
+        }
+      ],
+      "aliasConjugation": "undermines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "682542297ae10b6e9baf5a3271cad846",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 건강은 술로 손상되었다",
+      "text": "His health was undermined by drink."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바닷물이 절벽 아래를 침식하고 있었다.",
+      "text": "The sea had undermined the cliff."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 우리에 대한 그녀의 신뢰를 훼손했다.",
+      "text": "It undermined her confidence in us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아버지의 건강은 술로 손상되었다.",
+      "text": "My father’s health was undermined by drink."
+    }
+  ],
+  "isWordType": true
+}

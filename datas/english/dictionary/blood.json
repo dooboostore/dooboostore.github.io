@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "blood",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "blʌd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "피, 혈액; 생혈(生血), 생명",
+              "examples": [
+                {
+                  "text": "a drop of <b>blood</b>",
+                  "translatedText": "피 한 방울"
+                }
+              ],
+              "originalMeaning": "피, 혈액; 생혈(生血), 생명"
+            },
+            {
+              "meaning": "(하등 동물의) 체액; 붉은 수액(樹液), (붉은) 과즙; [미·속어] 케첩",
+              "examples": [],
+              "originalMeaning": "(하등 동물의) 체액; 붉은 수액(樹液), (붉은) 과즙; [미·속어] 케첩"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사냥개에게> 처음으로 피맛을 보게 하다, <군인을> 유혈 행위에 익숙하게 하다, <사람에게> 새로운 체험을 시키다",
+              "examples": [],
+              "originalMeaning": "<사냥개에게> 처음으로 피맛을 보게 하다, <군인을> 유혈 행위에 익숙하게 하다, <사람에게> 새로운 체험을 시키다"
+            },
+            {
+              "meaning": "<처음으로 여우 사냥을 하는 사람에게> 피를 바르는 의식을 거행하다",
+              "examples": [],
+              "originalMeaning": "<처음으로 여우 사냥을 하는 사람에게> 피를 바르는 의식을 거행하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6eae8048792844b7b0d6fd80bfba4b03",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6eae8048792844b7b0d6fd80bfba4b03",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bloods"
+        },
+        {
+          "type": "과거형",
+          "value": "blooded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blooding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blooded"
+        }
+      ],
+      "aliasConjugation": "bloods",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fa0f1fbf471060ed5379d8c7784358bd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 피가 끓고 있다",
+      "text": "His <b>blood</b> is on fire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 얼굴에 피가 스며들었다.",
+      "text": "<b>Blood</b> surged to his face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "피가 붕대를 붉게 물들였다.",
+      "text": "The <b>blood</b> reddened the bandage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직 한 방울의 피도 흘리지 않았다.",
+      "text": "No <b>blood</b> has been drawn yet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는  전신의 피가 얼어붙는 듯했다.",
+      "text": "His very <b>blood</b> was congealed."
+    }
+  ],
+  "isWordType": true
+}

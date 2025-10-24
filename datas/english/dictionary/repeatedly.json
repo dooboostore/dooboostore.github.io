@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "repeatedly",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ripí:tidli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "되풀이하여, 재삼재사, 여러 차례",
+              "examples": [],
+              "originalMeaning": "되풀이하여, 재삼재사, 여러 차례"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6dfb563eaa4d4925b980135c04ece350",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6dfb563eaa4d4925b980135c04ece350",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "46bb6fe3f9fe96ab20eb4deb298caec3",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "repeat",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈpiːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "되풀이하다, 반복하다; 다시 경험하다; 되풀이하여 말하다",
+              "examples": [
+                {
+                  "text": "Could you <b>repeat</b> your question?",
+                  "translatedText": "질문을 다시 말씀해 주시겠어요?"
+                }
+              ],
+              "originalMeaning": "되풀이하다, 반복하다; 다시 경험하다; 되풀이하여 말하다"
+            },
+            {
+              "meaning": "복창[암송]하다",
+              "examples": [
+                {
+                  "text": "<b>Repeat</b> the following words after me.",
+                  "translatedText": "다음 말들을 따라 하시오."
+                }
+              ],
+              "originalMeaning": "복창[암송]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "되풀이하여 말하다, 반복하다",
+              "examples": [],
+              "originalMeaning": "되풀이하여 말하다, 반복하다"
+            },
+            {
+              "meaning": "<먹은 것이> 넘어오다, <양파·부추 등이> 입 안에 뒷맛이 남다",
+              "examples": [
+                {
+                  "text": "Fried mackerels always <b>repeat</b> on me.",
+                  "translatedText": "고등어 튀김을 먹으면 언제나 넘어온다."
+                }
+              ],
+              "originalMeaning": "<먹은 것이> 넘어오다, <양파·부추 등이> 입 안에 뒷맛이 남다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "되풀이",
+              "examples": [],
+              "originalMeaning": "되풀이"
+            },
+            {
+              "meaning": "반복되는 것",
+              "examples": [],
+              "originalMeaning": "반복되는 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b448bfaea364e34903ca25b096b1bd5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b448bfaea364e34903ca25b096b1bd5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "repeats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5a9dd4fc231814a20f0fe1f10d3b4120",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "과거는 다시 경험할 수 없다.",
+      "text": "You can’t <b>repeat</b> the past."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 한 말을 그대로 되풀이해 보시오.",
+      "text": "<b>Repeat</b> exactly what he said."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다음 말들을 따라 하시오.",
+      "text": "<b>Repeat</b> the following words after me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 같은 말을 되씹을 뿐이었다",
+      "text": "He did nothing but <b>repeat</b> himself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 말은 되풀이할 가치가 없다.",
+      "text": "His language does not bear repeating."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "stage",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "steɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "단계, 정도, (발달 등의) 기(期), 시기(period), (과정·발전·연속에서의) 국면(phase), 위치(position)",
+              "examples": [],
+              "originalMeaning": "단계, 정도, (발달 등의) 기(期), 시기(period), (과정·발전·연속에서의) 국면(phase), 위치(position)"
+            },
+            {
+              "meaning": "(극장의) 무대, 스테이지",
+              "examples": [],
+              "originalMeaning": "(극장의) 무대, 스테이지"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "상연하다; 각색하다; 극화하다, 연출하다",
+              "examples": [],
+              "originalMeaning": "상연하다; 각색하다; 극화하다, 연출하다"
+            },
+            {
+              "meaning": "<극적·공공적 효과를 겨냥한 활동을> 기획[조직]하다; <동맹 파업·정치 운동 등을> 꾀하다, 계획하다",
+              "examples": [
+                {
+                  "text": "They staged a protest march.",
+                  "translatedText": "그들은 항의 시위를 벌였다."
+                }
+              ],
+              "originalMeaning": "<극적·공공적 효과를 겨냥한 활동을> 기획[조직]하다; <동맹 파업·정치 운동 등을> 꾀하다, 계획하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "역마차로 여행하다",
+              "examples": [],
+              "originalMeaning": "역마차로 여행하다"
+            },
+            {
+              "meaning": "상연에 적합하다, 연극이 되다",
+              "examples": [
+                {
+                  "text": "<b>stage</b> well[badly]",
+                  "translatedText": "연극이 잘 되다[되지 않다]"
+                }
+              ],
+              "originalMeaning": "상연에 적합하다, 연극이 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8991d095b05e472287ad57384db63367",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8991d095b05e472287ad57384db63367",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stages"
+        },
+        {
+          "type": "과거형",
+          "value": "staged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "staging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "staged"
+        }
+      ],
+      "aliasConjugation": "stages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d96efa860b090f03da47f96f47544b1e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 무대에 설 것이다.",
+      "text": "She will act on the <b>stage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 항의 데모를 벌였다.",
+      "text": "They staged a protest march."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 쉬며 놀며 여행하였다",
+      "text": "They traveled by easy[short] stages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 배우를 야유하여  몰아냈다.",
+      "text": "They hooted the actor off (the <b>stage</b>)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 단계에서는 너무 많은 힘을 주지 마라",
+      "text": "Don't get too worked up at this <b>stage</b>."
+    }
+  ],
+  "isWordType": true
+}

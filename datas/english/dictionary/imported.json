@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "import",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<상품을> 수입하다 ((from, into))(opp. export)",
+              "examples": [
+                {
+                  "text": "importedarticles[goods]",
+                  "translatedText": "수입품"
+                }
+              ],
+              "originalMeaning": "<상품을> 수입하다 ((from, into))(opp. export)"
+            },
+            {
+              "meaning": "들여오다; <감정 등을> 개입시키다, 이입(移入)하다",
+              "examples": [
+                {
+                  "text": "foodstuffs <b>imported</b> from the farm",
+                  "translatedText": "농장에서 들여온 식료품"
+                }
+              ],
+              "originalMeaning": "들여오다; <감정 등을> 개입시키다, 이입(移入)하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "중요하다, 중대한 관계가 있다(matter)",
+              "examples": [],
+              "originalMeaning": "중요하다, 중대한 관계가 있다(matter)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수입(importation),[보통 pl.] 수입품, [캐나다·속어] 외국인 선수,[보통 pl.] 수입액",
+              "examples": [
+                {
+                  "text": "food imports",
+                  "translatedText": "수입 식품"
+                }
+              ],
+              "originalMeaning": "수입(importation),[보통 pl.] 수입품, [캐나다·속어] 외국인 선수,[보통 pl.] 수입액"
+            },
+            {
+              "meaning": "[종종 the ~] 취지, 의미(meaning)",
+              "examples": [
+                {
+                  "text": "I felt the <b>import</b> of her words.",
+                  "translatedText": "나는 그녀가 하는 말의 속뜻을 알아챘다."
+                }
+              ],
+              "originalMeaning": "[종종 the ~] 취지, 의미(meaning)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bfc1d36f96d84e309d24f61089c9e99f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bfc1d36f96d84e309d24f61089c9e99f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "imports"
+        },
+        {
+          "type": "과거형",
+          "value": "imported"
+        },
+        {
+          "type": "현재 분사",
+          "value": "importing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "imported"
+        }
+      ],
+      "aliasConjugation": "imports",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3a3e40c9753138522ca3290bf492e084",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아는 것이 우리에게는 중요하다.",
+      "text": "It imports us to know."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국은 호주에서 양모를 수입한다",
+      "text": "Korea imports wool from Australia."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그녀가 하는 말의 속뜻을 알아챘다.",
+      "text": "I felt the <b>import</b> of her words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 말은 태도의 변화를 의미했다.",
+      "text": "Her words <b>imported</b> a change of attitude."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수출이 수입을 2백만 불 초과했다",
+      "text": "Exports exceeded imports by 2 million dollars."
+    }
+  ],
+  "isWordType": true
+}

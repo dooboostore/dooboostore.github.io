@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "attendance",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈtendəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "출석, 출근, 참석, 참가 ((at))",
+              "examples": [],
+              "originalMeaning": "출석, 출근, 참석, 참가 ((at))"
+            },
+            {
+              "meaning": "[C] [집합적] 출석[참가, 참석]자, 회중(會衆) ((at)); [sing.] 출석자[관객] 수",
+              "examples": [
+                {
+                  "text": "a large[small] <b>attendance</b>",
+                  "translatedText": "다수[소수]의 참석자"
+                }
+              ],
+              "originalMeaning": "[C] [집합적] 출석[참가, 참석]자, 회중(會衆) ((at)); [sing.] 출석자[관객] 수"
+            },
+            {
+              "meaning": "(…에의) 시중, 수행; 간병, 간호; 봉사, 서비스(료) ((on))",
+              "examples": [
+                {
+                  "text": "medical <b>attendance</b>",
+                  "translatedText": "의료"
+                }
+              ],
+              "originalMeaning": "(…에의) 시중, 수행; 간병, 간호; 봉사, 서비스(료) ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fc634066a1444d7ab463556835daac8c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fc634066a1444d7ab463556835daac8c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9fc7c156076b1cae2032fba9b511b32f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 사람의 청강이 예상된다",
+      "text": "A large <b>attendance</b> is expected."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 반은 오늘 전원 출석하고 있다",
+      "text": "That class has perfect <b>attendance</b> today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회원들의 출석이 아주 나빴다",
+      "text": "The <b>attendance</b> of the members were very slim[thin]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 강연에는 많은 청중이 참석했다",
+      "text": "There was a good[large] <b>attendance</b> at the lecture."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회의는 참석자가 적어서 유회되었다",
+      "text": "The meeting was adjourned owing to scanty <b>attendance</b>."
+    }
+  ],
+  "isWordType": true
+}

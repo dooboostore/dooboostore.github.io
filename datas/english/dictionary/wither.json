@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "wither",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈwɪðə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "시들다, 이울다, 말라빠지다(shrivel); 시들어 죽다 ((up, away))",
+              "examples": [
+                {
+                  "text": "The flowers withered up[away].",
+                  "translatedText": "꽃이 시들었다."
+                }
+              ],
+              "originalMeaning": "시들다, 이울다, 말라빠지다(shrivel); 시들어 죽다 ((up, away))"
+            },
+            {
+              "meaning": "<색이> 바래다, <소리가> 사라져 가다",
+              "examples": [],
+              "originalMeaning": "<색이> 바래다, <소리가> 사라져 가다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "시들게 하다, 말라 죽게 하다 ((up))",
+              "examples": [
+                {
+                  "text": "The hot sun has withered up[away] the grass.",
+                  "translatedText": "뜨거운 햇볕 때문에 풀이 완전히 시들어 버렸다."
+                }
+              ],
+              "originalMeaning": "시들게 하다, 말라 죽게 하다 ((up))"
+            },
+            {
+              "meaning": "쇠퇴시키다, 약하게 하다 ((away))",
+              "examples": [],
+              "originalMeaning": "쇠퇴시키다, 약하게 하다 ((away))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/90e8b1208aa74371b4485354c8ef1309",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/90e8b1208aa74371b4485354c8ef1309",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "withers"
+        },
+        {
+          "type": "과거형",
+          "value": "withered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "withering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "withered"
+        }
+      ],
+      "aliasConjugation": "withers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "97603be36376aaf939b254d8dbc03de0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물이 부족하면 식물들이 고사한다",
+      "text": "Plants <b>wither</b> from lack of water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마른 나뭇잎이 바람결에 간댕거린다",
+      "text": "A withered leaf trembles in the wind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뜨거운 태양 때문에 꽃들이 고사했다",
+      "text": "The hot sun has withered the flowers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 마른 나무들을 죄다 베어 버렸다.",
+      "text": "They chopped down all the withered trees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뜨거운 햇볕 때문에 풀이 완전히 시들어 버렸다.",
+      "text": "The hot sun has withered up[away] the grass."
+    }
+  ],
+  "isWordType": true
+}

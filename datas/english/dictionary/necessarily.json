@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "necessarily",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌnesəˈserəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "반드시, 물론",
+              "examples": [
+                {
+                  "text": "It must necessarilybe worked out.",
+                  "translatedText": "그것은 반드시 해결되어야 한다."
+                }
+              ],
+              "originalMeaning": "반드시, 물론"
+            },
+            {
+              "meaning": "[부정 구문] 반드시 (…은 아니다)",
+              "examples": [
+                {
+                  "text": "Learned men are not <b>necessarily</b> wise.",
+                  "translatedText": "학자라고 반드시 현명한 것은 아니다."
+                }
+              ],
+              "originalMeaning": "[부정 구문] 반드시 (…은 아니다)"
+            },
+            {
+              "meaning": "필연적인 결과로서, 불가피하게, 부득이",
+              "examples": [
+                {
+                  "text": "It necessarilyfollows that …",
+                  "translatedText": "당연히 …하게 된다"
+                }
+              ],
+              "originalMeaning": "필연적인 결과로서, 불가피하게, 부득이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/acb80879bb8a41d98f39edcd543f5b02",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/acb80879bb8a41d98f39edcd543f5b02",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d2d9914e6af7b71cdd48da357cd03dc0",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "necessary",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nesəseri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "필요한, 없어서는 안 될 ((to, for))",
+              "examples": [
+                {
+                  "text": "a necessarypart of the motor",
+                  "translatedText": "모터의 필수 부품"
+                }
+              ],
+              "originalMeaning": "필요한, 없어서는 안 될 ((to, for))"
+            },
+            {
+              "meaning": "필연의, 필연적인, 피할 수 없는(inevitable)",
+              "examples": [
+                {
+                  "text": "a <b>necessary</b> evil",
+                  "translatedText": "불가피한 악폐, 필요악"
+                }
+              ],
+              "originalMeaning": "필연의, 필연적인, 피할 수 없는(inevitable)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] 필수품, 필요한 물건",
+              "examples": [
+                {
+                  "text": "daily necessaries",
+                  "translatedText": "일용품"
+                }
+              ],
+              "originalMeaning": "[pl.] 필수품, 필요한 물건"
+            },
+            {
+              "meaning": "[the ~] [구어] 필요한 것[행위], ((특히)) 돈",
+              "examples": [
+                {
+                  "text": "do the <b>necessary</b>",
+                  "translatedText": "[구어] 필요한 일을 하다"
+                }
+              ],
+              "originalMeaning": "[the ~] [구어] 필요한 것[행위], ((특히)) 돈"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7681604ae40f4db499c2fa04968ebe35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7681604ae40f4db499c2fa04968ebe35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "eae23710ebe9e574639c3c55769f0799",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 반드시 해결되어야 한다.",
+      "text": "It must <b>necessarily</b> be worked out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "부자가 반드시 행복한 것은 아니다",
+      "text": "The rich are not <b>necessarily</b> happy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "학자라고 반드시 현명한 것은 아니다.",
+      "text": "Learned men are not <b>necessarily</b> wise."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오락도 일에 진배없이 필요하다",
+      "text": "Recreation is no less <b>necessary</b> than work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "복수의 사람이 동의해야 한다",
+      "text": "It is <b>necessary</b> to have more than one person's consent."
+    }
+  ],
+  "isWordType": true
+}

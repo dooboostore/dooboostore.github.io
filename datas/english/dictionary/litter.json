@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "litter",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 어질러진 물건, 잡동사니; 쓰레기, 찌꺼기",
+              "examples": [
+                {
+                  "text": "a <b>litter</b> receptacle",
+                  "translatedText": "쓰레기통"
+                }
+              ],
+              "originalMeaning": "[U] 어질러진 물건, 잡동사니; 쓰레기, 찌꺼기"
+            },
+            {
+              "meaning": "난잡, 혼란",
+              "examples": [],
+              "originalMeaning": "난잡, 혼란"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<방 안 등을> 어질러 놓다 ((up, with))",
+              "examples": [
+                {
+                  "text": "<b>litter</b> up one's room with books and papers",
+                  "translatedText": "방을 책과 서류로 어질러 놓다"
+                }
+              ],
+              "originalMeaning": "<방 안 등을> 어질러 놓다 ((up, with))"
+            },
+            {
+              "meaning": "<물건을> 흩뜨리다 ((about, around))",
+              "examples": [
+                {
+                  "text": "<b>litter</b> toys about the room",
+                  "translatedText": "방 안에 장난감을 흩뜨리다"
+                }
+              ],
+              "originalMeaning": "<물건을> 흩뜨리다 ((about, around))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<동물이> 새끼를 낳다, [속어] 아이를 낳다",
+              "examples": [],
+              "originalMeaning": "<동물이> 새끼를 낳다, [속어] 아이를 낳다"
+            },
+            {
+              "meaning": "(짚 위에서) 자다",
+              "examples": [],
+              "originalMeaning": "(짚 위에서) 자다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66bcc7c5d9d54be0ba0a988df8d24110",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66bcc7c5d9d54be0ba0a988df8d24110",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "litters"
+        },
+        {
+          "type": "과거형",
+          "value": "littered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "littering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "littered"
+        }
+      ],
+      "aliasConjugation": "litters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a3b207541864864c05c4c5d5c853f25c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새벽달 보자고 초저녁부터 기다린다",
+      "text": "Don't build the sty before the <b>litter</b> comes. or Boil not pap before the child is born."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장난감이 방바닥에 흩어져 있었다.",
+      "text": "Toys littered up the floor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 고양이는 한 배에 새끼를 네 마리 낳았다",
+      "text": "My cat had a <b>litter</b> of four kittens."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "종이가 흩어져 방안이 산란하다",
+      "text": "The room is littered with scraps of paper."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방안에 종이가 지저분하게 깔렸다",
+      "text": "The room was littered with scraps of paper."
+    }
+  ],
+  "isWordType": true
+}

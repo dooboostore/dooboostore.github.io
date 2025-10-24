@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "surgical",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sɜːrdʒɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "외과(술)의, 외과적인; 외과의의",
+              "examples": [],
+              "originalMeaning": "외과(술)의, 외과적인; 외과의의"
+            },
+            {
+              "meaning": "수술의, 수술상의, <열 따위가> 수술에 기인하는, 외과용의",
+              "examples": [],
+              "originalMeaning": "수술의, 수술상의, <열 따위가> 수술에 기인하는, 외과용의"
+            },
+            {
+              "meaning": "아주 정확한",
+              "examples": [
+                {
+                  "text": "a <b>surgical</b> air strike",
+                  "translatedText": "정확하고 신속한 공중 습격"
+                }
+              ],
+              "originalMeaning": "아주 정확한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c90867baa1af41ef936b68f9e8c68f20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c90867baa1af41ef936b68f9e8c68f20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b7d65f1d5fd53ec620df3cc3bd3e9225",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수술 끝이 좋다[좋지 않다]",
+      "text": "The <b>surgical</b> operation resulted in success[failure]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수술의 결과가 좋지 않았다",
+      "text": "The <b>surgical</b> operation resulted in failure."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "journey",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈdʒɜːrni"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여행(trip) ((보통 육로의 비교적 긴)), (=travel)",
+              "examples": [
+                {
+                  "text": "a <b>journey</b> into the country",
+                  "translatedText": "시골 여행"
+                }
+              ],
+              "originalMeaning": "여행(trip) ((보통 육로의 비교적 긴)), (=<span class='related_word' lang='en' >travel</span>)"
+            },
+            {
+              "meaning": "여행 일정, 일정 기간 동안의 여행, 여정; (인생의) 행로, 편력",
+              "examples": [
+                {
+                  "text": "a week's <b>journey</b>",
+                  "translatedText": "일주일 간의 여행"
+                }
+              ],
+              "originalMeaning": "여행 일정, 일정 기간 동안의 여행, 여정; (인생의) 행로, 편력"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "여행하다",
+              "examples": [],
+              "originalMeaning": "여행하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/255cb87ece554414888f0f8425698222",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/255cb87ece554414888f0f8425698222",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "journeys"
+        },
+        {
+          "type": "과거형",
+          "value": "journeyed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "journeying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "journeyed"
+        }
+      ],
+      "aliasConjugation": "journeys",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c7fddae35d77222de6f09df5769cb2ff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여행을 떠나고 부재중이다",
+      "text": "He is away on a <b>journey</b>[trip]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "편안한 여행을 하시길 바랍니다",
+      "text": "I hope you have a safe <b>journey</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 세계 일주 여행을 했다",
+      "text": "He made a <b>journey</b> around the world."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여행 끝이라 고단해 보였다",
+      "text": "He looked tired after his <b>journey</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한숨 자고 여독이나 푸시오",
+      "text": "Sleep off your fatigue of the <b>journey</b>."
+    }
+  ],
+  "isWordType": true
+}

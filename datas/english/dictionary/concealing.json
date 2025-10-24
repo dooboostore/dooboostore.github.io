@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "entry": "conceal",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈsiːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "숨기다, 감추다; 비밀로 하다, 내색하지 않다 (=hide)",
+              "examples": [
+                {
+                  "text": "He <b>conceal</b> ed the fugitive.",
+                  "translatedText": "그는 도망자를 숨겨 주었다."
+                }
+              ],
+              "originalMeaning": "숨기다, 감추다; 비밀로 하다, 내색하지 않다 (=<span class='related_word' lang='en' >hide</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d0004dc72f8a4448b63450501a028ba8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d0004dc72f8a4448b63450501a028ba8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "conceals"
+        },
+        {
+          "type": "과거형",
+          "value": "concealed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "concealing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "concealed"
+        }
+      ],
+      "aliasConjugation": "conceals",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f322a42bf356f4ca7205e7a5a4b59458",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 도망자를 숨겨 주었다.",
+      "text": "He concealed the fugitive."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너의 의도를 내게 숨기지 마라.",
+      "text": "Do not <b>conceal</b> your intentions from me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 억지로 웃으며 슬픔을 숨기려고 했다",
+      "text": "She tried to <b>conceal</b> her grief behind a forced smile."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "취중에 진담한다",
+      "text": "One often tells the truth when drunk. or There is truth in wine. or What soberness conceals drunkenness reveals."
+    }
+  ],
+  "isWordType": true
+}

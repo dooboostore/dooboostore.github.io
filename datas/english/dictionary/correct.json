@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "correct",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈrekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(사실과 일치하여) 옳은, 틀림없는(opp. incorrect), 정확한",
+              "examples": [
+                {
+                  "text": "a <b>correct</b> judgment[view]",
+                  "translatedText": "올바른 판단[견해]"
+                }
+              ],
+              "originalMeaning": "(사실과 일치하여) 옳은, 틀림없는(opp. incorrect), 정확한"
+            },
+            {
+              "meaning": "의당한, 온당[적당]한; 예의 바른, 품행이 방정한",
+              "examples": [],
+              "originalMeaning": "의당한, 온당[적당]한; 예의 바른, 품행이 방정한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<잘못을> 정정하다, 고치다, 바로잡다; …의 잘못을 지적하다; 첨삭하다; 교정(校正)하다",
+              "examples": [
+                {
+                  "text": "<b>correct</b> errors",
+                  "translatedText": "틀린 데를 고치다"
+                }
+              ],
+              "originalMeaning": "<잘못을> 정정하다, 고치다, 바로잡다; …의 잘못을 지적하다; 첨삭하다; 교정(校正)하다"
+            },
+            {
+              "meaning": "교정(矯正)하다; 타이르다, 징계하다",
+              "examples": [
+                {
+                  "text": "<b>correct</b> a child with the rod",
+                  "translatedText": "아이를 매로 벌주다"
+                }
+              ],
+              "originalMeaning": "교정(矯正)하다; 타이르다, 징계하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고치다, 정정하다",
+              "examples": [],
+              "originalMeaning": "고치다, 정정하다"
+            },
+            {
+              "meaning": "<주가가> (시세의 급등 또는 급락 후에 일시적으로) 반전하다, 회복되다",
+              "examples": [],
+              "originalMeaning": "<주가가> (시세의 급등 또는 급락 후에 일시적으로) 반전하다, 회복되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8d5ee3e01131448a950f83939363db8b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8d5ee3e01131448a950f83939363db8b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "corrects"
+        },
+        {
+          "type": "과거형",
+          "value": "corrected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "correcting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "corrected"
+        }
+      ],
+      "aliasConjugation": "corrects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "470e317f7bbd95779bad93388111c182",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 시계는 꼭 맞는다",
+      "text": "This watch keeps <b>correct</b>[good] time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "보도는 아마 정확할 것이다.",
+      "text": "The report is presumably <b>correct</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 항상 행실이 단정하다",
+      "text": "He is always proper[<b>correct</b>] in his behavior."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 보고는 정확한 것임이 증명되었다.",
+      "text": "His report was certified (as) <b>correct</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떤 의미에서는 그가 한 말이 옳을지도 모른다",
+      "text": "Maybe in a certain sense, what he says is <b>correct</b>."
+    }
+  ],
+  "isWordType": true
+}

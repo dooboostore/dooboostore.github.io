@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "clasp",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "klæsp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "걸쇠, 죔쇠, 버클(buckle)",
+              "examples": [],
+              "originalMeaning": "걸쇠, 죔쇠, 버클(buckle)"
+            },
+            {
+              "meaning": "쥠, 움켜쥠(grasp), 악수, 포옹(embrace)",
+              "examples": [
+                {
+                  "text": "He took her hand in a firm <b>clasp</b> .",
+                  "translatedText": "그는 그녀의 손을 꽉 잡았다."
+                }
+              ],
+              "originalMeaning": "쥠, 움켜쥠(grasp), 악수, 포옹(embrace)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(걸쇠·죔쇠 등으로) 고정시키다, 죄다; <띠 등을> 버클로 죄다",
+              "examples": [],
+              "originalMeaning": "(걸쇠·죔쇠 등으로) 고정시키다, 죄다; <띠 등을> 버클로 죄다"
+            },
+            {
+              "meaning": "<손 따위를> 꼭 쥐다, 악수하다",
+              "examples": [
+                {
+                  "text": "<b>clasp</b> another's hand",
+                  "translatedText": "상대방의 손을 꼭 쥐다"
+                }
+              ],
+              "originalMeaning": "<손 따위를> 꼭 쥐다, 악수하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "꽉 쥐다, 껴안다",
+              "examples": [],
+              "originalMeaning": "꽉 쥐다, 껴안다"
+            },
+            {
+              "meaning": "(걸쇠·죔쇠 등으로) 고정시키다, 죄다",
+              "examples": [],
+              "originalMeaning": "(걸쇠·죔쇠 등으로) 고정시키다, 죄다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bf813984d8af41e68360e17246a716e3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bf813984d8af41e68360e17246a716e3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "clasps"
+        },
+        {
+          "type": "과거형",
+          "value": "clasped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "clasping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "clasped"
+        }
+      ],
+      "aliasConjugation": "clasps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e5f7986fefc6c6fb5c9c43beda14f78a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그녀를 꼭 껴안았다.",
+      "text": "He clasped her in his arms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그녀의 손을 꼭 쥐었다.",
+      "text": "He clasped her by the hand."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어머니는 아기를 가슴에 꼭 끌어안았다",
+      "text": "The mother clasped her baby to her breast."
+    }
+  ],
+  "isWordType": true
+}

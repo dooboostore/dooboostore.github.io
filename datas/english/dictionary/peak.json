@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "peak",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "píːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(지붕·탑 등의) 뾰족한 끝, 첨단",
+              "examples": [],
+              "originalMeaning": "(지붕·탑 등의) 뾰족한 끝, 첨단"
+            },
+            {
+              "meaning": "(뾰족한) 산꼭대기, 봉우리 (=top)",
+              "examples": [
+                {
+                  "text": "snow-covered peaks",
+                  "translatedText": "눈 덮인 산봉우리"
+                }
+              ],
+              "originalMeaning": "(뾰족한) 산꼭대기, 봉우리 (=<span class='related_word' lang='en' >top</span>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 최고의, 피크의",
+              "examples": [
+                {
+                  "text": "the <b>peak</b> year",
+                  "translatedText": "(통계상) 최고 기록의 해"
+                }
+              ],
+              "originalMeaning": "[A] 최고의, 피크의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뾰족해지다, 우뚝 솟다; 정점[최대한]에 도달하다; <고래가> 꼬리를 올리다",
+              "examples": [],
+              "originalMeaning": "뾰족해지다, 우뚝 솟다; 정점[최대한]에 도달하다; <고래가> 꼬리를 올리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb850a03e6b247989803abd7196e6189",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb850a03e6b247989803abd7196e6189",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "peaks"
+        },
+        {
+          "type": "과거형",
+          "value": "peaked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "peaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "peaked"
+        }
+      ],
+      "aliasConjugation": "peaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f91547710f113233a74cc5cff0dd9df7",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "peak",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "야위다",
+              "examples": [
+                {
+                  "text": "<b>peak</b> and pine",
+                  "translatedText": "수척해지다"
+                }
+              ],
+              "originalMeaning": "야위다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/245aeffacf8d40109b2dd3a0da9e89e0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/245aeffacf8d40109b2dd3a0da9e89e0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "peaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "130d04c06331d1f1c459fff4888dfdad",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 전성기는 이미 지났다",
+      "text": "She's already passed her <b>peak</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금 한창 주연이 열리고 있다",
+      "text": "The banquet is at its height[<b>peak</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 인기는 피크에 달했다",
+      "text": "His popularity has reached its <b>peak</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산봉우리가 구름 위에 용출하고 있다",
+      "text": "The <b>peak</b> rises above the clouds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전력 소비는 여름철에 절정에 이른다",
+      "text": "Power consumption peaks in summer."
+    }
+  ],
+  "isWordType": true
+}

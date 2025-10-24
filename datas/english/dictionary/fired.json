@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "fire",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfaɪə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 불, 화염, 불꽃(flame); 연소(combustion)",
+              "examples": [
+                {
+                  "text": "a bright[blazing] <b>fire</b>",
+                  "translatedText": "빨갛게 타오르는 불꽃"
+                }
+              ],
+              "originalMeaning": "[U] 불, 화염, 불꽃(flame); 연소(combustion)"
+            },
+            {
+              "meaning": "(난방·요리용) 불, 화덕불, 숯불, 모닥불; 화톳불",
+              "examples": [
+                {
+                  "text": "build[make] a <b>fire</b>",
+                  "translatedText": "불을 피우다"
+                }
+              ],
+              "originalMeaning": "(난방·요리용) 불, 화덕불, 숯불, 모닥불; 화톳불"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 불을 지르다, 방화하다; 새빨갛게 하다; 빛나게 하다",
+              "examples": [
+                {
+                  "text": "<b>fire</b> a house",
+                  "translatedText": "집에 불을 지르다"
+                }
+              ],
+              "originalMeaning": "…에 불을 지르다, 방화하다; 새빨갛게 하다; 빛나게 하다"
+            },
+            {
+              "meaning": "…에 불을 때다, 불을 넣다",
+              "examples": [],
+              "originalMeaning": "…에 불을 때다, 불을 넣다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "발포[사격]하다 ((at, into, on)); <총포가> 발화하다",
+              "examples": [
+                {
+                  "text": "The soldiers <b>fire</b> d at the fleeing enemy.",
+                  "translatedText": "병사들은 도망치는 적에게 발포했다."
+                }
+              ],
+              "originalMeaning": "발포[사격]하다 ((at, into, on)); <총포가> 발화하다"
+            },
+            {
+              "meaning": "<폭약 등이> 불붙다; <내연 기관이> 발화하다, 시동하다",
+              "examples": [],
+              "originalMeaning": "<폭약 등이> 불붙다; <내연 기관이> 발화하다, 시동하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/788e9c662424452fad93dd22f6bcaf70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/788e9c662424452fad93dd22f6bcaf70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fires"
+        },
+        {
+          "type": "과거형",
+          "value": "fired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "firing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fired"
+        }
+      ],
+      "aliasConjugation": "fires",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c1512e5a2f03b955ab258262a170d2cc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "멈춰 서지 않으면 쏜다.",
+      "text": "Stand or I <b>fire</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "불이 꺼져 가고 있다.",
+      "text": "The <b>fire</b> is down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 피가 끓고 있다",
+      "text": "His blood is on <b>fire</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 불을 들쑤셔 돋우었다.",
+      "text": "He poked the <b>fire</b> up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조만간에 나는 면직될 것이다",
+      "text": "I am going to be <b>fired</b> sooner or later. or My dismissal is a question of time now."
+    }
+  ],
+  "isWordType": true
+}

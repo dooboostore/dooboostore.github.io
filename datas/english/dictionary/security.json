@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "security",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sə│kjʊrəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "안전, 무사",
+              "examples": [
+                {
+                  "text": "national <b>security</b>",
+                  "translatedText": "국가 안보"
+                }
+              ],
+              "originalMeaning": "안전, 무사"
+            },
+            {
+              "meaning": "[U] 안심, 마음 든든함, [고어] 방심(放心)",
+              "examples": [
+                {
+                  "text": "<b>Security</b> is the greatest enemy.",
+                  "translatedText": "[속담] 방심이 제일 무서운 적이다."
+                }
+              ],
+              "originalMeaning": "[U] 안심, 마음 든든함, [고어] 방심(放心)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "안전[보안]의, 안전을 위한, 안전 보장의",
+              "examples": [
+                {
+                  "text": "a <b>security</b> company",
+                  "translatedText": "경비 회사"
+                }
+              ],
+              "originalMeaning": "안전[보안]의, 안전을 위한, 안전 보장의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1120f1ec934349ffa834cd605407f353",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1120f1ec934349ffa834cd605407f353",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "securities"
+        }
+      ],
+      "aliasConjugation": "securities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "9e032f414b045473c161bf670e7da2dd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "MSA는 상호 안전 보장법의 약칭이다",
+      "text": "MSA is short[stands] for the Mutual <b>Security</b> Act."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 대부금의 담보로 집을 잡히고 있다.",
+      "text": "He has given his house as <b>security</b> for the loan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정부는 국민의 생활을 보장해야 한다",
+      "text": "The government should provide <b>security</b> for all people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 집을 담보로 잡고 돈을 빌려 주겠다고 제의했다",
+      "text": "He offered a mortgage on house property as <b>security</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "승객의 안전을 위해 모든 짐은 엄밀히 검사한다",
+      "text": "For the <b>security</b> of passengers, all baggage is carefully checked."
+    }
+  ],
+  "isWordType": true
+}

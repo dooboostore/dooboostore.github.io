@@ -1,0 +1,160 @@
+{
+  "items": [
+    {
+      "entry": "panic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pǽnik"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(원인을 알 수 없는) 돌연한 공포, 공황, 패닉; [구어] 허둥지둥, 우왕좌왕",
+              "examples": [
+                {
+                  "text": "in (a) <b>panic</b>",
+                  "translatedText": "공포에 싸여"
+                }
+              ],
+              "originalMeaning": "(원인을 알 수 없는) 돌연한 공포, 공황, 패닉; [구어] 허둥지둥, 우왕좌왕"
+            },
+            {
+              "meaning": "공황, 패닉",
+              "examples": [
+                {
+                  "text": "a stock market <b>panic</b>",
+                  "translatedText": "주식 공황"
+                }
+              ],
+              "originalMeaning": "공황, 패닉"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<공포 등이> 당황케 하는, 제정신을 잃게 하는",
+              "examples": [],
+              "originalMeaning": "<공포 등이> 당황케 하는, 제정신을 잃게 하는"
+            },
+            {
+              "meaning": "허둥지둥하는, 미친 듯한; 공황적인",
+              "examples": [
+                {
+                  "text": "<b>panic</b> haste",
+                  "translatedText": "몹시 허둥댐"
+                }
+              ],
+              "originalMeaning": "허둥지둥하는, 미친 듯한; 공황적인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 공포[공황]를 일으키다, 도망가게 하다, 허둥대게 하다",
+              "examples": [],
+              "originalMeaning": "…에 공포[공황]를 일으키다, 도망가게 하다, 허둥대게 하다"
+            },
+            {
+              "meaning": "웃기다, <관객 등을> 열광시키다",
+              "examples": [],
+              "originalMeaning": "웃기다, <관객 등을> 열광시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b99315aa3a244ea39a01fa2c5cd6e1cd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b99315aa3a244ea39a01fa2c5cd6e1cd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "panics"
+        },
+        {
+          "type": "과거형",
+          "value": "panicked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "panicking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "panicked"
+        }
+      ],
+      "aliasConjugation": "panics",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "49f90c9db9e971a6bf4152facee567ad",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "panic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기장류(類)",
+              "examples": [],
+              "originalMeaning": "기장류(類)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b392dca2c7249be81c8cbc3f739c179",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b392dca2c7249be81c8cbc3f739c179",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "panics",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d366c3f7f16f2002e53157b2abfebb1d",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "초초해서 말을 계속 더듬었다",
+      "text": "I panicked and kept stumbling over my words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전쟁으로 인심이 흉흉하다",
+      "text": "People are <b>panic</b>-stricken with the outbreak of war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당황하지 마라",
+      "text": "Take it easy. or Don't <b>panic</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "허둥대지 마라, 침착해라!",
+      "text": "Don’t <b>panic</b>!"
+    }
+  ],
+  "isWordType": true
+}

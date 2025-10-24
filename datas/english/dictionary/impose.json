@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "impose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪmˈpoʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<의무·벌·세금 등을> 지우다, 과하다, 부과하다(lay)",
+              "examples": [
+                {
+                  "text": "<b>impose</b> taxes on[upon] a person's property",
+                  "translatedText": "…의 재산에 과세하다"
+                }
+              ],
+              "originalMeaning": "<의무·벌·세금 등을> 지우다, 과하다, 부과하다(lay)"
+            },
+            {
+              "meaning": "<의견 등을> 강요[강제]하다(force) ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>impose</b> one's opinion uponothers",
+                  "translatedText": "자기 의견을 남에게 강요하다"
+                }
+              ],
+              "originalMeaning": "<의견 등을> 강요[강제]하다(force) ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "속이다; (…에) 편승하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>impose</b> upona person's kindness",
+                  "translatedText": "…의 친절을 이용하다"
+                }
+              ],
+              "originalMeaning": "속이다; (…에) 편승하다 ((on, upon))"
+            },
+            {
+              "meaning": "(남의 일에) 주제넘게 나서다, 말참견하다; 강요하다",
+              "examples": [],
+              "originalMeaning": "(남의 일에) 주제넘게 나서다, 말참견하다; 강요하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3947fa00f3fd4a94aa996460c8dd5315",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3947fa00f3fd4a94aa996460c8dd5315",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "imposes"
+        },
+        {
+          "type": "과거형",
+          "value": "imposed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "imposing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "imposed"
+        }
+      ],
+      "aliasConjugation": "imposes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e5e62aa9ee79e0b00e896d759467bcee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 도시에 야간 외출 금지령이 내려졌다",
+      "text": "A curfew was imposed on the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 숫되어서 잘 속는다",
+      "text": "She is unsuspecting and easily imposed upon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언덕 위에 집 한 채가 덩그렇게 서 있다",
+      "text": "An imposing house towers high over the hill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 아들은 선생들의 속박에 반항하기 시작했다",
+      "text": "My son began to rebel against the restraint imposed by his teachers."
+    }
+  ],
+  "isWordType": true
+}

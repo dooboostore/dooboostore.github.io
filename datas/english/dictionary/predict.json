@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "predict",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prɪˈdɪkt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "예언하다, 예측하다, 예보하다 (=foretell)",
+              "examples": [
+                {
+                  "text": "The weather forecast predicts sunshine for tomorrow.",
+                  "translatedText": "일기 예보에 의하면 내일은 쾌청할 것이라고 한다."
+                }
+              ],
+              "originalMeaning": "예언하다, 예측하다, 예보하다 (=<span class='related_word' lang='en' >foretell</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "예언[예보]하다",
+              "examples": [],
+              "originalMeaning": "예언[예보]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/53797f70e7954f7eafe2cb90ad7d81c4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/53797f70e7954f7eafe2cb90ad7d81c4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "predicts"
+        },
+        {
+          "type": "과거형",
+          "value": "predicted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "predicting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "predicted"
+        }
+      ],
+      "aliasConjugation": "predicts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "db26d01f8af5c909d4ce694733e71897",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전쟁이 언제 일어날 것인지 예언하였다.",
+      "text": "He predicted when war would break out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지진이 일어날 것이라고 예언하였다.",
+      "text": "They predicted[It was predicted] that there would be an earthquake."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가 변동을 가늠할 수가 없다",
+      "text": "The price fluctuations are difficult to forecast[<b>predict</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결과를 예측할 수 없다",
+      "text": "I can't guess[wouldn't care to <b>predict</b>] what the result will be."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일기 예보에 의하면 내일은 쾌청할 것이라고 한다.",
+      "text": "The weather forecast predicts sunshine for tomorrow."
+    }
+  ],
+  "isWordType": true
+}

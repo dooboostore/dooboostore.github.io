@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "table",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈteɪbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "테이블, 탁자",
+              "examples": [],
+              "originalMeaning": "테이블, 탁자"
+            },
+            {
+              "meaning": "작업대, 놀이대; 수공대(手工臺), 수술대, 필기용 테이블",
+              "examples": [
+                {
+                  "text": "a green <b>table</b>",
+                  "translatedText": "도박대 ((녹색의 책상보를 씌운 데서))"
+                }
+              ],
+              "originalMeaning": "작업대, 놀이대; 수공대(手工臺), 수술대, 필기용 테이블"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "테이블의, 식탁의, 탁상용의",
+              "examples": [
+                {
+                  "text": "a <b>table</b> lamp",
+                  "translatedText": "탁상 전기 스탠드"
+                }
+              ],
+              "originalMeaning": "테이블의, 식탁의, 탁상용의"
+            },
+            {
+              "meaning": "식탁용의, 식사의",
+              "examples": [],
+              "originalMeaning": "식탁용의, 식사의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "탁상에 놓다",
+              "examples": [],
+              "originalMeaning": "탁상에 놓다"
+            },
+            {
+              "meaning": "표[리스트, 목록]로 만들다",
+              "examples": [],
+              "originalMeaning": "표[리스트, 목록]로 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9e114250f62447f6abc80247f68b8f29",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9e114250f62447f6abc80247f68b8f29",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tables"
+        },
+        {
+          "type": "과거형",
+          "value": "tabled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tabling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tabled"
+        }
+      ],
+      "aliasConjugation": "tables",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bb66bfcf1cddad1be0e7d72a5fa15cae",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 책상 위에 두시오",
+      "text": "Lay[Put] it on the <b>table</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "테이블을 움직이지 않게 하시오",
+      "text": "Make the <b>table</b> steady."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 식사 시중을 들게 합시다.",
+      "text": "Let him help at <b>table</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모자를 탁자 위에 두어라.",
+      "text": "Park your hat on the <b>table</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "식탁은 나무를 가지고 만든다",
+      "text": "The <b>table</b> is made of wood."
+    }
+  ],
+  "isWordType": true
+}

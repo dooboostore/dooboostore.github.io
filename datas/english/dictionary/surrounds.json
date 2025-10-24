@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "surround",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səˈraʊnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "둘러싸다, 에워싸다; [군사] 포위하다 ((with, by))",
+              "examples": [
+                {
+                  "text": "be surrounded by admirers",
+                  "translatedText": "찬미자에게 둘러싸이다"
+                }
+              ],
+              "originalMeaning": "둘러싸다, 에워싸다; [군사] 포위하다 ((with, by))"
+            },
+            {
+              "meaning": "둘러막다, 두르다 ((with, by))",
+              "examples": [],
+              "originalMeaning": "둘러막다, 두르다 ((with, by))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "둘러싸는 것; 환경, 주위, 분위기",
+              "examples": [],
+              "originalMeaning": "둘러싸는 것; 환경, 주위, 분위기"
+            },
+            {
+              "meaning": "가장자리 장식",
+              "examples": [],
+              "originalMeaning": "가장자리 장식"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/485d6679648e4503ae35ea6f1192e21a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/485d6679648e4503ae35ea6f1192e21a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "surrounds"
+        },
+        {
+          "type": "과거형",
+          "value": "surrounded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "surrounding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "surrounded"
+        }
+      ],
+      "aliasConjugation": "surrounds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "797ce51c5fa4164c1ce63e575ea759ad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "구경꾼이 집을 빽 둘러쌌다",
+      "text": "The house is thickly surrounded by a crowd."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경찰이 그 집을 첩첩 둘러싸고 있었다",
+      "text": "The house was surrounded by droves of policemen."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자기의 생활 방식을 주위 사람들 것에 맞추도록 힘썼다.",
+      "text": "He tried to assimilate his way of life to that of the surrounding people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아군은 삼중으로 포위당했다",
+      "text": "Our troops were surrounded trebly by the enemy."
+    }
+  ],
+  "isWordType": true
+}

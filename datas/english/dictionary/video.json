@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "video",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│vɪdioʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [TV] 비디오, 영상 (부분)(opp. audio), [구어] = VIDEOTAPE",
+              "examples": [],
+              "originalMeaning": "[U] [TV] 비디오, 영상 (부분)(opp. audio), [구어] = VIDEOTAPE"
+            },
+            {
+              "meaning": "텔레비전(television)",
+              "examples": [],
+              "originalMeaning": "텔레비전(television)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "텔레비전의, 텔레비전 수상기의",
+              "examples": [],
+              "originalMeaning": "텔레비전의, 텔레비전 수상기의"
+            },
+            {
+              "meaning": "[TV] 비디오의, 영상(부분)의, 녹화의",
+              "examples": [],
+              "originalMeaning": "[TV] 비디오의, 영상(부분)의, 녹화의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d1ebc5e6f5b04d80bf673d72455461ac",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d1ebc5e6f5b04d80bf673d72455461ac",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "videos"
+        },
+        {
+          "type": "복수형",
+          "value": "videos"
+        },
+        {
+          "type": "과거형",
+          "value": "videoed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "videoing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "videoed"
+        }
+      ],
+      "aliasConjugation": "videos",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "37a6cb86859fddadb8f40dc3f14361fb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들은 비디오 게임에 열광적이다",
+      "text": "Children are crazy about <b>video</b> games."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 비디오 게임에 빠졌다",
+      "text": "I've addicted to <b>video</b> games. or I've picked up the habit of <b>video</b> games."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 비디오는 오늘 중으로 돌려주어야 한다",
+      "text": "I have to return this <b>video</b> today. or I have to take this <b>video</b> back today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비디오 게임의 신기함은 일부 아이들에게는 한물 가버렸다.",
+      "text": "The novelty of <b>video</b> games has worn off for some kids."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 가게는 더 이상 저질의 비디오 테잎을 팔지 않는다",
+      "text": "The store has withdrawn the offending videos from its shelves."
+    }
+  ],
+  "isWordType": true
+}

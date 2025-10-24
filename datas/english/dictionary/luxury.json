@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "luxury",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlʌkʃəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사치, 호사",
+              "examples": [
+                {
+                  "text": "live in <b>luxury</b>",
+                  "translatedText": "사치스럽게 살다"
+                }
+              ],
+              "originalMeaning": "사치, 호사"
+            },
+            {
+              "meaning": "사치품, 고급품",
+              "examples": [],
+              "originalMeaning": "사치품, 고급품"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "사치(품)의, 고급(품)의",
+              "examples": [
+                {
+                  "text": "a <b>luxury</b> car",
+                  "translatedText": "고급차"
+                }
+              ],
+              "originalMeaning": "사치(품)의, 고급(품)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/63240d297759431192c1b14bde35f682",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/63240d297759431192c1b14bde35f682",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "luxuries"
+        }
+      ],
+      "aliasConjugation": "luxuries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "3d9c731344b7cb88be8217ba6c0ee979",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그러한 사치는 못한다",
+      "text": "I can't afford such <b>luxury</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 형편에 그런 사치는 못한다",
+      "text": "I cannot afford such <b>luxury</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그렇게 사치할 터가 못 된다",
+      "text": "Circumstanced as I am, I can't afford such <b>luxury</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 사치는 재정상 할 수 없다",
+      "text": "I cannot afford such <b>luxury</b>. or My means cannot afford such <b>luxury</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 봉급이 적기 때문에 사치라고는 모른다",
+      "text": "His salary is low and he gets few luxuries."
+    }
+  ],
+  "isWordType": true
+}

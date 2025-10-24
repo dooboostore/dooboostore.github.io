@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "deliver",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈlɪvə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<물건·편지를> 배달하다, <전언 등을> 전하다",
+              "examples": [
+                {
+                  "text": "<b>deliver</b> a package",
+                  "translatedText": "소포를 배달하다"
+                }
+              ],
+              "originalMeaning": "<물건·편지를> 배달하다, <전언 등을> 전하다"
+            },
+            {
+              "meaning": "넘겨 주다, 인도하다, 포기하다 ((up, over; to, into)); [법] 정식으로 교부하다",
+              "examples": [
+                {
+                  "text": "<b>deliver</b> a city up",
+                  "translatedText": "도시를 포기하다"
+                }
+              ],
+              "originalMeaning": "넘겨 주다, 인도하다, 포기하다 ((up, over; to, into)); [법] 정식으로 교부하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "분만[해산]하다, 낳다",
+              "examples": [],
+              "originalMeaning": "분만[해산]하다, 낳다"
+            },
+            {
+              "meaning": "상품 등을 배달하다",
+              "examples": [],
+              "originalMeaning": "상품 등을 배달하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fdfbb38c34b04d5dad778784199784ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fdfbb38c34b04d5dad778784199784ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "delivers"
+        },
+        {
+          "type": "과거형",
+          "value": "delivered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "delivering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "delivered"
+        }
+      ],
+      "aliasConjugation": "delivers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1f06ea05923d61a94cbeae711f7e12f9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이걸 택배로 보내 주세요",
+      "text": "Please <b>deliver</b> this to my house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우편은 하루에 두 번 배달된다",
+      "text": "Letters are delivered twice a day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 간첩은 경찰에 자수했다",
+      "text": "The spy surrendered[delivered] himself to the police."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "영수증과 물품을 교환하여 드립니다",
+      "text": "We <b>deliver</b> goods in exchange for a receipt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지시하신 대로 그 상자를 배달했습니다.",
+      "text": "I delivered the box per your instructions."
+    }
+  ],
+  "isWordType": true
+}

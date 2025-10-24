@@ -1,0 +1,361 @@
+/* Fixed Header */
+.english-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0; /* Allow shrinking */
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Home Button - Always at the left edge */
+.home-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Don't shrink */
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Current Item Info - Horizontal layout with image */
+.current-item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  min-width: 0; /* Allow shrinking */
+  max-width: 400px; /* Limit max width */
+}
+
+.item-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0; /* Don't shrink image */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0; /* Allow shrinking */
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ... for long names */
+}
+
+.item-type {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-menu {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.favorites-count {
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.7rem;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+/* Favorites Panel */
+.favorites-panel {
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  width: 400px;
+  max-height: 500px;
+  background: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.favorites-panel.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.favorites-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: #6c757d;
+  padding: 2rem;
+  font-style: italic;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  transition: all 0.2s ease;
+}
+
+.favorite-item:hover {
+  background: #e9ecef;
+}
+
+.word-info {
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin: -0.25rem;
+}
+
+.word-info:hover {
+  background-color: rgba(33, 150, 243, 0.05);
+}
+
+.word-text {
+  font-weight: 600;
+  color: #495057;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.clickable-word {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.clickable-word:hover {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.word-meaning {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: rgba(220, 53, 69, 0.1);
+}
+
+/* Main Content */
+.english-main {
+  margin-top: 60px; /* Header height + some spacing */
+  min-height: calc(100vh - 60px);
+}
+
+/* Player page - no margin (both PC and mobile) */
+.english-main:has(.player-container) {
+  margin-top: 0;
+  height: 100vh; /* 정확히 100vh, min-height 아님 */
+  overflow: hidden; /* 전체 스크롤 방지 */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0.6rem 1rem;
+  }
+  
+  .header-left {
+    gap: 0.5rem;
+  }
+  
+  .header-title {
+    font-size: 1rem;
+  }
+  
+  .home-btn {
+    min-width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .current-item-info {
+    padding: 0.3rem 0.6rem;
+    gap: 0.5rem;
+    max-width: 250px; /* Smaller max width on mobile */
+  }
+  
+  .item-image {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .item-name {
+    font-size: 0.8rem;
+  }
+  
+  .item-type {
+    display: none; /* Hide type on mobile to save space */
+  }
+  
+  /* Hide current item info in landscape mode */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .current-item-info {
+      display: none;
+    }
+    
+    .header-content {
+      padding: 0.4rem 1rem; /* 더 작은 패딩 */
+    }
+    
+    .home-btn {
+      min-width: 32px;
+      height: 32px;
+    }
+  }
+  
+  .menu-btn span {
+    display: none;
+  }
+  
+  .menu-btn {
+    padding: 0.4rem;
+    min-width: 36px;
+    justify-content: center;
+  }
+  
+  .favorites-panel {
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+  }
+  
+  .english-main {
+    margin-top: 50px;
+  }
+}

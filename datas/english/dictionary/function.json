@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "function",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfʌŋkʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기능, 작용; 목적; 관능(官能)",
+              "examples": [
+                {
+                  "text": "the <b>function</b> of the heart[kidneys]",
+                  "translatedText": "심장[신장]의 기능"
+                }
+              ],
+              "originalMeaning": "기능, 작용; 목적; 관능(官能)"
+            },
+            {
+              "meaning": "[보통 pl.] 직능, 직무, 직분, 역할; [화학] 작용기(基), 관능기(基)",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 직능, 직무, 직분, 역할; [화학] 작용기(基), 관능기(基)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기능을 하다, 작용하다(operate), 활동하다; 직분[역할, 구실]을 다하다",
+              "examples": [
+                {
+                  "text": "The telephone was not functioning.",
+                  "translatedText": "전화가 고장 나 있었다."
+                }
+              ],
+              "originalMeaning": "기능을 하다, 작용하다(operate), 활동하다; 직분[역할, 구실]을 다하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1f167e85e6a434687552c1b30d2b5c0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1f167e85e6a434687552c1b30d2b5c0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "functions"
+        },
+        {
+          "type": "과거형",
+          "value": "functioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "functioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "functioned"
+        }
+      ],
+      "aliasConjugation": "functions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3f48dbdc7190ba18213abe2e4ed8d047",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 선반은 매우 기능적이다",
+      "text": "This shelf is very functional."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전화가 고장 나 있었다.",
+      "text": "The telephone was not functioning."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가격은 수요와 공급과의 상관관계이다.",
+      "text": "Price is a <b>function</b> of supply and demand."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "선생은 가르치는 것이 제구실이다",
+      "text": "The business[duty, <b>function</b>] of the teacher is to teach."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신문의 기능은 사회에 정보를 제공하는 데 있다",
+      "text": "The major <b>function</b> of the press is to give information to the public."
+    }
+  ],
+  "isWordType": true
+}

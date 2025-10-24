@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "detect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈtekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<나쁜 짓 등을> 발견하다; 간파하다, <정체 등을> 탐지하다, 인지하다 (=discover)",
+              "examples": [
+                {
+                  "text": "<b>detect</b> the smell of smoke",
+                  "translatedText": "연기 냄새를 탐지하다"
+                }
+              ],
+              "originalMeaning": "<나쁜 짓 등을> 발견하다; 간파하다, <정체 등을> 탐지하다, 인지하다 (=<span class='related_word' lang='en' >discover</span>)"
+            },
+            {
+              "meaning": "[통신] 검파하다, [화학] 검출하다",
+              "examples": [],
+              "originalMeaning": "[통신] 검파하다, [화학] 검출하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<형사·탐정이> 탐색[수색]하다",
+              "examples": [],
+              "originalMeaning": "<형사·탐정이> 탐색[수색]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f5692f2958f44442b1fcc54efa368443",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f5692f2958f44442b1fcc54efa368443",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "detects"
+        },
+        {
+          "type": "과거형",
+          "value": "detected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "detecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "detected"
+        }
+      ],
+      "aliasConjugation": "detects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "369b86cbd4631424dbeb31c0bbf12005",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 사기를 친 것이 들통 났다",
+      "text": "He was detected in fraud."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사탕에서 독물이 검출되었다",
+      "text": "Some poisonous substances were detected in those candies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 해역에 부설된 기뢰를 탐지하는 데 성공했다",
+      "text": "We succeeded in detecting the mines laid in that sea area."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "컴퓨터 프로그램의 문제점을 찾아내서 고쳤다",
+      "text": "They detected a problem in the computer program and fixed it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "농작물에서 방사능이 검출되었다",
+      "text": "Radioactivity was detected[found] in the crops."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "evidence",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈevɪdəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 증거, 물증 ((for, of)); [법] 증언; [C] 증거 물건; 증인 (=proof)",
+              "examples": [
+                {
+                  "text": "Is there any <b>evidence</b> of[for] this?",
+                  "translatedText": "이에 대한 무슨 증거가 있는가?"
+                }
+              ],
+              "originalMeaning": "[U] 증거, 물증 ((for, of)); [법] 증언; [C] 증거 물건; 증인 (=<span class='related_word' lang='en' >proof</span>)"
+            },
+            {
+              "meaning": "명백, 명료",
+              "examples": [],
+              "originalMeaning": "명백, 명료"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(증거로써) 증명하다",
+              "examples": [],
+              "originalMeaning": "(증거로써) 증명하다"
+            },
+            {
+              "meaning": "명시하다(show clearly), …의 증거가 되다, (감정 등을) 겉으로 나타내다",
+              "examples": [],
+              "originalMeaning": "명시하다(show clearly), …의 증거가 되다, (감정 등을) 겉으로 나타내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/508a817a6fb34bef94e262912ade5231",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/508a817a6fb34bef94e262912ade5231",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "evidences"
+        },
+        {
+          "type": "과거형",
+          "value": "evidenced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "evidencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "evidenced"
+        }
+      ],
+      "aliasConjugation": "evidences",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ecc363aaa0fa9e1a6e50f9bad072f9f4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 새로운 증거를 발견했다.",
+      "text": "He unearthed new <b>evidence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새 증거가 그를 결심케 했다.",
+      "text": "The new <b>evidence</b> decided him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 증거로 유죄가 명백해지다.",
+      "text": "The <b>evidence</b> manifests the guilt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이렇다 할 증거는 아무것도 없다",
+      "text": "There’s no particular <b>evidence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아무런 증거도 없는데 감금되었다",
+      "text": "He was imprisoned on no <b>evidence</b>."
+    }
+  ],
+  "isWordType": true
+}

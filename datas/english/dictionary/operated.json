@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "operate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːpəreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<기계·기관 등이> 움직이다, 일하다; <회사·공장이> 조업하다",
+              "examples": [
+                {
+                  "text": "This machine <b>operate</b> s night and day.",
+                  "translatedText": "이 기계는 주야로 움직인다."
+                }
+              ],
+              "originalMeaning": "<기계·기관 등이> 움직이다, 일하다; <회사·공장이> 조업하다"
+            },
+            {
+              "meaning": "작용하다, 영향을 끼치다 ((on, upon)); <약이> 효과를 나타내다, 듣다",
+              "examples": [
+                {
+                  "text": "Books <b>operate</b> powerfully upon the soul both for good and evil.",
+                  "translatedText": "책은 좋건 나쁘건 정신에 강력한 영향을 끼친다."
+                }
+              ],
+              "originalMeaning": "작용하다, 영향을 끼치다 ((on, upon)); <약이> 효과를 나타내다, 듣다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "운전하다, 조종하다",
+              "examples": [
+                {
+                  "text": "Who is operating the microphone?",
+                  "translatedText": "누가 마이크를 조작하고 있느냐?"
+                }
+              ],
+              "originalMeaning": "운전하다, 조종하다"
+            },
+            {
+              "meaning": "경영하다, 관리하다",
+              "examples": [
+                {
+                  "text": "<b>operate</b> a hotel[ranch]",
+                  "translatedText": "호텔[목장]을 경영하다"
+                }
+              ],
+              "originalMeaning": "경영하다, 관리하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d8d3b109406e4e37b4b345b4198da34b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d8d3b109406e4e37b4b345b4198da34b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "operates"
+        },
+        {
+          "type": "과거형",
+          "value": "operated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "operating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "operated"
+        }
+      ],
+      "aliasConjugation": "operates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f4b1734db1684ccd602cc07ef6030fdf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 코 수술을 받았다.",
+      "text": "He had his nose <b>operated</b> on."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공장 가동이 아직은 저조하다",
+      "text": "The factories now <b>operate</b> at a whisper."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 이 기계를 어떻게 조작하는지 잘 보시오.",
+      "text": "See how I <b>operate</b> this machine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 맹장을 수술했다 I had my appendix out. or",
+      "text": "I was <b>operated</b> on for appendicitis."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "버스는 결손 운행을 하고 있다",
+      "text": "The bus service is being <b>operated</b> at a loss."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "leaf",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "liːf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "잎, 나뭇잎, 풀잎",
+              "examples": [
+                {
+                  "text": "a <b>leaf</b> blade",
+                  "translatedText": "엽편(葉片)"
+                }
+              ],
+              "originalMeaning": "잎, 나뭇잎, 풀잎"
+            },
+            {
+              "meaning": "군엽(群葉)(foliage)",
+              "examples": [],
+              "originalMeaning": "군엽(群葉)(foliage)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잎이 나다",
+              "examples": [],
+              "originalMeaning": "잎이 나다"
+            },
+            {
+              "meaning": "책 등의 페이지를 빨리 넘기다",
+              "examples": [],
+              "originalMeaning": "책 등의 페이지를 빨리 넘기다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책 등의 페이지를> 빨리 넘기다",
+              "examples": [],
+              "originalMeaning": "<책 등의 페이지를> 빨리 넘기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f5c622c9d5e5457aa8dcb25d4cb0497e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f5c622c9d5e5457aa8dcb25d4cb0497e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "leafs"
+        },
+        {
+          "type": "복수형",
+          "value": "leaves"
+        },
+        {
+          "type": "과거형",
+          "value": "leafed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "leafing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "leafed"
+        }
+      ],
+      "aliasConjugation": "leafs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "14caf95e89ce0442729cb0fb2a96e754",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 새로운 삶을 시작했다",
+      "text": "I've turned over a new <b>leaf</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "4 에서 2를 빼면 2가 남는다.",
+      "text": "Two from four leaves two."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "10에서 4를 빼면 6이 남는다",
+      "text": "Taking 4 from 10 leaves 6."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "8 마이너스 3은 5이다",
+      "text": "Eight minus three leaves[is] five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "9 빼기 0는 9이다.",
+      "text": "Nothing from nine leaves nine."
+    }
+  ],
+  "isWordType": true
+}

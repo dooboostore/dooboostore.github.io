@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "represent",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌreprɪˈzent"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "나타내다, 의미하다, 상징하다",
+              "examples": [
+                {
+                  "text": "The dove represents peace.",
+                  "translatedText": "비둘기는 평화를 상징한다."
+                }
+              ],
+              "originalMeaning": "나타내다, 의미하다, 상징하다"
+            },
+            {
+              "meaning": "(문자·기호 등으로) 나타내다, 표현[표시]하다",
+              "examples": [
+                {
+                  "text": "The color red commonly represents danger.",
+                  "translatedText": "빨간색은 일반적으로 위험을 나타낸다."
+                }
+              ],
+              "originalMeaning": "(문자·기호 등으로) 나타내다, 표현[표시]하다"
+            },
+            {
+              "meaning": "대리[대표]하다; <선거구·선거민을> 대표하다, …출신 의원이다 ((at, on, in))",
+              "examples": [
+                {
+                  "text": "<b>represent</b> a labor union on a committee",
+                  "translatedText": "위원회에서 노동조합을 대표하다"
+                }
+              ],
+              "originalMeaning": "대리[대표]하다; <선거구·선거민을> 대표하다, …출신 의원이다 ((at, on, in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d48aa5ae5a24d38a29737bd6b064ebe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d48aa5ae5a24d38a29737bd6b064ebe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "represents"
+        },
+        {
+          "type": "과거형",
+          "value": "represented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "representing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "represented"
+        }
+      ],
+      "aliasConjugation": "represents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bc861d92358bc4dc014111a9c1822775",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-present",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriː prɪˈzent"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 선사하다, 다시 제출하다",
+              "examples": [],
+              "originalMeaning": "다시 선사하다, 다시 제출하다"
+            },
+            {
+              "meaning": "<극 등을> 재연하다",
+              "examples": [],
+              "originalMeaning": "<극 등을> 재연하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ae7322f2b584560a10e54494a4b7f8e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ae7322f2b584560a10e54494a4b7f8e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2fae5ea12eae198d26378b2e224d77ac",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 여왕 역을 맡아 했다",
+      "text": "She represented a queen."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자기가 학생이라고 말했다.",
+      "text": "He represented himself as[to be] a student."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 미시간 주 출신의 상원 의원이다.",
+      "text": "He represents Michigan in the Senate."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지도상의 이 표는 절을 나타낸다",
+      "text": "This mark on the map represents a temple."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 한국을 대표해서 회의에 참석했다.",
+      "text": "He represented Korea at the conference."
+    }
+  ],
+  "isWordType": true
+}

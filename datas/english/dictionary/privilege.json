@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "privilege",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈprɪvəlɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] 특권, 특전, 특별 취급; (의원의 의회 내에서의) 특권",
+              "examples": [
+                {
+                  "text": "the <b>privilege</b> s of birth",
+                  "translatedText": "명문의 특권, 생득의 특권"
+                }
+              ],
+              "originalMeaning": "[보통 the ~] 특권, 특전, 특별 취급; (의원의 의회 내에서의) 특권"
+            },
+            {
+              "meaning": "(개인적) 은전, (특별한) 혜택; 명예",
+              "examples": [
+                {
+                  "text": "It's my <b>privilege</b> to be here.",
+                  "translatedText": "여기에 동석하게 되어 영광입니다."
+                }
+              ],
+              "originalMeaning": "(개인적) 은전, (특별한) 혜택; 명예"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 특권[특전]을 주다 (→privileged)",
+              "examples": [
+                {
+                  "text": "( <b>privilege</b>+[목]+to do) We privileged him to come to school later than usual.",
+                  "translatedText": "그에게 평소보다 늦게 등교하는 것을 특별히 허락했다."
+                }
+              ],
+              "originalMeaning": "…에게 특권[특전]을 주다 (→<span class='related_word' lang='en' >privileged</span>)"
+            },
+            {
+              "meaning": "특전으로서 면제하다(exempt) ((from))",
+              "examples": [
+                {
+                  "text": "<b>privilege</b> a person from some burden",
+                  "translatedText": "…을 어떤 부담에서 특별히 면제해 주다"
+                }
+              ],
+              "originalMeaning": "특전으로서 면제하다(exempt) ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3e259ab0855d42aeb445519e6b9a0aed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3e259ab0855d42aeb445519e6b9a0aed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "privileges"
+        },
+        {
+          "type": "과거형",
+          "value": "privileged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "privileging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "privileged"
+        }
+      ],
+      "aliasConjugation": "privileges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8c32b6d61be08abe9be4784015e39b29",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여기에 동석하게 되어 영광입니다.",
+      "text": "It’s my <b>privilege</b> to be here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 특권이 그에게 주어졌다.",
+      "text": "The <b>privilege</b> has been conceded to him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 언제 와도 좋다는 특권이 주어져 있었다.",
+      "text": "He was privileged to come at any time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 내로라하는 집안의 딸임을 자랑한다",
+      "text": "She is proud of her privileged family background."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그의 개인적인 도움을 받는 은전을 입었다",
+      "text": "I was privileged to receive his personal assistance."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "parking",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɑːrkɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 주차, 주차 장소, 주차장 관리(의 직업), 주차 용지",
+              "examples": [
+                {
+                  "text": "No <b>parking</b> (here).",
+                  "translatedText": "[게시] 주차 금지."
+                }
+              ],
+              "originalMeaning": "[U] 주차, 주차 장소, 주차장 관리(의 직업), 주차 용지"
+            },
+            {
+              "meaning": "카 섹스",
+              "examples": [
+                {
+                  "text": "go <b>parking</b>",
+                  "translatedText": "카 섹스를 하다"
+                }
+              ],
+              "originalMeaning": "카 섹스"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "주차의[에 관한]",
+              "examples": [
+                {
+                  "text": "a <b>parking</b> space",
+                  "translatedText": "주차 공간"
+                }
+              ],
+              "originalMeaning": "주차의[에 관한]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8abe863040d0486398c4870040a2d939",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8abe863040d0486398c4870040a2d939",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ba7eff8eecab39e83fa77e1b478d8887",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "park",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɑːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공원, 유원지; (벤치·화단 등이 있는) 광장; 자연 공원",
+              "examples": [
+                {
+                  "text": "a national park",
+                  "translatedText": "국립 공원"
+                }
+              ],
+              "originalMeaning": "공원, 유원지; (벤치·화단 등이 있는) 광장; 자연 공원"
+            },
+            {
+              "meaning": "[미] 운동장, 경기장; [종종 the ~] [영·구어] 축구장, 럭비장; …장",
+              "examples": [
+                {
+                  "text": "a baseball park",
+                  "translatedText": "야구장"
+                }
+              ],
+              "originalMeaning": "[미] 운동장, 경기장; [종종 the ~] [영·구어] 축구장, 럭비장; …장"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "주차시키다; <포·차 등을> 한 곳에 세워[정리하여] 두다, 대기시키다",
+              "examples": [],
+              "originalMeaning": "주차시키다; <포·차 등을> 한 곳에 세워[정리하여] 두다, 대기시키다"
+            },
+            {
+              "meaning": "[구어] <물건을> (어떤 곳에 잠시) 두다, <아이 등을> 남에게 맡기다",
+              "examples": [
+                {
+                  "text": "Park your hat on the table.",
+                  "translatedText": "모자를 탁자 위에 두어라."
+                }
+              ],
+              "originalMeaning": "[구어] <물건을> (어떤 곳에 잠시) 두다, <아이 등을> 남에게 맡기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주차하다",
+              "examples": [],
+              "originalMeaning": "주차하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/718e567e73a24e44a281407bc7e917bf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/718e567e73a24e44a281407bc7e917bf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "parks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e81b5cd29924284101f02868eb1ebab9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 주차장은 유료입니다",
+      "text": "You must pay for the use of this <b>parking</b> lot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 주차장은 민영이다",
+      "text": "This <b>parking</b> lot is under private management."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주차장은 만원이다",
+      "text": "The <b>parking</b> lot is full[full to capacity]. or The <b>parking</b> lot is full up."
+    }
+  ],
+  "isWordType": true
+}

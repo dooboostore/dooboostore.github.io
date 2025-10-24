@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "masked",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mæskt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "가면을 쓴, 복면한, 가장한(disguised)",
+              "examples": [
+                {
+                  "text": "He was <b>masked</b>.",
+                  "translatedText": "그는 가면을 쓰고 있었다."
+                }
+              ],
+              "originalMeaning": "가면을 쓴, 복면한, 가장한(disguised)"
+            },
+            {
+              "meaning": "감춘, 숨은",
+              "examples": [
+                {
+                  "text": "<b>masked</b> treachery",
+                  "translatedText": "감춰진 음모"
+                }
+              ],
+              "originalMeaning": "감춘, 숨은"
+            },
+            {
+              "meaning": "엄폐[차폐]한",
+              "examples": [],
+              "originalMeaning": "엄폐[차폐]한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4dcb4e0c9ce9407fb93b00146591723a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4dcb4e0c9ce9407fb93b00146591723a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6c8cab377ae4dc8b75926bc5785b92b2",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "mask",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mæsk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(변장용) 복면; 가면, 탈",
+              "examples": [
+                {
+                  "text": "party masks",
+                  "translatedText": "파티용 가면"
+                }
+              ],
+              "originalMeaning": "(변장용) 복면; 가면, 탈"
+            },
+            {
+              "meaning": "(보호용) 마스크, 방독 마스크(= gas ~), 데스마스크(= death ~), 수중 마스크",
+              "examples": [],
+              "originalMeaning": "(보호용) 마스크, 방독 마스크(= gas ~), 데스마스크(= death ~), 수중 마스크"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 가면을 씌우다, 가면으로 가리다 (→masked)",
+              "examples": [],
+              "originalMeaning": "…에 가면을 씌우다, 가면으로 가리다 (→<span class='related_word' lang='en' ><b>masked</b></span>)"
+            },
+            {
+              "meaning": "<감정 등을> 감추다, 가장하다",
+              "examples": [
+                {
+                  "text": "<b>mask</b> one's intentions",
+                  "translatedText": "본심을 감추다"
+                }
+              ],
+              "originalMeaning": "<감정 등을> 감추다, 가장하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "가면을 쓰다, 가장하다, 본심을 숨기다",
+              "examples": [],
+              "originalMeaning": "가면을 쓰다, 가장하다, 본심을 숨기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72d328c41af84a4d931c218ad867963c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72d328c41af84a4d931c218ad867963c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "masks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "afdd4594d027ca5497034cdc1d159935",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 공손함은 노여움을 감추려는 겉꾸림이었다.",
+      "text": "His politeness is a <b>mask</b> for anger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 가면을 쓰고 있었다.",
+      "text": "He was <b>masked</b>."
+    }
+  ],
+  "isWordType": true
+}

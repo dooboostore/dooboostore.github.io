@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "admit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ədˈmɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·사물이 사람·사물을> 들이다, 넣다(let in); 입장[입학, 입회]을 허락하다 (=receive)",
+              "examples": [
+                {
+                  "text": "The window was opened, <b>admit</b> ting fresh air.",
+                  "translatedText": "신선한 공기가 들어오도록 창문은 열려 있었다."
+                }
+              ],
+              "originalMeaning": "<사람·사물이 사람·사물을> 들이다, 넣다(let in); 입장[입학, 입회]을 허락하다 (=<span class='related_word' lang='en' >receive</span>)"
+            },
+            {
+              "meaning": "<장소가 사람을> 수용할 수 있다(have room for)",
+              "examples": [
+                {
+                  "text": "This hall <b>admit</b> s 50 persons.",
+                  "translatedText": "이 홀은 50명을 수용할 수 있다."
+                }
+              ],
+              "originalMeaning": "<장소가 사람을> 수용할 수 있다(have room for)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[사물을 주어로, 보통은 부정문으로] <사실 등이 …의> 여지가 있다, <…을> 허용하다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>admit</b> of discussion",
+                  "translatedText": "논의의 여지가 있다"
+                }
+              ],
+              "originalMeaning": "[사물을 주어로, 보통은 부정문으로] <사실 등이 …의> 여지가 있다, <…을> 허용하다 ((of))"
+            },
+            {
+              "meaning": "…에 들어갈 수단이 되다, …에 이르다[통하다] ((to))",
+              "examples": [
+                {
+                  "text": "This ticket <b>admit</b> s to the hall.",
+                  "translatedText": "이 표로 홀에 들어갈 수 있다."
+                }
+              ],
+              "originalMeaning": "…에 들어갈 수단이 되다, …에 이르다[통하다] ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/af3088766bc04459b257894ed9ba30ed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/af3088766bc04459b257894ed9ba30ed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "admits"
+        },
+        {
+          "type": "과거형",
+          "value": "admitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "admitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "admitted"
+        }
+      ],
+      "aliasConjugation": "admits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "60f0880a268800c8ce59ca1bad9a43ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 의심할 여지가 없다.",
+      "text": "This admits of no doubt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 분초를 다투는 문제이다",
+      "text": "It is a matter of great urgency. or It admits of no delay. or It is very urgent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 내가 잘못했다는 것을 시인한다",
+      "text": "I <b>admit</b> that I was wrong."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 홀은 50명을 수용할 수 있다.",
+      "text": "This hall admits 50 persons."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 표로 홀에 들어갈 수 있다.",
+      "text": "This ticket admits to the hall."
+    }
+  ],
+  "isWordType": true
+}

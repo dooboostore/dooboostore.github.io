@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "tackle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtækl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 연장, 도구, 기구, 장치; 낚시 도구; 마구(馬具)",
+              "examples": [
+                {
+                  "text": "writing <b>tackle</b>",
+                  "translatedText": "필기 도구"
+                }
+              ],
+              "originalMeaning": "[U] 연장, 도구, 기구, 장치; 낚시 도구; 마구(馬具)"
+            },
+            {
+              "meaning": "고패, 녹로(轆 轤)",
+              "examples": [],
+              "originalMeaning": "고패, 녹로(轆 轤)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<일 등에> 부딪치다, <문제 등을> 다루다; 부지런히 시작하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>tackle</b> a problem",
+                  "translatedText": "문제를 다루다"
+                }
+              ],
+              "originalMeaning": "<일 등에> 부딪치다, <문제 등을> 다루다; 부지런히 시작하다 ((to))"
+            },
+            {
+              "meaning": "(문제 등으로) …와 논쟁하다 ((about, on, over))",
+              "examples": [
+                {
+                  "text": "<b>tackle</b> a person on some subject",
+                  "translatedText": "어떤 문제로 …와 논쟁하다, …에게 분명히 이야기하다"
+                }
+              ],
+              "originalMeaning": "(문제 등으로) …와 논쟁하다 ((about, on, over))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(문제 등을) 다루다, 손대다",
+              "examples": [],
+              "originalMeaning": "(문제 등을) 다루다, 손대다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/94a84676f0a2474b9f75d98f97711d6a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/94a84676f0a2474b9f75d98f97711d6a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tackles"
+        },
+        {
+          "type": "과거형",
+          "value": "tackled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tackling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tackled"
+        }
+      ],
+      "aliasConjugation": "tackles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b9b868ce043124539e807e464ab203f8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어떤 역할이라도 재치있게 소화해 낼 수 있다",
+      "text": "He can <b>tackle</b> any role with ease."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모두 다 덤벼들어 순식간에 일을 끝냈다",
+      "text": "All of us tackled the work and finished it in a blink[made short work of it]."
+    }
+  ],
+  "isWordType": true
+}

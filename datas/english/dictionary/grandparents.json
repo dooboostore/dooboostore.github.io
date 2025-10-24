@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "entry": "grandparent",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɡrænperənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조부, 조모",
+              "examples": [],
+              "originalMeaning": "조부, 조모"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b6798f37d4d0455aaee656090539ba18",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b6798f37d4d0455aaee656090539ba18",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "75dfc5a48fa8e71e20a27b5beb2b9d56",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조부모님이 그 고아를 거두게 되었다",
+      "text": "The orphan was left in the care of his <b>grandparents</b>."
+    }
+  ],
+  "isWordType": true
+}

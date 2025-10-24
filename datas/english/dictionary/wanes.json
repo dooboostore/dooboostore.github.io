@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "wane",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "weɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "작아[적어]지다; 약해지다, 쇠약해지다, 감퇴하다; 끝이 가까워지다",
+              "examples": [
+                {
+                  "text": "His popularity has waned.",
+                  "translatedText": "그의 인기는 기울었다."
+                }
+              ],
+              "originalMeaning": "작아[적어]지다; 약해지다, 쇠약해지다, 감퇴하다; 끝이 가까워지다"
+            },
+            {
+              "meaning": "<달 등이> 이지러지다(opp. wax)",
+              "examples": [],
+              "originalMeaning": "<달 등이> 이지러지다(opp. wax)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(달의) 이지러짐",
+              "examples": [],
+              "originalMeaning": "(달의) 이지러짐"
+            },
+            {
+              "meaning": "[the ~] 감소, 감퇴, 쇠미(衰微); 쇠퇴기",
+              "examples": [],
+              "originalMeaning": "[the ~] 감소, 감퇴, 쇠미(衰微); 쇠퇴기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a5df00f58734442f91845341408b3f56",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a5df00f58734442f91845341408b3f56",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wanes"
+        },
+        {
+          "type": "과거형",
+          "value": "waned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "waning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "waned"
+        }
+      ],
+      "aliasConjugation": "wanes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "adc9e8c319293f3be47e09f2dc58f83a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 인기는 줄기 시작했다",
+      "text": "Her popularity was beginning to <b>wane</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집은 가세가 기울어지고 있다",
+      "text": "Their fortune is waning[beginning to ebb]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 TV 탤런트의 인기는 하락세다",
+      "text": "The popularity of the TV personality is on the <b>wane</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한때 인기 선수였던 그도 이제 사양길로 접어들었다",
+      "text": "He was a star player, but now he is on the decline[<b>wane</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달이 이울고 있다",
+      "text": "The moon is waning."
+    }
+  ],
+  "isWordType": true
+}

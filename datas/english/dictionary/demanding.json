@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "demanding",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│mændɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 요구가 지나친, 지나친 요구를 하는; <일이> 큰 노력을 요하는",
+              "examples": [],
+              "originalMeaning": "<사람이> 요구가 지나친, 지나친 요구를 하는; <일이> 큰 노력을 요하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b7b812c34cea471ea87bef6cf9ecb458",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b7b812c34cea471ea87bef6cf9ecb458",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "58b97143be3af99123a7250d16fc4c67",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "demand",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈmænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "요구[요청]하다(ask for), 청구하다 ((of, from))",
+              "examples": [
+                {
+                  "text": "<b>demand</b> too high a price of[from] a person",
+                  "translatedText": "…에게 엄청난 값을 청구하다"
+                }
+              ],
+              "originalMeaning": "요구[요청]하다(ask for), 청구하다 ((of, from))"
+            },
+            {
+              "meaning": "<사물이> <숙련·인내·시일 등을> 필요로 하다(need)(cf. REQUIRE)",
+              "examples": [
+                {
+                  "text": "This matter <b>demand</b> s great caution.",
+                  "translatedText": "이 일은 세심한 주의를 요한다."
+                }
+              ],
+              "originalMeaning": "<사물이> <숙련·인내·시일 등을> 필요로 하다(need)(cf. REQUIRE)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "요청[요구]하다, 묻다 ((of))",
+              "examples": [],
+              "originalMeaning": "요청[요구]하다, 묻다 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "요구(claim); 청구(request) ((for, on))",
+              "examples": [
+                {
+                  "text": "a <b>demand</b> for higher wages",
+                  "translatedText": "임금 인상 요구"
+                }
+              ],
+              "originalMeaning": "요구(claim); 청구(request) ((for, on))"
+            },
+            {
+              "meaning": "요구되는 것, 요구 사항",
+              "examples": [],
+              "originalMeaning": "요구되는 것, 요구 사항"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3a8d969d18834cffaa5c25285e928396",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3a8d969d18834cffaa5c25285e928396",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "demands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "323753741d350fd840f47f2666af29e4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신의 요구는 옳지 않다",
+      "text": "Your demands are not just."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너의 요구는 법적 근거가 없다",
+      "text": "Your <b>demand</b> has no legal basis."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 일은 세심한 주의를 요한다.",
+      "text": "This matter demands great caution."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수요가 공급을 넘고 있다.",
+      "text": "The <b>demand</b> has outreached our supply."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 요구 사항을 시끄럽게 떠들어댔다.",
+      "text": "They clamored their demands."
+    }
+  ],
+  "isWordType": true
+}

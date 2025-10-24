@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "smell",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "smel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "냄새 맡다[맡아보다] ((at, about)); 냄새를 알다, 후각이 있다",
+              "examples": [
+                {
+                  "text": "I cannot <b>smell</b> because I am stuffy.",
+                  "translatedText": "나는 코가 막혀 냄새를 맡을 수 없다."
+                }
+              ],
+              "originalMeaning": "냄새 맡다[맡아보다] ((at, about)); 냄새를 알다, 후각이 있다"
+            },
+            {
+              "meaning": "조사하다",
+              "examples": [],
+              "originalMeaning": "조사하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "냄새 맡다, <개가> <사냥감 등의> 냄새를 맡아내다, <사람이> 찾아내다",
+              "examples": [],
+              "originalMeaning": "냄새 맡다, <개가> <사냥감 등의> 냄새를 맡아내다, <사람이> 찾아내다"
+            },
+            {
+              "meaning": "향기[냄새]로 알다[알아내다]",
+              "examples": [
+                {
+                  "text": "Can a camel <b>smell</b> water a mile off?",
+                  "translatedText": "낙타는 1마일 떨어진 곳에서 물 냄새를 맡을 수 있을까?"
+                }
+              ],
+              "originalMeaning": "향기[냄새]로 알다[알아내다]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "후각",
+              "examples": [],
+              "originalMeaning": "후각"
+            },
+            {
+              "meaning": "[UC/] 냄새, 향기; 악취; 기미, 혐의",
+              "examples": [
+                {
+                  "text": "a sweet <b>smell</b>",
+                  "translatedText": "달콤한 향기"
+                }
+              ],
+              "originalMeaning": "[UC/] 냄새, 향기; 악취; 기미, 혐의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6284e1056f244fd68c79b7089c5ba1f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6284e1056f244fd68c79b7089c5ba1f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "smells"
+        },
+        {
+          "type": "과거형",
+          "value": "smelled, smelt"
+        },
+        {
+          "type": "현재 분사",
+          "value": "smelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "smelled, smelt"
+        }
+      ],
+      "aliasConjugation": "smells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b7cc8d922738cbf18b65412a44f5c42e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무 냄새도 안 난다",
+      "text": "I don't <b>smell</b> anything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그에게서 술 냄새가 난다.",
+      "text": "He smells of wine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "넝마 타는 냄새가 난다.",
+      "text": "I <b>smell</b> rags burning."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 제비꽃 같은 향기가 난다.",
+      "text": "It smells like violets."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "뭔가 타는 냄새가 난다",
+      "text": "I (can) <b>smell</b> something burning."
+    }
+  ],
+  "isWordType": true
+}

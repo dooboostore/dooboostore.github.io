@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "potato",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pə│teɪtoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "감자",
+              "examples": [],
+              "originalMeaning": "감자"
+            },
+            {
+              "meaning": "고구마",
+              "examples": [],
+              "originalMeaning": "고구마"
+            },
+            {
+              "meaning": "[the ~] 안성맞춤인 것, 훌륭한 것",
+              "examples": [],
+              "originalMeaning": "[the ~] 안성맞춤인 것, 훌륭한 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4caabdef005946d1bc591a7d42234b8b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4caabdef005946d1bc591a7d42234b8b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "potatoes"
+        }
+      ],
+      "aliasConjugation": "potatoes",
+      "aliasConjugationPos": "복수형",
+      "gdid": "da097a46c45edc582175087d629b4a77",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감자를 캐고 있었다",
+      "text": "He was digging potatoes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 감자들은 껍질이 쉽게 벗겨진다.",
+      "text": "These potatoes peel easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "감자는 미국이 원산지이다",
+      "text": "The <b>potato</b> is native to America."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "감자 좀 들여가시지요",
+      "text": "Would you take[buy] some of the potatoes, please?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고구마 덩굴",
+      "text": "(sweet) <b>potato</b> runners[vines]"
+    }
+  ],
+  "isWordType": true
+}

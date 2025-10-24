@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "tailored",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│teɪlərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(=TAILOR-MADE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>TAILOR</b>-MADE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b8e36d1d112d42e09707f90ca485b1e8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b8e36d1d112d42e09707f90ca485b1e8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4989d6221ea6661eaa4946bed0b0b3ff",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "tailor",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈteɪlə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "재단사, 재봉사 ((주로 신사복을 주문받아 만드는; cf. DRESSMAKER))",
+              "examples": [
+                {
+                  "text": "a <b>tailor</b>[[영] <b>tailor</b> 's] shop",
+                  "translatedText": "맞춤 양복점"
+                }
+              ],
+              "originalMeaning": "재단사, 재봉사 ((주로 신사복을 주문받아 만드는; cf. DRESSMAKER))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<양복을> 짓다",
+              "examples": [
+                {
+                  "text": "He is well <b>tailored</b>.",
+                  "translatedText": "(그의 옷은) 잘 지어졌다."
+                }
+              ],
+              "originalMeaning": "<양복을> 짓다"
+            },
+            {
+              "meaning": "<방법·계획·각본 등을> (용도·목적에) 맞추다, (남에게) 맞게 하다 ((to, for))",
+              "examples": [
+                {
+                  "text": "He <b>tailored</b> his lecture to[for] his audience.",
+                  "translatedText": "그는 강연의 수준을 청중에 맞추었다."
+                }
+              ],
+              "originalMeaning": "<방법·계획·각본 등을> (용도·목적에) 맞추다, (남에게) 맞게 하다 ((to, for))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "양복을 짓다, 양복점을 경영하다",
+              "examples": [],
+              "originalMeaning": "양복을 짓다, 양복점을 경영하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e5e8214cf0d34f029e191853cde19d8e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e5e8214cf0d34f029e191853cde19d8e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "tailors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b1e692354726082dd8d25872e05b98e1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 강연의 수준을 청중에 맞추었다.",
+      "text": "He <b>tailored</b> his lecture to[for] his audience."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재단사는 제복에 금몰을 달았다.",
+      "text": "The <b>tailor</b> faced a uniform with gold braid."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재단사는 새 옷을 지으려고 내 치수를 쟀다.",
+      "text": "The <b>tailor</b> measured me for new clothes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잘 지어졌다.",
+      "text": "He is well <b>tailored</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "맞춤의 <b>tailor</b>-made",
+      "text": ";ordered;custom-made"
+    }
+  ],
+  "isWordType": true
+}

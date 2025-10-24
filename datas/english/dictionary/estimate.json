@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "estimate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈestɪmeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "견적, 어림, 개산(槪算), 추정",
+              "examples": [
+                {
+                  "text": "a written <b>estimate</b>",
+                  "translatedText": "견적서"
+                }
+              ],
+              "originalMeaning": "견적, 어림, 개산(槪算), 추정"
+            },
+            {
+              "meaning": "(인물 등의) 평가, 가치 판단(judgment, opinion)",
+              "examples": [],
+              "originalMeaning": "(인물 등의) 평가, 가치 판단(judgment, opinion)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "평가하다, 견적하다, 어림하다, 추정하다",
+              "examples": [
+                {
+                  "text": "<b>estimate</b> the value of one's property",
+                  "translatedText": "재산의 가치를 견적하다"
+                }
+              ],
+              "originalMeaning": "평가하다, 견적하다, 어림하다, 추정하다"
+            },
+            {
+              "meaning": "[부사와 함께] <인물 등을> 평가하다, 판단하다(judge)",
+              "examples": [
+                {
+                  "text": "You <b>estimate</b> his intellect too highly.",
+                  "translatedText": "당신은 그의 지력을 과대평가하고 있다."
+                }
+              ],
+              "originalMeaning": "[부사와 함께] <인물 등을> 평가하다, 판단하다(judge)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "개산(槪算)하다, 견적서를 만들다",
+              "examples": [
+                {
+                  "text": "<b>estimate</b> for repairing expenses",
+                  "translatedText": "수리비를 견적하다"
+                }
+              ],
+              "originalMeaning": "개산(槪算)하다, 견적서를 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a91a85e81bf140fe9088097a3477dacb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a91a85e81bf140fe9088097a3477dacb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "estimates"
+        },
+        {
+          "type": "과거형",
+          "value": "estimated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "estimating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "estimated"
+        }
+      ],
+      "aliasConjugation": "estimates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b19266b5d1eb5e82263986c96c67d648",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 저 사람을 도두보고 있다",
+      "text": "You <b>estimate</b> his worth too highly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신은 그의 지력을 과대평가하고 있다.",
+      "text": "You <b>estimate</b> his intellect too highly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 이득은 2백만 불로 추산된다",
+      "text": "The gain is estimated at 2 million dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "손해는 약 50만 원으로 추산되었다",
+      "text": "The damage was roughly estimated at 500,000 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그 방의 길이를 20피트로 어림잡았다.",
+      "text": "I estimated the room to be 20 feet long."
+    }
+  ],
+  "isWordType": true
+}

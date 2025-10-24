@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "button",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbʌtn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(옷의) 단추",
+              "examples": [],
+              "originalMeaning": "(옷의) 단추"
+            },
+            {
+              "meaning": "단추 비슷한 것; (초인종 등의) 누름단추, (카메라의) 셔터, (회원 등의 둥근) 배지",
+              "examples": [],
+              "originalMeaning": "단추 비슷한 것; (초인종 등의) 누름단추, (카메라의) 셔터, (회원 등의 둥근) 배지"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<옷의> 단추를 채우다 ((up)), 단추로 잠그다, …에 단추를 달다",
+              "examples": [
+                {
+                  "text": "<b>button</b> (up) one's coat (to the chin)",
+                  "translatedText": "옷 단추를 (턱까지 꼭) 채우다"
+                }
+              ],
+              "originalMeaning": "<옷의> 단추를 채우다 ((up)), 단추로 잠그다, …에 단추를 달다"
+            },
+            {
+              "meaning": "<입 등을> 꼭 다물다",
+              "examples": [],
+              "originalMeaning": "<입 등을> 꼭 다물다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "단추가 채워지다, 단추로 고정하다 ((up))",
+              "examples": [
+                {
+                  "text": "This jacket buttons (up) easily.",
+                  "translatedText": "이 재킷의 단추는 채우기 쉽다."
+                }
+              ],
+              "originalMeaning": "단추가 채워지다, 단추로 고정하다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ed27849e30e4b4e9f93ba450955fff4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ed27849e30e4b4e9f93ba450955fff4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "buttons"
+        },
+        {
+          "type": "과거형",
+          "value": "buttoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "buttoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "buttoned"
+        }
+      ],
+      "aliasConjugation": "buttons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "52840fb87f867e37efeaa5f65352ad67",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 단추가 하나 끌러져 있다.",
+      "text": "He has got a <b>button</b> undone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자네 코트 단추 하나가 떨어져 있다.",
+      "text": "A <b>button</b> is off your coat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 단추 하나도 달 줄 모르는구나",
+      "text": "You can't even sew on a <b>button</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "단추 끼워 줄게, 이리 온",
+      "text": "Come on, my dear. I will <b>button</b> you up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 재킷의 단추는 채우기 쉽다.",
+      "text": "This jacket buttons (up) easily."
+    }
+  ],
+  "isWordType": true
+}

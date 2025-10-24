@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "credit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkredɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "신뢰, 신용(trust)",
+              "examples": [],
+              "originalMeaning": "신뢰, 신용(trust)"
+            },
+            {
+              "meaning": "명성, 평판; 신망; 진실성",
+              "examples": [],
+              "originalMeaning": "명성, 평판; 신망; 진실성"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "믿다, 신용하다",
+              "examples": [
+                {
+                  "text": "I can't <b>credit</b> that story.",
+                  "translatedText": "나는 그런 이야기를 믿을 수 없다."
+                }
+              ],
+              "originalMeaning": "믿다, 신용하다"
+            },
+            {
+              "meaning": "<…의 성질·감정 등을 가지고 있다고> 믿다 ((with)), <공로·명예를> …에게 돌리다, …덕분으로 돌리다(ascribe) ((to))",
+              "examples": [
+                {
+                  "text": "<b>credit</b> something to a person = <b>credit</b> a person with something",
+                  "translatedText": "어떤 물건이 …에게 속하는 것으로 보다"
+                }
+              ],
+              "originalMeaning": "<…의 성질·감정 등을 가지고 있다고> 믿다 ((with)), <공로·명예를> …에게 돌리다, …덕분으로 돌리다(ascribe) ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2dd0fb456b6a41d6b70405e7f482bb68",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2dd0fb456b6a41d6b70405e7f482bb68",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "credits"
+        },
+        {
+          "type": "과거형",
+          "value": "credited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "crediting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "credited"
+        }
+      ],
+      "aliasConjugation": "credits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6827c4f1fe0c2351a3b1ecf827530ea9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것으로 그의 면이 설 것이다",
+      "text": "This will be to his <b>credit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그런 이야기를 믿을 수 없다.",
+      "text": "I can’t <b>credit</b> that story."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 가게는 외상이 안 통한다",
+      "text": "They don't sell on <b>credit</b> at that store."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리들은 그런 일로 낯내지 못한다",
+      "text": "We should not get <b>credit</b> for that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 어느 정도 신용할 수 있다",
+      "text": "They deserve some degree of <b>credit</b>."
+    }
+  ],
+  "isWordType": true
+}

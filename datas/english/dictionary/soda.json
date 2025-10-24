@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "soda",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsoʊdə"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "소다, 나트륨 화합물 ((특히 탄산소다, 중탄산소다(중조), 가성소다 등))",
+              "examples": [],
+              "originalMeaning": "소다, 나트륨 화합물 ((특히 탄산소다, 중탄산소다(중조), 가성소다 등))"
+            },
+            {
+              "meaning": "소다수, 사이다 ((가미한 탄산음료))(= ~ pop)",
+              "examples": [],
+              "originalMeaning": "소다수, 사이다 ((가미한 탄산음료))(= ~ pop)"
+            },
+            {
+              "meaning": "크림소다",
+              "examples": [],
+              "originalMeaning": "크림소다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cdc4038ffe6046f286796f2216c539ef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cdc4038ffe6046f286796f2216c539ef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a1e48addfb358501765eb196216a56d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소다수를 차게 해 주세요.",
+      "text": "Ice the <b>soda</b>, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "위스키 소다, 하이볼",
+      "text": "(a) whiskey and <b>soda</b>"
+    }
+  ],
+  "isWordType": true
+}

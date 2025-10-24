@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "atomic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈtɑːmɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "원자의",
+              "examples": [
+                {
+                  "text": "<b>atomic</b> value",
+                  "translatedText": "원자가"
+                }
+              ],
+              "originalMeaning": "원자의"
+            },
+            {
+              "meaning": "원자력의[을 사용한], 원자 폭탄의[을 사용하는]",
+              "examples": [],
+              "originalMeaning": "원자력의[을 사용한], 원자 폭탄의[을 사용하는]"
+            },
+            {
+              "meaning": "극소의(minute), [구어·반어] 막대한(atomical)",
+              "examples": [],
+              "originalMeaning": "극소의(minute), [구어·반어] 막대한(atomical)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0a733c34e5424faba7e610567e070bdc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0a733c34e5424faba7e610567e070bdc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d5d517c7d52205b0ccc690f2ce3e6212",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "원자 무기의 발명은 전략을 일변시켰다",
+      "text": "The invention of <b>atomic</b> weapons has revolutionized strategy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "히로시마에 대한 원자탄 투하는 일본을 패배시킨 결정타였다",
+      "text": "The dropping of the <b>atomic</b> bomb on Hiroshima dealt[was] the finishing blow to Japan."
+    }
+  ],
+  "isWordType": true
+}

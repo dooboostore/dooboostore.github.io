@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "comedy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːmədi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "희극(opp. tragedy)",
+              "examples": [
+                {
+                  "text": "(as) good as a <b>comedy</b>",
+                  "translatedText": "희극처럼 재미있는"
+                }
+              ],
+              "originalMeaning": "희극(opp. tragedy)"
+            },
+            {
+              "meaning": "희극적인 장면[사건]",
+              "examples": [
+                {
+                  "text": "There is plenty of <b>comedy</b> in life.",
+                  "translatedText": "인생에는 희극적인 일이 많다."
+                }
+              ],
+              "originalMeaning": "희극적인 장면[사건]"
+            },
+            {
+              "meaning": "희극적 요소",
+              "examples": [],
+              "originalMeaning": "희극적 요소"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/22b9868db1df4f5aaedb0e0b5bbb3388",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/22b9868db1df4f5aaedb0e0b5bbb3388",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "comedies"
+        }
+      ],
+      "aliasConjugation": "comedies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "ce2c333c9e9e09e9c02b08419c94c320",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "희극처럼 재미있는",
+      "text": "(as) good as a <b>comedy</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "단테의 「신곡」",
+      "text": "Dante’s Divine <b>Comedy</b>"
+    }
+  ],
+  "isWordType": true
+}

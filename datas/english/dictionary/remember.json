@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "remember",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈmembə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "생각해 내다, 상기하다",
+              "examples": [
+                {
+                  "text": "He suddenly remembered that he made a promise with her.",
+                  "translatedText": "그는 갑자기 그녀와의 약속이 생각났다."
+                }
+              ],
+              "originalMeaning": "생각해 내다, 상기하다"
+            },
+            {
+              "meaning": "기억하고 있다; 잊지 않고 …하다 ((for, by, against))",
+              "examples": [
+                {
+                  "text": "<b>remember</b> the poem by heart",
+                  "translatedText": "시를 암송하다"
+                }
+              ],
+              "originalMeaning": "기억하고 있다; 잊지 않고 …하다 ((for, by, against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기억하고 있다, 기억해 두다, 기억력이 있다",
+              "examples": [
+                {
+                  "text": "if I <b>remember</b> right(ly)",
+                  "translatedText": "내 기억이 정확하다면"
+                }
+              ],
+              "originalMeaning": "기억하고 있다, 기억해 두다, 기억력이 있다"
+            },
+            {
+              "meaning": "상기하다, 회고하다",
+              "examples": [
+                {
+                  "text": "He remembers of his youth.",
+                  "translatedText": "그는 자신의 젊은 시절을 회고한다."
+                }
+              ],
+              "originalMeaning": "상기하다, 회고하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/04489f44c2a5494db6fc08a6638ee98d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/04489f44c2a5494db6fc08a6638ee98d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "remembers"
+        },
+        {
+          "type": "과거형",
+          "value": "remembered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "remembering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "remembered"
+        }
+      ],
+      "aliasConjugation": "remembers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "59ceb95ca0b0e801cd74e525882d50c2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 잘 기억하고 있다.",
+      "text": "I can <b>remember</b> it well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신을 영원히 잊지 않겠다.",
+      "text": "I’ll <b>remember</b> you forever."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "씨에게 안부 전해 주시오.",
+      "text": "<b>Remember</b> me (kindly) to Mr. X. X"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 이름이 금방 생각나지 않는군",
+      "text": "I can't <b>remember</b> his name off the top of my head. or I don't know offhand what his name is."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조금도 생각이 안 난다.",
+      "text": "I cannot <b>remember</b> a tithe of it."
+    }
+  ],
+  "isWordType": true
+}

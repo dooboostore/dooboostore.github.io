@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "system",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪstəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(통일된) 체계, 조직, 계(系); (통신·수송 등의) 조직망, 시스템; 통일성",
+              "examples": [
+                {
+                  "text": "a <b>system</b> of government",
+                  "translatedText": "정치 조직"
+                }
+              ],
+              "originalMeaning": "(통일된) 체계, 조직, 계(系); (통신·수송 등의) 조직망, 시스템; 통일성"
+            },
+            {
+              "meaning": "[the ~] (지배) 체제",
+              "examples": [
+                {
+                  "text": "upset the <b>system</b>",
+                  "translatedText": "체제를 뒤엎다"
+                }
+              ],
+              "originalMeaning": "[the ~] (지배) 체제"
+            },
+            {
+              "meaning": "(학문·사상의) 체계, 학설, 가설",
+              "examples": [
+                {
+                  "text": "the Ptolemaic <b>system</b>",
+                  "translatedText": "톨레미(Ptolemy)의 천동설"
+                }
+              ],
+              "originalMeaning": "(학문·사상의) 체계, 학설, 가설"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0b371f97fbce449d8a22c863af94b0ed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0b371f97fbce449d8a22c863af94b0ed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f7bda073aa3afd9879670ec250f9e652",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "독 기운이 전신에 돌았다",
+      "text": "The poison has passed into one's <b>system</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 강연은 계통이 서지 않았다",
+      "text": "There was no <b>system</b> in his lecture."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비밀 결사 조직이 탄로났다",
+      "text": "The <b>system</b> of the secret society was disclosed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "더 큰 스테레오를 갖고 싶은데 내 좁은 방에 둘 곳이 없다",
+      "text": "I would certainly like a bigger stereo <b>system</b>, but there is no place to put it in my small room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 제도는 우리 사업에 나쁠 것이다",
+      "text": "This <b>system</b> would be damaging to our business."
+    }
+  ],
+  "isWordType": true
+}

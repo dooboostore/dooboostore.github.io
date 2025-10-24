@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "gas",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡæs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기체 ((공기 이외의))(cf. FLUID, SOLID, LIQUID)",
+              "examples": [
+                {
+                  "text": "Oxygen and nitrogen are <b>gas</b> es.",
+                  "translatedText": "산소와 질소는 기체다."
+                }
+              ],
+              "originalMeaning": "기체 ((공기 이외의))(cf. FLUID, SOLID, LIQUID)"
+            },
+            {
+              "meaning": "[U] (연료·난방용) 가스, 최루 가스(= tear ~), [군사] 독가스(= poison ~), [광산] 폭발 가스",
+              "examples": [],
+              "originalMeaning": "[U] (연료·난방용) 가스, 최루 가스(= tear ~), [군사] 독가스(= poison ~), [광산] 폭발 가스"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<방 등에> 가스를 공급하다, <기낭(氣囊)에> 가스를 채우다",
+              "examples": [],
+              "originalMeaning": "<방 등에> 가스를 공급하다, <기낭(氣囊)에> 가스를 채우다"
+            },
+            {
+              "meaning": "독가스로 공격하다",
+              "examples": [],
+              "originalMeaning": "독가스로 공격하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<축전지 등이> 가스를 내다",
+              "examples": [],
+              "originalMeaning": "<축전지 등이> 가스를 내다"
+            },
+            {
+              "meaning": "독가스 공격을 하다",
+              "examples": [],
+              "originalMeaning": "독가스 공격을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bf7d2795109441a3a92a0789c5658e36",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bf7d2795109441a3a92a0789c5658e36",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gases, gasses"
+        },
+        {
+          "type": "복수형",
+          "value": "gases, gasses"
+        },
+        {
+          "type": "과거형",
+          "value": "gassed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gassing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gassed"
+        }
+      ],
+      "aliasConjugation": "gases, gasses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1233c650a7f26b4107499caea0985e85",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "차의 기름이 다 떨어져 간다",
+      "text": "I'm low on <b>gas</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 가스는 공기와 비슷하다.",
+      "text": "The <b>gas</b> approximates air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가속 페달에서 발을 떼라.",
+      "text": "Take your foot off the <b>gas</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 차는 휘발유를 많이 먹는다.",
+      "text": "My car consumes much <b>gas</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가스등이 거리를 비추고 있었다.",
+      "text": "<b>Gas</b> lamps lit the streets."
+    }
+  ],
+  "isWordType": true
+}
