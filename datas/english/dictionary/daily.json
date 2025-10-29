@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "daily",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdeɪli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "매일의, 나날의; 일간의 <신문>; 일상의",
+              "examples": [
+                {
+                  "text": "a <b>daily</b> (news)paper",
+                  "translatedText": "일간 신문"
+                }
+              ],
+              "originalMeaning": "매일의, 나날의; 일간의 <신문>; 일상의"
+            },
+            {
+              "meaning": "매일 계산하는, 일당의, 일부(日賦)의",
+              "examples": [
+                {
+                  "text": "a <b>daily</b> wage",
+                  "translatedText": "일급, 일당"
+                }
+              ],
+              "originalMeaning": "매일 계산하는, 일당의, 일부(日賦)의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "매일, 날마다(every day); 끊임없이",
+              "examples": [],
+              "originalMeaning": "매일, 날마다(every day); 끊임없이"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일간 신문",
+              "examples": [],
+              "originalMeaning": "일간 신문"
+            },
+            {
+              "meaning": "통근하는 하녀, 파출부(= ~ help)",
+              "examples": [],
+              "originalMeaning": "통근하는 하녀, 파출부(= ~ help)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/003295f5c12f4718b7e4c1f9d5765f7f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/003295f5c12f4718b7e4c1f9d5765f7f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "dailies"
+        }
+      ],
+      "aliasConjugation": "dailies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "e7da9f753a557f87525b09d00c9d7a13",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 차들이 매일 다리를 횡단한다",
+      "text": "Many cars traverse the bridge <b>daily</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신문은 매일 일어나는 일들을 보도한다",
+      "text": "The newspaper reports <b>daily</b> events."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 판에 박은 듯한 일과에 싫증이 난다.",
+      "text": "I am sickening of my <b>daily</b> routine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소금은 일상생활에 불가결한 것이다",
+      "text": "Salt is indispensable[a must] in our <b>daily</b> life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 모 일간 신문에 연재되었다",
+      "text": "It was published serially in a <b>daily</b> newspaper."
+    }
+  ],
+  "isWordType": true
+}

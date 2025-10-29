@@ -3,9 +3,9 @@
     <div class="header-content">
         <div class="header-left">
             <!-- Show home button when in sub-route (always at the left edge) -->
-            <button class="home-btn" dr-if="@this@.isInSubRoute" dr-event-click="@this@.goToHome()" title="홈으로 이동">
+            <dr-a href="/english/" class="home-btn" dr-if="@this@.isInSubRoute" title="홈으로 이동">
                 <i class="fas fa-home"></i>
-            </button>
+            </dr-a>
             
             <!-- Show title when on main page -->
             <h1 class="header-title" dr-if="!@this@.isInSubRoute">English Learning</h1>

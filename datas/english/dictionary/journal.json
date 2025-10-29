@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "journal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈdʒɜːrnl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일지, 일기 ((보통 diary보다 문학적인 것))",
+              "examples": [
+                {
+                  "text": "I decided to keep a <b>journal</b>",
+                  "translatedText": "나는 일기를 쓰기로 결심했다."
+                }
+              ],
+              "originalMeaning": "일지, 일기 ((보통 diary보다 문학적인 것))"
+            },
+            {
+              "meaning": "신문, 일간 신문",
+              "examples": [
+                {
+                  "text": "the wall street <b>Journal</b>",
+                  "translatedText": "윌스트리트 저널"
+                }
+              ],
+              "originalMeaning": "신문, 일간 신문"
+            },
+            {
+              "meaning": "잡지(periodical), 정기 간행물 ((특히 시사적 내용을 취급한 것)); (학술 단체 등의) 기관지",
+              "examples": [
+                {
+                  "text": "a monthly <b>journal</b>",
+                  "translatedText": "월간 잡지"
+                }
+              ],
+              "originalMeaning": "잡지(periodical), 정기 간행물 ((특히 시사적 내용을 취급한 것)); (학술 단체 등의) 기관지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b908ce2649354ab8a5584c0eb9c7b104",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b908ce2649354ab8a5584c0eb9c7b104",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a3a32bb47d95185593db696d5fad0145",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 책상 위는 신문 잡지로 어수선하게 뒤덮여 있다.",
+      "text": "His desk is strewn with journals."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 진열대의 잡지 위로 몸을 굽혔다.",
+      "text": "She stooped over the journals on the stand."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 착상은 한 잡지의 논문에서 따온 것이다",
+      "text": "His ideas were lifted from an article in a <b>journal</b>."
+    }
+  ],
+  "isWordType": true
+}

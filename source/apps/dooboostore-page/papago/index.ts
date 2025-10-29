@@ -93,7 +93,7 @@ async function delay(ms: number): Promise<void> {
 async function processScripts() {
   // const scriptsPath = path.join(__dirname, '../../../../datas/english/scripts/The Intern (2015).json');
   // const scriptsPath = path.join(__dirname, '../../../../datas/english/scripts/제니 영어 인터뷰 lzWF94mipFY.json');
-  const scriptsPath = path.join(__dirname, '../../../../datas/english/scripts/Anya Taylor-Joy Breaks Down 13 Looks, From Queen\'s Gambit to the Golden Globes | Life in Looks.json');
+  const scriptsPath = path.join(__dirname, '../../../../datas/english/scripts/Jennie Is Obsessed With Her Met Gala Look | Met Gala 2025 With Emma Chamberlain | Vogue.json');
   const dictionaryDir = path.join(__dirname, '../../../../datas/english/dictionary');
   
   // Create dictionary directory if it doesn't exist

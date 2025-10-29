@@ -5,15 +5,18 @@ import template from './english.router.component.html';
 import styles from './english.router.component.css';
 import { ComponentRouterBase } from '@dooboostore/simple-boot-front/component/ComponentRouterBase';
 import { EnglishRouteComponent } from './english.route.component';
-import { ChildrenSet, query } from '@dooboostore/dom-render/components/ComponentBase';
+import { ChildrenSet, event, query } from '@dooboostore/dom-render/components/ComponentBase';
 import { RawSet } from '@dooboostore/dom-render/rawsets/RawSet';
 import { RoutingDataSet } from '@dooboostore/simple-boot/route/RouterManager';
 import { OnCreateRenderDataParams } from '@dooboostore/dom-render/lifecycle/OnCreateRenderData';
 import { OnCreatedOutletDebounce } from '@dooboostore/dom-render/components/ComponentRouterBase';
-import { ValidUtils } from "@dooboostore/core-web/valid/ValidUtils";
-import { SimFrontOption } from "@dooboostore/simple-boot-front/option/SimFrontOption";
-import { ApiService } from "@dooboostore/simple-boot/fetch/ApiService";
+import { ValidUtils } from '@dooboostore/core-web/valid/ValidUtils';
+import { SimFrontOption } from '@dooboostore/simple-boot-front/option/SimFrontOption';
+import { ApiService } from '@dooboostore/simple-boot/fetch/ApiService';
 import { PlayerRouteComponent } from '@src/pages/english/player/player.route.component';
+import { OnCreateRender } from '@dooboostore/dom-render/lifecycle/OnCreateRender';
+import { window } from 'rxjs';
+import { VideoItem, VideoItemService } from '@src/service/english/VideoItemService';
 
 export type FavoriteWord = {
   text: string;
@@ -30,7 +33,7 @@ export type Item = { name: string; type?: string; img: string; link?: string };
     '': '/',
     '/': EnglishRouteComponent,
     '/{name}': PlayerRouteComponent,
-    '/{name}/': PlayerRouteComponent,
+    '/{name}/': PlayerRouteComponent
 
   },
   routers: []
@@ -39,61 +42,70 @@ export type Item = { name: string; type?: string; img: string; link?: string };
   template,
   styles
 })
-export class EnglishRouterComponent extends ComponentRouterBase implements OnCreatedOutletDebounce {
+export class EnglishRouterComponent extends ComponentRouterBase implements OnCreatedOutletDebounce, OnCreateRender {
   favoriteWords: FavoriteWord[] = [];
   showFavorites = false;
 
   // Current item info
   currentItemName?: string;
-  currentItem?: Item;
-  items?: Item[];
+  currentItem?: VideoItem;
+  // items?: Item[];
   isInSubRoute = false; // Track if we're in a sub-route
 
-  constructor(private config: SimFrontOption, private apiService: ApiService) {
+  constructor(private config: SimFrontOption, private videoItemService: VideoItemService) {
     super({ sameRouteNoApply: true });
   }
 
-  onCreateRenderData(data: OnCreateRenderDataParams): void {
 
+  onCreateRenderData(data: OnCreateRenderDataParams): void {
+    super.onCreateRenderData(data);
+    console.log('english.router.component onCreateRenderData-------');
+
+  }
+
+  onCreateRender(...param: any[]): void {
+    console.log('english.router.component onCreateRender-------');
   }
 
   async onInitRender(param: any, rawSet: RawSet) {
     await super.onInitRender(param, rawSet);
 
-    console.log('-------')
+    console.log('english.router.component onInitRender-------');
     // Load favorite words from localStorage
     this.loadFavoriteWords();
 
     // Initialize speech synthesis voices
     this.initializeSpeechSynthesis();
 
-    // Load items data
-    if (ValidUtils.isBrowser()) {
-      try {
-        this.items = await this.apiService.get<Item[]>({ target: '/datas/english/items.json' });
-        console.log('Loaded items:', this.items.length);
-      } catch (error) {
-        console.error('Failed to load items:', error);
-      }
-    }
+
   }
 
   async onRouting(r: RoutingDataSet): Promise<void> {
     await super.onRouting(r);
+    console.log('english.router.component onRouting-------');
 
 
-    // Get current item name from route
-    this.currentItemName = r.routerModule.pathData?.name;
-    console.log('------->', r, this.currentItemName)
-    // Check if we're in a sub-route (has name parameter)
-    this.isInSubRoute = !!this.currentItemName;
+    if (ValidUtils.isBrowser()) {
+      // Get current item name from route
+      this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name??'');
+      console.log('------->', r, this.currentItemName);
+      // Check if we're in a sub-route (has name parameter)
+      this.isInSubRoute = !!this.currentItemName;
 
-    // Find current item info
-    if (this.currentItemName && this.items) {
-      this.currentItem = this.items.find(item => item.name === this.currentItemName);
-      console.log('Current item:', this.currentItem);
-    } else {
-      this.currentItem = undefined;
+      // Find current item info
+      if (this.currentItemName) {
+        // Load items data
+        // try {
+        //   this.items = await this.apiService.get<Item[]>({ target: '/datas/english/items.json' });
+        //   console.log('Loaded items:', this.items.length);
+        // } catch (error) {
+        //   console.error('Failed to load items:', error);
+        // }
+        this.currentItem = await this.videoItemService.item(this.currentItemName);
+        console.log('Current item:', this.currentItem);
+      } else {
+        this.currentItem = undefined;
+      }
     }
   }
 
@@ -146,7 +158,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
 
   // Add word to favorites
   addToFavorites = (word: string, meaning: string) => {
-    
+
     // Check if word already exists
     const exists = this.favoriteWords.some(fav => fav.text.toLowerCase() === word.toLowerCase());
     if (exists) {
@@ -166,7 +178,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
 
     console.log('Added to favorites:', word);
     return true;
-  }
+  };
 
   // Remove word from favorites
   removeFavorite(word: string) {
@@ -178,7 +190,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
   // Check if word is in favorites
   isWordFavorite = (word: string): boolean => {
     return this.favoriteWords.some(fav => fav.text.toLowerCase() === word.toLowerCase());
-  }
+  };
 
   // Toggle favorites panel
   toggleFavorites() {
@@ -217,14 +229,6 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
   }
 
 
-
-  // Navigate to home (english main page)
-  goToHome() {
-    if (ValidUtils.isBrowser()) {
-      window.location.href = '/english/';
-    }
-  }
-
   // Speak word using TTS
   speakWord(word: string) {
     if (!ValidUtils.isBrowser()) {
@@ -232,10 +236,10 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
     }
 
     // Check if browser supports Speech Synthesis
-    if (!('speechSynthesis' in window)) {
-      console.warn('Speech Synthesis not supported in this browser');
-      return;
-    }
+    // if (!('speechSynthesis' in window)) {
+    //   console.warn('Speech Synthesis not supported in this browser');
+    //   return;
+    // }
 
     // Stop any ongoing speech
     speechSynthesis.cancel();
@@ -247,7 +251,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
     // Ensure voices are loaded before speaking
     const speakWithVoices = () => {
       const voices = speechSynthesis.getVoices();
-      
+
       if (voices.length === 0) {
         // If no voices loaded yet, try again after a short delay
         setTimeout(speakWithVoices, 100);
@@ -324,7 +328,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
       { name: 'Microsoft Hazel Desktop', priority: 3 },
 
       // Chrome OS voices
-      { name: 'Chrome OS US English', priority: 5 },
+      { name: 'Chrome OS US English', priority: 5 }
     ];
 
     // Find the best matching voice with highest priority
@@ -332,11 +336,11 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
     let highestPriority = 0;
 
     for (const voicePriority of voicePriorities) {
-      const voice = voices.find(v => 
-        v.name.includes(voicePriority.name) && 
+      const voice = voices.find(v =>
+        v.name.includes(voicePriority.name) &&
         v.lang.startsWith('en')
       );
-      
+
       if (voice && voicePriority.priority > highestPriority) {
         bestVoice = voice;
         highestPriority = voicePriority.priority;
@@ -349,31 +353,31 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
     }
 
     // If no priority voice found, prefer local voices over remote ones
-    const localEnglishVoices = voices.filter(v => 
+    const localEnglishVoices = voices.filter(v =>
       v.lang.startsWith('en') && v.localService
     );
-    
+
     if (localEnglishVoices.length > 0) {
       // Prefer female voices as they tend to sound more natural
-      const femaleVoice = localEnglishVoices.find(v => 
-        v.name.toLowerCase().includes('female') || 
+      const femaleVoice = localEnglishVoices.find(v =>
+        v.name.toLowerCase().includes('female') ||
         v.name.toLowerCase().includes('woman') ||
         v.name.toLowerCase().includes('samantha') ||
         v.name.toLowerCase().includes('victoria') ||
         v.name.toLowerCase().includes('karen')
       );
-      
+
       if (femaleVoice) {
         console.log(`🎤 Selected local female voice: ${femaleVoice.name}`);
         return femaleVoice;
       }
-      
+
       console.log(`🎤 Selected local voice: ${localEnglishVoices[0].name}`);
       return localEnglishVoices[0];
     }
 
     // Fallback to any English voice, preferring US English
-    const usEnglishVoice = voices.find(v => 
+    const usEnglishVoice = voices.find(v =>
       v.lang === 'en-US' || v.lang.startsWith('en-US')
     );
     if (usEnglishVoice) {

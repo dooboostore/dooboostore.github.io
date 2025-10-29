@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "entry": "tack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tǽk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "납작못, 압정",
+              "examples": [],
+              "originalMeaning": "납작못, 압정"
+            },
+            {
+              "meaning": "시침, 시침질, 가봉",
+              "examples": [],
+              "originalMeaning": "시침, 시침질, 가봉"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "압정으로 고정시키다 ((down, up, together))",
+              "examples": [
+                {
+                  "text": "<b>tack</b> a carpet down",
+                  "translatedText": "깔개를 압정으로 고정시키다"
+                }
+              ],
+              "originalMeaning": "압정으로 고정시키다 ((down, up, together))"
+            },
+            {
+              "meaning": "시침질하다, 가봉하다 ((on, onto, together))",
+              "examples": [
+                {
+                  "text": "<b>tack</b> up a coat",
+                  "translatedText": "상의를 가봉하다"
+                }
+              ],
+              "originalMeaning": "시침질하다, 가봉하다 ((on, onto, together))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[항해] <배가> 바람을 빗받아 갈지자형으로 나아가다, 침로를 그때그때 바꾸다 ((about))",
+              "examples": [
+                {
+                  "text": "The boat tacked about against the wind.",
+                  "translatedText": "배가 바람을 안고 갈지자형으로 나아갔다."
+                }
+              ],
+              "originalMeaning": "[항해] <배가> 바람을 빗받아 갈지자형으로 나아가다, 침로를 그때그때 바꾸다 ((about))"
+            },
+            {
+              "meaning": "지그재그로 걷다",
+              "examples": [],
+              "originalMeaning": "지그재그로 걷다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/40a87faa49e348108426007b2812e25e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/40a87faa49e348108426007b2812e25e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tacks"
+        },
+        {
+          "type": "과거형",
+          "value": "tacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tacked"
+        }
+      ],
+      "aliasConjugation": "tacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7727aea386b7ca7a9fdb8d3710399eb2",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "tack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "음식물, ((특히)) 딱딱한 비스킷[빵]",
+              "examples": [],
+              "originalMeaning": "음식물, ((특히)) 딱딱한 비스킷[빵]"
+            },
+            {
+              "meaning": "시시한 것, 보잘것없는 작품",
+              "examples": [],
+              "originalMeaning": "시시한 것, 보잘것없는 작품"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19a332866bf9435185d093e9fec7eb8e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19a332866bf9435185d093e9fec7eb8e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "tacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d6a3ddf5139db510226e05694656a0b1",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 모자에 리본을 꿰매 달았다.",
+      "text": "She tacked a ribbon onto her hat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 바람을 안고 갈지자형으로 나아갔다.",
+      "text": "The boat tacked about against the wind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "중요한 문제부터 논의하자",
+      "text": "Let's get down to brass tacks."
+    }
+  ],
+  "isWordType": true
+}

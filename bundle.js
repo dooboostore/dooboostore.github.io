@@ -2158,6 +2158,306 @@ var config = {
 
 /***/ }),
 
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js":
+/*!********************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   fromArrayLike: () => (/* binding */ fromArrayLike),
+/* harmony export */   fromAsyncIterable: () => (/* binding */ fromAsyncIterable),
+/* harmony export */   fromInteropObservable: () => (/* binding */ fromInteropObservable),
+/* harmony export */   fromIterable: () => (/* binding */ fromIterable),
+/* harmony export */   fromPromise: () => (/* binding */ fromPromise),
+/* harmony export */   fromReadableStreamLike: () => (/* binding */ fromReadableStreamLike),
+/* harmony export */   innerFrom: () => (/* binding */ innerFrom)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
+/* harmony import */ var _util_isArrayLike__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/isArrayLike */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js");
+/* harmony import */ var _util_isPromise__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/isPromise */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isPromise.js");
+/* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Observable */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/Observable.js");
+/* harmony import */ var _util_isInteropObservable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/isInteropObservable */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js");
+/* harmony import */ var _util_isAsyncIterable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/isAsyncIterable */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js");
+/* harmony import */ var _util_throwUnobservableError__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/throwUnobservableError */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js");
+/* harmony import */ var _util_isIterable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/isIterable */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isIterable.js");
+/* harmony import */ var _util_isReadableStreamLike__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../util/isReadableStreamLike */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js");
+/* harmony import */ var _util_isFunction__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../util/isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+/* harmony import */ var _util_reportUnhandledError__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/reportUnhandledError */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/reportUnhandledError.js");
+/* harmony import */ var _symbol_observable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../symbol/observable */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/symbol/observable.js");
+
+
+
+
+
+
+
+
+
+
+
+
+function innerFrom(input) {
+    if (input instanceof _Observable__WEBPACK_IMPORTED_MODULE_3__.Observable) {
+        return input;
+    }
+    if (input != null) {
+        if ((0,_util_isInteropObservable__WEBPACK_IMPORTED_MODULE_4__.isInteropObservable)(input)) {
+            return fromInteropObservable(input);
+        }
+        if ((0,_util_isArrayLike__WEBPACK_IMPORTED_MODULE_1__.isArrayLike)(input)) {
+            return fromArrayLike(input);
+        }
+        if ((0,_util_isPromise__WEBPACK_IMPORTED_MODULE_2__.isPromise)(input)) {
+            return fromPromise(input);
+        }
+        if ((0,_util_isAsyncIterable__WEBPACK_IMPORTED_MODULE_5__.isAsyncIterable)(input)) {
+            return fromAsyncIterable(input);
+        }
+        if ((0,_util_isIterable__WEBPACK_IMPORTED_MODULE_7__.isIterable)(input)) {
+            return fromIterable(input);
+        }
+        if ((0,_util_isReadableStreamLike__WEBPACK_IMPORTED_MODULE_8__.isReadableStreamLike)(input)) {
+            return fromReadableStreamLike(input);
+        }
+    }
+    throw (0,_util_throwUnobservableError__WEBPACK_IMPORTED_MODULE_6__.createInvalidObservableTypeError)(input);
+}
+function fromInteropObservable(obj) {
+    return new _Observable__WEBPACK_IMPORTED_MODULE_3__.Observable(function (subscriber) {
+        var obs = obj[_symbol_observable__WEBPACK_IMPORTED_MODULE_11__.observable]();
+        if ((0,_util_isFunction__WEBPACK_IMPORTED_MODULE_9__.isFunction)(obs.subscribe)) {
+            return obs.subscribe(subscriber);
+        }
+        throw new TypeError('Provided object does not correctly implement Symbol.observable');
+    });
+}
+function fromArrayLike(array) {
+    return new _Observable__WEBPACK_IMPORTED_MODULE_3__.Observable(function (subscriber) {
+        for (var i = 0; i < array.length && !subscriber.closed; i++) {
+            subscriber.next(array[i]);
+        }
+        subscriber.complete();
+    });
+}
+function fromPromise(promise) {
+    return new _Observable__WEBPACK_IMPORTED_MODULE_3__.Observable(function (subscriber) {
+        promise
+            .then(function (value) {
+            if (!subscriber.closed) {
+                subscriber.next(value);
+                subscriber.complete();
+            }
+        }, function (err) { return subscriber.error(err); })
+            .then(null, _util_reportUnhandledError__WEBPACK_IMPORTED_MODULE_10__.reportUnhandledError);
+    });
+}
+function fromIterable(iterable) {
+    return new _Observable__WEBPACK_IMPORTED_MODULE_3__.Observable(function (subscriber) {
+        var e_1, _a;
+        try {
+            for (var iterable_1 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__values)(iterable), iterable_1_1 = iterable_1.next(); !iterable_1_1.done; iterable_1_1 = iterable_1.next()) {
+                var value = iterable_1_1.value;
+                subscriber.next(value);
+                if (subscriber.closed) {
+                    return;
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (iterable_1_1 && !iterable_1_1.done && (_a = iterable_1.return)) _a.call(iterable_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        subscriber.complete();
+    });
+}
+function fromAsyncIterable(asyncIterable) {
+    return new _Observable__WEBPACK_IMPORTED_MODULE_3__.Observable(function (subscriber) {
+        process(asyncIterable, subscriber).catch(function (err) { return subscriber.error(err); });
+    });
+}
+function fromReadableStreamLike(readableStream) {
+    return fromAsyncIterable((0,_util_isReadableStreamLike__WEBPACK_IMPORTED_MODULE_8__.readableStreamLikeToAsyncGenerator)(readableStream));
+}
+function process(asyncIterable, subscriber) {
+    var asyncIterable_1, asyncIterable_1_1;
+    var e_2, _a;
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__awaiter)(this, void 0, void 0, function () {
+        var value, e_2_1;
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    _b.trys.push([0, 5, 6, 11]);
+                    asyncIterable_1 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__asyncValues)(asyncIterable);
+                    _b.label = 1;
+                case 1: return [4, asyncIterable_1.next()];
+                case 2:
+                    if (!(asyncIterable_1_1 = _b.sent(), !asyncIterable_1_1.done)) return [3, 4];
+                    value = asyncIterable_1_1.value;
+                    subscriber.next(value);
+                    if (subscriber.closed) {
+                        return [2];
+                    }
+                    _b.label = 3;
+                case 3: return [3, 1];
+                case 4: return [3, 11];
+                case 5:
+                    e_2_1 = _b.sent();
+                    e_2 = { error: e_2_1 };
+                    return [3, 11];
+                case 6:
+                    _b.trys.push([6, , 9, 10]);
+                    if (!(asyncIterable_1_1 && !asyncIterable_1_1.done && (_a = asyncIterable_1.return))) return [3, 8];
+                    return [4, _a.call(asyncIterable_1)];
+                case 7:
+                    _b.sent();
+                    _b.label = 8;
+                case 8: return [3, 10];
+                case 9:
+                    if (e_2) throw e_2.error;
+                    return [7];
+                case 10: return [7];
+                case 11:
+                    subscriber.complete();
+                    return [2];
+            }
+        });
+    });
+}
+//# sourceMappingURL=innerFrom.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js":
+/*!****************************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OperatorSubscriber: () => (/* binding */ OperatorSubscriber),
+/* harmony export */   createOperatorSubscriber: () => (/* binding */ createOperatorSubscriber)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
+/* harmony import */ var _Subscriber__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Subscriber */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/Subscriber.js");
+
+
+function createOperatorSubscriber(destination, onNext, onComplete, onError, onFinalize) {
+    return new OperatorSubscriber(destination, onNext, onComplete, onError, onFinalize);
+}
+var OperatorSubscriber = (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(OperatorSubscriber, _super);
+    function OperatorSubscriber(destination, onNext, onComplete, onError, onFinalize, shouldUnsubscribe) {
+        var _this = _super.call(this, destination) || this;
+        _this.onFinalize = onFinalize;
+        _this.shouldUnsubscribe = shouldUnsubscribe;
+        _this._next = onNext
+            ? function (value) {
+                try {
+                    onNext(value);
+                }
+                catch (err) {
+                    destination.error(err);
+                }
+            }
+            : _super.prototype._next;
+        _this._error = onError
+            ? function (err) {
+                try {
+                    onError(err);
+                }
+                catch (err) {
+                    destination.error(err);
+                }
+                finally {
+                    this.unsubscribe();
+                }
+            }
+            : _super.prototype._error;
+        _this._complete = onComplete
+            ? function () {
+                try {
+                    onComplete();
+                }
+                catch (err) {
+                    destination.error(err);
+                }
+                finally {
+                    this.unsubscribe();
+                }
+            }
+            : _super.prototype._complete;
+        return _this;
+    }
+    OperatorSubscriber.prototype.unsubscribe = function () {
+        var _a;
+        if (!this.shouldUnsubscribe || this.shouldUnsubscribe()) {
+            var closed_1 = this.closed;
+            _super.prototype.unsubscribe.call(this);
+            !closed_1 && ((_a = this.onFinalize) === null || _a === void 0 ? void 0 : _a.call(this));
+        }
+    };
+    return OperatorSubscriber;
+}(_Subscriber__WEBPACK_IMPORTED_MODULE_1__.Subscriber));
+
+//# sourceMappingURL=OperatorSubscriber.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/operators/window.js":
+/*!****************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/operators/window.js ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   window: () => (/* binding */ window)
+/* harmony export */ });
+/* harmony import */ var _Subject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Subject */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/Subject.js");
+/* harmony import */ var _util_lift__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/lift */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/lift.js");
+/* harmony import */ var _OperatorSubscriber__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OperatorSubscriber */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js");
+/* harmony import */ var _util_noop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/noop */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/noop.js");
+/* harmony import */ var _observable_innerFrom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../observable/innerFrom */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js");
+
+
+
+
+
+function window(windowBoundaries) {
+    return (0,_util_lift__WEBPACK_IMPORTED_MODULE_1__.operate)(function (source, subscriber) {
+        var windowSubject = new _Subject__WEBPACK_IMPORTED_MODULE_0__.Subject();
+        subscriber.next(windowSubject.asObservable());
+        var errorHandler = function (err) {
+            windowSubject.error(err);
+            subscriber.error(err);
+        };
+        source.subscribe((0,_OperatorSubscriber__WEBPACK_IMPORTED_MODULE_2__.createOperatorSubscriber)(subscriber, function (value) { return windowSubject === null || windowSubject === void 0 ? void 0 : windowSubject.next(value); }, function () {
+            windowSubject.complete();
+            subscriber.complete();
+        }, errorHandler));
+        (0,_observable_innerFrom__WEBPACK_IMPORTED_MODULE_4__.innerFrom)(windowBoundaries).subscribe((0,_OperatorSubscriber__WEBPACK_IMPORTED_MODULE_2__.createOperatorSubscriber)(subscriber, function () {
+            windowSubject.complete();
+            subscriber.next((windowSubject = new _Subject__WEBPACK_IMPORTED_MODULE_0__.Subject()));
+        }, _util_noop__WEBPACK_IMPORTED_MODULE_3__.noop, errorHandler));
+        return function () {
+            windowSubject === null || windowSubject === void 0 ? void 0 : windowSubject.unsubscribe();
+            windowSubject = null;
+        };
+    });
+}
+//# sourceMappingURL=window.js.map
+
+/***/ }),
+
 /***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js":
 /*!*************************************************************************************************************!*\
   !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js ***!
@@ -2190,6 +2490,29 @@ var timeoutProvider = {
     delegate: undefined,
 };
 //# sourceMappingURL=timeoutProvider.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/symbol/iterator.js":
+/*!***************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/symbol/iterator.js ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getSymbolIterator: () => (/* binding */ getSymbolIterator),
+/* harmony export */   iterator: () => (/* binding */ iterator)
+/* harmony export */ });
+function getSymbolIterator() {
+    if (typeof Symbol !== 'function' || !Symbol.iterator) {
+        return '@@iterator';
+    }
+    return Symbol.iterator;
+}
+var iterator = getSymbolIterator();
+//# sourceMappingURL=iterator.js.map
 
 /***/ }),
 
@@ -2368,6 +2691,42 @@ function identity(x) {
 
 /***/ }),
 
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js":
+/*!****************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isArrayLike: () => (/* binding */ isArrayLike)
+/* harmony export */ });
+var isArrayLike = (function (x) { return x && typeof x.length === 'number' && typeof x !== 'function'; });
+//# sourceMappingURL=isArrayLike.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js":
+/*!********************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isAsyncIterable: () => (/* binding */ isAsyncIterable)
+/* harmony export */ });
+/* harmony import */ var _isFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+
+function isAsyncIterable(obj) {
+    return Symbol.asyncIterator && (0,_isFunction__WEBPACK_IMPORTED_MODULE_0__.isFunction)(obj === null || obj === void 0 ? void 0 : obj[Symbol.asyncIterator]);
+}
+//# sourceMappingURL=isAsyncIterable.js.map
+
+/***/ }),
+
 /***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js":
 /*!***************************************************************************************************!*\
   !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js ***!
@@ -2383,6 +2742,163 @@ function isFunction(value) {
     return typeof value === 'function';
 }
 //# sourceMappingURL=isFunction.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js":
+/*!************************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isInteropObservable: () => (/* binding */ isInteropObservable)
+/* harmony export */ });
+/* harmony import */ var _symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../symbol/observable */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/symbol/observable.js");
+/* harmony import */ var _isFunction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+
+
+function isInteropObservable(input) {
+    return (0,_isFunction__WEBPACK_IMPORTED_MODULE_1__.isFunction)(input[_symbol_observable__WEBPACK_IMPORTED_MODULE_0__.observable]);
+}
+//# sourceMappingURL=isInteropObservable.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isIterable.js":
+/*!***************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isIterable.js ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isIterable: () => (/* binding */ isIterable)
+/* harmony export */ });
+/* harmony import */ var _symbol_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../symbol/iterator */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/symbol/iterator.js");
+/* harmony import */ var _isFunction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+
+
+function isIterable(input) {
+    return (0,_isFunction__WEBPACK_IMPORTED_MODULE_1__.isFunction)(input === null || input === void 0 ? void 0 : input[_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__.iterator]);
+}
+//# sourceMappingURL=isIterable.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isPromise.js":
+/*!**************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isPromise.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isPromise: () => (/* binding */ isPromise)
+/* harmony export */ });
+/* harmony import */ var _isFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+
+function isPromise(value) {
+    return (0,_isFunction__WEBPACK_IMPORTED_MODULE_0__.isFunction)(value === null || value === void 0 ? void 0 : value.then);
+}
+//# sourceMappingURL=isPromise.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js":
+/*!*************************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isReadableStreamLike: () => (/* binding */ isReadableStreamLike),
+/* harmony export */   readableStreamLikeToAsyncGenerator: () => (/* binding */ readableStreamLikeToAsyncGenerator)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
+/* harmony import */ var _isFunction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+
+
+function readableStreamLikeToAsyncGenerator(readableStream) {
+    return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__asyncGenerator)(this, arguments, function readableStreamLikeToAsyncGenerator_1() {
+        var reader, _a, value, done;
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__generator)(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    reader = readableStream.getReader();
+                    _b.label = 1;
+                case 1:
+                    _b.trys.push([1, , 9, 10]);
+                    _b.label = 2;
+                case 2:
+                    if (false) // removed by dead control flow
+{}
+                    return [4, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__await)(reader.read())];
+                case 3:
+                    _a = _b.sent(), value = _a.value, done = _a.done;
+                    if (!done) return [3, 5];
+                    return [4, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__await)(void 0)];
+                case 4: return [2, _b.sent()];
+                case 5: return [4, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__await)(value)];
+                case 6: return [4, _b.sent()];
+                case 7:
+                    _b.sent();
+                    return [3, 2];
+                case 8: return [3, 10];
+                case 9:
+                    reader.releaseLock();
+                    return [7];
+                case 10: return [2];
+            }
+        });
+    });
+}
+function isReadableStreamLike(obj) {
+    return (0,_isFunction__WEBPACK_IMPORTED_MODULE_1__.isFunction)(obj === null || obj === void 0 ? void 0 : obj.getReader);
+}
+//# sourceMappingURL=isReadableStreamLike.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/lift.js":
+/*!*********************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/lift.js ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   hasLift: () => (/* binding */ hasLift),
+/* harmony export */   operate: () => (/* binding */ operate)
+/* harmony export */ });
+/* harmony import */ var _isFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isFunction */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/isFunction.js");
+
+function hasLift(source) {
+    return (0,_isFunction__WEBPACK_IMPORTED_MODULE_0__.isFunction)(source === null || source === void 0 ? void 0 : source.lift);
+}
+function operate(init) {
+    return function (source) {
+        if (hasLift(source)) {
+            return source.lift(function (liftedSource) {
+                try {
+                    return init(liftedSource, this);
+                }
+                catch (err) {
+                    this.error(err);
+                }
+            });
+        }
+        throw new TypeError('Unable to lift unknown Observable type');
+    };
+}
+//# sourceMappingURL=lift.js.map
 
 /***/ }),
 
@@ -2465,6 +2981,24 @@ function reportUnhandledError(err) {
     });
 }
 //# sourceMappingURL=reportUnhandledError.js.map
+
+/***/ }),
+
+/***/ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js":
+/*!***************************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createInvalidObservableTypeError: () => (/* binding */ createInvalidObservableTypeError)
+/* harmony export */ });
+function createInvalidObservableTypeError(input) {
+    return new TypeError("You provided " + (input !== null && typeof input === 'object' ? 'an invalid object' : "'" + input + "'") + " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.");
+}
+//# sourceMappingURL=throwUnobservableError.js.map
 
 /***/ }),
 
@@ -23536,7 +24070,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<!-- Fixed Header -->\n<header class=\"english-header\">\n    <div class=\"header-content\">\n        <div class=\"header-left\">\n            <!-- Show home button when in sub-route (always at the left edge) -->\n            <button class=\"home-btn\" dr-if=\"@this@.isInSubRoute\" dr-event-click=\"@this@.goToHome()\" title=\"홈으로 이동\">\n                <i class=\"fas fa-home\"></i>\n            </button>\n            \n            <!-- Show title when on main page -->\n            <h1 class=\"header-title\" dr-if=\"!@this@.isInSubRoute\">English Learning</h1>\n            \n            <!-- Show current item info when in sub-route -->\n            <div class=\"current-item-info\" dr-if=\"@this@.currentItem\">\n                <img class=\"item-image\" dr-attr=\"{src: @this@.currentItem.img}\" alt=\"Item image\">\n                <div class=\"item-details\">\n                    <span class=\"item-name\">${@this@.currentItem.name}$</span>\n                    <span class=\"item-type\" dr-if=\"@this@.currentItem.type\">${@this@.currentItem.type}$</span>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"user-menu\">\n            <button class=\"menu-btn favorites-btn\" dr-event-click=\"@this@.toggleFavorites()\">\n                <i class=\"fas fa-star\"></i>\n                <span>즐겨찾기</span>\n                <span class=\"favorites-count\"\n                    dr-if=\"@this@.favoriteWords.length > 0\">${@this@.favoriteWords.length}$</span>\n            </button>\n        </div>\n    </div>\n\n    <!-- Favorites Panel -->\n    <div class=\"favorites-panel\" dr-if=\"@this@.showFavorites\"\n        dr-attr=\"{class: 'favorites-panel' + (@this@.showFavorites ? ' show' : '')}\">\n        <div class=\"panel-header\">\n            <h3>즐겨찾기 단어</h3>\n            <button class=\"close-btn\" dr-event-click=\"@this@.toggleFavorites()\">\n                <i class=\"fas fa-times\"></i>\n            </button>\n        </div>\n\n        <div class=\"favorites-content\">\n            <div class=\"empty-message\" dr-if=\"@this@.favoriteWords.length === 0\">\n                아직 즐겨찾기한 단어가 없습니다.\n            </div>\n\n            <div class=\"favorite-item\" dr-for-of=\"@this@.favoriteWords\" dr-option-item-variable-name=\"word\">\n                <div class=\"word-info\" dr-event-click=\"@this@.onFavoriteWordClick(#word#.text, $event)\">\n                    <span class=\"word-text clickable-word\">${#word#.text}$</span>\n                    <span class=\"word-meaning\">${#word#.meaning}$</span>\n                </div>\n                <button class=\"remove-btn\" dr-event-click=\"@this@.removeFavorite(#word#.text)\">\n                    <i class=\"fas fa-trash\"></i>\n                </button>\n            </div>\n        </div>\n    </div>\n</header>\n\n<main class=\"english-main\">\n    <dr-router-outlet createArguments=\"${@this@.getChildArguments()}$\"></dr-router-outlet>\n</main>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<!-- Fixed Header -->\n<header class=\"english-header\">\n    <div class=\"header-content\">\n        <div class=\"header-left\">\n            <!-- Show home button when in sub-route (always at the left edge) -->\n            <dr-a href=\"/english/\" class=\"home-btn\" dr-if=\"@this@.isInSubRoute\" title=\"홈으로 이동\">\n                <i class=\"fas fa-home\"></i>\n            </dr-a>\n            \n            <!-- Show title when on main page -->\n            <h1 class=\"header-title\" dr-if=\"!@this@.isInSubRoute\">English Learning</h1>\n            \n            <!-- Show current item info when in sub-route -->\n            <div class=\"current-item-info\" dr-if=\"@this@.currentItem\">\n                <img class=\"item-image\" dr-attr=\"{src: @this@.currentItem.img}\" alt=\"Item image\">\n                <div class=\"item-details\">\n                    <span class=\"item-name\">${@this@.currentItem.name}$</span>\n                    <span class=\"item-type\" dr-if=\"@this@.currentItem.type\">${@this@.currentItem.type}$</span>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"user-menu\">\n            <button class=\"menu-btn favorites-btn\" dr-event-click=\"@this@.toggleFavorites()\">\n                <i class=\"fas fa-star\"></i>\n                <span>즐겨찾기</span>\n                <span class=\"favorites-count\"\n                    dr-if=\"@this@.favoriteWords.length > 0\">${@this@.favoriteWords.length}$</span>\n            </button>\n        </div>\n    </div>\n\n    <!-- Favorites Panel -->\n    <div class=\"favorites-panel\" dr-if=\"@this@.showFavorites\"\n        dr-attr=\"{class: 'favorites-panel' + (@this@.showFavorites ? ' show' : '')}\">\n        <div class=\"panel-header\">\n            <h3>즐겨찾기 단어</h3>\n            <button class=\"close-btn\" dr-event-click=\"@this@.toggleFavorites()\">\n                <i class=\"fas fa-times\"></i>\n            </button>\n        </div>\n\n        <div class=\"favorites-content\">\n            <div class=\"empty-message\" dr-if=\"@this@.favoriteWords.length === 0\">\n                아직 즐겨찾기한 단어가 없습니다.\n            </div>\n\n            <div class=\"favorite-item\" dr-for-of=\"@this@.favoriteWords\" dr-option-item-variable-name=\"word\">\n                <div class=\"word-info\" dr-event-click=\"@this@.onFavoriteWordClick(#word#.text, $event)\">\n                    <span class=\"word-text clickable-word\">${#word#.text}$</span>\n                    <span class=\"word-meaning\">${#word#.meaning}$</span>\n                </div>\n                <button class=\"remove-btn\" dr-event-click=\"@this@.removeFavorite(#word#.text)\">\n                    <i class=\"fas fa-trash\"></i>\n                </button>\n            </div>\n        </div>\n    </div>\n</header>\n\n<main class=\"english-main\">\n    <dr-router-outlet createArguments=\"${@this@.getChildArguments()}$\"></dr-router-outlet>\n</main>");
 
 /***/ }),
 
@@ -23561,9 +24095,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _english_route_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./english.route.component */ "./src/pages/english/english.route.component.ts");
 /* harmony import */ var _dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @dooboostore/core-web/valid/ValidUtils */ "../../packages/@dooboostore/core-web/src/valid/ValidUtils.ts");
 /* harmony import */ var _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @dooboostore/simple-boot-front/option/SimFrontOption */ "../../packages/@dooboostore/simple-boot-front/src/option/SimFrontOption.ts");
-/* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
-/* harmony import */ var _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @src/pages/english/player/player.route.component */ "./src/pages/english/player/player.route.component.ts");
+/* harmony import */ var _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @src/pages/english/player/player.route.component */ "./src/pages/english/player/player.route.component.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rxjs */ "../../node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/esm5/internal/operators/window.js");
+/* harmony import */ var _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @src/service/english/VideoItemService */ "./src/service/english/VideoItemService.ts");
 var _a, _b;
+
 
 
 
@@ -23578,53 +24114,58 @@ var _a, _b;
 
 let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_simple_boot_front_component_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_6__.ComponentRouterBase {
     config;
-    apiService;
+    videoItemService;
     favoriteWords = [];
     showFavorites = false;
     // Current item info
     currentItemName;
     currentItem;
-    items;
+    // items?: Item[];
     isInSubRoute = false; // Track if we're in a sub-route
-    constructor(config, apiService) {
+    constructor(config, videoItemService) {
         super({ sameRouteNoApply: true });
         this.config = config;
-        this.apiService = apiService;
+        this.videoItemService = videoItemService;
     }
     onCreateRenderData(data) {
+        super.onCreateRenderData(data);
+        console.log('english.router.component onCreateRenderData-------');
+    }
+    onCreateRender(...param) {
+        console.log('english.router.component onCreateRender-------');
     }
     async onInitRender(param, rawSet) {
         await super.onInitRender(param, rawSet);
-        console.log('-------');
+        console.log('english.router.component onInitRender-------');
         // Load favorite words from localStorage
         this.loadFavoriteWords();
         // Initialize speech synthesis voices
         this.initializeSpeechSynthesis();
-        // Load items data
-        if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser()) {
-            try {
-                this.items = await this.apiService.get({ target: '/datas/english/items.json' });
-                console.log('Loaded items:', this.items.length);
-            }
-            catch (error) {
-                console.error('Failed to load items:', error);
-            }
-        }
     }
     async onRouting(r) {
         await super.onRouting(r);
-        // Get current item name from route
-        this.currentItemName = r.routerModule.pathData?.name;
-        console.log('------->', r, this.currentItemName);
-        // Check if we're in a sub-route (has name parameter)
-        this.isInSubRoute = !!this.currentItemName;
-        // Find current item info
-        if (this.currentItemName && this.items) {
-            this.currentItem = this.items.find(item => item.name === this.currentItemName);
-            console.log('Current item:', this.currentItem);
-        }
-        else {
-            this.currentItem = undefined;
+        console.log('english.router.component onRouting-------');
+        if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser()) {
+            // Get current item name from route
+            this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name ?? '');
+            console.log('------->', r, this.currentItemName);
+            // Check if we're in a sub-route (has name parameter)
+            this.isInSubRoute = !!this.currentItemName;
+            // Find current item info
+            if (this.currentItemName) {
+                // Load items data
+                // try {
+                //   this.items = await this.apiService.get<Item[]>({ target: '/datas/english/items.json' });
+                //   console.log('Loaded items:', this.items.length);
+                // } catch (error) {
+                //   console.error('Failed to load items:', error);
+                // }
+                this.currentItem = await this.videoItemService.item(this.currentItemName);
+                console.log('Current item:', this.currentItem);
+            }
+            else {
+                this.currentItem = undefined;
+            }
         }
     }
     onCreatedThisChild(child, data) {
@@ -23703,7 +24244,7 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
         this.showFavorites = !this.showFavorites;
     }
     initializeSpeechSynthesis() {
-        if (!_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser() || !('speechSynthesis' in window)) {
+        if (!_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser() || !("speechSynthesis" in rxjs__WEBPACK_IMPORTED_MODULE_11__.window)) {
             console.warn('Speech Synthesis not available');
             return;
         }
@@ -23728,22 +24269,16 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
         // Also load when voices change (for Chrome)
         speechSynthesis.onvoiceschanged = loadVoices;
     }
-    // Navigate to home (english main page)
-    goToHome() {
-        if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser()) {
-            window.location.href = '/english/';
-        }
-    }
     // Speak word using TTS
     speakWord(word) {
         if (!_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser()) {
             return;
         }
         // Check if browser supports Speech Synthesis
-        if (!('speechSynthesis' in window)) {
-            console.warn('Speech Synthesis not supported in this browser');
-            return;
-        }
+        // if (!('speechSynthesis' in window)) {
+        //   console.warn('Speech Synthesis not supported in this browser');
+        //   return;
+        // }
         // Stop any ongoing speech
         speechSynthesis.cancel();
         // Clean the word (remove punctuation)
@@ -23816,7 +24351,7 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
             { name: 'Microsoft Mark', priority: 4 },
             { name: 'Microsoft Hazel Desktop', priority: 3 },
             // Chrome OS voices
-            { name: 'Chrome OS US English', priority: 5 },
+            { name: 'Chrome OS US English', priority: 5 }
         ];
         // Find the best matching voice with highest priority
         let bestVoice = null;
@@ -23885,8 +24420,8 @@ EnglishRouterComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         route: {
             '': '/',
             '/': _english_route_component__WEBPACK_IMPORTED_MODULE_7__.EnglishRouteComponent,
-            '/{name}': _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_11__.PlayerRouteComponent,
-            '/{name}/': _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_11__.PlayerRouteComponent,
+            '/{name}': _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_10__.PlayerRouteComponent,
+            '/{name}/': _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_10__.PlayerRouteComponent
         },
         routers: []
     }),
@@ -23894,7 +24429,7 @@ EnglishRouterComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         template: _english_router_component_html__WEBPACK_IMPORTED_MODULE_4__["default"],
         styles: _english_router_component_css__WEBPACK_IMPORTED_MODULE_5__["default"]
     }),
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_9__.SimFrontOption !== "undefined" && _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_9__.SimFrontOption) === "function" ? _a : Object, typeof (_b = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_10__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_10__.ApiService) === "function" ? _b : Object])
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_9__.SimFrontOption !== "undefined" && _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_9__.SimFrontOption) === "function" ? _a : Object, typeof (_b = typeof _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_12__.VideoItemService !== "undefined" && _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_12__.VideoItemService) === "function" ? _b : Object])
 ], EnglishRouterComponent);
 
 
@@ -23912,7 +24447,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".player-container {\n  display: flex;\n  height: 100svh;\n  width: 100%;\n}\n\n.player-container.swapped {\n  flex-direction: row-reverse;\n}\n\n.dictionary-section,\n.scripts-section {\n  flex: 1;\n  overflow-y: auto;\n  padding: 20px;\n  border-right: 1px solid #e0e0e0;\n}\n\n.scripts-section {\n  border-right: none;\n  border-left: 1px solid #e0e0e0;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden; /* 전체 섹션은 스크롤 안함 */\n}\n\n/* YouTube Section Styles */\n.youtube-section {\n  height: 65%;\n  padding: 10px;\n  border-bottom: 1px solid #e0e0e0;\n  background: #f8f9fa;\n  flex-shrink: 0;\n  position: sticky;\n  top: 0;\n  z-index: 10;\n}\n\n#youtube-player-container {\n  width: 100%;\n  height: 100%;\n  background: #000;\n  border-radius: 8px;\n  overflow: hidden;\n}\n\n#youtube-player-container iframe {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\n\n\n\n/* Dictionary Styles */\n.dictionary-content {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  padding-top: 10px;\n  padding-bottom: 80px;\n  /* Space for floating controller */\n}\n\n.dictionary-item {\n  background: #f8f9fa;\n  border-radius: 6px;\n  padding: 12px;\n  border: 1px solid #e9ecef;\n  scroll-margin-top: 80px; /* Account for fixed header */\n}\n\n.clickable-dictionary {\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n\n.clickable-title {\n  cursor: pointer;\n  transition: color 0.2s ease;\n}\n\n.clickable-title:hover {\n  color: #1976d2;\n  text-decoration: underline;\n}\n\n.clickable-example {\n  cursor: pointer;\n  transition: all 0.2s ease;\n  border-radius: 3px;\n  padding: 2px 4px;\n  margin: -2px -4px;\n}\n\n.clickable-example:hover {\n  background-color: #e3f2fd;\n  color: #1976d2;\n}\n\n.word-entry {\n  margin-bottom: 10px;\n}\n\n.entry-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n\n.entry-title {\n  font-size: 16px;\n  font-weight: 700;\n  color: #2c3e50;\n  margin: 0;\n  flex: 1;\n}\n\n/* Favorite Checkbox Styles */\n.favorite-checkbox-label {\n  cursor: pointer;\n  padding: 0.25rem;\n  border-radius: 4px;\n  transition: all 0.2s ease;\n  min-width: 28px;\n  height: 28px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n}\n\n.favorite-checkbox {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.favorite-icon {\n  color: #ccc;\n  font-size: 1.1rem;\n  transition: all 0.2s ease;\n}\n\n.favorite-checkbox-label:hover .favorite-icon {\n  color: #ffc107;\n  transform: scale(1.1);\n}\n\n.favorite-checkbox-label:hover {\n  background: rgba(255, 193, 7, 0.1);\n}\n\n.favorite-checkbox:checked + .favorite-icon {\n  color: #ffc107;\n}\n\n.favorite-checkbox-label:has(.favorite-checkbox:checked) .favorite-icon {\n  color: #ffc107;\n}\n\n.favorite-checkbox-label:has(.favorite-checkbox:checked):hover .favorite-icon {\n  color: #e0a800;\n}\n\n\n\n.pos-type {\n  background: #3498db;\n  color: white;\n  padding: 3px 6px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: 600;\n  display: inline-block;\n  margin-bottom: 6px;\n}\n\n/* Null type styling */\n.pos-type-null {\n  background: #95a5a6 !important;\n}\n\n/* Original word styling */\n.dictionary-item[data-match-type=\"original\"] {\n  background: #f8f9fa;\n  border: 1px dashed #dee2e6;\n  opacity: 0.8;\n}\n\n.dictionary-item[data-match-type=\"original\"] .pos-type {\n  background: #6c757d;\n}\n\n.dictionary-item[data-match-type=\"original\"] .meaning-text {\n  font-style: italic;\n  color: #6c757d;\n}\n\n.meanings {\n  margin-left: 10px;\n}\n\n.meaning-item {\n  margin-bottom: 8px;\n  padding: 6px;\n  background: white;\n  border-radius: 3px;\n  border-left: 3px solid #3498db;\n}\n\n.meaning-text {\n  font-weight: 500;\n  margin-bottom: 6px;\n  color: #2c3e50;\n  font-size: 14px;\n}\n\n.examples {\n  margin-left: 15px;\n}\n\n.example-item {\n  margin-bottom: 6px;\n  padding: 4px;\n  background: #f1f2f6;\n  border-radius: 3px;\n}\n\n.example-text {\n  font-style: italic;\n  color: #34495e;\n  margin-bottom: 3px;\n  font-size: 13px;\n}\n\n.example-translation {\n  color: #7f8c8d;\n  font-size: 12px;\n}\n\n/* Dictionary Examples Section */\n.examples-section {\n  margin-top: 15px;\n  border-top: 1px solid #e9ecef;\n  padding-top: 10px;\n}\n\n.examples-summary {\n  cursor: pointer;\n  padding: 8px 12px;\n  background: #f8f9fa;\n  border: 1px solid #dee2e6;\n  border-radius: 4px;\n  font-size: 13px;\n  font-weight: 600;\n  color: #495057;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  transition: all 0.2s ease;\n  user-select: none;\n}\n\n.examples-summary:hover {\n  background: #e9ecef;\n  color: #343a40;\n}\n\n.examples-summary i {\n  color: #6c757d;\n  font-size: 12px;\n}\n\n.examples-content {\n  margin-top: 10px;\n  padding: 0 5px;\n}\n\n.examples-content .example-item {\n  margin-bottom: 12px;\n  padding: 10px;\n  background: #ffffff;\n  border: 1px solid #e9ecef;\n  border-radius: 4px;\n  border-left: 3px solid #17a2b8;\n}\n\n.examples-content .example-text {\n  font-size: 14px;\n  line-height: 1.4;\n  color: #2c3e50;\n  margin-bottom: 6px;\n  cursor: pointer;\n  transition: color 0.2s ease;\n}\n\n.examples-content .example-text:hover {\n  color: #1976d2;\n}\n\n.examples-content .example-translation {\n  font-size: 13px;\n  color: #6c757d;\n  font-style: italic;\n}\n\n/* Scripts Styles */\n.scripts-content {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n  padding: 12px;\n  padding-bottom: 80px;\n  /* Space for floating controller */\n  height: 100%;\n  overflow-y: auto;\n}\n\n/* When YouTube is present, scripts take remaining space */\n.scripts-content.with-youtube {\n  height: calc(35vh - 40px); /* YouTube 영역 제외한 정확한 높이 */\n  flex: 1;\n  padding: 0;\n  overflow-y: auto; /* 스크립트 영역만 스크롤 */\n}\n\n/* Script Item Styles - Dictionary와 일관된 디자인 */\n.script-item {\n  background: #ffffff !important;\n  border: 1px solid #e9ecef !important;\n  border-radius: 6px;\n  padding: 0 !important;\n  margin-bottom: 4px;\n  overflow: visible !important;\n  transition: all 0.2s ease;\n  display: block !important;\n  visibility: visible !important;\n  scroll-margin-top: 0 !important;\n}\n\n.script-item:hover {\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);\n  border-color: #dee2e6;\n}\n\n.script-item:has(.script-radio:checked) {\n  border-left: 3px solid #2196f3;\n  background-color: #e3f2fd;\n  border-color: #2196f3;\n}\n\n.script-block {\n  display: block !important;\n  padding: 0 !important;\n  margin: 0 !important;\n  cursor: pointer;\n  position: relative;\n  transition: all 0.2s ease;\n  visibility: visible !important;\n}\n\n.script-radio {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.script-content {\n  transition: all 0.2s ease;\n  display: block !important;\n  visibility: visible !important;\n}\n\n.english-text {\n  font-size: 14px !important;\n  line-height: 1.3;\n  color: #2c3e50 !important;\n  margin-bottom: 3px;\n  font-weight: 500;\n  display: block !important;\n  visibility: visible !important;\n  padding: 8px 10px !important;\n}\n\n.script-item:has(.script-radio:checked) .english-text {\n  color: #1976d2 !important;\n  font-weight: 600;\n}\n\n.korean-text {\n  font-size: 12px !important;\n  color: #888 !important;\n  line-height: 1.2;\n  margin-top: 2px;\n  font-style: italic;\n  display: none; /* 기본적으로 숨김 */\n  visibility: visible !important;\n  padding: 0 10px 8px 10px !important;\n}\n\n/* 번역이 활성화되었을 때 한글 텍스트 표시 */\n.korean-text.show-translation {\n  display: block !important;\n}\n\n.script-item:has(.script-radio:checked) .korean-text {\n  color: #1565c0 !important;\n}\n\n.script-item {\n  background: #ffffff;\n  border: 1px solid #e9ecef;\n  border-radius: 6px;\n  overflow: hidden;\n  scroll-margin-top: 80px; /* Account for fixed header */\n}\n\n.script-item:hover {\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);\n}\n\n.script-block {\n  display: block;\n  padding: 10px 12px;\n  cursor: pointer;\n  border-radius: 6px;\n  position: relative;\n  transition: background-color 0.2s ease;\n}\n\n.script-block:hover {\n  background-color: #f8f9fa;\n}\n\n.script-radio {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.script-radio:checked + .script-content,\n.script-radio:checked ~ .script-content {\n  background-color: #e3f2fd;\n}\n\n.script-item:has(.script-radio:checked) {\n  border-left: 3px solid #2196f3;\n  background-color: #e3f2fd;\n}\n\n.script-content {\n  transition: background-color 0.2s ease;\n}\n\n/* Korean text visibility - controlled by JavaScript */\n.korean-text {\n  display: none;\n}\n\n\n\n.english-text {\n  font-size: 15px;\n  line-height: 1.4;\n  color: #2c3e50;\n  margin-bottom: 6px;\n}\n\n.korean-text {\n  font-size: 13px;\n  color: #888;\n  line-height: 1.3;\n  margin-top: 4px;\n  font-style: italic;\n}\n\n/* Mobile Layout */\n@media (max-width: 768px) {\n  .player-container {\n    flex-direction: column;\n    height: 100svh;\n  }\n\n  .dictionary-section,\n  .scripts-section {\n    flex: 1;\n    border-right: none;\n    border-left: none;\n    border-bottom: 1px solid #e0e0e0;\n    padding: 15px;\n  }\n\n  .scripts-section {\n    border-bottom: none;\n    border-top: 1px solid #e0e0e0;\n  }\n\n  .dictionary-section,\n  .scripts-section {\n    /* Remove extra padding since no headers */\n    padding: 15px;\n  }\n\n  .entry-title {\n    font-size: 18px;\n  }\n\n  /* Mobile adjustments for favorite checkbox */\n  .favorite-checkbox-label {\n    min-width: 24px;\n    height: 24px;\n    padding: 0.2rem;\n  }\n  \n  .favorite-icon {\n    font-size: 1rem;\n  }\n\n  .english-text {\n    font-size: 14px;\n  }\n\n  .korean-text {\n    font-size: 12px;\n  }\n\n  /* Better spacing for mobile dictionary items */\n  .dictionary-item {\n    margin-bottom: 15px;\n  }\n\n  /* Extra padding for mobile floating controller */\n  .scripts-content,\n  .dictionary-content {\n    padding-bottom: 80px;\n    /* Space for fixed bottom controller */\n  }\n\n  /* Mobile YouTube adjustments */\n  .youtube-section {\n    height: 55%;\n    padding: 8px;\n    position: sticky;\n    top: 0;\n    z-index: 10;\n  }\n\n  .scripts-content.with-youtube {\n    height: calc(45vh - 40px);\n    overflow-y: auto;\n    padding: 0;\n  }\n\n  .script-item {\n    border-radius: 6px;\n    padding: 0 !important;\n    margin-bottom: 3px;\n  }\n\n  .script-block {\n    padding: 0 !important;\n    margin: 0 !important;\n  }\n\n  .english-text {\n    font-size: 13px;\n    margin-bottom: 2px;\n    padding: 6px 8px !important;\n  }\n\n  .korean-text {\n    font-size: 11px;\n    margin-top: 1px;\n    padding: 0 8px 6px 8px !important;\n  }\n\n  .scripts-content {\n    gap: 3px;\n    padding: 8px;\n  }\n}\n\n/* Scrollbar Styling */\n.dictionary-section::-webkit-scrollbar,\n.scripts-section::-webkit-scrollbar {\n  width: 6px;\n}\n\n.dictionary-section::-webkit-scrollbar-track,\n.scripts-section::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n\n.dictionary-section::-webkit-scrollbar-thumb,\n.scripts-section::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 3px;\n}\n\n.dictionary-section::-webkit-scrollbar-thumb:hover,\n.scripts-section::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n\n/* W\nord highlighting */\n.word {\n  display: inline-block;\n  margin-right: 1px;\n  padding: 1px 2px;\n  border-radius: 2px;\n  transition: all 0.3s ease;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  user-select: none;\n  border: 2px solid transparent;\n}\n\n.word.highlighted {\n  background-color: #ffeb3b !important;\n  color: #333 !important;\n  font-weight: 600 !important;\n  box-shadow: 0 2px 4px rgba(255, 235, 59, 0.4) !important;\n  border: 2px solid #fdd835 !important;\n  outline: none !important;\n  -webkit-tap-highlight-color: transparent !important;\n}\n\n.clickable-word {\n  cursor: pointer;\n  transition: all 0.2s ease;\n  -webkit-tap-highlight-color: transparent;\n}\n\n.clickable-word:hover:not(.highlighted) {\n  background-color: #e3f2fd;\n  color: #1976d2;\n  transform: scale(1.05);\n}\n\n/* iOS specific styles */\n@media (max-width: 768px) {\n  .clickable-word:active:not(.highlighted) {\n    background-color: #e3f2fd;\n    color: #1976d2;\n    transform: scale(1.02);\n  }\n}\n\n/* Floating Controller */\n.floating-controller {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: rgba(255, 255, 255, 0.95);\n  backdrop-filter: blur(10px);\n  padding: 12px 20px;\n  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  z-index: 1000;\n}\n\n.controller-content {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n\n.control-btn {\n  width: 32px;\n  height: 32px;\n  border: none;\n  border-radius: 50%;\n  background: #f5f5f5;\n  color: #666;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.3s ease;\n  font-size: 12px;\n}\n\n.control-btn:hover:not(:disabled) {\n  background: #e0e0e0;\n  color: #333;\n  transform: scale(1.05);\n}\n\n.control-btn:disabled {\n  opacity: 0.4;\n  cursor: not-allowed;\n}\n\n.translation-btn.active {\n  background: #2196f3;\n  color: white;\n}\n\n.translation-btn.active:hover {\n  background: #1976d2;\n}\n\n.sound-btn.active {\n  background: #4caf50;\n  color: white;\n}\n\n.sound-btn.active:hover {\n  background: #388e3c;\n}\n\n.play-btn {\n  background: #f5f5f5;\n  color: #666;\n}\n\n.play-btn:hover {\n  background: #e0e0e0;\n  color: #333;\n}\n\n.play-btn.playing {\n  background: #ff9800;\n  color: white;\n  animation: pulse 1.5s infinite;\n}\n\n.play-btn.playing:hover {\n  background: #f57c00;\n}\n\n@keyframes pulse {\n  0% {\n    transform: scale(1);\n  }\n\n  50% {\n    transform: scale(1.05);\n  }\n\n  100% {\n    transform: scale(1);\n  }\n}\n\n.word-slider-container {\n  flex: 1;\n  min-width: 200px;\n  display: flex;\n  align-items: center;\n}\n\n.word-slider {\n  width: 100%;\n  height: 6px;\n  border-radius: 3px;\n  background: #ddd;\n  outline: none;\n  -webkit-appearance: none;\n  appearance: none;\n}\n\n.word-slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  appearance: none;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: #2196f3;\n  cursor: pointer;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n  transition: all 0.3s ease;\n}\n\n.word-slider::-webkit-slider-thumb:hover {\n  transform: scale(1.2);\n  background: #1976d2;\n}\n\n.word-slider::-moz-range-thumb {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: #2196f3;\n  cursor: pointer;\n  border: none;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n/* Tablet adjustments (medium screens) */\n@media (max-width: 1024px) and (min-width: 769px) {\n  .floating-controller {\n    padding: 10px 18px;\n  }\n\n  .controller-content {\n    gap: 10px;\n  }\n\n  .control-btn {\n    width: 30px;\n    height: 30px;\n    font-size: 11px;\n  }\n\n  .word-slider-container {\n    flex: 1;\n    min-width: 160px;\n  }\n}\n\n/* Mobile adjustments (small screens) */\n@media (max-width: 768px) {\n  .floating-controller {\n    padding: 10px 15px;\n  }\n\n  .controller-content {\n    gap: 8px;\n  }\n\n  .control-btn {\n    width: 28px;\n    height: 28px;\n    font-size: 10px;\n  }\n\n  .word-slider-container {\n    flex: 1;\n    min-width: 120px;\n  }\n\n  .word {\n    margin-right: 1px;\n    padding: 1px 1px;\n  }\n\n  .script-block {\n    padding: 8px 10px;\n  }\n}\n\n/* Loading Spinner */\n.loading-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 200px;\n  gap: 20px;\n}\n\n.loading-spinner {\n  width: 40px;\n  height: 40px;\n  border: 4px solid #f3f3f3;\n  border-top: 4px solid #2196f3;\n  border-radius: 50%;\n  animation: spin 1s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\n.loading-text {\n  color: #666;\n  font-size: 14px;\n  font-weight: 500;\n  animation: pulse-text 1.5s ease-in-out infinite;\n}\n\n@keyframes pulse-text {\n  0%, 100% { opacity: 0.6; }\n  50% { opacity: 1; }\n}\n\n/* Dictionary highlight effect */\n.dictionary-item.highlighted-dictionary {\n  background: linear-gradient(135deg, #fff3cd, #ffeaa7);\n  border: 2px solid #f39c12;\n  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);\n  transform: scale(1.02);\n  transition: all 0.3s ease;\n}\n\n.dictionary-item.highlighted-dictionary .entry-title {\n  color: #d68910;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n}\n\n/* Swap Button */\n.swap-button {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 32px;\n  height: 32px;\n  background: rgba(255, 255, 255, 0.95);\n  border: 1px solid #e0e0e0;\n  border-radius: 50%;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);\n  backdrop-filter: blur(10px);\n  z-index: 999;\n  color: #666;\n  transition: all 0.3s ease;\n  font-size: 14px;\n}\n\n.swap-button:hover {\n  background: #2196f3;\n  color: white;\n  transform: translate(-50%, -50%) scale(1.1);\n  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.3);\n}\n\n/* Mobile adjustments for swap button */\n@media (max-width: 768px) {\n  .swap-button {\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 28px;\n    height: 28px;\n    font-size: 12px;\n  }\n\n  .swap-button:hover {\n    transform: translate(-50%, -50%) scale(1.1);\n  }\n\n  .player-container.swapped {\n    flex-direction: column-reverse;\n  }\n\n  /* Maintain borders when swapped on mobile */\n  .player-container.swapped .scripts-section {\n    border-top: none;\n    border-bottom: 1px solid #e0e0e0;\n  }\n\n  .player-container.swapped .dictionary-section {\n    border-bottom: none;\n    border-top: 1px solid #e0e0e0;\n  }\n}\n/* E\nntry Header with Favorite Button */\n.entry-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n\n.entry-title {\n  flex: 1;\n  margin: 0;\n}\n\n.favorite-btn {\n  background: none;\n  border: none;\n  color: #ccc;\n  cursor: pointer;\n  padding: 0.25rem;\n  border-radius: 4px;\n  transition: all 0.2s ease;\n  font-size: 1.1rem;\n  min-width: 28px;\n  height: 28px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.favorite-btn:hover {\n  color: #ffc107;\n  background: rgba(255, 193, 7, 0.1);\n  transform: scale(1.1);\n}\n\n.favorite-btn.active {\n  color: #ffc107;\n}\n\n.favorite-btn.active:hover {\n  color: #e0a800;\n}\n\n/* Mobile adjustments for favorite button */\n@media (max-width: 768px) {\n  .entry-header {\n    gap: 0.25rem;\n  }\n  \n  .favorite-btn {\n    font-size: 1rem;\n    min-width: 24px;\n    height: 24px;\n    padding: 0.2rem;\n  }\n}/* Respo\nnsive scroll margins for mobile */\n@media (max-width: 768px) {\n  .dictionary-item,\n  .script-item {\n    scroll-margin-top: 60px; /* Smaller margin for mobile header */\n  }\n}");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".player-container {\n  display: flex;\n  height: 100svh;\n  width: 100%;\n}\n\n.player-container.swapped {\n  flex-direction: row-reverse;\n}\n\n.dictionary-section,\n.scripts-section {\n  flex: 1;\n  overflow-y: auto;\n  padding: 20px;\n  border-right: 1px solid #e0e0e0;\n}\n\n.scripts-section {\n  border-right: none;\n  border-left: 1px solid #e0e0e0;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden; /* 전체 섹션은 스크롤 안함 */\n}\n\n/* YouTube Section Styles */\n.youtube-section {\n  height: 65%;\n  padding: 10px;\n  border-bottom: 1px solid #e0e0e0;\n  background: #f8f9fa;\n  flex-shrink: 0;\n  position: sticky;\n  top: 0;\n  z-index: 10;\n}\n\n#youtube-player-container {\n  width: 100%;\n  height: 100%;\n  background: #000;\n  border-radius: 8px;\n  overflow: hidden;\n}\n\n#youtube-player-container iframe {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\n\n\n\n/* Dictionary Styles */\n.dictionary-content {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  padding-top: 10px;\n  padding-bottom: 80px;\n  /* Space for floating controller */\n}\n\n.dictionary-item {\n  background: #f8f9fa;\n  border-radius: 6px;\n  padding: 12px;\n  border: 1px solid #e9ecef;\n  scroll-margin-top: 80px; /* Account for fixed header */\n}\n\n.clickable-dictionary {\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n\n.clickable-title {\n  cursor: pointer;\n  transition: color 0.2s ease;\n}\n\n.clickable-title:hover {\n  color: #1976d2;\n  text-decoration: underline;\n}\n\n.clickable-example {\n  cursor: pointer;\n  transition: all 0.2s ease;\n  border-radius: 3px;\n  padding: 2px 4px;\n  margin: -2px -4px;\n}\n\n.clickable-example:hover {\n  background-color: #e3f2fd;\n  color: #1976d2;\n}\n\n.word-entry {\n  margin-bottom: 10px;\n}\n\n.entry-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n\n.entry-title {\n  font-size: 16px;\n  font-weight: 700;\n  color: #2c3e50;\n  margin: 0;\n  flex: 1;\n}\n\n/* Favorite Checkbox Styles */\n.favorite-checkbox-label {\n  cursor: pointer;\n  padding: 0.25rem;\n  border-radius: 4px;\n  transition: all 0.2s ease;\n  min-width: 28px;\n  height: 28px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n}\n\n.favorite-checkbox {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.favorite-icon {\n  color: #ccc;\n  font-size: 1.1rem;\n  transition: all 0.2s ease;\n}\n\n.favorite-checkbox-label:hover .favorite-icon {\n  color: #ffc107;\n  transform: scale(1.1);\n}\n\n.favorite-checkbox-label:hover {\n  background: rgba(255, 193, 7, 0.1);\n}\n\n.favorite-checkbox:checked + .favorite-icon {\n  color: #ffc107;\n}\n\n.favorite-checkbox-label:has(.favorite-checkbox:checked) .favorite-icon {\n  color: #ffc107;\n}\n\n.favorite-checkbox-label:has(.favorite-checkbox:checked):hover .favorite-icon {\n  color: #e0a800;\n}\n\n\n\n.pos-type {\n  background: #3498db;\n  color: white;\n  padding: 3px 6px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: 600;\n  display: inline-block;\n  margin-bottom: 6px;\n}\n\n/* Null type styling */\n.pos-type-null {\n  background: #95a5a6 !important;\n}\n\n/* Original word styling */\n.dictionary-item[data-match-type=\"original\"] {\n  background: #f8f9fa;\n  border: 1px dashed #dee2e6;\n  opacity: 0.8;\n}\n\n.dictionary-item[data-match-type=\"original\"] .pos-type {\n  background: #6c757d;\n}\n\n.dictionary-item[data-match-type=\"original\"] .meaning-text {\n  font-style: italic;\n  color: #6c757d;\n}\n\n.meanings {\n  margin-left: 10px;\n}\n\n.meaning-item {\n  margin-bottom: 8px;\n  padding: 6px;\n  background: white;\n  border-radius: 3px;\n  border-left: 3px solid #3498db;\n}\n\n.meaning-text {\n  font-weight: 500;\n  margin-bottom: 6px;\n  color: #2c3e50;\n  font-size: 14px;\n}\n\n.examples {\n  margin-left: 15px;\n}\n\n.example-item {\n  margin-bottom: 6px;\n  padding: 4px;\n  background: #f1f2f6;\n  border-radius: 3px;\n}\n\n.example-text {\n  font-style: italic;\n  color: #34495e;\n  margin-bottom: 3px;\n  font-size: 13px;\n}\n\n.example-translation {\n  color: #7f8c8d;\n  font-size: 12px;\n}\n\n/* Dictionary Examples Section */\n.examples-section {\n  margin-top: 15px;\n  border-top: 1px solid #e9ecef;\n  padding-top: 10px;\n}\n\n.examples-summary {\n  cursor: pointer;\n  padding: 8px 12px;\n  background: #f8f9fa;\n  border: 1px solid #dee2e6;\n  border-radius: 4px;\n  font-size: 13px;\n  font-weight: 600;\n  color: #495057;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  transition: all 0.2s ease;\n  user-select: none;\n}\n\n.examples-summary:hover {\n  background: #e9ecef;\n  color: #343a40;\n}\n\n.examples-summary i {\n  color: #6c757d;\n  font-size: 12px;\n}\n\n.examples-content {\n  margin-top: 10px;\n  padding: 0 5px;\n}\n\n.examples-content .example-item {\n  margin-bottom: 12px;\n  padding: 10px;\n  background: #ffffff;\n  border: 1px solid #e9ecef;\n  border-radius: 4px;\n  border-left: 3px solid #17a2b8;\n}\n\n.examples-content .example-text {\n  font-size: 14px;\n  line-height: 1.4;\n  color: #2c3e50;\n  margin-bottom: 6px;\n  cursor: pointer;\n  transition: color 0.2s ease;\n}\n\n.examples-content .example-text:hover {\n  color: #1976d2;\n}\n\n.examples-content .example-translation {\n  font-size: 13px;\n  color: #6c757d;\n  font-style: italic;\n}\n\n/* Scripts Styles */\n.scripts-content {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n  padding: 12px;\n  padding-bottom: 80px;\n  /* Space for floating controller */\n  height: 100%;\n  overflow-y: auto;\n}\n\n/* When YouTube is present, scripts take remaining space */\n.scripts-content.with-youtube {\n  height: calc(35vh - 40px); /* YouTube 영역 제외한 정확한 높이 */\n  flex: 1;\n  padding: 0;\n  overflow-y: auto; /* 스크립트 영역만 스크롤 */\n}\n\n/* Script Item Styles - Dictionary와 일관된 디자인 */\n.script-item {\n  background: #ffffff !important;\n  border: 1px solid #e9ecef !important;\n  border-radius: 6px;\n  padding: 0 !important;\n  margin-bottom: 4px;\n  overflow: visible !important;\n  transition: all 0.2s ease;\n  display: block !important;\n  visibility: visible !important;\n  scroll-margin-top: 0 !important;\n}\n\n.script-item:hover {\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);\n  border-color: #dee2e6;\n}\n\n.script-item:has(.script-radio:checked) {\n  border-left: 3px solid #2196f3;\n  background-color: #e3f2fd;\n  border-color: #2196f3;\n}\n\n.script-block {\n  display: block !important;\n  padding: 0 !important;\n  margin: 0 !important;\n  cursor: pointer;\n  position: relative;\n  transition: all 0.2s ease;\n  visibility: visible !important;\n}\n\n.script-radio {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.script-content {\n  transition: all 0.2s ease;\n  display: block !important;\n  visibility: visible !important;\n}\n\n.english-text {\n  font-size: 14px !important;\n  line-height: 1.3;\n  color: #2c3e50 !important;\n  margin-bottom: 3px;\n  font-weight: 500;\n  display: block !important;\n  visibility: visible !important;\n  padding: 8px 10px !important;\n}\n\n.script-item:has(.script-radio:checked) .english-text {\n  color: #1976d2 !important;\n  font-weight: 600;\n}\n\n.korean-text {\n  font-size: 12px !important;\n  color: #888 !important;\n  line-height: 1.2;\n  margin-top: 2px;\n  font-style: italic;\n  display: none; /* 기본적으로 숨김 */\n  visibility: visible !important;\n  padding: 0 10px 8px 10px !important;\n}\n\n/* 번역이 활성화되었을 때 한글 텍스트 표시 */\n.korean-text.show-translation {\n  display: block !important;\n}\n\n.script-item:has(.script-radio:checked) .korean-text {\n  color: #1565c0 !important;\n}\n\n.script-item {\n  background: #ffffff;\n  border: 1px solid #e9ecef;\n  border-radius: 6px;\n  overflow: hidden;\n  scroll-margin-top: 80px; /* Account for fixed header */\n}\n\n.script-item:hover {\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);\n}\n\n.script-block {\n  display: block;\n  padding: 10px 12px;\n  cursor: pointer;\n  border-radius: 6px;\n  position: relative;\n  transition: background-color 0.2s ease;\n}\n\n.script-block:hover {\n  background-color: #f8f9fa;\n}\n\n.script-radio {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n.script-radio:checked + .script-content,\n.script-radio:checked ~ .script-content {\n  background-color: #e3f2fd;\n}\n\n.script-item:has(.script-radio:checked) {\n  border-left: 3px solid #2196f3;\n  background-color: #e3f2fd;\n}\n\n.script-content {\n  transition: background-color 0.2s ease;\n}\n\n/* Korean text visibility - controlled by JavaScript */\n.korean-text {\n  display: none;\n}\n\n\n\n.english-text {\n  font-size: 15px;\n  line-height: 1.4;\n  color: #2c3e50;\n  margin-bottom: 6px;\n}\n\n.korean-text {\n  font-size: 13px;\n  color: #888;\n  line-height: 1.3;\n  margin-top: 4px;\n  font-style: italic;\n}\n\n/* Mobile Layout */\n@media (max-width: 768px) {\n  .player-container {\n    flex-direction: column;\n    height: 100svh;\n  }\n\n  .dictionary-section,\n  .scripts-section {\n    flex: 1;\n    border-right: none;\n    border-left: none;\n    border-bottom: 1px solid #e0e0e0;\n    padding: 15px;\n  }\n\n  .scripts-section {\n    border-bottom: none;\n    border-top: 1px solid #e0e0e0;\n  }\n\n  .dictionary-section,\n  .scripts-section {\n    /* Remove extra padding since no headers */\n    padding: 15px;\n  }\n\n  .entry-title {\n    font-size: 18px;\n  }\n\n  /* Mobile adjustments for favorite checkbox */\n  .favorite-checkbox-label {\n    min-width: 24px;\n    height: 24px;\n    padding: 0.2rem;\n  }\n  \n  .favorite-icon {\n    font-size: 1rem;\n  }\n\n  .english-text {\n    font-size: 14px;\n  }\n\n  .korean-text {\n    font-size: 12px;\n  }\n\n  /* Better spacing for mobile dictionary items */\n  .dictionary-item {\n    margin-bottom: 15px;\n  }\n\n  /* Extra padding for mobile floating controller */\n  .scripts-content,\n  .dictionary-content {\n    padding-bottom: 80px;\n    /* Space for fixed bottom controller */\n  }\n\n  /* Mobile YouTube adjustments */\n  .youtube-section {\n    height: 55%;\n    padding: 0px;\n    position: sticky;\n    top: 0;\n    z-index: 10;\n  }\n\n  .scripts-content.with-youtube {\n    height: calc(45vh - 40px);\n    overflow-y: auto;\n    padding: 0;\n  }\n\n  .script-item {\n    border-radius: 6px;\n    padding: 0 !important;\n    margin-bottom: 3px;\n  }\n\n  .script-block {\n    padding: 0 !important;\n    margin: 0 !important;\n  }\n\n  .english-text {\n    font-size: 13px;\n    margin-bottom: 2px;\n    padding: 6px 8px !important;\n  }\n\n  .korean-text {\n    font-size: 11px;\n    margin-top: 1px;\n    padding: 0 8px 6px 8px !important;\n  }\n\n  .scripts-content {\n    gap: 3px;\n    padding: 8px;\n  }\n}\n\n/* Scrollbar Styling */\n.dictionary-section::-webkit-scrollbar,\n.scripts-section::-webkit-scrollbar {\n  width: 6px;\n}\n\n.dictionary-section::-webkit-scrollbar-track,\n.scripts-section::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n\n.dictionary-section::-webkit-scrollbar-thumb,\n.scripts-section::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 3px;\n}\n\n.dictionary-section::-webkit-scrollbar-thumb:hover,\n.scripts-section::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n\n/* W\nord highlighting */\n.word {\n  display: inline-block;\n  margin-right: 1px;\n  padding: 1px 2px;\n  border-radius: 2px;\n  transition: all 0.3s ease;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  user-select: none;\n  border: 2px solid transparent;\n}\n\n.word.highlighted {\n  background-color: #ffeb3b !important;\n  color: #333 !important;\n  font-weight: 600 !important;\n  box-shadow: 0 2px 4px rgba(255, 235, 59, 0.4) !important;\n  border: 2px solid #fdd835 !important;\n  outline: none !important;\n  -webkit-tap-highlight-color: transparent !important;\n}\n\n.clickable-word {\n  cursor: pointer;\n  transition: all 0.2s ease;\n  -webkit-tap-highlight-color: transparent;\n}\n\n.clickable-word:hover:not(.highlighted) {\n  background-color: #e3f2fd;\n  color: #1976d2;\n  transform: scale(1.05);\n}\n\n/* iOS specific styles */\n@media (max-width: 768px) {\n  .clickable-word:active:not(.highlighted) {\n    background-color: #e3f2fd;\n    color: #1976d2;\n    transform: scale(1.02);\n  }\n}\n\n/* Floating Controller */\n.floating-controller {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: rgba(255, 255, 255, 0.95);\n  backdrop-filter: blur(10px);\n  padding: 12px 20px;\n  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  z-index: 1000;\n}\n\n.controller-content {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n\n.control-btn {\n  width: 32px;\n  height: 32px;\n  border: none;\n  border-radius: 50%;\n  background: #f5f5f5;\n  color: #666;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.3s ease;\n  font-size: 12px;\n}\n\n.control-btn:hover:not(:disabled) {\n  background: #e0e0e0;\n  color: #333;\n  transform: scale(1.05);\n}\n\n.control-btn:disabled {\n  opacity: 0.4;\n  cursor: not-allowed;\n}\n\n.translation-btn.active {\n  background: #2196f3;\n  color: white;\n}\n\n.translation-btn.active:hover {\n  background: #1976d2;\n}\n\n.sound-btn.active {\n  background: #4caf50;\n  color: white;\n}\n\n.sound-btn.active:hover {\n  background: #388e3c;\n}\n\n.play-btn {\n  background: #f5f5f5;\n  color: #666;\n}\n\n.play-btn:hover {\n  background: #e0e0e0;\n  color: #333;\n}\n\n.play-btn.playing {\n  background: #ff9800;\n  color: white;\n  animation: pulse 1.5s infinite;\n}\n\n.play-btn.playing:hover {\n  background: #f57c00;\n}\n\n@keyframes pulse {\n  0% {\n    transform: scale(1);\n  }\n\n  50% {\n    transform: scale(1.05);\n  }\n\n  100% {\n    transform: scale(1);\n  }\n}\n\n.word-slider-container {\n  flex: 1;\n  min-width: 200px;\n  display: flex;\n  align-items: center;\n}\n\n.word-slider {\n  width: 100%;\n  height: 6px;\n  border-radius: 3px;\n  background: #ddd;\n  outline: none;\n  -webkit-appearance: none;\n  appearance: none;\n}\n\n.word-slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  appearance: none;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: #2196f3;\n  cursor: pointer;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n  transition: all 0.3s ease;\n}\n\n.word-slider::-webkit-slider-thumb:hover {\n  transform: scale(1.2);\n  background: #1976d2;\n}\n\n.word-slider::-moz-range-thumb {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: #2196f3;\n  cursor: pointer;\n  border: none;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n/* Tablet adjustments (medium screens) */\n@media (max-width: 1024px) and (min-width: 769px) {\n  .floating-controller {\n    padding: 10px 18px;\n  }\n\n  .controller-content {\n    gap: 10px;\n  }\n\n  .control-btn {\n    width: 30px;\n    height: 30px;\n    font-size: 11px;\n  }\n\n  .word-slider-container {\n    flex: 1;\n    min-width: 160px;\n  }\n}\n\n/* Mobile adjustments (small screens) */\n@media (max-width: 768px) {\n  .floating-controller {\n    padding: 10px 15px;\n  }\n\n  .controller-content {\n    gap: 8px;\n  }\n\n  .control-btn {\n    width: 28px;\n    height: 28px;\n    font-size: 10px;\n  }\n\n  .word-slider-container {\n    flex: 1;\n    min-width: 120px;\n  }\n\n  .word {\n    margin-right: 1px;\n    padding: 1px 1px;\n  }\n\n  .script-block {\n    padding: 8px 10px;\n  }\n}\n\n/* Loading Spinner */\n.loading-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 200px;\n  gap: 20px;\n}\n\n.loading-spinner {\n  width: 40px;\n  height: 40px;\n  border: 4px solid #f3f3f3;\n  border-top: 4px solid #2196f3;\n  border-radius: 50%;\n  animation: spin 1s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\n.loading-text {\n  color: #666;\n  font-size: 14px;\n  font-weight: 500;\n  animation: pulse-text 1.5s ease-in-out infinite;\n}\n\n@keyframes pulse-text {\n  0%, 100% { opacity: 0.6; }\n  50% { opacity: 1; }\n}\n\n/* Dictionary highlight effect */\n.dictionary-item.highlighted-dictionary {\n  background: linear-gradient(135deg, #fff3cd, #ffeaa7);\n  border: 2px solid #f39c12;\n  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);\n  transform: scale(1.02);\n  transition: all 0.3s ease;\n}\n\n.dictionary-item.highlighted-dictionary .entry-title {\n  color: #d68910;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n}\n\n/* Swap Button */\n.swap-button {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 32px;\n  height: 32px;\n  background: rgba(255, 255, 255, 0.95);\n  border: 1px solid #e0e0e0;\n  border-radius: 50%;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);\n  backdrop-filter: blur(10px);\n  z-index: 999;\n  color: #666;\n  transition: all 0.3s ease;\n  font-size: 14px;\n}\n\n.swap-button:hover {\n  background: #2196f3;\n  color: white;\n  transform: translate(-50%, -50%) scale(1.1);\n  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.3);\n}\n\n/* Mobile adjustments for swap button */\n@media (max-width: 768px) {\n  .swap-button {\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 28px;\n    height: 28px;\n    font-size: 12px;\n  }\n\n  .swap-button:hover {\n    transform: translate(-50%, -50%) scale(1.1);\n  }\n\n  .player-container.swapped {\n    flex-direction: column-reverse;\n  }\n\n  /* Maintain borders when swapped on mobile */\n  .player-container.swapped .scripts-section {\n    border-top: none;\n    border-bottom: 1px solid #e0e0e0;\n  }\n\n  .player-container.swapped .dictionary-section {\n    border-bottom: none;\n    border-top: 1px solid #e0e0e0;\n  }\n}\n/* E\nntry Header with Favorite Button */\n.entry-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n\n.entry-title {\n  flex: 1;\n  margin: 0;\n}\n\n.favorite-btn {\n  background: none;\n  border: none;\n  color: #ccc;\n  cursor: pointer;\n  padding: 0.25rem;\n  border-radius: 4px;\n  transition: all 0.2s ease;\n  font-size: 1.1rem;\n  min-width: 28px;\n  height: 28px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.favorite-btn:hover {\n  color: #ffc107;\n  background: rgba(255, 193, 7, 0.1);\n  transform: scale(1.1);\n}\n\n.favorite-btn.active {\n  color: #ffc107;\n}\n\n.favorite-btn.active:hover {\n  color: #e0a800;\n}\n\n/* Mobile adjustments for favorite button */\n@media (max-width: 768px) {\n  .entry-header {\n    gap: 0.25rem;\n  }\n  \n  .favorite-btn {\n    font-size: 1rem;\n    min-width: 24px;\n    height: 24px;\n    padding: 0.2rem;\n  }\n}/* Respo\nnsive scroll margins for mobile */\n@media (max-width: 768px) {\n  .dictionary-item,\n  .script-item {\n    scroll-margin-top: 60px; /* Smaller margin for mobile header */\n  }\n}");
 
 /***/ }),
 
@@ -23950,7 +24485,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
 /* harmony import */ var _dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @dooboostore/core-web/valid/ValidUtils */ "../../packages/@dooboostore/core-web/src/valid/ValidUtils.ts");
 /* harmony import */ var _dooboostore_dom_render_components_ComponentBase__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @dooboostore/dom-render/components/ComponentBase */ "../../packages/@dooboostore/dom-render/src/components/ComponentBase.ts");
-var _a;
+/* harmony import */ var _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @src/service/english/VideoItemService */ "./src/service/english/VideoItemService.ts");
+var _a, _b;
+
 
 
 
@@ -23961,10 +24498,10 @@ var _a;
 
 let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_render_components_ComponentBase__WEBPACK_IMPORTED_MODULE_7__.ComponentBase {
     apiService;
+    videoItemService;
     name;
     scripts;
     dictionaries;
-    items;
     currentItem;
     // Favorite functions passed from parent router
     addToFavorites;
@@ -23986,9 +24523,10 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
     youtubePlayerReady = false;
     userManuallySelected = false;
     lastManualSelectionTime = 0;
-    constructor(apiService) {
+    constructor(apiService, videoItemService) {
         super();
         this.apiService = apiService;
+        this.videoItemService = videoItemService;
     }
     onCreateRender(param) {
         console.log('PlayerRouteComponent onCreateRender called with params:', param);
@@ -24008,24 +24546,21 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
         await super.onRawSetRendered(rawSet, otherData);
     }
     async onRouting(r) {
-        this.name = r.routerModule.pathData?.name;
-    }
-    async onInitRender(param, rawSet) {
-        await super.onInitRender(param, rawSet);
+        this.name = decodeURIComponent(r.routerModule.pathData?.name ?? '');
+        console.log('Routing to PlayerRouteComponent with name:', this.name);
         if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_6__.ValidUtils.isBrowser() && this.name) {
             try {
                 this.isLoadingScripts = true;
                 // Load both scripts and items data in parallel
-                const [scriptsData, itemsData] = await Promise.all([
+                const [scriptsData, videoItem] = await Promise.all([
                     this.apiService.get({ target: `/datas/english/scripts/${this.name}.json` }),
-                    this.apiService.get({ target: '/datas/english/items.json' })
+                    this.videoItemService.item(this.name)
                 ]);
+                console.log('!!!!!!!!!!!!!!!');
                 this.scripts = scriptsData;
-                this.items = itemsData;
                 // Extract current item from items array using this.name
-                this.currentItem = this.items.find(item => item.name === this.name);
+                this.currentItem = videoItem;
                 this.isLoadingScripts = false;
-                console.log(`📚 Loaded ${this.scripts.length} scripts and ${this.items.length} items`);
                 console.log(`🎯 Current item:`, this.currentItem);
                 // Initialize YouTube player if current item is YouTube
                 if (this.currentItem?.type === 'youtube') {
@@ -24056,6 +24591,10 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
                 this.isLoadingScripts = false;
             }
         }
+    }
+    async onInitRender(param, rawSet) {
+        await super.onInitRender(param, rawSet);
+        console.log('asd');
     }
     initializeSpeechSynthesis() {
         if (!_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_6__.ValidUtils.isBrowser() || !('speechSynthesis' in window)) {
@@ -24621,30 +25160,46 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
         if (!this.youtubePlayer || !this.youtubePlayerReady) {
             return;
         }
-        // Monitor YouTube playback time every 500ms
+        // Monitor YouTube playback time every 1 second (reduced frequency)
         setInterval(() => {
             if (this.youtubePlayer && this.youtubePlayerReady && this.scripts) {
                 try {
-                    const currentTime = this.youtubePlayer.getCurrentTime();
-                    this.updateScriptSelectionByTime(currentTime);
+                    // Only check time if YouTube is actually playing
+                    const playerState = this.youtubePlayer.getPlayerState();
+                    if (playerState === 1) { // Only when playing
+                        const currentTime = this.youtubePlayer.getCurrentTime();
+                        this.updateScriptSelectionByTime(currentTime);
+                    }
                 }
                 catch (error) {
                     // Ignore errors when player is not ready
                 }
             }
-        }, 500);
+        }, 1000); // Increased to 1 second to reduce CPU usage
     }
     updateScriptSelectionByTime(currentTime) {
         if (!this.scripts)
             return;
         // Don't auto-select if user manually selected recently
         if (this.userManuallySelected) {
-            console.log('🚫 Skipping auto-selection - user manually selected');
             return;
         }
-        // Don't auto-select if time is very early
+        // Don't auto-select if time is very early or if YouTube is not playing
         if (currentTime < 1)
             return;
+        // Check if YouTube is actually playing to avoid unnecessary processing
+        try {
+            const playerState = this.youtubePlayer?.getPlayerState();
+            // Only process if YouTube is playing (state 1) or paused (state 2)
+            // Don't process if unstarted (-1), ended (0), buffering (3), or cued (5)
+            if (playerState !== 1 && playerState !== 2) {
+                return;
+            }
+        }
+        catch (error) {
+            // If we can't get player state, skip auto-selection
+            return;
+        }
         // Find the script that matches the current time
         let matchingScriptIndex = -1;
         for (let i = 0; i < this.scripts.length; i++) {
@@ -24700,7 +25255,6 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
     parseTimeString(timeStr) {
         // Remove any whitespace
         timeStr = timeStr.trim();
-        console.log('🕐 Parsing time string:', timeStr);
         // Handle MM:SS or H:MM:SS format (e.g., "8:52", "1:23:45")
         const colonMatch = timeStr.match(/^(\d+):(\d+)(?::(\d+))?$/);
         if (colonMatch) {
@@ -24708,7 +25262,6 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
             const minutes = colonMatch[3] ? parseInt(colonMatch[2]) : parseInt(colonMatch[1]);
             const seconds = colonMatch[3] ? parseInt(colonMatch[3]) : parseInt(colonMatch[2]);
             const totalSeconds = hours * 3600 + minutes * 60 + seconds;
-            console.log(`🕐 Parsed ${timeStr} as ${totalSeconds} seconds (${hours}h ${minutes}m ${seconds}s)`);
             return totalSeconds;
         }
         // Handle formats like "10s", "1m30s", "2m", "1h30m", etc.
@@ -24739,12 +25292,6 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
                 totalSeconds = plainNumber;
                 hasValidTime = true;
             }
-        }
-        if (hasValidTime) {
-            console.log(`🕐 Parsed ${timeStr} as ${totalSeconds} seconds`);
-        }
-        else {
-            console.warn(`🕐 Could not parse time string: ${timeStr}`);
         }
         // Return totalSeconds if we found valid time (including 0), otherwise null
         return hasValidTime ? totalSeconds : null;
@@ -25203,26 +25750,27 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
     }
     seekYouTubeToScriptTime(scriptIndex) {
         if (!this.youtubePlayer || !this.youtubePlayerReady || !this.scripts) {
-            console.warn('🎥 YouTube player not ready for seeking');
             return;
         }
         const currentScript = this.scripts[scriptIndex];
         if (!currentScript || !currentScript.t) {
-            console.warn('🎥 No time information for script');
             return;
         }
         // Parse time string
         const timeInSeconds = this.parseTimeString(currentScript.t);
         if (timeInSeconds === null) {
-            console.warn('🎥 Could not parse time:', currentScript.t);
             return;
         }
-        console.log(`🎥 Seeking YouTube to ${timeInSeconds}s (${currentScript.t}) - no auto-play`);
+        console.log(`🎥 Seeking YouTube to ${timeInSeconds}s (${currentScript.t})`);
         try {
+            // Check if player is ready for seeking
+            const playerState = this.youtubePlayer.getPlayerState();
             // Seek to the time without playing - just move to position
             this.youtubePlayer.seekTo(timeInSeconds, true);
-            // Explicitly pause to ensure no auto-play
-            this.youtubePlayer.pauseVideo();
+            // Only pause if the video was not already paused/stopped
+            if (playerState === 1) { // Only pause if currently playing
+                this.youtubePlayer.pauseVideo();
+            }
         }
         catch (error) {
             console.error('🎥 Error seeking YouTube player:', error);
@@ -25248,12 +25796,6 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
             return false;
         }
         return this.isWordFavorite(word);
-    }
-    // Get current item info
-    getCurrentItem() {
-        if (!this.items || !this.name)
-            return undefined;
-        return this.items.find(item => item.name === this.name);
     }
     createYouTubeEmbed() {
         if (!_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_6__.ValidUtils.isBrowser() || !this.currentItem?.link) {
@@ -25370,18 +25912,6 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
         console.error('🎥 Could not extract video ID from URL:', url);
         return null;
     }
-    // Get item by name
-    getItemByName(name) {
-        if (!this.items)
-            return undefined;
-        return this.items.find(item => item.name === name);
-    }
-    // Get all items of specific type
-    getItemsByType(type) {
-        if (!this.items)
-            return [];
-        return this.items.filter(item => item.type === type);
-    }
     onDestroy() {
         // Stop any ongoing speech and word highlighting
         this.stopSpeech();
@@ -25402,7 +25932,7 @@ PlayerRouteComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         template: _player_route_component_html__WEBPACK_IMPORTED_MODULE_2__["default"],
         styles: _player_route_component_css__WEBPACK_IMPORTED_MODULE_3__["default"]
     }),
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService) === "function" ? _a : Object])
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService) === "function" ? _a : Object, typeof (_b = typeof _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__.VideoItemService !== "undefined" && _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__.VideoItemService) === "function" ? _b : Object])
 ], PlayerRouteComponent);
 
 
@@ -25617,6 +26147,46 @@ var CodeFetchService;
 (function (CodeFetchService) {
     CodeFetchService.SYMBOL = Symbol.for("CodeFetchService");
 })(CodeFetchService || (CodeFetchService = {}));
+
+
+/***/ }),
+
+/***/ "./src/service/english/VideoItemService.ts":
+/*!*************************************************!*\
+  !*** ./src/service/english/VideoItemService.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   VideoItemService: () => (/* binding */ VideoItemService)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
+/* harmony import */ var _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
+/* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
+var _a;
+
+
+
+let VideoItemService = class VideoItemService {
+    apiService;
+    constructor(apiService) {
+        this.apiService = apiService;
+    }
+    async items() {
+        return await this.apiService.get({ target: '/datas/english/items.json' });
+    }
+    async item(name) {
+        const items = await this.items();
+        return items.find(item => item.name === name);
+    }
+};
+VideoItemService = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__.Sim,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_2__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_2__.ApiService) === "function" ? _a : Object])
+], VideoItemService);
+
 
 
 /***/ })

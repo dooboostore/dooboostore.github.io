@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "salt",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sɔːlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "소금, 식염(= common ~)",
+              "examples": [
+                {
+                  "text": "spill <b>salt</b>",
+                  "translatedText": "소금을 엎지르다 ((재수가 없다고 전해짐))"
+                }
+              ],
+              "originalMeaning": "소금, 식염(= common ~)"
+            },
+            {
+              "meaning": "[pl.] 염제(塩劑), 약용 염 ((완하제·방부제))",
+              "examples": [],
+              "originalMeaning": "[pl.] 염제(塩劑), 약용 염 ((완하제·방부제))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "소금의, 소금기 있는, 짠(cf. FRESH)",
+              "examples": [
+                {
+                  "text": "a <b>salt</b> spring",
+                  "translatedText": "염천"
+                }
+              ],
+              "originalMeaning": "소금의, 소금기 있는, 짠(cf. FRESH)"
+            },
+            {
+              "meaning": "소금에 절인",
+              "examples": [
+                {
+                  "text": "<b>salt</b> cod",
+                  "translatedText": "소금에 절인 대구"
+                }
+              ],
+              "originalMeaning": "소금에 절인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<음식에> 소금을 치다, 소금으로 간을 맞추다",
+              "examples": [],
+              "originalMeaning": "<음식에> 소금을 치다, 소금으로 간을 맞추다"
+            },
+            {
+              "meaning": "소금에 절이다 ((down))",
+              "examples": [],
+              "originalMeaning": "소금에 절이다 ((down))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a8c2f788511c4f66bf9d804b756109dd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a8c2f788511c4f66bf9d804b756109dd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "salts"
+        },
+        {
+          "type": "과거형",
+          "value": "salted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "salting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "salted"
+        }
+      ],
+      "aliasConjugation": "salts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c8cbd3fc976f1973928208d629475209",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "SALT",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전략 무기 제한 협정[회담]",
+              "examples": [],
+              "originalMeaning": "전략 무기 제한 협정[회담]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c00c4213a3d4694b36b01280310abab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c00c4213a3d4694b36b01280310abab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ef14d4e48779dbef2e816abb26ce0c20",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소금은 바닷물 속에 있다.",
+      "text": "<b>Salt</b> exists in the sea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소금 좀 집어 주십시오.",
+      "text": "Please pass (me) the <b>salt</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 세상의 사표가 될 만한 사람이다",
+      "text": "He is the <b>salt</b> of the earth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "바닷물에는 다량의 염분이 포함되어 있다",
+      "text": "Sea-water contains much <b>salt</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "염분을 적게 섭취하도록 하시오",
+      "text": "Try to use less <b>salt</b> in your diet."
+    }
+  ],
+  "isWordType": true
+}

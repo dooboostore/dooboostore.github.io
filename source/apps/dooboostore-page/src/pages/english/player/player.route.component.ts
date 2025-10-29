@@ -14,6 +14,7 @@ import {
   ComponentBase,
   query
 } from '@dooboostore/dom-render/components/ComponentBase';
+import { VideoItem, VideoItemService } from '@src/service/english/VideoItemService';
 
 
 
@@ -77,12 +78,6 @@ export type Dictionary = {
   originalWord?: string; // Add original word from filename
 };
 
-export type ItemData = {
-  name: string;
-  type?: string;
-  img: string;
-  link?: string;
-};
 
 @Sim
 @Component({
@@ -93,8 +88,7 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
   private name?: string | undefined;
   scripts?: Script[];
   dictionaries?: Dictionary[];
-  items?: ItemData[];
-  currentItem?: ItemData;
+  currentItem?: VideoItem;
 
   // Favorite functions passed from parent router
   addToFavorites?: (word: string, meaning: string) => boolean;
@@ -118,7 +112,7 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
   private userManuallySelected = false;
   private lastManualSelectionTime = 0;
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private videoItemService: VideoItemService) {
     super();
   }
 
@@ -142,11 +136,8 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
   }
 
   async onRouting(r: RoutingDataSet): Promise<void> {
-    this.name = r.routerModule.pathData?.name;
-  }
-
-  async onInitRender(param: any, rawSet: RawSet): Promise<void> {
-    await super.onInitRender(param, rawSet);
+    this.name = decodeURIComponent(r.routerModule.pathData?.name??'');
+    console.log('Routing to PlayerRouteComponent with name:', this.name);
 
 
     if (ValidUtils.isBrowser() && this.name) {
@@ -154,20 +145,18 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
         this.isLoadingScripts = true;
 
         // Load both scripts and items data in parallel
-        const [scriptsData, itemsData] = await Promise.all([
+        const [scriptsData, videoItem] = await Promise.all([
           this.apiService.get<Script[]>({ target: `/datas/english/scripts/${this.name}.json` }),
-          this.apiService.get<ItemData[]>({ target: '/datas/english/items.json' })
+          this.videoItemService.item(this.name)
         ]);
 
+        console.log('!!!!!!!!!!!!!!!');
         this.scripts = scriptsData;
-        this.items = itemsData;
-
         // Extract current item from items array using this.name
-        this.currentItem = this.items.find(item => item.name === this.name);
+        this.currentItem = videoItem;
 
         this.isLoadingScripts = false;
 
-        console.log(`📚 Loaded ${this.scripts.length} scripts and ${this.items.length} items`);
         console.log(`🎯 Current item:`, this.currentItem);
 
         // Initialize YouTube player if current item is YouTube
@@ -201,6 +190,12 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
         this.isLoadingScripts = false;
       }
     }
+
+  }
+
+  async onInitRender(param: any, rawSet: RawSet): Promise<void> {
+    await super.onInitRender(param, rawSet);
+    console.log('asd')
   }
 
   private initializeSpeechSynthesis() {
@@ -1643,12 +1638,6 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
     return this.isWordFavorite(word);
   }
 
-  // Get current item info
-  getCurrentItem(): ItemData | undefined {
-    if (!this.items || !this.name) return undefined;
-    return this.items.find(item => item.name === this.name);
-  }
-
   private createYouTubeEmbed() {
     if (!ValidUtils.isBrowser() || !this.currentItem?.link) {
       console.warn('🎥 Cannot create YouTube embed: browser check or link missing');
@@ -1774,17 +1763,6 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
     return null;
   }
 
-  // Get item by name
-  getItemByName(name: string): ItemData | undefined {
-    if (!this.items) return undefined;
-    return this.items.find(item => item.name === name);
-  }
-
-  // Get all items of specific type
-  getItemsByType(type: string): ItemData[] {
-    if (!this.items) return [];
-    return this.items.filter(item => item.type === type);
-  }
 
   onDestroy() {
     // Stop any ongoing speech and word highlighting
