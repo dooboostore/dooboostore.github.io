@@ -892,17 +892,21 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
       return;
     }
 
-    // Monitor YouTube playback time every 500ms
+    // Monitor YouTube playback time every 1 second (reduced frequency)
     setInterval(() => {
       if (this.youtubePlayer && this.youtubePlayerReady && this.scripts) {
         try {
-          const currentTime = this.youtubePlayer.getCurrentTime();
-          this.updateScriptSelectionByTime(currentTime);
+          // Only check time if YouTube is actually playing
+          const playerState = this.youtubePlayer.getPlayerState();
+          if (playerState === 1) { // Only when playing
+            const currentTime = this.youtubePlayer.getCurrentTime();
+            this.updateScriptSelectionByTime(currentTime);
+          }
         } catch (error) {
           // Ignore errors when player is not ready
         }
       }
-    }, 500);
+    }, 1000); // Increased to 1 second to reduce CPU usage
   }
 
   private updateScriptSelectionByTime(currentTime: number) {
@@ -910,12 +914,24 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
 
     // Don't auto-select if user manually selected recently
     if (this.userManuallySelected) {
-      console.log('🚫 Skipping auto-selection - user manually selected');
       return;
     }
 
-    // Don't auto-select if time is very early
+    // Don't auto-select if time is very early or if YouTube is not playing
     if (currentTime < 1) return;
+
+    // Check if YouTube is actually playing to avoid unnecessary processing
+    try {
+      const playerState = this.youtubePlayer?.getPlayerState();
+      // Only process if YouTube is playing (state 1) or paused (state 2)
+      // Don't process if unstarted (-1), ended (0), buffering (3), or cued (5)
+      if (playerState !== 1 && playerState !== 2) {
+        return;
+      }
+    } catch (error) {
+      // If we can't get player state, skip auto-selection
+      return;
+    }
 
     // Find the script that matches the current time
     let matchingScriptIndex = -1;
@@ -982,8 +998,6 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
     // Remove any whitespace
     timeStr = timeStr.trim();
 
-    console.log('🕐 Parsing time string:', timeStr);
-
     // Handle MM:SS or H:MM:SS format (e.g., "8:52", "1:23:45")
     const colonMatch = timeStr.match(/^(\d+):(\d+)(?::(\d+))?$/);
     if (colonMatch) {
@@ -992,7 +1006,6 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
       const seconds = colonMatch[3] ? parseInt(colonMatch[3]) : parseInt(colonMatch[2]);
 
       const totalSeconds = hours * 3600 + minutes * 60 + seconds;
-      console.log(`🕐 Parsed ${timeStr} as ${totalSeconds} seconds (${hours}h ${minutes}m ${seconds}s)`);
       return totalSeconds;
     }
 
@@ -1028,12 +1041,6 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
         totalSeconds = plainNumber;
         hasValidTime = true;
       }
-    }
-
-    if (hasValidTime) {
-      console.log(`🕐 Parsed ${timeStr} as ${totalSeconds} seconds`);
-    } else {
-      console.warn(`🕐 Could not parse time string: ${timeStr}`);
     }
 
     // Return totalSeconds if we found valid time (including 0), otherwise null
@@ -1580,30 +1587,33 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
 
   private seekYouTubeToScriptTime(scriptIndex: number) {
     if (!this.youtubePlayer || !this.youtubePlayerReady || !this.scripts) {
-      console.warn('🎥 YouTube player not ready for seeking');
       return;
     }
 
     const currentScript = this.scripts[scriptIndex];
     if (!currentScript || !currentScript.t) {
-      console.warn('🎥 No time information for script');
       return;
     }
 
     // Parse time string
     const timeInSeconds = this.parseTimeString(currentScript.t);
     if (timeInSeconds === null) {
-      console.warn('🎥 Could not parse time:', currentScript.t);
       return;
     }
 
-    console.log(`🎥 Seeking YouTube to ${timeInSeconds}s (${currentScript.t}) - no auto-play`);
+    console.log(`🎥 Seeking YouTube to ${timeInSeconds}s (${currentScript.t})`);
 
     try {
+      // Check if player is ready for seeking
+      const playerState = this.youtubePlayer.getPlayerState();
+
       // Seek to the time without playing - just move to position
       this.youtubePlayer.seekTo(timeInSeconds, true);
-      // Explicitly pause to ensure no auto-play
-      this.youtubePlayer.pauseVideo();
+
+      // Only pause if the video was not already paused/stopped
+      if (playerState === 1) { // Only pause if currently playing
+        this.youtubePlayer.pauseVideo();
+      }
     } catch (error) {
       console.error('🎥 Error seeking YouTube player:', error);
     }
