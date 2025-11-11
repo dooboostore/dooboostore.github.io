@@ -1123,10 +1123,10 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
       const fetchStart = performance.now();
       const dictionaries: any[] =[];
       (await this.dictionaryService.getWords(cleanWords)).forEach((word, index) => {
+        dictionaries!.push(word);
         if (index > 0 && Math.random() < 0.3) {
           dictionaries!.push(null as any);
         }
-        dictionaries!.push(word);
       });
       this.dictionaries = dictionaries;
       const fetchTime = performance.now();

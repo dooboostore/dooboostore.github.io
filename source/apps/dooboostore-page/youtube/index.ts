@@ -173,6 +173,15 @@ async function translateWithPapago(text: string): Promise<string> {
       method: 'POST',
       headers: {
         'accept': 'application/json',
+        'accept-language': 'ko',
+        'authorization': 'PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:Nc9wm5xDwFIjG9zZ/s5W/Q==',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'device-type': 'pc',
+        'origin': 'https://papago.naver.com',
+        'referer': 'https://papago.naver.com/',
+        'timestamp': Date.now().toString(),
+        'x-apigw-partnerid': 'papago',
+        'x-ppg-ctype': 'WEB_PC'
       },
       body: new URLSearchParams({
         deviceId: 'ffbaf550-ce4b-4478-ae20-ee54a0e3cd60',

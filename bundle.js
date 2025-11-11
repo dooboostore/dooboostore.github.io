@@ -23583,11 +23583,11 @@ let EnglishRouteComponent = class EnglishRouteComponent extends _dooboostore_dom
             // Separate items by type
             this.movieItems = this.items.filter(item => !item.type || item.type === 'movie');
             this.youtubeItems = [];
-            this.items.filter(item => item.type === 'youtube').forEach(it => {
-                if (Math.random() < 0.1) {
+            this.items.filter(item => item.type === 'youtube').forEach((it, index) => {
+                this.youtubeItems.push(it);
+                if (index > 0 && Math.random() < 0.2) {
                     this.youtubeItems.push(null);
                 }
-                this.youtubeItems.push(it);
             });
             console.log('Movies:', this.movieItems.length);
             console.log('YouTube videos:', this.youtubeItems.length);
@@ -24810,10 +24810,10 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
             const fetchStart = performance.now();
             const dictionaries = [];
             (await this.dictionaryService.getWords(cleanWords)).forEach((word, index) => {
+                dictionaries.push(word);
                 if (index > 0 && Math.random() < 0.3) {
                     dictionaries.push(null);
                 }
-                dictionaries.push(word);
             });
             this.dictionaries = dictionaries;
             const fetchTime = performance.now();

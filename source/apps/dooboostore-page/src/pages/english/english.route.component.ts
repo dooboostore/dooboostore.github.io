@@ -50,11 +50,11 @@ export class EnglishRouteComponent extends ComponentBase implements RouterAction
       // Separate items by type
       this.movieItems = this.items.filter(item => !item.type || item.type === 'movie');
       this.youtubeItems = [];
-      this.items.filter(item => item.type === 'youtube').forEach(it => {
-        if (Math.random() < 0.1) {
+      this.items.filter(item => item.type === 'youtube').forEach((it,index) => {
+        this.youtubeItems!.push(it);
+        if (index > 0 && Math.random() < 0.2) {
           this.youtubeItems!.push(null as any);
         }
-        this.youtubeItems!.push(it);
       });
       
       console.log('Movies:', this.movieItems.length);
