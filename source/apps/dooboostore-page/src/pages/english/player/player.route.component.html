@@ -17,7 +17,7 @@
                                 ${#item#.entry}$</h3>
                             <label class="favorite-checkbox-label" title="즐겨찾기에 추가/제거" dr-if="#item#.entry">
                                 <input type="checkbox" class="favorite-checkbox"
-                                    dr-attr="{checked: @this@?.checkWordFavorite?.(#item#.entry || '') ? 'checked' : null}"
+                                    dr-attr="{checked: @this@.checkWordFavorite(#item#.entry || '') ? 'checked' : null}"
                                     dr-event-change="@this@.toggleFavorite(#item#.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#.entry || '')">
                                 <i class="fas fa-star favorite-icon"></i>
                             </label>

@@ -53,6 +53,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
   // items?: Item[];
   isInSubRoute = false; // Track if we're in a sub-route
 
+  name='zzz'
   constructor(
     private config: SimFrontOption,
     private videoItemService: VideoItemService,
@@ -75,6 +76,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
   async onInitRender(param: any, rawSet: RawSet) {
     await super.onInitRender(param, rawSet);
 
+    this.name = new Date().toISOString();
     console.log('english.router.component onInitRender-------');
     // Load favorite words from localStorage
     this.loadFavoriteWords();
