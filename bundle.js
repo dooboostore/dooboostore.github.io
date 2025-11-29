@@ -23990,7 +23990,7 @@ __webpack_require__.r(__webpack_exports__);
 const environment = {
     name: 'default-template',
     environment: 'local',
-    host: 'http://localhost:8082',
+    host: 'https://dooboostore.github.io',
     production: false,
     frontDistPath: 'dist-front-end',
     frontDistIndexFileName: 'index.html',
@@ -25184,7 +25184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   environment: () => (/* binding */ environment)
 /* harmony export */ });
 const environment = {
-    packageGithubIoUrl: 'http://localhost:8082/dooboostore-develop.github.io/packages',
+    packageGithubIoUrl: 'https://dooboostore-develop.github.io/packages',
     cookie: {
         accessTokenName: 'ACCESS_TOKEN',
         refreshTokenName: 'REFRESH_TOKEN',
