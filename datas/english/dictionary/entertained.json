@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "entertain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│entər│teɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "즐겁게 하다, 즐기게 하다, 위안하다(amuse)",
+              "examples": [
+                {
+                  "text": "<b>entertain</b> the company with music[by tricks]",
+                  "translatedText": "음악[요술]으로 좌중을 즐겁게 하다"
+                }
+              ],
+              "originalMeaning": "즐겁게 하다, 즐기게 하다, 위안하다(amuse)"
+            },
+            {
+              "meaning": "대접하다, 환대하다 ((with, at, to))",
+              "examples": [
+                {
+                  "text": "<b>entertain</b> one's friends at[to] a garden party",
+                  "translatedText": "가든 파티에 친구들을 초청하여 대접하다"
+                }
+              ],
+              "originalMeaning": "대접하다, 환대하다 ((with, at, to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대접하다, 환대하다",
+              "examples": [],
+              "originalMeaning": "대접하다, 환대하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d38e3d93eee04813831188e0c6c725ba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d38e3d93eee04813831188e0c6c725ba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "entertains"
+        },
+        {
+          "type": "과거형",
+          "value": "entertained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "entertaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "entertained"
+        }
+      ],
+      "aliasConjugation": "entertains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2f840cd57c9c6696c6f97e129b0fd1ce",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리를 정성껏 대접했다",
+      "text": "He did his utmost to <b>entertain</b> us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그들에게 저녁을 대접했다",
+      "text": "I treated[<b>entertained</b>] them to dinner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나에 대한 대우가 끔찍했다",
+      "text": "He did his utmost to <b>entertain</b> me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 손님 접대하느라 큰 소란을 피웠다",
+      "text": "They made much ado to <b>entertain</b> their guests."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "연예인 일행은 노래와 춤으로 장병들을 위문했다",
+      "text": "A company of entertainers <b>entertained</b> troops with songs and dances."
+    }
+  ],
+  "isWordType": true
+}

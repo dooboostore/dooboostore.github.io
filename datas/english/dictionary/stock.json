@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "stock",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "stɑːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "재고품, 사들인 물건, 저장품",
+              "examples": [],
+              "originalMeaning": "재고품, 사들인 물건, 저장품"
+            },
+            {
+              "meaning": "저장, 비축",
+              "examples": [
+                {
+                  "text": "lay in a <b>stock</b> of flour",
+                  "translatedText": "밀가루를 사들이다"
+                }
+              ],
+              "originalMeaning": "저장, 비축"
+            },
+            {
+              "meaning": "축적, 비축, (지식 등의) 온축",
+              "examples": [
+                {
+                  "text": "have a good <b>stock</b> of information",
+                  "translatedText": "풍부한 정보를 갖고 있다, 소식통이다"
+                }
+              ],
+              "originalMeaning": "축적, 비축, (지식 등의) 온축"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "수중에 있는, 재고의; 재고 관리의; 주요한",
+              "examples": [
+                {
+                  "text": "<b>stock</b> articles",
+                  "translatedText": "재고품"
+                }
+              ],
+              "originalMeaning": "수중에 있는, 재고의; 재고 관리의; 주요한"
+            },
+            {
+              "meaning": "표준의; 흔한, 보통의, 상투적인",
+              "examples": [
+                {
+                  "text": "a <b>stock</b> size in shoes",
+                  "translatedText": "표준 사이즈의 구두"
+                }
+              ],
+              "originalMeaning": "표준의; 흔한, 보통의, 상투적인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<상점 등에> (물품을) 들여놓다, 사들이다, 재고품으로 쌓아 두다 ((with)); <상품 등을> 비축하다, 저장하다",
+              "examples": [
+                {
+                  "text": "The store is well stocked with excellent goods.",
+                  "translatedText": "저 상점에는 좋은 물품이 풍부하게 갖추어져 있다."
+                }
+              ],
+              "originalMeaning": "<상점 등에> (물품을) 들여놓다, 사들이다, 재고품으로 쌓아 두다 ((with)); <상품 등을> 비축하다, 저장하다"
+            },
+            {
+              "meaning": "<물건을> 보관하다, 두다; <마음·기억에> (지식 등을) 쌓아 두다, 공급하다 ((with))",
+              "examples": [],
+              "originalMeaning": "<물건을> 보관하다, 두다; <마음·기억에> (지식 등을) 쌓아 두다, 공급하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2f4ca6a5d693407eb438d91b80496eed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2f4ca6a5d693407eb438d91b80496eed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stocks"
+        },
+        {
+          "type": "과거형",
+          "value": "stocked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stocking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stocked"
+        }
+      ],
+      "aliasConjugation": "stocks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "75714f815470efe9e4c4f66647cf571a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 좋은 가문의 출신이다.",
+      "text": "He comes of (a) good <b>stock</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예비 식량이 바닥이 났다",
+      "text": "Our <b>stock</b> of food is running out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마침 그 물건은 동났습니다",
+      "text": "That article is unluckily out of <b>stock</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 주식 시장에서 돈을 왕창 벌었다",
+      "text": "I made a bundle in the <b>stock</b> market."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주가가 공전의 오름세를 보였다",
+      "text": "The price of stocks has hit an all-time high."
+    }
+  ],
+  "isWordType": true
+}

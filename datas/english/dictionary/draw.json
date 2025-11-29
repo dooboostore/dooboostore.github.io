@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "draw",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "drɔː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "당기다, 끌다, 잡아끌다; 끌어당기다 (=pull)",
+              "examples": [
+                {
+                  "text": "<b>draw</b> a cart",
+                  "translatedText": "짐마차를 끌다"
+                }
+              ],
+              "originalMeaning": "당기다, 끌다, 잡아끌다; 끌어당기다 (=<span class='related_word' lang='en' >pull</span>)"
+            },
+            {
+              "meaning": "<기관차 등이> 끌고 가다(drag), 잡아끌다(haul), 끌어들이다; <고삐·재갈 등을> 잡아채다",
+              "examples": [
+                {
+                  "text": "<b>draw</b> a belt tight",
+                  "translatedText": "혁대를 졸라매다"
+                }
+              ],
+              "originalMeaning": "<기관차 등이> 끌고 가다(drag), 잡아끌다(haul), 끌어들이다; <고삐·재갈 등을> 잡아채다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "끌리다; 끌다, 끌어당기다(pull)",
+              "examples": [
+                {
+                  "text": "This horse draws well.",
+                  "translatedText": "이 말은 (짐을) 잘 끈다."
+                }
+              ],
+              "originalMeaning": "끌리다; 끌다, 끌어당기다(pull)"
+            },
+            {
+              "meaning": "칼을 뽑다, 권총을 빼다, <이빨 등이> 빠지다",
+              "examples": [],
+              "originalMeaning": "칼을 뽑다, 권총을 빼다, <이빨 등이> 빠지다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "끌어당김, 끌기; 잡아 뽑음; 권총을 뺌; (파이프·담배·술의) 한 모금",
+              "examples": [],
+              "originalMeaning": "끌어당김, 끌기; 잡아 뽑음; 권총을 뺌; (파이프·담배·술의) 한 모금"
+            },
+            {
+              "meaning": "이목[인기]을 끄는 것, (사람을) 끄는 것",
+              "examples": [
+                {
+                  "text": "The new play is a great <b>draw</b>.",
+                  "translatedText": "이번의 연극은 대성공이다."
+                }
+              ],
+              "originalMeaning": "이목[인기]을 끄는 것, (사람을) 끄는 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a52d8724bb0e47c29b7565f8d215dc86",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a52d8724bb0e47c29b7565f8d215dc86",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "draws"
+        },
+        {
+          "type": "과거형",
+          "value": "drew"
+        },
+        {
+          "type": "현재 분사",
+          "value": "drawing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "drawn"
+        }
+      ],
+      "aliasConjugation": "draws",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1e56790f237c1e5f656b547979d25325",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이해도 며칠 남지 않았다",
+      "text": "We have only a few days left before the end of the year. or The year is drawing to a close. or New Year's Day is coming on us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 차는 잘 우러난다.",
+      "text": "This tea draws well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 말은  잘 끈다.",
+      "text": "This horse draws well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "코르크가 잘 빠지지 않는다.",
+      "text": "The cork draws hard."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "차가 잘 우러난다[우러나지 않는다]",
+      "text": "The tea draws[doesn't <b>draw</b>] well."
+    }
+  ],
+  "isWordType": true
+}

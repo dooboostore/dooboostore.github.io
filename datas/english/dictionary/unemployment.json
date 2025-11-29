@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "unemployment",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌʌnɪmˈplɔɪmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "실직, 실업 상태; 실업률, 실업자수",
+              "examples": [
+                {
+                  "text": "push <b>unemployment</b> down",
+                  "translatedText": "실업률을 낮추다"
+                }
+              ],
+              "originalMeaning": "실직, 실업 상태; 실업률, 실업자수"
+            },
+            {
+              "meaning": "(=UNEMPLOYMENT BENEFIT)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>UNEMPLOYMENT</b> BENEFIT</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0b319e35d7d345fc8f7b5c619321bd94",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0b319e35d7d345fc8f7b5c619321bd94",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3bdb0b8d8e775b207882d73bb47a25eb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불황으로 실업률이 23%로 치솟았다.",
+      "text": "The slump pushed up <b>unemployment</b> to 23%."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대부분의 경제 문제는 실업 탓이다",
+      "text": "<b>Unemployment</b> is the cause of most of economic problems."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실업이 다시 증가했다",
+      "text": "<b>Unemployment</b> has risen again."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실업 문제가 심각해졌다",
+      "text": "The <b>unemployment</b> problem has come to assume a grave aspect."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실업자가 많다",
+      "text": "There is much <b>unemployment</b>."
+    }
+  ],
+  "isWordType": true
+}

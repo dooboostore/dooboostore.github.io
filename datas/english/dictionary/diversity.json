@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "diversity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "daɪ│vɜːrsəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 다양성, 변화(variety); [U] 상이, 차이; [C] 상이점",
+              "examples": [],
+              "originalMeaning": "[UC/] 다양성, 변화(variety); [U] 상이, 차이; [C] 상이점"
+            },
+            {
+              "meaning": "[a ~] 여러 가지, 잡다 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>diversity</b> of opinion",
+                  "translatedText": "여러 가지 의견"
+                }
+              ],
+              "originalMeaning": "[a ~] 여러 가지, 잡다 ((of))"
+            },
+            {
+              "meaning": "인종의 다양함",
+              "examples": [],
+              "originalMeaning": "인종의 다양함"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e53eca942d314463bb8e0a12691ba347",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e53eca942d314463bb8e0a12691ba347",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3489ebdedc136cb804b7dab16654b020",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 작품은 단조롭다",
+      "text": "Her works lack <b>diversity</b>[follow one and the same pattern]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의견이 분분하다",
+      "text": "There is a great[rich] <b>diversity</b> of opinion."
+    }
+  ],
+  "isWordType": true
+}

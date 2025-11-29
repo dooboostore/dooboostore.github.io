@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "paper",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpeɪpə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 종이, 종이 모양의 것",
+              "examples": [
+                {
+                  "text": "two sheets of <b>paper</b>",
+                  "translatedText": "종이 두 장"
+                }
+              ],
+              "originalMeaning": "[U] 종이, 종이 모양의 것"
+            },
+            {
+              "meaning": "[pl.] 서류, 문서, 기록",
+              "examples": [
+                {
+                  "text": "Look through the <b>papers</b>, will you?",
+                  "translatedText": "그 서류를 한번 훑어봐 주지 않겠니?"
+                }
+              ],
+              "originalMeaning": "[pl.] 서류, 문서, 기록"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "종이의[로 만든]",
+              "examples": [
+                {
+                  "text": "a <b>paper</b> bag",
+                  "translatedText": "종이 봉지"
+                }
+              ],
+              "originalMeaning": "종이의[로 만든]"
+            },
+            {
+              "meaning": "종이 같은, 엷은, 약한",
+              "examples": [],
+              "originalMeaning": "종이 같은, 엷은, 약한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<방에> 벽지를 바르다, 도배하다; 색종이로 꾸미다",
+              "examples": [],
+              "originalMeaning": "<방에> 벽지를 바르다, 도배하다; 색종이로 꾸미다"
+            },
+            {
+              "meaning": "<물건을> 종이에 싸다",
+              "examples": [],
+              "originalMeaning": "<물건을> 종이에 싸다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d65fa45881f4e48b7d337004900d291",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d65fa45881f4e48b7d337004900d291",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "papers"
+        },
+        {
+          "type": "과거형",
+          "value": "papered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "papering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "papered"
+        }
+      ],
+      "aliasConjugation": "papers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9362df29b386481f97e910ccd283ff9a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 서류 좀 정리하여 보관해 주세요",
+      "text": "File these <b>papers</b>, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "서류는 A군이 보관하고 있다",
+      "text": "The <b>papers</b> are in the custody of Mr. A. or The <b>papers</b> are in Mr. A's keeping."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "종이 한 장만 다오",
+      "text": "Give me a piece of <b>paper</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "종이는 불이 잘 붙는다.",
+      "text": "<b>Paper</b> catches fire easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이제 종이는 다 써 버렸다.",
+      "text": "The <b>paper</b> is all used up."
+    }
+  ],
+  "isWordType": true
+}

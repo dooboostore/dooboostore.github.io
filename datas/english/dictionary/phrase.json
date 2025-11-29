@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "phrase",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "freɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[문법] 구(句) ((2어 이상의 집합체로서 문중에서 의미상 한 단위로 기능하는 것, ⇒ 문법 해설 (22) cf. CLAUSE))",
+              "examples": [
+                {
+                  "text": "a noun <b>phrase</b>",
+                  "translatedText": "명사구"
+                }
+              ],
+              "originalMeaning": "[문법] 구(句) ((2어 이상의 집합체로서 문중에서 의미상 한 단위로 기능하는 것, ⇒ 문법 해설 (22) cf. CLAUSE))"
+            },
+            {
+              "meaning": "숙어, 성구(成句), 관용구",
+              "examples": [
+                {
+                  "text": "a set <b>phrase</b>",
+                  "translatedText": "성구, 관용구"
+                }
+              ],
+              "originalMeaning": "숙어, 성구(成句), 관용구"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(특정한) 말로 나타내다, 말로 표현하다, …이라고 부르다",
+              "examples": [
+                {
+                  "text": "<b>phrase</b> one's thoughts",
+                  "translatedText": "생각을 말로 표현하다"
+                }
+              ],
+              "originalMeaning": "(특정한) 말로 나타내다, 말로 표현하다, …이라고 부르다"
+            },
+            {
+              "meaning": "[음악] (연주에서) 악구를 두드러지게 하다, 각 악구로 나누다",
+              "examples": [],
+              "originalMeaning": "[음악] (연주에서) 악구를 두드러지게 하다, 각 악구로 나누다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb8265d8b55c4b57a7858d484e2b782f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb8265d8b55c4b57a7858d484e2b782f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "phrases"
+        },
+        {
+          "type": "과거형",
+          "value": "phrased"
+        },
+        {
+          "type": "현재 분사",
+          "value": "phrasing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "phrased"
+        }
+      ],
+      "aliasConjugation": "phrases",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6d386e1baac3b9a3eda42bd2983f65d4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영어 단어 숙어의 보전",
+      "text": "A Thesaurus[Treasury] of English Words and Phrases"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 말이 그의 입버릇이 되어 있다",
+      "text": "That's his favorite <b>phrase</b>. or That's his pet expression."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 어구는 거꾸로 읽으면 알 수 있다",
+      "text": "This <b>phrase</b> may be understood when it is read bottom up."
+    }
+  ],
+  "isWordType": true
+}

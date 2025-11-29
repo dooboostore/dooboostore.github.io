@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "shallow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʃæloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "얕은(opp. deep)",
+              "examples": [
+                {
+                  "text": "<b>shallow</b> water",
+                  "translatedText": "얕은 물"
+                }
+              ],
+              "originalMeaning": "얕은(opp. deep)"
+            },
+            {
+              "meaning": "천박한, 얄팍한, 피상적인 <견해 등>",
+              "examples": [
+                {
+                  "text": "<b>shallow</b> mind",
+                  "translatedText": "피상적인 생각"
+                }
+              ],
+              "originalMeaning": "천박한, 얄팍한, 피상적인 <견해 등>"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] 물이 얕은 곳, 여울",
+              "examples": [
+                {
+                  "text": "wade through the shallows",
+                  "translatedText": "물이 얕은 곳을 걸어서 건너다"
+                }
+              ],
+              "originalMeaning": "[pl.] 물이 얕은 곳, 여울"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "얕게 하다, 얕아지다",
+              "examples": [],
+              "originalMeaning": "얕게 하다, 얕아지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/07691b0f1ffc44e980d7a977d0bd0e36",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/07691b0f1ffc44e980d7a977d0bd0e36",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "shallower"
+        },
+        {
+          "type": "최상급",
+          "value": "shallowest"
+        }
+      ],
+      "aliasConjugation": "shallower",
+      "aliasConjugationPos": "비교급",
+      "gdid": "cfbabf6d6679c6441317c7fed94a2575",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물이 얕은 곳에서 헤엄쳐라",
+      "text": "You should swim in <b>shallow</b> water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물이 얕아서 발이 바닥에 닿는다",
+      "text": "The water is so <b>shallow</b> I can touch the ground[bottom]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 상황 분석은 너무 피상적이다",
+      "text": "His analysis of the situation is too superficial[<b>shallow</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개울이 얕아서 걸어서 건널 수 있었다",
+      "text": "The stream was <b>shallow</b> and we could walk across it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "피상적인 지식",
+      "text": "(a) superficial[<b>shallow</b>] knowledge"
+    }
+  ],
+  "isWordType": true
+}

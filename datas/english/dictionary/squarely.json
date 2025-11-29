@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "squarely",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈskwerli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "직각으로, 네모지게",
+              "examples": [],
+              "originalMeaning": "직각으로, 네모지게"
+            },
+            {
+              "meaning": "정면으로, 바로",
+              "examples": [
+                {
+                  "text": "face a problem <b>squarely</b>",
+                  "translatedText": "문제에 정면으로 맞서다"
+                }
+              ],
+              "originalMeaning": "정면으로, 바로"
+            },
+            {
+              "meaning": "공평하게, 공명정대하게; 정정당당히, 정직하게",
+              "examples": [],
+              "originalMeaning": "공평하게, 공명정대하게; 정정당당히, 정직하게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1b10dac964bb47c08e53c6cbb027cb14",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1b10dac964bb47c08e53c6cbb027cb14",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a8ba007adf5da0a51ba89ff3d829b341",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "square",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "skwer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "정사각형, 네모진 물건[면]",
+              "examples": [],
+              "originalMeaning": "정사각형, 네모진 물건[면]"
+            },
+            {
+              "meaning": "(시가지의 네모난) 광장(廣場)(cf. CIRCUS)",
+              "examples": [],
+              "originalMeaning": "(시가지의 네모난) 광장(廣場)(cf. CIRCUS)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "정사각형의, 사각의",
+              "examples": [],
+              "originalMeaning": "정사각형의, 사각의"
+            },
+            {
+              "meaning": "직각을 이루는, 직각의 ((with, to))",
+              "examples": [],
+              "originalMeaning": "직각을 이루는, 직각의 ((with, to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "정사각형으로 하다[만들다] ((off))",
+              "examples": [],
+              "originalMeaning": "정사각형으로 하다[만들다] ((off))"
+            },
+            {
+              "meaning": "네모[직각]로 하다, <어깨·팔꿈치 등을> 펴다",
+              "examples": [],
+              "originalMeaning": "네모[직각]로 하다, <어깨·팔꿈치 등을> 펴다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4bb66b73eb4c4c84bb6df97ca964e8be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4bb66b73eb4c4c84bb6df97ca964e8be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "squarer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "8c4b106d36e8a5d486f031d0ebffd8f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 건물은 광장에 면하고 있다.",
+      "text": "The building faces the <b>square</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 뜰은 사방 20미터이다",
+      "text": "This garden is twenty meters <b>square</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그에게 빚을 갚았다;그에게 앙갚음을 했다.",
+      "text": "I have squared accounts with him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "면적은 대략 100평방 야드이다.",
+      "text": "The area is approximately 100 <b>square</b> yards."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사무실로 사용되는 2,000평방 피트의 공간",
+      "text": "2,000 <b>square</b> feet of usable office space"
+    }
+  ],
+  "isWordType": true
+}

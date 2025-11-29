@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "formula",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│fɔːrmjələ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "판에 박은 말, (인사말 등의) 상투적인[형식적인] 문구",
+              "examples": [],
+              "originalMeaning": "판에 박은 말, (인사말 등의) 상투적인[형식적인] 문구"
+            },
+            {
+              "meaning": "신앙 형식, 신조(creed)",
+              "examples": [],
+              "originalMeaning": "신앙 형식, 신조(creed)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<경주용 자동차가> 공식 규격에 따른",
+              "examples": [
+                {
+                  "text": "a <b>formula</b> car",
+                  "translatedText": "포뮬러 카"
+                }
+              ],
+              "originalMeaning": "<경주용 자동차가> 공식 규격에 따른"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/315fa10664584fde8860b07f6199ff10",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/315fa10664584fde8860b07f6199ff10",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "formulas, formulae"
+        }
+      ],
+      "aliasConjugation": "formulas, formulae",
+      "aliasConjugationPos": "복수형",
+      "gdid": "feeb17e13e815ba027f7388115672304",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "선생님은 학생들의 머리에 그 공식을 주입시켰다.",
+      "text": "The teacher banged the <b>formula</b> into his pupils’ head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "H2O는 물의 화학식이다.",
+      "text": "H2O is the <b>formula</b> for water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너도 별수 없구나",
+      "text": "You don't have any magic <b>formula</b>, either."
+    }
+  ],
+  "isWordType": true
+}

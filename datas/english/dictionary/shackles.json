@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "shackle",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈʃækl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 수갑, 족쇄, 차꼬",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 수갑, 족쇄, 차꼬"
+            },
+            {
+              "meaning": "[종종 pl.] 속박, 구속, 계루(係累)",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 속박, 구속, 계루(係累)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "족쇄[수갑]를 채우다, 쇠사슬로 붙들어 매다",
+              "examples": [],
+              "originalMeaning": "족쇄[수갑]를 채우다, 쇠사슬로 붙들어 매다"
+            },
+            {
+              "meaning": "구속하다, 속박하다; 방해하다",
+              "examples": [],
+              "originalMeaning": "구속하다, 속박하다; 방해하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/034ef0eb329d43c0826734eb4378388d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/034ef0eb329d43c0826734eb4378388d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shackles"
+        },
+        {
+          "type": "과거형",
+          "value": "shackled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shackling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shackled"
+        }
+      ],
+      "aliasConjugation": "shackles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d77872db3ce5b2a03faf2f5d84dc376c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "죄수들이 족쇄에 함께 묶여 있었다",
+      "text": "The prisoners were shackled together."
+    }
+  ],
+  "isWordType": true
+}

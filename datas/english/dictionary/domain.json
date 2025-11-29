@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "domain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "doʊ│meɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "영토, 영지; 세력 범위; (개인의) 소유지",
+              "examples": [],
+              "originalMeaning": "영토, 영지; 세력 범위; (개인의) 소유지"
+            },
+            {
+              "meaning": "(학문·사상·활동 등의) 범위, …계(sphere)",
+              "examples": [],
+              "originalMeaning": "(학문·사상·활동 등의) 범위, …계(sphere)"
+            },
+            {
+              "meaning": "[수학] 영역, 변역, 정의역; [컴퓨터] 도메인",
+              "examples": [],
+              "originalMeaning": "[수학] 영역, 변역, 정의역; [컴퓨터] 도메인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4492348ae9b04cb59c74b11212929780",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4492348ae9b04cb59c74b11212929780",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e860116ba5f5babf8a3c6185ffe0c268",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 내 영역이 아니다",
+      "text": "That is not my field. or That is not in my line. or That is outside my field[sphere]. or That is out of my <b>domain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토지 수용권",
+      "text": "(right of) eminent <b>domain</b>"
+    }
+  ],
+  "isWordType": true
+}

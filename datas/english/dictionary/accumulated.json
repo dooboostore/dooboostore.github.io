@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "accumulate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkjuːmjəleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<돈 등을> (장기간에 걸쳐 조금씩) 모으다, 축적하다; [드물게] 쌓아올리다",
+              "examples": [
+                {
+                  "text": "<b>accumulate</b> a fortune",
+                  "translatedText": "축재하다"
+                }
+              ],
+              "originalMeaning": "<돈 등을> (장기간에 걸쳐 조금씩) 모으다, 축적하다; [드물게] 쌓아올리다"
+            },
+            {
+              "meaning": "(대학에서) <높은 학위와 낮은 학위를> 동시 취득하다",
+              "examples": [],
+              "originalMeaning": "(대학에서) <높은 학위와 낮은 학위를> 동시 취득하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "모이다, 쌓이다, 축적되다",
+              "examples": [],
+              "originalMeaning": "모이다, 쌓이다, 축적되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72acb78c5740478080cbb8fe32ecdef4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72acb78c5740478080cbb8fe32ecdef4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accumulates"
+        },
+        {
+          "type": "과거형",
+          "value": "accumulated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accumulating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accumulated"
+        }
+      ],
+      "aliasConjugation": "accumulates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f03cc825b262e48869b0fa00f904ba2d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 주식에 투자하여 축재했다",
+      "text": "By investing in stocks he <b>accumulated</b> a fortune."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이자가 누적되어 총 200만 원이 되었다",
+      "text": "The interest has mounted[<b>accumulated</b>] to two million won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "눈이 쌓인다",
+      "text": "Snow accumulates[piles up, heaps] ."
+    }
+  ],
+  "isWordType": true
+}

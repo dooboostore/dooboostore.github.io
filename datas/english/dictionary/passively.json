@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "passive",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpæsɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "수동적인(inactive), 활기 없는, 소극적인",
+              "examples": [
+                {
+                  "text": "a <b>passive</b> member of a committee",
+                  "translatedText": "위원회에 적극적으로 참가하지 않는 위원"
+                }
+              ],
+              "originalMeaning": "수동적인(inactive), 활기 없는, 소극적인"
+            },
+            {
+              "meaning": "반응 없는, 휴지(休止) 중인",
+              "examples": [],
+              "originalMeaning": "반응 없는, 휴지(休止) 중인"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] [문법] 수동태; 수동형, 수동 구문",
+              "examples": [],
+              "originalMeaning": "[보통 the ~] [문법] 수동태; 수동형, 수동 구문"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9df88fd53add4708904ff8e134298fbf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9df88fd53add4708904ff8e134298fbf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a3a0d5c851d6e6db5551ded02a1b0bb8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 무슨 일을 하든 너무 수동적이다",
+      "text": "He is a too <b>passive</b> in everything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 활동적인 사람이지, 수동적인 사람은 아니다",
+      "text": "He is a man of active, not of <b>passive</b>, nature."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 간접 흡연에 관한 빗나간 보고서이다",
+      "text": "It is the misleading report on <b>passive</b> smoking."
+    }
+  ],
+  "isWordType": true
+}

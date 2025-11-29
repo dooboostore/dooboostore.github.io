@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "worker",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│wɜːrkə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일하는 사람, 공부하는 사람; 연구가[자]",
+              "examples": [
+                {
+                  "text": "a good <b>worker</b>",
+                  "translatedText": "근면한 사람"
+                }
+              ],
+              "originalMeaning": "일하는 사람, 공부하는 사람; 연구가[자]"
+            },
+            {
+              "meaning": "노동자, 일꾼, 직공",
+              "examples": [
+                {
+                  "text": "steel workers",
+                  "translatedText": "철강 노동자들"
+                }
+              ],
+              "originalMeaning": "노동자, 일꾼, 직공"
+            },
+            {
+              "meaning": "세공사",
+              "examples": [],
+              "originalMeaning": "세공사"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7e0846e6463f45e1b747087cdb3a5583",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7e0846e6463f45e1b747087cdb3a5583",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "80221a935b8718e077ae191a43161e2b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 자진해서 일하는 사람이다.",
+      "text": "She is a willing <b>worker</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 일을 부실하게 한다",
+      "text": "He is not a conscientious <b>worker</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고용주는 고용인의 등골을 뽑았다",
+      "text": "The employer sweat his <b>worker</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 고용주는 고용인을 착취한다",
+      "text": "The employer sweats his workers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파업으로 많은 노동자가 놀게 되었다.",
+      "text": "The strike idled many workers."
+    }
+  ],
+  "isWordType": true
+}

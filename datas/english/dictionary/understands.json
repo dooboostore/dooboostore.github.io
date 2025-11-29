@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "understand",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʌndər│stænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…의 말 등을> 이해하다, 알아듣다",
+              "examples": [
+                {
+                  "text": "Do you <b>understand</b> me?",
+                  "translatedText": "내 말을 알아듣겠소?"
+                }
+              ],
+              "originalMeaning": "<…의 말 등을> 이해하다, 알아듣다"
+            },
+            {
+              "meaning": "<참뜻·설명·원인·성질 등을> 알다, 이해가 가다, 깨닫다",
+              "examples": [
+                {
+                  "text": "( <b>understand</b>+wh. to do) <b>understand</b> how to deal with the matter",
+                  "translatedText": "그 문제의 취급 방법을 알고 있다"
+                }
+              ],
+              "originalMeaning": "<참뜻·설명·원인·성질 등을> 알다, 이해가 가다, 깨닫다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "알다, 이해력이 있다; 지력(知力)이 있다",
+              "examples": [
+                {
+                  "text": "You don't <b>understand</b>.",
+                  "translatedText": "자네는 (사정을) 이해하지 못하고 있어."
+                }
+              ],
+              "originalMeaning": "알다, 이해력이 있다; 지력(知力)이 있다"
+            },
+            {
+              "meaning": "들어서 알(고 있)다",
+              "examples": [
+                {
+                  "text": "The situation is better, so I <b>understand</b>.",
+                  "translatedText": "사태는 호전되었다고 듣고 있다."
+                }
+              ],
+              "originalMeaning": "들어서 알(고 있)다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b546cd1f73184b99ac759d0388731929",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b546cd1f73184b99ac759d0388731929",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "understands"
+        },
+        {
+          "type": "과거형",
+          "value": "understood"
+        },
+        {
+          "type": "현재 분사",
+          "value": "understanding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "understood"
+        }
+      ],
+      "aliasConjugation": "understands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f317be34e159cd5e7d12091cdd10d7e3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 일부러 모른 체했다",
+      "text": "He would not <b>understand</b> me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 도무지 알 수 없다",
+      "text": "I cannot <b>understand</b> it at all."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 네 말을 못 알아듣겠다",
+      "text": "I don't <b>understand</b> what you are talking about. or I don't dig it. or You are talking over my head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 …라고 듣고[알고] 있다",
+      "text": "I’m given to <b>understand</b> that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 소설은 읽기 쉽다",
+      "text": "This story is easy to read[<b>understand</b>]."
+    }
+  ],
+  "isWordType": true
+}

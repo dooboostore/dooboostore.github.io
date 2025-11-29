@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "define",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈfaɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "정의를 내리다, <말의> 뜻을 명확히 하다",
+              "examples": [
+                {
+                  "text": "<b>define</b> a word as …",
+                  "translatedText": "낱말의 뜻이 …라고 정의를 내리다"
+                }
+              ],
+              "originalMeaning": "정의를 내리다, <말의> 뜻을 명확히 하다"
+            },
+            {
+              "meaning": "<진의(眞意)·본질·입장 등을> 밝히다",
+              "examples": [
+                {
+                  "text": "<b>define</b> one's position",
+                  "translatedText": "자기의 입장을 밝히다"
+                }
+              ],
+              "originalMeaning": "<진의(眞意)·본질·입장 등을> 밝히다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "정의를 내리다",
+              "examples": [],
+              "originalMeaning": "정의를 내리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f919ca3849e44d79a739c298f0e3f9a1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f919ca3849e44d79a739c298f0e3f9a1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "defines"
+        },
+        {
+          "type": "과거형",
+          "value": "defined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "defining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "defined"
+        }
+      ],
+      "aliasConjugation": "defines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1bd1897d0f68d176904a9130f551144a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산이 선명하게 그림자를 물위에 비추고 있다",
+      "text": "The mountain casts its sharply defined reflection on the waters."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신사의 정의는 예의를 아는 사람인 것이다",
+      "text": "A gentleman is defined as one who knows manners. or Good manners <b>define</b> the gentleman."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이성이 인간의 특징이다.",
+      "text": "Reason <b>defines</b> man."
+    }
+  ],
+  "isWordType": true
+}

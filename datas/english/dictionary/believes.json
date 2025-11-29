@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "believe",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪˈliːv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "믿다",
+              "examples": [
+                {
+                  "text": "Columbus believed that the earth is round.",
+                  "translatedText": "콜럼버스는 지구가 둥글다고 믿었다."
+                }
+              ],
+              "originalMeaning": "믿다"
+            },
+            {
+              "meaning": "(…이라고) 생각하다, 여기다(suppose, think)",
+              "examples": [
+                {
+                  "text": "I believed (that) he was honest. = I <b>believe</b> d him (to be) honest.",
+                  "translatedText": "그가 정직하다고 생각했다."
+                }
+              ],
+              "originalMeaning": "(…이라고) 생각하다, 여기다(suppose, think)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(사람을) 믿다, 신뢰[신용, 신임]하다; …의 존재[가치]를 믿다; 신앙하다; …을 좋다고 생각하다",
+              "examples": [
+                {
+                  "text": "<b>believe</b> in a person",
+                  "translatedText": "…의 인격[역량]을 믿다"
+                }
+              ],
+              "originalMeaning": "(사람을) 믿다, 신뢰[신용, 신임]하다; …의 존재[가치]를 믿다; 신앙하다; …을 좋다고 생각하다"
+            },
+            {
+              "meaning": "생각하다(think)",
+              "examples": [
+                {
+                  "text": "How can you <b>believe</b> so badly of them?",
+                  "translatedText": "도대체 왜 그들을 그처럼 나쁘게 생각하느냐?"
+                }
+              ],
+              "originalMeaning": "생각하다(think)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/57ca5ba5b7e64ba1acaa4bb927126297",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/57ca5ba5b7e64ba1acaa4bb927126297",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "believes"
+        },
+        {
+          "type": "과거형",
+          "value": "believed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "believing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "believed"
+        }
+      ],
+      "aliasConjugation": "believes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "197a1c4a1e686f26586261877fba1162",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 말을 믿어도 좋다",
+      "text": "<b>Believe</b> me. or Trust me. or Take my word for it. or You've got my word for it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "설마, 믿을 수 없군.",
+      "text": "No! I don’t <b>believe</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 눈을 믿지 못하겠어",
+      "text": "I can't <b>believe</b> my eyes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 …이라고 믿고 있다.",
+      "text": "I am led to <b>believe</b> that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 …이라고 믿고 싶다",
+      "text": "I incline to <b>believe</b> that ..."
+    }
+  ],
+  "isWordType": true
+}

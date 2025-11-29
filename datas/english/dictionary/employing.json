@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "employ",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪmˈplɔɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람을> 쓰다, 고용하다, 일을 주다; <동물을> 부리다",
+              "examples": [
+                {
+                  "text": "men employed by the railroads",
+                  "translatedText": "철도 종업원"
+                }
+              ],
+              "originalMeaning": "<사람을> 쓰다, 고용하다, 일을 주다; <동물을> 부리다"
+            },
+            {
+              "meaning": "[보통 수동형 또는 oneself로] …에 종사하다, …에 헌신하다(occupy, devote)",
+              "examples": [
+                {
+                  "text": "He was employed in clipping the hedge. = He <b>employ</b> ed himself in clipping the hedge.",
+                  "translatedText": "그는 산울타리의 가지치기를 하였다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형 또는 oneself로] …에 종사하다, …에 헌신하다(occupy, devote)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고용",
+              "examples": [],
+              "originalMeaning": "고용"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a7ead2f4d1da4e82b72ba816c33cb648",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a7ead2f4d1da4e82b72ba816c33cb648",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "employs"
+        },
+        {
+          "type": "과거형",
+          "value": "employed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "employing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "employed"
+        }
+      ],
+      "aliasConjugation": "employs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "16fd3c5b27d09a0b7a72994e18a25cb6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 일은 60명의 일이다.",
+      "text": "The work will <b>employ</b> 60 men."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 내가 쓰고 있는 사람들이다",
+      "text": "They are in my <b>employ</b>[service, pay]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 유리한 조건으로 채용되었다",
+      "text": "He was employed on favorable terms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사무원으로 근무하고 있다.",
+      "text": "He is employed as a clerk.=They <b>employ</b> him as a clerk."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 회사에 근무하고 있다",
+      "text": "He is with the company. or He is in the service of the company. or He is in the <b>employ</b> of the company."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "bottleneck",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│bɑːtlnek"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "병목",
+              "examples": [],
+              "originalMeaning": "병목"
+            },
+            {
+              "meaning": "좁은 통로[길], 교통 체증[병목 현상](이 일어나는 곳)",
+              "examples": [],
+              "originalMeaning": "좁은 통로[길], 교통 체증[병목 현상](이 일어나는 곳)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 진행을 방해하다, 가두다",
+              "examples": [],
+              "originalMeaning": "…의 진행을 방해하다, 가두다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "진행이 방해되다",
+              "examples": [],
+              "originalMeaning": "진행이 방해되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/586c209edb104ec49da86e94bd0105dd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/586c209edb104ec49da86e94bd0105dd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7bbb4be9af482089f23cc6063444b2dd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 계획에는 많은 애로점이 있다",
+      "text": "There are a series of <b>bottlenecks</b> in the way of this program."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정부는 생산의 애로를 타개하고자 하고 있다",
+      "text": "The Government is trying to break the <b>bottleneck</b> of production."
+    }
+  ],
+  "isWordType": true
+}

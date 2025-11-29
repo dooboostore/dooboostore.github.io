@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "peer",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "píər"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(나이·지위·능력이) 동등한 사람; 동배(同輩), 동료; (법률상) 대등한 사람",
+              "examples": [],
+              "originalMeaning": "(나이·지위·능력이) 동등한 사람; 동배(同輩), 동료; (법률상) 대등한 사람"
+            },
+            {
+              "meaning": "<가치·질이> 동등한 것",
+              "examples": [
+                {
+                  "text": "without a <b>peer</b>",
+                  "translatedText": "비길 데 없는"
+                }
+              ],
+              "originalMeaning": "<가치·질이> 동등한 것"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 필적하다",
+              "examples": [],
+              "originalMeaning": "…에 필적하다"
+            },
+            {
+              "meaning": "귀족으로 만들다",
+              "examples": [],
+              "originalMeaning": "귀족으로 만들다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 대등[필적]하다 ((with))",
+              "examples": [],
+              "originalMeaning": "(…와) 대등[필적]하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5fc97e9b5aac4317a9c12812ce1a6e75",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5fc97e9b5aac4317a9c12812ce1a6e75",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "peers"
+        },
+        {
+          "type": "과거형",
+          "value": "peered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "peering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "peered"
+        }
+      ],
+      "aliasConjugation": "peers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f3557f6be14bb475ba16bea137b9ef96",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "peer",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "píər"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "자세히 들여다보다, 응시하다, 주의해서 보다 ((into, at))",
+              "examples": [
+                {
+                  "text": "<b>peer</b> in[out]",
+                  "translatedText": "안[밖]을 응시하다"
+                }
+              ],
+              "originalMeaning": "자세히 들여다보다, 응시하다, 주의해서 보다 ((into, at))"
+            },
+            {
+              "meaning": "<해 등이> 희미하게 나타나다, 보이기 시작하다 ((from, through))",
+              "examples": [
+                {
+                  "text": "The sun peered from behind a cloud.",
+                  "translatedText": "해가 구름 뒤에서 나타나기 시작했다."
+                }
+              ],
+              "originalMeaning": "<해 등이> 희미하게 나타나다, 보이기 시작하다 ((from, through))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b10342e14731475f8bb211a7122b987a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b10342e14731475f8bb211a7122b987a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "peers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "084d29280883cbebe184b057442ec6fa",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해가 구름 뒤에서 나타나기 시작했다.",
+      "text": "The sun peered from behind a cloud."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것에는 대볼 만한 것이 없다",
+      "text": "It stands unchallenged[unparalleled, without a <b>peer</b>]."
+    }
+  ],
+  "isWordType": true
+}

@@ -18,6 +18,7 @@ import { OnCreateRender } from '@dooboostore/dom-render/lifecycle/OnCreateRender
 import { window } from 'rxjs';
 import { VideoItem, VideoItemService } from '@src/service/english/VideoItemService';
 import { VoiceService } from '@src/service/VoiceService';
+import { environment } from '@back-end/environments/environment';
 
 export type FavoriteWord = {
   text: string;
@@ -75,7 +76,6 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
 
   async onInitRender(param: any, rawSet: RawSet) {
     await super.onInitRender(param, rawSet);
-
     this.name = new Date().toISOString();
     console.log('english.router.component onInitRender-------');
     // Load favorite words from localStorage
@@ -89,30 +89,61 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
 
   async onRouting(r: RoutingDataSet): Promise<void> {
     await super.onRouting(r);
-    console.log('english.router.component onRouting-------');
+
+    this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name??'');
+    this.currentItem = this.currentItemName ? await this.videoItemService.item(this.currentItemName) : undefined;
+
+
+    console.log('english.router.component onRouting-------', this.config?.window);
+    if (this.config?.window) {
+      const doc = this.config.window.document;
+      const setMetaByProperty = (property: string, content: string) => {
+        const d = doc.querySelector(`meta[property="${property}"]`);
+        console.log('dddddddd->', property, d);
+        doc.querySelector(`meta[property="${property}"]`)?.setAttribute('content', content);
+      };
+      const setMetaByName = (name: string, content: string) => {
+        doc.querySelector(`meta[name="${name}"]`)?.setAttribute('content', content);
+      };
+      const setLink = (rel: string, href: string) => {
+        doc.querySelector(`link[rel="${rel}"]`)?.setAttribute('href', href);
+      };
+      const setTitle = (title: string) => {
+        doc.title = title;
+      };
+      let pageTitle = 'English Learning';
+      let pageDescription = 'Learn English with videos, movies, and interactive content.';
+      let pageUrl = environment.host + this.config.window.window.location.pathname;
+      let pageImage = 'assets/images/dooboostore.png'
+
+      console.log('------------------> Setting SEO for', pageUrl);
+      if (this.currentItem) {
+        // Page-specific SEO content
+        pageTitle = this.currentItem.name;
+        pageDescription = this.currentItem.name
+        pageImage = this.currentItem.img;
+        // Set Title, Description, Canonical URL
+      }
+      setTitle(pageTitle);
+      setMetaByName('description', pageDescription);
+      setLink('canonical', pageUrl);
+
+      // Set Open Graph (OG) tags for social sharing
+      setMetaByProperty('og:title', pageTitle);
+      setMetaByProperty('og:description', pageDescription);
+      setMetaByProperty('og:image', pageImage);
+      setMetaByProperty('og:url', pageUrl);
+      setMetaByProperty('og:type', 'website')
+    }
+
+
 
 
     if (ValidUtils.isBrowser()) {
       // Get current item name from route
-      this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name??'');
-      console.log('------->', r, this.currentItemName);
+      // console.log('------->', r, this.currentItemName);
       // Check if we're in a sub-route (has name parameter)
       this.isInSubRoute = !!this.currentItemName;
-
-      // Find current item info
-      if (this.currentItemName) {
-        // Load items data
-        // try {
-        //   this.items = await this.apiService.get<Item[]>({ target: '/datas/english/items.json' });
-        //   console.log('Loaded items:', this.items.length);
-        // } catch (error) {
-        //   console.error('Failed to load items:', error);
-        // }
-        this.currentItem = await this.videoItemService.item(this.currentItemName);
-        console.log('Current item:', this.currentItem);
-      } else {
-        this.currentItem = undefined;
-      }
     }
   }
 

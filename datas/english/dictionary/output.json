@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "output",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈaʊtpʊt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "생산, 산출; (힘 등을) 냄",
+              "examples": [
+                {
+                  "text": "a sudden <b>output</b> of energy",
+                  "translatedText": "별안간 힘을 냄"
+                }
+              ],
+              "originalMeaning": "생산, 산출; (힘 등을) 냄"
+            },
+            {
+              "meaning": "(일정 기간 중의) 생산고, (탄광 등의) 산출량, 생산품",
+              "examples": [
+                {
+                  "text": "the daily <b>output</b> of automobiles",
+                  "translatedText": "하루 자동차 생산량"
+                }
+              ],
+              "originalMeaning": "(일정 기간 중의) 생산고, (탄광 등의) 산출량, 생산품"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "생산[산출]하다, [컴퓨터] <정보를> 출력하다",
+              "examples": [],
+              "originalMeaning": "생산[산출]하다, [컴퓨터] <정보를> 출력하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2c765fc11465482996f7d0b7e10b8412",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2c765fc11465482996f7d0b7e10b8412",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "outputs"
+        },
+        {
+          "type": "과거형",
+          "value": "outputted, output"
+        },
+        {
+          "type": "현재 분사",
+          "value": "outputting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "outputted, output"
+        }
+      ],
+      "aliasConjugation": "outputs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9f5197dd06c9fb32fe23bbc5c58a7834",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "침울한 경제 전망에도 불구하고 제조업의 생산량은 약간 증가했다",
+      "text": "In spite of the gloomy economic forecasts, manufacturing <b>output</b> has risen slightly."
+    }
+  ],
+  "isWordType": true
+}

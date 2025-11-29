@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "acquire",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkwaɪə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<재산·권리 등을> 취득하다, 획득하다",
+              "examples": [],
+              "originalMeaning": "<재산·권리 등을> 취득하다, 획득하다"
+            },
+            {
+              "meaning": "<지식·학문 등을 노력하여> 얻다, 배우다, 습득하다; <습관 등을> 몸에 익히다, 지니게 되다 (=get)",
+              "examples": [
+                {
+                  "text": "<b>acquire</b> a foreign language",
+                  "translatedText": "외국어를 습득하다"
+                }
+              ],
+              "originalMeaning": "<지식·학문 등을 노력하여> 얻다, 배우다, 습득하다; <습관 등을> 몸에 익히다, 지니게 되다 (=<span class='related_word' lang='en' >get</span>)"
+            },
+            {
+              "meaning": "<비평 등을> 받게 하다",
+              "examples": [],
+              "originalMeaning": "<비평 등을> 받게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4d91813cd21b4492840e9fd00b567e86",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4d91813cd21b4492840e9fd00b567e86",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "acquires"
+        },
+        {
+          "type": "과거형",
+          "value": "acquired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "acquiring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "acquired"
+        }
+      ],
+      "aliasConjugation": "acquires",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "97b21d250cc048436ff20e73492b383b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 골동품에 취미가 붙었다",
+      "text": "I acquired a taste for antiques."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 노래는 한때 크게 성행했다",
+      "text": "The song had[acquired] a great vogue at one time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 피자를 좋아하게 되었다",
+      "text": "I have taken a shine to pizza. or I acquired a taste for pizza."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 만학한 사람이지만 어학력이 대단하다",
+      "text": "He has a marvelous linguistic knowledge which he acquired in his later years."
+    }
+  ],
+  "isWordType": true
+}

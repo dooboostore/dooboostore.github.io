@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "register",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈredʒɪstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "등록[등기]부, (특정인의) 명부",
+              "examples": [
+                {
+                  "text": "a parish[church] <b>register</b>",
+                  "translatedText": "교구[교회]의 교적부 ((출생·세례·결혼·사망 등이 기록된))"
+                }
+              ],
+              "originalMeaning": "등록[등기]부, (특정인의) 명부"
+            },
+            {
+              "meaning": "(생사 등의 공적인) 기록, 등기, 등록; 표, 목록",
+              "examples": [
+                {
+                  "text": "call the <b>register</b>",
+                  "translatedText": "출석을 부르다"
+                }
+              ],
+              "originalMeaning": "(생사 등의 공적인) 기록, 등기, 등록; 표, 목록"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(정식으로 명부 등에) 기재하다, 등기하다, 등록하다; 기록하다",
+              "examples": [
+                {
+                  "text": "<b>register</b> the birth of a baby",
+                  "translatedText": "아기의 출생 신고를 하다"
+                }
+              ],
+              "originalMeaning": "(정식으로 명부 등에) 기재하다, 등기하다, 등록하다; 기록하다"
+            },
+            {
+              "meaning": "<우편물을> 등기로 부치다, [영] <수하물 등을> (일시적으로) 맡기다",
+              "examples": [
+                {
+                  "text": "get[have] a letter registered",
+                  "translatedText": "편지를 등기로 부치다"
+                }
+              ],
+              "originalMeaning": "<우편물을> 등기로 부치다, [영] <수하물 등을> (일시적으로) 맡기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(호텔 등에서) 기명하다, (숙박부 등에) 기입하다; 서명하다; 선거인 명부에 등록하다; (입학·청강의) 등록을 하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>register</b> at a hotel",
+                  "translatedText": "호텔에 묵다"
+                }
+              ],
+              "originalMeaning": "(호텔 등에서) 기명하다, (숙박부 등에) 기입하다; 서명하다; 선거인 명부에 등록하다; (입학·청강의) 등록을 하다 ((for))"
+            },
+            {
+              "meaning": "<안팎의 인쇄면 등이> 바르게 일치하다",
+              "examples": [],
+              "originalMeaning": "<안팎의 인쇄면 등이> 바르게 일치하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c28dc67119c448068a80fe1a81d8b696",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c28dc67119c448068a80fe1a81d8b696",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "registers"
+        },
+        {
+          "type": "과거형",
+          "value": "registered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "registering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "registered"
+        }
+      ],
+      "aliasConjugation": "registers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5d7e0251b51312eb661e8f1bd0fa3869",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 얼굴에 공포의 기색이 나타났다.",
+      "text": "His face registered fear."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 호적에 양자로 되어 있다",
+      "text": "He is registered as an adopted son."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 반은 재적 학생 수가 52명이다",
+      "text": "This class has 52 pupils on the <b>register</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 편지를 잊지 말고 등기로 부쳐 주시오.",
+      "text": "Remember to get the letter registered."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 대장에 기입하는 것을 잊었다",
+      "text": "I forgot to put[enter] it in the ledger[<b>register</b>]."
+    }
+  ],
+  "isWordType": true
+}

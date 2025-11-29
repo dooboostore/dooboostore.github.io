@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "shelf",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃelf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "선반, 시렁; 한 시렁분의 것 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>shelf</b> of books",
+                  "translatedText": "책 한 시렁"
+                }
+              ],
+              "originalMeaning": "선반, 시렁; 한 시렁분의 것 ((of))"
+            },
+            {
+              "meaning": "선반 모양의 것; (낭떠러지의) 암붕(岩棚); 단(platform); 암초, 사주(砂洲), 물이 얕은 곳, 모래톱; 대륙붕",
+              "examples": [],
+              "originalMeaning": "선반 모양의 것; (낭떠러지의) 암붕(岩棚); 단(platform); 암초, 사주(砂洲), 물이 얕은 곳, 모래톱; 대륙붕"
+            },
+            {
+              "meaning": "[광산] 기반암(基盤岩), 암상(岩床); 평층(平層)",
+              "examples": [],
+              "originalMeaning": "[광산] 기반암(基盤岩), 암상(岩床); 평층(平層)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a57cf09b9444cdcb165c2f27a65ce1c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a57cf09b9444cdcb165c2f27a65ce1c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "shelves"
+        }
+      ],
+      "aliasConjugation": "shelves",
+      "aliasConjugationPos": "복수형",
+      "gdid": "29b98b5173b2addc02eedbde9e9f5cc1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 손이 선반까지 뻗었다.",
+      "text": "His hand went to the <b>shelf</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 책은 이 선반에 놓인다.",
+      "text": "This book goes on this <b>shelf</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 선반은 매우 기능적이다",
+      "text": "This <b>shelf</b> is very functional."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그릇이 선반에 얹혀 있다",
+      "text": "The dishes are put on the <b>shelf</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 책을 서가에 도로 갖다 두시오.",
+      "text": "Return this book to the <b>shelf</b>."
+    }
+  ],
+  "isWordType": true
+}

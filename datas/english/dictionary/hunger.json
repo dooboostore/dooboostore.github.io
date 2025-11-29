@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "hunger",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhʌŋɡə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "굶주림, 기아",
+              "examples": [
+                {
+                  "text": "die of <b>hunger</b>",
+                  "translatedText": "굶어 죽다"
+                }
+              ],
+              "originalMeaning": "굶주림, 기아"
+            },
+            {
+              "meaning": "공복, 배고픔",
+              "examples": [
+                {
+                  "text": "collapse from <b>hunger</b>",
+                  "translatedText": "배고픔으로 쓰러지다"
+                }
+              ],
+              "originalMeaning": "공복, 배고픔"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "굶주리다, 배가 고프다, 시장기가 들다",
+              "examples": [],
+              "originalMeaning": "굶주리다, 배가 고프다, 시장기가 들다"
+            },
+            {
+              "meaning": "갈망[열망]하다(yearn) ((for, after, to do))",
+              "examples": [
+                {
+                  "text": "<b>hunger</b> for[after] change",
+                  "translatedText": "변화를 갈망하다"
+                }
+              ],
+              "originalMeaning": "갈망[열망]하다(yearn) ((for, after, to do))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "굶주리게 하다, 배를 곯려 …시키다 ((into, out of))",
+              "examples": [
+                {
+                  "text": "<b>hunger</b> a person into submission",
+                  "translatedText": "…을 배를 곯려 굴복시키다"
+                }
+              ],
+              "originalMeaning": "굶주리게 하다, 배를 곯려 …시키다 ((into, out of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0222dcc8ba0142468bb98272d3bcf24d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0222dcc8ba0142468bb98272d3bcf24d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hungers"
+        },
+        {
+          "type": "과거형",
+          "value": "hungered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hungering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hungered"
+        }
+      ],
+      "aliasConjugation": "hungers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b20d3ca9c4ff07589fda4c12853a7cf6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "필요[굶주림] 앞에 법률은 없다.",
+      "text": "Necessity[<b>Hunger</b>] knows[has] no law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 고프면 무엇이나 맛이 있다.",
+      "text": "<b>Hunger</b> gives relish to any food."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "허기가 져서 눈이 뒤집힐 지경이다",
+      "text": "I am almost frantic with <b>hunger</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 고파 배에서 꾸르륵 소리가 났다",
+      "text": "My stomach growled[rumbled] with <b>hunger</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 허기져서 항복하지 않을 수 없었다.",
+      "text": "<b>Hunger</b> compelled him to surrender."
+    }
+  ],
+  "isWordType": true
+}

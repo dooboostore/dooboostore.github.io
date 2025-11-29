@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "error",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈerə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "잘못, 실수, 틀림(mistake) ((in, of))",
+              "examples": [
+                {
+                  "text": "Correct errors, if any.",
+                  "translatedText": "틀린 데가 있으면 고치시오."
+                }
+              ],
+              "originalMeaning": "잘못, 실수, 틀림(mistake) ((in, of))"
+            },
+            {
+              "meaning": "그릇된 생각(delusion)",
+              "examples": [],
+              "originalMeaning": "그릇된 생각(delusion)"
+            },
+            {
+              "meaning": "과실, 죄(sin)",
+              "examples": [],
+              "originalMeaning": "과실, 죄(sin)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/97e3cdff21da423fa0da2221e8e48e24",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/97e3cdff21da423fa0da2221e8e48e24",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fd5c38c1d73121ec0e62b3332181e0c7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잘못은 섞여 들게 마련이다.",
+      "text": "Errors will slip in."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 틀린 것을 옳다고 떼를 쓴다",
+      "text": "He stands firm in his <b>error</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 틀린 것을 맞다고 부썩 우긴다",
+      "text": "He stands firm on his <b>error</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주의만 하면 실수는 하지 않는다.",
+      "text": "Care insures us against errors."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 틀렸다는 것을 깨우칠 수가 없다",
+      "text": "I cannot convince him of his <b>error</b>."
+    }
+  ],
+  "isWordType": true
+}

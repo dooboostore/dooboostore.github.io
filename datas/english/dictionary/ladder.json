@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "ladder",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlædə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사닥다리, 사다리",
+              "examples": [
+                {
+                  "text": "climb up[down] a <b>ladder</b>",
+                  "translatedText": "사다리를 오르다[내리다]"
+                }
+              ],
+              "originalMeaning": "사닥다리, 사다리"
+            },
+            {
+              "meaning": "사다리 모양의 물건",
+              "examples": [],
+              "originalMeaning": "사다리 모양의 물건"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "출세하다 ((to))",
+              "examples": [],
+              "originalMeaning": "출세하다 ((to))"
+            },
+            {
+              "meaning": "<스타킹이> 세로 올이 나가다( run)",
+              "examples": [],
+              "originalMeaning": "<스타킹이> 세로 올이 나가다( run)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "사다리로 오르다",
+              "examples": [],
+              "originalMeaning": "사다리로 오르다"
+            },
+            {
+              "meaning": "…에 사다리를 걸다",
+              "examples": [],
+              "originalMeaning": "…에 사다리를 걸다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea68233bef604a6b84930ed60037dd20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea68233bef604a6b84930ed60037dd20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ladders"
+        },
+        {
+          "type": "과거형",
+          "value": "laddered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "laddering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "laddered"
+        }
+      ],
+      "aliasConjugation": "ladders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d23a66e6031fa648d2703fd4785422a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사다리를 타고 성벽을 기어올랐다",
+      "text": "They scaled the wall by <b>ladder</b>[with a <b>ladder</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 사회적 지위는 상당히 높다.",
+      "text": "He is well up the social <b>ladder</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "천 리 길도 한 걸음부터",
+      "text": "Step after step the <b>ladder</b> is ascended."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사닥다리 위에서 아래를 향해 소리쳤다.",
+      "text": "He called down from the top of the <b>ladder</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 경영자 자리까지 승급하였다",
+      "text": "She moved up the <b>ladder</b> to the position of manager."
+    }
+  ],
+  "isWordType": true
+}

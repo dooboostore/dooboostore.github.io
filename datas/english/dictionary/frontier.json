@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "frontier",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "frʌnˈtɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(국가간의) 국경 (지방) ((between, with))",
+              "examples": [],
+              "originalMeaning": "(국가간의) 국경 (지방) ((between, with))"
+            },
+            {
+              "meaning": "[the ~] 변경 (지대) ((개척 시대의 개척지와 미개척지의 경계 지방))",
+              "examples": [
+                {
+                  "text": "live in log huts onthe <b>frontier</b>",
+                  "translatedText": "변경에서 통나무집 생활을 하다"
+                }
+              ],
+              "originalMeaning": "[the ~] 변경 (지대) ((개척 시대의 개척지와 미개척지의 경계 지방))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "국경(지방)의",
+              "examples": [
+                {
+                  "text": "a <b>frontier</b> town",
+                  "translatedText": "국경 도시"
+                }
+              ],
+              "originalMeaning": "국경(지방)의"
+            },
+            {
+              "meaning": "변경의",
+              "examples": [],
+              "originalMeaning": "변경의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e5807bf26064433abc34efeccbdce4cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e5807bf26064433abc34efeccbdce4cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "307c4fe18b373253c536cbb2d68aa210",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나라는 국경에 경비병을 배치했다.",
+      "text": "The country posted the guards at the <b>frontier</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토지가 국경에까지 미치다",
+      "text": "The land reaches the <b>frontier</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -22,6 +22,7 @@ import { VideoItem, VideoItemService } from '@src/service/english/VideoItemServi
 })
 export class EnglishRouteComponent extends ComponentBase implements RouterAction.OnRouting {
 
+  name='english-route'
   items?: VideoItem[] = undefined;
   movieItems?: VideoItem[] = undefined;
   youtubeItems?: VideoItem[] = undefined;
@@ -44,6 +45,7 @@ export class EnglishRouteComponent extends ComponentBase implements RouterAction
 
   async onInitRender(param: any, rawSet: RawSet): Promise<void> {
     await super.onInitRender(param, rawSet);
+    this.name = 'english-route' + Date.now();
     if (ValidUtils.isBrowser()) {
       this.items = await this.videoItemService.items();
       

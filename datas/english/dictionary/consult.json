@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "consult",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈsʌlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<전문가에게> 의견을 묻다, 상담[상의]하다 ((on, about)); <의사에게> 보이다, 진찰받다",
+              "examples": [
+                {
+                  "text": "<b>consult</b> a lawyer",
+                  "translatedText": "변호사에게 상담하다"
+                }
+              ],
+              "originalMeaning": "<전문가에게> 의견을 묻다, 상담[상의]하다 ((on, about)); <의사에게> 보이다, 진찰받다"
+            },
+            {
+              "meaning": "<참고서·사전 등을> 참고하다, 찾다; <시계 등을> 보다",
+              "examples": [
+                {
+                  "text": "<b>consult</b> a watch",
+                  "translatedText": "(시간을 알려고) 시계를 보다"
+                }
+              ],
+              "originalMeaning": "<참고서·사전 등을> 참고하다, 찾다; <시계 등을> 보다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "상의[의논]하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>consult</b> with a person about[on] a matter",
+                  "translatedText": "어떤 일에 대해 남과 상의하다"
+                }
+              ],
+              "originalMeaning": "상의[의논]하다 ((with))"
+            },
+            {
+              "meaning": "(회사 등의) 컨설턴트 직을 맡다 ((for))",
+              "examples": [],
+              "originalMeaning": "(회사 등의) 컨설턴트 직을 맡다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상담, 협의(회); 비밀 회의",
+              "examples": [],
+              "originalMeaning": "상담, 협의(회); 비밀 회의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c700c3ee61fa409fa4011efca2255691",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c700c3ee61fa409fa4011efca2255691",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "consults"
+        },
+        {
+          "type": "과거형",
+          "value": "consulted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "consulting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "consulted"
+        }
+      ],
+      "aliasConjugation": "consults",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "47e5881d82ad68a6ceae58895f2d4af0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 나에게 상의했어야 했다.",
+      "text": "You ought to have consulted with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일에 관하여 아버지와 상담하였다",
+      "text": "I consulted with my father about the matter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 의사에게 진찰받는 것을 몹시 부끄러워했다",
+      "text": "She was very shy of consulting a doctor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 기원에 관한 참조 문헌이 없다",
+      "text": "There is no literature to refer to[<b>consult</b> about] its origin."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신은 묵비권을 행사할 권리가 있으며 변호사와 상의할 권리도 있다",
+      "text": "You have the right to remain silent and the right to <b>consult</b> a lawyer."
+    }
+  ],
+  "isWordType": true
+}

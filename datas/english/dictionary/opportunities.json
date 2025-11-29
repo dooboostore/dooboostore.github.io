@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "opportunity",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːpər│tuːnəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기회, 호기 ((of))",
+              "examples": [
+                {
+                  "text": "equality of <b>opportunity</b>",
+                  "translatedText": "기회 균등"
+                }
+              ],
+              "originalMeaning": "기회, 호기 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/687a73b4deb641689e8b7d75724c5bd2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/687a73b4deb641689e8b7d75724c5bd2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "opportunities"
+        }
+      ],
+      "aliasConjugation": "opportunities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "458e8782190d93c3e4560cbf75112d51",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여행할 기회가 거의 없다.",
+      "text": "I have little <b>opportunity</b> for making a trip."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 평생에 한 번밖에 없는 기회였다.",
+      "text": "It was a once-in-a-lifetime <b>opportunity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 기회를 이용하여 한마디 하겠다",
+      "text": "I take this <b>opportunity</b>[occasion] to say a word."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 나라에서는 입신 출세의 기회가 많다",
+      "text": "This is a country of great <b>opportunities</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 기회를 빌려 감사의 뜻을 전하고자 합니다",
+      "text": "Let me take this <b>opportunity</b> to thank you."
+    }
+  ],
+  "isWordType": true
+}

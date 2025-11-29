@@ -3613,6 +3613,14 @@ var ConvertUtils;
     ConvertUtils.jsonToMap = (jsonStr) => {
         return new Map(JSON.parse(jsonStr));
     };
+    ConvertUtils.toUrl = (data) => {
+        try {
+            return new URL(data);
+        }
+        catch (e) {
+            throw new Error(`Invalid URL string: ${data}`);
+        }
+    };
     ConvertUtils.decodeURIString = (data) => {
         return decodeURIComponent(data);
     };
@@ -4083,6 +4091,183 @@ var ConvertUtils;
     //     return obj;
     // }
 })(ConvertUtils || (ConvertUtils = {}));
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/core/src/date/DateUtils.ts":
+/*!**************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/date/DateUtils.ts ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DateUtils: () => (/* binding */ DateUtils)
+/* harmony export */ });
+var DateUtils;
+(function (DateUtils) {
+    DateUtils.create = (data) => new Date(data);
+    DateUtils.dayZeroTime = (data) => {
+        const date = data ? new Date(data) : new Date();
+        date.setHours(0, 0, 0, 0);
+        return date;
+    };
+    DateUtils.fullMilliSecond = () => new Date().getTime();
+    DateUtils.fullSecond = () => new Date().getTime() / 1000;
+    DateUtils.milliSecond = () => new Date().getMilliseconds();
+    DateUtils.format = (date, format = 'yyyy-MM-dd HH:mm:ss') => {
+        const pad = (num) => String(num).padStart(2, '0');
+        const year = date.getFullYear();
+        const month = pad(date.getMonth() + 1);
+        const day = pad(date.getDate());
+        const hours = pad(date.getHours());
+        const minutes = pad(date.getMinutes());
+        const seconds = pad(date.getSeconds());
+        return format
+            .replace('yyyy', String(year))
+            .replace('MM', month)
+            .replace('dd', day)
+            .replace('HH', hours)
+            .replace('mm', minutes)
+            .replace('ss', seconds);
+    };
+    DateUtils.isSameDate = (date1, date2) => date1.getFullYear() === date2.getFullYear() &&
+        date1.getMonth() === date2.getMonth() &&
+        date1.getDate() === date2.getDate();
+    DateUtils.compare = (date1, date2) => date1.getTime() < date2.getTime() ? -1 : date1.getTime() > date2.getTime() ? 1 : 0;
+    DateUtils.weekCountOfYear = (date) => {
+        // Copy date so it's not modified
+        const currentDate = new Date(date.getTime());
+        // Set to nearest Thursday: current date + 4 - current day number (from 0 to 6)
+        // Make Sunday's day number 7
+        currentDate.setDate(currentDate.getDate() + 4 - (currentDate.getDay() || 7));
+        // January 1st of the year
+        const yearStart = new Date(currentDate.getFullYear(), 0, 1);
+        // Calculate full weeks to nearest Thursday
+        const weekNo = Math.ceil(((currentDate.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
+        return weekNo;
+    };
+    DateUtils.age = (dateOfBirth, until = new Date()) => {
+        let age = until.getFullYear() - dateOfBirth.getFullYear();
+        const m = until.getMonth() - dateOfBirth.getMonth();
+        if (m < 0 || (m === 0 && until.getDate() < dateOfBirth.getDate())) {
+            age--;
+        }
+        return Math.max(age, 0);
+    };
+    DateUtils.countingAge = (dateOfBirth, until = new Date()) => {
+        return Math.max(until.getFullYear() - dateOfBirth.getFullYear(), 0) + 1;
+    };
+    DateUtils.add = ({ years = 0, months = 0, days = 0, minutes = 0, seconds = 0, milliSecond = 0 }, date) => {
+        const result = date ? new Date(date) : new Date();
+        if (years)
+            result.setFullYear(result.getFullYear() + years);
+        if (months)
+            result.setMonth(result.getMonth() + months);
+        if (days)
+            result.setDate(result.getDate() + days);
+        if (minutes)
+            result.setMinutes(result.getMinutes() + minutes);
+        if (seconds)
+            result.setSeconds(result.getSeconds() + seconds);
+        if (milliSecond)
+            result.setMilliseconds(result.getMilliseconds() + milliSecond);
+        return result;
+    };
+    DateUtils.toDate = (date) => {
+        if (date instanceof Date) {
+            return date;
+        }
+        else if (typeof date === 'string' || typeof date === 'number') {
+            return new Date(date);
+        }
+        else {
+            throw new Error('Invalid date type. Expected Date, string, or number.');
+        }
+    };
+    DateUtils.sinceSeconds = (date) => Math.floor((Date.now() - date.getTime()) / 1000);
+    DateUtils.toSeconds = (date = new Date()) => Math.floor(date.getTime() / 1000);
+    DateUtils.toMilliseconds = (date = new Date()) => date.getTime();
+    DateUtils.fromSeconds = (seconds) => new Date(seconds * 1000);
+    DateUtils.fromMilliseconds = (milliseconds) => new Date(milliseconds);
+    DateUtils.toISOString = (date = new Date()) => date.toISOString();
+    DateUtils.fromISOString = (isoString) => new Date(isoString);
+    DateUtils.formatDuration = (timeSecond, locale = DateUtils.getDefaultLocale()) => {
+        const rtf = new Intl.RelativeTimeFormat(locale, { numeric: 'always', style: 'long' });
+        let remaining = timeSecond;
+        const days = Math.floor(remaining / 86400);
+        remaining -= days * 86400;
+        const hours = Math.floor(remaining / 3600);
+        remaining -= hours * 3600;
+        const minutes = Math.floor(remaining / 60);
+        remaining -= minutes * 60;
+        const seconds = remaining;
+        const result = [];
+        if (days > 0) {
+            result.push(rtf.format(days, 'day').replace('후', '').replace('in ', '').replace('dans ', ''));
+        }
+        if (hours > 0) {
+            result.push(rtf.format(hours, 'hour').replace('후', '').replace('in ', '').replace('dans ', ''));
+        }
+        if (minutes > 0) {
+            result.push(rtf.format(minutes, 'minute').replace('후', '').replace('in ', '').replace('dans ', ''));
+        }
+        if (seconds > 0 || result.length === 0) {
+            result.push(rtf.format(seconds, 'second').replace('후', '').replace('in ', '').replace('dans ', ''));
+        }
+        return result.join(' ');
+    };
+    DateUtils.relativeTime = (date, config) => {
+        const rtf = new Intl.RelativeTimeFormat(config?.locales, config?.options);
+        let targetDate;
+        if (!(date instanceof Date)) {
+            targetDate = new Date(date);
+        }
+        else {
+            targetDate = date;
+        }
+        const now = new Date();
+        const diffMs = targetDate.getTime() - now.getTime(); // 입력된 시간 - 현재 시간
+        // 분, 시간, 일 단위로 절대값 차이 계산
+        const absDiffMinutes = Math.floor(Math.abs(diffMs) / (1000 * 60));
+        const absDiffHours = Math.floor(Math.abs(diffMs) / (1000 * 60 * 60));
+        const absDiffDays = Math.floor(Math.abs(diffMs) / (1000 * 60 * 60 * 24));
+        if (diffMs === 0) {
+            return rtf.format(0, 'seconds'); // "지금" 또는 "0초 후/전" (로케일에 따라 다름)
+        }
+        if (diffMs < 0) { // 과거 (입력된 시간이 현재보다 이전)
+            if (absDiffMinutes < 1) { // 1분 미만 과거
+                return rtf.format(-Math.floor(Math.abs(diffMs) / 1000), 'seconds'); // "몇 초 전"
+            }
+            else if (absDiffMinutes < 60) { // 60분 미만 과거
+                return rtf.format(-absDiffMinutes, 'minutes'); // "몇 분 전"
+            }
+            else if (absDiffHours < 24) { // 24시간 미만 과거
+                return rtf.format(-absDiffHours, 'hours'); // "몇 시간 전"
+            }
+            else { // 그 이상 과거
+                return rtf.format(-absDiffDays, 'days'); // "몇 일 전"
+            }
+        }
+        else { // 미래 (입력된 시간이 현재보다 이후)
+            if (absDiffMinutes < 1) { // 1분 미만 미래
+                return rtf.format(Math.floor(diffMs / 1000), 'seconds'); // "몇 초 후"
+            }
+            else if (absDiffMinutes < 60) { // 60분 미만 미래
+                return rtf.format(absDiffMinutes, 'minutes'); // "몇 분 후"
+            }
+            else if (absDiffHours < 24) { // 24시간 미만 미래
+                return rtf.format(absDiffHours, 'hours'); // "몇 시간 후"
+            }
+            else { // 그 이상 미래
+                return rtf.format(absDiffDays, 'days'); // "몇 일 후"
+            }
+        }
+    };
+    DateUtils.getDefaultLocale = () => Intl.DateTimeFormat().resolvedOptions().locale;
+})(DateUtils || (DateUtils = {}));
 
 
 /***/ }),
@@ -5532,6 +5717,202 @@ class HttpJsonFetcher extends _HttpFetcher__WEBPACK_IMPORTED_MODULE_0__.HttpFetc
 
 /***/ }),
 
+/***/ "../../packages/@dooboostore/core/src/logger/Logger.ts":
+/*!*************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/logger/Logger.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Logger: () => (/* binding */ Logger),
+/* harmony export */   LoggerLevel: () => (/* binding */ LoggerLevel)
+/* harmony export */ });
+/* harmony import */ var _date_DateUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../date/DateUtils */ "../../packages/@dooboostore/core/src/date/DateUtils.ts");
+// import { InspectOptions } from 'node:util';
+
+var LoggerLevel;
+(function (LoggerLevel) {
+    LoggerLevel["LOG"] = "LOG";
+    LoggerLevel["ERROR"] = "ERROR";
+    LoggerLevel["WARN"] = "WARN";
+    LoggerLevel["INFO"] = "INFO";
+    LoggerLevel["DEBUG"] = "DEBUG";
+    LoggerLevel["TRACE"] = "TRACE";
+    LoggerLevel["OFF"] = "OFF";
+})(LoggerLevel || (LoggerLevel = {}));
+//
+// export interface Logger {
+//   log(...args: any[]): void;
+//
+//   error(...args: any[]): void;
+//
+//   warn(...args: any[]): void;
+//
+//   info(...args: any[]): void;
+//
+//   debug(...args: any[]): void;
+//
+//   trace(...args: any[]): void;
+// }
+class Logger {
+    config;
+    constructor(config) {
+        this.config = config;
+    }
+    setConfig(config) {
+        this.config = config;
+    }
+    _log(logLevel, ...args) {
+        const now = new Date();
+        let file, line;
+        // const isNode = typeof process !== "undefined" && process.versions && process.versions.node;
+        // console.log('------------isNode', isNode);
+        // 환경별 스택 추출
+        // if (isNode) {
+        //   const stackObj = {} as any;
+        //   Error.captureStackTrace(stackObj, this._log);
+        //   const stack = stackObj?.stack.split("\n")[1];
+        //   const match = stack.match(/at (.*):(\d+):(\d+)/);
+        //   const path = isNode ? require("path") : null;
+        //   file = path.basename(match[1]);
+        //   line = match[2];
+        // } else {
+        const err = new Error();
+        const stackLines = err.stack.split("\n");
+        // console.log('------------', stackLines);
+        let stack = stackLines[3];
+        const match = stack.match(/(?:at\s)?(?:.*\s)?(?:\(|\@)?(.*):(\d+):(\d+)/);
+        // console.log('mmmmmmmmmmmmm', match);
+        file = match[1]; //new URL(match[1]).pathname.split("/").pop();
+        line = `${match[2]}:${match[3]}`;
+        // }
+        // 출력 문자열 생성
+        // const formattedDate = formatDate(now);
+        const message = args.map(arg => typeof arg === "object" ? JSON.stringify(arg) : String(arg)).join(" ");
+        const format = this.config?.format ?? '';
+        // 포맷 파싱 및 적용
+        let output = format;
+        // 날짜 처리: ${date:'형식'}
+        const dateMatch = format.match(/\${date:'([^']+)'\}/);
+        if (dateMatch) {
+            const dateFormat = dateMatch[1];
+            output = output.replace(dateMatch[0], _date_DateUtils__WEBPACK_IMPORTED_MODULE_0__.DateUtils.format(now, dateFormat));
+        }
+        // // 줄 번호 처리: ${line:자릿수}
+        output = output.replace("${line}", line);
+        output = output.replace("${level}", logLevel);
+        // const lineMatch = format.match(/\${line:(\d+)\}/);
+        // if (lineMatch) {
+        //   const digits = parseInt(lineMatch[1], 10);
+        //   const paddedLine = String(line).padStart(digits, "0");
+        //   output = output.replace(lineMatch[0], paddedLine);
+        // }
+        // 파일명 처리
+        output = output.replace("${file}", file.split('/').pop() ?? '');
+        // 메시지 처리
+        output = output.replace("${message}", message);
+        return output;
+        // const output = `[${formattedDate}] [${file}:${line}] ${message}`;
+        //
+        // // 캡처 및 출력
+        // capturedOutput += output + "\n";
+    }
+    log(msg, ...args) {
+        if (this.config?.level === LoggerLevel.OFF) {
+            return;
+        }
+        console.log(this._log(LoggerLevel.LOG, msg), ...args);
+    }
+    // public logDir(obj: any, option?: InspectOptions) {
+    //   if (this.config?.level === LoggerLevel.OFF) {
+    //     return;
+    //   }
+    //   console.dir(obj, option);
+    // }
+    error(msg, ...args) {
+        if (this.config?.level === LoggerLevel.OFF) {
+            return;
+        }
+        (console.error ?? console.log)(this._log(LoggerLevel.ERROR, msg), ...args);
+    }
+    // public errorDir(obj: any, option?: InspectOptions) {
+    //   if (this.config?.level === LoggerLevel.OFF) {
+    //     return;
+    //   }
+    //   console.dir(obj, option);
+    // }
+    warn(msg, ...args) {
+        if (this.config?.level === LoggerLevel.ERROR ||
+            this.config?.level === LoggerLevel.LOG ||
+            this.config?.level === LoggerLevel.OFF) {
+            return;
+        }
+        (console.warn ?? console.log)(this._log(LoggerLevel.WARN, msg), ...args);
+    }
+    // public warnDir(obj: any, option?: InspectOptions) {
+    //   if (
+    //     this.config?.level === LoggerLevel.ERROR ||
+    //     this.config?.level === LoggerLevel.LOG ||
+    //     this.config?.level === LoggerLevel.OFF
+    //   ) {
+    //     return;
+    //   }
+    //   console.dir(obj, option);
+    // }
+    info(msg, ...args) {
+        if (this.config?.level === LoggerLevel.WARN ||
+            this.config?.level === LoggerLevel.ERROR ||
+            this.config?.level === LoggerLevel.LOG ||
+            this.config?.level === LoggerLevel.OFF) {
+            return;
+        }
+        (console.info ?? console.log)(this._log(LoggerLevel.INFO, msg), ...args);
+    }
+    // public infoDir(obj: any, option?: InspectOptions) {
+    //   if (
+    //     this.config?.level === LoggerLevel.WARN ||
+    //     this.config?.level === LoggerLevel.ERROR ||
+    //     this.config?.level === LoggerLevel.LOG ||
+    //     this.config?.level === LoggerLevel.OFF
+    //   ) {
+    //     return;
+    //   }
+    //   console.dir(obj, option);
+    // }
+    debug(msg, ...args) {
+        if (this.config?.level === LoggerLevel.INFO ||
+            this.config?.level === LoggerLevel.WARN ||
+            this.config?.level === LoggerLevel.ERROR ||
+            this.config?.level === LoggerLevel.LOG ||
+            this.config?.level === LoggerLevel.OFF) {
+            return;
+        }
+        (console.debug ?? console.log)(this._log(LoggerLevel.DEBUG, msg), ...args);
+    }
+    // public debugDir(obj: any, option?: InspectOptions) {
+    //   if (
+    //     this.config?.level === LoggerLevel.INFO ||
+    //     this.config?.level === LoggerLevel.WARN ||
+    //     this.config?.level === LoggerLevel.ERROR ||
+    //     this.config?.level === LoggerLevel.LOG ||
+    //     this.config?.level === LoggerLevel.OFF
+    //   ) {
+    //     return;
+    //   }
+    //   console.dir(obj, option);
+    // }
+    trace(...args) {
+        if (this.config?.level === LoggerLevel.TRACE) {
+            (console.trace ?? console.log)(...args);
+        }
+    }
+}
+
+
+/***/ }),
+
 /***/ "../../packages/@dooboostore/core/src/math/MathUtil.ts":
 /*!*************************************************************!*\
   !*** ../../packages/@dooboostore/core/src/math/MathUtil.ts ***!
@@ -6282,7 +6663,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Observable: () => (/* binding */ Observable)
 /* harmony export */ });
-/* harmony import */ var _Subscriber___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Subscriber. */ "../../packages/@dooboostore/core/src/message/Subscriber..ts");
+/* harmony import */ var _Subscriber__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Subscriber */ "../../packages/@dooboostore/core/src/message/Subscriber.ts");
 
 class Observable {
     _producerFunction;
@@ -6290,13 +6671,28 @@ class Observable {
         this._producerFunction = producerFunction;
     }
     subscribe(observer, e, c) {
+        /*
+            const observer = observerOrNext;
+    
+        const partialObserver: Partial<Observer<T, E>> = typeof observer === 'function'
+          ? {
+              next: observer,
+              error: error,
+              complete: complete
+            }
+          : {
+              next: observer.next,
+              error: observer.error,
+              complete: observer.complete
+            };
+         */
         const partialObserver = {
             next: typeof observer === 'object' ? observer.next : observer,
             error: typeof observer === 'object' ? observer.error : e,
             complete: typeof observer === 'object' ? observer.complete : c
         };
         // Create a new internal subscriber for this specific subscription
-        const internalSubscriber = new _Subscriber___WEBPACK_IMPORTED_MODULE_0__.Subscriber({
+        const internalSubscriber = new _Subscriber__WEBPACK_IMPORTED_MODULE_0__.Subscriber({
             next: (data) => {
                 partialObserver.next?.(data);
             },
@@ -6511,10 +6907,10 @@ class Subject extends _Observable__WEBPACK_IMPORTED_MODULE_0__.Observable {
 
 /***/ }),
 
-/***/ "../../packages/@dooboostore/core/src/message/Subscriber..ts":
-/*!*******************************************************************!*\
-  !*** ../../packages/@dooboostore/core/src/message/Subscriber..ts ***!
-  \*******************************************************************/
+/***/ "../../packages/@dooboostore/core/src/message/Subscriber.ts":
+/*!******************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/message/Subscriber.ts ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6553,6 +6949,62 @@ class Subscriber {
     unsubscribe() {
         this.closed = true;
     }
+}
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/core/src/message/operators/bufferTime.ts":
+/*!****************************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/message/operators/bufferTime.ts ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   bufferTime: () => (/* binding */ bufferTime)
+/* harmony export */ });
+/* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Observable */ "../../packages/@dooboostore/core/src/message/Observable.ts");
+
+/**
+ * Buffers the source Observable values for a specific time period.
+ *
+ * @param bufferTimeSpan The amount of time to fill each buffer for.
+ * @return An Observable of arrays of values.
+ */
+function bufferTime(bufferTimeSpan) {
+    return (source) => {
+        return new _Observable__WEBPACK_IMPORTED_MODULE_0__.Observable(subscriber => {
+            let buffer = [];
+            const intervalId = setInterval(() => {
+                if (buffer.length > 0) {
+                    subscriber.next(buffer);
+                    buffer = [];
+                }
+            }, bufferTimeSpan);
+            const sourceSubscription = source.subscribe({
+                next: (value) => {
+                    buffer.push(value);
+                },
+                error: (err) => {
+                    subscriber.error(err);
+                    clearInterval(intervalId);
+                },
+                complete: () => {
+                    if (buffer.length > 0) {
+                        subscriber.next(buffer);
+                    }
+                    subscriber.complete();
+                    clearInterval(intervalId);
+                }
+            });
+            return () => {
+                sourceSubscription.unsubscribe();
+                clearInterval(intervalId);
+            };
+        });
+    };
 }
 
 
@@ -6954,69 +7406,93 @@ var ObjectUtils;
             if (Path.isFunctionScript(path) || Path.isArrowFunctionScript(path)) {
                 return path;
             }
+            // Protect nullish coalescing operator (??) by replacing it with a placeholder
+            const nullishCoalescingPlaceholder = '__NULLISH_COALESCING__';
+            const hasNullishCoalescing = path.includes('??');
+            let tempPath = path;
+            if (hasNullishCoalescing) {
+                tempPath = tempPath.replace(/\?\?/g, nullishCoalescingPlaceholder);
+            }
             // Check for ternary operator pattern (? :)
-            if (path.includes(' ? ') && path.includes(' : ')) {
-                // Handle ternary operator - only convert property access parts, not the ternary operator itself
-                const parts = path.split(/(\s+\?\s+|\s+:\s+)/);
-                const result = parts.map((part, index) => {
-                    // Only process the first part (before ?) for optional chaining
-                    if (index === 0) {
-                        const tokens = part.match(/[^?.[\]]+|\[[^\]]*\]/g);
-                        if (tokens && tokens.length > 1) {
-                            return tokens.join('?.');
-                        }
+            // Match "? " (with space after ?) followed by ":" somewhere later - this indicates a ternary operator
+            // The space after ? is crucial to distinguish from optional chaining (?.)
+            const ternaryMatch = tempPath.match(/\?\s+[^:]*:/);
+            if (ternaryMatch) {
+                // Handle ternary operator - split by the ternary operator parts
+                // We need to split carefully to preserve the ? and : operators
+                const questionMarkIndex = tempPath.indexOf('?');
+                const colonIndex = tempPath.indexOf(':', questionMarkIndex);
+                if (questionMarkIndex !== -1 && colonIndex !== -1) {
+                    // Check if there's a space after the ?
+                    const charAfterQuestion = tempPath.charAt(questionMarkIndex + 1);
+                    if (charAfterQuestion === ' ' || charAfterQuestion === '\t' || charAfterQuestion === '\n') {
+                        // Split into three parts: condition, true branch, false branch
+                        const condition = tempPath.substring(0, questionMarkIndex).trim();
+                        const trueBranch = tempPath.substring(questionMarkIndex + 1, colonIndex).trim();
+                        const falseBranch = tempPath.substring(colonIndex + 1).trim();
+                        // Process each part recursively
+                        const processedCondition = Path.toOptionalChainPath(condition);
+                        const processedTrueBranch = Path.toOptionalChainPath(trueBranch);
+                        const processedFalseBranch = Path.toOptionalChainPath(falseBranch);
+                        // Reconstruct with original spacing around ? and :
+                        const finalResult = `${processedCondition} ? ${processedTrueBranch} : ${processedFalseBranch}`;
+                        // Restore nullish coalescing operator
+                        return hasNullishCoalescing ? finalResult.replace(new RegExp(nullishCoalescingPlaceholder, 'g'), '??') : finalResult;
                     }
-                    return part;
-                });
-                return result.join('');
+                }
             }
             // Handle function calls by processing the entire path with regex replacement
-            if (path.includes('(')) {
+            if (tempPath.includes('(')) {
                 // Replace function calls with a placeholder, process the path, then restore function calls
                 const functionCallMatches = [];
-                let tempPath = path;
+                let workingPath = tempPath;
                 let counter = 0;
                 // Find and process function calls with their arguments
                 const functionCallRegex = /(\w+)\(([^()]*(?:\([^()]*\)[^()]*)*)\)/g;
                 let match;
-                while ((match = functionCallRegex.exec(path)) !== null) {
+                while ((match = functionCallRegex.exec(tempPath)) !== null) {
                     const fullMatch = match[0];
                     const funcName = match[1];
                     const funcArgs = match[2];
                     const placeholder = `__FUNC_CALL_${counter}__`;
-                    // Process function arguments recursively
-                    const processedArgs = funcArgs ? Path.toOptionalChainPath(funcArgs) : '';
+                    // Process function arguments recursively, but don't add ?. at the end of closing parenthesis
+                    let processedArgs = funcArgs ? Path.toOptionalChainPath(funcArgs) : '';
+                    // Remove trailing ?. before closing parenthesis if it exists
+                    processedArgs = processedArgs.replace(/\?\.\s*$/, '');
                     const processedFuncCall = `${funcName}?.(${processedArgs})`;
                     functionCallMatches.push({
                         original: fullMatch,
                         processed: processedFuncCall,
                         placeholder: placeholder
                     });
-                    tempPath = tempPath.replace(fullMatch, placeholder);
+                    workingPath = workingPath.replace(fullMatch, placeholder);
                     counter++;
                 }
                 // Process the path without function calls
-                const tokens = tempPath.match(/[^?.[\]]+|\[[^\]]*\]/g);
+                const tokens = workingPath.match(/[^?.[\]]+|\[[^\]]*\]/g);
                 let processedPath = '';
                 if (tokens && tokens.length > 1) {
                     processedPath = tokens.join('?.');
                 }
                 else {
-                    processedPath = tempPath;
+                    processedPath = workingPath;
                 }
                 // Restore function calls
                 for (const funcMatch of functionCallMatches) {
                     processedPath = processedPath.replace(funcMatch.placeholder, funcMatch.processed);
                 }
-                return processedPath;
+                // Restore nullish coalescing operator
+                return hasNullishCoalescing ? processedPath.replace(new RegExp(nullishCoalescingPlaceholder, 'g'), '??') : processedPath;
             }
             // Tokenize the path by '.', '[', ']', and '?' to handle property access and existing optional chaining.
-            const tokens = path.match(/[^?.[\]]+|\[[^\]]*\]/g);
+            const tokens = tempPath.match(/[^?.[\]]+|\[[^\]]*\]/g);
             if (!tokens) {
-                return path; // Return original path if no tokens are found (e.g., path is just '.')
+                return hasNullishCoalescing ? path : path; // Return original path if no tokens are found (e.g., path is just '.')
             }
             // Join tokens with '?.', effectively creating the optional chain path.
-            return tokens.join('?.');
+            const result = tokens.join('?.');
+            // Restore nullish coalescing operator
+            return hasNullishCoalescing ? result.replace(new RegExp(nullishCoalescingPlaceholder, 'g'), '??') : result;
         };
         Path.removeOptionalChainOperator = (path) => {
             if (!path) {
@@ -8047,6 +8523,51 @@ var Promises;
         await Promise.all(executing);
         return results;
     };
+    /**
+     * Retry a promise with configurable delays
+     * @param factory Function that returns a promise to retry (receives attempt number and previous error as parameters)
+     * @param config Retry configuration
+     * @param config.retry Number of retries (0 = no retry, 1 = retry once if failed, etc.)
+     * @param config.delay.initialDelay Delay before first attempt (default: 0)
+     * @param config.delay.retryDelay Delay between retry attempts (default: 0)
+     * @param config.onRetry Callback called on each retry with error and attempt number
+     * @returns Promise that resolves with the result or rejects after all retries
+     * @example
+     * // Retry up to 3 times with 1 second delay between attempts
+     * await Promises.retry((attempt, error) => {
+     *   if (error) console.log('Previous error:', error);
+     *   return fetchData(attempt);
+     * }, { retry: 3, delay: { retryDelay: 1000 } })
+     */
+    Promises.retry = async (factory, config) => {
+        const initialDelay = config.delay?.initialDelay ?? 0;
+        const retryDelay = config.delay?.retryDelay ?? 0;
+        // Initial delay before first attempt
+        if (initialDelay > 0) {
+            await Promises.sleep(initialDelay);
+        }
+        let lastError;
+        for (let attempt = 0; attempt <= config.retry; attempt++) {
+            try {
+                return await factory(attempt, lastError);
+            }
+            catch (error) {
+                lastError = error;
+                // Don't retry if this was the last attempt
+                if (attempt === config.retry) {
+                    break;
+                }
+                // Call onRetry callback if provided
+                config.onRetry?.(error, attempt + 1);
+                // Wait before retrying
+                if (retryDelay > 0) {
+                    await Promises.sleep(retryDelay);
+                }
+            }
+        }
+        // All retries failed, throw the last error
+        throw lastError;
+    };
     let Result;
     (function (Result) {
         async function awaitWrap(promise) {
@@ -8550,6 +9071,15 @@ var ValidUtils;
         // 2. prototype 속성을 가져야 함
         return typeof fn === 'function' && typeof fn.prototype !== 'undefined';
     };
+    ValidUtils.isUrl = (str) => {
+        try {
+            new URL(str);
+            return true;
+        }
+        catch (_) {
+            return false;
+        }
+    };
     ValidUtils.isFrozen = (obj) => {
         return Object.isFrozen(obj);
     };
@@ -8992,25 +9522,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
 /* harmony import */ var _events_EventManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./events/EventManager */ "../../packages/@dooboostore/dom-render/src/events/EventManager.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _types_Types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types/Types */ "../../packages/@dooboostore/dom-render/src/types/Types.ts");
-/* harmony import */ var _rawsets_RawSetType__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./rawsets/RawSetType */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSetType.ts");
-/* harmony import */ var _operators_DrThisProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operators/DrThisProperty */ "../../packages/@dooboostore/dom-render/src/operators/DrThisProperty.ts");
-/* harmony import */ var _rawsets_RawSetOperatorType__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./rawsets/RawSetOperatorType */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSetOperatorType.ts");
-/* harmony import */ var _components_ComponentSet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/ComponentSet */ "../../packages/@dooboostore/dom-render/src/components/ComponentSet.ts");
-/* harmony import */ var _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./decorators/DomRenderNoProxy */ "../../packages/@dooboostore/dom-render/src/decorators/DomRenderNoProxy.ts");
-/* harmony import */ var _lifecycle_OnCreateRender__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lifecycle/OnCreateRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnCreateRender.ts");
-/* harmony import */ var _lifecycle_OnInitRender__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lifecycle/OnInitRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnInitRender.ts");
-/* harmony import */ var _lifecycle_OnCreateRenderData__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lifecycle/OnCreateRenderData */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnCreateRenderData.ts");
-/* harmony import */ var _lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lifecycle/OnChangeAttrRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChangeAttrRender.ts");
-/* harmony import */ var _dooboostore_core_web_document_DocumentUtils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @dooboostore/core-web/document/DocumentUtils */ "../../packages/@dooboostore/core-web/src/document/DocumentUtils.ts");
-/* harmony import */ var _dooboostore_core_types__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @dooboostore/core/types */ "../../packages/@dooboostore/core/src/types.ts");
-/* harmony import */ var _lifecycle_OnBeforeReturnSet__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lifecycle/OnBeforeReturnSet */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnBeforeReturnSet.ts");
-/* harmony import */ var _lifecycle_OnChildRenderedByProperty__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lifecycle/OnChildRenderedByProperty */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChildRenderedByProperty.ts");
-/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
-/* harmony import */ var _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @dooboostore/core/valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
-/* harmony import */ var _lifecycle_OnProxyDomRender__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lifecycle/OnProxyDomRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnProxyDomRender.ts");
-/* harmony import */ var _lifecycle_OnRawSetRendered__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lifecycle/OnRawSetRendered */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnRawSetRendered.ts");
+/* harmony import */ var _types_Types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types/Types */ "../../packages/@dooboostore/dom-render/src/types/Types.ts");
+/* harmony import */ var _rawsets_RawSetType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rawsets/RawSetType */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSetType.ts");
+/* harmony import */ var _operators_DrThisProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./operators/DrThisProperty */ "../../packages/@dooboostore/dom-render/src/operators/DrThisProperty.ts");
+/* harmony import */ var _rawsets_RawSetOperatorType__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./rawsets/RawSetOperatorType */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSetOperatorType.ts");
+/* harmony import */ var _components_ComponentSet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/ComponentSet */ "../../packages/@dooboostore/dom-render/src/components/ComponentSet.ts");
+/* harmony import */ var _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./decorators/DomRenderNoProxy */ "../../packages/@dooboostore/dom-render/src/decorators/DomRenderNoProxy.ts");
+/* harmony import */ var _lifecycle_OnCreateRender__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lifecycle/OnCreateRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnCreateRender.ts");
+/* harmony import */ var _lifecycle_OnInitRender__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lifecycle/OnInitRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnInitRender.ts");
+/* harmony import */ var _lifecycle_OnCreateRenderData__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lifecycle/OnCreateRenderData */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnCreateRenderData.ts");
+/* harmony import */ var _lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lifecycle/OnChangeAttrRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChangeAttrRender.ts");
+/* harmony import */ var _dooboostore_core_web_document_DocumentUtils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @dooboostore/core-web/document/DocumentUtils */ "../../packages/@dooboostore/core-web/src/document/DocumentUtils.ts");
+/* harmony import */ var _dooboostore_core_types__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @dooboostore/core/types */ "../../packages/@dooboostore/core/src/types.ts");
+/* harmony import */ var _lifecycle_OnBeforeReturnSet__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lifecycle/OnBeforeReturnSet */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnBeforeReturnSet.ts");
+/* harmony import */ var _lifecycle_OnChildRenderedByProperty__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lifecycle/OnChildRenderedByProperty */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChildRenderedByProperty.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
+/* harmony import */ var _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @dooboostore/core/valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
+/* harmony import */ var _lifecycle_OnProxyDomRender__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./lifecycle/OnProxyDomRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnProxyDomRender.ts");
+/* harmony import */ var _lifecycle_OnRawSetRendered__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lifecycle/OnRawSetRendered */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnRawSetRendered.ts");
+/* harmony import */ var _lifecycle_OnChildRawSetRendered__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lifecycle/OnChildRawSetRendered */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChildRawSetRendered.ts");
 
 
 
@@ -9075,8 +9605,8 @@ class DomRenderProxy {
     _domRender_ref = new Map();
     _rawSets = new Map();
     _domRender_proxy;
-    // public _firstTarget: Node;
     _targets = new Set();
+    // public name = Math.random();
     constructor(_domRender_origin, target, _domRender_config) {
         this._domRender_origin = _domRender_origin;
         this._domRender_config = _domRender_config;
@@ -9093,17 +9623,17 @@ class DomRenderProxy {
         // }, 1000)
     }
     static unFinal(obj) {
-        return _types_Types__WEBPACK_IMPORTED_MODULE_3__.DomRenderFinalProxy.unFinal(obj);
+        return _types_Types__WEBPACK_IMPORTED_MODULE_2__.DomRenderFinalProxy.unFinal(obj);
     }
     static final(obj) {
-        return _types_Types__WEBPACK_IMPORTED_MODULE_3__.DomRenderFinalProxy.final(obj);
+        return _types_Types__WEBPACK_IMPORTED_MODULE_2__.DomRenderFinalProxy.final(obj);
     }
     static isFinal(obj) {
-        return _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_18__.ValidUtils.isNull(obj) || _types_Types__WEBPACK_IMPORTED_MODULE_3__.DomRenderFinalProxy.isFinal(obj);
+        return _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_17__.ValidUtils.isNull(obj) || _types_Types__WEBPACK_IMPORTED_MODULE_2__.DomRenderFinalProxy.isFinal(obj);
     }
     async run(objProxy) {
         this._domRender_proxy = objProxy;
-        if ((0,_lifecycle_OnProxyDomRender__WEBPACK_IMPORTED_MODULE_19__.isOnProxyDomRender)(objProxy)) {
+        if ((0,_lifecycle_OnProxyDomRender__WEBPACK_IMPORTED_MODULE_18__.isOnProxyDomRender)(objProxy)) {
             objProxy.onProxyDomRender(this._domRender_config);
         }
         const obj = getDomRenderOriginObject(objProxy);
@@ -9111,8 +9641,8 @@ class DomRenderProxy {
             Object.keys(obj).forEach(it => {
                 // Reflect 메타데이터에서 domRender:NoProxy 여부 확인
                 try {
-                    const isNoProxy = Reflect.getMetadata(_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_8__.DomRenderNoProxyKey, obj, it) ||
-                        Reflect.getMetadata(_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_8__.DomRenderNoProxyKey, Object.getPrototypeOf(obj).constructor);
+                    const isNoProxy = Reflect.getMetadata(_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_7__.DomRenderNoProxyKey, obj, it) ||
+                        Reflect.getMetadata(_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_7__.DomRenderNoProxyKey, Object.getPrototypeOf(obj).constructor);
                     if (isNoProxy) {
                         return obj;
                     }
@@ -9124,7 +9654,7 @@ class DomRenderProxy {
                     typeof target === 'object' &&
                     !DomRenderProxy.isFinal(target) &&
                     !Object.isFrozen(target) &&
-                    !(obj instanceof _types_Types__WEBPACK_IMPORTED_MODULE_3__.Shield)) {
+                    !(obj instanceof _types_Types__WEBPACK_IMPORTED_MODULE_2__.Shield)) {
                     const isExcluded = this._domRender_config.proxyExcludeTyps?.some(it => target instanceof it) ?? false;
                     // const filter = this._domRender_config.proxyExcludeTyps?.filter(it => target instanceof it) ?? [];
                     if (!isExcluded) {
@@ -9157,15 +9687,15 @@ class DomRenderProxy {
         const onCreate = target.getAttribute?.(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_ON_CREATE_ARGUMENTS_OPTIONNAME);
         let createParam = [];
         if (onCreate) {
-            createParam = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Script.evaluateReturn(onCreate, this._domRender_proxy);
+            createParam = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(onCreate, this._domRender_proxy);
             if (!Array.isArray(createParam)) {
                 createParam = [createParam];
             }
         }
-        if ((0,_lifecycle_OnCreateRenderData__WEBPACK_IMPORTED_MODULE_11__.isOnCreateRenderData)(this._domRender_proxy)) {
+        if ((0,_lifecycle_OnCreateRenderData__WEBPACK_IMPORTED_MODULE_10__.isOnCreateRenderData)(this._domRender_proxy)) {
             this._domRender_proxy?.onCreateRenderData({ rootParent: this._domRender_proxy });
         }
-        if ((0,_lifecycle_OnCreateRender__WEBPACK_IMPORTED_MODULE_9__.isOnCreateRender)(this._domRender_proxy)) {
+        if ((0,_lifecycle_OnCreateRender__WEBPACK_IMPORTED_MODULE_8__.isOnCreateRender)(this._domRender_proxy)) {
             this._domRender_proxy.onCreateRender(...createParam);
         }
         // const innerHTML = (target as any).innerHTML ?? '';
@@ -9190,9 +9720,9 @@ class DomRenderProxy {
             const onInit = target.getAttribute?.(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_ON_INIT_ARGUMENTS_OPTIONNAME);
             let initParam;
             if (onCreate) {
-                initParam = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_2__.ScriptUtils.evaluateReturn(onCreate, this._domRender_proxy);
+                initParam = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(onCreate, this._domRender_proxy);
             }
-            if ((0,_lifecycle_OnInitRender__WEBPACK_IMPORTED_MODULE_10__.isOnInitRender)(this._domRender_proxy)) {
+            if ((0,_lifecycle_OnInitRender__WEBPACK_IMPORTED_MODULE_9__.isOnInitRender)(this._domRender_proxy)) {
                 await this._domRender_proxy.onInitRender(initParam, rawSet ?? { dataSet: { config: this._domRender_config } });
             }
         }
@@ -9233,7 +9763,7 @@ class DomRenderProxy {
                     it.detect.action();
                     // } else if (it.type === RawSetType.TARGET_ELEMENT && it.data && fullPathStr && targetAttrMap && (it.fragment as any).render) {
                 }
-                else if (it.type === _rawsets_RawSetType__WEBPACK_IMPORTED_MODULE_4__.RawSetType.TARGET_ELEMENT &&
+                else if (it.type === _rawsets_RawSetType__WEBPACK_IMPORTED_MODULE_3__.RawSetType.TARGET_ELEMENT &&
                     it.dataSet?.render?.currentThis &&
                     fullPathStr &&
                     targetAttrMap) {
@@ -9253,7 +9783,7 @@ class DomRenderProxy {
                             // console.log('render-->!!!!!', it.dataSet.render);
                             // const script = `${render.renderScript} return ${v} `;
                             // const cval = ScriptUtils.eval(script, Object.assign(this._domRender_proxy ?? {}, { __render: render }));
-                            if ((0,_lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_12__.isOnChangeAttrRender)(it.dataSet?.render?.currentThis)) {
+                            if ((0,_lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_11__.isOnChangeAttrRender)(it.dataSet?.render?.currentThis)) {
                                 it.dataSet?.render?.currentThis?.onChangeAttrRender?.(k, targetAttrObject[k], { rawSet: it });
                             }
                         }
@@ -9275,10 +9805,13 @@ class DomRenderProxy {
             }
             const t = it.findNearThis(this._domRender_proxy);
             // TODO: 호출된곳에서 또 변수를 수정하게되면 무한루프니깐 왠만하면 사용못하게 해야한다.
-            if ((0,_lifecycle_OnRawSetRendered__WEBPACK_IMPORTED_MODULE_20__.isOnRawSetRendered)(t)) {
-                await t.onRawSetRendered(it, { path: fullPathStr, value: _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Script.evaluateReturn(`this.${fullPathStr}`, this._domRender_proxy), root: this._domRender_proxy, renderResult });
+            if ((0,_lifecycle_OnRawSetRendered__WEBPACK_IMPORTED_MODULE_19__.isOnRawSetRendered)(t)) {
+                await t.onRawSetRendered(it, { path: fullPathStr, value: _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(`this.${fullPathStr}`, this._domRender_proxy), root: this._domRender_proxy, renderResult });
             }
             // console.log('----', it);
+        }
+        if ((0,_lifecycle_OnChildRawSetRendered__WEBPACK_IMPORTED_MODULE_20__.isOnChildRawSetRendered)(this._domRender_proxy)) {
+            await this._domRender_proxy.onChildRawSetRendered();
         }
         if (removeRawSets.length > 0) {
             this.removeRawSet(...removeRawSets);
@@ -9344,7 +9877,7 @@ class DomRenderProxy {
                     .join('');
                 const lastPropertyName = strings[strings.length - 1];
                 const path = 'this' + front;
-                const data = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_2__.ScriptUtils.evaluateReturn(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Path.toOptionalChainPath(path), this._domRender_proxy);
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Path.toOptionalChainPath(path), this._domRender_proxy);
                 // console.log('root-->', this._rawSets, path, data );
                 // console.log('--!!!!', fullPathStr, iterable, data, front, last);
                 // 왜여기서 promise를 했을까를 생각해보면......훔.. 변수변경과 화면 뿌려주는걸 동기로하면 성능이 안나오고 비현실적이다.  그래서 promise
@@ -9361,7 +9894,7 @@ class DomRenderProxy {
                     firstTargets?.forEach(it => {
                         // console.log('----forEach---', it);
                         const type = it.point.start?.getAttribute?.('type');
-                        if (type === _rawsets_RawSetOperatorType__WEBPACK_IMPORTED_MODULE_6__.RawSetOperatorType.DR_THIS_PROPERTY) {
+                        if (type === _rawsets_RawSetOperatorType__WEBPACK_IMPORTED_MODULE_5__.RawSetOperatorType.DR_THIS_PROPERTY) {
                             firstTargetDictionary.push(it);
                         }
                     });
@@ -9379,7 +9912,7 @@ class DomRenderProxy {
                                 startElement.setAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_HAS_KEYS_OPTIONNAME, keys.filter(it => it !== lastPropertyName).join(','));
                             }
                             if (!keys.includes(lastPropertyName)) {
-                                const raws = _operators_DrThisProperty__WEBPACK_IMPORTED_MODULE_5__.DrThisProperty.append(this._domRender_proxy, fullPathStr, lastPropertyName, it, this._domRender_config);
+                                const raws = _operators_DrThisProperty__WEBPACK_IMPORTED_MODULE_4__.DrThisProperty.append(this._domRender_proxy, fullPathStr, lastPropertyName, it, this._domRender_config);
                                 if (raws) {
                                     rawSets.push(...raws);
                                 }
@@ -9429,8 +9962,8 @@ class DomRenderProxy {
                     // console.log(`⚡ Event processing time: ${Date.now() - eventProcessStartTime}ms (${this._targets.size} targets)`);
                     // console.log(`🔄 Promise inner total time: ${Date.now() - promiseInnerStartTime}ms`);
                     //랜더대상된게있으면
-                    if (rData?.length > 0 && (0,_lifecycle_OnChildRenderedByProperty__WEBPACK_IMPORTED_MODULE_16__.isOnChildRenderedByProperty)(data)) {
-                        const propertyValue = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Script.evaluateReturn(`this.${lastPropertyName}`, data);
+                    if (rData?.length > 0 && (0,_lifecycle_OnChildRenderedByProperty__WEBPACK_IMPORTED_MODULE_15__.isOnChildRenderedByProperty)(data)) {
+                        const propertyValue = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(`this.${lastPropertyName}`, data);
                         data.onChildRenderedByProperty(lastPropertyName, propertyValue);
                         // data
                     }
@@ -9458,7 +9991,7 @@ class DomRenderProxy {
         // }catch (e) {}
         // console.log('set-->', p, value, target, receiver, Reflect.getMetadata(DomRenderNoProxyKey, target, p) );
         if ((typeof p === 'string' && p !== '__domrender_components' && excludeGetSetPropertys.includes(p)) ||
-            Reflect.getMetadata(_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_8__.DomRenderNoProxyKey, target, p)) {
+            Reflect.getMetadata(_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_7__.DomRenderNoProxyKey, target, p)) {
             target[p] = value;
             return true;
         }
@@ -9469,15 +10002,18 @@ class DomRenderProxy {
         //     return true;
         // }
         // console.log('set--?', p, target, value);
+        let start = performance.now();
         if (typeof p === 'string') {
             value = this.proxy(receiver, value, p);
         }
+        // console.log('set proxy time', performance.now() - start, p);
+        // start = performance.now();
         // console.log('set typeChecked',  (target as any)[p] instanceof ComponentSet, value instanceof ComponentSet);
         // if ((target as any)[p] instanceof ComponentSet) {
         //   (target as any)[p]?.obj?.onDrThisUnBind?.();
         // }
         // is ComponentSet
-        if (value instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_7__.ComponentSet && target[p] instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_7__.ComponentSet) {
+        if (value instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_6__.ComponentSet && target[p] instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_6__.ComponentSet) {
             value.config.beforeComponentSet = target[p];
         }
         target[p] = value;
@@ -9485,18 +10021,21 @@ class DomRenderProxy {
         if (typeof p === 'string') {
             fullPathInfo = this.root([[{ path: p, obj: this._domRender_proxy }]], value);
         }
+        // console.log('set proxy root time', performance.now() - start, p);
+        // start = performance.now();
+        //
         // console.log('setRooot', fullPathInfo);
         //normal attribute 또한 링크랑 같은 증세라서 이렇게 해줘야한다!!
         // const rootDomRenderProxy = this.findRootDomRenderProxy();
         // console.log('set!!!!!!!', fullPathInfo, rootDomRenderProxy)
         // console.log('--------rootDom',fullPathInfo, rootDomRenderProxy, rootDomRenderProxy._domRender_proxy)
         const rootElement = this._domRender_config.rootElement ?? this._domRender_config.window.document;
-        _dooboostore_core_web_document_DocumentUtils__WEBPACK_IMPORTED_MODULE_13__.DocumentUtils.querySelectorAllByAttributeName(rootElement, _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.normalAttrMapAttrName)?.forEach(elementInfo => {
+        _dooboostore_core_web_document_DocumentUtils__WEBPACK_IMPORTED_MODULE_12__.DocumentUtils.querySelectorAllByAttributeName(rootElement, _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.normalAttrMapAttrName)?.forEach(elementInfo => {
             // @ts-ignore
             // const optionalPath = ObjectUtils.Path.toOptionalChainPath(elementInfo.value);
-            const targets = new Map(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Script.evaluateReturn(elementInfo.value));
+            const targets = new Map(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(elementInfo.value));
             Array.from(targets.entries())
-                .filter(_dooboostore_core_types__WEBPACK_IMPORTED_MODULE_14__.isDefined)
+                .filter(_dooboostore_core_types__WEBPACK_IMPORTED_MODULE_13__.isDefined)
                 .flatMap(([key, valueScript]) => {
                 return fullPathInfo
                     .flat()
@@ -9510,14 +10049,14 @@ class DomRenderProxy {
                 let script;
                 if (it.valueScript.isStringTemplate) {
                     variablePaths.forEach(it => {
-                        let r = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Path.toOptionalChainPath(it.inner);
+                        let r = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Path.toOptionalChainPath(it.inner);
                         targetScript = targetScript.replaceAll(it.origin, `\${${r}}`);
                     });
                     script = '`' + targetScript + '`';
                 }
                 else {
                     variablePaths.forEach(it => {
-                        let r = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Path.toOptionalChainPath(it.inner);
+                        let r = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Path.toOptionalChainPath(it.inner);
                         targetScript = targetScript.replaceAll(it.origin, `${r}`);
                     });
                     script = targetScript;
@@ -9526,11 +10065,11 @@ class DomRenderProxy {
                 //   let r = ObjectUtils.Path.toOptionalChainPath(it.inner);
                 //   targetScript = targetScript.replaceAll(it.origin,`\${${r}}`);
                 // })
-                const value1 = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_17__.ObjectUtils.Script.evaluateReturn(script, it.pathInfo.obj);
+                const value1 = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(script, it.pathInfo.obj);
                 // console.log('proxy set!Attribut======', it.key, value1)
-                if (value1 === null) {
+                if (value1 === null || value1 === undefined) {
                     elementInfo.element.removeAttribute(it.key);
-                    elementInfo.element[it.key] = null;
+                    // elementInfo.element[it.key] = null;
                 }
                 else {
                     elementInfo.element.setAttribute(it.key, value1);
@@ -9538,13 +10077,15 @@ class DomRenderProxy {
                 }
             });
         });
+        // console.log('set proxy normalAttrMapAttrName time', performance.now() - start, p);
+        // start = performance.now();
         //여기서 링크 같은거 해줘야함  *-link로 변수값이 변경되면 그걸 참고하고있는 다른것들에도 해줘야한다.
-        _dooboostore_core_web_document_DocumentUtils__WEBPACK_IMPORTED_MODULE_13__.DocumentUtils.querySelectorAllByAttributeName(rootElement, _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.linkTargetMapAttrName)?.forEach(elementInfo => {
+        _dooboostore_core_web_document_DocumentUtils__WEBPACK_IMPORTED_MODULE_12__.DocumentUtils.querySelectorAllByAttributeName(rootElement, _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.linkTargetMapAttrName)?.forEach(elementInfo => {
             // @ts-ignore
-            const targets = new Map(_dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_2__.ScriptUtils.evaluateReturn(elementInfo.value));
+            const targets = new Map(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(elementInfo.value));
             Array.from(targets.entries())
                 .filter(([key, value]) => value.trim())
-                .filter(_dooboostore_core_types__WEBPACK_IMPORTED_MODULE_14__.isDefined)
+                .filter(_dooboostore_core_types__WEBPACK_IMPORTED_MODULE_13__.isDefined)
                 .flatMap(([key, valueScript]) => {
                 return fullPathInfo
                     .flat()
@@ -9552,7 +10093,7 @@ class DomRenderProxy {
                     .flatMap(it => ({ key, valueScript: valueScript, pathInfo: it }));
             })
                 .forEach(info => {
-                const value1 = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_2__.ScriptUtils.evaluateReturn(info.valueScript, info.pathInfo.obj);
+                const value1 = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(info.valueScript, info.pathInfo.obj);
                 const applyAttributeName = _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.linkAttrs.find(it => it.name === info.key);
                 if (applyAttributeName) {
                     if (value1 === null) {
@@ -9566,7 +10107,7 @@ class DomRenderProxy {
             });
             Array.from(targets.entries())
                 .filter(([key, value]) => value.trim())
-                .filter(_dooboostore_core_types__WEBPACK_IMPORTED_MODULE_14__.isDefined)
+                .filter(_dooboostore_core_types__WEBPACK_IMPORTED_MODULE_13__.isDefined)
                 .flatMap(([key, valueScript]) => {
                 return fullPathInfo
                     .flat()
@@ -9580,14 +10121,17 @@ class DomRenderProxy {
                 }
             });
         });
+        // console.log('set proxy linkTargetMapAttrName time', performance.now() - start, p);
+        // start = performance.now();
         // console.log('---end',receiver);
         if ('onBeforeReturnSet' in receiver &&
             typeof p === 'string' &&
             !(this._domRender_config.proxyExcludeOnBeforeReturnSets ?? []).concat(excludeGetSetPropertys).includes(p)) {
-            if ((0,_lifecycle_OnBeforeReturnSet__WEBPACK_IMPORTED_MODULE_15__.isOnBeforeReturnSet)(receiver)) {
+            if ((0,_lifecycle_OnBeforeReturnSet__WEBPACK_IMPORTED_MODULE_14__.isOnBeforeReturnSet)(receiver)) {
                 receiver.onBeforeReturnSet?.(p, value, fullPathInfo.map(it => it.map(it => it.path).join()));
             }
         }
+        // console.log('done!!')
         return true;
     }
     get(target, p, receiver) {
@@ -9648,16 +10192,16 @@ class DomRenderProxy {
         try {
             // const isNoProxy = Reflect.getMetadata(DomRenderNoProxyKey, obj, p) || Reflect.getMetadata(DomRenderNoProxyKey, Object.getPrototypeOf(obj).constructor);
             const isObject = typeof obj === 'object';
-            const isNoProxy = isObject && (0,_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_8__.isDomRenderNoProxy)(obj, p);
+            const isNoProxy = isObject && (0,_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_7__.isDomRenderNoProxy)(obj, p);
             const isExclude = this._domRender_config.proxyExcludeTyps?.some(it => obj instanceof it) ?? false;
             const isFinal = isObject && DomRenderProxy.isFinal(obj);
             const isFrozen = Object.isFrozen(obj);
-            const isShield = obj instanceof _types_Types__WEBPACK_IMPORTED_MODULE_3__.Shield;
+            const isShield = obj instanceof _types_Types__WEBPACK_IMPORTED_MODULE_2__.Shield;
             if (obj === undefined ||
                 obj === null ||
                 isNoProxy ||
                 isExclude ||
-                _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_18__.ValidUtils.isNullOrUndefined(obj) ||
+                _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_17__.ValidUtils.isNullOrUndefined(obj) ||
                 !isObject ||
                 isFinal ||
                 isFrozen ||
@@ -9786,7 +10330,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
 /* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
 /* harmony import */ var _dooboostore_core_message_operators_debounceTime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @dooboostore/core/message/operators/debounceTime */ "../../packages/@dooboostore/core/src/message/operators/debounceTime.ts");
+/* harmony import */ var _dooboostore_core_message_operators_bufferTime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @dooboostore/core/message/operators/bufferTime */ "../../packages/@dooboostore/core/src/message/operators/bufferTime.ts");
 var _a, _b;
+
 
 
 
@@ -9881,6 +10427,10 @@ class ComponentBase {
     _refreshTimers = new Map();
     childrenSetSubject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_6__.Subject();
     createChildrenDebounceSubscription;
+    onRawSetRenderedOtherDataSubject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_6__.Subject();
+    onChildRawSetRenderedOtherDataSubject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_6__.Subject();
+    onRawSetRenderedOtherDataSubjectSubscription;
+    onChildRawSetRenderedOtherDataSubjectSubscription;
     constructor(_config) {
         this._config = _config;
     }
@@ -10078,6 +10628,10 @@ class ComponentBase {
         this._refreshTimers.clear();
     }
     async onRawSetRendered(rawSet, otherData) {
+        this.onRawSetRenderedOtherDataSubject.next(otherData);
+        // this.onRawSetRenderedOtherDataSubjectSubscription = this.onRawSetRenderedOtherDataSubject.pipe(debounceTime(this.componentConfig?.onRawSetRenderedOtherDataDebounce??0)).subscribe(it => {
+        //   this.onRawSetRenderedDebounce(it);
+        // });
         const queries = _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_5__.ReflectUtils.getMetadata(QUERY_METADATA_KEY, this.constructor);
         if (queries) {
             queries.filter(it => it.refreshRawSetRendered).forEach(queryInfo => {
@@ -10090,6 +10644,9 @@ class ComponentBase {
                 this._updateEventBinding(eventInfo, rawSet, true);
             });
         }
+    }
+    async onChildRawSetRendered() {
+        this.onChildRawSetRenderedOtherDataSubject.next();
     }
     /**
      * Manually refresh all query and event decorators
@@ -10303,6 +10860,10 @@ class ComponentBase {
     }
     onCreatedThisChildDebounce(childrenSet) {
     }
+    onRawSetRenderedDebounce(childrenSet) {
+    }
+    onChildRawSetRenderedDebounce() {
+    }
     onCreateRenderData(data) {
         this._render = data.render;
         if (data.render?.rawSet) {
@@ -10339,7 +10900,14 @@ class ComponentBase {
     }
     async onInitRender(param, rawSet) {
         this.createChildrenDebounceSubscription = this.childrenSetSubject.pipe((0,_dooboostore_core_message_operators_debounceTime__WEBPACK_IMPORTED_MODULE_7__.debounceTime)(this.componentConfig?.createChildrenDebounce ?? 0)).subscribe(it => {
+            // console.log('call onCreatedThisChildDebounce', it);
             this.onCreatedThisChildDebounce(it);
+        });
+        this.onRawSetRenderedOtherDataSubjectSubscription = this.onRawSetRenderedOtherDataSubject.pipe((0,_dooboostore_core_message_operators_bufferTime__WEBPACK_IMPORTED_MODULE_8__.bufferTime)(this.componentConfig?.onRawSetRenderedOtherDataDebounce ?? 0)).subscribe(it => {
+            this.onRawSetRenderedDebounce(it);
+        });
+        this.onChildRawSetRenderedOtherDataSubjectSubscription = this.onChildRawSetRenderedOtherDataSubject.pipe((0,_dooboostore_core_message_operators_debounceTime__WEBPACK_IMPORTED_MODULE_7__.debounceTime)(this.componentConfig?.onChildRawSetRenderedOtherDataDebounce ?? 0)).subscribe(it => {
+            this.onChildRawSetRenderedDebounce();
         });
         if (rawSet) {
             this.setRawSet(rawSet);
@@ -10367,6 +10935,8 @@ class ComponentBase {
         this._cleanupEventBindings();
         this._clearAllRefreshTimers();
         this.createChildrenDebounceSubscription?.unsubscribe();
+        this.onRawSetRenderedOtherDataSubjectSubscription?.unsubscribe();
+        this.onChildRawSetRenderedOtherDataSubjectSubscription?.unsubscribe();
     }
 }
 (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
@@ -10409,6 +10979,22 @@ class ComponentBase {
     _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__.DomRenderNoProxy,
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
 ], ComponentBase.prototype, "createChildrenDebounceSubscription", void 0);
+(0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__.DomRenderNoProxy,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+], ComponentBase.prototype, "onRawSetRenderedOtherDataSubject", void 0);
+(0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__.DomRenderNoProxy,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+], ComponentBase.prototype, "onChildRawSetRenderedOtherDataSubject", void 0);
+(0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__.DomRenderNoProxy,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+], ComponentBase.prototype, "onRawSetRenderedOtherDataSubjectSubscription", void 0);
+(0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__.DomRenderNoProxy,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+], ComponentBase.prototype, "onChildRawSetRenderedOtherDataSubjectSubscription", void 0);
 
 
 /***/ }),
@@ -10540,9 +11126,11 @@ var A;
         target = null;
         style = null;
         classAttr = null;
+        drClass = null;
         click = null;
         replace = false;
         scrollToTop = true;
+        element;
         onClick(event) {
             if (this.click) {
                 const attributes = {
@@ -10564,6 +11152,23 @@ var A;
                 this.domRenderConfig?.router?.go({ path: this.href, replace: this.replace, scrollToTop: this.scrollToTop });
             }
         }
+        onChangeAttrRender(name, value, other) {
+            super.onChangeAttrRender(name, value, other);
+            if (this.element && name.startsWith('attribute-')) {
+                this.element.setAttribute(name, value);
+            }
+        }
+        onAElementInit($element) {
+            this.element = $element;
+            this.getAttribute('onInit')?.($element);
+            this.getAttributeNames()
+                .filter(it => it.startsWith('attribute-'))
+                .forEach(it => {
+                const attrName = it.replace(/^attribute-/, '');
+                const attrValue = this.getAttribute(it);
+                this.element.setAttribute(attrName, attrValue);
+            });
+        }
     }
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         (0,_ComponentBase__WEBPACK_IMPORTED_MODULE_1__.attribute)({ converter: v => v || null }),
@@ -10581,6 +11186,10 @@ var A;
         (0,_ComponentBase__WEBPACK_IMPORTED_MODULE_1__.attribute)({ name: 'class', converter: v => v || null }),
         (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
     ], A.prototype, "classAttr", void 0);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+        (0,_ComponentBase__WEBPACK_IMPORTED_MODULE_1__.attribute)({ name: 'dr-class', converter: v => v || null }),
+        (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+    ], A.prototype, "drClass", void 0);
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         (0,_ComponentBase__WEBPACK_IMPORTED_MODULE_1__.attribute)(),
         (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
@@ -10605,6 +11214,8 @@ var A;
         style="\${@this@.style}$"
         class="\${@this@.classAttr}$"
         dr-event-click="@this@.onClick($event)"
+        dr-class="\${@this@.drClass}$"
+        dr-on-init="@this@.onAElementInit($element)"
       >#innerHTML#</a>`,
             objFactory: (e, o, r2, constructorParam) => {
                 return _DomRender__WEBPACK_IMPORTED_MODULE_2__.DomRender.run({ rootObject: new A.A(...constructorParam), config });
@@ -10645,9 +11256,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Appender: () => (/* binding */ Appender),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _ComponentBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ComponentBase */ "../../packages/@dooboostore/dom-render/src/components/ComponentBase.ts");
-/* harmony import */ var _DomRender__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../DomRender */ "../../packages/@dooboostore/dom-render/src/DomRender.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
+/* harmony import */ var _ComponentBase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ComponentBase */ "../../packages/@dooboostore/dom-render/src/components/ComponentBase.ts");
+/* harmony import */ var _DomRender__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../DomRender */ "../../packages/@dooboostore/dom-render/src/DomRender.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+
 
 
 
@@ -10658,8 +11271,9 @@ var Appender;
     //   template: '<div dr-appender="@this@.appender" dr-option-strip="true">#innerHTML#</div>',
     //   selector: `${selector}`
     // })
-    class Appender extends _ComponentBase__WEBPACK_IMPORTED_MODULE_0__.ComponentBase {
+    class Appender extends _ComponentBase__WEBPACK_IMPORTED_MODULE_1__.ComponentBase {
         value;
+        drOptionItemVariableName = null;
         // onCreateRender(...param: any) {
         //   console.log('--onCreateRender')
         // }
@@ -10690,15 +11304,19 @@ var Appender;
             // console.log('------>appender', name, value);
         }
     }
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+        (0,_ComponentBase__WEBPACK_IMPORTED_MODULE_1__.attribute)({ name: 'dr-option-item-variable-name', converter: v => v || null }),
+        (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+    ], Appender.prototype, "drOptionItemVariableName", void 0);
     Appender_1.Appender = Appender;
 })(Appender || (Appender = {}));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
     appender: (config) => {
-        return _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.createComponentTargetElement({
+        return _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_3__.RawSet.createComponentTargetElement({
             name: Appender.selector,
-            template: '<div dr-appender="@this@.value" dr-option-strip="true">#innerHTML#</div>',
+            template: '<div dr-appender="@this@.value" dr-option-item-variable-name="${@this@.drOptionItemVariableName}$" dr-option-strip="true">#innerHTML#</div>',
             objFactory: (e, o, r2, counstructorParam) => {
-                return _DomRender__WEBPACK_IMPORTED_MODULE_1__.DomRender.run({ rootObject: new Appender.Appender(...counstructorParam), config: config });
+                return _DomRender__WEBPACK_IMPORTED_MODULE_2__.DomRender.run({ rootObject: new Appender.Appender(...counstructorParam), config: config });
             }
         });
     },
@@ -11098,6 +11716,12 @@ var Details;
             const toggleAttribute = this.getAttribute('toggle');
             if (toggleAttribute) {
                 toggleAttribute?.(element.open);
+            }
+            if (element.open) {
+                this.getAttribute('onOpen')?.();
+            }
+            else {
+                this.getAttribute('onClose')?.();
             }
         }
         async onInitRender(param, rawSet) {
@@ -12158,8 +12782,15 @@ var RouterOutlet;
         createArguments;
         childObject;
         childRawSet;
+        sw = false;
         setValue(value) {
-            this.value = value;
+            this.sw = false;
+            setTimeout(() => {
+                this.value = value;
+            }, 0);
+            setTimeout(() => {
+                this.sw = true;
+            }, 0);
             // console.log('sssssssssss');
         }
         async onInitRender(param, rawSet) {
@@ -12167,13 +12798,13 @@ var RouterOutlet;
             const c = this.getParentThis();
             const userValue = this.getAttribute('value');
             if (typeof userValue === 'string') {
-                this.value = c[userValue];
+                this.setValue(c[userValue]);
             }
             else if (userValue instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_3__.ComponentSet) {
-                this.value = userValue;
+                this.setValue(userValue);
             }
             else if (!userValue && c instanceof _components_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_4__.ComponentRouterBase) {
-                this.value = c.child;
+                this.setValue(c.child);
             }
             // console.log('------',c);
         }
@@ -12182,9 +12813,9 @@ var RouterOutlet;
         }
         onChangeAttrRender(name, value, other) {
             super.onChangeAttrRender(name, value, other);
-            console.log('--------------', name, value);
+            // console.log('--------------', name, value);
             if (this.equalsAttributeName(name, 'value')) {
-                this.value = value;
+                this.setValue(value);
             }
             if (this.equalsAttributeName(name, 'if')) {
                 this.if = value;
@@ -12221,10 +12852,11 @@ var RouterOutlet;
                         .forEach(it => {
                         const attrName = it.replace(/^attribute-/, '');
                         const attrValue = this.getAttribute(it);
+                        $rawSet.dataSet.render.attribute ??= {};
+                        $rawSet.dataSet.render.attribute[attrName] = attrValue;
                         $component.onChangeAttrRender(attrName, attrValue, { rawSet: $rawSet });
                     });
                 }
-                // console.log(' vv');
             }
         }
     }
@@ -12235,7 +12867,11 @@ var RouterOutlet;
     routerOutlet: (config, executer) => {
         return _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.createComponentTargetElement({
             name: RouterOutlet.selector,
-            template: '<div dr-this="@this@.value" dr-detect-option-if="@this@?.value && @this@?.if" dr-option-strip="true" dr-on-create:arguments="@this@.createArguments" dr-on-create:callback="@this@?.onCreateDrThis?.($component, $rawSet)">#innerHTML#</div>',
+            template: `
+        <dr-if value="\${@this@.sw}$">
+            <div dr-this="@this@.value" dr-detect-option-if="@this@?.value && @this@?.if" dr-option-strip="true" dr-on-create:arguments="@this@.createArguments" dr-on-create:callback="@this@?.onCreateDrThis?.($component, $rawSet)">#innerHTML#</div>
+        </dr-if>
+        `,
             objFactory: (e, o, r2, counstructorParam) => {
                 return executer?.run({ rootObject: new RouterOutlet.RouterOutlet(...counstructorParam), config: config });
             }
@@ -12626,6 +13262,13 @@ var Select;
             super();
             // console.log('----Select constructor')
         }
+        // get value(): string | (string | null)[] | null | undefined {
+        //   return this._value;
+        // }
+        // set value(val: string | (string | null)[] | null | undefined) {
+        //   console.log('value set', val)
+        //   this._value = val;
+        // }
         get optionComponents() {
             return this.getChildren(Option);
         }
@@ -12676,13 +13319,17 @@ var Select;
             const summaries = this.getChildren(Summary);
             this.options = options;
             const values = this.options.filter(it => it.selected && !it.disabled).map(it => it.value);
-            this.getAttribute('changeSelected')?.(values);
             summaries?.forEach(it => {
                 it.setDisabled(this.disabled);
                 if (!this.disabled) {
                     it.setOptions(options);
                 }
             });
+            this.selectedValues = values;
+            this.selectedOptions = this.options.filter(it => it.selected && !it.disabled);
+            this.value = this.selectedValues[0];
+            this.getAttribute('onchange')?.(this.value);
+            this.getAttribute('onchangeValues')?.(values);
         }
         onInitDetailsElement(detailsElement) {
             // console.log('detailsElement oninit', detailsElement);
@@ -12696,6 +13343,30 @@ var Select;
             super.onDestroyRender();
             this.documentClickSubscription?.unsubscribe();
             this.windowBlurSubscription?.unsubscribe();
+        }
+        setValue(value) {
+            this.value = value;
+            if (this.options) {
+                // clear
+                this.options.forEach(it => {
+                    it.selected = false;
+                    it.updateStatus();
+                });
+                for (let option of this.options) {
+                    if (option.value === value) {
+                        option.selected = true;
+                        if (!this.multiple) {
+                            // 하나만 선택
+                            break;
+                        }
+                    }
+                    else {
+                        option.selected = false;
+                    }
+                    option.updateStatus();
+                }
+            }
+            console.log('value set', value);
         }
         test() {
             console.log('tttttttt');
@@ -12737,6 +13408,12 @@ var Select;
         _decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_6__.DomRenderNoProxy,
         (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", SelectBody)
     ], Select.prototype, "selectBodyComponent", void 0);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+        (0,_ComponentBase__WEBPACK_IMPORTED_MODULE_1__.attribute)('value'),
+        (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Function),
+        (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [Object]),
+        (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:returntype", void 0)
+    ], Select.prototype, "setValue", null);
     Select_1.Select = Select;
 })(Select || (Select = {}));
 const stateComponentFactory = (name, type) => {
@@ -12897,6 +13574,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ComponentBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ComponentBase */ "../../packages/@dooboostore/dom-render/src/components/ComponentBase.ts");
 /* harmony import */ var _DomRender__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../DomRender */ "../../packages/@dooboostore/dom-render/src/DomRender.ts");
 /* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lifecycle/OnChangeAttrRender */ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChangeAttrRender.ts");
+
 
 
 
@@ -12907,6 +13586,18 @@ var This;
         value;
         if = null;
         createArguments;
+        childObject;
+        childRawSet;
+        sw = false;
+        setValue(value) {
+            this.sw = false;
+            setTimeout(() => {
+                this.value = value;
+            }, 0);
+            setTimeout(() => {
+                this.sw = true;
+            }, 0);
+        }
         async onInitRender(param, rawSet) {
             await super.onInitRender(param, rawSet);
         }
@@ -12916,7 +13607,7 @@ var This;
         onChangeAttrRender(name, value, other) {
             super.onChangeAttrRender(name, value, other);
             if (this.equalsAttributeName(name, 'value')) {
-                this.value = value;
+                this.setValue(value);
             }
             if (this.equalsAttributeName(name, 'if')) {
                 this.if = value;
@@ -12925,9 +13616,24 @@ var This;
                 this.createArguments = value;
             }
         }
-        created(component) {
-            component ??= this.value?.obj;
-            this.getAttribute('onCreated')?.(component);
+        created($component, $rawSet) {
+            this.childObject = $component ??= this.value?.obj;
+            this.childRawSet = $rawSet;
+            if ($component) {
+                this.getAttribute('onCreated')?.($component);
+                // attribute 전달 처리
+                if ((0,_lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_3__.isOnChangeAttrRender)($component)) {
+                    this.getAttributeNames()
+                        .filter(it => it.startsWith('attribute-'))
+                        .forEach(it => {
+                        const attrName = it.replace(/^attribute-/, '');
+                        const attrValue = this.getAttribute(it);
+                        $rawSet.dataSet.render.attribute ??= {};
+                        $rawSet.dataSet.render.attribute[attrName] = attrValue;
+                        $component.onChangeAttrRender(attrName, attrValue, { rawSet: $rawSet });
+                    });
+                }
+            }
         }
     }
     This_1.This = This;
@@ -12936,7 +13642,11 @@ var This;
     this: (config) => {
         return _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.createComponentTargetElement({
             name: This.selector,
-            template: '<div dr-this="@this@.value" dr-detect-option-if="@this@?.value && @this@?.if" dr-option-strip="true" dr-on-create:arguments="@this@.createArguments" dr-on-create:callback="@this@?.created?.($component)">#innerHTML#</div>',
+            template: `
+        <dr-if value="\${@this@.sw}$">
+            <div dr-this="@this@.value" dr-detect-option-if="@this@?.value && @this@?.if" dr-option-strip="true" dr-on-create:arguments="@this@.createArguments" dr-on-create:callback="@this@?.created?.($component, $rawSet)">#innerHTML#</div>
+        </dr-if>
+        `,
             objFactory: (e, o, r2, counstructorParam) => {
                 return _DomRender__WEBPACK_IMPORTED_MODULE_1__.DomRender.run({ rootObject: new This.This(...counstructorParam), config: config });
             }
@@ -13543,7 +14253,7 @@ class EventManager {
         this.procAttr(childNodes, EventManager.hiddenAttrName, (it, attribute) => {
             const script = attribute;
             if (script) {
-                const data = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(script, obj);
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
                 if (it.hidden !== data) {
                     it.hidden = data;
                 }
@@ -13554,7 +14264,7 @@ class EventManager {
         this.procAttr(childNodes, EventManager.requiredAttrName, (it, attribute) => {
             const script = attribute;
             if (script) {
-                const data = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(script, obj);
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
                 if (it.required !== data) {
                     it.required = data;
                 }
@@ -13565,7 +14275,7 @@ class EventManager {
         this.procAttr(childNodes, EventManager.openAttrName, (it, attribute) => {
             const script = attribute;
             if (script) {
-                const data = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(script, obj);
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
                 if (it.open !== data) {
                     it.open = data;
                 }
@@ -13600,7 +14310,7 @@ class EventManager {
                     })
                 }));
                 // console.log('!!!!!!!!!!!', k, data, script, variablePaths, v)
-                if (data === null) {
+                if (data === null || data === undefined) {
                     it.removeAttribute(k);
                 }
                 else {
@@ -14000,6 +14710,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const isOnChangeAttrRender = (obj) => {
     return typeof obj?.onChangeAttrRender === 'function';
+};
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/dom-render/src/lifecycle/OnChildRawSetRendered.ts":
+/*!*************************************************************************************!*\
+  !*** ../../packages/@dooboostore/dom-render/src/lifecycle/OnChildRawSetRendered.ts ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isOnChildRawSetRendered: () => (/* binding */ isOnChildRawSetRendered)
+/* harmony export */ });
+const isOnChildRawSetRendered = (obj) => {
+    return typeof obj?.onChildRawSetRendered === 'function';
 };
 
 
@@ -14445,6 +15173,13 @@ class Appender {
             }
         };
     }
+    get(key) {
+        const o = this.keyMap.get(key);
+        if (o !== undefined) {
+            return this[o];
+        }
+        return undefined;
+    }
     set(key, ...v) {
         const o = this.keyMap.get(key);
         // console.log('set!!', o);
@@ -14460,7 +15195,7 @@ class Appender {
     delete(key) {
         const o = this.keyMap.get(key);
         if (o !== undefined) {
-            this[o] = [];
+            this[o] = this[o].map(it => undefined);
             this.keyMap.delete(key);
             // this.length--;
         }
@@ -14527,9 +15262,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Dr: () => (/* binding */ Dr)
 /* harmony export */ });
 /* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -14539,10 +15274,10 @@ class Dr extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.Opera
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack);
     }
     async executeAttrRequire(data) {
-        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherEncoding(this.elementSource.element);
-        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
+        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element);
+        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
                     ${this.render.bindScript}
                     const n = $element.cloneNode(true);
                     var destIt = ${this.elementSource.attrs.drItOption};
@@ -14563,15 +15298,15 @@ class Dr extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.Opera
                 ...this.render
             })
         }));
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarDecoding(newTemp, vars);
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherDecoding(newTemp, itRandom);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarDecoding(newTemp, vars);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherDecoding(newTemp, itRandom);
         const tempalte = this.source.config.window.document.createElement('template');
         tempalte.innerHTML = newTemp.innerHTML;
         this.returnContainer.fag.append(tempalte.content);
-        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
+        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
         this.returnContainer.raws.push(...rr);
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__.ExecuteState.EXECUTE;
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
 }
 
@@ -14590,9 +15325,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DrAppender: () => (/* binding */ DrAppender)
 /* harmony export */ });
 /* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -14603,28 +15338,28 @@ class DrAppender extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack, false);
     }
     async executeAttrRequire(attr) {
-        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherEncoding(this.elementSource.element);
-        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
+        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element);
+        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
                     try{
                     ${this.render.bindScript}
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
                         const ifWrap = document.createElement('div');
-                        // ifWrap.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_STRIP_OPTIONNAME}', 'true');
-                        // ifWrap.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_IF_NAME}', '${this.elementSource.attrs.drAppender} && ${this.elementSource.attrs.drAppender}.length > 0');
+                        // ifWrap.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_STRIP_OPTIONNAME}', 'true');
+                        // ifWrap.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_NAME}', '${this.elementSource.attrs.drAppender} && ${this.elementSource.attrs.drAppender}.length > 0');
                         const n = this.__render.element.cloneNode(true);
                         Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drAppender' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
                         const length = ${this.elementSource.attrs.drAppender}.length;
                         if (length > 0) {
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_FOR_OF_NAME}', '${this.elementSource.attrs.drAppender}[' + (length-1) + ']');
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_NEXT_OPTIONNAME}', '${this.elementSource.attrs.drAppender},' + length);
+                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FOR_OF_NAME}', '${this.elementSource.attrs.drAppender}[' + (length-1) + ']');
+                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_NEXT_OPTIONNAME}', '${this.elementSource.attrs.drAppender},' + length);
                         } else {
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_FOR_OF_NAME}', '${this.elementSource.attrs.drAppender}[0]');
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_NEXT_OPTIONNAME}', '${this.elementSource.attrs.drAppender},' + 1);
+                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FOR_OF_NAME}', '${this.elementSource.attrs.drAppender}[0]');
+                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_NEXT_OPTIONNAME}', '${this.elementSource.attrs.drAppender},' + 1);
                         }
                         // console.log('appender--->', Array.from(n.getAttributeNames()).map(it=>({name:it,attr: n.getAttribute(it)})));
-                        // const drOptionThis = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.DR_THIS_OPTIONNAME}');
+                        // const drOptionThis = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_THIS_OPTIONNAME}');
                         // if (drOptionThis) {
                         // }
                         // ifWrap.append(n);
@@ -14636,22 +15371,22 @@ class DrAppender extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0
             __render: Object.freeze({
                 drStripOption: this.elementSource.attrs.drStripOption,
                 drAttr: this.elementSource.attrs,
-                drAttrsOriginName: _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drAttrsOriginName,
+                drAttrsOriginName: _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drAttrsOriginName,
                 fag: newTemp,
                 ...this.render
                 // eslint-disable-next-line no-use-before-define
             })
         }));
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarDecoding(newTemp, vars);
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherDecoding(newTemp, itRandom);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarDecoding(newTemp, vars);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherDecoding(newTemp, itRandom);
         const tempalte = this.source.config.window.document.createElement('template');
         tempalte.innerHTML = newTemp.innerHTML;
         this.returnContainer.fag.append(tempalte.content);
-        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
+        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
         // const rrr = rr.flatMap(it => it.render(obj, config));// .flat();
         this.returnContainer.raws.push(...rr);
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__.ExecuteState.EXECUTE;
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
 }
 
@@ -14670,9 +15405,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DrFor: () => (/* binding */ DrFor)
 /* harmony export */ });
 /* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -14683,11 +15418,11 @@ class DrFor extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.Op
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack, false);
     }
     async executeAttrRequire(attr) {
-        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherEncoding(this.elementSource.element);
-        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
+        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element);
+        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
         // console.log('-----asdad',attr , this.elementSource.attrs.drItOption);
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
                     ${this.render.bindScript}
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
                     for(${attr}) {
@@ -14711,15 +15446,15 @@ class DrFor extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.Op
                 ...this.render
             })
         }));
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarDecoding(newTemp, vars);
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherDecoding(newTemp, itRandom);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarDecoding(newTemp, vars);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherDecoding(newTemp, itRandom);
         const tempalte = this.source.config.window.document.createElement('template');
         tempalte.innerHTML = newTemp.innerHTML;
         this.returnContainer.fag.append(tempalte.content);
-        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
+        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
         this.returnContainer.raws.push(...rr);
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__.ExecuteState.EXECUTE;
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
 }
 
@@ -14757,6 +15492,7 @@ class DrForOf extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.
         const newTemp = this.source.config.window.document.createElement('temp');
         const variableName = this.elementSource.element.getAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_VARIABLE_NAME_OPTIONNAME);
         const itemVariableName = this.elementSource.element.getAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME);
+        // const drAttrOption = this.elementSource.element.getAttribute(RawSet.DR_ATTR_OPTIONNAME);
         const itemIndexVariableName = this.elementSource.element.getAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME);
         const hasVariableName = this.elementSource.element.hasAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_VARIABLE_NAME_OPTIONNAME);
         const hasItemVariableName = this.elementSource.element.hasAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME);
@@ -14798,6 +15534,20 @@ class DrForOf extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.
                             }
                             if (${hasItemIndexVariableName} && '${itemIndexVariableName}') {
                               n.getAttributeNames().forEach(it => n.setAttribute(it, n.getAttribute(it).replaceAll('#${itemIndexVariableName}#', i)));
+                            }
+                            
+                            const hasDrOptionAttr = n.hasAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ATTR_OPTIONNAME}');
+                            if (hasDrOptionAttr) {
+                              const drOptionAttr = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ATTR_OPTIONNAME}');
+                              const drOptionAttrResult = $scriptUtils.evaluateReturn(drOptionAttr, this);
+                              Array.from(Object.entries(drOptionAttrResult??{})).forEach(([k,v])=>{
+                                if (v === null) {
+                                  n.removeAttribute(k);
+                                } else {
+                                  n.setAttribute(k,v);
+                                }
+                              })
+                            
                             }
                             const hasDrOptionIf = n.hasAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_OPTIONNAME}');
                             if (hasDrOptionIf) {
@@ -14897,13 +15647,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DrForm: () => (/* binding */ DrForm)
 /* harmony export */ });
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _validators_Validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../validators/Validator */ "../../packages/@dooboostore/dom-render/src/validators/Validator.ts");
-/* harmony import */ var _events_EventManager__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../events/EventManager */ "../../packages/@dooboostore/dom-render/src/events/EventManager.ts");
-/* harmony import */ var _validators_ValidatorArray__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../validators/ValidatorArray */ "../../packages/@dooboostore/dom-render/src/validators/ValidatorArray.ts");
-/* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _validators_Validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../validators/Validator */ "../../packages/@dooboostore/dom-render/src/validators/Validator.ts");
+/* harmony import */ var _events_EventManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../events/EventManager */ "../../packages/@dooboostore/dom-render/src/events/EventManager.ts");
+/* harmony import */ var _validators_ValidatorArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../validators/ValidatorArray */ "../../packages/@dooboostore/dom-render/src/validators/ValidatorArray.ts");
+/* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -14911,33 +15661,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class DrForm extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_5__.OperatorExecuterAttrRequire {
+class DrForm extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_4__.OperatorExecuterAttrRequire {
     constructor(rawSet, render, returnContainer, elementSource, source, afterCallBack) {
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack, false);
     }
     async executeAttrRequire(attr) {
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drFormOtherMoveAttr(this.elementSource.element, 'name', 'temp-name', this.source.config);
-        const data = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(`${attr}`, this.source.obj);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.drFormOtherMoveAttr(this.elementSource.element, 'name', 'temp-name', this.source.config);
+        const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_6__.ObjectUtils.Script.evaluateReturn(`${attr}`, this.source.obj);
         const childs = Array.from(this.elementSource.element.querySelectorAll('[name]'));
-        const fromName = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(this.elementSource.element.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FORM_NAME}:name`) ?? '', this.source.obj);
+        const fromName = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_6__.ObjectUtils.Script.evaluateReturn(this.elementSource.element.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_FORM_NAME}:name`) ?? '', this.source.obj);
         const thisName = fromName ?? this.elementSource.element.getAttribute('name');
         // // 자기자신이 Input 대상일때
         if (childs.length <= 0 && thisName) {
             childs.push(this.elementSource.element);
         }
         else {
-            if (data instanceof _validators_Validator__WEBPACK_IMPORTED_MODULE_2__.Validator) {
+            if (data instanceof _validators_Validator__WEBPACK_IMPORTED_MODULE_1__.Validator) {
                 data.setTarget(this.elementSource.element);
             }
         }
         childs.forEach(it => {
-            const eventName = it.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FORM_NAME}:event`) ?? 'change';
-            const validatorName = it.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FORM_NAME}:validator`);
-            const attrEventName = _events_EventManager__WEBPACK_IMPORTED_MODULE_3__.EventManager.attrPrefix + 'event-' + eventName;
-            let varpath = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(this.elementSource.element.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FORM_NAME}:name`) ?? '', this.source.obj) ?? it.getAttribute('name');
+            const eventName = it.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_FORM_NAME}:event`) ?? 'change';
+            const validatorName = it.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_FORM_NAME}:validator`);
+            const attrEventName = _events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.attrPrefix + 'event-' + eventName;
+            let varpath = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_6__.ObjectUtils.Script.evaluateReturn(this.elementSource.element.getAttribute(`${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.DR_FORM_NAME}:name`) ?? '', this.source.obj) ?? it.getAttribute('name');
             if (varpath != null) {
                 if (validatorName) {
-                    _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluate(`
+                    _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_6__.ObjectUtils.Script.evaluate(`
                                 ${this.render.bindScript}
                                 const validator = typeof ${validatorName} ==='function' ?  new  ${validatorName}() : ${validatorName};
                                 ${attr}['${varpath}'] = validator;
@@ -14949,12 +15699,12 @@ class DrForm extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_5__.O
                     }));
                 }
                 varpath = `${attr}['${varpath}']`;
-                const data = _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluateReturn(`${varpath}`, this.source.obj);
-                if (data instanceof _validators_ValidatorArray__WEBPACK_IMPORTED_MODULE_4__.ValidatorArray) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_6__.ObjectUtils.Script.evaluateReturn(`${varpath}`, this.source.obj);
+                if (data instanceof _validators_ValidatorArray__WEBPACK_IMPORTED_MODULE_3__.ValidatorArray) {
                     it.setAttribute(attrEventName, `${varpath}.setArrayValue($target, $target.value, $event); ${it.getAttribute(attrEventName) ?? ''};`);
                     data.addValidator(it.value, it);
                 }
-                else if (data instanceof _validators_Validator__WEBPACK_IMPORTED_MODULE_2__.Validator) {
+                else if (data instanceof _validators_Validator__WEBPACK_IMPORTED_MODULE_1__.Validator) {
                     // varpath += (varpath ? '.value' : 'value');
                     // varpath = drAttr.drForm + '.' + varpath;
                     // it.setAttribute(attrEventName, `${varpath} = $target.value; ${target}=$target; ${event}=$event;`);
@@ -14967,9 +15717,9 @@ class DrForm extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_5__.O
                 }
             }
         });
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drFormOtherMoveAttr(this.elementSource.element, 'temp-name', 'name', this.source.config);
-        this.returnContainer.raws.push(..._rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.elementSource.element, this.source.obj, this.source.config));
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_6__.ExecuteState.EXECUTE;
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.drFormOtherMoveAttr(this.elementSource.element, 'temp-name', 'name', this.source.config);
+        this.returnContainer.raws.push(..._rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.checkPointCreates(this.elementSource.element, this.source.obj, this.source.config));
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_5__.ExecuteState.EXECUTE;
     }
 }
 
@@ -15070,9 +15820,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DrInnerHTML: () => (/* binding */ DrInnerHTML)
 /* harmony export */ });
 /* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -15083,7 +15833,7 @@ class DrInnerHTML extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_
     }
     async executeAttrRequire(attr) {
         const newTemp = this.source.config.window.document.createElement('temp');
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
                         ${this.render.bindScript}
                         const n = $element.cloneNode(true);
                         ${this.elementSource.attrs.drBeforeOption ?? ''}
@@ -15105,10 +15855,10 @@ class DrInnerHTML extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_
         const tempalte = this.source.config.window.document.createElement('template');
         tempalte.innerHTML = newTemp.innerHTML;
         this.returnContainer.fag.append(tempalte.content);
-        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
+        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
         this.returnContainer.raws.push(...rr);
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__.ExecuteState.EXECUTE;
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
 }
 
@@ -15209,10 +15959,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DrRepeat: () => (/* binding */ DrRepeat)
 /* harmony export */ });
 /* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _events_EventManager__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../events/EventManager */ "../../packages/@dooboostore/dom-render/src/events/EventManager.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _events_EventManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../events/EventManager */ "../../packages/@dooboostore/dom-render/src/events/EventManager.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -15224,10 +15974,10 @@ class DrRepeat extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack, false);
     }
     async executeAttrRequire(attr) {
-        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherEncoding(this.elementSource.element);
-        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
+        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element);
+        const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`
                     ${this.render.bindScript}
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
                     var i = 0; 
@@ -15235,7 +15985,7 @@ class DrRepeat extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__
                     const repeatStr = \`${attr}\`;
                     let range = repeat;
                     if (typeof repeat === 'number') {
-                        range = ${_events_EventManager__WEBPACK_IMPORTED_MODULE_3__.EventManager.RANGE_VARNAME}(repeat);
+                        range = ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.RANGE_VARNAME}(repeat);
                     } 
                     for(const it of range) {
                         var destIt = it;
@@ -15263,15 +16013,15 @@ class DrRepeat extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__
                 ...this.render
             })
         }));
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drVarDecoding(newTemp, vars);
-        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drItOtherDecoding(newTemp, itRandom);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarDecoding(newTemp, vars);
+        _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherDecoding(newTemp, itRandom);
         const tempalte = this.source.config.window.document.createElement('template');
         tempalte.innerHTML = newTemp.innerHTML;
         this.returnContainer.fag.append(tempalte.content);
-        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
+        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
         this.returnContainer.raws.push(...rr);
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_4__.ExecuteState.EXECUTE;
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__.ExecuteState.EXECUTE;
     }
 }
 
@@ -15290,9 +16040,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DrStripElement: () => (/* binding */ DrStripElement)
 /* harmony export */ });
 /* harmony import */ var _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OperatorExecuterAttrRequire */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuterAttrRequire.ts");
-/* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
-/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
-/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
+/* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
 
 
 
@@ -15307,7 +16057,7 @@ class DrStripElement extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODU
         // const vars = RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
         // Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drIf' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v)); <-- 이부분은 다른 attr에도 적용을 할지말지 생각해야됨  엘리먼트 존재유무에 따라서 적용을 할지말지 결정해야됨
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
                 ${this.render.bindScript}
                 ${this.elementSource.attrs.drBeforeOption ?? ''}
                 const n = $element.cloneNode(true);
@@ -15322,7 +16072,7 @@ class DrStripElement extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODU
             __render: Object.freeze({
                 fag: newTemp,
                 drAttr: this.elementSource.attrs,
-                drAttrsOriginName: _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.drAttrsOriginName,
+                drAttrsOriginName: _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drAttrsOriginName,
                 drStripOption: this.elementSource.attrs.drStripOption,
                 ...this.render
             })
@@ -15330,10 +16080,10 @@ class DrStripElement extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODU
         const tempalte = this.source.config.window.document.createElement('template');
         tempalte.innerHTML = newTemp.innerHTML;
         this.returnContainer.fag.append(tempalte.content);
-        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
+        const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
         this.returnContainer.raws.push(...rr);
-        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__.ExecuteState.EXECUTE;
+        return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
 }
 
@@ -15725,6 +16475,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/script/ScriptUtils */ "../../packages/@dooboostore/core-web/src/script/ScriptUtils.ts");
 /* harmony import */ var _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rawsets/RawSet */ "../../packages/@dooboostore/dom-render/src/rawsets/RawSet.ts");
 /* harmony import */ var _OperatorExecuter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OperatorExecuter */ "../../packages/@dooboostore/dom-render/src/operators/OperatorExecuter.ts");
+/* harmony import */ var _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/core/object/ObjectUtils */ "../../packages/@dooboostore/core/src/object/ObjectUtils.ts");
+
 
 
 
@@ -15746,7 +16498,7 @@ class DrThisProperty extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODU
         // }
         // await new Promise(resolve => setTimeout(resolve, 1000));
         // console.log('!!!!!!!!!!!!!!', this.rawSet);
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_1__.ScriptUtils.evaluate(`
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`
                     ${this.render.bindScript}
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
                     var i = 0; 
@@ -16006,6 +16758,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// let renderCnt = 0;
 class RawSet {
     uuid;
     type;
@@ -16111,7 +16864,7 @@ class RawSet {
         RawSet.DR_INNERHTML_NAME,
         RawSet.DR_INNERTEXT_NAME,
         RawSet.DR_REPEAT_NAME,
-        RawSet.DR_DETECT_NAME,
+        // RawSet.DR_DETECT_NAME, // TODO: DrDetect 오퍼레이터 구현 필요
         RawSet.DR_STRIP_NAME
     ];
     constructor(uuid, type, point, dataSet, detect) {
@@ -16209,6 +16962,7 @@ class RawSet {
     // }
     async render(obj, config) {
         // console.log('render!!!!!!!!!!!!!!')
+        // renderCnt++;
         // const t0 = performance.now();
         // console.group('RawSet render', this);
         const genNode = config.window.document.importNode(this.dataSet.fragment, true);
@@ -16353,14 +17107,16 @@ class RawSet {
         // console.log('pppppppppppppp', this);
         // replaceBody와 applyEvent 순서를 바꿨다 20250511
         const childrenNodes = Array.from(genNode.childNodes);
-        // console.log(`RawSet aa took ${performance.now() - t0} milliseconds.`, childrenNodes);
+        // console.log(`RawSet aa took ${performance.now() - t0} milliseconds. children`, childrenNodes);
         this.applyEvent(obj, genNode, config);
         // console.log(`RawSet xxxxxxxxxx took ${performance.now() - t0} milliseconds.`);
         this.replaceBody(genNode); // 중요 여기서 마지막에 연션된 값을 그려준다.
+        // console.log(`RawSet replaceBody took ${performance.now() - t0} milliseconds.`);
         // console.log('rawSEt!!!!!!!', obj, this.near)
         // console.log('rawSEt!!!!!!!', obj, this.findNearThis(obj),childrenNodes,config)
         // console.log('rawSEt!!!!!!!', obj, drAttrs)
         this.onRenderedEvent(obj, childrenNodes, config);
+        // console.log(`RawSet onRenderedEvent took ${performance.now() - t0} milliseconds.`);
         drAttrs.forEach(it => {
             if (it.drCompleteOption) {
                 // genNode.childNodes
@@ -16376,6 +17132,7 @@ class RawSet {
                 ${it.drCompleteOption}`, Object.assign(obj, { __render: render }));
             }
         });
+        // console.log(`RawSet drAttrs.forEach took ${performance.now() - t0} milliseconds.`);
         // 중요 style isolation 나중에 :scope로 대체 가능할듯.
         // 2023.9.4일 없앰  style 처음들어올때 처리하는걸로 바꿈
         // RawSet.generateStyleSheetsLocal(config);
@@ -16384,6 +17141,7 @@ class RawSet {
                 await it.obj?.onInitRender?.({}, this);
             }
         }
+        // console.log(`RawSet const it of onThisComponentSetCallBacks took ${performance.now() - t0} milliseconds.`);
         for (const it of onElementInitCallBacks) {
             if ((0,_lifecycle_OnInitRender__WEBPACK_IMPORTED_MODULE_28__.isOnInitRender)(this.dataSet.render?.currentThis)) {
                 // TODO: 나중에 파라미터 들어가야될듯. 지금은 리팩토링하느라 빠짐
@@ -16413,10 +17171,12 @@ class RawSet {
             }
             config?.onElementInit?.(it.name, obj, this, it.targetElement);
         }
+        // console.log(`RawSet for (const it of onElementInitCallBacks) { took ${performance.now() - t0} milliseconds.`);
         // TODO: 이부분도 위에 targetElement 처럼 해야될까?
         for (const it of onAttrInitCallBacks) {
             config?.onAttrInit?.(it.attrName, it.attrValue, obj, this);
         }
+        // console.log(`RawSet  for (const it of onAttrInitCallBacks) { took ${performance.now() - t0} milliseconds.`);
         // component destroy
         if (obj.__domrender_components) {
             Object.entries(obj.__domrender_components).forEach(([key, value]) => {
@@ -16429,9 +17189,10 @@ class RawSet {
                 }
             });
         }
+        // console.log(`RawSet  if (obj.__domrender_components) { took ${performance.now() - t0} milliseconds.`);
         // console.log('-------raws',raws)
-        // console.log(`RawSet render took ${performance.now() - t0} milliseconds.`);
-        // console.groupEnd();
+        // console.log(`RawSet render took ${performance.now() - t0} milliseconds. END!!`, renderCnt);
+        console.groupEnd();
         return { raws: raws, executedOperators: executedOperators };
     }
     // 중요 스타일 적용 부분
@@ -16669,6 +17430,20 @@ class RawSet {
                         const cval = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Script.evaluateReturn('`' + targetScript + '`', Object.assign(obj));
                         if (cval === null) {
                             element.removeAttribute(it);
+                            /* TODO: 여기 더 추가되어야될듯
+                             TODO: 훔..... 없어도될듯?
+                            *
+                <select dr-event-change="@this@.onMarketChange($event)" class="market-select">
+                    <option>마켓 선택 (${@this@.markets?.length??0}$개)</option>
+                    <option dr-for-of="@this@.markets" dr-option-item-variable-name="market" value="${#market#.uuid}$" dr-attr="{selected: #market#.uuid === @this@.marketUUID ? 'selected' : null}">
+                      ${#market#.name}$
+                    </option>
+                  </select>
+                             */
+                            // } else if (
+                            //   !(element.hasAttribute(RawSet.DR_VARIABLE_NAME_OPTIONNAME) || element.hasAttribute(RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME) || element.hasAttribute(RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME))
+                            // ) {
+                            //     element.setAttribute(it, cval);
                         }
                         else {
                             element.setAttribute(it, cval);
@@ -17237,6 +18012,7 @@ class RawSet {
             targetElement.innerHTML = _dooboostore_core_string_StringUtils__WEBPACK_IMPORTED_MODULE_1__.StringUtils.replaceSequentially(targetElement.innerHTML, templateReplacements);
         }
         // console.log('aa-asIs', targetElement.innerHTML);
+        const componentName = targetElement.getAttribute(RawSet.DR_VARIABLE_NAME_OPTIONNAME) ?? 'component';
         const optionThisName = targetElement.getAttribute(RawSet.DR_THIS_NAME_OPTIONNAME);
         // console.log('11111111111111', optionThisName)
         targetElement
@@ -17245,6 +18021,7 @@ class RawSet {
         const thisRandom = this.drThisEncoding(targetElement, drThis, { asIs: /@this@/g });
         // console.log('@@@@@@@@@@@@@0', thisRandom);
         // let thisNameRandom: string | undefined = undefined;
+        targetElement.innerHTML = targetElement.innerHTML.replaceAll(`#${componentName}#`, drThis);
         if (optionThisName) {
             // console.log('-----0', element.innerHTML, '\n', targetElement.innerHTML)
             targetElement.innerHTML = targetElement.innerHTML.replaceAll(`@${optionThisName}@`, drThis);
@@ -17808,6 +18585,7 @@ class PathRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
     }
     getUrl() {
         if (!this.config.window.document?.location?.href) {
+            //if ((!this.config.window.document?.location?.href) || (this.config.window.document?.location?.href === 'about:blank')) {
             return '/';
         }
         const url = new URL(this.config.window.document.location?.href);
@@ -17850,6 +18628,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/convert/ConvertUtils */ "../../packages/@dooboostore/core/src/convert/ConvertUtils.ts");
 /* harmony import */ var _dooboostore_core_message_BehaviorSubject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core/message/BehaviorSubject */ "../../packages/@dooboostore/core/src/message/BehaviorSubject.ts");
 /* harmony import */ var _dooboostore_core_expression_Expression__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/core/expression/Expression */ "../../packages/@dooboostore/core/src/expression/Expression.ts");
+/* harmony import */ var _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
+
 
 
 
@@ -17861,11 +18641,13 @@ class Router {
         let routeData;
         if (config?.firstUrl) {
             const path = config.firstUrl.split('?');
+            const urlSearchParams = new URLSearchParams(path[1] ?? '');
             routeData = {
                 url: config.firstUrl,
                 path: path[0],
-                searchParams: new URLSearchParams(path[1] ?? ''),
+                searchParams: urlSearchParams,
                 router: this,
+                search: urlSearchParams.size > 0 ? `?${urlSearchParams.toString()}` : '',
                 triggerPoint: 'end'
             };
             this.behaviorSubject = new _dooboostore_core_message_BehaviorSubject__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject(routeData);
@@ -17927,32 +18709,43 @@ class Router {
     getRouteData(config) {
         let path = '';
         let url = '';
+        let searchParams;
         if (config?.pathOrUrl) {
-            let isUrl = false;
-            try {
-                new URL(config.pathOrUrl);
-                isUrl = true;
-            }
-            catch {
-                isUrl = false;
-            }
-            if (isUrl) {
-                const u = new URL(config.pathOrUrl);
-                path = u.pathname;
-                url = u.pathname + u.search;
+            // try {
+            //   new URL(config.pathOrUrl);
+            //   isUrl = true;
+            // } catch {
+            //   isUrl = false;
+            // }
+            // if(isUrl){
+            //   const u = new URL(config.pathOrUrl);
+            //   path = u.pathname;
+            //   url = u.pathname + u.search;
+            // } else {
+            const paths = config.pathOrUrl.split('?');
+            searchParams = new URLSearchParams(paths[1]);
+            const firstUrl = paths[0];
+            if (_dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_3__.ValidUtils.isUrl(firstUrl)) {
+                path = new URL(firstUrl).pathname;
             }
             else {
-                path = config.pathOrUrl.split('?')[0];
+                path = firstUrl;
             }
+            url = config.pathOrUrl;
+            // }
         }
         else {
             path = this.getPathName();
             url = this.getUrl();
+            searchParams = this.getSearchParams();
         }
+        // console.log('url', url);
         const newVar = {
             path: path,
             url: url,
-            searchParams: this.getSearchParams()
+            searchParams: searchParams,
+            search: searchParams.size > 0 ? `?${searchParams.toString()}` : '',
+            router: this
         };
         const data = this.getData();
         if (data) {
@@ -17964,7 +18757,7 @@ class Router {
                 newVar.pathData = data;
             }
         }
-        newVar.router = this;
+        // newVar.router = this;
         // newVar.currentTarget = config?.currentTarget;
         return Object.freeze(newVar);
     }
@@ -18001,6 +18794,7 @@ class Router {
         //end부분은 constructor의  this.config.window.addEventListener('popstate'   에서 받아서 처리된다 호출된다.
     }
     go(config) {
+        // console.log('Router go', config);
         if (typeof config === 'number') {
             this.behaviorSubject.next({ ...this.getRouteData(), triggerPoint: 'start' });
             this.config.window.history?.go(config);
@@ -18025,7 +18819,8 @@ class Router {
             try {
                 this._config.window?.scrollTo?.(0, 0);
             }
-            catch (e) { }
+            catch (e) {
+            }
         }
         // console.log('----------', data, config)
         // if (!config.disabledPopEvent) {
@@ -18045,6 +18840,10 @@ class Router {
             targetPath = `${tpath}${s.length > 0 ? '?' : ''}${s}`;
         }
         return targetPath;
+    }
+    reload() {
+        const currentUrl = this.getUrl();
+        this.replace(currentUrl);
     }
 }
 
@@ -18433,6 +19232,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // export const DomRenderRootDefaultTemplate = '${@this@.name}$ <button dr-event-click="$router.go(\'/\')">aa</button><button dr-event-click="console.log(@this@.name); @this@.name = 22">aa</button>  ${@this@.rootRouter}$<dr-this value="${@this@.rootRouter}$"></dr-this>'
 const DomRenderRootDefaultTemplate = '<dr-this value="${@this@.child}$"></dr-this>';
+// export const DomRenderRootDefaultTemplate = '<div>zz${@this@.name}$z</div>'
 // export const DomRenderRootDefaultTemplate = '[${@this@.name}$]'
 const DomRenderRootDefaultStyle = '';
 // export const DomRenderRootDefaultTemplate = '<dr-this value="222 ${@this@.child}$"></dr-this>'
@@ -18441,10 +19241,40 @@ const DomRenderRootDefaultStyle = '';
 //   path: ''
 // })
 class DomRenderRootObject extends _component_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_0__.ComponentRouterBase {
-    name = 'domRenderRootObject';
+    name = 'domRenderRootObject' + new Date().toISOString();
     // rootRouter?: any;
+    first = true;
+    onInitCallbacks = [];
+    onChildRawSetRenderedDebounceCallbacks = [];
     constructor() {
         super({ sameRouteNoApply: true });
+    }
+    addOnInitCallback(cb) {
+        this.onInitCallbacks.push(async () => {
+            await cb();
+        });
+    }
+    addOnChildRawSetRenderedDebounceCallback(cb) {
+        this.onChildRawSetRenderedDebounceCallbacks.push(async () => {
+            await cb();
+        });
+    }
+    async onInitRender(param, rawSet) {
+        // console.log('1onInitRender DomRenderRootObject', this.name);
+        if (this.first) {
+            await super.onInitRender(param, rawSet);
+            for (const callback of this.onInitCallbacks) {
+                await callback();
+            }
+            this.first = false;
+        }
+        // console.log('2onInitRender DomRenderRootObject', this.name);
+    }
+    async onChildRawSetRenderedDebounce() {
+        for (let onChildRawSetRenderedDebounceCallback of this.onChildRawSetRenderedDebounceCallbacks) {
+            await onChildRawSetRenderedDebounceCallback();
+        }
+        // console.log('-------bbbbbbbbbbbcccccb')
     }
 }
 
@@ -18481,6 +19311,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_simple_boot_decorators_route_Router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/route/Router */ "../../packages/@dooboostore/simple-boot/src/decorators/route/Router.ts");
 /* harmony import */ var _dooboostore_core_message_BehaviorSubject__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @dooboostore/core/message/BehaviorSubject */ "../../packages/@dooboostore/core/src/message/BehaviorSubject.ts");
 /* harmony import */ var _dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @dooboostore/core/message/operators/filter */ "../../packages/@dooboostore/core/src/message/operators/filter.ts");
+/* harmony import */ var _dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @dooboostore/core-web/valid/ValidUtils */ "../../packages/@dooboostore/core-web/src/valid/ValidUtils.ts");
+
 
 
 
@@ -18510,6 +19342,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
         _dooboostore_simple_boot_intent_IntentManager__WEBPACK_IMPORTED_MODULE_8__.IntentManager,
         _dooboostore_simple_boot_route_RouterManager__WEBPACK_IMPORTED_MODULE_9__.RouterManager,
         _dooboostore_simple_boot_simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_7__.SimstanceManager,
+        _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootObject,
         _option_SimFrontOption__WEBPACK_IMPORTED_MODULE_0__.SimFrontOption,
         _dooboostore_dom_render_routers_Router__WEBPACK_IMPORTED_MODULE_12__.Router
     ];
@@ -18557,8 +19390,10 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             window: option.window,
             targetElements: this.domRenderTargetElements,
             targetAttrs: this.domRenderTargetAttrs,
-            onElementInit: (name, obj, rawSet, targetElement) => { },
-            onAttrInit: (attrName, attrValue, obj, rawSet) => { },
+            onElementInit: (name, obj, rawSet, targetElement) => {
+            },
+            onAttrInit: (attrName, attrValue, obj, rawSet) => {
+            },
             // routerType: option.urlType,
             routerType: this.domRenderRouter,
             scripts: {
@@ -18615,6 +19450,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             //       // this.targetElement = data.target;
             //       // document.body.appendChild(this.targetElement);
             //     } else {
+            // console.log('--DomRender.run({ rootObject: obj, config: this.domRenderConfig })---->',obj)
             const result = _dooboostore_dom_render_DomRender__WEBPACK_IMPORTED_MODULE_4__.DomRender.run({ rootObject: obj, config: this.domRenderConfig });
             // console.log('proxy end', result);
             return result;
@@ -18631,9 +19467,8 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
         const targetUserElement = typeof this.option.selector === 'string'
             ? this.option.window.document.querySelector(this.option.selector)
             : this.option.selector;
-        const targetElement = targetUserElement?.cloneNode(true);
-        if (!targetElement) {
-            throw new Error('no element selector ' + this.option.selector);
+        if (!(targetUserElement instanceof HTMLElement)) {
+            throw new Error('HTMLElement is not Element');
         }
         const simstanceManager = super.run(otherInstanceSim);
         this.initDomRenderConfigSetting();
@@ -18641,10 +19476,41 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             const cevent = event;
             this.publishIntent(new _dooboostore_simple_boot_intent_Intent__WEBPACK_IMPORTED_MODULE_6__.Intent(cevent.detail.uri, cevent.detail.data, event));
         });
-        targetElement.innerHTML = _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootDefaultTemplate;
-        // targetElement.innerHTML = DomRenderRootDefaultStyle;
-        targetElement.hidden = true;
-        this.option.window.document.body.appendChild(targetElement);
+        let targetElement = targetUserElement;
+        const rect = targetUserElement.getBoundingClientRect();
+        const originPosition = targetElement.style.position;
+        const originTop = targetElement.style.top;
+        const originLeft = targetElement.style.left;
+        const originWidth = targetElement.style.width;
+        const originHeight = targetElement.style.height;
+        const originZIndex = targetElement.style.zIndex;
+        // console.log('-----rect-----', rect, originPosition, originTop, originLeft, originWidth, originHeight, originZIndex);
+        if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_19__.ValidUtils.isBrowser()) {
+            // console.log('none server side')
+            targetUserElement.removeAttribute('id');
+            targetElement = targetUserElement.cloneNode(true);
+            if (!targetElement || !targetUserElement) {
+                throw new Error('no element selector ' + this.option.selector);
+            }
+            targetElement.setAttribute('dom-render-side', 'client');
+            targetElement.innerHTML = _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootDefaultTemplate;
+            targetElement.removeAttribute('dom-render-done');
+            // targetElement = targetUserElement;
+            //  console.log('------???????', targetUserElement, this.option.selector)
+            targetElement.style.position = 'fixed';
+            targetElement.style.top = `${rect.top}px`;
+            targetElement.style.left = `${rect.left}px`;
+            targetElement.style.width = `${rect.width}px`;
+            targetElement.style.height = `${rect.height}px`;
+            targetElement.style.zIndex = '999999';
+            targetElement.setAttribute('random', Math.random().toString());
+            this.option.window.document.body.appendChild(targetElement);
+        }
+        else {
+            targetElement.setAttribute('dom-render-side', 'server');
+            targetElement.innerHTML = _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootDefaultTemplate;
+            // console.log('server side')
+        }
         // const targetElement = this.option.window.document.querySelector(this.option.selector);
         // const {rootObject: domRenderRoot, config } = DomRender.runSet({rootObject: this.domRenderRootObject, target: targetElement, config: this.domRenderConfig});
         const domRender = new _dooboostore_dom_render_DomRender__WEBPACK_IMPORTED_MODULE_4__.DomRender({
@@ -18656,38 +19522,42 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
         this.domRenderRootObject = domRender.rootObject;
         (0,_dooboostore_simple_boot_decorators_route_Router__WEBPACK_IMPORTED_MODULE_16__.routerProcess)({ path: '', routers: [this.option.rootRouter] }, _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootObject);
         // 작업테스크 옮겨줘야 비동기적으로 처리됨에 깜빡임 없앨수있다.
-        setTimeout(() => {
-            targetElement.hidden = false;
-            targetUserElement.replaceWith(targetElement);
-        }, 0);
+        this.domRenderRootObject.addOnChildRawSetRenderedDebounceCallback(() => {
+            const hasDone = targetElement.hasAttribute('dom-render-done');
+            // console.log('----domRenderRootObject rendered-----', hasDone);
+            if (!hasDone) {
+                targetElement.setAttribute('dom-render-done', 'done');
+                if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_19__.ValidUtils.isBrowser()) {
+                    targetElement.style.position = originPosition;
+                    targetElement.style.top = originTop;
+                    targetElement.style.left = originLeft;
+                    targetElement.style.width = originWidth;
+                    targetElement.style.height = originHeight;
+                    targetElement.style.zIndex = originZIndex;
+                    targetUserElement.remove();
+                }
+                else {
+                }
+            }
+        });
         // dom-render 라우팅 끝나면
         this.domRenderRouter.observable.pipe((0,_dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__.filter)(it => it.triggerPoint === 'end')).subscribe(it => {
             // console.log('this.domRenderRouter.observable.subscribe---------------', it, this.domRenderRouter)
-            const intent = new _dooboostore_simple_boot_intent_Intent__WEBPACK_IMPORTED_MODULE_6__.Intent(it.path || '/');
+            //   console.log('this.domRenderRouter.observable', it)
+            // const intent = new Intent(it.path || '/');
+            const targetPath = (it.path || '/') + (it.search);
+            const intent = new _dooboostore_simple_boot_intent_Intent__WEBPACK_IMPORTED_MODULE_6__.Intent(targetPath);
             //   // TODO: 왜 canActivate가 두번 호출되는지 확인 필요!! 그래서 setTimeout으로 처리함 원인 모르겠음 아 씨발
             this.routing(intent, { router: this.domRenderRootObject }).then(async (it) => {
-                // console.log('vvvvvvvvv', it);
+                // console.log('-------->', it)
                 // dom-render 라우팅 끝나면 -> simple-boot-front routing start!
                 this.routingSubject.next({ triggerPoint: 'start', routerModule: it });
                 let findFirstRouter = it.firstRouteChainValue;
-                //       setTimeout(() => {
                 if (findFirstRouter && findFirstRouter.constructor === this.option.rootRouter) {
                     const rootRouter = (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_10__.getDomRenderOriginObject)(this.rootRouter?.obj);
                     const findRouter = (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_10__.getDomRenderOriginObject)(findFirstRouter);
-                    // console.log('!!!!!', domRenderRoot, rootRouter, findRouter);
-                    // domRenderRoot.name = new Date().toISOString();
-                    // domRenderRoot.name = domRenderRoot.rootRouter?.obj?.child;
-                    // setTimeout(() => {
-                    // if (rootRouter !== findRouter) {
                     await this.domRenderRootObject.canActivate(undefined, findRouter);
                     await this.domRenderRootObject.onRouting({ intent, routerModule: it, routerManager: this.routerManager });
-                    // setTimeout(() => {
-                    //   console.log('ccccccccan')
-                    //   this.domRenderRootObject.canActivate(undefined, findRouter); // new ComponentSet(rootRouter);
-                    // },0)
-                    //   console.log('change!', domRenderRoot, domRenderRoot.rootRouter?.obj)
-                    // }
-                    // },5)
                 }
                 this.routingSubject.next({ triggerPoint: 'end', routerModule: it });
                 //       }, 0);
@@ -19166,6 +20036,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../codes/HttpHeaders */ "../../packages/@dooboostore/simple-boot-http-server-ssr/src/codes/HttpHeaders.ts");
 /* harmony import */ var _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/convert/ConvertUtils */ "../../packages/@dooboostore/core/src/convert/ConvertUtils.ts");
 /* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
+var SymbolIntentApiServiceProxy_1;
 var _a;
 
 
@@ -19173,120 +20044,104 @@ var _a;
 
 
 const _ = _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__.ApiService;
-let SymbolIntentApiServiceProxy = class SymbolIntentApiServiceProxy {
+let SymbolIntentApiServiceProxy = SymbolIntentApiServiceProxy_1 = class SymbolIntentApiServiceProxy {
     apiService;
     constructor(apiService) {
         this.apiService = apiService;
-        console.log('-------apiService', apiService);
+        // console.log('-------apiService', apiService);
+    }
+    static createHandler(apiService) {
+        return {
+            get(target, prop, receiver) {
+                const simConfig = (0,_dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__.getSim)(target);
+                const value = Reflect.get(target, prop, receiver);
+                if (typeof value === 'function' && simConfig?.symbol) {
+                    return function (...args) {
+                        const f = value;
+                        const p = (userConfig) => {
+                            const headers = { ...(userConfig?.headers ?? {}), ...(0,_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__.makeIntentHeaderBySymbol)(simConfig.symbol) };
+                            const method = userConfig?.method ?? 'post';
+                            if (method === 'post' && userConfig?.multipartFormData) {
+                                return apiService.post({
+                                    target: `/${String(prop)}`,
+                                    config: {
+                                        bypassTransform: userConfig?.bypassTransform,
+                                        transformText: userConfig?.transformText,
+                                        config: userConfig?.config,
+                                        fetch: {
+                                            credentials: 'include',
+                                            headers: headers,
+                                            body: _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_3__.ConvertUtils.toFormData(userConfig?.body)
+                                        }
+                                    }
+                                });
+                            }
+                            else if (method === 'post') {
+                                return apiService.postJson({
+                                    target: `/${String(prop)}`,
+                                    config: {
+                                        bypassTransform: userConfig?.bypassTransform,
+                                        transformText: userConfig?.transformText,
+                                        config: userConfig?.config,
+                                        fetch: {
+                                            credentials: 'include',
+                                            headers: headers,
+                                            body: userConfig?.body
+                                        }
+                                    }
+                                });
+                            }
+                            else if (method === 'petch') {
+                                return apiService.patchJson({
+                                    target: `/${String(prop)}`,
+                                    config: {
+                                        bypassTransform: userConfig?.bypassTransform,
+                                        transformText: userConfig?.transformText,
+                                        config: userConfig?.config,
+                                        fetch: {
+                                            credentials: 'include',
+                                            headers: headers,
+                                            body: userConfig?.body
+                                        }
+                                    }
+                                });
+                            }
+                            else {
+                                return apiService[method]({
+                                    target: { url: `/${String(prop)}`, searchParams: userConfig?.body },
+                                    config: {
+                                        bypassTransform: userConfig?.bypassTransform,
+                                        transformText: userConfig?.transformText,
+                                        config: userConfig?.config,
+                                        fetch: {
+                                            credentials: 'include',
+                                            headers: headers,
+                                        }
+                                    }
+                                });
+                            }
+                        };
+                        args.push(p);
+                        return Reflect.apply(f, target, args);
+                    };
+                }
+                return Reflect.get(target, prop, receiver);
+            },
+            apply(target, thisArg, argArray) {
+                console.log('SymbolIntentApiServiceProxy apply');
+                // @ts-ignore
+                return Reflect.apply(target, thisArg, argArray);
+            }
+        };
     }
     get(target, prop, receiver) {
-        const simConfig = (0,_dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__.getSim)(target);
-        const apiService = this.apiService;
-        const value = Reflect.get(target, prop, receiver);
-        if (typeof value === 'function' && simConfig?.symbol) {
-            return function (...args) {
-                const f = value;
-                const p = (userConfig) => {
-                    const headers = { ...(userConfig?.headers ?? {}), ...(0,_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__.makeIntentHeaderBySymbol)(simConfig.symbol) };
-                    const method = userConfig?.method ?? 'post';
-                    if (method === 'post' && userConfig?.multipartFormData) {
-                        return apiService.post({
-                            target: `/${String(prop)}`,
-                            config: {
-                                bypassTransform: userConfig?.bypassTransform,
-                                transformText: userConfig?.transformText,
-                                fetch: {
-                                    credentials: 'include',
-                                    headers: headers,
-                                    body: _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_3__.ConvertUtils.toFormData(userConfig?.body)
-                                }
-                            }
-                        });
-                    }
-                    else if (method === 'post') {
-                        return apiService.postJson({
-                            target: `/${String(prop)}`,
-                            config: {
-                                bypassTransform: userConfig?.bypassTransform,
-                                transformText: userConfig?.transformText,
-                                fetch: {
-                                    credentials: 'include',
-                                    headers: headers,
-                                    body: userConfig?.body
-                                }
-                            }
-                        });
-                    }
-                    else if (method === 'petch') {
-                        return apiService.patchJson({
-                            target: `/${String(prop)}`,
-                            config: {
-                                bypassTransform: userConfig?.bypassTransform,
-                                transformText: userConfig?.transformText,
-                                fetch: {
-                                    credentials: 'include',
-                                    headers: headers,
-                                    body: userConfig?.body
-                                }
-                            }
-                        });
-                    }
-                    else {
-                        return apiService[method]({
-                            // return apiService.head({
-                            target: { url: `/${String(prop)}`, searchParams: userConfig?.body },
-                            config: {
-                                bypassTransform: userConfig?.bypassTransform,
-                                transformText: userConfig?.transformText,
-                                fetch: {
-                                    credentials: 'include',
-                                    headers: headers,
-                                }
-                            }
-                        });
-                    }
-                    // if (userConfig?.multipartFormData) {
-                    //   return apiService.post({
-                    //     target: `/${String(prop)}`,
-                    //     config: {
-                    //       bypassTransform: userConfig?.bypassTransform,
-                    //       transformText: userConfig?.transformText,
-                    //       fetch: {
-                    //         credentials: 'include',
-                    //         headers: headers,
-                    //         body: ConvertUtils.toFormData(userConfig?.body)
-                    //       }
-                    //     }
-                    //   });
-                    // } else {
-                    //   return apiService.postJson({
-                    //     target: `/${String(prop)}`,
-                    //     config: {
-                    //       bypassTransform: userConfig?.bypassTransform,
-                    //       transformText: userConfig?.transformText,
-                    //       fetch: {
-                    //         credentials: 'include',
-                    //         headers: headers,
-                    //         body: userConfig?.body
-                    //       }
-                    //     }
-                    //   });
-                    // }
-                };
-                args.push(p);
-                return Reflect.apply(f, target, args);
-                // return f.apply(target, args);
-            };
-        }
-        return Reflect.get(target, prop, receiver);
+        return SymbolIntentApiServiceProxy_1.createHandler(this.apiService).get(target, prop, receiver);
     }
     apply(target, thisArg, argArray) {
-        console.log('SymbolIntentApiServiceProxy apply');
-        // @ts-ignore
-        return Reflect.apply(target, thisArg, argArray);
+        return SymbolIntentApiServiceProxy_1.createHandler(this.apiService).apply(target, thisArg, argArray);
     }
 };
-SymbolIntentApiServiceProxy = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+SymbolIntentApiServiceProxy = SymbolIntentApiServiceProxy_1 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
     _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__.Sim,
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__.ApiService) === "function" ? _a : Object])
 ], SymbolIntentApiServiceProxy);
@@ -19593,10 +20448,10 @@ class Alert {
     config;
     result;
     isActive = false;
-    activeBefore = [];
-    activeAfter = [];
-    deActiveBefore = [];
-    deActiveAfter = [];
+    activateBefore = [];
+    activateAfter = [];
+    deActivateBefore = [];
+    deActivateAfter = [];
     data = new Map();
     uuid;
     constructor(alertService, config) {
@@ -19610,16 +20465,16 @@ class Alert {
         }
     }
     addOpenBefore(fn) {
-        this.activeBefore.push(fn);
+        this.activateBefore.push(fn);
     }
     addOpenAfter(fn) {
-        this.activeAfter.push(fn);
+        this.activateAfter.push(fn);
     }
     addCloseBefore(fn) {
-        this.deActiveBefore.push(fn);
+        this.deActivateBefore.push(fn);
     }
     addCloseAfter(fn) {
-        this.deActiveAfter.push(fn);
+        this.deActivateAfter.push(fn);
     }
     setData(key, value) {
         this.data.set(key, value);
@@ -19627,41 +20482,41 @@ class Alert {
     getData(key) {
         return this.data.get(key);
     }
-    async active() {
+    async activate() {
         try {
-            await Promise.allSettled(this.activeBefore.map(it => it()))
+            await Promise.allSettled(this.activateBefore.map(it => it()))
                 .then(it => {
                 this.result = this.make();
                 this.alertService?.publish({ action: _AlertAction__WEBPACK_IMPORTED_MODULE_1__.AlertAction.ACTIVE, alert: this });
                 this.isActive = true;
                 if (this.config?.closeTime !== undefined && this.config?.closeTime > 0) {
                     setTimeout(() => {
-                        this.inActive();
+                        this.deActivate();
                     }, this.config.closeTime);
                 }
-                this.config?.active?.(this.result, this);
+                this.config?.activate?.(this.result, this);
             });
         }
         catch (e) {
         }
         finally {
-            await Promise.allSettled(this.activeAfter.map(it => it())).then(it => {
+            await Promise.allSettled(this.activateAfter.map(it => it())).then(it => {
             });
         }
     }
-    async inActive() {
+    async deActivate() {
         try {
-            await Promise.allSettled(this.deActiveBefore.map(it => it()))
+            await Promise.allSettled(this.deActivateBefore.map(it => it()))
                 .then(it => {
                 this.alertService?.publish({ action: _AlertAction__WEBPACK_IMPORTED_MODULE_1__.AlertAction.IN_ACTIVE, alert: this });
                 this.isActive = false;
-                this.config?.deActive?.(this.result, this);
+                this.config?.deActivate?.(this.result, this);
             });
         }
         catch (e) {
         }
         finally {
-            await Promise.allSettled(this.deActiveAfter.map(it => it())).then(it => {
+            await Promise.allSettled(this.deActivateAfter.map(it => it())).then(it => {
             });
         }
     }
@@ -20178,6 +21033,390 @@ const getAround = (target, propertyKey) => {
 
 /***/ }),
 
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/aop/index.ts":
+/*!***************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/aop/index.ts ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   After: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.After),
+/* harmony export */   Around: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.Around),
+/* harmony export */   AroundForceReturn: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.AroundForceReturn),
+/* harmony export */   Before: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.Before),
+/* harmony export */   getAfter: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getAfter),
+/* harmony export */   getAfters: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getAfters),
+/* harmony export */   getAround: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getAround),
+/* harmony export */   getBefore: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getBefore),
+/* harmony export */   getBefores: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getBefores),
+/* harmony export */   getProtoAfters: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getProtoAfters),
+/* harmony export */   getProtoBefores: () => (/* reexport safe */ _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__.getProtoBefores)
+/* harmony export */ });
+/* harmony import */ var _AOPDecorator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AOPDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/aop/AOPDecorator.ts");
+
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/cache/CacheDecorator.ts":
+/*!**************************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/cache/CacheDecorator.ts ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Cache: () => (/* binding */ Cache),
+/* harmony export */   DefaultCacheStorage: () => (/* binding */ DefaultCacheStorage),
+/* harmony export */   deleteCacheByKey: () => (/* binding */ deleteCacheByKey),
+/* harmony export */   deleteCacheByKeyStartWith: () => (/* binding */ deleteCacheByKeyStartWith),
+/* harmony export */   findCacheByKey: () => (/* binding */ findCacheByKey),
+/* harmony export */   findCacheByKeyStartWith: () => (/* binding */ findCacheByKeyStartWith),
+/* harmony export */   getCacheSet: () => (/* binding */ getCacheSet)
+/* harmony export */ });
+/* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
+
+class DefaultCacheStorage {
+    storage = new Map();
+    delete(key) {
+        return this.storage.delete(key);
+    }
+    get(key) {
+        return this.storage.get(key);
+    }
+    has(key) {
+        return this.storage.has(key);
+    }
+    set(key, value) {
+        this.storage.set(key, value);
+    }
+}
+const isNoAllKey = (cacheOption) => {
+    return !('key' in cacheOption) && !('deleteKey' in cacheOption) && !('setKey' in cacheOption);
+};
+const isKey = (cacheOption) => {
+    return 'key' in cacheOption && (typeof cacheOption.key === 'string' || typeof cacheOption.key === 'function');
+};
+const isChildrenKey = (cacheOption) => {
+    return 'key' in cacheOption && typeof cacheOption.key === 'object' && cacheOption.key !== null && 'key' in cacheOption.key && 'childrenKey' in cacheOption.key;
+};
+const isDeleteKey = (cacheOption) => {
+    return 'deleteKey' in cacheOption && (typeof cacheOption.deleteKey === 'string' || typeof cacheOption.deleteKey === 'function');
+};
+const isDeleteChildrenKey = (cacheOption) => {
+    return 'deleteKey' in cacheOption && typeof cacheOption.deleteKey === 'object' && cacheOption.deleteKey !== null && 'key' in cacheOption.deleteKey && 'childrenKey' in cacheOption.deleteKey;
+};
+const isSetKey = (cacheOption) => {
+    return 'setKey' in cacheOption && (typeof cacheOption.setKey === 'string' || typeof cacheOption.setKey === 'function');
+};
+const isSetChildrenKey = (cacheOption) => {
+    return 'setKey' in cacheOption && typeof cacheOption.setKey === 'object' && cacheOption.setKey !== null && 'key' in cacheOption.setKey && 'childrenKey' in cacheOption.setKey;
+};
+const isUpdate = (cacheOption) => {
+    return isSetKey(cacheOption) || isSetChildrenKey(cacheOption);
+};
+const simpleApplicationCache = new WeakMap();
+// setInterval(() => {
+//   // console.log('debug cache', simpleApplicationCache.values())
+//   console.dir(simpleApplicationCache.values(), {depth: 10, colors: true});
+// }, 1000)
+const getCacheSet = (simpleApplication) => {
+    return simpleApplicationCache.get(simpleApplication);
+};
+const findCacheByKey = (simpleApplication, key) => {
+    const storage = simpleApplicationCache.get(simpleApplication);
+    if (storage) {
+        return Array.from(storage.config.entries()).find(([k, v]) => k === key);
+    }
+};
+const findCacheByKeyStartWith = (simpleApplication, key) => {
+    const storage = simpleApplicationCache.get(simpleApplication);
+    if (storage) {
+        return Array.from(storage.config.entries()).filter(([k, v]) => k.startsWith(key));
+    }
+    else {
+        return [];
+    }
+};
+const deleteCacheByKey = (simpleApplication, key) => {
+    const storage = simpleApplicationCache.get(simpleApplication);
+    if (storage) {
+        // delete에서 rootKey 지우면 자식들 다 지워쟈야한다.
+        storage.storage.delete(key);
+        findCacheByKeyStartWith(simpleApplication, key).forEach(([k, v]) => {
+            const data = storage.config.get(k);
+            if (data?.expireTimeout) {
+                clearTimeout(data.expireTimeout);
+            }
+            storage.config.delete(k);
+            storage.storage.delete(k);
+        });
+    }
+};
+const deleteCacheByKeyStartWith = (simpleApplication, key) => {
+    findCacheByKeyStartWith(simpleApplication, key).forEach(([key, data]) => deleteCacheByKey(simpleApplication, key));
+};
+const CacheMetadataKey = Symbol('Cache');
+const cacheProcess = (data, target, propertyKey, descriptor) => {
+    // 원본 메서드 저장
+    const originalMethod = descriptor.value;
+    // function으로 해야지 proxy가 먹힌 this를 사용할 수 있다.
+    descriptor.value = function (...args) {
+        const data = _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(CacheMetadataKey, target, propertyKey);
+        const simpleApplication = this._SimpleBoot_application;
+        const simstanceManager = this._SimpleBoot_simstanceManager;
+        const simOption = this._SimpleBoot_simOption;
+        if (simpleApplication && simstanceManager && simOption && simOption.cache?.enable && data) {
+            const simpleApplicationStorage = simpleApplicationCache.get(simpleApplication) ?? { storage: simOption.cache?.storage ?? new DefaultCacheStorage(), config: new Map() };
+            simpleApplicationCache.set(simpleApplication, simpleApplicationStorage);
+            let rootKey;
+            if (isNoAllKey(data)) {
+                rootKey = data.key = target.constructor.name + '.' + propertyKey.toString();
+            }
+            if (isKey(data)) {
+                rootKey = typeof data.key === 'function' ? data.key.apply(this, args) : data.key;
+            }
+            else if (isChildrenKey(data)) {
+                rootKey = typeof data.key.key === 'function' ? data.key.key.apply(this, args) : data.key.key;
+            }
+            else if (isDeleteKey(data)) {
+                rootKey = typeof data.deleteKey === 'function' ? data.deleteKey.apply(this, args) : data.deleteKey;
+            }
+            else if (isDeleteChildrenKey(data)) {
+                rootKey = typeof data.deleteKey.key === 'function' ? data.deleteKey.key.apply(this, args) : data.deleteKey.key;
+            }
+            else if (isSetKey(data)) {
+                rootKey = typeof data.setKey === 'function' ? data.setKey.apply(this, args) : data.setKey;
+            }
+            else if (isSetChildrenKey(data)) {
+                rootKey = typeof data.setKey.key === 'function' ? data.setKey.key.apply(this, args) : data.setKey.key;
+            }
+            if (isUpdate(data)) {
+            }
+            else {
+                if (isKey(data) && rootKey) {
+                    const findTarget = findCacheByKey(simpleApplication, rootKey);
+                    // console.log('findSingleKey', findTarget, data)
+                    if (findTarget) {
+                        const key = findTarget[0];
+                        return simpleApplicationStorage.storage.get(key);
+                    }
+                }
+                else if (isChildrenKey(data) && rootKey) {
+                    const findTargets = findCacheByKeyStartWith(simpleApplication, rootKey);
+                    const rdata = findTargets.filter(([k, v]) => simpleApplicationStorage.storage.has(k)).map(([k, v]) => simpleApplicationStorage.storage?.get(k));
+                    if (rdata.length > 0) {
+                        return rdata;
+                    }
+                }
+            }
+            const result = originalMethod.apply(this, args);
+            if (isDeleteKey(data) && rootKey) {
+                deleteCacheByKey(simpleApplication, rootKey);
+            }
+            else if (isDeleteChildrenKey(data) && rootKey) {
+                const key = typeof data.deleteKey.childrenKey === 'function' ? data.deleteKey.childrenKey.call(this, result) : data.deleteKey.childrenKey;
+                const keys = key instanceof Array ? key : [key];
+                keys.forEach(it => deleteCacheByKey(simpleApplication, `${rootKey}${data.deleteKey.join ?? '.'}${it}`));
+            }
+            else if ((isSetKey(data) || isKey(data)) && rootKey) {
+                const ms = data.ms ?? simOption.cache?.ms;
+                const expireTimeout = ms !== undefined ? setTimeout(() => deleteCacheByKey(simpleApplication, rootKey), ms) : undefined;
+                simpleApplicationStorage.config.set(rootKey, { data: data, expireTimeout });
+                simpleApplicationStorage.storage?.set(rootKey, result);
+            }
+            else if ((isSetChildrenKey(data) || isChildrenKey(data)) && rootKey) {
+                const key = isSetChildrenKey(data) ? data.setKey : data.key;
+                const childrenKeys = typeof key.childrenKey === 'function' ? key.childrenKey.call(this, result) : key.childrenKey;
+                const keys = childrenKeys instanceof Array ? childrenKeys : [childrenKeys];
+                keys.forEach(it => {
+                    const childKey = `${rootKey}${key.join ?? '.'}${it.key}`;
+                    const ms = it.ms ?? data.ms ?? simOption.cache?.ms;
+                    const expireTimeout = ms !== undefined ? setTimeout(() => deleteCacheByKey(simpleApplication, childKey), ms) : undefined;
+                    simpleApplicationStorage.config.set(childKey, { data: data, expireTimeout });
+                    simpleApplicationStorage.storage?.set(childKey, it.data);
+                });
+            }
+            return result;
+        }
+        else {
+            return originalMethod.apply(this, args);
+        }
+    };
+    // console.log('--------->', (target as any)._SimpleBoot_simstanceManager);
+    // console.log('--------->', target, propertyKey, descriptor);
+    _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.defineMetadata(CacheMetadataKey, data, target, propertyKey);
+};
+function Cache(targetOrOption, propertyKey, descriptor) {
+    if (typeof targetOrOption === 'object' && propertyKey && descriptor) {
+        // @Cache
+        cacheProcess({}, targetOrOption, propertyKey, descriptor);
+    }
+    else if (typeof targetOrOption === 'object') {
+        // @Cache({})
+        return (target, propertyKey, descriptor) => {
+            const data = targetOrOption;
+            return cacheProcess(data, target, propertyKey, descriptor);
+        };
+    }
+    else {
+        throw new Error('Invalid arguments for Cache decorator');
+    }
+    // return (target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<any>) => {
+    //   // 원본 메서드 저장
+    //   const originalMethod = descriptor.value;
+    //
+    //   // function으로 해야지 proxy가 먹힌 this를 사용할 수 있다.
+    //   descriptor.value = function (...args: Parameters<M>) {
+    //
+    //     const data = ReflectUtils.getMetadata<CacheOption<M>>(CacheMetadataKey, target, propertyKey);
+    //     const simpleApplication: SimpleApplication = (this as any)._SimpleBoot_application as SimpleApplication;
+    //     const simstanceManager: SimstanceManager = (this as any)._SimpleBoot_simstanceManager as SimstanceManager;
+    //     const simOption: SimOption = (this as any)._SimpleBoot_simOption as SimOption;
+    //     if (simpleApplication && simstanceManager && simOption && simOption.cache?.enable && data) {
+    //       const simpleApplicationStorage = simpleApplicationCache.get(simpleApplication) ?? {storage: simOption.cache?.storage ?? new DefaultCacheStorage(), config: new Map<string, ConfigDataSet>()};
+    //       simpleApplicationCache.set(simpleApplication, simpleApplicationStorage);
+    //
+    //
+    //       let rootKey: undefined | string;
+    //       if (isSingleKey(data)) {
+    //         rootKey = typeof data.key === 'function' ? data.key.apply(this, args) : data.key;
+    //         const findTarget = findCacheByKey(simpleApplication, rootKey);
+    //         // console.log('findSingleKey', findTarget, data)
+    //         if (findTarget) {
+    //           const key = findTarget[0];
+    //           return simpleApplicationStorage.storage.get(key)
+    //         }
+    //       } else if (isChildrenKey(data)) {
+    //         rootKey = typeof data.key.key === 'function' ? data.key.key.apply(this, args) : data.key.key;
+    //         const findTargets = findCacheByKeyStartWith(simpleApplication, rootKey);
+    //         const rdata = findTargets.filter(([k,v]) => simpleApplicationStorage.storage.has(k)).map(([k, v]) => simpleApplicationStorage.storage?.get(k));
+    //         if (rdata.length > 0) {
+    //           return rdata;
+    //         }
+    //       } else if (isDeleteKey(data)) {
+    //         rootKey = typeof data.deleteKey === 'function' ? data.deleteKey.apply(this, args) : data.deleteKey;
+    //       } else if (isDeleteChildrenKey(data)) {
+    //         rootKey = typeof data.deleteKey.key === 'function' ? data.deleteKey.key.apply(this, args) : data.deleteKey.key;
+    //       }
+    //
+    //       const result = originalMethod.apply(this, args);
+    //
+    //       if (isDeleteKey(data) && rootKey) {
+    //         deleteCacheByKey(simpleApplication, rootKey);
+    //       } else if (isDeleteChildrenKey(data) && rootKey) {
+    //         const key = typeof data.deleteKey.childrenKey === 'function' ? data.deleteKey.childrenKey.call(this, result) : data.deleteKey.childrenKey;
+    //         const keys = key instanceof Array ? key : [key];
+    //         keys.forEach(it =>deleteCacheByKey(simpleApplication, it));
+    //       } else if (isSingleKey(data) && rootKey) {
+    //         const ms = data.ms ?? simOption.cache?.ms;
+    //         const expireTimeout = ms !== undefined ? setTimeout(() => deleteCacheByKey(simpleApplication, rootKey!), ms) : undefined;
+    //         simpleApplicationStorage.config.set(rootKey, {data: data as CacheOption<any> , expireTimeout});
+    //         simpleApplicationStorage.storage?.set(rootKey, result);
+    //       } else if (isChildrenKey(data) && rootKey) {
+    //         const childrenKeys = typeof data.key.childrenKey === 'function' ? data.key.childrenKey.call(this, result) : data.key.childrenKey;
+    //         const keys = childrenKeys instanceof Array ? childrenKeys : [childrenKeys];
+    //         keys.forEach(it => {
+    //           const childKey = `${rootKey}${data.key.join ?? '.'}${it.key}`;
+    //           const ms = data.ms ?? data.ms ?? simOption.cache?.ms;
+    //           const expireTimeout = ms !== undefined ? setTimeout(() => deleteCacheByKey(simpleApplication, childKey), ms) : undefined;
+    //           simpleApplicationStorage.config.set(childKey, {data: data as CacheOption<any>, expireTimeout});
+    //           simpleApplicationStorage.storage?.set(childKey, it.data);
+    //         });
+    //       }
+    //
+    //       return result;
+    //
+    //       // simOption.cache.storage.
+    //       // const s = typeof data.type === 'symbol'
+    //       //      ? simstanceManager.findFirstSim<Storage>(data.type)
+    //       //      : simstanceManager.findFirstSim<Storage>({ type: data.type as ConstructorType<any> });
+    //       // const storage = s?.getValue();
+    //       // if (storage) {
+    //       //
+    //       // }
+    //     } else {
+    //       return originalMethod.apply(this, args);
+    //     }
+    //   };
+    //   // console.log('--------->', (target as any)._SimpleBoot_simstanceManager);
+    //   // console.log('--------->', target, propertyKey, descriptor);
+    //   ReflectUtils.defineMetadata(CacheMetadataKey, data, target, propertyKey);
+    // }
+}
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/cache/index.ts":
+/*!*****************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/cache/index.ts ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Cache: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.Cache),
+/* harmony export */   DefaultCacheStorage: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.DefaultCacheStorage),
+/* harmony export */   deleteCacheByKey: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.deleteCacheByKey),
+/* harmony export */   deleteCacheByKeyStartWith: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.deleteCacheByKeyStartWith),
+/* harmony export */   findCacheByKey: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.findCacheByKey),
+/* harmony export */   findCacheByKeyStartWith: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.findCacheByKeyStartWith),
+/* harmony export */   getCacheSet: () => (/* reexport safe */ _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__.getCacheSet)
+/* harmony export */ });
+/* harmony import */ var _CacheDecorator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CacheDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/cache/CacheDecorator.ts");
+
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/event/EventListener.ts":
+/*!*************************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/event/EventListener.ts ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EventListener: () => (/* binding */ EventListener),
+/* harmony export */   getEventListener: () => (/* binding */ getEventListener)
+/* harmony export */ });
+/* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
+
+const EventListenerMetadataKey = Symbol('EventListener');
+const EventListener = (option) => {
+    return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.metadata(EventListenerMetadataKey, option);
+};
+const getEventListener = (target, propertyKey) => {
+    return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(EventListenerMetadataKey, target, propertyKey);
+};
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/event/index.ts":
+/*!*****************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/event/index.ts ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EventListener: () => (/* reexport safe */ _EventListener__WEBPACK_IMPORTED_MODULE_0__.EventListener),
+/* harmony export */   getEventListener: () => (/* reexport safe */ _EventListener__WEBPACK_IMPORTED_MODULE_0__.getEventListener)
+/* harmony export */ });
+/* harmony import */ var _EventListener__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EventListener */ "../../packages/@dooboostore/simple-boot/src/decorators/event/EventListener.ts");
+
+
+
+/***/ }),
+
 /***/ "../../packages/@dooboostore/simple-boot/src/decorators/exception/ExceptionDecorator.ts":
 /*!**********************************************************************************************!*\
   !*** ../../packages/@dooboostore/simple-boot/src/decorators/exception/ExceptionDecorator.ts ***!
@@ -20247,6 +21486,129 @@ const targetExceptionHandler = (target, error, excludeMethods = []) => {
 
 /***/ }),
 
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/exception/index.ts":
+/*!*********************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/exception/index.ts ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ExceptionHandler: () => (/* reexport safe */ _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__.ExceptionHandler),
+/* harmony export */   ExceptionHandlerSituationType: () => (/* reexport safe */ _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__.ExceptionHandlerSituationType),
+/* harmony export */   getExceptionHandler: () => (/* reexport safe */ _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__.getExceptionHandler),
+/* harmony export */   getExceptionHandlers: () => (/* reexport safe */ _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__.getExceptionHandlers),
+/* harmony export */   targetExceptionHandler: () => (/* reexport safe */ _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__.targetExceptionHandler),
+/* harmony export */   targetExceptionHandlers: () => (/* reexport safe */ _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__.targetExceptionHandlers)
+/* harmony export */ });
+/* harmony import */ var _ExceptionDecorator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExceptionDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/exception/ExceptionDecorator.ts");
+
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/index.ts":
+/*!***********************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/index.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   After: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.After),
+/* harmony export */   Around: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.Around),
+/* harmony export */   AroundForceReturn: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.AroundForceReturn),
+/* harmony export */   Before: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.Before),
+/* harmony export */   Cache: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.Cache),
+/* harmony export */   DefaultCacheStorage: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.DefaultCacheStorage),
+/* harmony export */   EventListener: () => (/* reexport safe */ _event__WEBPACK_IMPORTED_MODULE_5__.EventListener),
+/* harmony export */   ExceptionHandler: () => (/* reexport safe */ _exception__WEBPACK_IMPORTED_MODULE_6__.ExceptionHandler),
+/* harmony export */   ExceptionHandlerSituationType: () => (/* reexport safe */ _exception__WEBPACK_IMPORTED_MODULE_6__.ExceptionHandlerSituationType),
+/* harmony export */   Inject: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.Inject),
+/* harmony export */   InjectSituationType: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.InjectSituationType),
+/* harmony export */   Injection: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.Injection),
+/* harmony export */   Lifecycle: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.Lifecycle),
+/* harmony export */   MetaDataAtomic: () => (/* reexport safe */ _MetaDataAtomic__WEBPACK_IMPORTED_MODULE_0__.MetaDataAtomic),
+/* harmony export */   MetaDataPropertyAtomic: () => (/* reexport safe */ _MetaDataAtomic__WEBPACK_IMPORTED_MODULE_0__.MetaDataPropertyAtomic),
+/* harmony export */   NotEmpty: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.NotEmpty),
+/* harmony export */   NotNull: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.NotNull),
+/* harmony export */   PostConstruct: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.PostConstruct),
+/* harmony export */   Regexp: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.Regexp),
+/* harmony export */   Route: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.Route),
+/* harmony export */   RouteMetadataKey: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.RouteMetadataKey),
+/* harmony export */   Router: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.Router),
+/* harmony export */   RouterMetadataKey: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.RouterMetadataKey),
+/* harmony export */   Sim: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.Sim),
+/* harmony export */   SimMetadataKey: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.SimMetadataKey),
+/* harmony export */   SimNoProxy: () => (/* reexport safe */ _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__.SimNoProxy),
+/* harmony export */   SimNoProxyKey: () => (/* reexport safe */ _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__.SimNoProxyKey),
+/* harmony export */   SituationTypeContainer: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.SituationTypeContainer),
+/* harmony export */   SituationTypeContainers: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.SituationTypeContainers),
+/* harmony export */   Valid: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.Valid),
+/* harmony export */   Validation: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.Validation),
+/* harmony export */   containers: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.containers),
+/* harmony export */   deleteCacheByKey: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.deleteCacheByKey),
+/* harmony export */   deleteCacheByKeyStartWith: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.deleteCacheByKeyStartWith),
+/* harmony export */   execValidation: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.execValidation),
+/* harmony export */   execValidationInValid: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.execValidationInValid),
+/* harmony export */   findCacheByKey: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.findCacheByKey),
+/* harmony export */   findCacheByKeyStartWith: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.findCacheByKeyStartWith),
+/* harmony export */   getAfter: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getAfter),
+/* harmony export */   getAfters: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getAfters),
+/* harmony export */   getAround: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getAround),
+/* harmony export */   getBefore: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getBefore),
+/* harmony export */   getBefores: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getBefores),
+/* harmony export */   getCacheSet: () => (/* reexport safe */ _cache__WEBPACK_IMPORTED_MODULE_4__.getCacheSet),
+/* harmony export */   getEventListener: () => (/* reexport safe */ _event__WEBPACK_IMPORTED_MODULE_5__.getEventListener),
+/* harmony export */   getExceptionHandler: () => (/* reexport safe */ _exception__WEBPACK_IMPORTED_MODULE_6__.getExceptionHandler),
+/* harmony export */   getExceptionHandlers: () => (/* reexport safe */ _exception__WEBPACK_IMPORTED_MODULE_6__.getExceptionHandlers),
+/* harmony export */   getInject: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.getInject),
+/* harmony export */   getInjection: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.getInjection),
+/* harmony export */   getPostConstructs: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.getPostConstructs),
+/* harmony export */   getProtoAfters: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getProtoAfters),
+/* harmony export */   getProtoBefores: () => (/* reexport safe */ _aop__WEBPACK_IMPORTED_MODULE_3__.getProtoBefores),
+/* harmony export */   getRoute: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.getRoute),
+/* harmony export */   getRouter: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.getRouter),
+/* harmony export */   getRoutes: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.getRoutes),
+/* harmony export */   getSim: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.getSim),
+/* harmony export */   getSimNoProxy: () => (/* reexport safe */ _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__.getSimNoProxy),
+/* harmony export */   getValidIndex: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidIndex),
+/* harmony export */   getValidator: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidator),
+/* harmony export */   getValidators: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidators),
+/* harmony export */   isInjectFactory: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isInjectFactory),
+/* harmony export */   isSimNoProxy: () => (/* reexport safe */ _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__.isSimNoProxy),
+/* harmony export */   routerProcess: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.routerProcess),
+/* harmony export */   simProcess: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.simProcess),
+/* harmony export */   sims: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.sims),
+/* harmony export */   targetExceptionHandler: () => (/* reexport safe */ _exception__WEBPACK_IMPORTED_MODULE_6__.targetExceptionHandler),
+/* harmony export */   targetExceptionHandlers: () => (/* reexport safe */ _exception__WEBPACK_IMPORTED_MODULE_6__.targetExceptionHandlers)
+/* harmony export */ });
+/* harmony import */ var _MetaDataAtomic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MetaDataAtomic */ "../../packages/@dooboostore/simple-boot/src/decorators/MetaDataAtomic.ts");
+/* harmony import */ var _SimDecorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
+/* harmony import */ var _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SimNoProxy */ "../../packages/@dooboostore/simple-boot/src/decorators/SimNoProxy.ts");
+/* harmony import */ var _aop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./aop */ "../../packages/@dooboostore/simple-boot/src/decorators/aop/index.ts");
+/* harmony import */ var _cache__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cache */ "../../packages/@dooboostore/simple-boot/src/decorators/cache/index.ts");
+/* harmony import */ var _event__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./event */ "../../packages/@dooboostore/simple-boot/src/decorators/event/index.ts");
+/* harmony import */ var _exception__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./exception */ "../../packages/@dooboostore/simple-boot/src/decorators/exception/index.ts");
+/* harmony import */ var _inject__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./inject */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/index.ts");
+/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./route */ "../../packages/@dooboostore/simple-boot/src/decorators/route/index.ts");
+/* harmony import */ var _validate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./validate */ "../../packages/@dooboostore/simple-boot/src/decorators/validate/index.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts":
 /*!*******************************************************************************!*\
   !*** ../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts ***!
@@ -20260,7 +21622,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   InjectSituationType: () => (/* binding */ InjectSituationType),
 /* harmony export */   SituationTypeContainer: () => (/* binding */ SituationTypeContainer),
 /* harmony export */   SituationTypeContainers: () => (/* binding */ SituationTypeContainers),
-/* harmony export */   getInject: () => (/* binding */ getInject)
+/* harmony export */   getInject: () => (/* binding */ getInject),
+/* harmony export */   isInjectFactory: () => (/* binding */ isInjectFactory)
 /* harmony export */ });
 /* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
 
@@ -20295,6 +21658,9 @@ class SituationTypeContainers {
         return this.containers.find(predicate);
     }
 }
+const isInjectFactory = (obj) => {
+    return typeof obj?.injectFactory === 'function';
+};
 const InjectMetadataKey = Symbol('Inject');
 const injectProcess = (config, target, propertyKey, parameterIndex) => {
     if (propertyKey && typeof target === 'object') { // <-- object: method
@@ -20368,6 +21734,34 @@ function Injection(configOrTarget, propertyKey, descriptor) {
 const getInjection = (target, propertyKey) => {
     return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(InjectionMetadataKey, target, propertyKey);
 };
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/inject/index.ts":
+/*!******************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/inject/index.ts ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Inject: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.Inject),
+/* harmony export */   InjectSituationType: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.InjectSituationType),
+/* harmony export */   Injection: () => (/* reexport safe */ _Injection__WEBPACK_IMPORTED_MODULE_1__.Injection),
+/* harmony export */   SituationTypeContainer: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.SituationTypeContainer),
+/* harmony export */   SituationTypeContainers: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.SituationTypeContainers),
+/* harmony export */   getInject: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.getInject),
+/* harmony export */   getInjection: () => (/* reexport safe */ _Injection__WEBPACK_IMPORTED_MODULE_1__.getInjection),
+/* harmony export */   isInjectFactory: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isInjectFactory)
+/* harmony export */ });
+/* harmony import */ var _Inject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Inject */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts");
+/* harmony import */ var _Injection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Injection */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Injection.ts");
+
+// export * from './Injectable';
+
+// export * from './InjectArgumentFactory';
 
 
 /***/ }),
@@ -20458,6 +21852,157 @@ const getRoutes = (target) => {
     }
     return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(RouteMetadataKey, target);
 };
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/route/index.ts":
+/*!*****************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/route/index.ts ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Route: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.Route),
+/* harmony export */   RouteMetadataKey: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.RouteMetadataKey),
+/* harmony export */   Router: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.Router),
+/* harmony export */   RouterMetadataKey: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.RouterMetadataKey),
+/* harmony export */   getRoute: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.getRoute),
+/* harmony export */   getRouter: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.getRouter),
+/* harmony export */   getRoutes: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.getRoutes),
+/* harmony export */   routerProcess: () => (/* reexport safe */ _Router__WEBPACK_IMPORTED_MODULE_0__.routerProcess)
+/* harmony export */ });
+/* harmony import */ var _Router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Router */ "../../packages/@dooboostore/simple-boot/src/decorators/route/Router.ts");
+// export * from './OnRoute';
+
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/validate/Validation.ts":
+/*!*************************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/validate/Validation.ts ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NotEmpty: () => (/* binding */ NotEmpty),
+/* harmony export */   NotNull: () => (/* binding */ NotNull),
+/* harmony export */   Regexp: () => (/* binding */ Regexp),
+/* harmony export */   Valid: () => (/* binding */ Valid),
+/* harmony export */   Validation: () => (/* binding */ Validation),
+/* harmony export */   execValidation: () => (/* binding */ execValidation),
+/* harmony export */   execValidationInValid: () => (/* binding */ execValidationInValid),
+/* harmony export */   getValidIndex: () => (/* binding */ getValidIndex),
+/* harmony export */   getValidator: () => (/* binding */ getValidator),
+/* harmony export */   getValidators: () => (/* binding */ getValidators)
+/* harmony export */ });
+/* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
+
+const ValidMetadataKey = Symbol('ValidMetadataKey');
+const Valid = (target, propertyKey, parameterIndex) => {
+    if (propertyKey && typeof target === 'object') { // <-- object: method
+        target = target.constructor;
+        const existingRequiredParameters = Reflect.getOwnMetadata(ValidMetadataKey, target, propertyKey) || [];
+        existingRequiredParameters.push(parameterIndex);
+        Reflect.defineMetadata(ValidMetadataKey, existingRequiredParameters, target, propertyKey);
+    }
+    else if (!propertyKey || typeof target === 'function') { // <-- function: constructor
+        const existingRequiredParameters = Reflect.getOwnMetadata(ValidMetadataKey, target) || [];
+        existingRequiredParameters.push(parameterIndex);
+        Reflect.defineMetadata(ValidMetadataKey, existingRequiredParameters, target);
+    }
+};
+const getValidIndex = (target, propertyKey) => {
+    if (target !== null && undefined !== target && typeof target === 'object') {
+        target = target.constructor;
+    }
+    if (propertyKey) {
+        const parameters = Reflect.getOwnMetadata(ValidMetadataKey, target, propertyKey);
+        return parameters ?? [];
+    }
+    else {
+        return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(ValidMetadataKey, target) ?? [];
+    }
+};
+const ValidationMetadataKey = Symbol('ValidationMetadataKey');
+const Validation = (validator) => {
+    return (target, propertyKey) => {
+        const saves = (_dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(ValidationMetadataKey, target.constructor) ?? []);
+        saves.push({
+            propertyKey,
+            validator
+        });
+        _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.defineMetadata(ValidationMetadataKey, saves, target.constructor);
+        _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.defineMetadata(ValidationMetadataKey, validator, target, propertyKey);
+    };
+};
+const getValidator = (target, propertyKey) => {
+    return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(ValidationMetadataKey, target, propertyKey);
+};
+const getValidators = (target) => {
+    if (target !== null && undefined !== target && typeof target === 'object') {
+        target = target.constructor;
+    }
+    return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(ValidationMetadataKey, target) ?? [];
+};
+const Regexp = (regexp) => {
+    const content = (value, ...params) => {
+        return regexp.test(value);
+    };
+    return content;
+};
+const NotNull = (value, ...params) => {
+    return value !== null;
+};
+const NotEmpty = (value, ...params) => {
+    return value !== null && value !== undefined && (typeof value === 'string' && value.length > 0 || Array.isArray(value) && value.length > 0);
+};
+const execValidationInValid = (obj) => {
+    return execValidation(obj).filter(it => !it.valid);
+};
+const execValidation = (obj) => {
+    const validators = getValidators(obj);
+    const reesults = [];
+    validators.forEach(it => {
+        reesults.push({
+            name: it.propertyKey,
+            valid: it.validator(it.propertyKey, it),
+            message: ''
+        });
+    });
+    return reesults;
+};
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/decorators/validate/index.ts":
+/*!********************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/decorators/validate/index.ts ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NotEmpty: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.NotEmpty),
+/* harmony export */   NotNull: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.NotNull),
+/* harmony export */   Regexp: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.Regexp),
+/* harmony export */   Valid: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.Valid),
+/* harmony export */   Validation: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.Validation),
+/* harmony export */   execValidation: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.execValidation),
+/* harmony export */   execValidationInValid: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.execValidationInValid),
+/* harmony export */   getValidIndex: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.getValidIndex),
+/* harmony export */   getValidator: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.getValidator),
+/* harmony export */   getValidators: () => (/* reexport safe */ _Validation__WEBPACK_IMPORTED_MODULE_0__.getValidators)
+/* harmony export */ });
+/* harmony import */ var _Validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Validation */ "../../packages/@dooboostore/simple-boot/src/decorators/validate/Validation.ts");
+
 
 
 /***/ }),
@@ -20590,7 +22135,7 @@ let ApiService = class ApiService extends _dooboostore_core_fetch_HttpJsonFetche
             const alert = this.alertService?.progress({ title: config.config.config.title });
             if (alert) {
                 pipe.progress = alert;
-                alert.active();
+                alert.activate();
             }
         }
     }
@@ -20598,7 +22143,7 @@ let ApiService = class ApiService extends _dooboostore_core_fetch_HttpJsonFetche
         this.subject.next({ type: 'success', config, pipe });
         config.config?.config?.callBackSuccess?.(config, pipe);
         if (config.config?.config?.alertSuccessMsg) {
-            this.alertService?.success({ title: config.config.config.title })?.active();
+            this.alertService?.success({ title: config.config.config.title })?.activate();
         }
     }
     afterSuccessTransform(config, pipe) {
@@ -20606,7 +22151,7 @@ let ApiService = class ApiService extends _dooboostore_core_fetch_HttpJsonFetche
     finally(config, pipe) {
         this.subject.next({ type: 'final', config, pipe });
         config.config?.config?.callBackFinal?.(config, pipe);
-        pipe.progress?.inActive();
+        pipe.progress?.deActivate();
     }
     error(config, pipe, e) {
         console.log('error', e);
@@ -20616,7 +22161,7 @@ let ApiService = class ApiService extends _dooboostore_core_fetch_HttpJsonFetche
             this.alertService?.danger({
                 title: `${config.config.config.title ? config.config.config.title : ''}${e.message ? `(${e.message})` : ''}`
             })
-                ?.active();
+                ?.activate();
         }
         if (config.config?.config?.enableErrorConsole) {
             console.error(`apiService Error ${config?.config?.config?.title}`, e);
@@ -20727,21 +22272,75 @@ class Intent {
     }
     get query() {
         const paths = this.fullPath.split('?');
+        // console.log('fullPath', this.fullPath, paths)
         return paths[1] ?? '';
+    }
+    getQueryParamDecodeURI(key) {
+        const p = this.queryParamsDecodeURI;
+        if (key) {
+            return p[key];
+        }
+        else {
+            return p;
+        }
+    }
+    getQueryParamDecodeURIFirst(key) {
+        const param = this.getQueryParamDecodeURI(key);
+        if (Array.isArray(param)) {
+            return param[0];
+        }
+        else {
+            return param;
+        }
+    }
+    ;
+    getQueryParam(key) {
+        const p = this.queryParams;
+        if (key) {
+            return p[key];
+        }
+        else {
+            return p;
+        }
+    }
+    getQueryParamFirst(key) {
+        const param = this.getQueryParam(key);
+        if (Array.isArray(param)) {
+            return param[0];
+        }
+        else {
+            return param;
+        }
     }
     get queryParams() {
         const param = {};
         this.query.split('&')?.forEach(it => {
             const a = it.split('=');
-            param[a[0]] = a[1];
+            if (param[a[0]]) {
+                if (Array.isArray(param[a[0]])) {
+                    param[a[0]].push(a[1]);
+                }
+                else {
+                    param[a[0]] = [param[a[0]], a[1]];
+                }
+            }
+            else {
+                param[a[0]] = a[1];
+            }
         });
         return param;
     }
-    get queryParamsAfterDecodeURI() {
+    get queryParamsDecodeURI() {
         const params = this.queryParams;
         for (const key in params) {
             if (params.hasOwnProperty(key)) {
-                params[key] = decodeURIComponent(params[key]);
+                const param = params[key];
+                if (Array.isArray(param)) {
+                    params[key] = param.map(p => decodeURIComponent(p));
+                }
+                else {
+                    params[key] = decodeURIComponent(param);
+                }
             }
         }
         return params;
@@ -20777,7 +22376,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
 /* harmony import */ var _route_RouterManager__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../route/RouterManager */ "../../packages/@dooboostore/simple-boot/src/route/RouterManager.ts");
 /* harmony import */ var _SimOption__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../SimOption */ "../../packages/@dooboostore/simple-boot/src/SimOption.ts");
+/* harmony import */ var _IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./IntentSubscribe */ "../../packages/@dooboostore/simple-boot/src/intent/IntentSubscribe.ts");
+/* harmony import */ var _decorators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../decorators */ "../../packages/@dooboostore/simple-boot/src/decorators/index.ts");
+/* harmony import */ var _decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../decorators/inject/Inject */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts");
 var _a, _b, _c;
+
+
+
 
 
 
@@ -20820,7 +22425,7 @@ let IntentManager = class IntentManager {
         else if (typeof it === 'string') {
             it = new _Intent__WEBPACK_IMPORTED_MODULE_1__.Intent(it, data);
         }
-        let intent = it;
+        const intent = it;
         const r = [];
         if (!routerMatch) {
             if (intent.symbols) {
@@ -20842,12 +22447,13 @@ let IntentManager = class IntentManager {
             }
         });
         this.subject.next(it);
-        targetInstances.forEach(data => {
+        for (let data of targetInstances) {
             let orNewSim = data;
             if (orNewSim) {
                 if (intent.paths.length > 0) {
                     let callthis = orNewSim;
                     let lastProp = '';
+                    // path '/' 로해서 계속 파고든다.
                     intent.paths
                         .filter(i => i)
                         .forEach(i => {
@@ -20856,6 +22462,17 @@ let IntentManager = class IntentManager {
                         lastProp = i;
                     });
                     if (orNewSim && typeof orNewSim === 'function') {
+                        const injects = (0,_decorators__WEBPACK_IMPORTED_MODULE_9__.getInject)(callthis, orNewSim.name);
+                        // console.log('-------params', injects);
+                        if (injects) {
+                            for (const inject of injects) {
+                                let v = this.simstanceManager.findLastSim(inject.config).getValue();
+                                if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_10__.isInjectFactory)(v)) {
+                                    v = await v.injectFactory(intent.data, inject);
+                                }
+                                intent.data[inject.index] = v;
+                            }
+                        }
                         if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.DATA_PARAMETERS === intent.publishType) {
                             r.push(orNewSim.call(callthis, intent.data));
                         }
@@ -20873,17 +22490,24 @@ let IntentManager = class IntentManager {
                 }
                 else {
                     if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.DATA_PARAMETERS === intent.publishType) {
-                        r.push(orNewSim?.intentSubscribe?.(intent.data));
+                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__.isIntentSubscribe)(orNewSim)) {
+                            r.push(orNewSim.intentSubscribe(intent.data));
+                        }
                     }
                     else if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.INLINE_DATA_PARAMETERS === intent.publishType) {
-                        r.push(orNewSim?.intentSubscribe?.(...intent.data));
+                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__.isIntentSubscribe)(orNewSim)) {
+                            r.push(orNewSim.intentSubscribe(...intent.data));
+                        }
                     }
                     else {
-                        r.push(orNewSim?.intentSubscribe?.(intent));
+                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__.isIntentSubscribe)(orNewSim)) {
+                            r.push(orNewSim?.intentSubscribe?.(intent));
+                        }
                     }
                 }
             }
-        });
+        }
+        ;
         return r;
     }
 };
@@ -20892,6 +22516,24 @@ IntentManager = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_2__.SimstanceManager !== "undefined" && _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_2__.SimstanceManager) === "function" ? _a : Object, typeof (_b = typeof _route_RouterManager__WEBPACK_IMPORTED_MODULE_6__.RouterManager !== "undefined" && _route_RouterManager__WEBPACK_IMPORTED_MODULE_6__.RouterManager) === "function" ? _b : Object, typeof (_c = typeof _SimOption__WEBPACK_IMPORTED_MODULE_7__.SimOption !== "undefined" && _SimOption__WEBPACK_IMPORTED_MODULE_7__.SimOption) === "function" ? _c : Object])
 ], IntentManager);
 
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot/src/intent/IntentSubscribe.ts":
+/*!*****************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot/src/intent/IntentSubscribe.ts ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   isIntentSubscribe: () => (/* binding */ isIntentSubscribe)
+/* harmony export */ });
+const isIntentSubscribe = (obj) => {
+    return !!obj && typeof obj.intentSubscribe === 'function';
+};
 
 
 /***/ }),
@@ -21684,6 +23326,26 @@ class RouterModule {
     hasActivateInLastRoute(obj) {
         return this.lastRouteChainValue?.hasActivate(obj) === true;
     }
+    getQueryParamDecodeURI(key) {
+        if (this.intent) {
+            return this.intent.getQueryParamDecodeURI(key);
+        }
+    }
+    getQueryParamDecodeURIFirst(key) {
+        if (this.intent) {
+            return this.intent.getQueryParamDecodeURIFirst(key);
+        }
+    }
+    getQueryParam(key) {
+        if (this.intent) {
+            return this.intent.getQueryParam(key);
+        }
+    }
+    getQueryParamFirst(key) {
+        if (this.intent) {
+            return this.intent.getQueryParamFirst(key);
+        }
+    }
     get queryParams() {
         if (this.intent) {
             return this.intent.queryParams;
@@ -21691,7 +23353,7 @@ class RouterModule {
     }
     get queryParamsAfterDecodeURI() {
         if (this.intent) {
-            return this.intent.queryParamsAfterDecodeURI;
+            return this.intent.queryParamsDecodeURI;
         }
     }
 }
@@ -22308,6 +23970,40 @@ class SimNoSuch extends _SimError__WEBPACK_IMPORTED_MODULE_0__.SimError {
         super(message, name, stack);
     }
 }
+
+
+/***/ }),
+
+/***/ "./back-end/environments/environment.ts":
+/*!**********************************************!*\
+  !*** ./back-end/environments/environment.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   environment: () => (/* binding */ environment)
+/* harmony export */ });
+/* harmony import */ var _dooboostore_core_logger_Logger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/logger/Logger */ "../../packages/@dooboostore/core/src/logger/Logger.ts");
+
+const environment = {
+    name: 'default-template',
+    environment: 'local',
+    host: 'http://localhost:8082',
+    production: false,
+    frontDistPath: 'dist-front-end',
+    frontDistIndexFileName: 'index.html',
+    loggerConfig: {
+        level: _dooboostore_core_logger_Logger__WEBPACK_IMPORTED_MODULE_0__.LoggerLevel.DEBUG,
+        format: '[${date:\'yyyy-MM-dd HH:mm:ss\'}] ${file}(${line}):${message}'
+    },
+    httpServerConfig: {
+        listen: {
+            port: 8081
+        }
+    }
+};
 
 
 /***/ }),
@@ -23561,6 +25257,7 @@ var _a;
 
 let EnglishRouteComponent = class EnglishRouteComponent extends _dooboostore_dom_render_components_ComponentBase__WEBPACK_IMPORTED_MODULE_6__.ComponentBase {
     videoItemService;
+    name = 'english-route';
     items = undefined;
     movieItems = undefined;
     youtubeItems = undefined;
@@ -23578,6 +25275,7 @@ let EnglishRouteComponent = class EnglishRouteComponent extends _dooboostore_dom
     }
     async onInitRender(param, rawSet) {
         await super.onInitRender(param, rawSet);
+        this.name = 'english-route' + Date.now();
         if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_5__.ValidUtils.isBrowser()) {
             this.items = await this.videoItemService.items();
             // Separate items by type
@@ -23666,7 +25364,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_pages_english_player_player_route_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @src/pages/english/player/player.route.component */ "./src/pages/english/player/player.route.component.ts");
 /* harmony import */ var _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @src/service/english/VideoItemService */ "./src/service/english/VideoItemService.ts");
 /* harmony import */ var _src_service_VoiceService__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @src/service/VoiceService */ "./src/service/VoiceService.ts");
+/* harmony import */ var _back_end_environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @back-end/environments/environment */ "./back-end/environments/environment.ts");
 var _a, _b, _c;
+
 
 
 
@@ -23691,6 +25391,7 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
     currentItem;
     // items?: Item[];
     isInSubRoute = false; // Track if we're in a sub-route
+    name = 'zzz';
     constructor(config, videoItemService, voiceService) {
         super({ sameRouteNoApply: true });
         this.config = config;
@@ -23706,6 +25407,7 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
     }
     async onInitRender(param, rawSet) {
         await super.onInitRender(param, rawSet);
+        this.name = new Date().toISOString();
         console.log('english.router.component onInitRender-------');
         // Load favorite words from localStorage
         this.loadFavoriteWords();
@@ -23714,28 +25416,52 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
     }
     async onRouting(r) {
         await super.onRouting(r);
-        console.log('english.router.component onRouting-------');
+        this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name ?? '');
+        this.currentItem = this.currentItemName ? await this.videoItemService.item(this.currentItemName) : undefined;
+        console.log('english.router.component onRouting-------', this.config?.window);
+        if (this.config?.window) {
+            const doc = this.config.window.document;
+            const setMetaByProperty = (property, content) => {
+                const d = doc.querySelector(`meta[property="${property}"]`);
+                console.log('dddddddd->', property, d);
+                doc.querySelector(`meta[property="${property}"]`)?.setAttribute('content', content);
+            };
+            const setMetaByName = (name, content) => {
+                doc.querySelector(`meta[name="${name}"]`)?.setAttribute('content', content);
+            };
+            const setLink = (rel, href) => {
+                doc.querySelector(`link[rel="${rel}"]`)?.setAttribute('href', href);
+            };
+            const setTitle = (title) => {
+                doc.title = title;
+            };
+            let pageTitle = 'English Learning';
+            let pageDescription = 'Learn English with videos, movies, and interactive content.';
+            let pageUrl = _back_end_environments_environment__WEBPACK_IMPORTED_MODULE_13__.environment.host + this.config.window.window.location.pathname;
+            let pageImage = 'assets/images/dooboostore.png';
+            console.log('------------------> Setting SEO for', pageUrl);
+            if (this.currentItem) {
+                // Page-specific SEO content
+                pageTitle = this.currentItem.name;
+                pageDescription = this.currentItem.name;
+                pageImage = this.currentItem.img;
+                // Set Title, Description, Canonical URL
+            }
+            setTitle(pageTitle);
+            setMetaByName('description', pageDescription);
+            setLink('canonical', pageUrl);
+            // Set Open Graph (OG) tags for social sharing
+            setMetaByProperty('og:title', pageTitle);
+            setMetaByProperty('og:description', pageDescription);
+            setMetaByProperty('og:image', pageImage);
+            setMetaByProperty('og:url', pageUrl);
+            setMetaByProperty('og:type', 'website');
+        }
         if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_8__.ValidUtils.isBrowser()) {
             // Get current item name from route
-            this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name ?? '');
-            console.log('------->', r, this.currentItemName);
+            // console.log('------->', r, this.currentItemName);
             // Check if we're in a sub-route (has name parameter)
             this.isInSubRoute = !!this.currentItemName;
-            // Find current item info
-            if (this.currentItemName) {
-                // Load items data
-                // try {
-                //   this.items = await this.apiService.get<Item[]>({ target: '/datas/english/items.json' });
-                //   console.log('Loaded items:', this.items.length);
-                // } catch (error) {
-                //   console.error('Failed to load items:', error);
-                // }
-                this.currentItem = await this.videoItemService.item(this.currentItemName);
-                console.log('Current item:', this.currentItem);
-            }
-            else {
-                this.currentItem = undefined;
-            }
         }
     }
     onCreatedThisChild(child, data) {
@@ -23887,7 +25613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"player-container\" dr-attr=\"{class: 'player-container' + (@this@.isSwapped ? ' swapped' : '')}\">\n    <div class=\"dictionary-section\">\n        <!-- Dictionary Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingDictionaries\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading dictionary...</div>\n        </div>\n        <!-- <button dr-event-click=\"@this@.test()\">zzzzzzzzzzzzzzz</button> -->\n        <div class=\"dictionary-content\" dr-if=\"@this@.dictionaries && !@this@.isLoadingDictionaries\">\n            <div class=\"dictionary-item\" dr-for-of=\"@this@.dictionaries\" dr-option-item-variable-name=\"dict\"\n                dr-attr=\"{'data-original-word': #dict#.originalWord, 'data-match-type': #dict#?.items?.[0].matchType}\">\n                <div dr-if=\"#dict#\" class=\"word-items\" dr-for-of=\"#dict#.items\" dr-option-item-variable-name=\"item\">\n                    <div dr-if=\"#item#\" class=\"word-entry\">\n                        <div class=\"entry-header\">\n                            <h3 class=\"entry-title clickable-title\"\n                                dr-event-click=\"@this@.onEntryTitleClick($element, $event)\">\n                                ${#item#.entry}$</h3>\n                            <label class=\"favorite-checkbox-label\" title=\"즐겨찾기에 추가/제거\" dr-if=\"#item#.entry\">\n                                <input type=\"checkbox\" class=\"favorite-checkbox\"\n                                    dr-attr=\"{checked: @this@?.checkWordFavorite?.(#item#.entry || '') ? 'checked' : null}\"\n                                    dr-event-change=\"@this@.toggleFavorite(#item#.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#.entry || '')\">\n                                <i class=\"fas fa-star favorite-icon\"></i>\n                            </label>\n                        </div>\n                        <div class=\"pos-list\" dr-for-of=\"#item#.pos\" dr-option-item-variable-name=\"pos\">\n                            <div class=\"pos-type\" dr-attr=\"{class: 'pos-type' + (#pos#.type ? '' : ' pos-type-null')}\">\n                                ${#pos#.type || '기타'}$</div>\n                            <div class=\"meanings\" dr-for-of=\"#pos#.meanings\" dr-option-item-variable-name=\"meaning\">\n                                <div class=\"meaning-item\">\n                                    <div class=\"meaning-text\">${#meaning#.meaning}$</div>\n                                    <div class=\"examples\" dr-if=\"#meaning#.examples.length > 0\"\n                                        dr-for-of=\"#meaning#.examples\" dr-option-item-variable-name=\"example\">\n                                        <div class=\"example-item\">\n                                            <div class=\"example-text clickable-example\"\n                                                dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                                #{#example#.text}#</div>\n                                            <div class=\"example-translation\">#{#example#.translatedText}#</div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Dictionary Examples Section -->\n                    <details class=\"examples-section\" dr-if=\"#dict#?.examples && #dict#?.examples.length > 0\">\n                        <summary class=\"examples-summary\">\n                            <i class=\"fas fa-book-open\"></i>\n                            예문 보기 (${#dict#?.examples.length}$개)\n                        </summary>\n                        <div class=\"examples-content\">\n                            <div class=\"example-item\" dr-for-of=\"#dict#?.examples\"\n                                dr-option-item-variable-name=\"example\">\n                                <div class=\"example-text clickable-example\"\n                                    dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                    #{#example#.text}#</div>\n                                <div class=\"example-translation\">#{#example#.translatedText}#</div>\n                            </div>\n                        </div>\n                    </details>\n                </div>\n                <div>\n                    <iframe dr-if=\"!#dict#\" src=\"https://lazycollect.com/assets/dooboostore/adfit/320x50.html\" style=\"width: 100%; height: 50px;\" frameborder=\"0\"></iframe>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"scripts-section\">\n        <!-- Scripts Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingScripts\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading scripts...</div>\n        </div>\n\n        <!-- YouTube Video Section (only for YouTube content) -->\n        <div class=\"youtube-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div id=\"youtube-player-container\">\n                <!-- YouTube iframe will be inserted here -->\n            </div>\n        </div>\n\n        <!-- Translation Items Section (YouTube only) -->\n        <div class=\"translation-items-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div class=\"translation-content\" dr-if=\"@this@.translations\">\n                <div class=\"translation-item\" dr-for-of=\"@this@.translations\" dr-option-item-variable-name=\"item\"\n                    dr-option-item-index-variable-name=\"index\"\n                    dr-attr=\"{'data-index': #index#, 'data-start-ms': #item#.startMs, 'data-end-ms': #item#.endMs, 'data-type': #item#.type}\"\n                    dr-event-click=\"#item#.type === 'en' && @this@.onTranslationItemClick(#index#, #item#.startMs, #item#.endMs, $event)\">\n                    <div class=\"translation-text\" dr-attr=\"{class: 'translation-text ' + (#item#.type === 'en' ? 'english-text' : 'korean-text')}\">${#item#.text}$</div>\n                </div>\n            </div>\n        </div>\n        \n        <!-- Fallback for non-YouTube content -->\n        <div class=\"no-content\" dr-if=\"@this@.currentItem?.type !== 'youtube'\">\n            <div class=\"no-content-message\">Only YouTube content is supported</div>\n        </div>\n    </div>\n</div>\n\n<!-- Floating Controller -->\n<div class=\"floating-controller\">\n    <button class=\"control-btn hide-words-btn\" \n        dr-event-click=\"@this@.toggleHideWords()\"\n        dr-attr=\"{class: 'control-btn hide-words-btn' + (@this@.hideWordsEnabled ? ' active' : '')}\"\n        title=\"Hide random words\">\n        <i class=\"fas fa-eye-slash\"></i>\n    </button>\n    \n    <button class=\"control-btn auto-play-btn\" \n        dr-event-click=\"@this@.toggleAutoPlay()\"\n        dr-attr=\"{class: 'control-btn auto-play-btn' + (@this@.autoPlayEnabled ? ' active' : '')}\"\n        title=\"Toggle auto play\">\n        <i class=\"fas fa-circle-play\"></i>\n    </button>\n    \n    <button class=\"control-btn replay-btn\" \n        dr-event-click=\"@this@.replayCurrentCue()\"\n        title=\"Replay current subtitle\">\n        <i class=\"fas fa-rotate-right\"></i>\n    </button>\n    \n    <button class=\"nav-btn prev-btn\" \n        dr-event-click=\"@this@.previousCue()\"\n        title=\"Previous subtitle\">\n        <i class=\"fas fa-chevron-left\"></i>\n    </button>\n    \n    <div class=\"slider-container\">\n        <input type=\"range\" \n            class=\"global-word-slider\" \n            min=\"-1\" \n            dr-attr=\"{max: @this@.maxGlobalWordIndex, value: @this@.globalWordIndex}\"\n            dr-event-input=\"@this@.onGlobalWordSliderChange(parseInt($event.target.value))\"\n            title=\"Navigate through all words\">\n        <div class=\"slider-label-container\">\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.previousWord()\"\n                title=\"Previous word\">\n                <i class=\"fas fa-chevron-left\"></i>\n            </button>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex >= 0\">${@this@.globalWordIndex + 1}$ / ${@this@.maxGlobalWordIndex + 1}$</div>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex < 0\">Select word</div>\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.nextWord()\"\n                title=\"Next word\">\n                <i class=\"fas fa-chevron-right\"></i>\n            </button>\n        </div>\n    </div>\n    \n    <button class=\"nav-btn next-btn\" \n        dr-event-click=\"@this@.nextCue()\"\n        title=\"Next subtitle\">\n        <i class=\"fas fa-chevron-right\"></i>\n    </button>\n    \n    <button class=\"control-btn korean-translation-btn\" \n        dr-event-click=\"@this@.toggleKoreanTranslation()\"\n        dr-attr=\"{class: 'control-btn korean-translation-btn' + (@this@.showKoreanTranslation ? ' active' : '')}\"\n        title=\"Toggle Korean translation\">\n        <i class=\"fas fa-language\"></i>\n    </button>\n</div>\n\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"player-container\" dr-attr=\"{class: 'player-container' + (@this@.isSwapped ? ' swapped' : '')}\">\n    <div class=\"dictionary-section\">\n        <!-- Dictionary Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingDictionaries\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading dictionary...</div>\n        </div>\n        <!-- <button dr-event-click=\"@this@.test()\">zzzzzzzzzzzzzzz</button> -->\n        <div class=\"dictionary-content\" dr-if=\"@this@.dictionaries && !@this@.isLoadingDictionaries\">\n            <div class=\"dictionary-item\" dr-for-of=\"@this@.dictionaries\" dr-option-item-variable-name=\"dict\"\n                dr-attr=\"{'data-original-word': #dict#.originalWord, 'data-match-type': #dict#?.items?.[0].matchType}\">\n                <div dr-if=\"#dict#\" class=\"word-items\" dr-for-of=\"#dict#.items\" dr-option-item-variable-name=\"item\">\n                    <div dr-if=\"#item#\" class=\"word-entry\">\n                        <div class=\"entry-header\">\n                            <h3 class=\"entry-title clickable-title\"\n                                dr-event-click=\"@this@.onEntryTitleClick($element, $event)\">\n                                ${#item#.entry}$</h3>\n                            <label class=\"favorite-checkbox-label\" title=\"즐겨찾기에 추가/제거\" dr-if=\"#item#.entry\">\n                                <input type=\"checkbox\" class=\"favorite-checkbox\"\n                                    dr-attr=\"{checked: @this@.checkWordFavorite(#item#.entry || '') ? 'checked' : null}\"\n                                    dr-event-change=\"@this@.toggleFavorite(#item#.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#.entry || '')\">\n                                <i class=\"fas fa-star favorite-icon\"></i>\n                            </label>\n                        </div>\n                        <div class=\"pos-list\" dr-for-of=\"#item#.pos\" dr-option-item-variable-name=\"pos\">\n                            <div class=\"pos-type\" dr-attr=\"{class: 'pos-type' + (#pos#.type ? '' : ' pos-type-null')}\">\n                                ${#pos#.type || '기타'}$</div>\n                            <div class=\"meanings\" dr-for-of=\"#pos#.meanings\" dr-option-item-variable-name=\"meaning\">\n                                <div class=\"meaning-item\">\n                                    <div class=\"meaning-text\">${#meaning#.meaning}$</div>\n                                    <div class=\"examples\" dr-if=\"#meaning#.examples.length > 0\"\n                                        dr-for-of=\"#meaning#.examples\" dr-option-item-variable-name=\"example\">\n                                        <div class=\"example-item\">\n                                            <div class=\"example-text clickable-example\"\n                                                dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                                #{#example#.text}#</div>\n                                            <div class=\"example-translation\">#{#example#.translatedText}#</div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Dictionary Examples Section -->\n                    <details class=\"examples-section\" dr-if=\"#dict#?.examples && #dict#?.examples.length > 0\">\n                        <summary class=\"examples-summary\">\n                            <i class=\"fas fa-book-open\"></i>\n                            예문 보기 (${#dict#?.examples.length}$개)\n                        </summary>\n                        <div class=\"examples-content\">\n                            <div class=\"example-item\" dr-for-of=\"#dict#?.examples\"\n                                dr-option-item-variable-name=\"example\">\n                                <div class=\"example-text clickable-example\"\n                                    dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                    #{#example#.text}#</div>\n                                <div class=\"example-translation\">#{#example#.translatedText}#</div>\n                            </div>\n                        </div>\n                    </details>\n                </div>\n                <div>\n                    <iframe dr-if=\"!#dict#\" src=\"https://lazycollect.com/assets/dooboostore/adfit/320x50.html\" style=\"width: 100%; height: 50px;\" frameborder=\"0\"></iframe>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"scripts-section\">\n        <!-- Scripts Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingScripts\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading scripts...</div>\n        </div>\n\n        <!-- YouTube Video Section (only for YouTube content) -->\n        <div class=\"youtube-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div id=\"youtube-player-container\">\n                <!-- YouTube iframe will be inserted here -->\n            </div>\n        </div>\n\n        <!-- Translation Items Section (YouTube only) -->\n        <div class=\"translation-items-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div class=\"translation-content\" dr-if=\"@this@.translations\">\n                <div class=\"translation-item\" dr-for-of=\"@this@.translations\" dr-option-item-variable-name=\"item\"\n                    dr-option-item-index-variable-name=\"index\"\n                    dr-attr=\"{'data-index': #index#, 'data-start-ms': #item#.startMs, 'data-end-ms': #item#.endMs, 'data-type': #item#.type}\"\n                    dr-event-click=\"#item#.type === 'en' && @this@.onTranslationItemClick(#index#, #item#.startMs, #item#.endMs, $event)\">\n                    <div class=\"translation-text\" dr-attr=\"{class: 'translation-text ' + (#item#.type === 'en' ? 'english-text' : 'korean-text')}\">${#item#.text}$</div>\n                </div>\n            </div>\n        </div>\n        \n        <!-- Fallback for non-YouTube content -->\n        <div class=\"no-content\" dr-if=\"@this@.currentItem?.type !== 'youtube'\">\n            <div class=\"no-content-message\">Only YouTube content is supported</div>\n        </div>\n    </div>\n</div>\n\n<!-- Floating Controller -->\n<div class=\"floating-controller\">\n    <button class=\"control-btn hide-words-btn\" \n        dr-event-click=\"@this@.toggleHideWords()\"\n        dr-attr=\"{class: 'control-btn hide-words-btn' + (@this@.hideWordsEnabled ? ' active' : '')}\"\n        title=\"Hide random words\">\n        <i class=\"fas fa-eye-slash\"></i>\n    </button>\n    \n    <button class=\"control-btn auto-play-btn\" \n        dr-event-click=\"@this@.toggleAutoPlay()\"\n        dr-attr=\"{class: 'control-btn auto-play-btn' + (@this@.autoPlayEnabled ? ' active' : '')}\"\n        title=\"Toggle auto play\">\n        <i class=\"fas fa-circle-play\"></i>\n    </button>\n    \n    <button class=\"control-btn replay-btn\" \n        dr-event-click=\"@this@.replayCurrentCue()\"\n        title=\"Replay current subtitle\">\n        <i class=\"fas fa-rotate-right\"></i>\n    </button>\n    \n    <button class=\"nav-btn prev-btn\" \n        dr-event-click=\"@this@.previousCue()\"\n        title=\"Previous subtitle\">\n        <i class=\"fas fa-chevron-left\"></i>\n    </button>\n    \n    <div class=\"slider-container\">\n        <input type=\"range\" \n            class=\"global-word-slider\" \n            min=\"-1\" \n            dr-attr=\"{max: @this@.maxGlobalWordIndex, value: @this@.globalWordIndex}\"\n            dr-event-input=\"@this@.onGlobalWordSliderChange(parseInt($event.target.value))\"\n            title=\"Navigate through all words\">\n        <div class=\"slider-label-container\">\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.previousWord()\"\n                title=\"Previous word\">\n                <i class=\"fas fa-chevron-left\"></i>\n            </button>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex >= 0\">${@this@.globalWordIndex + 1}$ / ${@this@.maxGlobalWordIndex + 1}$</div>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex < 0\">Select word</div>\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.nextWord()\"\n                title=\"Next word\">\n                <i class=\"fas fa-chevron-right\"></i>\n            </button>\n        </div>\n    </div>\n    \n    <button class=\"nav-btn next-btn\" \n        dr-event-click=\"@this@.nextCue()\"\n        title=\"Next subtitle\">\n        <i class=\"fas fa-chevron-right\"></i>\n    </button>\n    \n    <button class=\"control-btn korean-translation-btn\" \n        dr-event-click=\"@this@.toggleKoreanTranslation()\"\n        dr-attr=\"{class: 'control-btn korean-translation-btn' + (@this@.showKoreanTranslation ? ' active' : '')}\"\n        title=\"Toggle Korean translation\">\n        <i class=\"fas fa-language\"></i>\n    </button>\n</div>\n\n");
 
 /***/ }),
 
@@ -25283,7 +27009,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("\n<main>\n    <dr-router-outlet></dr-router-outlet>\n</main>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<main>\n    <dr-router-outlet></dr-router-outlet>\n</main>");
 
 /***/ }),
 
@@ -25325,22 +27051,14 @@ var _a;
 
 let IndexRouterComponent = class IndexRouterComponent extends _dooboostore_simple_boot_front_component_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_5__.ComponentRouterBase {
     router;
+    name = 'index-router';
     constructor(router) {
         super({ sameRouteNoApply: true });
         this.router = router;
     }
     async onInitRender(param, rawSet) {
-        super.onInitRender(param, rawSet);
-    }
-    async canActivate(url, data) {
-        super.canActivate(url, data);
-    }
-    async onRouting(r) {
-        await super.onRouting(r);
-        console.log("onRouting");
-    }
-    onCreatedThisChildDebounce(childrenSet) {
-        super.onCreatedThisChildDebounce(childrenSet);
+        await super.onInitRender(param, rawSet);
+        this.name = 'index-router' + Date.now();
     }
     test() { }
 };
@@ -25924,7 +27642,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
 /* harmony import */ var _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
 /* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
+/* harmony import */ var _back_end_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @back-end/environments/environment */ "./back-end/environments/environment.ts");
 var _a;
+
 
 
 
@@ -25934,7 +27654,9 @@ let VideoItemService = class VideoItemService {
         this.apiService = apiService;
     }
     async items() {
-        return await this.apiService.get({ target: '/datas/english/items.json' }).then(it => it.reverse());
+        return await this.apiService.get({
+            target: new URL(`${_back_end_environments_environment__WEBPACK_IMPORTED_MODULE_3__.environment.host}/datas/english/items.json`)
+        }).then(it => it.reverse());
     }
     async item(name) {
         const items = await this.items();

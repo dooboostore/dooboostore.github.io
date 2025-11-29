@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "valid",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvælɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "근거가 확실한, 정확한, 정당[타당]한",
+              "examples": [
+                {
+                  "text": "a <b>valid</b> conclusion",
+                  "translatedText": "타당한 결론"
+                }
+              ],
+              "originalMeaning": "근거가 확실한, 정확한, 정당[타당]한"
+            },
+            {
+              "meaning": "유효한, 효과적인(opp. invalid)",
+              "examples": [
+                {
+                  "text": "a <b>valid</b> remedy",
+                  "translatedText": "효과적인 치료"
+                }
+              ],
+              "originalMeaning": "유효한, 효과적인(opp. invalid)"
+            },
+            {
+              "meaning": "설득력 있는, 권위 있는",
+              "examples": [],
+              "originalMeaning": "설득력 있는, 권위 있는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a7007a06f5ea484f8e592a8faa05ebd3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a7007a06f5ea484f8e592a8faa05ebd3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "63768be7f0bf1f7bcb0542b599b8a509",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "통용 기간은 당일 한",
+      "text": "Good[<b>Valid</b>] for the day of issue only."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 증명서는 이미 통하지 않는다",
+      "text": "The certification is no longer <b>valid</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도중 하차하면 이 차표는 무효가 된다",
+      "text": "If you break your journey, this ticket will not be <b>valid</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 표는 발행 당일만 유효하다",
+      "text": "This ticket is available[good, <b>valid</b>] on the day of issue only."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "유언은 무효[유효]의 재결을 받았다.",
+      "text": "The will was adjudged (to be) void[<b>valid</b>].=They adjudged that the will was void[<b>valid</b>]."
+    }
+  ],
+  "isWordType": true
+}

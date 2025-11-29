@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "transmit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "træns│mɪt; trænz│mɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<물건 등을> 부치다; 보내다, 건네다, 전달[송달]하다",
+              "examples": [
+                {
+                  "text": "<b>transmit</b> a letter by hand[a parcel by rail, a message by radio]",
+                  "translatedText": "편지를 손수 전해주다[소포를 철도편으로 부치다, 통신을 무전으로 보내다]"
+                }
+              ],
+              "originalMeaning": "<물건 등을> 부치다; 보내다, 건네다, 전달[송달]하다"
+            },
+            {
+              "meaning": "<지식·보도·정보 등을> 전하다, 알리다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>transmit</b> a tradition to posterity",
+                  "translatedText": "전통을 후세에 전하다"
+                }
+              ],
+              "originalMeaning": "<지식·보도·정보 등을> 전하다, 알리다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "송신하다, 방송하다",
+              "examples": [],
+              "originalMeaning": "송신하다, 방송하다"
+            },
+            {
+              "meaning": "자손[상속인]에게 권리[의무]를 전하다",
+              "examples": [],
+              "originalMeaning": "자손[상속인]에게 권리[의무]를 전하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/46a147f15d4a4e59b73a56d6678ac0d0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/46a147f15d4a4e59b73a56d6678ac0d0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "transmits"
+        },
+        {
+          "type": "과거형",
+          "value": "transmitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "transmitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "transmitted"
+        }
+      ],
+      "aliasConjugation": "transmits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9283bebe064ebfa7cbe00762ae0b9237",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 바이러스는 신체적 접촉을 통하여 감염된다",
+      "text": "The virus is <b>transmitted</b> via physical contact."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 역사적인 행사는 위성으로 전세계에 중계되었다",
+      "text": "The historic event was <b>transmitted</b> all over the world by satellite."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "유리는 빛을 전도한다",
+      "text": "Glass transmits light."
+    }
+  ],
+  "isWordType": true
+}

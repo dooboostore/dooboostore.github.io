@@ -4,7 +4,7 @@ import path from 'path';
 import process from 'process';
 
 // YouTube Video ID를 여기서 변경하세요
-const YOUTUBE_VIDEO_ID = '90c_l07cPyI';
+const YOUTUBE_VIDEO_ID = 'l6d_0PB0Pbg';
 
 // 번역 방식 선택: 'youtube' (YouTube 자동번역) 또는 'papago' (Papago API 번역)
 const TRANSLATION_METHOD: 'youtube' | 'papago' = 'youtube';
@@ -143,6 +143,23 @@ async function fetchDictionary(word: string): Promise<PapagoResponse | null> {
     const response = await fetch(`https://papago.naver.com/apis/dictionary/search?source=en&target=ko&text=${encodeURIComponent(word)}&locale=ko`, {
       headers: {
         "accept": "application/json",
+        "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+        "authorization": "PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:0q77fVjSF1Qh3crEdIDMKQ==",
+        "cache-control": "no-cache",
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Chromium\";v=\"142\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        'timestamp': Date.now().toString(),
+        "x-apigw-partnerid": "papago",
+        "x-ppg-ctype": "WEB_PC",
+        "cookie": "NNB=ZFCDE4DECVCWQ; _ga_8P4PY65YZ2=GS2.1.s1749365250$o1$g0$t1749365250$j60$l0$h0; ba.uuid=4c6155ad-568d-4b70-bfac-a51e7da4bbcf; ASID=3b0589f40000019827bcdb750000001d; bnb_tooltip_shown_finance_v1=true; _ga=GA1.2.1705893687.1749365250; ab.storage.userId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3AZ2JG%7Ce%3Aundefined%7Cc%3A1761905082349%7Cl%3A1761905082350; ab.storage.deviceId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3A63dd0bf6-7986-8282-897c-5526a566b2ab%7Ce%3Aundefined%7Cc%3A1761905082350%7Cl%3A1761905082350; ab.storage.sessionId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3Ad2c680c5-2d3f-9d2b-c3fb-42785b70ed6b%7Ce%3A1761907197910%7Cc%3A1761905082349%7Cl%3A1761905397910; NV_WETR_LOCATION_RGN_M=\"MDYxNDAxMDE=\"; NV_WETR_LAST_ACCESS_RGN_M=\"MDYxNDAxMDE=\"; NAC=OLdABsQZqteGA; page_uid=jfNfawpzLiwssDoLlS8ssssss24-215133; NACT=1; nid_inf=1426211877; papago_skin_locale=ko; SRT30=1764406270; SRT5=1764406270; BUC=RzB0uuyqkGsQmKdpHTlI80xtxirvT3VORUdOrARznUE=",
+        "Referer": "https://papago.naver.com/"
       },
       method: "GET"
     });
@@ -172,16 +189,25 @@ async function translateWithPapago(text: string): Promise<string> {
     const response = await fetch('https://papago.naver.com/apis/nsmt/translate', {
       method: 'POST',
       headers: {
-        'accept': 'application/json',
-        'accept-language': 'ko',
-        'authorization': 'PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:Nc9wm5xDwFIjG9zZ/s5W/Q==',
-        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'device-type': 'pc',
-        'origin': 'https://papago.naver.com',
-        'referer': 'https://papago.naver.com/',
+        "accept": "application/json",
+        "accept-language": "ko",
+        "authorization": "PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:3nITCzO9GCSWr9L0e/ZJww==",
+        "cache-control": "no-cache",
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "device-type": "pc",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Chromium\";v=\"142\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
         'timestamp': Date.now().toString(),
-        'x-apigw-partnerid': 'papago',
-        'x-ppg-ctype': 'WEB_PC'
+        "x-apigw-partnerid": "papago",
+        "x-ppg-ctype": "WEB_PC",
+        "cookie": "NNB=ZFCDE4DECVCWQ; _ga_8P4PY65YZ2=GS2.1.s1749365250$o1$g0$t1749365250$j60$l0$h0; ba.uuid=4c6155ad-568d-4b70-bfac-a51e7da4bbcf; ASID=3b0589f40000019827bcdb750000001d; bnb_tooltip_shown_finance_v1=true; _ga=GA1.2.1705893687.1749365250; ab.storage.userId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3AZ2JG%7Ce%3Aundefined%7Cc%3A1761905082349%7Cl%3A1761905082350; ab.storage.deviceId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3A63dd0bf6-7986-8282-897c-5526a566b2ab%7Ce%3Aundefined%7Cc%3A1761905082350%7Cl%3A1761905082350; ab.storage.sessionId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3Ad2c680c5-2d3f-9d2b-c3fb-42785b70ed6b%7Ce%3A1761907197910%7Cc%3A1761905082349%7Cl%3A1761905397910; NV_WETR_LOCATION_RGN_M=\"MDYxNDAxMDE=\"; NV_WETR_LAST_ACCESS_RGN_M=\"MDYxNDAxMDE=\"; NAC=OLdABsQZqteGA; page_uid=jfNfawpzLiwssDoLlS8ssssss24-215133; NACT=1; nid_inf=1426211877; papago_skin_locale=ko; SRT30=1764406270; SRT5=1764406270; BUC=uD_D-1wRQ_qrJ2TBY9cJtxbW9ArFsXht-Uga8wXo35o=",
+        "Referer": "https://papago.naver.com/"
       },
       body: new URLSearchParams({
         deviceId: 'ffbaf550-ce4b-4478-ae20-ee54a0e3cd60',

@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "sustain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səˈsteɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "떠받치다, 지탱하다",
+              "examples": [],
+              "originalMeaning": "떠받치다, 지탱하다"
+            },
+            {
+              "meaning": "<피해·손실·충격 등을> 받다, 입다; 경험하다",
+              "examples": [],
+              "originalMeaning": "<피해·손실·충격 등을> 받다, 입다; 경험하다"
+            },
+            {
+              "meaning": "<무게·압력·고난 등을> 견디다, 굽히지 않다; <중책 등을> 맡다",
+              "examples": [],
+              "originalMeaning": "<무게·압력·고난 등을> 견디다, 굽히지 않다; <중책 등을> 맡다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0f6ba070e4cb4585abb7ff97e00c2ee7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0f6ba070e4cb4585abb7ff97e00c2ee7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sustains"
+        },
+        {
+          "type": "과거형",
+          "value": "sustained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sustaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sustained"
+        }
+      ],
+      "aliasConjugation": "sustains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3a4908f8555c4687f6193485b8a8a1b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "법정은 그의 주장을 인정했다.",
+      "text": "The court sustained him in his claim."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재판관은 변호사의 이의가 정당하다고 인정했다.",
+      "text": "The judge sustained the lawyer’s objection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이의를 인정[기각]합니다!",
+      "text": "Objection sustained[overruled]!"
+    }
+  ],
+  "isWordType": true
+}

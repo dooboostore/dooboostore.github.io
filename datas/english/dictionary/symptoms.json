@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "symptom",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪmptəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 a ~] 징후, 징조; (…의) 전조, 조짐 ((of))",
+              "examples": [],
+              "originalMeaning": "[보통 a ~] 징후, 징조; (…의) 전조, 조짐 ((of))"
+            },
+            {
+              "meaning": "증후(症候), 증상",
+              "examples": [
+                {
+                  "text": "allergic <b>symptoms</b>",
+                  "translatedText": "알레르기 증상"
+                }
+              ],
+              "originalMeaning": "증후(症候), 증상"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25e42d7482f54b44bcec92504a5fa4fc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25e42d7482f54b44bcec92504a5fa4fc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c5d7a2bd100d75a6b47f0d3767ae32fe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 감기의 징후이다",
+      "text": "It is a <b>symptom</b> of cold."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "병세가 한고비를 넘겼다",
+      "text": "The worst <b>symptom</b> has subsided."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열은 병의 징조이다",
+      "text": "Fever is a <b>symptom</b> of illness."
+    }
+  ],
+  "isWordType": true
+}

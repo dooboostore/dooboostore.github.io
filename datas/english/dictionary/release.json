@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "entry": "release",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈliːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·동물을> 석방[방면]하다, 놓아주다, 해방시키다 ((from)), (=free)",
+              "examples": [
+                {
+                  "text": "<b>release</b> a person from slavery",
+                  "translatedText": "…을 노예 신분에서 해방하다"
+                }
+              ],
+              "originalMeaning": "<사람·동물을> 석방[방면]하다, 놓아주다, 해방시키다 ((from)), (=<span class='related_word' lang='en' >free</span>)"
+            },
+            {
+              "meaning": "풀어놓다, 떼어놓다; <폭탄을> 투하하다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>release</b> a bomb from an airplane",
+                  "translatedText": "비행기에서 폭탄을 투하하다"
+                }
+              ],
+              "originalMeaning": "풀어놓다, 떼어놓다; <폭탄을> 투하하다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "석방, 방면; 면제, 해제; 해방[석방] 영장; 구출, 구제 ((from))",
+              "examples": [],
+              "originalMeaning": "석방, 방면; 면제, 해제; 해방[석방] 영장; 구출, 구제 ((from))"
+            },
+            {
+              "meaning": "발사, (폭탄의) 투하",
+              "examples": [],
+              "originalMeaning": "발사, (폭탄의) 투하"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/29980346983045379a1b6810b744a921",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/29980346983045379a1b6810b744a921",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "releases"
+        },
+        {
+          "type": "과거형",
+          "value": "released"
+        },
+        {
+          "type": "현재 분사",
+          "value": "releasing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "released"
+        }
+      ],
+      "aliasConjugation": "releases",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "68bc3fe7cc59e68a0d7c85e12be70571",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-lease",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:lí:s"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<토지·가옥 등을> 전대(轉貸)하다, [법] 양도하다",
+              "examples": [],
+              "originalMeaning": "<토지·가옥 등을> 전대(轉貸)하다, [법] 양도하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "양도 계약, 양도된 토지[재산]",
+              "examples": [],
+              "originalMeaning": "양도 계약, 양도된 토지[재산]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ddb340f0929447f2bd7a232a77592e3f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ddb340f0929447f2bd7a232a77592e3f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0a445191661f2ad9dfddc42b2c5211da",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람은 구류에서 풀려났다",
+      "text": "He was released from custody."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꼭 잡고 놓지 마라",
+      "text": "Don't <b>release</b>[let go] your hold[grip] on it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 교도소에서 막 나왔다",
+      "text": "He has just been released from prison."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 기갈을 겨우 면했다",
+      "text": "They were narrowly saved[released] from starvation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대사를 받아 출옥했다",
+      "text": "He was released from prison on a general pardon[under an amnesty]."
+    }
+  ],
+  "isWordType": true
+}

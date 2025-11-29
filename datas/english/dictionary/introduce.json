@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "introduce",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˌɪntrəˈduːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "소개하다, 만나게 해 주다",
+              "examples": [
+                {
+                  "text": "Let me <b>introduce</b> my brother to you.",
+                  "translatedText": "동생을 소개하겠습니다."
+                }
+              ],
+              "originalMeaning": "소개하다, 만나게 해 주다"
+            },
+            {
+              "meaning": "<생각·유행 등을> 창안[창출]하다, 시작하다; (처음으로) 들여오다, 도입하다; 처음으로 수입하다, 전하다; 채용하다 ((into, in))",
+              "examples": [
+                {
+                  "text": "<b>introduce</b> a new fashion in hats",
+                  "translatedText": "모자에 새 유행을 도입하다"
+                }
+              ],
+              "originalMeaning": "<생각·유행 등을> 창안[창출]하다, 시작하다; (처음으로) 들여오다, 도입하다; 처음으로 수입하다, 전하다; 채용하다 ((into, in))"
+            },
+            {
+              "meaning": "<신제품 등을> 발표하다; (사교계 등에) 공식적으로 소개하다, 데뷔시키다",
+              "examples": [],
+              "originalMeaning": "<신제품 등을> 발표하다; (사교계 등에) 공식적으로 소개하다, 데뷔시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e4423bafe9b4c43bd4d67db012e7e58",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e4423bafe9b4c43bd4d67db012e7e58",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "introduces"
+        },
+        {
+          "type": "과거형",
+          "value": "introduced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "introducing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "introduced"
+        }
+      ],
+      "aliasConjugation": "introduces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2b5f2d01d660bb9f05189c17c1825077",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 무난한 화제를 꺼냈다",
+      "text": "I introduced a safe topic."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정부는 새 법안을 제출할 것이다",
+      "text": "The government will <b>introduce</b> a new bill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 친구 김 군을 소개합니다",
+      "text": "Allow me to <b>introduce</b>[present] to you my friend Mr. Kim. or May I <b>introduce</b> my friend Mr. Kim to you? or “Introducing Mr. Kim”(명함에서)"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사상은 유럽에서 왔다",
+      "text": "Those ideas were introduced into Korea from Europe."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "담배는 아메리카에서 유럽에 전해졌다.",
+      "text": "Tobacco was introduced into Europe from America."
+    }
+  ],
+  "isWordType": true
+}

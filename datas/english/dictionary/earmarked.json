@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "earmark",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɪrmɑːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "귀표 ((소유주를 밝히기 위하여 가축 등의 귀에 표시함)), 표(標), 소유주의 표시, 책장 모서리의 접힌 부분(dog-ear)",
+              "examples": [],
+              "originalMeaning": "귀표 ((소유주를 밝히기 위하여 가축 등의 귀에 표시함)), 표(標), 소유주의 표시, 책장 모서리의 접힌 부분(dog-ear)"
+            },
+            {
+              "meaning": "[종종 pl.] 특징",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 특징"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<가축에> 귀표를 하다; (페이지의) 귀를 접다; (자금 등을 특정 용도에) 지정하다, 배당하다 ((for)); …의 소유라고 인정하다 ((for))",
+              "examples": [],
+              "originalMeaning": "<가축에> 귀표를 하다; (페이지의) 귀를 접다; (자금 등을 특정 용도에) 지정하다, 배당하다 ((for)); …의 소유라고 인정하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6a9660764cc45fb98609e9af3fa1e51",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6a9660764cc45fb98609e9af3fa1e51",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "earmarks"
+        },
+        {
+          "type": "과거형",
+          "value": "earmarked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "earmarking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "earmarked"
+        }
+      ],
+      "aliasConjugation": "earmarks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "998d2cea7bc17a83fb9c6548b92e9500",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 나무들은 내년에 벨 것으로 점 찍어 놓았다",
+      "text": "These trees have been <b>earmarked</b> for cutting next year."
+    }
+  ],
+  "isWordType": true
+}

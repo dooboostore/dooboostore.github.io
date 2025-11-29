@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "prompt",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prɑːmpt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "즉석의; 즉시[쾌히, 선뜻] …하는; [상업] 즉시불의",
+              "examples": [
+                {
+                  "text": "a <b>prompt</b> note",
+                  "translatedText": "즉시불 어음"
+                }
+              ],
+              "originalMeaning": "즉석의; 즉시[쾌히, 선뜻] …하는; [상업] 즉시불의"
+            },
+            {
+              "meaning": "신속한, 재빠른, 민활한, 기민한; <사람이> 시간을 지키는",
+              "examples": [
+                {
+                  "text": "be <b>prompt</b> in action",
+                  "translatedText": "동작이 빠르다"
+                }
+              ],
+              "originalMeaning": "신속한, 재빠른, 민활한, 기민한; <사람이> 시간을 지키는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자극하다, 격려하다(inspire) ((to)); 촉구하다, 부추기다",
+              "examples": [
+                {
+                  "text": "a behavior prompted by natural instinct",
+                  "translatedText": "자연 본능에 의해 촉구된 행동"
+                }
+              ],
+              "originalMeaning": "자극하다, 격려하다(inspire) ((to)); 촉구하다, 부추기다"
+            },
+            {
+              "meaning": "상기시키다, 생각나게 하다, <사상·감정을> 불어넣다",
+              "examples": [],
+              "originalMeaning": "상기시키다, 생각나게 하다, <사상·감정을> 불어넣다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대사를 일러주다",
+              "examples": [],
+              "originalMeaning": "대사를 일러주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/99ac02bfc6434c4fbc722280f1830a35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/99ac02bfc6434c4fbc722280f1830a35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "prompter"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "prompts"
+        },
+        {
+          "type": "최상급",
+          "value": "promptest"
+        },
+        {
+          "type": "과거형",
+          "value": "prompted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "prompting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "prompted"
+        }
+      ],
+      "aliasConjugation": "prompter",
+      "aliasConjugationPos": "비교급",
+      "gdid": "d669ec1124b96aa344291ae9a5fc7e94",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지금부터는 시간을 잘 지키겠습니다",
+      "text": "I'll be <b>prompt</b> from now on."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 집세를 선뜻 잘 낸다.",
+      "text": "He is <b>prompt</b> in paying his rent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 명령을 신속히 수행해라",
+      "text": "Be <b>prompt</b> to carry out this order."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "급히 답장을 써야 할 편지가 있다",
+      "text": "I have a letter to answer promptly[quickly]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "즉시 송금해 주시면 감사하겠습니다",
+      "text": "A <b>prompt</b> remittance would be appreciated."
+    }
+  ],
+  "isWordType": true
+}

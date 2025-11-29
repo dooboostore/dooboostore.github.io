@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "maintain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "meɪnˈteɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "지속[계속]하다",
+              "examples": [
+                {
+                  "text": "<b>maintain</b> neighborly relations",
+                  "translatedText": "우호[선린] 관계를 지속하다"
+                }
+              ],
+              "originalMeaning": "지속[계속]하다"
+            },
+            {
+              "meaning": "유지하다, 지탱하다",
+              "examples": [
+                {
+                  "text": "<b>maintain</b> a correct posture",
+                  "translatedText": "바른 자세를 유지하다"
+                }
+              ],
+              "originalMeaning": "유지하다, 지탱하다"
+            },
+            {
+              "meaning": "(보수(補修)하여) 간수하다, 건사하다, 정비하다, 보존하다, 보전하다",
+              "examples": [],
+              "originalMeaning": "(보수(補修)하여) 간수하다, 건사하다, 정비하다, 보존하다, 보전하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1dbf3fde1dc14c7a9b43901f7154c2ad",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1dbf3fde1dc14c7a9b43901f7154c2ad",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "maintains"
+        },
+        {
+          "type": "과거형",
+          "value": "maintained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "maintaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "maintained"
+        }
+      ],
+      "aliasConjugation": "maintains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ce1f9b311c4f08fecabf7d7432e94275",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기가 옳다고 주장했다.",
+      "text": "He maintained that he was right."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국민적 자존심을 지켜야 한다",
+      "text": "We must <b>maintain</b> our national self-respect."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전쟁이 불가피하다고 주장한다",
+      "text": "He maintains that war is inevitable."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 점포를 지탱할 수 없어서 폐업했다",
+      "text": "Being unable to <b>maintain</b> the shop any longer, he shut it up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 학교는 경영난에 빠져 있다",
+      "text": "The school is in financial difficulties[finds it difficult to <b>maintain</b> itself]."
+    }
+  ],
+  "isWordType": true
+}

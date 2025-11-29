@@ -1,0 +1,129 @@
+{
+  "items": [
+    {
+      "entry": "universal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│juːnɪ│vɜːrsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "보편적인, 전반적인; 일반적인; [논리] 전칭(全稱)의(opp. special)",
+              "examples": [
+                {
+                  "text": "<b>universal</b> rules",
+                  "translatedText": "보편적 법칙"
+                }
+              ],
+              "originalMeaning": "보편적인, 전반적인; 일반적인; [논리] 전칭(全稱)의(opp. special)"
+            },
+            {
+              "meaning": "만국의, 전세계의",
+              "examples": [],
+              "originalMeaning": "만국의, 전세계의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보편적 실재, [논리] 전칭(全稱) 명제, [철학] 일반 개념",
+              "examples": [],
+              "originalMeaning": "보편적 실재, [논리] 전칭(全稱) 명제, [철학] 일반 개념"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a4b738dcedb411880691435bc3b9584",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a4b738dcedb411880691435bc3b9584",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "07113065b034fe8466ee3f3f2ca55545",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "universe",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "júːnəvə́:rs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 우주, 은하계 (우주), (은하계에 필적하는) 성운(星雲)",
+              "examples": [
+                {
+                  "text": "reach a new universe",
+                  "translatedText": "새로운 은하 우주에 도달하다"
+                }
+              ],
+              "originalMeaning": "[the ~] 우주, 은하계 (우주), (은하계에 필적하는) 성운(星雲)"
+            },
+            {
+              "meaning": "만유(萬有), 천지만물, 삼라만상",
+              "examples": [],
+              "originalMeaning": "만유(萬有), 천지만물, 삼라만상"
+            },
+            {
+              "meaning": "[the ~] 세계(world), 만천하(의 사람); 전인류",
+              "examples": [
+                {
+                  "text": "a truth known throughout the universe",
+                  "translatedText": "전세계에 알려진 진리"
+                }
+              ],
+              "originalMeaning": "[the ~] 세계(world), 만천하(의 사람); 전인류"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0dba37d96ecb499e9beb6f5f29d9f053",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0dba37d96ecb499e9beb6f5f29d9f053",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "universal",
+      "aliasConjugationPos": "형용사",
+      "gdid": "f1f4d3263ee7f5700f4b21e0e6568e02",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 만인이 주지하는 바다",
+      "text": "It is a matter of <b>universal</b> knowledge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "음악은 세계 공통어이다.",
+      "text": "Music is a <b>universal</b> language."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "만천하에 알려진 사실이다",
+      "text": "The whole world knows this fact. or It is a matter of <b>universal</b> knowledge."
+    }
+  ],
+  "isWordType": true
+}

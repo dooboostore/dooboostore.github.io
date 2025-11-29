@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "author",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɔːθə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "저자, 작가, 저술가 ((보통 여성도 포함함))",
+              "examples": [
+                {
+                  "text": "the <b>author</b> of a book",
+                  "translatedText": "책의 저자"
+                }
+              ],
+              "originalMeaning": "저자, 작가, 저술가 ((보통 여성도 포함함))"
+            },
+            {
+              "meaning": "(한 작가의) 저작물, 작품",
+              "examples": [],
+              "originalMeaning": "(한 작가의) 저작물, 작품"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책 등을> 쓰다, 저술하다(write)",
+              "examples": [],
+              "originalMeaning": "<책 등을> 쓰다, 저술하다(write)"
+            },
+            {
+              "meaning": "만들어 내다, 창시하다",
+              "examples": [],
+              "originalMeaning": "만들어 내다, 창시하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1353a78fea12444aafecdfc975c8e95c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1353a78fea12444aafecdfc975c8e95c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "authors"
+        },
+        {
+          "type": "과거형",
+          "value": "authored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "authoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "authored"
+        }
+      ],
+      "aliasConjugation": "authors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ab5c924e952a21fd612eb000dd2f42bd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그분은 많은 책을 쓰셨다",
+      "text": "He is the <b>author</b> of many books."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 그 소동의 장본인이다",
+      "text": "He is the very <b>author</b> of the riot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 작가로서의 발판을 굳혔다",
+      "text": "He is now established as an <b>author</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책에 저자의 검인이 없다",
+      "text": "This book bears no seal of the <b>author</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 작가는 장래성이 있다",
+      "text": "The <b>author</b> shows promise of better things."
+    }
+  ],
+  "isWordType": true
+}

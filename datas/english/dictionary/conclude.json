@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "conclude",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈkluːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "끝내다, 결말짓다, 끝맺다, 완결하다 ((by, with)), (=finish)",
+              "examples": [
+                {
+                  "text": "<b>conclude</b> an argument",
+                  "translatedText": "논쟁을 마치다"
+                }
+              ],
+              "originalMeaning": "끝내다, 결말짓다, 끝맺다, 완결하다 ((by, with)), (=<span class='related_word' lang='en' >finish</span>)"
+            },
+            {
+              "meaning": "<조약 등을> 체결하다, 맺다(settle)",
+              "examples": [
+                {
+                  "text": "<b>conclude</b> a treaty of friendship",
+                  "translatedText": "우호 조약을 체결하다"
+                }
+              ],
+              "originalMeaning": "<조약 등을> 체결하다, 맺다(settle)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…으로써) 말을 맺다(end) ((with))",
+              "examples": [
+                {
+                  "text": "<b>conclude</b> by saying that …[with a few remarks]",
+                  "translatedText": "…이라고 말하고[몇 마디 의견을 개진하고] 이야기를 끝맺다"
+                }
+              ],
+              "originalMeaning": "(…으로써) 말을 맺다(end) ((with))"
+            },
+            {
+              "meaning": "<글·말·모임 등이> 끝나다 ((with))",
+              "examples": [
+                {
+                  "text": "The letter <b>conclude</b> d as follows.",
+                  "translatedText": "편지는 다음과 같이 끝맺고 있었다."
+                }
+              ],
+              "originalMeaning": "<글·말·모임 등이> 끝나다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c7dd666180f4beea0f8ec1346daecaa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c7dd666180f4beea0f8ec1346daecaa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "concludes"
+        },
+        {
+          "type": "과거형",
+          "value": "concluded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "concluding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "concluded"
+        }
+      ],
+      "aliasConjugation": "concludes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "16c2c12b4f4e81d1937ecf3748a6410f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것으로 오늘의 프로그램을 마칩니다",
+      "text": "This concludes today's program."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "편지는 다음과 같이 맺어져 있다",
+      "text": "The letter concludes as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "편지는 다음과 같이 끝맺어 있었다.",
+      "text": "The letter concluded as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 미쳤다고 단정할 수밖에 없다",
+      "text": "I must <b>conclude</b> that he is deranged in mind. or My decision is that he is not mentally sound."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 농장을 팔기로 결정했다.",
+      "text": "They’ve concluded to sell their farm."
+    }
+  ],
+  "isWordType": true
+}

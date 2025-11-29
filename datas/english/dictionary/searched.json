@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "search",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sɜːrtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "찾다, 수색[탐색]하다, <장소·사람을> 수색하여 찾다 ((for)); <책 등을> 자세히 조사하다",
+              "examples": [
+                {
+                  "text": "<b>search</b> a ship",
+                  "translatedText": "배를 임검하다"
+                }
+              ],
+              "originalMeaning": "찾다, 수색[탐색]하다, <장소·사람을> 수색하여 찾다 ((for)); <책 등을> 자세히 조사하다"
+            },
+            {
+              "meaning": "(숨긴 것을 찾으려고) <남을> 몸수색하다, <…의 소지품을> 수색하다",
+              "examples": [
+                {
+                  "text": "<b>search</b> a person for smuggled goods[weapons]",
+                  "translatedText": "밀수품[무기]이 있나 몸[소지품]수색하다"
+                }
+              ],
+              "originalMeaning": "(숨긴 것을 찾으려고) <남을> 몸수색하다, <…의 소지품을> 수색하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "찾다, 구하다, 탐구[추구]하다 ((for, after)); 파고들다, 조사하다(investigate) ((into))",
+              "examples": [
+                {
+                  "text": "<b>search</b> after health and happiness",
+                  "translatedText": "건강과 행복을 추구하다"
+                }
+              ],
+              "originalMeaning": "찾다, 구하다, 탐구[추구]하다 ((for, after)); 파고들다, 조사하다(investigate) ((into))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수색, 추구 ((for))",
+              "examples": [],
+              "originalMeaning": "수색, 추구 ((for))"
+            },
+            {
+              "meaning": "조사, 음미 ((after, for, of))",
+              "examples": [],
+              "originalMeaning": "조사, 음미 ((after, for, of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/60d539e76b784055bc9fb14a490c0b84",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/60d539e76b784055bc9fb14a490c0b84",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "searches"
+        },
+        {
+          "type": "과거형",
+          "value": "searched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "searching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "searched"
+        }
+      ],
+      "aliasConjugation": "searches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "50c5ee1723ae7767bb705c729b6aa0ab",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경찰이 가택 수색을 했다",
+      "text": "The policemen <b>searched</b> the house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 서류를 뒤지면서 찾았다.",
+      "text": "He <b>searched</b> through his papers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여우는 먹을 것을 찾아 헤맸다.",
+      "text": "The fox scoured about in <b>search</b> of food."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 문제에 관한 새로운 정보를 찾아라.",
+      "text": "<b>Search</b> new information on a subject."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 길 잃은 아이를 찾으러 나섰다",
+      "text": "They set off in <b>search</b> of a lost child."
+    }
+  ],
+  "isWordType": true
+}

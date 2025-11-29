@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "body",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈbɑːdi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사람·동물의) 몸, 신체, 육체(opp. mind, soul, spirit); 시체",
+              "examples": [
+                {
+                  "text": "a healthy <b>body</b>",
+                  "translatedText": "건강한 몸"
+                }
+              ],
+              "originalMeaning": "(사람·동물의) 몸, 신체, 육체(opp. mind, soul, spirit); 시체"
+            },
+            {
+              "meaning": "(머리·사지를 제외한) 몸통(torso), 동체(opp. head, limb); (의류의) 몸통 부분, 동부(胴部); 나무의 줄기(trunk)",
+              "examples": [
+                {
+                  "text": "a man's <b>body</b> and limbs",
+                  "translatedText": "사람의 몸통과 사지"
+                }
+              ],
+              "originalMeaning": "(머리·사지를 제외한) 몸통(torso), 동체(opp. head, limb); (의류의) 몸통 부분, 동부(胴部); 나무의 줄기(trunk)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<관념을> 체현[구현]하다, 구체화하다(embody)",
+              "examples": [],
+              "originalMeaning": "<관념을> 체현[구현]하다, 구체화하다(embody)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "몸의, 육체적인(bodily)",
+              "examples": [
+                {
+                  "text": "<b>body</b> temperature",
+                  "translatedText": "체온"
+                }
+              ],
+              "originalMeaning": "몸의, 육체적인(bodily)"
+            },
+            {
+              "meaning": "(논문·편지 등의) 본문의",
+              "examples": [],
+              "originalMeaning": "(논문·편지 등의) 본문의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/076d390ed5c940e29dc393f993bc4cae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/076d390ed5c940e29dc393f993bc4cae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bodies"
+        },
+        {
+          "type": "복수형",
+          "value": "bodies"
+        },
+        {
+          "type": "과거형",
+          "value": "bodied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bodying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bodied"
+        }
+      ],
+      "aliasConjugation": "bodies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7d4c59f9971853bb347af3bbffb15028",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나무의 뿌리는 사람의 위에 상당한다",
+      "text": "What a root does for a tree is the same as what a stomach does for a man. or What a root is to a tree is what a stomach is to a human <b>body</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "동체가 두 동강이 났다",
+      "text": "The <b>body</b> was severed in two."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사체에서 폭행의 자국을 발견할 수가 없었다",
+      "text": "The <b>body</b> bore no traces of violation. or There were no marks of violation on the <b>body</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몸과 마음이 모두 나른하다",
+      "text": "I am weary in <b>body</b> and mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시체가 나무에 매달려 있다",
+      "text": "A dead <b>body</b> is hanging on a tree."
+    }
+  ],
+  "isWordType": true
+}

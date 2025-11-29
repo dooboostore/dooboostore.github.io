@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "engineer",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│endʒɪ│nɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기사, 기술자; 공학자",
+              "examples": [
+                {
+                  "text": "a computer <b>engineer</b>",
+                  "translatedText": "컴퓨터 기사"
+                }
+              ],
+              "originalMeaning": "기사, 기술자; 공학자"
+            },
+            {
+              "meaning": "(상선의) 기관사, [미] (기차의) 기관사([영] engine driver), 기관공(mechanic)",
+              "examples": [],
+              "originalMeaning": "(상선의) 기관사, [미] (기차의) 기관사([영] engine driver), 기관공(mechanic)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(기사로서) …공사를 감독[설계]하다, 건조하다",
+              "examples": [
+                {
+                  "text": "<b>engineer</b> an aqueduct",
+                  "translatedText": "도수관(導水管) 공사의 설계를 하다"
+                }
+              ],
+              "originalMeaning": "(기사로서) …공사를 감독[설계]하다, 건조하다"
+            },
+            {
+              "meaning": "솜씨 있게 처리하다; 공작하다, 꾀하다 ((through))",
+              "examples": [
+                {
+                  "text": "<b>engineer</b> a plot",
+                  "translatedText": "계략을 꾸미다"
+                }
+              ],
+              "originalMeaning": "솜씨 있게 처리하다; 공작하다, 꾀하다 ((through))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기사로서 일하다, 교묘하게 처리하다",
+              "examples": [],
+              "originalMeaning": "기사로서 일하다, 교묘하게 처리하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ec7a950671eb4d67af3f6ee0dc34543c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ec7a950671eb4d67af3f6ee0dc34543c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "engineers"
+        },
+        {
+          "type": "과거형",
+          "value": "engineered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "engineering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "engineered"
+        }
+      ],
+      "aliasConjugation": "engineers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ebf1cc59a2ed4682a7dd0e5cfde03a95",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "요즘 컴퓨터 기사는 높은 봉급을 받는다.",
+      "text": "A computer <b>engineer</b> commands a good salary nowadays."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사업 팀에는 소프트웨어 기술자나 그런 일을 할 수 있는 누군가가 필요하다",
+      "text": "We need a software <b>engineer</b> or someone on the project team."
+    }
+  ],
+  "isWordType": true
+}

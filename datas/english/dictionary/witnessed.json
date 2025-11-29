@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "witness",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈwɪtnəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "목격자",
+              "examples": [
+                {
+                  "text": "without a <b>witness</b>",
+                  "translatedText": "목격자 없이"
+                }
+              ],
+              "originalMeaning": "목격자"
+            },
+            {
+              "meaning": "(…의) 증거가 되는 사람, 증거물",
+              "examples": [],
+              "originalMeaning": "(…의) 증거가 되는 사람, 증거물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "목격하다, 보다",
+              "examples": [
+                {
+                  "text": "Many people <b>witnessed</b> the accident.",
+                  "translatedText": "그 사고를 목격한 사람이 많았다."
+                }
+              ],
+              "originalMeaning": "목격하다, 보다"
+            },
+            {
+              "meaning": "입증[증명]하다; 증언하다; <사물이> …을 나타내다, …의 증거가 되다",
+              "examples": [
+                {
+                  "text": "Her red face <b>witnessed</b> her embarrassment.",
+                  "translatedText": "벌겋게 상기된 그녀의 얼굴이 당황하고 있다는 증거였다."
+                }
+              ],
+              "originalMeaning": "입증[증명]하다; 증언하다; <사물이> …을 나타내다, …의 증거가 되다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "증언하다 ((for, against))",
+              "examples": [
+                {
+                  "text": "<b>witness</b> for[against] a person",
+                  "translatedText": "…에게 유리[불리]한 증언을 하다"
+                }
+              ],
+              "originalMeaning": "증언하다 ((for, against))"
+            },
+            {
+              "meaning": "증명하다, 증거가 되다, 입증하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>witness</b> to a person's innocence",
+                  "translatedText": "…의 결백함을 입증하다"
+                }
+              ],
+              "originalMeaning": "증명하다, 증거가 되다, 입증하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ef8d7d56c290421791e92b407cb4bb18",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ef8d7d56c290421791e92b407cb4bb18",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "witnesses"
+        },
+        {
+          "type": "과거형",
+          "value": "witnessed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "witnessing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "witnessed"
+        }
+      ],
+      "aliasConjugation": "witnesses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "04113523592daca056183a373e9a26b6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "증인은 성경에 대고 맹세했다",
+      "text": "The <b>witness</b> swore on the Bible."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사고를 목격한 사람이 많았다.",
+      "text": "Many people <b>witnessed</b> the accident."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 남자가 증인으로 출두했다",
+      "text": "A man presented himself as a <b>witness</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "변호사는 증인의 이야기에 이의를 제기했다.",
+      "text": "The lawyer impugned the <b>witness</b>’s story."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그것이 운전사의 과실임을 증언했다.",
+      "text": "He <b>witnessed</b> that it was the driver’s fault."
+    }
+  ],
+  "isWordType": true
+}

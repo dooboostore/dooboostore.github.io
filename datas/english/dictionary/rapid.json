@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "rapid",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈræpɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "빠른, 급한, 신속한",
+              "examples": [
+                {
+                  "text": "<b>rapid</b> growth",
+                  "translatedText": "빠른 성장"
+                }
+              ],
+              "originalMeaning": "빠른, 급한, 신속한"
+            },
+            {
+              "meaning": "<행동이> 날랜, 민첩한, 재빠른; 서두르는 (=quick)",
+              "examples": [
+                {
+                  "text": "a <b>rapid</b> worker",
+                  "translatedText": "민첩하게 일하는 사람"
+                }
+              ],
+              "originalMeaning": "<행동이> 날랜, 민첩한, 재빠른; 서두르는 (=<span class='related_word' lang='en' >quick</span>)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 여울, 급류",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 여울, 급류"
+            },
+            {
+              "meaning": "고속 수송 열차[시스템]",
+              "examples": [],
+              "originalMeaning": "고속 수송 열차[시스템]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0343a3cb84ae4963a0b31bb2012a1cbf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0343a3cb84ae4963a0b31bb2012a1cbf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "rapider"
+        },
+        {
+          "type": "최상급",
+          "value": "rapidest"
+        }
+      ],
+      "aliasConjugation": "rapider",
+      "aliasConjugationPos": "비교급",
+      "gdid": "57268bf2151682bedec99178067460aa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 빨리 말하지 마라",
+      "text": "Don't speak so fast[rapidly]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 딸은 발육이 빠르다",
+      "text": "My daughter grows rapidly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 도시의 인구가 급속히 자라고 있다",
+      "text": "The city is rapidly increasing in its population. or The population of the city is rapidly growing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "현대는 변화가 빠른 시대이다.",
+      "text": "Ours is a day of <b>rapid</b> changes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가가 다락같이 오르고 있다",
+      "text": "The prices are going up[soaring] rapidly."
+    }
+  ],
+  "isWordType": true
+}

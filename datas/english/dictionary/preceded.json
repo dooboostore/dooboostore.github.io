@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "precede",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prɪˈsiːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "앞서다, 먼저 일어나다, <안내인이> 앞장서다(opp. follow)",
+              "examples": [
+                {
+                  "text": "Lightning <b>precede</b> s thunder.",
+                  "translatedText": "뇌성이 나기 전에 번개가 번쩍인다."
+                }
+              ],
+              "originalMeaning": "앞서다, 먼저 일어나다, <안내인이> 앞장서다(opp. follow)"
+            },
+            {
+              "meaning": "…의 윗자리를 차지하다, …보다 우월하다, 우선하다",
+              "examples": [
+                {
+                  "text": "This precedes all others.",
+                  "translatedText": "이것은 다른 모든 것보다 우선한다."
+                }
+              ],
+              "originalMeaning": "…의 윗자리를 차지하다, …보다 우월하다, 우선하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "앞서다, 우선하다; 상위에 위치하다",
+              "examples": [],
+              "originalMeaning": "앞서다, 우선하다; 상위에 위치하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c22b937669aa47849b967f8c688d0b8c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c22b937669aa47849b967f8c688d0b8c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "precedes"
+        },
+        {
+          "type": "과거형",
+          "value": "preceded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "preceding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "preceded"
+        }
+      ],
+      "aliasConjugation": "precedes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9d3b1fb078e005c7b627030ee8f0fe8e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 다른 모든 것보다 우선한다.",
+      "text": "This precedes all others."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지난해에 비해 감소되어 있다",
+      "text": "It shows a decrease as compared with[against] the preceding year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "뇌성이 나기 전에 번개가 번쩍인다.",
+      "text": "Lightning precedes thunder."
+    }
+  ],
+  "isWordType": true
+}

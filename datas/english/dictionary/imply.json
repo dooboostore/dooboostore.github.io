@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "imply",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪmˈplaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(필연적으로) 포함하다, 수반하다, 내포하다, 함축하다; <단어가> …을 뜻하다, 의미하다(mean)",
+              "examples": [
+                {
+                  "text": "Rights <b>imply</b> obligations.",
+                  "translatedText": "권리는 의무를 수반한다."
+                }
+              ],
+              "originalMeaning": "(필연적으로) 포함하다, 수반하다, 내포하다, 함축하다; <단어가> …을 뜻하다, 의미하다(mean)"
+            },
+            {
+              "meaning": "암시하다, 넌지시 비치다(suggest)",
+              "examples": [],
+              "originalMeaning": "암시하다, 넌지시 비치다(suggest)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1806ab5dc5ef4570b6ea6879753c30d9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1806ab5dc5ef4570b6ea6879753c30d9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "implies"
+        },
+        {
+          "type": "과거형",
+          "value": "implied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "implying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "implied"
+        }
+      ],
+      "aliasConjugation": "implies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2abb36453fdb0b404e6bdeaad6172a7d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "침묵은 때로 동의를 의미한다",
+      "text": "Silence sometimes implies consent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 말 속에는 거부의 뜻이 포함되어 있었다",
+      "text": "His words implied rejection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 뜻이 아니었어요",
+      "text": "I didn't mean to <b>imply</b> that. or That's not what I meant."
+    }
+  ],
+  "isWordType": true
+}

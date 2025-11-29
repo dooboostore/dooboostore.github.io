@@ -27,24 +27,16 @@ import { EnglishRouterComponent } from "@src/pages/english/english.router.compon
   using: [drComponent, projectComponent],
 })
 export class IndexRouterComponent extends ComponentRouterBase {
+  private name= 'index-router'
   constructor(private router: DomRenderRouter) {
     super({ sameRouteNoApply: true });
   }
   async onInitRender(param: any, rawSet: RawSet) {
-    super.onInitRender(param, rawSet);
-  }
-  async canActivate(url: RoutingDataSet, data?: any): Promise<void> {
-    super.canActivate(url, data);
+    await super.onInitRender(param, rawSet);
+    this.name = 'index-router' + Date.now();
   }
 
-  async onRouting(r: RoutingDataSet): Promise<void> {
-    await super.onRouting(r);
-    console.log("onRouting");
-  }
 
-  onCreatedThisChildDebounce(childrenSet: ChildrenSet[]) {
-    super.onCreatedThisChildDebounce(childrenSet);
-  }
 
   test() {}
 }

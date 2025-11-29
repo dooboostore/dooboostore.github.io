@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "entry": "explosion",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪk│sploʊʒn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "폭발, 파열(cf. IMPLOSION); 폭음, 폭발음",
+              "examples": [
+                {
+                  "text": "a gas <b>explosion</b>",
+                  "translatedText": "가스 폭발"
+                }
+              ],
+              "originalMeaning": "폭발, 파열(cf. IMPLOSION); 폭음, 폭발음"
+            },
+            {
+              "meaning": "(분노·웃음 등의) 격발, 폭발",
+              "examples": [
+                {
+                  "text": "an <b>explosion</b> of laughter",
+                  "translatedText": "폭소"
+                }
+              ],
+              "originalMeaning": "(분노·웃음 등의) 격발, 폭발"
+            },
+            {
+              "meaning": "(폐쇄음의) 파열(plosion)",
+              "examples": [],
+              "originalMeaning": "(폐쇄음의) 파열(plosion)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f204ed3df7e645d685ee72f1b0436d34",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f204ed3df7e645d685ee72f1b0436d34",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2b9866924191d04598fd280b4f7a3bc5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭탄의 폭음이 멀리서 들렸다",
+      "text": "The bomb <b>explosion</b> was heard a long way away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기관이 파열하여 선체에 구멍이 뚫렸다",
+      "text": "A boiler <b>explosion</b> blew a hole right through the hull."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭발로 인해 그 지역은 막대한 손해를 입었다",
+      "text": "The <b>explosion</b> caused a great deal of damage to the area."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭발 소리가 10마일 사방에 들렸다",
+      "text": "The <b>explosion</b> was heard within a radius of ten miles[over a ten mile range]."
+    }
+  ],
+  "isWordType": true
+}
