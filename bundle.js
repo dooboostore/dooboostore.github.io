@@ -25418,12 +25418,10 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
         await super.onRouting(r);
         this.currentItemName = decodeURIComponent(r.routerModule.pathData?.name ?? '');
         this.currentItem = this.currentItemName ? await this.videoItemService.item(this.currentItemName) : undefined;
-        console.log('english.router.component onRouting-------', this.config?.window);
         if (this.config?.window) {
             const doc = this.config.window.document;
             const setMetaByProperty = (property, content) => {
                 const d = doc.querySelector(`meta[property="${property}"]`);
-                console.log('dddddddd->', property, d);
                 doc.querySelector(`meta[property="${property}"]`)?.setAttribute('content', content);
             };
             const setMetaByName = (name, content) => {
@@ -25439,7 +25437,6 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
             let pageDescription = 'Learn English with videos, movies, and interactive content.';
             let pageUrl = _back_end_environments_environment__WEBPACK_IMPORTED_MODULE_13__.environment.host + this.config.window.window.location.pathname;
             let pageImage = 'assets/images/dooboostore.png';
-            console.log('------------------> Setting SEO for', pageUrl);
             if (this.currentItem) {
                 // Page-specific SEO content
                 pageTitle = this.currentItem.name;

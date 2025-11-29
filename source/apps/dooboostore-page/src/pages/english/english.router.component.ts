@@ -94,12 +94,10 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
     this.currentItem = this.currentItemName ? await this.videoItemService.item(this.currentItemName) : undefined;
 
 
-    console.log('english.router.component onRouting-------', this.config?.window);
     if (this.config?.window) {
       const doc = this.config.window.document;
       const setMetaByProperty = (property: string, content: string) => {
         const d = doc.querySelector(`meta[property="${property}"]`);
-        console.log('dddddddd->', property, d);
         doc.querySelector(`meta[property="${property}"]`)?.setAttribute('content', content);
       };
       const setMetaByName = (name: string, content: string) => {
@@ -116,7 +114,6 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
       let pageUrl = environment.host + this.config.window.window.location.pathname;
       let pageImage = 'assets/images/dooboostore.png'
 
-      console.log('------------------> Setting SEO for', pageUrl);
       if (this.currentItem) {
         // Page-specific SEO content
         pageTitle = this.currentItem.name;

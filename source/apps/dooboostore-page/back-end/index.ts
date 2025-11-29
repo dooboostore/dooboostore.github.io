@@ -50,7 +50,7 @@ class Server implements Runnable<void, void> {
       ssrExcludeFilter: (rr) => /^\/api\//.test(rr.reqUrl), // Exclude API routes from SSR
       poolOption: {
         max: 50,
-        min: 5,
+        min: 50,
       },
     };
 
