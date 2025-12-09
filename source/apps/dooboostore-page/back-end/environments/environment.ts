@@ -4,7 +4,7 @@ import { LoggerConfig, LoggerLevel } from '@dooboostore/core/logger/Logger';
 export const environment = {
   name: 'default-template',
   environment: 'local',
-  host: 'http://localhost:8082',
+  host: 'https://dooboostore.github.io',
   production: false,
   frontDistPath: 'dist-front-end',
   frontDistIndexFileName: 'index.html',

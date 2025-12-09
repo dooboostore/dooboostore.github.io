@@ -3235,39 +3235,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LocationUtils: () => (/* binding */ LocationUtils)
 /* harmony export */ });
-class LocationUtils {
-    static hash(window) {
+var LocationUtils;
+(function (LocationUtils) {
+    LocationUtils.hash = (window) => {
         return window.location.hash.replace('#', '');
-    }
-    static hashPath(window) {
+    };
+    LocationUtils.hashPath = (window) => {
         return window.location.hash.replace('#', '').split('?')[0];
-    }
-    static hashSearch(window) {
-        return window.location.hash.replace('#', '').split('?')[1];
-    }
-    static hashQueryParams(window) {
+    };
+    // search는 앞에 ? 붙어있다 브라우저에서도 location.search
+    LocationUtils.hashSearch = (window) => {
+        const string = window.location.hash.replace('#', '').split('?')[1];
+        return string ? `?${string}` : '';
+    };
+    LocationUtils.hashQueryParams = (window) => {
         const s = window.location.hash.replace('#', '').split('?')[1] || '';
-        return this.queryStringToMap(s);
-    }
-    static path(window) {
+        return LocationUtils.queryStringToMap(s);
+    };
+    LocationUtils.path = (window) => {
         return window.location.pathname;
-    }
-    static pathQueryParamsObject(window) {
-        return this.queryStringToObject(window.location.search.substring(1));
-    }
-    static hashQueryParamsObject(window) {
+    };
+    LocationUtils.search = (window) => {
+        return window.location.search || '';
+    };
+    LocationUtils.pathQueryParamsObject = (window) => {
+        return LocationUtils.queryStringToObject(window.location.search.substring(1));
+    };
+    LocationUtils.hashQueryParamsObject = (window) => {
         const s = window.location.hash.split('?').pop() ?? '';
         if (s.startsWith('#')) {
             return {};
         }
         else {
-            return this.queryStringToObject(s);
+            return LocationUtils.queryStringToObject(s);
         }
-    }
-    static pathQueryParams(window) {
-        return this.queryStringToMap(window.location.search.substring(1));
-    }
-    static queryStringToMap(s) {
+    };
+    LocationUtils.pathQueryParams = (window) => {
+        return LocationUtils.queryStringToMap(window.location.search.substring(1));
+    };
+    LocationUtils.queryStringToMap = (s) => {
         const params = new Map();
         const vars = s.split('&') || [];
         vars.forEach(it => {
@@ -3277,8 +3283,8 @@ class LocationUtils {
             }
         });
         return params;
-    }
-    static queryStringToObject(s) {
+    };
+    LocationUtils.queryStringToObject = (s) => {
         const params = {};
         const vars = s.split('&') || [];
         vars.forEach(it => {
@@ -3288,8 +3294,8 @@ class LocationUtils {
             }
         });
         return params;
-    }
-}
+    };
+})(LocationUtils || (LocationUtils = {}));
 
 
 /***/ }),
@@ -3327,7 +3333,7 @@ var NodeUtils;
         // console.log('repalceNode', targetNode, newNode, targetNode.parentNode)
         return targetNode.parentNode?.replaceChild(newNode, targetNode);
     };
-    NodeUtils.addNode = (targetNode, newNode) => {
+    NodeUtils.insertAfter = (targetNode, newNode) => {
         return targetNode.parentNode?.insertBefore(newNode, targetNode.nextSibling);
     };
     NodeUtils.cloneNode = (element, deep) => {
@@ -4031,6 +4037,16 @@ var ConvertUtils;
         }
         return searchParams;
     };
+    ConvertUtils.toRawQueryString = (data, option) => {
+        const params = ConvertUtils.toURLSearchParams(data);
+        const dataStr = Array.from(params.entries())
+            .map(([k, v]) => {
+            const j = `${k}=${option?.valueEncodeURIComponent ? encodeURIComponent(v) : v}`;
+            return j;
+        })
+            .join('&');
+        return dataStr;
+    };
     // export const RelativeHumanReadableTimeLabels = {
     //   [IOS3166_1_Code.KOR]: {
     //     justNow: '방금 전',
@@ -4071,6 +4087,29 @@ var ConvertUtils;
      */
     ConvertUtils.stringJsonToKeyPairs = (stringJson) => {
         return Array.from(stringJson.matchAll(/(\w+):\s*([^,}]+)/g)).map(match => ({ key: match[1], value: match[2] }));
+    };
+    ConvertUtils.stringToBase64 = (str) => {
+        return btoa(str);
+    };
+    ConvertUtils.uint8ArrayToBase64 = (bytes) => {
+        let binary = '';
+        const len = bytes.byteLength;
+        for (let i = 0; i < len; i++) {
+            binary += String.fromCharCode(bytes[i]);
+        }
+        return btoa(binary);
+    };
+    ConvertUtils.base64ToString = (base64) => {
+        return atob(base64);
+    };
+    ConvertUtils.base64ToUint8Array = (base64) => {
+        const binaryString = atob(base64);
+        const len = binaryString.length;
+        const bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+        return bytes;
     };
     // const formDataToFormDataEntryValueObj = <T = { [key: string]: FormDataEntryValue | FormDataEntryValue[] }>(
     //   data: FormData | HTMLFormElement
@@ -7205,6 +7244,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _valid_ValidUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../types */ "../../packages/@dooboostore/core/src/types.ts");
+/* harmony import */ var _parser_path_ObjectPathParser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../parser/path/ObjectPathParser */ "../../packages/@dooboostore/core/src/parser/path/ObjectPathParser.ts");
+
 
 
 var ObjectUtils;
@@ -7390,116 +7431,24 @@ var ObjectUtils;
     let Path;
     (function (Path) {
         Path.isFunctionScript = (script) => {
-            return script.trim().startsWith('function');
+            return _parser_path_ObjectPathParser__WEBPACK_IMPORTED_MODULE_2__.ObjectPathParser.isFunctionScript(script);
         };
         Path.isArrowFunctionScript = (script) => {
-            return /^\s*\([^)]*\)\s*=>/.test(script);
+            return _parser_path_ObjectPathParser__WEBPACK_IMPORTED_MODULE_2__.ObjectPathParser.isArrowFunctionScript(script);
         };
         Path.toOptionalChainPath = (path) => {
             if (!path) {
                 return '';
             }
-            // Add this check for object literals
-            if (path.trim().startsWith('{') && path.trim().endsWith('}')) {
-                return path;
-            }
-            if (Path.isFunctionScript(path) || Path.isArrowFunctionScript(path)) {
-                return path;
-            }
-            // Protect nullish coalescing operator (??) by replacing it with a placeholder
-            const nullishCoalescingPlaceholder = '__NULLISH_COALESCING__';
-            const hasNullishCoalescing = path.includes('??');
-            let tempPath = path;
-            if (hasNullishCoalescing) {
-                tempPath = tempPath.replace(/\?\?/g, nullishCoalescingPlaceholder);
-            }
-            // Check for ternary operator pattern (? :)
-            // Match "? " (with space after ?) followed by ":" somewhere later - this indicates a ternary operator
-            // The space after ? is crucial to distinguish from optional chaining (?.)
-            const ternaryMatch = tempPath.match(/\?\s+[^:]*:/);
-            if (ternaryMatch) {
-                // Handle ternary operator - split by the ternary operator parts
-                // We need to split carefully to preserve the ? and : operators
-                const questionMarkIndex = tempPath.indexOf('?');
-                const colonIndex = tempPath.indexOf(':', questionMarkIndex);
-                if (questionMarkIndex !== -1 && colonIndex !== -1) {
-                    // Check if there's a space after the ?
-                    const charAfterQuestion = tempPath.charAt(questionMarkIndex + 1);
-                    if (charAfterQuestion === ' ' || charAfterQuestion === '\t' || charAfterQuestion === '\n') {
-                        // Split into three parts: condition, true branch, false branch
-                        const condition = tempPath.substring(0, questionMarkIndex).trim();
-                        const trueBranch = tempPath.substring(questionMarkIndex + 1, colonIndex).trim();
-                        const falseBranch = tempPath.substring(colonIndex + 1).trim();
-                        // Process each part recursively
-                        const processedCondition = Path.toOptionalChainPath(condition);
-                        const processedTrueBranch = Path.toOptionalChainPath(trueBranch);
-                        const processedFalseBranch = Path.toOptionalChainPath(falseBranch);
-                        // Reconstruct with original spacing around ? and :
-                        const finalResult = `${processedCondition} ? ${processedTrueBranch} : ${processedFalseBranch}`;
-                        // Restore nullish coalescing operator
-                        return hasNullishCoalescing ? finalResult.replace(new RegExp(nullishCoalescingPlaceholder, 'g'), '??') : finalResult;
-                    }
-                }
-            }
-            // Handle function calls by processing the entire path with regex replacement
-            if (tempPath.includes('(')) {
-                // Replace function calls with a placeholder, process the path, then restore function calls
-                const functionCallMatches = [];
-                let workingPath = tempPath;
-                let counter = 0;
-                // Find and process function calls with their arguments
-                const functionCallRegex = /(\w+)\(([^()]*(?:\([^()]*\)[^()]*)*)\)/g;
-                let match;
-                while ((match = functionCallRegex.exec(tempPath)) !== null) {
-                    const fullMatch = match[0];
-                    const funcName = match[1];
-                    const funcArgs = match[2];
-                    const placeholder = `__FUNC_CALL_${counter}__`;
-                    // Process function arguments recursively, but don't add ?. at the end of closing parenthesis
-                    let processedArgs = funcArgs ? Path.toOptionalChainPath(funcArgs) : '';
-                    // Remove trailing ?. before closing parenthesis if it exists
-                    processedArgs = processedArgs.replace(/\?\.\s*$/, '');
-                    const processedFuncCall = `${funcName}?.(${processedArgs})`;
-                    functionCallMatches.push({
-                        original: fullMatch,
-                        processed: processedFuncCall,
-                        placeholder: placeholder
-                    });
-                    workingPath = workingPath.replace(fullMatch, placeholder);
-                    counter++;
-                }
-                // Process the path without function calls
-                const tokens = workingPath.match(/[^?.[\]]+|\[[^\]]*\]/g);
-                let processedPath = '';
-                if (tokens && tokens.length > 1) {
-                    processedPath = tokens.join('?.');
-                }
-                else {
-                    processedPath = workingPath;
-                }
-                // Restore function calls
-                for (const funcMatch of functionCallMatches) {
-                    processedPath = processedPath.replace(funcMatch.placeholder, funcMatch.processed);
-                }
-                // Restore nullish coalescing operator
-                return hasNullishCoalescing ? processedPath.replace(new RegExp(nullishCoalescingPlaceholder, 'g'), '??') : processedPath;
-            }
-            // Tokenize the path by '.', '[', ']', and '?' to handle property access and existing optional chaining.
-            const tokens = tempPath.match(/[^?.[\]]+|\[[^\]]*\]/g);
-            if (!tokens) {
-                return hasNullishCoalescing ? path : path; // Return original path if no tokens are found (e.g., path is just '.')
-            }
-            // Join tokens with '?.', effectively creating the optional chain path.
-            const result = tokens.join('?.');
-            // Restore nullish coalescing operator
-            return hasNullishCoalescing ? result.replace(new RegExp(nullishCoalescingPlaceholder, 'g'), '??') : result;
+            const parser = new _parser_path_ObjectPathParser__WEBPACK_IMPORTED_MODULE_2__.ObjectPathParser(path);
+            return parser.toOptionalChainPath();
         };
         Path.removeOptionalChainOperator = (path) => {
             if (!path) {
                 return '';
             }
-            // Replace all optional chaining operators with standard ones.
-            return path.replace(/\?\./g, '.').replace(/\.\[/g, '[');
+            const parser = new _parser_path_ObjectPathParser__WEBPACK_IMPORTED_MODULE_2__.ObjectPathParser(path);
+            return parser.removeOptionalChainOperator();
         };
         const parsePath = (path) => {
             const result = [];
@@ -8313,6 +8262,1107 @@ function isCssCommentItem(item) {
 
 /***/ }),
 
+/***/ "../../packages/@dooboostore/core/src/parser/path/ObjectPathParser.ts":
+/*!****************************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/parser/path/ObjectPathParser.ts ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ObjectPathParser: () => (/* binding */ ObjectPathParser),
+/* harmony export */   Token: () => (/* binding */ Token),
+/* harmony export */   TokenType: () => (/* binding */ TokenType)
+/* harmony export */ });
+/**
+ * ObjectPathParser - JavaScript 경로 표현식을 파싱하고 Optional Chaining으로 변환하는 파서
+ *
+ * 트리 구조의 토큰을 생성하여 계층적 표현식을 지원
+ *
+ * 사용법:
+ * const parser = new ObjectPathParser('this.obj.func(a.b[0])');
+ * const root = parser.getRoot();
+ * root.children.forEach(child => console.log(child.type));
+ */
+// --- Token Types ---
+var TokenType;
+(function (TokenType) {
+    // Leaf tokens
+    TokenType["IDENTIFIER"] = "identifier";
+    TokenType["STRING"] = "string";
+    TokenType["NUMBER"] = "number";
+    TokenType["TEMPLATE_LITERAL"] = "template_literal";
+    TokenType["OPERATOR"] = "operator";
+    TokenType["WHITESPACE"] = "whitespace";
+    // Structural tokens (can have children)
+    TokenType["MEMBER_EXPRESSION"] = "member_expression";
+    TokenType["PROPERTY_ACCESS"] = "property_access";
+    TokenType["BRACKET_ACCESS"] = "bracket_access";
+    TokenType["FUNCTION_CALL"] = "function_call";
+    TokenType["PARENTHESIZED"] = "parenthesized";
+    TokenType["OBJECT_LITERAL"] = "object_literal";
+    TokenType["ARRAY_LITERAL"] = "array_literal";
+    TokenType["TERNARY"] = "ternary";
+    TokenType["BINARY"] = "binary";
+    // Root
+    TokenType["ROOT"] = "root";
+    TokenType["EOF"] = "eof";
+})(TokenType || (TokenType = {}));
+// --- Base Token Class ---
+class Token {
+    type;
+    value;
+    start;
+    end;
+    parent = null;
+    children = [];
+    isOptional = false;
+    // 연산자 주변 공백 보존용
+    leftSpace = '';
+    rightSpace = '';
+    constructor(type, value, start, end) {
+        this.type = type;
+        this.value = value;
+        this.start = start;
+        this.end = end;
+    }
+    // --- Child management ---
+    addChild(child) {
+        child.parent = this;
+        this.children.push(child);
+        return this;
+    }
+    getChildren() {
+        return this.children;
+    }
+    hasChildren() {
+        return this.children.length > 0;
+    }
+    getParent() {
+        return this.parent;
+    }
+    // --- Type checks ---
+    isIdentifier() { return this.type === TokenType.IDENTIFIER; }
+    isString() { return this.type === TokenType.STRING; }
+    isNumber() { return this.type === TokenType.NUMBER; }
+    isTemplateLiteral() { return this.type === TokenType.TEMPLATE_LITERAL; }
+    isOperator() { return this.type === TokenType.OPERATOR; }
+    isWhitespace() { return this.type === TokenType.WHITESPACE; }
+    isMemberExpression() { return this.type === TokenType.MEMBER_EXPRESSION; }
+    isPropertyAccess() { return this.type === TokenType.PROPERTY_ACCESS; }
+    isBracketAccess() { return this.type === TokenType.BRACKET_ACCESS; }
+    isFunctionCall() { return this.type === TokenType.FUNCTION_CALL; }
+    isParenthesized() { return this.type === TokenType.PARENTHESIZED; }
+    isObjectLiteral() { return this.type === TokenType.OBJECT_LITERAL; }
+    isArrayLiteral() { return this.type === TokenType.ARRAY_LITERAL; }
+    isTernary() { return this.type === TokenType.TERNARY; }
+    isBinary() { return this.type === TokenType.BINARY; }
+    isRoot() { return this.type === TokenType.ROOT; }
+    isEOF() { return this.type === TokenType.EOF; }
+    // --- Keyword check for identifiers ---
+    isKeyword() {
+        if (this.type !== TokenType.IDENTIFIER)
+            return false;
+        return ['true', 'false', 'null', 'undefined', 'this', 'window', 'document'].includes(this.value);
+    }
+    // --- Operator checks ---
+    isLogicalOperator() {
+        return this.type === TokenType.OPERATOR && (this.value === '||' || this.value === '&&');
+    }
+    isNullishOperator() {
+        return this.type === TokenType.OPERATOR && this.value === '??';
+    }
+    isComparisonOperator() {
+        return this.type === TokenType.OPERATOR &&
+            ['===', '!==', '==', '!=', '<', '>', '<=', '>='].includes(this.value);
+    }
+    isArithmeticOperator() {
+        return this.type === TokenType.OPERATOR && ['+', '-', '*', '/', '%'].includes(this.value);
+    }
+    // --- Stringify ---
+    stringify() {
+        if (this.children.length === 0) {
+            return this.value;
+        }
+        return this.children.map(c => c.stringify()).join('');
+    }
+    // --- Optional chain conversion ---
+    toOptionalChain(isFirst = false) {
+        switch (this.type) {
+            case TokenType.PROPERTY_ACCESS:
+                return `?.${this.children.map(c => c.toOptionalChain()).join('')}`;
+            case TokenType.BRACKET_ACCESS:
+                // 첫 번째 요소인 경우 ?. 추가하지 않음
+                if (isFirst) {
+                    return `[${this.children.map(c => c.toOptionalChain()).join('')}]`;
+                }
+                return `?.[${this.children.map(c => c.toOptionalChain()).join('')}]`;
+            case TokenType.FUNCTION_CALL:
+                return `?.(${this.children.map(c => c.toOptionalChain()).join('')})`;
+            case TokenType.MEMBER_EXPRESSION:
+                if (this.children.length === 0)
+                    return this.value;
+                let result = '';
+                for (let i = 0; i < this.children.length; i++) {
+                    const child = this.children[i];
+                    // 첫 번째 자식에게 isFirst=true 전달
+                    result += child.toOptionalChain(i === 0);
+                }
+                return result;
+            case TokenType.PARENTHESIZED:
+                // isOptional이 설정되어 있으면 ?. 접근으로 처리
+                if (this.isOptional) {
+                    return `?.(${this.children.map(c => c.toOptionalChain()).join('')})`;
+                }
+                // 부모가 MEMBER_EXPRESSION이고 첫 번째 자식이 아니면 ?. 추가
+                if (this.parent?.type === TokenType.MEMBER_EXPRESSION && !isFirst) {
+                    return `?.(${this.children.map(c => c.toOptionalChain()).join('')})`;
+                }
+                return `(${this.children.map(c => c.toOptionalChain()).join('')})`;
+            case TokenType.TERNARY:
+                // children: [condition, trueBranch, falseBranch]
+                if (this.children.length >= 3) {
+                    return `${this.children[0].toOptionalChain()} ? ${this.children[1].toOptionalChain()} : ${this.children[2].toOptionalChain()}`;
+                }
+                return this.stringify();
+            case TokenType.BINARY:
+                // children: [left, right], value contains operator
+                if (this.children.length >= 2) {
+                    const op = this.value;
+                    // 원본 공백 보존
+                    const leftSp = this.leftSpace;
+                    const rightSp = this.rightSpace;
+                    return `${this.children[0].toOptionalChain()}${leftSp}${op}${rightSp}${this.children[1].toOptionalChain()}`;
+                }
+                return this.stringify();
+            case TokenType.ROOT:
+                return this.children.map(c => c.toOptionalChain()).join('');
+            case TokenType.OBJECT_LITERAL:
+            case TokenType.ARRAY_LITERAL:
+            case TokenType.STRING:
+            case TokenType.NUMBER:
+            case TokenType.TEMPLATE_LITERAL:
+                return this.value;
+            case TokenType.OPERATOR:
+                // Unary operator with children (e.g., !expr)
+                if (this.children.length > 0) {
+                    return `${this.value}${this.children.map(c => c.toOptionalChain()).join('')}`;
+                }
+                return this.value;
+            default:
+                return this.value;
+        }
+    }
+    // --- Tree traversal ---
+    walk(callback, depth = 0) {
+        callback(this, depth);
+        for (const child of this.children) {
+            child.walk(callback, depth + 1);
+        }
+    }
+    find(predicate) {
+        if (predicate(this))
+            return this;
+        for (const child of this.children) {
+            const found = child.find(predicate);
+            if (found)
+                return found;
+        }
+        return null;
+    }
+    findAll(predicate) {
+        const results = [];
+        this.walk((token) => {
+            if (predicate(token))
+                results.push(token);
+        });
+        return results;
+    }
+}
+// --- ObjectPathParser Class ---
+class ObjectPathParser {
+    input;
+    pos = 0;
+    root;
+    constructor(input = '') {
+        this.input = input;
+        this.root = new Token(TokenType.ROOT, '', 0, input.length);
+        if (input) {
+            this.parse();
+        }
+    }
+    // --- Getters ---
+    getInput() {
+        return this.input;
+    }
+    getRoot() {
+        return this.root;
+    }
+    getTokens() {
+        return this.root.children;
+    }
+    // --- Flat token list (for backward compatibility) ---
+    getFlatTokens() {
+        const tokens = [];
+        this.root.walk((token) => {
+            if (token.type !== TokenType.ROOT) {
+                tokens.push(token);
+            }
+        });
+        return tokens;
+    }
+    // --- Helper methods ---
+    isFunctionScript() {
+        return this.input.trim().startsWith('function');
+    }
+    isArrowFunctionScript() {
+        return /^\s*\([^)]*\)\s*=>/.test(this.input);
+    }
+    isObjectLiteralInput() {
+        const trimmed = this.input.trim();
+        return trimmed.startsWith('{') && trimmed.endsWith('}');
+    }
+    // --- Tokenizer helpers ---
+    peek(offset = 0) {
+        return this.input[this.pos + offset] || '';
+    }
+    advance() {
+        return this.input[this.pos++] || '';
+    }
+    isEOF() {
+        return this.pos >= this.input.length;
+    }
+    skipWhitespace() {
+        while (!this.isEOF() && /\s/.test(this.peek())) {
+            this.advance();
+        }
+    }
+    // --- Main parse method ---
+    parse() {
+        this.pos = 0;
+        this.root = new Token(TokenType.ROOT, '', 0, this.input.length);
+        while (!this.isEOF()) {
+            this.skipWhitespace();
+            if (this.isEOF())
+                break;
+            const token = this.parseExpression();
+            if (token) {
+                this.root.addChild(token);
+            }
+        }
+    }
+    parseExpression() {
+        this.skipWhitespace();
+        if (this.isEOF())
+            return null;
+        // Check for ternary operator at top level
+        const ternary = this.tryParseTernary();
+        if (ternary)
+            return ternary;
+        // Check for binary operators
+        const binary = this.tryParseBinary();
+        if (binary)
+            return binary;
+        // Parse primary expression (member expression, literal, etc.)
+        return this.parsePrimaryExpression();
+    }
+    parsePrimaryExpression() {
+        this.skipWhitespace();
+        if (this.isEOF())
+            return null;
+        const start = this.pos;
+        const char = this.peek();
+        // String literal
+        if (char === "'" || char === '"') {
+            return this.parseString(char);
+        }
+        // Template literal
+        if (char === '`') {
+            return this.parseTemplateLiteral();
+        }
+        // Object literal
+        if (char === '{') {
+            return this.parseObjectLiteral();
+        }
+        // Array literal or bracket access at start
+        if (char === '[') {
+            return this.parseArrayOrBracket();
+        }
+        // Parenthesized expression
+        if (char === '(') {
+            return this.parseParenthesized();
+        }
+        // Number
+        if (/\d/.test(char)) {
+            return this.parseNumber();
+        }
+        // Identifier (start of member expression)
+        if (/[a-zA-Z_$]/.test(char)) {
+            return this.parseMemberExpression();
+        }
+        // Unary NOT operator (!)
+        if (char === '!') {
+            return this.parseUnaryNot();
+        }
+        // Operator
+        if (this.isOperatorChar(char)) {
+            return this.parseOperator();
+        }
+        // Unknown - skip
+        this.advance();
+        return null;
+    }
+    // Parse unary NOT operator (!expr)
+    parseUnaryNot() {
+        const start = this.pos;
+        this.advance(); // consume !
+        this.skipWhitespace();
+        // Parse the expression after !
+        const expr = this.parsePrimaryExpression();
+        if (expr) {
+            // Create a unary token that wraps the expression
+            const unary = new Token(TokenType.OPERATOR, '!', start, this.pos);
+            unary.addChild(expr);
+            return unary;
+        }
+        return new Token(TokenType.OPERATOR, '!', start, this.pos);
+    }
+    parseMemberExpression() {
+        const start = this.pos;
+        const memberExpr = new Token(TokenType.MEMBER_EXPRESSION, '', start, start);
+        // Parse the base identifier
+        const identifier = this.parseIdentifier();
+        memberExpr.addChild(identifier);
+        // Parse chain of accesses
+        while (!this.isEOF()) {
+            const char = this.peek();
+            // Optional chaining: ?.
+            if (char === '?' && this.peek(1) === '.') {
+                this.advance();
+                this.advance(); // consume ?.
+                if (this.peek() === '[') {
+                    // ?.[
+                    const bracket = this.parseBracketAccess(true);
+                    memberExpr.addChild(bracket);
+                }
+                else if (this.peek() === '(') {
+                    // ?.(
+                    const funcCall = this.parseFunctionCall(true);
+                    memberExpr.addChild(funcCall);
+                }
+                else {
+                    // ?.property
+                    const prop = this.parsePropertyAccess(true);
+                    memberExpr.addChild(prop);
+                }
+            }
+            // Regular dot access
+            else if (char === '.') {
+                this.advance(); // consume .
+                // Check if next is parenthesis (e.g., a.(b).c)
+                if (this.peek() === '(') {
+                    const paren = this.parseParenthesizedAccess(false);
+                    memberExpr.addChild(paren);
+                }
+                else {
+                    const prop = this.parsePropertyAccess(false);
+                    memberExpr.addChild(prop);
+                }
+            }
+            // Bracket access
+            else if (char === '[') {
+                const bracket = this.parseBracketAccess(false);
+                memberExpr.addChild(bracket);
+            }
+            // Function call
+            else if (char === '(') {
+                const funcCall = this.parseFunctionCall(false);
+                memberExpr.addChild(funcCall);
+            }
+            else {
+                break;
+            }
+        }
+        memberExpr.end = this.pos;
+        memberExpr.value = this.input.substring(start, this.pos);
+        return memberExpr;
+    }
+    // 괄호로 감싸진 속성 접근 (e.g., a.(b).c)
+    parseParenthesizedAccess(isOptional) {
+        const start = this.pos;
+        this.advance(); // consume (
+        const paren = new Token(TokenType.PARENTHESIZED, '', start, start);
+        paren.isOptional = isOptional;
+        let depth = 1;
+        let content = '';
+        while (!this.isEOF() && depth > 0) {
+            const char = this.peek();
+            if (char === '(')
+                depth++;
+            else if (char === ')') {
+                depth--;
+                if (depth === 0)
+                    break;
+            }
+            content += this.advance();
+        }
+        if (content.trim()) {
+            const innerParser = new ObjectPathParser(content);
+            for (const child of innerParser.getTokens()) {
+                paren.addChild(child);
+            }
+        }
+        if (this.peek() === ')')
+            this.advance(); // consume )
+        paren.end = this.pos;
+        paren.value = this.input.substring(start, this.pos);
+        return paren;
+    }
+    parseIdentifier() {
+        const start = this.pos;
+        let value = '';
+        while (!this.isEOF() && /[a-zA-Z0-9_$]/.test(this.peek())) {
+            value += this.advance();
+        }
+        return new Token(TokenType.IDENTIFIER, value, start, this.pos);
+    }
+    parsePropertyAccess(isOptional) {
+        const start = this.pos;
+        const prop = new Token(TokenType.PROPERTY_ACCESS, '', start, start);
+        prop.isOptional = isOptional;
+        const identifier = this.parseIdentifier();
+        prop.addChild(identifier);
+        prop.end = this.pos;
+        prop.value = this.input.substring(start, this.pos);
+        return prop;
+    }
+    parseBracketAccess(isOptional) {
+        const start = this.pos;
+        this.advance(); // consume [
+        const bracket = new Token(TokenType.BRACKET_ACCESS, '', start, start);
+        bracket.isOptional = isOptional;
+        // Parse content inside brackets
+        const contentStart = this.pos;
+        let depth = 1;
+        let content = '';
+        while (!this.isEOF() && depth > 0) {
+            const char = this.peek();
+            if (char === '[')
+                depth++;
+            else if (char === ']') {
+                depth--;
+                if (depth === 0)
+                    break;
+            }
+            content += this.advance();
+        }
+        // Parse the content as expression
+        if (content.trim()) {
+            const innerParser = new ObjectPathParser(content);
+            for (const child of innerParser.getTokens()) {
+                bracket.addChild(child);
+            }
+        }
+        if (this.peek() === ']')
+            this.advance(); // consume ]
+        bracket.end = this.pos;
+        bracket.value = this.input.substring(start, this.pos);
+        return bracket;
+    }
+    parseFunctionCall(isOptional) {
+        const start = this.pos;
+        this.advance(); // consume (
+        const funcCall = new Token(TokenType.FUNCTION_CALL, '', start, start);
+        funcCall.isOptional = isOptional;
+        // Parse arguments
+        let depth = 1;
+        let content = '';
+        while (!this.isEOF() && depth > 0) {
+            const char = this.peek();
+            if (char === '(')
+                depth++;
+            else if (char === ')') {
+                depth--;
+                if (depth === 0)
+                    break;
+            }
+            content += this.advance();
+        }
+        // Parse arguments as expressions
+        if (content.trim()) {
+            const innerParser = new ObjectPathParser(content);
+            for (const child of innerParser.getTokens()) {
+                funcCall.addChild(child);
+            }
+        }
+        if (this.peek() === ')')
+            this.advance(); // consume )
+        funcCall.end = this.pos;
+        funcCall.value = this.input.substring(start, this.pos);
+        return funcCall;
+    }
+    parseParenthesized() {
+        const start = this.pos;
+        this.advance(); // consume (
+        const paren = new Token(TokenType.PARENTHESIZED, '', start, start);
+        let depth = 1;
+        let content = '';
+        while (!this.isEOF() && depth > 0) {
+            const char = this.peek();
+            if (char === '(')
+                depth++;
+            else if (char === ')') {
+                depth--;
+                if (depth === 0)
+                    break;
+            }
+            content += this.advance();
+        }
+        if (content.trim()) {
+            const innerParser = new ObjectPathParser(content);
+            for (const child of innerParser.getTokens()) {
+                paren.addChild(child);
+            }
+        }
+        if (this.peek() === ')')
+            this.advance(); // consume )
+        paren.end = this.pos;
+        paren.value = this.input.substring(start, this.pos);
+        // Check if followed by member access (e.g., (expr).prop or (expr)[0] or (expr)?.prop)
+        if (this.peek() === '.' || this.peek() === '[' || (this.peek() === '?' && this.peek(1) === '.')) {
+            const memberExpr = new Token(TokenType.MEMBER_EXPRESSION, '', start, start);
+            memberExpr.addChild(paren);
+            while (!this.isEOF()) {
+                const char = this.peek();
+                // Optional chaining: ?.
+                if (char === '?' && this.peek(1) === '.') {
+                    this.advance();
+                    this.advance(); // consume ?.
+                    if (this.peek() === '[') {
+                        const bracket = this.parseBracketAccess(true);
+                        memberExpr.addChild(bracket);
+                    }
+                    else if (this.peek() === '(') {
+                        const funcCall = this.parseFunctionCall(true);
+                        memberExpr.addChild(funcCall);
+                    }
+                    else {
+                        const prop = this.parsePropertyAccess(true);
+                        memberExpr.addChild(prop);
+                    }
+                }
+                else if (char === '.') {
+                    this.advance(); // consume .
+                    if (this.peek() === '(') {
+                        const parenAccess = this.parseParenthesizedAccess(false);
+                        memberExpr.addChild(parenAccess);
+                    }
+                    else {
+                        const prop = this.parsePropertyAccess(false);
+                        memberExpr.addChild(prop);
+                    }
+                }
+                else if (char === '[') {
+                    const bracket = this.parseBracketAccess(false);
+                    memberExpr.addChild(bracket);
+                }
+                else {
+                    break;
+                }
+            }
+            memberExpr.end = this.pos;
+            memberExpr.value = this.input.substring(start, this.pos);
+            return memberExpr;
+        }
+        return paren;
+    }
+    parseString(quote) {
+        const start = this.pos;
+        let value = this.advance(); // opening quote
+        while (!this.isEOF() && this.peek() !== quote) {
+            if (this.peek() === '\\') {
+                value += this.advance();
+                if (!this.isEOF())
+                    value += this.advance();
+            }
+            else {
+                value += this.advance();
+            }
+        }
+        if (!this.isEOF())
+            value += this.advance(); // closing quote
+        return new Token(TokenType.STRING, value, start, this.pos);
+    }
+    parseTemplateLiteral() {
+        const start = this.pos;
+        let value = this.advance(); // opening `
+        let depth = 0;
+        while (!this.isEOF()) {
+            const char = this.peek();
+            if (char === '`' && depth === 0) {
+                value += this.advance();
+                break;
+            }
+            // Handle ${...} expressions - process them for optional chaining
+            if (char === '$' && this.peek(1) === '{') {
+                value += this.advance(); // $
+                value += this.advance(); // {
+                depth++;
+                // Collect the expression inside ${...}
+                let exprContent = '';
+                let exprDepth = 1;
+                while (!this.isEOF() && exprDepth > 0) {
+                    const c = this.peek();
+                    if (c === '{')
+                        exprDepth++;
+                    else if (c === '}') {
+                        exprDepth--;
+                        if (exprDepth === 0)
+                            break;
+                    }
+                    exprContent += this.advance();
+                }
+                // Process the expression for optional chaining
+                if (exprContent.trim()) {
+                    const innerParser = new ObjectPathParser(exprContent);
+                    value += innerParser.toOptionalChainPath();
+                }
+                if (this.peek() === '}') {
+                    value += this.advance(); // }
+                    depth--;
+                }
+                continue;
+            }
+            if (char === '\\') {
+                value += this.advance();
+                if (!this.isEOF())
+                    value += this.advance();
+            }
+            else {
+                value += this.advance();
+            }
+        }
+        return new Token(TokenType.TEMPLATE_LITERAL, value, start, this.pos);
+    }
+    parseNumber() {
+        const start = this.pos;
+        let value = '';
+        while (!this.isEOF() && /[\d.]/.test(this.peek())) {
+            value += this.advance();
+        }
+        return new Token(TokenType.NUMBER, value, start, this.pos);
+    }
+    parseObjectLiteral() {
+        const start = this.pos;
+        this.advance(); // consume {
+        let depth = 1;
+        let content = '{';
+        while (!this.isEOF() && depth > 0) {
+            const char = this.peek();
+            if (char === '{')
+                depth++;
+            else if (char === '}')
+                depth--;
+            content += this.advance();
+        }
+        return new Token(TokenType.OBJECT_LITERAL, content, start, this.pos);
+    }
+    parseArrayOrBracket() {
+        const start = this.pos;
+        this.advance(); // consume [
+        let depth = 1;
+        let content = '';
+        while (!this.isEOF() && depth > 0) {
+            const char = this.peek();
+            if (char === '[')
+                depth++;
+            else if (char === ']') {
+                depth--;
+                if (depth === 0)
+                    break;
+            }
+            content += this.advance();
+        }
+        if (this.peek() === ']')
+            this.advance();
+        // Check if this is followed by member access (then it's bracket access at start)
+        if (this.peek() === '.' || this.peek() === '[') {
+            const bracket = new Token(TokenType.BRACKET_ACCESS, `[${content}]`, start, this.pos);
+            if (content.trim()) {
+                const innerParser = new ObjectPathParser(content);
+                for (const child of innerParser.getTokens()) {
+                    bracket.addChild(child);
+                }
+            }
+            // Continue parsing as member expression
+            const memberExpr = new Token(TokenType.MEMBER_EXPRESSION, '', start, start);
+            memberExpr.addChild(bracket);
+            while (!this.isEOF()) {
+                const char = this.peek();
+                if (char === '.') {
+                    this.advance();
+                    memberExpr.addChild(this.parsePropertyAccess(false));
+                }
+                else if (char === '[') {
+                    memberExpr.addChild(this.parseBracketAccess(false));
+                }
+                else {
+                    break;
+                }
+            }
+            memberExpr.end = this.pos;
+            memberExpr.value = this.input.substring(start, this.pos);
+            return memberExpr;
+        }
+        // Otherwise it's an array literal
+        return new Token(TokenType.ARRAY_LITERAL, `[${content}]`, start, this.pos);
+    }
+    isOperatorChar(char) {
+        return ['+', '-', '*', '/', '%', '=', '!', '<', '>', '&', '|', '?'].includes(char);
+    }
+    parseOperator() {
+        const start = this.pos;
+        let value = this.advance();
+        const next = this.peek();
+        // Multi-char operators
+        if ((value === '=' || value === '!' || value === '<' || value === '>') && next === '=') {
+            value += this.advance();
+            if (this.peek() === '=')
+                value += this.advance();
+        }
+        else if ((value === '&' && next === '&') || (value === '|' && next === '|')) {
+            value += this.advance();
+        }
+        else if (value === '?' && next === '?') {
+            value += this.advance();
+        }
+        return new Token(TokenType.OPERATOR, value, start, this.pos);
+    }
+    tryParseTernary() {
+        // Look ahead for ternary pattern: expr ? expr : expr
+        const savedPos = this.pos;
+        const remaining = this.input.substring(this.pos);
+        // Find ternary operator at depth 0, respecting string literals
+        let depth = 0;
+        let inString = false;
+        let stringChar = '';
+        let questionIdx = -1;
+        let colonIdx = -1;
+        for (let i = 0; i < remaining.length; i++) {
+            const char = remaining[i];
+            const prevChar = i > 0 ? remaining[i - 1] : '';
+            // Track string state (handle escape characters)
+            if ((char === '"' || char === "'" || char === '`') && prevChar !== '\\') {
+                if (!inString) {
+                    inString = true;
+                    stringChar = char;
+                }
+                else if (char === stringChar) {
+                    inString = false;
+                    stringChar = '';
+                }
+            }
+            if (inString)
+                continue;
+            // Track depth for parentheses, brackets, braces
+            if (char === '(' || char === '[' || char === '{')
+                depth++;
+            else if (char === ')' || char === ']' || char === '}')
+                depth--;
+            // Find ternary ? at depth 0
+            if (depth === 0 && char === '?') {
+                const nextChar = remaining[i + 1] || '';
+                // Skip optional chaining (?.) and nullish coalescing (??)
+                if (nextChar === '.' || nextChar === '?')
+                    continue;
+                // Ternary ? should be followed by whitespace or expression
+                questionIdx = i;
+            }
+            // Find ternary : at depth 0 (only after finding ?)
+            if (depth === 0 && char === ':' && questionIdx >= 0 && colonIdx < 0) {
+                colonIdx = i;
+                break;
+            }
+        }
+        // Not a ternary expression
+        if (questionIdx < 0 || colonIdx < 0)
+            return null;
+        const condStr = remaining.substring(0, questionIdx).trim();
+        const trueStr = remaining.substring(questionIdx + 1, colonIdx).trim();
+        const falseStr = remaining.substring(colonIdx + 1).trim();
+        if (!condStr || !trueStr || !falseStr)
+            return null;
+        const ternary = new Token(TokenType.TERNARY, remaining, savedPos, savedPos + remaining.length);
+        const condParser = new ObjectPathParser(condStr);
+        const trueParser = new ObjectPathParser(trueStr);
+        const falseParser = new ObjectPathParser(falseStr);
+        for (const child of condParser.getTokens())
+            ternary.addChild(child);
+        for (const child of trueParser.getTokens())
+            ternary.addChild(child);
+        for (const child of falseParser.getTokens())
+            ternary.addChild(child);
+        this.pos = this.input.length; // consume all
+        return ternary;
+    }
+    tryParseBinary() {
+        // Look for binary operators at top level
+        const remaining = this.input.substring(this.pos);
+        // Check operators in order of precedence (lowest to highest)
+        // This ensures we parse correctly: a < b - c => a < (b - c), not (a < b) - c
+        const operatorGroups = [
+            ['||'], // Logical OR (lowest precedence)
+            ['&&'], // Logical AND
+            ['??'], // Nullish coalescing
+            ['<', '>', '<=', '>='], // Comparison
+            ['===', '!==', '==', '!='], // Equality
+            ['+', '-'], // Addition/Subtraction
+            ['*', '/', '%'] // Multiplication/Division (highest precedence)
+        ];
+        // Search from lowest to highest precedence
+        for (const operators of operatorGroups) {
+            for (const op of operators) {
+                let depth = 0;
+                let inString = false;
+                let stringChar = '';
+                let lastMatchIndex = -1;
+                // Find the LAST occurrence of this operator at depth 0 (right-to-left for left-associative)
+                for (let i = 0; i < remaining.length - op.length + 1; i++) {
+                    const char = remaining[i];
+                    // Track string state
+                    if ((char === '"' || char === "'" || char === '`') && (i === 0 || remaining[i - 1] !== '\\')) {
+                        if (!inString) {
+                            inString = true;
+                            stringChar = char;
+                        }
+                        else if (char === stringChar) {
+                            inString = false;
+                        }
+                    }
+                    if (inString)
+                        continue;
+                    // Track depth
+                    if (char === '(' || char === '[' || char === '{')
+                        depth++;
+                    else if (char === ')' || char === ']' || char === '}')
+                        depth--;
+                    // Check for operator at depth 0
+                    if (depth === 0 && remaining.substring(i, i + op.length) === op) {
+                        // Make sure it's not part of optional chaining
+                        if (op === '?' && remaining[i + 1] === '.')
+                            continue;
+                        // For - operator, make sure it's not a negative number
+                        if (op === '-') {
+                            // Look back to find the last non-whitespace character
+                            let lastNonSpace = '';
+                            for (let j = i - 1; j >= 0; j--) {
+                                if (remaining[j].trim()) {
+                                    lastNonSpace = remaining[j];
+                                    break;
+                                }
+                            }
+                            // Skip if it looks like a negative number (after operator, comma, or opening bracket/paren, or at start)
+                            if (!lastNonSpace || /[+\-*\/%=<>!&|,(\[]/.test(lastNonSpace)) {
+                                continue;
+                            }
+                        }
+                        // For comparison/equality operators, make sure we're not matching part of a longer operator
+                        if (['<', '>', '=', '!'].includes(op)) {
+                            const nextChar = remaining[i + op.length] || '';
+                            if (nextChar === '=')
+                                continue; // Skip < if it's part of <=
+                        }
+                        lastMatchIndex = i;
+                    }
+                }
+                // If we found a match, split there
+                if (lastMatchIndex >= 0) {
+                    const i = lastMatchIndex;
+                    const leftRaw = remaining.substring(0, i);
+                    const rightRaw = remaining.substring(i + op.length);
+                    const leftStr = leftRaw.trim();
+                    const rightStr = rightRaw.trim();
+                    if (leftStr && rightStr) {
+                        const binary = new Token(TokenType.BINARY, op, this.pos, this.pos + remaining.length);
+                        // 연산자 주변 공백 보존
+                        const leftTrailingSpace = leftRaw.substring(leftStr.length);
+                        const rightLeadingSpace = rightRaw.substring(0, rightRaw.length - rightRaw.trimStart().length);
+                        binary.leftSpace = leftTrailingSpace;
+                        binary.rightSpace = rightLeadingSpace;
+                        const leftParser = new ObjectPathParser(leftStr);
+                        const rightParser = new ObjectPathParser(rightStr);
+                        // Binary token should have exactly 2 children: left and right
+                        // Wrap the parsed results in containers that preserve the original structure
+                        const leftContainer = new Token(TokenType.ROOT, leftStr, 0, leftStr.length);
+                        for (const child of leftParser.getTokens())
+                            leftContainer.addChild(child);
+                        binary.addChild(leftContainer);
+                        const rightContainer = new Token(TokenType.ROOT, rightStr, 0, rightStr.length);
+                        for (const child of rightParser.getTokens())
+                            rightContainer.addChild(child);
+                        binary.addChild(rightContainer);
+                        this.pos = this.input.length;
+                        return binary;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    // --- Main conversion method ---
+    toOptionalChainPath() {
+        if (!this.input)
+            return '';
+        // 객체 리터럴은 변환하지 않음
+        if (this.isObjectLiteralInput())
+            return this.input;
+        // 함수 스크립트는 변환하지 않음
+        if (this.isFunctionScript() || this.isArrowFunctionScript())
+            return this.input;
+        return this.root.toOptionalChain();
+    }
+    removeOptionalChainOperator() {
+        if (!this.input)
+            return '';
+        return this.input.replace(/\?\./g, '.').replace(/\.\[/g, '[');
+    }
+    stringify() {
+        return this.root.stringify();
+    }
+    // --- Static factory methods ---
+    static parse(input) {
+        return new ObjectPathParser(input);
+    }
+    static isFunctionScript(script) {
+        return script.trim().startsWith('function');
+    }
+    static isArrowFunctionScript(script) {
+        return /^\s*\([^)]*\)\s*=>/.test(script);
+    }
+    static isObjectLiteral(script) {
+        const trimmed = script.trim();
+        return trimmed.startsWith('{') && trimmed.endsWith('}');
+    }
+}
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/core/src/promise/AbortablePromise.ts":
+/*!************************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/promise/AbortablePromise.ts ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AbortablePromise: () => (/* binding */ AbortablePromise)
+/* harmony export */ });
+/**
+ * AbortablePromise - Promise-like class that supports AbortSignal
+ * Allows chaining with .then() and collects steps for sequential execution
+ */
+class AbortablePromise {
+    steps = [];
+    signal;
+    initialExecutor;
+    errorHandler;
+    constructor(executor, signal) {
+        this.initialExecutor = executor;
+        this.signal = signal;
+    }
+    then(onfulfilled, onrejected) {
+        // Create new promise instance
+        const newPromise = new AbortablePromise(this.initialExecutor, this.signal);
+        // Copy existing steps
+        newPromise.steps = [...this.steps];
+        // Add new step if provided
+        if (onfulfilled) {
+            newPromise.steps.push(onfulfilled);
+        }
+        // Set error handler if provided
+        if (onrejected) {
+            newPromise.errorHandler = onrejected;
+        }
+        else if (this.errorHandler) {
+            newPromise.errorHandler = this.errorHandler;
+        }
+        return newPromise;
+    }
+    catch(onrejected) {
+        return this.then(undefined, onrejected);
+    }
+    finally(onfinally) {
+        return this.then((value) => {
+            onfinally?.();
+            return value;
+        }, (reason) => {
+            onfinally?.();
+            throw reason;
+        });
+    }
+    async execute() {
+        try {
+            // Check abort before starting
+            if (this.signal?.aborted) {
+                throw new Error(this.signal.reason || 'Aborted');
+            }
+            // Create abort promise
+            const abortPromise = new Promise((_, reject) => {
+                if (this.signal?.aborted) {
+                    return reject(new Error(this.signal.reason || 'Aborted'));
+                }
+                const callback = (e) => {
+                    const target = e.target;
+                    this.signal?.removeEventListener('abort', callback);
+                    reject(new Error(target.reason || 'Aborted'));
+                };
+                this.signal?.addEventListener('abort', callback, { once: true });
+            });
+            // Pipeline runner
+            const pipelineRunner = async () => {
+                // Execute initial executor
+                let lastResult;
+                if (typeof this.initialExecutor === 'function') {
+                    if (this.signal?.aborted) {
+                        throw new Error(this.signal.reason || 'Aborted');
+                    }
+                    lastResult = await this.initialExecutor();
+                }
+                else {
+                    lastResult = await this.initialExecutor;
+                }
+                // Execute each step sequentially
+                for (let i = 0; i < this.steps.length; i++) {
+                    // Check abort before each step
+                    if (this.signal?.aborted) {
+                        throw new Error(this.signal.reason || 'Aborted');
+                    }
+                    const step = this.steps[i];
+                    lastResult = await step(lastResult);
+                }
+                return lastResult;
+            };
+            return await Promise.race([pipelineRunner(), abortPromise]);
+        }
+        catch (error) {
+            if (this.errorHandler) {
+                return await this.errorHandler(error);
+            }
+            throw error;
+        }
+    }
+    // Convert to native Promise
+    toPromise() {
+        return this.execute();
+    }
+}
+
+
+/***/ }),
+
 /***/ "../../packages/@dooboostore/core/src/promise/Promises.ts":
 /*!****************************************************************!*\
   !*** ../../packages/@dooboostore/core/src/promise/Promises.ts ***!
@@ -8325,6 +9375,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Promises: () => (/* binding */ Promises)
 /* harmony export */ });
 /* harmony import */ var _valid_ValidUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
+/* harmony import */ var _AbortablePromise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AbortablePromise */ "../../packages/@dooboostore/core/src/promise/AbortablePromise.ts");
+
 
 var Promises;
 (function (Promises) {
@@ -8410,42 +9462,13 @@ var Promises;
             }, delay);
         });
     };
-    Promises.transaction = (promise, config) => {
-        const p = typeof promise === 'function' ? promise() : promise;
-        let after;
-        let before;
-        let promiseData;
-        new Promise((resolve, reject) => {
-            const execute = () => {
-                before = config?.before?.();
-                p.then(data => {
-                    resolve(data);
-                });
-                after = config?.after?.();
-            };
-            setTimeout(() => {
-                execute();
-            }, config?.delay ?? 0);
-            // if (config?.delay) {
-            // } else {
-            //   setTimeout(() => {
-            //     execute();
-            //   },1000);
-            // }
-        })
-            .then(data => {
-            promiseData = data;
-            config?.then?.(data, { before: before });
-        })
-            .catch(e => {
-            config?.catch?.(e, { before: before, after: after });
-            if (!config?.disabledCatchThrow) {
-                throw e;
-            }
-        })
-            .finally(() => {
-            config?.finally?.({ before: before, after: after, data: promiseData });
-        });
+    /**
+     * Create an abortable promise chain
+     * @param executor Initial promise or promise factory
+     * @param signal Optional AbortSignal to cancel the execution
+     */
+    Promises.abortable = (executor, signal) => {
+        return new _AbortablePromise__WEBPACK_IMPORTED_MODULE_1__.AbortablePromise(executor, signal);
     };
     Promises.withResolvers = () => {
         let resolve;
@@ -9747,69 +10770,46 @@ class DomRenderProxy {
         }
         const removeRawSets = [];
         const rawSets = raws ?? this.getRawSets();
+        // console.log('Total RawSets to render:', Array.isArray(rawSets) ? rawSets.length : 0);
         // console.log('----', rawSets);
-        for (const it of rawSets) {
-            it.getUsingTriggerVariables(this._domRender_config).forEach(path => {
-                // console.log('getUsingTriggerVariables->', path);
-                this.addRawSet(path, it);
-            });
-            let renderResult;
-            if (it.isConnected) {
-                // 중요 render될때 targetAttribute 체크 해야함.
-                const targetAttrMap = it.point.node?.getAttribute?.(_events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.normalAttrMapAttrName);
-                // console.log('sssssssssSSS?',it, targetAttrMap)
-                // console.log('----2', it, fullPathStr, targetAttrMap, (it.fragment as any).render, it.isConnected, this.getRawSets());
-                if (it.detect?.action) {
-                    it.detect.action();
-                    // } else if (it.type === RawSetType.TARGET_ELEMENT && it.data && fullPathStr && targetAttrMap && (it.fragment as any).render) {
-                }
-                else if (it.type === _rawsets_RawSetType__WEBPACK_IMPORTED_MODULE_3__.RawSetType.TARGET_ELEMENT &&
-                    it.dataSet?.render?.currentThis &&
-                    fullPathStr &&
-                    targetAttrMap) {
-                    new Map(JSON.parse(targetAttrMap)).forEach((v, k) => {
-                        // it?.data.onChangeAttrRender(k, null, v);
-                        // console.log('------->?',v,k);
-                        const isUsing = v.variablePaths.some(it => _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.isUsingThisVar(it.inner, `this.${fullPathStr}`));
-                        // console.log('------->?',v,k, isUsing);
-                        if (isUsing) {
-                            const targetAttrObject = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.getAttributeObject(it.point.node, {
-                                script: it.dataSet?.render?.renderScript ?? '',
-                                obj: Object.assign(this._domRender_proxy ?? {}, { __render: it.dataSet?.render })
-                            });
-                            it.dataSet.render ??= {};
-                            it.dataSet.render.attribute = targetAttrObject;
-                            // const render = it.dataSet?.render;
-                            // console.log('render-->!!!!!', it.dataSet.render);
-                            // const script = `${render.renderScript} return ${v} `;
-                            // const cval = ScriptUtils.eval(script, Object.assign(this._domRender_proxy ?? {}, { __render: render }));
-                            if ((0,_lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_11__.isOnChangeAttrRender)(it.dataSet?.render?.currentThis)) {
-                                it.dataSet?.render?.currentThis?.onChangeAttrRender?.(k, targetAttrObject[k], { rawSet: it });
-                            }
-                        }
-                        // console.log('---?', v, fullPathStr, isUsing);
-                    });
-                    // ------------------->
-                }
-                else {
-                    const rawSets = await it.render(this._domRender_proxy, this._domRender_config);
-                    renderResult = rawSets;
-                    // 그외 자식들 render
-                    if (rawSets && rawSets.raws.length > 0) {
-                        await this.render(rawSets.raws);
-                    }
-                }
-            }
-            else {
-                removeRawSets.push(it);
-            }
-            const t = it.findNearThis(this._domRender_proxy);
-            // TODO: 호출된곳에서 또 변수를 수정하게되면 무한루프니깐 왠만하면 사용못하게 해야한다.
-            if ((0,_lifecycle_OnRawSetRendered__WEBPACK_IMPORTED_MODULE_19__.isOnRawSetRendered)(t)) {
-                await t.onRawSetRendered(it, { path: fullPathStr, value: _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(`this.${fullPathStr}`, this._domRender_proxy), root: this._domRender_proxy, renderResult });
-            }
-            // console.log('----', it);
+        // console.log('----', rawSets);
+        const CHUNK_SIZE = 50;
+        const chunks = [];
+        let rawSetsArray = Array.from(rawSets);
+        // console.log('--->1', JSON.stringify(rawSetsArray.map(it=>it.type)));
+        // rawSetsArray = rawSetsArray.sort((a, b) => {
+        //   const order = { [RawSetType.TARGET_ELEMENT]: 0, [RawSetType.TARGET_ATTR]: 1, [RawSetType.TEXT]: 2 };
+        //   return (order[a.type] ?? 999) - (order[b.type] ?? 999);
+        // });
+        // console.log('--->2', JSON.stringify(rawSetsArray.map(it=>it.type)));
+        // await Promise.all(rawSetsArray.map(rawSet => this.renderExecute(rawSet, fullPathStr, removeRawSets)));
+        for (const rawSet of rawSetsArray) {
+            await this.renderExecute(rawSet, fullPathStr, removeRawSets);
         }
+        // 훔....아래 벌크..잘동작이 안되네..아... 위에처럼 하나씩 처리하면 되긴하는데..흠..
+        // const firstRawSet = rawSetsArray.shift();
+        // 이렇게 청크단위로 처리할때  await Promises.sleep(0); 을 넣어줘도 처음에 dr-for-of가 먼저 돌고 그러면 참고하고있는 rawSet들이 isConnect가 false되니깐 처리안되고
+        // 나중에 처리되면서 오류가 난다. 그래서 청크내에서 첫번째꺼는 바로처리하고 그다음꺼부터는 await를 넣어줘서 브라우저가 중간에 처리할 시간을 주도록 한다.
+        // 항상 먼저 등록된 path들에 의해 뒤에게 생성되는경우가 무조건이기떄문에 먼저거 한번 돌려주면 잘된다.
+        // 아니면 renderExecute  안쪽에서 매번 sleep을 줘도되는데.. 그렇게되면 부하가 너무 갈수 있어서.. 우선 첫번쨰것만 처리하도록해본다.
+        // if (firstRawSet) {
+        //   await this.renderExecute(firstRawSet, fullPathStr, removeRawSets);
+        // }
+        // for (let i = 0; i < rawSetsArray.length; i += (CHUNK_SIZE)) {
+        //   chunks.push(rawSetsArray.slice(i, i + CHUNK_SIZE));
+        // }
+        //
+        // for (const chunk of chunks) {
+        //   const promises = chunk.map(async (it, index) => {
+        //     await this.renderExecute(it, fullPathStr, removeRawSets);
+        //     // console.log('----', it);
+        //   });
+        //   // console.log('실행.!')
+        //   await Promise.all(promises);
+        //   if (chunks.length > 1) {
+        //     await new Promise(resolve => requestAnimationFrame(resolve));
+        //   }
+        // }
         if ((0,_lifecycle_OnChildRawSetRendered__WEBPACK_IMPORTED_MODULE_20__.isOnChildRawSetRendered)(this._domRender_proxy)) {
             await this._domRender_proxy.onChildRawSetRendered();
         }
@@ -9817,6 +10817,81 @@ class DomRenderProxy {
             this.removeRawSet(...removeRawSets);
         }
         return this.getRawSets();
+    }
+    async renderExecute(it, fullPathStr, removeRawSets) {
+        // console.log('실행?')
+        // await Promises.sleep(0);
+        it.getUsingTriggerVariables(this._domRender_config).forEach(path => {
+            // console.log('getUsingTriggerVariables->', path);
+            this.addRawSet(path, it);
+        });
+        let renderResult;
+        // console.log('isConnected?', it, it.isConnected);
+        if (it.isConnected) {
+            // 중요 render될때 targetAttribute 체크 해야함.
+            const targetAttrMap = it.point.node?.getAttribute?.(_events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.normalAttrMapAttrName);
+            // console.log('sssssssssSSS?',it, targetAttrMap)
+            // console.log('----2', it, fullPathStr, targetAttrMap, (it.fragment as any).render, it.isConnected, this.getRawSets());
+            if (it.detect?.action) {
+                it.detect.action();
+                // } else if (it.type === RawSetType.TARGET_ELEMENT && it.data && fullPathStr && targetAttrMap && (it.fragment as any).render) {
+            }
+            else if (it.type === _rawsets_RawSetType__WEBPACK_IMPORTED_MODULE_3__.RawSetType.TARGET_ELEMENT &&
+                it.dataSet?.render?.currentThis &&
+                fullPathStr &&
+                targetAttrMap) {
+                const attrStart = performance.now();
+                new Map(JSON.parse(targetAttrMap)).forEach((v, k) => {
+                    // it?.data.onChangeAttrRender(k, null, v);
+                    // console.log('------->?',v,k);
+                    const isUsing = v.variablePaths.some(it => _events_EventManager__WEBPACK_IMPORTED_MODULE_1__.EventManager.isUsingThisVar(it.inner, `this.${fullPathStr}`));
+                    // console.log('------->?',v,k, isUsing);
+                    if (isUsing) {
+                        const targetAttrObject = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_0__.RawSet.getAttributeObject(it.point.node, {
+                            script: it.dataSet?.render?.renderScript ?? '',
+                            obj: Object.assign(this._domRender_proxy ?? {}, { __render: it.dataSet?.render })
+                        });
+                        it.dataSet.render ??= {};
+                        it.dataSet.render.attribute = targetAttrObject;
+                        // const render = it.dataSet?.render;
+                        // console.log('render-->!!!!!', it.dataSet.render);
+                        // const script = `${render.renderScript} return ${v} `;
+                        // const cval = ScriptUtils.eval(script, Object.assign(this._domRender_proxy ?? {}, { __render: render }));
+                        if ((0,_lifecycle_OnChangeAttrRender__WEBPACK_IMPORTED_MODULE_11__.isOnChangeAttrRender)(it.dataSet?.render?.currentThis)) {
+                            it.dataSet?.render?.currentThis?.onChangeAttrRender?.(k, targetAttrObject[k], { rawSet: it });
+                        }
+                    }
+                    // console.log('---?', v, fullPathStr, isUsing);
+                });
+                const attrEnd = performance.now();
+                // if (attrEnd - attrStart > 10) {
+                // console.log('Slow Attr Update:', attrEnd - attrStart, it);
+                // }
+                // ------------------->
+            }
+            else {
+                const renderStart = performance.now();
+                const rawSets = await it.render(this._domRender_proxy, this._domRender_config);
+                // console.log('!!!!!!!!!', rawSets)
+                const renderEnd = performance.now();
+                // if (renderEnd - renderStart > 10) {
+                //   console.log('Slow RawSet Render:', renderEnd - renderStart, it);
+                // }
+                renderResult = rawSets;
+                // 그외 자식들 render
+                if (rawSets && rawSets.raws.length > 0) {
+                    await this.render(rawSets.raws);
+                }
+            }
+        }
+        else {
+            removeRawSets.push(it);
+        }
+        const t = it.findNearThis(this._domRender_proxy);
+        // TODO: 호출된곳에서 또 변수를 수정하게되면 무한루프니깐 왠만하면 사용못하게 해야한다.
+        if ((0,_lifecycle_OnRawSetRendered__WEBPACK_IMPORTED_MODULE_19__.isOnRawSetRendered)(t)) {
+            await t.onRawSetRendered(it, { path: fullPathStr, value: _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(`this.${fullPathStr}`, this._domRender_proxy), root: this._domRender_proxy, renderResult });
+        }
     }
     // domrender_ref로 찾는걸로 바꿈
     // public findRootDomRenderProxy(): DomRenderProxy<any> {
@@ -9827,6 +10902,7 @@ class DomRenderProxy {
     //   return current;
     // }
     root(pathInfos, value, lastDoneExecute = true) {
+        // console.time('root_total');
         const rootStartTime = Date.now();
         const pathKey = pathInfos.flat().map(i => i.path).join('.');
         // console.group(`🌳 DomRenderProxy root: ${pathKey}`);
@@ -9855,15 +10931,16 @@ class DomRenderProxy {
             });
         }
         else {
+            // console.time('root_recursive');
             const pathProcessStartTime = Date.now();
             // const firstPathStr = paths.slice(1).reverse().join('.');
-            const strings = pathInfos.reverse().map(it => it.map(it => it.path).join(','));
+            const shortPaths = pathInfos.reverse().map(it => it.map(it => it.path).join(','));
             // array같은경우도 키값으로 접근하기때문에 특정 인덱스를 찾아서 그부분만 바꿔줄수 있다.
-            const fullPathStr = strings
+            const fullPathStr = shortPaths
                 .map(it => (isNaN(Number(it)) ? '.' + it : `[${it}]`))
                 .join('')
                 .slice(1);
-            // console.log(`🛤️ Path processing time: ${Date.now() - pathProcessStartTime}ms for path: ${fullPathStr}`);
+            // console.log(`🛤️ Path processing time: ${Date.now() - pathProcessStartTime}ms for path: ${fullPathStr}`, lastDoneExecute);
             if (lastDoneExecute) {
                 // const firstData = ScriptUtils.evalReturn('this.' + firstPathStr, this._domRender_proxy);
                 // console.log('-------', firstPathStr, firstData);
@@ -9871,17 +10948,24 @@ class DomRenderProxy {
                 // }
                 const iterable = this._rawSets.get(fullPathStr);
                 // array check
-                const front = strings
-                    .slice(0, strings.length - 1)
+                const front = shortPaths
+                    .slice(0, shortPaths.length - 1)
                     .map(it => (isNaN(Number(it)) ? '.' + it : `[${it}]`))
                     .join('');
-                const lastPropertyName = strings[strings.length - 1];
+                const lastPropertyName = shortPaths[shortPaths.length - 1];
                 const path = 'this' + front;
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Script.evaluateReturn(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_16__.ObjectUtils.Path.toOptionalChainPath(path), this._domRender_proxy);
-                // console.log('root-->', this._rawSets, path, data );
+                // console.log('root-sub-->', this._rawSets, iterable, path, data );
+                // 중요: 값이 undefined/null이 되면 해당 경로로 시작하는 모든 child RawSet들을 정리
+                // 예: users가 undefined가 되면 users[0].imgUrl, users[1].office.name 등의 RawSet들도 제거
+                // if (value === undefined || value === null) {
+                //   this.removeChildRawSetsByPath(fullPathStr);
+                // }
                 // console.log('--!!!!', fullPathStr, iterable, data, front, last);
                 // 왜여기서 promise를 했을까를 생각해보면......훔.. 변수변경과 화면 뿌려주는걸 동기로하면 성능이 안나오고 비현실적이다.  그래서 promise
                 const promiseStartTime = Date.now();
+                // console.timeEnd('root_recursive');
+                // console.time('root_render_wait');
                 new Promise(async (resolve) => {
                     const promiseInnerStartTime = Date.now();
                     let rData = [];
@@ -9970,6 +11054,8 @@ class DomRenderProxy {
                     resolve(rData);
                 }).then(it => {
                     // console.log('DonrenderProxy root RenderDone')
+                    // console.timeEnd('root_render_wait');
+                    // console.timeEnd('root_total');
                 });
             }
             fullPaths.push([{ path: fullPathStr, obj: this._domRender_proxy }]);
@@ -10012,6 +11098,7 @@ class DomRenderProxy {
         // if ((target as any)[p] instanceof ComponentSet) {
         //   (target as any)[p]?.obj?.onDrThisUnBind?.();
         // }
+        // console.log('---', this._domRender_ref, p, this._domRender_proxy)
         // is ComponentSet
         if (value instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_6__.ComponentSet && target[p] instanceof _components_ComponentSet__WEBPACK_IMPORTED_MODULE_6__.ComponentSet) {
             value.config.beforeComponentSet = target[p];
@@ -10267,6 +11354,7 @@ class DomRenderProxy {
     //     this.garbageRawSet();
     // }
     removeRawSet(...raws) {
+        // console.log('Before removeRawSet, total rawSets:', this.getRawSets().length);
         this._rawSets.forEach(it => {
             it.forEach(sit => {
                 if (!sit.isConnected) {
@@ -10278,6 +11366,31 @@ class DomRenderProxy {
             });
         });
         this.targetGarbageRawSet();
+        // console.log('After removeRawSet, total rawSets:', this.getRawSets().length);
+    }
+    // 특정 경로로 시작하는 모든 child RawSet들을 제거
+    // 예: path가 'users'이면 'users[0]', 'users[0].imgUrl', 'users.length' 등 모두 제거
+    removeChildRawSetsByPath(parentPath) {
+        const pathsToRemove = [];
+        this._rawSets.forEach((rawSetSet, path) => {
+            // 정확히 일치하거나, 배열 인덱스 접근(users[), 또는 속성 접근(users.)으로 시작하는 경우
+            if (path === parentPath || path.startsWith(parentPath + '[') || path.startsWith(parentPath + '.')) {
+                pathsToRemove.push(path);
+            }
+        });
+        if (pathsToRemove.length > 0) {
+            console.log(`🧹 Removing child RawSets for path '${parentPath}':`, pathsToRemove);
+            pathsToRemove.forEach(path => {
+                const rawSetSet = this._rawSets.get(path);
+                if (rawSetSet) {
+                    rawSetSet.forEach(rawSet => {
+                        // DOM에서 제거
+                        rawSet.remove?.();
+                    });
+                    this._rawSets.delete(path);
+                }
+            });
+        }
     }
     targetGarbageRawSet() {
         this._targets.forEach(it => {
@@ -13867,7 +14980,7 @@ class EventManager {
         mouseleave: 'mouseout',
         mouseenter: 'mouseover',
         focus: 'focusin',
-        blur: 'focusout',
+        blur: 'focusout'
     };
     directAttachEvents = new Set(['close']);
     static ownerVariablePathAttrName = EventManager.attrPrefix + 'owner-variable-path';
@@ -13887,7 +15000,7 @@ class EventManager {
         { name: EventManager.attrPrefix + 'hidden-link', property: 'value', event: 'input' },
         { name: EventManager.attrPrefix + 'required-link', property: 'value', event: 'input' },
         { name: EventManager.attrPrefix + 'checked-link', property: 'checked', event: 'change' },
-        { name: EventManager.attrPrefix + 'open-link', property: 'open', event: 'toggle' },
+        { name: EventManager.attrPrefix + 'open-link', property: 'open', event: 'toggle' }
     ];
     // @ts-ignore  합성이벤트(Synthetic) 처리하면서 의미가 없어졌다
     static linkTargetMapAttrName = EventManager.attrPrefix + 'link-variables';
@@ -14432,81 +15545,141 @@ class EventManager {
         });
     }
     changeVar(obj, elements, varName, config) {
-        // console.log('changeVar', obj, elements, varName)
-        this.procAttr(elements, EventManager.styleAttrName, (it, attribute) => {
-            let script = attribute;
-            if (script) {
-                script = 'return ' + script;
-            }
-            if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
-                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.__render.element;  ${script} `, Object.assign(obj, {
-                    __render: Object.freeze({
-                        element: it,
-                        attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
-                    })
-                }));
-                if (typeof data === 'string') {
-                    data.split(';').forEach(sit => {
-                        const [key, value] = sit.split(':').map(s => s.trim());
-                        if (key && value) {
-                            it.style[key] = value;
-                        }
-                    });
-                    // it.setAttribute('style', data);
+        // 아래 이부분을 적용해야될지 말아야될지....성능이슈가.. 그래서 우선 timeout으로 테스크큐로.. 우선..
+        setTimeout(() => {
+            // console.log('changeVar', obj, elements, varName)
+            this.procAttr(elements, EventManager.styleAttrName, (it, attribute) => {
+                let script = attribute;
+                if (script) {
+                    script = 'return ' + script;
                 }
-                else if (Array.isArray(data)) {
-                    data.forEach(sit => {
-                        const [key, value] = sit.split(':').map(s => s.trim());
-                        if (key && value) {
-                            it.style[key] = value;
-                        }
-                    });
-                    // it.setAttribute('style', data.join(';'));
-                }
-                else {
-                    for (const [key, value] of Object.entries(data)) {
-                        // if (it instanceof HTMLElement) {
-                        it.style[key] = value === null ? null : String(value);
-                        // }
+                if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.__render.element;  ${script} `, Object.assign(obj, {
+                        __render: Object.freeze({
+                            element: it,
+                            attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
+                        })
+                    }));
+                    if (typeof data === 'string') {
+                        data.split(';').forEach(sit => {
+                            const [key, value] = sit.split(':').map(s => s.trim());
+                            if (key && value) {
+                                it.style[key] = value;
+                            }
+                        });
+                        // it.setAttribute('style', data);
                     }
-                }
-            }
-        });
-        this.procAttr(elements, EventManager.classAttrName, (it, attribute) => {
-            let script = attribute;
-            if (script) {
-                script = 'return ' + script;
-            }
-            if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
-                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.element;  ${script} `, Object.assign(obj, {
-                    __render: Object.freeze({
-                        element: it,
-                        attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
-                    })
-                }));
-                // alert(1)
-                if (typeof data === 'string') {
-                    data.split(' ').forEach(cit => it.classList.add(cit.trim()));
-                }
-                else if (Array.isArray(data)) {
-                    data.forEach(cit => it.classList.add(cit.trim()));
-                }
-                else {
-                    for (const [key, value] of Object.entries(data)) {
-                        if (it instanceof HTMLElement) {
-                            if (value) {
-                                it.classList.add(key.trim());
+                    else if (Array.isArray(data)) {
+                        data.forEach(sit => {
+                            const [key, value] = sit.split(':').map(s => s.trim());
+                            if (key && value) {
+                                it.style[key] = value;
                             }
-                            else {
-                                it.classList.remove(key.trim());
-                            }
+                        });
+                        // it.setAttribute('style', data.join(';'));
+                    }
+                    else {
+                        for (const [key, value] of Object.entries(data)) {
+                            // if (it instanceof HTMLElement) {
+                            it.style[key] = value === null ? null : String(value);
+                            // }
                         }
                     }
                 }
-            }
-        });
+            });
+            this.procAttr(elements, EventManager.classAttrName, (it, attribute) => {
+                let script = attribute;
+                if (script) {
+                    script = 'return ' + script;
+                }
+                if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.element;  ${script} `, Object.assign(obj, {
+                        __render: Object.freeze({
+                            element: it,
+                            attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
+                        })
+                    }));
+                    // alert(1)
+                    if (typeof data === 'string') {
+                        data.split(' ').map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
+                    }
+                    else if (Array.isArray(data)) {
+                        data.map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
+                    }
+                    else {
+                        for (const [key, value] of Object.entries(data)) {
+                            if (it instanceof HTMLElement) {
+                                const v = key.trim();
+                                if (value && v) {
+                                    it.classList.add(v);
+                                }
+                                else if (v) {
+                                    it.classList.remove(v);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            this.procAttr(elements, EventManager.valueAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.value !== data)
+                        it.value = data;
+                }
+            });
+            this.procAttr(elements, EventManager.checkedAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.checked !== data)
+                        it.checked = data;
+                }
+            });
+            this.procAttr(elements, EventManager.selectedAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.selected !== data)
+                        it.selected = data;
+                }
+            });
+            this.procAttr(elements, EventManager.readonlyAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.readOnly !== data)
+                        it.readOnly = data;
+                }
+            });
+            this.procAttr(elements, EventManager.disabledAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.disabled !== data)
+                        it.disabled = data;
+                }
+            });
+            this.procAttr(elements, EventManager.hiddenAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.hidden !== data)
+                        it.hidden = data;
+                }
+            });
+            this.procAttr(elements, EventManager.requiredAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.required !== data)
+                        it.required = data;
+                }
+            });
+            this.procAttr(elements, EventManager.openAttrName, (it, attribute) => {
+                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                    if (it.open !== data)
+                        it.open = data;
+                }
+            });
+        }, 1);
     }
-    procAttr(elements = new Set(), attrName, callBack) {
+    deepAttributeElements(elements = new Set(), attrName) {
         const sets = new Set();
         elements.forEach(it => {
             if (!it) {
@@ -14514,12 +15687,18 @@ class EventManager {
             }
             if (it.nodeType === 1) {
                 const e = it;
-                sets.add(e);
+                if (e.hasAttribute(attrName)) {
+                    sets.add(e);
+                }
                 e.querySelectorAll(`[${attrName}]`).forEach(it => {
                     sets.add(it);
                 });
             }
         });
+        return sets;
+    }
+    procAttr(elements = new Set(), attrName, callBack) {
+        const sets = this.deepAttributeElements(elements, attrName);
         sets.forEach(it => {
             const attr = it.getAttribute(attrName);
             const attrs = _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it);
@@ -14537,22 +15716,29 @@ class EventManager {
     }
     setValue(obj, name, value) {
         name = name.replaceAll('this.', 'this.this.');
-        _dooboostore_core_web_script_ScriptUtils__WEBPACK_IMPORTED_MODULE_0__.ScriptUtils.evaluate(`${name} = this.value;`, {
+        _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`${name} = this.value;`, {
             this: obj,
             value: value
         });
     }
-    static isUsingThisVar(raws, varName) {
-        if (varName && raws) {
-            if (varName.startsWith('this.')) {
-                varName = varName.replace(/this\./, '');
-            }
+    static decodeScriptVar(raws) {
+        if (raws) {
             // TODO: 훔.. 꼭필요한가..?  트리거될때 스크립트변수 까지 감지해야될까?
             EventManager.VARNAMES.forEach(it => {
                 // raws = raws!.replace(RegExp(it.replace('$', '\\$'), 'g'), `this?.___${it}`);
                 raws = raws.replace(RegExp(it.replace('$', '\\$'), 'g'), `this.___${it}`);
             });
-            const variablePaths = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Path.detectPathFromScript(raws ?? '', { excludeThis: true });
+            return raws;
+        }
+        return undefined;
+    }
+    static isUsingThisVar(raws, varName) {
+        raws = EventManager.decodeScriptVar(raws);
+        if (varName && raws) {
+            if (varName.startsWith('this.')) {
+                varName = varName.replace(/this\./, '');
+            }
+            const variablePaths = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Path.detectPathFromScript(raws, { excludeThis: true });
             return variablePaths.has(varName);
         }
         return false;
@@ -15505,11 +16691,12 @@ class DrForOf extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
                     var i = -1; 
                     const forOf = ${_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Path.toOptionalChainPath(attr)};
-                    const forOfStr = \`${attr}\`.trim();
+                    const forOfStr = '('+\`${attr}\`.trim() + ')';
                     // console.log('forOf---',forOf);
                     // debugger;
                     if (forOf) {
                         for(const it of forOf) {
+                          // console.log('forOf---it',it);
                             i++;
                             var destIt = it;
                             if (/\\[(.*,?)\\],/g.test(forOfStr)) {
@@ -15523,6 +16710,8 @@ class DrForOf extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.
                             } else {
                                 destIt = forOfStr + '[' + i +']'
                             }
+                            destIt = '(' + destIt + ')';
+                            
                             const n = this.__render.element.cloneNode(true);
                             Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drForOf' && k !== 'drNextOption' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
                             n.getAttributeNames().forEach(it => n.setAttribute(it, n.getAttribute(it).replace(/\\#it\\#/g, destIt).replace(/\\#nearForOfIt\\#/g, destIt).replace(/\\#it\\#/g, destIt).replace(/\\#nearForOfIndex\\#/g, i)))
@@ -16960,11 +18149,62 @@ class RawSet {
     // 중요 render 처리 부분
     // public async render(obj: any, config: DomRenderConfig): Promise<RawSet[]> {
     // }
+    lastRenderedValue;
     async render(obj, config) {
         // console.log('render!!!!!!!!!!!!!!')
         // renderCnt++;
         // const t0 = performance.now();
         // console.group('RawSet render', this);
+        // Dirty Checking Optimization for Text Nodes
+        if (this.dataSet.fragment.childNodes.length === 1 && this.dataSet.fragment.childNodes[0].nodeType === Node.TEXT_NODE) {
+            const textContent = this.dataSet.fragment.childNodes[0].textContent;
+            if (textContent) {
+                const runText = RawSet.expressionGroups(textContent)[0][1];
+                const __render = {
+                    rawSet: this,
+                    scripts: _events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.setBindProperty(config?.scripts, obj),
+                    router: config?.router,
+                    range: _iterators_Range__WEBPACK_IMPORTED_MODULE_3__.Range.range,
+                    element: this.dataSet.fragment.childNodes[0],
+                    attribute: {},
+                    rootObject: obj,
+                    scriptUtils: _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Script,
+                    nearThis: this.findNearThis(obj),
+                    parentThis: this.findParentThis(obj),
+                    bindScript: ` /** render **/
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.SCRIPTS_VARNAME} = this.__render.scripts;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.RAWSET_VARNAME} = this.__render.rawSet;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.ELEMENT_VARNAME} = this.__render.element;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.ATTRIBUTE_VARNAME} = this.__render.attribute;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.RANGE_VARNAME} = this.__render.range;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.ROUTER_VARNAME} = this.__render.router;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.NEAR_THIS_VARNAME} = this.__render.nearThis;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.PARENT_THIS_VARNAME} = this.__render.parentThis;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.SCRIPT_UTILS_VARNAME} = this.__render.scriptUtils;
+                      const ${_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.ROOT_OBJECT_VARNAME} = this.__render.rootObject;
+              `
+                };
+                try {
+                    const newValue = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Script.evaluateReturn({
+                        bodyScript: __render.bindScript,
+                        returnScript: runText
+                    }, Object.assign(obj, { __render }));
+                    const newValueStr = String(newValue);
+                    if (this.lastRenderedValue === newValueStr) {
+                        // console.log('✓ Skipping render: Value unchanged', newValue);
+                        return { raws: [], executedOperators: [] };
+                    }
+                    // console.log('✗ Rendering: Value changed', this.lastRenderedValue, '->', newValue);
+                    // Update lastRenderedValue BEFORE proceeding with render
+                    // This ensures the value is cached even if render fails partway through
+                    this.lastRenderedValue = newValueStr;
+                }
+                catch (e) {
+                    // Evaluation failed, proceed with normal render
+                    // console.log('⚠ Dirty check failed, proceeding with render', e);
+                }
+            }
+        }
         const genNode = config.window.document.importNode(this.dataSet.fragment, true);
         const raws = [];
         const onAttrInitCallBacks = [];
@@ -18501,6 +19741,9 @@ class HashRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
     getPathName() {
         return _dooboostore_core_web_location_LocationUtils__WEBPACK_IMPORTED_MODULE_1__.LocationUtils.hashPath(this.config.window) || '/';
     }
+    getSearch() {
+        return _dooboostore_core_web_location_LocationUtils__WEBPACK_IMPORTED_MODULE_1__.LocationUtils.hashSearch(this.config.window);
+    }
     getHashSearchParams(data) {
         const hash = this.config.window.location.hash;
         const queryIndex = hash.indexOf('?');
@@ -18596,6 +19839,9 @@ class PathRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
     }
     getPathName() {
         return this.config.window.location?.pathname ?? '/';
+    }
+    getSearch() {
+        return this.config.window.location?.search ?? '';
     }
     getHashSearchParams(data) {
         // http://local.com/#wow=222&wow=bb&z=2
@@ -18707,23 +19953,16 @@ class Router {
         }
     }
     getRouteData(config) {
-        let path = '';
-        let url = '';
-        let searchParams;
+        let path = this.getPathName();
+        let url = this.getUrl();
+        let searchParams = this.getSearchParams();
+        let search = this.getSearch();
+        // console.log('pppppppppppppp', path,url,searchParams,search);
+        // 요청 URL이 있을경우 해당 URL로 파싱
         if (config?.pathOrUrl) {
-            // try {
-            //   new URL(config.pathOrUrl);
-            //   isUrl = true;
-            // } catch {
-            //   isUrl = false;
-            // }
-            // if(isUrl){
-            //   const u = new URL(config.pathOrUrl);
-            //   path = u.pathname;
-            //   url = u.pathname + u.search;
-            // } else {
             const paths = config.pathOrUrl.split('?');
-            searchParams = new URLSearchParams(paths[1]);
+            search = paths[1] ? `?${paths[1]}` : '';
+            searchParams = new URLSearchParams(search);
             const firstUrl = paths[0];
             if (_dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_3__.ValidUtils.isUrl(firstUrl)) {
                 path = new URL(firstUrl).pathname;
@@ -18734,17 +19973,14 @@ class Router {
             url = config.pathOrUrl;
             // }
         }
-        else {
-            path = this.getPathName();
-            url = this.getUrl();
-            searchParams = this.getSearchParams();
-        }
         // console.log('url', url);
         const newVar = {
             path: path,
             url: url,
             searchParams: searchParams,
-            search: searchParams.size > 0 ? `?${searchParams.toString()}` : '',
+            // 이렇게 하면 진짜 문자열이 변형이 될수 있다 따라서 그냥 문자열 자른 원본을넣어줘야한다
+            // search: searchParams.size > 0 ? `?${searchParams.toString()}` : '',
+            search: search,
             router: this
         };
         const data = this.getData();
@@ -18828,14 +20064,14 @@ class Router {
         // }
     }
     toUrl(data) {
-        console.log('toUrl', data);
+        // console.log('toUrl', data);
         let targetPath;
         if (typeof data === 'string') {
             targetPath = data;
         }
         else {
             const tpath = data.path ?? this.getPathName();
-            const s = data.searchParams ? _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_0__.ConvertUtils.toURLSearchParams(data.searchParams).toString() : '';
+            const s = data.searchParams ? _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_0__.ConvertUtils.toRawQueryString(data.searchParams, { valueEncodeURIComponent: true }) : '';
             // data.searchParams
             targetPath = `${tpath}${s.length > 0 ? '?' : ''}${s}`;
         }
@@ -19504,7 +20740,8 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             targetElement.style.height = `${rect.height}px`;
             targetElement.style.zIndex = '999999';
             targetElement.setAttribute('random', Math.random().toString());
-            this.option.window.document.body.appendChild(targetElement);
+            // NodeUtils.insertAfter
+            targetUserElement.parentNode.insertBefore(targetElement, targetUserElement.nextSibling);
         }
         else {
             targetElement.setAttribute('dom-render-side', 'server');
@@ -19542,14 +20779,14 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
         });
         // dom-render 라우팅 끝나면
         this.domRenderRouter.observable.pipe((0,_dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__.filter)(it => it.triggerPoint === 'end')).subscribe(it => {
-            // console.log('this.domRenderRouter.observable.subscribe---------------', it, this.domRenderRouter)
+            // console.log('this.domRenderRouter.observable.subscribe---------------', it)
             //   console.log('this.domRenderRouter.observable', it)
             // const intent = new Intent(it.path || '/');
             const targetPath = (it.path || '/') + (it.search);
             const intent = new _dooboostore_simple_boot_intent_Intent__WEBPACK_IMPORTED_MODULE_6__.Intent(targetPath);
             //   // TODO: 왜 canActivate가 두번 호출되는지 확인 필요!! 그래서 setTimeout으로 처리함 원인 모르겠음 아 씨발
             this.routing(intent, { router: this.domRenderRootObject }).then(async (it) => {
-                // console.log('-------->', it)
+                // console.log('simplebootfront simpleboot routing-------->', it)
                 // dom-render 라우팅 끝나면 -> simple-boot-front routing start!
                 this.routingSubject.next({ triggerPoint: 'start', routerModule: it });
                 let findFirstRouter = it.firstRouteChainValue;
@@ -19559,6 +20796,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
                     await this.domRenderRootObject.canActivate(undefined, findRouter);
                     await this.domRenderRootObject.onRouting({ intent, routerModule: it, routerManager: this.routerManager });
                 }
+                // console.log('----> simplebootfront simpleboot routing done-------->', it, it.intent.uri)
                 this.routingSubject.next({ triggerPoint: 'end', routerModule: it });
                 //       }, 0);
             });
@@ -19978,7 +21216,7 @@ class SimpleBootHttpSSRFactory {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   HttpHeaders: () => (/* binding */ HttpHeaders),
-/* harmony export */   makeIntentHeaderBySymbol: () => (/* binding */ makeIntentHeaderBySymbol)
+/* harmony export */   makeIntentHeaderBySymbolFor: () => (/* binding */ makeIntentHeaderBySymbolFor)
 /* harmony export */ });
 /* harmony import */ var _dooboostore_simple_boot_http_server_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/simple-boot-http-server/codes/HttpHeaders */ "../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts");
 /* harmony import */ var _Mimes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Mimes */ "../../packages/@dooboostore/simple-boot-http-server-ssr/src/codes/Mimes.ts");
@@ -19988,7 +21226,7 @@ const HttpHeaders = {
     ..._dooboostore_simple_boot_http_server_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_0__.HttpHeaders,
     XSimpleBootSsrIntentScheme: 'x-simple-boot-ssr-intent-scheme'
 };
-const makeIntentHeaderBySymbol = (symbol) => {
+const makeIntentHeaderBySymbolFor = (symbol) => {
     return {
         [HttpHeaders.Accept]: _Mimes__WEBPACK_IMPORTED_MODULE_1__.Mimes.ApplicationJsonPostSimpleBootSsrIntentScheme,
         [HttpHeaders.XSimpleBootSsrIntentScheme]: `Symbol.for(${symbol.description})`
@@ -20059,7 +21297,7 @@ let SymbolIntentApiServiceProxy = SymbolIntentApiServiceProxy_1 = class SymbolIn
                     return function (...args) {
                         const f = value;
                         const p = (userConfig) => {
-                            const headers = { ...(userConfig?.headers ?? {}), ...(0,_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__.makeIntentHeaderBySymbol)(simConfig.symbol) };
+                            const headers = { ...(userConfig?.headers ?? {}), ...(0,_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__.makeIntentHeaderBySymbolFor)(simConfig.symbol) };
                             const method = userConfig?.method ?? 'post';
                             if (method === 'post' && userConfig?.multipartFormData) {
                                 return apiService.post({
@@ -21577,7 +22815,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getValidIndex: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidIndex),
 /* harmony export */   getValidator: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidator),
 /* harmony export */   getValidators: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidators),
-/* harmony export */   isInjectFactory: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isInjectFactory),
 /* harmony export */   isSimNoProxy: () => (/* reexport safe */ _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__.isSimNoProxy),
 /* harmony export */   routerProcess: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.routerProcess),
 /* harmony export */   simProcess: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.simProcess),
@@ -21622,8 +22859,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   InjectSituationType: () => (/* binding */ InjectSituationType),
 /* harmony export */   SituationTypeContainer: () => (/* binding */ SituationTypeContainer),
 /* harmony export */   SituationTypeContainers: () => (/* binding */ SituationTypeContainers),
-/* harmony export */   getInject: () => (/* binding */ getInject),
-/* harmony export */   isInjectFactory: () => (/* binding */ isInjectFactory)
+/* harmony export */   getInject: () => (/* binding */ getInject)
 /* harmony export */ });
 /* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
 
@@ -21658,9 +22894,6 @@ class SituationTypeContainers {
         return this.containers.find(predicate);
     }
 }
-const isInjectFactory = (obj) => {
-    return typeof obj?.injectFactory === 'function';
-};
 const InjectMetadataKey = Symbol('Inject');
 const injectProcess = (config, target, propertyKey, parameterIndex) => {
     if (propertyKey && typeof target === 'object') { // <-- object: method
@@ -21753,8 +22986,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SituationTypeContainer: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.SituationTypeContainer),
 /* harmony export */   SituationTypeContainers: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.SituationTypeContainers),
 /* harmony export */   getInject: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.getInject),
-/* harmony export */   getInjection: () => (/* reexport safe */ _Injection__WEBPACK_IMPORTED_MODULE_1__.getInjection),
-/* harmony export */   isInjectFactory: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isInjectFactory)
+/* harmony export */   getInjection: () => (/* reexport safe */ _Injection__WEBPACK_IMPORTED_MODULE_1__.getInjection)
 /* harmony export */ });
 /* harmony import */ var _Inject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Inject */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts");
 /* harmony import */ var _Injection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Injection */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Injection.ts");
@@ -22378,9 +23610,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SimOption__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../SimOption */ "../../packages/@dooboostore/simple-boot/src/SimOption.ts");
 /* harmony import */ var _IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./IntentSubscribe */ "../../packages/@dooboostore/simple-boot/src/intent/IntentSubscribe.ts");
 /* harmony import */ var _decorators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../decorators */ "../../packages/@dooboostore/simple-boot/src/decorators/index.ts");
-/* harmony import */ var _decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../decorators/inject/Inject */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts");
 var _a, _b, _c;
-
 
 
 
@@ -22407,7 +23637,7 @@ let IntentManager = class IntentManager {
     get observable() {
         return this.subject.asObservable();
     }
-    async publish(it, data) {
+    async makeIntentData(it, data) {
         const target = [];
         const rootRouter = isRouterPublishType(it) ? it.rootRouter : this.simOption.rootRouter;
         it = isRouterPublishType(it) ? it.router : it;
@@ -22426,7 +23656,6 @@ let IntentManager = class IntentManager {
             it = new _Intent__WEBPACK_IMPORTED_MODULE_1__.Intent(it, data);
         }
         const intent = it;
-        const r = [];
         if (!routerMatch) {
             if (intent.symbols) {
                 target.push(...intent.symbols.map(sym => this.simstanceManager.findSims(sym)).flat());
@@ -22438,6 +23667,11 @@ let IntentManager = class IntentManager {
                 target.push(...this.simstanceManager.getSimAtomics());
             }
         }
+        return { intent, target };
+    }
+    async publishMeta(it, data) {
+        const { intent, target } = await this.makeIntentData(it, data);
+        const r = [];
         const targetInstances = target.map(it => {
             if (it instanceof _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic) {
                 return it.getValue();
@@ -22446,7 +23680,7 @@ let IntentManager = class IntentManager {
                 return it;
             }
         });
-        this.subject.next(it);
+        this.subject.next(intent);
         for (let data of targetInstances) {
             let orNewSim = data;
             if (orNewSim) {
@@ -22467,8 +23701,11 @@ let IntentManager = class IntentManager {
                         if (injects) {
                             for (const inject of injects) {
                                 let v = this.simstanceManager.findLastSim(inject.config).getValue();
-                                if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_10__.isInjectFactory)(v)) {
-                                    v = await v.injectFactory(intent.data, inject);
+                                if (typeof inject.config.returnFactory === "function") {
+                                    v = await inject.config.returnFactory({ instance: callthis, methodName: orNewSim.name, parameter: intent.data }, v);
+                                }
+                                else if (typeof inject.config.returnFactory === "string") {
+                                    v = await v[inject.config.returnFactory]({ instance: callthis, methodName: orNewSim.name, parameter: intent.data }, v);
                                 }
                                 intent.data[inject.index] = v;
                             }
@@ -22507,8 +23744,11 @@ let IntentManager = class IntentManager {
                 }
             }
         }
-        ;
-        return r;
+        return { return: r, target };
+    }
+    async publish(it, data) {
+        const rdata = await this.publishMeta(it, data);
+        return rdata.return;
     }
 };
 IntentManager = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
@@ -25610,7 +26850,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"player-container\" dr-attr=\"{class: 'player-container' + (@this@.isSwapped ? ' swapped' : '')}\">\n    <div class=\"dictionary-section\">\n        <!-- Dictionary Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingDictionaries\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading dictionary...</div>\n        </div>\n        <!-- <button dr-event-click=\"@this@.test()\">zzzzzzzzzzzzzzz</button> -->\n        <div class=\"dictionary-content\" dr-if=\"@this@.dictionaries && !@this@.isLoadingDictionaries\">\n            <div class=\"dictionary-item\" dr-for-of=\"@this@.dictionaries\" dr-option-item-variable-name=\"dict\"\n                dr-attr=\"{'data-original-word': #dict#.originalWord, 'data-match-type': #dict#?.items?.[0].matchType}\">\n                <div dr-if=\"#dict#\" class=\"word-items\" dr-for-of=\"#dict#.items\" dr-option-item-variable-name=\"item\">\n                    <div dr-if=\"#item#\" class=\"word-entry\">\n                        <div class=\"entry-header\">\n                            <h3 class=\"entry-title clickable-title\"\n                                dr-event-click=\"@this@.onEntryTitleClick($element, $event)\">\n                                ${#item#.entry}$</h3>\n                            <label class=\"favorite-checkbox-label\" title=\"즐겨찾기에 추가/제거\" dr-if=\"#item#.entry\">\n                                <input type=\"checkbox\" class=\"favorite-checkbox\"\n                                    dr-attr=\"{checked: @this@.checkWordFavorite(#item#.entry || '') ? 'checked' : null}\"\n                                    dr-event-change=\"@this@.toggleFavorite(#item#.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#.entry || '')\">\n                                <i class=\"fas fa-star favorite-icon\"></i>\n                            </label>\n                        </div>\n                        <div class=\"pos-list\" dr-for-of=\"#item#.pos\" dr-option-item-variable-name=\"pos\">\n                            <div class=\"pos-type\" dr-attr=\"{class: 'pos-type' + (#pos#.type ? '' : ' pos-type-null')}\">\n                                ${#pos#.type || '기타'}$</div>\n                            <div class=\"meanings\" dr-for-of=\"#pos#.meanings\" dr-option-item-variable-name=\"meaning\">\n                                <div class=\"meaning-item\">\n                                    <div class=\"meaning-text\">${#meaning#.meaning}$</div>\n                                    <div class=\"examples\" dr-if=\"#meaning#.examples.length > 0\"\n                                        dr-for-of=\"#meaning#.examples\" dr-option-item-variable-name=\"example\">\n                                        <div class=\"example-item\">\n                                            <div class=\"example-text clickable-example\"\n                                                dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                                #{#example#.text}#</div>\n                                            <div class=\"example-translation\">#{#example#.translatedText}#</div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Dictionary Examples Section -->\n                    <details class=\"examples-section\" dr-if=\"#dict#?.examples && #dict#?.examples.length > 0\">\n                        <summary class=\"examples-summary\">\n                            <i class=\"fas fa-book-open\"></i>\n                            예문 보기 (${#dict#?.examples.length}$개)\n                        </summary>\n                        <div class=\"examples-content\">\n                            <div class=\"example-item\" dr-for-of=\"#dict#?.examples\"\n                                dr-option-item-variable-name=\"example\">\n                                <div class=\"example-text clickable-example\"\n                                    dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                    #{#example#.text}#</div>\n                                <div class=\"example-translation\">#{#example#.translatedText}#</div>\n                            </div>\n                        </div>\n                    </details>\n                </div>\n                <div>\n                    <iframe dr-if=\"!#dict#\" src=\"https://lazycollect.com/assets/dooboostore/adfit/320x50.html\" style=\"width: 100%; height: 50px;\" frameborder=\"0\"></iframe>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"scripts-section\">\n        <!-- Scripts Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingScripts\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading scripts...</div>\n        </div>\n\n        <!-- YouTube Video Section (only for YouTube content) -->\n        <div class=\"youtube-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div id=\"youtube-player-container\">\n                <!-- YouTube iframe will be inserted here -->\n            </div>\n        </div>\n\n        <!-- Translation Items Section (YouTube only) -->\n        <div class=\"translation-items-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div class=\"translation-content\" dr-if=\"@this@.translations\">\n                <div class=\"translation-item\" dr-for-of=\"@this@.translations\" dr-option-item-variable-name=\"item\"\n                    dr-option-item-index-variable-name=\"index\"\n                    dr-attr=\"{'data-index': #index#, 'data-start-ms': #item#.startMs, 'data-end-ms': #item#.endMs, 'data-type': #item#.type}\"\n                    dr-event-click=\"#item#.type === 'en' && @this@.onTranslationItemClick(#index#, #item#.startMs, #item#.endMs, $event)\">\n                    <div class=\"translation-text\" dr-attr=\"{class: 'translation-text ' + (#item#.type === 'en' ? 'english-text' : 'korean-text')}\">${#item#.text}$</div>\n                </div>\n            </div>\n        </div>\n        \n        <!-- Fallback for non-YouTube content -->\n        <div class=\"no-content\" dr-if=\"@this@.currentItem?.type !== 'youtube'\">\n            <div class=\"no-content-message\">Only YouTube content is supported</div>\n        </div>\n    </div>\n</div>\n\n<!-- Floating Controller -->\n<div class=\"floating-controller\">\n    <button class=\"control-btn hide-words-btn\" \n        dr-event-click=\"@this@.toggleHideWords()\"\n        dr-attr=\"{class: 'control-btn hide-words-btn' + (@this@.hideWordsEnabled ? ' active' : '')}\"\n        title=\"Hide random words\">\n        <i class=\"fas fa-eye-slash\"></i>\n    </button>\n    \n    <button class=\"control-btn auto-play-btn\" \n        dr-event-click=\"@this@.toggleAutoPlay()\"\n        dr-attr=\"{class: 'control-btn auto-play-btn' + (@this@.autoPlayEnabled ? ' active' : '')}\"\n        title=\"Toggle auto play\">\n        <i class=\"fas fa-circle-play\"></i>\n    </button>\n    \n    <button class=\"control-btn replay-btn\" \n        dr-event-click=\"@this@.replayCurrentCue()\"\n        title=\"Replay current subtitle\">\n        <i class=\"fas fa-rotate-right\"></i>\n    </button>\n    \n    <button class=\"nav-btn prev-btn\" \n        dr-event-click=\"@this@.previousCue()\"\n        title=\"Previous subtitle\">\n        <i class=\"fas fa-chevron-left\"></i>\n    </button>\n    \n    <div class=\"slider-container\">\n        <input type=\"range\" \n            class=\"global-word-slider\" \n            min=\"-1\" \n            dr-attr=\"{max: @this@.maxGlobalWordIndex, value: @this@.globalWordIndex}\"\n            dr-event-input=\"@this@.onGlobalWordSliderChange(parseInt($event.target.value))\"\n            title=\"Navigate through all words\">\n        <div class=\"slider-label-container\">\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.previousWord()\"\n                title=\"Previous word\">\n                <i class=\"fas fa-chevron-left\"></i>\n            </button>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex >= 0\">${@this@.globalWordIndex + 1}$ / ${@this@.maxGlobalWordIndex + 1}$</div>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex < 0\">Select word</div>\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.nextWord()\"\n                title=\"Next word\">\n                <i class=\"fas fa-chevron-right\"></i>\n            </button>\n        </div>\n    </div>\n    \n    <button class=\"nav-btn next-btn\" \n        dr-event-click=\"@this@.nextCue()\"\n        title=\"Next subtitle\">\n        <i class=\"fas fa-chevron-right\"></i>\n    </button>\n    \n    <button class=\"control-btn korean-translation-btn\" \n        dr-event-click=\"@this@.toggleKoreanTranslation()\"\n        dr-attr=\"{class: 'control-btn korean-translation-btn' + (@this@.showKoreanTranslation ? ' active' : '')}\"\n        title=\"Toggle Korean translation\">\n        <i class=\"fas fa-language\"></i>\n    </button>\n</div>\n\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"player-container\" dr-attr=\"{class: 'player-container' + (@this@.isSwapped ? ' swapped' : '')}\">\n    <div class=\"dictionary-section\">\n        <!-- Dictionary Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingDictionaries\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading dictionary...</div>\n        </div>\n        <!-- <button dr-event-click=\"@this@.test()\">zzzzzzzzzzzzzzz</button> -->\n        <div class=\"dictionary-content\" dr-if=\"@this@.dictionaries && !@this@.isLoadingDictionaries\">\n            <div class=\"dictionary-item\" dr-for-of=\"@this@.dictionaries\" dr-option-item-variable-name=\"dict\"\n                dr-attr=\"{'data-original-word': #dict#.originalWord, 'data-match-type': #dict#?.items?.[0].matchType}\">\n                <div dr-if=\"#dict#\" class=\"word-items\" dr-for-of=\"#dict#.items\" dr-option-item-variable-name=\"item\">\n                    <div dr-if=\"#item#\" class=\"word-entry\">\n                        <div class=\"entry-header\">\n                            <h3 class=\"entry-title clickable-title\"\n                                dr-event-click=\"@this@.onEntryTitleClick($element, $event)\">\n                                ${#item#.entry}$</h3>\n                            <label class=\"favorite-checkbox-label\" title=\"즐겨찾기에 추가/제거\" dr-if=\"#item#.entry\">\n                                <input type=\"checkbox\" class=\"favorite-checkbox\"\n                                    dr-attr=\"{checked: @this@.checkWordFavorite(#item#?.entry || '') ? 'checked' : null}\"\n                                    dr-event-change=\"@this@?.toggleFavorite(#item#?.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#?.entry || '')\">\n                                <i class=\"fas fa-star favorite-icon\"></i>\n                            </label>\n                        </div>\n                        <div class=\"pos-list\" dr-for-of=\"#item#.pos\" dr-option-item-variable-name=\"pos\">\n                            <div class=\"pos-type\" dr-attr=\"{class: 'pos-type' + (#pos#.type ? '' : ' pos-type-null')}\">\n                                ${#pos#.type || '기타'}$</div>\n                            <div class=\"meanings\" dr-for-of=\"#pos#.meanings\" dr-option-item-variable-name=\"meaning\">\n                                <div class=\"meaning-item\">\n                                    <div class=\"meaning-text\">${#meaning#?.meaning}$</div>\n                                    <div class=\"examples\" dr-if=\"#meaning#.examples.length > 0\"\n                                        dr-for-of=\"#meaning#.examples\" dr-option-item-variable-name=\"example\">\n                                        <div class=\"example-item\">\n                                            <div class=\"example-text clickable-example\"\n                                                dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                                #{#example#?.text}#</div>\n                                            <div class=\"example-translation\">#{#example#?.translatedText}#</div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Dictionary Examples Section -->\n                    <details class=\"examples-section\" dr-if=\"#dict#?.examples && #dict#?.examples?.length > 0\">\n                        <summary class=\"examples-summary\">\n                            <i class=\"fas fa-book-open\"></i>\n                            예문 보기 (${#dict#?.examples.length}$개)\n                        </summary>\n                        <div class=\"examples-content\">\n                            <div class=\"example-item\" dr-for-of=\"#dict#?.examples\"\n                                dr-option-item-variable-name=\"example\">\n                                <div class=\"example-text clickable-example\"\n                                    dr-event-click=\"@this@.onExampleClick($element, $event)\">\n                                    #{#example#?.text}#</div>\n                                <div class=\"example-translation\">#{#example#?.translatedText}#</div>\n                            </div>\n                        </div>\n                    </details>\n                </div>\n                <div>\n                    <iframe dr-if=\"!#dict#\" src=\"https://lazycollect.com/assets/dooboostore/adfit/320x50.html\" style=\"width: 100%; height: 50px;\" frameborder=\"0\"></iframe>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"scripts-section\">\n        <!-- Scripts Loading -->\n        <div class=\"loading-container\" dr-if=\"@this@.isLoadingScripts\">\n            <div class=\"loading-spinner\"></div>\n            <div class=\"loading-text\">Loading scripts...</div>\n        </div>\n\n        <!-- YouTube Video Section (only for YouTube content) -->\n        <div class=\"youtube-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div id=\"youtube-player-container\">\n                <!-- YouTube iframe will be inserted here -->\n            </div>\n        </div>\n\n        <!-- Translation Items Section (YouTube only) -->\n        <div class=\"translation-items-section\" dr-if=\"@this@.currentItem?.type === 'youtube'\">\n            <div class=\"translation-content\" dr-if=\"@this@.translations\">\n                <div class=\"translation-item\" dr-for-of=\"@this@.translations\" dr-option-item-variable-name=\"item\"\n                    dr-option-item-index-variable-name=\"index\"\n                    dr-attr=\"{'data-index': #index#, 'data-start-ms': #item#.startMs, 'data-end-ms': #item#.endMs, 'data-type': #item#.type}\"\n                    dr-event-click=\"#item#.type === 'en' && @this@.onTranslationItemClick(#index#, #item#.startMs, #item#.endMs, $event)\">\n                    <div class=\"translation-text\" dr-attr=\"{class: 'translation-text ' + (#item#.type === 'en' ? 'english-text' : 'korean-text')}\">${#item#?.text}$</div>\n                </div>\n            </div>\n        </div>\n        \n        <!-- Fallback for non-YouTube content -->\n        <div class=\"no-content\" dr-if=\"@this@.currentItem?.type !== 'youtube'\">\n            <div class=\"no-content-message\">Only YouTube content is supported</div>\n        </div>\n    </div>\n</div>\n\n<!-- Floating Controller -->\n<div class=\"floating-controller\">\n    <button class=\"control-btn hide-words-btn\" \n        dr-event-click=\"@this@.toggleHideWords()\"\n        dr-attr=\"{class: 'control-btn hide-words-btn' + (@this@.hideWordsEnabled ? ' active' : '')}\"\n        title=\"Hide random words\">\n        <i class=\"fas fa-eye-slash\"></i>\n    </button>\n    \n    <button class=\"control-btn auto-play-btn\" \n        dr-event-click=\"@this@.toggleAutoPlay()\"\n        dr-attr=\"{class: 'control-btn auto-play-btn' + (@this@.autoPlayEnabled ? ' active' : '')}\"\n        title=\"Toggle auto play\">\n        <i class=\"fas fa-circle-play\"></i>\n    </button>\n    \n    <button class=\"control-btn replay-btn\" \n        dr-event-click=\"@this@.replayCurrentCue()\"\n        title=\"Replay current subtitle\">\n        <i class=\"fas fa-rotate-right\"></i>\n    </button>\n    \n    <button class=\"nav-btn prev-btn\" \n        dr-event-click=\"@this@.previousCue()\"\n        title=\"Previous subtitle\">\n        <i class=\"fas fa-chevron-left\"></i>\n    </button>\n    \n    <div class=\"slider-container\">\n        <input type=\"range\" \n            class=\"global-word-slider\" \n            min=\"-1\" \n            dr-attr=\"{max: @this@.maxGlobalWordIndex, value: @this@.globalWordIndex}\"\n            dr-event-input=\"@this@.onGlobalWordSliderChange(parseInt($event.target.value))\"\n            title=\"Navigate through all words\">\n        <div class=\"slider-label-container\">\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.previousWord()\"\n                title=\"Previous word\">\n                <i class=\"fas fa-chevron-left\"></i>\n            </button>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex >= 0\">${@this@.globalWordIndex + 1}$ / ${@this@.maxGlobalWordIndex + 1}$</div>\n            <div class=\"slider-label\" dr-if=\"@this@.globalWordIndex < 0\">Select word</div>\n            <button class=\"word-nav-btn\" \n                dr-event-click=\"@this@.nextWord()\"\n                title=\"Next word\">\n                <i class=\"fas fa-chevron-right\"></i>\n            </button>\n        </div>\n    </div>\n    \n    <button class=\"nav-btn next-btn\" \n        dr-event-click=\"@this@.nextCue()\"\n        title=\"Next subtitle\">\n        <i class=\"fas fa-chevron-right\"></i>\n    </button>\n    \n    <button class=\"control-btn korean-translation-btn\" \n        dr-event-click=\"@this@.toggleKoreanTranslation()\"\n        dr-attr=\"{class: 'control-btn korean-translation-btn' + (@this@.showKoreanTranslation ? ' active' : '')}\"\n        title=\"Toggle Korean translation\">\n        <i class=\"fas fa-language\"></i>\n    </button>\n</div>\n\n");
 
 /***/ }),
 
@@ -26572,7 +27812,7 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
                     // Ignore errors
                 }
             }
-        }, 50);
+        }, 5);
         if (this.youtubeTimeMonitoringInterval)
             this.intervals.push(this.youtubeTimeMonitoringInterval);
     }
@@ -26668,6 +27908,7 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
                 this.stopCuePlayCheck();
                 return;
             }
+            console.log('vvvvvvvvvvv?');
             try {
                 const currentTime = this.youtubePlayer.getCurrentTime();
                 if (currentTime >= endTime - 0.5) {
@@ -26682,7 +27923,7 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
             catch (error) {
                 console.log('⚠️ Cue play check error:', error);
             }
-        }, 50);
+        }, 5);
         if (this.cuePlayCheckInterval)
             this.intervals.push(this.cuePlayCheckInterval);
     }
