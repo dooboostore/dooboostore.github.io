@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "commercial",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kəˈmɜːrʃl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "상업상의, 통상[교역]의",
+              "examples": [
+                {
+                  "text": "a <b>commercial</b> artist",
+                  "translatedText": "상업 미술가"
+                }
+              ],
+              "originalMeaning": "상업상의, 통상[교역]의"
+            },
+            {
+              "meaning": "[A] 영리적인, 영리 본위의; 이익이 되는, 돈벌이가 되는",
+              "examples": [
+                {
+                  "text": "a <b>commercial</b> success",
+                  "translatedText": "영리면에서의 성공"
+                }
+              ],
+              "originalMeaning": "[A] 영리적인, 영리 본위의; 이익이 되는, 돈벌이가 되는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "광고[상업] 방송, = COMMERCIAL TRAVELER, 중간 품질의 고기",
+              "examples": [],
+              "originalMeaning": "광고[상업] 방송, = <b>COMMERCIAL</b> TRAVELER, 중간 품질의 고기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72403fd3b7e3400f8ac2c6730ba81f15",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72403fd3b7e3400f8ac2c6730ba81f15",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6f52693d9974ba62ce96b790e9837c23",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 통상 조약은 일방적으로 파기되었다",
+      "text": "The <b>commercial</b> treaty was abrogated one-sidedly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식은 상업계에는 청천벽력이었다",
+      "text": "The news came like a thunderclap on the <b>commercial</b> world."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "광고에 유명 인사를 쓰면 광고 메시지에 손상을 준다",
+      "text": "Using a popular celebrity detracts from its message as a <b>commercial</b>."
+    }
+  ],
+  "isWordType": true
+}

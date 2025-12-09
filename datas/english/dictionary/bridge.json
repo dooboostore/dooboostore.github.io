@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "bridge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "brídƷ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "다리, 교량",
+              "examples": [
+                {
+                  "text": "build[throw] a <b>bridge</b> across[over] a river",
+                  "translatedText": "강에 다리를 놓다"
+                }
+              ],
+              "originalMeaning": "다리, 교량"
+            },
+            {
+              "meaning": "교량 역할을 하는 것; 중매, 중개",
+              "examples": [],
+              "originalMeaning": "교량 역할을 하는 것; 중매, 중개"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<강에> 다리를 놓다, 다리로 묶다[연결하다]; 다리를 놓아 <길을> 만들다",
+              "examples": [],
+              "originalMeaning": "<강에> 다리를 놓다, 다리로 묶다[연결하다]; 다리를 놓아 <길을> 만들다"
+            },
+            {
+              "meaning": "<공간·틈을> 메우다",
+              "examples": [],
+              "originalMeaning": "<공간·틈을> 메우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/49e603c770324ccfaff50b1639d2e4bd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/49e603c770324ccfaff50b1639d2e4bd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bridges"
+        },
+        {
+          "type": "과거형",
+          "value": "bridged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bridging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bridged"
+        }
+      ],
+      "aliasConjugation": "bridges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1226de4b3385918ee51fc9e67dd6f7a4",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "bridge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "브리지 ((카드놀이의 일종))",
+              "examples": [],
+              "originalMeaning": "브리지 ((카드놀이의 일종))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ef46fa24ba34c2291705c0d9ffaa246",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ef46fa24ba34c2291705c0d9ffaa246",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "bridges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ef6c2a4c167ce4205382a9097c92a9c0",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 다리는 200년 되었다.",
+      "text": "The <b>bridge</b> is 200 years old."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강에 다리가 걸려 있다.",
+      "text": "There is a <b>bridge</b> over the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 다리는 작년에 개통되었다",
+      "text": "This <b>bridge</b> was opened last year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 차들이 매일 다리를 횡단한다",
+      "text": "Many cars traverse the <b>bridge</b> daily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 다리는 약간의 보강이 필요하다",
+      "text": "The <b>bridge</b> needs some reinforcement."
+    }
+  ],
+  "isWordType": true
+}

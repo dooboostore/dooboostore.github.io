@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "entry": "supermarket",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│suːpərmɑːrkət"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "슈퍼마켓, 종합 회사",
+              "examples": [
+                {
+                  "text": "a financial <b>supermarket</b>",
+                  "translatedText": "종합적 금융회사"
+                }
+              ],
+              "originalMeaning": "슈퍼마켓, 종합 회사"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8adda0ae12d448fa982ea91e075ccfde",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8adda0ae12d448fa982ea91e075ccfde",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2facb6b59b021cd65e43362707b5ff2d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "근처에 큰 슈퍼가 생기고 나서 우리 같은 구멍가게 장사는 녹았다",
+      "text": "Since the big <b>supermarket</b> was built nearby, small shops such as ours have suffered terribly."
+    }
+  ],
+  "isWordType": true
+}

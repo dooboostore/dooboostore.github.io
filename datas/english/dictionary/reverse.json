@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "reverse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪˈvɜːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 역(逆), 반대 ((of)); 반전(反轉)",
+              "examples": [
+                {
+                  "text": "It is the <b>reverse</b> of kindness.",
+                  "translatedText": "그건 친절이라기 보다는 그 반대이다."
+                }
+              ],
+              "originalMeaning": "[the ~] 역(逆), 반대 ((of)); 반전(反轉)"
+            },
+            {
+              "meaning": "[the ~] 뒤, 배면, 배후; (주화·메달 등의) 뒷면(opp. obverse); (펼친 책의) 왼쪽 페이지(verso)(opp. recto)",
+              "examples": [
+                {
+                  "text": "the <b>reverse</b> side of the form",
+                  "translatedText": "양식지 뒷면"
+                }
+              ],
+              "originalMeaning": "[the ~] 뒤, 배면, 배후; (주화·메달 등의) 뒷면(opp. obverse); (펼친 책의) 왼쪽 페이지(verso)(opp. recto)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "거꾸로의, 반대의, 상반되는 ((to)), (=opposite)",
+              "examples": [],
+              "originalMeaning": "거꾸로의, 반대의, 상반되는 ((to)), (=<span class='related_word' lang='en' >opposite</span>)"
+            },
+            {
+              "meaning": "[A] 뒤[이면]의, 배후의; 뒤로 향한(opp. obverse)",
+              "examples": [
+                {
+                  "text": "the <b>reverse</b> side of a fabric",
+                  "translatedText": "직물의 안쪽"
+                }
+              ],
+              "originalMeaning": "[A] 뒤[이면]의, 배후의; 뒤로 향한(opp. obverse)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<위치·방향·순서 등을> 거꾸로 하다, 반대로 하다; 뒤집다",
+              "examples": [],
+              "originalMeaning": "<위치·방향·순서 등을> 거꾸로 하다, 반대로 하다; 뒤집다"
+            },
+            {
+              "meaning": "바꿔 놓다, 전환하다",
+              "examples": [],
+              "originalMeaning": "바꿔 놓다, 전환하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7eb7e3aa53354bb989d59b13833f3166",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7eb7e3aa53354bb989d59b13833f3166",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reverses"
+        },
+        {
+          "type": "과거형",
+          "value": "reversed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reversing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reversed"
+        }
+      ],
+      "aliasConjugation": "reverses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a12f131217522872338ba8294f1d0999",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그건 친절이라기 보다는 그 반대이다.",
+      "text": "It is the <b>reverse</b> of kindness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 차는 후진하여 문을 나갔다.",
+      "text": "The car reversed out of the gate."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 바보라니, 그 반대이다",
+      "text": "He is no fool, but just the opposite[<b>reverse</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 그가 생각한 것과는 정반대이다",
+      "text": "It is the very <b>reverse</b> to what he intended."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "앞뒤가 전도되어 있다",
+      "text": "The order is inverted[reversed]."
+    }
+  ],
+  "isWordType": true
+}

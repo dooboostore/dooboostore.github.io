@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "intended",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈtendɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "의도된, 계획된, 고의의",
+              "examples": [],
+              "originalMeaning": "의도된, 계획된, 고의의"
+            },
+            {
+              "meaning": "[구어] 미래의, 장래의; 약혼한",
+              "examples": [
+                {
+                  "text": "my <b>intended</b> wife",
+                  "translatedText": "나의 약혼녀"
+                }
+              ],
+              "originalMeaning": "[구어] 미래의, 장래의; 약혼한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[one’s ~] 약혼자",
+              "examples": [],
+              "originalMeaning": "[one’s ~] 약혼자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fd69a2545c2844e49d086c356e145615",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fd69a2545c2844e49d086c356e145615",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f7be733268b3d7a38e3ffe73237237ba",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "intend",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈtend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…할 작정이다, …하려고 생각하다",
+              "examples": [
+                {
+                  "text": "( <b>intend</b>+to do) I <b>intend</b> going. = I <b>intend</b> to go.",
+                  "translatedText": "나는 갈 작정이다.(cf. I <b>intended</b> to have gone. 갈 셈이었다. )((그러나 가지 못했다))"
+                }
+              ],
+              "originalMeaning": "…할 작정이다, …하려고 생각하다"
+            },
+            {
+              "meaning": "의도하다, 기도(企圖)하다, 고의로 하다",
+              "examples": [
+                {
+                  "text": "( <b>intend</b>+todo) I did not <b>intend</b> to insult you at all.",
+                  "translatedText": "당신을 모욕할 생각은 추호도 없었다."
+                }
+              ],
+              "originalMeaning": "의도하다, 기도(企圖)하다, 고의로 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "목적[계획]을 가지다, 의도하다; [고어] 출발하다",
+              "examples": [],
+              "originalMeaning": "목적[계획]을 가지다, 의도하다; [고어] 출발하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/129c8692b3f34be2a75a27b486b8d8ed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/129c8692b3f34be2a75a27b486b8d8ed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "intends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e800b8e71653fa82f10bae54cebe4472",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 직접 갈 터이다",
+      "text": "I <b>intend</b> to go in person."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아예 그런 생각은 없었다",
+      "text": "I never <b>intended</b> to do so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그를 보낼 작정이다.",
+      "text": "I <b>intend</b> him to go.=I <b>intend</b> that he shall go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그를 작가로 만들 작정이다.",
+      "text": "I <b>intend</b> him to be a writer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 선생이 될 생각이었다",
+      "text": "I <b>intended</b> to become a teacher."
+    }
+  ],
+  "isWordType": true
+}

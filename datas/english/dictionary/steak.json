@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "steak",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "steɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(요리용 쇠고기·생선의) 두껍게 썬 고기, ((특히)) 비프스테이크(beefsteak)",
+              "examples": [],
+              "originalMeaning": "(요리용 쇠고기·생선의) 두껍게 썬 고기, ((특히)) 비프스테이크(beefsteak)"
+            },
+            {
+              "meaning": "스테이크용 고기",
+              "examples": [
+                {
+                  "text": "Hamburg <b>steak</b>",
+                  "translatedText": "햄버그스테이크"
+                }
+              ],
+              "originalMeaning": "스테이크용 고기"
+            },
+            {
+              "meaning": "잘게 썬 쇠고기",
+              "examples": [],
+              "originalMeaning": "잘게 썬 쇠고기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6b607eb771c34402a1a981edf439d4ec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6b607eb771c34402a1a981edf439d4ec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e247261d8baa6d6965bd37001c1f5776",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "스테이크는 잘 익힌 것을 좋아합니다.",
+      "text": "I like to have my <b>steak</b> well-done."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "스테이크는 때로 판자 위에 구워내는 일이 있다.",
+      "text": "<b>Steak</b> is sometimes planked."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 스테이크는 알맞게 구워졌다.",
+      "text": "This <b>steak</b> has been done to a turn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "스테이크가 질기다",
+      "text": "The <b>steak</b> is tough."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "햄버그스테이크",
+      "text": "Hamburg <b>steak</b>"
+    }
+  ],
+  "isWordType": true
+}

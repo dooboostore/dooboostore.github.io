@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "essence",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈesns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사물의) 본질, 정수(精髓), 진수, (본질 구성의) 요소(element)",
+              "examples": [
+                {
+                  "text": "He is the <b>essence</b> of goodness.",
+                  "translatedText": "그는 다시없이 선량하다."
+                }
+              ],
+              "originalMeaning": "(사물의) 본질, 정수(精髓), 진수, (본질 구성의) 요소(element)"
+            },
+            {
+              "meaning": "[UC/] 정(精), 엑스(extract) ((of)); 정유(精油); 에센스 ((식물성 정유의 알코올 용액)); 향수(perfume)",
+              "examples": [
+                {
+                  "text": "<b>essence</b> of lemon",
+                  "translatedText": "레몬 엑스"
+                }
+              ],
+              "originalMeaning": "[UC/] 정(精), 엑스(extract) ((of)); 정유(精油); 에센스 ((식물성 정유의 알코올 용액)); 향수(perfume)"
+            },
+            {
+              "meaning": "[C] [철학] 실재, 실체; 영적 존재",
+              "examples": [
+                {
+                  "text": "God is an <b>essence</b>.",
+                  "translatedText": "신(神)은 실재이다."
+                }
+              ],
+              "originalMeaning": "[C] [철학] 실재, 실체; 영적 존재"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fb58892642574123b0837fa45c77edcc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fb58892642574123b0837fa45c77edcc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1d665bae6a3e880bc99e33c90f4a4c5a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실질에 있어서는 큰 차이가 없다",
+      "text": "They are little different in <b>essence</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 다시없이 선량하다.",
+      "text": "He is the <b>essence</b> of goodness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신은 실재이다.",
+      "text": "God is an <b>essence</b>."
+    }
+  ],
+  "isWordType": true
+}

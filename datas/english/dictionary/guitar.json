@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "guitar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡɪˈtɑː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기타",
+              "examples": [
+                {
+                  "text": "an electric <b>guitar</b>",
+                  "translatedText": "전기 기타"
+                }
+              ],
+              "originalMeaning": "기타"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기타를 치다",
+              "examples": [],
+              "originalMeaning": "기타를 치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/680d12a2c51b420a90023a52f3edbe34",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/680d12a2c51b420a90023a52f3edbe34",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "486f369ca7dcb9e7ca89a4c966afd29c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 시간만 나면 기타를 친다",
+      "text": "He plays the <b>guitar</b> every free second he's got."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바이올린보다 기타를 더 좋아한다.",
+      "text": "I like the <b>guitar</b> better than the violin."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방 한구석에 기타가 놓여 있었다",
+      "text": "There was a <b>guitar</b> in a corner of the room."
+    }
+  ],
+  "isWordType": true
+}

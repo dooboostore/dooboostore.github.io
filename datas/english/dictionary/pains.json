@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "pain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "peɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (육체적·정신적) 아픔, 고통; 고뇌; 비탄, 근심; [C] (국부적인) 아픔",
+              "examples": [
+                {
+                  "text": "a <b>pain</b> clinic",
+                  "translatedText": "통증 치료소"
+                }
+              ],
+              "originalMeaning": "[U] (육체적·정신적) 아픔, 고통; 고뇌; 비탄, 근심; [C] (국부적인) 아픔"
+            },
+            {
+              "meaning": "[보통 pl.] 고생, 노고, 수고, 노력(efforts)",
+              "examples": [
+                {
+                  "text": "No <b>pains</b>, no gains.",
+                  "translatedText": "[속담] 수고가 없으면 이득도 없다. ((현재는 No <b>pain</b> , no gain.을 많이 씀))"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 고생, 노고, 수고, 노력(efforts)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<상처나 신체 일부가 사람에게> 고통을 주다",
+              "examples": [],
+              "originalMeaning": "<상처나 신체 일부가 사람에게> 고통을 주다"
+            },
+            {
+              "meaning": "[보통 it을 주어로 하여] 괴롭히다, 마음 아프게 하다, 슬프게 하다(grieve)",
+              "examples": [],
+              "originalMeaning": "[보통 it을 주어로 하여] 괴롭히다, 마음 아프게 하다, 슬프게 하다(grieve)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "아프다",
+              "examples": [],
+              "originalMeaning": "아프다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c28d5081f38f4e01bd060d47a769a1d0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c28d5081f38f4e01bd060d47a769a1d0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pains"
+        },
+        {
+          "type": "과거형",
+          "value": "pained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "paining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pained"
+        }
+      ],
+      "aliasConjugation": "pains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7727cf14fa6579bafd9f0de8d27f18fa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "진통이 시작되었다",
+      "text": "Her labor has started. or She has begun to have labor <b>pains</b>. or She has gone into labor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 아파서 얼굴을 찡그렸다",
+      "text": "<b>Pain</b> lined her forehead."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 괴로움의 신음 소리를 내었다",
+      "text": "He gave a moan of <b>pain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 고통을 잘 참아 냈다",
+      "text": "She has borne the <b>pain</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 고통 때문에 몸을 구부렸다.",
+      "text": "He doubled over[up] with <b>pain</b>."
+    }
+  ],
+  "isWordType": true
+}

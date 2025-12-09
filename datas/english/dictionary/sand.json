@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "sand",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모래",
+              "examples": [
+                {
+                  "text": "a grain of <b>sand</b>",
+                  "translatedText": "모래 한 알"
+                }
+              ],
+              "originalMeaning": "모래"
+            },
+            {
+              "meaning": "[pl.] 모래땅, 모래 벌판[언덕]; 사막;[종종 pl.] 모래톱, 사주(砂洲)",
+              "examples": [],
+              "originalMeaning": "[pl.] 모래땅, 모래 벌판[언덕]; 사막;[종종 pl.] 모래톱, 사주(砂洲)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에> 모래를 뿌리다",
+              "examples": [
+                {
+                  "text": "<b>sand</b> a road",
+                  "translatedText": "(빙판) 길에 모래를 뿌리다"
+                }
+              ],
+              "originalMeaning": "<…에> 모래를 뿌리다"
+            },
+            {
+              "meaning": "모래로 덮다[파묻다] ((종종 up, over))",
+              "examples": [
+                {
+                  "text": "The harbor is sanded upby the current.",
+                  "translatedText": "그 항구는 조류에 밀려온 모래로 얕아졌다."
+                }
+              ],
+              "originalMeaning": "모래로 덮다[파묻다] ((종종 up, over))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9d3b9b2f76d6427c82dc215a46ee1eee",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9d3b9b2f76d6427c82dc215a46ee1eee",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sands"
+        },
+        {
+          "type": "과거형",
+          "value": "sanded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sanding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sanded"
+        }
+      ],
+      "aliasConjugation": "sands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f1c61ad222e19ab31bf1a4031fab16ea",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Sand",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상드 George ~ (1804-76) ((프랑스의 여류 작가, Mme. Dudevant의 필명))",
+              "examples": [],
+              "originalMeaning": "상드 George ~ (1804-76) ((프랑스의 여류 작가, Mme. Dudevant의 필명))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/122c7f1c0a8f4cb08d9a4dd3eaff9f6d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/122c7f1c0a8f4cb08d9a4dd3eaff9f6d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ff61538c09d5bf425aaf947f8f66bf07",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모래로 하천이 막혀 가고 있다.",
+      "text": "<b>Sand</b> is choking the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사실을 직시하지 않고 있다",
+      "text": "He buries his head in the <b>sand</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 항구는 조류에 밀려온 모래로 얕아졌다.",
+      "text": "The harbor is sanded up by the current."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "몇 마일을 가도 모래뿐이었다.",
+      "text": "For miles and miles there was nothing but <b>sand</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모래밭을 사박사박 밟고 갔다",
+      "text": "He walked across the <b>sand</b> with a soft crunch."
+    }
+  ],
+  "isWordType": true
+}

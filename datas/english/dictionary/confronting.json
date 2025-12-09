@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "confront",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈfrʌnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "직면하다, 맞서다(face)",
+              "examples": [
+                {
+                  "text": "His house confronts mine.",
+                  "translatedText": "그의 집은 우리 집과 마주 서 있다."
+                }
+              ],
+              "originalMeaning": "직면하다, 맞서다(face)"
+            },
+            {
+              "meaning": "(…와) 대면[대결]시키다 ((with)), …의 눈앞에 (증거 등을) 들이대다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>confront</b> a person with evidence of his crime",
+                  "translatedText": "…에게 범죄의 증거를 들이대다"
+                }
+              ],
+              "originalMeaning": "(…와) 대면[대결]시키다 ((with)), …의 눈앞에 (증거 등을) 들이대다 ((with))"
+            },
+            {
+              "meaning": "<곤란 등이> …에게 들이닥치다, <사람이 곤란 등에> 직면하다",
+              "examples": [],
+              "originalMeaning": "<곤란 등이> …에게 들이닥치다, <사람이 곤란 등에> 직면하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9889b189048d4488a386c392c9d83c68",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9889b189048d4488a386c392c9d83c68",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "confronts"
+        },
+        {
+          "type": "과거형",
+          "value": "confronted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "confronting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "confronted"
+        }
+      ],
+      "aliasConjugation": "confronts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6751997752a5fa14154a2b5ea3c11ea7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 집은 우리 집과 마주 서 있다.",
+      "text": "His house confronts mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어려운 문제에 부닥쳤다",
+      "text": "He is confronted with a hard problem."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어려운 문제에 직면하였다",
+      "text": "He was faced[confronted] with a difficult question."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무리 침착한 사람일지라도 그러한 위기에 임하면 침착함을 잃는 법이다",
+      "text": "Were a man ever so calm, he would lose his presence of mind if confronted by such a crisis."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "auction",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɔːkʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경매, 공매(公賣)",
+              "examples": [
+                {
+                  "text": "a public <b>auction</b>",
+                  "translatedText": "공매, 경매"
+                }
+              ],
+              "originalMeaning": "경매, 공매(公賣)"
+            },
+            {
+              "meaning": "(=AUCTION BRIDGE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>AUCTION</b> BRIDGE</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경매에서 팔다, 경매하다 ((off))",
+              "examples": [],
+              "originalMeaning": "경매에서 팔다, 경매하다 ((off))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/140e6afc21fb4f34a64cd9db12608bc6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/140e6afc21fb4f34a64cd9db12608bc6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "auctions"
+        },
+        {
+          "type": "과거형",
+          "value": "auctioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "auctioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "auctioned"
+        }
+      ],
+      "aliasConjugation": "auctions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c5d31dc020b6f3a8680d2ee1afff1b2b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경매에서 진귀한 우표[주화] 컬렉션을 팔았다",
+      "text": "They sold a valuable stamp[coin] collection at the <b>auction</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 그림은 경매에서 내 손에 10만원에 떨어졌다",
+      "text": "The picture was knocked down to me at an <b>auction</b> for 100,000 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "역경매",
+      "text": "Dutch <b>auction</b>"
+    }
+  ],
+  "isWordType": true
+}
