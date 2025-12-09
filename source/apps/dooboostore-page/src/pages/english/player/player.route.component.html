@@ -17,8 +17,8 @@
                                 ${#item#.entry}$</h3>
                             <label class="favorite-checkbox-label" title="즐겨찾기에 추가/제거" dr-if="#item#.entry">
                                 <input type="checkbox" class="favorite-checkbox"
-                                    dr-attr="{checked: @this@.checkWordFavorite(#item#.entry || '') ? 'checked' : null}"
-                                    dr-event-change="@this@.toggleFavorite(#item#.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#.entry || '')">
+                                    dr-attr="{checked: @this@.checkWordFavorite(#item#?.entry || '') ? 'checked' : null}"
+                                    dr-event-change="@this@?.toggleFavorite(#item#?.entry || '', #item#?.pos?.[0]?.meanings?.[0]?.meaning || #item#?.entry || '')">
                                 <i class="fas fa-star favorite-icon"></i>
                             </label>
                         </div>
@@ -27,14 +27,14 @@
                                 ${#pos#.type || '기타'}$</div>
                             <div class="meanings" dr-for-of="#pos#.meanings" dr-option-item-variable-name="meaning">
                                 <div class="meaning-item">
-                                    <div class="meaning-text">${#meaning#.meaning}$</div>
+                                    <div class="meaning-text">${#meaning#?.meaning}$</div>
                                     <div class="examples" dr-if="#meaning#.examples.length > 0"
                                         dr-for-of="#meaning#.examples" dr-option-item-variable-name="example">
                                         <div class="example-item">
                                             <div class="example-text clickable-example"
                                                 dr-event-click="@this@.onExampleClick($element, $event)">
-                                                #{#example#.text}#</div>
-                                            <div class="example-translation">#{#example#.translatedText}#</div>
+                                                #{#example#?.text}#</div>
+                                            <div class="example-translation">#{#example#?.translatedText}#</div>
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <!-- Dictionary Examples Section -->
-                    <details class="examples-section" dr-if="#dict#?.examples && #dict#?.examples.length > 0">
+                    <details class="examples-section" dr-if="#dict#?.examples && #dict#?.examples?.length > 0">
                         <summary class="examples-summary">
                             <i class="fas fa-book-open"></i>
                             예문 보기 (${#dict#?.examples.length}$개)
@@ -52,8 +52,8 @@
                                 dr-option-item-variable-name="example">
                                 <div class="example-text clickable-example"
                                     dr-event-click="@this@.onExampleClick($element, $event)">
-                                    #{#example#.text}#</div>
-                                <div class="example-translation">#{#example#.translatedText}#</div>
+                                    #{#example#?.text}#</div>
+                                <div class="example-translation">#{#example#?.translatedText}#</div>
                             </div>
                         </div>
                     </details>
@@ -86,7 +86,7 @@
                     dr-option-item-index-variable-name="index"
                     dr-attr="{'data-index': #index#, 'data-start-ms': #item#.startMs, 'data-end-ms': #item#.endMs, 'data-type': #item#.type}"
                     dr-event-click="#item#.type === 'en' && @this@.onTranslationItemClick(#index#, #item#.startMs, #item#.endMs, $event)">
-                    <div class="translation-text" dr-attr="{class: 'translation-text ' + (#item#.type === 'en' ? 'english-text' : 'korean-text')}">${#item#.text}$</div>
+                    <div class="translation-text" dr-attr="{class: 'translation-text ' + (#item#.type === 'en' ? 'english-text' : 'korean-text')}">${#item#?.text}$</div>
                 </div>
             </div>
         </div>

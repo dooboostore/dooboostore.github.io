@@ -1165,7 +1165,7 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
           // Ignore errors
         }
       }
-    }, 50) as any;
+    }, 5) as any;
 
     if (this.youtubeTimeMonitoringInterval)
     this.intervals.push(this.youtubeTimeMonitoringInterval);
@@ -1281,6 +1281,7 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
         this.stopCuePlayCheck();
         return;
       }
+      console.log('vvvvvvvvvvv?');
       
       try {
         const currentTime = this.youtubePlayer.getCurrentTime();
@@ -1297,7 +1298,7 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
       } catch (error) {
         console.log('⚠️ Cue play check error:', error);
       }
-    }, 50) as any;
+    }, 5) as any;
 
     if (this.cuePlayCheckInterval)
     this.intervals.push(this.cuePlayCheckInterval);

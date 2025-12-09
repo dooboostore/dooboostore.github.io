@@ -1,5 +1,5 @@
 export const environment = {
-  packageGithubIoUrl: 'https://dooboostore-develop.github.io/packages',
+  packageGithubIoUrl: 'http://localhost:8082/dooboostore-develop.github.io/packages',
   cookie: {
     accessTokenName : 'ACCESS_TOKEN',
     refreshTokenName : 'REFRESH_TOKEN',
