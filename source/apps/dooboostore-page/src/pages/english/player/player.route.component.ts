@@ -572,9 +572,9 @@ export class PlayerRouteComponent extends ComponentBase implements RouterAction.
           this.youtubePlayer.playVideo();
           console.log(`▶️ Playing segment: ${startSeconds}s - ${endSeconds}s`);
           
-          setTimeout(() => {
+          // setTimeout(() => {
             this.startCuePlayCheck(endSeconds);
-          }, 100);
+          // }, 100);
         }
       }, 100);
     }
