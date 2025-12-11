@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "exterminate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪk│stɜːrmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "근절[절멸]하다, 몰살하다, 모조리 없애버리다",
+              "examples": [
+                {
+                  "text": "<b>exterminate</b> cockroaches",
+                  "translatedText": "바퀴벌레를 근절하다"
+                }
+              ],
+              "originalMeaning": "근절[절멸]하다, 몰살하다, 모조리 없애버리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cc683df0a278460a87209648885ecd31",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cc683df0a278460a87209648885ecd31",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exterminates"
+        },
+        {
+          "type": "과거형",
+          "value": "exterminated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exterminating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exterminated"
+        }
+      ],
+      "aliasConjugation": "exterminates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2c52efcd48a51273fb48eab6b3e8b6fb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "송두리째 근절됐다",
+      "text": "It was exterminated root and branch."
+    }
+  ],
+  "isWordType": true
+}

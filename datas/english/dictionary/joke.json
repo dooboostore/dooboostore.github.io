@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "joke",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dʒoʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "농담, 재담, 익살, 조크; 희롱, 놀림, 장난(jest)",
+              "examples": [
+                {
+                  "text": "a good <b>joke</b>",
+                  "translatedText": "멋진 재담"
+                }
+              ],
+              "originalMeaning": "농담, 재담, 익살, 조크; 희롱, 놀림, 장난(jest)"
+            },
+            {
+              "meaning": "[보통 a[the] ~] 우스운 일[상황]; 웃음거리, 웃음가마리 ((of)) (((어울리지 않거나 부끄러운 일로 인한) 조소·비난의 대상))",
+              "examples": [
+                {
+                  "text": "He is the <b>joke</b> of the town.",
+                  "translatedText": "그는 온 동네의 웃음거리이다."
+                }
+              ],
+              "originalMeaning": "[보통 a[the] ~] 우스운 일[상황]; 웃음거리, 웃음가마리 ((of)) (((어울리지 않거나 부끄러운 일로 인한) 조소·비난의 대상))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "농담하다, 익살 부리다; 희롱하다",
+              "examples": [],
+              "originalMeaning": "농담하다, 익살 부리다; 희롱하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "놀리다(banter), 조롱하다, 비웃다",
+              "examples": [
+                {
+                  "text": "<b>joke</b> a person on his baldness[accent]",
+                  "translatedText": "…의 대머리[사투리]를 놀려 대다"
+                }
+              ],
+              "originalMeaning": "놀리다(banter), 조롱하다, 비웃다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/26f706925462449585bb18b908d11f02",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/26f706925462449585bb18b908d11f02",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "jokes"
+        },
+        {
+          "type": "과거형",
+          "value": "joked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "joking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "joked"
+        }
+      ],
+      "aliasConjugation": "jokes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6d5303a40ea309f0088422b618a8055a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 시험은 아주 쉬웠다.",
+      "text": "The test was a <b>joke</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 농담은 나를 비꼰 것이었다.",
+      "text": "The <b>joke</b> was on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 농담은 차마 들을 수 없다",
+      "text": "I can't stand his jokes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "청중은 그의 재담에 폭소를 터뜨렸다",
+      "text": "The audience burst out laughing at his <b>joke</b>. or His <b>joke</b> was greeted with bursts of laughter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀에게 농담 걸지 마라.",
+      "text": "Don’t play a <b>joke</b> on her."
+    }
+  ],
+  "isWordType": true
+}

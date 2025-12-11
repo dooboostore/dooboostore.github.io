@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "decline",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈklaɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(정중히) 거절하다, 사절하다",
+              "examples": [
+                {
+                  "text": "She declined with thanks.",
+                  "translatedText": "그녀는 정중히 거절했다."
+                }
+              ],
+              "originalMeaning": "(정중히) 거절하다, 사절하다"
+            },
+            {
+              "meaning": "기울다, 내려가다",
+              "examples": [],
+              "originalMeaning": "기울다, 내려가다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<도전·초대·신청 등을> 거절[사절]하다(opp. accept), (=refuse)",
+              "examples": [
+                {
+                  "text": "<b>decline</b> a person's offer",
+                  "translatedText": "…의 제의를 거절하다"
+                }
+              ],
+              "originalMeaning": "<도전·초대·신청 등을> 거절[사절]하다(opp. accept), (=<span class='related_word' lang='en' >refuse</span>)"
+            },
+            {
+              "meaning": "기울이다, <고개를> 팍 숙이다",
+              "examples": [],
+              "originalMeaning": "기울이다, <고개를> 팍 숙이다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(해가) 기움",
+              "examples": [],
+              "originalMeaning": "(해가) 기움"
+            },
+            {
+              "meaning": "내리받이; 쇠퇴, 퇴보, 타락; (귀족 계급 등의) 몰락; 만년",
+              "examples": [
+                {
+                  "text": "a gentle <b>decline</b> in the road",
+                  "translatedText": "도로의 완만한 내리막"
+                }
+              ],
+              "originalMeaning": "내리받이; 쇠퇴, 퇴보, 타락; (귀족 계급 등의) 몰락; 만년"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a33dc6a678a243c6b02d4e07a020cb40",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a33dc6a678a243c6b02d4e07a020cb40",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "declines"
+        },
+        {
+          "type": "과거형",
+          "value": "declined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "declining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "declined"
+        }
+      ],
+      "aliasConjugation": "declines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5a34146af61e989e050e1f8c247d9b3f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "집무 중 면회 사절",
+      "text": "Visitors declined during office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사례는 일절 받지 않습니다",
+      "text": "I <b>decline</b> any form of reward."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 건강은 차츰 나빠졌다",
+      "text": "His health gradually failed[declined]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "담배 질이 떨어져 간다",
+      "text": "The quality of tobacco is declining."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 고사하고 받지 않았다",
+      "text": "He positively declined to receive it."
+    }
+  ],
+  "isWordType": true
+}

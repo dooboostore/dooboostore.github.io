@@ -121,6 +121,7 @@ export class EnglishRouterComponent extends ComponentRouterBase implements OnCre
         pageImage = this.currentItem.img;
         // Set Title, Description, Canonical URL
       }
+      console.log('Setting SEO tags:', { pageTitle, pageDescription, pageUrl, pageImage });
       setTitle(pageTitle);
       setMetaByName('description', pageDescription);
       setLink('canonical', pageUrl);

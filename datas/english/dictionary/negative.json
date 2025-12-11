@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "negative",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈneɡətɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<의견·대답 등이> 부정[부인]의, 부정적인",
+              "examples": [
+                {
+                  "text": "a <b>negative</b> response to the question",
+                  "translatedText": "그 질문에 대한 부정적인 대답"
+                }
+              ],
+              "originalMeaning": "<의견·대답 등이> 부정[부인]의, 부정적인"
+            },
+            {
+              "meaning": "<태도·의지 등이> 거부적인, 반대의",
+              "examples": [
+                {
+                  "text": "a <b>negative</b> vote",
+                  "translatedText": "반대 투표"
+                }
+              ],
+              "originalMeaning": "<태도·의지 등이> 거부적인, 반대의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부정; [문법] 부정어(구) ((no, not, never 등)); 부정 명제(命題)",
+              "examples": [
+                {
+                  "text": "double <b>negative</b>",
+                  "translatedText": "이중 부정 ((보기:cannot do nothing))"
+                }
+              ],
+              "originalMeaning": "부정; [문법] 부정어(구) ((no, not, never 등)); 부정 명제(命題)"
+            },
+            {
+              "meaning": "거부, 거절, 부정의 말[회답]",
+              "examples": [],
+              "originalMeaning": "거부, 거절, 부정의 말[회답]"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[대답으로서] 아니(오)(no)",
+              "examples": [
+                {
+                  "text": "“Won't you come with me?” ─ “<b>Negative</b>.”",
+                  "translatedText": "같이 갈래? ─ 아니."
+                }
+              ],
+              "originalMeaning": "[대답으로서] 아니(오)(no)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b9e86bddb4b1400da72e219e3f0d9760",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b9e86bddb4b1400da72e219e3f0d9760",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "negatives"
+        },
+        {
+          "type": "과거형",
+          "value": "negatived"
+        },
+        {
+          "type": "현재 분사",
+          "value": "negativing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "negatived"
+        }
+      ],
+      "aliasConjugation": "negatives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e66c5a15b5f77af4dd5bbb19b115e41c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "손톱 깨무는 것은 좋지 않은 행동이다",
+      "text": "Nail-biting is a <b>negative</b> behavior."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "검사 결과 음성으로 나타났다",
+      "text": "The result of the examination was <b>negative</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 투베르쿨린 반응은 양성[음성]이었다",
+      "text": "My tuberculin reaction was positive[<b>negative</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 대답은 부정적이었다",
+      "text": "He answered in a <b>negative</b> way."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "음과 양",
+      "text": "Yin and Yang;the positive and the <b>negative</b>;the male and female principles"
+    }
+  ],
+  "isWordType": true
+}

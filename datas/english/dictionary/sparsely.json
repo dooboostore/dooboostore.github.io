@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "sparse",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "spɑːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<인구 등이> 희박한, 성긴, 드문드문한(opp. dense)",
+              "examples": [
+                {
+                  "text": "a <b>sparse</b> population",
+                  "translatedText": "희박한 인구"
+                }
+              ],
+              "originalMeaning": "<인구 등이> 희박한, 성긴, 드문드문한(opp. dense)"
+            },
+            {
+              "meaning": "<털·식생(植生)이> 드문드문 난, 산재하는",
+              "examples": [
+                {
+                  "text": "a <b>sparse</b> beard",
+                  "translatedText": "엉성하게 난 턱수염"
+                }
+              ],
+              "originalMeaning": "<털·식생(植生)이> 드문드문 난, 산재하는"
+            },
+            {
+              "meaning": "부족한, 빈약한",
+              "examples": [],
+              "originalMeaning": "부족한, 빈약한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1092f759fafc4a7fbff1526045002965",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1092f759fafc4a7fbff1526045002965",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "sparser"
+        },
+        {
+          "type": "최상급",
+          "value": "sparsest"
+        }
+      ],
+      "aliasConjugation": "sparser",
+      "aliasConjugationPos": "비교급",
+      "gdid": "d91bc6f151632fc46a31c8960eefca46",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 언덕에는 나무가 띄엄띄엄 서 있다",
+      "text": "The hill is <b>sparsely</b> wooded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 언덕에는 나무가 듬성듬성 심어져 있다",
+      "text": "The hill is <b>sparsely</b>[thinly] wooded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "들에 집이 드문드문 서 있다",
+      "text": "The field is <b>sparsely</b> dotted with houses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "골짜기에 인가가 띄엄띄엄 있다",
+      "text": "The valley is <b>sparsely</b> dotted with houses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "벌판에 나무가 성깃성깃했다",
+      "text": "The field was <b>sparsely</b> dotted with trees."
+    }
+  ],
+  "isWordType": true
+}

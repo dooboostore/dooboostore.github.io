@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "deficit",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdefɪsɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부족(액), 결손 ((in)); 적자(opp. surplus)",
+              "examples": [
+                {
+                  "text": "a <b>deficit</b> in revenue",
+                  "translatedText": "세입 적자"
+                }
+              ],
+              "originalMeaning": "부족(액), 결손 ((in)); 적자(opp. surplus)"
+            },
+            {
+              "meaning": "불리한 처지, 열세",
+              "examples": [],
+              "originalMeaning": "불리한 처지, 열세"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2d085a96ec5b4078aeb869df475e1e71",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2d085a96ec5b4078aeb869df475e1e71",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0e3b788237f6500275ec15a11dd395ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "돈이 5천 원 축난다",
+      "text": "The sum comes short by five thousand won. or There is a <b>deficit</b>[shortage] of five thousand won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다달의 적자는 보너스로 메우고 있다",
+      "text": "We make up for the monthly <b>deficits</b> with bonuses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대통령은 적자 감축에 모든 것을 걸고 있다",
+      "text": "The president sticks his neck out for <b>deficit</b> reduction."
+    }
+  ],
+  "isWordType": true
+}

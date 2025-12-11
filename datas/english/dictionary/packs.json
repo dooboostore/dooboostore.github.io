@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "pack",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pæk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "꾸러미, 보따리, 포장한 짐, 짐짝",
+              "examples": [
+                {
+                  "text": "a mule's <b>pack</b>",
+                  "translatedText": "노새의 등짐"
+                }
+              ],
+              "originalMeaning": "꾸러미, 보따리, 포장한 짐, 짐짝"
+            },
+            {
+              "meaning": "(접어서 갠) 낙하산 꾸러미",
+              "examples": [],
+              "originalMeaning": "(접어서 갠) 낙하산 꾸러미"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "운송용의",
+              "examples": [],
+              "originalMeaning": "운송용의"
+            },
+            {
+              "meaning": "포장용의",
+              "examples": [],
+              "originalMeaning": "포장용의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<짐 등을> 꾸리다, 싸다, 묶다, 포장하다",
+              "examples": [
+                {
+                  "text": "<b>pack</b> (up) clothes",
+                  "translatedText": "옷가지를 꾸리다"
+                }
+              ],
+              "originalMeaning": "<짐 등을> 꾸리다, 싸다, 묶다, 포장하다"
+            },
+            {
+              "meaning": "<물건을> (그릇 등에) 채워 넣다, 통조림으로 만들다",
+              "examples": [
+                {
+                  "text": "Meat is often packed in cans.",
+                  "translatedText": "고기는 종종 통조림으로 만들어진다."
+                }
+              ],
+              "originalMeaning": "<물건을> (그릇 등에) 채워 넣다, 통조림으로 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a61f9b71f53e480d968b4bf4247c9307",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a61f9b71f53e480d968b4bf4247c9307",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "packs"
+        },
+        {
+          "type": "과거형",
+          "value": "packed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "packing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "packed"
+        }
+      ],
+      "aliasConjugation": "packs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5c18c2e4791598365b6f08025f601077",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비 온 뒤에 땅이 굳어진다",
+      "text": "Ground <b>packs</b> after a rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 의류는 쉽게 포장할 수 있다.",
+      "text": "These clothes <b>pack</b> easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방에 사람이 꽉 찼다",
+      "text": "The room is jammed[packed] with people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 방에 사람들이 빽빽이 찼다",
+      "text": "The room is packed with people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고기는 종종 통조림으로 만들어진다.",
+      "text": "Meat is often packed in cans."
+    }
+  ],
+  "isWordType": true
+}

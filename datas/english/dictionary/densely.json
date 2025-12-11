@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "densely",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "짙게, 밀집하여, 빽빽이",
+              "examples": [],
+              "originalMeaning": "짙게, 밀집하여, 빽빽이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4a2e4b9328b94a61b5187f1342215577",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4a2e4b9328b94a61b5187f1342215577",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "72a2a897c4544383ae8a63fba026dd10",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "dense",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dens"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "밀집한, 빽빽한",
+              "examples": [
+                {
+                  "text": "a <b>dense</b> forest",
+                  "translatedText": "밀림"
+                }
+              ],
+              "originalMeaning": "밀집한, 빽빽한"
+            },
+            {
+              "meaning": "<인구가> 조밀한(opp. sparse)",
+              "examples": [
+                {
+                  "text": "a <b>dense</b> population",
+                  "translatedText": "조밀한 인구"
+                }
+              ],
+              "originalMeaning": "<인구가> 조밀한(opp. sparse)"
+            },
+            {
+              "meaning": "<안개 등이> 자욱한, 짙은; 농밀한; 농후한; [사진] <음화가> 불투명한",
+              "examples": [
+                {
+                  "text": "a <b>dense</b> fog",
+                  "translatedText": "짙은 안개"
+                }
+              ],
+              "originalMeaning": "<안개 등이> 자욱한, 짙은; 농밀한; 농후한; [사진] <음화가> 불투명한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/93e4ceb69ae4445d8cf0e9ac97100518",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/93e4ceb69ae4445d8cf0e9ac97100518",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "denser",
+      "aliasConjugationPos": "비교급",
+      "gdid": "49fb289543f4cf77fab3690937b3e955",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소나무가 빽빽이 자라고 있다",
+      "text": "Pine trees grow <b>densely</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 도시는 인구가 조밀하다",
+      "text": "This city is <b>densely</b> populated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산에 나무가 총총하게 들어서 있다",
+      "text": "A mountain is <b>densely</b> wooded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 지역은 인가가 밀집해 있다",
+      "text": "This area is <b>densely</b> populated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "농무는 뱃사공에게 가장 무서운 적이다",
+      "text": "A <b>dense</b> fog is the sailor's greatest enemy."
+    }
+  ],
+  "isWordType": true
+}

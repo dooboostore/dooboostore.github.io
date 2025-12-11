@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "delay",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈleɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "늦추다, 지체시키다",
+              "examples": [
+                {
+                  "text": "Ignorance <b>delay</b> s progress.",
+                  "translatedText": "무지가 진보를 늦춘다."
+                }
+              ],
+              "originalMeaning": "늦추다, 지체시키다"
+            },
+            {
+              "meaning": "미루다, 연기하다",
+              "examples": [
+                {
+                  "text": "We must <b>delay</b> our holidays until next month.",
+                  "translatedText": "휴가를 다음 달까지 미뤄야 한다."
+                }
+              ],
+              "originalMeaning": "미루다, 연기하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "우물쭈물하다, 시간이 걸리다",
+              "examples": [],
+              "originalMeaning": "우물쭈물하다, 시간이 걸리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지연, 지체; 유예, 연기",
+              "examples": [],
+              "originalMeaning": "지연, 지체; 유예, 연기"
+            },
+            {
+              "meaning": "지연 시간[기간]",
+              "examples": [],
+              "originalMeaning": "지연 시간[기간]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/345c7486547841c7b757bb4fa56a01fa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/345c7486547841c7b757bb4fa56a01fa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "delays"
+        },
+        {
+          "type": "과거형",
+          "value": "delayed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "delaying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "delayed"
+        }
+      ],
+      "aliasConjugation": "delays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "73d3f94ad5d80d72e0d4aeba271aa781",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 분초를 다투는 문제이다",
+      "text": "It is a matter of great urgency. or It admits of no <b>delay</b>. or It is very urgent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비행기가 한 시간 늦었다",
+      "text": "The plane was <b>delayed</b> one hour."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다소의 지연을 생각해 두어야 한다.",
+      "text": "We must allow for some <b>delay</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네가 늦어서 그는 등이 달았다",
+      "text": "He was vexed[impatient] at your <b>delay</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사태는 촌각의 지체도 용납하지 않는다.",
+      "text": "The situation permits of no <b>delay</b>."
+    }
+  ],
+  "isWordType": true
+}

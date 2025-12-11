@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "populate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɑːpjuleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "거주시키다, 식민(植民)하다",
+              "examples": [],
+              "originalMeaning": "거주시키다, 식민(植民)하다"
+            },
+            {
+              "meaning": "장소를 차지하다; …에 거주하다, 살다",
+              "examples": [
+                {
+                  "text": "densely[sparsely] <b>populated</b>",
+                  "translatedText": "인구가 조밀[희박]한"
+                }
+              ],
+              "originalMeaning": "장소를 차지하다; …에 거주하다, 살다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5ffdb96c419e4bddad955faca65e2288",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5ffdb96c419e4bddad955faca65e2288",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "populates"
+        },
+        {
+          "type": "과거형",
+          "value": "populated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "populating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "populated"
+        }
+      ],
+      "aliasConjugation": "populates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f53df9600dd45919047b88c8ddc9af4e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 도시는 인구가 조밀하다",
+      "text": "This city is densely <b>populated</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 지역은 인가가 밀집해 있다",
+      "text": "This area is densely <b>populated</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 나라는 땅은 좁고 인구는 많다",
+      "text": "Our country is limited in area and densely <b>populated</b>."
+    }
+  ],
+  "isWordType": true
+}

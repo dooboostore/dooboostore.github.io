@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "composed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kəm│poʊzd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "침착한(calm), 차분한",
+              "examples": [],
+              "originalMeaning": "침착한(calm), 차분한"
+            },
+            {
+              "meaning": "…으로 구성되어 ((of))",
+              "examples": [
+                {
+                  "text": "The troop was <b>composed</b> entirely of American soldiers.",
+                  "translatedText": "그 부대는 완전히 미국 병사들로 구성되어 있었다."
+                }
+              ],
+              "originalMeaning": "…으로 구성되어 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dada2d5ccf3548e6b3b1172ab7367758",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dada2d5ccf3548e6b3b1172ab7367758",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "de8267538f3f3f0334b0e26e20328d66",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "compose",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kəm│poʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "조립하다, 구성하다, <…의> 기초를 이루다; 조직하다 (→composed)",
+              "examples": [
+                {
+                  "text": "Facts alone do not <b>compose</b> a book.",
+                  "translatedText": "사실만으로 책이 되는 것은 아니다."
+                }
+              ],
+              "originalMeaning": "조립하다, 구성하다, <…의> 기초를 이루다; 조직하다 (→<span class='related_word' lang='en' ><b>composed</b></span>)"
+            },
+            {
+              "meaning": "<시·글을> 만들다, 짓다, 작문하다; 작곡하다",
+              "examples": [
+                {
+                  "text": "<b>compose</b> a poem",
+                  "translatedText": "시를 짓다"
+                }
+              ],
+              "originalMeaning": "<시·글을> 만들다, 짓다, 작문하다; 작곡하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "작곡하다, 시를 짓다",
+              "examples": [],
+              "originalMeaning": "작곡하다, 시를 짓다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b2acde1f9f1c4316a205abb8fa3047f6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b2acde1f9f1c4316a205abb8fa3047f6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "composes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d5d73d5be807e25a93348dc034a464ce",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람이 우리 앞에 턱 나타났다",
+      "text": "He composedly appeared in front of us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 적을 앞에 두고 유유히 식사를 했다",
+      "text": "We sat down composedly to a hearty meal in the face of the enemy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 클럽은 회원이 1,000명이다",
+      "text": "This club is <b>composed</b> of 1,000 members."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사실만으로 책이 되는 것은 아니다.",
+      "text": "Facts alone do not <b>compose</b> a book."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 교과서는 10단원으로 되어 있다",
+      "text": "This textbook is <b>composed</b> of ten units."
+    }
+  ],
+  "isWordType": true
+}

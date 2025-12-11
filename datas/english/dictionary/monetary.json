@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "monetary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mʌnɪteri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "화폐의, 통화의",
+              "examples": [
+                {
+                  "text": "the <b>monetary</b> system",
+                  "translatedText": "화폐 제도"
+                }
+              ],
+              "originalMeaning": "화폐의, 통화의"
+            },
+            {
+              "meaning": "금전(상)의; 금융의, 재정(상)의(financial)",
+              "examples": [
+                {
+                  "text": "<b>monetary</b> value",
+                  "translatedText": "금전적 가치"
+                }
+              ],
+              "originalMeaning": "금전(상)의; 금융의, 재정(상)의(financial)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/382f39e138494a4fbc9754ed02ffe06e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/382f39e138494a4fbc9754ed02ffe06e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9d61412abdadc61c3797d58927d48490",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국의 화폐 단위는 원이다",
+      "text": "The <b>monetary</b> unit of Korea is the won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "황제 폐하께서 금일봉을 하사하셨다",
+      "text": "The Emperor granted a <b>monetary</b> gift."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국제 통화 기금",
+      "text": "International <b>Monetary</b> Fund"
+    }
+  ],
+  "isWordType": true
+}

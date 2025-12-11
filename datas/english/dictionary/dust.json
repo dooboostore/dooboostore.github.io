@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "dust",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dʌst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "먼지, 티끌; [a ~] 자욱한 먼지, 흙먼지; 진폐증(塵肺症)",
+              "examples": [],
+              "originalMeaning": "먼지, 티끌; [a ~] 자욱한 먼지, 흙먼지; 진폐증(塵肺症)"
+            },
+            {
+              "meaning": "가루, 분말; 꽃가루",
+              "examples": [
+                {
+                  "text": "<b>dust</b> tea",
+                  "translatedText": "가루차"
+                }
+              ],
+              "originalMeaning": "가루, 분말; 꽃가루"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<가루 따위를> 뿌리다, 흩뿌리다, 끼얹다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>dust</b> a cake with sugar = <b>dust</b> sugar onto a cake",
+                  "translatedText": "케이크에 설탕을 뿌리다"
+                }
+              ],
+              "originalMeaning": "<가루 따위를> 뿌리다, 흩뿌리다, 끼얹다 ((with))"
+            },
+            {
+              "meaning": "<사람·물건의> 먼지를 털다[닦아내다] ((off))",
+              "examples": [
+                {
+                  "text": "<b>dust</b> (off) a table",
+                  "translatedText": "테이블의 먼지를 털다"
+                }
+              ],
+              "originalMeaning": "<사람·물건의> 먼지를 털다[닦아내다] ((off))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<새가> 사욕(砂浴)을 하다, 가루를 흩뿌리다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>dust</b> with insecticide",
+                  "translatedText": "살충제를 뿌리다"
+                }
+              ],
+              "originalMeaning": "<새가> 사욕(砂浴)을 하다, 가루를 흩뿌리다 ((with))"
+            },
+            {
+              "meaning": "먼지를 털다, 청소하다",
+              "examples": [],
+              "originalMeaning": "먼지를 털다, 청소하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bba8a68b73d7402e93aa2176ae6a96c6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bba8a68b73d7402e93aa2176ae6a96c6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dusts"
+        },
+        {
+          "type": "과거형",
+          "value": "dusted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dusting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dusted"
+        }
+      ],
+      "aliasConjugation": "dusts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1ab9660a14305b8a38016f5af16a7d22",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "머리 위로 먼지를 둘러썼다",
+      "text": "<b>Dust</b> fell all over me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "먼지가 내 머리 위로 쏟아졌다.",
+      "text": "<b>Dust</b> snowed on my head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "먼지가 뭉게뭉게 피어 올랐다.",
+      "text": "The <b>dust</b> flew about in clouds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상 위에 먼지가 들이쌓인다",
+      "text": "<b>Dust</b> collects[is thick] on the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 비로 먼지가 가라앉게 될 것이다.",
+      "text": "The rain will settle the <b>dust</b>."
+    }
+  ],
+  "isWordType": true
+}

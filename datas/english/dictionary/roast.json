@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "roast",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "roʊst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<특히 고기를> (오븐에) 굽다 (=cook)",
+              "examples": [
+                {
+                  "text": "<b>roast</b> beef",
+                  "translatedText": "쇠고기를 굽다"
+                }
+              ],
+              "originalMeaning": "<특히 고기를> (오븐에) 굽다 (=<span class='related_word' lang='en' >cook</span>)"
+            },
+            {
+              "meaning": "<콩·커피 원두 등을> 볶다",
+              "examples": [
+                {
+                  "text": "<b>roast</b> the beans brown",
+                  "translatedText": "콩을 알맞게 볶다"
+                }
+              ],
+              "originalMeaning": "<콩·커피 원두 등을> 볶다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<고기가> 구워지다, 그을리다, 로스트로 하다, 볶아지다, 볕에 타다",
+              "examples": [
+                {
+                  "text": "They were roasting under the sun.",
+                  "translatedText": "그들은 일광욕을 하고 있었다."
+                }
+              ],
+              "originalMeaning": "<고기가> 구워지다, 그을리다, 로스트로 하다, 볶아지다, 볕에 타다"
+            },
+            {
+              "meaning": "타는 듯이 뜨겁다",
+              "examples": [
+                {
+                  "text": "I am simply roasting.",
+                  "translatedText": "더워 죽겠다."
+                }
+              ],
+              "originalMeaning": "타는 듯이 뜨겁다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [미] (오븐에) 구운 고기, 불고기; [C] 불고기용 고기([영] joint), 로스트 ((보통 쇠고기))",
+              "examples": [],
+              "originalMeaning": "[U] [미] (오븐에) 구운 고기, 불고기; [C] 불고기용 고기([영] joint), 로스트 ((보통 쇠고기))"
+            },
+            {
+              "meaning": "불에 구운 것; 굽기, 불에 대기[익히기]",
+              "examples": [],
+              "originalMeaning": "불에 구운 것; 굽기, 불에 대기[익히기]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a618d44d06bd4300a69bf257bf7b7a24",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a618d44d06bd4300a69bf257bf7b7a24",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "roasts"
+        },
+        {
+          "type": "과거형",
+          "value": "roasted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "roasting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "roasted"
+        }
+      ],
+      "aliasConjugation": "roasts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4a3505a3efb1048ffb2525c68de0e9e7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 일광욕을 하고 있었다.",
+      "text": "They were roasting under the sun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "식사의 주요 코스는 구운 쇠고기였다",
+      "text": "The main course was <b>roast</b> beef."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 불을 쬐어 몸을 녹이고 있었다.",
+      "text": "She was roasting herself before the fire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교각살우다",
+      "text": "The remedy is worse than the evil. or You shouldn't burn the house to <b>roast</b> the pig."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "더워 죽겠다.",
+      "text": "I am simply roasting."
+    }
+  ],
+  "isWordType": true
+}

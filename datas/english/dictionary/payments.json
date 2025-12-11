@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "payment",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpeɪmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지불; 납입, 불입; 상환; 변상(compensation)",
+              "examples": [
+                {
+                  "text": "make <b>payment</b>",
+                  "translatedText": "지불하다, 불입하다"
+                }
+              ],
+              "originalMeaning": "지불; 납입, 불입; 상환; 변상(compensation)"
+            },
+            {
+              "meaning": "지불[납입] 금액",
+              "examples": [],
+              "originalMeaning": "지불[납입] 금액"
+            },
+            {
+              "meaning": "보수, 보상; [U] 보복, 징벌 ((for))",
+              "examples": [
+                {
+                  "text": "<b>payment</b> for the wrong",
+                  "translatedText": "나쁜 짓에 대한 응보"
+                }
+              ],
+              "originalMeaning": "보수, 보상; [U] 보복, 징벌 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/77818b6528d04f9c858a7dfe08125f35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/77818b6528d04f9c858a7dfe08125f35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "dcbc200c389d411a97a4ad261785ba0c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지불하지 않을 경우에는 소송을 하겠다.",
+      "text": "Failing <b>payment</b>, we shall sue."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내달로 지불 기한이 찬다",
+      "text": "The <b>payment</b> will come due next month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자동차 대금 지불이 밀렸다",
+      "text": "I am behind in my auto loan <b>payments</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 6개월에 걸쳐서 지불했다.",
+      "text": "He spread his <b>payment</b> over[for] six months."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기일 내에 꼭 납부하도록 하시오",
+      "text": "Be sure to complete the <b>payment</b> by the due date."
+    }
+  ],
+  "isWordType": true
+}

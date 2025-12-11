@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "deciding",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "disáidiŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "결정적인, 결승[결전]의(decisive)",
+              "examples": [],
+              "originalMeaning": "결정적인, 결승[결전]의(decisive)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a5c3741f66c54725950956e514e32a35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a5c3741f66c54725950956e514e32a35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "009265ec655401b4ae34d961e87ee097",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "decide",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈsaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "결심[결의]하다(resolve)",
+              "examples": [
+                {
+                  "text": "He has decided to become a doctor. = He has decided that he will become a doctor.",
+                  "translatedText": "그는 의사가 되려고 결심했다.((★ <b>decide</b> doing은 잘못))"
+                }
+              ],
+              "originalMeaning": "결심[결의]하다(resolve)"
+            },
+            {
+              "meaning": "결정하다",
+              "examples": [
+                {
+                  "text": "It has been <b>decide</b> d that the conference shall be held next month.",
+                  "translatedText": "다음 달에 회의를 개최하기로 결정되었다."
+                }
+              ],
+              "originalMeaning": "결정하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결심[결정]하다(determine) ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>decide</b> on a course of action",
+                  "translatedText": "행동 방침을 정하다"
+                }
+              ],
+              "originalMeaning": "결심[결정]하다(determine) ((on, upon))"
+            },
+            {
+              "meaning": "판결을 내리다",
+              "examples": [
+                {
+                  "text": "The judge decided against[for, in favor of] the defendant.",
+                  "translatedText": "판사는 피고에게 불리[유리]한 판결을 내렸다."
+                }
+              ],
+              "originalMeaning": "판결을 내리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fdf98f7b977247bf9fafd10dfda2af55",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fdf98f7b977247bf9fafd10dfda2af55",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "decides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "02f263b70f21bde649fddaa82de6bed6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 집에 있기로 결정했다.",
+      "text": "We decided to stay in."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "최선을 다해 보고 안 되면 다시 생각하겠다",
+      "text": "I'll give it my best shot, and if I can't hack it, I'll <b>decide</b> what to do then."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "결정은 네게 달려 있다.",
+      "text": "It rests with you to <b>decide</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 당신이 결정할 일이다.",
+      "text": "That’s for you to <b>decide</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새 증거가 그를 결심케 했다.",
+      "text": "The new evidence decided him."
+    }
+  ],
+  "isWordType": true
+}

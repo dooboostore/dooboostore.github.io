@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "simultaneously",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sàiməltéiniəsli,sì-"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "동시에 ((with)), 일제히",
+              "examples": [],
+              "originalMeaning": "동시에 ((with)), 일제히"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/16904709e8da4c3a99cfcb19da1e2be1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/16904709e8da4c3a99cfcb19da1e2be1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "33586a019589619988ddab2fab146560",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "simultaneous",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│saɪml│teɪniəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "동시에 일어나는, 동시의, 동시에 존재하는 ((with))",
+              "examples": [
+                {
+                  "text": "<b>simultaneous</b> movements",
+                  "translatedText": "동시 동작"
+                }
+              ],
+              "originalMeaning": "동시에 일어나는, 동시의, 동시에 존재하는 ((with))"
+            },
+            {
+              "meaning": "연립시킨",
+              "examples": [],
+              "originalMeaning": "연립시킨"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0c3946ccb2f842788eb27ebb2465bfd3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0c3946ccb2f842788eb27ebb2465bfd3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d68414999ca4ee5b62659871540fe86a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일제히 포문을 열었다",
+      "text": "All the guns opened fire <b>simultaneously</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노점이 일제히 철거되었다",
+      "text": "All the street stalls were pulled down <b>simultaneously</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "동시통역",
+      "text": "(a) <b>simultaneous</b> interpretation"
+    }
+  ],
+  "isWordType": true
+}

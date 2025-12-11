@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "swim",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "swɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "헤엄치다, 수영하다",
+              "examples": [
+                {
+                  "text": "<b>swim</b> aboutin the sea",
+                  "translatedText": "바다를 헤엄쳐 다니다"
+                }
+              ],
+              "originalMeaning": "헤엄치다, 수영하다"
+            },
+            {
+              "meaning": "뜨다, 떠내려가다, 표류하다",
+              "examples": [
+                {
+                  "text": "The fat is swimming on the soup.",
+                  "translatedText": "기름기가 수프 표면에 떠 있다."
+                }
+              ],
+              "originalMeaning": "뜨다, 떠내려가다, 표류하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "헤엄쳐 건너다",
+              "examples": [
+                {
+                  "text": "<b>swim</b> a lake",
+                  "translatedText": "호수를 헤엄쳐 건너다"
+                }
+              ],
+              "originalMeaning": "헤엄쳐 건너다"
+            },
+            {
+              "meaning": "<수영 경기에> 참가하다, …와 경영(競泳)하다",
+              "examples": [],
+              "originalMeaning": "<수영 경기에> 참가하다, …와 경영(競泳)하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수영, 수영 시간[거리]",
+              "examples": [
+                {
+                  "text": "go for a <b>swim</b>",
+                  "translatedText": "수영하러 가다"
+                }
+              ],
+              "originalMeaning": "수영, 수영 시간[거리]"
+            },
+            {
+              "meaning": "미끄러지듯 움직임",
+              "examples": [],
+              "originalMeaning": "미끄러지듯 움직임"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b9fdeb684b80418fac8991a9ed90a521",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b9fdeb684b80418fac8991a9ed90a521",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "swims"
+        },
+        {
+          "type": "과거형",
+          "value": "swam"
+        },
+        {
+          "type": "현재 분사",
+          "value": "swimming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "swum"
+        }
+      ],
+      "aliasConjugation": "swims",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "49e14d23bdafbb8a20eb4f5017cbf45a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 헤엄을 전혀 못친다",
+      "text": "I can't <b>swim</b> a stroke."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "죽이 되든 밥이 되든 한번 해보겠다",
+      "text": "Sink or <b>swim</b>, I will try."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소년은 수영에 서툴렀다.",
+      "text": "The boy was unapt to <b>swim</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수영할 수 있다고 그는 말했다.",
+      "text": "He said (that) he could <b>swim</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수영할 줄 알지만 잘하지는 못한다.",
+      "text": "I can <b>swim</b>, but not very well."
+    }
+  ],
+  "isWordType": true
+}

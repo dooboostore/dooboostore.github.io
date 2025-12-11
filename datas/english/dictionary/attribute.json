@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "attribute",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…의 원인을> …에 귀착시키다, …의 탓으로 하다(ascribe); …의 덕분으로 돌리다, <결과를> …에 돌리다(refer) ((to)); <어떤 일을> (어느 때·장소의) 것으로 하다(assign) ((to))",
+              "examples": [
+                {
+                  "text": "<b>attribute</b> the rise in market share to price-cutting",
+                  "translatedText": "시장 점유율의 상승을 가격 삭감의 덕으로 돌리다"
+                }
+              ],
+              "originalMeaning": "<…의 원인을> …에 귀착시키다, …의 탓으로 하다(ascribe); …의 덕분으로 돌리다, <결과를> …에 돌리다(refer) ((to)); <어떤 일을> (어느 때·장소의) 것으로 하다(assign) ((to))"
+            },
+            {
+              "meaning": "<성질 등이> 있다고 생각하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>attribute</b> evil motive to a person",
+                  "translatedText": "…에게 악의가 있다고 생각하다"
+                }
+              ],
+              "originalMeaning": "<성질 등이> 있다고 생각하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "속성, 특성, 특질",
+              "examples": [],
+              "originalMeaning": "속성, 특성, 특질"
+            },
+            {
+              "meaning": "부속물, 상징",
+              "examples": [],
+              "originalMeaning": "부속물, 상징"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6f4659e18abe4dfd8f074a981e4b5778",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6f4659e18abe4dfd8f074a981e4b5778",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "attributes"
+        },
+        {
+          "type": "과거형",
+          "value": "attributed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "attributing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "attributed"
+        }
+      ],
+      "aliasConjugation": "attributes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3189a0c6264e4fc0c13c560f2925d31c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "톰에게는 분별이 있다고 생각한다.",
+      "text": "We <b>attribute</b> prudence to Tom."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기의 성공을 노력[행운]의 덕분이라고 했다.",
+      "text": "He attributed his success to hard work[good luck]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의사는 그의 병을 과음 탓으로 돌렸다",
+      "text": "Doctors attributed the cause of his illness to his overdrinking."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "orbit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɔːrbɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "궤도",
+              "examples": [
+                {
+                  "text": "<b>orbit</b> motion",
+                  "translatedText": "공전 운동"
+                }
+              ],
+              "originalMeaning": "궤도"
+            },
+            {
+              "meaning": "생활의 궤도, 활동 범위; (인생) 행로, 생활 과정; 세력권[범위]",
+              "examples": [],
+              "originalMeaning": "생활의 궤도, 활동 범위; (인생) 행로, 생활 과정; 세력권[범위]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<지구 등의> 주위를 궤도를 그리며 돌다, <인공위성 등을> 발사하여 궤도에 올리다",
+              "examples": [],
+              "originalMeaning": "<지구 등의> 주위를 궤도를 그리며 돌다, <인공위성 등을> 발사하여 궤도에 올리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "선회하다(circle), 궤도를 그리며 돌다",
+              "examples": [],
+              "originalMeaning": "선회하다(circle), 궤도를 그리며 돌다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f559a653e2b84d2d970cc3fb29ff270c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f559a653e2b84d2d970cc3fb29ff270c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "orbits"
+        },
+        {
+          "type": "과거형",
+          "value": "orbited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "orbiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "orbited"
+        }
+      ],
+      "aliasConjugation": "orbits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "20afe0d77cb0ea83043e23df960b5fd1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 인공위성을 궤도에 쏘아 올렸다.",
+      "text": "They injected the satellite into its <b>orbit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "로켓이 궤도로 솟아오른다",
+      "text": "The rocket soars into <b>orbit</b>."
+    }
+  ],
+  "isWordType": true
+}

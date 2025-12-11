@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "continue",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈtɪnjuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "계속하다, 지속하다(opp. stop)",
+              "examples": [
+                {
+                  "text": "They <b>continued</b> their journey.",
+                  "translatedText": "그들은 여행을 계속했다."
+                }
+              ],
+              "originalMeaning": "계속하다, 지속하다(opp. stop)"
+            },
+            {
+              "meaning": "(중단했다가 다시) 계속하다 ((resume 쪽이 일반적)), 계속하여 진술하다, 말을 잇다",
+              "examples": [
+                {
+                  "text": "<b>Continued</b> on[from] page 20.",
+                  "translatedText": "20페이지로[에서] 계속."
+                }
+              ],
+              "originalMeaning": "(중단했다가 다시) 계속하다 ((resume 쪽이 일반적)), 계속하여 진술하다, 말을 잇다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "계속되다, 계속하고 있다(go on)",
+              "examples": [
+                {
+                  "text": "His speech <b>continued</b> an hour.",
+                  "translatedText": "그의 연설은 한 시간 동안 계속되었다."
+                }
+              ],
+              "originalMeaning": "계속되다, 계속하고 있다(go on)"
+            },
+            {
+              "meaning": "존속하다, 계속하다(last); 머무르다 ((at, in))",
+              "examples": [
+                {
+                  "text": "<b>continue</b> in the faith of one's fathers",
+                  "translatedText": "조상의 신앙을 지키다"
+                }
+              ],
+              "originalMeaning": "존속하다, 계속하다(last); 머무르다 ((at, in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/07f16c9041764d6daedf9380b63963a2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/07f16c9041764d6daedf9380b63963a2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "continues"
+        },
+        {
+          "type": "과거형",
+          "value": "continued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "continuing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "continued"
+        }
+      ],
+      "aliasConjugation": "continues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d13758d3586f70900ff1982a9ae350c3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 연설은 한 시간 동안 계속되었다.",
+      "text": "His speech <b>continued</b> an hour."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 오랫동안 일을 계속했다",
+      "text": "He <b>continued</b> working for a long time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "물가는 계속해서 오를 것이다.",
+      "text": "Prices will <b>continue</b> to creep higher."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상황은 달라진 것이 없다",
+      "text": "The situation continues to be unchanged."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 연설은 한 시간 동안 계속되었다",
+      "text": "His speech <b>continued</b> for an hour."
+    }
+  ],
+  "isWordType": true
+}

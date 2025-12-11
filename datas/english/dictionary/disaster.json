@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "disaster",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│zæstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (큰) 재해, 재앙, 대참사; 불행, 재난",
+              "examples": [
+                {
+                  "text": "natural <b>disaster</b> s",
+                  "translatedText": "천재(天災)"
+                }
+              ],
+              "originalMeaning": "[U] (큰) 재해, 재앙, 대참사; 불행, 재난"
+            },
+            {
+              "meaning": "[구어] (큰) 실패, 실패작,[a ~] 엉망진창인 것",
+              "examples": [
+                {
+                  "text": "The party was a total <b>disaster</b> .",
+                  "translatedText": "파티는 완전히 엉망으로 끝났다."
+                }
+              ],
+              "originalMeaning": "[구어] (큰) 실패, 실패작,[a ~] 엉망진창인 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/65cd8114e6c142448f4c858d278dd9f4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/65cd8114e6c142448f4c858d278dd9f4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "92142916883f14b998a92b29a59e8fd3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파티는 완전히 엉망으로 끝났다.",
+      "text": "The party was a total <b>disaster</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 천재가 아니라 인재다",
+      "text": "It's not a natural <b>disaster</b> but a man-made one."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "재난이 임박한 것 같은 예감이 든다.",
+      "text": "I feel that some <b>disaster</b> is impending."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 이 뜻밖의 재난에 아연할 뿐이었다",
+      "text": "They stood aghast at this unforeseen <b>disaster</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년은 특히 재해가 많은 해였다",
+      "text": "This year has been indeed remarkable for frequent disasters."
+    }
+  ],
+  "isWordType": true
+}

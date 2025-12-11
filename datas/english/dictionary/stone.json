@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "stone",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "stoʊn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "석재(石材), 돌",
+              "examples": [
+                {
+                  "text": "a house made of <b>stone</b>",
+                  "translatedText": "돌집"
+                }
+              ],
+              "originalMeaning": "석재(石材), 돌"
+            },
+            {
+              "meaning": "돌, 돌멩이",
+              "examples": [],
+              "originalMeaning": "돌, 돌멩이"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "돌의, 석조의, 석제의; 석기(石器)제의",
+              "examples": [
+                {
+                  "text": "a <b>stone</b> building",
+                  "translatedText": "석조 건축물"
+                }
+              ],
+              "originalMeaning": "돌의, 석조의, 석제의; 석기(石器)제의"
+            },
+            {
+              "meaning": "[S~] 석기 시대의",
+              "examples": [],
+              "originalMeaning": "[S~] 석기 시대의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "아주, 완전히",
+              "examples": [
+                {
+                  "text": "<b>stone</b> dead",
+                  "translatedText": "완전히 죽어 있는"
+                }
+              ],
+              "originalMeaning": "아주, 완전히"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5810eacf4c6d4d86932124f7b6ce1139",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5810eacf4c6d4d86932124f7b6ce1139",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stones"
+        },
+        {
+          "type": "과거형",
+          "value": "stoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stoned"
+        }
+      ],
+      "aliasConjugation": "stones",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "103cd6cff2219b69bcf8d8c95162d19b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "승마복을 입은 체중이 12스톤이다.",
+      "text": "I ride 12 <b>stone</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돌에 걸려 넘어질 뻔했다.",
+      "text": "He tripped on a <b>stone</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 아주 눈이 뒤집혔었다",
+      "text": "I had gone <b>stone</b> crazy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아주 냉혹한 녀석이다",
+      "text": "He is as cold as a <b>stone</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돌도 부르짖는다, 귀신도 운다.",
+      "text": "The very stones cry out."
+    }
+  ],
+  "isWordType": true
+}

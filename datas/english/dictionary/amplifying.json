@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "amplify",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈæmplɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "확대[증대]하다(enlarge); <장소 등을> 넓히다, 확장하다(extend)",
+              "examples": [
+                {
+                  "text": "The story only amplified his fear.",
+                  "translatedText": "그 이야기는 그의 공포심을 크게 할 뿐이었다."
+                }
+              ],
+              "originalMeaning": "확대[증대]하다(enlarge); <장소 등을> 넓히다, 확장하다(extend)"
+            },
+            {
+              "meaning": "<서술·설명을> 더욱 상세히 하다, 부연하다",
+              "examples": [
+                {
+                  "text": "He amplified the matter by illustrations.",
+                  "translatedText": "그는 예를 들어 그것을 부연했다."
+                }
+              ],
+              "originalMeaning": "<서술·설명을> 더욱 상세히 하다, 부연하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "상세히 설명하다, 부연하다(expatiate) ((on))",
+              "examples": [
+                {
+                  "text": "He amplified on the accident.",
+                  "translatedText": "그는 그 사고에 대해 자세히 설명했다."
+                }
+              ],
+              "originalMeaning": "상세히 설명하다, 부연하다(expatiate) ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/60454b04015e4745bbb188c74dfda6f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/60454b04015e4745bbb188c74dfda6f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "amplifies"
+        },
+        {
+          "type": "과거형",
+          "value": "amplified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "amplifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "amplified"
+        }
+      ],
+      "aliasConjugation": "amplifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f20f3a9f1268ee75ca3b2fcd0a36fef9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 사고에 대해 자세히 설명했다.",
+      "text": "He amplified on the accident."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 예를 들어 그것을 부연했다.",
+      "text": "He amplified the matter by illustrations."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "확성기를 통해서 소리가 증폭되었다",
+      "text": "The sound was amplified through a loudspeaker."
+    }
+  ],
+  "isWordType": true
+}
