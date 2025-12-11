@@ -6764,6 +6764,7 @@ class Observable {
             }
         };
     }
+    // complete 되야지만 마지막 처리된다!
     toPromise() {
         return new Promise((resolve, reject) => {
             let lastValue;
@@ -7183,6 +7184,69 @@ function filter(predicate) {
                 }
             });
             return subscription; // Return the subscription for teardown
+        });
+    };
+}
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/core/src/message/operators/first.ts":
+/*!***********************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/message/operators/first.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   first: () => (/* binding */ first)
+/* harmony export */ });
+/* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Observable */ "../../packages/@dooboostore/core/src/message/Observable.ts");
+
+/**
+ * Emits only the first value (or the first value that meets some condition) emitted by the source Observable.
+ *
+ * @param predicate An optional function to test each item emitted by the source Observable.
+ * @param defaultValue The default value emitted in case no valid value was found on the source.
+ * @return An Observable that emits only the first value from the source Observable, or a default value if no value is emitted.
+ */
+function first(predicate, defaultValue) {
+    return (source) => {
+        return new _Observable__WEBPACK_IMPORTED_MODULE_0__.Observable(subscriber => {
+            let index = 0;
+            let hasValue = false;
+            const subscription = source.subscribe({
+                next: (value) => {
+                    if (hasValue) {
+                        return; // Already found first value
+                    }
+                    const shouldEmit = predicate ? predicate(value, index++) : true;
+                    if (shouldEmit) {
+                        hasValue = true;
+                        subscriber.next(value);
+                        subscriber.complete();
+                        subscription.unsubscribe();
+                    }
+                },
+                error: (err) => {
+                    if (!hasValue) {
+                        subscriber.error(err);
+                    }
+                },
+                complete: () => {
+                    if (!hasValue) {
+                        if (defaultValue !== undefined) {
+                            subscriber.next(defaultValue);
+                            subscriber.complete();
+                        }
+                        else {
+                            subscriber.error(new Error('no elements in sequence'));
+                        }
+                    }
+                }
+            });
+            return subscription;
         });
     };
 }
@@ -15546,138 +15610,136 @@ class EventManager {
     }
     changeVar(obj, elements, varName, config) {
         // 아래 이부분을 적용해야될지 말아야될지....성능이슈가.. 그래서 우선 timeout으로 테스크큐로.. 우선..
-        setTimeout(() => {
-            // console.log('changeVar', obj, elements, varName)
-            this.procAttr(elements, EventManager.styleAttrName, (it, attribute) => {
-                let script = attribute;
-                if (script) {
-                    script = 'return ' + script;
+        // console.log('changeVar', obj, elements, varName)
+        this.procAttr(elements, EventManager.styleAttrName, (it, attribute) => {
+            let script = attribute;
+            if (script) {
+                script = 'return ' + script;
+            }
+            if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.__render.element;  ${script} `, Object.assign(obj, {
+                    __render: Object.freeze({
+                        element: it,
+                        attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
+                    })
+                }));
+                if (typeof data === 'string') {
+                    data.split(';').forEach(sit => {
+                        const [key, value] = sit.split(':').map(s => s.trim());
+                        if (key && value) {
+                            it.style[key] = value;
+                        }
+                    });
+                    // it.setAttribute('style', data);
                 }
-                if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.__render.element;  ${script} `, Object.assign(obj, {
-                        __render: Object.freeze({
-                            element: it,
-                            attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
-                        })
-                    }));
-                    if (typeof data === 'string') {
-                        data.split(';').forEach(sit => {
-                            const [key, value] = sit.split(':').map(s => s.trim());
-                            if (key && value) {
-                                it.style[key] = value;
-                            }
-                        });
-                        // it.setAttribute('style', data);
+                else if (Array.isArray(data)) {
+                    data.forEach(sit => {
+                        const [key, value] = sit.split(':').map(s => s.trim());
+                        if (key && value) {
+                            it.style[key] = value;
+                        }
+                    });
+                    // it.setAttribute('style', data.join(';'));
+                }
+                else if (data) {
+                    for (const [key, value] of Object.entries(data)) {
+                        // if (it instanceof HTMLElement) {
+                        it.style[key] = value === null ? null : String(value);
+                        // }
                     }
-                    else if (Array.isArray(data)) {
-                        data.forEach(sit => {
-                            const [key, value] = sit.split(':').map(s => s.trim());
-                            if (key && value) {
-                                it.style[key] = value;
+                }
+            }
+        });
+        this.procAttr(elements, EventManager.classAttrName, (it, attribute) => {
+            let script = attribute;
+            if (script) {
+                script = 'return ' + script;
+            }
+            if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.element;  ${script} `, Object.assign(obj, {
+                    __render: Object.freeze({
+                        element: it,
+                        attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
+                    })
+                }));
+                // alert(1)
+                if (typeof data === 'string') {
+                    data.split(' ').map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
+                }
+                else if (Array.isArray(data)) {
+                    data.map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
+                }
+                else if (data) {
+                    for (const [key, value] of Object.entries(data)) {
+                        if (it instanceof HTMLElement) {
+                            const v = key.trim();
+                            if (value && v) {
+                                it.classList.add(v);
                             }
-                        });
-                        // it.setAttribute('style', data.join(';'));
-                    }
-                    else {
-                        for (const [key, value] of Object.entries(data)) {
-                            // if (it instanceof HTMLElement) {
-                            it.style[key] = value === null ? null : String(value);
-                            // }
+                            else if (v) {
+                                it.classList.remove(v);
+                            }
                         }
                     }
                 }
-            });
-            this.procAttr(elements, EventManager.classAttrName, (it, attribute) => {
-                let script = attribute;
-                if (script) {
-                    script = 'return ' + script;
-                }
-                if (EventManager.isUsingThisVar(script, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluate(`const $element = this.element;  ${script} `, Object.assign(obj, {
-                        __render: Object.freeze({
-                            element: it,
-                            attribute: _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it)
-                        })
-                    }));
-                    // alert(1)
-                    if (typeof data === 'string') {
-                        data.split(' ').map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
-                    }
-                    else if (Array.isArray(data)) {
-                        data.map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
-                    }
-                    else {
-                        for (const [key, value] of Object.entries(data)) {
-                            if (it instanceof HTMLElement) {
-                                const v = key.trim();
-                                if (value && v) {
-                                    it.classList.add(v);
-                                }
-                                else if (v) {
-                                    it.classList.remove(v);
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-            this.procAttr(elements, EventManager.valueAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.value !== data)
-                        it.value = data;
-                }
-            });
-            this.procAttr(elements, EventManager.checkedAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.checked !== data)
-                        it.checked = data;
-                }
-            });
-            this.procAttr(elements, EventManager.selectedAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.selected !== data)
-                        it.selected = data;
-                }
-            });
-            this.procAttr(elements, EventManager.readonlyAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.readOnly !== data)
-                        it.readOnly = data;
-                }
-            });
-            this.procAttr(elements, EventManager.disabledAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.disabled !== data)
-                        it.disabled = data;
-                }
-            });
-            this.procAttr(elements, EventManager.hiddenAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.hidden !== data)
-                        it.hidden = data;
-                }
-            });
-            this.procAttr(elements, EventManager.requiredAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.required !== data)
-                        it.required = data;
-                }
-            });
-            this.procAttr(elements, EventManager.openAttrName, (it, attribute) => {
-                if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
-                    const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
-                    if (it.open !== data)
-                        it.open = data;
-                }
-            });
-        }, 1);
+            }
+        });
+        this.procAttr(elements, EventManager.valueAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.value !== data)
+                    it.value = data;
+            }
+        });
+        this.procAttr(elements, EventManager.checkedAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.checked !== data)
+                    it.checked = data;
+            }
+        });
+        this.procAttr(elements, EventManager.selectedAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.selected !== data)
+                    it.selected = data;
+            }
+        });
+        this.procAttr(elements, EventManager.readonlyAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.readOnly !== data)
+                    it.readOnly = data;
+            }
+        });
+        this.procAttr(elements, EventManager.disabledAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.disabled !== data)
+                    it.disabled = data;
+            }
+        });
+        this.procAttr(elements, EventManager.hiddenAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.hidden !== data)
+                    it.hidden = data;
+            }
+        });
+        this.procAttr(elements, EventManager.requiredAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.required !== data)
+                    it.required = data;
+            }
+        });
+        this.procAttr(elements, EventManager.openAttrName, (it, attribute) => {
+            if (EventManager.isUsingThisVar(attribute, varName) || varName === undefined) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(attribute, obj);
+                if (it.open !== data)
+                    it.open = data;
+            }
+        });
     }
     deepAttributeElements(elements = new Set(), attrName) {
         const sets = new Set();
@@ -15703,7 +15765,9 @@ class EventManager {
             const attr = it.getAttribute(attrName);
             const attrs = _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(it);
             if (attr) {
+                // setTimeout(() => {
                 callBack(it, attr, attrs);
+                // }, 0)
             }
         });
     }
@@ -20465,6 +20529,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DomRenderRootObject: () => (/* binding */ DomRenderRootObject)
 /* harmony export */ });
 /* harmony import */ var _component_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component/ComponentRouterBase */ "../../packages/@dooboostore/simple-boot-front/src/component/ComponentRouterBase.ts");
+/* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
+
 
 // export const DomRenderRootDefaultTemplate = '${@this@.name}$ <button dr-event-click="$router.go(\'/\')">aa</button><button dr-event-click="console.log(@this@.name); @this@.name = 22">aa</button>  ${@this@.rootRouter}$<dr-this value="${@this@.rootRouter}$"></dr-this>'
 const DomRenderRootDefaultTemplate = '<dr-this value="${@this@.child}$"></dr-this>';
@@ -20482,8 +20548,12 @@ class DomRenderRootObject extends _component_ComponentRouterBase__WEBPACK_IMPORT
     first = true;
     onInitCallbacks = [];
     onChildRawSetRenderedDebounceCallbacks = [];
+    lifeCycleSubject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_1__.Subject();
     constructor() {
-        super({ sameRouteNoApply: true });
+        super({ sameRouteNoApply: true, onChildRawSetRenderedOtherDataDebounce: 5 });
+    }
+    lifecycleObservable() {
+        return this.lifeCycleSubject.asObservable();
     }
     addOnInitCallback(cb) {
         this.onInitCallbacks.push(async () => {
@@ -20506,10 +20576,23 @@ class DomRenderRootObject extends _component_ComponentRouterBase__WEBPACK_IMPORT
         }
         // console.log('2onInitRender DomRenderRootObject', this.name);
     }
+    async canActivate(url, data) {
+        await super.canActivate(url, data);
+        // console.log('canActivate DomRenderRootObject', );
+    }
+    async onRouting(r) {
+        await super.onRouting(r);
+        // console.log('onRouting DomRenderRootObject', );
+    }
+    onCreatedThisChildDebounce(childrenSet) {
+        super.onCreatedThisChildDebounce(childrenSet);
+        // console.log('dddddddddddddddddo');
+    }
     async onChildRawSetRenderedDebounce() {
         for (let onChildRawSetRenderedDebounceCallback of this.onChildRawSetRenderedDebounceCallbacks) {
             await onChildRawSetRenderedDebounceCallback();
         }
+        this.lifeCycleSubject.next({ type: 'end' });
         // console.log('-------bbbbbbbbbbbcccccb')
     }
 }
@@ -20547,7 +20630,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dooboostore_simple_boot_decorators_route_Router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/route/Router */ "../../packages/@dooboostore/simple-boot/src/decorators/route/Router.ts");
 /* harmony import */ var _dooboostore_core_message_BehaviorSubject__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @dooboostore/core/message/BehaviorSubject */ "../../packages/@dooboostore/core/src/message/BehaviorSubject.ts");
 /* harmony import */ var _dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @dooboostore/core/message/operators/filter */ "../../packages/@dooboostore/core/src/message/operators/filter.ts");
-/* harmony import */ var _dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @dooboostore/core-web/valid/ValidUtils */ "../../packages/@dooboostore/core-web/src/valid/ValidUtils.ts");
+/* harmony import */ var _dooboostore_core_message_operators_first__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @dooboostore/core/message/operators/first */ "../../packages/@dooboostore/core/src/message/operators/first.ts");
+/* harmony import */ var _dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @dooboostore/core-web/valid/ValidUtils */ "../../packages/@dooboostore/core-web/src/valid/ValidUtils.ts");
+
 
 
 
@@ -20721,7 +20806,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
         const originHeight = targetElement.style.height;
         const originZIndex = targetElement.style.zIndex;
         // console.log('-----rect-----', rect, originPosition, originTop, originLeft, originWidth, originHeight, originZIndex);
-        if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_19__.ValidUtils.isBrowser()) {
+        if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_20__.ValidUtils.isBrowser()) {
             // console.log('none server side')
             targetUserElement.removeAttribute('id');
             targetElement = targetUserElement.cloneNode(true);
@@ -20764,7 +20849,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             // console.log('----domRenderRootObject rendered-----', hasDone);
             if (!hasDone) {
                 targetElement.setAttribute('dom-render-done', 'done');
-                if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_19__.ValidUtils.isBrowser()) {
+                if (_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_20__.ValidUtils.isBrowser()) {
                     targetElement.style.position = originPosition;
                     targetElement.style.top = originTop;
                     targetElement.style.left = originLeft;
@@ -20777,6 +20862,13 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
                 }
             }
         });
+        // console.log('-----------aaaaaa', aaa);
+        // this.domRenderRootObject.lifecycleObservable().pipe(first()).toPromise().then(() => {
+        //   console.log('-----------lifecycleObservable toPromise done');
+        // })
+        // this.domRenderRootObject.lifecycleObservable().subscribe(it => {
+        //   console.log('-----------lifecycleObservable', it);
+        // })
         // dom-render 라우팅 끝나면
         this.domRenderRouter.observable.pipe((0,_dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__.filter)(it => it.triggerPoint === 'end')).subscribe(it => {
             // console.log('this.domRenderRouter.observable.subscribe---------------', it)
@@ -20794,16 +20886,25 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
                     const rootRouter = (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_10__.getDomRenderOriginObject)(this.rootRouter?.obj);
                     const findRouter = (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_10__.getDomRenderOriginObject)(findFirstRouter);
                     await this.domRenderRootObject.canActivate(undefined, findRouter);
+                    // const aaa = await this.domRenderRootObject.lifecycleObservable().toPromise();
                     await this.domRenderRootObject.onRouting({ intent, routerModule: it, routerManager: this.routerManager });
+                    // console.log('-----> simplebootfront rootRouter onRouting done-------->', it, it.intent.uri)
                 }
                 // console.log('----> simplebootfront simpleboot routing done-------->', it, it.intent.uri)
+                // console.log('-----> simplebootfront before wait domRenderRootObject rendered-------->', it, it.intent.uri)
+                // if (ValidUtils.isBrowser()) {
+                //   this.routingSubject.next({triggerPoint: 'end', routerModule: it});
+                // } else {
+                await this.domRenderRootObject.lifecycleObservable().pipe((0,_dooboostore_core_message_operators_first__WEBPACK_IMPORTED_MODULE_19__.first)()).toPromise();
                 this.routingSubject.next({ triggerPoint: 'end', routerModule: it });
+                // }
                 //       }, 0);
             });
         });
         return simstanceManager;
     }
     async goRouting(url) {
+        // console.log('simplebootfront goRouting-------->', url);
         await this.domRenderRouter?.go({ path: url });
         // this.afterSetting();
     }
@@ -26684,6 +26785,7 @@ let EnglishRouterComponent = class EnglishRouterComponent extends _dooboostore_s
                 pageImage = this.currentItem.img;
                 // Set Title, Description, Canonical URL
             }
+            console.log('Setting SEO tags:', { pageTitle, pageDescription, pageUrl, pageImage });
             setTitle(pageTitle);
             setMetaByName('description', pageDescription);
             setLink('canonical', pageUrl);
@@ -27319,9 +27421,9 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
                 if (this.youtubePlayer && this.youtubePlayerReady) {
                     this.youtubePlayer.playVideo();
                     console.log(`▶️ Playing segment: ${startSeconds}s - ${endSeconds}s`);
-                    setTimeout(() => {
-                        this.startCuePlayCheck(endSeconds);
-                    }, 100);
+                    // setTimeout(() => {
+                    this.startCuePlayCheck(endSeconds);
+                    // }, 100);
                 }
             }, 100);
         }
