@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "illustration",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌɪləˈstreɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(책·잡지 등의) 삽화, 도해, 도판",
+              "examples": [],
+              "originalMeaning": "(책·잡지 등의) 삽화, 도해, 도판"
+            },
+            {
+              "meaning": "(설명을 위한) 실례, 비교",
+              "examples": [],
+              "originalMeaning": "(설명을 위한) 실례, 비교"
+            },
+            {
+              "meaning": "설명, 예증",
+              "examples": [],
+              "originalMeaning": "설명, 예증"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0051ee637a0e4b3d9de211a708f8215e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0051ee637a0e4b3d9de211a708f8215e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1f934f1f68c30d180393a078d0614909",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 예를 들어 그것을 부연했다.",
+      "text": "He amplified the matter by illustrations."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 삽화는 사진을 복사한 것이다",
+      "text": "The <b>illustration</b> is reproduced from the photograph."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기 이론을 예증하는 여러 가지 사실을 들었다",
+      "text": "He enumerated a large number of facts in <b>illustration</b> of his theory."
+    }
+  ],
+  "isWordType": true
+}

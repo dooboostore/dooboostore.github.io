@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "entry": "timid",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtɪmɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "겁 많은, 소심한, 내성적인; (…을) 두려워하는 ((of, about, with))",
+              "examples": [],
+              "originalMeaning": "겁 많은, 소심한, 내성적인; (…을) 두려워하는 ((of, about, with))"
+            },
+            {
+              "meaning": "<언동 등이> 자신이 없는, 머뭇거리는, 수줍어하는; <정책 등이> 결단력이 부족한 (=shy)",
+              "examples": [
+                {
+                  "text": "a <b>timid</b> manner",
+                  "translatedText": "주저하는 태도"
+                }
+              ],
+              "originalMeaning": "<언동 등이> 자신이 없는, 머뭇거리는, 수줍어하는; <정책 등이> 결단력이 부족한 (=<span class='related_word' lang='en' >shy</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/31916407b0e1404d89323bf445675dd7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/31916407b0e1404d89323bf445675dd7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "timider"
+        },
+        {
+          "type": "최상급",
+          "value": "timidest"
+        }
+      ],
+      "aliasConjugation": "timider",
+      "aliasConjugationPos": "비교급",
+      "gdid": "51155662551fe9ecebb75b8e3adbfda8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 어찌나 소심한지 사람들 앞에서 변변히 말도 못한다",
+      "text": "She is so <b>timid</b> that she scarcely opens her mouth in public."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "매우 겁이 많은",
+      "text": "(as) <b>timid</b> as a rabbit"
+    }
+  ],
+  "isWordType": true
+}

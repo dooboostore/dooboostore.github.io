@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "persuade",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pər│sweɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "설득하다, 권[설득]하여 …시키다",
+              "examples": [
+                {
+                  "text": "( <b>persuade</b>+[목]+to do) He persuaded me to forgive her.",
+                  "translatedText": "그는 그녀를 용서하도록 나를 설득했다."
+                }
+              ],
+              "originalMeaning": "설득하다, 권[설득]하여 …시키다"
+            },
+            {
+              "meaning": "확인시키다, 납득시키다 ((of))",
+              "examples": [
+                {
+                  "text": "How can you <b>persuade</b> him of your innocence[that you are innocent]?",
+                  "translatedText": "자네의 결백을 그에게 어떻게 납득시킬 수 있는가?"
+                }
+              ],
+              "originalMeaning": "확인시키다, 납득시키다 ((of))"
+            },
+            {
+              "meaning": "<물건을> 서서히 넣다 ((into)); <회답 등을> (…에게서) 겨우 얻어내다 ((out of, from))",
+              "examples": [
+                {
+                  "text": "<b>persuade</b> a wedge into the crack",
+                  "translatedText": "금 간 데 쐐기를 조금씩 박다"
+                }
+              ],
+              "originalMeaning": "<물건을> 서서히 넣다 ((into)); <회답 등을> (…에게서) 겨우 얻어내다 ((out of, from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/026618cd829d449d9aaf016313a07d62",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/026618cd829d449d9aaf016313a07d62",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "persuades"
+        },
+        {
+          "type": "과거형",
+          "value": "persuaded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "persuading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "persuaded"
+        }
+      ],
+      "aliasConjugation": "persuades",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0d4e5478588bbb105d628ad055b8d99c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그의 죽음이 믿어지지 않는다",
+      "text": "I cannot <b>persuade</b> myself that he is dead[of his death]. or I can hardly believe he's dead."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그녀를 용서하도록 나를 설득했다.",
+      "text": "He persuaded me to forgive her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그녀에게서 겨우 회답을 얻어냈다.",
+      "text": "I persuaded an answer out of her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그를 설득하는 데 무척 힘이 들었다.",
+      "text": "We had a great tug to <b>persuade</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "누가 뭐라 해도 난 찬성 못하겠다",
+      "text": "No one will <b>persuade</b> me to approve of it."
+    }
+  ],
+  "isWordType": true
+}

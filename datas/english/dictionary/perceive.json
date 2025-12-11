@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "perceive",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pər│siːv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "지각(知覺)하다, 감지(感知)하다, 인지[인식]하다, 눈치채다, 알아차리다",
+              "examples": [
+                {
+                  "text": "<b>perceive</b> a faint sound",
+                  "translatedText": "희미한 소리를 감지하다"
+                }
+              ],
+              "originalMeaning": "지각(知覺)하다, 감지(感知)하다, 인지[인식]하다, 눈치채다, 알아차리다"
+            },
+            {
+              "meaning": "이해하다; 깨닫다, <의미·진상 등을> 파악하다",
+              "examples": [
+                {
+                  "text": "<b>perceive</b> difficulties",
+                  "translatedText": "어려움을 이해하다"
+                }
+              ],
+              "originalMeaning": "이해하다; 깨닫다, <의미·진상 등을> 파악하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/38fbae08e41a48a7aa0d2f448d96b67a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/38fbae08e41a48a7aa0d2f448d96b67a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "perceives"
+        },
+        {
+          "type": "과거형",
+          "value": "perceived"
+        },
+        {
+          "type": "현재 분사",
+          "value": "perceiving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "perceived"
+        }
+      ],
+      "aliasConjugation": "perceives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7f7fb11947f0703a59c61fa45f41a32b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그가 거절할 것을 알았다.",
+      "text": "I perceived that he would refuse."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 정직한 사람임을 알았다.",
+      "text": "I perceived him (to be) an honest man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감시당하고 있는 것을 알아챘다",
+      "text": "He perceived that he was being watched."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "창에 어렴풋한 빛이 보였다",
+      "text": "We perceived a glimmer of light in the window."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 그것을 착안한 것은 참 잘한 것이다",
+      "text": "It is to his credit that he perceived it."
+    }
+  ],
+  "isWordType": true
+}

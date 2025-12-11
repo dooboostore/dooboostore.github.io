@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "father",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfɑːðə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "아버지, 부친; 부성애; [F~; 호칭으로서] 아버지; [구어] 시아버지, 장인; 의부, 계부, 양부",
+              "examples": [
+                {
+                  "text": "Like <b>father</b>, like son.",
+                  "translatedText": "[속담] 그 아버지에 그 아들, 부전자전"
+                }
+              ],
+              "originalMeaning": "아버지, 부친; 부성애; [F~; 호칭으로서] 아버지; [구어] 시아버지, 장인; 의부, 계부, 양부"
+            },
+            {
+              "meaning": "아버지로 숭상받는 사람, 보호자, 후견인",
+              "examples": [
+                {
+                  "text": "the <b>father</b> of his country",
+                  "translatedText": "국부"
+                }
+              ],
+              "originalMeaning": "아버지로 숭상받는 사람, 보호자, 후견인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 아버지가 되다; (아버지로서) <자식을> 보다(beget); …에게 아버지 노릇을 하다, 보호자가 되다",
+              "examples": [
+                {
+                  "text": "He fathered two children.",
+                  "translatedText": "그는 두 아이의 아버지가 되었다."
+                }
+              ],
+              "originalMeaning": "…의 아버지가 되다; (아버지로서) <자식을> 보다(beget); …에게 아버지 노릇을 하다, 보호자가 되다"
+            },
+            {
+              "meaning": "일으키다; 창시하다, <계획 등을> 시작하다",
+              "examples": [
+                {
+                  "text": "<b>father</b> a plan",
+                  "translatedText": "계획을 만들다"
+                }
+              ],
+              "originalMeaning": "일으키다; 창시하다, <계획 등을> 시작하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "아버지로서 행동하다, 부친의 책임을 다하다",
+              "examples": [],
+              "originalMeaning": "아버지로서 행동하다, 부친의 책임을 다하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a1d470ab67d4e53acde610b4cf00ebc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a1d470ab67d4e53acde610b4cf00ebc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fathers"
+        },
+        {
+          "type": "과거형",
+          "value": "fathered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fathering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fathered"
+        }
+      ],
+      "aliasConjugation": "fathers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2ecdf1b740c58a1d4e2b78873a5afb78",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아버지를 꼭 닮았다",
+      "text": "He is the perfect image of his <b>father</b>. or He is the spit of his <b>father</b>. or He looks like his <b>father</b>, a chip off the old block."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 아이는 아버지를 빼쏘았다",
+      "text": "The boy is a carbon copy of his <b>father</b>. or The boy is the spitting image of his <b>father</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 아버지에 그 아들, 부전자전",
+      "text": "Like <b>father</b>, like son."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아버지는 자동차로 일터에 가신다",
+      "text": "<b>Father</b> drives to work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 두 아이의 아버지가 되었다.",
+      "text": "He fathered two children."
+    }
+  ],
+  "isWordType": true
+}

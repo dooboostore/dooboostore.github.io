@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "entry": "unconstitutional",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʌn│kɑːnstə│tuːʃənl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "헌법 위반의, 위헌의",
+              "examples": [],
+              "originalMeaning": "헌법 위반의, 위헌의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3b0c4b18ecf7412a80d941d7bacbfa3b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3b0c4b18ecf7412a80d941d7bacbfa3b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "49b9fc16f044e8bda2b8f37046ee2fc9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 결정은 위헌이다",
+      "text": "This decision is <b>unconstitutional</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 헌법 위반이다",
+      "text": "That is against the Constitution. or That is a violation of the Constitution. or That is <b>unconstitutional</b>."
+    }
+  ],
+  "isWordType": true
+}

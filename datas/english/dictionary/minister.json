@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "minister",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmɪnɪstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "성직자, 목사; [영] 비(非)국교파 목사",
+              "examples": [
+                {
+                  "text": "a <b>minister</b> of religion",
+                  "translatedText": "목사, 승려, 종교가"
+                }
+              ],
+              "originalMeaning": "성직자, 목사; [영] 비(非)국교파 목사"
+            },
+            {
+              "meaning": "장관, 대신",
+              "examples": [
+                {
+                  "text": "the Prime <b>Minister</b>",
+                  "translatedText": "국무총리, 수상(Premier)"
+                }
+              ],
+              "originalMeaning": "장관, 대신"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "성직자[목사, 대리인 ((등))] 노릇을 하다",
+              "examples": [],
+              "originalMeaning": "성직자[목사, 대리인 ((등))] 노릇을 하다"
+            },
+            {
+              "meaning": "섬기다, 봉사하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>minister</b> to the sick",
+                  "translatedText": "병자를 보살피다"
+                }
+              ],
+              "originalMeaning": "섬기다, 봉사하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3b8770d832bf4485a65ad5b77007c215",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3b8770d832bf4485a65ad5b77007c215",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ministers"
+        },
+        {
+          "type": "과거형",
+          "value": "ministered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ministering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ministered"
+        }
+      ],
+      "aliasConjugation": "ministers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e158191b280597f5b00e894221cf93b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장관이 추문 사건에 걸렸다",
+      "text": "A <b>minister</b> was involved in the scandal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "총리는 여야 쌍방으로부터 몹시 들이몰렸다",
+      "text": "The Prime <b>Minister</b> came under heavy fire from his own party as well as from the opposition."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직 장관의 결재를 못 받았다",
+      "text": "It remains to be sanctioned by the <b>Minister</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외무 장관이 갑자기 해임되었다",
+      "text": "The foreign <b>minister</b> was suddenly dismissed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장관이더라도 그는 그것을 후회하게 될 것이다",
+      "text": "<b>Minister</b> or no, he shall smart for it."
+    }
+  ],
+  "isWordType": true
+}

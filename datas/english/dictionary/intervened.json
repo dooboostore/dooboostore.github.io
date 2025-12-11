@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "intervene",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɪntər│viːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사이에 들다, 사이에 일어나다, 끼다, 개재하다 ((between))",
+              "examples": [
+                {
+                  "text": "Years <b>intervened</b> between the two incidents.",
+                  "translatedText": "그 두 사건 사이에는 몇 년이라는 세월이 끼어 있었다."
+                }
+              ],
+              "originalMeaning": "사이에 들다, 사이에 일어나다, 끼다, 개재하다 ((between))"
+            },
+            {
+              "meaning": "<어떤 일이> 방해하다",
+              "examples": [
+                {
+                  "text": "I will see you tomorrow, should nothing <b>intervene</b>.",
+                  "translatedText": "지장이 생기지 않으면 내일 뵙겠습니다."
+                }
+              ],
+              "originalMeaning": "<어떤 일이> 방해하다"
+            },
+            {
+              "meaning": "중재하다, 간섭하다, 개입하다 ((between, in))",
+              "examples": [
+                {
+                  "text": "<b>intervene</b> in a dispute",
+                  "translatedText": "분쟁을 중재하다"
+                }
+              ],
+              "originalMeaning": "중재하다, 간섭하다, 개입하다 ((between, in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d70d8a801e524cf6bd8590ea9f7ebcfb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d70d8a801e524cf6bd8590ea9f7ebcfb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "intervenes"
+        },
+        {
+          "type": "과거형",
+          "value": "intervened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "intervening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "intervened"
+        }
+      ],
+      "aliasConjugation": "intervenes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "91d16f11ad428ee783a4d0961229fcdc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지장이 생기지 않으면 내일 뵙겠습니다.",
+      "text": "I will see you tomorrow, should nothing <b>intervene</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 두 사건 사이에는 몇 년이라는 세월이 지나 있었다.",
+      "text": "Years <b>intervened</b> between the two incidents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "폭동이 일어났을 때 경찰은 개입하지 않을 수 없었다",
+      "text": "When rioting broke out, the police were obliged to <b>intervene</b>."
+    }
+  ],
+  "isWordType": true
+}

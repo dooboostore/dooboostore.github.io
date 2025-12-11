@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "proxy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈprɑːksi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 대리 (행위), 대리권, 대리 투표",
+              "examples": [
+                {
+                  "text": "vote by <b>proxy</b>",
+                  "translatedText": "대리로 투표하다"
+                }
+              ],
+              "originalMeaning": "[U] 대리 (행위), 대리권, 대리 투표"
+            },
+            {
+              "meaning": "위임장",
+              "examples": [],
+              "originalMeaning": "위임장"
+            },
+            {
+              "meaning": "대리인",
+              "examples": [],
+              "originalMeaning": "대리인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c83f4d809d714d5ba0e4039e5d2acb5e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c83f4d809d714d5ba0e4039e5d2acb5e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "proxies"
+        }
+      ],
+      "aliasConjugation": "proxies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "dd60a35b35f371f74b627861ff9fdf23",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 사람들이 대리를 시켜 투표했다",
+      "text": "A large number of people voted by <b>proxy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 아들이 나를 대신할 것이다",
+      "text": "My son shall be my <b>proxy</b>. or My son will sub for me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 대리로 투표했다",
+      "text": "I voted on his behalf[as his <b>proxy</b>]."
+    }
+  ],
+  "isWordType": true
+}

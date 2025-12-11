@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "claim",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kleɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<권리·유산 등을> (당연한 것으로서) 요구[청구]하다 (=demand)",
+              "examples": [
+                {
+                  "text": "<b>claim</b> damages",
+                  "translatedText": "손해 배상을 요구하다"
+                }
+              ],
+              "originalMeaning": "<권리·유산 등을> (당연한 것으로서) 요구[청구]하다 (=<span class='related_word' lang='en' >demand</span>)"
+            },
+            {
+              "meaning": "<권리·사실을> 주장하다, 승인을 구하다",
+              "examples": [
+                {
+                  "text": "Both sides claimed the victory.",
+                  "translatedText": "양쪽 모두 승리를 주장했다."
+                }
+              ],
+              "originalMeaning": "<권리·사실을> 주장하다, 승인을 구하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "요구하다, 권리를 주장하다",
+              "examples": [],
+              "originalMeaning": "요구하다, 권리를 주장하다"
+            },
+            {
+              "meaning": "의견을 말하다",
+              "examples": [],
+              "originalMeaning": "의견을 말하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(권리로서의) 요구, 청구(demand) ((for, on, to, against))",
+              "examples": [
+                {
+                  "text": "I have many <b>claim</b> s on my time.",
+                  "translatedText": "여러 가지 일로 시간을 빼앗긴다."
+                }
+              ],
+              "originalMeaning": "(권리로서의) 요구, 청구(demand) ((for, on, to, against))"
+            },
+            {
+              "meaning": "(소유권·사실의) 주장, 단언",
+              "examples": [
+                {
+                  "text": "( <b>claim</b> +to do) His <b>claim</b> to be promoted to the post was quite legitimate.",
+                  "translatedText": "그 자리로 진급시켜 달라는 그의 요구는 아주 정당한 것이었다."
+                }
+              ],
+              "originalMeaning": "(소유권·사실의) 주장, 단언"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9ac7e1c0f1364717a803eaa9e6b2f15f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9ac7e1c0f1364717a803eaa9e6b2f15f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "claims"
+        },
+        {
+          "type": "과거형",
+          "value": "claimed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "claiming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "claimed"
+        }
+      ],
+      "aliasConjugation": "claims",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d13a4eba9ee32a9de1892054cc84f0f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 땅의 소유권을 주장했다",
+      "text": "He laid <b>claim</b> to the land."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 학자라고 할 자격이 없다.",
+      "text": "He has no <b>claim</b> to scholarship."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 분실물은 찾아가는 사람이 없다",
+      "text": "No one claims the lost article."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 산의 정상까지 올라갔다고 주장했다.",
+      "text": "He claimed to have reached the top of the mountain.=He claimed that he had reached the top of the mountain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그것이 자기 재산이라고 주장한다",
+      "text": "She claims it as her property."
+    }
+  ],
+  "isWordType": true
+}
