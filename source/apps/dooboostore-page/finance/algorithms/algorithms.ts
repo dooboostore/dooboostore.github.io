@@ -271,12 +271,10 @@ const algorithms = async (dataPlan: DataPlan) => {
       avoidPriceVolumeDivergence: true // 가격-거래량 다이버전스 회피
     },
     sell: {
-      symbolSize: 3, // 상위 3개 종목 선택
-      stockSize: 10,  // 각 종목당 10주씩 매도
-      stopLoss: -0.02, // -2% 손절 (더 빠른 손절)
-      takeProfit: 0.03, // +3% 익절 (더 빠른 익절)
-      // stopLoss: -1, // -2% 손절 (더 빠른 손절)
-      // takeProfit: 1, // +3% 익절 (더 빠른 익절)
+      symbolSize: 3, // 상위 3개 종목 선택 (그룹 데드크로스 시 사용)
+      stockRate: 0.5,  // 보유 주식의 50%씩 매도 (0.1 = 10%, 0.5 = 50%, 1.0 = 100%)
+      stopLoss: -0.02, // -2% 손절
+      takeProfit: 0.03, // +3% 익절
       trailingStopPercent: 0.02 // 최고가 대비 -2% 트레일링 스톱
     },
     timeFilter: {
@@ -584,7 +582,18 @@ const algorithms = async (dataPlan: DataPlan) => {
     const currentQuote = quotesUntilNow[quotesUntilNow.length - 1];
     if (!currentQuote || !currentQuote.close) return;
 
-    const quantity = holding.quantity; // 전량 매도
+    // 매도 수량 계산: stockRate 비율만큼 매도
+    let quantity: number;
+    if (reason === 'STOP_LOSS' || reason === 'TAKE_PROFIT' || reason === 'TRAILING_STOP') {
+      // 손절/익절/트레일링스톱은 전량 매도
+      quantity = holding.quantity;
+    } else {
+      // 데드크로스는 stockRate 비율만큼 매도
+      quantity = Math.floor(holding.quantity * config.sell.stockRate);
+      if (quantity === 0) quantity = 1; // 최소 1주
+      if (quantity > holding.quantity) quantity = holding.quantity; // 보유량 초과 방지
+    }
+    
     const price = currentQuote.close;
     const revenue = price * quantity;
     const fees = revenue * config.tradeFees.sell;
@@ -592,7 +601,14 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     // 계좌 업데이트
     account.balance += total;
-    account.holdings.delete(symbol);
+    
+    if (quantity >= holding.quantity) {
+      // 전량 매도
+      account.holdings.delete(symbol);
+    } else {
+      // 일부 매도 - 수량만 감소
+      holding.quantity -= quantity;
+    }
 
     // 거래 내역 저장
     const profit = (price - holding.avgPrice) * quantity - fees;
@@ -643,8 +659,10 @@ const algorithms = async (dataPlan: DataPlan) => {
       profit
     });
 
+    const remainingQty = account.holdings.get(symbol)?.quantity || 0;
     const emoji = reason === 'STOP_LOSS' ? '🛑' : reason === 'TAKE_PROFIT' ? '🎯' : reason === 'TRAILING_STOP' ? '📉' : '☠️';
-    console.log(`    ${emoji} SELL ${symbol} (${reason}): ${quantity}주 @ ${price.toLocaleString()}원 (profit: ${profit >= 0 ? '+' : ''}${profit.toLocaleString()}원 / ${profitRate >= 0 ? '+' : ''}${profitRate.toFixed(2)}%)`);
+    const remainingInfo = remainingQty > 0 ? ` (남은 수량: ${remainingQty}주)` : '';
+    console.log(`    ${emoji} SELL ${symbol} (${reason}): ${quantity}주 @ ${price.toLocaleString()}원 (profit: ${profit >= 0 ? '+' : ''}${profit.toLocaleString()}원 / ${profitRate >= 0 ? '+' : ''}${profitRate.toFixed(2)}%)${remainingInfo}`);
     console.log(`    💵 Balance: ${account.balance.toLocaleString()}원`);
   };
 
