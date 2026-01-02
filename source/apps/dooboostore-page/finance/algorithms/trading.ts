@@ -76,7 +76,7 @@ export const buyStock = (
 
   // 기울기 체크
   if (config.features.slopeFilter) {
-    if (fromMA.slope <= config.buy.minSlope) {
+    if (fromMA.slope < config.buy.minSlope) {
       console.log(`    ⚠️  Slope too low (${fromMA.slope.toFixed(2)}%), skipping buy`);
       return false;
     }

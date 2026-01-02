@@ -393,13 +393,13 @@ export const createChart = (
     ctxCanvas.fillText(timeStr, x, displayHeight - padding.bottom + 20);
   }
 
-  // ========== 골든크로스/데드크로스 표시 ==========
-  drawCrossMarkers(ctxCanvas, timeSeries, padding, chartWidth, chartHeight, topChartY, symbolTransactions);
-
-  // ========== 매수/매도 표시 ==========
+  // ========== 매수/매도 표시 (먼저 그림) ==========
   if (symbolTransactions && symbolTransactions.length > 0) {
     drawTransactionMarkers(ctxCanvas, timeSeries, symbolTransactions, padding, chartWidth, chartHeight, topChartY);
   }
+
+  // ========== 골든크로스/데드크로스 표시 (나중에 그림 - 위에 표시) ==========
+  drawCrossMarkers(ctxCanvas, timeSeries, padding, chartWidth, chartHeight, topChartY, symbolTransactions);
 
   // 저장
   const buffer = canvas.toBuffer('image/png');
@@ -449,6 +449,7 @@ const drawCrossMarkers = (
       const x = padding.left + (chartWidth * index / (timeSeries.length - 1));
 
       if (data.goldenCross) {
+        console.log(`  [CHART DEBUG] Drawing golden cross arrow at index ${index}, time: ${data.time.toISOString()}, x: ${x}`);
         drawGoldenCrossMarker(ctx, x, topChartY, chartHeight, 20, 9);
       }
 
