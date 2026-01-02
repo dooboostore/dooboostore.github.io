@@ -56,14 +56,14 @@ export class User {
     buy: {
       rate: 0.1, // 잔액 대비 매수 비율
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용)  undefined 이면 피라미딩 안함
-      slopeThreshold: 0.1, // 매수 시점 기울기 임계값  undefined 이면 기울기 필터링 안함  (goldenCross.from 기간의 기울기)
+      slopeThreshold: 0.1, // 매수 시점 기울기 임계값  undefined 이면 기울기 필터링 안함
       groupCrossCheck: true // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
 
     sell: {
       rate: 0.5, // 보유량 대비 매도 비율
       moreRate: 0.25, // 추가 매도 비율 (피라미딩용)  undefined 이면 피라미딩 안함
-      stopLossPercent: 0.05, // 손절 퍼센트  undefined 이면 손절 안함  (deadCross.from 기간의 기울기)
+      stopLossPercent: 0.05, // 손절 퍼센트  undefined 이면 손절 안함
       groupCrossCheck: true // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
     }
 

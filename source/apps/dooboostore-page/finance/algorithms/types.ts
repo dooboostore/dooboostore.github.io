@@ -85,9 +85,12 @@ export type TickData = {
   low: number;            // 저가 등락률
   close: number;          // 종가 등락률
   volume: number;         // 거래량 등락률
+  priceSlope: number;     // 이전 봉 대비 가격 변화
+  volumeSlope: number;    // 이전 봉 대비 거래량 변화
   actualClose: number;    // 실제 종가
   priceMA: Map<number, number>;   // 가격 이평선
   volumeMA: Map<number, number>;  // 거래량 이평선
+  maSlope: Map<number, number>;   // 이전 봉 대비 이평선 변화
   crossStatus?: 'GOLDEN' | 'DEAD';  // 크로스 상태
 };
 
@@ -104,6 +107,18 @@ export type TradingConfig = {
   tradeFees: {
     buy: number;
     sell: number;
+  };
+  buy?: {
+    rate?: number;           // 잔액 대비 매수 비율
+    moreRate?: number;       // 추가 매수 비율 (피라미딩용)
+    slopeThreshold?: number; // 매수 시점 기울기 임계값
+    groupCrossCheck?: boolean; // 그룹 골든크로스 체크
+  };
+  sell?: {
+    rate?: number;           // 보유량 대비 매도 비율
+    moreRate?: number;       // 추가 매도 비율 (피라미딩용)
+    stopLossPercent?: number; // 손절 퍼센트
+    groupCrossCheck?: boolean; // 그룹 데드크로스 체크
   };
   features?: Partial<{
     pyramiding: boolean;
@@ -123,32 +138,6 @@ export type TradingConfig = {
     bollingerBandsFilter: boolean;
     volumeAnalysisFilter: boolean;
     onlySymbolGoldenCross: boolean;
-  }>;
-  buy?: Partial<{
-    symbolSize: number;
-    stockRate: number;
-    stockSize: number;
-    minVolumeStrength: number;
-    minSlope: number;
-    maxMaGap: number;
-    positionSizePercent: number;
-    minObvSlope: number;
-    minRsi: number;
-    maxRsi: number;
-    macdBullish: boolean;
-    bollingerPosition: string;
-    minBollingerPercentB: number;
-    maxBollingerPercentB: number;
-    volumeTrendRequired: string;
-    avoidPriceVolumeDivergence: boolean;
-  }>;
-  sell?: Partial<{
-    symbolSize: number;
-    stockRate: number;
-    additionalSellThreshold: number;
-    stopLoss: number;
-    takeProfit: number;
-    trailingStopPercent: number;
   }>;
   timeFilter?: {
     excludeHours: number[];

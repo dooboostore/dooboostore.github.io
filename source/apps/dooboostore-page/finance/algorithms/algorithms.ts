@@ -219,8 +219,11 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     highChangeRate: number; // 고가 등락률
     lowChangeRate: number; // 저가 등락률
     volumeChangeRate: number; // 시작 거래량 대비 등락률
+    priceSlope: number; // 이전 봉 대비 priceChangeRate 변화
+    volumeSlope: number; // 이전 봉 대비 volumeChangeRate 변화
     priceMA: Map<number, number>; // 가격 등락률 이평선
     volumeMA: Map<number, number>; // 거래량 등락률 이평선
+    maSlope: Map<number, number>; // 이전 봉 대비 이평선 값 변화
     crossStatus?: 'GOLDEN' | 'DEAD'; // 크로스 상태 (발생 후 유지)
   };
 
@@ -308,11 +311,32 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               lowChangeRate,
               priceChangeRate,
               volumeChangeRate,
+              priceSlope: 0, // 나중에 계산
+              volumeSlope: 0, // 나중에 계산
               priceMA,
               volumeMA,
+              maSlope: new Map<number, number>(), // 나중에 계산
               crossStatus: undefined
             };
           });
+
+          // slope 계산 (이전 봉 대비 변화)
+          for (let i = 1; i < quotes.length; i++) {
+            const prev = quotes[i - 1];
+            const curr = quotes[i];
+            
+            // 가격/거래량 slope
+            curr.priceSlope = curr.priceChangeRate - prev.priceChangeRate;
+            curr.volumeSlope = curr.volumeChangeRate - prev.volumeChangeRate;
+            
+            // 이평선 slope
+            curr.priceMA.forEach((value, period) => {
+              const prevValue = prev.priceMA.get(period);
+              if (prevValue !== undefined) {
+                curr.maSlope.set(period, value - prevValue);
+              }
+            });
+          }
 
           // 크로스 상태 계산 (상태 유지)
           let currentStatus: 'GOLDEN' | 'DEAD' | undefined = undefined;
@@ -463,8 +487,27 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         lowChangeRate: avgPriceChangeRate,
         priceChangeRate: avgPriceChangeRate,
         volumeChangeRate: avgVolumeChangeRate,
+        priceSlope: 0, // 나중에 계산
+        volumeSlope: 0, // 나중에 계산
         priceMA: avgPriceMA,
-        volumeMA: avgVolumeMA
+        volumeMA: avgVolumeMA,
+        maSlope: new Map<number, number>() // 나중에 계산
+      });
+    }
+
+    // 그룹 slope 계산
+    for (let i = 1; i < groupQuotes.length; i++) {
+      const prev = groupQuotes[i - 1];
+      const curr = groupQuotes[i];
+      
+      curr.priceSlope = curr.priceChangeRate - prev.priceChangeRate;
+      curr.volumeSlope = curr.volumeChangeRate - prev.volumeChangeRate;
+      
+      curr.priceMA.forEach((value, period) => {
+        const prevValue = prev.priceMA.get(period);
+        if (prevValue !== undefined) {
+          curr.maSlope.set(period, value - prevValue);
+        }
       });
     }
 
@@ -541,10 +584,28 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
           lowChangeRate,
           priceChangeRate,
           // volumeChangeRate는 이전 봉 대비라서 그대로 사용
-          priceMA: adjustedPriceMA
+          priceMA: adjustedPriceMA,
           // volumeMA도 그대로 사용
+          priceSlope: 0, // 재계산 예정
+          maSlope: new Map<number, number>() // 재계산 예정
         };
       });
+
+      // slope 재계산 (보정된 값 기준)
+      for (let i = 1; i < adjustedQuotes.length; i++) {
+        const prev = adjustedQuotes[i - 1];
+        const curr = adjustedQuotes[i];
+        
+        curr.priceSlope = curr.priceChangeRate - prev.priceChangeRate;
+        // volumeSlope는 보정 안 했으니 그대로
+        
+        curr.priceMA.forEach((value, period) => {
+          const prevValue = prev.priceMA.get(period);
+          if (prevValue !== undefined) {
+            curr.maSlope.set(period, value - prevValue);
+          }
+        });
+      }
 
       // 첫 번째 봉의 초기 상태 재판단 후, 그 상태를 이어가도록 수정
       if (adjustedQuotes.length > 0) {
@@ -692,9 +753,12 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         low: q.lowChangeRate,
         close: q.priceChangeRate,
         volume: q.volumeChangeRate,
+        priceSlope: q.priceSlope,
+        volumeSlope: q.volumeSlope,
         actualClose: q.close!,
         priceMA: q.priceMA,
         volumeMA: q.volumeMA,
+        maSlope: q.maSlope,
         crossStatus: q.crossStatus
       }));
       
