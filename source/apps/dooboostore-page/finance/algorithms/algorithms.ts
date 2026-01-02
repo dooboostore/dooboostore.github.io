@@ -738,8 +738,6 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     const snapshots: SymbolSnapshot[] = [];
     
     algoSymbols.forEach((symbolData, symbol) => {
-      if (symbolData.isGroup) return;  // 그룹은 매매 대상 아님
-      
       // currentTime 이전의 quotes만 필터링
       const filteredQuotes = symbolData.quotes.filter(q => q.date.getTime() <= currentTime.getTime());
       if (filteredQuotes.length === 0) return;
