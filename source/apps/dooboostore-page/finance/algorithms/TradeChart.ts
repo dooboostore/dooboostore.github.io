@@ -9,6 +9,7 @@ export type ChartDataPoint = {
   close: number;  // 종가 등락률
   volume: number; // 거래량 등락률
   ma: Map<number, number>;  // 이평선 (기간 -> 값)
+  actualClose?: number;  // 실제 종가 (그룹이 아닌 경우)
 };
 
 // MA 색상 매핑
@@ -33,6 +34,7 @@ export class TradeChart {
   private title: string = '';
   private data: ChartDataPoint[] = [];
   private maPeriods: number[] = [];
+  private isGroup: boolean = false;
 
   constructor() {
     this.canvas = createCanvas(this.width * this.scale, this.height * this.scale);
@@ -52,6 +54,11 @@ export class TradeChart {
 
   setMAPeriods(periods: number[]): this {
     this.maPeriods = periods;
+    return this;
+  }
+
+  setIsGroup(isGroup: boolean): this {
+    this.isGroup = isGroup;
     return this;
   }
 
@@ -106,11 +113,11 @@ export class TradeChart {
     const priceYScale = (v: number) => priceChartTop + priceChartHeight - ((v - priceMin) / (priceMax - priceMin)) * priceChartHeight;
     const volYScale = (v: number) => volumeChartTop + volumeChartHeight - ((v - volMin) / (volMax - volMin)) * volumeChartHeight;
 
-    // 가격 차트 그리드
-    this.drawGrid(priceMin, priceMax, priceYScale, priceChartTop, priceChartHeight, '%');
+    // 가격 차트 그리드 (isPrice=true로 오른쪽 Y축에 실제 가격 표시)
+    this.drawGrid(priceMin, priceMax, priceYScale, priceChartTop, priceChartHeight, '%', true);
     
     // 거래량 차트 그리드
-    this.drawGrid(volMin, volMax, volYScale, volumeChartTop, volumeChartHeight, '%');
+    this.drawGrid(volMin, volMax, volYScale, volumeChartTop, volumeChartHeight, '%', false);
 
     // 0% 기준선 (가격)
     if (priceMin < 0 && priceMax > 0) {
@@ -205,16 +212,18 @@ export class TradeChart {
     return this;
   }
 
-  private drawGrid(minVal: number, maxVal: number, yScale: (v: number) => number, _chartTop: number, _chartHeight: number, suffix: string): void {
-    const { ctx, width, padding } = this;
+  private drawGrid(minVal: number, maxVal: number, yScale: (v: number) => number, _chartTop: number, _chartHeight: number, suffix: string, isPrice: boolean = false): void {
+    const { ctx, width, padding, data, isGroup } = this;
     const gridCount = 4;
     const step = (maxVal - minVal) / gridCount;
+    
+    // 실제 가격 표시 여부: 가격 차트이고 그룹이 아니고 actualClose가 있는 경우
+    const hasActualPrice = isPrice && !isGroup && data.length > 0 && data[0].actualClose !== undefined;
 
     ctx.strokeStyle = '#e0e0e0';
     ctx.lineWidth = 1;
     ctx.fillStyle = '#666666';
     ctx.font = '10px Arial';
-    ctx.textAlign = 'right';
 
     for (let i = 0; i <= gridCount; i++) {
       const value = minVal + step * i;
@@ -225,7 +234,28 @@ export class TradeChart {
       ctx.lineTo(width - padding.right, y);
       ctx.stroke();
       
+      // 왼쪽 Y축: 등락률
+      ctx.textAlign = 'right';
       ctx.fillText(`${value.toFixed(1)}${suffix}`, padding.left - 5, y + 3);
+      
+      // 오른쪽 Y축: 실제 가격 (그룹이 아닌 경우만)
+      if (hasActualPrice) {
+        const firstData = data[0];
+        const basePrice = firstData.actualClose! / (1 + firstData.close / 100);
+        const actualPrice = basePrice * (1 + value / 100);
+        ctx.textAlign = 'left';
+        ctx.fillText(this.formatPrice(actualPrice), width - padding.right + 5, y + 3);
+      }
+    }
+  }
+
+  private formatPrice(price: number): string {
+    if (price >= 1000000) {
+      return (price / 1000000).toFixed(2) + 'M';
+    } else if (price >= 1000) {
+      return Math.round(price).toLocaleString();
+    } else {
+      return price.toFixed(2);
     }
   }
 

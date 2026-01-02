@@ -13,15 +13,14 @@ export class User {
   goldenCross: GoldenCrossConfig = {
     from: 5,
     to: 20,
-    under: [50],
-    minSlope: 0
+    below: [50]
   };
 
   // 데드크로스 설정
   deadCross: DeadCrossConfig = {
     from: 5,
     to: 20,
-    below: [50]
+    above: [50]
   };
 
   // 이동평균선 기간
@@ -31,7 +30,7 @@ export class User {
   config: TradingConfig = {
     tradeFees: {
       buy: 0.00015,
-      sell: 0.00245,
+      sell: 0.00245
     },
 
     features: {
@@ -56,7 +55,7 @@ export class User {
 
     buy: {
       symbolSize: 3,
-      stockRate: 0.10,
+      stockRate: 0.1,
       stockSize: 100,
       minVolumeStrength: 50,
       minSlope: 0,
@@ -77,8 +76,8 @@ export class User {
       symbolSize: 3,
       stockRate: 0.5,
       additionalSellThreshold: 0.01,
-      stopLoss: -0.10,
-      takeProfit: 0.50,
+      stopLoss: -0.1,
+      takeProfit: 0.5,
       trailingStopPercent: 0.02
     },
 
@@ -108,16 +107,11 @@ export class User {
     this.groups = groups;
   }
 
-
   // 필요한 모든 MA 기간 (중복 제거, 정렬)
   getAllMAPeriods(): number[] {
-    return Array.from(new Set([
-      ...this.maPeriods,
-      this.goldenCross.from,
-      this.goldenCross.to,
-      this.deadCross.from,
-      this.deadCross.to
-    ])).sort((a, b) => a - b);
+    return Array.from(
+      new Set([...this.maPeriods, this.goldenCross.from, this.goldenCross.to, this.deadCross.from, this.deadCross.to])
+    ).sort((a, b) => a - b);
   }
 
   getSymbolsInGroup(label?: string): string[] {
@@ -131,7 +125,6 @@ export class User {
     const group = this.groups.find(g => g.label === label);
     return Array.from(new Set<string>(group ? group.symbols : []));
   }
-
 
   // 매수 (TODO: 나중에 구현)
   buyStock(): boolean {

@@ -63,15 +63,14 @@ export type TimeSeries = {
 export type GoldenCrossConfig = {
   from: number;
   to: number;
-  under?: number[];
-  minSlope?: number;
+  below?: number[];
 };
 
 // 데드크로스 설정
 export type DeadCrossConfig = {
   from: number;
   to: number;
-  below?: number[];
+  above?: number[];
 };
 
 // 크로스 상태

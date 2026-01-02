@@ -201,15 +201,17 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
   const tickers: { symbol: string; label: string }[] = JSON.parse(readFileSync(TICKERS_PATH, 'utf-8'));
   
   // 필요한 모든 MA 기간 (중복 제거)
-  const allMAPeriods = Array.from(new Set([
-    ...user.maPeriods,
-    user.goldenCross.from,
-    user.goldenCross.to,
-    ...(user.goldenCross.under || []),
-    user.deadCross.from,
-    user.deadCross.to,
-    ...(user.deadCross.below || [])
-  ])).sort((a, b) => a - b);
+  const allMAPeriods = Array.from(
+    new Set([
+      ...user.maPeriods,
+      user.goldenCross.from,
+      user.goldenCross.to,
+      ...(user.goldenCross.below || []),
+      user.deadCross.from,
+      user.deadCross.to,
+      ...(user.deadCross.above || [])
+    ])
+  ).sort((a, b) => a - b);
 
   // 확장된 Quote 타입
   type ExtendedQuote = ChartQuote & {
@@ -499,13 +501,15 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       low: q.lowChangeRate,
       close: q.priceChangeRate,
       volume: q.volumeChangeRate,
-      ma: q.priceMA
+      ma: q.priceMA,
+      actualClose: q.close  // 실제 종가 (그룹은 평균값)
     }));
     
     const chart = new TradeChart()
       .setTitle(`${symbolData.label} ${key} (${symbolData.isGroup ? 'Group' : 'Symbol'})`)
       .setData(chartData)
       .setMAPeriods(user.maPeriods)
+      .setIsGroup(symbolData.isGroup)
       .draw();
     
     const filename = symbolData.isGroup ? `group-${key}.png` : `symbol-${key}.png`;
