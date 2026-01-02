@@ -447,22 +447,17 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     
     if (filteredQuotes.length > 0 && basePrice > 0) {
       // 기준가 대비 등락률로 보정 (이평선도 같이 보정)
+      // 거래량 등락률은 이전 봉 대비라서 보정 불필요
       const adjustedQuotes = filteredQuotes.map(q => {
         const openChangeRate = ((q.open || q.close!) - basePrice) / basePrice * 100;
         const highChangeRate = ((q.high || q.close!) - basePrice) / basePrice * 100;
         const lowChangeRate = ((q.low || q.close!) - basePrice) / basePrice * 100;
         const priceChangeRate = (q.close! - basePrice) / basePrice * 100;
-        const volumeChangeRate = baseVolume > 0 ? ((q.volume || 0) - baseVolume) / baseVolume * 100 : 0;
         
         // 이평선도 같은 기준으로 보정 (기존 값 - 기준 등락률)
         const adjustedPriceMA = new Map<number, number>();
         q.priceMA.forEach((value, period) => {
           adjustedPriceMA.set(period, value - basePriceChangeRate);
-        });
-        
-        const adjustedVolumeMA = new Map<number, number>();
-        q.volumeMA.forEach((value, period) => {
-          adjustedVolumeMA.set(period, value - baseVolumeChangeRate);
         });
         
         return {
@@ -471,9 +466,9 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
           highChangeRate,
           lowChangeRate,
           priceChangeRate,
-          volumeChangeRate,
-          priceMA: adjustedPriceMA,
-          volumeMA: adjustedVolumeMA
+          // volumeChangeRate는 이전 봉 대비라서 그대로 사용
+          priceMA: adjustedPriceMA
+          // volumeMA도 그대로 사용
         };
       });
       

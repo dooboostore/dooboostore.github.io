@@ -199,13 +199,13 @@ export class TradeChart {
     // 범례
     this.drawLegend();
 
-    // X축 라벨
-    this.drawXAxisLabels(xScale);
+    // X축 라벨 및 세로 그리드선
+    this.drawXAxisLabels(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
 
     return this;
   }
 
-  private drawGrid(minVal: number, maxVal: number, yScale: (v: number) => number, chartTop: number, chartHeight: number, suffix: string): void {
+  private drawGrid(minVal: number, maxVal: number, yScale: (v: number) => number, _chartTop: number, _chartHeight: number, suffix: string): void {
     const { ctx, width, padding } = this;
     const gridCount = 4;
     const step = (maxVal - minVal) / gridCount;
@@ -250,12 +250,8 @@ export class TradeChart {
     });
   }
 
-  private drawXAxisLabels(xScale: (i: number) => number): void {
-    const { ctx, height, padding, data } = this;
-    
-    ctx.fillStyle = '#666666';
-    ctx.font = '10px Arial';
-    ctx.textAlign = 'center';
+  private drawXAxisLabels(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeChartTop: number, volumeChartHeight: number): void {
+    const { ctx, height, padding, data, gap } = this;
 
     const labelCount = Math.min(6, data.length);
     const step = Math.max(1, Math.floor(data.length / labelCount));
@@ -263,6 +259,25 @@ export class TradeChart {
     for (let i = 0; i < data.length; i += step) {
       const d = data[i];
       const x = xScale(i);
+      
+      // 세로 그리드선 (가격 차트 영역)
+      ctx.strokeStyle = '#e0e0e0';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, priceChartTop + priceChartHeight);
+      ctx.stroke();
+      
+      // 세로 그리드선 (거래량 차트 영역)
+      ctx.beginPath();
+      ctx.moveTo(x, volumeChartTop);
+      ctx.lineTo(x, volumeChartTop + volumeChartHeight);
+      ctx.stroke();
+      
+      // X축 라벨
+      ctx.fillStyle = '#666666';
+      ctx.font = '10px Arial';
+      ctx.textAlign = 'center';
       const timeStr = `${d.time.getMonth() + 1}/${d.time.getDate()} ${d.time.getHours()}:${d.time.getMinutes().toString().padStart(2, '0')}`;
       ctx.fillText(timeStr, x, height - padding.bottom + 15);
     }
