@@ -58,6 +58,7 @@ export class User {
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'balance' as const, // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
       slopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
+      slopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
       moreSlopeThresholdRate: 0.02 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
       groupCrossCheck: false // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
@@ -67,11 +68,13 @@ export class User {
       moreRate: 0.25, // 추가 매도 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
       slopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
+      slopeThresholdType: 'any' as const, // up: 상승 시, down: 하락 시, any: 무관
       moreSlopeThresholdRate: 0.04 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 slopeThresholdRate 사용)
-      stopLossRate: 0.10, // 손절 비율 (0~1, 예: 0.10 = 10%)  undefined 이면 손절 안함
+      stopLossRate: 0.1, // 손절 비율 (0~1, 예: 0.10 = 10%)  undefined 이면 손절 안함
       groupCrossCheck: false, // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
       // 익절 설정 (피라미딩 익절)
-      takeProfit: {// 평균 매수가(avgPrice) 대비 현재가의 수익률로 익절 판단해
+      takeProfit: {
+        // 평균 매수가(avgPrice) 대비 현재가의 수익률로 익절 판단해
         thresholdRate: 0.05, // 첫 익절 기준 수익률 (10%)
         moreThresholdRate: 0.05, // 추가 익절 간격 (10%씩, 즉 20%, 30%, 40%...)
         rate: 0.3, // 첫 익절 매도 비율 (30%)
@@ -138,7 +141,7 @@ export class User {
 
   // 심볼별 익절 횟수 추적 (피라미딩 익절용)
   private takeProfitCount = new Map<string, number>();
-  
+
   // 심볼별 손절 후 새 골든크로스 대기 상태 (손절 후 재매수 방지)
   private waitingNewGoldenCross = new Map<string, boolean>();
 
@@ -192,7 +195,7 @@ export class User {
       // 보유 여부 확인
       const holding = this.account.getHolding(symbol);
       const hasHolding = holding !== undefined && holding.quantity > 0;
-      
+
       // 이번 틱에서 매도 발생 여부 (매도 후 같은 틱에서 매수 금지)
       let soldThisTick = false;
 
@@ -243,11 +246,23 @@ export class User {
 
           let canSell = true;
 
-          // 기울기 체크 (priceSlopeRate가 음수여야 함) - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
+          // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
           if (slopeThresholdRate !== undefined) {
-            if (latestQuote.priceSlope > -(slopeThresholdRate * 100)) {
-              canSell = false;
+            const thresholdPercent = slopeThresholdRate * 100;
+            const slopeType = this.config.sell?.slopeThresholdType ?? 'any';
+
+            if (slopeType === 'down') {
+              // 하락 시에만 매도 (기존 로직)
+              if (latestQuote.priceSlope > -thresholdPercent) {
+                canSell = false;
+              }
+            } else if (slopeType === 'up') {
+              // 상승 시에만 매도
+              if (latestQuote.priceSlope < thresholdPercent) {
+                canSell = false;
+              }
             }
+            // 'any'는 기울기 무관하게 매도 가능
           }
 
           // 그룹 크로스 체크
@@ -277,10 +292,10 @@ export class User {
           this.firstSellDone.set(symbol, false);
         }
       }
-      
+
       // 매도 발생 시 같은 틱에서 매수 금지
       if (soldThisTick) return;
-      
+
       // 손절 후 새 골든크로스 대기 상태 체크
       if (this.waitingNewGoldenCross.get(symbol)) {
         // 데드크로스가 나오면 대기 상태 해제 (다음 골든크로스에서 매수 가능)
@@ -307,17 +322,39 @@ export class User {
 
         let canBuy = true;
 
-        // 기울기 체크 (priceSlope가 양수여야 함) - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
+        // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
         if (slopeThresholdRate !== undefined) {
           const thresholdPercent = slopeThresholdRate * 100;
+          const slopeType = this.config.buy?.slopeThresholdType ?? 'up';
+
           console.log(
-            `[${symbol}] 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}% [${isPyramiding ? '피라미딩' : '신규'}]`
+            `[${symbol}] 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${isPyramiding ? '피라미딩' : '신규'}]`
           );
-          if (latestQuote.priceSlope < thresholdPercent) {
-            canBuy = false;
-            console.log(
-              `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% < ${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
-            );
+
+          if (slopeType === 'up') {
+            // 상승 시에만 매수 (기존 로직)
+            if (latestQuote.priceSlope < thresholdPercent) {
+              canBuy = false;
+              console.log(
+                `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% < ${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
+              );
+            }
+          } else if (slopeType === 'down') {
+            // 하락 시에만 매수
+            if (latestQuote.priceSlope > -thresholdPercent) {
+              canBuy = false;
+              console.log(
+                `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% > -${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
+              );
+            }
+          } else {
+            // 'any': 절대값으로 체크
+            if (Math.abs(latestQuote.priceSlope) < thresholdPercent) {
+              canBuy = false;
+              console.log(
+                `[${symbol}] 매수 스킵: 기울기 부족 (|${latestQuote.priceSlope.toFixed(4)}%| < ${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
+              );
+            }
           }
         }
 
