@@ -119,6 +119,7 @@ export type TradingConfig = {
     moreSlopeThresholdRate?: number; // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
     moreSlopeThresholdType?: 'up' | 'down' | 'any';  // 피라미딩 매수 기울기 타입 (없으면 slopeThresholdType 사용)
     groupCrossCheck?: boolean; // 그룹 골든크로스 체크
+    forceCrossBuy?: boolean; // 골든크로스 새로 발생 시 무조건 slopeThresholdRate/Type으로 매수 (피라미딩 조건 무시)
   };
   sell?: {
     rate?: number;           // 보유량 대비 매도 비율 (0~1)

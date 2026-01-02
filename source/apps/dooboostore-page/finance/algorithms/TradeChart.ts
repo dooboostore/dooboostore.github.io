@@ -461,7 +461,11 @@ export class TradeChart {
       
       if (tx.type === 'BUY') {
         color = '#1976D2';  // 파랑
-        label = tx.isPyramiding ? '+' : 'B';
+        if (tx.isGoldenCrossEntry) {
+          label = 'B';  // 골든크로스 진입 매수
+        } else {
+          label = tx.isPyramiding ? '+' : 'B';
+        }
       } else {
         color = '#D32F2F';  // 빨강
         if (tx.reason === 'STOP_LOSS') {
@@ -520,7 +524,7 @@ export class TradeChart {
         ctx.translate(x + 4, priceChartTop + 20);
         ctx.rotate(-Math.PI / 2);  // 90도 회전 (세로)
         ctx.fillStyle = color;
-        ctx.font = '8px Arial';
+        ctx.font = '6px Arial';
         ctx.textAlign = 'right';
         ctx.textBaseline = 'middle';
         ctx.fillText(tx.label, 0, 0);

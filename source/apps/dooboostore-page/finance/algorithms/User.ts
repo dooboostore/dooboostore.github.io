@@ -60,9 +60,10 @@ export class User {
       slopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
       slopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
 
-      moreSlopeThresholdRate: 0.02 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
+      moreSlopeThresholdRate: 0.04 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
       moreSlopeThresholdType: 'up' as const, // 피라미딩 매수 기울기 타입 (없으면 slopeThresholdType 사용)
-      groupCrossCheck: true // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
+      groupCrossCheck: true, // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
+      forceCrossBuy: true // 골든크로스 새로 발생 시 무조건 slopeThresholdRate/Type으로 매수 (피라미딩 조건 무시)
     },
 
     sell: {
@@ -177,6 +178,7 @@ export class User {
       if (quotes.length === 0) return;
 
       const latestQuote = quotes[quotes.length - 1];
+      const prevQuote = quotes.length > 1 ? quotes[quotes.length - 2] : undefined;
       const quoteTime = latestQuote.time.getTime();
       const lastTime = this.lastProcessedTime.get(symbol) || 0;
 
@@ -340,16 +342,25 @@ export class User {
         // 현재 보유 여부 다시 확인 (매도로 인해 변경되었을 수 있음)
         const currentHolding = this.account.getHolding(symbol);
         const isPyramiding = currentHolding !== undefined && currentHolding.quantity > 0;
+        
+        // 골든크로스가 새로 발생했는지 확인 (이전 틱이 GOLDEN이 아니었으면)
+        const isNewGoldenCross = prevQuote?.crossStatus !== 'GOLDEN';
+        
+        // forceCrossBuy: 골든크로스 새로 발생 시 신규 매수 조건으로 처리
+        const usePyramidingCondition = isPyramiding && !(this.config.buy?.forceCrossBuy && isNewGoldenCross);
 
         // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 slopeThresholdRate 사용
-        const slopeThresholdRate = isPyramiding
+        const slopeThresholdRate = usePyramidingCondition
           ? (this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.slopeThresholdRate)
           : this.config.buy?.slopeThresholdRate;
 
         // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 slopeThresholdType 사용
-        const slopeType = isPyramiding
+        const slopeType = usePyramidingCondition
           ? (this.config.buy?.moreSlopeThresholdType ?? this.config.buy?.slopeThresholdType ?? 'up')
           : (this.config.buy?.slopeThresholdType ?? 'up');
+        
+        // 로그용 라벨
+        const conditionLabel = usePyramidingCondition ? '피라미딩' : (isPyramiding && isNewGoldenCross ? '크로스매수' : '신규');
 
         let canBuy = true;
 
@@ -359,7 +370,7 @@ export class User {
           const thresholdPercent = slopeThresholdRate * 100;
 
           console.log(
-            `[${symbol}] 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${isPyramiding ? '피라미딩' : '신규'}]`
+            `[${symbol}] 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${conditionLabel}]`
           );
 
           if (slopeType === 'up') {
@@ -367,7 +378,7 @@ export class User {
             if (latestQuote.priceSlope < thresholdPercent) {
               canBuy = false;
               console.log(
-                `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% < ${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
+                `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% < ${thresholdPercent.toFixed(2)}%) [${conditionLabel}]`
               );
             }
           } else if (slopeType === 'down') {
@@ -375,7 +386,7 @@ export class User {
             if (latestQuote.priceSlope > -thresholdPercent) {
               canBuy = false;
               console.log(
-                `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% > -${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
+                `[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% > -${thresholdPercent.toFixed(2)}%) [${conditionLabel}]`
               );
             }
           } else {
@@ -383,7 +394,7 @@ export class User {
             if (Math.abs(latestQuote.priceSlope) < thresholdPercent) {
               canBuy = false;
               console.log(
-                `[${symbol}] 매수 스킵: 기울기 부족 (|${latestQuote.priceSlope.toFixed(4)}%| < ${thresholdPercent.toFixed(2)}%) [${isPyramiding ? '피라미딩' : '신규'}]`
+                `[${symbol}] 매수 스킵: 기울기 부족 (|${latestQuote.priceSlope.toFixed(4)}%| < ${thresholdPercent.toFixed(2)}%) [${conditionLabel}]`
               );
             }
           }
@@ -399,17 +410,17 @@ export class User {
 
         if (canBuy) {
           console.log(
-            `[${symbol}] 매수 조건 충족: crossStatus=${latestQuote.crossStatus}, slope=${latestQuote.priceSlope.toFixed(4)}, groupCross=${groupCrossStatus} [${isPyramiding ? '피라미딩' : '신규'}]`
+            `[${symbol}] 매수 조건 충족: crossStatus=${latestQuote.crossStatus}, slope=${latestQuote.priceSlope.toFixed(4)}, groupCross=${groupCrossStatus} [${conditionLabel}]`
           );
           if (isPyramiding) {
-            // 피라미딩 (추가 매수)
+            // 피라미딩 (추가 매수) - forceCrossBuy로 크로스매수인 경우도 포함
             if (this.config.buy?.moreRate !== undefined) {
-              this.buyStock(symbol, latestQuote, this.config.buy.moreRate, true);
+              this.buyStock(symbol, latestQuote, this.config.buy.moreRate, true, isNewGoldenCross && this.config.buy?.forceCrossBuy);
             }
           } else {
             // 신규 매수
             const rate = this.config.buy?.rate ?? 0.1;
-            this.buyStock(symbol, latestQuote, rate, false);
+            this.buyStock(symbol, latestQuote, rate, false, false);
           }
         }
       }
@@ -417,7 +428,7 @@ export class User {
   }
 
   // 매수
-  private buyStock(symbol: string, quote: TickData, rate: number, isPyramiding: boolean): boolean {
+  private buyStock(symbol: string, quote: TickData, rate: number, isPyramiding: boolean, isGoldenCrossEntry: boolean = false): boolean {
     let buyAmount: number;
 
     if (isPyramiding) {
@@ -482,7 +493,8 @@ export class User {
       fees,
       total,
       holdingAfter,
-      isPyramiding
+      isPyramiding,
+      isGoldenCrossEntry
     };
     this.account.addTransaction(tx);
 
@@ -492,8 +504,9 @@ export class User {
     }
     this.symbolTransactionsMap.get(symbol)!.push(tx);
 
+    const buyLabel = isGoldenCrossEntry ? '크로스매수' : (isPyramiding ? '피라미딩' : '신규');
     console.log(
-      `📈 BUY ${symbol}: ${quantity}주 @ ${quote.actualClose.toLocaleString()}원 (${isPyramiding ? '피라미딩' : '신규'})`
+      `📈 BUY ${symbol}: ${quantity}주 @ ${quote.actualClose.toLocaleString()}원 (${buyLabel})`
     );
     return true;
   }
