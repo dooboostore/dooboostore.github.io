@@ -11,6 +11,7 @@ export type ChartDataPoint = {
   volume: number; // 거래량 등락률
   ma: Map<number, number>;  // 이평선 (기간 -> 값)
   actualClose?: number;  // 실제 종가 (그룹이 아닌 경우)
+  actualVolume?: number; // 실제 거래량 (그룹이 아닌 경우)
   crossStatus?: 'GOLDEN' | 'DEAD';  // 크로스 상태
 };
 
@@ -29,9 +30,9 @@ export class TradeChart {
   
   // 차트 설정
   private width = 1200;
-  private height = 700;  // 높이 증가
-  private padding = { top: 60, right: 60, bottom: 60, left: 80 };
-  private gap = 20;  // 상단/하단 차트 간격
+  private height = 850;  // 3단 차트용 높이 증가
+  private padding = { top: 60, right: 80, bottom: 60, left: 80 };
+  private gap = 15;  // 차트 간격
   
   private title: string = '';
   private data: ChartDataPoint[] = [];
@@ -82,12 +83,15 @@ export class TradeChart {
     const { ctx, width, height, padding, gap } = this;
     const chartWidth = width - padding.left - padding.right;
     
-    // 상단 70%, 하단 30%
-    const priceChartHeight = (height - padding.top - padding.bottom - gap) * 0.7;
-    const volumeChartHeight = (height - padding.top - padding.bottom - gap) * 0.3;
+    // 3단 차트: 상단 55%, 중단 20%, 하단 25%
+    const totalChartHeight = height - padding.top - padding.bottom - gap * 2;
+    const priceChartHeight = totalChartHeight * 0.55;
+    const actualVolumeChartHeight = totalChartHeight * 0.20;
+    const volumeRateChartHeight = totalChartHeight * 0.25;
     
     const priceChartTop = padding.top;
-    const volumeChartTop = padding.top + priceChartHeight + gap;
+    const actualVolumeChartTop = priceChartTop + priceChartHeight + gap;
+    const volumeRateChartTop = actualVolumeChartTop + actualVolumeChartHeight + gap;
 
     // 배경
     ctx.fillStyle = '#ffffff';
@@ -110,28 +114,41 @@ export class TradeChart {
     priceMin -= priceRange * 0.1;
     priceMax += priceRange * 0.1;
 
-    // 거래량 데이터 범위
-    let volMin = 0, volMax = -Infinity;
+    // 실제 거래량 데이터 범위 (최대값 기준 0~100%)
+    let actualVolMax = 0;
     this.data.forEach(d => {
-      volMin = Math.min(volMin, d.volume);
-      volMax = Math.max(volMax, d.volume);
+      if (d.actualVolume !== undefined && d.actualVolume > actualVolMax) {
+        actualVolMax = d.actualVolume;
+      }
     });
-    if (volMax === volMin) { volMax += 100; }
-    const volRange = volMax - volMin;
-    volMax += volRange * 0.1;
-    volMin -= volRange * 0.1;
+    if (actualVolMax === 0) actualVolMax = 1; // 0 방지
+
+    // 거래량 등락률 데이터 범위
+    let volRateMin = 0, volRateMax = -Infinity;
+    this.data.forEach(d => {
+      volRateMin = Math.min(volRateMin, d.volume);
+      volRateMax = Math.max(volRateMax, d.volume);
+    });
+    if (volRateMax === volRateMin) { volRateMax += 100; }
+    const volRateRange = volRateMax - volRateMin;
+    volRateMax += volRateRange * 0.1;
+    volRateMin -= volRateRange * 0.1;
 
     // 좌표 변환
     const candleWidth = Math.max(1, (chartWidth / this.data.length) * 0.7);
     const xScale = (i: number) => padding.left + ((i + 0.5) / this.data.length) * chartWidth;
     const priceYScale = (v: number) => priceChartTop + priceChartHeight - ((v - priceMin) / (priceMax - priceMin)) * priceChartHeight;
-    const volYScale = (v: number) => volumeChartTop + volumeChartHeight - ((v - volMin) / (volMax - volMin)) * volumeChartHeight;
+    const actualVolYScale = (percent: number) => actualVolumeChartTop + actualVolumeChartHeight - (percent / 100) * actualVolumeChartHeight;
+    const volRateYScale = (v: number) => volumeRateChartTop + volumeRateChartHeight - ((v - volRateMin) / (volRateMax - volRateMin)) * volumeRateChartHeight;
 
     // 가격 차트 그리드 (isPrice=true로 오른쪽 Y축에 실제 가격 표시)
     this.drawGrid(priceMin, priceMax, priceYScale, priceChartTop, priceChartHeight, '%', true);
     
-    // 거래량 차트 그리드
-    this.drawGrid(volMin, volMax, volYScale, volumeChartTop, volumeChartHeight, '%', false);
+    // 실제 거래량 차트 그리드 (왼쪽: 0~100%, 오른쪽: 실제 거래량)
+    this.drawActualVolumeGrid(actualVolMax, actualVolYScale, actualVolumeChartTop, actualVolumeChartHeight);
+    
+    // 거래량 등락률 차트 그리드
+    this.drawGrid(volRateMin, volRateMax, volRateYScale, volumeRateChartTop, volumeRateChartHeight, '%', false);
 
     // 0% 기준선 (가격)
     if (priceMin < 0 && priceMax > 0) {
@@ -145,13 +162,13 @@ export class TradeChart {
       ctx.setLineDash([]);
     }
 
-    // 0% 기준선 (거래량)
+    // 0% 기준선 (거래량 등락률)
     ctx.strokeStyle = '#888888';
     ctx.lineWidth = 1;
     ctx.setLineDash([3, 3]);
     ctx.beginPath();
-    ctx.moveTo(padding.left, volYScale(0));
-    ctx.lineTo(width - padding.right, volYScale(0));
+    ctx.moveTo(padding.left, volRateYScale(0));
+    ctx.lineTo(width - padding.right, volRateYScale(0));
     ctx.stroke();
     ctx.setLineDash([]);
 
@@ -194,11 +211,26 @@ export class TradeChart {
       ctx.stroke();
     });
 
-    // 거래량 막대 그리기
+    // 실제 거래량 막대 그리기 (중단 차트)
+    this.data.forEach((d, i) => {
+      if (d.actualVolume === undefined) return;
+      const x = xScale(i);
+      const percent = (d.actualVolume / actualVolMax) * 100;
+      const y = actualVolYScale(percent);
+      const y0 = actualVolYScale(0);
+      const barHeight = y0 - y;
+      
+      // 가격 상승=빨강, 하락=파랑
+      const isUp = d.close >= d.open;
+      ctx.fillStyle = isUp ? 'rgba(211, 47, 47, 0.6)' : 'rgba(25, 118, 210, 0.6)';
+      ctx.fillRect(x - candleWidth / 2, y, candleWidth, barHeight);
+    });
+
+    // 거래량 등락률 막대 그리기 (하단 차트)
     this.data.forEach((d, i) => {
       const x = xScale(i);
-      const y0 = volYScale(0);
-      const y = volYScale(d.volume);
+      const y0 = volRateYScale(0);
+      const y = volRateYScale(d.volume);
       const barHeight = y0 - y;
       
       // 양수=초록, 음수=빨강
@@ -224,13 +256,13 @@ export class TradeChart {
     this.drawSummary();
 
     // X축 라벨 및 세로 그리드선
-    this.drawXAxisLabels(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
+    this.drawXAxisLabels3(xScale, priceChartTop, priceChartHeight, actualVolumeChartTop, actualVolumeChartHeight, volumeRateChartTop, volumeRateChartHeight);
 
     // 크로스 마커 그리기
-    this.drawCrossMarkers(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
+    this.drawCrossMarkers3(xScale, priceChartTop, priceChartHeight, volumeRateChartTop, volumeRateChartHeight);
 
     // 거래 마커 그리기
-    this.drawTradeMarkers(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
+    this.drawTradeMarkers3(xScale, priceChartTop, priceChartHeight, volumeRateChartTop, volumeRateChartHeight);
 
     return this;
   }
@@ -279,6 +311,47 @@ export class TradeChart {
       return Math.round(price).toLocaleString();
     } else {
       return price.toFixed(2);
+    }
+  }
+
+  private formatVolume(volume: number): string {
+    if (volume >= 1000000000) {
+      return (volume / 1000000000).toFixed(1) + 'B';
+    } else if (volume >= 1000000) {
+      return (volume / 1000000).toFixed(1) + 'M';
+    } else if (volume >= 1000) {
+      return (volume / 1000).toFixed(0) + 'K';
+    } else {
+      return volume.toFixed(0);
+    }
+  }
+
+  private drawActualVolumeGrid(maxVolume: number, yScale: (percent: number) => number, chartTop: number, chartHeight: number): void {
+    const { ctx, width, padding } = this;
+    const gridCount = 4;
+    
+    ctx.strokeStyle = '#e0e0e0';
+    ctx.lineWidth = 1;
+    ctx.fillStyle = '#666666';
+    ctx.font = '10px Arial';
+
+    for (let i = 0; i <= gridCount; i++) {
+      const percent = (i / gridCount) * 100;
+      const y = yScale(percent);
+      
+      ctx.beginPath();
+      ctx.moveTo(padding.left, y);
+      ctx.lineTo(width - padding.right, y);
+      ctx.stroke();
+      
+      // 왼쪽 Y축: 0~100%
+      ctx.textAlign = 'right';
+      ctx.fillText(`${percent.toFixed(0)}%`, padding.left - 5, y + 3);
+      
+      // 오른쪽 Y축: 실제 거래량 값
+      const actualVolume = (percent / 100) * maxVolume;
+      ctx.textAlign = 'left';
+      ctx.fillText(this.formatVolume(actualVolume), width - padding.right + 5, y + 3);
     }
   }
 
@@ -486,6 +559,221 @@ export class TradeChart {
       ctx.beginPath();
       ctx.moveTo(x, priceChartTop);
       ctx.lineTo(x, volumeChartTop + volumeChartHeight);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // 아래쪽 화살표 (가격 차트 위)
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x, arrowY + arrowSize);  // 꼭지점 (아래)
+      ctx.lineTo(x - arrowSize / 2, arrowY);  // 왼쪽 위
+      ctx.lineTo(x + arrowSize / 2, arrowY);  // 오른쪽 위
+      ctx.closePath();
+      ctx.fill();
+      
+      // 삼각형 안에 흰색 글씨
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = 'bold 8px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, arrowY + arrowSize * 0.4);
+      ctx.textBaseline = 'alphabetic';
+      
+      // 화살표 위에 세로 글씨: "전체보유수(매매수)"
+      const infoText = `${tx.holdingAfter}(${tx.quantity})`;
+      ctx.save();
+      ctx.translate(x, arrowY - 2);
+      ctx.rotate(-Math.PI / 2);  // 90도 회전
+      ctx.fillStyle = color;
+      ctx.font = '6px Arial';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(infoText, 0, 0);
+      ctx.restore();
+      
+      // label이 있으면 점선 옆에 세로로 표시
+      if (tx.label) {
+        ctx.save();
+        ctx.translate(x + 4, priceChartTop + 20);
+        ctx.rotate(-Math.PI / 2);  // 90도 회전 (세로)
+        ctx.fillStyle = color;
+        ctx.font = '6px Arial';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(tx.label, 0, 0);
+        ctx.restore();
+      }
+    });
+  }
+
+  // 3단 차트용 X축 라벨
+  private drawXAxisLabels3(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, actualVolumeChartTop: number, actualVolumeChartHeight: number, volumeRateChartTop: number, volumeRateChartHeight: number): void {
+    const { ctx, height, padding, data } = this;
+
+    // 날짜가 바뀌는 인덱스 찾기
+    const dateChangeIndices = new Set<number>();
+    let prevDate = '';
+    data.forEach((d, i) => {
+      const dateStr = `${d.time.getFullYear()}-${d.time.getMonth()}-${d.time.getDate()}`;
+      if (dateStr !== prevDate) {
+        dateChangeIndices.add(i);
+        prevDate = dateStr;
+      }
+    });
+
+    // 일반 라벨 간격 계산
+    const labelCount = Math.min(6, data.length);
+    const step = Math.max(1, Math.floor(data.length / labelCount));
+    
+    // 라벨 표시할 인덱스 (날짜 변경 + 일반 간격)
+    const labelIndices = new Set<number>();
+    dateChangeIndices.forEach(i => labelIndices.add(i));
+    for (let i = 0; i < data.length; i += step) {
+      labelIndices.add(i);
+    }
+    
+    labelIndices.forEach(i => {
+      const d = data[i];
+      const x = xScale(i);
+      const isDateChange = dateChangeIndices.has(i);
+      
+      // 세로 그리드선 (가격 차트 영역)
+      ctx.strokeStyle = isDateChange ? '#999999' : '#e0e0e0';
+      ctx.lineWidth = isDateChange ? 1.5 : 1;
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, priceChartTop + priceChartHeight);
+      ctx.stroke();
+      
+      // 세로 그리드선 (실제 거래량 차트 영역)
+      ctx.beginPath();
+      ctx.moveTo(x, actualVolumeChartTop);
+      ctx.lineTo(x, actualVolumeChartTop + actualVolumeChartHeight);
+      ctx.stroke();
+      
+      // 세로 그리드선 (거래량 등락률 차트 영역)
+      ctx.beginPath();
+      ctx.moveTo(x, volumeRateChartTop);
+      ctx.lineTo(x, volumeRateChartTop + volumeRateChartHeight);
+      ctx.stroke();
+      
+      // X축 라벨
+      ctx.fillStyle = isDateChange ? '#000000' : '#666666';
+      ctx.font = isDateChange ? 'bold 10px Arial' : '10px Arial';
+      ctx.textAlign = 'center';
+      const timeStr = `${d.time.getMonth() + 1}/${d.time.getDate()} ${d.time.getHours()}:${d.time.getMinutes().toString().padStart(2, '0')}`;
+      ctx.fillText(timeStr, x, height - padding.bottom + 15);
+    });
+  }
+
+  // 3단 차트용 크로스 마커
+  private drawCrossMarkers3(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeRateChartTop: number, volumeRateChartHeight: number): void {
+    const { ctx, height, padding, data } = this;
+    
+    data.forEach((d, i) => {
+      // 상태가 바뀌는 시점에만 마커 표시
+      const prevStatus = i > 0 ? data[i - 1].crossStatus : undefined;
+      if (d.crossStatus === prevStatus) return;
+      
+      const x = xScale(i);
+      let color: string;
+      let label: string;
+      
+      if (d.crossStatus === 'GOLDEN') {
+        color = '#FFD700';  // 노랑
+        label = 'G';
+      } else if (d.crossStatus === 'DEAD') {
+        color = '#F44336';  // 빨강
+        label = 'D';
+      } else {
+        color = '#888888';  // 회색 (undefined)
+        label = 'N';
+      }
+      
+      // Y축 점선 (3개 차트 전체)
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, volumeRateChartTop + volumeRateChartHeight);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // 위쪽 화살표 (X축 라벨 아래 여백)
+      const arrowY = height - padding.bottom + 35;
+      const arrowSize = 12;
+      
+      // 화살표 배경 (위쪽 방향 삼각형)
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x, arrowY - arrowSize);  // 꼭지점 (위)
+      ctx.lineTo(x - arrowSize / 2, arrowY);  // 왼쪽 아래
+      ctx.lineTo(x + arrowSize / 2, arrowY);  // 오른쪽 아래
+      ctx.closePath();
+      ctx.fill();
+      
+      // 화살표 안쪽 글씨
+      ctx.fillStyle = d.crossStatus === 'GOLDEN' ? '#000000' : '#FFFFFF';
+      ctx.font = 'bold 8px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, arrowY - arrowSize / 3);
+      ctx.textBaseline = 'alphabetic';  // 원복
+    });
+  }
+
+  // 3단 차트용 거래 마커
+  private drawTradeMarkers3(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeRateChartTop: number, volumeRateChartHeight: number): void {
+    const { ctx, data, transactions } = this;
+    
+    if (transactions.length === 0) return;
+    
+    // 데이터 시간 -> 인덱스 맵
+    const timeToIndex = new Map<number, number>();
+    data.forEach((d, i) => {
+      timeToIndex.set(d.time.getTime(), i);
+    });
+    
+    transactions.forEach(tx => {
+      const txTime = tx.time.getTime();
+      const index = timeToIndex.get(txTime);
+      if (index === undefined) return;
+      
+      const x = xScale(index);
+      const arrowY = priceChartTop - 5;
+      const arrowSize = 14;
+      
+      let color: string;
+      let label: string;
+      
+      if (tx.type === 'BUY') {
+        color = '#1976D2';  // 파랑
+        if (tx.isGoldenCrossEntry) {
+          label = 'B';  // 골든크로스 진입 매수
+        } else {
+          label = tx.isPyramiding ? '+' : 'B';
+        }
+      } else {
+        color = '#D32F2F';  // 빨강
+        if (tx.reason === 'STOP_LOSS') {
+          label = '!';
+        } else if (tx.reason?.startsWith('TAKE_PROFIT')) {
+          label = '$';  // 익절
+        } else if (tx.reason === 'DEAD_CROSS_MORE') {
+          label = '+';
+        } else {
+          label = 'S';
+        }
+      }
+      
+      // Y축 점선 (3개 차트 전체)
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 2]);
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, volumeRateChartTop + volumeRateChartHeight);
       ctx.stroke();
       ctx.setLineDash([]);
       

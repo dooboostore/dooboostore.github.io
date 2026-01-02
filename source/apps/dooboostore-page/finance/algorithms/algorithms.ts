@@ -866,6 +866,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       volume: q.volumeChangeRate,
       ma: q.priceMA,
       actualClose: q.close, // 실제 종가
+      actualVolume: q.volume, // 실제 거래량
       crossStatus: q.crossStatus // 크로스 상태
     }));
 

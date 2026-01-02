@@ -57,13 +57,13 @@ export class User {
       rate: 0.1, // 잔액 대비 매수 비율 (0~1)
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'balance' as const, // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
-      slopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
+      slopeThresholdRate: 0.004, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
       slopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
 
       moreSlopeThresholdRate: 0.04 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
       moreSlopeThresholdType: 'up' as const, // 피라미딩 매수 기울기 타입 (없으면 slopeThresholdType 사용)
       groupCrossCheck: true, // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
-      forceCrossBuy: true // 골든크로스 새로 발생 시 무조건 slopeThresholdRate/Type으로 매수 (피라미딩 조건 무시)
+      forceCrossBuy: 'slopeCheck' as 'slopeCheck' | 'force' | undefined // 골든크로스 새로 발생 시: 'slopeCheck'=기울기 체크 후 매수, 'force'=무조건 매수
     },
 
     sell: {
@@ -346,27 +346,42 @@ export class User {
         // 골든크로스가 새로 발생했는지 확인 (이전 틱이 GOLDEN이 아니었으면)
         const isNewGoldenCross = prevQuote?.crossStatus !== 'GOLDEN';
         
-        // forceCrossBuy: 골든크로스 새로 발생 시 신규 매수 조건으로 처리
-        const usePyramidingCondition = isPyramiding && !(this.config.buy?.forceCrossBuy && isNewGoldenCross);
+        // forceCrossBuy 모드 확인
+        const forceCrossBuyMode = this.config.buy?.forceCrossBuy;
+        const isForceCrossBuy = isPyramiding && forceCrossBuyMode && isNewGoldenCross;
 
-        // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 slopeThresholdRate 사용
-        const slopeThresholdRate = usePyramidingCondition
-          ? (this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.slopeThresholdRate)
-          : this.config.buy?.slopeThresholdRate;
-
-        // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 slopeThresholdType 사용
-        const slopeType = usePyramidingCondition
-          ? (this.config.buy?.moreSlopeThresholdType ?? this.config.buy?.slopeThresholdType ?? 'up')
-          : (this.config.buy?.slopeThresholdType ?? 'up');
+        // 기울기 임계값 결정
+        // - forceCrossBuy='slopeCheck': 첫 매수 기준 (slopeThresholdRate/Type) 사용
+        // - 일반 피라미딩: moreSlopeThresholdRate/Type 사용 (없으면 slopeThresholdRate/Type)
+        // - 신규 매수: slopeThresholdRate/Type 사용
+        let slopeThresholdRate: number | undefined;
+        let slopeType: 'up' | 'down' | 'any';
+        
+        if (isForceCrossBuy && forceCrossBuyMode === 'slopeCheck') {
+          // forceCrossBuy='slopeCheck': 첫 매수 기준 사용
+          slopeThresholdRate = this.config.buy?.slopeThresholdRate;
+          slopeType = this.config.buy?.slopeThresholdType ?? 'up';
+        } else if (isPyramiding) {
+          // 일반 피라미딩: moreSlopeThresholdRate/Type 사용
+          slopeThresholdRate = this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.slopeThresholdRate;
+          slopeType = this.config.buy?.moreSlopeThresholdType ?? this.config.buy?.slopeThresholdType ?? 'up';
+        } else {
+          // 신규 매수: slopeThresholdRate/Type 사용
+          slopeThresholdRate = this.config.buy?.slopeThresholdRate;
+          slopeType = this.config.buy?.slopeThresholdType ?? 'up';
+        }
         
         // 로그용 라벨
-        const conditionLabel = usePyramidingCondition ? '피라미딩' : (isPyramiding && isNewGoldenCross ? '크로스매수' : '신규');
+        const conditionLabel = isForceCrossBuy ? '크로스매수' : (isPyramiding ? '피라미딩' : '신규');
 
         let canBuy = true;
 
-        // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
-        // slopeType: 'up'=상승 시, 'down'=하락 시, 'any'=방향 무관 (절대값으로 임계값 체크)
-        if (slopeThresholdRate !== undefined) {
+        // forceCrossBuy='force'일 때는 기울기 체크 스킵
+        if (isForceCrossBuy && forceCrossBuyMode === 'force') {
+          console.log(`[${symbol}] 크로스매수: 골든크로스 발생으로 기울기 체크 스킵 (force)`);
+        } else if (slopeThresholdRate !== undefined) {
+          // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
+          // slopeType: 'up'=상승 시, 'down'=하락 시, 'any'=방향 무관 (절대값으로 임계값 체크)
           const thresholdPercent = slopeThresholdRate * 100;
 
           console.log(
@@ -415,7 +430,7 @@ export class User {
           if (isPyramiding) {
             // 피라미딩 (추가 매수) - forceCrossBuy로 크로스매수인 경우도 포함
             if (this.config.buy?.moreRate !== undefined) {
-              this.buyStock(symbol, latestQuote, this.config.buy.moreRate, true, isNewGoldenCross && this.config.buy?.forceCrossBuy);
+              this.buyStock(symbol, latestQuote, this.config.buy.moreRate, true, isForceCrossBuy);
             }
           } else {
             // 신규 매수
