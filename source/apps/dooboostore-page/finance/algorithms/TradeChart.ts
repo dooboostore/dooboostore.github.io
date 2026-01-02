@@ -513,6 +513,19 @@ export class TradeChart {
       ctx.textBaseline = 'middle';
       ctx.fillText(infoText, 0, 0);
       ctx.restore();
+      
+      // label이 있으면 점선 옆에 세로로 표시
+      if (tx.label) {
+        ctx.save();
+        ctx.translate(x + 4, priceChartTop + 20);
+        ctx.rotate(-Math.PI / 2);  // 90도 회전 (세로)
+        ctx.fillStyle = color;
+        ctx.font = '8px Arial';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(tx.label, 0, 0);
+        ctx.restore();
+      }
     });
   }
 

@@ -880,7 +880,11 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       if (group) {
         group.symbols.forEach(symbol => {
           const txs = user.symbolTransactionsMap.get(symbol) || [];
-          symbolTransactions.push(...txs);
+          // 각 거래에 심볼 라벨 추가
+          const symbolLabel = algoSymbols.get(symbol)?.label || symbol;
+          txs.forEach(tx => {
+            symbolTransactions.push({ ...tx, label: symbolLabel });
+          });
         });
         // 시간순 정렬
         symbolTransactions.sort((a, b) => a.time.getTime() - b.time.getTime());

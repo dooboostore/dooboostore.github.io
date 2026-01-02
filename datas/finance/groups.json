@@ -1,72 +1,117 @@
 [
   {
     "group": "semiconductor-kr",
-    "label": "반도체 (한국)",
-    "symbols": ["005930.KS", "000660.KS", "042700.KS", "000990.KS"]
+    "label": "반도체",
+    "symbols": ["005930.KS", "000660.KS", "042700.KS", "000990.KS", "058470.KS", "403870.KS"]
   },
   {
-    "group": "battery-kr",
-    "label": "배터리 (한국)",
-    "symbols": ["006400.KS", "373220.KS", "066970.KS", "051910.KS"]
-  },
-  {
-    "group": "energy-kr",
-    "label": "에너지 (한국)",
-    "symbols": ["015760.KS", "034020.KS", "052690.KS", "010950.KS", "010060.KS"]
-  },
-  {
-    "group": "finance-kr",
-    "label": "금융 (한국)",
-    "symbols": ["055550.KS", "086790.KS", "105560.KS", "000810.KS"]
-  },
-  {
-    "group": "construction-kr",
-    "label": "건설 (한국)",
-    "symbols": ["000720.KS", "028260.KS", "047040.KS", "375500.KS"]
-  },
-  {
-    "group": "shipbuilding-kr",
-    "label": "조선 (한국)",
-    "symbols": ["010140.KS", "009540.KS", "042660.KS", "267250.KS"]
-  },
-  {
-    "group": "bio-kr",
-    "label": "바이오 (한국)",
-    "symbols": ["207940.KS", "068270.KS", "326030.KS", "214450.KS"]
-  },
-  {
-    "group": "robot-kr",
-    "label": "로봇 (한국)",
-    "symbols": ["204320.KS", "454910.KS", "012330.KS"]
-  },
-  {
-    "group": "auto-kr",
-    "label": "자동차 (한국)",
-    "symbols": ["005380.KS", "012330.KS", "000270.KS", "161390.KS"]
+    "group": "display-kr",
+    "label": "디스플레이",
+    "symbols": ["034220.KS", "066570.KS", "272210.KS", "131970.KQ"]
   },
   {
     "group": "software-kr",
-    "label": "소프트웨어 (한국)",
-    "symbols": ["035720.KS", "036570.KS"]
+    "label": "소프트웨어",
+    "symbols": ["035720.KS", "036570.KS", "035420.KS", "263750.KQ", "041510.KQ"]
   },
   {
-    "group": "security-kr",
-    "label": "보안 (한국)",
-    "symbols": ["053800.KS", "357780.KS", "214150.KS"]
+    "group": "robot-kr",
+    "label": "로봇",
+    "symbols": ["267260.KS", "090460.KS", "108490.KQ", "056080.KQ", "298040.KS"]
+  },
+  {
+    "group": "refinery-kr",
+    "label": "정유/화학",
+    "symbols": ["010950.KS", "096770.KS", "011170.KS", "010060.KS", "051910.KS", "006650.KS"]
+  },
+  {
+    "group": "steel-kr",
+    "label": "철강/비철",
+    "symbols": ["005490.KS", "004020.KS", "001230.KS", "103140.KS", "004370.KS"]
+  },
+  {
+    "group": "shipbuilding-kr",
+    "label": "조선/상사",
+    "symbols": ["010140.KS", "009540.KS", "042660.KS", "267250.KS", "011760.KS"]
+  },
+  {
+    "group": "transport-kr",
+    "label": "운송",
+    "symbols": ["003490.KS", "180640.KS", "028670.KS", "020560.KS", "000120.KS"]
+  },
+  {
+    "group": "renewable-kr",
+    "label": "신재생에너지",
+    "symbols": ["015760.KS", "034020.KS", "052690.KS", "322000.KS", "117580.KS"]
+  },
+  {
+    "group": "finance-kr",
+    "label": "금융/지주",
+    "symbols": ["055550.KS", "086790.KS", "105560.KS", "000810.KS", "316140.KS", "024110.KS"]
+  },
+  {
+    "group": "power-kr",
+    "label": "전력",
+    "symbols": ["015760.KS", "267260.KS", "009830.KS", "034590.KS"]
+  },
+  {
+    "group": "auto-kr",
+    "label": "자동차",
+    "symbols": ["005380.KS", "012330.KS", "000270.KS", "161390.KS", "011210.KS"]
+  },
+  {
+    "group": "ev-kr",
+    "label": "전기차/배터리",
+    "symbols": ["006400.KS", "373220.KS", "066970.KS", "051910.KS", "247540.KQ", "096770.KS"]
+  },
+  {
+    "group": "cosmetics-kr",
+    "label": "화장품",
+    "symbols": ["090430.KS", "002790.KS", "078520.KS", "192820.KS"]
+  },
+  {
+    "group": "food-kr",
+    "label": "음식료/의류",
+    "symbols": ["097950.KS", "271560.KS", "005300.KS", "004990.KS", "280360.KS"]
+  },
+  {
+    "group": "retail-kr",
+    "label": "유통",
+    "symbols": ["004170.KS", "139480.KS", "069960.KS", "023530.KS", "035760.KQ"]
+  },
+  {
+    "group": "construction-kr",
+    "label": "건설",
+    "symbols": ["000720.KS", "028260.KS", "047040.KS", "375500.KS", "006360.KS"]
   },
   {
     "group": "telecom-kr",
-    "label": "통신 (한국)",
+    "label": "통신",
     "symbols": ["030200.KS", "017670.KS", "032640.KS"]
   },
   {
-    "group": "entertainment-kr",
-    "label": "엔터테인먼트 (한국)",
-    "symbols": ["352820.KS", "041510.KS", "122870.KS", "035900.KS", "299900.KQ", "067160.KQ"]
+    "group": "defense-kr",
+    "label": "방산/우주항공",
+    "symbols": ["012450.KS", "047810.KS", "064350.KS", "298040.KS", "042660.KS"]
   },
   {
-    "group": "defense-kr",
-    "label": "국방 (한국)",
-    "symbols": ["042660.KS"]
+    "group": "pharma-kr",
+    "label": "제약/바이오",
+    "symbols": ["207940.KS", "068270.KS", "326030.KS", "128940.KS", "145020.KQ", "091990.KS"]
+  },
+  {
+    "group": "healthcare-kr",
+    "label": "헬스케어",
+    "symbols": ["086900.KQ", "041830.KQ", "214150.KQ", "950130.KQ"]
+  },
+  {
+    "group": "ai-kr",
+    "label": "AI",
+    "symbols": ["035720.KS", "035420.KS", "005930.KS", "000660.KS", "403870.KQ", "058470.KQ"]
+  },
+  {
+    "group": "entertainment-kr",
+    "label": "엔터테인먼트",
+    "symbols": ["352820.KS", "122870.KQ", "035900.KQ", "041510.KQ"]
   }
 ]

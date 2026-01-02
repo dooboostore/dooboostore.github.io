@@ -34,6 +34,7 @@ export type Transaction = {
   isPyramiding?: boolean; // 매수 시 피라미딩 여부
   isReBuy?: boolean; // 매수 시 재매수 여부 (익절/손절 후 재매수)
   isGoldenCrossEntry?: boolean; // 골든크로스 진입 시점 매수 여부
+  label?: string; // 차트에 표시할 라벨 (세로로 표시됨)
 };
 
 // 보유 종목 정보
