@@ -68,7 +68,7 @@ export class User {
       moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
       slopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
       moreSlopeThresholdRate: 0.04 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 slopeThresholdRate 사용)
-      stopLossRate: 0.2, // 손절 비율 (0~1, 예: 0.20 = 20%)  undefined 이면 손절 안함
+      stopLossRate: 0.02, // 손절 비율 (0~1, 예: 0.02 = 2%)  undefined 이면 손절 안함
       groupCrossCheck: false, // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
       // 익절 설정 (피라미딩 익절)
       takeProfit: {// 평균 매수가(avgPrice) 대비 현재가의 수익률로 익절 판단해
@@ -138,6 +138,9 @@ export class User {
 
   // 심볼별 익절 횟수 추적 (피라미딩 익절용)
   private takeProfitCount = new Map<string, number>();
+  
+  // 심볼별 손절 후 새 골든크로스 대기 상태 (손절 후 재매수 방지)
+  private waitingNewGoldenCross = new Map<string, boolean>();
 
   // 심볼이 속한 그룹 찾기
   private getGroupForSymbol(symbol: string): Group | undefined {
@@ -202,6 +205,7 @@ export class User {
             console.log(`🚨 STOP_LOSS 발동! ${symbol}: 손실률 ${(lossRate * 100).toFixed(2)}%`);
             this.sellStock(symbol, latestQuote, 1.0, 'STOP_LOSS', false); // 전량 손절
             this.takeProfitCount.set(symbol, 0); // 익절 카운트 리셋
+            this.waitingNewGoldenCross.set(symbol, true); // 새 골든크로스 대기 상태로 전환
             return;
           }
         }
@@ -276,6 +280,19 @@ export class User {
       
       // 매도 발생 시 같은 틱에서 매수 금지
       if (soldThisTick) return;
+      
+      // 손절 후 새 골든크로스 대기 상태 체크
+      if (this.waitingNewGoldenCross.get(symbol)) {
+        // 데드크로스가 나오면 대기 상태 해제 (다음 골든크로스에서 매수 가능)
+        if (latestQuote.crossStatus === 'DEAD' || latestQuote.crossStatus === undefined) {
+          this.waitingNewGoldenCross.set(symbol, false);
+          console.log(`[${symbol}] 손절 후 데드크로스 확인 - 새 골든크로스 대기 해제`);
+        } else {
+          // 아직 골든크로스 상태면 매수 금지
+          console.log(`[${symbol}] 손절 후 새 골든크로스 대기 중 - 매수 스킵`);
+          return;
+        }
+      }
 
       // 매수 체크 (골든크로스)
       if (latestQuote.crossStatus === 'GOLDEN') {

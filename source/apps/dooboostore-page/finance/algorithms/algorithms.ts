@@ -790,9 +790,24 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
   const totalProfit = sellTxs.reduce((sum, tx) => sum + (tx.profit || 0), 0);
   const totalFees = transactions.reduce((sum, tx) => sum + tx.fees, 0);
   
+  // 보유 주식 평가액 계산 (마지막 가격 기준)
+  let holdingsValue = 0;
+  user.account.holdings.forEach((holding, symbol) => {
+    const symbolData = algoSymbols.get(symbol);
+    if (symbolData && symbolData.quotes.length > 0) {
+      const lastQuote = symbolData.quotes[symbolData.quotes.length - 1];
+      holdingsValue += holding.quantity * (lastQuote.close || 0);
+    }
+  });
+  const totalValue = user.account.balance + holdingsValue;
+  const totalReturnRate = ((totalValue - user.account.initialBalance) / user.account.initialBalance * 100);
+  const totalProfitLoss = totalValue - user.account.initialBalance;
+  
   console.log(`\n📊 거래 요약:`);
   console.log(`   초기 잔고: ${user.account.initialBalance.toLocaleString()}원`);
   console.log(`   최종 잔고: ${user.account.balance.toLocaleString()}원`);
+  console.log(`   보유 주식 평가액: ${holdingsValue.toLocaleString()}원`);
+  console.log(`   총 평가금액: ${totalValue.toLocaleString()}원 (${totalProfitLoss >= 0 ? '+' : ''}${totalProfitLoss.toLocaleString()}원, ${totalReturnRate >= 0 ? '+' : ''}${totalReturnRate.toFixed(2)}%)`);
   console.log(`   매수 횟수: ${buyTxs.length}회 (총 ${totalBuyAmount.toLocaleString()}원)`);
   console.log(`   매도 횟수: ${sellTxs.length}회 (총 ${totalSellAmount.toLocaleString()}원)`);
   console.log(`   실현 손익: ${totalProfit.toLocaleString()}원`);
@@ -802,17 +817,24 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
   if (user.account.holdings.size > 0) {
     console.log(`\n📦 보유 종목:`);
     user.account.holdings.forEach((holding, symbol) => {
-      console.log(`   ${symbol}: ${holding.quantity}주 @ 평균 ${holding.avgPrice.toLocaleString()}원`);
+      const symbolData = algoSymbols.get(symbol);
+      let currentPrice = holding.avgPrice;
+      let profitRate = 0;
+      if (symbolData && symbolData.quotes.length > 0) {
+        currentPrice = symbolData.quotes[symbolData.quotes.length - 1].close || holding.avgPrice;
+        profitRate = ((currentPrice - holding.avgPrice) / holding.avgPrice * 100);
+      }
+      const evalValue = holding.quantity * currentPrice;
+      console.log(`   ${symbol}: ${holding.quantity}주 @ 평균 ${holding.avgPrice.toLocaleString()}원 → 현재 ${currentPrice.toLocaleString()}원 (${profitRate >= 0 ? '+' : ''}${profitRate.toFixed(2)}%, ${evalValue.toLocaleString()}원)`);
     });
   }
   
-  // 수익률 계산
-  const returnRate = ((user.account.balance - user.account.initialBalance) / user.account.initialBalance * 100).toFixed(2);
-  console.log(`\n📈 수익률: ${returnRate}%`);
+  // 수익률 계산 (평가금액 기준)
+  console.log(`\n📈 총 수익률: ${totalReturnRate >= 0 ? '+' : ''}${totalReturnRate.toFixed(2)}% (${totalProfitLoss >= 0 ? '+' : ''}${totalProfitLoss.toLocaleString()}원)`);
   console.log('='.repeat(60));
 
 
-  // 테스트로 그래프 그려보기
+  //  그래프 그려보기
   const outputDir = join(__dirname, '../../../../datas/finance/output');
   if (!existsSync(outputDir)) {
     mkdirSync(outputDir, { recursive: true });
