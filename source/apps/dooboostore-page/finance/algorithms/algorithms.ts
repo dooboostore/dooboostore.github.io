@@ -271,8 +271,8 @@ const algorithms = async (dataPlan: DataPlan) => {
       symbolSize: 3, // 상위 3개 종목 선택 (그룹 데드크로스 시 사용)
       stockRate: 0.5,  // 보유 주식의 50%씩 매도 (0.1 = 10%, 0.5 = 50%, 1.0 = 100%)
       additionalSellThreshold: 0.01, // 추가 매도 기준: 이전 매도 대비 1% 추가 하락
-      stopLoss: -0.50, // -2% 손절
-      takeProfit: 0.50, // +50% 익절
+      stopLoss: -0.10, // -x% 손절  (손절은 dead cross일떄에만)
+      takeProfit: 0.10, // +x% 익절
       trailingStopPercent: 0.02 // 최고가 대비 -2% 트레일링 스톱
     },
     timeFilter: {
@@ -2206,7 +2206,18 @@ const algorithms = async (dataPlan: DataPlan) => {
       const endTime = timeSeries[timeSeries.length - 1].time.getTime();
       const timeRange = endTime - startTime;
 
-      symbolTransactions.forEach(tx => {
+      // 거래별 보유 수량 계산
+      let holdingQuantity = 0;
+      const txWithHolding = symbolTransactions.map(tx => {
+        if (tx.type === 'BUY') {
+          holdingQuantity += tx.quantity;
+        } else {
+          holdingQuantity -= tx.quantity;
+        }
+        return { ...tx, holdingAfter: holdingQuantity };
+      });
+
+      txWithHolding.forEach(tx => {
         const txTime = tx.time.getTime();
         if (txTime < startTime || txTime > endTime) return;
 
@@ -2237,10 +2248,15 @@ const algorithms = async (dataPlan: DataPlan) => {
           ctx.font = 'bold 7px Arial';
           ctx.fillText('B', x, topChartY + 16);
           
-          // 매수 수량 표시 (화살표 위쪽)
+          // 보유 수량 표시 (화살표 위쪽, 세로로 회전)
+          ctx.save();
+          ctx.translate(x, topChartY - 5);
+          ctx.rotate(-Math.PI / 2); // 90도 반시계방향 회전
           ctx.fillStyle = '#2196F3';
           ctx.font = 'bold 8px Arial';
-          ctx.fillText(`${tx.quantity}`, x, topChartY - 5);
+          ctx.textAlign = 'left';
+          ctx.fillText(`${tx.holdingAfter}(${tx.quantity})`, 0, 0);
+          ctx.restore();
         } else {
           // 매도 수직 점선 (주황색)
           ctx.strokeStyle = '#FF9800';
@@ -2284,10 +2300,15 @@ const algorithms = async (dataPlan: DataPlan) => {
           ctx.font = 'bold 7px Arial';
           ctx.fillText(label, x, topChartY + 10);
           
-          // 매도 수량 표시 (화살표 위쪽)
+          // 보유 수량 표시 (화살표 위쪽, 세로로 회전)
+          ctx.save();
+          ctx.translate(x, topChartY - 5);
+          ctx.rotate(-Math.PI / 2); // 90도 반시계방향 회전
           ctx.fillStyle = '#FF9800';
           ctx.font = 'bold 8px Arial';
-          ctx.fillText(`${tx.quantity}`, x, topChartY - 5);
+          ctx.textAlign = 'left';
+          ctx.fillText(`${tx.holdingAfter}(${tx.quantity})`, 0, 0);
+          ctx.restore();
         }
       });
     }
