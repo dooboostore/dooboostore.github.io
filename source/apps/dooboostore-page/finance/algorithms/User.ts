@@ -54,32 +54,18 @@ export class User {
     },
 
     buy: {
-      // symbolSize: 3,
-      // stockRate: 0.1,
-      // stockSize: 100,
-      // minVolumeStrength: 50,
-      // minSlope: 0,
-      // maxMaGap: 0.05,
-      // positionSizePercent: 0.1,
-      // minObvSlope: 0,
-      // minRsi: 30,
-      // maxRsi: 70,
-      // macdBullish: true,
-      // bollingerPosition: 'lower',
-      // minBollingerPercentB: 0.2,
-      // maxBollingerPercentB: 0.5,
-      // volumeTrendRequired: 'increasing',
-      // avoidPriceVolumeDivergence: true
+      rate: 0.1, // 잔액 대비 매수 비율
+      moreRate: 0.05, // 추가 매수 비율 (피라미딩용)  undefined 이면 피라미딩 안함
+      slopeThreshold: 0.1, // 매수 시점 기울기 임계값  undefined 이면 기울기 필터링 안함  (goldenCross.from 기간의 기울기)
+      groupCrossCheck: true // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
 
     sell: {
-      // symbolSize: 3,
-      // stockRate: 0.5,
-      // additionalSellThreshold: 0.01,
-      // stopLoss: -0.1,
-      // takeProfit: 0.5,
-      // trailingStopPercent: 0.02
-    },
+      rate: 0.5, // 보유량 대비 매도 비율
+      moreRate: 0.25, // 추가 매도 비율 (피라미딩용)  undefined 이면 피라미딩 안함
+      stopLossPercent: 0.05, // 손절 퍼센트  undefined 이면 손절 안함  (deadCross.from 기간의 기울기)
+      groupCrossCheck: true // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
+    }
 
     // timeFilter: {
     //   excludeHours: [9, 15]
@@ -138,17 +124,17 @@ export class User {
     for (const snapshot of snapshots) {
       const { symbol, quotes } = snapshot;
       if (quotes.length === 0) continue;
-      
+
       const latestQuote = quotes[quotes.length - 1];
       const quoteTime = latestQuote.time.getTime();
       const lastTime = this.lastProcessedTime.get(symbol) || 0;
-      
+
       // 이미 처리한 데이터면 스킵 (중복 매매 방지)
       if (quoteTime <= lastTime) continue;
-      
+
       // 새로운 데이터 처리
       this.lastProcessedTime.set(symbol, quoteTime);
-      
+
       // TODO: 매매 로직 구현
       // - latestQuote.crossStatus로 골든/데드 크로스 상태 확인
       // - quotes 배열로 과거 데이터 참조 가능
