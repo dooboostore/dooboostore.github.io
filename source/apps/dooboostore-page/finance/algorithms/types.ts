@@ -76,13 +76,36 @@ export type DeadCrossConfig = {
 // 크로스 상태
 export type CrossState = 'GOLDEN' | 'DEAD' | 'NONE';
 
+// 틱 데이터 (User.onTick에 전달되는 데이터)
+export type TickData = {
+  time: Date;
+  symbol: string;
+  open: number;           // 시가 등락률
+  high: number;           // 고가 등락률
+  low: number;            // 저가 등락률
+  close: number;          // 종가 등락률
+  volume: number;         // 거래량 등락률
+  actualClose: number;    // 실제 종가
+  priceMA: Map<number, number>;   // 가격 이평선
+  volumeMA: Map<number, number>;  // 거래량 이평선
+  crossStatus?: 'GOLDEN' | 'DEAD';  // 크로스 상태
+};
+
+// 심볼 스냅샷 (User.onTick에 전달되는 심볼별 데이터)
+export type SymbolSnapshot = {
+  symbol: string;
+  label: string;
+  isGroup: boolean;
+  quotes: TickData[];  // currentTime 이전의 모든 quotes
+};
+
 // 거래 설정
 export type TradingConfig = {
   tradeFees: {
     buy: number;
     sell: number;
   };
-  features: {
+  features?: Partial<{
     pyramiding: boolean;
     stopLoss: boolean;
     takeProfit: boolean;
@@ -100,8 +123,8 @@ export type TradingConfig = {
     bollingerBandsFilter: boolean;
     volumeAnalysisFilter: boolean;
     onlySymbolGoldenCross: boolean;
-  };
-  buy: {
+  }>;
+  buy?: Partial<{
     symbolSize: number;
     stockRate: number;
     stockSize: number;
@@ -118,22 +141,22 @@ export type TradingConfig = {
     maxBollingerPercentB: number;
     volumeTrendRequired: string;
     avoidPriceVolumeDivergence: boolean;
-  };
-  sell: {
+  }>;
+  sell?: Partial<{
     symbolSize: number;
     stockRate: number;
     additionalSellThreshold: number;
     stopLoss: number;
     takeProfit: number;
     trailingStopPercent: number;
-  };
-  timeFilter: {
+  }>;
+  timeFilter?: {
     excludeHours: number[];
   };
-  riskManagement: {
+  riskManagement?: {
     maxConsecutiveLosses: number;
   };
-  scoreWeights: {
+  scoreWeights?: {
     slope: number;
     volume: number;
     maGap: number;

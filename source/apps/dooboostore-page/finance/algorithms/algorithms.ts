@@ -2,7 +2,7 @@ import { join } from 'path';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { YahooFinanceBrowser, ChartResult, ChartQuote } from '../service/YahooFinanceBrowserService';
 import { calculateMA, calculateRSI, calculateMACD, calculateBollingerBands, analyzeVolume, checkGoldenCross, checkDeadCross } from './calc';
-import type { DataPlan, Group, Transaction, TimeSeries, CrossState } from './types';
+import type { DataPlan, Group, TickData, SymbolSnapshot } from './types';
 import { User } from './User';
 import { createChart, type ChartContext } from './chart';
 import { TradeChart, ChartDataPoint } from './TradeChart';
@@ -195,11 +195,10 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
   const deadCross = user.deadCross;
   const config = user.config;
 
-
   // 전처리
   const groups = user.groups;
   const tickers: { symbol: string; label: string }[] = JSON.parse(readFileSync(TICKERS_PATH, 'utf-8'));
-  
+
   // 필요한 모든 MA 기간 (중복 제거)
   const allMAPeriods = Array.from(
     new Set([
@@ -215,20 +214,21 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
 
   // 확장된 Quote 타입
   type ExtendedQuote = ChartQuote & {
-    priceChangeRate: number;  // 종가 등락률 (close 기준)
-    openChangeRate: number;   // 시가 등락률
-    highChangeRate: number;   // 고가 등락률
-    lowChangeRate: number;    // 저가 등락률
+    priceChangeRate: number; // 종가 등락률 (close 기준)
+    openChangeRate: number; // 시가 등락률
+    highChangeRate: number; // 고가 등락률
+    lowChangeRate: number; // 저가 등락률
     volumeChangeRate: number; // 시작 거래량 대비 등락률
-    priceMA: Map<number, number>;  // 가격 등락률 이평선
+    priceMA: Map<number, number>; // 가격 등락률 이평선
     volumeMA: Map<number, number>; // 거래량 등락률 이평선
-    crossStatus?: 'GOLDEN' | 'DEAD';  // 크로스 상태 (발생 후 유지)
+    crossStatus?: 'GOLDEN' | 'DEAD'; // 크로스 상태 (발생 후 유지)
   };
 
-  type SymbolData = { label: string, open: number; openVolume: number; isGroup: boolean; quotes: ExtendedQuote[] };
+  type SymbolData = { label: string; open: number; openVolume: number; isGroup: boolean; quotes: ExtendedQuote[] };
   const symbols = new Map<string, SymbolData>();
-  
-  user.getSymbolsInGroup()
+
+  user
+    .getSymbolsInGroup()
     .filter(it => !symbols.has(it))
     .forEach(symbol => {
       const chartPath = join(CHART_DIR, dataPlan.interval, `${symbol}.json`);
@@ -244,11 +244,14 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
           })
           .filter(it => {
             // 전체 데이터 로드 (dataFrom ~ dataTo) + close가 null이 아닌 것만
-            return it.date.getTime() >= dataStartDate.getTime() && 
-                   it.date.getTime() <= dataEndDate.getTime() &&
-                   it.close !== null && it.close !== undefined;
+            return (
+              it.date.getTime() >= dataStartDate.getTime() &&
+              it.date.getTime() <= dataEndDate.getTime() &&
+              it.close !== null &&
+              it.close !== undefined
+            );
           });
-        
+
         // 연속 중복 데이터 제거 (같은 close, volume 값이 연속되면 첫 번째만 유지)
         const filteredQuotes = allQuotes.filter((quote, index) => {
           if (index === 0) return true;
@@ -259,11 +262,11 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         if (filteredQuotes.length) {
           const openPrice = filteredQuotes[0]?.open || 0;
           const openVolume = filteredQuotes[0]?.volume || 0;
-          
+
           // 등락률 배열 계산 (이평선 계산용)
           const priceChangeRates: number[] = [];
           const volumeChangeRates: number[] = [];
-          
+
           // 확장된 quotes 생성
           const quotes: ExtendedQuote[] = filteredQuotes.map((quote, index) => {
             // OHLC 등락률 계산
@@ -272,7 +275,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
             const lowChangeRate = openPrice > 0 ? (((quote.low || quote.close!) - openPrice) / openPrice) * 100 : 0;
             const priceChangeRate = openPrice > 0 ? ((quote.close! - openPrice) / openPrice) * 100 : 0;
             priceChangeRates.push(priceChangeRate);
-            
+
             // 이전 봉 대비 거래량 등락률
             let volumeChangeRate = 0;
             if (index > 0) {
@@ -281,23 +284,23 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               volumeChangeRate = prevVolume > 0 ? ((currVolume - prevVolume) / prevVolume) * 100 : 0;
             }
             volumeChangeRates.push(volumeChangeRate);
-            
+
             // 이평선 계산
             const priceMA = new Map<number, number>();
             const volumeMA = new Map<number, number>();
-            
+
             allMAPeriods.forEach(period => {
               const priceMaValue = calculateMA(priceChangeRates, period, index);
               if (priceMaValue !== null) {
                 priceMA.set(period, priceMaValue);
               }
-              
+
               const volumeMaValue = calculateMA(volumeChangeRates, period, index);
               if (volumeMaValue !== null) {
                 volumeMA.set(period, volumeMaValue);
               }
             });
-            
+
             return {
               ...quote,
               openChangeRate,
@@ -313,12 +316,12 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
 
           // 크로스 상태 계산 (상태 유지)
           let currentStatus: 'GOLDEN' | 'DEAD' | undefined = undefined;
-          
+
           quotes.forEach((quote, index) => {
             const currMA = quote.priceMA;
             const currFrom = currMA.get(user.goldenCross.from);
             const currTo = currMA.get(user.goldenCross.to);
-            
+
             // 첫 번째 봉: 현재 상태 판단
             if (index === 0) {
               if (currFrom !== undefined && currTo !== undefined) {
@@ -351,9 +354,9 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               quote.crossStatus = currentStatus;
               return;
             }
-            
+
             const prevMA = quotes[index - 1].priceMA;
-            
+
             const goldenResult = checkGoldenCross(prevMA, currMA, user.goldenCross);
             if (goldenResult.triggered) {
               currentStatus = 'GOLDEN';
@@ -365,9 +368,8 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
                 // 크로스 발생했지만 조건 미충족 시 상태 초기화
                 const prevFrom = prevMA.get(user.goldenCross.from);
                 const prevTo = prevMA.get(user.goldenCross.to);
-                
-                if (prevFrom !== undefined && prevTo !== undefined && 
-                    currFrom !== undefined && currTo !== undefined) {
+
+                if (prevFrom !== undefined && prevTo !== undefined && currFrom !== undefined && currTo !== undefined) {
                   if (prevFrom < prevTo && currFrom >= currTo) {
                     currentStatus = undefined;
                   } else if (prevFrom > prevTo && currFrom <= currTo) {
@@ -376,11 +378,17 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
                 }
               }
             }
-            
+
             quote.crossStatus = currentStatus;
           });
 
-          symbols.set(symbol, {label: tickers.find(t => t.symbol === symbol)?.label || symbol, open: openPrice, openVolume: openVolume, isGroup: false, quotes } );
+          symbols.set(symbol, {
+            label: tickers.find(t => t.symbol === symbol)?.label || symbol,
+            open: openPrice,
+            openVolume: openVolume,
+            isGroup: false,
+            quotes
+          });
         }
         console.log(
           `Loaded ${dataPlan.interval} chart for ${symbol}, ${allQuotes.length} -> ${filteredQuotes.length} data points (duplicates removed)`
@@ -390,75 +398,67 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       }
     });
 
-
-
   // 그룹별 평균 계산
-  user.groups.forEach((group) => {
+  user.groups.forEach(group => {
     // 그룹에 속한 심볼들의 데이터 수집
-    const groupSymbolsData = group.symbols
-      .map(symbol => symbols.get(symbol))
-      .filter(data => data !== undefined);
-    
+    const groupSymbolsData = group.symbols.map(symbol => symbols.get(symbol)).filter(data => data !== undefined);
+
     if (groupSymbolsData.length === 0) {
       console.log(`Group ${group.label}: No symbol data found, skipping`);
       return;
     }
-    
+
     // 모든 심볼의 quotes 길이 중 최소값 (동일 시점 맞추기)
     const minQuotesLength = Math.min(...groupSymbolsData.map(d => d.quotes.length));
-    
+
     if (minQuotesLength === 0) {
       console.log(`Group ${group.label}: No quotes found, skipping`);
       return;
     }
-    
+
     // 그룹 평균 quotes 생성
     const groupQuotes: ExtendedQuote[] = [];
-    
+
     for (let i = 0; i < minQuotesLength; i++) {
       // 해당 시점의 모든 심볼 데이터
       const symbolQuotesAtTime = groupSymbolsData.map(d => d.quotes[i]);
       const validQuotes = symbolQuotesAtTime.filter(q => q.close !== null && q.close !== undefined);
-      
+
       if (validQuotes.length === 0) continue;
-      
+
       // 평균 계산
       const avgPriceChangeRate = validQuotes.reduce((sum, q) => sum + q.priceChangeRate, 0) / validQuotes.length;
       const avgVolumeChangeRate = validQuotes.reduce((sum, q) => sum + q.volumeChangeRate, 0) / validQuotes.length;
-      
+
       // 이평선 평균 계산
       const avgPriceMA = new Map<number, number>();
       const avgVolumeMA = new Map<number, number>();
-      
+
       allMAPeriods.forEach(period => {
         // 가격 이평선 평균
-        const priceMaValues = validQuotes
-          .map(q => q.priceMA.get(period))
-          .filter(v => v !== undefined) as number[];
+        const priceMaValues = validQuotes.map(q => q.priceMA.get(period)).filter(v => v !== undefined) as number[];
         if (priceMaValues.length > 0) {
           avgPriceMA.set(period, priceMaValues.reduce((a, b) => a + b, 0) / priceMaValues.length);
         }
-        
+
         // 거래량 이평선 평균
-        const volumeMaValues = validQuotes
-          .map(q => q.volumeMA.get(period))
-          .filter(v => v !== undefined) as number[];
+        const volumeMaValues = validQuotes.map(q => q.volumeMA.get(period)).filter(v => v !== undefined) as number[];
         if (volumeMaValues.length > 0) {
           avgVolumeMA.set(period, volumeMaValues.reduce((a, b) => a + b, 0) / volumeMaValues.length);
         }
       });
-      
+
       // 첫 번째 심볼의 시간 정보 사용
       const baseQuote = symbolQuotesAtTime[0];
-      
+
       groupQuotes.push({
         date: baseQuote.date,
-        open: 0,  // 그룹은 시작가 의미 없음
+        open: 0, // 그룹은 시작가 의미 없음
         high: 0,
         low: 0,
-        close: avgPriceChangeRate,  // 평균 등락률을 close에 저장
+        close: avgPriceChangeRate, // 평균 등락률을 close에 저장
         volume: 0,
-        openChangeRate: avgPriceChangeRate,  // 그룹은 OHLC 모두 같은 값
+        openChangeRate: avgPriceChangeRate, // 그룹은 OHLC 모두 같은 값
         highChangeRate: avgPriceChangeRate,
         lowChangeRate: avgPriceChangeRate,
         priceChangeRate: avgPriceChangeRate,
@@ -467,7 +467,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         volumeMA: avgVolumeMA
       });
     }
-    
+
     // 그룹 데이터를 symbols에 추가 (group.group을 키로 사용)
     symbols.set(group.group, {
       label: group.label,
@@ -476,22 +476,23 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       isGroup: true,
       quotes: groupQuotes
     });
-    
-    console.log(`Group ${group.label}: Created with ${groupQuotes.length} data points (avg of ${groupSymbolsData.length} symbols)`);
-  });
 
+    console.log(
+      `Group ${group.label}: Created with ${groupQuotes.length} data points (avg of ${groupSymbolsData.length} symbols)`
+    );
+  });
 
   // algoFrom ~ algoTo 기간으로 데이터 필터링 + algoFrom 기준 보정
   const algoSymbols = new Map<string, SymbolData>();
-  
+
   symbols.forEach((symbolData, key) => {
     // algoFrom 직전 데이터 찾기
     const allQuotes = symbolData.quotes;
     let basePrice = 0;
     let baseVolume = 0;
-    let basePriceChangeRate = 0;  // 기준 등락률 (보정용)
+    let basePriceChangeRate = 0; // 기준 등락률 (보정용)
     let baseVolumeChangeRate = 0;
-    
+
     // algoFrom 직전 데이터의 close를 기준으로
     for (let i = allQuotes.length - 1; i >= 0; i--) {
       if (allQuotes[i].date.getTime() < algoStartDate.getTime()) {
@@ -502,7 +503,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         break;
       }
     }
-    
+
     // 직전 데이터가 없으면 첫 번째 데이터의 open 사용
     if (basePrice === 0 && allQuotes.length > 0) {
       const firstAlgoQuote = allQuotes.find(q => q.date.getTime() >= algoStartDate.getTime());
@@ -513,26 +514,26 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         baseVolumeChangeRate = 0;
       }
     }
-    
-    const filteredQuotes = allQuotes.filter(q => 
-      q.date.getTime() >= algoStartDate.getTime() && q.date.getTime() <= algoEndDate.getTime()
+
+    const filteredQuotes = allQuotes.filter(
+      q => q.date.getTime() >= algoStartDate.getTime() && q.date.getTime() <= algoEndDate.getTime()
     );
-    
+
     if (filteredQuotes.length > 0 && basePrice > 0) {
       // 기준가 대비 등락률로 보정 (이평선도 같이 보정)
       // 거래량 등락률은 이전 봉 대비라서 보정 불필요
       const adjustedQuotes = filteredQuotes.map(q => {
-        const openChangeRate = ((q.open || q.close!) - basePrice) / basePrice * 100;
-        const highChangeRate = ((q.high || q.close!) - basePrice) / basePrice * 100;
-        const lowChangeRate = ((q.low || q.close!) - basePrice) / basePrice * 100;
-        const priceChangeRate = (q.close! - basePrice) / basePrice * 100;
-        
+        const openChangeRate = (((q.open || q.close!) - basePrice) / basePrice) * 100;
+        const highChangeRate = (((q.high || q.close!) - basePrice) / basePrice) * 100;
+        const lowChangeRate = (((q.low || q.close!) - basePrice) / basePrice) * 100;
+        const priceChangeRate = ((q.close! - basePrice) / basePrice) * 100;
+
         // 이평선도 같은 기준으로 보정 (기존 값 - 기준 등락률)
         const adjustedPriceMA = new Map<number, number>();
         q.priceMA.forEach((value, period) => {
           adjustedPriceMA.set(period, value - basePriceChangeRate);
         });
-        
+
         return {
           ...q,
           openChangeRate,
@@ -544,16 +545,16 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
           // volumeMA도 그대로 사용
         };
       });
-      
+
       // 첫 번째 봉의 초기 상태 재판단 후, 그 상태를 이어가도록 수정
       if (adjustedQuotes.length > 0) {
         const firstQuote = adjustedQuotes[0];
         const currMA = firstQuote.priceMA;
         const currFrom = currMA.get(user.goldenCross.from);
         const currTo = currMA.get(user.goldenCross.to);
-        
+
         let initialStatus: 'GOLDEN' | 'DEAD' | undefined = undefined;
-        
+
         if (currFrom !== undefined && currTo !== undefined) {
           if (currFrom > currTo) {
             let belowOk = true;
@@ -581,10 +582,10 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
             initialStatus = aboveOk ? 'DEAD' : undefined;
           }
         }
-        
+
         // 첫 번째 봉 상태 설정
         firstQuote.crossStatus = initialStatus;
-        
+
         // 나머지 봉들: 크로스 발생 시점만 상태 변경, 아니면 이전 상태 유지
         let currentStatus = initialStatus;
         for (let i = 1; i < adjustedQuotes.length; i++) {
@@ -592,7 +593,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
           const prevQuote = adjustedQuotes[i - 1];
           const prevMA = prevQuote.priceMA;
           const qMA = quote.priceMA;
-          
+
           const goldenResult = checkGoldenCross(prevMA, qMA, user.goldenCross);
           if (goldenResult.triggered) {
             currentStatus = 'GOLDEN';
@@ -606,9 +607,8 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               const prevTo = prevMA.get(user.goldenCross.to);
               const qFrom = qMA.get(user.goldenCross.from);
               const qTo = qMA.get(user.goldenCross.to);
-              
-              if (prevFrom !== undefined && prevTo !== undefined && 
-                  qFrom !== undefined && qTo !== undefined) {
+
+              if (prevFrom !== undefined && prevTo !== undefined && qFrom !== undefined && qTo !== undefined) {
                 // 골든크로스 발생했지만 조건 미충족
                 if (prevFrom < prevTo && qFrom >= qTo) {
                   currentStatus = undefined;
@@ -618,7 +618,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
                   currentStatus = undefined;
                 }
               }
-              
+
               // 현재 상태가 undefined이고 조건을 충족하면 상태 업데이트
               if (currentStatus === undefined && qFrom !== undefined && qTo !== undefined) {
                 if (qFrom > qTo) {
@@ -654,16 +654,68 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
           quote.crossStatus = currentStatus;
         }
       }
-      
+
       algoSymbols.set(key, {
         ...symbolData,
         quotes: adjustedQuotes
       });
-      
-      console.log(`Filtered ${key}: ${symbolData.quotes.length} -> ${filteredQuotes.length} data points (basePrice: ${basePrice})`);
+
+      console.log(
+        `Filtered ${key}: ${symbolData.quotes.length} -> ${filteredQuotes.length} data points (basePrice: ${basePrice})`
+      );
     }
   });
 
+  // 데이터 계산
+
+  // timeline - 실제 시간 흐름 시뮬레이션
+  let currentTime = new Date(algoStartDate.getTime());
+  const timelineInterval = interval;  // 체크 주기 (데이터 interval과 동일하게 설정, 필요시 변경 가능)
+  
+  while (currentTime <= algoEndDate) {
+    // currentTime 이전의 quotes를 가진 모든 symbolData 수집
+    const snapshots: SymbolSnapshot[] = [];
+    
+    algoSymbols.forEach((symbolData, symbol) => {
+      if (symbolData.isGroup) return;  // 그룹은 매매 대상 아님
+      
+      // currentTime 이전의 quotes만 필터링
+      const filteredQuotes = symbolData.quotes.filter(q => q.date.getTime() <= currentTime.getTime());
+      if (filteredQuotes.length === 0) return;
+      
+      // TickData 배열로 변환
+      const tickQuotes: TickData[] = filteredQuotes.map(q => ({
+        time: q.date,
+        symbol,
+        open: q.openChangeRate,
+        high: q.highChangeRate,
+        low: q.lowChangeRate,
+        close: q.priceChangeRate,
+        volume: q.volumeChangeRate,
+        actualClose: q.close!,
+        priceMA: q.priceMA,
+        volumeMA: q.volumeMA,
+        crossStatus: q.crossStatus
+      }));
+      
+      snapshots.push({
+        symbol,
+        label: symbolData.label,
+        isGroup: symbolData.isGroup,
+        quotes: tickQuotes
+      });
+    });
+    
+    // User에게 전달
+    if (snapshots.length > 0) {
+      user.onTick(currentTime, snapshots);
+    }
+    
+    currentTime = new Date(currentTime.getTime() + timelineInterval);
+  }
+  
+  console.log('✅ Trading simulation completed');
+  console.log(`Final balance: ${user.account.balance.toLocaleString()}원`);
 
   // 테스트로 그래프 그려보기
   const outputDir = join(__dirname, '../../../../datas/finance/output');
@@ -674,7 +726,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
   // 각 심볼/그룹별 차트 생성
   algoSymbols.forEach((symbolData, key) => {
     console.log(`Drawing chart for: ${key} (${symbolData.quotes.length} data points)`);
-    
+
     // ChartDataPoint로 변환 (OHLC 캔들 + 거래량)
     const chartData: ChartDataPoint[] = symbolData.quotes.map(q => ({
       time: q.date,
@@ -684,8 +736,8 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       close: q.priceChangeRate,
       volume: q.volumeChangeRate,
       ma: q.priceMA,
-      actualClose: q.close,  // 실제 종가
-      crossStatus: q.crossStatus  // 크로스 상태
+      actualClose: q.close, // 실제 종가
+      crossStatus: q.crossStatus // 크로스 상태
     }));
 
     const chart = new TradeChart()
@@ -694,30 +746,11 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       .setMAPeriods(user.maPeriods)
       .setIsGroup(symbolData.isGroup)
       .draw();
-    
+
     const filename = symbolData.isGroup ? `group-${key}.png` : `symbol-${key}.png`;
     writeFileSync(join(outputDir, filename), chart.toBuffer());
     console.log(`Chart saved: ${filename}`);
   });
-
-
-
-
-
-
-
-  // 데이터 계산
-
-
-  // timeline
-  // let currentTime = new Date(algoStartDate.getTime());
-  // const timelineInterval = interval;
-  // while (currentTime <= algoEndDate) {
-  //   console.log(`\n⏰ Processing time: ${currentTime.toISOString()}`);
-  //
-  //   currentTime = new Date(currentTime.getTime() + interval);
-  // }
-
 
   console.log('✅ All charts generated');
 };

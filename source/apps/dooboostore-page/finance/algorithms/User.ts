@@ -2,7 +2,7 @@
  * 사용자 클래스 - 트레이딩 설정, 계좌, 매수/매도 로직 포함
  */
 
-import type { TradingConfig, GoldenCrossConfig, DeadCrossConfig, Group, Transaction } from './types';
+import type { TradingConfig, GoldenCrossConfig, DeadCrossConfig, Group, Transaction, TickData, SymbolSnapshot } from './types';
 import { Account } from './Account';
 
 export class User {
@@ -126,14 +126,45 @@ export class User {
     return Array.from(new Set<string>(group ? group.symbols : []));
   }
 
+  // 심볼별 마지막 처리된 데이터 시간 (중복 매매 방지)
+  private lastProcessedTime = new Map<string, number>();
+
+  /**
+   * 틱 데이터 수신 - 매매 판단 진입점
+   * @param currentTime 현재 시뮬레이션 시간
+   * @param snapshots 각 심볼별 스냅샷 (currentTime 이전의 모든 quotes 포함)
+   */
+  onTick(currentTime: Date, snapshots: SymbolSnapshot[]): void {
+    for (const snapshot of snapshots) {
+      const { symbol, quotes } = snapshot;
+      if (quotes.length === 0) continue;
+      
+      const latestQuote = quotes[quotes.length - 1];
+      const quoteTime = latestQuote.time.getTime();
+      const lastTime = this.lastProcessedTime.get(symbol) || 0;
+      
+      // 이미 처리한 데이터면 스킵 (중복 매매 방지)
+      if (quoteTime <= lastTime) continue;
+      
+      // 새로운 데이터 처리
+      this.lastProcessedTime.set(symbol, quoteTime);
+      
+      // TODO: 매매 로직 구현
+      // - latestQuote.crossStatus로 골든/데드 크로스 상태 확인
+      // - quotes 배열로 과거 데이터 참조 가능
+      // - 매수 조건 충족 시: this.buyStock(symbol, latestQuote)
+      // - 매도 조건 충족 시: this.sellStock(symbol, latestQuote)
+    }
+  }
+
   // 매수 (TODO: 나중에 구현)
-  buyStock(): boolean {
+  private buyStock(symbol: string, quote: TickData): boolean {
     // TODO: 구현 예정
     return false;
   }
 
   // 매도 (TODO: 나중에 구현)
-  sellStock(): boolean {
+  private sellStock(symbol: string, quote: TickData): boolean {
     // TODO: 구현 예정
     return false;
   }
