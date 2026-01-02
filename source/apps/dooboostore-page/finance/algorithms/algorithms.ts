@@ -217,7 +217,7 @@ const algorithms = async (dataPlan: DataPlan) => {
 
   // 골든크로스 / 데드크로스 설정
   const goldenCross = { from: 5, to: 20, under: [50], minSlope: 0.0005 }; // 5일선이 20일선을 상향 돌파, 5일선이 50일선보다 위
-  const deadCross = { from: 5, to: 20 };   // 5일선이 20일선을 하향 돌파 (골든크로스와 동일한 기준)
+  const deadCross = { from: 5, to: 20, below: [50] };   // 5일선이 20일선을 하향 돌파, 5일선이 50일선 아래로 떨어지면 전량 매도
 
   // 트레이딩 설정
   const config = {
@@ -231,9 +231,10 @@ const algorithms = async (dataPlan: DataPlan) => {
     // 기능 활성화 플래그
     features: {
       pyramiding: true,           // 피라미딩 (추가 매수)
-      stopLoss: false,            // 손절 (데드크로스 상태에서만)
-      takeProfit: false,          // 익절 (데드크로스 상태에서만)
+      stopLoss: true,             // 손절 (항상 체크)
+      takeProfit: true,           // 익절 (항상 체크)
       trailingStop: false,        // 트레일링 스톱 (데드크로스 상태에서만)
+      deadCrossAdditionalSell: true, // 데드크로스 상태에서 추가 하락 시 추가 매도
       timeFilter: false,          // 시간 필터 (9시, 15시 제외)
       maGapFilter: false,         // MA 간격 필터
       consecutiveLossProtection: false, // 연속 손실 방지
@@ -249,8 +250,8 @@ const algorithms = async (dataPlan: DataPlan) => {
     },
 
     buy: {
-      symbolSize: 2, // 상위 2개 종목 선택 (집중 투자)
-      stockRate: 0.01,  // 잔고의 10%씩 투자
+      symbolSize: 3, // 상위 2개 종목 선택 (집중 투자)
+      stockRate: 0.10,  // 잔고의 1%씩 투자
       stockSize: 100,  // [DEPRECATED] 고정 주식 수 (stockRate 사용 시 무시됨)
       minVolumeStrength: 50, // 최소 거래량 강도 50% (더 강한 신호)
       minSlope: 0, // 최소 기울기
@@ -269,8 +270,9 @@ const algorithms = async (dataPlan: DataPlan) => {
     sell: {
       symbolSize: 3, // 상위 3개 종목 선택 (그룹 데드크로스 시 사용)
       stockRate: 0.5,  // 보유 주식의 50%씩 매도 (0.1 = 10%, 0.5 = 50%, 1.0 = 100%)
-      stopLoss: -0.02, // -2% 손절
-      takeProfit: 0.03, // +3% 익절
+      additionalSellThreshold: 0.01, // 추가 매도 기준: 이전 매도 대비 1% 추가 하락
+      stopLoss: -0.50, // -2% 손절
+      takeProfit: 0.50, // +50% 익절
       trailingStopPercent: 0.02 // 최고가 대비 -2% 트레일링 스톱
     },
     timeFilter: {
@@ -287,13 +289,17 @@ const algorithms = async (dataPlan: DataPlan) => {
   };
 
   // 계좌 정보
+  const INITIAL_BALANCE = 300000000; // 초기 잔고 3억원
   const account = {
-    balance: 300000000, // 초기 잔고 3억원
+    balance: INITIAL_BALANCE,
     holdings: new Map<string, { quantity: number, avgPrice: number, maxPrice: number }>() // 보유 종목 (종목코드 -> {수량, 평균단가, 최고가})
   };
 
   // 심볼별 크로스 상태 추적
   const symbolCrossState = new Map<string, 'GOLDEN' | 'DEAD' | 'NONE'>(); // 각 심볼의 현재 크로스 상태
+
+  // 심볼별 마지막 매도 가격 추적 (데드크로스 추가 매도용)
+  const symbolLastSellPrice = new Map<string, number>(); // 각 심볼의 마지막 매도 가격
 
   // 매수 가능 그룹 화이트리스트
   const buyableGroups = new Set<string>(); // 골든크로스 발생한 그룹들
@@ -313,6 +319,7 @@ const algorithms = async (dataPlan: DataPlan) => {
     total: number;
     avgBuyPrice?: number; // 매도 시 평균 매수가
     profit?: number; // 매도 시 손익
+    reason?: string; // 매도 이유 (TAKE_PROFIT, STOP_LOSS, DEAD_CROSS, DEAD_CROSS_ADDITIONAL, etc.)
   };
   const transactions: Transaction[] = [];
 
@@ -557,6 +564,8 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     console.log(`    ✅ BUY ${symbol}: ${quantity}주 @ ${price.toLocaleString()}원 (group: ${group.label}, slope: ${fromMA.slope.toFixed(2)}%, vol: ${volumeStrength.toFixed(1)}%, rsi: ${rsi?.toFixed(1) || 'N/A'}, macd: ${macd?.histogram.toFixed(4) || 'N/A'}, bb: ${bollingerBands ? (bollingerBands.percentB * 100).toFixed(1) + '%' : 'N/A'})`);
     console.log(`    💵 Balance: ${account.balance.toLocaleString()}원`);
+    
+    return true; // 매수 성공
   };
 
   // 개별 종목 매도 함수
@@ -567,7 +576,8 @@ const algorithms = async (dataPlan: DataPlan) => {
     volumeStrength: number,
     fromMA: { value: number, slope: number },
     toMA: { value: number, slope: number },
-    reason: string = 'DEAD_CROSS'
+    reason: string = 'DEAD_CROSS',
+    forceFullSell: boolean = false // 강제 전량 매도 플래그
   ) => {
     const holding = account.holdings.get(symbol);
     if (!holding || holding.quantity === 0) return;
@@ -583,14 +593,21 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     // 매도 수량 계산: stockRate 비율만큼 매도
     let quantity: number;
-    if (reason === 'STOP_LOSS' || reason === 'TAKE_PROFIT' || reason === 'TRAILING_STOP') {
-      // 손절/익절/트레일링스톱은 전량 매도
+    if (forceFullSell || reason === 'STOP_LOSS' || reason === 'TAKE_PROFIT' || reason === 'TRAILING_STOP') {
+      // 강제 전량 매도 또는 손절/익절/트레일링스톱은 전량 매도
       quantity = holding.quantity;
     } else {
       // 데드크로스는 stockRate 비율만큼 매도
-      quantity = Math.floor(holding.quantity * config.sell.stockRate);
+      quantity = Math.round(holding.quantity * config.sell.stockRate);
       if (quantity === 0) quantity = 1; // 최소 1주
       if (quantity > holding.quantity) quantity = holding.quantity; // 보유량 초과 방지
+      
+      // 남은 수량이 너무 적으면 전량 매도
+      const remaining = holding.quantity - quantity;
+      if (remaining > 0 && remaining < 5) { // 5주 미만 남으면
+        quantity = holding.quantity; // 전량 매도
+        console.log(`    ⚠️  Remaining quantity too small (${remaining}), selling all`);
+      }
     }
     
     const price = currentQuote.close;
@@ -639,7 +656,8 @@ const algorithms = async (dataPlan: DataPlan) => {
       fees,
       total,
       avgBuyPrice: holding.avgPrice,
-      profit
+      profit,
+      reason // 매도 이유 추가
     });
 
     // 심볼별 거래 내역 저장
@@ -655,7 +673,8 @@ const algorithms = async (dataPlan: DataPlan) => {
       fees,
       total,
       avgBuyPrice: holding.avgPrice,
-      profit
+      profit,
+      reason // 매도 이유 추가
     });
 
     const remainingQty = account.holdings.get(symbol)?.quantity || 0;
@@ -665,9 +684,10 @@ const algorithms = async (dataPlan: DataPlan) => {
     console.log(`    💵 Balance: ${account.balance.toLocaleString()}원`);
   };
 
-  // 손절/익절 체크 함수
-  const checkStopLossAndTakeProfit = (currentTime: Date) => {
+  // 손절/익절 체크 함수 (이번 시점에 판 종목 리스트 반환)
+  const checkStopLossAndTakeProfit = (currentTime: Date): Set<string> => {
     const toSell: { symbol: string, reason: string, price: number, holding: { quantity: number, avgPrice: number, maxPrice: number } }[] = [];
+    const soldSymbols = new Set<string>(); // 이번 시점에 판 종목들
 
     account.holdings.forEach((holding, symbol) => {
       const symbolData = symbols.get(symbol);
@@ -687,27 +707,35 @@ const algorithms = async (dataPlan: DataPlan) => {
       }
 
       const profitRate = (currentPrice - holding.avgPrice) / holding.avgPrice;
-
-      // ⚠️ 중요: 데드크로스 상태일 때만 손절/익절/트레일링스톱 실행
-      const currentState = symbolCrossState.get(symbol);
-      if (currentState !== 'DEAD') {
-        // 데드크로스 상태가 아니면 손절/익절 안함
-        return;
+      
+      // 066970 종목만 디버그 로그
+      if (symbol === '066970.KS' && profitRate > 0.02) {
+        const currentState = symbolCrossState.get(symbol);
+        console.log(`  [DEBUG] ${symbol} profit check: ${(profitRate * 100).toFixed(2)}% (state: ${currentState}, takeProfit enabled: ${config.features.takeProfit})`);
       }
 
-      // 손절 체크 (기능 활성화 시에만)
+      // 손절 체크 (기능 활성화 시에만) - 항상 체크
       if (config.features.stopLoss && profitRate <= config.sell.stopLoss) {
+        if (symbol === '066970.KS') {
+          console.log(`  [DEBUG] ${symbol} STOP LOSS triggered!`);
+        }
         toSell.push({ symbol, reason: 'STOP_LOSS', price: currentPrice, holding });
       }
-      // 익절 체크 (기능 활성화 시에만)
+      // 익절 체크 (기능 활성화 시에만) - 항상 체크
       else if (config.features.takeProfit && profitRate >= config.sell.takeProfit) {
+        if (symbol === '066970.KS') {
+          console.log(`  [DEBUG] ${symbol} TAKE PROFIT triggered! ${(profitRate * 100).toFixed(2)}% >= ${(config.sell.takeProfit * 100).toFixed(2)}%`);
+        }
         toSell.push({ symbol, reason: 'TAKE_PROFIT', price: currentPrice, holding });
       }
-      // 트레일링 스톱 체크 (최고가 대비) - 기능 활성화 시에만
+      // 트레일링 스톱 체크 (최고가 대비) - 데드크로스 상태에서만
       else if (config.features.trailingStop) {
-        const drawdownFromMax = (currentPrice - holding.maxPrice) / holding.maxPrice;
-        if (drawdownFromMax <= -config.sell.trailingStopPercent) {
-          toSell.push({ symbol, reason: 'TRAILING_STOP', price: currentPrice, holding });
+        const currentState = symbolCrossState.get(symbol);
+        if (currentState === 'DEAD') {
+          const drawdownFromMax = (currentPrice - holding.maxPrice) / holding.maxPrice;
+          if (drawdownFromMax <= -config.sell.trailingStopPercent) {
+            toSell.push({ symbol, reason: 'TRAILING_STOP', price: currentPrice, holding });
+          }
         }
       }
     });
@@ -728,6 +756,9 @@ const algorithms = async (dataPlan: DataPlan) => {
         // 계좌 업데이트
         account.balance += total;
         account.holdings.delete(item.symbol);
+
+        // 판 종목 기록
+        soldSymbols.add(item.symbol);
 
         // 연속 손실 카운트 업데이트 (기능 활성화 시에만)
         if (config.features.consecutiveLossProtection) {
@@ -756,7 +787,8 @@ const algorithms = async (dataPlan: DataPlan) => {
           fees,
           total,
           avgBuyPrice: item.holding.avgPrice,
-          profit
+          profit,
+          reason: item.reason // 매도 이유 추가
         });
 
         // 심볼별 거래 내역 저장
@@ -772,7 +804,8 @@ const algorithms = async (dataPlan: DataPlan) => {
           fees,
           total,
           avgBuyPrice: item.holding.avgPrice,
-          profit
+          profit,
+          reason: item.reason // 매도 이유 추가
         });
 
         const emoji = item.reason === 'STOP_LOSS' ? '🛑' : item.reason === 'TAKE_PROFIT' ? '🎯' : '📉';
@@ -782,6 +815,8 @@ const algorithms = async (dataPlan: DataPlan) => {
 
       console.log(`  💵 Balance: ${account.balance.toLocaleString()}원`);
     }
+
+    return soldSymbols; // 이번 시점에 판 종목 리스트 반환
   };
 
   // 전처리
@@ -1017,8 +1052,11 @@ const algorithms = async (dataPlan: DataPlan) => {
   while (currentTime <= endDate) {
     console.log(`\n⏰ Current time: ${currentTime.toISOString()}`);
 
-    // 손절/익절 체크 (매 시점마다)
-    checkStopLossAndTakeProfit(currentTime);
+    // 손절/익절 체크 (매 시점마다) - 이번 시점에 판 종목 리스트 받기
+    const soldSymbolsThisTime = checkStopLossAndTakeProfit(currentTime);
+    
+    // 이번 시점에 매수한 종목 추적 (중복 매수 방지)
+    const boughtSymbolsThisTime = new Set<string>();
 
     // 각 그룹별 등락률 계산
     groups.forEach(group => {
@@ -1163,16 +1201,101 @@ const algorithms = async (dataPlan: DataPlan) => {
 
                 // 데드크로스 플래그 설정 (차트 표시용)
                 isSymbolDeadCross = true;
+
+                // below 조건 체크 (마지노선): from이 below 기준선 아래로 떨어졌는지
+                let belowConditionMet = false;
+                if (deadCross.below && deadCross.below.length > 0) {
+                  for (const belowPeriod of deadCross.below) {
+                    const belowMA = maValues.get(belowPeriod);
+                    if (belowMA && currFromMADead.value < belowMA.value) {
+                      belowConditionMet = true;
+                      console.log(`    🚨 BELOW THRESHOLD: MA${deadCross.from} (${currFromMADead.value.toFixed(2)}) < MA${belowPeriod} (${belowMA.value.toFixed(2)}) - FULL SELL!`);
+                      break;
+                    }
+                  }
+                }
+
+                // 데드크로스 진입 시 첫 매도
+                if (account.holdings.has(symbol)) {
+                  if (belowConditionMet) {
+                    console.log(`    ✅ Holding detected, FULL SELL due to below threshold`);
+                    sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS_BELOW', true); // 전량 매도
+                  } else {
+                    console.log(`    ✅ Holding detected, first sell on dead cross entry`);
+                    sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS');
+                  }
+                  
+                  // 마지막 매도 가격 기록
+                  const symbolData = symbols.get(symbol);
+                  if (symbolData) {
+                    const quotesUntilNow = symbolData.quotes.filter(q =>
+                      q.date.getTime() <= currentTime.getTime() && q.close !== null && q.close !== undefined
+                    );
+                    const currentQuote = quotesUntilNow[quotesUntilNow.length - 1];
+                    if (currentQuote && currentQuote.close) {
+                      symbolLastSellPrice.set(symbol, currentQuote.close);
+                    }
+                  }
+                }
+              } else {
+                // 데드크로스 상태 유지 중
+                
+                // 먼저 below 조건 체크 (마지노선): from이 below 기준선 아래로 떨어졌는지
+                let belowConditionMet = false;
+                if (deadCross.below && deadCross.below.length > 0 && account.holdings.has(symbol)) {
+                  for (const belowPeriod of deadCross.below) {
+                    const belowMA = maValues.get(belowPeriod);
+                    if (belowMA && currFromMADead.value < belowMA.value) {
+                      // 이전에는 위였는데 지금 아래로 떨어졌는지 확인
+                      const prevFromMA = prevTimeSeries.ma.get(deadCross.from);
+                      const prevBelowMA = prevTimeSeries.ma.get(belowPeriod);
+                      
+                      if (prevFromMA && prevBelowMA && prevFromMA.value >= prevBelowMA.value) {
+                        belowConditionMet = true;
+                        const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+                        console.log(`    🚨 BELOW THRESHOLD [${timeStr}]: MA${deadCross.from} (${currFromMADead.value.toFixed(2)}) dropped below MA${belowPeriod} (${belowMA.value.toFixed(2)}) - FULL SELL!`);
+                        sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS_BELOW', true); // 전량 매도
+                        break;
+                      }
+                    }
+                  }
+                }
+                
+                // below 조건으로 전량 매도하지 않았으면 추가 하락 체크
+                if (!belowConditionMet && config.features.deadCrossAdditionalSell && account.holdings.has(symbol)) {
+                  const lastSellPrice = symbolLastSellPrice.get(symbol);
+                  
+                  if (lastSellPrice) {
+                    const symbolData = symbols.get(symbol);
+                    if (symbolData) {
+                      const quotesUntilNow = symbolData.quotes.filter(q =>
+                        q.date.getTime() <= currentTime.getTime() && q.close !== null && q.close !== undefined
+                      );
+                      const currentQuote = quotesUntilNow[quotesUntilNow.length - 1];
+                      
+                      if (currentQuote && currentQuote.close) {
+                        const currentPrice = currentQuote.close;
+                        const priceDecline = (lastSellPrice - currentPrice) / lastSellPrice;
+                        
+                        // 이전 매도 대비 추가 하락이 threshold 이상이면 추가 매도
+                        if (priceDecline >= config.sell.additionalSellThreshold) {
+                          const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+                          console.log(`    📉 Additional decline detected [${timeStr}]: ${symbol} - ${(priceDecline * 100).toFixed(2)}% down from last sell (${lastSellPrice.toLocaleString()} → ${currentPrice.toLocaleString()})`);
+                          console.log(`    ✅ Attempting additional sell`);
+                          
+                          sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS_ADDITIONAL');
+                          
+                          // 마지막 매도 가격 업데이트
+                          symbolLastSellPrice.set(symbol, currentPrice);
+                        }
+                      }
+                    }
+                  }
+                }
               }
 
               // 데드크로스 상태로 설정
               symbolCrossState.set(symbol, 'DEAD');
-
-              // 보유 중인 종목이면 매도
-              if (account.holdings.has(symbol)) {
-                console.log(`    ✅ Holding detected, attempting sell`);
-                sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS');
-              }
             }
             // 2. 골든크로스 상태 체크 (데드크로스가 아닐 때만)
             else if (currFromMAGolden && currToMAGolden && currFromMAGolden.value > currToMAGolden.value) {
@@ -1186,6 +1309,9 @@ const algorithms = async (dataPlan: DataPlan) => {
 
                 // 골든크로스 플래그 설정 (차트 표시용)
                 isSymbolGoldenCross = true;
+                
+                // 마지막 매도 가격 초기화 (골든크로스로 전환되면 리셋)
+                symbolLastSellPrice.delete(symbol);
               }
 
               // 골든크로스 상태로 설정
@@ -1225,28 +1351,44 @@ const algorithms = async (dataPlan: DataPlan) => {
                     // 골든크로스 진입 시점 - 조건 만족하면 매수
                     shouldBuy = true;
                   } else if (prevFromMAGolden && prevToMAGolden) {
-                    // 골든크로스 유지 중 - 이전에 조건 불만족이었다가 지금 만족하면 매수
-                    let prevUnderConditionMet = true;
-                    if (goldenCross.under && goldenCross.under.length > 0) {
-                      for (const underPeriod of goldenCross.under) {
-                        const prevUnderMA = prevTimeSeries.ma.get(underPeriod);
-                        if (prevUnderMA && prevFromMAGolden.value <= prevUnderMA.value) {
-                          prevUnderConditionMet = false;
-                          break;
-                        }
+                    // 골든크로스 유지 중
+                    
+                    // 케이스 1: 보유하지 않음 (익절/손절 후) → 재매수
+                    if (!account.holdings.has(symbol)) {
+                      // 이번 시점에 판 종목은 재매수 안함 (다음 시점에 재매수)
+                      if (soldSymbolsThisTime.has(symbol)) {
+                        const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+                        console.log(`  ⏸️  SKIP RE-BUY [${timeStr}]: ${symbol} - Sold in this time point, will re-buy next time if still in golden cross`);
+                      } else {
+                        shouldBuy = true;
+                        const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+                        console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - No holdings in golden cross state`);
                       }
                     }
+                    // 케이스 2: 이전에 조건 불만족이었다가 지금 만족 (피라미딩)
+                    else {
+                      let prevUnderConditionMet = true;
+                      if (goldenCross.under && goldenCross.under.length > 0) {
+                        for (const underPeriod of goldenCross.under) {
+                          const prevUnderMA = prevTimeSeries.ma.get(underPeriod);
+                          if (prevUnderMA && prevFromMAGolden.value <= prevUnderMA.value) {
+                            prevUnderConditionMet = false;
+                            break;
+                          }
+                        }
+                      }
 
-                    let prevSlopeConditionMet = true;
-                    if (goldenCross.minSlope !== undefined && prevFromMAGolden.slope < goldenCross.minSlope) {
-                      prevSlopeConditionMet = false;
-                    }
+                      let prevSlopeConditionMet = true;
+                      if (goldenCross.minSlope !== undefined && prevFromMAGolden.slope < goldenCross.minSlope) {
+                        prevSlopeConditionMet = false;
+                      }
 
-                    if (!prevUnderConditionMet || !prevSlopeConditionMet) {
-                      shouldBuy = true;
-                      const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
-                      console.log(`  ✨ CONDITIONS MET [${timeStr}]: ${symbol} - Conditions satisfied while in golden cross state`);
-                      isSymbolGoldenCross = true; // 차트에 표시
+                      if (!prevUnderConditionMet || !prevSlopeConditionMet) {
+                        shouldBuy = true;
+                        const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+                        console.log(`  ✨ CONDITIONS MET [${timeStr}]: ${symbol} - Conditions satisfied while in golden cross state`);
+                        isSymbolGoldenCross = true; // 차트에 표시
+                      }
                     }
                   }
 
@@ -1254,16 +1396,22 @@ const algorithms = async (dataPlan: DataPlan) => {
                     // 종목이 속한 그룹 찾기
                     const symbolGroup = groups.find(g => g.symbols.includes(symbol));
                     if (symbolGroup) {
+                      let bought = false;
                       if (config.features.onlySymbolGoldenCross) {
                         console.log(`    ✅ onlySymbolGoldenCross enabled, attempting buy without group check`);
-                        buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis);
+                        bought = buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis);
                       } else {
                         if (buyableGroups.has(symbolGroup.group)) {
                           console.log(`    ✅ Group ${symbolGroup.label} is in buyable list, attempting buy`);
-                          buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis);
+                          bought = buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis);
                         } else {
                           console.log(`    ⚠️  Group ${symbolGroup.label} is NOT in buyable list, skipping buy`);
                         }
+                      }
+                      
+                      // 매수 성공 시 이번 시점 매수 목록에 추가
+                      if (bought) {
+                        boughtSymbolsThisTime.add(symbol);
                       }
                     }
                   }
@@ -1471,7 +1619,18 @@ const algorithms = async (dataPlan: DataPlan) => {
 
                 console.log(`    📈 Buying top ${topSymbols.length} symbols already in golden cross:`);
                 topSymbols.forEach(item => {
-                  buyStock(item.symbol, group, currentTime, item.changeRate, item.volumeStrength, item.fromMA, item.toMA, item.obvSlope, item.rsi, item.macd, item.bollingerBands, item.volumeAnalysis);
+                  // 이번 시점에 이미 매수한 종목은 스킵 (중복 매수 방지)
+                  if (boughtSymbolsThisTime.has(item.symbol)) {
+                    console.log(`      ⏭️  Skipping ${item.symbol} - Already bought in this time point`);
+                    return;
+                  }
+                  
+                  const bought = buyStock(item.symbol, group, currentTime, item.changeRate, item.volumeStrength, item.fromMA, item.toMA, item.obvSlope, item.rsi, item.macd, item.bollingerBands, item.volumeAnalysis);
+                  
+                  // 매수 성공 시 이번 시점 매수 목록에 추가
+                  if (bought) {
+                    boughtSymbolsThisTime.add(item.symbol);
+                  }
                 });
               } else {
                 console.log(`    ⚠️  No symbols in golden cross state found`);
@@ -1527,7 +1686,7 @@ const algorithms = async (dataPlan: DataPlan) => {
   console.log('\n' + '='.repeat(60));
   console.log('📊 TRADING SUMMARY');
   console.log('='.repeat(60));
-  console.log(`Initial Balance: 300,000,000원`);
+  console.log(`Initial Balance: ${INITIAL_BALANCE.toLocaleString()}원`);
   console.log(`Final Balance: ${account.balance.toLocaleString()}원`);
 
   // 보유 종목 평가
@@ -1542,18 +1701,20 @@ const algorithms = async (dataPlan: DataPlan) => {
           const currentValue = lastQuote.close * holding.quantity;
           const profit = (lastQuote.close - holding.avgPrice) * holding.quantity;
           holdingsValue += currentValue;
-          console.log(`  ${symbol}: ${holding.quantity}주 @ ${holding.avgPrice.toLocaleString()}원 → 현재 ${lastQuote.close.toLocaleString()}원 (평가손익: ${profit >= 0 ? '+' : ''}${profit.toLocaleString()}원)`);
+          const label = tickerLabelMap.get(symbol) || symbol;
+          console.log(`  ${label} (${symbol}): ${holding.quantity}주 @ ${holding.avgPrice.toLocaleString()}원 → 현재 ${lastQuote.close.toLocaleString()}원 (평가손익: ${profit >= 0 ? '+' : ''}${profit.toLocaleString()}원)`);
         }
       }
     });
   }
 
   const totalAssets = account.balance + holdingsValue;
-  const totalProfit = totalAssets - 300000000;
-  const returnRate = (totalProfit / 300000000) * 100;
+  const totalProfit = totalAssets - INITIAL_BALANCE;
+  const returnRate = (totalProfit / INITIAL_BALANCE) * 100;
 
   console.log(`\nHoldings Value: ${holdingsValue.toLocaleString()}원`);
-  console.log(`Total Assets: ${totalAssets.toLocaleString()}원`);
+  console.log(`\nbalance Value: ${account.balance.toLocaleString()}원`);
+  console.log(`Total Assets (balance+holding): ${totalAssets.toLocaleString()}원`);
   console.log(`Total Profit: ${totalProfit >= 0 ? '+' : ''}${totalProfit.toLocaleString()}원 (${returnRate >= 0 ? '+' : ''}${returnRate.toFixed(2)}%)`);
   console.log(`Total Transactions: ${transactions.length}`);
   console.log('='.repeat(60));
@@ -1603,18 +1764,27 @@ const algorithms = async (dataPlan: DataPlan) => {
   const createChart = (title: string, timeSeries: TimeSeries[], filename: string, symbolTransactions?: Transaction[]) => {
     if (!timeSeries || timeSeries.length === 0) return;
 
-    const width = 1200;
-    const height = 800;
+    // 고해상도를 위해 2배 크기로 생성
+    const scale = 2;
+    const width = 1200 * scale;
+    const height = 800 * scale;
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext('2d');
+    
+    // 스케일 적용
+    ctx.scale(scale, scale);
+
+    // 이제 모든 좌표는 원래 크기(1200x800)로 사용
+    const displayWidth = 1200;
+    const displayHeight = 800;
 
     ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, width, height);
+    ctx.fillRect(0, 0, displayWidth, displayHeight);
 
     const padding = { top: 60, right: 60, bottom: 60, left: 80 };
     const gap = 40;
-    const chartWidth = width - padding.left - padding.right;
-    const chartHeight = (height - padding.top - padding.bottom - gap) / 2;
+    const chartWidth = displayWidth - padding.left - padding.right;
+    const chartHeight = (displayHeight - padding.top - padding.bottom - gap) / 2;
 
     const topChartY = padding.top;
     const bottomChartY = padding.top + chartHeight + gap;
@@ -1658,7 +1828,7 @@ const algorithms = async (dataPlan: DataPlan) => {
     ctx.fillStyle = '#000000';
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
-    ctx.fillText(title, width / 2, 35);
+    ctx.fillText(title, displayWidth / 2, 35);
 
     // MA 색상 매핑
     const maColors: Record<number, string> = {
@@ -1670,7 +1840,7 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     // 범례 (상단 차트)
     ctx.font = '12px Arial';
-    let legendX = width - 350;
+    let legendX = displayWidth - 350;
     const legendY = topChartY + 10;
 
     ctx.fillStyle = '#2196F3';
@@ -1689,7 +1859,7 @@ const algorithms = async (dataPlan: DataPlan) => {
     });
 
     // 범례 (하단 차트)
-    legendX = width - 350;
+    legendX = displayWidth - 350;
     const legendY3 = bottomChartY + 10;
 
     ctx.fillStyle = '#FF5722';
@@ -1738,7 +1908,7 @@ const algorithms = async (dataPlan: DataPlan) => {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    const drawLine = (data: (number | null)[], minVal: number, range: number, color: string, lineWidth: number, baseY: number) => {
+    const drawLine = (data: (number | null)[], minVal: number, range: number, color: string, lineWidth: number, baseY: number, drawDots: boolean = false) => {
       ctx.strokeStyle = color;
       ctx.lineWidth = lineWidth;
       ctx.beginPath();
@@ -1759,18 +1929,33 @@ const algorithms = async (dataPlan: DataPlan) => {
       });
 
       ctx.stroke();
+      
+      // 점 그리기 (옵션)
+      if (drawDots) {
+        ctx.fillStyle = color;
+        data.forEach((value, index) => {
+          if (value === null) return;
+          
+          const x = padding.left + (chartWidth * index / (data.length - 1));
+          const y = baseY + chartHeight - ((value - minVal) / range * chartHeight);
+          
+          ctx.beginPath();
+          ctx.arc(x, y, 2, 0, 2 * Math.PI);
+          ctx.fill();
+        });
+      }
     };
 
     // 등락률 이동평균선 그리기 (역순으로 그려서 짧은 기간이 위에 오도록)
     [...maPeriods].reverse().forEach(period => {
       const maValues = changeRateMAData.get(period);
       if (maValues) {
-        drawLine(maValues, minChangeRate, rangeChangeRate, maColors[period] || '#999999', 1.5, topChartY);
+        drawLine(maValues, minChangeRate, rangeChangeRate, maColors[period] || '#999999', 1, topChartY, false); // 점 제거
       }
     });
 
     ctx.strokeStyle = '#2196F3';
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 2;
     ctx.beginPath();
 
     timeSeries.forEach((data, index) => {
@@ -1785,6 +1970,17 @@ const algorithms = async (dataPlan: DataPlan) => {
     });
 
     ctx.stroke();
+    
+    // 등락률 라인에도 점 추가
+    ctx.fillStyle = '#2196F3';
+    timeSeries.forEach((data, index) => {
+      const x = padding.left + (chartWidth * index / (timeSeries.length - 1));
+      const y = topChartY + chartHeight - ((data.avgChangeRate - minChangeRate) / rangeChangeRate * chartHeight);
+      
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, 2 * Math.PI);
+      ctx.fill();
+    });
 
     // ========== 하단 차트: 거래량 강도 ==========
 
@@ -1822,12 +2018,12 @@ const algorithms = async (dataPlan: DataPlan) => {
     [...maPeriods].reverse().forEach(period => {
       const maValues = volumeMAData.get(period);
       if (maValues) {
-        drawLine(maValues, minVolume, rangeVolume, maColors[period] || '#999999', 1.5, bottomChartY);
+        drawLine(maValues, minVolume, rangeVolume, maColors[period] || '#999999', 1, bottomChartY, false); // 점 제거
       }
     });
 
     ctx.strokeStyle = '#FF5722';
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 2;
     ctx.beginPath();
 
     timeSeries.forEach((data, index) => {
@@ -1842,6 +2038,17 @@ const algorithms = async (dataPlan: DataPlan) => {
     });
 
     ctx.stroke();
+    
+    // 거래량 강도 라인에도 점 추가
+    ctx.fillStyle = '#FF5722';
+    timeSeries.forEach((data, index) => {
+      const x = padding.left + (chartWidth * index / (timeSeries.length - 1));
+      const y = bottomChartY + chartHeight - ((data.avgVolumeStrength - minVolume) / rangeVolume * chartHeight);
+      
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, 2 * Math.PI);
+      ctx.fill();
+    });
 
     // ========== X축 ==========
     ctx.fillStyle = '#666666';
@@ -1864,7 +2071,7 @@ const algorithms = async (dataPlan: DataPlan) => {
         timeStr = `${(time.getMonth() + 1).toString().padStart(2, '0')}/${time.getDate().toString().padStart(2, '0')} ${time.getHours()}:${time.getMinutes().toString().padStart(2, '0')}`;
       }
       
-      ctx.fillText(timeStr, x, height - padding.bottom + 20);
+      ctx.fillText(timeStr, x, displayHeight - padding.bottom + 20);
     }
 
     // 등락률 차트 위에 골든크로스/데드크로스 표시 (그룹 또는 심볼)
@@ -1876,7 +2083,7 @@ const algorithms = async (dataPlan: DataPlan) => {
         if (data.goldenCross) {
           // 골든크로스 수직 점선 (초록색)
           ctx.strokeStyle = '#4CAF50';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 1;
           ctx.setLineDash([5, 5]);
           ctx.beginPath();
           ctx.moveTo(x, topChartY);
@@ -1892,14 +2099,14 @@ const algorithms = async (dataPlan: DataPlan) => {
 
           // 'G' 레이블 (화살표 안쪽)
           ctx.fillStyle = '#FFFFFF';
-          ctx.font = 'bold 10px Arial';
+          ctx.font = 'bold 7px Arial';
           ctx.fillText('G', x, topChartY + chartHeight - 10);
         }
 
         if (data.deadCross) {
           // 데드크로스 수직 점선 (빨간색)
           ctx.strokeStyle = '#F44336';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 1;
           ctx.setLineDash([5, 5]);
           ctx.beginPath();
           ctx.moveTo(x, topChartY);
@@ -1915,7 +2122,7 @@ const algorithms = async (dataPlan: DataPlan) => {
 
           // 'D' 레이블 (화살표 안쪽)
           ctx.fillStyle = '#FFFFFF';
-          ctx.font = 'bold 10px Arial';
+          ctx.font = 'bold 7px Arial';
           ctx.fillText('D', x, topChartY + chartHeight - 10);
         }
       });
@@ -1946,7 +2153,7 @@ const algorithms = async (dataPlan: DataPlan) => {
         if (data.goldenCross) {
           // 골든크로스 수직 점선 (초록색)
           ctx.strokeStyle = '#4CAF50';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 1;
           ctx.setLineDash([5, 5]);
           ctx.beginPath();
           ctx.moveTo(x, topChartY);
@@ -1971,7 +2178,7 @@ const algorithms = async (dataPlan: DataPlan) => {
           
           // 데드크로스 수직 점선 (빨간색)
           ctx.strokeStyle = '#F44336';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 1;
           ctx.setLineDash([5, 5]);
           ctx.beginPath();
           ctx.moveTo(x, topChartY);
@@ -2011,7 +2218,7 @@ const algorithms = async (dataPlan: DataPlan) => {
         if (tx.type === 'BUY') {
           // 매수 수직 점선 (파란색)
           ctx.strokeStyle = '#2196F3';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 1;
           ctx.setLineDash([5, 5]);
           ctx.beginPath();
           ctx.moveTo(x, topChartY);
@@ -2027,12 +2234,17 @@ const algorithms = async (dataPlan: DataPlan) => {
 
           // 'B' 레이블 (화살표 안쪽)
           ctx.fillStyle = '#FFFFFF';
-          ctx.font = 'bold 10px Arial';
+          ctx.font = 'bold 7px Arial';
           ctx.fillText('B', x, topChartY + 16);
+          
+          // 매수 수량 표시 (화살표 위쪽)
+          ctx.fillStyle = '#2196F3';
+          ctx.font = 'bold 8px Arial';
+          ctx.fillText(`${tx.quantity}`, x, topChartY - 5);
         } else {
           // 매도 수직 점선 (주황색)
           ctx.strokeStyle = '#FF9800';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 1;
           ctx.setLineDash([5, 5]);
           ctx.beginPath();
           ctx.moveTo(x, topChartY);
@@ -2046,10 +2258,36 @@ const algorithms = async (dataPlan: DataPlan) => {
           ctx.textAlign = 'center';
           ctx.fillText('▼', x, topChartY + 20);
 
-          // 'S' 레이블 (화살표 안쪽)
+          // 레이블 결정
+          let label = 'S';
+          if (tx.profit && tx.profit > 0) {
+            // 익절
+            label = '+S';
+          } else if (tx.reason === 'DEAD_CROSS') {
+            // 데드크로스 첫 매도 (일부)
+            label = 's';
+          } else if (tx.reason === 'DEAD_CROSS_ADDITIONAL') {
+            // 추가 매도 (일부)
+            label = '-s';
+          } else if (tx.reason === 'DEAD_CROSS_BELOW') {
+            // 마지노선 전량 매도
+            label = '-S';
+          } else if (tx.reason === 'STOP_LOSS' || tx.reason === 'TRAILING_STOP') {
+            // 손절
+            label = '!S';
+          } else {
+            // 기타
+            label = 'S';
+          }
+          
           ctx.fillStyle = '#FFFFFF';
-          ctx.font = 'bold 10px Arial';
-          ctx.fillText('S', x, topChartY + 16);
+          ctx.font = 'bold 7px Arial';
+          ctx.fillText(label, x, topChartY + 10);
+          
+          // 매도 수량 표시 (화살표 위쪽)
+          ctx.fillStyle = '#FF9800';
+          ctx.font = 'bold 8px Arial';
+          ctx.fillText(`${tx.quantity}`, x, topChartY - 5);
         }
       });
     }
