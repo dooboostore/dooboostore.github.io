@@ -57,7 +57,7 @@ export class User {
       rate: 0.1, // 잔액 대비 매수 비율
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용)  undefined 이면 피라미딩 안함
       moreRateType: 'balance' as const, // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
-      slopeThreshold: 0.1, // 매수 시점 기울기 임계값  undefined 이면 기울기 필터링 안함
+      slopeThreshold: 0.0, // 매수 시점 기울기 임계값  undefined 이면 기울기 필터링 안함
       groupCrossCheck: true // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
 
@@ -65,7 +65,8 @@ export class User {
       rate: 0.5, // 보유량 대비 매도 비율
       moreRate: 0.25, // 추가 매도 비율 (피라미딩용)  undefined 이면 피라미딩 안함
       moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
-      stopLossPercent: 0.02, // 손절 퍼센트  undefined 이면 손절 안함
+      slopeThreshold: 0.0, // 매도 시점 기울기 임계값 (priceSlope <= -slopeThreshold일 때 매도)
+      stopLossPercent: 0.0, // 손절 퍼센트  undefined 이면 손절 안함
       groupCrossCheck: true // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
     }
 
@@ -195,8 +196,8 @@ export class User {
           let canSell = true;
 
           // 기울기 체크 (priceSlope가 음수여야 함)
-          if (this.config.buy?.slopeThreshold !== undefined) {
-            if (latestQuote.priceSlope > -this.config.buy.slopeThreshold) {
+          if (this.config.sell?.slopeThreshold !== undefined) {
+            if (latestQuote.priceSlope > -this.config.sell.slopeThreshold) {
               canSell = false;
             }
           }
@@ -236,6 +237,7 @@ export class User {
         if (this.config.buy?.slopeThreshold !== undefined) {
           if (latestQuote.priceSlope < this.config.buy.slopeThreshold) {
             canBuy = false;
+            console.log(`[${symbol}] 매수 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)} < ${this.config.buy.slopeThreshold})`);
           }
         }
 
@@ -243,10 +245,12 @@ export class User {
         if (canBuy && this.config.buy?.groupCrossCheck) {
           if (groupCrossStatus !== 'GOLDEN') {
             canBuy = false;
+            console.log(`[${symbol}] 매수 스킵: 그룹 크로스 상태 불일치 (그룹: ${groupCrossStatus})`);
           }
         }
 
         if (canBuy) {
+          console.log(`[${symbol}] 매수 조건 충족: crossStatus=${latestQuote.crossStatus}, slope=${latestQuote.priceSlope.toFixed(4)}, groupCross=${groupCrossStatus}`);
           if (hasHolding) {
             // 피라미딩 (추가 매수)
             if (this.config.buy?.moreRate !== undefined) {

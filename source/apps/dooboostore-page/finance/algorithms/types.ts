@@ -113,13 +113,16 @@ export type TradingConfig = {
     rate?: number;           // 잔액 대비 매수 비율
     moreRate?: number;       // 추가 매수 비율 (피라미딩용)
     moreRateType?: 'balance' | 'position' | 'initial';  // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
-    slopeThreshold?: number; // 매수 시점 기울기 임계값
+    slopeThreshold?: number; // 첫 매수 시점 기울기 임계값
+    moreRateSlopeThreshold?: number; // 피라미딩 매수 기울기 임계값 (없으면 slopeThreshold 사용)
     groupCrossCheck?: boolean; // 그룹 골든크로스 체크
   };
   sell?: {
     rate?: number;           // 보유량 대비 매도 비율
     moreRate?: number;       // 추가 매도 비율 (피라미딩용)
     moreRateType?: 'holding' | 'initial';  // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
+    slopeThreshold?: number; // 첫 매도 시점 기울기 임계값
+    moreRateSlopeThreshold?: number; // 피라미딩 매도 기울기 임계값 (없으면 slopeThreshold 사용)
     stopLossPercent?: number; // 손절 퍼센트
     groupCrossCheck?: boolean; // 그룹 데드크로스 체크
   };
