@@ -216,8 +216,8 @@ const algorithms = async (dataPlan: DataPlan) => {
   const maPeriods: number[] = [5, 10, 20, 50]; // 사용할 이동평균 기간들
 
   // 골든크로스 / 데드크로스 설정
-  const goldenCross = { from: 5, to: 20, under: [50], minSlope: 0.001 }; // 5일선이 20일선을 상향 돌파, 5일선이 50일선보다 위, 5일선 기울기 0.02 이상 (2% 변화, 0~1 범위에서 1=100%)
-  const deadCross = { from: 5, to: 10 };   // 5일선이 10일선을 하향 돌파
+  const goldenCross = { from: 5, to: 20, under: [50], minSlope: 0.0005 }; // 5일선이 20일선을 상향 돌파, 5일선이 50일선보다 위
+  const deadCross = { from: 5, to: 20 };   // 5일선이 20일선을 하향 돌파 (골든크로스와 동일한 기준)
 
   // 트레이딩 설정
   const config = {
@@ -255,7 +255,8 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     buy: {
       symbolSize: 2, // 상위 2개 종목 선택 (집중 투자)
-      stockSize: 100,  // 각 종목당 100주씩 매수
+      stockRate: 0.5,  // 잔고의 10%씩 투자
+      stockSize: 100,  // [DEPRECATED] 고정 주식 수 (stockRate 사용 시 무시됨)
       minVolumeStrength: 50, // 최소 거래량 강도 50% (더 강한 신호)
       minSlope: 0, // 최소 기울기
       maxMaGap: 0.05, // MA 간격 최대 5% (너무 벌어지면 늦음)
@@ -471,39 +472,42 @@ const algorithms = async (dataPlan: DataPlan) => {
       console.log(`    📈 Pyramiding: Adding to existing position`);
     }
 
-    // 자금 관리: 잔고의 10%씩 투자 또는 고정 수량
+    // 자금 관리: 잔고 기반 비율 투자
     let quantity: number;
-    if (config.features.positionSizing) {
-      const maxInvestment = account.balance * config.buy.positionSizePercent;
-      quantity = Math.floor(maxInvestment / price);
-    } else {
-      quantity = config.buy.stockSize;
+    
+    // 잔고의 stockRate 비율만큼 투자
+    const investmentAmount = account.balance * config.buy.stockRate;
+    quantity = Math.floor(investmentAmount / price);
+    
+    // 피라미딩 시 수량 조정: 매수 횟수에 따라 절반씩 감소
+    if (holding && config.features.pyramiding) {
+      // 현재 보유 수량으로 몇 번째 매수인지 계산
+      const currentHolding = holding.quantity;
       
-      // 피라미딩 시 수량 조정: 매수 횟수에 따라 절반씩 감소
-      if (holding && config.features.pyramiding) {
-        // 현재 보유 수량으로 몇 번째 매수인지 계산
-        // 첫 매수: stockSize, 두 번째: stockSize/2, 세 번째: stockSize/4, ...
-        const currentHolding = holding.quantity;
-        const baseSize = config.buy.stockSize;
-        
-        // 이미 보유한 수량을 기준으로 다음 매수 수량 계산
-        // 예: 100주 보유 → 50주 추가, 150주 보유 → 25주 추가
-        let pyramidQuantity = baseSize;
-        let accumulatedQuantity = 0;
-        
-        // 몇 번째 매수인지 찾기
-        while (accumulatedQuantity < currentHolding) {
-          accumulatedQuantity += pyramidQuantity;
-          pyramidQuantity = Math.floor(pyramidQuantity / 2);
-        }
-        
-        quantity = Math.max(1, pyramidQuantity); // 최소 1주
-        console.log(`    📊 Pyramiding quantity: ${quantity}주 (current holding: ${currentHolding}주)`);
+      // 첫 매수 시 투자 금액 역산
+      const firstInvestment = holding.avgPrice * currentHolding;
+      let pyramidInvestment = firstInvestment;
+      let accumulatedQuantity = 0;
+      
+      // 몇 번째 매수인지 찾기
+      while (accumulatedQuantity < currentHolding) {
+        const qty = Math.floor(pyramidInvestment / holding.avgPrice);
+        accumulatedQuantity += qty;
+        pyramidInvestment = pyramidInvestment / 2;
       }
+      
+      // 다음 투자 금액은 절반
+      const nextInvestment = pyramidInvestment;
+      quantity = Math.floor(nextInvestment / price);
+      quantity = Math.max(1, quantity); // 최소 1주
+      
+      console.log(`    📊 Pyramiding quantity: ${quantity}주 (investment: ${nextInvestment.toLocaleString()}원, current holding: ${currentHolding}주)`);
+    } else {
+      console.log(`    💰 Investment: ${investmentAmount.toLocaleString()}원 (${(config.buy.stockRate * 100).toFixed(1)}% of balance)`);
     }
 
     if (quantity === 0) {
-      console.log(`    ⚠️  Insufficient balance for even 1 share (price: ${price.toLocaleString()})`);
+      console.log(`    ⚠️  Insufficient balance for even 1 share (price: ${price.toLocaleString()}원, available: ${investmentAmount.toLocaleString()}원)`);
       return;
     }
 
@@ -688,6 +692,13 @@ const algorithms = async (dataPlan: DataPlan) => {
       }
 
       const profitRate = (currentPrice - holding.avgPrice) / holding.avgPrice;
+
+      // ⚠️ 중요: 데드크로스 상태일 때만 손절/익절/트레일링스톱 실행
+      const currentState = symbolCrossState.get(symbol);
+      if (currentState !== 'DEAD') {
+        // 데드크로스 상태가 아니면 손절/익절 안함
+        return;
+      }
 
       // 손절 체크
       if (profitRate <= config.sell.stopLoss) {
@@ -1273,10 +1284,10 @@ const algorithms = async (dataPlan: DataPlan) => {
 
         // 심볼별 시계열 데이터 저장
         if (isSymbolGoldenCross) {
-          console.log(`  📊 [DEBUG] ${symbol}: Saving goldenCross=true to timeSeries`);
+          console.log(`  📊 [DEBUG] ${symbol}: Saving goldenCross=true to timeSeries at ${currentTime.toISOString()}`);
         }
         if (isSymbolDeadCross) {
-          console.log(`  📊 [DEBUG] ${symbol}: Saving deadCross=true to timeSeries`);
+          console.log(`  📊 [DEBUG] ${symbol}: Saving deadCross=true to timeSeries at ${currentTime.toISOString()}`);
         }
 
         symbolTimeSeriesMap.get(symbol)?.push({
@@ -1915,6 +1926,25 @@ const algorithms = async (dataPlan: DataPlan) => {
       });
     } else {
       // 심볼 차트: 골든크로스/데드크로스 표시 (아래쪽)
+      console.log(`  [CHART DEBUG] ${title}: Checking ${timeSeries.length} data points for crosses`);
+      let goldenCount = 0;
+      let deadCount = 0;
+      
+      // First pass: count crosses and log details
+      timeSeries.forEach((data, index) => {
+        if (data.goldenCross) {
+          goldenCount++;
+          console.log(`  [CHART DEBUG] ${title}: Golden cross at index ${index}, time: ${data.time.toISOString()}`);
+        }
+        if (data.deadCross) {
+          deadCount++;
+          console.log(`  [CHART DEBUG] ${title}: Dead cross at index ${index}, time: ${data.time.toISOString()}`);
+        }
+      });
+      
+      console.log(`  [CHART DEBUG] ${title}: Found ${goldenCount} golden crosses, ${deadCount} dead crosses`);
+      
+      // Second pass: draw arrows
       timeSeries.forEach((data, index) => {
         const x = padding.left + (chartWidth * index / (timeSeries.length - 1));
 
@@ -1942,6 +1972,8 @@ const algorithms = async (dataPlan: DataPlan) => {
         }
 
         if (data.deadCross) {
+          console.log(`  [CHART DEBUG] Drawing dead cross arrow at index ${index}, time: ${data.time.toISOString()}, x: ${x}`);
+          
           // 데드크로스 수직 점선 (빨간색)
           ctx.strokeStyle = '#F44336';
           ctx.lineWidth = 2;
