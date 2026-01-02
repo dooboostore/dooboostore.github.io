@@ -14,8 +14,10 @@ const ITEMS_PATH = join(__dirname, '../../../../datas/finance/items.json');
 
 type DataPlan = {
   interval: string;
-  from: string;
-  to: string;
+  dataFrom: string;  // 데이터 수집 시작일 (이동평균선 계산용)
+  dataTo: string;    // 데이터 수집 종료일
+  algoFrom: string;  // 알고리즘 실행 시작일
+  algoTo: string;    // 알고리즘 실행 종료일
 };
 
 type Group = {
@@ -27,8 +29,8 @@ type Group = {
 async function load5MinuteCharts(dataPlan: DataPlan) {
   console.log('📊 Starting chart data collection...');
   console.log(`   Interval: ${dataPlan.interval}`);
-  console.log(`   From: ${dataPlan.from}`);
-  console.log(`   To: ${dataPlan.to}`);
+  console.log(`   Data From: ${dataPlan.dataFrom}`);
+  console.log(`   Data To: ${dataPlan.dataTo}`);
 
   // Load groups
   if (!existsSync(GROUPS_PATH)) {
@@ -53,8 +55,8 @@ async function load5MinuteCharts(dataPlan: DataPlan) {
 
   // Use interval from dataPlan
   const intervals = [dataPlan.interval];
-  const startDate = new Date(dataPlan.from);
-  const endDate = new Date(dataPlan.to);
+  const startDate = new Date(dataPlan.dataFrom);
+  const endDate = new Date(dataPlan.dataTo);
 
   let processedCount = 0;
   let skippedCount = 0;
@@ -161,7 +163,7 @@ async function load5MinuteCharts(dataPlan: DataPlan) {
   console.log('✅ Chart data collection completed!');
   console.log(`📊 Summary:`);
   console.log(`   - Interval: ${dataPlan.interval}`);
-  console.log(`   - Date range: ${dataPlan.from} to ${dataPlan.to}`);
+  console.log(`   - Date range: ${dataPlan.dataFrom} to ${dataPlan.dataTo}`);
   console.log(`   - Total symbols: ${symbols.length}`);
   console.log(`   - Processed: ${processedCount}`);
   console.log(`   - Skipped (already exists): ${skippedCount}`);
@@ -175,12 +177,14 @@ async function load5MinuteCharts(dataPlan: DataPlan) {
 const algorithms = async (dataPlan: DataPlan) => {
   console.log('🤖 Starting algorithm with dataPlan:');
   console.log(`   Interval: ${dataPlan.interval}`);
-  console.log(`   From: ${dataPlan.from}`);
-  console.log(`   To: ${dataPlan.to}`);
+  console.log(`   Data Range: ${dataPlan.dataFrom} ~ ${dataPlan.dataTo}`);
+  console.log(`   Algorithm Range: ${dataPlan.algoFrom} ~ ${dataPlan.algoTo}`);
   
   // Parse dates from dataPlan
-  const startDate = new Date(dataPlan.from);
-  const endDate = new Date(dataPlan.to);
+  const dataStartDate = new Date(dataPlan.dataFrom);
+  const dataEndDate = new Date(dataPlan.dataTo);
+  const algoStartDate = new Date(dataPlan.algoFrom);
+  const algoEndDate = new Date(dataPlan.algoTo);
   
   // Determine time increment based on interval
   let intervalMs: number;
@@ -320,6 +324,7 @@ const algorithms = async (dataPlan: DataPlan) => {
     avgBuyPrice?: number; // 매도 시 평균 매수가
     profit?: number; // 매도 시 손익
     reason?: string; // 매도 이유 (TAKE_PROFIT, STOP_LOSS, DEAD_CROSS, DEAD_CROSS_ADDITIONAL, etc.)
+    isPyramiding?: boolean; // 매수 시 피라미딩 여부
   };
   const transactions: Transaction[] = [];
 
@@ -453,6 +458,9 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     const price = currentQuote.close;
     const holding = account.holdings.get(symbol);
+    
+    // 피라미딩 여부는 나중에 결정 (피라미딩 체크 로직 통과 후)
+    let isPyramiding = false;
 
     // 피라미딩 체크 (이미 보유 중인 경우)
     if (holding) {
@@ -460,6 +468,9 @@ const algorithms = async (dataPlan: DataPlan) => {
         console.log(`    ⚠️  Already holding ${symbol}, pyramiding disabled`);
         return;
       }
+
+      // 여기까지 왔으면 피라미딩
+      isPyramiding = true;
 
       // 기울기가 더 가파르면 추가 매수
       const symbolTimeSeries = symbolTimeSeriesMap.get(symbol);
@@ -546,7 +557,8 @@ const algorithms = async (dataPlan: DataPlan) => {
       quantity,
       price,
       fees,
-      total
+      total,
+      isPyramiding
     });
 
     // 심볼별 거래 내역 저장
@@ -560,10 +572,12 @@ const algorithms = async (dataPlan: DataPlan) => {
       quantity,
       price,
       fees,
-      total
+      total,
+      isPyramiding
     });
 
-    console.log(`    ✅ BUY ${symbol}: ${quantity}주 @ ${price.toLocaleString()}원 (group: ${group.label}, slope: ${fromMA.slope.toFixed(2)}%, vol: ${volumeStrength.toFixed(1)}%, rsi: ${rsi?.toFixed(1) || 'N/A'}, macd: ${macd?.histogram.toFixed(4) || 'N/A'}, bb: ${bollingerBands ? (bollingerBands.percentB * 100).toFixed(1) + '%' : 'N/A'})`);
+    const pyramidingLabel = isPyramiding ? ' (Pyramiding)' : '';
+    console.log(`    ✅ BUY ${symbol}: ${quantity}주 @ ${price.toLocaleString()}원${pyramidingLabel} (isPyramiding: ${isPyramiding}, group: ${group.label}, slope: ${fromMA.slope.toFixed(2)}%, vol: ${volumeStrength.toFixed(1)}%, rsi: ${rsi?.toFixed(1) || 'N/A'}, macd: ${macd?.histogram.toFixed(4) || 'N/A'}, bb: ${bollingerBands ? (bollingerBands.percentB * 100).toFixed(1) + '%' : 'N/A'})`);
     console.log(`    💵 Balance: ${account.balance.toLocaleString()}원`);
     
     return true; // 매수 성공
@@ -850,7 +864,8 @@ const algorithms = async (dataPlan: DataPlan) => {
             };
           })
           .filter((it) => {
-            return it.date.getTime() >= startDate.getTime() && it.date.getTime() <= endDate.getTime();
+            // 전체 데이터 로드 (dataFrom ~ dataTo)
+            return it.date.getTime() >= dataStartDate.getTime() && it.date.getTime() <= dataEndDate.getTime();
           });
         if (quotes.length) {
           symbols.set(symbol, { open: quotes[0]?.open || 0, quotes });
@@ -1024,7 +1039,7 @@ const algorithms = async (dataPlan: DataPlan) => {
     return { volumeTrend, priceVolumeDivergence };
   };
 
-  let currentTime = new Date(startDate);
+  let currentTime = new Date(dataStartDate);  // 데이터 시작 시점부터 (MA 계산을 위해 전체 기간)
 
   // const config = {
   //   tradFees: 0.0005,
@@ -1057,11 +1072,15 @@ const algorithms = async (dataPlan: DataPlan) => {
   // }
 
 
-  while (currentTime <= endDate) {
-    console.log(`\n⏰ Current time: ${currentTime.toISOString()}`);
+  while (currentTime <= algoEndDate) {  // 알고리즘 종료 시점까지
+    const isAlgoActive = currentTime.getTime() >= algoStartDate.getTime();  // 거래 활성화 여부
+    
+    if (isAlgoActive) {
+      console.log(`\n⏰ Current time: ${currentTime.toISOString()}`);
+    }
 
-    // 손절/익절 체크 (매 시점마다) - 이번 시점에 판 종목 리스트 받기
-    const soldSymbolsThisTime = checkStopLossAndTakeProfit(currentTime);
+    // 손절/익절 체크 (알고리즘 활성 기간에만)
+    const soldSymbolsThisTime = isAlgoActive ? checkStopLossAndTakeProfit(currentTime) : new Set<string>();
     
     // 이번 시점에 매수한 종목 추적 (중복 매수 방지)
     const boughtSymbolsThisTime = new Set<string>();
@@ -1416,7 +1435,7 @@ const algorithms = async (dataPlan: DataPlan) => {
                         shouldBuy = true;
                         const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
                         console.log(`  ✨ CONDITIONS MET [${timeStr}]: ${symbol} - Conditions satisfied while in golden cross state`);
-                        isSymbolGoldenCross = true; // 차트에 표시
+                        // 피라미딩은 골든크로스 마크 표시 안 함
                       }
                     }
                   }
@@ -1859,6 +1878,72 @@ const algorithms = async (dataPlan: DataPlan) => {
     ctx.textAlign = 'center';
     ctx.fillText(title, displayWidth / 2, 35);
 
+    // 보유 수량 및 수익률 계산 (마지막 시점 기준)
+    if (symbolTransactions && symbolTransactions.length > 0) {
+      let holdingQuantity = 0;
+      let totalCost = 0;
+      let totalQuantity = 0;
+      let totalProfit = 0; // 전체 실현 손익
+      let totalInvested = 0; // 총 투자금액 (매수 금액 합계)
+      
+      symbolTransactions.forEach(tx => {
+        if (tx.type === 'BUY') {
+          holdingQuantity += tx.quantity;
+          totalCost += tx.price * tx.quantity;
+          totalQuantity += tx.quantity;
+          totalInvested += tx.total; // 수수료 포함 투자금
+        } else {
+          holdingQuantity -= tx.quantity;
+          if (tx.profit !== undefined) {
+            totalProfit += tx.profit; // 실현 손익 누적
+          }
+          if (holdingQuantity > 0) {
+            // 일부 매도: 평균 단가 유지
+            const avgPrice = totalCost / totalQuantity;
+            totalCost = avgPrice * holdingQuantity;
+            totalQuantity = holdingQuantity;
+          } else {
+            // 전량 매도
+            totalCost = 0;
+            totalQuantity = 0;
+          }
+        }
+      });
+      
+      // 보유 중인 경우: 현재 수익률 + 실현손익 표시
+      if (holdingQuantity > 0 && totalQuantity > 0) {
+        const avgPrice = totalCost / totalQuantity;
+        const lastPrice = timeSeries[timeSeries.length - 1]?.avgChangeRate || 0;
+        
+        // 현재가 추정 (시작가 기준)
+        const symbolData = symbols.get(symbolTransactions[0].symbol);
+        if (symbolData) {
+          const startPrice = symbolData.open;
+          const currentPrice = startPrice * (1 + lastPrice / 100);
+          const profitRate = ((currentPrice - avgPrice) / avgPrice) * 100;
+          const unrealizedProfit = (currentPrice - avgPrice) * holdingQuantity; // 미실현 손익
+          
+          // 보유 정보 표시 (완전 왼쪽 위)
+          ctx.font = '12px Arial';
+          ctx.textAlign = 'left';
+          ctx.fillStyle = '#000000';
+          const profitSign = profitRate >= 0 ? '+' : '';
+          const realizedProfitSign = totalProfit >= 0 ? '+' : '';
+          ctx.fillText(`보유: ${holdingQuantity}주 | 수익률: ${profitSign}${profitRate.toFixed(2)}% | 실현손익: ${realizedProfitSign}${totalProfit.toLocaleString()}원`, 10, 15);
+        }
+      }
+      // 보유하지 않은 경우: 전체 실현 손익 + 수익률 표시
+      else if (totalProfit !== 0 && totalInvested > 0) {
+        const totalProfitRate = (totalProfit / totalInvested) * 100;
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#000000';
+        const profitSign = totalProfit >= 0 ? '+' : '';
+        const rateSign = totalProfitRate >= 0 ? '+' : '';
+        ctx.fillText(`보유: 0주 | 수익률: ${rateSign}${totalProfitRate.toFixed(2)}% | 실현손익: ${profitSign}${totalProfit.toLocaleString()}원`, 10, 15);
+      }
+    }
+
     // MA 색상 매핑
     const maColors: Record<number, string> = {
       5: '#9C27B0',
@@ -2272,10 +2357,13 @@ const algorithms = async (dataPlan: DataPlan) => {
           ctx.textAlign = 'center';
           ctx.fillText('▲', x, topChartY + 20);
 
-          // 'B' 레이블 (화살표 안쪽)
+          // 레이블 결정 (피라미딩 여부)
+          const buyLabel = tx.isPyramiding ? '+b' : 'b';
+          
+          // 레이블 (화살표 안쪽)
           ctx.fillStyle = '#FFFFFF';
           ctx.font = 'bold 7px Arial';
-          ctx.fillText('B', x, topChartY + 16);
+          ctx.fillText(buyLabel, x, topChartY + 16);
           
           // 보유 수량 표시 (화살표 위쪽, 세로로 회전)
           ctx.save();
@@ -2373,8 +2461,10 @@ const algorithms = async (dataPlan: DataPlan) => {
 
 const dataPlan: DataPlan = {
   interval: '1d',
-  from: '2025-05-01',
-  to: '2025-12-31'
+  dataFrom: '2025-04-01',  // 데이터 수집 시작 (MA50 계산을 위해 1개월 더 일찍)
+  dataTo: '2026-01-02',    // 데이터 수집 종료
+  algoFrom: '2025-05-01',  // 알고리즘 실행 시작
+  algoTo: '2026-01-02'     // 알고리즘 실행 종료
 };
 
 export default {
