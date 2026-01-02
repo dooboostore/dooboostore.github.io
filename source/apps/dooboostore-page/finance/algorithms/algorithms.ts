@@ -244,7 +244,7 @@ const algorithms = async (dataPlan: DataPlan) => {
       consecutiveLossProtection: false, // 연속 손실 방지
       positionSizing: false,      // 자금 관리 (잔고의 10%씩)
       volumeStrengthFilter: false, // 거래량 강도 필터
-      slopeFilter: true,         // 기울기 필터
+      slopeFilter: false,         // 기울기 필터
       obvFilter: false,           // OBV 필터
       rsiFilter: false,           // RSI 필터
       macdFilter: false,          // MACD 필터 (모멘텀)
@@ -304,6 +304,9 @@ const algorithms = async (dataPlan: DataPlan) => {
 
   // 심볼별 마지막 매도 가격 추적 (데드크로스 추가 매도용)
   const symbolLastSellPrice = new Map<string, number>(); // 각 심볼의 마지막 매도 가격
+  
+  // 심볼별 골든크로스 사이클 첫 매수 여부 추적
+  const symbolGoldenCycleFirstBuy = new Map<string, boolean>(); // 각 심볼의 현재 골든크로스 사이클에서 매수했는지
 
   // 매수 가능 그룹 화이트리스트
   const buyableGroups = new Set<string>(); // 골든크로스 발생한 그룹들
@@ -325,6 +328,8 @@ const algorithms = async (dataPlan: DataPlan) => {
     profit?: number; // 매도 시 손익
     reason?: string; // 매도 이유 (TAKE_PROFIT, STOP_LOSS, DEAD_CROSS, DEAD_CROSS_ADDITIONAL, etc.)
     isPyramiding?: boolean; // 매수 시 피라미딩 여부
+    isReBuy?: boolean; // 매수 시 재매수 여부 (익절/손절 후 재매수)
+    isGoldenCrossEntry?: boolean; // 골든크로스 진입 시점 매수 여부
   };
   const transactions: Transaction[] = [];
 
@@ -353,7 +358,9 @@ const algorithms = async (dataPlan: DataPlan) => {
     rsi?: number,
     macd?: { macd: number, signal: number, histogram: number },
     bollingerBands?: { upper: number, middle: number, lower: number, percentB: number },
-    volumeAnalysis?: { volumeTrend: 'increasing' | 'decreasing' | 'neutral', priceVolumeDivergence: boolean }
+    volumeAnalysis?: { volumeTrend: 'increasing' | 'decreasing' | 'neutral', priceVolumeDivergence: boolean },
+    isReBuy: boolean = false,  // 재매수 여부
+    isGoldenCrossEntry: boolean = false  // 골든크로스 진입 시점 매수 여부
   ) => {
     // 시간 필터 체크
     if (config.features.timeFilter) {
@@ -460,29 +467,36 @@ const algorithms = async (dataPlan: DataPlan) => {
     const holding = account.holdings.get(symbol);
     
     // 피라미딩 여부는 나중에 결정 (피라미딩 체크 로직 통과 후)
+    // 골든크로스 진입 시점이면 피라미딩이 아님
     let isPyramiding = false;
 
     // 피라미딩 체크 (이미 보유 중인 경우)
     if (holding) {
-      if (!config.features.pyramiding) {
-        console.log(`    ⚠️  Already holding ${symbol}, pyramiding disabled`);
-        return;
-      }
-
-      // 여기까지 왔으면 피라미딩
-      isPyramiding = true;
-
-      // 기울기가 더 가파르면 추가 매수
-      const symbolTimeSeries = symbolTimeSeriesMap.get(symbol);
-      if (symbolTimeSeries && symbolTimeSeries.length >= 2) {
-        const prevData = symbolTimeSeries[symbolTimeSeries.length - 2];
-        const prevFromMA = prevData.ma.get(goldenCross.from);
-        if (prevFromMA && fromMA.slope <= prevFromMA.slope) {
-          console.log(`    ⚠️  Slope not increasing (${fromMA.slope.toFixed(2)}% vs ${prevFromMA.slope.toFixed(2)}%), skipping pyramiding`);
+      // 골든크로스 진입 시점이면 피라미딩이 아님 (첫 매수로 처리)
+      if (isGoldenCrossEntry) {
+        console.log(`    📈 Golden cross entry with existing position - treating as first buy, not pyramiding`);
+        isPyramiding = false;
+      } else {
+        if (!config.features.pyramiding) {
+          console.log(`    ⚠️  Already holding ${symbol}, pyramiding disabled`);
           return;
         }
+
+        // 여기까지 왔으면 피라미딩
+        isPyramiding = true;
+
+        // 기울기가 더 가파르면 추가 매수
+        const symbolTimeSeries = symbolTimeSeriesMap.get(symbol);
+        if (symbolTimeSeries && symbolTimeSeries.length >= 2) {
+          const prevData = symbolTimeSeries[symbolTimeSeries.length - 2];
+          const prevFromMA = prevData.ma.get(goldenCross.from);
+          if (prevFromMA && fromMA.slope <= prevFromMA.slope) {
+            console.log(`    ⚠️  Slope not increasing (${fromMA.slope.toFixed(2)}% vs ${prevFromMA.slope.toFixed(2)}%), skipping pyramiding`);
+            return;
+          }
+        }
+        console.log(`    📈 Pyramiding: Adding to existing position`);
       }
-      console.log(`    📈 Pyramiding: Adding to existing position`);
     }
 
     // 자금 관리: 잔고 기반 비율 투자
@@ -558,7 +572,9 @@ const algorithms = async (dataPlan: DataPlan) => {
       price,
       fees,
       total,
-      isPyramiding
+      isPyramiding,
+      isReBuy,
+      isGoldenCrossEntry
     });
 
     // 심볼별 거래 내역 저장
@@ -573,7 +589,9 @@ const algorithms = async (dataPlan: DataPlan) => {
       price,
       fees,
       total,
-      isPyramiding
+      isPyramiding,
+      isReBuy,
+      isGoldenCrossEntry
     });
 
     const pyramidingLabel = isPyramiding ? ' (Pyramiding)' : '';
@@ -1072,8 +1090,8 @@ const algorithms = async (dataPlan: DataPlan) => {
   // }
 
 
-  while (currentTime <= algoEndDate) {  // 알고리즘 종료 시점까지
-    const isAlgoActive = currentTime.getTime() >= algoStartDate.getTime();  // 거래 활성화 여부
+  while (currentTime <= dataEndDate) {  // 데이터 종료 시점까지 (차트 전체 기간)
+    const isAlgoActive = currentTime.getTime() >= algoStartDate.getTime() && currentTime.getTime() <= algoEndDate.getTime();  // 거래 활성화 여부
     
     if (isAlgoActive) {
       console.log(`\n⏰ Current time: ${currentTime.toISOString()}`);
@@ -1201,9 +1219,9 @@ const algorithms = async (dataPlan: DataPlan) => {
           }
         });
 
-        // 골든크로스 / 데드크로스 감지
+        // 골든크로스 / 데드크로스 감지 (알고리즘 활성 기간에만)
         const prevTimeSeries = symbolTimeSeries[symbolTimeSeries.length - 1];
-        if (prevTimeSeries) {
+        if (isAlgoActive && prevTimeSeries) {
           // 매 시점마다 현재 상태 계산 (데드크로스가 우선)
           const currFromMADead = maValues.get(deadCross.from);
           const currToMADead = maValues.get(deadCross.to);
@@ -1242,8 +1260,8 @@ const algorithms = async (dataPlan: DataPlan) => {
                   }
                 }
 
-                // 데드크로스 진입 시 첫 매도
-                if (account.holdings.has(symbol)) {
+                // 데드크로스 진입 시 첫 매도 (알고리즘 활성 기간에만)
+                if (isAlgoActive && account.holdings.has(symbol)) {
                   const holding = account.holdings.get(symbol)!;
                   
                   // 같은 시점에 매수한 종목은 매도 제외
@@ -1286,11 +1304,11 @@ const algorithms = async (dataPlan: DataPlan) => {
                   }
                 }
               } else {
-                // 데드크로스 상태 유지 중
+                // 데드크로스 상태 유지 중 (알고리즘 활성 기간에만 매도)
                 
                 // 먼저 below 조건 체크 (마지노선): from이 below 기준선 아래로 떨어졌는지
                 let belowConditionMet = false;
-                if (deadCross.below && deadCross.below.length > 0 && account.holdings.has(symbol)) {
+                if (isAlgoActive && deadCross.below && deadCross.below.length > 0 && account.holdings.has(symbol)) {
                   for (const belowPeriod of deadCross.below) {
                     const belowMA = maValues.get(belowPeriod);
                     if (belowMA && currFromMADead.value < belowMA.value) {
@@ -1309,8 +1327,8 @@ const algorithms = async (dataPlan: DataPlan) => {
                   }
                 }
                 
-                // below 조건으로 전량 매도하지 않았으면 추가 하락 체크
-                if (!belowConditionMet && config.features.deadCrossAdditionalSell && account.holdings.has(symbol)) {
+                // below 조건으로 전량 매도하지 않았으면 추가 하락 체크 (알고리즘 활성 기간에만)
+                if (isAlgoActive && !belowConditionMet && config.features.deadCrossAdditionalSell && account.holdings.has(symbol)) {
                   const lastSellPrice = symbolLastSellPrice.get(symbol);
                   
                   if (lastSellPrice) {
@@ -1349,14 +1367,44 @@ const algorithms = async (dataPlan: DataPlan) => {
             else if (currFromMAGolden && currToMAGolden && currFromMAGolden.value > currToMAGolden.value) {
               // 현재 골든크로스 상태
               const prevState = symbolCrossState.get(symbol);
+              
+              // 골든크로스 진입 여부 플래그
+              let isGoldenCrossEntry = false;
 
               // 골든크로스 진입 (이전에 골든이 아니었는데 지금 골든)
               if (prevState !== 'GOLDEN') {
+                isGoldenCrossEntry = true;  // 진입 플래그 설정
+                symbolGoldenCycleFirstBuy.set(symbol, false); // 새 골든크로스 사이클 시작 - 아직 매수 안함
                 const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
                 console.log(`  🌟 GOLDEN CROSS [${timeStr}]: ${symbol} - MA${goldenCross.from} (${currFromMAGolden.value.toFixed(2)}) > MA${goldenCross.to} (${currToMAGolden.value.toFixed(2)})`);
 
-                // 골든크로스 플래그 설정 (차트 표시용)
-                isSymbolGoldenCross = true;
+                // under 조건 체크
+                let underConditionMet = true;
+                if (goldenCross.under && goldenCross.under.length > 0) {
+                  for (const underPeriod of goldenCross.under) {
+                    const underMA = maValues.get(underPeriod);
+                    if (underMA && currFromMAGolden.value <= underMA.value) {
+                      underConditionMet = false;
+                      console.log(`    ⚠️  Under condition failed: MA${goldenCross.from} (${currFromMAGolden.value.toFixed(2)}) <= MA${underPeriod} (${underMA.value.toFixed(2)})`);
+                      break;
+                    }
+                  }
+                }
+
+                // 기울기 조건 체크
+                let slopeConditionMet = true;
+                if (goldenCross.minSlope !== undefined && currFromMAGolden.slope < goldenCross.minSlope) {
+                  slopeConditionMet = false;
+                  console.log(`    ⚠️  Slope condition failed: MA${goldenCross.from} slope (${currFromMAGolden.slope.toFixed(6)}) < minSlope (${goldenCross.minSlope})`);
+                }
+
+                // 모든 조건을 만족할 때만 골든크로스로 인정 (차트 표시용)
+                if (underConditionMet && slopeConditionMet) {
+                  isSymbolGoldenCross = true;
+                  console.log(`    ✅ All golden cross conditions met - marking on chart`);
+                } else {
+                  console.log(`    ⚠️  Golden cross conditions not met - not marking on chart`);
+                }
                 
                 // 마지막 매도 가격 초기화 (골든크로스로 전환되면 리셋)
                 symbolLastSellPrice.delete(symbol);
@@ -1365,9 +1413,9 @@ const algorithms = async (dataPlan: DataPlan) => {
               // 골든크로스 상태로 설정
               symbolCrossState.set(symbol, 'GOLDEN');
 
-              // 매수 조건 체크
+              // 매수 조건 체크 (알고리즘 활성 기간에만)
               // pyramiding이 활성화되어 있으면 보유 중이어도 매수 시도
-              const canBuy = !account.holdings.has(symbol) || config.features.pyramiding;
+              const canBuy = isAlgoActive && (!account.holdings.has(symbol) || config.features.pyramiding);
               
               if (canBuy) {
                 // under 조건 체크
@@ -1395,14 +1443,23 @@ const algorithms = async (dataPlan: DataPlan) => {
                   // 이전에 조건 불만족이었는지 확인 (중복 매수 방지)
                   let shouldBuy = false;
 
-                  if (prevState !== 'GOLDEN') {
+                  // prevState가 undefined이거나 GOLDEN이 아닌 경우 (골든크로스 진입 또는 첫 시작)
+                  if (isGoldenCrossEntry) {
                     // 골든크로스 진입 시점 - 조건 만족하면 매수
                     shouldBuy = true;
+                    // 골든크로스 진입 시 조건 만족하면 차트에 G 마크 표시 (이미 설정되어 있으면 유지)
+                    if (!isSymbolGoldenCross) {
+                      isSymbolGoldenCross = true;
+                      console.log(`    ✅ Golden cross entry with conditions met - marking on chart`);
+                    }
                   } else if (prevFromMAGolden && prevToMAGolden) {
                     // 골든크로스 유지 중
                     
-                    // 케이스 1: 보유하지 않음 (익절/손절 후) → 재매수
-                    if (!account.holdings.has(symbol)) {
+                    // 현재 상태가 골든크로스인지 확인 (데드크로스 상태에서는 재매수 안함)
+                    const currentState = symbolCrossState.get(symbol);
+                    
+                    // 케이스 1: 보유하지 않음 (익절/손절 후) → 재매수 (골든크로스 상태일 때만)
+                    if (!account.holdings.has(symbol) && currentState === 'GOLDEN') {
                       // 이번 시점에 판 종목은 재매수 안함 (다음 시점에 재매수)
                       if (soldSymbolsThisTime.has(symbol)) {
                         const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
@@ -1410,7 +1467,15 @@ const algorithms = async (dataPlan: DataPlan) => {
                       } else {
                         shouldBuy = true;
                         const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
-                        console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - No holdings in golden cross state`);
+                        
+                        // 골든크로스 사이클에서 첫 매수인 경우 G 마크 표시
+                        const hasFirstBuyInCycle = symbolGoldenCycleFirstBuy.get(symbol) || false;
+                        if (!hasFirstBuyInCycle && !isSymbolGoldenCross) {
+                          isSymbolGoldenCross = true;
+                          console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - First buy in golden cross cycle (label: "b") - marking G on chart`);
+                        } else {
+                          console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - No holdings in golden cross state (RE-BUY, label: "!b")`);
+                        }
                       }
                     }
                     // 케이스 2: 이전에 조건 불만족이었다가 지금 만족 (피라미딩)
@@ -1435,31 +1500,51 @@ const algorithms = async (dataPlan: DataPlan) => {
                         shouldBuy = true;
                         const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
                         console.log(`  ✨ CONDITIONS MET [${timeStr}]: ${symbol} - Conditions satisfied while in golden cross state`);
+                        
+                        // 골든크로스 사이클에서 첫 매수인 경우 G 마크 표시 (이미 설정되어 있으면 유지)
+                        const hasFirstBuyInCycle = symbolGoldenCycleFirstBuy.get(symbol) || false;
+                        if (!hasFirstBuyInCycle && !isSymbolGoldenCross) {
+                          isSymbolGoldenCross = true;
+                          console.log(`    ✅ First buy in golden cross cycle - marking on chart`);
+                        }
                         // 피라미딩은 골든크로스 마크 표시 안 함
                       }
                     }
                   }
 
                   if (shouldBuy) {
-                    // 종목이 속한 그룹 찾기
-                    const symbolGroup = groups.find(g => g.symbols.includes(symbol));
-                    if (symbolGroup) {
-                      let bought = false;
-                      if (config.features.onlySymbolGoldenCross) {
-                        console.log(`    ✅ onlySymbolGoldenCross enabled, attempting buy without group check`);
-                        bought = buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis);
-                      } else {
-                        if (buyableGroups.has(symbolGroup.group)) {
-                          console.log(`    ✅ Group ${symbolGroup.label} is in buyable list, attempting buy`);
-                          bought = buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis);
+                    // 이번 시점에 이미 매수한 종목은 스킵 (중복 매수 방지)
+                    if (boughtSymbolsThisTime.has(symbol)) {
+                      const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+                      console.log(`  ⏭️  SKIP BUY [${timeStr}]: ${symbol} - Already bought in this time point`);
+                    } else {
+                      // 종목이 속한 그룹 찾기
+                      const symbolGroup = groups.find(g => g.symbols.includes(symbol));
+                      if (symbolGroup) {
+                        // 재매수 여부 판단:
+                        // - 골든크로스 사이클에서 첫 매수: isReBuy: false (라벨 "b")
+                        // - 골든크로스 사이클에서 재매수: isReBuy: true (라벨 "!b")
+                        const hasFirstBuyInCycle = symbolGoldenCycleFirstBuy.get(symbol) || false;
+                        const isReBuy = hasFirstBuyInCycle && !account.holdings.has(symbol);
+                        
+                        let bought = false;
+                        if (config.features.onlySymbolGoldenCross) {
+                          console.log(`    ✅ onlySymbolGoldenCross enabled, attempting buy without group check (isReBuy: ${isReBuy}, hasFirstBuy: ${hasFirstBuyInCycle}, isGoldenCrossEntry: ${isGoldenCrossEntry})`);
+                          bought = buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis, isReBuy, isGoldenCrossEntry);
                         } else {
-                          console.log(`    ⚠️  Group ${symbolGroup.label} is NOT in buyable list, skipping buy`);
+                          if (buyableGroups.has(symbolGroup.group)) {
+                            console.log(`    ✅ Group ${symbolGroup.label} is in buyable list, attempting buy (isReBuy: ${isReBuy}, hasFirstBuy: ${hasFirstBuyInCycle}, isGoldenCrossEntry: ${isGoldenCrossEntry})`);
+                            bought = buyStock(symbol, symbolGroup, currentTime, changeRate, volumeStrength, currFromMAGolden, currToMAGolden, obvSlope, rsi || undefined, macd || undefined, bollingerBands || undefined, volumeAnalysis, isReBuy, isGoldenCrossEntry);
+                          } else {
+                            console.log(`    ⚠️  Group ${symbolGroup.label} is NOT in buyable list, skipping buy`);
+                          }
                         }
-                      }
-                      
-                      // 매수 성공 시 이번 시점 매수 목록에 추가
-                      if (bought) {
-                        boughtSymbolsThisTime.add(symbol);
+                        
+                        // 매수 성공 시 이번 시점 매수 목록에 추가 + 골든크로스 사이클 첫 매수 플래그 설정
+                        if (bought) {
+                          boughtSymbolsThisTime.add(symbol);
+                          symbolGoldenCycleFirstBuy.set(symbol, true); // 이 골든크로스 사이클에서 매수했음
+                        }
                       }
                     }
                   }
@@ -1534,9 +1619,9 @@ const algorithms = async (dataPlan: DataPlan) => {
           }
         });
 
-        // 골든크로스 / 데드크로스 감지 (그룹) - 화이트리스트 관리
+        // 골든크로스 / 데드크로스 감지 (그룹) - 화이트리스트 관리 (알고리즘 활성 기간에만)
         const prevGroupTimeSeries = groupTimeSeries[groupTimeSeries.length - 1];
-        if (prevGroupTimeSeries) {
+        if (isAlgoActive && prevGroupTimeSeries) {
           // 골든크로스 체크
           const prevFromMAGolden = prevGroupTimeSeries.ma.get(goldenCross.from);
           const prevToMAGolden = prevGroupTimeSeries.ma.get(goldenCross.to);
@@ -1556,8 +1641,9 @@ const algorithms = async (dataPlan: DataPlan) => {
               // 골든크로스 표시
               isGoldenCross = true;
 
-              // 그룹 골든크로스 발생 시, 이미 골든크로스 상태인 심볼들 매수
-              console.log(`    🔍 Checking for symbols already in golden cross state...`);
+              // 그룹 골든크로스 발생 시, 이미 골든크로스 상태인 심볼들 매수 (알고리즘 활성 기간에만)
+              if (isAlgoActive) {
+                console.log(`    🔍 Checking for symbols already in golden cross state...`);
               const symbolsToBuy: { symbol: string, changeRate: number, volumeStrength: number, fromMA: { value: number, slope: number }, toMA: { value: number, slope: number }, obvSlope: number, rsi?: number, macd?: { macd: number, signal: number, histogram: number }, bollingerBands?: { upper: number, middle: number, lower: number, percentB: number }, volumeAnalysis?: { volumeTrend: 'increasing' | 'decreasing' | 'neutral', priceVolumeDivergence: boolean }, score: number }[] = [];
 
               group.symbols.forEach(symbol => {
@@ -1673,7 +1759,8 @@ const algorithms = async (dataPlan: DataPlan) => {
                     return;
                   }
                   
-                  const bought = buyStock(item.symbol, group, currentTime, item.changeRate, item.volumeStrength, item.fromMA, item.toMA, item.obvSlope, item.rsi, item.macd, item.bollingerBands, item.volumeAnalysis);
+                  // 그룹 골든크로스 매수는 피라미딩이므로 isReBuy: false
+                  const bought = buyStock(item.symbol, group, currentTime, item.changeRate, item.volumeStrength, item.fromMA, item.toMA, item.obvSlope, item.rsi, item.macd, item.bollingerBands, item.volumeAnalysis, false);
                   
                   // 매수 성공 시 이번 시점 매수 목록에 추가
                   if (bought) {
@@ -1682,6 +1769,9 @@ const algorithms = async (dataPlan: DataPlan) => {
                 });
               } else {
                 console.log(`    ⚠️  No symbols in golden cross state found`);
+              }
+              } else {
+                console.log(`    ⏸️  Skipping group golden cross buy - Algorithm not active yet`);
               }
             }
           }
@@ -2357,8 +2447,17 @@ const algorithms = async (dataPlan: DataPlan) => {
           ctx.textAlign = 'center';
           ctx.fillText('▲', x, topChartY + 20);
 
-          // 레이블 결정 (피라미딩 여부)
-          const buyLabel = tx.isPyramiding ? '+b' : 'b';
+          // 레이블 결정
+          // 우선순위: 골든크로스 진입 > 피라미딩 > 재매수
+          let buyLabel = 'b';
+          if (tx.isGoldenCrossEntry) {
+            buyLabel = 'b';  // 골든크로스 진입 시점 첫 매수 (최우선)
+          } else if (tx.isPyramiding) {
+            buyLabel = '+b';  // 추가매수 (피라미딩)
+          } else if (tx.isReBuy) {
+            buyLabel = '!b';  // 재매수 (익절/손절 후)
+          }
+          // else: 'b' (골든크로스 첫 매수)
           
           // 레이블 (화살표 안쪽)
           ctx.fillStyle = '#FFFFFF';
@@ -2441,7 +2540,9 @@ const algorithms = async (dataPlan: DataPlan) => {
   groups.forEach(group => {
     const timeSeries = groupTimeSeriesMap.get(group.group);
     if (timeSeries) {
-      createChart(group.label, timeSeries, `group-${group.group}.png`);
+      // 알고리즘 시작일부터 필터링
+      const filteredTimeSeries = timeSeries.filter(t => t.time.getTime() >= algoStartDate.getTime());
+      createChart(group.label, filteredTimeSeries, `group-${group.group}.png`);
     }
   });
 
@@ -2449,10 +2550,12 @@ const algorithms = async (dataPlan: DataPlan) => {
   console.log('\n📊 Generating symbol charts...');
   symbolTimeSeriesMap.forEach((timeSeries, symbol) => {
     if (timeSeries && timeSeries.length > 0) {
+      // 알고리즘 시작일부터 필터링
+      const filteredTimeSeries = timeSeries.filter(t => t.time.getTime() >= algoStartDate.getTime());
       const symbolTxs = symbolTransactionsMap.get(symbol) || [];
       const label = tickerLabelMap.get(symbol) || symbol;
       const title = `${label} (${symbol})`;
-      createChart(title, timeSeries, `symbol-${symbol}.png`, symbolTxs);
+      createChart(title, filteredTimeSeries, `symbol-${symbol}.png`, symbolTxs);
     }
   });
 
