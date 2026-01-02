@@ -240,7 +240,7 @@ const algorithms = async (dataPlan: DataPlan) => {
       consecutiveLossProtection: false, // 연속 손실 방지
       positionSizing: false,      // 자금 관리 (잔고의 10%씩)
       volumeStrengthFilter: false, // 거래량 강도 필터
-      slopeFilter: false,         // 기울기 필터
+      slopeFilter: true,         // 기울기 필터
       obvFilter: false,           // OBV 필터
       rsiFilter: false,           // RSI 필터
       macdFilter: false,          // MACD 필터 (모멘텀)
@@ -254,7 +254,7 @@ const algorithms = async (dataPlan: DataPlan) => {
       stockRate: 0.10,  // 잔고의 1%씩 투자
       stockSize: 100,  // [DEPRECATED] 고정 주식 수 (stockRate 사용 시 무시됨)
       minVolumeStrength: 50, // 최소 거래량 강도 50% (더 강한 신호)
-      minSlope: 0, // 최소 기울기
+      minSlope: 0.01, // 최소 기울기
       maxMaGap: 0.05, // MA 간격 최대 5% (너무 벌어지면 늦음)
       positionSizePercent: 0.1, // 잔고의 10%씩 투자
       minObvSlope: 0, // 최소 OBV 기울기 (양수면 OBV 상승 중)
@@ -272,7 +272,7 @@ const algorithms = async (dataPlan: DataPlan) => {
       stockRate: 0.5,  // 보유 주식의 50%씩 매도 (0.1 = 10%, 0.5 = 50%, 1.0 = 100%)
       additionalSellThreshold: 0.01, // 추가 매도 기준: 이전 매도 대비 1% 추가 하락
       stopLoss: -0.10, // -x% 손절  (손절은 dead cross일떄에만)
-      takeProfit: 0.10, // +x% 익절
+      takeProfit: 0.50, // +x% 익절
       trailingStopPercent: 0.02 // 최고가 대비 -2% 트레일링 스톱
     },
     timeFilter: {
@@ -292,7 +292,7 @@ const algorithms = async (dataPlan: DataPlan) => {
   const INITIAL_BALANCE = 300000000; // 초기 잔고 3억원
   const account = {
     balance: INITIAL_BALANCE,
-    holdings: new Map<string, { quantity: number, avgPrice: number, maxPrice: number }>() // 보유 종목 (종목코드 -> {수량, 평균단가, 최고가})
+    holdings: new Map<string, { quantity: number, avgPrice: number, maxPrice: number, buyTime: Date }>() // 보유 종목 (종목코드 -> {수량, 평균단가, 최고가, 매수시간})
   };
 
   // 심볼별 크로스 상태 추적
@@ -532,9 +532,10 @@ const algorithms = async (dataPlan: DataPlan) => {
       holding.quantity = totalQuantity;
       holding.avgPrice = totalCost / totalQuantity;
       holding.maxPrice = Math.max(holding.maxPrice, price);
+      holding.buyTime = new Date(currentTime); // 피라미딩 시 매수 시간 갱신
     } else {
       // 신규 매수
-      account.holdings.set(symbol, { quantity, avgPrice: price, maxPrice: price });
+      account.holdings.set(symbol, { quantity, avgPrice: price, maxPrice: price, buyTime: new Date(currentTime) });
     }
 
     // 거래 내역 저장
@@ -686,10 +687,15 @@ const algorithms = async (dataPlan: DataPlan) => {
 
   // 손절/익절 체크 함수 (이번 시점에 판 종목 리스트 반환)
   const checkStopLossAndTakeProfit = (currentTime: Date): Set<string> => {
-    const toSell: { symbol: string, reason: string, price: number, holding: { quantity: number, avgPrice: number, maxPrice: number } }[] = [];
+    const toSell: { symbol: string, reason: string, price: number, holding: { quantity: number, avgPrice: number, maxPrice: number, buyTime: Date } }[] = [];
     const soldSymbols = new Set<string>(); // 이번 시점에 판 종목들
 
     account.holdings.forEach((holding, symbol) => {
+      // 같은 시점에 매수한 종목은 익절/손절 체크 제외
+      if (holding.buyTime.getTime() === currentTime.getTime()) {
+        return; // 스킵
+      }
+      
       const symbolData = symbols.get(symbol);
       if (!symbolData) return;
 
@@ -714,14 +720,16 @@ const algorithms = async (dataPlan: DataPlan) => {
         console.log(`  [DEBUG] ${symbol} profit check: ${(profitRate * 100).toFixed(2)}% (state: ${currentState}, takeProfit enabled: ${config.features.takeProfit})`);
       }
 
-      // 손절 체크 (기능 활성화 시에만) - 항상 체크
-      if (config.features.stopLoss && profitRate <= config.sell.stopLoss) {
+      const currentState = symbolCrossState.get(symbol);
+      
+      // 손절 체크 (기능 활성화 시에만) - 데드크로스 상태에서만 (최우선)
+      if (config.features.stopLoss && currentState === 'DEAD' && profitRate <= config.sell.stopLoss) {
         if (symbol === '066970.KS') {
           console.log(`  [DEBUG] ${symbol} STOP LOSS triggered!`);
         }
         toSell.push({ symbol, reason: 'STOP_LOSS', price: currentPrice, holding });
       }
-      // 익절 체크 (기능 활성화 시에만) - 항상 체크
+      // 익절 체크 (기능 활성화 시에만) - 항상 체크 (손절이 없을 때만)
       else if (config.features.takeProfit && profitRate >= config.sell.takeProfit) {
         if (symbol === '066970.KS') {
           console.log(`  [DEBUG] ${symbol} TAKE PROFIT triggered! ${(profitRate * 100).toFixed(2)}% >= ${(config.sell.takeProfit * 100).toFixed(2)}%`);
@@ -1217,23 +1225,44 @@ const algorithms = async (dataPlan: DataPlan) => {
 
                 // 데드크로스 진입 시 첫 매도
                 if (account.holdings.has(symbol)) {
-                  if (belowConditionMet) {
-                    console.log(`    ✅ Holding detected, FULL SELL due to below threshold`);
-                    sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS_BELOW', true); // 전량 매도
-                  } else {
-                    console.log(`    ✅ Holding detected, first sell on dead cross entry`);
-                    sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS');
+                  const holding = account.holdings.get(symbol)!;
+                  
+                  // 같은 시점에 매수한 종목은 매도 제외
+                  if (holding.buyTime.getTime() === currentTime.getTime()) {
+                    console.log(`    ⚠️  Bought at same time, skipping dead cross sell`);
+                    return; // 이 심볼은 스킵
                   }
                   
-                  // 마지막 매도 가격 기록
                   const symbolData = symbols.get(symbol);
+                  
                   if (symbolData) {
                     const quotesUntilNow = symbolData.quotes.filter(q =>
                       q.date.getTime() <= currentTime.getTime() && q.close !== null && q.close !== undefined
                     );
                     const currentQuote = quotesUntilNow[quotesUntilNow.length - 1];
+                    
                     if (currentQuote && currentQuote.close) {
-                      symbolLastSellPrice.set(symbol, currentQuote.close);
+                      const currentPrice = currentQuote.close;
+                      const profitRate = (currentPrice - holding.avgPrice) / holding.avgPrice;
+                      
+                      // 손절 조건 체크 (최우선)
+                      if (config.features.stopLoss && profitRate <= config.sell.stopLoss) {
+                        console.log(`    🛑 STOP LOSS condition met (${(profitRate * 100).toFixed(2)}%), FULL SELL!`);
+                        sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'STOP_LOSS', true); // 전량 손절
+                      }
+                      // below 조건 체크 (마지노선)
+                      else if (belowConditionMet) {
+                        console.log(`    ✅ Holding detected, FULL SELL due to below threshold`);
+                        sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS_BELOW', true); // 전량 매도
+                      }
+                      // 일반 데드크로스 첫 매도
+                      else {
+                        console.log(`    ✅ Holding detected, first sell on dead cross entry`);
+                        sellStock(symbol, currentTime, changeRate, volumeStrength, currFromMADead, currToMADead, 'DEAD_CROSS');
+                      }
+                      
+                      // 마지막 매도 가격 기록
+                      symbolLastSellPrice.set(symbol, currentPrice);
                     }
                   }
                 }
