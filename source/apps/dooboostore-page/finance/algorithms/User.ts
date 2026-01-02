@@ -68,12 +68,12 @@ export class User {
       moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
       slopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
       moreSlopeThresholdRate: 0.04 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 slopeThresholdRate 사용)
-      stopLossRate: 0.02, // 손절 비율 (0~1, 예: 0.02 = 2%)  undefined 이면 손절 안함
+      stopLossRate: 0.10, // 손절 비율 (0~1, 예: 0.10 = 10%)  undefined 이면 손절 안함
       groupCrossCheck: false, // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
       // 익절 설정 (피라미딩 익절)
       takeProfit: {// 평균 매수가(avgPrice) 대비 현재가의 수익률로 익절 판단해
-        thresholdRate: 0.02, // 첫 익절 기준 수익률 (10%)
-        moreThresholdRate: 0.1, // 추가 익절 간격 (10%씩, 즉 20%, 30%, 40%...)
+        thresholdRate: 0.05, // 첫 익절 기준 수익률 (10%)
+        moreThresholdRate: 0.05, // 추가 익절 간격 (10%씩, 즉 20%, 30%, 40%...)
         rate: 0.3, // 첫 익절 매도 비율 (30%)
         moreRate: 0.3 // 추가 익절 매도 비율 (30%)
       }

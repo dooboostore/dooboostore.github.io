@@ -818,6 +818,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     console.log(`\n📦 보유 종목:`);
     user.account.holdings.forEach((holding, symbol) => {
       const symbolData = algoSymbols.get(symbol);
+      const label = symbolData?.label || symbol;
       let currentPrice = holding.avgPrice;
       let profitRate = 0;
       if (symbolData && symbolData.quotes.length > 0) {
@@ -825,7 +826,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         profitRate = ((currentPrice - holding.avgPrice) / holding.avgPrice * 100);
       }
       const evalValue = holding.quantity * currentPrice;
-      console.log(`   ${symbol}: ${holding.quantity}주 @ 평균 ${holding.avgPrice.toLocaleString()}원 → 현재 ${currentPrice.toLocaleString()}원 (${profitRate >= 0 ? '+' : ''}${profitRate.toFixed(2)}%, ${evalValue.toLocaleString()}원)`);
+      console.log(`   ${symbol} (${label}): ${holding.quantity}주 @ 평균 ${holding.avgPrice.toLocaleString()}원 → 현재 ${currentPrice.toLocaleString()}원 (${profitRate >= 0 ? '+' : ''}${profitRate.toFixed(2)}%, ${evalValue.toLocaleString()}원)`);
     });
   }
   
@@ -885,6 +886,13 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
   console.log('✅ All charts generated');
 };
 
+// const dataPlan: DataPlan = {
+//   interval: '1d',
+//   dataFrom: '2025-07-01T00:00:00+09:00', // 데이터 수집 시작 (6개월 전)
+//   dataTo: '2026-01-03T00:00:00+09:00', // 데이터 수집 종료
+//   algoFrom: '2025-10-01T00:00:00+09:00', // 알고리즘 실행 시작 (3개월 전)
+//   algoTo: '2026-01-03T00:00:00+09:00' // 알고리즘 실행 종료
+// };
 const dataPlan: DataPlan = {
   interval: '5m',
   dataFrom: '2025-12-20T09:00:00+09:00', // 데이터 수집 시작 (5분봉은 최대 60일)
