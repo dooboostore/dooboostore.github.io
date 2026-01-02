@@ -304,7 +304,7 @@ export class TradeChart {
   }
 
   private drawSummary(): void {
-    if (!this.summary || this.isGroup) return;
+    if (!this.summary) return;
     
     const { ctx, width, padding } = this;
     const { totalHolding, totalProfitRate, totalProfit } = this.summary;

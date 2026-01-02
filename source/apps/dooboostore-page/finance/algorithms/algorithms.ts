@@ -2,7 +2,7 @@ import { join } from 'path';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { YahooFinanceBrowser, ChartResult, ChartQuote } from '../service/YahooFinanceBrowserService';
 import { calculateMA, calculateRSI, calculateMACD, calculateBollingerBands, analyzeVolume, checkGoldenCross, checkDeadCross } from './calc';
-import type { DataPlan, Group, TickData, SymbolSnapshot } from './types';
+import type { DataPlan, Group, TickData, SymbolSnapshot, Transaction } from './types';
 import { User } from './User';
 import { createChart, type ChartContext } from './chart';
 import { TradeChart, ChartDataPoint } from './TradeChart';
@@ -559,7 +559,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       q => q.date.getTime() >= algoStartDate.getTime() && q.date.getTime() <= algoEndDate.getTime()
     );
 
-    if (filteredQuotes.length > 0 && basePrice > 0) {
+    if (filteredQuotes.length > 0 && (symbolData.isGroup || basePrice > 0)) {
       // 기준가 대비 등락률로 보정 (이평선도 같이 보정)
       // 거래량 등락률은 이전 봉 대비라서 보정 불필요
       const adjustedQuotes = filteredQuotes.map(q => {
@@ -869,19 +869,60 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       crossStatus: q.crossStatus // 크로스 상태
     }));
 
-    // 해당 심볼의 거래 내역
-    const symbolTransactions = user.symbolTransactionsMap.get(key) || [];
-    
-    // 요약 정보 계산
-    const holding = user.account.getHolding(key);
-    const totalHolding = holding?.quantity || 0;
-    const lastPrice = chartData.length > 0 ? chartData[chartData.length - 1].actualClose || 0 : 0;
-    const avgPrice = holding?.avgPrice || 0;
-    const totalProfitRate = avgPrice > 0 ? ((lastPrice - avgPrice) / avgPrice) * 100 : 0;
-    const totalProfit = totalHolding * (lastPrice - avgPrice);
+    let symbolTransactions: Transaction[] = [];
+    let totalHolding = 0;
+    let totalProfitRate = 0;
+    let totalProfit = 0;
+
+    if (symbolData.isGroup) {
+      // 그룹: 해당 그룹에 속한 모든 심볼의 거래 내역 합치기
+      const group = user.groups.find(g => g.group === key);
+      if (group) {
+        group.symbols.forEach(symbol => {
+          const txs = user.symbolTransactionsMap.get(symbol) || [];
+          symbolTransactions.push(...txs);
+        });
+        // 시간순 정렬
+        symbolTransactions.sort((a, b) => a.time.getTime() - b.time.getTime());
+
+        // 그룹 요약: 해당 그룹 심볼들의 보유량, 수익 합계
+        group.symbols.forEach(symbol => {
+          const holding = user.account.getHolding(symbol);
+          if (holding && holding.quantity > 0) {
+            const symbolQuotes = algoSymbols.get(symbol)?.quotes;
+            const lastPrice = symbolQuotes && symbolQuotes.length > 0 ? symbolQuotes[symbolQuotes.length - 1].close || 0 : 0;
+            totalHolding += holding.quantity;
+            totalProfit += holding.quantity * (lastPrice - holding.avgPrice);
+          }
+        });
+        // 그룹 수익률은 총 수익 / 총 투자금액으로 계산 (간단히 수익금만 표시)
+        totalProfitRate = 0; // 그룹은 수익률 계산이 복잡해서 생략
+      }
+    } else {
+      // 심볼: 해당 심볼의 거래 내역
+      symbolTransactions = user.symbolTransactionsMap.get(key) || [];
+      
+      // 요약 정보 계산
+      const holding = user.account.getHolding(key);
+      totalHolding = holding?.quantity || 0;
+      const lastPrice = chartData.length > 0 ? chartData[chartData.length - 1].actualClose || 0 : 0;
+      const avgPrice = holding?.avgPrice || 0;
+      totalProfitRate = avgPrice > 0 ? ((lastPrice - avgPrice) / avgPrice) * 100 : 0;
+      totalProfit = totalHolding * (lastPrice - avgPrice);
+    }
+
+    // 타이틀 생성
+    let title = `${symbolData.label} ${key}`;
+    if (symbolData.isGroup) {
+      const group = user.groups.find(g => g.group === key);
+      const symbolCount = group?.symbols.length || 0;
+      title += ` (Group, ${symbolCount} symbols)`;
+    } else {
+      title += ' (Symbol)';
+    }
 
     const chart = new TradeChart()
-      .setTitle(`${symbolData.label} ${key} (${symbolData.isGroup ? 'Group' : 'Symbol'})`)
+      .setTitle(title)
       .setData(chartData)
       .setMAPeriods(user.maPeriods)
       .setIsGroup(symbolData.isGroup)
