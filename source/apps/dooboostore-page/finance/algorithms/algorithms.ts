@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { YahooFinanceBrowser, ChartResult, ChartQuote } from '../service/YahooFinanceBrowserService';
-import { calculateMA, calculateRSI, calculateMACD, calculateBollingerBands, analyzeVolume, checkGoldenCross, checkDeadCross } from './calc';
+import { calculateMA, calculateRSI, calculateMACD, calculateBollingerBands, analyzeVolume, checkGoldenCross, checkDeadCross, calculateOBV } from './calc';
 import type { DataPlan, Group, TickData, SymbolSnapshot, Transaction } from './types';
 import { User } from './User';
 import { createChart, type ChartContext } from './chart';
@@ -225,6 +225,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     volumeMA: Map<number, number>; // 거래량 등락률 이평선
     maSlope: Map<number, number>; // 이전 봉 대비 이평선 값 변화
     crossStatus?: 'GOLDEN' | 'DEAD'; // 크로스 상태 (발생 후 유지)
+    obv: number; // OBV (On-Balance Volume)
   };
 
   type SymbolData = { label: string; open: number; openVolume: number; isGroup: boolean; quotes: ExtendedQuote[] };
@@ -304,6 +305,11 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               }
             });
 
+            // OBV 계산
+            const closes = filteredQuotes.slice(0, index + 1).map(q => q.close!);
+            const volumes = filteredQuotes.slice(0, index + 1).map(q => q.volume || 0);
+            const obv = calculateOBV(closes, volumes, index);
+
             return {
               ...quote,
               openChangeRate,
@@ -316,7 +322,8 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               priceMA,
               volumeMA,
               maSlope: new Map<number, number>(), // 나중에 계산
-              crossStatus: undefined
+              crossStatus: undefined,
+              obv
             };
           });
 
@@ -476,7 +483,8 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         volumeSlope: 0, // 나중에 계산
         priceMA: new Map<number, number>(), // 나중에 계산
         volumeMA: new Map<number, number>(), // 나중에 계산
-        maSlope: new Map<number, number>() // 나중에 계산
+        maSlope: new Map<number, number>(), // 나중에 계산
+        obv: 0 // 그룹은 OBV 없음
       });
     }
 
@@ -867,6 +875,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       ma: q.priceMA,
       actualClose: q.close, // 실제 종가
       actualVolume: q.volume, // 실제 거래량
+      obv: q.obv, // OBV
       crossStatus: q.crossStatus // 크로스 상태
     }));
 

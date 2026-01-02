@@ -222,6 +222,30 @@ export const calculateOBVSlope = (obvValues: number[], period: number = 5): numb
 };
 
 /**
+ * OBV(On Balance Volume) 계산
+ * @param closes 종가 배열
+ * @param volumes 거래량 배열
+ * @param currentIndex 현재 인덱스
+ * @returns OBV 값
+ */
+export const calculateOBV = (closes: number[], volumes: number[], currentIndex: number): number => {
+  if (currentIndex < 0 || closes.length === 0) return 0;
+  
+  let obv = volumes[0] || 0;
+  
+  for (let i = 1; i <= currentIndex && i < closes.length; i++) {
+    if (closes[i] > closes[i - 1]) {
+      obv += volumes[i] || 0;
+    } else if (closes[i] < closes[i - 1]) {
+      obv -= volumes[i] || 0;
+    }
+    // closes[i] === closes[i-1] 이면 OBV 변화 없음
+  }
+  
+  return obv;
+};
+
+/**
  * 변동률 계산
  * @param currentPrice 현재 가격
  * @param previousPrice 이전 가격
