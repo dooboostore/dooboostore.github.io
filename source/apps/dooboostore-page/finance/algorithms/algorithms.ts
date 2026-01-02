@@ -776,8 +776,41 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     currentTime = new Date(currentTime.getTime() + timelineInterval);
   }
   
+  console.log('\n' + '='.repeat(60));
   console.log('✅ Trading simulation completed');
-  console.log(`Final balance: ${user.account.balance.toLocaleString()}원`);
+  console.log('='.repeat(60));
+  
+  // 거래 내역 요약
+  const transactions = user.account.transactions;
+  const buyTxs = transactions.filter(tx => tx.type === 'BUY');
+  const sellTxs = transactions.filter(tx => tx.type === 'SELL');
+  
+  const totalBuyAmount = buyTxs.reduce((sum, tx) => sum + tx.total, 0);
+  const totalSellAmount = sellTxs.reduce((sum, tx) => sum + tx.total, 0);
+  const totalProfit = sellTxs.reduce((sum, tx) => sum + (tx.profit || 0), 0);
+  const totalFees = transactions.reduce((sum, tx) => sum + tx.fees, 0);
+  
+  console.log(`\n📊 거래 요약:`);
+  console.log(`   초기 잔고: ${user.account.initialBalance.toLocaleString()}원`);
+  console.log(`   최종 잔고: ${user.account.balance.toLocaleString()}원`);
+  console.log(`   매수 횟수: ${buyTxs.length}회 (총 ${totalBuyAmount.toLocaleString()}원)`);
+  console.log(`   매도 횟수: ${sellTxs.length}회 (총 ${totalSellAmount.toLocaleString()}원)`);
+  console.log(`   실현 손익: ${totalProfit.toLocaleString()}원`);
+  console.log(`   총 수수료: ${totalFees.toLocaleString()}원`);
+  
+  // 보유 종목
+  if (user.account.holdings.size > 0) {
+    console.log(`\n📦 보유 종목:`);
+    user.account.holdings.forEach((holding, symbol) => {
+      console.log(`   ${symbol}: ${holding.quantity}주 @ 평균 ${holding.avgPrice.toLocaleString()}원`);
+    });
+  }
+  
+  // 수익률 계산
+  const returnRate = ((user.account.balance - user.account.initialBalance) / user.account.initialBalance * 100).toFixed(2);
+  console.log(`\n📈 수익률: ${returnRate}%`);
+  console.log('='.repeat(60));
+
 
   // 테스트로 그래프 그려보기
   const outputDir = join(__dirname, '../../../../datas/finance/output');
@@ -802,11 +835,24 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       crossStatus: q.crossStatus // 크로스 상태
     }));
 
+    // 해당 심볼의 거래 내역
+    const symbolTransactions = user.symbolTransactionsMap.get(key) || [];
+    
+    // 요약 정보 계산
+    const holding = user.account.getHolding(key);
+    const totalHolding = holding?.quantity || 0;
+    const lastPrice = chartData.length > 0 ? chartData[chartData.length - 1].actualClose || 0 : 0;
+    const avgPrice = holding?.avgPrice || 0;
+    const totalProfitRate = avgPrice > 0 ? ((lastPrice - avgPrice) / avgPrice) * 100 : 0;
+    const totalProfit = totalHolding * (lastPrice - avgPrice);
+
     const chart = new TradeChart()
       .setTitle(`${symbolData.label} ${key} (${symbolData.isGroup ? 'Group' : 'Symbol'})`)
       .setData(chartData)
       .setMAPeriods(user.maPeriods)
       .setIsGroup(symbolData.isGroup)
+      .setTransactions(symbolTransactions)
+      .setSummary(totalHolding, totalProfitRate, totalProfit)
       .draw();
 
     const filename = symbolData.isGroup ? `group-${key}.png` : `symbol-${key}.png`;

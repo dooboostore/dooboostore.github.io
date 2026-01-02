@@ -1,4 +1,5 @@
 import { createCanvas, Canvas, CanvasRenderingContext2D } from 'canvas';
+import type { Transaction } from './types';
 
 // 데이터 포인트 타입 (캔들용 OHLC + 거래량)
 export type ChartDataPoint = {
@@ -36,6 +37,8 @@ export class TradeChart {
   private data: ChartDataPoint[] = [];
   private maPeriods: number[] = [];
   private isGroup: boolean = false;
+  private transactions: Transaction[] = [];
+  private summary: { totalHolding: number; totalProfitRate: number; totalProfit: number } | null = null;
 
   constructor() {
     this.canvas = createCanvas(this.width * this.scale, this.height * this.scale);
@@ -60,6 +63,16 @@ export class TradeChart {
 
   setIsGroup(isGroup: boolean): this {
     this.isGroup = isGroup;
+    return this;
+  }
+
+  setTransactions(transactions: Transaction[]): this {
+    this.transactions = transactions;
+    return this;
+  }
+
+  setSummary(totalHolding: number, totalProfitRate: number, totalProfit: number): this {
+    this.summary = { totalHolding, totalProfitRate, totalProfit };
     return this;
   }
 
@@ -207,11 +220,17 @@ export class TradeChart {
     // 범례
     this.drawLegend();
 
+    // 요약 정보 (오른쪽 상단)
+    this.drawSummary();
+
     // X축 라벨 및 세로 그리드선
     this.drawXAxisLabels(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
 
     // 크로스 마커 그리기
     this.drawCrossMarkers(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
+
+    // 거래 마커 그리기
+    this.drawTradeMarkers(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
 
     return this;
   }
@@ -282,6 +301,30 @@ export class TradeChart {
       ctx.fillText(`MA${period}`, x + 24, y);
       x += 55;
     });
+  }
+
+  private drawSummary(): void {
+    if (!this.summary || this.isGroup) return;
+    
+    const { ctx, width, padding } = this;
+    const { totalHolding, totalProfitRate, totalProfit } = this.summary;
+    
+    const x = width - padding.right;
+    const y = padding.top - 25;
+    
+    ctx.font = '10px Arial';
+    ctx.textAlign = 'right';
+    
+    // 총 보유량
+    ctx.fillStyle = '#000000';
+    ctx.fillText(`보유: ${totalHolding.toLocaleString()}주`, x, y - 12);
+    
+    // 수익률 (양수=빨강, 음수=파랑)
+    ctx.fillStyle = totalProfitRate >= 0 ? '#D32F2F' : '#1976D2';
+    ctx.fillText(`수익률: ${totalProfitRate >= 0 ? '+' : ''}${totalProfitRate.toFixed(2)}%`, x, y);
+    
+    // 수익금
+    ctx.fillText(`수익: ${totalProfit >= 0 ? '+' : ''}${totalProfit.toLocaleString()}원`, x, y + 12);
   }
 
   private drawXAxisLabels(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeChartTop: number, volumeChartHeight: number): void {
@@ -370,6 +413,84 @@ export class TradeChart {
       ctx.textBaseline = 'middle';
       ctx.fillText(label, x, arrowY - arrowSize / 3);
       ctx.textBaseline = 'alphabetic';  // 원복
+    });
+  }
+
+  private drawTradeMarkers(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeChartTop: number, volumeChartHeight: number): void {
+    const { ctx, data, transactions } = this;
+    
+    if (transactions.length === 0) return;
+    
+    // 데이터 시간 -> 인덱스 맵
+    const timeToIndex = new Map<number, number>();
+    data.forEach((d, i) => {
+      timeToIndex.set(d.time.getTime(), i);
+    });
+    
+    transactions.forEach(tx => {
+      const txTime = tx.time.getTime();
+      const index = timeToIndex.get(txTime);
+      if (index === undefined) return;
+      
+      const x = xScale(index);
+      const arrowY = priceChartTop - 5;
+      const arrowSize = 8;
+      
+      let color: string;
+      let label: string;
+      
+      if (tx.type === 'BUY') {
+        color = '#1976D2';  // 파랑
+        label = tx.isPyramiding ? '+' : 'B';
+      } else {
+        color = '#D32F2F';  // 빨강
+        if (tx.reason === 'STOP_LOSS') {
+          label = '!';
+        } else if (tx.reason === 'DEAD_CROSS_MORE') {
+          label = '+';
+        } else {
+          label = 'S';
+        }
+      }
+      
+      // Y축 점선 (가격 차트 + 거래량 차트 전체)
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 2]);
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, volumeChartTop + volumeChartHeight);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // 아래쪽 화살표 (가격 차트 위)
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x, arrowY + arrowSize);  // 꼭지점 (아래)
+      ctx.lineTo(x - arrowSize / 2, arrowY);  // 왼쪽 위
+      ctx.lineTo(x + arrowSize / 2, arrowY);  // 오른쪽 위
+      ctx.closePath();
+      ctx.fill();
+      
+      // 삼각형 안에 흰색 글씨
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '5px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, arrowY + arrowSize * 0.4);
+      ctx.textBaseline = 'alphabetic';
+      
+      // 화살표 위에 세로 글씨: "전체보유수(매매수)"
+      const infoText = `${tx.holdingAfter}(${tx.quantity})`;
+      ctx.save();
+      ctx.translate(x, arrowY - 2);
+      ctx.rotate(-Math.PI / 2);  // 90도 회전
+      ctx.fillStyle = color;
+      ctx.font = '4px Arial';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(infoText, 0, 0);
+      ctx.restore();
     });
   }
 

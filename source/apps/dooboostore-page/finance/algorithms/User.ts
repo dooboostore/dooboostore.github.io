@@ -56,6 +56,7 @@ export class User {
     buy: {
       rate: 0.1, // 잔액 대비 매수 비율
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용)  undefined 이면 피라미딩 안함
+      moreRateType: 'balance' as const, // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
       slopeThreshold: 0.1, // 매수 시점 기울기 임계값  undefined 이면 기울기 필터링 안함
       groupCrossCheck: true // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
@@ -63,7 +64,8 @@ export class User {
     sell: {
       rate: 0.5, // 보유량 대비 매도 비율
       moreRate: 0.25, // 추가 매도 비율 (피라미딩용)  undefined 이면 피라미딩 안함
-      stopLossPercent: 0.05, // 손절 퍼센트  undefined 이면 손절 안함
+      moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
+      stopLossPercent: 0.02, // 손절 퍼센트  undefined 이면 손절 안함
       groupCrossCheck: true // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
     }
 
@@ -114,6 +116,15 @@ export class User {
 
   // 심볼별 마지막 처리된 데이터 시간 (중복 매매 방지)
   private lastProcessedTime = new Map<string, number>();
+  
+  // 심볼별 첫 매도 여부 추적 (데드크로스 구간에서 피라미딩 구분용)
+  private firstSellDone = new Map<string, boolean>();
+  
+  // 심볼별 첫 매수 금액 (피라미딩 계산용)
+  private initialBuyAmount = new Map<string, number>();
+  
+  // 심볼별 첫 매도 수량 (피라미딩 계산용)
+  private initialSellQuantity = new Map<string, number>();
 
   // 심볼이 속한 그룹 찾기
   private getGroupForSymbol(symbol: string): Group | undefined {
@@ -171,8 +182,10 @@ export class User {
         // 손절 체크
         if (this.config.sell?.stopLossPercent !== undefined) {
           const lossPercent = (latestQuote.actualClose - holding.avgPrice) / holding.avgPrice;
+          // console.log(`[${symbol}] 손절 체크: 현재가=${latestQuote.actualClose}, 평균가=${holding.avgPrice.toFixed(0)}, 손실률=${(lossPercent * 100).toFixed(2)}%, 기준=${-this.config.sell.stopLossPercent * 100}%`);
           if (lossPercent <= -this.config.sell.stopLossPercent) {
-            this.sellStock(symbol, latestQuote, 1.0, 'STOP_LOSS'); // 전량 손절
+            console.log(`🚨 STOP_LOSS 발동! ${symbol}: 손실률 ${(lossPercent * 100).toFixed(2)}%`);
+            this.sellStock(symbol, latestQuote, 1.0, 'STOP_LOSS', false); // 전량 손절
             return;
           }
         }
@@ -196,9 +209,22 @@ export class User {
           }
 
           if (canSell) {
-            const rate = this.config.sell?.rate ?? 0.5;
-            this.sellStock(symbol, latestQuote, rate, 'DEAD_CROSS');
+            const isFirstSell = !this.firstSellDone.get(symbol);
+            if (isFirstSell) {
+              // 첫 매도
+              const rate = this.config.sell?.rate ?? 0.5;
+              this.sellStock(symbol, latestQuote, rate, 'DEAD_CROSS', false);
+              this.firstSellDone.set(symbol, true);
+            } else {
+              // 추가 매도 (피라미딩)
+              if (this.config.sell?.moreRate !== undefined) {
+                this.sellStock(symbol, latestQuote, this.config.sell.moreRate, 'DEAD_CROSS_MORE', true);
+              }
+            }
           }
+        } else {
+          // 데드크로스 아니면 첫 매도 플래그 리셋
+          this.firstSellDone.set(symbol, false);
         }
       }
 
@@ -238,7 +264,26 @@ export class User {
 
   // 매수
   private buyStock(symbol: string, quote: TickData, rate: number, isPyramiding: boolean): boolean {
-    const buyAmount = this.account.balance * rate;
+    let buyAmount: number;
+    
+    if (isPyramiding) {
+      const moreRateType = this.config.buy?.moreRateType || 'balance';
+      if (moreRateType === 'balance') {
+        buyAmount = this.account.balance * rate;
+      } else if (moreRateType === 'position') {
+        const holding = this.account.getHolding(symbol);
+        const positionValue = holding ? holding.quantity * quote.actualClose : 0;
+        buyAmount = positionValue * rate;
+      } else {  // initial
+        const initialAmount = this.initialBuyAmount.get(symbol) || 0;
+        buyAmount = initialAmount * rate;
+      }
+    } else {
+      buyAmount = this.account.balance * rate;
+      // 첫 매수 금액 저장
+      this.initialBuyAmount.set(symbol, buyAmount);
+    }
+    
     if (buyAmount <= 0 || quote.actualClose <= 0) return false;
 
     const quantity = Math.floor(buyAmount / quote.actualClose);
@@ -272,6 +317,7 @@ export class User {
     }
 
     // 거래 내역 기록
+    const holdingAfter = this.account.getHolding(symbol)?.quantity || 0;
     const tx: Transaction = {
       time: quote.time,
       type: 'BUY',
@@ -280,6 +326,7 @@ export class User {
       price: quote.actualClose,
       fees,
       total,
+      holdingAfter,
       isPyramiding
     };
     this.account.addTransaction(tx);
@@ -295,12 +342,29 @@ export class User {
   }
 
   // 매도
-  private sellStock(symbol: string, quote: TickData, rate: number, reason: string): boolean {
+  private sellStock(symbol: string, quote: TickData, rate: number, reason: string, isMore: boolean = false): boolean {
     const holding = this.account.getHolding(symbol);
     if (!holding || holding.quantity <= 0) return false;
 
-    const sellQuantity = Math.floor(holding.quantity * rate);
+    let sellQuantity: number;
+    
+    if (isMore) {
+      const moreRateType = this.config.sell?.moreRateType || 'holding';
+      if (moreRateType === 'holding') {
+        sellQuantity = Math.floor(holding.quantity * rate);
+      } else {  // initial
+        const initialQty = this.initialSellQuantity.get(symbol) || 0;
+        sellQuantity = Math.floor(initialQty * rate);
+      }
+    } else {
+      sellQuantity = Math.floor(holding.quantity * rate);
+      // 첫 매도 수량 저장
+      this.initialSellQuantity.set(symbol, sellQuantity);
+    }
+    
     if (sellQuantity <= 0) return false;
+    // 보유량보다 많이 팔 수 없음
+    sellQuantity = Math.min(sellQuantity, holding.quantity);
 
     const sellAmount = sellQuantity * quote.actualClose;
     const fees = sellAmount * this.config.tradeFees.sell;
@@ -320,6 +384,7 @@ export class User {
     }
 
     // 거래 내역 기록
+    const holdingAfter = holding.quantity;  // 이미 위에서 차감됨
     const tx: Transaction = {
       time: quote.time,
       type: 'SELL',
@@ -328,6 +393,7 @@ export class User {
       price: quote.actualClose,
       fees,
       total,
+      holdingAfter,
       avgBuyPrice: holding.avgPrice,
       profit,
       reason
