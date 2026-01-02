@@ -467,13 +467,18 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       // 첫 번째 심볼의 시간 정보 사용
       const baseQuote = symbolQuotesAtTime[0];
 
+      // 실제 거래량 평균 계산
+      const avgActualVolume = validQuotes.reduce((sum, q) => sum + (q.volume || 0), 0) / validQuotes.length;
+      // OBV 평균 계산
+      const avgOBV = validQuotes.reduce((sum, q) => sum + (q.obv || 0), 0) / validQuotes.length;
+
       groupQuotes.push({
         date: baseQuote.date,
         open: 0,
         high: 0,
         low: 0,
         close: avgPriceChangeRate,
-        volume: 0,
+        volume: avgActualVolume, // 그룹 평균 거래량
         openChangeRate: avgOpenChangeRate,
         highChangeRate: avgHighChangeRate,
         lowChangeRate: avgLowChangeRate,
@@ -484,7 +489,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         priceMA: new Map<number, number>(), // 나중에 계산
         volumeMA: new Map<number, number>(), // 나중에 계산
         maSlope: new Map<number, number>(), // 나중에 계산
-        obv: 0 // 그룹은 OBV 없음
+        obv: avgOBV // 그룹 평균 OBV
       });
     }
 
@@ -942,6 +947,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       .setIsGroup(symbolData.isGroup)
       .setTransactions(symbolTransactions)
       .setSummary(totalHolding, totalProfitRate, totalProfit)
+      .setConfig({ shows: ['VOLUME', 'OBV'] })
       .draw();
 
     const filename = symbolData.isGroup ? `group-${key}.png` : `symbol-${key}.png`;

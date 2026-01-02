@@ -86,23 +86,47 @@ export class TradeChart {
     return this;
   }
 
+  setConfig(config: ChartConfig): this {
+    this.config = config;
+    // 표시할 차트 수에 따라 높이 조정
+    const chartCount = 1 + config.shows.length; // 가격 차트 + 추가 차트들
+    this.height = 500 + chartCount * 120;
+    // 캔버스 재생성
+    this.canvas = createCanvas(this.width * this.scale, this.height * this.scale);
+    this.ctx = this.canvas.getContext('2d');
+    this.ctx.scale(this.scale, this.scale);
+    return this;
+  }
+
   draw(): this {
     if (this.data.length === 0 || this.data.length === 1) return this;
 
-    const { ctx, width, height, padding, gap } = this;
+    const { ctx, width, height, padding, gap, config } = this;
     const chartWidth = width - padding.left - padding.right;
     
-    // 4단 차트: 가격 50%, 거래량 18%, OBV 14%, 거래량등락률 18%
-    const totalChartHeight = height - padding.top - padding.bottom - gap * 3;
-    const priceChartHeight = totalChartHeight * 0.50;
-    const actualVolumeChartHeight = totalChartHeight * 0.18;
-    const obvChartHeight = totalChartHeight * 0.14;
-    const volumeRateChartHeight = totalChartHeight * 0.18;
+    // 표시할 차트 수에 따라 높이 비율 계산
+    const showVolume = config.shows.includes('VOLUME');
+    const showOBV = config.shows.includes('OBV');
+    const subChartCount = config.shows.length;
+    
+    const totalChartHeight = height - padding.top - padding.bottom - gap * subChartCount;
+    const priceChartHeight = totalChartHeight * (subChartCount === 0 ? 1 : (subChartCount === 1 ? 0.7 : 0.55));
+    const subChartHeight = subChartCount > 0 ? (totalChartHeight - priceChartHeight) / subChartCount : 0;
     
     const priceChartTop = padding.top;
-    const actualVolumeChartTop = priceChartTop + priceChartHeight + gap;
-    const obvChartTop = actualVolumeChartTop + actualVolumeChartHeight + gap;
-    const volumeRateChartTop = obvChartTop + obvChartHeight + gap;
+    
+    // 서브 차트 위치 계산
+    let currentTop = priceChartTop + priceChartHeight + gap;
+    const chartPositions: { type: ChartShowType; top: number; height: number }[] = [];
+    config.shows.forEach(type => {
+      chartPositions.push({ type, top: currentTop, height: subChartHeight });
+      currentTop += subChartHeight + gap;
+    });
+    
+    // 마지막 차트 bottom 위치
+    const lastChartBottom = chartPositions.length > 0 
+      ? chartPositions[chartPositions.length - 1].top + subChartHeight 
+      : priceChartTop + priceChartHeight;
 
     // 배경
     ctx.fillStyle = '#ffffff';
@@ -148,36 +172,13 @@ export class TradeChart {
     obvMin -= obvRange * 0.1;
     obvMax += obvRange * 0.1;
 
-    // 거래량 등락률 데이터 범위
-    let volRateMin = 0, volRateMax = -Infinity;
-    this.data.forEach(d => {
-      volRateMin = Math.min(volRateMin, d.volume);
-      volRateMax = Math.max(volRateMax, d.volume);
-    });
-    if (volRateMax === volRateMin) { volRateMax += 100; }
-    const volRateRange = volRateMax - volRateMin;
-    volRateMax += volRateRange * 0.1;
-    volRateMin -= volRateRange * 0.1;
-
     // 좌표 변환
     const candleWidth = Math.max(1, (chartWidth / this.data.length) * 0.7);
     const xScale = (i: number) => padding.left + ((i + 0.5) / this.data.length) * chartWidth;
     const priceYScale = (v: number) => priceChartTop + priceChartHeight - ((v - priceMin) / (priceMax - priceMin)) * priceChartHeight;
-    const actualVolYScale = (percent: number) => actualVolumeChartTop + actualVolumeChartHeight - (percent / 100) * actualVolumeChartHeight;
-    const obvYScale = (v: number) => obvChartTop + obvChartHeight - ((v - obvMin) / (obvMax - obvMin)) * obvChartHeight;
-    const volRateYScale = (v: number) => volumeRateChartTop + volumeRateChartHeight - ((v - volRateMin) / (volRateMax - volRateMin)) * volumeRateChartHeight;
 
-    // 가격 차트 그리드 (isPrice=true로 오른쪽 Y축에 실제 가격 표시)
+    // 가격 차트 그리드
     this.drawGrid(priceMin, priceMax, priceYScale, priceChartTop, priceChartHeight, '%', true);
-    
-    // 실제 거래량 차트 그리드 (왼쪽: 0~100%, 오른쪽: 실제 거래량)
-    this.drawActualVolumeGrid(actualVolMax, actualVolYScale, actualVolumeChartTop, actualVolumeChartHeight);
-    
-    // OBV 차트 그리드
-    this.drawOBVGrid(obvMin, obvMax, obvYScale, obvChartTop, obvChartHeight);
-    
-    // 거래량 등락률 차트 그리드
-    this.drawGrid(volRateMin, volRateMax, volRateYScale, volumeRateChartTop, volumeRateChartHeight, '%', false);
 
     // 0% 기준선 (가격)
     if (priceMin < 0 && priceMax > 0) {
@@ -191,17 +192,7 @@ export class TradeChart {
       ctx.setLineDash([]);
     }
 
-    // 0% 기준선 (거래량 등락률)
-    ctx.strokeStyle = '#888888';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([3, 3]);
-    ctx.beginPath();
-    ctx.moveTo(padding.left, volRateYScale(0));
-    ctx.lineTo(width - padding.right, volRateYScale(0));
-    ctx.stroke();
-    ctx.setLineDash([]);
-
-    // 캔들 차트 그리기 (그룹도 OHLC 평균으로 캔들 표시)
+    // 캔들 차트 그리기
     this.data.forEach((d, i) => {
       const x = xScale(i);
       const isUp = d.close >= d.open;
@@ -222,7 +213,7 @@ export class TradeChart {
       ctx.fillRect(x - candleWidth / 2, bodyTop, candleWidth, Math.max(1, bodyBottom - bodyTop));
     });
 
-    // MA 라인 (1px)
+    // MA 라인
     this.maPeriods.forEach(period => {
       ctx.strokeStyle = MA_COLORS[period] || '#888888';
       ctx.lineWidth = 1;
@@ -240,49 +231,42 @@ export class TradeChart {
       ctx.stroke();
     });
 
-    // 실제 거래량 막대 그리기 (2단 차트)
-    this.data.forEach((d, i) => {
-      if (d.actualVolume === undefined) return;
-      const x = xScale(i);
-      const percent = (d.actualVolume / actualVolMax) * 100;
-      const y = actualVolYScale(percent);
-      const y0 = actualVolYScale(0);
-      const barHeight = y0 - y;
-      
-      // 가격 상승=빨강, 하락=파랑
-      const isUp = d.close >= d.open;
-      ctx.fillStyle = isUp ? 'rgba(211, 47, 47, 0.6)' : 'rgba(25, 118, 210, 0.6)';
-      ctx.fillRect(x - candleWidth / 2, y, candleWidth, barHeight);
-    });
-
-    // OBV 라인 그리기 (3단 차트)
-    ctx.strokeStyle = '#9C27B0';  // 보라색
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    let obvStarted = false;
-    this.data.forEach((d, i) => {
-      if (d.obv === undefined) return;
-      const x = xScale(i);
-      const y = obvYScale(d.obv);
-      if (!obvStarted) { ctx.moveTo(x, y); obvStarted = true; }
-      else ctx.lineTo(x, y);
-    });
-    ctx.stroke();
-
-    // 거래량 등락률 막대 그리기 (4단 차트)
-    this.data.forEach((d, i) => {
-      const x = xScale(i);
-      const y0 = volRateYScale(0);
-      const y = volRateYScale(d.volume);
-      const barHeight = y0 - y;
-      
-      // 양수=초록, 음수=빨강
-      ctx.fillStyle = d.volume >= 0 ? '#4CAF50' : '#F44336';
-      
-      if (barHeight >= 0) {
-        ctx.fillRect(x - candleWidth / 2, y, candleWidth, barHeight);
-      } else {
-        ctx.fillRect(x - candleWidth / 2, y0, candleWidth, -barHeight);
+    // 서브 차트 그리기
+    chartPositions.forEach(({ type, top, height: chartHeight }) => {
+      if (type === 'VOLUME') {
+        const actualVolYScale = (percent: number) => top + chartHeight - (percent / 100) * chartHeight;
+        this.drawActualVolumeGrid(actualVolMax, actualVolYScale, top, chartHeight);
+        
+        // 거래량 막대
+        this.data.forEach((d, i) => {
+          if (d.actualVolume === undefined) return;
+          const x = xScale(i);
+          const percent = (d.actualVolume / actualVolMax) * 100;
+          const y = actualVolYScale(percent);
+          const y0 = actualVolYScale(0);
+          const barHeight = y0 - y;
+          
+          const isUp = d.close >= d.open;
+          ctx.fillStyle = isUp ? 'rgba(211, 47, 47, 0.6)' : 'rgba(25, 118, 210, 0.6)';
+          ctx.fillRect(x - candleWidth / 2, y, candleWidth, barHeight);
+        });
+      } else if (type === 'OBV') {
+        const obvYScale = (v: number) => top + chartHeight - ((v - obvMin) / (obvMax - obvMin)) * chartHeight;
+        this.drawOBVGrid(obvMin, obvMax, obvYScale, top, chartHeight);
+        
+        // OBV 라인
+        ctx.strokeStyle = '#9C27B0';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        let obvStarted = false;
+        this.data.forEach((d, i) => {
+          if (d.obv === undefined) return;
+          const x = xScale(i);
+          const y = obvYScale(d.obv);
+          if (!obvStarted) { ctx.moveTo(x, y); obvStarted = true; }
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
       }
     });
 
@@ -295,17 +279,17 @@ export class TradeChart {
     // 범례
     this.drawLegend();
 
-    // 요약 정보 (오른쪽 상단)
+    // 요약 정보
     this.drawSummary();
 
     // X축 라벨 및 세로 그리드선
-    this.drawXAxisLabels4(xScale, priceChartTop, priceChartHeight, actualVolumeChartTop, actualVolumeChartHeight, obvChartTop, obvChartHeight, volumeRateChartTop, volumeRateChartHeight);
+    this.drawXAxisLabelsDynamic(xScale, priceChartTop, priceChartHeight, chartPositions, lastChartBottom);
 
     // 크로스 마커 그리기
-    this.drawCrossMarkers4(xScale, priceChartTop, volumeRateChartTop, volumeRateChartHeight);
+    this.drawCrossMarkersDynamic(xScale, priceChartTop, lastChartBottom);
 
     // 거래 마커 그리기
-    this.drawTradeMarkers4(xScale, priceChartTop, priceChartHeight, volumeRateChartTop, volumeRateChartHeight);
+    this.drawTradeMarkersDynamic(xScale, priceChartTop, priceChartHeight, lastChartBottom);
 
     return this;
   }
@@ -332,17 +316,28 @@ export class TradeChart {
       ctx.lineTo(width - padding.right, y);
       ctx.stroke();
       
-      // 왼쪽 Y축: 등락률
-      ctx.textAlign = 'right';
-      ctx.fillText(`${value.toFixed(1)}${suffix}`, padding.left - 5, y + 3);
-      
-      // 오른쪽 Y축: 실제 가격 (그룹이 아닌 경우만)
       if (hasActualPrice) {
+        // 심볼: 왼쪽 Y축 = 실제 가격, 오른쪽 Y축 = 등락률
         const firstData = data[0];
         const basePrice = firstData.actualClose! / (1 + firstData.close / 100);
         const actualPrice = basePrice * (1 + value / 100);
+        ctx.textAlign = 'right';
+        ctx.fillText(this.formatPrice(actualPrice), padding.left - 5, y + 3);
         ctx.textAlign = 'left';
-        ctx.fillText(this.formatPrice(actualPrice), width - padding.right + 5, y + 3);
+        ctx.fillText(`${value >= 0 ? '+' : ''}${value.toFixed(1)}${suffix}`, width - padding.right + 5, y + 3);
+      } else if (isGroup) {
+        // 그룹: 왼쪽 Y축 = 평균 가격 (첫 close 기준), 오른쪽 Y축 = 등락률
+        // 그룹은 actualClose가 없으므로 close(등락률)를 기준으로 가상 가격 계산
+        const baseGroupPrice = 100; // 기준가 100으로 설정
+        const groupPrice = baseGroupPrice * (1 + value / 100);
+        ctx.textAlign = 'right';
+        ctx.fillText(groupPrice.toFixed(1), padding.left - 5, y + 3);
+        ctx.textAlign = 'left';
+        ctx.fillText(`${value >= 0 ? '+' : ''}${value.toFixed(1)}${suffix}`, width - padding.right + 5, y + 3);
+      } else {
+        // 기타: 왼쪽 Y축 = 등락률만
+        ctx.textAlign = 'right';
+        ctx.fillText(`${value >= 0 ? '+' : ''}${value.toFixed(1)}${suffix}`, padding.left - 5, y + 3);
       }
     }
   }
@@ -370,8 +365,17 @@ export class TradeChart {
   }
 
   private drawActualVolumeGrid(maxVolume: number, yScale: (percent: number) => number, chartTop: number, chartHeight: number): void {
-    const { ctx, width, padding } = this;
+    const { ctx, width, padding, data, isGroup } = this;
     const gridCount = 4;
+    
+    // 첫 번째 거래량 값 (기준값) - 그룹용 변화률 계산
+    let baseVolume = 0;
+    for (const d of data) {
+      if (d.actualVolume !== undefined && d.actualVolume > 0) {
+        baseVolume = d.actualVolume;
+        break;
+      }
+    }
     
     ctx.strokeStyle = '#e0e0e0';
     ctx.lineWidth = 1;
@@ -387,21 +391,37 @@ export class TradeChart {
       ctx.lineTo(width - padding.right, y);
       ctx.stroke();
       
-      // 왼쪽 Y축: 0~100%
-      ctx.textAlign = 'right';
-      ctx.fillText(`${percent.toFixed(0)}%`, padding.left - 5, y + 3);
-      
-      // 오른쪽 Y축: 실제 거래량 값
+      // 왼쪽 Y축: 실제 거래량 값 (심볼/그룹 모두)
       const actualVolume = (percent / 100) * maxVolume;
+      ctx.textAlign = 'right';
+      ctx.fillText(this.formatVolume(actualVolume), padding.left - 5, y + 3);
+      
+      // 오른쪽 Y축
       ctx.textAlign = 'left';
-      ctx.fillText(this.formatVolume(actualVolume), width - padding.right + 5, y + 3);
+      if (isGroup && baseVolume > 0) {
+        // 그룹: 첫 번째 거래량 대비 변화률
+        const changeRate = ((actualVolume - baseVolume) / baseVolume) * 100;
+        ctx.fillText(`${changeRate >= 0 ? '+' : ''}${changeRate.toFixed(0)}%`, width - padding.right + 5, y + 3);
+      } else {
+        // 심볼: 0~100%
+        ctx.fillText(`${percent.toFixed(0)}%`, width - padding.right + 5, y + 3);
+      }
     }
   }
 
   private drawOBVGrid(minVal: number, maxVal: number, yScale: (v: number) => number, chartTop: number, chartHeight: number): void {
-    const { ctx, width, padding } = this;
+    const { ctx, width, padding, data } = this;
     const gridCount = 3;
     const step = (maxVal - minVal) / gridCount;
+    
+    // 첫 번째 OBV 값 (기준값)
+    let baseOBV = 0;
+    for (const d of data) {
+      if (d.obv !== undefined) {
+        baseOBV = d.obv;
+        break;
+      }
+    }
     
     ctx.strokeStyle = '#e0e0e0';
     ctx.lineWidth = 1;
@@ -421,13 +441,10 @@ export class TradeChart {
       ctx.textAlign = 'right';
       ctx.fillText(this.formatVolume(value), padding.left - 5, y + 3);
       
-      // 오른쪽 Y축: OBV 라벨
-      if (i === gridCount) {
-        ctx.textAlign = 'left';
-        ctx.fillStyle = '#9C27B0';
-        ctx.fillText('OBV', width - padding.right + 5, y + 3);
-        ctx.fillStyle = '#666666';
-      }
+      // 오른쪽 Y축: OBV 변화률 %
+      const changeRate = baseOBV !== 0 ? ((value - baseOBV) / Math.abs(baseOBV)) * 100 : 0;
+      ctx.textAlign = 'left';
+      ctx.fillText(`${changeRate >= 0 ? '+' : ''}${changeRate.toFixed(0)}%`, width - padding.right + 5, y + 3);
     }
   }
 
@@ -887,6 +904,214 @@ export class TradeChart {
         ctx.save();
         ctx.translate(x + 4, priceChartTop + 20);
         ctx.rotate(-Math.PI / 2);  // 90도 회전 (세로)
+        ctx.fillStyle = color;
+        ctx.font = '6px Arial';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(tx.label, 0, 0);
+        ctx.restore();
+      }
+    });
+  }
+
+  // 동적 X축 라벨 (config.shows 기반)
+  private drawXAxisLabelsDynamic(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, chartPositions: { type: ChartShowType; top: number; height: number }[], lastChartBottom: number): void {
+    const { ctx, height, padding, data } = this;
+
+    // 날짜가 바뀌는 인덱스 찾기
+    const dateChangeIndices = new Set<number>();
+    let prevDate = '';
+    data.forEach((d, i) => {
+      const dateStr = `${d.time.getFullYear()}-${d.time.getMonth()}-${d.time.getDate()}`;
+      if (dateStr !== prevDate) {
+        dateChangeIndices.add(i);
+        prevDate = dateStr;
+      }
+    });
+
+    // 일반 라벨 간격 계산
+    const labelCount = Math.min(6, data.length);
+    const step = Math.max(1, Math.floor(data.length / labelCount));
+    
+    // 라벨 표시할 인덱스 (날짜 변경 + 일반 간격)
+    const labelIndices = new Set<number>();
+    dateChangeIndices.forEach(i => labelIndices.add(i));
+    for (let i = 0; i < data.length; i += step) {
+      labelIndices.add(i);
+    }
+    
+    labelIndices.forEach(i => {
+      const d = data[i];
+      const x = xScale(i);
+      const isDateChange = dateChangeIndices.has(i);
+      
+      ctx.strokeStyle = isDateChange ? '#999999' : '#e0e0e0';
+      ctx.lineWidth = isDateChange ? 1.5 : 1;
+      
+      // 가격 차트 세로 그리드선
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, priceChartTop + priceChartHeight);
+      ctx.stroke();
+      
+      // 서브 차트들 세로 그리드선
+      chartPositions.forEach(({ top, height: chartHeight }) => {
+        ctx.beginPath();
+        ctx.moveTo(x, top);
+        ctx.lineTo(x, top + chartHeight);
+        ctx.stroke();
+      });
+      
+      // X축 라벨
+      ctx.fillStyle = isDateChange ? '#000000' : '#666666';
+      ctx.font = isDateChange ? 'bold 10px Arial' : '10px Arial';
+      ctx.textAlign = 'center';
+      const timeStr = `${d.time.getMonth() + 1}/${d.time.getDate()} ${d.time.getHours()}:${d.time.getMinutes().toString().padStart(2, '0')}`;
+      ctx.fillText(timeStr, x, height - padding.bottom + 15);
+    });
+  }
+
+  // 동적 크로스 마커 (config.shows 기반)
+  private drawCrossMarkersDynamic(xScale: (i: number) => number, priceChartTop: number, lastChartBottom: number): void {
+    const { ctx, height, padding, data } = this;
+    
+    data.forEach((d, i) => {
+      // 상태가 바뀌는 시점에만 마커 표시
+      const prevStatus = i > 0 ? data[i - 1].crossStatus : undefined;
+      if (d.crossStatus === prevStatus) return;
+      
+      const x = xScale(i);
+      let color: string;
+      let label: string;
+      
+      if (d.crossStatus === 'GOLDEN') {
+        color = '#FFD700';
+        label = 'G';
+      } else if (d.crossStatus === 'DEAD') {
+        color = '#F44336';
+        label = 'D';
+      } else {
+        color = '#888888';
+        label = 'N';
+      }
+      
+      // Y축 점선 (전체 차트)
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, lastChartBottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // 위쪽 화살표
+      const arrowY = height - padding.bottom + 35;
+      const arrowSize = 12;
+      
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x, arrowY - arrowSize);
+      ctx.lineTo(x - arrowSize / 2, arrowY);
+      ctx.lineTo(x + arrowSize / 2, arrowY);
+      ctx.closePath();
+      ctx.fill();
+      
+      ctx.fillStyle = d.crossStatus === 'GOLDEN' ? '#000000' : '#FFFFFF';
+      ctx.font = 'bold 8px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, arrowY - arrowSize / 3);
+      ctx.textBaseline = 'alphabetic';
+    });
+  }
+
+  // 동적 거래 마커 (config.shows 기반)
+  private drawTradeMarkersDynamic(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, lastChartBottom: number): void {
+    const { ctx, data, transactions } = this;
+    
+    if (transactions.length === 0) return;
+    
+    const timeToIndex = new Map<number, number>();
+    data.forEach((d, i) => {
+      timeToIndex.set(d.time.getTime(), i);
+    });
+    
+    transactions.forEach(tx => {
+      const txTime = tx.time.getTime();
+      const index = timeToIndex.get(txTime);
+      if (index === undefined) return;
+      
+      const x = xScale(index);
+      const arrowY = priceChartTop - 5;
+      const arrowSize = 14;
+      
+      let color: string;
+      let label: string;
+      
+      if (tx.type === 'BUY') {
+        color = '#1976D2';
+        if (tx.isGoldenCrossEntry) {
+          label = 'B';
+        } else {
+          label = tx.isPyramiding ? '+' : 'B';
+        }
+      } else {
+        color = '#D32F2F';
+        if (tx.reason === 'STOP_LOSS') {
+          label = '!';
+        } else if (tx.reason?.startsWith('TAKE_PROFIT')) {
+          label = '$';
+        } else if (tx.reason === 'DEAD_CROSS_MORE') {
+          label = '+';
+        } else {
+          label = 'S';
+        }
+      }
+      
+      // Y축 점선 (전체 차트)
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 2]);
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, lastChartBottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // 아래쪽 화살표
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x, arrowY + arrowSize);
+      ctx.lineTo(x - arrowSize / 2, arrowY);
+      ctx.lineTo(x + arrowSize / 2, arrowY);
+      ctx.closePath();
+      ctx.fill();
+      
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = 'bold 8px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, arrowY + arrowSize * 0.4);
+      ctx.textBaseline = 'alphabetic';
+      
+      // 화살표 위에 세로 글씨
+      const infoText = `${tx.holdingAfter}(${tx.quantity})`;
+      ctx.save();
+      ctx.translate(x, arrowY - 2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillStyle = color;
+      ctx.font = '6px Arial';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(infoText, 0, 0);
+      ctx.restore();
+      
+      // label이 있으면 점선 옆에 세로로 표시
+      if (tx.label) {
+        ctx.save();
+        ctx.translate(x + 4, priceChartTop + 20);
+        ctx.rotate(-Math.PI / 2);
         ctx.fillStyle = color;
         ctx.font = '6px Arial';
         ctx.textAlign = 'right';
