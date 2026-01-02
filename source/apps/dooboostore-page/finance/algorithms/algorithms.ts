@@ -231,23 +231,18 @@ const algorithms = async (dataPlan: DataPlan) => {
     // 기능 활성화 플래그
     features: {
       pyramiding: true,           // 피라미딩 (추가 매수)
-      trailingStop: false,         // 트레일링 스톱
-      timeFilter: false,           // 시간 필터 (9시, 15시 제외)
-      // maGapFilter: false,          // MA 간격 필터
-      // consecutiveLossProtection: false, // 연속 손실 방지
-      // slopeFilter: false,          // 기울기 필터
-
-      // pyramiding: true,           // 피라미딩 (추가 매수)
-      // trailingStop: true,         // 트레일링 스톱
-      // timeFilter: true,           // 시간 필터 (9시, 15시 제외)
-      maGapFilter: false,          // MA 간격 필터
+      stopLoss: false,            // 손절 (데드크로스 상태에서만)
+      takeProfit: false,          // 익절 (데드크로스 상태에서만)
+      trailingStop: false,        // 트레일링 스톱 (데드크로스 상태에서만)
+      timeFilter: false,          // 시간 필터 (9시, 15시 제외)
+      maGapFilter: false,         // MA 간격 필터
       consecutiveLossProtection: false, // 연속 손실 방지
-      positionSizing: false,       // 자금 관리 (잔고의 10%씩)
-      volumeStrengthFilter: false,  // 거래량 강도 필터
-      slopeFilter: false,          // 기울기 필터
-      obvFilter: false,             // OBV 필터
-      rsiFilter: false,             // RSI 필터
-      macdFilter: false,           // MACD 필터 (모멘텀)
+      positionSizing: false,      // 자금 관리 (잔고의 10%씩)
+      volumeStrengthFilter: false, // 거래량 강도 필터
+      slopeFilter: false,         // 기울기 필터
+      obvFilter: false,           // OBV 필터
+      rsiFilter: false,           // RSI 필터
+      macdFilter: false,          // MACD 필터 (모멘텀)
       bollingerBandsFilter: false, // 볼린저 밴드 필터 (변동성)
       volumeAnalysisFilter: false, // 거래량 분석 필터 (강화)
       onlySymbolGoldenCross: true // 심볼 골든크로스만으로 매수 (그룹 골든크로스 무시)
@@ -255,7 +250,7 @@ const algorithms = async (dataPlan: DataPlan) => {
 
     buy: {
       symbolSize: 2, // 상위 2개 종목 선택 (집중 투자)
-      stockRate: 0.5,  // 잔고의 10%씩 투자
+      stockRate: 0.01,  // 잔고의 10%씩 투자
       stockSize: 100,  // [DEPRECATED] 고정 주식 수 (stockRate 사용 시 무시됨)
       minVolumeStrength: 50, // 최소 거래량 강도 50% (더 강한 신호)
       minSlope: 0, // 최소 기울기
@@ -700,12 +695,12 @@ const algorithms = async (dataPlan: DataPlan) => {
         return;
       }
 
-      // 손절 체크
-      if (profitRate <= config.sell.stopLoss) {
+      // 손절 체크 (기능 활성화 시에만)
+      if (config.features.stopLoss && profitRate <= config.sell.stopLoss) {
         toSell.push({ symbol, reason: 'STOP_LOSS', price: currentPrice, holding });
       }
-      // 익절 체크
-      else if (profitRate >= config.sell.takeProfit) {
+      // 익절 체크 (기능 활성화 시에만)
+      else if (config.features.takeProfit && profitRate >= config.sell.takeProfit) {
         toSell.push({ symbol, reason: 'TAKE_PROFIT', price: currentPrice, holding });
       }
       // 트레일링 스톱 체크 (최고가 대비) - 기능 활성화 시에만
@@ -1926,7 +1921,7 @@ const algorithms = async (dataPlan: DataPlan) => {
       });
     } else {
       // 심볼 차트: 골든크로스/데드크로스 표시 (아래쪽)
-      console.log(`  [CHART DEBUG] ${title}: Checking ${timeSeries.length} data points for crosses`);
+      // console.log(`  [CHART DEBUG] ${title}: Checking ${timeSeries.length} data points for crosses`);
       let goldenCount = 0;
       let deadCount = 0;
       
