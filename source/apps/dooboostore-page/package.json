@@ -82,6 +82,7 @@
     "finance:build:watch": "rm -rf dist-finance && webpack --config finance/webpack.config.js --watch",
     "finance:build": "rm -rf dist-finance && webpack --config finance/webpack.config.js",
     "finance:build:start": "pnpm run finance:build && node dist-finance/index.js",
+    "finance:start": "node dist-finance/index.js --inspect",
     "test:build": "webpack --config test/webpack.config.js",
     "test:build:watch": "webpack --config test/webpack.config.js --watch",
     "test:start": "node dist-test/index.js",

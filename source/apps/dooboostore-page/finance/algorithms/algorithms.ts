@@ -545,10 +545,121 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
         };
       });
       
+      // 첫 번째 봉의 초기 상태 재판단 후, 그 상태를 이어가도록 수정
+      if (adjustedQuotes.length > 0) {
+        const firstQuote = adjustedQuotes[0];
+        const currMA = firstQuote.priceMA;
+        const currFrom = currMA.get(user.goldenCross.from);
+        const currTo = currMA.get(user.goldenCross.to);
+        
+        let initialStatus: 'GOLDEN' | 'DEAD' | undefined = undefined;
+        
+        if (currFrom !== undefined && currTo !== undefined) {
+          if (currFrom > currTo) {
+            let belowOk = true;
+            if (user.goldenCross.below && user.goldenCross.below.length > 0) {
+              for (const period of user.goldenCross.below) {
+                const belowMA = currMA.get(period);
+                if (belowMA !== undefined && belowMA >= currFrom) {
+                  belowOk = false;
+                  break;
+                }
+              }
+            }
+            initialStatus = belowOk ? 'GOLDEN' : undefined;
+          } else if (currFrom < currTo) {
+            let aboveOk = true;
+            if (user.deadCross.above && user.deadCross.above.length > 0) {
+              for (const period of user.deadCross.above) {
+                const aboveMA = currMA.get(period);
+                if (aboveMA !== undefined && aboveMA <= currFrom) {
+                  aboveOk = false;
+                  break;
+                }
+              }
+            }
+            initialStatus = aboveOk ? 'DEAD' : undefined;
+          }
+        }
+        
+        // 첫 번째 봉 상태 설정
+        firstQuote.crossStatus = initialStatus;
+        
+        // 나머지 봉들: 크로스 발생 시점만 상태 변경, 아니면 이전 상태 유지
+        let currentStatus = initialStatus;
+        for (let i = 1; i < adjustedQuotes.length; i++) {
+          const quote = adjustedQuotes[i];
+          const prevQuote = adjustedQuotes[i - 1];
+          const prevMA = prevQuote.priceMA;
+          const qMA = quote.priceMA;
+          
+          const goldenResult = checkGoldenCross(prevMA, qMA, user.goldenCross);
+          if (goldenResult.triggered) {
+            currentStatus = 'GOLDEN';
+          } else {
+            const deadResult = checkDeadCross(prevMA, qMA, user.deadCross);
+            if (deadResult.triggered) {
+              currentStatus = 'DEAD';
+            } else {
+              // 크로스 발생했지만 조건 미충족 시 상태 초기화
+              const prevFrom = prevMA.get(user.goldenCross.from);
+              const prevTo = prevMA.get(user.goldenCross.to);
+              const qFrom = qMA.get(user.goldenCross.from);
+              const qTo = qMA.get(user.goldenCross.to);
+              
+              if (prevFrom !== undefined && prevTo !== undefined && 
+                  qFrom !== undefined && qTo !== undefined) {
+                // 골든크로스 발생했지만 조건 미충족
+                if (prevFrom < prevTo && qFrom >= qTo) {
+                  currentStatus = undefined;
+                }
+                // 데드크로스 발생했지만 조건 미충족
+                else if (prevFrom > prevTo && qFrom <= qTo) {
+                  currentStatus = undefined;
+                }
+              }
+              
+              // 현재 상태가 undefined이고 조건을 충족하면 상태 업데이트
+              if (currentStatus === undefined && qFrom !== undefined && qTo !== undefined) {
+                if (qFrom > qTo) {
+                  // 골든 상태 체크
+                  let belowOk = true;
+                  if (user.goldenCross.below) {
+                    for (const period of user.goldenCross.below) {
+                      const belowMA = qMA.get(period);
+                      if (belowMA !== undefined && belowMA >= qFrom) {
+                        belowOk = false;
+                        break;
+                      }
+                    }
+                  }
+                  if (belowOk) currentStatus = 'GOLDEN';
+                } else if (qFrom < qTo) {
+                  // 데드 상태 체크
+                  let aboveOk = true;
+                  if (user.deadCross.above) {
+                    for (const period of user.deadCross.above) {
+                      const aboveMA = qMA.get(period);
+                      if (aboveMA !== undefined && aboveMA <= qFrom) {
+                        aboveOk = false;
+                        break;
+                      }
+                    }
+                  }
+                  if (aboveOk) currentStatus = 'DEAD';
+                }
+              }
+            }
+          }
+          quote.crossStatus = currentStatus;
+        }
+      }
+      
       algoSymbols.set(key, {
         ...symbolData,
         quotes: adjustedQuotes
       });
+      
       console.log(`Filtered ${key}: ${symbolData.quotes.length} -> ${filteredQuotes.length} data points (basePrice: ${basePrice})`);
     }
   });
@@ -576,7 +687,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       actualClose: q.close,  // 실제 종가
       crossStatus: q.crossStatus  // 크로스 상태
     }));
-    
+
     const chart = new TradeChart()
       .setTitle(`${symbolData.label} ${key} (${symbolData.isGroup ? 'Group' : 'Symbol'})`)
       .setData(chartData)
