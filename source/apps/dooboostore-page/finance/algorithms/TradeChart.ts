@@ -10,6 +10,7 @@ export type ChartDataPoint = {
   volume: number; // 거래량 등락률
   ma: Map<number, number>;  // 이평선 (기간 -> 값)
   actualClose?: number;  // 실제 종가 (그룹이 아닌 경우)
+  crossStatus?: 'GOLDEN' | 'DEAD';  // 크로스 상태
 };
 
 // MA 색상 매핑
@@ -209,6 +210,9 @@ export class TradeChart {
     // X축 라벨 및 세로 그리드선
     this.drawXAxisLabels(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
 
+    // 크로스 마커 그리기
+    this.drawCrossMarkers(xScale, priceChartTop, priceChartHeight, volumeChartTop, volumeChartHeight);
+
     return this;
   }
 
@@ -311,6 +315,62 @@ export class TradeChart {
       const timeStr = `${d.time.getMonth() + 1}/${d.time.getDate()} ${d.time.getHours()}:${d.time.getMinutes().toString().padStart(2, '0')}`;
       ctx.fillText(timeStr, x, height - padding.bottom + 15);
     }
+  }
+
+  private drawCrossMarkers(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeChartTop: number, volumeChartHeight: number): void {
+    const { ctx, height, padding, data } = this;
+    
+    data.forEach((d, i) => {
+      // 상태가 바뀌는 시점에만 마커 표시
+      const prevStatus = i > 0 ? data[i - 1].crossStatus : undefined;
+      if (d.crossStatus === prevStatus) return;
+      
+      const x = xScale(i);
+      let color: string;
+      let label: string;
+      
+      if (d.crossStatus === 'GOLDEN') {
+        color = '#FFD700';  // 노랑
+        label = 'G';
+      } else if (d.crossStatus === 'DEAD') {
+        color = '#F44336';  // 빨강
+        label = 'D';
+      } else {
+        color = '#888888';  // 회색 (undefined)
+        label = 'N';
+      }
+      
+      // Y축 점선 (가격 차트 + 거래량 차트 전체)
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(x, priceChartTop);
+      ctx.lineTo(x, volumeChartTop + volumeChartHeight);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      
+      // 위쪽 화살표 (X축 라벨 아래 여백)
+      const arrowY = height - padding.bottom + 35;
+      const arrowSize = 12;
+      
+      // 화살표 배경 (위쪽 방향 삼각형)
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x, arrowY - arrowSize);  // 꼭지점 (위)
+      ctx.lineTo(x - arrowSize / 2, arrowY);  // 왼쪽 아래
+      ctx.lineTo(x + arrowSize / 2, arrowY);  // 오른쪽 아래
+      ctx.closePath();
+      ctx.fill();
+      
+      // 화살표 안쪽 글씨
+      ctx.fillStyle = d.crossStatus === 'GOLDEN' ? '#000000' : '#FFFFFF';
+      ctx.font = 'bold 8px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, x, arrowY - arrowSize / 3);
+      ctx.textBaseline = 'alphabetic';  // 원복
+    });
   }
 
   toBuffer(): Buffer {

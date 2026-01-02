@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { YahooFinanceBrowser, ChartResult, ChartQuote } from '../service/YahooFinanceBrowserService';
-import { calculateMA, calculateRSI, calculateMACD, calculateBollingerBands, analyzeVolume } from './calc';
+import { calculateMA, calculateRSI, calculateMACD, calculateBollingerBands, analyzeVolume, checkGoldenCross, checkDeadCross } from './calc';
 import type { DataPlan, Group, Transaction, TimeSeries, CrossState } from './types';
 import { User } from './User';
 import { createChart, type ChartContext } from './chart';
@@ -222,6 +222,7 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
     volumeChangeRate: number; // 시작 거래량 대비 등락률
     priceMA: Map<number, number>;  // 가격 등락률 이평선
     volumeMA: Map<number, number>; // 거래량 등락률 이평선
+    crossStatus?: 'GOLDEN' | 'DEAD';  // 크로스 상태 (발생 후 유지)
   };
 
   type SymbolData = { label: string, open: number; openVolume: number; isGroup: boolean; quotes: ExtendedQuote[] };
@@ -305,10 +306,80 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
               priceChangeRate,
               volumeChangeRate,
               priceMA,
-              volumeMA
+              volumeMA,
+              crossStatus: undefined
             };
           });
+
+          // 크로스 상태 계산 (상태 유지)
+          let currentStatus: 'GOLDEN' | 'DEAD' | undefined = undefined;
           
+          quotes.forEach((quote, index) => {
+            const currMA = quote.priceMA;
+            const currFrom = currMA.get(user.goldenCross.from);
+            const currTo = currMA.get(user.goldenCross.to);
+            
+            // 첫 번째 봉: 현재 상태 판단
+            if (index === 0) {
+              if (currFrom !== undefined && currTo !== undefined) {
+                if (currFrom > currTo) {
+                  let belowOk = true;
+                  if (user.goldenCross.below) {
+                    for (const period of user.goldenCross.below) {
+                      const belowMA = currMA.get(period);
+                      if (belowMA !== undefined && belowMA >= currFrom) {
+                        belowOk = false;
+                        break;
+                      }
+                    }
+                  }
+                  if (belowOk) currentStatus = 'GOLDEN';
+                } else if (currFrom < currTo) {
+                  let aboveOk = true;
+                  if (user.deadCross.above) {
+                    for (const period of user.deadCross.above) {
+                      const aboveMA = currMA.get(period);
+                      if (aboveMA !== undefined && aboveMA <= currFrom) {
+                        aboveOk = false;
+                        break;
+                      }
+                    }
+                  }
+                  if (aboveOk) currentStatus = 'DEAD';
+                }
+              }
+              quote.crossStatus = currentStatus;
+              return;
+            }
+            
+            const prevMA = quotes[index - 1].priceMA;
+            
+            const goldenResult = checkGoldenCross(prevMA, currMA, user.goldenCross);
+            if (goldenResult.triggered) {
+              currentStatus = 'GOLDEN';
+            } else {
+              const deadResult = checkDeadCross(prevMA, currMA, user.deadCross);
+              if (deadResult.triggered) {
+                currentStatus = 'DEAD';
+              } else {
+                // 크로스 발생했지만 조건 미충족 시 상태 초기화
+                const prevFrom = prevMA.get(user.goldenCross.from);
+                const prevTo = prevMA.get(user.goldenCross.to);
+                
+                if (prevFrom !== undefined && prevTo !== undefined && 
+                    currFrom !== undefined && currTo !== undefined) {
+                  if (prevFrom < prevTo && currFrom >= currTo) {
+                    currentStatus = undefined;
+                  } else if (prevFrom > prevTo && currFrom <= currTo) {
+                    currentStatus = undefined;
+                  }
+                }
+              }
+            }
+            
+            quote.crossStatus = currentStatus;
+          });
+
           symbols.set(symbol, {label: tickers.find(t => t.symbol === symbol)?.label || symbol, open: openPrice, openVolume: openVolume, isGroup: false, quotes } );
         }
         console.log(
@@ -502,7 +573,8 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       close: q.priceChangeRate,
       volume: q.volumeChangeRate,
       ma: q.priceMA,
-      actualClose: q.close  // 실제 종가 (그룹은 평균값)
+      actualClose: q.close,  // 실제 종가
+      crossStatus: q.crossStatus  // 크로스 상태
     }));
     
     const chart = new TradeChart()

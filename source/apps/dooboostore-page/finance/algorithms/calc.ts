@@ -264,3 +264,114 @@ export const calculateMASlope = (currentMA: number, previousMA: number): number 
   if (previousMA === 0) return 0;
   return ((currentMA - previousMA) / previousMA) * 100;
 };
+
+import type { GoldenCrossConfig, DeadCrossConfig } from './types';
+
+export type CrossCheckResult = {
+  triggered: boolean;  // 크로스 발생 여부
+  reason?: string;     // 실패 사유 (디버깅용)
+};
+
+/**
+ * 골든크로스 검증
+ * - from 이평선이 to 이평선을 상향 돌파
+ * - below 조건: 지정된 이평선들이 from 이평선보다 아래에 있어야 함
+ * 
+ * @param prevMA 이전 봉의 MA 값들 (기간 -> 값)
+ * @param currMA 현재 봉의 MA 값들 (기간 -> 값)
+ * @param config 골든크로스 설정
+ * @returns 크로스 발생 여부 및 사유
+ */
+export const checkGoldenCross = (
+  prevMA: Map<number, number>,
+  currMA: Map<number, number>,
+  config: GoldenCrossConfig
+): CrossCheckResult => {
+  const { from, to, below } = config;
+  
+  const prevFrom = prevMA.get(from);
+  const prevTo = prevMA.get(to);
+  const currFrom = currMA.get(from);
+  const currTo = currMA.get(to);
+  
+  // MA 값이 없으면 검증 불가
+  if (prevFrom === undefined || prevTo === undefined || 
+      currFrom === undefined || currTo === undefined) {
+    return { triggered: false, reason: 'MA values not available' };
+  }
+  
+  // 골든크로스 조건: 이전에는 from < to, 현재는 from >= to
+  const wasBelowBefore = prevFrom < prevTo;
+  const isAboveNow = currFrom >= currTo;
+  
+  if (!wasBelowBefore || !isAboveNow) {
+    return { triggered: false, reason: `No crossover: prev(${prevFrom.toFixed(2)} < ${prevTo.toFixed(2)}=${wasBelowBefore}), curr(${currFrom.toFixed(2)} >= ${currTo.toFixed(2)}=${isAboveNow})` };
+  }
+  
+  // below 조건 검증: 지정된 이평선들이 from보다 아래에 있어야 함
+  if (below && below.length > 0) {
+    for (const period of below) {
+      const belowMA = currMA.get(period);
+      if (belowMA === undefined) {
+        return { triggered: false, reason: `MA${period} not available for below check` };
+      }
+      if (belowMA >= currFrom) {
+        return { triggered: false, reason: `MA${period}(${belowMA.toFixed(2)}) is not below MA${from}(${currFrom.toFixed(2)})` };
+      }
+    }
+  }
+  
+  return { triggered: true };
+};
+
+/**
+ * 데드크로스 검증
+ * - from 이평선이 to 이평선을 하향 돌파
+ * - above 조건: 지정된 이평선들이 from 이평선보다 위에 있어야 함
+ * 
+ * @param prevMA 이전 봉의 MA 값들 (기간 -> 값)
+ * @param currMA 현재 봉의 MA 값들 (기간 -> 값)
+ * @param config 데드크로스 설정
+ * @returns 크로스 발생 여부 및 사유
+ */
+export const checkDeadCross = (
+  prevMA: Map<number, number>,
+  currMA: Map<number, number>,
+  config: DeadCrossConfig
+): CrossCheckResult => {
+  const { from, to, above } = config;
+  
+  const prevFrom = prevMA.get(from);
+  const prevTo = prevMA.get(to);
+  const currFrom = currMA.get(from);
+  const currTo = currMA.get(to);
+  
+  // MA 값이 없으면 검증 불가
+  if (prevFrom === undefined || prevTo === undefined || 
+      currFrom === undefined || currTo === undefined) {
+    return { triggered: false, reason: 'MA values not available' };
+  }
+  
+  // 데드크로스 조건: 이전에는 from > to, 현재는 from <= to
+  const wasAboveBefore = prevFrom > prevTo;
+  const isBelowNow = currFrom <= currTo;
+  
+  if (!wasAboveBefore || !isBelowNow) {
+    return { triggered: false, reason: `No crossover: prev(${prevFrom.toFixed(2)} > ${prevTo.toFixed(2)}=${wasAboveBefore}), curr(${currFrom.toFixed(2)} <= ${currTo.toFixed(2)}=${isBelowNow})` };
+  }
+  
+  // above 조건 검증: 지정된 이평선들이 from보다 위에 있어야 함
+  if (above && above.length > 0) {
+    for (const period of above) {
+      const aboveMA = currMA.get(period);
+      if (aboveMA === undefined) {
+        return { triggered: false, reason: `MA${period} not available for above check` };
+      }
+      if (aboveMA <= currFrom) {
+        return { triggered: false, reason: `MA${period}(${aboveMA.toFixed(2)}) is not above MA${from}(${currFrom.toFixed(2)})` };
+      }
+    }
+  }
+  
+  return { triggered: true };
+};
