@@ -34,66 +34,66 @@ export class User {
     },
 
     features: {
-      pyramiding: false,
-      stopLoss: true,
-      takeProfit: true,
-      trailingStop: false,
-      deadCrossAdditionalSell: true,
-      timeFilter: false,
-      maGapFilter: false,
-      consecutiveLossProtection: false,
-      positionSizing: false,
-      volumeStrengthFilter: false,
-      slopeFilter: false,
-      obvFilter: false,
-      rsiFilter: false,
-      macdFilter: false,
-      bollingerBandsFilter: false,
-      volumeAnalysisFilter: false,
-      onlySymbolGoldenCross: true
+      // pyramiding: false,
+      // stopLoss: true,
+      // takeProfit: true,
+      // trailingStop: false,
+      // deadCrossAdditionalSell: true,
+      // timeFilter: false,
+      // maGapFilter: false,
+      // consecutiveLossProtection: false,
+      // positionSizing: false,
+      // volumeStrengthFilter: false,
+      // slopeFilter: false,
+      // obvFilter: false,
+      // rsiFilter: false,
+      // macdFilter: false,
+      // bollingerBandsFilter: false,
+      // volumeAnalysisFilter: false,
+      // onlySymbolGoldenCross: true
     },
 
     buy: {
-      symbolSize: 3,
-      stockRate: 0.1,
-      stockSize: 100,
-      minVolumeStrength: 50,
-      minSlope: 0,
-      maxMaGap: 0.05,
-      positionSizePercent: 0.1,
-      minObvSlope: 0,
-      minRsi: 30,
-      maxRsi: 70,
-      macdBullish: true,
-      bollingerPosition: 'lower',
-      minBollingerPercentB: 0.2,
-      maxBollingerPercentB: 0.5,
-      volumeTrendRequired: 'increasing',
-      avoidPriceVolumeDivergence: true
+      // symbolSize: 3,
+      // stockRate: 0.1,
+      // stockSize: 100,
+      // minVolumeStrength: 50,
+      // minSlope: 0,
+      // maxMaGap: 0.05,
+      // positionSizePercent: 0.1,
+      // minObvSlope: 0,
+      // minRsi: 30,
+      // maxRsi: 70,
+      // macdBullish: true,
+      // bollingerPosition: 'lower',
+      // minBollingerPercentB: 0.2,
+      // maxBollingerPercentB: 0.5,
+      // volumeTrendRequired: 'increasing',
+      // avoidPriceVolumeDivergence: true
     },
 
     sell: {
-      symbolSize: 3,
-      stockRate: 0.5,
-      additionalSellThreshold: 0.01,
-      stopLoss: -0.1,
-      takeProfit: 0.5,
-      trailingStopPercent: 0.02
+      // symbolSize: 3,
+      // stockRate: 0.5,
+      // additionalSellThreshold: 0.01,
+      // stopLoss: -0.1,
+      // takeProfit: 0.5,
+      // trailingStopPercent: 0.02
     },
 
-    timeFilter: {
-      excludeHours: [9, 15]
-    },
-
-    riskManagement: {
-      maxConsecutiveLosses: 3
-    },
-
-    scoreWeights: {
-      slope: 0.5,
-      volume: 0.3,
-      maGap: 0.2
-    }
+    // timeFilter: {
+    //   excludeHours: [9, 15]
+    // },
+    //
+    // riskManagement: {
+    //   maxConsecutiveLosses: 3
+    // },
+    //
+    // scoreWeights: {
+    //   slope: 0.5,
+    //   volume: 0.3,
+    //   maGap: 0.2
+    // }
   };
 
   // 관리하는 그룹들
