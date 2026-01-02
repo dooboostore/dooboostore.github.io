@@ -155,7 +155,7 @@ export class TradeChart {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // 캔들 그리기
+    // 캔들 차트 그리기 (그룹도 OHLC 평균으로 캔들 표시)
     this.data.forEach((d, i) => {
       const x = xScale(i);
       const isUp = d.close >= d.open;
@@ -328,18 +328,38 @@ export class TradeChart {
   }
 
   private drawXAxisLabels(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeChartTop: number, volumeChartHeight: number): void {
-    const { ctx, height, padding, data, gap } = this;
+    const { ctx, height, padding, data } = this;
 
+    // 날짜가 바뀌는 인덱스 찾기
+    const dateChangeIndices = new Set<number>();
+    let prevDate = '';
+    data.forEach((d, i) => {
+      const dateStr = `${d.time.getFullYear()}-${d.time.getMonth()}-${d.time.getDate()}`;
+      if (dateStr !== prevDate) {
+        dateChangeIndices.add(i);
+        prevDate = dateStr;
+      }
+    });
+
+    // 일반 라벨 간격 계산
     const labelCount = Math.min(6, data.length);
     const step = Math.max(1, Math.floor(data.length / labelCount));
     
+    // 라벨 표시할 인덱스 (날짜 변경 + 일반 간격)
+    const labelIndices = new Set<number>();
+    dateChangeIndices.forEach(i => labelIndices.add(i));
     for (let i = 0; i < data.length; i += step) {
+      labelIndices.add(i);
+    }
+    
+    labelIndices.forEach(i => {
       const d = data[i];
       const x = xScale(i);
+      const isDateChange = dateChangeIndices.has(i);
       
       // 세로 그리드선 (가격 차트 영역)
-      ctx.strokeStyle = '#e0e0e0';
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = isDateChange ? '#999999' : '#e0e0e0';
+      ctx.lineWidth = isDateChange ? 1.5 : 1;
       ctx.beginPath();
       ctx.moveTo(x, priceChartTop);
       ctx.lineTo(x, priceChartTop + priceChartHeight);
@@ -352,12 +372,12 @@ export class TradeChart {
       ctx.stroke();
       
       // X축 라벨
-      ctx.fillStyle = '#666666';
-      ctx.font = '10px Arial';
+      ctx.fillStyle = isDateChange ? '#000000' : '#666666';
+      ctx.font = isDateChange ? 'bold 10px Arial' : '10px Arial';
       ctx.textAlign = 'center';
       const timeStr = `${d.time.getMonth() + 1}/${d.time.getDate()} ${d.time.getHours()}:${d.time.getMinutes().toString().padStart(2, '0')}`;
       ctx.fillText(timeStr, x, height - padding.bottom + 15);
-    }
+    });
   }
 
   private drawCrossMarkers(xScale: (i: number) => number, priceChartTop: number, priceChartHeight: number, volumeChartTop: number, volumeChartHeight: number): void {

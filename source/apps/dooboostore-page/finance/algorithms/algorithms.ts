@@ -450,50 +450,47 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
 
       if (validQuotes.length === 0) continue;
 
-      // 평균 계산
+      // OHLC 등락률 평균 계산
+      const avgOpenChangeRate = validQuotes.reduce((sum, q) => sum + q.openChangeRate, 0) / validQuotes.length;
+      const avgHighChangeRate = validQuotes.reduce((sum, q) => sum + q.highChangeRate, 0) / validQuotes.length;
+      const avgLowChangeRate = validQuotes.reduce((sum, q) => sum + q.lowChangeRate, 0) / validQuotes.length;
       const avgPriceChangeRate = validQuotes.reduce((sum, q) => sum + q.priceChangeRate, 0) / validQuotes.length;
       const avgVolumeChangeRate = validQuotes.reduce((sum, q) => sum + q.volumeChangeRate, 0) / validQuotes.length;
-
-      // 이평선 평균 계산
-      const avgPriceMA = new Map<number, number>();
-      const avgVolumeMA = new Map<number, number>();
-
-      allMAPeriods.forEach(period => {
-        // 가격 이평선 평균
-        const priceMaValues = validQuotes.map(q => q.priceMA.get(period)).filter(v => v !== undefined) as number[];
-        if (priceMaValues.length > 0) {
-          avgPriceMA.set(period, priceMaValues.reduce((a, b) => a + b, 0) / priceMaValues.length);
-        }
-
-        // 거래량 이평선 평균
-        const volumeMaValues = validQuotes.map(q => q.volumeMA.get(period)).filter(v => v !== undefined) as number[];
-        if (volumeMaValues.length > 0) {
-          avgVolumeMA.set(period, volumeMaValues.reduce((a, b) => a + b, 0) / volumeMaValues.length);
-        }
-      });
 
       // 첫 번째 심볼의 시간 정보 사용
       const baseQuote = symbolQuotesAtTime[0];
 
       groupQuotes.push({
         date: baseQuote.date,
-        open: 0, // 그룹은 시작가 의미 없음
+        open: 0,
         high: 0,
         low: 0,
-        close: avgPriceChangeRate, // 평균 등락률을 close에 저장
+        close: avgPriceChangeRate,
         volume: 0,
-        openChangeRate: avgPriceChangeRate, // 그룹은 OHLC 모두 같은 값
-        highChangeRate: avgPriceChangeRate,
-        lowChangeRate: avgPriceChangeRate,
+        openChangeRate: avgOpenChangeRate,
+        highChangeRate: avgHighChangeRate,
+        lowChangeRate: avgLowChangeRate,
         priceChangeRate: avgPriceChangeRate,
         volumeChangeRate: avgVolumeChangeRate,
         priceSlope: 0, // 나중에 계산
         volumeSlope: 0, // 나중에 계산
-        priceMA: avgPriceMA,
-        volumeMA: avgVolumeMA,
+        priceMA: new Map<number, number>(), // 나중에 계산
+        volumeMA: new Map<number, number>(), // 나중에 계산
         maSlope: new Map<number, number>() // 나중에 계산
       });
     }
+
+    // 그룹 자체의 close 값으로 이평선 계산
+    allMAPeriods.forEach(period => {
+      for (let i = period - 1; i < groupQuotes.length; i++) {
+        // 최근 period개의 close 평균
+        let sum = 0;
+        for (let j = i - period + 1; j <= i; j++) {
+          sum += groupQuotes[j].priceChangeRate;
+        }
+        groupQuotes[i].priceMA.set(period, sum / period);
+      }
+    });
 
     // 그룹 slope 계산
     for (let i = 1; i < groupQuotes.length; i++) {
@@ -566,10 +563,24 @@ const algorithms = async (dataPlan: DataPlan, user: User) => {
       // 기준가 대비 등락률로 보정 (이평선도 같이 보정)
       // 거래량 등락률은 이전 봉 대비라서 보정 불필요
       const adjustedQuotes = filteredQuotes.map(q => {
-        const openChangeRate = (((q.open || q.close!) - basePrice) / basePrice) * 100;
-        const highChangeRate = (((q.high || q.close!) - basePrice) / basePrice) * 100;
-        const lowChangeRate = (((q.low || q.close!) - basePrice) / basePrice) * 100;
-        const priceChangeRate = ((q.close! - basePrice) / basePrice) * 100;
+        let openChangeRate: number;
+        let highChangeRate: number;
+        let lowChangeRate: number;
+        let priceChangeRate: number;
+
+        if (symbolData.isGroup) {
+          // 그룹: 이미 등락률이므로 기준 등락률만 빼줌
+          openChangeRate = q.openChangeRate - basePriceChangeRate;
+          highChangeRate = q.highChangeRate - basePriceChangeRate;
+          lowChangeRate = q.lowChangeRate - basePriceChangeRate;
+          priceChangeRate = q.priceChangeRate - basePriceChangeRate;
+        } else {
+          // 심볼: 실제 가격이므로 기준가 대비 등락률 계산
+          openChangeRate = (((q.open || q.close!) - basePrice) / basePrice) * 100;
+          highChangeRate = (((q.high || q.close!) - basePrice) / basePrice) * 100;
+          lowChangeRate = (((q.low || q.close!) - basePrice) / basePrice) * 100;
+          priceChangeRate = ((q.close! - basePrice) / basePrice) * 100;
+        }
 
         // 이평선도 같은 기준으로 보정 (기존 값 - 기준 등락률)
         const adjustedPriceMA = new Map<number, number>();

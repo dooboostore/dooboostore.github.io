@@ -57,23 +57,25 @@ export class User {
       rate: 0.1, // 잔액 대비 매수 비율 (0~1)
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'balance' as const, // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
-      crossSlopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
-      crossSlopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
-      moreSlopeThresholdRate: 0.02 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 crossSlopeThresholdRate 사용)
-      moreSlopeThresholdType: 'up' as const, // 피라미딩 매수 기울기 타입 (없으면 crossSlopeThresholdType 사용)
-      groupCrossCheck: false // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
+      slopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
+      slopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
+
+      moreSlopeThresholdRate: 0.02 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
+      moreSlopeThresholdType: 'up' as const, // 피라미딩 매수 기울기 타입 (없으면 slopeThresholdType 사용)
+      groupCrossCheck: true // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
 
     sell: {
       rate: 0.5, // 보유량 대비 매도 비율 (0~1)
       moreRate: 0.25, // 추가 매도 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
-      crossSlopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
-      crossSlopeThresholdType: 'any' as const, // up: 상승 시, down: 하락 시, any: 무관
-      moreSlopeThresholdRate: 0.004 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 crossSlopeThresholdRate 사용)
-      moreSlopeThresholdType: 'any' as const, // 피라미딩 매도 기울기 타입 (없으면 crossSlopeThresholdType 사용)
+      slopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
+      slopeThresholdType: 'down' as const, // up: 상승 시, down: 하락 시, any: 무관
+
+      moreSlopeThresholdRate: 0.004 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 slopeThresholdRate 사용)
+      moreSlopeThresholdType: 'down' as const, // 피라미딩 매도 기울기 타입 (없으면 slopeThresholdType 사용)
       stopLossRate: 0.02, // 손절 비율 (0~1, 예: 0.10 = 10%)  undefined 이면 손절 안함
-      groupCrossCheck: false, // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
+      groupCrossCheck: true, // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
       // 익절 설정 (피라미딩 익절)
       takeProfit: {
         // 평균 매수가(avgPrice) 대비 현재가의 수익률로 익절 판단해
@@ -241,22 +243,22 @@ export class User {
         if (latestQuote.crossStatus === 'DEAD') {
           const isFirstSell = !this.firstSellDone.get(symbol);
 
-          // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 crossSlopeThresholdRate 사용
-          const crossSlopeThresholdRate = isFirstSell
-            ? this.config.sell?.crossSlopeThresholdRate
-            : (this.config.sell?.moreSlopeThresholdRate ?? this.config.sell?.crossSlopeThresholdRate);
+          // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 slopeThresholdRate 사용
+          const slopeThresholdRate = isFirstSell
+            ? this.config.sell?.slopeThresholdRate
+            : (this.config.sell?.moreSlopeThresholdRate ?? this.config.sell?.slopeThresholdRate);
 
-          // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 crossSlopeThresholdType 사용
+          // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 slopeThresholdType 사용
           const slopeType = isFirstSell
-            ? (this.config.sell?.crossSlopeThresholdType ?? 'any')
-            : (this.config.sell?.moreSlopeThresholdType ?? this.config.sell?.crossSlopeThresholdType ?? 'any');
+            ? (this.config.sell?.slopeThresholdType ?? 'any')
+            : (this.config.sell?.moreSlopeThresholdType ?? this.config.sell?.slopeThresholdType ?? 'any');
 
           let canSell = true;
 
-          // 기울기 체크 - priceSlope는 % 단위, crossSlopeThresholdRate는 0~1 비율
+          // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
           // slopeType: 'up'=상승 시, 'down'=하락 시, 'any'=방향 무관 (절대값으로 임계값 체크)
-          if (crossSlopeThresholdRate !== undefined) {
-            const thresholdPercent = crossSlopeThresholdRate * 100;
+          if (slopeThresholdRate !== undefined) {
+            const thresholdPercent = slopeThresholdRate * 100;
 
             console.log(
               `[${symbol}] 매도 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${isFirstSell ? '첫매도' : '피라미딩'}]`
@@ -339,22 +341,22 @@ export class User {
         const currentHolding = this.account.getHolding(symbol);
         const isPyramiding = currentHolding !== undefined && currentHolding.quantity > 0;
 
-        // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 crossSlopeThresholdRate 사용
-        const crossSlopeThresholdRate = isPyramiding
-          ? (this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.crossSlopeThresholdRate)
-          : this.config.buy?.crossSlopeThresholdRate;
+        // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 slopeThresholdRate 사용
+        const slopeThresholdRate = isPyramiding
+          ? (this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.slopeThresholdRate)
+          : this.config.buy?.slopeThresholdRate;
 
-        // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 crossSlopeThresholdType 사용
+        // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 slopeThresholdType 사용
         const slopeType = isPyramiding
-          ? (this.config.buy?.moreSlopeThresholdType ?? this.config.buy?.crossSlopeThresholdType ?? 'up')
-          : (this.config.buy?.crossSlopeThresholdType ?? 'up');
+          ? (this.config.buy?.moreSlopeThresholdType ?? this.config.buy?.slopeThresholdType ?? 'up')
+          : (this.config.buy?.slopeThresholdType ?? 'up');
 
         let canBuy = true;
 
-        // 기울기 체크 - priceSlope는 % 단위, crossSlopeThresholdRate는 0~1 비율
+        // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
         // slopeType: 'up'=상승 시, 'down'=하락 시, 'any'=방향 무관 (절대값으로 임계값 체크)
-        if (crossSlopeThresholdRate !== undefined) {
-          const thresholdPercent = crossSlopeThresholdRate * 100;
+        if (slopeThresholdRate !== undefined) {
+          const thresholdPercent = slopeThresholdRate * 100;
 
           console.log(
             `[${symbol}] 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${isPyramiding ? '피라미딩' : '신규'}]`
