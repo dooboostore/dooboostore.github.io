@@ -110,21 +110,28 @@ export type TradingConfig = {
     sell: number;
   };
   buy?: {
-    rate?: number;           // 잔액 대비 매수 비율
-    moreRate?: number;       // 추가 매수 비율 (피라미딩용)
+    rate?: number;           // 잔액 대비 매수 비율 (0~1)
+    moreRate?: number;       // 추가 매수 비율 (피라미딩용, 0~1)
     moreRateType?: 'balance' | 'position' | 'initial';  // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
-    slopeThreshold?: number; // 첫 매수 시점 기울기 임계값
-    moreRateSlopeThreshold?: number; // 피라미딩 매수 기울기 임계값 (없으면 slopeThreshold 사용)
+    slopeThresholdRate?: number; // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
+    moreSlopeThresholdRate?: number; // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
     groupCrossCheck?: boolean; // 그룹 골든크로스 체크
   };
   sell?: {
-    rate?: number;           // 보유량 대비 매도 비율
-    moreRate?: number;       // 추가 매도 비율 (피라미딩용)
+    rate?: number;           // 보유량 대비 매도 비율 (0~1)
+    moreRate?: number;       // 추가 매도 비율 (피라미딩용, 0~1)
     moreRateType?: 'holding' | 'initial';  // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
-    slopeThreshold?: number; // 첫 매도 시점 기울기 임계값
-    moreRateSlopeThreshold?: number; // 피라미딩 매도 기울기 임계값 (없으면 slopeThreshold 사용)
-    stopLossPercent?: number; // 손절 퍼센트
+    slopeThresholdRate?: number; // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
+    moreSlopeThresholdRate?: number; // 피라미딩 매도 기울기 임계값 (없으면 slopeThresholdRate 사용)
+    stopLossRate?: number; // 손절 비율 (0~1, 예: 0.05 = 5%)
     groupCrossCheck?: boolean; // 그룹 데드크로스 체크
+    // 익절 설정
+    takeProfit?: {
+      thresholdRate: number;      // 첫 익절 기준 수익률 (0~1, 예: 0.10 = 10%)
+      moreThresholdRate?: number; // 추가 익절 간격 (0~1, 예: 0.10 = 10%씩, 없으면 thresholdRate 사용)
+      rate: number;               // 첫 익절 매도 비율 (0~1)
+      moreRate?: number;          // 추가 익절 매도 비율 (0~1, 없으면 rate 사용)
+    };
   };
   features?: Partial<{
     pyramiding: boolean;

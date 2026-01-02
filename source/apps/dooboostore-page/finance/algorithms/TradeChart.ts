@@ -434,7 +434,7 @@ export class TradeChart {
       
       const x = xScale(index);
       const arrowY = priceChartTop - 5;
-      const arrowSize = 8;
+      const arrowSize = 14;
       
       let color: string;
       let label: string;
@@ -446,6 +446,8 @@ export class TradeChart {
         color = '#D32F2F';  // 빨강
         if (tx.reason === 'STOP_LOSS') {
           label = '!';
+        } else if (tx.reason?.startsWith('TAKE_PROFIT')) {
+          label = '$';  // 익절$';  // 익절
         } else if (tx.reason === 'DEAD_CROSS_MORE') {
           label = '+';
         } else {
@@ -474,7 +476,7 @@ export class TradeChart {
       
       // 삼각형 안에 흰색 글씨
       ctx.fillStyle = '#FFFFFF';
-      ctx.font = '5px Arial';
+      ctx.font = 'bold 8px Arial';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(label, x, arrowY + arrowSize * 0.4);
@@ -486,7 +488,7 @@ export class TradeChart {
       ctx.translate(x, arrowY - 2);
       ctx.rotate(-Math.PI / 2);  // 90도 회전
       ctx.fillStyle = color;
-      ctx.font = '4px Arial';
+      ctx.font = '6px Arial';
       ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
       ctx.fillText(infoText, 0, 0);
