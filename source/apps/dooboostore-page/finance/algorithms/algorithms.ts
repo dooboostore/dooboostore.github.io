@@ -1212,11 +1212,10 @@ const algorithms = async (dataPlan: DataPlan) => {
                         shouldBuy = true;
                         const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
                         
-                        // 골든크로스 사이클에서 첫 매수인 경우 G 마크 표시
+                        // 골든크로스 사이클에서 첫 매수인 경우 (G 마크는 진입 시점에만 표시)
                         const hasFirstBuyInCycle = symbolGoldenCycleFirstBuy.get(symbol) || false;
-                        if (!hasFirstBuyInCycle && !isSymbolGoldenCross) {
-                          isSymbolGoldenCross = true;
-                          console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - First buy in golden cross cycle (label: "b") - marking G on chart`);
+                        if (!hasFirstBuyInCycle) {
+                          console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - First buy in golden cross cycle (label: "b")`);
                         } else {
                           console.log(`  🔄 RE-BUY OPPORTUNITY [${timeStr}]: ${symbol} - No holdings in golden cross state (RE-BUY, label: "!b")`);
                         }
@@ -1245,11 +1244,10 @@ const algorithms = async (dataPlan: DataPlan) => {
                         const timeStr = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
                         console.log(`  ✨ CONDITIONS MET [${timeStr}]: ${symbol} - Conditions satisfied while in golden cross state`);
                         
-                        // 골든크로스 사이클에서 첫 매수인 경우 G 마크 표시 (이미 설정되어 있으면 유지)
+                        // 골든크로스 사이클에서 첫 매수인 경우 (G 마크는 진입 시점에만 표시)
                         const hasFirstBuyInCycle = symbolGoldenCycleFirstBuy.get(symbol) || false;
-                        if (!hasFirstBuyInCycle && !isSymbolGoldenCross) {
-                          isSymbolGoldenCross = true;
-                          console.log(`    ✅ First buy in golden cross cycle - marking on chart`);
+                        if (!hasFirstBuyInCycle) {
+                          console.log(`    ✅ First buy in golden cross cycle`);
                         }
                         // 피라미딩은 골든크로스 마크 표시 안 함
                       }
@@ -1675,7 +1673,7 @@ const dataPlan: DataPlan = {
   interval: '1d',
   dataFrom: '2025-04-01',  // 데이터 수집 시작 (MA50 계산을 위해 1개월 더 일찍)
   dataTo: '2026-01-02',    // 데이터 수집 종료
-  algoFrom: '2024-12-01',  // 알고리즘 실행 시작
+  algoFrom: '2025-11-01',  // 알고리즘 실행 시작
   algoTo: '2026-01-02'     // 알고리즘 실행 종료
 };
 

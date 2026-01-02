@@ -34,7 +34,7 @@ export const DEFAULT_CONFIG: TradingConfig = {
 
   // 기능 활성화 플래그
   features: {
-    pyramiding: true,           // 피라미딩 (추가 매수)
+    pyramiding: false,           // 피라미딩 (추가 매수)
     stopLoss: true,             // 손절 (항상 체크)
     takeProfit: true,           // 익절 (항상 체크)
     trailingStop: false,        // 트레일링 스톱 (데드크로스 상태에서만)
@@ -44,7 +44,7 @@ export const DEFAULT_CONFIG: TradingConfig = {
     consecutiveLossProtection: false, // 연속 손실 방지
     positionSizing: false,      // 자금 관리 (잔고의 10%씩)
     volumeStrengthFilter: false, // 거래량 강도 필터
-    slopeFilter: false,         // 기울기 필터
+    slopeFilter: true,         // 기울기 필터
     obvFilter: false,           // OBV 필터
     rsiFilter: false,           // RSI 필터
     macdFilter: false,          // MACD 필터 (모멘텀)
@@ -58,7 +58,7 @@ export const DEFAULT_CONFIG: TradingConfig = {
     stockRate: 0.10,  // 잔고의 10%씩 투자
     stockSize: 100,  // [DEPRECATED] 고정 주식 수 (stockRate 사용 시 무시됨)
     minVolumeStrength: 50, // 최소 거래량 강도 50%
-    minSlope: 0.01, // 최소 기울기
+    minSlope: 0.01, // 최소 기울기 1%
     maxMaGap: 0.05, // MA 간격 최대 5%
     positionSizePercent: 0.1, // 잔고의 10%씩 투자
     minObvSlope: 0, // 최소 OBV 기울기
