@@ -57,9 +57,10 @@ export class User {
       rate: 0.1, // 잔액 대비 매수 비율 (0~1)
       moreRate: 0.05, // 추가 매수 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'balance' as const, // balance: 잔고 기준, position: 현재 포지션 기준, initial: 첫 매수금액 기준
-      slopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
-      slopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
-      moreSlopeThresholdRate: 0.02 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 slopeThresholdRate 사용)
+      crossSlopeThresholdRate: 0.0, // 첫 매수 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)  undefined 이면 기울기 필터링 안함
+      crossSlopeThresholdType: 'up' as const, // up: 상승 시, down: 하락 시, any: 무관
+      moreSlopeThresholdRate: 0.02 as number | undefined, // 피라미딩 매수 기울기 임계값 (없으면 crossSlopeThresholdRate 사용)
+      moreSlopeThresholdType: 'up' as const, // 피라미딩 매수 기울기 타입 (없으면 crossSlopeThresholdType 사용)
       groupCrossCheck: false // symbol이 속한 그룹이 골든크로스 상태인지 추가 확인  undefined 이면 체크안함
     },
 
@@ -67,10 +68,11 @@ export class User {
       rate: 0.5, // 보유량 대비 매도 비율 (0~1)
       moreRate: 0.25, // 추가 매도 비율 (피라미딩용, 0~1)  undefined 이면 피라미딩 안함
       moreRateType: 'holding' as const, // holding: 현재 보유량 기준, initial: 첫 매도수량 기준
-      slopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
-      slopeThresholdType: 'any' as const, // up: 상승 시, down: 하락 시, any: 무관
-      moreSlopeThresholdRate: 0.04 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 slopeThresholdRate 사용)
-      stopLossRate: 0.1, // 손절 비율 (0~1, 예: 0.10 = 10%)  undefined 이면 손절 안함
+      crossSlopeThresholdRate: 0.0, // 첫 매도 시점 기울기 임계값 (0~1, 예: 0.04 = 4%)
+      crossSlopeThresholdType: 'any' as const, // up: 상승 시, down: 하락 시, any: 무관
+      moreSlopeThresholdRate: 0.004 as number | undefined, // 피라미딩 매도 기울기 임계값 (없으면 crossSlopeThresholdRate 사용)
+      moreSlopeThresholdType: 'any' as const, // 피라미딩 매도 기울기 타입 (없으면 crossSlopeThresholdType 사용)
+      stopLossRate: 0.02, // 손절 비율 (0~1, 예: 0.10 = 10%)  undefined 이면 손절 안함
       groupCrossCheck: false, // symbol이 속한 그룹이 데드크로스 상태인지 추가 확인  undefined 이면 체크안함
       // 익절 설정 (피라미딩 익절)
       takeProfit: {
@@ -239,30 +241,52 @@ export class User {
         if (latestQuote.crossStatus === 'DEAD') {
           const isFirstSell = !this.firstSellDone.get(symbol);
 
-          // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 slopeThresholdRate 사용
-          const slopeThresholdRate = isFirstSell
-            ? this.config.sell?.slopeThresholdRate
-            : (this.config.sell?.moreSlopeThresholdRate ?? this.config.sell?.slopeThresholdRate);
+          // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 crossSlopeThresholdRate 사용
+          const crossSlopeThresholdRate = isFirstSell
+            ? this.config.sell?.crossSlopeThresholdRate
+            : (this.config.sell?.moreSlopeThresholdRate ?? this.config.sell?.crossSlopeThresholdRate);
+
+          // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 crossSlopeThresholdType 사용
+          const slopeType = isFirstSell
+            ? (this.config.sell?.crossSlopeThresholdType ?? 'any')
+            : (this.config.sell?.moreSlopeThresholdType ?? this.config.sell?.crossSlopeThresholdType ?? 'any');
 
           let canSell = true;
 
-          // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
-          if (slopeThresholdRate !== undefined) {
-            const thresholdPercent = slopeThresholdRate * 100;
-            const slopeType = this.config.sell?.slopeThresholdType ?? 'any';
+          // 기울기 체크 - priceSlope는 % 단위, crossSlopeThresholdRate는 0~1 비율
+          // slopeType: 'up'=상승 시, 'down'=하락 시, 'any'=방향 무관 (절대값으로 임계값 체크)
+          if (crossSlopeThresholdRate !== undefined) {
+            const thresholdPercent = crossSlopeThresholdRate * 100;
+
+            console.log(
+              `[${symbol}] 매도 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${isFirstSell ? '첫매도' : '피라미딩'}]`
+            );
 
             if (slopeType === 'down') {
-              // 하락 시에만 매도 (기존 로직)
+              // 하락 시에만 매도: priceSlope <= -threshold
               if (latestQuote.priceSlope > -thresholdPercent) {
                 canSell = false;
+                console.log(
+                  `[${symbol}] 매도 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% > -${thresholdPercent.toFixed(2)}%) [${isFirstSell ? '첫매도' : '피라미딩'}]`
+                );
               }
             } else if (slopeType === 'up') {
-              // 상승 시에만 매도
+              // 상승 시에만 매도: priceSlope >= threshold
               if (latestQuote.priceSlope < thresholdPercent) {
                 canSell = false;
+                console.log(
+                  `[${symbol}] 매도 스킵: 기울기 부족 (${latestQuote.priceSlope.toFixed(4)}% < ${thresholdPercent.toFixed(2)}%) [${isFirstSell ? '첫매도' : '피라미딩'}]`
+                );
+              }
+            } else {
+              // 'any': 방향 무관, 절대값으로 임계값 체크
+              if (Math.abs(latestQuote.priceSlope) < thresholdPercent) {
+                canSell = false;
+                console.log(
+                  `[${symbol}] 매도 스킵: 기울기 부족 (|${latestQuote.priceSlope.toFixed(4)}%| < ${thresholdPercent.toFixed(2)}%) [${isFirstSell ? '첫매도' : '피라미딩'}]`
+                );
               }
             }
-            // 'any'는 기울기 무관하게 매도 가능
           }
 
           // 그룹 크로스 체크
@@ -315,24 +339,29 @@ export class User {
         const currentHolding = this.account.getHolding(symbol);
         const isPyramiding = currentHolding !== undefined && currentHolding.quantity > 0;
 
-        // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 slopeThresholdRate 사용
-        const slopeThresholdRate = isPyramiding
-          ? (this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.slopeThresholdRate)
-          : this.config.buy?.slopeThresholdRate;
+        // 기울기 임계값 결정: 피라미딩은 moreSlopeThresholdRate, 없으면 crossSlopeThresholdRate 사용
+        const crossSlopeThresholdRate = isPyramiding
+          ? (this.config.buy?.moreSlopeThresholdRate ?? this.config.buy?.crossSlopeThresholdRate)
+          : this.config.buy?.crossSlopeThresholdRate;
+
+        // 기울기 타입 결정: 피라미딩은 moreSlopeThresholdType, 없으면 crossSlopeThresholdType 사용
+        const slopeType = isPyramiding
+          ? (this.config.buy?.moreSlopeThresholdType ?? this.config.buy?.crossSlopeThresholdType ?? 'up')
+          : (this.config.buy?.crossSlopeThresholdType ?? 'up');
 
         let canBuy = true;
 
-        // 기울기 체크 - priceSlope는 % 단위, slopeThresholdRate는 0~1 비율
-        if (slopeThresholdRate !== undefined) {
-          const thresholdPercent = slopeThresholdRate * 100;
-          const slopeType = this.config.buy?.slopeThresholdType ?? 'up';
+        // 기울기 체크 - priceSlope는 % 단위, crossSlopeThresholdRate는 0~1 비율
+        // slopeType: 'up'=상승 시, 'down'=하락 시, 'any'=방향 무관 (절대값으로 임계값 체크)
+        if (crossSlopeThresholdRate !== undefined) {
+          const thresholdPercent = crossSlopeThresholdRate * 100;
 
           console.log(
             `[${symbol}] 기울기 체크: priceSlope=${latestQuote.priceSlope.toFixed(4)}%, threshold=${thresholdPercent.toFixed(2)}%, type=${slopeType} [${isPyramiding ? '피라미딩' : '신규'}]`
           );
 
           if (slopeType === 'up') {
-            // 상승 시에만 매수 (기존 로직)
+            // 상승 시에만 매수: priceSlope >= threshold
             if (latestQuote.priceSlope < thresholdPercent) {
               canBuy = false;
               console.log(
@@ -340,7 +369,7 @@ export class User {
               );
             }
           } else if (slopeType === 'down') {
-            // 하락 시에만 매수
+            // 하락 시에만 매수: priceSlope <= -threshold
             if (latestQuote.priceSlope > -thresholdPercent) {
               canBuy = false;
               console.log(
@@ -348,7 +377,7 @@ export class User {
               );
             }
           } else {
-            // 'any': 절대값으로 체크
+            // 'any': 방향 무관, 절대값으로 임계값 체크
             if (Math.abs(latestQuote.priceSlope) < thresholdPercent) {
               canBuy = false;
               console.log(
@@ -489,7 +518,14 @@ export class User {
       this.initialSellQuantity.set(symbol, sellQuantity);
     }
 
-    if (sellQuantity <= 0) return false;
+    if (sellQuantity <= 0) {
+      // 남은 수량이 적어서 비율 계산으로 0이 된 경우, 전량 매도
+      if (holding.quantity > 0 && holding.quantity <= 10) {
+        sellQuantity = holding.quantity;
+      } else {
+        return false;
+      }
+    }
     // 보유량보다 많이 팔 수 없음
     sellQuantity = Math.min(sellQuantity, holding.quantity);
 
