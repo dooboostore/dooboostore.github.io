@@ -9,48 +9,31 @@ export class User {
   // 계좌
   account: Account;
 
-  // 골든크로스 설정
-  goldenCross: GoldenCrossConfig = {
-    from: 5,
-    to: 20,
-    below: [50]
-  };
 
-  // 데드크로스 설정
-  deadCross: DeadCrossConfig = {
-    from: 5,
-    to: 10,
-    above: [10]
-  };
 
   // 이동평균선 기간
   maPeriods: number[] = [5, 10, 20, 50];
 
   // 트레이딩 설정
   config: TradingConfig = {
+
+    // 골든크로스 설정
+    goldenCross: {
+      from: 5,
+      to: 20,
+      below: [50]
+    },
+
+    // 데드크로스 설정
+    deadCross: {
+      from: 5,
+      to: 10,
+      above: [10]
+    },
+
     tradeFees: {
       buy: 0.00015,
       sell: 0.00245
-    },
-
-    features: {
-      // pyramiding: false,
-      // stopLoss: true,
-      // takeProfit: true,
-      // trailingStop: false,
-      // deadCrossAdditionalSell: true,
-      // timeFilter: false,
-      // maGapFilter: false,
-      // consecutiveLossProtection: false,
-      // positionSizing: false,
-      // volumeStrengthFilter: false,
-      // slopeFilter: false,
-      // obvFilter: false,
-      // rsiFilter: false,
-      // macdFilter: false,
-      // bollingerBandsFilter: false,
-      // volumeAnalysisFilter: false,
-      // onlySymbolGoldenCross: true
     },
 
     buy: {
@@ -87,19 +70,6 @@ export class User {
       }
     }
 
-    // timeFilter: {
-    //   excludeHours: [9, 15]
-    // },
-    //
-    // riskManagement: {
-    //   maxConsecutiveLosses: 3
-    // },
-    //
-    // scoreWeights: {
-    //   slope: 0.5,
-    //   volume: 0.3,
-    //   maGap: 0.2
-    // }
   };
 
   // 관리하는 그룹들
@@ -116,7 +86,7 @@ export class User {
   // 필요한 모든 MA 기간 (중복 제거, 정렬)
   getAllMAPeriods(): number[] {
     return Array.from(
-      new Set([...this.maPeriods, this.goldenCross.from, this.goldenCross.to, this.deadCross.from, this.deadCross.to])
+      new Set([...this.maPeriods, this.config.goldenCross.from, this.config.goldenCross.to, this.config.deadCross.from, this.config.deadCross.to])
     ).sort((a, b) => a - b);
   }
 

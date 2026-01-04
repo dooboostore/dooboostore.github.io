@@ -106,6 +106,8 @@ export type SymbolSnapshot = {
 
 // 거래 설정
 export type TradingConfig = {
+  goldenCross: GoldenCrossConfig ;
+  deadCross: DeadCrossConfig;
   tradeFees: {
     buy: number;
     sell: number;
