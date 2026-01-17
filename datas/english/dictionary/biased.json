@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "entry": "biased",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbaɪəst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "치우친, 편견을 지닌, 편향된(opp. unbiased)",
+              "examples": [
+                {
+                  "text": "a <b>biased</b> view",
+                  "translatedText": "편견"
+                }
+              ],
+              "originalMeaning": "치우친, 편견을 지닌, 편향된(opp. unbiased)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dd56f768ec8f4611a4ce0ab95db8a2ad",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dd56f768ec8f4611a4ce0ab95db8a2ad",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6a4ec2132bb2f4663bf17481075f22fe",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "bias",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbaɪəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "선입견 ((to, toward)), 편견 ((for, against)); (마음의) 경향, 성향 (=prejudice)",
+              "examples": [
+                {
+                  "text": "a religious[political] <b>bias</b>",
+                  "translatedText": "종교적[정치적] 성향"
+                }
+              ],
+              "originalMeaning": "선입견 ((to, toward)), 편견 ((for, against)); (마음의) 경향, 성향 (=<span class='related_word' lang='en' >prejudice</span>)"
+            },
+            {
+              "meaning": "(직물의 결에 대한) 사선(斜線), 바이어스",
+              "examples": [],
+              "originalMeaning": "(직물의 결에 대한) 사선(斜線), 바이어스"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "엇갈린, 비스듬한; [전기] 편의의",
+              "examples": [],
+              "originalMeaning": "엇갈린, 비스듬한; [전기] 편의의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "비스듬히, 대각선을 따라",
+              "examples": [],
+              "originalMeaning": "비스듬히, 대각선을 따라"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/56e6abe171334db6ab012cf9cfd52d04",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/56e6abe171334db6ab012cf9cfd52d04",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "biases, biasses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1fb79d5a5e33c81dd5411b05641b7449",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "판단이 이해 관계에 치우칠 때가 있다",
+      "text": "Judgment is often <b>biased</b> by interest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "김 선생님은 나에 대해 감정적인 편견을 가지고 있다",
+      "text": "Mr. Kim has an emotional <b>bias</b> toward me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 견해는 편파적이다",
+      "text": "His views are partial[prejudiced, <b>biased</b>]."
+    }
+  ],
+  "isWordType": true
+}

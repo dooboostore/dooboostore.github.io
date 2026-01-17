@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "downstairs",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│daʊn│sterz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "아래층으로[에], [구어] [항공] 지상에",
+              "examples": [
+                {
+                  "text": "go <b>downstairs</b>",
+                  "translatedText": "아래층에 내려가다"
+                }
+              ],
+              "originalMeaning": "아래층으로[에], [구어] [항공] 지상에"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "pl. [단수·복수 취급] 아래층; [미] 극장의 1층(opp. upstairs); 내려가는 (전용) 계단; (2층 버스의) 1층 ((inside, lower-deck라고도 함))",
+              "examples": [],
+              "originalMeaning": "pl. [단수·복수 취급] 아래층; [미] 극장의 1층(opp. upstairs); 내려가는 (전용) 계단; (2층 버스의) 1층 ((inside, lower-deck라고도 함))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "아래층의",
+              "examples": [],
+              "originalMeaning": "아래층의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66bcd265294949e08f39ecd1ed1a17d4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66bcd265294949e08f39ecd1ed1a17d4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e03fb55e6a686f059624908eb9c0eee5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 발을 쿵쿵거리며 2층에서 내려왔다[교실을 걸어다녔다].",
+      "text": "He stamped <b>downstairs</b>[about the classroom]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 상의를 팔에 걸치고 아래층으로 내려왔다.",
+      "text": "He came <b>downstairs</b> with his coat over his arm."
+    }
+  ],
+  "isWordType": true
+}

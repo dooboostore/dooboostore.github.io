@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "advised",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ædváizd,əd-"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[보통 복합어를 이루어] 숙고한, 신중한(deliberate)",
+              "examples": [
+                {
+                  "text": "ill-[well-]<b>advised</b>",
+                  "translatedText": "무분별한[분별 있는]"
+                }
+              ],
+              "originalMeaning": "[보통 복합어를 이루어] 숙고한, 신중한(deliberate)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37ae8d75c32c4bb68b8ca36e7a5ddf58",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37ae8d75c32c4bb68b8ca36e7a5ddf58",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cc9cffba41619c2e41991360c8a01518",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "advise",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ədˈvaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "충고하다, 조언하다; 권하다(recommend)",
+              "examples": [
+                {
+                  "text": "<b>advise</b> a change of air",
+                  "translatedText": "전지 요양을 권하다"
+                }
+              ],
+              "originalMeaning": "충고하다, 조언하다; 권하다(recommend)"
+            },
+            {
+              "meaning": "통지[통고]하다, 알리다(inform) ((of))",
+              "examples": [
+                {
+                  "text": "<b>advise</b> a person of one's address",
+                  "translatedText": "…에게 자기 주소를 알리다"
+                }
+              ],
+              "originalMeaning": "통지[통고]하다, 알리다(inform) ((of))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(남과) 의논하다, 상담하다(consult) ((with))",
+              "examples": [
+                {
+                  "text": "<b>advise</b> with one's teacher about[on]",
+                  "translatedText": "선생님과 …에 대해 의논하다"
+                }
+              ],
+              "originalMeaning": "(남과) 의논하다, 상담하다(consult) ((with))"
+            },
+            {
+              "meaning": "충고하다 ((on))",
+              "examples": [
+                {
+                  "text": "Do as your doctor advises.",
+                  "translatedText": "의사의 충고대로 하시오."
+                }
+              ],
+              "originalMeaning": "충고하다 ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/118865e2d9ed47c2ac87e16621322abd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/118865e2d9ed47c2ac87e16621322abd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "advises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2a27351b4eb40e716f95a71f085a848c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그에게 즉시 출발하도록 권했다.",
+      "text": "I <b>advised</b> his starting at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어느 쪽을 해야 할지 가르쳐 주시오.",
+      "text": "Can you <b>advise</b> me which to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 네게 충고를 할 수 있을거야",
+      "text": "He'll be in a position to <b>advise</b> you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어느 것을 사야 좋을지 내게 조언해 주었다.",
+      "text": "He <b>advised</b> me which to buy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "의사는 내게 금연을 권했다",
+      "text": "The doctor <b>advised</b> me to quit[stop] smoking."
+    }
+  ],
+  "isWordType": true
+}

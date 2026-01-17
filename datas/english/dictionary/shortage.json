@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "shortage",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʃɔːrtɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부족, 결핍",
+              "examples": [
+                {
+                  "text": "a <b>shortage</b> of time[rain, food]",
+                  "translatedText": "시간[비, 식료품] 부족"
+                }
+              ],
+              "originalMeaning": "부족, 결핍"
+            },
+            {
+              "meaning": "부족액[량]",
+              "examples": [],
+              "originalMeaning": "부족액[량]"
+            },
+            {
+              "meaning": "결점, 결함",
+              "examples": [],
+              "originalMeaning": "결점, 결함"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e931a4bcf8514bf4a2567f34305a5415",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e931a4bcf8514bf4a2567f34305a5415",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0447b93e2b6a311b06956e4db2553e4e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돈이 5천 원 축난다",
+      "text": "The sum comes short by five thousand won. or There is a deficit[<b>shortage</b>] of five thousand won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물의 부족은 더욱 심각해졌다.",
+      "text": "The <b>shortage</b> of water grew all the more serious."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "탄약의 부족이 패인이 되었다",
+      "text": "The <b>shortage</b> of munitions resulted in the defeat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "품귀의 소문을 듣자 사람들은 충동적으로 물건을 사재기 했다.",
+      "text": "A rumor of a <b>shortage</b> stampeded people into laying in supplies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "후진국들은 극심한 인재난을 겪고 있다",
+      "text": "Underdeveloped countries are faced with serious shortages of talented people."
+    }
+  ],
+  "isWordType": true
+}

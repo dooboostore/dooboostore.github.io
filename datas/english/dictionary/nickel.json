@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "nickel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈnɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [화학] 니켈, 백통 ((금속 원소; 기호 Ni, 번호 28))",
+              "examples": [],
+              "originalMeaning": "[U] [화학] 니켈, 백통 ((금속 원소; 기호 Ni, 번호 28))"
+            },
+            {
+              "meaning": "[미] 5센트짜리 백통화, [미·속어] 5달러 지폐",
+              "examples": [],
+              "originalMeaning": "[미] 5센트짜리 백통화, [미·속어] 5달러 지폐"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "니켈 도금하다",
+              "examples": [],
+              "originalMeaning": "니켈 도금하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/52cef59ff65249f492a27cc36ab4c513",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/52cef59ff65249f492a27cc36ab4c513",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "nickels"
+        },
+        {
+          "type": "과거형",
+          "value": "nickelled, nickeled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "nickelling, nickeling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "nickelled, nickeled"
+        }
+      ],
+      "aliasConjugation": "nickels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4b1835510ddb57e48a3a4642ac3df284",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "5 센트 빌려 줘.",
+      "text": "Lend me a <b>nickel</b>."
+    }
+  ],
+  "isWordType": true
+}

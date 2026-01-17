@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "refuel",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriːˈfjuːəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "…에 연료를 보급하다",
+              "examples": [],
+              "originalMeaning": "…에 연료를 보급하다"
+            },
+            {
+              "meaning": "<논쟁 등에> 기름을 붓다",
+              "examples": [],
+              "originalMeaning": "<논쟁 등에> 기름을 붓다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연료의 보급을 받다",
+              "examples": [],
+              "originalMeaning": "연료의 보급을 받다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/38ff27dee08f42e1b5244b0d778b5ac7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/38ff27dee08f42e1b5244b0d778b5ac7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "refuels"
+        },
+        {
+          "type": "과거형",
+          "value": "refuelled, refueled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "refuelling, refueling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "refuelled, refueled"
+        }
+      ],
+      "aliasConjugation": "refuels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "12090e28be2cf810c016697e433fabeb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비행기는 급유를 위해 뉴욕에서 약 1시간 머물렀다",
+      "text": "The aircraft made a <b>refueling</b> stop of about an hour at New York. or The plane stopped at New York for about an hour to <b>refuel</b>."
+    }
+  ],
+  "isWordType": true
+}

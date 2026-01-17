@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "rhyme",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "raɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(시의) 운, 각운(脚韻), 압운(押韻)",
+              "examples": [],
+              "originalMeaning": "(시의) 운, 각운(脚韻), 압운(押韻)"
+            },
+            {
+              "meaning": "동운어(同韻語)",
+              "examples": [],
+              "originalMeaning": "동운어(同韻語)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "시를 짓다",
+              "examples": [],
+              "originalMeaning": "시를 짓다"
+            },
+            {
+              "meaning": "운(韻)을 달다, 운이 맞다 ((with))",
+              "examples": [
+                {
+                  "text": "“More” rhymes with[to] “door”. more",
+                  "translatedText": "는 door와 운이 맞는다."
+                }
+              ],
+              "originalMeaning": "운(韻)을 달다, 운이 맞다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<시를> 짓다, 시로 짓다, 시작(詩作)으로 지내다 ((away))",
+              "examples": [],
+              "originalMeaning": "<시를> 짓다, 시로 짓다, 시작(詩作)으로 지내다 ((away))"
+            },
+            {
+              "meaning": "압운시키다, 운을 달게 하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>rhyme</b> “shepherd” with “leopard”",
+                  "translatedText": "shepherd를 leopard와 압운시키다"
+                }
+              ],
+              "originalMeaning": "압운시키다, 운을 달게 하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a0dd957793c465292ab8602d44ef4da",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a0dd957793c465292ab8602d44ef4da",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rhymes"
+        },
+        {
+          "type": "과거형",
+          "value": "rhymed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rhyming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rhymed"
+        }
+      ],
+      "aliasConjugation": "rhymes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a89000f27d4717e9d924137c9d148e09",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "는 door와 운이 맞는다.",
+      "text": "“More” rhymes with[to] “door”. more"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떻게 된 셈인지 영문을 모르겠다",
+      "text": "There is neither <b>rhyme</b> nor reason about it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방금 네 말은 동이 닿지 않는다",
+      "text": "There is no logic[neither <b>rhyme</b> nor reason] in your last remark."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "‘준’은 ‘문’과 압운한다",
+      "text": "June rhymes with moon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "king과 ring",
+      "text": "은 운이 맞는다 “king” rhymes with “ring”. or “king” and “ring” <b>rhyme</b>."
+    }
+  ],
+  "isWordType": true
+}

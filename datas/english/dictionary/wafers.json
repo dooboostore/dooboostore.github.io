@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "wafer",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈweɪfə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "웨이퍼 ((살짝 구운 얇은 과자))",
+              "examples": [
+                {
+                  "text": "(as) thin as a <b>wafer</b>",
+                  "translatedText": "아주 얇은"
+                }
+              ],
+              "originalMeaning": "웨이퍼 ((살짝 구운 얇은 과자))"
+            },
+            {
+              "meaning": "성체, 제병(祭餠) ((성찬용의 빵))",
+              "examples": [],
+              "originalMeaning": "성체, 제병(祭餠) ((성찬용의 빵))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "풀로 봉하다, 봉함용 풀을 바르다",
+              "examples": [],
+              "originalMeaning": "풀로 봉하다, 봉함용 풀을 바르다"
+            },
+            {
+              "meaning": "<건초 등을> 얇은 판 모양으로 압축하다",
+              "examples": [],
+              "originalMeaning": "<건초 등을> 얇은 판 모양으로 압축하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d7cf9d662be9457ab598c89eb3083fa8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d7cf9d662be9457ab598c89eb3083fa8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3faa182f118ae8163be15c523394dbd8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 불면 날아갈 만큼 말라빠졌다",
+      "text": "He is as thin as a lath[<b>wafer</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아주 얇은",
+      "text": "(as) thin as a <b>wafer</b>"
+    }
+  ],
+  "isWordType": true
+}

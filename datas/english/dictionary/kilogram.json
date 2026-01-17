@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "entry": "kilogram",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɪləɡræm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "킬로그램 ((1,000그램; 略 kg))",
+              "examples": [],
+              "originalMeaning": "킬로그램 ((1,000그램; 略 kg))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b912b3065a4e4b9b813f0da83163aab4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b912b3065a4e4b9b813f0da83163aab4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7071500e52a6f6a856a6084b7856533b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쌀은 지금 1킬로당 얼마에 팔리고 있다",
+      "text": "Rice is now sold at so much a <b>kilogram</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "체중이 3킬로그램 늘어났다",
+      "text": "I gained three kilograms."
+    }
+  ],
+  "isWordType": true
+}

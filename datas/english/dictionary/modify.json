@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "modify",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɑːdɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(일부) 변경하다, 수정하다 (=change)",
+              "examples": [
+                {
+                  "text": "<b>modify</b> a contract",
+                  "translatedText": "계약을 일부 변경하다"
+                }
+              ],
+              "originalMeaning": "(일부) 변경하다, 수정하다 (=<span class='related_word' lang='en' >change</span>)"
+            },
+            {
+              "meaning": "<조건·요구 등을> 완화하다, 조절하다",
+              "examples": [
+                {
+                  "text": "<b>modify</b> the terms of a treaty",
+                  "translatedText": "조약 조건을 바꾸다"
+                }
+              ],
+              "originalMeaning": "<조건·요구 등을> 완화하다, 조절하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "변경되다, 수정되다",
+              "examples": [],
+              "originalMeaning": "변경되다, 수정되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b5daadfad1384ad49e5b847636d4c22f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b5daadfad1384ad49e5b847636d4c22f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "modifies"
+        },
+        {
+          "type": "과거형",
+          "value": "modified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "modifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "modified"
+        }
+      ],
+      "aliasConjugation": "modifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8a1924601edd40d6671f656a903f94e9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "목소리를 눅여 말하는 게 좋겠다",
+      "text": "You'd better <b>modify</b> your tone."
+    }
+  ],
+  "isWordType": true
+}

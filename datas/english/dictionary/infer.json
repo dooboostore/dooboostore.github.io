@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "infer",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈfɜː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "추론하다, 추리하다, 추단[추량]하다, 추측하다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>infer</b> an unknown fact from a known fact",
+                  "translatedText": "기지의 사실에서 미지의 것을 추론하다"
+                }
+              ],
+              "originalMeaning": "추론하다, 추리하다, 추단[추량]하다, 추측하다 ((from))"
+            },
+            {
+              "meaning": "결론으로서 의미하다, 암시하다",
+              "examples": [
+                {
+                  "text": "Silence often infers consent.",
+                  "translatedText": "침묵은 종종 동의의 표시이다."
+                }
+              ],
+              "originalMeaning": "결론으로서 의미하다, 암시하다"
+            },
+            {
+              "meaning": "vi 추론[추정]하다",
+              "examples": [],
+              "originalMeaning": "vi 추론[추정]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/97a668370797446a8df8de8801f5f66e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/97a668370797446a8df8de8801f5f66e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "infers"
+        },
+        {
+          "type": "과거형",
+          "value": "inferred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "inferring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "inferred"
+        }
+      ],
+      "aliasConjugation": "infers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "eb25aa20c99ff2414a744b425a9212a0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "침묵은 종종 동의의 표시이다.",
+      "text": "Silence often infers consent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나머지는 미루어 알 수 있는 일이다",
+      "text": "The rest is for you to <b>infer</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신 말로 추고하건대 당신은 이 계획에 반대인 것 같다",
+      "text": "I should <b>infer</b> from your remark that you are against this plan."
+    }
+  ],
+  "isWordType": true
+}

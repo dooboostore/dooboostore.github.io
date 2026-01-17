@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "nobody",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│noʊbədi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "아무도 …않다(no one)",
+              "examples": [],
+              "originalMeaning": "아무도 …않다(no one)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보잘것없는 사람, 무명인(cf. SOMEBODY)",
+              "examples": [
+                {
+                  "text": "He is a mere <b>nobody</b>.",
+                  "translatedText": "그는 보잘것없는 사람일 뿐이다."
+                }
+              ],
+              "originalMeaning": "보잘것없는 사람, 무명인(cf. SOMEBODY)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4eed3b1602f47388bd6dca021c0f7b3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4eed3b1602f47388bd6dca021c0f7b3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "nobodies"
+        }
+      ],
+      "aliasConjugation": "nobodies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "26f172171f2ac8144b12e62de6312ba2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 보잘것없는 사람일 뿐이다.",
+      "text": "He is a mere <b>nobody</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무도 일어나 있지 않다.",
+      "text": "<b>Nobody</b> is stirring yet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아무도 잘못되지 않기를 바란다.",
+      "text": "He wishes <b>nobody</b> ill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무도 그가 누군지를 몰랐다.",
+      "text": "<b>Nobody</b> knew who he was."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 집은 텅 비어 있었다",
+      "text": "<b>Nobody</b> was in his house."
+    }
+  ],
+  "isWordType": true
+}

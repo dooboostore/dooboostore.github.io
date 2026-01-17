@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "update",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌʌpˈdeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[미] 새롭게 하다, 최신의 것으로 하다, 갱신하다(bring up to date); [컴퓨터] 갱신하다",
+              "examples": [],
+              "originalMeaning": "[미] 새롭게 하다, 최신의 것으로 하다, 갱신하다(bring up to date); [컴퓨터] 갱신하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "새롭게 함, 갱신, 개정",
+              "examples": [],
+              "originalMeaning": "새롭게 함, 갱신, 개정"
+            },
+            {
+              "meaning": "최신 정보; [컴퓨터] 갱신 ((데이터 파일에 데이터를 더하거나, 변경시키거나, 없애서 데이터 파일을 새롭게 하는 것))",
+              "examples": [],
+              "originalMeaning": "최신 정보; [컴퓨터] 갱신 ((데이터 파일에 데이터를 더하거나, 변경시키거나, 없애서 데이터 파일을 새롭게 하는 것))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "최신의, 첨단을 걷는",
+              "examples": [],
+              "originalMeaning": "최신의, 첨단을 걷는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3a4c576a86ac485598ca1133a11a19b3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3a4c576a86ac485598ca1133a11a19b3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "updates"
+        },
+        {
+          "type": "과거형",
+          "value": "updated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "updating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "updated"
+        }
+      ],
+      "aliasConjugation": "updates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7891d544d5eb204dcf5dde9f3cc19d5b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 네게 재판에 관해 최신 소식을 통지할 것이다",
+      "text": "They will give you an <b>update</b> on any news on the trial."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "patent",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "특허(권)",
+              "examples": [
+                {
+                  "text": "apply[ask] for a <b>patent</b>",
+                  "translatedText": "특허를 출원하다"
+                }
+              ],
+              "originalMeaning": "특허(권)"
+            },
+            {
+              "meaning": "(전매) 특허품",
+              "examples": [],
+              "originalMeaning": "(전매) 특허품"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(전매) 특허의, 특허권을 가진",
+              "examples": [
+                {
+                  "text": "a <b>patent</b> theatre",
+                  "translatedText": "[영] 특허 극장"
+                }
+              ],
+              "originalMeaning": "(전매) 특허의, 특허권을 가진"
+            },
+            {
+              "meaning": "<법률·변호사 등이> 특허에 관한, 특허를 다루는",
+              "examples": [
+                {
+                  "text": "<b>patent</b> law",
+                  "translatedText": "특허법"
+                }
+              ],
+              "originalMeaning": "<법률·변호사 등이> 특허에 관한, 특허를 다루는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 특허를 얻다, [드물게] 특허권을 주다",
+              "examples": [],
+              "originalMeaning": "…의 특허를 얻다, [드물게] 특허권을 주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d2c96eb172cc4bfea5cc7ef7dd10178b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d2c96eb172cc4bfea5cc7ef7dd10178b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "patents"
+        },
+        {
+          "type": "과거형",
+          "value": "patented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "patenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "patented"
+        }
+      ],
+      "aliasConjugation": "patents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7042fd1d0b2a7e2a19cc940220d6fdcb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "특허 신청 중이다",
+      "text": "Application for a <b>patent</b> is pending."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "특허가 나오다",
+      "text": "A <b>patent</b> is granted ."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "특허 출원중",
+      "text": "<b>Patent</b> applied for. or <b>Patent</b> pending."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "특허 출원중",
+      "text": "<b>Patent</b> pending. or <b>Patent</b> applied for."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "특허 출원 중.",
+      "text": "<b>Patent</b> pending."
+    }
+  ],
+  "isWordType": true
+}

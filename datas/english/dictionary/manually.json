@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "manually",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "손으로, 수공으로",
+              "examples": [],
+              "originalMeaning": "손으로, 수공으로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0cafa7e7005640768801a175ea759790",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0cafa7e7005640768801a175ea759790",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ea11fb2300989a6471a67b98c3e804c9",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "manual",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmænjuəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "손의; 손으로 하는, 수동의; 인력을 요하는; 수공의",
+              "examples": [
+                {
+                  "text": "<b>manual</b> dexterity",
+                  "translatedText": "손재간이 있음"
+                }
+              ],
+              "originalMeaning": "손의; 손으로 하는, 수동의; 인력을 요하는; 수공의"
+            },
+            {
+              "meaning": "현재 있는, 수중에 있는",
+              "examples": [],
+              "originalMeaning": "현재 있는, 수중에 있는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "소책자; 취급 설명서, 편람, 안내서, 입문서, 지도서",
+              "examples": [],
+              "originalMeaning": "소책자; 취급 설명서, 편람, 안내서, 입문서, 지도서"
+            },
+            {
+              "meaning": "(교련) 교범",
+              "examples": [],
+              "originalMeaning": "(교련) 교범"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/61b7d0de1d14416da9338edf847ee4e1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/61b7d0de1d14416da9338edf847ee4e1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "371e5616016b44993d81f8dbd0277549",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 노동을 해 본 일이 없다",
+      "text": "He hasn't done any <b>manual</b> labor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "집을 짓는 것은 많은 품이 든다",
+      "text": "Building a house involves a lot of <b>manual</b> labor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "설명서를 읽고 나서 기계를 조작하시오.",
+      "text": "Read the <b>manual</b> before you operate the machine."
+    }
+  ],
+  "isWordType": true
+}

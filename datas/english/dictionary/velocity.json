@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "entry": "velocity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "və│lɑːsəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "속도(speed), 속력; (자금의) 회전율",
+              "examples": [],
+              "originalMeaning": "속도(speed), 속력; (자금의) 회전율"
+            },
+            {
+              "meaning": "(사태 등의) 신속",
+              "examples": [],
+              "originalMeaning": "(사태 등의) 신속"
+            },
+            {
+              "meaning": "[물리] 속도, [야구] (투구의) 속도",
+              "examples": [
+                {
+                  "text": "cruising <b>velocity</b>",
+                  "translatedText": "경제 속도"
+                }
+              ],
+              "originalMeaning": "[물리] 속도, [야구] (투구의) 속도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8534f310a16148f0a26c369b32c4010f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8534f310a16148f0a26c369b32c4010f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "velocities"
+        }
+      ],
+      "aliasConjugation": "velocities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "99b4bf2219e13410ed24a21143ae451a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풍력은 한 시간에 50마일에 달했다",
+      "text": "The wind attained a <b>velocity</b> of fifty miles an hour."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "순간 최대 풍속이 30미터에 달했다",
+      "text": "The maximum instantaneous wind <b>velocity</b> reached 30 meters."
+    }
+  ],
+  "isWordType": true
+}

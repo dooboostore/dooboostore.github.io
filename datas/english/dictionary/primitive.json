@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "primitive",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈprɪmətɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "원시의, 초기의; 태고의, 옛날의",
+              "examples": [
+                {
+                  "text": "a <b>primitive</b> man",
+                  "translatedText": "원시인"
+                }
+              ],
+              "originalMeaning": "원시의, 초기의; 태고의, 옛날의"
+            },
+            {
+              "meaning": "미개 민족[문화]의",
+              "examples": [],
+              "originalMeaning": "미개 민족[문화]의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "원시인",
+              "examples": [],
+              "originalMeaning": "원시인"
+            },
+            {
+              "meaning": "문예 부흥기 이전의 화가(의 작품), 소박한 화풍의 화가[작품]",
+              "examples": [],
+              "originalMeaning": "문예 부흥기 이전의 화가(의 작품), 소박한 화풍의 화가[작품]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25bd5dbfe2e54f0ea16bc44fa3266e57",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25bd5dbfe2e54f0ea16bc44fa3266e57",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8ffdb2b7c1a9d8af98d0bbdce5a2c541",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 나라의 공업은 아직도 유치하다",
+      "text": "The industry in this country is still <b>primitive</b>[in its infancy]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 나라의 목축업은 아직 초보 단계에 있다",
+      "text": "The stock-farming in this country is still <b>primitive</b>[in an early stage]."
+    }
+  ],
+  "isWordType": true
+}

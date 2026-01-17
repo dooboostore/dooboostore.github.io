@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "reproduce",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│riːprə│duːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<장면·소리 등을> 재생하다, 재현하다; 재연하다; 복사하다, 복제하다, 모조하다; <인물·풍경을> 그리다",
+              "examples": [
+                {
+                  "text": "<b>reproduce</b> a picture from an old print",
+                  "translatedText": "옛 판화에서 그림을 복사하다"
+                }
+              ],
+              "originalMeaning": "<장면·소리 등을> 재생하다, 재현하다; 재연하다; 복사하다, 복제하다, 모조하다; <인물·풍경을> 그리다"
+            },
+            {
+              "meaning": "<동·식물이> <부분·기관을> 재생하다",
+              "examples": [
+                {
+                  "text": "<b>reproduce</b> a severed branch",
+                  "translatedText": "잘려나간 가지를 재생하다"
+                }
+              ],
+              "originalMeaning": "<동·식물이> <부분·기관을> 재생하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<동·식물이> 생식하다, 번식하다",
+              "examples": [
+                {
+                  "text": "Most plants <b>reproduce</b> by seed.",
+                  "translatedText": "대부분의 식물은 종자에 의해 번식한다."
+                }
+              ],
+              "originalMeaning": "<동·식물이> 생식하다, 번식하다"
+            },
+            {
+              "meaning": "[well 등의 부사와 함께] 복사[복제, 재생]되다",
+              "examples": [
+                {
+                  "text": "This print reproduces well.",
+                  "translatedText": "이 판화는 복사가 잘 된다."
+                }
+              ],
+              "originalMeaning": "[well 등의 부사와 함께] 복사[복제, 재생]되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4865b69db50d49349292d6825c070d31",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4865b69db50d49349292d6825c070d31",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reproduces"
+        },
+        {
+          "type": "과거형",
+          "value": "reproduced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reproducing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reproduced"
+        }
+      ],
+      "aliasConjugation": "reproduces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "55d4ea86599a926ae2748a00577c95c7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 판화는 복사가 잘 된다.",
+      "text": "This print reproduces well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대부분의 식물은 종자에 의해 번식한다.",
+      "text": "Most plants <b>reproduce</b> by seed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 삽화는 사진을 복사한 것이다",
+      "text": "The illustration is reproduced from the photograph."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "생식 본능은 인간성에 깊이 뿌리박혀 있다.",
+      "text": "The desire to <b>reproduce</b> is deeply rooted in human nature."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "출판사의 사전 승인 없이는 이 책의 복제를 불허합니다",
+      "text": "No part of this publication may be reproduced without the prior written permission of the publisher."
+    }
+  ],
+  "isWordType": true
+}

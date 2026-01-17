@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "entry": "empty",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈempti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<용기·집·차 등이> 빈, <도로 등이> 인적이 없는",
+              "examples": [
+                {
+                  "text": "an <b>empty</b> house",
+                  "translatedText": "빈 집"
+                }
+              ],
+              "originalMeaning": "<용기·집·차 등이> 빈, <도로 등이> 인적이 없는"
+            },
+            {
+              "meaning": "(성질 등을) 결여한, …이 없는(devoid) ((of))",
+              "examples": [
+                {
+                  "text": "a book <b>empty</b> of real information",
+                  "translatedText": "실질적인 정보가 결여된 책"
+                }
+              ],
+              "originalMeaning": "(성질 등을) 결여한, …이 없는(devoid) ((of))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 빈 상자[광주리, 병, 차, 통]",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 빈 상자[광주리, 병, 차, 통]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<그릇 등을> 비우다, 다 마셔버리다, 없어지게 하다",
+              "examples": [
+                {
+                  "text": "<b>empty</b> a bucket",
+                  "translatedText": "양동이를 비우다"
+                }
+              ],
+              "originalMeaning": "<그릇 등을> 비우다, 다 마셔버리다, 없어지게 하다"
+            },
+            {
+              "meaning": "[~ itself로] <강 등이> …에 흘러들다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>empty</b> itself into the sea",
+                  "translatedText": " 바다로 흘러들다"
+                }
+              ],
+              "originalMeaning": "[~ itself로] <강 등이> …에 흘러들다 ((into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d3b9cbcb8ac040da9c25040cade47936",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d3b9cbcb8ac040da9c25040cade47936",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "emptier"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "empties"
+        },
+        {
+          "type": "최상급",
+          "value": "emptiest"
+        },
+        {
+          "type": "복수형",
+          "value": "empties"
+        },
+        {
+          "type": "과거형",
+          "value": "emptied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "emptying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "emptied"
+        }
+      ],
+      "aliasConjugation": "emptier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "4e7c9f718fd9ef9703038501c2a9f074",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방이 텅텅 비어 있다",
+      "text": "The room is all <b>empty</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인생은 뜬구름과 같은 것이다",
+      "text": "Nothing is certain in this world. or All is vanity in life. or Life is an <b>empty</b> dream."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 배곯고는 일하지 않겠다",
+      "text": "I won't work on an <b>empty</b> stomach."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "버스 앞쪽은 비어 있었다",
+      "text": "The front of the bus was <b>empty</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대번에 잔을 비웠다",
+      "text": "He emptied the glass at a draft."
+    }
+  ],
+  "isWordType": true
+}

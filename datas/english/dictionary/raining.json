@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "rain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 비, [C] 강우, [U] 우천(rainy weather)",
+              "examples": [
+                {
+                  "text": "a heavy <b>rain</b>",
+                  "translatedText": "호우"
+                }
+              ],
+              "originalMeaning": "[U] 비, [C] 강우, [U] 우천(rainy weather)"
+            },
+            {
+              "meaning": "[pl.] (우기 등의) 강우, 장마; 소나기, 한차례 내리는 비",
+              "examples": [
+                {
+                  "text": "spring <b>rain</b> s",
+                  "translatedText": "봄장마"
+                }
+              ],
+              "originalMeaning": "[pl.] (우기 등의) 강우, 장마; 소나기, 한차례 내리는 비"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보통 it를 주어로 하여] 비가 오다",
+              "examples": [
+                {
+                  "text": "It <b>rain</b> s.",
+                  "translatedText": "비가 온다."
+                }
+              ],
+              "originalMeaning": "[보통 it를 주어로 하여] 비가 오다"
+            },
+            {
+              "meaning": "<…이> 비 오듯 하다",
+              "examples": [
+                {
+                  "text": "Shells and bullets rained upon us.",
+                  "translatedText": "총포탄이 비 오듯 쏟아졌다."
+                }
+              ],
+              "originalMeaning": "<…이> 비 오듯 하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[it을 주어로 하여 oneself로] 비를 내리다",
+              "examples": [
+                {
+                  "text": "It has rained itself out.",
+                  "translatedText": "비가 그쳤다."
+                }
+              ],
+              "originalMeaning": "[it을 주어로 하여 oneself로] 비를 내리다"
+            },
+            {
+              "meaning": "[it을 주어로 하여] …의 비를 내리게 하다, …이 비 오듯 쏟아지다",
+              "examples": [
+                {
+                  "text": "It rainedlarge drops.",
+                  "translatedText": "굵은 비가 내렸다."
+                }
+              ],
+              "originalMeaning": "[it을 주어로 하여] …의 비를 내리게 하다, …이 비 오듯 쏟아지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7fe51787444e40659915496ef8f0ff00",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7fe51787444e40659915496ef8f0ff00",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rains"
+        },
+        {
+          "type": "과거형",
+          "value": "rained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "raining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rained"
+        }
+      ],
+      "aliasConjugation": "rains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a93274fc1d33613a99f92b4288f2f4a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 와서 땅이 우물졌다",
+      "text": "The <b>rain</b> formed small hollows in the ground. or The <b>rain</b> formed a pool in the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 올 것 같다.",
+      "text": "It is likely to <b>rain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 참 많이 왔거든!",
+      "text": "It certainly did <b>rain</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아직 비가 오고 있다",
+      "text": "It is still <b>raining</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비가 올 듯 말 듯했다",
+      "text": "I was not sure if it would <b>rain</b> or not. or There was no telling whether it would <b>rain</b> or not."
+    }
+  ],
+  "isWordType": true
+}

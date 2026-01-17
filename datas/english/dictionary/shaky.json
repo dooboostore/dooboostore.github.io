@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "shaky",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈʃeɪki"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "흔들리는, 떨리는, 흔들거리는, 위태위태한, 덜컥거리는",
+              "examples": [],
+              "originalMeaning": "흔들리는, 떨리는, 흔들거리는, 위태위태한, 덜컥거리는"
+            },
+            {
+              "meaning": "<몸이> 부들부들 떨리는, 휘청거리는, 비틀거리는; <목소리·필적 등이> 떨리는",
+              "examples": [
+                {
+                  "text": "<b>shaky</b> voice",
+                  "translatedText": "떨리는 목소리"
+                }
+              ],
+              "originalMeaning": "<몸이> 부들부들 떨리는, 휘청거리는, 비틀거리는; <목소리·필적 등이> 떨리는"
+            },
+            {
+              "meaning": "불확실한, <지위·정권·지식 등이> 불안정한, <신용이> 두텁치 못한, <건물 등이> 무너질 듯한",
+              "examples": [
+                {
+                  "text": "<b>shaky</b> evidence",
+                  "translatedText": "불확실한 증거"
+                }
+              ],
+              "originalMeaning": "불확실한, <지위·정권·지식 등이> 불안정한, <신용이> 두텁치 못한, <건물 등이> 무너질 듯한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0b202a086b8a42d2a0f40e6e64f5f4e8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0b202a086b8a42d2a0f40e6e64f5f4e8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "shakier"
+        },
+        {
+          "type": "최상급",
+          "value": "shakiest"
+        }
+      ],
+      "aliasConjugation": "shakier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "98689bdfe62a5f965e5dede6a5290be6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상 다리가 좀 일긋거린다",
+      "text": "The legs of the table are a bit <b>shaky</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 영어는 아직도 조금은 어설프다",
+      "text": "His English is still a little bit <b>shaky</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상 다리가 되똑거린다",
+      "text": "The leg of a table is <b>shaky</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "층계가 끈덕거린다",
+      "text": "The staircase is <b>shaky</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람이 헐렁헐렁하다",
+      "text": "He is very unstable[pretty <b>shaky</b>]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "impair",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪmˈper"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<가치·힘·건강 등을> 감하다, 덜다, 약하게 하다, 손상시키다, 해치다(damage), 나쁘게 하다",
+              "examples": [
+                {
+                  "text": "<b>impair</b> one's health",
+                  "translatedText": "건강을 해치다[상하게 하다]"
+                }
+              ],
+              "originalMeaning": "<가치·힘·건강 등을> 감하다, 덜다, 약하게 하다, 손상시키다, 해치다(damage), 나쁘게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "손상, 감손",
+              "examples": [],
+              "originalMeaning": "손상, 감손"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b59f970ce5d40ad9fc28695dbb5f471",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b59f970ce5d40ad9fc28695dbb5f471",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "impairs"
+        },
+        {
+          "type": "과거형",
+          "value": "impaired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "impairing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "impaired"
+        }
+      ],
+      "aliasConjugation": "impairs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "99b6b52da938ebac89b98fe5387a5a72",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일로 그들 우정에 금이 갔다",
+      "text": "The affair impaired their friendship."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "술은 도를 넘으면 몸에 안 좋다",
+      "text": "Excessive[Too much] drinking impairs one's health."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일 때문에 그들의 우정에 금이 갔다",
+      "text": "That has impaired[caused a crack in] their friendship."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "doubt",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "daʊt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "의심하다, 수상히 여기다, 의혹을 품다",
+              "examples": [
+                {
+                  "text": "I <b>doubt</b> her honesty.",
+                  "translatedText": "나는 그녀의 정직성을 의심한다."
+                }
+              ],
+              "originalMeaning": "의심하다, 수상히 여기다, 의혹을 품다"
+            },
+            {
+              "meaning": "염려하다, …이 아닐까 생각하다 ((that))",
+              "examples": [],
+              "originalMeaning": "염려하다, …이 아닐까 생각하다 ((that))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "의심하다, 의혹을 품다, 미심쩍게 생각하다 ((about, of))",
+              "examples": [
+                {
+                  "text": "I don't <b>doubt</b> of your success.",
+                  "translatedText": "나는 당신의 성공을 의심치 않소."
+                }
+              ],
+              "originalMeaning": "의심하다, 의혹을 품다, 미심쩍게 생각하다 ((about, of))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "의심, 회의(懷疑); 불신",
+              "examples": [],
+              "originalMeaning": "의심, 회의(懷疑); 불신"
+            },
+            {
+              "meaning": "(결과 등이) 의심스러움, 불확실함",
+              "examples": [
+                {
+                  "text": "There is some <b>doubt</b> (as to) whether he will be elected.",
+                  "translatedText": "그가 당선될지 어떨지 다소 불확실하다. ★ whether 앞의 as to나 about 등의 전치사는 흔히 생략됨."
+                }
+              ],
+              "originalMeaning": "(결과 등이) 의심스러움, 불확실함"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d8fcaa1ef1b34c6992b48d3fdc5286a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d8fcaa1ef1b34c6992b48d3fdc5286a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "doubts"
+        },
+        {
+          "type": "과거형",
+          "value": "doubted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "doubting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "doubted"
+        }
+      ],
+      "aliasConjugation": "doubts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "46c4ed801f9d7e040b9b99072d5ec353",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거의 의심할 바 없다",
+      "text": "You can hardly <b>doubt</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그의 성공을 의심하지 않는다",
+      "text": "I have no <b>doubt</b> of his success[that he will succeed]. or I do not <b>doubt</b> (but) that he will succeed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그녀의 정직성을 의심한다.",
+      "text": "I <b>doubt</b> her honesty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 의심할 여지가 없다.",
+      "text": "This admits of no <b>doubt</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모든 것을 의심한다.",
+      "text": "He doubts about everything."
+    }
+  ],
+  "isWordType": true
+}

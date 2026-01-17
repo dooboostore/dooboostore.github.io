@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "excel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈsel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<남을> 능가하다, …보다 낫다 ((in, at))",
+              "examples": [
+                {
+                  "text": "He excels others in character[atsports].",
+                  "translatedText": "그는 인격이[운동에서] 남보다 뛰어나다."
+                }
+              ],
+              "originalMeaning": "<남을> 능가하다, …보다 낫다 ((in, at))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빼어나다, 탁월하다 ((in, at))",
+              "examples": [
+                {
+                  "text": "<b>excel</b> in biology[at chess]",
+                  "translatedText": "생물학[체스]에서 뛰어나다"
+                }
+              ],
+              "originalMeaning": "빼어나다, 탁월하다 ((in, at))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f09660c07c9345c68d46200d8afe7d64",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f09660c07c9345c68d46200d8afe7d64",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "excels"
+        },
+        {
+          "type": "과거형",
+          "value": "excelled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "excelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "excelled"
+        }
+      ],
+      "aliasConjugation": "excels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e7f4aa3682222a7d4ebbbc580057aa0a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 수학에 특히 빼어나다",
+      "text": "He excels in mathematics."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 운동에서 남보다 앞선다",
+      "text": "He excels others at sports."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 학업에 앞서려고 노력했다",
+      "text": "I tried to <b>excel</b> in my studies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 인격이[운동에서] 남보다 뛰어나다.",
+      "text": "He excels others in character[at sports]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 언제나 수학 시간에 판친다",
+      "text": "He always excels in the mathematics class."
+    }
+  ],
+  "isWordType": true
+}

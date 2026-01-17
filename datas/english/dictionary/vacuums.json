@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "vacuum",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvækjuəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "진공",
+              "examples": [
+                {
+                  "text": "absolute <b>vacuum</b>",
+                  "translatedText": "절대 진공"
+                }
+              ],
+              "originalMeaning": "진공"
+            },
+            {
+              "meaning": "진공실(opp. plenum)",
+              "examples": [],
+              "originalMeaning": "진공실(opp. plenum)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 진공의[에 관한], 진공을 이용한, 진공 장치의",
+              "examples": [],
+              "originalMeaning": "[A] 진공의[에 관한], 진공을 이용한, 진공 장치의"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "진공 청소기로 청소하다",
+              "examples": [],
+              "originalMeaning": "진공 청소기로 청소하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/65551ffdaa314b5db31846f4aa22dd11",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/65551ffdaa314b5db31846f4aa22dd11",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "vacuums"
+        },
+        {
+          "type": "복수형",
+          "value": "vacuums, vacua"
+        },
+        {
+          "type": "과거형",
+          "value": "vacuumed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "vacuuming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "vacuumed"
+        }
+      ],
+      "aliasConjugation": "vacuums",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ad7939308f9ef5349a7b9959f97c4a39",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상실감으로 그의 마음에 구멍이 생겼다.",
+      "text": "The loss left a <b>vacuum</b> in his heart."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "진공 청소기가 왱왱 돌아가는 소리를 들었다",
+      "text": "I heard a <b>vacuum</b> cleaner whirring."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "보온병",
+      "text": "a <b>vacuum</b> bottle"
+    }
+  ],
+  "isWordType": true
+}

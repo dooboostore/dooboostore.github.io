@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "sweep",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "swiːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "청소하다, 소제하다, <먼지 등을> 털다 ((off)), 쓸어버리다 ((away, up))",
+              "examples": [
+                {
+                  "text": "<b>sweep</b> up a room",
+                  "translatedText": "방을 청소하다"
+                }
+              ],
+              "originalMeaning": "청소하다, 소제하다, <먼지 등을> 털다 ((off)), 쓸어버리다 ((away, up))"
+            },
+            {
+              "meaning": "<급류·눈사태 등이> 쓸어 내리다, 씻어 내리다 ((along, down)); 휩쓸어 가다 ((away)); 날려버리다, 흩날려보내다 ((off)); 일소[소탕]하다 ((away)); <질병·소란·흥분 등이> <장소를> 휩쓸다; 전멸시키다; <화염 등이> 삼켜 버리다; 소사(...",
+              "examples": [
+                {
+                  "text": "She had her hat swept off by the wind.",
+                  "translatedText": "그녀는 바람에 모자를 날려버렸다."
+                }
+              ],
+              "originalMeaning": "<급류·눈사태 등이> 쓸어 내리다, 씻어 내리다 ((along, down)); 휩쓸어 가다 ((away)); 날려버리다, 흩날려보내다 ((off)); 일소[소탕]하다 ((away)); <질병·소란·흥분 등이> <장소를> 휩쓸다; 전멸시키다; <화염 등이> 삼켜 버리다; 소사(..."
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "청소하다, 쓸다",
+              "examples": [],
+              "originalMeaning": "청소하다, 쓸다"
+            },
+            {
+              "meaning": "<폭풍(우)·노도·전염병 등이> 엄습하다, 휘몰아치다; <사람·차 등이> 휙 지나가다; <감정이> 엄습하다, 치밀어 오르다",
+              "examples": [
+                {
+                  "text": "The cavalry swept down on the enemy.",
+                  "translatedText": "기병대는 적군을 급습하였다."
+                }
+              ],
+              "originalMeaning": "<폭풍(우)·노도·전염병 등이> 엄습하다, 휘몰아치다; <사람·차 등이> 휙 지나가다; <감정이> 엄습하다, 치밀어 오르다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "청소, 쓸기",
+              "examples": [
+                {
+                  "text": "give the house a good <b>sweep</b>",
+                  "translatedText": "집을 깨끗히 청소하다"
+                }
+              ],
+              "originalMeaning": "청소, 쓸기"
+            },
+            {
+              "meaning": "일소, 전폐",
+              "examples": [],
+              "originalMeaning": "일소, 전폐"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/95183911ef0f4e7697acf83755391c11",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/95183911ef0f4e7697acf83755391c11",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sweeps"
+        },
+        {
+          "type": "과거형",
+          "value": "swept"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sweeping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "swept"
+        }
+      ],
+      "aliasConjugation": "sweeps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f3afbd0ae01f31c536428f3a6436ed2e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방 청소는 네 책임이다",
+      "text": "You are responsible for the sweeping of this room. or It is your duty to <b>sweep</b> this room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 떼의 새들이 휙 날아갔다.",
+      "text": "A flock of birds swept by."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "심한 공포감이 나를 엄습했다.",
+      "text": "A deadly fear swept over me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신부의 드레스가 길게 늘어져 있다.",
+      "text": "The bride’s dress sweeps long."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 땅은 멀리 동쪽으로 뻗쳐 있었다.",
+      "text": "The land swept away to the east."
+    }
+  ],
+  "isWordType": true
+}

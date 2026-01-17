@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "materialize",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mə│tɪriəlaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 형체를 부여하다, 구체화[실현]하다",
+              "examples": [],
+              "originalMeaning": "…에 형체를 부여하다, 구체화[실현]하다"
+            },
+            {
+              "meaning": "<영혼을> 육체적으로 나타내다, 체현(體現)시키다",
+              "examples": [],
+              "originalMeaning": "<영혼을> 육체적으로 나타내다, 체현(體現)시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<영혼이> 육체적으로 나타나다, 체현하다",
+              "examples": [],
+              "originalMeaning": "<영혼이> 육체적으로 나타나다, 체현하다"
+            },
+            {
+              "meaning": "<소원·계획 등이> 실현되다",
+              "examples": [
+                {
+                  "text": "Our plan never materialized.",
+                  "translatedText": "우리의 계획은 결코 실현되지 않았다."
+                }
+              ],
+              "originalMeaning": "<소원·계획 등이> 실현되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6f4eae7e0379427e8bf8679b5585aec1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6f4eae7e0379427e8bf8679b5585aec1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "materializes"
+        },
+        {
+          "type": "과거형",
+          "value": "materialized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "materializing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "materialized"
+        }
+      ],
+      "aliasConjugation": "materializes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b992dd364297465b26affe7d7a0620d3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리의 계획은 결코 실현되지 않았다.",
+      "text": "Our plan never materialized."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리의 계획은 실행에 옮겨지지 못했다",
+      "text": "Our plans did not <b>materialize</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 예언은 실현되지 않았다",
+      "text": "His prediction did not <b>materialize</b>."
+    }
+  ],
+  "isWordType": true
+}

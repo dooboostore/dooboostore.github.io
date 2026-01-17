@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "dependent",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈpendənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[P] <남에게> 의지[의존]하는 ((on, upon; for))",
+              "examples": [
+                {
+                  "text": "He is <b>dependent</b> on his uncle for his living expenses.",
+                  "translatedText": "그는 생활비를 삼촌에게 의존하고 있다."
+                }
+              ],
+              "originalMeaning": "[P] <남에게> 의지[의존]하는 ((on, upon; for))"
+            },
+            {
+              "meaning": "종속 관계의, 예속적인(opp. independent)",
+              "examples": [],
+              "originalMeaning": "종속 관계의, 예속적인(opp. independent)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "남에게 의지하여 사는 사람; 하인, 종; 부양가족, 식솔; 의존[종속]물; [문법] 종속어구[절]",
+              "examples": [],
+              "originalMeaning": "남에게 의지하여 사는 사람; 하인, 종; 부양가족, 식솔; 의존[종속]물; [문법] 종속어구[절]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2aabc8bf14454b90bb4ca9d73b1ff977",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2aabc8bf14454b90bb4ca9d73b1ff977",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3d41a3042cbb8e5b1b78abd0dbcfb3f5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 생활비를 삼촌에게 의존하고 있다.",
+      "text": "He is <b>dependent</b> on his uncle for his living expenses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수확은 날씨에 좌우된다.",
+      "text": "The harvest is <b>dependent</b> upon the weather."
+    }
+  ],
+  "isWordType": true
+}

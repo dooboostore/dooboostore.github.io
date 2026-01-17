@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "entry": "dive",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(물 속으로) 뛰어들다, 물속에 잠기다, (…을 찾아) 잠수하다 ((for)), <잠수함 등이> 잠수하다",
+              "examples": [
+                {
+                  "text": "<b>dive</b> into a river",
+                  "translatedText": "강물에 뛰어들다"
+                }
+              ],
+              "originalMeaning": "(물 속으로) 뛰어들다, 물속에 잠기다, (…을 찾아) 잠수하다 ((for)), <잠수함 등이> 잠수하다"
+            },
+            {
+              "meaning": "갑자기 안 보이게 되다, (덤불 등에) 들어가 숨다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>dive</b> into bushes",
+                  "translatedText": "덤불 속으로 숨어들다"
+                }
+              ],
+              "originalMeaning": "갑자기 안 보이게 되다, (덤불 등에) 들어가 숨다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<손 등을> 쑤셔 넣다",
+              "examples": [],
+              "originalMeaning": "<손 등을> 쑤셔 넣다"
+            },
+            {
+              "meaning": "<잠수함 등을> 잠수시키다",
+              "examples": [],
+              "originalMeaning": "<잠수함 등을> 잠수시키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(수영의) 다이빙, 잠수",
+              "examples": [
+                {
+                  "text": "a fancy <b>dive</b>",
+                  "translatedText": "곡예 다이빙"
+                }
+              ],
+              "originalMeaning": "(수영의) 다이빙, 잠수"
+            },
+            {
+              "meaning": "급강하",
+              "examples": [
+                {
+                  "text": "a nose[steep] <b>dive</b>",
+                  "translatedText": "급강하"
+                }
+              ],
+              "originalMeaning": "급강하"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4371f5a2e5f74f3299dcedfedf241686",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4371f5a2e5f74f3299dcedfedf241686",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dives"
+        },
+        {
+          "type": "과거형",
+          "value": "dived, dove"
+        },
+        {
+          "type": "현재 분사",
+          "value": "diving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dived"
+        }
+      ],
+      "aliasConjugation": "dives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "319b9e0187af27140ac1827f939297a4",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "diva",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdiːvə"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(가극의) 프리마돈나, 주연[인기] 여가수",
+              "examples": [],
+              "originalMeaning": "(가극의) 프리마돈나, 주연[인기] 여가수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/407ee3a21dcf464d97c12f386fd0795a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/407ee3a21dcf464d97c12f386fd0795a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "divas, dive",
+      "aliasConjugationPos": "복수형",
+      "gdid": "5c2054860d3586ca1e076a054df7a091",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비둘기는 평화를 상징한다.",
+      "text": "The dove represents peace."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비둘기는 평화의 상징이다.",
+      "text": "The dove is a figure of peace."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "매우 온화한",
+      "text": "(as) mild as a lamb[a dove, May, milk]"
+    }
+  ],
+  "isWordType": true
+}

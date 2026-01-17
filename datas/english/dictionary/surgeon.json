@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "entry": "surgeon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsɜːrdʒən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "외과의(醫)(cf. PHYSICIAN)",
+              "examples": [],
+              "originalMeaning": "외과의(醫)(cf. PHYSICIAN)"
+            },
+            {
+              "meaning": "군의(관), 선의(船醫)",
+              "examples": [],
+              "originalMeaning": "군의(관), 선의(船醫)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37e4f7a419ed4d488cedaf3d9f00702b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37e4f7a419ed4d488cedaf3d9f00702b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3fe878c5493c0ef016705b0309271ed5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외과 의사는 그에게[맹장] 수술을 했다.",
+      "text": "The <b>surgeon</b> operated on him[for appendicitis]."
+    }
+  ],
+  "isWordType": true
+}

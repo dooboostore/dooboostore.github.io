@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "hydrogen",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhaɪdrədʒən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수소 ((기호 H))",
+              "examples": [
+                {
+                  "text": "<b>hydrogen</b> (mon)oxide",
+                  "translatedText": "산화수소 ((물))"
+                }
+              ],
+              "originalMeaning": "수소 ((기호 H))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8fc9890b82b34120ac7d5cc9f06102c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8fc9890b82b34120ac7d5cc9f06102c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9535d01d73a4e738743cb549581d5884",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물은 산소와 수소로 분해할 수 있다.",
+      "text": "Water can be analyzed into oxygen and <b>hydrogen</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과산화수소 표백",
+      "text": "(<b>hydrogen</b>) peroxide bleaching"
+    }
+  ],
+  "isWordType": true
+}

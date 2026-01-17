@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "chemistry",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkemɪstri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "화학",
+              "examples": [
+                {
+                  "text": "applied <b>chemistry</b>",
+                  "translatedText": "응용 화학"
+                }
+              ],
+              "originalMeaning": "화학"
+            },
+            {
+              "meaning": "화학적 성질[작용]",
+              "examples": [],
+              "originalMeaning": "화학적 성질[작용]"
+            },
+            {
+              "meaning": "(사물의) 불가사의한 작용",
+              "examples": [],
+              "originalMeaning": "(사물의) 불가사의한 작용"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2cbbceb2f6b54b5bb9c16d0f8d057f11",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2cbbceb2f6b54b5bb9c16d0f8d057f11",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "chemistries"
+        }
+      ],
+      "aliasConjugation": "chemistries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "89365cd65d780c8c928edb6d49384155",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "화학과 물리는 서로 관련이 있다.",
+      "text": "<b>Chemistry</b> and physics correlate."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 화학에서 백점을 받았다",
+      "text": "I got a perfect score in <b>chemistry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 케임브리지 대학에서 화학을 전공하고 있다.",
+      "text": "He is reading <b>chemistry</b> at Cambridge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 선생님은 화학에서 세 명을 낙제시켰다",
+      "text": "The teacher failed[flunked ] 3 students in <b>chemistry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 컬럼비아 대학에서 화학을 전공하고 있다.",
+      "text": "He has been doing <b>chemistry</b> at Columbia University."
+    }
+  ],
+  "isWordType": true
+}

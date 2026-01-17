@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "nominally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "nɑ́mənəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "명목[명의]상, [문장 전체를 수식하여] 명목상은",
+              "examples": [],
+              "originalMeaning": "명목[명의]상, [문장 전체를 수식하여] 명목상은"
+            },
+            {
+              "meaning": "명사로서, 명사적으로",
+              "examples": [],
+              "originalMeaning": "명사로서, 명사적으로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ffb731bd22fd4dd8adf6e7ceedfaaad5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ffb731bd22fd4dd8adf6e7ceedfaaad5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e6030ae4413c31cdc928aa7d4c719ad9",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "nominal",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nɑːmɪnl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "이름만의, 명목[명의]상의(opp. effective)",
+              "examples": [
+                {
+                  "text": "a <b>nominal</b> ruler",
+                  "translatedText": "명목상의 통치자"
+                }
+              ],
+              "originalMeaning": "이름만의, 명목[명의]상의(opp. effective)"
+            },
+            {
+              "meaning": "아주 적은, 근소한(slight)",
+              "examples": [
+                {
+                  "text": "a <b>nominal</b> fee",
+                  "translatedText": "아주 적은 수수료"
+                }
+              ],
+              "originalMeaning": "아주 적은, 근소한(slight)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "명사 상당어, 명사류",
+              "examples": [],
+              "originalMeaning": "명사 상당어, 명사류"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a24aa1ed38ef42e89a661cda7b7aaba8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a24aa1ed38ef42e89a661cda7b7aaba8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f0271f19c809cd07074e0c3484e8c6a7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고까짓 빚으로 걱정할 것이 뭐 있나",
+      "text": "Don't worry about such a <b>nominal</b> debt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 임무는 완전히 예정대로 되었다.",
+      "text": "The mission was <b>nominal</b> throughout."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "거저나 다름없는 값입니다",
+      "text": "It's merely a <b>nominal</b> price. or It is quite a bargain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "유명무실하다",
+      "text": "(be) <b>nominal</b>;titular;be in name only"
+    }
+  ],
+  "isWordType": true
+}

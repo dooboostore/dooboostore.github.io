@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "entry": "bumpy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbʌmpi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<길이> 울퉁불퉁한, <차가> 덜컥거리는, [항공] 악기류가 있는, <음악·시 등이> 박자가 고르지 않은",
+              "examples": [],
+              "originalMeaning": "<길이> 울퉁불퉁한, <차가> 덜컥거리는, [항공] 악기류가 있는, <음악·시 등이> 박자가 고르지 않은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6b8da784e0dc4ab3862bd52cf8437933",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6b8da784e0dc4ab3862bd52cf8437933",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "bumpier"
+        },
+        {
+          "type": "최상급",
+          "value": "bumpiest"
+        }
+      ],
+      "aliasConjugation": "bumpier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "2b077bab3891e3babb0f8b816ccd27b7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "험한 항해가 될 것이다",
+      "text": "It will be a <b>bumpy</b> flight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "울퉁불퉁한 길이 수 년이 지나자 펴졌다",
+      "text": "Over the years, the <b>bumpy</b> road had worn smooth."
+    }
+  ],
+  "isWordType": true
+}

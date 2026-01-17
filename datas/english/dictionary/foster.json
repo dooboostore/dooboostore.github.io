@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "foster",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│fɔːstə(r); │fɑːstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "육성하다, 촉진하다(promote), 조성하다",
+              "examples": [
+                {
+                  "text": "<b>foster</b> exports",
+                  "translatedText": "수출을 촉진하다"
+                }
+              ],
+              "originalMeaning": "육성하다, 촉진하다(promote), 조성하다"
+            },
+            {
+              "meaning": "(수양 자식으로서) 기르다(nurse), <아이를> 수양부모에게 맡기다, 돌보다, 사랑하여 아끼다",
+              "examples": [
+                {
+                  "text": "<b>foster</b> children",
+                  "translatedText": "양자들을 양육하다"
+                }
+              ],
+              "originalMeaning": "(수양 자식으로서) 기르다(nurse), <아이를> 수양부모에게 맡기다, 돌보다, 사랑하여 아끼다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(친부모 같이) 사랑하는, 보살펴 주는, 양(養)…",
+              "examples": [
+                {
+                  "text": "<b>foster</b> grandparents",
+                  "translatedText": "양조부모"
+                }
+              ],
+              "originalMeaning": "(친부모 같이) 사랑하는, 보살펴 주는, 양(養)…"
+            },
+            {
+              "meaning": "(친부모와 같은) 사랑[보살핌]을 받는",
+              "examples": [],
+              "originalMeaning": "(친부모와 같은) 사랑[보살핌]을 받는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e610d39df7443c9887db8bf839c9ebe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e610d39df7443c9887db8bf839c9ebe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fosters"
+        },
+        {
+          "type": "과거형",
+          "value": "fostered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fostering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fostered"
+        }
+      ],
+      "aliasConjugation": "fosters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1bad59949b3e267d57caa2055c50db87",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Foster",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "포스터 Stephen ~ (1826-64) ((미국의 가요 작사·작곡가))",
+              "examples": [],
+              "originalMeaning": "포스터 Stephen ~ (1826-64) ((미국의 가요 작사·작곡가))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/daf08c1ae7ff4c49a90c4abf52ba0e54",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/daf08c1ae7ff4c49a90c4abf52ba0e54",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "752d4f00f28962e52e411460352d0c62",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낳은 정보다 기른 정",
+      "text": "The <b>foster</b> parents are closer than the natural parents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 활동의 목적은 아이들의 언어 기능을 발전시키는 데 있다",
+      "text": "These activities are intended to <b>foster</b> children's language skills."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어린애는 낳아 준 친부모보다 길러 준 양부모를 더 따른다",
+      "text": "A child is more attached to its <b>foster</b> parents than to its real parents."
+    }
+  ],
+  "isWordType": true
+}

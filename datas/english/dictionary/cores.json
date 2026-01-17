@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "core",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kɔː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(배·사과 등의) 응어리, 과심(果心); (나무의) 고갱이; (종기·부스럼 등의) 근; (새끼의) 가운데 가닥",
+              "examples": [],
+              "originalMeaning": "(배·사과 등의) 응어리, 과심(果心); (나무의) 고갱이; (종기·부스럼 등의) 근; (새끼의) 가운데 가닥"
+            },
+            {
+              "meaning": "[the ~] (사물의) 핵심, 골자(gist); 속마음",
+              "examples": [],
+              "originalMeaning": "[the ~] (사물의) 핵심, 골자(gist); 속마음"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "핵이 되는, 핵심의, 중심적인",
+              "examples": [
+                {
+                  "text": "<b>core</b> business[product]",
+                  "translatedText": "핵심 사업[제품]"
+                }
+              ],
+              "originalMeaning": "핵이 되는, 핵심의, 중심적인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "과심[응어리]을 도려내다 ((out)), 중심부에서 잘라내다[뽑아내다]",
+              "examples": [],
+              "originalMeaning": "과심[응어리]을 도려내다 ((out)), 중심부에서 잘라내다[뽑아내다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c065f49b8363437db964862511c4192f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c065f49b8363437db964862511c4192f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cores"
+        },
+        {
+          "type": "과거형",
+          "value": "cored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cored"
+        }
+      ],
+      "aliasConjugation": "cores",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "50c5d1b4e0e22bce7a27abc6d6985661",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "CORE",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "인종 평등 회의",
+              "examples": [],
+              "originalMeaning": "인종 평등 회의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19eb803bc41446a3b1492a8f678c33a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19eb803bc41446a3b1492a8f678c33a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "15870e1d6222ec26d0f1eb1e734e5765",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "까치가 사과를 속까지 파먹었다",
+      "text": "The magpie ate into an apple to the <b>core</b>."
+    }
+  ],
+  "isWordType": true
+}

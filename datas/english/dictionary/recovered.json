@@ -1,0 +1,176 @@
+{
+  "items": [
+    {
+      "entry": "recover",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈkʌvə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "되찾다, 도로 찾다; <시체 등을> 찾아내다",
+              "examples": [
+                {
+                  "text": "<b>recover</b> a stolen wallet",
+                  "translatedText": "도둑맞은 지갑을 도로 찾다"
+                }
+              ],
+              "originalMeaning": "되찾다, 도로 찾다; <시체 등을> 찾아내다"
+            },
+            {
+              "meaning": "<건강·의식 등을> 회복하다, 되찾다, 소생시키다, 회복시키다",
+              "examples": [
+                {
+                  "text": "<b>recover</b> a person to life",
+                  "translatedText": "…을 소생시키다"
+                }
+              ],
+              "originalMeaning": "<건강·의식 등을> 회복하다, 되찾다, 소생시키다, 회복시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "건강을 회복하다 ((from, of))",
+              "examples": [
+                {
+                  "text": "<b>recover</b> from[of] an illness",
+                  "translatedText": "병이 낫다"
+                }
+              ],
+              "originalMeaning": "건강을 회복하다 ((from, of))"
+            },
+            {
+              "meaning": "원상태로 복구되다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>recover</b> from the effects of the earthquake",
+                  "translatedText": " 지진의 피해에서 복구되다"
+                }
+              ],
+              "originalMeaning": "원상태로 복구되다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "자세의 회복(recovery)",
+              "examples": [],
+              "originalMeaning": "자세의 회복(recovery)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/131b0902725d4df1b153b1c67c92833b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/131b0902725d4df1b153b1c67c92833b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "recovers"
+        },
+        {
+          "type": "과거형",
+          "value": "recovered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recovering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recovered"
+        }
+      ],
+      "aliasConjugation": "recovers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e816f8c262f12942c426d4946aa4443d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-cover",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriː ˈkʌvə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 덮다, 덮개를 다시 하다",
+              "examples": [],
+              "originalMeaning": "다시 덮다, 덮개를 다시 하다"
+            },
+            {
+              "meaning": "갈아 붙이다, 표지를 갈아 붙이다",
+              "examples": [],
+              "originalMeaning": "갈아 붙이다, 표지를 갈아 붙이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1f016ac845404701a9859be16ea66449",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1f016ac845404701a9859be16ea66449",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "re-covers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "11a664c008d84c627e6ab125b64f0f16",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 거의 회복되고 있다",
+      "text": "He has almost <b>recovered</b> his health."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 회복될 성싶지 않았다",
+      "text": "It seemed as if she would not <b>recover</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 곧 회복할 것 같지 않다",
+      "text": "There is no hope of his recovering soon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "환자의 맥박은 정상으로 돌아왔다",
+      "text": "The patient has <b>recovered</b> a nomal pulse."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 병이 오래도록 질질 끌었다",
+      "text": "He was long in recovering from his illness."
+    }
+  ],
+  "isWordType": true
+}

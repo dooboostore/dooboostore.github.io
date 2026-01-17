@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "eat",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "iːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "먹다, <음식물을> 씹어서 삼키다, <국·죽 등을> 떠내어 마시다",
+              "examples": [
+                {
+                  "text": "<b>eat</b> good food",
+                  "translatedText": "미식(美食)하다, 좋은 식사를 하다"
+                }
+              ],
+              "originalMeaning": "먹다, <음식물을> 씹어서 삼키다, <국·죽 등을> 떠내어 마시다"
+            },
+            {
+              "meaning": "파괴하다, 침식[부식]하다; <해충 따위가 …을> 마구 먹어대다 ((away, out, up))",
+              "examples": [
+                {
+                  "text": "This acid <b>eats</b> metal.",
+                  "translatedText": "이 산은 금속을 부식한다."
+                }
+              ],
+              "originalMeaning": "파괴하다, 침식[부식]하다; <해충 따위가 …을> 마구 먹어대다 ((away, out, up))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "음식을 먹다, 식사를 하다",
+              "examples": [
+                {
+                  "text": "<b>eat</b> and drink",
+                  "translatedText": "먹고 마시다"
+                }
+              ],
+              "originalMeaning": "음식을 먹다, 식사를 하다"
+            },
+            {
+              "meaning": "먹어 들어가다, 파먹다, 침식[부식]하다 ((into))",
+              "examples": [
+                {
+                  "text": "The sea has eaten into the north shore.",
+                  "translatedText": "바다가 북쪽 해안을 침식했다."
+                }
+              ],
+              "originalMeaning": "먹어 들어가다, 파먹다, 침식[부식]하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] [구어] 음식, 식사(meals)",
+              "examples": [],
+              "originalMeaning": "[pl.] [구어] 음식, 식사(meals)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5289c81b7bd44ddbae472cd77e7f0c27",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5289c81b7bd44ddbae472cd77e7f0c27",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "eats"
+        },
+        {
+          "type": "과거형",
+          "value": "ate"
+        },
+        {
+          "type": "현재 분사",
+          "value": "eating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "eaten"
+        }
+      ],
+      "aliasConjugation": "eats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8f3a66af4c0edf81e10b2e7c602195df",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 손에 장을 지지겠다",
+      "text": "I'll <b>eat</b> my hat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "만복이 될 때까지 먹었다",
+      "text": "He ate his fill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 깡그리 먹어 치웠다",
+      "text": "He ate it all up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 생선은 맛이 좋다.",
+      "text": "This fish <b>eats</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그것을 다 먹었다.",
+      "text": "He ate all of it.=He ate it all."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,119 @@
+{
+  "quotes": [
+    {
+      "date": "2025-12-22T00:00:00.000Z",
+      "open": 36400,
+      "high": 36700,
+      "low": 36150,
+      "close": 36200,
+      "volume": 106912,
+      "adjclose": 36200
+    },
+    {
+      "date": "2025-12-23T00:00:00.000Z",
+      "open": 36450,
+      "high": 36550,
+      "low": 35950,
+      "close": 36150,
+      "volume": 114473,
+      "adjclose": 36150
+    },
+    {
+      "date": "2025-12-24T00:00:00.000Z",
+      "open": 36150,
+      "high": 37350,
+      "low": 35900,
+      "close": 37350,
+      "volume": 148322,
+      "adjclose": 37350
+    },
+    {
+      "date": "2025-12-26T00:00:00.000Z",
+      "open": 37400,
+      "high": 38300,
+      "low": 37000,
+      "close": 37100,
+      "volume": 150032,
+      "adjclose": 37100
+    },
+    {
+      "date": "2025-12-29T00:00:00.000Z",
+      "open": 37100,
+      "high": 37400,
+      "low": 36850,
+      "close": 37200,
+      "volume": 117365,
+      "adjclose": 37200
+    },
+    {
+      "date": "2025-12-30T00:00:00.000Z",
+      "open": 36950,
+      "high": 37800,
+      "low": 36950,
+      "close": 37400,
+      "volume": 102811,
+      "adjclose": 37400
+    },
+    {
+      "date": "2026-01-02T00:00:00.000Z",
+      "open": null,
+      "high": null,
+      "low": null,
+      "close": null,
+      "volume": null,
+      "adjclose": null
+    }
+  ],
+  "meta": {
+    "currency": "KRW",
+    "symbol": "263750.KS",
+    "exchangeName": "KOE",
+    "fullExchangeName": "KOSDAQ",
+    "instrumentType": "MUTUALFUND",
+    "firstTradeDate": 1505347200,
+    "regularMarketTime": 1721419200,
+    "hasPrePostMarketData": false,
+    "gmtoffset": 32400,
+    "timezone": "KST",
+    "exchangeTimezoneName": "Asia/Seoul",
+    "regularMarketPrice": 46050,
+    "fiftyTwoWeekHigh": 43450,
+    "fiftyTwoWeekLow": 27800,
+    "shortName": "263750.KS,0P0001BL7Y,135285",
+    "chartPreviousClose": 36350,
+    "priceHint": 2,
+    "currentTradingPeriod": {
+      "pre": {
+        "timezone": "KST",
+        "start": 1767306600,
+        "end": 1767312000,
+        "gmtoffset": 32400
+      },
+      "regular": {
+        "timezone": "KST",
+        "start": 1767312000,
+        "end": 1767333600,
+        "gmtoffset": 32400
+      },
+      "post": {
+        "timezone": "KST",
+        "start": 1767333600,
+        "end": 1767344400,
+        "gmtoffset": 32400
+      }
+    },
+    "dataGranularity": "1d",
+    "range": "",
+    "validRanges": [
+      "1mo",
+      "3mo",
+      "6mo",
+      "ytd",
+      "1y",
+      "2y",
+      "5y",
+      "10y",
+      "max"
+    ]
+  }
+}

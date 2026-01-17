@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "discharge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<배에서> 짐을 부리다, <짐을> 내리다, 양륙하다; <차량이> <승객을> 내리다",
+              "examples": [
+                {
+                  "text": "<b>discharge</b> a ship of a cargo = <b>discharge</b> a cargo from a ship",
+                  "translatedText": "배에서 짐을 내리다"
+                }
+              ],
+              "originalMeaning": "<배에서> 짐을 부리다, <짐을> 내리다, 양륙하다; <차량이> <승객을> 내리다"
+            },
+            {
+              "meaning": "<물 등을> 방출하다, 쏟다",
+              "examples": [],
+              "originalMeaning": "<물 등을> 방출하다, 쏟다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "짐을 부리다, 내리다, 양륙하다; <부담이> 없어지다",
+              "examples": [],
+              "originalMeaning": "짐을 부리다, 내리다, 양륙하다; <부담이> 없어지다"
+            },
+            {
+              "meaning": "<강이> 흘러들다 ((into))",
+              "examples": [
+                {
+                  "text": "The river discharges into the Pacific Ocean.",
+                  "translatedText": "그 강은 태평양으로 흘러 들어간다."
+                }
+              ],
+              "originalMeaning": "<강이> 흘러들다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "짐부리기, 양륙",
+              "examples": [
+                {
+                  "text": "<b>discharge</b> afloat",
+                  "translatedText": "해상에서 짐을 부림"
+                }
+              ],
+              "originalMeaning": "짐부리기, 양륙"
+            },
+            {
+              "meaning": "발사, 발포",
+              "examples": [],
+              "originalMeaning": "발사, 발포"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/48f092a87ae246108c8c830807887463",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/48f092a87ae246108c8c830807887463",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "discharges"
+        },
+        {
+          "type": "과거형",
+          "value": "discharged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "discharging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "discharged"
+        }
+      ],
+      "aliasConjugation": "discharges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f230109579dc3200eed2de555c0ce89b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 임무 수행 중 부상했다",
+      "text": "He was injured in the <b>discharge</b> of his duty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 강은 태평양으로 흘러 들어간다.",
+      "text": "The river discharges into the Pacific Ocean."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기 의무를 충실히 이행했다",
+      "text": "He was faithful in the <b>discharge</b> of his duties."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불경기로 인하여 실업자 사태가 났다",
+      "text": "Depression has brought forth a mass <b>discharge</b> of employees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "군중은 경찰의 공무 집행을 방해했다.",
+      "text": "The crowd obstructed the police in the <b>discharge</b> of their duties."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "necessity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "nəˈsesəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] 필수품, 불가결한 것",
+              "examples": [
+                {
+                  "text": "the necessities of life",
+                  "translatedText": "생활 필수품"
+                }
+              ],
+              "originalMeaning": "[pl.] 필수품, 불가결한 것"
+            },
+            {
+              "meaning": "[종종 the ~] 필요성, 필요, 긴급한 필요",
+              "examples": [
+                {
+                  "text": "( <b>necessity</b>+to do) Is there any <b>necessity</b> for her to stay any longer?",
+                  "translatedText": "그녀가 아직도 남아 있을 필요가 있습니까?"
+                }
+              ],
+              "originalMeaning": "[종종 the ~] 필요성, 필요, 긴급한 필요"
+            },
+            {
+              "meaning": "[UC/] 필연(성), 불가피(성); 당연한 결과",
+              "examples": [
+                {
+                  "text": "physical <b>necessity</b>",
+                  "translatedText": "물리적 필연성"
+                }
+              ],
+              "originalMeaning": "[UC/] 필연(성), 불가피(성); 당연한 결과"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/01b285f074b348e6834e564beb9dbcb8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/01b285f074b348e6834e564beb9dbcb8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "necessities"
+        }
+      ],
+      "aliasConjugation": "necessities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "ae1c74bbcf65990990269838586289c5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 불가불 그렇게 했다",
+      "text": "I had no choice but to do so. or I had to do so out of <b>necessity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 가난에 허덕이고 있다.",
+      "text": "He is in great <b>necessity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사흘 굶어 도둑질 안할 놈 없다.",
+      "text": "<b>Necessity</b> knows[has] no law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 필요는 통절히 느껴졌다",
+      "text": "The <b>necessity</b> was keenly felt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "필요[굶주림] 앞에 법률은 없다.",
+      "text": "<b>Necessity</b>[Hunger] knows[has] no law."
+    }
+  ],
+  "isWordType": true
+}

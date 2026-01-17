@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "entry": "January",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│dʒænjueri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "1월 ((略 Jan., Ja.))",
+              "examples": [
+                {
+                  "text": "in <b>January</b>",
+                  "translatedText": "1월에"
+                }
+              ],
+              "originalMeaning": "1월 ((略 Jan., Ja.))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e37d9e6d79b24292b2e81cdf6b2c05c9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e37d9e6d79b24292b2e81cdf6b2c05c9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "Januaries"
+        }
+      ],
+      "aliasConjugation": "Januaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "9e11af3618b70821fb39b18b5c0a3c4f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결혼식은 1월 10일로 결정되었다",
+      "text": "The wedding was fixed for the 10th of <b>January</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가는 1월에 정상에 달한 후 상당히 하락하였다",
+      "text": "Prices declined considerably from the high peak of <b>January</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "entry": "magnitude",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mæɡnɪtuːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 크기, 크고 작음(size); [U] 큼, 거대함",
+              "examples": [
+                {
+                  "text": "the <b>magnitude</b> of the universe",
+                  "translatedText": "우주의 거대함"
+                }
+              ],
+              "originalMeaning": "[UC/] 크기, 크고 작음(size); [U] 큼, 거대함"
+            },
+            {
+              "meaning": "[U] 중요성(importance); 위대함, 고결",
+              "examples": [
+                {
+                  "text": "the <b>magnitude</b> of a problem",
+                  "translatedText": "문제의 중대성"
+                }
+              ],
+              "originalMeaning": "[U] 중요성(importance); 위대함, 고결"
+            },
+            {
+              "meaning": "(항성의) 광도, (광도의) 등급",
+              "examples": [],
+              "originalMeaning": "(항성의) 광도, (광도의) 등급"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/45c1811b8f474de897f7baaf9e83dd31",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/45c1811b8f474de897f7baaf9e83dd31",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f711691a800d3c2757f0c66c349bcc6d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1등성의 밝기는 6등성의 100배이다",
+      "text": "A first-<b>magnitude</b> star is a hundred times brighter than a sixth-<b>magnitude</b> star."
+    }
+  ],
+  "isWordType": true
+}

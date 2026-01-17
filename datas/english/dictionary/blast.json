@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "blast",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "blæst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(한 줄기의) 센 바람, 일진광풍(一陣狂風), 돌풍, 질풍",
+              "examples": [],
+              "originalMeaning": "(한 줄기의) 센 바람, 일진광풍(一陣狂風), 돌풍, 질풍"
+            },
+            {
+              "meaning": "강하게 부는 소리, 피리 소리, (자동차 등의) 경적 소리",
+              "examples": [
+                {
+                  "text": "blow a <b>blast</b> on the siren",
+                  "translatedText": "기적을 울리다"
+                }
+              ],
+              "originalMeaning": "강하게 부는 소리, 피리 소리, (자동차 등의) 경적 소리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<나팔 등을> 불다, <큰 소리를> 내다 ((out))",
+              "examples": [],
+              "originalMeaning": "<나팔 등을> 불다, <큰 소리를> 내다 ((out))"
+            },
+            {
+              "meaning": "<더위·추위 등이> 시들게 하다, 마르게 하다",
+              "examples": [],
+              "originalMeaning": "<더위·추위 등이> 시들게 하다, 마르게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "큰 소리를 내다",
+              "examples": [],
+              "originalMeaning": "큰 소리를 내다"
+            },
+            {
+              "meaning": "폭파[발파]하다, (총 등으로) 쏘다",
+              "examples": [],
+              "originalMeaning": "폭파[발파]하다, (총 등으로) 쏘다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37577fbd13a94861ba2db8e83f91fab3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37577fbd13a94861ba2db8e83f91fab3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blasts"
+        },
+        {
+          "type": "과거형",
+          "value": "blasted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blasting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blasted"
+        }
+      ],
+      "aliasConjugation": "blasts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "065f020fb80ef714e5fde4f265e4c66e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경기가 한창 진행 중이다",
+      "text": "The game is in full swing[<b>blast</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 선거 연설에서 상대방을 호되게 깠다",
+      "text": "In his campaign speech he really blasted the other party."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 친구들이 아파트에 와서 우리는 아주 잘 놀았다",
+      "text": "My friends came up to my apartment and we had a <b>blast</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돌풍이 요트를 전복시켰다.",
+      "text": "A <b>blast</b> of wind keeled over the yacht."
+    }
+  ],
+  "isWordType": true
+}

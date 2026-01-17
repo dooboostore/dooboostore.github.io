@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "leap",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "liːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "껑충 뛰다, 날뛰다, 뛰어오르다, 도약하다",
+              "examples": [
+                {
+                  "text": "<b>leap</b> at a person",
+                  "translatedText": "…에게 달려들다[뛰어오르다]"
+                }
+              ],
+              "originalMeaning": "껑충 뛰다, 날뛰다, 뛰어오르다, 도약하다"
+            },
+            {
+              "meaning": "<경기·가격 등이> 급격히 상승하다",
+              "examples": [],
+              "originalMeaning": "<경기·가격 등이> 급격히 상승하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<장애물 등을> 뛰어넘다",
+              "examples": [],
+              "originalMeaning": "<장애물 등을> 뛰어넘다"
+            },
+            {
+              "meaning": "뛰게 하다, 뛰어넘게 하다",
+              "examples": [
+                {
+                  "text": "<b>leap</b> a horse across a ditch",
+                  "translatedText": "말에게 도랑을 뛰어넘게 하다"
+                }
+              ],
+              "originalMeaning": "뛰게 하다, 뛰어넘게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "뜀, 도약(跳躍)(jump); 한 번 뛰는 거리[높이], 뛰어넘어야 할 것[장소]; 뛰는 자리, 도약대",
+              "examples": [
+                {
+                  "text": "take a <b>leap</b>",
+                  "translatedText": "도약하다"
+                }
+              ],
+              "originalMeaning": "뜀, 도약(跳躍)(jump); 한 번 뛰는 거리[높이], 뛰어넘어야 할 것[장소]; 뛰는 자리, 도약대"
+            },
+            {
+              "meaning": "교미",
+              "examples": [],
+              "originalMeaning": "교미"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b918d814eb2d48a9afcb27c00adb4707",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b918d814eb2d48a9afcb27c00adb4707",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "leaps"
+        },
+        {
+          "type": "과거형",
+          "value": "leaped, leapt"
+        },
+        {
+          "type": "현재 분사",
+          "value": "leaping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "leaped, leapt"
+        }
+      ],
+      "aliasConjugation": "leaps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fcf6cf4f0be47bc822c25d2115c50479",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 조금도 모험이 아니다",
+      "text": "There is no risk in this. or This is by no means (taking) a <b>leap</b> in the dark."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세 사람이 나에게 달려들었다",
+      "text": "Three men sprang[leaped] at me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세 놈이 나에게 덤볐다",
+      "text": "Three fellows sprang[leaped] on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 수는 3,000으로 격증하였다",
+      "text": "The number leaped[jumped] to 3,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년에는 윤달이 들어 있다",
+      "text": "A <b>leap</b> month sets in this year."
+    }
+  ],
+  "isWordType": true
+}

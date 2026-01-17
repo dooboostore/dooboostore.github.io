@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "entry": "mouse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "maʊs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "생쥐(cf. RAT)",
+              "examples": [
+                {
+                  "text": "a house[field] <b>mouse</b>",
+                  "translatedText": "집[들]쥐"
+                }
+              ],
+              "originalMeaning": "생쥐(cf. RAT)"
+            },
+            {
+              "meaning": "겁쟁이, 암띤 사람",
+              "examples": [],
+              "originalMeaning": "겁쟁이, 암띤 사람"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "습격하다, 몰아내다(hunt out); 찾아내다 ((out))",
+              "examples": [],
+              "originalMeaning": "습격하다, 몰아내다(hunt out); 찾아내다 ((out))"
+            },
+            {
+              "meaning": "(고양이가 쥐를 다루듯) 못살게 굴다, 가지고 놀다; 잡아 찢다",
+              "examples": [],
+              "originalMeaning": "(고양이가 쥐를 다루듯) 못살게 굴다, 가지고 놀다; 잡아 찢다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<고양이가> 쥐를 잡다, 노리다",
+              "examples": [],
+              "originalMeaning": "<고양이가> 쥐를 잡다, 노리다"
+            },
+            {
+              "meaning": "찾아다니다, 배회하다 ((about))",
+              "examples": [],
+              "originalMeaning": "찾아다니다, 배회하다 ((about))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f8339cdc408149aba0354bb0eb3effc8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f8339cdc408149aba0354bb0eb3effc8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "mice, mouses"
+        }
+      ],
+      "aliasConjugation": "mice, mouses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "28b362a73d3dd70a2cfef3a7ecb70ea1",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Mouse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "Minimum Orbital Unmanned Satellite of Earth 지구 소궤도 무인 위성",
+              "examples": [],
+              "originalMeaning": "Minimum Orbital Unmanned Satellite of Earth 지구 소궤도 무인 위성"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8222de97775648d989838a961f4ec881",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8222de97775648d989838a961f4ec881",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ae36d9be3d143d38fd96816bdab4bcc1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 나를 가지고 놀았다",
+      "text": "They played cat and <b>mouse</b> with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쥐는 고양이 앞에서 쪽을 못 쓴다",
+      "text": "The <b>mouse</b> cowers before the cat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뱀은 개구리나 쥐를 잡아먹고 산다",
+      "text": "The snake lives on frogs, mice, and rats."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 고양이는 쥐를 잘 잡는다",
+      "text": "This cat is a good mouser. or This cat is very good at catching mice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고양이는 쥐를 잡아먹는다.",
+      "text": "Cats prey upon mice."
+    }
+  ],
+  "isWordType": true
+}

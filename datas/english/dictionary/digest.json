@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "digest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "소화하다, <약·포도주가> <음식의> 소화를 돕다[촉진하다]",
+              "examples": [
+                {
+                  "text": "food easy to <b>digest</b>",
+                  "translatedText": "소화가 잘되는 음식"
+                }
+              ],
+              "originalMeaning": "소화하다, <약·포도주가> <음식의> 소화를 돕다[촉진하다]"
+            },
+            {
+              "meaning": "<지식 등을> 잘 이해하다, 터득하다; <의미를> 음미하다, 잘 새기다; 숙고하다; <새 영토 등을> 동화시키다",
+              "examples": [
+                {
+                  "text": "<b>digest</b> the poem",
+                  "translatedText": "그 시를 음미하다"
+                }
+              ],
+              "originalMeaning": "<지식 등을> 잘 이해하다, 터득하다; <의미를> 음미하다, 잘 새기다; 숙고하다; <새 영토 등을> 동화시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<음식물이> 소화되다, 삭다; 음식을 소화하다; [화학] 증해되다",
+              "examples": [
+                {
+                  "text": "This food digests well[ill].",
+                  "translatedText": "이 음식은 소화가 잘[안] 된다."
+                }
+              ],
+              "originalMeaning": "<음식물이> 소화되다, 삭다; 음식을 소화하다; [화학] 증해되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "요약, 적요; (문학 작품 등의) 개요",
+              "examples": [],
+              "originalMeaning": "요약, 적요; (문학 작품 등의) 개요"
+            },
+            {
+              "meaning": "(법령의) 요람, 집성; [the D~] 유스티니아누스 법전",
+              "examples": [],
+              "originalMeaning": "(법령의) 요람, 집성; [the D~] 유스티니아누스 법전"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ceb2dba421a4075a795f03eb62b0af3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ceb2dba421a4075a795f03eb62b0af3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "digests"
+        },
+        {
+          "type": "과거형",
+          "value": "digested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "digesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "digested"
+        }
+      ],
+      "aliasConjugation": "digests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "32a5ae2f51666a5a081fb1f0b1198031",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 음식은 소화가 잘[안] 된다.",
+      "text": "This food digests well[ill]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 소화가 잘 된다[안 된다]",
+      "text": "This digests well[poorly]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "채소는 소화가 잘 된다",
+      "text": "Vegetables <b>digest</b> well."
+    }
+  ],
+  "isWordType": true
+}

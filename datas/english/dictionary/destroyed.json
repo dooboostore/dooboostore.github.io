@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "destroy",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈstrɔɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "파괴하다(opp. construct), <문서 등을> 파기하다, 훼손하다",
+              "examples": [
+                {
+                  "text": "The building was <b>destroy</b> ed by a bomb.",
+                  "translatedText": "그 건물은 폭탄으로 파괴되었다."
+                }
+              ],
+              "originalMeaning": "파괴하다(opp. construct), <문서 등을> 파기하다, 훼손하다"
+            },
+            {
+              "meaning": "멸하다, 괴멸[박멸]하다, 구제(驅除)하다;[보통 수동형으로] <동물을> 죽이다, 잡다",
+              "examples": [
+                {
+                  "text": "Many lives were <b>destroy</b> ed in the war.",
+                  "translatedText": "그 전쟁에서 많은 사람이 죽었다."
+                }
+              ],
+              "originalMeaning": "멸하다, 괴멸[박멸]하다, 구제(驅除)하다;[보통 수동형으로] <동물을> 죽이다, 잡다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "파괴하다, 부서지다",
+              "examples": [],
+              "originalMeaning": "파괴하다, 부서지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cbb4de0468b94981b27889ed7f6569f3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cbb4de0468b94981b27889ed7f6569f3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "destroys"
+        },
+        {
+          "type": "과거형",
+          "value": "destroyed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "destroying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "destroyed"
+        }
+      ],
+      "aliasConjugation": "destroys",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bb845709994430b392eac0dda425ffe2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 건물은 폭탄으로 파괴되었다.",
+      "text": "The building was <b>destroyed</b> by a bomb."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 전쟁에서 많은 사람이 죽었다.",
+      "text": "Many lives were <b>destroyed</b> in the war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 패전으로 사기가 완전히 떨어졌다",
+      "text": "The defeat completely <b>destroyed</b> morale."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 화재로 가옥 15채가 소실되었다",
+      "text": "Fifteen houses were <b>destroyed</b> in the fire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 회의의 기록은 모두 파기되어야 한다.",
+      "text": "All records of this meeting shall be <b>destroyed</b>."
+    }
+  ],
+  "isWordType": true
+}

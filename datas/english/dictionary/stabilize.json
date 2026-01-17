@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "stabilize",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsteɪbəlaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "안정시키다, 고정시키다; <선박·항공기 등에> 안정 장치를 하다; 변동하지 않도록 하다",
+              "examples": [],
+              "originalMeaning": "안정시키다, 고정시키다; <선박·항공기 등에> 안정 장치를 하다; 변동하지 않도록 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "안정[고정]되다",
+              "examples": [],
+              "originalMeaning": "안정[고정]되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f98c400fb1b240e1a2fdb37c1d3645f2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f98c400fb1b240e1a2fdb37c1d3645f2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stabilizes"
+        },
+        {
+          "type": "과거형",
+          "value": "stabilized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stabilizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stabilized"
+        }
+      ],
+      "aliasConjugation": "stabilizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "882158195de9e105f16d2f2c855dc9a7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가가 점차로 안정되어 가고 있다",
+      "text": "Prices (of commodities) are gradually getting stabilized."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "민생을 안정시킬 대책이 시급하다",
+      "text": "Measures to <b>stabilize</b> the people's livelihood are urgently needed."
+    }
+  ],
+  "isWordType": true
+}

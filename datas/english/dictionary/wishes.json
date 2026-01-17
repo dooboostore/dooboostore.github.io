@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "wish",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "희망하다, 바라다, …하고 싶다",
+              "examples": [
+                {
+                  "text": "( <b>wish</b>+to do) I <b>wish</b> to go abroad.",
+                  "translatedText": "외국에 가고 싶다"
+                }
+              ],
+              "originalMeaning": "희망하다, 바라다, …하고 싶다"
+            },
+            {
+              "meaning": "…이기를 바라다 (=want)",
+              "examples": [
+                {
+                  "text": "I <b>wish</b> I were [[구어] was] a bird!",
+                  "translatedText": "새라면 좋을 텐데! ★ 실현할 수 없는 소망."
+                }
+              ],
+              "originalMeaning": "…이기를 바라다 (=<span class='related_word' lang='en' >want</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "희망하다, (쉽게 얻을 수 없는 것을) 바라다 ((for, after))",
+              "examples": [
+                {
+                  "text": "The weather is all one could <b>wish</b> for.",
+                  "translatedText": "날씨는 정말 좋다."
+                }
+              ],
+              "originalMeaning": "희망하다, (쉽게 얻을 수 없는 것을) 바라다 ((for, after))"
+            },
+            {
+              "meaning": "(…에) 소원을 빌다, 기원하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>wish</b> on a star",
+                  "translatedText": "별에 소원을 빌다"
+                }
+              ],
+              "originalMeaning": "(…에) 소원을 빌다, 기원하다 ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "소원, 소망, 희망",
+              "examples": [
+                {
+                  "text": "according to one's <b>wishes</b>",
+                  "translatedText": "소망에 따라"
+                }
+              ],
+              "originalMeaning": "소원, 소망, 희망"
+            },
+            {
+              "meaning": "[보통 pl.] (남의 행복·평안 등을) 바라는 말, 기원",
+              "examples": [
+                {
+                  "text": "Please send her my best[kindest] <b>wishes</b>.",
+                  "translatedText": "그 여자에게 안부 전하여 주시오."
+                }
+              ],
+              "originalMeaning": "[보통 pl.] (남의 행복·평안 등을) 바라는 말, 기원"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c9f6099fb1334cad95aa7a838913b2a4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c9f6099fb1334cad95aa7a838913b2a4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wishes"
+        },
+        {
+          "type": "과거형",
+          "value": "wished"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wishing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wished"
+        }
+      ],
+      "aliasConjugation": "wishes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4e5affba2031bb7425aabd94ff643000",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 선생님께 올림",
+      "text": "To[Presented to] Mr. Lee with best <b>wishes</b> from..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나를 저주하고 있다",
+      "text": "He <b>wishes</b> me evil."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 해 주기를 바라네.",
+      "text": "I <b>wish</b> you to do it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 잊어 주면 좋겠네.",
+      "text": "I <b>wish</b> that forgotten."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "곧 가 주었으면 하네.",
+      "text": "I <b>wish</b> you to go at once."
+    }
+  ],
+  "isWordType": true
+}

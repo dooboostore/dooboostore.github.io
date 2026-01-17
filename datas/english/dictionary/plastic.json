@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "plastic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈplæstɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "플라스틱의[으로 만든], 합성수지의, 비닐의",
+              "examples": [],
+              "originalMeaning": "플라스틱의[으로 만든], 합성수지의, 비닐의"
+            },
+            {
+              "meaning": "가소성(可塑性)의, 마음대로 형태를 뜰 수 있는",
+              "examples": [
+                {
+                  "text": "<b>plastic</b> substances",
+                  "translatedText": "가소(可塑) 물질 ((점토·합성수지 등))"
+                }
+              ],
+              "originalMeaning": "가소성(可塑性)의, 마음대로 형태를 뜰 수 있는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 플라스틱, 합성수지; 플라스틱 제품",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 플라스틱, 합성수지; 플라스틱 제품"
+            },
+            {
+              "meaning": "[구어] 신용 카드, 신용 카드에 의한 지불[신용 대출]",
+              "examples": [],
+              "originalMeaning": "[구어] 신용 카드, 신용 카드에 의한 지불[신용 대출]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fe0f1fa58f164345a2abeecc9f3ea7a8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fe0f1fa58f164345a2abeecc9f3ea7a8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "69e3c293dc5a60c77a4ad9365c29265e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고무와 플라스틱은 탄력 있는 물질이다",
+      "text": "Rubber and <b>plastic</b> are flexible materials."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "플라스틱은 고무의 대용품으로 쓸 수 있다",
+      "text": "<b>Plastic</b> can be used as a substitute for rubber."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "educate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈedʒukeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "교육하다, 육성하다; <정신을> 도야(陶冶)하다, 훈육하다",
+              "examples": [
+                {
+                  "text": "<b>educate</b> a person for a thing",
+                  "translatedText": "…을 어떤 일에 적합하도록 교육하다"
+                }
+              ],
+              "originalMeaning": "교육하다, 육성하다; <정신을> 도야(陶冶)하다, 훈육하다"
+            },
+            {
+              "meaning": "<특수 능력·취미 등을> 기르다; <귀·눈 등을> 훈련하다(train) ((in, to)); <동물을> 길들이다(train)",
+              "examples": [
+                {
+                  "text": "<b>educate</b> a person in art",
+                  "translatedText": "…을 훈련하여 예술적 재능을 키우다"
+                }
+              ],
+              "originalMeaning": "<특수 능력·취미 등을> 기르다; <귀·눈 등을> 훈련하다(train) ((in, to)); <동물을> 길들이다(train)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교육[훈련]하다",
+              "examples": [],
+              "originalMeaning": "교육[훈련]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b7c93ee70b44401aad87c9abb1d5b160",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b7c93ee70b44401aad87c9abb1d5b160",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "educates"
+        },
+        {
+          "type": "과거형",
+          "value": "educated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "educating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "educated"
+        }
+      ],
+      "aliasConjugation": "educates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "26489d1f6c815a5fb41ca709b2fc4b94",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 교육을 충분히 받았다",
+      "text": "He is a highly educated man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 하버드에서 교육을 받았다.",
+      "text": "He was educated at Harvard."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 법률[대학] 교육을 받고 있다.",
+      "text": "He is educated in law[at a college]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "젊은 사람들을 가르치는 것은 매우 의미 있는 일이다",
+      "text": "It is a task of great significance to <b>educate</b> young people."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "behave",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪˈheɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[양태의 부사(구)와 함께] 행동하다",
+              "examples": [
+                {
+                  "text": "He doesn't know how to <b>behave</b> .",
+                  "translatedText": "그는 예의범절을 모른다."
+                }
+              ],
+              "originalMeaning": "[양태의 부사(구)와 함께] 행동하다"
+            },
+            {
+              "meaning": "예절 바르게 행동하다",
+              "examples": [
+                {
+                  "text": "The little ones didn't <b>behave</b> .",
+                  "translatedText": "어린이들은 예절이 바르지 않았다."
+                }
+              ],
+              "originalMeaning": "예절 바르게 행동하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[양태의 부사(구)와 함께] 행동[처신]하다",
+              "examples": [
+                {
+                  "text": "He behaved himself like a gentleman.",
+                  "translatedText": "그는 신사답게 처신했다."
+                }
+              ],
+              "originalMeaning": "[양태의 부사(구)와 함께] 행동[처신]하다"
+            },
+            {
+              "meaning": "<어린이가> 예절 바르게 행동하다",
+              "examples": [
+                {
+                  "text": "<b>Behave</b> yourself!",
+                  "translatedText": "얌전하게 굴어요!"
+                }
+              ],
+              "originalMeaning": "<어린이가> 예절 바르게 행동하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce489e8ad01046d7aa3394e1fc7cdc9b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce489e8ad01046d7aa3394e1fc7cdc9b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "behaves"
+        },
+        {
+          "type": "과거형",
+          "value": "behaved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "behaving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "behaved"
+        }
+      ],
+      "aliasConjugation": "behaves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b16d4565a06ec8bb21ad4938e3bb7a06",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 차는 잘 달렸다.",
+      "text": "The car behaved itself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "취중, 언행에 조심해야 한다",
+      "text": "First of all, <b>behave</b> yourself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 이 따위 짓을 하다니!",
+      "text": "That he should <b>behave</b> like this!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 예의 범절을 모른다.",
+      "text": "He doesn’t know how to <b>behave</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "야생의 개는 늑대와 같이 행동한다",
+      "text": "Feral dogs <b>behave</b> like wolves."
+    }
+  ],
+  "isWordType": true
+}

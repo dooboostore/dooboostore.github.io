@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "moon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "muːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] (천체의) 달",
+              "examples": [
+                {
+                  "text": "a trip to the <b>moon</b>",
+                  "translatedText": "달 여행"
+                }
+              ],
+              "originalMeaning": "[보통 the ~] (천체의) 달"
+            },
+            {
+              "meaning": "태음월(太陰月)(lunar month),[보통 pl.] [시어] 한 달",
+              "examples": [
+                {
+                  "text": "for three moons",
+                  "translatedText": "3개월간"
+                }
+              ],
+              "originalMeaning": "태음월(太陰月)(lunar month),[보통 pl.] [시어] 한 달"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<때를[시간을]> 멍하니 보내다[지내다] ((away))",
+              "examples": [
+                {
+                  "text": "<b>moon</b> the evening away",
+                  "translatedText": "저녁 나절을 멍하니 보내다"
+                }
+              ],
+              "originalMeaning": "<때를[시간을]> 멍하니 보내다[지내다] ((away))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "부질없이 돌아다니다, 멍하니 바라보다 ((about, around))",
+              "examples": [],
+              "originalMeaning": "부질없이 돌아다니다, 멍하니 바라보다 ((about, around))"
+            },
+            {
+              "meaning": "(열중하여) 정신없이 시간을 보내다 ((over))",
+              "examples": [],
+              "originalMeaning": "(열중하여) 정신없이 시간을 보내다 ((over))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15706cd157bf4ad99e49e5e838b149c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15706cd157bf4ad99e49e5e838b149c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "moons"
+        },
+        {
+          "type": "과거형",
+          "value": "mooned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mooning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mooned"
+        }
+      ],
+      "aliasConjugation": "moons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ecd6e369f4cd7f2be60dd0c7b410ca29",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달이 높이 떠 있다.",
+      "text": "The <b>moon</b> rides high."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달의 원주는 약 7,000 마일이다",
+      "text": "The circumference of the <b>moon</b> is about 7,000 miles. or The <b>moon</b> is about 7,000 miles in circumference."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달이 중천에 걸려 있다",
+      "text": "The <b>moon</b> is riding high."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내게 불가능한 약속을 했다",
+      "text": "He promised me the <b>moon</b>[earth]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달이 밝게 빛나고 있었다",
+      "text": "The <b>moon</b> was shining brightly."
+    }
+  ],
+  "isWordType": true
+}
