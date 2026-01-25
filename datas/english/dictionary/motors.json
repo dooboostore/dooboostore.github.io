@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "motor",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│moʊtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모터, 전동기(電動機), 발동기; 내연 기관",
+              "examples": [],
+              "originalMeaning": "모터, 전동기(電動機), 발동기; 내연 기관"
+            },
+            {
+              "meaning": "[영] 자동차",
+              "examples": [],
+              "originalMeaning": "[영] 자동차"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "움직이게 하는, 원동(력)의; 발동의",
+              "examples": [
+                {
+                  "text": "<b>motor</b> power",
+                  "translatedText": "원동력"
+                }
+              ],
+              "originalMeaning": "움직이게 하는, 원동(력)의; 발동의"
+            },
+            {
+              "meaning": "모터의, 발동기의; 자동차(용)의, 자동차에 의한",
+              "examples": [
+                {
+                  "text": "the <b>motor</b> industry",
+                  "translatedText": "자동차 산업"
+                }
+              ],
+              "originalMeaning": "모터의, 발동기의; 자동차(용)의, 자동차에 의한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자동차로 운반하다[보내다]",
+              "examples": [
+                {
+                  "text": "<b>motor</b> a friend home",
+                  "translatedText": "친구를 차로 집까지 태워다주다"
+                }
+              ],
+              "originalMeaning": "자동차로 운반하다[보내다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb23bdd23af74d64ad1f68d9fe30c083",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb23bdd23af74d64ad1f68d9fe30c083",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "motors"
+        },
+        {
+          "type": "과거형",
+          "value": "motored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "motoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "motored"
+        }
+      ],
+      "aliasConjugation": "motors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ab3b1e22496135686016484d7ef3c9d1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사람은 뉴욕의 한 자동차 판매업자의 외판원으로 있다.",
+      "text": "This salesman travels for a New York <b>motor</b> dealer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모터가 헛돌고 있다",
+      "text": "The <b>motor</b> is idling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "교통사고가 빈발한다",
+      "text": "Traffic accidents occur very often. or A <b>motor</b> accident is a common occurrence."
+    }
+  ],
+  "isWordType": true
+}

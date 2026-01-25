@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "sex",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "seks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "성, 성별, 남녀별",
+              "examples": [
+                {
+                  "text": "a member of the same[opposite] <b>sex</b>",
+                  "translatedText": "동성[이성]의 사람"
+                }
+              ],
+              "originalMeaning": "성, 성별, 남녀별"
+            },
+            {
+              "meaning": "[보통 the ~; 집합적] 남성, 여성;[the ~] [익살] 여자, 여성;[pl.] 양성",
+              "examples": [
+                {
+                  "text": "the equality of the sexes",
+                  "translatedText": "남녀평등"
+                }
+              ],
+              "originalMeaning": "[보통 the ~; 집합적] 남성, 여성;[the ~] [익살] 여자, 여성;[pl.] 양성"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "성의 차에 의한",
+              "examples": [],
+              "originalMeaning": "성의 차에 의한"
+            },
+            {
+              "meaning": "(=SEXUAL)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >SEXUAL</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<병아리의> 성을 감별하다",
+              "examples": [],
+              "originalMeaning": "<병아리의> 성을 감별하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/947a5871b79243d89664c68d2eb36b3c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/947a5871b79243d89664c68d2eb36b3c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sexes"
+        },
+        {
+          "type": "과거형",
+          "value": "sexed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sexing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sexed"
+        }
+      ],
+      "aliasConjugation": "sexes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "36ca738d94eda4e66c9bfbc39a2dfd9c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 새로운 이론은 꽤 매력이 있다.",
+      "text": "The new theory has much <b>sex</b> appeal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 이성간 교제가 넓다",
+      "text": "He has a large acquaintance of the opposite <b>sex</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마릴린 먼로는 온 세상의 남성을 성적 매력으로 뇌쇄했다",
+      "text": "Marylin Monroe bewitched men around the world with her <b>sex</b> appeal."
+    }
+  ],
+  "isWordType": true
+}

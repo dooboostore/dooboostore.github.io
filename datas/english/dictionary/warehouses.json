@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "warehouse",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│werhaʊs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "창고, 저장소",
+              "examples": [],
+              "originalMeaning": "창고, 저장소"
+            },
+            {
+              "meaning": "도매점, 큰 상점",
+              "examples": [],
+              "originalMeaning": "도매점, 큰 상점"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "창고에 넣다, 보세 창고에 예치하다, [미] 대규모 공공 수용 시설에 수용하다",
+              "examples": [],
+              "originalMeaning": "창고에 넣다, 보세 창고에 예치하다, [미] 대규모 공공 수용 시설에 수용하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/efaa536603ba4567b9bb63b11e0762cc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/efaa536603ba4567b9bb63b11e0762cc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "20d60da5fabcc527b4676d73c4e4c759",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 창고에는 쌀이 50톤 들어간다.",
+      "text": "The <b>warehouse</b> stores 50 tons of rice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "군중이 창고로 우우 몰려들었다.",
+      "text": "The crowds poured into the <b>warehouse</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나머지 쌀은 창고에 보관되어 있다",
+      "text": "The surplus rice is stored in <b>warehouse</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "날이 더워 창고의 쌀이 떴다",
+      "text": "The rice stored in the <b>warehouse</b> has become stale[moldy] because of the hot weather."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쌀을 창고에 오래 두어 띄워 버렸다",
+      "text": "The rice was kept in the <b>warehouse</b> so long that it got stale from the heat."
+    }
+  ],
+  "isWordType": true
+}

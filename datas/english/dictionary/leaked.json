@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "leak",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "liːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "<물·공기·빛 등이> 새는 구멍[곳] ((in))",
+              "examples": [],
+              "originalMeaning": "<물·공기·빛 등이> 새는 구멍[곳] ((in))"
+            },
+            {
+              "meaning": "새는 물, 새어 나오는 증기[가스]",
+              "examples": [],
+              "originalMeaning": "새는 물, 새어 나오는 증기[가스]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<지붕·배 등이> 새다; <물·가스·광선 등이> 새다, 새어 나오다 ((in, out)); (눈[코]에서) 눈물[콧물]이 나다",
+              "examples": [
+                {
+                  "text": "The boat is <b>leak</b> ing.",
+                  "translatedText": "배에 물이 새어 들어오고 있다."
+                }
+              ],
+              "originalMeaning": "<지붕·배 등이> 새다; <물·가스·광선 등이> 새다, 새어 나오다 ((in, out)); (눈[코]에서) 눈물[콧물]이 나다"
+            },
+            {
+              "meaning": "<비밀 등이> 누설되다 ((out))",
+              "examples": [
+                {
+                  "text": "The secret <b>leak</b> ed out.",
+                  "translatedText": "비밀이 누설되었다."
+                }
+              ],
+              "originalMeaning": "<비밀 등이> 누설되다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<물·공기 등을> 새게 하다, 누출시키다",
+              "examples": [
+                {
+                  "text": "That pipe <b>leak</b> s gas.",
+                  "translatedText": "저 파이프는 가스가 샌다."
+                }
+              ],
+              "originalMeaning": "<물·공기 등을> 새게 하다, 누출시키다"
+            },
+            {
+              "meaning": "<비밀·정보 등을> 누설하다, 흘리다 ((out, to))",
+              "examples": [],
+              "originalMeaning": "<비밀·정보 등을> 누설하다, 흘리다 ((out, to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/312015e2acf245f99b570e6e41217691",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/312015e2acf245f99b570e6e41217691",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "leaks"
+        },
+        {
+          "type": "과거형",
+          "value": "leaked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "leaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "leaked"
+        }
+      ],
+      "aliasConjugation": "leaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c972df7b7c87400af462d42408be5816",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배에 물이 새어 들어오고 있다.",
+      "text": "The boat is leaking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비밀이 곧 들통 났다",
+      "text": "The secret soon <b>leaked</b> out[came out]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비밀은 곧 펑크 났다",
+      "text": "The secret soon came out[<b>leaked</b> out]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "깨지거나 새는 곳이 있나 체크해라",
+      "text": "Check it for cracks or leaks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비밀이 적에게 새고 있다",
+      "text": "The secret leaks through to the enemy."
+    }
+  ],
+  "isWordType": true
+}

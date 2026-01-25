@@ -1,0 +1,169 @@
+{
+  "items": [
+    {
+      "entry": "sit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "앉다; 걸터앉다, 착석하다 ((down; on, at, in))(opp. stand)",
+              "examples": [
+                {
+                  "text": "<b>sit</b> at table",
+                  "translatedText": "식탁에 앉다"
+                }
+              ],
+              "originalMeaning": "앉다; 걸터앉다, 착석하다 ((down; on, at, in))(opp. stand)"
+            },
+            {
+              "meaning": "(초상화·사진을 위해) 포즈를 취하다(pose) ((to, for))",
+              "examples": [
+                {
+                  "text": "<b>sit</b> to a photographer",
+                  "translatedText": "사진을 찍게 하다"
+                }
+              ],
+              "originalMeaning": "(초상화·사진을 위해) 포즈를 취하다(pose) ((to, for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "앉히다, 착석시키다 ((down))",
+              "examples": [
+                {
+                  "text": "I sat myself down beside him.",
+                  "translatedText": "나는 그의 옆에 앉았다."
+                }
+              ],
+              "originalMeaning": "앉히다, 착석시키다 ((down))"
+            },
+            {
+              "meaning": "<말·보트 등을> 타다",
+              "examples": [
+                {
+                  "text": "She <b>sits</b> her horse well.",
+                  "translatedText": "그녀는 자기 말을 잘 탄다."
+                }
+              ],
+              "originalMeaning": "<말·보트 등을> 타다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "앉음, 착석, 기다리기, 앉아 있는[기다리는] 시간",
+              "examples": [],
+              "originalMeaning": "앉음, 착석, 기다리기, 앉아 있는[기다리는] 시간"
+            },
+            {
+              "meaning": "(옷의) 어울림, 입음새",
+              "examples": [],
+              "originalMeaning": "(옷의) 어울림, 입음새"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4cfc0596c50a40cdb1aec6bdbffc1038",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4cfc0596c50a40cdb1aec6bdbffc1038",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sits"
+        },
+        {
+          "type": "과거형",
+          "value": "sat"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sat"
+        }
+      ],
+      "aliasConjugation": "sits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "92d4e4dd9a28ebd442b256b93f2ba210",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "SIT",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "static induction transistor",
+              "examples": [],
+              "originalMeaning": "static induction transistor"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/edc0fec7d03847cc98534460c520bd20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/edc0fec7d03847cc98534460c520bd20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e9daed6d4a4b005fb89abf660081dfa4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내 곁에 앉아 있었다.",
+      "text": "He sat beside me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "둘 중 어느 쪽에나 앉으십시오",
+      "text": "<b>Sit</b> on either side."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내 오른편에 앉았다",
+      "text": "He sat on my right side."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국회는 지금 개회 중이다.",
+      "text": "Congress is sitting now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 자기 말을 잘 탄다.",
+      "text": "She <b>sits</b> her horse well."
+    }
+  ],
+  "isWordType": true
+}

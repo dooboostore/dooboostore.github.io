@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "statistic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stəˈtɪstɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "통계치[량]",
+              "examples": [],
+              "originalMeaning": "통계치[량]"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(=STATISTICAL)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >STATISTICAL</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/be79bb0f45f74d2da110bdec61b893fb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/be79bb0f45f74d2da110bdec61b893fb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "62674236ad2a19f99be23845c1f8daba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 통계들은 인구 1,000명당 사망 지수를 나타낸다",
+      "text": "These statistics show deaths per 1,000 of the population."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "통계는 자동차 사고가 감소하고 있음을 보여 주고 있다.",
+      "text": "The statistics indicate that auto accidents are on the decrease."
+    }
+  ],
+  "isWordType": true
+}
