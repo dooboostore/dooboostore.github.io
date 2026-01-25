@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "evident",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈevɪdənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "분명한(plain), 명백한",
+              "examples": [
+                {
+                  "text": "with <b>evident</b> satisfaction",
+                  "translatedText": "사뭇 만족한 듯이"
+                }
+              ],
+              "originalMeaning": "분명한(plain), 명백한"
+            },
+            {
+              "meaning": "분명히 나타난",
+              "examples": [
+                {
+                  "text": "It was <b>evident</b> (to everyone) that the game was canceled.",
+                  "translatedText": "그 시합이 취소된 것은 모두 알 수 있을 정도로 분명했다."
+                }
+              ],
+              "originalMeaning": "분명히 나타난"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0fb4aa277a9f4a03bafdf8aa6b38b591",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0fb4aa277a9f4a03bafdf8aa6b38b591",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "40fe03c835902fab20db459bd35b10d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 실수한 것은 분명하다.",
+      "text": "Evidently he has made a mistake."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아무래도 내 말을 오해한 것 같다.",
+      "text": "He has evidently mistaken me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 분명히 피로한데도 불구하고 일을 계속했다.",
+      "text": "Despite his <b>evident</b> distress, he went on working."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 시합이 취소된 것은 모두 알 수 있을 정도로 분명했다.",
+      "text": "It was <b>evident</b> (to everyone) that the game was canceled."
+    }
+  ],
+  "isWordType": true
+}

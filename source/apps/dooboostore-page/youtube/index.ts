@@ -4,7 +4,7 @@ import path from 'path';
 import process from 'process';
 
 // YouTube Video ID를 여기서 변경하세요
-const YOUTUBE_VIDEO_ID = 'tAcu24DzG5U';
+const YOUTUBE_VIDEO_ID = '5nEw2IFpCeQ';
 
 // 번역 방식 선택: 'youtube' (YouTube 자동번역) 또는 'papago' (Papago API 번역)
 const TRANSLATION_METHOD: 'youtube' | 'papago' = 'youtube';

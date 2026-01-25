@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "contribute",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈtrɪbjuːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<돈·물건을> 기부[기증]하다 ((for, to, toward))",
+              "examples": [
+                {
+                  "text": "<b>contribute</b> money to relieving the poor",
+                  "translatedText": "빈민 구제를 위해 돈을 기부하다"
+                }
+              ],
+              "originalMeaning": "<돈·물건을> 기부[기증]하다 ((for, to, toward))"
+            },
+            {
+              "meaning": "<원고를> 기고하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>contribute</b> articles to journals",
+                  "translatedText": "잡지에 기고하다"
+                }
+              ],
+              "originalMeaning": "<원고를> 기고하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기부를 하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>contribute</b> to the community chest",
+                  "translatedText": "공동 기금에 기부하다"
+                }
+              ],
+              "originalMeaning": "기부를 하다 ((to))"
+            },
+            {
+              "meaning": "기여[공헌]하다; (…의) 한 도움[원인]이 되다 ((to, toward))",
+              "examples": [],
+              "originalMeaning": "기여[공헌]하다; (…의) 한 도움[원인]이 되다 ((to, toward))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/95f8a5f11cf7467896ea0f1d55358c32",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/95f8a5f11cf7467896ea0f1d55358c32",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "contributes"
+        },
+        {
+          "type": "과거형",
+          "value": "contributed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "contributing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "contributed"
+        }
+      ],
+      "aliasConjugation": "contributes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bdddbdcf9d1204eb91d9d4e6b3b0ea1f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이름을 숨기고 신문에 투고했다",
+      "text": "He contributed to a newspaper anonymously."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 문명에 기여한 바가 없다",
+      "text": "It has contributed in no way to civilization."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "일이 이렇게 된 데는 여러 곡절이 있다",
+      "text": "Many circumstances have contributed toward this."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이런저런 잡지에 많은 기고를 한다",
+      "text": "He contributes a number of articles to some magazine or other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 치켜세워 재단에 거액의 기부를 하게 했다.",
+      "text": "They flattered him into <b>contributing</b> heavily to the foundation."
+    }
+  ],
+  "isWordType": true
+}

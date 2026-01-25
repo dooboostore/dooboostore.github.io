@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "gauge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "계량[측정] 기준, 규격",
+              "examples": [],
+              "originalMeaning": "계량[측정] 기준, 규격"
+            },
+            {
+              "meaning": "표준 치수, 척도",
+              "examples": [],
+              "originalMeaning": "표준 치수, 척도"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "측정하다, 재다",
+              "examples": [],
+              "originalMeaning": "측정하다, 재다"
+            },
+            {
+              "meaning": "<사람·행동 등을> 판단하다, 평가하다",
+              "examples": [
+                {
+                  "text": "<b>gauge</b> whether the company will succeed or fail",
+                  "translatedText": "그 기업이 성공할 것인지 실패할 것인지 판단하다"
+                }
+              ],
+              "originalMeaning": "<사람·행동 등을> 판단하다, 평가하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/955d04d2e647418e839ec4d16b7f3173",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/955d04d2e647418e839ec4d16b7f3173",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gauges"
+        },
+        {
+          "type": "과거형",
+          "value": "gauged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gauging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gauged"
+        }
+      ],
+      "aliasConjugation": "gauges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d3073da75643ae55c92b94d18f4e3c90",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 어떤 반응을 보일지 요량하기 어렵다",
+      "text": "It's difficult to <b>gauge</b> how he is going to respond."
+    }
+  ],
+  "isWordType": true
+}

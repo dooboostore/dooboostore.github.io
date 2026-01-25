@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "addicted",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈdɪktɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[P] <마약 등을> 상용하여, (…에) 중독되어, 빠져; (…에) 탐닉하여, 열중[몰두]하여 ((to))",
+              "examples": [
+                {
+                  "text": "He is <b>addicted</b> to drinking[watching TV].",
+                  "translatedText": "그는 술[텔레비전]에 중독되어 있다."
+                }
+              ],
+              "originalMeaning": "[P] <마약 등을> 상용하여, (…에) 중독되어, 빠져; (…에) 탐닉하여, 열중[몰두]하여 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b7bb03f525af488889b65a216bf924a1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b7bb03f525af488889b65a216bf924a1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "170bf17b9fd0fd5cd678f15a2b174616",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "addict",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈædɪkt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[~ oneself 또는 be ~ed로] 중독되게 하다, <악습에> 빠지게 하다 ((to)) (→addicted)",
+              "examples": [
+                {
+                  "text": "<b>addict</b> oneself to gambling",
+                  "translatedText": "도박에 빠지다"
+                }
+              ],
+              "originalMeaning": "[~ oneself 또는 be ~ed로] 중독되게 하다, <악습에> 빠지게 하다 ((to)) (→<span class='related_word' lang='en' ><b>addicted</b></span>)"
+            },
+            {
+              "meaning": "<사람을> 마약[알코올] 중독시키다",
+              "examples": [],
+              "originalMeaning": "<사람을> 마약[알코올] 중독시키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(마약 등의) 상용자, 중독자",
+              "examples": [
+                {
+                  "text": "an opium[a drug] <b>addict</b>",
+                  "translatedText": "아편[마약] 중독자"
+                }
+              ],
+              "originalMeaning": "(마약 등의) 상용자, 중독자"
+            },
+            {
+              "meaning": "열중자, 열광하는 사람, 열렬한 팬",
+              "examples": [
+                {
+                  "text": "an opera <b>addict</b>",
+                  "translatedText": "열렬한 오페라 팬"
+                }
+              ],
+              "originalMeaning": "열중자, 열광하는 사람, 열렬한 팬"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aff60182affb4ae183fd917694395546",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aff60182affb4ae183fd917694395546",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "527ceadb86593ecf3ee51543242acca8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 술[텔레비전]에 중독되어 있다.",
+      "text": "He is <b>addicted</b> to drinking[watching TV]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 비디오 게임에 빠졌다",
+      "text": "I've <b>addicted</b> to video games. or I've picked up the habit of video games."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 사람은 식도락가이다",
+      "text": "He is an epicure. or He is <b>addicted</b> to the pleasures of the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아편 중독자 an opium <b>addict</b>;a hophead",
+      "text": ";an opium fiend;an opium smoker[eater]"
+    }
+  ],
+  "isWordType": true
+}

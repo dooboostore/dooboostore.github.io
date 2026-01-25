@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "commerce",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɑːmɜːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상업(business); 통상, 교역(trade)",
+              "examples": [],
+              "originalMeaning": "상업(business); 통상, 교역(trade)"
+            },
+            {
+              "meaning": "(사회적) 교제, 교섭; 의견 교환 ((with))",
+              "examples": [],
+              "originalMeaning": "(사회적) 교제, 교섭; 의견 교환 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교제하다 ((with))",
+              "examples": [],
+              "originalMeaning": "교제하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a9d19db165d4feeade7b1f64b1a222f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a9d19db165d4feeade7b1f64b1a222f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b21806f07bf18b27fb7b3378b9cccdec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "미국은 공업과 상업에 있어 세계 제일의 나라이다",
+      "text": "America holds the first rank in the world for industry and <b>commerce</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "벌꿀은 중요한 상품이다",
+      "text": "Honey is an important article of <b>commerce</b>."
+    }
+  ],
+  "isWordType": true
+}
