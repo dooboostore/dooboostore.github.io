@@ -1,10 +1,11 @@
 import { Sim } from "@dooboostore/simple-boot/decorators/SimDecorator";
 import { ValidUtils } from "@dooboostore/core-web/valid/ValidUtils";
-
+import {DomRenderNoProxy} from '@dooboostore/dom-render/decorators/DomRenderNoProxy'
 @Sim
 export class VoiceService {
   private isPlayingWord = false;
   private isPlayingScript = false;
+  @DomRenderNoProxy
   private selectedVoice: SpeechSynthesisVoice | null = null;
 
   constructor() {
@@ -88,6 +89,7 @@ export class VoiceService {
   }
 
   speakWord(word: string, onEnd?: () => void): void {
+    console.log('---->', this.selectedVoice);
     if (!ValidUtils.isBrowser() || !('speechSynthesis' in window)) {
       console.warn('Speech Synthesis not supported');
       return;
