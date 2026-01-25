@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "visa",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈviːzə"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사증, 비자; (여권 등의) 이서(裏書)",
+              "examples": [
+                {
+                  "text": "a tourist[entry] <b>visa</b>",
+                  "translatedText": "관광[입국] 비자"
+                }
+              ],
+              "originalMeaning": "사증, 비자; (여권 등의) 이서(裏書)"
+            },
+            {
+              "meaning": "((일반적으로)) 허가증",
+              "examples": [],
+              "originalMeaning": "((일반적으로)) 허가증"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<여권·서류 등에> 이서[사증]하다(endorse), …에게 비자를 내주다",
+              "examples": [],
+              "originalMeaning": "<여권·서류 등에> 이서[사증]하다(endorse), …에게 비자를 내주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7dbc6c472ba94d9fa5967056b5203bd1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7dbc6c472ba94d9fa5967056b5203bd1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "visas"
+        },
+        {
+          "type": "복수형",
+          "value": "visas"
+        },
+        {
+          "type": "과거형",
+          "value": "visaed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "visaing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "visaed"
+        }
+      ],
+      "aliasConjugation": "visas",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "db048737901d3daea0f27f865a1a2bb8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 내게 입국 비자를 내주었다",
+      "text": "They granted an entry <b>visa</b> to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 비자 카드에서 100달러를 직불해 주시오.",
+      "text": "Please debit my <b>Visa</b> account with the sum of $100."
+    }
+  ],
+  "isWordType": true
+}

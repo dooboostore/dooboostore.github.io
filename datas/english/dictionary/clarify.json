@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "clarify",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈklærəfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<의미 등을> 뚜렷하게[명백하게] 하다, 명백하게 설명하다(explain)",
+              "examples": [
+                {
+                  "text": "<b>clarify</b> one's position",
+                  "translatedText": "입장을 분명히 하다"
+                }
+              ],
+              "originalMeaning": "<의미 등을> 뚜렷하게[명백하게] 하다, 명백하게 설명하다(explain)"
+            },
+            {
+              "meaning": "<액체 등을> 깨끗하게 하다, 맑게 하다, 정화하다",
+              "examples": [],
+              "originalMeaning": "<액체 등을> 깨끗하게 하다, 맑게 하다, 정화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<액체가> 맑아지다, 투명해지다",
+              "examples": [],
+              "originalMeaning": "<액체가> 맑아지다, 투명해지다"
+            },
+            {
+              "meaning": "<의미 등이> 뚜렷해지다, 분명해지다",
+              "examples": [],
+              "originalMeaning": "<의미 등이> 뚜렷해지다, 분명해지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b98c555ef4914f308fde157bfb131fe9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b98c555ef4914f308fde157bfb131fe9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "clarifies"
+        },
+        {
+          "type": "과거형",
+          "value": "clarified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "clarifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "clarified"
+        }
+      ],
+      "aliasConjugation": "clarifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "82ec45e220f622aa4f0d959c0de31083",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 사고 원인을 해명하려고 애쓰고 있다",
+      "text": "The police is trying to <b>clarify</b> the cause of the accident."
+    }
+  ],
+  "isWordType": true
+}

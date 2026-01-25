@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "bolt",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bóult"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "볼트, 나사못(cf. NUT)",
+              "examples": [],
+              "originalMeaning": "볼트, 나사못(cf. NUT)"
+            },
+            {
+              "meaning": "빗장, 걸쇠; 자물쇠청; (총의) 노리쇠",
+              "examples": [],
+              "originalMeaning": "빗장, 걸쇠; 자물쇠청; (총의) 노리쇠"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "빗장을 질러 잠그다, 볼트로 죄다",
+              "examples": [
+                {
+                  "text": "<b>bolt</b> the door",
+                  "translatedText": "문에 빗장을 지르다"
+                }
+              ],
+              "originalMeaning": "빗장을 질러 잠그다, 볼트로 죄다"
+            },
+            {
+              "meaning": "…에서 탈퇴하다, 탈당하다",
+              "examples": [],
+              "originalMeaning": "…에서 탈퇴하다, 탈당하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뛰어나가다, 도망하다, <말이> 날뛰며 달아나다",
+              "examples": [
+                {
+                  "text": "They bolted out with all their money.",
+                  "translatedText": "그들은 있는 돈을 전부 갖고 도망쳤다."
+                }
+              ],
+              "originalMeaning": "뛰어나가다, 도망하다, <말이> 날뛰며 달아나다"
+            },
+            {
+              "meaning": "탈당하다",
+              "examples": [],
+              "originalMeaning": "탈당하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/58076f586d744dba97ad5ae65898c9be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/58076f586d744dba97ad5ae65898c9be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bolts"
+        },
+        {
+          "type": "과거형",
+          "value": "bolted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bolting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bolted"
+        }
+      ],
+      "aliasConjugation": "bolts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7c60b616880195867bb51c4f50c301e5",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "bolt",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "체질하여 가르다, 세밀히 조사하다",
+              "examples": [],
+              "originalMeaning": "체질하여 가르다, 세밀히 조사하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2395dfcab50448f38f6ef1e16952e054",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2395dfcab50448f38f6ef1e16952e054",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "bolts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "955f44e1e59a4eec5bf77c3e720abe6b",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 구멍에 볼트를 끼웠다.",
+      "text": "He slipped the <b>bolt</b> through the hole."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 있는 돈을 전부 갖고 도망쳤다.",
+      "text": "They bolted out with all their money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 남자가 우리 정원에서 뛰어나가는 것을 보았다.",
+      "text": "I saw a man <b>bolt</b> out of our garden."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식은 내게 청천벽력 같았다",
+      "text": "The news came to me like a <b>bolt</b> out of the blue."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 청천벽력과도 같았다",
+      "text": "It came like a <b>bolt</b> from the blue sky. or It was a <b>bolt</b> out of the blue."
+    }
+  ],
+  "isWordType": true
+}

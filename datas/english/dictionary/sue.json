@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "sue",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "suː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…로) 고소하다, <남을> 상대로 (…의) 소송을 제기하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>sue</b> a person for damages",
+                  "translatedText": "…을 상대로 손해 배상 소송을 제기하다"
+                }
+              ],
+              "originalMeaning": "(…로) 고소하다, <남을> 상대로 (…의) 소송을 제기하다 ((for))"
+            },
+            {
+              "meaning": "…에게 (…을) 간청하다 ((for))",
+              "examples": [],
+              "originalMeaning": "…에게 (…을) 간청하다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…을 얻으려고) 소송을 제기하다, 고소하다 ((for, to))",
+              "examples": [
+                {
+                  "text": "<b>sue</b> for a divorce",
+                  "translatedText": "이혼 소송을 제기하다"
+                }
+              ],
+              "originalMeaning": "(…을 얻으려고) 소송을 제기하다, 고소하다 ((for, to))"
+            },
+            {
+              "meaning": "(…을) 간청[간원]하다, 청하다, 구하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>sue</b> for peace",
+                  "translatedText": "화평을 청하다"
+                }
+              ],
+              "originalMeaning": "(…을) 간청[간원]하다, 청하다, 구하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/954d73c90cde4b21bb2c057ae6f8803c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/954d73c90cde4b21bb2c057ae6f8803c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sues"
+        },
+        {
+          "type": "과거형",
+          "value": "sued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "suing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sued"
+        }
+      ],
+      "aliasConjugation": "sues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "965480f2d7d6b72a6e4c9a1c8e1ebd69",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Sue",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여자 이름 ((Susan, Susanna, Susannah의 애칭))",
+              "examples": [],
+              "originalMeaning": "여자 이름 ((Susan, Susanna, Susannah의 애칭))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e78a23534dca4525a2e92c7c7d8068f0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e78a23534dca4525a2e92c7c7d8068f0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "994160e20c2dbfa7610e51e73fae6bcb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지불하지 않을 경우에는 소송을 하겠다.",
+      "text": "Failing payment, we shall <b>sue</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세입자를 고소하는 것 이외에는 집세를 받을 방법이 없다.",
+      "text": "We can’t collect rent other than by suing the tenant."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신을 고소하겠다",
+      "text": "I'm going to take you to court. or I'm going to <b>sue</b> you. or You'll be hearing from my lawyer."
+    }
+  ],
+  "isWordType": true
+}

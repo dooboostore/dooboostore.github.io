@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "foresee",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɔːrˈsiː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "예견하다, 예지하다, 내다보다",
+              "examples": [
+                {
+                  "text": "<b>foresee</b> a recession",
+                  "translatedText": "경기 후퇴를 내다보다"
+                }
+              ],
+              "originalMeaning": "예견하다, 예지하다, 내다보다"
+            },
+            {
+              "meaning": "미리 보다, 사전에 확인하다",
+              "examples": [],
+              "originalMeaning": "미리 보다, 사전에 확인하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "선견지명이 있다, 통찰력을 발휘하다",
+              "examples": [],
+              "originalMeaning": "선견지명이 있다, 통찰력을 발휘하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/321fd4b8458b43a08c9b387b8ee65c5a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/321fd4b8458b43a08c9b387b8ee65c5a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "foresees"
+        },
+        {
+          "type": "과거형",
+          "value": "foresaw"
+        },
+        {
+          "type": "현재 분사",
+          "value": "foreseeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "foreseen"
+        }
+      ],
+      "aliasConjugation": "foresees",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7d3aedee79797e5f5775871544aa3814",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "승패는 예측할 수 없다",
+      "text": "The fate of a battle cannot be foreseen."
+    }
+  ],
+  "isWordType": true
+}

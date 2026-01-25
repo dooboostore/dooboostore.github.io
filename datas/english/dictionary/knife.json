@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "knife",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "naɪf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "나이프, 칼, 부엌칼",
+              "examples": [
+                {
+                  "text": "a clasp <b>knife</b>",
+                  "translatedText": "접는 나이프"
+                }
+              ],
+              "originalMeaning": "나이프, 칼, 부엌칼"
+            },
+            {
+              "meaning": "검(sword), 단검(dagger)",
+              "examples": [],
+              "originalMeaning": "검(sword), 단검(dagger)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "작은 칼[나이프]로 베다; 단도로 찌르다, 찔러 죽이다",
+              "examples": [],
+              "originalMeaning": "작은 칼[나이프]로 베다; 단도로 찌르다, 찔러 죽이다"
+            },
+            {
+              "meaning": "(음흉한 수단으로) 해치(려 하)다, 배신하(려 하)다",
+              "examples": [],
+              "originalMeaning": "(음흉한 수단으로) 해치(려 하)다, 배신하(려 하)다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[미] 칼로 베며 나아가다, (파도 등을) 헤치고 나아가다",
+              "examples": [],
+              "originalMeaning": "[미] 칼로 베며 나아가다, (파도 등을) 헤치고 나아가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bc33163d477d49d4846872c50a393f7b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bc33163d477d49d4846872c50a393f7b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "knifes"
+        },
+        {
+          "type": "복수형",
+          "value": "knives"
+        },
+        {
+          "type": "과거형",
+          "value": "knifed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "knifing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "knifed"
+        }
+      ],
+      "aliasConjugation": "knifes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8b30339d9ad4a3bd4bfb6e0572b4f8cf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "칼이 잘 들지 않는다",
+      "text": "The <b>knife</b> is dull[blunt]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 칼에는 내력[유래]이 있다.",
+      "text": "This <b>knife</b> has a history."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 칼은 날이 잘 선다",
+      "text": "This <b>knife</b> takes a nice edge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 칼로 손가락을 베었다.",
+      "text": "She cut her finger on a <b>knife</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "누가 내 칼을 들어갔다",
+      "text": "Somebody has taken away my <b>knife</b>."
+    }
+  ],
+  "isWordType": true
+}

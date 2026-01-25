@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "trade",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "treɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 무역, 교역, 통상(commerce); 상업, 장사, 매매, 거래",
+              "examples": [
+                {
+                  "text": "foreign[home, domestic] <b>trade</b>",
+                  "translatedText": "외국[국내] 무역"
+                }
+              ],
+              "originalMeaning": "[UC/] 무역, 교역, 통상(commerce); 상업, 장사, 매매, 거래"
+            },
+            {
+              "meaning": "미개인과의 교역품",
+              "examples": [],
+              "originalMeaning": "미개인과의 교역품"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "상업의, 무역의",
+              "examples": [],
+              "originalMeaning": "상업의, 무역의"
+            },
+            {
+              "meaning": "특정 직업용의",
+              "examples": [],
+              "originalMeaning": "특정 직업용의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…의) 장사를 하다, 매매하다((in)); (…와) 거래[무역]하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>trade</b> in furs",
+                  "translatedText": "모피 장사를 하다"
+                }
+              ],
+              "originalMeaning": "(…의) 장사를 하다, 매매하다((in)); (…와) 거래[무역]하다 ((with))"
+            },
+            {
+              "meaning": "<지위 등을> 돈으로 거래하다",
+              "examples": [],
+              "originalMeaning": "<지위 등을> 돈으로 거래하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cc414aa426e54fc7b59bdfcd4c57addf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cc414aa426e54fc7b59bdfcd4c57addf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "trades"
+        },
+        {
+          "type": "과거형",
+          "value": "traded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "trading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "traded"
+        }
+      ],
+      "aliasConjugation": "trades",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e0b7b08daf38711c1d41a1a83911f248",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 부초 같은 삶을 산다",
+      "text": "I lead a precarious <b>trade</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 해외 무역에 종사하고 있다.",
+      "text": "He is engaged in foreign <b>trade</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전쟁 때문에 무역이 정체되어 버렸다",
+      "text": "The war caused a paralysis of <b>trade</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 고장은 사과의 집산지이다",
+      "text": "This town is a trading center for apples."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 나라 간의 교역이 활발하다.",
+      "text": "<b>Trade</b> between the two countries is active."
+    }
+  ],
+  "isWordType": true
+}

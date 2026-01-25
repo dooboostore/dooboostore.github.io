@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "soldier",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│soʊldʒə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "육군 군인, 군인 ((장교에서 사병까지 전부))",
+              "examples": [
+                {
+                  "text": "<b>soldiers</b> and sailors",
+                  "translatedText": "육군과 해군"
+                }
+              ],
+              "originalMeaning": "육군 군인, 군인 ((장교에서 사병까지 전부))"
+            },
+            {
+              "meaning": "병사, 사병(opp. officer), 하사관(enlisted man)",
+              "examples": [],
+              "originalMeaning": "병사, 사병(opp. officer), 하사관(enlisted man)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "군인이 되다, 병역에 복무하다",
+              "examples": [
+                {
+                  "text": "go soldiering",
+                  "translatedText": "군인이 되다"
+                }
+              ],
+              "originalMeaning": "군인이 되다, 병역에 복무하다"
+            },
+            {
+              "meaning": "[구어] 일에 꾀를 부리다, 꾀병 부리다(malinger)",
+              "examples": [],
+              "originalMeaning": "[구어] 일에 꾀를 부리다, 꾀병 부리다(malinger)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/01099cf7e8254f4a8f7cfef0884057b6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/01099cf7e8254f4a8f7cfef0884057b6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "soldiers"
+        },
+        {
+          "type": "과거형",
+          "value": "soldiered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "soldiering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "soldiered"
+        }
+      ],
+      "aliasConjugation": "soldiers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "896832a862d4c0bf288767583f835bbc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "군인이 보초를 서고 있다",
+      "text": "The <b>soldier</b>[sentry] is on guard."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 군인이 되게 태어났다.",
+      "text": "He was meant for[to be] a <b>soldier</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 단지 한 병사에 불과하다",
+      "text": "He is a mere private <b>soldier</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어느 모로 보나 군인이다",
+      "text": "He is a <b>soldier</b>, every inch of him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 군인 기질이 강하다",
+      "text": "He has much of the <b>soldier</b> in him."
+    }
+  ],
+  "isWordType": true
+}

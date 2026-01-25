@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "included",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "inklú:did"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "함유된, 포함된",
+              "examples": [],
+              "originalMeaning": "함유된, 포함된"
+            },
+            {
+              "meaning": "<수술·암술이> 꽃부리 밖으로 튀어나오지 않은",
+              "examples": [],
+              "originalMeaning": "<수술·암술이> 꽃부리 밖으로 튀어나오지 않은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/09b583fef2314cb29c3e7ad6f556ad8f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/09b583fef2314cb29c3e7ad6f556ad8f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7fb6f6ff581dad7786471edc4275b724",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "include",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈkluːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을 (부분·요소 등으로서) 포함하다, 함유[포괄]하다 (=contain)",
+              "examples": [
+                {
+                  "text": "all charges <b>included</b>",
+                  "translatedText": "일체의 비용을 포함하여"
+                }
+              ],
+              "originalMeaning": "…을 (부분·요소 등으로서) 포함하다, 함유[포괄]하다 (=<span class='related_word' lang='en' >contain</span>)"
+            },
+            {
+              "meaning": "넣다, (전체의 일부로서) 포함시키다, 끼우다; 계산하다",
+              "examples": [
+                {
+                  "text": "He includes me among his enemies.",
+                  "translatedText": "그는 나를 적의 한 사람으로 생각한다."
+                }
+              ],
+              "originalMeaning": "넣다, (전체의 일부로서) 포함시키다, 끼우다; 계산하다"
+            },
+            {
+              "meaning": "[보통 수동형으로] 감금하다, 에워싸다(enclose)",
+              "examples": [],
+              "originalMeaning": "[보통 수동형으로] 감금하다, 에워싸다(enclose)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3894354527264248a45fbdd437b3b75e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3894354527264248a45fbdd437b3b75e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "includes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "90867cfa87b3e1bd0630536640741719",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "명단에 내 이름도 포함되어 있다",
+      "text": "The list includes my name."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 속에는 내 몫도 들어 있었다",
+      "text": "My part[share] was <b>included</b> in it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "명부에서 그의 이름이 빠졌다",
+      "text": "His name is not (<b>included</b>) in the list."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나를 적의 한 사람으로 생각한다.",
+      "text": "He includes me among his enemies."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이자도 계산에 들어가 있다",
+      "text": "The interest is <b>included</b> in the account."
+    }
+  ],
+  "isWordType": true
+}

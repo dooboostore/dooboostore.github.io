@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "proclaim",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈkleɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(특히 국가적 중대사를) 선언하다(declare), 공포[선포]하다",
+              "examples": [
+                {
+                  "text": "<b>proclaim</b> war",
+                  "translatedText": "선전(宣戰) 포고하다"
+                }
+              ],
+              "originalMeaning": "(특히 국가적 중대사를) 선언하다(declare), 공포[선포]하다"
+            },
+            {
+              "meaning": "분명히 나타내다, 증명하다(indicate)",
+              "examples": [
+                {
+                  "text": "His manners <b>proclaim</b> him (to be) a gentleman[that he is a gentleman].",
+                  "translatedText": "그의 매너를 보면 그가 신사임을 알 수 있다."
+                }
+              ],
+              "originalMeaning": "분명히 나타내다, 증명하다(indicate)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "단언[포고, 공포, 성명]하다",
+              "examples": [],
+              "originalMeaning": "단언[포고, 공포, 성명]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bc2a6a5097f24315af51bed0b57b5ec3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bc2a6a5097f24315af51bed0b57b5ec3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "proclaims"
+        },
+        {
+          "type": "과거형",
+          "value": "proclaimed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "proclaiming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "proclaimed"
+        }
+      ],
+      "aliasConjugation": "proclaims",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5aceb6ccf84fd30e8852382d532fabfe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국민은 그를 왕으로 선포하였다.",
+      "text": "The people <b>proclaimed</b> him king."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 정치에 관심이 없다고 천명했다",
+      "text": "He <b>proclaimed</b> that he was indifferent to politics."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 반역자라고 선언했다.",
+      "text": "They <b>proclaimed</b> him (to be) a traitor[that he was a traitor]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 매너를 보면 그가 신사임을 알 수 있다.",
+      "text": "His manners <b>proclaim</b> him (to be) a gentleman[that he is a gentleman]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "계엄령이 선포되자 시가는 살벌한 기운이 감돌았다",
+      "text": "As the martial law was <b>proclaimed</b>, the city was in a tense and violent atmosphere."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "embody",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪmˈbɑːdi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(사상·감정 등을 예술품·말 등으로) 구체화하다, 구체적으로 표현하다, 구현하다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>embody</b> democratic ideas in the speech",
+                  "translatedText": "민주주의 사상[관념]을 연설에서 구체적으로 나타내다"
+                }
+              ],
+              "originalMeaning": "(사상·감정 등을 예술품·말 등으로) 구체화하다, 구체적으로 표현하다, 구현하다 ((in))"
+            },
+            {
+              "meaning": "<정신에> 형태를 부여하다",
+              "examples": [],
+              "originalMeaning": "<정신에> 형태를 부여하다"
+            },
+            {
+              "meaning": "합체(合體)시키다, 통합하다; [군사] (부대로) 편성하다",
+              "examples": [],
+              "originalMeaning": "합체(合體)시키다, 통합하다; [군사] (부대로) 편성하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6d9f329aff044c9c8c613728e4ad837e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6d9f329aff044c9c8c613728e4ad837e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "embodies"
+        },
+        {
+          "type": "과거형",
+          "value": "embodied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "embodying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "embodied"
+        }
+      ],
+      "aliasConjugation": "embodies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0e003e98f43bf10bfb8da9b1afbe7aad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책에는 모든 규칙이 수록되어 있다.",
+      "text": "The book embodies all the rules."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언어는 사상을 구현한다",
+      "text": "Words <b>embody</b> thoughts."
+    }
+  ],
+  "isWordType": true
+}

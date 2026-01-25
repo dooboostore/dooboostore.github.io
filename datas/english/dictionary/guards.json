@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "guard",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡɑːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "지키다, 수호[보호, 호위]하다 ((against, from)), (=protect)",
+              "examples": [
+                {
+                  "text": "<b>guard</b> a person against[from] temptations",
+                  "translatedText": "…을 유혹에서 보호하다"
+                }
+              ],
+              "originalMeaning": "지키다, 수호[보호, 호위]하다 ((against, from)), (=<span class='related_word' lang='en' >protect</span>)"
+            },
+            {
+              "meaning": "<죄수 등을> 망보다, 감시[경계]하다, <입구 등을> 파수 보다",
+              "examples": [
+                {
+                  "text": "<b>guard</b> a prisoner",
+                  "translatedText": "죄수를 감시하다"
+                }
+              ],
+              "originalMeaning": "<죄수 등을> 망보다, 감시[경계]하다, <입구 등을> 파수 보다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(사고·과실·병 등을) 경계하다, 조심하다 ((against))",
+              "examples": [
+                {
+                  "text": "<b>guard</b> against fires",
+                  "translatedText": "화재를 예방하다"
+                }
+              ],
+              "originalMeaning": "(사고·과실·병 등을) 경계하다, 조심하다 ((against))"
+            },
+            {
+              "meaning": "망을 보다, 감시하다; 보호하다, 지키다",
+              "examples": [],
+              "originalMeaning": "망을 보다, 감시하다; 보호하다, 지키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보호자, 호위자, 수위, 파수, 감시인; [미] 교도관; [군사] 보초, 위병; 호위병[대]; (포로 등의) 호송병[대]; [영] 근위병[대]; 친위병[대], 수비대;[the G~s] [영] 근위 연대",
+              "examples": [
+                {
+                  "text": "<b>guard</b> of honor",
+                  "translatedText": "의장병"
+                }
+              ],
+              "originalMeaning": "보호자, 호위자, 수위, 파수, 감시인; [미] 교도관; [군사] 보초, 위병; 호위병[대]; (포로 등의) 호송병[대]; [영] 근위병[대]; 친위병[대], 수비대;[the G~s] [영] 근위 연대"
+            },
+            {
+              "meaning": "경계, 망보기, 살핌, 감시",
+              "examples": [
+                {
+                  "text": "be kept under <b>guard</b>",
+                  "translatedText": "감시당하다"
+                }
+              ],
+              "originalMeaning": "경계, 망보기, 살핌, 감시"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0cff90b08de345d5872e27ea559af3b7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0cff90b08de345d5872e27ea559af3b7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "guards"
+        },
+        {
+          "type": "과거형",
+          "value": "guarded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "guarding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "guarded"
+        }
+      ],
+      "aliasConjugation": "guards",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c554d2d762ae98d1b9b3bdc243421885",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 집은 경호를 받고 있다",
+      "text": "His house is under <b>guard</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "군인이 보초를 서고 있다",
+      "text": "The soldier[sentry] is on <b>guard</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전혀 예기치 못한 질문을 하는군",
+      "text": "Your question threw me off <b>guard</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "도둑놈에게 열쇠를 맡긴 셈이다",
+      "text": "He sets the wolf to <b>guard</b> the sheep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내가 마음 놓고 있을 때 때렸다",
+      "text": "He hit me when I was off my <b>guard</b>."
+    }
+  ],
+  "isWordType": true
+}

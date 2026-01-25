@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "rewrite",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriːˈraɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 쓰다, 고쳐 쓰다",
+              "examples": [
+                {
+                  "text": "<b>rewrite</b> a story for children",
+                  "translatedText": "어린이를 대상으로 이야기를 고쳐 쓰다"
+                }
+              ],
+              "originalMeaning": "다시 쓰다, 고쳐 쓰다"
+            },
+            {
+              "meaning": "<기자가 제출한 기사를> 신문에 실을 수 있도록 고쳐 쓰다",
+              "examples": [],
+              "originalMeaning": "<기자가 제출한 기사를> 신문에 실을 수 있도록 고쳐 쓰다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고쳐 씀, 정정본[판], 개작(改作)",
+              "examples": [],
+              "originalMeaning": "고쳐 씀, 정정본[판], 개작(改作)"
+            },
+            {
+              "meaning": "고쳐 쓴 기사",
+              "examples": [],
+              "originalMeaning": "고쳐 쓴 기사"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0c4308e754924a32b586d21317ce2d78",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0c4308e754924a32b586d21317ce2d78",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rewrites"
+        },
+        {
+          "type": "과거형",
+          "value": "rewrote"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rewriting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rewritten"
+        }
+      ],
+      "aliasConjugation": "rewrites",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bb8052d911183b5b8af6b1c3291b4de5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다음 글을 지시한 대로 바꾸어 쓰시오",
+      "text": "<b>Rewrite</b> the following sentence as indicated[directed]."
+    }
+  ],
+  "isWordType": true
+}

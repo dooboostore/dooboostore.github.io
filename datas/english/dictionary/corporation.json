@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "corporation",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɔːrpə│reɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "법인, 사단 법인(= ~ aggregate)",
+              "examples": [],
+              "originalMeaning": "법인, 사단 법인(= ~ aggregate)"
+            },
+            {
+              "meaning": "지방 공공 단체, 지방 자치체",
+              "examples": [],
+              "originalMeaning": "지방 공공 단체, 지방 자치체"
+            },
+            {
+              "meaning": "[종종 C~] [영] 도시 자치체, 시의회(council)",
+              "examples": [
+                {
+                  "text": "the <b>Corporation</b> of the City of London",
+                  "translatedText": "런던시 자치체"
+                }
+              ],
+              "originalMeaning": "[종종 C~] [영] 도시 자치체, 시의회(council)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6cc2a3661a894305aa8095050f640579",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6cc2a3661a894305aa8095050f640579",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "701c1f0c592ae3409a3bfb122e65e71a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국 해외 개발 공사",
+      "text": "the Korean Overseas Development <b>Corporation</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느 대기업이 우리 것과 유사한 제품을 시장에 내놓을 거라는 소문이 있다",
+      "text": "There's a rumor that one of the big corporations will bring out a product just like ours."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "귀하의 수표를 서울 무역 회사 앞으로 발행해 주시기 바랍니다",
+      "text": "Please make your check payable[out] to Seoul Trading <b>corporation</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 공사는 머지 않아 민영으로 바뀌게 되어 있다",
+      "text": "That public <b>corporation</b> is supposed to be transferred to the private sector in the near future."
+    }
+  ],
+  "isWordType": true
+}

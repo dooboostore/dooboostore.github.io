@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "identity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "aɪˈdentəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "동일함, 일치, 동일성",
+              "examples": [
+                {
+                  "text": "a case of mistaken <b>identity</b>",
+                  "translatedText": "사람을 착각한 경우"
+                }
+              ],
+              "originalMeaning": "동일함, 일치, 동일성"
+            },
+            {
+              "meaning": "동일한 사람[물건]임, 본인임; 정체, 신원",
+              "examples": [
+                {
+                  "text": "admit[reveal] one's <b>identity</b>",
+                  "translatedText": "신원을 밝히다"
+                }
+              ],
+              "originalMeaning": "동일한 사람[물건]임, 본인임; 정체, 신원"
+            },
+            {
+              "meaning": "독자성, 주체성, 본질",
+              "examples": [
+                {
+                  "text": "lose one's <b>identity</b>",
+                  "translatedText": "주체성을 잃다"
+                }
+              ],
+              "originalMeaning": "독자성, 주체성, 본질"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15b45f8010864e16ae25323a096b6bf1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15b45f8010864e16ae25323a096b6bf1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "identities"
+        }
+      ],
+      "aliasConjugation": "identities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "dd69a89b466eb6b017351e10bd95d693",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 정체에 대한 힌트를 달라.",
+      "text": "Give me a hint as to his <b>identity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그의 신분을 밝히기를 거부했다",
+      "text": "He refused to reveal his <b>identity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "살인자의 신원에 관한 단서가 없다",
+      "text": "There was no clue as to the <b>identity</b> of the killer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신원 미상이다",
+      "text": "The person's <b>identity</b> is not established. or The person's name and address are unknown. or The person is unidentified."
+    }
+  ],
+  "isWordType": true
+}

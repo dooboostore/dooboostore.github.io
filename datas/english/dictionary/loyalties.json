@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "loyalty",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɔɪəlti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "충성, 충의, 충절",
+              "examples": [],
+              "originalMeaning": "충성, 충의, 충절"
+            },
+            {
+              "meaning": "성실, 충실",
+              "examples": [],
+              "originalMeaning": "성실, 충실"
+            },
+            {
+              "meaning": "애국적 행위[언동]",
+              "examples": [],
+              "originalMeaning": "애국적 행위[언동]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cdecd0d11b22432d89d581a8d71f5619",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cdecd0d11b22432d89d581a8d71f5619",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "loyalties"
+        }
+      ],
+      "aliasConjugation": "loyalties",
+      "aliasConjugationPos": "복수형",
+      "gdid": "6c28049b0d8813790ba9153701cbef55",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 순수한 충성심에서 왕에게 간했다",
+      "text": "He expostulated with the king in all <b>loyalty</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자신의 상관에게 변함없는 신의를 보여 주었다",
+      "text": "He showed unswerving <b>loyalty</b> to his boss."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기사들은 왕에게 충성할 것을 맹세하였다",
+      "text": "The knights swore an oath of <b>loyalty</b> to their king."
+    }
+  ],
+  "isWordType": true
+}

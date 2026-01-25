@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "rebel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "반역자, 반도, 반항자 ((against, to))",
+              "examples": [],
+              "originalMeaning": "반역자, 반도, 반항자 ((against, to))"
+            },
+            {
+              "meaning": "[종종 R~] [미] 반란군 병사 ((남북 전쟁 때의 남군 병사)), [종종 R~] [미·구어] 남부 백인",
+              "examples": [],
+              "originalMeaning": "[종종 R~] [미] 반란군 병사 ((남북 전쟁 때의 남군 병사)), [종종 R~] [미·구어] 남부 백인"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "반역의",
+              "examples": [
+                {
+                  "text": "the <b>rebel</b> army",
+                  "translatedText": "반란군"
+                }
+              ],
+              "originalMeaning": "반역의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "모반[반역]하다, 반란을 일으키다 ((against)); (권위·관습 등에) 반대하다, 반항하다 ((against))",
+              "examples": [
+                {
+                  "text": "<b>rebel</b> against all authority",
+                  "translatedText": "모든 권위에 대항하다"
+                }
+              ],
+              "originalMeaning": "모반[반역]하다, 반란을 일으키다 ((against)); (권위·관습 등에) 반대하다, 반항하다 ((against))"
+            },
+            {
+              "meaning": "화합하지 않다 ((with)); 반감을 가지다, 반발하다, 몸서리치다 ((against, at))",
+              "examples": [
+                {
+                  "text": "My mind rebels at the thought.",
+                  "translatedText": "그것을 생각하면 오싹해진다."
+                }
+              ],
+              "originalMeaning": "화합하지 않다 ((with)); 반감을 가지다, 반발하다, 몸서리치다 ((against, at))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a72442847cc41419cf57d779c415604",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a72442847cc41419cf57d779c415604",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rebels"
+        },
+        {
+          "type": "과거형",
+          "value": "rebelled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rebelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rebelled"
+        }
+      ],
+      "aliasConjugation": "rebels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b470a2fceed9536ddd58f084e2a54772",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 아들은 선생들의 속박에 반항하기 시작했다",
+      "text": "My son began to <b>rebel</b> against the restraint imposed by his teachers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 생각하면 오싹해진다.",
+      "text": "My mind rebels at the thought."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "symbol",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪmbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상징, 표상(表象), 심벌",
+              "examples": [
+                {
+                  "text": "The cross is the <b>symbol</b> of Christianity.",
+                  "translatedText": "십자가는 그리스도교의 상징이다."
+                }
+              ],
+              "originalMeaning": "상징, 표상(表象), 심벌"
+            },
+            {
+              "meaning": "기호, 표, 부호",
+              "examples": [
+                {
+                  "text": "a phonetic <b>symbol</b>",
+                  "translatedText": "발음 기호"
+                }
+              ],
+              "originalMeaning": "기호, 표, 부호"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "(=SYMBOLIZE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >SYMBOLIZE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f45bb8b4803b4bd2aa8e60c002c0708d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f45bb8b4803b4bd2aa8e60c002c0708d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "symbols"
+        },
+        {
+          "type": "과거형",
+          "value": "symbolled, symboled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "symbolling, symboling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "symbolled, symboled"
+        }
+      ],
+      "aliasConjugation": "symbols",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "61093a1f941dccbe3537f2676ada31ee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대통령은 그 나라의 상징이다",
+      "text": "The president is the <b>symbol</b> of the State."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "십자가는 구원의 표상이다",
+      "text": "The cross is the <b>symbol</b> of salvation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "십자가는 그리스도교의 상징이다.",
+      "text": "The cross is the <b>symbol</b> of Christianity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "개나리는 봄의 상징이다",
+      "text": "The forsythia is the <b>symbol</b> of the spring."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "originate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈrɪdʒɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "시작하다, 일으키다",
+              "examples": [],
+              "originalMeaning": "시작하다, 일으키다"
+            },
+            {
+              "meaning": "창설하다; 창작하다, 발명하다, 창조하다; 고안하다, 짜내다, 생각해 내다",
+              "examples": [
+                {
+                  "text": "He originated a new teaching method.",
+                  "translatedText": "그는 새 교수법을 창안했다."
+                }
+              ],
+              "originalMeaning": "창설하다; 창작하다, 발명하다, 창조하다; 고안하다, 짜내다, 생각해 내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "비롯하다, 일어나다, 시작되다, 생기다, 유래하다; 고안되다 ((from, in, with))",
+              "examples": [
+                {
+                  "text": "Coal has originated from the decay of plants.",
+                  "translatedText": "석탄은 식물이 썩어 된 것이다."
+                }
+              ],
+              "originalMeaning": "비롯하다, 일어나다, 시작되다, 생기다, 유래하다; 고안되다 ((from, in, with))"
+            },
+            {
+              "meaning": "<열차·버스가> (…에서) 시발하다, 발차하다 ((at, in))",
+              "examples": [
+                {
+                  "text": "The flight originates in New York.",
+                  "translatedText": "그 항공편은 뉴욕 발이다."
+                }
+              ],
+              "originalMeaning": "<열차·버스가> (…에서) 시발하다, 발차하다 ((at, in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e578145b0d5f431a9ff605e214f71c3b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e578145b0d5f431a9ff605e214f71c3b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "originates"
+        },
+        {
+          "type": "과거형",
+          "value": "originated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "originating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "originated"
+        }
+      ],
+      "aliasConjugation": "originates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7b00f13dde1cd63341f81a260244725c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 이론은 A씨의 고안입니다",
+      "text": "Mr. A originated this theory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일은 그 시합에서 발단했다",
+      "text": "The trouble originated in a game."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 항공편은 뉴욕 발이다.",
+      "text": "The flight originates in New York."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사건은 질투에서 시작되었다",
+      "text": "This case originated in jealousy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 브라운 씨가 발안한 것입니다",
+      "text": "The plan originated with Mr. Brown."
+    }
+  ],
+  "isWordType": true
+}

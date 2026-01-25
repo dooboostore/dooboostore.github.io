@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "entry": "abandon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əbǽndən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·집·지위 등을> 버리다, 유기하다",
+              "examples": [
+                {
+                  "text": "<b>abandon</b> one's friend",
+                  "translatedText": "친구를 버리다"
+                }
+              ],
+              "originalMeaning": "<사람·집·지위 등을> 버리다, 유기하다"
+            },
+            {
+              "meaning": "<계획·습관 등을> 그만두다, 단념하다(give up)",
+              "examples": [
+                {
+                  "text": "<b>abandon</b> one's plan",
+                  "translatedText": "계획을 포기하다"
+                }
+              ],
+              "originalMeaning": "<계획·습관 등을> 그만두다, 단념하다(give up)"
+            },
+            {
+              "meaning": "<소유물을> 넘겨주다, 내주다(surrender); <…을> (…이) 하는 대로 내맡기다 ((to, for))",
+              "examples": [
+                {
+                  "text": "<b>abandon</b> one's country to the invaders",
+                  "translatedText": "자기 나라를 침략자들에게 내맡기다"
+                }
+              ],
+              "originalMeaning": "<소유물을> 넘겨주다, 내주다(surrender); <…을> (…이) 하는 대로 내맡기다 ((to, for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a041f6fc55114ca0a52eca142b440d97",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a041f6fc55114ca0a52eca142b440d97",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "abandons"
+        },
+        {
+          "type": "과거형",
+          "value": "abandoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "abandoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "abandoned"
+        }
+      ],
+      "aliasConjugation": "abandons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "61e5382ea84c369b50edd4cb4c51a4f1",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "abandon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 자유분방, 방종, [영] 자포자기",
+              "examples": [],
+              "originalMeaning": "[U] 자유분방, 방종, [영] 자포자기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a822b5bfed904100a461643a6551cdac",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a822b5bfed904100a461643a6551cdac",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "abandons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e9f6b3c21af6b9ab87e9ff99d3885158",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 폐안이 되었다",
+      "text": "The plan was abandoned[dropped]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 적군에게 집을 내주어야 했다",
+      "text": "We had to <b>abandon</b> our homes to enemy troops."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "술타령하다 <b>abandon</b> oneself to drinking;be steeped in liquor;be soaked in drink;be boozy",
+      "text": ";suggest[ask for] a drink"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "포기하지 마!",
+      "text": "Don't give up! or Stick with it! or Don't <b>abandon</b> ship yet."
+    }
+  ],
+  "isWordType": true
+}

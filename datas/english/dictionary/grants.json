@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "grant",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡrænt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(인정하여 정식으로) 주다, 수여하다 (=give)",
+              "examples": [
+                {
+                  "text": "<b>grant</b> permission",
+                  "translatedText": "허가해 주다"
+                }
+              ],
+              "originalMeaning": "(인정하여 정식으로) 주다, 수여하다 (=<span class='related_word' lang='en' >give</span>)"
+            },
+            {
+              "meaning": "<탄원·간청 등을> 승인하다, 허가하다, 들어주다(allow)",
+              "examples": [
+                {
+                  "text": "<b>grant</b> a person a favor",
+                  "translatedText": "…의 부탁을 들어주다"
+                }
+              ],
+              "originalMeaning": "<탄원·간청 등을> 승인하다, 허가하다, 들어주다(allow)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 허가, 인가; 수여; 교부, 하사",
+              "examples": [],
+              "originalMeaning": "[UC/] 허가, 인가; 수여; 교부, 하사"
+            },
+            {
+              "meaning": "교부된 물건, 하사금, (특정 목적을 위한) 보조금, 조성금 ((연구비·장학금 등))",
+              "examples": [
+                {
+                  "text": "government grantsto universities",
+                  "translatedText": "대학에 대한 정부의 보조금"
+                }
+              ],
+              "originalMeaning": "교부된 물건, 하사금, (특정 목적을 위한) 보조금, 조성금 ((연구비·장학금 등))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/467ee44e1d7a41c49aa76a1b46dff8ec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/467ee44e1d7a41c49aa76a1b46dff8ec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "grants"
+        },
+        {
+          "type": "과거형",
+          "value": "granted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "granting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "granted"
+        }
+      ],
+      "aliasConjugation": "grants",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b8ed9d7be1248e043ab6c0600dfc7679",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Grant",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "그랜트 Ulysses Simpson ~ (1822-85) ((미국 남북 전쟁 때의 북군 총사령관, 제18대 대통령(1869-77)))",
+              "examples": [],
+              "originalMeaning": "그랜트 Ulysses Simpson ~ (1822-85) ((미국 남북 전쟁 때의 북군 총사령관, 제18대 대통령(1869-77)))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/582bc91605e34abdb7a9a79811881103",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/582bc91605e34abdb7a9a79811881103",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9fb89d42ee52586b0df4df6b7cffc795",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "제발 제 소원을 들어주십시오",
+      "text": "Please <b>grant</b> my wish[prayer]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 내게 입국 비자를 내주었다",
+      "text": "They granted an entry visa to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "황제 폐하께서 금일봉을 하사하셨다",
+      "text": "The Emperor granted a monetary gift."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비록 그것이 사실이라 할지라도 자네가 잘못이네",
+      "text": "Granting it to be true, you are still in the wrong. or Granting that it is true, you are still in the wrong."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "하느님, 우리가 거기에 무사히 이르게 하소서.",
+      "text": "God <b>grant</b> that we get there alive."
+    }
+  ],
+  "isWordType": true
+}
