@@ -4088,6 +4088,9 @@ var ConvertUtils;
     ConvertUtils.stringJsonToKeyPairs = (stringJson) => {
         return Array.from(stringJson.matchAll(/(\w+):\s*([^,}]+)/g)).map(match => ({ key: match[1], value: match[2] }));
     };
+    ConvertUtils.entriesToKeyPairs = (o) => {
+        return Object.entries(o).map(([key, value]) => ({ key, value }));
+    };
     ConvertUtils.stringToBase64 = (str) => {
         return btoa(str);
     };
@@ -6734,27 +6737,13 @@ class Observable {
                 partialObserver.complete?.();
             }
         });
-        let teardownLogic;
         if (this._producerFunction) {
-            teardownLogic = this._producerFunction(internalSubscriber);
-        }
-        let closed = false;
-        return {
-            get closed() {
-                return closed;
-            },
-            unsubscribe: () => {
-                // console.log('unsubscribe-->', teardownLogic)
-                // Execute the teardown logic returned by the producer function
-                if (typeof teardownLogic === 'function') {
-                    teardownLogic();
-                }
-                else if (teardownLogic && typeof teardownLogic.unsubscribe === 'function') {
-                    teardownLogic.unsubscribe();
-                }
-                closed = true;
+            const teardownLogic = this._producerFunction(internalSubscriber);
+            if (teardownLogic) {
+                internalSubscriber.add(teardownLogic);
             }
-        };
+        }
+        return internalSubscriber;
     }
     // complete 되야지만 마지막 처리된다!
     toPromise() {
@@ -6799,6 +6788,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ReplaySubject: () => (/* binding */ ReplaySubject)
 /* harmony export */ });
 /* harmony import */ var _Subject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
+/* harmony import */ var _Subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Subscription */ "../../packages/@dooboostore/core/src/message/Subscription.ts");
+
 
 class ReplaySubject extends _Subject__WEBPACK_IMPORTED_MODULE_0__.Subject {
     bufferSize;
@@ -6840,7 +6831,7 @@ class ReplaySubject extends _Subject__WEBPACK_IMPORTED_MODULE_0__.Subject {
             else {
                 subscriber.complete();
             }
-            return { closed: true, unsubscribe: () => { } }; // Return dummy subscription as it's already done
+            return _Subscription__WEBPACK_IMPORTED_MODULE_1__.Subscription.EMPTY;
         }
         // Then, call super._subscribeToSubject to add the observer for future values
         return super._subscribeToSubject(subscriber);
@@ -6862,6 +6853,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Subject: () => (/* binding */ Subject)
 /* harmony export */ });
 /* harmony import */ var _Observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Observable */ "../../packages/@dooboostore/core/src/message/Observable.ts");
+/* harmony import */ var _Subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Subscription */ "../../packages/@dooboostore/core/src/message/Subscription.ts");
+
 
 class Subject extends _Observable__WEBPACK_IMPORTED_MODULE_0__.Observable {
     _observers = new Set();
@@ -6870,7 +6863,7 @@ class Subject extends _Observable__WEBPACK_IMPORTED_MODULE_0__.Observable {
     _error;
     constructor() {
         // Call parent Observable constructor with our own subscribe logic
-        super((subscriber) => {
+        super(subscriber => {
             return this._subscribeToSubject(subscriber);
         });
     }
@@ -6887,19 +6880,12 @@ class Subject extends _Observable__WEBPACK_IMPORTED_MODULE_0__.Observable {
             else {
                 partialObserver.complete?.();
             }
-            return { closed: true, unsubscribe: () => { } }; // Already stopped, return dummy subscription
+            return _Subscription__WEBPACK_IMPORTED_MODULE_1__.Subscription.EMPTY;
         }
         this._observers.add(partialObserver);
-        let closed = false;
-        return {
-            get closed() {
-                return closed;
-            },
-            unsubscribe: () => {
-                this._observers.delete(partialObserver);
-                closed = true;
-            }
-        };
+        return new _Subscription__WEBPACK_IMPORTED_MODULE_1__.Subscription(() => {
+            this._observers.delete(partialObserver);
+        });
     }
     next(data) {
         if (this._isStopped) {
@@ -6950,10 +6936,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Subscriber: () => (/* binding */ Subscriber)
 /* harmony export */ });
-class Subscriber {
+/* harmony import */ var _Subscription__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Subscription */ "../../packages/@dooboostore/core/src/message/Subscription.ts");
+
+class Subscriber extends _Subscription__WEBPACK_IMPORTED_MODULE_0__.Subscription {
     destination;
-    closed = false;
     constructor(destination) {
+        super();
         this.destination = destination;
     }
     next(value) {
@@ -6978,8 +6966,100 @@ class Subscriber {
         this.destination.complete();
         this.unsubscribe();
     }
+}
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/core/src/message/Subscription.ts":
+/*!********************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/message/Subscription.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Subscription: () => (/* binding */ Subscription)
+/* harmony export */ });
+class Subscription {
+    static EMPTY = (function (empty) {
+        empty.closed = true;
+        return empty;
+    })(new Subscription());
+    closed = false;
+    _teardowns = null;
+    constructor(initialTeardown) {
+        if (initialTeardown) {
+            this.add(initialTeardown);
+        }
+    }
     unsubscribe() {
+        if (this.closed) {
+            return;
+        }
         this.closed = true;
+        const teardowns = this._teardowns;
+        this._teardowns = null;
+        if (teardowns) {
+            let errors = null;
+            teardowns.forEach(teardown => {
+                try {
+                    if (typeof teardown === 'function') {
+                        teardown();
+                    }
+                    else if (teardown && typeof teardown.unsubscribe === 'function') {
+                        teardown.unsubscribe();
+                    }
+                }
+                catch (e) {
+                    errors = errors || [];
+                    errors.push(e);
+                }
+            });
+            if (errors) {
+                throw new Error(errors.map(e => e.message).join('\n'));
+            }
+        }
+    }
+    add(teardown) {
+        if (!teardown) {
+            return;
+        }
+        let teardownToAdd;
+        if (typeof teardown === 'function') {
+            teardownToAdd = teardown;
+        }
+        else if (typeof teardown === 'object' && teardown !== null && typeof teardown.unsubscribe === 'function') {
+            teardownToAdd = teardown;
+        }
+        else {
+            return;
+        }
+        if (this.closed) {
+            if (typeof teardownToAdd === 'function') {
+                teardownToAdd();
+            }
+            else {
+                teardownToAdd.unsubscribe();
+            }
+        }
+        else {
+            if (!this._teardowns) {
+                this._teardowns = [];
+            }
+            this._teardowns.push(teardownToAdd);
+        }
+    }
+    remove(teardown) {
+        const teardowns = this._teardowns;
+        if (!teardowns || !teardown) {
+            return;
+        }
+        const index = teardowns.indexOf(teardown);
+        if (index !== -1) {
+            teardowns.splice(index, 1);
+        }
     }
 }
 
@@ -9509,8 +9589,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Promises: () => (/* binding */ Promises)
 /* harmony export */ });
-/* harmony import */ var _valid_ValidUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
-/* harmony import */ var _AbortablePromise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AbortablePromise */ "../../packages/@dooboostore/core/src/promise/AbortablePromise.ts");
+/* harmony import */ var _message_Subscription__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../message/Subscription */ "../../packages/@dooboostore/core/src/message/Subscription.ts");
+/* harmony import */ var _valid_ValidUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
+/* harmony import */ var _AbortablePromise__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AbortablePromise */ "../../packages/@dooboostore/core/src/promise/AbortablePromise.ts");
+
 
 
 var Promises;
@@ -9529,7 +9611,7 @@ var Promises;
         catch (e) {
             const targetHas = Array.isArray(has) ? has : [has];
             for (let ha of targetHas) {
-                if (_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_0__.ValidUtils.isConstructor(ha)) {
+                if (_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_1__.ValidUtils.isConstructor(ha)) {
                     if (e instanceof ha) {
                         return e;
                     }
@@ -9555,7 +9637,7 @@ var Promises;
     };
     Promises.loop = (config) => {
         return {
-            subscribe: (callback) => {
+            subscribe: callback => {
                 let stop = false;
                 let age = 0;
                 const loopExecute = async () => {
@@ -9584,14 +9666,9 @@ var Promises;
                 setTimeout(() => {
                     loopExecute();
                 }, config.delay ?? 0);
-                return {
-                    get closed() {
-                        return stop;
-                    },
-                    unsubscribe: () => {
-                        stop = true;
-                    }
-                };
+                return new _message_Subscription__WEBPACK_IMPORTED_MODULE_0__.Subscription(() => {
+                    stop = true;
+                });
             }
         };
     };
@@ -9609,7 +9686,7 @@ var Promises;
      * @param signal Optional AbortSignal to cancel the execution
      */
     Promises.abortable = (executor, signal) => {
-        return new _AbortablePromise__WEBPACK_IMPORTED_MODULE_1__.AbortablePromise(executor, signal);
+        return new _AbortablePromise__WEBPACK_IMPORTED_MODULE_2__.AbortablePromise(executor, signal);
     };
     Promises.withResolvers = () => {
         let resolve;
@@ -9620,21 +9697,32 @@ var Promises;
         });
         return { promise, resolve, reject };
     };
-    /**
-     * Execute promises in chunks with concurrency limit to prevent network overload
-     * @param promiseFactories Array of promise factories (functions that return promises)
-     * @param chunkSize Number of promises to execute concurrently
-     * @returns Promise that resolves with all results
-     */
-    Promises.executeInChunks = async (promiseFactories, chunkSize = 10) => {
+    Promises.executeInChunks = async (promiseFactories, config) => {
         const results = [];
+        const chunkSize = config.chunkSize;
+        const sleepBetweenChunks = config.sleepBetweenChunks;
         for (let i = 0; i < promiseFactories.length; i += chunkSize) {
             const chunk = promiseFactories.slice(i, i + chunkSize);
             const chunkResults = await Promise.all(chunk.map(factory => factory()));
             results.push(...chunkResults);
             // Add small delay between chunks to be extra safe
             if (i + chunkSize < promiseFactories.length) {
-                await Promises.sleep(100);
+                await Promises.sleep(sleepBetweenChunks);
+            }
+        }
+        return results;
+    };
+    Promises.executeSettledInChunks = async (promiseFactories, config) => {
+        const results = [];
+        const chunkSize = config.chunkSize;
+        const sleepBetweenChunks = config.sleepBetweenChunks;
+        for (let i = 0; i < promiseFactories.length; i += chunkSize) {
+            const chunk = promiseFactories.slice(i, i + chunkSize);
+            const chunkResults = (await Promise.allSettled(chunk.map(factory => factory())));
+            results.push(...chunkResults);
+            // Add small delay between chunks to be extra safe
+            if (i + chunkSize < promiseFactories.length) {
+                await Promises.sleep(sleepBetweenChunks);
             }
         }
         return results;
@@ -9740,15 +9828,14 @@ var Promises;
             try {
                 await data;
             }
-            catch (e) {
-            }
+            catch (e) { }
             const rData = {
                 status: data.status,
                 isFulfilled: data.isFulfilled,
                 isRejected: data.isRejected,
                 isPending: data.isPending,
                 value: data.value,
-                reason: data.reason,
+                reason: data.reason
             };
             if (typeof promise === 'function') {
                 rData.factory = () => {
@@ -10201,6 +10288,86 @@ __webpack_require__.r(__webpack_exports__);
 // export const isDefined = <T>(value: T | undefined | null): value is T => value !== undefined && value !== null;
 // export const isDefined = <T>(value: T | undefined | null): value is NonNullable<T> => value !== undefined && value !== null;
 const isDefined = (value) => value !== undefined && value !== null;
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/core/src/url/UrlUtils.ts":
+/*!************************************************************!*\
+  !*** ../../packages/@dooboostore/core/src/url/UrlUtils.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   UrlUtils: () => (/* binding */ UrlUtils)
+/* harmony export */ });
+var UrlUtils;
+(function (UrlUtils) {
+    // 1 const fullUrl = "http://naver.com/asdwd?a=na";
+    // 2
+    // 3 try {
+    //   4   const url = new URL(fullUrl);
+    //   5   const origin = url.origin; // "http://naver.com"
+    //   6
+    //   7   console.log(origin); // 출력: http://naver.com
+    //   8 } catch (error) {
+    //   9   console.error("유효하지 않은 URL입니다:", error);
+    //   10 }
+    UrlUtils.origin = (fullurl) => {
+        return new URL(fullurl).origin;
+    };
+    UrlUtils.toUrl = (fullUrl) => {
+        return new URL(fullUrl);
+    };
+    /**
+     * URLSearchParams에서 특정 키를 삭제
+     */
+    UrlUtils.deleteSearchParam = (searchParams, name) => {
+        const names = Array.isArray(name) ? name : [name];
+        names.forEach(n => searchParams.delete(n));
+        return searchParams;
+    };
+    /**
+     * URLSearchParams에 키-값 쌍을 추가
+     */
+    UrlUtils.appendSearchParam = (searchParams, params) => {
+        params.forEach(([key, value]) => searchParams.append(key, value));
+        return searchParams;
+    };
+    /**
+     * URLSearchParams에서 키를 삭제하고 새로운 값을 추가 (upsert)
+     * 기존 값이 있으면 삭제하고, 새로운 값을 추가
+     */
+    UrlUtils.upsertSearchParam = (searchParams, params) => {
+        Object.entries(params).forEach(([key, value]) => {
+            searchParams.delete(key); // 기존 값 삭제
+            if (Array.isArray(value)) {
+                value.forEach(v => searchParams.append(key, v));
+            }
+            else {
+                searchParams.append(key, value);
+            }
+        });
+        return searchParams;
+    };
+    /**
+     * URLSearchParams 조작을 위한 헬퍼
+     */
+    UrlUtils.manipulateSearchParams = (searchParams, options) => {
+        if (options?.delete) {
+            UrlUtils.deleteSearchParam(searchParams, options.delete);
+        }
+        if (options?.append) {
+            UrlUtils.appendSearchParam(searchParams, options.append);
+        }
+        if (options?.upsert) {
+            UrlUtils.upsertSearchParam(searchParams, options.upsert);
+        }
+        return searchParams;
+    };
+})(UrlUtils || (UrlUtils = {}));
 
 
 /***/ }),
@@ -15502,6 +15669,12 @@ class EventManager {
             const script = attribute;
             if (script) {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (data) {
+                    it.setAttribute('selected', 'selected');
+                }
+                else {
+                    it.removeAttribute('selected');
+                }
                 if (it.selected !== data) {
                     it.selected = data;
                 }
@@ -15513,6 +15686,12 @@ class EventManager {
             const script = attribute;
             if (script) {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (data) {
+                    it.setAttribute('readonly', 'readonly');
+                }
+                else {
+                    it.removeAttribute('readonly');
+                }
                 if (it.readOnly !== data) {
                     it.readOnly = data;
                 }
@@ -15524,6 +15703,12 @@ class EventManager {
             const script = attribute;
             if (script) {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (data) {
+                    it.setAttribute('disabled', 'disabled');
+                }
+                else {
+                    it.removeAttribute('disabled');
+                }
                 if (it.disabled !== data) {
                     it.disabled = data;
                 }
@@ -15535,6 +15720,12 @@ class EventManager {
             const script = attribute;
             if (script) {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (data) {
+                    it.setAttribute('hidden', 'hidden');
+                }
+                else {
+                    it.removeAttribute('hidden');
+                }
                 if (it.hidden !== data) {
                     it.hidden = data;
                 }
@@ -15546,6 +15737,12 @@ class EventManager {
             const script = attribute;
             if (script) {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (data) {
+                    it.setAttribute('required', 'required');
+                }
+                else {
+                    it.removeAttribute('required');
+                }
                 if (it.required !== data) {
                     it.required = data;
                 }
@@ -15557,6 +15754,12 @@ class EventManager {
             const script = attribute;
             if (script) {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (data) {
+                    it.setAttribute('open', 'open');
+                }
+                else {
+                    it.removeAttribute('open');
+                }
                 if (it.open !== data) {
                     it.open = data;
                 }
@@ -19967,6 +20170,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Router */ "../../packages/@dooboostore/dom-render/src/routers/Router.ts");
 /* harmony import */ var _dooboostore_core_web_location_LocationUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core-web/location/LocationUtils */ "../../packages/@dooboostore/core-web/src/location/LocationUtils.ts");
+/* harmony import */ var _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/core/url/UrlUtils */ "../../packages/@dooboostore/core/src/url/UrlUtils.ts");
+
 
 
 class HashRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
@@ -19976,59 +20181,63 @@ class HashRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
     getSearchParams(data) {
         const hashSearch = _dooboostore_core_web_location_LocationUtils__WEBPACK_IMPORTED_MODULE_1__.LocationUtils.hashSearch(this.config.window);
         const searchParams = hashSearch ? new URLSearchParams(hashSearch) : (new URL(this.config.window.document.location.href)).searchParams;
-        data?.delete?.forEach(it => {
-            searchParams.delete(it);
-        });
-        data?.append?.forEach(it => {
-            searchParams.append(it[0], it[1]);
-        });
-        return searchParams;
+        return _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_2__.UrlUtils.manipulateSearchParams(searchParams, data);
     }
-    push(path, data, title = '') {
+    push(path, state) {
         if (path === '/') {
-            return super.pushState(data, title, '/');
+            return super.pushState(state?.data, state?.title, '/', state?.config);
         }
         else {
-            return super.pushState(data, title, `#${this.toUrl(path)}`);
+            return super.pushState(state?.data, state?.title, `#${this.toUrl(path)}`, state?.config);
         }
     }
-    replace(path, data, title) {
+    replace(path, state) {
         if (path === '/') {
-            return super.replaceState(data, title, '/');
+            return super.replaceState(state?.data, state?.title, '/', state?.config);
         }
         else {
-            return super.replaceState(data, title, `#${this.toUrl(path)}`);
+            return super.replaceState(state?.data, state?.title, `#${this.toUrl(path)}`, state?.config);
         }
     }
-    setDeleteHashSearchParam(name, data, title) {
+    setDeleteHashSearchParam(name, state) {
     }
-    pushDeleteHashSearchParam(name, data, title) {
+    pushDeleteHashSearchParam(name, state) {
         const s = this.getHashSearchParams({ delete: Array.isArray(name) ? name : [name] });
         const size = Array.from(s.entries()).length;
         const href = `${this.config.window.location.pathname}${this.config.window.location.search}${size > 0 ? '#' + s.toString() : ''}`;
-        super.pushState(data, title, href);
+        super.pushState(state?.data, state?.title, href, state?.config);
     }
-    pushDeleteSearchParam(name, data, title) {
+    pushDeleteSearchParam(name, state) {
         const s = this.getSearchParams({ delete: Array.isArray(name) ? name : [name] });
-        this.push({ searchParams: s }, data, title);
+        this.push({ searchParams: s }, state);
     }
-    pushAddSearchParam(params, data, title) {
+    pushAddSearchParam(params, state) {
         const s = this.getSearchParams({ append: params });
-        this.push({ searchParams: s }, data, title);
+        this.push({ searchParams: s }, state);
     }
-    replaceDeleteHashSearchParam(name, data, title) {
+    pushUpsertSearchParam(params, state) {
+        const s = this.getSearchParams();
+        _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_2__.UrlUtils.upsertSearchParam(s, params);
+        this.push({ searchParams: s }, state);
+    }
+    replaceDeleteHashSearchParam(name, state) {
         const s = this.getHashSearchParams({ delete: Array.isArray(name) ? name : [name] });
         const size = Array.from(s.entries()).length;
         const href = `${this.config.window.location.pathname}${this.config.window.location.search}${size > 0 ? '#' + s.toString() : ''}`;
-        super.pushState(data, title, href);
+        super.pushState(state?.data, state?.title, href, state?.config);
     }
-    replaceDeleteSearchParam(name, data, title) {
+    replaceDeleteSearchParam(name, state) {
         const s = this.getSearchParams({ delete: Array.isArray(name) ? name : [name] });
-        this.push({ searchParams: s }, data, title);
+        this.push({ searchParams: s }, state);
     }
-    replaceAddSearchParam(params, data, title) {
+    replaceAddSearchParam(params, state) {
         const s = this.getSearchParams({ append: params });
-        this.push({ searchParams: s }, data, title);
+        this.push({ searchParams: s }, state);
+    }
+    replaceUpsertSearchParam(params, state) {
+        const s = this.getSearchParams();
+        _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_2__.UrlUtils.upsertSearchParam(s, params);
+        this.replace({ searchParams: s }, state);
     }
     getUrl() {
         return _dooboostore_core_web_location_LocationUtils__WEBPACK_IMPORTED_MODULE_1__.LocationUtils.hash(this.config.window) || '/';
@@ -20046,14 +20255,7 @@ class HashRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
         const hash = this.config.window.location.hash;
         const queryIndex = hash.indexOf('?');
         const searchParams = (queryIndex !== -1) ? new URLSearchParams(hash.slice(queryIndex + 1)) : new URLSearchParams();
-        ;
-        data?.delete?.forEach(it => {
-            searchParams.delete(it);
-        });
-        data?.append?.forEach(it => {
-            searchParams.append(it[0], it[1]);
-        });
-        return searchParams;
+        return _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_2__.UrlUtils.manipulateSearchParams(searchParams, data);
     }
 }
 
@@ -20072,6 +20274,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   PathRouter: () => (/* binding */ PathRouter)
 /* harmony export */ });
 /* harmony import */ var _Router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Router */ "../../packages/@dooboostore/dom-render/src/routers/Router.ts");
+/* harmony import */ var _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/core/url/UrlUtils */ "../../packages/@dooboostore/core/src/url/UrlUtils.ts");
+
 
 class PathRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
     constructor(config) {
@@ -20082,47 +20286,51 @@ class PathRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
             return new URLSearchParams();
         }
         const searchParams = (new URL(this.config.window.document.location?.href)).searchParams;
-        data?.delete?.forEach(it => {
-            searchParams.delete(it);
-        });
-        data?.append?.forEach(it => {
-            searchParams.append(it[0], it[1]);
-        });
-        return searchParams;
+        return _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_1__.UrlUtils.manipulateSearchParams(searchParams, data);
     }
-    push(path, data, title = '') {
-        return super.pushState(data, title, this.toUrl(path));
+    push(path, state) {
+        return super.pushState(state?.data, state?.title, this.toUrl(path), state?.config);
     }
-    replace(path, data, title = '') {
-        return super.replaceState(data, title, this.toUrl(path));
+    replace(path, state) {
+        return super.replaceState(state?.data, state?.title, this.toUrl(path), state?.config);
     }
-    pushDeleteSearchParam(name, data, title) {
-        const s = this.getSearchParams({ delete: [name] });
-        this.push({ searchParams: s }, data, title);
-    }
-    pushDeleteHashSearchParam(name, data, title) {
-        const s = this.getHashSearchParams({ delete: [name] });
-        const size = Array.from(s.entries()).length;
-        const href = `${this.config.window.location?.pathname ?? '/'}${this.config.window.location?.search}${size > 0 ? '#' + s.toString() : ''}`;
-        super.pushState(data, title, href);
-    }
-    pushAddSearchParam(params, data, title) {
-        const s = this.getSearchParams({ append: params });
-        this.push({ searchParams: s }, data, title);
-    }
-    replaceDeleteSearchParam(name, data, title) {
+    pushDeleteSearchParam(name, state) {
         const s = this.getSearchParams({ delete: Array.isArray(name) ? name : [name] });
-        this.replace({ searchParams: s }, data, title);
+        this.push({ searchParams: s }, state);
     }
-    replaceDeleteHashSearchParam(name, data, title) {
+    pushDeleteHashSearchParam(name, state) {
         const s = this.getHashSearchParams({ delete: Array.isArray(name) ? name : [name] });
         const size = Array.from(s.entries()).length;
         const href = `${this.config.window.location?.pathname ?? '/'}${this.config.window.location?.search}${size > 0 ? '#' + s.toString() : ''}`;
-        super.replaceState(data, title, href);
+        super.pushState(state?.data, state?.title, href, state?.config);
     }
-    replaceAddSearchParam(params, data, title) {
+    pushAddSearchParam(params, state) {
         const s = this.getSearchParams({ append: params });
-        this.replace({ searchParams: s }, data, title);
+        this.push({ searchParams: s }, state);
+    }
+    pushUpsertSearchParam(params, state) {
+        const s = this.getSearchParams();
+        _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_1__.UrlUtils.upsertSearchParam(s, params);
+        this.push({ searchParams: s }, state);
+    }
+    replaceDeleteSearchParam(name, state) {
+        const s = this.getSearchParams({ delete: Array.isArray(name) ? name : [name] });
+        this.replace({ searchParams: s }, state);
+    }
+    replaceDeleteHashSearchParam(name, state) {
+        const s = this.getHashSearchParams({ delete: Array.isArray(name) ? name : [name] });
+        const size = Array.from(s.entries()).length;
+        const href = `${this.config.window.location?.pathname ?? '/'}${this.config.window.location?.search}${size > 0 ? '#' + s.toString() : ''}`;
+        super.replaceState(state?.data, state?.title, href, state?.config);
+    }
+    replaceAddSearchParam(params, state) {
+        const s = this.getSearchParams({ append: params });
+        this.replace({ searchParams: s }, state);
+    }
+    replaceUpsertSearchParam(params, state) {
+        const s = this.getSearchParams();
+        _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_1__.UrlUtils.upsertSearchParam(s, params);
+        this.replace({ searchParams: s }, state);
     }
     getUrl() {
         if (!this.config.window.document?.location?.href) {
@@ -20144,14 +20352,7 @@ class PathRouter extends _Router__WEBPACK_IMPORTED_MODULE_0__.Router {
     getHashSearchParams(data) {
         // http://local.com/#wow=222&wow=bb&z=2
         const searchParams = new URLSearchParams(this.config.window.location?.hash.slice(1) ?? '');
-        data?.delete?.forEach(it => {
-            searchParams.delete(it);
-        });
-        data?.append?.forEach(it => {
-            searchParams.append(it[0], it[1]);
-        });
-        return searchParams;
-        // return undefined;
+        return _dooboostore_core_url_UrlUtils__WEBPACK_IMPORTED_MODULE_1__.UrlUtils.manipulateSearchParams(searchParams, data);
     }
 }
 
@@ -20177,6 +20378,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// popstate 이벤트 무시를 위한 마커
+const ROUTER_NO_EVENT_MARKER = '__ROUTER_NO_EVENT__';
 class Router {
     behaviorSubject;
     _config;
@@ -20202,9 +20405,10 @@ class Router {
             this.behaviorSubject = new _dooboostore_core_message_BehaviorSubject__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject(routeData);
         }
         this.config.window.addEventListener('popstate', (event) => {
-            // domrender에서 발생하지 않은 즉 back, previous 일떄에도 이벤트가도록 처리
-            // if(!isPopStateCurrentTargetDomrenderRouter(event.state)) {
-            // console.log('-------');
+            // console.log('----->', event.state)
+            // noEventAndPublish 마커가 있으면 이벤트 발행하지 않음
+            // if (event.state && event.state[ROUTER_NO_EVENT_MARKER]) {
+            // } else {
             const routeData = { ...this.getRouteData(), triggerPoint: 'end' };
             this.behaviorSubject.next(routeData);
             // }
@@ -20215,6 +20419,9 @@ class Router {
     }
     get searchParamObject() {
         return _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_0__.ConvertUtils.toObject(this.getSearchParams());
+    }
+    getSearchParamObject() {
+        return this.searchParamObject;
     }
     get config() {
         return this._config;
@@ -20295,21 +20502,34 @@ class Router {
         // newVar.currentTarget = config?.currentTarget;
         return Object.freeze(newVar);
     }
-    pushState(data, title, path) {
-        // data = this.config.changeStateConvertDate?this.config.changeStateConvertDate(data): data;
-        // console.log('--->pushState', data);
-        this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'start' });
-        this.config.window.history?.pushState(data, title ?? '', path);
-        this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'end' });
-        return { data };
+    pushState(data, title, path, config) {
+        // noEventAndPublish가 true이면 마커 추가
+        const stateData = config?.noEventAndPublish
+            ? { ...data, [ROUTER_NO_EVENT_MARKER]: true }
+            : data;
+        if (!config?.noEventAndPublish) {
+            this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'start' });
+        }
+        this.config.window.history?.pushState(stateData, title ?? '', path);
+        if (!config?.noEventAndPublish) {
+            this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'end' });
+        }
+        return { data: stateData };
     }
-    replaceState(data, title, path) {
-        // data = this.config.changeStateConvertDate?this.config.changeStateConvertDate(data): data;
-        // console.log('--->replaceState', data);
-        this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'start' });
-        this.config.window.history?.replaceState(data, title ?? '', path);
-        this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'end' });
-        return { data };
+    replaceState(data, title, path, config) {
+        // console.log('-re?->', data, title, path, config);
+        // noEventAndPublish가 true이면 마커 추가
+        const stateData = config?.noEventAndPublish
+            ? { ...data, [ROUTER_NO_EVENT_MARKER]: true }
+            : data;
+        if (!config?.noEventAndPublish) {
+            this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'start' });
+        }
+        this.config.window.history?.replaceState(stateData, title ?? '', path);
+        if (!config?.noEventAndPublish) {
+            this.behaviorSubject.next({ ...this.getRouteData({ pathOrUrl: path }), triggerPoint: 'end' });
+        }
+        return { data: stateData };
     }
     getData() {
         return this.config.window.history?.state;
@@ -20317,37 +20537,38 @@ class Router {
     getPathData(urlExpression, currentUrl = this.getPathName()) {
         return _dooboostore_core_expression_Expression__WEBPACK_IMPORTED_MODULE_2__.Expression.Path.pathNameData(currentUrl, urlExpression);
     }
-    back() {
-        this.behaviorSubject.next({ ...this.getRouteData(), triggerPoint: 'start' });
-        this.config.window.history.back();
-        //en부분은 constructo의  this.config.window.addEventListener('popstate'   에서 받아서 처리된다 호출된다.
-    }
-    forward() {
-        this.behaviorSubject.next({ ...this.getRouteData(), triggerPoint: 'start' });
-        this.config.window.history?.forward();
-        //end부분은 constructor의  this.config.window.addEventListener('popstate'   에서 받아서 처리된다 호출된다.
-    }
-    go(config) {
-        // console.log('Router go', config);
-        if (typeof config === 'number') {
+    back(config) {
+        if (!config?.noEventAndPublish) {
             this.behaviorSubject.next({ ...this.getRouteData(), triggerPoint: 'start' });
+        }
+        this.config.window.history.back();
+        // end부분은 constructor의 this.config.window.addEventListener('popstate')에서 받아서 처리된다
+    }
+    forward(config) {
+        if (!config?.noEventAndPublish) {
+            this.behaviorSubject.next({ ...this.getRouteData(), triggerPoint: 'start' });
+        }
+        this.config.window.history?.forward();
+        // end부분은 constructor의 this.config.window.addEventListener('popstate')에서 받아서 처리된다
+    }
+    go(config, changeStateConfig) {
+        if (typeof config === 'number') {
+            if (!changeStateConfig?.noEventAndPublish) {
+                this.behaviorSubject.next({ ...this.getRouteData(), triggerPoint: 'start' });
+            }
             this.config.window.history?.go(config);
-            //end부분은 constructor의  this.config.window.addEventListener('popstate'   에서 받아서 처리된다 호출된다.
+            // end부분은 constructor의 this.config.window.addEventListener('popstate')에서 받아서 처리된다
             return;
         }
         if (typeof config === 'string') {
             config = { path: config };
         }
-        // let data: ChangeStateResult | undefined = undefined;
         if (config?.replace) {
-            this.replace(config.path, config.data, config.title);
+            this.replace(config.path, config.state);
         }
         else {
-            this.push(config.path, config.data, config.title);
+            this.push(config.path, config.state);
         }
-        // if (!this.config.disableAttach) {
-        //   await this.attach();
-        // }
         // 스크롤 제어 (기본값: true - 맨 위로 스크롤)
         if (config.scrollToTop !== false) {
             try {
@@ -20356,10 +20577,6 @@ class Router {
             catch (e) {
             }
         }
-        // console.log('----------', data, config)
-        // if (!config.disabledPopEvent) {
-        //   this.dispatchPopStateEvent(config?.data);
-        // }
     }
     toUrl(data) {
         // console.log('toUrl', data);
@@ -25890,15 +26107,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ComponentRouterBase: () => (/* binding */ ComponentRouterBase)
 /* harmony export */ });
-/* harmony import */ var _dooboostore_dom_render_components_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/dom-render/components/ComponentRouterBase */ "../../packages/@dooboostore/dom-render/src/components/ComponentRouterBase.ts");
-/* harmony import */ var _ComponentSet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ComponentSet */ "../../packages/@dooboostore/simple-boot-front/src/component/ComponentSet.ts");
-/* harmony import */ var _dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/dom-render/DomRenderProxy */ "../../packages/@dooboostore/dom-render/src/DomRenderProxy.ts");
-/* harmony import */ var _dooboostore_dom_render_components_router_RouterOutlet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/dom-render/components/router/RouterOutlet */ "../../packages/@dooboostore/dom-render/src/components/router/RouterOutlet.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
+/* harmony import */ var _dooboostore_dom_render_components_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/dom-render/components/ComponentRouterBase */ "../../packages/@dooboostore/dom-render/src/components/ComponentRouterBase.ts");
+/* harmony import */ var _ComponentSet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ComponentSet */ "../../packages/@dooboostore/simple-boot-front/src/component/ComponentSet.ts");
+/* harmony import */ var _dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/dom-render/DomRenderProxy */ "../../packages/@dooboostore/dom-render/src/DomRenderProxy.ts");
+/* harmony import */ var _dooboostore_dom_render_components_router_RouterOutlet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/dom-render/components/router/RouterOutlet */ "../../packages/@dooboostore/dom-render/src/components/router/RouterOutlet.ts");
+/* harmony import */ var _dooboostore_dom_render_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @dooboostore/dom-render/decorators/DomRenderNoProxy */ "../../packages/@dooboostore/dom-render/src/decorators/DomRenderNoProxy.ts");
 
 
 
 
-class ComponentRouterBase extends _dooboostore_dom_render_components_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_0__.ComponentRouterBase {
+
+
+class ComponentRouterBase extends _dooboostore_dom_render_components_ComponentRouterBase__WEBPACK_IMPORTED_MODULE_1__.ComponentRouterBase {
+    _routingDataSet;
     constructor(_config) {
         super(_config);
     }
@@ -25908,7 +26130,7 @@ class ComponentRouterBase extends _dooboostore_dom_render_components_ComponentRo
     setChild(child) {
         // console.log('setChild!!', child, (this as any).name)
         if (child) {
-            child = child instanceof _ComponentSet__WEBPACK_IMPORTED_MODULE_1__.ComponentSet ? child : new _ComponentSet__WEBPACK_IMPORTED_MODULE_1__.ComponentSet(child);
+            child = child instanceof _ComponentSet__WEBPACK_IMPORTED_MODULE_2__.ComponentSet ? child : new _ComponentSet__WEBPACK_IMPORTED_MODULE_2__.ComponentSet(child);
         }
         else {
             child = undefined;
@@ -25928,20 +26150,28 @@ class ComponentRouterBase extends _dooboostore_dom_render_components_ComponentRo
     async canActivate(url, data) {
         // console.log('cccccccccccc', data, typeof data);
         if (!(this.componentConfig?.sameRouteNoApply &&
-            (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_2__.getDomRenderOriginObject)(this.child?.obj) === (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_2__.getDomRenderOriginObject)(data))) {
-            this.child = new _ComponentSet__WEBPACK_IMPORTED_MODULE_1__.ComponentSet(data);
-            const routerOutlet = this.getChildren(_dooboostore_dom_render_components_router_RouterOutlet__WEBPACK_IMPORTED_MODULE_3__.RouterOutlet.RouterOutlet);
+            (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_3__.getDomRenderOriginObject)(this.child?.obj) === (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_3__.getDomRenderOriginObject)(data))) {
+            this.child = new _ComponentSet__WEBPACK_IMPORTED_MODULE_2__.ComponentSet(data);
+            const routerOutlet = this.getChildren(_dooboostore_dom_render_components_router_RouterOutlet__WEBPACK_IMPORTED_MODULE_4__.RouterOutlet.RouterOutlet);
             if (routerOutlet) {
                 routerOutlet.forEach(it => it.setValue(this.child));
             }
         }
     }
+    getPathData() {
+        return this._routingDataSet?.routerModule.getPathData();
+    }
     async onRouting(r) {
+        this._routingDataSet = r;
         // if (RouterAction.isOnRouting(this.child?.obj)){
         //   await this.child.obj.onRouting(r);
         // }
     }
 }
+(0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _dooboostore_dom_render_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_5__.DomRenderNoProxy,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+], ComponentRouterBase.prototype, "_routingDataSet", void 0);
 
 
 /***/ }),
@@ -29400,6 +29630,9 @@ class RouterModule {
     get pathData() {
         return this._pathData;
     }
+    getPathData() {
+        return this._pathData;
+    }
     set pathData(value) {
         this._pathData = value;
     }
@@ -31794,7 +32027,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_service_VoiceService__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @src/service/VoiceService */ "./src/service/VoiceService.ts");
 /* harmony import */ var _src_service_english_AutoTranslationService__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @src/service/english/AutoTranslationService */ "./src/service/english/AutoTranslationService.ts");
 /* harmony import */ var _src_service_english_DictionaryService__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @src/service/english/DictionaryService */ "./src/service/english/DictionaryService.ts");
-var _a, _b, _c, _d, _e;
+/* harmony import */ var _dooboostore_core_web_clipboard_ClipBoardUtils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @dooboostore/core-web/clipboard/ClipBoardUtils */ "../../packages/@dooboostore/core-web/src/clipboard/ClipBoardUtils.ts");
+/* harmony import */ var _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @dooboostore/simple-boot-front/option/SimFrontOption */ "../../packages/@dooboostore/simple-boot-front/src/option/SimFrontOption.ts");
+var _a, _b, _c, _d, _e, _f;
+
+
 
 
 
@@ -31813,6 +32050,7 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
     voiceService;
     autoTranslationService;
     dictionaryService;
+    config;
     name;
     dictionaries;
     currentItem;
@@ -31849,13 +32087,14 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
     maxGlobalWordIndex = 0;
     allWords = [];
     wordToItemMap = new Map();
-    constructor(apiService, videoItemService, voiceService, autoTranslationService, dictionaryService) {
+    constructor(apiService, videoItemService, voiceService, autoTranslationService, dictionaryService, config) {
         super();
         this.apiService = apiService;
         this.videoItemService = videoItemService;
         this.voiceService = voiceService;
         this.autoTranslationService = autoTranslationService;
         this.dictionaryService = dictionaryService;
+        this.config = config;
     }
     onCreateRender(param) {
         console.log('PlayerRouteComponent onCreateRender called with params:', param);
@@ -32208,7 +32447,11 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
         const seconds = milliseconds / 1000;
         return this.formatTime(seconds);
     }
-    onTranslationItemClick(index, startMs, endMs, event) {
+    async onTranslationItemClick(index, startMs, endMs, event) {
+        const currentTranslation = this.translations?.[index];
+        if (currentTranslation?.text && this.config.window) {
+            await _dooboostore_core_web_clipboard_ClipBoardUtils__WEBPACK_IMPORTED_MODULE_12__.ClipBoardUtils.writeText(currentTranslation?.text, this.config.window);
+        }
         console.log('🖱️ onTranslationItemClick called with index:', index, 'startMs:', startMs, 'endMs:', endMs);
         if (event) {
             const target = event.target;
@@ -32580,33 +32823,36 @@ let PlayerRouteComponent = class PlayerRouteComponent extends _dooboostore_dom_r
             this.stopRangeAnimation();
         });
     }
-    onEntryTitleClick(element, event) {
+    async onEntryTitleClick(element, event) {
         event.preventDefault();
         event.stopPropagation();
         if (this.soundEnabled && element) {
             const text = element.innerText || element.textContent;
             if (text) {
                 this.speakWord(text);
+                await _dooboostore_core_web_clipboard_ClipBoardUtils__WEBPACK_IMPORTED_MODULE_12__.ClipBoardUtils.writeText(text, this.config.window);
             }
         }
     }
-    onExampleClick(element, event) {
+    async onExampleClick(element, event) {
         event.preventDefault();
         event.stopPropagation();
         if (this.soundEnabled && element) {
             const text = element.innerText || element.textContent;
             if (text) {
                 this.speakWord(text);
+                await _dooboostore_core_web_clipboard_ClipBoardUtils__WEBPACK_IMPORTED_MODULE_12__.ClipBoardUtils.writeText(text, this.config.window);
             }
         }
     }
-    onDictionaryItemClick(dictionary, event) {
+    async onDictionaryItemClick(dictionary, event) {
         event.preventDefault();
         event.stopPropagation();
         if (this.soundEnabled && dictionary.items && dictionary.items.length > 0) {
             const firstItem = dictionary.items[0];
             if (firstItem && firstItem.entry) {
                 this.speakWord(firstItem.entry);
+                await _dooboostore_core_web_clipboard_ClipBoardUtils__WEBPACK_IMPORTED_MODULE_12__.ClipBoardUtils.writeText(firstItem.entry, this.config.window);
             }
         }
     }
@@ -33046,7 +33292,7 @@ PlayerRouteComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         template: _player_route_component_html__WEBPACK_IMPORTED_MODULE_2__["default"],
         styles: _player_route_component_css__WEBPACK_IMPORTED_MODULE_3__["default"]
     }),
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService) === "function" ? _a : Object, typeof (_b = typeof _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__.VideoItemService !== "undefined" && _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__.VideoItemService) === "function" ? _b : Object, typeof (_c = typeof _src_service_VoiceService__WEBPACK_IMPORTED_MODULE_9__.VoiceService !== "undefined" && _src_service_VoiceService__WEBPACK_IMPORTED_MODULE_9__.VoiceService) === "function" ? _c : Object, typeof (_d = typeof _src_service_english_AutoTranslationService__WEBPACK_IMPORTED_MODULE_10__.AutoTranslationService !== "undefined" && _src_service_english_AutoTranslationService__WEBPACK_IMPORTED_MODULE_10__.AutoTranslationService) === "function" ? _d : Object, typeof (_e = typeof _src_service_english_DictionaryService__WEBPACK_IMPORTED_MODULE_11__.DictionaryService !== "undefined" && _src_service_english_DictionaryService__WEBPACK_IMPORTED_MODULE_11__.DictionaryService) === "function" ? _e : Object])
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_5__.ApiService) === "function" ? _a : Object, typeof (_b = typeof _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__.VideoItemService !== "undefined" && _src_service_english_VideoItemService__WEBPACK_IMPORTED_MODULE_8__.VideoItemService) === "function" ? _b : Object, typeof (_c = typeof _src_service_VoiceService__WEBPACK_IMPORTED_MODULE_9__.VoiceService !== "undefined" && _src_service_VoiceService__WEBPACK_IMPORTED_MODULE_9__.VoiceService) === "function" ? _c : Object, typeof (_d = typeof _src_service_english_AutoTranslationService__WEBPACK_IMPORTED_MODULE_10__.AutoTranslationService !== "undefined" && _src_service_english_AutoTranslationService__WEBPACK_IMPORTED_MODULE_10__.AutoTranslationService) === "function" ? _d : Object, typeof (_e = typeof _src_service_english_DictionaryService__WEBPACK_IMPORTED_MODULE_11__.DictionaryService !== "undefined" && _src_service_english_DictionaryService__WEBPACK_IMPORTED_MODULE_11__.DictionaryService) === "function" ? _e : Object, typeof (_f = typeof _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_13__.SimFrontOption !== "undefined" && _dooboostore_simple_boot_front_option_SimFrontOption__WEBPACK_IMPORTED_MODULE_13__.SimFrontOption) === "function" ? _f : Object])
 ], PlayerRouteComponent);
 
 
