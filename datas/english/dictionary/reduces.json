@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "reduce",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪ││duːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<양·액수·정도 따위를> 줄이다, 감소시키다; 축소하다, 삭감하다 (=decrease)",
+              "examples": [
+                {
+                  "text": "<b>reduce</b> one's weight",
+                  "translatedText": "체중을 줄이다"
+                }
+              ],
+              "originalMeaning": "<양·액수·정도 따위를> 줄이다, 감소시키다; 축소하다, 삭감하다 (=<span class='related_word' lang='en' >decrease</span>)"
+            },
+            {
+              "meaning": "<신분·지위를> 낮추다, 격하시키다, 영락[몰락]하게 하다",
+              "examples": [
+                {
+                  "text": "<b>reduce</b> a person topoverty",
+                  "translatedText": "…을 가난하게 하다"
+                }
+              ],
+              "originalMeaning": "<신분·지위를> 낮추다, 격하시키다, 영락[몰락]하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "줄다, 감소하다, 축소되다; 저하되다; 약해지다",
+              "examples": [],
+              "originalMeaning": "줄다, 감소하다, 축소되다; 저하되다; 약해지다"
+            },
+            {
+              "meaning": "(절식 등으로) 체중을 줄이다",
+              "examples": [
+                {
+                  "text": "No more, thanks, I'm reducing.",
+                  "translatedText": "이제 충분합니다, 감량 중이니까요."
+                }
+              ],
+              "originalMeaning": "(절식 등으로) 체중을 줄이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/560fd42538f748bcabe051fbf41589af",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/560fd42538f748bcabe051fbf41589af",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reduces"
+        },
+        {
+          "type": "과거형",
+          "value": "reduced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reducing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reduced"
+        }
+      ],
+      "aliasConjugation": "reduces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "302ef104c35cc45a6c7a9713ac696a6b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너무 많으니 좀 덜어라",
+      "text": "It is too much, <b>reduce</b> some."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 체중을 반으로 줄였다",
+      "text": "He reduced his weight by half."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사병으로 계급이 내려갔다",
+      "text": "He was reduced to the ranks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이제 충분합니다, 감량 중이니까요.",
+      "text": "No more, thanks, I’m reducing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 병으로 피골이 상접했다.",
+      "text": "His illness reduced him to nothing[a skeleton]."
+    }
+  ],
+  "isWordType": true
+}

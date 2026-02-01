@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "entry": "conjunction",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈdʒʌŋkʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 결합, 연결, 접속; 합동; 관련",
+              "examples": [],
+              "originalMeaning": "[UC/] 결합, 연결, 접속; 합동; 관련"
+            },
+            {
+              "meaning": "접속사(⇒ 문법 해설 )",
+              "examples": [
+                {
+                  "text": "coordinate conjunctions",
+                  "translatedText": "등위 접속사 ((동격의 어구를 잇는 and, but 등))"
+                }
+              ],
+              "originalMeaning": "접속사(⇒ 문법 해설 )"
+            },
+            {
+              "meaning": "[천문] (두 행성 등의) 합(合), (달의) 삭(朔)",
+              "examples": [],
+              "originalMeaning": "[천문] (두 행성 등의) 합(合), (달의) 삭(朔)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8a91c596cb59412c801cd34d24859d90",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8a91c596cb59412c801cd34d24859d90",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2f9f11d9216b667da4ba30153edd7139",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 약은 다른 약과 병용하지 말 것",
+      "text": "Don't take this medicine in <b>conjunction</b> with any other medication."
+    }
+  ],
+  "isWordType": true
+}

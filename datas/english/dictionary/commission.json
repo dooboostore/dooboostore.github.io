@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "commission",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈmɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (직권·임무의) 위임, 위탁 ((to)); 위임장",
+              "examples": [
+                {
+                  "text": "<b>commission</b> of powers[authority] to a person",
+                  "translatedText": "…에의 권한의 위임"
+                }
+              ],
+              "originalMeaning": "[U] (직권·임무의) 위임, 위탁 ((to)); 위임장"
+            },
+            {
+              "meaning": "[U] (위임된) 임무, 직권; 명령, 지령; [C] 주문, 의뢰 사항",
+              "examples": [],
+              "originalMeaning": "[U] (위임된) 임무, 직권; 명령, 지령; [C] 주문, 의뢰 사항"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위임하다, …에게 권한을 주다(authorize); …에게 위임장을 주다; <장교로> 임관하다(appoint); <일 등을> 의뢰하다, 주문하다",
+              "examples": [
+                {
+                  "text": "( <b>commission</b> +[목]+to do) She <b>commission</b> ed the artist to paint a picture of her.",
+                  "translatedText": "그녀는 화가에게 초상화를 그려 달라고 부탁했다."
+                }
+              ],
+              "originalMeaning": "위임하다, …에게 권한을 주다(authorize); …에게 위임장을 주다; <장교로> 임관하다(appoint); <일 등을> 의뢰하다, 주문하다"
+            },
+            {
+              "meaning": "<군함을> 취역시키다",
+              "examples": [],
+              "originalMeaning": "<군함을> 취역시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<기계가> 작동하다",
+              "examples": [],
+              "originalMeaning": "<기계가> 작동하다"
+            },
+            {
+              "meaning": "<군함이> 취역하다",
+              "examples": [],
+              "originalMeaning": "<군함이> 취역하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2396ef71276d432bad1b088abebb5ad4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2396ef71276d432bad1b088abebb5ad4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "commissions"
+        },
+        {
+          "type": "과거형",
+          "value": "commissioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "commissioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "commissioned"
+        }
+      ],
+      "aliasConjugation": "commissions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "89979b1848dcf8510ce6188a21a58b18",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 구문을 받고 기계를 팔았다",
+      "text": "He sold the machine on <b>commission</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교육 개혁 심의 위원회",
+      "text": "Education Reform Deliberation <b>Commission</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 화가에게 초상화를 그려 달라고 부탁했다.",
+      "text": "She commissioned the artist to paint a picture of her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "유엔 인권 위원회",
+      "text": "UN <b>Commission</b> on Human Rights"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "2퍼센트의 수수료를 징수합니다",
+      "text": "We will collect a two percent <b>commission</b>."
+    }
+  ],
+  "isWordType": true
+}

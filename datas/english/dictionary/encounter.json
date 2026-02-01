@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "encounter",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈkaʊntə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(우연히) 만나다, 마주치다",
+              "examples": [
+                {
+                  "text": "<b>encounter</b> an old friend on the train",
+                  "translatedText": "기차에서 옛 친구를 우연히 만나다"
+                }
+              ],
+              "originalMeaning": "(우연히) 만나다, 마주치다"
+            },
+            {
+              "meaning": "<위험·곤란 등에> 부닥치다",
+              "examples": [],
+              "originalMeaning": "<위험·곤란 등에> 부닥치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "만나다(meet), 교전하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>encounter</b> with danger",
+                  "translatedText": "위험에 부닥치다"
+                }
+              ],
+              "originalMeaning": "만나다(meet), 교전하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "마주침 ((with))",
+              "examples": [
+                {
+                  "text": "have an <b>encounter</b> with",
+                  "translatedText": "…와 우연히 만나다"
+                }
+              ],
+              "originalMeaning": "마주침 ((with))"
+            },
+            {
+              "meaning": "교전, 충돌 ((with)); [미·속어] 경기",
+              "examples": [],
+              "originalMeaning": "교전, 충돌 ((with)); [미·속어] 경기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/41eae2b5e27346aaa128cc2c79160f45",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/41eae2b5e27346aaa128cc2c79160f45",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "encounters"
+        },
+        {
+          "type": "과거형",
+          "value": "encountered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "encountering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "encountered"
+        }
+      ],
+      "aliasConjugation": "encounters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3678eb84ed57261e8da2871d01411883",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 숲 속에서 곰을 만났다",
+      "text": "He encountered a bear in the woods."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직도 많은 여성들이 직장에서 뿌리 깊은 편견에 부딪히고 있다",
+      "text": "Many women still <b>encounter</b> deep-seated prejudice in the work place."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지난 5년 동안은 정말 다사다난하였다",
+      "text": "I have encountered one difficulty[obstacle, hardship] after another these last five years."
+    }
+  ],
+  "isWordType": true
+}

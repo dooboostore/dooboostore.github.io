@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "extend",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈstend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<손·발 등을> 뻗다, 뻗치다, 내밀다; <밧줄·철사 등을> 치다(stretch)",
+              "examples": [
+                {
+                  "text": "<b>extend</b> a wire between two posts",
+                  "translatedText": "두 기둥 사이에 철사를 치다"
+                }
+              ],
+              "originalMeaning": "<손·발 등을> 뻗다, 뻗치다, 내밀다; <밧줄·철사 등을> 치다(stretch)"
+            },
+            {
+              "meaning": "<철도·도로 등을> 연장하다; <기간을> 늘이다, 연기하다(prolong)",
+              "examples": [
+                {
+                  "text": "<b>extend</b> one's visa",
+                  "translatedText": "비자를 연장하다"
+                }
+              ],
+              "originalMeaning": "<철도·도로 등을> 연장하다; <기간을> 늘이다, 연기하다(prolong)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "넓어지다, 퍼지다, 뻗다(stretch) ((over, across)); 이르다, 달하다(reach); <범위·관심 등이> (…에) 미치다 ((into, to)), (=expand)",
+              "examples": [
+                {
+                  "text": "The desert <b>extends</b> southward to the Sudan.",
+                  "translatedText": "사막은 남쪽으로 수단까지 미치고 있다."
+                }
+              ],
+              "originalMeaning": "넓어지다, 퍼지다, 뻗다(stretch) ((over, across)); 이르다, 달하다(reach); <범위·관심 등이> (…에) 미치다 ((into, to)), (=<span class='related_word' lang='en' >expand</span>)"
+            },
+            {
+              "meaning": "<시간이> 계속되다, <…까지> 걸치다(last) ((to, into))",
+              "examples": [
+                {
+                  "text": "His absence <b>extends</b> to five days.",
+                  "translatedText": "그의 결석이 5일째에 이른다."
+                }
+              ],
+              "originalMeaning": "<시간이> 계속되다, <…까지> 걸치다(last) ((to, into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f6f4205835c5467fb3ed840bfd83bb46",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f6f4205835c5467fb3ed840bfd83bb46",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "extends"
+        },
+        {
+          "type": "과거형",
+          "value": "extended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "extending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "extended"
+        }
+      ],
+      "aliasConjugation": "extends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bdf2181d2fbefbba3e2346635158ba67",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 결석이 5일째에 이른다.",
+      "text": "His absence <b>extends</b> to five days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 세력은 해외로 뻗쳐 있다",
+      "text": "His power <b>extends</b> beyond the seas."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "손해가 이웃 마을에 미쳤다",
+      "text": "The damage extended to the next village."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 회의는 토요일까지 계속되었다.",
+      "text": "The conference extended into Saturday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국 사람의 수명이 길어졌다",
+      "text": "The lifespan of Koreans has been extended."
+    }
+  ],
+  "isWordType": true
+}
