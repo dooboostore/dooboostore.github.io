@@ -34935,6 +34935,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
 /* harmony import */ var _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
 /* harmony import */ var _dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/core-web/valid/ValidUtils */ "../../packages/@dooboostore/core-web/src/valid/ValidUtils.ts");
+/* harmony import */ var _dooboostore_dom_render_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/dom-render/decorators/DomRenderNoProxy */ "../../packages/@dooboostore/dom-render/src/decorators/DomRenderNoProxy.ts");
+var _a;
+
 
 
 
@@ -35012,6 +35015,7 @@ let VoiceService = class VoiceService {
         return null;
     }
     speakWord(word, onEnd) {
+        console.log('---->', this.selectedVoice);
         if (!_dooboostore_core_web_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_2__.ValidUtils.isBrowser() || !('speechSynthesis' in window)) {
             console.warn('Speech Synthesis not supported');
             return;
@@ -35113,6 +35117,10 @@ let VoiceService = class VoiceService {
         };
     }
 };
+(0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    _dooboostore_dom_render_decorators_DomRenderNoProxy__WEBPACK_IMPORTED_MODULE_3__.DomRenderNoProxy,
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:type", Object)
+], VoiceService.prototype, "selectedVoice", void 0);
 VoiceService = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
     _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__.Sim,
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [])
