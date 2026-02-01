@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "choose",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃuːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "고르다, 선택하다",
+              "examples": [
+                {
+                  "text": "<b>choose</b> a reference book",
+                  "translatedText": "참고서를 고르다"
+                }
+              ],
+              "originalMeaning": "고르다, 선택하다"
+            },
+            {
+              "meaning": "선출하다(elect)",
+              "examples": [
+                {
+                  "text": "We chose him chairman.",
+                  "translatedText": "우리는 그를 의장으로 선출했다."
+                }
+              ],
+              "originalMeaning": "선출하다(elect)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "선택하다 ((between))",
+              "examples": [
+                {
+                  "text": "She had to <b>choose</b> between the two.",
+                  "translatedText": "그녀는 그 둘 중 하나를 고르지 않으면 안 되었다."
+                }
+              ],
+              "originalMeaning": "선택하다 ((between))"
+            },
+            {
+              "meaning": "순번 등을 결정하다",
+              "examples": [],
+              "originalMeaning": "순번 등을 결정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e53395c6f0f845d0beef5f1598277748",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e53395c6f0f845d0beef5f1598277748",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "chooses"
+        },
+        {
+          "type": "과거형",
+          "value": "chose"
+        },
+        {
+          "type": "현재 분사",
+          "value": "choosing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "chosen"
+        }
+      ],
+      "aliasConjugation": "chooses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3f1fdf5146808387783677a7c5e89fb4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 지도자로 선출했다.",
+      "text": "They chose him for their leader.=They chose him as their leader.=They chose him to be their leader."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 그를 의장으로 선출했다.",
+      "text": "We chose him chairman."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 사람의 결혼 날짜가 정해졌다",
+      "text": "The date has been chosen for their wedding. or A day has been set for their wedding."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "좋아하는 옷을 맘대로 골라라.",
+      "text": "<b>Choose</b> any dress you like."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것들 중에서 택일하면 된다",
+      "text": "You may <b>choose</b> one among them."
+    }
+  ],
+  "isWordType": true
+}

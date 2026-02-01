@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "spur",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spɜː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "박차",
+              "examples": [],
+              "originalMeaning": "박차"
+            },
+            {
+              "meaning": "[문어·비유] 자극, 격려, 고무; 동기, 유인 ((to, for))",
+              "examples": [],
+              "originalMeaning": "[문어·비유] 자극, 격려, 고무; 동기, 유인 ((to, for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 박차를 가하다 ((on))",
+              "examples": [
+                {
+                  "text": "The rider spurred his horse (on).",
+                  "translatedText": "기수는 말에 박차를 가했다[가하여 달리게 했다]."
+                }
+              ],
+              "originalMeaning": "…에 박차를 가하다 ((on))"
+            },
+            {
+              "meaning": "몰아대다, 격려하다, 자극하다 ((on, to, into))",
+              "examples": [
+                {
+                  "text": "Ambition spurred him on to success.",
+                  "translatedText": "그는 야심에 자극되어 성공했다."
+                }
+              ],
+              "originalMeaning": "몰아대다, 격려하다, 자극하다 ((on, to, into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(말에) 박차를 가해 달리게 하다, 급히 몰고 가다, 서두르다",
+              "examples": [
+                {
+                  "text": "The knight spurred on[forward] to the castle.",
+                  "translatedText": "기사는 말을 몰고 성으로 급히 달려갔다."
+                }
+              ],
+              "originalMeaning": "(말에) 박차를 가해 달리게 하다, 급히 몰고 가다, 서두르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/186f89052fb34775977c2ae88d9e06b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/186f89052fb34775977c2ae88d9e06b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "spurs"
+        },
+        {
+          "type": "과거형",
+          "value": "spurred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "spurring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "spurred"
+        }
+      ],
+      "aliasConjugation": "spurs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "34a29a24b19f0ba48ef86ed86e03e783",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 그냥 확 고른 것이야",
+      "text": "It is just a <b>spur</b>-of-the-moment choice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 야심에 자극되어 성공했다.",
+      "text": "Ambition spurred him on to success."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기수는 말에 박차를 가했다[가하여 달리게 했다].",
+      "text": "The rider spurred his horse (on)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기사는 말을 몰고 성으로 급히 달려갔다.",
+      "text": "The knight spurred on[forward] to the castle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 갑자기 떠나기로 결정했다",
+      "text": "He decided to leave on the <b>spur</b> of the moment."
+    }
+  ],
+  "isWordType": true
+}

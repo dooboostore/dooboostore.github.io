@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "indirect",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│ɪndə│rekt; │ɪndaɪ│rekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<길 등이> 똑바르지 않은, 우회하는",
+              "examples": [
+                {
+                  "text": "an <b>indirect</b> course in sailing",
+                  "translatedText": "우회 항로"
+                }
+              ],
+              "originalMeaning": "<길 등이> 똑바르지 않은, 우회하는"
+            },
+            {
+              "meaning": "<결과·효과·관계 등이> 간접적인, 이차적인; 방계의(secondary)",
+              "examples": [
+                {
+                  "text": "an <b>indirect</b> advantage[effect]",
+                  "translatedText": "간접 이익[효과]"
+                }
+              ],
+              "originalMeaning": "<결과·효과·관계 등이> 간접적인, 이차적인; 방계의(secondary)"
+            },
+            {
+              "meaning": "<행위·표현 등이> 직접적이 아닌, 빙 둘러대는, 에두른",
+              "examples": [
+                {
+                  "text": "make an <b>indirect</b> allusion",
+                  "translatedText": "넌지시 말하다"
+                }
+              ],
+              "originalMeaning": "<행위·표현 등이> 직접적이 아닌, 빙 둘러대는, 에두른"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dc0ace941d6f40b89c8d4147069735d4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dc0ace941d6f40b89c8d4147069735d4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7b7f05843e5d892f2623639f16390c20",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그 사건에 간접적으로 관계되어 있다",
+      "text": "I am <b>indirectly</b> concerned in the affair."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 그의 무식함을 둘러말했다",
+      "text": "She made an <b>indirect</b> allusion to his lack of education."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정부는 간접세를 단계적으로 도입[폐지]할 예정이다",
+      "text": "The government intends to phase in[out] the <b>indirect</b> tax."
+    }
+  ],
+  "isWordType": true
+}
