@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "accompany",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkʌmpəni"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 동반하다, 동행하다, 함께 가다, 수행하다(go with)",
+              "examples": [
+                {
+                  "text": "<b>accompany</b> a person to the door",
+                  "translatedText": "…을 문까지 전송하다"
+                }
+              ],
+              "originalMeaning": "<사람이> 동반하다, 동행하다, 함께 가다, 수행하다(go with)"
+            },
+            {
+              "meaning": "<사물이> …을 수반하다, …을 첨가하다; (…와) 동시에 일어나다",
+              "examples": [
+                {
+                  "text": "The series is accompanied by an illustrated book.",
+                  "translatedText": "이 총서는 삽화가 든 책 한 권이 딸려 있다."
+                }
+              ],
+              "originalMeaning": "<사물이> …을 수반하다, …을 첨가하다; (…와) 동시에 일어나다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "반주하다",
+              "examples": [],
+              "originalMeaning": "반주하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/693cd937f6494e79a0b9a4f0b50d485d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/693cd937f6494e79a0b9a4f0b50d485d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accompanies"
+        },
+        {
+          "type": "과거형",
+          "value": "accompanied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accompanying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accompanied"
+        }
+      ],
+      "aliasConjugation": "accompanies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "61988212d9b8c5d475f1188c828c4f63",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 따라가겠다고 고집을 세운다",
+      "text": "He insists upon accompanying us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 비서를 대동하고 일본으로 떠났다",
+      "text": "He left for Japan accompanied by his secretary."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "7세 미만은 성인 동반시 무료",
+      "text": "Children under seven free if accompanied by an adult."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신이 동행하여 주신다면 기꺼이 가겠습니다.",
+      "text": "I shall be glad[pleased] to go, if you will <b>accompany</b> me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "열한 살 아래 어린이들은 어른과 동반하여야 한다",
+      "text": "Children eleven and under must be accompanied by an adult."
+    }
+  ],
+  "isWordType": true
+}

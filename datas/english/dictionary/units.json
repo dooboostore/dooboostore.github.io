@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "unit",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈjuːnɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "단일체, 하나, 한 사람; 일단",
+              "examples": [],
+              "originalMeaning": "단일체, 하나, 한 사람; 일단"
+            },
+            {
+              "meaning": "편성[구성] 단위, 유니트; [군사] 부대",
+              "examples": [],
+              "originalMeaning": "편성[구성] 단위, 유니트; [군사] 부대"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "단위의, 단위를 구성하는",
+              "examples": [
+                {
+                  "text": "<b>unit</b> area",
+                  "translatedText": "단위 면적"
+                }
+              ],
+              "originalMeaning": "단위의, 단위를 구성하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e78cc553bba145dab6832a33355cd465",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e78cc553bba145dab6832a33355cd465",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c2c2582e9f7fad7f9944d9ed953e22c8",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Unit.",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "Unitarian",
+              "examples": [],
+              "originalMeaning": "Unitarian"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/585d5f5a1de745438e8f75f07a79a13f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/585d5f5a1de745438e8f75f07a79a13f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "540c909f50c27aa378203083176859cd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국의 화폐 단위는 원이다",
+      "text": "The monetary <b>unit</b> of Korea is the won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너의 계산은 단위가 틀렸다",
+      "text": "You are calculating in the wrong <b>units</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 교과서는 10단원으로 되어 있다",
+      "text": "This textbook is composed of ten <b>units</b>."
+    }
+  ],
+  "isWordType": true
+}

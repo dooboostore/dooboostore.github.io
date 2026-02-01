@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "railroad",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│reɪlroʊd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[미] 철도 선로, 철도; 철도 시설",
+              "examples": [
+                {
+                  "text": "travel first class on the <b>railroad</b>",
+                  "translatedText": "일등 객실로 철도 여행을 하다"
+                }
+              ],
+              "originalMeaning": "[미] 철도 선로, 철도; 철도 시설"
+            },
+            {
+              "meaning": "철도 회사 ((略 R.R.)),[pl.] 철도주(株)",
+              "examples": [],
+              "originalMeaning": "철도 회사 ((略 R.R.)),[pl.] 철도주(株)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "철도의",
+              "examples": [
+                {
+                  "text": "a <b>railroad</b> accident",
+                  "translatedText": "철도 사고"
+                }
+              ],
+              "originalMeaning": "철도의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 철도를 부설하다",
+              "examples": [],
+              "originalMeaning": "…에 철도를 부설하다"
+            },
+            {
+              "meaning": "철도로 수송하다[나르다]",
+              "examples": [],
+              "originalMeaning": "철도로 수송하다[나르다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92529d5362bb40f8a9cc394b2f58e32b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92529d5362bb40f8a9cc394b2f58e32b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "railroads"
+        },
+        {
+          "type": "과거형",
+          "value": "railroaded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "railroading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "railroaded"
+        }
+      ],
+      "aliasConjugation": "railroads",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4c02119aff64d5edee6728bc48dee2ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "도로가 철도와 평행하게 나 있다",
+      "text": "The road parallels the <b>railroad</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 철도의 기점은 서울이다",
+      "text": "The <b>railroad</b> line starts from Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 철도는 길이가 200마일에 걸쳐 있다.",
+      "text": "This <b>railroad</b> is over 200 miles long."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지금은 그 지방에 기차가 다닌다",
+      "text": "A <b>railroad</b> is now open to that locality."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철도가 우리 읍을 그 시에 연결한다.",
+      "text": "The <b>railroad</b> connects our town with the city."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "diagnose",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│daɪəɡ│noʊs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "진단하다 ((사람은 목적어가 되지 않음))",
+              "examples": [
+                {
+                  "text": "The doctor diagnosed her case as tuberculosis.",
+                  "translatedText": "의사는 그녀의 병을 결핵이라고 진단했다."
+                }
+              ],
+              "originalMeaning": "진단하다 ((사람은 목적어가 되지 않음))"
+            },
+            {
+              "meaning": "<문제 등의> 원인을 밝혀내다, 조사 분석하다",
+              "examples": [],
+              "originalMeaning": "<문제 등의> 원인을 밝혀내다, 조사 분석하다"
+            },
+            {
+              "meaning": "<프로그램 오류나 장치의 장애를> 진단하다",
+              "examples": [],
+              "originalMeaning": "<프로그램 오류나 장치의 장애를> 진단하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/05deb1c330414b638b29f3e88054148a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/05deb1c330414b638b29f3e88054148a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "diagnoses"
+        },
+        {
+          "type": "과거형",
+          "value": "diagnosed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "diagnosing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "diagnosed"
+        }
+      ],
+      "aliasConjugation": "diagnoses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cb7275bb5264fb0ce7fb62753b7c64a9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "의사가 병명을 밝히지 못하다",
+      "text": "The doctor fails[is unable] to <b>diagnose</b> a case."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "의사는 그녀의 병을 결핵이라고 진단했다.",
+      "text": "The doctor diagnosed her case as tuberculosis."
+    }
+  ],
+  "isWordType": true
+}

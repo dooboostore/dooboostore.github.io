@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "deck",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dek"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "갑판, 덱",
+              "examples": [
+                {
+                  "text": "the forecastle[quarter, main] <b>deck</b>",
+                  "translatedText": "앞[뒤, 주] 갑판"
+                }
+              ],
+              "originalMeaning": "갑판, 덱"
+            },
+            {
+              "meaning": "[미] (철도의) 객차 지붕; (버스 등의) 바닥, 층; (복엽기의) 날개",
+              "examples": [],
+              "originalMeaning": "[미] (철도의) 객차 지붕; (버스 등의) 바닥, 층; (복엽기의) 날개"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[~ oneself 또는 수동형으로] 장식하다, 꾸미다, 입히다 ((out, with))",
+              "examples": [
+                {
+                  "text": "The room was <b>deck</b> ed with flowers.",
+                  "translatedText": "방은 꽃으로 꾸며져 있었다."
+                }
+              ],
+              "originalMeaning": "[~ oneself 또는 수동형으로] 장식하다, 꾸미다, 입히다 ((out, with))"
+            },
+            {
+              "meaning": "갑판을 깔다",
+              "examples": [],
+              "originalMeaning": "갑판을 깔다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c5c6f823721d4726a16db17a3687a07f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c5c6f823721d4726a16db17a3687a07f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "decks"
+        },
+        {
+          "type": "과거형",
+          "value": "decked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "decking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "decked"
+        }
+      ],
+      "aliasConjugation": "decks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6f6de0c91ccc0d17247b440e52fc6abf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "선장은 갑판을 걸어서 순시했다.",
+      "text": "The captain walked the <b>deck</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방은 꽃으로 꾸며져 있었다.",
+      "text": "The room was decked with flowers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "생선들이 갑판에서 퍼덕이고 있었다.",
+      "text": "Fish were flopping on the <b>deck</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잇따른 놀이 배의 갑판을 휩쓸었다",
+      "text": "Heavy waves washed[broke] over the <b>deck</b> of the ship."
+    }
+  ],
+  "isWordType": true
+}

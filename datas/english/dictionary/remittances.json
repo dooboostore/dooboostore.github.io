@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "remittance",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈmɪtns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "송금",
+              "examples": [],
+              "originalMeaning": "송금"
+            },
+            {
+              "meaning": "송금액",
+              "examples": [],
+              "originalMeaning": "송금액"
+            },
+            {
+              "meaning": "송금 수단",
+              "examples": [],
+              "originalMeaning": "송금 수단"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2e661c157c2c44459419ae75f92e1a5c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2e661c157c2c44459419ae75f92e1a5c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "df2738c9e62833f5ae0367d7af7b9b64",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "즉시 송금해 주시면 감사하겠습니다",
+      "text": "A prompt <b>remittance</b> would be appreciated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "귀하의 송금은 정히 입수하였습니다",
+      "text": "Your <b>remittance</b> has come to hand[been duly received]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "50달러를 송금해 주시면 물건을 보내 드리겠습니다",
+      "text": "We will forward the goods on <b>remittance</b> of fifty dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두산동아불 수표를 써서 송금액을 동봉하여 주십시요",
+      "text": "Please enclose your <b>remittance</b>, making check payable to Doosan Dong-A."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "매상 계정서는 결재 송금액과 함께 매월 제출해 주십시오",
+      "text": "Account sales is to be rendered monthly together with a <b>remittance</b> in settlement."
+    }
+  ],
+  "isWordType": true
+}

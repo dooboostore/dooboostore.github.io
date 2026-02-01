@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "harness",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈhɑːrnɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적, 단수 취급] (마차 끄는 말의) 마구(馬具)",
+              "examples": [
+                {
+                  "text": "a double <b>harness</b>",
+                  "translatedText": "쌍두마차의 마구"
+                }
+              ],
+              "originalMeaning": "[집합적, 단수 취급] (마차 끄는 말의) 마구(馬具)"
+            },
+            {
+              "meaning": "(사람의) 갑옷",
+              "examples": [],
+              "originalMeaning": "(사람의) 갑옷"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<말 등에> 마구를 채우다",
+              "examples": [
+                {
+                  "text": "<b>harness</b> a horse to a carriage",
+                  "translatedText": "말에 마구를 채워 마차에 연결하다"
+                }
+              ],
+              "originalMeaning": "<말 등에> 마구를 채우다"
+            },
+            {
+              "meaning": "<폭포 등의 자연력을> 동력화하다, 이용하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>harness</b> the sun's rays",
+                  "translatedText": "태양 광선을 동력화하다"
+                }
+              ],
+              "originalMeaning": "<폭포 등의 자연력을> 동력화하다, 이용하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/478c115a2a694cd9b72fd776da7898ba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/478c115a2a694cd9b72fd776da7898ba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "harnesses"
+        },
+        {
+          "type": "과거형",
+          "value": "harnessed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "harnessing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "harnessed"
+        }
+      ],
+      "aliasConjugation": "harnesses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1fb09a9ecb1823667f8c1567e74cf735",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 댐을 건설해서 수력을 이용한다",
+      "text": "By building dams we <b>harness</b> water."
+    }
+  ],
+  "isWordType": true
+}

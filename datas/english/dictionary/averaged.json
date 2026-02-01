@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "average",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈævərɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "평균, 평균값",
+              "examples": [
+                {
+                  "text": "an arithmetical[geometrical] <b>average</b>",
+                  "translatedText": "산술[기하] 평균"
+                }
+              ],
+              "originalMeaning": "평균, 평균값"
+            },
+            {
+              "meaning": "(일반) 표준, 보통 수준",
+              "examples": [],
+              "originalMeaning": "(일반) 표준, 보통 수준"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "평균의",
+              "examples": [
+                {
+                  "text": "the <b>average</b> life span",
+                  "translatedText": "평균 수명"
+                }
+              ],
+              "originalMeaning": "평균의"
+            },
+            {
+              "meaning": "보통 수준의, 보통의",
+              "examples": [
+                {
+                  "text": "of <b>average</b> quality",
+                  "translatedText": "보통 품질의"
+                }
+              ],
+              "originalMeaning": "보통 수준의, 보통의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "평균하다, 평균 내다",
+              "examples": [],
+              "originalMeaning": "평균하다, 평균 내다"
+            },
+            {
+              "meaning": "평균하여 …하다",
+              "examples": [
+                {
+                  "text": "I <b>average</b> 8 hours' work a day.",
+                  "translatedText": "하루 평균 8시간 일한다."
+                }
+              ],
+              "originalMeaning": "평균하여 …하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a0122c5d4a2842d8b11391ea4bf99ad5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a0122c5d4a2842d8b11391ea4bf99ad5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "averages"
+        },
+        {
+          "type": "과거형",
+          "value": "averaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "averaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "averaged"
+        }
+      ],
+      "aliasConjugation": "averages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f35cc791284460f577caa9c3d9681531",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "평균해서 35라는 수가 나온다",
+      "text": "We get 35 as <b>average</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "하루 평균 8시간 일한다.",
+      "text": "I <b>average</b> 8 hours’ work a day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "본교에서는 평균 60점 이하는 낙제로 친다",
+      "text": "A student who fails to get an <b>average</b> mark of 60 is rejected[not promoted] at this school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 몸무게는 표준 이상[이하]이다",
+      "text": "My weight is above[below] the <b>average</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 성적은 중등 이상[이하]이다",
+      "text": "My school record is above[below] <b>average</b>."
+    }
+  ],
+  "isWordType": true
+}
