@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "tide",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "taɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 조수, 조류; 간만",
+              "examples": [
+                {
+                  "text": "low[ebb] <b>tide</b>",
+                  "translatedText": "썰물"
+                }
+              ],
+              "originalMeaning": "[UC/] 조수, 조류; 간만"
+            },
+            {
+              "meaning": "(=FLOOD TIDE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >FLOOD <b>TIDE</b></span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "조수처럼 밀어닥치다, 조수를 타고 가다[흐르다]",
+              "examples": [],
+              "originalMeaning": "조수처럼 밀어닥치다, 조수를 타고 가다[흐르다]"
+            },
+            {
+              "meaning": "<사람이> 어떻게든 해 나가다, 살아남다",
+              "examples": [],
+              "originalMeaning": "<사람이> 어떻게든 해 나가다, 살아남다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "조수에 태워 나르다",
+              "examples": [],
+              "originalMeaning": "조수에 태워 나르다"
+            },
+            {
+              "meaning": "<곤란 등을> 극복하다 ((over)); 극복시키다, 넘기게 하다 ((over))",
+              "examples": [],
+              "originalMeaning": "<곤란 등을> 극복하다 ((over)); 극복시키다, 넘기게 하다 ((over))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72dba6703b3d46e5b335130b53c199be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72dba6703b3d46e5b335130b53c199be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tides"
+        },
+        {
+          "type": "과거형",
+          "value": "tided"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tiding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tided"
+        }
+      ],
+      "aliasConjugation": "tides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "26090b6161f5f33221c106f6c56cb311",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "tide",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "일어나다, 생기다(betide)",
+              "examples": [],
+              "originalMeaning": "일어나다, 생기다(betide)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39db1787ff864502ae89d60b685b5fdd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39db1787ff864502ae89d60b685b5fdd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "tides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "881020dcce3737986474b1ec6e70be34",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조수가 빠르게 밀려들고 있다.",
+      "text": "The <b>tide</b> is making fast."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조수는 하루에 두 번 밀려온다.",
+      "text": "The <b>tide</b> flows twice a day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 완미하여 여론의 동향을 깨닫지 못한다",
+      "text": "He is so bigoted in his views that he is blind to the <b>tide</b> of public opinion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세월은 사람을 기다리지 않는다",
+      "text": "Time and <b>tide</b> wait(s) for no man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세월은 사람을 기다려 주지 않는다.",
+      "text": "Time and <b>tide</b> tarry for no man."
+    }
+  ],
+  "isWordType": true
+}

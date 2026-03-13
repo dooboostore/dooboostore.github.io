@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "assess",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈses"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<세금·벌금 등을> 사정하다 ((at))",
+              "examples": [],
+              "originalMeaning": "<세금·벌금 등을> 사정하다 ((at))"
+            },
+            {
+              "meaning": "<재산·수입 등을> 평가하다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>assess</b> a house at 30,000,000 won",
+                  "translatedText": "가옥을 3천만 원으로 평가하다"
+                }
+              ],
+              "originalMeaning": "<재산·수입 등을> 평가하다 ((at))"
+            },
+            {
+              "meaning": "<세금·기부금 등을> 할당하다, 부과하다(impose) ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>assess</b> 50,000 won on land",
+                  "translatedText": "토지에 5만 원을 과세하다"
+                }
+              ],
+              "originalMeaning": "<세금·기부금 등을> 할당하다, 부과하다(impose) ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ba3078bbdc294c16848de183a166ed32",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ba3078bbdc294c16848de183a166ed32",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assesses"
+        },
+        {
+          "type": "과거형",
+          "value": "assessed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assessing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assessed"
+        }
+      ],
+      "aliasConjugation": "assesses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dedf4842a3a1298fa2de00c51803e894",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 지원자의 적격성 여부를 평가하는 방법이다",
+      "text": "This is the way of <b>assessing</b> applicants suitability."
+    }
+  ],
+  "isWordType": true
+}

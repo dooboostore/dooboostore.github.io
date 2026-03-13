@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "dessert",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈzɜːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "디저트, 후식 ((미국에서는 파이·푸딩·과자류·아이스크림 등, 영국에서는 원래 과일·과자류 등이 나왔는데, 지금은 거의 미국과 같음))",
+              "examples": [],
+              "originalMeaning": "디저트, 후식 ((미국에서는 파이·푸딩·과자류·아이스크림 등, 영국에서는 원래 과일·과자류 등이 나왔는데, 지금은 거의 미국과 같음))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "디저트용의",
+              "examples": [
+                {
+                  "text": "a <b>dessert</b> fork[knife]",
+                  "translatedText": "디저트 포크[나이프]"
+                }
+              ],
+              "originalMeaning": "디저트용의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/34aa4ecb63484024a36a862d04585a55",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/34aa4ecb63484024a36a862d04585a55",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "08867122d1289ca50e34681afa09f8b0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "식사에는 디저트와 커피가 포함된다.",
+      "text": "The meal includes <b>dessert</b> and coffee."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "후식으로 케이크가 나왔다",
+      "text": "Cake was served for <b>dessert</b>."
+    }
+  ],
+  "isWordType": true
+}

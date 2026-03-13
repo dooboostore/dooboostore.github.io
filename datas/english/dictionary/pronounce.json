@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "pronounce",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈnaʊns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발음하다, 음독(音讀)하다",
+              "examples": [
+                {
+                  "text": "<b>pronounce</b> a word correctly",
+                  "translatedText": "단어를 정확하게 발음하다"
+                }
+              ],
+              "originalMeaning": "발음하다, 음독(音讀)하다"
+            },
+            {
+              "meaning": "선언하다, 언명[단언]하다, 표명하다 ((on, upon, for, against))",
+              "examples": [
+                {
+                  "text": "<b>pronounce</b> the method (to be) inadequate = <b>pronounce</b> that the method is inadequate",
+                  "translatedText": "그 방법이 부적당하다고 표명하다"
+                }
+              ],
+              "originalMeaning": "선언하다, 언명[단언]하다, 표명하다 ((on, upon, for, against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "발음하다",
+              "examples": [
+                {
+                  "text": "<b>pronounce</b> well[badly]",
+                  "translatedText": "발음이 좋다[나쁘다]"
+                }
+              ],
+              "originalMeaning": "발음하다"
+            },
+            {
+              "meaning": "의견을 말하다, 판단을 내리다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "The committee will <b>pronounce</b> on the matter in dispute.",
+                  "translatedText": "위원회는 논쟁 중인 그 문제에 판단을 내릴 것이다."
+                }
+              ],
+              "originalMeaning": "의견을 말하다, 판단을 내리다 ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0a01adf8c8204968be984a1455c5237d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0a01adf8c8204968be984a1455c5237d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pronounces"
+        },
+        {
+          "type": "과거형",
+          "value": "pronounced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pronouncing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pronounced"
+        }
+      ],
+      "aliasConjugation": "pronounces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6695e88e6a8a70b62886c2d3de3962cb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 완치되었다는 확언을 들었다.",
+      "text": "He was pronounced completely cured."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "환자는 위기를 벗어났다는 분명한 말을 들었다.",
+      "text": "The patient was pronounced out of danger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "위원회는 논쟁중인 그 문제에 판단을 내릴 것이다.",
+      "text": "The committee will <b>pronounce</b> on the matter in dispute."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 재기 불능이라고들 한다",
+      "text": "His recovery is pronounced hopeless[impossible]. or His chance of recovery is said to be hopeless."
+    }
+  ],
+  "isWordType": true
+}

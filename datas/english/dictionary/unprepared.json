@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "unprepared",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʌnprɪ│perd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "준비 없는, 즉석의",
+              "examples": [
+                {
+                  "text": "an <b>unprepared</b> speech",
+                  "translatedText": "즉석 연설"
+                }
+              ],
+              "originalMeaning": "준비 없는, 즉석의"
+            },
+            {
+              "meaning": "준비[각오]가 되지 않은 ((for))",
+              "examples": [
+                {
+                  "text": "( <b>unprepared</b>+to do) She was <b>unprepared</b> to answer.",
+                  "translatedText": "그녀는 대답할 준비가 되어 있지 않았다."
+                }
+              ],
+              "originalMeaning": "준비[각오]가 되지 않은 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/22649235f6de4284aee5d1af6f6b56e5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/22649235f6de4284aee5d1af6f6b56e5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "19be478096683a551e008649d625ef5f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 대답할 준비가 되어 있지 않았다.",
+      "text": "She was <b>unprepared</b> to answer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 일은 천만뜻밖이다",
+      "text": "Who would have thought this! or I am <b>unprepared</b> for this."
+    }
+  ],
+  "isWordType": true
+}
