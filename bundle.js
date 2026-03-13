@@ -7529,7 +7529,9 @@ var ObjectUtils;
         const data = [];
         if (target) {
             const proto = Object.getPrototypeOf(target);
-            (Object.keys(proto) || []).filter(it => it !== 'constructor').forEach(it => {
+            (Object.keys(proto) || [])
+                .filter(it => it !== 'constructor')
+                .forEach(it => {
                 data.push(proto[it]);
             });
         }
@@ -7588,7 +7590,9 @@ var ObjectUtils;
         const data = new Map();
         if (target) {
             const proto = Object.getPrototypeOf(target);
-            (Object.keys(proto) || []).filter(it => it !== 'constructor').forEach(it => {
+            (Object.keys(proto) || [])
+                .filter(it => it !== 'constructor')
+                .forEach(it => {
                 data.set(proto[it], it);
             });
         }
@@ -7633,7 +7637,9 @@ var ObjectUtils;
             }
             else if (value && typeof value === 'object') {
                 if (config?.deep) {
-                    return Object.fromEntries(Object.entries(value).filter(([_, v]) => v !== undefined && v !== null).map(([k, v]) => [k, cleanValue(v)]));
+                    return Object.fromEntries(Object.entries(value)
+                        .filter(([_, v]) => v !== undefined && v !== null)
+                        .map(([k, v]) => [k, cleanValue(v)]));
                 }
                 else {
                     return Object.fromEntries(Object.entries(value).filter(([_, v]) => v !== undefined && v !== null));
@@ -7730,7 +7736,8 @@ var ObjectUtils;
                 else {
                     // Ensure current[part] is of the correct type for the next part
                     const nextPart = pathParts[i + 1];
-                    if (typeof nextPart === 'number') { // Next part is an array index
+                    if (typeof nextPart === 'number') {
+                        // Next part is an array index
                         if (!Array.isArray(current[part])) {
                             current[part] = [];
                         }
@@ -7741,7 +7748,8 @@ var ObjectUtils;
                             }
                         }
                     }
-                    else { // Next part is a string (object property)
+                    else {
+                        // Next part is a string (object property)
                         if (typeof current[part] !== 'object' || current[part] === null) {
                             current[part] = {};
                         }
@@ -7930,13 +7938,16 @@ var ObjectUtils;
             const globalContext = {
                 window: new Proxy(() => { }, new GetDetectProxy('window')),
                 document: new Proxy(() => { }, new GetDetectProxy('document')),
-                console: new Proxy(() => { }, new GetDetectProxy('console')),
+                console: new Proxy(() => { }, new GetDetectProxy('console'))
                 // this는 destUser 자체가 됨
             };
             const destUser = new Proxy(() => { }, new GetDetectProxy('this'));
             try {
+                // [아키텍트님의 정석] #...# 형태의 템플릿 변수는 JS 문법 에러(Private Field)를 유발하므로
+                // 감지 단계에서는 안전한 문자열로 마스킹 처리합니다.
+                const maskedScript = script.replace(/#([^#]+)#/g, '__DOMRENDER_VAR_$1__');
                 // 전역 컨텍스트와 함께 실행
-                const func = new Function('window', 'document', 'console', `"use strict"; ${script}; `);
+                const func = new Function('window', 'document', 'console', `"use strict"; ${maskedScript}; `);
                 func.call(destUser, globalContext.window, globalContext.document, globalContext.console);
                 // console.log('------->', script);
             }
@@ -7971,7 +7982,9 @@ var ObjectUtils;
         return target;
     };
     ObjectUtils.deleteKey = (obj, keys) => {
-        keys.filter(it => (0,_types__WEBPACK_IMPORTED_MODULE_1__.isDefined)(it)).forEach(it => {
+        keys
+            .filter(it => (0,_types__WEBPACK_IMPORTED_MODULE_1__.isDefined)(it))
+            .forEach(it => {
             delete obj[it];
         });
     };
@@ -10061,6 +10074,22 @@ var ReflectUtils;
         else {
             return Reflect.getMetadata(metadataKey, target);
         }
+        //
+        // let tt = target;
+        // // proxy 걸린거는 오리지널 constructor에 들어가있을경우도있어서  reflect가 proxy의 constructor에서 찾는경우도있다,
+        // // 서버랑 프론트랑 다른듯.. 그래서 위로 찾아가면서
+        // while (tt) {
+        //     let meta: any = undefined;
+        //     if (propertyKey) {
+        //         meta = Reflect.getMetadata(metadataKey, tt, propertyKey);
+        //     } else {
+        //         meta = Reflect.getMetadata(metadataKey, tt);
+        //     }
+        //     if (meta) {
+        //         return meta;
+        //     }
+        //     tt = Reflect.getPrototypeOf(tt);
+        // }
     };
     ReflectUtils.getMetadataKeys = (target) => {
         return Reflect.getMetadataKeys(target);
@@ -10964,6 +10993,15 @@ class DomRenderProxy {
     }
     static isFinal(obj) {
         return _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_17__.ValidUtils.isNull(obj) || _types_Types__WEBPACK_IMPORTED_MODULE_2__.DomRenderFinalProxy.isFinal(obj);
+    }
+    static isProxy(obj) {
+        return _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_17__.ValidUtils.isNull(obj) || isWrapProxyDomRenderProxy(obj);
+    }
+    static getOriginalObject(obj) {
+        if (isWrapProxyDomRenderProxy(obj)) {
+            return obj._domRender_origin;
+        }
+        return obj;
     }
     async run(objProxy) {
         this._domRender_proxy = objProxy;
@@ -15305,23 +15343,19 @@ __webpack_require__.r(__webpack_exports__);
 class EventManager {
     window;
     static attrPrefix = 'dr-';
-    eventNames = [
-        'click', 'mousedown', 'mouseup', 'dblclick', 'mouseover', 'mouseout', 'mousemove', 'mouseenter', 'mouseleave', 'contextmenu',
-        'keyup', 'keydown', 'keypress', 'toggle',
-        'change', 'input', 'submit', 'resize', 'focus', 'blur',
-        'close', 'cancel'
-    ];
+    eventNames = ['click', 'mousedown', 'mouseup', 'dblclick', 'mouseover', 'mouseout', 'mousemove', 'mouseenter', 'mouseleave', 'contextmenu', 'keyup', 'keydown', 'keypress', 'toggle', 'change', 'input', 'submit', 'resize', 'focus', 'blur', 'close', 'cancel', 'scroll'];
     delegatableEventMap = {
         mouseleave: 'mouseout',
         mouseenter: 'mouseover',
         focus: 'focusin',
         blur: 'focusout'
     };
-    directAttachEvents = new Set(['close']);
+    directAttachEvents = new Set(['close', 'scroll']);
     static ownerVariablePathAttrName = EventManager.attrPrefix + 'owner-variable-path';
     static eventParam = EventManager.attrPrefix + 'event';
     static onInitAttrName = EventManager.attrPrefix + 'on-init';
     static valueAttrName = EventManager.attrPrefix + 'value';
+    static srcAttrName = EventManager.attrPrefix + 'src';
     static checkedAttrName = EventManager.attrPrefix + 'checked';
     static selectedAttrName = EventManager.attrPrefix + 'selected';
     static readonlyAttrName = EventManager.attrPrefix + 'readonly';
@@ -15370,27 +15404,10 @@ class EventManager {
     static VARNAMES = [EventManager.SCRIPTS_VARNAME, EventManager.FAG_VARNAME, EventManager.RAWSET_VARNAME, EventManager.RANGE_VARNAME, EventManager.ROUTER_VARNAME, EventManager.ELEMENT_VARNAME, EventManager.TARGET_VARNAME, EventManager.EVENT_VARNAME, EventManager.COMPONENT_VARNAME, EventManager.INNERHTML_VARNAME, EventManager.ATTRIBUTE_VARNAME, EventManager.ATTRIBUTE_VARNAME, EventManager.CREATOR_META_DATA_VARNAME, EventManager.PARENT_THIS_PATH_VARNAME, EventManager.PARENT_THIS_VARNAME];
     static WINDOW_EVENT_POPSTATE = 'popstate';
     static WINDOW_EVENT_RESIZE = 'resize';
-    static WINDOW_EVENTS = [EventManager.WINDOW_EVENT_POPSTATE, EventManager.WINDOW_EVENT_RESIZE];
+    static WINDOW_EVENT_SCROLL = 'scroll';
+    static WINDOW_EVENTS = [EventManager.WINDOW_EVENT_POPSTATE, EventManager.WINDOW_EVENT_RESIZE, EventManager.WINDOW_EVENT_SCROLL];
     static noDetectAttr = [EventManager.normalAttrMapAttrName];
-    static attrNames = [
-        EventManager.valueAttrName,
-        EventManager.checkedAttrName,
-        EventManager.selectedAttrName,
-        EventManager.readonlyAttrName,
-        EventManager.disabledAttrName,
-        EventManager.hiddenAttrName,
-        EventManager.requiredAttrName,
-        EventManager.openAttrName,
-        EventManager.attrAttrName,
-        EventManager.normalAttrMapAttrName,
-        EventManager.styleAttrName,
-        EventManager.classAttrName,
-        EventManager.attrPrefix + 'window-event-' + EventManager.WINDOW_EVENT_POPSTATE,
-        EventManager.attrPrefix + 'window-event-' + EventManager.WINDOW_EVENT_RESIZE,
-        EventManager.onInitAttrName,
-        ...EventManager.linkAttrs.map(it => it.name),
-        this.eventParam
-    ];
+    static attrNames = [EventManager.valueAttrName, EventManager.srcAttrName, EventManager.checkedAttrName, EventManager.selectedAttrName, EventManager.readonlyAttrName, EventManager.disabledAttrName, EventManager.hiddenAttrName, EventManager.requiredAttrName, EventManager.openAttrName, EventManager.attrAttrName, EventManager.normalAttrMapAttrName, EventManager.styleAttrName, EventManager.classAttrName, EventManager.attrPrefix + 'window-event-' + EventManager.WINDOW_EVENT_POPSTATE, EventManager.attrPrefix + 'window-event-' + EventManager.WINDOW_EVENT_RESIZE, EventManager.attrPrefix + 'window-event-' + EventManager.WINDOW_EVENT_SCROLL, EventManager.onInitAttrName, ...EventManager.linkAttrs.map(it => it.name), this.eventParam];
     bindScript = `
         const ${EventManager.VALUE_VARNAME} = this.__render.value;
         const ${EventManager.SCRIPTS_VARNAME} = this.__render.scripts;
@@ -15410,7 +15427,7 @@ class EventManager {
         EventManager.attrNames.push(EventManager.onRenderedInitAttrName);
         if (typeof window !== 'undefined') {
             EventManager.WINDOW_EVENTS.forEach(eventName => {
-                window?.addEventListener(eventName, (event) => {
+                window?.addEventListener(eventName, event => {
                     const targetAttr = `dr-window-event-${eventName}`;
                     document.querySelectorAll(`[${targetAttr}]`).forEach(it => {
                         const script = it.getAttribute(targetAttr);
@@ -15458,9 +15475,7 @@ class EventManager {
         if (!root)
             return handlers;
         const initialTarget = event.target;
-        let currentTarget = (initialTarget.nodeType === 1)
-            ? initialTarget
-            : initialTarget.parentElement;
+        let currentTarget = initialTarget.nodeType === 1 ? initialTarget : initialTarget.parentElement;
         const collectedElements = new Set();
         const eventMap = {
             mouseout: 'mouseleave',
@@ -15498,7 +15513,11 @@ class EventManager {
             const eventParamAttr = EventManager.eventParam;
             if (currentTarget.hasAttribute(eventParamAttr)) {
                 const bindEvents = currentTarget.getAttribute(`${eventParamAttr}:bind`);
-                if (bindEvents && bindEvents.split(',').map(s => s.trim()).includes(mappedEventName)) {
+                if (bindEvents &&
+                    bindEvents
+                        .split(',')
+                        .map(s => s.trim())
+                        .includes(mappedEventName)) {
                     handlers.push({
                         element: currentTarget,
                         attr: eventParamAttr,
@@ -15616,7 +15635,9 @@ class EventManager {
                 const attributes = _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_1__.ElementUtils.getAttributeToObject(element);
                 const params = {};
                 const prefix = attr + ':';
-                Object.entries(attributes).filter(([k, v]) => k.startsWith(prefix)).forEach(([k, v]) => {
+                Object.entries(attributes)
+                    .filter(([k, v]) => k.startsWith(prefix))
+                    .forEach(([k, v]) => {
                     params[k.slice(prefix.length)] = v;
                 });
                 const paramContext = this.createExecutionContext(event, element, componentInstance, config, { params });
@@ -15649,6 +15670,15 @@ class EventManager {
                 const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
                 if (it.value !== data) {
                     it.value = data;
+                }
+            }
+        });
+        this.procAttr(childNodes, EventManager.srcAttrName, (it, attribute) => {
+            const script = attribute;
+            if (script) {
+                const data = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_4__.ObjectUtils.Script.evaluateReturn(script, obj);
+                if (it.src !== data) {
+                    it.src = data;
                 }
             }
         });
@@ -15890,7 +15920,9 @@ class EventManager {
         // t0 = performance.now();
         this.onRenderedEvent(obj, childNodes, config);
         this.changeVar(obj, childNodes, undefined, config);
-        const elements = Array.from(childNodes).filter(it => it.nodeType === 1).map(it => it);
+        const elements = Array.from(childNodes)
+            .filter(it => it.nodeType === 1)
+            .map(it => it);
         elements.forEach(it => {
             config?.applyEvents?.filter(ta => it.getAttribute(ta.attrName) !== null).forEach(ta => ta.callBack(it, it.getAttribute(ta.attrName), obj));
         });
@@ -15971,10 +16003,17 @@ class EventManager {
                 }));
                 // alert(1)
                 if (typeof data === 'string') {
-                    data.split(' ').map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
+                    data
+                        .split(' ')
+                        .map(it => it.trim())
+                        .filter(it => it.length > 0)
+                        .forEach(cit => it.classList.add(cit.trim()));
                 }
                 else if (Array.isArray(data)) {
-                    data.map(it => it.trim()).filter(it => it.length > 0).forEach(cit => it.classList.add(cit.trim()));
+                    data
+                        .map(it => it.trim())
+                        .filter(it => it.length > 0)
+                        .forEach(cit => it.classList.add(cit.trim()));
                 }
                 else if (data) {
                     for (const [key, value] of Object.entries(data)) {
@@ -16127,9 +16166,12 @@ class EventManager {
     }
     getBindScript(config) {
         if (config?.eventVariables) {
-            const bindScript = Object.entries(config.eventVariables).filter(([key, value]) => !this.bindScript.includes(`const ${key}`)).map(([key, value]) => {
+            const bindScript = Object.entries(config.eventVariables)
+                .filter(([key, value]) => !this.bindScript.includes(`const ${key}`))
+                .map(([key, value]) => {
                 return `const ${key} = this.__render.${key};`;
-            }).join(';');
+            })
+                .join(';');
             return this.bindScript + '' + bindScript;
         }
         else {
@@ -16895,35 +16937,96 @@ class DrAppender extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack, false);
     }
     async executeAttrRequire(attr) {
-        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element);
+        const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element, 'DrAppender');
         const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
+        const variableName = this.elementSource.attrs.drVariableNameOption;
+        const itemVariableName = this.elementSource.attrs.drItemVariableNameOption;
+        const itemIndexVariableName = this.elementSource.attrs.drItemIndexVariableNameOption;
+        const itemOffsetIndexVariableName = this.elementSource.attrs.drItemOffsetIndexVariableNameOption;
+        const hasVariableName = !!variableName;
+        const hasItemVariableName = !!itemVariableName;
+        const hasItemIndexVariableName = !!itemIndexVariableName;
+        const hasItemOffsetIndexVariableName = !!itemOffsetIndexVariableName;
+        const indexOffsetOption = this.elementSource.attrs.drItemIndexOffsetOption;
+        const hasIndexOffsetOption = !!indexOffsetOption;
         _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
                     try{
                     ${this.render.bindScript}
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
-                        const ifWrap = document.createElement('div');
-                        // ifWrap.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_STRIP_OPTIONNAME}', 'true');
-                        // ifWrap.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_NAME}', '${this.elementSource.attrs.drAppender} && ${this.elementSource.attrs.drAppender}.length > 0');
-                        const n = this.__render.element.cloneNode(true);
-                        Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drAppender' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
-                        const length = ${this.elementSource.attrs.drAppender}.length;
-                        if (length > 0) {
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FOR_OF_NAME}', '${this.elementSource.attrs.drAppender}[' + (length-1) + ']');
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_NEXT_OPTIONNAME}', '${this.elementSource.attrs.drAppender},' + length);
-                        } else {
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FOR_OF_NAME}', '${this.elementSource.attrs.drAppender}[0]');
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_NEXT_OPTIONNAME}', '${this.elementSource.attrs.drAppender},' + 1);
+                        const offset = ${hasIndexOffsetOption ? Number(indexOffsetOption) : 0};
+                        const data = ${_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Path.toOptionalChainPath(attr)};
+                        const attrStr = \`${attr}\`.trim();
+                        const isChunkPath = /\\[\\d+\\]$/.test(attrStr);
+                        
+                        if (data !== undefined && data !== null) {
+                            // SSR 호환성을 위해 Array.from 사용
+                            const items = isChunkPath ? (Array.isArray(data) ? data : [data]) : (typeof data.getAll === 'function' ? data.getAll().slice(offset) : Array.from(data).slice(offset));
+                            var i = -1;
+                            
+                            for(const it of items) {
+                                i++;
+                                const userIdx = i + offset;
+                                
+                                // 아이템 접근 경로 생성
+                                let destItStr = attrStr + '[' + (isChunkPath ? i : userIdx) + ']';
+                                if (!isChunkPath && typeof data.getAll === 'function') {
+                                   destItStr = '(' + attrStr + '.getAll()[' + userIdx + '])';
+                                } else {
+                                   destItStr = '(' + destItStr + ')';
+                                }
+                                
+                                const n = this.__render.element.cloneNode(true);
+                                // 옵션 복원 및 정제
+                                Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drAppender' && k !== 'drNextOption' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
+                                
+                                // 정교한 치환 로직 (속성)
+                                n.getAttributeNames().forEach(itName => {
+                                    let attrVal = n.getAttribute(itName);
+                                    attrVal = attrVal.replace(/\\#it\\#/g, destItStr)
+                                                     .replace(/\\#nearForOfIt\\#/g, destItStr)
+                                                     .replace(/\\#index\\#/g, String(i))
+                                                     .replace(/\\#offsetIndex\\#/g, String(userIdx))
+                                                     .replace(/\\#nearForOfIndex\\#/g, String(i));
+                                    
+                                    if (${hasVariableName} && '${variableName}') attrVal = attrVal.replaceAll('#${variableName}#', attrStr);
+                                    if (${hasItemVariableName} && '${itemVariableName}') attrVal = attrVal.replaceAll('#${itemVariableName}#', destItStr);
+                                    if (${hasItemIndexVariableName} && '${itemIndexVariableName}') attrVal = attrVal.replaceAll('#${itemIndexVariableName}#', String(i));
+                                    if (${hasItemOffsetIndexVariableName} && '${itemOffsetIndexVariableName}') attrVal = attrVal.replaceAll('#${itemOffsetIndexVariableName}#', String(userIdx));
+                                    n.setAttribute(itName, attrVal);
+                                });
+
+                                // 정교한 치환 로직 (InnerHTML)
+                                n.innerHTML = n.innerHTML.replace(/\\#it\\#/g, destItStr)
+                                                         .replace(/\\#index\\#/g, String(i))
+                                                         .replace(/\\#offsetIndex\\#/g, String(userIdx));
+                                                         
+                                if (${hasVariableName} && '${variableName}') n.innerHTML = n.innerHTML.replaceAll('#${variableName}#', attrStr);
+                                if (${hasItemVariableName} && '${itemVariableName}') n.innerHTML = n.innerHTML.replaceAll('#${itemVariableName}#', destItStr);
+                                if (${hasItemIndexVariableName} && '${itemIndexVariableName}') n.innerHTML = n.innerHTML.replaceAll('#${itemIndexVariableName}#', String(i));
+                                if (${hasItemOffsetIndexVariableName} && '${itemOffsetIndexVariableName}') n.innerHTML = n.innerHTML.replaceAll('#${itemOffsetIndexVariableName}#', String(userIdx));
+                       
+                                if (this.__render.drStripOption === 'true') {
+                                    Array.from(n.childNodes).forEach(it => this.__render.fag.append(it));
+                                } else {
+                                    this.__render.fag.append(n);
+                                }
+                            }
+                            
+                            // 다음 세대 센티넬 생성 (정석 체이닝)
+                            const nextN = this.__render.element.cloneNode(true);
+                            Object.entries(this.__render.drAttr).filter(([k,v]) => v).forEach(([k, v]) => nextN.setAttribute(this.__render.drAttrsOriginName[k], v));
+                            
+                            const basePath = attrStr.replace(/\\[\\d+\\]$/, '');
+                            const appenderObj = ${_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Path.toOptionalChainPath(attr.replace(/\\[\\d+\\]$/, ''))};
+                            const nextChunkIdx = isChunkPath ? Number(attrStr.match(/\\[(\\d+)\\]$/)[1]) + 1 : (appenderObj?.length ?? 0);
+                            
+                            nextN.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_APPENDER_NAME}', basePath + '[' + nextChunkIdx + ']');
+                            nextN.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_INDEX_OFFSET_OPTIONNAME}', (offset + items.length));
+                            this.__render.fag.append(nextN);
                         }
-                        // console.log('appender--->', Array.from(n.getAttributeNames()).map(it=>({name:it,attr: n.getAttribute(it)})));
-                        // const drOptionThis = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_THIS_OPTIONNAME}');
-                        // if (drOptionThis) {
-                        // }
-                        // ifWrap.append(n);
-                        // this.__render.fag.append(ifWrap);
-                        this.__render.fag.append(n);
                     ${this.elementSource.attrs.drAfterOption ?? ''}
-                    }catch(e){}
+                    }catch(e){console.error('DrAppender Error:', e);}
                     `, Object.assign(this.source.obj, {
             __render: Object.freeze({
                 drStripOption: this.elementSource.attrs.drStripOption,
@@ -16931,17 +17034,15 @@ class DrAppender extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0
                 drAttrsOriginName: _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drAttrsOriginName,
                 fag: newTemp,
                 ...this.render
-                // eslint-disable-next-line no-use-before-define
             })
         }));
         _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarDecoding(newTemp, vars);
         _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherDecoding(newTemp, itRandom);
-        const tempalte = this.source.config.window.document.createElement('template');
-        tempalte.innerHTML = newTemp.innerHTML;
-        this.returnContainer.fag.append(tempalte.content);
+        const template = this.source.config.window.document.createElement('template');
+        template.innerHTML = newTemp.innerHTML;
+        this.returnContainer.fag.append(template.content);
         const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
-        // const rrr = rr.flatMap(it => it.render(obj, config));// .flat();
         this.returnContainer.raws.push(...rr);
         return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
@@ -17043,132 +17144,102 @@ class DrForOf extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.
         super(rawSet, render, returnContainer, elementSource, source, afterCallBack, false);
     }
     async executeAttrRequire(attr) {
-        // console.log('타지도않냐?')
         const itRandom = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherEncoding(this.elementSource.element, 'DrForOf');
         const vars = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarEncoding(this.elementSource.element, this.elementSource.attrs.drVarOption ?? '');
         const newTemp = this.source.config.window.document.createElement('temp');
-        const variableName = this.elementSource.element.getAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_VARIABLE_NAME_OPTIONNAME);
-        const itemVariableName = this.elementSource.element.getAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME);
-        // const drAttrOption = this.elementSource.element.getAttribute(RawSet.DR_ATTR_OPTIONNAME);
-        const itemIndexVariableName = this.elementSource.element.getAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME);
-        const hasVariableName = this.elementSource.element.hasAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_VARIABLE_NAME_OPTIONNAME);
-        const hasItemVariableName = this.elementSource.element.hasAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME);
-        const hasItemIndexVariableName = this.elementSource.element.hasAttribute(_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME);
-        // console.log('----!', this.elementSource.attrs)
-        // ScriptUtils.evalReturn()
-        const t0 = performance.now();
+        const variableName = this.elementSource.attrs.drVariableNameOption;
+        const itemVariableName = this.elementSource.attrs.drItemVariableNameOption || _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME_DEFAULT;
+        const itemIndexVariableName = this.elementSource.attrs.drItemIndexVariableNameOption || _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME_DEFAULT;
+        const hasVariableName = !!variableName;
+        const hasItemVariableName = !!itemVariableName;
+        const hasItemIndexVariableName = !!itemIndexVariableName;
         _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Script.evaluate(`
+                    try {
                     ${this.render.bindScript}
                     ${this.elementSource.attrs.drBeforeOption ?? ''}
-                    var i = -1; 
-                    const forOf = ${_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Path.toOptionalChainPath(attr)};
-                    const forOfStr = '('+\`${attr}\`.trim() + ')';
-                    // console.log('forOf---',forOf);
-                    // debugger;
-                    if (forOf) {
-                        for(const it of forOf) {
-                          // console.log('forOf---it',it);
-                            i++;
-                            var destIt = it;
-                            if (/\\[(.*,?)\\],/g.test(forOfStr)) {
-                                if (typeof it === 'string') {
-                                    destIt = it;
+                        var i = -1;
+                        const forOf = ${_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_3__.ObjectUtils.Path.toOptionalChainPath(attr)};
+                        const forOfStr = '('+\`${attr}\`.trim() + ')';
+                        if (forOf) {
+                            for(const it of forOf) {
+                                i++;
+                                var destIt = it;
+                                if (/\\[(.*,?)\\],/g.test(forOfStr)) {
+                                    if (typeof it === 'string') {
+                                        destIt = it;
+                                    } else {
+                                        destIt = forOfStr.substring(1, forOfStr.length-1).split(',')[i];
+                                    }
+                                } else if (forOf.isRange) {
+                                        destIt = it;
                                 } else {
-                                    destIt = forOfStr.substring(1, forOfStr.length-1).split(',')[i];
+                                    destIt = forOfStr + '[' + i +']'
                                 }
-                            } else if (forOf.isRange) {
-                                    destIt = it;
-                            } else {
-                                destIt = forOfStr + '[' + i +']'
-                            }
-                            destIt = '(' + destIt + ')';
-                            
-                            const n = this.__render.element.cloneNode(true);
-                            Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drForOf' && k !== 'drNextOption' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
-                            n.getAttributeNames().forEach(it => n.setAttribute(it, n.getAttribute(it).replace(/\\#it\\#/g, destIt).replace(/\\#nearForOfIt\\#/g, destIt).replace(/\\#it\\#/g, destIt).replace(/\\#nearForOfIndex\\#/g, i)))
-                            if (${hasVariableName} && '${variableName}') {
-                              n.getAttributeNames().forEach(it => n.setAttribute(it, n.getAttribute(it).replaceAll('#${variableName}#', forOfStr)));
-                            }
-                            if (${hasItemVariableName} && '${itemVariableName}') {
-                              n.getAttributeNames().forEach(it => n.setAttribute(it, n.getAttribute(it).replaceAll('#${itemVariableName}#', destIt)));
-                            }
-                            if (${hasItemIndexVariableName} && '${itemIndexVariableName}') {
-                              n.getAttributeNames().forEach(it => n.setAttribute(it, n.getAttribute(it).replaceAll('#${itemIndexVariableName}#', i)));
-                            }
-                            
-                            const hasDrOptionAttr = n.hasAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ATTR_OPTIONNAME}');
-                            if (hasDrOptionAttr) {
-                              const drOptionAttr = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ATTR_OPTIONNAME}');
-                              const drOptionAttrResult = $scriptUtils.evaluateReturn(drOptionAttr, this);
-                              Array.from(Object.entries(drOptionAttrResult??{})).forEach(([k,v])=>{
-                                if (v === null) {
-                                  n.removeAttribute(k);
-                                } else {
-                                  n.setAttribute(k,v);
-                                }
-                              })
-                            
-                            }
-                            const hasDrOptionIf = n.hasAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_OPTIONNAME}');
-                            if (hasDrOptionIf) {
-                              const drOptionIf = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_OPTIONNAME}');
-                              const e = $scriptUtils.evaluateReturn(drOptionIf, this);
-                              if(!e) {
-                                continue;
-                              }
-                            
-                            }
-                            
-                            const drOptionAttr = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_DETECT_ATTR_OPTIONNAME}');
-                            if (drOptionAttr) {
-                              const drOptionAttrResult = $scriptUtils.evaluateReturn(drOptionAttr, this);
-                              Array.from(Object.entries(drOptionAttrResult??{})).forEach(([k,v])=>{
-                                if (v === null) {
-                                  n.removeAttribute(k);
-                                } else {
-                                  n.setAttribute(k,v);
-                                }
-                              })
-                            }
-                            
-                            const drOptionFilter = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_DETECT_FILTER_OPTIONNAME}');
-                            if (drOptionFilter) {
-                              const drOptionFilterResult = $scriptUtils.evaluateReturn(drOptionFilter, this);
-                              // console.log('---drforof----', drOptionFilter, drOptionFilterResult)
-                              if (!drOptionFilterResult) {
-                                continue;
-                              }
-                            }
+                                destIt = '(' + destIt + ')';
+                                
+                                const n = this.__render.element.cloneNode(true);
+                                // dr-for-of 및 관련 옵션 제거 후 나머지 속성 유지
+                                Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drForOf' && k !== 'drNextOption' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
+                                
+                                // 정교한 치환 함수 (Regex 기반으로 호환성 확보)
+                                const replaceAllVars = (text) => {
+                                    if (!text) return text;
+                                    let result = text.replace(/\\#it\\#/g, destIt)
+                                                     .replace(/\\#nearForOfIt\\#/g, destIt)
+                                                     .replace(/\\#index\\#/g, String(i))
+                                                     .replace(/\\#nearForOfIndex\\#/g, String(i));
+                                    
+                                    if (${hasVariableName} && '${variableName}') result = result.replace(new RegExp('#${variableName}#', 'g'), forOfStr);
+                                    if (${hasItemVariableName} && '${itemVariableName}') result = result.replace(new RegExp('#${itemVariableName}#', 'g'), destIt);
+                                    if (${hasItemIndexVariableName} && '${itemIndexVariableName}') result = result.replace(new RegExp('#${itemIndexVariableName}#', 'g'), String(i));
+                                    return result;
+                                };
 
-                            n.innerHTML = n.innerHTML.replace(/\\#it\\#/g, destIt).replace(/\\#index\\#/g, i);
-                            if (${hasVariableName} && '${variableName}') {
-                              n.innerHTML = n.innerHTML.replaceAll('#${variableName}#', forOfStr);
+                                // 속성 치환
+                                n.getAttributeNames().forEach(itName => {
+                                    n.setAttribute(itName, replaceAllVars(n.getAttribute(itName)));
+                                });
+
+                                const hasDrOptionAttr = n.hasAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ATTR_OPTIONNAME}');
+                                if (hasDrOptionAttr) {
+                                  const drOptionAttr = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_ATTR_OPTIONNAME}');
+                                  const drOptionAttrResult = $scriptUtils.evaluateReturn(drOptionAttr, this);
+                                  Array.from(Object.entries(drOptionAttrResult??{})).forEach(([k,v])=>{
+                                    if (v === null) n.removeAttribute(k); else n.setAttribute(k,v);
+                                  });
+                                }
+                                
+                                const hasDrOptionIf = n.hasAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_OPTIONNAME}');
+                                if (hasDrOptionIf) {
+                                  const drOptionIf = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_IF_OPTIONNAME}');
+                                  if(!$scriptUtils.evaluateReturn(drOptionIf, this)) continue;
+                                }
+                                
+                                const drOptionAttrDetect = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_DETECT_ATTR_OPTIONNAME}');
+                                if (drOptionAttrDetect) {
+                                  const drOptionAttrResult = $scriptUtils.evaluateReturn(drOptionAttrDetect, this);
+                                  Array.from(Object.entries(drOptionAttrResult??{})).forEach(([k,v])=>{
+                                    if (v === null) n.removeAttribute(k); else n.setAttribute(k,v);
+                                  });
+                                }
+                                
+                                const drOptionFilter = n.getAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_DETECT_FILTER_OPTIONNAME}');
+                                if (drOptionFilter) {
+                                  if (!$scriptUtils.evaluateReturn(drOptionFilter, this)) continue;
+                                }
+     
+                                // InnerHTML 치환
+                                n.innerHTML = replaceAllVars(n.innerHTML);
+                       
+                                if (this.__render.drStripOption === 'true') {
+                                    Array.from(n.childNodes).forEach(it => this.__render.fag.append(it));
+                                } else {
+                                    this.__render.fag.append(n);
+                                }
                             }
-                            if (${hasItemVariableName} && '${itemVariableName}') {
-                              n.innerHTML = n.innerHTML.replaceAll('#${itemVariableName}#', destIt);
-                            }
-                            if (${hasItemIndexVariableName} && '${itemIndexVariableName}') {
-                              n.innerHTML = n.innerHTML.replaceAll('#${itemIndexVariableName}#', i);
-                            }
-                   
-                            if (this.__render.drStripOption === 'true') {
-                                Array.from(n.childNodes).forEach(it => this.__render.fag.append(it));
-                            } else {
-                                this.__render.fag.append(n);
-                            }
-                           
                         }
-                        
-                        if('${this.elementSource.attrs.drNextOption}' !== 'null') {
-                            const n = this.__render.element.cloneNode(true);
-                            Object.entries(this.__render.drAttr).filter(([k,v]) => k !== 'drForOf' && k !== 'drNextOption' && v).forEach(([k, v]) => n.setAttribute(this.__render.drAttrsOriginName[k], v));
-                            const [name, idx] = '${this.elementSource.attrs.drNextOption}'.split(',');
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_FOR_OF_NAME}', name + '[' + idx + ']');
-                            n.setAttribute('${_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.DR_NEXT_OPTIONNAME}', name + ',' +  (Number(idx) + 1));
-                            this.__render.fag.append(n);
-                        }
-                    }
                     ${this.elementSource.attrs.drAfterOption ?? ''}
+                    } catch(e) { console.error('DrForOf Error:', e); }
                     `, Object.assign(this.source.obj, {
             __render: Object.freeze({
                 drStripOption: this.elementSource.attrs.drStripOption,
@@ -17176,19 +17247,16 @@ class DrForOf extends _OperatorExecuterAttrRequire__WEBPACK_IMPORTED_MODULE_0__.
                 drAttrsOriginName: _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drAttrsOriginName,
                 fag: newTemp,
                 ...this.render
-                // eslint-disable-next-line no-use-before-define
             })
         }));
         _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drVarDecoding(newTemp, vars);
         _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.drItOtherDecoding(newTemp, itRandom);
-        const tempalte = this.source.config.window.document.createElement('template');
-        tempalte.innerHTML = newTemp.innerHTML;
-        this.returnContainer.fag.append(tempalte.content);
+        const template = this.source.config.window.document.createElement('template');
+        template.innerHTML = newTemp.innerHTML;
+        this.returnContainer.fag.append(template.content);
         const rr = _rawsets_RawSet__WEBPACK_IMPORTED_MODULE_1__.RawSet.checkPointCreates(this.returnContainer.fag, this.source.obj, this.source.config);
         this.elementSource.element.parentNode?.replaceChild(this.returnContainer.fag, this.elementSource.element);
-        // const rrr = rr.flatMap(it => it.render(obj, config));// .flat();
         this.returnContainer.raws.push(...rr);
-        // console.log(`drForOf 호출에 걸린 시간은 ${performance.now() - t0} 밀리초.`);
         return _OperatorExecuter__WEBPACK_IMPORTED_MODULE_2__.ExecuteState.EXECUTE;
     }
 }
@@ -18421,7 +18489,12 @@ class RawSet {
     static DR_THIS_NAME_OPTIONNAME = 'dr-option-this-name';
     static DR_VARIABLE_NAME_OPTIONNAME = 'dr-option-variable-name';
     static DR_ITEM_VARIABLE_NAME_OPTIONNAME = 'dr-option-item-variable-name';
+    static DR_ITEM_VARIABLE_NAME_OPTIONNAME_DEFAULT = 'it';
     static DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME = 'dr-option-item-index-variable-name';
+    static DR_ITEM_OFFSET_INDEX_VARIABLE_NAME_OPTIONNAME = 'dr-option-item-offset-index-variable-name';
+    static DR_ITEM_INDEX_OFFSET_OPTIONNAME = 'dr-option-item-index-offset';
+    static DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME_DEFAULT = 'index';
+    static DR_ITEM_OFFSET_INDEX_VARIABLE_NAME_OPTIONNAME_DEFAULT = 'offsetIndex';
     static DR_INNER_HTML_NAME_OPTIONNAME = 'dr-option-inner-html-name';
     static DR_INNER_TEXT_NAME_OPTIONNAME = 'dr-option-inner-text-name';
     static DR_INNER_HTML_ESCAPED_NAME_OPTIONNAME = 'dr-option-inner-html-escaped-name';
@@ -18456,15 +18529,18 @@ class RawSet {
         drDetectIfOption: RawSet.DR_DETECT_IF_OPTIONNAME,
         drDestroyOption: RawSet.DR_DESTROY_OPTIONNAME,
         drHasKeysOption: RawSet.DR_HAS_KEYS_OPTIONNAME,
-        drKeyOption: RawSet.DR_KEY_OPTIONNAME
+        drKeyOption: RawSet.DR_KEY_OPTIONNAME,
+        drItemIndexOffsetOption: RawSet.DR_ITEM_INDEX_OFFSET_OPTIONNAME,
+        drVariableNameOption: RawSet.DR_VARIABLE_NAME_OPTIONNAME,
+        drItemVariableNameOption: RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME,
+        drItemIndexVariableNameOption: RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME,
+        drItemOffsetIndexVariableNameOption: RawSet.DR_ITEM_OFFSET_INDEX_VARIABLE_NAME_OPTIONNAME
     };
     static DR_TAGS = [];
     // public static readonly DR_REPLACE_ACTION_ATTRIBUTES = [
     //   RawSet.DR_REPLACE_TARGET_ELEMENT_IS_NAME
     // ]
-    static DR_ELEMENTS = [
-        RawSet.DR_TARGET_ELEMENT_ELEMENTNAME
-    ];
+    static DR_ELEMENTS = [RawSet.DR_TARGET_ELEMENT_ELEMENTNAME];
     static DR_ATTRIBUTES = [
         RawSet.DR_NAME,
         RawSet.DR_APPENDER_NAME,
@@ -18492,7 +18568,7 @@ class RawSet {
     }
     get isConnected() {
         // console.log('isConnect???', this, this.point.start.isConnected, this.point.end.isConnected);
-        return (this.point && this.point.start && this.point.end && this.point.start.isConnected && this.point.end.isConnected);
+        return this.point && this.point.start && this.point.end && this.point.start.isConnected && this.point.end.isConnected;
     }
     // 중요
     getUsingTriggerVariables(config) {
@@ -18730,7 +18806,12 @@ class RawSet {
                     drDestroyOption: this.getAttributeAndDelete(element, RawSet.DR_DESTROY_OPTIONNAME),
                     drKeyOption: this.getAttributeAndDelete(element, RawSet.DR_KEY_OPTIONNAME),
                     drDetectIfOption: this.getAttribute(element, RawSet.DR_DETECT_IF_OPTIONNAME),
-                    drHasKeysOption: this.getAttribute(element, RawSet.DR_HAS_KEYS_OPTIONNAME)
+                    drHasKeysOption: this.getAttribute(element, RawSet.DR_HAS_KEYS_OPTIONNAME),
+                    drItemIndexOffsetOption: this.getAttributeAndDelete(element, RawSet.DR_ITEM_INDEX_OFFSET_OPTIONNAME),
+                    drVariableNameOption: this.getAttributeAndDelete(element, RawSet.DR_VARIABLE_NAME_OPTIONNAME),
+                    drItemVariableNameOption: this.getAttributeAndDelete(element, RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME),
+                    drItemIndexVariableNameOption: this.getAttributeAndDelete(element, RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME),
+                    drItemOffsetIndexVariableNameOption: this.getAttributeAndDelete(element, RawSet.DR_ITEM_OFFSET_INDEX_VARIABLE_NAME_OPTIONNAME)
                 };
                 drAttrs.push(drAttr);
                 // 아래 순서 중요
@@ -18887,6 +18968,8 @@ class RawSet {
             styleBody = styleBody.join('\n');
         }
         styleBody = styleBody.replaceAll('#uuid#', componentKey);
+        const { cleanedCss, importRules } = RawSet.extractCssImports(styleBody);
+        styleBody = cleanedCss;
         const start = `#${componentKey}-start`;
         const end = `#${componentKey}-end`;
         // 이거뭐하는지 까먹었네 뭐였지??..
@@ -18932,11 +19015,63 @@ class RawSet {
         // 여기서 선언 selector 자체에도 처리가능하도록 한다 20250518
         after = after.replaceAll('/*$', '${');
         after = after.replaceAll('$*/', '}$');
+        if (importRules.length) {
+            after = `${importRules.join('\n')}\n${after}`;
+        }
         if (styleTagWrap) {
             styleBody = `<style id='${componentKey}-style' domstyle>${after}</style>`;
         }
         // console.log('style!!!!!!!!!!!!!!2', styleBody);
         return styleBody;
+    }
+    static extractCssImports(styleBody) {
+        const importRules = [];
+        let result = '';
+        let i = 0;
+        while (i < styleBody.length) {
+            const importIndex = styleBody.indexOf('@import', i);
+            if (importIndex === -1) {
+                result += styleBody.slice(i);
+                break;
+            }
+            result += styleBody.slice(i, importIndex);
+            let j = importIndex + '@import'.length;
+            let inSingleQuote = false;
+            let inDoubleQuote = false;
+            let parenDepth = 0;
+            while (j < styleBody.length) {
+                const ch = styleBody[j];
+                if (ch === '\\') {
+                    j += 2;
+                    continue;
+                }
+                if (!inDoubleQuote && ch === "'") {
+                    inSingleQuote = !inSingleQuote;
+                }
+                else if (!inSingleQuote && ch === '"') {
+                    inDoubleQuote = !inDoubleQuote;
+                }
+                else if (!inSingleQuote && !inDoubleQuote) {
+                    if (ch === '(') {
+                        parenDepth += 1;
+                    }
+                    else if (ch === ')' && parenDepth > 0) {
+                        parenDepth -= 1;
+                    }
+                    else if (ch === ';' && parenDepth === 0) {
+                        j += 1;
+                        break;
+                    }
+                }
+                j += 1;
+            }
+            const importRule = styleBody.slice(importIndex, j).trim();
+            if (importRule) {
+                importRules.push(importRule);
+            }
+            i = j;
+        }
+        return { cleanedCss: result, importRules };
     }
     applyEvent(obj, fragment = this.dataSet.fragment, config) {
         // const t0 = performance.now();
@@ -19015,9 +19150,7 @@ class RawSet {
                 // const between = StringUtils.betweenRegexpStr('[$#]\\{', '\\}', StringUtils.deleteEnter((node as Text).data ?? ''))
                 const between = RawSet.expressionGroups(_dooboostore_core_string_StringUtils__WEBPACK_IMPORTED_MODULE_1__.StringUtils.deleteEnter(node.data ?? ''));
                 // console.log('bbbb', between)
-                const r = between?.length > 0
-                    ? _dooboostore_core_web_node_NodeUtils__WEBPACK_IMPORTED_MODULE_33__.NodeUtils.FindNodesFilterResult.MATCH_AND_SKIP_CHILDREN
-                    : _dooboostore_core_web_node_NodeUtils__WEBPACK_IMPORTED_MODULE_33__.NodeUtils.FindNodesFilterResult.NO_MATCH_AND_SKIP_CHILDREN;
+                const r = between?.length > 0 ? _dooboostore_core_web_node_NodeUtils__WEBPACK_IMPORTED_MODULE_33__.NodeUtils.FindNodesFilterResult.MATCH_AND_SKIP_CHILDREN : _dooboostore_core_web_node_NodeUtils__WEBPACK_IMPORTED_MODULE_33__.NodeUtils.FindNodesFilterResult.NO_MATCH_AND_SKIP_CHILDREN;
                 // console.log('acceptNodeReturn node', r);
                 return r;
                 // return /\$\{.*?\}/g.test(StringUtils.deleteEnter((node as Text).data ?? '')) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
@@ -19039,8 +19172,7 @@ class RawSet {
                     const script = element.getAttribute(_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.attrAttrName) ?? '';
                     // console.log('scriptscriptscriptscriptscriptscript,', script)
                     // const keyValuePairs = Array.from(script.matchAll(/['"]?(\w+)['"]?:\s*([^,}]+)/g))
-                    const keyValuePairs = Array.from(script.matchAll(/['"]?([\w-_]+)['"]?:\s*([^,}]+)/g))
-                        .map(match => ({
+                    const keyValuePairs = Array.from(script.matchAll(/['"]?([\w-_]+)['"]?:\s*([^,}]+)/g)).map(match => ({
                         key: match[1],
                         value: match[2]
                     }));
@@ -19052,8 +19184,7 @@ class RawSet {
                 const targetElementIs = element.getAttribute(RawSet.DR_REPLACE_TARGET_ELEMENT_IS_NAME);
                 const targetElementNames = config.targetElements?.map(it => it.name.toLowerCase()) ?? [];
                 targetElementNames.push(...RawSet.DR_ELEMENTS);
-                const isElement = targetElementNames.includes(element.tagName.toLowerCase()) ||
-                    targetElementNames.includes(targetElementIs?.toLowerCase());
+                const isElement = targetElementNames.includes(element.tagName.toLowerCase()) || targetElementNames.includes(targetElementIs?.toLowerCase());
                 // if (isElement) {
                 //   (element as HTMLElement).style.display = 'none';
                 //   (element as HTMLElement).style.width = '100px';
@@ -19066,7 +19197,10 @@ class RawSet {
                 const normalAttrs = new Map();
                 const linkVariables = new Map();
                 const linkNames = _events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.linkAttrs.map(it => it.name);
-                const isAttr = element.getAttributeNames().filter(it => !_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.noDetectAttr.includes(it)).filter(it => {
+                const isAttr = element
+                    .getAttributeNames()
+                    .filter(it => !_events_EventManager__WEBPACK_IMPORTED_MODULE_2__.EventManager.noDetectAttr.includes(it))
+                    .filter(it => {
                     const value = element.getAttribute(it)?.trim();
                     // link일때
                     if (value && linkNames.includes(it)) {
@@ -19096,15 +19230,15 @@ class RawSet {
                         if (cval === null) {
                             element.removeAttribute(it);
                             /* TODO: 여기 더 추가되어야될듯
-                             TODO: 훔..... 없어도될듯?
-                            *
-                <select dr-event-change="@this@.onMarketChange($event)" class="market-select">
-                    <option>마켓 선택 (${@this@.markets?.length??0}$개)</option>
-                    <option dr-for-of="@this@.markets" dr-option-item-variable-name="market" value="${#market#.uuid}$" dr-attr="{selected: #market#.uuid === @this@.marketUUID ? 'selected' : null}">
-                      ${#market#.name}$
-                    </option>
-                  </select>
-                             */
+                           TODO: 훔..... 없어도될듯?
+                          *
+              <select dr-event-change="@this@.onMarketChange($event)" class="market-select">
+                  <option>마켓 선택 (${@this@.markets?.length??0}$개)</option>
+                  <option dr-for-of="@this@.markets" dr-option-item-variable-name="market" value="${#market#.uuid}$" dr-attr="{selected: #market#.uuid === @this@.marketUUID ? 'selected' : null}">
+                    ${#market#.name}$
+                  </option>
+                </select>
+                           */
                             // } else if (
                             //   !(element.hasAttribute(RawSet.DR_VARIABLE_NAME_OPTIONNAME) || element.hasAttribute(RawSet.DR_ITEM_VARIABLE_NAME_OPTIONNAME) || element.hasAttribute(RawSet.DR_ITEM_INDEX_VARIABLE_NAME_OPTIONNAME))
                             // ) {
@@ -19220,8 +19354,7 @@ class RawSet {
                 const targetElementIs = element.getAttribute(RawSet.DR_REPLACE_TARGET_ELEMENT_IS_NAME);
                 const targetElementNames = config.targetElements?.map(it => it.name.toLowerCase()) ?? [];
                 targetElementNames.push(...RawSet.DR_ELEMENTS);
-                const isElement = targetElementNames.includes(element.tagName.toLowerCase()) ||
-                    targetElementNames.includes(targetElementIs?.toLowerCase());
+                const isElement = targetElementNames.includes(element.tagName.toLowerCase()) || targetElementNames.includes(targetElementIs?.toLowerCase());
                 // if (isElement) {
                 //   (element as HTMLElement).style.display = 'none'
                 // }
@@ -19347,17 +19480,13 @@ class RawSet {
     static drItOtherEncoding(element, postFix) {
         const random = _dooboostore_core_random_RandomUtils__WEBPACK_IMPORTED_MODULE_0__.RandomUtils.uuid() + postFix;
         const regex = /#it#/g;
-        element
-            .querySelectorAll(`[${RawSet.DR_IT_OPTIONNAME}], [${RawSet.DR_FOR_OF_NAME}], [${RawSet.DR_REPEAT_NAME}], [${RawSet.DR_APPENDER_NAME}]`)
-            .forEach(it => {
+        element.querySelectorAll(`[${RawSet.DR_IT_OPTIONNAME}], [${RawSet.DR_FOR_OF_NAME}], [${RawSet.DR_REPEAT_NAME}], [${RawSet.DR_APPENDER_NAME}]`).forEach(it => {
             it.innerHTML = it.innerHTML.replace(regex, random);
         });
         return random;
     }
     static drItOtherDecoding(element, random) {
-        element
-            .querySelectorAll(`[${RawSet.DR_IT_OPTIONNAME}], [${RawSet.DR_FOR_OF_NAME}], [${RawSet.DR_REPEAT_NAME}], [${RawSet.DR_APPENDER_NAME}]`)
-            .forEach(it => {
+        element.querySelectorAll(`[${RawSet.DR_IT_OPTIONNAME}], [${RawSet.DR_FOR_OF_NAME}], [${RawSet.DR_REPEAT_NAME}], [${RawSet.DR_APPENDER_NAME}]`).forEach(it => {
             it.innerHTML = it.innerHTML.replace(RegExp(random, 'g'), '#it#');
         });
     }
@@ -19422,16 +19551,12 @@ class RawSet {
             _dooboostore_core_string_StringUtils__WEBPACK_IMPORTED_MODULE_1__.StringUtils.regexExec(variable, message)
                 .reverse()
                 .forEach(it => {
-                message =
-                    message.substr(0, it.index) +
-                        message.substr(it.index).replace(it[0], `${it[1] ?? ''}${eIt.getAttribute(RawSet.DR_THIS_NAME)}`);
+                message = message.substr(0, it.index) + message.substr(it.index).replace(it[0], `${it[1] ?? ''}${eIt.getAttribute(RawSet.DR_THIS_NAME)}`);
             });
             eIt.innerHTML = message;
         });
         const targetElements = config.config.targetElements ?? [];
-        const targetElementNames = targetElements
-            .map(it => it.name.replaceAll('.', '\\.').replaceAll(':', '\\:'))
-            .join(',');
+        const targetElementNames = targetElements.map(it => it.name.replaceAll('.', '\\.').replaceAll(':', '\\:')).join(',');
         const thisRandom = _dooboostore_core_random_RandomUtils__WEBPACK_IMPORTED_MODULE_0__.RandomUtils.uuid();
         // console.log('thisRandom', thisRandom, variable);
         element.querySelectorAll(targetElementNames).forEach(it => {
@@ -19445,9 +19570,7 @@ class RawSet {
             _dooboostore_core_string_StringUtils__WEBPACK_IMPORTED_MODULE_1__.StringUtils.regexExec(variable, message)
                 .reverse()
                 .forEach(it => {
-                message =
-                    message.substr(0, it.index) +
-                        message.substr(it.index).replace(it[0], `${it[1] ?? ''}${config.otherReplaceVariablePath}`);
+                message = message.substr(0, it.index) + message.substr(it.index).replace(it[0], `${it[1] ?? ''}${config.otherReplaceVariablePath}`);
             });
             element.innerHTML = message;
         }
@@ -19455,9 +19578,7 @@ class RawSet {
     }
     static drThisBindDecoding(element, config) {
         const targetElements = config.config.targetElements ?? [];
-        const targetElementNames = targetElements
-            .map(it => it.name.replaceAll('.', '\\.').replaceAll(':', '\\:'))
-            .join(',');
+        const targetElementNames = targetElements.map(it => it.name.replaceAll('.', '\\.').replaceAll(':', '\\:')).join(',');
         element.querySelectorAll(targetElementNames).forEach(it => {
             it.innerHTML = it.innerHTML.replace(RegExp(config.asIs, 'g'), config.toBe);
         });
@@ -19534,9 +19655,10 @@ class RawSet {
         let targetObj = obj;
         if (set) {
             targetObj = set.obj;
-            set.setTemplateStyle(await RawSet.fetchTemplateStyle(set));
-            const style = RawSet.generateStyleTransform(set.styles ?? [], rawSet.uuid, true);
-            targetElement.innerHTML = style + (set.template ?? '');
+            const templateStringSet = await RawSet.fetchTemplateStyle(set, targetObj);
+            set.setTemplateStyle(templateStringSet);
+            const style = RawSet.generateStyleTransform(templateStringSet.styles ?? [], rawSet.uuid, true);
+            targetElement.innerHTML = style + (templateStringSet.template ?? '');
         }
         else {
             targetObj = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Script.evaluateReturn(_dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Path.toOptionalChainPath(drThis), obj);
@@ -19586,8 +19708,8 @@ class RawSet {
         render.attribute = RawSet.getAttributeObject(element, { script: renderScript, obj: obj, renderData: render });
         render = Object.freeze(render);
         // dr-on-create data onCreateRender
-        const onCreateDataScript = `return {rootParent: this, render: this.__render}`;
-        const onCreateDataParam = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Script.evaluate(onCreateDataScript, Object.assign(obj, { __render: render }));
+        const onCreateDataScript = `{rootParent: this, render: this.__render}`;
+        const onCreateDataParam = _dooboostore_core_object_ObjectUtils__WEBPACK_IMPORTED_MODULE_32__.ObjectUtils.Script.evaluateReturn(onCreateDataScript, Object.assign(obj, { __render: render }));
         if ((0,_lifecycle_OnCreateRenderData__WEBPACK_IMPORTED_MODULE_25__.isOnCreateRenderData)(targetObj)) {
             targetObj?.onCreateRenderData(onCreateDataParam);
         }
@@ -19680,9 +19802,7 @@ class RawSet {
         const componentName = targetElement.getAttribute(RawSet.DR_VARIABLE_NAME_OPTIONNAME) ?? 'component';
         const optionThisName = targetElement.getAttribute(RawSet.DR_THIS_NAME_OPTIONNAME);
         // console.log('11111111111111', optionThisName)
-        targetElement
-            .getAttributeNames()
-            .forEach(it => targetElement.setAttribute(it, targetElement.getAttribute(it).replace(/#this#/g, drThis)));
+        targetElement.getAttributeNames().forEach(it => targetElement.setAttribute(it, targetElement.getAttribute(it).replace(/#this#/g, drThis)));
         const thisRandom = this.drThisEncoding(targetElement, drThis, { asIs: /@this@/g });
         // console.log('@@@@@@@@@@@@@0', thisRandom);
         // let thisNameRandom: string | undefined = undefined;
@@ -19738,20 +19858,26 @@ class RawSet {
         // console.log('set __domrender_this_variable_name', (fag as any).__domrender_this_variable_name)
         return fag;
     }
-    static async fetchTemplateStyle(set) {
+    static async fetchTemplateStyle(set, obj) {
         // const id = RandomUtils.getRandomString(20);
         const stylePromises = [];
-        const templatePromise = set.template && set.template.startsWith('lazy://')
-            ? (await fetch(set.template.substring(6))).text()
-            : Promise.resolve(set.template);
-        if (Array.isArray(set.styles)) {
-            for (let i = 0; set.styles && i < (set.styles.length ?? 0); i++) {
-                const it = set.styles[i];
-                stylePromises.push(it.startsWith('lazy://') ? (await fetch(it.substring(6))).text() : Promise.resolve(it));
+        const resolveLazy = async (value) => {
+            if (!value) {
+                return value;
+            }
+            return value.startsWith('lazy://') ? (await fetch(value.substring(6))).text() : value;
+        };
+        const templateValue = typeof set.template === 'function' ? await set.template(obj) : set.template;
+        const templatePromise = typeof templateValue === 'string' ? resolveLazy(templateValue) : Promise.resolve(templateValue);
+        const stylesValue = typeof set.styles === 'function' ? await set.styles(obj) : set.styles;
+        if (Array.isArray(stylesValue)) {
+            for (let i = 0; i < stylesValue.length; i++) {
+                const it = stylesValue[i];
+                stylePromises.push(resolveLazy(it));
             }
         }
-        else if (set.styles) {
-            stylePromises.push(Promise.resolve(set.styles));
+        else if (typeof stylesValue === 'string') {
+            stylePromises.push(resolveLazy(stylesValue));
         }
         // const tempTemplate = config.window.document.createElement('template');
         // tempTemplate.innerHTML = await templatePromise;
@@ -19784,13 +19910,10 @@ class RawSet {
     static createComponentTargetElement({ name, objFactory, template = '', styles = [], noStrip }) {
         const targetElement = {
             name,
-            styles,
-            template,
+            styles: styles,
+            template: template,
             noStrip,
             async callBack(element, obj, rawSet, attrs, config) {
-                const templateStyle = await RawSet.fetchTemplateStyle({ template: this.template, styles: this.styles });
-                this.template = templateStyle.template;
-                this.styles = templateStyle.styles;
                 obj[_index__WEBPACK_IMPORTED_MODULE_35__.DomRenderComponentMetaKey.DOMRENDER_COMPONENTS_KEY] ??= {};
                 const domrenderComponents = obj[_index__WEBPACK_IMPORTED_MODULE_35__.DomRenderComponentMetaKey.DOMRENDER_COMPONENTS_KEY];
                 // debugger;
@@ -19841,7 +19964,7 @@ class RawSet {
                     constructorParam = param;
                 }
                 // // console.log('------22', attrs);
-                const instance = (domrenderComponents[rawSet.uuid] = objFactory(element, obj, rawSet, constructorParam));
+                const instance = (domrenderComponents[rawSet.uuid] = await objFactory(element, obj, rawSet, constructorParam));
                 render = {
                     currentThis: instance,
                     // creatorMetaData: i,
@@ -19850,6 +19973,9 @@ class RawSet {
                 rawSet.dataSet.render = render;
                 // 추적 및 destroy 위해.
                 instance.__rawSet = rawSet;
+                const templateStyle = await RawSet.fetchTemplateStyle({ template: this.template, styles: this.styles }, instance);
+                this.template = templateStyle.template;
+                this.styles = templateStyle.styles;
                 let applayTemplate = element.innerHTML;
                 let applayTemplateText = element.textContent?.trim() ?? '';
                 let applayTemplateEscape = _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_34__.ConvertUtils.escapeHTML(element.innerHTML);
@@ -19882,7 +20008,7 @@ class RawSet {
                 // RawSet.replaceInnerHTML(
                 // applayTemplate = StringUtils.regexExecArrayReplace(this.template, RegExp(`#${innerHTMLName}#`, 'g'), applayTemplate)
                 // applayTemplate = StringUtils.regexExecArrayReplace(this.template, [RegExp(`#${innerHTMLName}#`, 'g')], applayTemplate)
-                applayTemplate = _dooboostore_core_string_StringUtils__WEBPACK_IMPORTED_MODULE_1__.StringUtils.replaceSequentially((this.template ?? ''), [
+                applayTemplate = _dooboostore_core_string_StringUtils__WEBPACK_IMPORTED_MODULE_1__.StringUtils.replaceSequentially(this.template ?? '', [
                     {
                         regex: new RegExp(`#${innerHTMLName}#`, 'g'),
                         callback: () => applayTemplate
@@ -19928,7 +20054,6 @@ class RawSet {
                     // template.innerHTML = template.innerHTML.replace(RegExp(innerHTMLThisRandom, 'g'), 'this.');
                     let s = _dooboostore_core_web_element_ElementUtils__WEBPACK_IMPORTED_MODULE_4__.ElementUtils.toInnerHTML(data, { document: config.window.document });
                     template.innerHTML = s.replace(RegExp(innerHTMLThisRandom, 'g'), 'this.');
-                    ;
                     // console.log('ccc?', template.innerHTML);
                     // template.innerHTML = '<div>zzzzzzz</div>'
                     data = template.content;
@@ -19996,9 +20121,7 @@ class RawSet {
         const findPath = (rawSet) => {
             if (rawSet && rawSet.point) {
                 // jsDom에서 instranceof HTMLMetaElement가 안먹히는것같아? 간혈적으로?
-                if (rawSet.point?.start &&
-                    'getAttribute' in rawSet.point.start &&
-                    rawSet.point.start.getAttribute('this-path')) {
+                if (rawSet.point?.start && 'getAttribute' in rawSet.point.start && rawSet.point.start.getAttribute('this-path')) {
                     paths.push(rawSet.point.start.getAttribute('this-path'));
                 }
                 if (rawSet.point.parentRawSet)
@@ -25708,15 +25831,7 @@ const isPopStateDataType = (state) => {
 };
 class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPACK_IMPORTED_MODULE_5__.SimpleApplication {
     option;
-    domRendoerExcludeProxy = [
-        _dooboostore_simple_boot_SimpleApplication__WEBPACK_IMPORTED_MODULE_5__.SimpleApplication,
-        _dooboostore_simple_boot_intent_IntentManager__WEBPACK_IMPORTED_MODULE_8__.IntentManager,
-        _dooboostore_simple_boot_route_RouterManager__WEBPACK_IMPORTED_MODULE_9__.RouterManager,
-        _dooboostore_simple_boot_simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_7__.SimstanceManager,
-        _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootObject,
-        _option_SimFrontOption__WEBPACK_IMPORTED_MODULE_0__.SimFrontOption,
-        _dooboostore_dom_render_routers_Router__WEBPACK_IMPORTED_MODULE_12__.Router
-    ];
+    domRendoerExcludeProxy = [_dooboostore_simple_boot_SimpleApplication__WEBPACK_IMPORTED_MODULE_5__.SimpleApplication, _dooboostore_simple_boot_intent_IntentManager__WEBPACK_IMPORTED_MODULE_8__.IntentManager, _dooboostore_simple_boot_route_RouterManager__WEBPACK_IMPORTED_MODULE_9__.RouterManager, _dooboostore_simple_boot_simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_7__.SimstanceManager, _DomRenderRootObject__WEBPACK_IMPORTED_MODULE_15__.DomRenderRootObject, _option_SimFrontOption__WEBPACK_IMPORTED_MODULE_0__.SimFrontOption, _dooboostore_dom_render_routers_Router__WEBPACK_IMPORTED_MODULE_12__.Router];
     domRenderTargetElements = [];
     domRenderTargetAttrs = [];
     domRenderConfig;
@@ -25757,14 +25872,13 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
                     // changeStateConvertDate:(data) =>({...data, type: 'popstateData', router: this.routerAndSettingData.routerAtomic.getValue()} as PopStateType)
                 });
         this.simstanceManager.setStoreSet(_dooboostore_dom_render_routers_Router__WEBPACK_IMPORTED_MODULE_12__.Router, this.domRenderRouter);
+        this.simstanceManager.setStoreSet(SimpleBootFront, this);
         this.domRenderConfig = {
             window: option.window,
             targetElements: this.domRenderTargetElements,
             targetAttrs: this.domRenderTargetAttrs,
-            onElementInit: (name, obj, rawSet, targetElement) => {
-            },
-            onAttrInit: (attrName, attrValue, obj, rawSet) => {
-            },
+            onElementInit: (name, obj, rawSet, targetElement) => { },
+            onAttrInit: (attrName, attrValue, obj, rawSet) => { },
             // routerType: option.urlType,
             routerType: this.domRenderRouter,
             scripts: {
@@ -25792,13 +25906,22 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             onAfterProxy: (it) => this.createDomRender(it)
         };
     }
-    get routingSubjectObservable() {
+    get routingObservable() {
         return this.routingSubject.asObservable();
     }
-    getComponentInnerHtml(targetObj, id) {
+    get routingStartObservable() {
+        const observable = this.routingSubject.asObservable().pipe((0,_dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__.filter)(it => it.triggerPoint === 'start'));
+        return observable;
+    }
+    get routingEndObservable() {
+        const observable = this.routingSubject.asObservable().pipe((0,_dooboostore_core_message_operators_filter__WEBPACK_IMPORTED_MODULE_18__.filter)(it => it.triggerPoint === 'end' || it.triggerPoint === 'error-end'));
+        return observable;
+    }
+    async getComponentInnerHtml(targetObj, id) {
         const component = (0,_decorators_Component__WEBPACK_IMPORTED_MODULE_2__.getComponent)(targetObj);
-        const styles = _dooboostore_dom_render_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_11__.RawSet.generateStyleTransform(component?.styles ?? '', id);
-        const template = component?.template ?? '';
+        const styleStr = typeof component?.styles === 'function' ? await component.styles(targetObj) : Array.isArray(component?.styles) ? component.styles.join('') : (component?.styles ?? '');
+        const styles = _dooboostore_dom_render_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_11__.RawSet.generateStyleTransform(styleStr ?? '', id);
+        const template = typeof component?.template === 'function' ? await component.template(targetObj) : (component?.template ?? '');
         return styles + template;
     }
     createDomRender(obj) {
@@ -25835,9 +25958,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
     }
     initRun(otherInstanceSim) {
         // console.log('!@!!', this.option.window.document.body.innerHTML);
-        const targetUserElement = typeof this.option.selector === 'string'
-            ? this.option.window.document.querySelector(this.option.selector)
-            : this.option.selector;
+        const targetUserElement = typeof this.option.selector === 'string' ? this.option.window.document.querySelector(this.option.selector) : this.option.selector;
         if (!(targetUserElement instanceof HTMLElement)) {
             throw new Error('HTMLElement is not Element');
         }
@@ -25924,13 +26045,13 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             // console.log('this.domRenderRouter.observable.subscribe---------------', it)
             //   console.log('this.domRenderRouter.observable', it)
             // const intent = new Intent(it.path || '/');
-            const targetPath = (it.path || '/') + (it.search);
+            const targetPath = (it.path || '/') + it.search;
             const intent = new _dooboostore_simple_boot_intent_Intent__WEBPACK_IMPORTED_MODULE_6__.Intent(targetPath);
             //   // TODO: 왜 canActivate가 두번 호출되는지 확인 필요!! 그래서 setTimeout으로 처리함 원인 모르겠음 아 씨발
             this.routing(intent, { router: this.domRenderRootObject }).then(async (it) => {
                 // console.log('simplebootfront simpleboot routing-------->', it)
                 // dom-render 라우팅 끝나면 -> simple-boot-front routing start!
-                this.routingSubject.next({ triggerPoint: 'start', routerModule: it });
+                this.routingSubject.next({ triggerPoint: 'start', routerModule: it, domRenderRouter: this.domRenderRouter });
                 let findFirstRouter = it.firstRouteChainValue;
                 if (findFirstRouter && findFirstRouter.constructor === this.option.rootRouter) {
                     const rootRouter = (0,_dooboostore_dom_render_DomRenderProxy__WEBPACK_IMPORTED_MODULE_10__.getDomRenderOriginObject)(this.rootRouter?.obj);
@@ -25946,7 +26067,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
                 //   this.routingSubject.next({triggerPoint: 'end', routerModule: it});
                 // } else {
                 await this.domRenderRootObject.lifecycleObservable().pipe((0,_dooboostore_core_message_operators_first__WEBPACK_IMPORTED_MODULE_19__.first)()).toPromise();
-                this.routingSubject.next({ triggerPoint: 'end', routerModule: it });
+                this.routingSubject.next({ triggerPoint: 'end', routerModule: it, domRenderRouter: this.domRenderRouter });
                 // }
                 //       }, 0);
             });
@@ -25958,9 +26079,9 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
         await this.domRenderRouter?.go({ path: url });
         // this.afterSetting();
     }
-    async getIntent(url) {
+    async routingRouterModule(url) {
         const intent = typeof url === 'string' ? new _dooboostore_simple_boot_intent_Intent__WEBPACK_IMPORTED_MODULE_6__.Intent(url) : url;
-        const data = await this.routing(intent);
+        const data = await this.routing(intent, { noOnRouting: true });
         return data;
     }
     run(otherInstanceSim, url) {
@@ -26031,7 +26152,7 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
             const items = _dooboostore_dom_render_rawsets_RawSet__WEBPACK_IMPORTED_MODULE_11__.RawSet.createComponentTargetElement({
                 name: name,
                 noStrip: component?.noStrip === true,
-                objFactory: (e, obj, r, counstructorParam) => {
+                objFactory: async (e, obj, r, counstructorParam) => {
                     let newSim;
                     if (counstructorParam?.length) {
                         newSim = new val(...counstructorParam);
@@ -26065,6 +26186,51 @@ class SimpleBootFront extends _dooboostore_simple_boot_SimpleApplication__WEBPAC
     }
     getSimstanceManager() {
         return this.simstanceManager;
+    }
+    saveDataHydration(key, data) {
+        const window = this.option.window;
+        window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__ ??= {};
+        if (window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__[key]) {
+            window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__[key].count++;
+        }
+        else {
+            window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__[key] = { data, count: 1 };
+        }
+    }
+    getDataHydration(key) {
+        const window = this.option.window;
+        return window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__?.[key]?.data;
+    }
+    cutDataHydration(key) {
+        const window = this.option.window;
+        const item = window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__?.[key];
+        if (item) {
+            item.count--;
+            const data = item.data;
+            if (item.count <= 0) {
+                delete window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__[key];
+            }
+            return data;
+        }
+    }
+    deleteDataHydration(key) {
+        const window = this.option.window;
+        if (window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__) {
+            delete window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__[key];
+        }
+    }
+    clearDataHydration() {
+        const window = this.option.window;
+        delete window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__;
+    }
+    writeDataHydration() {
+        const window = this.option.window;
+        const data = window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__;
+        if (data && Object.keys(data).length > 0) {
+            const script = window.document.createElement('script');
+            script.innerHTML = `window.__SIMPLE_BOOT_FRONT_DATA_HYDRATION__ = ${JSON.stringify(data)};`;
+            window.document.body.appendChild(script);
+        }
     }
     onDestroy() {
         // console.log('SimpleBootFront onDestroy');
@@ -26374,10 +26540,123 @@ class SimpleBootHttpSSRFactory {
 
 /***/ }),
 
-/***/ "../../packages/@dooboostore/simple-boot-http-server-ssr/src/proxy/SymbolIntentApiServiceProxy.ts":
-/*!********************************************************************************************************!*\
-  !*** ../../packages/@dooboostore/simple-boot-http-server-ssr/src/proxy/SymbolIntentApiServiceProxy.ts ***!
-  \********************************************************************************************************/
+/***/ "../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts":
+/*!************************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HttpHeaders: () => (/* binding */ HttpHeaders),
+/* harmony export */   makeIntentHeaderBySymbolFor: () => (/* binding */ makeIntentHeaderBySymbolFor)
+/* harmony export */ });
+/* harmony import */ var _Mimes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mimes */ "../../packages/@dooboostore/simple-boot-http-server/src/codes/Mimes.ts");
+
+const HttpHeaders = {
+    ContentLength: 'Content-Length',
+    ContentType: 'Content-Type',
+    ContentEncoding: 'Content-Encoding',
+    Accept: 'Accept',
+    Authorization: 'Authorization',
+    CacheControl: 'Cache-Control',
+    Connection: 'Connection',
+    Date: 'Date',
+    Host: 'Host',
+    Pragma: 'Pragma',
+    Trailer: 'Trailer',
+    TransferEncoding: 'Transfer-Encoding',
+    Upgrade: 'Upgrade',
+    Via: 'Via',
+    Warning: 'Warning',
+    AcceptCharset: 'Accept-Charset',
+    AcceptEncoding: 'Accept-Encoding',
+    AcceptLanguage: 'Accept-Language',
+    AccessControlAllowOrigin: 'Access-Control-Allow-Origin',
+    AccessControlAllowMethods: 'Access-Control-Allow-Methods',
+    AccessControlAllowHeaders: 'Access-Control-Allow-Headers',
+    AccessControlExposeHeaders: 'Access-Control-Expose-Headers',
+    Expect: 'Expect',
+    From: 'From',
+    MaxForwards: 'Max-Forwards',
+    Referer: 'Referer',
+    UserAgent: 'User-Agent',
+    Cookie: 'Cookie',
+    SetCookie: 'Set-Cookie',
+    // SetHeader : 'Set-Header',
+    Cookie2: 'Cookie2',
+    SetCookie2: 'Set-Cookie2',
+    Location: 'Location',
+    IfModifiedSince: 'If-Modified-Since',
+    IfUnmodifiedSince: 'If-Unmodified-Since',
+    IfMatch: 'If-Match',
+    IfNoneMatch: 'If-None-Match',
+    IfRange: 'If-Range',
+    Allow: 'Allow',
+    Server: 'Server',
+    XSimpleBootSsrIntentScheme: 'x-simple-boot-ssr-intent-scheme',
+    XSimpleBootHttpTopicProtocol: 'x-simple-boot-http-topic-protocol'
+};
+const makeIntentHeaderBySymbolFor = (symbol) => {
+    return {
+        [HttpHeaders.Accept]: _Mimes__WEBPACK_IMPORTED_MODULE_0__.Mimes.ApplicationJsonPostSimpleBootSsrIntentScheme,
+        [HttpHeaders.XSimpleBootSsrIntentScheme]: `Symbol.for(${symbol.description})`
+    };
+};
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot-http-server/src/codes/Mimes.ts":
+/*!******************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot-http-server/src/codes/Mimes.ts ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Mimes: () => (/* binding */ Mimes)
+/* harmony export */ });
+var Mimes;
+(function (Mimes) {
+    Mimes["ApplicationJson"] = "application/json";
+    Mimes["ApplicationOctetStream"] = "application/octet-stream";
+    Mimes["ApplicationXml"] = "application/xml";
+    Mimes["ApplicationJsonPatch"] = "application/json-patch+json";
+    Mimes["ApplicationXWwwFormUrlencoded"] = "application/x-www-form-urlencoded";
+    Mimes["TextPlain"] = "text/plain";
+    Mimes["TextHtml"] = "text/html";
+    Mimes["All"] = "*/*";
+    Mimes["TextCss"] = "text/css";
+    Mimes["TextJavascript"] = "text/javascript";
+    Mimes["TextXml"] = "text/xml";
+    Mimes["TextXslt"] = "text/xslt";
+    Mimes["TextXmlDtd"] = "text/xml-dtd";
+    Mimes["TextPlainUtf8"] = "text/plain; charset=utf-8";
+    Mimes["ImagePng"] = "image/png";
+    Mimes["ImageGif"] = "image/gif";
+    Mimes["ImageJpeg"] = "image/jpeg";
+    Mimes["ImageSvg"] = "image/svg+xml";
+    Mimes["ImageBmp"] = "image/bmp";
+    Mimes["ImageTiff"] = "image/tiff";
+    Mimes["ImagePdf"] = "application/pdf";
+    Mimes["ImageXBmp"] = "image/x-bmp";
+    Mimes["ImageXpixmap"] = "image/x-xpixmap";
+    Mimes["ImageXxbm"] = "image/x-xbm";
+    Mimes["MultipartFormData"] = "multipart/form-data";
+    Mimes["ApplicationJsonPostSimpleBootSsrIntentScheme"] = "application/json-post+simple-boot-ssr-intent-scheme";
+    Mimes["Intent"] = "intent";
+})(Mimes || (Mimes = {}));
+
+
+/***/ }),
+
+/***/ "../../packages/@dooboostore/simple-boot-http-server/src/proxy/SymbolIntentApiServiceProxy.ts":
+/*!****************************************************************************************************!*\
+  !*** ../../packages/@dooboostore/simple-boot-http-server/src/proxy/SymbolIntentApiServiceProxy.ts ***!
+  \****************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26387,7 +26666,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
 /* harmony import */ var _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
-/* harmony import */ var _dooboostore_simple_boot_http_server_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/simple-boot-http-server/codes/HttpHeaders */ "../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts");
+/* harmony import */ var _codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../codes/HttpHeaders */ "../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts");
 /* harmony import */ var _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/core/convert/ConvertUtils */ "../../packages/@dooboostore/core/src/convert/ConvertUtils.ts");
 /* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
 var SymbolIntentApiServiceProxy_1;
@@ -26407,13 +26686,16 @@ let SymbolIntentApiServiceProxy = SymbolIntentApiServiceProxy_1 = class SymbolIn
     static createHandler(apiService) {
         return {
             get(target, prop, receiver) {
+                if (prop === '_SimpleBoot_origin') {
+                    return target;
+                }
                 const simConfig = (0,_dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_1__.getSim)(target);
                 const value = Reflect.get(target, prop, receiver);
                 if (typeof value === 'function' && simConfig?.symbol) {
                     return function (...args) {
                         const f = value;
                         const p = (userConfig) => {
-                            const headers = { ...(userConfig?.headers ?? {}), ...(0,_dooboostore_simple_boot_http_server_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__.makeIntentHeaderBySymbolFor)(simConfig.symbol) };
+                            const headers = { ...(userConfig?.headers ?? {}), ...(0,_codes_HttpHeaders__WEBPACK_IMPORTED_MODULE_2__.makeIntentHeaderBySymbolFor)(simConfig.symbol) };
                             const method = userConfig?.method ?? 'post';
                             if (method === 'post' && userConfig?.multipartFormData) {
                                 //@ts-ignore
@@ -26473,7 +26755,7 @@ let SymbolIntentApiServiceProxy = SymbolIntentApiServiceProxy_1 = class SymbolIn
                                         config: userConfig?.config,
                                         fetch: {
                                             credentials: 'include',
-                                            headers: headers,
+                                            headers: headers
                                         }
                                     }
                                 });
@@ -26504,118 +26786,6 @@ SymbolIntentApiServiceProxy = SymbolIntentApiServiceProxy_1 = (0,tslib__WEBPACK_
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_4__.ApiService) === "function" ? _a : Object])
 ], SymbolIntentApiServiceProxy);
 
-
-
-/***/ }),
-
-/***/ "../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts":
-/*!************************************************************************************!*\
-  !*** ../../packages/@dooboostore/simple-boot-http-server/src/codes/HttpHeaders.ts ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   HttpHeaders: () => (/* binding */ HttpHeaders),
-/* harmony export */   makeIntentHeaderBySymbolFor: () => (/* binding */ makeIntentHeaderBySymbolFor)
-/* harmony export */ });
-/* harmony import */ var _Mimes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mimes */ "../../packages/@dooboostore/simple-boot-http-server/src/codes/Mimes.ts");
-
-const HttpHeaders = {
-    ContentLength: 'Content-Length',
-    ContentType: 'Content-Type',
-    ContentEncoding: 'Content-Encoding',
-    Accept: 'Accept',
-    Authorization: 'Authorization',
-    CacheControl: 'Cache-Control',
-    Connection: 'Connection',
-    Date: 'Date',
-    Host: 'Host',
-    Pragma: 'Pragma',
-    Trailer: 'Trailer',
-    TransferEncoding: 'Transfer-Encoding',
-    Upgrade: 'Upgrade',
-    Via: 'Via',
-    Warning: 'Warning',
-    AcceptCharset: 'Accept-Charset',
-    AcceptEncoding: 'Accept-Encoding',
-    AcceptLanguage: 'Accept-Language',
-    AccessControlAllowOrigin: 'Access-Control-Allow-Origin',
-    AccessControlAllowMethods: 'Access-Control-Allow-Methods',
-    AccessControlAllowHeaders: 'Access-Control-Allow-Headers',
-    AccessControlExposeHeaders: 'Access-Control-Expose-Headers',
-    Expect: 'Expect',
-    From: 'From',
-    MaxForwards: 'Max-Forwards',
-    Referer: 'Referer',
-    UserAgent: 'User-Agent',
-    Cookie: 'Cookie',
-    SetCookie: 'Set-Cookie',
-    // SetHeader : 'Set-Header',
-    Cookie2: 'Cookie2',
-    SetCookie2: 'Set-Cookie2',
-    Location: 'Location',
-    IfModifiedSince: 'If-Modified-Since',
-    IfUnmodifiedSince: 'If-Unmodified-Since',
-    IfMatch: 'If-Match',
-    IfNoneMatch: 'If-None-Match',
-    IfRange: 'If-Range',
-    Allow: 'Allow',
-    Server: 'Server',
-    XSimpleBootSsrIntentScheme: 'x-simple-boot-ssr-intent-scheme'
-};
-const makeIntentHeaderBySymbolFor = (symbol) => {
-    return {
-        [HttpHeaders.Accept]: _Mimes__WEBPACK_IMPORTED_MODULE_0__.Mimes.ApplicationJsonPostSimpleBootSsrIntentScheme,
-        [HttpHeaders.XSimpleBootSsrIntentScheme]: `Symbol.for(${symbol.description})`
-    };
-};
-
-
-/***/ }),
-
-/***/ "../../packages/@dooboostore/simple-boot-http-server/src/codes/Mimes.ts":
-/*!******************************************************************************!*\
-  !*** ../../packages/@dooboostore/simple-boot-http-server/src/codes/Mimes.ts ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Mimes: () => (/* binding */ Mimes)
-/* harmony export */ });
-var Mimes;
-(function (Mimes) {
-    Mimes["ApplicationJson"] = "application/json";
-    Mimes["ApplicationOctetStream"] = "application/octet-stream";
-    Mimes["ApplicationXml"] = "application/xml";
-    Mimes["ApplicationJsonPatch"] = "application/json-patch+json";
-    Mimes["ApplicationXWwwFormUrlencoded"] = "application/x-www-form-urlencoded";
-    Mimes["TextPlain"] = "text/plain";
-    Mimes["TextHtml"] = "text/html";
-    Mimes["All"] = "*/*";
-    Mimes["TextCss"] = "text/css";
-    Mimes["TextJavascript"] = "text/javascript";
-    Mimes["TextXml"] = "text/xml";
-    Mimes["TextXslt"] = "text/xslt";
-    Mimes["TextXmlDtd"] = "text/xml-dtd";
-    Mimes["TextPlainUtf8"] = "text/plain; charset=utf-8";
-    Mimes["ImagePng"] = "image/png";
-    Mimes["ImageGif"] = "image/gif";
-    Mimes["ImageJpeg"] = "image/jpeg";
-    Mimes["ImageSvg"] = "image/svg+xml";
-    Mimes["ImageBmp"] = "image/bmp";
-    Mimes["ImageTiff"] = "image/tiff";
-    Mimes["ImagePdf"] = "application/pdf";
-    Mimes["ImageXBmp"] = "image/x-bmp";
-    Mimes["ImageXpixmap"] = "image/x-xpixmap";
-    Mimes["ImageXxbm"] = "image/x-xbm";
-    Mimes["MultipartFormData"] = "multipart/form-data";
-    Mimes["ApplicationJsonPostSimpleBootSsrIntentScheme"] = "application/json-post+simple-boot-ssr-intent-scheme";
-    Mimes["Intent"] = "intent";
-})(Mimes || (Mimes = {}));
 
 
 /***/ }),
@@ -26708,8 +26878,10 @@ class SimpleApplication {
         // this.simstanceManager.setStoreSet(SimpleApplication, this);
         this.simstanceManager.setStoreSet(_simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_0__.SimstanceManager, this.simstanceManager);
         // cacheManager는 사용자가 불러다 사용할때 뜨도록. 미리 추가안해준다.
-        this.routerManager = this.simstanceManager.proxy(new _route_RouterManager__WEBPACK_IMPORTED_MODULE_3__.RouterManager(this.simstanceManager, option));
-        this.intentManager = this.simstanceManager.proxy(new _intent_IntentManager__WEBPACK_IMPORTED_MODULE_2__.IntentManager(this.simstanceManager, this.routerManager, option));
+        // this.routerManager = this.simstanceManager.proxy(new RouterManager(this.simstanceManager, option));
+        // this.intentManager = this.simstanceManager.proxy(new IntentManager(this.simstanceManager, this.routerManager, option));
+        this.routerManager = new _route_RouterManager__WEBPACK_IMPORTED_MODULE_3__.RouterManager(this, this.simstanceManager, option);
+        this.intentManager = new _intent_IntentManager__WEBPACK_IMPORTED_MODULE_2__.IntentManager(this, this.simstanceManager, this.routerManager, option);
         this.simstanceManager.setStoreSet(_intent_IntentManager__WEBPACK_IMPORTED_MODULE_2__.IntentManager, this.intentManager);
         this.simstanceManager.setStoreSet(_route_RouterManager__WEBPACK_IMPORTED_MODULE_3__.RouterManager, this.routerManager);
         _decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_6__.containers.add(this);
@@ -26724,6 +26896,8 @@ class SimpleApplication {
         return this.routerManager;
     }
     run(otherInstanceSim) {
+        otherInstanceSim ??= new Map();
+        otherInstanceSim.set(SimpleApplication, this);
         this.simstanceManager.run(otherInstanceSim);
         return this;
         // return this.simstanceManager;
@@ -27216,7 +27390,9 @@ function Sim(configOrTarget) {
 }
 const getSim = (target) => {
     if (target != null && target !== undefined && typeof target === 'object') {
-        target = target.constructor;
+        // proxy 걸린거떄문에 이렇게 한다. 안걸린것도 잘된다.
+        target = Object.getPrototypeOf(target).constructor;
+        // target = target.constructor;
     }
     try {
         return _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(SimMetadataKey, target);
@@ -27948,6 +28124,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getValidator: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidator),
 /* harmony export */   getValidators: () => (/* reexport safe */ _validate__WEBPACK_IMPORTED_MODULE_9__.getValidators),
 /* harmony export */   isSimNoProxy: () => (/* reexport safe */ _SimNoProxy__WEBPACK_IMPORTED_MODULE_2__.isSimNoProxy),
+/* harmony export */   isTargetFactory: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isTargetFactory),
+/* harmony export */   isTargetNone: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isTargetNone),
+/* harmony export */   isTargetScheme: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isTargetScheme),
+/* harmony export */   isTargetSymbol: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isTargetSymbol),
+/* harmony export */   isTargetType: () => (/* reexport safe */ _inject__WEBPACK_IMPORTED_MODULE_7__.isTargetType),
 /* harmony export */   routerProcess: () => (/* reexport safe */ _route__WEBPACK_IMPORTED_MODULE_8__.routerProcess),
 /* harmony export */   simProcess: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.simProcess),
 /* harmony export */   sims: () => (/* reexport safe */ _SimDecorator__WEBPACK_IMPORTED_MODULE_1__.sims),
@@ -27991,7 +28172,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   InjectSituationType: () => (/* binding */ InjectSituationType),
 /* harmony export */   SituationTypeContainer: () => (/* binding */ SituationTypeContainer),
 /* harmony export */   SituationTypeContainers: () => (/* binding */ SituationTypeContainers),
-/* harmony export */   getInject: () => (/* binding */ getInject)
+/* harmony export */   getInject: () => (/* binding */ getInject),
+/* harmony export */   isTargetFactory: () => (/* binding */ isTargetFactory),
+/* harmony export */   isTargetNone: () => (/* binding */ isTargetNone),
+/* harmony export */   isTargetScheme: () => (/* binding */ isTargetScheme),
+/* harmony export */   isTargetSymbol: () => (/* binding */ isTargetSymbol),
+/* harmony export */   isTargetType: () => (/* binding */ isTargetType)
 /* harmony export */ });
 /* harmony import */ var _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @dooboostore/core/reflect/ReflectUtils */ "../../packages/@dooboostore/core/src/reflect/ReflectUtils.ts");
 
@@ -28026,9 +28212,26 @@ class SituationTypeContainers {
         return this.containers.find(predicate);
     }
 }
+// [아키텍트님의 정석] Type Guards for InjectConfig (High Precision)
+const isTargetSymbol = (config) => {
+    return 'symbol' in config && config.symbol !== undefined;
+};
+const isTargetType = (config) => {
+    return 'type' in config && config.type !== undefined;
+};
+const isTargetScheme = (config) => {
+    return 'scheme' in config && config.scheme !== undefined;
+};
+const isTargetFactory = (config) => {
+    return 'factory' in config && typeof config.factory === 'function' && !('symbol' in config) && !('type' in config) && !('scheme' in config);
+};
+const isTargetNone = (config) => {
+    return !('symbol' in config) && !('type' in config) && !('scheme' in config) && !isTargetFactory(config);
+};
 const InjectMetadataKey = Symbol('Inject');
 const injectProcess = (config, target, propertyKey, parameterIndex) => {
-    if (propertyKey && typeof target === 'object') { // <-- object: method
+    if (propertyKey && typeof target === 'object') {
+        // <-- object: method
         const otarget = target;
         target = target.constructor;
         const saves = (Reflect.getOwnMetadata(InjectMetadataKey, target, propertyKey) || []);
@@ -28036,7 +28239,8 @@ const injectProcess = (config, target, propertyKey, parameterIndex) => {
         saves.push({ index: parameterIndex, config: config, propertyKey, type });
         _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.defineMetadata(InjectMetadataKey, saves, target, propertyKey);
     }
-    else if (!propertyKey || typeof target === 'function') { // <-- function: constructor
+    else if (!propertyKey || typeof target === 'function') {
+        // <-- function: constructor
         const existingInjectdParameters = (_dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getMetadata(InjectMetadataKey, target) || []);
         const type = _dooboostore_core_reflect_ReflectUtils__WEBPACK_IMPORTED_MODULE_0__.ReflectUtils.getParameterTypes(target)[parameterIndex];
         existingInjectdParameters.push({ index: parameterIndex, config: config, type });
@@ -28118,7 +28322,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SituationTypeContainer: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.SituationTypeContainer),
 /* harmony export */   SituationTypeContainers: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.SituationTypeContainers),
 /* harmony export */   getInject: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.getInject),
-/* harmony export */   getInjection: () => (/* reexport safe */ _Injection__WEBPACK_IMPORTED_MODULE_1__.getInjection)
+/* harmony export */   getInjection: () => (/* reexport safe */ _Injection__WEBPACK_IMPORTED_MODULE_1__.getInjection),
+/* harmony export */   isTargetFactory: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isTargetFactory),
+/* harmony export */   isTargetNone: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isTargetNone),
+/* harmony export */   isTargetScheme: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isTargetScheme),
+/* harmony export */   isTargetSymbol: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isTargetSymbol),
+/* harmony export */   isTargetType: () => (/* reexport safe */ _Inject__WEBPACK_IMPORTED_MODULE_0__.isTargetType)
 /* harmony export */ });
 /* harmony import */ var _Inject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Inject */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Inject.ts");
 /* harmony import */ var _Injection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Injection */ "../../packages/@dooboostore/simple-boot/src/decorators/inject/Injection.ts");
@@ -28732,36 +28941,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   IntentManager: () => (/* binding */ IntentManager),
 /* harmony export */   isRouterPublishType: () => (/* binding */ isRouterPublishType)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
-/* harmony import */ var _Intent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Intent */ "../../packages/@dooboostore/simple-boot/src/intent/Intent.ts");
-/* harmony import */ var _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../simstance/SimstanceManager */ "../../packages/@dooboostore/simple-boot/src/simstance/SimstanceManager.ts");
-/* harmony import */ var _decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
-/* harmony import */ var _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../simstance/SimAtomic */ "../../packages/@dooboostore/simple-boot/src/simstance/SimAtomic.ts");
-/* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
-/* harmony import */ var _route_RouterManager__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../route/RouterManager */ "../../packages/@dooboostore/simple-boot/src/route/RouterManager.ts");
-/* harmony import */ var _SimOption__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../SimOption */ "../../packages/@dooboostore/simple-boot/src/SimOption.ts");
-/* harmony import */ var _IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./IntentSubscribe */ "../../packages/@dooboostore/simple-boot/src/intent/IntentSubscribe.ts");
-/* harmony import */ var _decorators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../decorators */ "../../packages/@dooboostore/simple-boot/src/decorators/index.ts");
-var _a, _b, _c;
+/* harmony import */ var _Intent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Intent */ "../../packages/@dooboostore/simple-boot/src/intent/Intent.ts");
+/* harmony import */ var _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../simstance/SimAtomic */ "../../packages/@dooboostore/simple-boot/src/simstance/SimAtomic.ts");
+/* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
+/* harmony import */ var _IntentSubscribe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IntentSubscribe */ "../../packages/@dooboostore/simple-boot/src/intent/IntentSubscribe.ts");
+/* harmony import */ var _decorators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../decorators */ "../../packages/@dooboostore/simple-boot/src/decorators/index.ts");
 
 
 
 
 
-
-
-
-
-
-const isRouterPublishType = (it) => typeof it === 'object' &&
-    typeof it.router === 'string' &&
-    typeof it.rootRouter === 'function';
-let IntentManager = class IntentManager {
+const isRouterPublishType = (it) => typeof it === 'object' && typeof it.router === 'string' && typeof it.rootRouter === 'function';
+// @Sim
+class IntentManager {
+    simpleApplication;
     simstanceManager;
     routerManager;
     simOption;
-    subject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_5__.Subject();
-    constructor(simstanceManager, routerManager, simOption) {
+    subject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_2__.Subject();
+    constructor(simpleApplication, simstanceManager, routerManager, simOption) {
+        this.simpleApplication = simpleApplication;
         this.simstanceManager = simstanceManager;
         this.routerManager = routerManager;
         this.simOption = simOption;
@@ -28782,10 +28981,10 @@ let IntentManager = class IntentManager {
             if (instance) {
                 target.push(instance);
             }
-            it = new _Intent__WEBPACK_IMPORTED_MODULE_1__.Intent(actualPath, data);
+            it = new _Intent__WEBPACK_IMPORTED_MODULE_0__.Intent(actualPath, data);
         }
         else if (typeof it === 'string') {
-            it = new _Intent__WEBPACK_IMPORTED_MODULE_1__.Intent(it, data);
+            it = new _Intent__WEBPACK_IMPORTED_MODULE_0__.Intent(it, data);
         }
         const intent = it;
         if (!routerMatch) {
@@ -28805,7 +29004,7 @@ let IntentManager = class IntentManager {
         const { intent, target } = await this.makeIntentData(it, data);
         const r = [];
         const targetInstances = target.map(it => {
-            if (it instanceof _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic) {
+            if (it instanceof _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_1__.SimAtomic) {
                 return it.getValue();
             }
             else {
@@ -28828,24 +29027,40 @@ let IntentManager = class IntentManager {
                         lastProp = i;
                     });
                     if (orNewSim && typeof orNewSim === 'function') {
-                        const injects = (0,_decorators__WEBPACK_IMPORTED_MODULE_9__.getInject)(callthis, orNewSim.name);
+                        const injects = (0,_decorators__WEBPACK_IMPORTED_MODULE_4__.getInject)(callthis, orNewSim.name);
                         // console.log('-------params', injects);
                         if (injects) {
                             for (const inject of injects) {
-                                let v = this.simstanceManager.findLastSim(inject.config).getValue();
-                                if (typeof inject.config.returnFactory === "function") {
-                                    v = await inject.config.returnFactory({ instance: callthis, methodName: orNewSim.name, parameter: intent.data }, v);
+                                let v = undefined;
+                                const cfg = inject.config;
+                                // [아키텍트님의 정석] 주입 3대 전략 (Factory / Symbol / Type)
+                                if ((0,_decorators__WEBPACK_IMPORTED_MODULE_4__.isTargetFactory)(cfg)) {
+                                    // Choice 3: 순수 Factory 전략
+                                    v = await cfg.factory({ instance: callthis, methodName: orNewSim.name, parameter: intent.data, application: this.simpleApplication });
                                 }
-                                else if (typeof inject.config.returnFactory === "string") {
-                                    v = await v[inject.config.returnFactory]({ instance: callthis, methodName: orNewSim.name, parameter: intent.data }, v);
+                                else {
+                                    // Choice 1 & 2: Symbol 또는 Type/Scheme 전략
+                                    const findLastSim = (0,_decorators__WEBPACK_IMPORTED_MODULE_4__.isTargetSymbol)(cfg) ? this.simstanceManager.findLastSim(cfg.symbol) : (0,_decorators__WEBPACK_IMPORTED_MODULE_4__.isTargetScheme)(cfg) || (0,_decorators__WEBPACK_IMPORTED_MODULE_4__.isTargetType)(cfg) ? this.simstanceManager.findLastSim(cfg) : undefined;
+                                    if (findLastSim) {
+                                        v = findLastSim.getValue();
+                                    }
+                                    // Augmentation: 찾은 객체를 팩토리를 통해 가공
+                                    if (cfg.factory && v !== undefined) {
+                                        if (typeof cfg.factory === 'function') {
+                                            v = await cfg.factory({ instance: callthis, methodName: orNewSim.name, parameter: intent.data, application: this.simpleApplication }, v);
+                                        }
+                                        else if (v && typeof cfg.factory === 'string' && v[cfg.factory]) {
+                                            v = await v[cfg.factory]({ instance: callthis, methodName: orNewSim.name, parameter: intent.data, application: this.simpleApplication }, v);
+                                        }
+                                    }
                                 }
                                 intent.data[inject.index] = v;
                             }
                         }
-                        if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.DATA_PARAMETERS === intent.publishType) {
+                        if (_Intent__WEBPACK_IMPORTED_MODULE_0__.PublishType.DATA_PARAMETERS === intent.publishType) {
                             r.push(orNewSim.call(callthis, intent.data));
                         }
-                        else if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.INLINE_DATA_PARAMETERS === intent.publishType) {
+                        else if (_Intent__WEBPACK_IMPORTED_MODULE_0__.PublishType.INLINE_DATA_PARAMETERS === intent.publishType) {
                             r.push(orNewSim.call(callthis, ...intent.data));
                         }
                         else {
@@ -28858,18 +29073,18 @@ let IntentManager = class IntentManager {
                     }
                 }
                 else {
-                    if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.DATA_PARAMETERS === intent.publishType) {
-                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__.isIntentSubscribe)(orNewSim)) {
+                    if (_Intent__WEBPACK_IMPORTED_MODULE_0__.PublishType.DATA_PARAMETERS === intent.publishType) {
+                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_3__.isIntentSubscribe)(orNewSim)) {
                             r.push(orNewSim.intentSubscribe(intent.data));
                         }
                     }
-                    else if (_Intent__WEBPACK_IMPORTED_MODULE_1__.PublishType.INLINE_DATA_PARAMETERS === intent.publishType) {
-                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__.isIntentSubscribe)(orNewSim)) {
+                    else if (_Intent__WEBPACK_IMPORTED_MODULE_0__.PublishType.INLINE_DATA_PARAMETERS === intent.publishType) {
+                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_3__.isIntentSubscribe)(orNewSim)) {
                             r.push(orNewSim.intentSubscribe(...intent.data));
                         }
                     }
                     else {
-                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_8__.isIntentSubscribe)(orNewSim)) {
+                        if ((0,_IntentSubscribe__WEBPACK_IMPORTED_MODULE_3__.isIntentSubscribe)(orNewSim)) {
                             r.push(orNewSim?.intentSubscribe?.(intent));
                         }
                     }
@@ -28882,12 +29097,7 @@ let IntentManager = class IntentManager {
         const rdata = await this.publishMeta(it, data);
         return rdata.return;
     }
-};
-IntentManager = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
-    _decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_3__.Sim,
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_2__.SimstanceManager !== "undefined" && _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_2__.SimstanceManager) === "function" ? _a : Object, typeof (_b = typeof _route_RouterManager__WEBPACK_IMPORTED_MODULE_6__.RouterManager !== "undefined" && _route_RouterManager__WEBPACK_IMPORTED_MODULE_6__.RouterManager) === "function" ? _b : Object, typeof (_c = typeof _SimOption__WEBPACK_IMPORTED_MODULE_7__.SimOption !== "undefined" && _SimOption__WEBPACK_IMPORTED_MODULE_7__.SimOption) === "function" ? _c : Object])
-], IntentManager);
-
+}
 
 
 /***/ }),
@@ -28986,6 +29196,9 @@ class SimProxyHandler {
         else if (name === '_SimpleBoot_simOption') {
             return this.simOption;
         }
+        else if (name === '_SimpleBoot_origin') {
+            return target;
+        }
         else {
             return target[name];
         }
@@ -29057,7 +29270,10 @@ class SimProxyHandler {
         }
     }
     getExceptionHandler(e, thisArg, target) {
-        const globalConfigSets = this.simOption.advice.map(it => this.simstanceManager?.getOrNewSim({ target: it })).filter(it => it).map(it => {
+        const globalConfigSets = this.simOption.advice
+            .map(it => this.simstanceManager?.getOrNewSim({ target: it }))
+            .filter(it => it)
+            .map(it => {
             return { thisArg: it, config: (0,_decorators_exception_ExceptionDecorator__WEBPACK_IMPORTED_MODULE_2__.targetExceptionHandler)(it, e, [target]) };
         }) ?? [];
         const thisConfigSet = { thisArg: thisArg, config: (0,_decorators_exception_ExceptionDecorator__WEBPACK_IMPORTED_MODULE_2__.targetExceptionHandler)(thisArg, e, [target]) };
@@ -29143,18 +29359,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   RouterManager: () => (/* binding */ RouterManager)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs");
-/* harmony import */ var _intent_Intent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../intent/Intent */ "../../packages/@dooboostore/simple-boot/src/intent/Intent.ts");
-/* harmony import */ var _RouterModule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RouterModule */ "../../packages/@dooboostore/simple-boot/src/route/RouterModule.ts");
-/* harmony import */ var _decorators_route_Router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../decorators/route/Router */ "../../packages/@dooboostore/simple-boot/src/decorators/route/Router.ts");
-/* harmony import */ var _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../simstance/SimAtomic */ "../../packages/@dooboostore/simple-boot/src/simstance/SimAtomic.ts");
-/* harmony import */ var _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../simstance/SimstanceManager */ "../../packages/@dooboostore/simple-boot/src/simstance/SimstanceManager.ts");
-/* harmony import */ var _decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
-/* harmony import */ var _dooboostore_core_expression_Expression__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @dooboostore/core/expression/Expression */ "../../packages/@dooboostore/core/src/expression/Expression.ts");
-/* harmony import */ var _route_RouterAction__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../route/RouterAction */ "../../packages/@dooboostore/simple-boot/src/route/RouterAction.ts");
-/* harmony import */ var _SimOption__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../SimOption */ "../../packages/@dooboostore/simple-boot/src/SimOption.ts");
-/* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
-var _a, _b;
+/* harmony import */ var _intent_Intent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../intent/Intent */ "../../packages/@dooboostore/simple-boot/src/intent/Intent.ts");
+/* harmony import */ var _RouterModule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RouterModule */ "../../packages/@dooboostore/simple-boot/src/route/RouterModule.ts");
+/* harmony import */ var _decorators_route_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../decorators/route/Router */ "../../packages/@dooboostore/simple-boot/src/decorators/route/Router.ts");
+/* harmony import */ var _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../simstance/SimAtomic */ "../../packages/@dooboostore/simple-boot/src/simstance/SimAtomic.ts");
+/* harmony import */ var _dooboostore_core_expression_Expression__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/core/expression/Expression */ "../../packages/@dooboostore/core/src/expression/Expression.ts");
+/* harmony import */ var _route_RouterAction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../route/RouterAction */ "../../packages/@dooboostore/simple-boot/src/route/RouterAction.ts");
+/* harmony import */ var _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @dooboostore/core/message/Subject */ "../../packages/@dooboostore/core/src/message/Subject.ts");
 
 
 
@@ -29162,16 +29373,15 @@ var _a, _b;
 
 
 
-
-
-
-
-let RouterManager = class RouterManager {
+// @Sim
+class RouterManager {
+    simpleApplication;
     simstanceManager;
     simOption;
     activeRouterModule;
-    subject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_10__.Subject();
-    constructor(simstanceManager, simOption) {
+    subject = new _dooboostore_core_message_Subject__WEBPACK_IMPORTED_MODULE_6__.Subject();
+    constructor(simpleApplication, simstanceManager, simOption) {
+        this.simpleApplication = simpleApplication;
         this.simstanceManager = simstanceManager;
         this.simOption = simOption;
     }
@@ -29189,8 +29399,8 @@ let RouterManager = class RouterManager {
         if (targetRouter) {
             const targetType = (typeof targetRouter === 'object') ? targetRouter.constructor : targetRouter;
             const targetValue = (typeof targetRouter === 'object') ? targetRouter : undefined;
-            const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({ targetKeyType: targetType, originalType: targetType, value: targetValue }, this.simstanceManager);
-            const routerData = routerAtomic.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_3__.RouterMetadataKey);
+            const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_3__.SimAtomic({ targetKeyType: targetType, originalType: targetType, value: targetValue }, this.simstanceManager);
+            const routerData = routerAtomic.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_2__.RouterMetadataKey);
             if (routerData) {
                 const currentPrefix = (option?.prefix ?? '') + routerData.path;
                 // Add the current router's path if it has a default route
@@ -29219,7 +29429,7 @@ let RouterManager = class RouterManager {
         }
         const targetType = (typeof targetRouter === 'object') ? targetRouter.constructor : targetRouter;
         const targetValue = (typeof targetRouter === 'object') ? targetRouter : undefined;
-        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({ targetKeyType: targetType, originalType: targetType, value: targetValue }, this.simstanceManager);
+        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_3__.SimAtomic({ targetKeyType: targetType, originalType: targetType, value: targetValue }, this.simstanceManager);
         const allMatches = this._collectAllMatchingModules(routerAtomic, intent, []);
         // Priority 1: Exact path match with a module
         const exactModuleMatches = allMatches.filter(rm => rm.path === intent.pathname && rm.module);
@@ -29237,16 +29447,17 @@ let RouterManager = class RouterManager {
     }
     async routing(intent, option) {
         if (typeof intent === 'string') {
-            intent = new _intent_Intent__WEBPACK_IMPORTED_MODULE_1__.Intent(intent);
+            intent = new _intent_Intent__WEBPACK_IMPORTED_MODULE_0__.Intent(intent);
         }
         const targetRouter = option?.router ?? this.simOption.rootRouter;
+        const callCheckOnRouting = option?.noOnRouting !== true; // 기본값은 false, 즉 onRouting 호출
         if (!targetRouter) {
             throw new Error('no router');
         }
         // await new Promise((r)=> setTimeout(r, 0)); // <-- 이거 넣어야지 두번불러지는게 없어지는듯? 뭐지 event loop 변경된건가?
         const targetType = (typeof targetRouter === 'object') ? targetRouter.constructor : targetRouter;
         const targetValue = (typeof targetRouter === 'object') ? targetRouter : undefined;
-        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({ targetKeyType: targetType, originalType: targetType, value: targetValue }, this.simstanceManager);
+        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_3__.SimAtomic({ targetKeyType: targetType, originalType: targetType, value: targetValue }, this.simstanceManager);
         const rootRouter = routerAtomic.getValue();
         const executeModuleResult = this.getExecuteModule(routerAtomic, intent, [], option);
         if (executeModuleResult) {
@@ -29263,10 +29474,10 @@ let RouterManager = class RouterManager {
                     const current = routerChains[i];
                     const next = routerChains[i + 1];
                     const value = current.getValue();
-                    if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isCanActivate(value) && next) {
+                    if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isCanActivate(value) && next) {
                         await value.canActivate(routingDataSet, next.getValue());
                     }
-                    if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isOnRouting(value) && next) {
+                    if (callCheckOnRouting && _route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isOnRouting(value) && next) {
                         await value.onRouting(routingDataSet);
                     }
                 }
@@ -29279,10 +29490,10 @@ let RouterManager = class RouterManager {
             if (!executeModule?.module) {
                 const routerChain = executeModule.routerChains[executeModule.routerChains.length - 1];
                 const value = routerChain?.getValue();
-                if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isCanActivate(value)) {
+                if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isCanActivate(value)) {
                     await value.canActivate(routingDataSet, moduleInstance);
                 }
-                if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isOnRouting(value)) {
+                if (callCheckOnRouting && _route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isOnRouting(value)) {
                     await value.onRouting(routingDataSet);
                 }
             }
@@ -29291,14 +29502,14 @@ let RouterManager = class RouterManager {
             // 모듈을 포함하는 라우터와 모듈 인스턴스 자체의 라이프사이클 훅을 호출합니다.
             else { // find page
                 const value = executeModule.router?.getValue();
-                if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isCanActivate(value)) {
+                if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isCanActivate(value)) {
                     await value.canActivate(routingDataSet, moduleInstance);
                 }
-                if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isOnRouting(value)) {
+                if (callCheckOnRouting && _route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isOnRouting(value)) {
                     await value.onRouting(routingDataSet);
                 }
                 // 가지고있는 선택된 Route도 isRouting이면
-                if (moduleInstance && _route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isOnRouting(moduleInstance)) {
+                if (moduleInstance && callCheckOnRouting && _route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isOnRouting(moduleInstance)) {
                     await moduleInstance.onRouting(routingDataSet);
                 }
             }
@@ -29345,13 +29556,13 @@ let RouterManager = class RouterManager {
          * this.activeRouterModule = routerModule;
          * return this.activeRouterModule as RouterModule<any, any>;
         */
-        const routerModule = new _RouterModule__WEBPACK_IMPORTED_MODULE_2__.RouterModule(this.simstanceManager, rootRouter, undefined, []);
+        const routerModule = new _RouterModule__WEBPACK_IMPORTED_MODULE_1__.RouterModule(this.simstanceManager, rootRouter, undefined, []);
         const routingDataSet = { intent, routerModule: routerModule, routerManager: this };
         const value = rootRouter;
-        if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isCanActivate(value)) {
+        if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isCanActivate(value)) {
             await value.canActivate(routingDataSet, null);
         }
-        if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_8__.RouterAction.isOnRouting(value)) {
+        if (_route_RouterAction__WEBPACK_IMPORTED_MODULE_5__.RouterAction.isOnRouting(value)) {
             await value.onRouting(routingDataSet);
         }
         this.activeRouterModule = routerModule;
@@ -29359,7 +29570,7 @@ let RouterManager = class RouterManager {
     }
     getExecuteModule(router, intent, parentRouters, option) {
         const path = intent.pathname;
-        const routerConfig = router.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_3__.RouterMetadataKey);
+        const routerConfig = router.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_2__.RouterMetadataKey);
         if (routerConfig) {
             // filter
             const filters = [];
@@ -29373,7 +29584,7 @@ let RouterManager = class RouterManager {
             if (noAccept) {
                 return;
             }
-            const routerStrings = parentRouters.map(it => it.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_3__.RouterMetadataKey)?.path || '');
+            const routerStrings = parentRouters.map(it => it.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_2__.RouterMetadataKey)?.path || '');
             const isRoot = this.isRootUrl(routerConfig.path, routerStrings, path);
             // console.log('----------routerConfig.path', routerConfig.path, 'isRoot', isRoot, 'routerStrings', routerStrings, 'path', path);
             if (isRoot) {
@@ -29383,7 +29594,7 @@ let RouterManager = class RouterManager {
                     let bestMatchModule = undefined;
                     let bestMatchLength = -1;
                     for (const child of routerConfig.routers) {
-                        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({ targetKeyType: child, originalType: child }, this.simstanceManager);
+                        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_3__.SimAtomic({ targetKeyType: child, originalType: child }, this.simstanceManager);
                         const executeModule = this.getExecuteModule(routerAtomic, intent, currentParentRouters, option);
                         if (executeModule) {
                             const [rm, chains] = executeModule;
@@ -29421,13 +29632,13 @@ let RouterManager = class RouterManager {
         const urls = url.split('/');
         const trimmedUrls = urls.slice(0, searchs.length).join('/');
         // console.log('!!searchString', searchString, 'url', trimmedUrls);
-        return !!_dooboostore_core_expression_Expression__WEBPACK_IMPORTED_MODULE_7__.Expression.Path.pathNameData(trimmedUrls, searchString);
+        return !!_dooboostore_core_expression_Expression__WEBPACK_IMPORTED_MODULE_4__.Expression.Path.pathNameData(trimmedUrls, searchString);
         // return url.startsWith(searchString)
     }
     _collectAllMatchingModules(router, intent, parentRouters) {
         const matches = [];
         const path = intent.pathname;
-        const routerConfig = router.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_3__.RouterMetadataKey);
+        const routerConfig = router.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_2__.RouterMetadataKey);
         if (routerConfig) {
             const filters = [];
             if (Array.isArray(routerConfig.filters)) {
@@ -29440,14 +29651,14 @@ let RouterManager = class RouterManager {
             if (noAccept) {
                 return matches;
             }
-            const routerStrings = parentRouters.map(it => it.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_3__.RouterMetadataKey)?.path || '');
+            const routerStrings = parentRouters.map(it => it.getConfig(_decorators_route_Router__WEBPACK_IMPORTED_MODULE_2__.RouterMetadataKey)?.path || '');
             const isRoot = this.isRootUrl(routerConfig.path, routerStrings, path);
             if (isRoot) {
                 const currentParentRouters = [...parentRouters, router];
                 // Collect matches from child routers
                 if (routerConfig.routers && routerConfig.routers.length > 0) {
                     for (const child of routerConfig.routers) {
-                        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({ targetKeyType: child, originalType: child }, this.simstanceManager);
+                        const routerAtomic = new _simstance_SimAtomic__WEBPACK_IMPORTED_MODULE_3__.SimAtomic({ targetKeyType: child, originalType: child }, this.simstanceManager);
                         matches.push(...this._collectAllMatchingModules(routerAtomic, intent, currentParentRouters));
                     }
                 }
@@ -29471,7 +29682,7 @@ let RouterManager = class RouterManager {
         // 2. If no exact module, check if the intent path matches the router's path
         const urlRoot = parentRoots.join('') + (routerData.path || '');
         if (this.isRootUrl(routerData.path, parentRoots, intent.pathname)) {
-            const rm = new _RouterModule__WEBPACK_IMPORTED_MODULE_2__.RouterModule(this.simstanceManager, router);
+            const rm = new _RouterModule__WEBPACK_IMPORTED_MODULE_1__.RouterModule(this.simstanceManager, router);
             rm.intent = intent;
             rm.path = urlRoot;
             rm.pathData = intent.getPathnameData(urlRoot);
@@ -29489,7 +29700,7 @@ let RouterManager = class RouterManager {
                 if (pathnameData) {
                     try {
                         const dataSet = this.findRouteProperty(routerData.route, it, intent);
-                        const rm = new _RouterModule__WEBPACK_IMPORTED_MODULE_2__.RouterModule(this.simstanceManager, router, dataSet.child);
+                        const rm = new _RouterModule__WEBPACK_IMPORTED_MODULE_1__.RouterModule(this.simstanceManager, router, dataSet.child);
                         rm.data = dataSet.data;
                         rm.path = path;
                         rm.pathData = pathnameData;
@@ -29562,12 +29773,7 @@ let RouterManager = class RouterManager {
             propertyKeys
         };
     }
-};
-RouterManager = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
-    _decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_6__.Sim,
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_5__.SimstanceManager !== "undefined" && _simstance_SimstanceManager__WEBPACK_IMPORTED_MODULE_5__.SimstanceManager) === "function" ? _a : Object, typeof (_b = typeof _SimOption__WEBPACK_IMPORTED_MODULE_9__.SimOption !== "undefined" && _SimOption__WEBPACK_IMPORTED_MODULE_9__.SimOption) === "function" ? _b : Object])
-], RouterManager);
-
+}
 
 
 /***/ }),
@@ -29824,6 +30030,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SimpleApplication__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../SimpleApplication */ "../../packages/@dooboostore/simple-boot/src/SimpleApplication.ts");
 /* harmony import */ var _decorators_SimNoProxy__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../decorators/SimNoProxy */ "../../packages/@dooboostore/simple-boot/src/decorators/SimNoProxy.ts");
 /* harmony import */ var _dooboostore_core_random_RandomUtils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @dooboostore/core/random/RandomUtils */ "../../packages/@dooboostore/core/src/random/RandomUtils.ts");
+/* harmony import */ var _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @dooboostore/core/valid/ValidUtils */ "../../packages/@dooboostore/core/src/valid/ValidUtils.ts");
+
 
 
 
@@ -29862,7 +30070,10 @@ class SimstanceManager {
         const r = [];
         Array.from(this.storage.entries()).forEach(([targetKeyType, targetMap]) => {
             // Array.from(targetMap).forEach(it => {
-            r.push(...Array.from(Array.from(targetMap.keys())).map(sit => new _SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({ targetKeyType, originalType: sit }, this)));
+            r.push(...Array.from(Array.from(targetMap.keys())).map(sit => new _SimAtomic__WEBPACK_IMPORTED_MODULE_4__.SimAtomic({
+                targetKeyType,
+                originalType: sit
+            }, this)));
             // });
         });
         return r;
@@ -29971,7 +30182,11 @@ class SimstanceManager {
         if (target) {
             const registed = this.getStoreSet(target, originTypeTarget);
             if (registed?.type && !registed?.instance) {
-                return this.resolve({ targetKey: target, target: originTypeTarget, newInstanceCarrier: newInstanceCarrier });
+                return this.resolve({
+                    targetKey: target,
+                    target: originTypeTarget,
+                    newInstanceCarrier: newInstanceCarrier
+                });
             }
             return registed?.instance;
         }
@@ -30036,7 +30251,13 @@ class SimstanceManager {
     }
     newSim({ target, simCreateAfter, otherStorage, newInstanceCarrier }) {
         // @ts-ignore TODO: 여기서 생성
-        const r = new target(...this.getParameterSim({ target: target, otherStorage: otherStorage, newInstanceCarrier: newInstanceCarrier }));
+        const parameters = this.getParameterSim({
+            target: target,
+            otherStorage: otherStorage,
+            newInstanceCarrier: newInstanceCarrier
+        });
+        // @ts-ignore
+        const r = _dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_15__.ValidUtils.isFunction(target) && !target.prototype ? target(...parameters) : new target(...parameters);
         let p = this.proxy(r);
         const config = (0,_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_2__.getSim)(target);
         if (config?.proxy) {
@@ -30103,30 +30324,31 @@ class SimstanceManager {
         // this.storage map to json String
         injections = paramTypes.map((token, idx) => {
             const saveInject = injects?.find(it => it.index === idx);
-            if (saveInject?.config.disabled) {
-                return undefined;
-            }
-            for (const f of firstCheckMaker ?? []) {
-                const firstCheckObj = f({ target, targetKey }, token, idx, saveInject);
-                if (undefined !== firstCheckObj) {
-                    return firstCheckObj;
-                }
-            }
             if (saveInject) {
                 const inject = saveInject.config;
+                for (const f of firstCheckMaker ?? []) {
+                    const firstCheckObj = f({ target, targetKey }, token, idx, saveInject);
+                    if (undefined !== firstCheckObj) {
+                        return firstCheckObj;
+                    }
+                }
                 let obj = otherStorage?.get(token);
                 // console.log('vvvvv----->', obj, token, inject);
-                if (token === Array && (inject.type || inject.scheme || inject.symbol)) {
+                if (token === Array && ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetType)(inject) || (0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetScheme)(inject) || (0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetSymbol)(inject))) {
                     const p = [];
-                    if (inject.type) {
+                    if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetType)(inject) && inject.type) {
                         p.push(...this.getStoreSets(inject.type)
-                            .map(it => this.resolve({ targetKey: inject.type, target: it.type, newInstanceCarrier: newInstanceCarrier }))
+                            .map(it => this.resolve({
+                            targetKey: inject.type,
+                            target: it.type,
+                            newInstanceCarrier: newInstanceCarrier
+                        }))
                             .reverse());
                     }
-                    if (inject.symbol) {
+                    if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetSymbol)(inject)) {
                         p.push(...this.getSimConfig(inject.symbol).map(it => it.getValue({ newInstanceCarrier: newInstanceCarrier })));
                     }
-                    if (inject.scheme) {
+                    if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetScheme)(inject)) {
                         p.push(...this.getSimConfig(inject.scheme).map(it => it.getValue({ newInstanceCarrier: newInstanceCarrier })));
                     }
                     return p;
@@ -30154,40 +30376,81 @@ class SimstanceManager {
                     }
                 }
                 if (!obj) {
-                    const findLastSim = inject.symbol
-                        ? this.findLastSim(inject.symbol)
-                        : this.findLastSim({ scheme: inject.scheme, type: inject.type });
-                    try {
-                        obj = findLastSim
-                            ? this.resolve({
-                                targetKey: findLastSim?.type.targetKeyType ?? token,
-                                newInstanceCarrier: newInstanceCarrier
-                            })
-                            : this.resolve({ targetKey: token, newInstanceCarrier: newInstanceCarrier });
+                    // [아키텍트님의 정석] 주입 3대 전략 (Factory / Symbol / Type)
+                    if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetFactory)(inject)) {
+                        // Choice 3: 순수 Factory 전략
+                        obj = inject.factory({
+                            instance: undefined,
+                            methodName: String(targetKey),
+                            parameter: injections,
+                            application: this.simpleApplication
+                        });
                     }
-                    catch (e) {
-                        // Inject optional 처리
-                        if (inject.optional) {
-                            return undefined;
+                    else {
+                        // Choice 1 & 2: Symbol 또는 Type/Scheme 전략
+                        let findLastSim;
+                        if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetSymbol)(inject)) {
+                            findLastSim = this.findLastSim(inject.symbol);
                         }
-                        else {
-                            throw e;
+                        else if ((0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetType)(inject) || (0,_decorators_inject_Inject__WEBPACK_IMPORTED_MODULE_6__.isTargetScheme)(inject)) {
+                            findLastSim = this.findLastSim(inject);
+                        }
+                        try {
+                            obj = findLastSim
+                                ? this.resolve({
+                                    targetKey: findLastSim?.type.targetKeyType ?? token,
+                                    newInstanceCarrier: newInstanceCarrier
+                                })
+                                : this.resolve({ targetKey: token, newInstanceCarrier: newInstanceCarrier });
+                            // Augmentation: 찾은 객체를 팩토리를 통해 가공
+                            if (inject.factory && obj) {
+                                if (typeof inject.factory === 'function') {
+                                    obj = inject.factory({
+                                        instance: undefined,
+                                        methodName: String(targetKey),
+                                        parameter: injections,
+                                        application: this.simpleApplication
+                                    }, obj);
+                                }
+                            }
+                        }
+                        catch (e) {
+                            // Inject optional 처리
+                            if (inject.optional) {
+                                return undefined;
+                            }
+                            else {
+                                throw e;
+                            }
                         }
                     }
                 }
-                if (inject.applyProxy && obj) {
-                    if (inject.applyProxy.param) {
-                        obj = new Proxy(obj, new inject.applyProxy.type(...inject.applyProxy.param));
+                if (inject.proxy && obj) {
+                    // [아키텍트님의 정석] 통합 프록시 전략 (클래스 또는 팩토리 함수)
+                    if (_dooboostore_core_valid_ValidUtils__WEBPACK_IMPORTED_MODULE_15__.ValidUtils.isConstructor(inject.proxy)) {
+                        // Choice A: 클래스 프록시
+                        const handler = (0,_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_2__.getSim)(inject.proxy) ? this.getOrNewSim({ target: inject.proxy }) : new inject.proxy();
+                        if (handler) {
+                            obj = new Proxy(obj, handler);
+                        }
                     }
-                    else {
-                        obj = new Proxy(obj, new inject.applyProxy.type());
+                    else if (typeof inject.proxy === 'function') {
+                        // Choice B: 즉석 팩토리 프록시
+                        const handler = inject.proxy({ application: this.simpleApplication, instance: obj });
+                        if (handler) {
+                            obj = new Proxy(obj, handler);
+                        }
                     }
                 }
                 return obj;
             }
             else if (token) {
-                // TODO: 왜 other에서 가져오는걸까?  -> 와부에서 전달해주는걸 먼저 처리 해주기위해 추측
-                // console.log('oooooooooooooooo', token, otherStorage)
+                for (const f of firstCheckMaker ?? []) {
+                    const firstCheckObj = f({ target, targetKey }, token, idx, saveInject);
+                    if (undefined !== firstCheckObj) {
+                        return firstCheckObj;
+                    }
+                }
                 return otherStorage?.get(token) ?? this.resolve({ targetKey: token, newInstanceCarrier });
             }
             return undefined;
@@ -30197,11 +30460,7 @@ class SimstanceManager {
     proxy(target) {
         try {
             const noProxy = (0,_decorators_SimNoProxy__WEBPACK_IMPORTED_MODULE_13__.isSimNoProxy)(target);
-            if (!noProxy &&
-                target !== null &&
-                (0,_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_2__.getSim)(target) &&
-                typeof target === 'object' &&
-                !('_SimpleBoot_isProxy' in target)) {
+            if (!noProxy && target !== null && (0,_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_2__.getSim)(target) && typeof target === 'object' && !('_SimpleBoot_isProxy' in target)) {
                 for (const key in target) {
                     if (!(0,_decorators_SimNoProxy__WEBPACK_IMPORTED_MODULE_13__.isSimNoProxy)(target, key)) {
                         target[key] = this.proxy(target[key]);
@@ -30412,7 +30671,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_service_CodeFetchService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @src/service/CodeFetchService */ "./src/service/CodeFetchService.ts");
 /* harmony import */ var _dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @dooboostore/simple-boot/decorators/SimDecorator */ "../../packages/@dooboostore/simple-boot/src/decorators/SimDecorator.ts");
 /* harmony import */ var _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @dooboostore/simple-boot/fetch/ApiService */ "../../packages/@dooboostore/simple-boot/src/fetch/ApiService.ts");
-/* harmony import */ var _dooboostore_simple_boot_http_server_ssr_proxy_SymbolIntentApiServiceProxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/simple-boot-http-server-ssr/proxy/SymbolIntentApiServiceProxy */ "../../packages/@dooboostore/simple-boot-http-server-ssr/src/proxy/SymbolIntentApiServiceProxy.ts");
+/* harmony import */ var _dooboostore_simple_boot_http_server_proxy_SymbolIntentApiServiceProxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dooboostore/simple-boot-http-server/proxy/SymbolIntentApiServiceProxy */ "../../packages/@dooboostore/simple-boot-http-server/src/proxy/SymbolIntentApiServiceProxy.ts");
 /* harmony import */ var _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @dooboostore/core/convert/ConvertUtils */ "../../packages/@dooboostore/core/src/convert/ConvertUtils.ts");
 /* harmony import */ var _src_environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @src/environments/environment */ "./src/environments/environment.ts");
 var _a;
@@ -30431,7 +30690,7 @@ let FrontEndCodeFetchService = class FrontEndCodeFetchService {
     async fetch(request, data) {
         const rawData = await this.apiService.get({
             target: `${_src_environments_environment__WEBPACK_IMPORTED_MODULE_6__.environment.packageGithubIoUrl}/${request.path}`,
-            config: { transformText: true },
+            config: { responseTransform: "text" },
         });
         return { rawData: _dooboostore_core_convert_ConvertUtils__WEBPACK_IMPORTED_MODULE_5__.ConvertUtils.escapeHTML(rawData, { targets: ['$', '<', '>', '&'] }) };
     }
@@ -30439,7 +30698,7 @@ let FrontEndCodeFetchService = class FrontEndCodeFetchService {
 FrontEndCodeFetchService = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
     (0,_dooboostore_simple_boot_decorators_SimDecorator__WEBPACK_IMPORTED_MODULE_2__.Sim)({
         symbol: _src_service_CodeFetchService__WEBPACK_IMPORTED_MODULE_1__.CodeFetchService.SYMBOL,
-        proxy: _dooboostore_simple_boot_http_server_ssr_proxy_SymbolIntentApiServiceProxy__WEBPACK_IMPORTED_MODULE_4__.SymbolIntentApiServiceProxy,
+        proxy: _dooboostore_simple_boot_http_server_proxy_SymbolIntentApiServiceProxy__WEBPACK_IMPORTED_MODULE_4__.SymbolIntentApiServiceProxy,
     }),
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__metadata)("design:paramtypes", [typeof (_a = typeof _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_3__.ApiService !== "undefined" && _dooboostore_simple_boot_fetch_ApiService__WEBPACK_IMPORTED_MODULE_3__.ApiService) === "function" ? _a : Object])
 ], FrontEndCodeFetchService);

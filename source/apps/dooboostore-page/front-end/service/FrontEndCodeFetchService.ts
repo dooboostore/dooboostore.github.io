@@ -4,7 +4,7 @@ import { ApiService } from "@dooboostore/simple-boot/fetch/ApiService";
 import {
   Config,
   SymbolIntentApiServiceProxy,
-} from "@dooboostore/simple-boot-http-server-ssr/proxy/SymbolIntentApiServiceProxy";
+} from "@dooboostore/simple-boot-http-server/proxy/SymbolIntentApiServiceProxy";
 import {ConvertUtils} from '@dooboostore/core/convert/ConvertUtils'
 import { environment } from "@src/environments/environment";
 @Sim({
@@ -18,7 +18,7 @@ export class FrontEndCodeFetchService implements CodeFetchService {
   async fetch(request: CodeFetchService.FetchRequest, data?:((config: Config<CodeFetchService.FetchRequest>) => Promise<CodeFetchService.FetchResponse>)): Promise<CodeFetchService.FetchResponse> {
   const rawData = await this.apiService.get<string>({
     target: `${environment.packageGithubIoUrl}/${request.path}`,
-    config: { transformText: true },
+    config: { responseTransform: "text"},
   });
   return { rawData: ConvertUtils.escapeHTML(rawData, {targets:['$','<','>','&']}) };
   }
