@@ -85,7 +85,7 @@ async function searchKeywordInTab(context: BrowserContext, keyword: string, keyw
     setTimeout(() => {
       console.log(`  [${keywordIndex + 1}/${totalKeywords}] ⏱️ Timeout - closing keyword tab`);
       resolve(videos);
-    }, 30000);
+    }, 50000);
   });
   
   const workPromise = (async (): Promise<VideoRecommendation[]> => {
@@ -94,11 +94,11 @@ async function searchKeywordInTab(context: BrowserContext, keyword: string, keyw
       
       // 검색 결과 페이지로 바로 이동
       const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(keyword)}`;
-      await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+      await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
       
       // 검색 결과 대기
-      await page.waitForSelector('ytd-video-renderer, ytd-rich-item-renderer', { timeout: 15000 });
-      await delay(1000);
+      await page.waitForSelector('ytd-video-renderer, ytd-rich-item-renderer', { timeout: 30000 });
+      await delay(2000);
       
       // "동영상" 탭 클릭
       console.log(`  [${keywordIndex + 1}/${totalKeywords}] 📺 Clicking '동영상' tab...`);
@@ -113,7 +113,7 @@ async function searchKeywordInTab(context: BrowserContext, keyword: string, keyw
             await button.click();
             tabClicked = true;
             console.log(`  [${keywordIndex + 1}/${totalKeywords}] ✅ Clicked '동영상' tab (found by text)`);
-            await delay(1500);
+            await delay(3000);
             break;
           }
         }
@@ -134,7 +134,7 @@ async function searchKeywordInTab(context: BrowserContext, keyword: string, keyw
                 await tab.click();
                 tabClicked = true;
                 console.log(`  [${keywordIndex + 1}/${totalKeywords}] ✅ Clicked '동영상' tab (selector: ${selector})`);
-                await delay(1500);
+                await delay(3000);
                 break;
               }
             } catch (e) {
@@ -170,7 +170,7 @@ async function searchKeywordInTab(context: BrowserContext, keyword: string, keyw
         
         // 페이지 끝까지 스크롤
         await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
-        await delay(1500); // 로딩 대기
+        await delay(3000); // 로딩 대기
         
         scrollAttempts++;
         
@@ -410,7 +410,7 @@ async function processPersona(persona: Persona): Promise<PersonaResult> {
     // 1. 유튜브 홈 페이지 접속
     console.log('🌐 Navigating to YouTube...');
     await page.goto('https://www.youtube.com', { waitUntil: 'domcontentloaded' });
-    await delay(1000);
+    await delay(3000);
     
     // 2. 각 키워드를 병렬로 검색하고 결과 수집
     console.log(`\n🔎 Searching ${persona.keywords.length} keywords in parallel...`);
