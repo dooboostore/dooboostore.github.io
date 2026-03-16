@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "pertinent",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈpɜːrtnənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "적절한, 타당한, 꼭 들어맞는",
+              "examples": [
+                {
+                  "text": "a <b>pertinent</b> remark",
+                  "translatedText": "적절한 말"
+                }
+              ],
+              "originalMeaning": "적절한, 타당한, 꼭 들어맞는"
+            },
+            {
+              "meaning": "관계 있는, 관련된; (…에) 속하는 ((to))",
+              "examples": [
+                {
+                  "text": "<b>pertinent</b> details",
+                  "translatedText": "관련 항목"
+                }
+              ],
+              "originalMeaning": "관계 있는, 관련된; (…에) 속하는 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 부속물[품]",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 부속물[품]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1f877a9743d34e789ae84ceb6ad22819",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1f877a9743d34e789ae84ceb6ad22819",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a99e66bf5f79fe11ebb005fc12089344",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 제의는 이 사건에 가장 적절하다",
+      "text": "What he proposes is most <b>pertinent</b> to the matter in hand."
+    }
+  ],
+  "isWordType": true
+}

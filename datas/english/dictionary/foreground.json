@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "foreground",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│fɔːrɡraʊnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전경(前景) ((경치·그림의))(opp. background)",
+              "examples": [],
+              "originalMeaning": "전경(前景) ((경치·그림의))(opp. background)"
+            },
+            {
+              "meaning": "최전면, 표면, 가장 두드러진 위치",
+              "examples": [],
+              "originalMeaning": "최전면, 표면, 가장 두드러진 위치"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "전경에 그리다, 최전면에 내세우다",
+              "examples": [],
+              "originalMeaning": "전경에 그리다, 최전면에 내세우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2d096f1a55694a4885780c0f8ad7f11a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2d096f1a55694a4885780c0f8ad7f11a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "foregrounds"
+        },
+        {
+          "type": "과거형",
+          "value": "foregrounded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "foregrounding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "foregrounded"
+        }
+      ],
+      "aliasConjugation": "foregrounds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "26d0043b30e8b9bf7979d4ccf7f79b7e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사진의 전경에 옛 다리가 있다",
+      "text": "We see an old bridge in the <b>foreground</b> of the picture."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "dare",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "der"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "감히 …하다, 뱃심 좋게[겁내지 않고, 건방지게도] …하다(venture)",
+              "examples": [
+                {
+                  "text": "He daren't do it.",
+                  "translatedText": "그는 그럴 용기가 없다."
+                }
+              ],
+              "originalMeaning": "감히 …하다, 뱃심 좋게[겁내지 않고, 건방지게도] …하다(venture)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "감히 …하다, 뱃심 좋게[건방지게도] …하다 ((조동사 용법과 같은 뜻; 구문은 보통 동사처럼 -s, do, to를 씀; 그러나 to를 쓰지 않는 경우도 있음))",
+              "examples": [
+                {
+                  "text": "( <b>dare</b> +to do) He does not <b>dare</b> to do it.",
+                  "translatedText": "그는 그럴 용기가 없다."
+                }
+              ],
+              "originalMeaning": "감히 …하다, 뱃심 좋게[건방지게도] …하다 ((조동사 용법과 같은 뜻; 구문은 보통 동사처럼 -s, do, to를 씀; 그러나 to를 쓰지 않는 경우도 있음))"
+            },
+            {
+              "meaning": "모험적으로 해보다, <위험을> 무릅쓰다",
+              "examples": [
+                {
+                  "text": "I <b>dare</b> any danger[anything].",
+                  "translatedText": "어떤 위험이라도 무릅쓰고 한다."
+                }
+              ],
+              "originalMeaning": "모험적으로 해보다, <위험을> 무릅쓰다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대담하게[감히] 하다, (…할) 용기가 있다",
+              "examples": [
+                {
+                  "text": "I would do it if I dared.",
+                  "translatedText": "할 수만 있다면 하겠는데 (겁이 나서 못하겠다)."
+                }
+              ],
+              "originalMeaning": "대담하게[감히] 하다, (…할) 용기가 있다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7d0c53224d8e404cbdfbb66cdb313eed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7d0c53224d8e404cbdfbb66cdb313eed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dares"
+        },
+        {
+          "type": "과거형",
+          "value": "dared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "daring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dared"
+        }
+      ],
+      "aliasConjugation": "dares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "515d8babaf4b310c1c69638ae51c2fa3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너 말 다 했것다",
+      "text": "How <b>dare</b> you say such a thing to me? or You are a fine one to talk to me like that!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감히 그것을 한다.",
+      "text": "He dares to do it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 큰 대담성을 가졌다",
+      "text": "He has great daring."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "할 수만 있다면 하겠는데 .",
+      "text": "I would do it if I dared."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그럴 용기가 없다.",
+      "text": "He does not <b>dare</b> to do it."
+    }
+  ],
+  "isWordType": true
+}

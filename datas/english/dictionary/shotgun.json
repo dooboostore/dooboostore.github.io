@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "shotgun",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʃɑːtɡʌn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "산탄(散彈)총, 새총, 엽총",
+              "examples": [],
+              "originalMeaning": "산탄(散彈)총, 새총, 엽총"
+            },
+            {
+              "meaning": "숏건 포메이션",
+              "examples": [],
+              "originalMeaning": "숏건 포메이션"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "shotgun으로 쏘다, 강제[강압]하다",
+              "examples": [],
+              "originalMeaning": "<b>shotgun</b>으로 쏘다, 강제[강압]하다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "산탄총의",
+              "examples": [
+                {
+                  "text": "a <b>shotgun</b> murder",
+                  "translatedText": "탄총에 의한 살인"
+                }
+              ],
+              "originalMeaning": "산탄총의"
+            },
+            {
+              "meaning": "무턱대고 하는, 무차별의",
+              "examples": [],
+              "originalMeaning": "무턱대고 하는, 무차별의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c75208c6df0c4f18a4b8b06c36a17986",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c75208c6df0c4f18a4b8b06c36a17986",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shotguns"
+        },
+        {
+          "type": "과거형",
+          "value": "shotgunned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shotgunning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shotgunned"
+        }
+      ],
+      "aliasConjugation": "shotguns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8127e35cc618fcaef74134cac26301cb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사냥에 참가할 사람은 엽총을 지참할 것",
+      "text": "One who wants to join in the hunting should carry a <b>shotgun</b>."
+    }
+  ],
+  "isWordType": true
+}

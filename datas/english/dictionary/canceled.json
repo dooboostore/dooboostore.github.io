@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "canceled",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "취소된, 소인이 있는",
+              "examples": [],
+              "originalMeaning": "취소된, 소인이 있는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4fd74b8a8f1403cb02a81fb81c30510",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4fd74b8a8f1403cb02a81fb81c30510",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "638d055998de5428136d480d51cfef21",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "cancel",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkænsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<계약·주문 등을> 취소하다, 무효로 하다(annul)",
+              "examples": [
+                {
+                  "text": "<b>cancel</b> an order for the book",
+                  "translatedText": "그 책의 주문을 취소하다"
+                }
+              ],
+              "originalMeaning": "<계약·주문 등을> 취소하다, 무효로 하다(annul)"
+            },
+            {
+              "meaning": "지우다, 삭제하다; 말소하다",
+              "examples": [
+                {
+                  "text": "<b>cancel</b> two lines",
+                  "translatedText": "2행을 지우다"
+                }
+              ],
+              "originalMeaning": "지우다, 삭제하다; 말소하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "상쇄되다 ((out))",
+              "examples": [],
+              "originalMeaning": "상쇄되다 ((out))"
+            },
+            {
+              "meaning": "<분자·분모 등이> (…로) 약분되다 ((by))",
+              "examples": [],
+              "originalMeaning": "<분자·분모 등이> (…로) 약분되다 ((by))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "말소, 취소; (계약의) 해제",
+              "examples": [],
+              "originalMeaning": "말소, 취소; (계약의) 해제"
+            },
+            {
+              "meaning": "삭제 (부분)",
+              "examples": [],
+              "originalMeaning": "삭제 (부분)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e08650d520644304bd2061c10b6a51ab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e08650d520644304bd2061c10b6a51ab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "cancels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3406308cdb6f140172f7d73d819874af",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이제 와서 취소할 수도 없다",
+      "text": "It is too late to <b>cancel</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 계약은 파기된 것으로 간주한다",
+      "text": "We consider the contract <b>canceled</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다음 뉴욕발 편은 결항되었다",
+      "text": "The next flight from New York has been <b>canceled</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "태풍 경보는 한 시간 전에 해제되었다",
+      "text": "The typhoon warning was <b>canceled</b> an hour ago."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 계약이 파기된 것으로 알았다",
+      "text": "They considered that the contract was <b>canceled</b>."
+    }
+  ],
+  "isWordType": true
+}

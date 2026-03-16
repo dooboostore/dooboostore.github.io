@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "overlap",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "겹치다, 포개다; <테이블 덮개가> …로부터 삐죽이 나오다",
+              "examples": [
+                {
+                  "text": "They <b>overlap</b> each other.",
+                  "translatedText": "그들은 서로 겹쳐 있다."
+                }
+              ],
+              "originalMeaning": "겹치다, 포개다; <테이블 덮개가> …로부터 삐죽이 나오다"
+            },
+            {
+              "meaning": "일부분이 …와 일치하다; …와 공통점이 있다, 상치(相値)하다; (시간적으로) 중복하다",
+              "examples": [],
+              "originalMeaning": "일부분이 …와 일치하다; …와 공통점이 있다, 상치(相値)하다; (시간적으로) 중복하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(공간적으로) 겹쳐지다, 부분적으로 일치하다",
+              "examples": [],
+              "originalMeaning": "(공간적으로) 겹쳐지다, 부분적으로 일치하다"
+            },
+            {
+              "meaning": "(시간적으로) 일부분이 일치하다, 중복되다",
+              "examples": [
+                {
+                  "text": "His free time didn't <b>overlap</b> with mine.",
+                  "translatedText": "그의 자유 시간과 나의 자유 시간이 일치하지 않았다."
+                }
+              ],
+              "originalMeaning": "(시간적으로) 일부분이 일치하다, 중복되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "중복, 부분적 일치",
+              "examples": [],
+              "originalMeaning": "중복, 부분적 일치"
+            },
+            {
+              "meaning": "삐져 나온 부분의 크기[양]",
+              "examples": [],
+              "originalMeaning": "삐져 나온 부분의 크기[양]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50b1bacc2d9c4693a7f77d3f84d5f6a2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50b1bacc2d9c4693a7f77d3f84d5f6a2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "overlaps"
+        },
+        {
+          "type": "과거형",
+          "value": "overlapped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "overlapping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "overlapped"
+        }
+      ],
+      "aliasConjugation": "overlaps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fece36904785cd14ad143974b2e5d1cd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 서로 겹쳐 있다.",
+      "text": "They <b>overlap</b> each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 직무와 나의 직무가 겹친다",
+      "text": "His duties and mine <b>overlap</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "천의 끝이 테이블에서 삐죽이 나와 있다.",
+      "text": "The ends of cloth <b>overlap</b> the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지붕의 기와는 서로 미늘 달고 있다",
+      "text": "The tiles on the roof <b>overlap</b> each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지붕 위의 기와가 서로 겹쳐져 있다",
+      "text": "The tiles on the roof <b>overlap</b> one another."
+    }
+  ],
+  "isWordType": true
+}

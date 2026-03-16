@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "tread",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tred"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "걷다, 가다 ((walk가 일반적)); 진행하다; [비유] 일을 해 나가다",
+              "examples": [],
+              "originalMeaning": "걷다, 가다 ((walk가 일반적)); 진행하다; [비유] 일을 해 나가다"
+            },
+            {
+              "meaning": "(잘못하여) 밟다; [비유] 망치다, 손상시키다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>tread</b> a perilous path",
+                  "translatedText": "[비유] 위험한 길을 걷다"
+                }
+              ],
+              "originalMeaning": "(잘못하여) 밟다; [비유] 망치다, 손상시키다 ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "밟다, 걷다, 지나가다",
+              "examples": [
+                {
+                  "text": "<b>tread</b> a path through the snow",
+                  "translatedText": "눈을 밟아 길을 내다"
+                }
+              ],
+              "originalMeaning": "밟다, 걷다, 지나가다"
+            },
+            {
+              "meaning": "<과일 등을> 밟다, 밟아 으깨다; <페달 등을> 밟다",
+              "examples": [
+                {
+                  "text": "<b>tread</b> grapes",
+                  "translatedText": "(포도즙을 짜기 위하여) 포도를 밟다"
+                }
+              ],
+              "originalMeaning": "<과일 등을> 밟다, 밟아 으깨다; <페달 등을> 밟다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "밟음; 발걸음, 걸음걸이; 밟는 소리, 발소리; 길",
+              "examples": [],
+              "originalMeaning": "밟음; 발걸음, 걸음걸이; 밟는 소리, 발소리; 길"
+            },
+            {
+              "meaning": "(계단 등의) 발판(tread-board); 페달, 디딤판 ((재봉틀·자전거·죽마(竹馬) 등의)); (사닥다리의) 디딤 횡목",
+              "examples": [],
+              "originalMeaning": "(계단 등의) 발판(<b>tread</b>-board); 페달, 디딤판 ((재봉틀·자전거·죽마(竹馬) 등의)); (사닥다리의) 디딤 횡목"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d95b920a51a64c01bc007bc3684a0f71",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d95b920a51a64c01bc007bc3684a0f71",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "treads"
+        },
+        {
+          "type": "과거형",
+          "value": "trod"
+        },
+        {
+          "type": "현재 분사",
+          "value": "treading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "trodden, trod"
+        }
+      ],
+      "aliasConjugation": "treads",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c24581820e4a9a2e58dfb1a181128ac3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 호랑이 꼬리를 밟는 심정이었다",
+      "text": "I felt as if I were treading on a lion's tail."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 발을 밟지 않도록 주의해 주시오.",
+      "text": "Please be careful not to <b>tread</b> on my foot."
+    }
+  ],
+  "isWordType": true
+}

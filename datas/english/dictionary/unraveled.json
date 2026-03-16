@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "unravel",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʌnˈrævl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<얽힌 실 등을> 풀다",
+              "examples": [],
+              "originalMeaning": "<얽힌 실 등을> 풀다"
+            },
+            {
+              "meaning": "해명하다, 해결하다",
+              "examples": [
+                {
+                  "text": "<b>unravel</b> a situation",
+                  "translatedText": "국면을 타개하다"
+                }
+              ],
+              "originalMeaning": "해명하다, 해결하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "풀어지다, 해명되다",
+              "examples": [],
+              "originalMeaning": "풀어지다, 해명되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2286cdee417c48fa9c3270d5ed2374ae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2286cdee417c48fa9c3270d5ed2374ae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "unravels"
+        },
+        {
+          "type": "과거형",
+          "value": "unravelled, unraveled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "unravelling, unraveling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "unravelled, unraveled"
+        }
+      ],
+      "aliasConjugation": "unravels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8e6e301a7659f88e92d63d93fbd05558",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 없어진 금고의 수수께끼를 풀려고 애썼다",
+      "text": "They tried to solve[<b>unravel</b>] the mystery of the missing cashbox."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "미스테리가 풀리기 시작했다",
+      "text": "The mystery started to <b>unravel</b>."
+    }
+  ],
+  "isWordType": true
+}

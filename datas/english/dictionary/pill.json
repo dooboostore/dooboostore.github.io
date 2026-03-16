@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "pill",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "píl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "환약, 알약; 작은 알 모양의 것 (→medicine)",
+              "examples": [],
+              "originalMeaning": "환약, 알약; 작은 알 모양의 것 (→<span class='related_word' lang='en' >medicine</span>)"
+            },
+            {
+              "meaning": "싫은 것[사람], 괴로운 일",
+              "examples": [],
+              "originalMeaning": "싫은 것[사람], 괴로운 일"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "환약으로 만들다",
+              "examples": [],
+              "originalMeaning": "환약으로 만들다"
+            },
+            {
+              "meaning": "환약을 먹이다",
+              "examples": [],
+              "originalMeaning": "환약을 먹이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/532293023691446c987dae8f050a21b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/532293023691446c987dae8f050a21b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pills"
+        },
+        {
+          "type": "과거형",
+          "value": "pilled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pilling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pilled"
+        }
+      ],
+      "aliasConjugation": "pills",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "563530bdd1e622a01f39cd0c1c4eb71f",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "pill",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[고어] 약탈하다; [방언] <껍질을> 벗기다, 까다",
+              "examples": [],
+              "originalMeaning": "[고어] 약탈하다; [방언] <껍질을> 벗기다, 까다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1ca6fc9185d5401f833b022c140cf887",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1ca6fc9185d5401f833b022c140cf887",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "pills",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c3dad2745f6f21381952662751a06485",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 약은 아픔을 가라앉힐 것이다",
+      "text": "These pills will help to ease the pain."
+    }
+  ],
+  "isWordType": true
+}

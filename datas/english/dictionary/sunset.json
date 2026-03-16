@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "sunset",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌnset"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "해넘이, 일몰; 해질녘(cf. SUNRISE)",
+              "examples": [
+                {
+                  "text": "at[after] <b>sunset</b>",
+                  "translatedText": "일몰시[후]에"
+                }
+              ],
+              "originalMeaning": "해넘이, 일몰; 해질녘(cf. SUNRISE)"
+            },
+            {
+              "meaning": "저녁놀이 진 하늘, 저녁놀 빛",
+              "examples": [],
+              "originalMeaning": "저녁놀이 진 하늘, 저녁놀 빛"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "쇠퇴하는, 사양의",
+              "examples": [],
+              "originalMeaning": "쇠퇴하는, 사양의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a525108cfe90445a9c28aa949d6fcec4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a525108cfe90445a9c28aa949d6fcec4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sunsets"
+        },
+        {
+          "type": "과거형",
+          "value": "sunsetted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sunsetting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sunsetted"
+        }
+      ],
+      "aliasConjugation": "sunsets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bf1d41e8d00a76db43ab0287c420e5a0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이제까지 이렇게 아름다운 석양을 본 적이 없다.",
+      "text": "I have never seen so beautiful a <b>sunset</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하늘은 일몰시에 밝아진다.",
+      "text": "The sky lights up at <b>sunset</b>."
+    }
+  ],
+  "isWordType": true
+}
