@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "marvel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈmɑːrvl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "놀라운 일, 경이(驚異), 불가사의함",
+              "examples": [
+                {
+                  "text": "The <b>marvel</b> is that ….",
+                  "translatedText": "신기한 일은 …인 것이다."
+                }
+              ],
+              "originalMeaning": "놀라운 일, 경이(驚異), 불가사의함"
+            },
+            {
+              "meaning": "[보통 a ~] 놀라운 사람[물건], 비범한 사람[재능]",
+              "examples": [
+                {
+                  "text": "a <b>marvel</b> of patience",
+                  "translatedText": "놀라울 만큼 참을성 있는 사람"
+                }
+              ],
+              "originalMeaning": "[보통 a ~] 놀라운 사람[물건], 비범한 사람[재능]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "놀라다, 경탄하다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>marvel</b> at his courage",
+                  "translatedText": "그의 용기에 놀라다"
+                }
+              ],
+              "originalMeaning": "놀라다, 경탄하다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이상하게 여기다(wonder), 놀라다, 경탄하다",
+              "examples": [
+                {
+                  "text": "I <b>marvel</b> that he could do so.",
+                  "translatedText": "그가 그렇게 할 수 있었다니 놀랍다."
+                }
+              ],
+              "originalMeaning": "이상하게 여기다(wonder), 놀라다, 경탄하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/85f274b9335f443a8e8382bc1e4bc075",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/85f274b9335f443a8e8382bc1e4bc075",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "marvels"
+        },
+        {
+          "type": "과거형",
+          "value": "marvelled, marveled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "marvelling, marveling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "marvelled, marveled"
+        }
+      ],
+      "aliasConjugation": "marvels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "368af45c4db130ab088b0a2b95e0c788",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신기한 일은 …인 것이다.",
+      "text": "The <b>marvel</b> is that ...."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 그렇게 할 수 있었다니 놀랍다.",
+      "text": "I <b>marvel</b> that he could do so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 아이는 정말 신동이다",
+      "text": "The child is really a <b>marvel</b>[phenomenon, wonder]"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 산의 아름다운 단풍에 감탄할 것입니다",
+      "text": "You'll <b>marvel</b> at the beautiful fall foliage of that mountain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 그 죄수가 어떻게 탈옥했을까 하고 이상하게 생각했다.",
+      "text": "The police marveled how the prisoner had escaped."
+    }
+  ],
+  "isWordType": true
+}
