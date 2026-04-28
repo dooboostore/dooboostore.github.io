@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "recall",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "상기하다, 생각해 내다 (=remember)",
+              "examples": [
+                {
+                  "text": "I can't <b>recall</b> having met him.",
+                  "translatedText": "그를 만난 일이 생각나지 않는다."
+                }
+              ],
+              "originalMeaning": "상기하다, 생각해 내다 (=<span class='related_word' lang='en' >remember</span>)"
+            },
+            {
+              "meaning": "생각나게 하다, 상기시키다 ((to)); 연상시키다",
+              "examples": [
+                {
+                  "text": "an old house which recalls a Victorian farmhouse",
+                  "translatedText": "빅토리아조(朝)의 농가를 연상시키는 낡은 집"
+                }
+              ],
+              "originalMeaning": "생각나게 하다, 상기시키다 ((to)); 연상시키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "회상, 상기; 회상력, 기억력",
+              "examples": [
+                {
+                  "text": "total <b>recall</b>",
+                  "translatedText": "세밀한 데까지 생각해 내는 능력(을 가진 사람)"
+                }
+              ],
+              "originalMeaning": "회상, 상기; 회상력, 기억력"
+            },
+            {
+              "meaning": "도로 부름, (대사 등의) 소환, [미] 리콜 ((일반 투표에 의한 공무원의 해임(권)))",
+              "examples": [],
+              "originalMeaning": "도로 부름, (대사 등의) 소환, [미] 리콜 ((일반 투표에 의한 공무원의 해임(권)))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/24f3b33414a04d8cb51b732367a9ab3d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/24f3b33414a04d8cb51b732367a9ab3d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "recalls"
+        },
+        {
+          "type": "과거형",
+          "value": "recalled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recalling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recalled"
+        }
+      ],
+      "aliasConjugation": "recalls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "774cd064ff5f09a942f9e814cc7621dc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 누구인지 잘 생각해 봐.",
+      "text": "Try to <b>recall</b> who he is."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 뉴스를 읽은 일이 기억난다.",
+      "text": "I <b>recall</b> that I read the news."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그를 만난 일이 생각나지 않는다.",
+      "text": "I can’t <b>recall</b> having met him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결함이 있는 차들은 모두 회수되었다.",
+      "text": "Defective cars were all recalled."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 이야기를 듣자니 내 마음에 그리운 얼굴들이 떠올랐다.",
+      "text": "The story recalled old faces to my mind."
+    }
+  ],
+  "isWordType": true
+}

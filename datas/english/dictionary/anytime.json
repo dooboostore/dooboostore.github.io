@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "anytime",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "énitàim"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "언제든지(at any time) ((흔히 any time으로 띄어 씀))",
+              "examples": [
+                {
+                  "text": "Call me <b>anytime</b>, I'm always home.",
+                  "translatedText": "늘 집에 있으니까 언제든지 전화해."
+                }
+              ],
+              "originalMeaning": "언제든지(at any time) ((흔히 any time으로 띄어 씀))"
+            },
+            {
+              "meaning": "언제나, 반드시, 예외 없이",
+              "examples": [
+                {
+                  "text": "I can do better than that <b>anytime</b>.",
+                  "translatedText": "언제 해도 그보다 잘 할 수 있다."
+                }
+              ],
+              "originalMeaning": "언제나, 반드시, 예외 없이"
+            }
+          ]
+        },
+        {
+          "type": "감탄사",
+          "meanings": [
+            {
+              "meaning": "언제든지 좋아요, 천만에요, 괜찮아요(You’re welcome.)",
+              "examples": [],
+              "originalMeaning": "언제든지 좋아요, 천만에요, 괜찮아요(You’re welcome.)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "언제라도",
+              "examples": [
+                {
+                  "text": "<b>Anytime</b> is OK with me.",
+                  "translatedText": "(나는) 언제라도 좋아."
+                }
+              ],
+              "originalMeaning": "언제라도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7c663dc8abd54984a1be4b19965cf2cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7c663dc8abd54984a1be4b19965cf2cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5a5bd7400a1948bdde14b27a02be5efc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언제 해도 그보다 잘 할 수 있다.",
+      "text": "I can do better that <b>anytime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "늘 집에 있으니까 언제든지 전화해.",
+      "text": "Call me <b>anytime</b>, I’m always home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들을 항상 눈 밖에 나가지 못하도록 해라",
+      "text": "Don't let your children out of your sight <b>anytime</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언제라도 좋아.",
+      "text": "<b>Anytime</b> is OK with me."
+    }
+  ],
+  "isWordType": true
+}

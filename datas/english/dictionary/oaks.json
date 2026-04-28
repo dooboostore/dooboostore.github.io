@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "oak",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "oʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[식물] 오크 ((떡갈나무·졸참나무류의 낙엽 활엽수, 열매는 acorn))",
+              "examples": [],
+              "originalMeaning": "[식물] 오크 ((떡갈나무·졸참나무류의 낙엽 활엽수, 열매는 acorn))"
+            },
+            {
+              "meaning": "오크재(材), 오크재 제품",
+              "examples": [],
+              "originalMeaning": "오크재(材), 오크재 제품"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "오크(재)의",
+              "examples": [
+                {
+                  "text": "an <b>oak</b> door",
+                  "translatedText": "오크재(材)의 문"
+                }
+              ],
+              "originalMeaning": "오크(재)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bbded65c20294feaa4d526f430be8461",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bbded65c20294feaa4d526f430be8461",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7ab1d7a7e516ddcfdb8452e72bd12c9f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "열 번 찍어 안 넘어가는 나무 없다.",
+      "text": "Little strokes fell great <b>oaks</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 방에는 오크의 징두리 판이 붙어 있었다.",
+      "text": "The room was wainscoted in <b>oak</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "담쟁이가 떡갈나무에 칭칭 감겼다.",
+      "text": "The ivy twined about[(a)round] the <b>oak</b> tree."
+    }
+  ],
+  "isWordType": true
+}

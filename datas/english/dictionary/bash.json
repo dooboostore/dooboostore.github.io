@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "bash",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bæʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[구어] 세게 때리다, 강타하다 ((up)); <머리 등을> 부딪히다 ((against))",
+              "examples": [],
+              "originalMeaning": "[구어] 세게 때리다, 강타하다 ((up)); <머리 등을> 부딪히다 ((against))"
+            },
+            {
+              "meaning": "맹렬히 비난하다",
+              "examples": [],
+              "originalMeaning": "맹렬히 비난하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[구어] 세게 때림, 강타; [속어] 떠들썩한 파티",
+              "examples": [],
+              "originalMeaning": "[구어] 세게 때림, 강타; [속어] 떠들썩한 파티"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a2053a9039ea4bceba2cb6269df19374",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a2053a9039ea4bceba2cb6269df19374",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bashes"
+        },
+        {
+          "type": "과거형",
+          "value": "bashed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bashing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bashed"
+        }
+      ],
+      "aliasConjugation": "bashes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bad38f06f5c5c7ea6bd0cfe22c8f6855",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 망치로 상자를 힘껏 내려쳤다",
+      "text": "I gave the box a good <b>bash</b> with my hammer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일본 때리기",
+      "text": "Japan-bashing"
+    }
+  ],
+  "isWordType": true
+}

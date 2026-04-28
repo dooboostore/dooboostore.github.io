@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "swing",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "swɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "흔들리다, 진동하다; …의 사이를 오락가락하다",
+              "examples": [
+                {
+                  "text": "The door swung in the wind.",
+                  "translatedText": "문이 바람에 흔들렸다."
+                }
+              ],
+              "originalMeaning": "흔들리다, 진동하다; …의 사이를 오락가락하다"
+            },
+            {
+              "meaning": "(…에) 매달리다 ((from, on))",
+              "examples": [
+                {
+                  "text": "A lamp swung from the ceiling.",
+                  "translatedText": "램프가 천장에 매달려 있었다."
+                }
+              ],
+              "originalMeaning": "(…에) 매달리다 ((from, on))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "흔들다, 뒤흔들다",
+              "examples": [],
+              "originalMeaning": "흔들다, 뒤흔들다"
+            },
+            {
+              "meaning": "<막대 등을> 휘두르다",
+              "examples": [],
+              "originalMeaning": "<막대 등을> 휘두르다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흔듦",
+              "examples": [],
+              "originalMeaning": "흔듦"
+            },
+            {
+              "meaning": "(경기·여론 등의) 변동, 동요; 변경",
+              "examples": [],
+              "originalMeaning": "(경기·여론 등의) 변동, 동요; 변경"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/55628bd43f5f4712ad4070b6caad6548",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/55628bd43f5f4712ad4070b6caad6548",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "swings"
+        },
+        {
+          "type": "과거형",
+          "value": "swung"
+        },
+        {
+          "type": "현재 분사",
+          "value": "swinging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "swung"
+        }
+      ],
+      "aliasConjugation": "swings",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "47d6e85f43ce5670681c0b6dfffc75c7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배트를 이런 식으로 휘두르시오.",
+      "text": "<b>Swing</b> the bat like so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경기가 한창 진행 중이다",
+      "text": "The game is in full <b>swing</b>[blast]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 닻을 내리고  빙빙 돌고 있다.",
+      "text": "The ship swings at anchor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파티가 한창 진행 중이었다",
+      "text": "The party was in full <b>swing</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "램프가 천장에 매달려 있었다.",
+      "text": "A lamp swung from the ceiling."
+    }
+  ],
+  "isWordType": true
+}

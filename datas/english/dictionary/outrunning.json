@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "outrun",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌaʊtˈrʌn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "달려서 이기다[앞서다]",
+              "examples": [],
+              "originalMeaning": "달려서 이기다[앞서다]"
+            },
+            {
+              "meaning": "…로부터 달아나다",
+              "examples": [
+                {
+                  "text": "<b>outrun</b> the police",
+                  "translatedText": "경찰의 눈을 피해 달아나다"
+                }
+              ],
+              "originalMeaning": "…로부터 달아나다"
+            },
+            {
+              "meaning": "…의 도를 넘다, 초과하다",
+              "examples": [
+                {
+                  "text": "The company's spending outran its income.",
+                  "translatedText": "그 회사의 지출은 수입을 초과했다."
+                }
+              ],
+              "originalMeaning": "…의 도를 넘다, 초과하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6e5df63278df42a3827e45d9c0bcc9a6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6e5df63278df42a3827e45d9c0bcc9a6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "outruns"
+        },
+        {
+          "type": "과거형",
+          "value": "outran"
+        },
+        {
+          "type": "현재 분사",
+          "value": "outrunning"
+        }
+      ],
+      "aliasConjugation": "outruns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "da625c6db1390b4df28e0f3071ec5edc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 열중한 나머지 분별없는 짓을 했다.",
+      "text": "He let his zeal <b>outrun</b> discretion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 그녀보다 득표수가 많았다.",
+      "text": "I outran her."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "entry": "council",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkaʊnsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "회의, 협의, 평의; 평의회, 협의회, 자문회(cf. COUNSEL)",
+              "examples": [],
+              "originalMeaning": "회의, 협의, 평의; 평의회, 협의회, 자문회(cf. COUNSEL)"
+            },
+            {
+              "meaning": "지방 의회 ((시·읍 의회 등))",
+              "examples": [
+                {
+                  "text": "a county <b>council</b>",
+                  "translatedText": "[영] 주의회"
+                }
+              ],
+              "originalMeaning": "지방 의회 ((시·읍 의회 등))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "회의용의",
+              "examples": [],
+              "originalMeaning": "회의용의"
+            },
+            {
+              "meaning": "(지방 자치체의) 의회에 의해 결정된, 공영(公營)의",
+              "examples": [],
+              "originalMeaning": "(지방 자치체의) 의회에 의해 결정된, 공영(公營)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e66ab7d9723849579e80d3da7e3e81ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e66ab7d9723849579e80d3da7e3e81ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6c4f1945d743b06c493fa150f05fe9a7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 읍의회에 관계하고 있다[일원이다].",
+      "text": "He is on the town <b>council</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 법안은 시의회를 통과했다.",
+      "text": "The bill passed the City <b>Council</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시 위원회는 대중의 압력에 꺾일 수 밖에 없었다",
+      "text": "The city <b>council</b> was forced to bend to public pressure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "심의회는 그 문제에 대해 대통령에게 답신했다",
+      "text": "The <b>council</b> reported[submitted a report] on the issue to the President."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,2681 @@
+WEBVTT
+
+00:00:02.080 --> 00:00:06.319
+We're so excited for our very first
+
+00:00:03.679 --> 00:00:10.320
+special guest. He has helped build
+
+00:00:06.319 --> 00:00:14.880
+modern AI, then explain modern AI, and
+
+00:00:10.320 --> 00:00:16.640
+then occasionally rename modern AI. He
+
+00:00:14.880 --> 00:00:18.640
+actually helped co-ound open AAI right
+
+00:00:16.640 --> 00:00:21.039
+inside of this office. Was the one who
+
+00:00:18.640 --> 00:00:23.760
+actually got Autopilot working at Tesla
+
+00:00:21.039 --> 00:00:26.480
+back in the day, and he has a rare gift
+
+00:00:23.760 --> 00:00:28.640
+of making the most complex technical
+
+00:00:26.480 --> 00:00:30.160
+shifts feel both accessible and
+
+00:00:28.640 --> 00:00:31.760
+inevitable.
+
+00:00:30.160 --> 00:00:35.040
+You all know him for having coined the
+
+00:00:31.760 --> 00:00:36.480
+term vibe coding last year, but just in
+
+00:00:35.040 --> 00:00:38.879
+the last few months, he said something
+
+00:00:36.480 --> 00:00:41.520
+even more startling. That he's never
+
+00:00:38.879 --> 00:00:43.040
+felt more behind as a programmer. That's
+
+00:00:41.520 --> 00:00:44.160
+where we're starting today. Thank you,
+
+00:00:43.040 --> 00:00:46.000
+Andre, for joining us.
+
+00:00:44.160 --> 00:00:47.120
+>> Yeah. Hello. Excited to be here and to
+
+00:00:46.000 --> 00:00:49.520
+kick us off.
+
+00:00:47.120 --> 00:00:51.120
+>> Okay. So, just a couple months ago, you
+
+00:00:49.520 --> 00:00:53.039
+said that you've never felt more behind
+
+00:00:51.120 --> 00:00:55.360
+as a programmer. That's startling to
+
+00:00:53.039 --> 00:00:57.199
+hear from you of all people. Um, can you
+
+00:00:55.360 --> 00:01:00.160
+help us unpack that? Was that feeling
+
+00:00:57.199 --> 00:01:02.480
+exhilarating or unsettling?
+
+00:01:00.160 --> 00:01:05.280
+>> Uh yeah, a mixture of both for sure. Uh
+
+00:01:02.480 --> 00:01:06.960
+well, first of all, um
+
+00:01:05.280 --> 00:01:08.400
+I guess like as many of you, I've been
+
+00:01:06.960 --> 00:01:10.000
+using agentic tools like lot code,
+
+00:01:08.400 --> 00:01:12.000
+adjacent things, uh for a while, maybe
+
+00:01:10.000 --> 00:01:13.680
+over the last year as it came out and it
+
+00:01:12.000 --> 00:01:15.200
+was very good at you know chunks of code
+
+00:01:13.680 --> 00:01:16.320
+and sometimes it would mess up and you
+
+00:01:15.200 --> 00:01:18.400
+have to edit them and it was kind of
+
+00:01:16.320 --> 00:01:21.439
+helpful and then I would say December
+
+00:01:18.400 --> 00:01:22.799
+was this uh clear point where for me I
+
+00:01:21.439 --> 00:01:24.960
+was on a break so I had a bit more time.
+
+00:01:22.799 --> 00:01:26.880
+I think many other people were similar
+
+00:01:24.960 --> 00:01:28.640
+and uh I just started to notice that
+
+00:01:26.880 --> 00:01:30.000
+with the latest models uh the chunks
+
+00:01:28.640 --> 00:01:31.280
+just came out fine and then I kept
+
+00:01:30.000 --> 00:01:32.640
+asking for more and it just came out
+
+00:01:31.280 --> 00:01:34.799
+fine and then I can't remember the last
+
+00:01:32.640 --> 00:01:36.479
+time I corrected it and then I was I
+
+00:01:34.799 --> 00:01:38.251
+just you know trusted the system more
+
+00:01:36.479 --> 00:01:39.040
+and more and then I was vibe coding
+
+00:01:38.251 --> 00:01:42.079
+[laughter]
+
+00:01:39.040 --> 00:01:43.600
+and uh so it was kind of a I do think
+
+00:01:42.079 --> 00:01:45.040
+that it was a very stark transition. I
+
+00:01:43.600 --> 00:01:47.280
+think that a lot of people actually I
+
+00:01:45.040 --> 00:01:49.680
+tried to I tried to stress this on uh
+
+00:01:47.280 --> 00:01:52.079
+Twitter and or X because I think a lot
+
+00:01:49.680 --> 00:01:54.320
+of people experienced AI last year as
+
+00:01:52.079 --> 00:01:55.920
+ChachiPT adjacent thing. Uh but you
+
+00:01:54.320 --> 00:01:58.000
+really had to look again and you had to
+
+00:01:55.920 --> 00:01:59.680
+look as of December uh because things
+
+00:01:58.000 --> 00:02:01.920
+have changed fundamentally and uh
+
+00:01:59.680 --> 00:02:04.079
+especially on this like agentic coherent
+
+00:02:01.920 --> 00:02:07.360
+workflow uh that really started to
+
+00:02:04.079 --> 00:02:09.360
+actually work. Um, and so I would say
+
+00:02:07.360 --> 00:02:12.560
+that um, yeah, it was just that
+
+00:02:09.360 --> 00:02:14.239
+realization that really uh, uh, had me
+
+00:02:12.560 --> 00:02:16.239
+um, go down their whole rabbit hole of
+
+00:02:14.239 --> 00:02:18.160
+just, you know, infinity side projects.
+
+00:02:16.239 --> 00:02:19.599
+Uh, my side projects folder is like
+
+00:02:18.160 --> 00:02:21.760
+extremely full with lots of random
+
+00:02:19.599 --> 00:02:23.760
+things and, uh, just, uh, V coding all
+
+00:02:21.760 --> 00:02:25.680
+the time. Uh, so, uh, yeah, that kind of
+
+00:02:23.760 --> 00:02:26.800
+happened in December, I would say, and I
+
+00:02:25.680 --> 00:02:28.080
+was looking at the repercussions of that
+
+00:02:26.800 --> 00:02:30.000
+since.
+
+00:02:28.080 --> 00:02:33.120
+>> Um, you've talked a lot about this idea
+
+00:02:30.000 --> 00:02:35.360
+of LLMs as a new computer. um that it
+
+00:02:33.120 --> 00:02:38.080
+isn't just better software, it's a whole
+
+00:02:35.360 --> 00:02:41.040
+new computing paradigm. And um software
+
+00:02:38.080 --> 00:02:43.920
+1.0 was explicit rules, software 2.0 was
+
+00:02:41.040 --> 00:02:46.480
+learned weights, software 3.0 is this.
+
+00:02:43.920 --> 00:02:48.879
+Um if that's actually true, what does a
+
+00:02:46.480 --> 00:02:50.800
+team build differently the day they
+
+00:02:48.879 --> 00:02:53.280
+actually believe this,
+
+00:02:50.800 --> 00:02:56.000
+>> right? So uh yeah, exactly. So software
+
+00:02:53.280 --> 00:02:57.680
+1.0, I'm writing code, software 2.0, I'm
+
+00:02:56.000 --> 00:02:59.599
+actually programming by creating data
+
+00:02:57.680 --> 00:03:01.040
+sets and training uh training neural
+
+00:02:59.599 --> 00:03:02.480
+networks. So the programming is kind of
+
+00:03:01.040 --> 00:03:03.519
+like arranging data sets and maybe some
+
+00:03:02.480 --> 00:03:05.280
+objectives and neural network
+
+00:03:03.519 --> 00:03:07.440
+architectures. And then what happened is
+
+00:03:05.280 --> 00:03:09.760
+that basically if you train one of these
+
+00:03:07.440 --> 00:03:12.400
+GPT models or LLMs on a sufficiently
+
+00:03:09.760 --> 00:03:14.400
+large set of tasks implicit basically um
+
+00:03:12.400 --> 00:03:15.680
+implicitly because by training on the
+
+00:03:14.400 --> 00:03:17.280
+internet you have to multitask all the
+
+00:03:15.680 --> 00:03:18.800
+things that are in the data set. Uh
+
+00:03:17.280 --> 00:03:20.000
+these actually become kind of like a
+
+00:03:18.800 --> 00:03:21.760
+programmable computer in a certain
+
+00:03:20.000 --> 00:03:24.000
+sense. So software 3.0 know is kind of
+
+00:03:21.760 --> 00:03:25.840
+about uh you know your programming now
+
+00:03:24.000 --> 00:03:28.480
+turns to prompting and what's in the
+
+00:03:25.840 --> 00:03:30.480
+context window is your lever over the
+
+00:03:28.480 --> 00:03:32.400
+interpreter that is the LLM that is kind
+
+00:03:30.480 --> 00:03:34.159
+of like interpreting your context and uh
+
+00:03:32.400 --> 00:03:37.760
+performing computation in the dig
+
+00:03:34.159 --> 00:03:39.840
+digital information space. So I guess um
+
+00:03:37.760 --> 00:03:41.120
+yeah that's kind of the transition and I
+
+00:03:39.840 --> 00:03:42.560
+think there's a few examples of that
+
+00:03:41.120 --> 00:03:44.879
+really drove it home for me and maybe
+
+00:03:42.560 --> 00:03:48.000
+that might be instructive. Uh so for
+
+00:03:44.879 --> 00:03:49.760
+example when you when openclaw came out
+
+00:03:48.000 --> 00:03:50.879
+when you want to install openclaw you
+
+00:03:49.760 --> 00:03:52.720
+would expect that normally this is a
+
+00:03:50.879 --> 00:03:54.640
+bash bash script like a shell script. So
+
+00:03:52.720 --> 00:03:57.360
+run the shell script to run to install
+
+00:03:54.640 --> 00:03:58.560
+open claw. Um but the thing is that in
+
+00:03:57.360 --> 00:04:00.080
+order to target lots of different
+
+00:03:58.560 --> 00:04:01.680
+platforms and lots of different types of
+
+00:04:00.080 --> 00:04:03.200
+computers you might run an open claw.
+
+00:04:01.680 --> 00:04:05.120
+This these shell scripts usually balloon
+
+00:04:03.200 --> 00:04:06.159
+up and become extremely complex. But the
+
+00:04:05.120 --> 00:04:07.840
+thing is you're still stuck in a
+
+00:04:06.159 --> 00:04:09.840
+software 1.0 universe of wanting to
+
+00:04:07.840 --> 00:04:12.000
+write the code. And actually the open
+
+00:04:09.840 --> 00:04:13.920
+claw installation is a is a copy paste
+
+00:04:12.000 --> 00:04:15.760
+of a b bunch of text that you're
+
+00:04:13.920 --> 00:04:18.079
+supposed to give to your agent. Uh so
+
+00:04:15.760 --> 00:04:19.280
+basically it's it's a little skill of uh
+
+00:04:18.079 --> 00:04:20.639
+you know copy paste this and give it to
+
+00:04:19.280 --> 00:04:22.079
+your agent and it will install open
+
+00:04:20.639 --> 00:04:23.600
+claw. And the reason this is a lot more
+
+00:04:22.079 --> 00:04:25.199
+powerful is you're working now in the
+
+00:04:23.600 --> 00:04:27.759
+software 3.0 paradigm where you don't
+
+00:04:25.199 --> 00:04:29.440
+have to precisely spell out you know all
+
+00:04:27.759 --> 00:04:30.960
+the individual details of that setup.
+
+00:04:29.440 --> 00:04:32.560
+The agent has its own intelligence that
+
+00:04:30.960 --> 00:04:34.639
+it packages up and then it kind of like
+
+00:04:32.560 --> 00:04:36.400
+follows the instructions and it looks at
+
+00:04:34.639 --> 00:04:37.440
+your environment, your computer and it
+
+00:04:36.400 --> 00:04:38.639
+kind of like performs intelligent
+
+00:04:37.440 --> 00:04:40.400
+actions to make things work and it
+
+00:04:38.639 --> 00:04:42.960
+debugs things in the loop and it's just
+
+00:04:40.400 --> 00:04:44.479
+like so much more powerful, right? So I
+
+00:04:42.960 --> 00:04:46.000
+think that's a very different kind of
+
+00:04:44.479 --> 00:04:47.520
+like way of thinking about it is just
+
+00:04:46.000 --> 00:04:48.720
+like what is the piece of text to copy
+
+00:04:47.520 --> 00:04:50.560
+paste to your agent? That's the
+
+00:04:48.720 --> 00:04:52.560
+programming paradigm. Now I think one
+
+00:04:50.560 --> 00:04:54.160
+more maybe uh example that comes to mind
+
+00:04:52.560 --> 00:04:56.720
+that is even more extreme than that is
+
+00:04:54.160 --> 00:05:00.400
+when I was building um menu genen. So,
+
+00:04:56.720 --> 00:05:01.919
+menu genen is this idea where you um you
+
+00:05:00.400 --> 00:05:03.680
+come to a restaurant, they give you a
+
+00:05:01.919 --> 00:05:05.280
+menu. There's no pictures usually. So, I
+
+00:05:03.680 --> 00:05:07.680
+don't know what any of these things are
+
+00:05:05.280 --> 00:05:09.680
+uh usually like 30% of the things I have
+
+00:05:07.680 --> 00:05:12.000
+no idea what they are, 50%. So, I wanted
+
+00:05:09.680 --> 00:05:13.840
+to take a photo of the restaurant menu
+
+00:05:12.000 --> 00:05:16.240
+and to get pictures of what those things
+
+00:05:13.840 --> 00:05:18.240
+might look like in a generic sense. And
+
+00:05:16.240 --> 00:05:20.080
+so I built I've vcoded this app that
+
+00:05:18.240 --> 00:05:21.440
+basically lets you upload a photo and it
+
+00:05:20.080 --> 00:05:24.880
+does all this stuff and it runs on
+
+00:05:21.440 --> 00:05:26.720
+Verscell and uh it basically rerenders
+
+00:05:24.880 --> 00:05:28.320
+the menu and it gives you like all the
+
+00:05:26.720 --> 00:05:31.039
+items and it gives you a picture that it
+
+00:05:28.320 --> 00:05:33.840
+uses an image um you know generator uh
+
+00:05:31.039 --> 00:05:35.919
+for to basically OCR all the different
+
+00:05:33.840 --> 00:05:37.039
+titles uh use the image generator to get
+
+00:05:35.919 --> 00:05:39.840
+pictures of them and then shows it to
+
+00:05:37.039 --> 00:05:41.680
+you. And then I saw the software 3.0
+
+00:05:39.840 --> 00:05:43.199
+version of this which is which blew my
+
+00:05:41.680 --> 00:05:46.000
+mind which is literally just take your
+
+00:05:43.199 --> 00:05:48.880
+photo give it to Gemini and say use
+
+00:05:46.000 --> 00:05:51.440
+Nanobanana to overlay the the things
+
+00:05:48.880 --> 00:05:52.960
+onto the menu. Uh and Nanabanana
+
+00:05:51.440 --> 00:05:54.320
+basically returned an image that is
+
+00:05:52.960 --> 00:05:56.639
+exactly the picture of the menu that I
+
+00:05:54.320 --> 00:05:58.479
+took but it actually put into the pixels
+
+00:05:56.639 --> 00:06:02.080
+it rendered the different things in the
+
+00:05:58.479 --> 00:06:04.319
+menu and this blew my mind because
+
+00:06:02.080 --> 00:06:06.160
+actually all of my menu gen is spirious.
+
+00:06:04.319 --> 00:06:09.039
+It's working in the old paradigm that
+
+00:06:06.160 --> 00:06:11.360
+app shouldn't exist. uh and uh yeah the
+
+00:06:09.039 --> 00:06:14.000
+software 3.0 paradigm is a lot more kind
+
+00:06:11.360 --> 00:06:15.840
+of raw. It just um your neural network
+
+00:06:14.000 --> 00:06:18.080
+is doing more and more of the work and
+
+00:06:15.840 --> 00:06:19.840
+your prompt or context is just the image
+
+00:06:18.080 --> 00:06:21.440
+and the output is an image and there's
+
+00:06:19.840 --> 00:06:24.960
+no need to have any of the app in
+
+00:06:21.440 --> 00:06:27.840
+between. Um so I think that people have
+
+00:06:24.960 --> 00:06:30.000
+to kind of like reframe you know not to
+
+00:06:27.840 --> 00:06:31.440
+work in existing paradigm of what things
+
+00:06:30.000 --> 00:06:33.840
+existed and just think about it as a
+
+00:06:31.440 --> 00:06:36.000
+speed up of what exists. It's actually
+
+00:06:33.840 --> 00:06:37.360
+like new things are available now. And
+
+00:06:36.000 --> 00:06:38.880
+going back to your programming question,
+
+00:06:37.360 --> 00:06:40.479
+it's not even I think that's also an
+
+00:06:38.880 --> 00:06:41.680
+example of working in the in the old
+
+00:06:40.479 --> 00:06:42.880
+mindset because it's not just about
+
+00:06:41.680 --> 00:06:44.960
+programming and programming becoming
+
+00:06:42.880 --> 00:06:47.360
+faster. This is more general information
+
+00:06:44.960 --> 00:06:49.440
+processing that is automatable now. So
+
+00:06:47.360 --> 00:06:51.600
+um it's not just even about code. So
+
+00:06:49.440 --> 00:06:53.440
+previous code worked over kind of like
+
+00:06:51.600 --> 00:06:55.199
+structured data, right? And uh you write
+
+00:06:53.440 --> 00:06:56.800
+code over structured data. But like for
+
+00:06:55.199 --> 00:06:59.759
+example with my LLM knowledge basis
+
+00:06:56.800 --> 00:07:01.440
+project um basically you get LLMs to
+
+00:06:59.759 --> 00:07:03.120
+create wikis for your organization or
+
+00:07:01.440 --> 00:07:04.319
+for you in person etc. This is not even
+
+00:07:03.120 --> 00:07:06.720
+a program. This is not something that
+
+00:07:04.319 --> 00:07:08.080
+could exist before because there was no
+
+00:07:06.720 --> 00:07:09.360
+there was no code that would create a
+
+00:07:08.080 --> 00:07:10.960
+knowledge base based on a bunch of
+
+00:07:09.360 --> 00:07:14.000
+facts. But now you can just take these
+
+00:07:10.960 --> 00:07:15.919
+documents and uh basically uh recompile
+
+00:07:14.000 --> 00:07:17.680
+them in a different way and uh reorder
+
+00:07:15.919 --> 00:07:19.680
+them and create something that is uh new
+
+00:07:17.680 --> 00:07:22.400
+and interesting uh as a reframing of the
+
+00:07:19.680 --> 00:07:24.639
+data. And so these are new things that
+
+00:07:22.400 --> 00:07:26.560
+weren't possible. Uh and so I think this
+
+00:07:24.639 --> 00:07:29.039
+is uh something that I keep trying to
+
+00:07:26.560 --> 00:07:31.039
+get back to as to not only what can we
+
+00:07:29.039 --> 00:07:33.520
+do that existed that is faster now but I
+
+00:07:31.039 --> 00:07:35.039
+think there's new opportunities of just
+
+00:07:33.520 --> 00:07:36.240
+things that couldn't be possible before
+
+00:07:35.039 --> 00:07:37.199
+and I almost think that that's more
+
+00:07:36.240 --> 00:07:40.000
+exciting.
+
+00:07:37.199 --> 00:07:41.840
+>> I love the menu genen progression and
+
+00:07:40.000 --> 00:07:43.840
+dichotomy that you laid out and I think
+
+00:07:41.840 --> 00:07:45.520
+even I'm sure many folks here followed
+
+00:07:43.840 --> 00:07:48.880
+your own progression of programming from
+
+00:07:45.520 --> 00:07:51.039
+last October to early January February
+
+00:07:48.880 --> 00:07:54.560
+this year. Um, if you extrapolate that
+
+00:07:51.039 --> 00:07:56.960
+further, what is the 2026 equivalent um,
+
+00:07:54.560 --> 00:07:59.520
+for building websites in the '9s,
+
+00:07:56.960 --> 00:08:02.560
+building mobile apps in the 2010s,
+
+00:07:59.520 --> 00:08:04.560
+building SAS um, in the last cloud era,
+
+00:08:02.560 --> 00:08:06.720
+what will look completely obvious in
+
+00:08:04.560 --> 00:08:08.000
+hindsight that is still mostly unbuilt
+
+00:08:06.720 --> 00:08:10.240
+today?
+
+00:08:08.000 --> 00:08:12.400
+>> Um, [clears throat] well, going with the
+
+00:08:10.240 --> 00:08:13.520
+example of menu, I guess, uh, so a lot
+
+00:08:12.400 --> 00:08:15.199
+of this code shouldn't exist and it's
+
+00:08:13.520 --> 00:08:17.120
+just neural network doing most of the
+
+00:08:15.199 --> 00:08:19.120
+work. Um I do think that the
+
+00:08:17.120 --> 00:08:21.440
+extrapolation looks very weird because
+
+00:08:19.120 --> 00:08:23.599
+you could basically imagine
+
+00:08:21.440 --> 00:08:25.440
+I don't I yeah so you could imagine
+
+00:08:23.599 --> 00:08:28.800
+completely neural computers in a certain
+
+00:08:25.440 --> 00:08:30.479
+sense you feed raw videos like imagine a
+
+00:08:28.800 --> 00:08:32.719
+device you takes raw videos or audio
+
+00:08:30.479 --> 00:08:35.200
+into basically what's a neural net and
+
+00:08:32.719 --> 00:08:37.440
+uh uses diffusion to render a UI that is
+
+00:08:35.200 --> 00:08:40.560
+kind of like you know unique for that
+
+00:08:37.440 --> 00:08:42.159
+moment in a certain sense and um I kind
+
+00:08:40.560 --> 00:08:43.360
+of feel like in the early days of
+
+00:08:42.159 --> 00:08:45.040
+computing actually people were a little
+
+00:08:43.360 --> 00:08:46.800
+bit confused as to whether computers
+
+00:08:45.040 --> 00:08:48.480
+would look like calculators or computers
+
+00:08:46.800 --> 00:08:50.320
+would look like neural nets and in 50s
+
+00:08:48.480 --> 00:08:52.160
+and 60s it was not really obvious which
+
+00:08:50.320 --> 00:08:53.360
+way would go and of course we went down
+
+00:08:52.160 --> 00:08:55.120
+the calculator path and ended up
+
+00:08:53.360 --> 00:08:56.320
+building classical computing and then
+
+00:08:55.120 --> 00:08:58.160
+neural nets are currently running
+
+00:08:56.320 --> 00:09:00.240
+virtualized on existing computers but
+
+00:08:58.160 --> 00:09:01.600
+you could imagine I think that uh a lot
+
+00:09:00.240 --> 00:09:02.959
+of this will flip and that the neural
+
+00:09:01.600 --> 00:09:05.600
+net becomes kind of like the host
+
+00:09:02.959 --> 00:09:07.600
+process and uh the CPUs become kind of
+
+00:09:05.600 --> 00:09:09.279
+like the co-processor so we saw the
+
+00:09:07.600 --> 00:09:10.800
+diagram of you know intelligence compute
+
+00:09:09.279 --> 00:09:12.959
+is going to of neural networks is going
+
+00:09:10.800 --> 00:09:14.880
+to take over and become the dominant
+
+00:09:12.959 --> 00:09:17.200
+spend of flops so you could imagine
+
+00:09:14.880 --> 00:09:18.800
+something really weird and foreign when
+
+00:09:17.200 --> 00:09:20.320
+where neural nets are doing most of the
+
+00:09:18.800 --> 00:09:22.880
+heavy lifting. They're using tool use as
+
+00:09:20.320 --> 00:09:24.000
+this like you know um historical
+
+00:09:22.880 --> 00:09:25.760
+appendage for some kinds of like
+
+00:09:24.000 --> 00:09:27.600
+deterministic tasks. Uh but what's
+
+00:09:25.760 --> 00:09:29.920
+really running the show is these uh
+
+00:09:27.600 --> 00:09:31.279
+neural nets that are in a certain way.
+
+00:09:29.920 --> 00:09:33.120
+Um so you can imagine something
+
+00:09:31.279 --> 00:09:34.640
+extremely foreign as the extrapolation
+
+00:09:33.120 --> 00:09:36.720
+but I think we're going to probably get
+
+00:09:34.640 --> 00:09:39.120
+there uh sort of piece by piece. Um and
+
+00:09:36.720 --> 00:09:40.991
+I don't yeah that that progression is
+
+00:09:39.120 --> 00:09:41.120
+TBD I would say.
+
+00:09:40.991 --> 00:09:43.279
+>> [snorts]
+
+00:09:41.120 --> 00:09:45.279
+>> I'd like to talk a little bit about um
+
+00:09:43.279 --> 00:09:47.519
+uh this concept of verifiability, the
+
+00:09:45.279 --> 00:09:49.839
+fact that AI will automate faster and
+
+00:09:47.519 --> 00:09:52.480
+more easily domains where the output can
+
+00:09:49.839 --> 00:09:54.320
+be verified. Um if that framework is
+
+00:09:52.480 --> 00:09:56.399
+right, what work is about to move much
+
+00:09:54.320 --> 00:09:58.640
+faster than people realize and what
+
+00:09:56.399 --> 00:10:00.480
+professions do we have that people
+
+00:09:58.640 --> 00:10:02.800
+actually think are safe but that are
+
+00:10:00.480 --> 00:10:05.360
+actually highly verifiable?
+
+00:10:02.800 --> 00:10:07.519
+Uh yes. So I I spent uh some time
+
+00:10:05.360 --> 00:10:09.680
+writing about verifiability and um
+
+00:10:07.519 --> 00:10:12.399
+basically like traditional computers can
+
+00:10:09.680 --> 00:10:14.959
+easily automate what you can specify in
+
+00:10:12.399 --> 00:10:16.959
+code and uh kind of this latest round of
+
+00:10:14.959 --> 00:10:19.519
+LLMs can easily automate what you can uh
+
+00:10:16.959 --> 00:10:20.959
+verify in a certain in a certain sense
+
+00:10:19.519 --> 00:10:22.720
+because the way this works is that when
+
+00:10:20.959 --> 00:10:24.079
+frontier labs are training these LLMs
+
+00:10:22.720 --> 00:10:25.519
+these are giant reinforcement learning
+
+00:10:24.079 --> 00:10:28.160
+environments. So they are given
+
+00:10:25.519 --> 00:10:29.680
+verification rewards and then because of
+
+00:10:28.160 --> 00:10:32.000
+the way that these models are trained
+
+00:10:29.680 --> 00:10:34.240
+they end up basically uh progressing and
+
+00:10:32.000 --> 00:10:36.320
+creating these like jagged entities that
+
+00:10:34.240 --> 00:10:37.760
+really peak in capability in kind of
+
+00:10:36.320 --> 00:10:39.440
+like verifiable domains like math and
+
+00:10:37.760 --> 00:10:41.600
+code and adjacent and kind of like
+
+00:10:39.440 --> 00:10:43.279
+stagnate and are a little bit um you
+
+00:10:41.600 --> 00:10:44.959
+know rough around the edges when uh
+
+00:10:43.279 --> 00:10:46.480
+things are not kind of like in that in
+
+00:10:44.959 --> 00:10:47.760
+that space. So I think the reason I
+
+00:10:46.480 --> 00:10:49.519
+wrote about verifiability is I'm trying
+
+00:10:47.760 --> 00:10:52.160
+to understand why these things are so
+
+00:10:49.519 --> 00:10:54.000
+jagged. Um and some of it has to do with
+
+00:10:52.160 --> 00:10:55.839
+how the labs train the models but I
+
+00:10:54.000 --> 00:10:57.519
+think some of it also has to do with um
+
+00:10:55.839 --> 00:10:58.880
+the focus of the labs and what they
+
+00:10:57.519 --> 00:11:00.800
+happen to put into the data
+
+00:10:58.880 --> 00:11:01.920
+distribution. Uh because some things
+
+00:11:00.800 --> 00:11:03.760
+basically are significantly more
+
+00:11:01.920 --> 00:11:05.040
+valuable in economy and end up creating
+
+00:11:03.760 --> 00:11:06.720
+more environments because the labs
+
+00:11:05.040 --> 00:11:08.160
+wanted to work in those settings. So I
+
+00:11:06.720 --> 00:11:09.440
+think code is a good example of that.
+
+00:11:08.160 --> 00:11:10.880
+There's probably lots of verifiable
+
+00:11:09.440 --> 00:11:12.079
+environments they could think about that
+
+00:11:10.880 --> 00:11:13.279
+happen not to make it into the mix
+
+00:11:12.079 --> 00:11:15.920
+because they're just not that useful to
+
+00:11:13.279 --> 00:11:18.480
+have the capability around. Um, but I
+
+00:11:15.920 --> 00:11:21.120
+think to me the big um I guess like the
+
+00:11:18.480 --> 00:11:22.959
+big mystery is uh the favorite example
+
+00:11:21.120 --> 00:11:24.560
+for a while was that how many letters
+
+00:11:22.959 --> 00:11:26.000
+are are in a strawberry and the models
+
+00:11:24.560 --> 00:11:27.920
+would famously get this wrong and it's
+
+00:11:26.000 --> 00:11:29.760
+an example of jaggedness. Uh the models
+
+00:11:27.920 --> 00:11:32.160
+now patch this I think but the new one
+
+00:11:29.760 --> 00:11:34.480
+is I want to go to a car wash to wash my
+
+00:11:32.160 --> 00:11:36.800
+car and it's 50 meters away. Should I
+
+00:11:34.480 --> 00:11:38.399
+drive or should I walk? And
+
+00:11:36.800 --> 00:11:40.959
+state-of-the-art models today will tell
+
+00:11:38.399 --> 00:11:42.959
+you to walk because it's so close. How
+
+00:11:40.959 --> 00:11:46.079
+is it possible that state-of-the-art
+
+00:11:42.959 --> 00:11:48.800
+Opus 4.7 will simultaneously refactor a
+
+00:11:46.079 --> 00:11:50.480
+100,000 like [laughter] codebase line
+
+00:11:48.800 --> 00:11:52.560
+codebase or find zero day
+
+00:11:50.480 --> 00:11:56.480
+vulnerabilities and yet tells me to walk
+
+00:11:52.560 --> 00:11:58.959
+to this car wash? This is insane. And to
+
+00:11:56.480 --> 00:12:01.279
+whatever extent these uh models are
+
+00:11:58.959 --> 00:12:02.480
+remain jagged, it's an indication that
+
+00:12:01.279 --> 00:12:05.600
+number one maybe something's slightly
+
+00:12:02.480 --> 00:12:07.760
+off or um number two you need to
+
+00:12:05.600 --> 00:12:09.360
+actually be in the loop a little bit and
+
+00:12:07.760 --> 00:12:11.200
+you need to treat them as tools and you
+
+00:12:09.360 --> 00:12:12.880
+do have to kind of stay in touch with
+
+00:12:11.200 --> 00:12:14.480
+what they're doing. And so I think all
+
+00:12:12.880 --> 00:12:16.079
+of my writing long story short about
+
+00:12:14.480 --> 00:12:18.480
+verifiability is just trying to
+
+00:12:16.079 --> 00:12:20.399
+understand um why these things are
+
+00:12:18.480 --> 00:12:22.079
+jacked. Is there any pattern to it? And
+
+00:12:20.399 --> 00:12:25.200
+I think it's some kind of a combination
+
+00:12:22.079 --> 00:12:28.079
+of verifiable plus labs care. Maybe one
+
+00:12:25.200 --> 00:12:31.040
+more anecdote that is instructive is uh
+
+00:12:28.079 --> 00:12:33.200
+from GPT 3.5 to GPT4 people noticed that
+
+00:12:31.040 --> 00:12:34.480
+chess improved a lot and I think a lot
+
+00:12:33.200 --> 00:12:36.240
+of people thought oh well it's just a
+
+00:12:34.480 --> 00:12:38.000
+progression of the capabilities but
+
+00:12:36.240 --> 00:12:39.360
+actually it's it's more that uh I think
+
+00:12:38.000 --> 00:12:41.120
+this is public information I think I saw
+
+00:12:39.360 --> 00:12:43.760
+it on the internet um a huge amount of
+
+00:12:41.120 --> 00:12:46.000
+like um data of chess made it into the
+
+00:12:43.760 --> 00:12:48.320
+pre-training set and just because it's
+
+00:12:46.000 --> 00:12:50.160
+in a data distribution uh basically the
+
+00:12:48.320 --> 00:12:53.120
+model improved a lot more than it would
+
+00:12:50.160 --> 00:12:55.120
+just by default. So someone at OpenAI
+
+00:12:53.120 --> 00:12:56.800
+decided to add this data and now you
+
+00:12:55.120 --> 00:12:58.320
+have a capability that just peaked a lot
+
+00:12:56.800 --> 00:13:01.519
+more. And so that's why I think I'm
+
+00:12:58.320 --> 00:13:03.040
+stressing this um dimension of it as we
+
+00:13:01.519 --> 00:13:04.639
+are slightly at the mercy of whatever
+
+00:13:03.040 --> 00:13:06.240
+the labs are doing, whatever they happen
+
+00:13:04.639 --> 00:13:08.000
+to put into the mix. And you have to
+
+00:13:06.240 --> 00:13:10.160
+actually explore this thing that they
+
+00:13:08.000 --> 00:13:11.680
+give you that has no manual. And it
+
+00:13:10.160 --> 00:13:13.680
+works in certain settings, but maybe not
+
+00:13:11.680 --> 00:13:16.560
+in some settings. And you have to kind
+
+00:13:13.680 --> 00:13:17.839
+of um explore it a little bit. And uh if
+
+00:13:16.560 --> 00:13:19.920
+you're in the circuits that were part of
+
+00:13:17.839 --> 00:13:21.519
+the RL, you fly. And if you're in the
+
+00:13:19.920 --> 00:13:22.880
+circuits that are out of the data
+
+00:13:21.519 --> 00:13:24.240
+distribution, uh you're going to
+
+00:13:22.880 --> 00:13:26.160
+struggle and you have to kind of figure
+
+00:13:24.240 --> 00:13:28.160
+out which which circuits you're in in
+
+00:13:26.160 --> 00:13:29.519
+your application. And if you and if
+
+00:13:28.160 --> 00:13:30.959
+you're not in the circuits, then you
+
+00:13:29.519 --> 00:13:32.880
+have to really look at fine-tuning and
+
+00:13:30.959 --> 00:13:34.079
+doing some of your own work because it's
+
+00:13:32.880 --> 00:13:36.639
+not going to necessarily come out of the
+
+00:13:34.079 --> 00:13:38.079
+LLM out of the box.
+
+00:13:36.639 --> 00:13:40.240
+>> I'd love to come back to the concept of
+
+00:13:38.079 --> 00:13:42.480
+jagged intelligence in a little bit. Um,
+
+00:13:40.240 --> 00:13:44.800
+if you are a founder today and thinking
+
+00:13:42.480 --> 00:13:46.800
+about building a company, you are trying
+
+00:13:44.800 --> 00:13:49.040
+to solve a problem that you think is
+
+00:13:46.800 --> 00:13:51.360
+tractable, something that uh is a domain
+
+00:13:49.040 --> 00:13:53.120
+that is verifiable, but you look around
+
+00:13:51.360 --> 00:13:56.560
+and you think, "Oh my gosh, well, the
+
+00:13:53.120 --> 00:13:58.560
+labs have really really started uh
+
+00:13:56.560 --> 00:14:00.800
+getting to escape velocity in the ones
+
+00:13:58.560 --> 00:14:02.639
+that seem most obvious, math, coding,
+
+00:14:00.800 --> 00:14:05.680
+and others." What would your advice be
+
+00:14:02.639 --> 00:14:08.639
+to to the founders in the audience?
+
+00:14:05.680 --> 00:14:10.480
+Um
+
+00:14:08.639 --> 00:14:12.079
+so I think maybe that comes to the
+
+00:14:10.480 --> 00:14:14.800
+previous question of I do think that
+
+00:14:12.079 --> 00:14:17.040
+verifiability because it um let me
+
+00:14:14.800 --> 00:14:18.639
+think. So verifiability makes something
+
+00:14:17.040 --> 00:14:20.320
+tractable in the current paradigm
+
+00:14:18.639 --> 00:14:24.560
+because you can throw a huge amount of
+
+00:14:20.320 --> 00:14:26.800
+RL at it. Um so maybe one way to see it
+
+00:14:24.560 --> 00:14:28.639
+is that uh that remains true even if the
+
+00:14:26.800 --> 00:14:30.560
+labs are not focusing on it directly. So
+
+00:14:28.639 --> 00:14:31.839
+if you are in a verifiable setting where
+
+00:14:30.560 --> 00:14:34.079
+you could create these RL environments
+
+00:14:31.839 --> 00:14:35.279
+or examples then that actually sets you
+
+00:14:34.079 --> 00:14:36.720
+up to potentially do your own fine
+
+00:14:35.279 --> 00:14:38.079
+tuning and you might benefit from that.
+
+00:14:36.720 --> 00:14:39.760
+But that is fundamentally technology
+
+00:14:38.079 --> 00:14:41.199
+that just works. You can pull a lever if
+
+00:14:39.760 --> 00:14:43.440
+you have huge amount of diverse data
+
+00:14:41.199 --> 00:14:44.959
+sets of RL environments etc. Uh you can
+
+00:14:43.440 --> 00:14:47.920
+use your favorite fine-tuning framework
+
+00:14:44.959 --> 00:14:49.199
+and um and uh pull the lever and get
+
+00:14:47.920 --> 00:14:51.920
+something that actually uh works pretty
+
+00:14:49.199 --> 00:14:54.959
+well. So um I don't know what the
+
+00:14:51.920 --> 00:14:56.480
+examples of this might be. Um, but I do
+
+00:14:54.959 --> 00:14:58.160
+think there are some very valuable uh
+
+00:14:56.480 --> 00:14:59.519
+reinforcement learning environments that
+
+00:14:58.160 --> 00:15:01.279
+people could think of that I think are
+
+00:14:59.519 --> 00:15:02.720
+not part of the Yeah, I don't want to
+
+00:15:01.279 --> 00:15:04.800
+give away the answer, but there is one
+
+00:15:02.720 --> 00:15:06.480
+domain that I think is very uh Oh, okay.
+
+00:15:04.800 --> 00:15:08.639
+Sorry, I don't mean to vape post on on
+
+00:15:06.480 --> 00:15:09.360
+the stage, but there are some examples
+
+00:15:08.639 --> 00:15:11.040
+of this.
+
+00:15:09.360 --> 00:15:13.040
+>> On the flip side, what do you think
+
+00:15:11.040 --> 00:15:14.959
+still feels automatable only from a
+
+00:15:13.040 --> 00:15:17.279
+distance?
+
+00:15:14.959 --> 00:15:19.440
+>> I do think that ultimately almost
+
+00:15:17.279 --> 00:15:21.040
+everything can be made uh verifiable to
+
+00:15:19.440 --> 00:15:23.839
+some extent. some things easier than
+
+00:15:21.040 --> 00:15:25.680
+others. Um because even for like things
+
+00:15:23.839 --> 00:15:27.839
+like writing or so on, you can imagine
+
+00:15:25.680 --> 00:15:29.760
+having a council of LLM judges and
+
+00:15:27.839 --> 00:15:31.760
+probably get get to some get get
+
+00:15:29.760 --> 00:15:33.360
+something uh reasonable out of the um
+
+00:15:31.760 --> 00:15:36.639
+from from this kind of an approach. So
+
+00:15:33.360 --> 00:15:40.320
+it's more about what's easy or hard. Um
+
+00:15:36.639 --> 00:15:42.000
+so I I do think that ultimately um uh
+
+00:15:40.320 --> 00:15:43.199
+yeah, I think uh
+
+00:15:42.000 --> 00:15:45.680
+>> everything [laughter]
+
+00:15:43.199 --> 00:15:47.600
+>> everything is automatable.
+
+00:15:45.680 --> 00:15:49.279
+>> Amazing. Okay. Um, so last year you
+
+00:15:47.600 --> 00:15:50.800
+coined the term vibe coding and today
+
+00:15:49.279 --> 00:15:52.959
+we're in a world that feels a little bit
+
+00:15:50.800 --> 00:15:54.160
+more serious, more regent engineering.
+
+00:15:52.959 --> 00:15:55.360
+What do you think is the difference
+
+00:15:54.160 --> 00:15:57.360
+between the two and what would you
+
+00:15:55.360 --> 00:15:59.120
+actually call what we're in today?
+
+00:15:57.360 --> 00:16:01.120
+>> Uh, yeah. So I would say vibe coding is
+
+00:15:59.120 --> 00:16:03.040
+about raising the floor for everyone in
+
+00:16:01.120 --> 00:16:05.120
+terms of what they can do in software.
+
+00:16:03.040 --> 00:16:06.639
+So the floor rises, everyone can vibe
+
+00:16:05.120 --> 00:16:08.639
+code anything and that's amazing,
+
+00:16:06.639 --> 00:16:10.079
+incredible. But then I would say agentic
+
+00:16:08.639 --> 00:16:11.920
+engineering is about preserving the
+
+00:16:10.079 --> 00:16:13.839
+quality bar of what existed before in
+
+00:16:11.920 --> 00:16:15.920
+professional software. So you're not
+
+00:16:13.839 --> 00:16:18.880
+allowed to introduce vulnerabilities due
+
+00:16:15.920 --> 00:16:20.320
+to VIP coding. Um you are um you're
+
+00:16:18.880 --> 00:16:22.639
+still responsible for your software just
+
+00:16:20.320 --> 00:16:24.800
+as before, but can you go faster? And
+
+00:16:22.639 --> 00:16:26.240
+spoiler is you can but how do you how do
+
+00:16:24.800 --> 00:16:28.240
+you do that properly? And so to me
+
+00:16:26.240 --> 00:16:29.600
+agentic engineering when I call it that
+
+00:16:28.240 --> 00:16:31.199
+because I do think it's kind of like an
+
+00:16:29.600 --> 00:16:32.480
+engineering discipline. You have these
+
+00:16:31.199 --> 00:16:33.839
+agents which are these like spiky
+
+00:16:32.480 --> 00:16:35.759
+entities. They're a bit fable, a little
+
+00:16:33.839 --> 00:16:37.680
+bit stocastic, but they are extremely
+
+00:16:35.759 --> 00:16:39.839
+powerful. is how do you how do you
+
+00:16:37.680 --> 00:16:42.480
+coordinate them to go faster without
+
+00:16:39.839 --> 00:16:46.000
+sacrificing your quality bar and doing
+
+00:16:42.480 --> 00:16:48.880
+that well and correctly um is the the
+
+00:16:46.000 --> 00:16:50.079
+realm of agentic engineering um so I
+
+00:16:48.880 --> 00:16:51.759
+kind of see them as as different like
+
+00:16:50.079 --> 00:16:53.600
+one is about maybe raising the raising
+
+00:16:51.759 --> 00:16:55.360
+the floor and the other is about um you
+
+00:16:53.600 --> 00:16:58.160
+know extrapolating and what I'm seeing I
+
+00:16:55.360 --> 00:17:01.199
+think is there is a very high ceiling on
+
+00:16:58.160 --> 00:17:02.720
+agentic engineer uh capability and you
+
+00:17:01.199 --> 00:17:04.720
+know people used to talk about the 10x
+
+00:17:02.720 --> 00:17:08.559
+engineer previously I think that this is
+
+00:17:04.720 --> 00:17:11.760
+magnified a lot more 10x is uh is not uh
+
+00:17:08.559 --> 00:17:13.520
+the speed up you gain. Um and I think uh
+
+00:17:11.760 --> 00:17:16.160
+it does seem to me like people who are
+
+00:17:13.520 --> 00:17:18.079
+very good at this um peak a lot more
+
+00:17:16.160 --> 00:17:18.559
+than 10x uh from from my perspective
+
+00:17:18.079 --> 00:17:21.280
+right now.
+
+00:17:18.559 --> 00:17:23.520
+>> I really like that framing. Um one thing
+
+00:17:21.280 --> 00:17:25.199
+that when Sam Alman came to AIN last
+
+00:17:23.520 --> 00:17:27.199
+year, one memorable thing he said was
+
+00:17:25.199 --> 00:17:29.200
+that people of different generations use
+
+00:17:27.199 --> 00:17:31.200
+chatpt differently. So if you're in your
+
+00:17:29.200 --> 00:17:32.799
+30s, you use it as a Google search
+
+00:17:31.200 --> 00:17:35.200
+replacement. But if you're in your
+
+00:17:32.799 --> 00:17:37.440
+teens, tragic is your gateway to the
+
+00:17:35.200 --> 00:17:39.280
+internet. What is the parallel here in
+
+00:17:37.440 --> 00:17:42.640
+coding today? If we were to watch two
+
+00:17:39.280 --> 00:17:45.360
+people code using OpenClaw, Claude Code,
+
+00:17:42.640 --> 00:17:47.840
+Codeex, one you'd consider mediocre at
+
+00:17:45.360 --> 00:17:49.600
+it and one you would consider fully AI
+
+00:17:47.840 --> 00:17:51.592
+native. How would you describe the
+
+00:17:49.600 --> 00:17:51.679
+difference?
+
+00:17:51.592 --> 00:17:53.600
+>> [clears throat]
+
+00:17:51.679 --> 00:17:55.039
+>> I mean I think it's a just trying to get
+
+00:17:53.600 --> 00:17:56.799
+the most out of the tools that are
+
+00:17:55.039 --> 00:17:59.679
+available utilizing all of their
+
+00:17:56.799 --> 00:18:02.160
+features investing into your own um kind
+
+00:17:59.679 --> 00:18:03.440
+of setup. Uh so just like previously all
+
+00:18:02.160 --> 00:18:04.480
+the engineers are used to basically
+
+00:18:03.440 --> 00:18:06.559
+getting the most out of the tools you
+
+00:18:04.480 --> 00:18:09.520
+use either it's vim or v code or now
+
+00:18:06.559 --> 00:18:13.039
+it's you know cloth code or codec or so
+
+00:18:09.520 --> 00:18:16.400
+on. So um just investing into your setup
+
+00:18:13.039 --> 00:18:18.559
+um and um utilizing a lot of the you
+
+00:18:16.400 --> 00:18:20.799
+know uh tools that are available to you.
+
+00:18:18.559 --> 00:18:23.120
+Um and I think it just kind of looks
+
+00:18:20.799 --> 00:18:26.799
+like that. I do think that um maybe
+
+00:18:23.120 --> 00:18:29.840
+related thought is um a lot of people
+
+00:18:26.799 --> 00:18:31.919
+are maybe hiring um for this right
+
+00:18:29.840 --> 00:18:34.640
+because they want to hire strong agentic
+
+00:18:31.919 --> 00:18:37.280
+engineers. I do think that um what I'm
+
+00:18:34.640 --> 00:18:39.440
+seeing is that uh the you know most
+
+00:18:37.280 --> 00:18:41.919
+people have still not refactored their
+
+00:18:39.440 --> 00:18:44.240
+um their hiring process for a gentic
+
+00:18:41.919 --> 00:18:46.400
+engineer capability right like if you're
+
+00:18:44.240 --> 00:18:48.240
+giving out puzzles to solve and this is
+
+00:18:46.400 --> 00:18:50.000
+still the old paradigm I would say that
+
+00:18:48.240 --> 00:18:52.400
+hiring have to has to look like give me
+
+00:18:50.000 --> 00:18:53.840
+a really big project and see someone
+
+00:18:52.400 --> 00:18:57.280
+implement that big project like let's
+
+00:18:53.840 --> 00:18:59.039
+write say a Twitter clone uh for agents
+
+00:18:57.280 --> 00:19:01.520
+and then uh make it really good make it
+
+00:18:59.039 --> 00:19:03.840
+really secure and then have some agents
+
+00:19:01.520 --> 00:19:06.640
+uh simulate some activity uh on this
+
+00:19:03.840 --> 00:19:09.039
+Twitter and then I'm going to use 10
+
+00:19:06.640 --> 00:19:12.960
+codecs 5.4x for X high to try to break
+
+00:19:09.039 --> 00:19:15.440
+your break your um uh this website that
+
+00:19:12.960 --> 00:19:16.640
+you deployed and they're going to try to
+
+00:19:15.440 --> 00:19:18.320
+basically break it and they should not
+
+00:19:16.640 --> 00:19:20.000
+be able to break it. And so maybe it
+
+00:19:18.320 --> 00:19:21.679
+looks like that, right? And so yeah,
+
+00:19:20.000 --> 00:19:25.039
+watching people in that that setting and
+
+00:19:21.679 --> 00:19:26.559
+building bigger uh projects and uh
+
+00:19:25.039 --> 00:19:28.400
+utilize utilizing the tooling is maybe
+
+00:19:26.559 --> 00:19:29.039
+what I would uh look at for the most
+
+00:19:28.400 --> 00:19:31.280
+part.
+
+00:19:29.039 --> 00:19:33.679
+>> And as agents do more, what human skill
+
+00:19:31.280 --> 00:19:34.880
+do you think becomes more valuable, not
+
+00:19:33.679 --> 00:19:37.039
+less?
+
+00:19:34.880 --> 00:19:39.440
+>> Uh so um yeah, it's a good question. I
+
+00:19:37.039 --> 00:19:40.559
+think um well right now the answer is
+
+00:19:39.440 --> 00:19:44.480
+that the agents are kind of like these
+
+00:19:40.559 --> 00:19:46.960
+intern entities right so it's remarkable
+
+00:19:44.480 --> 00:19:48.559
+um you basically still have to be in
+
+00:19:46.960 --> 00:19:50.400
+charge of the aesthetics the the
+
+00:19:48.559 --> 00:19:52.480
+judgment the taste and a little bit of
+
+00:19:50.400 --> 00:19:54.559
+oversight maybe one one of my favorite
+
+00:19:52.480 --> 00:19:57.679
+examples of like the the weirdness of
+
+00:19:54.559 --> 00:20:00.559
+agents is um for menu genen uh you sign
+
+00:19:57.679 --> 00:20:02.559
+up with a Google Google account but you
+
+00:20:00.559 --> 00:20:04.160
+um purchase credits using a stripe
+
+00:20:02.559 --> 00:20:06.320
+account and both of them have email
+
+00:20:04.160 --> 00:20:08.400
+addresses and my agent actually tried to
+
+00:20:06.320 --> 00:20:10.880
+basically
+
+00:20:08.400 --> 00:20:13.039
+um like when you purchase credits, it
+
+00:20:10.880 --> 00:20:15.760
+assigned it using the email address from
+
+00:20:13.039 --> 00:20:18.000
+Stripe to the Google email address like
+
+00:20:15.760 --> 00:20:20.320
+there wasn't a persistent user ID that
+
+00:20:18.000 --> 00:20:21.600
+that uh for people it was trying to
+
+00:20:20.320 --> 00:20:22.720
+match up the email addresses, but you
+
+00:20:21.600 --> 00:20:24.480
+could use different email address for
+
+00:20:22.720 --> 00:20:26.799
+your Stripe and your Google and
+
+00:20:24.480 --> 00:20:28.240
+basically would not associate the funds.
+
+00:20:26.799 --> 00:20:29.919
+And so this is the kind of thing that
+
+00:20:28.240 --> 00:20:31.520
+these agents still will make mistakes
+
+00:20:29.919 --> 00:20:33.039
+about is like why would you use email
+
+00:20:31.520 --> 00:20:34.559
+addresses to try to crossorrelate the
+
+00:20:33.039 --> 00:20:36.720
+funds? They can be arbitrary. You can
+
+00:20:34.559 --> 00:20:39.039
+use different emails, etc. Like this is
+
+00:20:36.720 --> 00:20:40.480
+such a weird thing to do. So I think
+
+00:20:39.039 --> 00:20:43.520
+people have to be in charge of this
+
+00:20:40.480 --> 00:20:46.000
+spec, this plan. And um I actually don't
+
+00:20:43.520 --> 00:20:47.360
+even like the plan mode. I I would I
+
+00:20:46.000 --> 00:20:48.240
+mean obviously it's very useful, but I
+
+00:20:47.360 --> 00:20:49.600
+think there's something more general
+
+00:20:48.240 --> 00:20:51.440
+here where you have to work with your
+
+00:20:49.600 --> 00:20:53.600
+agent to design a spec that is very
+
+00:20:51.440 --> 00:20:55.360
+detailed and maybe it's uh maybe
+
+00:20:53.600 --> 00:20:56.960
+basically the docs and then get the
+
+00:20:55.360 --> 00:20:58.720
+agents to write them and you're in
+
+00:20:56.960 --> 00:21:00.480
+charge of the oversight and the top
+
+00:20:58.720 --> 00:21:02.480
+level categories, but the agents are
+
+00:21:00.480 --> 00:21:04.000
+doing a lot of the under the hood. And
+
+00:21:02.480 --> 00:21:05.840
+um so I think you're not caring about
+
+00:21:04.000 --> 00:21:09.200
+some of the details. So as an example
+
+00:21:05.840 --> 00:21:11.520
+also with um arrays or tensors in neural
+
+00:21:09.200 --> 00:21:13.280
+networks. Um there's a ton of details
+
+00:21:11.520 --> 00:21:14.960
+between PyTorch and NumPy and all the
+
+00:21:13.280 --> 00:21:17.280
+different like pandas and so on for all
+
+00:21:14.960 --> 00:21:18.960
+the different little API details. And I
+
+00:21:17.280 --> 00:21:20.640
+I already forgot about the keep dims
+
+00:21:18.960 --> 00:21:22.799
+versus keep dim or whether it's dim or
+
+00:21:20.640 --> 00:21:24.000
+axis or reshape or permute or transpose.
+
+00:21:22.799 --> 00:21:25.440
+I don't remember this stuff anymore,
+
+00:21:24.000 --> 00:21:26.640
+right? Because you don't have to. This
+
+00:21:25.440 --> 00:21:28.000
+is the kind of details that are handled
+
+00:21:26.640 --> 00:21:30.000
+by the intern because they have very
+
+00:21:28.000 --> 00:21:32.080
+good recall and but you still have to
+
+00:21:30.000 --> 00:21:33.679
+know for example that um you know
+
+00:21:32.080 --> 00:21:35.280
+there's underlying tensor there's an
+
+00:21:33.679 --> 00:21:37.200
+underlying view and then you can
+
+00:21:35.280 --> 00:21:38.320
+manipulate view of the same storage or
+
+00:21:37.200 --> 00:21:40.080
+you can have different storage which
+
+00:21:38.320 --> 00:21:41.520
+would be less efficient and so you still
+
+00:21:40.080 --> 00:21:43.440
+have to have an understanding of what
+
+00:21:41.520 --> 00:21:45.760
+this stuff is doing and some of the
+
+00:21:43.440 --> 00:21:47.600
+fundamentals um so that you're not
+
+00:21:45.760 --> 00:21:50.799
+copying memory around unnecessarily and
+
+00:21:47.600 --> 00:21:53.280
+so on but uh the details of the APIs are
+
+00:21:50.799 --> 00:21:55.600
+now handed off so it um you're in charge
+
+00:21:53.280 --> 00:21:57.039
+of the taste the engineering the design
+
+00:21:55.600 --> 00:21:58.240
+um and that it makes sense and that
+
+00:21:57.039 --> 00:21:59.520
+you're asking for the right things and
+
+00:21:58.240 --> 00:22:01.280
+that you're saying that okay that these
+
+00:21:59.520 --> 00:22:03.919
+have to be unique user IDs that we're
+
+00:22:01.280 --> 00:22:06.080
+going to tie everything to um and so
+
+00:22:03.919 --> 00:22:07.360
+you're doing some of the design and
+
+00:22:06.080 --> 00:22:08.880
+development and the engineers are doing
+
+00:22:07.360 --> 00:22:10.159
+the fill in the blanks and that's
+
+00:22:08.880 --> 00:22:11.600
+currently kind of like where we are and
+
+00:22:10.159 --> 00:22:13.679
+I think that's what everyone of course
+
+00:22:11.600 --> 00:22:15.360
+is seeing I think right now
+
+00:22:13.679 --> 00:22:18.559
+>> do you think there's a chance that this
+
+00:22:15.360 --> 00:22:20.080
+um taste and judgment matters less over
+
+00:22:18.559 --> 00:22:21.360
+time or will the ceiling just keep
+
+00:22:20.080 --> 00:22:22.720
+rising
+
+00:22:21.360 --> 00:22:25.440
+>> um yeah it's a good question I would
+
+00:22:22.720 --> 00:22:28.320
+Okay.
+
+00:22:25.440 --> 00:22:30.240
+Um, I mean, I'm hoping that the that it
+
+00:22:28.320 --> 00:22:31.520
+improves. I think probably the reason it
+
+00:22:30.240 --> 00:22:33.200
+doesn't improve right now is again, it's
+
+00:22:31.520 --> 00:22:36.559
+not part of the RL. There's probably no
+
+00:22:33.200 --> 00:22:39.840
+aesthetics cost or reward or it's not
+
+00:22:36.559 --> 00:22:41.200
+good enough or something like that. Um,
+
+00:22:39.840 --> 00:22:42.480
+I do think that when you actually look
+
+00:22:41.200 --> 00:22:44.480
+at the code, sometimes I get a little
+
+00:22:42.480 --> 00:22:46.080
+bit of a heart attack because it's not
+
+00:22:44.480 --> 00:22:47.120
+like super amazing code necessarily all
+
+00:22:46.080 --> 00:22:48.480
+the time and it's very bloaty and
+
+00:22:47.120 --> 00:22:50.240
+there's a lot of copy paste and there's
+
+00:22:48.480 --> 00:22:52.480
+awkward abstractions that are brittle
+
+00:22:50.240 --> 00:22:55.760
+and like it works but it's just really
+
+00:22:52.480 --> 00:22:57.840
+gross. Um, and I do I do hope that this
+
+00:22:55.760 --> 00:22:59.840
+can improve in future models. Um, a good
+
+00:22:57.840 --> 00:23:02.080
+example also is this uh you know micro
+
+00:22:59.840 --> 00:23:04.640
+GPT project which where I was trying to
+
+00:23:02.080 --> 00:23:06.640
+simplify uh LLM training to be as simple
+
+00:23:04.640 --> 00:23:08.799
+as possible. The models hate this. They
+
+00:23:06.640 --> 00:23:10.960
+can't do it. I tried to I keep I kept
+
+00:23:08.799 --> 00:23:13.600
+trying to prompt an LLM to simplify more
+
+00:23:10.960 --> 00:23:15.520
+simplify more and it just can't you feel
+
+00:23:13.600 --> 00:23:18.240
+like you're outside of the RL circuits.
+
+00:23:15.520 --> 00:23:20.240
+It feels like you're obviously you know
+
+00:23:18.240 --> 00:23:23.760
+you're pulling teeth. It's not like
+
+00:23:20.240 --> 00:23:25.120
+light speed. So I think um I do think
+
+00:23:23.760 --> 00:23:26.400
+that people are still remain in charge
+
+00:23:25.120 --> 00:23:27.600
+of this. But I do think that there's
+
+00:23:26.400 --> 00:23:28.640
+nothing fundamental again that's
+
+00:23:27.600 --> 00:23:30.400
+preventing it. It's just the labs
+
+00:23:28.640 --> 00:23:31.039
+haven't done it yet almost.
+
+00:23:30.400 --> 00:23:33.360
+>> Yeah.
+
+00:23:31.039 --> 00:23:36.480
+>> So I'd love to come back to this idea of
+
+00:23:33.360 --> 00:23:38.159
+uh jagged forms of intelligence. you
+
+00:23:36.480 --> 00:23:39.520
+wrote a little bit about this with a
+
+00:23:38.159 --> 00:23:42.640
+very thoughtprovoking piece around
+
+00:23:39.520 --> 00:23:44.400
+animals versus ghosts. Um, and the idea
+
+00:23:42.640 --> 00:23:46.799
+is that we're not building animals, we
+
+00:23:44.400 --> 00:23:48.559
+are summoning ghosts. Um, and these are
+
+00:23:46.799 --> 00:23:51.440
+jagged forms of intelligence that are
+
+00:23:48.559 --> 00:23:54.000
+shaped by data and reward functions, but
+
+00:23:51.440 --> 00:23:57.039
+not by intrinsic motivation or fun or
+
+00:23:54.000 --> 00:24:00.000
+curiosity or empowerment. Uh, things
+
+00:23:57.039 --> 00:24:02.880
+that kind of came about via evolution.
+
+00:24:00.000 --> 00:24:04.480
+um why does that framing matter and what
+
+00:24:02.880 --> 00:24:07.120
+does it actually change about how you
+
+00:24:04.480 --> 00:24:08.960
+build and deploy and evaluate or even
+
+00:24:07.120 --> 00:24:12.559
+trust them?
+
+00:24:08.960 --> 00:24:13.760
+>> Uh yeah, so yeah, I think the reason I
+
+00:24:12.559 --> 00:24:15.200
+wrote about this is because I'm trying
+
+00:24:13.760 --> 00:24:16.640
+to wrap my head around what these things
+
+00:24:15.200 --> 00:24:18.320
+are, right? Because if you have a good
+
+00:24:16.640 --> 00:24:20.080
+model of what they are or are not, then
+
+00:24:18.320 --> 00:24:23.760
+you're going to be more competent at uh
+
+00:24:20.080 --> 00:24:25.919
+using them. Um and I do think that um I
+
+00:24:23.760 --> 00:24:28.559
+don't know if it has I'm not sure if it
+
+00:24:25.919 --> 00:24:29.520
+actually has like real power. [laughter]
+
+00:24:28.559 --> 00:24:33.120
+I think it's a little bit of
+
+00:24:29.520 --> 00:24:34.799
+philosophizing. Um, but I do think that
+
+00:24:33.120 --> 00:24:36.880
+um
+
+00:24:34.799 --> 00:24:38.640
+I think it's just um coming to terms
+
+00:24:36.880 --> 00:24:40.080
+with the fact that these things are not,
+
+00:24:38.640 --> 00:24:41.279
+you know, animal intelligences. Like if
+
+00:24:40.080 --> 00:24:43.200
+you yell at them, they're not going to
+
+00:24:41.279 --> 00:24:46.799
+work better or worse or it doesn't have
+
+00:24:43.200 --> 00:24:48.159
+any impact. Um, and uh it's all just
+
+00:24:46.799 --> 00:24:50.960
+kind of like these statistical
+
+00:24:48.159 --> 00:24:53.200
+simulation circuits where the the
+
+00:24:50.960 --> 00:24:55.520
+substrate is pre-training so like
+
+00:24:53.200 --> 00:24:57.919
+statistics and then but then there's RL
+
+00:24:55.520 --> 00:25:00.400
+bolting on top. So, it kind of like
+
+00:24:57.919 --> 00:25:02.159
+increases the dispendages and um maybe
+
+00:25:00.400 --> 00:25:04.080
+it's just kind of like a mindset of what
+
+00:25:02.159 --> 00:25:05.840
+I'm coming into or what's likely to work
+
+00:25:04.080 --> 00:25:07.760
+or not likely to work or how to modify
+
+00:25:05.840 --> 00:25:09.360
+it. But I don't actually I don't know
+
+00:25:07.760 --> 00:25:11.279
+that I have like here are the five
+
+00:25:09.360 --> 00:25:12.640
+obvious outcomes of how to make your
+
+00:25:11.279 --> 00:25:14.640
+system better. It's more just being
+
+00:25:12.640 --> 00:25:16.480
+suspicious of it and um
+
+00:25:14.640 --> 00:25:18.400
+>> figuring out over time.
+
+00:25:16.480 --> 00:25:20.000
+>> That's where it starts. Um okay, so you
+
+00:25:18.400 --> 00:25:22.559
+are so deep in working with agents that
+
+00:25:20.000 --> 00:25:24.880
+don't just chat. They have um real
+
+00:25:22.559 --> 00:25:26.240
+permissions. They have local context.
+
+00:25:24.880 --> 00:25:28.240
+they actually take action on your be
+
+00:25:26.240 --> 00:25:30.080
+your behalf. What does the world look
+
+00:25:28.240 --> 00:25:31.279
+like when we all start to live in that
+
+00:25:30.080 --> 00:25:34.000
+world?
+
+00:25:31.279 --> 00:25:35.600
+>> Uh yeah, I think I think every a lot of
+
+00:25:34.000 --> 00:25:38.240
+people probably here are excited about
+
+00:25:35.600 --> 00:25:40.240
+what this agent uh you know native
+
+00:25:38.240 --> 00:25:41.360
+agentic environment looks like and
+
+00:25:40.240 --> 00:25:42.480
+everything has to be rewritten.
+
+00:25:41.360 --> 00:25:44.559
+Everything is still fundamentally
+
+00:25:42.480 --> 00:25:46.799
+written for humans and has to be moved
+
+00:25:44.559 --> 00:25:48.320
+around. I still use most of the time
+
+00:25:46.799 --> 00:25:49.679
+when I use uh different frameworks or
+
+00:25:48.320 --> 00:25:51.360
+libraries or things like that, they
+
+00:25:49.679 --> 00:25:53.120
+still have docs that are fundamentally
+
+00:25:51.360 --> 00:25:55.679
+written for humans. This is my favorite
+
+00:25:53.120 --> 00:25:57.039
+pet peeve. Like I don't uh why are
+
+00:25:55.679 --> 00:25:58.400
+people still telling me what to do? Like
+
+00:25:57.039 --> 00:26:00.227
+I don't want to do anything. What is the
+
+00:25:58.400 --> 00:26:02.880
+thing I should copy paste to my agent?
+
+00:26:00.227 --> 00:26:04.799
+[laughter] Like uh so it's just um every
+
+00:26:02.880 --> 00:26:06.000
+time I'm told, you know, go to this URL
+
+00:26:04.799 --> 00:26:07.360
+or something like that, it's just like
+
+00:26:06.000 --> 00:26:10.320
+ah [laughter]
+
+00:26:07.360 --> 00:26:12.240
+you know. [snorts] So um everyone is I
+
+00:26:10.320 --> 00:26:14.080
+think excited about how do we decompose
+
+00:26:12.240 --> 00:26:16.159
+the workloads that need to happen into
+
+00:26:14.080 --> 00:26:18.240
+fundamentally sensors over the world,
+
+00:26:16.159 --> 00:26:20.080
+actuators over the world. How do we make
+
+00:26:18.240 --> 00:26:23.360
+it agent native? Uh basically describe
+
+00:26:20.080 --> 00:26:27.840
+it to agents first. um and then have a
+
+00:26:23.360 --> 00:26:30.159
+lot of automation around um you know the
+
+00:26:27.840 --> 00:26:32.960
+um yeah around data structures that are
+
+00:26:30.159 --> 00:26:34.400
+very legible to the LLMs. Uh so I think
+
+00:26:32.960 --> 00:26:36.960
+um yeah I'm hoping that there's a lot of
+
+00:26:34.400 --> 00:26:39.039
+agent first um infrastructure out there
+
+00:26:36.960 --> 00:26:40.960
+and that you know for Menuguen famously
+
+00:26:39.039 --> 00:26:42.400
+when I wrote the uh not I'm not sure how
+
+00:26:40.960 --> 00:26:44.159
+famously but when I wrote the blog post
+
+00:26:42.400 --> 00:26:46.240
+about Menuguen [laughter]
+
+00:26:44.159 --> 00:26:47.440
+um a lot of the work a lot of the
+
+00:26:46.240 --> 00:26:48.720
+trouble was not even writing the code
+
+00:26:47.440 --> 00:26:50.240
+for Menugen it was deploying it in
+
+00:26:48.720 --> 00:26:51.440
+versell because I had to work with all
+
+00:26:50.240 --> 00:26:52.640
+these different services and I had to
+
+00:26:51.440 --> 00:26:54.960
+string them up and I had to go to their
+
+00:26:52.640 --> 00:26:56.720
+settings and the menus and you know
+
+00:26:54.960 --> 00:26:59.760
+configure my DNS and it was just so
+
+00:26:56.720 --> 00:27:01.760
+annoying and so that's a good example of
+
+00:26:59.760 --> 00:27:04.480
+I would hope that menu gen that I could
+
+00:27:01.760 --> 00:27:05.840
+give a prompt to an LLM build menu genen
+
+00:27:04.480 --> 00:27:07.840
+and then I didn't have to touch anything
+
+00:27:05.840 --> 00:27:09.679
+and it's deployed in that same way on
+
+00:27:07.840 --> 00:27:12.159
+the internet. Uh I think that would be a
+
+00:27:09.679 --> 00:27:13.360
+good kind of a test for whether or not
+
+00:27:12.159 --> 00:27:14.960
+uh a lot of our infrastructure is
+
+00:27:13.360 --> 00:27:17.279
+becoming more and more agent native. And
+
+00:27:14.960 --> 00:27:19.360
+then ultimately I would say yeah I I do
+
+00:27:17.279 --> 00:27:21.279
+think we're going towards a world where
+
+00:27:19.360 --> 00:27:25.520
+um there's agent representation for
+
+00:27:21.279 --> 00:27:26.960
+people and for organizations and um you
+
+00:27:25.520 --> 00:27:28.720
+know I'll have my agent talk to your
+
+00:27:26.960 --> 00:27:30.799
+agent uh to figure out some of the
+
+00:27:28.720 --> 00:27:33.039
+details of our meetings or or things
+
+00:27:30.799 --> 00:27:34.799
+like that. So, [laughter]
+
+00:27:33.039 --> 00:27:36.720
+um I do think that that's uh roughly
+
+00:27:34.799 --> 00:27:37.840
+where things are going, but um yeah, I
+
+00:27:36.720 --> 00:27:38.240
+think everyone here is excited about
+
+00:27:37.840 --> 00:27:40.000
+that.
+
+00:27:38.240 --> 00:27:41.679
+>> I really like the visual analogy of
+
+00:27:40.000 --> 00:27:42.640
+sensors and actuators. I actually hadn't
+
+00:27:41.679 --> 00:27:43.039
+thought of that. That's super
+
+00:27:42.640 --> 00:27:43.440
+interesting,
+
+00:27:43.039 --> 00:27:45.360
+>> right?
+
+00:27:43.440 --> 00:27:47.679
+>> Um okay, I think we have to end on a
+
+00:27:45.360 --> 00:27:49.360
+question about education. Um because you
+
+00:27:47.679 --> 00:27:51.200
+are probably one of the very best in the
+
+00:27:49.360 --> 00:27:53.520
+world at making complex technical
+
+00:27:51.200 --> 00:27:56.320
+concepts simple and deeply thoughtful
+
+00:27:53.520 --> 00:27:59.760
+about how we design education around it.
+
+00:27:56.320 --> 00:28:02.480
+Um, what still remains worth learning
+
+00:27:59.760 --> 00:28:05.440
+deeply when intelligence gets cheap as
+
+00:28:02.480 --> 00:28:07.760
+we move into the next a era of AI?
+
+00:28:05.440 --> 00:28:09.200
+>> Yeah. Uh, there was a tweet that blew my
+
+00:28:07.760 --> 00:28:10.559
+mind recently and I keep thinking about
+
+00:28:09.200 --> 00:28:12.640
+it like every other day. It was
+
+00:28:10.559 --> 00:28:14.240
+something along the lines of um, you can
+
+00:28:12.640 --> 00:28:16.640
+outsource your thinking but you can't
+
+00:28:14.240 --> 00:28:17.679
+outsource your understanding.
+
+00:28:16.640 --> 00:28:21.279
+And um,
+
+00:28:17.679 --> 00:28:23.520
+>> I think that's really nicely put. I so
+
+00:28:21.279 --> 00:28:25.120
+yeah because I still I'm still part of
+
+00:28:23.520 --> 00:28:26.720
+the system and I still I still have to
+
+00:28:25.120 --> 00:28:27.919
+somehow information still has to make it
+
+00:28:26.720 --> 00:28:29.279
+into my brain and I feel like I'm
+
+00:28:27.919 --> 00:28:30.799
+becoming a bottleneck of just even
+
+00:28:29.279 --> 00:28:32.880
+knowing what are we trying to build why
+
+00:28:30.799 --> 00:28:34.640
+is it worth doing uh how do I direct you
+
+00:28:32.880 --> 00:28:37.840
+know how do I direct my my agents and so
+
+00:28:34.640 --> 00:28:39.760
+on so I do still think that ultimately
+
+00:28:37.840 --> 00:28:43.279
+something has to direct the thinking and
+
+00:28:39.760 --> 00:28:44.720
+the processing and so on and um that's
+
+00:28:43.279 --> 00:28:46.240
+still kind of fundamentally constrained
+
+00:28:44.720 --> 00:28:47.679
+somehow by understanding and this is one
+
+00:28:46.240 --> 00:28:49.600
+reason I also was very excited about all
+
+00:28:47.679 --> 00:28:51.360
+the LM knowledge bases because I feel
+
+00:28:49.600 --> 00:28:53.200
+like that's that's a way for me to
+
+00:28:51.360 --> 00:28:54.960
+process information and anytime I see a
+
+00:28:53.200 --> 00:28:56.799
+different projection onto information. I
+
+00:28:54.960 --> 00:28:58.720
+always like feel like I gain insight. So
+
+00:28:56.799 --> 00:29:00.320
+it's really just a lot of prompts for me
+
+00:28:58.720 --> 00:29:03.360
+to do synthetic data generation kind of
+
+00:29:00.320 --> 00:29:05.039
+over over some fixed data. Uh so I I
+
+00:29:03.360 --> 00:29:06.720
+really enjoy uh whenever I read an
+
+00:29:05.039 --> 00:29:07.760
+article I have my uh you know my wiki
+
+00:29:06.720 --> 00:29:09.520
+that's being built up from these
+
+00:29:07.760 --> 00:29:12.640
+articles and I love asking questions
+
+00:29:09.520 --> 00:29:15.120
+about things or um and I I think that
+
+00:29:12.640 --> 00:29:17.279
+ultimately these are tools to enhance
+
+00:29:15.120 --> 00:29:18.559
+understanding in a certain way and this
+
+00:29:17.279 --> 00:29:20.080
+is still kind of like a bit of a
+
+00:29:18.559 --> 00:29:22.880
+bottleneck because then you can't direct
+
+00:29:20.080 --> 00:29:25.360
+the you can't be a good director if you
+
+00:29:22.880 --> 00:29:26.960
+still uh because the LM certainly don't
+
+00:29:25.360 --> 00:29:28.960
+excel at understanding you still are
+
+00:29:26.960 --> 00:29:31.039
+uniquely in charge of that. So, uh,
+
+00:29:28.960 --> 00:29:32.559
+yeah, I think, uh, tools to that effect,
+
+00:29:31.039 --> 00:29:33.200
+I think are incredibly interesting and
+
+00:29:32.559 --> 00:29:34.559
+exciting.
+
+00:29:33.200 --> 00:29:36.159
+>> I'm excited to be back here in a couple
+
+00:29:34.559 --> 00:29:38.480
+years and to see if we've been fully
+
+00:29:36.159 --> 00:29:40.000
+automated out of the loop and they
+
+00:29:38.480 --> 00:29:41.440
+actually take care of understanding as
+
+00:29:40.000 --> 00:29:42.930
+well. Uh, thank you so much for joining
+
+00:29:41.440 --> 00:29:44.950
+us, Andre. We really appreciate it.
+
+00:29:42.930 --> 00:29:44.950
+[applause]
+

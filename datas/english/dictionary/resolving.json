@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "resolve",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪˈzɑːlv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 결심[결정]하다; 결심시키다; <의회가> 결의하다, 의결하다; 표결하다 (=decide)",
+              "examples": [
+                {
+                  "text": "It was resolved that …",
+                  "translatedText": "…으로 의결되었다"
+                }
+              ],
+              "originalMeaning": "<사람이> 결심[결정]하다; 결심시키다; <의회가> 결의하다, 의결하다; 표결하다 (=<span class='related_word' lang='en' >decide</span>)"
+            },
+            {
+              "meaning": "분해[분석]하다; 용해하다, 녹이다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>resolve</b> water into oxygen and hydrogen",
+                  "translatedText": "물을 산소와 수소로 분해하다"
+                }
+              ],
+              "originalMeaning": "분해[분석]하다; 용해하다, 녹이다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결심하다; 결정하다, 결의하다 ((on, upon, against))",
+              "examples": [
+                {
+                  "text": "He <b>resolve</b> d onmaking an early start.",
+                  "translatedText": "그는 일찍 떠나기로 결정했다."
+                }
+              ],
+              "originalMeaning": "결심하다; 결정하다, 결의하다 ((on, upon, against))"
+            },
+            {
+              "meaning": "분해[환원]하다, 용해하다 ((into, to))",
+              "examples": [
+                {
+                  "text": "It resolves into its elements.",
+                  "translatedText": "그것은 원소로 분해된다."
+                }
+              ],
+              "originalMeaning": "분해[환원]하다, 용해하다 ((into, to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "결심, 결의",
+              "examples": [
+                {
+                  "text": "put one's <b>resolve</b> into effect",
+                  "translatedText": "결의를 실행으로 옮기다"
+                }
+              ],
+              "originalMeaning": "결심, 결의"
+            },
+            {
+              "meaning": "결단(력), 견인불발, 불굴, 확고부동",
+              "examples": [],
+              "originalMeaning": "결단(력), 견인불발, 불굴, 확고부동"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e0819e01f6624bc8994c32e039f10237",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e0819e01f6624bc8994c32e039f10237",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "resolves"
+        },
+        {
+          "type": "과거형",
+          "value": "resolved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "resolving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "resolved"
+        }
+      ],
+      "aliasConjugation": "resolves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a05bdd606e595d6e9b2db43fb3b035c9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그것을 단행할 각오이다",
+      "text": "I am resolved to carry it out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 최선을 다할 결심이다.",
+      "text": "We are resolved to do our utmost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "안개는 곧 비로 바뀌었다.",
+      "text": "The fog was soon resolved into rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 담배를 끊을 결심을 하였다.",
+      "text": "He made a <b>resolve</b> to stop smoking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사실 때문에 그는 싸울 결심을 했다.",
+      "text": "This fact resolved him to fight."
+    }
+  ],
+  "isWordType": true
+}

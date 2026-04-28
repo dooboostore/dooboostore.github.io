@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "entry": "paste",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "peɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(붙이는) 풀",
+              "examples": [
+                {
+                  "text": "scissors and <b>paste</b>",
+                  "translatedText": "가위와 풀; 독창성 없는 편집"
+                }
+              ],
+              "originalMeaning": "(붙이는) 풀"
+            },
+            {
+              "meaning": "밀가루 반죽",
+              "examples": [],
+              "originalMeaning": "밀가루 반죽"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<종이를> 풀칠하다, 풀로 바르다[붙이다] ((up, on, down, together)); 풀칠하여 붙이다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>paste</b> two sheets of paper together",
+                  "translatedText": "두 장의 종이를 풀칠하여 붙이다"
+                }
+              ],
+              "originalMeaning": "<종이를> 풀칠하다, 풀로 바르다[붙이다] ((up, on, down, together)); 풀칠하여 붙이다 ((with))"
+            },
+            {
+              "meaning": "<창문·틈 등에> 종이를 바르다 ((up, over)); …에 바르다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>paste</b> the wall with the paper",
+                  "translatedText": "벽에 벽지를 바르다"
+                }
+              ],
+              "originalMeaning": "<창문·틈 등에> 종이를 바르다 ((up, over)); …에 바르다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/79700a81fd914108b7b0d57f24749359",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/79700a81fd914108b7b0d57f24749359",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pastes"
+        },
+        {
+          "type": "과거형",
+          "value": "pasted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pasting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pasted"
+        }
+      ],
+      "aliasConjugation": "pastes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0555d2be72f7e22261a7d01a449f3a1a",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "paste",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "치다, 때리다; 맹포격[폭격]하다",
+              "examples": [],
+              "originalMeaning": "치다, 때리다; 맹포격[폭격]하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(얼굴에의) 강타",
+              "examples": [],
+              "originalMeaning": "(얼굴에의) 강타"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0e66409d4f8466b80b351a03cbb75eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0e66409d4f8466b80b351a03cbb75eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "pastes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "68aeb9b44b5e736a225c845e3325fb4a",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풀이 잘 붙는다",
+      "text": "A <b>paste</b> sticks well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풀이 뭉치다",
+      "text": "<b>Paste</b> lumps. or <b>Paste</b> forms a hard mass."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풀이 되직하다",
+      "text": "The <b>paste</b> is a bit thick."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풀이 굳었다",
+      "text": "The <b>paste</b> has become hard."
+    }
+  ],
+  "isWordType": true
+}

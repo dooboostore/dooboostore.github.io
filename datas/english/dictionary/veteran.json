@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "veteran",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvetərən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "노련가, 경험 많은 대가, 베테랑; ((특히)) 노병(老兵)",
+              "examples": [
+                {
+                  "text": "a <b>veteran</b> of the police force",
+                  "translatedText": "경찰의 베테랑"
+                }
+              ],
+              "originalMeaning": "노련가, 경험 많은 대가, 베테랑; ((특히)) 노병(老兵)"
+            },
+            {
+              "meaning": "퇴역[재향] 군인( ex-serviceman)",
+              "examples": [
+                {
+                  "text": "a Vietnam <b>veteran</b>",
+                  "translatedText": "베트남전 참전 군인"
+                }
+              ],
+              "originalMeaning": "퇴역[재향] 군인( ex-serviceman)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "노련한, 많은 경험을 쌓은; 전쟁[전투] 경험이 많은",
+              "examples": [
+                {
+                  "text": "<b>veteran</b> troops",
+                  "translatedText": "역전(歷戰)의 정예 부대"
+                }
+              ],
+              "originalMeaning": "노련한, 많은 경험을 쌓은; 전쟁[전투] 경험이 많은"
+            },
+            {
+              "meaning": "퇴역 (군인)의",
+              "examples": [],
+              "originalMeaning": "퇴역 (군인)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f7fac4b5f8f444b3aa3552031e5c921b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f7fac4b5f8f444b3aa3552031e5c921b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1cf7dd93bb7c614622be4d171cdc7940",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실무에 있어서는 그가 능수다",
+      "text": "He is a shrewd man[a <b>veteran</b>] of business practice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 기자 생활 20년의 노련한 신문인이다",
+      "text": "He is a <b>veteran</b> newspaperman with a 20-year career of journalism."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "재향 군인회",
+      "text": "(Korean) Veterans Association"
+    }
+  ],
+  "isWordType": true
+}

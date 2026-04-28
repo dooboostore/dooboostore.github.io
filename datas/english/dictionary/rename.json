@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "entry": "rename",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriːˈneɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 새 이름을 지어주다, 개명하다",
+              "examples": [],
+              "originalMeaning": "…에게 새 이름을 지어주다, 개명하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a6bc291e949c42afaed94d9113fb1caa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a6bc291e949c42afaed94d9113fb1caa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "renames"
+        },
+        {
+          "type": "과거형",
+          "value": "renamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "renaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "renamed"
+        }
+      ],
+      "aliasConjugation": "renames",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "06e25e2098fcdd4a3f48f21dd0b06922",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 거리는 ‘자유로’로 개칭되었다",
+      "text": "The street was renamed Freedom Avenue."
+    }
+  ],
+  "isWordType": true
+}

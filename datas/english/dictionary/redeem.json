@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "redeem",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈdiːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "되사다, <저당물을> 도로 찾다",
+              "examples": [
+                {
+                  "text": "<b>redeem</b> one's pawned watch",
+                  "translatedText": "전당잡힌 시계를 찾다"
+                }
+              ],
+              "originalMeaning": "되사다, <저당물을> 도로 찾다"
+            },
+            {
+              "meaning": "<채무·채권을> 변제하다, 상환하다; <지폐를> 회수하다",
+              "examples": [],
+              "originalMeaning": "<채무·채권을> 변제하다, 상환하다; <지폐를> 회수하다"
+            },
+            {
+              "meaning": "<쿠폰·상품권 등을> 상품으로 바꾸다",
+              "examples": [],
+              "originalMeaning": "<쿠폰·상품권 등을> 상품으로 바꾸다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f88a67ba240843bcbc0d32921b463d60",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f88a67ba240843bcbc0d32921b463d60",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "redeems"
+        },
+        {
+          "type": "과거형",
+          "value": "redeemed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "redeeming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "redeemed"
+        }
+      ],
+      "aliasConjugation": "redeems",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4a1133d8661160da1061ffb879ba6c7a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "눈 덕택에 얼굴이 추함을 면하고 있다.",
+      "text": "The eyes <b>redeem</b> the face from ugliness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "남들을 위로함으로써 그 자신의 절망에서도 구출되었다.",
+      "text": "Comforting others redeemed him from his own despair."
+    }
+  ],
+  "isWordType": true
+}

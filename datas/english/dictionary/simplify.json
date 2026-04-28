@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "simplify",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsɪmplɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "간단하게 하다, 평이하게 하다, 단순화하다",
+              "examples": [
+                {
+                  "text": "<b>simplify</b> one's explanation",
+                  "translatedText": "설명을 평이하게 하다"
+                }
+              ],
+              "originalMeaning": "간단하게 하다, 평이하게 하다, 단순화하다"
+            },
+            {
+              "meaning": "간단[간략]화가 지나치다(oversimplify)",
+              "examples": [],
+              "originalMeaning": "간단[간략]화가 지나치다(oversimplify)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d385f55632c449d1bd493b57fbc6c5f7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d385f55632c449d1bd493b57fbc6c5f7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "simplifies"
+        },
+        {
+          "type": "과거형",
+          "value": "simplified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "simplifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "simplified"
+        }
+      ],
+      "aliasConjugation": "simplifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0ebea7cf97855d09ac4948c5a76f4e7f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "입국 절차가 간편해졌다",
+      "text": "Entry formalities have been simplified."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수속이 간략해졌다",
+      "text": "The formalities have been simplified."
+    }
+  ],
+  "isWordType": true
+}

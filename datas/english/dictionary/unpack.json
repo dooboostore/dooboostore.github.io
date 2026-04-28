@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "unpack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌʌnˈpæk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<꾸러미·짐을> 풀다, 끄르다",
+              "examples": [],
+              "originalMeaning": "<꾸러미·짐을> 풀다, 끄르다"
+            },
+            {
+              "meaning": "<안에 든 것을> 꾸러미[짐]에서 꺼내다",
+              "examples": [],
+              "originalMeaning": "<안에 든 것을> 꾸러미[짐]에서 꺼내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "꾸러미[짐]를 풀다",
+              "examples": [],
+              "originalMeaning": "꾸러미[짐]를 풀다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/569579bdc74f4071b4a18a6251c9482c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/569579bdc74f4071b4a18a6251c9482c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "unpacks"
+        },
+        {
+          "type": "과거형",
+          "value": "unpacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "unpacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "unpacked"
+        }
+      ],
+      "aliasConjugation": "unpacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e36ca2eafd1da53dbc6246efa96db95b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "짐을 푸는 데에 오래 걸리지 않을 것입니다.",
+      "text": "I won’t be long unpacking."
+    }
+  ],
+  "isWordType": true
+}
