@@ -134,13 +134,6 @@ export default (container: symbol): ConstructorType<StockService> => {
 
         this.candleStartTime.set(code, now);
       }
-        // temporary debug: log completed candle volume
-        try {
-          console.log('[CANDLE-COMPLETE]', code, 'completedVol=', currentCandle.volume);
-        } catch (e) {
-          // ignore
-        }
-      // removed debug log
     }
 
     /**

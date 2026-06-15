@@ -1,6 +1,6 @@
 import {
   elementDefine,
-  onConnectedShadow,
+  onConnectedBodyShadow,
   addEventListener,
   onInitialize,
 } from "@dooboostore/simple-web-component";
@@ -99,7 +99,7 @@ export default (w: Window) => {
       this.stockService = stockService;
     }
 
-    @onConnectedShadow
+    @onConnectedBodyShadow
     render() {
       return `
         <style>

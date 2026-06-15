@@ -1,6 +1,6 @@
 import {
   elementDefine,
-  onConnectedShadow,
+  onConnectedBodyShadow,
   addEventListener,
   onInitialize,
 } from "@dooboostore/simple-web-component";
@@ -75,7 +75,7 @@ export default (w: Window) => {
       this.router = router;
     }
 
-    @onConnectedShadow
+    @onConnectedBodyShadow
     render() {
       return `
         <style>

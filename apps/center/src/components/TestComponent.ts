@@ -1,4 +1,4 @@
-import { innerHtml, createElement, CreateElementConfig, elementDefine, onConnectedShadow } from "@dooboostore/simple-web-component";
+import { innerHtml, createElement, CreateElementConfig, elementDefine, onConnectedBodyShadow } from "@dooboostore/simple-web-component";
 
 const tagName = "test-component";
 
@@ -16,7 +16,7 @@ export default (w: Window) => {
   @elementDefine(tagName, { window: w })
   class AccommodationCard extends w.HTMLElement {
 
-    @onConnectedShadow
+    @onConnectedBodyShadow
     render() {
       return `
      <div>asdasd</div>

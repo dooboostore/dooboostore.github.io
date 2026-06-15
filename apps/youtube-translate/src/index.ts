@@ -4,7 +4,7 @@ import path from 'path';
 import process from 'process';
 
 // YouTube Video ID를 여기서 변경하세요
-const YOUTUBE_VIDEO_ID = "96jN2OCOfLs";
+const YOUTUBE_VIDEO_ID = "7HvrdXjdlU8";
 
 // 번역 방식 선택: 'youtube' (YouTube 자동번역) 또는 'papago' (Papago API 번역)
 const TRANSLATION_METHOD: 'youtube' | 'papago' = 'youtube';
@@ -933,6 +933,7 @@ async function downloadYouTubeSubtitles() {
     // 1순위: 원본 영어 자막들
     const originalEnglishOptions = [
       /^영어$/,
+      /^영어 - CC1$/,
       /^영어\(미국\)$/,
       /^영어\(미국\) - Captions$/,
       /^English$/,

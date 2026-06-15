@@ -1,6 +1,6 @@
 import {
   elementDefine,
-  onConnectedShadow,
+  onConnectedBodyShadow,
   subscribeSwcAppRouteChangeWhileConnected,
   innerHtmlLight,
   replaceChildren,
@@ -48,7 +48,13 @@ export default (w: Window) => {
       return `<center-stock-flight-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/coordinate-simulation"], { order: 4 })
+    @subscribeSwcAppRouteChangeWhileConnected(["/lotto"], { order: 4 })
+    @innerHtmlLight
+    handleLotto() {
+      return `<center-lotto-page/>`;
+    }
+
+    @subscribeSwcAppRouteChangeWhileConnected(["/coordinate-simulation"], { order: 5 })
     @innerHtmlLight
     handleCoordinateSimulation() {
       return `<center-coordinate-2d-simulation-page/>`;
@@ -84,7 +90,7 @@ export default (w: Window) => {
     //   console.log("----->", event);
     // }
 
-    @onConnectedShadow
+    @onConnectedBodyShadow
     render() {
       return `
         <style>

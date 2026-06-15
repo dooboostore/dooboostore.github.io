@@ -7,14 +7,20 @@ import { VideoItemService } from './english/VideoItemService';
 import { AutoTranslationService } from './english/AutoTranslationService';
 import { DictionaryService } from './english/DictionaryService';
 import { VoiceService } from './english/VoiceService';
+import { OllamaService } from './OllamaService';
+import { StockService } from './stock/StockService';
+import { LottoService } from './lotto/LottoService';
+
 import OllamaServiceFactory from './OllamaService';
 import StockServiceFactory from './stock/StockService';
+import LottoServiceFactory from './lotto/LottoService';
 
 // 모든 서비스팩토리 집합: 확장에 따라 추가
 export const serviceFactories: ((s: symbol) => any)[] = [
   ...englishServiceFactories,
   OllamaServiceFactory,
   StockServiceFactory,
+  LottoServiceFactory,
   // ...xxxServiceFactories, // 추가 가능
 ];
 
@@ -27,4 +33,7 @@ export {
   AutoTranslationService,
   DictionaryService,
   VoiceService,
+  OllamaService,
+  StockService,
+  LottoService,
 };

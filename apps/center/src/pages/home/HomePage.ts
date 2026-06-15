@@ -1,6 +1,6 @@
 import {
   elementDefine,
-  onConnectedShadow,
+  onConnectedBodyShadow,
   addEventListener, onInitialize
 } from "@dooboostore/simple-web-component";
 import { Router } from '@dooboostore/core-web';
@@ -31,6 +31,15 @@ export default (w: Window) => {
       badge: 'New'
     },
     {
+      id: 'lotto',
+      icon: '🎰',
+      title: 'Lotto Analytics',
+      description: '로또 당첨 번호 분석 및 통계 데이터를 시각적으로 확인하세요.',
+      path: '/lotto',
+      color: '#ff9800',
+      badge: 'New'
+    },
+    {
       id: 'coordinate-simulation',
       icon: '📐',
       title: '2D Coordinate Simulation',
@@ -50,7 +59,7 @@ export default (w: Window) => {
       this.router = router;
     }
 
-    @onConnectedShadow
+    @onConnectedBodyShadow
     render() {
       const cardHtml = apps.map(app => `
         <div class="app-card" data-path="${app.path}" role="button" tabindex="0" aria-label="${app.title}">

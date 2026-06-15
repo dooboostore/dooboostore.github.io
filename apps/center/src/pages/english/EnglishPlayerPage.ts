@@ -1,6 +1,6 @@
 import {
   elementDefine,
-  onConnectedShadow,
+  onConnectedBodyShadow,
   onConnectedAfter,
   addEventListener,
   innerHtml, onInitialize, onDisconnected
@@ -1947,7 +1947,7 @@ export default (w: Window) => {
       }
     }
 
-    @onConnectedShadow
+    @onConnectedBodyShadow
     render() {
       return `
         <style>
