@@ -22,7 +22,7 @@ export default (w: Window) => {
     private selectedRound: number = 0;
     private currentLotto: LottoItem | null = null;
     private activeTab: 'round' | 'stats' = 'round';
-    private statsRounds: number = 10;
+    private statsRounds: number = 1;
     private numberStats: Map<number, number> = new Map();
     private recommendedSets: number[][] = [];
     private overlapAllowance: number = 0; 
@@ -55,7 +55,15 @@ export default (w: Window) => {
       for (let i = 1; i <= 45; i++) stats.set(i, 0);
 
       list.slice(0, count).forEach(item => {
-        [item.tm1WnNo, item.tm2WnNo, item.tm3WnNo, item.tm4WnNo, item.tm5WnNo, item.tm6WnNo].forEach(num => {
+        [
+          item.tm1WnNo,
+          item.tm2WnNo,
+          item.tm3WnNo,
+          item.tm4WnNo,
+          item.tm5WnNo,
+          item.tm6WnNo,
+          item.bnsWnNo,
+        ].forEach((num) => {
           stats.set(num, (stats.get(num) || 0) + 1);
         });
       });
@@ -229,7 +237,7 @@ export default (w: Window) => {
               <div class="controls">
                 <span>최근</span>
                 <select id="stats-select">
-                  ${[10, 20, 30, 40].map(v => `<option value="${v}" ${this.statsRounds === v ? 'selected' : ''}>${v}회</option>`).join('')}
+                  ${[1, 10, 20, 30, 40].map(v => `<option value="${v}" ${this.statsRounds === v ? 'selected' : ''}>${v}회</option>`).join('')}
                 </select>
                 <span>분석</span>
               </div>
