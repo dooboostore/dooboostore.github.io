@@ -27,6 +27,9 @@ export default (w: Window) => {
     private recommendedSets: number[][] = [];
     private overlapAllowance: number = 0; 
     private setRequestCount: number = 1;
+    private excludeLatestRound: boolean = false;
+    private latestRoundNumbers: number[] = [];
+    private latestBonusNumber: number = 0;
 
     @onInitialize
     async onInitialized(
@@ -50,11 +53,26 @@ export default (w: Window) => {
     }
 
     private async loadStatsData(count: number) {
-      const list = await this.lottoService.getLottoList(this.latestRound, count);
+      // 최신 회차는 항상 미리 가져와 저장 (제외 여부와 무관)
+      const fetchCount = this.excludeLatestRound ? count + 1 : count;
+      const list = await this.lottoService.getLottoList(this.latestRound, fetchCount);
       const stats = new Map<number, number>();
       for (let i = 1; i <= 45; i++) stats.set(i, 0);
 
-      list.slice(0, count).forEach(item => {
+      // 최신 회차 번호 저장 (보너스 포함) - 항상 list[0]
+      if (list.length > 0) {
+        const latest = list[0];
+        this.latestRoundNumbers = [
+          latest.tm1WnNo, latest.tm2WnNo, latest.tm3WnNo,
+          latest.tm4WnNo, latest.tm5WnNo, latest.tm6WnNo,
+        ];
+        this.latestBonusNumber = latest.bnsWnNo;
+      }
+
+      // 제외 체크 시 최신 회차(list[0])를 건너뛰고 집계
+      const targetList = this.excludeLatestRound ? list.slice(1, count + 1) : list.slice(0, count);
+
+      targetList.forEach(item => {
         [
           item.tm1WnNo,
           item.tm2WnNo,
@@ -90,27 +108,11 @@ export default (w: Window) => {
       }
 
       const sets: number[][] = [];
-      let currentPool: number[] = [];
 
       for (let s = 0; s < this.setRequestCount; s++) {
-        const gameNumbers = new Set<number>();
-        
-        while (gameNumbers.size < 6) {
-          if (currentPool.length === 0) {
-            // 풀을 셔플하여 보충
-            currentPool = [...basePool].sort(() => Math.random() - 0.5);
-          }
-          
-          const num = currentPool.shift();
-          if (num !== undefined && !gameNumbers.has(num)) {
-            gameNumbers.add(num);
-          }
-          
-          // 풀을 다 써도 부족한 극단적 상황 방지
-          if (currentPool.length === 0 && gameNumbers.size < 6 && basePool.length < 6) break;
-        }
-        
-        sets.push(Array.from(gameNumbers).sort((a, b) => a - b));
+        const shuffled = [...basePool].sort(() => Math.random() - 0.5);
+        const picked = shuffled.slice(0, 6).sort((a, b) => a - b);
+        sets.push(picked);
       }
 
       this.recommendedSets = sets;
@@ -198,6 +200,13 @@ export default (w: Window) => {
           .round-info { text-align: center; margin-bottom: 15px; }
           .round-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
           .round-date { font-size: 14px; color: #888; }
+          .exclude-label { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; cursor: pointer; user-select: none; }
+          .exclude-label input[type="checkbox"] { width: 15px; height: 15px; cursor: pointer; accent-color: #1976d2; }
+          .ball.ball-latest-win { outline: 3px solid #ff3d00; outline-offset: 2px; position: relative; }
+          .ball.ball-latest-bonus { outline: 3px solid #aa00ff; outline-offset: 2px; position: relative; }
+          .latest-dot { position: absolute; top: -4px; right: -4px; width: 8px; height: 8px; border-radius: 50%; border: 1px solid white; }
+          .dot-win { background: #ff3d00; }
+          .dot-bonus { background: #aa00ff; }
 
           /* Mobile Responsive */
           @media (max-width: 480px) {
@@ -213,6 +222,7 @@ export default (w: Window) => {
             .ball { width: 30px; height: 30px; font-size: 11px; }
             .controls { gap: 5px; }
             select, button, input[type="number"] { padding: 6px 8px; font-size: 12px; }
+            .exclude-label { font-size: 12px; }
           }
         </style>
 
@@ -241,6 +251,12 @@ export default (w: Window) => {
                 </select>
                 <span>분석</span>
               </div>
+              <div class="controls" style="justify-content: center; margin-top: -8px;">
+                <label class="exclude-label">
+                  <input type="checkbox" id="exclude-latest-checkbox" ${this.excludeLatestRound ? 'checked' : ''}>
+                  최신 회차(${this.latestRound}회) 제외
+                </label>
+              </div>
             `}
 
             <div class="lotto-paper">
@@ -264,7 +280,17 @@ export default (w: Window) => {
                       <div class="set-row">
                         <div style="font-size: 11px; color: #888; margin-bottom: 5px;">Set ${idx + 1}</div>
                         <div class="ball-container">
-                          ${set.map(n => `<div class="ball ball-${Math.floor((n - 1) / 10)}">${n}</div>`).join('')}
+                          ${set.map(n => {
+                            const isLatest = this.latestRoundNumbers.includes(n);
+                            const isBonus = this.latestBonusNumber === n;
+                            if (isLatest) {
+                              return `<div class="ball ball-${Math.floor((n - 1) / 10)} ball-latest-win" title="${this.latestRound}회 당첨번호">${n}<span class="latest-dot dot-win"></span></div>`;
+                            } else if (isBonus) {
+                              return `<div class="ball ball-${Math.floor((n - 1) / 10)} ball-latest-bonus" title="${this.latestRound}회 보너스번호">${n}<span class="latest-dot dot-bonus"></span></div>`;
+                            } else {
+                              return `<div class="ball ball-${Math.floor((n - 1) / 10)}">${n}</div>`;
+                            }
+                          }).join('')}
                         </div>
                       </div>
                     `).join('')}
@@ -322,6 +348,13 @@ export default (w: Window) => {
     @addEventListener('#recommend-btn', 'click', { delegate: true })
     onRecommendClick() {
       this.generateRecommendation();
+    }
+
+    @addEventListener('#exclude-latest-checkbox', 'change', { delegate: true })
+    async onExcludeLatestChange(e: Event) {
+      const checkbox = e.target as HTMLInputElement;
+      this.excludeLatestRound = checkbox.checked;
+      await this.loadStatsData(this.statsRounds);
     }
   }
 
