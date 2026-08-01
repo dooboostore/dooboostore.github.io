@@ -30,6 +30,7 @@ export default (w: Window) => {
     private excludeLatestRound: boolean = false;
     private latestRoundNumbers: number[] = [];
     private latestBonusNumber: number = 0;
+    private combinedSet: number[] = [];
 
     @onInitialize
     async onInitialized(
@@ -116,6 +117,16 @@ export default (w: Window) => {
       }
 
       this.recommendedSets = sets;
+      this.combinedSet = [];
+      this.triggerRender();
+    }
+
+    private generateCombination() {
+      // 추출된 모든 세트에서 번호 합집합
+      const pool = Array.from(new Set(this.recommendedSets.flat())).sort((a, b) => a - b);
+      if (pool.length < 6) return;
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      this.combinedSet = shuffled.slice(0, 6).sort((a, b) => a - b);
       this.triggerRender();
     }
 
@@ -207,6 +218,10 @@ export default (w: Window) => {
           .latest-dot { position: absolute; top: -4px; right: -4px; width: 8px; height: 8px; border-radius: 50%; border: 1px solid white; }
           .dot-win { background: #ff3d00; }
           .dot-bonus { background: #aa00ff; }
+          .combine-section { margin-bottom: 16px; background: #f0f7ff; border: 1px solid #bbdefb; border-radius: 10px; padding: 12px; }
+          .combine-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+          .combine-label { font-size: 13px; color: #1565c0; font-weight: bold; }
+          .combine-result { margin-top: 12px; display: flex; justify-content: center; }
 
           /* Mobile Responsive */
           @media (max-width: 480px) {
@@ -275,6 +290,29 @@ export default (w: Window) => {
                   <button id="recommend-btn">추출</button>
                 </div>
                 ${this.recommendedSets.length > 0 ? `
+                  <div class="combine-section">
+                    <div class="combine-header">
+                      <span class="combine-label">추출된 ${Array.from(new Set(this.recommendedSets.flat())).length}개 번호에서 조합</span>
+                      <button id="combine-btn">조합하기</button>
+                    </div>
+                    ${this.combinedSet.length === 6 ? `
+                      <div class="combine-result">
+                        <div class="ball-container">
+                          ${this.combinedSet.map(n => {
+                            const isLatest = this.latestRoundNumbers.includes(n);
+                            const isBonus = this.latestBonusNumber === n;
+                            if (isLatest) {
+                              return `<div class="ball ball-${Math.floor((n - 1) / 10)} ball-latest-win" title="${this.latestRound}회 당첨번호">${n}<span class="latest-dot dot-win"></span></div>`;
+                            } else if (isBonus) {
+                              return `<div class="ball ball-${Math.floor((n - 1) / 10)} ball-latest-bonus" title="${this.latestRound}회 보너스번호">${n}<span class="latest-dot dot-bonus"></span></div>`;
+                            } else {
+                              return `<div class="ball ball-${Math.floor((n - 1) / 10)}">${n}</div>`;
+                            }
+                          }).join('')}
+                        </div>
+                      </div>
+                    ` : ''}
+                  </div>
                   <div class="results-list">
                     ${this.recommendedSets.map((set, idx) => `
                       <div class="set-row">
@@ -348,6 +386,11 @@ export default (w: Window) => {
     @addEventListener('#recommend-btn', 'click', { delegate: true })
     onRecommendClick() {
       this.generateRecommendation();
+    }
+
+    @addEventListener('#combine-btn', 'click', { delegate: true })
+    onCombineClick() {
+      this.generateCombination();
     }
 
     @addEventListener('#exclude-latest-checkbox', 'change', { delegate: true })
