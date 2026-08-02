@@ -168,13 +168,13 @@ importers:
 
   packages/@dooboostore/core-node:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
     devDependencies:
-      '@dooboostore/core':
-        specifier: 1.0.30
-        version: 1.0.30(reflect-metadata@0.2.2)
       '@types/node':
         specifier: ^20
         version: 20.19.39
@@ -447,13 +447,13 @@ importers:
 
   packages/@dooboostore/core-web:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
     devDependencies:
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
       '@types/node':
         specifier: ^20
         version: 20.19.39
@@ -1319,6 +1319,12 @@ importers:
 
   packages/@dooboostore/dom-render:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-web':
+        specifier: workspace:*
+        version: link:../core-web
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -1341,15 +1347,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
-      '@dooboostore/core-web':
-        specifier: workspace:*
-        version: link:../core-web
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -1703,6 +1700,12 @@ importers:
 
   packages/@dooboostore/lib-node:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-node':
+        specifier: workspace:*
+        version: link:../core-node
       canvas:
         specifier: ^3.1.2
         version: 3.2.3
@@ -1710,12 +1713,6 @@ importers:
         specifier: ^0.2.2
         version: 0.2.2
     devDependencies:
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
       '@types/node':
         specifier: ^20
         version: 20.19.39
@@ -1733,6 +1730,12 @@ importers:
 
   packages/@dooboostore/lib-web:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-web':
+        specifier: workspace:*
+        version: link:../core-web
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -1755,15 +1758,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
-      '@dooboostore/core-web':
-        specifier: workspace:*
-        version: link:../core-web
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -2039,6 +2033,9 @@ importers:
 
   packages/@dooboostore/simple-boot:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -2061,12 +2058,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -2112,6 +2103,18 @@ importers:
 
   packages/@dooboostore/simple-boot-front:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-web':
+        specifier: workspace:*
+        version: link:../core-web
+      '@dooboostore/dom-render':
+        specifier: workspace:*
+        version: link:../dom-render
+      '@dooboostore/simple-boot':
+        specifier: workspace:*
+        version: link:../simple-boot
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -2134,21 +2137,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
-      '@dooboostore/core-web':
-        specifier: workspace:*
-        version: link:../core-web
-      '@dooboostore/dom-render':
-        specifier: workspace:*
-        version: link:../dom-render
-      '@dooboostore/simple-boot':
-        specifier: workspace:*
-        version: link:../simple-boot
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -2450,6 +2438,21 @@ importers:
 
   packages/@dooboostore/simple-boot-http-server:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-node':
+        specifier: workspace:*
+        version: link:../core-node
+      '@dooboostore/core-web':
+        specifier: workspace:*
+        version: link:../core-web
+      '@dooboostore/dom-render':
+        specifier: workspace:*
+        version: link:../dom-render
+      '@dooboostore/simple-boot':
+        specifier: workspace:*
+        version: link:../simple-boot
       fast-json-patch:
         specifier: ^3.1.0
         version: 3.1.1
@@ -2484,21 +2487,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
-      '@dooboostore/core-web':
-        specifier: workspace:*
-        version: link:../core-web
-      '@dooboostore/dom-render':
-        specifier: workspace:*
-        version: link:../dom-render
-      '@dooboostore/simple-boot':
-        specifier: workspace:*
-        version: link:../simple-boot
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -2550,6 +2538,33 @@ importers:
 
   packages/@dooboostore/simple-boot-http-server-ssr:
     dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-node':
+        specifier: workspace:*
+        version: link:../core-node
+      '@dooboostore/core-web':
+        specifier: workspace:*
+        version: link:../core-web
+      '@dooboostore/dom-parser':
+        specifier: workspace:*
+        version: link:../dom-parser
+      '@dooboostore/dom-render':
+        specifier: workspace:*
+        version: link:../dom-render
+      '@dooboostore/simple-boot':
+        specifier: workspace:*
+        version: link:../simple-boot
+      '@dooboostore/simple-boot-front':
+        specifier: workspace:*
+        version: link:../simple-boot-front
+      '@dooboostore/simple-boot-http-server':
+        specifier: workspace:*
+        version: link:../simple-boot-http-server
+      '@dooboostore/simple-web-component':
+        specifier: workspace:*
+        version: link:../simple-web-component
       jsdom:
         specifier: ^26.0.0
         version: 26.1.0(canvas@3.2.3)
@@ -2581,33 +2596,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
-      '@dooboostore/core-web':
-        specifier: workspace:*
-        version: link:../core-web
-      '@dooboostore/dom-parser':
-        specifier: workspace:*
-        version: link:../dom-parser
-      '@dooboostore/dom-render':
-        specifier: workspace:*
-        version: link:../dom-render
-      '@dooboostore/simple-boot':
-        specifier: workspace:*
-        version: link:../simple-boot
-      '@dooboostore/simple-boot-front':
-        specifier: workspace:*
-        version: link:../simple-boot-front
-      '@dooboostore/simple-boot-http-server':
-        specifier: workspace:*
-        version: link:../simple-boot-http-server
-      '@dooboostore/simple-web-component':
-        specifier: workspace:*
-        version: link:../simple-web-component
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -4000,6 +3988,16 @@ importers:
         version: 5.2.3(tslib@2.8.1)(webpack-cli@5.1.4)(webpack@5.106.2)
 
   packages/@dooboostore/simple-web-component:
+    dependencies:
+      '@dooboostore/core':
+        specifier: workspace:*
+        version: link:../core
+      '@dooboostore/core-web':
+        specifier: workspace:*
+        version: link:../core-web
+      '@dooboostore/simple-boot':
+        specifier: workspace:*
+        version: link:../simple-boot
     devDependencies:
       '@babel/core':
         specifier: ^7.24.0
@@ -4019,18 +4017,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.24.0
         version: 7.28.5(@babel/core@7.29.0)
-      '@dooboostore/core':
-        specifier: workspace:*
-        version: link:../core
-      '@dooboostore/core-node':
-        specifier: workspace:*
-        version: link:../core-node
-      '@dooboostore/core-web':
-        specifier: workspace:*
-        version: link:../core-web
-      '@dooboostore/simple-boot':
-        specifier: workspace:*
-        version: link:../simple-boot
       '@types/jest':
         specifier: ^26.0.22
         version: 26.0.24
@@ -4232,6 +4218,28 @@ importers:
       webpack-dev-server:
         specifier: ^4.15.1
         version: 4.15.2(webpack-cli@5.1.4)(webpack@5.106.2)
+
+  packages/@dooboostore/simple-web-component/lsp:
+    dependencies:
+      vscode-languageclient:
+        specifier: ^9.0.1
+        version: 9.0.1
+      vscode-languageserver:
+        specifier: ^9.0.1
+        version: 9.0.1
+      vscode-languageserver-textdocument:
+        specifier: ^1.0.11
+        version: 1.0.12
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.39
+      '@types/vscode':
+        specifier: ^1.85.0
+        version: 1.125.0
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.3
 
   packages/@dooboostore/simple-web-component/test/bundle:
     devDependencies:
@@ -4953,11 +4961,6 @@ packages:
   '@discoveryjs/json-ext@0.5.7':
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
-
-  '@dooboostore/core@1.0.30':
-    resolution: {integrity: sha512-3NrMlY5T9qjJX126+3gkcovqT1cfHcaYYEzKy/nh1nd6QoqDg0Xt6fquUNxorkL8IFj930prnZItTuvvXLklzg==}
-    peerDependencies:
-      reflect-metadata: ^0.2.2
 
   '@esbuild/aix-ppc64@0.23.1':
     resolution: {integrity: sha512-6VhYk1diRqrhBAqpJEdjASR/+WVRtfjpqKuNw11cLiaWpAT/Uu+nokB+UJnevzy/P9C/ty6AOe0dwueMrGh/iQ==}
@@ -5756,6 +5759,9 @@ packages:
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
 
+  '@types/vscode@1.125.0':
+    resolution: {integrity: sha512-0icm/ZQAaism87P0ekHqi4/Ju9du+Tm0RUW+y7vqRsxY2cY0FNRX1nAnaW7nT6npPt2tfHiheZ55Zm9UhqonFA==}
+
   '@types/ws@8.18.1':
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
 
@@ -6157,6 +6163,9 @@ packages:
 
   brace-expansion@1.1.14:
     resolution: {integrity: sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g==}
+
+  brace-expansion@2.1.4:
+    resolution: {integrity: sha512-hGfVzPxthbf3+2yjg/RBs60cB0FhqBS/zvdV/4wn4/BmN0bNMMHPc4V/BbFieqf1TKAGGAHnY4eSjajCl0f2Xg==}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -7934,6 +7943,10 @@ packages:
   minimatch@3.1.5:
     resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
 
+  minimatch@5.1.9:
+    resolution: {integrity: sha512-7o1wEA2RyMP7Iu7GNba9vc0RWWGACJOCZBJX2GJWip0ikV+wcOsgVuY9uE8CPiyQhkGFSlhuSkZPavN7u1c2Fw==}
+    engines: {node: '>=10'}
+
   minimist@0.0.10:
     resolution: {integrity: sha512-iotkTvxc+TwOm5Ieim8VnSNvCDjCK9S8G3scJ50ZthspSxa7jx50jkhYduuAtAjvfDUwSgOwf8+If99AlOEhyw==}
 
@@ -9254,6 +9267,27 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
+  vscode-jsonrpc@8.2.0:
+    resolution: {integrity: sha512-C+r0eKJUIfiDIfwJhria30+TYWPtuHJXHtI7J0YlOmKAo7ogxP20T0zxB7HZQIFhIyvoBPwWskjxrvAtfjyZfA==}
+    engines: {node: '>=14.0.0'}
+
+  vscode-languageclient@9.0.1:
+    resolution: {integrity: sha512-JZiimVdvimEuHh5olxhxkht09m3JzUGwggb5eRUkzzJhZ2KjCN0nh55VfiED9oez9DyF8/fz1g1iBV3h+0Z2EA==}
+    engines: {vscode: ^1.82.0}
+
+  vscode-languageserver-protocol@3.17.5:
+    resolution: {integrity: sha512-mb1bvRJN8SVznADSGWM9u/b07H7Ecg0I3OgXDuLdn307rl/J3A9YD6/eYOssqhecL27hK1IPZAsaqh00i/Jljg==}
+
+  vscode-languageserver-textdocument@1.0.12:
+    resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
+
+  vscode-languageserver-types@3.17.5:
+    resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==}
+
+  vscode-languageserver@9.0.1:
+    resolution: {integrity: sha512-woByF3PDpkHFUreUa7Hos7+pUWdeWMXRd26+ZX2A8cFx6v/JPTtd4/uN0/jB6XQHYaOlHbio03NTHCqrgG5n7g==}
+    hasBin: true
+
   w3c-xmlserializer@5.0.0:
     resolution: {integrity: sha512-o8qghlI8NZHU1lLPrpi2+Uq7abh4GGPpYANlalzWxyWteJOCsr/P+oPBA49TOLu5FTZO4d3F9MnWJfiMo4BkmA==}
     engines: {node: '>=18'}
@@ -10321,10 +10355,6 @@ snapshots:
 
   '@discoveryjs/json-ext@0.5.7': {}
 
-  '@dooboostore/core@1.0.30(reflect-metadata@0.2.2)':
-    dependencies:
-      reflect-metadata: 0.2.2
-
   '@esbuild/aix-ppc64@0.23.1':
     optional: true
 
@@ -11111,6 +11141,8 @@ snapshots:
 
   '@types/tough-cookie@4.0.5': {}
 
+  '@types/vscode@1.125.0': {}
+
   '@types/ws@8.18.1':
     dependencies:
       '@types/node': 20.19.39
@@ -11648,6 +11680,10 @@ snapshots:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
+
+  brace-expansion@2.1.4:
+    dependencies:
+      balanced-match: 1.0.2
 
   braces@3.0.3:
     dependencies:
@@ -13691,6 +13727,10 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.14
 
+  minimatch@5.1.9:
+    dependencies:
+      brace-expansion: 2.1.4
+
   minimist@0.0.10: {}
 
   minimist@1.2.8: {}
@@ -15234,6 +15274,27 @@ snapshots:
   v8-compile-cache@2.4.0: {}
 
   vary@1.1.2: {}
+
+  vscode-jsonrpc@8.2.0: {}
+
+  vscode-languageclient@9.0.1:
+    dependencies:
+      minimatch: 5.1.9
+      semver: 7.7.4
+      vscode-languageserver-protocol: 3.17.5
+
+  vscode-languageserver-protocol@3.17.5:
+    dependencies:
+      vscode-jsonrpc: 8.2.0
+      vscode-languageserver-types: 3.17.5
+
+  vscode-languageserver-textdocument@1.0.12: {}
+
+  vscode-languageserver-types@3.17.5: {}
+
+  vscode-languageserver@9.0.1:
+    dependencies:
+      vscode-languageserver-protocol: 3.17.5
 
   w3c-xmlserializer@5.0.0:
     dependencies:

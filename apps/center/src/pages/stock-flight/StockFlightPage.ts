@@ -56,6 +56,7 @@ export default (w: Window) => {
     // VCHG 기준값 (새 캔들 시작 시 리셋)
     private _baselineVolumeForChange: number = 0;
     private _lastCandleTime: string = "";
+    private _lastCandleTime: string = "";
 
     // history buffers for traces (newest at index 0)
     private priceHistory: number[] = [];

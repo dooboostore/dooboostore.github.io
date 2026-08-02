@@ -4,7 +4,7 @@ import {
   onInitialize,
   addEventListener,
   event,
-  innerHtmlLight,
+  innerHtmlLight, state
 } from "@dooboostore/simple-web-component";
 import { LottoService } from "../../services/lotto/LottoService";
 import type { LottoService as LottoServiceType, LottoItem } from "../../services/lotto/LottoService";
@@ -21,6 +21,12 @@ export default (w: Window) => {
     private lottoService!: LottoServiceType;
 
     // ---------- 상태 ----------
+
+    @state('aa')
+    private latestRoundaaaa: number = 0;
+
+    @state
+    private kk: number = 0;
 
     private latestRound: number = 0;
 
@@ -113,9 +119,10 @@ export default (w: Window) => {
       `;
     }
 
-    // ---------- 렌더 상태 빌더 ----------
+    // ---------- 렌더 상태 빌더 ---------- {{ @aa@ }}
 
     private get contentStyles(): string {
+      // {{ @aa@. }}
       return `
         .controls { margin-bottom: 20px; display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; }
         select, button, input[type="number"] { padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd; font-size: 14px; outline: none; }
@@ -190,15 +197,23 @@ export default (w: Window) => {
         .map(r => `<option value="${r}" ${r === this.selectedRound ? 'selected' : ''}>${r}회</option>`)
         .join('');
 
+        // {{ @@aa@.toExponential()}}
       return `
         <div class="controls">
           <select id="round-select">
             ${roundOptions}
           </select>
-        </div>
+        </div> 
+        {{ @activeTab@.toString(); }}
+        {{ @aa@.toExponential()}}
+        {{ @aa@.toExponential }}
+      {{ @aa@ }}
+      {{ @aa@ }}
+      {{ @kk@ }}
+<div a::ww="@aa@ @kk@">test</div>
         <div class="round-info">
-          <div class="round-title">${this.currentLotto?.ltEpsd || ''}회 당첨 결과</div>
-          <div class="round-date">${this.currentLotto?.ltRflYmd || ''} 추첨</div>
+          <div class="round-title">${this.currentLotto?.ltEpsd || ""}회 당첨 결과</div>
+          <div class="round-date">${this.currentLotto?.ltRflYmd || ""} 추첨</div>
         </div>
       `;
     }
