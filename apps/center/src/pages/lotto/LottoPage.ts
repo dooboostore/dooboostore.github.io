@@ -204,13 +204,7 @@ export default (w: Window) => {
             ${roundOptions}
           </select>
         </div> 
-        {{ @activeTab@.toString(); }}
-        {{ @aa@.toExponential()}}
-        {{ @aa@.toExponential }}
-      {{ @aa@ }}
-      {{ @aa@ }}
-      {{ @kk@ }}
-<div a::ww="@aa@ @kk@">test</div>
+<!--<div a::ww="@aa@ @kk@">test</div>-->
         <div class="round-info">
           <div class="round-title">${this.currentLotto?.ltEpsd || ""}회 당첨 결과</div>
           <div class="round-date">${this.currentLotto?.ltRflYmd || ""} 추첨</div>
