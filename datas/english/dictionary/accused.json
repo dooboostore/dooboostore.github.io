@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "<b>accused</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkjuːzd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "고발[고소]당한",
+              "examples": [],
+              "originalMeaning": "고발[고소]당한"
+            },
+            {
+              "meaning": "[the ~; 명사적] (형사) 피고인(들), 피의자(opp. accuser)",
+              "examples": [],
+              "originalMeaning": "[the ~; 명사적] (형사) 피고인(들), 피의자(opp. accuser)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2ef061d3b0064a7080fe931f4befe1b9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2ef061d3b0064a7080fe931f4befe1b9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "620891d7bd22a56b459af0c275a96ca5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>accuse</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈkjuːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고발[고소]하다, …에게 죄를 추궁하다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>accuse</b> a person as a murderer",
+                  "translatedText": "…을 살인자로 고소하다"
+                }
+              ],
+              "originalMeaning": "고발[고소]하다, …에게 죄를 추궁하다 ((of))"
+            },
+            {
+              "meaning": "비난하다(blame), 책망하다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>accuse</b> oneself",
+                  "translatedText": "자책하다"
+                }
+              ],
+              "originalMeaning": "비난하다(blame), 책망하다 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고발하다, 비난하다",
+              "examples": [],
+              "originalMeaning": "고발하다, 비난하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f2fc26dfd5a4df4b5de0519ccbe2699",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f2fc26dfd5a4df4b5de0519ccbe2699",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "accuses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d32a5e21eac8263a6b142c52c4a8a95b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 애매하게 죄를 썼다",
+      "text": "He was falsely charged[<b>accused</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배심원은 피고의 무죄를 인정했다",
+      "text": "The jury found the <b>accused</b> not guilty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그가 뇌물을 받았다고 비난했다.",
+      "text": "They <b>accused</b> the man of taking bribes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "피고는 무죄의 몸이 되어 법정을 나갔다.",
+      "text": "The <b>accused</b> left the court a free man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "피고는 무기형의 선고를 받았다",
+      "text": "The <b>accused</b> was sentenced to life imprisonment."
+    }
+  ],
+  "isWordType": true
+}

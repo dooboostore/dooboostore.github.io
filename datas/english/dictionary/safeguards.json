@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>safeguard</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│seɪfɡɑːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<권익을> 보호하다, 호송하다(convoy)",
+              "examples": [],
+              "originalMeaning": "<권익을> 보호하다, 호송하다(convoy)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보호(책), 보호[방위] 수단 ((against))",
+              "examples": [
+                {
+                  "text": "a <b>safeguard</b> against the possible loss",
+                  "translatedText": "일어날 수 있는 손실에 대한 예방책"
+                }
+              ],
+              "originalMeaning": "보호(책), 보호[방위] 수단 ((against))"
+            },
+            {
+              "meaning": "안전 통행증",
+              "examples": [],
+              "originalMeaning": "안전 통행증"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/48f110d3348e4e9c8eaa05660e4b1fa0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/48f110d3348e4e9c8eaa05660e4b1fa0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "safeguards"
+        },
+        {
+          "type": "과거형",
+          "value": "safeguarded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "safeguarding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "safeguarded"
+        }
+      ],
+      "aliasConjugation": "safeguards",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "400884c9d028564086759429732d8aa9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "병에는 청결이 최상의 예방책이다",
+      "text": "Keeping clean is a <b>safeguard</b> against disease."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것이 아마도 최선의 교통사고 예방책일 것이다",
+      "text": "This is probably the best <b>safeguard</b> against traffic accident."
+    }
+  ],
+  "isWordType": true
+}

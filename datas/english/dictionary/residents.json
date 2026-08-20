@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "resident",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈrezɪdənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "거주하는, 살고 있는 ((at, in))",
+              "examples": [
+                {
+                  "text": "a <b>resident</b> tutor",
+                  "translatedText": "입주 가정 교사"
+                }
+              ],
+              "originalMeaning": "거주하는, 살고 있는 ((at, in))"
+            },
+            {
+              "meaning": "고유의, 내재(內在)하는 ((in))",
+              "examples": [
+                {
+                  "text": "privileges <b>resident</b> in a class",
+                  "translatedText": "계급 고유의 특권"
+                }
+              ],
+              "originalMeaning": "고유의, 내재(內在)하는 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "거주자, 살고 있는 사람(cf. VISITOR, TRANSIENT, INHABITANT); 거류민",
+              "examples": [
+                {
+                  "text": "foreign <b>resident</b> s",
+                  "translatedText": "재류 외국인"
+                }
+              ],
+              "originalMeaning": "거주자, 살고 있는 사람(cf. VISITOR, TRANSIENT, INHABITANT); 거류민"
+            },
+            {
+              "meaning": "레지던트 ((intern을 마친 전문의(醫) 수련자))(cf. HOUSE PHYSICIAN)",
+              "examples": [],
+              "originalMeaning": "레지던트 ((intern을 마친 전문의(醫) 수련자))(cf. HOUSE PHYSICIAN)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/273750cc3613420f8eb414b76b06f1ec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/273750cc3613420f8eb414b76b06f1ec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e1010fd9c3770bcd4301c9dbc9ae8c0f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 그의 집에 살고 있다.",
+      "text": "She is <b>resident</b> at his house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정부는 주민에게 피난 명령을 내렸다",
+      "text": "The government issued an evacuation order to the <b>residents</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재미 교포",
+      "text": "Korean <b>residents</b> in America"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재일[재미] 동포",
+      "text": "Korean <b>residents</b> in Japan[the U.S.]"
+    }
+  ],
+  "isWordType": true
+}

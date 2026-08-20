@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "canvass",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkænvəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<투표·의견·기부 등을> <어떤 지역·집단의 사람들에게> 부탁하고 다니다, 간청하다, 의뢰하다, 권유하다; <선거구 등을> 유세하다; [미] <개표를> 점검하다",
+              "examples": [
+                {
+                  "text": "<b>canvass</b> a district for votes",
+                  "translatedText": "투표를 호소하러 선거구를 유세하다"
+                }
+              ],
+              "originalMeaning": "<투표·의견·기부 등을> <어떤 지역·집단의 사람들에게> 부탁하고 다니다, 간청하다, 의뢰하다, 권유하다; <선거구 등을> 유세하다; [미] <개표를> 점검하다"
+            },
+            {
+              "meaning": "상세히 조사하다, 정사(精査)하다",
+              "examples": [
+                {
+                  "text": "<b>canvass</b> the ad columns for a house for rent",
+                  "translatedText": "셋집을 얻으려고 광고란을 조사하다"
+                }
+              ],
+              "originalMeaning": "상세히 조사하다, 정사(精査)하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "선거 운동을 하다, 주문을 받으러 다니다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>canvass</b> for a candidate",
+                  "translatedText": "후보자를 위해 운동하다"
+                }
+              ],
+              "originalMeaning": "선거 운동을 하다, 주문을 받으러 다니다 ((for))"
+            },
+            {
+              "meaning": "의논[토론]하다",
+              "examples": [],
+              "originalMeaning": "의논[토론]하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "호별 방문, 주문받음",
+              "examples": [],
+              "originalMeaning": "호별 방문, 주문받음"
+            },
+            {
+              "meaning": "선거 운동, 유세",
+              "examples": [],
+              "originalMeaning": "선거 운동, 유세"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/960186673d2f4e83b54882841fca860b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/960186673d2f4e83b54882841fca860b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "canvasses"
+        },
+        {
+          "type": "과거형",
+          "value": "canvassed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "canvassing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "canvassed"
+        }
+      ],
+      "aliasConjugation": "canvasses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fa9043d32a376b8631ca1d32d1bff598",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 민주당을 위해 유세를 했다",
+      "text": "I was canvassing for the Democrats."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회사에서의 나의 일은 외교이다",
+      "text": "My work in the company is canvassing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 부근을 집집마다 주문받으러 다녔다.",
+      "text": "He canvassed the neighborhood from house to house for order."
+    }
+  ],
+  "isWordType": true
+}

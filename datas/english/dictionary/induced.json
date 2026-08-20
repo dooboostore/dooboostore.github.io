@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "induce",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪn│duːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "권유하다, 설득하여[권하여] …시키다(persuade)",
+              "examples": [
+                {
+                  "text": "( <b>induce</b>+[목]+to do) Nothing shall <b>induce</b> me to go.",
+                  "translatedText": "어떠한 권유가 있더라도 나는 가지 않는다."
+                }
+              ],
+              "originalMeaning": "권유하다, 설득하여[권하여] …시키다(persuade)"
+            },
+            {
+              "meaning": "[종종 수동형으로] 야기하다, 일으키다, 유발(誘發)하다",
+              "examples": [
+                {
+                  "text": "This medicine induces sleep.",
+                  "translatedText": "이 약은 졸리게 한다."
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 야기하다, 일으키다, 유발(誘發)하다"
+            },
+            {
+              "meaning": "귀납하다(opp. deduce)",
+              "examples": [],
+              "originalMeaning": "귀납하다(opp. deduce)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aa0fccbb3e294e47895090a9815a4cda",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aa0fccbb3e294e47895090a9815a4cda",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "induces"
+        },
+        {
+          "type": "과거형",
+          "value": "induced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "inducing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "induced"
+        }
+      ],
+      "aliasConjugation": "induces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e32c5bad9aa38531cdca956292436bc2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 졸리게 한다.",
+      "text": "This medicine induces sleep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 잠을 오게 한다",
+      "text": "This medicine will <b>induce</b> sleep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "암만해도 그를 보낼 수가 없었다",
+      "text": "Nothing could <b>induce</b> him to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어떠한 권유가 있더라도 나는 가지 않는다.",
+      "text": "Nothing shall <b>induce</b> me to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아무리 설득해도 그는 귀국하려 들지 않았다",
+      "text": "Nothing would <b>induce</b> him to go home."
+    }
+  ],
+  "isWordType": true
+}

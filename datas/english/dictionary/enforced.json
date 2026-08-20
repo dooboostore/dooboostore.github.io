@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "entry": "enforced",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪnˈfɔːrst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "강제된, 강제적인",
+              "examples": [
+                {
+                  "text": "<b>enforced</b> currency",
+                  "translatedText": "강제 통화"
+                }
+              ],
+              "originalMeaning": "강제된, 강제적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3760fc60ecad422aae5d6b2f105c4d65",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3760fc60ecad422aae5d6b2f105c4d65",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8aed786bab884768d1e57da9dab1c76d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "enforce",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪnˈfɔːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<법률 등을> 실시[시행]하다, 집행하다",
+              "examples": [],
+              "originalMeaning": "<법률 등을> 실시[시행]하다, 집행하다"
+            },
+            {
+              "meaning": "억지로 시키다, 강요하다(compel) (→enforced)",
+              "examples": [
+                {
+                  "text": "<b>enforce</b> obedience to one's demand by threats",
+                  "translatedText": "협박하여 자기 요구에 복종하기를 강요하다"
+                }
+              ],
+              "originalMeaning": "억지로 시키다, 강요하다(compel) (→<span class='related_word' lang='en' ><b>enforced</b></span>)"
+            },
+            {
+              "meaning": "<논거(論據)·주장·요구 등을> 강력히 주장하다",
+              "examples": [],
+              "originalMeaning": "<논거(論據)·주장·요구 등을> 강력히 주장하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4f1de4c078dd4108914a05e0ccb92488",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4f1de4c078dd4108914a05e0ccb92488",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "enforces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ed2ef9eec32b09a0a7497291932b4598",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 법률을 어떤 일이 있어도 시행해야 한다는 견해를 취했다.",
+      "text": "He took the position that the law must be <b>enforced</b> at any cost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "훈련[규율]은 엄하게 실시되었다.",
+      "text": "Discipline was severely <b>enforced</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "군율이 엄하다",
+      "text": "Military discipline is strictly <b>enforced</b>."
+    }
+  ],
+  "isWordType": true
+}

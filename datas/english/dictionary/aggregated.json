@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "aggregate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "집합하다, 모이다",
+              "examples": [],
+              "originalMeaning": "집합하다, 모이다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "모으다, 결집시키다",
+              "examples": [],
+              "originalMeaning": "모으다, 결집시키다"
+            },
+            {
+              "meaning": "총계 …이 되다(amount to)",
+              "examples": [
+                {
+                  "text": "The money collected <b>aggregated</b> $2,000.",
+                  "translatedText": "수금된 돈은 총계 2,000달러가 되었다."
+                }
+              ],
+              "originalMeaning": "총계 …이 되다(amount to)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "집합적인(collective)",
+              "examples": [],
+              "originalMeaning": "집합적인(collective)"
+            },
+            {
+              "meaning": "총계의(total)",
+              "examples": [
+                {
+                  "text": "<b>aggregate</b> tonnage",
+                  "translatedText": "총톤수 ((선복(船腹)의))"
+                }
+              ],
+              "originalMeaning": "총계의(total)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39fb7ff06bda46d0b5059c17fd2a21f9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39fb7ff06bda46d0b5059c17fd2a21f9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "aggregates"
+        },
+        {
+          "type": "과거형",
+          "value": "aggregated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "aggregating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "aggregated"
+        }
+      ],
+      "aliasConjugation": "aggregates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f661a01c34cbec9068999d099d7adc0b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수금된 돈은 합계 2,000달러가 되었다.",
+      "text": "The money collected <b>aggregated</b> $2,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몰아 5만톤이 되는 12척의 배를 갖고 있다",
+      "text": "They have twelve ships, aggregating 50,000 tons."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모인 돈은 통틀어 5천만 원에 이를 것이다",
+      "text": "The money will total[<b>aggregate</b>, amount to] fifty million won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "통산 부채액은 백만 달러가 넘는다",
+      "text": "The <b>aggregate</b> amount of indebtedness is over one million dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "총액은 3천만 원이 된다",
+      "text": "The total amounts to thirty million won. or It totals[aggregates, amounts to] thirty million won."
+    }
+  ],
+  "isWordType": true
+}

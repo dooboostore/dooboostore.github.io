@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "<b>distrust</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪsˈtrʌst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "신용하지 않다, 믿지 않다; 의심하다 ((mistrust보다 뜻이 강함))",
+              "examples": [
+                {
+                  "text": "<b>distrust</b> one's own eyes",
+                  "translatedText": "자기의 눈을 의심하다"
+                }
+              ],
+              "originalMeaning": "신용하지 않다, 믿지 않다; 의심하다 ((mistrust보다 뜻이 강함))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [또는 a ~] 불신; 의혹, 의심 ((of))",
+              "examples": [],
+              "originalMeaning": "[U] [또는 a ~] 불신; 의혹, 의심 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/904a31d58f9a43cbbedacd5a321a8c80",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/904a31d58f9a43cbbedacd5a321a8c80",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "distrusts"
+        },
+        {
+          "type": "과거형",
+          "value": "distrusted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "distrusting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "distrusted"
+        }
+      ],
+      "aliasConjugation": "distrusts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8444120fea983389ca2c7fca505f3cf5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불신 풍조가 만연하고 있다",
+      "text": "The trend of mutual <b>distrust</b> is prevalent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기 눈을 의심하지 않을 수 없다",
+      "text": "He cannot help distrusting his own eyes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들의 정치에 대한 불신은 점점 심해지고 있다",
+      "text": "Their <b>distrust</b> of politics continues to get[grow] stronger."
+    }
+  ],
+  "isWordType": true
+}

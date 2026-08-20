@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "entry": "<b>gem</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dʒem"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보석, 보옥(jewel)",
+              "examples": [
+                {
+                  "text": "The crown was set with <b>gem</b> s.",
+                  "translatedText": "그 왕관에는 보석이 박혀 있었다."
+                }
+              ],
+              "originalMeaning": "보석, 보옥(jewel)"
+            },
+            {
+              "meaning": "귀중품, 일품(逸品)(treasure)",
+              "examples": [
+                {
+                  "text": "This is the <b>gem</b> of my record collection.",
+                  "translatedText": "이것은 나의 수집 레코드 가운데 일품이다."
+                }
+              ],
+              "originalMeaning": "귀중품, 일품(逸品)(treasure)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 보석을 박다, 보석으로 장식하다",
+              "examples": [],
+              "originalMeaning": "…에 보석을 박다, 보석으로 장식하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/63b61898a6d5463d84b542b40f74cc8b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/63b61898a6d5463d84b542b40f74cc8b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gems"
+        },
+        {
+          "type": "과거형",
+          "value": "gemmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gemming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gemmed"
+        }
+      ],
+      "aliasConjugation": "gems",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b9ff4325beee2134ac7ce828dc71c635",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>GEM</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "ground-effect machine",
+              "examples": [],
+              "originalMeaning": "ground-effect machine"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5723b41472654dd3bbc1ff5710f90c77",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5723b41472654dd3bbc1ff5710f90c77",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "60f46a43b5d5691f5967fda87a81828c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 왕관에는 보석이 박혀 있었다.",
+      "text": "The crown was set with <b>gems</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 목걸이에는 보석이 박혀 있었다.",
+      "text": "Her necklace was beset with <b>gems</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리 사무실에서 없어서는 안 될 사람이다",
+      "text": "He is a jewel[<b>gem</b>] in our office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 나의 수집 레코드 가운데 일품이다.",
+      "text": "This is the <b>gem</b> of my record collection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "와전하느니 옥쇄하라",
+      "text": "Better be a broken <b>gem</b> than a whole brick."
+    }
+  ],
+  "isWordType": true
+}

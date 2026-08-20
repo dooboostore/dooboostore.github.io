@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>owe</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "oʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "빚지고 있다, 지불할 의무가 있다",
+              "examples": [
+                {
+                  "text": "<b>owe</b> money to the bank",
+                  "translatedText": "은행에 돈을 갚아야만 하다"
+                }
+              ],
+              "originalMeaning": "빚지고 있다, 지불할 의무가 있다"
+            },
+            {
+              "meaning": "…의 은혜를 입고 있다, <명예·성공 등을> …에 돌리다, …의 덕택으로 알다",
+              "examples": [
+                {
+                  "text": "<b>owe</b> one's fame to good fortune",
+                  "translatedText": "…의 명성을 행운의 덕으로 돌리다"
+                }
+              ],
+              "originalMeaning": "…의 은혜를 입고 있다, <명예·성공 등을> …에 돌리다, …의 덕택으로 알다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빚이 있다",
+              "examples": [
+                {
+                  "text": "He still owes for his house.",
+                  "translatedText": "그는 아직 지불하지 못한 집값이 남아 있다."
+                }
+              ],
+              "originalMeaning": "빚이 있다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6d4b805161ef4ab89c2d9784fff64a52",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6d4b805161ef4ab89c2d9784fff64a52",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "owes"
+        },
+        {
+          "type": "과거형",
+          "value": "owed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "owing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "owed"
+        }
+      ],
+      "aliasConjugation": "owes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cafb602c954aca7626235ee40aa38ce5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그에게 유감이 있다.",
+      "text": "I <b>owe</b> him a grudge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 네게 큰 신세를 졌다",
+      "text": "I <b>owe</b> you big time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 아무런 유한도 없다",
+      "text": "I <b>owe</b> him no grudge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 네게 아무 감정도 없다",
+      "text": "I <b>owe</b> you no grudge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일금 100만 원을 차용함",
+      "text": "I <b>owe</b> you[IOU] one million won."
+    }
+  ],
+  "isWordType": true
+}

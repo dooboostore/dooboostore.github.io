@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "<b>emigrate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈemɪɡreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(타국으로) 이주하다, 이민하다; (다른 주 등으로) 전출하다(cf. IMMIGRATE), (=migrate)",
+              "examples": [
+                {
+                  "text": "<b>emigrate</b> fromKorea to[into] Canada",
+                  "translatedText": "한국에서 캐나다로 이주하다"
+                }
+              ],
+              "originalMeaning": "(타국으로) 이주하다, 이민하다; (다른 주 등으로) 전출하다(cf. IMMIGRATE), (=<span class='related_word' lang='en' >migrate</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dbf727f7a22a497cb2ecdb974ccbc525",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dbf727f7a22a497cb2ecdb974ccbc525",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "emigrates"
+        },
+        {
+          "type": "과거형",
+          "value": "emigrated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "emigrating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "emigrated"
+        }
+      ],
+      "aliasConjugation": "emigrates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "73096cc60c179d894ebba7e5d4a42293",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너의 캐나다 이민 계획은 좋지 않다고 생각한다.",
+      "text": "I don’t like your plan to <b>emigrate</b> to Canada."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 캐나다로 이민가려는 생각에 사로잡혀 있다.",
+      "text": "He is obsessed with the idea of emigrating to Canada."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "많은 사람이 이 나라에서 미국으로 이민 간다",
+      "text": "A large number of people <b>emigrate</b> to America from this country."
+    }
+  ],
+  "isWordType": true
+}

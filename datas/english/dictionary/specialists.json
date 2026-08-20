@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "specialist",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈspeʃəlɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전문가, 전문의(醫) ((in))(cf. GENERAL PRACTITIONER)",
+              "examples": [
+                {
+                  "text": "an eye <b>specialist</b>",
+                  "translatedText": "안과(眼科) 전문의"
+                }
+              ],
+              "originalMeaning": "전문가, 전문의(醫) ((in))(cf. GENERAL PRACTITIONER)"
+            },
+            {
+              "meaning": "특기[기술]병",
+              "examples": [],
+              "originalMeaning": "특기[기술]병"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전문(가)의, 전문적인(specialistic)",
+              "examples": [
+                {
+                  "text": "<b>specialist</b> knowledge",
+                  "translatedText": "전문 지식"
+                }
+              ],
+              "originalMeaning": "전문(가)의, 전문적인(specialistic)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aae7c0f151fa4a5c8b832bd5f2502309",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aae7c0f151fa4a5c8b832bd5f2502309",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "64a817b49f53526d00adb2362fea2c08",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 외환 시장에 관해 밝다",
+      "text": "He is an expert[a <b>specialist</b>] in the foreign exchange market."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비행기 추락 사고의 원인 조사를 위해 전문가들이 급파되었다",
+      "text": "A group of <b>specialists</b> were dispatched to investigate the causes of the plane crash."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 전문가의 영역이다",
+      "text": "This is the province of the <b>specialist</b>."
+    }
+  ],
+  "isWordType": true
+}

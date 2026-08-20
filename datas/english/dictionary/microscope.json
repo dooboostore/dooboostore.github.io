@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "entry": "<b>microscope</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│maɪkrəskoʊp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "현미경",
+              "examples": [
+                {
+                  "text": "a binocular <b>microscope</b>",
+                  "translatedText": "쌍안 현미경"
+                }
+              ],
+              "originalMeaning": "현미경"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9eb352e5b68249f091d5eb3a060028b5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9eb352e5b68249f091d5eb3a060028b5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e8d0771e5bb76e3eb2cf6ca73fe04682",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 현미경은 물체를 200배로 확대한다.",
+      "text": "This <b>microscope</b> magnifies an object 200 times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 현미경은 물체를 800배까지 확대한다",
+      "text": "This <b>microscope</b> magnifies an object up to eight hundred times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 현미경으로 살펴보자",
+      "text": "Let's examine it under the[with a] <b>microscope</b>."
+    }
+  ],
+  "isWordType": true
+}

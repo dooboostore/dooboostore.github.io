@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "entry": "<b>dismiss</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪsˈmɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<집회 등을> 해산시키다, 산회시키다; <사람을> 퇴거시키다, 퇴거를 허락하다[명하다]",
+              "examples": [],
+              "originalMeaning": "<집회 등을> 해산시키다, 산회시키다; <사람을> 퇴거시키다, 퇴거를 허락하다[명하다]"
+            },
+            {
+              "meaning": "해고하다, 면직하다, 내쫓다(expel) ((from))",
+              "examples": [
+                {
+                  "text": "<b>dismiss</b> oneself from office",
+                  "translatedText": "공직에서 물러나다"
+                }
+              ],
+              "originalMeaning": "해고하다, 면직하다, 내쫓다(expel) ((from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "해산하다, 분산하다(disperse)",
+              "examples": [
+                {
+                  "text": "<b>Dismiss</b> !",
+                  "translatedText": "[구령] [군사] 해산!"
+                }
+              ],
+              "originalMeaning": "해산하다, 분산하다(disperse)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e5b616d33bbe43ee9a80dbe237fcf041",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e5b616d33bbe43ee9a80dbe237fcf041",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dismisses"
+        },
+        {
+          "type": "과거형",
+          "value": "dismissed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dismissing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dismissed"
+        }
+      ],
+      "aliasConjugation": "dismisses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "939fedfd4bccf56647716a7124e3d230",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>Dismiss</b>!",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "[구령] [군사] 해산!",
+              "examples": [],
+              "originalMeaning": "[구령] [군사] 해산!"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/726059e283f441c7982a29a8a779e627",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/726059e283f441c7982a29a8a779e627",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0fd3f55031d26ba571b797902280b173",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 일은 염두에 두지 말라",
+      "text": "Don't think[care] about it. or <b>Dismiss</b> it from your mind. or You had better forget about it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "외무 장관이 갑자기 해임되었다",
+      "text": "The foreign minister was suddenly <b>dismissed</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오늘은 이것으로 수업을 끝마치겠습니다",
+      "text": "So far for today. or Class (is) <b>dismissed</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 직무를 게을리하여 해고당했다",
+      "text": "He was <b>dismissed</b> for neglecting his duties."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 장교는 군대에서 제적되었다.",
+      "text": "The officer was <b>dismissed</b> (from) the army[the service]."
+    }
+  ],
+  "isWordType": true
+}

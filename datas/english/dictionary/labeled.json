@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>label</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈleɪbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "라벨, 레테르, 꼬리표, 부전(附箋)",
+              "examples": [
+                {
+                  "text": "put <b>label</b> s on one's luggage",
+                  "translatedText": "수하물에 짐표를 붙이다"
+                }
+              ],
+              "originalMeaning": "라벨, 레테르, 꼬리표, 부전(附箋)"
+            },
+            {
+              "meaning": "(사람·단체·유파·운동 등의 특색을 간단히 표시한) 부호, 표어, 표지(標識)",
+              "examples": [],
+              "originalMeaning": "(사람·단체·유파·운동 등의 특색을 간단히 표시한) 부호, 표어, 표지(標識)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 라벨을[표를] 붙이다, 라벨로 나타내다",
+              "examples": [
+                {
+                  "text": "<b>label</b> a bottle",
+                  "translatedText": "병에 라벨을 붙이다"
+                }
+              ],
+              "originalMeaning": "…에 라벨을[표를] 붙이다, 라벨로 나타내다"
+            },
+            {
+              "meaning": "(라벨을 붙여서) 분류하다(classify), …을 (…이라고) 부르다(designate)",
+              "examples": [
+                {
+                  "text": "They <b>label</b> him a liar.",
+                  "translatedText": "그들은 그를 거짓말쟁이라고 부른다."
+                }
+              ],
+              "originalMeaning": "(라벨을 붙여서) 분류하다(classify), …을 (…이라고) 부르다(designate)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/17f260da335a436dbdb15325a632e11a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/17f260da335a436dbdb15325a632e11a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "labels"
+        },
+        {
+          "type": "과거형",
+          "value": "labelled, labeled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "labelling, labeling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "labelled, labeled"
+        }
+      ],
+      "aliasConjugation": "labels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d588fe0ab4394bea5a9751e4895e909a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 거짓말쟁이라고 부른다.",
+      "text": "They <b>label</b> him a liar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 상자에는 50개들이란 라벨이 붙어 있다.",
+      "text": "The box is <b>labeled</b> 50 count."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그에게 문제아라는 딱지가 붙여졌다",
+      "text": "He was <b>labeled</b> (as) a problem child."
+    }
+  ],
+  "isWordType": true
+}

@@ -60,6 +60,12 @@ export default (w: Window) => {
       return `<center-coordinate-2d-simulation-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/buyback"], { order: 6 })
+    @innerHtmlLight
+    handleBuyback() {
+      return `<center-buyback-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {

@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "trigger",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtrɪɡə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(총포의) 방아쇠",
+              "examples": [],
+              "originalMeaning": "(총포의) 방아쇠"
+            },
+            {
+              "meaning": "(기계의) 제동기[장치], 제륜기(制輪機)",
+              "examples": [],
+              "originalMeaning": "(기계의) 제동기[장치], 제륜기(制輪機)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(방아쇠를 당겨서) 쏘다, 발사하다; 폭발시키다",
+              "examples": [],
+              "originalMeaning": "(방아쇠를 당겨서) 쏘다, 발사하다; 폭발시키다"
+            },
+            {
+              "meaning": "<일을> 일으키다, 시작케 하다, 유발하다 ((off))",
+              "examples": [],
+              "originalMeaning": "<일을> 일으키다, 시작케 하다, 유발하다 ((off))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bda93c55b8cc4ce083267dd8caffd70d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bda93c55b8cc4ce083267dd8caffd70d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "triggers"
+        },
+        {
+          "type": "과거형",
+          "value": "triggered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "triggering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "triggered"
+        }
+      ],
+      "aliasConjugation": "triggers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "91ff21bd8c90e7130433e7619ed1769c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 남의 약점을 들추기를 즐기는 기자였다",
+      "text": "He was a <b>trigger</b>-happy reporter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사건 탓으로 주요한 갈등이 시작되었다",
+      "text": "The incident <b>triggered</b>[sparked off] a major conflict."
+    }
+  ],
+  "isWordType": true
+}

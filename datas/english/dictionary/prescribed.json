@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "entry": "prescribed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "priskráibd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "규정된, 미리 정해진",
+              "examples": [
+                {
+                  "text": "<b>prescribed</b> textbooks",
+                  "translatedText": "지정 교과서"
+                }
+              ],
+              "originalMeaning": "규정된, 미리 정해진"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8cd78d081af54e37ad074380600a9883",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8cd78d081af54e37ad074380600a9883",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a4ea69773e30e123144d7a329b79f879",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "prescribe",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prɪˈskraɪb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "규정하다, 정하다; 명령하다, 지령[지시]하다(order)",
+              "examples": [
+                {
+                  "text": "Do what the law prescribes.",
+                  "translatedText": "법이 정하는 바를 하여라."
+                }
+              ],
+              "originalMeaning": "규정하다, 정하다; 명령하다, 지령[지시]하다(order)"
+            },
+            {
+              "meaning": "<약·치료법 등을> 처방[지시]하다, 처방을 쓰다 ((for))",
+              "examples": [
+                {
+                  "text": "The attending physician prescribes the medicines for his patient.",
+                  "translatedText": "주치의는 환자에게 약을 처방해 준다."
+                }
+              ],
+              "originalMeaning": "<약·치료법 등을> 처방[지시]하다, 처방을 쓰다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "규정하다, 지령하다 ((for))",
+              "examples": [],
+              "originalMeaning": "규정하다, 지령하다 ((for))"
+            },
+            {
+              "meaning": "처방을 쓰다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>prescribe</b> for a patient[for the gout]",
+                  "translatedText": "환자에게 처방을 적어주다[통풍(痛風)의 처방을 내리다]"
+                }
+              ],
+              "originalMeaning": "처방을 쓰다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c995129991f94005b35a811e3a415081",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c995129991f94005b35a811e3a415081",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "prescribes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b9e2425837fa621cf51ead90b202e7f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "법이 정하는 바를 하여라.",
+      "text": "Do what the law prescribes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 항상 우리들에게 해야 할 바를 지시한다.",
+      "text": "He always prescribes to us what (we are) to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "주치의는 환자에게 약을 처방해 준다.",
+      "text": "The attending physician prescribes the medicines for his patient."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "관례로 장례식에서는 상복을 입게 되어 있다.",
+      "text": "Convention prescribes that we (should) wear black at a funeral."
+    }
+  ],
+  "isWordType": true
+}

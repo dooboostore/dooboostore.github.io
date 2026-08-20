@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "pedestrian",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pəˈdestriən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보행자(walker), 도보 여행자(cf. EQUESTRIAN)",
+              "examples": [],
+              "originalMeaning": "보행자(walker), 도보 여행자(cf. EQUESTRIAN)"
+            },
+            {
+              "meaning": "잘 걷는 사람, 도보 경주자, 도보주의자",
+              "examples": [],
+              "originalMeaning": "잘 걷는 사람, 도보 경주자, 도보주의자"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "도보의, 보행의",
+              "examples": [
+                {
+                  "text": "a <b>pedestrian</b> tour",
+                  "translatedText": "도보 여행"
+                }
+              ],
+              "originalMeaning": "도보의, 보행의"
+            },
+            {
+              "meaning": "<문체 등이> 산문적인, 평범[단조]한",
+              "examples": [
+                {
+                  "text": "a <b>pedestrian</b> speech",
+                  "translatedText": "평범한 연설"
+                }
+              ],
+              "originalMeaning": "<문체 등이> 산문적인, 평범[단조]한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19ef38ff01db48908107db7aa1636fc3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19ef38ff01db48908107db7aa1636fc3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e4830ad9191623774359bafd9b2ac101",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "트럭이 보행자를 치고 뺑소니쳤다",
+      "text": "There was a hit-and-run accident between a truck and a <b>pedestrian</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자네는 잘도 걷는군",
+      "text": "You are a good walker[<b>pedestrian</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 건각의 소유자다",
+      "text": "He is really a good walker[<b>pedestrian</b>]."
+    }
+  ],
+  "isWordType": true
+}

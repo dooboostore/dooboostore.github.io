@@ -1,0 +1,171 @@
+{
+  "items": [
+    {
+      "entry": "count",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "káunt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(총수를 알기 위해) 세다, 계산하다; 산출하다",
+              "examples": [
+                {
+                  "text": "<b>count</b> the money",
+                  "translatedText": "돈을 세다"
+                }
+              ],
+              "originalMeaning": "(총수를 알기 위해) 세다, 계산하다; 산출하다"
+            },
+            {
+              "meaning": "셈에 넣다, 포함시키다 ((in, among))",
+              "examples": [
+                {
+                  "text": "<b>Count</b> me in for the party.",
+                  "translatedText": "파티에 나 좀 끼워 줘."
+                }
+              ],
+              "originalMeaning": "셈에 넣다, 포함시키다 ((in, among))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(물건의 수를) 세다, 계산하다; (…부터 …까지) 세다 ((up; to))",
+              "examples": [
+                {
+                  "text": "I'll <b>count</b> (up) to a hundred.",
+                  "translatedText": "나는 백까지 셀 것이다."
+                }
+              ],
+              "originalMeaning": "(물건의 수를) 세다, 계산하다; (…부터 …까지) 세다 ((up; to))"
+            },
+            {
+              "meaning": "셈[계산]에 넣다",
+              "examples": [],
+              "originalMeaning": "셈[계산]에 넣다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "계산, 셈",
+              "examples": [],
+              "originalMeaning": "계산, 셈"
+            },
+            {
+              "meaning": "총수, 총계; 회계, 경리",
+              "examples": [],
+              "originalMeaning": "총수, 총계; 회계, 경리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bb091cc4abb041c2a1ceb4945042b3c0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bb091cc4abb041c2a1ceb4945042b3c0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "counts"
+        },
+        {
+          "type": "과거형",
+          "value": "counted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "counting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "counted"
+        }
+      ],
+      "aliasConjugation": "counts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4f536f73da009b415de75459db5d9ff3",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "count",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "káunt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(영국 이외의) 백작",
+              "examples": [],
+              "originalMeaning": "(영국 이외의) 백작"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/715d5cd8a5c94438b5fe5b793246cdc3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/715d5cd8a5c94438b5fe5b793246cdc3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "counts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "acf2153f68ccf562cf0df2481216057b",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "1 에서 10까지 세시오.",
+      "text": "<b>Count</b> from l to 10."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "T 백작 및 동부인",
+      "text": "<b>Count</b> and Countess T"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 내가 행복하다고 생각한다.",
+      "text": "I <b>count</b> myself happy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "파티에 나 좀 끼워 줘.",
+      "text": "<b>Count</b> me in for the party."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방금의 서브는 노 카운트가 되었다",
+      "text": "That serve didn't <b>count</b>."
+    }
+  ],
+  "isWordType": true
+}

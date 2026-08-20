@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "curl",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɜːrl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<머리털을> 곱슬곱슬하게 하다, 컬하다",
+              "examples": [],
+              "originalMeaning": "<머리털을> 곱슬곱슬하게 하다, 컬하다"
+            },
+            {
+              "meaning": "꼬다, 비틀다 ((up)), 둥글게 감다, <입술 등을> 일그러뜨리다",
+              "examples": [],
+              "originalMeaning": "꼬다, 비틀다 ((up)), 둥글게 감다, <입술 등을> 일그러뜨리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<머리털이> 곱슬곱슬해지다",
+              "examples": [],
+              "originalMeaning": "<머리털이> 곱슬곱슬해지다"
+            },
+            {
+              "meaning": "<연기가> 맴돌다, 비틀리다, <길이> 굽이지다; <공이> 커브하다",
+              "examples": [
+                {
+                  "text": "Paper curls when it burns.",
+                  "translatedText": "종이는 타면 둥글게 오그라든다."
+                }
+              ],
+              "originalMeaning": "<연기가> 맴돌다, 비틀리다, <길이> 굽이지다; <공이> 커브하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(머리털의) 컬, 곱슬털;[pl.] 고수머리, ((일반적으로)) 머리칼",
+              "examples": [],
+              "originalMeaning": "(머리털의) 컬, 곱슬털;[pl.] 고수머리, ((일반적으로)) 머리칼"
+            },
+            {
+              "meaning": "나선형의 것, 소용돌이 꼴, 굽이침",
+              "examples": [],
+              "originalMeaning": "나선형의 것, 소용돌이 꼴, 굽이침"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7d06500eb2cb4197b6d1c1166bd15e3a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7d06500eb2cb4197b6d1c1166bd15e3a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "curls"
+        },
+        {
+          "type": "과거형",
+          "value": "curled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "curling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "curled"
+        }
+      ],
+      "aliasConjugation": "curls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "82efea60a4a2a8f8b662a092ef2ffe46",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "종이는 타면 둥글게 오그라든다.",
+      "text": "Paper curls when it burns."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "연기가 굴뚝에서 소용돌이치며 올라갔다.",
+      "text": "Smoke curled out of the chimney."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 머리에 클립을 끼운 채 부엌일을 하고 있었다",
+      "text": "She was doing kitchen work with curling pins in her hair[with her hair (up) in curlers]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나뭇잎이 오그라진다",
+      "text": "The leaves <b>curl</b> up."
+    }
+  ],
+  "isWordType": true
+}

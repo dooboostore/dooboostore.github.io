@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "intersection",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɪntər│sekʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "교차, 횡단",
+              "examples": [],
+              "originalMeaning": "교차, 횡단"
+            },
+            {
+              "meaning": "(도로의) 교차점; [수학] 교점(交點), 교선(交線)",
+              "examples": [
+                {
+                  "text": "a store at the <b>intersection</b>",
+                  "translatedText": "교차점에 면한 가게"
+                }
+              ],
+              "originalMeaning": "(도로의) 교차점; [수학] 교점(交點), 교선(交線)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d4b5469592644612bcf81febcb127b58",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d4b5469592644612bcf81febcb127b58",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ac6998f55c44bbedb0f2ae9c4f8e0767",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 복잡한 교차로에서 빨간 신호등을 무시하고 달렸다",
+      "text": "I ran a red light at a busy <b>intersection</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네거리에서 직진하세요",
+      "text": "Go straight at the <b>intersection</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "광화문 교차로",
+      "text": "Gwanghwamun <b>intersection</b>"
+    }
+  ],
+  "isWordType": true
+}
