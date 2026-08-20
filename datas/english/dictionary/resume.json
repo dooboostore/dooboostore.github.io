@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "<b>resume</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪ│zuːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 시작하다, 다시 계속하다",
+              "examples": [
+                {
+                  "text": "<b>resume</b> conversation",
+                  "translatedText": "이야기를 다시 시작하다"
+                }
+              ],
+              "originalMeaning": "다시 시작하다, 다시 계속하다"
+            },
+            {
+              "meaning": "다시 차지하다, 재점유하다",
+              "examples": [
+                {
+                  "text": "<b>resume</b> one's seat",
+                  "translatedText": "자리에 다시 앉다"
+                }
+              ],
+              "originalMeaning": "다시 차지하다, 재점유하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "되찾다, 다시 차지하다",
+              "examples": [],
+              "originalMeaning": "되찾다, 다시 차지하다"
+            },
+            {
+              "meaning": "다시 시작하다, 계속하다",
+              "examples": [],
+              "originalMeaning": "다시 시작하다, 계속하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/546f406fa33f4fa1bba5e6c8da6e198f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/546f406fa33f4fa1bba5e6c8da6e198f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "resumes"
+        },
+        {
+          "type": "과거형",
+          "value": "resumed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "resuming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "resumed"
+        }
+      ],
+      "aliasConjugation": "resumes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2aec3dfc38f62d84187611e0793e37dd",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>resume</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈrezəmeɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대략, 적요, 개요(summary)(cf. <b>RESUME</b> 5)",
+              "examples": [],
+              "originalMeaning": "대략, 적요, 개요(summary)(cf. <b>RESUME</b> 5)"
+            },
+            {
+              "meaning": "이력서",
+              "examples": [],
+              "originalMeaning": "이력서"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/971f642b55514bc99064bb900367c356",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/971f642b55514bc99064bb900367c356",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "resumes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "57414fb37e9bd701c40a101ce71085b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다시 밤의 세계가 된다.",
+      "text": "Night resumes her reign."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "월요일에 배달을 다시 시작해 주세요",
+      "text": "<b>Resume</b> delivery on Monday, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회의는 오후 2시에 재개됩니다",
+      "text": "The meeting will be resumed at 2:00 p.m."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전회에 이어 그 책의 이야기를 하겠습니다",
+      "text": "I will <b>resume</b> the story of the book where I left off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대사는 내일 귀임 길에 오를 것이다",
+      "text": "The ambassador will leave tomorrow to <b>resume</b> his official duties."
+    }
+  ],
+  "isWordType": true
+}

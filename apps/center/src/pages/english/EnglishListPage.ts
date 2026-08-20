@@ -78,31 +78,47 @@ export default (w: Window) => {
           :host {
             display: block;
             min-height: 100vh;
-            background: var(--color-bg, #fff);
-            font-family: var(--font-family, -apple-system, sans-serif);
+            background: #f0f2f5;
+            font-family: var(--font-family, sans-serif);
           }
+
+          .header {
+            display: flex; align-items: center; gap: 12px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 60%, #42a5f5 100%);
+            color: white;
+          }
+          .header-back {
+            background: rgba(255,255,255,0.2); border: none; color: white;
+            width: 40px; height: 40px; border-radius: 8px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; font-size: 20px;
+          }
+          .header-back:hover { background: rgba(255,255,255,0.3); }
+          .header-title { font-size: 22px; font-weight: 700; flex: 1; }
+          .header-hits { height: 20px; border-radius: 4px; opacity: 0.9; margin-left: auto; }
+          .content { padding: 20px; max-width: 1200px; margin: 0 auto; }
 
           .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 20px;
-            padding: 24px;
           }
 
           .video-card {
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            background: var(--color-surface, #fff);
-            border: 1px solid var(--color-border, #e0e0e0);
+            background: #fff;
+            border: 1px solid #e0e0e0;
             outline: none;
           }
 
           .video-card:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.12));
+            box-shadow: 0 8px 24px rgba(25,118,210,0.15);
+            border-color: #1976d2;
           }
 
           .video-card:focus-visible {
@@ -110,7 +126,7 @@ export default (w: Window) => {
           }
 
           .video-card:hover .video-title {
-            color: var(--color-primary, #1976d2);
+            color: #1976d2;
           }
 
           .video-thumb {
@@ -150,7 +166,7 @@ export default (w: Window) => {
             padding: 10px 8px;
             font-size: 13px;
             font-weight: 600;
-            color: var(--color-text, #222);
+            color: #222;
             line-height: 1.3;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -158,7 +174,7 @@ export default (w: Window) => {
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            border-top: 1px solid var(--color-border-light, #eee);
+            border-top: 1px solid #eee;
             transition: color 0.2s;
             word-break: break-word;
           }
@@ -167,25 +183,50 @@ export default (w: Window) => {
             grid-column: 1 / -1;
             text-align: center;
             padding: 60px;
-            color: var(--color-text-muted, #888);
+            color: #888;
           }
 
-          @media (max-width: 480px) {
+          .copyright {
+            text-align: center; padding: 24px 16px; color: #aaa; font-size: 13px;
+            border-top: 1px solid #eee; margin-top: 24px;
+          }
+
+          @media (max-width: 600px) {
+            .header { padding: 14px 16px; }
+            .header-title { font-size: 18px; }
+            .content { padding: 12px; }
             .video-grid {
               grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
               gap: 12px;
-              padding: 16px;
             }
           }
         </style>
-<!--        <button id="lazy-btn">lazy-btn loading</button>-->
-<!--        <test-component> </test-component>-->
 
-        <h1 style="position: sticky; top:0; background-color: white; z-index: 999; padding: 5px">English <img alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io.svg?style=plastic&amp;"></h1>
-        <div class="video-grid">
-          <div class="empty">Loading...</div>
+        <div class="header">
+          <button class="header-back" aria-label="Go home" title="홈으로">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+          </button>
+          <div>
+            <div class="header-title">🎬 English Learning</div>
+          </div>
+          <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-english.svg?style=plastic&amp;"/>
         </div>
+
+        <main class="content">
+          <div class="video-grid">
+            <div class="empty">Loading...</div>
+          </div>
+        </main>
+
+        <footer class="copyright">
+          © ${new Date().getFullYear()} dooboostore
+        </footer>
       `;
+    }
+
+    @addEventListener('.header-back', 'click')
+    onBackClick() {
+      this.router?.go('/');
     }
 
     @addEventListener(".video-card", "click", { delegate: true })

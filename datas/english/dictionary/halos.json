@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "halo",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│heɪloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(성상(聖像) 등의) 후광, 원광(nimbus)",
+              "examples": [],
+              "originalMeaning": "(성상(聖像) 등의) 후광, 원광(nimbus)"
+            },
+            {
+              "meaning": "[비유] 영광, 광영(glory); 존경",
+              "examples": [],
+              "originalMeaning": "[비유] 영광, 광영(glory); 존경"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "후광을 씌우다, 후광이 되다; 무리를 씌우다, 무리가 서다",
+              "examples": [],
+              "originalMeaning": "후광을 씌우다, 후광이 되다; 무리를 씌우다, 무리가 서다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dd5ee21acf994a1fbf51518d76ef29f6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dd5ee21acf994a1fbf51518d76ef29f6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "haloes, halos"
+        },
+        {
+          "type": "복수형",
+          "value": "haloes, halos"
+        },
+        {
+          "type": "과거형",
+          "value": "haloed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "haloing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "haloed"
+        }
+      ],
+      "aliasConjugation": "haloes, halos",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "356287393bb80884bcdb8b4027b28e96",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "HALO",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "high altitude large optics 고고도(高高度) 대형 광학 장치",
+              "examples": [],
+              "originalMeaning": "high altitude large optics 고고도(高高度) 대형 광학 장치"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/740655c4af6648e6a835c63fa85331b0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/740655c4af6648e6a835c63fa85331b0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "52cb2cb89c35129118c2d5dc90e983ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달무리는 비가 올 징조이다.",
+      "text": "A lunar <b>halo</b> signifies rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달무리가 섰다",
+      "text": "The moon has a <b>halo</b>."
+    }
+  ],
+  "isWordType": true
+}

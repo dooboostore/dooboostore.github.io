@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>logically</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "lɑ́dƷikəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "논리적으로, 논리상; 필연적으로",
+              "examples": [],
+              "originalMeaning": "논리적으로, 논리상; 필연적으로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0436ce2b8e38496d905c0cc0a7b70f9a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0436ce2b8e38496d905c0cc0a7b70f9a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c0acbc688a7afd72a5dec8a1a078af24",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>logical</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│lɑːdʒɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "논리학(상)의, 논리(상)의; 논리적인; (논리상) 필연적인",
+              "examples": [
+                {
+                  "text": "<b>logical</b> thinking",
+                  "translatedText": "논리적 사고"
+                }
+              ],
+              "originalMeaning": "논리학(상)의, 논리(상)의; 논리적인; (논리상) 필연적인"
+            },
+            {
+              "meaning": "논리 (회로)의",
+              "examples": [],
+              "originalMeaning": "논리 (회로)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3d5acb8e6746475f8cc949a0220429a0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3d5acb8e6746475f8cc949a0220429a0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5e0a715bc49e981c0bd933fb312a01a2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신의 말은 논리적으로 틀렸다",
+      "text": "What you say is <b>logically</b> wrong."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 방금 말한 것은 앞뒤가 맞지 않는다",
+      "text": "What he says just isn't <b>logical</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "…은 당연한 귀결이다",
+      "text": "It is a <b>logical</b> conclusion ;It naturally follows"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 필연적인 결과이다",
+      "text": "It follows as a <b>logical</b>[natural] consequence. or It must of necessity be so."
+    }
+  ],
+  "isWordType": true
+}

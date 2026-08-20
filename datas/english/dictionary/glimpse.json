@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "glimpse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡlɪmps"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흘끗 봄[보임], 일견, 일별 ((of)); [고어] 섬광, 희미한 빛 (=glance)",
+              "examples": [],
+              "originalMeaning": "흘끗 봄[보임], 일견, 일별 ((of)); [고어] 섬광, 희미한 빛 (=<span class='related_word' lang='en' >glance</span>)"
+            },
+            {
+              "meaning": "어렴풋이 감지함",
+              "examples": [
+                {
+                  "text": "have[catch, get] a <b>glimpse</b> of the truth",
+                  "translatedText": "진상을 어렴풋이 알다"
+                }
+              ],
+              "originalMeaning": "어렴풋이 감지함"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "흘끗 보다",
+              "examples": [],
+              "originalMeaning": "흘끗 보다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c04c31a5349425089d1396f81877a20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c04c31a5349425089d1396f81877a20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "glimpses"
+        },
+        {
+          "type": "과거형",
+          "value": "glimpsed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "glimpsing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "glimpsed"
+        }
+      ],
+      "aliasConjugation": "glimpses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6bb4075a62696fc37a820cbb49262f1a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 뒷모습이 흘끗 보였다",
+      "text": "I caught a <b>glimpse</b> of her back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것으로 그의 성격의 편린을 알 수 있다",
+      "text": "It enables us to get a <b>glimpse</b> of his personality."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "울타리 사이로 그의 뒷모습이 언뜻 보였다",
+      "text": "The opening in the fence gave a <b>glimpse</b> of his back view."
+    }
+  ],
+  "isWordType": true
+}

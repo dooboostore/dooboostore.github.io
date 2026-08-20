@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "authenticity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌɔːθenˈtɪsəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 확실성, 신뢰성; [구어] 성실",
+              "examples": [],
+              "originalMeaning": "[U] 확실성, 신뢰성; [구어] 성실"
+            },
+            {
+              "meaning": "진짜임",
+              "examples": [],
+              "originalMeaning": "진짜임"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6a0f02c2f9f343c09f00b288eaf6483e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6a0f02c2f9f343c09f00b288eaf6483e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b018b07b806e1daa49d929086f44ed33",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 보고의 진위는 확실치가 않다",
+      "text": "This report is of dubious <b>authenticity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 이야기의 진실성은 의심의 여지가 없다",
+      "text": "The <b>authenticity</b> of the story is beyond doubt."
+    }
+  ],
+  "isWordType": true
+}

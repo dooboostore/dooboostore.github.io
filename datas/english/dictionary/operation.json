@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "<b>operation</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːpə│reɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 작용, 움직임 ((of)); 작업",
+              "examples": [
+                {
+                  "text": "the <b>operation</b> of breathing",
+                  "translatedText": "호흡 작용"
+                }
+              ],
+              "originalMeaning": "[U] 작용, 움직임 ((of)); 작업"
+            },
+            {
+              "meaning": "(기계 등의) 운전, 작동",
+              "examples": [
+                {
+                  "text": "the <b>operation</b> of elevators",
+                  "translatedText": "엘리베이터의 운전[조작]"
+                }
+              ],
+              "originalMeaning": "(기계 등의) 운전, 작동"
+            },
+            {
+              "meaning": "(열차 등의) 운행, 운항",
+              "examples": [],
+              "originalMeaning": "(열차 등의) 운행, 운항"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f7cf9aec88134509a9179c72d9f8168c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f7cf9aec88134509a9179c72d9f8168c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "97c5134bb2d7a19fab01bafe78dc4596",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 코 수술을 받았다.",
+      "text": "He had an <b>operation</b> on his nose."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 수술을 받기로 했다.",
+      "text": "He has submitted to an <b>operation</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다음 주에 수술을 받게 된다.",
+      "text": "I’m having an <b>operation</b> next week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수술의 결과가 좋지 않았다",
+      "text": "The surgical <b>operation</b> resulted in failure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수술 끝이 좋다[좋지 않다]",
+      "text": "The surgical <b>operation</b> resulted in success[failure]."
+    }
+  ],
+  "isWordType": true
+}

@@ -7,6 +7,7 @@ import {
   innerHtmlLight, state
 } from "@dooboostore/simple-web-component";
 import { LottoService } from "../../services/lotto/LottoService";
+import { Router } from '@dooboostore/core-web';
 import type { LottoService as LottoServiceType, LottoItem } from "../../services/lotto/LottoService";
 import { inject } from "@dooboostore/simple-boot";
 
@@ -18,6 +19,7 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class LottoPage extends w.HTMLElement {
+    private router!: Router;
     private lottoService!: LottoServiceType;
 
     // ---------- 상태 ----------
@@ -53,9 +55,11 @@ export default (w: Window) => {
 
     @onInitialize
     async onInitialized(
-      @inject(LottoService.SYMBOL) lottoService: LottoServiceType
+      @inject(LottoService.SYMBOL) lottoService: LottoServiceType,
+      router: Router
     ): Promise<void> {
       this.lottoService = lottoService;
+      this.router = router;
       this.latestRound = await this.lottoService.getLatestRoundNumber();
       this.selectedRound = this.latestRound;
       await this.loadRoundData(this.selectedRound);
@@ -442,34 +446,76 @@ export default (w: Window) => {
     render() {
       return `
         <style>
-          :host { display: block; padding: 20px; font-family: sans-serif; background: #f0f2f5; min-height: 100vh; }
-          .container { max-width: 500px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+          *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+          :host { display: block; font-family: var(--font-family, sans-serif); background: #f0f2f5; min-height: 100vh; }
+          .header {
+            display: flex; align-items: center; gap: 12px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 60%, #42a5f5 100%);
+            color: white;
+          }
+          .header-back {
+            background: rgba(255,255,255,0.2); border: none; color: white;
+            width: 40px; height: 40px; border-radius: 8px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; font-size: 20px;
+          }
+          .header-back:hover { background: rgba(255,255,255,0.3); }
+          .header-title { font-size: 22px; font-weight: 700; flex: 1; }
+          .header-hits { height: 20px; border-radius: 4px; opacity: 0.9; margin-left: auto; }
+
+          .main-container { max-width: 500px; margin: 24px auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; }
           .tabs { display: flex; background: #eee; border-bottom: 1px solid #ddd; }
           .tabs input[type="radio"] { display: none; }
           .tabs label { flex: 1; padding: 15px; text-align: center; cursor: pointer; font-weight: bold; color: #666; transition: 0.2s; }
           .tabs input[type="radio"]:checked + label { background: white; color: #1976d2; border-bottom: 2px solid #1976d2; }
           .content { padding: 20px; }
+          .copyright {
+            text-align: center; padding: 24px 16px; color: #aaa; font-size: 13px;
+            border-top: 1px solid #eee; margin-top: 24px;
+          }
 
-          @media (max-width: 480px) {
-            :host { padding: 10px; }
-            .container { border-radius: 0; box-shadow: none; }
-            .content { padding: 10px; }
+          @media (max-width: 600px) {
+            .header { padding: 14px 16px; }
+            .header-title { font-size: 18px; }
+            .main-container { margin: 12px; border-radius: 8px; box-shadow: none; }
+            .content { padding: 12px; }
           }
         </style>
 
-        <div class="container">
-          <form class="tabs">
-            <input type="radio" id="tab-round" name="tab" value="round" ${this.activeTab === 'round' ? 'checked' : ''}>
-            <label for="tab-round">회차별 번호</label>
-            <input type="radio" id="tab-stats" name="tab" value="stats" ${this.activeTab === 'stats' ? 'checked' : ''}>
-            <label for="tab-stats">번호별 통계</label>
-          </form>
-
-          <div class="content">
-            <slot></slot>
+        <div class="header">
+          <button class="header-back" aria-label="Go home" title="홈으로">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+          </button>
+          <div>
+            <div class="header-title">🎰 Lotto Analytics</div>
           </div>
+          <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-lotto.svg?style=plastic&amp;"/>
         </div>
+
+        <main>
+          <div class="main-container">
+            <form class="tabs">
+              <input type="radio" id="tab-round" name="tab" value="round" ${this.activeTab === 'round' ? 'checked' : ''}>
+              <label for="tab-round">회차별 번호</label>
+              <input type="radio" id="tab-stats" name="tab" value="stats" ${this.activeTab === 'stats' ? 'checked' : ''}>
+              <label for="tab-stats">번호별 통계</label>
+            </form>
+
+            <div class="content">
+              <slot></slot>
+            </div>
+          </div>
+        </main>
+
+        <footer class="copyright">
+          © ${new Date().getFullYear()} dooboostore
+        </footer>
       `;
+    }
+
+    @addEventListener('.header-back', 'click')
+    onBackClick() {
+      this.router?.go('/');
     }
   }
 

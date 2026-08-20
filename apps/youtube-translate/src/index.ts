@@ -4,7 +4,7 @@ import path from 'path';
 import process from 'process';
 
 // YouTube Video ID를 여기서 변경하세요
-const YOUTUBE_VIDEO_ID = "7HvrdXjdlU8";
+const YOUTUBE_VIDEO_ID = "ITxsc3mgqts";
 
 // 번역 방식 선택: 'youtube' (YouTube 자동번역) 또는 'papago' (Papago API 번역)
 const TRANSLATION_METHOD: 'youtube' | 'papago' = 'youtube';
@@ -140,29 +140,56 @@ function parseVttTime(timeStr: string): number {
 
 async function fetchDictionary(word: string): Promise<PapagoResponse | null> {
   try {
-    const response = await fetch(`https://papago.naver.com/apis/dictionary/search?source=en&target=ko&text=${encodeURIComponent(word)}&locale=ko`, {
+
+
+   const response = await fetch("https://papago.naver.com/api/dictionary/search", {
       headers: {
-        "accept": "application/json",
+        accept: "application/json, text/plain, */*",
         "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-        "authorization": "PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:0q77fVjSF1Qh3crEdIDMKQ==",
+        baggage:
+          "sentry-environment=real,sentry-release=c9a455336cced29b211ff4aa2d7eab7c4d3151dc,sentry-public_key=dummy,sentry-trace_id=ef34d542e1e9468c8c0b628508b45feb,sentry-sampled=false,sentry-sample_rand=0.2868749920708059,sentry-sample_rate=0.01",
         "cache-control": "no-cache",
-        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "pragma": "no-cache",
-        "priority": "u=1, i",
-        "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Chromium\";v=\"142\"",
+        "content-type": "application/json",
+        pragma: "no-cache",
+        priority: "u=1, i",
+        "sec-ch-ua": '"Chromium";v="151", "Not=A?Brand";v="99"',
         "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-ch-ua-platform": '"macOS"',
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
-        'timestamp': Date.now().toString(),
-        "x-apigw-partnerid": "papago",
-        "x-ppg-ctype": "WEB_PC",
-        "cookie": "NNB=ZFCDE4DECVCWQ; _ga_8P4PY65YZ2=GS2.1.s1749365250$o1$g0$t1749365250$j60$l0$h0; ba.uuid=4c6155ad-568d-4b70-bfac-a51e7da4bbcf; ASID=3b0589f40000019827bcdb750000001d; bnb_tooltip_shown_finance_v1=true; _ga=GA1.2.1705893687.1749365250; ab.storage.userId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3AZ2JG%7Ce%3Aundefined%7Cc%3A1761905082349%7Cl%3A1761905082350; ab.storage.deviceId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3A63dd0bf6-7986-8282-897c-5526a566b2ab%7Ce%3Aundefined%7Cc%3A1761905082350%7Cl%3A1761905082350; ab.storage.sessionId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3Ad2c680c5-2d3f-9d2b-c3fb-42785b70ed6b%7Ce%3A1761907197910%7Cc%3A1761905082349%7Cl%3A1761905397910; NV_WETR_LOCATION_RGN_M=\"MDYxNDAxMDE=\"; NV_WETR_LAST_ACCESS_RGN_M=\"MDYxNDAxMDE=\"; NAC=OLdABsQZqteGA; page_uid=jfNfawpzLiwssDoLlS8ssssss24-215133; NACT=1; nid_inf=1426211877; papago_skin_locale=ko; SRT30=1764406270; SRT5=1764406270; BUC=RzB0uuyqkGsQmKdpHTlI80xtxirvT3VORUdOrARznUE=",
-        "Referer": "https://papago.naver.com/"
+        "sentry-trace": "ef34d542e1e9468c8c0b628508b45feb-90834cbd7bc04b25-0",
       },
-      method: "GET"
+      referrer: "https://papago.naver.com/",
+      body: '{"locale":"ko","source":"en","target":"ko","text":"'+encodeURIComponent(word)+'","clientType":"WEB"}',
+      method: "POST",
+      mode: "cors",
+      credentials: "include",
     });
+
+    // const response = await fetch(`https://papago.naver.com/apis/dictionary/search?source=en&target=ko&text=${encodeURIComponent(word)}&locale=ko`, {
+    //   headers: {
+    //     "accept": "application/json",
+    //     "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    //     "authorization": "PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:0q77fVjSF1Qh3crEdIDMKQ==",
+    //     "cache-control": "no-cache",
+    //     "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    //     "pragma": "no-cache",
+    //     "priority": "u=1, i",
+    //     "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Chromium\";v=\"142\"",
+    //     "sec-ch-ua-mobile": "?0",
+    //     "sec-ch-ua-platform": "\"macOS\"",
+    //     "sec-fetch-dest": "empty",
+    //     "sec-fetch-mode": "cors",
+    //     "sec-fetch-site": "same-origin",
+    //     'timestamp': Date.now().toString(),
+    //     "x-apigw-partnerid": "papago",
+    //     "x-ppg-ctype": "WEB_PC",
+    //     "cookie": "NNB=ZFCDE4DECVCWQ; _ga_8P4PY65YZ2=GS2.1.s1749365250$o1$g0$t1749365250$j60$l0$h0; ba.uuid=4c6155ad-568d-4b70-bfac-a51e7da4bbcf; ASID=3b0589f40000019827bcdb750000001d; bnb_tooltip_shown_finance_v1=true; _ga=GA1.2.1705893687.1749365250; ab.storage.userId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3AZ2JG%7Ce%3Aundefined%7Cc%3A1761905082349%7Cl%3A1761905082350; ab.storage.deviceId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3A63dd0bf6-7986-8282-897c-5526a566b2ab%7Ce%3Aundefined%7Cc%3A1761905082350%7Cl%3A1761905082350; ab.storage.sessionId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3Ad2c680c5-2d3f-9d2b-c3fb-42785b70ed6b%7Ce%3A1761907197910%7Cc%3A1761905082349%7Cl%3A1761905397910; NV_WETR_LOCATION_RGN_M=\"MDYxNDAxMDE=\"; NV_WETR_LAST_ACCESS_RGN_M=\"MDYxNDAxMDE=\"; NAC=OLdABsQZqteGA; page_uid=jfNfawpzLiwssDoLlS8ssssss24-215133; NACT=1; nid_inf=1426211877; papago_skin_locale=ko; SRT30=1764406270; SRT5=1764406270; BUC=RzB0uuyqkGsQmKdpHTlI80xtxirvT3VORUdOrARznUE=",
+    //     "Referer": "https://papago.naver.com/"
+    //   },
+    //   method: "GET"
+    // });
 
     console.log(`📡 API Response for "${word}": Status ${response.status}`);
 

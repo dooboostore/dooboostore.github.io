@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "<b>precedent</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpresɪdənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전례, (종래의) 관례, 선례",
+              "examples": [
+                {
+                  "text": "set[creat] a <b>precedent</b>",
+                  "translatedText": "선례를 만들다"
+                }
+              ],
+              "originalMeaning": "전례, (종래의) 관례, 선례"
+            },
+            {
+              "meaning": "판례",
+              "examples": [],
+              "originalMeaning": "판례"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(시간·순서·중요도 등의) 이전의, 앞의; 선행하는, 앞선",
+              "examples": [],
+              "originalMeaning": "(시간·순서·중요도 등의) 이전의, 앞의; 선행하는, 앞선"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 전례를 제시하다, 전례에 의해 지지[변호]하다",
+              "examples": [],
+              "originalMeaning": "…의 전례를 제시하다, 전례에 의해 지지[변호]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cc2464181c71447783a615ed821a89a9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cc2464181c71447783a615ed821a89a9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e73f2ff33646668bd56b44aeaaef8b31",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여태 그런 예가 없다",
+      "text": "There is no <b>precedent</b>[parallel] for this. or This case is unprecedented. or There has never been a case like this (before)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 처신은 선례를 어기는 것이다",
+      "text": "What he has done is against all precedents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공전의 일이다",
+      "text": "It has no <b>precedent</b> in history."
+    }
+  ],
+  "isWordType": true
+}

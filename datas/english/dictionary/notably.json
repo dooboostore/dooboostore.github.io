@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "<b>notably</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│noʊtəbli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "현저하게, 두드러지게; 명백히, 뚜렷하게",
+              "examples": [
+                {
+                  "text": "The situation has <b>notably</b> improved.",
+                  "translatedText": "사태는 현저하게 호전되었다."
+                }
+              ],
+              "originalMeaning": "현저하게, 두드러지게; 명백히, 뚜렷하게"
+            },
+            {
+              "meaning": "특히, 그 중에서도",
+              "examples": [
+                {
+                  "text": "Some early doctors, <b>notably</b> Hippocrates, thought that diet was important.",
+                  "translatedText": "고대의 의사들의 일부, 특히 히포크라테스는 음식 섭생이 중요하다고 생각했다."
+                }
+              ],
+              "originalMeaning": "특히, 그 중에서도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/853bd01b07df459ab75b6ecf1e357e2f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/853bd01b07df459ab75b6ecf1e357e2f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "91f564651d079e5211a8a473ab10dcc3",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>notable</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│noʊtəbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "주목할 만한, 뛰어난, 두드러진; 유명한; 중요한",
+              "examples": [
+                {
+                  "text": "a <b>notable</b> achievement",
+                  "translatedText": "뛰어난 업적"
+                }
+              ],
+              "originalMeaning": "주목할 만한, 뛰어난, 두드러진; 유명한; 중요한"
+            },
+            {
+              "meaning": "지각(知覺)할 수 있는",
+              "examples": [],
+              "originalMeaning": "지각(知覺)할 수 있는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 명사, 명망가(名望家); 유명한 것[일]; [역사] (비상시 프랑스 의회의) 명사 의원",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 명사, 명망가(名望家); 유명한 것[일]; [역사] (비상시 프랑스 의회의) 명사 의원"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d1b3c794b33c4a4da225e67511878d82",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d1b3c794b33c4a4da225e67511878d82",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "978312107d5657c6c3b4b17e69b0e402",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 야구계에서는 잊을 수 없는 존재이다",
+      "text": "He is a <b>notable</b> figure in baseball circles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고대의 의사들의 일부, 특히 히포크라테스는 음식 섭생이 중요하다고 생각했다.",
+      "text": "Some early doctors, <b>notably</b> Hippocrates, thought that diet was important."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사태는 현저하게 호전되었다.",
+      "text": "The situation has <b>notably</b> improved."
+    }
+  ],
+  "isWordType": true
+}

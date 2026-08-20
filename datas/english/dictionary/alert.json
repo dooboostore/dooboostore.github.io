@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "alert",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈlɜːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "방심하지 않는, 경계하는, 조심하는(watchful)",
+              "examples": [
+                {
+                  "text": "( <b>alert</b> +to do) The soldiers were <b>alert</b> to capture a spy.",
+                  "translatedText": "병사들은 간첩을 생포하려고 감시하고 있었다."
+                }
+              ],
+              "originalMeaning": "방심하지 않는, 경계하는, 조심하는(watchful)"
+            },
+            {
+              "meaning": "기민한, 재빠른, 민활한",
+              "examples": [
+                {
+                  "text": "He was very <b>alert</b> in answering.",
+                  "translatedText": "그는 재빨리 대답했다."
+                }
+              ],
+              "originalMeaning": "기민한, 재빠른, 민활한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(공습·폭풍우에 대한) 경보, 경계, 경계 태세[상태], 경계 경보 기간, [컴퓨터] 경고",
+              "examples": [
+                {
+                  "text": "raise a terrorist <b>alert</b>",
+                  "translatedText": "테러리스트 경보를 발령하다"
+                }
+              ],
+              "originalMeaning": "(공습·폭풍우에 대한) 경보, 경계, 경계 태세[상태], 경계 경보 기간, [컴퓨터] 경고"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경고하다, 주의하다, 경계시키다",
+              "examples": [],
+              "originalMeaning": "경고하다, 주의하다, 경계시키다"
+            },
+            {
+              "meaning": "…에 경보를 발하다",
+              "examples": [],
+              "originalMeaning": "…에 경보를 발하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/71153b9575c6499d9a8b14eef6ed22b9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/71153b9575c6499d9a8b14eef6ed22b9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "alerts"
+        },
+        {
+          "type": "과거형",
+          "value": "alerted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "alerting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "alerted"
+        }
+      ],
+      "aliasConjugation": "alerts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "08d4f0fc7cf1b4e12ed3bf68cacb559a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "병사들은 간첩을 생포하려고 감시하고 있었다.",
+      "text": "The soldiers were <b>alert</b> to capture a spy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전군에 특별 경계 태세를 취할 것을 명령했다",
+      "text": "He ordered the armed forces to be put on special <b>alert</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 재빨리 대답했다.",
+      "text": "He was very <b>alert</b> in answering."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사기꾼을 조심하시오",
+      "text": "Be <b>alert</b> to con artists. or Beware of con artists."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소매치기 조심",
+      "text": "Beware of pickpockets. or Beware of purse-snatchers. or Be <b>alert</b> for purse-snatchers."
+    }
+  ],
+  "isWordType": true
+}

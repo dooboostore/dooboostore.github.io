@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "fetch",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fetʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(가서) 가지고[데리고, 불러] 오다 (=bring)",
+              "examples": [
+                {
+                  "text": "<b>Fetch</b> a doctor at once.",
+                  "translatedText": "어서 의사를 불러오게."
+                }
+              ],
+              "originalMeaning": "(가서) 가지고[데리고, 불러] 오다 (=<span class='related_word' lang='en' >bring</span>)"
+            },
+            {
+              "meaning": "<사람의> 의식을 회복시키다 ((to, around)); <사람을> 설득하다 ((around))",
+              "examples": [],
+              "originalMeaning": "<사람의> 의식을 회복시키다 ((to, around)); <사람을> 설득하다 ((around))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "가서 물건을 가지고 오다",
+              "examples": [],
+              "originalMeaning": "가서 물건을 가지고 오다"
+            },
+            {
+              "meaning": "<사냥개가> 잡은 것을 물어 오다",
+              "examples": [],
+              "originalMeaning": "<사냥개가> 잡은 것을 물어 오다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(가서) 가져옴, 데려옴",
+              "examples": [],
+              "originalMeaning": "(가서) 가져옴, 데려옴"
+            },
+            {
+              "meaning": "팔을 쭉 뻗기",
+              "examples": [],
+              "originalMeaning": "팔을 쭉 뻗기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ecde00b6eaf34cb187b825429f342d0c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ecde00b6eaf34cb187b825429f342d0c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fetches"
+        },
+        {
+          "type": "과거형",
+          "value": "fetched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fetching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fetched"
+        }
+      ],
+      "aliasConjugation": "fetches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ca22ea1f942b3327dadc1a7d27f359ee",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "fetch",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사람이 죽기 직전에 나타난다고 하는) 생령(生靈)",
+              "examples": [],
+              "originalMeaning": "(사람이 죽기 직전에 나타난다고 하는) 생령(生靈)"
+            },
+            {
+              "meaning": "아주 많이 닮은 것",
+              "examples": [],
+              "originalMeaning": "아주 많이 닮은 것"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9a063264f24a4a26a360e7bdd4a32d36",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9a063264f24a4a26a360e7bdd4a32d36",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "fetches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "473e247714e2aadfc49e4ee5d14a2b6b",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 강변은 통하지 않는다",
+      "text": "Such a farfetched argument won't work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 좋은 값에 팔릴 것이다.",
+      "text": "This will <b>fetch</b> you much."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 것은 팔아봐야 똥값이다",
+      "text": "That would <b>fetch</b> only a small price."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 갖다 줄게",
+      "text": "I'll <b>fetch</b> it for you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "곧 의사를 불러오게.",
+      "text": "<b>Fetch</b> a doctor at once."
+    }
+  ],
+  "isWordType": true
+}

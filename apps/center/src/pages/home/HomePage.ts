@@ -47,6 +47,15 @@ export default (w: Window) => {
       path: '/coordinate-simulation',
       color: '#9c27b0',
       badge: ''
+    },
+    {
+      id: 'buyback',
+      icon: '💼',
+      title: '자사주 매입 신청',
+      description: 'SK하이닉스, 삼성전자 자사주 매입신청 현황을 확인하세요.',
+      path: '/buyback',
+      color: '#1976d2',
+      badge: 'New'
     }
   ];
 

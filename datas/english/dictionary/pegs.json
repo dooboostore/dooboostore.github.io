@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "peg",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "peɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(나무나 금속의) 못, 나무못, 쐐기못; 걸이못; (천막용) 말뚝; (등산용 자일의) 하켄; (토지 경계선의) 말뚝; (나무통 등의) 마개",
+              "examples": [
+                {
+                  "text": "a hat <b>peg</b>",
+                  "translatedText": "모자걸이"
+                }
+              ],
+              "originalMeaning": "(나무나 금속의) 못, 나무못, 쐐기못; 걸이못; (천막용) 말뚝; (등산용 자일의) 하켄; (토지 경계선의) 말뚝; (나무통 등의) 마개"
+            },
+            {
+              "meaning": "의족, [익살] 다리,[pl.] 바지",
+              "examples": [],
+              "originalMeaning": "의족, [익살] 다리,[pl.] 바지"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 나무못[말뚝]을 박다; 나무못으로 죄다; 못[말뚝]으로 표를 하다 ((down, in, out, up)); 말뚝으로 표시[구획]하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>peg</b> a tent down securely",
+                  "translatedText": "텐트를 말뚝을 박아 단단하게 치다"
+                }
+              ],
+              "originalMeaning": "…에 나무못[말뚝]을 박다; 나무못으로 죄다; 못[말뚝]으로 표를 하다 ((down, in, out, up)); 말뚝으로 표시[구획]하다 ((out))"
+            },
+            {
+              "meaning": "<빨래를> 빨래 집게로 고정하다 ((out))",
+              "examples": [],
+              "originalMeaning": "<빨래를> 빨래 집게로 고정하다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "부지런히 움직이다, 서두르다 ((down, along)); 열심히 일하다 ((away, at))",
+              "examples": [
+                {
+                  "text": "<b>peg</b> away[along, on]",
+                  "translatedText": "열심히 일하다"
+                }
+              ],
+              "originalMeaning": "부지런히 움직이다, 서두르다 ((down, along)); 열심히 일하다 ((away, at))"
+            },
+            {
+              "meaning": "공을 던지다",
+              "examples": [],
+              "originalMeaning": "공을 던지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/57f62ac74c8742bb84e1cc24aefdfbb9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/57f62ac74c8742bb84e1cc24aefdfbb9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pegs"
+        },
+        {
+          "type": "과거형",
+          "value": "pegged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pegging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pegged"
+        }
+      ],
+      "aliasConjugation": "pegs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5ffa0d65381bb53d91e2a3b6e949b232",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Peg",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여자 이름 ((Margaret의 애칭))",
+              "examples": [],
+              "originalMeaning": "여자 이름 ((Margaret의 애칭))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/657c4c10937443eb885d9a5953a2d0b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/657c4c10937443eb885d9a5953a2d0b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "89b3a340041c4ff5f1f1561bc83914b3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "임금 인상은 5 퍼센트로 묶였다",
+      "text": "Pay increase was pegged at 5%."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 열심히 숙제를 하고 있다.",
+      "text": "He is pegging away at his homework."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 특집 기사는 폭동을 계기로 쓰여졌다.",
+      "text": "The feature story was pegged on the riots."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "홈으로 송구하기에는 늦었다.",
+      "text": "The <b>peg</b> to the plate was late."
+    }
+  ],
+  "isWordType": true
+}

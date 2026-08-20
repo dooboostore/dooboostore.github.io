@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>determine</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│tɜːrmɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "결심시키다 (→determined)",
+              "examples": [
+                {
+                  "text": "( <b>determine</b> +[목]+to do) This determined me to act at once.",
+                  "translatedText": "이로써 나는 즉시 행동하기로 결심했다."
+                }
+              ],
+              "originalMeaning": "결심시키다 (→<span class='related_word' lang='en' >determined</span>)"
+            },
+            {
+              "meaning": "결심하다, 결의하다 (=decide)",
+              "examples": [
+                {
+                  "text": "I determined to go. = I determined that I would go.",
+                  "translatedText": "나는 가기로 결심했다."
+                }
+              ],
+              "originalMeaning": "결심하다, 결의하다 (=<span class='related_word' lang='en' >decide</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결정하다, 결심하다 ((on))",
+              "examples": [
+                {
+                  "text": "They determined on their course of future.",
+                  "translatedText": "그들은 장래의 방침을 결정했다."
+                }
+              ],
+              "originalMeaning": "결정하다, 결심하다 ((on))"
+            },
+            {
+              "meaning": "<효력 등이> 끝나다(expire)",
+              "examples": [],
+              "originalMeaning": "<효력 등이> 끝나다(expire)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/78ee5ba391274fa9b84716c604b307ea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/78ee5ba391274fa9b84716c604b307ea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "determines"
+        },
+        {
+          "type": "과거형",
+          "value": "determined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "determining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "determined"
+        }
+      ],
+      "aliasConjugation": "determines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "876159975b42e74d9ae580026c3bc035",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정신 일도 하사 불성",
+      "text": "Nothing is impossible to a determined mind. or Where there is a will, there is a way."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 곧 가기로 정했다.",
+      "text": "We determined on going at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한번 결심하면 마지막까지 한다",
+      "text": "Once I am determined, I never give up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이로써 나는 즉시 행동하기로 결심했다.",
+      "text": "This determined me to act at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "최후의 5분 간이 중요하다",
+      "text": "The last five minutes determines the issue."
+    }
+  ],
+  "isWordType": true
+}

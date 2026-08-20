@@ -1,0 +1,3468 @@
+WEBVTT
+
+00:00:02.476 --> 00:00:07.474
+JHH - Computex Keynote - 6.1.26
+________________
+
+00:00:07.474 --> 00:00:10.560
+[INTRO VIDEO]
+This is how intelligence is
+
+00:00:10.560 --> 00:00:22.000
+made. A new kind of factory. Generator 
+of tokens. The building blocks of AI.
+
+00:00:24.800 --> 00:00:36.960
+Tokens open a new frontier, turning data 
+into knowledge, reason, action. They
+
+00:00:36.960 --> 00:00:51.040
+reveal patterns in complexity you could never 
+see. They guard our cities to keep us safe,
+
+00:00:57.200 --> 00:01:18.520
+and lift us high above them. Tokens help 
+robots learn from us, work alongside us —
+
+00:01:22.320 --> 00:01:45.680
+we go where they cannot. Closing the gap between 
+hurt and healing, so they’ll breathe easier. And
+
+00:01:45.680 --> 00:02:14.240
+the smallest hearts beat stronger. Tokens are 
+helping us break new frontiers never attempted,
+
+00:02:25.920 --> 00:02:43.600
+so we can reach our goal. To infinity… and 
+beyond… Together. Take the next great leap
+
+00:02:43.600 --> 00:03:09.120
+into a bright future for all mankind. And 
+here, in Taipei, is where it all begins.
+
+00:03:09.120 --> 00:03:14.800
+________________
+[JANINE]
+
+00:03:14.800 --> 00:03:18.160
+Welcome to the stage, NVIDIA founder and CEO,
+
+00:03:18.160 --> 00:03:29.431
+Jensen Huang.
+________________
+
+00:03:29.431 --> 00:03:31.200
+[JENSEN]
+Welcome to GTC,
+
+00:03:31.200 --> 00:03:42.160
+Taiwan. So great to see all of you. Very good to 
+be home. I brought my parents home. Where are my
+
+00:03:42.160 --> 00:03:55.680
+parents? Everybody give a round of applause 
+to my mom and dad. And a round of applause
+
+00:03:55.680 --> 00:04:07.200
+for our pre-game show superstars, ladies 
+and gentlemen. Look how adorable they are.
+
+00:04:08.480 --> 00:04:13.120
+The superstars of Taiwan.
+There are so many of you here today. We
+
+00:04:13.120 --> 00:04:23.280
+are broadcasting this right now to 70 other launch 
+parties across Taiwan. 70 different conferences
+
+00:04:23.280 --> 00:04:29.280
+are going at the same time. Everybody is watching 
+this live. We have so much to tell you, and I
+
+00:04:29.280 --> 00:04:36.880
+have so many partners to thank. It is incredible 
+how large our ecosystem in Taiwan has become.
+
+00:04:36.880 --> 00:04:42.560
+Most of the time, when people think about 
+ecosystem, they think about our software stack.
+
+00:04:42.560 --> 00:04:48.240
+They think about the developer ecosystem above 
+the computing systems that NVIDIA builds. But
+
+00:04:48.240 --> 00:04:56.080
+NVIDIA’s ecosystem spans all the way upstream 
+to all of our supply chain here in Taiwan,
+
+00:04:56.080 --> 00:05:03.520
+where it all begins, and downstream all the way 
+to data centers, and eventually to end users.
+
+00:05:03.520 --> 00:05:09.440
+Today we’re going to talk about almost all of 
+the ecosystem. There are so many people to thank.
+
+00:05:09.440 --> 00:05:32.720
+I love my ecosystem here. So many incredible 
+companies, some of my favorite ecosystem partners.
+
+00:05:53.440 --> 00:06:02.880
+Taiwan’s rich ecosystem — the world’s best 
+supply chain ecosystem. Unbelievable.
+
+00:06:02.880 --> 00:06:08.960
+Well, thank you all for being here. And 
+this year, our businesses together are
+
+00:06:08.960 --> 00:06:16.640
+growing incredibly. In fact, somebody told me 
+last night that the annual GDP of Taiwan is
+
+00:06:16.640 --> 00:06:30.960
+going to grow almost 10%. Unbelievable. Well, 
+we have a lot to talk about. Let’s get going.
+
+00:06:30.960 --> 00:06:36.960
+Two years ago, when I was here, I started to talk 
+to you about how AI has moved from generative AI,
+
+00:06:36.960 --> 00:06:43.040
+and other waves of AI that are coming. 
+The next wave of AI was agentic AI. And
+
+00:06:43.040 --> 00:06:49.600
+today we can say that agentic AI has 
+arrived, that useful AI has arrived.
+
+00:06:49.600 --> 00:06:54.000
+Now, what does this mean? This 
+is GitHub. This is, of course,
+
+00:06:54.000 --> 00:06:58.720
+one of the first applications 
+of agentic AI — software coding.
+
+00:06:58.720 --> 00:07:04.800
+One of the most valuable professions, an 
+incredibly large ecosystem — 30 million,
+
+00:07:04.800 --> 00:07:11.440
+40 million professional software developers, 
+probably another couple hundred million who are
+
+00:07:11.440 --> 00:07:17.840
+students and enthusiasts and so on and so forth. 
+But say 30, 40 million software developers in the
+
+00:07:17.840 --> 00:07:26.080
+world code for a living. And this represents 
+most of them. This is GitHub. The pull request
+
+00:07:26.080 --> 00:07:33.040
+is when they download software, they modify it, 
+and commit is when they push it back up. And so,
+
+00:07:33.040 --> 00:07:44.560
+if you could look at this — in 2023 the 
+number of commits was 300 million, in 2024,
+
+00:07:44.560 --> 00:07:59.840
+400 million, in 2025, 500 million commits. In the 
+first few months of 2026, it has nearly tripled.
+
+00:07:59.840 --> 00:08:09.440
+Now what does that mean? 30 million software 
+developers representing about $3 trillion worth
+
+00:08:09.440 --> 00:08:18.880
+of GDP — that is what they’re paid, $3 trillion 
+worth of salaries per year, which is generating
+
+00:08:18.880 --> 00:08:25.200
+economic growth for the rest of the industries. 
+Say $100 trillion of the world’s industries is
+
+00:08:25.200 --> 00:08:37.040
+impacted — generated by $3 trillion worth of 
+salary. That $3 trillion worth of salary is
+
+00:08:37.040 --> 00:08:48.960
+now producing nearly three times as much output. 
+It’s effectively $9 trillion of productivity from
+
+00:08:48.960 --> 00:08:56.160
+$3 trillion of salaries. Does that make any sense? 
+The difference is absolutely extraordinary. This
+
+00:08:56.160 --> 00:09:01.440
+is the potential. This is the promise of AI.
+The number of software engineers is actually
+
+00:09:01.440 --> 00:09:08.320
+increasing. People talk about AI reducing 
+jobs — complete nonsense. It’s causing more
+
+00:09:08.320 --> 00:09:11.760
+software engineers to be hired, and 
+the reason for that is very simple.
+
+00:09:12.320 --> 00:09:20.080
+If you can hire a software engineer and you can 
+generate $9 trillion worth of productive work,
+
+00:09:20.080 --> 00:09:27.920
+why wouldn’t you want to hire more software 
+engineers? If that line was flat, then obviously
+
+00:09:27.920 --> 00:09:32.640
+people will hire fewer software engineers. 
+But because the output is so incredible,
+
+00:09:32.640 --> 00:09:38.000
+people want to hire more software engineers. This 
+is going to show up in our economy very soon.
+
+00:09:38.000 --> 00:09:42.960
+And so, the first thing is: useful AI has arrived. 
+Now, what does that mean from the industry’s
+
+00:09:42.960 --> 00:09:51.920
+perspective? That means that tokens are now in 
+extraordinary demand. Because if you can do this,
+
+00:09:51.920 --> 00:09:57.920
+you’re going to want to produce more of it. And 
+because tokens are now profitable units — tokens
+
+00:09:57.920 --> 00:10:06.400
+are now profitable units of revenue. Because it is 
+now profitable, the AI companies want to build a
+
+00:10:06.400 --> 00:10:12.400
+lot more tokens, generate a lot more tokens, build 
+more AI factories, which is the reason why compute
+
+00:10:12.400 --> 00:10:20.560
+demand here in Taiwan has skyrocketed. It is 
+precisely the reason why all of you are so busy,
+
+00:10:20.560 --> 00:10:28.640
+and your businesses are doing so well. In fact, 
+that looks like some of your stock prices.
+
+00:10:34.160 --> 00:10:41.200
+The compute pattern has changed. Everything 
+has changed. So the first idea is that useful
+
+00:10:41.200 --> 00:10:50.480
+AI has arrived. AI is now a profit generator. 
+AI is now a GDP generator. Behind it is a whole
+
+00:10:50.480 --> 00:10:56.400
+new kind of computing pattern — not just a 
+large language model, but an agent. Today,
+
+00:10:56.400 --> 00:10:59.920
+almost everything we’re going to talk 
+about is going to be based on this.
+
+00:10:59.920 --> 00:11:08.160
+So let me take a quick moment and show you what 
+I’m talking about. This is an agent — an agent
+
+00:11:08.160 --> 00:11:15.920
+application. In the old days, this would 
+be an application — this would be code,
+
+00:11:15.920 --> 00:11:23.600
+and this would be an operating system. 
+Application, code running inside an application,
+
+00:11:23.600 --> 00:11:31.680
+inside an operating system. Today, it is an agent, 
+which consists of a large language model, or many,
+
+00:11:31.680 --> 00:11:39.920
+sitting inside a harness, and that harness 
+helps orchestrate it to do productive work.
+
+00:11:39.920 --> 00:11:47.760
+This is the input — when that input comes, 
+it has to understand, observe, reason, act,
+
+00:11:47.760 --> 00:11:56.000
+use tools. That tool could be a spreadsheet, a 
+web browser, a data processing engine, a database
+
+00:11:56.000 --> 00:12:05.440
+engine, for example. This is orchestrated — this 
+harness orchestrates this routing of information.
+
+00:12:05.440 --> 00:12:12.480
+Every single time it touches — either processing 
+the context, understanding what is happening,
+
+00:12:12.480 --> 00:12:22.560
+reasoning about what to do, coming up with a plan 
+that it acts on — that orchestration is managed by
+
+00:12:22.560 --> 00:12:30.560
+software. And so this is fundamentally an agent. 
+It deals with short-term memory — called working
+
+00:12:30.560 --> 00:12:36.560
+memory — and long-term memory, just like we 
+do. And so the memory management system is
+
+00:12:36.560 --> 00:12:45.440
+incredibly important. This entire system is called 
+an agent. The large language model is used to do
+
+00:12:45.440 --> 00:12:52.800
+the thinking, and the harness connects everything 
+together, just like an operating system.
+
+00:12:53.600 --> 00:12:58.880
+And so this is the new computing model. 
+This is what an agent can do — incredible
+
+00:12:58.880 --> 00:13:05.120
+things. This is the big breakthrough: 
+the simultaneous convergence of large
+
+00:13:05.120 --> 00:13:09.920
+language models that are now able to do 
+a really good job thinking, reasoning,
+
+00:13:09.920 --> 00:13:16.240
+planning, using tools, and the fact that we 
+now have these harnesses that manage memory,
+
+00:13:16.240 --> 00:13:22.080
+manage orchestration, use tools. We can now do 
+amazing things. Let me give you some examples.
+
+00:13:22.720 --> 00:13:41.120
+This is a prompt. This is the code that is 
+generated, and this comes out. You guys — what
+
+00:13:41.120 --> 00:13:50.400
+do you think? Pretty amazing, right? Look, we use 
+Claude Code here, but Codex does an incredible
+
+00:13:50.400 --> 00:13:57.040
+job as well. Here’s another example. This is the 
+input: “Create a GIF — NVIDIA green dots on black,
+
+00:13:57.040 --> 00:14:08.720
+scatter, form Taiwan 101 building, NVLink GTC 
+Taipei 2026, morph to NVIDIA logo, then scatter,
+
+00:14:08.720 --> 00:14:14.640
+repeat.” Right? So you saw that — that was the 
+prompt. Here is the next one: “I lost my remote
+
+00:14:14.640 --> 00:14:21.920
+control battery clip. It looks like this. Create 
+a CAD file.” It uses a tool, creates a CAD file,
+
+00:14:21.920 --> 00:14:30.320
+ready for 3D printing to create a new one. Makes 
+sense? This is now the new computing pattern.
+
+00:14:30.320 --> 00:14:39.920
+Whereas we used to launch an application, click 
+and type, we now replace that with explaining
+
+00:14:39.920 --> 00:14:47.440
+to the AI what we want — our intent — and 
+the AI generates the code, or uses tools,
+
+00:14:47.440 --> 00:14:54.640
+and produces the necessary output. This is 
+how computers are going to work in the future.
+
+00:14:54.640 --> 00:15:01.200
+This is agentic AI. For two years we’ve been 
+building towards this, and now it has arrived.
+
+00:15:01.200 --> 00:15:07.840
+Now, one of the big breakthroughs of course is 
+tool use. A lot of people have said, “Jensen,
+
+00:15:08.720 --> 00:15:12.080
+agentic AI is coming, therefore all of the 
+software companies are going to go out of
+
+00:15:12.080 --> 00:15:19.280
+business.” I said: it’s exactly the opposite. 
+Because there are going to be so many agents,
+
+00:15:19.280 --> 00:15:25.520
+the world is no longer limited by the number 
+of people. Therefore, those agents are going
+
+00:15:25.520 --> 00:15:32.320
+to use more tools than ever. This is actually 
+an incredible time to be a software company.
+
+00:15:32.320 --> 00:15:38.960
+But the software has to be presented to the 
+agent in a way that the agent can use it.
+
+00:15:38.960 --> 00:15:46.480
+This is a big breakthrough, and in fact, what 
+we have done — what NVIDIA’s treasure is — is
+
+00:15:46.480 --> 00:15:53.280
+all of our CUDA libraries. I call them CUDA-X 
+libraries. This is NVIDIA’s treasure. Today,
+
+00:15:53.280 --> 00:16:02.080
+we are able to now present these CUDA-X libraries 
+to agents who can use them much more effectively
+
+00:16:02.080 --> 00:16:11.440
+than even humans. And so, this is a wonderful 
+time for CUDA-X libraries. Just take a look. 20
+
+00:16:11.440 --> 00:16:19.280
+years ago we built CUDA, a single architecture for 
+accelerated computing. We reinvented computing.
+
+00:16:19.280 --> 00:16:24.880
+A thousand CUDA-X libraries help developers 
+make breakthroughs in every field of science
+
+00:16:24.880 --> 00:16:34.880
+and engineering. CUDA-X libraries are tools for 
+agents. cuLitho for computational lithography.
+
+00:16:34.880 --> 00:16:45.920
+cuOpt for decision optimization. cuDSS for direct 
+sparse solvers. AI-Q for deep research across
+
+00:16:45.920 --> 00:16:57.600
+structured and unstructured documents. Aerial for 
+AI RAN. PhysicsNeMo for differentiable physics.
+
+00:16:57.600 --> 00:17:15.200
+Parabricks for genomics. At their foundation 
+are algorithms, and they are beautiful.
+
+00:19:58.320 --> 00:20:11.760
+A round of applause for math — math is beautiful.
+The computing pattern of software is going to
+
+00:20:11.760 --> 00:20:22.080
+change. In fact, let’s come back to this. This 
+is the agent — the ultimate disaggregated and
+
+00:20:22.080 --> 00:20:29.360
+distributed computing model. So many different 
+computers are going to be activated in order to
+
+00:20:29.360 --> 00:20:43.520
+process this agent. The agent consists of model, 
+harness, tools, and skills, and a runtime. All
+
+00:20:43.520 --> 00:20:52.240
+of that is running at different places in a data 
+center. You can think of the model as the brain,
+
+00:20:52.240 --> 00:21:01.280
+the harness as the body, and the tools that 
+it uses, working in a runtime — think of it
+
+00:21:01.280 --> 00:21:08.800
+as a workshop. So this is a person, a worker, 
+working with tools in a workshop. Of course,
+
+00:21:08.800 --> 00:21:14.720
+this is being done at extraordinarily large 
+scales. And each one of those steps is running
+
+00:21:14.720 --> 00:21:19.920
+in a different part of the computer.
+You can see the large language model is
+
+00:21:19.920 --> 00:21:27.760
+thinking — context processing, observing, 
+understanding the environment, reasoning,
+
+00:21:27.760 --> 00:21:34.320
+coming up with a plan, and acting on the plan. 
+Every single time that happens, an entire rack
+
+00:21:34.320 --> 00:21:41.840
+of Grace Blackwell NVLink 72 is activated. 
+It’s thinking with a large language model.
+
+00:21:41.840 --> 00:21:50.640
+Whenever it uses a tool, a CPU is used. That tool 
+could be a C compiler. It could be Python. It
+
+00:21:50.640 --> 00:21:58.560
+could be JavaScript. Or it could be accelerated 
+computing. Today’s agents are relatively simple
+
+00:21:58.560 --> 00:22:03.680
+users of tools. Tomorrow, they’re going 
+to be very sophisticated users of tools,
+
+00:22:03.680 --> 00:22:08.160
+which is the reason why the CUDA-X libraries 
+that I showed you are going to be incredibly
+
+00:22:08.160 --> 00:22:14.000
+popular with agents. They solve some of the most 
+important problems the world knows. And all of
+
+00:22:14.000 --> 00:22:23.120
+our CUDA-X libraries are now going to come with 
+skills that the AI could learn how to use. So the
+
+00:22:23.120 --> 00:22:29.360
+CUDA-X library comes with skills — basically 
+a manual — the AI reads it and goes, “Aha,
+
+00:22:29.360 --> 00:22:36.880
+that’s how you use it.” The ability to use these 
+libraries by agents is going to be incredible.
+
+00:22:36.880 --> 00:22:44.080
+And so, the tools run on CPUs and GPUs and 
+large language models. The security harness
+
+00:22:44.080 --> 00:22:52.560
+runs on CPUs and a security processor called the 
+DPU — NVIDIA’s BlueField. The orchestration of all
+
+00:22:52.560 --> 00:23:00.240
+this runs on a CPU. This is the entire harness — 
+the CPUs orchestrating all of the work. One of the
+
+00:23:00.240 --> 00:23:06.800
+hardest parts is memory. You can just imagine: the 
+working memory — called KV caching — is about what
+
+00:23:06.800 --> 00:23:13.840
+to remember. Compression, not just compression, 
+but how to retrieve. Do you retrieve structured
+
+00:23:13.840 --> 00:23:20.320
+data? Do you retrieve unstructured data? What is 
+the ontology, the relationship of all of these
+
+00:23:20.320 --> 00:23:26.560
+different data structures to itself? That entire 
+processing is incredibly complicated. The memory
+
+00:23:26.560 --> 00:23:34.640
+system of AI is going to cause the storage 
+system to be completely revolutionized.
+
+00:23:34.640 --> 00:23:42.000
+As you can see, every aspect of this 
+computing model — this computing pattern,
+
+00:23:42.000 --> 00:23:46.880
+this new application called an agent — is 
+fundamentally different than the way that
+
+00:23:46.880 --> 00:23:52.240
+applications used to run: a whole bunch of 
+software sitting inside a binary, sitting
+
+00:23:52.240 --> 00:24:00.480
+inside an operating system. This is the reason 
+— this disaggregated, this distributed, this
+
+00:24:00.480 --> 00:24:10.000
+heterogeneous computing problem — is precisely the 
+reason we built our next generation: Vera Rubin.
+
+00:24:10.000 --> 00:24:17.520
+Vera Rubin is not one chip. Vera Rubin 
+is not a GPU only. It starts with a GPU,
+
+00:24:17.520 --> 00:24:28.720
+but Vera Rubin is incredible. This entire 
+thing is Vera Rubin. From end to end, it has
+
+00:24:28.720 --> 00:24:36.800
+GPUs — Vera Rubin NVL72. It is orchestrated by 
+Vera CPUs that I’m going to tell you more about.
+
+00:24:36.800 --> 00:24:45.360
+The storage systems — revolutionary. Vera, along 
+with ConnectX-9, our software stack called DOCA,
+
+00:24:45.360 --> 00:24:51.360
+the security processor that’s inside so 
+that everything is encrypted at rest,
+
+00:24:52.400 --> 00:25:00.160
+in motion, as well as in use. Everything 
+across this is secure because the AI model
+
+00:25:00.160 --> 00:25:07.600
+is so precious. This is the reason why this 
+entire system observes confidential computing.
+
+00:25:07.600 --> 00:25:14.560
+Each one of these systems would be a complete 
+revolution in itself. Vera Rubin is the most
+
+00:25:14.560 --> 00:25:21.760
+ambitious endeavor in the history of our company. 
+The whole company worked on Vera Rubin — across
+
+00:25:21.760 --> 00:25:29.280
+all 40,000 engineers, not to mention all of you. 
+All of you participated in the creation of this
+
+00:25:29.280 --> 00:25:36.720
+entire system. Vera Rubin is really a miracle, 
+and it’s not just one chip — it is so many.
+
+00:25:36.720 --> 00:25:43.760
+Well, it’s even beyond that. A long time ago, 
+NVIDIA used to be a GPU company. But over the
+
+00:25:43.760 --> 00:25:50.152
+years we’ve evolved to become a systems company. 
+You’re looking here now at the most complex
+
+00:25:50.152 --> 00:25:59.280
+system, the most complex ground-up system ever 
+designed. But ultimately, our customers and our
+
+00:25:59.280 --> 00:26:06.720
+partners don’t want to buy computers. They want 
+to build AI factories, which is the reason why
+
+00:26:06.720 --> 00:26:13.760
+NVIDIA has really started to transform ourselves 
+yet again. You can see so much of our technology
+
+00:26:13.760 --> 00:26:20.960
+is now at the entire infrastructure scale. Our 
+partners are at infrastructure scale — power
+
+00:26:20.960 --> 00:26:29.200
+generators, cooling systems, the grid providers. 
+So many industrial companies are now part of our
+
+00:26:29.200 --> 00:26:35.760
+ecosystem, because ultimately we’re trying to 
+build an entire stack — just like GPUs, just
+
+00:26:35.760 --> 00:26:43.040
+like when we were building Grace Blackwell NVLink 
+72, just like now, we are building a full-stack
+
+00:26:43.040 --> 00:26:49.680
+system so that our customers could build 
+amazing AI infrastructure. Let’s take a look.
+
+00:26:49.680 --> 00:26:52.080
+________________
+[VIDEO NARRATION]
+
+00:26:52.080 --> 00:26:56.800
+The world is racing to build AI factories 
+— the largest infrastructure buildout in
+
+00:26:56.800 --> 00:27:04.320
+human history. AI factories are incredibly 
+complex. Every layer — chip, rack, network,
+
+00:27:04.320 --> 00:27:13.680
+power, cooling, grid — must be designed together 
+from end to end, because compute is revenue.
+
+00:27:13.680 --> 00:27:20.000
+NVIDIA DSX is the blueprint: a reference design 
+for building and operating AI factories at
+
+00:27:20.000 --> 00:27:27.600
+maximum efficiency and profitability.
+It starts with DSX Sim — the Omniverse
+
+00:27:27.600 --> 00:27:32.640
+blueprint. Partners design and validate an 
+NVIDIA Vera Rubin AI factory before a single
+
+00:27:32.640 --> 00:27:44.800
+rack is ordered. They plan the layout, simulate 
+the power and cooling, design the network,
+
+00:27:44.800 --> 00:27:52.560
+validate every integration, test every change 
+in the digital twin. The factory powers on.
+
+00:27:52.560 --> 00:27:59.520
+DSX OS takes over — it provisions, operates, 
+monitors, and remediates the infrastructure,
+
+00:27:59.520 --> 00:28:08.320
+turning the installed systems into trusted, 
+multi-tenant, resilient, AI-ready capacity.
+
+00:28:08.320 --> 00:28:15.040
+Today’s AI factories overprovision power 
+by up to 40%. DSX MaxLPS lets operators
+
+00:28:15.040 --> 00:28:21.760
+safely deploy more GPUs inside the same power 
+budget, adding billions in annual revenue.
+
+00:28:24.720 --> 00:28:28.960
+Breakthrough hot liquid cooling 
+at 45 degrees Celsius uses less
+
+00:28:28.960 --> 00:28:36.240
+water and energy — more power going to 
+revenue-generating compute. Incredible.
+
+00:28:36.240 --> 00:28:41.600
+Dynamic power allocation steers power from 
+rack to rack, recovering stranded watts,
+
+00:28:41.600 --> 00:28:48.480
+sending them where work is happening. In-rack 
+power smoothing flattens peak current spikes
+
+00:28:48.480 --> 00:28:57.920
+and power surges. Throughout the factory, 
+teams of AI agents work with DSX MaxLPS,
+
+00:28:57.920 --> 00:29:03.520
+continuously coordinating to balance 
+cooling and power to meet workload demand.
+
+00:29:03.520 --> 00:29:10.160
+DSX AI factories are flexible energy assets 
+that operate cooperatively with the grid. DSX
+
+00:29:10.160 --> 00:29:20.160
+Flex reads real-time grid signals and dynamically 
+adjusts back to power when the grid needs relief.
+
+00:29:20.160 --> 00:29:26.480
+100 gigawatts of AI factories will come online 
+before the end of the decade. NVIDIA DSX AI
+
+00:29:26.480 --> 00:29:36.960
+factories run at highest efficiency, produce the 
+lowest-cost tokens, and make the grid stronger.
+
+00:29:36.960 --> 00:29:41.680
+________________
+[JENSEN]
+
+00:29:41.680 --> 00:29:48.800
+I’ve shown you ecosystem slides of the past, 
+where NVIDIA’s computing layers and software
+
+00:29:50.320 --> 00:29:55.680
+stacks are integrated into other people’s 
+platforms — third-party platforms and libraries
+
+00:29:55.680 --> 00:30:03.520
+that serve end markets. That was a computing 
+ecosystem. This is an AI factory ecosystem.
+
+00:30:03.520 --> 00:30:11.360
+This is way downstream of all of you. Upstream 
+of me is all of you, and downstream of us is this
+
+00:30:11.360 --> 00:30:19.280
+ecosystem. Because NVIDIA, ultimately, is not just 
+building a GPU, not just building a system — we’re
+
+00:30:19.280 --> 00:30:26.320
+helping customers build these AI factories, this 
+AI infrastructure, that is so immensely complex.
+
+00:30:26.320 --> 00:30:34.960
+Each one of these, at one gigawatt level, 
+started at $20, $30 billion. It is at $50,
+
+00:30:34.960 --> 00:30:45.040
+$60 billion, and soon it will be $80, $100 
+billion per gigawatt. $100 billion into an
+
+00:30:45.040 --> 00:30:52.000
+AI factory. It must work the first time, and 
+it must work right away. The cost of capital
+
+00:30:52.000 --> 00:30:58.720
+is incredible. The complexity is incredible.
+So as you see, we used to design a chip inside
+
+00:30:58.720 --> 00:31:08.960
+a computer. And then we simulated a system inside 
+a computer. Today, you saw just now — everything
+
+00:31:08.960 --> 00:31:14.960
+was built in Omniverse. I’ve been working with 
+Omniverse with all of you for a long time.
+
+00:31:14.960 --> 00:31:21.280
+This was the dream come true, so that we can 
+build these gigantic systems — as large as the
+
+00:31:21.280 --> 00:31:26.320
+world wants to build — inside a digital 
+framework, inside a digital simulator,
+
+00:31:26.320 --> 00:31:33.920
+in a digital world, long before we 
+break ground and put our money to work.
+
+00:31:33.920 --> 00:31:42.320
+So this is our ecosystem. We call it DSX. 
+RTX is for our GPU, DGX is for our systems,
+
+00:31:42.320 --> 00:31:47.920
+and now DSX — basically infrastructure.
+Because of the work that we do here,
+
+00:31:47.920 --> 00:31:52.800
+across this entire stack including our systems 
+and software, it’s the reason why we can work
+
+00:31:52.800 --> 00:31:59.520
+with small companies and enable them to be 
+world-class AI clouds. Every one of these
+
+00:31:59.520 --> 00:32:06.080
+I’m about to show you are small companies — just 
+recently. And now CoreWeave is worth $50, $60,
+
+00:32:06.080 --> 00:32:12.240
+$70 billion, and growing incredibly fast. 
+Recently we worked with Nebius — and again,
+
+00:32:12.240 --> 00:32:19.120
+they’re growing incredibly fast. Each one of 
+these clouds has incredible customers: Cursor,
+
+00:32:19.120 --> 00:32:26.160
+the software coding company; Black Forest Labs, 
+image generation; World Labs, world foundation
+
+00:32:26.160 --> 00:32:34.720
+models; Revolut, the leading financial services AI 
+company; and Shopify. Here’s another one — Nscale,
+
+00:32:34.720 --> 00:32:42.800
+and their customers are British Telecom, Google 
+— Google is using one of our AI clouds. Thinking
+
+00:32:42.800 --> 00:32:50.960
+Machines, a frontier labs company, very exciting. 
+Here’s NAVER Cloud in Korea — Bank of Korea,
+
+00:32:50.960 --> 00:33:00.560
+Hyundai, so many incredible companies. Here’s one 
+in India — Yotta. Incredible companies. Here’s one
+
+00:33:00.560 --> 00:33:07.920
+based in Singapore, building in Australia 
+— Together AI, AI Singapore. And here’s one
+
+00:33:07.920 --> 00:33:16.960
+in Indonesia. Each one of these companies are 
+serving regional as well as global customers.
+
+00:33:16.960 --> 00:33:24.480
+AI is going to run everywhere. Every company 
+will be powered by it, every region will
+
+00:33:24.480 --> 00:33:37.440
+build it. Indosat, you’re in Indonesia — 
+here in Taiwan, GMI. It’s okay to clap.
+
+00:33:42.400 --> 00:33:48.560
+Incredible, incredible companies, incredible 
+opportunity, but all of them need several
+
+00:33:48.560 --> 00:33:54.000
+things. Of course, they need the computing stack 
+— this entire stack underneath. This is what made
+
+00:33:54.000 --> 00:34:00.880
+NVIDIA famous. All of our hardware and software 
+and libraries, our connection into the world’s
+
+00:34:00.880 --> 00:34:08.320
+ecosystem of third-party developers, makes it 
+possible for anyone to stand up an AI cloud.
+
+00:34:08.320 --> 00:34:15.440
+However, the AI cloud is so complex now. This 
+is the software version, the computer science
+
+00:34:15.440 --> 00:34:24.560
+version. The money version, the asset version, is 
+what I showed you earlier — it’s a giant factory.
+
+00:34:24.560 --> 00:34:30.400
+Having this ability alone is not enough, 
+which is the reason why NVIDIA has become
+
+00:34:30.400 --> 00:34:40.000
+an AI infrastructure company. Doing this well 
+— becoming incredibly good at helping customers
+
+00:34:40.000 --> 00:34:45.520
+build AI factories and deploying AI factories — is 
+incredibly important, and the reason for that is
+
+00:34:45.520 --> 00:34:55.600
+this: compute is revenue now. Compute is profit. 
+The absence of revenue and profit is loss.
+
+00:34:55.600 --> 00:35:08.080
+And so it’s really important to realize — this is 
+an example of AI infrastructure coming online. It
+
+00:35:08.080 --> 00:35:13.600
+could be coming online quickly, it could take 
+a while. Its throughput could be high, it could
+
+00:35:13.600 --> 00:35:21.120
+be low. Its resilience, or reliability, could be 
+good or bad. And its lifetime of usefulness could
+
+00:35:21.120 --> 00:35:33.280
+be long or short. Because this represents $50, 
+$60 — going to $100 billion — this curve matters
+
+00:35:33.280 --> 00:35:40.400
+greatly, which is the reason why NVIDIA is such 
+a great partner. Working with us, because of our
+
+00:35:40.400 --> 00:35:47.360
+fully integrated capability — we didn’t just come 
+up with a PowerPoint slide. We created the entire
+
+00:35:47.360 --> 00:35:53.600
+infrastructure. We connected everything together. 
+We built out billions and billions of it ourselves
+
+00:35:53.600 --> 00:36:04.320
+to make sure that everything works well.
+As a result, our time to first token,
+
+00:36:04.320 --> 00:36:13.760
+our time to first inference, our time to 
+training turned on is much faster. Second,
+
+00:36:13.760 --> 00:36:23.520
+because our throughput per watt — tokens per 
+watt — is utterly world class. And the reason
+
+00:36:23.520 --> 00:36:27.200
+for that is because we integrate everything, 
+we design everything from the ground up,
+
+00:36:27.200 --> 00:36:32.720
+we simulate the entire system, and we use extreme 
+co-design. Just like I showed you just now with
+
+00:36:32.720 --> 00:36:39.360
+the Vera Rubin rack — everything was designed in 
+order to deliver on this incredible throughput.
+
+00:36:40.080 --> 00:36:52.160
+If your data center, if your factory, has one 
+gigawatt, it will not have more — that’s all
+
+00:36:52.160 --> 00:37:00.720
+the power generation you could have. If you have 
+one gigawatt of power, then throughput per watt is
+
+00:37:00.720 --> 00:37:10.640
+revenue. Because every token is profitable. Every 
+token is revenue. This is the future. Compute is
+
+00:37:10.640 --> 00:37:17.520
+revenue. Performance per watt is your revenue. 
+Choosing the wrong architecture just because
+
+00:37:17.520 --> 00:37:25.840
+the chips are cheaper doesn’t translate. Doesn’t 
+make sense. You need to make sure of your revenue
+
+00:37:25.840 --> 00:37:40.240
+per watt. The more you buy, the more you make.
+And then third is reliability. If you ever get a
+
+00:37:40.240 --> 00:37:43.520
+chance to see these data centers, 
+there are so many moving parts,
+
+00:37:43.520 --> 00:37:52.400
+millions of cables. The ability for all of 
+those computers to work harmoniously, reliably,
+
+00:37:52.400 --> 00:38:00.480
+is extremely hard. We have now been operating 
+at very large scale for a very long time. That
+
+00:38:00.480 --> 00:38:07.760
+experience matters. That difference — mean time 
+between interrupts — is extremely important.
+
+00:38:07.760 --> 00:38:17.280
+And then lastly, this is very hard: the 
+lifetime of these systems. The software is
+
+00:38:17.280 --> 00:38:26.400
+changing all the time. Four years ago — the 
+time of Hopper — AI had completely changed.
+
+00:38:26.400 --> 00:38:34.320
+Six years ago — the timeframe of Ampere — AI 
+had completely changed. We started out talking
+
+00:38:34.320 --> 00:38:41.440
+about CNNs. Then we talked about Transformers. 
+Then we talked about mixture of experts. Now
+
+00:38:41.440 --> 00:38:49.840
+we’re talking about agentic systems. Every single 
+generation, every single few months, the software
+
+00:38:49.840 --> 00:38:58.080
+industry is coming up with new technology. If your 
+architecture is not flexible, if your ecosystem is
+
+00:38:58.080 --> 00:39:06.960
+not rich, then this curve cannot be long. You 
+cannot predict how long your system can last.
+
+00:39:06.960 --> 00:39:14.560
+I can. NVIDIA systems are all over the world. 
+Software developers start with NVIDIA CUDA.
+
+00:39:14.560 --> 00:39:21.920
+And by definition, therefore, the life — the 
+ecosystem, the useful asset — is going to be
+
+00:39:21.920 --> 00:39:28.000
+much longer. The difference is essentially cost. 
+You could think of it as revenue, but the other
+
+00:39:28.000 --> 00:39:37.360
+side of revenue is cost. If the life of the asset 
+is long, the TCO is low. This is the difference.
+
+00:39:37.360 --> 00:39:44.800
+This is what it looks like 
+when compute works this way —
+
+00:39:44.800 --> 00:39:59.200
+the more you buy, the more you make. Now, all 
+of you are experiencing this with me, isn’t
+
+00:39:59.200 --> 00:40:06.800
+that right? All of your demand, your factories 
+are working so hard, your people are working so
+
+00:40:06.800 --> 00:40:16.160
+hard all across Taiwan, because everybody wants 
+to make money. They realize that useful AI is
+
+00:40:16.160 --> 00:40:26.160
+here. Profitable AI is here. Compute demand 
+is incredibly high, and compute demand is the
+
+00:40:26.160 --> 00:40:32.240
+constraint. And so, let’s all work super, super 
+hard and help the world stand up AI factories
+
+00:40:32.240 --> 00:40:38.320
+everywhere. This is why it’s so important.
+I am so happy. Here I am, standing in front of
+
+00:40:38.320 --> 00:40:50.400
+you — Vera Rubin is in full production. 
+Vera Rubin is in full production.
+
+00:40:52.560 --> 00:41:02.480
+The supply chain we created for Vera Rubin 
+is twice as large as Grace Blackwell. It’s
+
+00:41:02.480 --> 00:41:11.200
+incredible. And what used to take two hours to 
+assemble one Grace Blackwell rack now only takes
+
+00:41:11.200 --> 00:41:17.440
+five minutes. So not only is the capacity 
+higher, the throughput is a lot faster,
+
+00:41:17.440 --> 00:41:25.520
+and we need it all to support the demand. 
+This ecosystem is extraordinary. Millions
+
+00:41:25.520 --> 00:41:31.920
+of square feet has been put online to support 
+Grace Blackwell and preparing now — ramping
+
+00:41:31.920 --> 00:41:39.520
+up now — Vera Rubin. I want to thank all of you. 
+Vera Rubin is now in full production. Thank you.
+
+00:41:41.680 --> 00:41:45.982
+Let’s take a look.
+________________
+
+00:41:45.982 --> 00:41:47.200
+[VIDEO NARRATION]
+Large language models
+
+00:41:47.200 --> 00:41:55.680
+generate answers. Now, AI agents can do work. But 
+processing agentic AI is a whole different kind
+
+00:41:55.680 --> 00:42:02.400
+of problem. Agents observe, reason, plan, 
+use tools. They manage massive context,
+
+00:42:02.400 --> 00:42:08.640
+juggling working memory and long-term memory. 
+They spin up subagents — specialists on demand.
+
+00:42:08.640 --> 00:42:14.720
+NVIDIA Vera Rubin is a multi-rack, pod-scale 
+system built to process agentic AI,
+
+00:42:14.720 --> 00:42:18.720
+and is now in full production.
+The manufacturing, automation,
+
+00:42:18.720 --> 00:42:24.240
+and orchestration across the supply chain — a 
+miracle to witness. Our journey started when
+
+00:42:24.240 --> 00:42:31.120
+we launched the first AI supercomputer, NVIDIA 
+DGX-1. Over the next decade, we pushed every
+
+00:42:31.120 --> 00:42:36.960
+chip and system to the limit — from Pascal 
+and the first Ampere, to Grace Blackwell,
+
+00:42:36.960 --> 00:42:43.600
+the first rack-scale AI supercomputer. And now, 
+Vera Rubin — the first multi-rack, pod-scale
+
+00:42:43.600 --> 00:42:49.840
+supercomputer built for the agentic age.
+It starts at TSMC. The seven new chips
+
+00:42:49.840 --> 00:42:54.240
+that make up Vera Rubin take shape 
+through hundreds of processing steps.
+
+00:42:54.240 --> 00:43:03.280
+Three-nanometer process. CoWoS advanced packaging. 
+HBM4 memory from Micron, SK Hynix, and Samsung.
+
+00:43:03.280 --> 00:43:10.880
+The Vera Rubin GPU — six trillion transistors 
+with over 18,000 components on one board.
+
+00:43:10.880 --> 00:43:18.000
+Vera Rubin NVL72 does the thinking — prompt and 
+context understanding, reasoning, and planning.
+
+00:43:18.000 --> 00:43:26.560
+Next, a new modular compute tray — streamlined 
+with a new PCB midplane. ConnectX-9,
+
+00:43:26.560 --> 00:43:32.160
+SuperNICs, and BlueField-4 DPUs — all 
+maintenance-accessible with no cables,
+
+00:43:32.160 --> 00:43:40.240
+for resiliency and AI factory scaling. 18 compute 
+trays, nine hot-swappable NVLink switch trays. New
+
+00:43:40.240 --> 00:43:47.680
+high-efficiency liquid-cooled bus bars carrying 
+over 5,000 amps — the equivalent of 20 electric
+
+00:43:47.680 --> 00:43:55.040
+cars at full acceleration. Together, 1.3 million 
+components form this third-generation MGX rack.
+
+00:43:56.000 --> 00:44:02.480
+Congratulations to Microsoft for their operational 
+Vera Rubin NVL72 engineering rack. Congratulations
+
+00:44:02.480 --> 00:44:08.640
+to Dell and CoreWeave as well for standing 
+up their Vera Rubin NVL72 engineering racks.
+
+00:44:08.640 --> 00:44:17.760
+Then, the Vera CPU rack — 256 CPUs in a single 
+liquid-cooled rack, orchestrating the models,
+
+00:44:17.760 --> 00:44:24.240
+shuffling memory, launching tools. Foxconn 
+and Quanta brought the Vera LPX rack to
+
+00:44:24.240 --> 00:44:32.640
+shape — 256 Groq LPUs across 16 trays, 40 
+petabytes per second of SRAM bandwidth — for
+
+00:44:32.640 --> 00:44:39.360
+ultra-low latency. While NVL72 generates 
+tokens at the highest throughput, the
+
+00:44:39.360 --> 00:44:47.680
+LPX rack generates them at the lowest latency.
+Vera BlueField-4 STX — where AI keeps its memory.
+
+00:44:47.680 --> 00:44:52.400
+Storage processing accelerated by 
+BlueField-4, connecting memory,
+
+00:44:52.400 --> 00:44:59.600
+storage, and in-silicon security.
+And NVIDIA Spectrum-X Ethernet Photonics — the
+
+00:44:59.600 --> 00:45:06.720
+world’s first Ethernet switch with 200-gigabit 
+co-packaged optics. TSMC’s CoWoS process,
+
+00:45:06.720 --> 00:45:13.200
+chip-scale packaging, and ultra-high-powered 
+laser dies on indium phosphide.
+
+00:45:13.200 --> 00:45:20.080
+Vera Rubin — five connected rack-scale 
+systems, a supercomputer for AI agents.
+
+00:45:20.080 --> 00:45:25.920
+150 supply chain partners across Taiwan. 
+Millions of square feet of factory floor,
+
+00:45:25.920 --> 00:45:33.040
+hundreds of sites. Chips, packages, systems, 
+and data centers pushed to the limits of size,
+
+00:45:33.040 --> 00:45:39.520
+power, and scale. This is what we call extreme 
+co-design. We did this with Taiwan. Together,
+
+00:45:39.520 --> 00:45:44.800
+we reinvented computing for the age of 
+AI. Taiwan was with us at the beginning,
+
+00:45:44.800 --> 00:45:51.200
+and here today, as we bring Vera Rubin 
+to the world. Thank you, Taiwan.
+
+00:45:51.200 --> 00:45:57.680
+________________
+[JENSEN]
+
+00:45:57.680 --> 00:46:09.280
+Ladies and gentlemen, Vera Rubin.
+Vera Rubin was not built just to run
+
+00:46:09.280 --> 00:46:19.200
+AI. Vera Rubin was built to run agents. This is 
+an agentic system. Imagine the complexity — which
+
+00:46:19.200 --> 00:46:25.120
+is the reason why the agent architecture is the 
+last great computer science breakthrough. It has
+
+00:46:25.120 --> 00:46:30.400
+taken this many years for agents to realize 
+their potential and become useful. It stands
+
+00:46:30.400 --> 00:46:36.640
+to reason that the computer that runs it is the 
+most advanced in the world. This is Vera Rubin.
+
+00:46:36.640 --> 00:46:47.920
+Let’s take a look. Can we 
+bring out Vera Rubin, please?
+
+00:46:59.440 --> 00:47:14.080
+And Janine, do we have the racks, the systems?
+It looks heavy. This is Vera Rubin — Vera Rubin
+
+00:47:14.880 --> 00:47:22.240
+NVL72. This is the LPX rack. At the next GTC, 
+I’m going to talk to you about a lot more of
+
+00:47:22.240 --> 00:47:30.960
+this. Today, we have so much to talk to you 
+about. This is the Vera CPU rack — 256 CPUs,
+
+00:47:30.960 --> 00:47:37.040
+all liquid-cooled. Let me tell you about Vera 
+in just a moment. This is the Vera BlueField
+
+00:47:37.040 --> 00:47:44.960
+storage processing system — and also security 
+system. And of course, this is our Mellanox
+
+00:47:44.960 --> 00:47:53.280
+networking — the world’s first CPO. This is Vera 
+Rubin. Incredible technology all coming together.
+
+00:47:53.280 --> 00:48:00.880
+Now, when we built Hopper, we built Hopper — 
+as you know — for pre-training. Pre-training
+
+00:48:00.880 --> 00:48:04.320
+was the most important application, the 
+most important workload we were working
+
+00:48:04.320 --> 00:48:10.720
+on at the time. Then when we worked on Grace 
+Blackwell, everybody said, “Jensen, you know,
+
+00:48:10.720 --> 00:48:18.000
+NVIDIA is really good at pre-training. Inference 
+is so easy.” Do you remember that? People used
+
+00:48:18.000 --> 00:48:24.720
+to say, “Inference is so easy. We could do that 
+too.” But as you know, inference equals money,
+
+00:48:24.720 --> 00:48:33.200
+and the models — MoEs — are so complicated, 
+and to do it at incredibly high response time,
+
+00:48:33.200 --> 00:48:38.480
+fast interactivity, and high throughput 
+at the same time is incredibly hard.
+
+00:48:38.480 --> 00:48:45.760
+Which is the reason why we created NVL72.
+Today, NVIDIA’s token cost is the lowest in
+
+00:48:45.760 --> 00:48:53.440
+the world — not by 10%, but by multiples, 
+orders of magnitude. All because we did
+
+00:48:53.440 --> 00:48:59.440
+extreme co-design. All because we understood 
+the computing model, the computing pattern
+
+00:48:59.440 --> 00:49:09.040
+of inference, and we were able to create NVL72.
+Now with Vera Rubin, it is beyond inference — it
+
+00:49:09.040 --> 00:49:22.240
+is now inference in an agentic system. This is 
+Vera Rubin. No cables, no hoses, no fans. What
+
+00:49:22.240 --> 00:49:32.240
+used to take — the last time I showed this to you 
+— cables everywhere, amazing to look at. But now
+
+00:49:32.240 --> 00:49:39.200
+there’s a PCB in the middle which connects both 
+sides. What used to take two hours now takes five
+
+00:49:39.200 --> 00:49:46.000
+minutes. The reliability and the resilience 
+of Vera Rubin is going to be off the charts.
+
+00:49:46.000 --> 00:49:53.680
+This is our Vera CPU tray — the most advanced 
+CPU that has ever been built. I want to show
+
+00:49:53.680 --> 00:50:04.480
+you that in just a second. And this is our 
+storage tray — two Vera CPUs, four ConnectX-9,
+
+00:50:04.480 --> 00:50:15.360
+incredible amounts of storage. This is our new 
+LPX — the Groq LPX rack, designed for very low
+
+00:50:15.360 --> 00:50:24.320
+latency inference. The throughput is delivered by 
+Vera Rubin and extended with NVL72. If you want
+
+00:50:24.320 --> 00:50:33.120
+to extend that even further, you can add Groq 
+LPUs. Here we have the Vera Rubin NVLink switch
+
+00:50:33.120 --> 00:50:40.560
+tray — the switches in the middle — and this is 
+revolutionary. Because of Vera Rubin, because
+
+00:50:40.560 --> 00:50:50.720
+of NVL72, and the NVLink switches that we created 
+and invented. And this is our Ethernet switch for
+
+00:50:50.720 --> 00:51:03.520
+scale-out. What’s amazing is we introduced these 
+two systems for Grace Blackwell, and today NVIDIA
+
+00:51:03.520 --> 00:51:11.120
+is the largest networking company in the world. 
+I’m so proud of the networking team. This is such
+
+00:51:11.120 --> 00:51:17.760
+an incredible enabler for everything that we do.
+I want to now talk to you about the next major
+
+00:51:17.760 --> 00:51:27.720
+industry we’re going to be part of. 
+Thank you, Janine. It’s right here —
+
+00:51:35.920 --> 00:51:44.720
+I think there are 2,000 people 
+back there pulling them.
+
+00:51:44.720 --> 00:51:54.560
+Okay, let’s talk about CPUs. Vera CPUs. 
+CPUs built for the age of agentic AI.
+
+00:51:54.560 --> 00:52:06.800
+All of the CPUs until now were created for people. 
+We were the users, we were the renters. The way
+
+00:52:06.800 --> 00:52:15.200
+we use CPUs — we live in a world counted by 
+seconds. The way we rent CPUs in the cloud,
+
+00:52:15.840 --> 00:52:24.160
+the more CPU cores you have, the more you can 
+rent. The economics and the use case of the
+
+00:52:24.160 --> 00:52:35.120
+old CPU are fundamentally different from agents.
+Agents are impatient. They don’t live in a world
+
+00:52:35.120 --> 00:52:42.000
+that is counted in seconds. They live in a world 
+counted in nanoseconds. When an agent uses a tool,
+
+00:52:42.000 --> 00:52:47.760
+it wants the response time to be as fast as 
+possible. When it accesses a database, it has
+
+00:52:47.760 --> 00:52:55.200
+to come back as soon as possible. Every moment 
+that the agent is waiting keeps it from going
+
+00:52:55.200 --> 00:53:04.000
+to the next step, the next step, the next step. 
+It is vital that we make the CPUs as low-latency
+
+00:53:04.000 --> 00:53:12.160
+as possible, as interactive as possible. 
+So we created Vera CPU for the age of AI.
+
+00:53:12.160 --> 00:53:17.920
+Now inside our system, it’s used in three 
+different ways. The first way, of course,
+
+00:53:17.920 --> 00:53:26.960
+is within Vera Rubin. For thinking — and inside 
+the Vera Rubin rack, there are already two
+
+00:53:26.960 --> 00:53:36.800
+CPUs. As you know, we are building and selling 
+millions of Vera Rubins. We have sold millions
+
+00:53:36.800 --> 00:53:42.240
+of Grace Blackwells. And NVIDIA already is 
+one of the largest CPU makers in the world.
+
+00:53:42.960 --> 00:53:51.280
+In the Vera Rubin rack there are two CPUs. 
+One for orchestrating and managing the GPUs,
+
+00:53:51.280 --> 00:53:59.200
+managing the KV cache, dealing with all of the 
+software that runs in the rack. We also have
+
+00:53:59.200 --> 00:54:08.080
+the Grace BlueField that is used for security 
+and isolation. The Vera compute is used for
+
+00:54:08.080 --> 00:54:16.080
+the harness, the orchestration of the AI models, 
+tool use, accessing the database. And the data
+
+00:54:16.080 --> 00:54:26.880
+servers are right here — Vera BlueField — the 
+fastest storage servers the world has ever made.
+
+00:54:26.880 --> 00:54:35.200
+And the reason why this is so vital is because 
+agents are accessing memory so incredibly fast.
+
+00:54:35.200 --> 00:54:44.000
+These systems — the storage server and the 
+CPUs — are in the critical path of the most
+
+00:54:44.000 --> 00:54:51.440
+expensive part of the data center. This is 
+the most expensive for a good reason. The
+
+00:54:51.440 --> 00:55:01.280
+economics of the AI factory are tokens. And the 
+tokens are created here. And so, of course, you
+
+00:55:01.280 --> 00:55:06.880
+want to manufacture and generate as many tokens 
+as possible. This is where you put all of your
+
+00:55:06.880 --> 00:55:15.280
+economics, and this has to not be in the way.
+And so Vera CPU has great requirements on the
+
+00:55:15.280 --> 00:55:20.400
+CPU architecture, which is the reason why 
+we built a brand new architecture from the
+
+00:55:20.400 --> 00:55:29.040
+ground up. A CPU the world has never seen 
+before. We call it Vera. This is CPU for
+
+00:55:29.040 --> 00:55:37.680
+agents. All the CPUs of the past, we built 
+for humans. This CPU is built for agents.
+
+00:55:37.680 --> 00:55:43.760
+There are four things to keep in mind — 
+the four takeaways. The first takeaway
+
+00:55:43.760 --> 00:55:49.200
+is that the instructions per clock 
+of Vera has to be incredibly good,
+
+00:55:49.200 --> 00:55:56.320
+because we need the latency to be short. We need 
+the processing time — single-threaded performance,
+
+00:55:56.320 --> 00:56:03.920
+not throughput — single-threaded performance has 
+to be world class. Absolutely the best. Which is
+
+00:56:03.920 --> 00:56:09.920
+the reason why the IPC, the instructions 
+per clock of Vera, is so high. It’s the
+
+00:56:09.920 --> 00:56:17.920
+highest in the world. 10 instructions fetched, 
+decoded, and executed per clock. Number one.
+
+00:56:17.920 --> 00:56:24.960
+Number two, the bandwidth necessary to 
+move data in and out of the CPU has to
+
+00:56:24.960 --> 00:56:34.320
+be utterly world class — bandwidth per core. 
+The third is just bandwidth, period. We’re
+
+00:56:34.320 --> 00:56:41.760
+moving data — and remember, I said earlier, 
+agentic systems are fundamentally disaggregated
+
+00:56:41.760 --> 00:56:49.840
+and distributed. Disaggregated and distributed. 
+When computing is disaggregated and distributed,
+
+00:56:49.840 --> 00:56:55.200
+networking becomes the problem. Therefore, 
+we have to move the data around as fast as
+
+00:56:55.200 --> 00:57:02.560
+possible — between the CPU cores, between the 
+CPU and the storage, the CPU and the GPU. The
+
+00:57:02.560 --> 00:57:09.440
+bandwidth around the system, and inside the 
+CPU core, has to be utterly world class.
+
+00:57:09.440 --> 00:57:15.360
+This is the first CPU that’s been built in a 
+long time that is literally at radical limits,
+
+00:57:15.360 --> 00:57:22.960
+with a fabric that connects all of the CPU 
+cores at the speed of light — 3.6 terabytes
+
+00:57:22.960 --> 00:57:34.560
+per second. No trip boundary crossings, because 
+all of the CPU cores are talking to each other
+
+00:57:34.560 --> 00:57:42.160
+with extremely high bandwidth. They’re not rented 
+core by core. They’re all working together. The
+
+00:57:42.160 --> 00:57:48.400
+cross-sectional bandwidth of Vera is off the 
+charts. It’s the first CPU to use PCIe Gen 6.
+
+00:57:49.200 --> 00:57:59.120
+It is also the first to use LPDDR5 with 1.2 
+terabytes per second — two to three times the
+
+00:57:59.120 --> 00:58:06.800
+bandwidth of the highest-performance CPUs in the 
+market. Three times the bandwidth on the inside.
+
+00:58:06.800 --> 00:58:16.720
+The bandwidth per core, and the bandwidth 
+overall, is world class. Now, remember — the
+
+00:58:16.720 --> 00:58:24.240
+number of CPUs is going to be quite high. And 
+the reason for that is very simple. We created
+
+00:58:24.240 --> 00:58:33.920
+CPUs for humans in the past, and humans — there 
+are only a billion of us. There will be billions
+
+00:58:33.920 --> 00:58:41.920
+of agents. And these agents are going to be using 
+the CPUs with very little patience, because the
+
+00:58:41.920 --> 00:58:50.160
+cost of the GPU that they sit next to is too 
+high, too valuable, too precious. Therefore,
+
+00:58:50.160 --> 00:58:59.200
+these CPUs are going to be both performant, but 
+they also have to be extremely energy-efficient,
+
+00:58:59.200 --> 00:59:07.520
+so that we can pack as much CPU as we can into the 
+factory without taking away power from the token
+
+00:59:07.520 --> 00:59:13.760
+generation, which we know is how we make money.
+These four properties — instructions per clock,
+
+00:59:13.760 --> 00:59:21.040
+or single-threaded performance; bandwidth per 
+core; the total bandwidth around the chip and
+
+00:59:21.040 --> 00:59:28.720
+inside the chip; and energy efficiency — define 
+Vera. It is absolutely world class. When you
+
+00:59:28.720 --> 00:59:35.680
+compare it to the highest-performance x86, it is 
+just off the charts. When you compare it in real,
+
+00:59:35.680 --> 00:59:44.240
+single-threaded performance — real performance 
+— it’s off the charts. It is incredible to be
+
+00:59:44.240 --> 00:59:51.440
+able to deliver a 5% improvement on CPUs. It is 
+incredible to be able to deliver 10%. But this
+
+00:59:51.440 --> 01:00:01.680
+kind of performance speedup is just unheard 
+of. This is NVIDIA Vera. What do you think?
+
+01:00:05.680 --> 01:00:08.222
+Let’s take a look.
+________________
+
+01:00:08.222 --> 01:00:10.000
+[VIDEO NARRATION]
+Agentic AI changes the role
+
+01:00:10.000 --> 01:00:17.840
+of the CPU. The CPU is now the conductor, and 
+the GPU is the orchestra. Traditional CPUs were
+
+01:00:17.840 --> 01:00:24.480
+built for a different era — maximizing cores per 
+socket, slicing them up, virtualizing, renting by
+
+01:00:24.480 --> 01:00:32.480
+the hour. In the age of agents, the CPU is now a 
+bottleneck to GPU utilization, directly affecting
+
+01:00:32.480 --> 01:00:39.920
+token throughput, latency, and user experience.
+NVIDIA Vera is the CPU built for the agentic
+
+01:00:39.920 --> 01:00:45.680
+loop — combining NVIDIA’s custom data center 
+CPU core with a scalable coherency fabric,
+
+01:00:45.680 --> 01:00:51.120
+for the right balance of performance, cores, 
+and bandwidth to maximize AI factory health.
+
+01:00:51.120 --> 01:00:55.920
+At the heart of Vera is the NVIDIA 
+Olympus core, built for modern data
+
+01:00:55.920 --> 01:01:03.520
+center workloads — branch-heavy Python runtimes, 
+tool calls, and sandbox code execution. Each core
+
+01:01:03.520 --> 01:01:10.320
+is tuned for throughput. A neural branch predictor 
+evaluating two taken branches per cycle. A 10-wide
+
+01:01:10.320 --> 01:01:15.920
+decode engine brings in more work each cycle. 
+A large out-of-order engine keeps instructions
+
+01:01:15.920 --> 01:01:21.760
+moving. Advanced prefetchers with a novel 
+graph engine anticipating the next data fetch.
+
+01:01:21.760 --> 01:01:27.920
+But fast cores only matter when data 
+arrives correctly and on time. Vera is
+
+01:01:27.920 --> 01:01:34.560
+the first CPU to use LPDDR5X memory while 
+correcting multiple errors simultaneously
+
+01:01:34.560 --> 01:01:39.920
+without compromising bandwidth. Vera 
+achieves 40% lower peak memory latency
+
+01:01:39.920 --> 01:01:47.440
+versus x86, keeping cores fed on time through 
+retrieval, analytics, and sandbox execution.
+
+01:01:47.440 --> 01:01:53.840
+NVIDIA’s second-generation scalable coherence 
+fabric unifies all 88 Olympus cores on a
+
+01:01:53.840 --> 01:02:02.480
+monolithic mesh. Separate dies for memory and 
+cores are not split across chiplets, enabling 50%
+
+01:02:02.480 --> 01:02:09.280
+faster core-to-core communication than traditional 
+CPUs. And memory-coherent NVLink chip-to-chip
+
+01:02:09.280 --> 01:02:17.360
+connects GPUs directly to the CPU. Beyond GPUs, 
+NVLink chip-to-chip can scale Vera up to multiple
+
+01:02:17.360 --> 01:02:25.200
+sockets, enabling massive bandwidth between CPUs.
+Vera delivers 1.8 times the agentic sandbox
+
+01:02:25.200 --> 01:02:32.480
+performance of x86 CPUs. Standalone, Vera 
+racks run agent sandboxes, tools, code,
+
+01:02:32.480 --> 01:02:39.600
+and data pipelines. Tightly coupled to Rubin 
+GPUs, Vera keeps accelerated workloads moving.
+
+01:02:39.600 --> 01:02:49.840
+NVIDIA Vera BlueField-4 STX — powers context, 
+memory, and AI storage. Compute, network, storage.
+
+01:02:49.840 --> 01:03:01.031
+Vera is the CPU for the age of agents.
+________________
+
+01:03:01.031 --> 01:03:03.360
+[JENSEN]
+This is going to be our new major
+
+01:03:03.360 --> 01:03:18.720
+growth driver. The reviews are already coming 
+out, and it’s pretty good. Pretty good stuff.
+
+01:03:18.720 --> 01:03:30.320
+Now, remember — Grace and Vera are also the 
+most highly qualified CPUs in the world of AI,
+
+01:03:30.320 --> 01:03:35.360
+because every single data center, every 
+single cloud, every single enterprise,
+
+01:03:35.360 --> 01:03:43.200
+every company that works with NVIDIA on AI has 
+already qualified Grace. The entire software
+
+01:03:43.200 --> 01:03:50.480
+stack has already been optimized for Grace. Every 
+company will be qualifying Vera. Vera will be the
+
+01:03:50.480 --> 01:03:57.520
+most optimized agentic CPU in the world, simply 
+because it’s going to go with Vera Rubin, simply
+
+01:03:57.520 --> 01:04:02.800
+because we made the big architecture switch. 
+In fact, during the Grace Blackwell transition,
+
+01:04:02.800 --> 01:04:11.520
+the biggest risk was going from external CPU 
+x86 into Grace Blackwell. That transition
+
+01:04:11.520 --> 01:04:19.200
+was extremely challenging. But we did it with 
+incredible execution. Now Grace is literally
+
+01:04:19.200 --> 01:04:24.960
+synonymous with Grace Blackwell. When people say 
+Blackwell, they say Grace Blackwell, because it is
+
+01:04:25.520 --> 01:04:30.560
+now utterly everywhere. Every company’s software 
+stack has been optimized for it. Everybody’s
+
+01:04:30.560 --> 01:04:36.160
+security stack has been optimized for it. And now 
+here comes Vera. I’m super excited about that.
+
+01:04:36.160 --> 01:04:42.800
+Now, look at some of the performance numbers. 
+Speedups are one thing. It is extremely hard
+
+01:04:42.800 --> 01:04:54.240
+to speed up SQL. SQL — the most famous 
+domain-specific language that has ever
+
+01:04:54.240 --> 01:05:05.600
+been created. Before CUDA, it was SQL. Before 
+OpenGL, there was SQL. Invented by IBM. Today,
+
+01:05:05.600 --> 01:05:11.200
+it is the structured database language of 
+the planet. Everybody uses SQL. This is
+
+01:05:11.200 --> 01:05:22.320
+SQL running three times faster — not 10% faster, 
+not 25% faster. Three times faster. Incredible.
+
+01:05:25.200 --> 01:05:32.240
+The next one is real-time stream processing. 
+Remember, your AI is going to be not just reading
+
+01:05:32.240 --> 01:05:38.240
+documents. Your AI is going to be watching 
+for telemetry — especially inside a factory,
+
+01:05:38.240 --> 01:05:44.320
+inside a stock exchange. You’re going to 
+be looking for telemetry continuously.
+
+01:05:44.320 --> 01:05:50.880
+The burst of data that’s coming in 
+goes into a CPU. This is Vera CPU
+
+01:05:50.880 --> 01:05:55.600
+running real-time stream processing for 
+the New York Stock Exchange. Lynn Martin,
+
+01:05:55.600 --> 01:06:00.640
+the president of the New York Stock Exchange, 
+has been so gracious to partner with us.
+
+01:06:00.640 --> 01:06:06.880
+This system runs all over the world, in real 
+time — real-time stream processing. Vera CPU:
+
+01:06:06.880 --> 01:06:14.080
+six times faster. All because of the bandwidth, 
+the single-threaded instruction execution, the
+
+01:06:14.080 --> 01:06:20.960
+bandwidth inside between the cores, the bandwidth 
+outside. Vera is completely revolutionary.
+
+01:06:28.720 --> 01:06:33.520
+You know, talking about x-factors is something 
+you do when you’re talking about GPUs. It is
+
+01:06:33.520 --> 01:06:42.240
+quite rare that somebody talks about x-factors 
+on real workloads associated with a CPU. So I’m
+
+01:06:42.240 --> 01:06:48.400
+so proud of the team. You guys did such a great 
+job. We have an extraordinary roadmap coming.
+
+01:06:48.400 --> 01:06:55.760
+And what’s really exciting is almost everybody 
+is supporting Vera. They’re as excited as we
+
+01:06:55.760 --> 01:07:06.960
+are. This is Vera opening up a brand new 
+market. Agents is a new workload. We built
+
+01:07:06.960 --> 01:07:14.640
+CPUs for humans in the past. We need CPUs for 
+agents, for agentic systems. The properties are
+
+01:07:14.640 --> 01:07:22.960
+different. Why would the CPU be the same? We 
+are building millions and millions of Veras.
+
+01:07:24.400 --> 01:07:33.040
+And to go to market with us — Taiwan’s ODMs and 
+computer makers, all the OEMs — you can see the
+
+01:07:33.040 --> 01:07:41.520
+early adopters. The early adopters are the agentic 
+companies. This is the beginning of a new market,
+
+01:07:41.520 --> 01:07:46.640
+a market that never existed before. It’s 
+not going to take away from the old markets,
+
+01:07:46.640 --> 01:07:56.160
+but this is a new market: CPU for agents. And 
+this market will surely be larger than the last,
+
+01:07:57.360 --> 01:08:03.280
+because there will be a lot more agents than there 
+are people, and the agents are very impatient.
+
+01:08:03.280 --> 01:08:16.400
+So, NVIDIA Vera CPU. Thank you.
+This is the most important slide, really. This
+
+01:08:16.400 --> 01:08:23.680
+is the takeaway. The takeaway here is that this is 
+the application pattern — the computing pattern of
+
+01:08:23.680 --> 01:08:34.720
+the next decade. Agents, harnesses, orchestrating 
+large language models. Every company will run
+
+01:08:34.720 --> 01:08:42.400
+it. Every company will be an agent company. 
+Every company will have agents running inside.
+
+01:08:43.040 --> 01:08:51.600
+Every company will see that agents need their 
+own operating system. Every company is asking:
+
+01:08:51.600 --> 01:08:58.640
+how do we run agents safely? How do we 
+build agents for our own workloads?
+
+01:08:58.640 --> 01:09:06.160
+And so, we have the NVIDIA Agent Toolkit 
+for Enterprise AI. You’ve seen me build
+
+01:09:06.160 --> 01:09:11.840
+this in plain sight. Almost everything that 
+NVIDIA does — at every GTC — if you go back
+
+01:09:11.840 --> 01:09:17.360
+and look at my GTC from five years ago or 
+10 years ago, you will see today. This,
+
+01:09:17.360 --> 01:09:23.760
+you’ve seen me talking about for several years, 
+because we’ve been building for this moment.
+
+01:09:23.760 --> 01:09:29.760
+There are four things that companies need 
+in order to build agents as a service,
+
+01:09:29.760 --> 01:09:38.240
+or to build agents to operate. The first thing you 
+need is models — of course, large language models,
+
+01:09:38.240 --> 01:09:44.560
+the smarter the better, the cheaper the better, 
+the faster the better. The second is you need
+
+01:09:44.560 --> 01:09:52.400
+a harness to orchestrate the whole thing. 
+The third — these models want to use tools,
+
+01:09:52.400 --> 01:09:57.600
+and these tools come with skills. And I 
+showed you CUDA-X libraries — those are
+
+01:09:57.600 --> 01:10:05.040
+going to be amazing tools for the agents in the 
+future. And then lastly, you need a runtime. You
+
+01:10:05.040 --> 01:10:10.960
+need the operating system that holds it all 
+together. This is the NVIDIA Agent Toolkit.
+
+01:10:14.400 --> 01:10:21.680
+It includes models that you can modify — 
+various world-class open models, and I’ll
+
+01:10:21.680 --> 01:10:29.600
+show you more. You can run agents from anybody. 
+You can run Claude Code — an incredible agent.
+
+01:10:29.600 --> 01:10:35.840
+Codex — incredible agent. You could run it inside 
+this harness called NVIDIA OpenShell, which is
+
+01:10:35.840 --> 01:10:44.320
+highly secure for inside the enterprise. The shell 
+protects the agent, keeps it grounded in security
+
+01:10:44.320 --> 01:10:53.440
+policies. Privacy is protected, its rights and 
+privileges are given, its identity is protected.
+
+01:10:53.440 --> 01:11:00.960
+And so this OpenShell is being adopted all over 
+the world, and it is open source. You can see so
+
+01:11:00.960 --> 01:11:07.760
+many companies adopting it — Red Hat, Canonical, 
+Microsoft — it’s going to be adopted everywhere.
+
+01:11:07.760 --> 01:11:16.880
+This is the runtime. And this runtime is fully 
+optimized for the NVIDIA AI platform, which is
+
+01:11:16.880 --> 01:11:26.640
+everywhere. So you can run OpenShell in any cloud, 
+on-prem, and even on device. You have tools and
+
+01:11:26.640 --> 01:11:34.240
+libraries that agents can use. You have models 
+that you can modify or use as-is. Or you have
+
+01:11:34.240 --> 01:11:46.000
+agents — OpenClaw, Hermes — another incredible 
+agentic harness. These agentic harnesses can
+
+01:11:46.000 --> 01:11:52.560
+now run on-prem or for you anywhere.
+So, four things, and this represents the
+
+01:11:52.560 --> 01:11:58.560
+operating system of the modern enterprise.
+Now, how do we use this? One of my favorite
+
+01:11:58.560 --> 01:12:07.600
+use cases of agents is chip designers. It is the 
+single most important thing that NVIDIA does. And
+
+01:12:07.600 --> 01:12:16.400
+so, of course, we have to partner with Cadence to 
+build a super agent — a chip design super agent.
+
+01:12:16.400 --> 01:12:25.680
+It is orchestrated by Codex or Claude Code. It 
+has RTL and architecture diagrams, or schematics,
+
+01:12:25.680 --> 01:12:33.120
+or specifications as input, and whatever you 
+need to fix. And together, we created some
+
+01:12:33.120 --> 01:12:42.240
+super agents that are optimized for the NVIDIA 
+platform, with Nemotron. Let’s take a look.
+
+01:12:42.240 --> 01:12:44.480
+________________
+[VIDEO NARRATION]
+
+01:12:46.400 --> 01:12:53.280
+Cadence and NVIDIA are partnering to build chip 
+design agents. Hundreds of thousands of NVIDIA
+
+01:12:53.280 --> 01:12:59.200
+chips come together to make the AI factories 
+that power the world’s frontier AI models.
+
+01:12:59.200 --> 01:13:05.200
+Designing these chips, and the systems they run 
+in, is one of the hardest engineering challenges.
+
+01:13:05.200 --> 01:13:11.680
+Trillions of transistors. Three-dimensional 
+circuits at microscopic scale. Every gate,
+
+01:13:11.680 --> 01:13:18.640
+every wire, synchronized to picoseconds, must work 
+in perfect harmony, with no margin for error.
+
+01:13:18.640 --> 01:13:24.880
+Physical prototypes are too slow and too costly. 
+So engineers work in the digital realm. Each chip
+
+01:13:24.880 --> 01:13:30.800
+begins as a set of architectural specifications, 
+then translated into RTL — the language of chip
+
+01:13:30.800 --> 01:13:38.560
+design. RTL must be verified in simulation. A 
+single bug can delay a chip by months. At NVIDIA,
+
+01:13:38.560 --> 01:13:44.400
+thousands of engineers, billions of compute 
+hours per year, millions of tests written, run,
+
+01:13:44.400 --> 01:13:50.640
+and debugged — a cycle that takes teams weeks.
+To compress this cycle, Cadence and NVIDIA built
+
+01:13:50.640 --> 01:13:57.200
+a design verification agent. Codex orchestrates 
+the process. Cadence Chip Stack launches the
+
+01:13:57.200 --> 01:14:03.920
+RTL verification loop, powered by Nemotron 
+and secured by NVIDIA OpenShell. Calling on
+
+01:14:03.920 --> 01:14:11.280
+expert subagents in RTL generation, test bench 
+creation, regression testing, and debug. The
+
+01:14:11.280 --> 01:14:17.040
+system drives itself. The Chip Stack agents run 
+hundreds of simulations with Cadence Xcelium,
+
+01:14:17.040 --> 01:14:24.720
+formal verification with JasperGold. Design flaws 
+revealed. Bugs in the code, fixed. What once took
+
+01:14:24.720 --> 01:14:32.800
+weeks now takes hours. Verification cycles over 
+40 times faster. Together, NVIDIA and Cadence are
+
+01:14:32.800 --> 01:14:38.880
+reinventing chip design with AI agents.
+________________
+
+01:14:38.880 --> 01:14:41.920
+[JENSEN]
+From weeks to hours.
+
+01:14:41.920 --> 01:14:47.600
+From weeks to hours. From weeks to hours.
+NVIDIA has thousands of chip designers.
+
+01:14:47.600 --> 01:14:54.080
+We are going to hire hundreds of thousands 
+of Cadence super agents to work with us,
+
+01:14:54.080 --> 01:14:59.440
+so that we can accelerate our company, 
+so that we can be even more ambitious,
+
+01:14:59.440 --> 01:15:08.160
+create even more amazing things, run even faster.
+You saw earlier that the toolkit — with models,
+
+01:15:08.160 --> 01:15:18.960
+harness, tools and skills, and runtimes — is 
+the reason why we’re working with Cadence so
+
+01:15:18.960 --> 01:15:25.680
+hard to accelerate all of their tools on CUDA, 
+because the agents are impatient. The agents
+
+01:15:25.680 --> 01:15:36.240
+want the answer immediately. And so, models, 
+harnesses, CUDA-accelerated libraries and tools,
+
+01:15:36.240 --> 01:15:41.680
+and then the runtime. What you saw just 
+now is all of that coming together.
+
+01:15:41.680 --> 01:15:48.160
+Now, one of the things that it starts with 
+is a great model that Cadence could modify
+
+01:15:48.160 --> 01:15:53.680
+and tune to be expert at the Cadence 
+workflow, at the Cadence expertise,
+
+01:15:53.680 --> 01:16:00.400
+so that they could create super agents that are 
+proprietary to Cadence, with their proprietary
+
+01:16:00.400 --> 01:16:07.680
+knowledge. They have to start with an excellent 
+model. We call it Nemotron. It is dedicated to
+
+01:16:07.680 --> 01:16:14.560
+building open models for the world, so that all 
+of you, all of us, could create our own agents.
+
+01:16:14.560 --> 01:16:32.560
+Today, we’re announcing Nemotron 3 Ultra. Our 
+next open model, and it is smart. The Nemotron
+
+01:16:32.560 --> 01:16:40.000
+models not only give you the model — we give 
+you all the data that we use to train the model,
+
+01:16:40.000 --> 01:16:49.120
+and because we have a coalition of incredible 
+partners, we work together and contribute data
+
+01:16:49.120 --> 01:16:56.480
+to each other. Nemotron is trained on one of the 
+largest suites of long-running reasoning models,
+
+01:16:56.480 --> 01:17:04.240
+long-running tool task-solving, tool-using 
+datasets in the world, because of all of our great
+
+01:17:04.240 --> 01:17:12.560
+partnerships. All of this — from the model, the 
+training scripts, and the data — made completely
+
+01:17:12.560 --> 01:17:20.960
+available to you. This is open models at its 
+best. The best open model system in the world.
+
+01:17:20.960 --> 01:17:27.360
+Simple goal: so that you can take all of it, 
+add to it, make it even better, make it yours.
+
+01:17:27.360 --> 01:17:37.440
+Nemotron 3 Ultra is five times faster. This is the 
+world’s first model based on a hybrid architecture
+
+01:17:37.440 --> 01:17:46.080
+of SSM — State Space Models — with a Mixture of 
+Experts. The architecture is incredibly fast.
+
+01:17:46.080 --> 01:17:50.960
+We made it fast so that you could think fast. When 
+you think fast, you can think longer at the same
+
+01:17:50.960 --> 01:18:02.160
+cost. So five times faster. It is also 30% cheaper 
+— 30% lower cost to run in total FLOPs and total
+
+01:18:02.160 --> 01:18:07.840
+inference time — than even the most cost-effective 
+models in the world. We’re comparing against the
+
+01:18:07.840 --> 01:18:19.440
+world’s best open models. Frontier smart. Five 
+times faster, 30% cheaper. Completely open. We’re
+
+01:18:19.440 --> 01:18:26.000
+completely dedicated to this. This is now Nemotron 
+3. We’re currently working on Nemotron 4.
+
+01:18:26.000 --> 01:18:35.760
+So this entire toolkit — from models, harnesses, 
+tools and skills, and runtimes — is the reason
+
+01:18:35.760 --> 01:18:43.360
+why every enterprise company in the world has 
+the ability now to create their own agents,
+
+01:18:43.360 --> 01:18:48.160
+just like Cadence did with their super agents. 
+And we’re working with so many companies — Cadence
+
+01:18:48.160 --> 01:18:56.880
+and CrowdStrike, ServiceNow and Palantir, SAP. 
+People always said, “Jensen, the agents are going
+
+01:18:56.880 --> 01:19:03.760
+to disrupt these markets.” I said: completely the 
+opposite. And you can now see it. Agents are going
+
+01:19:03.760 --> 01:19:12.720
+to create the largest opportunity ever for my 
+partners and friends. And we have the NVIDIA Agent
+
+01:19:12.720 --> 01:19:20.800
+Toolkit for Enterprise AI to help them.
+So there you go.
+
+01:19:23.840 --> 01:19:31.760
+First, Vera Rubin in full production. Two, 
+Vera CPU — CPU built for a new generation,
+
+01:19:31.760 --> 01:19:38.800
+for agents. And three, NVIDIA’s 
+Enterprise AI Toolkit, so that
+
+01:19:38.800 --> 01:19:46.720
+every enterprise and every enterprise 
+software company can build agents.
+
+01:19:53.760 --> 01:20:01.760
+My relationship with you started here. 
+And many of you, many of my friends and
+
+01:20:01.760 --> 01:20:09.040
+partners here in Taiwan — your companies 
+started here. This is, in a lot of ways,
+
+01:20:09.040 --> 01:20:16.000
+the beginning of the modern computer industry 
+— 40 years now. And NVIDIA is 33 years old.
+
+01:20:16.720 --> 01:20:26.000
+The PC industry was already starting to get going 
+— Windows 1, Windows 2, Apple 1, Apple 2 — and by
+
+01:20:26.000 --> 01:20:36.160
+the time we came along, Windows 3.1 was the PC. 
+And as you know, Windows 95 made the PC personal.
+
+01:20:36.160 --> 01:20:43.760
+It took the PC from enterprises and companies 
+and made it into a consumer electronics device.
+
+01:20:43.760 --> 01:20:49.840
+Everybody should have one, and everybody does.
+This is the beginning. This computing platform
+
+01:20:49.840 --> 01:20:55.440
+did several things incredibly smart. 
+Windows was not just disaggregated,
+
+01:20:55.440 --> 01:21:03.840
+as you know. Windows was properly abstracted. 
+It was architected just right — system BIOS,
+
+01:21:03.840 --> 01:21:15.280
+open chipsets, the operating system with drivers 
+that could be connected and installed at runtime,
+
+01:21:15.280 --> 01:21:24.400
+and an abstraction layer with a multimedia 
+API that opened up the PC to what we all
+
+01:21:24.400 --> 01:21:31.040
+know today. Each one of these elements was 
+essential in making the PC so popular.
+
+01:21:32.080 --> 01:21:41.600
+40 years later, Microsoft and NVIDIA are going 
+to reinvent the PC. This is going to be the new
+
+01:21:41.600 --> 01:21:50.960
+PC. Now, tomorrow night I’m going to be with 
+Satya. We’re going to talk a lot more about
+
+01:21:50.960 --> 01:21:57.360
+the work that we’re doing together. Microsoft and 
+NVIDIA — over the last three years, it took this
+
+01:21:57.360 --> 01:22:04.080
+long to completely reinvent how the PC is going to 
+work so that we could be ready for this moment.
+
+01:22:04.080 --> 01:22:11.600
+As I mentioned earlier, the computing pattern 
+called an agent is going to run in AI clouds.
+
+01:22:11.600 --> 01:22:19.120
+It’s going to run inside enterprises. It is also 
+going to run on your PC. What’s going to happen
+
+01:22:19.120 --> 01:22:26.240
+to that PC when it has an autonomous agent? An 
+agent that’s helping you, that understands you.
+
+01:22:26.240 --> 01:22:33.760
+You could talk to it. It could look at you. 
+You can ask it to refile things, go help you,
+
+01:22:33.760 --> 01:22:40.400
+do some research. It could do a lot more than 
+I’ll show you. But the new operating system is,
+
+01:22:40.400 --> 01:22:47.040
+of course, the old operating system plus large 
+language models. Large language models in a lot
+
+01:22:47.040 --> 01:22:55.280
+of ways are the modern version of DirectX. It has, 
+of course, input and output, understands prompts,
+
+01:22:55.280 --> 01:23:00.640
+it understands computer vision, it can generate 
+video, it can generate sound. It is the modern
+
+01:23:00.640 --> 01:23:09.520
+extension — the intelligence extension — 
+of the PC. On top of that, the application,
+
+01:23:09.520 --> 01:23:16.800
+as I mentioned before, is going to be replaced 
+by an agentic runtime. And that is the modern
+
+01:23:16.800 --> 01:23:20.800
+application: an agent. Let’s take a look.
+________________
+
+01:23:20.800 --> 01:23:26.400
+[VIDEO NARRATION]
+It started with a spark. An
+
+01:23:26.400 --> 01:23:36.000
+idea — to reimagine the PC for the first time in 
+40 years, for the age of AI. What becomes of our
+
+01:23:36.000 --> 01:23:43.760
+personal computer in a world of agents? Agents 
+running natively, connected to models — local
+
+01:23:43.760 --> 01:23:51.040
+or in the cloud — are personal AIs, sandboxed 
+for security, running continuously, getting
+
+01:23:51.040 --> 01:24:01.280
+work done. The chips and the OS must evolve.
+Introducing RTX Spark — everything we’ve learned
+
+01:24:01.280 --> 01:24:12.880
+over 33 years, distilled into one chip. Blackwell 
+RTX GPU with 6,144 Tensor Cores. One petaflop of
+
+01:24:12.880 --> 01:24:24.640
+AI performance. A custom 20-core Grace CPU, built 
+in partnership with MediaTek. Fused by NVLink. 128
+
+01:24:24.640 --> 01:24:34.640
+gigabytes of unified memory. TSMC 3-nanometer 
+process. 70 billion transistors. And in close
+
+01:24:34.640 --> 01:24:42.080
+collaboration with Microsoft — a Windows platform 
+for agents. We’re reinventing the personal
+
+01:24:42.080 --> 01:24:54.560
+computer. We’re creating for the age of agents. 
+This is the dawn of a new personal computing
+
+01:24:54.560 --> 01:25:04.631
+revolution. And it starts with NVIDIA RTX Spark.
+________________
+
+01:25:04.631 --> 01:25:18.080
+[JENSEN]
+Here it is. Of course,
+
+01:25:18.080 --> 01:25:23.120
+I’ve got to show you the most beautiful 
+part — which is video games. It’s also
+
+01:25:23.120 --> 01:25:30.800
+the closest to our heart. This is Forza. 
+This is 007, by the way — the new 007 game,
+
+01:25:30.800 --> 01:25:34.080
+I’m looking forward to playing 
+it. I look a little bit like him.
+
+01:25:35.440 --> 01:25:46.320
+Ladies and gentlemen, NVIDIA 
+RTX Spark laptops. Now,
+
+01:25:46.320 --> 01:26:00.720
+thank you. I have too many things in my pocket.
+Okay, all right. This is the most amazing chip the
+
+01:26:00.720 --> 01:26:09.440
+world has ever built. This is the chip we built 
+in partnership with MediaTek. I think I saw Rick
+
+01:26:09.440 --> 01:26:19.520
+earlier. This is a beautiful chip. This is a chip 
+that, frankly, would take 33 years to build. And
+
+01:26:19.520 --> 01:26:28.000
+the reason for that is because 100% of NVIDIA 
+software runs here. If you want to run digital
+
+01:26:28.000 --> 01:26:33.040
+biology, no problem. If you want to do seismic 
+processing, no problem. You want astrophysics,
+
+01:26:33.040 --> 01:26:38.960
+no problem. Everything associated with CUDA — all 
+the physics, all the biology, all the genomics,
+
+01:26:38.960 --> 01:26:45.600
+all the AI, all the computer graphics — no 
+problem. Every single application NVIDIA
+
+01:26:45.600 --> 01:26:53.680
+has ever created, and every single application 
+that Windows has ever run. Microsoft and NVIDIA
+
+01:26:53.680 --> 01:27:01.440
+meticulously optimized everything so that this 
+computer literally runs everything the world has
+
+01:27:01.440 --> 01:27:12.320
+ever created. Plus, it now runs agents. It is 
+an incredible computer. I am so proud of it.
+
+01:27:15.600 --> 01:27:22.560
+Okay. Now, I want you to keep that in mind 
+for the next video I’m going to show you.
+
+01:27:22.560 --> 01:27:28.240
+Just imagine — everything here is going to run 
+on your PC. Now, that computer could have a
+
+01:27:28.240 --> 01:27:38.320
+local Nemotron 3 Ultra model, or a Nemotron 3 
+model, or it could have Claude Code, or Codex,
+
+01:27:38.320 --> 01:27:44.000
+or some other model in the cloud, or something 
+on the network. And it’s going to work and do
+
+01:27:44.000 --> 01:27:48.142
+something amazing. Let’s play it.
+________________
+
+01:27:48.142 --> 01:27:49.360
+[VIDEO NARRATION]
+Every house starts as
+
+01:27:49.360 --> 01:27:56.480
+an idea. Getting from idea to design 
+takes a myriad of tools, expertise,
+
+01:27:56.480 --> 01:28:04.320
+and a lot of time. Now, an agent running 
+locally on RTX Spark can help me design
+
+01:28:04.320 --> 01:28:10.640
+a house using the tools on my laptop — with an 
+OpenShell sandbox, running the Hermes harness,
+
+01:28:10.640 --> 01:28:16.000
+connected to Claude Sonnet in the cloud.
+I select the site, share my concept sketches
+
+01:28:16.000 --> 01:28:22.480
+and mood board of styles to inspire my design. 
+And the prompt — a text description of the
+
+01:28:22.480 --> 01:28:31.200
+requirements and the design intent. My agent 
+goes to work. Using the tools on my laptop,
+
+01:28:31.200 --> 01:28:37.920
+it opens Rhino and starts modeling the site, 
+shaping terrain, setbacks, and the building
+
+01:28:37.920 --> 01:28:44.800
+envelope. Then it proposes building forms, 
+optimized for cost, comfort, and quality.
+
+01:28:45.760 --> 01:28:51.600
+With the form defined, my agent generates 
+the interior layout. Walls, circulation,
+
+01:28:51.600 --> 01:29:02.000
+rooms begin to take shape. I jump in whenever 
+I want to adjust, to change. Doors, windows,
+
+01:29:02.000 --> 01:29:11.920
+and structural elements are placed automatically. 
+My agent detects its own mistakes and fixes them.
+
+01:29:11.920 --> 01:29:17.520
+When I approve, the agent exports the model 
+from Rhino into Blender — materials and object
+
+01:29:17.520 --> 01:29:24.400
+properties transfer with the design context 
+intact. I fine-tune the materials, get the look
+
+01:29:24.400 --> 01:29:31.840
+just right. Then I pick the shots. Blender renders 
+the house. My agent, using generative AI with the
+
+01:29:31.840 --> 01:29:38.240
+Flux 2 model, makes them photorealistic. Multiple 
+viewpoints, lighting conditions. What was once a
+
+01:29:38.240 --> 01:29:47.200
+complex workflow is now guided and simplified 
+by my agent working on RTX Spark — designed at
+
+01:29:47.200 --> 01:29:56.960
+the speed of imagination.
+________________
+
+01:29:56.960 --> 01:30:00.000
+[JENSEN]
+The developers are so excited
+
+01:30:00.000 --> 01:30:05.280
+about this — it’s an incredible computer. All of 
+the acceleration, all the software capabilities
+
+01:30:05.280 --> 01:30:11.200
+associated with it, working with every 
+developer to make it incredible for all of you.
+
+01:30:11.200 --> 01:30:18.480
+The next one — Adobe. Incredible tool suite, used 
+by tens of millions of people around the world.
+
+01:30:18.480 --> 01:30:24.320
+They have re-engineered the architecture, 
+the core of Adobe Photoshop and Premiere,
+
+01:30:24.320 --> 01:30:30.000
+and they’ll release it for RTX Spark. It is twice 
+as fast. It’s already fast — now it’s going to be
+
+01:30:30.000 --> 01:30:36.240
+twice as fast. And it’s also designed to 
+be agent-friendly — with its MCP server,
+
+01:30:36.240 --> 01:30:44.640
+it can now interact with agents on your laptop.
+The number of partners that are so excited to
+
+01:30:44.640 --> 01:30:55.920
+bring RTX Spark to market is just incredible. 
+This is the first great PC reinvention in 40
+
+01:30:55.920 --> 01:31:02.080
+years. And I’m just so happy that all of you 
+and the ecosystem around the world has joined
+
+01:31:02.080 --> 01:31:08.880
+us. This is basically everybody. Everybody 
+will support RTX Spark, and we’ll be building
+
+01:31:08.880 --> 01:31:20.080
+incredibly smart and powerful and beautiful 
+laptops with all of you. Thank you very much.
+
+01:31:20.080 --> 01:31:30.880
+But that’s not all. RTX Spark is a reinvention of 
+the laptop. But in fact, Microsoft and NVIDIA are
+
+01:31:30.880 --> 01:31:39.120
+reinventing all of PC. And today we’re announcing 
+a whole new line — three revolutionary Windows
+
+01:31:39.120 --> 01:31:47.520
+machines, covering desktop, laptop, and 
+workstation — all 100% Windows compatible,
+
+01:31:47.520 --> 01:31:55.920
+100% CUDA, 100% NVIDIA AI Tensor Core. 
+Everything that runs on NVIDIA on all
+
+01:31:55.920 --> 01:32:04.640
+these different platforms around the world, runs 
+here. This is the first completely re-engineered,
+
+01:32:04.640 --> 01:32:10.640
+reinvented line of PCs in 40 years.
+Now, what’s really amazing is this. So
+
+01:32:10.640 --> 01:32:21.600
+this is the RTX Spark laptop. This is the desktop. 
+This one’s from MSI — Joseph, this one’s yours.
+
+01:32:22.960 --> 01:32:31.680
+Look how beautiful it is. This agent could run 
+24/7, meter-free. You can download your agent,
+
+01:32:31.680 --> 01:32:44.000
+you can run it right here. It’s running all the 
+time. No meter anxiety. And it’s connected to
+
+01:32:44.000 --> 01:32:50.560
+your whole house — connected to your laptop, 
+connected to your display, all the cameras,
+
+01:32:51.120 --> 01:32:57.760
+your dryer, your water cooler, your water heater, 
+your everything, whatever you want — your security
+
+01:32:57.760 --> 01:33:04.800
+system. All connected to this. And this becomes 
+your personal AI, your personal AI agent.
+
+01:33:04.800 --> 01:33:09.440
+And it gets smarter and smarter and smarter 
+over time, because today we have Nemotron 3
+
+01:33:09.440 --> 01:33:14.800
+Ultra. Tomorrow we have Nemotron 4. Then you 
+switch to Nemotron 5, then Nemotron 6, and we
+
+01:33:14.800 --> 01:33:19.600
+just keep getting smarter, smarter, smarter. And 
+meanwhile, this is sitting at home, helping you do
+
+01:33:19.600 --> 01:33:31.360
+things. If you want to book travel, no problem.
+And if you want an incredible system — this is DGX
+
+01:33:31.360 --> 01:33:44.000
+Station. Compatible with Windows, runs everything 
+in Windows, and it has 768 gigabytes of memory.
+
+01:33:44.000 --> 01:33:51.280
+And so you could run a trillion-parameter 
+model. This is unbelievable. 20 petaflops,
+
+01:33:51.280 --> 01:33:57.120
+eight terabytes per second of memory 
+bandwidth, and this sits by your desk.
+
+01:33:58.560 --> 01:34:05.200
+If you’re a developer of large language models, 
+a developer of agents — having this sit by your
+
+01:34:05.200 --> 01:34:10.640
+desk gives you all the compute you need, and then 
+when you deploy it, you put it in the cloud.
+
+01:34:10.640 --> 01:34:18.080
+Now, there’s something that, if you look at this 
+and think about this, something is happening here.
+
+01:34:18.080 --> 01:34:31.280
+Remember 15, 20 years ago — we used to have 
+an idea called a phone. Today, when you think
+
+01:34:31.280 --> 01:34:40.720
+about your phone, the one thing you don’t do 
+with it is make phone calls. You do just about
+
+01:34:40.720 --> 01:34:48.080
+everything else. And so that phone means something 
+very different to you than a phone of the past.
+
+01:34:49.120 --> 01:34:55.040
+I am certain what’s going to happen here is 
+that the PC, 10 years from now — the PC that
+
+01:34:55.040 --> 01:35:05.280
+you think about today, a tool where you launch 
+applications, click and type — is going to be
+
+01:35:05.280 --> 01:35:12.640
+completely different. Here’s my theory. I can 
+totally imagine, just as every house today
+
+01:35:12.640 --> 01:35:24.320
+has a home theater, big TVs, lawn mowers, 
+dishwashers — I could totally imagine that
+
+01:35:24.320 --> 01:35:30.240
+someday there’s actually an AI supercomputer 
+in your house. And it’s running all of your
+
+01:35:30.240 --> 01:35:35.120
+agents. It’s running all of your assistants, 
+and they’re doing all kinds of things for you
+
+01:35:35.120 --> 01:35:51.920
+all the time. You want AI agent computers 
+running in your house. And these, in time,
+
+01:35:51.920 --> 01:36:01.200
+become a lot more like R2-D2 to you. It becomes 
+more like C-3PO to you than it feels like a PC.
+
+01:36:03.040 --> 01:36:09.440
+There is no question — this reinvention of the 
+computer is as big a deal as the reinvention of
+
+01:36:09.440 --> 01:36:15.280
+the phone into what we now know as the smartphone. 
+And so, this is the beginning of that journey.
+
+01:36:15.280 --> 01:36:21.600
+This is the beginning of a new line. We have a 
+roadmap for this — a brand new product family.
+
+01:36:23.120 --> 01:36:33.520
+Every single generation of architecture, we will 
+have a desktop, a laptop, and a workstation.
+
+01:36:33.520 --> 01:36:40.080
+And the thing that I’m just incredibly pleased 
+and incredibly honored by is that 100% of the
+
+01:36:40.080 --> 01:36:54.640
+world’s PC industry has joined us to reinvent 
+the PC. A new line, a new beginning. Thank you.
+
+01:37:01.520 --> 01:37:13.120
+As you know, agentic AI is just a digital 
+robot. It understands, it reasons, it plans,
+
+01:37:13.120 --> 01:37:24.640
+and it acts and uses tools. Agentic AI is going to 
+run across all of these computers. We’re working
+
+01:37:24.640 --> 01:37:30.160
+on humanoid robotics computers, robotics computers 
+of all kinds. We’re working on self-driving car
+
+01:37:30.160 --> 01:37:36.400
+computers. We’re working on satellites. You 
+have GeForce, which has Tensor Cores. I just
+
+01:37:36.400 --> 01:37:42.640
+talked about a whole new line of PCs. Agriculture 
+equipment, manufacturing equipment, heavy industry
+
+01:37:42.640 --> 01:37:54.080
+equipment — all will be agentic. Even your base 
+stations — the radio stations of the future — are
+
+01:37:54.080 --> 01:38:01.760
+going to be agentic, understanding traffic and 
+thinking about how to coordinate with other base
+
+01:38:01.760 --> 01:38:10.400
+stations so that you can use as little energy as 
+possible, increasing the spectral efficiency.
+
+01:38:10.400 --> 01:38:18.240
+And so everything will run agents. Today, NVIDIA 
+is largely in the center. But I am pretty certain
+
+01:38:18.240 --> 01:38:26.000
+that there will be tens of billions, hundreds of 
+billions over time, of agentic systems and agentic
+
+01:38:26.000 --> 01:38:32.480
+computers running around the world.
+The biggest problem is data. In the
+
+01:38:32.480 --> 01:38:36.880
+case of language models, all the English and 
+all the language that we have on the internet
+
+01:38:36.880 --> 01:38:42.560
+that we train on was from the perspective 
+of us — we wrote it and we’re reading it.
+
+01:38:42.560 --> 01:38:52.000
+However, in order to create data for AI robotics, 
+it has to be from the perspective of the robot.
+
+01:38:52.000 --> 01:38:58.480
+And most of the world’s video data is from 
+a third person, not first person. And so,
+
+01:38:58.480 --> 01:39:06.000
+agentic systems, robotic systems, physical 
+AI — the data is the hardest problem.
+
+01:39:06.000 --> 01:39:11.680
+You’ve seen us move up this ladder. We started 
+with teleoperation, which is basically human
+
+01:39:11.680 --> 01:39:17.120
+demonstration — no different than the big 
+breakthrough of reinforcement learning from human
+
+01:39:17.120 --> 01:39:23.600
+feedback. Then we use simulation — this is 
+where Omniverse comes in, no different than
+
+01:39:23.600 --> 01:39:34.080
+reinforcement learning with verifiable rewards. 
+We use these systems to bootstrap the AI model,
+
+01:39:34.080 --> 01:39:41.680
+the physical AI model. Eventually we’re able 
+to learn from third-person data, reprojecting
+
+01:39:41.680 --> 01:39:48.960
+into first person. And now, eventually, through 
+bootstrapping, we have a World Foundation Model
+
+01:39:48.960 --> 01:39:55.840
+that can understand the physical world from any 
+perspective you want — third person, first person,
+
+01:39:56.480 --> 01:40:07.520
+inside and out. This is a big breakthrough.
+And today, we’re announcing Cosmos 3.
+
+01:40:07.520 --> 01:40:16.720
+Cosmos 3 is the frontier of physical AI. We are at 
+the frontier with language models — there are so
+
+01:40:16.720 --> 01:40:23.280
+many people working on it. However, in physical 
+AI, we are absolutely the world’s best. I am so
+
+01:40:23.280 --> 01:40:28.880
+proud of the team for doing this. This is the 
+Foundation Model for all of your work. Whenever
+
+01:40:28.880 --> 01:40:35.520
+you want to create a robot — a factory robot, a 
+robot that works in a factory, any kind of robot
+
+01:40:35.520 --> 01:40:44.640
+that involves the physical world — you now have 
+a companion in Cosmos 3 that can understand and
+
+01:40:44.640 --> 01:40:52.240
+reason. It can generate, it can simulate, and in 
+the loop it can even be the policy itself. It is
+
+01:40:52.240 --> 01:40:57.760
+at the top of leaderboards all over the world. 
+I am incredibly proud of Cosmos, and today we’re
+
+01:40:57.760 --> 01:41:01.902
+announcing Cosmos 3. Let’s take a look.
+________________
+
+01:41:01.902 --> 01:41:03.440
+[VIDEO NARRATION]
+The real world is infinite
+
+01:41:03.440 --> 01:41:10.880
+and unpredictable. Physical AI needs data, 
+but real-world data is impossible to scale.
+
+01:41:10.880 --> 01:41:20.000
+For physical AI, compute is data. This is Cosmos 
+— an open frontier omni-model for physical AI,
+
+01:41:20.000 --> 01:41:25.120
+built on a new Mixture of Transformers 
+architecture. Pixels, action, sound,
+
+01:41:25.120 --> 01:41:28.240
+and language flow into the 
+autoregressive transformer,
+
+01:41:28.240 --> 01:41:35.200
+which reasons, plans, and instructs the diffusion 
+transformer, which generates what comes next.
+
+01:41:35.200 --> 01:41:41.040
+Developers post-train Cosmos across 
+embodiments and use cases. As a VLM,
+
+01:41:41.040 --> 01:41:48.240
+Cosmos watches the physical world, understands 
+what’s happening, describing scenes and flagging
+
+01:41:48.240 --> 01:41:56.080
+what matters. As a world model, Cosmos generates 
+physics-accurate synthetic video from an image,
+
+01:41:56.080 --> 01:42:03.920
+text, or video. As a simulator, Cosmos closes 
+the loop for policy training and evaluation.
+
+01:42:03.920 --> 01:42:09.840
+And as the foundation of NVIDIA OmniDreams 
+— an action-conditioned world model — Cosmos
+
+01:42:09.840 --> 01:42:16.080
+predicts the future frame by frame.
+Post-train Cosmos and it becomes a world
+
+01:42:16.080 --> 01:42:26.640
+action model — perceiving, reasoning, planning, 
+generating actions — for robots of every kind,
+
+01:42:26.640 --> 01:42:33.840
+for everything that moves. A new 
+kind of data. A new kind of teacher,
+
+01:42:33.840 --> 01:42:55.360
+generated by compute. Cosmos — the foundation 
+for developers in the age of physical AI.
+
+01:42:55.360 --> 01:42:55.920
+________________
+[JENSEN]
+
+01:42:55.920 --> 01:43:07.200
+Text data plus compute gives you AI. Now that we 
+have AI, compute is data. And so, use Cosmos 3,
+
+01:43:07.200 --> 01:43:11.600
+train a whole bunch of models. Cosmos is such 
+an incredible open model system — it’s exactly
+
+01:43:11.600 --> 01:43:17.840
+the same as Nemotron. We open the model, we open 
+the data, and we even open how we trained it so
+
+01:43:17.840 --> 01:43:23.200
+that you can enhance it for yourself and 
+turn Cosmos into your proprietary model.
+
+01:43:23.200 --> 01:43:27.520
+We have such incredible partners working 
+with us in so many different industries.
+
+01:43:27.520 --> 01:43:34.160
+Now, the model itself is, of course, the most 
+understandable part of the AI stack. But the AI
+
+01:43:34.160 --> 01:43:44.560
+stack is very complicated — it has generators, the 
+model, simulators, and the runtime. Just as it is
+
+01:43:44.560 --> 01:43:54.467
+for agentic systems, cars are essentially physical 
+AI — agentic robots that are autonomous vehicles
+
+01:43:54.467 --> 01:44:00.640
+— and they have this complicated stack too.
+Today we’re announcing Alpamayo 2 Super, an
+
+01:44:00.640 --> 01:44:07.520
+open model for self-driving cars. We’re 
+working with car companies across the world.
+
+01:44:07.520 --> 01:44:11.840
+If you look at the brands that have signed up 
+for NVIDIA DRIVE Hyperion — that are building
+
+01:44:11.840 --> 01:44:20.960
+NVIDIA DRIVE Hyperion cars — this represents 
+about 80% of the world’s car manufacturers.
+
+01:44:23.200 --> 01:44:28.720
+We are going to have a whole lot of NVIDIA 
+DRIVE Hyperion systems that are able to run
+
+01:44:28.720 --> 01:44:34.320
+Alpamayo 2 Super, or anybody else’s NVIDIA 
+stack. We are also connected into mobility
+
+01:44:34.320 --> 01:44:40.240
+services — approximately 97% of the world’s 
+mobility services are connecting with us — so
+
+01:44:40.240 --> 01:44:48.320
+that when we deploy Alpamayo 2 Super on the DRIVE 
+Hyperion runtime, with the Halos operating system,
+
+01:44:48.320 --> 01:44:51.600
+we will be able to connect to all of these 
+services across the world. Let’s take a look.
+
+01:44:51.600 --> 01:44:55.680
+________________
+[VIDEO NARRATION]
+
+01:44:55.680 --> 01:44:59.920
+Hey Mercedes, let’s go to 
+my favorite sandwich shop.
+
+01:44:59.920 --> 01:45:06.960
+Routing to your destination. Lane is clear, 
+pulling out to start drive. Nudge left due
+
+01:45:06.960 --> 01:45:12.080
+to the stationary lead vehicle ahead blocking 
+our lane. Slow down to stop at the stop sign,
+
+01:45:12.080 --> 01:45:18.000
+controlling the intersection. Stop to yield to 
+the pedestrians. Since the person is in our lane,
+
+01:45:18.000 --> 01:45:22.240
+yield for the cutting vehicle from the left. Nudge 
+left to clear the stopped vehicle blocking on the
+
+01:45:22.240 --> 01:45:28.480
+right. Keep distance to the cutting vehicle 
+since it is merging into our lane. There is a
+
+01:45:28.480 --> 01:45:37.120
+lane stream crossing ahead. Stop to keep distance, 
+decelerate. Stop at the stop sign, intersection is
+
+01:45:37.120 --> 01:45:41.280
+controlled. Stop, yield to the cross traffic. Keep 
+distance to the truck. Nudge left due to the truck
+
+01:45:41.280 --> 01:45:53.200
+blocking on the left side of our lane.
+Your destination is on the right.
+
+01:45:57.200 --> 01:46:02.880
+Alpamayo 2 Super — the world’s first reasoning
+
+01:46:02.880 --> 01:46:05.431
+autonomous vehicle.
+________________
+
+01:46:05.431 --> 01:46:08.640
+[JENSEN]
+If you let it talk all the time, it will drive
+
+01:46:08.640 --> 01:46:17.040
+you crazy. But we’re very happy that it’s talking 
+to itself all the time. That’s called thinking.
+
+01:46:17.040 --> 01:46:22.560
+And so Alpamayo 2 Super is a reasoning car.
+The technology that we’ve created also applies
+
+01:46:22.560 --> 01:46:26.720
+to humanoids. Of course, there are many 
+new breakthroughs that have to happen.
+
+01:46:26.720 --> 01:46:38.560
+NVIDIA Isaac GR00T is our humanoid robotics 
+stack — model, data generation, simulation,
+
+01:46:38.560 --> 01:46:47.360
+the runtime including the operating system. 
+This represents the GR00T platform, the Isaac
+
+01:46:47.360 --> 01:46:53.440
+GR00T platform. Every one of our systems — the 
+exact same architecture — whether it’s an agentic
+
+01:46:53.440 --> 01:47:00.080
+system for the cloud, an agentic system for the 
+PC, a robotic system for a self-driving car,
+
+01:47:00.080 --> 01:47:06.960
+a robotic system for a humanoid robot — all 
+the same. And of course, in every single case,
+
+01:47:06.960 --> 01:47:15.760
+we build everything completely. We built 
+everything vertically, completely integrated
+
+01:47:15.760 --> 01:47:20.480
+with co-design, extreme co-design. And 
+then when we open it up for everybody
+
+01:47:20.480 --> 01:47:26.800
+to use — whichever part you like, whatever 
+you want to use, we even help you modify.
+
+01:47:26.800 --> 01:47:33.200
+But the one thing that is missing is we need 
+a reference platform for robotic systems.
+
+01:47:33.200 --> 01:47:37.680
+These robotic systems are so complicated 
+— so many motors, so many sensors,
+
+01:47:37.680 --> 01:47:44.320
+so fragile — and yet we need to have a way to 
+deliver these reference platforms, just like we
+
+01:47:44.320 --> 01:47:51.520
+do with PCs and DGXs and clouds and self-driving 
+cars. We now are going to do it for robots. Today,
+
+01:47:51.520 --> 01:47:59.600
+we’re announcing the NVIDIA Isaac GR00T reference 
+humanoid robot — fully integrated. 25 degrees of
+
+01:47:59.600 --> 01:48:09.040
+freedom on each hand, made by Sharpa. 31 degrees 
+of freedom on the robot, 6 feet, 150 pounds. Just
+
+01:48:09.040 --> 01:48:20.720
+like me. The first number is shorter, the second 
+number is bigger. Otherwise, pretty close.
+
+01:48:20.720 --> 01:48:27.520
+And this platform runs the new Jetson Thor and 
+our entire software stack — data generation stack,
+
+01:48:27.520 --> 01:48:34.320
+data simulation stack, the runtime — 
+all integrated into a robot designed
+
+01:48:34.320 --> 01:48:40.160
+for everyone to use. We built this for 
+higher education and university researchers,
+
+01:48:40.160 --> 01:48:45.600
+because for them to build this themselves is 
+insanely hard. And so let’s take a look at that.
+
+01:48:45.600 --> 01:48:46.320
+________________
+[VIDEO NARRATION]
+
+01:48:46.320 --> 01:48:51.680
+The next leap in AI is general-purpose 
+robots — humanoids. But building one is
+
+01:48:51.680 --> 01:48:57.360
+hard. Every team starts from scratch, stitching 
+together simulators, teleoperation systems,
+
+01:48:57.360 --> 01:49:03.360
+data pipelines, and training infrastructure. 
+Months of setup before research can start.
+
+01:49:03.360 --> 01:49:10.320
+NVIDIA Isaac GR00T — an open development 
+platform for humanoid robots. Open models,
+
+01:49:10.320 --> 01:49:17.360
+simulation and training libraries, and data 
+generators. Plus, the robot computer — fully
+
+01:49:17.360 --> 01:49:22.240
+pre-configured, ready to go in hours.
+First, set up the simulation environment
+
+01:49:22.240 --> 01:49:31.680
+in Isaac Lab. Capture demonstrations with 
+Isaac Teleoperation on a real or simulated
+
+01:49:31.680 --> 01:49:42.240
+robot. Generate synthetic data with Omniverse and 
+Cosmos, scaling one demonstration into thousands.
+
+01:49:42.240 --> 01:50:03.600
+Train policies, evaluate them in Isaac Lab Arena. 
+Deploy through Isaac ROS, running on Jetson Thor.
+
+01:50:03.600 --> 01:50:12.480
+Every element is modular and open — use ours 
+or swap in your own. GR00T is powering robotics
+
+01:50:12.480 --> 01:50:20.160
+research across every discipline for every 
+domain, from research labs to factory floors.
+
+01:50:20.160 --> 01:50:34.480
+One open platform. And now, a new edition: Isaac 
+GR00T reference design robots — built on NVIDIA’s
+
+01:50:34.480 --> 01:50:42.000
+open platform, ready for frontier research, for 
+any lab, anywhere. The age of robotics starts
+
+01:50:42.000 --> 01:50:48.791
+here. NVIDIA Isaac GR00T.
+________________
+
+01:50:48.791 --> 01:50:56.720
+[JENSEN]
+So many robots. Well, we can just
+
+01:50:56.720 --> 01:51:04.320
+let everybody who’s working on robots in the world 
+— let me tell you what I told you. The computer
+
+01:51:04.320 --> 01:51:11.200
+industry has been completely changed. In the 
+last six months, everything changed. Everything
+
+01:51:11.200 --> 01:51:18.080
+changed because agents were realized, and it 
+converged with the latest frontier models, and
+
+01:51:18.080 --> 01:51:25.440
+it made possible for AI to now do useful work.
+The computing pattern will repeat over and over
+
+01:51:25.440 --> 01:51:32.480
+and over again. This computing pattern — an agent 
+that has a model, a harness that uses tools with
+
+01:51:32.480 --> 01:51:38.640
+skills, and runs in a runtime — that runtime 
+depends on whether it’s in a cloud or on-prem,
+
+01:51:38.640 --> 01:51:45.280
+on a PC or a robot. But the computing pattern 
+is exactly the same for all of them. You will
+
+01:51:45.280 --> 01:51:48.880
+use different harnesses because of your 
+preference. You’ll use different models
+
+01:51:48.880 --> 01:51:53.600
+because of your preference. You will improve 
+them for your proprietary use. You would
+
+01:51:53.600 --> 01:51:59.040
+create super agents that you can offer to 
+other people to help them do their work.
+
+01:51:59.040 --> 01:52:06.320
+This agentic platform, this agentic pattern — 
+NVIDIA has an Enterprise AI Toolkit. This is a
+
+01:52:06.320 --> 01:52:13.120
+wonderful way for all of you to engage with AI, 
+and for us it’s a wonderful growth opportunity.
+
+01:52:13.120 --> 01:52:21.440
+Vera Rubin is in full production. Whereas Grace 
+Blackwell was created to process AI — particularly
+
+01:52:21.440 --> 01:52:28.720
+inference — Vera Rubin was created to run agents. 
+It is in full production. It is much, much more
+
+01:52:28.720 --> 01:52:35.840
+than a GPU. It is an entire, disaggregated, 
+distributed agent processing system.
+
+01:52:35.840 --> 01:52:41.680
+NVIDIA has really become an infrastructure company 
+— not just a GPU company, not just a systems
+
+01:52:41.680 --> 01:52:48.160
+company, but an infrastructure company to help you 
+generate the maximum revenue, the maximum profit,
+
+01:52:48.160 --> 01:52:54.640
+and to get there as soon as possible.
+The agentic world — this new way of
+
+01:52:54.640 --> 01:53:01.360
+computing — where you build CPUs for agents, 
+not for people. CPUs for agents have their
+
+01:53:01.360 --> 01:53:08.240
+own special requirements, and NVIDIA Vera is 
+revolutionary. I’m so happy about its ramp.
+
+01:53:08.240 --> 01:53:12.800
+The orders are already in. It’s going 
+to be the fastest and most successful
+
+01:53:12.800 --> 01:53:18.000
+product launch in our company’s history.
+NVIDIA and Microsoft have created a whole
+
+01:53:18.000 --> 01:53:26.640
+new line of PCs. This is a new beginning, and of 
+course, the exact same agentic computing pattern
+
+01:53:26.640 --> 01:53:34.400
+that I just described is also going to run on 
+all kinds of devices. I mentioned PCs, but in
+
+01:53:34.400 --> 01:53:41.280
+the future it’ll be robots and satellites and base 
+stations and factories — in the cloud, on-prem,
+
+01:53:41.280 --> 01:53:50.240
+at the edge. This agentic computing pattern will 
+be replicated in computers all over the world.
+
+01:53:50.240 --> 01:53:56.880
+How we think about the personal computer will very 
+likely change. I want to thank all of you for your
+
+01:53:56.880 --> 01:54:02.480
+partnership, your friendship. We couldn’t be here 
+without everything that we do together. I am so
+
+01:54:02.480 --> 01:54:09.600
+proud of how successful you’ve been this last 
+year. The next year is going to be even more. I
+
+01:54:09.600 --> 01:54:12.680
+have one more thing for you. Let’s take a look.
+________________
+
+01:54:32.640 --> 01:54:36.960
+[VIDEO NARRATION]
+[Closing performance — partial lyrics as
+
+01:54:38.880 --> 01:54:45.760
+captured:]
+Useful AI has arrived,
+
+01:54:45.760 --> 01:54:51.040
+agents working by your side. Can’t miss the 
+things we said today — we’re gonna break it
+
+01:54:51.040 --> 01:54:56.720
+all down for you, Taipei. Agents — widely 
+misunderstood, only movie stars had them
+
+01:54:56.720 --> 01:55:02.240
+in Hollywood. Now they’re your coworkers, making 
+dreams come true, building companies from living
+
+01:55:02.240 --> 01:55:09.840
+rooms. There’s so much confusion — we hear you. 
+That’s why we created Vera, gonna show it’s true.
+
+01:55:09.840 --> 01:55:17.680
+The cheapest token coming through. Ten times 
+throughput — more for special agents, double
+
+01:55:17.680 --> 01:55:25.600
+down. Vera keeps agent memory true. Now let’s talk 
+about it — CPU. Fifty percent faster. Not for x86.
+
+01:55:25.600 --> 01:55:40.720
+It’s built for agents. Everyone’s welcome to the 
+NVIDIA party. Vera Rubin in full production. 5X,
+
+01:55:40.720 --> 01:55:57.600
+faster work is done. OpenShell, keep the sandbox 
+tight. Here’s a five-layer cake, make no mistake.
+
+01:55:58.480 --> 01:56:11.040
+MaxLPS keeps power lean. Optimized for you — 
+so you can have your cake and eat it too. PC
+
+01:56:11.040 --> 01:56:29.581
+reinvention — 40 years. Running anywhere Windows 
+goes. Turning compute into synthetic data,
+
+01:56:29.581 --> 01:56:34.400
+reasoning through, understanding the world 
+like people do. It’s how they learn to move.
+
+01:57:12.960 --> 01:57:19.511
+The future’s here — come see what’s next.
+________________
+
+01:57:19.511 --> 01:57:34.320
+[JENSEN]
+Thank you, Taiwan. Welcome to Computex.
+
+01:57:36.320 --> 01:57:40.640
+Have a great time, everyone. 
+Thanks for an amazing year.
+
+01:57:40.640 --> 01:57:45.280
+Thank you for all your friendship 
+and support. Thank you. Take care.
+

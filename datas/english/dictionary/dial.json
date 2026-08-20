@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "<b>dial</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdaɪəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "다이얼, (시계·나침반 등의) 글자판; (계량기·라디오 등의) 지침반; (전화기의) 숫자판",
+              "examples": [],
+              "originalMeaning": "다이얼, (시계·나침반 등의) 글자판; (계량기·라디오 등의) 지침반; (전화기의) 숫자판"
+            },
+            {
+              "meaning": "[보통 sun ~] 해시계, 광산용 컴퍼스",
+              "examples": [],
+              "originalMeaning": "[보통 sun ~] 해시계, 광산용 컴퍼스"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(다이얼을 돌려) <라디오·텔레비전의> 파장에 맞추다, 국을 선택하다 ((in))",
+              "examples": [],
+              "originalMeaning": "(다이얼을 돌려) <라디오·텔레비전의> 파장에 맞추다, 국을 선택하다 ((in))"
+            },
+            {
+              "meaning": "<전화·라디오 등의> 다이얼을 돌리다, <번호를> 돌리다, …에 전화하다",
+              "examples": [],
+              "originalMeaning": "<전화·라디오 등의> 다이얼을 돌리다, <번호를> 돌리다, …에 전화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(전화의) 다이얼을 돌리다, 전화를 걸다",
+              "examples": [],
+              "originalMeaning": "(전화의) 다이얼을 돌리다, 전화를 걸다"
+            },
+            {
+              "meaning": "다이얼로 조정하다",
+              "examples": [],
+              "originalMeaning": "다이얼로 조정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/64eceedfd5f64a188b9db54afa88d866",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/64eceedfd5f64a188b9db54afa88d866",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dials"
+        },
+        {
+          "type": "과거형",
+          "value": "dialled, dialed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dialling, dialing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dialled, dialed"
+        }
+      ],
+      "aliasConjugation": "dials",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cb87133c923d79b90ab02f0979784711",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>dial</b>.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "dialect(al), dialectic(al), dialog(ue)",
+              "examples": [],
+              "originalMeaning": "dialect(al), dialectic(al), dialog(ue)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce06852dfb6841c0a3191d59c6694774",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce06852dfb6841c0a3191d59c6694774",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "dials",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "042e6aa39ad6d022a2ef9fc64bb37f8e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "톰, 119에 빨리 전화 좀 해 줘",
+      "text": "Tom, <b>dial</b> 119 quickly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "10 센트를 넣고 번호를 돌리시오.",
+      "text": "Deposit a dime and <b>dial</b> your number."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신호음이 들리지 않는다",
+      "text": "I don't get a <b>dial</b> tone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰에 전화를 걸어라",
+      "text": "<b>Dial</b> the police station."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "112번으로 전화를 걸었다",
+      "text": "I dialed 112."
+    }
+  ],
+  "isWordType": true
+}

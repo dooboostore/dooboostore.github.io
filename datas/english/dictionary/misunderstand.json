@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>misunderstand</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɪsʌndər│stænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "오해하다, 진가[본성]를 못 알아보다",
+              "examples": [
+                {
+                  "text": "She misunderstood me.",
+                  "translatedText": "그녀는 내 말을 오해했다."
+                }
+              ],
+              "originalMeaning": "오해하다, 진가[본성]를 못 알아보다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "오해를 하다",
+              "examples": [],
+              "originalMeaning": "오해를 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4f38ac3a68db4987823a52e33802b8ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4f38ac3a68db4987823a52e33802b8ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "misunderstands"
+        },
+        {
+          "type": "과거형",
+          "value": "misunderstood"
+        },
+        {
+          "type": "현재 분사",
+          "value": "misunderstanding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "misunderstood"
+        }
+      ],
+      "aliasConjugation": "misunderstands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e277a9f0dc385846630a47db433e5659",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 점에서 자네는 나를 오해하고 있다.",
+      "text": "There you <b>misunderstand</b> me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네가 그걸 잘못 해석한 것 같다",
+      "text": "It seems to me you <b>misunderstand</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 나를 오해하고 있다",
+      "text": "You do me an injustice[wrong] with your misunderstanding."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오해가 생겨 둘 사이가 어그러졌다",
+      "text": "Mutual misunderstanding led to their estrangement."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 사이에 오해가 있는 것 같다.",
+      "text": "There seems to be some misunderstanding between us."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>seize</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "siːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(갑자기) (붙)잡다, 꽉 쥐다, 붙들다 (=take)",
+              "examples": [
+                {
+                  "text": "<b>seize</b> a rope",
+                  "translatedText": "밧줄을 꽉 붙잡다"
+                }
+              ],
+              "originalMeaning": "(갑자기) (붙)잡다, 꽉 쥐다, 붙들다 (=<span class='related_word' lang='en' >take</span>)"
+            },
+            {
+              "meaning": "<의미·요점 등을> 파악하다, 납득하다, 이해하다",
+              "examples": [
+                {
+                  "text": "I seized your meaning.",
+                  "translatedText": "당신이 말하는 뜻을 알았습니다."
+                }
+              ],
+              "originalMeaning": "<의미·요점 등을> 파악하다, 납득하다, 이해하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잡다, 붙들다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>seize</b> on[upon] a rope",
+                  "translatedText": "밧줄을 붙잡다"
+                }
+              ],
+              "originalMeaning": "잡다, 붙들다 ((on, upon))"
+            },
+            {
+              "meaning": "<기회·결점 등을> 붙잡다, 포착하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>seize</b> on a chance",
+                  "translatedText": "기회를 포착하다"
+                }
+              ],
+              "originalMeaning": "<기회·결점 등을> 붙잡다, 포착하다 ((on, upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/150d39d989dd4a36b0f365d96ddd4d35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/150d39d989dd4a36b0f365d96ddd4d35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "seizes"
+        },
+        {
+          "type": "과거형",
+          "value": "seized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "seizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "seized"
+        }
+      ],
+      "aliasConjugation": "seizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "127ca00a5cc8aa04c48483aae4158362",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신이 말하는 뜻을 알았습니다.",
+      "text": "I seized your meaning."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너의 재산은 몰수될 것이다",
+      "text": "Your property will be seized."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 많은 재산을 갖고 있다.",
+      "text": "He is[stands] seized of much property."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 별안간 분노에 사로잡혔다.",
+      "text": "He was seized with a sudden rage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "채권자는 그의 봉급을 압류했다",
+      "text": "The creditor attached[seized] his salaries."
+    }
+  ],
+  "isWordType": true
+}

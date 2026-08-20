@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "tacit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtæsɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "말로 나타내지 않은, 무언의; 잠잠한 <관중>, 조용한 <방>",
+              "examples": [
+                {
+                  "text": "a <b>tacit</b> prayer",
+                  "translatedText": "묵도"
+                }
+              ],
+              "originalMeaning": "말로 나타내지 않은, 무언의; 잠잠한 <관중>, 조용한 <방>"
+            },
+            {
+              "meaning": "암묵의 <양해 등>",
+              "examples": [
+                {
+                  "text": "a <b>tacit</b> agreement[understanding]",
+                  "translatedText": "묵계(默契)"
+                }
+              ],
+              "originalMeaning": "암묵의 <양해 등>"
+            },
+            {
+              "meaning": "묵시의 ((계약은 없으나 법의 발동으로 생기는))",
+              "examples": [],
+              "originalMeaning": "묵시의 ((계약은 없으나 법의 발동으로 생기는))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0cc7a6f8244a4d958d7cde99146a368a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0cc7a6f8244a4d958d7cde99146a368a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b4f6d76e28914828e0a32a44a02cdbcf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그것을 묵허하였다",
+      "text": "He consented to it tacitly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "양자간에 묵계가 있다",
+      "text": "There is a <b>tacit</b> agreement between the two."
+    }
+  ],
+  "isWordType": true
+}

@@ -138,10 +138,10 @@ export default (w: Window) => {
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
           }
 
-          .header-title {
-            font-size: 24px;
-            font-weight: 700;
-            flex: 1;
+          .header-hits { height: 20px; border-radius: 4px; opacity: 0.9; margin-left: auto; }
+          .copyright {
+            text-align: center; padding: 20px 16px; color: #aaa; font-size: 13px;
+            border-top: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;
           }
 
           .header-subtitle {
@@ -332,13 +332,14 @@ export default (w: Window) => {
 
         <div class="container">
           <div class="header">
-            <button class="header-back" aria-label="Go back">
-              ← Back
+            <button class="header-back" aria-label="Go home" title="홈으로">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
             </button>
             <div>
               <div class="header-title">📐 2D Coordinate Simulation</div>
               <div class="header-subtitle">2D 좌표계 시뮬레이션 (0~100)</div>
             </div>
+            <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-coordinate-simulation.svg?style=plastic&amp;"/>
           </div>
 
           <div class="content">
@@ -369,6 +370,10 @@ export default (w: Window) => {
               </div>
             </div>
           </div>
+
+          <footer class="copyright">
+            © ${new Date().getFullYear()} dooboostore
+          </footer>
         </div>
       `;
     }

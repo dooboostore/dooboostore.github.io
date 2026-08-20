@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "<b>showy</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈʃoʊi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "눈에 띄는, 눈부신",
+              "examples": [
+                {
+                  "text": "showyflowers",
+                  "translatedText": "눈부신 꽃"
+                }
+              ],
+              "originalMeaning": "눈에 띄는, 눈부신"
+            },
+            {
+              "meaning": "화려한, 야한(gaudy)",
+              "examples": [],
+              "originalMeaning": "화려한, 야한(gaudy)"
+            },
+            {
+              "meaning": "허세 부리는, 겉꾸미는",
+              "examples": [],
+              "originalMeaning": "허세 부리는, 겉꾸미는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1818f0e40924bc38d566da7dbf5c324",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1818f0e40924bc38d566da7dbf5c324",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "showier"
+        },
+        {
+          "type": "최상급",
+          "value": "showiest"
+        }
+      ],
+      "aliasConjugation": "showier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "b714df41353f8a8b0e563f1e220d0014",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "보기보다 값어치가 없다",
+      "text": "It is <b>showy</b> but worthless. or It is not so good as it looks."
+    }
+  ],
+  "isWordType": true
+}

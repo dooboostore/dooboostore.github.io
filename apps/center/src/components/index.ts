@@ -1,1 +1,5 @@
-export const componentFactories = [];
+import StockChart from './StockChart';
+
+export const componentFactories = [
+  StockChart,
+];

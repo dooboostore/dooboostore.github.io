@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "<b>exert</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪɡˈzɜːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<힘·능력·지력 등을> 쓰다, 행사하다(exercise); [~ oneself로] 노력하다, 진력하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>exert</b> intelligence",
+                  "translatedText": "지력을 쓰다"
+                }
+              ],
+              "originalMeaning": "<힘·능력·지력 등을> 쓰다, 행사하다(exercise); [~ oneself로] 노력하다, 진력하다 ((for))"
+            },
+            {
+              "meaning": "<지도력 등을> 발휘하다, <압력을> 가하다, <감화를> 미치다",
+              "examples": [
+                {
+                  "text": "<b>exert</b> a favorable influence on a person",
+                  "translatedText": "…에게 좋은 영향을 끼치다"
+                }
+              ],
+              "originalMeaning": "<지도력 등을> 발휘하다, <압력을> 가하다, <감화를> 미치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66a867f0208e4664a631d95670448fc0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66a867f0208e4664a631d95670448fc0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exerts"
+        },
+        {
+          "type": "과거형",
+          "value": "exerted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exerting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exerted"
+        }
+      ],
+      "aliasConjugation": "exerts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7cbb0254f648ec3ffb0922b23d1290e8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경주에 이기기 위해 노력했다.",
+      "text": "He exerted himself to win the race."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 프랑스 음악에 강한 영향을 주었다",
+      "text": "He has had[exerted] a strong influence on French music."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 사상은 철학자들에게 좋은 영향을 끼쳤다",
+      "text": "His thought exerted a favorable influence upon the philosopheres."
+    }
+  ],
+  "isWordType": true
+}

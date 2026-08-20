@@ -56,7 +56,6 @@ export default (w: Window) => {
     // VCHG 기준값 (새 캔들 시작 시 리셋)
     private _baselineVolumeForChange: number = 0;
     private _lastCandleTime: string = "";
-    private _lastCandleTime: string = "";
 
     // history buffers for traces (newest at index 0)
     private priceHistory: number[] = [];
@@ -128,14 +127,12 @@ export default (w: Window) => {
            }
 
            .header {
-             position: relative;
              display: flex;
              align-items: center;
              gap: 12px;
-             padding: 0 120px 0 8px; /* top right bottom left - use vertical centering via absolute children */
-             background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+             padding: 16px 24px;
+             background: linear-gradient(135deg, #1565c0 0%, #1976d2 60%, #42a5f5 100%);
              color: white;
-             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
              flex-shrink: 0;
              height: 72px;
            }
@@ -201,19 +198,12 @@ export default (w: Window) => {
             }
 
            .header-title {
-             position: absolute;
-             left: 50%;
-             transform: translateX(-50%);
-             font-size: 24px;
+             font-size: 22px;
              font-weight: 700;
-             white-space: nowrap;
+             flex: 1;
            }
 
-           /* 숨기면 우측은 비어있음(여백 유지) */
-           .header .stock-select,
-           .header > img {
-             display: none;
-           }
+
 
            .header-subtitle {
              font-size: 12px;
@@ -298,30 +288,41 @@ export default (w: Window) => {
               font-size: 11px;
             }
 
-            .stock-select {
-              padding: 6px 8px;
-              font-size: 12px;
-            }
+           .stock-select {
+             padding: 6px 10px;
+             font-size: 12px;
+             border-radius: 6px;
+             border: 1px solid rgba(255, 255, 255, 0.3);
+             background: rgba(0, 0, 0, 0.2);
+             color: white;
+             outline: none;
+             cursor: pointer;
+             margin-left: auto;
+             flex-shrink: 0;
+           }
+           .stock-select option {
+             background: #1976d2;
+             color: white;
+           }
+           .header-hits { height: 20px; border-radius: 4px; opacity: 0.9; flex-shrink: 0; margin-left: 12px; }
+           .copyright {
+             text-align: center; padding: 20px 16px; color: #aaa; font-size: 13px;
+             border-top: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;
+           }
           }
         </style>
 
         <div class="container">
           <div class="header">
-            <div class="header-left">
-              <button class="header-back" aria-label="Go back">
-                ←
-              </button>
-
-              
-            </div>
-            <div>
-              <div class="header-title">Stock Flight</div>
-            </div>
-            <select class="stock-select" id="stockSelect" style="margin-left: auto;">
+            <button class="header-back" aria-label="Go home" title="홈으로">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+            </button>
+            <div class="header-title">Stock Flight</div>
+            <select class="stock-select" id="stockSelect">
               <option value="A000660">삼성전자 (A000660)</option>
               <option value="A000831">SK하이닉스 (A000831)</option>
             </select>
-            <img src="https://hits.sh/dooboostore.github.io/stock-flight.svg?style=plastic" alt="Hits" style="height: 20px; align-self: center;" />
+            <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-stock-flight.svg?style=plastic&amp;" />
           </div>
 
           <div class="content">
@@ -334,6 +335,10 @@ export default (w: Window) => {
               <canvas id="chartCanvas"></canvas>
             </div>
           </div>
+
+          <footer class="copyright">
+            © ${new Date().getFullYear()} dooboostore
+          </footer>
         </div>
       `;
     }

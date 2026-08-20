@@ -5,6 +5,7 @@ import EnglishPlayerPage from './english/EnglishPlayerPage';
 import StockFlightPage from './stock-flight/StockFlightPage';
 import LottoPage from './lotto/LottoPage';
 import CoordinateSimulationPage from './coordinate-simulation/CoordinateSimulationPage';
+import BuybackPage from './buyback/BuybackPage';
 
 export const pageFactories = [
   RootRouter,
@@ -13,5 +14,6 @@ export const pageFactories = [
   EnglishPlayerPage,
   StockFlightPage,
   LottoPage,
-  CoordinateSimulationPage
+  CoordinateSimulationPage,
+  BuybackPage
 ];

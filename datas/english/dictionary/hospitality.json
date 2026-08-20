@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "hospitality",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│hɑːsspɪ│tæləti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "환대, 친절히 접대함, 후대",
+              "examples": [
+                {
+                  "text": "the <b>hospitality</b> extended to him",
+                  "translatedText": "그에게 보여준 환대"
+                }
+              ],
+              "originalMeaning": "환대, 친절히 접대함, 후대"
+            },
+            {
+              "meaning": "(새로운 사고 방식 등의) 수용력 ((to))",
+              "examples": [
+                {
+                  "text": "extend a wide <b>hospitality</b> to Western thought",
+                  "translatedText": "서구적 사고 방식을 폭넓게 수용하다"
+                }
+              ],
+              "originalMeaning": "(새로운 사고 방식 등의) 수용력 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "접객업의; <방 등이> 접대용의, 응접용의",
+              "examples": [],
+              "originalMeaning": "접객업의; <방 등이> 접대용의, 응접용의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c5f0f174125c41d0921a4be3ddca715e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c5f0f174125c41d0921a4be3ddca715e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "hospitalities"
+        }
+      ],
+      "aliasConjugation": "hospitalities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "de4c04470363515c4cf81c8d2174ea44",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "귀지에 게재해 주시기 바랍니다.",
+      "text": "Afford me the <b>hospitality</b> of your columns."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그러면 염치 불구하고 호의를 받겠습니다.",
+      "text": "I shall trespass on[upon] your <b>hospitality</b>, then."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "disclose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪs│kloʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "드러내다, 노출시키다; 폭로[적발]하다; <비밀 등을> 털어놓다, 발표하다",
+              "examples": [
+                {
+                  "text": "He disclosed the secret to his friend.",
+                  "translatedText": "그는 친구에게 비밀을 털어놓았다."
+                }
+              ],
+              "originalMeaning": "드러내다, 노출시키다; 폭로[적발]하다; <비밀 등을> 털어놓다, 발표하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/20eb43fa1d30451f811e11b6158d1fea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/20eb43fa1d30451f811e11b6158d1fea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "discloses"
+        },
+        {
+          "type": "과거형",
+          "value": "disclosed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disclosing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disclosed"
+        }
+      ],
+      "aliasConjugation": "discloses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9312661a64acc2c64f9f0e7671264ca7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 친구에게 비밀을 밝혔다.",
+      "text": "He disclosed the secret to his friend."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사건으로 그들의 의도가 표면화되었다",
+      "text": "The event has disclosed their designs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 약점을 통쾌하게 폭로했다",
+      "text": "His weakness has been mercilessly disclosed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비밀 결사 조직이 탄로났다",
+      "text": "The system of the secret society was disclosed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 돈을 받고 자기 나라의 비밀을 떠들치었다",
+      "text": "He disclosed the secret of his country to the man for money."
+    }
+  ],
+  "isWordType": true
+}
