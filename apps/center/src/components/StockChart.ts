@@ -1,4 +1,15 @@
-import { elementDefine, onConnectedBodyShadow, onConnectedAfter, onDisconnected, queryShadow, eventShadowDom, eventWindow, mutationObserverLight, changedAttribute, resizeObserverLight } from "@dooboostore/simple-web-component";
+import {
+  changedAttribute,
+  elementDefine,
+  eventShadowDom,
+  eventWindow,
+  mutationObserverLight,
+  onConnectedAfter,
+  onConnectedBodyShadow,
+  onDisconnected,
+  queryShadow,
+  resizeObserverLight
+} from "@dooboostore/simple-web-component";
 
 const tagName = "stock-chart";
 
