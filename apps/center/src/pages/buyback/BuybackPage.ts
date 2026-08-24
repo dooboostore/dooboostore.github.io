@@ -101,7 +101,9 @@ export default (w: Window) => {
         this.itemsByCompany.set(company.code, list);
         this.tradedByCompany.set(company.code, tradedList);
         this.declarationsByCompany.set(company.code, declarations);
-        this.stockAcqDispByCompany.set(company.code, stockStatus?.dataList?.[0]?.stockAcqDisp || []);
+        const acqDisp = stockStatus?.dataList?.[0]?.stockAcqDisp || [];
+        console.log(`[BuybackPage] ${company.name} stockAcqDisp:`, acqDisp);
+        this.stockAcqDispByCompany.set(company.code, acqDisp);
 
         this.lastUpdatedByCompany.set(company.code, this.nowTime());
       } finally {
@@ -304,20 +306,33 @@ export default (w: Window) => {
                     <th>체결수량</th>
                     <th>남은수량</th>
                     <th>진행률</th>
+                    <th>체결금액(누계)</th>
                     <th>구분</th>
                     <th>기간</th>
                   </tr>
                 </thead>
                 <tbody>
                   ${acqDispList.length === 0
-                    ? '<tr><td colspan="6" class="empty-cell">취득·처분 내역이 없습니다.</td></tr>'
+                    ? '<tr><td colspan="7" class="empty-cell">취득·처분 내역이 없습니다.</td></tr>'
                     : acqDispList.map((row, idx) => {
                         const qty = Number(row.trstk_decl_qty) || 0;
                         const traded = Number(row.trstk_acc_trd_qty) || 0;
+                        const tradedVal = Number(row.trstk_acc_trdval) || 0;
                         const pct = qty > 0 ? ((traded / qty) * 100).toFixed(1) : '0';
                         const remaining = Math.max(0, qty - traded);
                         const type = row.trstk_acqstdisp_tp_cd === '1' ? '취득' : row.trstk_acqstdisp_tp_cd === '2' ? '처분' : '-';
                         const fmtDate = (d: string) => d && d.length === 8 ? `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}` : d || '-';
+                        const fmtMoney = (n: number): string => {
+                          if (!n) return '0';
+                          const jo = Math.floor(n / 1e12);
+                          const eok = Math.floor((n % 1e12) / 1e8);
+                          const man = Math.floor((n % 1e8) / 1e4);
+                          let s = '';
+                          if (jo > 0) s += `${jo}조 `;
+                          if (eok > 0) s += `${eok}억 `;
+                          if (man > 0) s += `${man}만`;
+                          return s.trim() || n.toLocaleString();
+                        };
                         const now = new Date();
                         const todayStr = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}`;
                         const isOngoing = !!row.trstk_decl_strt_dd && !!row.trstk_decl_end_dd
@@ -334,6 +349,7 @@ export default (w: Window) => {
                           <td class="qty-cell">${traded.toLocaleString()}</td>
                           <td class="qty-cell">${remaining.toLocaleString()}</td>
                           <td class="qty-cell"><span class="progress-track"><span class="mini-progress-fill" style="width: ${Math.min(100, Number(pct))}%"></span><span class="pct-label">${pct}%</span></span></td>
+                          <td class="qty-cell">${fmtMoney(tradedVal)}원</td>
                           <td class="type-cell">${type}</td>
                           <td class="date-cell">${fmtDate(row.trstk_decl_strt_dd)} ~ ${fmtDate(row.trstk_decl_end_dd)}</td>
                         </tr>`;
@@ -713,10 +729,10 @@ export default (w: Window) => {
         .acqdisp-table tr.latest td {
           background: #f0f6ff; font-weight: 600;
         }
-        .acqdisp-table td.qty-cell { position: relative; }
+        .acqdisp-table td.qty-cell { position: relative; padding: 9px 8px; }
         .acqdisp-table td.qty-cell .ongoing-sticker,
         .acqdisp-table td.qty-cell .upcoming-sticker {
-          position: absolute; top: -1px; left: 4px; z-index: 2;
+          position: absolute; top: 3px; left: 4px; z-index: 2;
           transform: rotate(-6deg);
         }
         .progress-track {
