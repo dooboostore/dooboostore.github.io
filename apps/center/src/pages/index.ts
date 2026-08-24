@@ -6,6 +6,7 @@ import StockFlightPage from './stock-flight/StockFlightPage';
 import LottoPage from './lotto/LottoPage';
 import CoordinateSimulationPage from './coordinate-simulation/CoordinateSimulationPage';
 import BuybackPage from './buyback/BuybackPage';
+import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
 
 export const pageFactories = [
   RootRouter,
@@ -15,5 +16,6 @@ export const pageFactories = [
   StockFlightPage,
   LottoPage,
   CoordinateSimulationPage,
-  BuybackPage
+  BuybackPage,
+  StockBrainCheckerPage
 ];

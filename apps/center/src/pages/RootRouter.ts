@@ -1,8 +1,11 @@
 import {
   elementDefine,
   onConnectedBodyShadow,
+  onConnectedBefore,
   subscribeSwcAppRouteChangeWhileConnected,
   innerHtmlLight,
+  innerHtml,
+  setAttribute,
   replaceChildren,
   addEventListener,
   event,
@@ -66,6 +69,12 @@ export default (w: Window) => {
       return `<center-buyback-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-brain-checker"], { order: 7 })
+    @innerHtmlLight
+    handleStockBrainChecker() {
+      return `<center-stock-brain-checker-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {
@@ -84,6 +93,20 @@ export default (w: Window) => {
     })
     renderContent(node: Node) {
       return node;
+    }
+
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setMeta() {
+      return {
+        titleBody: "@dooboostore Center",
+        ogTitle: "@dooboostore Center",
+        desc: "다양한 미니 앱들을 한 곳에서 만나보세요.",
+        ogDesc: "다양한 미니 앱들을 한 곳에서 만나보세요.",
+      };
     }
 
     // @event<InputEvent>("#input", "input", {

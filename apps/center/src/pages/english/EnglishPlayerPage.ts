@@ -3,7 +3,9 @@ import {
   onConnectedBodyShadow,
   onConnectedAfter,
   addEventListener,
-  innerHtml, onInitialize, onDisconnected
+  innerHtml, onInitialize, onDisconnected,
+  onConnectedBefore,
+  setAttribute
 } from "@dooboostore/simple-web-component";
 import { ClipBoardUtils, Router } from "@dooboostore/core-web";
 import { Inject } from '@dooboostore/simple-boot';
@@ -35,6 +37,20 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class EnglishPlayerPage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "English Player | @dooboostore",
+        ogTitle: "English Player | @dooboostore",
+        desc: "영어 학습 - 자막과 함께 영상을 시청하세요.",
+        ogDesc: "영어 학습 - 자막과 함께 영상을 시청하세요.",
+      };
+    }
+
     private router!: Router;
     private videoName: string = "";
     private videoItem: VideoItem | null = null;

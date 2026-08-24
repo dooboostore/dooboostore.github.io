@@ -4,7 +4,10 @@ import {
   onInitialize,
   addEventListener,
   event,
-  innerHtmlLight, state
+  innerHtmlLight, state,
+  onConnectedBefore,
+  innerHtml,
+  setAttribute
 } from "@dooboostore/simple-web-component";
 import { LottoService } from "../../services/lotto/LottoService";
 import { Router } from '@dooboostore/core-web';
@@ -19,6 +22,20 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class LottoPage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "Lotto Analytics | @dooboostore",
+        ogTitle: "Lotto Analytics | @dooboostore",
+        desc: "로또 당첨 번호 분석 및 통계 데이터를 시각적으로 확인하세요.",
+        ogDesc: "로또 당첨 번호 분석 및 통계 데이터를 시각적으로 확인하세요.",
+      };
+    }
+
     private router!: Router;
     private lottoService!: LottoServiceType;
 

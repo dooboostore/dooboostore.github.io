@@ -3,7 +3,9 @@ import {
   onConnectedBodyShadow,
   onConnectedAfter,
   addEventListener,
-  innerHtml, event
+  innerHtml, event,
+  onConnectedBefore,
+  setAttribute
 } from "@dooboostore/simple-web-component";
 import { Inject } from '@dooboostore/simple-boot';
 import { Router } from '@dooboostore/core-web';
@@ -17,6 +19,20 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class EnglishListPage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "English Learning | @dooboostore",
+        ogTitle: "English Learning | @dooboostore",
+        desc: "YouTube 영상으로 영어를 배워보세요. 자막, 사전, 발음 연습까지.",
+        ogDesc: "YouTube 영상으로 영어를 배워보세요. 자막, 사전, 발음 연습까지.",
+      };
+    }
+
     private router!: Router;
     private items: VideoItem[] = [];
 

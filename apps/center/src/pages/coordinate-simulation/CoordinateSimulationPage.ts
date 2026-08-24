@@ -3,6 +3,9 @@ import {
   onConnectedBodyShadow,
   addEventListener,
   onInitialize,
+  onConnectedBefore,
+  innerHtml,
+  setAttribute,
 } from "@dooboostore/simple-web-component";
 import { Router } from '@dooboostore/core-web';
 import { AnimationFrameUtils  } from '@dooboostore/core-web';
@@ -16,6 +19,20 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class Coordinate2DSimulationPage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "2D Coordinate Simulation | @dooboostore",
+        ogTitle: "2D Coordinate Simulation | @dooboostore",
+        desc: "2D 좌표계를 시각화하고 FPS를 조절하며 시뮬레이션해보세요.",
+        ogDesc: "2D 좌표계를 시각화하고 FPS를 조절하며 시뮬레이션해보세요.",
+      };
+    }
+
     private router!: Router;
      private canvas: HTMLCanvasElement | null = null;
      private ctx: CanvasRenderingContext2D | null = null;

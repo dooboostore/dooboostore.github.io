@@ -1,7 +1,7 @@
 import {
   changedAttribute,
   elementDefine,
-  eventShadowDom,
+  eventShadow,
   eventWindow,
   mutationObserverLight,
   onConnectedAfter,
@@ -184,7 +184,7 @@ export default (w: Window) => {
       this.viewEnd = this.viewStart + span - 1;
     }
 
-    @eventShadowDom('#stock-chart-canvas', 'wheel', { passive: false })
+    @eventShadow('#stock-chart-canvas', 'wheel', { passive: false })
     private onWheel(e: WheelEvent): void {
       e.preventDefault();
       const canvas = this.chartCanvas;
@@ -205,7 +205,7 @@ export default (w: Window) => {
       this.drawChart();
     }
 
-    @eventShadowDom('#stock-chart-canvas', 'mousedown')
+    @eventShadow('#stock-chart-canvas', 'mousedown')
     private onMouseDown(e: MouseEvent): void {
       this.dragging = true;
       this.dragLastX = e.clientX;
@@ -226,7 +226,7 @@ export default (w: Window) => {
       }
     }
 
-    @eventShadowDom('#stock-chart-canvas', 'mousemove')
+    @eventShadow('#stock-chart-canvas', 'mousemove')
     private onMouseMove(e: MouseEvent): void {
       if (this.dragging) {
         const canvas = this.chartCanvas;
@@ -261,7 +261,7 @@ export default (w: Window) => {
       return idx >= s && idx <= eI ? idx : -1;
     }
 
-    @eventShadowDom('#stock-chart-canvas', 'touchstart', { passive: false })
+    @eventShadow('#stock-chart-canvas', 'touchstart', { passive: false })
     private onTouchStart(e: TouchEvent): void {
       e.preventDefault();
       const touches = e.touches;
@@ -286,7 +286,7 @@ export default (w: Window) => {
       }
     }
 
-    @eventShadowDom('#stock-chart-canvas', 'touchmove', { passive: false })
+    @eventShadow('#stock-chart-canvas', 'touchmove', { passive: false })
     private onTouchMove(e: TouchEvent): void {
       e.preventDefault();
       const touches = e.touches;
@@ -320,7 +320,7 @@ export default (w: Window) => {
       }
     }
 
-    @eventShadowDom('#stock-chart-canvas', 'touchend')
+    @eventShadow('#stock-chart-canvas', 'touchend')
     private onTouchEnd(e: TouchEvent): void {
       const moved =
         Math.abs(e.changedTouches[0].clientX - this.downX) +

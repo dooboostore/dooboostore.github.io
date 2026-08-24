@@ -48,6 +48,9 @@ jobs:
       - name: Build Showcase Site
         run: pnpm --filter=dooboostore-center run build
 
+      - name: Generate SSR HTML
+        run: pnpm --filter=dooboostore-center run load-html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

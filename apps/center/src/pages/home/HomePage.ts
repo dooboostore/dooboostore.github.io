@@ -1,7 +1,10 @@
 import {
   elementDefine,
   onConnectedBodyShadow,
-  addEventListener, onInitialize
+  addEventListener, onInitialize,
+  onConnectedBefore,
+  innerHtml,
+  setAttribute
 } from "@dooboostore/simple-web-component";
 import { Router } from '@dooboostore/core-web';
 
@@ -56,11 +59,34 @@ export default (w: Window) => {
       path: '/buyback',
       color: '#1976d2',
       badge: 'New'
+    },
+    {
+      id: 'stock-brain-checker',
+      icon: '🧠',
+      title: '뇌동매매 잠깐!',
+      description: '팔까? 살까? Y/N 체크로 뇌동매매를 막아보세요.',
+      path: '/stock-brain-checker',
+      color: '#ef4444',
+      badge: 'New'
     }
   ];
 
   @elementDefine(tagName, { window: w })
   class HomePage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "@dooboostore Center",
+        ogTitle: "@dooboostore Center",
+        desc: "다양한 미니 앱들을 한 곳에서 만나보세요.",
+        ogDesc: "다양한 미니 앱들을 한 곳에서 만나보세요.",
+      };
+    }
+
     private router!: Router;
 
     @onInitialize

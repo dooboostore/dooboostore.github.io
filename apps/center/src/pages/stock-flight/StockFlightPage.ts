@@ -3,6 +3,9 @@ import {
   onConnectedBodyShadow,
   addEventListener,
   onInitialize,
+  onConnectedBefore,
+  innerHtml,
+  setAttribute,
 } from "@dooboostore/simple-web-component";
 import { Router } from '@dooboostore/core-web';
 import { inject, Sim } from "@dooboostore/simple-boot";
@@ -16,6 +19,20 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class StockFlightPage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "Stock Flight | @dooboostore",
+        ogTitle: "Stock Flight | @dooboostore",
+        desc: "주식 데이터를 비행기 계기판처럼 시각화하여 한눈에 파악하세요.",
+        ogDesc: "주식 데이터를 비행기 계기판처럼 시각화하여 한눈에 파악하세요.",
+      };
+    }
+
     private router!: Router;
     private stockService!: StockService;
     private canvas: HTMLCanvasElement | null = null;

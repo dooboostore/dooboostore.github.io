@@ -1,9 +1,12 @@
 import {
   addEventListener,
   elementDefine,
+  innerHtml,
   innerHtmlLight,
+  onConnectedBefore,
   onConnectedBodyShadow,
   onInitialize,
+  setAttribute,
 } from "@dooboostore/simple-web-component";
 import {Router} from '@dooboostore/core-web';
 import {inject} from "@dooboostore/simple-boot";
@@ -28,6 +31,20 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class BuybackPage extends w.HTMLElement {
+    @onConnectedBefore
+    @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    setPageMeta() {
+      return {
+        titleBody: "자사주 매입 현황 | @dooboostore",
+        ogTitle: "자사주 매입 현황 | @dooboostore",
+        desc: "SK하이닉스, 삼성전자의 자사주 매입 신청 현황을 확인하세요.",
+        ogDesc: "SK하이닉스, 삼성전자 자사주 매입 신청 현황을 확인하세요.",
+      };
+    }
+
     private router!: Router;
     private buybackService!: BuybackServiceType;
 
@@ -914,13 +931,14 @@ export default (w: Window) => {
         @media (max-width: 759px) {
           .notice-table th, .notice-table td { padding: 8px 10px; }
           .company-grid { grid-template-columns: 1fr; }
+          .company-sub-grid .notice-table-wrap { max-height: 112px; }
         }
         @media (min-width: 760px) {
           .company-sub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
           .disclosure-list { max-height: 176px; }
           .card { display: flex; flex-direction: column; max-height: 420px; }
-          .notice-table-wrap { flex: 1; overflow-x: auto; overflow-y: auto; min-height: 0; }
-          .acqdisp-wrap { max-height: none; flex: 1; min-height: 0; }
+          .company-sub-grid .notice-table-wrap { max-height: 168px; flex: none; overflow-x: auto; overflow-y: auto; }
+          .company-sub-grid .acqdisp-wrap { max-height: 128px; flex: none; }
         }
       `;
     }
