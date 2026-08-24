@@ -24,12 +24,20 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), "content", { valueKey: "ogImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), "content", { valueKey: "twitterImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), "content", { valueKey: "twitterTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), "content", { valueKey: "twitterDesc" })
     setPageMeta() {
       return {
         titleBody: "Stock Flight | @dooboostore",
         ogTitle: "Stock Flight | @dooboostore",
         desc: "주식 데이터를 비행기 계기판처럼 시각화하여 한눈에 파악하세요.",
         ogDesc: "주식 데이터를 비행기 계기판처럼 시각화하여 한눈에 파악하세요.",
+        ogImage: "/assets/images/stock-flight-og.png",
+        twitterImage: "/assets/images/stock-flight-og.png",
+        twitterTitle: "Stock Flight | @dooboostore",
+        twitterDesc: "주식 데이터를 비행기 계기판처럼 시각화하여 한눈에 파악하세요.",
       };
     }
 

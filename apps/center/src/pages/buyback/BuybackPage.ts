@@ -36,12 +36,20 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), "content", { valueKey: "ogImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), "content", { valueKey: "twitterImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), "content", { valueKey: "twitterTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), "content", { valueKey: "twitterDesc" })
     setPageMeta() {
       return {
         titleBody: "자사주 매입 현황 | @dooboostore",
         ogTitle: "자사주 매입 현황 | @dooboostore",
         desc: "SK하이닉스, 삼성전자의 자사주 매입 신청 현황을 확인하세요.",
         ogDesc: "SK하이닉스, 삼성전자 자사주 매입 신청 현황을 확인하세요.",
+        ogImage: "/assets/images/buyback-og.png",
+        twitterImage: "/assets/images/buyback-og.png",
+        twitterTitle: "자사주 매입 현황 | @dooboostore",
+        twitterDesc: "SK하이닉스, 삼성전자 자사주 매입 신청 현황을 확인하세요.",
       };
     }
 

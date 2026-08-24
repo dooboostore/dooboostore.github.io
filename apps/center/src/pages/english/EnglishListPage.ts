@@ -24,12 +24,20 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), "content", { valueKey: "ogImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), "content", { valueKey: "twitterImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), "content", { valueKey: "twitterTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), "content", { valueKey: "twitterDesc" })
     setPageMeta() {
       return {
         titleBody: "English Learning | @dooboostore",
         ogTitle: "English Learning | @dooboostore",
         desc: "YouTube 영상으로 영어를 배워보세요. 자막, 사전, 발음 연습까지.",
         ogDesc: "YouTube 영상으로 영어를 배워보세요. 자막, 사전, 발음 연습까지.",
+        ogImage: "/assets/images/english-og.png",
+        twitterImage: "/assets/images/english-og.png",
+        twitterTitle: "English Learning | @dooboostore",
+        twitterDesc: "YouTube 영상으로 영어를 배워보세요. 자막, 사전, 발음 연습까지.",
       };
     }
 

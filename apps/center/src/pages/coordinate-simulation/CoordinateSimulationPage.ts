@@ -24,12 +24,20 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), "content", { valueKey: "ogImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), "content", { valueKey: "twitterImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), "content", { valueKey: "twitterTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), "content", { valueKey: "twitterDesc" })
     setPageMeta() {
       return {
         titleBody: "2D Coordinate Simulation | @dooboostore",
         ogTitle: "2D Coordinate Simulation | @dooboostore",
         desc: "2D 좌표계를 시각화하고 FPS를 조절하며 시뮬레이션해보세요.",
         ogDesc: "2D 좌표계를 시각화하고 FPS를 조절하며 시뮬레이션해보세요.",
+        ogImage: "/assets/images/coordinate-simulation-og.png",
+        twitterImage: "/assets/images/coordinate-simulation-og.png",
+        twitterTitle: "2D Coordinate Simulation | @dooboostore",
+        twitterDesc: "2D 좌표계를 시각화하고 FPS를 조절하며 시뮬레이션해보세요.",
       };
     }
 

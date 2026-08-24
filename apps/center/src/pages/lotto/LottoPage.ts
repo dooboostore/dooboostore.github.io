@@ -27,12 +27,20 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), "content", { valueKey: "ogImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), "content", { valueKey: "twitterImage" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), "content", { valueKey: "twitterTitle" })
+    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), "content", { valueKey: "twitterDesc" })
     setPageMeta() {
       return {
         titleBody: "Lotto Analytics | @dooboostore",
         ogTitle: "Lotto Analytics | @dooboostore",
         desc: "로또 당첨 번호 분석 및 통계 데이터를 시각적으로 확인하세요.",
         ogDesc: "로또 당첨 번호 분석 및 통계 데이터를 시각적으로 확인하세요.",
+        ogImage: "/assets/images/lotto-og.png",
+        twitterImage: "/assets/images/lotto-og.png",
+        twitterTitle: "Lotto Analytics | @dooboostore",
+        twitterDesc: "로또 당첨 번호 분석 및 통계 데이터를 시각적으로 확인하세요.",
       };
     }
 
