@@ -4,9 +4,8 @@ const tagName = "stock-radar";
 
 interface AxisDef {
   id: string;
-  label: string;        // 축 이름 (아래 작은 글씨)
-  labelValue: string;   // 주 라벨 텍스트 (예: "E 45%")
-  color: string;        // 라벨 색
+  label: string;   // 축 이름 (축 끝 라벨)
+  color: string;   // 라벨 색
 }
 interface ScoreSet {
   fill?: string;
@@ -33,7 +32,6 @@ export default (w: Window) => {
         axes.push({
           id: el.getAttribute('id') || el.getAttribute('axis') || `ax${axes.length}`,
           label: el.getAttribute('label') || String(axes.length),
-          labelValue: el.getAttribute('label-value') || '',
           color: el.getAttribute('color') || '#6366f1',
         });
       });
@@ -107,18 +105,33 @@ export default (w: Window) => {
       const angle = (i: number) => -Math.PI / 2 + (Math.PI * 2 * i / n);
       const pt = (i: number, v: number) => [cx + Math.cos(angle(i)) * R * (v / 100), cy + Math.sin(angle(i)) * R * (v / 100)] as const;
 
-      // 그리드 (4단계) + 축선
-      ctx.strokeStyle = '#eef0f4';
-      ctx.lineWidth = 1;
-      for (let r = 1; r <= 4; r++) {
+      // 그리드 5단계 (20, 40, 60, 80, 100%) + 축선
+      const GRID_STEPS = 5;
+      const GRID_LABELS = ['20%', '40%', '60%', '80%', '100%'];
+      for (let r = 1; r <= GRID_STEPS; r++) {
+        const pct = (r / GRID_STEPS) * 100;
         ctx.beginPath();
         for (let i = 0; i < n; i++) {
-          const [x, y] = pt(i, (r / 4) * 100);
+          const [x, y] = pt(i, pct);
           if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
         }
         ctx.closePath();
+        ctx.strokeStyle = r === GRID_STEPS ? '#c8cdd6' : '#eef0f4';
+        ctx.lineWidth = r === GRID_STEPS ? 1.5 : 1;
         ctx.stroke();
+
+        // 12시 방향 축(i=0)을 기준으로 퍼센트 라벨 표기
+        const [lx, ly] = pt(0, pct);
+        ctx.font = '9px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        ctx.fillStyle = '#b0b8c6';
+        ctx.fillText(GRID_LABELS[r - 1], lx, ly - 2);
       }
+
+      // 축선
+      ctx.strokeStyle = '#eef0f4';
+      ctx.lineWidth = 1;
       for (let i = 0; i < n; i++) {
         ctx.beginPath();
         ctx.moveTo(cx, cy);
@@ -140,18 +153,19 @@ export default (w: Window) => {
         if (set.stroke) { ctx.strokeStyle = set.stroke; ctx.lineWidth = set.strokeWidth; ctx.stroke(); }
       }
 
-      // 축 라벨 (label-value 주 라벨 + label 이름)
+      // 축 라벨 (label + color, \n 개행 지원)
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
+      const lineHeight = 13;
       axes.forEach((a, i) => {
-        const [x, y] = pt(i, 112);
+        const lines = a.label.split('\n');
+        const [x, y] = pt(i, 120);
+        const totalH = lines.length * lineHeight;
         ctx.font = 'bold 10px sans-serif';
         ctx.fillStyle = a.color;
-        ctx.fillText(a.labelValue, x, y);
-        const [x2, y2] = pt(i, 128);
-        ctx.font = '9px sans-serif';
-        ctx.fillStyle = '#94a3b8';
-        ctx.fillText(a.label, x2, y2 + ((i === 2 || i === 6) ? 14 : 0)); // 좌우 축 이름만 아래로
+        lines.forEach((line, li) => {
+          ctx.fillText(line, x, y - totalH / 2 + li * lineHeight + lineHeight / 2);
+        });
       });
     }
   }

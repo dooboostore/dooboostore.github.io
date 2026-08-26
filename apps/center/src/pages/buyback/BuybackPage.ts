@@ -958,6 +958,32 @@ export default (w: Window) => {
       this.router?.go('/');
     }
 
+    @addEventListener('#buyback-share-fab', 'click')
+    async onShareFab() {
+      const url = window.location.href;
+      const title = '자사주 매입 신청 현황 | @dooboostore';
+      const text = '자사주 매입 신청 현황을 확인해보세요!';
+      const fab = this.shadowRoot?.querySelector('#buyback-share-fab') as HTMLElement;
+      const flash = () => {
+        if(!fab) return;
+        fab.textContent = '✓';
+        fab.classList.add('copied');
+        setTimeout(() => { if(fab.textContent === '✓') { fab.textContent = '🔗'; fab.classList.remove('copied'); } }, 1500);
+      };
+      try {
+        if((navigator as any).share) {
+          await (navigator as any).share({ title, text, url });
+        } else {
+          await navigator.clipboard?.writeText(url);
+          flash();
+        }
+      } catch(err: any) {
+        if(err?.name !== 'AbortError') {
+          try { await navigator.clipboard?.writeText(url); flash(); } catch {}
+        }
+      }
+    }
+
     @addEventListener('.card-tab-btn', 'click', { delegate: true, root: 'light' })
     onCardTabClick(e: Event) {
       const btn = (e.target as HTMLElement).closest('.card-tab-btn') as HTMLElement;
@@ -1136,6 +1162,9 @@ export default (w: Window) => {
             .header-title { font-size: 18px; }
             .content { padding: 12px; }
           }
+          .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#1565c0,#42a5f5);color:#fff;border:none;box-shadow:0 6px 20px rgba(25,118,210,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
+          .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(25,118,210,0.55)}
+          .share-fab.copied{background:#10b981;box-shadow:0 6px 20px rgba(16,185,129,0.45)}
         </style>
 
         <div class="header">
@@ -1151,6 +1180,7 @@ export default (w: Window) => {
         <main class="content">
           <slot></slot>
         </main>
+        <button id="buyback-share-fab" class="share-fab" title="공유">🔗</button>
       `;
     }
   }

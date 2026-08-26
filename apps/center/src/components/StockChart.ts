@@ -28,7 +28,7 @@ export interface ChartShapeBase {
   fill?: string;
   stroke?: string;
   strokeWidth?: number;
-  target?: 'candle' | 'volume';
+  target?: 'candle' | 'volume' | 'all';
 }
 export type ChartShape =
   | (ChartShapeBase & { type: 'rect'; x: number; y: number; width: number; height: number })
@@ -122,6 +122,14 @@ export default (w: Window) => {
       if (this.chartCanvas) this.drawChart();
     }
 
+    private disabledEvent: boolean = false;
+
+    // disabled-event 속성 — true면 모든 포인터/터치/휠 이벤트 리스너를 무시 (기본값: 활성)
+    @changedAttribute('disabled-event', { type: Boolean })
+    onDisabledEventChanged(value: boolean) {
+      this.disabledEvent = !!value;
+    }
+
     private dragLastX: number = 0;
     private dragging: boolean = false;
     private downX: number = 0;
@@ -152,7 +160,10 @@ export default (w: Window) => {
           :host { display: block; position: relative; }
           #stock-chart-canvas {
             display: block; width: 100%; height: 100%;
-            touch-action: none; cursor: crosshair;
+            touch-action: pan-y; cursor: crosshair;
+          }
+          :host([enabled-control]) #stock-chart-canvas {
+            touch-action: none;
           }
           .chart-readout {
             position: absolute; top: 8px; left: 10px;
@@ -293,6 +304,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'wheel', { passive: false })
     private onWheel(e: WheelEvent): void {
+      if (this.disabledEvent) return;
       if (!this.controlsEnabled) return;
       e.preventDefault();
       const canvas = this.chartCanvas;
@@ -315,6 +327,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'mousedown')
     private onMouseDown(e: MouseEvent): void {
+      if (this.disabledEvent) return;
       if (!this.controlsEnabled && !this.readoutEnabled) return;
       this.dragging = true;
       this.dragLastX = e.clientX;
@@ -324,6 +337,7 @@ export default (w: Window) => {
 
     @eventWindow('mouseup')
     private onMouseUp(e: MouseEvent): void {
+      if (this.disabledEvent) return;
       if (!this.dragging) return;
       this.dragging = false;
       const moved =
@@ -337,6 +351,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'mousemove')
     private onMouseMove(e: MouseEvent): void {
+      if (this.disabledEvent) return;
       if (this.controlsEnabled && this.dragging) {
         const canvas = this.chartCanvas;
         if (!canvas) return;
@@ -372,10 +387,12 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'touchstart', { passive: false })
     private onTouchStart(e: TouchEvent): void {
+      if (this.disabledEvent) return;
       if (!this.controlsEnabled && !this.readoutEnabled) return;
-      e.preventDefault();
       const touches = e.touches;
       if (touches.length === 2) {
+        // 핀치 줌: 스크롤 막고 핀치 처리
+        e.preventDefault();
         this.pinchDist0 = Math.abs(touches[0].clientX - touches[1].clientX);
         this.pinchSpan0 = this.viewEnd - this.viewStart + 1;
         const canvas = this.chartCanvas;
@@ -389,6 +406,7 @@ export default (w: Window) => {
         }
         this.dragging = false;
       } else if (touches.length === 1) {
+        // 1터치: 드래그 여부는 touchmove에서 판단하므로 여기선 preventDefault 안 함
         this.dragging = true;
         this.dragLastX = touches[0].clientX;
         this.downX = touches[0].clientX;
@@ -398,10 +416,12 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'touchmove', { passive: false })
     private onTouchMove(e: TouchEvent): void {
+      if (this.disabledEvent) return;
       if (!this.controlsEnabled) return;
-      e.preventDefault();
       const touches = e.touches;
       if (touches.length === 2 && this.pinchDist0 > 0) {
+        // 핀치 줌: 항상 스크롤 막음
+        e.preventDefault();
         const dist = Math.abs(touches[0].clientX - touches[1].clientX);
         if (dist === 0) return;
         const factor = this.pinchDist0 / dist;
@@ -421,7 +441,10 @@ export default (w: Window) => {
           Math.ceil(this.viewEnd) - Math.floor(this.viewStart) + 1;
         const candleW = plotW / dataLen;
         const dx = touches[0].clientX - this.dragLastX;
-        if (Math.abs(dx) >= 1) {
+        const dy = touches[0].clientY - this.downY;
+        // 수평 이동이 수직보다 클 때만 차트 드래그로 처리 (스크롤 방해 안 함)
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) >= 1) {
+          e.preventDefault();
           this.viewStart += -dx / candleW;
           this.viewEnd += -dx / candleW;
           this.clampView();
@@ -433,6 +456,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'touchend')
     private onTouchEnd(e: TouchEvent): void {
+      if (this.disabledEvent) return;
       const moved =
         Math.abs(e.changedTouches[0].clientX - this.downX) +
         Math.abs(e.changedTouches[0].clientY - this.downY);
