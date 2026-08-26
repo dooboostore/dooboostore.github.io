@@ -58,7 +58,7 @@ function coloredTypeHero(type: string, scores?: number[]): string {
 
 function badgeInner(type: string, colored: string): string {
   const name = NPTI_TYPE_INFO[type]?.name ?? '';
-  return name ? `${colored}<span class="badge-name">${name}</span>` : colored;
+  return name ? `<span class="badge-name">${name}</span>${colored}` : colored;
 }
 
 function computeScores8(candles: BuybackChartPoint[], marketValue = 1e14, baselineAmount?: number){
@@ -253,7 +253,7 @@ export default (w: Window) => {
       if(t){
         if(this.candles.length) {
           const type = nptiType(bodyScores);
-          t.innerHTML = coloredTypeHero(type, bodyScores) + `<span class="hero-name">${NPTI_TYPE_INFO[type]?.name ?? ''}</span>`;
+          t.innerHTML = `<span class="hero-name">${NPTI_TYPE_INFO[type]?.name ?? ''}</span>${coloredTypeHero(type, bodyScores)}`;
           t.dataset.type = type;
         } else t.innerHTML = '--';
       }
@@ -650,7 +650,7 @@ export default (w: Window) => {
           .npti-hero-letters{display:flex;align-items:center;gap:12px}
           .npti-hero-type:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,23,42,0.24)}
           .hero-name{font-size:12px;font-weight:600;color:rgba(255,255,255,0.5);letter-spacing:0.3px;white-space:nowrap}
-          .badge-name{display:block;font-size:9px;font-weight:500;color:rgba(255,255,255,0.55);margin-top:3px;white-space:nowrap;text-align:center}
+          .badge-name{display:block;font-size:9px;font-weight:500;color:rgba(255,255,255,0.55);margin-bottom:3px;white-space:nowrap;text-align:center}
           .window-panel{margin:10px 12px 12px;border:1px dashed #c7d2fe;border-radius:12px;padding:12px;background:#f5f7ff}
           .window-panel summary{list-style:none;cursor:pointer}
           .window-panel summary::-webkit-details-marker{display:none}
