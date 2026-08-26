@@ -7,6 +7,7 @@ import LottoPage from './lotto/LottoPage';
 import CoordinateSimulationPage from './coordinate-simulation/CoordinateSimulationPage';
 import BuybackPage from './buyback/BuybackPage';
 import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
+import StockNptiPage from './stock-npti/StockNptiPage';
 
 export const pageFactories = [
   RootRouter,
@@ -17,5 +18,6 @@ export const pageFactories = [
   LottoPage,
   CoordinateSimulationPage,
   BuybackPage,
-  StockBrainCheckerPage
+  StockBrainCheckerPage,
+  StockNptiPage
 ];

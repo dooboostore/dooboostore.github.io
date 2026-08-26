@@ -530,10 +530,14 @@ export default (container: symbol): ConstructorType<BuybackService> => {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const json = await response.json();
         const list = json.dataList || [];
-        return list.map((item: any) => ({
-          code: item.isu_cd || item.code || '',
-          name: item.corp_name || item.name || '',
-        }));
+        // findcorp-ac는 이름 검색 시 isu_cd=코드/corp_name=이름, 코드 검색 시 반대로 뒤집혀 반환될 수 있음 → 정규화
+        return list.map((item: any) => {
+          const a = String(item.isu_cd || item.code || '');
+          const b = String(item.corp_name || item.name || '');
+          const aIsCode = /^\d{6}$/.test(a);
+          const bIsCode = /^\d{6}$/.test(b);
+          return { code: aIsCode ? a : (bIsCode ? b : a), name: aIsCode ? b : a };
+        });
       } catch (e) {
         console.error('[BuybackService] Company search failed:', e);
         return [];

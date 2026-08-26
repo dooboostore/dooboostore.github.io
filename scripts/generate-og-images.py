@@ -22,6 +22,7 @@ Page → emoji mapping:
   lotto                    🎰 1f3b0
   stock-brain-checker      🧠 1f9e0
   stock-flight             ✈️  2708
+  stock-npti               🧬 1f9ec
 """
 import argparse
 import os
@@ -46,6 +47,7 @@ MAPPING = [
     ("lotto-og.png", "1f3b0", "🎰"),
     ("stock-brain-checker-og.png", "1f9e0", "🧠"),
     ("stock-flight-og.png", "2708", "✈️"),
+    ("stock-npti-og.png", "1f9ec", "🧬"),
 ]
 
 TWEMOJI_BASE = "https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/{code}.png"

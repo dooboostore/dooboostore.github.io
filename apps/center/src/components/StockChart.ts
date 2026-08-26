@@ -23,6 +23,24 @@ export interface StockChartPoint {
   volume: number;
 }
 
+/** 자식 <rect>/<arc> 로 그려지는 오버레이 도형 (캔버스 픽셀 좌표) */
+export interface ChartShapeBase {
+  fill?: string;
+  stroke?: string;
+  strokeWidth?: number;
+  target?: 'candle' | 'volume';
+}
+export type ChartShape =
+  | (ChartShapeBase & { type: 'rect'; x: number; y: number; width: number; height: number })
+  | (ChartShapeBase & { type: 'arc'; x: number; y: number; r: number; start: number; end: number })
+  // 날짜 기반 rect — x는 date-start/date-end 캔들 위치, y는 전체 가격 범위 자동 계산
+  | (ChartShapeBase & { type: 'rect-date'; dateStart: string; dateEnd: string });
+
+function num(v: string | null | undefined): number {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+}
+
 export interface StockChart extends HTMLElement {
   /** 외부에서 데이터 주입 (tick 요소 대신 사용 가능) */
   setData(points: StockChartPoint[]): void;
@@ -36,16 +54,71 @@ export default (w: Window) => {
   class StockChartImpl extends w.HTMLElement implements StockChart {
     // ---------- 상태 ----------
     private points: StockChartPoint[] = [];
+    private shapes: ChartShape[] = [];
     private viewStart: number = 0;
     private viewEnd: number = 0;
     private selectedIdx: number = -1;
     private viewInitDone: boolean = false;
     private showCloseLine: boolean = false;
+    private hiddenVolume: boolean = false;
+    private showMinMax: boolean = false;
+    private showLastLine: boolean = false;
+    private controlsEnabled: boolean = false;
+    private readoutEnabled: boolean = false;
+    private hiddenXLabel: boolean = false;
+    private hiddenYLabel: boolean = false;
 
     // show-close-line 속성 변경 시 호출 (기본값: 안 보임)
     @changedAttribute('show-close-line', { type: Boolean })
     onShowCloseLineChanged(value: boolean) {
       this.showCloseLine = !!value;
+      if (this.chartCanvas) this.drawChart();
+    }
+
+    // hidden-volume 속성 — true면 거래량 영역 숨김 (기본값: 보임)
+    @changedAttribute('hidden-volume', { type: Boolean })
+    onHiddenVolumeChanged(value: boolean) {
+      this.hiddenVolume = !!value;
+      if (this.chartCanvas) this.drawChart();
+    }
+
+    // show-min-max 속성 — true면 최고/최저 툴팁 표시 (기본값: 안 보임)
+    @changedAttribute('show-min-max', { type: Boolean })
+    onShowMinMaxChanged(value: boolean) {
+      this.showMinMax = !!value;
+      if (this.chartCanvas) this.drawChart();
+    }
+
+    // show-last-line 속성 — true면 마지막 종가 가로점선 + 태그 표시 (기본값: 안 보임)
+    @changedAttribute('show-last-line', { type: Boolean })
+    onShowLastLineChanged(value: boolean) {
+      this.showLastLine = !!value;
+      if (this.chartCanvas) this.drawChart();
+    }
+
+    // enabled-control 속성 — true면 드래그 이동/휠 줌/핀치 등 제어 활성화 (기본값: 비활성)
+    @changedAttribute('enabled-control', { type: Boolean })
+    onEnabledControlChanged(value: boolean) {
+      this.controlsEnabled = !!value;
+    }
+
+    // enabled-readout 속성 — true면 클릭/탭 시 캔들 정보(리드아웃) 표시 (기본값: 비활성)
+    @changedAttribute('enabled-readout', { type: Boolean })
+    onEnabledReadoutChanged(value: boolean) {
+      this.readoutEnabled = !!value;
+    }
+
+    // hidden-x-label — true면 x축(날짜) 라벨 숨김 (기본값: 보임)
+    @changedAttribute('hidden-x-label', { type: Boolean })
+    onHiddenXLabelChanged(value: boolean) {
+      this.hiddenXLabel = !!value;
+      if (this.chartCanvas) this.drawChart();
+    }
+
+    // hidden-y-label — true면 y축(가격/거래량 수치) 라벨 숨김 (기본값: 보임)
+    @changedAttribute('hidden-y-label', { type: Boolean })
+    onHiddenYLabelChanged(value: boolean) {
+      this.hiddenYLabel = !!value;
       if (this.chartCanvas) this.drawChart();
     }
 
@@ -101,6 +174,7 @@ export default (w: Window) => {
     onConnected() {
       // tick 자식 요소들로 데이터 구성
       this.collectFromTicks();
+      this.collectFromShapes();
       if (this.points.length === 0) {
         // 사용자가 setData를 부르길 기다림
         return;
@@ -136,16 +210,50 @@ export default (w: Window) => {
       this.points = points;
     }
 
+    // 자식 <rect>/<arc> 요소를 도형으로 수집 (캔버스 픽셀 좌표 오버레이)
+    private collectFromShapes(): void {
+      const shapes: ChartShape[] = [];
+      this.querySelectorAll(":scope > rect").forEach((el) => {
+        const attr = (n: string) => el.getAttribute(n);
+        const base = { fill: attr("fill") || attr("fill-style") || undefined, stroke: attr("stroke") || attr("stroke-style") || undefined, strokeWidth: num(attr("stroke-width")), target: (attr("target") === 'volume' ? 'volume' : 'candle') as 'candle' | 'volume' };
+        const ds = attr("date-start"), de = attr("date-end");
+        if (ds && de) {
+          shapes.push({ type: 'rect-date', dateStart: ds, dateEnd: de, ...base });
+          return;
+        }
+        // start-x/start-y/end-x/end-y 또는 x/y/width/height
+        const sx = num(attr("start-x")), sy = num(attr("start-y"));
+        const ex = num(attr("end-x")), ey = num(attr("end-y"));
+        const x = sx || num(attr("x"));
+        const y = sy || num(attr("y"));
+        const width = (ex && sx) ? ex - sx : num(attr("width"));
+        const height = (ey && sy) ? ey - sy : num(attr("height"));
+        shapes.push({ type: "rect", x, y, width, height, ...base });
+      });
+      this.querySelectorAll(":scope > arc").forEach((el) => {
+        const attr = (n: string) => el.getAttribute(n);
+        shapes.push({
+          type: "arc",
+          x: num(attr("x")), y: num(attr("y")), r: num(attr("r") || attr("radius")),
+          start: num(attr("start") || attr("start-angle")), end: num(attr("end") || attr("end-angle")),
+          fill: attr("fill") || attr("fill-style") || undefined,
+          stroke: attr("stroke") || attr("stroke-style") || undefined,
+          strokeWidth: num(attr("stroke-width")),
+        });
+      });
+      this.shapes = shapes;
+    }
+
     // tick 자식 요소 변경(추가/삭제/속성) 시 재수집 후 다시 그림
     // 셀렉터 생략 → $this(host, light DOM) observe
     @mutationObserverLight({ childList: true, attributes: true, subtree: true })
     private onTicksMutated(matchedEls: HTMLElement[]): void {
       this.collectFromTicks();
+      this.collectFromShapes();
       if (this.chartCanvas && this.points.length > 0) {
         if (!this.viewInitDone) {
           const n = this.points.length;
-          const span = Math.min(60, n);
-          this.viewStart = Math.max(0, n - span);
+          this.viewStart = 0;
           this.viewEnd = n - 1;
           this.viewInitDone = true;
         }
@@ -166,8 +274,7 @@ export default (w: Window) => {
       if (!canvas || this.points.length === 0) return;
       if (!this.viewInitDone) {
         const n = this.points.length;
-        const span = Math.min(60, n);
-        this.viewStart = Math.max(0, n - span);
+        this.viewStart = 0;
         this.viewEnd = n - 1;
         this.viewInitDone = true;
       }
@@ -186,6 +293,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'wheel', { passive: false })
     private onWheel(e: WheelEvent): void {
+      if (!this.controlsEnabled) return;
       e.preventDefault();
       const canvas = this.chartCanvas;
       if (!canvas) return;
@@ -207,6 +315,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'mousedown')
     private onMouseDown(e: MouseEvent): void {
+      if (!this.controlsEnabled && !this.readoutEnabled) return;
       this.dragging = true;
       this.dragLastX = e.clientX;
       this.downX = e.clientX;
@@ -219,7 +328,7 @@ export default (w: Window) => {
       this.dragging = false;
       const moved =
         Math.abs(e.clientX - this.downX) + Math.abs(e.clientY - this.downY);
-      if (moved < 5) {
+      if (this.readoutEnabled && moved < 5) {
         const idx = this.indexAtX(e.clientX);
         this.selectedIdx = idx === this.selectedIdx ? -1 : idx;
         this.drawChart();
@@ -228,7 +337,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'mousemove')
     private onMouseMove(e: MouseEvent): void {
-      if (this.dragging) {
+      if (this.controlsEnabled && this.dragging) {
         const canvas = this.chartCanvas;
         if (!canvas) return;
         const rect = canvas.getBoundingClientRect();
@@ -263,6 +372,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'touchstart', { passive: false })
     private onTouchStart(e: TouchEvent): void {
+      if (!this.controlsEnabled && !this.readoutEnabled) return;
       e.preventDefault();
       const touches = e.touches;
       if (touches.length === 2) {
@@ -288,6 +398,7 @@ export default (w: Window) => {
 
     @eventShadow('#stock-chart-canvas', 'touchmove', { passive: false })
     private onTouchMove(e: TouchEvent): void {
+      if (!this.controlsEnabled) return;
       e.preventDefault();
       const touches = e.touches;
       if (touches.length === 2 && this.pinchDist0 > 0) {
@@ -327,7 +438,7 @@ export default (w: Window) => {
         Math.abs(e.changedTouches[0].clientY - this.downY);
       const wasPinch = this.pinchDist0 > 0;
       this.pinchDist0 = 0;
-      if (this.dragging && !wasPinch && moved < 5) {
+      if (this.readoutEnabled && this.dragging && !wasPinch && moved < 5) {
         const idx = this.indexAtX(e.changedTouches[0].clientX);
         this.selectedIdx = idx === this.selectedIdx ? -1 : idx;
         this.drawChart();
@@ -355,12 +466,15 @@ export default (w: Window) => {
       const W = cssW,
         H = cssH;
       const padL = this.padL,
-        padR = this.padR,
-        padT = 8;
-      const axisH = 18,
-        gap = 8;
-      const volH = Math.max(36, H * 0.16);
-      const priceH = H - padT - axisH - volH - gap;
+        padT = 26;
+      // 라벨 숨김 시 해당 여백을 그래프로 확장
+      const padR = this.hiddenYLabel ? 8 : this.padR;
+      const axisH = this.hiddenXLabel ? 6 : 18;
+      const gap = this.hiddenVolume ? 0 : 4;
+      // 캔들:볼륨 = 7:3
+      const plotH = H - padT - axisH - gap;
+      const volH = this.hiddenVolume ? 0 : Math.max(8, plotH * 0.3);
+      const priceH = plotH - volH;
       const plotW = W - padL - padR;
 
       const UP = "#e5484d",
@@ -399,36 +513,42 @@ export default (w: Window) => {
         ctx.moveTo(padL, y);
         ctx.lineTo(W - padR, y);
         ctx.stroke();
-        ctx.fillStyle = "#98a2b3";
-        ctx.textAlign = "left";
-        ctx.fillText(p.toLocaleString(), W - padR + 6, y);
+        if (!this.hiddenYLabel) {
+          ctx.fillStyle = "#98a2b3";
+          ctx.textAlign = "left";
+          ctx.fillText(p.toLocaleString(), W - padR + 6, y);
+        }
       }
 
       // 거래량 영역 라인 + y축 수치 라벨
       const volTop = padT + priceH + gap;
-      const volPlotH = volH - 6;
-      const fmtVol = (v: number): string => {
-        if (v >= 100000000) return (v / 100000000).toFixed(1) + "억";
-        if (v >= 10000) return Math.round(v / 10000).toLocaleString() + "만";
-        return v.toLocaleString();
-      };
-      ctx.strokeStyle = "#f6f7f9";
-      for (let g = 1; g <= 2; g++) {
-        const vv = (maxV * g) / 2;
-        const vy = H - axisH - (volPlotH * g) / 2;
+      const volPlotH = Math.max(0, volH - 6);
+      if (!this.hiddenVolume) {
+        const fmtVol = (v: number): string => {
+          if (v >= 100000000) return (v / 100000000).toFixed(1) + "억";
+          if (v >= 10000) return Math.round(v / 10000).toLocaleString() + "만";
+          return v.toLocaleString();
+        };
+        ctx.strokeStyle = "#f6f7f9";
+        for (let g = 1; g <= 2; g++) {
+          const vv = (maxV * g) / 2;
+          const vy = H - axisH - (volPlotH * g) / 2;
+          ctx.beginPath();
+          ctx.moveTo(padL, vy);
+          ctx.lineTo(W - padR, vy);
+          ctx.stroke();
+          if (!this.hiddenYLabel) {
+            ctx.fillStyle = "#98a2b3";
+            ctx.textAlign = "left";
+            ctx.fillText(fmtVol(vv), W - padR + 6, vy);
+          }
+        }
+        ctx.strokeStyle = "#f0f2f5";
         ctx.beginPath();
-        ctx.moveTo(padL, vy);
-        ctx.lineTo(W - padR, vy);
+        ctx.moveTo(padL, volTop);
+        ctx.lineTo(W - padR, volTop);
         ctx.stroke();
-        ctx.fillStyle = "#98a2b3";
-        ctx.textAlign = "left";
-        ctx.fillText(fmtVol(vv), W - padR + 6, vy);
       }
-      ctx.strokeStyle = "#f0f2f5";
-      ctx.beginPath();
-      ctx.moveTo(padL, volTop);
-      ctx.lineTo(W - padR, volTop);
-      ctx.stroke();
 
       // 세로 시간 그리드 (가격+거래량 영역 관통)
       const step = Math.max(1, Math.ceil(data.length / 6));
@@ -460,10 +580,12 @@ export default (w: Window) => {
         const hgt = Math.max(1, Math.abs(yC - yO));
         ctx.fillStyle = color;
         ctx.fillRect(x - bodyW / 2, top, bodyW, hgt);
-        const vh = maxV > 0 ? (d.volume / maxV) * (volH - 6) : 0;
-        ctx.globalAlpha = 0.55;
-        ctx.fillRect(x - bodyW / 2, H - axisH - vh, bodyW, vh);
-        ctx.globalAlpha = 1;
+        if (!this.hiddenVolume) {
+          const vh = maxV > 0 ? (d.volume / maxV) * (volH - 6) : 0;
+          ctx.globalAlpha = 0.55;
+          ctx.fillRect(x - bodyW / 2, H - axisH - vh, bodyW, vh);
+          ctx.globalAlpha = 1;
+        }
       }
 
       // 종가 연결선 (캔들 위에 그려짐, show-close-line 속성 있을 때만)
@@ -528,50 +650,56 @@ export default (w: Window) => {
         ctx.textBaseline = "middle";
         ctx.fillText(text, cx, ty + th / 2 + 0.5);
       };
-      drawChartTip(
-        hiIdx,
-        data[hiIdx].high,
-        `최고: ${data[hiIdx].high.toLocaleString()}원`,
-        true,
-      );
-      drawChartTip(
-        loIdx,
-        data[loIdx].low,
-        `최저: ${data[loIdx].low.toLocaleString()}원`,
-        false,
-      );
-
-      // 날짜 축
-      ctx.fillStyle = "#98a2b3";
-      ctx.textAlign = "center";
-      for (let i = 0; i < data.length; i += step) {
-        const label = data[i].date.slice(5);
-        ctx.fillText(label, xCandle(i), H - axisH / 2);
+      if (this.showMinMax) {
+        drawChartTip(
+          hiIdx,
+          data[hiIdx].high,
+          `최고: ${data[hiIdx].high.toLocaleString()}원`,
+          true,
+        );
+        drawChartTip(
+          loIdx,
+          data[loIdx].low,
+          `최저: ${data[loIdx].low.toLocaleString()}원`,
+          false,
+        );
       }
 
-      // 마지막 종가 라인
-      const last = data[data.length - 1];
-      const lastUp = last.close >= last.open;
-      const ly = yPrice(last.close);
-      ctx.strokeStyle = lastUp ? UP : DOWN;
-      ctx.setLineDash([4, 3]);
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(padL, ly);
-      ctx.lineTo(W - padR, ly);
-      ctx.stroke();
-      ctx.setLineDash([]);
-      // 종가 태그
-      const tagText = last.close.toLocaleString();
-      ctx.fillStyle = lastUp ? UP : DOWN;
-      const tagW = ctx.measureText(tagText).width + 10;
-      ctx.beginPath();
-      const tagY = Math.max(padT, Math.min(H - axisH - volH - gap - 8, ly));
-      ctx.roundRect(W - padR + 2, tagY - 8, tagW, 16, 4);
-      ctx.fill();
-      ctx.fillStyle = "#fff";
-      ctx.textAlign = "left";
-      ctx.fillText(tagText, W - padR + 7, tagY);
+      // 날짜 축
+      if (!this.hiddenXLabel) {
+        ctx.fillStyle = "#98a2b3";
+        ctx.textAlign = "center";
+        for (let i = 0; i < data.length; i += step) {
+          const label = data[i].date.slice(5);
+          ctx.fillText(label, xCandle(i), H - axisH / 2);
+        }
+      }
+
+      // 마지막 종가 라인 (show-last-line 속성 있을 때만)
+      if (this.showLastLine) {
+        const last = data[data.length - 1];
+        const lastUp = last.close >= last.open;
+        const ly = yPrice(last.close);
+        ctx.strokeStyle = lastUp ? UP : DOWN;
+        ctx.setLineDash([4, 3]);
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padL, ly);
+        ctx.lineTo(W - padR, ly);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        // 종가 태그
+        const tagText = last.close.toLocaleString();
+        ctx.fillStyle = lastUp ? UP : DOWN;
+        const tagW = ctx.measureText(tagText).width + 10;
+        ctx.beginPath();
+        const tagY = Math.max(padT, Math.min(H - axisH - volH - gap - 8, ly));
+        ctx.roundRect(W - padR + 2, tagY - 8, tagW, 16, 4);
+        ctx.fill();
+        ctx.fillStyle = "#fff";
+        ctx.textAlign = "left";
+        ctx.fillText(tagText, W - padR + 7, tagY);
+      }
 
       // 선택된 캔들: 크로스헤어 + 종가 가로선 + 리드아웃
       const readout = this.readoutEl;
@@ -593,7 +721,7 @@ export default (w: Window) => {
         ctx.moveTo(padL, cy);
         ctx.lineTo(W - padR, cy);
         ctx.stroke();
-        if (d.volume > 0) {
+        if (!this.hiddenVolume && d.volume > 0) {
           const vy = H - axisH - (d.volume / maxV) * volPlotH;
           ctx.beginPath();
           ctx.moveTo(padL, vy);
@@ -648,6 +776,52 @@ export default (w: Window) => {
         });
       } else if (readout) {
         readout.style.display = "none";
+      }
+
+      // 자식 <rect>/<arc> 도형 오버레이
+      this.drawShapes(ctx, { data, xCandle, bodyW, yPrice, minP, maxP, volTop, H, axisH, padT });
+    }
+
+    private drawShapes(ctx: CanvasRenderingContext2D, c: { data: StockChartPoint[]; xCandle: (i: number) => number; bodyW: number; yPrice: (p: number) => number; minP: number; maxP: number; volTop: number; H: number; axisH: number; padT: number }): void {
+      for (const s of this.shapes) {
+        ctx.save();
+        if (s.fill) ctx.fillStyle = s.fill;
+        if (s.stroke) {
+          ctx.strokeStyle = s.stroke;
+          ctx.lineWidth = s.strokeWidth || 1;
+        }
+        if (s.type === 'rect-date') {
+          const i0 = c.data.findIndex(d => d.date === s.dateStart);
+          const i1 = c.data.findIndex(d => d.date === s.dateEnd);
+          if (i0 < 0 || i1 < 0 || i1 < i0) continue;
+          const x = c.xCandle(i0) - c.bodyW / 2;
+          const w = c.xCandle(i1) + c.bodyW / 2 - x;
+          let y: number, h: number;
+          if (s.target === 'all') {
+            // 가격 범위 최고점 ~ x축 (캔들+볼륨을 하나로)
+            y = c.yPrice(c.maxP);
+            h = (c.H - c.axisH) - y;
+          } else if (s.target === 'volume') {
+            // 거래량 영역 상단 ~ x축
+            y = c.volTop;
+            h = (c.H - c.axisH) - c.volTop;
+          } else {
+            // 캔들 가격 범위 (전체 max~min)
+            y = c.yPrice(c.maxP);
+            h = c.yPrice(c.minP) - y;
+          }
+          if (s.fill) ctx.fillRect(x, y, w, h);
+          if (s.stroke) ctx.strokeRect(x, y, w, h);
+        } else if (s.type === 'rect') {
+          if (s.fill) ctx.fillRect(s.x, s.y, s.width, s.height);
+          if (s.stroke) ctx.strokeRect(s.x, s.y, s.width, s.height);
+        } else if (s.type === 'arc') {
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, s.start, s.end);
+          if (s.fill) ctx.fill();
+          if (s.stroke) ctx.stroke();
+        }
+        ctx.restore();
       }
     }
   }

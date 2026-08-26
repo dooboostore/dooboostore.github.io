@@ -439,7 +439,7 @@ export default (w: Window) => {
               ${this.chartLoading ? '<div class="chart-loading"><div class="spinner"></div><span>차트 데이터를 불러오는 중...</span></div>' : ''}
               ${this.chartError ? `<div class="chart-error">${this.chartError}</div>` : ''}
               ${!this.chartLoading && !this.chartError && this.chartData.length > 0 ? `
-                <stock-chart>${ticks}</stock-chart>
+                <stock-chart enabled-control enabled-readout show-last-line>${ticks}</stock-chart>
               ` : ''}
               ${!this.chartLoading && !this.chartError && this.chartData.length === 0 ? '<div class="chart-error">차트 데이터가 없습니다.</div>' : ''}
             </div>

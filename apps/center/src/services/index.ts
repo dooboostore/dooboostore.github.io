@@ -11,11 +11,13 @@ import { OllamaService } from './OllamaService';
 import { StockService } from './stock/StockService';
 import { LottoService } from './lotto/LottoService';
 import { BuybackService } from './buyback/BuybackService';
+import { TossService } from './toss/TossService';
 
 import OllamaServiceFactory from './OllamaService';
 import StockServiceFactory from './stock/StockService';
 import LottoServiceFactory from './lotto/LottoService';
 import BuybackServiceFactory from './buyback/BuybackService';
+import TossServiceFactory from './toss/TossService';
 
 // 모든 서비스팩토리 집합: 확장에 따라 추가
 export const serviceFactories: ((s: symbol) => any)[] = [
@@ -24,6 +26,7 @@ export const serviceFactories: ((s: symbol) => any)[] = [
   StockServiceFactory,
   LottoServiceFactory,
   BuybackServiceFactory,
+  TossServiceFactory,
   // ...xxxServiceFactories, // 추가 가능
 ];
 
@@ -40,4 +43,5 @@ export {
   StockService,
   LottoService,
   BuybackService,
+  TossService,
 };

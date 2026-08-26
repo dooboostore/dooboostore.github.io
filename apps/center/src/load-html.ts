@@ -43,6 +43,27 @@ async function renderPage(initialPath: string, templateHtml: string): Promise<st
   (global as any).CanvasGradient = (w as any).CanvasGradient;
   (global as any).Path2D = (w as any).Path2D;
   (global as any).ImageData = (w as any).ImageData;
+  // ResizeObserver / MutationObserver polyfill for SSR
+  const ssrRO = class ResizeObserver {
+    constructor(_cb?: any) {}
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  } as any;
+  (w as any).ResizeObserver = ssrRO;
+  (global as any).ResizeObserver = ssrRO;
+  (globalThis as any).ResizeObserver = ssrRO;
+  if (typeof (global as any).MutationObserver === 'undefined') {
+    const ssrMO = class MutationObserver {
+      constructor(_cb?: any) {}
+      observe() {}
+      disconnect() {}
+      takeRecords() { return []; }
+    } as any;
+    (w as any).MutationObserver = ssrMO;
+    (global as any).MutationObserver = ssrMO;
+    (globalThis as any).MutationObserver = ssrMO;
+  }
   // requestAnimationFrame polyfill for SSR (dom-parser WindowBase throws — unconditional override)
   (w as any).requestAnimationFrame = (cb: FrameRequestCallback) => setTimeout(cb, 0) as unknown as number;
   (w as any).cancelAnimationFrame = (id: number) => clearTimeout(id as any);
@@ -126,7 +147,7 @@ async function main() {
   const html = fs.readFileSync(templatePath, 'utf-8');
   console.log('[load-html] template loaded:', templatePath, `${html.length} bytes`);
 
-  const pages = ["/english", "/stock-flight", "/lotto", "/coordinate-simulation", "/buyback", "/stock-brain-checker"];
+  const pages = ["/english", "/stock-flight", "/lotto", "/coordinate-simulation", "/buyback", "/stock-brain-checker", "/stock-npti"];
   const outDir = path.resolve(__dirname, '../dist');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 

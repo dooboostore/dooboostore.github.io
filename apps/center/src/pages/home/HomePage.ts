@@ -68,6 +68,15 @@ export default (w: Window) => {
       path: '/stock-brain-checker',
       color: '#ef4444',
       badge: 'New'
+    },
+    {
+      id: 'stock-npti',
+      icon: '🧬',
+      title: '주식 NPTI',
+      description: '내 종목의 MBTI는? 6각 레이더와 50봉 궤적으로 성격을 분석해보세요.',
+      path: '/stock-npti',
+      color: '#6366f1',
+      badge: 'New'
     }
   ];
 

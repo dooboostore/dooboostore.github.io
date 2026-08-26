@@ -75,6 +75,12 @@ export default (w: Window) => {
       return `<center-stock-brain-checker-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-npti"], { order: 8 })
+    @innerHtmlLight
+    handleStockNpti() {
+      return `<center-stock-npti-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {
