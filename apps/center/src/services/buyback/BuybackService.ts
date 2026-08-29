@@ -196,7 +196,7 @@ export interface BuybackService {
 export default (container: symbol): ConstructorType<BuybackService> => {
   @Sim({ symbol: BuybackService.SYMBOL, container: container })
   class BuybackServiceImpl implements BuybackService {
-    private readonly CORS_PROXY = 'https://corsproxy.io/?url=';
+    private readonly CORS_PROXY = 'https://sparkling-dew-b13c.visualkhh.workers.dev/?url=';
     private readonly API_BASE = 'https://mkind.krx.co.kr/api/trstk/applied';
     private readonly TRADED_API_BASE = 'https://mkind.krx.co.kr/api/trstk/traded';
     private readonly DECLARED_API_BASE = 'https://mkind.krx.co.kr/api/trstk/declared';

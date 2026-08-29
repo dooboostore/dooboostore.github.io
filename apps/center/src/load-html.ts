@@ -50,27 +50,41 @@ async function renderPage(initialPath: string, templateHtml: string): Promise<st
     unobserve() {}
     disconnect() {}
   } as any;
-  (w as any).ResizeObserver = ssrRO;
-  (global as any).ResizeObserver = ssrRO;
-  (globalThis as any).ResizeObserver = ssrRO;
-  if (typeof (global as any).MutationObserver === 'undefined') {
-    const ssrMO = class MutationObserver {
-      constructor(_cb?: any) {}
-      observe() {}
-      disconnect() {}
-      takeRecords() { return []; }
-    } as any;
-    (w as any).MutationObserver = ssrMO;
-    (global as any).MutationObserver = ssrMO;
-    (globalThis as any).MutationObserver = ssrMO;
-  }
-  // requestAnimationFrame polyfill for SSR (dom-parser WindowBase throws — unconditional override)
-  (w as any).requestAnimationFrame = (cb: FrameRequestCallback) => setTimeout(cb, 0) as unknown as number;
-  (w as any).cancelAnimationFrame = (id: number) => clearTimeout(id as any);
-  (global as any).requestAnimationFrame = (w as any).requestAnimationFrame.bind(w);
-  (global as any).cancelAnimationFrame = (w as any).cancelAnimationFrame.bind(w);
-  (globalThis as any).requestAnimationFrame = (w as any).requestAnimationFrame.bind(w);
-  (globalThis as any).cancelAnimationFrame = (w as any).cancelAnimationFrame.bind(w);
+  const mutationRO = class MutationObserver {
+    constructor(_cb?: any) {}
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  } as any
+  const interSectionRO = class IntersectionObserver {
+    constructor(_cb?: any) {}
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  } as any;
+  // (w as any).ResizeObserver = ssrRO;
+  // (w as any).MutationObserver = mutationRO;
+  // (w as any).IntersectionObserver = interSectionRO;
+  // (global as any).ResizeObserver = ssrRO;
+  // (globalThis as any).ResizeObserver = ssrRO;
+  // if (typeof (global as any).MutationObserver === 'undefined') {
+  //   const ssrMO = class MutationObserver {
+  //     constructor(_cb?: any) {}
+  //     observe() {}
+  //     disconnect() {}
+  //     takeRecords() { return []; }
+  //   } as any;
+  //   (w as any).MutationObserver = mutationRO;
+  //   (global as any).MutationObserver = mutationRO;
+  //   (globalThis as any).MutationObserver = mutationRO;
+  // }
+  // // requestAnimationFrame polyfill for SSR (dom-parser WindowBase throws — unconditional override)
+  // (w as any).requestAnimationFrame = (cb: FrameRequestCallback) => setTimeout(cb, 0) as unknown as number;
+  // (w as any).cancelAnimationFrame = (id: number) => clearTimeout(id as any);
+  // (global as any).requestAnimationFrame = (w as any).requestAnimationFrame.bind(w);
+  // (global as any).cancelAnimationFrame = (w as any).cancelAnimationFrame.bind(w);
+  // (globalThis as any).requestAnimationFrame = (w as any).requestAnimationFrame.bind(w);
+  // (globalThis as any).cancelAnimationFrame = (w as any).cancelAnimationFrame.bind(w);
   // fetch polyfill for relative URLs (SSR)
   const origFetch = global.fetch;
   const fetchWrapper = (input: RequestInfo | URL, init?: RequestInit) => {
