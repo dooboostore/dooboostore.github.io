@@ -81,6 +81,12 @@ export default (w: Window) => {
       return `<center-stock-npti-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-category-ranking"], { order: 9 })
+    @innerHtmlLight
+    handleStockCategoryRanking() {
+      return `<center-stock-category-ranking-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {

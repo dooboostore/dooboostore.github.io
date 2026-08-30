@@ -5,6 +5,66 @@ export namespace TossService {
   export const SYMBOL = Symbol.for('TossService');
 }
 
+// ── TICS Category Ranking ──────────────────────────────────────────
+
+/** 랭킹 조회 기간 */
+export type TicsDuration = '1d' | '1w' | '1m' | '3m' | '1y';
+
+/** 랭킹 정렬 기준 */
+export type TicsSortBy = 'TRADING_AMOUNT' | 'FLUCTUATION_RATE';
+
+/** 국가 구분 */
+export type TicsNation = 'KR' | 'US';
+
+/** TICS 랭킹 요청 파라미터 */
+export interface TicsRankingRequest {
+  readonly nation: TicsNation;
+  readonly duration: TicsDuration;
+  readonly sortBy: TicsSortBy;
+}
+
+/** 대표 종목 정보 */
+export interface TicsLeadingStock {
+  readonly productCode: string;   // e.g. "A005930"
+  readonly name: string;          // e.g. "삼성전자"
+  readonly logoImageUrl: string;
+  readonly signal: string;        // e.g. "관세 확대 부담"
+  readonly signalId: string;      // e.g. "STOCKS:005930:20260828"
+}
+
+/** TICS 카테고리 랭킹 항목 */
+export interface TicsCategoryItem {
+  readonly rank: number;
+  readonly ticsId: number;
+  readonly name: string;
+  readonly imageUrl: string;
+  /** 등락률 (소수 표현, e.g. -0.0341 = -3.41%) */
+  readonly fluctuationRate: number;
+  /** 거래대금 (KRW) */
+  readonly tradingAmountKrw: number;
+  /** 거래대금 (USD) */
+  readonly tradingAmountUsd: number;
+  /** 시가총액 (KRW) */
+  readonly totalMarketCapKrw: number;
+  /** 시가총액 (USD) */
+  readonly totalMarketCapUsd: number;
+  /** 포함 종목 수 */
+  readonly stockCount: number;
+  /** 대표 종목 */
+  readonly leadingStock: TicsLeadingStock;
+}
+
+/** TICS 카테고리 랭킹 응답 결과 */
+export interface TicsRankingResult {
+  readonly basedAt: string;         // ISO timestamp
+  readonly duration: TicsDuration;
+  readonly tics: readonly TicsCategoryItem[];
+}
+
+interface TicsRankingApiResponse {
+  readonly result: TicsRankingResult;
+}
+
 // ── Chart ──────────────────────────────────────────────────────────
 export type TossChartSession = 'all' | 'regular';
 export type TossInvestMode = 'integrated' | string;
@@ -413,44 +473,34 @@ export interface TossService {
   getShortSellingTrend(code: string, size?: number): Promise<readonly TossShortSellingTrend[]>;
   /** CFD — GET /mds/info/cfd?stockCode=&size=50 */
   getCFD(code: string, size?: number): Promise<readonly TossCFD[]>;
+  /** TICS 카테고리 랭킹 — POST /api/v2/dashboard/wts/overview/tics/ranking */
+  getTicsRanking(params: TicsRankingRequest): Promise<TicsRankingResult>;
+  /** 국내 거래대금 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingKrByAmount(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 국내 등락률 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingKrByFluctuation(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 해외 거래대금 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingUsByAmount(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 해외 등락률 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingUsByFluctuation(duration?: TicsDuration): Promise<TicsRankingResult>;
 }
 
 export default (container: symbol): ConstructorType<TossService> => {
   @Sim({ symbol: TossService.SYMBOL, container })
   class TossServiceImpl implements TossService {
     // allorigins는 서버/브라우저 모두 동작 (간헐적 522 타임아웃 발생)
-    private readonly CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+    private readonly CORS_PROXY = 'https://sparkling-dew-b13c.visualkhh.workers.dev/?url=';
     private readonly CHART_BASE = 'https://wts-info-api.tossinvest.com/api/v1/c-chart';
     private readonly SEARCH_BASE = 'https://wts-info-api.tossinvest.com/api/v3/search-all/wts-auto-complete';
     private readonly STOCK_INFO_BASE = 'https://wts-info-api.tossinvest.com/api/v2/stock-infos';
     private readonly STOCK_DETAIL_BASE = 'https://wts-info-api.tossinvest.com/api/v1/stock-detail/ui/wts';
-
-    // Toss는 Access-Control-Allow-Origin이 www.tossinvest.com 고정이라 브라우저 직접 호출 불가
-    // 무료 CORS 프록시는 불안정하므로 여러 개를 순차 시도 (522/403 등 실패 시 다음으로 폴백)
-    private readonly CORS_PROXIES = [
-      'https://api.allorigins.win/raw?url=',
-      'https://corsproxy.io/?url=',
-      'https://cors-anywhere.azm.workers.dev/',
-      'https://api.codetabs.com/v1/proxy?quest=',
-    ];
-
-    private buildProxyUrl(url: string, proxy: string): string {
-      return `${proxy}${encodeURIComponent(url)}`;
-    }
+    private readonly DASHBOARD_BASE = 'https://wts-info-api.tossinvest.com/api/v2/dashboard/wts';
 
     private async fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-      let lastError: unknown = null;
-      for (const proxy of this.CORS_PROXIES) {
-        try {
-          const proxied = this.buildProxyUrl(url, proxy);
-          const res = await fetch(proxied, init);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          return (await res.json()) as T;
-        } catch (e) {
-          lastError = e;
-        }
-      }
-      throw lastError instanceof Error ? lastError : new Error('All CORS proxies failed');
+      const proxied = `${this.CORS_PROXY}${encodeURIComponent(url)}`;
+      const res = await fetch(proxied, init);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return (await res.json()) as T;
     }
 
     async getChart(target: TossChartTarget, options: TossChartOptions = {}): Promise<TossChartResult> {
@@ -656,6 +706,36 @@ export default (container: symbol): ConstructorType<TossService> => {
 
     async getCFD(code: string, size = 50): Promise<readonly TossCFD[]> {
       return this.fetchTradeBody<TossCFD>('mds/info/cfd', code, size, 'stockCode');
+    }
+
+    async getTicsRanking(params: TicsRankingRequest): Promise<TicsRankingResult> {
+      const url = `${this.DASHBOARD_BASE}/overview/tics/ranking`;
+      const json = await this.fetchJson<TicsRankingApiResponse>(url, {
+        method: 'POST',
+        headers: {
+          accept: 'application/json',
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(params),
+      });
+      if (!json.result) throw new Error('Invalid TICS ranking response');
+      return json.result;
+    }
+
+    async getTicsRankingKrByAmount(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'KR', duration, sortBy: 'TRADING_AMOUNT' });
+    }
+
+    async getTicsRankingKrByFluctuation(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'KR', duration, sortBy: 'FLUCTUATION_RATE' });
+    }
+
+    async getTicsRankingUsByAmount(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'US', duration, sortBy: 'TRADING_AMOUNT' });
+    }
+
+    async getTicsRankingUsByFluctuation(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'US', duration, sortBy: 'FLUCTUATION_RATE' });
     }
   }
 

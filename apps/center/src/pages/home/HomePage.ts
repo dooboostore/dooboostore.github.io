@@ -77,6 +77,15 @@ export default (w: Window) => {
       path: '/stock-npti',
       color: '#6366f1',
       badge: 'New'
+    },
+    {
+      id: 'stock-category-ranking',
+      icon: '📊',
+      title: '카테고리 랭킹',
+      description: '국내/해외 TICS 카테고리별 등락률·거래대금·시가총액 분포도를 한눈에 비교하세요.',
+      path: '/stock-category-ranking',
+      color: '#0ea5e9',
+      badge: 'New'
     }
   ];
 

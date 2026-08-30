@@ -48,6 +48,7 @@ MAPPING = [
     ("stock-brain-checker-og.png", "1f9e0", "🧠"),
     ("stock-flight-og.png", "2708", "✈️"),
     ("stock-npti-og.png", "1f9ec", "🧬"),
+    ("stock-category-og.png", "1f9ec", "📊"),
 ]
 
 TWEMOJI_BASE = "https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/{code}.png"

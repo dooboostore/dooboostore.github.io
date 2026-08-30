@@ -139,6 +139,8 @@ export default (w: Window) => {
     private pinchAnchorFrac: number = 0.5;
     private readonly padL: number = 6;
     private readonly padR: number = 58;
+    /** 모바일 touchend 후 합성 mouseup 이벤트로 팝업이 닫히는 것을 방지하는 타임스탬프 */
+    private lastTouchEndTime: number = 0;
 
     // ---------- public ----------
 
@@ -339,6 +341,9 @@ export default (w: Window) => {
     private onMouseUp(e: MouseEvent): void {
       if (this.disabledEvent) return;
       if (!this.dragging) return;
+      // touchend 후 300ms 이내에 발생하는 합성 mouseup은 무시
+      // (모바일에서 팝업이 열리자마자 닫히는 현상 방지)
+      if (Date.now() - this.lastTouchEndTime < 350) return;
       this.dragging = false;
       const moved =
         Math.abs(e.clientX - this.downX) + Math.abs(e.clientY - this.downY);
@@ -462,12 +467,16 @@ export default (w: Window) => {
         Math.abs(e.changedTouches[0].clientY - this.downY);
       const wasPinch = this.pinchDist0 > 0;
       this.pinchDist0 = 0;
-      if (this.readoutEnabled && this.dragging && !wasPinch && moved < 5) {
+      // 모바일은 손가락 접촉면이 넓어 자연스럽게 수 px 이동이 발생하므로 임계값을 10으로 설정
+      if (this.readoutEnabled && this.dragging && !wasPinch && moved < 10) {
         const idx = this.indexAtX(e.changedTouches[0].clientX);
         this.selectedIdx = idx === this.selectedIdx ? -1 : idx;
         this.drawChart();
       }
       this.dragging = false;
+      // touchend 후 합성 mouseup/mousedown 이벤트가 약 300ms 뒤에 발생함
+      // → 그 사이에 mouseup 핸들러가 팝업을 닫지 못하도록 타임스탬프 기록
+      this.lastTouchEndTime = Date.now();
     }
 
     private drawChart(): void {
@@ -788,7 +797,11 @@ export default (w: Window) => {
           <span style="color:${up ? UP : DOWN};font-weight:700">종 ${d.close.toLocaleString()} (${sign}${diff.toFixed(2)}%)</span>
           <span>거래량 ${d.volume.toLocaleString()}</span>
         `;
+        // 초기 위치를 먼저 설정하고 표시 (깜빡임 방지)
+        readout.style.left = `${Math.max(4, hx - 60)}px`;
+        readout.style.top = `${Math.max(4, yPrice(d.high) - 48)}px`;
         readout.style.display = "flex";
+        // 실제 크기가 렌더링된 이후 정확한 위치로 보정
         requestAnimationFrame(() => {
           const r = readout.getBoundingClientRect();
           let lx = hx - r.width / 2;

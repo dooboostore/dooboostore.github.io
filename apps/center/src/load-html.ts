@@ -161,7 +161,16 @@ async function main() {
   const html = fs.readFileSync(templatePath, 'utf-8');
   console.log('[load-html] template loaded:', templatePath, `${html.length} bytes`);
 
-  const pages = ["/english", "/stock-flight", "/lotto", "/coordinate-simulation", "/buyback", "/stock-brain-checker", "/stock-npti"];
+  const pages = [
+    "/english",
+    "/stock-flight",
+    "/lotto",
+    "/coordinate-simulation",
+    "/buyback",
+    "/stock-brain-checker",
+    "/stock-npti",
+    "/stock-category-ranking",
+  ];
   const outDir = path.resolve(__dirname, '../dist');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 

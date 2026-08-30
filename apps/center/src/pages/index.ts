@@ -8,6 +8,7 @@ import CoordinateSimulationPage from './coordinate-simulation/CoordinateSimulati
 import BuybackPage from './buyback/BuybackPage';
 import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
 import StockNptiPage from './stock-npti/StockNptiPage';
+import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRankingPage';
 
 export const pageFactories = [
   RootRouter,
@@ -19,5 +20,6 @@ export const pageFactories = [
   CoordinateSimulationPage,
   BuybackPage,
   StockBrainCheckerPage,
-  StockNptiPage
+  StockNptiPage,
+  StockCategoryRankingPage,
 ];
