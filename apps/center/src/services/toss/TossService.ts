@@ -7,6 +7,40 @@ export namespace TossService {
 
 // ── TICS Category Ranking ──────────────────────────────────────────
 
+/** TICS 비교 차트 — /api/v1/dashboard/wts/overview/tics/{id}/comparison-chart */
+export interface TicsFluctuationRate {
+  readonly range: TicsDuration;
+  readonly value: number;
+  readonly date: string;
+}
+export interface TicsPricePoint {
+  readonly date: string;
+  readonly value: number;
+}
+export interface TicsComparisonIndicator {
+  readonly type: string;
+  readonly code: string;
+  readonly name: string;
+  readonly nation: TicsNation;
+  readonly securitiesType: string;
+  readonly isPrimary: boolean;
+  readonly fluctuationRates: readonly TicsFluctuationRate[];
+  readonly prices: readonly TicsPricePoint[];
+}
+export interface TicsComparisonChartResult {
+  readonly baseDate: string;
+  readonly indicators: readonly TicsComparisonIndicator[];
+}
+interface TicsComparisonChartApiResponse {
+  readonly result: TicsComparisonChartResult;
+}
+export interface TicsComparisonChartRequest {
+  readonly ticsId: number | string;
+  readonly nation: TicsNation;
+  readonly securitiesType?: string; // default 'STOCK'
+  readonly indicatorCode?: string; // default 'KGG01P'
+}
+
 /** 랭킹 조회 기간 */
 export type TicsDuration = '1d' | '1w' | '1m' | '3m' | '1y';
 
@@ -483,6 +517,8 @@ export interface TossService {
   getTicsRankingUsByAmount(duration?: TicsDuration): Promise<TicsRankingResult>;
   /** 해외 등락률 기준 TICS 랭킹 편의 메서드 */
   getTicsRankingUsByFluctuation(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** TICS 비교 차트 — GET /api/v1/dashboard/wts/overview/tics/{id}/comparison-chart */
+  getTicsComparisonChart(req: TicsComparisonChartRequest): Promise<TicsComparisonChartResult>;
 }
 
 export default (container: symbol): ConstructorType<TossService> => {
@@ -736,6 +772,17 @@ export default (container: symbol): ConstructorType<TossService> => {
 
     async getTicsRankingUsByFluctuation(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
       return this.getTicsRanking({ nation: 'US', duration, sortBy: 'FLUCTUATION_RATE' });
+    }
+
+    async getTicsComparisonChart(req: TicsComparisonChartRequest): Promise<TicsComparisonChartResult> {
+      const defaultIndicator = req.nation === 'US' ? 'SPX.CBI' : 'KGG01P';
+      const { ticsId, nation, securitiesType = 'STOCK', indicatorCode = defaultIndicator } = req;
+      const url = `https://wts-info-api.tossinvest.com/api/v1/dashboard/wts/overview/tics/${ticsId}/comparison-chart?nation=${encodeURIComponent(nation)}&securitiesType=${encodeURIComponent(securitiesType)}&indicatorCode=${encodeURIComponent(indicatorCode)}`;
+      const json = await this.fetchJson<TicsComparisonChartApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+      if (!json.result) throw new Error('Invalid TICS comparison chart response');
+      return json.result;
     }
   }
 

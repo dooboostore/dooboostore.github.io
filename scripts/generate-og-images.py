@@ -23,6 +23,7 @@ Page → emoji mapping:
   stock-brain-checker      🧠 1f9e0
   stock-flight             ✈️  2708
   stock-npti               🧬 1f9ec
+  stock-category           📊 1f4ca
 """
 import argparse
 import os
@@ -48,7 +49,7 @@ MAPPING = [
     ("stock-brain-checker-og.png", "1f9e0", "🧠"),
     ("stock-flight-og.png", "2708", "✈️"),
     ("stock-npti-og.png", "1f9ec", "🧬"),
-    ("stock-category-og.png", "1f9ec", "📊"),
+    ("stock-category-og.png", "1f4ca", "📊"),
 ]
 
 TWEMOJI_BASE = "https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/{code}.png"
