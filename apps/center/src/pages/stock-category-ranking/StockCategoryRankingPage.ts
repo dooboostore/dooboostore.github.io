@@ -107,27 +107,14 @@ export default (w: Window) => {
       const items = [...this.result.tics].slice(0, 30);
       chart.innerHTML = items.map(it => {
         const turnover = it.totalMarketCapKrw ? it.tradingAmountKrw / it.totalMarketCapKrw : 0;
-        const meta = JSON.stringify({
-          rank:           String(it.rank),
-          imageUrl:       it.imageUrl,
-          stockCount:     String(it.stockCount),
-          leadingName:    it.leadingStock.name,
-          leadingLogoUrl: it.leadingStock.logoImageUrl,
-          leadingSignal:  it.leadingStock.signal ?? '',
-          tradingAmountKrw: String(it.tradingAmountKrw),
-          totalMarketCapKrw: String(it.totalMarketCapKrw),
-        });
         return `<bubble
           label="${it.name}"
           x="${turnover}"
           y="${it.fluctuationRate}"
           r="${it.totalMarketCapKrw}"
           amount="${it.tradingAmountKrw}"
-          meta='${meta}'
         ></bubble>`;
       }).join('');
-      // 확대 레이어 열려있으면 동기화
-      if(this.shadowRoot?.querySelector('#chart-expand-layer.open')) this.syncExpandedChart();
     }
 
     private updateBasedAt() {
@@ -284,40 +271,6 @@ export default (w: Window) => {
           try{ await navigator.clipboard?.writeText(url); flash(); }catch{}
         }
       }
-    }
-
-    @addEventListener('#btn-size-view', 'click')
-    onSizeView(){ this.openChartExpand(); }
-
-    @addEventListener('#chart-expand-close', 'click')
-    onExpandClose(){ this.closeChartExpand(); }
-
-    @addEventListener('#chart-expand-backdrop', 'click')
-    onExpandBackdrop(){ this.closeChartExpand(); }
-
-    private openChartExpand(){
-      const layer = this.shadowRoot?.querySelector('#chart-expand-layer') as HTMLElement;
-      if(!layer) return;
-      this.syncExpandedChart();
-      layer.classList.add('open'); layer.setAttribute('aria-hidden','false');
-      try{ (this.ownerDocument as Document).body.style.overflow = 'hidden'; }catch{}
-      // 확대 차트 강제 리드로우 (display 변경 후)
-      requestAnimationFrame(()=>{
-        const exp = this.shadowRoot?.querySelector('#expanded-bubble-chart') as HTMLElement;
-        // mutationObserver로 자동 반영되나 강제 draw 트리거를 위해 innerHTML 재주입 시 이미 동기화됨
-        exp?.dispatchEvent(new Event('resize'));
-      });
-    }
-    private closeChartExpand(){
-      const layer = this.shadowRoot?.querySelector('#chart-expand-layer') as HTMLElement;
-      if(layer){ layer.classList.remove('open'); layer.setAttribute('aria-hidden','true'); }
-      try{ (this.ownerDocument as Document).body.style.overflow = ''; }catch{}
-    }
-    private syncExpandedChart(){
-      const main = this.shadowRoot?.querySelector('bubble-chart:not(#expanded-bubble-chart)') as HTMLElement;
-      const exp = this.shadowRoot?.querySelector('#expanded-bubble-chart') as HTMLElement;
-      if(!main || !exp) return;
-      exp.innerHTML = main.innerHTML;
     }
 
     private closeTicsChart() {
@@ -516,7 +469,7 @@ export default (w: Window) => {
             box-shadow:0 2px 8px rgba(21,101,192,0.3);
           }
 
-          bubble-chart { display:block; width:100%; height:auto; min-height:420px; }
+          bubble-chart { display:block; width:100%; height:auto;  }
           @media(max-width:480px){ bubble-chart{ min-height:380px; } }
 
           #list-area .card-header { justify-content:space-between; }
@@ -622,9 +575,9 @@ export default (w: Window) => {
           .chart-expand-title{font-size:15px;font-weight:800;color:#0f172a}
           .chart-expand-close{width:32px;height:32px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
           .chart-expand-close:hover{background:#f8fafc}
-          .chart-expand-body{flex:1;overflow:auto;padding:12px}
-          .chart-expand-body bubble-chart{min-height:520px}
-          @media(max-width:640px){.chart-expand-panel{width:calc(100% - 12px);height:86vh}.chart-expand-body bubble-chart{min-height:420px}}
+          .chart-expand-body{flex:1;min-height:0;display:flex;flex-direction:column;padding:12px;overflow:hidden}
+          .chart-expand-body #expanded-bubble-chart{flex:1;min-height:0}
+          @media(max-width:640px){.chart-expand-panel{width:calc(100% - 12px);height:86vh}.chart-expand-body #expanded-bubble-chart{min-height:420px}}
         </style>
 
         <div class="header">
@@ -664,7 +617,6 @@ export default (w: Window) => {
             <div class="card-header">
               <span class="card-title">카테고리 랭킹</span>
               <div style="margin-left:auto;display:flex;gap:8px">
-                <button class="btn-size-view" id="btn-size-view" aria-label="차트 크게 보기">🔍 크기보기</button>
                 <button class="btn-list-view" id="btn-list-view" aria-label="전체 리스트 보기">📋 리스트 보기</button>
               </div>
             </div>
@@ -696,19 +648,6 @@ export default (w: Window) => {
               <div id="tics-layer-loading" class="tics-layer-loading" style="display:none"><div class="spinner" style="margin:0 auto 10px"></div>차트 불러오는 중…</div>
               <div id="tics-layer-error" class="tics-layer-error" style="display:none"></div>
               <canvas id="tics-chart-canvas" width="700" height="260"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <div id="chart-expand-layer" aria-hidden="true">
-          <div class="chart-expand-backdrop" id="chart-expand-backdrop"></div>
-          <div class="chart-expand-panel" role="dialog" aria-modal="true">
-            <div class="chart-expand-header">
-              <span class="chart-expand-title">📊 카테고리 랭킹 (확대)</span>
-              <button class="chart-expand-close" id="chart-expand-close" aria-label="닫기">✕</button>
-            </div>
-            <div class="chart-expand-body">
-              <bubble-chart id="expanded-bubble-chart" enabled-zoom style="min-height:520px"></bubble-chart>
             </div>
           </div>
         </div>

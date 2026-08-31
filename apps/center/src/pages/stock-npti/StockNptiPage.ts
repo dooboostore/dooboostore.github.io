@@ -1,7 +1,7 @@
 import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, addEventListener, addEventListenerDocument, innerHtml, setAttribute } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
 import { inject } from '@dooboostore/simple-boot';
-import { BuybackService, BuybackChartPoint } from '../../services/buyback/BuybackService';
+import { TossService } from '../../services/toss/TossService';
 import {
   NPTI_AXIS_INFO,
   NPTI_TYPE_INFO,
@@ -61,7 +61,8 @@ function badgeInner(type: string, colored: string): string {
   return name ? `<span class="badge-name">${name}</span>${colored}` : colored;
 }
 
-function computeScores8(candles: BuybackChartPoint[], marketValue = 1e14, baselineAmount?: number){
+type NptiChartPoint = { date: string; open: number; high: number; low: number; close: number; volume: number; };
+function computeScores8(candles: NptiChartPoint[], marketValue = 1e14, baselineAmount?: number){
   const slice = candles;
   if(!slice.length) return [50,50,50,50,50,50,50,50];
   let E: number;
@@ -125,11 +126,11 @@ export default (w: Window) => {
     }
 
     private router!: Router;
-    private buybackService!: BuybackService;
-    private candles: BuybackChartPoint[] = [];
+    private tossService!: TossService;
+    private candles: NptiChartPoint[] = [];
     private marketValue = 1e14;
     private baselineAmount = 0;
-    private currentCode = '005930';
+    private currentCode = 'A005930';
     private currentName = '삼성전자';
     private windowSize = 50;
     private viewStart = 0;
@@ -137,18 +138,25 @@ export default (w: Window) => {
     private selectedRadioValue: string = 'body';
 
     @onInitialize
-    async onInit(@inject(BuybackService.SYMBOL) buybackService: BuybackService, router: Router){
-      this.buybackService = buybackService;
+    async onInit(@inject(TossService.SYMBOL) tossService: TossService, router: Router){
+      this.tossService = tossService;
       this.router = router;
       try{
         const code = router?.getSearchParams?.()?.get('code');
-        if(code && /^\d{6}$/.test(code)){
-          this.currentCode = code;
-          this.currentName = code;
-          try{
-            const found = (await this.buybackService.searchCompany(code))[0];
-            if(found?.name && /^\d{6}$/.test(found.code)) this.currentName = found.name;
-          }catch{}
+        if(code){
+          const norm = code.trim();
+          if(norm){
+            this.currentCode = /^[A-Z]/.test(norm) ? norm : `A${norm.replace(/^A/,'')}`;
+            this.currentName = norm;
+            try{
+              let nm: string | undefined = (await this.tossService.getOverview(this.currentCode).catch(()=>null))?.company?.name?.trim();
+              if(!nm){
+                const prod = (await this.tossService.searchProduct(norm).catch(()=>[]))?.[0];
+                nm = prod?.productName?.trim();
+              }
+              if(nm) this.currentName = nm;
+            }catch{}
+          }
         }
       }catch{}
       await this.loadStock(this.currentCode, this.currentName);
@@ -172,14 +180,29 @@ export default (w: Window) => {
       if(searchInput) searchInput.value = name;
 
       try{
-        const [chart, status] = await Promise.all([
-          this.buybackService.getChart(code, 12),
-          this.buybackService.getStockStatus({ code, name, color: '#6366f1' }).catch(()=>null)
+        const [chartRes, overview] = await Promise.all([
+          this.tossService.getChart(code, { count: 365, timeframe: 'day:1' }).catch(()=>null),
+          this.tossService.getOverview(code).catch(()=>null)
         ]);
-        this.candles = chart;
-        const resolvedName = status?.priceInfo?.com_abbrv?.trim();
-        if(resolvedName && /^\d{6}$/.test(this.currentName)) this.currentName = resolvedName;
-        const cap = Number(status?.priceInfo?.mktcap) || 0;
+        const raw = chartRes?.candles ?? [];
+        this.candles = raw.map(c=>({ date: c.dt.slice(0,10), open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }))
+          .sort((a,b)=> a.date.localeCompare(b.date));
+        let resolvedName = overview?.company?.name?.trim();
+        if(!resolvedName){
+          try{
+            const prod = (await this.tossService.searchProduct(code).catch(()=>[]))?.[0];
+            if(!prod && name !== code){
+              const prod2 = (await this.tossService.searchProduct(name).catch(()=>[]))?.[0];
+              resolvedName = prod2?.productName?.trim();
+            } else resolvedName = prod?.productName?.trim();
+          }catch{}
+        }
+        const isCodeLike = (v:string)=> /^(A\d{6}|US.+|\d{6})$/.test(v.trim());
+        if(resolvedName && (this.currentName === code || isCodeLike(this.currentName))) this.currentName = resolvedName;
+        // 검색창도 이름으로 갱신
+        const inp2 = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
+        if(inp2 && this.currentName !== code) inp2.value = this.currentName;
+        const cap = Number(overview?.marketValueKrw ?? overview?.marketValue ?? 0);
         this.marketValue = cap > 0 ? cap : 1e14;
         this.baselineAmount = this.candles.length ? avg(this.candles.map(c=>c.close*c.volume)) : 0;
         this.viewStart = Math.max(0, this.candles.length - this.windowSize);
@@ -386,12 +409,12 @@ export default (w: Window) => {
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       const q = input?.value.trim();
       if(!q) return;
-      const list = await this.buybackService.searchCompany(q);
+      const list = await this.tossService.searchProduct(q);
       const box = this.shadowRoot?.querySelector('#search-results') as HTMLElement;
       if(!box) return;
       box.innerHTML = list.slice(0,10).map(it=>`
-        <div class="search-item" data-code="${it.code}" data-name="${it.name}">
-          <div style="flex:1"><div style="font-weight:700;font-size:13px">${it.name}</div><div style="font-size:11px;color:#64748b">${it.code}</div></div>
+        <div class="search-item" data-code="${it.productCode}" data-name="${it.productName}">
+          <div style="flex:1"><div style="font-weight:700;font-size:13px">${it.productName}</div><div style="font-size:11px;color:#64748b">${it.productCode} · ${it.market}</div></div>
           <div style="font-size:11px;color:#0ea5e9">선택</div>
         </div>`).join('') || `<div style="padding:12px;color:#64748b">결과 없음</div>`;
       box.classList.add('show');

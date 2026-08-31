@@ -23,8 +23,6 @@ export interface BubbleChartPoint {
   r: number;
   /** 내부 원 크기 값 (거래대금 절대액) */
   amount: number;
-  /** 추가 메타 (JSON 직렬화) */
-  meta?: string;
 }
 
 export interface BubbleChart extends HTMLElement {
@@ -41,6 +39,13 @@ function fmtAxis(v: number): string {
   // 소수 → % 표기로 간주 (-0.034 → -3.4%) — 시가총액 0 제외
   if (Math.abs(v) < 1) return (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + '%';
   return v.toLocaleString();
+}
+
+/** 회전율 전용 포맷: 소수값을 항상 % 로 표시 (1.2803 → "+128.03%") */
+function fmtTurnover(v: number): string {
+  const pct = v * 100;
+  const sign = pct >= 0 ? '+' : '';
+  return sign + pct.toFixed(2) + '%';
 }
 
 export default (w: Window) => {
@@ -80,10 +85,7 @@ export default (w: Window) => {
       this.scaleX = 1; this.scaleY = 1;
       this.offsetX = 0; this.offsetY = 0;
       this.selectedIdx = -1;
-      // 툴팁 숨김
       if (this.tooltip) this.tooltip.style.display = 'none';
-      // info 패널 초기화
-      if (this.infoEl) this.infoEl.innerHTML = `<span class="bc-info-hint">항목을 클릭하면 상세 정보를 볼 수 있어요</span>`;
     }
 
     // ── 줌 공통 헬퍼 ──
@@ -111,9 +113,10 @@ export default (w: Window) => {
     private clampView() {
       const b = this.getFitBounds();
       if (!b) return;
-      // 뷰가 데이터 영역을 너무 벗어나지 않도록 제한 (여유 50% 허용)
-      const maxOffsetX = b.xFitRange * 0.8;
-      const maxOffsetY = b.yFitRange * 0.8;
+      // 확대 배율에 비례해 팬 가능 범위를 넓힘 (더 많이 확대할수록 더 멀리 이동 가능)
+      const panMargin = Math.max(this.scaleX, this.scaleY);
+      const maxOffsetX = b.xFitRange * panMargin * 0.9;
+      const maxOffsetY = b.yFitRange * panMargin * 0.9;
       this.offsetX = Math.max(-maxOffsetX, Math.min(maxOffsetX, this.offsetX));
       this.offsetY = Math.max(-maxOffsetY, Math.min(maxOffsetY, this.offsetY));
     }
@@ -122,17 +125,17 @@ export default (w: Window) => {
     private getPlotRect() {
       const canvas = this.canvas;
       if (!canvas) return null;
-      const cssW = canvas.clientWidth || 400;
+      const cssW = canvas.clientWidth  || 400;
       const cssH = canvas.clientHeight || 340;
-      const padB = 44;
-      const MAX_R_APPROX = Math.min((cssW - 80), (cssH - padB - 20)) * 0.13;
-      const bubblePad = Math.ceil(MAX_R_APPROX) + 4;
-      const padL = Math.max(62, bubblePad + 14);
-      const padR = Math.max(20, bubblePad);
-      const padT = Math.max(24, bubblePad + 8);
-      const padB2 = Math.max(44, bubblePad + 8);
-      const plotW = cssW - padL - padR;
-      const plotH = cssH - padT - padB2;
+      const tmpPlot = Math.min(cssW - 80, cssH - 60);
+      const maxR = Math.max(11, tmpPlot * 0.13);
+      const basePad = Math.ceil(maxR) + 2;
+      const padL  = Math.max(62, basePad + 14);
+      const padR  = Math.max(20, basePad + 8);
+      const padT  = Math.max(24, basePad + 8);
+      const padB2 = Math.max(44, basePad + 8);
+      const plotW = Math.max(10, cssW - padL - padR);
+      const plotH = Math.max(10, cssH - padT - padB2);
       if (plotW <= 0 || plotH <= 0) return null;
       return { padL, padR, padT, padB: padB2, plotW, plotH, cssW, cssH };
     }
@@ -152,8 +155,8 @@ export default (w: Window) => {
       if (!b) return;
       // 감도: 0.65로 완화 (이전 0.45는 너무 느림)
       const dampFactor = 1 + (factor - 1) * 0.65;
-      const newSX = Math.min(8, Math.max(1, this.scaleX * dampFactor));
-      const newSY = Math.min(8, Math.max(1, this.scaleY * dampFactor));
+      const newSX = Math.min(50, Math.max(1, this.scaleX * dampFactor));
+      const newSY = Math.min(50, Math.max(1, this.scaleY * dampFactor));
       const realFactorX = newSX / this.scaleX;
       const realFactorY = newSY / this.scaleY;
       // 앵커가 화면상 고정되도록 offset 보정
@@ -179,7 +182,6 @@ export default (w: Window) => {
           y:     Number(el.getAttribute('y'))      || 0,
           r:     Number(el.getAttribute('r'))      || 0,
           amount:Number(el.getAttribute('amount')) || 0,
-          meta:  el.getAttribute('meta')           || undefined,
         });
       });
       this.points = pts;
@@ -247,33 +249,6 @@ export default (w: Window) => {
           }
           #bc-swap:hover { background:#f1f5f9; }
           #bc-swap.active { background:#e0f2fe; border-color:#7dd3fc; color:#0c4a6e; }
-
-          /* ── 선택 정보 패널 ── */
-          #bc-info {
-            padding:10px 14px 14px;
-            min-height:52px;
-            font-family:-apple-system,sans-serif;
-            border-top:1px solid #f1f5f9;
-            flex-shrink:0;
-          }
-          .bc-info-hint { font-size:12px; color:#94a3b8; }
-          .bc-info-card { display:flex; align-items:flex-start; gap:10px; }
-          .bc-info-img  {
-            width:36px; height:36px; border-radius:8px;
-            object-fit:cover; background:#f1f5f9; flex-shrink:0;
-          }
-          .bc-info-body { display:flex; flex-direction:column; gap:4px; min-width:0; }
-          .bc-info-name { font-size:14px; font-weight:700; color:#0f172a; }
-          .bc-info-meta { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
-          .bc-badge-rate { padding:2px 8px; border-radius:10px; font-size:11px; font-weight:700; }
-          .bc-badge-rate.up   { background:#fef2f2; color:#e5484d; }
-          .bc-badge-rate.down { background:#eff6ff; color:#3e63dd; }
-          .bc-badge-num   { padding:2px 8px; border-radius:10px; font-size:11px; background:#f1f5f9; color:#475569; font-weight:600; }
-          .bc-badge-count { padding:2px 8px; border-radius:10px; font-size:11px; background:#ede9fe; color:#6d28d9; font-weight:600; }
-          .bc-info-leading { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:2px; }
-          .bc-leading-logo   { width:18px; height:18px; border-radius:4px; background:#f1f5f9; }
-          .bc-leading-name   { font-size:12px; font-weight:700; color:#334155; }
-          .bc-leading-signal { font-size:11px; color:#94a3b8; }
         </style>
         <div id="bc-legend">
           <span class="bc-legend-item up">상승</span>
@@ -285,7 +260,6 @@ export default (w: Window) => {
         <div id="bc-tooltip"></div>
         <button id="bc-swap" title="X/Y 축 바꾸기">⇄ 축교체</button>
         <button id="bc-reset">↺ 초기화</button>
-        <div id="bc-info"><span class="bc-info-hint">항목을 클릭하면 상세 정보를 볼 수 있어요</span></div>
       `;
     }
 
@@ -301,9 +275,6 @@ export default (w: Window) => {
     @queryShadow('#bc-swap')
     private swapBtn!: HTMLElement;
 
-    @queryShadow('#bc-info')
-    private infoEl!: HTMLElement;
-
     // ── 드로잉 ──
     private draw(): void {
       const canvas = this.canvas;
@@ -317,21 +288,23 @@ export default (w: Window) => {
       if (!ctx) return;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      const padB = 44;
       const pts = this.points;
-      // 버블 최대 반경을 먼저 계산해서 패딩에 반영 (잘림 방지)
       const rRaw = pts.map(p => p.r);
-      const rMax0 = Math.max(...rRaw, 1);
-      const MIN_R = 6;
-      const MAX_R_APPROX = Math.min((cssW - 80), (cssH - padB - 20)) * 0.13;
-      const bubblePad = Math.ceil(MAX_R_APPROX) + 4;
+      const rCapMax = Math.max(...rRaw, 1);
 
-      const padL = Math.max(62, bubblePad + 14); // y라벨 + 버블 여유
-      const padR = Math.max(20, bubblePad);
-      const padT = Math.max(24, bubblePad + 8);  // 상단 버블 잘림 방지
-      const padB2 = Math.max(44, bubblePad + 8); // 하단 버블 잘림 방지
-      const plotW = cssW - padL - padR;
-      const plotH = cssH - padT - padB2;
+      const minR = 10;
+      const tmpPlot = Math.min(cssW - 80, cssH - 60);
+      const maxR = Math.max(minR + 1, tmpPlot * 0.13);
+      const zoomScale = Math.min(6, Math.sqrt(this.scaleX * this.scaleY));
+
+      // 패딩은 줌과 무관하게 zoom=1 기준 maxR로 고정 (확대해도 축 라벨 영역 불변)
+      const basePad = Math.ceil(maxR) + 2;
+      const padL  = Math.max(62, basePad + 14);
+      const padR  = Math.max(20, basePad + 8);
+      const padT  = Math.max(24, basePad + 8);
+      const padB2 = Math.max(44, basePad + 8);
+      const plotW = Math.max(10, cssW - padL - padR);
+      const plotH = Math.max(10, cssH - padT - padB2);
 
       // ── 데이터 범위 (기본 fit) — swap 시 X=등락률, Y=시가총액 ──
       const xRaw = pts.map(p => this.swapAxes ? p.y : p.x);
@@ -360,20 +333,10 @@ export default (w: Window) => {
       const yb = yFitB + this.offsetY;
       const yt = yb + yRange;
 
-      const rMax = Math.max(...rRaw, 1);
-      const minR = 10;
-      const maxR = Math.min(plotW, plotH) * 0.13;
-
-      // 내부 원: 거래대금 — 시총 원 안에 얇은 선으로 표시 (20조/3248조=0.6% → 면적비로 매우 작게)
-      // X축: 시총이 500조 이하 vs 2700조 이상으로 양극화되어 중간이 텅 비는 데이터 특성상
-      // log 스케일이 오히려 오른쪽을 더 뭉치게 하므로, 초기 뷰는 선형으로 전체를 골고루 펼치고
-      // 확대 시에만 log의 장점이 살아나도록 함. 초기엔 선형 고정
+      // 버블 반지름: p.r(시가총액) 기준으로 정규화
       const toX = (v: number) => padL + ((v - xl) / (xr - xl)) * plotW;
       const toY = (v: number) => padT + plotH - ((v - yb) / (yt - yb)) * plotH;
-      // 면적 기반 크기 + 줌 배율 반영 (확대 시 원도 함께 커짐)
-      const zoomScale = Math.min(2.8, Math.sqrt(this.scaleX * this.scaleY));
-      const toR = (v: number) => (minR + Math.sqrt(v / rMax) * (maxR - minR)) * zoomScale;
-      // 내부원 크기는 drawBubble에서 br * sqrt(회전율) 로 계산해 시총 대비 비율에 비례해 매우 작게 표시
+      const toR = (v: number) => (minR + Math.sqrt(v / rCapMax) * (maxR - minR)) * zoomScale;
 
       // ── 배경 ──
       ctx.fillStyle = '#fff';
@@ -390,7 +353,8 @@ export default (w: Window) => {
         ctx.beginPath(); ctx.moveTo(padL, gy); ctx.lineTo(cssW - padR, gy); ctx.stroke();
         ctx.fillStyle = '#94a3b8';
         ctx.textAlign = 'right';
-        ctx.fillText(fmtAxis(yv), padL - 4, gy + 3);
+        // swap 후: Y = 회전율(소수→%), swap 전: Y = 등락률(fmtAxis)
+        ctx.fillText(this.swapAxes ? fmtTurnover(yv) : fmtAxis(yv), padL - 4, gy + 3);
       }
 
       // ── 0% 기준선 — swap 전: Y=0 수평선, swap 후: X=0 수직선 (등락률 0%) ──
@@ -421,7 +385,8 @@ export default (w: Window) => {
         const xv = xl + xRange * g / 4;
         const gx = toX(xv);
         if (gx < padL || gx > cssW - padR) continue;
-        ctx.fillText(fmtAxis(xv), gx, cssH - padB2 + 13);
+        // swap 전: X = 회전율(소수→%), swap 후: X = 등락률(fmtAxis)
+        ctx.fillText(this.swapAxes ? fmtAxis(xv) : fmtTurnover(xv), gx, cssH - padB2 + 13);
       }
 
       // ── 축 제목 — swap 시 바꿔 표시 (기본 X=회전율, R=시가총액) ──
@@ -442,10 +407,10 @@ export default (w: Window) => {
         this.swapBtn.textContent = this.swapAxes ? '⇄ 원복' : '⇄ 축교체';
       }
 
-      // ── 버블 + 라벨 — 좌/하단 라벨 영역만 가리고, 우/상단은 pad 여유까지 표시해 짤림 방지 ──
+      // ── 버블 — plot 내부로 클리핑하여 모든 축 라벨 뒤에서 가려짐 ──
       ctx.save();
       ctx.beginPath();
-      ctx.rect(padL, 0, cssW - padL, plotH + padT);
+      ctx.rect(padL, padT, plotW, plotH);
       ctx.clip();
       for (let i = 0; i < pts.length; i++) {
         if (i === this.selectedIdx) continue;
@@ -491,7 +456,7 @@ export default (w: Window) => {
           const sy = this.swapAxes ? sel.x : sel.y;
           const bx = toX(sx), by = toY(sy), br = toR(sel.r);
           // 버블이 화면 밖이면 툴팁 숨김
-          if (bx < padL - br || bx > cssW - padR + br || by < padT - br || by > cssH - padB + br) {
+          if (bx < padL - br || bx > cssW - padR + br || by < padT - br || by > cssH - padB2 + br) {
             this.tooltip.style.display = 'none';
           } else {
             const hostRect = this.getBoundingClientRect();
@@ -525,37 +490,115 @@ export default (w: Window) => {
     ) {
       const px = this.swapAxes ? p.y : p.x;
       const py = this.swapAxes ? p.x : p.y;
-      const bx = toX(px), by = toY(py), br = toR(p.r);
-      const up = p.y >= 0;  // y축이 등락률
+      // 바깥원 크기 = 시가총액(p.r) 기반
+      const br = toR(p.r);
+      // 회오리 바퀴 수: p.x = 회전율 (소수, 0.01 = 1%, 1.0 = 100% = 1바퀴, 5.5 = 550% = 5.5바퀴)
+      // p.x < 1 이면 1바퀴 미만, p.x >= 1 이면 여러 바퀴
+      const turns = Math.max(0, p.x);
+      const up = p.y >= 0;
       const c  = up ? '#e5484d' : '#3e63dd';
+      const bx = toX(px), by = toY(py);
+
+      ctx.save();
+
+      // 선택 강조 후광
       if (selected) {
         ctx.beginPath();
         ctx.arc(bx, by, br + 5, 0, Math.PI * 2);
         ctx.fillStyle = c + '22'; ctx.fill();
       }
+
+      // 시가총액 바깥 원
       ctx.beginPath();
       ctx.arc(bx, by, br, 0, Math.PI * 2);
-      ctx.fillStyle   = selected ? c + '44' : (up ? 'rgba(229,72,77,0.32)' : 'rgba(62,99,221,0.32)');
+      ctx.fillStyle   = selected ? c + '22' : (up ? 'rgba(229,72,77,0.14)' : 'rgba(62,99,221,0.14)');
       ctx.fill();
-      ctx.strokeStyle = selected ? c : (up ? 'rgba(229,72,77,0.95)' : 'rgba(62,99,221,0.95)');
-      ctx.lineWidth   = selected ? 2.5 : 1.6;
+      ctx.strokeStyle = selected ? c : (up ? 'rgba(229,72,77,0.9)' : 'rgba(62,99,221,0.9)');
+      ctx.lineWidth   = selected ? 2.2 : 1.4;
       ctx.stroke();
-      // 내부 원: 거래대금/시총 비율(회전율) — 20조/3248조=0.6%면 바깥원의 22% 수준으로 매우 작게
-      const turnover = Math.max(0, p.x);
-      const innerR = Math.min(Math.max(2.5, br * Math.sqrt(turnover) * 2.8), Math.max(2.5, br - 1.8));
-      if (innerR > 2.5) {
+
+      // ── 중심 십자 ──
+      // 라벨 폰트(9~10px)보다 크게, 원 크기에 비례하되 너무 크지 않게
+      const crossSize = Math.max(7, Math.min(br * 0.22, 18));
+      const crossAlpha = selected ? 0.35 : 0.22;
+      const crossColor = up ? `rgba(229,72,77,${crossAlpha})` : `rgba(62,99,221,${crossAlpha})`;
+      ctx.save();
+      ctx.strokeStyle = crossColor;
+      ctx.lineWidth   = selected ? 1.4 : 1.0;
+      ctx.lineCap     = 'round';
+      ctx.beginPath();
+      ctx.moveTo(bx - crossSize, by);
+      ctx.lineTo(bx + crossSize, by);
+      ctx.moveTo(bx, by - crossSize);
+      ctx.lineTo(bx, by + crossSize);
+      ctx.stroke();
+      ctx.restore();
+
+      // ── 안쪽 링 (회전율 시각화) ──
+      // · br*0.5 부터 시작해서 바깥쪽으로 링을 쌓음
+      // · 링 1개 = 100% (완전한 원)
+      // · 220% → 링1(완전), 링2(완전), 링3(20% 호)
+      // · 5.5% → 링1(5.5% 호만)
+      if (turns >= 0.002) {
+        ctx.save();
         ctx.beginPath();
-        ctx.arc(bx, by, innerR, 0, Math.PI * 2);
-        ctx.strokeStyle = up ? 'rgba(229,72,77,0.95)' : 'rgba(62,99,221,0.95)';
-        ctx.lineWidth = 1;
-        ctx.stroke();
-        // 내부 원 중앙이 너무 작을 때만 점 강조는 외부가 담당하므로 생략
+        ctx.arc(bx, by, br * 0.96, 0, Math.PI * 2);
+        ctx.clip();
+
+        const cappedTurns = Math.min(turns, 10);
+        const fullRings  = Math.floor(cappedTurns);   // 완전한 링 수
+        const remainder  = cappedTurns - fullRings;   // 마지막 링의 비율 (0~1)
+        const totalRings = fullRings + (remainder > 0 ? 1 : 0);
+
+        // 링 반지름 범위: br*0.5(첫 링) ~ br*0.88(마지막 링)
+        const innerR = br * 0.5;
+        const outerR2 = br * 0.88;
+        // 링 간격
+        const ringGap = totalRings > 1
+          ? (outerR2 - innerR) / (totalRings - 1)
+          : (outerR2 - innerR); // 링이 1개면 innerR 위치에만
+
+        ctx.strokeStyle = up ? '#e5484d' : '#3e63dd';
+        ctx.lineWidth   = selected ? 1.8 : 1.2;
+        ctx.globalAlpha = selected ? 0.9 : 0.75;
+
+        for (let i = 0; i < totalRings; i++) {
+          const ringR = totalRings > 1 ? innerR + ringGap * i : innerR;
+          const isLast = i === totalRings - 1;
+          const arcFrac = isLast && remainder > 0 ? remainder : 1; // 마지막 링은 부분 호
+          const startAngle = -Math.PI / 2;                         // 12시 방향에서 시작
+          const endAngle   = startAngle + arcFrac * Math.PI * 2;
+
+          ctx.beginPath();
+          ctx.arc(bx, by, ringR, startAngle, endAngle);
+          ctx.stroke();
+
+          // 마지막(부분) 링 끝점 강조
+          if (isLast && remainder > 0) {
+            ctx.globalAlpha = 1;
+            const ex = bx + Math.cos(endAngle) * ringR;
+            const ey = by + Math.sin(endAngle) * ringR;
+            ctx.beginPath(); ctx.arc(ex, ey, selected ? 2.2 : 1.6, 0, Math.PI * 2);
+            ctx.fillStyle = up ? '#e5484d' : '#3e63dd'; ctx.fill();
+            ctx.globalAlpha = selected ? 0.9 : 0.75;
+          }
+        }
+
+        ctx.restore();
+
+        // 1바퀴(100%) 초과 시 바깥 원 점선 강조
+        if (turns > 1) {
+          ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2);
+          ctx.strokeStyle = up ? 'rgba(229,72,77,0.35)' : 'rgba(62,99,221,0.35)';
+          ctx.setLineDash([4, 3]); ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]);
+        }
       } else if (!selected && br < 11) {
-        ctx.beginPath(); ctx.arc(bx, by, 1.8, 0, Math.PI * 2);
+        // 거래 거의 없는 작은 버블 중심점
+        ctx.beginPath(); ctx.arc(bx, by, 1.6, 0, Math.PI * 2);
         ctx.fillStyle = up ? '#e5484d' : '#3e63dd'; ctx.fill();
-      } else if (!selected && innerR <= 2.5 && br >= 11) {
-        // 거래대금이 극소여도 최소 표시를 위해 점 대신 얇은 원 유지 (이미 위에서 그려짐)
       }
+
+      ctx.restore();
     }
 
     // ── 좌표 → 가장 가까운 버블 인덱스 ──
@@ -568,18 +611,20 @@ export default (w: Window) => {
       const cssW = canvas.clientWidth  || 400;
       const cssH = canvas.clientHeight || 340;
       const rRaw = this.points.map(p => p.r);
-      const MAX_R_APPROX = Math.min(cssW - 80, cssH - 64) * 0.13;
-      const bubblePad = Math.ceil(MAX_R_APPROX) + 4;
-      const padL = Math.max(62, bubblePad + 14);
-      const padR = Math.max(20, bubblePad);
-      const padT = Math.max(20, bubblePad);
-      const padB = 44;
-      const plotW = cssW - padL - padR;
-      const plotH = cssH - padT - padB;
+      const rCapMax = Math.max(...rRaw, 1);
+      const tmpPlot = Math.min(cssW - 80, cssH - 60);
+      const minR = 10;
+      const maxR = Math.max(minR + 1, tmpPlot * 0.13);
+      const zoomScale = Math.min(6, Math.sqrt(this.scaleX * this.scaleY));
+      const basePad = Math.ceil(maxR) + 2;
+      const padL  = Math.max(62, basePad + 14);
+      const padR  = Math.max(20, basePad + 8);
+      const padT  = Math.max(24, basePad + 8);
+      const padB  = Math.max(44, basePad + 8);
+      const plotW = Math.max(10, cssW - padL - padR);
+      const plotH = Math.max(10, cssH - padT - padB);
 
       const pts  = this.points;
-      const rMax = Math.max(...rRaw, 1);
-      const minR = 10, maxR = Math.min(plotW, plotH) * 0.13;
 
       const xRange = b.xFitRange / this.scaleX;
       const yRange = b.yFitRange / this.scaleY;
@@ -589,8 +634,7 @@ export default (w: Window) => {
 
       const toX = (v: number) => padL + ((v - xl) / xRange) * plotW;
       const toY = (v: number) => padT + plotH - ((v - yb) / (yt - yb)) * plotH;
-      const zoomScale = Math.min(2.8, Math.sqrt(this.scaleX * this.scaleY));
-      const toR = (v: number) => (minR + Math.sqrt(v / rMax) * (maxR - minR)) * zoomScale;
+      const toR = (v: number) => (minR + Math.sqrt(v / rCapMax) * (maxR - minR)) * zoomScale;
 
       let hit = -1, minDist = Infinity;
       for (let i = 0; i < pts.length; i++) {
@@ -612,7 +656,7 @@ export default (w: Window) => {
       const sign = p.y >= 0 ? '+' : '';
       this.tooltip.innerHTML = `<strong>${p.label}</strong><br>
 등락률 <span style="color:${col};font-weight:700">${sign}${(p.y * 100).toFixed(2)}%</span><br>
-회전율 ${fmtAxis(p.x)}<br>시가총액 ${fmtAxis(p.r)}<br>거래대금 ${fmtAxis(p.amount)}`;
+회전율 ${fmtTurnover(p.x)}<br>시가총액 ${fmtAxis(p.r)}<br>거래대금 ${fmtAxis(p.amount)}`;
       this.tooltip.style.display = 'block';
       const hostRect = this.getBoundingClientRect();
       const ttW = 160, ttH = 80;
@@ -622,53 +666,6 @@ export default (w: Window) => {
       if (ly < 4) ly = clientY - hostRect.top + 14;
       this.tooltip.style.left = `${Math.max(4, lx)}px`;
       this.tooltip.style.top  = `${Math.max(4, ly)}px`;
-    }
-
-    private updateInfo(idx: number) {
-      if (!this.infoEl) return;
-      if (idx < 0) {
-        this.infoEl.innerHTML = `<span class="bc-info-hint">버블을 클릭하면 상세 정보를 볼 수 있어요</span>`;
-        return;
-      }
-      const p  = this.points[idx];
-      const up = p.y >= 0;  // y=등락률
-      const sign = up ? '+' : '';
-
-      let meta: Record<string, string> = {};
-      try { if (p.meta) meta = JSON.parse(p.meta) as Record<string, string>; } catch { /* ignore */ }
-
-      const stockCount  = meta.stockCount  ? Number(meta.stockCount)  : 0;
-      const leadingName = meta.leadingName ?? '';
-      const leadingLogo = meta.leadingLogoUrl ?? '';
-      const leadingSignal = meta.leadingSignal ?? '';
-      const imageUrl    = meta.imageUrl ?? '';
-      const rank        = meta.rank ? `${meta.rank}위 · ` : '';
-
-      const countBadge = stockCount > 1
-        ? `<span class="bc-badge-count">${leadingName} 외 ${stockCount - 1}개 종목</span>`
-        : stockCount === 1 ? `<span class="bc-badge-count">${leadingName}</span>` : '';
-
-      const leadingHtml = leadingName ? `
-        <div class="bc-info-leading">
-          ${leadingLogo ? `<img class="bc-leading-logo" src="${leadingLogo}" onerror="this.style.display='none'">` : ''}
-          <span class="bc-leading-name">${leadingName}</span>
-          ${leadingSignal ? `<span class="bc-leading-signal">${leadingSignal}</span>` : ''}
-        </div>` : '';
-
-      this.infoEl.innerHTML = `
-        <div class="bc-info-card">
-          ${imageUrl ? `<img class="bc-info-img" src="${imageUrl}" alt="${p.label}" onerror="this.style.display='none'">` : ''}
-          <div class="bc-info-body">
-            <div class="bc-info-name">${rank}${p.label}</div>
-            <div class="bc-info-meta">
-              <span class="bc-badge-rate ${up ? 'up' : 'down'}">${sign}${(p.y * 100).toFixed(2)}%</span>
-              <span class="bc-badge-num">회전율 ${fmtAxis(p.x)}</span>
-              <span class="bc-badge-num">시가총액 ${fmtAxis(p.r)}</span>
-              ${countBadge}
-            </div>
-            ${leadingHtml}
-          </div>
-        </div>`;
     }
 
     // ── 이벤트: 휠 줌 ──
@@ -720,7 +717,6 @@ export default (w: Window) => {
         this.selectedIdx = hit === this.selectedIdx ? -1 : hit;
         this.draw();
         this.showTooltip(this.selectedIdx, e.clientX, e.clientY);
-        this.updateInfo(this.selectedIdx);
         this.dispatchEvent(new CustomEvent('bubble-select', {
           detail: this.selectedIdx >= 0 ? this.points[this.selectedIdx] : null,
           bubbles: true,
@@ -799,7 +795,7 @@ export default (w: Window) => {
         const fracY = Math.max(0, Math.min(1, 1 - (cy - rect.top - pr.padT) / pr.plotH));
         // 현재 scale 대비 목표 scale 계산 후 zoomAt으로 위임 (앵커 보정 + 클램프 포함)
         const rawFactor = dist / this.pinchDist0;
-        const targetSX = Math.min(8, Math.max(1, this.pinchScaleX0 * (1 + (rawFactor - 1) * 0.5)));
+        const targetSX = Math.min(50, Math.max(1, this.pinchScaleX0 * (1 + (rawFactor - 1) * 0.5)));
         const factor = targetSX / this.scaleX;
         this.zoomAt(factor, fracX, fracY);
         this.draw();
@@ -847,7 +843,6 @@ export default (w: Window) => {
         this.selectedIdx = hit === this.selectedIdx ? -1 : hit;
         this.draw();
         this.showTooltip(this.selectedIdx, e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-        this.updateInfo(this.selectedIdx);
         this.dispatchEvent(new CustomEvent('bubble-select', {
           detail: this.selectedIdx >= 0 ? this.points[this.selectedIdx] : null,
           bubbles: true,
