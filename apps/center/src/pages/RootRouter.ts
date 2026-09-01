@@ -87,6 +87,12 @@ export default (w: Window) => {
       return `<center-stock-category-ranking-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-trading-simulation"], { order: 10 })
+    @innerHtmlLight
+    handleStockTradingSimulation() {
+      return `<center-stock-trading-simulation-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {

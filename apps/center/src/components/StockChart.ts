@@ -13,7 +13,7 @@ import {
 
 const tagName = "stock-chart";
 
-/** 캔들 데이터 한 건 */
+/** 캔들 데이터 한 건 — 자식 <line>/<tooltip> 포함 가능 (건별 B/S) */
 export interface StockChartPoint {
   date: string;
   open: number;
@@ -21,6 +21,11 @@ export interface StockChartPoint {
   low: number;
   close: number;
   volume: number;
+  lines?: { width: number; color: string }[];
+  tooltips?: { position: 'top' | 'bottom' | 'candle-top' | 'candle-bottom'; color?: string; fillColor?: string; lineColor?: string; labelColor?: string; label: string; lineWidth?: number }[];
+  // 하위 호환 단일 필드
+  line?: { width: number; color: string };
+  tooltip?: { position: 'top' | 'bottom' | 'candle-top' | 'candle-bottom'; color?: string; fillColor?: string; labelColor?: string; label: string; lineWidth?: number; lineColor?: string };
 }
 
 /** 자식 <rect>/<arc> 로 그려지는 오버레이 도형 (캔버스 픽셀 좌표) */
@@ -55,6 +60,7 @@ export default (w: Window) => {
     // ---------- 상태 ----------
     private points: StockChartPoint[] = [];
     private shapes: ChartShape[] = [];
+    private mas: Array<{ color: string; period: number }> = [];
     private viewStart: number = 0;
     private viewEnd: number = 0;
     private selectedIdx: number = -1;
@@ -137,6 +143,7 @@ export default (w: Window) => {
     private pinchDist0: number = 0;
     private pinchSpan0: number = 0;
     private pinchAnchorFrac: number = 0.5;
+    private pinchViewStart0: number = 0;
     private readonly padL: number = 6;
     private readonly padR: number = 58;
     /** 모바일 touchend 후 합성 mouseup 이벤트로 팝업이 닫히는 것을 방지하는 타임스탬프 */
@@ -188,6 +195,7 @@ export default (w: Window) => {
       // tick 자식 요소들로 데이터 구성
       this.collectFromTicks();
       this.collectFromShapes();
+      this.collectMas();
       if (this.points.length === 0) {
         // 사용자가 setData를 부르길 기다림
         return;
@@ -200,16 +208,28 @@ export default (w: Window) => {
       // observer 정리는 프레임워크가 자동 처리
     }
 
-    // host(컴포넌트) 크기 변경 시 재그리기
+     // host(컴포넌트) 크기 변경 시 재그리기
     @resizeObserverLight()
     onHostResize(matchedEls: HTMLElement[], entries: ResizeObserverEntry[]): void {
       if (this.chartCanvas) this.drawChart();
     }
 
+    private collectMas(): void {
+      const mas: Array<{ color: string; period: number }> = [];
+      this.querySelectorAll(':scope > ma').forEach(el => {
+        const color = el.getAttribute('color') || '#6366f1';
+        const sizeAttr = el.getAttribute('size') || el.getAttribute('period') || '20';
+        const period = Math.max(2, Number(sizeAttr) || 20);
+        mas.push({ color, period });
+      });
+      this.mas = mas;
+    }
+
     // ---------- 데이터 수집 ----------
 
     private collectFromTicks(): void {
-      const ticks = this.querySelectorAll(":scope > tick");
+      // 하위호환: <tick> (구) / <candle> (신) 모두 지원
+      const ticks = this.querySelectorAll(":scope > tick, :scope > candle");
       const points: StockChartPoint[] = [];
       ticks.forEach((tick) => {
         const date = tick.getAttribute("date") || "";
@@ -218,7 +238,39 @@ export default (w: Window) => {
         const low = Number(tick.getAttribute("low")) || 0;
         const close = Number(tick.getAttribute("close")) || 0;
         const volume = Number(tick.getAttribute("volume")) || 0;
-        points.push({ date, open, high, low, close, volume });
+        // candle/tick 자식 <line> / <tooltip> — 건별 B/S 등 여러 개 가능
+        const lines: { width: number; color: string }[] = [];
+        tick.querySelectorAll(':scope > line').forEach(lineEl => {
+          const w = lineEl.getAttribute('width');
+          const c = lineEl.getAttribute('color');
+          if (w || c) lines.push({ width: w ? Number(w) || 1 : 1, color: c || 'rgba(99,102,241,0.6)' });
+        });
+        const tooltips: NonNullable<StockChartPoint['tooltips']> = [];
+        tick.querySelectorAll(':scope > tooltip').forEach(tipEl => {
+          let pos = (tipEl.getAttribute('position') || 'top') as string;
+          // 하위호환: tip-top/bottom → candle-top/bottom
+          if (pos === 'tip-top') pos = 'candle-top';
+          if (pos === 'tip-bottom') pos = 'candle-bottom';
+          const lab = tipEl.getAttribute('label') || tipEl.getAttribute('lable') || '';
+          const fillC = tipEl.getAttribute('fill-color') || tipEl.getAttribute('color') || '';
+          const lineC = tipEl.getAttribute('line-color') || '';
+          const labelC = tipEl.getAttribute('label-color') || '';
+          const lw = tipEl.getAttribute('line-width');
+          // fill-color 없이 label-color/line-color만 있으면 비포커싱(투명 배경)
+          const col = fillC || labelC || lineC || '#6366f1';
+          tooltips.push({
+            position: (['top','bottom','candle-top','candle-bottom'].includes(pos) ? pos : 'top') as any,
+            color: col,
+            fillColor: fillC || undefined,
+            lineColor: lineC || undefined,
+            labelColor: labelC || undefined,
+            label: lab,
+            lineWidth: lw ? Number(lw) : undefined
+          } as any);
+        });
+        const line = lines[0];
+        const tooltip = tooltips[0];
+        points.push({ date, open, high, low, close, volume, lines: lines.length ? lines : undefined, tooltips: tooltips.length ? tooltips : undefined, line, tooltip });
       });
       this.points = points;
     }
@@ -257,12 +309,13 @@ export default (w: Window) => {
       this.shapes = shapes;
     }
 
-    // tick 자식 요소 변경(추가/삭제/속성) 시 재수집 후 다시 그림
+    // tick/ma 자식 요소 변경(추가/삭제/속성) 시 재수집 후 다시 그림
     // 셀렉터 생략 → $this(host, light DOM) observe
     @mutationObserverLight({ childList: true, attributes: true, subtree: true })
     private onTicksMutated(matchedEls: HTMLElement[]): void {
       this.collectFromTicks();
       this.collectFromShapes();
+      this.collectMas();
       if (this.chartCanvas && this.points.length > 0) {
         if (!this.viewInitDone) {
           const n = this.points.length;
@@ -400,13 +453,15 @@ export default (w: Window) => {
         e.preventDefault();
         this.pinchDist0 = Math.abs(touches[0].clientX - touches[1].clientX);
         this.pinchSpan0 = this.viewEnd - this.viewStart + 1;
+        this.pinchViewStart0 = this.viewStart;
         const canvas = this.chartCanvas;
         if (canvas) {
           const rect = canvas.getBoundingClientRect();
+          const plotW = Math.max(1, rect.width - this.padL - this.padR);
           const midX = (touches[0].clientX + touches[1].clientX) / 2;
           this.pinchAnchorFrac = Math.max(
             0,
-            Math.min(1, (midX - rect.left) / rect.width),
+            Math.min(1, (midX - rect.left - this.padL) / plotW),
           );
         }
         this.dragging = false;
@@ -425,15 +480,21 @@ export default (w: Window) => {
       if (!this.controlsEnabled) return;
       const touches = e.touches;
       if (touches.length === 2 && this.pinchDist0 > 0) {
-        // 핀치 줌: 항상 스크롤 막음
         e.preventDefault();
         const dist = Math.abs(touches[0].clientX - touches[1].clientX);
         if (dist === 0) return;
         const factor = this.pinchDist0 / dist;
         const newSpan = this.pinchSpan0 * factor;
-        const anchorIdx =
-          this.pinchSpan0 * this.pinchAnchorFrac + this.viewStart;
-        this.viewStart = anchorIdx - this.pinchAnchorFrac * newSpan;
+        // 핀치 중심은 현재 손가락 사이 중간점으로 매 프레임 재계산 (고정 앵커가 끝으로 쏠리는 현상 방지)
+        const canvas = this.chartCanvas;
+        const rect = canvas?.getBoundingClientRect();
+        const plotW = rect ? Math.max(1, rect.width - this.padL - this.padR) : 1;
+        const midX = (touches[0].clientX + touches[1].clientX) / 2;
+        const curFrac = rect
+          ? Math.max(0, Math.min(1, (midX - rect.left - this.padL) / plotW))
+          : this.pinchAnchorFrac;
+        const anchorIdx = this.pinchSpan0 * curFrac + this.pinchViewStart0;
+        this.viewStart = anchorIdx - curFrac * newSpan;
         this.viewEnd = this.viewStart + newSpan - 1;
         this.clampView();
         this.drawChart();
@@ -583,8 +644,10 @@ export default (w: Window) => {
         ctx.stroke();
       }
 
-      // 세로 시간 그리드 (가격+거래량 영역 관통)
-      const step = Math.max(1, Math.ceil(data.length / 6));
+      // 세로 시간 그리드 (가격+거래량 영역 관통) — 모바일 4개, 데스크탑 6개
+      const isMobile = W < 420;
+      const timeGridCount = isMobile ? 4 : 6;
+      const step = Math.max(1, Math.ceil(data.length / timeGridCount));
       ctx.strokeStyle = "#f6f7f9";
       ctx.lineWidth = 1;
       for (let i = 0; i < data.length; i += step) {
@@ -595,7 +658,13 @@ export default (w: Window) => {
         ctx.stroke();
       }
 
-      // 캔들 + 거래량
+      // --- 클리핑: 가격 영역만 (거래량/x축 라벨로 침범 방지) ---
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(padL, padT, plotW, priceH);
+      ctx.clip();
+
+      // 캔들 (가격 영역만)
       for (let i = 0; i < data.length; i++) {
         const d = data[i];
         const up = d.close >= d.open;
@@ -613,11 +682,132 @@ export default (w: Window) => {
         const hgt = Math.max(1, Math.abs(yC - yO));
         ctx.fillStyle = color;
         ctx.fillRect(x - bodyW / 2, top, bodyW, hgt);
-        if (!this.hiddenVolume) {
+      }
+
+      // 이동평균선 (캔들 위에, 클리핑 내)
+      if (this.mas.length) {
+        for (const ma of this.mas) {
+          const period = ma.period;
+          const full = this.points;
+          const fullMA: (number | null)[] = new Array(full.length).fill(null);
+          let sum = 0;
+          for (let i = 0; i < full.length; i++) {
+            sum += full[i].close;
+            if (i >= period) sum -= full[i - period].close;
+            if (i >= period - 1) fullMA[i] = sum / period;
+          }
+          ctx.strokeStyle = ma.color;
+          ctx.lineWidth = 1.2;
+          ctx.lineJoin = 'round';
+          ctx.beginPath();
+          let started = false;
+          for (let i = 0; i < data.length; i++) {
+            const gi = startI + i;
+            const v = fullMA[gi];
+            if (v == null) continue;
+            const px = xCandle(i);
+            const py = yPrice(v);
+            if (!started) { ctx.moveTo(px, py); started = true; }
+            else ctx.lineTo(px, py);
+          }
+          ctx.stroke();
+        }
+      }
+
+      ctx.restore();
+
+      // 거래량 (별도 영역, 클리핑 없음)
+      if (!this.hiddenVolume) {
+        for (let i = 0; i < data.length; i++) {
+          const d = data[i];
+          const up = d.close >= d.open;
+          const color = up ? UP : DOWN;
+          const x = Math.round(xCandle(i)) + 0.5;
           const vh = maxV > 0 ? (d.volume / maxV) * (volH - 6) : 0;
           ctx.globalAlpha = 0.55;
+          ctx.fillStyle = color;
           ctx.fillRect(x - bodyW / 2, H - axisH - vh, bodyW, vh);
           ctx.globalAlpha = 1;
+        }
+      }
+
+      // tick 자식 <line>/<tooltip> (건별 B/S 등 마커) — 여러 개 가능
+      for (let i = 0; i < data.length; i++) {
+        const d = data[i] as StockChartPoint;
+        const x = xCandle(i);
+        const lines = (d as any).lines as StockChartPoint['line'][] | undefined;
+        const tooltips = (d as any).tooltips as StockChartPoint['tooltip'][] | undefined;
+        // <line> : 수직 타임라인 (가격 영역만)
+        const lineList = lines ?? (d.line ? [d.line] : []);
+        for (const ln of lineList) {
+          const yEnd = padT + priceH;
+          ctx.save();
+          ctx.strokeStyle = ln.color;
+          ctx.lineWidth = ln.width;
+          ctx.beginPath();
+          ctx.moveTo(Math.round(x) + 0.5, padT);
+          ctx.lineTo(Math.round(x) + 0.5, yEnd);
+          ctx.stroke();
+          ctx.restore();
+        }
+        // <tooltip> : 라벨 + (선택) 라인
+        const tipList = tooltips ?? (d.tooltip ? [d.tooltip] : []);
+        for (const tip of tipList) {
+          if (!tip.label) continue;
+          // 라인 (tooltip의 line-width/line-color 가 있으면 그림) — 가격 영역만
+          if (tip.lineWidth && tip.lineColor) {
+            const yEnd = padT + priceH;
+            ctx.save();
+            ctx.strokeStyle = tip.lineColor;
+            ctx.lineWidth = tip.lineWidth;
+            ctx.beginPath();
+            ctx.moveTo(Math.round(x) + 0.5, padT);
+            ctx.lineTo(Math.round(x) + 0.5, yEnd);
+            ctx.stroke();
+            ctx.restore();
+          }
+          // 라벨 위치 — candle-*는 캔들 팁, top/bottom은 가격 영역 위/아래
+          let ly = padT - 5;
+          if (tip.position === 'bottom') ly = padT + priceH + 6;
+          else if (tip.position === 'candle-top' || (tip as any).position === 'tip-top') ly = yPrice(d.high) - 10 - 8;
+          else if (tip.position === 'candle-bottom' || (tip as any).position === 'tip-bottom') ly = yPrice(d.low) + 10 + 8;
+          const tipAny = tip as any;
+          const fillColor: string | undefined = tipAny.fillColor;
+          const labelColor: string | undefined = tipAny.labelColor;
+          const hasFill = !!fillColor;
+          const bg = fillColor || tip.color;
+          const fg = labelColor || (tip.label === 'D' || tip.label === 'G' ? '#fff' : '#fff');
+          // G/D처럼 fill 없이 label/line만인 경우 연하게 보이지 않도록, fill 없으면 흰 글자 대신 labelColor 사용
+          const useTextOnly = !hasFill && !!labelColor;
+          ctx.font = 'bold 10px -apple-system, sans-serif';
+          const tw = ctx.measureText(tip.label).width + 10;
+          const th = 16;
+          let tx = x - tw / 2;
+          tx = Math.max(padL + 2, Math.min(W - padR - tw - 2, tx));
+          // clamp y — 상하 18px 여유
+          if (ly - th/2 < padT - 18) ly = padT - 18 + th/2;
+          if (ly + th/2 > padT + priceH + 18) ly = padT + priceH + 18 - th/2;
+          if (hasFill) {
+            ctx.fillStyle = bg;
+            ctx.beginPath();
+            ctx.roundRect(tx, ly - th/2, tw, th, 6);
+            ctx.fill();
+            ctx.fillStyle = fg;
+          } else {
+            // fill 없이 라벨만: 배경 없이 텍스트만 (포커싱 약하게)
+            ctx.fillStyle = labelColor || tip.color;
+            // 텍스트 가독성을 위한 흰 외곽선은 유지하되 배경은 투명
+          }
+          // G/D처럼 fill 없이 label만인 경우 테두리 불필요
+          if (hasFill) {
+            ctx.strokeStyle = tip.label === 'D' ? '#ef4444' : tip.label === 'G' ? '#d97706' : (tipAny.lineColor || bg);
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+          ctx.fillStyle = fg;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(tip.label, tx + tw/2, ly + 0.5);
         }
       }
 
@@ -698,13 +888,16 @@ export default (w: Window) => {
         );
       }
 
-      // 날짜 축
+      // 날짜 축 — 원문 그대로 표시
       if (!this.hiddenXLabel) {
         ctx.fillStyle = "#98a2b3";
         ctx.textAlign = "center";
+        ctx.font = `${isMobile ? 9 : 10}px -apple-system, sans-serif`;
         for (let i = 0; i < data.length; i += step) {
-          const label = data[i].date.slice(5);
-          ctx.fillText(label, xCandle(i), H - axisH / 2);
+          const label = data[i].date;
+          const x = xCandle(i);
+          if (x < padL + 20 || x > W - padR - 20) continue;
+          ctx.fillText(label, x, H - axisH / 2);
         }
       }
 

@@ -9,6 +9,7 @@ import BuybackPage from './buyback/BuybackPage';
 import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
 import StockNptiPage from './stock-npti/StockNptiPage';
 import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRankingPage';
+import StockTradingSimulationPage from './stock-trading-simulation/StockTradingSimulationPage';
 
 export const pageFactories = [
   RootRouter,
@@ -22,4 +23,5 @@ export const pageFactories = [
   StockBrainCheckerPage,
   StockNptiPage,
   StockCategoryRankingPage,
+  StockTradingSimulationPage,
 ];

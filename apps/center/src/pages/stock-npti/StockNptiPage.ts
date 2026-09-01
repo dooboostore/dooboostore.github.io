@@ -227,7 +227,7 @@ export default (w: Window) => {
           : '';
       })() : '';
       return this.candles.map(c=>
-        `<tick date="${c.date}" open="${c.open}" high="${c.high}" low="${c.low}" close="${c.close}" volume="${c.volume}"></tick>`
+        `<candle date="${c.date}" open="${c.open}" high="${c.high}" low="${c.low}" close="${c.close}" volume="${c.volume}"></candle>`
       ).join('') + rect;
     }
 

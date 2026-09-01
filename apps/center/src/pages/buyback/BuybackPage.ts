@@ -426,7 +426,7 @@ export default (w: Window) => {
     private buildChartPopup(): string {
       if (!this.chartCompany) return '';
       const ticks = this.chartData.map(d => `
-        <tick date="${d.date}" open="${d.open}" high="${d.high}" low="${d.low}" close="${d.close}" volume="${d.volume}"></tick>
+        <candle date="${d.date}" open="${d.open}" high="${d.high}" low="${d.low}" close="${d.close}" volume="${d.volume}"></candle>
       `).join('');
       return `
         <div class="chart-overlay">

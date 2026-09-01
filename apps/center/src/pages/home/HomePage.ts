@@ -86,6 +86,15 @@ export default (w: Window) => {
       path: '/stock-category-ranking',
       color: '#0ea5e9',
       badge: 'New'
+    },
+    {
+      id: 'stock-trading-simulation',
+      icon: '📈',
+      title: '가상 트레이딩',
+      description: '종목 검색 후 1년 일봉 차트로 가상 매매를 시뮬레이션해보세요.',
+      path: '/stock-trading-simulation',
+      color: '#f59e0b',
+      badge: 'New'
     }
   ];
 

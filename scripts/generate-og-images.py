@@ -24,6 +24,7 @@ Page → emoji mapping:
   stock-flight             ✈️  2708
   stock-npti               🧬 1f9ec
   stock-category           📊 1f4ca
+  stock-trading-simulation 💹 1f4b9
 """
 import argparse
 import os
@@ -50,6 +51,7 @@ MAPPING = [
     ("stock-flight-og.png", "2708", "✈️"),
     ("stock-npti-og.png", "1f9ec", "🧬"),
     ("stock-category-og.png", "1f4ca", "📊"),
+    ("stock-trading-simulation-og.png", "1f4c8", "📈"),
 ]
 
 TWEMOJI_BASE = "https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/{code}.png"

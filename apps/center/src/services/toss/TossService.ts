@@ -563,8 +563,10 @@ export default (container: symbol): ConstructorType<TossService> => {
 
       // code 정규화: 영문 시작(A/US/KGG 등) 그대로, 숫자 6자리 → A prefix
       const normalizedCode = /^[A-Z]/.test(code) ? code : `A${code}`;
-      // 회사 정보가 있으면 market으로 해외 여부 판단 (NSQ/NYS), 없으면 코드 prefix로 판단
-      const isUS = normalizedCode.startsWith('US') || (marketHint ? /^(NSQ|NYS|NAS)/.test(marketHint) : false);
+      // 회사 정보가 있으면 market으로 해외 여부 판단 (NSQ/NYS/NAS/AMX), 없으면 코드 prefix로 판단 (US/NAS/AMX/NYS)
+      const isUS =
+        /^(US|NAS|AMX|NYS)/.test(normalizedCode) ||
+        (marketHint ? /^(NSQ|NYS|NAS|AMX)/.test(marketHint) : false);
       const marketPath = isUS ? 'us-s' : 'kr-s';
       const params = new URLSearchParams({
         count: String(count),

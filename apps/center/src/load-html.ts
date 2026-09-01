@@ -170,6 +170,7 @@ async function main() {
     "/stock-brain-checker",
     "/stock-npti",
     "/stock-category-ranking",
+    "/stock-trading-simulation",
   ];
   const outDir = path.resolve(__dirname, '../dist');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
