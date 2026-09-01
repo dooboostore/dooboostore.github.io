@@ -172,7 +172,7 @@ export default (w: Window) => {
             touch-action: pan-y; cursor: crosshair;
           }
           :host([enabled-control]) #stock-chart-canvas {
-            touch-action: none;
+            touch-action: pan-y;
           }
           .chart-readout {
             position: absolute; top: 8px; left: 10px;
@@ -357,10 +357,24 @@ export default (w: Window) => {
       this.viewEnd = this.viewStart + span - 1;
     }
 
+    private isAtFullView(): boolean {
+      const n = this.points.length;
+      if (n === 0) return true;
+      const span = this.viewEnd - this.viewStart + 1;
+      return span >= n - 0.5;
+    }
+
     @eventShadow('#stock-chart-canvas', 'wheel', { passive: false })
     private onWheel(e: WheelEvent): void {
       if (this.disabledEvent) return;
       if (!this.controlsEnabled) return;
+      const n = this.points.length;
+      const span0 = this.viewEnd - this.viewStart + 1;
+      const isFull = n > 0 && span0 >= n - 0.5;
+      const factor = e.deltaY > 0 ? 1.15 : 1 / 1.15;
+      // A: 100%(full)에서 줌아웃(휠 다운, factor>1)은 차트가 더 축소 불가 → 윈도우 스크롤로 흘림
+      // B: 100%에서 한 손가락 세로 스크롤도 touchMove에서 윈도우로 흘림 (아래)
+      if (isFull && factor > 1) return;
       e.preventDefault();
       const canvas = this.chartCanvas;
       if (!canvas) return;
@@ -372,7 +386,6 @@ export default (w: Window) => {
       );
       const span = this.viewEnd - this.viewStart + 1;
       const anchorIdx = this.viewStart + frac * span;
-      const factor = e.deltaY > 0 ? 1.15 : 1 / 1.15;
       const newSpan = span * factor;
       this.viewStart = anchorIdx - frac * newSpan;
       this.viewEnd = this.viewStart + newSpan - 1;
@@ -480,10 +493,13 @@ export default (w: Window) => {
       if (!this.controlsEnabled) return;
       const touches = e.touches;
       if (touches.length === 2 && this.pinchDist0 > 0) {
-        e.preventDefault();
         const dist = Math.abs(touches[0].clientX - touches[1].clientX);
         if (dist === 0) return;
         const factor = this.pinchDist0 / dist;
+        const isFull = this.isAtFullView();
+        // 100%에서 핀치 줌아웃(벌려서 축소, factor>1)은 더 축소 불가 → 윈도우로 흘림
+        if (isFull && factor > 1) return;
+        e.preventDefault();
         const newSpan = this.pinchSpan0 * factor;
         // 핀치 중심은 현재 손가락 사이 중간점으로 매 프레임 재계산 (고정 앵커가 끝으로 쏠리는 현상 방지)
         const canvas = this.chartCanvas;
@@ -499,6 +515,8 @@ export default (w: Window) => {
         this.clampView();
         this.drawChart();
       } else if (touches.length === 1 && this.dragging) {
+        // 100% 뷰에서는 한 손가락 제스처는 윈도우 스크롤로 흘림 (B)
+        if (this.isAtFullView()) return;
         const canvas = this.chartCanvas;
         if (!canvas) return;
         const rect = canvas.getBoundingClientRect();

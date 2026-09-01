@@ -10,13 +10,13 @@ const DEFAULT_CANDLE_COUNT = 360;
 const DEFAULT_TIMEFRAME: TossChartTimeframe = 'day:1';
 const DEFAULT_CAPITAL = 100_000_000;
 const DEFAULT_MA_CONFIGS = [
-  { period: 5, color: '#ef4444', pyramiding: { golden: { action: 'buy' as const, percent: 15, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 15, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 20, color: '#f59e0b', pyramiding: { golden: { action: 'buy' as const, percent: 25, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 25, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 60, color: '#10b981', pyramiding: { golden: { action: 'buy' as const, percent: 30, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 30, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 120, color: '#6366f1', pyramiding: { golden: { action: 'buy' as const, percent: 50, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 50, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
+  { period: 5, color: '#ef4444', pyramiding: { golden: { action: 'buy' as const, percent: 15, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 15, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
+  { period: 20, color: '#f59e0b', pyramiding: { golden: { action: 'buy' as const, percent: 25, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 25, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
+  { period: 60, color: '#10b981', pyramiding: { golden: { action: 'buy' as const, percent: 30, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 30, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
+  { period: 120, color: '#6366f1', pyramiding: { golden: { action: 'buy' as const, percent: 50, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 50, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
 ];
-const DEFAULT_TP = { enabled: true, percent: 15, sellPercent: 100, skip: 5 };
-const DEFAULT_SL = { enabled: true, percent: 10, sellPercent: 100, skip: 5 };
+const DEFAULT_TP = { enabled: true, percent: 15, sellPercent: 80, skip: 5, candleFilter: 'bull' as const, volumeFilter: 'higher' as const };
+const DEFAULT_SL = { enabled: true, percent: 10, sellPercent: 50, skip: 5, candleFilter: 'bear' as const, volumeFilter: 'lower' as const };
 const DEFAULT_SHOW_CROSS = false;
 
 export default (w: Window) => {
@@ -36,14 +36,14 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), 'content', { valueKey: 'twitterDesc' })
     setPageMeta() {
       return {
-        titleBody: '가상 트레이딩 시뮬레이션 | @dooboostore',
-        ogTitle: '가상 트레이딩 시뮬레이션 | @dooboostore',
-        desc: '이동평균 골든/데드 크로스로 가상 매매를 시뮬레이션하고 수익률을 확인해보세요.',
-        ogDesc: '이동평균 골든/데드 크로스로 가상 매매를 시뮬레이션하고 수익률을 확인해보세요.',
+        titleBody: '주식 트레이딩 시뮬레이션 | @dooboostore',
+        ogTitle: '주식 트레이딩 시뮬레이션 | @dooboostore',
+        desc: '이동평균 골든/데드 크로스로 매매를 시뮬레이션하고 수익률을 확인해보세요.',
+        ogDesc: '이동평균 골든/데드 크로스로 매매를 시뮬레이션하고 수익률을 확인해보세요.',
         ogImage: '/assets/images/stock-trading-simulation-og.png',
         twitterImage: '/assets/images/stock-trading-simulation-og.png',
-        twitterTitle: '가상 트레이딩 시뮬레이션 | @dooboostore',
-        twitterDesc: '이동평균 골든/데드 크로스로 가상 매매를 시뮬레이션하고 수익률을 확인해보세요.',
+        twitterTitle: '주식 트레이딩 시뮬레이션 | @dooboostore',
+        twitterDesc: '이동평균 골든/데드 크로스로 매매를 시뮬레이션하고 수익률을 확인해보세요.',
       };
     }
 
@@ -62,17 +62,21 @@ export default (w: Window) => {
     private takeProfitPercent = DEFAULT_TP.percent;
     private takeProfitSellPercent = DEFAULT_TP.sellPercent;
     private takeProfitSkip = DEFAULT_TP.skip;
+    private takeProfitCandleFilter: 'any'|'bull'|'bear' = DEFAULT_TP.candleFilter;
+    private takeProfitVolumeFilter: 'any'|'higher'|'lower' = DEFAULT_TP.volumeFilter;
     private showCross = DEFAULT_SHOW_CROSS;
     private stopLossEnabled = DEFAULT_SL.enabled;
     private stopLossPercent = DEFAULT_SL.percent;
     private stopLossSellPercent = DEFAULT_SL.sellPercent;
     private stopLossSkip = DEFAULT_SL.skip;
+    private stopLossCandleFilter: 'any'|'bull'|'bear' = DEFAULT_SL.candleFilter;
+    private stopLossVolumeFilter: 'any'|'higher'|'lower' = DEFAULT_SL.volumeFilter;
     // --- 시뮬레이션 결과 (마지막 계산값)
     private simCash = 0;
     private simShares = 0;
     private simFirstPrice = 0;
     private simLastPrice = 0;
-    private simTrades: { idx: number; date: string; price: number; action: 'buy'|'sell'; maPeriod: number; percent: number; sharesDelta: number; amount: number; cashAfter: number; sharesAfter: number; label?: string }[] = [];
+    private simTrades: { idx: number; date: string; price: number; action: 'buy'|'sell'; maPeriod: number; percent: number; sharesDelta: number; amount: number; cashAfter: number; sharesAfter: number; label?: string; profitRate: number | null; avgPrice: number; holdingValue: number }[] = [];
 
     private restoreSimFromUrl() {
       try {
@@ -88,11 +92,15 @@ export default (w: Window) => {
         const tp = p.get('tp'); if (tp) { const v = Number(tp); if (Number.isFinite(v) && v >= 0 && v <= 100) this.takeProfitPercent = v; }
         const tpSell = p.get('tpSell'); if (tpSell) { const v = Number(tpSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitSellPercent = Math.floor(v); }
         const tpSkip = p.get('tpSkip'); if (tpSkip) { const v = Number(tpSkip); if (Number.isFinite(v) && v >= 0 && v <= 20) this.takeProfitSkip = Math.floor(v); }
+        const tpCandle = p.get('tpCandle'); if (tpCandle && ['any','bull','bear'].includes(tpCandle)) this.takeProfitCandleFilter = tpCandle as any;
+        const tpVol = p.get('tpVol'); if (tpVol && ['any','higher','lower'].includes(tpVol)) this.takeProfitVolumeFilter = tpVol as any;
         const cross = p.get('cross'); if (cross) this.showCross = cross === '1';
         const slEn = p.get('slEn'); if (slEn) this.stopLossEnabled = slEn === '1';
         const sl = p.get('sl'); if (sl) { const v = Number(sl); if (Number.isFinite(v) && v >= 0 && v <= 100) this.stopLossPercent = v; }
         const slSell = p.get('slSell'); if (slSell) { const v = Number(slSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossSellPercent = Math.floor(v); }
         const slSkip = p.get('slSkip'); if (slSkip) { const v = Number(slSkip); if (Number.isFinite(v) && v >= 0 && v <= 20) this.stopLossSkip = Math.floor(v); }
+        const slCandle = p.get('slCandle'); if (slCandle && ['any','bull','bear'].includes(slCandle)) this.stopLossCandleFilter = slCandle as any;
+        const slVol = p.get('slVol'); if (slVol && ['any','higher','lower'].includes(slVol)) this.stopLossVolumeFilter = slVol as any;
         const mas = p.get('mas');
         if (mas) {
           try {
@@ -113,7 +121,7 @@ export default (w: Window) => {
                     period: Math.max(2, Math.min(500, Math.floor(Number(x.period)) || 10)),
                     color: typeof x.color === 'string' && /^#([0-9a-fA-F]{3,8})$/.test(x.color) ? x.color : '#6366f1',
                     pyramiding: {
-                      golden: { action: g.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(g.percent) || 0)), candleFilter: normCandle(g.candleFilter ?? x.candleFilter), volumeFilter: normVol(g.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(g.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(g.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(g.trigger ?? x.trigger), alignment: normAlign(g.alignment) === 'any' ? 'aligned' : normAlign(g.alignment) },
+                      golden: { action: g.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(g.percent) || 0)), candleFilter: normCandle(g.candleFilter ?? x.candleFilter), volumeFilter: normVol(g.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(g.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(g.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(g.trigger ?? x.trigger), alignment: normAlign(g.alignment) },
                       dead: { action: d.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(d.percent) || 0)), candleFilter: normCandle(d.candleFilter ?? x.candleFilter), volumeFilter: normVol(d.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(d.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(d.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(d.trigger ?? x.trigger), alignment: normAlign(d.alignment) },
                     },
                   };
@@ -130,9 +138,9 @@ export default (w: Window) => {
         const masStr = encodeURIComponent(JSON.stringify(this.maConfigs));
         this.router?.replaceUpsertSearchParam?.({
           cap: String(this.initialCapital), cnt: String(this.candleCount), tf: this.timeframe, mas: masStr,
-          tpEn: this.takeProfitEnabled ? '1' : '0', tp: String(this.takeProfitPercent), tpSell: String(this.takeProfitSellPercent), tpSkip: String(this.takeProfitSkip),
+          tpEn: this.takeProfitEnabled ? '1' : '0', tp: String(this.takeProfitPercent), tpSell: String(this.takeProfitSellPercent), tpSkip: String(this.takeProfitSkip), tpCandle: this.takeProfitCandleFilter, tpVol: this.takeProfitVolumeFilter,
           cross: this.showCross ? '1' : '0',
-          slEn: this.stopLossEnabled ? '1' : '0', sl: String(this.stopLossPercent), slSell: String(this.stopLossSellPercent), slSkip: String(this.stopLossSkip),
+          slEn: this.stopLossEnabled ? '1' : '0', sl: String(this.stopLossPercent), slSell: String(this.stopLossSellPercent), slSkip: String(this.stopLossSkip), slCandle: this.stopLossCandleFilter, slVol: this.stopLossVolumeFilter,
         });
       } catch {}
     }
@@ -148,20 +156,28 @@ export default (w: Window) => {
       const tpEl = this.shadowRoot?.querySelector('#sim-tp') as HTMLInputElement;
       const tpSellEl = this.shadowRoot?.querySelector('#sim-tp-sell') as HTMLInputElement;
       const tpSkipEl = this.shadowRoot?.querySelector('#sim-tp-skip') as HTMLInputElement;
+      const tpCandleEl = this.shadowRoot?.querySelector('#sim-tp-candle') as HTMLSelectElement;
+      const tpVolEl = this.shadowRoot?.querySelector('#sim-tp-volume') as HTMLSelectElement;
       const crossEl = this.shadowRoot?.querySelector('#sim-show-cross') as HTMLInputElement;
       const slEnEl = this.shadowRoot?.querySelector('#sim-sl-enabled') as HTMLInputElement;
       const slEl = this.shadowRoot?.querySelector('#sim-sl') as HTMLInputElement;
       const slSellEl = this.shadowRoot?.querySelector('#sim-sl-sell') as HTMLInputElement;
       const slSkipEl = this.shadowRoot?.querySelector('#sim-sl-skip') as HTMLInputElement;
+      const slCandleEl = this.shadowRoot?.querySelector('#sim-sl-candle') as HTMLSelectElement;
+      const slVolEl = this.shadowRoot?.querySelector('#sim-sl-volume') as HTMLSelectElement;
       if (tpEnEl) tpEnEl.checked = this.takeProfitEnabled;
       if (tpEl) tpEl.value = String(this.takeProfitPercent);
       if (tpSellEl) tpSellEl.value = String(this.takeProfitSellPercent);
       if (tpSkipEl) tpSkipEl.value = String(this.takeProfitSkip);
+      if (tpCandleEl) tpCandleEl.value = this.takeProfitCandleFilter;
+      if (tpVolEl) tpVolEl.value = this.takeProfitVolumeFilter;
       if (crossEl) crossEl.checked = this.showCross;
       if (slEnEl) slEnEl.checked = this.stopLossEnabled;
       if (slEl) slEl.value = String(this.stopLossPercent);
       if (slSellEl) slSellEl.value = String(this.stopLossSellPercent);
       if (slSkipEl) slSkipEl.value = String(this.stopLossSkip);
+      if (slCandleEl) slCandleEl.value = this.stopLossCandleFilter;
+      if (slVolEl) slVolEl.value = this.stopLossVolumeFilter;
     }
 
     @onInitialize
@@ -383,10 +399,14 @@ export default (w: Window) => {
       this.takeProfitPercent = DEFAULT_TP.percent;
       this.takeProfitSellPercent = DEFAULT_TP.sellPercent;
       this.takeProfitSkip = DEFAULT_TP.skip;
+      this.takeProfitCandleFilter = DEFAULT_TP.candleFilter;
+      this.takeProfitVolumeFilter = DEFAULT_TP.volumeFilter;
       this.stopLossEnabled = isTp ? DEFAULT_SL.enabled : false;
       this.stopLossPercent = DEFAULT_SL.percent;
       this.stopLossSellPercent = DEFAULT_SL.sellPercent;
       this.stopLossSkip = DEFAULT_SL.skip;
+      this.stopLossCandleFilter = DEFAULT_SL.candleFilter;
+      this.stopLossVolumeFilter = DEFAULT_SL.volumeFilter;
       this.showCross = DEFAULT_SHOW_CROSS;
       this.applySimConfigToForm();
       this.renderMaList();
@@ -405,11 +425,15 @@ export default (w: Window) => {
       this.takeProfitPercent = DEFAULT_TP.percent;
       this.takeProfitSellPercent = DEFAULT_TP.sellPercent;
       this.takeProfitSkip = DEFAULT_TP.skip;
+      this.takeProfitCandleFilter = DEFAULT_TP.candleFilter;
+      this.takeProfitVolumeFilter = DEFAULT_TP.volumeFilter;
       this.showCross = DEFAULT_SHOW_CROSS;
       this.stopLossEnabled = DEFAULT_SL.enabled;
       this.stopLossPercent = DEFAULT_SL.percent;
       this.stopLossSellPercent = DEFAULT_SL.sellPercent;
       this.stopLossSkip = DEFAULT_SL.skip;
+      this.stopLossCandleFilter = DEFAULT_SL.candleFilter;
+      this.stopLossVolumeFilter = DEFAULT_SL.volumeFilter;
       this.applySimConfigToForm();
       this.renderMaList();
       this.syncSimParamsToUrl();
@@ -419,8 +443,8 @@ export default (w: Window) => {
     @addEventListener('#sim-share-fab', 'click')
     async onShareFab() {
       const url = window.location.href;
-      const title = `가상 트레이딩 · ${this.currentName}`;
-      const text = `[${this.currentName}]의 가상 트레이딩을 확인해보세요!`;
+      const title = `주식 트레이딩 · ${this.currentName}`;
+      const text = `[${this.currentName}]의 종목 트레이딩을 확인해보세요!`;
       const fab = this.shadowRoot?.querySelector('#sim-share-fab') as HTMLElement;
       const flash = () => {
         if (!fab) return;
@@ -508,8 +532,33 @@ export default (w: Window) => {
           const avg = totalCost / shares;
           const currClose = candles[i].close;
           const profitRate = ((currClose - avg) / avg) * 100;
-          const shouldTP = this.takeProfitEnabled && profitRate >= this.takeProfitPercent;
-          const shouldSL = this.stopLossEnabled && profitRate <= -this.stopLossPercent;
+          let shouldTP = this.takeProfitEnabled && profitRate >= this.takeProfitPercent;
+          let shouldSL = this.stopLossEnabled && profitRate <= -this.stopLossPercent;
+          // 익절 캔들/거래량 필터
+          if (shouldTP) {
+            if (this.takeProfitCandleFilter !== 'any') {
+              const isBull = candles[i].close > candles[i].open;
+              const isBear = candles[i].close < candles[i].open;
+              if (this.takeProfitCandleFilter === 'bull' && !isBull) shouldTP = false;
+              if (this.takeProfitCandleFilter === 'bear' && !isBear) shouldTP = false;
+            }
+            if (shouldTP && this.takeProfitVolumeFilter !== 'any' && i > 0) {
+              if (this.takeProfitVolumeFilter === 'higher' && !(candles[i].volume > candles[i-1].volume)) shouldTP = false;
+              if (this.takeProfitVolumeFilter === 'lower' && !(candles[i].volume < candles[i-1].volume)) shouldTP = false;
+            }
+          }
+          if (shouldSL) {
+            if (this.stopLossCandleFilter !== 'any') {
+              const isBull = candles[i].close > candles[i].open;
+              const isBear = candles[i].close < candles[i].open;
+              if (this.stopLossCandleFilter === 'bull' && !isBull) shouldSL = false;
+              if (this.stopLossCandleFilter === 'bear' && !isBear) shouldSL = false;
+            }
+            if (shouldSL && this.stopLossVolumeFilter !== 'any' && i > 0) {
+              if (this.stopLossVolumeFilter === 'higher' && !(candles[i].volume > candles[i-1].volume)) shouldSL = false;
+              if (this.stopLossVolumeFilter === 'lower' && !(candles[i].volume < candles[i-1].volume)) shouldSL = false;
+            }
+          }
           if (shouldTP || shouldSL) {
             const isTP = shouldTP;
             const sellPct = isTP ? this.takeProfitSellPercent : this.stopLossSellPercent;
@@ -522,7 +571,10 @@ export default (w: Window) => {
               if (shares === 0) totalCost = 0;
               const label = isTP ? '익' : '손';
               const color = isTP ? '#10b981' : '#ef4444';
-              trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: 0, percent: sellPct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, label });
+              const profitRate = ((currClose - avg) / avg) * 100;
+              const avgPriceAfter = shares > 0 ? totalCost / shares : 0;
+              const holdingValue = shares * currClose;
+              trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: 0, percent: sellPct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, label, profitRate, avgPrice: avgPriceAfter, holdingValue });
               const arr = tradeAtIdx.get(i) ?? [];
               arr.push({ action: 'sell', label, color, position: 'candle-top' });
               tradeAtIdx.set(i, arr);
@@ -687,7 +739,9 @@ export default (w: Window) => {
             shares += buyShares;
             cash -= actualCost;
             totalCost += actualCost;
-            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'buy', maPeriod: ma.period, percent: pct, sharesDelta: buyShares, amount: actualCost, cashAfter: cash, sharesAfter: shares });
+            const buyAvgPrice = shares > 0 ? totalCost / shares : 0;
+            const buyHoldingValue = shares * currClose;
+            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'buy', maPeriod: ma.period, percent: pct, sharesDelta: buyShares, amount: actualCost, cashAfter: cash, sharesAfter: shares, profitRate: null, avgPrice: buyAvgPrice, holdingValue: buyHoldingValue });
             const arr = tradeAtIdx.get(i) ?? [];
             arr.push({ action: 'buy', label: 'B', color: '#3b82f6', position: 'candle-top' });
             tradeAtIdx.set(i, arr);
@@ -705,12 +759,15 @@ export default (w: Window) => {
             const sellShares = Math.floor(shares * (pct / 100));
             if (sellShares <= 0) continue;
             const avg = totalCost / shares;
+            const profitRateSell = ((currClose - avg) / avg) * 100;
             const proceeds = sellShares * currClose;
             shares -= sellShares;
             cash += proceeds;
             totalCost -= sellShares * avg;
             if (shares === 0) totalCost = 0;
-            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: ma.period, percent: pct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares });
+            const avgPriceAfterSell = shares > 0 ? totalCost / shares : 0;
+            const holdingValueAfterSell = shares * currClose;
+            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: ma.period, percent: pct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, profitRate: profitRateSell, avgPrice: avgPriceAfterSell, holdingValue: holdingValueAfterSell });
             const arr = tradeAtIdx.get(i) ?? [];
             arr.push({ action: 'sell', label: 'S', color: '#ef4444', position: 'candle-bottom' });
             tradeAtIdx.set(i, arr);
@@ -847,23 +904,41 @@ export default (w: Window) => {
         return s.slice(0, 16);
       };
       const evalAmt = this.simCash + this.simShares * this.simLastPrice;
+      const buyCnt = this.simTrades.filter(t=>t.action==='buy').length;
+      const sellCnt = this.simTrades.filter(t=>t.action==='sell' && t.maPeriod!==0).length;
+      const tpCnt = this.simTrades.filter(t=>(t as any).label==='익').length;
+      const slCnt = this.simTrades.filter(t=>(t as any).label==='손').length;
+      const holdingVal = Math.round(this.simShares * this.simLastPrice);
       body.innerHTML = `
-        <div style="padding:8px 14px;font-size:11px;color:#64748b;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid #f1f5f9;background:#f8fafc">
-          <span>총 <b style="color:#1e293b">${this.simTrades.length}건</b></span>
-          <span>최종 평가 <b style="color:#1e293b">${fmt(evalAmt)}원</b></span>
+        <div style="padding:8px 14px;font-size:11px;color:#64748b;display:flex;flex-direction:column;gap:4px;border-bottom:1px solid #f1f5f9;background:#f8fafc">
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><span>총 <b style="color:#1e293b">${this.simTrades.length}건</b> = 매수 <b style="color:#2563eb">${buyCnt}건</b> · 매도 <b style="color:#dc2626">${sellCnt}건</b> · 익절 <b style="color:#059669">${tpCnt}건</b> · 손절 <b style="color:#dc2626">${slCnt}건</b></span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><span>최종 평가 <b style="color:#1e293b">${fmt(evalAmt)}원</b> = 보유주식 ${Math.floor(this.simShares).toLocaleString()}주 (${fmt(holdingVal)}원) + 현금 ${fmt(Math.round(this.simCash))}원</span></div>
         </div>
         <div style="overflow:auto;max-height:60vh">
         <table style="width:100%;border-collapse:collapse;font-size:11px;white-space:nowrap">
-          <thead style="position:sticky;top:0;background:#fff;z-index:1"><tr style="color:#64748b;border-bottom:1px solid #e2e8f0">
-            <th style="padding:8px 10px;text-align:left">#</th><th style="padding:8px 10px;text-align:left">날짜</th><th style="padding:8px 10px;text-align:center">구분</th><th style="padding:8px 10px;text-align:center">MA</th><th style="padding:8px 10px;text-align:right">가격</th><th style="padding:8px 10px;text-align:right">수량</th><th style="padding:8px 10px;text-align:right">금액</th><th style="padding:8px 10px;text-align:right">보유주식</th><th style="padding:8px 10px;text-align:right">현금</th>
-          </tr></thead>
+          <thead style="position:sticky;top:0;background:#fff;z-index:1">
+            <tr style="color:#64748b;border-bottom:0px; solid #e2e8f0;background:#f8fafc">
+              <th colspan="8" style="padding:6px 10px;text-align:center;font-weight:800;color:#334155;border-right:1px solid #e2e8f0">매매</th>
+              <th colspan="5" style="padding:6px 10px;text-align:center;font-weight:800;color:#1e40af;background:#eef2ff">보유</th>
+            </tr>
+            <tr style="color:#64748b;border-bottom:1px solid #e2e8f0">
+              <th style="padding:8px 10px;text-align:left">#</th><th style="padding:8px 10px;text-align:left">날짜</th><th style="padding:8px 10px;text-align:center">구분</th><th style="padding:8px 10px;text-align:center">MA</th><th style="padding:8px 10px;text-align:right">매매시 시세</th><th style="padding:8px 10px;text-align:right">수량</th><th style="padding:8px 10px;text-align:right">금액</th><th style="padding:8px 10px;text-align:right">수익률</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">거래후 보유주식</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">평가금액</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">주당평균가격</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">현금</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">총자산</th>
+            </tr>
+          </thead>
           <tbody>
-            ${this.simTrades.map(t => {
+            ${this.simTrades.map((t, i) => {
               const isTpSl = t.maPeriod === 0;
               const isTp = (t as any).label === '익';
               const badgeText = isTpSl ? (isTp ? '익절' : '손절') : (t.action==='buy'?'매수 B':'매도 S');
               const badgeBg = isTpSl ? (isTp ? '#10b981' : '#ef4444') : (t.action==='buy'?'#3b82f6':'#ef4444');
               const maText = isTpSl ? `${isTp ? '익절' : '손절'} ${t.percent}%` : `MA${t.maPeriod} ${t.percent}%`;
+              const profitText = t.profitRate == null ? '-' : `${t.profitRate >= 0 ? '+' : ''}${t.profitRate.toFixed(2)}%`;
+              const profitColor = t.profitRate == null ? '#94a3b8' : t.profitRate > 0 ? '#dc2626' : t.profitRate < 0 ? '#2563eb' : '#64748b';
+              const avgPriceText = t.sharesAfter > 0 ? `${fmt(Math.round(t.avgPrice))}원` : '-';
+              const holdingValText = `${fmt(Math.round(t.holdingValue))}원`;
+              const total = Math.round(t.cashAfter + t.holdingValue);
+              const prevTotal = i === 0 ? this.initialCapital : Math.round(this.simTrades[i-1].cashAfter + this.simTrades[i-1].holdingValue);
+              const totalColor = total > prevTotal ? '#dc2626' : total < prevTotal ? '#2563eb' : '#1e293b';
               return `
               <tr style="border-bottom:1px solid #f1f5f9">
                 <td style="padding:7px 10px;color:#94a3b8">${t.idx}</td>
@@ -873,8 +948,12 @@ export default (w: Window) => {
                 <td style="padding:7px 10px;text-align:right">${fmt(t.price)}원</td>
                 <td style="padding:7px 10px;text-align:right">${Math.floor(t.sharesDelta).toLocaleString()}주</td>
                 <td style="padding:7px 10px;text-align:right">${fmt(t.amount)}원</td>
+                <td style="padding:7px 10px;text-align:right;color:${profitColor};font-weight:700">${profitText}</td>
                 <td style="padding:7px 10px;text-align:right">${Math.floor(t.sharesAfter).toLocaleString()}주</td>
+                <td style="padding:7px 10px;text-align:right">${holdingValText}</td>
+                <td style="padding:7px 10px;text-align:right">${avgPriceText}</td>
                 <td style="padding:7px 10px;text-align:right">${fmt(t.cashAfter)}원</td>
+                <td style="padding:7px 10px;text-align:right;font-weight:700;color:${totalColor}">${fmt(total)}원</td>
               </tr>
               `; }).join('')}
           </tbody>
@@ -927,18 +1006,26 @@ export default (w: Window) => {
       const tpEl = this.shadowRoot?.querySelector('#sim-tp') as HTMLInputElement;
       const tpSellEl = this.shadowRoot?.querySelector('#sim-tp-sell') as HTMLInputElement;
       const tpSkipEl = this.shadowRoot?.querySelector('#sim-tp-skip') as HTMLInputElement;
+      const tpCandleEl = this.shadowRoot?.querySelector('#sim-tp-candle') as HTMLSelectElement;
+      const tpVolEl = this.shadowRoot?.querySelector('#sim-tp-volume') as HTMLSelectElement;
       const slEnEl = this.shadowRoot?.querySelector('#sim-sl-enabled') as HTMLInputElement;
       const slEl = this.shadowRoot?.querySelector('#sim-sl') as HTMLInputElement;
       const slSellEl = this.shadowRoot?.querySelector('#sim-sl-sell') as HTMLInputElement;
       const slSkipEl = this.shadowRoot?.querySelector('#sim-sl-skip') as HTMLInputElement;
+      const slCandleEl = this.shadowRoot?.querySelector('#sim-sl-candle') as HTMLSelectElement;
+      const slVolEl = this.shadowRoot?.querySelector('#sim-sl-volume') as HTMLSelectElement;
       if (tpEnEl) this.takeProfitEnabled = !!tpEnEl.checked;
       if (tpEl) { const v = Number(tpEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitPercent = Math.floor(v); }
       if (tpSellEl) { const v = Number(tpSellEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitSellPercent = Math.floor(v); }
       if (tpSkipEl) { const v = Number(tpSkipEl.value); if (Number.isFinite(v) && v >= 0 && v <= 20) this.takeProfitSkip = Math.floor(v); }
+      if (tpCandleEl && ['any','bull','bear'].includes(tpCandleEl.value)) this.takeProfitCandleFilter = tpCandleEl.value as any;
+      if (tpVolEl && ['any','higher','lower'].includes(tpVolEl.value)) this.takeProfitVolumeFilter = tpVolEl.value as any;
       if (slEnEl) this.stopLossEnabled = !!slEnEl.checked;
       if (slEl) { const v = Number(slEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossPercent = Math.floor(v); }
       if (slSellEl) { const v = Number(slSellEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossSellPercent = Math.floor(v); }
       if (slSkipEl) { const v = Number(slSkipEl.value); if (Number.isFinite(v) && v >= 0 && v <= 20) this.stopLossSkip = Math.floor(v); }
+      if (slCandleEl && ['any','bull','bear'].includes(slCandleEl.value)) this.stopLossCandleFilter = slCandleEl.value as any;
+      if (slVolEl && ['any','higher','lower'].includes(slVolEl.value)) this.stopLossVolumeFilter = slVolEl.value as any;
       const crossEl = this.shadowRoot?.querySelector('#sim-show-cross') as HTMLInputElement;
       if (crossEl) this.showCross = !!crossEl.checked;
     }
@@ -990,16 +1077,16 @@ export default (w: Window) => {
           <div class="ma-row-head">
             <div class="ma-identity">
               <span class="ma-color" data-color="${ma.color}" style="background:${ma.color}"></span>
-              <input class="ma-period" type="number" min="2" max="500" value="${ma.period}" title="틱수" />
+              <input class="ma-period" type="number" min="2" max="500" style="font-size: 16px;" value="${ma.period}" title="틱수" />
               <span class="ma-unit">MA</span>
             </div>
             <button type="button" class="ma-remove" data-idx="${idx}" title="삭제">✕</button>
           </div>
           <div class="ma-row-fields">
             <div class="ma-field">
-              <div class="ma-field-head"><span class="ma-field-label golden">골든</span><div class="ma-action-box"><select class="ma-golden-action"><option value="buy" ${ma.pyramiding.golden.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.golden.action==='sell'?'selected':''}>매도</option></select><input class="ma-golden-pct" type="number" min="1" max="100" value="${ma.pyramiding.golden.percent}" /><span class="pct">%</span></div></div>
+              <div class="ma-field-head"><span class="ma-field-label golden">골든</span><div class="ma-action-box"><select class="ma-golden-action"><option value="buy" ${ma.pyramiding.golden.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.golden.action==='sell'?'selected':''}>매도</option></select><input class="ma-golden-pct" type="number" min="1" max="100" value="${ma.pyramiding.golden.percent}" style="font-size: 16px;" /><span class="pct">%</span></div></div>
               <div class="ma-field-opts">
-                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-golden-consecutive" type="number" min="1" max="10" value="${ma.pyramiding.golden.consecutive ?? 2}" />회</span><span class="ma-mini-group">최대 <input class="ma-golden-max" type="number" min="1" max="20" value="${ma.pyramiding.golden.maxTrades ?? 2}" />회 매매</span></label>
+                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-golden-consecutive" type="number" min="1" max="10" style="font-size: 16px;" value="${ma.pyramiding.golden.consecutive ?? 2}" />회</span><span class="ma-mini-group">최대 <input class="ma-golden-max" type="number" min="1" max="20" style="font-size: 16px;" value="${ma.pyramiding.golden.maxTrades ?? 2}" />회 매매</span></label>
                 <label class="ma-mini-opt" title="상태면 종가가 MA 위/아래에 머무는 동안 매 틱 매매, 발생시는 크로스 순간에만">지속 <select class="ma-golden-trigger"><option value="event" ${ma.pyramiding.golden.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.golden.trigger==='state'?'selected':''}>상태</option></select></label>
                 <label class="ma-mini-opt">캔들 <select class="ma-golden-candle"><option value="any" ${ma.pyramiding.golden.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.golden.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.golden.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
                 <label class="ma-mini-opt">거래량 <select class="ma-golden-volume"><option value="any" ${ma.pyramiding.golden.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.golden.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.golden.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
@@ -1007,9 +1094,9 @@ export default (w: Window) => {
               </div>
             </div>
             <div class="ma-field">
-              <div class="ma-field-head"><span class="ma-field-label dead">데드</span><div class="ma-action-box"><select class="ma-dead-action"><option value="buy" ${ma.pyramiding.dead.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.dead.action==='sell'?'selected':''}>매도</option></select><input class="ma-dead-pct" type="number" min="1" max="100" value="${ma.pyramiding.dead.percent}" /><span class="pct">%</span></div></div>
+              <div class="ma-field-head"><span class="ma-field-label dead">데드</span><div class="ma-action-box"><select class="ma-dead-action"><option value="buy" ${ma.pyramiding.dead.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.dead.action==='sell'?'selected':''}>매도</option></select><input class="ma-dead-pct" type="number" min="1" max="100" value="${ma.pyramiding.dead.percent}" style="font-size: 16px;" /><span class="pct">%</span></div></div>
               <div class="ma-field-opts">
-                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-dead-consecutive" type="number" min="1" max="10" value="${ma.pyramiding.dead.consecutive ?? 2}" />회</span><span class="ma-mini-group">최대 <input class="ma-dead-max" type="number" min="1" max="20" value="${ma.pyramiding.dead.maxTrades ?? 2}" />회 매매</span></label>
+                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-dead-consecutive" type="number" min="1" max="10" value="${ma.pyramiding.dead.consecutive ?? 2}" style="font-size: 16px;"/>회</span><span class="ma-mini-group">최대 <input class="ma-dead-max" type="number" min="1" max="20" value="${ma.pyramiding.dead.maxTrades ?? 2}" style="font-size: 16px;"/>회 매매</span></label>
                 <label class="ma-mini-opt">지속 <select class="ma-dead-trigger"><option value="event" ${ma.pyramiding.dead.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.dead.trigger==='state'?'selected':''}>상태</option></select></label>
                 <label class="ma-mini-opt">캔들 <select class="ma-dead-candle"><option value="any" ${ma.pyramiding.dead.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.dead.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.dead.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
                 <label class="ma-mini-opt">거래량 <select class="ma-dead-volume"><option value="any" ${ma.pyramiding.dead.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.dead.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.dead.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
@@ -1085,6 +1172,7 @@ export default (w: Window) => {
           .ma-mini-opt span{white-space:nowrap;flex-shrink:0}
           .ma-mini-opt input{width:36px;height:26px;text-align:center;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;font-weight:800;background:#fff;flex-shrink:0}
           .ma-mini-opt select{flex:1;min-width:60px;max-width:100%;height:26px;border-radius:8px;border:1px solid #e2e8f0;font-size:10px;font-weight:700;background:#fff;padding:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+          #stock-search {font-size: 16px !important;}
           @media(max-width:600px){
             .ma-row{padding:12px}
             .ma-row-fields{grid-template-columns:1fr}
@@ -1100,6 +1188,12 @@ export default (w: Window) => {
           }
           .add-ma-btn{margin-top:8px;width:100%;height:32px;border:1px dashed #fbbf24;background:#fffbeb;color:#d97706;border-radius:8px;cursor:pointer;font-size:12px;font-weight:700}
           .add-ma-btn:hover{background:#fef3c7}
+          .tp-sl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+          .tp-sl-opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+          @media(max-width:600px){
+            .tp-sl-grid{grid-template-columns:1fr}
+            .tp-sl-opts{grid-template-columns:1fr}
+          }
           .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;border:none;box-shadow:0 6px 20px rgba(245,158,11,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
           .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(245,158,11,0.55)}
           .share-fab.copied{background:#10b981;box-shadow:0 6px 20px rgba(16,185,129,0.45)}
@@ -1127,7 +1221,7 @@ export default (w: Window) => {
           <button class="header-back" aria-label="Go home" title="홈으로">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
           </button>
-          <div class="header-title">📈 가상 트레이딩</div>
+          <div class="header-title">📈 주식 트레이딩 시뮬레이션</div>
           <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-stock-trading-simulation.svg?style=plastic&amp;"/>
         </div>
 
@@ -1166,11 +1260,11 @@ export default (w: Window) => {
           </div>
 
           <form class="card" id="sim-config" style="margin-top:12px" onsubmit="return false">
-            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">⚙️ 시뮬레이션 설정</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#fff;cursor:pointer;user-select:none"><input id="sim-show-cross" type="checkbox" style="width:14px;height:14px" /> 크로스표시</label><select id="sim-preset-select" class="sim-preset-select" style="margin-left:8px;height:28px;padding:0 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.18);color:#fff;font-size:11px;font-weight:700;cursor:pointer"><option value="" style="color:#334155">선택</option><option value="tp-up" style="color:#334155">익,손절 상승추매</option><option value="tp-down" style="color:#334155">익,손절 하락추매</option><option value="hold-up" style="color:#334155">보유 상승추매</option><option value="hold-down" style="color:#334155">보유 하락추매</option></select></div>
+            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">⚙️ 설정</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#fff;cursor:pointer;user-select:none"><input id="sim-show-cross" type="checkbox" style="width:14px;height:14px" />크로스표시</label><select id="sim-preset-select" class="sim-preset-select" style="margin-left:8px;height:28px;padding:0 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.18);color:#fff;font-size:11px;font-weight:700;cursor:pointer"><option value="" style="color:#334155">초기화 선택</option><option value="tp-up" style="color:#334155">[실현] 상승매수, 하락매도</option><option value="tp-down" style="color:#334155">[실현] 상승매도, 하락매수</option><option value="hold-up" style="color:#334155">[보유] 상승매수, 하락매도</option><option value="hold-down" style="color:#334155">[보유] 상승매도, 하락매수</option></select></div>
             <div style="padding:12px 14px;display:flex;flex-direction:column;gap:12px">
               <div class="config-grid">
-                <div class="config-field"><label>투자원금 (원)</label><input id="sim-capital" type="number" min="100000" step="100000" value="100000000" /></div>
-                <div class="config-field"><label>캔들 수</label><input id="sim-candle-count" type="number" min="30" max="1000" value="360" /></div>
+                <div class="config-field"><label>투자원금 (원)</label><input id="sim-capital" type="number" min="100000" step="100000" value="100000000" style="font-size: 16px;" /></div>
+                <div class="config-field"><label>캔들 수</label><input id="sim-candle-count" type="number" min="30" max="1000" value="360" style="font-size: 16px;"/></div>
                 <div class="config-field"><label>타임프레임</label>
                   <select id="sim-timeframe">
                     <option value="min:1">1분</option><option value="min:3">3분</option><option value="min:5">5분</option><option value="min:15">15분</option><option value="min:30">30분</option><option value="min:60">60분</option>
@@ -1180,16 +1274,24 @@ export default (w: Window) => {
               </div>
               <div style="border-top:1px solid #fef3c7;padding-top:12px">
                 <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:8px">익절 / 손절 (평균단가 기준 · MA와 중복매매 방지)</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                <div class="tp-sl-grid">
                   <label style="display:flex;flex-direction:column;gap:6px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:10px">
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#166534"><input id="sim-tp-enabled" type="checkbox" checked style="width:14px;height:14px" /> 익절</span>
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#14532d;flex-wrap:wrap">수익 <input id="sim-tp" type="number" min="1" max="100" value="15" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700" />% 시 <input id="sim-tp-sell" type="number" min="1" max="100" value="100" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700" />% 매도</span>
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#14532d">이후 <input id="sim-tp-skip" type="number" min="0" max="20" value="5" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700" />회 MA 스킵</span>
+                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#166534"><input id="sim-tp-enabled" type="checkbox" checked style="width:14px;height:14px; font-size: 16px;" /> 익절</span>
+                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#14532d;flex-wrap:wrap">수익 <input id="sim-tp" type="number" min="1" max="100" value="15" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size: 16px;" />% 시 <input id="sim-tp-sell" type="number" min="1" max="100" value="100" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size: 16px;" />% 매도</span>
+                    <div class="tp-sl-opts">
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">캔들 <select id="sim-tp-candle" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #bbf7d0;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="bull">양봉</option><option value="bear">음봉</option></select></label>
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">거래량 <select id="sim-tp-volume" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #bbf7d0;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="higher">높을때</option><option value="lower">낮을때</option></select></label>
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">이후 <input id="sim-tp-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size:12px;" />회 MA매매 스킵</label>
+                    </div>
                   </label>
                   <label style="display:flex;flex-direction:column;gap:6px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:10px">
                     <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#991b1b"><input id="sim-sl-enabled" type="checkbox" checked style="width:14px;height:14px" /> 손절</span>
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#7f1d1d;flex-wrap:wrap">손실 <input id="sim-sl" type="number" min="1" max="100" value="10" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700" />% 시 <input id="sim-sl-sell" type="number" min="1" max="100" value="100" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700" />% 매도</span>
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#7f1d1d">이후 <input id="sim-sl-skip" type="number" min="0" max="20" value="5" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700" />회 MA 스킵</span>
+                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#7f1d1d;flex-wrap:wrap">손실 <input id="sim-sl" type="number" min="1" max="100" value="10" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size: 16px;" />% 시 <input id="sim-sl-sell" type="number" min="1" max="100" value="100" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size: 16px;" />% 매도</span>
+                    <div class="tp-sl-opts">
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">캔들 <select id="sim-sl-candle" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #fecaca;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="bull">양봉</option><option value="bear">음봉</option></select></label>
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">거래량 <select id="sim-sl-volume" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #fecaca;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="higher">높을때</option><option value="lower">낮을때</option></select></label>
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">이후 <input id="sim-sl-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size:12px;" />회 MA매매 스킵</label>
+                    </div>
                   </label>
                 </div>
                 <div style="font-size:10px;color:#94a3b8;margin-top:6px">평균단가(총매입금액/보유주수) 대비 현재 종가 수익률 기준 · <b>수익 N%</b> 도달 시 보유주수의 M% 익절, <b>손실 N%</b> 도달 시 M% 손절. 체결 시 해당 봉 + 이후 N회 동안 이동평균선 매매를 건너뜁니다 (중복 방지).</div>
@@ -1198,7 +1300,7 @@ export default (w: Window) => {
                 <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px">이동평균선 (추가/삭제, 틱수·피라미딩 설정)</div>
                 <div id="ma-list" class="ma-list"></div>
                 <button type="button" class="add-ma-btn" id="add-ma-btn">+ 이동평균선 추가</button>
-                <div style="font-size:10px;color:#94a3b8;margin-top:6px">골든/데드: 종가가 해당 MA를 상향/하향 돌파 시 · <b>매수 %</b>는 보유현금 기준, <b>매도 %</b>는 보유주식 기준. 첫 매수는 투자원금의 %로 진입.</div>
+                <div style="font-size:10px;color:#94a3b8;margin-top:6px">골든/데드: 종가가 해당 MA를 상향/하향 돌파 시 · <b>매수 %</b>는 보유현금 기준, <b>매도 %</b>는 보유주식 기준.</div>
               </div>
             </div>
           </form>
