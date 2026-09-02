@@ -9,14 +9,24 @@ const tagName = 'center-stock-trading-simulation-page';
 const DEFAULT_CANDLE_COUNT = 360;
 const DEFAULT_TIMEFRAME: TossChartTimeframe = 'day:1';
 const DEFAULT_CAPITAL = 100_000_000;
-const DEFAULT_MA_CONFIGS = [
-  { period: 5, color: '#ef4444', pyramiding: { golden: { action: 'buy' as const, percent: 15, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 15, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 20, color: '#f59e0b', pyramiding: { golden: { action: 'buy' as const, percent: 25, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 25, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 60, color: '#10b981', pyramiding: { golden: { action: 'buy' as const, percent: 30, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 30, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 120, color: '#6366f1', pyramiding: { golden: { action: 'buy' as const, percent: 50, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 50, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
+// 4종 프리셋을 각각 별도 상수로 분리 (개발자 식별 용이)
+const PRESET_MA_REAL_RISING_BUY = [ // [실현] 상승매수, 하락매도
+  { period: 5, color: '#ef4444', pyramiding: { golden: { action: 'buy' as const, percent: 15, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'sell' as const, percent: 15, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+  { period: 20, color: '#f59e0b', pyramiding: { golden: { action: 'buy' as const, percent: 25, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'sell' as const, percent: 25, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+  { period: 60, color: '#10b981', pyramiding: { golden: { action: 'buy' as const, percent: 30, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'sell' as const, percent: 30, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+  { period: 120, color: '#6366f1', pyramiding: { golden: { action: 'buy' as const, percent: 50, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'sell' as const, percent: 50, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
 ];
+const PRESET_MA_REAL_RISING_SELL = [ // [실현] 상승매도, 하락매수 — 현재 DEFAULT와 동일
+  { period: 5, color: '#ef4444', pyramiding: { golden: { action: 'sell' as const, percent: 15, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'buy' as const, percent: 15, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+  { period: 20, color: '#f59e0b', pyramiding: { golden: { action: 'sell' as const, percent: 25, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'buy' as const, percent: 25, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+  { period: 60, color: '#10b981', pyramiding: { golden: { action: 'sell' as const, percent: 30, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'buy' as const, percent: 30, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+  { period: 120, color: '#6366f1', pyramiding: { golden: { action: 'sell' as const, percent: 50, candleFilter: 'bear' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } }, dead: { action: 'buy' as const, percent: 50, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const, condition: { type: 'consecutiveSelected' as const, operator: '<=' as const, value: 4 } } } },
+];
+const PRESET_MA_HOLD_RISING_BUY = JSON.parse(JSON.stringify(PRESET_MA_REAL_RISING_BUY)); // [보유] 상승매수, 하락매도 — MA는 실현과 동일, 익절/손절만 OFF
+const PRESET_MA_HOLD_RISING_SELL = JSON.parse(JSON.stringify(PRESET_MA_REAL_RISING_SELL)); // [보유] 상승매도, 하락매수 — MA는 실현과 동일, 익절/손절만 OFF
+const DEFAULT_MA_CONFIGS = PRESET_MA_REAL_RISING_SELL; // 초기값: [실현] 상승매도, 하락매수
 const DEFAULT_TP = { enabled: true, percent: 15, sellPercent: 80, skip: 5, candleFilter: 'bull' as const, volumeFilter: 'higher' as const };
-const DEFAULT_SL = { enabled: true, percent: 10, sellPercent: 50, skip: 5, candleFilter: 'bear' as const, volumeFilter: 'lower' as const };
+const DEFAULT_SL = { enabled: true, percent: 10, sellPercent: 80, skip: 5, candleFilter: 'bear' as const, volumeFilter: 'higher' as const };
 const DEFAULT_SHOW_CROSS = false;
 
 export default (w: Window) => {
@@ -56,7 +66,7 @@ export default (w: Window) => {
     private candleCount = DEFAULT_CANDLE_COUNT;
     private timeframe: TossChartTimeframe = DEFAULT_TIMEFRAME;
     private initialCapital = DEFAULT_CAPITAL;
-    private maConfigs: { period: number; color: string; pyramiding: { golden: { action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; maxTrades: number; trigger: 'state' | 'event'; alignment: 'any' | 'aligned' | 'reverse' }; dead: { action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; maxTrades: number; trigger: 'state' | 'event'; alignment: 'any' | 'aligned' | 'reverse' } } }[] = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS));
+    private maConfigs: { period: number; color: string; pyramiding: { golden: { action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; maxTrades: number; trigger: 'state' | 'event'; alignment: 'any' | 'aligned' | 'reverse' | 'largerAbove' | 'largerBelow' | 'smallerAbove' | 'smallerBelow'; condition: { type: 'any' | 'consecutiveBuy' | 'consecutiveSell' | 'consecutiveSelected' | 'consecutiveBearish' | 'consecutiveBullish'; operator: 'any' | '<' | '<=' | '=' | '!=' | '>=' | '>'; value: number } }; dead: { action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; maxTrades: number; trigger: 'state' | 'event'; alignment: 'any' | 'aligned' | 'reverse' | 'largerAbove' | 'largerBelow' | 'smallerAbove' | 'smallerBelow'; condition: { type: 'any' | 'consecutiveBuy' | 'consecutiveSell' | 'consecutiveSelected' | 'consecutiveBearish' | 'consecutiveBullish'; operator: 'any' | '<' | '<=' | '=' | '!=' | '>=' | '>'; value: number } } } }[] = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS));
     // --- 익절/손절 (상수에서 초기화) ---
     private takeProfitEnabled = DEFAULT_TP.enabled;
     private takeProfitPercent = DEFAULT_TP.percent;
@@ -75,6 +85,7 @@ export default (w: Window) => {
     private simCash = 0;
     private simShares = 0;
     private simFirstPrice = 0;
+    private simReasonMap = new Map<number, string>();
     private simLastPrice = 0;
     private simTrades: { idx: number; date: string; price: number; action: 'buy'|'sell'; maPeriod: number; percent: number; sharesDelta: number; amount: number; cashAfter: number; sharesAfter: number; label?: string; profitRate: number | null; avgPrice: number; holdingValue: number }[] = [];
 
@@ -112,17 +123,20 @@ export default (w: Window) => {
                 const normCandle = (v: any) => v === 'bull' ? 'bull' : v === 'bear' ? 'bear' : 'any' as const;
                 const normVol = (v: any) => v === 'higher' ? 'higher' : v === 'lower' ? 'lower' : 'any' as const;
                 const normTrigger = (v: any) => v === 'state' ? 'state' : 'event' as const;
-                const normAlign = (v: any) => v === 'aligned' ? 'aligned' : v === 'reverse' ? 'reverse' : 'any' as const;
+                const normAlign = (v: any) => ['aligned','reverse','largerAbove','largerBelow','smallerAbove','smallerBelow'].includes(v) ? v : 'any' as const;
+                const normCondType = (v: any) => ['consecutiveBuy','consecutiveSell','consecutiveSelected','consecutiveBearish','consecutiveBullish'].includes(v) ? v : 'any' as const;
+                const normOp = (v: any) => ['<','<=','=','>=','>','!='].includes(v) ? v : 'any' as const;
                 this.maConfigs = valid.map((x: any) => {
-                  // 구 구조: consecutive/maxTrades/trigger가 루트에 있던 경우 호환
                   const g = x.pyramiding?.golden ?? {};
                   const d = x.pyramiding?.dead ?? {};
+                  const gCond = g.condition ?? {};
+                  const dCond = d.condition ?? {};
                   return {
                     period: Math.max(2, Math.min(500, Math.floor(Number(x.period)) || 10)),
                     color: typeof x.color === 'string' && /^#([0-9a-fA-F]{3,8})$/.test(x.color) ? x.color : '#6366f1',
                     pyramiding: {
-                      golden: { action: g.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(g.percent) || 0)), candleFilter: normCandle(g.candleFilter ?? x.candleFilter), volumeFilter: normVol(g.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(g.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(g.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(g.trigger ?? x.trigger), alignment: normAlign(g.alignment) },
-                      dead: { action: d.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(d.percent) || 0)), candleFilter: normCandle(d.candleFilter ?? x.candleFilter), volumeFilter: normVol(d.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(d.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(d.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(d.trigger ?? x.trigger), alignment: normAlign(d.alignment) },
+                      golden: { action: g.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(g.percent) || 0)), candleFilter: normCandle(g.candleFilter ?? x.candleFilter), volumeFilter: normVol(g.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(g.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(g.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(g.trigger ?? x.trigger), alignment: normAlign(g.alignment), condition: { type: normCondType(gCond.type), operator: normOp(gCond.operator), value: Math.max(1, Math.min(20, Math.floor(Number(gCond.value) || 1))) } },
+                      dead: { action: d.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(d.percent) || 0)), candleFilter: normCandle(d.candleFilter ?? x.candleFilter), volumeFilter: normVol(d.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(d.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(d.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(d.trigger ?? x.trigger), alignment: normAlign(d.alignment), condition: { type: normCondType(dCond.type), operator: normOp(dCond.operator), value: Math.max(1, Math.min(20, Math.floor(Number(dCond.value) || 1))) } },
                     },
                   };
                 });
@@ -231,7 +245,7 @@ export default (w: Window) => {
         const isMin = this.timeframe.startsWith('min:');
         const isDayWeekMonth = this.timeframe === 'day:1' || this.timeframe === 'week:1' || this.timeframe === 'month:1';
         const sortedRaw = [...raw].sort((a, b) => a.dt.localeCompare(b.dt));
-        const candles = sortedRaw.map(c => ({ date: isMin ? c.dt.slice(11, 16) : isDayWeekMonth ? c.dt.slice(5, 10) : c.dt, open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }));
+        const candles = sortedRaw.map(c => ({ date: isMin ? c.dt.slice(11, 16) : isDayWeekMonth ? c.dt.slice(2, 10) : c.dt, open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }));
         this.chartCandles = candles;
 
         // 차트에 tick(골든/데드 크로스 시 line/tooltip 포함) + ma 주입
@@ -367,7 +381,7 @@ export default (w: Window) => {
       const nextPeriod = Math.min(500, (maxPeriod || 0) + 10 || 10);
       const colors = ['#ef4444','#f59e0b','#10b981','#6366f1','#ec4899','#06b6d4'];
       const color = colors[this.maConfigs.length % colors.length];
-      this.maConfigs.push({ period: nextPeriod, color, pyramiding: { golden: { action: 'buy', percent: 20, candleFilter: 'bull', volumeFilter: 'higher', consecutive: 2, maxTrades: 2, trigger: 'event', alignment: 'aligned' }, dead: { action: 'sell', percent: 20, candleFilter: 'bear', volumeFilter: 'any', consecutive: 2, maxTrades: 2, trigger: 'event', alignment: 'any' } } });
+      this.maConfigs.push({ period: nextPeriod, color, pyramiding: { golden: { action: 'buy', percent: 20, candleFilter: 'bull', volumeFilter: 'higher', consecutive: 2, maxTrades: 2, trigger: 'event', alignment: 'aligned', condition: { type: 'consecutiveSelected', operator: '>=', value: 4 } }, dead: { action: 'sell', percent: 20, candleFilter: 'bear', volumeFilter: 'any', consecutive: 2, maxTrades: 2, trigger: 'event', alignment: 'any', condition: { type: 'consecutiveSelected', operator: '>=', value: 4 } } } });
       this.renderMaList();
       this.syncConfigFromForm();
       this.syncSimParamsToUrl();
@@ -379,18 +393,13 @@ export default (w: Window) => {
       const sel = e.target as HTMLSelectElement;
       const v = sel.value;
       if (!v) return;
+      let ma: typeof this.maConfigs;
+      if (v === 'tp-up') ma = JSON.parse(JSON.stringify(PRESET_MA_REAL_RISING_BUY)) as typeof this.maConfigs;
+      else if (v === 'tp-down') ma = JSON.parse(JSON.stringify(PRESET_MA_REAL_RISING_SELL)) as typeof this.maConfigs;
+      else if (v === 'hold-up') ma = JSON.parse(JSON.stringify(PRESET_MA_HOLD_RISING_BUY)) as typeof this.maConfigs;
+      else if (v === 'hold-down') ma = JSON.parse(JSON.stringify(PRESET_MA_HOLD_RISING_SELL)) as typeof this.maConfigs;
+      else ma = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS)) as typeof this.maConfigs;
       const isTp = v.startsWith('tp-');
-      const isUp = v.endsWith('-up');
-      // 기본 MA 4개는 유지하되 액션만 반전, TP/SL은 보유면 OFF
-      const base = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS)) as typeof this.maConfigs;
-      const ma = base.map(m => {
-        if (!isUp) {
-          // 하락추매: 매수/매도 액션만 반전, 캔들/거래량/연속 등 조건은 유지
-          m.pyramiding.golden.action = m.pyramiding.golden.action === 'buy' ? 'sell' : 'buy';
-          m.pyramiding.dead.action = m.pyramiding.dead.action === 'buy' ? 'sell' : 'buy';
-        }
-        return m;
-      });
       this.candleCount = DEFAULT_CANDLE_COUNT;
       this.timeframe = DEFAULT_TIMEFRAME;
       this.initialCapital = DEFAULT_CAPITAL;
@@ -466,6 +475,101 @@ export default (w: Window) => {
       }
     }
 
+    @addEventListener('#ma-list', 'change', { delegate: true })
+    onMaCondTypeChange(e: Event) {
+      const target = e.target as HTMLElement;
+      if (!target.classList.contains('ma-golden-cond-type') && !target.classList.contains('ma-dead-cond-type')) return;
+      const label = (target as HTMLElement).closest('label') as HTMLElement;
+      if (!label) return;
+      const isAny = (target as HTMLSelectElement).value === 'any';
+      const selects = label.querySelectorAll('select');
+      const input = label.querySelector('input') as HTMLElement;
+      const iltte = label.querySelector('.cond-iltte') as HTMLElement;
+      // selects[0] is type itself, [1] is op, [2] is act
+      const op = selects[1] as HTMLElement;
+      const act = selects[2] as HTMLElement;
+      if (op) op.style.display = isAny ? 'none' : '';
+      if (input) input.style.display = isAny ? 'none' : '';
+      if (iltte) iltte.style.display = isAny ? 'none' : '';
+      if (act) act.style.display = isAny ? 'none' : '';
+    }
+
+    @addEventListener('#ma-list', 'click', { delegate: true })
+    onMaHelpClick(e: Event) {
+      const raw = ((e as any).composedPath?.()?.[0] ?? e.target) as HTMLElement;
+      const help = raw.closest('.ma-help') as HTMLElement;
+      if (!help) return;
+      console.log('[MA-HELP-DBG] help', help?.getAttribute?.('data-help')?.slice(0,60));
+      e.preventDefault();
+      e.stopPropagation();
+      let tip = help.getAttribute('data-help');
+      if (!tip) return;
+      // 배지는 이미 이스케이프된 HTML 엔티티를 포함하므로 디코딩
+      tip = tip.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      const pop = this.shadowRoot?.querySelector('#ma-help-popover') as HTMLElement;
+      if (!pop) return;
+      if (pop.classList.contains('show') && pop.textContent === tip) {
+        pop.classList.remove('show');
+        return;
+      }
+      pop.textContent = tip;
+      pop.classList.add('show');
+      const rect = help.getBoundingClientRect();
+      const popW = 280;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      left = Math.max(8, Math.min(window.innerWidth - popW - 8, left));
+      let top = rect.bottom + 8;
+      if (top + 60 > window.innerHeight) top = rect.top - 50;
+      pop.style.left = `${left}px`;
+      pop.style.top = `${top}px`;
+      setTimeout(() => {
+        const hide = (ev: Event) => {
+          const t = ((ev as any).composedPath?.()?.[0] ?? ev.target) as Node;
+          if (pop.contains(t) || help.contains(t as Node)) return;
+          pop.classList.remove('show');
+          document.removeEventListener('click', hide);
+        };
+        setTimeout(() => document.addEventListener('click', hide), 0);
+      }, 0);
+    }
+
+    @addEventListener('#sim-history-body', 'click', { delegate: true })
+    onHistoryHelpClick(e: Event) {
+      const raw = ((e as any).composedPath?.()?.[0] ?? e.target) as HTMLElement;
+      const help = raw.closest('.ma-help') as HTMLElement;
+      if (!help) return;
+      e.preventDefault();
+      e.stopPropagation();
+      let tip = help.getAttribute('data-help');
+      if (!tip) return;
+      tip = tip.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      const pop = this.shadowRoot?.querySelector('#ma-help-popover') as HTMLElement;
+      if (!pop) return;
+      if (pop.classList.contains('show') && pop.textContent === tip) {
+        pop.classList.remove('show');
+        return;
+      }
+      pop.textContent = tip;
+      pop.classList.add('show');
+      const rect = help.getBoundingClientRect();
+      const popW = 280;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      left = Math.max(8, Math.min(window.innerWidth - popW - 8, left));
+      let top = rect.bottom + 8;
+      if (top + 60 > window.innerHeight) top = rect.top - 50;
+      pop.style.left = `${left}px`;
+      pop.style.top = `${top}px`;
+      setTimeout(() => {
+        const hide = (ev: Event) => {
+          const t = ((ev as any).composedPath?.()?.[0] ?? ev.target) as Node;
+          if (pop.contains(t) || help.contains(t as Node)) return;
+          pop.classList.remove('show');
+          document.removeEventListener('click', hide);
+        };
+        setTimeout(() => document.addEventListener('click', hide), 0);
+      }, 0);
+    }
+
     @addEventListener('#ma-list', 'click', { delegate: true })
     onRemoveMa(e: Event) {
       const btn = (e.target as HTMLElement).closest('.ma-remove') as HTMLElement;
@@ -510,6 +614,22 @@ export default (w: Window) => {
         for (let k = 0; k < formed.length - 1; k++) {
           if (!(formed[k].v < formed[k + 1].v)) return false;
         }
+        return true;
+      };
+      const checkAlignment = (maPeriod: number, idx: number, mode: string): boolean => {
+        const cur = maMap.get(maPeriod)?.[idx];
+        if (cur == null) return false;
+        if (mode === 'any') return true;
+        if (mode === 'aligned') return isAligned(idx);
+        if (mode === 'reverse') return isReverseAligned(idx);
+        // 큰/작은 MA와 비교
+        const curPeriod = maPeriod;
+        const larger = [...maMap.entries()].filter(([p]) => p > curPeriod).map(([p, arr]) => arr[idx]).filter(v => v != null) as number[];
+        const smaller = [...maMap.entries()].filter(([p]) => p < curPeriod).map(([p, arr]) => arr[idx]).filter(v => v != null) as number[];
+        if (mode === 'largerAbove') return larger.length > 0 && larger.every(v => v > cur);
+        if (mode === 'largerBelow') return larger.length > 0 && larger.every(v => v < cur);
+        if (mode === 'smallerAbove') return smaller.length > 0 && smaller.every(v => v > cur);
+        if (mode === 'smallerBelow') return smaller.length > 0 && smaller.every(v => v < cur);
         return true;
       };
 
@@ -574,7 +694,10 @@ export default (w: Window) => {
               const profitRate = ((currClose - avg) / avg) * 100;
               const avgPriceAfter = shares > 0 ? totalCost / shares : 0;
               const holdingValue = shares * currClose;
-              trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: 0, percent: sellPct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, label, profitRate, avgPrice: avgPriceAfter, holdingValue });
+              const tpReason = isTP ? `익절 ${this.takeProfitPercent}% 도달(수익률 ${profitRate.toFixed(2)}%, avg ${avg.toFixed(0)} → ${currClose}) ${sellPct}% 매도, 이후 ${this.takeProfitSkip}회 스킵` : `손절 ${this.stopLossPercent}% 도달(수익률 ${profitRate.toFixed(2)}%, avg ${avg.toFixed(0)} → ${currClose}) ${sellPct}% 매도, 이후 ${this.stopLossSkip}회 스킵`;
+              const tpIdx = trades.length + 1;
+              trades.push({ idx: tpIdx, date: candles[i].date, price: currClose, action: 'sell', maPeriod: 0, percent: sellPct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, label, profitRate, avgPrice: avgPriceAfter, holdingValue });
+              this.simReasonMap.set(tpIdx, tpReason);
               const arr = tradeAtIdx.get(i) ?? [];
               arr.push({ action: 'sell', label, color, position: 'candle-top' });
               tradeAtIdx.set(i, arr);
@@ -634,15 +757,14 @@ export default (w: Window) => {
             }
           }
           if (!sig) continue;
-          // 이동평균선 배열 조건 (골든/데드 각각)
+          // 이동평균선 배열/상대 위치 조건 (골든/데드 각각) — 디버그 로그 (모든 period)
           {
-            const align = sig === 'golden' ? ((ma.pyramiding.golden as any).alignment ?? 'aligned') : ((ma.pyramiding.dead as any).alignment ?? 'any');
-            if (align === 'aligned' && !isAligned(i)) {
-              if (sig === 'golden') { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-              else { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-              continue;
-            }
-            if (align === 'reverse' && !isReverseAligned(i)) {
+            const align = sig === 'golden' ? ((ma.pyramiding.golden as any).alignment ?? 'any') : ((ma.pyramiding.dead as any).alignment ?? 'any');
+            const ok = align === 'any' || checkAlignment(ma.period, i, align);
+            const cur = maMap.get(ma.period)?.[i];
+            const v5 = maMap.get(5)?.[i], v20 = maMap.get(20)?.[i], v60 = maMap.get(60)?.[i], v120 = maMap.get(120)?.[i];
+            console.log(`[ALIGN-DBG] i=${i} date=${candles[i].date} period=${ma.period} sig=${sig} align=${align} ok=${ok} cur=${cur?.toFixed(1)} MA5=${v5?.toFixed(1)} MA20=${v20?.toFixed(1)} MA60=${v60?.toFixed(1)} MA120=${v120?.toFixed(1)} close=${candles[i].close}`);
+            if (!ok) {
               if (sig === 'golden') { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
               else { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
               continue;
@@ -726,6 +848,35 @@ export default (w: Window) => {
               if (vFilter === 'lower' && !(curVol < prevVol)) continue;
             }
           }
+          // 추가 조건: 연속매매/연속캔들 + 비교 + 행동(스킵/매매)
+          {
+            const cond = sig === 'golden' ? (ma.pyramiding.golden as any).condition : (ma.pyramiding.dead as any).condition;
+            if (cond && cond.type !== 'any') {
+              let count = 0;
+              if (cond.type === 'consecutiveBuy') {
+                for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === 'buy') count++; else break; }
+              } else if (cond.type === 'consecutiveSell') {
+                for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === 'sell') count++; else break; }
+              } else if (cond.type === 'consecutiveSelected') {
+                const target = (sig === 'golden' ? ma.pyramiding.golden.action : ma.pyramiding.dead.action);
+                for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === target) count++; else break; }
+              } else if (cond.type === 'consecutiveBullish') {
+                for (let k = i; k >= 0; k--) { const c = candles[k]; if (c.close > c.open) count++; else break; }
+              } else if (cond.type === 'consecutiveBearish') {
+                for (let k = i; k >= 0; k--) { const c = candles[k]; if (c.close < c.open) count++; else break; }
+              }
+              const op = cond.operator;
+              let met = false;
+              if (op === 'any') met = true;
+              else if (op === '<') met = count < cond.value;
+              else if (op === '<=') met = count <= cond.value;
+              else if (op === '=') met = count === cond.value;
+              else if (op === '!=') met = count !== cond.value;
+              else if (op === '>=') met = count >= cond.value;
+              else if (op === '>') met = count > cond.value;
+              if (!met) continue;
+            }
+          }
           // 실제 매수/매도 집행 (피라미딩 설정에 따름)
           const cfg = sig === 'golden' ? ma.pyramiding.golden : ma.pyramiding.dead;
           const pct = Math.max(0, Math.min(100, cfg.percent));
@@ -741,7 +892,13 @@ export default (w: Window) => {
             totalCost += actualCost;
             const buyAvgPrice = shares > 0 ? totalCost / shares : 0;
             const buyHoldingValue = shares * currClose;
-            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'buy', maPeriod: ma.period, percent: pct, sharesDelta: buyShares, amount: actualCost, cashAfter: cash, sharesAfter: shares, profitRate: null, avgPrice: buyAvgPrice, holdingValue: buyHoldingValue });
+            const buyCond = (ma.pyramiding as any)[sig === 'golden' ? 'golden' : 'dead']?.condition;
+            const buyTrigger = sig === 'golden' ? (ma.pyramiding.golden as any).trigger : (ma.pyramiding.dead as any).trigger;
+            const buyAlign = sig === 'golden' ? (ma.pyramiding.golden as any).alignment : (ma.pyramiding.dead as any).alignment;
+            const buyReason = `MA${ma.period} ${sig==='golden'?'골든':'데드'}(${buyTrigger==='event'?'발생시':'상태'}, 캔들 ${sig==='golden'?(ma.pyramiding.golden as any).candleFilter:(ma.pyramiding.dead as any).candleFilter}, 거래량 ${sig==='golden'?(ma.pyramiding.golden as any).volumeFilter:(ma.pyramiding.dead as any).volumeFilter}, 정렬 ${buyAlign}, 연속${(sig==='golden'?(ma.pyramiding.golden as any).consecutive:(ma.pyramiding.dead as any).consecutive)}회/최대${(sig==='golden'?(ma.pyramiding.golden as any).maxTrades:(ma.pyramiding.dead as any).maxTrades)}회${buyCond && buyCond.type!=='any' ? `, 조건 ${buyCond.type} ${buyCond.operator} ${buyCond.value} → ${buyCond.action}`:''}) - ${(sig==='golden'?(ma.pyramiding.golden as any).action:(ma.pyramiding.dead as any).action)==='buy'?'매수':'매도'} ${pct}%`;
+            const buyIdx = trades.length + 1;
+            trades.push({ idx: buyIdx, date: candles[i].date, price: currClose, action: 'buy', maPeriod: ma.period, percent: pct, sharesDelta: buyShares, amount: actualCost, cashAfter: cash, sharesAfter: shares, profitRate: null, avgPrice: buyAvgPrice, holdingValue: buyHoldingValue });
+            this.simReasonMap.set(buyIdx, buyReason);
             const arr = tradeAtIdx.get(i) ?? [];
             arr.push({ action: 'buy', label: 'B', color: '#3b82f6', position: 'candle-top' });
             tradeAtIdx.set(i, arr);
@@ -759,6 +916,7 @@ export default (w: Window) => {
             const sellShares = Math.floor(shares * (pct / 100));
             if (sellShares <= 0) continue;
             const avg = totalCost / shares;
+            console.log(`[TRADE-DBG] SELL i=${i} date=${candles[i].date} period=${ma.period} sig=${sig} price=${currClose} sellShares=${sellShares} avg=${avg.toFixed(1)}`);
             const profitRateSell = ((currClose - avg) / avg) * 100;
             const proceeds = sellShares * currClose;
             shares -= sellShares;
@@ -767,7 +925,13 @@ export default (w: Window) => {
             if (shares === 0) totalCost = 0;
             const avgPriceAfterSell = shares > 0 ? totalCost / shares : 0;
             const holdingValueAfterSell = shares * currClose;
-            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: ma.period, percent: pct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, profitRate: profitRateSell, avgPrice: avgPriceAfterSell, holdingValue: holdingValueAfterSell });
+            const sellCond = (ma.pyramiding as any)[sig === 'golden' ? 'golden' : 'dead']?.condition;
+            const sellTrigger = sig === 'golden' ? (ma.pyramiding.golden as any).trigger : (ma.pyramiding.dead as any).trigger;
+            const sellAlign = sig === 'golden' ? (ma.pyramiding.golden as any).alignment : (ma.pyramiding.dead as any).alignment;
+            const sellReason = `MA${ma.period} ${sig==='golden'?'골든':'데드'}(${sellTrigger==='event'?'발생시':'상태'}, 캔들 ${sig==='golden'?(ma.pyramiding.golden as any).candleFilter:(ma.pyramiding.dead as any).candleFilter}, 거래량 ${sig==='golden'?(ma.pyramiding.golden as any).volumeFilter:(ma.pyramiding.dead as any).volumeFilter}, 정렬 ${sellAlign}, 연속${(sig==='golden'?(ma.pyramiding.golden as any).consecutive:(ma.pyramiding.dead as any).consecutive)}회/최대${(sig==='golden'?(ma.pyramiding.golden as any).maxTrades:(ma.pyramiding.dead as any).maxTrades)}회${sellCond && sellCond.type!=='any' ? `, 조건 ${sellCond.type} ${sellCond.operator} ${sellCond.value} → ${sellCond.action}`:''}) - 매도 ${pct}% (수익률 ${profitRateSell.toFixed(2)}%)`;
+            const sellIdx = trades.length + 1;
+            trades.push({ idx: sellIdx, date: candles[i].date, price: currClose, action: 'sell', maPeriod: ma.period, percent: pct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, profitRate: profitRateSell, avgPrice: avgPriceAfterSell, holdingValue: holdingValueAfterSell });
+            this.simReasonMap.set(sellIdx, sellReason);
             const arr = tradeAtIdx.get(i) ?? [];
             arr.push({ action: 'sell', label: 'S', color: '#ef4444', position: 'candle-bottom' });
             tradeAtIdx.set(i, arr);
@@ -943,7 +1107,7 @@ export default (w: Window) => {
               <tr style="border-bottom:1px solid #f1f5f9">
                 <td style="padding:7px 10px;color:#94a3b8">${t.idx}</td>
                 <td style="padding:7px 10px">${fmtDate(t.date)}</td>
-                <td style="padding:7px 10px;text-align:center"><span style="display:inline-block;min-width:42px;padding:2px 6px;border-radius:999px;font-weight:700;font-size:10px;color:#fff;background:${badgeBg}">${badgeText}</span></td>
+                <td style="padding:7px 10px;text-align:center"><span class="ma-help" data-help="${(this.simReasonMap.get(t.idx) || '').replace(/"/g, '&quot;')}" style="display:inline-block;min-width:42px;padding:2px 6px;border-radius:999px;font-weight:700;font-size:10px;color:#fff;background:${badgeBg};cursor:help">${badgeText}</span></td>
                 <td style="padding:7px 10px;text-align:center;color:#64748b">${maText}</td>
                 <td style="padding:7px 10px;text-align:right">${fmt(t.price)}원</td>
                 <td style="padding:7px 10px;text-align:right">${Math.floor(t.sharesDelta).toLocaleString()}주</td>
@@ -987,7 +1151,10 @@ export default (w: Window) => {
           const goldenCon = Number(row.querySelector('.ma-golden-consecutive')?.value) || 2;
           const goldenMax = Number(row.querySelector('.ma-golden-max')?.value) || 2;
           const goldenTrig = (row.querySelector('.ma-golden-trigger') as HTMLSelectElement)?.value as 'state'|'event' || 'event';
-          const goldenAlign = (row.querySelector('.ma-golden-alignment') as HTMLSelectElement)?.value as 'any'|'aligned'|'reverse' || 'aligned';
+          const goldenAlign = (row.querySelector('.ma-golden-alignment') as HTMLSelectElement)?.value as any || 'any';
+          const goldenCondType = (row.querySelector('.ma-golden-cond-type') as HTMLSelectElement)?.value as any || 'any';
+          const goldenCondOp = (row.querySelector('.ma-golden-cond-op') as HTMLSelectElement)?.value as any || 'any';
+          const goldenCondVal = Number((row.querySelector('.ma-golden-cond-val') as HTMLInputElement)?.value) || 1;
           const deadAct = (row.querySelector('.ma-dead-action') as HTMLSelectElement)?.value as 'buy'|'sell' || 'sell';
           const deadPct = Number((row.querySelector('.ma-dead-pct') as HTMLInputElement)?.value) || 0;
           const deadCandle = (row.querySelector('.ma-dead-candle') as HTMLSelectElement)?.value as 'any'|'bull'|'bear' || 'any';
@@ -995,9 +1162,12 @@ export default (w: Window) => {
           const deadCon = Number(row.querySelector('.ma-dead-consecutive')?.value) || 2;
           const deadMax = Number(row.querySelector('.ma-dead-max')?.value) || 2;
           const deadTrig = (row.querySelector('.ma-dead-trigger') as HTMLSelectElement)?.value as 'state'|'event' || 'event';
-          const deadAlign = (row.querySelector('.ma-dead-alignment') as HTMLSelectElement)?.value as 'any'|'aligned'|'reverse' || 'any';
+          const deadAlign = (row.querySelector('.ma-dead-alignment') as HTMLSelectElement)?.value as any || 'any';
+          const deadCondType = (row.querySelector('.ma-dead-cond-type') as HTMLSelectElement)?.value as any || 'any';
+          const deadCondOp = (row.querySelector('.ma-dead-cond-op') as HTMLSelectElement)?.value as any || 'any';
+          const deadCondVal = Number((row.querySelector('.ma-dead-cond-val') as HTMLInputElement)?.value) || 1;
           const color = row.querySelector('.ma-color')?.getAttribute('data-color') || '#6366f1';
-          if (period > 0) newConfigs.push({ period, color, pyramiding: { golden: { action: goldenAct, percent: Math.max(0, Math.min(100, goldenPct)), candleFilter: goldenCandle === 'bull' ? 'bull' : goldenCandle === 'bear' ? 'bear' : 'any', volumeFilter: goldenVol === 'higher' ? 'higher' : goldenVol === 'lower' ? 'lower' : 'any', consecutive: Math.max(1, Math.min(10, Math.floor(goldenCon) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(goldenMax) || 2)), trigger: goldenTrig === 'state' ? 'state' : 'event', alignment: goldenAlign === 'reverse' ? 'reverse' : goldenAlign === 'any' ? 'any' : 'aligned' }, dead: { action: deadAct, percent: Math.max(0, Math.min(100, deadPct)), candleFilter: deadCandle === 'bull' ? 'bull' : deadCandle === 'bear' ? 'bear' : 'any', volumeFilter: deadVol === 'higher' ? 'higher' : deadVol === 'lower' ? 'lower' : 'any', consecutive: Math.max(1, Math.min(10, Math.floor(deadCon) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(deadMax) || 2)), trigger: deadTrig === 'state' ? 'state' : 'event', alignment: deadAlign === 'reverse' ? 'reverse' : deadAlign === 'aligned' ? 'aligned' : 'any' } } });
+          if (period > 0) newConfigs.push({ period, color, pyramiding: { golden: { action: goldenAct, percent: Math.max(0, Math.min(100, goldenPct)), candleFilter: goldenCandle === 'bull' ? 'bull' : goldenCandle === 'bear' ? 'bear' : 'any', volumeFilter: goldenVol === 'higher' ? 'higher' : goldenVol === 'lower' ? 'lower' : 'any', consecutive: Math.max(1, Math.min(10, Math.floor(goldenCon) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(goldenMax) || 2)), trigger: goldenTrig === 'state' ? 'state' : 'event', alignment: goldenAlign as any, condition: { type: ['consecutiveBuy','consecutiveSell','consecutiveSelected','consecutiveBearish','consecutiveBullish'].includes(goldenCondType) ? goldenCondType : 'any', operator: ['<','<=','=','!=','>=','>'].includes(goldenCondOp) ? goldenCondOp : 'any', value: Math.max(1, Math.min(20, Math.floor(goldenCondVal) || 1)) } }, dead: { action: deadAct, percent: Math.max(0, Math.min(100, deadPct)), candleFilter: deadCandle === 'bull' ? 'bull' : deadCandle === 'bear' ? 'bear' : 'any', volumeFilter: deadVol === 'higher' ? 'higher' : deadVol === 'lower' ? 'lower' : 'any', consecutive: Math.max(1, Math.min(10, Math.floor(deadCon) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(deadMax) || 2)), trigger: deadTrig === 'state' ? 'state' : 'event', alignment: deadAlign as any, condition: { type: ['consecutiveBuy','consecutiveSell','consecutiveSelected','consecutiveBearish','consecutiveBullish'].includes(deadCondType) ? deadCondType : 'any', operator: ['<','<=','=','!=','>=','>'].includes(deadCondOp) ? deadCondOp : 'any', value: Math.max(1, Math.min(20, Math.floor(deadCondVal) || 1)) } } } });
         });
         if (newConfigs.length) this.maConfigs = newConfigs;
       }
@@ -1061,6 +1231,9 @@ export default (w: Window) => {
           setSel('.ma-golden-action', ma.pyramiding.golden.action);
           setVal('.ma-golden-pct', String(ma.pyramiding.golden.percent));
           setSel('.ma-golden-alignment', ma.pyramiding.golden.alignment);
+          setSel('.ma-golden-cond-type', (ma.pyramiding.golden as any).condition?.type ?? 'any');
+          setSel('.ma-golden-cond-op', (ma.pyramiding.golden as any).condition?.operator ?? 'any');
+          setVal('.ma-golden-cond-val', String((ma.pyramiding.golden as any).condition?.value ?? 1));
           setVal('.ma-dead-consecutive', String(ma.pyramiding.dead.consecutive ?? 2));
           setVal('.ma-dead-max', String(ma.pyramiding.dead.maxTrades ?? 2));
           setSel('.ma-dead-trigger', ma.pyramiding.dead.trigger);
@@ -1069,6 +1242,9 @@ export default (w: Window) => {
           setSel('.ma-dead-action', ma.pyramiding.dead.action);
           setVal('.ma-dead-pct', String(ma.pyramiding.dead.percent));
           setSel('.ma-dead-alignment', ma.pyramiding.dead.alignment);
+          setSel('.ma-dead-cond-type', (ma.pyramiding.dead as any).condition?.type ?? 'any');
+          setSel('.ma-dead-cond-op', (ma.pyramiding.dead as any).condition?.operator ?? 'any');
+          setVal('.ma-dead-cond-val', String((ma.pyramiding.dead as any).condition?.value ?? 1));
         });
         return;
       }
@@ -1086,21 +1262,23 @@ export default (w: Window) => {
             <div class="ma-field">
               <div class="ma-field-head"><span class="ma-field-label golden">골든</span><div class="ma-action-box"><select class="ma-golden-action"><option value="buy" ${ma.pyramiding.golden.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.golden.action==='sell'?'selected':''}>매도</option></select><input class="ma-golden-pct" type="number" min="1" max="100" value="${ma.pyramiding.golden.percent}" style="font-size: 16px;" /><span class="pct">%</span></div></div>
               <div class="ma-field-opts">
-                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-golden-consecutive" type="number" min="1" max="10" style="font-size: 16px;" value="${ma.pyramiding.golden.consecutive ?? 2}" />회</span><span class="ma-mini-group">최대 <input class="ma-golden-max" type="number" min="1" max="20" style="font-size: 16px;" value="${ma.pyramiding.golden.maxTrades ?? 2}" />회 매매</span></label>
-                <label class="ma-mini-opt" title="상태면 종가가 MA 위/아래에 머무는 동안 매 틱 매매, 발생시는 크로스 순간에만">지속 <select class="ma-golden-trigger"><option value="event" ${ma.pyramiding.golden.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.golden.trigger==='state'?'selected':''}>상태</option></select></label>
-                <label class="ma-mini-opt">캔들 <select class="ma-golden-candle"><option value="any" ${ma.pyramiding.golden.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.golden.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.golden.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
-                <label class="ma-mini-opt">거래량 <select class="ma-golden-volume"><option value="any" ${ma.pyramiding.golden.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.golden.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.golden.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
-                <label class="ma-mini-opt">이동평균선 <select class="ma-golden-alignment"><option value="any" ${ma.pyramiding.golden.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${(ma.pyramiding.golden.alignment ?? 'aligned')==='aligned'?'selected':''}>정배열</option><option value="reverse" ${ma.pyramiding.golden.alignment==='reverse'?'selected':''}>역배열</option></select></label>
+                <label class="ma-mini-opt ma-mini-opt--grouped"><span class="ma-mini-group"><span class="ma-help" data-help="크로스 발생 후 조건이 N봉 연속 유지되면 매매합니다. 예: 연속발생 2회면 크로스 다음 봉도 조건 유지 시 2번째 봉에 체결.">연속발생</span> <input class="ma-golden-consecutive" type="number" min="1" max="10" style="font-size: 16px;" value="${ma.pyramiding.golden.consecutive ?? 2}" />회</span><span class="ma-mini-group">최대 <input class="ma-golden-max" type="number" min="1" max="20" style="font-size: 16px;" value="${ma.pyramiding.golden.maxTrades ?? 2}" />회 매매</span></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="발생시: 크로스 순간에만 1회 신호. 상태: 종가가 MA 위/아래에 머무는 동안 매 봉 신호.">지속</span> <select class="ma-golden-trigger"><option value="event" ${ma.pyramiding.golden.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.golden.trigger==='state'?'selected':''}>상태</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="캔들 종가 기준 필터. 양봉: close>open, 음봉: close<open">캔들</span> <select class="ma-golden-candle"><option value="any" ${ma.pyramiding.golden.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.golden.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.golden.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="전봉 거래량 대비 필터. 이전보다 높/낮을 때만 매매">거래량</span> <select class="ma-golden-volume"><option value="any" ${ma.pyramiding.golden.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.golden.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.golden.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="현재 MA와 다른 MA들의 위치 관계">이동평균선</span> <select class="ma-golden-alignment"><option value="any" ${ma.pyramiding.golden.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${(ma.pyramiding.golden.alignment)==='aligned'?'selected':''}>정배열</option><option value="reverse" ${(ma.pyramiding.golden.alignment)==='reverse'?'selected':''}>역배열</option><option value="largerAbove" ${ma.pyramiding.golden.alignment==='largerAbove'?'selected':''}>큰MA가 위에있을때</option><option value="largerBelow" ${ma.pyramiding.golden.alignment==='largerBelow'?'selected':''}>큰MA가 아래있을때</option><option value="smallerAbove" ${ma.pyramiding.golden.alignment==='smallerAbove'?'selected':''}>작은MA가 위에있을때</option><option value="smallerBelow" ${ma.pyramiding.golden.alignment==='smallerBelow'?'selected':''}>작은MA가 아래있을때</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="추가 필터: 연속매매(내 거래내역 기준) 또는 연속캔들(가격 기준)이 조건에 맞을 때만 매매">조건</span> <select class="ma-golden-cond-type"><option value="any" ${(ma.pyramiding.golden.condition?.type ?? 'any')==='any'?'selected':''}>무관</option><option value="consecutiveBuy" ${ma.pyramiding.golden.condition?.type==='consecutiveBuy'?'selected':''}>연속매매_매수</option><option value="consecutiveSell" ${ma.pyramiding.golden.condition?.type==='consecutiveSell'?'selected':''}>연속매매_매도</option><option value="consecutiveSelected" ${(ma.pyramiding.golden.condition?.type ?? 'any')==='consecutiveSelected'?'selected':''}>연속매매_선택</option><option value="consecutiveBullish" ${ma.pyramiding.golden.condition?.type==='consecutiveBullish'?'selected':''}>연속캔들_상승</option><option value="consecutiveBearish" ${ma.pyramiding.golden.condition?.type==='consecutiveBearish'?'selected':''}>연속캔들_하락</option></select><select class="ma-golden-cond-op" style="${(ma.pyramiding.golden.condition?.type ?? 'any')==='any'?'display:none':''}"><option value="<" ${ma.pyramiding.golden.condition?.operator==='<'?'selected':''}>&lt;</option><option value="<=" ${ma.pyramiding.golden.condition?.operator==='<='?'selected':''}>&lt;=</option><option value="=" ${ma.pyramiding.golden.condition?.operator==='='?'selected':''}>=</option><option value="!=" ${ma.pyramiding.golden.condition?.operator==='!='?'selected':''}>!=</option><option value=">=" ${ma.pyramiding.golden.condition?.operator==='>='?'selected':''}>&gt;=</option><option value=">" ${ma.pyramiding.golden.condition?.operator==='>'?'selected':''}>&gt;</option></select><input class="ma-golden-cond-val" type="number" min="1" max="20" value="${ma.pyramiding.golden.condition?.value ?? 1}" style="width:42px;${(ma.pyramiding.golden.condition?.type ?? 'any')==='any'?'display:none':''}" /><span class="cond-iltte" style="${(ma.pyramiding.golden.condition?.type ?? 'any')==='any'?'display:none':''}">일때 매매</span></label>
               </div>
             </div>
             <div class="ma-field">
               <div class="ma-field-head"><span class="ma-field-label dead">데드</span><div class="ma-action-box"><select class="ma-dead-action"><option value="buy" ${ma.pyramiding.dead.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.dead.action==='sell'?'selected':''}>매도</option></select><input class="ma-dead-pct" type="number" min="1" max="100" value="${ma.pyramiding.dead.percent}" style="font-size: 16px;" /><span class="pct">%</span></div></div>
               <div class="ma-field-opts">
                 <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-dead-consecutive" type="number" min="1" max="10" value="${ma.pyramiding.dead.consecutive ?? 2}" style="font-size: 16px;"/>회</span><span class="ma-mini-group">최대 <input class="ma-dead-max" type="number" min="1" max="20" value="${ma.pyramiding.dead.maxTrades ?? 2}" style="font-size: 16px;"/>회 매매</span></label>
-                <label class="ma-mini-opt">지속 <select class="ma-dead-trigger"><option value="event" ${ma.pyramiding.dead.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.dead.trigger==='state'?'selected':''}>상태</option></select></label>
-                <label class="ma-mini-opt">캔들 <select class="ma-dead-candle"><option value="any" ${ma.pyramiding.dead.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.dead.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.dead.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
-                <label class="ma-mini-opt">거래량 <select class="ma-dead-volume"><option value="any" ${ma.pyramiding.dead.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.dead.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.dead.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
-                <label class="ma-mini-opt">이동평균선 <select class="ma-dead-alignment"><option value="any" ${ma.pyramiding.dead.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${ma.pyramiding.dead.alignment==='aligned'?'selected':''}>정배열</option><option value="reverse" ${ma.pyramiding.dead.alignment==='reverse'?'selected':''}>역배열</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="발생시: 크로스 순간에만 1회 신호. 상태: 종가가 MA 위/아래에 머무는 동안 매 봉 신호.">지속</span> <select class="ma-dead-trigger"><option value="event" ${ma.pyramiding.dead.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.dead.trigger==='state'?'selected':''}>상태</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="캔들 종가 기준 필터">캔들</span> <select class="ma-dead-candle"><option value="any" ${ma.pyramiding.dead.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.dead.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.dead.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="전봉 거래량 대비 필터">거래량</span> <select class="ma-dead-volume"><option value="any" ${ma.pyramiding.dead.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.dead.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.dead.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="현재 MA와 큰/작은 MA의 위치 관계">이동평균선</span> <select class="ma-dead-alignment"><option value="any" ${ma.pyramiding.dead.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${ma.pyramiding.dead.alignment==='aligned'?'selected':''}>정배열</option><option value="reverse" ${ma.pyramiding.dead.alignment==='reverse'?'selected':''}>역배열</option><option value="largerAbove" ${ma.pyramiding.dead.alignment==='largerAbove'?'selected':''}>큰MA가 위에있을때</option><option value="largerBelow" ${ma.pyramiding.dead.alignment==='largerBelow'?'selected':''}>큰MA가 아래있을때</option><option value="smallerAbove" ${ma.pyramiding.dead.alignment==='smallerAbove'?'selected':''}>작은MA가 위에있을때</option><option value="smallerBelow" ${ma.pyramiding.dead.alignment==='smallerBelow'?'selected':''}>작은MA가 아래있을때</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="연속매매(거래내역) 또는 연속캔들(가격) 조건이 맞을 때 매매/스킵">조건</span> <select class="ma-dead-cond-type"><option value="any" ${(ma.pyramiding.dead.condition?.type ?? 'any')==='any'?'selected':''}>무관</option><option value="consecutiveBuy" ${ma.pyramiding.dead.condition?.type==='consecutiveBuy'?'selected':''}>연속매매_매수</option><option value="consecutiveSell" ${ma.pyramiding.dead.condition?.type==='consecutiveSell'?'selected':''}>연속매매_매도</option><option value="consecutiveSelected" ${(ma.pyramiding.dead.condition?.type ?? 'any')==='consecutiveSelected'?'selected':''}>연속매매_선택</option><option value="consecutiveBullish" ${ma.pyramiding.dead.condition?.type==='consecutiveBullish'?'selected':''}>연속캔들_상승</option><option value="consecutiveBearish" ${ma.pyramiding.dead.condition?.type==='consecutiveBearish'?'selected':''}>연속캔들_하락</option></select><select class="ma-dead-cond-op" style="${(ma.pyramiding.dead.condition?.type ?? 'any')==='any'?'display:none':''}"><option value="<" ${ma.pyramiding.dead.condition?.operator==='<'?'selected':''}>&lt;</option><option value="<=" ${ma.pyramiding.dead.condition?.operator==='<='?'selected':''}>&lt;=</option><option value="=" ${ma.pyramiding.dead.condition?.operator==='='?'selected':''}>=</option><option value="!=" ${ma.pyramiding.dead.condition?.operator==='!='?'selected':''}>!=</option><option value=">=" ${ma.pyramiding.dead.condition?.operator==='>='?'selected':''}>&gt;=</option><option value=">" ${ma.pyramiding.dead.condition?.operator==='>'?'selected':''}>&gt;</option></select><input class="ma-dead-cond-val" type="number" min="1" max="20" value="${ma.pyramiding.dead.condition?.value ?? 1}" style="width:42px;${(ma.pyramiding.dead.condition?.type ?? 'any')==='any'?'display:none':''}" /><span class="cond-iltte" style="${(ma.pyramiding.dead.condition?.type ?? 'any')==='any'?'display:none':''}}">일때 매매</span></label>
               </div>
             </div>
           </div>
@@ -1172,6 +1350,9 @@ export default (w: Window) => {
           .ma-mini-opt span{white-space:nowrap;flex-shrink:0}
           .ma-mini-opt input{width:36px;height:26px;text-align:center;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;font-weight:800;background:#fff;flex-shrink:0}
           .ma-mini-opt select{flex:1;min-width:60px;max-width:100%;height:26px;border-radius:8px;border:1px solid #e2e8f0;font-size:10px;font-weight:700;background:#fff;padding:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+          .ma-help{cursor:help;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+          .ma-popover{position:fixed;max-width:280px;background:#1e293b;color:#fff;font-size:11px;line-height:1.5;padding:10px 12px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.25);z-index:999;display:none;pointer-events:none;white-space:normal}
+          .ma-popover.show{display:block;pointer-events:auto}
           #stock-search {font-size: 16px !important;}
           @media(max-width:600px){
             .ma-row{padding:12px}
@@ -1281,7 +1462,7 @@ export default (w: Window) => {
                     <div class="tp-sl-opts">
                       <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">캔들 <select id="sim-tp-candle" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #bbf7d0;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="bull">양봉</option><option value="bear">음봉</option></select></label>
                       <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">거래량 <select id="sim-tp-volume" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #bbf7d0;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="higher">높을때</option><option value="lower">낮을때</option></select></label>
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">이후 <input id="sim-tp-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size:12px;" />회 MA매매 스킵</label>
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">이후 <input id="sim-tp-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size:16px;" />회 MA매매 스킵</label>
                     </div>
                   </label>
                   <label style="display:flex;flex-direction:column;gap:6px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:10px">
@@ -1290,7 +1471,7 @@ export default (w: Window) => {
                     <div class="tp-sl-opts">
                       <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">캔들 <select id="sim-sl-candle" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #fecaca;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="bull">양봉</option><option value="bear">음봉</option></select></label>
                       <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">거래량 <select id="sim-sl-volume" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #fecaca;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="higher">높을때</option><option value="lower">낮을때</option></select></label>
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">이후 <input id="sim-sl-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size:12px;" />회 MA매매 스킵</label>
+                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">이후 <input id="sim-sl-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size:16px;" />회 MA매매 스킵</label>
                     </div>
                   </label>
                 </div>
@@ -1316,6 +1497,7 @@ export default (w: Window) => {
           </div>
         </div>
         <button id="sim-share-fab" class="share-fab" title="공유하기">🔗</button>
+        <div id="ma-help-popover" class="ma-popover" role="tooltip"></div>
       `;
     }
   }
