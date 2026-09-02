@@ -116,6 +116,8 @@ export interface TossChartOptions {
   readonly session?: TossChartSession;
   readonly investMode?: TossInvestMode;
   readonly useAdjustedRate?: boolean;
+  /** 종료 시점 ISO (inclusive) — 지정 시 과거로 count개 반환 */
+  readonly from?: string;
 }
 
 export interface TossCandle {
@@ -517,8 +519,30 @@ export interface TossService {
   getTicsRankingUsByAmount(duration?: TicsDuration): Promise<TicsRankingResult>;
   /** 해외 등락률 기준 TICS 랭킹 편의 메서드 */
   getTicsRankingUsByFluctuation(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 현재가 조회 — GET /api/v1/product/stock-prices?meta=true&productCodes=... */
+  getStockPrices(productCodes: readonly string[]): Promise<readonly TossStockPrice[]>;
+  getStockPrice(productCode: string): Promise<TossStockPrice | null>;
+
   /** TICS 비교 차트 — GET /api/v1/dashboard/wts/overview/tics/{id}/comparison-chart */
   getTicsComparisonChart(req: TicsComparisonChartRequest): Promise<TicsComparisonChartResult>;
+}
+
+// ── Stock Prices — GET /api/v1/product/stock-prices ─────────────────────
+export interface TossStockPrice {
+  readonly productCode: string;
+  readonly currency: string; // KRW / USD
+  readonly base: number; // 전일 종가
+  readonly close: number; // 현재가
+  readonly volume: number;
+  readonly exchange?: string; // integrated (KR)
+  readonly baseKrw?: number;
+  readonly closeKrw?: number;
+  readonly session?: string; // DAY_PRE_MAIN 등 (US)
+  readonly meta?: Readonly<{ baseKrwDecimal?: number; closeKrwDecimal?: number }>;
+}
+
+interface TossStockPricesApiResponse {
+  readonly result: readonly TossStockPrice[];
 }
 
 export default (container: symbol): ConstructorType<TossService> => {
@@ -546,6 +570,7 @@ export default (container: symbol): ConstructorType<TossService> => {
         session = 'all',
         investMode = 'integrated',
         useAdjustedRate = true,
+        from,
       } = options;
 
       // target 정규화: 문자열 코드 또는 회사 정보 객체
@@ -573,6 +598,7 @@ export default (container: symbol): ConstructorType<TossService> => {
         session,
         investMode,
         useAdjustedRate: String(useAdjustedRate),
+        ...(from ? { from } : {}),
       });
       // week/month/min은 session 파라미터 불필요 시 제외 (서버가 무시하지만 URL 정리)
       const isIntradayOrWeekly = timeframe.startsWith('min:') || timeframe.startsWith('week:') || timeframe.startsWith('month:');
@@ -785,6 +811,21 @@ export default (container: symbol): ConstructorType<TossService> => {
       });
       if (!json.result) throw new Error('Invalid TICS comparison chart response');
       return json.result;
+    }
+
+    async getStockPrices(productCodes: readonly string[]): Promise<readonly TossStockPrice[]> {
+      if (!productCodes.length) return [];
+      const codes = productCodes.map(c => /^[A-Z]/.test(c) ? c : `A${c}`).join(',');
+      const url = `https://wts-info-api.tossinvest.com/api/v1/product/stock-prices?meta=true&productCodes=${encodeURIComponent(codes)}`;
+      const json = await this.fetchJson<TossStockPricesApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+      return json.result ?? [];
+    }
+
+    async getStockPrice(productCode: string): Promise<TossStockPrice | null> {
+      const list = await this.getStockPrices([productCode]);
+      return list[0] ?? null;
     }
   }
 

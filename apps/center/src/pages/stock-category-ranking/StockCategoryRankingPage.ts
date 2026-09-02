@@ -61,6 +61,7 @@ export default (w: Window) => {
     private duration: TicsDuration = '1d';
     private result: TicsRankingResult | null = null;
     private chartLayerData: TicsComparisonChartResult | null = null;
+    private swapAxes = false;
 
     @onInitialize
     async onInit(
@@ -100,21 +101,46 @@ export default (w: Window) => {
       if (area)    area.style.opacity    = on ? '0.3'  : '1';
     }
 
-    /** <bubble-chart>의 자식 <bubble> 노드를 갱신 */
+    /** <bubble-chart>의 자식 <bubble> 노드를 갱신 — y 기반 색은 페이지에서 명시적으로 지정 (차트는 general) */
     private updateBubbles() {
       const chart = this.shadowRoot?.querySelector('bubble-chart:not(#expanded-bubble-chart)') as HTMLElement;
       if (!chart || !this.result) return;
       const items = [...this.result.tics].slice(0, 30);
-      chart.innerHTML = items.map(it => {
+      const maxCap = Math.max(...items.map(it => it.totalMarketCapKrw), 1);
+      // 축 라벨/데이터는 swapAxes에 따라 페이지에서 계산해 전달 — 차트는 general
+      const xLabel = this.swapAxes ? '등락률' : '회전율';
+      const yLabel = this.swapAxes ? '회전율' : '등락률';
+      chart.setAttribute('x-label', xLabel);
+      chart.setAttribute('y-label', yLabel);
+      const bubblesHtml = items.map(it => {
         const turnover = it.totalMarketCapKrw ? it.tradingAmountKrw / it.totalMarketCapKrw : 0;
+        const isUp = it.fluctuationRate >= 0;
+        const fillStyle = isUp ? 'rgba(229,72,77,0.32)' : 'rgba(62,99,221,0.32)';
+        const strokeStyle = isUp ? '#e5484d' : '#3e63dd';
+        const value = maxCap ? (it.totalMarketCapKrw / maxCap * 100) : 0;
+        const desc = `등락률 ${isUp ? '+' : ''}${(it.fluctuationRate*100).toFixed(2)}%\n회전율 ${(turnover*100).toFixed(2)}%\n시가총액 ${this.fmtAmount(it.totalMarketCapKrw)}\n거래대금 ${this.fmtAmount(it.tradingAmountKrw)}`;
+        const bx = this.swapAxes ? it.fluctuationRate : turnover;
+        const by = this.swapAxes ? turnover : it.fluctuationRate;
         return `<bubble
           label="${it.name}"
-          x="${turnover}"
-          y="${it.fluctuationRate}"
-          r="${it.totalMarketCapKrw}"
-          amount="${it.tradingAmountKrw}"
+          x="${bx}"
+          y="${by}"
+          value="${value.toFixed(2)}"
+          fill-style="${fillStyle}"
+          stroke-style="${strokeStyle}"
+          description="${desc.replace(/"/g, '&quot;').replace(/\n/g, '&#10;')}"
         ></bubble>`;
       }).join('');
+      const maxTurnover = Math.max(...items.map(it => it.totalMarketCapKrw ? it.tradingAmountKrw / it.totalMarketCapKrw : 0), 0);
+      const maxY = Math.max(...items.map(it => it.fluctuationRate), 0);
+      const lineHtml = this.swapAxes
+        ? (Number.isFinite(maxTurnover) && maxTurnover !== 0 ? `<line start-x="0" start-y="0" end-x="0" end-y="${maxTurnover}" stroke="#e11d48" line-width="1.5" line-dash="6,4"></line>` : '')
+        : (Number.isFinite(maxY) && maxY !== 0 ? `<line start-x="0" start-y="0" end-x="${maxY}" end-y="0" stroke="#e11d48" line-width="1.5" line-dash="6,4"></line>` : '');
+      chart.innerHTML = bubblesHtml + lineHtml;
+      // 스왑 버튼 활성 상태 동기화
+      const swapBtn = this.shadowRoot?.querySelector('#btn-swap-axes') as HTMLElement;
+      if (swapBtn) swapBtn.classList.toggle('active', this.swapAxes);
+      this.syncExpandedChart();
     }
 
     private updateBasedAt() {
@@ -187,6 +213,51 @@ export default (w: Window) => {
           </tbody>
         </table>
       `;
+    }
+
+    @addEventListener('#btn-swap-axes', 'click')
+    onSwapAxes() {
+      this.swapAxes = !this.swapAxes;
+      this.updateBubbles();
+    }
+
+    @addEventListener('#btn-chart-expand', 'click')
+    onChartExpand() { this.openChartExpand(); }
+
+    @addEventListener('#chart-expand-close', 'click')
+    onChartExpandClose() { this.closeChartExpand(); }
+
+    @addEventListener('#chart-expand-backdrop', 'click')
+    onChartExpandBackdrop() { this.closeChartExpand(); }
+
+    private openChartExpand() {
+      const src = this.shadowRoot?.querySelector('bubble-chart:not(#expanded-bubble-chart)') as HTMLElement;
+      const dst = this.shadowRoot?.querySelector('#expanded-bubble-chart') as HTMLElement;
+      const layer = this.shadowRoot?.querySelector('#chart-expand-layer') as HTMLElement;
+      if (!src || !dst || !layer) return;
+      dst.setAttribute('x-label', src.getAttribute('x-label') || '회전율');
+      dst.setAttribute('y-label', src.getAttribute('y-label') || '등락률');
+      if (src.hasAttribute('show-center-cross')) dst.setAttribute('show-center-cross', ''); else dst.removeAttribute('show-center-cross');
+      dst.innerHTML = src.innerHTML;
+      layer.classList.add('open'); layer.setAttribute('aria-hidden','false');
+      try { (this.ownerDocument as Document).body.style.overflow = 'hidden'; } catch {}
+    }
+
+    private closeChartExpand() {
+      const layer = this.shadowRoot?.querySelector('#chart-expand-layer') as HTMLElement;
+      if (layer) { layer.classList.remove('open'); layer.setAttribute('aria-hidden','true'); }
+      try { (this.ownerDocument as Document).body.style.overflow = ''; } catch {}
+    }
+
+    private syncExpandedChart() {
+      const layer = this.shadowRoot?.querySelector('#chart-expand-layer') as HTMLElement;
+      if (!layer?.classList.contains('open')) return;
+      const src = this.shadowRoot?.querySelector('bubble-chart:not(#expanded-bubble-chart)') as HTMLElement;
+      const dst = this.shadowRoot?.querySelector('#expanded-bubble-chart') as HTMLElement;
+      if (!src || !dst) return;
+      dst.setAttribute('x-label', src.getAttribute('x-label') || '회전율');
+      dst.setAttribute('y-label', src.getAttribute('y-label') || '등락률');
+      dst.innerHTML = src.innerHTML;
     }
 
     @addEventListener('#btn-list-view', 'click')
@@ -482,6 +553,21 @@ export default (w: Window) => {
           }
           .btn-list-view:hover { background:#fff; transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.12); }
           .btn-list-view:active { transform:translateY(0); }
+          .btn-swap-axes {
+            background:rgba(255,255,255,0.9); border:none; color:#334155;
+            padding:6px 12px; border-radius:20px; font-size:11px; font-weight:800;
+            cursor:pointer; display:flex; align-items:center; gap:4px; flex-shrink:0;
+            transition:all .15s ease;
+          }
+          .btn-swap-axes:hover { background:#fff; transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.12); }
+          .btn-swap-axes.active { background:#0ea5e9; color:#fff; }
+          .btn-expand {
+            background:rgba(255,255,255,0.9); border:none; color:#1565c0;
+            padding:6px 12px; border-radius:20px; font-size:11px; font-weight:800;
+            cursor:pointer; display:flex; align-items:center; gap:4px; flex-shrink:0;
+            transition:all .15s ease;
+          }
+          .btn-expand:hover { background:#fff; transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.12); }
           .list-count { font-size:11px; opacity:.85; font-weight:600; }
           #category-list { overflow-x:auto; }
           .cat-table { width:100%; border-collapse:collapse; min-width:680px; }
@@ -576,7 +662,7 @@ export default (w: Window) => {
           .chart-expand-close{width:32px;height:32px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
           .chart-expand-close:hover{background:#f8fafc}
           .chart-expand-body{flex:1;min-height:0;display:flex;flex-direction:column;padding:12px;overflow:hidden}
-          .chart-expand-body #expanded-bubble-chart{flex:1;min-height:0}
+          .chart-expand-body #expanded-bubble-chart{flex:1;min-height:0;height:100%;--bc-canvas-height:100%;display:flex;flex-direction:column}
           @media(max-width:640px){.chart-expand-panel{width:calc(100% - 12px);height:86vh}.chart-expand-body #expanded-bubble-chart{min-height:420px}}
         </style>
 
@@ -617,12 +703,14 @@ export default (w: Window) => {
             <div class="card-header">
               <span class="card-title">카테고리 랭킹</span>
               <div style="margin-left:auto;display:flex;gap:8px">
+                <button class="btn-swap-axes" id="btn-swap-axes" aria-label="축 교체" title="X/Y 축 교체">⇄ 축교체</button>
                 <button class="btn-list-view" id="btn-list-view" aria-label="전체 리스트 보기">📋 리스트 보기</button>
+                <button class="btn-expand" id="btn-chart-expand" aria-label="크게보기" title="차트 크게 보기">🔍 크게보기</button>
               </div>
             </div>
             <div id="error-msg"></div>
             <div id="loading"><div class="spinner"></div>불러오는 중…</div>
-            <bubble-chart enabled-zoom></bubble-chart>
+            <bubble-chart enabled-zoom x-label="회전율" y-label="등락률" show-center-cross></bubble-chart>
             <div class="based-at" id="based-at"></div>
           </div>
 
@@ -648,6 +736,19 @@ export default (w: Window) => {
               <div id="tics-layer-loading" class="tics-layer-loading" style="display:none"><div class="spinner" style="margin:0 auto 10px"></div>차트 불러오는 중…</div>
               <div id="tics-layer-error" class="tics-layer-error" style="display:none"></div>
               <canvas id="tics-chart-canvas" width="700" height="260"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div id="chart-expand-layer" aria-hidden="true">
+          <div class="chart-expand-backdrop" id="chart-expand-backdrop"></div>
+          <div class="chart-expand-panel" role="dialog" aria-modal="true">
+            <div class="chart-expand-header">
+              <span class="chart-expand-title">카테고리 랭킹 크게보기</span>
+              <button class="chart-expand-close" id="chart-expand-close" aria-label="닫기">✕</button>
+            </div>
+            <div class="chart-expand-body">
+              <bubble-chart id="expanded-bubble-chart" enabled-zoom x-label="회전율" y-label="등락률" show-center-cross></bubble-chart>
             </div>
           </div>
         </div>

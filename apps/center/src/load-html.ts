@@ -6,7 +6,7 @@ import { createRequire } from "module";
 if (!(globalThis as any).require) (globalThis as any).require = createRequire(import.meta.url);
 import { defineSwcAppBody, SwcAppInterface } from "@dooboostore/simple-web-component";
 import { defineServices } from "@center-src/services";
-import { componentFactories } from "@center-src/components";
+import { componentFactories } from "@dooboostore/simple-web-component-library";
 import { pageFactories } from "@center-src/pages";
 
 const __filename = fileURLToPath(import.meta.url);

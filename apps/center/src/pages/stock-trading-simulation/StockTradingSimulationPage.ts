@@ -1,23 +1,294 @@
-import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, addEventListener, addEventListenerDocument, innerHtml, setAttribute } from '@dooboostore/simple-web-component';
+import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, event, eventDelegate, eventDocument, innerHtml, setAttribute } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
 import { inject } from '@dooboostore/simple-boot';
 import { TossService, TossChartTimeframe } from '../../services/toss/TossService';
+import { findBestConfig, simulate, isResolveMode } from '@dooboostore/algorithm';
+import type { ExitConfig, MaConfig, ResolveMode, SimCandle, SimTrade } from '@dooboostore/algorithm';
+import { computeMacdSeries, computeRsiSeries, computeObvSeries } from '@dooboostore/simple-web-component-library';
+import lzString from 'lz-string';
+const { compressToEncodedURIComponent, decompressFromEncodedURIComponent } = lzString;
 
 const tagName = 'center-stock-trading-simulation-page';
 
-// ── 완전 초기값 (필드 초기값·초기화 공통 사용) ──
+/** 추세 레짐별 전략 1세트 (단일 모드도 길이 1 배열로 통일) */
+export interface StrategySet {
+  id: number;
+  label: string;
+  trend: number;
+  from: number;
+  to: number;
+  color: string;
+  maConfigs: MaConfig[];
+  exitConfigs: ExitConfig[];
+  mres: ResolveMode;
+  xres: ResolveMode;
+  profit: number;
+  rate: number;
+  trades: number;
+}
+
+/** 전략 세트 탭 색상 */
+const SET_PALETTE = ['#7c3aed', '#2563eb', '#0891b2', '#059669', '#d97706', '#db2777'];
+
+/** 추세 구간 1개 (표시·최적화 공통 정체성: 라벨·색상 포함) */
+export interface TrendZone {
+  from: number;
+  to: number;
+  trend: number;
+  label: string;
+  color: string;
+}
+
+export function trendRegimeOf(trend: number): { label: string; color: string } {
+  if (trend > 0.6) return { label: '상승', color: '#ef4444' };
+  if (trend < 0.4) return { label: '하락', color: '#3e63dd' };
+  return { label: '횡보', color: '#94a3b8' };
+}
+
+/** 표시 구간과 보유 세트 diff (이름 우선 + 범위 검증 — 데이터 바뀌면 재생성) */
+export function diffZoneSets(
+  sets: { label: string; from: number; to: number }[],
+  zones: { label: string; from: number; to: number }[],
+): { keepIdx: number[]; freshZones: { label: string; from: number; to: number }[] } {
+  const key = (x: { label: string; from: number; to: number }) => `${x.label}|${x.from}-${x.to}`;
+  const have = new Set(sets.map(key));
+  const keepIdx: number[] = [];
+  sets.forEach((s, i) => {
+    if (zones.some(g => g.label === s.label && g.from === s.from && g.to === s.to)) keepIdx.push(i);
+  });
+  const freshZones = zones.filter(g => !have.has(key(g)));
+  return { keepIdx, freshZones };
+}
+
+export function clipScoredSegments(
+  segs: TrendZone[],
+  scores: (number | null)[],
+  zs: number, ze: number,
+): TrendZone[] {
+  const out: TrendZone[] = [];
+  for (const g of segs) {
+    const f = Math.max(g.from, zs), t = Math.min(g.to, ze);
+    if (t < f) continue;
+    let sum = 0, cnt = 0;
+    for (let i = f; i <= t; i++) {
+      const v = scores[i];
+      if (v != null) { sum += v; cnt++; }
+    }
+    out.push({ ...g, from: f, to: t, trend: cnt > 0 ? sum / cnt : g.trend });
+  }
+  return out;
+}
+
+/** 추세 판단용 보조지표 1봉분 (화면단 판단, null = 해당 지표 없음) */
+export interface TrendBar {
+  macd: number | null;
+  signal: number | null;
+  rsi: number | null;
+  obv: number | null;
+}
+
+/** MACD+RSI+OBV → 추세 점수 0~1 (0.5=횡보, 1=상승, 0=하락).
+ *  MACD 0선/시그널 관계 + RSI/100 + OBV vs N봉 평균을 동일 가중 평균. 없는 지표는 제외. */
+export function scoreTrendBars(bars: TrendBar[], obvPeriod = 10): (number | null)[] {
+  const n = bars.length;
+  const out = new Array<number | null>(n).fill(null);
+  if (!n) return out;
+  const p = Math.max(2, Math.round(obvPeriod) || 10);
+  for (let i = 0; i < n; i++) {
+    const b = bars[i];
+    const parts: number[] = [];
+    if (b.macd != null) {
+      const zero = b.macd >= 0 ? 1 : 0;
+      parts.push(b.signal != null ? (zero + (b.macd >= b.signal ? 1 : 0)) / 2 : zero);
+    }
+    if (b.rsi != null) parts.push(Math.max(0, Math.min(1, b.rsi / 100)));
+    if (b.obv != null) {
+      let sum = 0, cnt = 0;
+      for (let k = Math.max(0, i - p + 1); k <= i; k++) {
+        const v = bars[k].obv;
+        if (v != null) { sum += v; cnt++; }
+      }
+      if (cnt > 0) {
+        const avg = sum / cnt;
+        parts.push(b.obv > avg ? 1 : b.obv < avg ? 0 : 0.5);
+      }
+    }
+    if (parts.length) out[i] = parts.reduce((a, c) => a + c, 0) / parts.length;
+  }
+  return out;
+}
+
+/** 추세 점수 → 레짐 분할 (hi 초과=상승, lo 미만=하락, 그 외=횡보).
+ *  짧은 구간은 이웃에 병합, 최대 maxSets개. 세트 trend = 구간 평균 점수. */
+export function splitScoreSegments(scores: (number | null)[], minLen = 10, maxSets = 6, hi = 0.6, lo = 0.4): { from: number; to: number; trend: number }[] {
+  const n = scores.length;
+  if (!n) return [];
+  const labelOf = (s: number | null, prev: number): number => s == null ? prev : s > hi ? 1 : s < lo ? -1 : 0;
+  const segs: { from: number; to: number; regime: number }[] = [];
+  let s = 0;
+  let cur = labelOf(scores[0], 0);
+  for (let i = 1; i < n; i++) {
+    const u = labelOf(scores[i], cur);
+    if (u !== cur) { segs.push({ from: s, to: i - 1, regime: cur }); s = i; cur = u; }
+  }
+  segs.push({ from: s, to: n - 1, regime: cur });
+  const absorb = (arr: { from: number; to: number; regime: number }[], idx: number): void => {
+    if (arr.length <= 1) return;
+    if (idx === 0) { arr[1].from = arr[0].from; arr.shift(); }
+    else { arr[idx - 1].to = arr[idx].to; arr.splice(idx, 1); }
+  };
+  for (;;) {
+    const si = segs.findIndex(g => (g.to - g.from + 1) < Math.max(1, minLen));
+    if (si < 0 || segs.length <= 1) break;
+    absorb(segs, si);
+  }
+  while (segs.length > Math.max(1, maxSets)) {
+    let mi = 0;
+    segs.forEach((g, i) => { if ((g.to - g.from) < (segs[mi].to - segs[mi].from)) mi = i; });
+    absorb(segs, mi);
+  }
+  return segs.map(g => {
+    let sum = 0, cnt = 0;
+    for (let i = g.from; i <= g.to; i++) {
+      const v = scores[i];
+      if (v != null) { sum += v; cnt++; }
+    }
+    return { from: g.from, to: g.to, trend: cnt > 0 ? sum / cnt : (g.regime > 0 ? 1 : g.regime < 0 ? 0 : 0.5) };
+  });
+}
+
+/** URL 복원용 실현 조건 정규화 (null = 사용 불가) */
+export function normExitList(arr: any): ExitConfig[] | null {
+  if (!Array.isArray(arr) || !arr.length) return null;
+  const valid = arr.filter((x: any) => x && typeof x.basis === 'string');
+  return valid.filter((x: any) => x.basis !== 'none').map((x: any) => ({
+    basis: (['profitRise', 'profitFall', 'peakFall', 'peakRise'] as string[]).includes(x.basis) ? x.basis : 'profitRise',
+    percent: Math.max(1, Math.min(100, Number(x.percent) || 15)),
+    sellPercent: Math.max(1, Math.min(100, Number(x.sellPercent) || 100)),
+    skip: Math.max(0, Math.min(20, Number(x.skip) || 5)),
+    candle: x.candle === 'bull' ? 'bull' : x.candle === 'bear' ? 'bear' : 'any',
+    volume: x.volume === 'higher' ? 'higher' : x.volume === 'lower' ? 'lower' : 'any',
+  } as ExitConfig));
+}
+
+/** URL 복원용 MA 조건 정규화 (null = 사용 불가) */
+export function normMaList(arr: any): MaConfig[] | null {
+  if (!Array.isArray(arr) || !arr.length) return null;
+  const valid = arr.filter((x: any) => x && typeof x.period === 'number' && typeof x.color === 'string' && x.pyramiding && (x.pyramiding.signals || (x.pyramiding.golden && x.pyramiding.dead)));
+  if (!valid.length) return null;
+  const normCandle = (v: any) => v === 'bull' ? 'bull' : v === 'bear' ? 'bear' : 'any' as const;
+  const normVol = (v: any) => v === 'higher' ? 'higher' : v === 'lower' ? 'lower' : 'any' as const;
+  const normAlign = (v: any) => ['aligned', 'reverse', 'largerAbove', 'largerBelow', 'smallerAbove', 'smallerBelow'].includes(v) ? v : 'any' as const;
+  const TRADE_CONDS = ['consecutiveBuy', 'consecutiveSell', 'consecutiveSelected'] as const;
+  const CANDLE_CONDS = ['consecutiveBullish', 'consecutiveBearish'] as const;
+  const MA_CONDS = ['maDeviation', 'maSlope'] as const;
+  const normOp = (v: any) => ['<', '<=', '=', '>=', '>', '!='].includes(v) ? v : 'any' as const;
+  const normCond = (c: any, validConds: readonly string[], isMa: boolean) => ({
+    type: validConds.includes(c?.type) ? c.type : 'any' as const,
+    operator: normOp(c?.operator),
+    value: isMa ? Math.max(-50, Math.min(50, Number(c?.value) || 0)) : Math.max(1, Math.min(20, Math.floor(Number(c?.value) || 1)))
+  });
+  const normSignal = (s: any) => {
+    const legacy = s.condition ?? {};
+    const route = (group: any, validConds: readonly string[]) => group ?? ((validConds as readonly string[]).includes(legacy.type) ? legacy : undefined);
+    return {
+      signal: s.signal === 'dead' ? 'dead' as const : 'golden' as const,
+      action: s.action === 'sell' ? 'sell' as const : 'buy' as const,
+      percent: Math.max(1, Math.min(100, Number(s.percent) || 20)),
+      candleFilter: normCandle(s.candleFilter),
+      volumeFilter: normVol(s.volumeFilter),
+      consecutive: Math.max(1, Math.min(10, Math.floor(Number(s.consecutive) || 2))),
+      alignment: normAlign(s.alignment),
+      condTrade: normCond(route(s.condTrade, TRADE_CONDS), TRADE_CONDS, false),
+      condCandle: normCond(route(s.condCandle, CANDLE_CONDS), CANDLE_CONDS, false),
+      condMa: normCond(route(s.condMa, MA_CONDS), MA_CONDS, true)
+    };
+  };
+  const list = valid.map((x: any) => {
+    let signals: any[] = [];
+    if (Array.isArray(x.pyramiding.signals)) {
+      signals = x.pyramiding.signals.map(normSignal).filter((s: any) => s.signal === 'golden' || s.signal === 'dead');
+    } else {
+      const g = x.pyramiding?.golden ?? {}; const d = x.pyramiding?.dead ?? {};
+      if (g && g.action !== 'none') signals.push(normSignal({ signal: 'golden', ...g }));
+      if (d && d.action !== 'none') signals.push(normSignal({ signal: 'dead', ...d }));
+      if (!signals.length) signals.push(normSignal({ signal: 'golden', action: 'buy', percent: 20, candleFilter: 'any', volumeFilter: 'any', consecutive: 2, alignment: 'any', condTrade: { type: 'any', operator: 'any', value: 1 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } }));
+    }
+    return {
+      period: Math.max(2, Math.min(500, Math.floor(Number(x.period)) || 10)),
+      color: typeof x.color === 'string' && /^#([0-9a-fA-F]{3,8})$/.test(x.color) ? x.color : '#6366f1',
+      pyramiding: { signals },
+    };
+  });
+  list.sort((a, b) => a.period - b.period);
+  return list as MaConfig[];
+}
+
+/** URL sets 직렬화 키맵 (compact):
+ *  set: l=label t=trend f=from e=to c=color m=maConfigs x=exitConfigs mr=mres xr=xres
+ *  ma: p=period c=color s=signals[] / signal: g=signal a=action p=percent cf=candleFilter
+ *  vf=volumeFilter n=consecutive al=alignment ct/cc/cm=condTrade/condCandle/condMa
+ *  cond: t=type o=operator v=value / exit: b=basis p=percent s=sellPercent k=skip c=candle v=volume */
+export function compactSetsForUrl(sets: StrategySet[]): any[] {
+  return sets.map(s => ({
+    l: s.label, t: s.trend, f: s.from, e: s.to, c: s.color,
+    m: s.maConfigs.map(m => ({
+      p: m.period, c: m.color,
+      s: ((m as any).pyramiding?.signals ?? []).map((g: any) => ({
+        g: g.signal, a: g.action, p: g.percent, cf: g.candleFilter, vf: g.volumeFilter,
+        n: g.consecutive, al: g.alignment,
+        ct: { t: g.condTrade?.type, o: g.condTrade?.operator, v: g.condTrade?.value },
+        cc: { t: g.condCandle?.type, o: g.condCandle?.operator, v: g.condCandle?.value },
+        cm: { t: g.condMa?.type, o: g.condMa?.operator, v: g.condMa?.value },
+      })),
+    })),
+    x: s.exitConfigs.map(x => ({ b: (x as any).basis, p: (x as any).percent, s: (x as any).sellPercent, k: (x as any).skip, c: (x as any).candle, v: (x as any).volume })),
+    mr: s.mres, xr: s.xres,
+  }));
+}
+
+/** compact → verbose 복원 (레거시 verbose는 그대로 통과) */
+export function expandSetsFromUrl(arr: any[]): any[] {
+  return arr.map((s: any) => {
+    if (s && typeof s === 'object' && ('maConfigs' in s || 'exitConfigs' in s)) return s;
+    const sig = (g: any) => ({
+      signal: g?.g, action: g?.a, percent: g?.p, candleFilter: g?.cf, volumeFilter: g?.vf,
+      consecutive: g?.n, alignment: g?.al,
+      condTrade: { type: g?.ct?.t, operator: g?.ct?.o, value: g?.ct?.v },
+      condCandle: { type: g?.cc?.t, operator: g?.cc?.o, value: g?.cc?.v },
+      condMa: { type: g?.cm?.t, operator: g?.cm?.o, value: g?.cm?.v },
+    });
+    return {
+      label: s?.l, trend: s?.t, from: s?.f, to: s?.e, color: s?.c,
+      mres: s?.mr, xres: s?.xr,
+      maConfigs: (s?.m ?? []).map((m: any) => ({ period: m?.p, color: m?.c, pyramiding: { signals: (m?.s ?? []).map(sig) } })),
+      exitConfigs: (s?.x ?? []).map((x: any) => ({ basis: x?.b, percent: x?.p, sellPercent: x?.s, skip: x?.k, candle: x?.c, volume: x?.v })),
+    };
+  });
+}
+
+/** sets 파라미터 파싱 — 레거시 verbose JSON 우선, 실패 시 압축 compact.
+ *  쓰기측이 pre-encode + set()이라 저장 시 2중 인코딩되므로, 압축 해체 전 1회 디코딩한다. */
+export function parseSetsParam(raw: string): any[] | null {
+  try {
+    const arr = JSON.parse(decodeURIComponent(raw));
+    if (Array.isArray(arr)) return arr;
+  } catch { /* compact 시도 */ }
+  try {
+    let enc = raw;
+    try { enc = decodeURIComponent(raw); } catch { enc = raw; }
+    const str = decompressFromEncodedURIComponent(enc);
+    if (!str) return null;
+    const arr = JSON.parse(str);
+    if (Array.isArray(arr)) return arr;
+  } catch { /* null */ }
+  return null;
+}
+
 const DEFAULT_CANDLE_COUNT = 360;
 const DEFAULT_TIMEFRAME: TossChartTimeframe = 'day:1';
 const DEFAULT_CAPITAL = 100_000_000;
-const DEFAULT_MA_CONFIGS = [
-  { period: 5, color: '#ef4444', pyramiding: { golden: { action: 'buy' as const, percent: 15, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 15, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 20, color: '#f59e0b', pyramiding: { golden: { action: 'buy' as const, percent: 25, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 25, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 60, color: '#10b981', pyramiding: { golden: { action: 'buy' as const, percent: 30, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 30, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-  { period: 120, color: '#6366f1', pyramiding: { golden: { action: 'buy' as const, percent: 50, candleFilter: 'bull' as const, volumeFilter: 'higher' as const, consecutive: 3, maxTrades: 2, trigger: 'event' as const, alignment: 'aligned' as const }, dead: { action: 'sell' as const, percent: 50, candleFilter: 'bear' as const, volumeFilter: 'any' as const, consecutive: 2, maxTrades: 2, trigger: 'event' as const, alignment: 'any' as const } } },
-];
-const DEFAULT_TP = { enabled: true, percent: 15, sellPercent: 80, skip: 5, candleFilter: 'bull' as const, volumeFilter: 'higher' as const };
-const DEFAULT_SL = { enabled: true, percent: 10, sellPercent: 50, skip: 5, candleFilter: 'bear' as const, volumeFilter: 'lower' as const };
-const DEFAULT_SHOW_CROSS = false;
+const DEFAULT_STOCK_CODE = 'A005930';
 
 export default (w: Window) => {
   const existing = w.customElements.get(tagName);
@@ -49,85 +320,197 @@ export default (w: Window) => {
 
     private router!: Router;
     private tossService!: TossService;
-    private currentCode = 'A005930';
-    private currentName = '삼성전자';
-    private chartCandles: { date: string; open: number; high: number; low: number; close: number; volume: number }[] = [];
+    private currentCode = DEFAULT_STOCK_CODE;
+    private currentName = DEFAULT_STOCK_CODE;
+    private chartCandles: SimCandle[] = [];
+    // --- 시뮬레이션 구간 (chartCandles 인덱스, 양쪽 포함) — 기본 전체 ---
+    private rangeStart = 0;
+    private rangeEnd = -1;
+    // URL(rs/re)로 복원된 구간 — 다음 로드 1회에만 리셋을 건너뜀
+    private rangeFromUrl = false;
     // --- 트레이딩 설정 (상수에서 초기화) ---
     private candleCount = DEFAULT_CANDLE_COUNT;
     private timeframe: TossChartTimeframe = DEFAULT_TIMEFRAME;
     private initialCapital = DEFAULT_CAPITAL;
-    private maConfigs: { period: number; color: string; pyramiding: { golden: { action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; maxTrades: number; trigger: 'state' | 'event'; alignment: 'any' | 'aligned' | 'reverse' }; dead: { action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; maxTrades: number; trigger: 'state' | 'event'; alignment: 'any' | 'aligned' | 'reverse' } } }[] = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS));
+    // --- 전략 세트 (단일 모드도 길이 1 배열로 통일, ma/exit/mres/xres는 활성 세트 위임) ---
+    private strategySets: StrategySet[] = [{
+      id: 0, label: '전체', trend: 0.5, from: -1, to: -1, color: SET_PALETTE[0],
+      maConfigs: [], exitConfigs: [{ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 5, candle: 'any', volume: 'any' }],
+      mres: 'minFirst', xres: 'minFirst', profit: 0, rate: 0, trades: 0,
+    }];
+    private activeSetIdx = 0;
+    private activeSet(): StrategySet {
+      if (!this.strategySets.length) {
+        this.strategySets = [{
+          id: 0, label: '전체', trend: 0.5, from: -1, to: -1, color: SET_PALETTE[0],
+          maConfigs: [], exitConfigs: [{ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 5, candle: 'any', volume: 'any' }],
+          mres: 'minFirst', xres: 'minFirst', profit: 0, rate: 0, trades: 0,
+        }];
+      }
+      this.activeSetIdx = Math.max(0, Math.min(this.activeSetIdx, this.strategySets.length - 1));
+      return this.strategySets[this.activeSetIdx];
+    }
+    private get maConfigs(): MaConfig[] { return this.activeSet().maConfigs; }
+    private set maConfigs(v: MaConfig[]) { this.activeSet().maConfigs = v; }
+    private get exitConfigs(): ExitConfig[] { return this.activeSet().exitConfigs; }
+    private set exitConfigs(v: ExitConfig[]) { this.activeSet().exitConfigs = v; }
+    private get maResolveMode(): ResolveMode { return this.activeSet().mres; }
+    private set maResolveMode(v: ResolveMode) { this.activeSet().mres = v; }
+    private get exitResolveMode(): ResolveMode { return this.activeSet().xres; }
+    private set exitResolveMode(v: ResolveMode) { this.activeSet().xres = v; }
     // --- 익절/손절 (상수에서 초기화) ---
-    private takeProfitEnabled = DEFAULT_TP.enabled;
-    private takeProfitPercent = DEFAULT_TP.percent;
-    private takeProfitSellPercent = DEFAULT_TP.sellPercent;
-    private takeProfitSkip = DEFAULT_TP.skip;
-    private takeProfitCandleFilter: 'any'|'bull'|'bear' = DEFAULT_TP.candleFilter;
-    private takeProfitVolumeFilter: 'any'|'higher'|'lower' = DEFAULT_TP.volumeFilter;
-    private showCross = DEFAULT_SHOW_CROSS;
-    private stopLossEnabled = DEFAULT_SL.enabled;
-    private stopLossPercent = DEFAULT_SL.percent;
-    private stopLossSellPercent = DEFAULT_SL.sellPercent;
-    private stopLossSkip = DEFAULT_SL.skip;
-    private stopLossCandleFilter: 'any'|'bull'|'bear' = DEFAULT_SL.candleFilter;
-    private stopLossVolumeFilter: 'any'|'higher'|'lower' = DEFAULT_SL.volumeFilter;
+    private takeProfitEnabled = false;
+    private takeProfitPercent = 15;
+    private takeProfitSellPercent = 80;
+    private takeProfitSkip = 5;
+    private takeProfitCandleFilter: 'any'|'bull'|'bear' = 'bull';
+    private takeProfitVolumeFilter: 'any'|'higher'|'lower' = 'higher';
+    private takeProfitBasis: 'profitRise'|'profitFall'|'peakFall'|'peakRise'|'none' = 'profitRise';
+    private showCross = false;
+    // 차트 데이터 기준 추세 구간 표시 (다이나믹 무관, 기본 off)
+    private showTrend = false;
+    private requireAllMas = false;
+    // 봉당 겹친 조건 확정 방식: 첫 조건만 / 마지막 조건만 / 방향별 합산 / 순합산 1건
+    // (전략 세트 위임 — 필드 선언은 strategySets 블록의 get/set 참조)
+    // 종료일시 ('' = 최신). date input 값(YYYY-MM-DD) + time input 값(HH:MM, 분봉만)
+    private endDate = '';
+    private endTime = '';
+    // 예상 추세 지수 0~1 (0=하락, 0.5=중립, 1=상승). 셀렉트 프리셋: 모름/횡보=0.5, 상승=1, 하락=0
+    private trendScore = 0.5;
+    // 다이나믹 추세 (MACD 0선으로 구간 분할 → 구간별 전략 세트). true면 trendScore 대신 구간별 1/0 사용
+    private trendDynamic = false;
+    // 추세구역 진입시 재생성 (zone 변경 시 새 구역만 최적화 추가, 벗어난 구역 제거)
+    private trendRegrow = false;
+    // 실전 마찰 — 체결 지연 (0=신호봉 종가, 1=다음봉 시가), 슬리피지 %, 체결률 %
+    private execDelay: 0 | 1 = 0;
+    private slippagePct = 0;
+    private fillRate = 100;
+    private feePercent = 0.015;
+    private stopLossEnabled = false;
+    private stopLossPercent = 10;
+    private stopLossSellPercent = 80;
+    private stopLossSkip = 5;
+    private stopLossCandleFilter: 'any'|'bull'|'bear' = 'bear';
+    private stopLossVolumeFilter: 'any'|'higher'|'lower' = 'higher';
+    private stopLossBasis: 'profitRise'|'profitFall'|'peakFall'|'peakRise'|'none' = 'profitFall';
+    // (익절/손절 조건 목록은 전략 세트 위임 — 필드 선언은 strategySets 블록의 get/set 참조)
     // --- 시뮬레이션 결과 (마지막 계산값)
     private simCash = 0;
     private simShares = 0;
     private simFirstPrice = 0;
+    private simReasonMap = new Map<number, string>();
     private simLastPrice = 0;
-    private simTrades: { idx: number; date: string; price: number; action: 'buy'|'sell'; maPeriod: number; percent: number; sharesDelta: number; amount: number; cashAfter: number; sharesAfter: number; label?: string; profitRate: number | null; avgPrice: number; holdingValue: number }[] = [];
+    private simTrades: SimTrade[] = [];
 
     private restoreSimFromUrl() {
       try {
         const p = this.router?.getSearchParams?.();
         if (!p) return;
+        // 전략 세트 전수 복원 (성공 시 mas/exits/tp/sl/mres/xres 레거시 복원 건너뜀)
+        const setsRestored = this.restoreSetsFromUrl(p);
         const cap = p.get('cap');
         if (cap) { const v = Number(cap); if (Number.isFinite(v) && v >= 10000) this.initialCapital = Math.floor(v); }
         const cnt = p.get('cnt');
         if (cnt) { const v = Number(cnt); if (Number.isFinite(v) && v >= 30 && v <= 1000) this.candleCount = Math.floor(v); }
         const tf = p.get('tf');
         if (tf && /^(min:\d+|day:1|week:1|month:1)$/.test(tf)) this.timeframe = tf as TossChartTimeframe;
-        const tpEn = p.get('tpEn'); if (tpEn) this.takeProfitEnabled = tpEn === '1';
-        const tp = p.get('tp'); if (tp) { const v = Number(tp); if (Number.isFinite(v) && v >= 0 && v <= 100) this.takeProfitPercent = v; }
-        const tpSell = p.get('tpSell'); if (tpSell) { const v = Number(tpSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitSellPercent = Math.floor(v); }
-        const tpSkip = p.get('tpSkip'); if (tpSkip) { const v = Number(tpSkip); if (Number.isFinite(v) && v >= 0 && v <= 20) this.takeProfitSkip = Math.floor(v); }
-        const tpCandle = p.get('tpCandle'); if (tpCandle && ['any','bull','bear'].includes(tpCandle)) this.takeProfitCandleFilter = tpCandle as any;
-        const tpVol = p.get('tpVol'); if (tpVol && ['any','higher','lower'].includes(tpVol)) this.takeProfitVolumeFilter = tpVol as any;
+        const ed = p.get('ed');
+        if (ed && /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2})?$/.test(ed)) {
+          const probe = new Date(ed.length <= 10 ? `${ed}T23:59:00` : `${ed}:00`);
+          if (Number.isFinite(probe.getTime()) && probe.getTime() <= Date.now()) {
+            this.endDate = ed.slice(0, 10);
+            this.endTime = ed.length > 10 ? ed.slice(11, 16) : '';
+          }
+        }
+        const tpEn = p.get('tpEn'); if (tpEn && !setsRestored) this.takeProfitEnabled = tpEn === '1';
+        const tp = p.get('tp'); if (tp && !setsRestored) { const v = Number(tp); if (Number.isFinite(v) && v >= 0 && v <= 100) this.takeProfitPercent = v; }
+        const tpSell = p.get('tpSell'); if (tpSell && !setsRestored) { const v = Number(tpSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitSellPercent = Math.floor(v); }
+        const tpSkip = p.get('tpSkip'); if (tpSkip && !setsRestored) { const v = Number(tpSkip); if (Number.isFinite(v) && v >= 0 && v <= 20) this.takeProfitSkip = Math.floor(v); }
+        const tpCandle = p.get('tpCandle'); if (tpCandle && !setsRestored && ['any','bull','bear'].includes(tpCandle)) this.takeProfitCandleFilter = tpCandle as any;
+        const tpVol = p.get('tpVol'); if (tpVol && !setsRestored && ['any','higher','lower'].includes(tpVol)) this.takeProfitVolumeFilter = tpVol as any;
         const cross = p.get('cross'); if (cross) this.showCross = cross === '1';
-        const slEn = p.get('slEn'); if (slEn) this.stopLossEnabled = slEn === '1';
-        const sl = p.get('sl'); if (sl) { const v = Number(sl); if (Number.isFinite(v) && v >= 0 && v <= 100) this.stopLossPercent = v; }
-        const slSell = p.get('slSell'); if (slSell) { const v = Number(slSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossSellPercent = Math.floor(v); }
-        const slSkip = p.get('slSkip'); if (slSkip) { const v = Number(slSkip); if (Number.isFinite(v) && v >= 0 && v <= 20) this.stopLossSkip = Math.floor(v); }
-        const slCandle = p.get('slCandle'); if (slCandle && ['any','bull','bear'].includes(slCandle)) this.stopLossCandleFilter = slCandle as any;
-        const slVol = p.get('slVol'); if (slVol && ['any','higher','lower'].includes(slVol)) this.stopLossVolumeFilter = slVol as any;
-        const mas = p.get('mas');
-        if (mas) {
+        const tzone = p.get('tzone'); if (tzone) this.showTrend = tzone !== '0';
+        const mall = p.get('mall'); if (mall) this.requireAllMas = mall === '1';
+        const mres = p.get('mres'); const xres = p.get('xres'); const dup = p.get('dup');
+        if (!setsRestored) {
+        if (mres === 'sum') this.maResolveMode = 'all'; else if (isResolveMode(mres)) this.maResolveMode = mres; else if (mres === 'firstOne') this.maResolveMode = 'minFirst'; else if (mres === 'lastOne') this.maResolveMode = 'maxFirst'; else if (dup) this.maResolveMode = dup === '1' ? 'all' : 'minFirst';
+        if (xres === 'sum') this.exitResolveMode = 'all'; else if (isResolveMode(xres)) this.exitResolveMode = xres; else if (xres === 'firstOne') this.exitResolveMode = 'minFirst'; else if (xres === 'lastOne') this.exitResolveMode = 'maxFirst'; else if (dup) this.exitResolveMode = 'minFirst';
+        }
+        const trend = p.get('trend');
+        if (trend === 'up') { this.trendScore = 1; this.trendDynamic = false; }
+        else if (trend === 'down') { this.trendScore = 0; this.trendDynamic = false; }
+        else if (trend === 'dynamic') this.trendDynamic = true;
+        else if (trend === 'regrow') this.trendRegrow = true;
+        else if (trend !== null && trend !== '' && Number.isFinite(Number(trend))) { this.trendScore = Math.max(0, Math.min(1, Number(trend))); this.trendDynamic = false; }
+        const lambda = p.get('lambda');
+        if (lambda !== null && lambda !== '' && Number.isFinite(Number(lambda))) {
+          const v = Math.max(0, Number(lambda));
+          this.riskAversion = [0, 0.5, 1].reduce((a, b) => Math.abs(b - v) < Math.abs(a - v) ? b : a);
+        }
+        const slEn = p.get('slEn'); if (slEn && !setsRestored) this.stopLossEnabled = slEn === '1';
+        const sl = p.get('sl'); if (sl && !setsRestored) { const v = Number(sl); if (Number.isFinite(v) && v >= 0 && v <= 100) this.stopLossPercent = v; }
+        const slSell = p.get('slSell'); if (slSell && !setsRestored) { const v = Number(slSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossSellPercent = Math.floor(v); }
+        const slSkip = p.get('slSkip'); if (slSkip && !setsRestored) { const v = Number(slSkip); if (Number.isFinite(v) && v >= 0 && v <= 20) this.stopLossSkip = Math.floor(v); }
+        const slCandle = p.get('slCandle'); if (slCandle && !setsRestored && ['any','bull','bear'].includes(slCandle)) this.stopLossCandleFilter = slCandle as any;
+        const slVol = p.get('slVol'); if (slVol && !setsRestored && ['any','higher','lower'].includes(slVol)) this.stopLossVolumeFilter = slVol as any;
+        const tpBasis = p.get('tpBasis'); if (tpBasis && !setsRestored && ['profit','peak','profitRise','profitFall','peakFall','peakRise'].includes(tpBasis)) { if (tpBasis==='profit') this.takeProfitBasis='profitRise' as any; else if(tpBasis==='peak') this.takeProfitBasis='peakFall' as any; else this.takeProfitBasis=tpBasis as any; }
+        const slBasis = p.get('slBasis'); if (slBasis && !setsRestored && ['profit','peak','profitRise','profitFall','peakFall','peakRise'].includes(slBasis)) { if (slBasis==='profit') this.stopLossBasis='profitFall' as any; else if(slBasis==='peak') this.stopLossBasis='peakFall' as any; else this.stopLossBasis=slBasis as any; }
+        const fee = p.get('fee'); if (fee) { const v = Number(fee); if (Number.isFinite(v) && v >= 0 && v <= 1) this.feePercent = v; }
+        const exec = p.get('exec'); if (exec === '1') this.execDelay = 1; else if (exec === '0') this.execDelay = 0;
+        const slip = p.get('slip'); if (slip) { const v = Number(slip); if (Number.isFinite(v) && v >= 0 && v <= 100) this.slippagePct = v; }
+        const fill = p.get('fill'); if (fill) { const v = Number(fill); if (Number.isFinite(v) && v >= 1 && v <= 100) this.fillRate = Math.floor(v); }
+        const rs = p.get('rs'); const re = p.get('re');
+        if (rs !== null || re !== null) {
+          const s = rs !== null ? Math.floor(Number(rs)) : 0;
+          const e = re !== null ? Math.floor(Number(re)) : -1;
+          if (Number.isFinite(s) && s >= 0 && Number.isFinite(e) && (e < 0 || e >= s)) {
+            this.rangeStart = s; this.rangeEnd = e; this.rangeFromUrl = true;
+          }
+        }
+        const exits = p.get('exits');
+        if (!setsRestored && exits) {
           try {
-            const decoded = decodeURIComponent(mas);
-            const arr = JSON.parse(decoded);
-            if (Array.isArray(arr) && arr.length) {
-              const valid = arr.filter((x: any) => x && typeof x.period === 'number' && typeof x.color === 'string' && x.pyramiding && x.pyramiding.golden && x.pyramiding.dead);
-              if (valid.length) {
-                const normCandle = (v: any) => v === 'bull' ? 'bull' : v === 'bear' ? 'bear' : 'any' as const;
-                const normVol = (v: any) => v === 'higher' ? 'higher' : v === 'lower' ? 'lower' : 'any' as const;
-                const normTrigger = (v: any) => v === 'state' ? 'state' : 'event' as const;
-                const normAlign = (v: any) => v === 'aligned' ? 'aligned' : v === 'reverse' ? 'reverse' : 'any' as const;
-                this.maConfigs = valid.map((x: any) => {
-                  // 구 구조: consecutive/maxTrades/trigger가 루트에 있던 경우 호환
-                  const g = x.pyramiding?.golden ?? {};
-                  const d = x.pyramiding?.dead ?? {};
-                  return {
-                    period: Math.max(2, Math.min(500, Math.floor(Number(x.period)) || 10)),
-                    color: typeof x.color === 'string' && /^#([0-9a-fA-F]{3,8})$/.test(x.color) ? x.color : '#6366f1',
-                    pyramiding: {
-                      golden: { action: g.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(g.percent) || 0)), candleFilter: normCandle(g.candleFilter ?? x.candleFilter), volumeFilter: normVol(g.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(g.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(g.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(g.trigger ?? x.trigger), alignment: normAlign(g.alignment) },
-                      dead: { action: d.action === 'sell' ? 'sell' : 'buy', percent: Math.max(0, Math.min(100, Number(d.percent) || 0)), candleFilter: normCandle(d.candleFilter ?? x.candleFilter), volumeFilter: normVol(d.volumeFilter), consecutive: Math.max(1, Math.min(10, Math.floor(Number(d.consecutive ?? x.consecutive)) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(Number(d.maxTrades ?? x.maxTrades)) || 2)), trigger: normTrigger(d.trigger ?? x.trigger), alignment: normAlign(d.alignment) },
-                    },
-                  };
-                });
+            const list = normExitList(JSON.parse(decodeURIComponent(exits)));
+            if (list) {
+              if (list.length) {
+                this.exitConfigs = list;
+                const first = this.exitConfigs[0] as any;
+                if (first) {
+                  this.takeProfitBasis = first.basis;
+                  this.takeProfitPercent = first.percent;
+                  this.takeProfitSellPercent = first.sellPercent;
+                  this.takeProfitSkip = first.skip;
+                  this.takeProfitCandleFilter = first.candle;
+                  this.takeProfitVolumeFilter = first.volume;
+                  this.takeProfitEnabled = true;
+                }
+                if ((this.exitConfigs as any)[1]) {
+                  const sec = (this.exitConfigs as any)[1];
+                  this.stopLossBasis = sec.basis;
+                  this.stopLossPercent = sec.percent;
+                  this.stopLossSellPercent = sec.sellPercent;
+                  this.stopLossSkip = sec.skip;
+                  this.stopLossCandleFilter = sec.candle;
+                  this.stopLossVolumeFilter = sec.volume;
+                  this.stopLossEnabled = true;
+                }
+              } else {
+                // 구버전에서 전부 안함이었으면 조건 없음으로 취급
+                this.exitConfigs = [];
               }
             }
+          } catch {}
+        } else if (!setsRestored && (p.get('tpBasis') || p.get('slBasis') || p.get('tpEn') || p.get('slEn'))) {
+          const list: any[] = [];
+          list.push({ basis: this.takeProfitBasis, percent: this.takeProfitPercent, sellPercent: this.takeProfitSellPercent, skip: this.takeProfitSkip, candle: this.takeProfitCandleFilter, volume: this.takeProfitVolumeFilter });
+          if (this.stopLossBasis !== 'none') list.push({ basis: this.stopLossBasis, percent: this.stopLossPercent, sellPercent: this.stopLossSellPercent, skip: this.stopLossSkip, candle: this.stopLossCandleFilter, volume: this.stopLossVolumeFilter });
+          if (list.length) this.exitConfigs = list as any;
+        }
+        const mas = p.get('mas');
+        if (mas && !setsRestored) {
+          try {
+            const list = normMaList(JSON.parse(decodeURIComponent(mas)));
+            if (list) this.maConfigs = list;
           } catch {}
         }
       } catch {}
@@ -136,60 +519,182 @@ export default (w: Window) => {
     private syncSimParamsToUrl() {
       try {
         const masStr = encodeURIComponent(JSON.stringify(this.maConfigs));
+        const exitsStr = encodeURIComponent(JSON.stringify(this.exitConfigs));
         this.router?.replaceUpsertSearchParam?.({
-          cap: String(this.initialCapital), cnt: String(this.candleCount), tf: this.timeframe, mas: masStr,
-          tpEn: this.takeProfitEnabled ? '1' : '0', tp: String(this.takeProfitPercent), tpSell: String(this.takeProfitSellPercent), tpSkip: String(this.takeProfitSkip), tpCandle: this.takeProfitCandleFilter, tpVol: this.takeProfitVolumeFilter,
-          cross: this.showCross ? '1' : '0',
-          slEn: this.stopLossEnabled ? '1' : '0', sl: String(this.stopLossPercent), slSell: String(this.stopLossSellPercent), slSkip: String(this.stopLossSkip), slCandle: this.stopLossCandleFilter, slVol: this.stopLossVolumeFilter,
+          cap: String(this.initialCapital), cnt: String(this.candleCount), tf: this.timeframe, mas: masStr, exits: exitsStr,
+          tpEn: this.takeProfitEnabled ? '1' : '0', tp: String(this.takeProfitPercent), tpSell: String(this.takeProfitSellPercent), tpSkip: String(this.takeProfitSkip), tpCandle: this.takeProfitCandleFilter, tpVol: this.takeProfitVolumeFilter, tpBasis: this.takeProfitBasis,
+          cross: this.showCross ? '1' : '0', tzone: this.showTrend ? '1' : '0',          mall: this.requireAllMas ? '1' : '0',
+          mres: this.maResolveMode, xres: this.exitResolveMode, trend: this.trendDynamic ? 'dynamic' : this.trendRegrow ? 'regrow' : String(this.trendScore), lambda: String(this.riskAversion),
+          ...(this.strategySets.length > 1 ? { sets: this.serializeSets() } : {}),
+          ...(this.chartCandles.length ? (() => { const [zs, ze] = this.zoneRange(); return { rs: String(zs), re: String(ze) }; })() : {}),
+          ed: this.endDate ? (this.endTime ? `${this.endDate}T${this.endTime}` : this.endDate) : '',
+          slEn: this.stopLossEnabled ? '1' : '0', sl: String(this.stopLossPercent), slSell: String(this.stopLossSellPercent), slSkip: String(this.stopLossSkip), slCandle: this.stopLossCandleFilter, slVol: this.stopLossVolumeFilter, slBasis: this.stopLossBasis,
+          fee: String(this.feePercent),
+          exec: String(this.execDelay), slip: String(this.slippagePct), fill: String(this.fillRate),
         });
       } catch {}
     }
 
+    private syncUrlWithoutReload() {
+      try {
+        const url = new URL(window.location.href);
+        const masStr = encodeURIComponent(JSON.stringify(this.maConfigs));
+        url.searchParams.set('cap', String(this.initialCapital));
+        url.searchParams.set('cnt', String(this.candleCount));
+        url.searchParams.set('tf', this.timeframe);
+        url.searchParams.set('mas', masStr);
+        const exitsStr2 = encodeURIComponent(JSON.stringify(this.exitConfigs));
+        url.searchParams.set('exits', exitsStr2);
+        url.searchParams.set('tpEn', this.takeProfitEnabled ? '1' : '0');
+        url.searchParams.set('tp', String(this.takeProfitPercent));
+        url.searchParams.set('tpSell', String(this.takeProfitSellPercent));
+        url.searchParams.set('tpSkip', String(this.takeProfitSkip));
+        url.searchParams.set('tpCandle', this.takeProfitCandleFilter);
+        url.searchParams.set('tpVol', this.takeProfitVolumeFilter);
+        url.searchParams.set('tpBasis', this.takeProfitBasis);
+        url.searchParams.set('cross', this.showCross ? '1' : '0');
+        url.searchParams.set('tzone', this.showTrend ? '1' : '0');
+        url.searchParams.set('mall', this.requireAllMas ? '1' : '0');
+        url.searchParams.set('mres', this.maResolveMode);
+        url.searchParams.set('xres', this.exitResolveMode);
+        url.searchParams.set('trend', this.trendDynamic ? 'dynamic' : this.trendRegrow ? 'regrow' : String(this.trendScore));
+        if (this.strategySets.length > 1) url.searchParams.set('sets', this.serializeSets());
+        else url.searchParams.delete('sets');
+        url.searchParams.set('lambda', String(this.riskAversion));
+        if (this.endDate) url.searchParams.set('ed', this.endTime ? `${this.endDate}T${this.endTime}` : this.endDate);
+        else url.searchParams.delete('ed');
+        if (this.chartCandles.length) {
+          const [zs, ze] = this.zoneRange();
+          url.searchParams.set('rs', String(zs));
+          url.searchParams.set('re', String(ze));
+        } else {
+          url.searchParams.delete('rs');
+          url.searchParams.delete('re');
+        }
+        url.searchParams.set('slEn', this.stopLossEnabled ? '1' : '0');
+        url.searchParams.set('sl', String(this.stopLossPercent));
+        url.searchParams.set('slSell', String(this.stopLossSellPercent));
+        url.searchParams.set('slSkip', String(this.stopLossSkip));
+        url.searchParams.set('slCandle', this.stopLossCandleFilter);
+        url.searchParams.set('slVol', this.stopLossVolumeFilter);
+        url.searchParams.set('slBasis', this.stopLossBasis);
+        url.searchParams.set('fee', String(this.feePercent));
+        url.searchParams.set('exec', String(this.execDelay));
+        url.searchParams.set('slip', String(this.slippagePct));
+        url.searchParams.set('fill', String(this.fillRate));
+        window.history.replaceState(null, '', url.toString());
+      } catch {}
+    }
+
     private applySimConfigToForm() {
+      const active = this.shadowRoot?.activeElement as HTMLElement | null;
       const capEl = this.shadowRoot?.querySelector('#sim-capital') as HTMLInputElement;
       const cntEl = this.shadowRoot?.querySelector('#sim-candle-count') as HTMLInputElement;
       const tfEl = this.shadowRoot?.querySelector('#sim-timeframe') as HTMLSelectElement;
-      if (capEl) capEl.value = String(this.initialCapital);
-      if (cntEl) cntEl.value = String(this.candleCount);
-      if (tfEl) tfEl.value = this.timeframe;
-      const tpEnEl = this.shadowRoot?.querySelector('#sim-tp-enabled') as HTMLInputElement;
+      if (capEl && capEl !== active) capEl.value = String(this.initialCapital);
+      if (cntEl && cntEl !== active) cntEl.value = String(this.candleCount);
+      if (tfEl && tfEl !== active) tfEl.value = this.timeframe;
+      const endDateEl = this.shadowRoot?.querySelector('#sim-end-date') as HTMLInputElement;
+      const endDtEl = this.shadowRoot?.querySelector('#sim-end-datetime') as HTMLInputElement;
+      if (endDateEl && endDateEl !== active) endDateEl.value = this.endDate;
+      if (endDtEl && endDtEl !== active) endDtEl.value = this.endTime ? `${this.endDate}T${this.endTime}` : '';
+      this.updateEndTimeVisibility();
       const tpEl = this.shadowRoot?.querySelector('#sim-tp') as HTMLInputElement;
       const tpSellEl = this.shadowRoot?.querySelector('#sim-tp-sell') as HTMLInputElement;
       const tpSkipEl = this.shadowRoot?.querySelector('#sim-tp-skip') as HTMLInputElement;
       const tpCandleEl = this.shadowRoot?.querySelector('#sim-tp-candle') as HTMLSelectElement;
       const tpVolEl = this.shadowRoot?.querySelector('#sim-tp-volume') as HTMLSelectElement;
       const crossEl = this.shadowRoot?.querySelector('#sim-show-cross') as HTMLInputElement;
-      const slEnEl = this.shadowRoot?.querySelector('#sim-sl-enabled') as HTMLInputElement;
       const slEl = this.shadowRoot?.querySelector('#sim-sl') as HTMLInputElement;
       const slSellEl = this.shadowRoot?.querySelector('#sim-sl-sell') as HTMLInputElement;
       const slSkipEl = this.shadowRoot?.querySelector('#sim-sl-skip') as HTMLInputElement;
       const slCandleEl = this.shadowRoot?.querySelector('#sim-sl-candle') as HTMLSelectElement;
       const slVolEl = this.shadowRoot?.querySelector('#sim-sl-volume') as HTMLSelectElement;
-      if (tpEnEl) tpEnEl.checked = this.takeProfitEnabled;
       if (tpEl) tpEl.value = String(this.takeProfitPercent);
       if (tpSellEl) tpSellEl.value = String(this.takeProfitSellPercent);
       if (tpSkipEl) tpSkipEl.value = String(this.takeProfitSkip);
       if (tpCandleEl) tpCandleEl.value = this.takeProfitCandleFilter;
       if (tpVolEl) tpVolEl.value = this.takeProfitVolumeFilter;
+      const tpBasisEl = this.shadowRoot?.querySelector('#sim-tp-basis') as HTMLSelectElement;
+      const slBasisEl = this.shadowRoot?.querySelector('#sim-sl-basis') as HTMLSelectElement;
+      if (tpBasisEl) tpBasisEl.value = this.takeProfitBasis;
+      if (slBasisEl) slBasisEl.value = this.stopLossBasis;
+      this.updateTpSlVisibility();
       if (crossEl) crossEl.checked = this.showCross;
-      if (slEnEl) slEnEl.checked = this.stopLossEnabled;
+      const trendEl2 = this.shadowRoot?.querySelector('#sim-show-trend') as HTMLInputElement;
+      if (trendEl2) trendEl2.checked = this.showTrend;
+      const mallEl = this.shadowRoot?.querySelector('#sim-require-all-mas') as HTMLInputElement;
+      if (mallEl) mallEl.checked = this.requireAllMas;
+      const mresEl = this.shadowRoot?.querySelector('#sim-resolve-mode') as HTMLSelectElement;
+      if (mresEl) mresEl.value = this.maResolveMode;
+      const xresEl = this.shadowRoot?.querySelector('#sim-exit-resolve-mode') as HTMLSelectElement;
+      if (xresEl) xresEl.value = this.exitResolveMode;
+      const trendEl = this.shadowRoot?.querySelector('#sim-trend-type') as HTMLSelectElement;
+      // 다이나믹 모드면 셀렉트 유지 (수치 대입 금지)
+      if (trendEl && (this.trendDynamic || this.trendRegrow)) { if (trendEl.value !== 'dynamic' && trendEl.value !== 'regrow') trendEl.value = this.trendDynamic ? 'dynamic' : 'regrow'; }
+      // 모름/횡보가 같은 값(0.5)이라 무조건 대입하면 첫 옵션(모름)으로 뒤집힘.
+      // trend는 입력값이라 결과가 바꾸지 않음: 수치상 다를 때만(예: URL 복원) 갱신.
+      else if (trendEl && (!Number.isFinite(Number(trendEl.value)) || Number(trendEl.value) !== this.trendScore)) trendEl.value = String(this.trendScore);
+      const presetEl = this.shadowRoot?.querySelector('#sim-optimize-preset') as HTMLSelectElement;
+      if (presetEl) presetEl.value = String(this.riskAversion);
       if (slEl) slEl.value = String(this.stopLossPercent);
       if (slSellEl) slSellEl.value = String(this.stopLossSellPercent);
       if (slSkipEl) slSkipEl.value = String(this.stopLossSkip);
       if (slCandleEl) slCandleEl.value = this.stopLossCandleFilter;
       if (slVolEl) slVolEl.value = this.stopLossVolumeFilter;
+      const feeEl = this.shadowRoot?.querySelector('#sim-fee') as HTMLInputElement;
+      if (feeEl) feeEl.value = String(this.feePercent);
+      const execEl = this.shadowRoot?.querySelector('#sim-exec-delay') as HTMLSelectElement;
+      if (execEl) execEl.value = String(this.execDelay);
+      const slipEl = this.shadowRoot?.querySelector('#sim-slippage') as HTMLInputElement;
+      if (slipEl) slipEl.value = String(this.slippagePct);
+      const fillEl = this.shadowRoot?.querySelector('#sim-fillrate') as HTMLInputElement;
+      if (fillEl) fillEl.value = String(this.fillRate);
     }
+
+    private updateTpSlVisibility() {
+      const tpBasisEl = this.shadowRoot?.querySelector('#sim-tp-basis') as HTMLSelectElement;
+      const slBasisEl = this.shadowRoot?.querySelector('#sim-sl-basis') as HTMLSelectElement;
+      const tpIsNone = (tpBasisEl?.value ?? this.takeProfitBasis) === 'none';
+      const slIsNone = (slBasisEl?.value ?? this.stopLossBasis) === 'none';
+      const tpInputs = this.shadowRoot?.querySelector('#sim-tp-inputs') as HTMLElement;
+      const slInputs = this.shadowRoot?.querySelector('#sim-sl-inputs') as HTMLElement;
+      if (tpInputs) tpInputs.style.display = tpIsNone ? 'none' : '';
+      if (slInputs) slInputs.style.display = slIsNone ? 'none' : '';
+      const tpLabel = tpBasisEl?.closest('label') as HTMLElement;
+      const slLabel = slBasisEl?.closest('label') as HTMLElement;
+      if (tpLabel) tpLabel.classList.toggle('is-disabled', tpIsNone);
+      if (slLabel) slLabel.classList.toggle('is-disabled', slIsNone);
+      const tpOpts = tpLabel?.querySelector('.tp-sl-opts') as HTMLElement;
+      const slOpts = slLabel?.querySelector('.tp-sl-opts') as HTMLElement;
+      if (tpOpts) tpOpts.style.display = tpIsNone ? 'none' : '';
+      if (slOpts) slOpts.style.display = slIsNone ? 'none' : '';
+      const grid = this.shadowRoot?.querySelector('.tp-sl-grid') as HTMLElement;
+      if (grid) grid.classList.toggle('is-single', tpIsNone || slIsNone);
+    }
+
+    private updateMaRowFieldsSingle() {
+      this.shadowRoot?.querySelectorAll('.ma-row').forEach(row => {
+        const fields = row.querySelector('.ma-row-fields') as HTMLElement;
+        if (!fields) return;
+        const signals = row.querySelectorAll('.ma-field');
+        const isSingle = signals.length <= 1;
+        fields.classList.toggle('is-single', isSingle);
+      });
+    }
+
+    private autoOptimizeDone = false;
 
     @onInitialize
     async onInit(@inject(TossService.SYMBOL) tossService: TossService, router: Router) {
       this.tossService = tossService;
       this.router = router;
       this.restoreSimFromUrl();
-      // 초기 파라미터 없으면 code처럼 바로 셋팅 (공유 URL에 기본값 포함)
+      // 초기 파라미터(mas)가 없으면 하드코딩 기본값 URL 동기화 대신 최적화 1회로 채움
+      let needsAutoOptimize = false;
       try {
         const p = router?.getSearchParams?.();
-        const needInit = !p?.get('cap') || !p?.get('cnt') || !p?.get('tf') || !p?.get('mas');
-        if (needInit) this.syncSimParamsToUrl();
+        needsAutoOptimize = !p?.get('mas') && !p?.get('sets');
       } catch {}
       try {
         const code = router?.getSearchParams?.()?.get('code');
@@ -210,6 +715,103 @@ export default (w: Window) => {
         }
       } catch {}
       await this.loadStock(this.currentCode, this.currentName);
+      // 초기값 없었으면 차트 로드 후 최적화 1회 실행해 기본 옵션 채움 (하드코딩 DEFAULT 대신)
+      if (needsAutoOptimize && !this.autoOptimizeDone && this.chartCandles.length) {
+        this.autoOptimizeDone = true;
+        try {
+          const titleEl = this.shadowRoot?.querySelector('#chart-title') as HTMLElement;
+          if (titleEl) titleEl.textContent = '최적 조건 탐색 중... (데이터 분석 + 탐색)';
+          await new Promise(r => setTimeout(r, 50));
+          const best = findBestConfig(this.chartCandles, { ...this.engineOpts(), trend: this.trendScore });
+          if (best) {
+            this.maConfigs = (best.maConfigs as typeof this.maConfigs).slice().sort((a,b)=>a.period-b.period);
+            this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
+            const _bm = (best as any).mres, _bx = (best as any).xres;
+            if (isResolveMode(_bm)) this.maResolveMode = _bm; // 이긴 쪽 모드로 셀렉트 동기화
+            if (isResolveMode(_bx)) this.exitResolveMode = _bx;
+            if ((best as any).exits) {
+              this.exitConfigs = (best as any).exits as any;
+              const f = this.exitConfigs[0] as any; if (f) { this.takeProfitBasis = f.basis; this.takeProfitPercent = f.percent; this.takeProfitSellPercent = f.sellPercent; this.takeProfitSkip = f.skip; this.takeProfitCandleFilter = f.candle; this.takeProfitVolumeFilter = f.volume; this.takeProfitEnabled = true; }
+              const s = (this.exitConfigs as any)[1]; if (s) { this.stopLossBasis = s.basis; this.stopLossPercent = s.percent; this.stopLossSellPercent = s.sellPercent; this.stopLossSkip = s.skip; this.stopLossCandleFilter = s.candle; this.stopLossVolumeFilter = s.volume; this.stopLossEnabled = true; } else { this.stopLossBasis = 'none' as any; this.stopLossEnabled = false; }
+            } else {
+              this.takeProfitEnabled = (best as any).tp.enabled;
+              this.takeProfitPercent = (best as any).tp.percent;
+              this.takeProfitSellPercent = (best as any).tp.sellPercent;
+              this.takeProfitSkip = (best as any).tp.skip;
+              this.takeProfitCandleFilter = (best as any).tp.candle as any;
+              this.takeProfitVolumeFilter = (best as any).tp.volume as any;
+              this.takeProfitBasis = (best as any).tp.basis ?? 'profitRise';
+              this.stopLossEnabled = (best as any).sl.enabled;
+              this.stopLossPercent = (best as any).sl.percent;
+              this.stopLossSellPercent = (best as any).sl.sellPercent;
+              this.stopLossSkip = (best as any).sl.skip;
+              this.stopLossCandleFilter = (best as any).sl.candle as any;
+              this.stopLossVolumeFilter = (best as any).sl.volume as any;
+              this.stopLossBasis = (best as any).sl.basis ?? 'profitFall';
+            }
+            this.applySimConfigToForm();
+            this.renderMaList();
+            this.renderExitList();
+            this.syncUrlWithoutReload();
+            this.syncMasToChart();
+            this.updateChartTitle();
+          } else {
+            // 최적화 실패 시에만 하드코딩 기본값 URL 반영 (fallback)
+            this.syncSimParamsToUrl();
+            this.updateChartTitle();
+          }
+        } catch {
+          this.syncSimParamsToUrl();
+        }
+      } else if (needsAutoOptimize && !this.chartCandles.length) {
+        // 캔들 로드 실패 시 fallback으로 기본값 URL 반영
+        try { this.syncSimParamsToUrl(); } catch {}
+      }
+    }
+
+    private lastStockPrice: { close: number; base: number | null } | null = null;
+
+    private updateChartTitle() {
+      const titleEl = this.shadowRoot?.querySelector('#chart-title') as HTMLElement;
+      if (!titleEl) return;
+      const tfLabel = this.timeframe.replace('day:','일봉 ').replace('week:','주봉 ').replace('month:','월봉 ').replace('min:','분봉 ');
+      const activeLen = this.getActiveCandles().length;
+      const rangeSuffix = (this.chartCandles.length && activeLen !== this.chartCandles.length)
+        ? ` (구간 ${activeLen}개)`
+        : '';
+      // 종료일 지정 시 실제 데이터 마지막 봉 날짜 표시 (URL 공유 시 동일 화면 확인용)
+      const endSuffix = (this.endDate && this.chartCandles.length)
+        ? ` (~${this.chartCandles[this.chartCandles.length - 1]?.date ?? this.endDate})` : '';
+      const countText = `${this.candleCount}개${rangeSuffix}${endSuffix}`;
+      let pricePart = '';
+      // stock-prices API 우선, 없으면 캔들 기반
+      if (this.lastStockPrice && this.lastStockPrice.close != null) {
+        const close = this.lastStockPrice.close;
+        const base = this.lastStockPrice.base;
+        const rate = base && base !== 0 ? ((close - base) / base) * 100 : null;
+        const rateStr = rate == null ? '' : ` ${rate >= 0 ? '+' : ''}${rate.toFixed(2)}%`;
+        const rateColor = rate == null ? '#64748b' : rate > 0 ? '#dc2626' : rate < 0 ? '#2563eb' : '#64748b';
+        const isUS = /^(US|NAS|AMX|NYS)/.test(this.currentCode);
+        const priceStr = `${Math.round(close).toLocaleString()}${isUS ? '$' : '원'}`;
+        titleEl.innerHTML = `${this.currentName} (${this.currentCode.replace(/^A/, '')}) · <span style="font-weight:800;color:#1e293b">${priceStr}</span>${rateStr ? ` <span style="font-weight:700;color:${rateColor}">${rateStr}</span>` : ''} · ${tfLabel} ${countText}`;
+        return;
+      }
+      if (this.chartCandles.length >= 2) {
+        const last = this.chartCandles[this.chartCandles.length - 1];
+        const prev = this.chartCandles[this.chartCandles.length - 2];
+        const rate = prev.close ? ((last.close - prev.close) / prev.close) * 100 : 0;
+        const rateStr = `${rate >= 0 ? '+' : ''}${rate.toFixed(2)}%`;
+        const isUS = /^(US|NAS|AMX|NYS)/.test(this.currentCode);
+        const priceStr = `${Math.round(last.close).toLocaleString()}${isUS ? '$' : '원'}`;
+        // 색상은 텍스트로만 전달할 수 있어 title은 문자열로, 색상은 별도 span이 필요하면 innerHTML로
+        titleEl.innerHTML = `${this.currentName} (${this.currentCode.replace(/^A/, '')}) · <span style="font-weight:800;color:#1e293b">${priceStr}</span> <span style="font-weight:700;color:${rate > 0 ? '#dc2626' : rate < 0 ? '#2563eb' : '#64748b'}">${rateStr}</span> · ${tfLabel} ${countText}`;
+        return;
+      } else if (this.chartCandles.length === 1) {
+        const last = this.chartCandles[0];
+        const isUS = /^(US|NAS|AMX|NYS)/.test(this.currentCode);
+        pricePart = ` · ${Math.round(last.close).toLocaleString()}${isUS ? '$' : '원'}`;
+      }
+      titleEl.textContent = `${this.currentName} (${this.currentCode.replace(/^A/, '')})${pricePart} · ${tfLabel} ${countText}`;
     }
 
     private async loadStock(code: string, name: string) {
@@ -221,25 +823,38 @@ export default (w: Window) => {
       } catch {}
       const searchInput = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       if (searchInput) searchInput.value = name;
-      const titleEl = this.shadowRoot?.querySelector('#chart-title') as HTMLElement;
-      const tfLabel = this.timeframe.replace('day:','일봉 ').replace('week:','주봉 ').replace('month:','월봉 ').replace('min:','분봉 ');
-      if (titleEl) titleEl.textContent = `${name} (${code.replace(/^A/, '')}) · ${tfLabel} ${this.candleCount}개`;
+      this.updateChartTitle();
 
       try {
-        const chartRes = await this.tossService.getChart(code, { count: this.candleCount, timeframe: this.timeframe }).catch(() => null);
+        const from = this.endDateToFrom();
+        const chartRes = await this.tossService.getChart(code, { count: this.candleCount, timeframe: this.timeframe, ...(from ? { from } : {}) }).catch(() => null);
         const raw = chartRes?.candles ?? [];
         const isMin = this.timeframe.startsWith('min:');
         const isDayWeekMonth = this.timeframe === 'day:1' || this.timeframe === 'week:1' || this.timeframe === 'month:1';
         const sortedRaw = [...raw].sort((a, b) => a.dt.localeCompare(b.dt));
-        const candles = sortedRaw.map(c => ({ date: isMin ? c.dt.slice(11, 16) : isDayWeekMonth ? c.dt.slice(5, 10) : c.dt, open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }));
+        const candles = sortedRaw.map(c => ({ date: isMin ? `${c.dt.slice(5, 10)} ${c.dt.slice(11, 16)}` : isDayWeekMonth ? c.dt.slice(2, 10) : c.dt, open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }));
         this.chartCandles = candles;
+        const sharedZone = this.rangeFromUrl;
+        this.syncRangeSliderBounds(true);
 
-        // 차트에 tick(골든/데드 크로스 시 line/tooltip 포함) + ma 주입
+        // 차트에 전체 tick + 구간 시뮬 마커 + 구간 rect 오버레이 + ma 주입
         const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
         if (chartEl) {
-          chartEl.innerHTML = this.buildTicksHtml(candles) + this.maConfigs.map(ma => `<ma color="${ma.color}" size="${ma.period}"></ma>`).join('');
+          chartEl.innerHTML = this.buildChartHtml();
         }
+        // 공유 링크 구간이면 차트 뷰도 해당 구간으로 (같은 화면 재현)
+        if (sharedZone) this.focusZoneOnChart();
         this.updateResultDisplay();
+        this.renderStrategyTabs();
+        this.updateChartTitle();
+        // 현재가 API로 타이틀 갱신 (code 진입 시에도 정확히 표시) — 실제 응답: { productCode, base, close }
+        try {
+          const sp = await this.tossService.getStockPrice(code).catch(() => null);
+          if (sp && sp.close != null && sp.base != null) {
+            this.lastStockPrice = { close: Number(sp.close), base: Number(sp.base) };
+            this.updateChartTitle();
+          }
+        } catch {}
 
         // 개요로 이름 재확정
         if (!chartRes) {
@@ -258,36 +873,64 @@ export default (w: Window) => {
               this.currentName = resolvedName;
               const inp2 = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
               if (inp2) inp2.value = this.currentName;
-              const tfLabel2 = this.timeframe.replace('day:','일봉 ').replace('week:','주봉 ').replace('month:','월봉 ').replace('min:','분봉 ');
-              if (titleEl) titleEl.textContent = `${this.currentName} (${code.replace(/^A/, '')}) · ${tfLabel2} ${this.candleCount}개`;
+              this.updateChartTitle();
             }
           } catch {}
         }
       } catch (e) { console.error(e); }
     }
 
-    @addEventListener('.header-back', 'click')
+    @event('.header-back', 'click')
     onBack() { this.router.go('/'); }
 
-    @addEventListener('#stock-search-btn', 'click')
+    @event('#stock-search-btn', 'click')
     onSearchBtn() { this.doSearch(); }
 
     private async doSearch() {
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       const q = input?.value.trim();
       if (!q) return;
-      const list = await this.tossService.searchProduct(q);
       const box = this.shadowRoot?.querySelector('#search-results') as HTMLElement;
+      const btn = this.shadowRoot?.querySelector('#stock-search-btn') as HTMLButtonElement;
+      if (box) { box.innerHTML = `<div style="padding:12px;color:#64748b;display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border:2px solid #e2e8f0;border-top-color:#f59e0b;border-radius:50%;display:inline-block;animation:spin 0.7s linear infinite"></span> 검색 중...</div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>`; box.classList.add('show'); }
+      if (btn) { btn.disabled = true; btn.textContent = '검색 중'; }
+      if (input) input.setAttribute('aria-busy', 'true');
+      let list: readonly any[] = [];
+      try { list = await this.tossService.searchProduct(q); } catch { list = []; }
       if (!box) return;
-      box.innerHTML = list.slice(0, 10).map(it => `
+      // stock-prices로 정확한 현재가 보강 (wts-auto-complete base/close보다 최신) — 실제 응답: { productCode, currency, base, close, volume }
+      let priceMap = new Map<string, { close: number; base: number }>();
+      try {
+        const codes = list.slice(0, 10).map(it => it.productCode);
+        const prices = await this.tossService.getStockPrices(codes).catch(() => [] as readonly any[]);
+        for (const p of prices as any[]) {
+          if (!p?.productCode || p.close == null || p.base == null) continue;
+          priceMap.set(p.productCode, { close: Number(p.close), base: Number(p.base) });
+        }
+      } catch {}
+      const fmtPrice = (v: number | null) => v == null ? '-' : Math.round(v).toLocaleString();
+      box.innerHTML = list.slice(0, 10).map(it => {
+        const isUS = /^(NSQ|NYS|NAS|AMX)/.test(it.market);
+        const pm = priceMap.get(it.productCode);
+        const close = pm?.close ?? (isUS ? it.close.usd : it.close.krw);
+        const base = pm?.base ?? (isUS ? it.base.usd : it.base.krw);
+        const rate = close != null && base != null && base !== 0 ? ((close - base) / base) * 100 : null;
+        const rateStr = rate == null ? '' : `${rate >= 0 ? '+' : ''}${rate.toFixed(2)}%`;
+        const rateColor = rate == null ? '#64748b' : rate > 0 ? '#dc2626' : rate < 0 ? '#2563eb' : '#64748b';
+        const priceStr = close == null ? '' : `${fmtPrice(close)}${isUS ? '$' : '원'}`;
+        return `
         <div class="search-item" data-code="${it.productCode}" data-name="${it.productName}">
           <div style="flex:1"><div style="font-weight:700;font-size:13px">${it.productName}</div><div style="font-size:11px;color:#64748b">${it.productCode} · ${it.market}</div></div>
-          <div style="font-size:11px;color:#0ea5e9">선택</div>
-        </div>`).join('') || `<div style="padding:12px;color:#64748b">결과 없음</div>`;
+          <div style="text-align:right;min-width:92px"><div style="font-size:12px;font-weight:800;color:#1e293b">${priceStr}</div><div style="font-size:11px;font-weight:700;color:${rateColor}">${rateStr}</div></div>
+          <div style="font-size:11px;color:#0ea5e9;margin-left:8px">선택</div>
+        </div>`;
+      }).join('') || `<div style="padding:12px;color:#64748b">결과 없음</div>`;
       box.classList.add('show');
+      if (btn) { btn.disabled = false; btn.textContent = '검색'; }
+      if (input) input.removeAttribute('aria-busy');
     }
 
-    @addEventListener('#stock-search', 'keydown')
+    @event('#stock-search', 'keydown')
     onSearchKey(e: KeyboardEvent) {
       if (e.key === 'Enter') { e.preventDefault(); this.doSearch(); }
       if (e.key === 'Escape') {
@@ -296,7 +939,7 @@ export default (w: Window) => {
       }
     }
 
-    @addEventListener('#stock-search-clear', 'click')
+    @event('#stock-search-clear', 'click')
     onClearSearch() {
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       if (input) input.value = '';
@@ -305,7 +948,7 @@ export default (w: Window) => {
       input?.focus();
     }
 
-    @addEventListenerDocument('click')
+    @eventDocument('click')
     onDocClick(e: MouseEvent) {
       const box = this.shadowRoot?.querySelector('#search-results') as HTMLElement;
       if (!box?.classList.contains('show')) return;
@@ -315,7 +958,7 @@ export default (w: Window) => {
       box.classList.remove('show');
     }
 
-    @addEventListener('#search-results', 'click', { delegate: true })
+    @eventDelegate('#search-results', 'click')
     onPick(e: Event) {
       const el = (e.target as HTMLElement).closest('.search-item') as HTMLElement;
       if (!el) return;
@@ -325,6 +968,12 @@ export default (w: Window) => {
       box?.classList.remove('show');
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       if (input) input.value = name;
+      // 종목 변경 시 종료일 초기화 (최신 기준)
+      this.endDate = ''; this.endTime = '';
+      const endDateEl = this.shadowRoot?.querySelector('#sim-end-date') as HTMLInputElement;
+      if (endDateEl) endDateEl.value = '';
+      const endDtEl = this.shadowRoot?.querySelector('#sim-end-datetime') as HTMLInputElement;
+      if (endDtEl) endDtEl.value = '';
       this.loadStock(code, name);
     }
 
@@ -332,115 +981,361 @@ export default (w: Window) => {
     onAfterConnected() {
       // URL에서 복원된 설정으로 폼/리스트 동기화
       this.applySimConfigToForm();
+      this.renderStrategyTabs();
       this.renderMaList();
+      this.renderExitList();
+      this.syncRangeSliderBounds();
+      this.updateChartTitle();
     }
 
-    @addEventListener('#sim-config', 'change')
-    onConfigFormChange() {
+    @event('#sim-config', 'change')
+    onConfigFormChange(e: Event) {
+      const target = e.target as HTMLElement;
+      const isCandleRelated = !!target.closest('#sim-candle-count, #sim-timeframe');
       const prevCount = this.candleCount;
       const prevTf = this.timeframe;
       this.syncConfigFromForm();
-      this.syncSimParamsToUrl();
-      if (prevCount !== this.candleCount || prevTf !== this.timeframe) {
+      this.writeBackFrictionInputs();
+      this.updateTpSlVisibility();
+      if (isCandleRelated && (prevCount !== this.candleCount || prevTf !== this.timeframe)) {
+        this.syncSimParamsToUrl();
         this.loadStock(this.currentCode, this.currentName);
       } else {
+        this.syncUrlWithoutReload();
         this.syncMasToChart();
       }
     }
 
-    @addEventListener('#sim-config', 'input')
-    onConfigFormInput() {
+    @event('#sim-config', 'input')
+    onConfigFormInput(e: Event) {
+      const target = e.target as HTMLElement;
+      const isCandleRelated = !!target.closest('#sim-candle-count, #sim-timeframe');
       const prevCount = this.candleCount;
       const prevTf = this.timeframe;
       this.syncConfigFromForm();
+      this.updateTpSlVisibility();
       // input 중에는 URL 갱신 없이 차트만 갱신해 포커스 유지 (change에서 URL 반영)
-      if (prevCount !== this.candleCount || prevTf !== this.timeframe) {
+      if (isCandleRelated && (prevCount !== this.candleCount || prevTf !== this.timeframe)) {
+        this.syncSimParamsToUrl();
+        this.loadStock(this.currentCode, this.currentName);
+      } else {
+        this.syncUrlWithoutReload();
+        this.syncMasToChart();
+      }
+    }
+
+    /** 종료일시 → from ISO (일봉 이하는 날짜 00:00, 분봉은 date+time). '' = 최신 */
+    private endDateToFrom(): string {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(this.endDate)) return '';
+      const isMin = this.timeframe.startsWith('min:');
+      const hm = isMin && /^\d{2}:\d{2}$/.test(this.endTime) ? this.endTime : '00:00';
+      return `${this.endDate}T${hm}:00+09:00`;
+    }
+
+    @event('#sim-candle-form', 'change')
+    onCandleFormChange() {
+      // alert(1)
+      const prevCount = this.candleCount;
+      const prevTf = this.timeframe;
+      const prevEnd = `${this.endDate}|${this.endTime}`;
+      this.syncConfigFromForm();
+      this.updateEndTimeVisibility();
+      this.syncSimParamsToUrl();
+      if (prevCount !== this.candleCount || prevTf !== this.timeframe || prevEnd !== `${this.endDate}|${this.endTime}`) {
         this.loadStock(this.currentCode, this.currentName);
       } else {
         this.syncMasToChart();
       }
     }
 
-    @addEventListener('#add-ma-btn', 'click')
+    private updateEndTimeVisibility() {
+      const isMin = this.timeframe.startsWith('min:');
+      const dateField = this.shadowRoot?.querySelector('#sim-end-date-field') as HTMLElement;
+      const dtField = this.shadowRoot?.querySelector('#sim-end-datetime-field') as HTMLElement;
+      if (dateField) dateField.style.display = isMin ? 'none' : '';
+      if (dtField) dtField.style.display = isMin ? '' : 'none';
+    }
+
+
+
+    private applyZone(start: number, end: number, focus: boolean) {
+      const n = this.chartCandles.length;
+      if (!n) return;
+      const e = Math.max(0, Math.min(Math.floor(end), n - 1));
+      const s = Math.max(0, Math.min(Math.floor(start), e));
+      if (s === this.rangeStart && e === this.rangeEnd) return;
+      this.rangeStart = s;
+      this.rangeEnd = e;
+      this.updateRangeLabels();
+      this.syncMasToChart();
+      this.syncUrlWithoutReload();
+      if (focus) this.focusZoneOnChart();
+    }
+
+    @event('#sim-zone', 'input')
+    onZoneInput(e: Event) {
+      const v = (e.target as any)?.value;
+      if (!v || typeof v !== 'object') return;
+      const s = Number(v.start);
+      const ed = Number(v.end);
+      if (!Number.isFinite(s) || !Number.isFinite(ed)) return;
+      this.applyZone(s, ed, false);
+    }
+
+    @event('#sim-zone', 'change')
+    onZoneChange(e: Event) {
+      const v = (e.target as any)?.value;
+      if (!v || typeof v !== 'object') return;
+      const s = Number(v.start);
+      const ed = Number(v.end);
+      if (!Number.isFinite(s) || !Number.isFinite(ed)) return;
+      this.applyZone(s, ed, true);
+      if (this.trendRegrow) void this.reconcileRegrowSets();
+    }
+
+    @event('#add-ma-btn', 'click')
     onAddMa() {
       const maxPeriod = this.maConfigs.length ? Math.max(...this.maConfigs.map(m => m.period)) : 0;
-      const nextPeriod = Math.min(500, (maxPeriod || 0) + 10 || 10);
+      const cap = Math.max(5, Math.min(500, this.candleCount - 1));
+      const nextPeriod = Math.min(cap, (maxPeriod || 0) + 10 || 10);
       const colors = ['#ef4444','#f59e0b','#10b981','#6366f1','#ec4899','#06b6d4'];
       const color = colors[this.maConfigs.length % colors.length];
-      this.maConfigs.push({ period: nextPeriod, color, pyramiding: { golden: { action: 'buy', percent: 20, candleFilter: 'bull', volumeFilter: 'higher', consecutive: 2, maxTrades: 2, trigger: 'event', alignment: 'aligned' }, dead: { action: 'sell', percent: 20, candleFilter: 'bear', volumeFilter: 'any', consecutive: 2, maxTrades: 2, trigger: 'event', alignment: 'any' } } });
+      this.maConfigs.push({ period: nextPeriod, color, pyramiding: { signals: [
+        { signal: 'golden', action: 'buy', percent: 20, candleFilter: 'bull', volumeFilter: 'higher', consecutive: 2, alignment: 'aligned', condTrade: { type: 'consecutiveSelected', operator: '>=', value: 4 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } },
+        { signal: 'dead', action: 'sell', percent: 20, candleFilter: 'bear', volumeFilter: 'any', consecutive: 2, alignment: 'any', condTrade: { type: 'consecutiveSelected', operator: '>=', value: 4 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } }
+      ] } });
+      this.maConfigs.sort((a,b)=>a.period-b.period);
       this.renderMaList();
       this.syncConfigFromForm();
       this.syncSimParamsToUrl();
       this.syncMasToChart();
     }
 
-    @addEventListener('#sim-preset-select', 'change')
-    onPresetChange(e: Event) {
-      const sel = e.target as HTMLSelectElement;
-      const v = sel.value;
-      if (!v) return;
-      const isTp = v.startsWith('tp-');
-      const isUp = v.endsWith('-up');
-      // 기본 MA 4개는 유지하되 액션만 반전, TP/SL은 보유면 OFF
-      const base = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS)) as typeof this.maConfigs;
-      const ma = base.map(m => {
-        if (!isUp) {
-          // 하락추매: 매수/매도 액션만 반전, 캔들/거래량/연속 등 조건은 유지
-          m.pyramiding.golden.action = m.pyramiding.golden.action === 'buy' ? 'sell' : 'buy';
-          m.pyramiding.dead.action = m.pyramiding.dead.action === 'buy' ? 'sell' : 'buy';
+    @eventDelegate('#ma-list', 'click')
+    onAddSignal(e: Event) {
+      const btn = (e.target as HTMLElement).closest('.add-signal-btn') as HTMLElement;
+      if (!btn) return;
+      const idx = Number(btn.dataset.idx);
+      if (!Number.isFinite(idx)) return;
+      const ma = this.maConfigs[idx];
+      if (!ma) return;
+      ma.pyramiding.signals.push({ signal: 'golden', action: 'buy', percent: 20, candleFilter: 'any', volumeFilter: 'any', consecutive: 2, alignment: 'any', condTrade: { type: 'any', operator: 'any', value: 1 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } });
+      this.renderMaList();
+      this.syncConfigFromForm();
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+    }
+
+    @eventDelegate('#ma-list', 'click')
+    onRemoveSignal(e: Event) {
+      const btn = (e.target as HTMLElement).closest('.signal-remove') as HTMLElement;
+      if (!btn) return;
+      const field = btn.closest('.ma-field') as HTMLElement;
+      const row = btn.closest('.ma-row') as HTMLElement;
+      if (!field || !row) return;
+      const idx = Number(row.dataset.idx);
+      const sIdx = Number(btn.dataset.sidx);
+      if (!Number.isFinite(idx) || !Number.isFinite(sIdx)) return;
+      const ma = this.maConfigs[idx];
+      if (!ma) return;
+      ma.pyramiding.signals.splice(sIdx, 1);
+      if (!ma.pyramiding.signals.length) {
+        ma.pyramiding.signals.push({ signal: 'golden', action: 'buy', percent: 20, candleFilter: 'any', volumeFilter: 'any', consecutive: 2, alignment: 'any', condTrade: { type: 'any', operator: 'any', value: 1 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } });
+      }
+      this.renderMaList();
+      this.syncConfigFromForm();
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+    }
+
+    @eventDelegate('#ma-list', 'input')
+    onMaListInput(e: Event) {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.ma-row')) return;
+      if (target.classList.contains('ma-color-input')) {
+        const dot = target.closest('.ma-color') as HTMLElement;
+        const v = (target as HTMLInputElement).value;
+        if (dot && /^#[0-9a-fA-F]{6}$/.test(v)) { dot.setAttribute('data-color', v); dot.style.background = v; }
+      }
+      this.syncConfigFromForm();
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+    }
+
+    @eventDelegate('#ma-list', 'change')
+    onMaListChange(e: Event) {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.ma-row')) return;
+      if (target.classList.contains('ma-action') || target.classList.contains('ma-signal')) {
+        (target as HTMLElement).dataset.v = (target as HTMLSelectElement).value;
+      }
+      this.syncConfigFromForm();
+      this.updateMaRowFieldsSingle();
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+    }
+
+    @event('#add-exit-btn', 'click')
+    onAddExit() {
+      this.exitConfigs.push({ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 5, candle: 'any', volume: 'any' });
+      this.renderExitList();
+      this.syncConfigFromForm();
+      this.syncSimParamsToUrl();
+      this.syncMasToChart();
+    }
+
+    @eventDelegate('#exit-list', 'click')
+    onRemoveExit(e: Event) {
+      const btn = (e.target as HTMLElement).closest('.exit-remove') as HTMLElement;
+      if (!btn) return;
+      const idx = Number(btn.dataset.idx);
+      if (Number.isFinite(idx)) {
+        this.exitConfigs.splice(idx, 1);
+        this.renderExitList();
+        this.syncConfigFromForm();
+        this.syncSimParamsToUrl();
+        this.syncMasToChart();
+      }
+    }
+
+    @eventDelegate('#exit-list', 'change')
+    onExitChange(e: Event) {
+      const target = e.target as HTMLElement;
+      if (!target.matches('.exit-basis, .exit-candle, .exit-volume')) return;
+      if (!target.closest('.ma-row')) return;
+      this.syncConfigFromForm();
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+    }
+
+
+    @event('#sim-optimize-preset', 'change')
+    onPresetChange() {
+      this.syncConfigFromForm();
+      this.syncUrlWithoutReload();
+    }
+
+    @event('#sim-optimize-btn', 'click', { preventDefault: true, stopPropagation: true })
+    async onOptimizeClick(e: Event) {
+      const btn = e.target as HTMLButtonElement;
+      this.syncConfigFromForm();
+      if (!this.chartCandles.length) {
+        await this.loadStock(this.currentCode, this.currentName);
+        if (!this.chartCandles.length) return;
+      }
+      btn.disabled = true;
+      const origText = btn.textContent;
+      btn.textContent = '최적 탐색 중...';
+      try {
+        await new Promise(r => setTimeout(r, 50));
+        const [zs, ze] = this.zoneRange();
+        if (this.trendDynamic) {
+          // 다이나믹: MACD+RSI+OBV 합성 추세로 분할 → 구간별 최적화 → 전략 세트 배열
+          const segs = this.segmentByTrend(zs, ze);
+          console.log('[sim] dynamic segs:', segs.map(g => `${g.label}[${g.from}-${g.to}]`).join(','));
+          const sets: StrategySet[] = [];
+          for (let si = 0; si < segs.length; si++) {
+            const g = segs[si];
+            btn.textContent = segs.length > 1 ? `최적 탐색 중... (${si + 1}/${segs.length})` : '최적 탐색 중...';
+            await new Promise(r => setTimeout(r, 30));
+            console.log('[sim] optimize input:', JSON.stringify({ candles: this.chartCandles.length, ...this.engineOpts(), simFrom: g.from, simTo: g.to, riskAversion: this.riskAversion, trend: g.trend }));
+            const best = findBestConfig(this.chartCandles, { ...this.engineOpts(), simFrom: g.from, simTo: g.to, riskAversion: this.riskAversion, trend: g.trend });
+            if (!best) { console.log('[sim] seg skipped (no best):', g.label, g.from, g.to); continue; }
+            const _bm = (best as any).mres, _bx = (best as any).xres;
+            sets.push({
+              id: si, label: g.label,
+              trend: g.trend, from: g.from, to: g.to,
+              color: g.color,
+              maConfigs: (best.maConfigs as MaConfig[]).slice().sort((a, b) => a.period - b.period),
+              exitConfigs: ((best as any).exits ?? []) as ExitConfig[],
+              mres: isResolveMode(_bm) ? _bm : 'minFirst',
+              xres: isResolveMode(_bx) ? _bx : 'minFirst',
+              profit: 0, rate: 0, trades: 0,
+            });
+          }
+          if (!sets.length) return;
+          this.strategySets = sets;
+          this.activeSetIdx = 0;
+          this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
+          this.loadTpSlFieldsFromExits(this.exitConfigs);
+          this.showCross = false;
+          this.applySimConfigToForm();
+          this.renderMaList();
+          this.renderExitList();
+          this.syncUrlWithoutReload();
+          this.syncMasToChart();
+          this.renderStrategyTabs();
+        } else if (this.trendRegrow) {
+          // 최적화 버튼은 clear 후 처음부터 전체 재생성 (zone 변경 시 증분 reconcile과 다름)
+          this.strategySets = [];
+          this.activeSetIdx = 0;
+          await this.reconcileRegrowSets(btn);
+        } else {
+        console.log('[sim] optimize input:', JSON.stringify({ candles: this.chartCandles.length, ...this.engineOpts(), riskAversion: this.riskAversion, trend: this.trendScore }));
+        const best = findBestConfig(this.chartCandles, { ...this.engineOpts(), riskAversion: this.riskAversion, trend: this.trendScore });
+        if (best) {
+          this.maConfigs = (best.maConfigs as MaConfig[]).slice().sort((a,b)=>a.period-b.period);
+          this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
+          const _bm = (best as any).mres, _bx = (best as any).xres;
+          if (isResolveMode(_bm)) this.maResolveMode = _bm; // 이긴 쪽 모드로 셀렉트 동기화
+          if (isResolveMode(_bx)) this.exitResolveMode = _bx;
+          if ((best as any).exits) {
+            this.exitConfigs = (best as any).exits as any;
+            this.loadTpSlFieldsFromExits(this.exitConfigs);
+          } else {
+            this.takeProfitEnabled = (best as any).tp.enabled;
+            this.takeProfitPercent = (best as any).tp.percent;
+            this.takeProfitSellPercent = (best as any).tp.sellPercent;
+            this.takeProfitSkip = (best as any).tp.skip;
+            this.takeProfitCandleFilter = (best as any).tp.candle as any;
+            this.takeProfitVolumeFilter = (best as any).tp.volume as any;
+            this.takeProfitBasis = (best as any).tp.basis ?? 'profitRise';
+            this.stopLossEnabled = (best as any).sl.enabled;
+            this.stopLossPercent = (best as any).sl.percent;
+            this.stopLossSellPercent = (best as any).sl.sellPercent;
+            this.stopLossSkip = (best as any).sl.skip;
+            this.stopLossCandleFilter = (best as any).sl.candle as any;
+            this.stopLossVolumeFilter = (best as any).sl.volume as any;
+            this.stopLossBasis = (best as any).sl.basis ?? 'profitFall';
+          }
+          this.strategySets = [{
+            id: 0, label: '전체', trend: this.trendScore, from: zs, to: ze, color: SET_PALETTE[0],
+            maConfigs: this.maConfigs, exitConfigs: this.exitConfigs,
+            mres: this.maResolveMode, xres: this.exitResolveMode, profit: 0, rate: 0, trades: 0,
+          }];
+          this.activeSetIdx = 0;
+          this.showCross = false;
+          this.applySimConfigToForm();
+          this.renderMaList();
+          this.renderExitList();
+          this.syncUrlWithoutReload();
+          this.syncMasToChart();
+          this.renderStrategyTabs();
         }
-        return m;
-      });
-      this.candleCount = DEFAULT_CANDLE_COUNT;
-      this.timeframe = DEFAULT_TIMEFRAME;
-      this.initialCapital = DEFAULT_CAPITAL;
-      this.maConfigs = ma;
-      this.takeProfitEnabled = isTp ? DEFAULT_TP.enabled : false;
-      this.takeProfitPercent = DEFAULT_TP.percent;
-      this.takeProfitSellPercent = DEFAULT_TP.sellPercent;
-      this.takeProfitSkip = DEFAULT_TP.skip;
-      this.takeProfitCandleFilter = DEFAULT_TP.candleFilter;
-      this.takeProfitVolumeFilter = DEFAULT_TP.volumeFilter;
-      this.stopLossEnabled = isTp ? DEFAULT_SL.enabled : false;
-      this.stopLossPercent = DEFAULT_SL.percent;
-      this.stopLossSellPercent = DEFAULT_SL.sellPercent;
-      this.stopLossSkip = DEFAULT_SL.skip;
-      this.stopLossCandleFilter = DEFAULT_SL.candleFilter;
-      this.stopLossVolumeFilter = DEFAULT_SL.volumeFilter;
-      this.showCross = DEFAULT_SHOW_CROSS;
-      this.applySimConfigToForm();
-      this.renderMaList();
-      this.syncSimParamsToUrl();
-      this.loadStock(this.currentCode, this.currentName);
-      sel.value = '';
+        }
+      } finally {
+        btn.disabled = false;
+        if (origText) btn.textContent = origText;
+      }
     }
 
-    @addEventListener('#sim-reset-btn', 'click')
-    onResetSim() {
-      this.candleCount = DEFAULT_CANDLE_COUNT;
-      this.timeframe = DEFAULT_TIMEFRAME;
-      this.initialCapital = DEFAULT_CAPITAL;
-      this.maConfigs = JSON.parse(JSON.stringify(DEFAULT_MA_CONFIGS));
-      this.takeProfitEnabled = DEFAULT_TP.enabled;
-      this.takeProfitPercent = DEFAULT_TP.percent;
-      this.takeProfitSellPercent = DEFAULT_TP.sellPercent;
-      this.takeProfitSkip = DEFAULT_TP.skip;
-      this.takeProfitCandleFilter = DEFAULT_TP.candleFilter;
-      this.takeProfitVolumeFilter = DEFAULT_TP.volumeFilter;
-      this.showCross = DEFAULT_SHOW_CROSS;
-      this.stopLossEnabled = DEFAULT_SL.enabled;
-      this.stopLossPercent = DEFAULT_SL.percent;
-      this.stopLossSellPercent = DEFAULT_SL.sellPercent;
-      this.stopLossSkip = DEFAULT_SL.skip;
-      this.stopLossCandleFilter = DEFAULT_SL.candleFilter;
-      this.stopLossVolumeFilter = DEFAULT_SL.volumeFilter;
-      this.applySimConfigToForm();
-      this.renderMaList();
+    @event('#sim-reload-btn', 'click', { preventDefault: true, stopPropagation: true })
+    onReloadCandles() {
+      this.syncConfigFromForm();
       this.syncSimParamsToUrl();
       this.loadStock(this.currentCode, this.currentName);
     }
 
-    @addEventListener('#sim-share-fab', 'click')
+    @event('#sim-candle-form', 'submit', { preventDefault: true, stopPropagation: true })
+    onCandleFormSubmit() {
+      this.syncConfigFromForm();
+      this.syncSimParamsToUrl();
+      this.loadStock(this.currentCode, this.currentName);
+    }
+
+
+
+    @event('#sim-share-fab', 'click')
     async onShareFab() {
       const url = window.location.href;
       const title = `주식 트레이딩 · ${this.currentName}`;
@@ -466,7 +1361,135 @@ export default (w: Window) => {
       }
     }
 
-    @addEventListener('#ma-list', 'click', { delegate: true })
+    @eventDelegate('#ma-list', 'change')
+    onMaCondTypeChange(e: Event) {
+      const target = e.target as HTMLElement;
+      if (!target.classList.contains('ma-condtrade-type') && !target.classList.contains('ma-condcandle-type') && !target.classList.contains('ma-condma-type')) return;
+      const label = (target as HTMLElement).closest('label') as HTMLElement;
+      if (!label) return;
+      const isAny = (target as HTMLSelectElement).value === 'any';
+      const selects = label.querySelectorAll('select');
+      const input = label.querySelector('input') as HTMLElement;
+      const op = selects[1] as HTMLElement;
+      if (op) op.style.display = isAny ? 'none' : '';
+      if (input) input.style.display = isAny ? 'none' : '';
+    }
+
+    @eventDelegate('#ma-list', 'click')
+    onMaHelpClick(e: Event) {
+      const raw = ((e as any).composedPath?.()?.[0] ?? e.target) as HTMLElement;
+      const help = raw.closest('.ma-help') as HTMLElement;
+      if (!help) return;
+      console.log('[MA-HELP-DBG] help', help?.getAttribute?.('data-help')?.slice(0,60));
+      e.preventDefault();
+      e.stopPropagation();
+      let tip = help.getAttribute('data-help');
+      if (!tip) return;
+      // 배지는 이미 이스케이프된 HTML 엔티티를 포함하므로 디코딩
+      tip = tip.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      const pop = this.shadowRoot?.querySelector('#ma-help-popover') as HTMLElement;
+      if (!pop) return;
+      if (pop.classList.contains('show') && pop.textContent === tip) {
+        pop.classList.remove('show');
+        return;
+      }
+      pop.textContent = tip;
+      pop.classList.add('show');
+      const rect = help.getBoundingClientRect();
+      const popW = 280;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      left = Math.max(8, Math.min(window.innerWidth - popW - 8, left));
+      let top = rect.bottom + 8;
+      if (top + 60 > window.innerHeight) top = rect.top - 50;
+      pop.style.left = `${left}px`;
+      pop.style.top = `${top}px`;
+      setTimeout(() => {
+        const hide = (ev: Event) => {
+          const t = ((ev as any).composedPath?.()?.[0] ?? ev.target) as Node;
+          if (pop.contains(t) || help.contains(t as Node)) return;
+          pop.classList.remove('show');
+          document.removeEventListener('click', hide);
+        };
+        setTimeout(() => document.addEventListener('click', hide), 0);
+      }, 0);
+    }
+
+    @eventDelegate('#sim-history-body', 'click')
+    onHistoryHelpClick(e: Event) {
+      const raw = ((e as any).composedPath?.()?.[0] ?? e.target) as HTMLElement;
+      const help = raw.closest('.ma-help') as HTMLElement;
+      if (!help) return;
+      e.preventDefault();
+      e.stopPropagation();
+      let tip = help.getAttribute('data-help');
+      if (!tip) return;
+      tip = tip.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      const pop = this.shadowRoot?.querySelector('#ma-help-popover') as HTMLElement;
+      if (!pop) return;
+      if (pop.classList.contains('show') && pop.textContent === tip) {
+        pop.classList.remove('show');
+        return;
+      }
+      pop.textContent = tip;
+      pop.classList.add('show');
+      const rect = help.getBoundingClientRect();
+      const popW = 280;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      left = Math.max(8, Math.min(window.innerWidth - popW - 8, left));
+      let top = rect.bottom + 8;
+      if (top + 60 > window.innerHeight) top = rect.top - 50;
+      pop.style.left = `${left}px`;
+      pop.style.top = `${top}px`;
+      setTimeout(() => {
+        const hide = (ev: Event) => {
+          const t = ((ev as any).composedPath?.()?.[0] ?? ev.target) as Node;
+          if (pop.contains(t) || help.contains(t as Node)) return;
+          pop.classList.remove('show');
+          document.removeEventListener('click', hide);
+        };
+        setTimeout(() => document.addEventListener('click', hide), 0);
+      }, 0);
+    }
+
+    @eventDelegate('#sim-config', 'click')
+    onSimConfigHelpClick(e: Event) {
+      const raw = ((e as any).composedPath?.()?.[0] ?? e.target) as HTMLElement;
+      const help = raw.closest('.ma-help') as HTMLElement;
+      if (!help) return;
+      if (help.closest('#ma-list')) return;
+      e.preventDefault();
+      e.stopPropagation();
+      let tip = help.getAttribute('data-help');
+      if (!tip) return;
+      tip = tip.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      const pop = this.shadowRoot?.querySelector('#ma-help-popover') as HTMLElement;
+      if (!pop) return;
+      if (pop.classList.contains('show') && pop.textContent === tip) {
+        pop.classList.remove('show');
+        return;
+      }
+      pop.textContent = tip;
+      pop.classList.add('show');
+      const rect = help.getBoundingClientRect();
+      const popW = 280;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      left = Math.max(8, Math.min(window.innerWidth - popW - 8, left));
+      let top = rect.bottom + 8;
+      if (top + 60 > window.innerHeight) top = rect.top - 50;
+      pop.style.left = `${left}px`;
+      pop.style.top = `${top}px`;
+      setTimeout(() => {
+        const hide = (ev: Event) => {
+          const t = ((ev as any).composedPath?.()?.[0] ?? ev.target) as Node;
+          if (pop.contains(t) || help.contains(t as Node)) return;
+          pop.classList.remove('show');
+          document.removeEventListener('click', hide);
+        };
+        setTimeout(() => document.addEventListener('click', hide), 0);
+      }, 0);
+    }
+
+    @eventDelegate('#ma-list', 'click')
     onRemoveMa(e: Event) {
       const btn = (e.target as HTMLElement).closest('.ma-remove') as HTMLElement;
       if (!btn) return;
@@ -480,321 +1503,51 @@ export default (w: Window) => {
       }
     }
 
-    private buildTicksHtml(candles: { date: string; open: number; high: number; low: number; close: number; volume: number }[]): string {
-      // 이동평균별 MA 배열 미리 계산
-      const maMap = new Map<number, (number | null)[]>();
-      for (const ma of this.maConfigs) {
-        const vals: (number | null)[] = [];
-        let sum = 0;
-        for (let i = 0; i < candles.length; i++) {
-          sum += candles[i].close;
-          if (i >= ma.period) sum -= candles[i - ma.period].close;
-          vals.push(i >= ma.period - 1 ? sum / ma.period : null);
+    private buildTicksHtml(candles: SimCandle[], simFrom = 0, simTo = candles.length - 1): string {
+      // 전략 세트 순차 평가 — 자본 체인 (레짐 전환 시 포지션 정리 가정)
+      // 평가 범위는 세트 범위 ∩ 실시간 zone (슬라이더 추적, zone 밖 세트는 미적용)
+      let capital = this.initialCapital;
+      const allTrades: SimTrade[] = [];
+      this.simReasonMap.clear();
+      const tradeAtAll = new Map<number, any[]>();
+      let crossAtActive = new Map<number, any[]>();
+      let lastR: any = null;
+      let firstDone = false;
+      this.strategySets.forEach((set, si) => {
+        const f = set.from < 0 ? simFrom : Math.max(simFrom, set.from);
+        const t = set.to < 0 ? simTo : Math.min(simTo, set.to);
+        if (t < f) { set.profit = 0; set.rate = 0; set.trades = 0; return; }
+        const r = simulate(candles, set.maConfigs, set.exitConfigs, {
+          initialCapital: capital, feePercent: this.feePercent,
+          requireAll: this.requireAllMas, maMode: set.mres, xMode: set.xres,
+          simFrom: f, simTo: t,
+          ...this.frictionOpts(),
+        });
+        for (const { idx, reason } of r.reasons) this.simReasonMap.set(idx, reason);
+        for (const [idx, arr] of r.tradeAtIdx) {
+          const ex = tradeAtAll.get(idx) ?? [];
+          for (const t of arr as any[]) ex.push({ ...(t as any), setColor: set.color, setIdx: si });
+          tradeAtAll.set(idx, ex);
         }
-        maMap.set(ma.period, vals);
-      }
-      const sortedMas = [...this.maConfigs].sort((a, b) => a.period - b.period);
-      const isAligned = (idx: number): boolean => {
-        const formed = sortedMas.map(ma => ({ period: ma.period, v: maMap.get(ma.period)![idx] }))
-          .filter(x => x.v != null) as { period: number; v: number }[];
-        if (formed.length < 2) return true;
-        for (let k = 0; k < formed.length - 1; k++) {
-          if (!(formed[k].v > formed[k + 1].v)) return false;
-        }
-        return true;
-      };
-      const isReverseAligned = (idx: number): boolean => {
-        const formed = sortedMas.map(ma => ({ period: ma.period, v: maMap.get(ma.period)![idx] }))
-          .filter(x => x.v != null) as { period: number; v: number }[];
-        if (formed.length < 2) return true;
-        for (let k = 0; k < formed.length - 1; k++) {
-          if (!(formed[k].v < formed[k + 1].v)) return false;
-        }
-        return true;
-      };
-
-      // 시뮬레이션: 투자원금/보유주식 기반 피라미딩 + G/D 라인 (연속발생 N회 충족 시 매매) + 익절/손절 (평균단가 기준, 중복 방지)
-      let cash = this.initialCapital;
-      let shares = 0;
-      let totalCost = 0;
-      const trades: typeof this.simTrades = [];
-      const tradeAtIdx: Map<number, { action: 'buy'|'sell'; label: string; color: string; position: string }[]> = new Map();
-      const crossAtIdx: Map<number, { label: string; color: string }[]> = new Map();
-      const goldenStreak = new Map<number, number>();
-      const deadStreak = new Map<number, number>();
-      const goldenTradeCnt = new Map<number, number>();
-      const deadTradeCnt = new Map<number, number>();
-      let maSkipRemaining = 0;
-
-      for (let i = 1; i < candles.length; i++) {
-        // 익절/손절 우선 체크 — 체결 시 해당 봉에서는 MA 매매 스킵 + 이후 N회 스킵 (중복 방지)
-        if (shares > 0 && totalCost > 0) {
-          const avg = totalCost / shares;
-          const currClose = candles[i].close;
-          const profitRate = ((currClose - avg) / avg) * 100;
-          let shouldTP = this.takeProfitEnabled && profitRate >= this.takeProfitPercent;
-          let shouldSL = this.stopLossEnabled && profitRate <= -this.stopLossPercent;
-          // 익절 캔들/거래량 필터
-          if (shouldTP) {
-            if (this.takeProfitCandleFilter !== 'any') {
-              const isBull = candles[i].close > candles[i].open;
-              const isBear = candles[i].close < candles[i].open;
-              if (this.takeProfitCandleFilter === 'bull' && !isBull) shouldTP = false;
-              if (this.takeProfitCandleFilter === 'bear' && !isBear) shouldTP = false;
-            }
-            if (shouldTP && this.takeProfitVolumeFilter !== 'any' && i > 0) {
-              if (this.takeProfitVolumeFilter === 'higher' && !(candles[i].volume > candles[i-1].volume)) shouldTP = false;
-              if (this.takeProfitVolumeFilter === 'lower' && !(candles[i].volume < candles[i-1].volume)) shouldTP = false;
-            }
-          }
-          if (shouldSL) {
-            if (this.stopLossCandleFilter !== 'any') {
-              const isBull = candles[i].close > candles[i].open;
-              const isBear = candles[i].close < candles[i].open;
-              if (this.stopLossCandleFilter === 'bull' && !isBull) shouldSL = false;
-              if (this.stopLossCandleFilter === 'bear' && !isBear) shouldSL = false;
-            }
-            if (shouldSL && this.stopLossVolumeFilter !== 'any' && i > 0) {
-              if (this.stopLossVolumeFilter === 'higher' && !(candles[i].volume > candles[i-1].volume)) shouldSL = false;
-              if (this.stopLossVolumeFilter === 'lower' && !(candles[i].volume < candles[i-1].volume)) shouldSL = false;
-            }
-          }
-          if (shouldTP || shouldSL) {
-            const isTP = shouldTP;
-            const sellPct = isTP ? this.takeProfitSellPercent : this.stopLossSellPercent;
-            const sellShares = Math.floor(shares * (sellPct / 100));
-            if (sellShares > 0) {
-              const proceeds = sellShares * currClose;
-              shares -= sellShares;
-              cash += proceeds;
-              totalCost -= sellShares * avg;
-              if (shares === 0) totalCost = 0;
-              const label = isTP ? '익' : '손';
-              const color = isTP ? '#10b981' : '#ef4444';
-              const profitRate = ((currClose - avg) / avg) * 100;
-              const avgPriceAfter = shares > 0 ? totalCost / shares : 0;
-              const holdingValue = shares * currClose;
-              trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: 0, percent: sellPct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, label, profitRate, avgPrice: avgPriceAfter, holdingValue });
-              const arr = tradeAtIdx.get(i) ?? [];
-              arr.push({ action: 'sell', label, color, position: 'candle-top' });
-              tradeAtIdx.set(i, arr);
-              maSkipRemaining = isTP ? this.takeProfitSkip : this.stopLossSkip;
-              continue; // MA 매매 스킵 (해당 봉 + 이후 N회)
-            }
-          }
-        }
-        // 익절/손절 이후 MA 스킵 카운트
-        if (maSkipRemaining > 0) {
-          maSkipRemaining--;
-          continue;
-        }
-        for (const ma of sortedMas) {
-          const vals = maMap.get(ma.period)!;
-          const prevMA = vals[i - 1];
-          const currMA = vals[i];
-          if (prevMA == null || currMA == null) continue;
-          const prevClose = candles[i - 1].close;
-          const currClose = candles[i].close;
-          const gTrig = ((ma.pyramiding.golden as any).trigger ?? (ma as any).trigger ?? 'event') as 'state' | 'event';
-          const dTrig = ((ma.pyramiding.dead as any).trigger ?? (ma as any).trigger ?? 'event') as 'state' | 'event';
-          const isAbove = currClose > currMA;
-          const isBelow = currClose < currMA;
-          const isCrossGolden = prevClose <= prevMA && currClose > currMA;
-          const isCrossDead = prevClose >= prevMA && currClose < currMA;
-          let sig: 'golden' | 'dead' | null = null;
-          let sigTrigger: 'state' | 'event' = 'event';
-          if (gTrig === 'state' ? isAbove : isCrossGolden) { sig = 'golden'; sigTrigger = gTrig; }
-          else if (dTrig === 'state' ? isBelow : isCrossDead) { sig = 'dead'; sigTrigger = dTrig; }
-          // G/D 라인/툴팁 — 발생시: 크로스 틱에만, 상태: 매 틱 상태 유지 시
-          if (sig) {
-            const isGolden = sig === 'golden';
-            const crossLabel = isGolden ? 'G' : 'D';
-            const crossColor = isGolden ? '#fbbf24' : '#f87171';
-            const arrC = crossAtIdx.get(i) ?? [];
-            if (!arrC.some(x => x.label === crossLabel)) {
-              arrC.push({ label: crossLabel, color: crossColor });
-              crossAtIdx.set(i, arrC);
-            }
-          }
-          // 연속/최대: 골든/데드 각각 설정
-          const need = Math.max(1, Math.min(10, sig === 'golden' ? ((ma.pyramiding.golden as any).consecutive ?? (ma as any).consecutive ?? 2) : ((ma.pyramiding.dead as any).consecutive ?? (ma as any).consecutive ?? 2)));
-          const maxTrades = Math.max(1, Math.min(20, sig === 'golden' ? ((ma.pyramiding.golden as any).maxTrades ?? (ma as any).maxTrades ?? 2) : ((ma.pyramiding.dead as any).maxTrades ?? (ma as any).maxTrades ?? 2)));
-          const triggerForNeed = sig ? (sig === 'golden' ? gTrig : dTrig) : 'event';
-          // 발생시 + need>1이면 크로스 없는 유지 틱에서도 sig를 이어가야 하므로, sig가 없으면 상태 유지로 재평가
-          if (!sig && triggerForNeed === 'event') {
-            // 이 분기는 sig가 크로스 기반이라 유지 틱에서는 sig가 없지만, streak이 유지 중이면 이어가기
-            const aboveStreak = goldenStreak.get(ma.period) ?? 0;
-            const belowStreak = deadStreak.get(ma.period) ?? 0;
-            if (isAbove && aboveStreak > 0) { sig = 'golden'; sigTrigger = gTrig; }
-            else if (isBelow && belowStreak > 0) { sig = 'dead'; sigTrigger = dTrig; }
-            else {
-              if (!isAbove) goldenStreak.set(ma.period, 0);
-              if (!isBelow) deadStreak.set(ma.period, 0);
-              continue;
-            }
-          }
-          if (!sig) continue;
-          // 이동평균선 배열 조건 (골든/데드 각각)
-          {
-            const align = sig === 'golden' ? ((ma.pyramiding.golden as any).alignment ?? 'aligned') : ((ma.pyramiding.dead as any).alignment ?? 'any');
-            if (align === 'aligned' && !isAligned(i)) {
-              if (sig === 'golden') { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-              else { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-              continue;
-            }
-            if (align === 'reverse' && !isReverseAligned(i)) {
-              if (sig === 'golden') { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-              else { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-              continue;
-            }
-          }
-          const trigger = sigTrigger;
-          if (trigger === 'event') {
-            const aboveStreak = (goldenStreak.get(ma.period) ?? 0);
-            const belowStreak = (deadStreak.get(ma.period) ?? 0);
-            if (sig === 'golden') {
-              const cur = isAbove ? aboveStreak + 1 : 1;
-              goldenStreak.set(ma.period, cur);
-              deadStreak.set(ma.period, 0);
-              deadTradeCnt.set(ma.period, 0);
-              if (cur < need) continue;
-              if ((goldenTradeCnt.get(ma.period) ?? 0) >= maxTrades) continue;
-            } else if (sig === 'dead') {
-              const cur = isBelow ? belowStreak + 1 : 1;
-              deadStreak.set(ma.period, cur);
-              goldenStreak.set(ma.period, 0);
-              goldenTradeCnt.set(ma.period, 0);
-              if (cur < need) continue;
-              if ((deadTradeCnt.get(ma.period) ?? 0) >= maxTrades) continue;
-            } else {
-              if (isAbove && aboveStreak > 0) {
-                const cur = aboveStreak + 1;
-                goldenStreak.set(ma.period, cur);
-                if (cur < need) continue;
-                if ((goldenTradeCnt.get(ma.period) ?? 0) >= maxTrades) continue;
-                sig = 'golden';
-              } else if (isBelow && belowStreak > 0) {
-                const cur = belowStreak + 1;
-                deadStreak.set(ma.period, cur);
-                if (cur < need) continue;
-                if ((deadTradeCnt.get(ma.period) ?? 0) >= maxTrades) continue;
-                sig = 'dead';
-              } else {
-                if (!isAbove) { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-                if (!isBelow) { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-                continue;
-              }
-            }
-          } else {
-            if (sig === 'golden') {
-              const cur = (goldenStreak.get(ma.period) ?? 0) + 1;
-              goldenStreak.set(ma.period, cur);
-              deadStreak.set(ma.period, 0);
-              deadTradeCnt.set(ma.period, 0);
-              if (cur < need) continue;
-              if ((goldenTradeCnt.get(ma.period) ?? 0) >= maxTrades) continue;
-            } else if (sig === 'dead') {
-              const cur = (deadStreak.get(ma.period) ?? 0) + 1;
-              deadStreak.set(ma.period, cur);
-              goldenStreak.set(ma.period, 0);
-              goldenTradeCnt.set(ma.period, 0);
-              if (cur < need) continue;
-              if ((deadTradeCnt.get(ma.period) ?? 0) >= maxTrades) continue;
-            } else {
-              if (!isAbove) { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-              if (!isBelow) { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-              continue;
-            }
-          }
-          // 캔들 종료 타입 필터 (양봉/음봉) — 골든/데드 각각
-          {
-            const filter = sig === 'golden' ? (ma.pyramiding.golden.candleFilter ?? 'any') : (ma.pyramiding.dead.candleFilter ?? 'any');
-            if (filter !== 'any') {
-              const isBull = candles[i].close > candles[i].open;
-              const isBear = candles[i].close < candles[i].open;
-              if (filter === 'bull' && !isBull) continue;
-              if (filter === 'bear' && !isBear) continue;
-            }
-          }
-          // 거래량 필터 — 전거래량 대비 (골든/데드 각각)
-          {
-            const vFilter = sig === 'golden' ? (ma.pyramiding.golden.volumeFilter ?? 'any') : (ma.pyramiding.dead.volumeFilter ?? 'any');
-            if (vFilter !== 'any' && i > 0) {
-              const prevVol = candles[i - 1].volume;
-              const curVol = candles[i].volume;
-              if (vFilter === 'higher' && !(curVol > prevVol)) continue;
-              if (vFilter === 'lower' && !(curVol < prevVol)) continue;
-            }
-          }
-          // 실제 매수/매도 집행 (피라미딩 설정에 따름)
-          const cfg = sig === 'golden' ? ma.pyramiding.golden : ma.pyramiding.dead;
-          const pct = Math.max(0, Math.min(100, cfg.percent));
-          if (pct <= 0) continue;
-          if (cfg.action === 'buy') {
-            const cost = Math.floor(cash * (pct / 100));
-            if (cost < 1000 || cash < cost) continue;
-            const buyShares = Math.floor(cost / currClose);
-            if (buyShares <= 0) continue;
-            const actualCost = buyShares * currClose;
-            shares += buyShares;
-            cash -= actualCost;
-            totalCost += actualCost;
-            const buyAvgPrice = shares > 0 ? totalCost / shares : 0;
-            const buyHoldingValue = shares * currClose;
-            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'buy', maPeriod: ma.period, percent: pct, sharesDelta: buyShares, amount: actualCost, cashAfter: cash, sharesAfter: shares, profitRate: null, avgPrice: buyAvgPrice, holdingValue: buyHoldingValue });
-            const arr = tradeAtIdx.get(i) ?? [];
-            arr.push({ action: 'buy', label: 'B', color: '#3b82f6', position: 'candle-top' });
-            tradeAtIdx.set(i, arr);
-            if (sig === 'golden') {
-              const c = (goldenTradeCnt.get(ma.period) ?? 0) + 1;
-              goldenTradeCnt.set(ma.period, c);
-              if (c >= maxTrades) { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-            } else {
-              const c = (deadTradeCnt.get(ma.period) ?? 0) + 1;
-              deadTradeCnt.set(ma.period, c);
-              if (c >= maxTrades) { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-            }
-          } else {
-            if (shares <= 0 || totalCost <= 0) continue;
-            const sellShares = Math.floor(shares * (pct / 100));
-            if (sellShares <= 0) continue;
-            const avg = totalCost / shares;
-            const profitRateSell = ((currClose - avg) / avg) * 100;
-            const proceeds = sellShares * currClose;
-            shares -= sellShares;
-            cash += proceeds;
-            totalCost -= sellShares * avg;
-            if (shares === 0) totalCost = 0;
-            const avgPriceAfterSell = shares > 0 ? totalCost / shares : 0;
-            const holdingValueAfterSell = shares * currClose;
-            trades.push({ idx: trades.length + 1, date: candles[i].date, price: currClose, action: 'sell', maPeriod: ma.period, percent: pct, sharesDelta: sellShares, amount: proceeds, cashAfter: cash, sharesAfter: shares, profitRate: profitRateSell, avgPrice: avgPriceAfterSell, holdingValue: holdingValueAfterSell });
-            const arr = tradeAtIdx.get(i) ?? [];
-            arr.push({ action: 'sell', label: 'S', color: '#ef4444', position: 'candle-bottom' });
-            tradeAtIdx.set(i, arr);
-            if (sig === 'golden') {
-              const c = (goldenTradeCnt.get(ma.period) ?? 0) + 1;
-              goldenTradeCnt.set(ma.period, c);
-              if (c >= maxTrades) { goldenStreak.set(ma.period, 0); goldenTradeCnt.set(ma.period, 0); }
-            } else {
-              const c = (deadTradeCnt.get(ma.period) ?? 0) + 1;
-              deadTradeCnt.set(ma.period, c);
-              if (c >= maxTrades) { deadStreak.set(ma.period, 0); deadTradeCnt.set(ma.period, 0); }
-            }
-          }
-        }
-      }
-
-      // 결과 저장 (보유주식수/평가금액/수익률 계산용)
-      this.simCash = cash;
-      this.simShares = shares;
-      this.simFirstPrice = candles.length ? candles[0].close : 0;
-      this.simLastPrice = candles.length ? candles[candles.length - 1].close : 0;
-      this.simTrades = trades;
+        if (si === this.activeSetIdx) crossAtActive = r.crossAtIdx as Map<number, any[]>;
+        const endVal = r.cash + r.shares * r.lastPrice;
+        set.profit = endVal - capital;
+        set.rate = capital ? (set.profit / capital) * 100 : 0;
+        set.trades = r.trades.length;
+        capital = endVal;
+        for (const t of r.trades) allTrades.push(t);
+        if (!firstDone) { this.simFirstPrice = r.firstPrice; firstDone = true; }
+        this.simLastPrice = r.lastPrice;
+        lastR = r;
+      });
+      this.simCash = lastR ? lastR.cash : 0;
+      this.simShares = lastR ? lastR.shares : 0;
+      this.simTrades = allTrades;
 
       return candles.map((c, i) => {
-        const crosses = crossAtIdx.get(i) ?? [];
-        const trades = tradeAtIdx.get(i) ?? [];
-        // G/D: 크로스표시 체크 시에만 라인+라벨 생성
+        const crosses = crossAtActive.get(i) ?? [];
+        const trades = tradeAtAll.get(i) ?? [];
+        // G/D: 크로스표시 체크 시에만 라인+라벨 생성 (활성 세트만)
         const crossHtml = this.showCross ? crosses.map(x => `<line width="1" color="${x.color}"></line><tooltip position="${x.label==='G'?'bottom':'top'}" label="${x.label}" label-color="${x.color}" line-color="${x.color}"></tooltip>`).join('') : '';
         // B/S: 실제 체결 — 캔들 팁에 붙는 라벨 (fill로 강조, 라인 없음)
         const tradeHtml = trades.map(t => `<tooltip position="${t.position}" label="${t.label}" fill-color="${t.color}" label-color="#fff"></tooltip>`).join('');
@@ -802,11 +1555,280 @@ export default (w: Window) => {
       }).join('');
     }
 
+    /** 구간 슬라이더로 선택된 캔들만 반환 (최적화·시뮬 공통 — 차트는 전체 유지) */
+    /** 선택 구간 [start, end] (엔진 simFrom/simTo 공용) */
+    private zoneRange(): [number, number] {
+      const n = this.chartCandles.length;
+      if (!n) return [0, -1];
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      return [Math.max(0, Math.min(this.rangeStart, end)), end];
+    }
+
+    // 낙폭 회피 계수 λ (score = profit − λ·MDD). 0=수익만, 0.5=기본, 1.5=손실회피
+    private riskAversion = 0.5;
+
+    private engineOpts() {
+      const [simFrom, simTo] = this.zoneRange();
+      return {
+        simFrom, simTo,
+        initialCapital: this.initialCapital, feePercent: this.feePercent,
+        maMode: this.maResolveMode, xMode: this.exitResolveMode,
+        riskAversion: this.riskAversion,
+        ...this.frictionOpts(),
+      };
+    }
+
+    /** UI % → 엔진 0~1 지수 */
+    private frictionOpts() {
+      return {
+        execDelay: this.execDelay,
+        slippage: this.slippagePct / 100,
+        fillRatio: this.fillRate / 100,
+      };
+    }
+
+    /** 차트 데이터만으로 추세 구간 계산 (MACD 12/26/9·RSI 14·OBV, 전체 캔들 기준, 표시·최적화 공통) */
+    private trendZones(): TrendZone[] {
+      return this.scoredZones().segs;
+    }
+
+    private scoredZones(): { segs: TrendZone[]; scores: (number | null)[] } {
+      const n = this.chartCandles.length;
+      if (!n) return { segs: [], scores: [] };
+      const closes = this.chartCandles.map(c => c.close);
+      const vols = this.chartCandles.map(c => c.volume);
+      const macd = computeMacdSeries(closes, 12, 26, 9);
+      const rsi = computeRsiSeries(closes, 14);
+      const obv = computeObvSeries(closes, vols);
+      const bars = closes.map((_, i) => ({ macd: macd.macd[i], signal: macd.signal[i], rsi: rsi[i], obv: obv[i] }));
+      const scores = scoreTrendBars(bars, 10);
+      const raw = splitScoreSegments(scores, 10, 12, 0.6, 0.4);
+      let upN = 0, dnN = 0, sideN = 0;
+      const segs = raw.map(g => {
+        const regime = trendRegimeOf(g.trend);
+        const no = regime.label === '상승' ? ++upN : regime.label === '하락' ? ++dnN : ++sideN;
+        return { from: g.from, to: g.to, trend: g.trend, label: `${regime.label} ${no}`, color: regime.color };
+      });
+      return { segs, scores };
+    }
+
+    /** 다이나믹 추세: 표시 구간 그대로 선택 범위로 clipping (동일 정체성) */
+    private segmentByTrend(zs: number, ze: number): TrendZone[] {
+      const { segs, scores } = this.scoredZones();
+      if (!scores.length || scores.every(v => v == null)) return [{ from: zs, to: ze, trend: this.trendScore, label: '전체', color: SET_PALETTE[0] }];
+      const clipped = clipScoredSegments(segs, scores, zs, ze);
+      return clipped.length ? clipped : [{ from: zs, to: ze, trend: this.trendScore, label: '전체', color: SET_PALETTE[0] }];
+    }
+
+    /** 추세구간 진입시 생성: 현재 선택이 걸친 표시 구간과 보유 세트 diff → 새 구역만 최적화 추가, 벗어난 구역 제거 */
+    private regrowRunId = 0;
+    private async reconcileRegrowSets(btn?: HTMLButtonElement): Promise<void> {
+      const runId = ++this.regrowRunId;
+      const [zs, ze] = this.zoneRange();
+      if (!this.chartCandles.length || zs > ze) return;
+      const zones = this.trendZones().filter(g => g.to >= zs && g.from <= ze);
+      const { keepIdx, freshZones } = diffZoneSets(
+        this.strategySets.map(s => ({ label: s.label, from: s.from, to: s.to })),
+        zones.map(g => ({ label: g.label, from: g.from, to: g.to })),
+      );
+      console.log('[sim] regrow reconcile:', `zone=[${zs}-${ze}] zones=${zones.length} keep=${keepIdx.length} fresh=${freshZones.length} sets=${this.strategySets.length}`);
+      const kept = keepIdx.map(i => this.strategySets[i]);
+      const zoneByKey = new Map(zones.map(g => [`${g.label}|${g.from}-${g.to}`, g]));
+      const fresh = freshZones.map(g => zoneByKey.get(`${g.label}|${g.from}-${g.to}`)!).filter(Boolean);
+      if (!fresh.length && kept.length === this.strategySets.length) return;
+      const origText = btn ? btn.textContent : '';
+      if (btn) btn.disabled = true;
+      try {
+        const newSets: StrategySet[] = [];
+        for (let k = 0; k < fresh.length; k++) {
+          if (runId !== this.regrowRunId) return;
+          const g = fresh[k];
+          if (btn) btn.textContent = `최적 탐색 중... (${g.label})`;
+          await new Promise(r => setTimeout(r, 30));
+          console.log('[sim] optimize input:', JSON.stringify({ candles: this.chartCandles.length, ...this.engineOpts(), simFrom: g.from, simTo: g.to, riskAversion: this.riskAversion, trend: g.trend }));
+          const best = findBestConfig(this.chartCandles, { ...this.engineOpts(), simFrom: g.from, simTo: g.to, riskAversion: this.riskAversion, trend: g.trend });
+          if (runId !== this.regrowRunId) return;
+          if (!best) { console.log('[sim] seg skipped (no best):', g.label, g.from, g.to); continue; }
+          const _bm = (best as any).mres, _bx = (best as any).xres;
+          newSets.push({
+            id: 0, label: g.label, trend: g.trend, from: g.from, to: g.to, color: g.color,
+            maConfigs: (best.maConfigs as MaConfig[]).slice().sort((a, b) => a.period - b.period),
+            exitConfigs: ((best as any).exits ?? []) as ExitConfig[],
+            mres: isResolveMode(_bm) ? _bm : 'minFirst',
+            xres: isResolveMode(_bx) ? _bx : 'minFirst',
+            profit: 0, rate: 0, trades: 0,
+          });
+        }
+        if (runId !== this.regrowRunId) return;
+        const merged = [...kept, ...newSets].sort((a, b) => a.from - b.from);
+        merged.forEach((s, i) => { s.id = i; });
+        if (!merged.length) return;
+        this.strategySets = merged;
+        this.activeSetIdx = Math.max(0, Math.min(this.activeSetIdx, merged.length - 1));
+        this.requireAllMas = true;
+        this.loadTpSlFieldsFromExits(this.exitConfigs);
+        this.showCross = false;
+        this.applySimConfigToForm();
+        this.renderMaList();
+        this.renderExitList();
+        this.syncUrlWithoutReload();
+        this.syncMasToChart();
+        this.renderStrategyTabs();
+      } finally {
+        if (btn) { btn.disabled = false; if (origText) btn.textContent = origText; }
+      }
+    }
+
+    /** 세트의 exits[0]/[1]을 익절/손절 폼 필드에 적재 */
+    private loadTpSlFieldsFromExits(exits: any[]) {
+      const f2 = exits[0] as any;
+      if (f2) { this.takeProfitBasis = f2.basis; this.takeProfitPercent = f2.percent; this.takeProfitSellPercent = f2.sellPercent; this.takeProfitSkip = f2.skip; this.takeProfitCandleFilter = f2.candle; this.takeProfitVolumeFilter = f2.volume; this.takeProfitEnabled = true; }
+      else { this.takeProfitBasis = 'none' as any; this.takeProfitEnabled = false; }
+      const s2 = exits[1] as any;
+      if (s2) { this.stopLossBasis = s2.basis; this.stopLossPercent = s2.percent; this.stopLossSellPercent = s2.sellPercent; this.stopLossSkip = s2.skip; this.stopLossCandleFilter = s2.candle; this.stopLossVolumeFilter = s2.volume; this.stopLossEnabled = true; }
+      else { this.stopLossBasis = 'none' as any; this.stopLossEnabled = false; }
+    }
+
+    /** 전략 세트 전수 직렬화 (URL sets 파라미터용 — compact 키 + lz-string 압축) */
+    private serializeSets(): string {
+      const json = JSON.stringify(compactSetsForUrl(this.strategySets));
+      return encodeURIComponent(compressToEncodedURIComponent(json));
+    }
+
+    /** URL sets 파라미터 → 전략 세트 전수 복원 (공유 링크 수신측, 재최적화 불필요) */
+    private restoreSetsFromUrl(p: URLSearchParams): boolean {
+      const raw = p.get('sets');
+      if (!raw) return false;
+      try {
+        const arr = parseSetsParam(raw);
+        console.log('[sim] restoreSets parsed=', Array.isArray(arr) ? arr.length : arr);
+        if (!arr || !arr.length || arr.length > 12) return false;
+        const expanded = expandSetsFromUrl(arr);
+        const sets: StrategySet[] = [];
+        expanded.forEach((s: any, i: number) => {
+          if (!s || typeof s !== 'object') { console.log('[sim] restoreSets skip', i, 'not-object'); return; }
+          const ma = normMaList(s.maConfigs);
+          const ex = normExitList(s.exitConfigs) ?? [];
+          const from = Math.floor(Number(s.from));
+          const to = Math.floor(Number(s.to));
+          if (!ma || !ma.length || !Number.isInteger(from) || !Number.isInteger(to) || to < from || from < 0) {
+            console.log('[sim] restoreSets skip', i, 'ma=', ma ? ma.length : ma, 'from=', s.from, 'to=', s.to);
+            return;
+          }
+          sets.push({
+            id: i,
+            label: typeof s.label === 'string' && s.label ? s.label.slice(0, 24) : (Number(s.trend) > 0.6 ? '상승' : Number(s.trend) < 0.4 ? '하락' : '횡보'),
+            trend: Number(s.trend) === 1 ? 1 : Number(s.trend) === 0 ? 0 : 0.5,
+            from, to,
+            color: typeof s.color === 'string' && /^#([0-9a-fA-F]{3,8})$/.test(s.color) ? s.color : SET_PALETTE[sets.length % SET_PALETTE.length],
+            maConfigs: ma, exitConfigs: ex,
+            mres: isResolveMode(s.mres) ? s.mres : 'minFirst',
+            xres: isResolveMode(s.xres) ? s.xres : 'minFirst',
+            profit: 0, rate: 0, trades: 0,
+          });
+        });
+        if (!sets.length) return false;
+        this.strategySets = sets;
+        this.activeSetIdx = 0;
+        this.loadTpSlFieldsFromExits(this.exitConfigs);
+        return true;
+      } catch { return false; }
+    }
+
+    private getActiveCandles(): SimCandle[] {
+      if (!this.chartCandles.length) return [];
+      const end = this.rangeEnd < 0 ? this.chartCandles.length - 1 : Math.min(this.rangeEnd, this.chartCandles.length - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      return this.chartCandles.slice(start, end + 1);
+    }
+
+    /** 캔들 로드 후 슬라이더 범위 재설정 (reset=true면 전체 선택) */
+    private syncRangeSliderBounds(reset = false) {
+      const n = this.chartCandles.length;
+      const slider = this.shadowRoot?.querySelector('#sim-zone') as any;
+      if (!n) return;
+      if (this.rangeFromUrl) { this.rangeFromUrl = false; }
+      else if (reset || this.rangeEnd < 0) { this.rangeStart = 0; this.rangeEnd = n - 1; }
+      this.rangeStart = Math.max(0, Math.min(this.rangeStart, n - 1));
+      this.rangeEnd = Math.max(this.rangeStart, Math.min(this.rangeEnd < 0 ? n - 1 : this.rangeEnd, n - 1));
+      if (slider) {
+        slider.setAttribute('min', '0');
+        slider.setAttribute('max', String(n - 1));
+        slider.setAttribute('step', '1');
+        if (typeof slider.setValues === 'function') {
+          slider.setValues({ start: this.rangeStart, end: this.rangeEnd });
+        }
+      }
+      this.updateRangeLabels();
+    }
+
+    private updateRangeLabels() {
+      const n = this.chartCandles.length;
+      const sEl = this.shadowRoot?.querySelector('#sim-range-start') as HTMLElement | null;
+      const eEl = this.shadowRoot?.querySelector('#sim-range-end') as HTMLElement | null;
+      const cEl = this.shadowRoot?.querySelector('#sim-range-count') as HTMLElement | null;
+      if (!n) {
+        if (sEl) sEl.textContent = '-';
+        if (eEl) eEl.textContent = '-';
+        if (cEl) cEl.textContent = '0개';
+        return;
+      }
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      if (sEl) sEl.textContent = this.chartCandles[start]?.date ?? '-';
+      if (eEl) eEl.textContent = this.chartCandles[end]?.date ?? '-';
+      if (cEl) cEl.textContent = `${end - start + 1}개`;
+      // 슬라이더를 현재 구간에 동기화 (속성 변경은 input/change를 발생시키지 않음)
+      const zone = this.shadowRoot?.querySelector('#sim-zone') as any;
+      if (zone && typeof zone.setValues === 'function') {
+        const cur = zone.value;
+        if (!cur || cur.start !== start || cur.end !== end) {
+          zone.setValues({ start, end });
+        }
+      }
+    }
+
+    /** 차트는 불러온 캔들 전체 + 전체 기준 MA로 그리고, 매매 마커만 선택 구간에 표시 */
+    private buildChartHtml(): string {
+      const n = this.chartCandles.length;
+      if (!n) return '';
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      // MA·크로스는 전체 캔들 기준, 매매 시뮬은 구간으로만 (마커 절대위치 부착)
+      const ticksHtml = this.buildTicksHtml(this.chartCandles, start, end);
+      // 조절 중인 구간 표시 (보라 — 슬라이더 실시간 추적, 기존 동작)
+      const sDate = this.chartCandles[start]?.date ?? '';
+      const eDate = this.chartCandles[end]?.date ?? '';
+      const liveRect = (start > 0 || end < n - 1) && sDate && eDate
+        ? `<rect date-start="${sDate}" date-end="${eDate}" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1" target="all"></rect>`
+        : '';
+      // 차트 데이터 기준 추세 구간 rect (다이나믹 무관, 상시 표시 가능)
+      const trendRects = this.showTrend ? this.trendZones().map(g => {
+        const sDate = this.chartCandles[g.from]?.date ?? '';
+        const eDate = this.chartCandles[g.to]?.date ?? '';
+        if (!sDate || !eDate) return '';
+        return `<rect date-start="${sDate}" date-end="${eDate}" fill="${g.color}05" stroke="${g.color}66" stroke-width="1" label="${g.label}" color="${g.color}" target="all"></rect>`;
+      }).join('') : '';
+      return `<volume></volume><macd></macd><rsi></rsi><obv></obv>` + ticksHtml + liveRect + trendRects + this.maConfigs.map(ma => `<ma color="${ma.color}" size="${ma.period}"></ma>`).join('');
+    }
+
+    /** 차트 뷰를 선택 구간으로 포커싱 (슬라이더 조작 시에만 호출) */
+    private focusZoneOnChart() {
+      const chartEl = this.shadowRoot?.querySelector('stock-chart') as any;
+      const n = this.chartCandles.length;
+      if (!chartEl || !n || typeof chartEl.setView !== 'function') return;
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      if (start > 0 || end < n - 1) chartEl.setView(start, end);
+    }
+
     private syncMasToChart() {
       const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
       if (!chartEl || !this.chartCandles.length) return;
-      chartEl.innerHTML = this.buildTicksHtml(this.chartCandles) + this.maConfigs.map(ma => `<ma color="${ma.color}" size="${ma.period}"></ma>`).join('');
+      console.log('[sim] eval frictions:', JSON.stringify(this.frictionOpts()));
+      chartEl.innerHTML = this.buildChartHtml();
       this.updateResultDisplay();
+      this.renderStrategyTabs();
     }
 
     private updateResultDisplay() {
@@ -835,6 +1857,11 @@ export default (w: Window) => {
         profitEl.style.color = profit > 0 ? '#dc2626' : profit < 0 ? '#2563eb' : '#64748b';
       }
       if (countEl) countEl.textContent = `${this.simTrades.length}건`;
+      const feeTotalEl = this.shadowRoot?.querySelector('#sim-fee-total') as HTMLElement;
+      if (feeTotalEl) {
+        const totalFee = this.simTrades.reduce((s, t) => s + (t.fee || 0), 0);
+        feeTotalEl.textContent = `${fmt(totalFee)}원`;
+      }
       // 단순 보유(첫틱 종가 → 마지막틱 종가) 가정 수익률/평가액 — 거래 없어도 항상 표시
       const holdRate = this.simFirstPrice ? ((this.simLastPrice - this.simFirstPrice) / this.simFirstPrice) * 100 : 0;
       const holdEval = this.simFirstPrice ? Math.round(this.initialCapital * (this.simLastPrice / this.simFirstPrice)) : this.initialCapital;
@@ -854,28 +1881,105 @@ export default (w: Window) => {
       if (modal?.classList.contains('show')) this.renderHistoryList();
     }
 
-    @addEventListener('#sim-history-btn', 'click')
+    @event('#sim-history-btn', 'click')
     onHistoryOpen() {
       this.renderHistoryList();
       const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
       modal?.classList.add('show');
     }
 
-    @addEventListener('#sim-history-close', 'click')
+    @event('#sim-history-close', 'click')
     onHistoryClose() {
       const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
       modal?.classList.remove('show');
     }
 
-    @addEventListener('#sim-history-modal', 'click')
+    @event('#sim-history-modal', 'click')
     onHistoryBackdrop(e: Event) {
       const modal = e.currentTarget as HTMLElement;
       if (e.target === modal) modal.classList.remove('show');
     }
 
-    @addEventListenerDocument('keydown')
+    @eventDelegate('#sim-history-body', 'click')
+    onCondSumClick(e: Event) {
+      const el = (e.target as HTMLElement).closest('.hcond-sum') as HTMLElement;
+      if (!el) return;
+      const tidx = Number(el.dataset.tidx);
+      if (!Number.isFinite(tidx)) return;
+      this.renderCondDetail(tidx);
+      const modal = this.shadowRoot?.querySelector('#sim-cond-modal') as HTMLElement;
+      modal?.classList.add('show');
+    }
+
+    private renderCondDetail(tidx: number) {
+      const body = this.shadowRoot?.querySelector('#sim-cond-body') as HTMLElement;
+      const title = this.shadowRoot?.querySelector('#sim-cond-title') as HTMLElement;
+      if (!body) return;
+      const t = this.simTrades.find(x => x.idx === tidx);
+      if (!t) { body.innerHTML = `<div style="padding:16px;color:#94a3b8;font-size:12px">해당 거래를 찾을 수 없습니다.</div>`; return; }
+      const fmt = (n: number) => Math.round(n).toLocaleString();
+      const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const isExit = t.maPeriod === 0;
+      const badgeText = isExit ? '매도 (청산)' : (t.action === 'buy' ? '매수' : '매도');
+      const profitText = t.profitRate == null ? '-' : `${t.profitRate >= 0 ? '+' : ''}${t.profitRate.toFixed(2)}%`;
+      const condList = (t.conds && t.conds.length ? t.conds : []);
+      // 칩을 건별로 그룹핑: 선행 '+ '/'− ' 칩이 새 멤버 조건의 시작 (집행분은 첫 그룹)
+      const groups: { kind: 'exec' | 'plus' | 'minus'; chips: string[] }[] = [];
+      let cur: { kind: 'exec' | 'plus' | 'minus'; chips: string[] } = { kind: 'exec', chips: [] };
+      for (const part of condList) {
+        if (part.startsWith('+ ')) { groups.push(cur); cur = { kind: 'plus', chips: [part.slice(2)] }; }
+        else if (part.startsWith('− ') || part.startsWith('- ')) { groups.push(cur); cur = { kind: 'minus', chips: [part.slice(2)] }; }
+        else cur.chips.push(part);
+      }
+      groups.push(cur);
+      const chip = (s: string, extra = '') => `<span class="hcond" style="cursor:default${extra}">${esc(s)}</span>`;
+      const execChips = groups.length && groups[0].kind === 'exec' ? groups[0].chips : [];
+      const memberGroups = groups.length && groups[0].kind === 'exec' ? groups.slice(1) : groups;
+      let plusNo = 0; let minusNo = 0;
+      const memberRows = memberGroups.filter(g => g.chips.length).map(g => {
+        const label = g.kind === 'plus' ? `합산 ${++plusNo}` : `상쇄 ${++minusNo}`;
+        return `<div class="cond-detail-row"><span class="k">${label}</span><span class="v">${g.chips.map(c => chip(c)).join('')}</span></div>`;
+      }).join('');
+      const detailList = (t.condDetail && t.condDetail.length ? t.condDetail : []);
+      const detailRows = detailList.length
+        ? `<div class="cond-detail-row"><span class="k">구성</span><span class="v">${detailList.map((d, di) => `<div class="hdetail">${di + 1}. ${esc(d)}</div>`).join('')}</span></div>` : '';
+      if (title) title.textContent = `🔍 조건 상세 #${t.idx} (${t.date})`;
+      const wanted = (t as any).wantedPrice ?? t.price;
+      const execDiff = wanted ? ((t.price - wanted) / wanted) * 100 : 0;
+      const execMode = (t as any).execMode === 'nextOpen' ? '다음봉 시가' : '당일 종가';
+      const slipV = (t as any).slipPct ?? 0;
+      const fillV = (t as any).fillPct ?? 100;
+      body.innerHTML = `
+        <div class="cond-detail-row"><span class="k">구분</span><span class="v">${badgeText}</span></div>
+        <div class="cond-detail-row"><span class="k">신호가</span><span class="v">${fmt(wanted)}원</span></div>
+        <div class="cond-detail-row"><span class="k">체결가</span><span class="v">${fmt(t.price)}원 <b style="color:${execDiff > 0 ? '#dc2626' : execDiff < 0 ? '#2563eb' : '#64748b'}">(${execDiff >= 0 ? '+' : ''}${execDiff.toFixed(2)}%)</b></span></div>
+        <div class="cond-detail-row"><span class="k">체결 방식</span><span class="v">${execMode} · 슬리피지 ${slipV}% · 체결률 ${fillV}%</span></div>
+        <div class="cond-detail-row"><span class="k">시세</span><span class="v">${fmt(wanted)}원</span></div>
+        <div class="cond-detail-row"><span class="k">수량</span><span class="v">${Math.floor(t.sharesDelta).toLocaleString()}주 (${fmt(t.amount)}원${(t as any).wantedShares > Math.floor(t.sharesDelta) ? ` · 주문 ${(t as any).wantedShares.toLocaleString()}주 중 부분체결` : ''})</span></div>
+        <div class="cond-detail-row"><span class="k">수익률</span><span class="v">${profitText}</span></div>
+        <div class="cond-detail-row"><span class="k">체결</span><span class="v">${execChips.map((c, i) => chip(c, i === 0 ? ';background:#ede9fe;color:#6d28d9;font-weight:800' : '')).join('') || '-'}</span></div>
+        ${memberRows}
+        ${detailRows}
+        <div class="cond-detail-reason">${esc(this.simReasonMap.get(t.idx) || '사유 없음')}</div>`;
+    }
+
+    @event('#sim-cond-close', 'click')
+    onCondClose() {
+      const modal = this.shadowRoot?.querySelector('#sim-cond-modal') as HTMLElement;
+      modal?.classList.remove('show');
+    }
+
+    @event('#sim-cond-modal', 'click')
+    onCondBackdrop(e: Event) {
+      const modal = e.currentTarget as HTMLElement;
+      if (e.target === modal) modal.classList.remove('show');
+    }
+
+    @eventDocument('keydown')
     onHistoryEsc(e: KeyboardEvent) {
       if (e.key === 'Escape') {
+        const cond = this.shadowRoot?.querySelector('#sim-cond-modal') as HTMLElement;
+        if (cond?.classList.contains('show')) { cond.classList.remove('show'); return; }
         const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
         if (modal?.classList.contains('show')) modal.classList.remove('show');
       }
@@ -889,7 +1993,7 @@ export default (w: Window) => {
       const holdEval = this.simFirstPrice ? Math.round(this.initialCapital * (this.simLastPrice / this.simFirstPrice)) : this.initialCapital;
       const holdHeader = this.simFirstPrice ? `<div style="padding:8px 14px;font-size:11px;color:#64748b;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid #f1f5f9;background:#fffbeb"> <span>단순보유 <b style="color:${holdRate>0?'#dc2626':holdRate<0?'#2563eb':'#64748b'}">${holdRate>=0?'+':''}${holdRate.toFixed(2)}%</b> (${fmtHold(this.simFirstPrice)}원 → ${fmtHold(this.simLastPrice)}원)</span> <span>평가 <b style="color:#1e293b">${fmtHold(holdEval)}원</b></span> <span style="margin-left:auto;color:#94a3b8">첫틱~마지막틱 종가 기준</span></div>` : '';
       if (!this.simTrades.length) {
-        body.innerHTML = `${holdHeader}<div style="padding:24px;text-align:center;color:#94a3b8;font-size:13px">체결된 거래가 없습니다.<br/>정렬(단기>장기 이동평균) 후 골든/데드 크로스에서만 체결됩니다.</div>`;
+        body.innerHTML = `${holdHeader}<div style="padding:24px;text-align:center;color:#94a3b8;font-size:13px">체결된 거래가 없습니다.<br/>매매 조건을 완화하거나 기간을 조정해 보세요.</div>`;
         return;
       }
       const fmt = (n: number) => Math.round(n).toLocaleString();
@@ -905,55 +2009,67 @@ export default (w: Window) => {
       };
       const evalAmt = this.simCash + this.simShares * this.simLastPrice;
       const buyCnt = this.simTrades.filter(t=>t.action==='buy').length;
-      const sellCnt = this.simTrades.filter(t=>t.action==='sell' && t.maPeriod!==0).length;
-      const tpCnt = this.simTrades.filter(t=>(t as any).label==='익').length;
-      const slCnt = this.simTrades.filter(t=>(t as any).label==='손').length;
+      const sellCnt = this.simTrades.filter(t=>t.action==='sell').length;
+      const exitCnt = this.simTrades.filter(t=>t.maPeriod===0).length;
       const holdingVal = Math.round(this.simShares * this.simLastPrice);
+      const totalFee = this.simTrades.reduce((s, t) => s + (t.fee || 0), 0);
       body.innerHTML = `
-        <div style="padding:8px 14px;font-size:11px;color:#64748b;display:flex;flex-direction:column;gap:4px;border-bottom:1px solid #f1f5f9;background:#f8fafc">
-          <div style="display:flex;gap:8px;flex-wrap:wrap"><span>총 <b style="color:#1e293b">${this.simTrades.length}건</b> = 매수 <b style="color:#2563eb">${buyCnt}건</b> · 매도 <b style="color:#dc2626">${sellCnt}건</b> · 익절 <b style="color:#059669">${tpCnt}건</b> · 손절 <b style="color:#dc2626">${slCnt}건</b></span></div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap"><span>최종 평가 <b style="color:#1e293b">${fmt(evalAmt)}원</b> = 보유주식 ${Math.floor(this.simShares).toLocaleString()}주 (${fmt(holdingVal)}원) + 현금 ${fmt(Math.round(this.simCash))}원</span></div>
+        <div class="hist-summary">
+          <div class="hist-stat"><div class="k">총 체결</div><div class="v">${this.simTrades.length}건</div></div>
+          <div class="hist-stat"><div class="k">매수</div><div class="v" style="color:#2563eb">${buyCnt}건</div></div>
+          <div class="hist-stat"><div class="k">매도</div><div class="v" style="color:#ef4444">${sellCnt}건</div><div class="s">(청산 ${exitCnt}건)</div></div>
+          <div class="hist-stat"><div class="k">수수료</div><div class="v" style="font-size:12px">${fmt(totalFee)}원</div></div>
         </div>
-        <div style="overflow:auto;max-height:60vh">
-        <table style="width:100%;border-collapse:collapse;font-size:11px;white-space:nowrap">
-          <thead style="position:sticky;top:0;background:#fff;z-index:1">
-            <tr style="color:#64748b;border-bottom:0px; solid #e2e8f0;background:#f8fafc">
-              <th colspan="8" style="padding:6px 10px;text-align:center;font-weight:800;color:#334155;border-right:1px solid #e2e8f0">매매</th>
-              <th colspan="5" style="padding:6px 10px;text-align:center;font-weight:800;color:#1e40af;background:#eef2ff">보유</th>
-            </tr>
-            <tr style="color:#64748b;border-bottom:1px solid #e2e8f0">
-              <th style="padding:8px 10px;text-align:left">#</th><th style="padding:8px 10px;text-align:left">날짜</th><th style="padding:8px 10px;text-align:center">구분</th><th style="padding:8px 10px;text-align:center">MA</th><th style="padding:8px 10px;text-align:right">매매시 시세</th><th style="padding:8px 10px;text-align:right">수량</th><th style="padding:8px 10px;text-align:right">금액</th><th style="padding:8px 10px;text-align:right">수익률</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">거래후 보유주식</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">평가금액</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">주당평균가격</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">현금</th><th style="padding:8px 10px;text-align:right;background:#eef2ee">총자산</th>
-            </tr>
+        <div class="hist-sub"><span>최종 평가 <b>${fmt(evalAmt)}원</b> <span style="color:#94a3b8">(보유 ${Math.floor(this.simShares).toLocaleString()}주 ${fmt(holdingVal)}원 + 현금 ${fmt(Math.round(this.simCash))}원)</span></span><span style="margin-left:auto">단순보유 <b style="color:${holdRate>0?'#dc2626':holdRate<0?'#2563eb':'#64748b'}">${holdRate>=0?'+':''}${holdRate.toFixed(2)}%</b> <span style="color:#94a3b8">(${fmtHold(this.simFirstPrice)}원 → ${fmtHold(this.simLastPrice)}원)</span></span></div>
+        <div class="hist-scroll">
+        <table class="hist-table">
+          <thead>
+            <tr class="hgroup"><th colspan="9">매매</th><th colspan="7" class="hold">보유</th></tr>
+            <tr><th style="text-align:left">#</th><th style="text-align:left">날짜</th><th>구분</th><th>조건</th><th class="num">시세</th><th class="num">수량</th><th class="num">금액</th><th class="num">수수료</th><th class="num">수익률</th><th class="num hold">보유주식</th><th class="num hold">평가금액</th><th class="num hold">평균가격</th><th class="num hold">현금</th><th class="num hold">변화액</th><th class="num hold">변화율</th><th class="num hold">총자산</th></tr>
           </thead>
           <tbody>
             ${this.simTrades.map((t, i) => {
-              const isTpSl = t.maPeriod === 0;
-              const isTp = (t as any).label === '익';
-              const badgeText = isTpSl ? (isTp ? '익절' : '손절') : (t.action==='buy'?'매수 B':'매도 S');
-              const badgeBg = isTpSl ? (isTp ? '#10b981' : '#ef4444') : (t.action==='buy'?'#3b82f6':'#ef4444');
-              const maText = isTpSl ? `${isTp ? '익절' : '손절'} ${t.percent}%` : `MA${t.maPeriod} ${t.percent}%`;
-              const profitText = t.profitRate == null ? '-' : `${t.profitRate >= 0 ? '+' : ''}${t.profitRate.toFixed(2)}%`;
-              const profitColor = t.profitRate == null ? '#94a3b8' : t.profitRate > 0 ? '#dc2626' : t.profitRate < 0 ? '#2563eb' : '#64748b';
-              const avgPriceText = t.sharesAfter > 0 ? `${fmt(Math.round(t.avgPrice))}원` : '-';
-              const holdingValText = `${fmt(Math.round(t.holdingValue))}원`;
-              const total = Math.round(t.cashAfter + t.holdingValue);
-              const prevTotal = i === 0 ? this.initialCapital : Math.round(this.simTrades[i-1].cashAfter + this.simTrades[i-1].holdingValue);
-              const totalColor = total > prevTotal ? '#dc2626' : total < prevTotal ? '#2563eb' : '#1e293b';
-              return `
-              <tr style="border-bottom:1px solid #f1f5f9">
-                <td style="padding:7px 10px;color:#94a3b8">${t.idx}</td>
-                <td style="padding:7px 10px">${fmtDate(t.date)}</td>
-                <td style="padding:7px 10px;text-align:center"><span style="display:inline-block;min-width:42px;padding:2px 6px;border-radius:999px;font-weight:700;font-size:10px;color:#fff;background:${badgeBg}">${badgeText}</span></td>
-                <td style="padding:7px 10px;text-align:center;color:#64748b">${maText}</td>
-                <td style="padding:7px 10px;text-align:right">${fmt(t.price)}원</td>
-                <td style="padding:7px 10px;text-align:right">${Math.floor(t.sharesDelta).toLocaleString()}주</td>
-                <td style="padding:7px 10px;text-align:right">${fmt(t.amount)}원</td>
-                <td style="padding:7px 10px;text-align:right;color:${profitColor};font-weight:700">${profitText}</td>
-                <td style="padding:7px 10px;text-align:right">${Math.floor(t.sharesAfter).toLocaleString()}주</td>
-                <td style="padding:7px 10px;text-align:right">${holdingValText}</td>
-                <td style="padding:7px 10px;text-align:right">${avgPriceText}</td>
-                <td style="padding:7px 10px;text-align:right">${fmt(t.cashAfter)}원</td>
-                <td style="padding:7px 10px;text-align:right;font-weight:700;color:${totalColor}">${fmt(total)}원</td>
+        const isExit = t.maPeriod === 0;
+        const badgeText = isExit ? '매도 (청산)' : (t.action==='buy'?'매수 B':'매도 S');
+        const badgeCls = isExit ? 'hbadge exit' : (t.action==='buy'?'hbadge buy':'hbadge sell');
+        const condList = (t.conds && t.conds.length ? t.conds : (isExit ? [`청산 ${t.percent}%`] : [`MA${t.maPeriod} ${t.percent}%`]));
+        // 요약 숫자는 칩 개수가 아니라 건수(팝업 그룹 수) 기준: 단건 청산(1)/MA(1), 합산 멤버 추가마다 +1
+        const grpCount = (() => {
+          let n = 0; let has = false;
+          for (const part of condList) {
+            if (part.startsWith('+ ') || part.startsWith('− ') || part.startsWith('- ')) n++;
+            else if (!has) { has = true; }
+          }
+          return (has ? 1 : 0) + n;
+        })();
+        const condSum = isExit ? `청산(${grpCount})` : `MA${t.maPeriod}(${grpCount})`;
+        const profitText = t.profitRate == null ? '-' : `${t.profitRate >= 0 ? '+' : ''}${t.profitRate.toFixed(2)}%`;
+        const profitColor = t.profitRate == null ? '#94a3b8' : t.profitRate > 0 ? '#dc2626' : t.profitRate < 0 ? '#2563eb' : '#64748b';
+        const avgPriceText = t.sharesAfter > 0 ? `${fmt(Math.round(t.avgPrice))}원` : '-';
+        const holdingValText = `${fmt(Math.round(t.holdingValue))}원`;
+        const total = Math.round(t.cashAfter + t.holdingValue);
+        const prevTotal = i === 0 ? this.initialCapital : Math.round(this.simTrades[i-1].cashAfter + this.simTrades[i-1].holdingValue);
+        const totalColor = total > prevTotal ? '#dc2626' : total < prevTotal ? '#2563eb' : '#1e293b';
+        const totalChg = total - prevTotal;
+        const totalChgRate = prevTotal ? (totalChg / prevTotal) * 100 : 0;
+        return `
+              <tr class="hrow">
+                <td class="dim">${t.idx}</td>
+                <td>${fmtDate(t.date)}</td>
+                <td style="text-align:center"><span class="${badgeCls}">${badgeText}</span></td>
+                <td style="text-align:center"><span class="hcond-sum" data-tidx="${t.idx}" title="클릭하면 조건 상세">${condSum}</span></td>
+                <td class="num">${fmt(t.price)}원</td>
+                <td class="num">${Math.floor(t.sharesDelta).toLocaleString()}주</td>
+                <td class="num">${fmt(t.amount)}원</td>
+                <td class="num" style="color:#64748b">${fmt(t.fee || 0)}원</td>
+                <td class="num" style="color:${profitColor};font-weight:700">${profitText}</td>
+                <td class="num hold">${Math.floor(t.sharesAfter).toLocaleString()}주</td>
+                <td class="num hold">${holdingValText}</td>
+                <td class="num hold">${avgPriceText}</td>
+                <td class="num hold">${fmt(t.cashAfter)}원</td>
+                <td class="num hold" style="font-weight:700;color:${totalColor}">${totalChg >= 0 ? '+' : ''}${fmt(totalChg)}원</td>
+                <td class="num hold" style="font-weight:700;color:${totalColor}">${totalChgRate >= 0 ? '+' : ''}${totalChgRate.toFixed(2)}%</td>
+                <td class="num hold" style="font-weight:700;color:${totalColor}">${fmt(total)}원</td>
               </tr>
               `; }).join('')}
           </tbody>
@@ -974,135 +2090,313 @@ export default (w: Window) => {
         if (Number.isFinite(v)) this.candleCount = Math.max(30, Math.min(1000, Math.floor(v)));
       }
       if (tfEl && tfEl.value) this.timeframe = tfEl.value as TossChartTimeframe;
-      // MA rows
+      const isMinTf = this.timeframe.startsWith('min:');
+      const endDateEl = this.shadowRoot?.querySelector('#sim-end-date') as HTMLInputElement;
+      const endDtEl = this.shadowRoot?.querySelector('#sim-end-datetime') as HTMLInputElement;
+      // 분봉은 datetime-local(YYYY-MM-DDTHH:MM), 나머지는 date(YYYY-MM-DD)
+      const rawEnd = isMinTf ? (endDtEl?.value || '').slice(0, 16) : (endDateEl?.value || '').slice(0, 10);
+      // 미래 일시 입력 시 최신으로 취급 (서버 빈 응답 방지)
+      if (/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2})?$/.test(rawEnd)) {
+        const probe = new Date(rawEnd.length <= 10 ? `${rawEnd}T23:59:00` : `${rawEnd}:00`);
+        if (Number.isFinite(probe.getTime()) && probe.getTime() <= Date.now()) {
+          this.endDate = rawEnd.slice(0, 10);
+          this.endTime = rawEnd.length > 10 ? rawEnd.slice(11, 16) : '';
+        } else {
+          this.endDate = ''; this.endTime = '';
+        }
+      } else {
+        this.endDate = ''; this.endTime = '';
+      }
+      // MA rows -> signals
       const rows = this.shadowRoot?.querySelectorAll('#ma-list .ma-row');
       if (rows) {
         const newConfigs: typeof this.maConfigs = [];
         rows.forEach((row: any) => {
           const period = Number(row.querySelector('.ma-period')?.value) || 0;
-          const goldenAct = (row.querySelector('.ma-golden-action') as HTMLSelectElement)?.value as 'buy'|'sell' || 'buy';
-          const goldenPct = Number((row.querySelector('.ma-golden-pct') as HTMLInputElement)?.value) || 0;
-          const goldenCandle = (row.querySelector('.ma-golden-candle') as HTMLSelectElement)?.value as 'any'|'bull'|'bear' || 'any';
-          const goldenVol = (row.querySelector('.ma-golden-volume') as HTMLSelectElement)?.value as 'any'|'higher'|'lower' || 'any';
-          const goldenCon = Number(row.querySelector('.ma-golden-consecutive')?.value) || 2;
-          const goldenMax = Number(row.querySelector('.ma-golden-max')?.value) || 2;
-          const goldenTrig = (row.querySelector('.ma-golden-trigger') as HTMLSelectElement)?.value as 'state'|'event' || 'event';
-          const goldenAlign = (row.querySelector('.ma-golden-alignment') as HTMLSelectElement)?.value as 'any'|'aligned'|'reverse' || 'aligned';
-          const deadAct = (row.querySelector('.ma-dead-action') as HTMLSelectElement)?.value as 'buy'|'sell' || 'sell';
-          const deadPct = Number((row.querySelector('.ma-dead-pct') as HTMLInputElement)?.value) || 0;
-          const deadCandle = (row.querySelector('.ma-dead-candle') as HTMLSelectElement)?.value as 'any'|'bull'|'bear' || 'any';
-          const deadVol = (row.querySelector('.ma-dead-volume') as HTMLSelectElement)?.value as 'any'|'higher'|'lower' || 'any';
-          const deadCon = Number(row.querySelector('.ma-dead-consecutive')?.value) || 2;
-          const deadMax = Number(row.querySelector('.ma-dead-max')?.value) || 2;
-          const deadTrig = (row.querySelector('.ma-dead-trigger') as HTMLSelectElement)?.value as 'state'|'event' || 'event';
-          const deadAlign = (row.querySelector('.ma-dead-alignment') as HTMLSelectElement)?.value as 'any'|'aligned'|'reverse' || 'any';
           const color = row.querySelector('.ma-color')?.getAttribute('data-color') || '#6366f1';
-          if (period > 0) newConfigs.push({ period, color, pyramiding: { golden: { action: goldenAct, percent: Math.max(0, Math.min(100, goldenPct)), candleFilter: goldenCandle === 'bull' ? 'bull' : goldenCandle === 'bear' ? 'bear' : 'any', volumeFilter: goldenVol === 'higher' ? 'higher' : goldenVol === 'lower' ? 'lower' : 'any', consecutive: Math.max(1, Math.min(10, Math.floor(goldenCon) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(goldenMax) || 2)), trigger: goldenTrig === 'state' ? 'state' : 'event', alignment: goldenAlign === 'reverse' ? 'reverse' : goldenAlign === 'any' ? 'any' : 'aligned' }, dead: { action: deadAct, percent: Math.max(0, Math.min(100, deadPct)), candleFilter: deadCandle === 'bull' ? 'bull' : deadCandle === 'bear' ? 'bear' : 'any', volumeFilter: deadVol === 'higher' ? 'higher' : deadVol === 'lower' ? 'lower' : 'any', consecutive: Math.max(1, Math.min(10, Math.floor(deadCon) || 2)), maxTrades: Math.max(1, Math.min(20, Math.floor(deadMax) || 2)), trigger: deadTrig === 'state' ? 'state' : 'event', alignment: deadAlign === 'reverse' ? 'reverse' : deadAlign === 'aligned' ? 'aligned' : 'any' } } });
+          const fields = row.querySelectorAll('.ma-field');
+          const signals: any[] = [];
+          fields.forEach((field: any) => {
+            const signal = (field.querySelector('.ma-signal') as HTMLSelectElement)?.value as 'golden'|'dead' || 'golden';
+            const action = (field.querySelector('.ma-action') as HTMLSelectElement)?.value as 'buy'|'sell' || 'buy';
+            const pct = Number((field.querySelector('.ma-pct') as HTMLInputElement)?.value) || 20;
+            const candle = (field.querySelector('.ma-candle') as HTMLSelectElement)?.value as any || 'any';
+            const volume = (field.querySelector('.ma-volume') as HTMLSelectElement)?.value as any || 'any';
+            const con = Number(field.querySelector('.ma-consecutive')?.value) || 2;
+            const align = (field.querySelector('.ma-alignment') as HTMLSelectElement)?.value as any || 'any';
+            const ctType = (field.querySelector('.ma-condtrade-type') as HTMLSelectElement)?.value as any || 'any';
+            const ctOp = (field.querySelector('.ma-condtrade-op') as HTMLSelectElement)?.value as any || 'any';
+            const ctVal = Number((field.querySelector('.ma-condtrade-val') as HTMLInputElement)?.value) || 1;
+            const ccType = (field.querySelector('.ma-condcandle-type') as HTMLSelectElement)?.value as any || 'any';
+            const ccOp = (field.querySelector('.ma-condcandle-op') as HTMLSelectElement)?.value as any || 'any';
+            const ccVal = Number((field.querySelector('.ma-condcandle-val') as HTMLInputElement)?.value) || 1;
+            const cmType = (field.querySelector('.ma-condma-type') as HTMLSelectElement)?.value as any || 'any';
+            const cmOp = (field.querySelector('.ma-condma-op') as HTMLSelectElement)?.value as any || 'any';
+            const cmVal = Number((field.querySelector('.ma-condma-val') as HTMLInputElement)?.value) || 0;
+            const normOp2 = (v: any) => ['<','<=','=','!=','>=','>'].includes(v) ? v : 'any';
+            signals.push({ signal: signal==='dead'?'dead':'golden', action: action==='sell'?'sell':'buy', percent: Math.max(1, Math.min(100, pct)), candleFilter: candle==='bull'?'bull':candle==='bear'?'bear':'any', volumeFilter: volume==='higher'?'higher':volume==='lower'?'lower':'any', consecutive: Math.max(1, Math.min(10, Math.floor(con)||2)), alignment: align as any, condTrade: { type: ['consecutiveBuy','consecutiveSell','consecutiveSelected'].includes(ctType)?ctType:'any', operator: normOp2(ctOp), value: Math.max(1, Math.min(20, Math.floor(Number(ctVal)||1))) }, condCandle: { type: ['consecutiveBullish','consecutiveBearish'].includes(ccType)?ccType:'any', operator: normOp2(ccOp), value: Math.max(1, Math.min(20, Math.floor(Number(ccVal)||1))) }, condMa: { type: ['maDeviation','maSlope'].includes(cmType)?cmType:'any', operator: normOp2(cmOp), value: Math.max(-50, Math.min(50, Number(cmVal)||0)) } });
+          });
+          if (period > 0) newConfigs.push({ period, color, pyramiding: { signals: signals.length ? signals : [{ signal: 'golden', action: 'buy', percent: 20, candleFilter: 'any', volumeFilter: 'any', consecutive: 2, alignment: 'any', condTrade: { type: 'any', operator: 'any', value: 1 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } }] } });
         });
-        if (newConfigs.length) this.maConfigs = newConfigs;
+        if (newConfigs.length) this.maConfigs = newConfigs.sort((a,b)=>a.period-b.period);
       }
-      // 익절/손절
-      const tpEnEl = this.shadowRoot?.querySelector('#sim-tp-enabled') as HTMLInputElement;
-      const tpEl = this.shadowRoot?.querySelector('#sim-tp') as HTMLInputElement;
-      const tpSellEl = this.shadowRoot?.querySelector('#sim-tp-sell') as HTMLInputElement;
-      const tpSkipEl = this.shadowRoot?.querySelector('#sim-tp-skip') as HTMLInputElement;
-      const tpCandleEl = this.shadowRoot?.querySelector('#sim-tp-candle') as HTMLSelectElement;
-      const tpVolEl = this.shadowRoot?.querySelector('#sim-tp-volume') as HTMLSelectElement;
-      const slEnEl = this.shadowRoot?.querySelector('#sim-sl-enabled') as HTMLInputElement;
-      const slEl = this.shadowRoot?.querySelector('#sim-sl') as HTMLInputElement;
-      const slSellEl = this.shadowRoot?.querySelector('#sim-sl-sell') as HTMLInputElement;
-      const slSkipEl = this.shadowRoot?.querySelector('#sim-sl-skip') as HTMLInputElement;
-      const slCandleEl = this.shadowRoot?.querySelector('#sim-sl-candle') as HTMLSelectElement;
-      const slVolEl = this.shadowRoot?.querySelector('#sim-sl-volume') as HTMLSelectElement;
-      if (tpEnEl) this.takeProfitEnabled = !!tpEnEl.checked;
-      if (tpEl) { const v = Number(tpEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitPercent = Math.floor(v); }
-      if (tpSellEl) { const v = Number(tpSellEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitSellPercent = Math.floor(v); }
-      if (tpSkipEl) { const v = Number(tpSkipEl.value); if (Number.isFinite(v) && v >= 0 && v <= 20) this.takeProfitSkip = Math.floor(v); }
-      if (tpCandleEl && ['any','bull','bear'].includes(tpCandleEl.value)) this.takeProfitCandleFilter = tpCandleEl.value as any;
-      if (tpVolEl && ['any','higher','lower'].includes(tpVolEl.value)) this.takeProfitVolumeFilter = tpVolEl.value as any;
-      if (slEnEl) this.stopLossEnabled = !!slEnEl.checked;
-      if (slEl) { const v = Number(slEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossPercent = Math.floor(v); }
-      if (slSellEl) { const v = Number(slSellEl.value); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossSellPercent = Math.floor(v); }
-      if (slSkipEl) { const v = Number(slSkipEl.value); if (Number.isFinite(v) && v >= 0 && v <= 20) this.stopLossSkip = Math.floor(v); }
-      if (slCandleEl && ['any','bull','bear'].includes(slCandleEl.value)) this.stopLossCandleFilter = slCandleEl.value as any;
-      if (slVolEl && ['any','higher','lower'].includes(slVolEl.value)) this.stopLossVolumeFilter = slVolEl.value as any;
+      // 실현 (exitConfigs) — 이동평균선처럼 추가/삭제
+      const exitRows = this.shadowRoot?.querySelectorAll('#exit-list .ma-row');
+      if (exitRows) {
+        const newExits: typeof this.exitConfigs = [];
+        exitRows.forEach((row: any) => {
+          const basis = (row.querySelector('.exit-basis') as HTMLSelectElement)?.value as any || 'profitRise';
+          const pct = Number((row.querySelector('.exit-pct') as HTMLInputElement)?.value) || 0;
+          const sell = Number((row.querySelector('.exit-sell') as HTMLInputElement)?.value) || 0;
+          const skip = Number((row.querySelector('.exit-skip') as HTMLInputElement)?.value) || 0;
+          const candle = (row.querySelector('.exit-candle') as HTMLSelectElement)?.value as any || 'any';
+          const volume = (row.querySelector('.exit-volume') as HTMLSelectElement)?.value as any || 'any';
+          newExits.push({ basis: ['profitRise','profitFall','peakFall','peakRise'].includes(basis) ? basis : 'profitRise', percent: Math.max(1, Math.min(100, pct)), sellPercent: Math.max(1, Math.min(100, sell)), skip: Math.max(0, Math.min(20, skip)), candle: candle==='bull'?'bull':candle==='bear'?'bear':'any', volume: volume==='higher'?'higher':volume==='lower'?'lower':'any' });
+        });
+        if (newExits.length) this.exitConfigs = newExits;
+        else if (exitRows.length === 0) this.exitConfigs = [];
+        // legacy fields 동기화 (하위호환)
+        const first = this.exitConfigs[0];
+        if (first) {
+          this.takeProfitBasis = first.basis as any;
+          this.takeProfitPercent = first.percent;
+          this.takeProfitSellPercent = first.sellPercent;
+          this.takeProfitSkip = first.skip;
+          this.takeProfitCandleFilter = first.candle as any;
+          this.takeProfitVolumeFilter = first.volume as any;
+          this.takeProfitEnabled = true;
+          if (this.exitConfigs[1]) {
+            const sec = this.exitConfigs[1] as any;
+            this.stopLossBasis = sec.basis as any;
+            this.stopLossPercent = sec.percent;
+            this.stopLossSellPercent = sec.sellPercent;
+            this.stopLossSkip = sec.skip;
+            this.stopLossCandleFilter = sec.candle as any;
+            this.stopLossVolumeFilter = sec.volume as any;
+            this.stopLossEnabled = true;
+          } else {
+            this.stopLossBasis = 'none' as any;
+            this.stopLossEnabled = false;
+          }
+        } else {
+          this.takeProfitBasis = 'none' as any;
+          this.takeProfitEnabled = false;
+          this.stopLossBasis = 'none' as any;
+          this.stopLossEnabled = false;
+        }
+      }
       const crossEl = this.shadowRoot?.querySelector('#sim-show-cross') as HTMLInputElement;
       if (crossEl) this.showCross = !!crossEl.checked;
+      const mallEl = this.shadowRoot?.querySelector('#sim-require-all-mas') as HTMLInputElement;
+      if (mallEl) this.requireAllMas = !!mallEl.checked;
+      const mresEl = this.shadowRoot?.querySelector('#sim-resolve-mode') as HTMLSelectElement;
+      if (mresEl && isResolveMode(mresEl.value)) this.maResolveMode = mresEl.value;
+      const xresEl = this.shadowRoot?.querySelector('#sim-exit-resolve-mode') as HTMLSelectElement;
+      if (xresEl && isResolveMode(xresEl.value)) this.exitResolveMode = xresEl.value;
+      const trendEl = this.shadowRoot?.querySelector('#sim-trend-type') as HTMLSelectElement;
+      this.trendDynamic = !!trendEl && trendEl.value === 'dynamic';
+      this.trendRegrow = !!trendEl && trendEl.value === 'regrow';
+      if (trendEl && trendEl.value !== '' && trendEl.value !== 'dynamic' && Number.isFinite(Number(trendEl.value))) this.trendScore = Math.max(0, Math.min(1, Number(trendEl.value)));
+      const presetEl = this.shadowRoot?.querySelector('#sim-optimize-preset') as HTMLSelectElement;
+      if (presetEl && ['0', '0.5', '1'].includes(presetEl.value)) this.riskAversion = Number(presetEl.value);
+      const feeEl = this.shadowRoot?.querySelector('#sim-fee') as HTMLInputElement;
+      if (feeEl) { const v = Number(feeEl.value); if (Number.isFinite(v) && v >= 0 && v <= 1) this.feePercent = v; }
+      const execEl = this.shadowRoot?.querySelector('#sim-exec-delay') as HTMLSelectElement;
+      if (execEl) this.execDelay = execEl.value === '1' ? 1 : 0;
+      const slipEl = this.shadowRoot?.querySelector('#sim-slippage') as HTMLInputElement;
+      if (slipEl) { const v = Number(slipEl.value); if (Number.isFinite(v)) this.slippagePct = Math.max(0, Math.min(100, v)); }
+      const fillEl = this.shadowRoot?.querySelector('#sim-fillrate') as HTMLInputElement;
+      if (fillEl) { const v = Number(fillEl.value); if (Number.isFinite(v)) this.fillRate = Math.max(1, Math.min(100, Math.floor(v))); }
+    }
+
+    /** 마찰 입력 확정 시점에 clamp 값 되쓰기 (타이핑 중에는 건드리지 않음) */
+    private writeBackFrictionInputs() {
+      const slipEl = this.shadowRoot?.querySelector('#sim-slippage') as HTMLInputElement;
+      if (slipEl) slipEl.value = String(this.slippagePct);
+      const fillEl = this.shadowRoot?.querySelector('#sim-fillrate') as HTMLInputElement;
+      if (fillEl) fillEl.value = String(this.fillRate);
+    }
+
+    @event('#sim-show-trend', 'change')
+    onShowTrendChange() {
+      const el = this.shadowRoot?.querySelector('#sim-show-trend') as HTMLInputElement;
+      if (el) this.showTrend = !!el.checked;
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+    }
+
+    private lastTabsSig = '';
+    private renderStrategyTabs() {
+      const el = this.shadowRoot?.querySelector('#sim-strategy-select') as HTMLSelectElement;
+      if (!el) return;
+      // 동일 내용 반복 렌더 방지 (input 이벤트→재렌더가 change 확정 전 선택을 날리는 레이스 방지)
+      const sig = this.strategySets.map(s => `${s.label}|${s.from}-${s.to}|${s.rate.toFixed(1)}`).join(';') + '#' + this.activeSetIdx;
+      if (sig === this.lastTabsSig) return;
+      this.lastTabsSig = sig;
+      el.innerHTML = this.strategySets.map((s, i) => {
+        const n = s.to - s.from + 1;
+        const rate = `${s.rate >= 0 ? '+' : ''}${s.rate.toFixed(1)}%`;
+        return `<option value="${i}"${i === this.activeSetIdx ? ' selected' : ''}>${s.label} · ${n}봉 ${rate}</option>`;
+      }).join('');
+      el.value = String(this.activeSetIdx);
+      el.disabled = this.strategySets.length <= 1;
+      el.title = this.strategySets.length <= 1 ? '전략 세트 1개 (다이나믹 최적화 시 여러 개)' : '전략 세트 선택 (단일·복수 공통)';
+    }
+
+    @event('#sim-strategy-select', 'change', {stopImmediatePropagation: true, preventDefault: true})
+    onStrategyTabClick(e: Event) {
+      // alert(1)
+      const el = (e.target as HTMLSelectElement);
+      const i = Number(el?.value);
+      if (!Number.isInteger(i) || i === this.activeSetIdx || i < 0 || i >= this.strategySets.length) return;
+      this.syncConfigFromForm();
+      this.activeSetIdx = i;
+      this.loadTpSlFieldsFromExits(this.exitConfigs);
+      this.applySimConfigToForm();
+      this.renderMaList();
+      this.renderExitList();
+      this.syncUrlWithoutReload();
+      this.syncMasToChart();
+      this.renderStrategyTabs();
     }
 
     private renderMaList() {
       const list = this.shadowRoot?.querySelector('#ma-list') as HTMLElement;
       if (!list) return;
-      // 포커스 유지: 이미 렌더된 경우 값만 갱신해 포커스/커서 유지
-      if (list.children.length === this.maConfigs.length && list.children.length > 0) {
+      const signalFieldHtml = (sig: any, sIdx: number) => `
+            <div class="ma-field" data-sidx="${sIdx}">
+              <div class="ma-field-head">
+                <div class="ma-action-box">
+                  <select class="ma-signal" data-v="${sig.signal}" title="신호 종류"><option value="golden" ${sig.signal==='golden'?'selected':''}>● 골든</option><option value="dead" ${sig.signal==='dead'?'selected':''}>● 데드</option></select>
+                  <select class="ma-action" data-v="${sig.action}"><option value="buy" ${sig.action==='buy'?'selected':''}>매수</option><option value="sell" ${sig.action==='sell'?'selected':''}>매도</option></select>
+                  <input class="ma-pct" type="number" min="1" max="100" value="${sig.percent}" /><span class="pct">%</span>
+                </div>
+                <button type="button" class="signal-remove" data-sidx="${sIdx}" title="신호 삭제">✕</button>
+              </div>
+              <div class="ma-field-opts">
+                <label class="ma-mini-opt"><span class="ma-help" data-help="크로스 상태 유지(발생 포함). 크로스 발생봉을 1봉째로 셈하고, 종가가 MA 위(골든)/아래(데드)에 입력한 봉수만큼 연속 머물면 그 봉에 매매합니다. 유지되는 동안 매 봉 체결됩니다.">유지</span> <input class="ma-consecutive" type="number" min="1" max="10" value="${sig.consecutive ?? 2}" />봉째 매매</label>
+
+                <label class="ma-mini-opt"><span class="ma-help" data-help="캔들 종가 기준 필터.">캔들</span> <select class="ma-candle"><option value="any" ${sig.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${sig.candleFilter==='bull'?'selected':''}>양봉</option><option value="bear" ${sig.candleFilter==='bear'?'selected':''}>음봉</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="전봉 거래량 대비 필터.">거래량</span> <select class="ma-volume"><option value="any" ${sig.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${sig.volumeFilter==='higher'?'selected':''}>증가</option><option value="lower" ${sig.volumeFilter==='lower'?'selected':''}>감소</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="현재 MA와 다른 MA들의 위치 관계">배열</span> <select class="ma-alignment"><option value="any" ${sig.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${sig.alignment==='aligned'?'selected':''}>정배열</option><option value="reverse" ${sig.alignment==='reverse'?'selected':''}>역배열</option><option value="largerAbove" ${sig.alignment==='largerAbove'?'selected':''}>큰MA 위</option><option value="largerBelow" ${sig.alignment==='largerBelow'?'selected':''}>큰MA 아래</option><option value="smallerAbove" ${sig.alignment==='smallerAbove'?'selected':''}>작은MA 위</option><option value="smallerBelow" ${sig.alignment==='smallerBelow'?'selected':''}>작은MA 아래</option></select></label>
+                <label class="ma-mini-opt"><span class="ma-help" data-help="최근 체결 끝에서 해당 방향이 이어진 횟수. 연속선택은 이 신호와 같은 방향. 무관=항상 통과.">연속매매</span> <select class="ma-condtrade-type"><option value="any" ${sig.condTrade?.type==='any'?'selected':''}>무관</option><option value="consecutiveBuy" ${sig.condTrade?.type==='consecutiveBuy'?'selected':''}>연속매수</option><option value="consecutiveSell" ${sig.condTrade?.type==='consecutiveSell'?'selected':''}>연속매도</option><option value="consecutiveSelected" ${sig.condTrade?.type==='consecutiveSelected'?'selected':''}>연속선택</option></select><select class="ma-condtrade-op" style="${(sig.condTrade?.type ?? 'any')==='any'?'display:none':''}"><option value="<" ${sig.condTrade?.operator==='<'?'selected':''}>&lt;</option><option value="<=" ${sig.condTrade?.operator==='<='?'selected':''}>&lt;=</option><option value="=" ${sig.condTrade?.operator==='='?'selected':''}>=</option><option value="!=" ${sig.condTrade?.operator==='!='?'selected':''}>!=</option><option value=">=" ${sig.condTrade?.operator==='>='?'selected':''}>&gt;=</option><option value=">" ${sig.condTrade?.operator==='>'?'selected':''}>&gt;</option></select><input class="ma-condtrade-val" type="number" min="1" max="20" step="1" value="${sig.condTrade?.value ?? 1}" style="${(sig.condTrade?.type ?? 'any')==='any'?'display:none':''}" /></label><label class="ma-mini-opt"><span class="ma-help" data-help="현재봉까지 같은 캔들이 이어진 개수. 무관=항상 통과.">연속봉</span> <select class="ma-condcandle-type"><option value="any" ${sig.condCandle?.type==='any'?'selected':''}>무관</option><option value="consecutiveBullish" ${sig.condCandle?.type==='consecutiveBullish'?'selected':''}>연속양봉</option><option value="consecutiveBearish" ${sig.condCandle?.type==='consecutiveBearish'?'selected':''}>연속음봉</option></select><select class="ma-condcandle-op" style="${(sig.condCandle?.type ?? 'any')==='any'?'display:none':''}"><option value="<" ${sig.condCandle?.operator==='<'?'selected':''}>&lt;</option><option value="<=" ${sig.condCandle?.operator==='<='?'selected':''}>&lt;=</option><option value="=" ${sig.condCandle?.operator==='='?'selected':''}>=</option><option value="!=" ${sig.condCandle?.operator==='!='?'selected':''}>!=</option><option value=">=" ${sig.condCandle?.operator==='>='?'selected':''}>&gt;=</option><option value=">" ${sig.condCandle?.operator==='>'?'selected':''}>&gt;</option></select><input class="ma-condcandle-val" type="number" min="1" max="20" step="1" value="${sig.condCandle?.value ?? 1}" style="${(sig.condCandle?.type ?? 'any')==='any'?'display:none':''}" /></label><label class="ma-mini-opt"><span class="ma-help" data-help="이격도=(종가-MA)/MA×100%. 기울기=(MA-전봉MA)/전봉MA×100%. 무관=항상 통과.">평균선</span> <select class="ma-condma-type"><option value="any" ${sig.condMa?.type==='any'?'selected':''}>무관</option><option value="maDeviation" ${sig.condMa?.type==='maDeviation'?'selected':''}>이격도</option><option value="maSlope" ${sig.condMa?.type==='maSlope'?'selected':''}>기울기</option></select><select class="ma-condma-op" style="${(sig.condMa?.type ?? 'any')==='any'?'display:none':''}"><option value="<" ${sig.condMa?.operator==='<'?'selected':''}>&lt;</option><option value="<=" ${sig.condMa?.operator==='<='?'selected':''}>&lt;=</option><option value="=" ${sig.condMa?.operator==='='?'selected':''}>=</option><option value="!=" ${sig.condMa?.operator==='!='?'selected':''}>!=</option><option value=">=" ${sig.condMa?.operator==='>='?'selected':''}>&gt;=</option><option value=">" ${sig.condMa?.operator==='>'?'selected':''}>&gt;</option></select><input class="ma-condma-val" type="number" min="-50" max="50" step="0.1" value="${sig.condMa?.value ?? 0}" style="width:54px;${(sig.condMa?.type ?? 'any')==='any'?'display:none':''}" /></label>
+              </div>
+            </div>`;
+      // 포커스 유지: signals 길이 같을 때만 빠른 갱신
+      const canFastUpdate = list.children.length === this.maConfigs.length && this.maConfigs.every((ma, idx) => {
+        const row = list.children[idx] as HTMLElement;
+        if (!row) return false;
+        const fields = row.querySelectorAll('.ma-field');
+        return fields.length === (ma.pyramiding.signals?.length ?? 0);
+      });
+      if (canFastUpdate && list.children.length > 0) {
         const active = this.shadowRoot?.activeElement as HTMLElement | null;
         this.maConfigs.forEach((ma, idx) => {
           const row = list.children[idx] as HTMLElement;
           if (!row) return;
-          const setVal = (sel: string, val: string) => {
-            const el = row.querySelector(sel) as HTMLInputElement | HTMLSelectElement | null;
-            if (!el) return;
-            if (el === active) return; // 포커스 중인 입력은 건드리지 않음
-            if ((el as HTMLInputElement).value !== val) (el as HTMLInputElement).value = val;
-          };
-          const setSel = (sel: string, val: string) => {
-            const el = row.querySelector(sel) as HTMLSelectElement | null;
-            if (!el || el === active) return;
-            if (el.value !== val) el.value = val;
-          };
           const colorEl = row.querySelector('.ma-color') as HTMLElement | null;
           if (colorEl) { colorEl.setAttribute('data-color', ma.color); (colorEl as HTMLElement).style.background = ma.color; }
-          setVal('.ma-period', String(ma.period));
-          setVal('.ma-golden-consecutive', String(ma.pyramiding.golden.consecutive ?? 2));
-          setVal('.ma-golden-max', String(ma.pyramiding.golden.maxTrades ?? 2));
-          setSel('.ma-golden-trigger', ma.pyramiding.golden.trigger);
-          setSel('.ma-golden-candle', ma.pyramiding.golden.candleFilter);
-          setSel('.ma-golden-volume', ma.pyramiding.golden.volumeFilter);
-          setSel('.ma-golden-action', ma.pyramiding.golden.action);
-          setVal('.ma-golden-pct', String(ma.pyramiding.golden.percent));
-          setSel('.ma-golden-alignment', ma.pyramiding.golden.alignment);
-          setVal('.ma-dead-consecutive', String(ma.pyramiding.dead.consecutive ?? 2));
-          setVal('.ma-dead-max', String(ma.pyramiding.dead.maxTrades ?? 2));
-          setSel('.ma-dead-trigger', ma.pyramiding.dead.trigger);
-          setSel('.ma-dead-candle', ma.pyramiding.dead.candleFilter);
-          setSel('.ma-dead-volume', ma.pyramiding.dead.volumeFilter);
-          setSel('.ma-dead-action', ma.pyramiding.dead.action);
-          setVal('.ma-dead-pct', String(ma.pyramiding.dead.percent));
-          setSel('.ma-dead-alignment', ma.pyramiding.dead.alignment);
+          const picker = row.querySelector('.ma-color-input') as HTMLInputElement | null;
+          if (picker && picker !== active && picker.value.toLowerCase() !== ma.color.toLowerCase()) picker.value = ma.color;
+          const periodEl = row.querySelector('.ma-period') as HTMLInputElement | null;
+          if (periodEl && periodEl !== active) periodEl.value = String(ma.period);
+          ma.pyramiding.signals.forEach((sig: any, sIdx: number) => {
+            const field = row.querySelector(`.ma-field[data-sidx="${sIdx}"]`) as HTMLElement | null;
+            if (!field) return;
+            const setVal = (sel: string, val: string) => {
+              const el = field.querySelector(sel) as HTMLInputElement | HTMLSelectElement | null;
+              if (!el || el === active) return;
+              if ((el as HTMLInputElement).value !== val) (el as HTMLInputElement).value = val;
+            };
+            const setSel = (sel: string, val: string) => {
+              const el = field.querySelector(sel) as HTMLSelectElement | null;
+              if (!el || el === active) return;
+              if (el.value !== val) el.value = val;
+            };
+            setSel('.ma-signal', sig.signal);
+            const sigEl = field.querySelector('.ma-signal') as HTMLElement | null;
+            if (sigEl && sigEl !== active) sigEl.dataset.v = sig.signal;
+            setSel('.ma-action', sig.action);
+            const actEl = field.querySelector('.ma-action') as HTMLElement | null;
+            if (actEl && actEl !== active) actEl.dataset.v = sig.action;
+            setVal('.ma-pct', String(sig.percent));
+            setVal('.ma-consecutive', String(sig.consecutive ?? 2));
+            setSel('.ma-candle', sig.candleFilter);
+            setSel('.ma-volume', sig.volumeFilter);
+            setSel('.ma-alignment', sig.alignment);
+            setSel('.ma-condtrade-type', sig.condTrade?.type ?? 'any');
+            setSel('.ma-condtrade-op', sig.condTrade?.operator ?? 'any');
+            setVal('.ma-condtrade-val', String(sig.condTrade?.value ?? 1));
+            setSel('.ma-condcandle-type', sig.condCandle?.type ?? 'any');
+            setSel('.ma-condcandle-op', sig.condCandle?.operator ?? 'any');
+            setVal('.ma-condcandle-val', String(sig.condCandle?.value ?? 1));
+            setSel('.ma-condma-type', sig.condMa?.type ?? 'any');
+            setSel('.ma-condma-op', sig.condMa?.operator ?? 'any');
+            setVal('.ma-condma-val', String(sig.condMa?.value ?? 0));
+            // 빠른 갱신에서도 무관이면 연산자/값 숨김 (전체 리렌더와 동일 상태 유지)
+            const syncCondVis = (typeSel: string, opSel: string, valSel: string) => {
+              const t = field.querySelector(typeSel) as HTMLSelectElement | null;
+              const isAny = !t || t.value === 'any';
+              const op = field.querySelector(opSel) as HTMLElement | null;
+              const val = field.querySelector(valSel) as HTMLElement | null;
+              if (op) op.style.display = isAny ? 'none' : '';
+              if (val) val.style.display = isAny ? 'none' : '';
+            };
+            syncCondVis('.ma-condtrade-type', '.ma-condtrade-op', '.ma-condtrade-val');
+            syncCondVis('.ma-condcandle-type', '.ma-condcandle-op', '.ma-condcandle-val');
+            syncCondVis('.ma-condma-type', '.ma-condma-op', '.ma-condma-val');
+          });
         });
+        this.updateMaRowFieldsSingle();
         return;
       }
       list.innerHTML = this.maConfigs.map((ma, idx) => `
         <div class="ma-row" data-idx="${idx}">
           <div class="ma-row-head">
             <div class="ma-identity">
-              <span class="ma-color" data-color="${ma.color}" style="background:${ma.color}"></span>
-              <input class="ma-period" type="number" min="2" max="500" style="font-size: 16px;" value="${ma.period}" title="틱수" />
-              <span class="ma-unit">MA</span>
+              <span class="ma-color" data-color="${ma.color}" style="background:${ma.color}" title="선 색상 변경"><input class="ma-color-input" type="color" value="${ma.color}" tabindex="-1" /></span>
+              <input class="ma-period" type="number" min="2" max="500" value="${ma.period}" title="틱수" />
+              <span class="ma-unit ma-help" data-help="이동평균 기간(틱수). 예: 5MA = 최근 5봉 종가 평균.">MA</span>
+              <span style="font-size:10px;color:#b45309;background:#fef3c7;border:1px solid #fde68a;border-radius:999px;padding:2px 8px;font-weight:800">${ma.pyramiding.signals.length}개 신호</span>
             </div>
-            <button type="button" class="ma-remove" data-idx="${idx}" title="삭제">✕</button>
+            <div class="ma-row-actions">
+              <button type="button" class="add-signal-btn" data-idx="${idx}" title="신호 추가">+ 신호</button>
+              <button type="button" class="ma-remove" data-idx="${idx}" title="MA 삭제">✕</button>
+            </div>
           </div>
           <div class="ma-row-fields">
-            <div class="ma-field">
-              <div class="ma-field-head"><span class="ma-field-label golden">골든</span><div class="ma-action-box"><select class="ma-golden-action"><option value="buy" ${ma.pyramiding.golden.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.golden.action==='sell'?'selected':''}>매도</option></select><input class="ma-golden-pct" type="number" min="1" max="100" value="${ma.pyramiding.golden.percent}" style="font-size: 16px;" /><span class="pct">%</span></div></div>
-              <div class="ma-field-opts">
-                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-golden-consecutive" type="number" min="1" max="10" style="font-size: 16px;" value="${ma.pyramiding.golden.consecutive ?? 2}" />회</span><span class="ma-mini-group">최대 <input class="ma-golden-max" type="number" min="1" max="20" style="font-size: 16px;" value="${ma.pyramiding.golden.maxTrades ?? 2}" />회 매매</span></label>
-                <label class="ma-mini-opt" title="상태면 종가가 MA 위/아래에 머무는 동안 매 틱 매매, 발생시는 크로스 순간에만">지속 <select class="ma-golden-trigger"><option value="event" ${ma.pyramiding.golden.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.golden.trigger==='state'?'selected':''}>상태</option></select></label>
-                <label class="ma-mini-opt">캔들 <select class="ma-golden-candle"><option value="any" ${ma.pyramiding.golden.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.golden.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.golden.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
-                <label class="ma-mini-opt">거래량 <select class="ma-golden-volume"><option value="any" ${ma.pyramiding.golden.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.golden.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.golden.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
-                <label class="ma-mini-opt">이동평균선 <select class="ma-golden-alignment"><option value="any" ${ma.pyramiding.golden.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${(ma.pyramiding.golden.alignment ?? 'aligned')==='aligned'?'selected':''}>정배열</option><option value="reverse" ${ma.pyramiding.golden.alignment==='reverse'?'selected':''}>역배열</option></select></label>
-              </div>
-            </div>
-            <div class="ma-field">
-              <div class="ma-field-head"><span class="ma-field-label dead">데드</span><div class="ma-action-box"><select class="ma-dead-action"><option value="buy" ${ma.pyramiding.dead.action==='buy'?'selected':''}>매수</option><option value="sell" ${ma.pyramiding.dead.action==='sell'?'selected':''}>매도</option></select><input class="ma-dead-pct" type="number" min="1" max="100" value="${ma.pyramiding.dead.percent}" style="font-size: 16px;" /><span class="pct">%</span></div></div>
-              <div class="ma-field-opts">
-                <label class="ma-mini-opt ma-mini-opt--grouped" title="크로스 후 상태가 몇 봉 연속 유지돼야 매매할지, 이후 최대 몇 번까지 분할 매매할지"><span class="ma-mini-group">연속발생 <input class="ma-dead-consecutive" type="number" min="1" max="10" value="${ma.pyramiding.dead.consecutive ?? 2}" style="font-size: 16px;"/>회</span><span class="ma-mini-group">최대 <input class="ma-dead-max" type="number" min="1" max="20" value="${ma.pyramiding.dead.maxTrades ?? 2}" style="font-size: 16px;"/>회 매매</span></label>
-                <label class="ma-mini-opt">지속 <select class="ma-dead-trigger"><option value="event" ${ma.pyramiding.dead.trigger==='event'?'selected':''}>발생시</option><option value="state" ${ma.pyramiding.dead.trigger==='state'?'selected':''}>상태</option></select></label>
-                <label class="ma-mini-opt">캔들 <select class="ma-dead-candle"><option value="any" ${ma.pyramiding.dead.candleFilter==='any'?'selected':''}>무관</option><option value="bull" ${ma.pyramiding.dead.candleFilter==='bull'?'selected':''}>양봉일때</option><option value="bear" ${ma.pyramiding.dead.candleFilter==='bear'?'selected':''}>음봉일때</option></select></label>
-                <label class="ma-mini-opt">거래량 <select class="ma-dead-volume"><option value="any" ${ma.pyramiding.dead.volumeFilter==='any'?'selected':''}>무관</option><option value="higher" ${ma.pyramiding.dead.volumeFilter==='higher'?'selected':''}>이전보다 높을때</option><option value="lower" ${ma.pyramiding.dead.volumeFilter==='lower'?'selected':''}>이전보다 낮을때</option></select></label>
-                <label class="ma-mini-opt">이동평균선 <select class="ma-dead-alignment"><option value="any" ${ma.pyramiding.dead.alignment==='any'?'selected':''}>무관</option><option value="aligned" ${ma.pyramiding.dead.alignment==='aligned'?'selected':''}>정배열</option><option value="reverse" ${ma.pyramiding.dead.alignment==='reverse'?'selected':''}>역배열</option></select></label>
-              </div>
-            </div>
+            ${ma.pyramiding.signals.map((sig: any, sIdx: number) => signalFieldHtml(sig, sIdx)).join('')}
+          </div>
+        </div>
+      `).join('');
+      this.updateMaRowFieldsSingle();
+    }
+
+    private renderExitList() {
+      const list = this.shadowRoot?.querySelector('#exit-list') as HTMLElement;
+      if (!list) return;
+      if (!this.exitConfigs.length) {
+        list.innerHTML = `<div style="padding:12px;color:#94a3b8;font-size:11px;border:1px dashed #e2e8f0;border-radius:10px;background:#f8fafc;text-align:center">조건 없음 — 청산 없이 보유</div>`;
+        return;
+      }
+      list.innerHTML = this.exitConfigs.map((ex, idx) => `
+        <div class="ma-row exit-row" data-idx="${idx}">
+          <div class="exit-head">
+            <div class="exit-title"><span class="exit-badge">${idx+1}</span> 실현 조건</div>
+            <button type="button" class="ma-remove exit-remove" data-idx="${idx}" title="삭제">✕</button>
+          </div>
+          <div class="exit-main">
+            <span class="lbl ma-help" data-help="수익률±=(현재가-평균)/평균, 보유고점−=(보유중최고가-현재)/보유중최고가, 보유저점+=(현재-보유중최저가)/보유중최저가. 고점/저점은 보유 기간 중에 갱신되는 값으로, 종목의 신고가·신저가와 무관합니다.">조건</span>
+            <select class="exit-basis" data-idx="${idx}"><option value="profitRise" ${ex.basis==='profitRise'?'selected':''}>수익률 +</option><option value="profitFall" ${ex.basis==='profitFall'?'selected':''}>수익률 −</option><option value="peakFall" ${ex.basis==='peakFall'?'selected':''}>보유고점 −</option><option value="peakRise" ${ex.basis==='peakRise'?'selected':''}>보유저점 +</option></select>
+            <span class="exit-inputs">
+              <input class="exit-pct" data-idx="${idx}" type="number" min="1" max="100" value="${ex.percent}" />% 도달 시
+              <input class="exit-sell" data-idx="${idx}" type="number" min="1" max="100" value="${ex.sellPercent}" />% 청산
+            </span>
+          </div>
+          <div class="exit-opts tp-sl-opts">
+            <label class="exit-opt"><span class="ma-help" data-help="캔들 필터">캔들</span> <select class="exit-candle" data-idx="${idx}"><option value="any" ${ex.candle==='any'?'selected':''}>무관</option><option value="bull" ${ex.candle==='bull'?'selected':''}>양봉</option><option value="bear" ${ex.candle==='bear'?'selected':''}>음봉</option></select></label>
+            <label class="exit-opt"><span class="ma-help" data-help="거래량 필터">거래량</span> <select class="exit-volume" data-idx="${idx}"><option value="any" ${ex.volume==='any'?'selected':''}>무관</option><option value="higher" ${ex.volume==='higher'?'selected':''}>증가</option><option value="lower" ${ex.volume==='lower'?'selected':''}>감소</option></select></label>
+            <label class="exit-opt"><span>스킵</span> <input class="exit-skip" data-idx="${idx}" type="number" min="0" max="20" value="${ex.skip}" />회</label>
           </div>
         </div>
       `).join('');
@@ -1125,9 +2419,9 @@ export default (w: Window) => {
           .card-title{font-size:15px;font-weight:700}
           .search-wrap{display:flex;gap:6px;align-items:center;position:relative;min-width:0;flex:1}
           .search-icon{font-size:12px;opacity:.6;color:#c7d2fe}
-          .search-wrap input{flex:1;min-width:0;height:30px;padding:0 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.4);outline:none;font-size:12px;background:#fff;box-sizing:border-box}
+          .search-wrap input{flex:1;min-width:0;height:32px;padding:0 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.4);outline:none;font-size:12px;background:#fff;box-sizing:border-box}
           .search-wrap input:focus{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,0.25)}
-          .search-wrap button,.search-clear{height:30px;padding:0 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.2);color:#fff;font-weight:600;cursor:pointer;font-size:12px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center}
+          .search-wrap button,.search-clear{height:32px;padding:0 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.2);color:#fff;font-weight:600;cursor:pointer;font-size:12px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center}
           .search-wrap button:hover,.search-clear:hover{background:rgba(255,255,255,0.35)}
           .search-results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.15);overflow:hidden;display:none;z-index:10;color:#334155}
           .search-results.show{display:block}
@@ -1136,59 +2430,98 @@ export default (w: Window) => {
           .chart-wrap{height:340px;padding:4px 12px 8px}
           @media(max-width:600px){ .chart-wrap{height:280px} }
           stock-chart{width:100%;height:100%;display:block}
-          .config-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+          .config-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
+          @media(max-width:900px){ .config-grid{grid-template-columns:1fr 1fr} }
           @media(max-width:600px){ .config-grid{grid-template-columns:1fr} }
           .config-field{display:flex;flex-direction:column;gap:4px}
           .config-field label{font-size:11px;font-weight:700;color:#64748b}
           .config-field input,.config-field select{height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff}
           .config-field input:focus,.config-field select:focus{border-color:#f59e0b}
-          .ma-list{display:flex;flex-direction:column;gap:14px;margin-top:12px}
-          .ma-row{display:flex;flex-direction:column;gap:12px;background:#fffbeb;border:1px solid #fde68a;border-radius:18px;padding:16px;box-shadow:0 2px 10px rgba(251,191,36,0.07)}
-          .ma-row-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
-          .ma-identity{display:flex;align-items:center;gap:10px}
-          .ma-color{width:18px;height:18px;border-radius:50%;flex-shrink:0;border:2.5px solid #fff;box-shadow:0 0 0 2px #fbbf24}
-          .ma-period{width:60px;height:36px;text-align:center;font-weight:800;font-size:15px;border-radius:10px;border:1.5px solid #f59e0b;background:#fff;outline:none;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+          .ma-list{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+          .ma-row{display:flex;flex-direction:column;gap:10px;background:#fffbeb;border:1px solid #fde68a;border-radius:16px;padding:14px;box-shadow:0 1px 4px rgba(180,120,20,0.06)}
+          .ma-row-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+          .ma-identity{display:flex;align-items:center;gap:8px}
+          .ma-color{position:relative;width:16px;height:16px;border-radius:50%;flex-shrink:0;border:2px solid #fff;box-shadow:0 0 0 2px #fbbf24;cursor:pointer;overflow:hidden}
+          .ma-color-input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:none;padding:0}
+          .ma-period{width:58px;height:32px;text-align:center;font-weight:800;font-size:14px;border-radius:8px;border:1px solid #f59e0b;background:#fff;outline:none}
           .ma-period:focus{border-color:#d97706;box-shadow:0 0 0 3px #fef3c7}
-          .ma-unit{font-size:12px;color:#92400e;font-weight:800;letter-spacing:0.04em}
-          .ma-remove{width:32px;height:32px;border-radius:10px;border:1px solid #fecaca;background:#fff;color:#fca5a5;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;transition:all .15s}
-          .ma-remove:hover{background:#fef2f2;color:#ef4444;border-color:#fca5a5}
-          .ma-row-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-          .ma-field{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #fde68a;border-radius:14px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,0.03)}
-          .ma-field-head{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;min-width:0}
-          .ma-field-label{font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;min-width:38px;text-align:center;letter-spacing:0.02em;flex-shrink:0}
-          .ma-field-label.golden{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
-          .ma-field-label.dead{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
-          .ma-action-box{flex:1;display:inline-flex;align-items:center;gap:6px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:4px 6px;min-width:0;flex-wrap:nowrap;white-space:nowrap}
-          .ma-action-box select{flex:1;min-width:64px;max-width:90px;height:28px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;font-weight:700;background:#fff;padding:0 6px}
-          .ma-action-box input{flex:0 0 52px;width:52px;height:28px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:800;text-align:center;background:#fff}
-          .ma-action-box .pct{font-size:11px;color:#92400e;font-weight:800;flex-shrink:0}
+          .ma-unit{font-size:12px;color:#92400e;font-weight:800}
+          .ma-remove{width:32px;height:32px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#94a3b8;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;transition:all .15s}
+          .ma-remove:hover{background:#fef2f2;color:#ef4444;border-color:#fecaca}
+          .ma-row-actions{display:flex;gap:6px;align-items:center}
+          .add-signal-btn{height:32px;padding:0 10px;border:1px solid #fcd34d;background:#fff;color:#b45309;border-radius:8px;cursor:pointer;font-size:11px;font-weight:800;white-space:nowrap}
+          .add-signal-btn:hover{background:#fef3c7}
+          .ma-row-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+          .ma-row-fields.is-single{grid-template-columns:1fr}
+          .ma-field{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #fde68a;border-radius:12px;padding:10px}
+          .ma-field-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+          .ma-action-box{flex:1;display:flex;align-items:center;gap:6px;min-width:0}
+          .ma-signal,.ma-action{height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;font-weight:800;background:#f8fafc;padding:0 6px;color:#334155}
+          .ma-signal[data-v="golden"]{color:#b45309;border-color:#fcd34d;background:#fffbeb}
+          .ma-signal[data-v="dead"]{color:#b91c1c;border-color:#fecaca;background:#fef2f2}
+          .ma-action[data-v="sell"]{color:#dc2626}
+          .ma-action[data-v="buy"]{color:#2563eb}
+          .ma-pct{width:52px;height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:800;text-align:center;background:#fff}
+          .ma-action-box .pct{font-size:11px;color:#92400e;font-weight:800}
+          .signal-remove{border:1px solid #fecaca;background:#fff;color:#fca5a5;border-radius:8px;min-width:28px;height:28px;font-size:11px;font-weight:800;cursor:pointer;flex-shrink:0}
+          .signal-remove:hover{background:#fef2f2;color:#ef4444;border-color:#fca5a5}
           .ma-field-opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:start}
-          .ma-field-opts .ma-mini-opt:first-child{grid-column:1 / -1}
-          .ma-field-opts .ma-mini-opt:last-child:nth-child(even){grid-column:1 / -1}
-          .ma-mini-opt{display:flex;align-items:center;gap:6px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:6px 8px;font-size:10px;font-weight:700;color:#78350f;transition:border-color .15s;min-width:0;overflow:hidden;flex-wrap:wrap}
-          .ma-mini-opt--grouped{gap:14px;justify-content:space-between}
-          .ma-mini-group{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
-          .ma-mini-opt:hover{border-color:#fcd34d}
-          .ma-mini-opt span{white-space:nowrap;flex-shrink:0}
-          .ma-mini-opt input{width:36px;height:26px;text-align:center;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;font-weight:800;background:#fff;flex-shrink:0}
-          .ma-mini-opt select{flex:1;min-width:60px;max-width:100%;height:26px;border-radius:8px;border:1px solid #e2e8f0;font-size:10px;font-weight:700;background:#fff;padding:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+          .ma-mini-opt{display:flex;align-items:center;gap:6px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:6px 8px;font-size:11px;font-weight:600;color:#475569;min-width:0;flex-wrap:wrap}
+          .ma-mini-opt input{width:40px;height:32px;text-align:center;border-radius:8px;border:1px solid #e2e8f0;font-size:13px;font-weight:700;background:#fff}
+          .ma-mini-opt select{flex:1;min-width:60px;height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:11px;font-weight:600;background:#fff;padding:0 4px;color:#334155}
+          .ma-condtrade-val,.ma-condcandle-val,.ma-condma-val{width:54px !important}
+          /* 실현(청산) — 바이올렛 테마로 MA와 명확히 구분 */
+          #exit-list{display:flex;flex-direction:column;gap:10px}
+          .ma-row.exit-row{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:16px;padding:14px;box-shadow:0 1px 4px rgba(109,88,246,0.08)}
+          .exit-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+          .exit-title{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#5b21b6}
+          .exit-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:#7c3aed;color:#fff;font-size:10px;font-weight:800}
+          .exit-remove:hover{background:#ede9fe !important;color:#7c3aed !important;border-color:#c4b5fd !important}
+          .exit-main{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px;background:#fff;border:1px solid #ede9fe;border-radius:10px;padding:8px}
+          .exit-main .lbl{font-size:11px;font-weight:800;color:#6d28d9}
+          .exit-basis{height:32px;border-radius:8px;border:1px solid #c4b5fd;font-size:11px;font-weight:800;background:#ede9fe;color:#5b21b6;padding:0 8px}
+          .exit-inputs{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#6d28d9;font-weight:700}
+          .exit-pct,.exit-sell{width:52px;height:32px;border-radius:8px;border:1px solid #e2e8f0;text-align:center;font-weight:800;font-size:13px;background:#fff}
+          .exit-opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:8px}
+          .exit-opt{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #ede9fe;border-radius:8px;padding:6px 8px;font-size:11px;font-weight:600;color:#5b21b6;justify-content:center}
+          .exit-opt select{flex:1;min-width:60px;height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:11px;font-weight:600;background:#fff;padding:0 4px;color:#334155}
+          .exit-skip{width:38px;height:32px;border-radius:8px;border:1px solid #e2e8f0;text-align:center;font-weight:800;font-size:13px;background:#fff}
+          /* 섹션 헤더 */
+          .section-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+          .section-title{font-size:12px;font-weight:800}
+          .section-title.ma{color:#92400e}
+          .section-title.exit{color:#5b21b6}
+          .section-badge{font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px;letter-spacing:0.02em}
+          .section-badge.ma{background:#fef3c7;color:#b45309;border:1px solid #fde68a}
+          .section-badge.exit{background:#ede9fe;color:#6d28d9;border:1px solid #ddd6fe}
+          .section-desc{font-size:10px;color:#94a3b8;font-weight:500}
+          .section-box{border-top:1px solid #f1f5f9;padding-top:12px}
+          .section-box.exit{border:1px solid #ede9fe;background:#faf9ff;border-radius:12px;padding:12px}
+          .section-box.ma{border:1px solid #fef3c7;background:#fffdf5;border-radius:12px;padding:12px}
+          .section-box.exec{border:1px solid #e2e8f0;background:#f8fafc;border-radius:12px;padding:12px}
+          .section-title.exec{color:#334155}
+          .add-ma-btn{margin-top:8px;width:100%;height:32px;border:1px dashed #fbbf24;background:#fff;color:#b45309;border-radius:8px;cursor:pointer;font-size:12px;font-weight:800}
+          .add-ma-btn:hover{background:#fef3c7}
+          .add-exit-btn{margin-top:8px;width:100%;height:32px;border:1px dashed #a78bfa;background:#fff;color:#6d28d9;border-radius:8px;cursor:pointer;font-size:12px;font-weight:800}
+          .add-exit-btn:hover{background:#ede9fe}
+          .ma-help{cursor:help;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+          .ma-popover{position:fixed;max-width:280px;background:#1e293b;color:#fff;font-size:11px;line-height:1.5;padding:10px 12px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.25);z-index:999;display:none;pointer-events:none;white-space:normal}
+          .ma-popover.show{display:block;pointer-events:auto}
           #stock-search {font-size: 16px !important;}
           @media(max-width:600px){
-            .ma-row{padding:12px}
+            .ma-row,.ma-row.exit-row{padding:10px}
             .ma-row-fields{grid-template-columns:1fr}
             .ma-field{padding:10px}
             .ma-field-opts{grid-template-columns:1fr}
-            .ma-field-opts .ma-mini-opt:first-child{grid-column:auto}
-            .ma-field-opts .ma-mini-opt:last-child:nth-child(even){grid-column:auto}
-            .ma-mini-opt select{font-size:11px}
+            .exit-opts{grid-template-columns:1fr}
+            .section-box.ma,.section-box.exit{padding:10px}
           }
           @media(max-width:820px) and (min-width:601px){
             .ma-row-fields{grid-template-columns:1fr}
             .ma-field-opts{grid-template-columns:1fr 1fr}
           }
-          .add-ma-btn{margin-top:8px;width:100%;height:32px;border:1px dashed #fbbf24;background:#fffbeb;color:#d97706;border-radius:8px;cursor:pointer;font-size:12px;font-weight:700}
-          .add-ma-btn:hover{background:#fef3c7}
-          .tp-sl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+          .tp-sl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+          .tp-sl-grid.is-single{grid-template-columns:1fr}
           .tp-sl-opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
           @media(max-width:600px){
             .tp-sl-grid{grid-template-columns:1fr}
@@ -1197,15 +2530,13 @@ export default (w: Window) => {
           .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;border:none;box-shadow:0 6px 20px rgba(245,158,11,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
           .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(245,158,11,0.55)}
           .share-fab.copied{background:#10b981;box-shadow:0 6px 20px rgba(16,185,129,0.45)}
-          .sim-reset-btn{margin-left:auto;height:28px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.18);color:#fff;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
-          .sim-reset-btn:hover{background:rgba(255,255,255,0.28)}
           .result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:12px 14px;background:#f8fafc;border-top:1px solid #f1f5f9}
           .result-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;text-align:center}
           .result-label{font-size:10px;font-weight:700;color:#94a3b8;letter-spacing:0.02em}
           .result-value{margin-top:4px;font-size:16px;font-weight:800;color:#1e293b;line-height:1}
           .result-sub{display:flex;gap:10px;flex-wrap:wrap;padding:8px 14px 12px;background:#f8fafc;border-top:1px solid #f1f5f9;font-size:11px;color:#64748b}
           .result-sub b{color:#334155}
-          .history-btn{margin-left:auto;height:26px;padding:0 10px;border-radius:999px;border:1px solid #f59e0b;background:#fff;color:#d97706;font-size:11px;font-weight:700;cursor:pointer}
+          .history-btn{margin-left:auto;height:32px;padding:0 10px;border-radius:999px;border:1px solid #f59e0b;background:#fff;color:#d97706;font-size:11px;font-weight:700;cursor:pointer}
           .history-btn:hover{background:#fffbeb}
           .history-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(15,23,42,0.45);z-index:50;padding:16px}
           .history-modal.show{display:flex}
@@ -1214,7 +2545,38 @@ export default (w: Window) => {
           .history-title{font-size:14px;font-weight:800;color:#1e293b}
           .history-close{width:32px;height:32px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer}
           .history-close:hover{background:#f8fafc}
-          @media(max-width:600px){ .result-grid{grid-template-columns:1fr} .result-value{font-size:15px} .history-panel{max-height:90vh} }
+          .hist-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px 14px;background:#f8fafc;border-bottom:1px solid #f1f5f9}
+          .hist-stat .s{font-size:10px;font-weight:700;color:#7c3aed}
+          .hist-stat{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:7px 4px;text-align:center}
+          .hist-stat .k{font-size:10px;font-weight:700;color:#94a3b8}
+          .hist-stat .v{margin-top:2px;font-size:14px;font-weight:800;color:#1e293b}
+          .hist-sub{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 14px;font-size:11px;color:#64748b;border-bottom:1px solid #f1f5f9;background:#fff}
+          .hist-sub b{color:#1e293b}
+          .hist-scroll{overflow:auto;max-height:62vh}
+          .hist-table{width:100%;min-width:880px;border-collapse:collapse;font-size:11px}
+          .hist-table thead{position:sticky;top:0;background:#fff;z-index:1}
+          .hist-table .hgroup th{padding:6px 8px;text-align:center;font-weight:800;color:#334155;border-bottom:1px solid #f1f5f9;background:#f8fafc}
+          .hist-table .hgroup th.hold{color:#5b21b6;background:#f5f3ff}
+          .hist-table thead tr:last-child th{padding:7px 8px;color:#64748b;border-bottom:1px solid #e2e8f0;white-space:nowrap}
+          .hist-table td{padding:6px 8px;border-bottom:1px solid #f1f5f9;white-space:nowrap}
+          .hist-table .num{text-align:right;font-variant-numeric:tabular-nums}
+          .hist-table th.hold,.hist-table td.hold{background:#faf9ff}
+          .hbadge{display:inline-block;min-width:64px;padding:2px 8px;border-radius:999px;font-weight:800;font-size:10px;color:#fff;text-align:center}
+          .hbadge.buy{background:#3b82f6}
+          .hbadge.sell{background:#ef4444}
+          .hbadge.exit{background:#7c3aed}
+          .hcond{display:inline-block;margin:1px 2px;padding:1px 7px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:10px;font-weight:700;cursor:help;white-space:nowrap}
+          .hcond-sum{display:inline-block;padding:2px 10px;border-radius:999px;background:#ede9fe;color:#6d28d9;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap;border:1px solid #ddd6fe}
+          .hcond-sum:hover{background:#ddd6fe}
+          .cond-detail-row{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:12px}
+          .hdetail{font-size:11px;color:#334155;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:3px 8px;margin:2px 0;line-height:1.5}
+          .cond-detail-row .k{min-width:52px;font-weight:800;color:#94a3b8;font-size:11px}
+          .cond-detail-row .v{color:#1e293b;font-weight:600}
+          .cond-detail-reason{margin-top:8px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.6;color:#475569}
+          .hrow:hover{background:#f8fafc}
+          td.dim{color:#94a3b8}
+          @media(max-width:600px){.hist-summary{grid-template-columns:repeat(2,1fr)}}
+          @media(max-width:600px){ .result-value{font-size:15px} .history-panel{max-height:90vh} }
         </style>
 
         <div class="header">
@@ -1236,71 +2598,88 @@ export default (w: Window) => {
                 <div id="search-results" class="search-results"></div>
               </div>
             </div>
-            <div style="padding:8px 14px;font-size:12px;color:#64748b" id="chart-title">삼성전자 (005930) · 일봉 1년</div>
+            <div style="padding:8px 14px;font-size:12px;color:#64748b" id="chart-title">로딩 중...</div>
             <div class="chart-wrap">
               <stock-chart id="sim-chart" enabled-control enabled-readout show-last-line></stock-chart>
             </div>
-            <div class="result-grid" id="sim-result">
-              <div class="result-item"><div class="result-label">보유주식수</div><div class="result-value" id="sim-shares">-주</div></div>
-              <div class="result-item"><div class="result-label">평가금액</div><div class="result-value" id="sim-eval">-원</div></div>
-              <div class="result-item"><div class="result-label">수익률</div><div class="result-value" id="sim-rate">-</div></div>
+            <div id="sim-range-row" style="display:flex;align-items:center;gap:8px;padding:4px 14px 10px;background:#fff;border-top:1px solid #f1f5f9;font-size:11px;color:#64748b">
+              <div style="display:flex;flex-direction:column;gap:4px;min-width:70px">
+              <span id="sim-range-start" style="font-weight:700;white-space:nowrap;font-size:10px;line-height:14px">-</span>
+              <label title="차트 데이터 기준 추세 구간 표시" style="display:inline-flex;align-items:center;gap:3px;font-size:10px;line-height:14px;font-weight:700;color:#64748b;cursor:pointer;white-space:nowrap"><input id="sim-show-trend" type="checkbox" style="width:12px;height:12px;margin:0" />추세</label>
+              </div>
+              <range-slider id="sim-zone" orientation="horizontal" min="0" max="359" step="1" style="flex:1">
+                <thumb-group label="구간" color="#7c3aed">
+                  <thumb name="start" value="0"></thumb>
+                  <thumb name="end" min="start" value="359"></thumb>
+                </thumb-group>
+              </range-slider>
+              <div style="display: flex; flex-direction: column;gap:4px;min-width:70px;align-items:flex-end">
+              <span id="sim-range-end" style="font-weight:700;white-space:nowrap;text-align:right;font-size:10px;line-height:14px">-</span>
+              <span id="sim-range-count" style="font-weight:800;color:#7c3aed;white-space:nowrap;font-size:10px;line-height:14px">-</span>
+              </div>
             </div>
-            <div class="result-sub" id="sim-result-detail">
-              <span>현금 <b id="sim-cash">-원</b></span>
-              <span>주식평가 <b id="sim-holding">-원</b></span>
-              <span>손익 <b id="sim-profit">-원</b></span>
-              <span style="color:#94a3b8"><span id="sim-trade-count">0건</span> 체결</span>
-              <button type="button" class="history-btn" id="sim-history-btn">거래내역보기</button>
-            </div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 14px 12px;background:#fffbeb;border-top:1px solid #fef3c7;font-size:11px;color:#92400e" id="sim-hold-row">
-              <span>단순보유 <b id="sim-hold-rate" style="color:#64748b">-</b> <span style="color:#94a3b8">(<span id="sim-hold-first">-</span> → <span id="sim-hold-last">-</span>)</span></span>
-              <span>평가 <b id="sim-hold-eval">-원</b></span>
-              <span style="margin-left:auto;color:#94a3b8">첫틱~마지막틱 종가 기준 · 매수 후 보유 가정</span>
-            </div>
+            <form id="sim-candle-form" style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;padding:8px 14px;background:#fffbeb;border-top:1px solid #fef3c7" onsubmit="return false">
+              <div class="config-field" style="flex:1;min-width:90px"><label style="font-size:11px;font-weight:700;color:#64748b">캔들 수</label><input id="sim-candle-count" type="number" min="30" max="1000" value="360" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;font-size:16px;"/></div>
+              <div class="config-field" style="flex:1;min-width:120px"><label style="font-size:11px;font-weight:700;color:#64748b">타임프레임</label><select id="sim-timeframe" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box"><option value="min:1">1분</option><option value="min:3">3분</option><option value="min:5">5분</option><option value="min:15">15분</option><option value="min:30">30분</option><option value="min:60">60분</option><option value="day:1" selected>일봉</option><option value="week:1">주봉</option><option value="month:1">월봉</option></select></div>
+              <div class="config-field" id="sim-end-date-field" style="flex:1;min-width:110px"><label style="font-size:11px;font-weight:700;color:#64748b">종료일 (비우면 최신)</label><input id="sim-end-date" type="date" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;"/></div>
+              <div class="config-field" id="sim-end-datetime-field" style="flex:1;min-width:150px;display:none"><label style="font-size:11px;font-weight:700;color:#64748b">종료일시 (비우면 최신)</label><input id="sim-end-datetime" type="datetime-local" step="60" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;"/></div>
+              <button type="submit" id="sim-reload-btn" style="height:32px;padding:0 14px;border-radius:999px;border:1px solid #f59e0b;background:#fff;color:#d97706;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;align-self:end">다시불러오기</button>
+            </form>
           </div>
 
           <form class="card" id="sim-config" style="margin-top:12px" onsubmit="return false">
-            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">⚙️ 설정</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#fff;cursor:pointer;user-select:none"><input id="sim-show-cross" type="checkbox" style="width:14px;height:14px" />크로스표시</label><select id="sim-preset-select" class="sim-preset-select" style="margin-left:8px;height:28px;padding:0 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.18);color:#fff;font-size:11px;font-weight:700;cursor:pointer"><option value="" style="color:#334155">초기화 선택</option><option value="tp-up" style="color:#334155">[실현] 상승매수, 하락매도</option><option value="tp-down" style="color:#334155">[실현] 상승매도, 하락매수</option><option value="hold-up" style="color:#334155">[보유] 상승매수, 하락매도</option><option value="hold-down" style="color:#334155">[보유] 상승매도, 하락매수</option></select></div>
+            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">⚙️ 설정</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#fff;cursor:pointer;user-select:none"><input id="sim-show-cross" type="checkbox" style="width:14px;height:14px" />크로스표시</label></div>
+            <div style="background:#f8fafc;border-bottom:1px solid #f1f5f9">
+              <div class="result-grid" id="sim-result">
+                <div class="result-item"><div class="result-label">보유주식수</div><div class="result-value" id="sim-shares">-주</div></div>
+                <div class="result-item"><div class="result-label">평가금액</div><div class="result-value" id="sim-eval">-원</div></div>
+                <div class="result-item"><div class="result-label">수익률</div><div class="result-value" id="sim-rate">-</div></div>
+              </div>
+              <div class="result-sub" id="sim-result-detail">
+                <span>현금 <b id="sim-cash">-원</b></span>
+                <span>주식평가 <b id="sim-holding">-원</b></span>
+                <span>손익 <b id="sim-profit">-원</b></span>
+                <span>수수료 <b id="sim-fee-total">-원</b></span>
+                <span style="color:#94a3b8"><span id="sim-trade-count">0건</span> 체결</span>
+                <button type="button" class="history-btn" id="sim-history-btn">거래내역보기</button>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;padding:8px 14px 12px;background:#fffbeb;border-top:1px solid #fef3c7;font-size:11px;color:#92400e" id="sim-hold-row">
+                <span>단순보유 <b id="sim-hold-rate" style="color:#64748b">-</b> <span style="color:#94a3b8">(<span id="sim-hold-first">-</span> → <span id="sim-hold-last">-</span>)</span></span>
+                <span>평가 <b id="sim-hold-eval">-원</b></span>
+                <span style="margin-left:auto;color:#94a3b8">첫틱~마지막틱 종가 기준 · 매수 후 보유 가정</span>
+              </div>
+            </div>
             <div style="padding:12px 14px;display:flex;flex-direction:column;gap:12px">
-              <div class="config-grid">
+              <div class="config-grid" style="grid-template-columns:1fr 1fr">
                 <div class="config-field"><label>투자원금 (원)</label><input id="sim-capital" type="number" min="100000" step="100000" value="100000000" style="font-size: 16px;" /></div>
-                <div class="config-field"><label>캔들 수</label><input id="sim-candle-count" type="number" min="30" max="1000" value="360" style="font-size: 16px;"/></div>
-                <div class="config-field"><label>타임프레임</label>
-                  <select id="sim-timeframe">
-                    <option value="min:1">1분</option><option value="min:3">3분</option><option value="min:5">5분</option><option value="min:15">15분</option><option value="min:30">30분</option><option value="min:60">60분</option>
-                    <option value="day:1" selected>일봉</option><option value="week:1">주봉</option><option value="month:1">월봉</option>
-                  </select>
-                </div>
+                <div class="config-field"><label><span class="ma-help" data-help="거래금액(체결금액) 대비 수수료율. 매수 시 체결금액 * 수수료, 매도 시 체결금액 * 수수료가 차감됩니다. 예: 0.015% → 1,000,000원 거래 시 150원.">수수료 (%)</span></label><input id="sim-fee" type="number" min="0" max="1" step="0.001" value="0.015" style="font-size: 16px;" /></div>
               </div>
-              <div style="border-top:1px solid #fef3c7;padding-top:12px">
-                <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:8px">익절 / 손절 (평균단가 기준 · MA와 중복매매 방지)</div>
-                <div class="tp-sl-grid">
-                  <label style="display:flex;flex-direction:column;gap:6px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:10px">
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#166534"><input id="sim-tp-enabled" type="checkbox" checked style="width:14px;height:14px; font-size: 16px;" /> 익절</span>
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#14532d;flex-wrap:wrap">수익 <input id="sim-tp" type="number" min="1" max="100" value="15" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size: 16px;" />% 시 <input id="sim-tp-sell" type="number" min="1" max="100" value="100" style="width:52px;height:28px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size: 16px;" />% 매도</span>
-                    <div class="tp-sl-opts">
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">캔들 <select id="sim-tp-candle" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #bbf7d0;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="bull">양봉</option><option value="bear">음봉</option></select></label>
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">거래량 <select id="sim-tp-volume" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #bbf7d0;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="higher">높을때</option><option value="lower">낮을때</option></select></label>
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#bbf7d0;color:#14532d;justify-content:center">이후 <input id="sim-tp-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #bbf7d0;text-align:center;font-weight:700;font-size:12px;" />회 MA매매 스킵</label>
-                    </div>
-                  </label>
-                  <label style="display:flex;flex-direction:column;gap:6px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:10px">
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#991b1b"><input id="sim-sl-enabled" type="checkbox" checked style="width:14px;height:14px" /> 손절</span>
-                    <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#7f1d1d;flex-wrap:wrap">손실 <input id="sim-sl" type="number" min="1" max="100" value="10" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size: 16px;" />% 시 <input id="sim-sl-sell" type="number" min="1" max="100" value="100" style="width:52px;height:28px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size: 16px;" />% 매도</span>
-                    <div class="tp-sl-opts">
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">캔들 <select id="sim-sl-candle" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #fecaca;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="bull">양봉</option><option value="bear">음봉</option></select></label>
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">거래량 <select id="sim-sl-volume" style="flex:1;min-width:60px;height:26px;border-radius:8px;border:1px solid #fecaca;font-size:10px;font-weight:700;background:#fff;padding:0 4px"><option value="any">무관</option><option value="higher">높을때</option><option value="lower">낮을때</option></select></label>
-                      <label class="ma-mini-opt" style="background:#fff;border-color:#fecaca;color:#7f1d1d;justify-content:center">이후 <input id="sim-sl-skip" type="number" min="0" max="20" value="5" style="width:36px;height:26px;border-radius:8px;border:1px solid #fecaca;text-align:center;font-weight:700;font-size:12px;" />회 MA매매 스킵</label>
-                    </div>
-                  </label>
-                </div>
-                <div style="font-size:10px;color:#94a3b8;margin-top:6px">평균단가(총매입금액/보유주수) 대비 현재 종가 수익률 기준 · <b>수익 N%</b> 도달 시 보유주수의 M% 익절, <b>손실 N%</b> 도달 시 M% 손절. 체결 시 해당 봉 + 이후 N회 동안 이동평균선 매매를 건너뜁니다 (중복 방지).</div>
+              <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:4px;flex-wrap:wrap;align-items:center">
+                <select id="sim-optimize-preset" title="최적화 성향: 적극형(λ0) / 균형형(λ0.5) / 안정형(λ1). score = profit − λ·MDD" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 10px;cursor:pointer"><option value="1">안정형</option><option value="0.5" selected>균형형</option><option value="0">적극형</option></select>
+                <select id="sim-trend-type" title="추세 예상: 최적화 탐색 방향 prior. 다이나믹은 MACD·RSI·OBV 합성 판단" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 10px;cursor:pointer"><option value="0.5" selected>추세 모름</option><option value="1">상승 예상</option><option value="0">하락 예상</option><option value="0.5">횡보 예상</option><option value="dynamic">다이나믹(MACD·RSI·OBV)</option><option value="regrow">추세구간 진입시 생성</option></select>
+                <button type="button" id="sim-optimize-btn" style="height:32px;padding:0 14px;border-radius:999px;border:1px solid #f59e0b;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(245,158,11,0.3);display:inline-flex;align-items:center;gap:4px">🎲 최적화</button>
               </div>
-              <div style="margin-top:12px">
-                <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px">이동평균선 (추가/삭제, 틱수·피라미딩 설정)</div>
+              <div class="section-box exec" style="margin-top:12px">
+                <div class="section-head"><span class="section-title exec">🔧 실전 체결</span></div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+                  <label title="체결 시점: 신호봉 종가(낙관) / 다음봉 시가(현실)" style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#334155">체결<select id="sim-exec-delay" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 8px;cursor:pointer"><option value="0" selected>당일종가</option><option value="1">다음봉시가</option></select></label>
+                  <label title="슬리피지 %: 매수는 높게, 매도는 낮게 체결" style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#334155">슬립<input id="sim-slippage" type="number" min="0" max="100" step="0.05" value="0" style="width:64px;height:32px;border-radius:999px;border:1px solid #e2e8f0;font-size:11px;font-weight:700;padding:0 8px" />%</label>
+                  <label title="체결률 %: 주문 대비 실제 체결 비율" style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#334155">체결<input id="sim-fillrate" type="number" min="1" max="100" step="1" value="100" style="width:64px;height:32px;border-radius:999px;border:1px solid #e2e8f0;font-size:11px;font-weight:700;padding:0 8px" />%</label>
+                </div>
+                <div style="font-size:10px;color:#94a3b8;margin-top:6px">조건 탐색이 아닌 실체결 가정. 최적화 탐색·공유 결과에 함께 적용됩니다.</div>
+              </div>
+              <div style="display:flex;justify-content:flex-end;margin:8px 0 4px"><select id="sim-strategy-select" title="전략 세트 선택 (단일·복수 공통)" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 10px;cursor:pointer;max-width:220px"></select></div>
+              <div class="section-box exit">
+                <div class="section-head"><span class="section-title exit">💜 실현</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#5b21b6;white-space:nowrap" title="같은 봉에 겹친 실현 조건 확정 방식 (매도% 기준)">조건중복<select id="sim-exit-resolve-mode" style="height:32px;border-radius:8px;border:1px solid #c4b5fd;font-size:11px;font-weight:800;background:#ede9fe;color:#5b21b6;padding:0 4px;outline:none"><option value="minFirst">최소값 우선</option><option value="maxFirst">최대값 우선</option><option value="all">복리 합산</option></select></label></div>
+                <div id="exit-list"></div>
+                <button type="button" class="add-exit-btn" id="add-exit-btn">+ 실현 조건 추가</button>
+                <div style="font-size:10px;color:#94a3b8;margin-top:6px">조건 충족 시 보유주수의 일부를 청산하고, 이후 N회 MA 매매를 스킵합니다.</div>
+              </div>
+              <div class="section-box ma" style="margin-top:12px">
+                <div class="section-head"><span class="section-title ma">📈 진입점</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#92400e;cursor:pointer;user-select:none;white-space:nowrap" title="체크 시 최장기 이평선이 형성되기 전 구간에서는 매매하지 않고, 모든 이평선이 존재하는 봉부터 처리합니다"><input id="sim-require-all-mas" type="checkbox" style="width:14px;height:14px" />이평선 존재시 처리</label><label style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#92400e;white-space:nowrap" title="같은 봉에 겹친 조건 확정 방식 (매수/매도% 기준)">조건중복<select id="sim-resolve-mode" style="height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:11px;font-weight:700;background:#fff;color:#92400e;padding:0 4px;outline:none"><option value="minFirst">최소값 우선</option><option value="maxFirst">최대값 우선</option><option value="all">복리 합산</option></select></label></div>
                 <div id="ma-list" class="ma-list"></div>
                 <button type="button" class="add-ma-btn" id="add-ma-btn">+ 이동평균선 추가</button>
-                <div style="font-size:10px;color:#94a3b8;margin-top:6px">골든/데드: 종가가 해당 MA를 상향/하향 돌파 시 · <b>매수 %</b>는 보유현금 기준, <b>매도 %</b>는 보유주식 기준.</div>
+                <div style="font-size:10px;color:#94a3b8;margin-top:6px">신호별 <b>매수 %</b>는 현금 기준, <b>매도 %</b>는 보유주식 기준.</div>
               </div>
             </div>
           </form>
@@ -1315,7 +2694,17 @@ export default (w: Window) => {
             <div id="sim-history-body"></div>
           </div>
         </div>
+        <div class="history-modal" id="sim-cond-modal" role="dialog" aria-modal="true" aria-label="조건 상세">
+          <div class="history-panel" style="width:min(480px,100%)">
+            <div class="history-head">
+              <div class="history-title" id="sim-cond-title">🔍 조건 상세</div>
+              <button type="button" class="history-close" id="sim-cond-close" aria-label="닫기">✕</button>
+            </div>
+            <div id="sim-cond-body" style="padding:12px 14px;overflow:auto;max-height:60vh"></div>
+          </div>
+        </div>
         <button id="sim-share-fab" class="share-fab" title="공유하기">🔗</button>
+        <div id="ma-help-popover" class="ma-popover" role="tooltip"></div>
       `;
     }
   }

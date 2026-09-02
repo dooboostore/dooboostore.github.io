@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { defineSwcAppBody, SwcAppInterface } from '@dooboostore/simple-web-component';
 import { UrlUtils } from "@dooboostore/core";
 import { defineServices } from "@center-src/services";
-import { componentFactories } from "@center-src/components";
+import { componentFactories } from "@dooboostore/simple-web-component-library";
 import { pageFactories } from "@center-src/pages";
 
 const w = window;
