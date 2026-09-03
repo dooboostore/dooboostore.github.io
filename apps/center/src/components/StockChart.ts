@@ -447,12 +447,14 @@ export default (w: Window) => {
       const canvas = this.chartCanvas;
       if (!canvas) return -1;
       const rect = canvas.getBoundingClientRect();
-      const plotW = Math.max(1, rect.width - this.padL - this.padR);
-      const dataLen = Math.ceil(this.viewEnd) - Math.floor(this.viewStart) + 1;
-      const frac = (clientX - rect.left - this.padL) / plotW;
-      const idx = Math.round(this.viewStart + frac * dataLen - 0.5);
+      // 그리기(xCandle)와 동일한 기준: effective padR + floor(viewStart) 원점
+      const padR = this.hiddenYLabel ? 8 : this.padR;
+      const plotW = Math.max(1, rect.width - this.padL - padR);
       const s = Math.floor(this.viewStart),
         eI = Math.ceil(this.viewEnd);
+      const dataLen = eI - s + 1;
+      const frac = (clientX - rect.left - this.padL) / plotW;
+      const idx = Math.round(s + frac * dataLen - 0.5);
       return idx >= s && idx <= eI ? idx : -1;
     }
 
@@ -975,7 +977,7 @@ export default (w: Window) => {
         ctx.setLineDash([]);
         // x축 날짜 필 하이라이트
         ctx.font = "bold 10px -apple-system, sans-serif";
-        const selLabel = d.date.slice(5);
+        const selLabel = d.date.includes(' ') ? d.date : d.date.slice(5);
         const selTw = ctx.measureText(selLabel).width + 10;
         ctx.fillStyle = "#33475b";
         ctx.beginPath();

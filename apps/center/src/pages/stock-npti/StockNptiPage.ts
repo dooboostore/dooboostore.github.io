@@ -132,6 +132,7 @@ export default (w: Window) => {
     private baselineAmount = 0;
     private currentCode = 'A005930';
     private currentName = '삼성전자';
+    private lastPrice: { close:number; base:number } | null = null;
     private windowSize = 50;
     private viewStart = 0;
     private segScores: number[][] = [];
@@ -206,6 +207,12 @@ export default (w: Window) => {
         this.marketValue = cap > 0 ? cap : 1e14;
         this.baselineAmount = this.candles.length ? avg(this.candles.map(c=>c.close*c.volume)) : 0;
         this.viewStart = Math.max(0, this.candles.length - this.windowSize);
+        // 현재가/등락률 조회 (선택 후 헤더에 표시)
+        try{
+          const sp:any = await (this.tossService as any).getStockPrice?.(code).catch(()=>null);
+          if(sp && sp.close!=null && sp.base!=null) this.lastPrice = { close:Number(sp.close), base:Number(sp.base) };
+          else this.lastPrice = null;
+        }catch{ this.lastPrice = null; }
 
         this.updateHeroSection();
         this.drawChart();
@@ -325,9 +332,10 @@ export default (w: Window) => {
     private updateHeroSection(): void {
       const form = this.shadowRoot?.querySelector('#npti-select-form') as HTMLElement;
       if(!form) return;
+      const pricePart = (()=>{ if(!this.lastPrice) return ''; const isUS=/^(US|NAS|AMX|NYS)/.test(this.currentCode); const rate=this.lastPrice.base?((this.lastPrice.close-this.lastPrice.base)/this.lastPrice.base)*100:null; const rateStr=rate==null?'':`${rate>=0?'+':''}${rate.toFixed(2)}%`; const rateColor=rate==null?'#64748b':rate>0?'#dc2626':rate<0?'#2563eb':'#64748b'; const priceStr=`${Math.round(this.lastPrice.close).toLocaleString()}${isUS?'$':'원'}`; return ` · <span style="font-weight:800;color:#1e293b">${priceStr}</span> <span style="font-weight:700;color:${rateColor}">${rateStr}</span>`; })();
       form.innerHTML = `
         <div class="npti-hero">
-          <div class="npti-hero-label">🧬 ${this.currentName} <span style="color:#cbd5e1;font-weight:600">${this.currentCode}</span> · 전체 1년 NPTI</div>
+          <div class="npti-hero-label">🧬 ${this.currentName} <span style="color:#cbd5e1;font-weight:600">${this.currentCode}</span>${pricePart} · 전체 1년 NPTI</div>
           <label class="npti-result-item">
             <input type="radio" name="npti-pick" value="body" checked class="npti-radio">
             <span class="npti-radio-icon" title="이 결과로 레이더 보기">
@@ -409,15 +417,40 @@ export default (w: Window) => {
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       const q = input?.value.trim();
       if(!q) return;
-      const list = await this.tossService.searchProduct(q);
       const box = this.shadowRoot?.querySelector('#search-results') as HTMLElement;
+      const btn = this.shadowRoot?.querySelector('#stock-search-btn') as HTMLButtonElement;
+      if(box){ box.innerHTML = `<div style="padding:12px;color:#64748b;display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border:2px solid #e2e8f0;border-top-color:#6366f1;border-radius:50%;display:inline-block;animation:spin 0.7s linear infinite"></span> 검색 중...</div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>`; box.classList.add('show'); }
+      if(btn){ btn.disabled = true; btn.textContent = '검색 중'; }
+      if(input) input.setAttribute('aria-busy','true');
+      let list: readonly any[] = [];
+      try{ list = await this.tossService.searchProduct(q); }catch{ list = []; }
       if(!box) return;
-      box.innerHTML = list.slice(0,10).map(it=>`
+      let priceMap = new Map<string, { close:number; base:number }>();
+      try{
+        const codes = (list as any[]).slice(0,10).map((it:any)=>it.productCode);
+        const prices = await (this.tossService as any).getStockPrices?.(codes).catch(()=>[] as any[]) ?? [];
+        for(const p of prices as any[]){ if(!p?.productCode||p.close==null||p.base==null) continue; priceMap.set(p.productCode, { close:Number(p.close), base:Number(p.base) }); }
+      }catch{}
+      const fmtPrice=(v:number|null)=> v==null?'-':Math.round(v).toLocaleString();
+      box.innerHTML = list.slice(0,10).map(it=>{
+        const isUS = /^(NSQ|NYS|NAS|AMX)/.test(it.market);
+        const pm = priceMap.get(it.productCode);
+        const close = pm?.close ?? (isUS ? it.close?.usd : it.close?.krw);
+        const base = pm?.base ?? (isUS ? it.base?.usd : it.base?.krw);
+        const rate = close!=null&&base!=null&&base!==0 ? ((close-base)/base)*100 : null;
+        const rateStr = rate==null?'':`${rate>=0?'+':''}${rate.toFixed(2)}%`;
+        const rateColor = rate==null?'#64748b':rate>0?'#dc2626':rate<0?'#2563eb':'#64748b';
+        const priceStr = close==null?'':`${fmtPrice(close)}${isUS?'$':'원'}`;
+        return `
         <div class="search-item" data-code="${it.productCode}" data-name="${it.productName}">
           <div style="flex:1"><div style="font-weight:700;font-size:13px">${it.productName}</div><div style="font-size:11px;color:#64748b">${it.productCode} · ${it.market}</div></div>
-          <div style="font-size:11px;color:#0ea5e9">선택</div>
-        </div>`).join('') || `<div style="padding:12px;color:#64748b">결과 없음</div>`;
+          <div style="text-align:right;min-width:92px"><div style="font-size:12px;font-weight:800;color:#1e293b">${priceStr}</div><div style="font-size:11px;font-weight:700;color:${rateColor}">${rateStr}</div></div>
+          <div style="font-size:11px;color:#0ea5e9;margin-left:8px">선택</div>
+        </div>`;
+      }).join('') || `<div style="padding:12px;color:#64748b">결과 없음</div>`;
       box.classList.add('show');
+      if(btn){ btn.disabled = false; btn.textContent = '검색'; }
+      if(input) input.removeAttribute('aria-busy');
     }
 
     @addEventListener('#stock-search', 'keydown')

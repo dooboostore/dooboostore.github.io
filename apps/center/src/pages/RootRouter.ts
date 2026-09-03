@@ -88,7 +88,7 @@ export default (w: Window) => {
     }
 
     @subscribeSwcAppRouteChangeWhileConnected(["/stock-trading-simulation"], { order: 10 })
-    @innerHtmlLight
+    @innerHtmlLight({ filter: (target) => !target.querySelector('center-stock-trading-simulation-page') })
     handleStockTradingSimulation() {
       return `<center-stock-trading-simulation-page/>`;
     }

@@ -1,4 +1,5 @@
 import {
+  changedAttribute,
   elementDefine,
   eventShadow,
   eventWindow,
@@ -11,18 +12,19 @@ import {
 
 const tagName = 'bubble-chart';
 
-/** child <bubble> 요소 한 건 */
+/** child <bubble> 요소 한 건 — general */
 export interface BubbleChartPoint {
-  /** 라벨 (카테고리명 등) */
   label: string;
-  /** X축 값 (회전율 = 거래대금/시가총액, 0~1) */
   x: number;
-  /** Y축 값 (등락률) */
   y: number;
-  /** 버블 크기 값 (시가총액) */
-  r: number;
-  /** 내부 원 크기 값 (거래대금 절대액) */
-  amount: number;
+  /** 0~100 비율 값 (max 시총 대비 %) — 버블 크기決定 */
+  value: number;
+  description?: string;
+  showCenterCross?: boolean;
+  fillStyle?: string;
+  strokeStyle?: string;
+  lineWidth?: number;
+  labelColor?: string;
 }
 
 export interface BubbleChart extends HTMLElement {
@@ -59,10 +61,10 @@ export default (w: Window) => {
     private selectedIdx = -1;
 
     // 핀치/휠 줌 상태
-    private scaleX = 1;   // x축 줌 배율 (1 = 자동 fit)
-    private scaleY = 1;   // y축 줌 배율
-    private offsetX = 0;  // x축 이동 (데이터 공간)
-    private offsetY = 0;  // y축 이동
+    private scaleX = 1;
+    private scaleY = 1;
+    private offsetX = 0;
+    private offsetY = 0;
     private pinchDist0 = 0;
     private pinchScaleX0 = 1;
     private pinchScaleY0 = 1;
@@ -71,8 +73,34 @@ export default (w: Window) => {
     private dragLastY = 0;
     private downX = 0;
     private downY = 0;
+    private lines: Array<{ sx: number; sy: number; ex: number; ey: number; dash?: string; width?: number; stroke?: string }> = [];
     private lastTouchEndTime = 0;
-    private swapAxes = false;
+    private xLabel = 'x';
+    private yLabel = 'y';
+    private showCenterCross = false;
+
+    @changedAttribute('x-label')
+    onXLabelChanged(v: string) {
+      this.xLabel = v ?? 'x';
+      if (this.canvas) this.draw();
+    }
+
+    @changedAttribute('y-label')
+    onYLabelChanged(v: string) {
+      this.yLabel = v ?? 'y';
+      if (this.canvas) this.draw();
+    }
+
+    @changedAttribute('show-center-cross', { type: Boolean })
+    onShowCenterCrossChanged(v: boolean) {
+      this.showCenterCross = !!v;
+      if (this.canvas) this.draw();
+    }
+
+    public reset(): void {
+      this.resetView();
+      this.draw();
+    }
 
     // ── API ──
     setData(points: BubbleChartPoint[]): void {
@@ -85,15 +113,14 @@ export default (w: Window) => {
       this.scaleX = 1; this.scaleY = 1;
       this.offsetX = 0; this.offsetY = 0;
       this.selectedIdx = -1;
-      if (this.tooltip) this.tooltip.style.display = 'none';
     }
 
     // ── 줌 공통 헬퍼 ──
     private getFitBounds() {
       const pts = this.points;
       if (pts.length === 0) return null;
-      const xRaw = pts.map(p => this.swapAxes ? p.y : p.x);
-      const yRaw = pts.map(p => this.swapAxes ? p.x : p.y);
+      const xRaw = pts.map(p => p.x);
+      const yRaw = pts.map(p => p.y);
       const xFitMin = Math.min(...xRaw);
       const xFitMax = Math.max(...xRaw);
       const xFitPad = (xFitMax - xFitMin) * 0.06 || xFitMax * 0.04 || 1;
@@ -121,19 +148,16 @@ export default (w: Window) => {
       this.offsetY = Math.max(-maxOffsetY, Math.min(maxOffsetY, this.offsetY));
     }
 
-    /** draw()와 동일한 패딩 로직으로 plot(순수 버블 영역) rect 계산 */
+    /** draw()와 동일한 패딩 로직으로 plot(순수 버블 영역) rect 계산 — 패딩 고정, 가운데 plot만 늘어남 */
     private getPlotRect() {
       const canvas = this.canvas;
       if (!canvas) return null;
       const cssW = canvas.clientWidth  || 400;
       const cssH = canvas.clientHeight || 340;
-      const tmpPlot = Math.min(cssW - 80, cssH - 60);
-      const maxR = Math.max(11, tmpPlot * 0.13);
-      const basePad = Math.ceil(maxR) + 2;
-      const padL  = Math.max(62, basePad + 14); // Y라벨 영역
-      const padR  = 12; // 우측 라벨 없음 → 최소 여백
-      const padT  = 12; // 상단 라벨 없음 → 최소 여백
-      const padB2 = Math.max(44, basePad + 8); // X라벨 영역
+      const padL  = 62; // Y라벨 고정
+      const padR  = 12;
+      const padT  = 12;
+      const padB2 = 44; // X라벨 고정
       const plotW = Math.max(10, cssW - padL - padR);
       const plotH = Math.max(10, cssH - padT - padB2);
       if (plotW <= 0 || plotH <= 0) return null;
@@ -172,19 +196,50 @@ export default (w: Window) => {
       this.clampView();
     }
 
-    // ── 데이터 수집 (child <bubble> 요소) ──
+    // ── 데이터 수집 (child <bubble> + <line> 요소) ──
     private collect(): void {
       const pts: BubbleChartPoint[] = [];
       this.querySelectorAll(':scope > bubble').forEach(el => {
+        const rawFill = (el.getAttribute('fill-style') ?? el.getAttribute('fillStyle') ?? '').trim();
+        const rawStroke = (el.getAttribute('stroke-style') ?? el.getAttribute('strokeStyle') ?? el.getAttribute('stroke') ?? '').trim();
+        const rawLabelColor = (el.getAttribute('label-color') ?? el.getAttribute('labelColor') ?? '').trim();
+        const rawLW = el.getAttribute('line-width') ?? el.getAttribute('lineWidth');
+        let lw: number | undefined;
+        if (rawLW != null && rawLW.trim() !== '') { const n = Number(rawLW); if (Number.isFinite(n) && n > 0) lw = n; }
+        const rawVal = el.getAttribute('value') ?? el.getAttribute('r');
+        let v = rawVal != null && rawVal.trim() !== '' ? Number(rawVal) : 0;
+        if (!Number.isFinite(v)) v = 0;
+        v = Math.max(0, Math.min(100, v));
         pts.push({
           label: el.getAttribute('label') || '',
           x:     Number(el.getAttribute('x'))     || 0,
           y:     Number(el.getAttribute('y'))      || 0,
-          r:     Number(el.getAttribute('r'))      || 0,
-          amount:Number(el.getAttribute('amount')) || 0,
+          value: v,
+          description: el.getAttribute('description') || undefined,
+          showCenterCross: el.hasAttribute('show-center-cross'),
+          fillStyle: rawFill || undefined,
+          strokeStyle: rawStroke || undefined,
+          lineWidth: lw,
+          labelColor: rawLabelColor || undefined,
         });
       });
       this.points = pts;
+      // <line> 오버레이 수집 — start-x/y, end-x/y 필수, 나머지는 기본값
+      const ls: typeof this.lines = [];
+      this.querySelectorAll(':scope > line').forEach(el => {
+        const sx = Number(el.getAttribute('start-x'));
+        const sy = Number(el.getAttribute('start-y'));
+        const ex = Number(el.getAttribute('end-x'));
+        const ey = Number(el.getAttribute('end-y'));
+        if (!Number.isFinite(sx) || !Number.isFinite(sy) || !Number.isFinite(ex) || !Number.isFinite(ey)) return;
+        ls.push({
+          sx, sy, ex, ey,
+          dash: el.getAttribute('line-dash') || el.getAttribute('line-style') || undefined,
+          width: Number(el.getAttribute('line-width') || el.getAttribute('stroke-width') || el.getAttribute('strokeWidth') || 1.5) || 1.5,
+          stroke: el.getAttribute('strokeStyle') || el.getAttribute('stroke') || el.getAttribute('color') || '#94a3b8',
+        });
+      });
+      this.lines = ls;
     }
 
     @onConnectedAfter
@@ -200,80 +255,36 @@ export default (w: Window) => {
       if (this.canvas && this.points.length > 0) this.draw();
     }
 
+    private resizeRaf = 0;
     @resizeObserverLight()
     onResize() {
-      if (this.canvas && this.points.length > 0) this.draw();
+      if (!this.canvas || this.points.length === 0) return;
+      if (this.resizeRaf) cancelAnimationFrame(this.resizeRaf);
+      this.resizeRaf = requestAnimationFrame(() => {
+        this.resizeRaf = 0;
+        if (this.canvas && this.points.length > 0) this.draw();
+      });
     }
 
-    // ── Shadow DOM ──
+    // ── Shadow DOM — canvas만 유지, 범례/버튼은 사용하는 쪽에서 렌더 ──
     @onConnectedBodyShadow
     render(): string {
       return `
         <style>
-            :host { display:block; position:relative; }
+          :host { display:block; position:relative; }
           #bc-canvas {
-            display:block; width:100%; height:320px;
+            display:block; width:100%; height:var(--bc-canvas-height, 320px);
             touch-action:pan-y; cursor:crosshair;
             background:#fff;
           }
-          /* enabled-zoom이어도 라벨/축 영역 터치는 윈도우 스크롤이 되도록 pan-y 유지.
-             plot 내부에서의 스크롤 차단은 JS에서 preventDefault로 처리 */
           :host([enabled-zoom]) #bc-canvas { touch-action:pan-y; }
-          #bc-legend {
-            display:flex; gap:12px; flex-wrap:wrap;
-            padding:8px 14px 4px; align-items:center;
-            font-family:-apple-system,sans-serif;
-          }
-          .bc-legend-item { font-size:11px; font-weight:700; }
-          .bc-legend-item.up { color:#e5484d; }
-          .bc-legend-item.down { color:#3e63dd; }
-          #bc-tooltip {
-            position:absolute; pointer-events:none; z-index:3;
-            background:rgba(15,23,42,0.88); color:#fff;
-            font-size:11px; line-height:1.5; border-radius:8px;
-            padding:6px 10px; display:none; white-space:nowrap;
-            box-shadow:0 4px 12px rgba(0,0,0,0.2);
-          }
-          #bc-reset {
-            position:absolute; top:8px; right:68px; z-index:4;
-            background:rgba(255,255,255,0.9); border:1px solid #e2e8f0;
-            border-radius:6px; padding:3px 8px; font-size:10px;
-            color:#64748b; cursor:pointer; display:none;
-          }
-          #bc-reset:hover { background:#f1f5f9; }
-          #bc-swap {
-            position:absolute; top:8px; right:8px; z-index:4;
-            background:rgba(255,255,255,0.9); border:1px solid #e2e8f0;
-            border-radius:6px; padding:3px 8px; font-size:10px;
-            color:#334155; cursor:pointer;
-          }
-          #bc-swap:hover { background:#f1f5f9; }
-          #bc-swap.active { background:#e0f2fe; border-color:#7dd3fc; color:#0c4a6e; }
         </style>
-        <div id="bc-legend">
-          <span class="bc-legend-item up">상승</span>
-          <span class="bc-legend-item down">하락</span>
-          <span class="bc-legend-item" style="display:flex;align-items:center;gap:4px;color:#64748b;font-weight:600"><span style="width:12px;height:12px;border-radius:50%;background:rgba(100,116,139,0.18);border:1.5px solid #64748b;display:inline-block;flex-shrink:0"></span>시총</span>
-          <span class="bc-legend-item" style="display:flex;align-items:center;gap:4px;color:#64748b;font-weight:600"><span style="width:8px;height:8px;border-radius:50%;border:1.2px solid #64748b;display:inline-block;flex-shrink:0"></span>회전율</span>
-        </div>
         <canvas id="bc-canvas"></canvas>
-        <div id="bc-tooltip"></div>
-        <button id="bc-swap" title="X/Y 축 바꾸기">⇄ 축교체</button>
-        <button id="bc-reset">↺ 초기화</button>
       `;
     }
 
     @queryShadow('#bc-canvas')
     private canvas!: HTMLCanvasElement;
-
-    @queryShadow('#bc-tooltip')
-    private tooltip!: HTMLElement;
-
-    @queryShadow('#bc-reset')
-    private resetBtn!: HTMLElement;
-
-    @queryShadow('#bc-swap')
-    private swapBtn!: HTMLElement;
 
     // ── 드로잉 ──
     private draw(): void {
@@ -289,40 +300,47 @@ export default (w: Window) => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const pts = this.points;
-      const rRaw = pts.map(p => p.r);
-      const rCapMax = Math.max(...rRaw, 1);
 
       const minR = 10;
-      const tmpPlot = Math.min(cssW - 80, cssH - 60);
+      const tmpPlot = Math.max(cssW - 80, cssH - 60);
       const maxR = Math.max(minR + 1, tmpPlot * 0.13);
-      const zoomScale = Math.min(6, Math.sqrt(this.scaleX * this.scaleY));
 
-      // 패딩은 줌과 무관하게 zoom=1 기준 maxR로 고정 — 좌/하단만 라벨 영역 확보, 상/우는 최소 여백
-      const basePad = Math.ceil(maxR) + 2;
-      const padL  = Math.max(62, basePad + 14); // Y라벨
-      const padR  = 12; // 우측 라벨 없음
-      const padT  = 12; // 상단 라벨 없음
-      const padB2 = Math.max(44, basePad + 8); // X라벨
+      // 패딩 고정 — 가로가 커져도 라벨 영역은 그대로, 가운데 plot만 확장
+      const padL  = 62; // Y라벨 고정
+      const padR  = 12;
+      const padT  = 12;
+      const padB2 = 44; // X라벨 고정
       const plotW = Math.max(10, cssW - padL - padR);
       const plotH = Math.max(10, cssH - padT - padB2);
 
-      // ── 데이터 범위 (기본 fit) — swap 시 X=등락률, Y=시가총액 ──
-      const xRaw = pts.map(p => this.swapAxes ? p.y : p.x);
-      const yRaw = pts.map(p => this.swapAxes ? p.x : p.y);
+      // ── 데이터 범위 (기본 fit) ──
+      const xRaw = pts.map(p => p.x);
+      const yRaw = pts.map(p => p.y);
 
       const xFitMin = Math.min(...xRaw);
       const xFitMax = Math.max(...xRaw);
       const xFitPad = (xFitMax - xFitMin) * 0.06 || xFitMax * 0.04 || 1;
-      // 시가총액은 0이 의미 없으므로 실제 최솟값 기준으로 여유 확보
-      const xFitL = xFitMin - xFitPad;
-      const xFitR = xFitMax + xFitPad;
-      const xFitRange = xFitR - xFitL;
-
-      const yFitMin = Math.min(...yRaw);  // 등락률은 음수 가능
+      const yFitMin = Math.min(...yRaw);
       const yFitMax = Math.max(...yRaw);
       const yFitPad = (yFitMax - yFitMin) * 0.25 || 0.01;
-      const yFitT   = yFitMax + yFitPad;
-      const yFitB   = yFitMin - yFitPad;
+      // 기본 fit 범위
+      let xFitL = xFitMin - xFitPad;
+      let xFitR = xFitMax + xFitPad;
+      let yFitB = yFitMin - yFitPad;
+      let yFitT = yFitMax + yFitPad;
+      // 버블 반경(maxR)만큼 추가 여유 — 초기 렌더에서 버블 잘림 방지 (절대 크기)
+      {
+        const xRange0 = xFitR - xFitL;
+        const yRange0 = yFitT - yFitB;
+        const xDataPerPx = xRange0 / Math.max(1, plotW);
+        const yDataPerPx = yRange0 / Math.max(1, plotH);
+        const rPx = maxR;
+        const padX = rPx * xDataPerPx * 1.05;
+        const padY = rPx * yDataPerPx * 1.05;
+        xFitL -= padX; xFitR += padX;
+        yFitB -= padY; yFitT += padY;
+      }
+      const xFitRange = xFitR - xFitL;
       const yFitRange = yFitT - yFitB;
 
       // 줌/이동 적용
@@ -333,10 +351,10 @@ export default (w: Window) => {
       const yb = yFitB + this.offsetY;
       const yt = yb + yRange;
 
-      // 버블 반지름: p.r(시가총액) 기준으로 정규화
+      // 버블 반지름: value 0~100 비율로 정규화 (절대 크기, 줌과 무관)
       const toX = (v: number) => padL + ((v - xl) / (xr - xl)) * plotW;
       const toY = (v: number) => padT + plotH - ((v - yb) / (yt - yb)) * plotH;
-      const toR = (v: number) => (minR + Math.sqrt(v / rCapMax) * (maxR - minR)) * zoomScale;
+      const toR = (v: number) => minR + (Math.max(0, Math.min(100, v)) / 100) * (maxR - minR);
 
       // ── 배경 ──
       ctx.fillStyle = '#fff';
@@ -353,30 +371,10 @@ export default (w: Window) => {
         ctx.beginPath(); ctx.moveTo(padL, gy); ctx.lineTo(cssW - padR, gy); ctx.stroke();
         ctx.fillStyle = '#94a3b8';
         ctx.textAlign = 'right';
-        // swap 후: Y = 회전율(소수→%), swap 전: Y = 등락률(fmtAxis)
-        ctx.fillText(this.swapAxes ? fmtTurnover(yv) : fmtAxis(yv), padL - 4, gy + 3);
+        ctx.fillText(fmtAxis(yv), padL - 4, gy + 3);
       }
 
-      // ── 0% 기준선 — swap 전: Y=0 수평선, swap 후: X=0 수직선 (등락률 0%) ──
-      if (this.swapAxes) {
-        const zeroX = toX(0);
-        if (zeroX >= padL && zeroX <= cssW - padR) {
-          ctx.strokeStyle = '#cbd5e1'; ctx.setLineDash([4, 3]); ctx.lineWidth = 1;
-          ctx.beginPath(); ctx.moveTo(zeroX, padT); ctx.lineTo(zeroX, cssH - padB2); ctx.stroke();
-          ctx.setLineDash([]);
-          ctx.fillStyle = '#94a3b8'; ctx.font = '9px -apple-system,sans-serif'; ctx.textAlign = 'center';
-          ctx.fillText('0%', zeroX, padT - 4);
-        }
-      } else {
-        const zeroY = toY(0);
-        if (zeroY >= padT && zeroY <= cssH - padB2) {
-          ctx.strokeStyle = '#cbd5e1'; ctx.setLineDash([4, 3]); ctx.lineWidth = 1;
-          ctx.beginPath(); ctx.moveTo(padL, zeroY); ctx.lineTo(cssW - padR, zeroY); ctx.stroke();
-          ctx.setLineDash([]);
-          ctx.fillStyle = '#94a3b8'; ctx.font = '9px -apple-system,sans-serif'; ctx.textAlign = 'right';
-          ctx.fillText('0%', padL - 4, zeroY - 3);
-        }
-      }
+      // 0% 기준선 제거 — 필요 시 <line>으로 사용자가 직접 추가
 
       // ── X 축 라벨 ──
       ctx.fillStyle = '#94a3b8';
@@ -385,33 +383,39 @@ export default (w: Window) => {
         const xv = xl + xRange * g / 4;
         const gx = toX(xv);
         if (gx < padL || gx > cssW - padR) continue;
-        // swap 전: X = 회전율(소수→%), swap 후: X = 등락률(fmtAxis)
-        ctx.fillText(this.swapAxes ? fmtAxis(xv) : fmtTurnover(xv), gx, cssH - padB2 + 13);
+        ctx.fillText(fmtTurnover(xv), gx, cssH - padB2 + 13);
       }
 
-      // ── 축 제목 — swap 시 바꿔 표시 (기본 X=회전율, R=시가총액) ──
+      // ── 축 제목 — x-label / y-label 속성 기반 ──
       ctx.fillStyle = '#64748b';
       ctx.font = 'bold 9px -apple-system,sans-serif';
       ctx.textAlign = 'center';
-      const xTitle = this.swapAxes ? '등락률' : '회전율';
-      const yTitle = this.swapAxes ? '회전율' : '등락률';
-      const xTitleFull = this.swapAxes ? '등락률' : '← 낮음    회전율    높음 →';
-      ctx.fillText(xTitleFull, padL + plotW / 2, cssH - 4);
+      ctx.fillText(this.xLabel, padL + plotW / 2, cssH - 4);
       ctx.save();
       ctx.translate(10, padT + plotH / 2);
       ctx.rotate(-Math.PI / 2);
-      ctx.fillText(yTitle, 0, 0);
+      ctx.fillText(this.yLabel, 0, 0);
       ctx.restore();
-      if (this.swapBtn) {
-        this.swapBtn.classList.toggle('active', this.swapAxes);
-        this.swapBtn.textContent = this.swapAxes ? '⇄ 원복' : '⇄ 축교체';
-      }
 
       // ── 버블 — plot 내부로 클리핑하여 모든 축 라벨 뒤에서 가려짐 ──
       ctx.save();
       ctx.beginPath();
       ctx.rect(padL, padT, plotW, plotH);
       ctx.clip();
+      // ── <line> 오버레이 — 데이터 좌표계로 매핑, plot 내부에만 보임 ──
+      for (const l of this.lines) {
+        const x1 = toX(l.sx), y1 = toY(l.sy), x2 = toX(l.ex), y2 = toY(l.ey);
+        ctx.save();
+        ctx.strokeStyle = l.stroke || '#94a3b8';
+        ctx.lineWidth = l.width ?? 1.5;
+        ctx.lineCap = 'round';
+        if (l.dash) {
+          const dash = l.dash.split(/[,\s]+/).map(s => Number(s.trim())).filter(n => Number.isFinite(n) && n > 0);
+          if (dash.length) ctx.setLineDash(dash);
+        }
+        ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+        ctx.restore();
+      }
       for (let i = 0; i < pts.length; i++) {
         if (i === this.selectedIdx) continue;
         this.drawBubble(ctx, pts[i], toX, toY, toR, false);
@@ -423,13 +427,10 @@ export default (w: Window) => {
       // ── 카테고리명 라벨 — 버블과 함께 클리핑되어 축 넘어가면 같이 사라짐 ──
       for (let i = 0; i < pts.length; i++) {
         const p = pts[i];
-        const px = this.swapAxes ? p.y : p.x;
-        const py = this.swapAxes ? p.x : p.y;
-        const bx = toX(px), by = toY(py), br = toR(p.r);
+        const bx = toX(p.x), by = toY(p.y), br = toR(p.value);
         const selected = i === this.selectedIdx;
-        if (!selected && br < maxR * 0.42) continue;
-        const up = p.y >= 0;
-        const c = selected ? (up ? '#e5484d' : '#3e63dd') : '#1e293b';
+        if (!selected && br < 9) continue;
+        const c = p.labelColor || (selected ? (p.strokeStyle || '#0f172a') : '#1e293b');
         ctx.fillStyle = c;
         ctx.font = selected ? 'bold 10px -apple-system,sans-serif' : '9px -apple-system,sans-serif';
         ctx.textAlign = 'center';
@@ -441,43 +442,48 @@ export default (w: Window) => {
       }
       ctx.restore();
 
-      // 리셋 버튼 표시/숨김
-      if (this.resetBtn) {
-        this.resetBtn.style.display =
-          (this.scaleX !== 1 || this.scaleY !== 1 || this.offsetX !== 0 || this.offsetY !== 0)
-            ? 'block' : 'none';
-      }
-
-      // 툴팁이 떠 있으면 확대/이동 후에도 버블을 따라가도록 재배치
-      if (this.tooltip && this.tooltip.style.display !== 'none' && this.selectedIdx >= 0) {
-        const sel = this.points[this.selectedIdx];
-        if (sel) {
-          const sx = this.swapAxes ? sel.y : sel.x;
-          const sy = this.swapAxes ? sel.x : sel.y;
-          const bx = toX(sx), by = toY(sy), br = toR(sel.r);
-          // 버블이 화면 밖이면 툴팁 숨김
-          if (bx < padL - br || bx > cssW - padR + br || by < padT - br || by > cssH - padB2 + br) {
-            this.tooltip.style.display = 'none';
-          } else {
-            const hostRect = this.getBoundingClientRect();
-            const canvasRect = canvas.getBoundingClientRect();
-            const clientX = canvasRect.left + bx;
-            const clientY = canvasRect.top + by;
-            // showTooltip과 동일한 배치 로직 재사용
-            const pUp = sel.y >= 0;
-            const col = pUp ? '#f87171' : '#60a5fa';
-            const sign = sel.y >= 0 ? '+' : '';
-            // 위치만 갱신 (내용은 유지)
-            const ttW = 160, ttH = 80;
-            let lx = clientX - hostRect.left + 14;
-            let ly = clientY - hostRect.top  - ttH - 10;
-            if (lx + ttW > hostRect.width)  lx = clientX - hostRect.left - ttW - 14;
-            if (ly < 4) ly = clientY - hostRect.top + 14;
-            this.tooltip.style.left = `${Math.max(4, lx)}px`;
-            this.tooltip.style.top  = `${Math.max(4, ly)}px`;
+      // ── 선택 툴팁 — description (\n 구분) — 클리핑 밖에서 그려 항상 보임 ──
+      if (this.selectedIdx >= 0 && this.selectedIdx < pts.length) {
+        const p = pts[this.selectedIdx];
+        const raw = p.description?.trim();
+        if (raw) {
+          const lines = raw.split('\n').map(s => s.trim()).filter(Boolean);
+          const displayLines = [p.label, ...lines];
+          const fontTitle = 'bold 11px -apple-system,sans-serif';
+          const fontBody = '11px -apple-system,sans-serif';
+          // 최대 너비 측정
+          let maxW = 0;
+          ctx.font = fontTitle; maxW = Math.max(maxW, ctx.measureText(displayLines[0] || '').width);
+          ctx.font = fontBody;
+          for (let i = 1; i < displayLines.length; i++) maxW = Math.max(maxW, ctx.measureText(displayLines[i]).width);
+          const padX = 10, padY = 8, lineH = 15;
+          const boxW = Math.ceil(maxW + padX * 2);
+          const boxH = Math.ceil(padY * 2 + displayLines.length * lineH);
+          const bx = toX(p.x), by = toY(p.y), br = toR(p.value);
+          let boxX = Math.round(bx - boxW / 2);
+          let boxY = Math.round(by - br - boxH - 10);
+          if (boxY < padT) boxY = Math.round(by + br + 10);
+          // 캔버스 경계 클램프
+          boxX = Math.max(4, Math.min(boxX, cssW - boxW - 4));
+          boxY = Math.max(4, Math.min(boxY, cssH - boxH - 4));
+          // 말풍선 배경
+          ctx.fillStyle = 'rgba(15,23,42,0.92)';
+          (ctx as any).beginPath();
+          if ((ctx as any).roundRect) (ctx as any).roundRect(boxX, boxY, boxW, boxH, 8);
+          else { ctx.rect(boxX, boxY, boxW, boxH); }
+          ctx.fill();
+          // 텍스트
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'middle';
+          for (let i = 0; i < displayLines.length; i++) {
+            ctx.font = i === 0 ? fontTitle : fontBody;
+            ctx.fillStyle = i === 0 ? '#fff' : 'rgba(255,255,255,0.92)';
+            ctx.fillText(displayLines[i], boxX + padX, boxY + padY + lineH * i + lineH / 2);
           }
+          ctx.textBaseline = 'alphabetic';
         }
       }
+
     }
 
     private drawBubble(
@@ -488,117 +494,42 @@ export default (w: Window) => {
       toR: (v: number) => number,
       selected: boolean,
     ) {
-      const px = this.swapAxes ? p.y : p.x;
-      const py = this.swapAxes ? p.x : p.y;
-      // 바깥원 크기 = 시가총액(p.r) 기반
-      const br = toR(p.r);
-      // 회오리 바퀴 수: p.x = 회전율 (소수, 0.01 = 1%, 1.0 = 100% = 1바퀴, 5.5 = 550% = 5.5바퀴)
-      // p.x < 1 이면 1바퀴 미만, p.x >= 1 이면 여러 바퀴
-      const turns = Math.max(0, p.x);
-      const up = p.y >= 0;
-      const c  = up ? '#e5484d' : '#3e63dd';
-      const bx = toX(px), by = toY(py);
+      const br = toR(p.value);
+      const DEFAULT_STROKE = '#64748b';
+      const DEFAULT_FILL = 'rgba(100,116,139,0.22)';
+      const stroke = p.strokeStyle || DEFAULT_STROKE;
+      const fill = p.fillStyle || DEFAULT_FILL;
+      const bx = toX(p.x), by = toY(p.y);
 
-      ctx.save();
-
-      // 선택 강조 후광
       if (selected) {
         ctx.beginPath();
         ctx.arc(bx, by, br + 5, 0, Math.PI * 2);
-        ctx.fillStyle = c + '22'; ctx.fill();
+        ctx.fillStyle = stroke + '22'; ctx.fill();
       }
 
-      // 시가총액 바깥 원
       ctx.beginPath();
       ctx.arc(bx, by, br, 0, Math.PI * 2);
-      ctx.fillStyle   = selected ? c + '22' : (up ? 'rgba(229,72,77,0.14)' : 'rgba(62,99,221,0.14)');
+      ctx.fillStyle = p.fillStyle ? p.fillStyle : (selected ? stroke + '44' : fill);
       ctx.fill();
-      ctx.strokeStyle = selected ? c : (up ? 'rgba(229,72,77,0.9)' : 'rgba(62,99,221,0.9)');
-      ctx.lineWidth   = selected ? 2.2 : 1.4;
+      ctx.strokeStyle = stroke;
+      ctx.lineWidth = p.lineWidth != null ? p.lineWidth : (selected ? 2.5 : 1.6);
       ctx.stroke();
 
-      // ── 중심 십자 ──
-      // 라벨 폰트(9~10px)보다 크게, 원 크기에 비례하되 너무 크지 않게
-      const crossSize = Math.max(7, Math.min(br * 0.22, 18));
-      const crossAlpha = selected ? 0.35 : 0.22;
-      const crossColor = up ? `rgba(229,72,77,${crossAlpha})` : `rgba(62,99,221,${crossAlpha})`;
-      ctx.save();
-      ctx.strokeStyle = crossColor;
-      ctx.lineWidth   = selected ? 1.4 : 1.0;
-      ctx.lineCap     = 'round';
-      ctx.beginPath();
-      ctx.moveTo(bx - crossSize, by);
-      ctx.lineTo(bx + crossSize, by);
-      ctx.moveTo(bx, by - crossSize);
-      ctx.lineTo(bx, by + crossSize);
-      ctx.stroke();
-      ctx.restore();
-
-      // ── 안쪽 링 (회전율 시각화) ──
-      // · br*0.5 부터 시작해서 바깥쪽으로 링을 쌓음
-      // · 링 1개 = 100% (완전한 원)
-      // · 220% → 링1(완전), 링2(완전), 링3(20% 호)
-      // · 5.5% → 링1(5.5% 호만)
-      if (turns >= 0.002) {
+      if (this.showCenterCross || p.showCenterCross) {
+        const crossSize = Math.max(7, Math.min(br * 0.22, 18));
         ctx.save();
+        ctx.strokeStyle = stroke;
+        ctx.globalAlpha = selected ? 0.35 : 0.22;
+        ctx.lineWidth = selected ? 1.4 : 1.0;
+        ctx.lineCap = 'round';
         ctx.beginPath();
-        ctx.arc(bx, by, br * 0.96, 0, Math.PI * 2);
-        ctx.clip();
-
-        const cappedTurns = Math.min(turns, 10);
-        const fullRings  = Math.floor(cappedTurns);   // 완전한 링 수
-        const remainder  = cappedTurns - fullRings;   // 마지막 링의 비율 (0~1)
-        const totalRings = fullRings + (remainder > 0 ? 1 : 0);
-
-        // 링 반지름 범위: br*0.5(첫 링) ~ br*0.88(마지막 링)
-        const innerR = br * 0.5;
-        const outerR2 = br * 0.88;
-        // 링 간격
-        const ringGap = totalRings > 1
-          ? (outerR2 - innerR) / (totalRings - 1)
-          : (outerR2 - innerR); // 링이 1개면 innerR 위치에만
-
-        ctx.strokeStyle = up ? '#e5484d' : '#3e63dd';
-        ctx.lineWidth   = selected ? 1.8 : 1.2;
-        ctx.globalAlpha = selected ? 0.9 : 0.75;
-
-        for (let i = 0; i < totalRings; i++) {
-          const ringR = totalRings > 1 ? innerR + ringGap * i : innerR;
-          const isLast = i === totalRings - 1;
-          const arcFrac = isLast && remainder > 0 ? remainder : 1; // 마지막 링은 부분 호
-          const startAngle = -Math.PI / 2;                         // 12시 방향에서 시작
-          const endAngle   = startAngle + arcFrac * Math.PI * 2;
-
-          ctx.beginPath();
-          ctx.arc(bx, by, ringR, startAngle, endAngle);
-          ctx.stroke();
-
-          // 마지막(부분) 링 끝점 강조
-          if (isLast && remainder > 0) {
-            ctx.globalAlpha = 1;
-            const ex = bx + Math.cos(endAngle) * ringR;
-            const ey = by + Math.sin(endAngle) * ringR;
-            ctx.beginPath(); ctx.arc(ex, ey, selected ? 2.2 : 1.6, 0, Math.PI * 2);
-            ctx.fillStyle = up ? '#e5484d' : '#3e63dd'; ctx.fill();
-            ctx.globalAlpha = selected ? 0.9 : 0.75;
-          }
-        }
-
+        ctx.moveTo(bx - crossSize, by);
+        ctx.lineTo(bx + crossSize, by);
+        ctx.moveTo(bx, by - crossSize);
+        ctx.lineTo(bx, by + crossSize);
+        ctx.stroke();
         ctx.restore();
-
-        // 1바퀴(100%) 초과 시 바깥 원 점선 강조
-        if (turns > 1) {
-          ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2);
-          ctx.strokeStyle = up ? 'rgba(229,72,77,0.35)' : 'rgba(62,99,221,0.35)';
-          ctx.setLineDash([4, 3]); ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]);
-        }
-      } else if (!selected && br < 11) {
-        // 거래 거의 없는 작은 버블 중심점
-        ctx.beginPath(); ctx.arc(bx, by, 1.6, 0, Math.PI * 2);
-        ctx.fillStyle = up ? '#e5484d' : '#3e63dd'; ctx.fill();
       }
-
-      ctx.restore();
     }
 
     // ── 좌표 → 가장 가까운 버블 인덱스 ──
@@ -610,62 +541,50 @@ export default (w: Window) => {
 
       const cssW = canvas.clientWidth  || 400;
       const cssH = canvas.clientHeight || 340;
-      const rRaw = this.points.map(p => p.r);
-      const rCapMax = Math.max(...rRaw, 1);
-      const tmpPlot = Math.min(cssW - 80, cssH - 60);
+      const tmpPlot = Math.max(cssW - 80, cssH - 60);
       const minR = 10;
       const maxR = Math.max(minR + 1, tmpPlot * 0.13);
-      const zoomScale = Math.min(6, Math.sqrt(this.scaleX * this.scaleY));
-      const basePad = Math.ceil(maxR) + 2;
-      const padL  = Math.max(62, basePad + 14);
+      const padL  = 62;
       const padR  = 12;
       const padT  = 12;
-      const padB  = Math.max(44, basePad + 8);
+      const padB  = 44;
       const plotW = Math.max(10, cssW - padL - padR);
       const plotH = Math.max(10, cssH - padT - padB);
 
       const pts  = this.points;
 
-      const xRange = b.xFitRange / this.scaleX;
-      const yRange = b.yFitRange / this.scaleY;
-      const xl = b.xFitL + this.offsetX;
-      const yb = b.yFitB + this.offsetY;
+      // draw()와 동일한 버블 여백 확장 — 줌/클릭 좌표 일치 (절대 크기)
+      let xFitL = b.xFitL, xFitR = b.xFitR, yFitB = b.yFitB, yFitT = b.yFitT;
+      {
+        const xRange0 = xFitR - xFitL;
+        const yRange0 = yFitT - yFitB;
+        const xDataPerPx = xRange0 / Math.max(1, plotW);
+        const yDataPerPx = yRange0 / Math.max(1, plotH);
+        const rPx = maxR;
+        const padX = rPx * xDataPerPx * 1.05;
+        const padY = rPx * yDataPerPx * 1.05;
+        xFitL -= padX; xFitR += padX;
+        yFitB -= padY; yFitT += padY;
+      }
+      const xFitRange = xFitR - xFitL;
+      const yFitRange = yFitT - yFitB;
+      const xRange = xFitRange / this.scaleX;
+      const yRange = yFitRange / this.scaleY;
+      const xl = xFitL + this.offsetX;
+      const yb = yFitB + this.offsetY;
       const yt = yb + yRange;
 
       const toX = (v: number) => padL + ((v - xl) / xRange) * plotW;
       const toY = (v: number) => padT + plotH - ((v - yb) / (yt - yb)) * plotH;
-      const toR = (v: number) => (minR + Math.sqrt(v / rCapMax) * (maxR - minR)) * zoomScale;
+      const toR = (v: number) => minR + (Math.max(0, Math.min(100, v)) / 100) * (maxR - minR);
 
       let hit = -1, minDist = Infinity;
       for (let i = 0; i < pts.length; i++) {
-        const px = this.swapAxes ? pts[i].y : pts[i].x;
-        const py = this.swapAxes ? pts[i].x : pts[i].y;
-        const bx = toX(px), by = toY(py), br = toR(pts[i].r);
+        const bx = toX(pts[i].x), by = toY(pts[i].y), br = toR(pts[i].value);
         const dist = Math.sqrt((cx - bx) ** 2 + (cy - by) ** 2);
         if (dist < br + 10 && dist < minDist) { minDist = dist; hit = i; }
       }
       return hit;
-    }
-
-    private showTooltip(idx: number, clientX: number, clientY: number) {
-      if (!this.tooltip) return;
-      if (idx < 0) { this.tooltip.style.display = 'none'; return; }
-      const p   = this.points[idx];
-      const up  = p.y >= 0;  // y=등락률
-      const col = up ? '#f87171' : '#60a5fa';
-      const sign = p.y >= 0 ? '+' : '';
-      this.tooltip.innerHTML = `<strong>${p.label}</strong><br>
-등락률 <span style="color:${col};font-weight:700">${sign}${(p.y * 100).toFixed(2)}%</span><br>
-회전율 ${fmtTurnover(p.x)}<br>시가총액 ${fmtAxis(p.r)}<br>거래대금 ${fmtAxis(p.amount)}`;
-      this.tooltip.style.display = 'block';
-      const hostRect = this.getBoundingClientRect();
-      const ttW = 160, ttH = 80;
-      let lx = clientX - hostRect.left + 14;
-      let ly = clientY - hostRect.top  - ttH - 10;
-      if (lx + ttW > hostRect.width)  lx = clientX - hostRect.left - ttW - 14;
-      if (ly < 4) ly = clientY - hostRect.top + 14;
-      this.tooltip.style.left = `${Math.max(4, lx)}px`;
-      this.tooltip.style.top  = `${Math.max(4, ly)}px`;
     }
 
     // ── 이벤트: 휠 줌 ──
@@ -716,7 +635,6 @@ export default (w: Window) => {
         const hit  = this.hitTest(e.clientX - rect.left, e.clientY - rect.top);
         this.selectedIdx = hit === this.selectedIdx ? -1 : hit;
         this.draw();
-        this.showTooltip(this.selectedIdx, e.clientX, e.clientY);
         this.dispatchEvent(new CustomEvent('bubble-select', {
           detail: this.selectedIdx >= 0 ? this.points[this.selectedIdx] : null,
           bubbles: true,
@@ -842,7 +760,6 @@ export default (w: Window) => {
         );
         this.selectedIdx = hit === this.selectedIdx ? -1 : hit;
         this.draw();
-        this.showTooltip(this.selectedIdx, e.changedTouches[0].clientX, e.changedTouches[0].clientY);
         this.dispatchEvent(new CustomEvent('bubble-select', {
           detail: this.selectedIdx >= 0 ? this.points[this.selectedIdx] : null,
           bubbles: true,
@@ -852,19 +769,7 @@ export default (w: Window) => {
       this.lastTouchEndTime = Date.now();
     }
 
-    // ── 리셋/축교체 버튼 ──
-    @eventShadow('#bc-swap', 'click')
-    private onSwap(): void {
-      this.swapAxes = !this.swapAxes;
-      this.scaleX = 1; this.scaleY = 1; this.offsetX = 0; this.offsetY = 0;
-      this.draw();
-    }
-
-    @eventShadow('#bc-reset', 'click')
-    private onReset(): void {
-      this.resetView();
-      this.draw();
-    }
+    // reset()은 public 메서드로 외부에서 호출
   }
 
   return BubbleChartImpl;
