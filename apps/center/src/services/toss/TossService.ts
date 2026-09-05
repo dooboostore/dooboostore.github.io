@@ -116,6 +116,8 @@ export interface TossChartOptions {
   readonly session?: TossChartSession;
   readonly investMode?: TossInvestMode;
   readonly useAdjustedRate?: boolean;
+  /** 종료 시점 ISO (inclusive) — 지정 시 과거로 count개 반환 */
+  readonly from?: string;
 }
 
 export interface TossCandle {
@@ -568,6 +570,7 @@ export default (container: symbol): ConstructorType<TossService> => {
         session = 'all',
         investMode = 'integrated',
         useAdjustedRate = true,
+        from,
       } = options;
 
       // target 정규화: 문자열 코드 또는 회사 정보 객체
@@ -595,6 +598,7 @@ export default (container: symbol): ConstructorType<TossService> => {
         session,
         investMode,
         useAdjustedRate: String(useAdjustedRate),
+        ...(from ? { from } : {}),
       });
       // week/month/min은 session 파라미터 불필요 시 제외 (서버가 무시하지만 URL 정리)
       const isIntradayOrWeekly = timeframe.startsWith('min:') || timeframe.startsWith('week:') || timeframe.startsWith('month:');

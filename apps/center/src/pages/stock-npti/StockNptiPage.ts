@@ -354,20 +354,16 @@ export default (w: Window) => {
     }
 
     private updateWinSliderMax(): void {
-      const maxStart = Math.max(0, this.candles.length - this.windowSize);
-
-      const winSlider = this.shadowRoot?.querySelector('#win-slider') as HTMLInputElement;
-      if(winSlider){
-        winSlider.max = String(this.candles.length > 0 ? this.candles.length : 120);
-        winSlider.value = String(this.windowSize);
-      }
       const winLabel = this.shadowRoot?.querySelector('#win-label') as HTMLElement;
       if(winLabel) winLabel.textContent = String(this.windowSize);
 
-      const winStart = this.shadowRoot?.querySelector('#win-start') as HTMLInputElement;
-      if(winStart){
-        winStart.max = String(maxStart);
-        winStart.value = String(this.viewStart);
+      const winZone = this.shadowRoot?.querySelector('#win-zone') as any;
+      if(winZone){
+        winZone.setAttribute('min', '0');
+        winZone.setAttribute('max', String(this.candles.length));
+        if(typeof winZone.setValues === 'function'){
+          winZone.setValues({ winStart: this.viewStart, winEnd: this.viewStart + this.windowSize });
+        }
       }
       const winStartLabel = this.shadowRoot?.querySelector('#win-start-label') as HTMLElement;
       if(winStartLabel) winStartLabel.textContent = String(this.viewStart);
@@ -494,35 +490,27 @@ export default (w: Window) => {
       this.loadStock(code, name);
     }
 
-    @addEventListener('#win-slider', 'input')
-    onWinSlider(e:Event){
-      const v = Number((e.target as HTMLInputElement).value);
-      this.windowSize = v;
-      const label = this.shadowRoot?.querySelector('#win-label') as HTMLElement;
-      if(label) label.textContent = String(v);
-      const maxStart = Math.max(0, this.candles.length - this.windowSize);
-      const startInput = this.shadowRoot?.querySelector('#win-start') as HTMLInputElement;
-      if(startInput){
-        startInput.max = String(maxStart);
-        if(this.viewStart > maxStart){
-          this.viewStart = maxStart;
-          const sl = this.shadowRoot?.querySelector('#win-start-label') as HTMLElement;
-          if(sl) sl.textContent = String(this.viewStart);
-          startInput.value = String(this.viewStart);
-        }
+    @addEventListener('#win-zone', 'input')
+    onStartSlider(e:Event){
+      const v = (e.target as any)?.value;
+      if(!v || typeof v !== 'object') return;
+      const s = Math.floor(Number(v.winStart));
+      const ed = Math.floor(Number(v.winEnd));
+      if(!Number.isFinite(s) || !Number.isFinite(ed)) return;
+      this.viewStart = Math.max(0, s);
+      // 영역 개수 = 구간 너비 (최소 5 유지)
+      this.windowSize = Math.max(5, ed - this.viewStart);
+      const label = this.shadowRoot?.querySelector('#win-start-label') as HTMLElement;
+      if(label) label.textContent = String(this.viewStart);
+      const sizeLabel = this.shadowRoot?.querySelector('#win-label') as HTMLElement;
+      if(sizeLabel) sizeLabel.textContent = String(this.windowSize);
+      const winZone = this.shadowRoot?.querySelector('#win-zone') as any;
+      if(winZone && typeof winZone.setValues === 'function'){
+        winZone.setValues({ winStart: this.viewStart, winEnd: this.viewStart + this.windowSize });
       }
       this.drawChart();
       this.drawRadar();
       // drawSegments는 캔들 전체 4구간 분석이라 윈도우 크기와 무관 — 호출 안 함
-    }
-
-    @addEventListener('#win-start', 'input')
-    onStartSlider(e:Event){
-      this.viewStart = Number((e.target as HTMLInputElement).value);
-      const label = this.shadowRoot?.querySelector('#win-start-label') as HTMLElement;
-      if(label) label.textContent = String(this.viewStart);
-      this.drawChart();
-      this.drawRadar();
     }
 
     // light DOM 이벤트 (form 안 badge 클릭)
@@ -691,6 +679,7 @@ export default (w: Window) => {
           .ctrl-label{font-size:12px;font-weight:700;color:#64748b;min-width:60px;white-space:nowrap}
           .ctrl-value{min-width:38px;text-align:center;background:#eef2ff;color:#6366f1;font-weight:800;font-size:13px;border-radius:6px;padding:2px 8px;font-variant-numeric:tabular-nums;box-sizing:border-box}
           .ctrl-row input[type=range]{flex:1;min-width:0;width:auto}
+          .ctrl-row range-slider{flex:1;min-width:0;width:auto}
           .controls input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:999px;background:#e2e8f0;outline:none;cursor:pointer;margin:0}
           .controls input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:#6366f1;border:2px solid #fff;box-shadow:0 1px 4px rgba(99,102,241,0.4);cursor:pointer;transition:transform .15s ease}
           .controls input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15)}
@@ -856,14 +845,15 @@ export default (w: Window) => {
               <div id="radar-legend" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:8px"></div>
               <div class="controls">
                 <div class="ctrl-row">
-                  <div class="ctrl-label">영역 개수</div>
-                  <span class="ctrl-value" id="win-label">50</span>
-                  <input id="win-slider" type="range" min="5" max="120" step="1" value="50" />
-                </div>
-                <div class="ctrl-row">
-                  <div class="ctrl-label">시작 위치</div>
-                  <span class="ctrl-value" id="win-start-label">0</span>
-                  <input id="win-start" type="range" min="0" max="0" value="0" />
+                  <div class="ctrl-label">영역 구간</div>
+                  <span class="ctrl-value" id="win-start-label" title="시작">0</span>
+                  <range-slider id="win-zone" orientation="horizontal" min="0" max="0" step="1">
+                    <thumb-group label="영역" color="#6366f1">
+                      <thumb name="winStart" value="0"></thumb>
+                      <thumb name="winEnd" min="winStart" value="50"></thumb>
+                    </thumb-group>
+                  </range-slider>
+                  <span class="ctrl-value" id="win-label" title="영역 개수">50</span>
                 </div>
               </div>
             </details>

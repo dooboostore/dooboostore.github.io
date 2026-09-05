@@ -49,6 +49,8 @@ function num(v: string | null | undefined): number {
 export interface StockChart extends HTMLElement {
   /** 외부에서 데이터 주입 (tick 요소 대신 사용 가능) */
   setData(points: StockChartPoint[]): void;
+  /** 프로그래밍 방식 뷰(줌/포커스) 지정 — 캔들 인덱스 양쪽 포함 */
+  setView(start: number, end: number): void;
 }
 
 export default (w: Window) => {
@@ -157,6 +159,19 @@ export default (w: Window) => {
       this.selectedIdx = -1;
       if (this.isConnected) {
         this.setupChart();
+      }
+    }
+
+    setView(start: number, end: number): void {
+      const n = this.points.length;
+      if (!n) return;
+      const s = Math.max(0, Math.min(Math.floor(start), n - 1));
+      const e = Math.max(s, Math.min(Math.ceil(end), n - 1));
+      this.viewStart = s;
+      this.viewEnd = e;
+      this.viewInitDone = true;
+      if (this.isConnected) {
+        this.drawChart();
       }
     }
 
@@ -280,7 +295,7 @@ export default (w: Window) => {
       const shapes: ChartShape[] = [];
       this.querySelectorAll(":scope > rect").forEach((el) => {
         const attr = (n: string) => el.getAttribute(n);
-        const base = { fill: attr("fill") || attr("fill-style") || undefined, stroke: attr("stroke") || attr("stroke-style") || undefined, strokeWidth: num(attr("stroke-width")), target: (attr("target") === 'volume' ? 'volume' : 'candle') as 'candle' | 'volume' };
+        const base = { fill: attr("fill") || attr("fill-style") || undefined, stroke: attr("stroke") || attr("stroke-style") || undefined, strokeWidth: num(attr("stroke-width")), target: (attr("target") === 'volume' ? 'volume' : attr("target") === 'all' ? 'all' : 'candle') as 'candle' | 'volume' | 'all' };
         const ds = attr("date-start"), de = attr("date-end");
         if (ds && de) {
           shapes.push({ type: 'rect-date', dateStart: ds, dateEnd: de, ...base });
@@ -1041,9 +1056,16 @@ export default (w: Window) => {
           ctx.lineWidth = s.strokeWidth || 1;
         }
         if (s.type === 'rect-date') {
-          const i0 = c.data.findIndex(d => d.date === s.dateStart);
-          const i1 = c.data.findIndex(d => d.date === s.dateEnd);
-          if (i0 < 0 || i1 < 0 || i1 < i0) continue;
+          // 전체 points 기준 인덱스 → 보이는 구간과 교집합 (줌해도 클리핑 표시)
+          const g0 = this.points.findIndex(d => d.date === s.dateStart);
+          const g1 = this.points.findIndex(d => d.date === s.dateEnd);
+          if (g0 < 0 || g1 < 0 || g1 < g0) continue;
+          const v0 = Math.floor(this.viewStart);
+          const c0 = Math.max(g0, v0);
+          const c1 = Math.min(g1, Math.ceil(this.viewEnd));
+          if (c1 < c0) continue;
+          const i0 = c0 - v0;
+          const i1 = c1 - v0;
           const x = c.xCandle(i0) - c.bodyW / 2;
           const w = c.xCandle(i1) + c.bodyW / 2 - x;
           let y: number, h: number;

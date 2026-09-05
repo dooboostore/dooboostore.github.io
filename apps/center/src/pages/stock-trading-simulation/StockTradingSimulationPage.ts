@@ -2,10 +2,11 @@ import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAft
 import { Router } from '@dooboostore/core-web';
 import { inject } from '@dooboostore/simple-boot';
 import { TossService, TossChartTimeframe } from '../../services/toss/TossService';
+import { findBestConfig, simulate, isResolveMode } from '../../services/stock/TradingSimulator';
+import type { ExitConfig, MaConfig, ResolveMode, SimCandle, SimTrade } from '../../services/stock/TradingSimulator';
 
 const tagName = 'center-stock-trading-simulation-page';
 
-type OptimizationType = 'default' | 'profit' | 'lossAvoid' | 'longTerm' | 'stable';
 const DEFAULT_CANDLE_COUNT = 360;
 const DEFAULT_TIMEFRAME: TossChartTimeframe = 'day:1';
 const DEFAULT_CAPITAL = 100_000_000;
@@ -43,12 +44,17 @@ export default (w: Window) => {
     private tossService!: TossService;
     private currentCode = DEFAULT_STOCK_CODE;
     private currentName = DEFAULT_STOCK_CODE;
-    private chartCandles: { date: string; open: number; high: number; low: number; close: number; volume: number }[] = [];
+    private chartCandles: SimCandle[] = [];
+    // --- 시뮬레이션 구간 (chartCandles 인덱스, 양쪽 포함) — 기본 전체 ---
+    private rangeStart = 0;
+    private rangeEnd = -1;
+    // URL(rs/re)로 복원된 구간 — 다음 로드 1회에만 리셋을 건너뜀
+    private rangeFromUrl = false;
     // --- 트레이딩 설정 (상수에서 초기화) ---
     private candleCount = DEFAULT_CANDLE_COUNT;
     private timeframe: TossChartTimeframe = DEFAULT_TIMEFRAME;
     private initialCapital = DEFAULT_CAPITAL;
-    private maConfigs: { period: number; color: string; pyramiding: { signals: { signal: 'golden'|'dead'; action: 'buy'|'sell'; percent: number; candleFilter: 'any' | 'bull' | 'bear'; volumeFilter: 'any' | 'higher' | 'lower'; consecutive: number; alignment: 'any' | 'aligned' | 'reverse' | 'largerAbove' | 'largerBelow' | 'smallerAbove' | 'smallerBelow'; condTrade: { type: 'any' | 'consecutiveBuy' | 'consecutiveSell' | 'consecutiveSelected'; operator: 'any' | '<' | '<=' | '=' | '!=' | '>=' | '>'; value: number }; condCandle: { type: 'any' | 'consecutiveBullish' | 'consecutiveBearish'; operator: 'any' | '<' | '<=' | '=' | '!=' | '>=' | '>'; value: number }; condMa: { type: 'any' | 'maDeviation' | 'maSlope'; operator: 'any' | '<' | '<=' | '=' | '!=' | '>=' | '>'; value: number } }[] } }[] = [];
+    private maConfigs: MaConfig[] = [];
     // --- 익절/손절 (상수에서 초기화) ---
     private takeProfitEnabled = false;
     private takeProfitPercent = 15;
@@ -59,6 +65,14 @@ export default (w: Window) => {
     private takeProfitBasis: 'profitRise'|'profitFall'|'peakFall'|'peakRise'|'none' = 'profitRise';
     private showCross = false;
     private requireAllMas = false;
+    // 봉당 겹친 조건 확정 방식: 첫 조건만 / 마지막 조건만 / 방향별 합산 / 순합산 1건
+    private maResolveMode: ResolveMode = 'minFirst';
+    private exitResolveMode: ResolveMode = 'minFirst';
+    // 종료일시 ('' = 최신). date input 값(YYYY-MM-DD) + time input 값(HH:MM, 분봉만)
+    private endDate = '';
+    private endTime = '';
+    // 예상 추세 지수 0~1 (0=하락, 0.5=중립, 1=상승). 셀렉트 프리셋: 모름/횡보=0.5, 상승=1, 하락=0
+    private trendScore = 0.5;
     private feePercent = 0.015;
     private stopLossEnabled = false;
     private stopLossPercent = 10;
@@ -67,14 +81,14 @@ export default (w: Window) => {
     private stopLossCandleFilter: 'any'|'bull'|'bear' = 'bear';
     private stopLossVolumeFilter: 'any'|'higher'|'lower' = 'higher';
     private stopLossBasis: 'profitRise'|'profitFall'|'peakFall'|'peakRise'|'none' = 'profitFall';
-    private exitConfigs: { basis: 'profitRise'|'profitFall'|'peakFall'|'peakRise'; percent: number; sellPercent: number; skip: number; candle: 'any'|'bull'|'bear'; volume: 'any'|'higher'|'lower' }[] = [{ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 5, candle: 'any', volume: 'any' }];
+    private exitConfigs: ExitConfig[] = [{ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 5, candle: 'any', volume: 'any' }];
     // --- 시뮬레이션 결과 (마지막 계산값)
     private simCash = 0;
     private simShares = 0;
     private simFirstPrice = 0;
     private simReasonMap = new Map<number, string>();
     private simLastPrice = 0;
-    private simTrades: { idx: number; date: string; price: number; action: 'buy'|'sell'; maPeriod: number; percent: number; sharesDelta: number; amount: number; fee: number; cashAfter: number; sharesAfter: number; label?: string; profitRate: number | null; avgPrice: number; holdingValue: number }[] = [];
+    private simTrades: SimTrade[] = [];
 
     private restoreSimFromUrl() {
       try {
@@ -86,6 +100,14 @@ export default (w: Window) => {
         if (cnt) { const v = Number(cnt); if (Number.isFinite(v) && v >= 30 && v <= 1000) this.candleCount = Math.floor(v); }
         const tf = p.get('tf');
         if (tf && /^(min:\d+|day:1|week:1|month:1)$/.test(tf)) this.timeframe = tf as TossChartTimeframe;
+        const ed = p.get('ed');
+        if (ed && /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2})?$/.test(ed)) {
+          const probe = new Date(ed.length <= 10 ? `${ed}T23:59:00` : `${ed}:00`);
+          if (Number.isFinite(probe.getTime()) && probe.getTime() <= Date.now()) {
+            this.endDate = ed.slice(0, 10);
+            this.endTime = ed.length > 10 ? ed.slice(11, 16) : '';
+          }
+        }
         const tpEn = p.get('tpEn'); if (tpEn) this.takeProfitEnabled = tpEn === '1';
         const tp = p.get('tp'); if (tp) { const v = Number(tp); if (Number.isFinite(v) && v >= 0 && v <= 100) this.takeProfitPercent = v; }
         const tpSell = p.get('tpSell'); if (tpSell) { const v = Number(tpSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.takeProfitSellPercent = Math.floor(v); }
@@ -94,6 +116,18 @@ export default (w: Window) => {
         const tpVol = p.get('tpVol'); if (tpVol && ['any','higher','lower'].includes(tpVol)) this.takeProfitVolumeFilter = tpVol as any;
         const cross = p.get('cross'); if (cross) this.showCross = cross === '1';
         const mall = p.get('mall'); if (mall) this.requireAllMas = mall === '1';
+        const mres = p.get('mres'); const xres = p.get('xres'); const dup = p.get('dup');
+        if (mres === 'sum') this.maResolveMode = 'all'; else if (isResolveMode(mres)) this.maResolveMode = mres; else if (mres === 'firstOne') this.maResolveMode = 'minFirst'; else if (mres === 'lastOne') this.maResolveMode = 'maxFirst'; else if (dup) this.maResolveMode = dup === '1' ? 'all' : 'minFirst';
+        if (xres === 'sum') this.exitResolveMode = 'all'; else if (isResolveMode(xres)) this.exitResolveMode = xres; else if (xres === 'firstOne') this.exitResolveMode = 'minFirst'; else if (xres === 'lastOne') this.exitResolveMode = 'maxFirst'; else if (dup) this.exitResolveMode = 'minFirst';
+        const trend = p.get('trend');
+        if (trend === 'up') this.trendScore = 1;
+        else if (trend === 'down') this.trendScore = 0;
+        else if (trend !== null && trend !== '' && Number.isFinite(Number(trend))) this.trendScore = Math.max(0, Math.min(1, Number(trend)));
+        const lambda = p.get('lambda');
+        if (lambda !== null && lambda !== '' && Number.isFinite(Number(lambda))) {
+          const v = Math.max(0, Number(lambda));
+          this.riskAversion = [0, 0.5, 1].reduce((a, b) => Math.abs(b - v) < Math.abs(a - v) ? b : a);
+        }
         const slEn = p.get('slEn'); if (slEn) this.stopLossEnabled = slEn === '1';
         const sl = p.get('sl'); if (sl) { const v = Number(sl); if (Number.isFinite(v) && v >= 0 && v <= 100) this.stopLossPercent = v; }
         const slSell = p.get('slSell'); if (slSell) { const v = Number(slSell); if (Number.isFinite(v) && v >= 1 && v <= 100) this.stopLossSellPercent = Math.floor(v); }
@@ -103,6 +137,14 @@ export default (w: Window) => {
         const tpBasis = p.get('tpBasis'); if (tpBasis && ['profit','peak','profitRise','profitFall','peakFall','peakRise'].includes(tpBasis)) { if (tpBasis==='profit') this.takeProfitBasis='profitRise' as any; else if(tpBasis==='peak') this.takeProfitBasis='peakFall' as any; else this.takeProfitBasis=tpBasis as any; }
         const slBasis = p.get('slBasis'); if (slBasis && ['profit','peak','profitRise','profitFall','peakFall','peakRise'].includes(slBasis)) { if (slBasis==='profit') this.stopLossBasis='profitFall' as any; else if(slBasis==='peak') this.stopLossBasis='peakFall' as any; else this.stopLossBasis=slBasis as any; }
         const fee = p.get('fee'); if (fee) { const v = Number(fee); if (Number.isFinite(v) && v >= 0 && v <= 1) this.feePercent = v; }
+        const rs = p.get('rs'); const re = p.get('re');
+        if (rs !== null || re !== null) {
+          const s = rs !== null ? Math.floor(Number(rs)) : 0;
+          const e = re !== null ? Math.floor(Number(re)) : -1;
+          if (Number.isFinite(s) && s >= 0 && Number.isFinite(e) && (e < 0 || e >= s)) {
+            this.rangeStart = s; this.rangeEnd = e; this.rangeFromUrl = true;
+          }
+        }
         const exits = p.get('exits');
         if (exits) {
           try {
@@ -221,6 +263,9 @@ export default (w: Window) => {
           tpEn: this.takeProfitEnabled ? '1' : '0', tp: String(this.takeProfitPercent), tpSell: String(this.takeProfitSellPercent), tpSkip: String(this.takeProfitSkip), tpCandle: this.takeProfitCandleFilter, tpVol: this.takeProfitVolumeFilter, tpBasis: this.takeProfitBasis,
           cross: this.showCross ? '1' : '0',
           mall: this.requireAllMas ? '1' : '0',
+          mres: this.maResolveMode, xres: this.exitResolveMode, trend: String(this.trendScore), lambda: String(this.riskAversion),
+          ...(this.chartCandles.length ? (() => { const [zs, ze] = this.zoneRange(); return { rs: String(zs), re: String(ze) }; })() : {}),
+          ed: this.endDate ? (this.endTime ? `${this.endDate}T${this.endTime}` : this.endDate) : '',
           slEn: this.stopLossEnabled ? '1' : '0', sl: String(this.stopLossPercent), slSell: String(this.stopLossSellPercent), slSkip: String(this.stopLossSkip), slCandle: this.stopLossCandleFilter, slVol: this.stopLossVolumeFilter, slBasis: this.stopLossBasis,
           fee: String(this.feePercent),
         });
@@ -246,6 +291,20 @@ export default (w: Window) => {
         url.searchParams.set('tpBasis', this.takeProfitBasis);
         url.searchParams.set('cross', this.showCross ? '1' : '0');
         url.searchParams.set('mall', this.requireAllMas ? '1' : '0');
+        url.searchParams.set('mres', this.maResolveMode);
+        url.searchParams.set('xres', this.exitResolveMode);
+        url.searchParams.set('trend', String(this.trendScore));
+        url.searchParams.set('lambda', String(this.riskAversion));
+        if (this.endDate) url.searchParams.set('ed', this.endTime ? `${this.endDate}T${this.endTime}` : this.endDate);
+        else url.searchParams.delete('ed');
+        if (this.chartCandles.length) {
+          const [zs, ze] = this.zoneRange();
+          url.searchParams.set('rs', String(zs));
+          url.searchParams.set('re', String(ze));
+        } else {
+          url.searchParams.delete('rs');
+          url.searchParams.delete('re');
+        }
         url.searchParams.set('slEn', this.stopLossEnabled ? '1' : '0');
         url.searchParams.set('sl', String(this.stopLossPercent));
         url.searchParams.set('slSell', String(this.stopLossSellPercent));
@@ -266,6 +325,11 @@ export default (w: Window) => {
       if (capEl && capEl !== active) capEl.value = String(this.initialCapital);
       if (cntEl && cntEl !== active) cntEl.value = String(this.candleCount);
       if (tfEl && tfEl !== active) tfEl.value = this.timeframe;
+      const endDateEl = this.shadowRoot?.querySelector('#sim-end-date') as HTMLInputElement;
+      const endDtEl = this.shadowRoot?.querySelector('#sim-end-datetime') as HTMLInputElement;
+      if (endDateEl && endDateEl !== active) endDateEl.value = this.endDate;
+      if (endDtEl && endDtEl !== active) endDtEl.value = this.endTime ? `${this.endDate}T${this.endTime}` : '';
+      this.updateEndTimeVisibility();
       const tpEl = this.shadowRoot?.querySelector('#sim-tp') as HTMLInputElement;
       const tpSellEl = this.shadowRoot?.querySelector('#sim-tp-sell') as HTMLInputElement;
       const tpSkipEl = this.shadowRoot?.querySelector('#sim-tp-skip') as HTMLInputElement;
@@ -290,6 +354,16 @@ export default (w: Window) => {
       if (crossEl) crossEl.checked = this.showCross;
       const mallEl = this.shadowRoot?.querySelector('#sim-require-all-mas') as HTMLInputElement;
       if (mallEl) mallEl.checked = this.requireAllMas;
+      const mresEl = this.shadowRoot?.querySelector('#sim-resolve-mode') as HTMLSelectElement;
+      if (mresEl) mresEl.value = this.maResolveMode;
+      const xresEl = this.shadowRoot?.querySelector('#sim-exit-resolve-mode') as HTMLSelectElement;
+      if (xresEl) xresEl.value = this.exitResolveMode;
+      const trendEl = this.shadowRoot?.querySelector('#sim-trend-type') as HTMLSelectElement;
+      // 모름/횡보가 같은 값(0.5)이라 무조건 대입하면 첫 옵션(모름)으로 뒤집힘.
+      // trend는 입력값이라 결과가 바꾸지 않음: 수치상 다를 때만(예: URL 복원) 갱신.
+      if (trendEl && (!Number.isFinite(Number(trendEl.value)) || Number(trendEl.value) !== this.trendScore)) trendEl.value = String(this.trendScore);
+      const presetEl = this.shadowRoot?.querySelector('#sim-optimize-preset') as HTMLSelectElement;
+      if (presetEl) presetEl.value = String(this.riskAversion);
       if (slEl) slEl.value = String(this.stopLossPercent);
       if (slSellEl) slSellEl.value = String(this.stopLossSellPercent);
       if (slSkipEl) slSkipEl.value = String(this.stopLossSkip);
@@ -369,10 +443,13 @@ export default (w: Window) => {
           const titleEl = this.shadowRoot?.querySelector('#chart-title') as HTMLElement;
           if (titleEl) titleEl.textContent = '최적 조건 탐색 중... (데이터 분석 + 탐색)';
           await new Promise(r => setTimeout(r, 50));
-          const best = this.findBestConfig(this.chartCandles);
+          const best = findBestConfig(this.chartCandles, { ...this.engineOpts(), trend: this.trendScore });
           if (best) {
             this.maConfigs = (best.maConfigs as typeof this.maConfigs).slice().sort((a,b)=>a.period-b.period);
             this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
+            const _bm = (best as any).mres, _bx = (best as any).xres;
+            if (isResolveMode(_bm)) this.maResolveMode = _bm; // 이긴 쪽 모드로 셀렉트 동기화
+            if (isResolveMode(_bx)) this.exitResolveMode = _bx;
             if ((best as any).exits) {
               this.exitConfigs = (best as any).exits as any;
               const f = this.exitConfigs[0] as any; if (f) { this.takeProfitBasis = f.basis; this.takeProfitPercent = f.percent; this.takeProfitSellPercent = f.sellPercent; this.takeProfitSkip = f.skip; this.takeProfitCandleFilter = f.candle; this.takeProfitVolumeFilter = f.volume; this.takeProfitEnabled = true; }
@@ -419,6 +496,14 @@ export default (w: Window) => {
       const titleEl = this.shadowRoot?.querySelector('#chart-title') as HTMLElement;
       if (!titleEl) return;
       const tfLabel = this.timeframe.replace('day:','일봉 ').replace('week:','주봉 ').replace('month:','월봉 ').replace('min:','분봉 ');
+      const activeLen = this.getActiveCandles().length;
+      const rangeSuffix = (this.chartCandles.length && activeLen !== this.chartCandles.length)
+        ? ` (구간 ${activeLen}개)`
+        : '';
+      // 종료일 지정 시 실제 데이터 마지막 봉 날짜 표시 (URL 공유 시 동일 화면 확인용)
+      const endSuffix = (this.endDate && this.chartCandles.length)
+        ? ` (~${this.chartCandles[this.chartCandles.length - 1]?.date ?? this.endDate})` : '';
+      const countText = `${this.candleCount}개${rangeSuffix}${endSuffix}`;
       let pricePart = '';
       // stock-prices API 우선, 없으면 캔들 기반
       if (this.lastStockPrice && this.lastStockPrice.close != null) {
@@ -429,7 +514,7 @@ export default (w: Window) => {
         const rateColor = rate == null ? '#64748b' : rate > 0 ? '#dc2626' : rate < 0 ? '#2563eb' : '#64748b';
         const isUS = /^(US|NAS|AMX|NYS)/.test(this.currentCode);
         const priceStr = `${Math.round(close).toLocaleString()}${isUS ? '$' : '원'}`;
-        titleEl.innerHTML = `${this.currentName} (${this.currentCode.replace(/^A/, '')}) · <span style="font-weight:800;color:#1e293b">${priceStr}</span>${rateStr ? ` <span style="font-weight:700;color:${rateColor}">${rateStr}</span>` : ''} · ${tfLabel} ${this.candleCount}개`;
+        titleEl.innerHTML = `${this.currentName} (${this.currentCode.replace(/^A/, '')}) · <span style="font-weight:800;color:#1e293b">${priceStr}</span>${rateStr ? ` <span style="font-weight:700;color:${rateColor}">${rateStr}</span>` : ''} · ${tfLabel} ${countText}`;
         return;
       }
       if (this.chartCandles.length >= 2) {
@@ -440,14 +525,14 @@ export default (w: Window) => {
         const isUS = /^(US|NAS|AMX|NYS)/.test(this.currentCode);
         const priceStr = `${Math.round(last.close).toLocaleString()}${isUS ? '$' : '원'}`;
         // 색상은 텍스트로만 전달할 수 있어 title은 문자열로, 색상은 별도 span이 필요하면 innerHTML로
-        titleEl.innerHTML = `${this.currentName} (${this.currentCode.replace(/^A/, '')}) · <span style="font-weight:800;color:#1e293b">${priceStr}</span> <span style="font-weight:700;color:${rate > 0 ? '#dc2626' : rate < 0 ? '#2563eb' : '#64748b'}">${rateStr}</span> · ${tfLabel} ${this.candleCount}개`;
+        titleEl.innerHTML = `${this.currentName} (${this.currentCode.replace(/^A/, '')}) · <span style="font-weight:800;color:#1e293b">${priceStr}</span> <span style="font-weight:700;color:${rate > 0 ? '#dc2626' : rate < 0 ? '#2563eb' : '#64748b'}">${rateStr}</span> · ${tfLabel} ${countText}`;
         return;
       } else if (this.chartCandles.length === 1) {
         const last = this.chartCandles[0];
         const isUS = /^(US|NAS|AMX|NYS)/.test(this.currentCode);
         pricePart = ` · ${Math.round(last.close).toLocaleString()}${isUS ? '$' : '원'}`;
       }
-      titleEl.textContent = `${this.currentName} (${this.currentCode.replace(/^A/, '')})${pricePart} · ${tfLabel} ${this.candleCount}개`;
+      titleEl.textContent = `${this.currentName} (${this.currentCode.replace(/^A/, '')})${pricePart} · ${tfLabel} ${countText}`;
     }
 
     private async loadStock(code: string, name: string) {
@@ -462,19 +547,24 @@ export default (w: Window) => {
       this.updateChartTitle();
 
       try {
-        const chartRes = await this.tossService.getChart(code, { count: this.candleCount, timeframe: this.timeframe }).catch(() => null);
+        const from = this.endDateToFrom();
+        const chartRes = await this.tossService.getChart(code, { count: this.candleCount, timeframe: this.timeframe, ...(from ? { from } : {}) }).catch(() => null);
         const raw = chartRes?.candles ?? [];
         const isMin = this.timeframe.startsWith('min:');
         const isDayWeekMonth = this.timeframe === 'day:1' || this.timeframe === 'week:1' || this.timeframe === 'month:1';
         const sortedRaw = [...raw].sort((a, b) => a.dt.localeCompare(b.dt));
         const candles = sortedRaw.map(c => ({ date: isMin ? `${c.dt.slice(5, 10)} ${c.dt.slice(11, 16)}` : isDayWeekMonth ? c.dt.slice(2, 10) : c.dt, open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }));
         this.chartCandles = candles;
+        const sharedZone = this.rangeFromUrl;
+        this.syncRangeSliderBounds(true);
 
-        // 차트에 tick(골든/데드 크로스 시 line/tooltip 포함) + ma 주입
+        // 차트에 전체 tick + 구간 시뮬 마커 + 구간 rect 오버레이 + ma 주입
         const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
         if (chartEl) {
-          chartEl.innerHTML = this.buildTicksHtml(candles) + this.maConfigs.map(ma => `<ma color="${ma.color}" size="${ma.period}"></ma>`).join('');
+          chartEl.innerHTML = this.buildChartHtml();
         }
+        // 공유 링크 구간이면 차트 뷰도 해당 구간으로 (같은 화면 재현)
+        if (sharedZone) this.focusZoneOnChart();
         this.updateResultDisplay();
         this.updateChartTitle();
         // 현재가 API로 타이틀 갱신 (code 진입 시에도 정확히 표시) — 실제 응답: { productCode, base, close }
@@ -598,6 +688,12 @@ export default (w: Window) => {
       box?.classList.remove('show');
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       if (input) input.value = name;
+      // 종목 변경 시 종료일 초기화 (최신 기준)
+      this.endDate = ''; this.endTime = '';
+      const endDateEl = this.shadowRoot?.querySelector('#sim-end-date') as HTMLInputElement;
+      if (endDateEl) endDateEl.value = '';
+      const endDtEl = this.shadowRoot?.querySelector('#sim-end-datetime') as HTMLInputElement;
+      if (endDtEl) endDtEl.value = '';
       this.loadStock(code, name);
     }
 
@@ -607,6 +703,7 @@ export default (w: Window) => {
       this.applySimConfigToForm();
       this.renderMaList();
       this.renderExitList();
+      this.syncRangeSliderBounds();
       this.updateChartTitle();
     }
 
@@ -645,21 +742,73 @@ export default (w: Window) => {
       }
     }
 
+    /** 종료일시 → from ISO (일봉 이하는 날짜 00:00, 분봉은 date+time). '' = 최신 */
+    private endDateToFrom(): string {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(this.endDate)) return '';
+      const isMin = this.timeframe.startsWith('min:');
+      const hm = isMin && /^\d{2}:\d{2}$/.test(this.endTime) ? this.endTime : '00:00';
+      return `${this.endDate}T${hm}:00+09:00`;
+    }
+
     @addEventListener('#sim-candle-form', 'change')
     onCandleFormChange() {
       // alert(1)
       const prevCount = this.candleCount;
       const prevTf = this.timeframe;
+      const prevEnd = `${this.endDate}|${this.endTime}`;
       this.syncConfigFromForm();
+      this.updateEndTimeVisibility();
       this.syncSimParamsToUrl();
-      if (prevCount !== this.candleCount || prevTf !== this.timeframe) {
+      if (prevCount !== this.candleCount || prevTf !== this.timeframe || prevEnd !== `${this.endDate}|${this.endTime}`) {
         this.loadStock(this.currentCode, this.currentName);
       } else {
         this.syncMasToChart();
       }
     }
 
+    private updateEndTimeVisibility() {
+      const isMin = this.timeframe.startsWith('min:');
+      const dateField = this.shadowRoot?.querySelector('#sim-end-date-field') as HTMLElement;
+      const dtField = this.shadowRoot?.querySelector('#sim-end-datetime-field') as HTMLElement;
+      if (dateField) dateField.style.display = isMin ? 'none' : '';
+      if (dtField) dtField.style.display = isMin ? '' : 'none';
+    }
 
+
+
+    private applyZone(start: number, end: number, focus: boolean) {
+      const n = this.chartCandles.length;
+      if (!n) return;
+      const e = Math.max(0, Math.min(Math.floor(end), n - 1));
+      const s = Math.max(0, Math.min(Math.floor(start), e));
+      if (s === this.rangeStart && e === this.rangeEnd) return;
+      this.rangeStart = s;
+      this.rangeEnd = e;
+      this.updateRangeLabels();
+      this.syncMasToChart();
+      this.syncUrlWithoutReload();
+      if (focus) this.focusZoneOnChart();
+    }
+
+    @addEventListener('#sim-zone', 'input')
+    onZoneInput(e: Event) {
+      const v = (e.target as any)?.value;
+      if (!v || typeof v !== 'object') return;
+      const s = Number(v.start);
+      const ed = Number(v.end);
+      if (!Number.isFinite(s) || !Number.isFinite(ed)) return;
+      this.applyZone(s, ed, false);
+    }
+
+    @addEventListener('#sim-zone', 'change')
+    onZoneChange(e: Event) {
+      const v = (e.target as any)?.value;
+      if (!v || typeof v !== 'object') return;
+      const s = Number(v.start);
+      const ed = Number(v.end);
+      if (!Number.isFinite(s) || !Number.isFinite(ed)) return;
+      this.applyZone(s, ed, true);
+    }
 
     @addEventListener('#add-ma-btn', 'click')
     onAddMa() {
@@ -776,124 +925,11 @@ export default (w: Window) => {
       this.syncMasToChart();
     }
 
-    @addEventListener('#sim-preset-select', 'change')
-    onPresetChange(e: Event) {
-      const sel = e.target as HTMLSelectElement;
-      const v = sel.value;
-      if (!v) return;
-      if (v === 'random') {
-        const rand = (n: number) => Math.floor(Math.random() * n);
-        const pick = <T>(arr: T[]) => arr[rand(arr.length)];
-        const colors = ['#ef4444','#f59e0b','#10b981','#6366f1','#ec4899','#06b6d4','#8b5cf6','#14b8a6'];
-        const candleOpts: ('any'|'bull'|'bear')[] = ['any','bull','bear'];
-        const volOpts: ('any'|'higher'|'lower')[] = ['any','higher','lower'];
-        const tradeConds = ['consecutiveBuy','consecutiveSell','consecutiveSelected'];
-        const candleConds = ['consecutiveBullish','consecutiveBearish'];
-        const maConds = ['maDeviation','maSlope'];
-        const condOps = ['any','<','<=','=','!=','>=','>'] as const;
-        const maCount = 2 + rand(3);
-        const periodPoolR = [5,10,20,30,60,90,120,200].filter(v => v < this.candleCount);
-        const shuffledR = [...periodPoolR].sort(() => Math.random() - 0.5);
-        const usedR = new Set<number>();
-        const maxPeriodR = Math.max(5, Math.min(240, this.candleCount - 1));
-        const ma = Array.from({ length: maCount }, (_, i) => {
-          let period: number;
-          if (i < shuffledR.length) period = shuffledR[i];
-          else { do { period = 3 + rand(maxPeriodR - 2); } while (usedR.has(period)); }
-          usedR.add(period);
-          const color = colors[rand(colors.length)];
-          const mkSide = (sg: 'golden'|'dead') => ({
-            action: (['buy','sell'][Math.floor(Math.random()*2)] as 'buy'|'sell'),
-            percent: 10 + rand(41),
-            candleFilter: pick(candleOpts),
-            volumeFilter: pick(volOpts),
-            consecutive: 1 + rand(3),
-            alignment: this.alignForSignal(sg),
-            condTrade: Math.random() < 0.5 ? { type: 'any' as const, operator: 'any' as const, value: 1 } : { type: pick(tradeConds) as any, operator: pick([...condOps].filter(o=>o!=='any')) as any, value: 1 + rand(5) },
-            condCandle: Math.random() < 0.5 ? { type: 'any' as const, operator: 'any' as const, value: 1 } : { type: pick(candleConds) as any, operator: pick([...condOps].filter(o=>o!=='any')) as any, value: 1 + rand(5) },
-            condMa: Math.random() < 0.5 ? { type: 'any' as const, operator: 'any' as const, value: 1 } : { type: pick(maConds) as any, operator: pick([...condOps].filter(o=>o!=='any')) as any, value: Number((Math.random()*20 -10).toFixed(1)) },
-          });
-          const sigCountR = 1 + rand(3);
-          const sigsR = Array.from({ length: sigCountR }, () => { const sg = pick(['golden','dead'] as const); return { signal: sg, ...mkSide(sg) }; });
-          return { period, color, pyramiding: { signals: sigsR } };
-        });
-        this.sanitizeAlignments(ma as any[]);
-        const filteredR = (ma as any[]).filter((m: any) => (m.pyramiding.signals||[]).length>0);
-        this.candleCount = DEFAULT_CANDLE_COUNT;
-        this.timeframe = DEFAULT_TIMEFRAME;
-        this.initialCapital = DEFAULT_CAPITAL;
-        this.maConfigs = (filteredR.length ? filteredR : ma) as typeof this.maConfigs;
-        this.maConfigs.sort((a,b)=>a.period-b.period);
-        this.takeProfitEnabled = Math.random() < 0.5;
-        this.takeProfitPercent = 5 + rand(26);
-        this.takeProfitSellPercent = 30 + rand(71);
-        this.takeProfitSkip = rand(6);
-        this.takeProfitCandleFilter = pick(candleOpts);
-        this.takeProfitVolumeFilter = pick(volOpts);
-        this.stopLossEnabled = Math.random() < 0.5;
-        this.stopLossPercent = 5 + rand(21);
-        this.stopLossSellPercent = 30 + rand(71);
-        this.stopLossSkip = rand(6);
-        this.stopLossCandleFilter = pick(candleOpts);
-        this.stopLossVolumeFilter = pick(volOpts);
-        this.showCross = false;
-        this.applySimConfigToForm();
-        this.renderMaList();
-        this.syncSimParamsToUrl();
-        this.loadStock(this.currentCode, this.currentName);
-        sel.value = '';
-        return;
-      }
-      // 프리셋 하드코딩 제거: 최적화로 대체
-      const prevCount = this.candleCount;
-      const prevTf = this.timeframe;
-      this.candleCount = DEFAULT_CANDLE_COUNT;
-      this.timeframe = DEFAULT_TIMEFRAME;
-      this.initialCapital = DEFAULT_CAPITAL;
-      // 프리셋 선택 시에도 최적화로 채움 (기존 PRESET_* 제거)
-      if (this.chartCandles.length) {
-        const best = this.findBestConfig(this.chartCandles);
-        if (best) {
-          this.maConfigs = (best.maConfigs as typeof this.maConfigs).slice().sort((a,b)=>a.period-b.period);
-          this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
-          if ((best as any).exits) {
-            this.exitConfigs = (best as any).exits as any;
-            const f2 = this.exitConfigs[0] as any; if (f2) { this.takeProfitBasis = f2.basis; this.takeProfitPercent = f2.percent; this.takeProfitSellPercent = f2.sellPercent; this.takeProfitSkip = f2.skip; this.takeProfitCandleFilter = f2.candle; this.takeProfitVolumeFilter = f2.volume; this.takeProfitEnabled = true; }
-            const s2 = (this.exitConfigs as any)[1]; if (s2) { this.stopLossBasis = s2.basis; this.stopLossPercent = s2.percent; this.stopLossSellPercent = s2.sellPercent; this.stopLossSkip = s2.skip; this.stopLossCandleFilter = s2.candle; this.stopLossVolumeFilter = s2.volume; this.stopLossEnabled = true; } else { this.stopLossBasis = 'none' as any; this.stopLossEnabled = false; }
-          } else {
-            this.takeProfitEnabled = (best as any).tp.enabled;
-            this.takeProfitPercent = (best as any).tp.percent;
-            this.takeProfitSellPercent = (best as any).tp.sellPercent;
-            this.takeProfitSkip = (best as any).tp.skip;
-            this.takeProfitCandleFilter = (best as any).tp.candle as any;
-            this.takeProfitVolumeFilter = (best as any).tp.volume as any;
-            this.takeProfitBasis = (best as any).tp.basis ?? 'profitRise';
-            this.stopLossEnabled = (best as any).sl.enabled;
-            this.stopLossPercent = (best as any).sl.percent;
-            this.stopLossSellPercent = (best as any).sl.sellPercent;
-            this.stopLossSkip = (best as any).sl.skip;
-            this.stopLossCandleFilter = (best as any).sl.candle as any;
-            this.stopLossVolumeFilter = (best as any).sl.volume as any;
-            this.stopLossBasis = (best as any).sl.basis ?? 'profitFall';
-          }
-        } else {
-          this.maConfigs = [];
-          this.takeProfitEnabled = false;
-          this.stopLossEnabled = false;
-        }
-      } else {
-        this.maConfigs = [];
-        this.takeProfitEnabled = false;
-        this.stopLossEnabled = false;
-      }
-      this.showCross = false;
-      this.feePercent = 0.015;
-      this.applySimConfigToForm();
-      this.renderMaList();
-      this.syncSimParamsToUrl();
-      if (prevCount !== this.candleCount || prevTf !== this.timeframe) this.loadStock(this.currentCode, this.currentName);
-      else this.syncMasToChart();
-      sel.value = '';
+
+    @addEventListener('#sim-optimize-preset', 'change')
+    onPresetChange() {
+      this.syncConfigFromForm();
+      this.syncUrlWithoutReload();
     }
 
     @addEventListener('#sim-optimize-btn', 'click', { preventDefault: true, stopPropagation: true })
@@ -906,15 +942,17 @@ export default (w: Window) => {
       }
       btn.disabled = true;
       const origText = btn.textContent;
-      const typeSel = this.shadowRoot?.querySelector('#sim-optimize-type') as HTMLSelectElement;
-      const optType = (typeSel?.value as OptimizationType) ?? 'default';
       btn.textContent = '최적 탐색 중...';
       try {
         await new Promise(r => setTimeout(r, 50));
-        const best = this.findBestConfig(this.chartCandles, optType);
+        console.log('[sim] optimize input:', JSON.stringify({ candles: this.chartCandles.length, ...this.engineOpts(), riskAversion: this.riskAversion, trend: this.trendScore }));
+        const best = findBestConfig(this.chartCandles, { ...this.engineOpts(), riskAversion: this.riskAversion, trend: this.trendScore });
         if (best) {
           this.maConfigs = (best.maConfigs as typeof this.maConfigs).slice().sort((a,b)=>a.period-b.period);
           this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
+          const _bm = (best as any).mres, _bx = (best as any).xres;
+          if (isResolveMode(_bm)) this.maResolveMode = _bm; // 이긴 쪽 모드로 셀렉트 동기화
+          if (isResolveMode(_bx)) this.exitResolveMode = _bx;
           if ((best as any).exits) {
             this.exitConfigs = (best as any).exits as any;
             const f2 = this.exitConfigs[0] as any; if (f2) { this.takeProfitBasis = f2.basis; this.takeProfitPercent = f2.percent; this.takeProfitSellPercent = f2.sellPercent; this.takeProfitSkip = f2.skip; this.takeProfitCandleFilter = f2.candle; this.takeProfitVolumeFilter = f2.volume; this.takeProfitEnabled = true; }
@@ -962,591 +1000,7 @@ export default (w: Window) => {
       this.loadStock(this.currentCode, this.currentName);
     }
 
-    private condMet(count: number, operator: string, value: number): boolean {
-      if (operator === 'any') return true;
-      if (operator === '<') return count < value;
-      if (operator === '<=') return count <= value;
-      if (operator === '=') return Math.abs(count - value) < 0.0001;
-      if (operator === '!=') return Math.abs(count - value) >= 0.0001;
-      if (operator === '>=') return count >= value;
-      if (operator === '>') return count > value;
-      return false;
-    }
 
-    // 신호 방향과 배열 조건의 정합성: 골든=상승배열 계열, 데드=하락배열 계열 (any 포함)
-    // hasSmaller/hasLarger가 false면 해당 참조가 없는 모드는 제외 (발동 불가 조합 방지)
-    private alignForSignal(sig: string, hasSmaller = true, hasLarger = true): 'any'|'aligned'|'reverse'|'largerAbove'|'largerBelow'|'smallerAbove'|'smallerBelow' {
-      const pool: ('any'|'aligned'|'reverse'|'largerAbove'|'largerBelow'|'smallerAbove'|'smallerBelow')[] = ['any'];
-      if (sig === 'golden') {
-        pool.push('aligned');
-        if (hasSmaller) pool.push('smallerAbove');
-        if (hasLarger) pool.push('largerBelow');
-      } else {
-        pool.push('reverse');
-        if (hasSmaller) pool.push('smallerAbove', 'smallerBelow');
-        if (hasLarger) pool.push('largerAbove');
-      }
-      if (Math.random() < 0.45) return 'any';
-      return pool[1 + Math.floor(Math.random() * (pool.length - 1))];
-    }
-
-    // 참조 집합이 비어 발동 불가한 배열 조건 교정 (최대 MA의 larger계열·최소 MA의 smaller계열)
-    private sanitizeAlignments(list: any[]): void {
-      if (!Array.isArray(list) || !list.length) return;
-      const ps = list.map((m: any) => Number(m?.period) || 0);
-      const mn = Math.min(...ps), mx = Math.max(...ps);
-      for (const m of list) {
-        const sigs = m?.pyramiding?.signals;
-        if (!Array.isArray(sigs)) continue;
-        for (const s of sigs) {
-          const a = s.alignment;
-          const needS = a === 'smallerAbove' || a === 'smallerBelow';
-          const needL = a === 'largerAbove' || a === 'largerBelow';
-          if ((needS && !(m.period > mn)) || (needL && !(m.period < mx))) {
-            s.alignment = this.alignForSignal(s.signal, m.period > mn, m.period < mx);
-          }
-        }
-      }
-    }
-
-    private findBestConfig(candles: { date: string; open: number; high: number; low: number; close: number; volume: number }[], type: OptimizationType = 'default') {
-      const rand = (n: number) => Math.floor(Math.random() * n);
-      const pick = <T>(arr: T[]) => arr[rand(arr.length)];
-      const colors = ['#ef4444','#f59e0b','#10b981','#6366f1','#ec4899','#06b6d4','#8b5cf6','#14b8a6'];
-      const candleOpts: ('any'|'bull'|'bear')[] = ['any','bull','bear'];
-      const volOpts: ('any'|'higher'|'lower')[] = ['any','higher','lower'];
-      const tradeConds = ['consecutiveBuy','consecutiveSell','consecutiveSelected'];
-      const candleConds = ['consecutiveBullish','consecutiveBearish'];
-      const maConds = ['maDeviation','maSlope'];
-      const condOps = ['any','<','<=','=','!=','>=','>'] as const;
-      const trials = 500; // 1차 가중 랜덤 + 필요시 2차 완화 (hill-climb 포함 총 약 660회 평가)
-      let best: any = null;
-      let bestProfit = -Infinity;
-      let bestClean: any = null;
-      let bestCleanProfit = -Infinity;
-      const pool: { score: number; maConfigs: any[]; exits: any[] }[] = [];
-      const scoreOf = (m: { profit: number; maxDrawdown: number; tradeCount: number; avgPeriod: number; volatility: number }) => {
-        if (type === 'default') return m.profit - m.maxDrawdown * 0.5;
-        if (type === 'profit') return m.profit;
-        if (type === 'lossAvoid') return m.profit - m.maxDrawdown * 1.5 - (m.tradeCount > 30 ? 5 : 0);
-        if (type === 'longTerm') {
-          const avgP = m.avgPeriod || 50;
-          let s = m.profit * (avgP / 50) * (5 / Math.max(1, m.tradeCount));
-          if (avgP < 40) s *= 0.6;
-          if (m.tradeCount > 12) s *= 0.7;
-          return s;
-        }
-        // stable: profit 대비 변동성·낙폭 페널티
-        return m.profit / (1 + m.maxDrawdown / 20 + m.volatility * 2);
-      };
-      const clampN = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
-      const mutate = (src: { maConfigs: any[]; exits: any[] }): { maConfigs: any[]; exits: any[] } => {
-        const c: { maConfigs: any[]; exits: any[] } = JSON.parse(JSON.stringify(src));
-        const maxP = Math.max(5, Math.min(500, candles.length - 1));
-        const r = Math.random();
-        if (r < 0.3 && c.maConfigs.length) {
-          const m: any = pick(c.maConfigs);
-          m.period = clampN(Math.round(m.period + (Math.random() < 0.5 ? -1 : 1) * (1 + rand(10))), 2, maxP);
-          const seen = new Set<number>();
-          c.maConfigs = c.maConfigs.filter((x: any) => { if (seen.has(x.period)) return false; seen.add(x.period); return true; });
-          this.sanitizeAlignments(c.maConfigs);
-        } else if (r < 0.55 && c.maConfigs.length) {
-          const m: any = pick(c.maConfigs);
-          const ss = m.pyramiding?.signals;
-          if (ss?.length) {
-            const s: any = pick(ss);
-            const k = rand(6);
-            if (k === 0) s.percent = clampN(s.percent + [-10, -5, 5, 10][rand(4)], 1, 100);
-            else if (k === 1) s.consecutive = clampN(s.consecutive + (Math.random() < 0.5 ? -1 : 1), 1, 10);
-            else if (k === 2) s.action = s.action === 'buy' ? 'sell' : 'buy';
-            else if (k === 3) s.candleFilter = pick(candleOpts);
-            else if (k === 4) s.volumeFilter = pick(volOpts);
-            else s.alignment = this.alignForSignal(s.signal);
-          }
-        } else if (r < 0.7 && c.maConfigs.length) {
-          const m: any = pick(c.maConfigs);
-          const ss = m.pyramiding?.signals;
-          if (ss?.length) {
-            const s: any = pick(ss);
-            const u2 = Math.random();
-            const g = u2 < 0.34 ? s.condTrade : u2 < 0.67 ? s.condCandle : s.condMa;
-            if (g) {
-              const isMa = g === s.condMa;
-              const u = Math.random();
-              if (u < 0.5 && g.type !== 'any') {
-                g.value = isMa ? clampN(Math.round((g.value + (Math.random() < 0.5 ? -1 : 1) * (0.5 + Math.random() * 2)) * 10) / 10, -50, 50)
-                               : clampN(Math.round(g.value + (Math.random() < 0.5 ? -1 : 1) * (1 + rand(2))), 1, 20);
-              } else if (u < 0.75) {
-                g.operator = pick([...condOps]);
-              } else {
-                const pool2 = g === s.condTrade ? ['any','consecutiveBuy','consecutiveSell','consecutiveSelected']
-                            : g === s.condCandle ? ['any','consecutiveBullish','consecutiveBearish']
-                            : ['any','maDeviation','maSlope'];
-                g.type = pick(pool2 as any);
-                if (g.type === 'any') g.operator = 'any';
-                else if (g.operator === 'any') g.operator = pick((['<','<=','=','!=','>=','>']) as any);
-              }
-            }
-          }
-        } else if (c.exits.length) {
-          const e = pick(c.exits);
-          const k = rand(4);
-          if (k === 0) e.percent = clampN(e.percent + (Math.random() < 0.5 ? -1 : 1) * (1 + rand(4)), 1, 100);
-          else if (k === 1) e.sellPercent = clampN(e.sellPercent + (Math.random() < 0.5 ? -1 : 1) * (5 + rand(10)), 1, 100);
-          else if (k === 2) e.skip = clampN(e.skip + (Math.random() < 0.5 ? -1 : 1), 0, 20);
-          else e.basis = pick(['profitRise','profitFall','peakFall','peakRise'] as const);
-        }
-        return c;
-      };
-      const consider = (maCfgs: any[], exitCfgs: any[]) => {
-        // 최적화는 UI 체크와 무관하게 항상 전체 이평선 존재 조건으로 평가
-        const m = this.calcMetrics(candles, maCfgs as any, exitCfgs as any, true);
-        const score = scoreOf(m);
-        if (score > bestProfit) { maCfgs.sort((a:any,b:any)=>a.period-b.period); bestProfit = score; best = { maConfigs: maCfgs, exits: exitCfgs, profit: m.profit, metrics: m, score, type }; }
-        if (m.conflicts === 0 && score > bestCleanProfit) { bestCleanProfit = score; bestClean = { maConfigs: maCfgs, exits: exitCfgs, profit: m.profit, metrics: m, score, type }; }
-        if (pool.length < 20 || score > pool[pool.length - 1].score) {
-          pool.push({ score, maConfigs: JSON.parse(JSON.stringify(maCfgs)), exits: JSON.parse(JSON.stringify(exitCfgs)) });
-          pool.sort((a, b) => b.score - a.score);
-          if (pool.length > 20) pool.length = 20;
-        }
-      };
-      // 베이스라인 2종을 먼저 평가 — 명백한 추세가 있을 때 0거래(관망)가 최적이라고 나오는 것 방지
-      const baselineExits: any[] = [{ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 0, candle: 'any', volume: 'any' }];
-      const baseline = (periods: number[]) => periods.map((period, i) => ({ period, color: colors[i % colors.length], pyramiding: { signals: (['golden','dead'] as const).map(sig => ({ signal: sig, action: sig === 'golden' ? 'buy' : 'sell', percent: sig === 'golden' ? 99 : 100, candleFilter: 'any', volumeFilter: 'any', consecutive: 1, alignment: 'any', condTrade: { type: 'any', operator: 'any', value: 1 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'any', operator: 'any', value: 1 } })) } }));
-      // NOTE: 매수 percent 100은 수수료 여유분이 없어 단 1주도 체결되지 않으므로 99 사용
-      consider(baseline([5, 20]), baselineExits);
-      consider(baseline([10, 30, 60]), baselineExits);
-      // 데이터 기반 기간 가중치: 표준 기간 단순전략(골든 전량매수/데드 전량매도) 점수로 기간 우선순위 산출
-      const periodPool = [5,10,20,30,60,90,120,200].filter(v => v < candles.length);
-      const maxPeriod = Math.max(5, Math.min(240, candles.length - 1));
-      const noCond = { type: 'any' as const, operator: 'any' as const, value: 1 };
-      const simpleExits: any[] = [{ basis: 'profitRise', percent: 15, sellPercent: 100, skip: 0, candle: 'any', volume: 'any' }];
-      const periodScore = new Map<number, number>();
-      for (const pp of periodPool) {
-        const pm = this.calcMetrics(candles, [{ period: pp, color: '#888888', pyramiding: { signals: [
-          { signal: 'golden', action: 'buy', percent: 99, candleFilter: 'any', volumeFilter: 'any', consecutive: 1, alignment: 'any', condTrade: { ...noCond }, condCandle: { ...noCond }, condMa: { ...noCond } },
-          { signal: 'dead', action: 'sell', percent: 100, candleFilter: 'any', volumeFilter: 'any', consecutive: 1, alignment: 'any', condTrade: { ...noCond }, condCandle: { ...noCond }, condMa: { ...noCond } },
-        ] } }], simpleExits, true);
-        periodScore.set(pp, Number.isFinite(pm.profit) ? pm.profit : -Infinity);
-      }
-      const weightedPool = [...periodPool].sort((a, b) => (periodScore.get(b) ?? -Infinity) - (periodScore.get(a) ?? -Infinity));
-      const pickPeriod = (used: Set<number>): number => {
-        if (Math.random() < 0.65) {
-          const avail = weightedPool.filter(q => !used.has(q));
-          if (avail.length) {
-            const idx = Math.min(avail.length - 1, Math.floor(Math.pow(Math.random(), 2) * avail.length));
-            used.add(avail[idx]);
-            return avail[idx];
-          }
-        }
-        for (let a = 0; a < 50; a++) { const q = 3 + rand(maxPeriod - 2); if (!used.has(q)) { used.add(q); return q; } }
-        const fallback = 3 + rand(maxPeriod - 2);
-        used.add(fallback);
-        return fallback;
-      };
-      for (let phase = 0; phase < 2; phase++) {
-        const relaxed = phase === 1;
-        // 1차(1000회)에서 거래 있는 최적값을 찾았으면 2차(조건 완화) 생략
-        if (relaxed && (best?.metrics?.tradeCount ?? 0) > 0) break;
-      for (let t = 0; t < trials; t++) {
-        const maCount = 2 + rand(3);
-        const used = new Set<number>();
-        const maConfigs = Array.from({ length: maCount }, () => {
-          const period = pickPeriod(used);
-          const color = colors[rand(colors.length)];
-          const mkSide = (sg: 'golden'|'dead') => ({
-            action: (['buy','sell'][Math.floor(Math.random()*2)] as 'buy'|'sell'),
-            percent: 10 + rand(41),
-            candleFilter: relaxed && Math.random() < 0.7 ? 'any' : pick(candleOpts),
-            volumeFilter: relaxed && Math.random() < 0.7 ? 'any' : pick(volOpts),
-            consecutive: relaxed ? 1 + rand(2) : 1 + rand(3),
-            alignment: relaxed ? 'any' : this.alignForSignal(sg),
-            condTrade: relaxed ? { type: 'any' as const, operator: 'any' as const, value: 1 } : (Math.random() < 0.5 ? { type: 'any' as const, operator: 'any' as const, value: 1 } : { type: pick(tradeConds) as any, operator: pick([...condOps].filter(o=>o!=='any')) as any, value: 1 + rand(5) }),
-            condCandle: relaxed ? { type: 'any' as const, operator: 'any' as const, value: 1 } : (Math.random() < 0.5 ? { type: 'any' as const, operator: 'any' as const, value: 1 } : { type: pick(candleConds) as any, operator: pick([...condOps].filter(o=>o!=='any')) as any, value: 1 + rand(5) }),
-            condMa: relaxed ? { type: 'any' as const, operator: 'any' as const, value: 1 } : (Math.random() < 0.5 ? { type: 'any' as const, operator: 'any' as const, value: 1 } : { type: pick(maConds) as any, operator: pick([...condOps].filter(o=>o!=='any')) as any, value: Number((Math.random()*20 -10).toFixed(1)) }),
-          });
-          const sigCount = 1 + rand(3);
-          const sigs = Array.from({ length: sigCount }, () => { const sg = pick(['golden','dead'] as const); return { signal: sg, ...mkSide(sg) }; });
-          return { period, color, pyramiding: { signals: sigs } };
-        });
-        this.sanitizeAlignments(maConfigs);
-        const filtered = maConfigs.filter(m => (m.pyramiding.signals||[]).length>0);
-        if (!filtered.length) continue;
-        const exitCount = 1 + rand(2);
-        const exits: any[] = Array.from({ length: exitCount }, () => {
-          const b = pick(['profitRise','profitFall','peakFall','peakRise'] as const);
-          return { basis: b, percent: 5 + rand(21), sellPercent: 30 + rand(71), skip: rand(6), candle: pick(candleOpts), volume: pick(volOpts) };
-        });
-        consider(filtered, exits);
-        } // for t
-      } // for phase — 1차에서 거래 있는 최적값을 못 찾으면 조건 완화해 추가 탐색
-      // hill-climb: 상위 후보를 변이시키며 점수 수렴 (랜덤 탐색 보완)
-      const elites = pool.slice(0, 5);
-      for (const e of elites) {
-        for (let g = 0; g < 30; g++) {
-          const mutated = mutate({ maConfigs: e.maConfigs, exits: e.exits });
-          consider(mutated.maConfigs, mutated.exits);
-        }
-      }
-      return bestClean ?? best; // 같은 틱 반대매매 없는 후보 우선 (없을 때만 전체 최적)
-    }
-
-    private calcCandidateProfit(candles: { date: string; open: number; high: number; low: number; close: number; volume: number }[], maConfigs: any[], tp: { enabled: boolean; percent: number; sellPercent: number; skip: number; candle: string; volume: string }, sl: { enabled: boolean; percent: number; sellPercent: number; skip: number; candle: string; volume: string }): number {
-      if (!candles.length || !maConfigs.length) return -Infinity;
-      const maMap = new Map<number, (number | null)[]>();
-      for (const ma of maConfigs) {
-        const vals: (number | null)[] = [];
-        let sum = 0;
-        for (let i = 0; i < candles.length; i++) {
-          sum += candles[i].close;
-          if (i >= ma.period) sum -= candles[i - ma.period].close;
-          vals.push(i >= ma.period - 1 ? sum / ma.period : null);
-        }
-        maMap.set(ma.period, vals);
-      }
-      const sortedMas = [...maConfigs].sort((a, b) => a.period - b.period);
-      const isAligned = (idx: number): boolean => {
-        const formed = sortedMas.map(ma => ({ period: ma.period, v: maMap.get(ma.period)![idx] })).filter(x => x.v != null) as { period: number; v: number }[];
-        if (formed.length < 2) return true;
-        for (let k = 0; k < formed.length - 1; k++) if (!(formed[k].v > formed[k+1].v)) return false;
-        return true;
-      };
-      const isReverseAligned = (idx: number): boolean => {
-        const formed = sortedMas.map(ma => ({ period: ma.period, v: maMap.get(ma.period)![idx] })).filter(x => x.v != null) as { period: number; v: number }[];
-        if (formed.length < 2) return true;
-        for (let k = 0; k < formed.length - 1; k++) if (!(formed[k].v < formed[k+1].v)) return false;
-        return true;
-      };
-      const checkAlignment = (maPeriod: number, idx: number, mode: string): boolean => {
-        const cur = maMap.get(maPeriod)?.[idx];
-        if (cur == null) return false;
-        if (mode === 'any') return true;
-        if (mode === 'aligned') return isAligned(idx);
-        if (mode === 'reverse') return isReverseAligned(idx);
-        const larger = [...maMap.entries()].filter(([p]) => p > maPeriod).map(([, arr]) => arr[idx]).filter(v => v != null) as number[];
-        const smaller = [...maMap.entries()].filter(([p]) => p < maPeriod).map(([, arr]) => arr[idx]).filter(v => v != null) as number[];
-        if (mode === 'largerAbove') return larger.length > 0 && larger.every(v => v > cur);
-        if (mode === 'largerBelow') return larger.length > 0 && larger.every(v => v < cur);
-        if (mode === 'smallerAbove') return smaller.length > 0 && smaller.every(v => v > cur);
-        if (mode === 'smallerBelow') return smaller.length > 0 && smaller.every(v => v < cur);
-        return true;
-      };
-      let cash = this.initialCapital;
-      let shares = 0;
-      let totalCost = 0;
-      const feeRate = this.feePercent / 100;
-      let peakPrice = 0;
-      let troughPrice = 0;
-      const trades: { action: string }[] = [];
-      const sigStreak = new Map<any, number>();
-      let maSkipRemaining = 0;
-      for (let i = 1; i < candles.length; i++) {
-        if (shares > 0) { peakPrice = Math.max(peakPrice, candles[i].close); troughPrice = troughPrice ? Math.min(troughPrice, candles[i].close) : candles[i].close; } else { peakPrice = 0; troughPrice = 0; }
-        if (shares > 0 && totalCost > 0) {
-          const avg = totalCost / shares;
-          const currClose = candles[i].close;
-          const profitRate = ((currClose - avg) / avg) * 100;
-          const peakDropRate = peakPrice > 0 ? ((peakPrice - currClose) / peakPrice) * 100 : 0;
-          let shouldTP = false;
-          if (tp.enabled) {
-            const b = (tp as any).basis;
-            if (b === 'profitRise' || b === 'profit') shouldTP = profitRate >= tp.percent;
-            else if (b === 'profitFall') shouldTP = profitRate <= -tp.percent;
-            else if (b === 'peakFall' || b === 'peak') shouldTP = peakDropRate >= tp.percent;
-            else if (b === 'peakRise') { const tr = troughPrice > 0 ? ((currClose - troughPrice) / troughPrice) * 100 : 0; shouldTP = tr >= tp.percent; }
-          }
-          let shouldSL = false;
-          if (sl.enabled) {
-            const b2 = (sl as any).basis;
-            if (b2 === 'profitRise' || b2 === 'profit') shouldSL = profitRate >= sl.percent;
-            else if (b2 === 'profitFall') shouldSL = profitRate <= -sl.percent;
-            else if (b2 === 'peakFall' || b2 === 'peak') shouldSL = peakDropRate >= sl.percent;
-            else if (b2 === 'peakRise') { const tr2 = troughPrice > 0 ? ((currClose - troughPrice) / troughPrice) * 100 : 0; shouldSL = tr2 >= sl.percent; }
-          }
-          if (shouldTP) {
-            if (tp.candle !== 'any') {
-              const isBull = candles[i].close > candles[i].open;
-              const isBear = candles[i].close < candles[i].open;
-              if (tp.candle === 'bull' && !isBull) shouldTP = false;
-              if (tp.candle === 'bear' && !isBear) shouldTP = false;
-            }
-            if (shouldTP && tp.volume !== 'any' && i > 0) {
-              if (tp.volume === 'higher' && !(candles[i].volume > candles[i-1].volume)) shouldTP = false;
-              if (tp.volume === 'lower' && !(candles[i].volume < candles[i-1].volume)) shouldTP = false;
-            }
-          }
-          if (shouldSL) {
-            if (sl.candle !== 'any') {
-              const isBull = candles[i].close > candles[i].open;
-              const isBear = candles[i].close < candles[i].open;
-              if (sl.candle === 'bull' && !isBull) shouldSL = false;
-              if (sl.candle === 'bear' && !isBear) shouldSL = false;
-            }
-            if (shouldSL && sl.volume !== 'any' && i > 0) {
-              if (sl.volume === 'higher' && !(candles[i].volume > candles[i-1].volume)) shouldSL = false;
-              if (sl.volume === 'lower' && !(candles[i].volume < candles[i-1].volume)) shouldSL = false;
-            }
-          }
-          if (shouldTP || shouldSL) {
-            const isTP = shouldTP;
-            const sellPct = isTP ? tp.sellPercent : sl.sellPercent;
-            const sellShares = Math.floor(shares * (sellPct / 100));
-            if (sellShares > 0) {
-              const currClose2 = candles[i].close;
-              const proceeds = sellShares * currClose2;
-              const fee = Math.round(proceeds * feeRate);
-              shares -= sellShares;
-              cash += proceeds - fee;
-              totalCost -= sellShares * avg;
-              if (shares === 0) totalCost = 0;
-              trades.push({ action: 'sell' });
-              maSkipRemaining = isTP ? tp.skip : sl.skip;
-              continue;
-            }
-          }
-        }
-        if (maSkipRemaining > 0) { maSkipRemaining--; continue; }
-        for (const ma of sortedMas) {
-          const vals = maMap.get(ma.period)!;
-          const prevMA = vals[i-1];
-          const currMA = vals[i];
-          if (prevMA == null || currMA == null) continue;
-          const prevClose = candles[i-1].close;
-          const currClose = candles[i].close;
-          const signals: any[] = (ma.pyramiding as any).signals || [];
-          for (let sIdx = 0; sIdx < signals.length; sIdx++) {
-            const sigCfg: any = signals[sIdx];
-            const sigType = sigCfg.signal as 'golden'|'dead';
-            const trigger = sigCfg.trigger as 'state'|'event' ?? 'event';
-            const isAbove = currClose > currMA;
-            const isBelow = currClose < currMA;
-            const isCrossGolden = prevClose <= prevMA && currClose > currMA;
-            const isCrossDead = prevClose >= prevMA && currClose < currMA;
-            let sig: 'golden'|'dead'|null = null;
-            if (sigType === 'golden') {
-              if (isAbove) sig = 'golden';
-            } else {
-              if (isBelow) sig = 'dead';
-            }
-            if (!sig) continue;
-            const sigKey = `${ma.period}-${sIdx}`;
-            const align = sigCfg.alignment ?? 'any';
-            if (align !== 'any' && !checkAlignment(ma.period, i, align)) {
-              sigStreak.set(sigKey, 0);
-              continue;
-            }
-            const need = Math.max(1, Math.min(10, sigCfg.consecutive ?? 2));
-            if (trigger === 'event') {
-              const curStreak = sigStreak.get(sigKey) ?? 0;
-              const isHolding = sig === 'golden' ? isAbove : isBelow;
-              const cur = isHolding ? curStreak + 1 : 1;
-              sigStreak.set(sigKey, cur);
-              if (cur < need) continue;
-            }
-            const ct0 = sigCfg.condTrade;
-            if (ct0 && ct0.type !== 'any') {
-              let count = 0;
-              if (ct0.type === 'consecutiveBuy') { for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === 'buy') count++; else break; } }
-              else if (ct0.type === 'consecutiveSell') { for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === 'sell') count++; else break; } }
-              else if (ct0.type === 'consecutiveSelected') { const target = sigCfg.action; for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === target) count++; else break; } }
-              if (!this.condMet(count, ct0.operator, ct0.value)) continue;
-            }
-            const cc0 = sigCfg.condCandle;
-            if (cc0 && cc0.type !== 'any') {
-              let count = 0;
-              if (cc0.type === 'consecutiveBullish') { for (let k = i; k >= 0; k--) { const c = candles[k]; if (c.close > c.open) count++; else break; } }
-              else if (cc0.type === 'consecutiveBearish') { for (let k = i; k >= 0; k--) { const c = candles[k]; if (c.close < c.open) count++; else break; } }
-              if (!this.condMet(count, cc0.operator, cc0.value)) continue;
-            }
-            const cm0 = sigCfg.condMa;
-            if (cm0 && cm0.type !== 'any') {
-              let count = 0;
-              if (cm0.type === 'maDeviation') { const maVal = maMap.get(ma.period)?.[i]; if (maVal == null || maVal === 0) count = 0; else count = ((candles[i].close - maVal) / maVal) * 100; }
-              else if (cm0.type === 'maSlope') { const maVal = maMap.get(ma.period)?.[i]; const prevMaVal = maMap.get(ma.period)?.[i-1]; if (maVal == null || prevMaVal == null || prevMaVal === 0) count = 0; else count = ((maVal - prevMaVal) / prevMaVal) * 100; }
-              if (!this.condMet(count, cm0.operator, cm0.value)) continue;
-            }
-            const cfg = sigCfg;
-            const pct = Math.max(1, Math.min(100, cfg.percent));
-            if (cfg.action === 'buy') {
-              const candleOk = cfg.candleFilter === 'any' || (cfg.candleFilter === 'bull' ? candles[i].close > candles[i].open : candles[i].close < candles[i].open);
-              const volOk = cfg.volumeFilter === 'any' || (i>0 && (cfg.volumeFilter === 'higher' ? candles[i].volume > candles[i-1].volume : candles[i].volume < candles[i-1].volume));
-              if (!candleOk || !volOk) continue;
-              const cost = Math.floor(cash * (pct / 100));
-              if (cost < 1000 || cash < cost) continue;
-              const buyShares = Math.floor(cost / currClose);
-              if (buyShares <= 0) continue;
-              const actualCost = buyShares * currClose;
-              const fee = Math.round(actualCost * feeRate);
-              if (cash < actualCost + fee) continue;
-              shares += buyShares;
-              cash -= actualCost + fee;
-              totalCost += actualCost + fee;
-              trades.push({ action: 'buy' });
-            } else {
-              if (shares <= 0 || totalCost <= 0) continue;
-              const sellShares = Math.floor(shares * (pct / 100));
-              if (sellShares <= 0) continue;
-              const avg = totalCost / shares;
-              const proceeds = sellShares * currClose;
-              const fee = Math.round(proceeds * feeRate);
-              shares -= sellShares;
-              cash += proceeds - fee;
-              totalCost -= sellShares * avg;
-              if (shares === 0) totalCost = 0;
-              trades.push({ action: 'sell' });
-            }
-          }
-        }
-      }
-      const lastPrice = candles.length ? candles[candles.length - 1].close : 0;
-      const evalAmt = cash + shares * lastPrice;
-      const profit = evalAmt - this.initialCapital;
-      const rate = this.initialCapital ? (profit / this.initialCapital) * 100 : 0;
-      return rate;
-    }
-
-    private calcMetrics(candles: { date: string; open: number; high: number; low: number; close: number; volume: number }[], maConfigs: any[], exits: any[], requireAll: boolean = this.requireAllMas): { profit: number; rate: number; maxDrawdown: number; tradeCount: number; avgPeriod: number; volatility: number; conflicts: number } {
-      if (!candles.length || !maConfigs.length) return { profit: -Infinity, rate: -Infinity, maxDrawdown: 100, tradeCount: 0, avgPeriod: 0, volatility: 0, conflicts: 0 };
-      const exitList: any[] = Array.isArray(exits) ? exits : [];
-      const maMap = new Map<number, (number | null)[]>();
-      for (const ma of maConfigs) { const vals: (number | null)[]=[]; let sum=0; for(let i=0;i<candles.length;i++){ sum+=candles[i].close; if(i>=ma.period) sum-=candles[i-ma.period].close; vals.push(i>=ma.period-1?sum/ma.period:null);} maMap.set(ma.period, vals); }
-      const sortedMas=[...maConfigs].sort((a,b)=>a.period-b.period);
-      const reqFrom=sortedMas.length?Math.max(...sortedMas.map((m:any)=>m.period)):0; // 전체 존재 조건 기준봉
-      const isAligned=(idx:number)=>{ const f=sortedMas.map(ma=>({period:ma.period,v:maMap.get(ma.period)![idx]})).filter(x=>x.v!=null) as any[]; if(f.length<2) return true; for(let k=0;k<f.length-1;k++) if(!(f[k].v>f[k+1].v)) return false; return true; };
-      const isRev=(idx:number)=>{ const f=sortedMas.map(ma=>({period:ma.period,v:maMap.get(ma.period)![idx]})).filter(x=>x.v!=null) as any[]; if(f.length<2) return true; for(let k=0;k<f.length-1;k++) if(!(f[k].v<f[k+1].v)) return false; return true; };
-      const checkAlignment=(maPeriod:number,idx:number,mode:string)=>{ const cur=maMap.get(maPeriod)?.[idx]; if(cur==null) return false; if(mode==='any') return true; if(mode==='aligned') return isAligned(idx); if(mode==='reverse') return isRev(idx); const larger=[...maMap.entries()].filter(([p])=>p>maPeriod).map(([,arr])=>arr[idx]).filter(v=>v!=null) as number[]; const smaller=[...maMap.entries()].filter(([p])=>p<maPeriod).map(([,arr])=>arr[idx]).filter(v=>v!=null) as number[]; if(mode==='largerAbove') return larger.length>0&&larger.every(v=>v>cur); if(mode==='largerBelow') return larger.length>0&&larger.every(v=>v<cur); if(mode==='smallerAbove') return smaller.length>0&&smaller.every(v=>v>cur); if(mode==='smallerBelow') return smaller.length>0&&smaller.every(v=>v<cur); return true; };
-      let cash=this.initialCapital; let shares=0; let totalCost=0; const feeRate=this.feePercent/100; let peakPrice=0; let troughPrice=0; let trades=0; let conflicts=0; let barDir:string|null=null; const tradeActions:string[]=[]; const sigStreak=new Map<any,number>(); let maSkipRemaining=0;
-      const equities:number[]=[]; let peakEquity=this.initialCapital; let maxDD=0;
-      for(let i=1;i<candles.length;i++){
-        if(shares>0){ peakPrice=Math.max(peakPrice,candles[i].close); troughPrice=troughPrice?Math.min(troughPrice,candles[i].close):candles[i].close; } else { peakPrice=0; troughPrice=0; }
-        if(shares>0&&totalCost>0){
-          const avg=totalCost/shares; const currClose=candles[i].close; const profitRate=((currClose-avg)/avg)*100; const peakDrop=peakPrice>0?((peakPrice-currClose)/peakPrice)*100:0; const troughRise=troughPrice>0?((currClose-troughPrice)/troughPrice)*100:0;
-          let exitExecuted=false;
-          for(const ex of exitList){
-            let should=false;
-            if(ex.basis==='profitRise') should=profitRate>=ex.percent;
-            else if(ex.basis==='profitFall') should=profitRate<=-ex.percent;
-            else if(ex.basis==='peakFall') should=peakDrop>=ex.percent;
-            else if(ex.basis==='peakRise') should=troughRise>=ex.percent;
-            if(!should) continue;
-            if(ex.candle!=='any'){ const isBull=candles[i].close>candles[i].open; const isBear=candles[i].close<candles[i].open; if(ex.candle==='bull'&&!isBull) should=false; if(ex.candle==='bear'&&!isBear) should=false; }
-            if(should&&ex.volume!=='any'&&i>0){ if(ex.volume==='higher'&&!(candles[i].volume>candles[i-1].volume)) should=false; if(ex.volume==='lower'&&!(candles[i].volume<candles[i-1].volume)) should=false; }
-            if(!should) continue;
-            const sellShares=Math.floor(shares*(ex.sellPercent/100)); if(sellShares<=0) continue;
-            const avg2=totalCost/shares; const proceeds=sellShares*currClose; const fee=Math.round(proceeds*feeRate); shares-=sellShares; cash+=proceeds-fee; totalCost-=sellShares*avg2; if(shares===0) totalCost=0; trades++; maSkipRemaining=ex.skip; exitExecuted=true; break;
-          }
-          if(exitExecuted){ const eq=cash+shares*candles[i].close; equities.push(eq); peakEquity=Math.max(peakEquity,eq); maxDD=Math.max(maxDD, peakEquity?((peakEquity-eq)/peakEquity)*100:0); continue; }
-        }
-        if(maSkipRemaining>0){ const eq=cash+shares*candles[i].close; equities.push(eq); peakEquity=Math.max(peakEquity,eq); maxDD=Math.max(maxDD, peakEquity?((peakEquity-eq)/peakEquity)*100:0); maSkipRemaining--; continue; }
-        barDir=null; for(const ma of sortedMas){ if(requireAll&&i<reqFrom) break; // 전체 이평선 존재 조건: 최장기선 미형성 구간 매매 스킵
-          const vals=maMap.get(ma.period)!; const prevMA=vals[i-1]; const currMA=vals[i]; if(prevMA==null||currMA==null) continue;
-          const currClose=candles[i].close;
-          const isAbove=currClose>currMA; const isBelow=currClose<currMA;
-          const signals: any[]=(ma.pyramiding as any).signals||[];
-          for(let sIdx=0;sIdx<signals.length;sIdx++){
-            const sigCfg:any=signals[sIdx]; const sigType=sigCfg.signal as 'golden'|'dead';
-            let sig:'golden'|'dead'|null=null;
-            if(sigType==='golden'){ if(isAbove) sig='golden'; } else { if(isBelow) sig='dead'; }
-            const sigKey=`${ma.period}-${sIdx}`;
-            if(!sig){ sigStreak.set(sigKey,0); continue; }
-            const align=sigCfg.alignment??'any'; if(align!=='any'&&!checkAlignment(ma.period,i,align)){ sigStreak.set(sigKey,0); continue; }
-            const need=Math.max(1,Math.min(10,sigCfg.consecutive??2));
-            const holdingNow=sig==='golden'?isAbove:isBelow; const cur=holdingNow?(sigStreak.get(sigKey)??0)+1:1; sigStreak.set(sigKey,cur);
-            if(cur<need) continue;
-            const ct0=sigCfg.condTrade;
-            if(ct0&&ct0.type!=='any'){
-              let count=0;
-              if(ct0.type==='consecutiveBuy'){ for(let k=tradeActions.length-1;k>=0;k--){ if(tradeActions[k]==='buy') count++; else break; } }
-              else if(ct0.type==='consecutiveSell'){ for(let k=tradeActions.length-1;k>=0;k--){ if(tradeActions[k]==='sell') count++; else break; } }
-              else if(ct0.type==='consecutiveSelected'){ const target=sigCfg.action; for(let k=tradeActions.length-1;k>=0;k--){ if(tradeActions[k]===target) count++; else break; } }
-              if(!this.condMet(count,ct0.operator,ct0.value)) continue;
-            }
-            const cc0=sigCfg.condCandle;
-            if(cc0&&cc0.type!=='any'){
-              let count=0;
-              if(cc0.type==='consecutiveBullish'){ for(let k=i;k>=0;k--){ const c=candles[k]; if(c.close>c.open) count++; else break; } }
-              else if(cc0.type==='consecutiveBearish'){ for(let k=i;k>=0;k--){ const c=candles[k]; if(c.close<c.open) count++; else break; } }
-              if(!this.condMet(count,cc0.operator,cc0.value)) continue;
-            }
-            const cm0=sigCfg.condMa;
-            if(cm0&&cm0.type!=='any'){
-              let count=0;
-              if(cm0.type==='maDeviation'){ const maVal=maMap.get(ma.period)?.[i]; if(maVal==null||maVal===0) count=0; else count=((candles[i].close-maVal)/maVal)*100; }
-              else if(cm0.type==='maSlope'){ const maVal=maMap.get(ma.period)?.[i]; const prevMaVal=maMap.get(ma.period)?.[i-1]; if(maVal==null||prevMaVal==null||prevMaVal===0) count=0; else count=((maVal-prevMaVal)/prevMaVal)*100; }
-              if(!this.condMet(count,cm0.operator,cm0.value)) continue;
-            }
-            const cfg=sigCfg; const pct=Math.max(1,Math.min(100,(cfg as any).percent));
-            if((cfg as any).action==='buy'){ const candleOk=(cfg as any).candleFilter==='any'||((cfg as any).candleFilter==='bull'?candles[i].close>candles[i].open:candles[i].close<candles[i].open); const volOk=(cfg as any).volumeFilter==='any'||(i>0&&((cfg as any).volumeFilter==='higher'?candles[i].volume>candles[i-1].volume:candles[i].volume<candles[i-1].volume)); if(!candleOk||!volOk) continue; const cost=Math.floor(cash*(pct/100)); if(cost<1000||cash<cost) continue; const buyShares=Math.floor(cost/currClose); if(buyShares<=0) continue; const actualCost=buyShares*currClose; const fee=Math.round(actualCost*feeRate); if(cash<actualCost+fee) continue; shares+=buyShares; cash-=actualCost+fee; totalCost+=actualCost+fee; if(barDir&&barDir!=='buy'){conflicts++;} barDir='buy'; trades++; tradeActions.push('buy'); } else { if(shares<=0||totalCost<=0) continue; const candleOk=(cfg as any).candleFilter==='any'||((cfg as any).candleFilter==='bull'?candles[i].close>candles[i].open:candles[i].close<candles[i].open); const volOk=(cfg as any).volumeFilter==='any'||(i>0&&((cfg as any).volumeFilter==='higher'?candles[i].volume>candles[i-1].volume:candles[i].volume<candles[i-1].volume)); if(!candleOk||!volOk) continue; const sellShares=Math.floor(shares*(pct/100)); if(sellShares<=0) continue; const avg=totalCost/shares; const proceeds=sellShares*currClose; const fee=Math.round(proceeds*feeRate); shares-=sellShares; cash+=proceeds-fee; totalCost-=sellShares*avg; if(shares===0) totalCost=0; if(barDir&&barDir!=='sell'){conflicts++;} barDir='sell'; trades++; tradeActions.push('sell'); }
-          }
-        }
-        const eq=cash+shares*candles[i].close; equities.push(eq); peakEquity=Math.max(peakEquity,eq); maxDD=Math.max(maxDD, peakEquity?((peakEquity-eq)/peakEquity)*100:0);
-      }
-      const lastPrice=candles.length?candles[candles.length-1].close:0; const evalAmt=cash+shares*lastPrice; const profit=evalAmt-this.initialCapital; const rate=this.initialCapital?(profit/this.initialCapital)*100:0;
-      let sum=0,sumSq=0; for(let i=1;i<equities.length;i++){ const r=(equities[i]-equities[i-1])/equities[i-1]; sum+=r; sumSq+=r*r; } const mean=equities.length>1?sum/(equities.length-1):0; const variance=equities.length>1?sumSq/(equities.length-1)-mean*mean:0; const volatility=Math.sqrt(Math.max(0,variance))*100;
-      const avgPeriod=maConfigs.length?maConfigs.reduce((s:number,m:any)=>s+m.period,0)/maConfigs.length:50;
-      return { profit: rate, rate, maxDrawdown: maxDD, tradeCount: trades, avgPeriod, volatility, conflicts };
-    }
-
-    @addEventListener('#sim-reset-btn', 'click')
-    async onResetSim() {
-      this.candleCount = DEFAULT_CANDLE_COUNT;
-      this.timeframe = DEFAULT_TIMEFRAME;
-      this.initialCapital = DEFAULT_CAPITAL;
-      this.showCross = false;
-      this.feePercent = 0.015;
-      // 리셋도 최적화로 채움 (하드코딩 DEFAULT 제거)
-      if (this.chartCandles.length) {
-        const best = this.findBestConfig(this.chartCandles);
-        if (best) {
-          this.maConfigs = (best.maConfigs as typeof this.maConfigs).slice().sort((a,b)=>a.period-b.period);
-          this.requireAllMas = true; // 최적화 결과 적용 시 전체존재 조건 강제 (체크박스 포함)
-          if ((best as any).exits) {
-            this.exitConfigs = (best as any).exits as any;
-            const f2 = this.exitConfigs[0] as any; if (f2) { this.takeProfitBasis = f2.basis; this.takeProfitPercent = f2.percent; this.takeProfitSellPercent = f2.sellPercent; this.takeProfitSkip = f2.skip; this.takeProfitCandleFilter = f2.candle; this.takeProfitVolumeFilter = f2.volume; this.takeProfitEnabled = true; }
-            const s2 = (this.exitConfigs as any)[1]; if (s2) { this.stopLossBasis = s2.basis; this.stopLossPercent = s2.percent; this.stopLossSellPercent = s2.sellPercent; this.stopLossSkip = s2.skip; this.stopLossCandleFilter = s2.candle; this.stopLossVolumeFilter = s2.volume; this.stopLossEnabled = true; } else { this.stopLossBasis = 'none' as any; this.stopLossEnabled = false; }
-          } else {
-            this.takeProfitEnabled = (best as any).tp.enabled;
-            this.takeProfitPercent = (best as any).tp.percent;
-            this.takeProfitSellPercent = (best as any).tp.sellPercent;
-            this.takeProfitSkip = (best as any).tp.skip;
-            this.takeProfitCandleFilter = (best as any).tp.candle as any;
-            this.takeProfitVolumeFilter = (best as any).tp.volume as any;
-            this.takeProfitBasis = (best as any).tp.basis ?? 'profitRise';
-            this.stopLossEnabled = (best as any).sl.enabled;
-            this.stopLossPercent = (best as any).sl.percent;
-            this.stopLossSellPercent = (best as any).sl.sellPercent;
-            this.stopLossSkip = (best as any).sl.skip;
-            this.stopLossCandleFilter = (best as any).sl.candle as any;
-            this.stopLossVolumeFilter = (best as any).sl.volume as any;
-            this.stopLossBasis = (best as any).sl.basis ?? 'profitFall';
-          }
-        } else {
-          this.maConfigs = [];
-          this.takeProfitEnabled = false;
-          this.stopLossEnabled = false;
-        }
-      } else {
-        this.maConfigs = [];
-        this.takeProfitEnabled = false;
-        this.takeProfitPercent = 15;
-        this.takeProfitSellPercent = 80;
-        this.takeProfitSkip = 5;
-        this.takeProfitCandleFilter = 'bull';
-        this.takeProfitVolumeFilter = 'higher';
-        this.takeProfitBasis = 'profitRise';
-        this.stopLossEnabled = false;
-        this.stopLossPercent = 10;
-        this.stopLossSellPercent = 80;
-        this.stopLossSkip = 5;
-        this.stopLossCandleFilter = 'bear';
-        this.stopLossVolumeFilter = 'higher';
-        this.stopLossBasis = 'profitFall';
-      }
-      this.applySimConfigToForm();
-      this.renderMaList();
-      this.syncSimParamsToUrl();
-      this.loadStock(this.currentCode, this.currentName);
-    }
 
     @addEventListener('#sim-share-fab', 'click')
     async onShareFab() {
@@ -1716,256 +1170,21 @@ export default (w: Window) => {
       }
     }
 
-    private buildTicksHtml(candles: { date: string; open: number; high: number; low: number; close: number; volume: number }[]): string {
+    private buildTicksHtml(candles: SimCandle[], simFrom = 0, simTo = candles.length - 1): string {
+      const r = simulate(candles, this.maConfigs, this.exitConfigs, {
+        initialCapital: this.initialCapital, feePercent: this.feePercent,
+        requireAll: this.requireAllMas, maMode: this.maResolveMode, xMode: this.exitResolveMode,
+        simFrom, simTo,
+      });
       this.simReasonMap.clear();
-      // 이동평균별 MA 배열 미리 계산
-      const maMap = new Map<number, (number | null)[]>();
-      for (const ma of this.maConfigs) {
-        const vals: (number | null)[] = [];
-        let sum = 0;
-        for (let i = 0; i < candles.length; i++) {
-          sum += candles[i].close;
-          if (i >= ma.period) sum -= candles[i - ma.period].close;
-          vals.push(i >= ma.period - 1 ? sum / ma.period : null);
-        }
-        maMap.set(ma.period, vals);
-      }
-      const sortedMas = [...this.maConfigs].sort((a, b) => a.period - b.period);
-      const reqFrom = sortedMas.length ? Math.max(...sortedMas.map(m => m.period)) : 0; // 전체 존재 조건 기준봉
-      const isAligned = (idx: number): boolean => {
-        const formed = sortedMas.map(ma => ({ period: ma.period, v: maMap.get(ma.period)![idx] }))
-          .filter(x => x.v != null) as { period: number; v: number }[];
-        if (formed.length < 2) return true;
-        for (let k = 0; k < formed.length - 1; k++) {
-          if (!(formed[k].v > formed[k + 1].v)) return false;
-        }
-        return true;
-      };
-      const isReverseAligned = (idx: number): boolean => {
-        const formed = sortedMas.map(ma => ({ period: ma.period, v: maMap.get(ma.period)![idx] }))
-          .filter(x => x.v != null) as { period: number; v: number }[];
-        if (formed.length < 2) return true;
-        for (let k = 0; k < formed.length - 1; k++) {
-          if (!(formed[k].v < formed[k + 1].v)) return false;
-        }
-        return true;
-      };
-      const checkAlignment = (maPeriod: number, idx: number, mode: string): boolean => {
-        const cur = maMap.get(maPeriod)?.[idx];
-        if (cur == null) return false;
-        if (mode === 'any') return true;
-        if (mode === 'aligned') return isAligned(idx);
-        if (mode === 'reverse') return isReverseAligned(idx);
-        // 큰/작은 MA와 비교
-        const curPeriod = maPeriod;
-        const larger = [...maMap.entries()].filter(([p]) => p > curPeriod).map(([p, arr]) => arr[idx]).filter(v => v != null) as number[];
-        const smaller = [...maMap.entries()].filter(([p]) => p < curPeriod).map(([p, arr]) => arr[idx]).filter(v => v != null) as number[];
-        if (mode === 'largerAbove') return larger.length > 0 && larger.every(v => v > cur);
-        if (mode === 'largerBelow') return larger.length > 0 && larger.every(v => v < cur);
-        if (mode === 'smallerAbove') return smaller.length > 0 && smaller.every(v => v > cur);
-        if (mode === 'smallerBelow') return smaller.length > 0 && smaller.every(v => v < cur);
-        return true;
-      };
-
-      // 시뮬레이션: 투자원금/보유주식 기반 피라미딩 + G/D 라인 (연속발생 N회 충족 시 매매) + 익절/손절 (평균단가 기준, 중복 방지)
-      let cash = this.initialCapital;
-      let shares = 0;
-      let totalCost = 0;
-      const feeRate = this.feePercent / 100;
-      let peakPrice = 0;
-      let troughPrice = 0;
-      const trades: typeof this.simTrades = [];
-      const tradeAtIdx: Map<number, { action: 'buy'|'sell'; label: string; color: string; position: string }[]> = new Map();
-      const crossAtIdx: Map<number, { label: string; color: string }[]> = new Map();
-      const sigStreak = new Map<any, number>();
-      let maSkipRemaining = 0;
-
-      for (let i = 1; i < candles.length; i++) {
-        if (shares > 0) { peakPrice = Math.max(peakPrice, candles[i].close); troughPrice = troughPrice ? Math.min(troughPrice, candles[i].close) : candles[i].close; } else { peakPrice = 0; troughPrice = 0; }
-        // 실현(청산 조건) 우선 체크 — exitConfigs 순회, 체결 시 MA 스킵
-        if (shares > 0 && totalCost > 0) {
-          const avg = totalCost / shares;
-          const currClose = candles[i].close;
-          const profitRate = ((currClose - avg) / avg) * 100;
-          const peakDropRate = peakPrice > 0 ? ((peakPrice - currClose) / peakPrice) * 100 : 0;
-          const troughRiseRate = troughPrice > 0 ? ((currClose - troughPrice) / troughPrice) * 100 : 0;
-          let exitExecuted = false;
-          for (const ex of this.exitConfigs) {
-            let should = false;
-            if (ex.basis === 'profitRise') should = profitRate >= ex.percent;
-            else if (ex.basis === 'profitFall') should = profitRate <= -ex.percent;
-            else if (ex.basis === 'peakFall') should = peakDropRate >= ex.percent;
-            else if (ex.basis === 'peakRise') should = troughRiseRate >= ex.percent;
-            if (!should) continue;
-            if (ex.candle !== 'any') {
-              const isBull = candles[i].close > candles[i].open;
-              const isBear = candles[i].close < candles[i].open;
-              if (ex.candle === 'bull' && !isBull) should = false;
-              if (ex.candle === 'bear' && !isBear) should = false;
-            }
-            if (should && ex.volume !== 'any' && i > 0) {
-              if (ex.volume === 'higher' && !(candles[i].volume > candles[i-1].volume)) should = false;
-              if (ex.volume === 'lower' && !(candles[i].volume < candles[i-1].volume)) should = false;
-            }
-            if (!should) continue;
-            const sellShares = Math.floor(shares * (ex.sellPercent / 100));
-            if (sellShares <= 0) continue;
-            const proceeds = sellShares * currClose;
-            const fee = Math.round(proceeds * feeRate);
-            shares -= sellShares;
-            cash += proceeds - fee;
-            totalCost -= sellShares * avg;
-            if (shares === 0) totalCost = 0;
-            const label = '청';
-            const color = '#8b5cf6';
-            const profitNow = ((currClose - avg) / avg) * 100;
-            const avgAfter = shares > 0 ? totalCost / shares : 0;
-            const holdingValue = shares * currClose;
-            const basisLabel = ex.basis === 'profitRise' ? '수익상승' : ex.basis === 'profitFall' ? '수익하락' : ex.basis === 'peakFall' ? '보유고점하락' : ex.basis === 'peakRise' ? '보유저점반등' : ex.basis;
-            const reason = `실현 ${basisLabel} ${ex.percent}% (수익률 ${profitNow.toFixed(2)}%, avg ${avg.toFixed(0)}→${currClose}) ${ex.sellPercent}% 매도, 수수료 ${fee.toLocaleString()}원, 이후 ${ex.skip}회 스킵`;
-            const tIdx = trades.length + 1;
-            trades.push({ idx: tIdx, date: candles[i].date, price: currClose, action: 'sell', maPeriod: 0, percent: ex.sellPercent, sharesDelta: sellShares, amount: proceeds, fee, cashAfter: cash, sharesAfter: shares, label, profitRate: profitNow, avgPrice: avgAfter, holdingValue });
-            this.simReasonMap.set(tIdx, reason);
-            const arr = tradeAtIdx.get(i) ?? [];
-            arr.push({ action: 'sell', label, color, position: 'candle-top' });
-            tradeAtIdx.set(i, arr);
-            maSkipRemaining = ex.skip;
-            exitExecuted = true;
-            break;
-          }
-          if (exitExecuted) continue;
-        }
-        // 익절/손절 이후 MA 스킵 카운트
-        if (maSkipRemaining > 0) {
-          maSkipRemaining--;
-          continue;
-        }
-        for (const ma of sortedMas) {
-          if (this.requireAllMas && i < reqFrom) break; // 전체 이평선 존재 조건: 최장기선 미형성 구간 매매 스킵
-          const vals = maMap.get(ma.period)!;
-          const prevMA = vals[i - 1];
-          const currMA = vals[i];
-          if (prevMA == null || currMA == null) continue;
-          const prevClose = candles[i - 1].close;
-          const currClose = candles[i].close;
-          const isAbove = currClose > currMA;
-          const isBelow = currClose < currMA;
-          const isCrossGolden = prevClose <= prevMA && currClose > currMA;
-          const isCrossDead = prevClose >= prevMA && currClose < currMA;
-          // G/D 마커는 실제 크로스 봉에만 표시 (상태 유지봉 제외, 전체존재 조건 시 미형성 구간 제외)
-          if ((isCrossGolden || isCrossDead) && !(this.requireAllMas && i < reqFrom)) {
-            const crossLabel = isCrossGolden ? 'G' : 'D';
-            const crossColor = isCrossGolden ? '#fbbf24' : '#f87171';
-            const arrC = crossAtIdx.get(i) ?? [];
-            if (!arrC.some(x => x.label === crossLabel)) {
-              arrC.push({ label: crossLabel, color: crossColor });
-              crossAtIdx.set(i, arrC);
-            }
-          }
-          const signals: any[] = (ma.pyramiding as any).signals || [];
-          for (let sIdx = 0; sIdx < signals.length; sIdx++) {
-            const sigCfg: any = signals[sIdx];
-            const sigType = sigCfg.signal as 'golden'|'dead';
-            let sig: 'golden' | 'dead' | null = null;
-            if (sigType === 'golden') {
-              if (isAbove) sig = 'golden';
-            } else {
-              if (isBelow) sig = 'dead';
-            }
-            const sigKey = `${ma.period}-${sIdx}`;
-            if (!sig) { sigStreak.set(sigKey, 0); continue; }
-            const align = sigCfg.alignment ?? 'any';
-            if (align !== 'any' && !checkAlignment(ma.period, i, align)) {
-              sigStreak.set(sigKey, 0);
-              continue;
-            }
-            const need = Math.max(1, Math.min(10, sigCfg.consecutive ?? 2));
-            const holdingNow = sig === 'golden' ? isAbove : isBelow;
-            const cur = holdingNow ? (sigStreak.get(sigKey) ?? 0) + 1 : 1;
-            sigStreak.set(sigKey, cur);
-            if (cur < need) continue;
-            const ct0 = sigCfg.condTrade;
-            if (ct0 && ct0.type !== 'any') {
-              let count = 0;
-              if (ct0.type === 'consecutiveBuy') { for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === 'buy') count++; else break; } }
-              else if (ct0.type === 'consecutiveSell') { for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === 'sell') count++; else break; } }
-              else if (ct0.type === 'consecutiveSelected') { const target = sigCfg.action; for (let k = trades.length - 1; k >= 0; k--) { if (trades[k].action === target) count++; else break; } }
-              if (!this.condMet(count, ct0.operator, ct0.value)) continue;
-            }
-            const cc0 = sigCfg.condCandle;
-            if (cc0 && cc0.type !== 'any') {
-              let count = 0;
-              if (cc0.type === 'consecutiveBullish') { for (let k = i; k >= 0; k--) { const c = candles[k]; if (c.close > c.open) count++; else break; } }
-              else if (cc0.type === 'consecutiveBearish') { for (let k = i; k >= 0; k--) { const c = candles[k]; if (c.close < c.open) count++; else break; } }
-              if (!this.condMet(count, cc0.operator, cc0.value)) continue;
-            }
-            const cm0 = sigCfg.condMa;
-            if (cm0 && cm0.type !== 'any') {
-              let count = 0;
-              if (cm0.type === 'maDeviation') { const maVal = maMap.get(ma.period)?.[i]; if (maVal == null || maVal === 0) count = 0; else count = ((candles[i].close - maVal) / maVal) * 100; }
-              else if (cm0.type === 'maSlope') { const maVal = maMap.get(ma.period)?.[i]; const prevMaVal = maMap.get(ma.period)?.[i-1]; if (maVal == null || prevMaVal == null || prevMaVal === 0) count = 0; else count = ((maVal - prevMaVal) / prevMaVal) * 100; }
-              if (!this.condMet(count, cm0.operator, cm0.value)) continue;
-            }
-            const cfg = sigCfg;
-            const pct = Math.max(1, Math.min(100, cfg.percent));
-            const candleOk = cfg.candleFilter === 'any' || (cfg.candleFilter === 'bull' ? candles[i].close > candles[i].open : candles[i].close < candles[i].open);
-            const volOk = cfg.volumeFilter === 'any' || (i > 0 && (cfg.volumeFilter === 'higher' ? candles[i].volume > candles[i-1].volume : candles[i].volume < candles[i-1].volume));
-            if (!candleOk || !volOk) continue;
-            const condParts: string[] = [];
-            { const g = cfg.condTrade; if (g && g.type !== 'any') condParts.push(`연속매매 ${g.type} ${g.operator} ${g.value}`); }
-            { const g = cfg.condCandle; if (g && g.type !== 'any') condParts.push(`연속봉 ${g.type} ${g.operator} ${g.value}`); }
-            { const g = cfg.condMa; if (g && g.type !== 'any') condParts.push(`평균선 ${g.type} ${g.operator} ${g.value}`); }
-            if (cfg.action === 'buy') {
-              const cost = Math.floor(cash * (pct / 100));
-              if (cost < 1000 || cash < cost) continue;
-              const buyShares = Math.floor(cost / currClose);
-              if (buyShares <= 0) continue;
-              const actualCost = buyShares * currClose;
-              const fee = Math.round(actualCost * feeRate);
-              if (cash < actualCost + fee) continue;
-              shares += buyShares;
-              cash -= actualCost + fee;
-              totalCost += actualCost + fee;
-              const buyAvgPrice = shares > 0 ? totalCost / shares : 0;
-              const buyHoldingValue = shares * currClose;
-              const buyReason = `MA${ma.period} ${sig==='golden'?'골든':'데드'}(캔들 ${cfg.candleFilter}, 거래량 ${cfg.volumeFilter}, 정렬 ${cfg.alignment}, 유지${cfg.consecutive}봉${condParts.length ? `, ${condParts.join(' · ')}` : ''}) - 매수 ${pct}%, 수수료 ${fee.toLocaleString()}원`;
-              const buyIdx = trades.length + 1;
-              trades.push({ idx: buyIdx, date: candles[i].date, price: currClose, action: 'buy', maPeriod: ma.period, percent: pct, sharesDelta: buyShares, amount: actualCost, fee, cashAfter: cash, sharesAfter: shares, profitRate: null, avgPrice: buyAvgPrice, holdingValue: buyHoldingValue });
-              this.simReasonMap.set(buyIdx, buyReason);
-              const arr = tradeAtIdx.get(i) ?? [];
-              arr.push({ action: 'buy', label: 'B', color: '#3b82f6', position: 'candle-top' });
-              tradeAtIdx.set(i, arr);
-            } else {
-              if (shares <= 0 || totalCost <= 0) continue;
-              const sellShares = Math.floor(shares * (pct / 100));
-              if (sellShares <= 0) continue;
-              const avg = totalCost / shares;
-              const profitRateSell = ((currClose - avg) / avg) * 100;
-              const proceeds = sellShares * currClose;
-              const fee = Math.round(proceeds * feeRate);
-              shares -= sellShares;
-              cash += proceeds - fee;
-              totalCost -= sellShares * avg;
-              if (shares === 0) totalCost = 0;
-              const avgAfterSell = shares > 0 ? totalCost / shares : 0;
-              const holdingAfterSell = shares * currClose;
-              const sellReason = `MA${ma.period} ${sig==='golden'?'골든':'데드'}(캔들 ${cfg.candleFilter}, 거래량 ${cfg.volumeFilter}, 정렬 ${cfg.alignment}, 유지${cfg.consecutive}봉${condParts.length ? `, ${condParts.join(' · ')}` : ''}) - 매도 ${pct}% (수익률 ${profitRateSell.toFixed(2)}%, 수수료 ${fee.toLocaleString()}원)`;
-              const sellIdx = trades.length + 1;
-              trades.push({ idx: sellIdx, date: candles[i].date, price: currClose, action: 'sell', maPeriod: ma.period, percent: pct, sharesDelta: sellShares, amount: proceeds, fee, cashAfter: cash, sharesAfter: shares, profitRate: profitRateSell, avgPrice: avgAfterSell, holdingValue: holdingAfterSell });
-              this.simReasonMap.set(sellIdx, sellReason);
-              const arr2 = tradeAtIdx.get(i) ?? [];
-              arr2.push({ action: 'sell', label: 'S', color: '#ef4444', position: 'candle-bottom' });
-              tradeAtIdx.set(i, arr2);
-            }
-          }
-        }
-      }
-      // 결과 저장 (보유주식수/평가금액/수익률 계산용)
-      this.simCash = cash;
-      this.simShares = shares;
-      this.simFirstPrice = candles.length ? candles[0].close : 0;
-      this.simLastPrice = candles.length ? candles[candles.length - 1].close : 0;
-      this.simTrades = trades;
+      for (const { idx, reason } of r.reasons) this.simReasonMap.set(idx, reason);
+      this.simCash = r.cash;
+      this.simShares = r.shares;
+      this.simFirstPrice = r.firstPrice;
+      this.simLastPrice = r.lastPrice;
+      this.simTrades = r.trades;
+      const tradeAtIdx = r.tradeAtIdx;
+      const crossAtIdx = r.crossAtIdx;
 
       return candles.map((c, i) => {
         const crosses = crossAtIdx.get(i) ?? [];
@@ -1978,10 +1197,111 @@ export default (w: Window) => {
       }).join('');
     }
 
+    /** 구간 슬라이더로 선택된 캔들만 반환 (최적화·시뮬 공통 — 차트는 전체 유지) */
+    /** 선택 구간 [start, end] (엔진 simFrom/simTo 공용) */
+    private zoneRange(): [number, number] {
+      const n = this.chartCandles.length;
+      if (!n) return [0, -1];
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      return [Math.max(0, Math.min(this.rangeStart, end)), end];
+    }
+
+    // 낙폭 회피 계수 λ (score = profit − λ·MDD). 0=수익만, 0.5=기본, 1.5=손실회피
+    private riskAversion = 0.5;
+
+    private engineOpts() {
+      const [simFrom, simTo] = this.zoneRange();
+      return {
+        simFrom, simTo,
+        initialCapital: this.initialCapital, feePercent: this.feePercent,
+        maMode: this.maResolveMode, xMode: this.exitResolveMode,
+        riskAversion: this.riskAversion,
+      };
+    }
+
+    private getActiveCandles(): SimCandle[] {
+      if (!this.chartCandles.length) return [];
+      const end = this.rangeEnd < 0 ? this.chartCandles.length - 1 : Math.min(this.rangeEnd, this.chartCandles.length - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      return this.chartCandles.slice(start, end + 1);
+    }
+
+    /** 캔들 로드 후 슬라이더 범위 재설정 (reset=true면 전체 선택) */
+    private syncRangeSliderBounds(reset = false) {
+      const n = this.chartCandles.length;
+      const slider = this.shadowRoot?.querySelector('#sim-zone') as any;
+      if (!n) return;
+      if (this.rangeFromUrl) { this.rangeFromUrl = false; }
+      else if (reset || this.rangeEnd < 0) { this.rangeStart = 0; this.rangeEnd = n - 1; }
+      this.rangeStart = Math.max(0, Math.min(this.rangeStart, n - 1));
+      this.rangeEnd = Math.max(this.rangeStart, Math.min(this.rangeEnd < 0 ? n - 1 : this.rangeEnd, n - 1));
+      if (slider) {
+        slider.setAttribute('min', '0');
+        slider.setAttribute('max', String(n - 1));
+        slider.setAttribute('step', '1');
+        if (typeof slider.setValues === 'function') {
+          slider.setValues({ start: this.rangeStart, end: this.rangeEnd });
+        }
+      }
+      this.updateRangeLabels();
+    }
+
+    private updateRangeLabels() {
+      const n = this.chartCandles.length;
+      const sEl = this.shadowRoot?.querySelector('#sim-range-start') as HTMLElement | null;
+      const eEl = this.shadowRoot?.querySelector('#sim-range-end') as HTMLElement | null;
+      const cEl = this.shadowRoot?.querySelector('#sim-range-count') as HTMLElement | null;
+      if (!n) {
+        if (sEl) sEl.textContent = '-';
+        if (eEl) eEl.textContent = '-';
+        if (cEl) cEl.textContent = '0개';
+        return;
+      }
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      if (sEl) sEl.textContent = this.chartCandles[start]?.date ?? '-';
+      if (eEl) eEl.textContent = this.chartCandles[end]?.date ?? '-';
+      if (cEl) cEl.textContent = `${end - start + 1}개`;
+      // 슬라이더를 현재 구간에 동기화 (속성 변경은 input/change를 발생시키지 않음)
+      const zone = this.shadowRoot?.querySelector('#sim-zone') as any;
+      if (zone && typeof zone.setValues === 'function') {
+        const cur = zone.value;
+        if (!cur || cur.start !== start || cur.end !== end) {
+          zone.setValues({ start, end });
+        }
+      }
+    }
+
+    /** 차트는 불러온 캔들 전체 + 전체 기준 MA로 그리고, 매매 마커만 선택 구간에 표시 */
+    private buildChartHtml(): string {
+      const n = this.chartCandles.length;
+      if (!n) return '';
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      // MA·크로스는 전체 캔들 기준, 매매 시뮬은 구간으로만 (마커 절대위치 부착)
+      const ticksHtml = this.buildTicksHtml(this.chartCandles, start, end);
+      const sDate = this.chartCandles[start]?.date ?? '';
+      const eDate = this.chartCandles[end]?.date ?? '';
+      const zoneRect = (start > 0 || end < n - 1) && sDate && eDate
+        ? `<rect date-start="${sDate}" date-end="${eDate}" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1" target="all"></rect>`
+        : '';
+      return ticksHtml + zoneRect + this.maConfigs.map(ma => `<ma color="${ma.color}" size="${ma.period}"></ma>`).join('');
+    }
+
+    /** 차트 뷰를 선택 구간으로 포커싱 (슬라이더 조작 시에만 호출) */
+    private focusZoneOnChart() {
+      const chartEl = this.shadowRoot?.querySelector('stock-chart') as any;
+      const n = this.chartCandles.length;
+      if (!chartEl || !n || typeof chartEl.setView !== 'function') return;
+      const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
+      const start = Math.max(0, Math.min(this.rangeStart, end));
+      if (start > 0 || end < n - 1) chartEl.setView(start, end);
+    }
+
     private syncMasToChart() {
       const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
       if (!chartEl || !this.chartCandles.length) return;
-      chartEl.innerHTML = this.buildTicksHtml(this.chartCandles) + this.maConfigs.map(ma => `<ma color="${ma.color}" size="${ma.period}"></ma>`).join('');
+      chartEl.innerHTML = this.buildChartHtml();
       this.updateResultDisplay();
     }
 
@@ -2054,9 +1374,78 @@ export default (w: Window) => {
       if (e.target === modal) modal.classList.remove('show');
     }
 
+    @addEventListener('#sim-history-body', 'click', { delegate: true })
+    onCondSumClick(e: Event) {
+      const el = (e.target as HTMLElement).closest('.hcond-sum') as HTMLElement;
+      if (!el) return;
+      const tidx = Number(el.dataset.tidx);
+      if (!Number.isFinite(tidx)) return;
+      this.renderCondDetail(tidx);
+      const modal = this.shadowRoot?.querySelector('#sim-cond-modal') as HTMLElement;
+      modal?.classList.add('show');
+    }
+
+    private renderCondDetail(tidx: number) {
+      const body = this.shadowRoot?.querySelector('#sim-cond-body') as HTMLElement;
+      const title = this.shadowRoot?.querySelector('#sim-cond-title') as HTMLElement;
+      if (!body) return;
+      const t = this.simTrades.find(x => x.idx === tidx);
+      if (!t) { body.innerHTML = `<div style="padding:16px;color:#94a3b8;font-size:12px">해당 거래를 찾을 수 없습니다.</div>`; return; }
+      const fmt = (n: number) => Math.round(n).toLocaleString();
+      const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const isExit = t.maPeriod === 0;
+      const badgeText = isExit ? '매도 (청산)' : (t.action === 'buy' ? '매수' : '매도');
+      const profitText = t.profitRate == null ? '-' : `${t.profitRate >= 0 ? '+' : ''}${t.profitRate.toFixed(2)}%`;
+      const condList = (t.conds && t.conds.length ? t.conds : []);
+      // 칩을 건별로 그룹핑: 선행 '+ '/'− ' 칩이 새 멤버 조건의 시작 (집행분은 첫 그룹)
+      const groups: { kind: 'exec' | 'plus' | 'minus'; chips: string[] }[] = [];
+      let cur: { kind: 'exec' | 'plus' | 'minus'; chips: string[] } = { kind: 'exec', chips: [] };
+      for (const part of condList) {
+        if (part.startsWith('+ ')) { groups.push(cur); cur = { kind: 'plus', chips: [part.slice(2)] }; }
+        else if (part.startsWith('− ') || part.startsWith('- ')) { groups.push(cur); cur = { kind: 'minus', chips: [part.slice(2)] }; }
+        else cur.chips.push(part);
+      }
+      groups.push(cur);
+      const chip = (s: string, extra = '') => `<span class="hcond" style="cursor:default${extra}">${esc(s)}</span>`;
+      const execChips = groups.length && groups[0].kind === 'exec' ? groups[0].chips : [];
+      const memberGroups = groups.length && groups[0].kind === 'exec' ? groups.slice(1) : groups;
+      let plusNo = 0; let minusNo = 0;
+      const memberRows = memberGroups.filter(g => g.chips.length).map(g => {
+        const label = g.kind === 'plus' ? `합산 ${++plusNo}` : `상쇄 ${++minusNo}`;
+        return `<div class="cond-detail-row"><span class="k">${label}</span><span class="v">${g.chips.map(c => chip(c)).join('')}</span></div>`;
+      }).join('');
+      const detailList = (t.condDetail && t.condDetail.length ? t.condDetail : []);
+      const detailRows = detailList.length
+        ? `<div class="cond-detail-row"><span class="k">구성</span><span class="v">${detailList.map((d, di) => `<div class="hdetail">${di + 1}. ${esc(d)}</div>`).join('')}</span></div>` : '';
+      if (title) title.textContent = `🔍 조건 상세 #${t.idx} (${t.date})`;
+      body.innerHTML = `
+        <div class="cond-detail-row"><span class="k">구분</span><span class="v">${badgeText}</span></div>
+        <div class="cond-detail-row"><span class="k">시세</span><span class="v">${fmt(t.price)}원</span></div>
+        <div class="cond-detail-row"><span class="k">수량</span><span class="v">${Math.floor(t.sharesDelta).toLocaleString()}주 (${fmt(t.amount)}원)</span></div>
+        <div class="cond-detail-row"><span class="k">수익률</span><span class="v">${profitText}</span></div>
+        <div class="cond-detail-row"><span class="k">체결</span><span class="v">${execChips.map((c, i) => chip(c, i === 0 ? ';background:#ede9fe;color:#6d28d9;font-weight:800' : '')).join('') || '-'}</span></div>
+        ${memberRows}
+        ${detailRows}
+        <div class="cond-detail-reason">${esc(this.simReasonMap.get(t.idx) || '사유 없음')}</div>`;
+    }
+
+    @addEventListener('#sim-cond-close', 'click')
+    onCondClose() {
+      const modal = this.shadowRoot?.querySelector('#sim-cond-modal') as HTMLElement;
+      modal?.classList.remove('show');
+    }
+
+    @addEventListener('#sim-cond-modal', 'click')
+    onCondBackdrop(e: Event) {
+      const modal = e.currentTarget as HTMLElement;
+      if (e.target === modal) modal.classList.remove('show');
+    }
+
     @addEventListenerDocument('keydown')
     onHistoryEsc(e: KeyboardEvent) {
       if (e.key === 'Escape') {
+        const cond = this.shadowRoot?.querySelector('#sim-cond-modal') as HTMLElement;
+        if (cond?.classList.contains('show')) { cond.classList.remove('show'); return; }
         const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
         if (modal?.classList.contains('show')) modal.classList.remove('show');
       }
@@ -2109,7 +1498,17 @@ export default (w: Window) => {
         const isExit = t.maPeriod === 0;
         const badgeText = isExit ? '매도 (청산)' : (t.action==='buy'?'매수 B':'매도 S');
         const badgeCls = isExit ? 'hbadge exit' : (t.action==='buy'?'hbadge buy':'hbadge sell');
-        const maText = isExit ? `청산 ${t.percent}%` : `MA${t.maPeriod} ${t.percent}%`;
+        const condList = (t.conds && t.conds.length ? t.conds : (isExit ? [`청산 ${t.percent}%`] : [`MA${t.maPeriod} ${t.percent}%`]));
+        // 요약 숫자는 칩 개수가 아니라 건수(팝업 그룹 수) 기준: 단건 청산(1)/MA(1), 합산 멤버 추가마다 +1
+        const grpCount = (() => {
+          let n = 0; let has = false;
+          for (const part of condList) {
+            if (part.startsWith('+ ') || part.startsWith('− ') || part.startsWith('- ')) n++;
+            else if (!has) { has = true; }
+          }
+          return (has ? 1 : 0) + n;
+        })();
+        const condSum = isExit ? `청산(${grpCount})` : `MA${t.maPeriod}(${grpCount})`;
         const profitText = t.profitRate == null ? '-' : `${t.profitRate >= 0 ? '+' : ''}${t.profitRate.toFixed(2)}%`;
         const profitColor = t.profitRate == null ? '#94a3b8' : t.profitRate > 0 ? '#dc2626' : t.profitRate < 0 ? '#2563eb' : '#64748b';
         const avgPriceText = t.sharesAfter > 0 ? `${fmt(Math.round(t.avgPrice))}원` : '-';
@@ -2121,8 +1520,8 @@ export default (w: Window) => {
               <tr class="hrow">
                 <td class="dim">${t.idx}</td>
                 <td>${fmtDate(t.date)}</td>
-                <td style="text-align:center"><span class="${badgeCls} ma-help" data-help="${(this.simReasonMap.get(t.idx) || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}">${badgeText}</span></td>
-                <td style="text-align:center;color:#64748b">${maText}</td>
+                <td style="text-align:center"><span class="${badgeCls}">${badgeText}</span></td>
+                <td style="text-align:center"><span class="hcond-sum" data-tidx="${t.idx}" title="클릭하면 조건 상세">${condSum}</span></td>
                 <td class="num">${fmt(t.price)}원</td>
                 <td class="num">${Math.floor(t.sharesDelta).toLocaleString()}주</td>
                 <td class="num">${fmt(t.amount)}원</td>
@@ -2153,6 +1552,23 @@ export default (w: Window) => {
         if (Number.isFinite(v)) this.candleCount = Math.max(30, Math.min(1000, Math.floor(v)));
       }
       if (tfEl && tfEl.value) this.timeframe = tfEl.value as TossChartTimeframe;
+      const isMinTf = this.timeframe.startsWith('min:');
+      const endDateEl = this.shadowRoot?.querySelector('#sim-end-date') as HTMLInputElement;
+      const endDtEl = this.shadowRoot?.querySelector('#sim-end-datetime') as HTMLInputElement;
+      // 분봉은 datetime-local(YYYY-MM-DDTHH:MM), 나머지는 date(YYYY-MM-DD)
+      const rawEnd = isMinTf ? (endDtEl?.value || '').slice(0, 16) : (endDateEl?.value || '').slice(0, 10);
+      // 미래 일시 입력 시 최신으로 취급 (서버 빈 응답 방지)
+      if (/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2})?$/.test(rawEnd)) {
+        const probe = new Date(rawEnd.length <= 10 ? `${rawEnd}T23:59:00` : `${rawEnd}:00`);
+        if (Number.isFinite(probe.getTime()) && probe.getTime() <= Date.now()) {
+          this.endDate = rawEnd.slice(0, 10);
+          this.endTime = rawEnd.length > 10 ? rawEnd.slice(11, 16) : '';
+        } else {
+          this.endDate = ''; this.endTime = '';
+        }
+      } else {
+        this.endDate = ''; this.endTime = '';
+      }
       // MA rows -> signals
       const rows = this.shadowRoot?.querySelectorAll('#ma-list .ma-row');
       if (rows) {
@@ -2235,6 +1651,14 @@ export default (w: Window) => {
       if (crossEl) this.showCross = !!crossEl.checked;
       const mallEl = this.shadowRoot?.querySelector('#sim-require-all-mas') as HTMLInputElement;
       if (mallEl) this.requireAllMas = !!mallEl.checked;
+      const mresEl = this.shadowRoot?.querySelector('#sim-resolve-mode') as HTMLSelectElement;
+      if (mresEl && isResolveMode(mresEl.value)) this.maResolveMode = mresEl.value;
+      const xresEl = this.shadowRoot?.querySelector('#sim-exit-resolve-mode') as HTMLSelectElement;
+      if (xresEl && isResolveMode(xresEl.value)) this.exitResolveMode = xresEl.value;
+      const trendEl = this.shadowRoot?.querySelector('#sim-trend-type') as HTMLSelectElement;
+      if (trendEl && trendEl.value !== '' && Number.isFinite(Number(trendEl.value))) this.trendScore = Math.max(0, Math.min(1, Number(trendEl.value)));
+      const presetEl = this.shadowRoot?.querySelector('#sim-optimize-preset') as HTMLSelectElement;
+      if (presetEl && ['0', '0.5', '1'].includes(presetEl.value)) this.riskAversion = Number(presetEl.value);
       const feeEl = this.shadowRoot?.querySelector('#sim-fee') as HTMLInputElement;
       if (feeEl) { const v = Number(feeEl.value); if (Number.isFinite(v) && v >= 0 && v <= 1) this.feePercent = v; }
     }
@@ -2507,8 +1931,6 @@ export default (w: Window) => {
           .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;border:none;box-shadow:0 6px 20px rgba(245,158,11,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
           .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(245,158,11,0.55)}
           .share-fab.copied{background:#10b981;box-shadow:0 6px 20px rgba(16,185,129,0.45)}
-          .sim-reset-btn{margin-left:auto;height:32px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.18);color:#fff;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
-          .sim-reset-btn:hover{background:rgba(255,255,255,0.28)}
           .result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:12px 14px;background:#f8fafc;border-top:1px solid #f1f5f9}
           .result-item{background:white;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;text-align:center}
           .result-label{font-size:10px;font-weight:700;color:#94a3b8;letter-spacing:0.02em}
@@ -2540,14 +1962,22 @@ export default (w: Window) => {
           .hist-table td{padding:6px 8px;border-bottom:1px solid #f1f5f9;white-space:nowrap}
           .hist-table .num{text-align:right;font-variant-numeric:tabular-nums}
           .hist-table th.hold,.hist-table td.hold{background:#faf9ff}
-          .hbadge{display:inline-block;min-width:64px;padding:2px 8px;border-radius:999px;font-weight:800;font-size:10px;color:#fff;cursor:help;text-align:center}
+          .hbadge{display:inline-block;min-width:64px;padding:2px 8px;border-radius:999px;font-weight:800;font-size:10px;color:#fff;text-align:center}
           .hbadge.buy{background:#3b82f6}
           .hbadge.sell{background:#ef4444}
           .hbadge.exit{background:#7c3aed}
+          .hcond{display:inline-block;margin:1px 2px;padding:1px 7px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:10px;font-weight:700;cursor:help;white-space:nowrap}
+          .hcond-sum{display:inline-block;padding:2px 10px;border-radius:999px;background:#ede9fe;color:#6d28d9;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap;border:1px solid #ddd6fe}
+          .hcond-sum:hover{background:#ddd6fe}
+          .cond-detail-row{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:12px}
+          .hdetail{font-size:11px;color:#334155;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:3px 8px;margin:2px 0;line-height:1.5}
+          .cond-detail-row .k{min-width:52px;font-weight:800;color:#94a3b8;font-size:11px}
+          .cond-detail-row .v{color:#1e293b;font-weight:600}
+          .cond-detail-reason{margin-top:8px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.6;color:#475569}
           .hrow:hover{background:#f8fafc}
           td.dim{color:#94a3b8}
           @media(max-width:600px){.hist-summary{grid-template-columns:repeat(2,1fr)}}
-          @media(max-width:600px){ .result-grid{grid-template-columns:1fr} .result-value{font-size:15px} .history-panel{max-height:90vh} }
+          @media(max-width:600px){ .result-value{font-size:15px} .history-panel{max-height:90vh} }
         </style>
 
         <div class="header">
@@ -2573,9 +2003,24 @@ export default (w: Window) => {
             <div class="chart-wrap">
               <stock-chart id="sim-chart" enabled-control enabled-readout show-last-line></stock-chart>
             </div>
+            <div id="sim-range-row" style="display:flex;align-items:center;gap:8px;padding:4px 14px 10px;background:#fff;border-top:1px solid #f1f5f9;font-size:11px;color:#64748b">
+              <span id="sim-range-start" style="font-weight:700;white-space:nowrap;min-width:64px;font-size: 10px;">-</span>
+              <range-slider id="sim-zone" orientation="horizontal" min="0" max="359" step="1" style="flex:1">
+                <thumb-group label="구간" color="#7c3aed">
+                  <thumb name="start" value="0"></thumb>
+                  <thumb name="end" min="start" value="359"></thumb>
+                </thumb-group>
+              </range-slider>
+              <div style="display: flex; flex-direction: column">
+              <span id="sim-range-end" style="font-weight:700;white-space:nowrap;min-width:64px;text-align:right;font-size: 10px;">-</span>
+              <span id="sim-range-count" style="font-weight:800;color:#7c3aed;white-space:nowrap">-</span>
+              </div>
+            </div>
             <form id="sim-candle-form" style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;padding:8px 14px;background:#fffbeb;border-top:1px solid #fef3c7" onsubmit="return false">
               <div class="config-field" style="flex:1;min-width:90px"><label style="font-size:11px;font-weight:700;color:#64748b">캔들 수</label><input id="sim-candle-count" type="number" min="30" max="1000" value="360" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;font-size:16px;"/></div>
               <div class="config-field" style="flex:1;min-width:120px"><label style="font-size:11px;font-weight:700;color:#64748b">타임프레임</label><select id="sim-timeframe" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box"><option value="min:1">1분</option><option value="min:3">3분</option><option value="min:5">5분</option><option value="min:15">15분</option><option value="min:30">30분</option><option value="min:60">60분</option><option value="day:1" selected>일봉</option><option value="week:1">주봉</option><option value="month:1">월봉</option></select></div>
+              <div class="config-field" id="sim-end-date-field" style="flex:1;min-width:110px"><label style="font-size:11px;font-weight:700;color:#64748b">종료일 (비우면 최신)</label><input id="sim-end-date" type="date" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;"/></div>
+              <div class="config-field" id="sim-end-datetime-field" style="flex:1;min-width:150px;display:none"><label style="font-size:11px;font-weight:700;color:#64748b">종료일시 (비우면 최신)</label><input id="sim-end-datetime" type="datetime-local" step="60" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;"/></div>
               <button type="submit" id="sim-reload-btn" style="height:32px;padding:0 14px;border-radius:999px;border:1px solid #f59e0b;background:#fff;color:#d97706;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;align-self:end">다시불러오기</button>
             </form>
           </div>
@@ -2583,7 +2028,6 @@ export default (w: Window) => {
           <form class="card" id="sim-config" style="margin-top:12px" onsubmit="return false">
             <div class="card-header" style="--accent:#f59e0b"><span class="card-title">⚙️ 설정</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#fff;cursor:pointer;user-select:none"><input id="sim-show-cross" type="checkbox" style="width:14px;height:14px" />크로스표시</label></div>
             <div style="background:#f8fafc;border-bottom:1px solid #f1f5f9">
-              <div style="padding:8px 14px;font-size:12px;font-weight:800;color:#92400e">📊 결과</div>
               <div class="result-grid" id="sim-result">
                 <div class="result-item"><div class="result-label">보유주식수</div><div class="result-value" id="sim-shares">-주</div></div>
                 <div class="result-item"><div class="result-label">평가금액</div><div class="result-value" id="sim-eval">-원</div></div>
@@ -2609,17 +2053,18 @@ export default (w: Window) => {
                 <div class="config-field"><label><span class="ma-help" data-help="거래금액(체결금액) 대비 수수료율. 매수 시 체결금액 * 수수료, 매도 시 체결금액 * 수수료가 차감됩니다. 예: 0.015% → 1,000,000원 거래 시 150원.">수수료 (%)</span></label><input id="sim-fee" type="number" min="0" max="1" step="0.001" value="0.015" style="font-size: 16px;" /></div>
               </div>
               <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:4px;flex-wrap:wrap;align-items:center">
-                <select id="sim-optimize-type" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 10px;cursor:pointer"><option value="default" selected>기본형</option><option value="profit">실현목표형</option><option value="lossAvoid">손실회피형</option><option value="longTerm">장기투자형</option><option value="stable">안정추구형</option></select>
+                <select id="sim-optimize-preset" title="최적화 성향: 적극형(λ0) / 균형형(λ0.5) / 안정형(λ1). score = profit − λ·MDD" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 10px;cursor:pointer"><option value="1">안정형</option><option value="0.5" selected>균형형</option><option value="0">적극형</option></select>
+                <select id="sim-trend-type" title="추세 예상: 최적화 탐색 방향 prior" style="height:32px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:700;padding:0 10px;cursor:pointer"><option value="0.5" selected>추세 모름</option><option value="1">상승 예상</option><option value="0">하락 예상</option><option value="0.5">횡보 예상</option></select>
                 <button type="button" id="sim-optimize-btn" style="height:32px;padding:0 14px;border-radius:999px;border:1px solid #f59e0b;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(245,158,11,0.3);display:inline-flex;align-items:center;gap:4px">🎲 최적화</button>
               </div>
               <div class="section-box exit">
-                <div class="section-head"><span class="section-title exit">💜 실현</span><span class="section-badge exit">청산 조건</span><span class="section-desc">평균단가 · 보유 고/저점 기준</span></div>
+                <div class="section-head"><span class="section-title exit">💜 실현</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#5b21b6;white-space:nowrap" title="같은 봉에 겹친 실현 조건 확정 방식 (매도% 기준)">조건중복<select id="sim-exit-resolve-mode" style="height:32px;border-radius:8px;border:1px solid #c4b5fd;font-size:11px;font-weight:800;background:#ede9fe;color:#5b21b6;padding:0 4px;outline:none"><option value="minFirst">최소값 우선</option><option value="maxFirst">최대값 우선</option><option value="all">복리 합산</option></select></label></div>
                 <div id="exit-list"></div>
                 <button type="button" class="add-exit-btn" id="add-exit-btn">+ 실현 조건 추가</button>
                 <div style="font-size:10px;color:#94a3b8;margin-top:6px">조건 충족 시 보유주수의 일부를 청산하고, 이후 N회 MA 매매를 스킵합니다.</div>
               </div>
               <div class="section-box ma" style="margin-top:12px">
-                <div class="section-head"><span class="section-title ma">📈 이동평균선</span><span class="section-badge ma">진입 조건</span><span class="section-desc">골든 · 데드 신호별 매수/매도</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#92400e;cursor:pointer;user-select:none;white-space:nowrap" title="체크 시 최장기 이평선이 형성되기 전 구간에서는 매매하지 않고, 모든 이평선이 존재하는 봉부터 처리합니다"><input id="sim-require-all-mas" type="checkbox" style="width:14px;height:14px" />모든 이동평균선 존재시 처리</label></div>
+                <div class="section-head"><span class="section-title ma">📈 진입점</span><label style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;font-size:11px;font-weight:700;color:#92400e;cursor:pointer;user-select:none;white-space:nowrap" title="체크 시 최장기 이평선이 형성되기 전 구간에서는 매매하지 않고, 모든 이평선이 존재하는 봉부터 처리합니다"><input id="sim-require-all-mas" type="checkbox" style="width:14px;height:14px" />이평선 존재시 처리</label><label style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#92400e;white-space:nowrap" title="같은 봉에 겹친 조건 확정 방식 (매수/매도% 기준)">조건중복<select id="sim-resolve-mode" style="height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:11px;font-weight:700;background:#fff;color:#92400e;padding:0 4px;outline:none"><option value="minFirst">최소값 우선</option><option value="maxFirst">최대값 우선</option><option value="all">복리 합산</option></select></label></div>
                 <div id="ma-list" class="ma-list"></div>
                 <button type="button" class="add-ma-btn" id="add-ma-btn">+ 이동평균선 추가</button>
                 <div style="font-size:10px;color:#94a3b8;margin-top:6px">신호별 <b>매수 %</b>는 현금 기준, <b>매도 %</b>는 보유주식 기준.</div>
@@ -2635,6 +2080,15 @@ export default (w: Window) => {
               <button type="button" class="history-close" id="sim-history-close" aria-label="닫기">✕</button>
             </div>
             <div id="sim-history-body"></div>
+          </div>
+        </div>
+        <div class="history-modal" id="sim-cond-modal" role="dialog" aria-modal="true" aria-label="조건 상세">
+          <div class="history-panel" style="width:min(480px,100%)">
+            <div class="history-head">
+              <div class="history-title" id="sim-cond-title">🔍 조건 상세</div>
+              <button type="button" class="history-close" id="sim-cond-close" aria-label="닫기">✕</button>
+            </div>
+            <div id="sim-cond-body" style="padding:12px 14px;overflow:auto;max-height:60vh"></div>
           </div>
         </div>
         <button id="sim-share-fab" class="share-fab" title="공유하기">🔗</button>
