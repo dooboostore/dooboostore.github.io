@@ -3546,8 +3546,6 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(webpack@5.106.2)
 
-  packages/@dooboostore/simple-boot-http-server/dist/cjs: {}
-
   packages/@dooboostore/simple-boot-http-server/example:
     dependencies:
       '@dooboostore/core':
@@ -4115,6 +4113,10 @@ importers:
         version: 5.2.3(tslib@2.8.1)(webpack-cli@5.1.4)(webpack@5.106.2)
 
   packages/@dooboostore/simple-web-component-library:
+    dependencies:
+      '@dooboostore/algorithm':
+        specifier: workspace:*
+        version: link:../algorithm
     devDependencies:
       '@dooboostore/simple-web-component':
         specifier: workspace:*
