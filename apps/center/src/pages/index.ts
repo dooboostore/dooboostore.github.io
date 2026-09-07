@@ -10,6 +10,15 @@ import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
 import StockNptiPage from './stock-npti/StockNptiPage';
 import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRankingPage';
 import StockTradingSimulationPage from './stock-trading-simulation/StockTradingSimulationPage';
+import MathPage from './math/MathPage';
+import MathVector from './math/components/MathVector';
+import MathDot from './math/components/MathDot';
+import MathNorm from './math/components/MathNorm';
+import MathNormalize from './math/components/MathNormalize';
+import MathRotate from './math/components/MathRotate';
+import MathTrig from './math/components/MathTrig';
+import MathProject from './math/components/MathProject';
+import MathCross from './math/components/MathCross';
 
 export const pageFactories = [
   RootRouter,
@@ -24,4 +33,13 @@ export const pageFactories = [
   StockNptiPage,
   StockCategoryRankingPage,
   StockTradingSimulationPage,
+  MathPage,
+  MathVector,
+  MathDot,
+  MathNorm,
+  MathNormalize,
+  MathRotate,
+  MathTrig,
+  MathProject,
+  MathCross,
 ];

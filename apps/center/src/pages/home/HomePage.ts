@@ -95,6 +95,15 @@ export default (w: Window) => {
       path: '/stock-trading-simulation',
       color: '#f59e0b',
       badge: 'New'
+    },
+    {
+      id: 'math',
+      icon: '📐',
+      title: '수학 그래프',
+      description: '삼각함수·이차함수·지수/로그·정규분포를 그래프로 시각화해보세요.',
+      path: '/math',
+      color: '#6366f1',
+      badge: 'New'
     }
   ];
 
