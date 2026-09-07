@@ -2,9 +2,8 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import lzString from 'lz-string';
 import {
-  scoreTrendBars,
-  splitScoreSegments,
-  clipScoredSegments,
+  TrendZone,
+  zoneRegimeOf,
   diffZoneSets,
   compactSetsForUrl,
   expandSetsFromUrl,
@@ -16,56 +15,54 @@ import {
 const { compressToEncodedURIComponent } = lzString;
 const near = (a: number, b: number, eps = 1e-9) => Math.abs(a - b) < eps;
 
-describe('scoreTrendBars', () => {
-  it('hand-check: all-down → 0.3, all-up → 0.9', () => {
-    const sc = scoreTrendBars([
-      { macd: -1, signal: -0.5, rsi: 40, obv: 100 },
-      { macd: 1, signal: 0.5, rsi: 70, obv: 300 },
-    ], 10);
-    assert.ok(near(sc[0]!, 0.3) && near(sc[1]!, 0.9));
+// obv=null → MACD파트·RSI파트 평균만. signal은 내부 EMA가 macd를 뒤따라오므로 기울기로 방향 유도
+const downBar = (i: number): TrendZone.TrendBar => ({ macd: -1 - i * 0.05, rsi: 30, obv: null }); // 하락지속 → macd<signal → (0+0.3)/2=0.15
+const sideBar = (i: number): TrendZone.TrendBar => ({ macd: -1, rsi: 50, obv: null }); // 수렴 → (0.5+0.5)/2=0.5
+const upBar = (i: number): TrendZone.TrendBar => ({ macd: 1 + i * 0.05, rsi: 90, obv: null }); // 상승지속 → macd>signal → (1+0.9)/2=0.95
+const rep = (n: number, f: (i: number) => TrendZone.TrendBar): TrendZone.TrendBar[] => Array.from({ length: n }, (_, i) => f(i));
+const grp = (r: number): string => r > 0.6 ? 'up' : r < 0.4 ? 'dn' : 'side';
+
+describe('TrendZone.trendZones', () => {
+  it('down/side/up split with mean scoreRates', () => {
+    const zs = TrendZone.trendZones([...rep(30, downBar), ...rep(30, sideBar), ...rep(30, upBar)], grp);
+    assert.equal(zs.length, 3);
+    assert.deepEqual(zs.map(g => [g.startIndex, g.endIndex]), [[0, 29], [30, 59], [60, 89]]);
+    // 경계 봉의 signal 수렴 과정이 섞여 평균이 이론값에서 미세 이탈
+    assert.ok(Math.abs(zs[0].scoreRate - 0.15) < 0.02 && zs[1].scoreRate === 0.5 && near(zs[2].scoreRate, 0.95));
+    assert.deepEqual(zs.map(g => g.group), ['dn', 'side', 'up']);
   });
-  it('partial indicators: rsi only → rsi/100', () => {
-    assert.deepEqual(scoreTrendBars([{ macd: null, signal: null, rsi: 80, obv: null }], 10), [0.8]);
+  it('short flat run after steep rise scores with the drop (signal lags above)', () => {
+    const zs = TrendZone.trendZones([...rep(30, upBar), ...rep(3, sideBar), ...rep(30, downBar)], grp);
+    assert.equal(zs.length, 2);
+    assert.deepEqual(zs.map(g => [g.startIndex, g.endIndex]), [[0, 29], [30, 62]]);
+    assert.deepEqual(zs.map(g => g.group), ['up', 'dn']);
   });
-  it('no indicators → null', () => {
-    assert.deepEqual(scoreTrendBars([{ macd: null, signal: null, rsi: null, obv: null }], 10), [null]);
+  it('maxSets caps zone count (default 12)', () => {
+    const alt = (i: number): TrendZone.TrendBar => (Math.floor(i / 10) % 2 === 0 ? upBar(i) : downBar(i));
+    const zs = TrendZone.trendZones(rep(200, alt), grp);
+    assert.equal(zs.length, 12);
+  });
+  it('empty → []', () => {
+    assert.deepEqual(TrendZone.trendZones([], grp), []);
+  });
+  it('uuid: same input → same, different → different, 16 hex', () => {
+    const a = [...rep(30, downBar), ...rep(30, upBar)];
+    const z1 = TrendZone.trendZones(a, grp);
+    const z2 = TrendZone.trendZones([...rep(30, downBar), ...rep(30, upBar)], grp);
+    assert.deepEqual(z1.map(g => g.uuid), z2.map(g => g.uuid));
+    assert.ok(z1.every(g => /^[0-9a-f]{16}$/.test(g.uuid)));
+    const z3 = TrendZone.trendZones([...rep(30, downBar), ...rep(30, sideBar)], grp);
+    assert.notDeepEqual(z1.map(g => g.uuid), z3.map(g => g.uuid));
+  });
+  it('zoneRegimeOf thresholds', () => {
+    assert.equal(zoneRegimeOf(0.95).label, '상승');
+    assert.equal(zoneRegimeOf(0.15).label, '하락');
+    assert.equal(zoneRegimeOf(0.5).label, '횡보');
   });
 });
 
-describe('splitScoreSegments', () => {
-  it('down/side/up split with mean trends', () => {
-    const sg = splitScoreSegments([...Array(30).fill(0.3), ...Array(30).fill(0.5), ...Array(30).fill(0.9)], 10, 6, 0.6, 0.4);
-    assert.equal(sg.length, 3);
-    assert.deepEqual(sg.map(g => [g.from, g.to]), [[0, 29], [30, 59], [60, 89]]);
-    assert.ok(near(sg[0].trend, 0.3) && sg[1].trend === 0.5 && near(sg[2].trend, 0.9, 1e-9));
-  });
-  it('short segment merges into neighbor', () => {
-    const r = splitScoreSegments([...Array(30).fill(0.9), ...Array(3).fill(0.5), ...Array(30).fill(0.1)], 10, 6, 0.6, 0.4);
-    assert.equal(r.length, 2);
-    assert.deepEqual([r[0].from, r[0].to], [0, 32]);
-  });
-  it('cap maxSets, empty, all-null', () => {
-    const r = splitScoreSegments(Array.from({ length: 80 }, (_, i) => (Math.floor(i / 10) % 2 === 0 ? 1 : -1)), 10, 6, 0.6, 0.4);
-    assert.equal(r.length, 6);
-    assert.deepEqual(splitScoreSegments([], 10, 6), []);
-    const n = splitScoreSegments([null, null, null], 2, 6, 0.6, 0.4);
-    assert.equal(n.length, 1);
-    assert.equal(n[0].trend, 0.5);
-  });
-  it('clip: sub-range keeps identical boundaries on overlap', () => {    // 전역 분할 [0-29 dn][30-59 side][60-89 up]에서 [10-69] clipping
-    const scores = [...Array(30).fill(0.1), ...Array(30).fill(0.5), ...Array(30).fill(0.9)];
-    const global = splitScoreSegments(scores, 10, 6, 0.6, 0.4);
-    const clipped = clipScoredSegments(global.map((g, i) => ({ ...g, label: 'z' + i, color: '#111' })), scores, 10, 69);
-    assert.deepEqual(clipped.map(g => [g.from, g.to]), [[10, 29], [30, 59], [60, 69]]);
-    // clip trend는 clip 범위 평균
-    assert.ok(Math.abs(clipped[0].trend - 0.1) < 1e-9 && Math.abs(clipped[2].trend - 0.9) < 1e-9);
-    // 자투리도 유지 (짧아도 최적화 시도, 안 되면 null 탈락)
-    const tiny = clipScoredSegments(global.map(g => ({ ...g, label: 'x', color: '#000' })), scores, 0, 25);
-    assert.deepEqual(tiny.map(g => [g.from, g.to]), [[0, 25]]);
-    // 라벨·색상 유지
-    assert.equal(tiny[0].label, 'x');
-  });
-  it('diffZoneSets: name-first match with range check', () => {
+describe('diffZoneSets: name-first match with range check', () => {
+  it('keeps matching, fresh for new', () => {
     const sets = [
       { label: '상승 1', from: 0, to: 100 },
       { label: '하락 1', from: 101, to: 200 },
@@ -110,7 +107,7 @@ describe('normMaList / normExitList', () => {
 });
 
 describe('sets URL round-trip', () => {
-  const sig = (signal: string, action: string) => ({ signal, action, percent: 20, candleFilter: 'any', volumeFilter: 'higher', consecutive: 2, alignment: 'aligned', condTrade: { type: 'consecutiveBuy', operator: '>=', value: 2 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'maSlope', operator: '>', value: 5 } });
+  const sig = (signal: string, action: string) => ({ signal, action, percent: 20, candleFilter: 'any', volumeFilter: 'higher', consecutive: 2, alignment: 'aligned', skipAfter: 0, condTrade: { type: 'consecutiveBuy', operator: '>=', value: 2 }, condCandle: { type: 'any', operator: 'any', value: 1 }, condMa: { type: 'maSlope', operator: '>', value: 5 } });
   const mkSet = (i: number, trend: number) => ({
     id: i, label: trend === 1 ? `상승 ${i}` : `하락 ${i}`, trend, from: i * 50, to: i * 50 + 49, color: '#7c3aed',
     maConfigs: [
