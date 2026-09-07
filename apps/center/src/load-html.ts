@@ -171,6 +171,7 @@ async function main() {
     "/stock-npti",
     "/stock-category-ranking",
     "/stock-trading-simulation",
+    "/math",
   ];
   const outDir = path.resolve(__dirname, '../dist');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });

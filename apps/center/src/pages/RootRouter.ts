@@ -9,6 +9,7 @@ import {
   replaceChildren,
   addEventListener,
   event,
+  skipIfExists,
 } from '@dooboostore/simple-web-component';
 import { Router, type RouterEventType } from '@dooboostore/core-web';
 
@@ -88,9 +89,15 @@ export default (w: Window) => {
     }
 
     @subscribeSwcAppRouteChangeWhileConnected(["/stock-trading-simulation"], { order: 10 })
-    @innerHtmlLight({ filter: (target) => !target.querySelector('center-stock-trading-simulation-page') })
+    @innerHtmlLight({ filter: skipIfExists('center-stock-trading-simulation-page') })
     handleStockTradingSimulation() {
       return `<center-stock-trading-simulation-page/>`;
+    }
+
+    @subscribeSwcAppRouteChangeWhileConnected(["/math"], { order: 11 })
+    @innerHtmlLight({ filter: skipIfExists('center-math-page') })
+    handleMath() {
+      return `<center-math-page/>`;
     }
 
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
