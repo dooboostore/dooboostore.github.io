@@ -2,8 +2,8 @@ import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAft
 import { Router } from '@dooboostore/core-web';
 import { inject } from '@dooboostore/simple-boot';
 import { TossService, TossChartTimeframe } from '../../services/toss/TossService';
-import { TrendZone, computeMacdSeries, computeRsiSeries, computeObvSeries, isResolveMode, TradingSimulator } from '@dooboostore/algorithm';
-import type { ExitConfig, MaConfig, ResolveMode, SimCandle, SimResult, SimTrade } from '@dooboostore/algorithm';
+import { TrendRange, computeMacdSeries, computeRsiSeries, computeObvSeries, isResolveMode, TradingSimulator } from '@dooboostore/algorithm';
+import type { ExitConfig, MaConfig, ResolveMode, SimCandle, SimResult, SimTrade, TradeAction } from '@dooboostore/algorithm';
 import lzString from 'lz-string';
 const { decompressFromEncodedURIComponent } = lzString;
 
@@ -12,10 +12,10 @@ const { decompressFromEncodedURIComponent } = lzString;
 
 const tagName = 'center-stock-trading-simulation-page';
 
-// TrendZone 네임스페이스 re-export (테스트 호환)
-export { TrendZone };
+// TrendRange 네임스페이스 re-export (테스트 호환)
+export { TrendRange };
 
-/** 표시용 추세 구간 (TendZone + 라벨·색상·표시 범위) */
+/** 표시용 추세 구간 (TendRange + 라벨·색상·표시 범위) */
 export interface DisplayZone {
   uuid: string;
   from: number;
@@ -55,7 +55,7 @@ const SET_PALETTE = ['#7c3aed', '#2563eb', '#0891b2', '#059669', '#d97706', '#db
 /** 매매조건 구간 탭 1개 (참고구간 + 구간별 최적화 설정 + 탐색 결과) */
 export interface TradeRange {
   id: number; uuid: string; label: string; color: string; start: number; end: number;
-  refMode: 'none' | 'range' | 'custom'; refRangeId: number; refStart: number; refEnd: number;
+  refMode: 'none' | 'range' | 'ranges' | 'custom'; refRangeId: number; refRangeIds: number[]; refStart: number; refEnd: number;
   riskAversion: number; trendScore: number; buyPctRate: number; sellPctRate: number;
   maResolveMode: ResolveMode; exitResolveMode: ResolveMode;
   best: TradingSimulator.BestConfig | null; sim: SimResult | null;
@@ -664,7 +664,10 @@ export default (w: Window) => {
           }
         }
         const rate = z.sim ? ` <span style="font-weight:800;color:${isActive ? '#fff' : hi(z.localRate)}">${z.localRate >= 0 ? '+' : ''}${z.localRate.toFixed(1)}%</span>` : '';
-        return `<button type="button" class="range-tab${isActive ? ' active' : ''}" data-id="${z.id}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${z.color};margin-right:6px;vertical-align:1px"></span>${esc(z.label)}${rate}${hold}</button>`;
+        const refIds = z.refMode === 'ranges' ? z.refRangeIds : z.refMode === 'range' ? [z.refRangeId] : [];
+        const refN = refIds.filter(id => this.tradeRanges.some(x => x.id === id)).length;
+        const refMark = refN ? ` <span style="color:${isActive ? 'rgba(255,255,255,0.85)' : '#94a3b8'}">↩${refN}</span>` : '';
+        return `<button type="button" class="range-tab${isActive ? ' active' : ''}" data-id="${z.id}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${z.color};margin-right:6px;vertical-align:1px"></span>${esc(z.label)}${rate}${hold}${refMark}</button>`;
       }).join('');
     }
 
@@ -700,18 +703,17 @@ export default (w: Window) => {
         </div>
         <div class="ref-row">
           <span class="ref-lab">참고구간:</span>
-          <select class="range-ref-select" data-id="${active.id}">
-            <option value="none"${active.refMode === 'none' ? ' selected' : ''}>없음</option>
-            ${this.tradeRanges.filter(z => z.id !== active.id).map(z => `<option value="range:${z.id}"${active.refMode === 'range' && active.refRangeId === z.id ? ' selected' : ''}>${z.label.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</option>`).join('')}
-            <option value="custom"${active.refMode === 'custom' ? ' selected' : ''}>직접선택</option>
-          </select>
+          <div class="ref-toggles" data-id="${active.id}">
+            <button type="button" class="ref-toggle special${active.refMode === 'none' ? ' on' : ''}" data-ref="none" data-id="${active.id}">없음</button>
+            <button type="button" class="ref-toggle special${active.refMode === 'custom' ? ' on' : ''}" data-ref="custom" data-id="${active.id}">직접입력</button>
+            ${this.tradeRanges.filter(z => z.id !== active.id).map(z => `<button type="button" class="ref-toggle${((active.refMode === 'ranges' ? active.refRangeIds : active.refMode === 'range' ? [active.refRangeId] : []) as number[]).includes(z.id) ? ' on' : ''}" data-ref="range:${z.id}" data-id="${active.id}" title="${z.label.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${z.color};margin-right:4px"></span>${z.label.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`).join('')}
+          </div>
           ${(() => {
-            if (active.refMode !== 'range') return '';
-            const rz = this.tradeRanges.find(z => z.id === active.refRangeId);
-            if (!rz || !this.chartCandles.length) return '';
-            const rs = this.chartCandles[Math.max(0, Math.min(rz.start, this.chartCandles.length - 1))]?.date ?? '-';
-            const re = this.chartCandles[Math.max(0, Math.min(rz.end, this.chartCandles.length - 1))]?.date ?? '-';
-            return `<span class="ref-info">↩ ${rz.label.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')} ${rs}~${re} (${rz.end - rz.start + 1}개)</span>`;
+            const ids = active.refMode === 'ranges' ? active.refRangeIds : active.refMode === 'range' ? [active.refRangeId] : [];
+            const list = (ids as number[]).map(id => this.tradeRanges.find(z => z.id === id)).filter(Boolean) as TradeRange[];
+            if (!list.length || !this.chartCandles.length) return '';
+            const total = list.reduce((s, rz) => s + Math.max(0, rz.end - rz.start + 1), 0);
+            return `<span class="ref-info">↩ ${list.length}개 구간 (총 ${total}개)</span>`;
           })()}
         </div>
         ${active.refMode === 'custom' ? `
@@ -755,6 +757,10 @@ export default (w: Window) => {
       if (slider && typeof slider.setValues === 'function') {
         slider.setValues({ start: active.start, end: active.end });
       }
+      // 참고 토글은 직접 바인딩 (위임 리타게팅 이슈 우회 — 렌더마다 재생성이라 중복 없음)
+      body.querySelectorAll('.ref-toggle').forEach((b) => {
+        (b as HTMLElement).onclick = (ev) => this.onRefToggleWrap(ev);
+      });
       this.updateTradeRangeLabels(active.id);
       if (active.refMode === 'custom') {
         const rs = { start: active.refStart, end: active.refEnd };
@@ -794,9 +800,18 @@ export default (w: Window) => {
       if (cEl) cEl.textContent = `${z.end - z.start + 1}개`;
     }
 
-    /** ✨ 자동추세구간+: MACD+RSI+OBV 합성 추세로 상승/하락/횡보 분할 → 기존 등록 전부 삭제 후 재배치 */
-    @event('#sim-auto-trend-btn', 'click')
-    onAutoTrend() {
+    /** ✨ 자동추세구간: MACD+RSI+OBV 합성 추세로 상승/하락/횡보 분할 → 기존 등록 전부 삭제 후 재배치 */
+    @event('#sim-auto-trend-mode', 'change')
+    onAutoTrendMode(e: Event) {
+      const sel = e.target as HTMLSelectElement;
+      const mode = sel.value;
+      sel.value = '';
+      if (mode === 'merged') this.onAutoTrend({ maxSets: 0 });
+      else if (mode === 'single') this.onAutoTrend({ minLen: 1, maxSets: 0 });
+      else if (mode === 'manual') this.onAddRange();
+    }
+
+    private onAutoTrend(config?: TrendRange.TrendRangeConfig) {
       const n = this.chartCandles.length;
       if (!n) return;
       // 차트 하단 구간슬라이더 선택 범위만 분할 (지표 히스토리는 전체 캔들로 계산)
@@ -807,13 +822,26 @@ export default (w: Window) => {
       const macd = computeMacdSeries(closes, 12, 26, 9);
       const rsi = computeRsiSeries(closes, 14);
       const obv = computeObvSeries(closes, vols);
-      const bars: TrendZone.TrendBar[] = [];
-      for (let i = zs; i <= ze; i++) bars.push({ macd: macd.macd[i], rsi: rsi[i], obv: obv[i] });
-      const zones = TrendZone.trendZones(bars, r => zoneRegimeOf(r).label);
+      const bars: TrendRange.TrendBar[] = [];
+      for (let i = zs; i <= ze; i++) {
+        const c = this.chartCandles[i];
+        bars.push({ macd: macd.macd[i], rsi: rsi[i], obv: obv[i], open: c.open, high: c.high, low: c.low, close: c.close });
+      }
+      const zones = TrendRange.trendRanges(bars, {
+        ...config,
+        groupBy: r => zoneRegimeOf(r).label,
+        // 라벨과 같은 조건(0.6/0.4)으로 같은 방향끼리만 병합 허용
+        mergeBy: (aRate, _aStr, bRate, _bStr) => (aRate > 0.6 ? 1 : aRate < 0.4 ? -1 : 0) === (bRate > 0.6 ? 1 : bRate < 0.4 ? -1 : 0),
+      });
       let upN = 0, dnN = 0, sideN = 0;
       this.tradeRanges = zones.map((g, i) => {
         const regime = zoneRegimeOf(g.scoreRate);
         const no = regime.label === '상승' ? ++upN : regime.label === '하락' ? ++dnN : ++sideN;
+        // 강도 배분: 방향 쪽에 strength%, 반대쪽에 나머지. 중립(0.5)은 50/50.
+        const sPct = Math.max(0, Math.min(100, Math.round(g.strengthRate * 100)));
+        const dirUp = g.scoreRate > 0.5, dirDn = g.scoreRate < 0.5;
+        // 첫 구간: 불러온 처음~자기 바로 앞을 직접입력 참고. 이후 구간: 앞선 모든 구간을 누적 참고
+        const ownStart = Math.max(zs, Math.min(zs + g.startIndex, ze));
         return {
           id: i + 1,
           uuid: g.uuid,
@@ -821,11 +849,13 @@ export default (w: Window) => {
           color: regime.color,
           start: Math.max(zs, Math.min(zs + g.startIndex, ze)),
           end: Math.max(zs, Math.min(zs + g.endIndex, ze)),
-          // 첫 구간: 선택 앞쪽에 가져온 캔들이 있으면 그곳(0 ~ 선택시작-1)을 직접선택 참고로, 이후 구간은 바로 앞 구간을 참고
-          refMode: (i === 0 ? (zs > 0 ? 'custom' : 'none') : 'range') as 'none' | 'range' | 'custom',
-          refRangeId: i > 0 ? i : 0,
-          refStart: 0, refEnd: i === 0 && zs > 0 ? zs - 1 : Math.max(0, n - 1),
-          riskAversion: 0.5, trendScore: Math.max(0, Math.min(1, g.scoreRate)), buyPctRate: 100, sellPctRate: 100,
+          refMode: (i === 0 ? (ownStart > 0 ? 'custom' : 'none') : 'ranges') as 'none' | 'range' | 'ranges' | 'custom',
+          refRangeId: i > 0 ? 1 : 0, refRangeIds: Array.from({ length: i }, (_, k) => k + 1),
+          refStart: 0, refEnd: i === 0 ? ownStart - 1 : Math.max(0, n - 1),
+          riskAversion: g.strengthRate > 0.5 ? 0 : g.strengthRate < 0.5 ? 1 : 0.5,
+          trendScore: Math.max(0, Math.min(1, g.scoreRate)),
+          buyPctRate: !dirUp && !dirDn ? 50 : dirUp ? sPct : 100 - sPct,
+          sellPctRate: !dirUp && !dirDn ? 50 : dirUp ? 100 - sPct : sPct,
           maResolveMode: 'minFirst', exitResolveMode: 'minFirst',
           best: null, sim: null, localRate: 0, localProfit: 0,
         };
@@ -835,10 +865,15 @@ export default (w: Window) => {
       this.refreshRealized();
     }
 
-    /** 구간의 참고구간 캔들 (range=참조 구간, custom=직접 선택, none=자기 구간) */
-    private refCandles(z: { refMode: 'none' | 'range' | 'custom'; refRangeId: number; refStart: number; refEnd: number; start: number; end: number }): SimCandle[] {
+    /** 구간의 참고구간 캔들 (ranges=참조 구간들 시간순 연결, range=참조 구간 1개, custom=직접 선택, none=자기 구간) */
+    private refCandles(z: { refMode: 'none' | 'range' | 'ranges' | 'custom'; refRangeId: number; refRangeIds?: number[]; refStart: number; refEnd: number; start: number; end: number }): SimCandle[] {
       if (!this.chartCandles.length) return [];
-      if (z.refMode === 'range') {
+      if (z.refMode === 'ranges') {
+        const list = (z.refRangeIds ?? [])
+          .map(id => this.tradeRanges.find(x => x.id === id))
+          .filter(Boolean) as TradeRange[];
+        if (list.length) return list.sort((a, b) => a.start - b.start).flatMap(rz => this.chartCandles.slice(rz.start, rz.end + 1));
+      } else if (z.refMode === 'range') {
         const rz = this.tradeRanges.find(x => x.id === z.refRangeId);
         if (rz) return this.chartCandles.slice(rz.start, rz.end + 1);
       } else if (z.refMode === 'custom') {
@@ -921,7 +956,16 @@ export default (w: Window) => {
       const hi = (n: number) => n > 0 ? '#dc2626' : n < 0 ? '#2563eb' : '#1e293b';
       const rate = `${z.localRate >= 0 ? '+' : ''}${z.localRate.toFixed(2)}%`;
       const profit = `${z.localProfit >= 0 ? '+' : ''}${Math.round(z.localProfit).toLocaleString()}원`;
-      return `수익률 <b style="color:${hi(z.localRate)}">${rate}</b> · 손익 <b style="color:${hi(z.localProfit)}">${profit}</b> · 체결 <b>${done}건</b>${fails ? ` (실패 <b>${fails}건</b>)` : ''}`;
+      // 단순보유 (구간 첫~끝 종가 보유 가정) 비교
+      let hold = '';
+      const zs = (z as any).start as number, ze = (z as any).end as number;
+      const f = this.chartCandles[Math.max(0, Math.min(zs, this.chartCandles.length - 1))]?.close;
+      const l = this.chartCandles[Math.max(0, Math.min(ze, this.chartCandles.length - 1))]?.close;
+      if (f) {
+        const r = ((l - f) / f) * 100;
+        hold = ` · 단순보유 <b style="color:${hi(r)}">${r >= 0 ? '+' : ''}${r.toFixed(2)}%</b>`;
+      }
+      return `수익률 <b style="color:${hi(z.localRate)}">${rate}</b> · 손익 <b style="color:${hi(z.localProfit)}">${profit}</b> · 체결 <b>${done}건</b>${fails ? ` (실패 <b>${fails}건</b>)` : ''}${hold}`;
     }
 
     private updateSimStrip(id: number) {
@@ -934,8 +978,9 @@ export default (w: Window) => {
     /** 활성 구간의 MA/실현 폼 → best 커밋 (타이핑 중 body 리렌더 없음) */
     private parseRangeConditions(): TradeRange | null {
       const z = this.tradeRanges.find(z => z.id === this.activeRangeId);
-      if (!z || !z.best) return null;
+      if (!z) return null;
       this.syncOptFromForm(z.id);
+      if (!z.best) return z;
       const rows = this.shadowRoot?.querySelectorAll('#ma-list .ma-row');
       if (rows && rows.length) {
         const newConfigs: any[] = [];
@@ -1015,18 +1060,21 @@ export default (w: Window) => {
       if (xresEl && isResolveMode(xresEl.value)) z.exitResolveMode = xresEl.value;
     }
 
-    /** 단일 구간 100라운드 최적화 → 최고 수익률 저장, 승자 유무 반환 */
+    /** 단일 구간 10라운드 최적화 → 최고 수익률 저장, 승자 유무 반환.
+     *  forceRef 지정 시(전체 최적화) 구간 개별 참고설정 대신 앞 구간 누적 캔들로 탐색. 빈 배열도 허용(→ prior 추론). */
     private async optimizeRange(
       z: TradeRange,
       onProgress?: (done: number) => void,
+      forceRef?: SimCandle[],
     ): Promise<boolean> {
       this.syncOptFromForm(z.id);
       // 최적화 입력은 참고구간 캔들 (없으면 자기 구간), 실행은 자기 구간
-      const ref = this.refCandles(z);
+      const ref = forceRef ?? this.refCandles(z);
       const own = this.chartCandles.slice(z.start, z.end + 1);
-      if (!ref.length || !own.length) return false;
+      if (!own.length) return false;
+      if (!forceRef && !ref.length) return false;
       let winner: { best: TradingSimulator.BestConfig; sim: SimResult } | null = null;
-      for (let r = 0; r < 100; r++) {
+      for (let r = 0; r < 10; r++) {
         const best = TradingSimulator.findBestConfig(ref, {
           trend: z.trendScore, riskAversion: z.riskAversion,
           buyPctRate: z.buyPctRate / 100, sellPctRate: z.sellPctRate / 100,
@@ -1039,7 +1087,7 @@ export default (w: Window) => {
           });
           if (!winner || sim.rate > winner.sim.rate) winner = { best, sim };
         }
-        if (r % 10 === 9) {
+        if (r % 5 === 4) {
           onProgress?.(r + 1);
           await new Promise(rr => setTimeout(rr, 0));
         }
@@ -1067,7 +1115,7 @@ export default (w: Window) => {
       const orig = btn.textContent;
       btn.textContent = '최적 탐색 중...';
       try {
-        await this.optimizeRange(z, done => { btn.textContent = `최적 탐색 중... (${done}/100)`; });
+        await this.optimizeRange(z, done => { btn.textContent = `최적 탐색 중... (${done}/10)`; });
         this.refreshRealized();
       } finally {
         btn.disabled = false;
@@ -1082,10 +1130,14 @@ export default (w: Window) => {
       btn.disabled = true;
       const orig = btn.textContent;
       try {
-        for (let i = 0; i < this.tradeRanges.length; i++) {
-          const z = this.tradeRanges[i];
-          btn.textContent = `전체 최적화 (${i + 1}/${this.tradeRanges.length})`;
-          await this.optimizeRange(z, done => { btn.textContent = `전체 최적화 (${i + 1}/${this.tradeRanges.length}) · ${done}/100`; });
+        // 시간순으로 앞에서부터 — 각 구간은 앞선 모든 구간의 캔들을 누적 참고로 탐색
+        const ordered = [...this.tradeRanges].sort((a, b) => a.start - b.start);
+        let prefix: SimCandle[] = [];
+        for (let i = 0; i < ordered.length; i++) {
+          const z = ordered[i];
+          btn.textContent = `전체 최적화 (${i + 1}/${ordered.length})`;
+          await this.optimizeRange(z, done => { btn.textContent = `전체 최적화 (${i + 1}/${ordered.length}) · ${done}/10`; }, [...prefix]);
+          prefix = prefix.concat(this.chartCandles.slice(z.start, z.end + 1));
         }
         this.refreshRealized();
       } finally {
@@ -1094,7 +1146,7 @@ export default (w: Window) => {
       }
     }
 
-    @event('#sim-add-range-btn', 'click')
+    /** 수동 구간 추가 (select 수동구간에서 호출) */
     onAddRange() {
       const id = this.nextRangeId++;
       const n = this.chartCandles.length;
@@ -1102,7 +1154,7 @@ export default (w: Window) => {
         id, uuid: crypto.randomUUID(), label: `구간 ${id}`,
         color: SET_PALETTE[(id - 1) % SET_PALETTE.length],
         start: 0, end: Math.max(0, n - 1),
-        refMode: 'none', refRangeId: 0, refStart: 0, refEnd: Math.max(0, n - 1),
+        refMode: 'none', refRangeId: 0, refRangeIds: [], refStart: 0, refEnd: Math.max(0, n - 1),
         riskAversion: 0.5, trendScore: 0.5, buyPctRate: 100, sellPctRate: 100,
         maResolveMode: 'minFirst', exitResolveMode: 'minFirst',
         best: null, sim: null, localRate: 0, localProfit: 0,
@@ -1145,26 +1197,40 @@ export default (w: Window) => {
       this.refreshRealized(true);
     }
 
-    @eventDelegate('#sim-range-body', 'change')
-    onRefSelectChange(e: Event) {
-      const sel = (e.target as HTMLElement).closest('.range-ref-select') as HTMLSelectElement;
-      if (!sel) return;
-      const z = this.tradeRanges.find(z => z.id === Number(sel.dataset.id));
+    /** 참고 토글 직접 바인딩 진입점 (위임과 중복 방지 위해 위임 핸들러 없음) */
+    private onRefToggleWrap(e: Event) {
+      const btn = (e.target as HTMLElement).closest('.ref-toggle') as HTMLElement;
+      console.log('[sim] ref-toggle click:', (e.target as HTMLElement)?.tagName, btn?.dataset?.ref);
+      if (btn) this.applyRefToggle(btn);
+    }
+
+    private applyRefToggle(btn: HTMLElement) {
+      const z = this.tradeRanges.find(z => z.id === Number(btn.dataset.id));
       if (!z) return;
-      const v = sel.value;
+      const v = btn.dataset.ref ?? '';
       if (v === 'custom') {
         z.refMode = 'custom';
         z.refStart = z.start; z.refEnd = z.end;
+      } else if (v === 'none') {
+        z.refMode = 'none'; z.refRangeId = 0; z.refRangeIds = [];
       } else if (v.startsWith('range:')) {
         const rid = Number(v.slice('range:'.length));
-        if (this.tradeRanges.some(x => x.id === rid && rid !== z.id)) {
-          z.refMode = 'range'; z.refRangeId = rid;
+        if (!this.tradeRanges.some(x => x.id === rid && rid !== z.id)) return;
+        const cur = new Set(z.refMode === 'ranges' ? z.refRangeIds : z.refMode === 'range' ? [z.refRangeId] : []);
+        if (cur.has(rid)) cur.delete(rid);
+        else cur.add(rid);
+        const ids = [...cur].filter(id => this.tradeRanges.some(x => x.id === id && id !== z.id));
+        if (ids.length >= 2) {
+          z.refMode = 'ranges'; z.refRangeIds = ids; z.refRangeId = ids[0];
+        } else if (ids.length === 1) {
+          z.refMode = 'range'; z.refRangeId = ids[0]; z.refRangeIds = ids;
         } else {
-          z.refMode = 'none'; z.refRangeId = 0;
+          z.refMode = 'none'; z.refRangeId = 0; z.refRangeIds = [];
         }
       } else {
-        z.refMode = 'none'; z.refRangeId = 0;
+        return;
       }
+      console.log('[sim] ref-toggle:', z.label, '→', z.refMode, JSON.stringify(z.refRangeIds));
       this.refreshRealized();
     }
 
@@ -1205,7 +1271,12 @@ export default (w: Window) => {
       this.tradeRanges.splice(idx, 1);
       // 삭제된 구간을 참조하던 참고구간은 끊음
       for (const z of this.tradeRanges) {
-        if (z.refMode === 'range' && z.refRangeId === id) { z.refMode = 'none'; z.refRangeId = 0; }
+        if (z.refMode === 'range' && z.refRangeId === id) { z.refMode = 'none'; z.refRangeId = 0; z.refRangeIds = []; }
+        else if (z.refMode === 'ranges') {
+          z.refRangeIds = z.refRangeIds.filter(rid => rid !== id);
+          if (!z.refRangeIds.length) { z.refMode = 'none'; }
+          else if (z.refRangeIds.length === 1) { z.refMode = 'range'; z.refRangeId = z.refRangeIds[0]; }
+        }
       }
       if (this.activeRangeId === id) {
         const next = this.tradeRanges[Math.min(idx, this.tradeRanges.length - 1)];
@@ -1225,7 +1296,7 @@ export default (w: Window) => {
     @eventDelegate('#sim-range-body', 'input')
     onMaExitInput(e: Event) {
       const t = e.target as HTMLElement;
-      if (!t.closest('.ma-row')) return;
+      if (!t.closest('.ma-row') && !t.closest('.opt-row')) return;
       if (t.classList.contains('ma-color-input')) {
         const dot = t.closest('.ma-color') as HTMLElement;
         const v = (t as HTMLInputElement).value;
@@ -1237,7 +1308,7 @@ export default (w: Window) => {
     @eventDelegate('#sim-range-body', 'change')
     onMaExitChange(e: Event) {
       const t = e.target as HTMLElement;
-      if (!t.closest('.ma-row') && !t.closest('.section-box')) return;
+      if (!t.closest('.ma-row') && !t.closest('.section-box') && !t.closest('.opt-row')) return;
       if (t.classList.contains('ma-action') || t.classList.contains('ma-signal')) {
         (t as HTMLElement).dataset.v = (t as HTMLSelectElement).value;
       }
@@ -1487,7 +1558,66 @@ export default (w: Window) => {
       return out.sort((a, b) => a.absIdx - b.absIdx);
     }
 
-    /** 전 구간 체결 마커 (절대 캔들 인덱스 → tooltip html) */
+    /** 거래내역 모달 렌더 (전 구간 병합, 절대 시간순) */
+    private renderHistoryList() {
+      const body = this.shadowRoot?.querySelector('#sim-history-body') as HTMLElement;
+      const count = this.shadowRoot?.querySelector('#sim-history-count') as HTMLElement;
+      if (!body) return;
+      const rows = this.mergedTrades();
+      if (count) count.textContent = rows.length ? `총 ${rows.length}건` : '';
+      if (!rows.length) {
+        body.innerHTML = `<div style="padding:24px;text-align:center;color:#94a3b8;font-size:12px">거래내역이 없습니다. 구간 최적화를 실행하세요.</div>`;
+        return;
+      }
+      const fmt = (n: number) => Math.round(n).toLocaleString();
+      const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const badge = (t: SimTrade): [string, string] => {
+        if (t.action === 'buy') return ['매수', '#3b82f6'];
+        if (t.action === 'sell') return ['매도', '#ef4444'];
+        if (t.action === 'exit') return [t.label || '청산', '#8b5cf6'];
+        return ['실패', '#94a3b8'];
+      };
+      body.innerHTML = `<table class="hist-table">
+        <thead><tr><th>#</th><th>날짜</th><th>구간</th><th>구분</th><th>시세</th><th>수량</th><th>금액</th><th>수수료</th><th>수익률</th><th>보유주식</th><th>평가금액</th><th>평균가격</th><th>현금</th><th>조건상세</th><th>사유</th></tr></thead>
+        <tbody>${rows.map(({ trade: t }, i) => {
+          const [bt, bc] = badge(t);
+          const m = /^\[(.+?)\]/.exec(t.reason);
+          const range = m ? m[1] : '-';
+          const reason = t.reason;
+          const pr = t.profitRate;
+          const prStr = pr == null ? '-' : `${pr >= 0 ? '+' : ''}${pr.toFixed(2)}%`;
+          const prColor = pr == null ? '#94a3b8' : pr > 0 ? '#dc2626' : pr < 0 ? '#2563eb' : '#64748b';
+          const conds = [...(t.conds ?? []), ...(t.condDetail ?? [])].filter(Boolean);
+          return `<tr><td class="num">${i + 1}</td><td>${esc(this.chartCandles[Math.max(0, Math.min(t.barIdx, this.chartCandles.length - 1))]?.date ?? '')}</td><td>${esc(range)}</td><td><span class="hist-badge" style="background:${bc}">${bt}</span></td><td class="num">${fmt(t.price)}원</td><td class="num">${Math.floor(t.sharesDelta).toLocaleString()}주</td><td class="num">${fmt(t.amount)}원</td><td class="num">${fmt(t.fee || 0)}원</td><td class="num" style="color:${prColor};font-weight:700">${prStr}</td><td class="num">${Math.floor(t.sharesAfter).toLocaleString()}주</td><td class="num">${fmt(t.holdingValue)}원</td><td class="num">${t.sharesAfter > 0 ? fmt(t.avgPrice) + '원' : '-'}</td><td class="num">${fmt(t.cashAfter)}원</td><td class="reason">${conds.map(c => esc(c)).join('<br>') || '-'}</td><td class="reason">${esc(reason)}</td></tr>`;
+        }).join('')}</tbody></table>`;
+    }
+
+    @event('#sim-history-btn', 'click')
+    onHistoryOpen() {
+      this.renderHistoryList();
+      const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
+      modal?.classList.add('show');
+    }
+
+    @event('#sim-history-close', 'click')
+    onHistoryClose() {
+      const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
+      modal?.classList.remove('show');
+    }
+
+    @event('#sim-history-modal', 'click')
+    onHistoryBackdrop(e: Event) {
+      const modal = e.currentTarget as HTMLElement;
+      if (e.target === modal) modal.classList.remove('show');
+    }
+
+    @eventDocument('keydown')
+    onHistoryEsc(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        const modal = this.shadowRoot?.querySelector('#sim-history-modal') as HTMLElement;
+        modal?.classList.remove('show');
+      }
+    }
     private allSimMarkers(): Map<number, string> {
       const out = new Map<number, string>();
       for (const { absIdx, trade: t } of this.mergedTrades()) {
@@ -1581,26 +1711,7 @@ export default (w: Window) => {
         if (!zsDate || !zeDate) return '';
         return `<rect date-start="${zsDate}" date-end="${zeDate}" fill="${z.color}1F" stroke="${z.color}" stroke-width="1" label="${escAttr(z.label)}" color="${z.color}" target="all"></rect>`;
       }).join('');
-      // 참고구간 rect (연하게 + ↩ 라벨로 구분)
-      const refRects = this.tradeRanges.map(z => {
-        let rs = -1, re = -1, rc = '#94a3b8', rl = '직접선택';
-        if (z.refMode === 'range') {
-          const rz = this.tradeRanges.find(x => x.id === z.refRangeId);
-          if (!rz) return '';
-          rs = rz.start; re = rz.end; rc = rz.color; rl = rz.label;
-        } else if (z.refMode === 'custom') {
-          rs = z.refStart; re = z.refEnd;
-        } else {
-          return '';
-        }
-        const cs = Math.max(0, Math.min(rs, n - 1));
-        const ce = Math.max(cs, Math.min(re, n - 1));
-        const csDate = this.chartCandles[cs]?.date ?? '';
-        const ceDate = this.chartCandles[ce]?.date ?? '';
-        if (!csDate || !ceDate) return '';
-        return `<rect date-start="${csDate}" date-end="${ceDate}" fill="${rc}0D" stroke="${rc}" stroke-width="1" label="↩ ${escAttr(rl)}" color="${rc}" target="all"></rect>`;
-      }).join('');
-      return `<volume></volume><macd></macd><rsi></rsi><obv></obv>` + ticksHtml + liveRect + rangeRects + refRects;
+      return `<volume></volume><macd></macd><rsi></rsi><obv></obv>` + ticksHtml + liveRect + rangeRects;
     }
 
     /** 차트 뷰를 선택 구간으로 포커싱 (슬라이더 조작 시에만 호출) */
@@ -1637,6 +1748,7 @@ export default (w: Window) => {
       let cash = this.initialCapital;
       let shares = Math.max(0, Math.floor(this.initialShares));
       let avg = this.initialAvgPrice;
+      const prevActions: TradeAction[] = [];
       const startEquity = this.startEquity();
       let fee = 0, count = 0, fails = 0;
       for (const z of ranges) {
@@ -1647,8 +1759,10 @@ export default (w: Window) => {
         const sim = TradingSimulator.simulate(own, z.best, {
           initialCapital: cash, feePercent: this.feePercent,
           initialShares: shares, initialAvgPrice: avg, requireAll: true,
+          prevActions: [...prevActions],
         });
         z.sim = sim;
+        for (const t of sim.trades) prevActions.push(t.action);
         const rangeEndEq = sim.cash + Math.max(0, Math.floor(sim.shares)) * own[own.length - 1].close;
         z.localProfit = rangeEndEq - rangeStartEq;
         z.localRate = rangeStartEq ? (z.localProfit / rangeStartEq) * 100 : 0;
@@ -1683,6 +1797,19 @@ export default (w: Window) => {
       const fmt = (n: number) => `${Math.round(n).toLocaleString()}원`;
       const fmtRate = (n: number) => `${n >= 0 ? '+' : ''}${n.toFixed(2)}%`;
       const hi = (n: number) => n > 0 ? '#dc2626' : n < 0 ? '#2563eb' : '#64748b';
+      // 선택구간 단순보유 (선택 첫~끝 종가, 시작 자기자본 기준) — live 유무 무관 공통
+      const holdAllEl = this.shadowRoot?.querySelector('#sim-hold-all') as HTMLElement;
+      if (holdAllEl) {
+        const [hzs, hze] = this.simRange();
+        const f = this.chartCandles[hzs]?.close, l = this.chartCandles[hze]?.close;
+        if (f && l) {
+          const r = ((l - f) / f) * 100;
+          holdAllEl.textContent = `${fmtRate(r)} (${fmt(this.startEquity() * (l / f))})`;
+          holdAllEl.style.color = hi(r);
+        } else {
+          holdAllEl.textContent = '-';
+        }
+      }
       if (this.live) {
         const L = this.live;
         set('#sim-shares', `${L.shares.toLocaleString()}주`);
@@ -1875,7 +2002,12 @@ export default (w: Window) => {
           .range-color-input::-moz-color-swatch{border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 2px #e2e8f0}
           .ref-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
           .ref-lab{font-size:11px;font-weight:700;color:#64748b;white-space:nowrap}
-          .range-ref-select{flex:1;min-width:120px;max-width:220px;height:32px;border-radius:8px;border:1px solid #e2e8f0;font-size:11px;font-weight:700;background:#fff;color:#334155;padding:0 6px;outline:none}
+          .ref-toggles{display:flex;gap:6px;overflow-x:auto;flex:1;min-width:0;padding:2px;scrollbar-width:thin}
+          .ref-toggle{flex:0 0 auto;height:32px;padding:0 12px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#64748b;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}
+          .ref-toggle:hover{border-color:#f59e0b;color:#d97706}
+          .ref-toggle.on{background:#f59e0b;border-color:#f59e0b;color:#fff}
+          .ref-toggle.special{border-style:dashed;color:#94a3b8}
+          .ref-toggle.special.on{background:#334155;border-color:#334155;color:#fff}
           .ref-info{font-size:10px;font-weight:700;color:#64748b;background:#f1f5f9;border-radius:999px;padding:3px 10px;white-space:nowrap}
           .opt-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
           .opt-item{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#334155;white-space:nowrap}
@@ -1964,6 +2096,18 @@ export default (w: Window) => {
           .cond-exit{background:#fff;border:1px solid #ede9fe;border-radius:10px;padding:8px 10px;margin-bottom:6px;font-size:11px;color:#475569}
           .cond-exit:last-child{margin-bottom:0}
           .cond-exit b{color:#5b21b6}
+          .hist-modal{position:fixed;inset:0;background:rgba(15,23,42,0.5);z-index:950;display:none;align-items:center;justify-content:center;padding:16px}
+          .hist-modal.show{display:flex}
+          .hist-box{background:#fff;border-radius:12px;max-width:860px;width:100%;max-height:82vh;display:flex;flex-direction:column;overflow:hidden}
+          .hist-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid #f1f5f9;font-size:13px;font-weight:800;color:#1e293b}
+          .hist-close{margin-left:auto;height:28px;padding:0 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#64748b;font-size:11px;font-weight:800;cursor:pointer}
+          .hist-body{overflow-y:auto;padding:0 0 12px}
+          .hist-table{width:100%;border-collapse:collapse;font-size:11px;color:#334155}
+          .hist-table th{position:sticky;top:0;background:#f8fafc;color:#64748b;font-size:10px;padding:8px 6px;border-bottom:1px solid #e2e8f0;white-space:nowrap;z-index:1}
+          .hist-table td{padding:7px 6px;border-bottom:1px solid #f1f5f9;white-space:nowrap;vertical-align:top}
+          .hist-table td.num{text-align:right;font-variant-numeric:tabular-nums}
+          .hist-table td.reason{white-space:normal;min-width:220px;color:#64748b}
+          .hist-badge{display:inline-block;min-width:34px;text-align:center;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:800;color:#fff}
         </style>
 
         <div class="header">
@@ -2027,6 +2171,8 @@ export default (w: Window) => {
                 <span>손익 <b id="sim-profit">-원</b></span>
                 <span>수수료 <b id="sim-fee-total">-원</b></span>
                 <span style="color:#94a3b8"><span id="sim-trade-count">0건</span> 체결</span>
+                <span style="color:#94a3b8">선택구간 단순보유 <b id="sim-hold-all">-</b></span>
+                <button type="button" id="sim-history-btn" style="margin-left:auto;height:28px;padding:0 12px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;color:#334155;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap">거래내역보기</button>
               </div>
             </div>
             <div style="padding:12px 14px;display:flex;flex-direction:column;gap:12px">
@@ -2040,7 +2186,7 @@ export default (w: Window) => {
           </form>
 
           <div class="card" id="sim-conditions" style="margin-top:12px">
-            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">📋 매매조건</span><span style="margin-left:auto;display:inline-flex;gap:6px;align-items:center"><button type="button" class="head-btn" id="sim-auto-trend-btn">✨ 자동추세구간+</button><button type="button" class="head-btn" id="sim-add-range-btn">구간추가+</button></span></div>
+            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">📋 매매조건</span><span style="margin-left:auto;display:inline-flex;gap:6px;align-items:center"><select id="sim-auto-trend-mode" class="head-btn" style="appearance:auto;padding-right:6px" title="구간 생성 방식"><option value="">✨ 자동추세구간+</option><option value="merged">병합추세구간</option><option value="single">단일추세구간</option><option value="manual">수동구간</option></select></span></div>
             <div style="padding:12px 14px;display:flex;flex-direction:column;gap:8px">
               <div id="sim-range-tabs-row" style="display:none;gap:8px;align-items:center">
                 <div class="range-tabs" id="sim-range-tabs" style="flex:1;min-width:0"></div>
@@ -2051,7 +2197,13 @@ export default (w: Window) => {
           </div>
         </main>
 
-        <button id="sim-share-fab" class="share-fab" title="공유하기">🔗</button>
+          <button id="sim-share-fab" class="share-fab" title="공유하기">🔗</button>
+          <div class="hist-modal" id="sim-history-modal">
+            <div class="hist-box">
+              <div class="hist-head"><span>📒 거래내역</span><span id="sim-history-count" style="font-size:11px;color:#94a3b8;font-weight:700"></span><button type="button" class="hist-close" id="sim-history-close">닫기 ✕</button></div>
+              <div class="hist-body" id="sim-history-body"></div>
+            </div>
+          </div>
       `;
     }
   }
