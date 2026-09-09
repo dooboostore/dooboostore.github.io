@@ -1,4 +1,4 @@
-import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, event, eventDelegate, eventDocument, innerHtml, setAttribute, propertyShadow } from '@dooboostore/simple-web-component';
+import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, event, eventDelegate, eventDocument, innerHtml, setAttribute, propertyShadow, callPropertyShadow } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
 import { inject } from '@dooboostore/simple-boot';
 import { TossService, TossChartTimeframe } from '../../services/toss/TossService';
@@ -7,6 +7,17 @@ import type { Candle } from '@dooboostore/algorithm';
 
 // TrendRange 네임스페이스 re-export (테스트 호환)
 export { TrendRange };
+
+/** 거래내역 1건 (초기보유 시드 + 이후 매매 누적용) */
+export interface TradeEntry {
+  idx: number;
+  date: string;
+  action: 'buy' | 'sell';
+  price: number;
+  shares: number;
+  amount: number;
+  reason: string;
+}
 
 // NOTE: 축소본 — 종목코드/캔들수/타임프레임/종료일시/투자원금/수수료/시작보유주 7개 파라미터만 유지.
 // 전략(MA/실현/최적화/추세/내역) 섹션은 StockTradingSimulationPage.orig.bak 에 보관, 나중에 가져다 씀.
@@ -60,59 +71,34 @@ export default (w: Window) => {
     @propertyShadow('#sim-candle-form', 'value')
     candleValue!: { count: number; timeframe: string; endDate: string; endTime: string; macdFast: number; macdSlow: number; macdSignal: number; rsiPeriod: number; rsiOb: number; rsiOs: number };
 
-    private cfgNum(v: any, fb: number): number {
-      const n = Number(v);
-      return Number.isFinite(n) ? n : fb;
-    }
-    private get initialCapital(): number { return this.cfgNum((this.configValue as any)?.capital, DEFAULT_CAPITAL); }
-    private set initialCapital(v: number) { (this.configValue as any).capital = v; }
-    private get feePercent(): number { return this.cfgNum((this.configValue as any)?.fee, DEFAULT_FEE_PERCENT); }
-    private set feePercent(v: number) { (this.configValue as any).fee = v; }
-    private get initialShares(): number { return this.cfgNum((this.configValue as any)?.shares, 100); }
-    private set initialShares(v: number) { (this.configValue as any).shares = v; }
-    private get initialAvgPrice(): number { return this.cfgNum((this.configValue as any)?.avg, 0); }
-    private set initialAvgPrice(v: number) { (this.configValue as any).avg = v; }
-    private get candleCount(): number { return this.cfgNum((this.candleValue as any)?.count, DEFAULT_CANDLE_COUNT); }
-    private set candleCount(v: number) { (this.candleValue as any).count = v; }
-    private get timeframe(): TossChartTimeframe {
-      const v = (this.candleValue as any)?.timeframe;
-      return /^(min:\d+|day:1|week:1|month:1)$/.test(v ?? '') ? v : DEFAULT_TIMEFRAME;
-    }
-    private set timeframe(v: TossChartTimeframe) { (this.candleValue as any).timeframe = v; }
-    private get endDate(): string {
-      const v = (this.candleValue as any)?.endDate;
-      return /^\d{4}-\d{2}-\d{2}$/.test(v ?? '') ? v : '';
-    }
-    private set endDate(v: string) { (this.candleValue as any).endDate = v; }
-    private get endTime(): string {
-      const v = (this.candleValue as any)?.endTime;
-      return /^\d{2}:\d{2}$/.test(v ?? '') ? v : '';
-    }
-    private set endTime(v: string) { (this.candleValue as any).endTime = v; }
-    private get macdFast(): number { return this.cfgNum((this.candleValue as any)?.macdFast, 12); }
-    private set macdFast(v: number) { (this.candleValue as any).macdFast = v; }
-    private get macdSlow(): number { return this.cfgNum((this.candleValue as any)?.macdSlow, 26); }
-    private set macdSlow(v: number) { (this.candleValue as any).macdSlow = v; }
-    private get macdSignal(): number { return this.cfgNum((this.candleValue as any)?.macdSignal, 9); }
-    private set macdSignal(v: number) { (this.candleValue as any).macdSignal = v; }
-    private get rsiPeriod(): number { return this.cfgNum((this.candleValue as any)?.rsiPeriod, 14); }
-    private set rsiPeriod(v: number) { (this.candleValue as any).rsiPeriod = v; }
-    private get rsiOverbought(): number { return this.cfgNum((this.candleValue as any)?.rsiOb, 70); }
-    private set rsiOverbought(v: number) { (this.candleValue as any).rsiOb = v; }
-    private get rsiOversold(): number { return this.cfgNum((this.candleValue as any)?.rsiOs, 30); }
-    private set rsiOversold(v: number) { (this.candleValue as any).rsiOs = v; }
     /** 시작 자기자본 = 현금 + 보유평가(수량×평단) */
     private startEquity(): number {
-      return this.initialCapital + this.initialShares * this.initialAvgPrice;
+      return this.configValue.capital + this.configValue.shares * this.configValue.avg;
     }
     private refreshInitAvg(): void {
       if (!this.chartCandles.length) return;
       const [zs] = this.simRange();
       const c = this.chartCandles[Math.max(0, Math.min(zs, this.chartCandles.length - 1))];
-      if (c) this.initialAvgPrice = Math.round(c.close);
+      if (c) this.configValue.avg = Math.round(c.close);
     }
     // --- 차트 상태 (파라미터 아님) ---
     private chartCandles: Candle[] = [];
+    // --- 거래내역 (config·candle 변경 시 전체 파기, 차트 로드 시 초기보유로 시드) ---
+    private trades: TradeEntry[] = [];
+    /** 선택 구간 첫 캔들 종가로 초기보유 1건 시드 */
+    private seedInitialTrade(): void {
+      this.trades = [];
+      if (!this.chartCandles.length) return;
+      const [zs] = this.simRange();
+      const c = this.chartCandles[Math.max(0, Math.min(zs, this.chartCandles.length - 1))];
+      const shares = Math.max(0, Math.floor(Number(this.configValue.shares) || 0));
+      if (!c || shares <= 0) return;
+      const price = Math.round(c.close);
+      this.trades = [{
+        idx: 1, date: c.date, action: 'buy', price, shares,
+        amount: Math.round(shares * price), reason: '초기보유주식',
+      }];
+    }
     private range = { start: 0, end: -1 };
     // URL(rs/re)로 복원된 구간 — 다음 로드 1회에만 전체 리셋을 건너뜀
     private rangeFromUrl = false;
@@ -168,20 +154,20 @@ export default (w: Window) => {
     private simUrlParams(): Record<string, string> {
       return {
         code: this.currentCode,
-        cap: String(this.initialCapital),
-        sh: String(this.initialShares),
-        cnt: String(this.candleCount),
-        tf: this.timeframe,
-        ed: this.endDate ? (this.endTime ? `${this.endDate}T${this.endTime}` : this.endDate) : '',
-        fee: String(this.feePercent),
+        cap: String(this.configValue.capital),
+        sh: String(this.configValue.shares),
+        cnt: String(this.candleValue.count),
+        tf: this.candleValue.timeframe,
+        ed: this.candleValue.endDate ? (this.candleValue.endTime ? `${this.candleValue.endDate}T${this.candleValue.endTime}` : this.candleValue.endDate) : '',
+        fee: String(this.configValue.fee),
         rs: String(this.range.start),
         re: String(this.range.end),
-        mf: String(this.macdFast),
-        msl: String(this.macdSlow),
-        msg: String(this.macdSignal),
-        rp: String(this.rsiPeriod),
-        ob: String(this.rsiOverbought),
-        os: String(this.rsiOversold),
+        mf: String(this.candleValue.macdFast),
+        msl: String(this.candleValue.macdSlow),
+        msg: String(this.candleValue.macdSignal),
+        rp: String(this.candleValue.rsiPeriod),
+        ob: String(this.candleValue.rsiOb),
+        os: String(this.candleValue.rsiOs),
       };
     }
 
@@ -230,14 +216,14 @@ export default (w: Window) => {
     private updateChartTitle() {
       const titleEl = this.shadowRoot?.querySelector('#chart-title') as HTMLElement;
       if (!titleEl) return;
-      const tfLabel = this.timeframe.replace('day:', '일봉 ').replace('week:', '주봉 ').replace('month:', '월봉 ').replace('min:', '분봉 ');
+      const tfLabel = this.candleValue.timeframe.replace('day:', '일봉 ').replace('week:', '주봉 ').replace('month:', '월봉 ').replace('min:', '분봉 ');
       const activeLen = this.getActiveCandles().length;
       const rangeSuffix = (this.chartCandles.length && activeLen !== this.chartCandles.length)
         ? ` (구간 ${activeLen}개)`
         : '';
-      const endSuffix = (this.endDate && this.chartCandles.length)
-        ? ` (~${this.chartCandles[this.chartCandles.length - 1]?.date ?? this.endDate})` : '';
-      const countText = `${this.candleCount}개${rangeSuffix}${endSuffix}`;
+      const endSuffix = (this.candleValue.endDate && this.chartCandles.length)
+        ? ` (~${this.chartCandles[this.chartCandles.length - 1]?.date ?? this.candleValue.endDate})` : '';
+      const countText = `${this.candleValue.count}개${rangeSuffix}${endSuffix}`;
       let pricePart = '';
       if (this.lastStockPrice && this.lastStockPrice.close != null) {
         const close = this.lastStockPrice.close;
@@ -269,10 +255,10 @@ export default (w: Window) => {
 
     /** 종료일시 → from ISO (일봉 이하는 날짜 00:00, 분봉은 date+time). '' = 최신 */
     private endDateToFrom(): string {
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(this.endDate)) return '';
-      const isMin = this.timeframe.startsWith('min:');
-      const hm = isMin && /^\d{2}:\d{2}$/.test(this.endTime) ? this.endTime : '00:00';
-      return `${this.endDate}T${hm}:00+09:00`;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(this.candleValue.endDate)) return '';
+      const isMin = this.candleValue.timeframe.startsWith('min:');
+      const hm = isMin && /^\d{2}:\d{2}$/.test(this.candleValue.endTime) ? this.candleValue.endTime : '00:00';
+      return `${this.candleValue.endDate}T${hm}:00+09:00`;
     }
 
     private async loadStock(code: string, name: string) {
@@ -288,10 +274,10 @@ export default (w: Window) => {
 
       try {
         const from = this.endDateToFrom();
-        const chartRes = await this.tossService.getChart(code, { count: this.candleCount, timeframe: this.timeframe, ...(from ? { from } : {}) }).catch(() => null);
+        const chartRes = await this.tossService.getChart(code, { count: this.candleValue.count, timeframe: this.candleValue.timeframe as TossChartTimeframe, ...(from ? { from } : {}) }).catch(() => null);
         const raw = chartRes?.candles ?? [];
-        const isMin = this.timeframe.startsWith('min:');
-        const isDayWeekMonth = this.timeframe === 'day:1' || this.timeframe === 'week:1' || this.timeframe === 'month:1';
+        const isMin = this.candleValue.timeframe.startsWith('min:');
+        const isDayWeekMonth = this.candleValue.timeframe === 'day:1' || this.candleValue.timeframe === 'week:1' || this.candleValue.timeframe === 'month:1';
         const sortedRaw = [...raw].sort((a, b) => a.dt.localeCompare(b.dt));
         const candles = sortedRaw.map(c => ({ date: isMin ? `${c.dt.slice(5, 10)} ${c.dt.slice(11, 16)}` : isDayWeekMonth ? c.dt.slice(2, 10) : c.dt, open: c.open, high: c.high, low: c.low, close: c.close, volume: c.volume }));
         this.chartCandles = candles;
@@ -307,6 +293,7 @@ export default (w: Window) => {
         if (chartEl) {
           chartEl.innerHTML = this.buildChartHtml();
         }
+        this.seedInitialTrade();
         this.refreshRealized();
         this.updateChartTitle();
         try {
@@ -428,8 +415,7 @@ export default (w: Window) => {
       const input = this.shadowRoot?.querySelector('#stock-search') as HTMLInputElement;
       if (input) input.value = name;
       // 종목 변경 시 종료일 초기화 (최신 기준)
-      this.endDate = ''; this.endTime = '';
-      this.candleValue = { endDate: '', endTime: '' } as any;
+      this.candleValue.endDate = ''; this.candleValue.endTime = '';
       this.loadStock(code, name);
     }
 
@@ -437,9 +423,10 @@ export default (w: Window) => {
     onAfterConnected() {
       this.syncRangeSliderBounds();
       this.updateChartTitle();
-      // 자식 폼 바인딩 완료 상태에서 URL 복원 → 로드
+      // 자식 폼 바인딩 완료 상태에서 URL 복원 → 확정값 URL 반영 → 로드
       this.restoreSimFromUrl();
       this.syncRangeSliderBounds();
+      this.syncSimParamsToUrl();
       this.updateChartTitle();
       void this.loadStock(this.currentCode, this.currentName);
     }
@@ -447,6 +434,8 @@ export default (w: Window) => {
     private handleConfigForm() {
       this.syncConfigFromForm();
       this.syncUrlWithoutReload();
+      this.trades = [];
+      this.seedInitialTrade();
       this.refreshRealized();
     }
 
@@ -464,21 +453,21 @@ export default (w: Window) => {
     private syncCandleForm() {
       const v = this.candleValue as any;
       if (!v || typeof v.count !== 'number') return;
-      if (Number.isFinite(v.count)) this.candleCount = Math.max(30, Math.min(1000, Math.floor(v.count)));
-      if (v.timeframe) this.timeframe = v.timeframe as TossChartTimeframe;
-      this.endDate = /^\d{4}-\d{2}-\d{2}$/.test(v.endDate) ? v.endDate : '';
-      this.endTime = /^\d{2}:\d{2}$/.test(v.endTime) ? v.endTime : '';
-      if (this.endDate) {
-        const probe = new Date(this.endDate.length <= 10 && !v.endTime ? `${this.endDate}T23:59:00` : `${this.endDate}T${this.endTime || '00:00'}:00`);
-        if (!Number.isFinite(probe.getTime()) || probe.getTime() > Date.now()) { this.endDate = ''; this.endTime = ''; }
+      if (Number.isFinite(v.count)) this.candleValue.count = Math.max(30, Math.min(1000, Math.floor(v.count)));
+      if (v.timeframe) this.candleValue.timeframe = v.timeframe as TossChartTimeframe;
+      this.candleValue.endDate = /^\d{4}-\d{2}-\d{2}$/.test(v.endDate) ? v.endDate : '';
+      this.candleValue.endTime = /^\d{2}:\d{2}$/.test(v.endTime) ? v.endTime : '';
+      if (this.candleValue.endDate) {
+        const probe = new Date(this.candleValue.endDate.length <= 10 && !v.endTime ? `${this.candleValue.endDate}T23:59:00` : `${this.candleValue.endDate}T${this.candleValue.endTime || '00:00'}:00`);
+        if (!Number.isFinite(probe.getTime()) || probe.getTime() > Date.now()) { this.candleValue.endDate = ''; this.candleValue.endTime = ''; }
       }
-      this.macdFast = Math.max(2, Math.min(100, Math.floor(v.macdFast)));
-      this.macdSlow = Math.max(2, Math.min(200, Math.floor(v.macdSlow)));
-      if (this.macdSlow <= this.macdFast) this.macdSlow = this.macdFast + 1;
-      this.macdSignal = Math.max(2, Math.min(50, Math.floor(v.macdSignal)));
-      this.rsiPeriod = Math.max(2, Math.min(100, Math.floor(v.rsiPeriod)));
-      this.rsiOverbought = Math.max(50, Math.min(100, Math.floor(v.rsiOb)));
-      this.rsiOversold = Math.max(0, Math.min(50, Math.floor(v.rsiOs)));
+      this.candleValue.macdFast = Math.max(2, Math.min(100, Math.floor(v.macdFast)));
+      this.candleValue.macdSlow = Math.max(2, Math.min(200, Math.floor(v.macdSlow)));
+      if (this.candleValue.macdSlow <= this.candleValue.macdFast) this.candleValue.macdSlow = this.candleValue.macdFast + 1;
+      this.candleValue.macdSignal = Math.max(2, Math.min(50, Math.floor(v.macdSignal)));
+      this.candleValue.rsiPeriod = Math.max(2, Math.min(100, Math.floor(v.rsiPeriod)));
+      this.candleValue.rsiOb = Math.max(50, Math.min(100, Math.floor(v.rsiOb)));
+      this.candleValue.rsiOs = Math.max(0, Math.min(50, Math.floor(v.rsiOs)));
     }
 
     @event('#sim-candle-form', 'change')
@@ -499,13 +488,14 @@ export default (w: Window) => {
     }
 
     private handleCandleForm() {
-      const prevCount = this.candleCount;
-      const prevTf = this.timeframe;
-      const prevEnd = `${this.endDate}|${this.endTime}`;
+      const prevCount = this.candleValue.count;
+      const prevTf = this.candleValue.timeframe;
+      const prevEnd = `${this.candleValue.endDate}|${this.candleValue.endTime}`;
       this.syncConfigFromForm();
       this.syncCandleForm();
       this.syncSimParamsToUrl();
-      if (prevCount !== this.candleCount || prevTf !== this.timeframe || prevEnd !== `${this.endDate}|${this.endTime}`) {
+      this.trades = [];
+      if (prevCount !== this.candleValue.count || prevTf !== this.candleValue.timeframe || prevEnd !== `${this.candleValue.endDate}|${this.candleValue.endTime}`) {
         this.loadStock(this.currentCode, this.currentName);
       } else {
         this.syncMasToChart();
@@ -521,6 +511,7 @@ export default (w: Window) => {
       this.range = { start: s, end: e };
       this.updateRangeLabels();
       this.refreshInitAvg();
+      this.seedInitialTrade();
       this.refreshRealized();
       this.syncUrlWithoutReload();
       if (focus) this.focusSimRangeOnChart();
@@ -638,7 +629,7 @@ export default (w: Window) => {
       const liveRect = (start > 0 || end < n - 1) && sDate && eDate
         ? `<rect date-start="${sDate}" date-end="${eDate}" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1" target="all"></rect>`
         : '';
-      return `<volume></volume><macd><fast period="${this.macdFast}"/><slow period="${this.macdSlow}"/><signal period="${this.macdSignal}"/></macd><rsi period="${this.rsiPeriod}"><overbought level="${this.rsiOverbought}"/><oversold level="${this.rsiOversold}"/></rsi><obv></obv>` + ticksHtml + liveRect;
+      return `<volume></volume><macd><fast period="${this.candleValue.macdFast}"/><slow period="${this.candleValue.macdSlow}"/><signal period="${this.candleValue.macdSignal}"/></macd><rsi period="${this.candleValue.rsiPeriod}"><overbought level="${this.candleValue.rsiOb}"/><oversold level="${this.candleValue.rsiOs}"/></rsi><obv></obv>` + ticksHtml + liveRect;
     }
 
     /** 차트 뷰를 선택 구간으로 포커싱 (슬라이더 조작 시에만 호출) */
@@ -690,15 +681,15 @@ export default (w: Window) => {
       const lastCandle = this.chartCandles.length ? this.chartCandles[this.chartCandles.length - 1].close : 0;
       const last = this.lastStockPrice?.close ?? lastCandle;
       if (!last) {
-        set('#sim-shares', `${Math.max(0, Math.floor(this.initialShares)).toLocaleString()}주`);
+        set('#sim-shares', `${Math.max(0, Math.floor(this.configValue.shares)).toLocaleString()}주`);
         set('#sim-eval', '-'); set('#sim-rate', '-');
-        set('#sim-cash', fmt(this.initialCapital));
+        set('#sim-cash', fmt(this.configValue.capital));
         set('#sim-holding', '-'); set('#sim-profit', '-');
         return;
       }
-      const shares = Math.max(0, Math.floor(this.initialShares));
+      const shares = Math.max(0, Math.floor(this.configValue.shares));
       const holding = shares * last;
-      const cash = this.initialCapital;
+      const cash = this.configValue.capital;
       const evalAmt = cash + holding;
       const profit = evalAmt - this.startEquity();
       const rate = this.startEquity() ? (profit / this.startEquity()) * 100 : 0;
@@ -713,9 +704,9 @@ export default (w: Window) => {
     private syncConfigFromForm() {
       const fv = this.configValue as { capital: number; fee: number; shares: number } | undefined;
       if (!fv) return;
-      if (Number.isFinite(fv.capital)) this.initialCapital = Math.max(10000, Math.floor(fv.capital));
-      if (Number.isFinite(fv.shares)) this.initialShares = Math.max(0, Math.floor(fv.shares));
-      if (Number.isFinite(fv.fee) && fv.fee >= 0 && fv.fee <= 1) this.feePercent = fv.fee;
+      if (Number.isFinite(fv.capital)) this.configValue.capital = Math.max(10000, Math.floor(fv.capital));
+      if (Number.isFinite(fv.shares)) this.configValue.shares = Math.max(0, Math.floor(fv.shares));
+      if (Number.isFinite(fv.fee) && fv.fee >= 0 && fv.fee <= 1) this.configValue.fee = fv.fee;
     }
 
     @event('#sim-reload-btn', 'click', { preventDefault: true, stopPropagation: true })
@@ -723,6 +714,12 @@ export default (w: Window) => {
       this.syncConfigFromForm();
       this.syncSimParamsToUrl();
       this.loadStock(this.currentCode, this.currentName);
+    }
+
+    @event('#sim-history-popup', 'history-open')
+    @callPropertyShadow('#sim-history-popup', 'show')
+    onHistoryOpen() {
+      return [this.trades];
     }
 
     @event('#sim-add-condition-btn', 'click')
@@ -860,6 +857,7 @@ export default (w: Window) => {
                 <span>주식평가 <b id="sim-holding">-원</b></span>
                 <span>손익 <b id="sim-profit">-원</b></span>
                 <span style="color:#94a3b8">선택구간 단순보유 <b id="sim-hold-all">-</b></span>
+                <trade-history-popup id="sim-history-popup" style="margin-left:auto"></trade-history-popup>
               </div>
             </div>
             <sim-config-form id="sim-config" capital="100000000" fee="0.015" shares="100"></sim-config-form>
