@@ -58,6 +58,8 @@ export interface TradeRange {
   refMode: 'none' | 'range' | 'ranges' | 'custom'; refRangeId: number; refRangeIds: number[]; refStart: number; refEnd: number;
   riskAversion: number; trendScore: number; buyPctRate: number; sellPctRate: number;
   maResolveMode: ResolveMode; exitResolveMode: ResolveMode;
+  /** 추세 확정 여부 (미확정 꼬리=false → 표시만, 매매 제외) */
+  confirmed: boolean;
   best: TradingSimulator.BestConfig | null; sim: SimResult | null;
   /** 구간 자체 성적 (시작 평가 → 끝 평가) */
   localRate: number; localProfit: number;
@@ -299,8 +301,21 @@ export default (w: Window) => {
     // --- 구간 탭 (매매조건 카드) ---
     // 참고구간: none(없음) / range(다른 구간 참조) / custom(직접 구간 선택) — findBestConfig 입력용(UI만)
     private tradeRanges: TradeRange[] = [];
+    // 리플레이 전용 작업 구간 — 매매조건 카드와 분리. 차트 rect·잠정 판단용으로만 사용
+    private replayRanges: TradeRange[] = [];
     // --- 실거래 체인 결과 (구간 시간순 simulate 연결, 상단 결과카드 표시용) ---
     private live: { eval: number; cash: number; shares: number; profit: number; rate: number; fee: number; count: number; fails: number } | null = null;
+    // 추세자동매매 리플레이 — null이면 비활성. 실행 중 렌더는 체인 대신 아래 스냅샷으로 직접 그림
+    private replay: { running: boolean; S: number; E: number; t: number; gen: number } | null = null;
+    private replayLog: { absIdx: number; trade: SimTrade }[] = [];
+    // 리플레이 실원장 — 틱마다 확정 체결 1건씩만 반영 (실패행 무시)
+    private ledgerCash = 0;
+    private ledgerShares = 0;
+    private ledgerAvg = 0;
+    // 청개구리 — 켜면 탐색 조건의 매수↔매도를 뒤집어 정반대로 매매
+    private contrarian = false;
+    // 리플레이 전용 청개구리 — 추세자동매매 틱에서만 읽음
+    private replayContrarian = false;
     private activeRangeId = 0;
     private nextRangeId = 1;
     /** 구간을 캔들 범위로 클램프 */
@@ -466,6 +481,16 @@ export default (w: Window) => {
     }
 
     private async loadStock(code: string, name: string) {
+      this.stopReplay();
+      // 종목 변경·다시불러오기 → 매매조건·거래내역 완전 초기화
+      this.tradeRanges = [];
+      this.replayRanges = [];
+      this.activeRangeId = 0;
+      this.nextRangeId = 1;
+      this.live = null;
+      this.ledgerCash = 0;
+      this.ledgerShares = 0;
+      this.ledgerAvg = 0;
       this.currentCode = code;
       this.currentName = name;
       try {
@@ -492,6 +517,8 @@ export default (w: Window) => {
         this.syncRangeSliderBounds(!keepRange);
         // 시작 평단 = 선택 구간 첫 캔들 종가
         this.refreshInitAvg();
+        // 원장·저널 초기화 (보유 있으면 초기보유 1건)
+        this.initLedgerAndJournal();
         // 구간 클램프 + 슬라이더 범위 갱신
         this.tradeRanges.forEach(z => {
           this.clampTradeRange(z);
@@ -667,7 +694,8 @@ export default (w: Window) => {
         const refIds = z.refMode === 'ranges' ? z.refRangeIds : z.refMode === 'range' ? [z.refRangeId] : [];
         const refN = refIds.filter(id => this.tradeRanges.some(x => x.id === id)).length;
         const refMark = refN ? ` <span style="color:${isActive ? 'rgba(255,255,255,0.85)' : '#94a3b8'}">↩${refN}</span>` : '';
-        return `<button type="button" class="range-tab${isActive ? ' active' : ''}" data-id="${z.id}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${z.color};margin-right:6px;vertical-align:1px"></span>${esc(z.label)}${rate}${hold}${refMark}</button>`;
+        const unMark = !z.confirmed ? ` <span style="color:${isActive ? 'rgba(255,255,255,0.85)' : '#b45309'}">잠정</span>` : '';
+        return `<button type="button" class="range-tab${isActive ? ' active' : ''}" data-id="${z.id}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${z.color};margin-right:6px;vertical-align:1px"></span>${esc(z.label)}${unMark}${rate}${hold}${refMark}</button>`;
       }).join('');
     }
 
@@ -806,8 +834,8 @@ export default (w: Window) => {
       const sel = e.target as HTMLSelectElement;
       const mode = sel.value;
       sel.value = '';
-      if (mode === 'merged') this.onAutoTrend({ maxSets: 0 });
-      else if (mode === 'single') this.onAutoTrend({ minLen: 1, maxSets: 0 });
+      if (mode === 'merged') this.onAutoTrend();
+      else if (mode === 'single') this.onAutoTrend({ mergeCut: 1 });
       else if (mode === 'manual') this.onAddRange();
     }
 
@@ -830,8 +858,6 @@ export default (w: Window) => {
       const zones = TrendRange.trendRanges(bars, {
         ...config,
         groupBy: r => zoneRegimeOf(r).label,
-        // 라벨과 같은 조건(0.6/0.4)으로 같은 방향끼리만 병합 허용
-        mergeBy: (aRate, _aStr, bRate, _bStr) => (aRate > 0.6 ? 1 : aRate < 0.4 ? -1 : 0) === (bRate > 0.6 ? 1 : bRate < 0.4 ? -1 : 0),
       });
       let upN = 0, dnN = 0, sideN = 0;
       this.tradeRanges = zones.map((g, i) => {
@@ -853,10 +879,12 @@ export default (w: Window) => {
           refRangeId: i > 0 ? 1 : 0, refRangeIds: Array.from({ length: i }, (_, k) => k + 1),
           refStart: 0, refEnd: i === 0 ? ownStart - 1 : Math.max(0, n - 1),
           riskAversion: g.strengthRate > 0.5 ? 0 : g.strengthRate < 0.5 ? 1 : 0.5,
-          trendScore: Math.max(0, Math.min(1, g.scoreRate)),
+          // 잠정 꼬리는 예상 rate를 prior로 (없으면 실측). 상승예측 입력에 그대로 보임
+          trendScore: g.forecastRate ?? Math.max(0, Math.min(1, g.scoreRate)),
           buyPctRate: !dirUp && !dirDn ? 50 : dirUp ? sPct : 100 - sPct,
           sellPctRate: !dirUp && !dirDn ? 50 : dirUp ? 100 - sPct : sPct,
           maResolveMode: 'minFirst', exitResolveMode: 'minFirst',
+          confirmed: g.confirmed,
           best: null, sim: null, localRate: 0, localProfit: 0,
         };
       });
@@ -1075,17 +1103,17 @@ export default (w: Window) => {
       if (!forceRef && !ref.length) return false;
       let winner: { best: TradingSimulator.BestConfig; sim: SimResult } | null = null;
       for (let r = 0; r < 10; r++) {
-        const best = TradingSimulator.findBestConfig(ref, {
+        const found = TradingSimulator.findBestConfig(ref, {
           trend: z.trendScore, riskAversion: z.riskAversion,
           buyPctRate: z.buyPctRate / 100, sellPctRate: z.sellPctRate / 100,
         });
-        if (best) {
-          const sim = TradingSimulator.simulate(own, best, {
+        if (found) {
+          const sim = TradingSimulator.simulate(own, found, {
             initialCapital: this.initialCapital, feePercent: this.feePercent,
             initialShares: this.initialShares, initialAvgPrice: this.initialAvgPrice,
             requireAll: true,
           });
-          if (!winner || sim.rate > winner.sim.rate) winner = { best, sim };
+          if (!winner || sim.rate > winner.sim.rate) winner = { best: found, sim };
         }
         if (r % 5 === 4) {
           onProgress?.(r + 1);
@@ -1093,12 +1121,23 @@ export default (w: Window) => {
         }
       }
       if (winner) {
-        z.best = winner.best;
-        z.sim = winner.sim;
+        let best = winner.best;
+        let sim = winner.sim;
+        // 청개구리: 확정된 승자 조건을 마지막에 뒤집고 뒤집힌 조건으로 다시 시뮬
+        if (this.contrarian) {
+          best = this.flipSignalActions(best);
+          sim = TradingSimulator.simulate(own, best, {
+            initialCapital: this.initialCapital, feePercent: this.feePercent,
+            initialShares: this.initialShares, initialAvgPrice: this.initialAvgPrice,
+            requireAll: true,
+          });
+        }
+        z.best = best;
+        z.sim = sim;
         // 이긴 쪽 모드로 실행 설정 동기화
-        z.maResolveMode = winner.best.maResolveMode;
-        z.exitResolveMode = winner.best.exitResolveMode;
-        console.log('[sim] optimize winner:', z.label, `rate=${winner.sim.rate.toFixed(2)}% profit=${Math.round(winner.sim.profit)}`);
+        z.maResolveMode = best.maResolveMode;
+        z.exitResolveMode = best.exitResolveMode;
+        console.log('[sim] optimize winner:', z.label, `rate=${sim.rate.toFixed(2)}% profit=${Math.round(sim.profit)}`);
         return true;
       }
       console.log('[sim] optimize: no winner', z.label);
@@ -1131,6 +1170,7 @@ export default (w: Window) => {
       const orig = btn.textContent;
       try {
         // 시간순으로 앞에서부터 — 각 구간은 앞선 모든 구간의 캔들을 누적 참고로 탐색
+        // 미확정 꼬리는 훈련·실행 모두 제외
         const ordered = [...this.tradeRanges].sort((a, b) => a.start - b.start);
         let prefix: SimCandle[] = [];
         for (let i = 0; i < ordered.length; i++) {
@@ -1146,6 +1186,239 @@ export default (w: Window) => {
       }
     }
 
+    /** 리플레이 버튼 표시 (대기/재생중 n/N/일시정지 n/N) */
+    private paintReplayBtn() {
+      const btn = this.shadowRoot?.querySelector('#sim-replay-btn') as HTMLElement;
+      if (!btn || !btn.isConnected) return;
+      const rp = this.replay;
+      if (!rp || !rp.running) {
+        const tag = rp ? ` ${rp.t - rp.S + 1}/${rp.E - rp.S + 1}` : '';
+        btn.textContent = `▶ 추세자동매매${tag}`;
+      } else {
+        btn.textContent = `⏸ ${rp.t - rp.S + 1}/${rp.E - rp.S + 1}`;
+      }
+    }
+
+    @event('#sim-contrarian', 'change')
+    onContrarianChange() {
+      const el = this.shadowRoot?.querySelector('#sim-contrarian') as HTMLInputElement;
+      if (!el) return;
+      this.contrarian = !!el.checked;
+      // 현재 설정된 조건을 뒤집어 다시 매매 (뒤집기는 involution이라 토글 복원 시 원상복귀)
+      for (const z of this.tradeRanges) {
+        if (z.best) z.best = this.flipSignalActions(z.best);
+      }
+      this.refreshRealized();
+    }
+
+    @event('#sim-replay-contrarian', 'change')
+    onReplayContrarianChange() {
+      const el = this.shadowRoot?.querySelector('#sim-replay-contrarian') as HTMLInputElement;
+      if (!el) return;
+      // 리플레이 전용 — 실행 중인 루프가 다음 틱부터 읽음. 저장된 조건은 건드리지 않음
+      this.replayContrarian = !!el.checked;
+    }
+
+    /** 청개구리: MA 신호의 매수↔매도 뒤집기 (청산 조건·신호 종류는 그대로) */
+    private flipSignalActions(best: TradingSimulator.BestConfig): TradingSimulator.BestConfig {
+      const out = JSON.parse(JSON.stringify(best)) as TradingSimulator.BestConfig;
+      for (const m of (out as any).maConfigs ?? []) {
+        for (const s of (m?.pyramiding?.signals ?? [])) {
+          if (s.action === 'buy') s.action = 'sell';
+          else if (s.action === 'sell') s.action = 'buy';
+        }
+      }
+      return out;
+    }
+
+    @event('#sim-replay-btn', 'click')
+    onReplayClick() {
+      const rp = this.replay;
+      if (rp?.running) { rp.running = false; this.paintReplayBtn(); return; } // 일시정지
+      if (rp && !rp.running) {
+        if (rp.t >= rp.E) { this.startReplay(); return; } // 완료됨 → 처음부터 다시
+        rp.running = true; this.paintReplayBtn(); void this.replayLoop(); return; // 재개
+      }
+      this.startReplay();
+    }
+
+    /** 원장·저널 초기화 — 초기 보유금액·보유주·평단(선택 구간 첫 종가) 셋팅.
+     *  보유주가 있으면 초기보유 1건을 내역 맨 앞에 (사유: 초기보유).
+     *  페이지 진입·종목 로드·리플레이 시작 시 호출. refreshInitAvg() 선행 필요. */
+    private initLedgerAndJournal() {
+      // 실원장 초기화 — 이후 틱마다 확정 체결 1건씩만 반영
+      this.ledgerCash = this.initialCapital;
+      this.ledgerShares = Math.max(0, Math.floor(this.initialShares));
+      this.ledgerAvg = this.initialAvgPrice;
+      this.replayLog = [];
+      // 시작 보유가 있으면 초기보유 1건을 내역 맨 앞에 (사유: 초기보유)
+      if (this.ledgerShares > 0 && this.chartCandles.length) {
+        const [S] = this.simRange();
+        const c = this.chartCandles[Math.max(0, Math.min(S, this.chartCandles.length - 1))];
+        const amt = Math.round(this.ledgerShares * this.ledgerAvg);
+        this.replayLog.push({ absIdx: S, trade: {
+          idx: 1, date: c.date, price: this.ledgerAvg, action: 'buy', barIdx: S,
+          reason: `초기보유 ${this.ledgerShares.toLocaleString()}주 @ ${Math.round(this.ledgerAvg).toLocaleString()}원`,
+          maPeriod: 0, percent: 100, sharesDelta: this.ledgerShares, amount: amt, fee: 0,
+          cashAfter: this.ledgerCash, sharesAfter: this.ledgerShares, profitRate: null,
+          avgPrice: this.ledgerAvg, holdingValue: amt, conds: [], condDetail: [],
+        }});
+      }
+    }
+
+    /** 리플레이 시작 — 설정·내역 초기화 후 선택 구간 처음부터 (구간은 병합자동으로 매 틱 재생성) */
+    private startReplay() {
+      const [S, E] = this.simRange();
+      if (!this.chartCandles.length || E <= S) return;
+      this.replayRanges = [];
+      this.live = null;
+      this.refreshInitAvg(); // 시작 평단 = 선택 구간 첫 캔들 종가
+      this.initLedgerAndJournal();
+      this.replay = { running: true, S, E, t: S - 1, gen: 0 };
+      this.renderRangeTabs();
+      this.renderRangeBody();
+      this.updateResultDisplay();
+      const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
+      if (chartEl) chartEl.innerHTML = this.buildChartHtml();
+      this.paintReplayBtn();
+      void this.replayLoop();
+    }
+
+    private async replayLoop() {
+      const rp = this.replay;
+      if (!rp) return;
+      const gen = (rp.gen = (rp.gen ?? 0) + 1);
+      while (rp.running && rp.t < rp.E && this.isConnected && this.replay === rp && rp.gen === gen) {
+        rp.t += 1;
+        this.paintReplayBtn();
+        await this.replayTick(rp.t);
+        if (!rp.running) break;
+        this.renderReplayTick();
+        await new Promise(r => setTimeout(r, 30));
+      }
+      if (this.replay === rp && rp.gen === gen) {
+        rp.running = false;
+        this.paintReplayBtn();
+      }
+    }
+
+    /** 리플레이 1틱 — t까지 히스토리로 병합자동 구간+잠정 예상 조건 탐색 후 당일봉만 집행·기록.
+     *  카드 P&L은 당일 조건의 구간 전체(prefix) 백테스트 기준, 저널·마커는 실제 집행분만. */
+    private async replayTick(t: number) {
+      const rp = this.replay;
+      if (!rp) return;
+      const S = rp.S;
+      const hist = this.chartCandles.slice(0, t + 1);
+      const closes = hist.map(c => c.close), vols = hist.map(c => c.volume);
+      const macd = computeMacdSeries(closes, 12, 26, 9);
+      const rsi = computeRsiSeries(closes, 14);
+      const obv = computeObvSeries(closes, vols);
+      const bars: TrendRange.TrendBar[] = [];
+      for (let i = S; i <= t; i++) {
+        const c = hist[i];
+        bars.push({ macd: macd.macd[i], rsi: rsi[i], obv: obv[i], open: c.open, high: c.high, low: c.low, close: c.close });
+      }
+      const zones = TrendRange.trendRanges(bars, { groupBy: r => zoneRegimeOf(r).label });
+      let upN = 0, dnN = 0, sideN = 0;
+      this.replayRanges = zones.map((g, i) => {
+        const regime = zoneRegimeOf(g.scoreRate);
+        const no = regime.label === '상승' ? ++upN : regime.label === '하락' ? ++dnN : ++sideN;
+        // 강도 배분: 방향 쪽에 strength%, 반대쪽에 나머지. 중립(0.5)은 50/50. (전체최적화와 동일)
+        const sPct = Math.max(0, Math.min(100, Math.round(g.strengthRate * 100)));
+        const dirUp = g.scoreRate > 0.5, dirDn = g.scoreRate < 0.5;
+        return {
+          id: i + 1,
+          uuid: g.uuid,
+          label: `${regime.label} ${no}`,
+          color: regime.color,
+          start: Math.max(S, Math.min(S + g.startIndex, t)),
+          end: Math.max(S, Math.min(S + g.endIndex, t)),
+          refMode: 'none' as const, refRangeId: 0, refRangeIds: [] as number[], refStart: 0, refEnd: 0,
+          riskAversion: g.strengthRate > 0.5 ? 0 : g.strengthRate < 0.5 ? 1 : 0.5,
+          trendScore: g.forecastRate ?? Math.max(0, Math.min(1, g.scoreRate)),
+          buyPctRate: !dirUp && !dirDn ? 50 : dirUp ? sPct : 100 - sPct,
+          sellPctRate: !dirUp && !dirDn ? 50 : dirUp ? 100 - sPct : sPct,
+          maResolveMode: 'minFirst' as ResolveMode, exitResolveMode: 'minFirst' as ResolveMode,
+          confirmed: g.confirmed,
+          best: null, sim: null, localRate: 0, localProfit: 0,
+        };
+      });
+      const prov = this.replayRanges[this.replayRanges.length - 1];
+      if (!prov) return;
+      // 잠정 예상으로 당일 조건 탐색 (선택 구간만 학습 — 실행 슬라이스와 일치, 미래 없음).
+      // 5라운드 돌려 최고 수익률로 승자 선정 후, 마지막봉 체결 여부만 본다
+      const train = this.chartCandles.slice(S, t + 1);
+      const own = this.chartCandles.slice(S, t + 1);
+      let winner: { best: TradingSimulator.BestConfig; sim: SimResult } | null = null;
+      for (let r = 0; r < 5; r++) {
+        const best = TradingSimulator.findBestConfig(train as SimCandle[], {
+          trend: prov.trendScore, riskAversion: prov.riskAversion,
+          buyPctRate: prov.buyPctRate / 100, sellPctRate: prov.sellPctRate / 100, trials: 1,
+        });
+        if (!best) continue;
+        // 실제 집행 내역 그대로 이어붙임 — in-engine trades 순회와 동일 시맨틱.
+        // exit/fail 포함: 연속매매 카운트가 끊기는 지점까지 일치. 저널은 t 이전봉만이라 당일 누수 없음
+        const prevActions: TradeAction[] = this.replayLog.map(e => e.trade.action);
+        const sim = TradingSimulator.simulate(own as SimCandle[], best, {
+          initialCapital: this.ledgerCash, feePercent: this.feePercent,
+          initialShares: this.ledgerShares, initialAvgPrice: this.ledgerAvg,
+          requireAll: true, prevActions,
+        });
+        if (!winner || sim.rate > winner.sim.rate) winner = { best, sim };
+      }
+      if (!winner) return;
+      let { best, sim } = winner;
+      // 청개구리: 확정된 승자 조건을 마지막에 뒤집고 뒤집힌 조건으로 다시 시뮬
+      if (this.replayContrarian) {
+        best = this.flipSignalActions(best);
+        const prevActions: TradeAction[] = this.replayLog.map(e => e.trade.action);
+        sim = TradingSimulator.simulate(own as SimCandle[], best, {
+          initialCapital: this.ledgerCash, feePercent: this.feePercent,
+          initialShares: this.ledgerShares, initialAvgPrice: this.ledgerAvg,
+          requireAll: true, prevActions,
+        });
+      }
+      // 잠정 구간 조건은 UI에 셋팅하지 않음 — 다음 틱에 바뀌는 잠정이라 표시가 오히려 혼란 (체인 미실행 — 리플레이는 아래 prefix 백테스트로 그림)
+      // 맨마지막 거래내역이 당일봉 체결이면 실원장 기준으로 정산해 1건 적용, 아니면 패스 (0건).
+      // sim-world 값이 아닌 원장 값으로 보유주식·현금·수수료를 다시 계산 (9주→357주 방지)
+      const localT = t - S;
+      const last = sim.trades.length ? sim.trades[sim.trades.length - 1] : null;
+      if (last && last.barIdx === localT &&
+        (last.action === 'buy' || last.action === 'sell' || last.action === 'exit')) {
+        const settled = TradingSimulator.settleTradeToLedger(
+          { cash: this.ledgerCash, shares: this.ledgerShares, avgPrice: this.ledgerAvg },
+          last, this.feePercent, this.replayLog.length + 1);
+        this.ledgerCash = settled.state.cash;
+        this.ledgerShares = settled.state.shares;
+        this.ledgerAvg = settled.state.avgPrice;
+        this.replayLog.push({ absIdx: t, trade: { ...settled.trade, barIdx: t, reason: `[${prov.label}] ${settled.trade.reason}` } });
+      }
+      // 카드 P&L은 실원장 기준 (저널 누적과 동일 world)
+      const startEq = this.startEquity();
+      const lastClose = this.chartCandles[t].close;
+      const evalAmt = this.ledgerCash + this.ledgerShares * lastClose;
+      const profit = evalAmt - startEq;
+      let fee = 0, count = 0, fails = 0;
+      for (const e of this.replayLog) {
+        fee += e.trade.fee || 0;
+        if (e.trade.action === 'buy' || e.trade.action === 'sell' || e.trade.action === 'exit') count++;
+        else if (e.trade.action === 'buy-fail' || e.trade.action === 'sell-fail') fails++;
+      }
+      this.live = {
+        eval: evalAmt, cash: this.ledgerCash, shares: this.ledgerShares, profit,
+        rate: startEq ? (profit / startEq) * 100 : 0, fee, count, fails,
+      };
+    }
+
+    /** 리플레이 틱 렌더 — 체인 없이 스냅샷 직접 그림 */
+    private renderReplayTick() {
+      const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
+      if (chartEl) chartEl.innerHTML = this.buildChartHtml();
+      this.updateResultDisplay();
+      this.renderRangeTabs();
+      this.renderRangeBody();
+    }
+
     /** 수동 구간 추가 (select 수동구간에서 호출) */
     onAddRange() {
       const id = this.nextRangeId++;
@@ -1157,6 +1430,7 @@ export default (w: Window) => {
         refMode: 'none', refRangeId: 0, refRangeIds: [], refStart: 0, refEnd: Math.max(0, n - 1),
         riskAversion: 0.5, trendScore: 0.5, buyPctRate: 100, sellPctRate: 100,
         maResolveMode: 'minFirst', exitResolveMode: 'minFirst',
+        confirmed: true,
         best: null, sim: null, localRate: 0, localProfit: 0,
       });
       this.activeRangeId = id;
@@ -1459,18 +1733,38 @@ export default (w: Window) => {
       }, 0);
     }
 
-    @event('#sim-config', 'change')
-    onConfigFormChange() {
+    /** 원장 기준 4종 스냅샷 (원금/수수료/보유주/평단) */
+    private basisSnapshot(): [number, number, number, number] {
+      return [this.initialCapital, this.feePercent, this.initialShares, this.initialAvgPrice];
+    }
+
+    /** 원장 기준 변경 시 거래 상태 전체 초기화.
+     *  저널·체결·원장은 전부 옛 기준 산출물이므로 파기. 조건(best)은 유지. */
+    private resetTradingState() {
+      this.stopReplay(); // 루프 정지 + 저널 비움 (이미 멈춰있으면 no-op)
+      this.live = null;
+      this.ledgerCash = 0;
+      this.ledgerShares = 0;
+      this.ledgerAvg = 0;
+      for (const z of this.tradeRanges) { z.sim = null; z.localRate = 0; z.localProfit = 0; }
+    }
+
+    private handleConfigForm() {
+      const before = this.basisSnapshot();
       this.syncConfigFromForm();
       this.syncUrlWithoutReload();
+      if (this.basisSnapshot().some((v, i) => v !== before[i])) this.resetTradingState();
       this.refreshRealized();
+    }
+
+    @event('#sim-config', 'change')
+    onConfigFormChange() {
+      this.handleConfigForm();
     }
 
     @event('#sim-config', 'input')
     onConfigFormInput() {
-      this.syncConfigFromForm();
-      this.syncUrlWithoutReload();
-      this.refreshRealized();
+      this.handleConfigForm();
     }
 
     /** 종료일시 → from ISO (일봉 이하는 날짜 00:00, 분봉은 date+time). '' = 최신 */
@@ -1544,8 +1838,10 @@ export default (w: Window) => {
       }).join('');
     }
 
-    /** 전 구간 매매내역 병합 — 사유 앞에 구간 라벨링, 절대 인덱스순 정렬 */
+    /** 전 구간 매매내역 병합 — 사유 앞에 구간 라벨링, 절대 인덱스순 정렬.
+     *  리플레이 중이면 기록된 리플레이 저널 그대로 (시간순 append라 정렬済) */
     private mergedTrades(): { absIdx: number; trade: SimTrade }[] {
+      if (this.replay) return this.replayLog;
       const out: { absIdx: number; trade: SimTrade }[] = [];
       for (const z of this.tradeRanges) {
         if (!z.sim) continue;
@@ -1565,8 +1861,20 @@ export default (w: Window) => {
       if (!body) return;
       const rows = this.mergedTrades();
       if (count) count.textContent = rows.length ? `총 ${rows.length}건` : '';
+      const fmt0 = (n: number) => Math.round(n).toLocaleString();
+      // 선택구간 첫~끝 종가 단순보유 (팝업 상단 비교용 — 내역 없어도 표시)
+      let holdHeader = '';
+      {
+        const [hzs, hze] = this.simRange();
+        const f = this.chartCandles[hzs]?.close, l = this.chartCandles[hze]?.close;
+        if (f && l) {
+          const r = ((l - f) / f) * 100;
+          const hc = r > 0 ? '#dc2626' : r < 0 ? '#2563eb' : '#64748b';
+          holdHeader = `<div style="padding:8px 14px;font-size:11px;color:#64748b;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid #f1f5f9;background:#fffbeb"><span>단순보유 <b style="color:${hc}">${r >= 0 ? '+' : ''}${r.toFixed(2)}%</b> (${fmt0(f)}원 → ${fmt0(l)}원)</span><span style="margin-left:auto;color:#94a3b8">선택구간 첫~끝 종가 기준</span></div>`;
+        }
+      }
       if (!rows.length) {
-        body.innerHTML = `<div style="padding:24px;text-align:center;color:#94a3b8;font-size:12px">거래내역이 없습니다. 구간 최적화를 실행하세요.</div>`;
+        body.innerHTML = `${holdHeader}<div style="padding:24px;text-align:center;color:#94a3b8;font-size:12px">거래내역이 없습니다. 구간 최적화를 실행하세요.</div>`;
         return;
       }
       const fmt = (n: number) => Math.round(n).toLocaleString();
@@ -1577,8 +1885,24 @@ export default (w: Window) => {
         if (t.action === 'exit') return [t.label || '청산', '#8b5cf6'];
         return ['실패', '#94a3b8'];
       };
-      body.innerHTML = `<table class="hist-table">
-        <thead><tr><th>#</th><th>날짜</th><th>구간</th><th>구분</th><th>시세</th><th>수량</th><th>금액</th><th>수수료</th><th>수익률</th><th>보유주식</th><th>평가금액</th><th>평균가격</th><th>현금</th><th>조건상세</th><th>사유</th></tr></thead>
+      const doneRows = rows.filter(({ trade: t }) => t.action === 'buy' || t.action === 'sell' || t.action === 'exit');
+      const failRows = rows.filter(({ trade: t }) => t.action === 'buy-fail' || t.action === 'sell-fail').length;
+      const buyCnt = rows.filter(({ trade: t }) => t.action === 'buy').length;
+      const sellCnt = rows.filter(({ trade: t }) => t.action === 'sell').length;
+      const exitCnt = rows.filter(({ trade: t }) => t.action === 'exit').length;
+      const totalFee = rows.reduce((s, { trade: t }) => s + (t.fee || 0), 0);
+      const liveEval = this.live
+        ? `<span>최종 평가 <b>${fmt0(this.live.eval)}원</b> <span style="color:#94a3b8">(보유 ${Math.floor(this.live.shares).toLocaleString()}주 ${fmt0(this.live.eval - this.live.cash)}원 + 현금 ${fmt0(this.live.cash)}원)</span></span>`
+        : `<span>최종 평가 <b>-</b></span>`;
+      const summaryHtml = `<div class="hist-summary">`
+        + `<div class="hist-stat"><div class="k">총 체결</div><div class="v">${doneRows.length}건${failRows ? `<div class="s">실패 ${failRows}건</div>` : ''}</div></div>`
+        + `<div class="hist-stat"><div class="k">매수</div><div class="v" style="color:#2563eb">${buyCnt}건</div></div>`
+        + `<div class="hist-stat"><div class="k">매도</div><div class="v" style="color:#ef4444">${sellCnt}건</div>${exitCnt ? `<div class="s">(청산 ${exitCnt}건)</div>` : ''}</div>`
+        + `<div class="hist-stat"><div class="k">수수료</div><div class="v" style="font-size:12px">${fmt0(totalFee)}원</div></div>`
+        + `</div><div class="hist-sub">${liveEval}</div>`;
+      const startEq = this.startEquity();
+      body.innerHTML = `${holdHeader}${summaryHtml}<table class="hist-table">
+        <thead><tr class="hgroup"><th colspan="10">매매 시점</th><th colspan="6" class="hold">이후 보유상태</th></tr><tr><th>#</th><th>날짜</th><th>구간</th><th>구분</th><th>시세</th><th>수량</th><th>금액</th><th>수수료</th><th>조건상세</th><th>사유</th><th class="hold">수익률</th><th class="hold">보유주식</th><th class="hold">평균가격</th><th class="hold">보유주식평가금액</th><th class="hold">현금</th><th class="hold">최종평가금액</th></tr></thead>
         <tbody>${rows.map(({ trade: t }, i) => {
           const [bt, bc] = badge(t);
           const m = /^\[(.+?)\]/.exec(t.reason);
@@ -1588,7 +1912,10 @@ export default (w: Window) => {
           const prStr = pr == null ? '-' : `${pr >= 0 ? '+' : ''}${pr.toFixed(2)}%`;
           const prColor = pr == null ? '#94a3b8' : pr > 0 ? '#dc2626' : pr < 0 ? '#2563eb' : '#64748b';
           const conds = [...(t.conds ?? []), ...(t.condDetail ?? [])].filter(Boolean);
-          return `<tr><td class="num">${i + 1}</td><td>${esc(this.chartCandles[Math.max(0, Math.min(t.barIdx, this.chartCandles.length - 1))]?.date ?? '')}</td><td>${esc(range)}</td><td><span class="hist-badge" style="background:${bc}">${bt}</span></td><td class="num">${fmt(t.price)}원</td><td class="num">${Math.floor(t.sharesDelta).toLocaleString()}주</td><td class="num">${fmt(t.amount)}원</td><td class="num">${fmt(t.fee || 0)}원</td><td class="num" style="color:${prColor};font-weight:700">${prStr}</td><td class="num">${Math.floor(t.sharesAfter).toLocaleString()}주</td><td class="num">${fmt(t.holdingValue)}원</td><td class="num">${t.sharesAfter > 0 ? fmt(t.avgPrice) + '원' : '-'}</td><td class="num">${fmt(t.cashAfter)}원</td><td class="reason">${conds.map(c => esc(c)).join('<br>') || '-'}</td><td class="reason">${esc(reason)}</td></tr>`;
+          const finalEval = t.cashAfter + t.holdingValue;
+          const finalRate = startEq ? ((finalEval - startEq) / startEq) * 100 : 0;
+          const finalColor = finalRate > 0 ? '#dc2626' : finalRate < 0 ? '#2563eb' : '#64748b';
+          return `<tr class="hrow"><td class="num">${i + 1}</td><td>${esc(this.chartCandles[Math.max(0, Math.min(t.barIdx, this.chartCandles.length - 1))]?.date ?? '')}</td><td>${esc(range)}</td><td><span class="hist-badge" style="background:${bc}">${bt}</span></td><td class="num">${fmt(t.price)}원</td><td class="num">${Math.floor(t.sharesDelta).toLocaleString()}주</td><td class="num">${fmt(t.amount)}원</td><td class="num">${fmt(t.fee || 0)}원</td><td class="reason">${conds.map(c => esc(c)).join('<br>') || '-'}</td><td class="reason">${esc(reason)}</td><td class="num hold" style="color:${prColor};font-weight:700">${prStr}</td><td class="num hold">${Math.floor(t.sharesAfter).toLocaleString()}주</td><td class="num hold">${t.sharesAfter > 0 ? fmt(t.avgPrice) + '원' : '-'}</td><td class="num hold">${fmt(t.holdingValue)}원</td><td class="num hold">${fmt(t.cashAfter)}원</td><td class="num hold" style="color:${finalColor};font-weight:700">${fmt(finalEval)}원 (${finalRate >= 0 ? '+' : ''}${finalRate.toFixed(2)}%)</td></tr>`;
         }).join('')}</tbody></table>`;
     }
 
@@ -1669,10 +1996,12 @@ export default (w: Window) => {
       const sEl = this.shadowRoot?.querySelector('#sim-range-start') as HTMLElement | null;
       const eEl = this.shadowRoot?.querySelector('#sim-range-end') as HTMLElement | null;
       const cEl = this.shadowRoot?.querySelector('#sim-range-count') as HTMLElement | null;
+      const hEl = this.shadowRoot?.querySelector('#sim-range-hold') as HTMLElement | null;
       if (!n) {
         if (sEl) sEl.textContent = '-';
         if (eEl) eEl.textContent = '-';
         if (cEl) cEl.textContent = '0개';
+        if (hEl) hEl.textContent = '-';
         return;
       }
       const end = this.rangeEnd < 0 ? n - 1 : Math.min(this.rangeEnd, n - 1);
@@ -1680,6 +2009,16 @@ export default (w: Window) => {
       if (sEl) sEl.textContent = this.chartCandles[start]?.date ?? '-';
       if (eEl) eEl.textContent = this.chartCandles[end]?.date ?? '-';
       if (cEl) cEl.textContent = `${end - start + 1}개`;
+      if (hEl) {
+        const f = this.chartCandles[start]?.close, l = this.chartCandles[end]?.close;
+        if (f && l) {
+          const r = ((l - f) / f) * 100;
+          hEl.textContent = `${r >= 0 ? '+' : ''}${r.toFixed(2)}%`;
+          hEl.style.color = r > 0 ? '#dc2626' : r < 0 ? '#2563eb' : '#94a3b8';
+        } else {
+          hEl.textContent = '-';
+        }
+      }
       const sliderEl = this.shadowRoot?.querySelector('#sim-range') as any;
       if (sliderEl && typeof sliderEl.setValues === 'function') {
         const cur = sliderEl.value;
@@ -1702,13 +2041,17 @@ export default (w: Window) => {
         ? `<rect date-start="${sDate}" date-end="${eDate}" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1" target="all"></rect>`
         : '';
       // 구간별 선택 구간 rect (구간 색상 + 라벨)
+      // 리플레이 중에는 작업 구간(replayRanges), 평소에는 사용자 구간(tradeRanges)
       const escAttr = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      const rangeRects = this.tradeRanges.map(z => {
+      const rectSrc = this.replay ? this.replayRanges : this.tradeRanges;
+      const rangeRects = rectSrc.map(z => {
         const zs = Math.max(0, Math.min(z.start, n - 1));
         const ze = Math.max(zs, Math.min(z.end, n - 1));
         const zsDate = this.chartCandles[zs]?.date ?? '';
         const zeDate = this.chartCandles[ze]?.date ?? '';
         if (!zsDate || !zeDate) return '';
+        const un = !z.confirmed;
+        if (un) return `<rect date-start="${zsDate}" date-end="${zeDate}" fill="#94a3b80D" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5,5" label="${escAttr(z.label)} (잠정)" color="#64748b" target="all"></rect>`;
         return `<rect date-start="${zsDate}" date-end="${zeDate}" fill="${z.color}1F" stroke="${z.color}" stroke-width="1" label="${escAttr(z.label)}" color="${z.color}" target="all"></rect>`;
       }).join('');
       return `<volume></volume><macd></macd><rsi></rsi><obv></obv>` + ticksHtml + liveRect + rangeRects;
@@ -1731,8 +2074,18 @@ export default (w: Window) => {
       this.updateResultDisplay();
     }
 
+    /** 리플레이 정지 (표시 스냅샷은 유지, 설정 변경 시 일반 뷰로 복귀) */
+    private stopReplay() {
+      if (!this.replay) return;
+      this.replay.running = false;
+      this.replay = null;
+      this.replayLog = [];
+      this.paintReplayBtn();
+    }
+
     /** 전 구간 시간순 실거래 체인: best 있으면 실행, 없으면 보유 통과. 상단 카드+탭+스트립+차트 갱신 */
     private refreshRealized(skipBody = false) {
+      this.stopReplay();
       const n = this.chartCandles.length;
       const ranges = [...this.tradeRanges].sort((a, b) => a.start - b.start);
       if (!n || !ranges.length) {
@@ -1773,7 +2126,7 @@ export default (w: Window) => {
         fee += sim.trades.reduce((s, t) => s + (t.fee || 0), 0);
         for (const t of sim.trades) {
           if (t.action === 'buy-fail' || t.action === 'sell-fail') fails++;
-          else count++;
+          else if (t.action === 'buy' || t.action === 'sell' || t.action === 'exit') count++;
         }
       }
       const evalAmt = cash + shares * this.chartCandles[n - 1].close;
@@ -2101,13 +2454,26 @@ export default (w: Window) => {
           .hist-box{background:#fff;border-radius:12px;max-width:860px;width:100%;max-height:82vh;display:flex;flex-direction:column;overflow:hidden}
           .hist-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid #f1f5f9;font-size:13px;font-weight:800;color:#1e293b}
           .hist-close{margin-left:auto;height:28px;padding:0 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#64748b;font-size:11px;font-weight:800;cursor:pointer}
-          .hist-body{overflow-y:auto;padding:0 0 12px}
-          .hist-table{width:100%;border-collapse:collapse;font-size:11px;color:#334155}
+          .hist-body{overflow:auto;padding:0 0 12px}
+          .hist-table{width:100%;min-width:1120px;border-collapse:collapse;font-size:11px;color:#334155}
           .hist-table th{position:sticky;top:0;background:#f8fafc;color:#64748b;font-size:10px;padding:8px 6px;border-bottom:1px solid #e2e8f0;white-space:nowrap;z-index:1}
+          .hist-table .hgroup th{position:static;padding:6px 8px;text-align:center;font-size:11px;font-weight:800;color:#334155;background:#f1f5f9;border-bottom:1px solid #e2e8f0}
+          .hist-table .hgroup th.hold{color:#5b21b6;background:#ede9fe}
+          .hist-table th.hold,.hist-table td.hold{background:#faf9ff}
           .hist-table td{padding:7px 6px;border-bottom:1px solid #f1f5f9;white-space:nowrap;vertical-align:top}
           .hist-table td.num{text-align:right;font-variant-numeric:tabular-nums}
-          .hist-table td.reason{white-space:normal;min-width:220px;color:#64748b}
+          .hist-table td.reason{white-space:normal;min-width:220px;max-width:320px;color:#475569;font-size:11px;line-height:1.6}
+          .hist-table tr.hrow:hover td{background:#f8fafc}
+          .hist-table tr.hrow:hover td.hold{background:#f5f3ff}
           .hist-badge{display:inline-block;min-width:34px;text-align:center;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:800;color:#fff}
+          .hist-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px 14px;background:#f8fafc;border-bottom:1px solid #f1f5f9}
+          .hist-stat{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:7px 4px;text-align:center}
+          .hist-stat .k{font-size:10px;font-weight:700;color:#94a3b8}
+          .hist-stat .v{margin-top:2px;font-size:14px;font-weight:800;color:#1e293b}
+          .hist-stat .s{font-size:10px;font-weight:700;color:#7c3aed}
+          .hist-sub{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 14px;font-size:11px;color:#64748b;border-bottom:1px solid #f1f5f9;background:#fff}
+          .hist-sub b{color:#1e293b}
+          @media(max-width:600px){.hist-summary{grid-template-columns:repeat(2,1fr)}}
         </style>
 
         <div class="header">
@@ -2146,7 +2512,12 @@ export default (w: Window) => {
               <div style="display: flex; flex-direction: column;gap:4px;min-width:70px;align-items:flex-end">
                 <span id="sim-range-end" style="font-weight:700;white-space:nowrap;text-align:right;font-size:10px;line-height:14px">-</span>
                 <span id="sim-range-count" style="font-weight:800;color:#7c3aed;white-space:nowrap;font-size:10px;line-height:14px">-</span>
+                <span id="sim-range-hold" title="선택구간 첫~끝 종가 단순보유" style="font-weight:800;color:#94a3b8;white-space:nowrap;font-size:10px;line-height:14px">-</span>
               </div>
+            </div>
+            <div id="sim-replay-row" style="display:flex;align-items:center;gap:8px;padding:6px 14px 10px;background:#fff;border-top:1px solid #f1f5f9;font-size:11px;color:#64748b">
+              <label style="display:inline-flex;align-items:center;gap:4px;font-weight:700;cursor:pointer;white-space:nowrap" title="반대로 매매: 탐색 조건의 매수↔매도를 뒤집음"><input type="checkbox" id="sim-replay-contrarian" style="width:14px;height:14px;accent-color:#8b5cf6" />🐸 청개구리</label>
+              <button type="button" id="sim-replay-btn" title="추세자동매매 재생" style="margin-left:auto;font-size:11px;font-weight:800;color:#d97706;border:1px solid #f59e0b;background:#fff;border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;line-height:16px">▶ 추세자동매매</button>
             </div>
             <form id="sim-candle-form" style="display:flex;gap:8px;align-items:end;flex-wrap:wrap;padding:8px 14px;background:#fffbeb;border-top:1px solid #fef3c7" onsubmit="return false">
               <div class="config-field" style="flex:1;min-width:90px"><label style="font-size:11px;font-weight:700;color:#64748b">캔들 수</label><input id="sim-candle-count" type="number" min="30" max="1000" value="360" style="width:100%;height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff;box-sizing:border-box;font-size:16px;"/></div>
@@ -2186,7 +2557,7 @@ export default (w: Window) => {
           </form>
 
           <div class="card" id="sim-conditions" style="margin-top:12px">
-            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">📋 매매조건</span><span style="margin-left:auto;display:inline-flex;gap:6px;align-items:center"><select id="sim-auto-trend-mode" class="head-btn" style="appearance:auto;padding-right:6px" title="구간 생성 방식"><option value="">✨ 자동추세구간+</option><option value="merged">병합추세구간</option><option value="single">단일추세구간</option><option value="manual">수동구간</option></select></span></div>
+            <div class="card-header" style="--accent:#f59e0b"><span class="card-title">📋 매매조건</span><span style="margin-left:auto;display:inline-flex;gap:6px;align-items:center"><label style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:#fff;cursor:pointer;white-space:nowrap" title="반대로 매매: 설정된 조건의 매수↔매도를 뒤집어 표시·집행"><input type="checkbox" id="sim-contrarian" style="width:14px;height:14px;accent-color:#8b5cf6" />🐸 청개구리</label><select id="sim-auto-trend-mode" class="head-btn" style="appearance:auto;padding-right:6px" title="구간 생성 방식"><option value="">✨ 자동추세구간+</option><option value="merged">병합추세구간</option><option value="single">단일추세구간</option><option value="manual">수동구간</option></select></span></div>
             <div style="padding:12px 14px;display:flex;flex-direction:column;gap:8px">
               <div id="sim-range-tabs-row" style="display:none;gap:8px;align-items:center">
                 <div class="range-tabs" id="sim-range-tabs" style="flex:1;min-width:0"></div>
