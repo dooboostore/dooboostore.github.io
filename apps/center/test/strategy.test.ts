@@ -37,11 +37,13 @@ describe('TrendRange.trendRanges', () => {
     assert.deepEqual(zs.map(g => [g.startIndex, g.endIndex]), [[0, 29], [30, 62]]);
     assert.deepEqual(zs.map(g => g.group), ['up', 'dn']);
   });
-  it('maxSets caps zone count (default 12), no adjacent duplicates', () => {
+  it('no adjacent duplicates, last unconfirmed', () => {
     const alt = (i: number): TrendRange.TrendBar => (Math.floor(i / 10) % 2 === 0 ? upBar(i) : downBar(i));
     const zs = TrendRange.trendRanges(rep(200, alt), { groupBy: grp });
-    assert.ok(zs.length <= 12 && zs.length >= 1);
+    assert.ok(zs.length >= 1);
     for (let i = 1; i < zs.length; i++) assert.notEqual(zs[i].group, zs[i - 1].group);
+    assert.ok(zs.slice(0, -1).every(z => z.confirmed === true));
+    assert.equal(zs[zs.length - 1].confirmed, false);
   });
   it('empty → []', () => {
     assert.deepEqual(TrendRange.trendRanges([], { groupBy: grp }), []);
@@ -63,15 +65,15 @@ describe('TrendRange.trendRanges', () => {
   it('strengthRate: strong trend → high, chop → low', () => {
     // 강력 상승: 장대양봉 연속 (몸통=폭, 효율 1)
     const strong = rep(30, (i) => ({ ...upBar(i), open: 100 + i * 10, high: 110 + i * 10, low: 100 + i * 10, close: 110 + i * 10 }));
-    const zStrong = TrendRange.trendRanges(strong, { groupBy: grp, minLen: 1, maxSets: 0 });
+    const zStrong = TrendRange.trendRanges(strong, { groupBy: grp, mergeCut: 1 });
     assert.ok(zStrong.length >= 1 && zStrong.every(g => g.strengthRate > 0.7), JSON.stringify(zStrong.map(g => g.strengthRate)));
     // 횡보: 도지 연속 (몸통 0, 효율 0)
     const chop = rep(30, () => ({ macd: 0.1, rsi: 50, obv: null, open: 100, high: 110, low: 90, close: 100 }));
-    const zChop = TrendRange.trendRanges(chop, { groupBy: grp, minLen: 1, maxSets: 0 });
+    const zChop = TrendRange.trendRanges(chop, { groupBy: grp, mergeCut: 1 });
     assert.ok(zChop.length >= 1 && zChop.every(g => g.strengthRate < 0.4), JSON.stringify(zChop.map(g => g.strengthRate)));
   });
   it('strengthRate without OHLC falls back to distance only', () => {
-    const zs = TrendRange.trendRanges(rep(30, upBar), { groupBy: grp, minLen: 1, maxSets: 0 });
+    const zs = TrendRange.trendRanges(rep(30, upBar), { groupBy: grp, mergeCut: 1 });
     // score 0.95 → 거리 0.9
     assert.ok(zs.length === 1 && Math.abs(zs[0].strengthRate - 0.9) < 0.05);
   });
