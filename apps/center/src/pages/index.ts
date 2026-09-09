@@ -10,6 +10,8 @@ import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
 import StockNptiPage from './stock-npti/StockNptiPage';
 import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRankingPage';
 import StockTradingSimulationPage from './stock-trading-simulation/StockTradingSimulationPage';
+import SimConfigForm from './stock-trading-simulation/components/SimConfigForm';
+import SimCandleForm from './stock-trading-simulation/components/SimCandleForm';
 import MathPage from './math/MathPage';
 import MathVector from './math/components/MathVector';
 import MathDot from './math/components/MathDot';
@@ -33,6 +35,8 @@ export const pageFactories = [
   StockNptiPage,
   StockCategoryRankingPage,
   StockTradingSimulationPage,
+  SimConfigForm,
+  SimCandleForm,
   MathPage,
   MathVector,
   MathDot,
