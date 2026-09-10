@@ -525,6 +525,110 @@ export interface TossService {
 
   /** TICS 비교 차트 — GET /api/v1/dashboard/wts/overview/tics/{id}/comparison-chart */
   getTicsComparisonChart(req: TicsComparisonChartRequest): Promise<TicsComparisonChartResult>;
+  /** TICS 전체 카테고리 트리 — GET /api/v1/tics/all */
+  getTicsAll(): Promise<TossTicsAllResult>;
+  /** TICS 카테고리 상세 + 구성종목 — GET /api/v1/tics/{id}/details */
+  getTicsDetails(id: number | string): Promise<TossTicsDetailsResult>;
+  /** 주요지수 대시보드 — GET wts-cert-api/api/v4/dashboard/wts/overview/indicator */
+  getIndicators(): Promise<TossIndicatorResult>;
+  /** 종목 미니차트 배치 — POST wts-cert-api/api/v1/dashboard/common/stocks/mini-chart */
+  getMiniCharts(codes: readonly string[]): Promise<TossMiniChartResult>;
+}
+
+/** 주요지수 1건 (indicators[].price + miniChart.candles) */
+export interface TossIndicatorItem {
+  readonly code: string;
+  readonly name: string;
+  readonly displayName: string;
+  readonly logoImageUrl: string;
+  readonly nation: 'us' | 'kr';
+  readonly price: {
+    readonly code: string;
+    readonly displayName: string;
+    readonly changeType: 'UP' | 'DOWN' | 'SAME';
+    readonly latestPrice: number;
+    readonly basePrice: number;
+  };
+  readonly miniChart: {
+    readonly timezone: string;
+    readonly candles: readonly { readonly startDate: string; readonly price: number }[];
+  };
+}
+
+/** 주요지수 대시보드 */
+export interface TossIndicatorResult {
+  readonly indicators: readonly TossIndicatorItem[];
+  readonly landingUrl: string;
+  readonly badgedIndices: readonly {
+    readonly indexCode: string;
+    readonly displayName: string;
+    readonly category: string;
+    readonly direction: 'UP' | 'DOWN';
+    readonly isAnomaly: boolean;
+    readonly changeRate: number;
+    readonly aiSignalTitle: string;
+    readonly aiSignalId: string;
+    readonly keyword: string;
+    readonly zscore: number;
+  }[];
+}
+
+/** 종목 미니차트 배치 */
+export interface TossMiniChartResult {
+  readonly baseDateTime: string;
+  readonly baseRange: string;
+  readonly baseStep: string;
+  readonly miniCharts: readonly {
+    readonly code: string;
+    readonly timezone: string;
+    readonly candles: readonly {
+      readonly startDate: string;
+      readonly open: number;
+      readonly close: number;
+      readonly low: number;
+      readonly high: number;
+    }[];
+  }[];
+}
+
+/** TICS 구성종목 1건 (details.stocks[]) */
+export interface TossTicsStockItem {
+  readonly code: string;
+  readonly name: string;
+  readonly detailName: string;
+  readonly companyCode: string;
+  readonly companyName: string;
+  readonly representative: boolean;
+  readonly type: string;
+  readonly logoImageUrl: string;
+}
+
+/** TICS 카테고리 상세 (구성종목 포함) */
+export interface TossTicsDetailsResult {
+  readonly id: number;
+  readonly title: string;
+  readonly depth: number;
+  readonly companyCount: number;
+  readonly etfCount: number;
+  readonly summary: string | null;
+  readonly description: string | null;
+  readonly stocks: readonly TossTicsStockItem[];
+}
+
+/** TICS 전체 트리 노드 */
+export interface TossTicsAllItem {
+  readonly id: number;
+  readonly title: string;
+  readonly depth: number;
+  readonly parentId: number | null;
+  readonly companyCount: number;
+  readonly subItems: readonly TossTicsAllItem[] | null;
+}
+
+/** TICS 전체 카테고리 — GET /api/v1/tics/all */
+export interface TossTicsAllResult {
+  readonly baseDateTime: string;
+  readonly ticsItems: readonly TossTicsAllItem[];
 }
 
 // ── Stock Prices — GET /api/v1/product/stock-prices ─────────────────────
@@ -557,6 +661,7 @@ export default (container: symbol): ConstructorType<TossService> => {
     private readonly DASHBOARD_BASE = 'https://wts-info-api.tossinvest.com/api/v2/dashboard/wts';
 
     private async fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
+      // 정적 배포 전제: 전부 workers 프록시 경유 (dev 포함)
       const proxied = `${this.CORS_PROXY}${encodeURIComponent(url)}`;
       const res = await fetch(proxied, init);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -826,6 +931,49 @@ export default (container: symbol): ConstructorType<TossService> => {
     async getStockPrice(productCode: string): Promise<TossStockPrice | null> {
       const list = await this.getStockPrices([productCode]);
       return list[0] ?? null;
+    }
+
+    async getTicsAll(): Promise<TossTicsAllResult> {
+      const json = await this.fetchJson<{ result: TossTicsAllResult }>(
+        'https://wts-info-api.tossinvest.com/api/v1/tics/all',
+        { headers: { accept: 'application/json' } },
+      );
+      if (!json.result) throw new Error('Invalid TICS all response');
+      return json.result;
+    }
+
+    async getTicsDetails(id: number | string): Promise<TossTicsDetailsResult> {
+      const json = await this.fetchJson<{ result: TossTicsDetailsResult }>(
+        `https://wts-info-api.tossinvest.com/api/v1/tics/${id}/details`,
+        { headers: { accept: 'application/json' } },
+      );
+      if (!json.result) throw new Error('Invalid TICS details response');
+      return json.result;
+    }
+
+    async getIndicators(): Promise<TossIndicatorResult> {
+      const json = await this.fetchJson<{ result: TossIndicatorResult }>(
+        'https://wts-cert-api.tossinvest.com/api/v4/dashboard/wts/overview/indicator',
+        { headers: { accept: 'application/json' } },
+      );
+      if (!json.result) throw new Error('Invalid indicator response');
+      return json.result;
+    }
+
+    async getMiniCharts(codes: readonly string[]): Promise<TossMiniChartResult> {
+      if (!codes.length) {
+        return { baseDateTime: '', baseRange: '', baseStep: '', miniCharts: [] };
+      }
+      const json = await this.fetchJson<{ result: TossMiniChartResult }>(
+        'https://wts-cert-api.tossinvest.com/api/v1/dashboard/common/stocks/mini-chart',
+        {
+          method: 'POST',
+          headers: { accept: 'application/json', 'content-type': 'application/json' },
+          body: JSON.stringify({ codes: [...codes] }),
+        },
+      );
+      if (!json.result) throw new Error('Invalid mini-chart response');
+      return json.result;
     }
   }
 

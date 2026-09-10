@@ -82,6 +82,24 @@ export default (w: Window) => {
       return `<center-stock-npti-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-category"], { order: 9 })
+    @innerHtmlLight
+    handleStockCategory() {
+      return `<center-stock-category-page/>`;
+    }
+
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-indicator"], { order: 9 })
+    @innerHtmlLight
+    handleStockIndicator() {
+      return `<center-stock-indicator-page/>`;
+    }
+
+    @subscribeSwcAppRouteChangeWhileConnected(["/stock-chart"], { order: 9 })
+    @innerHtmlLight
+    handleStockChart() {
+      return `<center-stock-chart-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/stock-category-ranking"], { order: 9 })
     @innerHtmlLight
     handleStockCategoryRanking() {
@@ -98,6 +116,12 @@ export default (w: Window) => {
     @innerHtmlLight({ filter: skipIfExists('center-math-page') })
     handleMath() {
       return `<center-math-page/>`;
+    }
+
+    @subscribeSwcAppRouteChangeWhileConnected(["/ram-price"], { order: 12 })
+    @innerHtmlLight
+    handleRamPrice() {
+      return `<center-ram-price-page/>`;
     }
 
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })

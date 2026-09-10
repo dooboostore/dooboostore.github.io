@@ -170,7 +170,11 @@ async function main() {
     "/stock-brain-checker",
     "/stock-npti",
     "/stock-category-ranking",
+    "/stock-category",
     "/stock-trading-simulation",
+    "/stock-indicator",
+    "/stock-chart",
+    "/ram-price",
     "/math",
   ];
   const outDir = path.resolve(__dirname, '../dist');
