@@ -85,7 +85,7 @@ export default (w: Window) => {
           .config-field input{height:32px;padding:0 8px;border-radius:8px;border:1px solid #e2e8f0;font-size:12px;outline:none;background:#fff}
           .config-field input:focus{border-color:#f59e0b}
         </style>
-        <form>
+        <form onsubmit="return false">
         <div style="padding:12px 14px;display:flex;flex-direction:column;gap:12px">
           <div class="config-grid">
             <div class="config-field"><label>투자원금 (원)</label><input name="capital" type="number" min="100000" step="100000" value="${this.defCapital}" style="font-size: 16px;" /></div>
