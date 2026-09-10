@@ -10,6 +10,8 @@ import {
 import { Router } from '@dooboostore/core-web';
 import { inject, Sim } from "@dooboostore/simple-boot";
 import { StockService } from '@center-src/services/stock/StockService';
+import { TradingSimulator } from '@dooboostore/algorithm';
+import type { Candle } from '@dooboostore/algorithm';
 
 const tagName = 'center-stock-flight-page';
 
@@ -65,6 +67,9 @@ export default (w: Window) => {
     private lastCandleClose: number = 0;         // 마지막 candle close 보간값
     private targetLastCandleClose: number = 0;   // 마지막 candle close 목표값
     private previousPrice: number = 0; // 이전 가격 (PITCH 계산용)
+    private forecastPitch: number = 0; // 5봉 예측 피치 (보간값)
+    private targetForecastPitch: number = 0; // 5봉 예측 피치 목표값
+    private forecastEdge: number = 0; // 예측 확신도 0~1 (수평선 색용)
     private handleCanvasResize: () => void = () => this.resizeCanvas();
     private handleChartCanvasResize: () => void = () => this.resizeChartCanvas();
 
@@ -107,9 +112,7 @@ export default (w: Window) => {
 
      // VCHG 계산용: 이전 초 volume
      private _prevTickVolume: number = 0;
-    private _lastTickVolume: number = 0;
-    // timestamp for throttling VOL debug logs
-    private _lastVolDbgLogTs: number = 0;
+     private _lastTickVolume: number = 0;
 
     private strengthToBank(strength: number): number {
       return Math.max(-30, Math.min(30, (strength - 100) * 0.3));
@@ -506,20 +509,23 @@ export default (w: Window) => {
     }
 
      private startAnimation(): void {
-      const LERP = 1 / 30; // 보간을 조금 더 빠르게 해서 밴드 지연을 줄임
-
-       const animate = (timestamp: number) => {
-         const lerp = (cur: number, target: number): number => {
-           const diff = target - cur;
-           if (Math.abs(diff) < 0.001) return target;
-           return cur + diff * LERP;
-         };
+        const animate = (timestamp: number) => {
+          // 프레임 독립 지수평활 — 주사율 달라도 동일 움직임 (뚝뚝 끊김 해소)
+          const prevTs = this.lastUpdateTime || timestamp;
+          const dt = Math.min(0.1, Math.max(0.001, (timestamp - prevTs) / 1000));
+          this.lastUpdateTime = timestamp;
+          const lerp = (cur: number, target: number, speed = 5): number => {
+            const diff = target - cur;
+            if (Math.abs(diff) < Math.max(0.001, Math.abs(target) * 1e-4)) return target;
+            return cur + diff * (1 - Math.exp(-dt * speed));
+          };
 
          this.currentPrice  = lerp(this.currentPrice,  this.targetPrice);
          this.strength      = lerp(this.strength,      this.targetStrength);
          this.pitch         = lerp(this.pitch,         this.targetPitch);
          this.bank          = lerp(this.bank,          this.targetBank);
-         this.changePercent = lerp(this.changePercent, this.targetChangePercent);
+          this.changePercent = lerp(this.changePercent, this.targetChangePercent);
+          this.forecastPitch = lerp(this.forecastPitch, this.targetForecastPitch);
          this.lastCandleClose = lerp(this.lastCandleClose, this.targetLastCandleClose);
 
           this.animatedCurrentPrice        = lerp(this.animatedCurrentPrice,        this.targetCurrentPrice);
@@ -617,8 +623,32 @@ export default (w: Window) => {
           }
         }
 
-        // Bank는 STR 기준으로 계산한다. 100이면 0도, 100 초과면 양수, 100 미만이면 음수.
-        this.targetBank = this.strengthToBank(current.strength);
+          // Bank는 STR 기준으로 계산한다. 100이면 0도, 100 초과면 양수, 100 미만이면 음수.
+          this.targetBank = this.strengthToBank(current.strength);
+
+          // ── 5봉 예측 피치 + 확신도 (HUD 결정 UI 연결) ──
+          // 분봉 80개로 forecast → 마지막점 수익률을 pitch 스케일(×30)로 환산.
+          // 확신 낮으면 수평선 회색 (차트 페이지와 같은 언어: 쉬라는 뜻).
+          try {
+            const hist = (this.stockService.getMinCandles(this.selectedCode, 80).candles || [])
+              .map((c: any): Candle => ({
+                date: String(c.dt), open: c.open, high: c.high,
+                low: c.low, close: c.close, volume: c.volume,
+              }))
+              .filter(c => c.close > 0);
+            if (hist.length >= 10) {
+              const fc = TradingSimulator.forecast(hist, 10);
+              const base = hist[hist.length - 1].close;
+              if (fc.length >= 5 && base > 0) {
+                const pct = ((fc[4] - base) / base) * 100;
+                this.targetForecastPitch = Math.max(-30, Math.min(30, pct * 30));
+              }
+              const p = TradingSimulator.directionProbability(hist);
+              this.forecastEdge = Math.abs(p - 0.5) * 2;
+            }
+          } catch (e) {
+            // 예측 실패 시 기존 표시 유지
+          }
 
         // Chart 애니메이션 목표값 설정
         const currentCandle = this.stockService.getCurrentCandle(this.selectedCode);
@@ -719,6 +749,15 @@ export default (w: Window) => {
       ctx.fillStyle = "#000";
       ctx.fillRect(0, 0, cw, ch);
 
+      // ── 변동성 셰이크: |변화율| 클수록 화면 떨림 (촉감용) ──
+      const shake = Math.min(6, Math.abs(this.changePercent) * 10);
+      if (shake > 0.4) {
+        ctx.save();
+        ctx.translate((Math.random() - 0.5) * shake, (Math.random() - 0.5) * shake);
+      } else {
+        ctx.save();
+      }
+
       // ── 레이아웃 계산 ──────────────────────────────────────────
       // [VOL tape] [AI center] [PRICE tape]
       // [VCHG tape] [STR tape row under AI] [PRICE tape]
@@ -787,6 +826,20 @@ export default (w: Window) => {
       ctx.fillRect(aiX, topH, aiW, strGap);
       // STR gauge 먼저 그리고, 라벨은 나중에 오버레이하여 뒤에 가려지지 않게 함
       this.drawRoundGaugeSTR(ctx, aiX, topH + strGap, aiW, bottomH - strGap);
+
+      // ── 극단 글로우: |pitch|≥15면 화면 가장자리 발광 (상승=초록, 하락=빨강) ──
+      const ap = Math.abs(this.pitch);
+      if (ap >= 15) {
+        const glowA = Math.min(0.5, (ap - 15) / 30);
+        const glowC = this.pitch >= 0 ? "76,175,80" : "244,67,54";
+        const grad = ctx.createRadialGradient(cw / 2, ch / 2, Math.min(cw, ch) * 0.35, cw / 2, ch / 2, Math.max(cw, ch) * 0.75);
+        grad.addColorStop(0, `rgba(${glowC},0)`);
+        grad.addColorStop(1, `rgba(${glowC},${glowA.toFixed(2)})`);
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, cw, ch);
+      }
+
+      ctx.restore(); // 셰이크 해제
     }
 
     /** VOL 원형 계기판 (ALT 스타일 - 위쪽) */
@@ -1433,17 +1486,6 @@ export default (w: Window) => {
       const prevCandleVol = (prevCandle && typeof prevCandle.volume === 'number') ? prevCandle.volume : 0;
       const volTipColor = currentTickVol > prevCandleVol ? "#4caf50" : (currentTickVol < prevCandleVol ? "#f44336" : "#888");
 
-      // VOL 디버그: console.clear 제거 — 대신 500ms 간격으로만 로그 출력
-      try {
-        const nowTs = Date.now();
-        if (nowTs - (this._lastVolDbgLogTs || 0) >= 500) {
-          console.log(`[VOL-DBG] time=${nowTs} currentTickVol=${currentTickVol} prevCandleVol=${prevCandleVol} _lastTickVolume=${this._lastTickVolume} targetCurrentVolume=${this.targetCurrentVolume} animatedCurrentVolume=${this.animatedCurrentVolume} prevTickVol=${prevTickVol} prevVolK=${prevVolK} displayVol=${displayVol}`);
-          this._lastVolDbgLogTs = nowTs;
-        }
-      } catch (e) {
-        // 안전하게 실패 무시
-      }
-
       // (overlay removed)
 
       // baseline line
@@ -1548,19 +1590,20 @@ export default (w: Window) => {
       // 지면
       ctx.fillStyle = "#6d4c1a";
       ctx.fillRect(-aiW, 0, aiW * 2, aiH * 2);
-      // 수평선
-      ctx.strokeStyle = "#fff";
+      // 수평선 — 확신 없으면 회색 (쉬라는 뜻), 있으면 흰색
+      ctx.strokeStyle = this.forecastEdge > 0.2 ? "#fff" : "#777";
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.moveTo(-aiW, 0);
       ctx.lineTo(aiW, 0);
       ctx.stroke();
 
-      // Pitch 눈금
+      // Pitch 눈금 — pitchPx와 동일 스케일(aiH/100)로 맞춰야 라벨이 실제 각도와 일치
+      const ladderScale = aiH / 100;
       const pitchSteps = [2.5, 5, 7.5, 10, 15, 20, 25, 30];
       for (const deg of pitchSteps) {
         for (const sign of [-1, 1]) {
-          const py = sign * deg * (aiH / 25);
+          const py = sign * deg * ladderScale;
           const isMain = deg % 10 === 0;
           const isMid  = deg % 5 === 0 && !isMain;
           const lineLen = isMain ? aiW * 0.35 : isMid ? aiW * 0.22 : aiW * 0.12;
@@ -1614,18 +1657,18 @@ export default (w: Window) => {
       ctx.closePath();
       ctx.fill();
 
-      // Bank 포인터 (TBD - 0도 고정)
+      // Bank 포인터 — 실제 bank각만큼 회전 (노랑)
       ctx.save();
       ctx.translate(cx, cy);
-      ctx.strokeStyle = "#888";
-      ctx.fillStyle = "#888";
+      ctx.rotate(this.bank * Math.PI / 180);
+      ctx.fillStyle = "#ffeb3b";
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.moveTo(0, -bankArcR + 2);
       ctx.lineTo(-7, -bankArcR + 16);
       ctx.lineTo(7, -bankArcR + 16);
       ctx.closePath();
-      ctx.stroke();
+      ctx.fill();
       ctx.restore();
 
       ctx.restore(); // clip 해제
@@ -1647,6 +1690,47 @@ export default (w: Window) => {
       ctx.beginPath();
       ctx.arc(cx, planeY, 5, 0, Math.PI * 2);
       ctx.stroke();
+
+      // ── Flight-path 마커 (어디로 향하는지): targetPitch 위치에 초록 빈원 ──
+      // 화면 y = cy + (현재pitch − 목표pitch) × 스케일. 위면 상승 중.
+      const fpY = cy + (this.pitch - this.targetPitch) * (aiH / 100);
+      const fpYc = Math.max(aiY + 14, Math.min(aiY + aiH - 14, fpY));
+      ctx.strokeStyle = "#00e676";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(cx, fpYc, 9, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(cx - 14, fpYc);
+      ctx.lineTo(cx - 9, fpYc);
+      ctx.moveTo(cx + 9, fpYc);
+      ctx.lineTo(cx + 14, fpYc);
+      ctx.stroke();
+
+      // ── 5봉 예측 마커 (보라 점선 원): forecast가 가리키는 피치 ──
+      // 초록=지금 향하는 곳, 보라=5봉 후 향할 곳. 둘 다 위면 상승 추세.
+      const fcY = cy + (this.pitch - this.forecastPitch) * (aiH / 100);
+      const fcYc = Math.max(aiY + 14, Math.min(aiY + aiH - 14, fcY));
+      ctx.strokeStyle = "#ce93d8";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 3]);
+      ctx.beginPath();
+      ctx.arc(cx, fcYc, 12, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // ── 추세 셰브론 (기수 왼쪽): |pitch| 5/15/25도마다 ▲▼ 1개씩 ──
+      const ap = Math.abs(this.pitch);
+      if (ap >= 5) {
+        const nChev = ap >= 25 ? 3 : ap >= 15 ? 2 : 1;
+        const col = this.pitch >= 0 ? "#4caf50" : "#f44336";
+        const ch = this.pitch >= 0 ? "▲" : "▼";
+        ctx.fillStyle = col;
+        ctx.font = `bold ${Math.max(12, aiH * 0.05)}px Arial`;
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+        ctx.fillText(ch.repeat(nChev), cx - aiW * 0.38, planeY);
+      }
 
       // ── 내부 오버레이: PITCH (좌상단), BANK (우상단) ──────────
       const overlaySize = Math.max(9, aiW * 0.025);
@@ -1677,6 +1761,15 @@ export default (w: Window) => {
       ctx.fillText("BANK", aiX + aiW - overlayPad, aiY + overlayPad);
       ctx.fillStyle = this.bank >= 0 ? "#4caf50" : "#f44336";
       ctx.fillText(`${bankSign}${this.bank.toFixed(1)}°`, aiX + aiW - overlayPad, aiY + overlayPad + overlaySize + 2);
+
+      // ── 대형 변동률 (상단 중앙): 숫자 안 읽어도 방향·크기 한눈에 ──
+      const cp = this.changePercent;
+      const arrow = cp > 0.05 ? "▲ " : cp < -0.05 ? "▼ " : "";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.font = `bold ${Math.max(22, aiH * 0.09)}px Arial`;
+      ctx.fillStyle = cp >= 0 ? "#4caf50" : "#f44336";
+      ctx.fillText(`${arrow}${cp >= 0 ? "+" : ""}${cp.toFixed(2)}%`, cx, aiY + bankArcR * 0.35);
     }
 
     /** Altimeter Tape (오른쪽): price 기반 - 포인터 고정, 눈금 스크롤 */

@@ -12,6 +12,7 @@ import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRank
 import StockTradingSimulationPage from './stock-trading-simulation/StockTradingSimulationPage';
 import SimConfigForm from './stock-trading-simulation/components/SimConfigForm';
 import SimCandleForm from './stock-trading-simulation/components/SimCandleForm';
+import SimIndicatorForm from './stock-trading-simulation/components/SimIndicatorForm';
 import TradeHistoryPopup from './stock-trading-simulation/components/TradeHistoryPopup';
 import MathPage from './math/MathPage';
 import MathVector from './math/components/MathVector';
@@ -38,6 +39,7 @@ export const pageFactories = [
   StockTradingSimulationPage,
   SimConfigForm,
   SimCandleForm,
+  SimIndicatorForm,
   TradeHistoryPopup,
   MathPage,
   MathVector,
