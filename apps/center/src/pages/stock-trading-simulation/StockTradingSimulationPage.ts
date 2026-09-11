@@ -104,7 +104,8 @@ export default (w: Window) => {
       this.trades = [];
       this.autoCash = null;
       this.autoShares = null;
-      this.lastBest = null;
+      // NOTE: lastBest(스위프 고정 s,m)는 여기서 지우지 않음 — runAutoTradeLoop가 매 실행마다
+      // seed를 호출하므로 지우면 락이 즉시 날아가 루프가 항상 폴백값으로 돔. 해제는 전략 해제·종목 로드에서 명시.
       this.baseCapital = this.configValue.capital ?? 0;
       this.baseShares = Math.max(0, Math.floor(Number(this.configValue.shares) || 0));
       if (!this.chartCandles.length) return;
@@ -354,9 +355,12 @@ export default (w: Window) => {
         }
         // 새 데이터 로드 → 줌 해제 (전체 표시)
         this.resetChartZoom();
+        // 새 데이터면 이전 종목의 스위프 고정값 무효 — 전략 있으면 복원에서 재스위프 (진행 중 스위프 무효화)
+        this.sweepGen++;
+        this.lastBest = null;
         this.seedInitialTrade();
         this.refreshRealized();
-        this.restorePlayAfterLoad();
+        await this.restorePlayAfterLoad();
         this.updateChartTitle();
         try {
           const sp = await this.tossService.getStockPrice(code).catch(() => null);
@@ -408,36 +412,51 @@ export default (w: Window) => {
       btn.style.background = this.frogActive ? '#dcfce7' : '#f8fafc';
       btn.style.borderColor = this.frogActive ? '#86efac' : '#e2e8f0';
     }
+    /** 스위프 베스트 클릭 → fresh 랜덤으로 다시 100회 돌려 (s, m) 교체 후 현재 위치 재실행 */
+    @event('#sim-sweep-best', 'click')
+    async onSweepReroll() {
+      if (!this.chartCandles.length) return;
+      await this.sweepAndLockFullRange();
+      const at = this.playIndex();
+      if (at != null) this.onPlayScrub(at, true);
+      else this.updateRangeLabels();
+    }
+
     @event('#sim-frog', 'click')
     onFrogToggle() {
       this.frogActive = !this.frogActive;
       this.paintFrogButton();
       this.syncSimParamsToUrl();
-      // 재생 중이면 현재 위치까지 다시 처리 (최적 스위프)
+      // 개구리는 매수/매도 뒤집기만 — 고정 (s, m) 유지, 현재 위치까지 같은 값으로 재실행
       const at = this.playIndex();
-      if (at != null) this.onPlayScrub(at, true, true);
+      if (at != null) this.onPlayScrub(at, true);
       else this.updateRangeLabels();
     }
 
     /** 전략 선택 → 재생 thumb 추가/제거 (group 내, min=start·max=end 구속) */
     @event('#sim-strategy', 'change')
-    onStrategyChange() {
+    async onStrategyChange() {
       const sel = (this.shadowRoot?.querySelector('#sim-strategy') as HTMLSelectElement | null)?.value ?? '';
       const group = this.shadowRoot?.querySelector('#sim-range thumb-group');
       if (!sel || !group) {
         group?.querySelector('thumb[name="play"]')?.remove();
         this.clearPlayhead();
-        // 전략 해제 → 자동매매 내역·결과 파기, 입력값 표시로 복귀
+        // 전략 해제 → 고정값·자동매매 내역·결과 파기, 입력값 표시로 복귀 (진행 중 스위프 무효화)
+        this.sweepGen++;
+        this.lastBest = null;
         this.seedInitialTrade();
         this.refreshRealized();
         this.syncSimParamsToUrl();
+        this.updateRangeLabels();
+        this.updateForecastSeries(null);
         return;
       }
       this.ensurePlayThumb();
       this.syncSimParamsToUrl();
-      // 기존 재생 위치가 있으면 그곳까지, 없으면 구간 처음부터 처리 (최적 스위프)
+      // 선택 시점에 풀구간 100회 스위프로 (s, m) 고정 후, 재생 위치까지 고정값 단일 처리
       const at = this.playIndex();
-      this.onPlayScrub(at ?? this.range.start, true, true);
+      await this.sweepAndLockFullRange();
+      this.onPlayScrub(at ?? this.range.start, true);
     }
 
     /** 재생 thumb 보장 (없으면 지정 위치에 생성) */
@@ -462,20 +481,24 @@ export default (w: Window) => {
     }
 
     /** 로드 완료 후 재생 상태 복원 (전략 선택 + URL pl 1회 적용) */
-    private restorePlayAfterLoad() {
+    private async restorePlayAfterLoad() {
       const sel = (this.shadowRoot?.querySelector('#sim-strategy') as HTMLSelectElement | null)?.value ?? '';
       if (!sel) return;
       const target = this.playFromUrl ?? this.range.start;
       this.playFromUrl = null;
       this.ensurePlayThumb(target);
-      // commit=true — 복원 시에도 재생 위치까지 거래내역 계산
+      // 복원 시에도 풀구간 스위프로 고정 후 재생 위치까지 자동매매 연산 + 최적 스위프 표시
+      await this.sweepAndLockFullRange();
       this.onPlayScrub(target, true);
     }
 
-    /** 재생 thumb 스크럽 — 선은 즉시 이동, 루프는 input 스로틀(120ms)/change 즉시 실행 */
-    private playThrottleTimer: ReturnType<typeof setTimeout> | null = null;    private playLastRun = 0;
-    private playPending: number | null = null;
-    private onPlayScrub(playIdx: number, commit: boolean, sweep = false) {
+    /** 드래그 중 스로틀 상태 — leading 즉시 1회 + trailing 최신 1회 */
+    private playThrottleTimer: number | null = null;
+    private playPendingIdx: number | null = null;
+    private lastPlayRunAt = 0;
+
+    /** 재생 thumb 스크럽 — 선·개수는 즉시, bestconfig+simulate는 commit 즉시 / 드래그 중 스로틀(150ms) 지속 실행 */
+    private onPlayScrub(playIdx: number, commit: boolean) {
       const n = this.chartCandles.length;
       if (!n) return;
       const end = this.range.end < 0 ? n - 1 : Math.min(this.range.end, n - 1);
@@ -484,44 +507,109 @@ export default (w: Window) => {
       this.paintPlayhead(this.chartCandles[p]?.date);
       const cEl = this.shadowRoot?.querySelector('#sim-range-count') as HTMLElement | null;
       if (cEl) cEl.textContent = `${p - start + 1}/${end - start + 1}봉`;
-      if (!commit) { this.schedulePlayLoop(p); return; }
-      this.cancelPlaySchedule();
-      this.playLastRun = Date.now();
-      this.syncSimParamsToUrl(p);
-      this.runAutoTradeLoop(p, sweep);
+      // 손떼기(commit) — 예약 취소 후 URL 동기화 + 즉시 연산
+      if (commit) {
+        if (this.playThrottleTimer != null) { clearTimeout(this.playThrottleTimer); this.playThrottleTimer = null; }
+        this.playPendingIdx = null;
+        this.syncSimParamsToUrl(p);
+        this.runAutoTradeLoop(p);
+        this.lastPlayRunAt = Date.now();
+        this.updateRangeLabels();
+        this.updateForecastSeries(p);
+        return;
+      }
+      // 드래그 중 — 고정 (s, m)으로 bestconfig+simulate 지속 실행 (URL은 손떼기 때만)
+      this.playPendingIdx = p;
+      const wait = 150 - (Date.now() - this.lastPlayRunAt);
+      if (wait <= 0) {
+        if (this.playThrottleTimer != null) { clearTimeout(this.playThrottleTimer); this.playThrottleTimer = null; }
+        this.runPlayPending();
+      } else if (this.playThrottleTimer == null) {
+        this.playThrottleTimer = window.setTimeout(() => {
+          this.playThrottleTimer = null;
+          this.runPlayPending();
+        }, wait);
+      }
+    }
+
+    /** 예약된 최신 위치 1건 실행 (드래그 중 스로틀용, URL 미동기화) */
+    private runPlayPending() {
+      const p = this.playPendingIdx;
+      this.playPendingIdx = null;
+      if (p == null) return;
+      this.runAutoTradeLoop(p);
+      this.lastPlayRunAt = Date.now();
       this.updateRangeLabels();
+      this.updateForecastSeries(p);
     }
 
-    /** 드래그 중 루프 스로틀 — 최신 위치만 trailing 실행 */
-    private schedulePlayLoop(p: number) {
-      this.playPending = p;
-      if (this.playThrottleTimer != null) return;
-      const wait = Math.max(0, 120 - (Date.now() - this.playLastRun));
-      this.playThrottleTimer = setTimeout(() => {
-        this.playThrottleTimer = null;
-        const target = this.playPending ?? p;
-        this.playPending = null;
-        // 슬라이더가 이미 다른 위치면 최신값 우선
-        const cur = this.playIndex();
-        this.playLastRun = Date.now();
-        this.runAutoTradeLoop(cur ?? target);
-      }, wait);
-    }
-
-    private cancelPlaySchedule() {
-      if (this.playThrottleTimer != null) { clearTimeout(this.playThrottleTimer); this.playThrottleTimer = null; }
-      this.playPending = null;
+    /** play 위치(=현재 시점) 기준 예측 콘 — [구간처음..play]로 10봉 예측해 play 다음부터 오버레이.
+     *  중간선 + 상·하단 3개 <series>. playIdx 인자 있으면 확정값 사용, null이면 강제 제거,
+     *  생략 시 DOM 실체 기준 읽기 (rangeValue.play가 thumb 제거 직후 stale할 수 있어서 DOM을 믿음).
+     *  차트 mutation observer가 속성 변경을 감지해 다시 그림. */
+    private updateForecastSeries(playIdx?: number | null) {
+      const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement | null;
+      if (!chartEl || !this.chartCandles.length) return;
+      const prevAll = [...chartEl.querySelectorAll(':scope > series[id^="sim-forecast"]')];
+      const n = this.chartCandles.length;
+      const end = this.range.end < 0 ? n - 1 : Math.min(this.range.end, n - 1);
+      const start = Math.max(0, Math.min(this.range.start, end));
+      const hasThumb = !!this.shadowRoot?.querySelector('#sim-range thumb-group thumb[name="play"]');
+      const at = playIdx !== undefined ? playIdx : (hasThumb ? this.playIndex() : null);
+      if (at == null) { prevAll.forEach(el => el.remove()); return; }
+      const p = Math.max(start, Math.min(Math.floor(at), end));
+      const slice = this.chartCandles.slice(start, p + 1);
+      // 중간선 = 물리량+푸리에 앙상블 (118종목 5일 58.5% 실측)
+      const a = TradingSimulator.forecastCloses(slice, 10);
+      const b = TradingSimulator.forecastByFourier(slice, 10, 60, 3);
+      const mid = a.map((v, k) => Math.round(((v + (b[k] ?? v)) / 2) * 100) / 100);
+      const bands = TradingSimulator.forecastBands(slice, 10, 2, mid);
+      if (!bands.mid.length) { prevAll.forEach(el => el.remove()); return; }
+      const base = slice[slice.length - 1]?.close ?? 0;
+      const pct = base > 0 ? ((bands.mid[bands.mid.length - 1] - base) / base) * 100 : 0;
+      const label = `예측 ${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`;
+      const specs = [
+        { id: 'sim-forecast-lo', values: bands.lower, color: '#c4b5fd', width: '1', label: '' },
+        { id: 'sim-forecast-up', values: bands.upper, color: '#c4b5fd', width: '1', label: '' },
+        { id: 'sim-forecast', values: bands.mid, color: '#8b5cf6', width: '2', label },
+      ];
+      for (const s of specs) {
+        const prev = chartEl.querySelector(`:scope > series#${CSS.escape(s.id)}`);
+        if (prev) {
+          prev.setAttribute('values', s.values.join(','));
+          prev.setAttribute('anchor', `at:${p + 1}`);
+          if (s.label) prev.setAttribute('label', s.label);
+          else prev.removeAttribute('label');
+        } else {
+          const el = document.createElement('series');
+          el.setAttribute('id', s.id);
+          el.setAttribute('values', s.values.join(','));
+          el.setAttribute('anchor', `at:${p + 1}`);
+          el.setAttribute('color', s.color);
+          el.setAttribute('dash', '5 4');
+          el.setAttribute('width', s.width);
+          if (s.label) el.setAttribute('label', s.label);
+          chartEl.appendChild(el);
+        }
+      }
+      // 예측 꼬리분이 현재 뷰를 넘으면 끝까지만 확장 (축소는 안 함, 차트 끝 초과분은 미래 슬롯)
+      const chart = chartEl as any;
+      if (typeof chart.getView === 'function' && typeof chart.setView === 'function') {
+        const v = chart.getView();
+        const need = Math.min(n - 1, p + bands.mid.length);
+        if (v && need > v.end) chart.setView(v.start, need);
+      }
     }
 
     /**
      * 누적 자동매매 — [첫봉] → [첫+둘] → … → [첫..p] 확장 윈도우마다
      * findBestConfig → simulate(fromBar=마지막봉) → 마지막봉 매매만 거래내역에 반영.
-     * sweep=true면 strategyRate 10개로 돌려 최고 수익률을 선택.
+     * 고정된 (s, m)으로 단일 실행 — 스위프·고정은 sweepAndLockFullRange() 담당.
      * 반영 후 보유주식·평가금액 표시(autoCash/autoShares) + 화면 새로고침.
      * 입력 폼(configValue)은 절대 건드리지 않음.
      */
-    private lastBest: { s: number; ret: number } | null = null;
-    private runAutoTradeLoop(p: number, sweep = false) {
+    private lastBest: { s: number; m: number; ret: number } | null = null;
+    private runAutoTradeLoop(p: number) {
       const n = this.chartCandles.length;
       if (!n) return;
       // 매번 seed 상태로 리셋 후 전체 루프 재실행 (중복 누적 방지)
@@ -529,28 +617,98 @@ export default (w: Window) => {
       const end = this.range.end < 0 ? n - 1 : Math.min(this.range.end, n - 1);
       const start = Math.max(0, Math.min(this.range.start, end));
       const upto = Math.max(start, Math.min(Math.floor(p), end));
-      if (!sweep) {
-        const r = this.runLoopOnce(start, upto, this.strategyRateOf());
-        this.lastBest = null;
-        this.applyLoopResult(r.accepted, r.cash, r.shares, upto);
-        return;
-      }
-      const startEq = (this.configValue.capital ?? 0) + Math.max(0, Math.floor(Number(this.configValue.shares) || 0)) * (this.chartCandles[start]?.close ?? 0);
-      let best: { s: number; ret: number; accepted: TradingSimulator.UserTrade[]; cash: number; shares: number } | null = null;
-      for (let i = 0; i < 10; i++) {
-        const s = i / 9;
-        const r = this.runLoopOnce(start, upto, s);
-        const endEq = r.cash + r.shares * (this.chartCandles[upto]?.close ?? 0);
-        const ret = startEq > 0 ? ((endEq - startEq) / startEq) * 100 : 0;
-        if (!best || ret > best.ret) best = { s, ret, accepted: r.accepted, cash: r.cash, shares: r.shares };
-      }
-      if (!best) return;
-      this.lastBest = { s: best.s, ret: best.ret };
-      this.applyLoopResult(best.accepted, best.cash, best.shares, upto);
+      // 고정값 우선, 없으면(전략 미선택 등) 기존 단일 실행과 동일 폴백
+      const s = this.lastBest?.s ?? this.strategyRateOf();
+      const m = this.lastBest?.m ?? 0.5;
+      const r = this.runLoopOnce(start, upto, s, m);
+      this.applyLoopResult(r.accepted, r.cash, r.shares, upto);
     }
 
-    /** 단일 루프 1회 — 지정 strategyRate로 확장 윈도우 순회, 승인 내역 + 최종 현금/보유 반환 */
-    private runLoopOnce(start: number, upto: number, sRate: number) {
+    /**
+     * 전략 선택/개구리 변경 시: 선택 구간 전체[처음..끝] 단일 평가로 100회 스위프 → 최적 (s, m) 고정.
+     * 매번 fresh 난수라 바꿀 때마다 다른 고정값. 우측 컬럼(sim-sweep-best)에 표시.
+     * 스크럽 재생(확장 윈도우 루프)은 runAutoTradeLoop가 고정값으로 담당 — 여기서 돌리면 100×봉수 폭증.
+     */
+    /** 스위프 세대 — 전략을 와따가따하면 이전 스위프는 중단, 최신만 lastBest 기록 */
+    private sweepGen = 0;
+    private async sweepAndLockFullRange() {
+      const gen = ++this.sweepGen;
+      const n = this.chartCandles.length;
+      if (!n) { this.lastBest = null; return; }
+      const end = this.range.end < 0 ? n - 1 : Math.min(this.range.end, n - 1);
+      const start = Math.max(0, Math.min(this.range.start, end));
+      const ind = this.indicatorValue as any ?? {};
+      const indicators = {
+        macdFast: ind.macdFast, macdSlow: ind.macdSlow, macdSignal: ind.macdSignal,
+        rsiPeriod: ind.rsiPeriod, rsiOb: ind.rsiOb, rsiOs: ind.rsiOs,
+        maShort: ind.maShort, maMid: ind.maMid, maLong: ind.maLong,
+        maExponential: !!ind.maExponential,
+      };
+      const fee = (this.configValue.fee ?? 0) / 100;
+      const capital = this.configValue.capital ?? 0;
+      const seedShares = Math.max(0, Math.floor(Number(this.configValue.shares) || 0));
+      const seedHist: TradingSimulator.UserTrade[] = seedShares > 0
+        ? [{ date: this.chartCandles[start].date, action: 'buy', price: Math.round(this.chartCandles[start]?.close ?? 0), shares: seedShares, initial: true }]
+        : [];
+      const win = this.chartCandles.slice(start, end + 1) as Candle[];
+      const startEq = capital + seedShares * (win[0]?.close ?? 0);
+      // 스위프 시작 표시 — 진행 중(…) → 10회마다 중간 최적값 → 최종 고정값
+      const swEl = this.shadowRoot?.querySelector('#sim-sweep-best') as HTMLElement | null;
+      if (swEl) swEl.textContent = '…';
+      let best: { s: number; m: number; ret: number } | null = null;
+      // 매번 fresh 난수 — 전략을 바꿀 때마다 다른 (s, m) 쌍 탐색 (같은 조건 재선택해도 다른 값)
+      const rand = Math.random;
+      for (let i = 0; i < 100; i++) {
+        if (gen !== this.sweepGen) return; // 더 최신 스위프 시작됨 — 이전 것은 중단
+        const s = rand();
+        const m = rand();
+        const cfg = TradingSimulator.findBestConfig(win, {
+          strategyRate: s,
+          marketRate: m,
+          invertActions: this.frogActive,
+          indicators,
+        });
+        const res = TradingSimulator.simulate({
+          candles: win, config: cfg, history: [...seedHist], indicators,
+          capital, fee, risk: { takeProfitPct: 100 }, // 2026-09-11 스위프 확정 (118종목)
+        });
+        const accepted = res.trades.filter(t => t.action === 'buy' || t.action === 'sell');
+        const { cash, shares } = this.replayFills(accepted, capital, seedShares, fee);
+        const endEq = cash + shares * (win[win.length - 1]?.close ?? 0);
+        const ret = startEq > 0 ? ((endEq - startEq) / startEq) * 100 : 0;
+        if (!best || ret > best.ret) best = { s, m, ret };
+        if (i % 10 === 9) {
+          if (gen !== this.sweepGen) return;
+          this.lastBest = best;
+          this.updateRangeLabels();
+          await new Promise(r => setTimeout(r, 0));
+        }
+      }
+      if (gen !== this.sweepGen) return;
+      this.lastBest = best;
+      this.updateRangeLabels();
+    }
+
+    /** 승인 내역 → 최종 현금/보유 (엔진과 동일 수식) */
+    private replayFills(accepted: TradingSimulator.UserTrade[], capital: number, seedShares: number, fee: number) {
+      let cash = capital;
+      let shares = seedShares;
+      for (const h of accepted) {
+        if (h.action === 'buy') {
+          const qty = Math.min(h.shares, Math.floor(cash / (h.price * (1 + fee))));
+          cash -= qty * h.price * (1 + fee);
+          shares += qty;
+        } else if (h.action === 'sell') {
+          const qty = Math.min(h.shares, shares);
+          cash += qty * h.price * (1 - fee);
+          shares -= qty;
+        }
+      }
+      return { cash, shares };
+    }
+
+    /** 단일 루프 1회 — 지정 strategyRate·marketRate로 확장 윈도우 순회, 승인 내역 + 최종 현금/보유 반환 */
+    private runLoopOnce(start: number, upto: number, sRate: number, mRate = 0.5) {
       const ind = this.indicatorValue as any ?? {};
       const indicators = {
         macdFast: ind.macdFast, macdSlow: ind.macdSlow, macdSignal: ind.macdSignal,
@@ -566,36 +724,26 @@ export default (w: Window) => {
         ? [{ date: this.chartCandles[start].date, action: 'buy', price: Math.round(this.chartCandles[start]?.close ?? 0), shares: seedShares, initial: true }]
         : [];
       const accepted: TradingSimulator.UserTrade[] = [];
+      let bs: TradingSimulator.BatchState | undefined;
       for (let k = 1; k <= upto - start + 1; k++) {
         const win = this.chartCandles.slice(start, start + k) as Candle[];
         const cfg = TradingSimulator.findBestConfig(win, {
           strategyRate: sRate,
-          marketRate: 0.5,
+          marketRate: mRate,
           invertActions: this.frogActive,
           indicators,
         });
         const res = TradingSimulator.simulate({
           candles: win, config: cfg, history: [...seedHist, ...accepted],
-          indicators, capital, fee, risk: { takeProfitPct: 8 }, fromBar: k - 1,
+          indicators, capital, fee, risk: { takeProfitPct: 100 }, fromBar: k - 1, batchState: bs, // 2026-09-11 스위프 확정 (118종목)
         });
+        bs = res.batchState;
         for (const t of res.trades) {
           if (t.action === 'buy' || t.action === 'sell') accepted.push(t);
         }
       }
       // 최종 포지션 재생 (엔진과 동일 수식)
-      let cash = capital;
-      let shares = seedShares;
-      for (const h of accepted) {
-        if (h.action === 'buy') {
-          const qty = Math.min(h.shares, Math.floor(cash / (h.price * (1 + fee))));
-          cash -= qty * h.price * (1 + fee);
-          shares += qty;
-        } else if (h.action === 'sell') {
-          const qty = Math.min(h.shares, shares);
-          cash += qty * h.price * (1 - fee);
-          shares -= qty;
-        }
-      }
+      const { cash, shares } = this.replayFills(accepted, capital, seedShares, fee);
       return { accepted, cash, shares };
     }
 
@@ -624,33 +772,33 @@ export default (w: Window) => {
       this.paintPlayhead(this.chartCandles[upto]?.date);
     }
 
-    /** 재생 현재위치선 — 해당 tick 자식 <line> (수직 타임라인, 뮤테이션 옵저버가 다시 그림) */
+    /** 재생 현재위치선 — 해당 candle 자식 <line> (수직 타임라인, 뮤테이션 옵저버가 다시 그림) */
     private paintPlayhead(date?: string) {
       const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement | null;
       if (!chartEl || !date) return;
-      chartEl.querySelector(':scope > tick > line#sim-playhead, :scope > candle > line#sim-playhead')?.remove();
-      chartEl.querySelector(':scope > tick > tooltip#sim-playhead-tip, :scope > candle > tooltip#sim-playhead-tip')?.remove();
-      const tick = [...chartEl.querySelectorAll(':scope > tick, :scope > candle')]
+      chartEl.querySelector(':scope > candle > line#sim-playhead')?.remove();
+      chartEl.querySelector(':scope > candle > tooltip#sim-playhead-tip')?.remove();
+      const candleEl = [...chartEl.querySelectorAll(':scope > candle')]
         .find(t => t.getAttribute('date') === date) as HTMLElement | undefined;
-      if (!tick) return;
+      if (!candleEl) return;
       const line = document.createElement('line');
       line.setAttribute('id', 'sim-playhead');
       line.setAttribute('width', '2');
       line.setAttribute('color', '#ef4444');
       line.setAttribute('target', 'all');
-      tick.appendChild(line);
+      candleEl.appendChild(line);
       const tip = document.createElement('tooltip');
       tip.setAttribute('id', 'sim-playhead-tip');
       tip.setAttribute('label', '자동매매');
       tip.setAttribute('position', 'top');
       tip.setAttribute('fill-color', '#ef4444');
-      tick.appendChild(tip);
+      candleEl.appendChild(tip);
     }
 
     private clearPlayhead() {
       const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement | null;
-      chartEl?.querySelector(':scope > tick > line#sim-playhead, :scope > candle > line#sim-playhead')?.remove();
-      chartEl?.querySelector(':scope > tick > tooltip#sim-playhead-tip, :scope > candle > tooltip#sim-playhead-tip')?.remove();
+      chartEl?.querySelector(':scope > candle > line#sim-playhead')?.remove();
+      chartEl?.querySelector(':scope > candle > tooltip#sim-playhead-tip')?.remove();
     }
 
     @event('#stock-search-btn', 'click')
@@ -882,6 +1030,7 @@ export default (w: Window) => {
       this.refreshInitAvg();
       this.seedInitialTrade();
       this.refreshRealized();
+      this.updateForecastSeries();
       this.syncUrlWithoutReload();
       // 구간 변경으로 차트 재빌드 시 재생선 복원
       const pl = Number((this.rangeValue as any)?.play);
@@ -913,13 +1062,13 @@ export default (w: Window) => {
       if (!Number.isFinite(s) || !Number.isFinite(ed)) return;
       const pl = Number((v as any).play);
       if (Number.isFinite(pl) && s === this.range.start && ed === (this.range.end < 0 ? this.chartCandles.length - 1 : this.range.end)) {
-        this.onPlayScrub(pl, true, true);
+        this.onPlayScrub(pl, true);
         return;
       }
       this.applySimRange(s, ed, true);
     }
 
-    private buildTicksHtml(candles: Candle[], markers?: Map<number, string>): string {
+    private buildCandlesHtml(candles: Candle[], markers?: Map<number, string>): string {
       return candles.map((c, i) => {
         const m = markers?.get(i) ?? '';
         return `<candle date="${c.date}" open="${c.open}" high="${c.high}" low="${c.low}" close="${c.close}" volume="${c.volume}">${m}</candle>`;
@@ -980,16 +1129,24 @@ export default (w: Window) => {
       const start = Math.max(0, Math.min(this.range.start, end));
       if (sEl) sEl.textContent = this.chartCandles[start]?.date ?? '-';
       if (eEl) eEl.textContent = this.chartCandles[end]?.date ?? '-';
+      const hasPlay = !!this.shadowRoot?.querySelector('#sim-range thumb-group thumb[name="play"]');
       if (cEl) {
-        // 자동매매 진행중(play thumb 존재)이면 현재위치 1/56봉 형식 + 최적 스위프 결과
+        // 자동매매 진행중(play thumb 존재)이면 현재위치 N/M봉 형식 (폭 고정)
         const plRaw = Number((this.rangeValue as any)?.play);
-        const hasPlay = !!this.shadowRoot?.querySelector('#sim-range thumb-group thumb[name="play"]');
         if (hasPlay && Number.isFinite(plRaw)) {
           const p = Math.max(start, Math.min(Math.floor(plRaw), end));
-          const best = this.lastBest ? ` · s${this.lastBest.s.toFixed(1)} ${this.lastBest.ret >= 0 ? '+' : ''}${this.lastBest.ret.toFixed(1)}%` : '';
-          cEl.textContent = `${p - start + 1}/${end - start + 1}봉${best}`;
+          cEl.textContent = `${p - start + 1}/${end - start + 1}봉`;
         } else {
           cEl.textContent = `${end - start + 1}개`;
+        }
+      }
+      // 최적 스위프 결과는 우측 컬럼 고정 자리 표시 (자리 고정, 값 없으면 '-')
+      const swEl = this.shadowRoot?.querySelector('#sim-sweep-best') as HTMLElement | null;
+      if (swEl) {
+        if (this.lastBest) {
+          swEl.textContent = `s${this.lastBest.s.toFixed(1)}/m${this.lastBest.m.toFixed(1)} ${this.lastBest.ret >= 0 ? '+' : ''}${this.lastBest.ret.toFixed(1)}%`;
+        } else {
+          swEl.textContent = '-';
         }
       }
       const cur = this.rangeValue as any;
@@ -1014,13 +1171,13 @@ export default (w: Window) => {
         const tip = `<tooltip position="${isBuy ? 'candle-bottom' : 'candle-top'}" label="${isBuy ? 'B' : 'S'}" fill-color="${isBuy ? '#dc2626' : '#2563eb'}" label-color="#fff"></tooltip>`;
         markers.set(idx, (markers.get(idx) ?? '') + tip);
       }
-      const ticksHtml = this.buildTicksHtml(this.chartCandles, markers);
+      const candlesHtml = this.buildCandlesHtml(this.chartCandles, markers);
       const sDate = this.chartCandles[start]?.date ?? '';
       const eDate = this.chartCandles[end]?.date ?? '';
       const liveRect = (start > 0 || end < n - 1) && sDate && eDate
         ? `<rect date-start="${sDate}" date-end="${eDate}" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1" target="all"></rect>`
         : '';
-      return `<volume></volume><ma period="${this.indicatorValue.maShort}" color="#ef4444" type="${this.indicatorValue.maExponential ? 'exponential' : 'sma'}"></ma><ma period="${this.indicatorValue.maMid}" color="#f59e0b" type="${this.indicatorValue.maExponential ? 'exponential' : 'sma'}"></ma><ma period="${this.indicatorValue.maLong}" color="#6366f1" type="${this.indicatorValue.maExponential ? 'exponential' : 'sma'}"></ma><macd><fast period="${this.indicatorValue.macdFast}"></fast><slow period="${this.indicatorValue.macdSlow}"></slow><signal period="${this.indicatorValue.macdSignal}"></signal></macd><rsi period="${this.indicatorValue.rsiPeriod}"><overbought level="${this.indicatorValue.rsiOb}"></overbought><oversold level="${this.indicatorValue.rsiOs}"></oversold></rsi><obv></obv>` + ticksHtml + liveRect;
+      return `<volume></volume><ma period="${this.indicatorValue.maShort}" color="#ef4444" type="${this.indicatorValue.maExponential ? 'exponential' : 'sma'}"></ma><ma period="${this.indicatorValue.maMid}" color="#f59e0b" type="${this.indicatorValue.maExponential ? 'exponential' : 'sma'}"></ma><ma period="${this.indicatorValue.maLong}" color="#6366f1" type="${this.indicatorValue.maExponential ? 'exponential' : 'sma'}"></ma><macd><fast period="${this.indicatorValue.macdFast}"></fast><slow period="${this.indicatorValue.macdSlow}"></slow><signal period="${this.indicatorValue.macdSignal}"></signal></macd><rsi period="${this.indicatorValue.rsiPeriod}"><overbought level="${this.indicatorValue.rsiOb}"></overbought><oversold level="${this.indicatorValue.rsiOs}"></oversold></rsi><obv></obv>` + candlesHtml + liveRect;
     }
 
     /** 차트 뷰를 선택 구간으로 포커싱 (슬라이더 조작 시에만 호출) */
@@ -1034,9 +1191,10 @@ export default (w: Window) => {
     }
 
     private syncMasToChart() {
-      const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement;
+      const chartEl = this.shadowRoot?.querySelector('stock-chart') as HTMLElement | null;
       if (!chartEl || !this.chartCandles.length) return;
       chartEl.innerHTML = this.buildChartHtml();
+      this.updateForecastSeries();
       this.updateResultDisplay();
     }
     /** 화면 갱신 (결과 표시 + 차트) */
@@ -1253,6 +1411,7 @@ export default (w: Window) => {
               <div style="display: flex; flex-direction: column;gap:4px;min-width:70px;align-items:flex-end">
                 <span id="sim-range-start" style="font-weight:700;white-space:nowrap;text-align:right;font-size:10px;line-height:14px">-</span>
                 <span id="sim-range-end" style="font-weight:700;white-space:nowrap;text-align:right;font-size:10px;line-height:14px">-</span>
+                <span id="sim-sweep-best" title="클릭: 다시 뽑기" style="font-weight:700;white-space:nowrap;text-align:right;font-size:10px;line-height:14px;color:#64748b;cursor:pointer">-</span>
               </div>
             </div>
             <sim-indicator-form id="sim-indicators" macd-fast="12" macd-slow="26" macd-signal="9" rsi-period="14" rsi-ob="70" rsi-os="30" ma-short="5" ma-mid="10" ma-long="40"></sim-indicator-form>
@@ -1275,7 +1434,7 @@ export default (w: Window) => {
                 <trade-history-popup id="sim-history-popup" style="margin-left:auto"></trade-history-popup>
               </div>
             </div>
-            <sim-config-form id="sim-config" capital="100000000" fee="0.015" shares="100"></sim-config-form>
+            <sim-config-form id="sim-config" capital="100000000" fee="0.015" shares="0"></sim-config-form>
           </div>
         </main>
 

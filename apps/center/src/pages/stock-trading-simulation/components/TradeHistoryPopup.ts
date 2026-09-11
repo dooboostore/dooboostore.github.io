@@ -9,6 +9,8 @@ export interface ConditionDetail {
   operator: string;
   action: string;
   percent: number;
+  /** 집행 방식 — 체결 조건에만 기록 (min/max/combined) */
+  applyMode?: string;
   description?: string;
   cooldownBars?: number;
   noTradeBars?: number;
@@ -184,12 +186,14 @@ export default (w: Window) => {
         return !!f && f.source === c.source && f.left === c.left && f.right === c.right
           && f.operator === c.operator && f.action === c.action && f.percent === c.percent;
       };
+      const modeLabel = (m?: string) => m === 'min' ? '최소' : m === 'max' ? '최대' : m === 'combined' ? '컴바인' : '';
       const condHtml = (c: ConditionDetail, fired: boolean) => {
         const extra: string[] = [];
         if (c.cooldownBars != null) extra.push(`발동 후 ${c.cooldownBars}봉 스킵`);
         if (c.noTradeBars != null) extra.push(`최근 ${c.noTradeBars}봉 무거래 시만`);
+        const mode = modeLabel(c.applyMode);
         return `<div class="hist-cond${fired ? ' fired' : ''}">
-          <div class="hist-cond-title"><span class="hist-src">${esc(c.source)}</span><span>${esc(c.left)} ${esc(c.operator)} ${esc(c.right)}</span><span style="color:${c.action === 'buy' ? '#3b82f6' : '#ef4444'}">${c.action === 'buy' ? '매수' : '매도'} ${c.percent}%</span>${fired ? '<span class="hist-fired-tag">✓ 처리됨</span>' : ''}</div>
+          <div class="hist-cond-title"><span class="hist-src">${esc(c.source)}</span><span>${esc(c.left)} ${esc(c.operator)} ${esc(c.right)}</span><span style="color:${c.action === 'buy' ? '#3b82f6' : '#ef4444'}">${c.action === 'buy' ? '매수' : '매도'} ${c.percent}%</span>${fired ? `<span class="hist-fired-tag">✓ 처리됨${mode ? ` · ${mode}` : ''}</span>` : ''}</div>
           <div class="hist-cond-line">${c.description ? `${esc(c.description)}<br/>` : ''}${extra.length ? esc(extra.join(' · ')) : '추가 제약 없음'}</div>
         </div>`;
       };
