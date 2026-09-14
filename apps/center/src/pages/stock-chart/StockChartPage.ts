@@ -70,7 +70,7 @@ export default (w: Window) => {
       this.yahooService = yahooService;
       this.router = router;
       // 직접 진입(?code=) 시 shadow DOM 준비 후 로드 (onInit 시점엔 엘리먼트 없음)
-      requestAnimationFrame(() => {
+      w.requestAnimationFrame(() => {
         try {
           const params = router?.getSearchParams?.();
           const code = params?.get('code');
@@ -294,7 +294,7 @@ export default (w: Window) => {
           chartEl.innerHTML = this.chartInnerHtml();
           // mutation observer가 새 봉 수집한 뒤에 복원 (동기 setView는 옛 개수 기준이라 1봉으로 잘림)
           if (v) {
-            requestAnimationFrame(() => {
+            w.requestAnimationFrame(() => {
               try { chartEl.setView(v.start + added, v.end + added); } catch {}
             });
           }

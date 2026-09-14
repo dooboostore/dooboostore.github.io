@@ -115,6 +115,15 @@ export default (w: Window) => {
       badge: 'New'
     },
     {
+      id: 'gpu-rental',
+      icon: '🎮',
+      title: 'GPU 렌탈 시세',
+      description: 'vast.ai GPU 시간당 렌탈료를 한눈에 확인하세요.',
+      path: '/gpu-rental',
+      color: '#6d28d9',
+      badge: 'New'
+    },
+    {
       id: 'stock-trading-simulation',
       icon: '📈',
       title: '가상 트레이딩',

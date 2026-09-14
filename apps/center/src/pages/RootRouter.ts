@@ -100,6 +100,12 @@ export default (w: Window) => {
       return `<center-stock-chart-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/gpu-rental"], { order: 9 })
+    @innerHtmlLight
+    handleGpuRental() {
+      return `<center-gpu-rental-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/stock-category-ranking"], { order: 9 })
     @innerHtmlLight
     handleStockCategoryRanking() {

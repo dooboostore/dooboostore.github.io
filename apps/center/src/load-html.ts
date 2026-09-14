@@ -16,7 +16,7 @@ async function renderPage(initialPath: string, templateHtml: string): Promise<st
   const { DomParser } = await import('@dooboostore/dom-parser');
   const parser = new DomParser(templateHtml, { href: `http://localhost${initialPath}` });
   const w = parser.window as unknown as Window & typeof globalThis;
-
+  console.log('window-href:', w.location.href);
   // SSR globals (DomParserInitializer 참고)
   (global as any).window = w;
   (global as any).document = w.document;
@@ -35,6 +35,7 @@ async function renderPage(initialPath: string, templateHtml: string): Promise<st
   (global as any).Element = (w as any).Element;
   (global as any).Document = (w as any).Document;
   (global as any).HTMLCanvasElement = (w as any).HTMLCanvasElement;
+  (global as any).FormData = (w as any).FormData;
   if ((global as any).HTMLCanvasElement) {
     (global as any).HTMLCanvasElement.prototype.getContext = () => null;
   }
@@ -78,13 +79,19 @@ async function renderPage(initialPath: string, templateHtml: string): Promise<st
   //   (global as any).MutationObserver = mutationRO;
   //   (globalThis as any).MutationObserver = mutationRO;
   // }
-  // // requestAnimationFrame polyfill for SSR (dom-parser WindowBase throws — unconditional override)
-  // (w as any).requestAnimationFrame = (cb: FrameRequestCallback) => setTimeout(cb, 0) as unknown as number;
-  // (w as any).cancelAnimationFrame = (id: number) => clearTimeout(id as any);
-  // (global as any).requestAnimationFrame = (w as any).requestAnimationFrame.bind(w);
-  // (global as any).cancelAnimationFrame = (w as any).cancelAnimationFrame.bind(w);
-  // (globalThis as any).requestAnimationFrame = (w as any).requestAnimationFrame.bind(w);
-  // (globalThis as any).cancelAnimationFrame = (w as any).cancelAnimationFrame.bind(w);
+  // requestAnimationFrame polyfill for SSR — unref()로 프로세스 종료 블로킹 방지
+  const ssrRaf = (cb: FrameRequestCallback): number => {
+    const t = setTimeout(() => cb(Date.now()), 16) as any;
+    try { if (t && typeof t.unref === 'function') t.unref(); } catch {}
+    return t as unknown as number;
+  };
+  const ssrCancelRaf = (id: number): void => { try { clearTimeout(id as any); } catch {} };
+  (w as any).requestAnimationFrame = ssrRaf;
+  (w as any).cancelAnimationFrame = ssrCancelRaf;
+  (global as any).requestAnimationFrame = ssrRaf;
+  (global as any).cancelAnimationFrame = ssrCancelRaf;
+  (globalThis as any).requestAnimationFrame = ssrRaf;
+  (globalThis as any).cancelAnimationFrame = ssrCancelRaf;
   // fetch polyfill for relative URLs (SSR)
   const origFetch = global.fetch;
   const fetchWrapper = (input: RequestInfo | URL, init?: RequestInit) => {

@@ -81,7 +81,7 @@ export default (w: Window) => {
         this.result = await this.tossService.getTicsRanking({
           nation: this.nation, duration: this.duration, sortBy: this.sortBy,
         });
-        requestAnimationFrame(() => {
+        w.requestAnimationFrame(() => {
           this.updateBubbles();
           this.updateBasedAt();
           this.updateCategoryList();

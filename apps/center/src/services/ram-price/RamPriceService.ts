@@ -190,244 +190,13 @@ export interface RamPriceSeries {
 export interface RamPriceResult {
   readonly updatedAt: string;
   readonly series: readonly RamPriceSeries[];
-  readonly source: 'memoryindex' | 'dramexchange' | 'fallback';
-}
-
-// ── memoryindex.io 타입 ────────────────────────────────────────────
-interface MemoryIndexPrice {
-  readonly id: string;
-  readonly memoryType: string;
-  readonly category: string;
-  readonly price: number;
-  readonly changePct: number;
-  readonly weeklyHigh: number;
-  readonly weeklyLow: number;
-  readonly sourceUpdatedAt: string;
-  readonly updatedAt: string;
+  readonly source: 'memoryindex' | 'dramexchange';
 }
 
 // ── 서비스 인터페이스 ──────────────────────────────────────────────
 export interface RamPriceService {
   getRamPrices(types?: readonly RamType[], historyDays?: number): Promise<RamPriceResult>;
   getRamHistory(type: RamType, historyDays?: number): Promise<RamPriceSeries>;
-}
-
-// ── fallback 정적 데이터 ──────────────────────────────────────────
-// 출처: DRAMeXchange, memoryindex.io, Tom's Hardware 공개 자료 (2024-01~2026-09)
-const FALLBACK_HISTORY: Record<RamType, Array<{ date: string; price: number }>> = {
-  // ── DRAM ──────────────────────────────────────────────────────────
-  DDR5: [
-    { date: '2024-01-01', price: 4.20 }, { date: '2024-02-01', price: 4.50 },
-    { date: '2024-03-01', price: 5.10 }, { date: '2024-04-01', price: 5.80 },
-    { date: '2024-05-01', price: 6.20 }, { date: '2024-06-01', price: 6.80 },
-    { date: '2024-07-01', price: 7.50 }, { date: '2024-08-01', price: 8.20 },
-    { date: '2024-09-01', price: 8.80 }, { date: '2024-10-01', price: 10.50 },
-    { date: '2024-11-01', price: 16.00 }, { date: '2024-12-01', price: 24.00 },
-    { date: '2025-01-01', price: 27.00 }, { date: '2025-02-01', price: 31.00 },
-    { date: '2025-03-01', price: 36.00 }, { date: '2025-04-01', price: 40.00 },
-    { date: '2025-05-01', price: 44.00 }, { date: '2025-06-01', price: 47.00 },
-    { date: '2025-07-01', price: 49.00 }, { date: '2025-08-01', price: 51.00 },
-    { date: '2025-09-01', price: 52.00 }, { date: '2025-10-01', price: 53.00 },
-    { date: '2025-11-01', price: 54.00 }, { date: '2025-12-01', price: 54.50 },
-    { date: '2026-01-01', price: 53.00 }, { date: '2026-02-01', price: 52.00 },
-    { date: '2026-03-01', price: 51.50 }, { date: '2026-04-01', price: 52.00 },
-    { date: '2026-05-01', price: 52.50 }, { date: '2026-06-01', price: 53.00 },
-    { date: '2026-07-01', price: 53.20 }, { date: '2026-08-01', price: 53.40 },
-    { date: '2026-09-01', price: 53.33 },
-  ],
-  DDR4: [
-    { date: '2024-01-01', price: 3.10 }, { date: '2024-02-01', price: 3.30 },
-    { date: '2024-03-01', price: 3.60 }, { date: '2024-04-01', price: 4.00 },
-    { date: '2024-05-01', price: 4.30 }, { date: '2024-06-01', price: 4.80 },
-    { date: '2024-07-01', price: 5.50 }, { date: '2024-08-01', price: 6.20 },
-    { date: '2024-09-01', price: 7.00 }, { date: '2024-10-01', price: 9.50 },
-    { date: '2024-11-01', price: 13.00 }, { date: '2024-12-01', price: 18.00 },
-    { date: '2025-01-01', price: 22.00 }, { date: '2025-02-01', price: 28.00 },
-    { date: '2025-03-01', price: 34.00 }, { date: '2025-04-01', price: 40.00 },
-    { date: '2025-05-01', price: 50.00 }, { date: '2025-06-01', price: 60.00 },
-    { date: '2025-07-01', price: 70.00 }, { date: '2025-08-01', price: 80.00 },
-    { date: '2025-09-01', price: 85.00 }, { date: '2025-10-01', price: 88.00 },
-    { date: '2025-11-01', price: 90.00 }, { date: '2025-12-01', price: 91.00 },
-    { date: '2026-01-01', price: 91.50 }, { date: '2026-02-01', price: 91.80 },
-    { date: '2026-03-01', price: 92.00 }, { date: '2026-04-01', price: 92.10 },
-    { date: '2026-05-01', price: 91.80 }, { date: '2026-06-01', price: 91.90 },
-    { date: '2026-07-01', price: 92.00 }, { date: '2026-08-01', price: 92.10 },
-    { date: '2026-09-01', price: 92.12 },
-  ],
-  DDR3: [
-    { date: '2024-01-01', price: 2.40 }, { date: '2024-04-01', price: 2.80 },
-    { date: '2024-07-01', price: 3.20 }, { date: '2024-10-01', price: 4.00 },
-    { date: '2025-01-01', price: 5.50 }, { date: '2025-04-01', price: 6.80 },
-    { date: '2025-07-01', price: 8.00 }, { date: '2025-10-01', price: 8.50 },
-    { date: '2026-01-01', price: 8.80 }, { date: '2026-04-01', price: 8.90 },
-    { date: '2026-07-01', price: 8.94 }, { date: '2026-09-01', price: 8.94 },
-  ],
-  GDDR6: [
-    { date: '2024-01-01', price: 3.50 }, { date: '2024-04-01', price: 3.80 },
-    { date: '2024-07-01', price: 4.20 }, { date: '2024-10-01', price: 5.00 },
-    { date: '2025-01-01', price: 5.80 }, { date: '2025-04-01', price: 7.00 },
-    { date: '2025-07-01', price: 8.50 }, { date: '2025-10-01', price: 10.00 },
-    { date: '2026-01-01', price: 11.20 }, { date: '2026-04-01', price: 11.50 },
-    { date: '2026-07-01', price: 11.60 }, { date: '2026-09-01', price: 11.63 },
-  ],
-  // ── HBM ───────────────────────────────────────────────────────────
-  HBM4: [
-    // HBM4 48GB: 2025Q3 양산 시작, 초기 $450+ → 점진 하락 예상
-    { date: '2025-07-01', price: 480.00 }, { date: '2025-08-01', price: 510.00 },
-    { date: '2025-09-01', price: 520.00 }, { date: '2025-10-01', price: 515.00 },
-    { date: '2025-11-01', price: 508.00 }, { date: '2025-12-01', price: 505.00 },
-    { date: '2026-01-01', price: 502.00 }, { date: '2026-02-01', price: 500.50 },
-    { date: '2026-03-01', price: 500.00 }, { date: '2026-04-01', price: 500.20 },
-    { date: '2026-05-01', price: 500.30 }, { date: '2026-06-01', price: 500.25 },
-    { date: '2026-07-01', price: 500.28 }, { date: '2026-08-01', price: 500.30 },
-    { date: '2026-09-01', price: 500.29 },
-  ],
-  HBM3E: [
-    { date: '2024-01-01', price: 95.00 }, { date: '2024-04-01', price: 110.00 },
-    { date: '2024-07-01', price: 130.00 }, { date: '2024-10-01', price: 150.00 },
-    { date: '2025-01-01', price: 160.00 }, { date: '2025-04-01', price: 175.00 },
-    { date: '2025-07-01', price: 190.00 }, { date: '2025-10-01', price: 200.00 },
-    { date: '2026-01-01', price: 205.00 }, { date: '2026-04-01', price: 203.00 },
-    { date: '2026-07-01', price: 200.00 }, { date: '2026-09-01', price: 199.95 },
-  ],
-  HBM3: [
-    { date: '2024-01-01', price: 80.00 }, { date: '2024-04-01', price: 90.00 },
-    { date: '2024-07-01', price: 105.00 }, { date: '2024-10-01', price: 120.00 },
-    { date: '2025-01-01', price: 130.00 }, { date: '2025-04-01', price: 145.00 },
-    { date: '2025-07-01', price: 160.00 }, { date: '2025-10-01', price: 175.00 },
-    { date: '2026-01-01', price: 185.00 }, { date: '2026-04-01', price: 193.00 },
-    { date: '2026-07-01', price: 199.00 }, { date: '2026-09-01', price: 199.95 },
-  ],
-  // ── Mobile ─────────────────────────────────────────────────────────
-  LPDDR5X: [
-    { date: '2024-01-01', price: 8.50 }, { date: '2024-04-01', price: 9.20 },
-    { date: '2024-07-01', price: 10.50 }, { date: '2024-10-01', price: 12.50 },
-    { date: '2025-01-01', price: 15.00 }, { date: '2025-04-01', price: 18.00 },
-    { date: '2025-07-01', price: 22.00 }, { date: '2025-10-01', price: 26.00 },
-    { date: '2026-01-01', price: 28.50 }, { date: '2026-04-01', price: 29.50 },
-    { date: '2026-07-01', price: 29.80 }, { date: '2026-09-01', price: 29.88 },
-  ],
-  LPDDR5: [
-    { date: '2024-01-01', price: 7.50 }, { date: '2024-04-01', price: 8.20 },
-    { date: '2024-07-01', price: 9.50 }, { date: '2024-10-01', price: 11.00 },
-    { date: '2025-01-01', price: 13.50 }, { date: '2025-04-01', price: 16.00 },
-    { date: '2025-07-01', price: 19.50 }, { date: '2025-10-01', price: 23.00 },
-    { date: '2026-01-01', price: 25.00 }, { date: '2026-04-01', price: 25.50 },
-    { date: '2026-07-01', price: 26.00 }, { date: '2026-09-01', price: 26.11 },
-  ],
-  LPDDR4: [
-    { date: '2024-01-01', price: 3.80 }, { date: '2024-04-01', price: 4.20 },
-    { date: '2024-07-01', price: 5.00 }, { date: '2024-10-01', price: 5.80 },
-    { date: '2025-01-01', price: 6.80 }, { date: '2025-04-01', price: 8.00 },
-    { date: '2025-07-01', price: 9.50 }, { date: '2025-10-01', price: 11.50 },
-    { date: '2026-01-01', price: 12.20 }, { date: '2026-04-01', price: 12.60 },
-    { date: '2026-07-01', price: 12.80 }, { date: '2026-09-01', price: 12.86 },
-  ],
-  // ── NAND ───────────────────────────────────────────────────────────
-  NAND_TLC_512G: [
-    { date: '2024-01-01', price: 3.20 }, { date: '2024-04-01', price: 3.80 },
-    { date: '2024-07-01', price: 4.50 }, { date: '2024-10-01', price: 5.50 },
-    { date: '2025-01-01', price: 6.80 }, { date: '2025-04-01', price: 7.50 },
-    { date: '2025-07-01', price: 8.20 }, { date: '2025-10-01', price: 9.00 },
-    { date: '2026-01-01', price: 9.50 }, { date: '2026-04-01', price: 9.70 },
-    { date: '2026-07-01', price: 9.80 }, { date: '2026-09-01', price: 9.81 },
-  ],
-  NAND_TLC_1T: [
-    { date: '2024-01-01', price: 5.80 }, { date: '2024-04-01', price: 6.80 },
-    { date: '2024-07-01', price: 8.00 }, { date: '2024-10-01', price: 9.80 },
-    { date: '2025-01-01', price: 12.00 }, { date: '2025-04-01', price: 13.50 },
-    { date: '2025-07-01', price: 15.00 }, { date: '2025-10-01', price: 16.50 },
-    { date: '2026-01-01', price: 17.20 }, { date: '2026-04-01', price: 17.50 },
-    { date: '2026-07-01', price: 17.60 }, { date: '2026-09-01', price: 17.66 },
-  ],
-  NAND_QLC_2T: [
-    { date: '2024-01-01', price: 9.50 }, { date: '2024-04-01', price: 11.00 },
-    { date: '2024-07-01', price: 13.00 }, { date: '2024-10-01', price: 16.00 },
-    { date: '2025-01-01', price: 19.50 }, { date: '2025-04-01', price: 22.00 },
-    { date: '2025-07-01', price: 24.50 }, { date: '2025-10-01', price: 27.00 },
-    { date: '2026-01-01', price: 29.00 }, { date: '2026-04-01', price: 29.80 },
-    { date: '2026-07-01', price: 30.30 }, { date: '2026-09-01', price: 30.46 },
-  ],
-  // ── Storage ────────────────────────────────────────────────────────
-  SSD_ESSD_30T: [
-    // 엔터프라이즈 SSD ($/TB 아닌 per unit)
-    { date: '2024-01-01', price: 2800 }, { date: '2024-04-01', price: 3100 },
-    { date: '2024-07-01', price: 3400 }, { date: '2024-10-01', price: 3700 },
-    { date: '2025-01-01', price: 3900 }, { date: '2025-04-01', price: 4100 },
-    { date: '2025-07-01', price: 4300 }, { date: '2025-10-01', price: 4500 },
-    { date: '2026-01-01', price: 4580 }, { date: '2026-04-01', price: 4620 },
-    { date: '2026-07-01', price: 4650 }, { date: '2026-09-01', price: 4656 },
-  ],
-  SSD_RTL_NVME_1T: [
-    { date: '2024-01-01', price: 68 }, { date: '2024-04-01', price: 78 },
-    { date: '2024-07-01', price: 90 }, { date: '2024-10-01', price: 105 },
-    { date: '2025-01-01', price: 118 }, { date: '2025-04-01', price: 130 },
-    { date: '2025-07-01', price: 145 }, { date: '2025-10-01', price: 160 },
-    { date: '2026-01-01', price: 175 }, { date: '2026-04-01', price: 185 },
-    { date: '2026-07-01', price: 192 }, { date: '2026-09-01', price: 195.95 },
-  ],
-  SSD_RTL_NVME_2T: [
-    { date: '2024-01-01', price: 115 }, { date: '2024-04-01', price: 132 },
-    { date: '2024-07-01', price: 152 }, { date: '2024-10-01', price: 178 },
-    { date: '2025-01-01', price: 200 }, { date: '2025-04-01', price: 222 },
-    { date: '2025-07-01', price: 248 }, { date: '2025-10-01', price: 272 },
-    { date: '2026-01-01', price: 298 }, { date: '2026-04-01', price: 320 },
-    { date: '2026-07-01', price: 372 }, { date: '2026-09-01', price: 376.39 },
-  ],
-  SSD_OEM_1T: [
-    { date: '2024-01-01', price: 42 }, { date: '2024-04-01', price: 50 },
-    { date: '2024-07-01', price: 60 }, { date: '2024-10-01', price: 72 },
-    { date: '2025-01-01', price: 82 }, { date: '2025-04-01', price: 92 },
-    { date: '2025-07-01', price: 103 }, { date: '2025-10-01', price: 112 },
-    { date: '2026-01-01', price: 118 }, { date: '2026-04-01', price: 122 },
-    { date: '2026-07-01', price: 124 }, { date: '2026-09-01', price: 125.29 },
-  ],
-  EMMC_32G: [
-    { date: '2024-01-01', price: 8.50 }, { date: '2024-04-01', price: 9.20 },
-    { date: '2024-07-01', price: 10.50 }, { date: '2024-10-01', price: 12.00 },
-    { date: '2025-01-01', price: 14.00 }, { date: '2025-04-01', price: 15.50 },
-    { date: '2025-07-01', price: 17.00 }, { date: '2025-10-01', price: 18.50 },
-    { date: '2026-01-01', price: 19.50 }, { date: '2026-04-01', price: 20.00 },
-    { date: '2026-07-01', price: 20.15 }, { date: '2026-09-01', price: 20.19 },
-  ],
-  UFS_128G: [
-    { date: '2024-01-01', price: 12.00 }, { date: '2024-04-01', price: 13.50 },
-    { date: '2024-07-01', price: 15.50 }, { date: '2024-10-01', price: 17.50 },
-    { date: '2025-01-01', price: 20.00 }, { date: '2025-04-01', price: 22.50 },
-    { date: '2025-07-01', price: 25.00 }, { date: '2025-10-01', price: 27.50 },
-    { date: '2026-01-01', price: 28.50 }, { date: '2026-04-01', price: 28.90 },
-    { date: '2026-07-01', price: 29.00 }, { date: '2026-09-01', price: 29.02 },
-  ],
-  UFS4_256G: [
-    { date: '2024-01-01', price: 22.00 }, { date: '2024-04-01', price: 25.00 },
-    { date: '2024-07-01', price: 28.50 }, { date: '2024-10-01', price: 32.00 },
-    { date: '2025-01-01', price: 36.00 }, { date: '2025-04-01', price: 40.00 },
-    { date: '2025-07-01', price: 44.00 }, { date: '2025-10-01', price: 48.00 },
-    { date: '2026-01-01', price: 51.50 }, { date: '2026-04-01', price: 53.50 },
-    { date: '2026-07-01', price: 54.80 }, { date: '2026-09-01', price: 54.99 },
-  ],
-};
-
-function buildSeriesFromFallback(types: readonly RamType[]): RamPriceResult {
-  const series: RamPriceSeries[] = types.map(type => {
-    const info = RAM_TYPES.find(t => t.id === type)!;
-    const raw = FALLBACK_HISTORY[type] ?? [];
-    const history: RamPricePoint[] = raw.map((item, i) => {
-      const prev = raw[i - 1]?.price;
-      const changePct = prev != null ? ((item.price - prev) / prev) * 100 : 0;
-      return { date: item.date, price: item.price, changePct };
-    });
-    const prices = history.map(h => h.price);
-    const latestPrice = prices[prices.length - 1] ?? 0;
-    const latestChangePct = history[history.length - 1]?.changePct ?? 0;
-    const w52 = prices.slice(-52);
-    return {
-      type, info, history, latestPrice, latestChangePct,
-      high52w: w52.length ? Math.max(...w52) : latestPrice,
-      low52w:  w52.length ? Math.min(...w52) : latestPrice,
-    };
-  });
-  return { updatedAt: new Date().toISOString(), series, source: 'fallback' };
 }
 
 export default (container: symbol): ConstructorType<RamPriceService> => {
@@ -443,10 +212,82 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
       return (await res.json()) as T;
     }
 
-    private async fetchCurrentPrices(): Promise<readonly MemoryIndexPrice[]> {
-      const json = await this.fetchJson<any>(`${this.MEMORY_INDEX_BASE}/memory-types`);
-      const items: any[] = Array.isArray(json) ? json : (json.data ?? []);
-      return items.filter((it: any) => it && typeof it.price === 'number');
+    /** 공식 무료 API — 전체 보드 (키 없이 10계약, 12시간 지연) */
+    private async fetchBoardPrices(): Promise<Map<string, { price: number; changePct: number }>> {
+      const result = new Map<string, { price: number; changePct: number }>();
+      try {
+        const json = await this.fetchJson<any>(
+          'https://memoryindex.io/api/public/v1/prices',
+        );
+        const mem: any[] = json?.memory ?? [];
+        for (const m of mem) {
+          const price = Number(m.spot_usd ?? m.price);
+          if (m?.ticker && Number.isFinite(price)) {
+            result.set(String(m.ticker), {
+              price,
+              changePct: Number(m.chg_24h_pct ?? 0),
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('[RamPriceService] board API 실패:', e);
+      }
+      return result;
+    }
+
+    /** 시드 히스토리 (SVG 추출 1년치, /datas/ram/history.json) */
+    private historyCache: Record<string, { date: string; price: number }[]> | null = null;
+    private async loadSeedHistory(): Promise<Record<string, { date: string; price: number }[]>> {
+      if (this.historyCache) return this.historyCache;
+      try {
+        const res = await fetch('/datas/ram/history.json', { headers: { accept: 'application/json' } });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        this.historyCache = (await res.json()) as Record<string, { date: string; price: number }[]>;
+      } catch (e) {
+        console.warn('[RamPriceService] seed history 없음:', e);
+        this.historyCache = {};
+      }
+      return this.historyCache;
+    }
+
+    private findSeed(
+      seed: Record<string, { date: string; price: number }[]>,
+      miId: string,
+    ): { date: string; price: number }[] {
+      if (seed[miId]?.length) return seed[miId];
+      const up = miId.toUpperCase();
+      const key = Object.keys(seed).find(k => k.toUpperCase() === up);
+      return key ? seed[key] : [];
+    }
+    private async fetchLivePrices(): Promise<Map<string, { price: number; changePct: number }>> {
+      const result = new Map<string, { price: number; changePct: number }>();
+      try {
+        const proxyUrl = `${this.CORS_PROXY}${encodeURIComponent('https://memoryindex.io/')}`;
+        const res = await fetch(proxyUrl, {
+          headers: {
+            accept: 'text/html',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+          },
+        });
+        if (!res.ok) return result;
+        const html = await res.text();
+
+        // 패턴: text-muted-foreground">ID</span><span ...>$price</span><span ...>±pct%</span>
+        // 예: DDR5-16G</span><span class="text-foreground">$53.33</span><span class="text-down">-2.00%</span>
+        const re = /text-muted-foreground">([A-Za-z0-9\-+.]+)<\/span><span[^>]*>\$([0-9,]+(?:\.[0-9]+)?)<\/span><span[^>]*>([+-][0-9.]+)%<\/span>/g;
+        let m: RegExpExecArray | null;
+        while ((m = re.exec(html)) !== null) {
+          const id = m[1];
+          const price = parseFloat(m[2].replace(/,/g, ''));
+          const changePct = parseFloat(m[3]);
+          if (id && Number.isFinite(price) && !result.has(id)) {
+            result.set(id, { price, changePct });
+          }
+        }
+      } catch (e) {
+        console.warn('[RamPriceService] HTML 파싱 실패:', e);
+      }
+      return result;
     }
 
     async getRamHistory(type: RamType, historyDays = 365): Promise<RamPriceSeries> {
@@ -458,61 +299,60 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
       types: readonly RamType[] = RAM_TYPES.map(t => t.id),
       historyDays = 365,
     ): Promise<RamPriceResult> {
-      try {
-        const currentList = await this.fetchCurrentPrices();
-        const cutoff = new Date();
-        cutoff.setDate(cutoff.getDate() - historyDays);
+      // 실시간: 공식 보드 API 우선 → marquee 파싱 폴백. 히스토리: 시드 JSON + 라이브 1점.
+      const [board, marquee, seed] = await Promise.all([
+        this.fetchBoardPrices(),
+        this.fetchLivePrices(),
+        this.loadSeedHistory(),
+      ]);
+      const live = new Map(board.size ? board : marquee);
+      const cutoff = new Date();
+      cutoff.setDate(cutoff.getDate() - historyDays);
+      const today = new Date().toISOString().slice(0, 10);
 
-        const series: RamPriceSeries[] = await Promise.all(
-          types.map(async (ramType): Promise<RamPriceSeries> => {
-            const info = RAM_TYPES.find(t => t.id === ramType)!;
-            const current = currentList.find(it =>
-              it.id?.toUpperCase() === info.miId?.toUpperCase()
-            );
+      const series: RamPriceSeries[] = types.map((ramType): RamPriceSeries => {
+        const info = RAM_TYPES.find(t => t.id === ramType)!;
+        const current = live.get(info.miId)
+          ?? [...live.entries()].find(([k]) => k.toUpperCase() === info.miId.toUpperCase())?.[1]
+          ?? null;
+        // 시드: 기간 필터 + 오늘 이후(추출 오차) 제거 + 날짜 정렬·중복 제거
+        const seen = new Set<string>();
+        const history: RamPricePoint[] = [];
+        for (const p of this.findSeed(seed, info.miId)) {
+          if (p.date < cutoff.toISOString().slice(0, 10) || p.date > today) continue;
+          if (seen.has(p.date)) continue;
+          seen.add(p.date);
+          const prev = history.length ? history[history.length - 1].price : undefined;
+          history.push({
+            date: p.date, price: p.price,
+            changePct: prev != null && prev > 0 ? ((p.price - prev) / prev) * 100 : 0,
+          });
+        }
+        if (current) {
+          const lastIdx = history.length - 1;
+          const updated: RamPricePoint = {
+            date: today,
+            price: current.price,
+            changePct: current.changePct,
+          };
+          if (lastIdx < 0 || history[lastIdx].date !== today) {
+            history.push(updated);
+          } else {
+            history[lastIdx] = updated;
+          }
+        }
+        const prices = history.map(h => h.price);
+        const latestPrice = current?.price ?? prices[prices.length - 1] ?? 0;
+        const latestChangePct = current?.changePct ?? history[history.length - 1]?.changePct ?? 0;
+        const w52 = prices.slice(-52);
+        return {
+          type: ramType, info, history, latestPrice, latestChangePct,
+          high52w: w52.length ? Math.max(...w52) : latestPrice,
+          low52w:  w52.length ? Math.min(...w52) : latestPrice,
+        };
+      });
 
-            const raw = FALLBACK_HISTORY[ramType] ?? [];
-            const history: RamPricePoint[] = raw
-              .filter(r => new Date(r.date) >= cutoff)
-              .map((item, i, arr) => {
-                const prev = arr[i - 1]?.price;
-                const changePct = prev != null ? ((item.price - prev) / prev) * 100 : 0;
-                return { date: item.date, price: item.price, changePct };
-              });
-
-            if (current) {
-              const today = new Date().toISOString().slice(0, 10);
-              const lastIdx = history.length - 1;
-              const updated: RamPricePoint = {
-                date: today,
-                price: current.price,
-                changePct: current.changePct,
-                weeklyHigh: current.weeklyHigh,
-                weeklyLow: current.weeklyLow,
-              };
-              if (lastIdx < 0 || history[lastIdx].date !== today) {
-                history.push(updated);
-              } else {
-                history[lastIdx] = updated;
-              }
-            }
-
-            const prices = history.map(h => h.price);
-            const latestPrice = current?.price ?? prices[prices.length - 1] ?? 0;
-            const latestChangePct = current?.changePct ?? history[history.length - 1]?.changePct ?? 0;
-            const w52 = prices.slice(-52);
-            return {
-              type: ramType, info, history, latestPrice, latestChangePct,
-              high52w: w52.length ? Math.max(...w52) : latestPrice,
-              low52w:  w52.length ? Math.min(...w52) : latestPrice,
-            };
-          }),
-        );
-
-        return { updatedAt: new Date().toISOString(), series, source: 'memoryindex' };
-      } catch (e) {
-        console.warn('[RamPriceService] API 실패, fallback 사용:', e);
-        return buildSeriesFromFallback(types);
-      }
+      return { updatedAt: new Date().toISOString(), series, source: 'memoryindex' };
     }
   }
 

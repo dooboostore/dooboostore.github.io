@@ -12,6 +12,7 @@ import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRank
 import StockCategoryPage from './stock-category/StockCategoryPage';
 import StockIndicatorPage from './stock-indicator/StockIndicatorPage';
 import StockChartPage from './stock-chart/StockChartPage';
+import GpuRentalPage from './gpu-rental/GpuRentalPage';
 import StockTradingSimulationPage from './stock-trading-simulation/StockTradingSimulationPage';
 import SimConfigForm from './stock-trading-simulation/components/SimConfigForm';
 import SimCandleForm from './stock-trading-simulation/components/SimCandleForm';
@@ -76,6 +77,7 @@ export const pageFactories = [
   StockCategoryPage,
   StockIndicatorPage,
   StockChartPage,
+  GpuRentalPage,
   StockTradingSimulationPage,
   SimConfigForm,
   SimCandleForm,

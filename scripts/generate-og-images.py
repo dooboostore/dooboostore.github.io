@@ -27,6 +27,7 @@ Page → emoji mapping:
   stock-category-list      🗂️ 1f5c2  (종목 카테고리 페이지)
   stock-indicator          📉 1f4c9  (주요 지표 페이지)
   stock-chart              📉 1f4c9  (종목 차트 페이지 — 지표와 공용)
+  gpu-rental               🎮 1fa80  (GPU 렌탈 페이지)
   stock-trading-simulation 💹 1f4b9
 """
 import argparse
@@ -57,6 +58,7 @@ MAPPING = [
     ("stock-category-list-og.png", "1f5c2", "🗂️"),
     ("stock-indicator-og.png", "1f4c9", "📉"),
     ("stock-chart-og.png", "1f4c9", "📉"),
+    ("gpu-rental-og.png", "1fa80", "🎮"),
     ("stock-trading-simulation-og.png", "1f4c8", "📈"),
     ("ram-price-og.png", "1f4be", "💾"),
 ]
