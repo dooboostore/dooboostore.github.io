@@ -26,6 +26,39 @@ import MathRotate from './math/components/MathRotate';
 import MathTrig from './math/components/MathTrig';
 import MathProject from './math/components/MathProject';
 import MathCross from './math/components/MathCross';
+import MathRank from './math/components/MathRank';
+import MathEigen from './math/components/MathEigen';
+import MathTranslate from './math/components/MathTranslate';
+import MathDet from './math/components/MathDet';
+import MathPCA from './math/components/MathPCA';
+import MathKabsch from './math/components/MathKabsch';
+import MathRotationCompare from './math/components/MathRotationCompare';
+import MathRotationMatrix from './math/components/MathRotationMatrix';
+import MathSE3Chain from './math/components/MathSE3Chain';
+import MathJacobian from './math/components/MathJacobian';
+import MathGraph from './math/components/MathGraph';
+import MathKalman from './math/components/MathKalman';
+import MathFourier from './math/components/MathFourier';
+import MathEpicycle from './math/components/MathEpicycle';
+import MathEuler from './math/components/MathEuler';
+import MathEConverge from './math/components/MathEConverge';
+import MathPID from './math/components/MathPID';
+import MathNaturalNumber from './math/components/MathNaturalNumber';
+import MathRealNumber from './math/components/MathRealNumber';
+import MathImaginaryNumber from './math/components/MathImaginaryNumber';
+import MathComplex from './math/components/MathComplex';
+import MathDerivative from './math/components/MathDerivative';
+import MathIntegral from './math/components/MathIntegral';
+import MathLaplace from './math/components/MathLaplace';
+import MathTimeConstant from './math/components/MathTimeConstant';
+import MathDampingRatio from './math/components/MathDampingRatio';
+import MathControlMap from './math/components/MathControlMap';
+import MathGain from './math/components/MathGain';
+import MathLoop from './math/components/MathLoop';
+import PhysicalPage from './physical/PhysicalPage';
+import PhysicalGearRatio from './physical/components/PhysicalGearRatio';
+import PhysicalImu from './physical/components/PhysicalImu';
+import PhysicalDof from './physical/components/PhysicalDof';
 import RamPricePage from './ram-price/RamPricePage';
 
 export const pageFactories = [
@@ -57,5 +90,38 @@ export const pageFactories = [
   MathTrig,
   MathProject,
   MathCross,
+  MathRank,
+  MathEigen,
+  MathTranslate,
+  MathDet,
+  MathPCA,
+  MathKabsch,
+  MathRotationCompare,
+  MathRotationMatrix,
+  MathSE3Chain,
+  MathJacobian,
+  MathGraph,
+  MathKalman,
+  MathFourier,
+  MathEpicycle,
+  MathEuler,
+  MathEConverge,
+  MathPID,
+  MathNaturalNumber,
+  MathRealNumber,
+  MathImaginaryNumber,
+  MathComplex,
+  MathDerivative,
+  MathIntegral,
+  MathLaplace,
+  MathTimeConstant,
+  MathDampingRatio,
+  MathControlMap,
+  MathGain,
+  MathLoop,
+  PhysicalPage,
+  PhysicalGearRatio,
+  PhysicalImu,
+  PhysicalDof,
   RamPricePage,
 ];

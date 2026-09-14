@@ -124,6 +124,12 @@ export default (w: Window) => {
       return `<center-ram-price-page/>`;
     }
 
+    @subscribeSwcAppRouteChangeWhileConnected(["/physical"], { order: 13 })
+    @innerHtmlLight({ filter: skipIfExists('center-physical-page') })
+    handlePhysical() {
+      return `<center-physical-page/>`;
+    }
+
     @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {

@@ -133,6 +133,15 @@ export default (w: Window) => {
       badge: 'New'
     },
     {
+      id: 'physical',
+      icon: '🦾',
+      title: '피지컬 AI 개념',
+      description: '기어비·IMU·자유도 등 로봇·피지컬 AI에서 쓰는 하드웨어·센서·역학 개념을 그래프로 시각화해보세요.',
+      path: '/physical',
+      color: '#0f766e',
+      badge: 'New'
+    },
+    {
       id: 'ram-price',
       icon: '💾',
       title: '반도체 RAM 가격 추이',

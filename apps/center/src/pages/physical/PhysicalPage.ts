@@ -10,48 +10,14 @@ import {
 } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
 
-const tagName = 'center-math-page';
+const tagName = 'center-physical-page';
 
-type MathConcept = 'vector' | 'dot' | 'norm' | 'normalize' | 'derivative' | 'integral' | 'rotate' | 'translate' | 'trig' | 'project' | 'cross' | 'rotmatrix' | 'se3chain' | 'det' | 'rank' | 'eigen' | 'pca' | 'kabsch' | 'rotcompare' | 'jacobian' | 'graph' | 'kalman' | 'pid' | 'gain' | 'naturalnumber' | 'realnumber' | 'imaginarynumber' | 'complex' | 'fourier' | 'epicycle' | 'euler' | 'econverge' | 'timeconstant' | 'damping' | 'laplace' | 'controlmap' | 'loop';
+type PhysicalConcept = 'gearratio' | 'imu' | 'dof';
 
-const CONCEPTS: { id: MathConcept; label: string; el: string; group?: string }[] = [
-  { id: 'vector', label: '벡터', el: 'center-math-vector' },
-  { id: 'dot', label: '내적', el: 'center-math-dot' },
-  { id: 'norm', label: '노름', el: 'center-math-norm' },
-  { id: 'normalize', label: '정규화', el: 'center-math-normalize' },
-  { id: 'derivative', label: '미분', el: 'center-math-derivative' },
-  { id: 'integral', label: '적분', el: 'center-math-integral' },
-  { id: 'rotate', label: '회전', el: 'center-math-rotate' },
-  { id: 'translate', label: '병진(평행이동)', el: 'center-math-translate' },
-  { id: 'trig', label: '삼각함수', el: 'center-math-trig' },
-  { id: 'project', label: '정사영', el: 'center-math-project' },
-  { id: 'cross', label: '외적·평면법선', el: 'center-math-cross' },
-  { id: 'rotmatrix', label: '회전행렬', el: 'center-math-rotmatrix' },
-  { id: 'se3chain', label: 'SE(3) 좌표계 체인', el: 'center-math-se3chain' },
-  { id: 'det', label: '행렬식(det)', el: 'center-math-det' },
-  { id: 'rank', label: 'rank(상자)', el: 'center-math-rank' },
-  { id: 'eigen', label: '고유값·고유벡터', el: 'center-math-eigen' },
-  { id: 'jacobian', label: '자코비안·특이점', el: 'center-math-jacobian' },
-  { id: 'pca', label: 'PCA(주성분분석)', el: 'center-math-pca' },
-  { id: 'kabsch', label: 'Kabsch(점군 정렬)', el: 'center-math-kabsch' },
-  { id: 'rotcompare', label: '오일러·쿼터니언·Gram-Schmidt 비교', el: 'center-math-rot-compare' },
-  { id: 'graph', label: '그래프·최단경로', el: 'center-math-graph' },
-  { id: 'kalman', label: '칼만 필터', el: 'center-math-kalman' },
-  { id: 'pid', label: 'PID 제어', el: 'center-math-pid' },
-  { id: 'gain', label: '게인(이득)', el: 'center-math-gain' },
-  { id: 'naturalnumber', label: '자연수', el: 'center-math-naturalnumber' },
-  { id: 'realnumber', label: '실수', el: 'center-math-realnumber' },
-  { id: 'imaginarynumber', label: '허수', el: 'center-math-imaginarynumber' },
-  { id: 'complex', label: '복소수', el: 'center-math-complex' },
-  { id: 'fourier', label: '푸리에 변환', el: 'center-math-fourier' },
-  { id: 'epicycle', label: '푸리에 원 애니메이션', el: 'center-math-epicycle' },
-  { id: 'econverge', label: '자연상수 e로 수렴', el: 'center-math-econverge' },
-  { id: 'euler', label: '오일러 공식(e^iθ)', el: 'center-math-euler' },
-  { id: 'timeconstant', label: '시정수(τ)', el: 'center-math-timeconstant' },
-  { id: 'damping', label: '감쇠비·고유진동수(ζ,ωn)', el: 'center-math-damping' },
-  { id: 'laplace', label: '라플라스 변환', el: 'center-math-laplace' },
-  { id: 'controlmap', label: 'PID·라플라스·감쇠비·시정수 관계', el: 'center-math-controlmap' },
-  { id: 'loop', label: '개루프·폐루프', el: 'center-math-loop' },
+const CONCEPTS: { id: PhysicalConcept; label: string; el: string; group?: string }[] = [
+  { id: 'gearratio', label: '기어비·토크-속도', el: 'center-physical-gearratio' },
+  { id: 'imu', label: 'IMU(가속도계·자이로)', el: 'center-physical-imu' },
+  { id: 'dof', label: '자유도(DOF)·여분자유도', el: 'center-physical-dof' },
 ];
 
 export default (w: Window) => {
@@ -59,7 +25,7 @@ export default (w: Window) => {
   if (existing) return tagName;
 
   @elementDefine(tagName, { window: w })
-  class MathPage extends w.HTMLElement {
+  class PhysicalPage extends w.HTMLElement {
     @onConnectedBefore
     @innerHtml((c, helper) => helper.$w.document.querySelector('title'), { valueKey: 'titleBody' })
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), 'content', { valueKey: 'ogTitle' })
@@ -71,25 +37,25 @@ export default (w: Window) => {
     @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), 'content', { valueKey: 'twitterDesc' })
     setPageMeta() {
       return {
-        titleBody: '수학 그래프 | @dooboostore',
-        ogTitle: '수학 그래프 | @dooboostore',
-        desc: '벡터·내적·노름을 그래프로 시각화해 보세요.',
-        ogDesc: '벡터·내적·노름을 그래프로 시각화해 보세요.',
-        ogImage: '/assets/images/math-og.png',
-        twitterImage: '/assets/images/math-og.png',
-        twitterTitle: '수학 그래프 | @dooboostore',
-        twitterDesc: '벡터·내적·노름을 그래프로 시각화해 보세요.',
+        titleBody: '피지컬 AI 개념 | @dooboostore',
+        ogTitle: '피지컬 AI 개념 | @dooboostore',
+        desc: '로봇·피지컬 AI에서 쓰는 하드웨어·센서·역학 개념을 그래프로 시각화해 보세요.',
+        ogDesc: '로봇·피지컬 AI에서 쓰는 하드웨어·센서·역학 개념을 그래프로 시각화해 보세요.',
+        ogImage: '/assets/images/physical-og.png',
+        twitterImage: '/assets/images/physical-og.png',
+        twitterTitle: '피지컬 AI 개념 | @dooboostore',
+        twitterDesc: '로봇·피지컬 AI에서 쓰는 하드웨어·센서·역학 개념을 그래프로 시각화해 보세요.',
       };
     }
 
     private router!: Router;
-    private activeConcept: MathConcept = 'vector';
+    private activeConcept: PhysicalConcept = 'gearratio';
 
     @onInitialize
     onInit(router: Router) {
       this.router = router;
       try {
-        const c = router?.getSearchParams?.()?.get('concept') as MathConcept | null;
+        const c = router?.getSearchParams?.()?.get('concept') as PhysicalConcept | null;
         if (c && CONCEPTS.some(k => k.id === c)) this.activeConcept = c;
       } catch {}
     }
@@ -106,16 +72,16 @@ export default (w: Window) => {
     onConceptTab(e: Event) {
       const btn = (e.target as HTMLElement).closest('.tab-concept') as HTMLElement;
       if (!btn || btn.dataset.value === this.activeConcept) return;
-      this.activeConcept = btn.dataset.value as MathConcept;
+      this.activeConcept = btn.dataset.value as PhysicalConcept;
       try { this.router?.replaceUpsertSearchParam?.({ concept: this.activeConcept }); } catch {}
       this.syncTabs();
       this.renderView();
     }
 
-    @addEventListener('#math-share-fab', 'click')
+    @addEventListener('#physical-share-fab', 'click')
     async onShareFab() {
       const url = (this.ownerDocument as Document).defaultView?.location.href ?? window.location.href;
-      const fab = this.shadowRoot?.querySelector('#math-share-fab') as HTMLElement;
+      const fab = this.shadowRoot?.querySelector('#physical-share-fab') as HTMLElement;
       const flash = () => {
         if (!fab) return;
         fab.textContent = '✓';
@@ -124,7 +90,7 @@ export default (w: Window) => {
       };
       try {
         if ((navigator as any).share) {
-          await (navigator as any).share({ title: '수학 그래프 | @dooboostore', text: '수학 개념을 그래프로 확인해보세요!', url });
+          await (navigator as any).share({ title: '피지컬 AI 개념 | @dooboostore', text: '로봇·피지컬 AI 개념을 그래프로 확인해보세요!', url });
         } else {
           await navigator.clipboard?.writeText(url);
           flash();
@@ -143,7 +109,7 @@ export default (w: Window) => {
 
     /** 활성 개념 컴포넌트를 뷰 영역에 꽂음 — 각 컴포넌트가 자기 그래프를 직접 그림 */
     private renderView() {
-      const view = this.shadowRoot?.querySelector('#math-view') as HTMLElement;
+      const view = this.shadowRoot?.querySelector('#physical-view') as HTMLElement;
       if (!view) return;
       const meta = CONCEPTS.find(k => k.id === this.activeConcept)!;
       view.innerHTML = `<${meta.el}></${meta.el}>`;
@@ -171,7 +137,7 @@ export default (w: Window) => {
         <style>
           :host { display:block; min-height:100vh; background:#f0f2f5; font-family:var(--font-family,sans-serif); }
           * { box-sizing:border-box; }
-          .header { display:flex; align-items:center; gap:12px; padding:16px 20px; background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 60%,#a78bfa 100%); color:#fff; }
+          .header { display:flex; align-items:center; gap:12px; padding:16px 20px; background:linear-gradient(135deg,#0f766e 0%,#14b8a6 60%,#5eead4 100%); color:#fff; }
           .header-back { background:rgba(255,255,255,0.2); border:none; color:#fff; width:38px; height:38px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
           .header-back:hover { background:rgba(255,255,255,0.35); }
           .header-title { font-size:20px; font-weight:700; flex:1; }
@@ -180,20 +146,20 @@ export default (w: Window) => {
           .content { padding:16px; display:flex; flex-direction:column; gap:12px; }
           @media(max-width:600px){ .content{padding:10px;gap:10px} }
           .card { background:#fff; border-radius:14px; box-shadow:0 4px 14px rgba(0,0,0,0.07); overflow:hidden; }
-          .card-header { background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; padding:10px 14px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+          .card-header { background:linear-gradient(135deg,#0f766e,#14b8a6); color:#fff; padding:10px 14px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
           .card-title { font-size:14px; font-weight:700; }
           .card-body { padding:12px 14px; }
           .tab-group { display:flex; gap:6px; flex-wrap:wrap; }
           .tab { padding:5px 13px; border-radius:20px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#64748b; font-size:12px; font-weight:600; cursor:pointer; transition:all .15s ease; white-space:nowrap; }
           .tab:hover { border-color:#94a3b8; color:#334155; }
-          .tab.active { background:linear-gradient(135deg,#6366f1,#a78bfa); color:#fff; border-color:transparent; box-shadow:0 2px 8px rgba(99,102,241,0.3); }
+          .tab.active { background:linear-gradient(135deg,#0f766e,#5eead4); color:#fff; border-color:transparent; box-shadow:0 2px 8px rgba(15,118,110,0.3); }
           .tab-seg { display:inline-flex; border:1.5px solid #e2e8f0; border-radius:20px; overflow:hidden; background:#f8fafc; }
           .tab-seg .tab { border:none; border-radius:0; background:transparent; box-shadow:none; }
           .tab-seg .tab + .tab { border-left:1.5px solid #e2e8f0; }
-          .tab-seg .tab.active { background:linear-gradient(135deg,#6366f1,#a78bfa); color:#fff; }
-          #math-view { padding:12px 14px; }
-          .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#a78bfa);color:#fff;border:none;box-shadow:0 6px 20px rgba(99,102,241,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
-          .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(99,102,241,0.55)}
+          .tab-seg .tab.active { background:linear-gradient(135deg,#0f766e,#5eead4); color:#fff; }
+          #physical-view { padding:12px 14px; }
+          .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#0f766e,#5eead4);color:#fff;border:none;box-shadow:0 6px 20px rgba(15,118,110,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
+          .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(15,118,110,0.55)}
           .share-fab.copied{background:#10b981;box-shadow:0 6px 20px rgba(16,185,129,0.45)}
           .copyright{text-align:center;padding:14px 16px;color:#aaa;font-size:12px;margin-top:8px}
         </style>
@@ -202,8 +168,8 @@ export default (w: Window) => {
           <button class="header-back" aria-label="Go home" title="홈으로">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
           </button>
-          <div class="header-title">📐 수학 그래프</div>
-          <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-math.svg?style=plastic&amp;"/>
+          <div class="header-title">🦾 피지컬 AI 개념</div>
+          <img class="header-hits" alt="Hits" src="https://hits.sh/hits.sh/dooboostore.github.io-apps-center-physical.svg?style=plastic&amp;"/>
         </div>
 
         <div class="content">
@@ -214,11 +180,11 @@ export default (w: Window) => {
 
           <div class="card">
             <div class="card-header"><span class="card-title">📈 그래프</span></div>
-            <div id="math-view"><${meta.el}></${meta.el}></div>
+            <div id="physical-view"><${meta.el}></${meta.el}></div>
           </div>
         </div>
 
-        <button id="math-share-fab" class="share-fab" title="공유">🔗</button>
+        <button id="physical-share-fab" class="share-fab" title="공유">🔗</button>
         <footer class="copyright">© ${new Date().getFullYear()} dooboostore</footer>
       `;
     }
