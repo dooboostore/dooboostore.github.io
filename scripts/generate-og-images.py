@@ -23,7 +23,10 @@ Page → emoji mapping:
   stock-brain-checker      🧠 1f9e0
   stock-flight             ✈️  2708
   stock-npti               🧬 1f9ec
-  stock-category           📊 1f4ca
+  stock-category           📊 1f4ca  (랭킹 페이지 공용)
+  stock-category-list      🗂️ 1f5c2  (종목 카테고리 페이지)
+  stock-indicator          📉 1f4c9  (주요 지표 페이지)
+  stock-chart              📉 1f4c9  (종목 차트 페이지 — 지표와 공용)
   stock-trading-simulation 💹 1f4b9
 """
 import argparse
@@ -51,7 +54,11 @@ MAPPING = [
     ("stock-flight-og.png", "2708", "✈️"),
     ("stock-npti-og.png", "1f9ec", "🧬"),
     ("stock-category-og.png", "1f4ca", "📊"),
+    ("stock-category-list-og.png", "1f5c2", "🗂️"),
+    ("stock-indicator-og.png", "1f4c9", "📉"),
+    ("stock-chart-og.png", "1f4c9", "📉"),
     ("stock-trading-simulation-og.png", "1f4c8", "📈"),
+    ("ram-price-og.png", "1f4be", "💾"),
 ]
 
 TWEMOJI_BASE = "https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/{code}.png"

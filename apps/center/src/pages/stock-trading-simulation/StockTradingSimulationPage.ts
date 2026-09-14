@@ -559,25 +559,29 @@ export default (w: Window) => {
       if (at == null) { prevAll.forEach(el => el.remove()); return; }
       const p = Math.max(start, Math.min(Math.floor(at), end));
       const slice = this.chartCandles.slice(start, p + 1);
-      // 중간선 = 물리량+푸리에 앙상블 (118종목 5일 58.5% 실측)
-      const a = TradingSimulator.forecastCloses(slice, 10);
-      const b = TradingSimulator.forecastByFourier(slice, 10, 60, 3);
-      const mid = a.map((v, k) => Math.round(((v + (b[k] ?? v)) / 2) * 100) / 100);
-      const bands = TradingSimulator.forecastBands(slice, 10, 2, mid);
-      if (!bands.mid.length) { prevAll.forEach(el => el.remove()); return; }
+      // 중간선 = forecast() 단일 예측 — 등락률 반전 복리 + 0.25 댐핑.
+      // 라벨에 directionProbability(5봉 후 상승확률) 병기 — 베팅사이즈 근거.
+      const ind = this.indicatorValue as any ?? {};
+      const maSize = Math.max(2, Math.floor(Number(ind.maLong) || 40));
+      const mid = TradingSimulator.forecast(slice, maSize);
+      if (!mid.length) { prevAll.forEach(el => el.remove()); return; }
       const base = slice[slice.length - 1]?.close ?? 0;
-      const pct = base > 0 ? ((bands.mid[bands.mid.length - 1] - base) / base) * 100 : 0;
-      const label = `예측 ${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`;
+      const pct = base > 0 ? ((mid[mid.length - 1] - base) / base) * 100 : 0;
+      const upP = TradingSimulator.directionProbability(slice);
+      const edge = Math.abs(upP - 0.5) * 2;
+      // 확신 색 구분 — edge>0.2 진한 보라(굵게), 미만 회색(얇게). 회색은 쉬라는 뜻.
+      const confident = edge > 0.2;
+      const label = `예측 ${pct >= 0 ? '+' : ''}${pct.toFixed(1)}% · 상승 ${(upP * 100).toFixed(0)}%`;
       const specs = [
-        { id: 'sim-forecast-lo', values: bands.lower, color: '#c4b5fd', width: '1', label: '' },
-        { id: 'sim-forecast-up', values: bands.upper, color: '#c4b5fd', width: '1', label: '' },
-        { id: 'sim-forecast', values: bands.mid, color: '#8b5cf6', width: '2', label },
+        { id: 'sim-forecast', values: mid, color: confident ? '#8b5cf6' : '#9ca3af', width: confident ? '3' : '1', label },
       ];
       for (const s of specs) {
         const prev = chartEl.querySelector(`:scope > series#${CSS.escape(s.id)}`);
         if (prev) {
           prev.setAttribute('values', s.values.join(','));
           prev.setAttribute('anchor', `at:${p + 1}`);
+          prev.setAttribute('color', s.color);
+          prev.setAttribute('width', s.width);
           if (s.label) prev.setAttribute('label', s.label);
           else prev.removeAttribute('label');
         } else {
@@ -596,7 +600,7 @@ export default (w: Window) => {
       const chart = chartEl as any;
       if (typeof chart.getView === 'function' && typeof chart.setView === 'function') {
         const v = chart.getView();
-        const need = Math.min(n - 1, p + bands.mid.length);
+        const need = Math.min(n - 1, p + mid.length);
         if (v && need > v.end) chart.setView(v.start, need);
       }
     }

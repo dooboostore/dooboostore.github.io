@@ -9,6 +9,9 @@ import BuybackPage from './buyback/BuybackPage';
 import StockBrainCheckerPage from './stock-brain-checker/StockBrainCheckerPage';
 import StockNptiPage from './stock-npti/StockNptiPage';
 import StockCategoryRankingPage from './stock-category-ranking/StockCategoryRankingPage';
+import StockCategoryPage from './stock-category/StockCategoryPage';
+import StockIndicatorPage from './stock-indicator/StockIndicatorPage';
+import StockChartPage from './stock-chart/StockChartPage';
 import StockTradingSimulationPage from './stock-trading-simulation/StockTradingSimulationPage';
 import SimConfigForm from './stock-trading-simulation/components/SimConfigForm';
 import SimCandleForm from './stock-trading-simulation/components/SimCandleForm';
@@ -23,6 +26,7 @@ import MathRotate from './math/components/MathRotate';
 import MathTrig from './math/components/MathTrig';
 import MathProject from './math/components/MathProject';
 import MathCross from './math/components/MathCross';
+import RamPricePage from './ram-price/RamPricePage';
 
 export const pageFactories = [
   RootRouter,
@@ -36,6 +40,9 @@ export const pageFactories = [
   StockBrainCheckerPage,
   StockNptiPage,
   StockCategoryRankingPage,
+  StockCategoryPage,
+  StockIndicatorPage,
+  StockChartPage,
   StockTradingSimulationPage,
   SimConfigForm,
   SimCandleForm,
@@ -50,4 +57,5 @@ export const pageFactories = [
   MathTrig,
   MathProject,
   MathCross,
+  RamPricePage,
 ];

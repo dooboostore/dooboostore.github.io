@@ -88,6 +88,33 @@ export default (w: Window) => {
       badge: 'New'
     },
     {
+      id: 'stock-category',
+      icon: '🗂️',
+      title: '종목 카테고리',
+      description: 'TICS 카테고리를 검색하고 클릭하면 구성종목을 확인하세요.',
+      path: '/stock-category',
+      color: '#14b8a6',
+      badge: 'New'
+    },
+    {
+      id: 'stock-indicator',
+      icon: '📈',
+      title: '주요 지표',
+      description: '코스피·나스닥·환율·금리 등 주요 지표를 한눈에 확인하세요.',
+      path: '/stock-indicator',
+      color: '#7c3aed',
+      badge: 'New'
+    },
+    {
+      id: 'stock-chart',
+      icon: '📉',
+      title: '종목 차트',
+      description: '종목 검색 후 일봉 차트를 확인하세요.',
+      path: '/stock-chart',
+      color: '#0288d1',
+      badge: 'New'
+    },
+    {
       id: 'stock-trading-simulation',
       icon: '📈',
       title: '가상 트레이딩',
@@ -103,6 +130,15 @@ export default (w: Window) => {
       description: '삼각함수·이차함수·지수/로그·정규분포를 그래프로 시각화해보세요.',
       path: '/math',
       color: '#6366f1',
+      badge: 'New'
+    },
+    {
+      id: 'ram-price',
+      icon: '💾',
+      title: '반도체 RAM 가격 추이',
+      description: 'DDR5·DDR4·LPDDR5·HBM3E 등 반도체 메모리 칩 가격 추이를 한눈에 확인하세요.',
+      path: '/ram-price',
+      color: '#1a237e',
       badge: 'New'
     }
   ];
