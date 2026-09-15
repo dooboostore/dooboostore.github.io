@@ -14,6 +14,11 @@ import type { GpuPriceHistory } from '../../services/gpu/GpuRentalService';
 
 const tagName = 'center-gpu-rental-page';
 
+type OverlayRange = '3m' | '6m' | '1y' | 'all';
+const OVERLAY_RANGE_DAYS: Record<OverlayRange, number> = { '3m': 90, '6m': 180, '1y': 365, all: Infinity };
+const OVERLAY_RANGE_LABELS: Record<OverlayRange, string> = { '3m': '3개월', '6m': '6개월', '1y': '1년', all: '전체' };
+const OVERLAY_RANGES: OverlayRange[] = ['3m', '6m', '1y', 'all'];
+
 export default (w: Window) => {
   const existing = w.customElements.get(tagName);
   if (existing) return tagName;
@@ -147,6 +152,8 @@ export default (w: Window) => {
       lo: number; span: number; t0: string; t1: string;
     } | null = null;
     private overlayHidden = new Set<string>();
+    private overlayRange: OverlayRange = '3m';
+    private overlayFilteredDaily = new Map<string, readonly { date: string; median: number }[]>();
 
     /** URL → 숨김 복원 / URL 갱신 (history 쌓지 않음) */
     private readHideFromUrl() {
@@ -174,24 +181,46 @@ export default (w: Window) => {
     private renderOverlay(hist: Record<string, GpuPriceHistory>) {
       const el = this.shadowRoot?.querySelector('#gpu-overlay') as HTMLElement;
       if (!el) return;
-      const names = Object.keys(hist).filter(g => (hist[g]?.daily?.length ?? 0) > 1);
-      if (!names.length) { el.innerHTML = '<div class="empty">히스토리 없음</div>'; return; }
+      const rangeBar = `<div class="overlay-range-bar">${OVERLAY_RANGES.map(r =>
+        `<button class="range-btn${r === this.overlayRange ? ' active' : ''}" data-range="${r}">${OVERLAY_RANGE_LABELS[r]}</button>`
+      ).join('')}</div>`;
+
+      const allNames = Object.keys(hist).filter(g => (hist[g]?.daily?.length ?? 0) > 1);
+      if (!allNames.length) { el.innerHTML = `${rangeBar}<div class="empty">히스토리 없음</div>`; return; }
+
+      const rangeDays = OVERLAY_RANGE_DAYS[this.overlayRange];
+      const latestDate = allNames.reduce((mx, g) => {
+        const d = hist[g].daily[hist[g].daily.length - 1]?.date;
+        return d && d > mx ? d : mx;
+      }, '');
+      const cutoff = new Date(latestDate || Date.now());
+      cutoff.setDate(cutoff.getDate() - rangeDays);
+      const cutoffStr = cutoff.toISOString().slice(0, 10);
+
+      this.overlayFilteredDaily.clear();
+      for (const g of allNames) {
+        const rows = Number.isFinite(rangeDays) ? hist[g].daily.filter(d => d.date >= cutoffStr) : hist[g].daily;
+        if (rows.length > 1) this.overlayFilteredDaily.set(g, rows);
+      }
+      const names = [...this.overlayFilteredDaily.keys()];
+      if (!names.length) { el.innerHTML = `${rangeBar}<div class="empty">선택한 기간에 데이터가 없습니다</div>`; return; }
+
       const W = 900, H = 260, P = 8;
-      const allV = names.flatMap(g => hist[g].daily.map(d => d.median)).filter(Number.isFinite);
+      const allV = names.flatMap(g => this.overlayFilteredDaily.get(g)!.map(d => d.median)).filter(Number.isFinite);
       const lo = Math.min(...allV), hi = Math.max(...allV);
       const span = hi - lo || 1;
-      const dates = names.flatMap(g => hist[g].daily.map(d => d.date)).sort();
+      const dates = names.flatMap(g => this.overlayFilteredDaily.get(g)!.map(d => d.date)).sort();
       const t0 = dates[0], t1 = dates[dates.length - 1];
       const X = (d: string) => P + (d >= t1 ? 1 : d <= t0 ? 0 :
         (new Date(d).getTime() - new Date(t0).getTime()) / Math.max(1, new Date(t1).getTime() - new Date(t0).getTime())) * (W - 2 * P);
       const Y = (v: number) => P + (1 - (v - lo) / span) * (H - 2 * P);
       const lines = names.filter(g => !this.overlayHidden.has(g)).map(g => {
-        const pts = hist[g].daily.map(d => `${X(d.date).toFixed(1)},${Y(d.median).toFixed(1)}`).join(' ');
+        const pts = this.overlayFilteredDaily.get(g)!.map(d => `${X(d.date).toFixed(1)},${Y(d.median).toFixed(1)}`).join(' ');
         return `<polyline points="${pts}" fill="none" stroke="${this.gpuColor(g)}" stroke-width="1.8"><title>${g}</title></polyline>`;
       }).join('');
       const legend = names.map(g =>
         `<button class="lg${this.overlayHidden.has(g) ? ' off' : ''}" data-lg="${g}"><span class="dot" style="background:${this.overlayHidden.has(g) ? '#cbd5e1' : this.gpuColor(g)}"></span>${g}</button>`).join('');
-      el.innerHTML =
+      el.innerHTML = rangeBar +
         `<svg id="overlay-svg" viewBox="0 0 ${W} ${H}" width="100%" height="${H}" preserveAspectRatio="none">${lines}</svg>` +
         `<div class="legend">${legend}</div>` +
         `<div id="overlay-tip"></div>`;
@@ -199,7 +228,16 @@ export default (w: Window) => {
     }
 
     @addEventListener('#gpu-overlay', 'click')
-    onLegendClick(e: Event) {
+    onOverlayClick(e: Event) {
+      const rangeBtn = (e.target as HTMLElement).closest('[data-range]') as HTMLElement | null;
+      if (rangeBtn?.dataset.range) {
+        const range = rangeBtn.dataset.range as OverlayRange;
+        if (range !== this.overlayRange) {
+          this.overlayRange = range;
+          this.renderOverlay(this.lastHist);
+        }
+        return;
+      }
       const btn = (e.target as HTMLElement).closest('[data-lg]') as HTMLElement | null;
       if (!btn?.dataset.lg) return;
       const g = btn.dataset.lg;
@@ -230,7 +268,7 @@ export default (w: Window) => {
       const allDates: string[] = [];
       for (const g of G.names) {
         if (this.overlayHidden.has(g)) continue;
-        for (const d of this.lastHist[g].daily) allDates.push(d.date);
+        for (const d of this.overlayFilteredDaily.get(g) ?? []) allDates.push(d.date);
       }
       const uniq = [...new Set(allDates)].sort();
       if (!uniq.length) return;
@@ -239,7 +277,7 @@ export default (w: Window) => {
       const rows = G.names
         .filter(g => !this.overlayHidden.has(g))
         .map(g => {
-          const f = this.lastHist[g].daily.find(d => d.date === date);
+          const f = (this.overlayFilteredDaily.get(g) ?? []).find(d => d.date === date);
           return f ? `<div><span class="dot" style="background:${this.gpuColor(g)}"></span>${g} <b>$${f.median.toFixed(2)}</b></div>` : '';
         }).join('');
       if (!rows) { tip.style.display = 'none'; return; }
@@ -370,6 +408,11 @@ export default (w: Window) => {
           .gpu-card { cursor:pointer; border-left:4px solid transparent; }
           .gpu-card.dimmed { opacity:0.45; }
           #gpu-overlay { background:#fff; border-radius:14px; box-shadow:0 4px 14px rgba(0,0,0,0.07); padding:14px; position:relative; }
+          .overlay-range-bar { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+          .overlay-range-bar .range-btn { font-size:12px; font-weight:600; padding:6px 14px; border-radius:10px;
+            border:1.5px solid #e2e8f0; background:#fff; color:#334155; cursor:pointer; }
+          .overlay-range-bar .range-btn:hover { background:#f1f5f9; }
+          .overlay-range-bar .range-btn.active { background:#1565c0; color:#fff; border-color:#1565c0; }
           #gpu-overlay .legend { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
           #gpu-overlay .lg { font-size:11px; color:#475569; display:flex; align-items:center; gap:4px;
             background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:16px; padding:3px 10px; cursor:pointer; }

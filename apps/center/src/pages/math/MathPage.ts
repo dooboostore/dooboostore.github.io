@@ -12,7 +12,7 @@ import { Router } from '@dooboostore/core-web';
 
 const tagName = 'center-math-page';
 
-type MathConcept = 'vector' | 'dot' | 'norm' | 'normalize' | 'derivative' | 'integral' | 'rotate' | 'translate' | 'trig' | 'project' | 'cross' | 'rotmatrix' | 'se3chain' | 'det' | 'rank' | 'eigen' | 'pca' | 'kabsch' | 'rotcompare' | 'jacobian' | 'graph' | 'kalman' | 'pid' | 'gain' | 'naturalnumber' | 'realnumber' | 'imaginarynumber' | 'complex' | 'fourier' | 'epicycle' | 'euler' | 'econverge' | 'timeconstant' | 'damping' | 'laplace' | 'controlmap' | 'loop';
+type MathConcept = 'vector' | 'dot' | 'norm' | 'normalize' | 'derivative' | 'integral' | 'rotate' | 'translate' | 'trig' | 'project' | 'cross' | 'rotmatrix' | 'se3chain' | 'det' | 'rank' | 'eigen' | 'pca' | 'kabsch' | 'rotcompare' | 'jacobian' | 'graph' | 'kalman' | 'pid' | 'pidangle' | 'findgain' | 'gain' | 'naturalnumber' | 'realnumber' | 'imaginarynumber' | 'complex' | 'fourier' | 'epicycle' | 'euler' | 'e' | 'econverge' | 'timeconstant' | 'damping' | 'laplace' | 'controlmap' | 'loop' | 'rootlocus';
 
 const CONCEPTS: { id: MathConcept; label: string; el: string; group?: string }[] = [
   { id: 'vector', label: '벡터', el: 'center-math-vector' },
@@ -38,6 +38,8 @@ const CONCEPTS: { id: MathConcept; label: string; el: string; group?: string }[]
   { id: 'graph', label: '그래프·최단경로', el: 'center-math-graph' },
   { id: 'kalman', label: '칼만 필터', el: 'center-math-kalman' },
   { id: 'pid', label: 'PID 제어', el: 'center-math-pid' },
+  { id: 'pidangle', label: 'PID 각도제어(실제 로봇코드)', el: 'center-math-pid-angle' },
+  { id: 'findgain', label: 'P게인 찾기(지연과 진동)', el: 'center-math-find-gain' },
   { id: 'gain', label: '게인(이득)', el: 'center-math-gain' },
   { id: 'naturalnumber', label: '자연수', el: 'center-math-naturalnumber' },
   { id: 'realnumber', label: '실수', el: 'center-math-realnumber' },
@@ -45,6 +47,7 @@ const CONCEPTS: { id: MathConcept; label: string; el: string; group?: string }[]
   { id: 'complex', label: '복소수', el: 'center-math-complex' },
   { id: 'fourier', label: '푸리에 변환', el: 'center-math-fourier' },
   { id: 'epicycle', label: '푸리에 원 애니메이션', el: 'center-math-epicycle' },
+  { id: 'e', label: '자연상수 e (쉽게)', el: 'center-math-e' },
   { id: 'econverge', label: '자연상수 e로 수렴', el: 'center-math-econverge' },
   { id: 'euler', label: '오일러 공식(e^iθ)', el: 'center-math-euler' },
   { id: 'timeconstant', label: '시정수(τ)', el: 'center-math-timeconstant' },
@@ -52,6 +55,7 @@ const CONCEPTS: { id: MathConcept; label: string; el: string; group?: string }[]
   { id: 'laplace', label: '라플라스 변환', el: 'center-math-laplace' },
   { id: 'controlmap', label: 'PID·라플라스·감쇠비·시정수 관계', el: 'center-math-controlmap' },
   { id: 'loop', label: '개루프·폐루프', el: 'center-math-loop' },
+  { id: 'rootlocus', label: '근궤적(Root Locus)', el: 'center-math-root-locus' },
 ];
 
 export default (w: Window) => {

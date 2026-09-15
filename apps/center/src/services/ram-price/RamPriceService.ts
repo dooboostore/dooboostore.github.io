@@ -199,11 +199,19 @@ export interface RamPriceService {
   getRamHistory(type: RamType, historyDays?: number): Promise<RamPriceSeries>;
 }
 
+/** memoryindex.io가 실시간으로 보고하는 시세 한 건 */
+interface LiveQuote {
+  readonly price: number;
+  readonly changePct: number;
+  /** 공식 보드 API에서만 제공 (마퀴 HTML 폴백에는 없음) */
+  readonly chg30dPct?: number;
+  readonly chgYoyPct?: number;
+}
+
 export default (container: symbol): ConstructorType<RamPriceService> => {
   @Sim({ symbol: RamPriceService.SYMBOL, container })
   class RamPriceServiceImpl implements RamPriceService {
     private readonly CORS_PROXY = 'https://sparkling-dew-b13c.visualkhh.workers.dev/?url=';
-    private readonly MEMORY_INDEX_BASE = 'https://api.ornnai.com/api';
 
     private async fetchJson<T>(url: string): Promise<T> {
       const target = `${this.CORS_PROXY}${encodeURIComponent(url)}`;
@@ -212,9 +220,9 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
       return (await res.json()) as T;
     }
 
-    /** 공식 무료 API — 전체 보드 (키 없이 10계약, 12시간 지연) */
-    private async fetchBoardPrices(): Promise<Map<string, { price: number; changePct: number }>> {
-      const result = new Map<string, { price: number; changePct: number }>();
+    /** 공식 무료 API — 전체 보드 (키 없이 10계약, 12시간 지연). spot가 + 24h/30일/전년비 변동률 제공 */
+    private async fetchBoardPrices(): Promise<Map<string, LiveQuote>> {
+      const result = new Map<string, LiveQuote>();
       try {
         const json = await this.fetchJson<any>(
           'https://memoryindex.io/api/public/v1/prices',
@@ -223,9 +231,13 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
         for (const m of mem) {
           const price = Number(m.spot_usd ?? m.price);
           if (m?.ticker && Number.isFinite(price)) {
+            const chg30dPct = Number(m.chg_30d_pct);
+            const chgYoyPct = Number(m.chg_yoy_pct);
             result.set(String(m.ticker), {
               price,
               changePct: Number(m.chg_24h_pct ?? 0),
+              chg30dPct: Number.isFinite(chg30dPct) ? chg30dPct : undefined,
+              chgYoyPct: Number.isFinite(chgYoyPct) ? chgYoyPct : undefined,
             });
           }
         }
@@ -235,32 +247,9 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
       return result;
     }
 
-    /** 시드 히스토리 (SVG 추출 1년치, /datas/ram/history.json) */
-    private historyCache: Record<string, { date: string; price: number }[]> | null = null;
-    private async loadSeedHistory(): Promise<Record<string, { date: string; price: number }[]>> {
-      if (this.historyCache) return this.historyCache;
-      try {
-        const res = await fetch('/datas/ram/history.json', { headers: { accept: 'application/json' } });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        this.historyCache = (await res.json()) as Record<string, { date: string; price: number }[]>;
-      } catch (e) {
-        console.warn('[RamPriceService] seed history 없음:', e);
-        this.historyCache = {};
-      }
-      return this.historyCache;
-    }
-
-    private findSeed(
-      seed: Record<string, { date: string; price: number }[]>,
-      miId: string,
-    ): { date: string; price: number }[] {
-      if (seed[miId]?.length) return seed[miId];
-      const up = miId.toUpperCase();
-      const key = Object.keys(seed).find(k => k.toUpperCase() === up);
-      return key ? seed[key] : [];
-    }
-    private async fetchLivePrices(): Promise<Map<string, { price: number; changePct: number }>> {
-      const result = new Map<string, { price: number; changePct: number }>();
+    /** 폴백 — 메인 페이지 시세 마퀴 HTML 파싱 (현재가 + 24h%만 제공, 30일/전년비 없음) */
+    private async fetchLivePrices(): Promise<Map<string, LiveQuote>> {
+      const result = new Map<string, LiveQuote>();
       try {
         const proxyUrl = `${this.CORS_PROXY}${encodeURIComponent('https://memoryindex.io/')}`;
         const res = await fetch(proxyUrl, {
@@ -290,6 +279,64 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
       return result;
     }
 
+    /**
+     * memoryindex.io가 실시간으로 보고하는 24h/30일/전년비 변동률을 앵커 삼아 일별 곡선을 로그 보간한다.
+     * memoryindex.io 자신의 차트도 "deterministic back-cast from the last print and the
+     * year-over-year move"(최신가 + 전년비 변동률로 역산한 추정 곡선)라고 명시하고 있어서,
+     * 저장된 일별 시세 대신 매번 fetch로 받은 실시간 변동률로부터 같은 방식으로 유도한다.
+     * 30일/전년비 변동률이 없는 티커(마퀴 폴백)는 오늘 한 점만 반환한다.
+     */
+    private buildHistory(quote: LiveQuote, historyDays: number, today: string): RamPricePoint[] {
+      type Anchor = { daysAgo: number; price: number };
+      const anchors: Anchor[] = [{ daysAgo: 0, price: quote.price }];
+      if (quote.chg30dPct != null) {
+        anchors.unshift({ daysAgo: 30, price: quote.price / (1 + quote.chg30dPct / 100) });
+      }
+      if (quote.chgYoyPct != null) {
+        anchors.unshift({ daysAgo: 365, price: quote.price / (1 + quote.chgYoyPct / 100) });
+      }
+      if (anchors.length < 2) {
+        return [{ date: today, price: quote.price, changePct: quote.changePct }];
+      }
+
+      const priceAtDaysAgo = (daysAgo: number): number => {
+        const oldest = anchors[0], newest = anchors[anchors.length - 1];
+        if (daysAgo >= oldest.daysAgo) return oldest.price;
+        if (daysAgo <= newest.daysAgo) return newest.price;
+        for (let i = 0; i < anchors.length - 1; i++) {
+          const outer = anchors[i], inner = anchors[i + 1];
+          if (daysAgo <= outer.daysAgo && daysAgo >= inner.daysAgo) {
+            const span = outer.daysAgo - inner.daysAgo || 1;
+            const frac = (outer.daysAgo - daysAgo) / span;
+            return Math.exp(Math.log(outer.price) + frac * (Math.log(inner.price) - Math.log(outer.price)));
+          }
+        }
+        return quote.price;
+      };
+
+      const maxAnchorDaysAgo = anchors[0].daysAgo;
+      const startDaysAgo = Math.min(historyDays, maxAnchorDaysAgo);
+      const history: RamPricePoint[] = [];
+      // 요청 범위가 앵커 범위보다 넓으면, 그 밖 구간은 가장 오래된 앵커값으로 평평한 한 점만 찍는다
+      if (historyDays > maxAnchorDaysAgo) {
+        const d = new Date();
+        d.setDate(d.getDate() - historyDays);
+        history.push({ date: d.toISOString().slice(0, 10), price: anchors[0].price, changePct: 0 });
+      }
+      for (let daysAgo = startDaysAgo; daysAgo >= 0; daysAgo--) {
+        const d = new Date();
+        d.setDate(d.getDate() - daysAgo);
+        const price = daysAgo === 0 ? quote.price : priceAtDaysAgo(daysAgo);
+        const prev = history.length ? history[history.length - 1].price : undefined;
+        history.push({
+          date: d.toISOString().slice(0, 10),
+          price,
+          changePct: prev != null && prev > 0 ? ((price - prev) / prev) * 100 : 0,
+        });
+      }
+      return history;
+    }
+
     async getRamHistory(type: RamType, historyDays = 365): Promise<RamPriceSeries> {
       const result = await this.getRamPrices([type], historyDays);
       return result.series[0]!;
@@ -299,56 +346,25 @@ export default (container: symbol): ConstructorType<RamPriceService> => {
       types: readonly RamType[] = RAM_TYPES.map(t => t.id),
       historyDays = 365,
     ): Promise<RamPriceResult> {
-      // 실시간: 공식 보드 API 우선 → marquee 파싱 폴백. 히스토리: 시드 JSON + 라이브 1점.
-      const [board, marquee, seed] = await Promise.all([
-        this.fetchBoardPrices(),
-        this.fetchLivePrices(),
-        this.loadSeedHistory(),
-      ]);
-      const live = new Map(board.size ? board : marquee);
-      const cutoff = new Date();
-      cutoff.setDate(cutoff.getDate() - historyDays);
+      // memoryindex.io에서 매번 직접 fetch — 로컬 시드 파일은 전혀 쓰지 않는다.
+      const board = await this.fetchBoardPrices();
+      const live = board.size ? board : await this.fetchLivePrices();
       const today = new Date().toISOString().slice(0, 10);
 
       const series: RamPriceSeries[] = types.map((ramType): RamPriceSeries => {
         const info = RAM_TYPES.find(t => t.id === ramType)!;
-        const current = live.get(info.miId)
+        const quote = live.get(info.miId)
           ?? [...live.entries()].find(([k]) => k.toUpperCase() === info.miId.toUpperCase())?.[1]
           ?? null;
-        // 시드: 기간 필터 + 오늘 이후(추출 오차) 제거 + 날짜 정렬·중복 제거
-        const seen = new Set<string>();
-        const history: RamPricePoint[] = [];
-        for (const p of this.findSeed(seed, info.miId)) {
-          if (p.date < cutoff.toISOString().slice(0, 10) || p.date > today) continue;
-          if (seen.has(p.date)) continue;
-          seen.add(p.date);
-          const prev = history.length ? history[history.length - 1].price : undefined;
-          history.push({
-            date: p.date, price: p.price,
-            changePct: prev != null && prev > 0 ? ((p.price - prev) / prev) * 100 : 0,
-          });
-        }
-        if (current) {
-          const lastIdx = history.length - 1;
-          const updated: RamPricePoint = {
-            date: today,
-            price: current.price,
-            changePct: current.changePct,
-          };
-          if (lastIdx < 0 || history[lastIdx].date !== today) {
-            history.push(updated);
-          } else {
-            history[lastIdx] = updated;
-          }
-        }
+
+        const history = quote ? this.buildHistory(quote, historyDays, today) : [];
         const prices = history.map(h => h.price);
-        const latestPrice = current?.price ?? prices[prices.length - 1] ?? 0;
-        const latestChangePct = current?.changePct ?? history[history.length - 1]?.changePct ?? 0;
-        const w52 = prices.slice(-52);
+        const latestPrice = quote?.price ?? 0;
+        const latestChangePct = quote?.changePct ?? 0;
         return {
           type: ramType, info, history, latestPrice, latestChangePct,
-          high52w: w52.length ? Math.max(...w52) : latestPrice,
-          low52w:  w52.length ? Math.min(...w52) : latestPrice,
+          high52w: prices.length ? Math.max(...prices) : latestPrice,
+          low52w:  prices.length ? Math.min(...prices) : latestPrice,
         };
       });
 

@@ -39,9 +39,12 @@ import MathSE3Chain from './math/components/MathSE3Chain';
 import MathJacobian from './math/components/MathJacobian';
 import MathGraph from './math/components/MathGraph';
 import MathKalman from './math/components/MathKalman';
+import MathPidAngle from './math/components/MathPidAngle';
+import MathFindGain from './math/components/MathFindGain';
 import MathFourier from './math/components/MathFourier';
 import MathEpicycle from './math/components/MathEpicycle';
 import MathEuler from './math/components/MathEuler';
+import MathE from './math/components/MathE';
 import MathEConverge from './math/components/MathEConverge';
 import MathPID from './math/components/MathPID';
 import MathNaturalNumber from './math/components/MathNaturalNumber';
@@ -56,6 +59,7 @@ import MathDampingRatio from './math/components/MathDampingRatio';
 import MathControlMap from './math/components/MathControlMap';
 import MathGain from './math/components/MathGain';
 import MathLoop from './math/components/MathLoop';
+import MathRootLocus from './math/components/MathRootLocus';
 import PhysicalPage from './physical/PhysicalPage';
 import PhysicalGearRatio from './physical/components/PhysicalGearRatio';
 import PhysicalImu from './physical/components/PhysicalImu';
@@ -107,8 +111,11 @@ export const pageFactories = [
   MathFourier,
   MathEpicycle,
   MathEuler,
+  MathE,
   MathEConverge,
   MathPID,
+  MathPidAngle,
+  MathFindGain,
   MathNaturalNumber,
   MathRealNumber,
   MathImaginaryNumber,
@@ -121,6 +128,7 @@ export const pageFactories = [
   MathControlMap,
   MathGain,
   MathLoop,
+  MathRootLocus,
   PhysicalPage,
   PhysicalGearRatio,
   PhysicalImu,

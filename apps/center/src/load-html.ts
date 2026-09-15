@@ -182,6 +182,7 @@ async function main() {
     "/stock-indicator",
     "/stock-chart",
     "/ram-price",
+    "/gpu-rental",
     "/math",
   ];
   const outDir = path.resolve(__dirname, '../dist');
