@@ -12,10 +12,11 @@ import { Router } from '@dooboostore/core-web';
 
 const tagName = 'center-physical-page';
 
-type PhysicalConcept = 'gearratio' | 'imu' | 'dof' | 'encoder' | 'xm430';
+type PhysicalConcept = 'gearratio' | 'statictorque' | 'imu' | 'dof' | 'encoder' | 'xm430';
 
 const CONCEPTS: { id: PhysicalConcept; label: string; el: string; group?: string }[] = [
   { id: 'gearratio', label: '기어비·토크-속도', el: 'center-physical-gearratio' },
+  { id: 'statictorque', label: '정하중 토크(서보 선정)', el: 'center-physical-statictorque' },
   { id: 'imu', label: 'IMU(가속도계·자이로)', el: 'center-physical-imu' },
   { id: 'dof', label: '자유도(DOF)·여분자유도', el: 'center-physical-dof' },
   { id: 'encoder', label: '엔코더(분해능·신호주기)', el: 'center-physical-encoder' },
@@ -155,10 +156,9 @@ export default (w: Window) => {
           .tab { padding:5px 13px; border-radius:20px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#64748b; font-size:12px; font-weight:600; cursor:pointer; transition:all .15s ease; white-space:nowrap; }
           .tab:hover { border-color:#94a3b8; color:#334155; }
           .tab.active { background:linear-gradient(135deg,#0f766e,#5eead4); color:#fff; border-color:transparent; box-shadow:0 2px 8px rgba(15,118,110,0.3); }
-          .tab-seg { display:inline-flex; border:1.5px solid #e2e8f0; border-radius:20px; overflow:hidden; background:#f8fafc; }
-          .tab-seg .tab { border:none; border-radius:0; background:transparent; box-shadow:none; }
-          .tab-seg .tab + .tab { border-left:1.5px solid #e2e8f0; }
-          .tab-seg .tab.active { background:linear-gradient(135deg,#0f766e,#5eead4); color:#fff; }
+          .tab-seg { display:inline-flex; flex-wrap:wrap; gap:5px; max-width:100%; padding:5px; border:1.5px dashed #99e6d9; border-radius:16px; background:#ecfdf9; }
+          .tab-seg .tab { background:#fff; }
+          .tab-seg .tab.active { background:linear-gradient(135deg,#0f766e,#5eead4); color:#fff; border-color:transparent; }
           #physical-view { padding:12px 14px; }
           .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#0f766e,#5eead4);color:#fff;border:none;box-shadow:0 6px 20px rgba(15,118,110,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
           .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(15,118,110,0.55)}

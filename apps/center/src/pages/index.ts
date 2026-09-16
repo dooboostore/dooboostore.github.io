@@ -67,6 +67,7 @@ import MathLoop from './math/components/MathLoop';
 import MathRootLocus from './math/components/MathRootLocus';
 import PhysicalPage from './physical/PhysicalPage';
 import PhysicalGearRatio from './physical/components/PhysicalGearRatio';
+import PhysicalStaticTorque from './physical/components/PhysicalStaticTorque';
 import PhysicalImu from './physical/components/PhysicalImu';
 import PhysicalDof from './physical/components/PhysicalDof';
 import PhysicalEncoder from './physical/components/PhysicalEncoder';
@@ -143,6 +144,7 @@ export const pageFactories = [
   MathRootLocus,
   PhysicalPage,
   PhysicalGearRatio,
+  PhysicalStaticTorque,
   PhysicalImu,
   PhysicalDof,
   PhysicalEncoder,

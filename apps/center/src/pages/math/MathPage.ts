@@ -206,10 +206,9 @@ export default (w: Window) => {
           .tab { padding:5px 13px; border-radius:20px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#64748b; font-size:12px; font-weight:600; cursor:pointer; transition:all .15s ease; white-space:nowrap; }
           .tab:hover { border-color:#94a3b8; color:#334155; }
           .tab.active { background:linear-gradient(135deg,#6366f1,#a78bfa); color:#fff; border-color:transparent; box-shadow:0 2px 8px rgba(99,102,241,0.3); }
-          .tab-seg { display:inline-flex; border:1.5px solid #e2e8f0; border-radius:20px; overflow:hidden; background:#f8fafc; }
-          .tab-seg .tab { border:none; border-radius:0; background:transparent; box-shadow:none; }
-          .tab-seg .tab + .tab { border-left:1.5px solid #e2e8f0; }
-          .tab-seg .tab.active { background:linear-gradient(135deg,#6366f1,#a78bfa); color:#fff; }
+          .tab-seg { display:inline-flex; flex-wrap:wrap; gap:5px; max-width:100%; padding:5px; border:1.5px dashed #cbd5e1; border-radius:16px; background:#eef2ff; }
+          .tab-seg .tab { background:#fff; }
+          .tab-seg .tab.active { background:linear-gradient(135deg,#6366f1,#a78bfa); color:#fff; border-color:transparent; }
           #math-view { padding:12px 14px; }
           .share-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#a78bfa);color:#fff;border:none;box-shadow:0 6px 20px rgba(99,102,241,0.45);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:900;transition:transform .15s ease,box-shadow .15s ease}
           .share-fab:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(99,102,241,0.55)}

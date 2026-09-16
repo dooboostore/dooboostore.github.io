@@ -412,7 +412,7 @@ export default (w: Window) => {
           ${this.buildCompanyGrid()}
         </div>
         <div class="notice-bar">
-          <span class="notice-text">자사주 매입 신청은 매입일 전날 <strong>18:00</strong>까지 신고해야 합니다.</span>
+          <span class="notice-text">자사주 매입 신청은 매입일 전날 <strong>장종료 전후</strong>까지 신고해야 합니다.</span>
           <span class="source-info"><span class="source-label">데이터 출처</span><span class="source-value">KRX KIND · ${new Date().getFullYear()}-01-01 ~ ${new Date().getFullYear()}-12-31</span></span>
         </div>
         ${this.buildPopup()}
