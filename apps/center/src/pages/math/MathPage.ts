@@ -12,50 +12,65 @@ import { Router } from '@dooboostore/core-web';
 
 const tagName = 'center-math-page';
 
-type MathConcept = 'vector' | 'dot' | 'norm' | 'normalize' | 'derivative' | 'integral' | 'rotate' | 'translate' | 'trig' | 'project' | 'cross' | 'rotmatrix' | 'se3chain' | 'det' | 'rank' | 'eigen' | 'pca' | 'kabsch' | 'rotcompare' | 'jacobian' | 'graph' | 'kalman' | 'pid' | 'pidangle' | 'findgain' | 'gain' | 'naturalnumber' | 'realnumber' | 'imaginarynumber' | 'complex' | 'fourier' | 'epicycle' | 'euler' | 'e' | 'econverge' | 'timeconstant' | 'damping' | 'laplace' | 'controlmap' | 'loop' | 'rootlocus';
+type MathConcept = 'vector' | 'dot' | 'norm' | 'normalize' | 'derivative' | 'integral' | 'rotate' | 'translate' | 'trig' | 'project' | 'cross' | 'rotmatrix' | 'se3chain' | 'det' | 'rank' | 'inverse' | 'eigen' | 'quadraticform' | 'pca' | 'leastsquares' | 'kabsch' | 'rotcompare' | 'jacobian' | 'pseudoinverse' | 'graph' | 'kalman' | 'pid' | 'pidangle' | 'findgain' | 'zieglernichols' | 'gain' | 'naturalnumber' | 'realnumber' | 'imaginarynumber' | 'complex' | 'fourier' | 'epicycle' | 'euler' | 'e' | 'econverge' | 'timeconstant' | 'damping' | 'laplace' | 'controlmap' | 'loop' | 'rootlocus';
 
 const CONCEPTS: { id: MathConcept; label: string; el: string; group?: string }[] = [
-  { id: 'vector', label: '벡터', el: 'center-math-vector' },
-  { id: 'dot', label: '내적', el: 'center-math-dot' },
-  { id: 'norm', label: '노름', el: 'center-math-norm' },
-  { id: 'normalize', label: '정규화', el: 'center-math-normalize' },
-  { id: 'derivative', label: '미분', el: 'center-math-derivative' },
-  { id: 'integral', label: '적분', el: 'center-math-integral' },
-  { id: 'rotate', label: '회전', el: 'center-math-rotate' },
-  { id: 'translate', label: '병진(평행이동)', el: 'center-math-translate' },
+  // 벡터 대수 기초
+  { id: 'vector', label: '벡터', el: 'center-math-vector', group: 'vecbasic' },
+  { id: 'dot', label: '내적', el: 'center-math-dot', group: 'vecbasic' },
+  { id: 'norm', label: '노름', el: 'center-math-norm', group: 'vecbasic' },
+  { id: 'normalize', label: '정규화', el: 'center-math-normalize', group: 'vecbasic' },
+  { id: 'project', label: '정사영', el: 'center-math-project', group: 'vecbasic' },
+  { id: 'cross', label: '외적·평면법선', el: 'center-math-cross', group: 'vecbasic' },
   { id: 'trig', label: '삼각함수', el: 'center-math-trig' },
-  { id: 'project', label: '정사영', el: 'center-math-project' },
-  { id: 'cross', label: '외적·평면법선', el: 'center-math-cross' },
-  { id: 'rotmatrix', label: '회전행렬', el: 'center-math-rotmatrix' },
-  { id: 'se3chain', label: 'SE(3) 좌표계 체인', el: 'center-math-se3chain' },
-  { id: 'det', label: '행렬식(det)', el: 'center-math-det' },
-  { id: 'rank', label: 'rank(상자)', el: 'center-math-rank' },
-  { id: 'eigen', label: '고유값·고유벡터', el: 'center-math-eigen' },
-  { id: 'jacobian', label: '자코비안·특이점', el: 'center-math-jacobian' },
-  { id: 'pca', label: 'PCA(주성분분석)', el: 'center-math-pca' },
-  { id: 'kabsch', label: 'Kabsch(점군 정렬)', el: 'center-math-kabsch' },
-  { id: 'rotcompare', label: '오일러·쿼터니언·Gram-Schmidt 비교', el: 'center-math-rot-compare' },
+  // 미분·적분
+  { id: 'derivative', label: '미분', el: 'center-math-derivative', group: 'calculus' },
+  { id: 'integral', label: '적분', el: 'center-math-integral', group: 'calculus' },
+  // 회전·좌표변환
+  { id: 'rotate', label: '회전', el: 'center-math-rotate', group: 'transform' },
+  { id: 'translate', label: '병진(평행이동)', el: 'center-math-translate', group: 'transform' },
+  { id: 'rotmatrix', label: '회전행렬', el: 'center-math-rotmatrix', group: 'transform' },
+  { id: 'se3chain', label: 'SE(3) 좌표계 체인', el: 'center-math-se3chain', group: 'transform' },
+  { id: 'rotcompare', label: '오일러·쿼터니언·Gram-Schmidt 비교', el: 'center-math-rot-compare', group: 'transform' },
+  // 선형대수 심화
+  { id: 'det', label: '행렬식(det)', el: 'center-math-det', group: 'linalg' },
+  { id: 'rank', label: 'rank(상자)', el: 'center-math-rank', group: 'linalg' },
+  { id: 'inverse', label: '역행렬·연립방정식(Ax=b)', el: 'center-math-inverse', group: 'linalg' },
+  { id: 'eigen', label: '고유값·고유벡터', el: 'center-math-eigen', group: 'linalg' },
+  { id: 'quadraticform', label: '이차형식·양의정부호', el: 'center-math-quadratic-form', group: 'linalg' },
+  { id: 'jacobian', label: '자코비안·특이점', el: 'center-math-jacobian', group: 'linalg' },
+  { id: 'pseudoinverse', label: '의사역행렬(DLS)', el: 'center-math-pseudoinverse', group: 'linalg' },
+  { id: 'pca', label: 'PCA(주성분분석)', el: 'center-math-pca', group: 'linalg' },
+  { id: 'leastsquares', label: '최소제곱법', el: 'center-math-least-squares', group: 'linalg' },
+  { id: 'kabsch', label: 'Kabsch(점군 정렬)', el: 'center-math-kabsch', group: 'linalg' },
   { id: 'graph', label: '그래프·최단경로', el: 'center-math-graph' },
   { id: 'kalman', label: '칼만 필터', el: 'center-math-kalman' },
-  { id: 'pid', label: 'PID 제어', el: 'center-math-pid' },
-  { id: 'pidangle', label: 'PID 각도제어(실제 로봇코드)', el: 'center-math-pid-angle' },
-  { id: 'findgain', label: 'P게인 찾기(지연과 진동)', el: 'center-math-find-gain' },
-  { id: 'gain', label: '게인(이득)', el: 'center-math-gain' },
-  { id: 'naturalnumber', label: '자연수', el: 'center-math-naturalnumber' },
-  { id: 'realnumber', label: '실수', el: 'center-math-realnumber' },
-  { id: 'imaginarynumber', label: '허수', el: 'center-math-imaginarynumber' },
-  { id: 'complex', label: '복소수', el: 'center-math-complex' },
-  { id: 'fourier', label: '푸리에 변환', el: 'center-math-fourier' },
-  { id: 'epicycle', label: '푸리에 원 애니메이션', el: 'center-math-epicycle' },
-  { id: 'e', label: '자연상수 e (쉽게)', el: 'center-math-e' },
-  { id: 'econverge', label: '자연상수 e로 수렴', el: 'center-math-econverge' },
-  { id: 'euler', label: '오일러 공식(e^iθ)', el: 'center-math-euler' },
-  { id: 'timeconstant', label: '시정수(τ)', el: 'center-math-timeconstant' },
-  { id: 'damping', label: '감쇠비·고유진동수(ζ,ωn)', el: 'center-math-damping' },
-  { id: 'laplace', label: '라플라스 변환', el: 'center-math-laplace' },
-  { id: 'controlmap', label: 'PID·라플라스·감쇠비·시정수 관계', el: 'center-math-controlmap' },
-  { id: 'loop', label: '개루프·폐루프', el: 'center-math-loop' },
-  { id: 'rootlocus', label: '근궤적(Root Locus)', el: 'center-math-root-locus' },
+  // PID 튜닝(이론 → 실전 로봇코드)
+  { id: 'pid', label: 'PID 제어', el: 'center-math-pid', group: 'pid' },
+  { id: 'findgain', label: 'P게인 찾기(지연과 진동)', el: 'center-math-find-gain', group: 'pid' },
+  { id: 'zieglernichols', label: 'Ziegler-Nichols 튜닝 공식', el: 'center-math-ziegler-nichols', group: 'pid' },
+  { id: 'pidangle', label: 'PID 각도제어(실제 로봇코드)', el: 'center-math-pid-angle', group: 'pid' },
+  // 제어이론 기초 어휘(루프·게인·근궤적)
+  { id: 'loop', label: '개루프·폐루프', el: 'center-math-loop', group: 'ctrltheory' },
+  { id: 'gain', label: '게인(이득)', el: 'center-math-gain', group: 'ctrltheory' },
+  { id: 'rootlocus', label: '근궤적(Root Locus)', el: 'center-math-root-locus', group: 'ctrltheory' },
+  // 수 체계(자연수→실수→허수→복소수)
+  { id: 'naturalnumber', label: '자연수', el: 'center-math-naturalnumber', group: 'numbers' },
+  { id: 'realnumber', label: '실수', el: 'center-math-realnumber', group: 'numbers' },
+  { id: 'imaginarynumber', label: '허수', el: 'center-math-imaginarynumber', group: 'numbers' },
+  { id: 'complex', label: '복소수', el: 'center-math-complex', group: 'numbers' },
+  // 푸리에
+  { id: 'fourier', label: '푸리에 변환', el: 'center-math-fourier', group: 'fourier' },
+  { id: 'epicycle', label: '푸리에 원 애니메이션', el: 'center-math-epicycle', group: 'fourier' },
+  // 자연상수 e
+  { id: 'e', label: '자연상수 e (쉽게)', el: 'center-math-e', group: 'econst' },
+  { id: 'econverge', label: '자연상수 e로 수렴', el: 'center-math-econverge', group: 'econst' },
+  { id: 'euler', label: '오일러 공식(e^iθ)', el: 'center-math-euler', group: 'econst' },
+  // 시스템 응답 특성(시정수·감쇠비·라플라스·PID의 관계)
+  { id: 'timeconstant', label: '시정수(τ)', el: 'center-math-timeconstant', group: 'response' },
+  { id: 'damping', label: '감쇠비·고유진동수(ζ,ωn)', el: 'center-math-damping', group: 'response' },
+  { id: 'laplace', label: '라플라스 변환', el: 'center-math-laplace', group: 'response' },
+  { id: 'controlmap', label: 'PID·라플라스·감쇠비·시정수 관계', el: 'center-math-controlmap', group: 'response' },
 ];
 
 export default (w: Window) => {

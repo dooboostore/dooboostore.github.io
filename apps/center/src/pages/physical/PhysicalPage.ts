@@ -12,12 +12,14 @@ import { Router } from '@dooboostore/core-web';
 
 const tagName = 'center-physical-page';
 
-type PhysicalConcept = 'gearratio' | 'imu' | 'dof';
+type PhysicalConcept = 'gearratio' | 'imu' | 'dof' | 'encoder' | 'xm430';
 
 const CONCEPTS: { id: PhysicalConcept; label: string; el: string; group?: string }[] = [
   { id: 'gearratio', label: '기어비·토크-속도', el: 'center-physical-gearratio' },
   { id: 'imu', label: 'IMU(가속도계·자이로)', el: 'center-physical-imu' },
   { id: 'dof', label: '자유도(DOF)·여분자유도', el: 'center-physical-dof' },
+  { id: 'encoder', label: '엔코더(분해능·신호주기)', el: 'center-physical-encoder' },
+  { id: 'xm430', label: 'XM430 실시간 시뮬레이터', el: 'center-physical-xm430' },
 ];
 
 export default (w: Window) => {

@@ -28,19 +28,24 @@ import MathTrig from './math/components/MathTrig';
 import MathProject from './math/components/MathProject';
 import MathCross from './math/components/MathCross';
 import MathRank from './math/components/MathRank';
+import MathInverse from './math/components/MathInverse';
 import MathEigen from './math/components/MathEigen';
+import MathQuadraticForm from './math/components/MathQuadraticForm';
 import MathTranslate from './math/components/MathTranslate';
 import MathDet from './math/components/MathDet';
 import MathPCA from './math/components/MathPCA';
+import MathLeastSquares from './math/components/MathLeastSquares';
 import MathKabsch from './math/components/MathKabsch';
 import MathRotationCompare from './math/components/MathRotationCompare';
 import MathRotationMatrix from './math/components/MathRotationMatrix';
 import MathSE3Chain from './math/components/MathSE3Chain';
 import MathJacobian from './math/components/MathJacobian';
+import MathPseudoinverse from './math/components/MathPseudoinverse';
 import MathGraph from './math/components/MathGraph';
 import MathKalman from './math/components/MathKalman';
 import MathPidAngle from './math/components/MathPidAngle';
 import MathFindGain from './math/components/MathFindGain';
+import MathZieglerNichols from './math/components/MathZieglerNichols';
 import MathFourier from './math/components/MathFourier';
 import MathEpicycle from './math/components/MathEpicycle';
 import MathEuler from './math/components/MathEuler';
@@ -64,6 +69,8 @@ import PhysicalPage from './physical/PhysicalPage';
 import PhysicalGearRatio from './physical/components/PhysicalGearRatio';
 import PhysicalImu from './physical/components/PhysicalImu';
 import PhysicalDof from './physical/components/PhysicalDof';
+import PhysicalEncoder from './physical/components/PhysicalEncoder';
+import PhysicalXm430 from './physical/components/PhysicalXm430';
 import RamPricePage from './ram-price/RamPricePage';
 
 export const pageFactories = [
@@ -97,15 +104,19 @@ export const pageFactories = [
   MathProject,
   MathCross,
   MathRank,
+  MathInverse,
   MathEigen,
+  MathQuadraticForm,
   MathTranslate,
   MathDet,
   MathPCA,
+  MathLeastSquares,
   MathKabsch,
   MathRotationCompare,
   MathRotationMatrix,
   MathSE3Chain,
   MathJacobian,
+  MathPseudoinverse,
   MathGraph,
   MathKalman,
   MathFourier,
@@ -116,6 +127,7 @@ export const pageFactories = [
   MathPID,
   MathPidAngle,
   MathFindGain,
+  MathZieglerNichols,
   MathNaturalNumber,
   MathRealNumber,
   MathImaginaryNumber,
@@ -133,5 +145,7 @@ export const pageFactories = [
   PhysicalGearRatio,
   PhysicalImu,
   PhysicalDof,
+  PhysicalEncoder,
+  PhysicalXm430,
   RamPricePage,
 ];
