@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "<b>bind</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "baɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "묶다, 동이다(tie), 매다 ((with, in, to)); 결박하다; 포박하다",
+              "examples": [
+                {
+                  "text": "<b>bind</b> one's hair with a ribbon",
+                  "translatedText": "리본으로 머리를 묶다"
+                }
+              ],
+              "originalMeaning": "묶다, 동이다(tie), 매다 ((with, in, to)); 결박하다; 포박하다"
+            },
+            {
+              "meaning": "둘러 감다",
+              "examples": [
+                {
+                  "text": "The ivy bound itself about a tree.",
+                  "translatedText": "담쟁이 덩쿨이 나무에 휘감겨 있었다."
+                }
+              ],
+              "originalMeaning": "둘러 감다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<흙·모래·눈 등이> 굳어지다",
+              "examples": [],
+              "originalMeaning": "<흙·모래·눈 등이> 굳어지다"
+            },
+            {
+              "meaning": "<약속 등이> 구속력이 있다",
+              "examples": [],
+              "originalMeaning": "<약속 등이> 구속력이 있다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "묶는[동이는] 것 ((끈, 실, 밧줄 따위))",
+              "examples": [],
+              "originalMeaning": "묶는[동이는] 것 ((끈, 실, 밧줄 따위))"
+            },
+            {
+              "meaning": "속박",
+              "examples": [],
+              "originalMeaning": "속박"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ae0f9f8e5dff431b8ac4c4b831a003d3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ae0f9f8e5dff431b8ac4c4b831a003d3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "binds"
+        },
+        {
+          "type": "과거형",
+          "value": "bound"
+        },
+        {
+          "type": "현재 분사",
+          "value": "binding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bound"
+        }
+      ],
+      "aliasConjugation": "binds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "606f47361519071b22f5b680fbf6e195",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 팀은 꼭 이긴다.",
+      "text": "Our team is bound to win."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 맞바람 때문에 발이 묶이었다",
+      "text": "The ship was wind-bound."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어차피 그것은 해야 한다",
+      "text": "I must[am bound to] do it anyhow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책은 가죽 장정이다",
+      "text": "The book is bound in leather."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 꼭 출세할 것이다",
+      "text": "He is bound to success in life."
+    }
+  ],
+  "isWordType": true
+}

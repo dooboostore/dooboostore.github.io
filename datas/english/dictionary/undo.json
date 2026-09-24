@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "<b>undo</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʌnˈduː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<일단 한 것을> 원상태로 돌리다, 본래대로 하다; <노력 등의> 결과를 망치다",
+              "examples": [
+                {
+                  "text": "What's done cannot be undone.",
+                  "translatedText": "[속담] 엎지른 물은 다시 담을 수 없다."
+                }
+              ],
+              "originalMeaning": "<일단 한 것을> 원상태로 돌리다, 본래대로 하다; <노력 등의> 결과를 망치다"
+            },
+            {
+              "meaning": "취소하다, [컴퓨터] (바로 전의 조작을 취소하고) 원래로 되돌리다",
+              "examples": [],
+              "originalMeaning": "취소하다, [컴퓨터] (바로 전의 조작을 취소하고) 원래로 되돌리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "풀리다, 열리다",
+              "examples": [],
+              "originalMeaning": "풀리다, 열리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0861fe15660b4ee69153cebd91c7a872",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0861fe15660b4ee69153cebd91c7a872",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "undoes"
+        },
+        {
+          "type": "과거형",
+          "value": "undid"
+        },
+        {
+          "type": "현재 분사",
+          "value": "undoing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "undone"
+        }
+      ],
+      "aliasConjugation": "undoes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "45d51a4ace8299f16a0f1304cfaa2f1d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일이 산같이 밀려 있다",
+      "text": "There is a good deal of work left undone. or There are heaps of work in arrears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바지 앞이 열려 있어요.",
+      "text": "Your fly is open[down, undone]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 단추가 하나 끌러져 있다.",
+      "text": "He has got a button undone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 신발끈 하나가 풀렸다",
+      "text": "One of my shoelaces is undone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "엎지른 물은 다시 담을 수 없다.",
+      "text": "What’s done cannot be undone."
+    }
+  ],
+  "isWordType": true
+}

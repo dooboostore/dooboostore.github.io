@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "entry": "<b>neighboring</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "néibəriŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 이웃의, 근처[인근]의; 인접한(adjacent)",
+              "examples": [
+                {
+                  "text": "<b>neighboring</b> right",
+                  "translatedText": "인접권"
+                }
+              ],
+              "originalMeaning": "[A] 이웃의, 근처[인근]의; 인접한(adjacent)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb4a79fdfc634495b4b6f039111e9d27",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb4a79fdfc634495b4b6f039111e9d27",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c5550f9cf104c76d2c09649af24c3069",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>neighbor</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "néibər"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "이웃(사람), 옆자리 사람, [보통 pl.] 이웃 나라 사람",
+              "examples": [
+                {
+                  "text": "a next-door <b>neighbor</b>",
+                  "translatedText": "옆집 사람"
+                }
+              ],
+              "originalMeaning": "이웃(사람), 옆자리 사람, [보통 pl.] 이웃 나라 사람"
+            },
+            {
+              "meaning": "가까이 있는 사람, (같은 종류의) 서로 이웃하는 것",
+              "examples": [],
+              "originalMeaning": "가까이 있는 사람, (같은 종류의) 서로 이웃하는 것"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "이웃의",
+              "examples": [
+                {
+                  "text": "a good <b>neighbor</b> policy",
+                  "translatedText": "선린 정책"
+                }
+              ],
+              "originalMeaning": "이웃의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이웃하다, 인접하다; …의 이웃에 살다",
+              "examples": [],
+              "originalMeaning": "이웃하다, 인접하다; …의 이웃에 살다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ab311ced0a5c48d38a2fb4545670b28d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ab311ced0a5c48d38a2fb4545670b28d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "bf6412a8e8f31f8bc37badf27a517c46",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "홍역이 이웃 마을로 번졌다",
+      "text": "Measles spread to a <b>neighboring</b> village."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부상자들은 근처 병원에 수용되었다",
+      "text": "The wounded were taken to a <b>neighboring</b> hospital."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "근해에는 크고 작은 섬들이 산재해 있다",
+      "text": "The <b>neighboring</b> sea is studded with islands, large and small."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전염병은 인근 마을들로 퍼져 나갔다.",
+      "text": "The epidemic has been spread to <b>neighboring</b> villages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불이 이웃집으로 연소했다",
+      "text": "The fire spread to the <b>neighboring</b> houses."
+    }
+  ],
+  "isWordType": true
+}

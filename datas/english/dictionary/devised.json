@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>devise</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈvaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<방법을> 궁리하다, 고안[안출]하다; 발명하다 ((how, to do))",
+              "examples": [
+                {
+                  "text": "<b>devise</b> a plan",
+                  "translatedText": "계획을 생각해 내다"
+                }
+              ],
+              "originalMeaning": "<방법을> 궁리하다, 고안[안출]하다; 발명하다 ((how, to do))"
+            },
+            {
+              "meaning": "<부동산을> 유증(遺贈)하다 ((to))",
+              "examples": [],
+              "originalMeaning": "<부동산을> 유증(遺贈)하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "궁리하다, 고안하다(contrive)",
+              "examples": [],
+              "originalMeaning": "궁리하다, 고안하다(contrive)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [법] (부동산) 유증, 유증 재산 ((부동산)), [C] 유언장의 증여 조항",
+              "examples": [],
+              "originalMeaning": "[U] [법] (부동산) 유증, 유증 재산 ((부동산)), [C] 유언장의 증여 조항"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/938fa3eb75f54034ad1902bc99c6194b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/938fa3eb75f54034ad1902bc99c6194b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "devises"
+        },
+        {
+          "type": "과거형",
+          "value": "devised"
+        },
+        {
+          "type": "현재 분사",
+          "value": "devising"
+        },
+        {
+          "type": "과거 분사",
+          "value": "devised"
+        }
+      ],
+      "aliasConjugation": "devises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cc8e67b3559960719ae8e5a484712098",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 편법을 강구해야 한다",
+      "text": "We must <b>devise</b> some expedient method."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 새로운 방법을 안출하는 재주가 있다.",
+      "text": "He is apt at devising new means."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 기계는 아주 편리하게 되어 있다",
+      "text": "The machine is skilfully <b>devised</b> for convenient use."
+    }
+  ],
+  "isWordType": true
+}

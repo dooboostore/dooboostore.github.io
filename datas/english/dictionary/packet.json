@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "<b>packet</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpækɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "소포(parcel)( package), (담배 등의) 갑( pack)",
+              "examples": [],
+              "originalMeaning": "소포(parcel)( package), (담배 등의) 갑( pack)"
+            },
+            {
+              "meaning": "(편지 등의) 한 묶음, 한 다발",
+              "examples": [
+                {
+                  "text": "a <b>packet</b> of letters",
+                  "translatedText": "편지 묶음"
+                }
+              ],
+              "originalMeaning": "(편지 등의) 한 묶음, 한 다발"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "소포[소화물]로 하다",
+              "examples": [],
+              "originalMeaning": "소포[소화물]로 하다"
+            },
+            {
+              "meaning": "<정보를> 패킷 단위로 나누다, 다발로 하다",
+              "examples": [],
+              "originalMeaning": "<정보를> 패킷 단위로 나누다, 다발로 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3c38b2976d834e7b90b93f6641199797",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3c38b2976d834e7b90b93f6641199797",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c170f0813856904fc7fb6a954718f17d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 담배갑에는 건강에 대한 경고가 나온다",
+      "text": "All cigarette packets carry a health warning."
+    }
+  ],
+  "isWordType": true
+}

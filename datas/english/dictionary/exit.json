@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "<b>exit</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "éɡzit, éksit"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(공공건물의) 출구 ((건물의 출구 표시는 보통 <b>Exit</b>, Way Out임))(opp. entrance)",
+              "examples": [
+                {
+                  "text": "We made for the nearest <b>exit</b>.",
+                  "translatedText": "우리는 가장 가까운 출구로 향했다."
+                }
+              ],
+              "originalMeaning": "(공공건물의) 출구 ((건물의 출구 표시는 보통 <b>Exit</b>, Way Out임))(opp. entrance)"
+            },
+            {
+              "meaning": "(고속도로의) 출구 램프, 출구(= fréeway ~)(opp. access)",
+              "examples": [],
+              "originalMeaning": "(고속도로의) 출구 램프, 출구(= fréeway ~)(opp. access)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "퇴거하다, 나가다; 세상을 떠나다, 죽다",
+              "examples": [],
+              "originalMeaning": "퇴거하다, 나가다; 세상을 떠나다, 죽다"
+            },
+            {
+              "meaning": "(시스템·프로그램에서) 빠지다, 종료하다",
+              "examples": [],
+              "originalMeaning": "(시스템·프로그램에서) 빠지다, 종료하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<장소에서> 퇴장하다",
+              "examples": [],
+              "originalMeaning": "<장소에서> 퇴장하다"
+            },
+            {
+              "meaning": "<프로그램 등을> 종료하다",
+              "examples": [],
+              "originalMeaning": "<프로그램 등을> 종료하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/111befe523cb4408bde5ade50b725390",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/111befe523cb4408bde5ade50b725390",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exits"
+        },
+        {
+          "type": "과거형",
+          "value": "exited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exited"
+        }
+      ],
+      "aliasConjugation": "exits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6ec94a83ee4c6e9a790befd88d8959d0",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>exit</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[연극] 퇴장하다(opp. enter, cf. EXEUNT)",
+              "examples": [],
+              "originalMeaning": "[연극] 퇴장하다(opp. enter, cf. EXEUNT)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7c9efb308a24447e8d4ab459ccbf5396",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7c9efb308a24447e8d4ab459ccbf5396",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "exits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ebd002b528c8d506e7fda9171be587be",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 가장 가까운 출구로 향했다.",
+      "text": "We made for the nearest <b>exit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "옆문으로 극장에서 나가시오",
+      "text": "Please <b>exit</b> the theater by the side doors."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배우가 퇴장한다",
+      "text": "The actor makes his <b>exit</b>."
+    }
+  ],
+  "isWordType": true
+}

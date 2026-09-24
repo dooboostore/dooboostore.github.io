@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "<b>custody</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkʌstədi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보관, 관리; (특히 미성년자의) 보호, 감독, 후견",
+              "examples": [],
+              "originalMeaning": "보관, 관리; (특히 미성년자의) 보호, 감독, 후견"
+            },
+            {
+              "meaning": "구류, 감금(imprisonment)",
+              "examples": [],
+              "originalMeaning": "구류, 감금(imprisonment)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8d80eaedfceb4d81967c70275be3fcef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8d80eaedfceb4d81967c70275be3fcef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "custodies"
+        }
+      ],
+      "aliasConjugation": "custodies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "5e4a459e7b592e78a4ad5f1c76890f3b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서류는 A군이 보관하고 있다",
+      "text": "The papers are in the <b>custody</b> of Mr. A. or The papers are in Mr. A's keeping."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람은 구류에서 풀려났다",
+      "text": "He was released from <b>custody</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 일주일 동안 구속되었다",
+      "text": "He was kept in <b>custody</b> for a week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 조사받기 위해 유치되어 있다",
+      "text": "He is held (in <b>custody</b>) for examination."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경찰에 유치되었다",
+      "text": "He was taken into police <b>custody</b>."
+    }
+  ],
+  "isWordType": true
+}

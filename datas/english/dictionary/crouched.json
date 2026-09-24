@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>crouch</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kraʊtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "몸을 쭈그리다, 쪼그리고 앉다; 웅크리다(stoop) ((down)); 오그라지다 ((to))",
+              "examples": [],
+              "originalMeaning": "몸을 쭈그리다, 쪼그리고 앉다; 웅크리다(stoop) ((down)); 오그라지다 ((to))"
+            },
+            {
+              "meaning": "(비굴하게) 굽실거리다, (두려워서) 위축되다 ((to))",
+              "examples": [
+                {
+                  "text": "He <b>crouched</b> to his master.",
+                  "translatedText": "그는 주인에게 굽실거렸다."
+                }
+              ],
+              "originalMeaning": "(비굴하게) 굽실거리다, (두려워서) 위축되다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<머리·허리를> (비굴하게) 구부리다, 낮게 하다",
+              "examples": [],
+              "originalMeaning": "<머리·허리를> (비굴하게) 구부리다, 낮게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 웅크림, 비굴하게 굽실거림",
+              "examples": [],
+              "originalMeaning": "[U] 웅크림, 비굴하게 굽실거림"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4ef3eaa18574e9fb03d9a39a3034ff7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4ef3eaa18574e9fb03d9a39a3034ff7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "crouches"
+        },
+        {
+          "type": "과거형",
+          "value": "crouched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "crouching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "crouched"
+        }
+      ],
+      "aliasConjugation": "crouches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "788d3b51d6a9b5ab2aca35dd7f9c4f09",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방 한구석에 몸을 오그리고 앉았다",
+      "text": "He <b>crouched</b> in a corner of the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 허리를 굽혀 그 소형차에 올라탔다",
+      "text": "He <b>crouched</b>[bent himself down] to get into the small car."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 주인에게 굽실거렸다.",
+      "text": "He <b>crouched</b> to his master."
+    }
+  ],
+  "isWordType": true
+}

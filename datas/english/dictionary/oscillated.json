@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>oscillate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːsɪleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(시계추처럼) 진동(振動)하다, 흔들리다, 왕복하다",
+              "examples": [],
+              "originalMeaning": "(시계추처럼) 진동(振動)하다, 흔들리다, 왕복하다"
+            },
+            {
+              "meaning": "<마음·의견 등이> 흔들리다, 동요하다 ((between))",
+              "examples": [
+                {
+                  "text": "He always <b>oscillate</b> s between different ideas.",
+                  "translatedText": "그는 언제나 여러 가지 생각으로 갈팡질팡한다."
+                }
+              ],
+              "originalMeaning": "<마음·의견 등이> 흔들리다, 동요하다 ((between))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "진동[동요]시키다",
+              "examples": [],
+              "originalMeaning": "진동[동요]시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eda0eb867275424dbd87eb4201c2517f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eda0eb867275424dbd87eb4201c2517f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "oscillates"
+        },
+        {
+          "type": "과거형",
+          "value": "oscillated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "oscillating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "oscillated"
+        }
+      ],
+      "aliasConjugation": "oscillates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "106352f0105532399a7ac8cf642efe98",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 언제나 여러 가지 생각으로 갈팡질팡한다.",
+      "text": "He always oscillates between different ideas."
+    }
+  ],
+  "isWordType": true
+}

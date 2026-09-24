@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>beard</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɪrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "턱수염",
+              "examples": [
+                {
+                  "text": "wear[grow] a <b>beard</b>",
+                  "translatedText": "턱수염을 기르고 있다[기르다]"
+                }
+              ],
+              "originalMeaning": "턱수염"
+            },
+            {
+              "meaning": "(염소 등의) 수염, (굴·조개의) 아가미, (새의) 수염 모양의 깃털",
+              "examples": [],
+              "originalMeaning": "(염소 등의) 수염, (굴·조개의) 아가미, (새의) 수염 모양의 깃털"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 수염을 잡아당기다[뽑다], 공공연히 반항하다(defy), …에 수염을 달다",
+              "examples": [],
+              "originalMeaning": "…의 수염을 잡아당기다[뽑다], 공공연히 반항하다(defy), …에 수염을 달다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25b0dc89314d47b0a7b20b3130f5d50a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25b0dc89314d47b0a7b20b3130f5d50a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "beards"
+        },
+        {
+          "type": "과거형",
+          "value": "bearded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bearding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bearded"
+        }
+      ],
+      "aliasConjugation": "beards",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a995077660c40bd97c6e3ad7c285e13b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 독특한 수염으로 이채를 띠고 있었다",
+      "text": "He caught our eyes with his characteristic <b>beard</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한참 이야기 중이다.",
+      "text": "Beards[Chins, Jaws] are wagging."
+    }
+  ],
+  "isWordType": true
+}

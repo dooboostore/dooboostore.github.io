@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>hesitate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhezɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주저하다, 머뭇거리다, 망설이다, 결단을 못 내리다; 꺼리다",
+              "examples": [
+                {
+                  "text": "Don't <b>hesitate</b>.",
+                  "translatedText": "주저[사양]하지 마라."
+                }
+              ],
+              "originalMeaning": "주저하다, 머뭇거리다, 망설이다, 결단을 못 내리다; 꺼리다"
+            },
+            {
+              "meaning": "말을 더듬다",
+              "examples": [
+                {
+                  "text": "<b>hesitate</b> inspeaking",
+                  "translatedText": "말을 더듬거리다"
+                }
+              ],
+              "originalMeaning": "말을 더듬다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "망설이면서[머뭇거리며] 말하다",
+              "examples": [],
+              "originalMeaning": "망설이면서[머뭇거리며] 말하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/598e82565a534c4b8140239acc54a3b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/598e82565a534c4b8140239acc54a3b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hesitates"
+        },
+        {
+          "type": "과거형",
+          "value": "hesitated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hesitating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hesitated"
+        }
+      ],
+      "aliasConjugation": "hesitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7a6e14c2c4178efbd184818eba9d922d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 법을 어기는 것을 꺼렸다.",
+      "text": "He <b>hesitated</b> to break the law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 망설이기만 하면 일은 다 된 거다.",
+      "text": "Once he hesitates, we have him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 결단을 내리기를 주저했다.",
+      "text": "He <b>hesitated</b> to make a decision."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 싸울까 항복할까 망설였다",
+      "text": "They <b>hesitated</b> between fighting and submitting."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 갈 둥 말 둥 하고 있다",
+      "text": "He is thinking over going there. or He hesitates to go."
+    }
+  ],
+  "isWordType": true
+}

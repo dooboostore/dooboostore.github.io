@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>absent</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "부재의, 집[자리]에 없는, 집을 비운; [P] 결석의, 결근의 ((from))(opp. present)",
+              "examples": [
+                {
+                  "text": "be <b>absent</b> from home[school]",
+                  "translatedText": "집을 비우다[결석하다]"
+                }
+              ],
+              "originalMeaning": "부재의, 집[자리]에 없는, 집을 비운; [P] 결석의, 결근의 ((from))(opp. present)"
+            },
+            {
+              "meaning": "없는(lacking), 결여된",
+              "examples": [
+                {
+                  "text": "be <b>absent</b> from my life",
+                  "translatedText": "내 생활과 전혀 무관하다"
+                }
+              ],
+              "originalMeaning": "없는(lacking), 결여된"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[~ oneself로] 결석[결근]하다 ((from)), <집을> 비우다",
+              "examples": [
+                {
+                  "text": "<b>absent</b> oneself from school",
+                  "translatedText": "결석하다"
+                }
+              ],
+              "originalMeaning": "[~ oneself로] 결석[결근]하다 ((from)), <집을> 비우다"
+            }
+          ]
+        },
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "…이 없을 때는, …없기 때문에",
+              "examples": [],
+              "originalMeaning": "…이 없을 때는, …없기 때문에"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dde2c0b7c4c547a9a89022e087989316",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dde2c0b7c4c547a9a89022e087989316",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "absents"
+        },
+        {
+          "type": "과거형",
+          "value": "absented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "absenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "absented"
+        }
+      ],
+      "aliasConjugation": "absents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "62049f66951c9227e0258619fa9c9d1f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "남의 뒷공론을 하는 게 아니야",
+      "text": "Don't speak ill of the <b>absent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "건망증이 생기는 것 같아",
+      "text": "I'm afraid I'm getting <b>absent</b>-minded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아무 말없이 결석했다",
+      "text": "He absented himself without notice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그가 결석한 줄 알았다",
+      "text": "I thought[supposed] that he was <b>absent</b> from school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어제는 열이 나서 결석했다",
+      "text": "I was <b>absent</b> yesterday because I had a fever."
+    }
+  ],
+  "isWordType": true
+}

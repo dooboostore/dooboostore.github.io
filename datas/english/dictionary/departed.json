@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "<b>departed</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│pɑːrtɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(최근에) 죽은(deceased), [the ~, 명사적, 단수 취급] 고인 ((개인)), [복수 취급] 죽은 사람 ((전체))",
+              "examples": [],
+              "originalMeaning": "(최근에) 죽은(deceased), [the ~, 명사적, 단수 취급] 고인 ((개인)), [복수 취급] 죽은 사람 ((전체))"
+            },
+            {
+              "meaning": "지나간, 과거의",
+              "examples": [],
+              "originalMeaning": "지나간, 과거의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f1af38a2a4144fce9fdde3b77f286217",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f1af38a2a4144fce9fdde3b77f286217",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "285e42b9f68129e779f2d5238250782e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>depart</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈpɑːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<열차·사람 등이> 출발하다, 떠나다(start) ((from, for))",
+              "examples": [
+                {
+                  "text": "They <b>departed</b> for America[from Seoul].",
+                  "translatedText": "그들은 미국으로[서울에서] 떠났다."
+                }
+              ],
+              "originalMeaning": "<열차·사람 등이> 출발하다, 떠나다(start) ((from, for))"
+            },
+            {
+              "meaning": "세상을 떠나다",
+              "examples": [],
+              "originalMeaning": "세상을 떠나다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "출발하다(leave)",
+              "examples": [
+                {
+                  "text": "<b>depart</b> Korea for Chicago",
+                  "translatedText": "한국을 떠나 시카고로 향하다"
+                }
+              ],
+              "originalMeaning": "출발하다(leave)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8409f2b9bbb34b9fbb15965cc182ece7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8409f2b9bbb34b9fbb15965cc182ece7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "departs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7d21855c26f3c72ab81b7f179a71e73f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지금부터 20분 후에 출발한다.",
+      "text": "Twenty minutes from now we will <b>depart</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "불쌍한 김 노인은 마침내 세상을 떠났다",
+      "text": "Poor old Kim has <b>departed</b> at last."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "서울발 동경행 항공편은 오후 5시 15분에 출발한다.",
+      "text": "The flight departs from Seoul for Tokyo at 5:15 P.M."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 애가 있어 죽은 아내의 일이 잊히지 않는다",
+      "text": "This child is an eternal reminder of my <b>departed</b> wife."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배가 바야흐로 출항하려고 한다",
+      "text": "The ship is about[just going] to <b>depart</b>. or The ship is on the point of sailing."
+    }
+  ],
+  "isWordType": true
+}

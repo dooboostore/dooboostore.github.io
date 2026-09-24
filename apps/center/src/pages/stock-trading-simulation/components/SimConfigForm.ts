@@ -1,4 +1,4 @@
-import { elementDefine, changedAttribute, onConnectedBodyShadow, setPropertyShadow, eventShadow, property } from '@dooboostore/simple-web-component';
+import { elementDefine, changedAttribute, onConnectedBodyShadow, propertyShadow, eventShadow, property } from '@dooboostore/simple-web-component';
 
 const tagName = 'sim-config-form';
 
@@ -39,28 +39,28 @@ export default (w: Window) => {
     }
 
     @changedAttribute('capital', { type: Number })
-    @setPropertyShadow('[name="capital"]', 'value')
+    @propertyShadow('[name="capital"]', 'value')
     onCapitalChanged(v: number) {
       if (Number.isFinite(v)) this.defCapital = v;
       return String(this.defCapital);
     }
 
     @changedAttribute('fee', { type: Number })
-    @setPropertyShadow('[name="fee"]', 'value')
+    @propertyShadow('[name="fee"]', 'value')
     onFeeChanged(v: number) {
       if (Number.isFinite(v)) this.defFee = v;
       return String(this.defFee);
     }
 
     @changedAttribute('shares', { type: Number })
-    @setPropertyShadow('[name="shares"]', 'value')
+    @propertyShadow('[name="shares"]', 'value')
     onSharesChanged(v: number) {
       if (Number.isFinite(v)) this.defShares = v;
       return String(this.defShares);
     }
 
     @changedAttribute('avg', { type: Number })
-    @setPropertyShadow('[name="avg"]', 'value')
+    @propertyShadow('[name="avg"]', 'value')
     onAvgChanged(v: number) {
       return Number.isFinite(v) ? String(v) : '0';
     }

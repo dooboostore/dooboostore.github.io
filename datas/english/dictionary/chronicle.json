@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "<b>chronicle</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│krɑːnɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "연대기(年代記), 편년사(編年史); 기록, 이야기",
+              "examples": [
+                {
+                  "text": "The Anglo-Saxon <b>Chronicle</b>",
+                  "translatedText": "앵글로 색슨 연대기"
+                }
+              ],
+              "originalMeaning": "연대기(年代記), 편년사(編年史); 기록, 이야기"
+            },
+            {
+              "meaning": "[the C~, 신문명에 써서] …신문",
+              "examples": [
+                {
+                  "text": "the News <b>Chronicle</b>",
+                  "translatedText": "뉴스크로니클 ((런던에서 발행되던 전국 조간지))"
+                }
+              ],
+              "originalMeaning": "[the C~, 신문명에 써서] …신문"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "연대기에 싣다, 연대순으로 기록하다, 기록에 올리다; 열거하다; 상술(詳述)하다",
+              "examples": [],
+              "originalMeaning": "연대기에 싣다, 연대순으로 기록하다, 기록에 올리다; 열거하다; 상술(詳述)하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/31883d0f3bfb477baadf4558c9b94fa0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/31883d0f3bfb477baadf4558c9b94fa0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "chronicles"
+        },
+        {
+          "type": "과거형",
+          "value": "chronicled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "chronicling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "chronicled"
+        }
+      ],
+      "aliasConjugation": "chronicles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e32a1a440b011675e3ac3bb5dbd14ea0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "역대기 상",
+      "text": "The First Book of the Chronicles;1 Chronicles"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "역대기 하",
+      "text": "The Second Book of the Chronicles;2 Chronicles"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "앵글로 색슨 연대기",
+      "text": "The Anglo-Saxon <b>Chronicle</b>"
+    }
+  ],
+  "isWordType": true
+}

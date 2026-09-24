@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "<b>defect</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "결점, 결함; 단점, 약점; 흠(blemish)",
+              "examples": [],
+              "originalMeaning": "결점, 결함; 단점, 약점; 흠(blemish)"
+            },
+            {
+              "meaning": "[U] 결손, 부족; [C] 부족액[량]",
+              "examples": [],
+              "originalMeaning": "[U] 결손, 부족; [C] 부족액[량]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "탈퇴하다, 변절하다 ((from)); 도망가다, 망명하다 ((to))",
+              "examples": [],
+              "originalMeaning": "탈퇴하다, 변절하다 ((from)); 도망가다, 망명하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dfe520076fc94ffbb2f139c130d41d26",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dfe520076fc94ffbb2f139c130d41d26",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "defects"
+        },
+        {
+          "type": "과거형",
+          "value": "defected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "defecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "defected"
+        }
+      ],
+      "aliasConjugation": "defects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "89edc199c559c3466a79ef922b99d411",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>defect</b>.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "defective",
+              "examples": [],
+              "originalMeaning": "defective"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c078cf3c8b6a4392b665f9042310480e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c078cf3c8b6a4392b665f9042310480e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "defects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "944275300c6a6f04dc8e76c56eda8311",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부엉이 소리도 제가 듣기에는 좋다",
+      "text": "We are apt to be blind to our own defects[faults]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자신의 조국에서 서방 세계로 넘어왔다",
+      "text": "He defected from his country to the West."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사지를 넘어 자유 세계로 귀순했다",
+      "text": "He defected to the Free World across the point of death."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 언어 장애 때문에 변호사 되기를 단념했다",
+      "text": "He gave up becoming a lawyer on account of a speech <b>defect</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오체가 멀쩡하다",
+      "text": "He is without any physical <b>defect</b>."
+    }
+  ],
+  "isWordType": true
+}

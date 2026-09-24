@@ -2,6 +2,8 @@ import RootRouter from './RootRouter';
 import HomePage from './home/HomePage';
 import EnglishListPage from './english/EnglishListPage';
 import EnglishPlayerPage from './english/EnglishPlayerPage';
+import TextEnglishListPage from './text-english/TextEnglishListPage';
+import TextEnglishReaderPage from './text-english/TextEnglishReaderPage';
 import StockFlightPage from './stock-flight/StockFlightPage';
 import LottoPage from './lotto/LottoPage';
 import CoordinateSimulationPage from './coordinate-simulation/CoordinateSimulationPage';
@@ -73,12 +75,43 @@ import PhysicalDof from './physical/components/PhysicalDof';
 import PhysicalEncoder from './physical/components/PhysicalEncoder';
 import PhysicalXm430 from './physical/components/PhysicalXm430';
 import RamPricePage from './ram-price/RamPricePage';
+import VisionPage from './vision/VisionPage';
+import VisionSaturateWrap from './vision/components/VisionSaturateWrap';
+import VisionColorSpace from './vision/components/VisionColorSpace';
+import VisionFiltering from './vision/components/VisionFiltering';
+import VisionMorphology from './vision/components/VisionMorphology';
+import VisionPipeline from './vision/components/VisionPipeline';
+import VisionPinhole from './vision/components/VisionPinhole';
+import VisionIntrinsicK from './vision/components/VisionIntrinsicK';
+import VisionLensDistortion from './vision/components/VisionLensDistortion';
+import VisionCameraChain from './vision/components/VisionCameraChain';
+import VisionPnP from './vision/components/VisionPnP';
+import VisionReprojectionError from './vision/components/VisionReprojectionError';
+import VisionMonocularAmbiguity from './vision/components/VisionMonocularAmbiguity';
+import VisionDistanceSolutions from './vision/components/VisionDistanceSolutions';
+import VisionHsvTuning from './vision/components/VisionHsvTuning';
+import VisionContourFilter from './vision/components/VisionContourFilter';
+import VisionEmaStabilize from './vision/components/VisionEmaStabilize';
+import VisionDetectionRate from './vision/components/VisionDetectionRate';
+import VisionCalibSetup from './vision/components/VisionCalibSetup';
+import VisionCalibRms from './vision/components/VisionCalibRms';
+import VisionCalibSanity from './vision/components/VisionCalibSanity';
+import VisionCalibPnpUpgrade from './vision/components/VisionCalibPnpUpgrade';
+import VisionRosPipeline from './vision/components/VisionRosPipeline';
+import VisionCvBridge from './vision/components/VisionCvBridge';
+import VisionBandwidthCalc from './vision/components/VisionBandwidthCalc';
+import VisionQosCompare from './vision/components/VisionQosCompare';
+import VisionPipelineIntegration from './vision/components/VisionPipelineIntegration';
+import VisionBackProjection from './vision/components/VisionBackProjection';
+import VisionPipelineValidation from './vision/components/VisionPipelineValidation';
 
 export const pageFactories = [
   RootRouter,
   HomePage,
   EnglishListPage,
   EnglishPlayerPage,
+  TextEnglishListPage,
+  TextEnglishReaderPage,
   StockFlightPage,
   LottoPage,
   CoordinateSimulationPage,
@@ -150,4 +183,33 @@ export const pageFactories = [
   PhysicalEncoder,
   PhysicalXm430,
   RamPricePage,
+  VisionPage,
+  VisionSaturateWrap,
+  VisionColorSpace,
+  VisionFiltering,
+  VisionMorphology,
+  VisionPipeline,
+  VisionPinhole,
+  VisionIntrinsicK,
+  VisionLensDistortion,
+  VisionCameraChain,
+  VisionPnP,
+  VisionReprojectionError,
+  VisionMonocularAmbiguity,
+  VisionDistanceSolutions,
+  VisionHsvTuning,
+  VisionContourFilter,
+  VisionEmaStabilize,
+  VisionDetectionRate,
+  VisionCalibSetup,
+  VisionCalibRms,
+  VisionCalibSanity,
+  VisionCalibPnpUpgrade,
+  VisionRosPipeline,
+  VisionCvBridge,
+  VisionBandwidthCalc,
+  VisionQosCompare,
+  VisionPipelineIntegration,
+  VisionBackProjection,
+  VisionPipelineValidation,
 ];

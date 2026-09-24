@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>scent</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sent"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 냄새; 향내, 향기 (=smell)",
+              "examples": [],
+              "originalMeaning": "[UC/] 냄새; 향내, 향기 (=<span class='related_word' lang='en' >smell</span>)"
+            },
+            {
+              "meaning": "향수(perfume)",
+              "examples": [],
+              "originalMeaning": "향수(perfume)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 냄새를 맡다; <짐승의> 냄새를 맡아내다[분간하다], 냄새로 찾아내다 ((out))",
+              "examples": [],
+              "originalMeaning": "…의 냄새를 맡다; <짐승의> 냄새를 맡아내다[분간하다], 냄새로 찾아내다 ((out))"
+            },
+            {
+              "meaning": "<비밀 등을> 눈치채다, 알아채다; <위험 등을> 감지하다",
+              "examples": [
+                {
+                  "text": "<b>scent</b> danger",
+                  "translatedText": "위험을 감지하다"
+                }
+              ],
+              "originalMeaning": "<비밀 등을> 눈치채다, 알아채다; <위험 등을> 감지하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "냄새 자취를 따라 추적하다, <개 등이> 냄새를 맡으며 돌아다니다 ((about))",
+              "examples": [],
+              "originalMeaning": "냄새 자취를 따라 추적하다, <개 등이> 냄새를 맡으며 돌아다니다 ((about))"
+            },
+            {
+              "meaning": "(…의) 냄새를 풍기다, 기미가 있다 ((of))",
+              "examples": [],
+              "originalMeaning": "(…의) 냄새를 풍기다, 기미가 있다 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7dcdccf9c2204b4197b4a8249e07a93d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7dcdccf9c2204b4197b4a8249e07a93d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "scents"
+        },
+        {
+          "type": "과거형",
+          "value": "scented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scented"
+        }
+      ],
+      "aliasConjugation": "scents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1d7d548dc6ef183b542bfbd878fa07c0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꽃이 좋은 냄새를 피웠다",
+      "text": "The flowers scented[perfumed] the air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "독한 냄새가 방 안에 배어 있다",
+      "text": "A powerful <b>scent</b> permeates the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오렌지에는 그 독특한 향기가 있다.",
+      "text": "The orange has a <b>scent</b> all its own."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "타월이 경찰의 단서가 되었다",
+      "text": "The towel put the police on the <b>scent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개는 후각이 예민하다.",
+      "text": "The dog is keen of <b>scent</b>."
+    }
+  ],
+  "isWordType": true
+}

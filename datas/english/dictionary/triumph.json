@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "<b>triumph</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtraɪʌmf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "승리, 정복 ((over)); 대성공; 업적, 공적 (=victory)",
+              "examples": [
+                {
+                  "text": "The new play was a <b>triumph</b>.",
+                  "translatedText": "신작 연극은 대성공이었다."
+                }
+              ],
+              "originalMeaning": "승리, 정복 ((over)); 대성공; 업적, 공적 (=<span class='related_word' lang='en' >victory</span>)"
+            },
+            {
+              "meaning": "승리감, 성공의 기쁨",
+              "examples": [],
+              "originalMeaning": "승리감, 성공의 기쁨"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "성공하다, 잘 되다; 승리를 차지하다, 이기다 ((over)); 이겨서 좋아하다, 개가를 올리다",
+              "examples": [
+                {
+                  "text": "<b>triumph</b> over a disease",
+                  "translatedText": "병을 극복하다"
+                }
+              ],
+              "originalMeaning": "성공하다, 잘 되다; 승리를 차지하다, 이기다 ((over)); 이겨서 좋아하다, 개가를 올리다"
+            },
+            {
+              "meaning": "개선식을 올리다, 승리를 축하하다",
+              "examples": [],
+              "originalMeaning": "개선식을 올리다, 승리를 축하하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "정복하다, 이기다",
+              "examples": [],
+              "originalMeaning": "정복하다, 이기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b6b9c4c649e84330b088465cf3402637",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b6b9c4c649e84330b088465cf3402637",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "triumphs"
+        },
+        {
+          "type": "과거형",
+          "value": "triumphed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "triumphing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "triumphed"
+        }
+      ],
+      "aliasConjugation": "triumphs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a0e0b250321a0ef6af89b7b4bd8df23e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신작 연극은 대성공이었다.",
+      "text": "The new play was a <b>triumph</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "드디어 정의가 이겼다.",
+      "text": "Finally justice triumphed."
+    }
+  ],
+  "isWordType": true
+}

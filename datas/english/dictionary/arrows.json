@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "<b>arrow</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈæroʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "화살(cf. BOW)",
+              "examples": [
+                {
+                  "text": "shoot an <b>arrow</b>",
+                  "translatedText": "화살을 쏘다"
+                }
+              ],
+              "originalMeaning": "화살(cf. BOW)"
+            },
+            {
+              "meaning": "화살 모양의 물건, 화살표 ((→))",
+              "examples": [],
+              "originalMeaning": "화살 모양의 물건, 화살표 ((→))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "화살표로 표시하다",
+              "examples": [],
+              "originalMeaning": "화살표로 표시하다"
+            },
+            {
+              "meaning": "(화살처럼) 돌진하다",
+              "examples": [],
+              "originalMeaning": "(화살처럼) 돌진하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(화살처럼) 날다, 달리다, 돌진하다",
+              "examples": [],
+              "originalMeaning": "(화살처럼) 날다, 달리다, 돌진하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fb051d0a8a8046c584f5256ce890ff72",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fb051d0a8a8046c584f5256ce890ff72",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4a2c1a78d9535f4de6390152dca18d74",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화살이 과녁 한가운데에 꽂혔다",
+      "text": "The <b>arrow</b> alighted[was fixed] in the very center of the target."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화살이 휙하고 날아갔다",
+      "text": "An <b>arrow</b> whizzed past."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화살이 표적에 맞았다.",
+      "text": "The <b>arrow</b> found its target."
+    }
+  ],
+  "isWordType": true
+}

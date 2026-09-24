@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "<b>agitated</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈædʒɪteɪtɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "흥분한, 동요한",
+              "examples": [],
+              "originalMeaning": "흥분한, 동요한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e54607af2fa45b3a46999e3e78dc883",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e54607af2fa45b3a46999e3e78dc883",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3cea92ac4f66bba4cb28aec019c336d5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>agitate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈædʒɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<액체를> 흔들다, 휘젓다, <바람이 파도를> 일으키다",
+              "examples": [],
+              "originalMeaning": "<액체를> 흔들다, 휘젓다, <바람이 파도를> 일으키다"
+            },
+            {
+              "meaning": "<사람을> 선동하다, <마음을> 교란하다(excite), 동요시키다",
+              "examples": [],
+              "originalMeaning": "<사람을> 선동하다, <마음을> 교란하다(excite), 동요시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "선동하다 ((for, against)), 여론을 환기하다, …의 (정치) 운동을 하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>agitate</b> for disarmament",
+                  "translatedText": "군비 철폐 운동을 하다"
+                }
+              ],
+              "originalMeaning": "선동하다 ((for, against)), 여론을 환기하다, …의 (정치) 운동을 하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2f7512b33ec448eeba0d4aa2dc9c77b1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2f7512b33ec448eeba0d4aa2dc9c77b1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "agitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9a3fafc7cd64df8838b5ff58e415570b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소식을 듣고 학생들은 술렁거렸다",
+      "text": "The students were <b>agitated</b> by[with] the news."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 문제로 민심이 동요하고 있다",
+      "text": "The people are <b>agitated</b> over the question."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신문은 주택 문제 개선을 위한 운동을 했다.",
+      "text": "The papers <b>agitated</b> for better housing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 스캔들로 전국이 어지럽다",
+      "text": "The whole country is <b>agitated</b> over the scandal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 개혁에 반대하는 운동을 시작했다",
+      "text": "They mounted a campaign[started agitating] against the reform."
+    }
+  ],
+  "isWordType": true
+}

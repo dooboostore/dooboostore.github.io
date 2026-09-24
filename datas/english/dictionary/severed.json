@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>sever</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsevə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "절단하다, 자르다 ((from)), (=separate)",
+              "examples": [
+                {
+                  "text": "<b>sever</b> a rope",
+                  "translatedText": "밧줄을 자르다"
+                }
+              ],
+              "originalMeaning": "절단하다, 자르다 ((from)), (=<span class='related_word' lang='en' >separate</span>)"
+            },
+            {
+              "meaning": "떼어 놓다(separate), 가르다(divide), 분리하다, 분할하다 ((into))",
+              "examples": [
+                {
+                  "text": "The world is <b>severed</b> into two blocks.",
+                  "translatedText": "세계는 두 진영으로 갈라져 있다."
+                }
+              ],
+              "originalMeaning": "떼어 놓다(separate), 가르다(divide), 분리하다, 분할하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "끊어지다, 갈라지다, 떨어지다, 분리하다",
+              "examples": [],
+              "originalMeaning": "끊어지다, 갈라지다, 떨어지다, 분리하다"
+            },
+            {
+              "meaning": "단절하다, 사이를 가르다",
+              "examples": [],
+              "originalMeaning": "단절하다, 사이를 가르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0d43ec27c42d43978c36bd4da72b0347",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0d43ec27c42d43978c36bd4da72b0347",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "severs"
+        },
+        {
+          "type": "과거형",
+          "value": "severed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "severing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "severed"
+        }
+      ],
+      "aliasConjugation": "severs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4df444d78e3fcec8e65c1839fdc3500e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "동체가 두 동강이 났다",
+      "text": "The body was <b>severed</b> in two."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "세계는 두 진영으로 갈라져 있다.",
+      "text": "The world is <b>severed</b> into two blocks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 회사와는 손을 끊었다",
+      "text": "We have <b>severed</b> our connection with the company."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 신작 소설은 혹평을 받았다",
+      "text": "His latest novel was subjected to <b>sever</b>[harsh] criticism."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 나라 사이가 단교됐다",
+      "text": "Diplomatic relations between the two countries were <b>severed</b>."
+    }
+  ],
+  "isWordType": true
+}

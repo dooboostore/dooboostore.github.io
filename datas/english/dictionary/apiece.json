@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "<b>apiece</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈpiːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "하나에 대하여, 한 사람에 대하여, 각자에게",
+              "examples": [
+                {
+                  "text": "give five dollars <b>apiece</b>",
+                  "translatedText": "각자에게[각각에] 5달러씩 주다"
+                }
+              ],
+              "originalMeaning": "하나에 대하여, 한 사람에 대하여, 각자에게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/349c00defc46406aa8b9991e34a8a0c3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/349c00defc46406aa8b9991e34a8a0c3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9785ea7637aad333017e4f1e81b5f13a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 참외는 매개 당 10센트이다",
+      "text": "These melons are ten cents <b>apiece</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 한 사람 앞에 1달러씩 주었다",
+      "text": "He gave us a dollar <b>apiece</b>[each]. or He gave a dollar to each (one) of us."
+    }
+  ],
+  "isWordType": true
+}

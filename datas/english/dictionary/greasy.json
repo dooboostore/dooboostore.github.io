@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "entry": "<b>greasy</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɡriːsi; ˈɡriːzi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<몸·의복·식기 등이> 기름이 묻은, 기름을 바른, 기름기 있는",
+              "examples": [],
+              "originalMeaning": "<몸·의복·식기 등이> 기름이 묻은, 기름을 바른, 기름기 있는"
+            },
+            {
+              "meaning": "기름을 함유한, 기름진, 기름기 많은",
+              "examples": [
+                {
+                  "text": "This food is <b>greasy</b>.",
+                  "translatedText": "이 음식은 기름기가 많다."
+                }
+              ],
+              "originalMeaning": "기름을 함유한, 기름진, 기름기 많은"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "양털을 깎는 사람",
+              "examples": [],
+              "originalMeaning": "양털을 깎는 사람"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d512abe99bf54a419601f65664896e2f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d512abe99bf54a419601f65664896e2f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "greasier"
+        },
+        {
+          "type": "최상급",
+          "value": "greasiest"
+        },
+        {
+          "type": "복수형",
+          "value": "greasies"
+        }
+      ],
+      "aliasConjugation": "greasier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "d6258d40f3a71df7a0949e6e58dc018f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 음식은 기름기가 많다.",
+      "text": "This food is <b>greasy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 음식은 기름기가 너무 많다",
+      "text": "The food[dish] is too <b>greasy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "옷에 온통 기름때가 끼어 있었다",
+      "text": "The clothes were smeared all over with <b>greasy</b> dirt."
+    }
+  ],
+  "isWordType": true
+}

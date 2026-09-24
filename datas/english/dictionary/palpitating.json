@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "<b>palpitate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpælpɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<심장·맥박이> 뛰다, 고동치다(throb)",
+              "examples": [],
+              "originalMeaning": "<심장·맥박이> 뛰다, 고동치다(throb)"
+            },
+            {
+              "meaning": "<기대 등으로> 가슴이 뛰다, 두근두근하다",
+              "examples": [],
+              "originalMeaning": "<기대 등으로> 가슴이 뛰다, 두근두근하다"
+            },
+            {
+              "meaning": "<사람·몸이> 떨리다 ((with))",
+              "examples": [],
+              "originalMeaning": "<사람·몸이> 떨리다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b7e0db5faf74999ac51a8d92ec7f054",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b7e0db5faf74999ac51a8d92ec7f054",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "palpitates"
+        },
+        {
+          "type": "과거형",
+          "value": "palpitated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "palpitating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "palpitated"
+        }
+      ],
+      "aliasConjugation": "palpitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dbac350fc664a9aecfdd4625da8ea8bc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 무서워서 가슴이 울렁거렸다",
+      "text": "Her heart was <b>palpitating</b> with fear."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가슴이 울렁울렁 한다",
+      "text": "My heart palpitates[throbs, flutters]."
+    }
+  ],
+  "isWordType": true
+}

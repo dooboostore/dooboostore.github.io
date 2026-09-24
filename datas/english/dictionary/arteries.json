@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "entry": "<b>artery</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːrtəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "동맥(opp. vein)",
+              "examples": [
+                {
+                  "text": "the main <b>artery</b>",
+                  "translatedText": "대동맥"
+                }
+              ],
+              "originalMeaning": "동맥(opp. vein)"
+            },
+            {
+              "meaning": "주요 수로[도로], 간선; 중추(中樞)",
+              "examples": [],
+              "originalMeaning": "주요 수로[도로], 간선; 중추(中樞)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9a6f8ecebea848679fdc6cd0a3bbef1a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9a6f8ecebea848679fdc6cd0a3bbef1a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "arteries"
+        }
+      ],
+      "aliasConjugation": "arteries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "dd5cd89b2c362624e6fbc5bbba6ded9b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 동맥의 직경을 측정했다",
+      "text": "He measured the diameter of the <b>artery</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 서울과 부산을 잇는 교통의 대동맥이다",
+      "text": "It is the main <b>artery</b> between Seoul and Busan."
+    }
+  ],
+  "isWordType": true
+}

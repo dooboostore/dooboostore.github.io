@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>borrow</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│bɑːroʊ; │bɔːroʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "빌리다 ((from, of))",
+              "examples": [
+                {
+                  "text": "I borrowed books from the library.",
+                  "translatedText": "나는 도서관에서 책을 빌렸다."
+                }
+              ],
+              "originalMeaning": "빌리다 ((from, of))"
+            },
+            {
+              "meaning": "(뺄셈할 때 윗자리에서) 꾸어 오다",
+              "examples": [],
+              "originalMeaning": "(뺄셈할 때 윗자리에서) 꾸어 오다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…에서) 빌리다, 꾸다, 차용하다 ((from))",
+              "examples": [],
+              "originalMeaning": "(…에서) 빌리다, 꾸다, 차용하다 ((from))"
+            },
+            {
+              "meaning": "바람[언덕]을 참작하여 치다",
+              "examples": [],
+              "originalMeaning": "바람[언덕]을 참작하여 치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f18634f94464efaa6884fa6d705517d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f18634f94464efaa6884fa6d705517d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "borrows"
+        },
+        {
+          "type": "과거형",
+          "value": "borrowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "borrowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "borrowed"
+        }
+      ],
+      "aliasConjugation": "borrows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6da7d80ffd5bde47fa39b660f6863731",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 넥타이 중 하나를 빌렸다.",
+      "text": "I borrowed a tie of his."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 늘 남의 것을 잘라먹는다",
+      "text": "He is always keeping borrowed things."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돈은 꾸지도 꾸어주지도 않는다는 것이 내 원칙이다",
+      "text": "It's my principle neither to <b>borrow</b> nor to lend money. or I make it a rule neither to <b>borrow</b> nor to lend money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그에게 차를 빌려 달라고 부탁했다",
+      "text": "I asked him if I could <b>borrow</b>[use] his car."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그래서 나는 그에게 돈을 꾸어야 했다.",
+      "text": "It involved (my) borrowing money from him."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "<b>facilitate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fəˈsɪlɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사정이> <일을> 용이하게 하다, 쉽게 하다, <행동·과정 등을> 촉진[조장]하다",
+              "examples": [
+                {
+                  "text": "Careful planning facilitates any kind of work.",
+                  "translatedText": "신중한 계획이 있으면 어떤 일이라도 순조롭게 진행된다."
+                }
+              ],
+              "originalMeaning": "<사정이> <일을> 용이하게 하다, 쉽게 하다, <행동·과정 등을> 촉진[조장]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5bd21a4d0b684050b095b600baf5bc7a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5bd21a4d0b684050b095b600baf5bc7a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "facilitates"
+        },
+        {
+          "type": "과거형",
+          "value": "facilitated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "facilitating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "facilitated"
+        }
+      ],
+      "aliasConjugation": "facilitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2f39d577169ff38559d1da01ffd33f7e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 이름을 내세우면 일은 용이하게 될 것이다",
+      "text": "Your name will <b>facilitate</b> matters."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신중한 계획이 있으면 어떤 일이라도 순조롭게 진행된다.",
+      "text": "Careful planning facilitates any kind of work."
+    }
+  ],
+  "isWordType": true
+}

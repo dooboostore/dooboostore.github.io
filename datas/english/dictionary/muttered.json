@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "<b>mutter</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmʌtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "중얼거리다; 불평을 말하다 ((at, against))",
+              "examples": [
+                {
+                  "text": "<b>mutter</b> against a person",
+                  "translatedText": "…에 대하여 불평을 말하다"
+                }
+              ],
+              "originalMeaning": "중얼거리다; 불평을 말하다 ((at, against))"
+            },
+            {
+              "meaning": "<천둥·파도 등이> 낮게 으르렁거리다[울리다]",
+              "examples": [],
+              "originalMeaning": "<천둥·파도 등이> 낮게 으르렁거리다[울리다]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "중얼거리다, 투덜투덜하다, 비밀히 말하다",
+              "examples": [
+                {
+                  "text": "<b>mutter</b> an oath",
+                  "translatedText": "저주의 말을 중얼거리다"
+                }
+              ],
+              "originalMeaning": "중얼거리다, 투덜투덜하다, 비밀히 말하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "중얼거림, 불평, (천둥 등의) 으르렁거리는[울리는] 소리",
+              "examples": [],
+              "originalMeaning": "중얼거림, 불평, (천둥 등의) 으르렁거리는[울리는] 소리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b70a611430f6419494f4d71d898e8159",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b70a611430f6419494f4d71d898e8159",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mutters"
+        },
+        {
+          "type": "과거형",
+          "value": "muttered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "muttering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "muttered"
+        }
+      ],
+      "aliasConjugation": "mutters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7052c9ff38be70e2c2fc4b6dc1cb4f16",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자는 무엇인가 혼자서 웅얼웅얼했다",
+      "text": "She <b>muttered</b> away to herself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 무엇인가 혼자 투덜거리며 가 버렸다",
+      "text": "He went away muttering something to himself."
+    }
+  ],
+  "isWordType": true
+}

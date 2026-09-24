@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "entry": "<b>nursery</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nɜːrsəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "육아실, 탁아소",
+              "examples": [],
+              "originalMeaning": "육아실, 탁아소"
+            },
+            {
+              "meaning": "보육 학교 ((어린아이들의 교육 시설))(= ~ school)",
+              "examples": [],
+              "originalMeaning": "보육 학교 ((어린아이들의 교육 시설))(= ~ school)"
+            },
+            {
+              "meaning": "양성소, (범죄 등의) 온상",
+              "examples": [],
+              "originalMeaning": "양성소, (범죄 등의) 온상"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cfe1f4a0f658449fb753a73ea52bb770",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cfe1f4a0f658449fb753a73ea52bb770",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "nurseries"
+        }
+      ],
+      "aliasConjugation": "nurseries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "dff6d394916a32caaf1c8d3c8017e1b0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 집사람은 유치원 보모입니다",
+      "text": "My wife is a kindergarten[<b>nursery</b> school] teacher."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 대학은 사실상 관리의 양성소였다",
+      "text": "The University was in practice the <b>nursery</b> of government officials."
+    }
+  ],
+  "isWordType": true
+}

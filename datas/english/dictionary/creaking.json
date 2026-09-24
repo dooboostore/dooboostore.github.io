@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "<b>creak</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kriːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "삐걱거리는 소리, 키익키익[삐걱삐걱] 울리는 소리, 삐걱거림",
+              "examples": [],
+              "originalMeaning": "삐걱거리는 소리, 키익키익[삐걱삐걱] 울리는 소리, 삐걱거림"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "삐걱거리(게 하)다",
+              "examples": [
+                {
+                  "text": "<b>Creaking</b> doors hang the longest.",
+                  "translatedText": "[속담] 병약자가 오래 산다., 「고로롱 팔십」"
+                }
+              ],
+              "originalMeaning": "삐걱거리(게 하)다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/11561719c5f9448c8746811e7957b13e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/11561719c5f9448c8746811e7957b13e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "creaks"
+        },
+        {
+          "type": "과거형",
+          "value": "creaked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "creaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "creaked"
+        }
+      ],
+      "aliasConjugation": "creaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f96c799a4d77115bd087c1ada334c9ca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 무게로 마루가 빼각거린다",
+      "text": "The floor gives a <b>creaking</b> sound under his weight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 문이 삐걱거리지 않도록 기름칠을 해야겠다",
+      "text": "I'll have to oil this door to stop it from <b>creaking</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 구두가 바드득거린다",
+      "text": "My shoes <b>creak</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "의자가 비걱거린다",
+      "text": "The chair creaks."
+    }
+  ],
+  "isWordType": true
+}

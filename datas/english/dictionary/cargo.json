@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "entry": "<b>cargo</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɑːrɡoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 뱃짐, 화물, 선화, (비행기·열차 등의) 적화(積貨); [미] (트럭의) 짐; ((일반적으로)) 짐, 무거운 짐",
+              "examples": [
+                {
+                  "text": "discharge the <b>cargo</b>",
+                  "translatedText": "짐을 부리다"
+                }
+              ],
+              "originalMeaning": "[CU] 뱃짐, 화물, 선화, (비행기·열차 등의) 적화(積貨); [미] (트럭의) 짐; ((일반적으로)) 짐, 무거운 짐"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<짐을> 싣다, 수송하다",
+              "examples": [],
+              "originalMeaning": "<짐을> 싣다, 수송하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6353e3fa0c894a509fcbb23813aefd4f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6353e3fa0c894a509fcbb23813aefd4f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "cargoes, cargos"
+        }
+      ],
+      "aliasConjugation": "cargoes, cargos",
+      "aliasConjugationPos": "복수형",
+      "gdid": "e56981af8f6cf8c3f762aaed8046c55a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 화물을 한 번에 조금씩 운반합시다",
+      "text": "Let's carry this <b>cargo</b> in a little at a time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "화물이 배에서 내려졌다",
+      "text": "<b>Cargo</b> was unloaded from the ship."
+    }
+  ],
+  "isWordType": true
+}

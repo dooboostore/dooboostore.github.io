@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "<b>swayed</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "swéid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(=SWAYBACKED)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >SWAYBACKED</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a2e90174d674c02b0a40e952a32d376",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a2e90174d674c02b0a40e952a32d376",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c0390acabfaae65dbc337d3567f97e96",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>sway</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sweɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<폭풍이> <큰 나무 등을> (전후좌우로) (뒤)흔들다, 동요시키다",
+              "examples": [],
+              "originalMeaning": "<폭풍이> <큰 나무 등을> (전후좌우로) (뒤)흔들다, 동요시키다"
+            },
+            {
+              "meaning": "[~ oneself로] 몸을 흔들다",
+              "examples": [],
+              "originalMeaning": "[~ oneself로] 몸을 흔들다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "흔들리다, 동요하다, 들썩들썩하다 (=swing)",
+              "examples": [
+                {
+                  "text": "The grass is swaying in the breeze.",
+                  "translatedText": "풀이 산들바람에 나부끼고 있다."
+                }
+              ],
+              "originalMeaning": "흔들리다, 동요하다, 들썩들썩하다 (=<span class='related_word' lang='en' >swing</span>)"
+            },
+            {
+              "meaning": "(…에 맞추어) 몸[머리]을 움직이다[흔들다] ((to))",
+              "examples": [],
+              "originalMeaning": "(…에 맞추어) 몸[머리]을 움직이다[흔들다] ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "동요, 흔들림",
+              "examples": [],
+              "originalMeaning": "동요, 흔들림"
+            },
+            {
+              "meaning": "좌우함; 세력, 지배력, 영향(력)",
+              "examples": [],
+              "originalMeaning": "좌우함; 세력, 지배력, 영향(력)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d7b16c896d4f4d74874e1578407b62ec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d7b16c896d4f4d74874e1578407b62ec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "sways",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b7a95b95ae12d4cfba2b5d4c92becc9f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 긴 머리채가 차랑거린다",
+      "text": "Her long pigtail sways on her back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "풀이 산들바람에 나부끼고 있다.",
+      "text": "The grass is swaying in the breeze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잘 얼러맞추면 그를 마음대로 할 수 있다",
+      "text": "If you just humor him right, you can easily <b>sway</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "버들가지가 바람에 흐늘흐늘 움직인다",
+      "text": "The willow branches are swaying gently in the wind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나뭇가지가 바람에 흔들린다",
+      "text": "Branches <b>sway</b> in the wind."
+    }
+  ],
+  "isWordType": true
+}

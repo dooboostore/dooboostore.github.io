@@ -170,6 +170,7 @@ async function main() {
 
   const pages = [
     "/english",
+    "/text-english",
     "/stock-flight",
     "/lotto",
     "/coordinate-simulation",

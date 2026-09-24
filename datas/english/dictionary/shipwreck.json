@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>shipwreck</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈʃɪprek"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 난선(難船), 난파; [C] 배의 조난 사고",
+              "examples": [
+                {
+                  "text": "suffer <b>shipwreck</b>",
+                  "translatedText": "난파하다"
+                }
+              ],
+              "originalMeaning": "[U] 난선(難船), 난파; [C] 배의 조난 사고"
+            },
+            {
+              "meaning": "난파선(의 잔해)",
+              "examples": [],
+              "originalMeaning": "난파선(의 잔해)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "난선[난파]시키다, 파멸시키다",
+              "examples": [
+                {
+                  "text": "be shipwrecked",
+                  "translatedText": "난파하다; 파괴되다, 파멸하다"
+                }
+              ],
+              "originalMeaning": "난선[난파]시키다, 파멸시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "난파[난선]하다, 파멸하다",
+              "examples": [],
+              "originalMeaning": "난파[난선]하다, 파멸하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e0eba1d9aa574ac7b3ea2a446273ab2e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e0eba1d9aa574ac7b3ea2a446273ab2e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shipwrecks"
+        },
+        {
+          "type": "과거형",
+          "value": "shipwrecked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shipwrecking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shipwrecked"
+        }
+      ],
+      "aliasConjugation": "shipwrecks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9a264d36a3d403399154085c0808c42e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "난파선의 선원들은 지나가던 기선에 의해 구조되었다",
+      "text": "The shipwrecked crew were picked up by a passing steamer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것을 타산지석으로 삼아라",
+      "text": "Let this be[serve as] a good lesson to you. or This will afford an excellent lesson to you. or Let another's <b>shipwreck</b> be your seamark. or It is good to learn at another men's cost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "악처는 일생의 환난이다",
+      "text": "A bad wife is a lifelong dearth[the <b>shipwreck</b> of her husband]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "<b>tinge</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "엷은 색조(tincture)",
+              "examples": [],
+              "originalMeaning": "엷은 색조(tincture)"
+            },
+            {
+              "meaning": "[a ~] (…)티, 기미, 냄새 ((of))",
+              "examples": [],
+              "originalMeaning": "[a ~] (…)티, 기미, 냄새 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "색조를 띠게 하다, (엷게) 물들이다; …한 맛[냄새]이 조금 나게 하다",
+              "examples": [
+                {
+                  "text": "Autumn tinges the woods with a thousand beautiful varieties of color.",
+                  "translatedText": "가을은 온갖 아름다운 빛깔로 숲을 물들인다."
+                }
+              ],
+              "originalMeaning": "색조를 띠게 하다, (엷게) 물들이다; …한 맛[냄새]이 조금 나게 하다"
+            },
+            {
+              "meaning": "[종종 수동형으로] 가미하다, …티가 나게 하다, 기미를 띠게 하다 ((with))",
+              "examples": [
+                {
+                  "text": "Her memory was <b>tinged</b> with sorrow.",
+                  "translatedText": "그녀의 추억은 슬픔을 띤 것이었다."
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 가미하다, …티가 나게 하다, 기미를 띠게 하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bc262443f96e40e78a56538880d8b5a1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bc262443f96e40e78a56538880d8b5a1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tinges"
+        },
+        {
+          "type": "과거형",
+          "value": "tinged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tingeing, tinging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tinged"
+        }
+      ],
+      "aliasConjugation": "tinges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "25fad59d5011d334cea53756795b10b2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 추억은 슬픔을 띤 것이었다.",
+      "text": "Her memory was <b>tinged</b> with sorrow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 목소리에는 슬픈 느낌이 있었다",
+      "text": "There was a <b>tinge</b> of sadness in her voice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네온 빛으로 하늘이 발갛다",
+      "text": "The sky is <b>tinged</b> with red from the neon lights."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "동천이 붉게 물들었다",
+      "text": "The eastern sky was <b>tinged</b> with crimson."
+    }
+  ],
+  "isWordType": true
+}

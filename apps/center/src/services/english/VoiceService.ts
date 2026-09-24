@@ -47,10 +47,8 @@ export default (container: symbol): ConstructorType<VoiceServiceType> => {
     }
     public speakWord(word: string, onEnd?: () => void): void {
       if (!('speechSynthesis' in window)) return;
-      if (this.isPlayingWord && !this.isPlayingScript) {
-        speechSynthesis.cancel();
-        this.isPlayingWord = false;
-      }
+      // 이미 출력 중인 음성(단어·문장 불문)은 끊고 새로 출력
+      this.stopSpeech();
       const clean = word.replace(/[,.":!?;]/g, '').trim();
       if (!clean) return;
       const u = new SpeechSynthesisUtterance(clean);

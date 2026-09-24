@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "<b>resound</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈzaʊnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<장소가> (소리 따위로) 울려 퍼지다, 반향하다 ((with))",
+              "examples": [
+                {
+                  "text": "The room <b>resounded</b> with the children's shouts.",
+                  "translatedText": "방안은 어린애들의 고함 소리로 가득 찼다."
+                }
+              ],
+              "originalMeaning": "<장소가> (소리 따위로) 울려 퍼지다, 반향하다 ((with))"
+            },
+            {
+              "meaning": "<악기·소리 등이> 울리다, 울다 ((through, around, in))",
+              "examples": [
+                {
+                  "text": "A gong <b>resound</b> ed.",
+                  "translatedText": "공[징]이 울렸다."
+                }
+              ],
+              "originalMeaning": "<악기·소리 등이> 울리다, 울다 ((through, around, in))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "반향시키다, 반향하다",
+              "examples": [],
+              "originalMeaning": "반향시키다, 반향하다"
+            },
+            {
+              "meaning": "큰소리로 말하다; 극구 칭찬하다, 찬양하다",
+              "examples": [],
+              "originalMeaning": "큰소리로 말하다; 극구 칭찬하다, 찬양하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fded8496cd734e769a89d5b6fcb66d19",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fded8496cd734e769a89d5b6fcb66d19",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "resounds"
+        },
+        {
+          "type": "과거형",
+          "value": "resounded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "resounding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "resounded"
+        }
+      ],
+      "aliasConjugation": "resounds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e5a2c4f839263a454143fdf9af62cc2a",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-sound",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:sáund"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "다시 울리(게 하)다",
+              "examples": [],
+              "originalMeaning": "다시 울리(게 하)다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/26c9fe297bfa4d789f5d698cbf2ea859",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/26c9fe297bfa4d789f5d698cbf2ea859",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1f2d9d11b08a02eff74039914a7b45df",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리가 소리지르자 산이 메아리쳤다",
+      "text": "The hills <b>resounded</b> when we shouted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방안은 어린애들의 고함 소리로 가득 찼다.",
+      "text": "The room <b>resounded</b> with the children’s shouts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "환성이 하늘을 찔렀다",
+      "text": "Shouts of joy rent the sky. or The sky <b>resounded</b> with rejoicing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공[징]이 울렸다.",
+      "text": "A gong <b>resounded</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "메아리가 울린다",
+      "text": "Echoes <b>resound</b>."
+    }
+  ],
+  "isWordType": true
+}

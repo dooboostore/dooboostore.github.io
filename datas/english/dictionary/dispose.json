@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>dispose</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈspoʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<군대·물건을> 배치하다, 배열하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>dispose</b> soldiers for the battle",
+                  "translatedText": "병사를 전장에 배치하다"
+                }
+              ],
+              "originalMeaning": "<군대·물건을> 배치하다, 배열하다 ((for))"
+            },
+            {
+              "meaning": "…할 마음이 내키게 하다 ((to)) (→disposed)",
+              "examples": [
+                {
+                  "text": "( <b>dispose</b> +[목]+to do) His advice disposed me to read it.",
+                  "translatedText": "그의 조언으로 그것을 읽고 싶어졌다."
+                }
+              ],
+              "originalMeaning": "…할 마음이 내키게 하다 ((to)) (→<span class='related_word' lang='en' >disposed</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "처리하다, 처치[처분]하다",
+              "examples": [
+                {
+                  "text": "Man proposes, God <b>dispose</b> .",
+                  "translatedText": "일은 사람이 하고 결과는 하늘에 맡긴다."
+                }
+              ],
+              "originalMeaning": "처리하다, 처치[처분]하다"
+            },
+            {
+              "meaning": "일의 추세[성패]를 결정하다",
+              "examples": [],
+              "originalMeaning": "일의 추세[성패]를 결정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/36a3de8b6ad44e13b9775d9030fd1cbf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/36a3de8b6ad44e13b9775d9030fd1cbf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "disposes"
+        },
+        {
+          "type": "과거형",
+          "value": "disposed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disposing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disposed"
+        }
+      ],
+      "aliasConjugation": "disposes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2780b3d0c4f677eb3e5f88c2a092238a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그를 원조하고 싶다",
+      "text": "I am disposed to help him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인간은 일을 계획하지만 신은 성패를 가르신다.",
+      "text": "Man proposes, God disposes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 당신한테 찬성하고 싶다.",
+      "text": "I am disposed to agree with you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "드라이브할 마음이 내키지 않는다.",
+      "text": "I’m not disposed for a drive."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 조언으로 그것을 읽고 싶어졌다.",
+      "text": "His advice disposed me to read it."
+    }
+  ],
+  "isWordType": true
+}

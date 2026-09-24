@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>jot</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dʒɑːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~; 보통 부정문에서] (매우) 적음, 조금",
+              "examples": [
+                {
+                  "text": "I don'tcare a <b>jot</b>.",
+                  "translatedText": "전혀 상관하지 않는다."
+                }
+              ],
+              "originalMeaning": "[a ~; 보통 부정문에서] (매우) 적음, 조금"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "간단히 몇 자 적어 두다, 메모하다 ((down))",
+              "examples": [
+                {
+                  "text": "<b>jot</b> down one's passport number",
+                  "translatedText": "여권의 번호를 적어 두다"
+                }
+              ],
+              "originalMeaning": "간단히 몇 자 적어 두다, 메모하다 ((down))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a9704e2b8f144ac9aac999ef74cff96e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a9704e2b8f144ac9aac999ef74cff96e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "jots"
+        },
+        {
+          "type": "과거형",
+          "value": "jotted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "jotting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "jotted"
+        }
+      ],
+      "aliasConjugation": "jots",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e34a20708e4f601caff716dcc5306a5a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전연 상관 않는다.",
+      "text": "I don’t care a <b>jot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일호도",
+      "text": "(not) in the least;(not) a <b>jot</b>[whit, bit]"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "<b>shove</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃʌv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(난폭하게) 밀다, 떼밀다, 밀치다; 밀어내다[제치다] (=push)",
+              "examples": [
+                {
+                  "text": "<b>shove</b> a person over a cliff",
+                  "translatedText": "벼랑에서 …을 떼밀어 떨어뜨리다"
+                }
+              ],
+              "originalMeaning": "(난폭하게) 밀다, 떼밀다, 밀치다; 밀어내다[제치다] (=<span class='related_word' lang='en' >push</span>)"
+            },
+            {
+              "meaning": "[~ one’s way로] 밀어제치고 나아가다",
+              "examples": [],
+              "originalMeaning": "[~ one’s way로] 밀어제치고 나아가다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "밀다, 밀치다, 밀고 나아가다; 밀어서 떨어지다",
+              "examples": [
+                {
+                  "text": "<b>shove</b> along",
+                  "translatedText": "밀고 나아가다"
+                }
+              ],
+              "originalMeaning": "밀다, 밀치다, 밀고 나아가다; 밀어서 떨어지다"
+            },
+            {
+              "meaning": "외출하다, 나가다",
+              "examples": [],
+              "originalMeaning": "외출하다, 나가다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "한 번 떼밀기, 밀치기",
+              "examples": [],
+              "originalMeaning": "한 번 떼밀기, 밀치기"
+            },
+            {
+              "meaning": "지지, 지원",
+              "examples": [],
+              "originalMeaning": "지지, 지원"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b930ba536a5043c0a9a56e94698af3eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b930ba536a5043c0a9a56e94698af3eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shoves"
+        },
+        {
+          "type": "과거형",
+          "value": "shoved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shoving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shoved"
+        }
+      ],
+      "aliasConjugation": "shoves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "20cc24adcaa27ae28088e626117581ca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 문을 밀어 열었다.",
+      "text": "He shoved open the door."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쓸데없이 남의 일에 나서지 마라",
+      "text": "Don't put[<b>shove</b>] your oar in other people's affairs. or Don't stick your nose into other people's business."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "떼밀지 마라",
+      "text": "Don't push me so much. or Stop <b>shoving</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "밀치지 마라",
+      "text": "Stop <b>shoving</b>."
+    }
+  ],
+  "isWordType": true
+}

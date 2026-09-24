@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "entry": "<b>knight</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(중세의) 기사(騎士), (귀부인을 따라 다닌) 무사",
+              "examples": [],
+              "originalMeaning": "(중세의) 기사(騎士), (귀부인을 따라 다닌) 무사"
+            },
+            {
+              "meaning": "나이트작(爵), 훈공작",
+              "examples": [],
+              "originalMeaning": "나이트작(爵), 훈공작"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 나이트 작위를 수여하다(cf. DUB)",
+              "examples": [],
+              "originalMeaning": "…에게 나이트 작위를 수여하다(cf. DUB)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9c39ed1e439c453f9388ff6bbb5bf714",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9c39ed1e439c453f9388ff6bbb5bf714",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "knights"
+        },
+        {
+          "type": "과거형",
+          "value": "knighted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "knighting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "knighted"
+        }
+      ],
+      "aliasConjugation": "knights",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ea7e69915722034a994720a2e5e1c9cf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기사는 허리에 칼을 차고 있었다.",
+      "text": "The <b>knight</b> belted his sword on."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국왕은 그에게 나이트 작위를 수여했다.",
+      "text": "The king dubbed him a <b>knight</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기사는 말을 몰고 성으로 급히 달려갔다.",
+      "text": "The <b>knight</b> spurred on[forward] to the castle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기사들은 왕에게 충성할 것을 맹세하였다",
+      "text": "The <b>knights</b> swore an oath of loyalty to their king."
+    }
+  ],
+  "isWordType": true
+}

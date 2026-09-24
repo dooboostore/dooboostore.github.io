@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>acquit</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkwɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "무죄로 하다, 무죄를 선고하다, 방면하다, 석방하다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>acquit</b> a prisoner",
+                  "translatedText": "죄인을 석방하다"
+                }
+              ],
+              "originalMeaning": "무죄로 하다, 무죄를 선고하다, 방면하다, 석방하다 ((of))"
+            },
+            {
+              "meaning": "(책임 등으로부터) <사람을> 해제하다, 면제해 주다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>acquit</b> a person of his[her] duty",
+                  "translatedText": "…의 의무를 해제하다"
+                }
+              ],
+              "originalMeaning": "(책임 등으로부터) <사람을> 해제하다, 면제해 주다 ((of))"
+            },
+            {
+              "meaning": "[well 등의 양태 부사와 함께] (…하게) 처신하다, 연기하다",
+              "examples": [
+                {
+                  "text": "<b>acquit</b> oneself well[badly]",
+                  "translatedText": "훌륭하게[졸렬하게] 처신하다; 맡은 역을 잘[서투르게] 연기하다"
+                }
+              ],
+              "originalMeaning": "[well 등의 양태 부사와 함께] (…하게) 처신하다, 연기하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f07b3eb789764bc3a5c28d6ab9cc8e6a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f07b3eb789764bc3a5c28d6ab9cc8e6a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "acquits"
+        },
+        {
+          "type": "과거형",
+          "value": "acquitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "acquitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "acquitted"
+        }
+      ],
+      "aliasConjugation": "acquits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2b1380e655c0d964bf9398beb08b821e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 재판을 받고 무죄 석방되었다",
+      "text": "He was tried and <b>acquitted</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 증거 불충분으로 면소되었다",
+      "text": "He was <b>acquitted</b> for lack of evidence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 고소가 취하되었다[면소되었다].",
+      "text": "He was <b>acquitted</b> of the charge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 책임이 면제되었다.",
+      "text": "He was <b>acquitted</b> of his responsibility."
+    }
+  ],
+  "isWordType": true
+}

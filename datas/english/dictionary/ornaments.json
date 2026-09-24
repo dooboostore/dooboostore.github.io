@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "<b>ornament</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "꾸밈, 장식",
+              "examples": [
+                {
+                  "text": "by way of <b>ornament</b>",
+                  "translatedText": "장식으로서"
+                }
+              ],
+              "originalMeaning": "꾸밈, 장식"
+            },
+            {
+              "meaning": "장식품, 장신구",
+              "examples": [
+                {
+                  "text": "personal <b>ornament</b> s",
+                  "translatedText": "장신구"
+                }
+              ],
+              "originalMeaning": "장식품, 장신구"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "꾸미다, 장식하다 ((with, in)), (=decorate)",
+              "examples": [
+                {
+                  "text": "<b>ornament</b> a roomwith flowers",
+                  "translatedText": "방을 꽃으로 장식하다"
+                }
+              ],
+              "originalMeaning": "꾸미다, 장식하다 ((with, in)), (=<span class='related_word' lang='en' >decorate</span>)"
+            },
+            {
+              "meaning": "…에 광채를 더하다, 장식이 되다",
+              "examples": [],
+              "originalMeaning": "…에 광채를 더하다, 장식이 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d6bc39c0f6f74d978f97ef532d829d66",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d6bc39c0f6f74d978f97ef532d829d66",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ornaments"
+        },
+        {
+          "type": "과거형",
+          "value": "ornamented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ornamenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ornamented"
+        }
+      ],
+      "aliasConjugation": "ornaments",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "85207c78d72f2ca48c25c7716be9585a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그의 회사의 영예가 될 것이다.",
+      "text": "He will be an <b>ornament</b> to his company."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사전은 쓰기 위해서 산 것이지 장식으로 산 것이 아니다",
+      "text": "The dictionary was bought for use, not for <b>ornament</b>."
+    }
+  ],
+  "isWordType": true
+}

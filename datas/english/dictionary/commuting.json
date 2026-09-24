@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>commute</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈmjuːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "갈다, 교환하다",
+              "examples": [],
+              "originalMeaning": "갈다, 교환하다"
+            },
+            {
+              "meaning": "<지불 방법 등을> 바꾸다, 대체하다 ((into, for)); [전기] <전류의> 방향을 바꾸다",
+              "examples": [],
+              "originalMeaning": "<지불 방법 등을> 바꾸다, 대체하다 ((into, for)); [전기] <전류의> 방향을 바꾸다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "대용되다, 대리하다 ((for)); 돈으로 대신 물다 ((for, into))",
+              "examples": [],
+              "originalMeaning": "대용되다, 대리하다 ((for)); 돈으로 대신 물다 ((for, into))"
+            },
+            {
+              "meaning": "[미] (정기[회수]권으로) 통근[통학]하다 ((between, from … to)); (통근·통학에) 열차[버스]를 타다",
+              "examples": [],
+              "originalMeaning": "[미] (정기[회수]권으로) 통근[통학]하다 ((between, from … to)); (통근·통학에) 열차[버스]를 타다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "통근, 통학; 통근 거리",
+              "examples": [],
+              "originalMeaning": "통근, 통학; 통근 거리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9903283e3afc4ac0ba07212d62953f26",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9903283e3afc4ac0ba07212d62953f26",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "commutes"
+        },
+        {
+          "type": "과거형",
+          "value": "commuted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "commuting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "commuted"
+        }
+      ],
+      "aliasConjugation": "commutes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b5eb5011f794039c8147f2ed36599da3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 직장까지 통근 거리가 짧다",
+      "text": "I have a short <b>commute</b> to work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 수원에서 서울로 통근하고 있다",
+      "text": "He commutes from Suwon to Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 서울의 통근 거리 내에서 산다",
+      "text": "I live within <b>commuting</b> distance of Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "길고 피곤한 출퇴근에 질렸다",
+      "text": "The long and tiring <b>commute</b> is getting to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "교외에서 시내에 있는 회사에 다니고 있다",
+      "text": "I <b>commute</b> from the suburbs to my office in the city."
+    }
+  ],
+  "isWordType": true
+}

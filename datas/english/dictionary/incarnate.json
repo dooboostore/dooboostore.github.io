@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "<b>incarnate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "육체를 갖춘, 육체를 입은, 육체를 부여받은, 사람의 모습을 한",
+              "examples": [
+                {
+                  "text": "a devil <b>incarnate</b> = an <b>incarnate</b> fiend",
+                  "translatedText": "악마의 화신(化身)"
+                }
+              ],
+              "originalMeaning": "육체를 갖춘, 육체를 입은, 육체를 부여받은, 사람의 모습을 한"
+            },
+            {
+              "meaning": "<관념·성질 등이> 구체화한",
+              "examples": [
+                {
+                  "text": "Liberty <b>incarnate</b>",
+                  "translatedText": "자유의 권화(權化)"
+                }
+              ],
+              "originalMeaning": "<관념·성질 등이> 구체화한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "육체를 부여하다 ((보통 수동형으로 「…의 육체[모습]를 가지다」의 뜻이 됨))",
+              "examples": [
+                {
+                  "text": "the devil incarnated in a black dog",
+                  "translatedText": "검정개의 모습을 한 악마"
+                }
+              ],
+              "originalMeaning": "육체를 부여하다 ((보통 수동형으로 「…의 육체[모습]를 가지다」의 뜻이 됨))"
+            },
+            {
+              "meaning": "<사람이> …의 화신[구체화, 전형]이 되다",
+              "examples": [],
+              "originalMeaning": "<사람이> …의 화신[구체화, 전형]이 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c08a722ee77c4bd083ffd01001d93021",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c08a722ee77c4bd083ffd01001d93021",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "incarnates"
+        },
+        {
+          "type": "과거형",
+          "value": "incarnated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "incarnating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "incarnated"
+        }
+      ],
+      "aliasConjugation": "incarnates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ace9b2ab103578ee22e7f07dd41cc89d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 악한은 악마의 화신이었다",
+      "text": "The villain was a fiend <b>incarnate</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자유의 권화",
+      "text": "Liberty <b>incarnate</b>"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,4 +1,4 @@
-import { elementDefine, changedAttribute, onConnectedBodyShadow, setPropertyShadow, eventShadow } from '@dooboostore/simple-web-component';
+import { elementDefine, changedAttribute, onConnectedBodyShadow, propertyShadow, eventShadow } from '@dooboostore/simple-web-component';
 
 const tagName = 'sim-candle-form';
 
@@ -27,13 +27,13 @@ export default (w: Window) => {
     }
 
     @changedAttribute('count', { type: Number })
-    @setPropertyShadow('[name="count"]', 'value')
+    @propertyShadow('[name="count"]', 'value')
     onCountChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(30, Math.min(1000, Math.floor(v)))) : '360';
     }
 
     @changedAttribute('timeframe')
-    @setPropertyShadow('[name="timeframe"]', 'value')
+    @propertyShadow('[name="timeframe"]', 'value')
     onTimeframeChanged(v: string) {
       const t = TF_RE.test(v ?? '') ? v : 'day:1';
       this._timeframe = t;

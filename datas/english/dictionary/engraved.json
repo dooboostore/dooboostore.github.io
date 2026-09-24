@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>engrave</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈɡreɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(금속·돌 등에) <문자·도안 등을> 새기다 ((on)); (문자·도안 등을 새겨서) 장식하다, …에 조각을 하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>engrave</b> an inscription on a tablet = <b>engrave</b> a tablet with an inscription",
+                  "translatedText": "명판(銘板)에 명을 새기다"
+                }
+              ],
+              "originalMeaning": "(금속·돌 등에) <문자·도안 등을> 새기다 ((on)); (문자·도안 등을 새겨서) 장식하다, …에 조각을 하다 ((with))"
+            },
+            {
+              "meaning": "<판 등에 새긴 문자·도안 등을> 인쇄하다, 조각판으로 인쇄하다",
+              "examples": [],
+              "originalMeaning": "<판 등에 새긴 문자·도안 등을> 인쇄하다, 조각판으로 인쇄하다"
+            },
+            {
+              "meaning": "<마음에> 새겨 두다, …에게 감명을 주다",
+              "examples": [
+                {
+                  "text": "His mother's face is <b>engraved</b> on his memory.",
+                  "translatedText": "어머니의 얼굴이 그의 기억에 새겨져 있다."
+                }
+              ],
+              "originalMeaning": "<마음에> 새겨 두다, …에게 감명을 주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fa2cb91695614aa3b03099508e6f4402",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fa2cb91695614aa3b03099508e6f4402",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "engraves"
+        },
+        {
+          "type": "과거형",
+          "value": "engraved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "engraving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "engraved"
+        }
+      ],
+      "aliasConjugation": "engraves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b223897df86277c7a6d98af0f5d842a6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 돌에 자기 이름을 팠다",
+      "text": "He inscribed[<b>engraved</b>] his name on the stone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어머니의 얼굴이 그의 기억에 새겨져 있다.",
+      "text": "His mother’s face is <b>engraved</b> on his memory."
+    }
+  ],
+  "isWordType": true
+}

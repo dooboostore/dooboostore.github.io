@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "<b>menace</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmenəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 협박, 위협, 공갈(threat); 위험한 것[사람]",
+              "examples": [
+                {
+                  "text": "a <b>menace</b> to peace",
+                  "translatedText": "평화에 대한 위협"
+                }
+              ],
+              "originalMeaning": "[UC/] 협박, 위협, 공갈(threat); 위험한 것[사람]"
+            },
+            {
+              "meaning": "[a ~] 귀찮은 것, 골칫거리, 말썽꾸러기",
+              "examples": [],
+              "originalMeaning": "[a ~] 귀찮은 것, 골칫거리, 말썽꾸러기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위협하다, 으르다, 협박하다 (=threaten)",
+              "examples": [
+                {
+                  "text": "<b>menace</b> a person with immediate dismissal",
+                  "translatedText": "…을 당장 해고하겠다고 위협하다"
+                }
+              ],
+              "originalMeaning": "위협하다, 으르다, 협박하다 (=<span class='related_word' lang='en' >threaten</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a99a2693bea5413cb6448e30770b048a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a99a2693bea5413cb6448e30770b048a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "menaces"
+        },
+        {
+          "type": "과거형",
+          "value": "menaced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "menacing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "menaced"
+        }
+      ],
+      "aliasConjugation": "menaces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0e3a795781a51841fa47ec8fbe4e7d47",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대기 오염은 건강에 위험하다",
+      "text": "Air pollution is a <b>menace</b> to health."
+    }
+  ],
+  "isWordType": true
+}

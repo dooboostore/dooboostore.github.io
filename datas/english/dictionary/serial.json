@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "entry": "<b>serial</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sɪriəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(소설·영화·라디오·TV 등의) 연속물, 연재물; (연재물 등의) 1회분 (=series)",
+              "examples": [],
+              "originalMeaning": "(소설·영화·라디오·TV 등의) 연속물, 연재물; (연재물 등의) 1회분 (=<span class='related_word' lang='en' >series</span>)"
+            },
+            {
+              "meaning": "정기 간행물",
+              "examples": [],
+              "originalMeaning": "정기 간행물"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "연속적인; 일련의, 계속되는; 순차의",
+              "examples": [
+                {
+                  "text": "<b>serial</b> murders",
+                  "translatedText": "연쇄 살인"
+                }
+              ],
+              "originalMeaning": "연속적인; 일련의, 계속되는; 순차의"
+            },
+            {
+              "meaning": "<소설 등이> 연속물의, 연속 출판의, <출판물이> 정기의; 연속 간행의",
+              "examples": [
+                {
+                  "text": "a <b>serial</b> story",
+                  "translatedText": "연재 소설"
+                }
+              ],
+              "originalMeaning": "<소설 등이> 연속물의, 연속 출판의, <출판물이> 정기의; 연속 간행의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d9598c184b584f9da32470cea153cf06",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d9598c184b584f9da32470cea153cf06",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c3302e0aa416ceb6282fe96aaffb0b26",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 모 일간 신문에 연재되었다",
+      "text": "It was published serially in a daily newspaper."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 동아일보에 연재된 소설이다",
+      "text": "This is a story published serially in the Dong-A Ilbo."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소설은 10회로 나뉘어 연재된다",
+      "text": "The story will appear (serially) in ten installments."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제5권 제2호",
+      "text": "Vol. 5 No. 2 (<b>Serial</b> Number 10)"
+    }
+  ],
+  "isWordType": true
+}

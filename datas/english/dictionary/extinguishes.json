@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>extinguish</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈstɪŋɡwɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<불·빛 등을> 끄다, 진화하다",
+              "examples": [
+                {
+                  "text": "<b>extinguish</b> a candle",
+                  "translatedText": "촛불을 끄다"
+                }
+              ],
+              "originalMeaning": "<불·빛 등을> 끄다, 진화하다"
+            },
+            {
+              "meaning": "<정열·희망 등을> 잃게 하다",
+              "examples": [
+                {
+                  "text": "All hope was almost <b>extinguish</b> ed.",
+                  "translatedText": "모든 희망이 거의 사라졌다."
+                }
+              ],
+              "originalMeaning": "<정열·희망 등을> 잃게 하다"
+            },
+            {
+              "meaning": "<사람을> 압도하다, <반대자 등을> 침묵시키다(silence)",
+              "examples": [],
+              "originalMeaning": "<사람을> 압도하다, <반대자 등을> 침묵시키다(silence)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1245c66d2b504b508d5f805834da6f9c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1245c66d2b504b508d5f805834da6f9c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "extinguishes"
+        },
+        {
+          "type": "과거형",
+          "value": "extinguished"
+        },
+        {
+          "type": "현재 분사",
+          "value": "extinguishing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "extinguished"
+        }
+      ],
+      "aliasConjugation": "extinguishes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8db583541ddf65f5035776d9d4032515",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모든 희망이 거의 사라졌다.",
+      "text": "All hope was almost extinguished."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "불은 얼마 안 가서 진화되었다",
+      "text": "The fire was soon extinguished[brought under control]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "<b>elaborate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "공들인, 고심하여 만들어 낸, 복잡한; 정교한",
+              "examples": [],
+              "originalMeaning": "공들인, 고심하여 만들어 낸, 복잡한; 정교한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "애써 만들다, 고심하여 만들다; 정교하게 만들다; <문장·고안 등을> 퇴고(推敲)하다",
+              "examples": [],
+              "originalMeaning": "애써 만들다, 고심하여 만들다; 정교하게 만들다; <문장·고안 등을> 퇴고(推敲)하다"
+            },
+            {
+              "meaning": "<음식 등을> 동화하다",
+              "examples": [],
+              "originalMeaning": "<음식 등을> 동화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "갈고 닦다; 상세히 말하다, 부연하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "Don't <b>elaborate</b>.",
+                  "translatedText": "지나치게 공들이지 마라."
+                }
+              ],
+              "originalMeaning": "갈고 닦다; 상세히 말하다, 부연하다 ((on, upon))"
+            },
+            {
+              "meaning": "정교해지다",
+              "examples": [],
+              "originalMeaning": "정교해지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37405c3a13ed48dab6321eec62b2d5cc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37405c3a13ed48dab6321eec62b2d5cc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "elaborates"
+        },
+        {
+          "type": "과거형",
+          "value": "elaborated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "elaborating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "elaborated"
+        }
+      ],
+      "aliasConjugation": "elaborates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8932d7635217c27b018264c1a0db76f2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 세공은 손이 퍽 많이 갔다",
+      "text": "This work is pretty <b>elaborate</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지나치게 공들이지 마라.",
+      "text": "Don’t <b>elaborate</b>."
+    }
+  ],
+  "isWordType": true
+}

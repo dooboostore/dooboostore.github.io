@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "<b>emit</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "iˈmɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<빛·열·향기 등을> 방사하다(give out), 내뿜다; <소리를> 내다(utter)",
+              "examples": [
+                {
+                  "text": "light and heat <b>emit</b> ted from the sun",
+                  "translatedText": "태양의 발사광과 열"
+                }
+              ],
+              "originalMeaning": "<빛·열·향기 등을> 방사하다(give out), 내뿜다; <소리를> 내다(utter)"
+            },
+            {
+              "meaning": "<의견·말 등을> 토로하다, <지폐·어음 등을> 발행하다(issue), <법령 등을> 발포[공포]하다, <신호를> (전파로) 보내다",
+              "examples": [],
+              "originalMeaning": "<의견·말 등을> 토로하다, <지폐·어음 등을> 발행하다(issue), <법령 등을> 발포[공포]하다, <신호를> (전파로) 보내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/63e20f782b7e48ceb5e183c270ce7066",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/63e20f782b7e48ceb5e183c270ce7066",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "emits"
+        },
+        {
+          "type": "과거형",
+          "value": "emitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "emitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "emitted"
+        }
+      ],
+      "aliasConjugation": "emits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "33407d83b6e5af6b092180fbbb05313e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "태양은 빛과 열을 발산한다",
+      "text": "The sun radiates[emits] light and heat."
+    }
+  ],
+  "isWordType": true
+}

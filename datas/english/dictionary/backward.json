@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>backward</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│bækwərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "뒤쪽(으로)의, 뒤를 향한(opp. forward)",
+              "examples": [],
+              "originalMeaning": "뒤쪽(으로)의, 뒤를 향한(opp. forward)"
+            },
+            {
+              "meaning": "거꾸로의",
+              "examples": [
+                {
+                  "text": "a <b>backward</b> blessing",
+                  "translatedText": "(처음에 재난이라고 생각됐던 것이) 나중에 복이 되는 것"
+                }
+              ],
+              "originalMeaning": "거꾸로의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "뒤쪽으로, 뒤를 향하여",
+              "examples": [
+                {
+                  "text": "walk <b>backward</b>",
+                  "translatedText": "뒷걸음질치다"
+                }
+              ],
+              "originalMeaning": "뒤쪽으로, 뒤를 향하여"
+            },
+            {
+              "meaning": "거꾸로, 끝에서부터",
+              "examples": [
+                {
+                  "text": "say the alphabet <b>backward</b>",
+                  "translatedText": "알파벳을 거꾸로 말하다"
+                }
+              ],
+              "originalMeaning": "거꾸로, 끝에서부터"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "후방, 뒤",
+              "examples": [],
+              "originalMeaning": "후방, 뒤"
+            },
+            {
+              "meaning": "과거, 옛날",
+              "examples": [],
+              "originalMeaning": "과거, 옛날"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4c1f8d68b5d45509af287f3d0ba10dc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4c1f8d68b5d45509af287f3d0ba10dc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0a58be03014e68d7eb6b86ded495d81e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 일이 퇴보하고 있다",
+      "text": "Things are going <b>backward</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 학급은 수학 진도가 앞서[뒤져] 있다",
+      "text": "This class is forward[<b>backward</b>] in mathematics."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "형편 없는 후진국으로서 그 민도는 말이 아니다",
+      "text": "It is a fearfully <b>backward</b> country and the low state of its people surpasses description."
+    }
+  ],
+  "isWordType": true
+}

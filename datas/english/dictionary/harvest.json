@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "<b>harvest</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│hɑːrvɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(작물의) 수확, 추수(crop); (사과·꿀 등의) 채취; (한 계절의) 수확량",
+              "examples": [
+                {
+                  "text": "an abundant[a good, a rich, a splendid] <b>harvest</b>",
+                  "translatedText": "풍작"
+                }
+              ],
+              "originalMeaning": "(작물의) 수확, 추수(crop); (사과·꿀 등의) 채취; (한 계절의) 수확량"
+            },
+            {
+              "meaning": "수확기, 추수기(harvesttime)",
+              "examples": [
+                {
+                  "text": "The rice <b>harvest</b> will soon come.",
+                  "translatedText": "곧 벼베기 철이 된다."
+                }
+              ],
+              "originalMeaning": "수확기, 추수기(harvesttime)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<작물을> 거두어들이다, 수확하다; <사과·꿀 등을> 채취하다",
+              "examples": [
+                {
+                  "text": "<b>harvest</b> honey",
+                  "translatedText": "꿀을 채취하다"
+                }
+              ],
+              "originalMeaning": "<작물을> 거두어들이다, 수확하다; <사과·꿀 등을> 채취하다"
+            },
+            {
+              "meaning": "수납하다(lay up)",
+              "examples": [],
+              "originalMeaning": "수납하다(lay up)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "작물을 거두어들이다, 수확하다(reap)",
+              "examples": [],
+              "originalMeaning": "작물을 거두어들이다, 수확하다(reap)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/47691031fda64874a2298d78de482dee",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/47691031fda64874a2298d78de482dee",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "harvests"
+        },
+        {
+          "type": "과거형",
+          "value": "harvested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "harvesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "harvested"
+        }
+      ],
+      "aliasConjugation": "harvests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c870801b5951adccd2b42fef6e5978e8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년은 풍년이 될 것 같다",
+      "text": "We shall probably have a good <b>harvest</b> this year. or A bumper <b>harvest</b> is anticipated here this year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풍년이 들 것이 내다보인다",
+      "text": "A good <b>harvest</b> is anticipated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "곧 벼베기 철이 된다.",
+      "text": "The rice <b>harvest</b> will soon come."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "추수는 10월에 다 끝났다",
+      "text": "The <b>harvest</b> was completed in October."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "작년의 수확은 예년에 비해 떨어진다",
+      "text": "Last year's <b>harvest</b> fell short of the average."
+    }
+  ],
+  "isWordType": true
+}

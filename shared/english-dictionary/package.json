@@ -1,0 +1,29 @@
+{
+  "name": "dooboostore-english-dictionary",
+  "version": "1.0.0",
+  "description": "Shared Naver Papago translation + English word extraction for apps/* (node + browser, no build step — consumed from src)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2"
+  }
+}

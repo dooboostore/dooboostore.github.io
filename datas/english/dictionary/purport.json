@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "<b>purport</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "의미; 취지, 요지",
+              "examples": [],
+              "originalMeaning": "의미; 취지, 요지"
+            },
+            {
+              "meaning": "목적, 의도",
+              "examples": [],
+              "originalMeaning": "목적, 의도"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "의미하다, 취지로 하다",
+              "examples": [
+                {
+                  "text": "a letter purporting that…",
+                  "translatedText": "…이라는 취지의 편지"
+                }
+              ],
+              "originalMeaning": "의미하다, 취지로 하다"
+            },
+            {
+              "meaning": "…이라고 일컫다, 주장하다; ((특히)) 외관을 꾸미다",
+              "examples": [
+                {
+                  "text": "( <b>purport</b>+to do) the law that purports to be in the interest of peace and order",
+                  "translatedText": "안녕 질서를 위한 것이라고 하는 법률"
+                }
+              ],
+              "originalMeaning": "…이라고 일컫다, 주장하다; ((특히)) 외관을 꾸미다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ba592e31ef0345ebb89508e748e28d35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ba592e31ef0345ebb89508e748e28d35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "purports"
+        },
+        {
+          "type": "과거형",
+          "value": "purported"
+        },
+        {
+          "type": "현재 분사",
+          "value": "purporting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "purported"
+        }
+      ],
+      "aliasConjugation": "purports",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c8200da86f8eb39f56d95d43411ae8ba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 서류는 공문서로 되어 있다.",
+      "text": "The document purports to be official."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,4 +1,4 @@
-import { elementDefine, changedAttribute, onConnectedBodyShadow, setPropertyShadow, eventShadow } from '@dooboostore/simple-web-component';
+import { elementDefine, changedAttribute, onConnectedBodyShadow, propertyShadow, eventShadow } from '@dooboostore/simple-web-component';
 
 const tagName = 'sim-indicator-form';
 
@@ -29,61 +29,61 @@ export default (w: Window) => {
     }
 
     @changedAttribute('macd-fast', { type: Number })
-    @setPropertyShadow('[name="macdFast"]', 'value')
+    @propertyShadow('[name="macdFast"]', 'value')
     onMacdFastChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(100, Math.floor(v)))) : '12';
     }
 
     @changedAttribute('macd-slow', { type: Number })
-    @setPropertyShadow('[name="macdSlow"]', 'value')
+    @propertyShadow('[name="macdSlow"]', 'value')
     onMacdSlowChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(200, Math.floor(v)))) : '26';
     }
 
     @changedAttribute('macd-signal', { type: Number })
-    @setPropertyShadow('[name="macdSignal"]', 'value')
+    @propertyShadow('[name="macdSignal"]', 'value')
     onMacdSignalChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(50, Math.floor(v)))) : '9';
     }
 
     @changedAttribute('rsi-period', { type: Number })
-    @setPropertyShadow('[name="rsiPeriod"]', 'value')
+    @propertyShadow('[name="rsiPeriod"]', 'value')
     onRsiPeriodChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(100, Math.floor(v)))) : '14';
     }
 
     @changedAttribute('rsi-ob', { type: Number })
-    @setPropertyShadow('[name="rsiOb"]', 'value')
+    @propertyShadow('[name="rsiOb"]', 'value')
     onRsiObChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(50, Math.min(100, Math.floor(v)))) : '70';
     }
 
     @changedAttribute('rsi-os', { type: Number })
-    @setPropertyShadow('[name="rsiOs"]', 'value')
+    @propertyShadow('[name="rsiOs"]', 'value')
     onRsiOsChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(0, Math.min(50, Math.floor(v)))) : '30';
     }
 
     @changedAttribute('ma-short', { type: Number })
-    @setPropertyShadow('[name="maShort"]', 'value')
+    @propertyShadow('[name="maShort"]', 'value')
     onMaShortChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(500, Math.floor(v)))) : '5';
     }
 
     @changedAttribute('ma-mid', { type: Number })
-    @setPropertyShadow('[name="maMid"]', 'value')
+    @propertyShadow('[name="maMid"]', 'value')
     onMaMidChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(500, Math.floor(v)))) : '10';
     }
 
     @changedAttribute('ma-long', { type: Number })
-    @setPropertyShadow('[name="maLong"]', 'value')
+    @propertyShadow('[name="maLong"]', 'value')
     onMaLongChanged(v: number) {
       return Number.isFinite(v) ? String(Math.max(2, Math.min(500, Math.floor(v)))) : '40';
     }
 
     @changedAttribute('ma-exponential', { type: Boolean })
-    @setPropertyShadow('[name="maExponential"]', 'checked')
+    @propertyShadow('[name="maExponential"]', 'checked')
     onMaExponentialChanged(v: boolean) {
       return !!v;
     }

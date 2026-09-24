@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>skirmish</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈskɜːrmɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(우발적인) 작은 접전(接戰), 사소한 충돌",
+              "examples": [],
+              "originalMeaning": "(우발적인) 작은 접전(接戰), 사소한 충돌"
+            },
+            {
+              "meaning": "작은 논쟁",
+              "examples": [],
+              "originalMeaning": "작은 논쟁"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사소한 접전[싸움, 충돌]을 하다 ((with))",
+              "examples": [],
+              "originalMeaning": "사소한 접전[싸움, 충돌]을 하다 ((with))"
+            },
+            {
+              "meaning": "찾아다니다",
+              "examples": [],
+              "originalMeaning": "찾아다니다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/007be0463e44443a84417a472f67afe0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/007be0463e44443a84417a472f67afe0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "skirmishes"
+        },
+        {
+          "type": "과거형",
+          "value": "skirmished"
+        },
+        {
+          "type": "현재 분사",
+          "value": "skirmishing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "skirmished"
+        }
+      ],
+      "aliasConjugation": "skirmishes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0d53f286bdf930fd603161a9466ac33d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 작은 충돌이 확대되어 큰 전투가 되었다.",
+      "text": "The <b>skirmish</b> grew into a major battle."
+    }
+  ],
+  "isWordType": true
+}

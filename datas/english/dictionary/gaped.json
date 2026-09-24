@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "<b>gape</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡeɪp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(놀람·감탄으로) 입을 딱 벌리다, 입을 벌리고 멍하니 바라보다 ((at))",
+              "examples": [
+                {
+                  "text": "They <b>gaped</b> at me in utter amazement.",
+                  "translatedText": "그들은 놀란 나머지 입을 딱 벌리고 나를 바라보았다."
+                }
+              ],
+              "originalMeaning": "(놀람·감탄으로) 입을 딱 벌리다, 입을 벌리고 멍하니 바라보다 ((at))"
+            },
+            {
+              "meaning": "(배고픔·졸음 등으로 인해 또는 열중한 나머지) 무심코 입을 크게 벌리다, 하품하다(yawn)",
+              "examples": [],
+              "originalMeaning": "(배고픔·졸음 등으로 인해 또는 열중한 나머지) 무심코 입을 크게 벌리다, 하품하다(yawn)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쩍 벌어진[갈라진] 틈",
+              "examples": [],
+              "originalMeaning": "쩍 벌어진[갈라진] 틈"
+            },
+            {
+              "meaning": "입을 딱 벌림",
+              "examples": [],
+              "originalMeaning": "입을 딱 벌림"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eec028e7cb0f48b283a5a57041036559",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eec028e7cb0f48b283a5a57041036559",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gapes"
+        },
+        {
+          "type": "과거형",
+          "value": "gaped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gaping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gaped"
+        }
+      ],
+      "aliasConjugation": "gapes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "126476e5820b0f138b06c2e376f529d0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 상의는 솔기가 벌어졌다",
+      "text": "Her jacket <b>gaped</b> at seams."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 놀란 나머지 입을 딱 벌리고 나를 바라보았다.",
+      "text": "They <b>gaped</b> at me in utter amazement."
+    }
+  ],
+  "isWordType": true
+}

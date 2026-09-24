@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "<b>cringe</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "krɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(겁이 나서) 움씰하다(cower)",
+              "examples": [],
+              "originalMeaning": "(겁이 나서) 움씰하다(cower)"
+            },
+            {
+              "meaning": "굽실거리다 ((to)), 알랑거리다(fawn)",
+              "examples": [
+                {
+                  "text": "The beggar is <b>cringing</b> to passersby.",
+                  "translatedText": "거지가 행인들에게 굽실거리고 있다."
+                }
+              ],
+              "originalMeaning": "굽실거리다 ((to)), 알랑거리다(fawn)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "비굴한 태도, 굽실거림",
+              "examples": [],
+              "originalMeaning": "비굴한 태도, 굽실거림"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6ad5ede5ebd5479c8addd79151c0ef0d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6ad5ede5ebd5479c8addd79151c0ef0d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cringes"
+        },
+        {
+          "type": "과거형",
+          "value": "cringed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cringing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cringed"
+        }
+      ],
+      "aliasConjugation": "cringes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "039775d56d4e47443343652990ecb8aa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "거지가 행인들에게 굽실거리고 있다.",
+      "text": "The beggar is <b>cringing</b> to passersby."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 상관의 비위를 맞추느라고 굽실거린다",
+      "text": "He cringes to his superior to make him happy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아버지 앞에서 설설 긴다",
+      "text": "He cringes before his father. or He keeps his head low before his father."
+    }
+  ],
+  "isWordType": true
+}

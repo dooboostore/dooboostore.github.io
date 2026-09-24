@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "<b>beckon</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbekən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "손짓[고갯짓, 몸짓]으로 부르다, 신호하다 ((to))",
+              "examples": [
+                {
+                  "text": "( <b>beckon</b> +[목]+to do) He <b>beckon</b> ed me to come nearer.",
+                  "translatedText": "그는 나에게 더 가까이 오라고 손짓했다."
+                }
+              ],
+              "originalMeaning": "손짓[고갯짓, 몸짓]으로 부르다, 신호하다 ((to))"
+            },
+            {
+              "meaning": "유인[유혹]하다",
+              "examples": [],
+              "originalMeaning": "유인[유혹]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "손짓해 부르다, 신호하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>beckon</b> to a person to come nearer",
+                  "translatedText": "…에게 더 가까이 오라고 손짓하다"
+                }
+              ],
+              "originalMeaning": "손짓해 부르다, 신호하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(신호로서의) 끄덕임, 손짓; (동의를 나타내는) 끄덕임",
+              "examples": [],
+              "originalMeaning": "(신호로서의) 끄덕임, 손짓; (동의를 나타내는) 끄덕임"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/581c5611c9cd4b06865ff2addee1a9ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/581c5611c9cd4b06865ff2addee1a9ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "beckons"
+        },
+        {
+          "type": "과거형",
+          "value": "beckoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "beckoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "beckoned"
+        }
+      ],
+      "aliasConjugation": "beckons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "05624e93267e67e7d925b6cdce493aa3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나에게 더 가까이 오라고 손짓했다.",
+      "text": "He <b>beckoned</b> me to come nearer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리를 불러들였다.",
+      "text": "He <b>beckoned</b> us in."
+    }
+  ],
+  "isWordType": true
+}

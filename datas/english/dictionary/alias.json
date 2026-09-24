@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "entry": "<b>alias</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈeɪliəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "일명 …, 별명은",
+              "examples": [
+                {
+                  "text": "Smith <b>alias</b> Johnson",
+                  "translatedText": "(본명은) 스미스, 통칭[일명] 존슨"
+                }
+              ],
+              "originalMeaning": "일명 …, 별명은"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "별명, 가명; [전자] 위신호(僞信號)",
+              "examples": [],
+              "originalMeaning": "별명, 가명; [전자] 위신호(僞信號)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/63059a9f413542dc9d844b549634b9e4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/63059a9f413542dc9d844b549634b9e4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "aliases"
+        }
+      ],
+      "aliasConjugation": "aliases",
+      "aliasConjugationPos": "복수형",
+      "gdid": "7611987e271af2cebef1ab82432732e3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "스미스 일명 심프슨",
+      "text": "Smith, <b>alias</b> Simpson"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "별명이 존슨인 스미스",
+      "text": "Smith <b>alias</b> Johnson"
+    }
+  ],
+  "isWordType": true
+}
