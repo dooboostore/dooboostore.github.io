@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>confound</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈfaʊnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 혼동하다(confuse) ((with))",
+              "examples": [
+                {
+                  "text": "<b>confound</b> right and wrong",
+                  "translatedText": "옳고 그름을 혼동하다"
+                }
+              ],
+              "originalMeaning": "(…와) 혼동하다(confuse) ((with))"
+            },
+            {
+              "meaning": "<사람을> 당황케[난처하게] 하다, 혼란에 빠뜨리다(perplex) (→confounded)",
+              "examples": [
+                {
+                  "text": "The shock confounded her.",
+                  "translatedText": "충격으로 그녀는 어리둥절해했다."
+                }
+              ],
+              "originalMeaning": "<사람을> 당황케[난처하게] 하다, 혼란에 빠뜨리다(perplex) (→<span class='related_word' lang='en' >confounded</span>)"
+            },
+            {
+              "meaning": "<적·계획·희망 등을> 꺾다, 좌절시키다(baffle)",
+              "examples": [],
+              "originalMeaning": "<적·계획·희망 등을> 꺾다, 좌절시키다(baffle)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/97ab4a67cd354283ada272f15fc5dd4f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/97ab4a67cd354283ada272f15fc5dd4f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "confounds"
+        },
+        {
+          "type": "과거형",
+          "value": "confounded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "confounding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "confounded"
+        }
+      ],
+      "aliasConjugation": "confounds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "56d6fb3bb66e02b97e13a7d065846d56",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "충격으로 그녀는 어리둥절해 했다.",
+      "text": "The shock confounded her."
+    }
+  ],
+  "isWordType": true
+}

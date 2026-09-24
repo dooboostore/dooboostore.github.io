@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "entry": "<b>haul</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hɔːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "세게 잡아당기다, 끌어당기다; 끌고 가다",
+              "examples": [
+                {
+                  "text": "<b>haul</b> in a net",
+                  "translatedText": "그물을 잡아당기다"
+                }
+              ],
+              "originalMeaning": "세게 잡아당기다, 끌어당기다; 끌고 가다"
+            },
+            {
+              "meaning": "운반하다, 차로 나르다",
+              "examples": [
+                {
+                  "text": "<b>haul</b> freight",
+                  "translatedText": "화물을 운반하다"
+                }
+              ],
+              "originalMeaning": "운반하다, 차로 나르다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잡아당기다(pull), 끌어당기다",
+              "examples": [
+                {
+                  "text": "<b>haul</b> at[(up)on] a rope",
+                  "translatedText": "밧줄을 잡아당기다"
+                }
+              ],
+              "originalMeaning": "잡아당기다(pull), 끌어당기다"
+            },
+            {
+              "meaning": "어떤 방향으로 나아가다, 방침을 바꾸다, <바람이> 방향을 바꾸다, [항해] <배가> 침로[진로]를 돌리다",
+              "examples": [
+                {
+                  "text": "The wind <b>haul</b> ed around to the east.",
+                  "translatedText": "바람이 방향을 동쪽으로 바꿨다."
+                }
+              ],
+              "originalMeaning": "어떤 방향으로 나아가다, 방침을 바꾸다, <바람이> 방향을 바꾸다, [항해] <배가> 침로[진로]를 돌리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~] 세게 잡아당김; 끌어당김, 끌기, 견인; 운반[운송] (거리); 운반물, 화물, 운반량",
+              "examples": [],
+              "originalMeaning": "[a ~] 세게 잡아당김; 끌어당김, 끌기, 견인; 운반[운송] (거리); 운반물, 화물, 운반량"
+            },
+            {
+              "meaning": "[a ~] 한 그물에 잡힌 고기 (분량), 그물 끌어 올리기",
+              "examples": [
+                {
+                  "text": "a good <b>haul</b> of fish",
+                  "translatedText": "풍어, 많은 어획량"
+                }
+              ],
+              "originalMeaning": "[a ~] 한 그물에 잡힌 고기 (분량), 그물 끌어 올리기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb7c220b7a6c43c4ad8abbd3ac2cb25a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb7c220b7a6c43c4ad8abbd3ac2cb25a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hauls"
+        },
+        {
+          "type": "과거형",
+          "value": "hauled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hauling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hauled"
+        }
+      ],
+      "aliasConjugation": "hauls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ef656c8babebb146fbb9282245a116c9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "좌초된 배는 저 예인선에 의해 예인되어 왔다",
+      "text": "The stranded ship was towed[pulled, dragged, hauled, drawn] by that tugboat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "재목은 제재소로 운반되었다.",
+      "text": "The timber was hauled to a sawmill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 경찰서로 끌려갔다",
+      "text": "He was pulled[hauled] along to the police station."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 심하게 야단맞았다",
+      "text": "I got chewed out. or I got raked[hauled, dragged] over the coals."
+    }
+  ],
+  "isWordType": true
+}

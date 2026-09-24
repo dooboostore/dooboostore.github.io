@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>repay</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈpeɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<돈을> 갚다, 상환하다",
+              "examples": [
+                {
+                  "text": "<b>Repay</b> me the money. = <b>Repay</b> the money to me.",
+                  "translatedText": "돈을 갚아 주게."
+                }
+              ],
+              "originalMeaning": "<돈을> 갚다, 상환하다"
+            },
+            {
+              "meaning": "<호의·진심 등에> (…으로) 보답하다, 되돌리다, 답하다 ((with))",
+              "examples": [
+                {
+                  "text": "She repaid the compliment witha smile.",
+                  "translatedText": "그녀는 찬사에 대해 미소로 답했다."
+                }
+              ],
+              "originalMeaning": "<호의·진심 등에> (…으로) 보답하다, 되돌리다, 답하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빚을 갚다",
+              "examples": [],
+              "originalMeaning": "빚을 갚다"
+            },
+            {
+              "meaning": "보답하다",
+              "examples": [],
+              "originalMeaning": "보답하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/afc0bde61bf1487e8d65ef654c99f4b7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/afc0bde61bf1487e8d65ef654c99f4b7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "repays"
+        },
+        {
+          "type": "과거형",
+          "value": "repaid"
+        },
+        {
+          "type": "현재 분사",
+          "value": "repaying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "repaid"
+        }
+      ],
+      "aliasConjugation": "repays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "65594351dcdd4b57b9b08c15320a0e68",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 찬사에 대해 미소로 답했다.",
+      "text": "She repaid the compliment with a smile."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돈은 갚아 줄 만한 사람에게만 빌려 주어라.",
+      "text": "Lend money only to such as will <b>repay</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 삼촌에게 보은하려고 열심히 일했다",
+      "text": "He worked hard to return[<b>repay</b>] his uncle's kindness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빚을 다 갚기로 그에게 약속해 두었다.",
+      "text": "I have a commitment to him to <b>repay</b> all of the debt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돈을 갚아 주게.",
+      "text": "<b>Repay</b> me the money.=<b>Repay</b> the money to me."
+    }
+  ],
+  "isWordType": true
+}

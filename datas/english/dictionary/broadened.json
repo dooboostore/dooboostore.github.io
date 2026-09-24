@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "<b>broaden</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbrɔːdn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "넓히다, 넓게 하다; 넓어지다, 벌어지다 ((out))",
+              "examples": [
+                {
+                  "text": "Travel <b>broaden</b> s the mind.",
+                  "translatedText": "여행은 시야를 넓혀 준다."
+                }
+              ],
+              "originalMeaning": "넓히다, 넓게 하다; 넓어지다, 벌어지다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a0f61ecba8e48d7b9583dc77618f5b3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a0f61ecba8e48d7b9583dc77618f5b3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "broadens"
+        },
+        {
+          "type": "과거형",
+          "value": "broadened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "broadening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "broadened"
+        }
+      ],
+      "aliasConjugation": "broadens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "880a069e7ed1e40e7f2d10baf2b82196",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여행은 시야를 넓혀 준다.",
+      "text": "Travel broadens the mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "강은 강어귀에서 퍼지고 있다",
+      "text": "The river broadens (out) at its mouth."
+    }
+  ],
+  "isWordType": true
+}

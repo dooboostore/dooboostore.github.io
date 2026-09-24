@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "<b>coil</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kɔ́il"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "똘똘 감다, 사리다",
+              "examples": [
+                {
+                  "text": "<b>coil</b> a rope",
+                  "translatedText": "밧줄을 똘똘 감다"
+                }
+              ],
+              "originalMeaning": "똘똘 감다, 사리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사리를 틀다, 감기다, 고리를 이루다; <강 따위가> 구불구불 휘다",
+              "examples": [
+                {
+                  "text": "The snake <b>coil</b> ed around[round] its victim.",
+                  "translatedText": "뱀은 먹이를 휘감았다."
+                }
+              ],
+              "originalMeaning": "사리를 틀다, 감기다, 고리를 이루다; <강 따위가> 구불구불 휘다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고리, 사리",
+              "examples": [],
+              "originalMeaning": "고리, 사리"
+            },
+            {
+              "meaning": "(새끼·철사 등의) 한 사리, [전기] 코일",
+              "examples": [],
+              "originalMeaning": "(새끼·철사 등의) 한 사리, [전기] 코일"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37771063897f4fecbcc22ee2df2bc644",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37771063897f4fecbcc22ee2df2bc644",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "coils"
+        },
+        {
+          "type": "과거형",
+          "value": "coiled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coiling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coiled"
+        }
+      ],
+      "aliasConjugation": "coils",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6d85b62fea9e92619760ac9017f456d4",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>coil</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[고어·시어] 격동, 혼란; 번거로움, 수고(trouble)",
+              "examples": [],
+              "originalMeaning": "[고어·시어] 격동, 혼란; 번거로움, 수고(trouble)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b9c99725c264378bb7c403b2db39cb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b9c99725c264378bb7c403b2db39cb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "coils",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "88e45dcf5a8d38cc779e41009827b52f",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 막대기에 철사를 둘둘 감았다",
+      "text": "He coiled a wire around[round] a stick."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뱀이 동굴 속에서 사리고 있었다.",
+      "text": "The snake coiled itself up in the cave."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뱀이 몸을 도사린다",
+      "text": "A snake coils itself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뱀은 먹이를 휘감았다.",
+      "text": "The snake coiled around[round] its victim."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "굴뚝에서 연기가 난다",
+      "text": "Smoke is coiling[rising] up from a chimney. or The chimney is giving off coils of smoke."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>soothe</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "suːð"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "달래다, 어르다; 위로하다",
+              "examples": [
+                {
+                  "text": "He tried to <b>soothe</b> the crying child.",
+                  "translatedText": "그는 우는 아이를 달래려고 해보았다."
+                }
+              ],
+              "originalMeaning": "달래다, 어르다; 위로하다"
+            },
+            {
+              "meaning": "<신경·감정을> 진정시키다, <고통 등을> 덜어주다",
+              "examples": [
+                {
+                  "text": "I tried to <b>soothe</b> her nerves[anger].",
+                  "translatedText": "나는 그녀의 신경질[화]을 가라앉혀 보려고 했다."
+                }
+              ],
+              "originalMeaning": "<신경·감정을> 진정시키다, <고통 등을> 덜어주다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "안심시키다, 달래다, 가라앉히다",
+              "examples": [],
+              "originalMeaning": "안심시키다, 달래다, 가라앉히다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0e078d412a6f4e9daecbbe4de76b6abf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0e078d412a6f4e9daecbbe4de76b6abf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "soothes"
+        },
+        {
+          "type": "과거형",
+          "value": "soothed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "soothing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "soothed"
+        }
+      ],
+      "aliasConjugation": "soothes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ee9fc008134c8841bbdeb472df33b199",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우는 아이를 달래려고 해보았다.",
+      "text": "He tried to <b>soothe</b> the crying child."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그녀의 신경질[화]을 가라앉혀 보려고 했다.",
+      "text": "I tried to <b>soothe</b> her nerves[anger]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "엄마는 우는 아이를 달래려 하고 있었다",
+      "text": "The mother was trying to <b>soothe</b> her crying child."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "술은 마음을 위로해준다",
+      "text": "A drink would help <b>soothe</b> your nerves."
+    }
+  ],
+  "isWordType": true
+}

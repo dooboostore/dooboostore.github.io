@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "entry": "<b>felony</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfeləni"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] [법] 중죄 ((살인·방화·강도 등, cf. MISDEMEANOR))",
+              "examples": [
+                {
+                  "text": "commit a <b>felony</b>",
+                  "translatedText": "중죄를 범하다"
+                }
+              ],
+              "originalMeaning": "[UC/] [법] 중죄 ((살인·방화·강도 등, cf. MISDEMEANOR))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4e434268c7bd4017b658deccf72454a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4e434268c7bd4017b658deccf72454a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "felonies"
+        }
+      ],
+      "aliasConjugation": "felonies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "283f65a33f27c3f66c4ce43ff62ca835",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "관리의 수뢰는 중범죄이다",
+      "text": "Bribery of a public official is a <b>felony</b>."
+    }
+  ],
+  "isWordType": true
+}

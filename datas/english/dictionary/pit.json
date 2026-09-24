@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "entry": "<b>pit</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pít"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(지면의) 구멍, 팬 곳, 구덩이(cavity)",
+              "examples": [],
+              "originalMeaning": "(지면의) 구멍, 팬 곳, 구덩이(cavity)"
+            },
+            {
+              "meaning": "함정(pitfall), 뜻밖의 위험",
+              "examples": [],
+              "originalMeaning": "함정(pitfall), 뜻밖의 위험"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "움푹 들어가게 하다, 구멍을 내다, 흠집을 내다",
+              "examples": [],
+              "originalMeaning": "움푹 들어가게 하다, 구멍을 내다, 흠집을 내다"
+            },
+            {
+              "meaning": "[종종 수동형으로] 곰보로 만들다 ((by, with))",
+              "examples": [
+                {
+                  "text": "the ground pitted byerosion",
+                  "translatedText": "침식으로 움푹 들어간 지면"
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 곰보로 만들다 ((by, with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "움푹 들어가다",
+              "examples": [],
+              "originalMeaning": "움푹 들어가다"
+            },
+            {
+              "meaning": "<피부가> (눌려서) 잠시 움푹 들어가다",
+              "examples": [],
+              "originalMeaning": "<피부가> (눌려서) 잠시 움푹 들어가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ed8842545bcd48dbad037c1f91233a43",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ed8842545bcd48dbad037c1f91233a43",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pits"
+        },
+        {
+          "type": "과거형",
+          "value": "pitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pitted"
+        }
+      ],
+      "aliasConjugation": "pits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7475a27ff03049c504a6042bd436f77a",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>pit</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(복숭아·살구 등의) 씨, 핵(stone)",
+              "examples": [],
+              "originalMeaning": "(복숭아·살구 등의) 씨, 핵(stone)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<과실의> 씨를 빼다",
+              "examples": [],
+              "originalMeaning": "<과실의> 씨를 빼다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/13b7be840fee4951a394c1f59127d3ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/13b7be840fee4951a394c1f59127d3ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "pits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ae3f016e7c42f1934fc9d4071d78d0fc",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 천연두로 얼굴이 얽었다.",
+      "text": "He is pitted with smallpox."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 얼굴에는 마맛자국이 있다",
+      "text": "My face is pitted with smallpox."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비에 땅이 움푹움푹 패었다",
+      "text": "The ground was pitted by the rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 서로 싸움이 붙었다.",
+      "text": "They were pitted against each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식을 듣고 내 가슴은 두방망이질했다",
+      "text": "My heart beat[went pitapat] at the news."
+    }
+  ],
+  "isWordType": true
+}

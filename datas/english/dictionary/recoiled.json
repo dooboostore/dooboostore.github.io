@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "<b>recoil</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "후퇴[패주]하다; 뒷걸음질치다, 꽁무니를 빼다; 주춤[움찔]하다 ((before, from, at))",
+              "examples": [
+                {
+                  "text": "He <b>recoiled</b> at the sight.",
+                  "translatedText": "그는 그 광경을 보고 움찔했다."
+                }
+              ],
+              "originalMeaning": "후퇴[패주]하다; 뒷걸음질치다, 꽁무니를 빼다; 주춤[움찔]하다 ((before, from, at))"
+            },
+            {
+              "meaning": "뒤로 반동하다 ((총포의 발사 후))",
+              "examples": [],
+              "originalMeaning": "뒤로 반동하다 ((총포의 발사 후))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "되튐, 반동, 뒤로 반동함 ((대포의))",
+              "examples": [
+                {
+                  "text": "Hate is only the <b>recoil</b> of love.",
+                  "translatedText": "미움은 사랑의 반동일 뿐이다."
+                }
+              ],
+              "originalMeaning": "되튐, 반동, 뒤로 반동함 ((대포의))"
+            },
+            {
+              "meaning": "뒷걸음질, 위축, 혐오, 진저리침 ((from))",
+              "examples": [],
+              "originalMeaning": "뒷걸음질, 위축, 혐오, 진저리침 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/48b9688bdd524591a8cb844d46c26c70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/48b9688bdd524591a8cb844d46c26c70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "recoils"
+        },
+        {
+          "type": "과거형",
+          "value": "recoiled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recoiling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recoiled"
+        }
+      ],
+      "aliasConjugation": "recoils",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c1a96b05afa443e1ebf4d0ed3043c27c",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-coil",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:kɔ́il"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "다시 감다[감기다]",
+              "examples": [],
+              "originalMeaning": "다시 감다[감기다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ef34c69988ef42259d21cab69a23e73a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ef34c69988ef42259d21cab69a23e73a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f634070565c2d1d6aaab52c60ff0f7a4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 광경을 보고 움찔했다.",
+      "text": "He <b>recoiled</b> at the sight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "미움은 사랑의 반동일 뿐이다.",
+      "text": "Hate is only the <b>recoil</b> of love."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자기 행위의 결과는 자신에게 되돌아온다.",
+      "text": "Our acts <b>recoil</b> (up)on ourselves."
+    }
+  ],
+  "isWordType": true
+}

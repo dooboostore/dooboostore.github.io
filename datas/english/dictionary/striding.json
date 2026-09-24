@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "<b>stride</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "straɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "큰 걸음으로 걷다",
+              "examples": [
+                {
+                  "text": "<b>stride</b> away",
+                  "translatedText": "큰 걸음으로 성큼성큼 가버리다"
+                }
+              ],
+              "originalMeaning": "큰 걸음으로 걷다"
+            },
+            {
+              "meaning": "(…을) 성큼 넘어서다 ((over, across))",
+              "examples": [
+                {
+                  "text": "<b>stride</b> acrossa stream",
+                  "translatedText": "시내를 건너뛰다"
+                }
+              ],
+              "originalMeaning": "(…을) 성큼 넘어서다 ((over, across))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<도랑 등을> 넘다, 넘어서다",
+              "examples": [],
+              "originalMeaning": "<도랑 등을> 넘다, 넘어서다"
+            },
+            {
+              "meaning": "<물건에> 걸터앉다, 걸터서다",
+              "examples": [],
+              "originalMeaning": "<물건에> 걸터앉다, 걸터서다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "큰 걸음, 활보",
+              "examples": [],
+              "originalMeaning": "큰 걸음, 활보"
+            },
+            {
+              "meaning": "(가로·세로의) 한 걸음의 폭, 보폭; (걷는) 보조",
+              "examples": [],
+              "originalMeaning": "(가로·세로의) 한 걸음의 폭, 보폭; (걷는) 보조"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4eebfb62f5641f0bda122fd3aab187c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4eebfb62f5641f0bda122fd3aab187c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "strides"
+        },
+        {
+          "type": "과거형",
+          "value": "strode"
+        },
+        {
+          "type": "현재 분사",
+          "value": "striding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stridden"
+        }
+      ],
+      "aliasConjugation": "strides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e27bdb1ac765250f2471049d5eaab139",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 공업은 크게 발달하였다",
+      "text": "The industry has made great development[strides]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "탐험대장은 짱짱하게 계속 걸었고 우리는 최선을 다해서 따라갔다",
+      "text": "Our expedition leader strode sturdily on and we followed as best as we could."
+    }
+  ],
+  "isWordType": true
+}

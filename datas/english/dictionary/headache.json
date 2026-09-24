@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "<b>headache</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhedeɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "두통",
+              "examples": [
+                {
+                  "text": "have a (bad) <b>headache</b>",
+                  "translatedText": "골치가 (지독히) 아프다"
+                }
+              ],
+              "originalMeaning": "두통"
+            },
+            {
+              "meaning": "골칫거리, 두통거리, 걱정거리",
+              "examples": [],
+              "originalMeaning": "골칫거리, 두통거리, 걱정거리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/314386995b0f4ae7b318d07e8e95afdb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/314386995b0f4ae7b318d07e8e95afdb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8a06d05be3cf5fb64e3a4dc4b0792f04",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 약은 두통에 잘 듣는다",
+      "text": "The drug is good for headaches."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 두통으로 괴로워하고 있다",
+      "text": "He is suffering from a <b>headache</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 두통은 뭘 써도 나을 것 같지 않다.",
+      "text": "Nothing seems to help my <b>headache</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인구 문제는 큰 두통거리다",
+      "text": "The population problem is a real <b>headache</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시간을 벌기 위해 머리가 아픈 체했다",
+      "text": "In order to gain time, I feigned a <b>headache</b>."
+    }
+  ],
+  "isWordType": true
+}

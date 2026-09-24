@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "<b>parcel</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈpɑːrsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "꾸러미, 소포(package), 소화물 (=baggage)",
+              "examples": [
+                {
+                  "text": "<b>parcel</b> paper",
+                  "translatedText": "포장지"
+                }
+              ],
+              "originalMeaning": "꾸러미, 소포(package), 소화물 (=<span class='related_word' lang='en' >baggage</span>)"
+            },
+            {
+              "meaning": "상품의 거래 단위, 한 번의 거래액",
+              "examples": [],
+              "originalMeaning": "상품의 거래 단위, 한 번의 거래액"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "부분적인, <사람이> 불완전한, 파트타임의",
+              "examples": [],
+              "originalMeaning": "부분적인, <사람이> 불완전한, 파트타임의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "나누다, 분배하다 ((out, into))",
+              "examples": [],
+              "originalMeaning": "나누다, 분배하다 ((out, into))"
+            },
+            {
+              "meaning": "꾸러미[소포]로 하다 ((up)), 한데 뭉뚱그리다",
+              "examples": [],
+              "originalMeaning": "꾸러미[소포]로 하다 ((up)), 한데 뭉뚱그리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1dc8690189964a1e99ade45d10467ed3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1dc8690189964a1e99ade45d10467ed3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "parcels"
+        },
+        {
+          "type": "과거형",
+          "value": "parcelled, parceled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "parcelling, parceling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "parcelled, parceled"
+        }
+      ],
+      "aliasConjugation": "parcels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e0b9b3dfe705f2e800d9d1ff30adcb3e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 운임은 저희가 부담합니다",
+      "text": "We send all parcels carriage-paid."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가져올 수 있는 만큼 많은 꾸러미를 가져오시오.",
+      "text": "Bring what parcels you can carry."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 소포를 속달로 보내고 싶습니다",
+      "text": "I'd like this <b>parcel</b> sent (by) special delivery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소화물의 송료는 대금 상환으로 지불한다",
+      "text": "The charge for the <b>parcel</b> is to be paid on delivery."
+    }
+  ],
+  "isWordType": true
+}

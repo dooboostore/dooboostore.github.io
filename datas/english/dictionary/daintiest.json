@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "<b>dainty</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdeɪnti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "섬약한, 섬세한, 우아한, 가냘픈 ((delicate보다 문어적인 말))",
+              "examples": [
+                {
+                  "text": "<b>dainty</b> hands",
+                  "translatedText": "섬섬옥수"
+                }
+              ],
+              "originalMeaning": "섬약한, 섬세한, 우아한, 가냘픈 ((delicate보다 문어적인 말))"
+            },
+            {
+              "meaning": "맛 좋은",
+              "examples": [
+                {
+                  "text": "<b>dainty</b> bits",
+                  "translatedText": "맛있는 것, 진미"
+                }
+              ],
+              "originalMeaning": "맛 좋은"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "맛있는 것, 진미(珍味)",
+              "examples": [],
+              "originalMeaning": "맛있는 것, 진미(珍味)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d6e8e3cbbe574533b551d2c6c2916a78",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d6e8e3cbbe574533b551d2c6c2916a78",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "daintier"
+        },
+        {
+          "type": "최상급",
+          "value": "daintiest"
+        },
+        {
+          "type": "복수형",
+          "value": "dainties"
+        }
+      ],
+      "aliasConjugation": "daintier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "67bfc87843117086cdca8af37b128106",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상에는 산해의 진미가 가득 차려져 있다",
+      "text": "The table groans with dainties of many kinds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "피크닉 바구니에는 온갖 진미가 들어 있었다",
+      "text": "There were dainties of every kind in the picnic basket."
+    }
+  ],
+  "isWordType": true
+}

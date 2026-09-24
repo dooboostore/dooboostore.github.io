@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "<b>steam</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stiːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(수)증기, 스팀; 증기력",
+              "examples": [],
+              "originalMeaning": "(수)증기, 스팀; 증기력"
+            },
+            {
+              "meaning": "김; 증발기(氣), 발산기; 안개; 증발[발산]물",
+              "examples": [
+                {
+                  "text": "a <b>steam</b> of perfume",
+                  "translatedText": "향수의 향기"
+                }
+              ],
+              "originalMeaning": "김; 증발기(氣), 발산기; 안개; 증발[발산]물"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "증기가 발생하다, 김을 내다",
+              "examples": [
+                {
+                  "text": "This boiler steams well.",
+                  "translatedText": "이 보일러는 증기가 잘 나온다."
+                }
+              ],
+              "originalMeaning": "증기가 발생하다, 김을 내다"
+            },
+            {
+              "meaning": "증발하다, 발산하다, 땀이 나다",
+              "examples": [
+                {
+                  "text": "<b>steam</b> away[up]",
+                  "translatedText": "증발해 버리다"
+                }
+              ],
+              "originalMeaning": "증발하다, 발산하다, 땀이 나다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<식품 등을> 찌다 (=cook)",
+              "examples": [],
+              "originalMeaning": "<식품 등을> 찌다 (=<span class='related_word' lang='en' >cook</span>)"
+            },
+            {
+              "meaning": "…에 김을 쐬다",
+              "examples": [
+                {
+                  "text": "<b>steam</b> open an envelope",
+                  "translatedText": "증기를 쐬어 봉투를 열다"
+                }
+              ],
+              "originalMeaning": "…에 김을 쐬다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72443bd5ab524414b64b70ac39cac8f4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72443bd5ab524414b64b70ac39cac8f4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "steams"
+        },
+        {
+          "type": "과거형",
+          "value": "steamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "steaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "steamed"
+        }
+      ],
+      "aliasConjugation": "steams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8f91db69ffbbb7393bf72315a12a9b40",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "주전자에서 김이 나고 있다",
+      "text": "The kettle is steaming."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 보일러는 증기가 잘 나온다.",
+      "text": "This boiler steams well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "흥분하지 말고 내 말 좀 끝까지 들어 봐",
+      "text": "Don't <b>steam</b>. Hear me out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "물이 증발하여 증기가 된다.",
+      "text": "The water vaporizes into <b>steam</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 기관은 증기로 움직인다",
+      "text": "This engine is driven by <b>steam</b>."
+    }
+  ],
+  "isWordType": true
+}

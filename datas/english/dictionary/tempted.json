@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>tempt</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "<b>tempt</b>"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "유혹하다, 꾀다, 부추기다, 마음을 끌다",
+              "examples": [
+                {
+                  "text": "The offer tempts me.",
+                  "translatedText": "그 제안에 마음이 끌린다."
+                }
+              ],
+              "originalMeaning": "유혹하다, 꾀다, 부추기다, 마음을 끌다"
+            },
+            {
+              "meaning": "(…할) 생각이 나게 하다, <식욕 등을> 돋우다",
+              "examples": [
+                {
+                  "text": "( <b>tempt</b>+[목]+to do) I am[feel] <b>tempted</b> to say",
+                  "translatedText": "…이라고 말하고 싶다"
+                }
+              ],
+              "originalMeaning": "(…할) 생각이 나게 하다, <식욕 등을> 돋우다"
+            },
+            {
+              "meaning": "[고어] [성서] 시험하다, 해보다(test); [문어] 위험을 무릅쓰다",
+              "examples": [
+                {
+                  "text": "<b>tempt</b> one's fate",
+                  "translatedText": "자신의 운명을 시험하다"
+                }
+              ],
+              "originalMeaning": "[고어] [성서] 시험하다, 해보다(test); [문어] 위험을 무릅쓰다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0bd7770c34ce4302b21d9e5814b7f645",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0bd7770c34ce4302b21d9e5814b7f645",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tempts"
+        },
+        {
+          "type": "과거형",
+          "value": "tempted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tempting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tempted"
+        }
+      ],
+      "aliasConjugation": "tempts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aa438d6d12cb02a40209c254118c8906",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 제안에 마음이 끌린다.",
+      "text": "The offer tempts me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 악심을 일으키어 그 돈을 훔쳤다",
+      "text": "He was <b>tempted</b> to steal the money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 보자 그는 훔치고 싶은 생각이 났다.",
+      "text": "The sight <b>tempted</b> him to steal[theft]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람은 술이라면 눈빛이 달라진다",
+      "text": "He is strongly <b>tempted</b> when a liquor is before him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나쁜 친구들의 꾐에 빠져 그는 잘못된 길로 들어갔다",
+      "text": "Bad companions <b>tempted</b> him into wrong ways."
+    }
+  ],
+  "isWordType": true
+}

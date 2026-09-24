@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>indicate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪndɪkeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(손가락·손 등으로) 가리키다, 지적하다, 지시하다",
+              "examples": [
+                {
+                  "text": "<b>indicate</b> a place on a map",
+                  "translatedText": "지도에서 장소를 지적하다"
+                }
+              ],
+              "originalMeaning": "(손가락·손 등으로) 가리키다, 지적하다, 지시하다"
+            },
+            {
+              "meaning": "나타내다, 보이다, 표시하다(show); <운전자·차가> (방향 지시기 등으로) <도는 방향을> 표시하다",
+              "examples": [
+                {
+                  "text": "This map indicates where the earthquake occurred.",
+                  "translatedText": "이 지도를 보면 지진이 어디서 일어났는지를 알 수 있다."
+                }
+              ],
+              "originalMeaning": "나타내다, 보이다, 표시하다(show); <운전자·차가> (방향 지시기 등으로) <도는 방향을> 표시하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<자동차·운전자가> (좌·우로 가는) 지시를 내다",
+              "examples": [],
+              "originalMeaning": "<자동차·운전자가> (좌·우로 가는) 지시를 내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fca7c3c46d074c099f1a17bd9e74f371",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fca7c3c46d074c099f1a17bd9e74f371",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "indicates"
+        },
+        {
+          "type": "과거형",
+          "value": "indicated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "indicating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "indicated"
+        }
+      ],
+      "aliasConjugation": "indicates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0d22613e81f3f6ca628688c884840fff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "안개는 좋은 날씨의 징조이다",
+      "text": "Fog indicates fine weather."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "빨간 등불은 위험을 표시한다",
+      "text": "A red light indicates[denotes] “Danger”."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사실은 그가 결백함을 나타낸다",
+      "text": "This fact proves[indicates] his innocence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사실들은 구체적 행동이 필요함을 나타낸다.",
+      "text": "The facts <b>indicate</b> a need for action."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다음 글을 지시한 대로 바꾸어 쓰시오",
+      "text": "Rewrite the following sentence as <b>indicated</b>[directed]."
+    }
+  ],
+  "isWordType": true
+}

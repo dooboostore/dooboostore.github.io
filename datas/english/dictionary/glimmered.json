@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "<b>glimmer</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɡlɪmə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "희미하게 빛나다, 깜박이다, 명멸하다(flicker)",
+              "examples": [],
+              "originalMeaning": "희미하게 빛나다, 깜박이다, 명멸하다(flicker)"
+            },
+            {
+              "meaning": "희미하게 나타나다",
+              "examples": [],
+              "originalMeaning": "희미하게 나타나다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "희미한 빛, 명멸하는 빛, 가물거리는 빛, 깜박이는 빛, 미광 (=gleam)",
+              "examples": [
+                {
+                  "text": "a <b>glimmer</b> of hope",
+                  "translatedText": "한 가닥의 희망"
+                }
+              ],
+              "originalMeaning": "희미한 빛, 명멸하는 빛, 가물거리는 빛, 깜박이는 빛, 미광 (=<span class='related_word' lang='en' >gleam</span>)"
+            },
+            {
+              "meaning": "어렴풋한 이해, 암시; 소량; (…의) 낌새 ((of))",
+              "examples": [
+                {
+                  "text": "have a <b>glimmer</b> of",
+                  "translatedText": "어렴풋이 눈치채다"
+                }
+              ],
+              "originalMeaning": "어렴풋한 이해, 암시; 소량; (…의) 낌새 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/97877deddb704446bee5a77fc6c68149",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/97877deddb704446bee5a77fc6c68149",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "glimmers"
+        },
+        {
+          "type": "과거형",
+          "value": "glimmered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "glimmering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "glimmered"
+        }
+      ],
+      "aliasConjugation": "glimmers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0b95f9d6a025688754bc870f5fe63f66",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 내게 희망의 빛을 주었다",
+      "text": "She gave me a <b>glimmer</b>[ray] of hope."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "파도 위에 불빛이 가물거린다",
+      "text": "The light glimmers on the waves."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "먼 곳에 빛이 희미하게 보인다",
+      "text": "A light glimmers in the distance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "창에 어렴풋한 빛이 보였다",
+      "text": "We perceived a <b>glimmer</b> of light in the window."
+    }
+  ],
+  "isWordType": true
+}

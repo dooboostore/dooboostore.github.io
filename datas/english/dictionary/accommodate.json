@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>accommodate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ə│kɑːmədeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "숙박시키다, <환자 등을> 수용하다, <차·배 등이 손님을> 태우다",
+              "examples": [
+                {
+                  "text": "Our ship accommodates up to 200.",
+                  "translatedText": "우리 배는 200명까지 탑승할 수 있다."
+                }
+              ],
+              "originalMeaning": "숙박시키다, <환자 등을> 수용하다, <차·배 등이 손님을> 태우다"
+            },
+            {
+              "meaning": "편의를 도모하다, <부탁 등을> 들어주다",
+              "examples": [],
+              "originalMeaning": "편의를 도모하다, <부탁 등을> 들어주다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "순응하다, 적응하다 ((to)); <눈이> 원근 조절을 하다",
+              "examples": [],
+              "originalMeaning": "순응하다, 적응하다 ((to)); <눈이> 원근 조절을 하다"
+            },
+            {
+              "meaning": "화해하다",
+              "examples": [],
+              "originalMeaning": "화해하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f6cfed9d34847e49bb590e2bcb20bcf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f6cfed9d34847e49bb590e2bcb20bcf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accommodates"
+        },
+        {
+          "type": "과거형",
+          "value": "accommodated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accommodating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accommodated"
+        }
+      ],
+      "aliasConjugation": "accommodates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d03b2a6929f2d1880a8ab4d0085b3bd2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 회관은 1,000명이 들어간다",
+      "text": "The hall accommodates[seats] 1,000 persons."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 회관에는 500명을 넣을 수 있다",
+      "text": "This hall can <b>accommodate</b> 500 people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 기선은 천 명의 승객을 실을 수 있다",
+      "text": "That steamer can <b>accommodate</b> 1,000 passengers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 환경에 순응하려고 애썼다",
+      "text": "I tried to <b>accommodate</b> myself to the circumstances."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 병원은 환자를 100명가량 수용할 수 있다",
+      "text": "The hospital can <b>accommodate</b> 100 patients or so."
+    }
+  ],
+  "isWordType": true
+}

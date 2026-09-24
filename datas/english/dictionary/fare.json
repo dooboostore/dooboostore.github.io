@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>fare</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(기차·전차·버스·배 등의) 운임, 요금, 통행료 (=price)",
+              "examples": [
+                {
+                  "text": "a railway[taxi] <b>fare</b>",
+                  "translatedText": "철도 운임[택시 요금]"
+                }
+              ],
+              "originalMeaning": "(기차·전차·버스·배 등의) 운임, 요금, 통행료 (=<span class='related_word' lang='en' >price</span>)"
+            },
+            {
+              "meaning": "(기차·버스·택시 등의 유료) 승객(passenger)",
+              "examples": [],
+              "originalMeaning": "(기차·버스·택시 등의 유료) 승객(passenger)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "가다(go), 여행하다(travel)",
+              "examples": [
+                {
+                  "text": "<b>fare</b> forth on one's journey",
+                  "translatedText": "여행길을 떠나다"
+                }
+              ],
+              "originalMeaning": "가다(go), 여행하다(travel)"
+            },
+            {
+              "meaning": "지내다, 살아가다(get on)",
+              "examples": [
+                {
+                  "text": "He fares well in his new position.",
+                  "translatedText": "그는 새 일자리에서 잘 해나가고 있다."
+                }
+              ],
+              "originalMeaning": "지내다, 살아가다(get on)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/75093d77de414ac0bd7b3cf6e198b0a4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/75093d77de414ac0bd7b3cf6e198b0a4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fares"
+        },
+        {
+          "type": "과거형",
+          "value": "fared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "faring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fared"
+        }
+      ],
+      "aliasConjugation": "fares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a139b4610b1f1f9006d04e37eedd3b95",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 일이 여의치 않았다.",
+      "text": "It has fared ill with him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "버스 요금은 구간 600원이다",
+      "text": "The bus <b>fare</b> is 600 won a section."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 식당은 음식이 좋다",
+      "text": "That restaurant has a good bill of <b>fare</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 새 일자리에서 잘 해나가고 있다.",
+      "text": "He fares well in his new position."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너무 눈이 높아도 탈이다",
+      "text": "If you go too far in your choice, you will <b>fare</b> worse."
+    }
+  ],
+  "isWordType": true
+}

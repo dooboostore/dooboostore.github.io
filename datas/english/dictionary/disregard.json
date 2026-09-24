@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>disregard</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│dɪsrɪ│ɡɑːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "무시[경시]하다(ignore), 소홀히 하다 (=neglect)",
+              "examples": [
+                {
+                  "text": "<b>disregard</b> a stop sign",
+                  "translatedText": "정지 표지를 무시하다"
+                }
+              ],
+              "originalMeaning": "무시[경시]하다(ignore), 소홀히 하다 (=<span class='related_word' lang='en' >neglect</span>)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "무시, 경시(ignoring) ((of, for))",
+              "examples": [
+                {
+                  "text": "have a complete <b>disregard</b> for",
+                  "translatedText": "…을 완전히 무시하다"
+                }
+              ],
+              "originalMeaning": "무시, 경시(ignoring) ((of, for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66bd2727385c4af39ddff8330aaadfcb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66bd2727385c4af39ddff8330aaadfcb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "disregards"
+        },
+        {
+          "type": "과거형",
+          "value": "disregarded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disregarding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disregarded"
+        }
+      ],
+      "aliasConjugation": "disregards",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3f6cc9a2581d83a641dca910274d59f0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책임 있는 정부는 결코 법의 무시를 관용하지 않는다",
+      "text": "No responsible government can tolerate <b>disregard</b> of the law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 경고는 무시되었다",
+      "text": "My warning was disregarded[went unheeded]."
+    }
+  ],
+  "isWordType": true
+}

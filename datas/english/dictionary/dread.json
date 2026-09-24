@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>dread</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dred"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "무서워하다, 두려워하다, 염려[걱정]하다; 꺼리다",
+              "examples": [
+                {
+                  "text": "The burnt child dreads the fire.",
+                  "translatedText": "[속담] 불에 놀란 아이 부지깽이만 보아도 놀란다."
+                }
+              ],
+              "originalMeaning": "무서워하다, 두려워하다, 염려[걱정]하다; 꺼리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "두려워하다, 우려하다(feel <b>dread</b>)",
+              "examples": [],
+              "originalMeaning": "두려워하다, 우려하다(feel <b>dread</b>)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 공포, 불안, 우려 (=fear)",
+              "examples": [],
+              "originalMeaning": "[U] 공포, 불안, 우려 (=<span class='related_word' lang='en' >fear</span>)"
+            },
+            {
+              "meaning": "무서운 사람[물건], 공포[두려움]의 대상[원인]",
+              "examples": [],
+              "originalMeaning": "무서운 사람[물건], 공포[두려움]의 대상[원인]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ac58108d99334879a7610685753aeb70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ac58108d99334879a7610685753aeb70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dreads"
+        },
+        {
+          "type": "과거형",
+          "value": "dreaded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dreading"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dreaded"
+        }
+      ],
+      "aliasConjugation": "dreads",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f34a5212bc98069da9bc99a5843630e7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 밤에 외출하기를 겁낸다.",
+      "text": "She dreads going out at night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불에 놀란 아이 부지깽이만 보아도 놀란다.",
+      "text": "The burnt child dreads the fire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불에 덴 아이는 불을 무서워한다, 자라 보고 놀란 가슴 솥뚜껑 보고 놀란다.",
+      "text": "A burnt child dreads the fire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들이 이번엔 무슨 짓을 할지 생각하면 두려워진다.",
+      "text": "I <b>dread</b> to think of what they will do next."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들은 본능적으로 어두운 곳을 두려워한다",
+      "text": "Children have an instinctive <b>dread</b> of the dark."
+    }
+  ],
+  "isWordType": true
+}

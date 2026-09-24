@@ -5,7 +5,7 @@ import {
   addEventListener,
   innerHtml, onInitialize, onDisconnected,
   onConnectedBefore,
-  setAttribute
+  attribute
 } from "@dooboostore/simple-web-component";
 import { ClipBoardUtils, Router } from "@dooboostore/core-web";
 import { Inject } from '@dooboostore/simple-boot';
@@ -39,9 +39,9 @@ export default (w: Window) => {
   class EnglishPlayerPage extends w.HTMLElement {
     @onConnectedBefore
     @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
     setPageMeta() {
       return {
         titleBody: "English Player | @dooboostore",

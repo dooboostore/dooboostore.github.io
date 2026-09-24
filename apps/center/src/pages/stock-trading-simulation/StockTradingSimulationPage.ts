@@ -1,4 +1,4 @@
-import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, event, eventDelegate, eventDocument, innerHtml, setAttribute, propertyShadow, callPropertyShadow } from '@dooboostore/simple-web-component';
+import { elementDefine, onConnectedBodyShadow, onConnectedBefore, onConnectedAfter, onInitialize, event, eventDelegate, eventDocument, innerHtml, attribute, propertyShadow, callPropertyShadow } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
 import { inject } from '@dooboostore/simple-boot';
 import { TossService, TossChartTimeframe } from '../../services/toss/TossService';
@@ -42,13 +42,13 @@ export default (w: Window) => {
   class StockTradingSimulationPage extends w.HTMLElement {
     @onConnectedBefore
     @innerHtml((c, helper) => helper.$w.document.querySelector('title'), { valueKey: 'titleBody' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), 'content', { valueKey: 'ogTitle' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), 'content', { valueKey: 'desc' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), 'content', { valueKey: 'ogDesc' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), 'content', { valueKey: 'ogImage' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), 'content', { valueKey: 'twitterImage' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), 'content', { valueKey: 'twitterTitle' })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), 'content', { valueKey: 'twitterDesc' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), 'content', { valueKey: 'ogTitle' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), 'content', { valueKey: 'desc' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), 'content', { valueKey: 'ogDesc' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:image"]'), 'content', { valueKey: 'ogImage' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:image"]'), 'content', { valueKey: 'twitterImage' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:title"]'), 'content', { valueKey: 'twitterTitle' })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="twitter:description"]'), 'content', { valueKey: 'twitterDesc' })
     setPageMeta() {
       return {
         titleBody: '주식 트레이딩 시뮬레이션 | @dooboostore',

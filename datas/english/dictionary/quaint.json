@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "<b>quaint</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kweɪnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "기묘한, 기이한(odd)",
+              "examples": [
+                {
+                  "text": "a <b>quaint</b> person",
+                  "translatedText": "괴짜"
+                }
+              ],
+              "originalMeaning": "기묘한, 기이한(odd)"
+            },
+            {
+              "meaning": "별스러워 흥미를 끄는, 예스러워 흥취 있는",
+              "examples": [
+                {
+                  "text": "a <b>quaint</b> sense of humor",
+                  "translatedText": "독특한 유머 감각"
+                }
+              ],
+              "originalMeaning": "별스러워 흥미를 끄는, 예스러워 흥취 있는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "변덕스러운 사람, 기인(奇人)",
+              "examples": [],
+              "originalMeaning": "변덕스러운 사람, 기인(奇人)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2e23360d75dc4412a386b1fdc783c1f8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2e23360d75dc4412a386b1fdc783c1f8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "quainter"
+        },
+        {
+          "type": "최상급",
+          "value": "quaintest"
+        }
+      ],
+      "aliasConjugation": "quainter",
+      "aliasConjugationPos": "비교급",
+      "gdid": "2c4405d7446ef6b6b4ab872442d10dca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 말투가 이상하다",
+      "text": "He has a <b>quaint</b> way of speaking."
+    }
+  ],
+  "isWordType": true
+}

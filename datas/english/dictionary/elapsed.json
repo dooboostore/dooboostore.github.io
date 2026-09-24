@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "<b>elapse</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈlæps"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<시간이> 경과하다, 지나다",
+              "examples": [],
+              "originalMeaning": "<시간이> 경과하다, 지나다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(시간의) 경과, 짧은 시간(lapse)",
+              "examples": [],
+              "originalMeaning": "(시간의) 경과, 짧은 시간(lapse)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0bcb4a4f2b514040a762247c456b8b95",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0bcb4a4f2b514040a762247c456b8b95",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "elapses"
+        },
+        {
+          "type": "과거형",
+          "value": "elapsed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "elapsing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "elapsed"
+        }
+      ],
+      "aliasConjugation": "elapses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8fdd2598e745fb67bececfb80d23efa6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몇 해가 흘렀다",
+      "text": "Several years <b>elapsed</b>[passed away, flowed away]."
+    }
+  ],
+  "isWordType": true
+}

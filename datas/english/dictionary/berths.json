@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "<b>berth</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɜːrθ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(열차·배 등의) 침대, 2단 침대",
+              "examples": [],
+              "originalMeaning": "(열차·배 등의) 침대, 2단 침대"
+            },
+            {
+              "meaning": "[항해] 정박[계류(繫留)] 위치[거리, 간격]; 정박소",
+              "examples": [
+                {
+                  "text": "a foul <b>berth</b>",
+                  "translatedText": "(충돌의 위험성이 있는) 나쁜 위치"
+                }
+              ],
+              "originalMeaning": "[항해] 정박[계류(繫留)] 위치[거리, 간격]; 정박소"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "정박시키다, …에게 침대를 마련해 주다",
+              "examples": [],
+              "originalMeaning": "정박시키다, …에게 침대를 마련해 주다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "정박하다, 잠자리[숙소]를 정하다",
+              "examples": [],
+              "originalMeaning": "정박하다, 잠자리[숙소]를 정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c89a0917ec694aaa9c2cb4e8b8bacfd6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c89a0917ec694aaa9c2cb4e8b8bacfd6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "berths"
+        },
+        {
+          "type": "과거형",
+          "value": "berthed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "berthing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "berthed"
+        }
+      ],
+      "aliasConjugation": "berths",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "83addb2c468731a0b5f698d1eb0a7292",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배는 제3 부두에 정박 중이다.",
+      "text": "The ship is lying at No. 3 <b>Berth</b>."
+    }
+  ],
+  "isWordType": true
+}

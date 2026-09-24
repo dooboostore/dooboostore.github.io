@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>slope</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sloʊp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경사지게 하다, 비탈지게 하다(incline) ((up, down, off, away))",
+              "examples": [],
+              "originalMeaning": "경사지게 하다, 비탈지게 하다(incline) ((up, down, off, away))"
+            },
+            {
+              "meaning": "<총 따위를> 메다",
+              "examples": [],
+              "originalMeaning": "<총 따위를> 메다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "경사지다, 비탈지다",
+              "examples": [
+                {
+                  "text": "The road slopes upward from the river.",
+                  "translatedText": "길은 강에서부터 오르막으로 되어 있다."
+                }
+              ],
+              "originalMeaning": "경사지다, 비탈지다"
+            },
+            {
+              "meaning": "내려가다[오다]",
+              "examples": [],
+              "originalMeaning": "내려가다[오다]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "비탈, 사면(斜面); 경사지; (대양을 향하여 경사진) 대륙 내의 지역",
+              "examples": [],
+              "originalMeaning": "비탈, 사면(斜面); 경사지; (대양을 향하여 경사진) 대륙 내의 지역"
+            },
+            {
+              "meaning": "경사(도), 물매",
+              "examples": [],
+              "originalMeaning": "경사(도), 물매"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6f4949e244aa413aae643b299a8085e1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6f4949e244aa413aae643b299a8085e1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "slopes"
+        },
+        {
+          "type": "과거형",
+          "value": "sloped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sloping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sloped"
+        }
+      ],
+      "aliasConjugation": "slopes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f6be63680eb96ae120b3657a5f3bed80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 땅은 바다 쪽으로 경사져 있다.",
+      "text": "The land slopes to[toward] the sea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집은 지붕이 경사졌다[평평하다]",
+      "text": "The house has a sloping[flat] roof."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비탈길을 페달을 밟으며 올라갔다.",
+      "text": "He pedaled his way up the <b>slope</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "길은 강에서부터 오르막으로 되어 있다.",
+      "text": "The road slopes upward from the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언덕은 기슭까지 완만히 경사져 있다",
+      "text": "The hill slopes gently down to the foot."
+    }
+  ],
+  "isWordType": true
+}

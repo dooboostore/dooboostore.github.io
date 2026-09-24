@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>advertise</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ædvərtaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "광고하다, 선전하다; 공시하다",
+              "examples": [
+                {
+                  "text": "<b>advertise</b> a house (for sale)",
+                  "translatedText": "집을 팔려고 광고하다"
+                }
+              ],
+              "originalMeaning": "광고하다, 선전하다; 공시하다"
+            },
+            {
+              "meaning": "통지하다, 알리다(inform) ((of, that …))",
+              "examples": [],
+              "originalMeaning": "통지하다, 알리다(inform) ((of, that …))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "광고하다, 광고를 내다; 광고하여 구하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>advertise</b> for a babysitter[a job]",
+                  "translatedText": "보모[직업]를 구하는 광고를 내다"
+                }
+              ],
+              "originalMeaning": "광고하다, 광고를 내다; 광고하여 구하다 ((for))"
+            },
+            {
+              "meaning": "(상품 등을 광고에 의해) 선전하다",
+              "examples": [],
+              "originalMeaning": "(상품 등을 광고에 의해) 선전하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/832e138a3aa54cccaa61575d75440d0c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/832e138a3aa54cccaa61575d75440d0c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "advertises"
+        },
+        {
+          "type": "과거형",
+          "value": "advertised"
+        },
+        {
+          "type": "현재 분사",
+          "value": "advertising"
+        },
+        {
+          "type": "과거 분사",
+          "value": "advertised"
+        }
+      ],
+      "aliasConjugation": "advertises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0abd964f3ad041aa2bf559f4e3074e03",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자기 선전을 몹시 한다.",
+      "text": "He advertises so much."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 신제품의 여러 장점을 선전했다",
+      "text": "He claimed[<b>advertised</b>] many advantages for the new product."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "소인은 자기를 내세우고 남을 헐뜯는 법이다",
+      "text": "Mean fellows will <b>advertise</b> themselves at the expenses of others."
+    }
+  ],
+  "isWordType": true
+}

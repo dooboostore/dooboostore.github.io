@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>correlate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɔːrəleɪt; │kɑːrəleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "서로 관련시키다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>correlate</b> the two",
+                  "translatedText": "그 둘을 관련시키다"
+                }
+              ],
+              "originalMeaning": "서로 관련시키다 ((with))"
+            },
+            {
+              "meaning": "<지층을> 대비하다",
+              "examples": [],
+              "originalMeaning": "<지층을> 대비하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "서로 관련하다 ((to, with))",
+              "examples": [
+                {
+                  "text": "Chemistry and physics <b>correlate</b> .",
+                  "translatedText": "화학과 물리는 서로 관련이 있다."
+                }
+              ],
+              "originalMeaning": "서로 관련하다 ((to, with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상호 관계가 있는 사람[물건], 상관물",
+              "examples": [],
+              "originalMeaning": "상호 관계가 있는 사람[물건], 상관물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1402e9fda16444a28cff685841798135",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1402e9fda16444a28cff685841798135",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "correlates"
+        },
+        {
+          "type": "과거형",
+          "value": "correlated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "correlating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "correlated"
+        }
+      ],
+      "aliasConjugation": "correlates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "79bfa6c511c545f4083627f0291ee37f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "와 B는 서로 관련이 있다.",
+      "text": "A correlates to[with] B. A"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화학과 물리는 서로 관련이 있다.",
+      "text": "Chemistry and physics <b>correlate</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신의 역사 지식을 지리 지식과 서로 관련시키도록 노력하시오.",
+      "text": "Try to <b>correlate</b> your knowledge of history with that of geography."
+    }
+  ],
+  "isWordType": true
+}

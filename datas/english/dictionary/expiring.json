@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "<b>expire</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈspaɪə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<계약·보증 등이> 만기가 되다, <기간이> 끝나다; <자격 등이> 소멸하다",
+              "examples": [
+                {
+                  "text": "My driver's license <b>expire</b> s next month.",
+                  "translatedText": "나의 운전면허증은 다음 달이 만기이다."
+                }
+              ],
+              "originalMeaning": "<계약·보증 등이> 만기가 되다, <기간이> 끝나다; <자격 등이> 소멸하다"
+            },
+            {
+              "meaning": "[문어] 숨을 거두다, 죽다; <등불 등이> 꺼지다",
+              "examples": [],
+              "originalMeaning": "[문어] 숨을 거두다, 죽다; <등불 등이> 꺼지다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<숨을> 내쉬다, 배출하다",
+              "examples": [],
+              "originalMeaning": "<숨을> 내쉬다, 배출하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f9fb116600d04c1a9b53627797f3d0b0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f9fb116600d04c1a9b53627797f3d0b0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "expires"
+        },
+        {
+          "type": "과거형",
+          "value": "expired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "expiring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "expired"
+        }
+      ],
+      "aliasConjugation": "expires",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "286fdcdbc401e7cc5a226c789129c514",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지원 마감 날이 넘어갔다",
+      "text": "The deadline for application has expired."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 임기는 내달에 찬다",
+      "text": "His term of office will <b>expire</b> next month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지원 마감이 어제로 지났다",
+      "text": "The time for application expired yesterday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나의 운전면허증은 다음달이 만기이다.",
+      "text": "My driver’s license expires next month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 표의 유효 기간은 벌써 지났다",
+      "text": "The validity of this ticket has already expired."
+    }
+  ],
+  "isWordType": true
+}

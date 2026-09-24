@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>whence</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wens"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "어디로부터(from where)",
+              "examples": [
+                {
+                  "text": "<b>Whence</b> comest thou?",
+                  "translatedText": "너, 어디서 왔니?"
+                }
+              ],
+              "originalMeaning": "어디로부터(from where)"
+            },
+            {
+              "meaning": "어떻게(how); 왜, 어찌하여(why)",
+              "examples": [
+                {
+                  "text": "Whencecomes it that …?",
+                  "translatedText": "…인 것은 무슨 까닭인가?"
+                }
+              ],
+              "originalMeaning": "어떻게(how); 왜, 어찌하여(why)"
+            }
+          ]
+        },
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[의문대명사] 어디 ((기원(起源)))",
+              "examples": [
+                {
+                  "text": "From <b>whence</b> is he?",
+                  "translatedText": "그는 어디 출신인가?"
+                }
+              ],
+              "originalMeaning": "[의문대명사] 어디 ((기원(起源)))"
+            },
+            {
+              "meaning": "[관계대명사] (…하는) 그 곳",
+              "examples": [
+                {
+                  "text": "the source from <b>whence</b> it springs",
+                  "translatedText": "그것이 나오는 바의 근원"
+                }
+              ],
+              "originalMeaning": "[관계대명사] (…하는) 그 곳"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "출처, 유래, 기원 ((of))",
+              "examples": [
+                {
+                  "text": "We know neither our <b>whence</b> nor our whither.",
+                  "translatedText": "우리들은 어디로부터 와서 어디로 가는지를 모른다."
+                }
+              ],
+              "originalMeaning": "출처, 유래, 기원 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/47cb2b9027664b5fa6eba04e045e65ed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/47cb2b9027664b5fa6eba04e045e65ed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "52afabb505d1e04b27006ca7465fd357",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리들은 어디로부터 와서 어디로 가는지를 모른다.",
+      "text": "We know neither our <b>whence</b> nor our whither."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느쪽으로 간다 해도 출발점으로 돌아오게 된다.",
+      "text": "Go whither you will, you will return <b>whence</b> you came."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "온 곳으로 돌아가라.",
+      "text": "Return <b>whence</b> you came."
+    }
+  ],
+  "isWordType": true
+}

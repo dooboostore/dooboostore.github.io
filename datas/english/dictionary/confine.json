@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>confine</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈfaɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "한정하다, 제한하다 ((within, to))",
+              "examples": [
+                {
+                  "text": "Would you <b>confine</b> your remarks to the fact?",
+                  "translatedText": "발언은 사실에만 한정해 주십시오."
+                }
+              ],
+              "originalMeaning": "한정하다, 제한하다 ((within, to))"
+            },
+            {
+              "meaning": "가두다(shut up), 감금하다(imprison) ((to, within, in))",
+              "examples": [],
+              "originalMeaning": "가두다(shut up), 감금하다(imprison) ((to, within, in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 경계, 국경 (지대);[종종 pl.] 범위, 영역; 한계 ((of))",
+              "examples": [
+                {
+                  "text": "the <b>confine</b> s of human knowledge",
+                  "translatedText": "인지(人智)의 한계"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 경계, 국경 (지대);[종종 pl.] 범위, 영역; 한계 ((of))"
+            },
+            {
+              "meaning": "감금 (장소)",
+              "examples": [],
+              "originalMeaning": "감금 (장소)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2520c141092040618b839865648bf3b3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2520c141092040618b839865648bf3b3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "confines"
+        },
+        {
+          "type": "과거형",
+          "value": "confined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "confining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "confined"
+        }
+      ],
+      "aliasConjugation": "confines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d6d058771e36c4683fedc9e0363b9540",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감기로 방에 갇혀 있다",
+      "text": "He is confined to his bed with a cold."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "발언은 사실에만 한정해 주십시오.",
+      "text": "Would you <b>confine</b> your remarks to the fact?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "법의 한도 내에서 운용해야 한다",
+      "text": "We must operate within the confines of the law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 생각을 가지고 있는 것은 일부 사람들만이다",
+      "text": "The idea is limited[confined] to a certain circle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "몸이 아파서 자리에 누운 채로 기동을 할 수 없었다",
+      "text": "I was so sick that I had to be confined to bed."
+    }
+  ],
+  "isWordType": true
+}

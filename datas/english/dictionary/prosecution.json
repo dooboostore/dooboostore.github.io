@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "<b>prosecution</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│prɑːsɪ│kjuːʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기소, 고발",
+              "examples": [
+                {
+                  "text": "a malicious <b>prosecution</b>",
+                  "translatedText": "무고(誣告)"
+                }
+              ],
+              "originalMeaning": "기소, 고발"
+            },
+            {
+              "meaning": "[the ~; 집합적] 기소자측, 검찰 당국(opp. defense)",
+              "examples": [
+                {
+                  "text": "a witness for the <b>prosecution</b>",
+                  "translatedText": "검찰측의 증인"
+                }
+              ],
+              "originalMeaning": "[the ~; 집합적] 기소자측, 검찰 당국(opp. defense)"
+            },
+            {
+              "meaning": "[U] 수행, 실행; 속행, 추구",
+              "examples": [
+                {
+                  "text": "the <b>prosecution</b> of research",
+                  "translatedText": "조사 수행"
+                }
+              ],
+              "originalMeaning": "[U] 수행, 실행; 속행, 추구"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2da374aea6a449068bcc08ba222e79ab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2da374aea6a449068bcc08ba222e79ab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "15eaffbe9cbf17dbf19df2e0333ac6a0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "검찰은 공안사범을 검거했다",
+      "text": "The <b>prosecution</b> arrested a public safety offender."
+    }
+  ],
+  "isWordType": true
+}

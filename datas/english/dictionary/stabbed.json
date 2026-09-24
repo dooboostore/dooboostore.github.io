@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "<b>stab</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stæb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "찌르다, 찔러 죽이다 ((with, by))",
+              "examples": [
+                {
+                  "text": "<b>stab</b> a person with a dagger = <b>stab</b> a dagger into a person",
+                  "translatedText": "…을 단도로 찌르다"
+                }
+              ],
+              "originalMeaning": "찌르다, 찔러 죽이다 ((with, by))"
+            },
+            {
+              "meaning": "(손가락 등으로) (…을) 향하여 가르키다 ((at, in))",
+              "examples": [],
+              "originalMeaning": "(손가락 등으로) (…을) 향하여 가르키다 ((at, in))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "찌르다, 찌르려고 대들다 ((at, into))",
+              "examples": [
+                {
+                  "text": "The thief <b>stabbed</b> at him.",
+                  "translatedText": "도둑은 그를 보고 찔렀다."
+                }
+              ],
+              "originalMeaning": "찌르다, 찌르려고 대들다 ((at, into))"
+            },
+            {
+              "meaning": "찌르듯이 아프다 ((at))",
+              "examples": [],
+              "originalMeaning": "찌르듯이 아프다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "찌름; 자상(刺傷), 찔린 상처",
+              "examples": [],
+              "originalMeaning": "찌름; 자상(刺傷), 찔린 상처"
+            },
+            {
+              "meaning": "쑤시고 아픔, 동통",
+              "examples": [],
+              "originalMeaning": "쑤시고 아픔, 동통"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0de9a346b1ff4451b299786f409bdf85",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0de9a346b1ff4451b299786f409bdf85",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stabs"
+        },
+        {
+          "type": "과거형",
+          "value": "stabbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stabbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stabbed"
+        }
+      ],
+      "aliasConjugation": "stabs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7020bec668e837827f8532d8eebbf3de",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "도둑은 그를 보고 찔렀다.",
+      "text": "The thief <b>stabbed</b> at him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아들의 비행 때문에 가슴을 도려내는 느낌이었다.",
+      "text": "He was <b>stabbed</b> to the heart by his son’s misconduct."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 양심의 가책을 받았다.",
+      "text": "Remorse <b>stabbed</b> her."
+    }
+  ],
+  "isWordType": true
+}

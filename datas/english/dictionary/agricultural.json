@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "entry": "<b>agricultural</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "æ̀ɡrikʌ́ltʃərəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "농업의, 농사[농예]의, 농학(상)의",
+              "examples": [],
+              "originalMeaning": "농업의, 농사[농예]의, 농학(상)의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e6189519037340739dfe38a46bd49473",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e6189519037340739dfe38a46bd49473",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "03e8d7d4d516c2885bd22173f60db5da",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 농촌을 구제하고자 일어섰다",
+      "text": "He set himself to save the <b>agricultural</b> village."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 관습은 농촌 지역에서는 아직 정착하지 못했다",
+      "text": "This custom is not firmly established in <b>agricultural</b> districts."
+    }
+  ],
+  "isWordType": true
+}

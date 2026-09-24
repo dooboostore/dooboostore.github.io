@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>wince</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɪns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(아픔·무서움 때문에) 주춤하다, 꽁무니 빼다, 질겁하다, 움츠리다, 겁내다 ((at, under))",
+              "examples": [
+                {
+                  "text": "He didn't <b>wince</b> under the blow.",
+                  "translatedText": "그는 맞고도 굴하지 않았다."
+                }
+              ],
+              "originalMeaning": "(아픔·무서움 때문에) 주춤하다, 꽁무니 빼다, 질겁하다, 움츠리다, 겁내다 ((at, under))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "질겁, 꽁무니 뺌, 주춤함, 위축, 겁냄",
+              "examples": [],
+              "originalMeaning": "질겁, 꽁무니 뺌, 주춤함, 위축, 겁냄"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/04f49d3849a8401785f1189ccfaadd7a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/04f49d3849a8401785f1189ccfaadd7a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "winces"
+        },
+        {
+          "type": "과거형",
+          "value": "winced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wincing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "winced"
+        }
+      ],
+      "aliasConjugation": "winces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8ef42282ddc665e74163b53dbf7a8a3d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 맞고도 굴하지 않았다.",
+      "text": "He didn’t <b>wince</b> under the blow."
+    }
+  ],
+  "isWordType": true
+}

@@ -2,10 +2,10 @@ import {
   elementDefine,
   onConnectedBodyShadow,
   onConnectedBefore,
-  subscribeSwcAppRouteChangeWhileConnected,
+  subscribeSwcAppRouteChange,
   innerHtmlLight,
   innerHtml,
-  setAttribute,
+  attribute,
   replaceChildren,
   addEventListener,
   event,
@@ -23,120 +23,132 @@ export default (w: Window) => {
   class RootRouter extends w.HTMLElement {
     private router!: Router;
 
-    @subscribeSwcAppRouteChangeWhileConnected({ order: -1 })
+    @subscribeSwcAppRouteChange({ order: -1 })
     onRouteChange(routerPathSet: RouterEventType) {
       console.log("[Route Change]", routerPathSet.path);
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["", "/"], { order: 0 })
+    @subscribeSwcAppRouteChange(["", "/"], { order: 0 })
     @innerHtmlLight
     handleHome() {
       return `<center-home-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/english"], { order: 1 })
+    @subscribeSwcAppRouteChange(["/english"], { order: 1 })
     @innerHtmlLight
     handleEnglishList() {
       return `<center-english-list-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(['/english/{name}'], { order: 2 })
+    @subscribeSwcAppRouteChange(['/english/{name}'], { order: 2 })
     @innerHtmlLight
     handleEnglishPlayer(routerPathSet: RouterEventType) {
       return `<center-english-player-page name="${routerPathSet.pathData.name}"/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-flight"], { order: 3 })
+    @subscribeSwcAppRouteChange(["/text-english"], { order: 2 })
+    @innerHtmlLight
+    handleTextEnglishList() {
+      return `<center-text-english-list-page/>`;
+    }
+
+    @subscribeSwcAppRouteChange(['/text-english/{name}'], { order: 2 })
+    @innerHtmlLight
+    handleTextEnglishReader(routerPathSet: RouterEventType) {
+      return `<center-text-english-reader-page name="${routerPathSet.pathData.name}"/>`;
+    }
+
+    @subscribeSwcAppRouteChange(["/stock-flight"], { order: 3 })
     @innerHtmlLight
     handleStockFlight() {
       return `<center-stock-flight-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/lotto"], { order: 4 })
+    @subscribeSwcAppRouteChange(["/lotto"], { order: 4 })
     @innerHtmlLight
     handleLotto() {
       return `<center-lotto-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/coordinate-simulation"], { order: 5 })
+    @subscribeSwcAppRouteChange(["/coordinate-simulation"], { order: 5 })
     @innerHtmlLight
     handleCoordinateSimulation() {
       return `<center-coordinate-2d-simulation-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/buyback"], { order: 6 })
+    @subscribeSwcAppRouteChange(["/buyback"], { order: 6 })
     @innerHtmlLight
     handleBuyback() {
       return `<center-buyback-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-brain-checker"], { order: 7 })
+    @subscribeSwcAppRouteChange(["/stock-brain-checker"], { order: 7 })
     @innerHtmlLight
     handleStockBrainChecker() {
       return `<center-stock-brain-checker-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-npti"], { order: 8 })
+    @subscribeSwcAppRouteChange(["/stock-npti"], { order: 8 })
     @innerHtmlLight
     handleStockNpti() {
       return `<center-stock-npti-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-category"], { order: 9 })
+    @subscribeSwcAppRouteChange(["/stock-category"], { order: 9 })
     @innerHtmlLight
     handleStockCategory() {
       return `<center-stock-category-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-indicator"], { order: 9 })
+    @subscribeSwcAppRouteChange(["/stock-indicator"], { order: 9 })
     @innerHtmlLight
     handleStockIndicator() {
       return `<center-stock-indicator-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-chart"], { order: 9 })
+    @subscribeSwcAppRouteChange(["/stock-chart"], { order: 9 })
     @innerHtmlLight
     handleStockChart() {
       return `<center-stock-chart-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/gpu-rental"], { order: 9 })
+    @subscribeSwcAppRouteChange(["/gpu-rental"], { order: 9 })
     @innerHtmlLight
     handleGpuRental() {
       return `<center-gpu-rental-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-category-ranking"], { order: 9 })
+    @subscribeSwcAppRouteChange(["/stock-category-ranking"], { order: 9 })
     @innerHtmlLight
     handleStockCategoryRanking() {
       return `<center-stock-category-ranking-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/stock-trading-simulation"], { order: 10 })
+    @subscribeSwcAppRouteChange(["/stock-trading-simulation"], { order: 10 })
     @innerHtmlLight({ filter: skipIfExists('center-stock-trading-simulation-page') })
     handleStockTradingSimulation() {
       return `<center-stock-trading-simulation-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/math"], { order: 11 })
+    @subscribeSwcAppRouteChange(["/math"], { order: 11 })
     @innerHtmlLight({ filter: skipIfExists('center-math-page') })
     handleMath() {
       return `<center-math-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/ram-price"], { order: 12 })
+    @subscribeSwcAppRouteChange(["/ram-price"], { order: 12 })
     @innerHtmlLight
     handleRamPrice() {
       return `<center-ram-price-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/physical"], { order: 13 })
+    @subscribeSwcAppRouteChange(["/physical"], { order: 13 })
     @innerHtmlLight({ filter: skipIfExists('center-physical-page') })
     handlePhysical() {
       return `<center-physical-page/>`;
     }
 
-    @subscribeSwcAppRouteChangeWhileConnected(["/{tail:.*}"], { order: 999 })
+    @subscribeSwcAppRouteChange(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {
       return `<div style="display: flex; align-items: center; justify-content: center; min-height: 400px; text-align: center; color: #666;">
@@ -158,9 +170,9 @@ export default (w: Window) => {
 
     @onConnectedBefore
     @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
     setMeta() {
       return {
         titleBody: "@dooboostore Center",

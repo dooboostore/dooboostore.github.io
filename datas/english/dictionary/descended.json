@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "entry": "<b>descended</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "diséndid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전해진, 유래한 ((from))",
+              "examples": [],
+              "originalMeaning": "전해진, 유래한 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d39c06a1874c414dafbeec2f24aa313d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d39c06a1874c414dafbeec2f24aa313d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2f2bd4c7a1232c7b618263d47e7d32c4",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>descend</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈsend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "내려가다, 내려오다, 내리다(opp. ascend)",
+              "examples": [
+                {
+                  "text": "<b>descend</b> from a tree",
+                  "translatedText": "나무에서 내려오다"
+                }
+              ],
+              "originalMeaning": "내려가다, 내려오다, 내리다(opp. ascend)"
+            },
+            {
+              "meaning": "내리받이가 되다, (아래로) 경사지다 ((to))",
+              "examples": [
+                {
+                  "text": "The path descends to the river.",
+                  "translatedText": "길은 강쪽으로 경사져 있다."
+                }
+              ],
+              "originalMeaning": "내리받이가 되다, (아래로) 경사지다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<비탈·층계 등을> 내려가다(go down)",
+              "examples": [
+                {
+                  "text": "<b>descend</b> a mountain",
+                  "translatedText": "산을 내려가다"
+                }
+              ],
+              "originalMeaning": "<비탈·층계 등을> 내려가다(go down)"
+            },
+            {
+              "meaning": "[수동형으로] …(의) 자손이다, <언어 등이> 유래하다 ((from)) (→<b>descended</b>)",
+              "examples": [],
+              "originalMeaning": "[수동형으로] …(의) 자손이다, <언어 등이> 유래하다 ((from)) (→<span class='related_word' lang='en' ><b>descended</b></span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1cb5dd044a684bb884444613584b2144",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1cb5dd044a684bb884444613584b2144",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "descends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5a2fee3b45e97268edc4ade80d7088dd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "길은 강쪽으로 경사져 있다.",
+      "text": "The path descends to the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "성령이 그들에게 강림하셨다",
+      "text": "The Holy Ghost[Spirit] <b>descended</b> upon them."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 적병을 급습했다.",
+      "text": "They <b>descended</b> upon the enemy soldiers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "세부로 옮겨가자.",
+      "text": "Let’s <b>descend</b> to details."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>surmise</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "짐작, 추측, 예측",
+              "examples": [],
+              "originalMeaning": "짐작, 추측, 예측"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "짐작[추측]하다(guess), …이라고 생각하다(suspect)",
+              "examples": [
+                {
+                  "text": "I surmised from his looks thathe was very poor then.",
+                  "translatedText": "그의 모습으로 보아 그 당시 그는 몹시 가난했던 것으로 생각되었다."
+                }
+              ],
+              "originalMeaning": "짐작[추측]하다(guess), …이라고 생각하다(suspect)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "추측하다",
+              "examples": [],
+              "originalMeaning": "추측하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/869486c54cf94bff8e08c7082f898582",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/869486c54cf94bff8e08c7082f898582",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "surmises"
+        },
+        {
+          "type": "과거형",
+          "value": "surmised"
+        },
+        {
+          "type": "현재 분사",
+          "value": "surmising"
+        },
+        {
+          "type": "과거 분사",
+          "value": "surmised"
+        }
+      ],
+      "aliasConjugation": "surmises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "47ffd6291d1b97dfe9101b55fcf96ef2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 미루어 볼 때 그는 진실을 말하지 않았을 것이다",
+      "text": "As I surmised, he had not told the truth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 모습으로 보아 그 당시 그는 몹시 가난했던 것으로 생각되었다.",
+      "text": "I surmised from his looks that he was very poor then."
+    }
+  ],
+  "isWordType": true
+}

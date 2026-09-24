@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>undertake</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʌndər│teɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<일·책임 등을> 맡다, 떠맡다, 책임 맡다",
+              "examples": [
+                {
+                  "text": "<b>undertake</b> a task[responsibility for …]",
+                  "translatedText": "일을[…의 책임을] 맡다"
+                }
+              ],
+              "originalMeaning": "<일·책임 등을> 맡다, 떠맡다, 책임 맡다"
+            },
+            {
+              "meaning": "착수하다, 시작하다; 기도하다",
+              "examples": [
+                {
+                  "text": "<b>undertake</b> an experiment",
+                  "translatedText": "실험에 착수하다"
+                }
+              ],
+              "originalMeaning": "착수하다, 시작하다; 기도하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "증인이 되다, 보증하다 ((for))",
+              "examples": [],
+              "originalMeaning": "증인이 되다, 보증하다 ((for))"
+            },
+            {
+              "meaning": "장례식을 떠맡다, 장의사를 경영하다",
+              "examples": [],
+              "originalMeaning": "장례식을 떠맡다, 장의사를 경영하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/52325f11619c4b0f9db13b8ec12f66fc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/52325f11619c4b0f9db13b8ec12f66fc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "undertakes"
+        },
+        {
+          "type": "과거형",
+          "value": "undertook"
+        },
+        {
+          "type": "현재 분사",
+          "value": "undertaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "undertaken"
+        }
+      ],
+      "aliasConjugation": "undertakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "400b332a3d44e87a8a3615c3aec37c26",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 꽤 큰 사업이다.",
+      "text": "It’s quite an undertaking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 손쉽게 인수할 수는 없다",
+      "text": "I can't <b>undertake</b> it so readily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오냐 그 일은 내가 맡겠다",
+      "text": "All right. I will <b>undertake</b> the work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 맡은 사업은 모조리 실패였다",
+      "text": "In everything I undertook I failed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 월요일까지는 그것을 하겠다고 약속했다.",
+      "text": "He undertook to do it by Monday."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>stake</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "steɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "말뚝, 막대기",
+              "examples": [],
+              "originalMeaning": "말뚝, 막대기"
+            },
+            {
+              "meaning": "화형주(火刑柱)",
+              "examples": [
+                {
+                  "text": "burn at the <b>stake</b>",
+                  "translatedText": "화형에 처하다"
+                }
+              ],
+              "originalMeaning": "화형주(火刑柱)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "말뚝에 매다",
+              "examples": [
+                {
+                  "text": "<b>stake</b> a horse",
+                  "translatedText": "말을 말뚝에 매다"
+                }
+              ],
+              "originalMeaning": "말뚝에 매다"
+            },
+            {
+              "meaning": "막대기로 찌르다",
+              "examples": [],
+              "originalMeaning": "막대기로 찌르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb00ef82ba1a4174ab885c746db06ab1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb00ef82ba1a4174ab885c746db06ab1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stakes"
+        },
+        {
+          "type": "과거형",
+          "value": "staked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "staking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "staked"
+        }
+      ],
+      "aliasConjugation": "stakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "435c168e0864b851c38a19594bcf7352",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국가의 존망에 관한 문제다",
+      "text": "It is a question of life or death for the nation. or The national existence is at <b>stake</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사업에 전재산을 걸었다",
+      "text": "He staked all his fortune on business."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 명예를 걸고 그의 정직함을 보증한다",
+      "text": "I <b>stake</b> my reputation on his honesty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "말뚝이 바위에 마치어 들어가지 않는다",
+      "text": "The <b>stake</b> has hit a rock and won't drive in any deeper."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가운이 걸린 일이다",
+      "text": "It is a matter of the family fortunes at <b>stake</b>."
+    }
+  ],
+  "isWordType": true
+}

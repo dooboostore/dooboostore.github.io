@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "<b>grey</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡreɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(=GRAY)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >GRAY</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/70e46b2a851145e3bbc54d4cf12e0864",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/70e46b2a851145e3bbc54d4cf12e0864",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "greyer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "greys"
+        },
+        {
+          "type": "최상급",
+          "value": "greyest"
+        },
+        {
+          "type": "과거형",
+          "value": "greyed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "greying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "greyed"
+        }
+      ],
+      "aliasConjugation": "greyer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "724a55a74daeac156efc5134a6fd0f45",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 40대 중반에 머리가 허옇게 되기 시작했다",
+      "text": "He started to go <b>grey</b>[gray] in his mid-forties."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 구멍 뚫린 회색 양말을 신고 있었다",
+      "text": "He was wearing <b>grey</b> socks with holes in them."
+    }
+  ],
+  "isWordType": true
+}

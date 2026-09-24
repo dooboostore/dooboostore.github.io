@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "<b>copyright</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːpiraɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "저작권, 판권 ((기호 ⓒ))",
+              "examples": [
+                {
+                  "text": "hold[own] the <b>copyright</b> on a book",
+                  "translatedText": "서적의 판권을 갖고 있다"
+                }
+              ],
+              "originalMeaning": "저작권, 판권 ((기호 ⓒ))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "저작권[판권]이 있는, 판권으로 보호된",
+              "examples": [],
+              "originalMeaning": "저작권[판권]이 있는, 판권으로 보호된"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<작품 등을> 저작권으로 보호하다, …의 판권을 얻다",
+              "examples": [],
+              "originalMeaning": "<작품 등을> 저작권으로 보호하다, …의 판권을 얻다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/99a50317427343e5a25896cc4ce37e57",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/99a50317427343e5a25896cc4ce37e57",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "copyrights"
+        },
+        {
+          "type": "과거형",
+          "value": "copyrighted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "copyrighting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "copyrighted"
+        }
+      ],
+      "aliasConjugation": "copyrights",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dac952abec3fb0cf732bc9c08c818707",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 저작에는 아직 판권이 살아 있다",
+      "text": "His works are still <b>copyright</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 소설의 저작권은 2년이 지나면 끝난다.",
+      "text": "The <b>copyright</b> of this novel will be out in two years’ time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저작권 소유",
+      "text": "All rights reserved. or Copyrighted."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "<b>insult</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "모욕하다, 욕보이다, …에게 무례한 짓을 하다",
+              "examples": [
+                {
+                  "text": "He <b>insult</b> ed me by calling me a fool.",
+                  "translatedText": "그는 나를 바보라고 부르며 모욕했다."
+                }
+              ],
+              "originalMeaning": "모욕하다, 욕보이다, …에게 무례한 짓을 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "모욕(적 언동), 무례",
+              "examples": [
+                {
+                  "text": "a personal <b>insult</b>",
+                  "translatedText": "인신 공격"
+                }
+              ],
+              "originalMeaning": "모욕(적 언동), 무례"
+            },
+            {
+              "meaning": "손상, 상해",
+              "examples": [],
+              "originalMeaning": "손상, 상해"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/114c925995d84e2d8429feacbebc230a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/114c925995d84e2d8429feacbebc230a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "insults"
+        },
+        {
+          "type": "과거형",
+          "value": "insulted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "insulting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "insulted"
+        }
+      ],
+      "aliasConjugation": "insults",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e399fdde45518ef713e3ef7a0d566645",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모욕을 꾹 참을 수가 있다.",
+      "text": "He is patient of insults."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여러 사람 앞에서 창피를 당했다",
+      "text": "He was insulted in public."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그의 말을 모욕으로 받아들였다.",
+      "text": "She took his remark as an <b>insult</b>[as insulting]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 말을 모욕으로 받아들였다.",
+      "text": "He took my remark as an <b>insult</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 갑자기 내게 욕을 퍼부었다.",
+      "text": "He jerked out an <b>insult</b> at me."
+    }
+  ],
+  "isWordType": true
+}

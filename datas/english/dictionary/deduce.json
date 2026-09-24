@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>deduce</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈduːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…에서) 연역(演繹)하다, 추론하다 ((from))(opp. induce), (=infer)",
+              "examples": [
+                {
+                  "text": "<b>deduce</b> a conclusion from premises",
+                  "translatedText": "전제에서 결론을 연역[추론]하다"
+                }
+              ],
+              "originalMeaning": "(…에서) 연역(演繹)하다, 추론하다 ((from))(opp. induce), (=<span class='related_word' lang='en' >infer</span>)"
+            },
+            {
+              "meaning": "<계통을> 따지다, <유래를> 찾다(derive) ((from))",
+              "examples": [
+                {
+                  "text": "<b>deduce</b> one's lineage",
+                  "translatedText": "가계(家系)를 더듬다"
+                }
+              ],
+              "originalMeaning": "<계통을> 따지다, <유래를> 찾다(derive) ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4d7d70c57604daebdeb7a53835405ac",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4d7d70c57604daebdeb7a53835405ac",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "deduces"
+        },
+        {
+          "type": "과거형",
+          "value": "deduced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "deducing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "deduced"
+        }
+      ],
+      "aliasConjugation": "deduces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "77d56fd4882650e98bdb36c0d660131b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사실에서 우리는 그가 우리와 의견이 같지 않다고 추론했다.",
+      "text": "From this fact we deduced that he didn’t agree with us."
+    }
+  ],
+  "isWordType": true
+}

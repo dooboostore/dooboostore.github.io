@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "<b>widen</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈwaɪdn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<폭·면적·범위 따위를> 넓히다",
+              "examples": [
+                {
+                  "text": "<b>widen</b> one's experience",
+                  "translatedText": "경험을 넓히다"
+                }
+              ],
+              "originalMeaning": "<폭·면적·범위 따위를> 넓히다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "넓어지다, <눈이> (놀람 등으로) 둥그레지다",
+              "examples": [
+                {
+                  "text": "The gap between them has <b>widened</b> to 7%.",
+                  "translatedText": "그들 사이의 격차는 7%까지 넓어졌다[벌어졌다]"
+                }
+              ],
+              "originalMeaning": "넓어지다, <눈이> (놀람 등으로) 둥그레지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4978dc841a74f11a69b09f3e4ccd111",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4978dc841a74f11a69b09f3e4ccd111",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "widens"
+        },
+        {
+          "type": "과거형",
+          "value": "widened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "widening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "widened"
+        }
+      ],
+      "aliasConjugation": "widens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8d52e6e8232d6f338e7e71c3b9e0cba9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 도로는 확장 중이다",
+      "text": "This road is being <b>widened</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "많은 교통량 때문에 도로의 폭을 넓히게 되었다",
+      "text": "They decided to <b>widen</b> the road due to the heavy traffic."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "틈이 바라지다",
+      "text": "The opening widens."
+    }
+  ],
+  "isWordType": true
+}

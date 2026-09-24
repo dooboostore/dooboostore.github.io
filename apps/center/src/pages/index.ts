@@ -2,6 +2,8 @@ import RootRouter from './RootRouter';
 import HomePage from './home/HomePage';
 import EnglishListPage from './english/EnglishListPage';
 import EnglishPlayerPage from './english/EnglishPlayerPage';
+import TextEnglishListPage from './text-english/TextEnglishListPage';
+import TextEnglishReaderPage from './text-english/TextEnglishReaderPage';
 import StockFlightPage from './stock-flight/StockFlightPage';
 import LottoPage from './lotto/LottoPage';
 import CoordinateSimulationPage from './coordinate-simulation/CoordinateSimulationPage';
@@ -79,6 +81,8 @@ export const pageFactories = [
   HomePage,
   EnglishListPage,
   EnglishPlayerPage,
+  TextEnglishListPage,
+  TextEnglishReaderPage,
   StockFlightPage,
   LottoPage,
   CoordinateSimulationPage,

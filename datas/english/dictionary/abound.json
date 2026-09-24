@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>abound</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈbaʊnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<동물이> 많이 있다; <장소 등이> (…으로) 가득하다 ((in, with))",
+              "examples": [
+                {
+                  "text": "Fish <b>abound</b> in this river. = This river <b>abound</b> s in fish.",
+                  "translatedText": "이 강에는 물고기가 많다."
+                }
+              ],
+              "originalMeaning": "<동물이> 많이 있다; <장소 등이> (…으로) 가득하다 ((in, with))"
+            },
+            {
+              "meaning": "<물건이> 풍부하다; 잘 공급되다 ((in, on))",
+              "examples": [
+                {
+                  "text": "<b>abound</b> in products",
+                  "translatedText": "생산물이 많다"
+                }
+              ],
+              "originalMeaning": "<물건이> 풍부하다; 잘 공급되다 ((in, on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/212cba02ec3e45d69ad43908e1f9fde0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/212cba02ec3e45d69ad43908e1f9fde0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "abounds"
+        },
+        {
+          "type": "과거형",
+          "value": "abounded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "abounding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "abounded"
+        }
+      ],
+      "aliasConjugation": "abounds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6c691b38342c22d25ca1471d4f870765",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 강에는 물고기가 많다.",
+      "text": "Fish <b>abound</b> in this river.=This river abounds in fish."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 개구리는 한국에 많다",
+      "text": "These frogs <b>abound</b> in Korea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 강에는 물고기가 많다",
+      "text": "This river abounds with fish."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 지방은 사과가 풍부하다",
+      "text": "This region abounds in apples. or Apples are abundant in this district."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배에는 쥐가 숱하다",
+      "text": "The ship abounds in[with] rats."
+    }
+  ],
+  "isWordType": true
+}

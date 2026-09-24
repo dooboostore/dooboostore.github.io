@@ -4,7 +4,7 @@ import {
   addEventListener, onInitialize,
   onConnectedBefore,
   innerHtml,
-  setAttribute
+  attribute
 } from "@dooboostore/simple-web-component";
 import { Router } from '@dooboostore/core-web';
 
@@ -23,6 +23,15 @@ export default (w: Window) => {
       path: '/english',
       color: '#ff0000',
       badge: 'Popular'
+    },
+    {
+      id: 'text-english',
+      icon: '📖',
+      title: 'Text English',
+      description: 'PDF·텍스트를 책처럼 읽으며 배우세요. 단어 툴팁, 발음 듣기까지.',
+      path: '/text-english',
+      color: '#4e342e',
+      badge: 'New'
     },
     {
       id: 'stock-flight',
@@ -165,9 +174,9 @@ export default (w: Window) => {
   class HomePage extends w.HTMLElement {
     @onConnectedBefore
     @innerHtml((c, helper) => helper.$w.document.querySelector("title"), { valueKey: "titleBody" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
-    @setAttribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:title"]'), "content", { valueKey: "ogTitle" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[name="description"]'), "content", { valueKey: "desc" })
+    @attribute((c, helper) => helper.$w.document.querySelector('meta[property="og:description"]'), "content", { valueKey: "ogDesc" })
     setPageMeta() {
       return {
         titleBody: "@dooboostore Center",

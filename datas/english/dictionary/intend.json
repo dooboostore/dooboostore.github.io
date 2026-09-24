@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>intend</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈtend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…할 작정이다, …하려고 생각하다",
+              "examples": [
+                {
+                  "text": "( <b>intend</b>+to do) I <b>intend</b> going. = I <b>intend</b> to go.",
+                  "translatedText": "나는 갈 작정이다.(cf. I intended to have gone. 갈 셈이었다. )((그러나 가지 못했다))"
+                }
+              ],
+              "originalMeaning": "…할 작정이다, …하려고 생각하다"
+            },
+            {
+              "meaning": "의도하다, 기도(企圖)하다, 고의로 하다",
+              "examples": [
+                {
+                  "text": "( <b>intend</b>+todo) I did not <b>intend</b> to insult you at all.",
+                  "translatedText": "당신을 모욕할 생각은 추호도 없었다."
+                }
+              ],
+              "originalMeaning": "의도하다, 기도(企圖)하다, 고의로 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "목적[계획]을 가지다, 의도하다; [고어] 출발하다",
+              "examples": [],
+              "originalMeaning": "목적[계획]을 가지다, 의도하다; [고어] 출발하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/129c8692b3f34be2a75a27b486b8d8ed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/129c8692b3f34be2a75a27b486b8d8ed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "intends"
+        },
+        {
+          "type": "과거형",
+          "value": "intended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "intending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "intended"
+        }
+      ],
+      "aliasConjugation": "intends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e800b8e71653fa82f10bae54cebe4472",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 직접 갈 터이다",
+      "text": "I <b>intend</b> to go in person."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아예 그런 생각은 없었다",
+      "text": "I never intended to do so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그를 보낼 작정이다.",
+      "text": "I <b>intend</b> him to go.=I <b>intend</b> that he shall go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그를 작가로 만들 작정이다.",
+      "text": "I <b>intend</b> him to be a writer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 선생이 될 생각이었다",
+      "text": "I intended to become a teacher."
+    }
+  ],
+  "isWordType": true
+}

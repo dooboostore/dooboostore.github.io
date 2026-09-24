@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "<b>pledge</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pledʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 맹세, 서약, 언질; (정부·정당 등의) 공약; [the ~] 금주의 맹세",
+              "examples": [
+                {
+                  "text": "redeem a <b>pledge</b>",
+                  "translatedText": "약속을 지키다"
+                }
+              ],
+              "originalMeaning": "[UC/] 맹세, 서약, 언질; (정부·정당 등의) 공약; [the ~] 금주의 맹세"
+            },
+            {
+              "meaning": "[U] 담보, 저당; [C] 담보물, 저당물",
+              "examples": [
+                {
+                  "text": "keep a watch as a <b>pledge</b>",
+                  "translatedText": "시계를 담보물로 맡아두다"
+                }
+              ],
+              "originalMeaning": "[U] 담보, 저당; [C] 담보물, 저당물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "맹세하다, 언질을 주다, 서약하다; 보증하다",
+              "examples": [
+                {
+                  "text": "<b>pledge</b> one's honor",
+                  "translatedText": "명예를 걸고 맹세하다"
+                }
+              ],
+              "originalMeaning": "맹세하다, 언질을 주다, 서약하다; 보증하다"
+            },
+            {
+              "meaning": "<남에게> 맹세시키다 ((to, to do))",
+              "examples": [
+                {
+                  "text": "<b>pledge</b> a person to temperance",
+                  "translatedText": "…에게 금주를 맹세시키다"
+                }
+              ],
+              "originalMeaning": "<남에게> 맹세시키다 ((to, to do))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "맹세하다, 보증인이 되다",
+              "examples": [
+                {
+                  "text": "<b>pledge</b> for one's friend",
+                  "translatedText": "친구의 보증인이 되다"
+                }
+              ],
+              "originalMeaning": "맹세하다, 보증인이 되다"
+            },
+            {
+              "meaning": "축배를 들다",
+              "examples": [],
+              "originalMeaning": "축배를 들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/16154b006486440481c51369999fb2b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/16154b006486440481c51369999fb2b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pledges"
+        },
+        {
+          "type": "과거형",
+          "value": "pledged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pledging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pledged"
+        }
+      ],
+      "aliasConjugation": "pledges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "23862e0e1a896cd6f44af69d86265a5e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 상품은 모두 담보로 잡혀 있다",
+      "text": "All the goods lie[are] in <b>pledge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 재회를 기약하고 헤어졌다",
+      "text": "We parted, pledging to meet again."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정당은 그들의 공약을 지켜야만 한다",
+      "text": "The party must keep their public <b>pledge</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 시계를 6만 원에 전당 잡혔다",
+      "text": "He pledged his watch for sixty thousand won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 사람은 재회를 기하고 헤어졌다",
+      "text": "The two parted, pledging[promising] to meet again."
+    }
+  ],
+  "isWordType": true
+}

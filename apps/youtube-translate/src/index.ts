@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import fs from 'fs';
 import path from 'path';
 import process from 'process';
+import { PapagoClient, extractEnglishWords, resolveCredentials } from 'dooboostore-english-dictionary';
 
 // YouTube Video ID를 여기서 변경하세요
 const YOUTUBE_VIDEO_ID = "ITxsc3mgqts";
@@ -19,6 +20,10 @@ const SCRIPTS_DIR = path.join(process.cwd(),  '..', '..', 'datas', 'english', 's
 const ITEMS_JSON_PATH = path.join(process.cwd(),  '..', '..', 'datas', 'english', 'items.json');
 const DICTIONARY_DIR = path.join(process.cwd(),  '..', '..', 'datas', 'english', 'dictionary');
 const AUTO_TRANSLATION_DIR = path.join(process.cwd(),  '..', '..', 'datas', 'english', 'auto-translation');
+
+// 공유 패키지 클라이언트 — credentials는 브라우저 기동 후 결정
+// (환경변수 → 실행 중 컨텍스트의 live 익명 세션 → 익명). 하드코딩 금지.
+let papago: PapagoClient;
 
 interface SubtitleData {
   language: string;
@@ -39,50 +44,6 @@ interface VideoItem {
   type: string;
   img: string;
   link: string;
-}
-
-interface PapagoResponse {
-  items: Array<{
-    entry: string;
-    subEntry?: string;
-    matchType: string;
-    hanjaEntry?: string;
-    phoneticSigns: Array<{
-      type: string;
-      sign: string;
-    }>;
-    pos: Array<{
-      type: string;
-      meanings: Array<{
-        meaning: string;
-        examples: Array<{
-          text: string;
-          translatedText: string;
-        }>;
-        originalMeaning: string;
-      }>;
-    }>;
-    source: string;
-    url: string;
-    mUrl: string;
-    expDicTypeForm: string;
-    locale: string;
-    conjugationList?: Array<{
-      type: string;
-      value: string;
-    }>;
-    aliasConjugation?: string;
-    aliasConjugationPos?: string;
-    gdid: string;
-    expEntrySuperscript?: string;
-  }>;
-  examples: Array<{
-    source: string;
-    matchType: string;
-    translatedText: string;
-    text: string;
-  }>;
-  isWordType: boolean;
 }
 
 function convertJson3ToVtt(jsonData: any): string {
@@ -138,129 +99,8 @@ function parseVttTime(timeStr: string): number {
   return hours * 3600000 + minutes * 60000 + seconds * 1000 + milliseconds;
 }
 
-async function fetchDictionary(word: string): Promise<PapagoResponse | null> {
-  try {
-
-
-   const response = await fetch("https://papago.naver.com/api/dictionary/search", {
-      headers: {
-        accept: "application/json, text/plain, */*",
-        "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-        baggage:
-          "sentry-environment=real,sentry-release=c9a455336cced29b211ff4aa2d7eab7c4d3151dc,sentry-public_key=dummy,sentry-trace_id=ef34d542e1e9468c8c0b628508b45feb,sentry-sampled=false,sentry-sample_rand=0.2868749920708059,sentry-sample_rate=0.01",
-        "cache-control": "no-cache",
-        "content-type": "application/json",
-        pragma: "no-cache",
-        priority: "u=1, i",
-        "sec-ch-ua": '"Chromium";v="151", "Not=A?Brand";v="99"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"macOS"',
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "sentry-trace": "ef34d542e1e9468c8c0b628508b45feb-90834cbd7bc04b25-0",
-      },
-      referrer: "https://papago.naver.com/",
-      body: '{"locale":"ko","source":"en","target":"ko","text":"'+encodeURIComponent(word)+'","clientType":"WEB"}',
-      method: "POST",
-      mode: "cors",
-      credentials: "include",
-    });
-
-    // const response = await fetch(`https://papago.naver.com/apis/dictionary/search?source=en&target=ko&text=${encodeURIComponent(word)}&locale=ko`, {
-    //   headers: {
-    //     "accept": "application/json",
-    //     "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-    //     "authorization": "PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:0q77fVjSF1Qh3crEdIDMKQ==",
-    //     "cache-control": "no-cache",
-    //     "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-    //     "pragma": "no-cache",
-    //     "priority": "u=1, i",
-    //     "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Chromium\";v=\"142\"",
-    //     "sec-ch-ua-mobile": "?0",
-    //     "sec-ch-ua-platform": "\"macOS\"",
-    //     "sec-fetch-dest": "empty",
-    //     "sec-fetch-mode": "cors",
-    //     "sec-fetch-site": "same-origin",
-    //     'timestamp': Date.now().toString(),
-    //     "x-apigw-partnerid": "papago",
-    //     "x-ppg-ctype": "WEB_PC",
-    //     "cookie": "NNB=ZFCDE4DECVCWQ; _ga_8P4PY65YZ2=GS2.1.s1749365250$o1$g0$t1749365250$j60$l0$h0; ba.uuid=4c6155ad-568d-4b70-bfac-a51e7da4bbcf; ASID=3b0589f40000019827bcdb750000001d; bnb_tooltip_shown_finance_v1=true; _ga=GA1.2.1705893687.1749365250; ab.storage.userId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3AZ2JG%7Ce%3Aundefined%7Cc%3A1761905082349%7Cl%3A1761905082350; ab.storage.deviceId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3A63dd0bf6-7986-8282-897c-5526a566b2ab%7Ce%3Aundefined%7Cc%3A1761905082350%7Cl%3A1761905082350; ab.storage.sessionId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3Ad2c680c5-2d3f-9d2b-c3fb-42785b70ed6b%7Ce%3A1761907197910%7Cc%3A1761905082349%7Cl%3A1761905397910; NV_WETR_LOCATION_RGN_M=\"MDYxNDAxMDE=\"; NV_WETR_LAST_ACCESS_RGN_M=\"MDYxNDAxMDE=\"; NAC=OLdABsQZqteGA; page_uid=jfNfawpzLiwssDoLlS8ssssss24-215133; NACT=1; nid_inf=1426211877; papago_skin_locale=ko; SRT30=1764406270; SRT5=1764406270; BUC=RzB0uuyqkGsQmKdpHTlI80xtxirvT3VORUdOrARznUE=",
-    //     "Referer": "https://papago.naver.com/"
-    //   },
-    //   method: "GET"
-    // });
-
-    console.log(`📡 API Response for "${word}": Status ${response.status}`);
-
-    if (!response.ok) {
-      console.log(`⚠️ API returned status ${response.status} for word: ${word}`);
-      return null;
-    }
-
-    const data = await response.json() as PapagoResponse;
-    console.log(`📦 Received data for "${word}":`, JSON.stringify(data).substring(0, 200) + '...');
-    return data;
-  } catch (error: any) {
-    console.log(`❌ Fetch error for word "${word}": ${error.message}`);
-    return null;
-  }
-}
-
 async function delay(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function translateWithPapago(text: string): Promise<string> {
-  try {
-    const response = await fetch('https://papago.naver.com/apis/nsmt/translate', {
-      method: 'POST',
-      headers: {
-        "accept": "application/json",
-        "accept-language": "ko",
-        "authorization": "PPG ffbaf550-ce4b-4478-ae20-ee54a0e3cd60:3nITCzO9GCSWr9L0e/ZJww==",
-        "cache-control": "no-cache",
-        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "device-type": "pc",
-        "pragma": "no-cache",
-        "priority": "u=1, i",
-        "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Chromium\";v=\"142\"",
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"macOS\"",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        'timestamp': Date.now().toString(),
-        "x-apigw-partnerid": "papago",
-        "x-ppg-ctype": "WEB_PC",
-        "cookie": "NNB=ZFCDE4DECVCWQ; _ga_8P4PY65YZ2=GS2.1.s1749365250$o1$g0$t1749365250$j60$l0$h0; ba.uuid=4c6155ad-568d-4b70-bfac-a51e7da4bbcf; ASID=3b0589f40000019827bcdb750000001d; bnb_tooltip_shown_finance_v1=true; _ga=GA1.2.1705893687.1749365250; ab.storage.userId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3AZ2JG%7Ce%3Aundefined%7Cc%3A1761905082349%7Cl%3A1761905082350; ab.storage.deviceId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3A63dd0bf6-7986-8282-897c-5526a566b2ab%7Ce%3Aundefined%7Cc%3A1761905082350%7Cl%3A1761905082350; ab.storage.sessionId.7d7bb94a-f465-48e5-bec1-35db97daf128=g%3Ad2c680c5-2d3f-9d2b-c3fb-42785b70ed6b%7Ce%3A1761907197910%7Cc%3A1761905082349%7Cl%3A1761905397910; NV_WETR_LOCATION_RGN_M=\"MDYxNDAxMDE=\"; NV_WETR_LAST_ACCESS_RGN_M=\"MDYxNDAxMDE=\"; NAC=OLdABsQZqteGA; page_uid=jfNfawpzLiwssDoLlS8ssssss24-215133; NACT=1; nid_inf=1426211877; papago_skin_locale=ko; SRT30=1764406270; SRT5=1764406270; BUC=uD_D-1wRQ_qrJ2TBY9cJtxbW9ArFsXht-Uga8wXo35o=",
-        "Referer": "https://papago.naver.com/"
-      },
-      body: new URLSearchParams({
-        deviceId: 'ffbaf550-ce4b-4478-ae20-ee54a0e3cd60',
-        locale: 'ko',
-        dict: 'false',
-        dictDisplay: '30',
-        honorific: 'false',
-        instant: 'true',
-        paging: 'false',
-        source: 'en',
-        target: 'ko',
-        text: text,
-        usageAgreed: 'true'
-      })
-    });
-
-    if (!response.ok) {
-      return '';
-    }
-
-    const data = await response.json() as { translatedText: string };
-    return data.translatedText || '';
-  } catch (error) {
-    console.log(`⚠️ Papago translation failed for: ${text.substring(0, 50)}...`);
-    return '';
-  }
 }
 
 async function processDictionary(subtitles: SubtitleEntry[]): Promise<void> {
@@ -276,12 +116,7 @@ async function processDictionary(subtitles: SubtitleEntry[]): Promise<void> {
     const allWords = new Set<string>();
     
     subtitles.forEach(subtitle => {
-      const words = subtitle.e
-        .split(/\s+/)
-        .map(word => word.replace(/[,.":!?;()]/g, '').toLowerCase())
-        .filter(word => word.length > 0 && /^[a-zA-Z']+$/.test(word));
-      
-      words.forEach(word => allWords.add(word));
+      extractEnglishWords(subtitle.e).forEach(word => allWords.add(word));
     });
     
     console.log(`📖 Found ${allWords.size} unique words`);
@@ -306,7 +141,7 @@ async function processDictionary(subtitles: SubtitleEntry[]): Promise<void> {
       
       console.log(`[${processedCount + skippedCount + 1}/${totalWords}] Fetching: ${word}`);
       
-      const dictionaryData = await fetchDictionary(word);
+      const dictionaryData = await papago.fetchWordDictionary(word);
       
       if (dictionaryData) {
         try {
@@ -457,10 +292,7 @@ async function copyVttFilesAndUpdateItems(videoTitle: string, subtitles: Subtitl
     const enCues = parseVttContent(enSubtitle.content);
     const allWords = new Set<string>();
     enCues.forEach(cue => {
-      const words = cue.text.split(/\s+/)
-        .map(word => word.replace(/[,.":!?;()]/g, '').toLowerCase())
-        .filter(word => word.length > 0 && /^[a-zA-Z']+$/.test(word));
-      words.forEach(word => allWords.add(word));
+      extractEnglishWords(cue.text).forEach(word => allWords.add(word));
     });
     
     const subtitleEntries = Array.from(allWords).map(word => ({ e: word, k: '', t: '0s' }));
@@ -518,7 +350,7 @@ async function convertVttToJsonAndUpdate_OLD(videoTitle: string, subtitles: Subt
         
         console.log(`[${i + 1}/${enCues.length}] Translating: ${enCue.text.substring(0, 50)}...`);
         
-        const koText = await translateWithPapago(enCue.text);
+        const koText = await papago.translate(enCue.text);
         if (koText) {
           translatedCount++;
         }
@@ -756,6 +588,24 @@ async function downloadYouTubeSubtitles() {
   
   const page = await context.newPage();
   const capturedSubtitles: SubtitleData[] = [];
+
+  // Papago live 익명 세션 — 실행 중 컨텍스트에서 직접 수집 (별도 브라우저 불필요)
+  papago = new PapagoClient({
+    credentials: await resolveCredentials(async () => {
+      try {
+        const papagoPage = await context.newPage();
+        await papagoPage.goto('https://papago.naver.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await papagoPage.waitForTimeout(3000);
+        const cookies = await context.cookies('https://papago.naver.com/');
+        await papagoPage.close();
+        if (cookies.length === 0) return null;
+        return cookies.map(c => `${c.name}=${c.value}`).join('; ');
+      } catch {
+        return null;
+      }
+    })
+  });
+
   const client = await context.newCDPSession(page);
   await client.send('Network.enable');
   

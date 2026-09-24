@@ -4,6 +4,7 @@ import { englishServiceFactories } from './english';
 
 // 기존 호환성을 위해 필요한 개별 심볼도 유지
 import { VideoItemService } from './english/VideoItemService';
+import { TextTranslationService } from './english/TextTranslationService';
 import { AutoTranslationService } from './english/AutoTranslationService';
 import { DictionaryService } from './english/DictionaryService';
 import { VoiceService } from './english/VoiceService';
@@ -45,6 +46,7 @@ export const defineServices = async (container: symbol) => {
 
 export {
   VideoItemService,
+  TextTranslationService,
   AutoTranslationService,
   DictionaryService,
   VoiceService,

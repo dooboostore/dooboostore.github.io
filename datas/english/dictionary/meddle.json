@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>meddle</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmedl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "간섭[참견]하다, 관여하다 ((in, with)), (=interfere)",
+              "examples": [
+                {
+                  "text": "He is always meddling.",
+                  "translatedText": "그는 항상 쓸데없는 참견을 한다."
+                }
+              ],
+              "originalMeaning": "간섭[참견]하다, 관여하다 ((in, with)), (=<span class='related_word' lang='en' >interfere</span>)"
+            },
+            {
+              "meaning": "<남의 것을> 만지작거리다, 주무르다 ((with))",
+              "examples": [
+                {
+                  "text": "Don't <b>meddle</b> with my gun.",
+                  "translatedText": "내 총을 만지지 마라."
+                }
+              ],
+              "originalMeaning": "<남의 것을> 만지작거리다, 주무르다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d629b704c377487889deb23dfca293fb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d629b704c377487889deb23dfca293fb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "meddles"
+        },
+        {
+          "type": "과거형",
+          "value": "meddled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "meddling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "meddled"
+        }
+      ],
+      "aliasConjugation": "meddles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cd64e05816214300fe70a5fde2fb1d7f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 항상 쓸데없는 참견을 한다.",
+      "text": "He is always meddling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 총을 만지지 마라.",
+      "text": "Don’t <b>meddle</b> with my gun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 무슨 일에든지 들고나는 여자다",
+      "text": "She meddles with everything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쓸데없는 간섭을 하면 본때를 보여줄 테야",
+      "text": "I’ll teach you to <b>meddle</b> in my affairs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내가 하는 일에 일일이 간섭한다",
+      "text": "He meddles with me in every blessed thing I do."
+    }
+  ],
+  "isWordType": true
+}

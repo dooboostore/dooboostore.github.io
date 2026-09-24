@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "<b>rummage</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈrʌmɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "뒤지다, 샅샅이 찾다; (뒤져서) 찾아내다; (찾기 위해) 뒤적거리다",
+              "examples": [
+                {
+                  "text": "I <b>rummaged</b> up[out] the pin.",
+                  "translatedText": "가까스로 핀을 찾아냈다."
+                }
+              ],
+              "originalMeaning": "뒤지다, 샅샅이 찾다; (뒤져서) 찾아내다; (찾기 위해) 뒤적거리다"
+            },
+            {
+              "meaning": "샅샅이 조사하다, [항해] ((특히)) 세관원이 <배 안을> 검사[임검]하다",
+              "examples": [
+                {
+                  "text": "<b>rummage</b> a ship for opium",
+                  "translatedText": "아편을 찾아내기 위해 배 안을 수색하다"
+                }
+              ],
+              "originalMeaning": "샅샅이 조사하다, [항해] ((특히)) 세관원이 <배 안을> 검사[임검]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뒤지다, 뒤져서 찾다, 수색하다 ((about, in, among))",
+              "examples": [
+                {
+                  "text": "I began to <b>rummage</b> for the ticket in my pockets.",
+                  "translatedText": "차표를 찾기 위해 호주머니를 뒤지기 시작했다."
+                }
+              ],
+              "originalMeaning": "뒤지다, 뒤져서 찾다, 수색하다 ((about, in, among))"
+            },
+            {
+              "meaning": "임검하다, 수색하다 ((in))",
+              "examples": [],
+              "originalMeaning": "임검하다, 수색하다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [미] 잡동사니, 허섭스레기",
+              "examples": [],
+              "originalMeaning": "[U] [미] 잡동사니, 허섭스레기"
+            },
+            {
+              "meaning": "샅샅이 뒤지기; (세관원의) 검색, 임검",
+              "examples": [],
+              "originalMeaning": "샅샅이 뒤지기; (세관원의) 검색, 임검"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/94f7d77ddbf643bd8d5d5db8bb278f57",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/94f7d77ddbf643bd8d5d5db8bb278f57",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rummages"
+        },
+        {
+          "type": "과거형",
+          "value": "rummaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rummaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rummaged"
+        }
+      ],
+      "aliasConjugation": "rummages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6fbf7984e8de1fbea4d88d33fbaed24e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 문서를 뒤적거리며 무언가를 찾고 있었다.",
+      "text": "He was rummaging about among the documents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차표를 찾기 위해 호주머니를 뒤지기 시작했다.",
+      "text": "I began to <b>rummage</b> for the ticket in my pockets."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가까스로 핀을 찾아냈다.",
+      "text": "I <b>rummaged</b> up[out] the pin."
+    }
+  ],
+  "isWordType": true
+}

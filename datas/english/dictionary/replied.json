@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "entry": "<b>reply</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈplaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "대답하다, 답변하다 ((to)), (=answer)",
+              "examples": [
+                {
+                  "text": "<b>reply</b> to a person",
+                  "translatedText": "…에게 대답하다"
+                }
+              ],
+              "originalMeaning": "대답하다, 답변하다 ((to)), (=<span class='related_word' lang='en' >answer</span>)"
+            },
+            {
+              "meaning": "응답[응수]하다, 응전(應戰)하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>reply</b> to an enemy's fire",
+                  "translatedText": "적의 포화에 응사하다"
+                }
+              ],
+              "originalMeaning": "응답[응수]하다, 응전(應戰)하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "대답하다, 대꾸하다",
+              "examples": [
+                {
+                  "text": "He <b>replied</b> thathis mind was made up.",
+                  "translatedText": "그는 결심이 섰다고 대답하였다."
+                }
+              ],
+              "originalMeaning": "대답하다, 대꾸하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대답, 회답",
+              "examples": [
+                {
+                  "text": "give a direct <b>reply</b>",
+                  "translatedText": "직접 대답하다"
+                }
+              ],
+              "originalMeaning": "대답, 회답"
+            },
+            {
+              "meaning": "응수, 응전 ((to))",
+              "examples": [],
+              "originalMeaning": "응수, 응전 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4053bff6197c4ed1be2c1727385979ba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4053bff6197c4ed1be2c1727385979ba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "replies"
+        },
+        {
+          "type": "복수형",
+          "value": "replies"
+        },
+        {
+          "type": "과거형",
+          "value": "replied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "replying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "replied"
+        }
+      ],
+      "aliasConjugation": "replies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c62c9063aa2bac86faea7903a8d7e531",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "회답은 팩스로 보내 주시오.",
+      "text": "Please fax me the <b>reply</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 대답에 그는 귀가 따가웠다.",
+      "text": "The <b>reply</b> tingled in his ears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 대답은 정작 사죄나 다름없다",
+      "text": "His <b>reply</b> is, in fact, an apology."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 대답은 거절이나 다름없다.",
+      "text": "This <b>reply</b> approaches to a denial."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우편으로 답장이 한 통 더 왔다.",
+      "text": "The mail brought yet another <b>reply</b>."
+    }
+  ],
+  "isWordType": true
+}

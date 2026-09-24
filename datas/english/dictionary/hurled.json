@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>hurl</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hɜːrl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "세게 내던지다 (=throw)",
+              "examples": [
+                {
+                  "text": "<b>hurl</b> a spear at a wild animal",
+                  "translatedText": "들짐승에게 창을 던지다"
+                }
+              ],
+              "originalMeaning": "세게 내던지다 (=<span class='related_word' lang='en' >throw</span>)"
+            },
+            {
+              "meaning": "[~ oneself로] …에게 덤벼[달려]들다",
+              "examples": [
+                {
+                  "text": "The man <b>hurled</b> himself against the door.",
+                  "translatedText": "그는 문으로 달려들었다."
+                }
+              ],
+              "originalMeaning": "[~ oneself로] …에게 덤벼[달려]들다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "집어 던지다, [야구] 투구하다(pitch)",
+              "examples": [],
+              "originalMeaning": "집어 던지다, [야구] 투구하다(pitch)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "투척(投擲)",
+              "examples": [],
+              "originalMeaning": "투척(投擲)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d4b0ab7037d54f1bb96cbe0e8e9d28cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d4b0ab7037d54f1bb96cbe0e8e9d28cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hurls"
+        },
+        {
+          "type": "과거형",
+          "value": "hurled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hurling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hurled"
+        }
+      ],
+      "aliasConjugation": "hurls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6625178eb39b45dd563cf30507ae249e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 경찰에게 돌을 던지기 시작했다",
+      "text": "They began to <b>hurl</b> stones at the police."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화가 치밀어 그는 방 저쪽으로 책을 확 던졌다",
+      "text": "In a fit of temper, he <b>hurled</b> the book across the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 문으로 달려들었다.",
+      "text": "The man <b>hurled</b> himself against the door."
+    }
+  ],
+  "isWordType": true
+}

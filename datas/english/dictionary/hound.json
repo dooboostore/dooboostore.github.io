@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "<b>hound</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "haʊnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 복합어를 이루어] 사냥개",
+              "examples": [],
+              "originalMeaning": "[종종 복합어를 이루어] 사냥개"
+            },
+            {
+              "meaning": "[구어] 개, [the ~s] (여우 사냥에 쓰는) 사냥개 무리",
+              "examples": [],
+              "originalMeaning": "[구어] 개, [the ~s] (여우 사냥에 쓰는) 사냥개 무리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "사냥개로 사냥하다, 뒤쫓다, 몰아세우다 ((down)), 내쫓다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>hound</b> a person out of one's area",
+                  "translatedText": "…의 지역에서 …을 내몰다"
+                }
+              ],
+              "originalMeaning": "사냥개로 사냥하다, 뒤쫓다, 몰아세우다 ((down)), 내쫓다 ((out))"
+            },
+            {
+              "meaning": "<사람을> 맹렬하게 추적하다, 집요하게 괴롭히다",
+              "examples": [],
+              "originalMeaning": "<사람을> 맹렬하게 추적하다, 집요하게 괴롭히다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4cdac23e2f224e52bf642ffabbea1b08",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4cdac23e2f224e52bf642ffabbea1b08",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hounds"
+        },
+        {
+          "type": "과거형",
+          "value": "hounded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hounding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hounded"
+        }
+      ],
+      "aliasConjugation": "hounds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7f5725a303a85b0b38d124dd56dc86f7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사냥개가 숲에서 꿩을 몰아낸다",
+      "text": "A hunting dog[<b>hound</b>] chases a pheasant out of the bush."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개 조심!",
+      "text": "Ware the <b>hound</b>!"
+    }
+  ],
+  "isWordType": true
+}

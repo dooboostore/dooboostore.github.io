@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "<b>childish</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtʃaɪldɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "어린이 같은",
+              "examples": [],
+              "originalMeaning": "어린이 같은"
+            },
+            {
+              "meaning": "<어른이> 유치한, 어린애 같은, 어른답지 못한",
+              "examples": [
+                {
+                  "text": "a <b>childish</b> idea",
+                  "translatedText": "유치한 생각(⇒ childlike [유의어/])"
+                }
+              ],
+              "originalMeaning": "<어른이> 유치한, 어린애 같은, 어른답지 못한"
+            },
+            {
+              "meaning": "노인성 치매에 걸린(senile)",
+              "examples": [],
+              "originalMeaning": "노인성 치매에 걸린(senile)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/83945bda92d14314ac901f8a44c3c113",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/83945bda92d14314ac901f8a44c3c113",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "712daf826955c64c5f8d9eade3553fe4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어린 구석이 많다",
+      "text": "He has many <b>childish</b> ways."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "끔찍한 광경을 보고 어린 마음에 대단히 놀랐다",
+      "text": "The fearful sight made a deep impression on my <b>childish</b> mind."
+    }
+  ],
+  "isWordType": true
+}

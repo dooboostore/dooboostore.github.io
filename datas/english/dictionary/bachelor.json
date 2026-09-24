@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "<b>bachelor</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbætʃələ(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "미혼[독신] 남자",
+              "examples": [],
+              "originalMeaning": "미혼[독신] 남자"
+            },
+            {
+              "meaning": "학사(cf. MASTER 5)",
+              "examples": [
+                {
+                  "text": "a <b>Bachelor</b> of Arts",
+                  "translatedText": "문학사 ((略 B.A.))"
+                }
+              ],
+              "originalMeaning": "학사(cf. MASTER 5)"
+            },
+            {
+              "meaning": "(=<b>BACHELOR</b>-AT-ARMS)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>BACHELOR</b>-AT-ARMS</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e23120242ec2494f819c26f8b9ca614f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e23120242ec2494f819c26f8b9ca614f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ee099ca218995a22337a57efb72edd32",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 평생을 독신으로 지냈다",
+      "text": "He remained single[a <b>bachelor</b>, unmarried] all his life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일생을 독신으로 지냈다.",
+      "text": "He lived and died a <b>bachelor</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 모두 독신이다",
+      "text": "They are bachelors without exception."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "문학사",
+      "text": "<b>Bachelor</b> of Arts"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이학사",
+      "text": "<b>Bachelor</b> of Science"
+    }
+  ],
+  "isWordType": true
+}

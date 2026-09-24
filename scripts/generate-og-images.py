@@ -48,6 +48,7 @@ CACHE_DIR = Path("/tmp")  # twemoji cache
 
 MAPPING = [
     ("english-og.png", "1f4da", "📚"),
+    ("text-english-og.png", "1f4d6", "📖"),
     ("coordinate-simulation-og.png", "1f4d0", "📐"),
     ("buyback-og.png", "1f4c8", "📈"),
     ("lotto-og.png", "1f3b0", "🎰"),

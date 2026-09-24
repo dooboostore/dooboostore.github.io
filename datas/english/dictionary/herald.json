@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>herald</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈherəld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "왕[공식]의 사자(使者)(messenger); 군사(軍使), 전령",
+              "examples": [],
+              "originalMeaning": "왕[공식]의 사자(使者)(messenger); 군사(軍使), 전령"
+            },
+            {
+              "meaning": "포고자(布告者), 보도자, 통보관",
+              "examples": [],
+              "originalMeaning": "포고자(布告者), 보도자, 통보관"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고지[포고]하다, 보도하다",
+              "examples": [],
+              "originalMeaning": "고지[포고]하다, 보도하다"
+            },
+            {
+              "meaning": "<사물·일이> …의 도래를 알리다, …의 예고를 하다",
+              "examples": [],
+              "originalMeaning": "<사물·일이> …의 도래를 알리다, …의 예고를 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5a5bdd895e8949a78ee774a7c25c5c70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5a5bdd895e8949a78ee774a7c25c5c70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "heralds"
+        },
+        {
+          "type": "과거형",
+          "value": "heralded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "heralding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "heralded"
+        }
+      ],
+      "aliasConjugation": "heralds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0ab6e47495af848978f091bd68455ad6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낙엽은 겨울의 사자이다",
+      "text": "The falling leaves are heralds of Jack Frost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뉴욕 헤럴드지",
+      "text": "The New York <b>Herald</b>"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "<b>bulge</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bʌldʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "불룩한 것[부분], (통 등의) 중배, [항해] 배의 바닥(bilge)",
+              "examples": [
+                {
+                  "text": "the <b>bulge</b> keel",
+                  "translatedText": "(배의) 중배"
+                }
+              ],
+              "originalMeaning": "불룩한 것[부분], (통 등의) 중배, [항해] 배의 바닥(bilge)"
+            },
+            {
+              "meaning": "일시적 증가, 부풀어오름, 팽창; 급등 ((in))",
+              "examples": [
+                {
+                  "text": "a <b>bulge</b> in the birthrate",
+                  "translatedText": "출생률의 급등"
+                }
+              ],
+              "originalMeaning": "일시적 증가, 부풀어오름, 팽창; 급등 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "부풀다; 불룩하다, 가득 차 있다 ((with))",
+              "examples": [
+                {
+                  "text": "His muscles bulged out.",
+                  "translatedText": "그의 근육은 불룩 솟아 있었다."
+                }
+              ],
+              "originalMeaning": "부풀다; 불룩하다, 가득 차 있다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "부풀리다, 불룩하게 하다 ((with))",
+              "examples": [
+                {
+                  "text": "He bulged his pockets with apples.",
+                  "translatedText": "그의 호주머니는 사과로 불룩하였다."
+                }
+              ],
+              "originalMeaning": "부풀리다, 불룩하게 하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bc5a5c33d3364849ae0ec70ade112da1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bc5a5c33d3364849ae0ec70ade112da1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bulges"
+        },
+        {
+          "type": "과거형",
+          "value": "bulged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bulging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bulged"
+        }
+      ],
+      "aliasConjugation": "bulges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5f1d55546bfe2025833b34dedc8f1ef6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 근육은 불룩 솟아 있었다.",
+      "text": "His muscles bulged out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 호주머니는 사탕으로 볼록했다",
+      "text": "His pocket bulged with candy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 불룩 나오기 시작했다",
+      "text": "My stomach has begun to <b>bulge</b> out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 호주머니는 사과로 불룩하였다.",
+      "text": "He bulged his pockets with apples."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자루는 오렌지로 불룩하다.",
+      "text": "The sack bulges with oranges."
+    }
+  ],
+  "isWordType": true
+}

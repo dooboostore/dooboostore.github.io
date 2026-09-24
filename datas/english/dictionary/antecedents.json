@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "<b>antecedent</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌæntɪˈsiːdnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "앞서는, 선행의(prior); …보다 이전의 ((to))",
+              "examples": [],
+              "originalMeaning": "앞서는, 선행의(prior); …보다 이전의 ((to))"
+            },
+            {
+              "meaning": "전제(前提)의, 가정의",
+              "examples": [],
+              "originalMeaning": "전제(前提)의, 가정의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 전례",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 전례"
+            },
+            {
+              "meaning": "선행자, 선재자",
+              "examples": [],
+              "originalMeaning": "선행자, 선재자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f9b565d8f9db44baa4146fa532fc6b7e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f9b565d8f9db44baa4146fa532fc6b7e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cd8691f860239ce9ec8508c74d0c3308",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그의 이력을 알고 있다",
+      "text": "I know his <b>antecedents</b>[personal history]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 출생과 전력에 대해 거의 알려진 것이 없다.",
+      "text": "Little is known about his birth and <b>antecedents</b>."
+    }
+  ],
+  "isWordType": true
+}

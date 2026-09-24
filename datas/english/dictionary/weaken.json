@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "<b>weaken</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈwiːkən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "약화시키다",
+              "examples": [
+                {
+                  "text": "<b>weaken</b> ed eyesight",
+                  "translatedText": "약해진 시력"
+                }
+              ],
+              "originalMeaning": "약화시키다"
+            },
+            {
+              "meaning": "<술·차 등을> 묽게 하다",
+              "examples": [],
+              "originalMeaning": "<술·차 등을> 묽게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "약해지다",
+              "examples": [],
+              "originalMeaning": "약해지다"
+            },
+            {
+              "meaning": "결단성이 없어지다; 흔들거리다; 꺾이다, 굴복하다",
+              "examples": [],
+              "originalMeaning": "결단성이 없어지다; 흔들거리다; 꺾이다, 굴복하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/49d49a47acb44dafb9baf00352bace22",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/49d49a47acb44dafb9baf00352bace22",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "weakens"
+        },
+        {
+          "type": "과거형",
+          "value": "weakened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "weakening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "weakened"
+        }
+      ],
+      "aliasConjugation": "weakens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d417b000e8032fd61451c11606290abf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "병으로 그 여자는 약해졌다",
+      "text": "Sickness has weakened her."
+    }
+  ],
+  "isWordType": true
+}

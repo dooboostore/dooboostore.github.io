@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "<b>kneel</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "niːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "무릎 꿇다, 무릎을 구부리다",
+              "examples": [],
+              "originalMeaning": "무릎 꿇다, 무릎을 구부리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea0e972cda724e69bbc3b10a0e034815",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea0e972cda724e69bbc3b10a0e034815",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "kneels"
+        },
+        {
+          "type": "과거형",
+          "value": "kneeled, knelt"
+        },
+        {
+          "type": "현재 분사",
+          "value": "kneeling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "kneeled, knelt"
+        }
+      ],
+      "aliasConjugation": "kneels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6e008fa719b42f9960ceefc1887c6d75",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 조상 앞에 무릎을 꿇었다.",
+      "text": "They knelt down before graven images."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "목사는 집회 참석자들에게 꿇어앉으라고 했다",
+      "text": "The pastor asked the congregation to <b>kneel</b>."
+    }
+  ],
+  "isWordType": true
+}

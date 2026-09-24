@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "<b>messenger</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmesɪndʒə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사자(使者), 전령(傳令); 심부름꾼",
+              "examples": [
+                {
+                  "text": "send a letter by a <b>messenger</b>",
+                  "translatedText": "심부름꾼을 통해 편지를 보내다"
+                }
+              ],
+              "originalMeaning": "사자(使者), 전령(傳令); 심부름꾼"
+            },
+            {
+              "meaning": "(우편) 집배원",
+              "examples": [],
+              "originalMeaning": "(우편) 집배원"
+            },
+            {
+              "meaning": "선구자",
+              "examples": [],
+              "originalMeaning": "선구자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3ade6858a2784eb7b06c8ef4ebcc8d42",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3ade6858a2784eb7b06c8ef4ebcc8d42",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e5d0d5eeccf85e251f817c1479382f29",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사자는 헐떡거리며 소식을 전했다.",
+      "text": "The <b>messenger</b> panted out the news."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "심부름꾼에게 들려 보내라.",
+      "text": "Send it per <b>messenger</b>."
+    }
+  ],
+  "isWordType": true
+}

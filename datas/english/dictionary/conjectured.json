@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>conjecture</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈdʒektʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "어림짐작, 추측, 억측(guesswork)",
+              "examples": [
+                {
+                  "text": "hazard a <b>conjecture</b>",
+                  "translatedText": "어림짐작하다"
+                }
+              ],
+              "originalMeaning": "어림짐작, 추측, 억측(guesswork)"
+            },
+            {
+              "meaning": "(사진·암호 등의 추측에 의한) 해독, 판독",
+              "examples": [],
+              "originalMeaning": "(사진·암호 등의 추측에 의한) 해독, 판독"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "추측[억측]하다, (추측으로) 판독하다",
+              "examples": [
+                {
+                  "text": "We <b>conjectured</b> that our team would win the victory.",
+                  "translatedText": "우리 팀이 승리하리라고 추측했다."
+                }
+              ],
+              "originalMeaning": "추측[억측]하다, (추측으로) 판독하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "추측하다, 어림대고 말하다",
+              "examples": [],
+              "originalMeaning": "추측하다, 어림대고 말하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/31be728932c8475a83e26b785eef22d4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/31be728932c8475a83e26b785eef22d4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "conjectures"
+        },
+        {
+          "type": "과거형",
+          "value": "conjectured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "conjecturing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "conjectured"
+        }
+      ],
+      "aliasConjugation": "conjectures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f18a7cbb79169c8b34d21aaaa38d40af",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "도저히 추상할 수 없다",
+      "text": "It is past all <b>conjecture</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 억설에 지나지 않는다",
+      "text": "That is a mere <b>conjecture</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 팀이 승리하리라고 추측했다.",
+      "text": "We <b>conjectured</b> that our team would win the victory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 법안의 운명은 아직 예단할 수 없다",
+      "text": "The fate of the bill is still open to <b>conjecture</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 문제에 대해서는 여러가지 억설이 분분했다",
+      "text": "Various conjectures about the matter were flying about."
+    }
+  ],
+  "isWordType": true
+}

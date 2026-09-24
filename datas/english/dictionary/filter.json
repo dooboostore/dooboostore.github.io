@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "<b>filter</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfɪltə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(액체·가스 등의) 여과기(濾過器)[장치], 거름종이, 물거르개",
+              "examples": [],
+              "originalMeaning": "(액체·가스 등의) 여과기(濾過器)[장치], 거름종이, 물거르개"
+            },
+            {
+              "meaning": "여과용 다공성(多孔性) 물질 ((여과 작용을 하는 베·숯·자갈 등))",
+              "examples": [],
+              "originalMeaning": "여과용 다공성(多孔性) 물질 ((여과 작용을 하는 베·숯·자갈 등))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "거르다, 여과하다",
+              "examples": [],
+              "originalMeaning": "거르다, 여과하다"
+            },
+            {
+              "meaning": "여과하여 제거하다 ((off, out))",
+              "examples": [
+                {
+                  "text": "filtered tap water",
+                  "translatedText": "여과 수돗물"
+                }
+              ],
+              "originalMeaning": "여과하여 제거하다 ((off, out))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "여과되다 ((through)); <액체·사상 등이> 스며들다, 통과하다 ((through, into)); <빛·소문 등이> 새(어 나오)다 ((out, through))",
+              "examples": [
+                {
+                  "text": "Water <b>filter</b> s through the sandy soil.",
+                  "translatedText": "물은 모래땅에 스며든다."
+                }
+              ],
+              "originalMeaning": "여과되다 ((through)); <액체·사상 등이> 스며들다, 통과하다 ((through, into)); <빛·소문 등이> 새(어 나오)다 ((out, through))"
+            },
+            {
+              "meaning": "<자동차가> (교차점에서 직진 방향 적신호시) 녹색 화살표 신호에 따라 좌[우]회전하다",
+              "examples": [],
+              "originalMeaning": "<자동차가> (교차점에서 직진 방향 적신호시) 녹색 화살표 신호에 따라 좌[우]회전하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/296c17ff2116424b8efa64a14f8f7037",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/296c17ff2116424b8efa64a14f8f7037",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "filters"
+        },
+        {
+          "type": "과거형",
+          "value": "filtered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "filtering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "filtered"
+        }
+      ],
+      "aliasConjugation": "filters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5cee533b0497f73517f1d683b9b184b5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 비밀은 온 마을에 새어 나왔다.",
+      "text": "The secret filtered into the town."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "동양 철학이 미국의 젊은이들 마음에 침투했다",
+      "text": "Eastern philosophy filtered into the hearts of young Americans."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "길은 나무 사이로 비치는 햇빛에 어룽거렸다",
+      "text": "The lane was mottled with the sunbeams filtering through the leaves."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물은 모래땅에 스며든다.",
+      "text": "Water filters through the sandy soil."
+    }
+  ],
+  "isWordType": true
+}

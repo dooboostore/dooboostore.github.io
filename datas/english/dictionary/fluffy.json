@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "<b>fluffy</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈflʌfi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "보풀의, 솜털의; 보풀보풀[복슬복슬]한",
+              "examples": [],
+              "originalMeaning": "보풀의, 솜털의; 보풀보풀[복슬복슬]한"
+            },
+            {
+              "meaning": "<물건이> 가벼운, 푹신한",
+              "examples": [],
+              "originalMeaning": "<물건이> 가벼운, 푹신한"
+            },
+            {
+              "meaning": "<성격이> 모호한, 불분명한",
+              "examples": [],
+              "originalMeaning": "<성격이> 모호한, 불분명한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ddc0ae716cc043ca86f7213d044457bb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ddc0ae716cc043ca86f7213d044457bb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "fluffier"
+        },
+        {
+          "type": "최상급",
+          "value": "fluffiest"
+        }
+      ],
+      "aliasConjugation": "fluffier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "bfb0c986093f8dcd752a409680867ddd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이불이 푹신푹신하다",
+      "text": "The bedding is soft and <b>fluffy</b>."
+    }
+  ],
+  "isWordType": true
+}

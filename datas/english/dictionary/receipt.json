@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>receipt</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈsiːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "영수증",
+              "examples": [
+                {
+                  "text": "make out[write] a <b>receipt</b>",
+                  "translatedText": "영수증을 쓰다"
+                }
+              ],
+              "originalMeaning": "영수증"
+            },
+            {
+              "meaning": "받음, 영수, 수취 ((of))",
+              "examples": [
+                {
+                  "text": "on (the) <b>receipt</b> of",
+                  "translatedText": "…을 받는 대로"
+                }
+              ],
+              "originalMeaning": "받음, 영수, 수취 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<계산서에> 영수필(Received)이라고 쓰다, [미] …의 영수증을 발행하다",
+              "examples": [],
+              "originalMeaning": "<계산서에> 영수필(Received)이라고 쓰다, [미] …의 영수증을 발행하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "영수증을 발행하다 ((for))",
+              "examples": [],
+              "originalMeaning": "영수증을 발행하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/32039a2836854eddbe6f696a08ceea68",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/32039a2836854eddbe6f696a08ceea68",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "be1640f5ba2099812cdd1b5f11c434fd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일금 5만원을 정히 영수하였습니다",
+      "text": "I acknowledge the <b>receipt</b> of the sum of 50,000 won. or Received the sum of 50,000 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수입은 달마다 증감이 있다",
+      "text": "The receipts vary with the month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "혜서는 잘 받아 보았습니다",
+      "text": "We are in <b>receipt</b> of your kind letter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대금은 현물 인수와 동시에 지불해 주십시오",
+      "text": "Please pay on <b>receipt</b> of the goods."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영수증과 물품을 교환하여 드립니다",
+      "text": "We deliver goods in exchange for a <b>receipt</b>."
+    }
+  ],
+  "isWordType": true
+}

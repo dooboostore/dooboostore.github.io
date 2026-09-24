@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "bequeath",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪˈkwiːð"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<동산을> 유언으로 증여하다 ((to))",
+              "examples": [
+                {
+                  "text": "She <b>bequeathed</b> no small sum of money to him. = She <b>bequeathed</b> him no small sum of money.",
+                  "translatedText": "그녀는 그에게 적잖은 돈을 유산으로 남겼다."
+                }
+              ],
+              "originalMeaning": "<동산을> 유언으로 증여하다 ((to))"
+            },
+            {
+              "meaning": "<작품·문명 등을> 후세에 남기다, 전하다 ((to))",
+              "examples": [
+                {
+                  "text": "One age bequeaths its civilization to the next.",
+                  "translatedText": "한 시대는 다음 시대에 그 문명을 전한다."
+                }
+              ],
+              "originalMeaning": "<작품·문명 등을> 후세에 남기다, 전하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a40198d0c3d2492ea75d8dfdc2d8beb9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a40198d0c3d2492ea75d8dfdc2d8beb9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bequeaths"
+        },
+        {
+          "type": "과거형",
+          "value": "bequeathed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bequeathing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bequeathed"
+        }
+      ],
+      "aliasConjugation": "bequeaths",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "165a5d673ba17e6dc02577cb3cedad3e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 그에게 적지 않은 돈을 유산으로 남겼다.",
+      "text": "She <b>bequeathed</b> no small sum of money to him.=She <b>bequeathed</b> him no small sum of money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 전 재산을 딸에게 물려준다는 유언을 했다",
+      "text": "He made a will leaving[bequeathing] all his estate to his daughter."
+    }
+  ],
+  "isWordType": true
+}

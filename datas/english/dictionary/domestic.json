@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "<b>domestic</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dəˈmestɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "가정의, 가사의",
+              "examples": [
+                {
+                  "text": "<b>domestic</b> affairs",
+                  "translatedText": "가사"
+                }
+              ],
+              "originalMeaning": "가정의, 가사의"
+            },
+            {
+              "meaning": "가정적인, 살림이 알뜰한",
+              "examples": [],
+              "originalMeaning": "가정적인, 살림이 알뜰한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "하인, 하녀, 가정부, 가정의 고용인",
+              "examples": [],
+              "originalMeaning": "하인, 하녀, 가정부, 가정의 고용인"
+            },
+            {
+              "meaning": "[pl.] [미] 국내[가내] 제품, 가정용 리넨 ((타월·시트 등))",
+              "examples": [],
+              "originalMeaning": "[pl.] [미] 국내[가내] 제품, 가정용 리넨 ((타월·시트 등))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1704b992a6cf405e801a63fd05739a15",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1704b992a6cf405e801a63fd05739a15",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a0e16101cadd52d03213482c58a167ea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 가엾은 아이는 가정적인 애정에 굶주려 있었다.",
+      "text": "The poor child starved for <b>domestic</b> affection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정부는 국내 산업을 조장할 대책을 세웠다",
+      "text": "The government took measures to promote <b>domestic</b> industry."
+    }
+  ],
+  "isWordType": true
+}
