@@ -16,7 +16,7 @@ type VisionConcept =
   | 'saturatewrap' | 'colorspace' | 'filtering' | 'morphology' | 'pipeline'
   | 'pinhole' | 'intrinsicK' | 'distortion' | 'camerachain'
   | 'pnp' | 'reprojection' | 'ambiguity' | 'distancesolutions'
-  | 'hsvtuning' | 'contourfilter' | 'emastabilize' | 'detectionrate'
+  | 'hsvtuning' | 'contourfilter' | 'emastabilize' | 'detectionrate' | 'perfprofile'
   | 'calibsetup' | 'calibrms' | 'calibsanity' | 'calibpnpupgrade'
   | 'rospipeline' | 'cvbridge' | 'bandwidth' | 'qoscompare'
   | 'pipelineintegration' | 'backprojection' | 'pipelinevalidation';
@@ -39,6 +39,7 @@ const CONCEPTS: { id: VisionConcept; label: string; el: string; group?: string }
   { id: 'contourfilter', label: '컨투어 필터', el: 'center-vision-contour-filter', group: 'ocv19' },
   { id: 'emastabilize', label: '시간축 안정화(EMA)', el: 'center-vision-ema-stabilize', group: 'ocv19' },
   { id: 'detectionrate', label: '검출률 매트릭스', el: 'center-vision-detection-rate', group: 'ocv19' },
+  { id: 'perfprofile', label: '성능 측정', el: 'center-vision-perf-profile', group: 'ocv19' },
   { id: 'calibsetup', label: '왜 여러 장인가', el: 'center-vision-calib-setup', group: 'ocv20' },
   { id: 'calibrms', label: 'RMS 재투영 오차', el: 'center-vision-calib-rms', group: 'ocv20' },
   { id: 'calibsanity', label: '상식·눈 검사', el: 'center-vision-calib-sanity', group: 'ocv20' },

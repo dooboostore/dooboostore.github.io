@@ -24,11 +24,20 @@ const TOPIC_INFO: Record<TopicId, { title: string; fields: string[] }> = {
   },
 };
 
+// 토픽별로 함께 강조할 업/다운스트림 요소 id — 선택 시 다이어그램 전체에 "흐름"이 보이게 함
+const TOPIC_LINKS: Record<TopicId, string[]> = {
+  image_raw: ['rp-node-usbcam', 'rp-arrow-1', 'rp-node-detector'],
+  camera_info: ['rp-node-usbcam', 'rp-arrow-1', 'rp-node-detector'],
+  detection: ['rp-node-detector', 'rp-arrow-2', 'rp-sub-rosbag'],
+  image_annotated: ['rp-node-detector', 'rp-arrow-2', 'rp-sub-rqt', 'rp-sub-rosbag'],
+};
+
 const MD = `
 ## ROS2 이미지 파이프라인의 표준 구조
 - \`usb_cam\` 드라이버가 **/image_raw**(Image)와 **/camera_info**(CameraInfo)를 발행하고, \`color_detector\` 노드가 구독·처리 후 **/detection**(중심 좌표)과 **/image_annotated**(디버그 오버레이)를 발행합니다.
-- \`rqt_image_view\`와 \`rosbag\`은 같은 토픽을 **구독만** 하면 됩니다 — **발행자는 구독자를 모른다**(느슨한 결합)는 원칙이 이미지에서도 그대로입니다.
-- 아래 박스를 클릭하면 그 토픽의 메시지 구조를 확인할 수 있습니다.
+- \`rqt_image_view\`와 \`rosbag\`은 같은 토픽을 **구독만** 하면 됩니다 — **발행자는 구독자를 모른다**(느슨한 결합)는 원칙이 이미지에서도 그대로입니다. 방송국(발행자)이 시청자(구독자)가 누구인지, 몇 명인지 몰라도 방송이 되는 것과 같습니다.
+- 아래 박스를 클릭하면 그 토픽의 메시지 구조와, 그 데이터가 흘러가는 경로(강조 표시)를 함께 확인할 수 있습니다.
+- 22강에서는 이 \`/detection\`·\`/image_annotated\`가 \`/object_pose\`(PoseStamped)·\`/object_point\`(PointStamped)로 확장되어, 픽셀 좌표가 3D 포즈·위치로 승격됩니다.
 `;
 
 export default (w: Window) => {
@@ -42,6 +51,11 @@ export default (w: Window) => {
     private refresh() {
       this.shadowRoot?.querySelectorAll('.rp-box').forEach(el => {
         (el as HTMLElement).classList.toggle('active', (el as HTMLElement).dataset.topic === this.selected);
+      });
+      // 선택된 토픽의 업/다운스트림 노드·화살표도 함께 강조 — 데이터가 "흐르는" 경로를 눈으로 보여줌
+      const linked = new Set(TOPIC_LINKS[this.selected]);
+      this.shadowRoot?.querySelectorAll('[data-flow-id]').forEach(el => {
+        (el as HTMLElement).classList.toggle('rp-flow-on', linked.has((el as HTMLElement).dataset.flowId!));
       });
       const info = TOPIC_INFO[this.selected];
       const panel = this.shadowRoot?.querySelector('#rp-panel') as HTMLElement;
@@ -76,7 +90,11 @@ export default (w: Window) => {
           .rp-box { padding:8px 12px; border-radius:8px; font-size:11px; font-weight:700; cursor:pointer; border:2px solid transparent; background:#e2e8f0; color:#334155; transition:all .15s; }
           .rp-box:hover { border-color:#94a3b8; }
           .rp-box.active { border-color:#0369a1; background:#bae6fd; color:#0c4a6e; }
-          .rp-arrow { color:#94a3b8; font-size:16px; }
+          .rp-arrow { color:#94a3b8; font-size:16px; transition:color .15s; }
+          .rp-node, .rp-sub { transition:background .15s, color .15s, box-shadow .15s; }
+          .rp-flow-on.rp-node { background:#0369a1; box-shadow:0 0 0 2px #bae6fd; }
+          .rp-flow-on.rp-arrow { color:#0369a1; font-weight:800; }
+          .rp-flow-on.rp-sub { background:#0369a1; color:#fff; }
           .rp-sub { padding:6px 12px; border-radius:8px; font-size:10.5px; font-weight:600; background:#f3e8ff; color:#6d28d9; }
           .rp-panel { margin-top:14px; background:#0f172a; color:#e2e8f0; border-radius:10px; padding:12px 14px; font-size:12px; line-height:1.8; min-height:120px; }
           .rp-panel-title { font-weight:800; color:#38bdf8; margin-bottom:6px; }
@@ -91,20 +109,20 @@ export default (w: Window) => {
         </div>
 
         <div class="rp-graph">
-          <div class="rp-row"><div class="rp-node">usb_cam 드라이버</div></div>
-          <div class="rp-arrow">↓</div>
+          <div class="rp-row"><div class="rp-node" data-flow-id="rp-node-usbcam">usb_cam 드라이버</div></div>
+          <div class="rp-arrow" data-flow-id="rp-arrow-1">↓</div>
           <div class="rp-row">
             <div class="rp-box" data-topic="image_raw">/image_raw</div>
             <div class="rp-box" data-topic="camera_info">/camera_info</div>
           </div>
-          <div class="rp-arrow">↓</div>
-          <div class="rp-row"><div class="rp-node">color_detector (19강 모듈+배관)</div></div>
-          <div class="rp-arrow">↓</div>
+          <div class="rp-arrow" data-flow-id="rp-arrow-1">↓</div>
+          <div class="rp-row"><div class="rp-node" data-flow-id="rp-node-detector">color_detector (19강 모듈+배관)</div></div>
+          <div class="rp-arrow" data-flow-id="rp-arrow-2">↓</div>
           <div class="rp-row">
             <div class="rp-box" data-topic="detection">/detection</div>
             <div class="rp-box" data-topic="image_annotated">/image_annotated</div>
           </div>
-          <div class="rp-row"><div class="rp-sub">rqt_image_view</div><div class="rp-sub">rosbag record</div></div>
+          <div class="rp-row"><div class="rp-sub" data-flow-id="rp-sub-rqt">rqt_image_view</div><div class="rp-sub" data-flow-id="rp-sub-rosbag">rosbag record</div></div>
         </div>
 
         <div class="rp-panel" id="rp-panel"></div>

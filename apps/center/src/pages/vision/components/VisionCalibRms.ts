@@ -14,11 +14,19 @@ function rms(values: number[]): number {
 
 const MD = `
 ## RMS 재투영 오차 — 오늘의 성적표
-- \`cv2.calibrateCamera\`의 첫 반환값이 RMS입니다: 모든 장·모든 코너의 "예측 자리 vs 실제 자리" 거리를 **제곱평균제곱근**한 값.
+- \`cv2.calibrateCamera\`의 첫 반환값이 RMS입니다: 모든 장·모든 코너의 "예측 자리 vs 실제 자리" 거리를 **제곱평균제곱근**한 값 — [[vision-pnp]]·[[vision-reprojection-error]](18강)의 재투영 오차와 같은 개념을, 여러 장에 걸쳐 한꺼번에 계산한 것입니다.
 - 판정: **< 0.5px 우수**, **0.5~1.0px 양호**, **> 1.0px 재촬영**.
 - 제곱을 쓰기 때문에 **한 장의 크게 틀린 사진이 전체 값을 끌어올립니다** — 장별 오차 막대를 보고 흔들린 사진을 골라내는 게 정석입니다.
 - 값이 작다고 무조건 좋은 것도 아닙니다: 사진이 전부 정면·중앙이면 오차는 작지만 왜곡 계수는 제대로 추정되지 않습니다([[vision-calib-setup]]).
 `;
+
+const DIAGNOSIS: { symptom: string; cause: string; fix: string; highlight?: boolean }[] = [
+  { symptom: '전체 RMS가 큼', cause: '보드가 들뜸 / 칸 크기(SQ) 오기입', fix: '평판 재부착, SQ 재실측' },
+  { symptom: '특정 장만 유난히 큼', cause: '모션 블러, 코너 오검출', fix: '해당 장 제외 (아래 체크박스로 체험)', highlight: true },
+  { symptom: 'k1이 비정상적으로 큼', cause: '가장자리 사진 부족', fix: '구석 배치 사진 추가' },
+  { symptom: 'f가 FOV 실측과 불일치', cause: '기울인 사진 부족', fix: '±30° 이상 기울인 장 추가' },
+  { symptom: '쓸 때마다 결과가 다름', cause: '오토포커스가 f를 바꿈', fix: '포커스 고정 후 재캘리브레이션' },
+];
 
 export default (w: Window) => {
   const existing = w.customElements.get(tagName);
@@ -79,6 +87,11 @@ export default (w: Window) => {
           .rms-ctl { display:flex; align-items:center; justify-content:center; gap:8px; font-size:12px; font-weight:700; color:#475569; margin-top:10px; }
           .rms-overall { text-align:center; font-size:14px; font-weight:800; color:#1e293b; margin-top:10px; }
           .rms-verdict { text-align:center; font-size:12.5px; font-weight:700; border-radius:8px; padding:8px 12px; margin-top:8px; border:1px solid; }
+          .rms-diag-title { font-size:12px; font-weight:800; color:#1e293b; margin:16px 0 6px; }
+          table.rms-diag { width:100%; border-collapse:collapse; font-size:11.5px; }
+          table.rms-diag th, table.rms-diag td { border:1px solid #e2e8f0; padding:6px 8px; text-align:left; }
+          table.rms-diag th { background:#f0f9ff; color:#0369a1; font-weight:800; }
+          table.rms-diag tr.highlight td { background:#eff6ff; font-weight:700; }
           .md { font-size:13px; color:#334155; line-height:1.7; margin-top:12px; border-top:1px solid #f1f5f9; padding-top:10px; }
           .md h2 { font-size:14px; font-weight:800; color:#1e293b; margin:0 0 6px; }
           .md code { background:#f1f5f9; border-radius:4px; padding:1px 5px; font-size:12px; }
@@ -101,6 +114,12 @@ export default (w: Window) => {
 
         <div class="rms-overall" id="rms-overall"></div>
         <div class="rms-verdict" id="rms-verdict"></div>
+
+        <div class="rms-diag-title">진단표 — 오차가 클 때</div>
+        <table class="rms-diag">
+          <tr><th>증상</th><th>원인 후보</th><th>처방</th></tr>
+          ${DIAGNOSIS.map(d => `<tr${d.highlight ? ' class="highlight"' : ''}><td>${d.symptom}</td><td>${d.cause}</td><td>${d.fix}</td></tr>`).join('')}
+        </table>
 
         <div class="md">${marked.parse(MD) as string}</div>
       `;

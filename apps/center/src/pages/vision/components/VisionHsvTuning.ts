@@ -8,7 +8,7 @@ const PLOT_H = 220;
 const H_MAX = 60; // 표시 범위 (빨강 공 예시라 0~60만 봐도 충분)
 const S_MAX = 255;
 
-type Point = { h: number; s: number };
+type Point = { h: number; s: number; v: number };
 
 function gaussianRand(mean: number, std: number): number {
   const u1 = Math.random(), u2 = Math.random();
@@ -16,26 +16,29 @@ function gaussianRand(mean: number, std: number): number {
   return mean + z * std;
 }
 
-function genCluster(n: number, hMean: number, hStd: number, sMean: number, sStd: number): Point[] {
+function genCluster(n: number, hMean: number, hStd: number, sMean: number, sStd: number, vMean: number, vStd: number): Point[] {
   return Array.from({ length: n }, () => ({
     h: Math.max(0, Math.min(H_MAX, gaussianRand(hMean, hStd))),
     s: Math.max(0, Math.min(S_MAX, gaussianRand(sMean, sStd))),
+    v: Math.max(0, Math.min(255, gaussianRand(vMean, vStd))),
   }));
 }
 
+// 어두운 조명일수록 V(명도)도 함께 낮다 — 그림자/저조도 영역을 V 하한으로 걸러내는 실습용 분포
 const LIGHTS = [
-  { key: 'daylight', label: '주광', color: '#f59e0b', points: genCluster(60, 4, 3, 205, 25) },
-  { key: 'fluorescent', label: '형광등', color: '#d97706', points: genCluster(60, 7, 3.5, 175, 25) },
-  { key: 'dark', label: '어두움', color: '#92400e', points: genCluster(60, 9, 4, 140, 30) },
+  { key: 'daylight', label: '주광', color: '#f59e0b', points: genCluster(60, 4, 3, 205, 25, 200, 25) },
+  { key: 'fluorescent', label: '형광등', color: '#d97706', points: genCluster(60, 7, 3.5, 175, 25, 150, 25) },
+  { key: 'dark', label: '어두움', color: '#92400e', points: genCluster(60, 9, 4, 140, 30, 60, 25) },
 ];
-const BACKGROUND = genCluster(160, 28, 18, 70, 45);
+const BACKGROUND = genCluster(160, 28, 18, 70, 45, 110, 50);
 
 const MD = `
 ## HSV 범위 튜닝 — 감이 아니라 도구로
-- 트랙바로 H/S 상·하한을 조절하며 원본/마스크를 나란히 보는 게 실전 절차입니다: **H 상·하한을 조여 물체만 남기고, S 하한으로 배경의 물빠진 색을 제거**합니다.
+- 트랙바로 H/S/V 상·하한을 조절하며 원본/마스크를 나란히 보는 게 실전 절차입니다: **H 상·하한을 조여 물체만 남기고, S 하한으로 배경의 물빠진 색을, V 하한으로 그림자·저조도 영역을 제거**합니다.
+- **H는 0~179의 원형 척도**입니다(OpenCV 기준). 빨강은 그 원의 이음매(0과 179가 맞닿는 지점) 위에 있어서 실제로는 \`[0,10] ∪ [170,179]\`처럼 **두 조각으로 쪼개져 있습니다** — 한쪽 조각만 \`inRange\`에 넣으면 마스크 절반이 소리소문 없이 사라집니다.
 - 오른쪽(여기서는 아래) 산점도는 세 조명(주광/형광등/어두움)에서 찍은 같은 공의 H-S 분포입니다 — **세 구름을 모두 덮되 배경(회색 점)을 피하는 상자가 좋은 범위**입니다.
 - 범위는 **"물체의 분포"와 "배경의 분포" 사이의 협상**입니다 — 너무 좁히면 조명이 조금만 바뀌어도 놓치고, 너무 넓히면 배경이 섞여 들어옵니다.
-- 확정한 범위는 코드에 하드코딩하지 말고 **설정(dict/JSON)으로 분리**합니다 — 조명이 바뀌면 숫자만 갈아 끼웁니다.
+- 확정한 범위는 코드에 하드코딩하지 말고 **설정(dict/JSON)으로 분리**합니다 — 조명이 바뀌면 숫자만 갈아 끼웁니다. [[vision-colorspace]]에서 다룬 HSV 색상환이 바로 이 H/S/V 세 축이고, 여기서 확정한 범위는 21강에서 ROS2 노드의 파라미터(launch 인자)가 되어 그대로 흘러갑니다.
 `;
 
 export default (w: Window) => {
@@ -48,9 +51,10 @@ export default (w: Window) => {
     private hMax = 12;
     private sMin = 130;
     private sMax = 255;
+    private vMin = 50;
 
     private refresh() {
-      const { hMin, hMax, sMin, sMax } = this;
+      const { hMin, hMax, sMin, sMax, vMin } = this;
       const toX = (h: number) => (h / H_MAX) * PLOT_W;
       const toY = (s: number) => PLOT_H - (s / S_MAX) * PLOT_H;
 
@@ -60,7 +64,7 @@ export default (w: Window) => {
       setAttr('#ht-box', 'width', String(toX(hMax) - toX(hMin)));
       setAttr('#ht-box', 'height', String(toY(sMin) - toY(sMax)));
 
-      const inBox = (p: Point) => p.h >= hMin && p.h <= hMax && p.s >= sMin && p.s <= sMax;
+      const inBox = (p: Point) => p.h >= hMin && p.h <= hMax && p.s >= sMin && p.s <= sMax && p.v >= vMin;
 
       const setText = (sel: string, text: string) => {
         const el = this.shadowRoot?.querySelector(sel) as HTMLElement;
@@ -70,6 +74,7 @@ export default (w: Window) => {
       setText('#ht-hmax-val', String(hMax));
       setText('#ht-smin-val', String(sMin));
       setText('#ht-smax-val', String(sMax));
+      setText('#ht-vmin-val', String(vMin));
 
       let statsHtml = '';
       LIGHTS.forEach(light => {
@@ -92,6 +97,8 @@ export default (w: Window) => {
     onSMin(e: Event) { this.sMin = Number((e.target as HTMLInputElement).value) || 0; this.refresh(); }
     @addEventListener('#ht-smax', 'input')
     onSMax(e: Event) { this.sMax = Number((e.target as HTMLInputElement).value) || 0; this.refresh(); }
+    @addEventListener('#ht-vmin', 'input')
+    onVMin(e: Event) { this.vMin = Number((e.target as HTMLInputElement).value) || 0; this.refresh(); }
 
     @onConnectedAfter
     onReady() { this.refresh(); }
@@ -122,15 +129,16 @@ export default (w: Window) => {
         </style>
 
         <div class="ht-intro">
-          HSV 범위에 "정답"은 없습니다 — 물체의 색 샘플이 조명마다 조금씩 다른 곳에 찍히고, 배경에도 비슷한 색이 섞여 있기 때문입니다. 좋은 범위란 <b>물체의 세 조명 구름을 전부 덮으면서 배경은 최대한 피하는</b> 상자를 찾는 것 — 감이 아니라 데이터를 보고 협상하는 작업입니다.
+          HSV 범위에 "정답"은 없습니다 — 물체의 색 샘플이 조명마다 조금씩 다른 곳에 찍히고, 배경에도 비슷한 색이 섞여 있기 때문입니다. 좋은 범위란 <b>물체의 세 조명 구름을 전부 덮으면서 배경은 최대한 피하는</b> 상자를 찾는 것 — 감이 아니라 데이터를 보고 협상하는 작업입니다. 스마트폰 카메라 앱의 "그림자 보정" 슬라이더가 하는 일도 결국 이 <b>V(명도) 하한 조정</b>과 같습니다.
         </div>
 
-        <div class="math-desc">H/S 슬라이더로 빨간 네모(선택 범위)를 움직여서, 세 조명의 물체 구름을 얼마나 덮고 배경을 얼마나 피하는지 확인해보세요.</div>
+        <div class="math-desc">H/S/V 슬라이더로 빨간 네모(선택 범위)를 움직여서, 세 조명의 물체 구름을 얼마나 덮고 배경을 얼마나 피하는지, V 하한을 올리면 어두운 조명(갈색 점)이 먼저 빠지는지 확인해보세요.</div>
 
         <div class="ctl"><label>H min <input id="ht-hmin" type="range" min="0" max="${H_MAX}" step="1" value="${this.hMin}"><b id="ht-hmin-val">${this.hMin}</b></label></div>
         <div class="ctl"><label>H max <input id="ht-hmax" type="range" min="0" max="${H_MAX}" step="1" value="${this.hMax}"><b id="ht-hmax-val">${this.hMax}</b></label></div>
         <div class="ctl"><label>S min <input id="ht-smin" type="range" min="0" max="255" step="5" value="${this.sMin}"><b id="ht-smin-val">${this.sMin}</b></label></div>
         <div class="ctl"><label>S max <input id="ht-smax" type="range" min="0" max="255" step="5" value="${this.sMax}"><b id="ht-smax-val">${this.sMax}</b></label></div>
+        <div class="ctl"><label>V min(그림자 제거) <input id="ht-vmin" type="range" min="0" max="255" step="5" value="${this.vMin}"><b id="ht-vmin-val">${this.vMin}</b></label></div>
 
         <svg viewBox="0 0 ${PLOT_W} ${PLOT_H}">
           ${dots(BACKGROUND, '#94a3b8', 1.8)}

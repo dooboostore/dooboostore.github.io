@@ -136,6 +136,24 @@ function bilateralFilter(grid: number[][], k: number): number[][] {
   return out;
 }
 
+/** Sobel X 커널 — 블러와 똑같은 "3×3 커널을 이미지 위로 밀며 내적"하는 컨볼루션이지만, 가중치가 달라 흐리는 대신 가로 방향 밝기 변화(수직 경계)를 뽑아낸다. */
+function sobelEdge(grid: number[][]): number[][] {
+  const kernel = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]];
+  const out: number[][] = [];
+  for (let y = 0; y < H; y++) {
+    const row: number[] = [];
+    for (let x = 0; x < W; x++) {
+      let sum = 0;
+      for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
+        sum += grid[clampIdx(y + dy, H)][clampIdx(x + dx, W)] * kernel[dy + 1][dx + 1];
+      }
+      row.push(Math.abs(sum));
+    }
+    out.push(row);
+  }
+  return out;
+}
+
 function applyFilter(grid: number[][], type: FilterType, k: number): number[][] {
   if (type === 'box') return boxBlur(grid, k);
   if (type === 'gaussian') return gaussianBlur(grid, k);
@@ -164,9 +182,10 @@ function drawGrid(canvas: HTMLCanvasElement, grid: number[][]) {
 const MD = `
 ## 필터링 — 노이즈를 눌러야 마스크가 깨끗하다
 - 카메라 픽셀에는 센서 노이즈가 섞여 있고, 그대로 \`inRange\`를 하면 마스크에 소금 뿌린 듯한 점이 남습니다. 이미지도 **블러(저역통과)** 로 다듬고 시작합니다.
-- 연산의 정체는 **컨볼루션** — 작은 커널 행렬을 이미지 위로 밀며 내적하는 것입니다. 커널을 바꾸면 블러가 아니라 **에지 검출(Sobel)** 도 됩니다 — 연산은 하나(컨볼루션), 커널이 역할을 정합니다.
+- 연산의 정체는 **컨볼루션** — 작은 커널 행렬을 이미지 위로 밀며 내적하는 것입니다. 커널을 바꾸면 블러가 아니라 **에지 검출(Sobel)** 도 됩니다 — 연산은 하나(컨볼루션), 커널이 역할을 정합니다. 맨 오른쪽 Sobel 패널이 그 증거입니다: 블러와 똑같은 3×3 컨볼루션인데 가중치만 달라서 경계만 하얗게 뜹니다.
 - 네 필터를 동시에 비교해보세요: **평균**은 빠르지만 경계가 뭉개지고, **가우시안**은 그보다 자연스럽고, **미디언**은 소금·후추 노이즈(0/255로 튀는 값)를 거의 완벽히 지우고, **양방향**은 경계(밝기 차가 큰 곳)를 보존하면서 평평한 영역만 부드럽게 만듭니다.
 - 커널 크기를 키우면 노이즈는 더 잘 지워지지만 경계도 더 많이 뭉개집니다.
+- 이 중 **가우시안 블러 단계는 이 페이지의 파이프라인 조립 탭, 19강 HSV 마스킹**에서 색 검출 전 전처리로 그대로 재사용됩니다. 현실에서는 인스타그램 같은 보정 필터, 사진 노이즈 제거 앱이 전부 이 블러 연산을 쓰고 있습니다.
 `;
 
 export default (w: Window) => {
@@ -185,6 +204,8 @@ export default (w: Window) => {
         const canvas = q(`vf-${f.id}`);
         if (canvas) drawGrid(canvas, applyFilter(this.grid, f.id, this.kernelSize));
       });
+      const sobelCanvas = q('vf-sobel');
+      if (sobelCanvas) drawGrid(sobelCanvas, sobelEdge(this.grid));
 
       const kernelVal = this.shadowRoot?.querySelector('#vf-kernel-val') as HTMLElement;
       if (kernelVal) kernelVal.textContent = `${this.kernelSize}×${this.kernelSize}`;
@@ -262,6 +283,10 @@ export default (w: Window) => {
 
         <div class="vf-strip">
           ${FILTERS.map(panel).join('')}
+          <div class="vf-panel">
+            <canvas width="${W}" height="${H}" id="vf-sobel"></canvas>
+            <div class="vf-panel-label">Sobel 엣지(같은 컨볼루션, 다른 커널)</div>
+          </div>
         </div>
 
         <div class="md">${marked.parse(MD) as string}</div>

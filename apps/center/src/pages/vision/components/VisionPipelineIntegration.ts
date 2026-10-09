@@ -7,8 +7,10 @@ const MD = `
 ## 통합 비전 파이프라인 — 두 갈래, 하나의 목표
 - **경로 A**(ArUco → solvePnP → PoseStamped): 정확한 6DOF 포즈 — "정답 소스"이자 정밀 작업용.
 - **경로 B**(색 검출 → 거리 추정 → PointStamped): 마커 없는 자연 물체 — 18강의 모호성 해결책을 실제로 가동.
-- 새로 만드는 것은 **연결부와 품질 게이트뿐** — 각 상자는 전부 이전 강의(16~20강)에서 만든 조각의 재사용입니다.
+- **메시지 선택의 근거**: 마커는 자세까지 나오므로 \`PoseStamped\`(위치+자세), 색 물체는 자세를 정의하기 어려우므로 \`PointStamped\`(위치만) — **정직한 인터페이스가 좋은 인터페이스**입니다.
+- 새로 만드는 것은 **연결부와 품질 게이트뿐** — 각 상자는 전부 이전 강의(16~21강)에서 만든 조각의 재사용입니다.
 - **품질 게이트**: 재투영 오차가 문턱을 넘으면 발행하지 않습니다. "나쁜 데이터를 흘리지 않는 것"도 인터페이스의 일부입니다.
+- **RViz2**: 픽셀(2D)이 포즈(3D)로 승격되는 순간을 \`camera_link\` 기준 3D 장면으로 확인합니다 — 품질 게이트가 막은 포즈는 RViz에도 올라오지 않습니다.
 `;
 
 export default (w: Window) => {
@@ -40,6 +42,30 @@ export default (w: Window) => {
       }
       const gate = this.shadowRoot?.querySelector('#pi-gate-box') as HTMLElement;
       if (gate) gate.style.background = pass ? '#dcfce7' : '#fee2e2';
+
+      const pathA = this.shadowRoot?.querySelector('#pi-patha-box') as HTMLElement;
+      if (pathA) pathA.style.background = pass ? '#ea580c' : '#b91c1c';
+
+      const rviz = this.shadowRoot?.querySelector('#pi-rviz') as HTMLElement;
+      if (rviz) {
+        const poseFill = pass ? '#7c3aed' : '#475569';
+        const poseOpacity = pass ? 1 : 0.35;
+        const poseLabel = pass ? 'object_pose' : 'DROP';
+        rviz.innerHTML =
+          `<rect x="0" y="0" width="200" height="120" rx="8" fill="#0f172a"/>` +
+          // camera_link 원점 축
+          `<circle cx="25" cy="95" r="2.5" fill="#fff"/>` +
+          `<line x1="25" y1="95" x2="65" y2="95" stroke="#ef4444" stroke-width="2"/><circle cx="65" cy="95" r="2" fill="#ef4444"/>` +
+          `<line x1="25" y1="95" x2="10" y2="62" stroke="#22c55e" stroke-width="2"/><circle cx="10" cy="62" r="2" fill="#22c55e"/>` +
+          `<line x1="25" y1="95" x2="25" y2="55" stroke="#3b82f6" stroke-width="2"/><circle cx="25" cy="55" r="2" fill="#3b82f6"/>` +
+          `<text x="25" y="110" font-size="8" fill="#94a3b8" text-anchor="middle">camera_link</text>` +
+          // 경로 A: 마커 포즈(자세 포함 — 회전된 사각형)
+          `<g transform="rotate(20 125 42)" opacity="${poseOpacity}"><rect x="111" y="28" width="28" height="28" fill="none" stroke="${poseFill}" stroke-width="2.5"/></g>` +
+          `<text x="125" y="20" font-size="8" fill="${poseFill}" text-anchor="middle">${poseLabel}</text>` +
+          // 경로 B: 색 물체 위치(위치만 — 원)
+          `<circle cx="165" cy="80" r="11" fill="none" stroke="#dc2626" stroke-width="2.5"/>` +
+          `<text x="165" y="100" font-size="8" fill="#dc2626" text-anchor="middle">object_point</text>`;
+      }
     }
 
     @addEventListener('#pi-err', 'input')
@@ -72,6 +98,8 @@ export default (w: Window) => {
           .ctl b { min-width:40px; text-align:right; color:#1e293b; }
           #pi-gate-box { text-align:center; padding:10px; border-radius:8px; margin-top:10px; font-size:11px; font-weight:700; transition:background .15s; }
           .pi-log { text-align:center; font-size:12px; font-weight:700; font-family:monospace; border-radius:8px; padding:8px 10px; margin-top:8px; border:1px solid; }
+          .pi-rviz-box { text-align:center; margin-top:14px; }
+          #pi-rviz-svg { width:200px; height:120px; border-radius:8px; }
           .md { font-size:13px; color:#334155; line-height:1.7; margin-top:12px; border-top:1px solid #f1f5f9; padding-top:10px; }
           .md h2 { font-size:14px; font-weight:800; color:#1e293b; margin:0 0 6px; }
           .md code { background:#f1f5f9; border-radius:4px; padding:1px 5px; font-size:12px; }
@@ -87,7 +115,7 @@ export default (w: Window) => {
           <div class="pi-row"><div class="pi-box pi-teal">왜곡 보정(20강)</div></div>
           <div class="pi-arrow">↓</div>
           <div class="pi-row">
-            <div class="pi-box pi-orange">ArUco 검출 → solvePnP(18강)</div>
+            <div class="pi-box pi-orange" id="pi-patha-box">ArUco 검출 → solvePnP(18강)</div>
             <div class="pi-box pi-red">색 검출(19강) → 거리 추정</div>
           </div>
           <div class="pi-arrow">↓</div>
@@ -102,6 +130,11 @@ export default (w: Window) => {
         <div class="ctl"><label>재투영 오차 <input id="pi-err" type="range" min="0" max="5" step="0.1" value="${this.reprojError}"><b id="pi-err-val">${this.reprojError.toFixed(1)}px</b></label></div>
         <div id="pi-gate-box">품질 게이트: 문턱 ${this.threshold.toFixed(1)}px</div>
         <div class="pi-log" id="pi-log"></div>
+
+        <div class="pi-rviz-box">
+          <svg id="pi-rviz-svg" viewBox="0 0 200 120"><g id="pi-rviz"></g></svg>
+          <div class="math-desc">RViz2 — camera_link 기준 3D 장면(네모=마커 포즈, 원=색 물체 위치). 게이트가 막으면 포즈가 회색으로 사라집니다.</div>
+        </div>
 
         <div class="md">${marked.parse(MD) as string}</div>
       `;

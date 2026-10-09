@@ -11,6 +11,7 @@ const MD = `
 - **관문②**: \`cx,cy\`가 이미지 중앙 근처(640×480이면 320±30, 240±30)인지, \`fx≈fy\`(5% 이상 다르면 의심)인지, fx로 계산한 FOV가 실측 FOV와 맞는지(교차 검증).
 - **관문③**: \`cv2.undistort(img, K, dist)\`로 보정한 뒤, 가장자리의 굽은 직선이 펴졌는지 눈으로 확인합니다.
 - 세 관문(RMS·상식·눈 검사)을 **모두 통과해야** \`camera_params.npz\`를 배포합니다.
+- 여기서 검사하는 fx/fy/cx/cy·FOV는 [[vision-intrinsic-k]]·[[vision-lens-distortion]](17강)에서 다룬 바로 그 값들입니다 — 17강이 "K가 뭔지"를 배웠다면, 이 탭은 "그 K가 믿을 만한지"를 검증합니다.
 `;
 
 function fov(fPx: number, sizePx: number): number {
@@ -49,7 +50,8 @@ export default (w: Window) => {
       checks.push({ label: 'fx ≈ fy (5% 이내)', ok: fRatio <= 0.05, detail: `차이 ${(fRatio * 100).toFixed(1)}%` });
       const calcFov = fov(this.fx, IMG_W);
       const fovDiff = Math.abs(calcFov - this.measuredFov) / this.measuredFov;
-      checks.push({ label: 'FOV 교차검증(5% 이내)', ok: fovDiff <= 0.05, detail: `계산 ${calcFov.toFixed(1)}° vs 실측 ${this.measuredFov}°` });
+      const fovOk = fovDiff <= 0.05;
+      checks.push({ label: 'FOV 교차검증(5% 이내)', ok: fovOk, detail: `계산 ${calcFov.toFixed(1)}° vs 실측 ${this.measuredFov}°` });
 
       const listEl = q('#sn-checklist');
       if (listEl) {
@@ -61,7 +63,13 @@ export default (w: Window) => {
       const allOk = checks.every(c => c.ok);
       const verdict = q('#sn-verdict');
       if (verdict) {
-        verdict.textContent = allOk ? '✅ 관문② 통과 — 상식적인 값입니다' : '⚠ 관문② 중 일부 불합격 — K를 의심해보세요';
+        if (allOk) {
+          verdict.textContent = '✅ 관문② 통과 — 상식적인 값입니다';
+        } else if (!fovOk) {
+          verdict.textContent = '⚠ FOV가 실측과 어긋납니다 — 촬영 시 기울인 사진이 부족했을 가능성이 큽니다([[vision-calib-setup]] 참고)';
+        } else {
+          verdict.textContent = '⚠ 관문② 중 일부 불합격 — K를 의심해보세요';
+        }
         verdict.style.background = allOk ? '#dcfce7' : '#fee2e2';
         verdict.style.color = allOk ? '#166534' : '#991b1b';
         verdict.style.borderColor = allOk ? '#bbf7d0' : '#fecaca';

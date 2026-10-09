@@ -13,11 +13,19 @@ function seededRand(seed: number): number {
   return x - Math.floor(x) - 0.5;
 }
 
+const STRATEGIES = [
+  { title: '① 처리를 더 빠르게', detail: '다운샘플링(해상도↓), 알고리즘 최적화 — 애초에 9.4ms 같은 처리 시간 자체를 줄인다(19강 성능 측정 참고).' },
+  { title: '② 처리를 분리', detail: '수신 콜백과 무거운 연산을 별도 스레드/프로세스로 분리 — 이미지 수신 자체가 막히지 않게 한다.' },
+  { title: '③ 샘플링(throttle)', detail: '모든 프레임을 처리하지 않고 N프레임마다 1번만 처리 — 처리율을 의도적으로 낮춰 큐가 쌓이지 않게 한다.' },
+];
+
 const MD = `
 ## QoS — best-effort vs reliable
 - 프레임은 **"늦으면 버리는" 데이터**입니다. reliable+깊은 큐로 밀린 프레임을 성실히 재전송하면 **점점 과거를 보는 로봇**이 됩니다.
 - best-effort·depth=1로 "최신만" 유지하는 것이 \`qos_profile_sensor_data\`의 이유입니다 — **"프레임은 신선도가 생명"**이라, 밀리면 버려야 합니다.
 - 구독자 처리 속도가 발행 속도보다 느릴 때(비율 &lt; 1), reliable은 지연이 **계속 누적**되지만 best-effort는 오래된 프레임을 버려 **최신 상태를 유지**합니다.
+- 영상통화에서 네트워크가 느려질 때 오래된 프레임을 붙잡고 재생하지 않고 화면이 끊기며 곧장 최신 프레임으로 건너뛰는 것과 같은 원리입니다.
+- 19강에서 잰 처리율(FPS), 22강의 \`ros2 topic hz/delay\` 측정이 바로 이 "처리 속도/발행 속도 비율"을 실제로 재는 도구입니다.
 `;
 
 export default (w: Window) => {
@@ -87,6 +95,10 @@ export default (w: Window) => {
           .qc-legend { display:flex; gap:14px; justify-content:center; font-size:11px; color:#64748b; flex-wrap:wrap; }
           .qc-finals { font-size:12px; font-weight:700; color:#1e293b; text-align:center; margin-top:8px; display:flex; flex-direction:column; gap:2px; }
           .qc-verdict { text-align:center; font-size:12px; font-weight:700; border-radius:8px; padding:8px 12px; margin-top:10px; border:1px solid; }
+          .qc-strategies { margin-top:16px; display:flex; flex-direction:column; gap:6px; }
+          .qc-strategies-title { font-size:12.5px; font-weight:800; color:#1e293b; margin-bottom:2px; }
+          .qc-strategy { background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:8px 10px; font-size:11.5px; }
+          .qc-strategy b { color:#0369a1; display:block; margin-bottom:2px; }
           .md { font-size:13px; color:#334155; line-height:1.7; margin-top:12px; border-top:1px solid #f1f5f9; padding-top:10px; }
           .md h2 { font-size:14px; font-weight:800; color:#1e293b; margin:0 0 6px; }
           .md code { background:#f1f5f9; border-radius:4px; padding:1px 5px; font-size:12px; }
@@ -112,6 +124,11 @@ export default (w: Window) => {
           <span id="qc-besteffort-final"></span>
         </div>
         <div class="qc-verdict" id="qc-verdict"></div>
+
+        <div class="qc-strategies">
+          <div class="qc-strategies-title">심화 — 처리 지연이 프레임 주기를 넘으면: 세 가지 전략</div>
+          ${STRATEGIES.map(s => `<div class="qc-strategy"><b>${s.title}</b>${s.detail}</div>`).join('')}
+        </div>
 
         <div class="md">${marked.parse(MD) as string}</div>
       `;

@@ -16,9 +16,11 @@ function seededRand(seed: number): number {
 
 const MD = `
 ## 검증 — rosbag과 줄자
-- **5-1 정적 정확도**: 물체를 실측 30/50/80cm에 두고 두 경로의 추정 거리를 비교 — **마커(A)가 색+크기(B)보다 일관되게 정밀**합니다.
-- **5-2 교차 검증**: 공에 마커를 붙여 두 경로가 같은 물체를 추정하게 하면, A(정밀)를 기준으로 B의 오차 분포를 얻습니다.
+- **5-1 정적 정확도**: 물체를 실측 30/50/80cm에 두고 두 경로의 추정 거리를 비교 — 판정 기준은 **오차 < 5%, A가 B보다 정밀한지**. **마커(A)가 색+크기(B)보다 일관되게 정밀**합니다.
+- **5-2 교차 검증**: 공에 마커를 붙여 두 경로가 같은 물체를 추정하게 하면, A(정밀)를 기준으로 B의 오차 분포를 얻습니다 — **14강 Jacobian 교차 검증과 같은 논리**(정밀한 기준으로 덜 정밀한 쪽의 오차를 역산)입니다.
 - **5-3 rosbag 회귀 시험**: 21강의 bag을 재생하며 \`ros2 topic hz/delay\`로 처리율·지연을 측정 — **같은 bag으로 코드 수정 전후를 비교하면 회귀 시험**이 됩니다. 수치가 나빠지면 커밋을 되돌릴 근거가 생깁니다.
+- **심화 — 시간 동기화**: \`/camera_info\`와 \`/image_raw\`의 타임스탬프가 어긋나면, 그 순간의 K·왜곡 계수가 실제로는 다른 프레임에 쓰인 것이라 계산된 포즈가 미묘하게(하지만 체계적으로) 틀어집니다 — 두 토픽을 같은 헤더 스탬프로 묶는 동기화가 중요한 이유입니다.
+- 이 세 가지 검증은 결국 19강(색검출)·20강(캘리브레이션)·21강(ROS2 배관)에서 만든 모든 조각이 **한꺼번에 시험대에 오르는 자리**입니다.
 `;
 
 export default (w: Window) => {
@@ -127,11 +129,12 @@ export default (w: Window) => {
         </div>
 
         <div class="ctl"><label>노이즈 배율 <input id="pv-noise" type="range" min="0.5" max="3" step="0.1" value="${this.noise}"><b id="pv-noise-val">${this.noise.toFixed(1)}×</b></label></div>
+        <div class="math-desc">노이즈 배율 = 조명 변화·진동·흔들림이 심한 환경일수록 커진다고 생각하면 됩니다(1.0=기준 환경).</div>
 
         <div class="pv-strip">
           <div class="pv-panel">
             <svg viewBox="0 0 180 112" width="180" height="112"><g id="pv-bars"></g></svg>
-            <div class="pv-panel-label">① 거리별 오차(A=초록 마커, B=주황 색+크기)</div>
+            <div class="pv-panel-label">① 거리별 오차(A=초록 마커, B=주황 색+크기) · 판정: 오차&lt;5%, A가 B보다 정밀해야 함</div>
           </div>
           <div class="pv-panel">
             <svg viewBox="0 0 110 110" width="110" height="110"><g id="pv-scatter"></g></svg>

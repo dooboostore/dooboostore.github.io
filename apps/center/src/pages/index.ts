@@ -93,6 +93,7 @@ import VisionHsvTuning from './vision/components/VisionHsvTuning';
 import VisionContourFilter from './vision/components/VisionContourFilter';
 import VisionEmaStabilize from './vision/components/VisionEmaStabilize';
 import VisionDetectionRate from './vision/components/VisionDetectionRate';
+import VisionPerfProfile from './vision/components/VisionPerfProfile';
 import VisionCalibSetup from './vision/components/VisionCalibSetup';
 import VisionCalibRms from './vision/components/VisionCalibRms';
 import VisionCalibSanity from './vision/components/VisionCalibSanity';
@@ -201,6 +202,7 @@ export const pageFactories = [
   VisionContourFilter,
   VisionEmaStabilize,
   VisionDetectionRate,
+  VisionPerfProfile,
   VisionCalibSetup,
   VisionCalibRms,
   VisionCalibSanity,
