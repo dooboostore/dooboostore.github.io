@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>bribe</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "braɪb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "뇌물",
+              "examples": [
+                {
+                  "text": "accept[take] a <b>bribe</b>",
+                  "translatedText": "뇌물을 받다"
+                }
+              ],
+              "originalMeaning": "뇌물"
+            },
+            {
+              "meaning": "남을 포섭하기 위한 수단, 유혹물, 미끼",
+              "examples": [],
+              "originalMeaning": "남을 포섭하기 위한 수단, 유혹물, 미끼"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "매수하다, 뇌물로 유혹하다; 뇌물을 주다[쓰다]",
+              "examples": [
+                {
+                  "text": "<b>bribe</b> a person with money",
+                  "translatedText": "…을 돈으로 매수하다"
+                }
+              ],
+              "originalMeaning": "매수하다, 뇌물로 유혹하다; 뇌물을 주다[쓰다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a7664f318a0843299673be4301638989",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a7664f318a0843299673be4301638989",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bribes"
+        },
+        {
+          "type": "과거형",
+          "value": "bribed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bribing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bribed"
+        }
+      ],
+      "aliasConjugation": "bribes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0eecb5adaa22d6932f7e006de3353d70",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 슬그머니 뇌물을 받았다",
+      "text": "He accepted bribes on the quiet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 정직했기 때문에 뇌물을 거절했다.",
+      "text": "Honest as he was, he refused to <b>bribe</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그가 뇌물을 받았다고 비난했다.",
+      "text": "They accused the man of taking bribes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 관리에게 집어 주고 그것을 시켰다",
+      "text": "He bribed the officials into doing it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "총리는 뇌물을 받아서 탄핵되었다",
+      "text": "The prime minister was impeached for taking a <b>bribe</b>."
+    }
+  ],
+  "isWordType": true
+}
