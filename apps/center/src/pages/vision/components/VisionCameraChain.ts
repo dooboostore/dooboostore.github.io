@@ -53,9 +53,11 @@ export default (w: Window) => {
       };
       setText('#cc-pw', `(${Xw.toFixed(2)}, ${Yw.toFixed(2)}, ${Zw.toFixed(2)})`);
       setText('#cc-pc', `(${Xc.toFixed(2)}, ${Yc.toFixed(2)}, ${Zc.toFixed(2)})`);
-      setText('#cc-norm', `(${x.toFixed(3)}, ${y.toFixed(3)})`);
-      setText('#cc-dist', `(${xd.toFixed(3)}, ${yd.toFixed(3)})`);
-      setText('#cc-pixel', `(${u.toFixed(1)}, ${v.toFixed(1)})`);
+      // Zc≤0이면 나눗셈이 발산 — 수치 박스에는 '—' 표시 (화면 경고는 아래 note)
+      const invalid = Zc <= 0;
+      setText('#cc-norm', invalid ? '(—, —)' : `(${x.toFixed(3)}, ${y.toFixed(3)})`);
+      setText('#cc-dist', invalid ? '(—, —)' : `(${xd.toFixed(3)}, ${yd.toFixed(3)})`);
+      setText('#cc-pixel', invalid ? '(—, —)' : `(${u.toFixed(1)}, ${v.toFixed(1)})`);
 
       const setVal = (sel: string, text: string) => setText(sel, text);
       setVal('#cc-xw-val', Xw.toFixed(2));
@@ -154,7 +156,7 @@ export default (w: Window) => {
         <div class="ctl"><label>tz <input id="cc-tz" type="range" min="-3" max="3" step="0.1" value="${this.tz}"><b id="cc-tz-val">${this.tz.toFixed(2)}</b></label></div>
 
         <div class="cc-section-title">K · 왜곡</div>
-        <div class="ctl"><label>fx=fy <input id="cc-fx" type="range" min="100" max="600" step="10" value="${this.fx}"><b id="cc-fx-val">${this.fx}</b></label></div>
+        <div class="ctl"><label>fx=fy (등방 가정) <input id="cc-fx" type="range" min="100" max="600" step="10" value="${this.fx}"><b id="cc-fx-val">${this.fx}</b></label></div>
         <div class="ctl"><label>k1 <input id="cc-k1" type="range" min="-0.4" max="0.4" step="0.01" value="${this.k1}"><b id="cc-k1-val">${this.k1.toFixed(2)}</b></label></div>
 
         <div class="cc-chain">
@@ -171,6 +173,10 @@ export default (w: Window) => {
 
         <canvas id="cc-canvas" width="${CANVAS_W}" height="${CANVAS_H}"></canvas>
         <div class="cc-note" id="cc-note"></div>
+        <div style="display:flex;gap:12px;justify-content:center;font-size:11px;color:#64748b;margin-top:4px">
+          <span><span style="color:#22c55e">●</span> 화면 안(가시)</span>
+          <span><span style="color:#ef4444">●</span> 카메라 뒤/화면 밖(비가시)</span>
+        </div>
 
         <div class="md">${marked.parse(MD) as string}</div>
       `;

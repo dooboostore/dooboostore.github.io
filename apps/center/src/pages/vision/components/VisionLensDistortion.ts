@@ -111,10 +111,12 @@ export default (w: Window) => {
 
       const kindEl = this.shadowRoot?.querySelector('#ld-kind') as HTMLElement;
       if (kindEl) {
+        // r=1에서의 방사 배율(1+k1+k2+k3) 합으로 판정 — k1만 보면 k2·k3가 큰 경우를 놓침
+        const radial = this.k1 + this.k2 + this.k3;
         kindEl.textContent =
-          this.k1 < -0.02 ? `배럴(barrel) — k1=${this.k1.toFixed(2)} < 0` :
-          this.k1 > 0.02 ? `핀쿠션(pincushion) — k1=${this.k1.toFixed(2)} > 0` :
-          '왜곡 거의 없음 (k1 ≈ 0)';
+          radial < -0.02 ? `배럴(barrel) — k1+k2+k3=${radial.toFixed(2)} < 0` :
+          radial > 0.02 ? `핀쿠션(pincushion) — k1+k2+k3=${radial.toFixed(2)} > 0` :
+          '왜곡 거의 없음 (합 ≈ 0)';
       }
     }
 

@@ -14,7 +14,7 @@ function seededRand(seed: number): number {
 }
 
 const STRATEGIES = [
-  { title: '① 처리를 더 빠르게', detail: '다운샘플링(해상도↓), 알고리즘 최적화 — 애초에 9.4ms 같은 처리 시간 자체를 줄인다(19강 성능 측정 참고).' },
+  { title: '① 처리를 더 빠르게', detail: '다운샘플링(해상도↓), 알고리즘 최적화 — 애초에 처리 시간 자체를 줄인다(19강 성능 측정: 5단계 합계 9.4ms 참고).' },
   { title: '② 처리를 분리', detail: '수신 콜백과 무거운 연산을 별도 스레드/프로세스로 분리 — 이미지 수신 자체가 막히지 않게 한다.' },
   { title: '③ 샘플링(throttle)', detail: '모든 프레임을 처리하지 않고 N프레임마다 1번만 처리 — 처리율을 의도적으로 낮춰 큐가 쌓이지 않게 한다.' },
 ];
@@ -58,7 +58,10 @@ export default (w: Window) => {
         if (el) el.textContent = text;
       };
       setText('#qc-rate-val', this.rate.toFixed(2));
-      setText('#qc-reliable-final', `reliable+depth10: ${reliable[N - 1].toFixed(2)}s 지연`);
+      // 차트는 Y_MAX(0.8s)에서 잘리므로, 실제 누적값도 함께 표시
+      const trueFinal = slowdown * (N - 1) * DT;
+      const capped = trueFinal > Y_MAX;
+      setText('#qc-reliable-final', `reliable+depth10: ${reliable[N - 1].toFixed(2)}s 지연${capped ? ` (차트 상한 0.8s에서 잘림, 실제 ≈${trueFinal.toFixed(1)}s)` : ''}`);
       setText('#qc-besteffort-final', `best-effort+depth1: ~${bestEffort[N - 1].toFixed(2)}s (신선 유지)`);
 
       const verdict = this.shadowRoot?.querySelector('#qc-verdict') as HTMLElement;

@@ -49,7 +49,8 @@ export default (w: Window) => {
           const excluded = this.excludeBad && i === BAD_IDX;
           const h = CHART_H - toY(v);
           const color = excluded ? '#cbd5e1' : (v > 1.0 ? '#ef4444' : v > 0.5 ? '#f59e0b' : '#16a34a');
-          return `<rect x="${(i * barW + 1).toFixed(1)}" y="${toY(v).toFixed(1)}" width="${(barW - 2).toFixed(1)}" height="${h.toFixed(1)}" fill="${color}" opacity="${excluded ? 0.35 : 1}"/>`;
+          const num = i === BAD_IDX ? `<text x="${(i * barW + barW / 2).toFixed(1)}" y="${(toY(v) - 4).toFixed(1)}" font-size="9" font-weight="800" fill="#b91c1c" text-anchor="middle">8번</text>` : '';
+          return `<rect x="${(i * barW + 1).toFixed(1)}" y="${toY(v).toFixed(1)}" width="${(barW - 2).toFixed(1)}" height="${h.toFixed(1)}" fill="${color}" opacity="${excluded ? 0.35 : 1}"/>` + num;
         }).join('') +
           `<line x1="0" y1="${(CHART_H - (1.0 / maxV) * CHART_H).toFixed(1)}" x2="${CHART_W}" y2="${(CHART_H - (1.0 / maxV) * CHART_H).toFixed(1)}" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,3"/>` +
           `<line x1="0" y1="${(CHART_H - (0.5 / maxV) * CHART_H).toFixed(1)}" x2="${CHART_W}" y2="${(CHART_H - (0.5 / maxV) * CHART_H).toFixed(1)}" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"/>`;

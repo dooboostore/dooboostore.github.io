@@ -5,13 +5,20 @@ const tagName = 'center-vision-hsv-tuning';
 
 const PLOT_W = 300;
 const PLOT_H = 220;
-const H_MAX = 60; // 표시 범위 (빨강 공 예시라 0~60만 봐도 충분)
+const H_MAX = 179; // OpenCV H 전체 (빨강 이음매 [0,10]∪[170,179] 실습용)
 const S_MAX = 255;
 
 type Point = { h: number; s: number; v: number };
 
+// 결정적 난수 (Park-Miller) — 새로고침해도 같은 점구름, 강의 재현성 보장
+let _seed = 123456789;
+function srand(): number {
+  _seed = (_seed * 16807) % 2147483647;
+  return (_seed - 1) / 2147483646;
+}
+
 function gaussianRand(mean: number, std: number): number {
-  const u1 = Math.random(), u2 = Math.random();
+  const u1 = Math.max(srand(), 1e-9), u2 = srand();
   const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
   return mean + z * std;
 }
@@ -57,14 +64,31 @@ export default (w: Window) => {
       const { hMin, hMax, sMin, sMax, vMin } = this;
       const toX = (h: number) => (h / H_MAX) * PLOT_W;
       const toY = (s: number) => PLOT_H - (s / S_MAX) * PLOT_H;
+      // hMin>hMax면 원형 이음매 랩어라운드 ([hMin,179]∪[0,hMax])
+      const wrap = hMin > hMax;
 
       const setAttr = (sel: string, attr: string, val: string) => this.shadowRoot?.querySelector(sel)?.setAttribute(attr, val);
-      setAttr('#ht-box', 'x', String(toX(hMin)));
-      setAttr('#ht-box', 'y', String(toY(sMax)));
-      setAttr('#ht-box', 'width', String(toX(hMax) - toX(hMin)));
-      setAttr('#ht-box', 'height', String(toY(sMin) - toY(sMax)));
+      if (!wrap) {
+        setAttr('#ht-box', 'x', String(toX(hMin)));
+        setAttr('#ht-box', 'y', String(toY(sMax)));
+        setAttr('#ht-box', 'width', String(toX(hMax) - toX(hMin)));
+        setAttr('#ht-box', 'height', String(toY(sMin) - toY(sMax)));
+        setAttr('#ht-box2', 'width', '0');
+      } else {
+        setAttr('#ht-box', 'x', String(toX(hMin)));
+        setAttr('#ht-box', 'y', String(toY(sMax)));
+        setAttr('#ht-box', 'width', String(PLOT_W - toX(hMin)));
+        setAttr('#ht-box', 'height', String(toY(sMin) - toY(sMax)));
+        setAttr('#ht-box2', 'x', '0');
+        setAttr('#ht-box2', 'y', String(toY(sMax)));
+        setAttr('#ht-box2', 'width', String(toX(hMax)));
+        setAttr('#ht-box2', 'height', String(toY(sMin) - toY(sMax)));
+      }
 
-      const inBox = (p: Point) => p.h >= hMin && p.h <= hMax && p.s >= sMin && p.s <= sMax && p.v >= vMin;
+      const inBox = (p: Point) => {
+        const hOk = wrap ? (p.h >= hMin || p.h <= hMax) : (p.h >= hMin && p.h <= hMax);
+        return hOk && p.s >= sMin && p.s <= sMax && p.v >= vMin;
+      };
 
       const setText = (sel: string, text: string) => {
         const el = this.shadowRoot?.querySelector(sel) as HTMLElement;
@@ -100,6 +124,18 @@ export default (w: Window) => {
     @addEventListener('#ht-vmin', 'input')
     onVMin(e: Event) { this.vMin = Number((e.target as HTMLInputElement).value) || 0; this.refresh(); }
 
+    @addEventListener('#ht-seam', 'click')
+    onSeamPreset() {
+      this.hMin = 170; this.hMax = 10;
+      const set = (sel: string, v: number) => {
+        const el = this.shadowRoot?.querySelector(sel) as HTMLInputElement;
+        if (el) el.value = String(v);
+      };
+      set('#ht-hmin', 170);
+      set('#ht-hmax', 10);
+      this.refresh();
+    }
+
     @onConnectedAfter
     onReady() { this.refresh(); }
 
@@ -132,18 +168,23 @@ export default (w: Window) => {
           HSV 범위에 "정답"은 없습니다 — 물체의 색 샘플이 조명마다 조금씩 다른 곳에 찍히고, 배경에도 비슷한 색이 섞여 있기 때문입니다. 좋은 범위란 <b>물체의 세 조명 구름을 전부 덮으면서 배경은 최대한 피하는</b> 상자를 찾는 것 — 감이 아니라 데이터를 보고 협상하는 작업입니다. 스마트폰 카메라 앱의 "그림자 보정" 슬라이더가 하는 일도 결국 이 <b>V(명도) 하한 조정</b>과 같습니다.
         </div>
 
-        <div class="math-desc">H/S/V 슬라이더로 빨간 네모(선택 범위)를 움직여서, 세 조명의 물체 구름을 얼마나 덮고 배경을 얼마나 피하는지, V 하한을 올리면 어두운 조명(갈색 점)이 먼저 빠지는지 확인해보세요.</div>
+        <div class="math-desc">H/S/V 슬라이더로 빨간 네모(선택 범위)를 움직여서, 세 조명의 물체 구름을 얼마나 덮고 배경을 얼마나 피하는지, V 하한을 올리면 어두운 조명(갈색 점)이 먼저 빠지는지 확인해보세요. H는 원형이라 <b>H min을 max보다 크게</b> 두면 이음매 랩어라운드([170,179]∪[0,10])가 됩니다 — 아래 버튼으로 빨강 이음매를 한 번에 맞춰보세요.</div>
 
         <div class="ctl"><label>H min <input id="ht-hmin" type="range" min="0" max="${H_MAX}" step="1" value="${this.hMin}"><b id="ht-hmin-val">${this.hMin}</b></label></div>
         <div class="ctl"><label>H max <input id="ht-hmax" type="range" min="0" max="${H_MAX}" step="1" value="${this.hMax}"><b id="ht-hmax-val">${this.hMax}</b></label></div>
         <div class="ctl"><label>S min <input id="ht-smin" type="range" min="0" max="255" step="5" value="${this.sMin}"><b id="ht-smin-val">${this.sMin}</b></label></div>
         <div class="ctl"><label>S max <input id="ht-smax" type="range" min="0" max="255" step="5" value="${this.sMax}"><b id="ht-smax-val">${this.sMax}</b></label></div>
         <div class="ctl"><label>V min(그림자 제거) <input id="ht-vmin" type="range" min="0" max="255" step="5" value="${this.vMin}"><b id="ht-vmin-val">${this.vMin}</b></label></div>
+        <div class="ctl"><button id="ht-seam" style="margin:4px auto;padding:6px 12px;border-radius:16px;border:1.5px solid #bae6fd;background:#f0f9ff;color:#0369a1;font-size:12px;font-weight:700;cursor:pointer">빨강 이음매 [0,10]∪[170,179] 맞추기</button></div>
 
-        <svg viewBox="0 0 ${PLOT_W} ${PLOT_H}">
+        <svg viewBox="0 0 ${PLOT_W} ${PLOT_H + 16}">
           ${dots(BACKGROUND, '#94a3b8', 1.8)}
           ${LIGHTS.map(l => dots(l.points, l.color, 2.2)).join('')}
           <rect id="ht-box" x="0" y="0" width="0" height="0" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="1.5"/>
+          <rect id="ht-box2" x="0" y="0" width="0" height="0" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="2" y="${PLOT_H + 12}" font-size="9" fill="#94a3b8">0</text>
+          <text x="${PLOT_W / 2 - 8}" y="${PLOT_H + 12}" font-size="9" fill="#94a3b8">90</text>
+          <text x="${PLOT_W - 20}" y="${PLOT_H + 12}" font-size="9" fill="#94a3b8">179</text>
         </svg>
         <div class="ht-legend">
           ${LIGHTS.map(l => `<span><span style="color:${l.color}">■</span> ${l.label}</span>`).join('')}

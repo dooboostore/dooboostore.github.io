@@ -185,6 +185,8 @@ async function main() {
     "/ram-price",
     "/gpu-rental",
     "/math",
+    "/ros2",
+    "/ai",
   ];
   const outDir = path.resolve(__dirname, '../dist');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });

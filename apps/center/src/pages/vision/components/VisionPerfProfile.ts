@@ -32,7 +32,7 @@ export default (w: Window) => {
       const factor = this.resScale * this.resScale;
       const stages = STAGES_BASE.map(s => ({ ...s, ms: s.ms * factor }));
       const sum = stages.reduce((a, s) => a + s.ms, 0);
-      const fps = Math.min(30, 1000 / sum);
+      const trueFps = 1000 / sum;
 
       const barsEl = this.shadowRoot?.querySelector('#pf-bars') as HTMLElement;
       if (barsEl) {
@@ -58,7 +58,7 @@ export default (w: Window) => {
       };
       setText('#pf-scale-val', `${this.resScale.toFixed(1)}×`);
       setText('#pf-sum', `합계: ${sum.toFixed(1)}ms`);
-      setText('#pf-fps', `달성 가능 FPS: ${fps.toFixed(1)}`);
+      setText('#pf-fps', trueFps > 30 ? `처리 능력: ${trueFps.toFixed(1)}FPS (30FPS로 제한)` : `달성 가능 FPS: ${trueFps.toFixed(1)}`);
       const headroom = BUDGET_30FPS - sum;
       const verdict = this.shadowRoot?.querySelector('#pf-verdict') as HTMLElement;
       if (verdict) {
@@ -73,7 +73,7 @@ export default (w: Window) => {
     }
 
     @addEventListener('#pf-scale', 'input')
-    onScale(e: Event) { this.resScale = Number((e.target as HTMLInputElement).value); this.refresh(); }
+    onScale(e: Event) { this.resScale = Number((e.target as HTMLInputElement).value) || 1; this.refresh(); }
 
     @onConnectedAfter
     onReady() { this.refresh(); }

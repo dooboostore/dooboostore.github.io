@@ -34,14 +34,15 @@ export default (w: Window) => {
       if (barsEl) {
         const groupW = CHART_W / DISTANCES.length;
         const maxV = 10;
+        const TOP = 20, BH = 140; // 막대 위 숫자 공간 확보
         barsEl.innerHTML = DISTANCES.map((d, i) => {
-          const h = (values[i] / maxV) * CHART_H;
+          const h = (values[i] / maxV) * BH;
           const x = i * groupW + groupW * 0.25;
           const w2 = groupW * 0.5;
           const color = `rgb(${Math.round(107 + (22 - 107) * t)}, ${Math.round(114 + (163 - 114) * t)}, ${Math.round(128 + (74 - 128) * t)})`;
-          return `<rect x="${x.toFixed(1)}" y="${(CHART_H - h).toFixed(1)}" width="${w2.toFixed(1)}" height="${h.toFixed(1)}" fill="${color}"/>` +
-            `<text x="${(x + w2 / 2).toFixed(1)}" y="${(CHART_H - h - 4).toFixed(1)}" font-size="9" fill="#334155" text-anchor="middle">${values[i].toFixed(1)}%</text>` +
-            `<text x="${(x + w2 / 2).toFixed(1)}" y="${CHART_H + 14}" font-size="9" fill="#64748b" text-anchor="middle">${d}</text>`;
+          return `<rect x="${x.toFixed(1)}" y="${(TOP + BH - h).toFixed(1)}" width="${w2.toFixed(1)}" height="${h.toFixed(1)}" fill="${color}"/>` +
+            `<text x="${(x + w2 / 2).toFixed(1)}" y="${(TOP + BH - h - 5).toFixed(1)}" font-size="9" fill="#334155" text-anchor="middle">${values[i].toFixed(1)}%</text>` +
+            `<text x="${(x + w2 / 2).toFixed(1)}" y="${TOP + BH + 14}" font-size="9" fill="#64748b" text-anchor="middle">${d}</text>`;
         }).join('');
       }
 
@@ -73,6 +74,9 @@ export default (w: Window) => {
           .ctl b { min-width:50px; text-align:right; color:#1e293b; }
           svg { display:block; width:100%; max-width:${CHART_W}px; margin:14px auto 4px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0; overflow:visible; }
           .pu-mode { text-align:center; font-size:12.5px; font-weight:700; color:#1e293b; background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:6px 12px; margin-top:16px; }
+          .pu-legend { display:flex; gap:12px; justify-content:center; font-size:11px; color:#64748b; margin-top:6px; flex-wrap:wrap; }
+          .pu-legend span { display:inline-flex; align-items:center; gap:5px; }
+          .sw { width:10px; height:10px; border-radius:2px; display:inline-block; }
           .md { font-size:13px; color:#334155; line-height:1.7; margin-top:12px; border-top:1px solid #f1f5f9; padding-top:10px; }
           .md h2 { font-size:14px; font-weight:800; color:#1e293b; margin:0 0 6px; }
           .md code { background:#f1f5f9; border-radius:4px; padding:1px 5px; font-size:12px; }
@@ -87,6 +91,10 @@ export default (w: Window) => {
         <div class="ctl"><label>보정 적용 <input id="pu-blend" type="range" min="0" max="100" step="5" value="${this.blend}"><b id="pu-blend-val">${this.blend}%</b></label></div>
 
         <svg viewBox="0 0 ${CHART_W} ${CHART_H + 18}"><g id="pu-bars"></g></svg>
+        <div class="pu-legend">
+          <span><i class="sw" style="background:rgb(107,114,128)"></i>근사 K (회색)</span>
+          <span><i class="sw" style="background:rgb(22,163,74)"></i>측정 K + 왜곡 보정 (초록)</span>
+        </div>
         <div class="pu-mode" id="pu-mode"></div>
 
         <div class="md">${marked.parse(MD) as string}</div>

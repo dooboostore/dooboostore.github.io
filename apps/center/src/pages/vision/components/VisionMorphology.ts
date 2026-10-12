@@ -118,7 +118,7 @@ export default (w: Window) => {
 
   @elementDefine(tagName, { window: w })
   class VisionMorphology extends w.HTMLElement {
-    private threshold = 128;
+    private threshold = 100; // 배경(0~120) 노이즈가 살짝 올라오는 값 — 첫 화면부터 "지저분한 마스크" 스토리
     private kernelSize = 3;
     private scene: number[][] = generateGrayscaleScene();
 

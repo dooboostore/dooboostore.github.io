@@ -81,6 +81,12 @@ export default (w: Window) => {
       setAttr('#ds-floor-line', 'y2', String(floorY));
       setAttr('#ds-floor-hit', 'cx', String(hitX));
       setAttr('#ds-floor-hit', 'cy', String(hitY));
+      setAttr('#ds-lbl-cam', 'x', String(camX + 8));
+      setAttr('#ds-lbl-cam', 'y', String(actualCamY + 3));
+      setAttr('#ds-lbl-hit', 'x', String(hitX));
+      setAttr('#ds-lbl-hit', 'y', String(hitY - 10));
+      const lblHit = this.shadowRoot?.querySelector('#ds-lbl-hit') as HTMLElement;
+      if (lblHit) lblHit.textContent = `d=${dFloor.toFixed(2)}m`;
     }
 
     @addEventListener('#ds-fx', 'input')
@@ -135,9 +141,10 @@ export default (w: Window) => {
           <div class="ds-method-title">① 실제 크기를 안다 (PnP와 동일 원리)</div>
           <div class="ctl"><label>fx <input id="ds-fx" type="range" min="200" max="1000" step="10" value="${this.fx}"><b id="ds-fx-val">${this.fx}</b></label></div>
           <div class="ctl"><label>실제 폭 W <input id="ds-w" type="range" min="0.02" max="0.3" step="0.01" value="${this.knownWidth}"><b id="ds-w-val">${(this.knownWidth * 100).toFixed(0)}cm</b></label></div>
-          <div class="ctl"><label>픽셀 폭 w <input id="ds-wpx" type="range" min="10" max="200" step="1" value="${this.pixelWidth}"><b id="ds-wpx-val">${this.pixelWidth}px</b></label></div>
+          <div class="ctl"><label>픽셀 폭 w <input id="ds-wpx" type="range" min="10" max="170" step="1" value="${this.pixelWidth}"><b id="ds-wpx-val">${this.pixelWidth}px</b></label></div>
           <canvas id="ds-ball" width="${BALL_CANVAS_W}" height="${BALL_CANVAS_H}"></canvas>
           <div class="ds-formula" id="ds-formula1"></div>
+          <div class="ds-depth-note">※ 이 탭의 fx 기본값(600)은 예시 카메라입니다(PnP 탭의 300과 다름) — 카메라마다 K가 다르다는 17강 얘기 그대로, 값보다 식의 구조를 보세요.</div>
         </div>
 
         <div class="ds-method">
@@ -154,6 +161,8 @@ export default (w: Window) => {
             <circle id="ds-cam-dot" cx="0" cy="0" r="5" fill="#1e293b"/>
             <line id="ds-floor-ray" x1="0" y1="0" x2="0" y2="0" stroke="#0369a1" stroke-width="2"/>
             <circle id="ds-floor-hit" cx="0" cy="0" r="5" fill="#22c55e"/>
+            <text id="ds-lbl-cam" x="0" y="0" font-size="9" fill="#1e293b">카메라(h)</text>
+            <text id="ds-lbl-hit" x="0" y="0" font-size="9" fill="#15803d" text-anchor="middle">d</text>
           </svg>
           <div class="ds-formula" id="ds-formula3"></div>
           <div class="ds-depth-note"><b>자율주행차가 "차선 위 흰 물체"까지의 거리를 재는 방식</b>이 바로 이것입니다 — 차는 바닥(도로)이 평평하다고 가정하고, 카메라 높이·기울기만 알면 화면 속 아무 점이든 바닥과 만나는 지점의 실제 거리를 계산합니다. 도로에 턱이나 과속방지턱이 있으면(바닥 가정이 깨지면) 이 거리가 틀어집니다.</div>

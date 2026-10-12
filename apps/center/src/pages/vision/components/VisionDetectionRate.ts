@@ -48,8 +48,8 @@ const ZONE_POS: { x: number; y: number }[] = [
 ];
 
 function farAvgAt(minArea: number): number {
-  const boost = Math.max(0, (DEFAULT_MIN_AREA - minArea) * 0.12);
-  return ROWS.reduce((s, r) => s + Math.min(100, r.base[2] + boost), 0) / ROWS.length;
+  const boost = (DEFAULT_MIN_AREA - minArea) * 0.12; // 낮추면 +회복, 올리면 −악화
+  return ROWS.reduce((s, r) => s + Math.min(100, Math.max(0, r.base[2] + boost)), 0) / ROWS.length;
 }
 
 export default (w: Window) => {
@@ -62,15 +62,15 @@ export default (w: Window) => {
     private selectedDist = 2; // 0=근거리,1=중거리,2=원거리 — 공간 다이어그램에 보여줄 거리
 
     private refresh() {
-      // min_area를 낮출수록 원거리(index 2) 열의 검출률이 회복된다 (거리 적응형 개선 시뮬레이션).
-      const boost = Math.max(0, (DEFAULT_MIN_AREA - this.minArea) * 0.12);
+      // min_area를 낮추면 원거리(index 2) 열이 회복되고, 올리면 망가진다 (거리 적응형 개선 시뮬레이션).
+      const boost = (DEFAULT_MIN_AREA - this.minArea) * 0.12;
 
       const tableEl = this.shadowRoot?.querySelector('#dr-table') as HTMLElement;
       if (tableEl) {
         const header = `<tr><th></th>${DISTANCES.map(d => `<th>${d}</th>`).join('')}</tr>`;
         const rows = ROWS.map(row => {
           const cells = row.base.map((rate, ci) => {
-            const adjusted = ci === 2 ? Math.min(100, rate + boost) : rate;
+            const adjusted = ci === 2 ? Math.min(100, Math.max(0, rate + boost)) : rate;
             return `<td style="background:${rateColor(adjusted)}">${adjusted.toFixed(0)}%</td>`;
           }).join('');
           return `<tr><th>${row.label}</th>${cells}</tr>`;
@@ -78,12 +78,14 @@ export default (w: Window) => {
         tableEl.innerHTML = header + rows;
       }
 
-      // 원거리 열 평균 검출률 상승 → 면적 필터로 인한 실패 비율이 줄고, 나머지 원인이 상대적으로 늘어난다.
-      const shrink = Math.min(30, boost * 0.8);
+      // 원거리 열 평균이 오르면 면적 필터 실패 비중이 줄고(나머지 상대 증가), 내리면 그 반대
+      const shrink = Math.min(40, Math.max(-30, boost * 0.8));
       const causes = CAUSES_BASE.map(c => ({ ...c }));
-      causes[0].pct = Math.max(10, causes[0].pct - shrink);
+      causes[0].pct = Math.min(90, Math.max(10, causes[0].pct - shrink));
       const redistribute = (CAUSES_BASE[0].pct - causes[0].pct) / 3;
-      for (let i = 1; i < causes.length; i++) causes[i].pct += redistribute;
+      for (let i = 1; i < causes.length; i++) causes[i].pct = Math.max(0, causes[i].pct + redistribute);
+      const total = causes.reduce((s, c) => s + c.pct, 0);
+      causes.forEach(c => { c.pct = (c.pct / total) * 100; });
 
       const pieEl = this.shadowRoot?.querySelector('#dr-pie') as HTMLElement;
       if (pieEl) {
@@ -118,13 +120,14 @@ export default (w: Window) => {
         const MW = 220, MH = 150;
         mapEl.innerHTML = `<rect x="2" y="2" width="${MW - 4}" height="${MH - 4}" rx="8" fill="#0f172a"/>` +
           ROWS.map((row, i) => {
-            const rate = this.selectedDist === 2 ? Math.min(100, row.base[2] + boost) : row.base[this.selectedDist];
+            const rate = this.selectedDist === 2 ? Math.min(100, Math.max(0, row.base[2] + boost)) : row.base[this.selectedDist];
             const pos = ZONE_POS[i];
             const cx = pos.x * MW, cy = pos.y * MH;
             const r = 11 + (rate / 100) * 8;
+            const labelY = Math.min(cy + r + 11, MH - 3);
             return `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" fill="${rateColor(rate)}"/>` +
               `<text x="${cx.toFixed(1)}" y="${(cy + 3).toFixed(1)}" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">${rate.toFixed(0)}</text>` +
-              `<text x="${cx.toFixed(1)}" y="${(cy + r + 11).toFixed(1)}" font-size="8" fill="#94a3b8" text-anchor="middle">${row.label}</text>`;
+              `<text x="${cx.toFixed(1)}" y="${labelY.toFixed(1)}" font-size="8" fill="#94a3b8" text-anchor="middle">${row.label}</text>`;
           }).join('');
       }
 
@@ -132,7 +135,7 @@ export default (w: Window) => {
       const curveEl = this.shadowRoot?.querySelector('#dr-curve') as HTMLElement;
       if (curveEl) {
         const CW = 220, CH = 90;
-        const MIN_A = 50, MAX_A = DEFAULT_MIN_AREA;
+        const MIN_A = 50, MAX_A = 600;
         const steps = 25;
         const pts: string[] = [];
         for (let i = 0; i <= steps; i++) {
@@ -144,7 +147,17 @@ export default (w: Window) => {
         }
         const curX = ((this.minArea - MIN_A) / (MAX_A - MIN_A)) * CW;
         const curY = CH - (avgFar / 100) * CH;
-        curveEl.innerHTML = `<polyline points="${pts.join(' ')}" fill="none" stroke="#0369a1" stroke-width="2"/>` +
+        const grid = [60, 80, 100].map(v => {
+          const y = CH - (v / 100) * CH;
+          return `<line x1="0" y1="${y}" x2="${CW}" y2="${y}" stroke="#e2e8f0" stroke-width="1"/>` +
+            `<text x="2" y="${y - 2}" font-size="7" fill="#94a3b8">${v}%</text>`;
+        }).join('');
+        const baseX = ((DEFAULT_MIN_AREA - MIN_A) / (MAX_A - MIN_A)) * CW;
+        curveEl.innerHTML = grid +
+          `<line x1="${baseX}" y1="0" x2="${baseX}" y2="${CH}" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>` +
+          `<text x="${baseX + 2}" y="9" font-size="7" fill="#94a3b8">기준 300</text>` +
+          `<text x="2" y="${CH - 3}" font-size="7" fill="#94a3b8">50 ← min_area → 600</text>` +
+          `<polyline points="${pts.join(' ')}" fill="none" stroke="#0369a1" stroke-width="2"/>` +
           `<circle cx="${curX.toFixed(1)}" cy="${curY.toFixed(1)}" r="4" fill="#ef4444"/>`;
       }
     }
@@ -203,9 +216,9 @@ export default (w: Window) => {
           검출기를 다 만들었으면 "되는 것 같다"가 아니라 숫자로 평가해야 합니다. 화면의 <b>5영역 × 3거리</b>에 물체를 두고 검출률을 재면, 중앙·근거리만 봐서는 안 보이는 <b>사각지대</b>(구석·원거리)가 드러납니다.
         </div>
 
-        <div class="math-desc">min_area를 낮춰보면서 원거리(작게 찍히는 조건) 검출률이 어떻게 회복되는지, 그만큼 실패 원인 중 "면적 필터" 비중이 줄어드는지 확인해보세요.</div>
+        <div class="math-desc">min_area를 낮춰보면서 원거리(작게 찍히는 조건) 검출률이 어떻게 회복되는지, 올리면 어떻게 망가지는지, 그만큼 실패 원인 중 "면적 필터" 비중이 어떻게 바뀌는지 확인해보세요.</div>
 
-        <div class="ctl"><label>min_area <input id="dr-minarea" type="range" min="50" max="${DEFAULT_MIN_AREA}" step="10" value="${this.minArea}"><b id="dr-minarea-val">${this.minArea}</b></label></div>
+        <div class="ctl"><label>min_area <input id="dr-minarea" type="range" min="50" max="600" step="10" value="${this.minArea}"><b id="dr-minarea-val">${this.minArea}</b></label></div>
 
         <div class="dr-row">
           <table id="dr-table"></table>

@@ -39,7 +39,8 @@ export default (w: Window) => {
     private badMatch = false;
 
     private refresh() {
-      // 재투영(빨간 ○): 참 포즈로 계산한 "모델이 예측하는" 픽셀 — 항상 정확.
+      // 재투영(빨간 ○): 참 포즈로 계산한 "모델이 예측하는" 픽셀 — 데모라 참 포즈를 쓰지만,
+      // 실전은 추정 R,t로 투영하므로 오차가 0이 아니다. "겹칠수록 좋은 포즈"라는 판정 원리는 동일.
       const predicted = CORNERS.map(([lx, ly]) => project(lx, ly));
       // 관측(초록 +): 실제 검출 결과 — 작은 노이즈가 항상 섞이고, "잘못된 대응"이면 코너 하나가 옆 코너 자리와 통째로 뒤바뀜.
       const seed = 12345;
@@ -145,7 +146,7 @@ export default (w: Window) => {
           로봇이 물건을 <b>실제로 집기 직전</b>에 "포즈 계산이 맞았는지" 확인하는 마지막 체크포인트가 바로 이 재투영 오차입니다 — 틀린 포즈로 팔을 뻗으면 허공을 집거나 물건을 쳐서 떨어뜨립니다.
         </div>
 
-        <div class="math-desc">초록 +는 관측된 코너, 빨간 ○는 (참) 포즈로 다시 투영한 코너입니다. 둘이 겹칠수록 좋은 포즈입니다.</div>
+        <div class="math-desc">초록 +는 관측된 코너, 빨간 ○는 (참) 포즈로 다시 투영한 코너입니다. 둘이 겹칠수록 좋은 포즈입니다. ※ 데모는 참 포즈를 쓰지만 실전은 추정 R,t로 투영하므로, "0에 가까울수록 좋다"는 판정으로 읽으세요.</div>
 
         <div class="ctl"><label>검출 노이즈 <input id="re-noise" type="range" min="0" max="2" step="0.1" value="${this.noisePx}"><b id="re-noise-val">${this.noisePx.toFixed(1)}px</b></label></div>
         <label class="re-checkbox"><input id="re-badmatch" type="checkbox" ${this.badMatch ? 'checked' : ''}> 대응점 하나를 일부러 잘못 매칭(대각선 코너와 뒤바꿈)</label>

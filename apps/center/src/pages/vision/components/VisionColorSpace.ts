@@ -169,6 +169,7 @@ export default (w: Window) => {
       const { hue, sat } = wheelPointToHs(canvas, e.clientX, e.clientY);
       this.hue = hue;
       this.sat = sat;
+      this.syncSliders();
       this.refresh();
     }
 
@@ -178,23 +179,35 @@ export default (w: Window) => {
       const rect = bar.getBoundingClientRect();
       const frac = 1 - Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
       this.val = Math.round(frac * 255);
+      this.syncSliders();
       this.refresh();
     }
 
-    @addEventListener('#cs-wheel', 'mousedown')
+    /** 휠·바 드래그가 바꾸는 값을 슬라이더 썸에도 반영 */
+    private syncSliders() {
+      const set = (sel: string, v: number) => {
+        const el = this.shadowRoot?.querySelector(sel) as HTMLInputElement;
+        if (el) el.value = String(v);
+      };
+      set('#cs-hue', this.hue);
+      set('#cs-sat', this.sat);
+      set('#cs-val', this.val);
+    }
+
+    @addEventListener('#cs-wheel', 'pointerdown')
     onWheelDown(e: MouseEvent) { this.wheelDragging = true; this.setFromWheel(e); }
-    @addEventListener('#cs-wheel', 'mousemove')
+    @addEventListener('#cs-wheel', 'pointermove')
     onWheelMove(e: MouseEvent) { if (this.wheelDragging) this.setFromWheel(e); }
-    @addEventListener('#cs-wheel', 'mouseup')
+    @addEventListener('#cs-wheel', 'pointerup')
     onWheelUp() { this.wheelDragging = false; }
     @addEventListener('#cs-wheel', 'mouseleave')
     onWheelLeave() { this.wheelDragging = false; }
 
-    @addEventListener('#cs-vbar', 'mousedown')
+    @addEventListener('#cs-vbar', 'pointerdown')
     onVBarDown(e: MouseEvent) { this.vBarDragging = true; this.setFromVBar(e); }
-    @addEventListener('#cs-vbar', 'mousemove')
+    @addEventListener('#cs-vbar', 'pointermove')
     onVBarMove(e: MouseEvent) { if (this.vBarDragging) this.setFromVBar(e); }
-    @addEventListener('#cs-vbar', 'mouseup')
+    @addEventListener('#cs-vbar', 'pointerup')
     onVBarUp() { this.vBarDragging = false; }
     @addEventListener('#cs-vbar', 'mouseleave')
     onVBarLeave() { this.vBarDragging = false; }
@@ -209,7 +222,13 @@ export default (w: Window) => {
     onLight(e: Event) { this.lightingFactor = Number((e.target as HTMLInputElement).value) || 0; this.refresh(); }
 
     @onConnectedAfter
-    onReady() { this.refresh(); }
+    onReady() {
+      this.refresh();
+      // 창 밖에서 놓아도 드래그가 풀리게 (캔버스 mouseleave만으로는 부족)
+      const doc = this.ownerDocument;
+      doc?.addEventListener('mouseup', () => { this.wheelDragging = false; this.vBarDragging = false; });
+      doc?.addEventListener('pointerup', () => { this.wheelDragging = false; this.vBarDragging = false; });
+    }
 
     @onConnectedBodyShadow
     render() {

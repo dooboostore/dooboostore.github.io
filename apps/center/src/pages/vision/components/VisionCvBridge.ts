@@ -47,6 +47,11 @@ export default (w: Window) => {
           verdict.style.background = '#fee2e2'; verdict.style.color = '#991b1b'; verdict.style.borderColor = '#fecaca';
         }
       }
+      // 틀린 방식을 켜면 오염되는 경로(배관 박스+번역 화살표)를 빨강으로 — 수치가 아니라 "어디가" 틀렸는지 표시
+      this.shadowRoot?.querySelectorAll('.cb-box.cb-node').forEach(el =>
+        (el as HTMLElement).classList.toggle('cb-tainted', this.naive));
+      this.shadowRoot?.querySelectorAll('.cb-arrow-mid').forEach(el =>
+        (el as HTMLElement).classList.toggle('cb-tainted-arrow', this.naive));
     }
 
     @addEventListener('#cb-delay', 'input')
@@ -72,7 +77,9 @@ export default (w: Window) => {
           .cb-pure { background:#dcfce7; border:1.5px solid #86efac; }
           .cb-pure-title { font-weight:800; color:#166534; margin-bottom:6px; }
           .cb-line { color:#475569; margin-bottom:2px; }
-          .cb-arrow-mid { display:flex; align-items:center; font-size:20px; color:#94a3b8; }
+          .cb-arrow-mid { display:flex; align-items:center; font-size:20px; color:#94a3b8; transition:color .15s; }
+          .cb-tainted { border-color:#ef4444 !important; background:#fef2f2 !important; }
+          .cb-tainted-arrow { color:#ef4444 !important; }
           .ctl { display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:#475569; margin-top:10px; }
           .ctl label { display:flex; align-items:center; gap:8px; flex:1; }
           .ctl input[type="range"] { flex:1; }

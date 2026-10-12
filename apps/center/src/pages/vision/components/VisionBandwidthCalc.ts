@@ -74,6 +74,23 @@ export default (w: Window) => {
     @addEventListener('#bw-fps', 'input') onFps(e: Event) { this.fps = Number((e.target as HTMLInputElement).value); this.refresh(); }
     @addEventListener('#bw-ratio', 'input') onRatio(e: Event) { this.compressRatio = Number((e.target as HTMLInputElement).value); this.refresh(); }
 
+    @addEventListener('.bw-preset', 'click', { delegate: true })
+    onPreset(e: Event) {
+      const btn = (e.target as HTMLElement).closest('.bw-preset') as HTMLElement;
+      if (!btn) return;
+      this.width = Number(btn.dataset.w);
+      this.height = Number(btn.dataset.h);
+      this.fps = Number(btn.dataset.fps ?? this.fps);
+      const set = (sel: string, v: number) => {
+        const el = this.shadowRoot?.querySelector(sel) as HTMLInputElement;
+        if (el) el.value = String(v);
+      };
+      set('#bw-w', this.width);
+      set('#bw-h', this.height);
+      set('#bw-fps', this.fps);
+      this.refresh();
+    }
+
     @onConnectedAfter
     onReady() { this.refresh(); }
 
@@ -94,6 +111,9 @@ export default (w: Window) => {
           .bw-vals { display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:12px; text-align:center; }
           .bw-vals b { display:block; font-size:14px; }
           .bw-verdict { text-align:center; font-size:12px; font-weight:700; border-radius:8px; padding:8px 12px; margin-top:10px; border:1px solid; }
+          .bw-presets { display:flex; gap:6px; justify-content:center; margin-top:10px; flex-wrap:wrap; }
+          .bw-preset { padding:5px 12px; border-radius:14px; border:1.5px solid #bae6fd; background:#f0f9ff; color:#0369a1; font-size:11.5px; font-weight:700; cursor:pointer; }
+          .bw-preset:hover { border-color:#0369a1; }
           .md { font-size:13px; color:#334155; line-height:1.7; margin-top:12px; border-top:1px solid #f1f5f9; padding-top:10px; }
           .md h2 { font-size:14px; font-weight:800; color:#1e293b; margin:0 0 6px; }
           .md code { background:#f1f5f9; border-radius:4px; padding:1px 5px; font-size:12px; }
@@ -109,6 +129,12 @@ export default (w: Window) => {
         <div class="ctl"><label>압축률(1/N) <input id="bw-ratio" type="range" min="5" max="30" step="1" value="${this.compressRatio}"><b id="bw-ratio-val">1/${this.compressRatio}</b></label></div>
 
         <div class="bw-formula" id="bw-formula"></div>
+
+        <div class="bw-presets">
+          <button class="bw-preset" data-w="640" data-h="480" data-fps="30">480p@30</button>
+          <button class="bw-preset" data-w="1280" data-h="720" data-fps="30">720p@30</button>
+          <button class="bw-preset" data-w="1280" data-h="720" data-fps="15">720p@15 (fps 절반)</button>
+        </div>
 
         <svg viewBox="0 0 260 150"><g id="bw-bars"></g></svg>
 

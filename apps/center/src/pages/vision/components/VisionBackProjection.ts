@@ -41,13 +41,14 @@ export default (w: Window) => {
       setText('#bp-x', `x = (${this.cu}−${CU}) × ${Z.toFixed(2)} / ${FX} = ${x.toFixed(3)}m`);
       setText('#bp-err', `1px 검출 오차 → 거리 오차 ≈ ${(dZ * 1000).toFixed(1)}mm`);
 
-      // SVG: 카메라 원점 → 공 위치
+      // SVG: 카메라 원점 → 공 위치 (화면 밖 좌표는 변에 붙임 — 수치는 그대로 표시)
       const SVG_W = 280, SVG_H = 140;
       const originX = 20, originY = SVG_H / 2;
       const scale = 90; // px per meter
       const ballX = Math.min(originX + Z * scale, SVG_W - 15);
-      const ballY = originY - (x * scale) / 2;
-      const ballR = Math.max(4, Math.min(22, (this.diameter * scale) / 2));
+      const ballY = Math.min(SVG_H - 15, Math.max(15, originY - (x * scale) / 2));
+      // 원의 크기도 원근 반영: r_px를 깊이 Z에서의 미터로 되돌린 뒤 스케일
+      const ballR = Math.max(2, Math.min(22, (this.rPx * Z * scale) / FX));
 
       const scene = this.shadowRoot?.querySelector('#bp-scene') as HTMLElement;
       if (scene) {
@@ -59,17 +60,19 @@ export default (w: Window) => {
           `<text x="${ballX.toFixed(1)}" y="${(ballY - ballR - 6).toFixed(1)}" font-size="9" fill="#dc2626" text-anchor="middle">Z=${Z.toFixed(2)}m</text>`;
       }
 
-      // 거리별 오차 증폭 막대 (가까이/중간/멀리의 동일 1px 오차)
+      // 거리별 오차 증폭 막대 (가까이/중간/멀리의 동일 1px 오차) — 현재 r_px와 가장 가까운 막대 강조
       const samples = [80, 40, 15]; // r_px 큼(가까움)→작음(멀리)
       const errs = samples.map(r => Math.abs((FX * this.diameter) / (2 * r * r)) * 1000);
       const maxErr = Math.max(...errs, 1);
+      let best = 0;
+      samples.forEach((r, i) => { if (Math.abs(r - this.rPx) < Math.abs(samples[best] - this.rPx)) best = i; });
       const barsEl = this.shadowRoot?.querySelector('#bp-err-bars') as HTMLElement;
       if (barsEl) {
         const BW = 70, BH = 70, GAP = 10;
         barsEl.innerHTML = samples.map((r, i) => {
           const h = (errs[i] / maxErr) * BH;
           const x0 = i * (BW + GAP) + 10;
-          const highlight = r === this.rPx || Math.abs(r - this.rPx) < 5;
+          const highlight = i === best;
           return `<rect x="${x0}" y="${(BH - h + 10).toFixed(1)}" width="${BW}" height="${h.toFixed(1)}" fill="${highlight ? '#0369a1' : '#cbd5e1'}"/>` +
             `<text x="${x0 + BW / 2}" y="${(BH + 24).toFixed(1)}" font-size="9" fill="#334155" text-anchor="middle">r=${r}px</text>` +
             `<text x="${x0 + BW / 2}" y="${(BH - h + 4).toFixed(1)}" font-size="9" fill="#1e293b" text-anchor="middle">${errs[i].toFixed(1)}mm</text>`;

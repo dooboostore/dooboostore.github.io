@@ -4,7 +4,7 @@ import { marked } from 'marked';
 const tagName = 'center-vision-pipeline-validation';
 
 const DISTANCES = ['30cm', '50cm', '80cm'];
-const A_ERR_BASE = [1.1, 1.3, 1.8]; // 마커 PnP 오차%
+const A_ERR_BASE = [1.1, 1.4, 1.9]; // 마커 PnP 오차% (calib-pnp-upgrade 탭과 동일)
 const B_ERR_BASE = [3.2, 4.1, 6.3]; // 색+크기 오차%
 const N_SCATTER = 40;
 const N_HIST = 30;
@@ -34,13 +34,13 @@ export default (w: Window) => {
     private refresh() {
       const n = this.noise;
 
-      // ① 거리별 오차 막대
+      // ① 거리별 오차 막대 (스케일은 현재 최대값에 맞춤 — 노이즈를 올려도 넘치지 않음)
       const aErr = A_ERR_BASE.map(v => v * n);
       const bErr = B_ERR_BASE.map(v => v * n);
       const barsEl = this.shadowRoot?.querySelector('#pv-bars') as HTMLElement;
       if (barsEl) {
         const CW = 180, CH = 100;
-        const maxV = 12;
+        const maxV = Math.max(12, ...aErr, ...bErr) * 1.1;
         const groupW = CW / DISTANCES.length;
         barsEl.innerHTML = DISTANCES.map((d, i) => {
           const ha = (aErr[i] / maxV) * CH, hb = (bErr[i] / maxV) * CH;
@@ -67,9 +67,9 @@ export default (w: Window) => {
         scatterEl.innerHTML = dots;
       }
 
-      // ③ bag 재생 지연 히스토그램
+      // ③ bag 재생 지연 히스토그램 (나쁜 환경일수록 평균도 밀림)
       const histEl = this.shadowRoot?.querySelector('#pv-hist') as HTMLElement;
-      let meanDelay = 44;
+      const meanDelay = Math.round(44 * Math.sqrt(n));
       if (histEl) {
         const HW = 180, HH = 90;
         const bins = new Array(N_HIST).fill(0);

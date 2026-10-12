@@ -90,7 +90,7 @@ function rgbToHsvCv(r: number, g: number, b: number): [number, number, number] {
     else h = 60 * ((rn - gn) / delta + 4);
   }
   if (h < 0) h += 360;
-  const hCv = Math.round(h / 2);
+  const hCv = Math.round(h / 2) % 180; // h≈360°는 0°와 같은 빨강 — 180 경계 래핑
   const sCv = max === 0 ? 0 : Math.round((delta / max) * 255);
   const vCv = Math.round(max * 255);
   return [hCv, sCv, vCv];
@@ -194,7 +194,7 @@ function drawOverlay(canvas: HTMLCanvasElement, grid: ColorGrid, mask: boolean[]
       const i = (y * W + x) * 4;
       if (mask[y][x]) {
         img.data[i] = Math.round(grid.r[y][x] * 0.4 + 60);
-        img.data[i + 1] = Math.round(grid.g[y][x] * 0.4 + 180);
+        img.data[i + 1] = Math.min(255, Math.round(grid.g[y][x] * 0.4 + 180));
         img.data[i + 2] = Math.round(grid.b[y][x] * 0.4 + 40);
         if (x < minX) minX = x; if (x > maxX) maxX = x;
         if (y < minY) minY = y; if (y > maxY) maxY = y;
@@ -313,8 +313,8 @@ export default (w: Window) => {
         </style>
 
         <div class="pl-intro">
-          지금까지 본 블러·HSV·이진화·모폴로지를 전부 이어 붙이면 "색상 객체 검출기"가 됩니다: <b>BGR → 블러 → HSV 변환 → inRange(색 범위) → 열림 → 닫힘 → 깨끗한 마스크</b>. 노이즈 낀 장면에서 빨간 공 하나를 찾는 전체 과정을 단계별로 직접 비교해보세요.<br><br>
-          이 일곱 단계가 19강에서는 코드 15줄이 되고, 컨투어(윤곽선) 추출만 더하면 완성된 검출기가 됩니다. 로봇 팔이 빨간 블록을 집기 전 "어디 있는지"를 찾는 첫 단계가 바로 이것이고, 그 중심 좌표는 18강 PnP·22강 통합 파이프라인에서 3D 포즈로 승격됩니다.
+          지금까지 본 블러·HSV·이진화·모폴로지를 전부 이어 붙이면 "색상 객체 검출기"가 됩니다: <b>BGR → 블러 → inRange(HSV) → 열림 → 닫힘 → 깨끗한 마스크</b>. 노이즈 낀 장면에서 빨간 공 하나를 찾는 전체 과정을 단계별로 직접 비교해보세요.<br><br>
+          이 여섯 단계가 19강에서는 코드 15줄이 되고, 컨투어(윤곽선) 추출만 더하면 완성된 검출기가 됩니다. 로봇 팔이 빨간 블록을 집기 전 "어디 있는지"를 찾는 첫 단계가 바로 이것이고, 그 중심 좌표는 18강 PnP·22강 통합 파이프라인에서 3D 포즈로 승격됩니다.
         </div>
 
         <div class="math-desc">빨간 공을 찾는 전체 파이프라인 — 각 단계를 거칠 때마다 마스크가 어떻게 깨끗해지는지 비교해보세요.</div>

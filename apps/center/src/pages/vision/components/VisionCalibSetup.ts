@@ -9,6 +9,12 @@ type ShotType = 'front' | 'tilt' | 'far';
 const TYPE_LABEL: Record<ShotType, string> = { front: '정면', tilt: '기울임', far: '원거리' };
 const TYPE_ICON: Record<ShotType, string> = { front: '□', tilt: '◇', far: '○' };
 
+// f·Z 바꿔치기 데모용 (보드 반폭 1m 정사각, 화면 중앙 배치)
+const DEMO_CX = 160;
+const DEMO_CY = 75;
+const DEMO_F1 = 300;
+const DEMO_Z1 = 5;
+
 const MD = `
 ## 왜 체커보드를 여러 장 찍는가
 - 미지수: **K 4개**(fx, fy, cx, cy) + **왜곡 5개**(k1,k2,p1,p2,k3) + **장마다 포즈 6개**(R,t) → 사진 N장이면 \`9 + 6N\`개. 관측은 장당 코너 54개 × 2 = **108개 구속**/장.
@@ -32,8 +38,23 @@ export default (w: Window) => {
       tilt: new Array(9).fill(0),
       far: new Array(9).fill(0),
     };
+    // 바꿔치기 데모 상태 — 초기값이 바로 "정면 트릭" (f×2, Z×2 → 같은 영상)
+    private f2 = 600;
+    private z2 = 10;
+    private tilt2 = 0;
 
     private zoneTotal(i: number) { return this.shots.front[i] + this.shots.tilt[i] + this.shots.far[i]; }
+
+    /** 보드 꼭대기 4모서리 투영 (tilt=수직축 회전 deg) */
+    private projQuad(f: number, Z: number, tiltDeg: number): [number, number][] {
+      const t = (tiltDeg * Math.PI) / 180;
+      const cos = Math.cos(t), sin = Math.sin(t);
+      return [[1, 1], [-1, 1], [-1, -1], [1, -1]].map(([bx, by]) => {
+        const lat = bx * cos;
+        const dep = Z + bx * sin;
+        return [DEMO_CX + (f * lat) / dep, DEMO_CY + (f * by) / dep];
+      });
+    }
 
     private refresh() {
       const totals = { front: 0, tilt: 0, far: 0 };
@@ -46,7 +67,9 @@ export default (w: Window) => {
       const observations = CORNERS * 2 * N;
 
       this.shadowRoot?.querySelectorAll('.cs-mode-btn').forEach(el => {
-        (el as HTMLElement).classList.toggle('active', (el as HTMLElement).dataset.type === this.mode);
+        const t = (el as HTMLElement).dataset.type as ShotType;
+        (el as HTMLElement).classList.toggle('active', t === this.mode);
+        (el as HTMLElement).textContent = `${TYPE_ICON[t]} ${TYPE_LABEL[t]} (${totals[t]})`;
       });
 
       this.shadowRoot?.querySelectorAll('.cs-zone').forEach((el, i) => {
@@ -90,6 +113,39 @@ export default (w: Window) => {
         verdict.style.color = allOk ? '#166534' : '#991b1b';
         verdict.style.borderColor = allOk ? '#bbf7d0' : '#fecaca';
       }
+
+      // ---- 바꿔치기 데모: 빨강=고정(정면 f=300/Z=5), 파랑=조절 ----
+      const fixed = this.projQuad(DEMO_F1, DEMO_Z1, 0);
+      const vari = this.projQuad(this.f2, this.z2, this.tilt2);
+      const setPts = (sel: string, pts: [number, number][]) => {
+        this.shadowRoot?.querySelector(sel)?.setAttribute('points', pts.map(p => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' '));
+      };
+      setPts('#cs-fixed', fixed);
+      setPts('#cs-var', vari);
+      const diff = fixed.reduce((s, p, i) => s + Math.hypot(p[0] - vari[i][0], p[1] - vari[i][1]), 0) / 4;
+      setText('#cs-f2-val', String(this.f2));
+      setText('#cs-z2-val', `${this.z2.toFixed(1)}m`);
+      setText('#cs-tilt2-val', `${this.tilt2}°`);
+      const amb = q('#cs-amb');
+      if (amb) {
+        const same = diff < 0.5;
+        amb.textContent = same
+          ? `영상 차이 ${diff.toFixed(2)}px — 같은 사진! f와 Z를 구분할 수 없습니다.`
+          : `영상 차이 ${diff.toFixed(1)}px — 다른 사진! 이 차이가 f·Z를 분리하는 단서입니다.`;
+        amb.style.background = same ? '#fee2e2' : '#dcfce7';
+        amb.style.color = same ? '#991b1b' : '#166534';
+        amb.style.borderColor = same ? '#fecaca' : '#bbf7d0';
+      }
+    }
+
+    private syncDemoSliders() {
+      const set = (sel: string, v: number) => {
+        const el = this.shadowRoot?.querySelector(sel) as HTMLInputElement;
+        if (el) el.value = String(v);
+      };
+      set('#cs-f2', this.f2);
+      set('#cs-z2', this.z2);
+      set('#cs-tilt2', this.tilt2);
     }
 
     @addEventListener('.cs-mode-btn', 'click', { delegate: true })
@@ -110,11 +166,62 @@ export default (w: Window) => {
       this.refresh();
     }
 
+    @addEventListener('.cs-zone', 'contextmenu', { delegate: true })
+    onZoneRightClick(e: Event) {
+      e.preventDefault();
+      const btn = (e.target as HTMLElement).closest('.cs-zone') as HTMLElement;
+      if (!btn) return;
+      const i = Number(btn.dataset.idx);
+      if (this.shots[this.mode][i] > 0) this.shots[this.mode][i]--;
+      else {
+        const t = (['front', 'tilt', 'far'] as ShotType[]).find(t => this.shots[t][i] > 0);
+        if (t) this.shots[t][i]--;
+      }
+      this.refresh();
+    }
+
     @addEventListener('#cs-reset', 'click')
     onReset() {
       (['front', 'tilt', 'far'] as ShotType[]).forEach(t => { this.shots[t] = new Array(9).fill(0); });
       this.refresh();
     }
+
+    @addEventListener('#cs-bad', 'click')
+    onBadExample() {
+      this.shots.front = [3, 2, 2, 2, 3, 2, 2, 2, 2];
+      this.shots.tilt = new Array(9).fill(0);
+      this.shots.far = new Array(9).fill(0);
+      this.refresh();
+    }
+
+    @addEventListener('#cs-good', 'click')
+    onGoodExample() {
+      this.shots.front = [1, 1, 1, 1, 2, 1, 1, 1, 1];
+      this.shots.tilt = [1, 0, 1, 1, 0, 1, 1, 0, 1];
+      this.shots.far = [0, 1, 0, 1, 0, 1, 0, 1, 0];
+      this.refresh();
+    }
+
+    @addEventListener('#cs-preset-trick', 'click')
+    onPresetTrick() {
+      this.f2 = 600; this.z2 = 10; this.tilt2 = 0;
+      this.syncDemoSliders();
+      this.refresh();
+    }
+
+    @addEventListener('#cs-preset-tilt', 'click')
+    onPresetTilt() {
+      this.tilt2 = 30;
+      this.syncDemoSliders();
+      this.refresh();
+    }
+
+    @addEventListener('#cs-f2', 'input')
+    onF2(e: Event) { this.f2 = Number((e.target as HTMLInputElement).value) || 1; this.refresh(); }
+    @addEventListener('#cs-z2', 'input')
+    onZ2(e: Event) { this.z2 = Number((e.target as HTMLInputElement).value) || 1; this.refresh(); }
+    @addEventListener('#cs-tilt2', 'input')
+    onTilt2(e: Event) { this.tilt2 = Number((e.target as HTMLInputElement).value); this.refresh(); }
 
     @onConnectedAfter
     onReady() { this.refresh(); }
@@ -127,9 +234,18 @@ export default (w: Window) => {
           .math-desc { font-size:12px; color:#64748b; margin-bottom:8px; }
           .cs-intro { font-size:13px; line-height:1.7; color:#334155; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px; margin-bottom:14px; }
           .cs-intro b { color:#0369a1; }
-          .cs-why { display:flex; gap:14px; justify-content:center; align-items:flex-end; margin:14px 0; flex-wrap:wrap; }
-          .cs-why-panel { text-align:center; }
-          .cs-why-label { font-size:11px; font-weight:700; color:#475569; margin-top:6px; max-width:140px; }
+          .ctl { display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:#475569; margin-top:8px; }
+          .ctl label { display:flex; align-items:center; gap:8px; flex:1; }
+          .ctl input[type="range"] { flex:1; }
+          .ctl b { min-width:55px; text-align:right; color:#1e293b; }
+          .cs-demo-svg { display:block; width:100%; max-width:340px; margin:10px auto 4px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0; }
+          .cs-demo-btns { display:flex; gap:6px; justify-content:center; margin:8px 0 4px; flex-wrap:wrap; }
+          .cs-demo-btn { padding:6px 12px; border-radius:16px; border:1.5px solid #bae6fd; background:#f0f9ff; color:#0369a1; font-size:12px; font-weight:700; cursor:pointer; }
+          .cs-demo-btn:hover { border-color:#0369a1; }
+          .cs-amb { text-align:center; font-size:12.5px; font-weight:700; border-radius:8px; padding:10px 12px; margin-top:10px; border:1px solid; }
+          .cs-legend { display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12px; color:#475569; background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:8px 12px; margin-top:8px; }
+          .cs-legend span { display:inline-flex; align-items:center; gap:6px; }
+          .swatch-line { width:18px; height:0; display:inline-block; flex-shrink:0; }
           .cs-mode-row { display:flex; gap:6px; justify-content:center; margin-top:10px; }
           .cs-mode-btn { padding:6px 14px; border-radius:16px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#64748b; font-size:12px; font-weight:700; cursor:pointer; }
           .cs-mode-btn:hover { border-color:#94a3b8; }
@@ -157,18 +273,27 @@ export default (w: Window) => {
           체커보드를 찍을 때마다 그 장의 <b>포즈(R,t)</b>는 새로 생기는 미지수지만, <b>K와 왜곡 계수는 모든 장이 공유</b>합니다. 사진이 1장이어도 구속 수식은 충분해 보이지만, <b>정면 사진만 많으면 f와 Z가 서로 구분되지 않습니다</b> — 아래에서 왜 그런지 먼저 보고, 9구역에 원하는 유형(정면/기울임/원거리)의 촬영을 배치해보세요.
         </div>
 
-        <div class="cs-why">
-          <div class="cs-why-panel">
-            <svg width="100" height="80" viewBox="0 0 100 80"><rect x="25" y="15" width="50" height="50" fill="none" stroke="#ef4444" stroke-width="2.5"/></svg>
-            <div class="cs-why-label">정면: 모든 코너가 같은 깊이처럼 보여 f·Z가 서로 바꿔치기돼도 같은 사각형</div>
-          </div>
-          <div class="cs-why-panel">
-            <svg width="100" height="80" viewBox="0 0 100 80"><polygon points="20,20 80,12 85,65 15,70" fill="none" stroke="#16a34a" stroke-width="2.5"/></svg>
-            <div class="cs-why-label">기울임: 코너마다 깊이가 달라 사다리꼴로 찌그러짐 → f와 Z를 분리할 단서</div>
-          </div>
+        <div class="cs-demo-btns">
+          <button class="cs-demo-btn" id="cs-preset-trick">① 정면 트릭 (f×2, Z×2)</button>
+          <button class="cs-demo-btn" id="cs-preset-tilt">② 기울임 30° 추가</button>
+        </div>
+        <div class="math-desc">빨강=고정(정면, f=300, Z=5m). 파랑을 조작해보세요. 정면에서는 f·Z 트릭으로 빨강과 완전히 겹쳐집니다. 기울임을 주면 같은 트릭이 통하지 않습니다.</div>
+
+        <svg class="cs-demo-svg" viewBox="0 0 320 150">
+          <polygon id="cs-var" points="" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
+          <polygon id="cs-fixed" points="" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+        </svg>
+
+        <div class="ctl"><label>f' (파랑 초점) <input id="cs-f2" type="range" min="100" max="600" step="10" value="${this.f2}"><b id="cs-f2-val">${this.f2}</b></label></div>
+        <div class="ctl"><label>Z' (파랑 거리) <input id="cs-z2" type="range" min="2" max="10" step="0.5" value="${this.z2}"><b id="cs-z2-val">${this.z2.toFixed(1)}m</b></label></div>
+        <div class="ctl"><label>기울임 (파랑) <input id="cs-tilt2" type="range" min="0" max="45" step="5" value="${this.tilt2}"><b id="cs-tilt2-val">${this.tilt2}°</b></label></div>
+        <div class="cs-amb" id="cs-amb"></div>
+        <div class="cs-legend">
+          <span><i class="swatch-line" style="border-top:3px solid #ef4444"></i>고정 (정면 f=300, Z=5)</span>
+          <span><i class="swatch-line" style="border-top:3px solid #3b82f6"></i>조절 중</span>
         </div>
 
-        <div class="math-desc">아래 구역 그리드에 촬영 유형을 선택한 뒤 클릭해서 쌓아보세요(구역당 최대 5장)</div>
+        <div class="math-desc" style="margin-top:16px">아래 구역 그리드에 촬영 유형을 선택한 뒤 클릭해서 쌓아보세요(구역당 최대 5장, 우클릭=1장 취소)</div>
 
         <div class="cs-mode-row">
           ${(['front', 'tilt', 'far'] as ShotType[]).map(t => `<button class="cs-mode-btn" data-type="${t}">${TYPE_ICON[t]} ${TYPE_LABEL[t]}</button>`).join('')}
@@ -177,8 +302,12 @@ export default (w: Window) => {
         <div class="cs-grid">
           ${ZONES.map((z, i) => `<button class="cs-zone" data-idx="${i}">${z}<br>0장</button>`).join('')}
         </div>
-        <div class="cs-hint">구역 클릭 = 선택한 유형의 촬영 1장 추가</div>
-        <button class="cs-reset-btn" id="cs-reset">초기화</button>
+        <div class="cs-hint">구역 클릭 = 선택한 유형의 촬영 1장 추가 · 우클릭 = 1장 취소</div>
+        <div class="cs-demo-btns">
+          <button class="cs-demo-btn" id="cs-bad">나쁜 예: 정면만 20장</button>
+          <button class="cs-demo-btn" id="cs-good">모범 답안 채우기</button>
+          <button class="cs-reset-btn" id="cs-reset" style="margin:0">초기화</button>
+        </div>
 
         <div class="cs-stats">
           <div class="cs-stat"><b>총 사진 수 N</b><span id="cs-n">0</span></div>

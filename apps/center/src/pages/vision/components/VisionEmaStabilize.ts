@@ -35,7 +35,8 @@ function computeEma(raw: number[], alpha: number): number[] {
 }
 
 const toX = (i: number) => (i / (N - 1)) * CHART_W;
-const toY = (v: number) => CHART_H - ((v - Y_MIN) / (Y_MAX - Y_MIN)) * CHART_H;
+// 차트 밖으로 튀는 값은 위·아래 변에 붙여 그린다 (0 리셋 대참사를 "소실"이 아닌 "바닥 추락"으로 보여주기 위함)
+const toY = (v: number) => Math.min(CHART_H, Math.max(0, CHART_H - ((v - Y_MIN) / (Y_MAX - Y_MIN)) * CHART_H));
 const toPolyline = (series: number[]) => series.map((v, i) => `${toX(i).toFixed(1)},${toY(v).toFixed(1)}`).join(' ');
 
 const DROPOUT_START = 14;
@@ -62,7 +63,7 @@ function computeEmaDropout(raw: number[], alpha: number, mode: 'carry' | 'resetZ
 
 const MD = `
 ## 시간 축 안정화 — 검출값 떨림 잡기
-- 프레임마다 검출 중심이 몇 픽셀씩 떨립니다. **EMA(지수이동평균)**로 다듬습니다: \`cx = α·새값 + (1−α)·이전값\`
+- 프레임마다 검출 중심이 몇 픽셀씩 떨립니다. **EMA(지수이동평균)**로 다듬습니다: \`x_filt = α·새값 + (1−α)·이전값\`
 - **α가 크면**(민감) 새 값을 빨리 반영해 반응은 빠르지만 떨림도 덜 눌립니다. **α가 작으면**(둔감) 떨림은 잘 눌리지만, 물체가 실제로 움직였을 때 **새 위치를 늦게 따라가는 지연(lag)**이 생깁니다.
 - 이건 **부드러움 ↔ 지연의 트레이드오프**입니다 — 정답은 없고, 이 신호를 받는 **추적 제어가 견딜 수 있는 지연 만큼만** 필터를 걸어야 합니다.
 - 아래 그래프에서 공이 6초 지점에서 갑자기 옮겨진 뒤, α가 작을수록 새 위치에 늦게 도달하는 걸 확인해보세요.
@@ -118,23 +119,25 @@ export default (w: Window) => {
       setAttr('#es-emaA', 'points', toPolyline(emaA));
       setAttr('#es-emaB', 'points', toPolyline(emaB));
 
-      // 지연 측정: 점프 이후 목표값의 95%에 도달하는 데 걸리는 샘플 수
+      // 지연 측정: 점프 이후 목표값의 95%에 도달하는 데 걸리는 샘플 수 (도달 못하면 null)
       const settleTime = (ema: number[]) => {
         const target = JUMP_VAL;
         const threshold = BASE_VAL + (target - BASE_VAL) * 0.95;
         for (let i = JUMP_AT; i < ema.length; i++) {
           if (ema[i] >= threshold) return i - JUMP_AT;
         }
-        return ema.length - JUMP_AT;
+        return null;
       };
 
       const setText = (sel: string, text: string) => {
         const el = this.shadowRoot?.querySelector(sel) as HTMLElement;
         if (el) el.textContent = text;
       };
+      const lagText = (a: number, st: number | null) =>
+        st === null ? `α=${a.toFixed(2)}: 24프레임 안에 95% 미도달 (너무 둔감!)` : `α=${a.toFixed(2)}: 새 위치 95% 도달까지 ${st}프레임`;
       setText('#es-alpha-val', this.alpha.toFixed(2));
-      setText('#es-lag-a', `α=${this.alpha.toFixed(2)}: 새 위치 95% 도달까지 ${settleTime(emaA)}프레임`);
-      setText('#es-lag-b', `α=${this.refAlpha.toFixed(2)}(비교): ${settleTime(emaB)}프레임`);
+      setText('#es-lag-a', lagText(this.alpha, settleTime(emaA)));
+      setText('#es-lag-b', lagText(this.refAlpha, settleTime(emaB)) + ' (비교)');
     }
 
     @addEventListener('#es-alpha', 'input')

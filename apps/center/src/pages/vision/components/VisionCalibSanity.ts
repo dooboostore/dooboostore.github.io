@@ -40,6 +40,7 @@ export default (w: Window) => {
       setText('#sn-cx-val', String(this.cx));
       setText('#sn-cy-val', String(this.cy));
       setText('#sn-fov-val', String(this.measuredFov));
+      setText('#sn-k1-val', this.k1.toFixed(2));
 
       const checks: { label: string; ok: boolean; detail: string }[] = [];
       const cxOk = Math.abs(this.cx - IMG_W / 2) <= 30;
@@ -77,7 +78,8 @@ export default (w: Window) => {
 
       const curveEl = q('#sn-curve');
       if (curveEl) {
-        const bow = this.undistorted ? 0 : 18;
+        // 굽음량은 k1에 비례 (|k1|=0.28 → 약 18px) — k1 슬라이더가 undistort 데모와 직결됨
+        const bow = this.undistorted ? 0 : Math.min(30, Math.abs(this.k1) * 64);
         const lines = [20, 45, 70, 95, 120].map(y =>
           `<path d="M5,${y} Q${UND_SIZE / 2},${y + (y < UND_SIZE / 2 ? bow : -bow)} ${UND_SIZE - 5},${y}" stroke="${this.undistorted ? '#16a34a' : '#ef4444'}" stroke-width="2" fill="none"/>`
         ).join('');
@@ -91,6 +93,7 @@ export default (w: Window) => {
     @addEventListener('#sn-cx', 'input') onCx(e: Event) { this.cx = Number((e.target as HTMLInputElement).value); this.refresh(); }
     @addEventListener('#sn-cy', 'input') onCy(e: Event) { this.cy = Number((e.target as HTMLInputElement).value); this.refresh(); }
     @addEventListener('#sn-fov', 'input') onFov(e: Event) { this.measuredFov = Number((e.target as HTMLInputElement).value); this.refresh(); }
+    @addEventListener('#sn-k1', 'input') onK1(e: Event) { this.k1 = Number((e.target as HTMLInputElement).value); this.refresh(); }
     @addEventListener('#sn-toggle', 'click') onToggle() { this.undistorted = !this.undistorted; this.refresh(); }
 
     @onConnectedAfter
@@ -133,6 +136,7 @@ export default (w: Window) => {
         <div class="ctl"><label>cx <input id="sn-cx" type="range" min="200" max="440" step="1" value="${this.cx}"><b id="sn-cx-val">${this.cx}</b></label></div>
         <div class="ctl"><label>cy <input id="sn-cy" type="range" min="120" max="360" step="1" value="${this.cy}"><b id="sn-cy-val">${this.cy}</b></label></div>
         <div class="ctl"><label>실측 FOV(°) <input id="sn-fov" type="range" min="40" max="70" step="1" value="${this.measuredFov}"><b id="sn-fov-val">${this.measuredFov}</b></label></div>
+        <div class="ctl"><label>k1 (왜곡 계수) <input id="sn-k1" type="range" min="-0.5" max="0" step="0.01" value="${this.k1}"><b id="sn-k1-val">${this.k1.toFixed(2)}</b></label></div>
 
         <div class="sn-checklist" id="sn-checklist"></div>
         <div class="sn-verdict" id="sn-verdict"></div>
@@ -140,6 +144,10 @@ export default (w: Window) => {
         <div class="sn-und-box">
           <svg class="sn-svg"><g id="sn-curve"></g></svg>
           <div class="math-desc" id="sn-und-label"></div>
+          <div style="display:flex;gap:10px;justify-content:center;font-size:11px;color:#64748b;margin-top:4px">
+            <span><span style="color:#ef4444">—</span> 보정 전(굽음)</span>
+            <span><span style="color:#16a34a">—</span> 보정 후(직선)</span>
+          </div>
           <button class="sn-und-btn" id="sn-toggle">보정 전/후 전환</button>
         </div>
 

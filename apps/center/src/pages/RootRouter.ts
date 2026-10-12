@@ -154,6 +154,18 @@ export default (w: Window) => {
       return `<center-vision-page/>`;
     }
 
+    @subscribeSwcAppRouteChange(["/ros2"], { order: 15 })
+    @innerHtmlLight({ filter: skipIfExists('center-ros2-page') })
+    handleRos2() {
+      return `<center-ros2-page/>`;
+    }
+
+    @subscribeSwcAppRouteChange(["/ai"], { order: 16 })
+    @innerHtmlLight({ filter: skipIfExists('center-ai-page') })
+    handleAi() {
+      return `<center-ai-page/>`;
+    }
+
     @subscribeSwcAppRouteChange(["/{tail:.*}"], { order: 999 })
     @innerHtmlLight
     handle404() {

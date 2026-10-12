@@ -1,5 +1,50 @@
 import RootRouter from './RootRouter';
 import HomePage from './home/HomePage';
+import Ros2Page from './ros2/Ros2Page';
+import MlMarket from './ml/components/MlMarket';
+import MlSplit from './ml/components/MlSplit';
+import MlScaling from './ml/components/MlScaling';
+import MlKnnReg from './ml/components/MlKnnReg';
+import MlLinReg from './ml/components/MlLinReg';
+import MlPolyReg from './ml/components/MlPolyReg';
+import MlLogistic from './ml/components/MlLogistic';
+import MlSgd from './ml/components/MlSgd';
+import MlTree from './ml/components/MlTree';
+import MlCvGrid from './ml/components/MlCvGrid';
+import MlEnsemble from './ml/components/MlEnsemble';
+import MlKMeans from './ml/components/MlKMeans';
+import MlPca from './ml/components/MlPca';
+import MlMlp from './ml/components/MlMlp';
+import MlDeep from './ml/components/MlDeep';
+import MlTrainNN from './ml/components/MlTrainNN';
+import MlCnn from './ml/components/MlCnn';
+import MlCnnViz from './ml/components/MlCnnViz';
+import MlRnn from './ml/components/MlRnn';
+import MlImdb from './ml/components/MlImdb';
+import MlLstm from './ml/components/MlLstm';
+import MlSupervised from './ml/components/MlSupervised';
+import MlUnsupervised from './ml/components/MlUnsupervised';
+import MlReinforcement from './ml/components/MlReinforcement';
+import MlSelfSupervised from './ml/components/MlSelfSupervised';
+import MlImitation from './ml/components/MlImitation';
+import MlTransfer from './ml/components/MlTransfer';
+import RosDistro from './ros2/components/RosDistro';
+import RosInstall from './ros2/components/RosInstall';
+import RosNode from './ros2/components/RosNode';
+import RosPatterns from './ros2/components/RosPatterns';
+import RosComm from './ros2/components/RosComm';
+import RosParam from './ros2/components/RosParam';
+import RosLaunch from './ros2/components/RosLaunch';
+import RosDds from './ros2/components/RosDds';
+import RosQos from './ros2/components/RosQos';
+import RosCli from './ros2/components/RosCli';
+import RosPkg from './ros2/components/RosPkg';
+import RosBag from './ros2/components/RosBag';
+import RosTf from './ros2/components/RosTf';
+import RosUrdf from './ros2/components/RosUrdf';
+import RosEco from './ros2/components/RosEco';
+import RosSim from './ai/components/RosSim';
+import AiPage from './ai/AiPage';
 import EnglishListPage from './english/EnglishListPage';
 import EnglishPlayerPage from './english/EnglishPlayerPage';
 import TextEnglishListPage from './text-english/TextEnglishListPage';
@@ -109,6 +154,51 @@ import VisionPipelineValidation from './vision/components/VisionPipelineValidati
 export const pageFactories = [
   RootRouter,
   HomePage,
+  Ros2Page,
+  MlMarket,
+  MlSplit,
+  MlScaling,
+  MlKnnReg,
+  MlLinReg,
+  MlPolyReg,
+  MlLogistic,
+  MlSgd,
+  MlTree,
+  MlCvGrid,
+  MlEnsemble,
+  MlKMeans,
+  MlPca,
+  MlMlp,
+  MlDeep,
+  MlTrainNN,
+  MlCnn,
+  MlCnnViz,
+  MlRnn,
+  MlImdb,
+  MlLstm,
+  MlSupervised,
+  MlUnsupervised,
+  MlReinforcement,
+  MlSelfSupervised,
+  MlImitation,
+  MlTransfer,
+  RosDistro,
+  RosInstall,
+  RosNode,
+  RosPatterns,
+  RosComm,
+  RosParam,
+  RosLaunch,
+  RosDds,
+  RosQos,
+  RosCli,
+  RosPkg,
+  RosBag,
+  RosTf,
+  RosUrdf,
+  RosEco,
+  RosSim,
+  AiPage,
   EnglishListPage,
   EnglishPlayerPage,
   TextEnglishListPage,

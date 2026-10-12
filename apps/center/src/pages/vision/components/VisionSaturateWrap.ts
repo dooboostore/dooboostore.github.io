@@ -12,10 +12,8 @@ const saturate8 = (v: number): number => Math.max(0, Math.min(255, v));
 
 const MD = `
 ## uint8 오버플로 — 감김(wrap) vs 포화(saturate)
-- 디지털 이미지의 픽셀값은 보통 **8비트(0~255)**로 저장됩니다. 밝기를 더하는 연산을 하면 이 범위를 넘어가는 경우가 생기는데, 처리 방식이 두 가지입니다.
-- **감김(wrap)**: \`(값) % 256\` — 256을 넘으면 다시 0부터 순환합니다. 예: \`250 + 10 = 4\`. 밝았던 픽셀이 갑자기 어두워지는 **검은 반점(artifact)** 이 생깁니다.
-- **포화(saturate)**: 0~255 범위로 **clamp** — 넘치면 그냥 255(또는 0)에서 멈춥니다. 밝기 연산은 보통 이 방식(OpenCV의 \`cv2.add\`)을 씁니다.
-- 아래 그래디언트(0→255)에 밝기를 더해보면, wrap은 중간에 검은 띠가 생기고 saturate는 끝부분이 하얗게 뭉개지는(clipping) 차이가 보입니다.
+- 수치 예시: \`250 + 10\` → wrap은 \`4\`, saturate는 \`255\`. \`5 − 10\` → wrap은 \`251\`, saturate는 \`0\`.
+- wrap의 검은 띠(artifact)와 saturate의 끝 뭉개짐(clipping)을 위 그래디언트에서 직접 확인해보세요.
 `;
 
 export default (w: Window) => {

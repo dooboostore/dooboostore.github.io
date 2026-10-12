@@ -16,7 +16,7 @@ const TOPIC_INFO: Record<TopicId, { title: string; fields: string[] }> = {
   },
   detection: {
     title: 'geometry_msgs/msg/PointStamped',
-    fields: ['header — 원본 /image_raw의 stamp를 계승!', 'point.x, point.y — 검출 중심 픽셀(19강 결과)'],
+    fields: ['header — 원본 /image_raw의 stamp를 계승!', 'point.x, point.y — 검출 중심 픽셀(19강 결과, 픽셀 단위 임시값)', '※ 22강에서 미터 단위 3D(/object_point)로 승격됨 — 같은 메시지명, 다른 단위 주의'],
   },
   image_annotated: {
     title: 'sensor_msgs/msg/Image (디버그용)',
@@ -26,8 +26,8 @@ const TOPIC_INFO: Record<TopicId, { title: string; fields: string[] }> = {
 
 // 토픽별로 함께 강조할 업/다운스트림 요소 id — 선택 시 다이어그램 전체에 "흐름"이 보이게 함
 const TOPIC_LINKS: Record<TopicId, string[]> = {
-  image_raw: ['rp-node-usbcam', 'rp-arrow-1', 'rp-node-detector'],
-  camera_info: ['rp-node-usbcam', 'rp-arrow-1', 'rp-node-detector'],
+  image_raw: ['rp-node-usbcam', 'rp-arrow-1', 'rp-arrow-1b', 'rp-node-detector'],
+  camera_info: ['rp-node-usbcam', 'rp-arrow-1', 'rp-arrow-1b', 'rp-node-detector'],
   detection: ['rp-node-detector', 'rp-arrow-2', 'rp-sub-rosbag'],
   image_annotated: ['rp-node-detector', 'rp-arrow-2', 'rp-sub-rqt', 'rp-sub-rosbag'],
 };
@@ -115,7 +115,7 @@ export default (w: Window) => {
             <div class="rp-box" data-topic="image_raw">/image_raw</div>
             <div class="rp-box" data-topic="camera_info">/camera_info</div>
           </div>
-          <div class="rp-arrow" data-flow-id="rp-arrow-1">↓</div>
+          <div class="rp-arrow" data-flow-id="rp-arrow-1b">↓</div>
           <div class="rp-row"><div class="rp-node" data-flow-id="rp-node-detector">color_detector (19강 모듈+배관)</div></div>
           <div class="rp-arrow" data-flow-id="rp-arrow-2">↓</div>
           <div class="rp-row">

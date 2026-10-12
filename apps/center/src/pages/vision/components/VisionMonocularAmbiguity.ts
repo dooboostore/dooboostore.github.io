@@ -27,7 +27,8 @@ export default (w: Window) => {
   class VisionMonocularAmbiguity extends w.HTMLElement {
     private radiusA = 0.5; // 기준 공(가까이) 반지름
     private Za = 2.5; // 기준 공 거리
-    private Zb = 6; // 비교 공(멀리) 거리 - 반지름은 자동 계산
+    private Zb = 5; // 비교 공(멀리) 거리 - 반지름은 자동 계산 (항상 Za < Zb ≤ 2·Za 유지)
+    private static readonly ZB_MAX = 7;
 
     private refresh() {
       const { radiusA, Za, Zb } = this;
@@ -45,16 +46,17 @@ export default (w: Window) => {
       setAttr('#ma-circleB', 'cx', String(screenZb));
       setAttr('#ma-circleB', 'cy', String(PINHOLE_Y));
       setAttr('#ma-circleB', 'r', String(rB));
-      // 핀홀에서 두 공 모두에 접하는(= 같은 각) 위아래 레이 — 기준 공 A의 비율로 각도 고정.
-      // 실제 비율(radiusA/Za)을 그대로 화면 기울기로 쓰면 안 됨 - Z축과 반지름축의 스케일(SCALE_Z, SCALE_X)이
-      // 서로 달라서, 그 비율만큼 보정해야 원과 광선이 정확히 맞닿는다(안 그러면 원이 광선 밖으로 삐져나옴).
-      const slope = (radiusA / Za) * (SCALE_X / SCALE_Z);
-      const farX = SVG_W - 10;
-      const farY = slope * (farX - PINHOLE_X);
-      setAttr('#ma-ray-top', 'x2', String(farX));
-      setAttr('#ma-ray-top', 'y2', String(PINHOLE_Y - farY));
-      setAttr('#ma-ray-bottom', 'x2', String(farX));
-      setAttr('#ma-ray-bottom', 'y2', String(PINHOLE_Y + farY));
+      // 핀홀에서 먼 공 B에 접하는 위아래 접선 — 두 공이 같은 각크기라 A에도 동시에 접한다.
+      // 접점을 직접 계산하므로 스케일 보정도, 화면 밖으로 뻗는 광선도 없다.
+      const dxB = screenZb - PINHOLE_X;
+      const rr = Math.min(rB, dxB * 0.999);
+      const L = Math.sqrt(Math.max(dxB * dxB - rr * rr, 1));
+      const tx = PINHOLE_X + (L * L) / dxB;
+      const ty = (L * rr) / dxB;
+      setAttr('#ma-ray-top', 'x2', String(tx));
+      setAttr('#ma-ray-top', 'y2', String(PINHOLE_Y - ty));
+      setAttr('#ma-ray-bottom', 'x2', String(tx));
+      setAttr('#ma-ray-bottom', 'y2', String(PINHOLE_Y + ty));
 
       const setText = (sel: string, text: string) => {
         const el = this.shadowRoot?.querySelector(sel) as HTMLElement;
@@ -70,9 +72,29 @@ export default (w: Window) => {
     @addEventListener('#ma-radiusA', 'input')
     onRadiusA(e: Event) { this.radiusA = Number((e.target as HTMLInputElement).value) || 0.1; this.refresh(); }
     @addEventListener('#ma-za', 'input')
-    onZa(e: Event) { this.Za = Number((e.target as HTMLInputElement).value) || 1; this.refresh(); }
+    onZa(e: Event) {
+      this.Za = Number((e.target as HTMLInputElement).value) || 1;
+      this.clampZb();
+      this.refresh();
+    }
     @addEventListener('#ma-zb', 'input')
-    onZb(e: Event) { this.Zb = Number((e.target as HTMLInputElement).value) || 1; this.refresh(); }
+    onZb(e: Event) {
+      this.Zb = Number((e.target as HTMLInputElement).value) || 1;
+      this.clampZb();
+      this.refresh();
+    }
+
+    /** B는 항상 A보다 멀되 2배 이내 — 서사("먼 공")와 화면 표시 한계 동시 보장 */
+    private clampZb() {
+      const lo = this.Za + 0.5;
+      const hi = Math.min(VisionMonocularAmbiguity.ZB_MAX, this.Za * 2);
+      const clamped = Math.min(Math.max(this.Zb, lo), hi);
+      if (clamped !== this.Zb) {
+        this.Zb = Math.round(clamped * 10) / 10;
+        const el = this.shadowRoot?.querySelector('#ma-zb') as HTMLInputElement;
+        if (el) el.value = String(this.Zb);
+      }
+    }
 
     @onConnectedAfter
     onReady() { this.refresh(); }
@@ -102,11 +124,11 @@ export default (w: Window) => {
           핀홀 투영식 \`x=f·X/Z\`을 보면, 물체 크기 X와 거리 Z를 **같은 비율로** 같이 키우거나 줄여도 x(찍히는 크기)는 똑같습니다. 즉 "작은 공이 가까이 있는 것"과 "큰 공이 멀리 있는 것"은 **사진 한 장으로는 절대 구별할 수 없습니다** — 크기를 모른다는 조건 하나만으로 거리 자체가 원리적으로 미지수가 됩니다.
         </div>
 
-        <div class="math-desc">기준 공(파랑, 가까이)의 크기·거리를 정하면, 그와 "화면에서 똑같은 크기로 보이는" 먼 공(빨강)의 반지름이 자동으로 계산됩니다 — 두 공 다 같은 광선 쌍에 꼭 맞게 그려집니다.</div>
+        <div class="math-desc">기준 공(파랑, 가까이)의 크기·거리를 정하면, 그와 "화면에서 똑같은 크기로 보이는" 먼 공(빨강)의 반지름이 자동으로 계산됩니다 — 두 공 다 같은 광선 쌍에 꼭 맞게 그려집니다. B 거리는 A의 2배 이내로 자동 제한됩니다(서사 유지+화면 표시 한계).</div>
 
-        <div class="ctl"><label>기준 공 반지름(A) <input id="ma-radiusA" type="range" min="0.1" max="1" step="0.05" value="${this.radiusA}"><b id="ma-radiusA-val">${this.radiusA.toFixed(2)}</b></label></div>
+        <div class="ctl"><label>기준 공 반지름(A) <input id="ma-radiusA" type="range" min="0.1" max="0.6" step="0.05" value="${this.radiusA}"><b id="ma-radiusA-val">${this.radiusA.toFixed(2)}</b></label></div>
         <div class="ctl"><label>기준 공 거리(A) <input id="ma-za" type="range" min="1" max="4" step="0.1" value="${this.Za}"><b id="ma-za-val">${this.Za.toFixed(1)}</b></label></div>
-        <div class="ctl"><label>비교 공 거리(B) <input id="ma-zb" type="range" min="2" max="8" step="0.1" value="${this.Zb}"><b id="ma-zb-val">${this.Zb.toFixed(1)}</b></label></div>
+        <div class="ctl"><label>비교 공 거리(B) <input id="ma-zb" type="range" min="2" max="7" step="0.1" value="${this.Zb}"><b id="ma-zb-val">${this.Zb.toFixed(1)}</b></label></div>
 
         <svg viewBox="0 0 ${SVG_W} ${SVG_H}">
           <circle cx="${PINHOLE_X}" cy="${PINHOLE_Y}" r="4" fill="#1e293b"/>

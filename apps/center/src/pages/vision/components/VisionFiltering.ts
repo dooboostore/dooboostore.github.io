@@ -276,7 +276,7 @@ export default (w: Window) => {
           ${rows}
         </table>
 
-        <div class="math-desc">같은 노이즈 낀 원본에 필터 4종을 동시에 적용해 비교해보세요 — 노이즈 제거력과 경계 보존력의 차이가 한눈에 보입니다.</div>
+        <div class="math-desc">같은 노이즈 낀 원본에 필터 4종을 동시에 적용해 비교해보세요 — 노이즈 제거력과 경계 보존력의 차이가 한눈에 보입니다. (가우시안 σ = 커널/6: 커널을 키우면 뭉개짐 반경도 함께 커집니다)</div>
 
         <div class="ctl"><label>커널 크기(홀수) <input id="vf-kernel" type="range" min="1" max="9" step="2" value="${this.kernelSize}"><b id="vf-kernel-val">${this.kernelSize}×${this.kernelSize}</b></label></div>
         <div class="ctl"><label>노이즈 비율 <input id="vf-noise" type="range" min="0" max="25" step="1" value="${Math.round(this.noiseProb * 100)}"><b id="vf-noise-val">${Math.round(this.noiseProb * 100)}%</b></label> <button id="vf-regen">노이즈 재생성</button></div>

@@ -128,8 +128,16 @@ export default (w: Window) => {
         <div class="math-desc">경로 A(마커): 정밀 6DOF · 경로 B(색): 위치만 — 아래는 경로 A의 품질 게이트 시뮬레이션</div>
 
         <div class="ctl"><label>재투영 오차 <input id="pi-err" type="range" min="0" max="5" step="0.1" value="${this.reprojError}"><b id="pi-err-val">${this.reprojError.toFixed(1)}px</b></label></div>
-        <div id="pi-gate-box">품질 게이트: 문턱 ${this.threshold.toFixed(1)}px</div>
+        <div id="pi-gate-box">품질 게이트: 문턱 ${this.threshold.toFixed(1)}px (캘리브레이션 판정 1.0px보다 관대 — 실전 여유분)</div>
         <div class="pi-log" id="pi-log"></div>
+        <div style="display:flex;gap:10px;justify-content:center;font-size:10.5px;color:#64748b;margin-top:6px;flex-wrap:wrap">
+          <span><span style="color:#64748b">■</span> 입력 토픽</span>
+          <span><span style="color:#0d9488">■</span> 왜곡 보정</span>
+          <span><span style="color:#ea580c">■</span> 경로 A 연산</span>
+          <span><span style="color:#dc2626">■</span> 경로 B 연산</span>
+          <span><span style="color:#7c3aed">■</span> /object_pose (RViz 네모)</span>
+          <span><span style="color:#2563eb">■</span> /object_point (RViz 원)</span>
+        </div>
 
         <div class="pi-rviz-box">
           <svg id="pi-rviz-svg" viewBox="0 0 200 120"><g id="pi-rviz"></g></svg>

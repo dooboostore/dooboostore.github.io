@@ -118,10 +118,15 @@ export default (w: Window) => {
 
         <div class="math-desc">아래 슬라이더로 실제 그 반대 방향(포즈를 정하면 사진이 어떻게 나오는지)을 먼저 체험해보세요 — 정사각형 마커가 회전(θ)·거리(Z)에 따라 화면에서 어떤 사각형(사다리꼴)으로 찍히는지. 이 "일그러진 모양"이 곧 자세의 흔적이고, PnP는 이 모양만 보고 θ·Z를 역으로 찾아내는 겁니다.</div>
 
-        <div class="ctl"><label>θ (마커 회전, Y축) <input id="pnp-theta" type="range" min="0" max="70" step="1" value="${this.thetaDeg}"><b id="pnp-theta-val">${this.thetaDeg}°</b></label></div>
+        <div class="ctl"><label>θ (마커 회전, Y축) <input id="pnp-theta" type="range" min="-70" max="70" step="1" value="${this.thetaDeg}"><b id="pnp-theta-val">${this.thetaDeg}°</b></label></div>
         <div class="ctl"><label>Z (거리) <input id="pnp-z" type="range" min="1" max="5" step="0.1" value="${this.Z}"><b id="pnp-z-val">${this.Z.toFixed(2)}</b></label></div>
 
         <canvas id="pnp-canvas" width="${CANVAS_W}" height="${CANVAS_H}"></canvas>
+        <div style="display:flex;gap:12px;justify-content:center;font-size:11px;color:#64748b;margin-top:4px;flex-wrap:wrap">
+          <span><span style="color:#334155">＋</span> 주점(cx,cy) 십자선</span>
+          <span><span style="color:#f59e0b">■</span> 투영된 마커 사각형</span>
+          <span><span style="color:#ef4444">●</span> 검출된 4개 모서리</span>
+        </div>
         <div class="pnp-out" id="pnp-rvec"></div>
         <div class="pnp-out" id="pnp-tvec"></div>
 

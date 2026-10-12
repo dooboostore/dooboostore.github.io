@@ -169,6 +169,24 @@ export default (w: Window) => {
       badge: 'New'
     },
     {
+      id: 'ros2',
+      icon: '🤖',
+      title: 'ROS 2 개념',
+      description: 'ROS 2를 설치부터 노드·통신·DDS·TF까지 인터랙션으로 배워보세요.',
+      path: '/ros2',
+      color: '#22314e',
+      badge: 'New'
+    },
+    {
+      id: 'ai',
+      icon: '🧠',
+      title: 'AI 개념',
+      description: '로봇 AI 결합 위치와 Sim2Real을 인터랙션으로 배워보세요.',
+      path: '/ai',
+      color: '#4c1d95',
+      badge: 'New'
+    },
+    {
       id: 'ram-price',
       icon: '💾',
       title: '반도체 RAM 가격 추이',
