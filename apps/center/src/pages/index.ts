@@ -43,6 +43,10 @@ import RosBag from './ros2/components/RosBag';
 import RosTf from './ros2/components/RosTf';
 import RosUrdf from './ros2/components/RosUrdf';
 import RosEco from './ros2/components/RosEco';
+import RosDesign from './ros2/components/RosDesign';
+import RosMsgs from './ros2/components/RosMsgs';
+import RosParamDict from './ros2/components/RosParamDict';
+import RosControl from './ros2/components/RosControl';
 import RosSim from './ai/components/RosSim';
 import AiPage from './ai/AiPage';
 import EnglishListPage from './english/EnglishListPage';
@@ -197,6 +201,10 @@ export const pageFactories = [
   RosTf,
   RosUrdf,
   RosEco,
+  RosDesign,
+  RosMsgs,
+  RosParamDict,
+  RosControl,
   RosSim,
   AiPage,
   EnglishListPage,

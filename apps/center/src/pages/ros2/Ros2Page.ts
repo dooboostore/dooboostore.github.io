@@ -7,6 +7,9 @@ import {
   addEventListener,
   innerHtml,
   attribute,
+  subscribeSwcAppRouteChange,
+  swcAppRouteGo,
+  swcAppRouteQueryParam,
 } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
 
@@ -14,10 +17,11 @@ const tagName = 'center-ros2-page';
 
 type RosConcept =
   | 'distro' | 'install'
-  | 'node' | 'patterns' | 'comm' | 'param' | 'launch'
+  | 'node' | 'patterns' | 'comm' | 'msgs' | 'param' | 'launch'
   | 'dds' | 'qos'
-  | 'cli' | 'pkg' | 'bag' | 'tf' | 'urdf'
-  | 'eco';
+  | 'cli' | 'pkg' | 'bag' | 'tf' | 'urdf' | 'ros2control'
+  | 'eco'
+  | 'design';
 
 const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] = [
   { id: 'distro', label: '배포판 지도', el: 'center-ros2-distro', group: 'start' },
@@ -25,6 +29,7 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'node', label: '노드', el: 'center-ros2-node', group: 'core' },
   { id: 'patterns', label: '노드구성', el: 'center-ros2-patterns', group: 'core' },
   { id: 'comm', label: '토픽·서비스·액션', el: 'center-ros2-comm', group: 'core' },
+  { id: 'msgs', label: '메시지 타입', el: 'center-ros2-msgs', group: 'core' },
   { id: 'param', label: '파라미터', el: 'center-ros2-param', group: 'core' },
   { id: 'launch', label: 'Launch', el: 'center-ros2-launch', group: 'core' },
   { id: 'dds', label: 'DDS·RMW', el: 'center-ros2-dds', group: 'mw' },
@@ -34,7 +39,9 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'bag', label: 'rosbag', el: 'center-ros2-bag', group: 'tools' },
   { id: 'tf', label: 'TF2', el: 'center-ros2-tf', group: 'tools' },
   { id: 'urdf', label: 'URDF·암', el: 'center-ros2-urdf', group: 'tools' },
+  { id: 'ros2control', label: 'ros2_control', el: 'center-ros2-control', group: 'tools' },
   { id: 'eco', label: '생태계', el: 'center-ros2-eco', group: 'eco' },
+  { id: 'design', label: '실전노드설계', el: 'center-ros2-design', group: 'real' },
 ];
 
 export default (w: Window) => {
@@ -82,6 +89,16 @@ export default (w: Window) => {
       this.renderView();
     }
 
+    /** ?concept= 이 바뀔 때마다 (탭 클릭 push, 브라우저 뒤로/앞으로 가기 모두) 탭과 뷰를 맞춘다 */
+    @subscribeSwcAppRouteChange('/ros2', { trigger: 'connectedDone' })
+    onRoute(@swcAppRouteQueryParam('concept') concept: string | null) {
+      const c = (concept && CONCEPTS.some(k => k.id === concept) ? concept : 'distro') as RosConcept;
+      if (c === this.activeConcept) return;
+      this.activeConcept = c;
+      this.syncTabs();
+      this.renderView();
+    }
+
     @addEventListener('.header-back', 'click')
     onBack() { this.router.go('/'); }
 
@@ -89,10 +106,13 @@ export default (w: Window) => {
     onConceptTab(e: Event) {
       const btn = (e.target as HTMLElement).closest('.tab-concept') as HTMLElement;
       if (!btn || btn.dataset.value === this.activeConcept) return;
-      this.activeConcept = btn.dataset.value as RosConcept;
-      try { this.router?.replaceUpsertSearchParam?.({ concept: this.activeConcept }); } catch {}
-      this.syncTabs();
-      this.renderView();
+      this.goConcept(btn.dataset.value as RosConcept);
+    }
+
+    /** 히스토리에 push만 — 실제 전환은 onRoute가 (탭 안의 sec·node 같은 하위 상태는 버린다) */
+    @swcAppRouteGo
+    goConcept(concept: RosConcept) {
+      return { path: `/ros2?concept=${concept}`, scrollToTop: false };
     }
 
     @addEventListener('#ros2-share-fab', 'click')

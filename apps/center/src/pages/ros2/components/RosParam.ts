@@ -108,6 +108,7 @@ export default (w: Window) => {
         <div class="rp-cmd"><code id="rp-cmd2"></code><button class="rp-copy" data-copy="">복사</button></div>
 
         <div class="md">${marked.parse(MD) as string}</div>
+        <center-ros2-param-dict></center-ros2-param-dict>
       `;
     }
   }
