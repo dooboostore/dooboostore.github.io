@@ -79,7 +79,7 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
     md: `
 ## 전체 아키텍처 — 7계층
 
-위에서 아래로 흐르고, 왼쪽이 팔, 오른쪽이 베이스입니다. 학습 노드(주황)는 ③과 ⑤에만 있고, 안전(빨강)은 항상 학습 노드 뒤에 있습니다. 실선=토픽, 굵은 선=액션, 점선=서비스·파라미터·피드백·매핑 단계 전용. 화살표 라벨은 **[종류 이모지] 이름 (메시지 타입)** 형식입니다.
+위에서 아래로 흐르고, 왼쪽이 팔, 오른쪽이 베이스입니다. 학습 노드(주황)는 ③과 ⑤에만 있고, 안전(빨강)은 항상 학습 노드 뒤에 있습니다. 실선=토픽, 굵은 선=액션, 점선=서비스·파라미터·피드백·매핑 단계 전용. 화살표 라벨은 **[종류 이모지] 이름 (메시지 타입)** 형식입니다. 라벨 앞의 **❶❷❸…는 실행 순서**이고 다이어그램마다 새로 셉니다. 번호가 없는 화살표는 늘 흐르는 입력입니다.
 
 > 👆 **섹터 영역을 누르면 해당 상세 섹션으로, 노드를 누르면 노드 사전의 해당 카드로 이동합니다.**
 
@@ -147,20 +147,22 @@ flowchart TB
     NT -.->|"✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)<br/>📞 set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| NAV
     CO ==>|"🎬 /execute_task_solution<br/>(moveit_task_<br/>constructor_msgs/action/<br/>ExecuteTaskSolution)"| MTC
     CO ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| NAV
-    MTC ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| CM
-    CM -->|"🧩 읽기 reference<br/>JTC 목표 관절각<br/>+ 관절·그리퍼 state"| RLA
-    RLA -->|"🧩 쓰기 command<br/>목표각 + Δ<br/>(±0.05rad 클리핑)"| CM
+    MTC ==>|"❶ 🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| CM
+    CM -->|"❹ 🧩 읽기 reference<br/>JTC 목표 관절각<br/>+ 관절·그리퍼 state"| RLA
+    RLA -->|"❺ 🧩 쓰기 command<br/>목표각 + Δ<br/>(±0.05rad 클리핑)"| CM
     NAV -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| RLN
     RLN -->|"✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| VS
     VS -->|"✉️ /cmd_vel_smoothed<br/>(geometry_msgs/<br/>TwistStamped)"| CMN
-    CMN -->|"✉️ /cmd_vel<br/>(geometry_msgs/<br/>TwistStamped)"| CM
+    CMN -->|"❶ ✉️ /cmd_vel<br/>(geometry_msgs/<br/>TwistStamped)"| CM
+    %% 보이지 않는 배치 힌트: ❶ /cmd_vel 라벨이 ❹ reference 라벨을 덮지 않게 한다
+    RLA ~~~ CMN
     PC -->|"✉️ /pole_cam/depth<br/>/color/points<br/>(sensor_msgs/<br/>PointCloud2)"| CMN
-    CM -->|"✉️ /joint_states<br/>(sensor_msgs/JointState)"| ASM
-    ASM -.->|"📞 cancel_goal<br/>(action_msgs/srv/<br/>CancelGoal)"| CM
+    CM -->|"❸ ✉️ /joint_states<br/>(sensor_msgs/JointState)"| ASM
+    ASM -.->|"❼ 📞 cancel_goal<br/>이상 시에만<br/>(action_msgs/srv/<br/>CancelGoal)"| CM
     ASM -->|"✉️ /arm_safety_event<br/>(cupbot_interfaces/<br/>ArmSafetyEvent)"| CO
     CO -->|"✉️ /robot_say<br/>(std_msgs/String)"| UI
-    CM -->|"🔌 쓰기 SyncWrite<br/>Goal Position·Velocity<br/>(Dynamixel Protocol 2.0)"| HW
-    HW -->|"🔌 읽기 SyncRead<br/>Present Pos·Vel·Current<br/>+ IMU (OpenCR)"| CM
+    CM -->|"❻ 🔌 쓰기 SyncWrite<br/>Goal Position·Velocity<br/>(Dynamixel Protocol 2.0)"| HW
+    HW -->|"❷ 🔌 읽기 SyncRead<br/>Present Pos·Vel·Current<br/>+ IMU (OpenCR)"| CM
 ${CLS}
     class PER,CO,PC,GC,UI std;
     class VLM ai;
@@ -182,6 +184,14 @@ ${F}
 
 - **물리 하드웨어는 노란 영역, 토픽은 내지 않는다.** 장치(육각형)는 신호가 오가는 곳 가까이에 두고 같은 노란 "물리 하드웨어" 영역으로 표시했다 — 센서 쪽(카메라)과 구동 쪽(OpenCR·모터·IMU). RealSense 카메라 2대는 🔌 USB 3로 realsense2_camera 드라이버 노드에 붙고, 토픽은 드라이버 노드가 발행한다. 모터·IMU는 OpenCR → hardware interface(controller_manager) 경로로 같은 원칙을 따른다.
 - **rl_arm_correction은 ROS 노드가 아니다.** controller_manager 안에서 JTC 바로 뒤에 체인으로 붙는 컨트롤러 플러그인이다 (컨트롤러 탭 참고).
+- **controller_manager 화살표 순서 (❶~❼).** 100Hz 한 주기는 read → update → write 순서다.
+  - ❶ 입력: MTC의 궤적 목표(팔, 동작 시작 때 1회)와 collision_monitor의 \`/cmd_vel\`(베이스, 계속)은 언제든 도착하고, 다음 주기 update에서 쓰인다.
+  - ❷ read: OpenCR에서 관절 위치·속도·전류와 IMU를 읽는다.
+  - ❸ update: joint_state_broadcaster가 ❷에서 읽은 값을 \`/joint_states\`로 발행한다 (arm_safety_monitor가 받음).
+  - ❹ update: JTC가 이번 주기 목표 관절각을 계산해 rl_arm_correction에 reference로 넘긴다.
+  - ❺ update: rl_arm_correction이 Δ를 더해 command로 쓴다. diff_drive도 이 단계에서 ❶의 \`/cmd_vel\`로 바퀴 속도를 계산한다.
+  - ❻ write: 최종 명령을 OpenCR로 보낸다. 그리고 다음 주기 ❷로 돌아간다.
+  - ❼ 이상 시에만: arm_safety_monitor가 ❸을 보고 문제를 찾으면 팔 궤적을 취소한다. 주기와 무관한 비동기 호출이다.
 - **controller_manager는 하나.** 베이스·팔·그리퍼·IMU가 같은 OpenCR에 붙어 있으므로 hardware component 하나에 컨트롤러들을 함께 올린다.
 - **LiDAR가 없으므로 /scan도 없다.** 장애물은 pole_cam PointCloud2를 Nav2 costmap(voxel layer)·collision_monitor·MoveIt octomap에 그대로 넣는다.
 - **SLAM·위치추정은 RTAB-Map.** RGB-D 영상 + 휠/IMU 오도메트리로 지도를 만들고(매핑 모드), 운영 중에는 같은 DB로 위치만 추정한다(위치추정 모드). slam_toolbox·amcl은 LaserScan이 필요해서 쓰지 않는다 (Nav2·SLAM 섹션의 3-1).
@@ -281,22 +291,22 @@ flowchart TB
     O3a(["→ 3 bt_navigator"])
     O3b(["→ 3 controller_server"])
     O4a(["→ 4 move_group (MTC)"])
-    USER -->|"🗣️ 말·텍스트<br/>“테이블 위 컵 가져다줘”"| UI
-    UI -->|"✉️ /user_command<br/>(std_msgs/String)"| VLM
-    CO -->|"✉️ /robot_say<br/>(std_msgs/String)"| UI
-    UI -->|"🔊 음성 안내<br/>“컵 가져왔어요”<br/>“컵을 잡을 수 없어요”"| USER
+    USER -->|"❶ 🗣️ 말·텍스트<br/>“테이블 위 컵 가져다줘”"| UI
+    UI -->|"❷ ✉️ /user_command<br/>(std_msgs/String)"| VLM
+    CO -->|"❿ ✉️ /robot_say<br/>(std_msgs/String)"| UI
+    UI -->|"⓫ 🔊 음성 안내<br/>“컵 가져왔어요”<br/>“컵을 잡을 수 없어요”"| USER
     TO --> VLM
     TO --> CO
     SE --> CO
-    VLM -->|"✉️ /sub_goals<br/>(cupbot_interfaces/<br/>SubGoalArray)"| CO
-    CO -->|"✉️ /task_status<br/>(cupbot_interfaces/<br/>TaskStatus)"| VLM
-    CO -.->|"📞 /score_grasps<br/>(cupbot_interfaces/srv/<br/>ScoreGrasps)"| GS
+    VLM -->|"❸ ✉️ /sub_goals<br/>(cupbot_interfaces/<br/>SubGoalArray)"| CO
+    CO -->|"❾ ✉️ /task_status<br/>(cupbot_interfaces/<br/>TaskStatus)"| VLM
+    CO -.->|"❼ 📞 /score_grasps<br/>(cupbot_interfaces/srv/<br/>ScoreGrasps)"| GS
     NI --> NT
-    NT -->|"✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)"| O3b
-    NT -.->|"📞 /controller_server<br/>/set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| O3b
-    CO ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| O3a
-    CO ==>|"🎬 /execute_task_solution<br/>(moveit_task_<br/>constructor_msgs/action/<br/>ExecuteTaskSolution)"| O4a
-    CO -.->|"📞 /apply_planning_scene ·<br/>/clear_octomap<br/>(moveit_msgs/srv/<br/>ApplyPlanningScene ·<br/>std_srvs/srv/Empty)"| O4a
+    NT -->|"❺ ✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)"| O3b
+    NT -.->|"❺ 📞 /controller_server<br/>/set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| O3b
+    CO ==>|"❹ 🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| O3a
+    CO ==>|"❽ 🎬 /execute_task_solution<br/>(moveit_task_<br/>constructor_msgs/action/<br/>ExecuteTaskSolution)"| O4a
+    CO -.->|"❻ 📞 /apply_planning_scene ·<br/>/clear_octomap<br/>(moveit_msgs/srv/<br/>ApplyPlanningScene ·<br/>std_srvs/srv/Empty)"| O4a
 ${CLS}
     class VLM ai;
     class CO,UI std;
@@ -325,6 +335,15 @@ ${F}
 3. **팔은 베이스가 멈췄을 때만:** NavigateToPose 성공 후 0.5초 안정 대기 → planning scene 갱신 → pick.
 4. **파지 재시도는 coordinator 몫:** grasp_scorer 후보를 점수순으로 최대 2개 시도. 모두 실패하면 그때 /task_status로 VLM에 재계획을 요청한다.
 5. **재시도 한도:** 같은 단계 2회 실패면 \`/robot_say\`로 voice_ui에 보내 사람에게 음성으로 알리고 정지.
+
+**화살표 순서 (❶~⓫)** — 명령 하나가 처리되는 순서. 6장 시나리오의 번호와 같은 흐름이다.
+
+- ❶~❸ 명령 → VLM 계획 → coordinator가 /sub_goals 받음
+- ❹ 이동 단계: NavigateToPose. ❺ 이동하는 동안 rl_nav_tuner가 1~2초마다 속도 상한·파라미터를 바꾼다
+- ❻~❽ pick 단계: 장면 갱신(octomap 지우기·컵 등록) → 파지 후보 점수 → MTC 실행. 실패하면 ❼의 다음 후보로 ❽ 재시도
+- ❾ 단계가 끝날 때마다 /task_status (place까지 ❹~❽ 반복 뒤 마지막 완료 보고)
+- ❿~⓫ 결과를 음성으로 알림
+- 번호 없는 화살표(/tracked_objects, /arm_safety_event, 내비 상태)는 늘 들어오는 입력이다.
 
 - grasp_scorer는 pick 직전에 한 번만 물으면 되므로 토픽보다 서비스가 맞다.
 - rl_nav_tuner의 출력은 **속도 상한(/speed_limit 토픽)** 과 **DWB kinematic 파라미터(set_parameters)** 두 경로로만 나간다. 자세한 건 학습 탭의 프리셋 표 참고.
@@ -356,10 +375,10 @@ flowchart TB
     RTAB["📦 rtabmap<br/>위치추정 모드"]
     LMN["📦 lifecycle_manager_navigation"]
     O5a(["→ 5 rl_nav_correction"])
-    IN ==> BT
-    BT ==>|"🎬 /compute_path_to_pose<br/>(nav2_msgs/action/<br/>ComputePathToPose)"| PS
-    BT ==>|"🎬 /follow_path<br/>(nav2_msgs/action/<br/>FollowPath)"| CS
-    BT ==>|"🎬 /spin · /backup ·<br/>/wait<br/>(nav2_msgs/action/<br/>Spin · BackUp · Wait)"| BS
+    IN ==>|"❷"| BT
+    BT ==>|"❸ 🎬 /compute_path_to_pose<br/>(nav2_msgs/action/<br/>ComputePathToPose)"| PS
+    BT ==>|"❺ 🎬 /follow_path<br/>(nav2_msgs/action/<br/>FollowPath)"| CS
+    BT ==>|"❼ 🎬 /spin · /backup ·<br/>/wait<br/>(nav2_msgs/action/<br/>Spin · BackUp · Wait)"| BS
     RGBD --> RTAB
     ODOM --> RTAB
     RTAB -->|"✉️ /map transient_local<br/>(nav_msgs/OccupancyGrid)"| PS
@@ -368,13 +387,13 @@ flowchart TB
     PTS --> CS
     ODOM --> CS
     TUNE -.-> CS
-    PS -->|"✉️ /plan<br/>(nav_msgs/Path)"| O5a
-    CS -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| O5a
-    BS -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| O5a
-    LMN -.->|"📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| BT
-    LMN -.->|"📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| PS
-    LMN -.->|"📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| CS
-    LMN -.->|"📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| BS
+    PS -->|"❹ ✉️ /plan<br/>(nav_msgs/Path)"| O5a
+    CS -->|"❻ ✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| O5a
+    BS -->|"❽ ✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| O5a
+    LMN -.->|"❶ 📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| BT
+    LMN -.->|"❶ 📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| PS
+    LMN -.->|"❶ 📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| CS
+    LMN -.->|"❶ 📞 change_state<br/>(lifecycle_msgs/srv/<br/>ChangeState)"| BS
 ${CLS}
     class BT,PS,CS,BS,RTAB,LMN std;
     class IN,TUNE,PTS,RGBD,ODOM,O5a ext;
@@ -389,6 +408,15 @@ ${F}
 | /plan | 토픽 | nav_msgs/Path | planner_server → rl_nav_correction, RViz | 계획마다 |
 | /cmd_vel_nav | 토픽 | geometry_msgs/TwistStamped | controller_server, behavior_server → rl_nav_correction | 20Hz |
 | */change_state | 서비스 | lifecycle_msgs/srv/ChangeState | lifecycle_manager → 관리 대상 노드 | 시작·종료 시 |
+
+**화살표 순서 (❶~❽)**
+
+- ❶ 시작할 때 1회: lifecycle_manager가 Nav2 서버들을 configure → activate 한다
+- ❷ coordinator의 NavigateToPose 도착
+- ❸~❹ 경로 계산 → /plan 발행
+- ❺~❻ 경로 따라가기 → /cmd_vel_nav 20Hz. 주행 중 ❸~❻이 약 1Hz로 반복된다(재계획)
+- ❼~❽ 막혔을 때만: 복구 동작(Spin·BackUp·Wait) → 복구 중 속도 명령. 끝나면 ❸부터 다시
+- 번호 없는 화살표(/map, map→odom, 점구름, /odometry/filtered, rl_nav_tuner)는 늘 들어오는 입력이다.
 
 - **costmap 장애물 층:** LaserScan이 없으므로 \`voxel_layer\`(또는 STVL)에 PointCloud2를 \`observation_sources\`로 넣는다. \`min_obstacle_height 0.03\`, \`max_obstacle_height 0.40\`으로 바닥과 테이블 상판 위를 거른다.
 - **시야 사각지대:** pole_cam 수평 화각은 약 87°라 옆·뒤가 안 보인다. 한 번 본 장애물이 시야 밖에서도 남도록 voxel layer의 clearing을 보수적으로 두고, BT의 **BackUp 복구는 빼거나 거리를 0.1m 이하로** 제한한다(뒤를 못 보므로 collision_monitor도 막아 주지 못한다). Spin도 짧게.
@@ -495,28 +523,28 @@ flowchart TB
         GRC["📦 gripper_controller"]
         JSB["📦 joint_state_broadcaster"]
         HWI["📦 turtlebot3_manipulation<br/>hardware interface"]
-        JTC -->|"🧩 reference interface 관절각<br/>(double)"| RAC
-        RAC -->|"🧩 command interface<br/>(double)"| HWI
-        GRC -->|"🧩 command interface<br/>(double)"| HWI
-        HWI -->|"🧩 state interface<br/>(double)"| JTC
-        HWI -->|"🧩 state interface<br/>joint1~4 position·velocity<br/>(double)"| RAC
-        HWI -->|"🧩 state interface<br/>gripper position·effort<br/>(파지 여부 판단)"| RAC
-        HWI -->|"🧩 state interface<br/>(double)"| JSB
+        JTC -->|"❻ 🧩 reference interface 관절각<br/>(double)"| RAC
+        RAC -->|"❼ 🧩 command interface<br/>(double)"| HWI
+        GRC -->|"❼ 🧩 command interface<br/>(double)"| HWI
+        HWI -->|"❹ 🧩 state interface<br/>(double)"| JTC
+        HWI -->|"❹ 🧩 state interface<br/>joint1~4 position·velocity<br/>(double)"| RAC
+        HWI -->|"❹ 🧩 state interface<br/>gripper position·effort<br/>(파지 여부 판단)"| RAC
+        HWI -->|"❹ 🧩 state interface<br/>(double)"| JSB
     end
     MOT{{"OpenCR → 다이나믹셀"}}
     O1(["→ 1 robot_state_publisher · move_group"])
     O2(["→ 2 coordinator"])
-    IN ==> MG
+    IN ==>|"❶"| MG
     SC -.-> MG
     PCD --> MG
-    MG ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| JTC
-    MG ==>|"🎬 /gripper_controller<br/>/gripper_cmd<br/>(control_msgs/action/<br/>GripperCommand)"| GRC
-    HWI -->|"🔌 쓰기 SyncWrite<br/>Goal Position<br/>(관절 4 · 그리퍼)"| MOT
-    MOT -->|"🔌 읽기 SyncRead<br/>Present Pos·Vel·Current<br/>(Current → effort)"| HWI
-    JSB -->|"✉️ /joint_states<br/>(sensor_msgs/JointState)"| O1
-    JSB -->|"✉️ /joint_states effort<br/>(sensor_msgs/JointState)"| ASM
-    ASM -.->|"📞 follow_joint_trajectory<br/>/_action/cancel_goal<br/>(action_msgs/srv/<br/>CancelGoal)"| JTC
-    ASM -->|"✉️ /arm_safety_event<br/>(cupbot_interfaces/<br/>ArmSafetyEvent)"| O2
+    MG ==>|"❷ 🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| JTC
+    MG ==>|"❷ 🎬 /gripper_controller<br/>/gripper_cmd<br/>(control_msgs/action/<br/>GripperCommand)"| GRC
+    HWI -->|"❽ 🔌 쓰기 SyncWrite<br/>Goal Position<br/>(관절 4 · 그리퍼)"| MOT
+    MOT -->|"❸ 🔌 읽기 SyncRead<br/>Present Pos·Vel·Current<br/>(Current → effort)"| HWI
+    JSB -->|"❺ ✉️ /joint_states<br/>(sensor_msgs/JointState)"| O1
+    JSB -->|"❺ ✉️ /joint_states effort<br/>(sensor_msgs/JointState)"| ASM
+    ASM -.->|"❾ 📞 follow_joint_trajectory<br/>/_action/cancel_goal<br/>(action_msgs/srv/<br/>CancelGoal)"| JTC
+    ASM -->|"❿ ✉️ /arm_safety_event<br/>(cupbot_interfaces/<br/>ArmSafetyEvent)"| O2
 ${CLS}
     class MG,JTC,GRC,JSB,HWI std;
     class RAC rl;
@@ -524,6 +552,19 @@ ${CLS}
     class MOT hw;
     class IN,SC,PCD,O1,O2 ext;
 ${F}
+
+**화살표 순서 (❶~❿)**
+
+- ❶ coordinator가 MTC 태스크 실행 요청 (장면 갱신은 그 전에 2장 ❻에서 끝남)
+- ❷ MTC 단계마다 팔 궤적(JTC) 또는 그리퍼 명령 중 하나를 보낸다. 접근 → 그리퍼 열기 → 파지 → … 순서로 번갈아
+- ❸~❽ controller_manager 100Hz 한 주기 (read → update → write)
+  - ❸ read: 다이나믹셀에서 위치·속도·전류를 읽는다
+  - ❹ 읽은 값이 state interface로 각 컨트롤러에 보인다 (같은 메모리)
+  - ❺ update: joint_state_broadcaster가 /joint_states 발행
+  - ❻ update: JTC가 이번 주기 목표 관절각을 rl_arm_correction의 reference로 넘긴다
+  - ❼ update: rl_arm_correction(목표각 + Δ)과 gripper_controller가 command를 쓴다
+  - ❽ write: 다이나믹셀로 보내고 다음 주기 ❸으로
+- ❾~❿ 이상 시에만: arm_safety_monitor가 ❺의 전류를 보고 접촉을 찾으면 궤적 취소 → coordinator에 보고
 
 | 이름 | 종류 | 메시지 타입 | 보내는 쪽 → 받는 쪽 | 주기 |
 | --- | --- | --- | --- | --- |
@@ -605,26 +646,26 @@ flowchart TB
         DD["📦 diff_drive_controller"]
         IMUB["📦 imu_sensor_broadcaster"]
         BHW["📦 hardware interface"]
-        DD -->|"🧩 command interface<br/>(double)"| BHW
-        BHW -->|"🧩 state interface<br/>(double)"| DD
-        BHW -->|"🧩 state interface<br/>(double)"| IMUB
+        DD -->|"❽ 🧩 command interface<br/>(double)"| BHW
+        BHW -->|"❻ 🧩 state interface<br/>(double)"| DD
+        BHW -->|"❻ 🧩 state interface<br/>(double)"| IMUB
     end
     WM{{"바퀴 모터 ×2 · IMU (OpenCR)"}}
     O3(["→ 3 Nav2 · 2 rl_nav_tuner"])
-    CIN --> RNC
-    PIN --> RNC
-    SL --> RNC
-    RNC -->|"✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| VS
-    VS -->|"✉️ /cmd_vel_smoothed<br/>(geometry_msgs/<br/>TwistStamped)"| CMN
+    CIN -->|"❶"| RNC
+    PIN -->|"❶"| RNC
+    SL -->|"❶"| RNC
+    RNC -->|"❷ ✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| VS
+    VS -->|"❸ ✉️ /cmd_vel_smoothed<br/>(geometry_msgs/<br/>TwistStamped)"| CMN
     PTS --> CMN
-    CMN -->|"✉️ /cmd_vel<br/>(geometry_msgs/<br/>TwistStamped)"| DD
-    BHW -->|"🔌 쓰기 SyncWrite<br/>Goal Velocity<br/>(바퀴 2개)"| WM
-    WM -->|"🔌 읽기 SyncRead<br/>Present Pos·Vel (바퀴)<br/>+ IMU 자세·각속도·가속도"| BHW
-    DD -->|"✉️ /odom<br/>(nav_msgs/Odometry)"| EKF
-    IMUB -->|"✉️ /imu<br/>(sensor_msgs/Imu)"| EKF
-    IMUB -->|"✉️ /imu<br/>(sensor_msgs/Imu)"| RNC
-    DD -->|"✉️ /odom<br/>(nav_msgs/Odometry)"| RNC
-    EKF -->|"✉️ /odometry/filtered ·<br/>/tf odom→base_link<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| O3
+    CMN -->|"❹ ✉️ /cmd_vel<br/>(geometry_msgs/<br/>TwistStamped)"| DD
+    BHW -->|"❾ 🔌 쓰기 SyncWrite<br/>Goal Velocity<br/>(바퀴 2개)"| WM
+    WM -->|"❺ 🔌 읽기 SyncRead<br/>Present Pos·Vel (바퀴)<br/>+ IMU 자세·각속도·가속도"| BHW
+    DD -->|"❼ ✉️ /odom<br/>(nav_msgs/Odometry)"| EKF
+    IMUB -->|"❼ ✉️ /imu<br/>(sensor_msgs/Imu)"| EKF
+    IMUB -->|"❼ ✉️ /imu<br/>(sensor_msgs/Imu)"| RNC
+    DD -->|"❼ ✉️ /odom<br/>(nav_msgs/Odometry)"| RNC
+    EKF -->|"❿ ✉️ /odometry/filtered ·<br/>/tf odom→base_link<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| O3
 ${CLS}
     class VS,EKF,DD,IMUB,BHW std;
     class RNC rl;
@@ -632,6 +673,17 @@ ${CLS}
     class WM hw;
     class CIN,PIN,SL,PTS,O3 ext;
 ${F}
+
+**화살표 순서 (❶~❿)**
+
+- ❶~❹ 속도 명령 체인 (20Hz): Nav2 명령 → RL 보정 → 가속 제한 → 충돌 감시 → diff_drive_controller
+- ❺~❾ controller_manager 한 주기 (read → update → write)
+  - ❺ read: 바퀴 위치·속도와 IMU를 읽는다
+  - ❻ 읽은 값이 state interface로 diff_drive·imu broadcaster에 보인다
+  - ❼ update: /odom, /imu 발행. rl_nav_correction은 이 값을 **다음 ❶~❷ 계산**에 쓴다 (피드백)
+  - ❽ update: diff_drive가 ❹의 /cmd_vel로 바퀴 목표 속도를 쓴다
+  - ❾ write: 모터로 보내고 다음 주기 ❺로
+- ❿ EKF가 ❼을 융합해 /odometry/filtered와 odom→base_link TF를 낸다
 
 | 이름 | 종류 | 메시지 타입 | 보내는 쪽 → 받는 쪽 | 주기 |
 | --- | --- | --- | --- | --- |
@@ -736,15 +788,15 @@ flowchart TB
     end
     D1{{"OpenCR → 다이나믹셀<br/>팔·그리퍼·바퀴·IMU"}}
     D2{{"다른 장치"}}
-    URDF -->|"✉️ /robot_description<br/>(std_msgs/String)"| RM
-    YAML -->|"⚙️ 파라미터 파일"| CTRL
-    SP -->|"📞 load · switch_controller<br/>(controller_manager_msgs)"| CTRL
-    CTRL -->|"🧩 command 쓰기<br/>(double)"| RM
-    RM -->|"🧩 state 읽기<br/>(double)"| CTRL
-    RM -->|"🧩 write()"| HWC
-    HWC -->|"🧩 read()"| RM
-    P1 -->|"🔌 쓰기 SyncWrite<br/>(Dynamixel Protocol 2.0)"| D1
-    D1 -->|"🔌 읽기 SyncRead<br/>(Dynamixel Protocol 2.0)"| P1
+    URDF -->|"❶ ✉️ /robot_description<br/>(std_msgs/String)"| RM
+    YAML -->|"❷ ⚙️ 파라미터 파일"| CTRL
+    SP -->|"❸ 📞 load · switch_controller<br/>(controller_manager_msgs)"| CTRL
+    CTRL -->|"❼ 🧩 command 쓰기<br/>(double)"| RM
+    RM -->|"❻ 🧩 state 읽기<br/>(double)"| CTRL
+    RM -->|"❽ 🧩 write()"| HWC
+    HWC -->|"❺ 🧩 read()"| RM
+    P1 -->|"❾ 🔌 쓰기 SyncWrite<br/>(Dynamixel Protocol 2.0)"| D1
+    D1 -->|"❹ 🔌 읽기 SyncRead<br/>(Dynamixel Protocol 2.0)"| P1
     P2 -.->|"🔌 장치 고유 프로토콜"| D2
 ${CLS}
     class C1,C3,C4,RM,P1,P2,SP std;
@@ -752,6 +804,15 @@ ${CLS}
     class D1,D2 hw;
     class URDF,YAML ext;
 ${F}
+
+**화살표 순서 (❶~❾)**
+
+- ❶~❸ 시작할 때 1회: URDF로 하드웨어 플러그인을 올리고 → 컨트롤러 파라미터를 읽고 → spawner가 컨트롤러를 올려 켠다
+- ❹~❾ 100Hz 반복 (read → update → write)
+  - ❹~❺ read: 장치에서 읽은 값을 hardware component가 state interface에 채운다
+  - ❻~❼ update: 컨트롤러가 state를 읽고 command를 쓴다
+  - ❽~❾ write: command를 장치로 보내고 다음 주기 ❹로
+- 다른 장치용 플러그인(점선)은 예시라 번호가 없다.
 
 ### 이 로봇에서 연결하는 것
 
