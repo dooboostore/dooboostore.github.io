@@ -79,46 +79,75 @@ const EDGE_STYLE = `
   svg.eh-has-sel g.edgeLabel:not(.eh-sel) { opacity:.3; }  /* 안쪽 span도 class가 edgeLabel이라 g로 한정 */
 `;
 
+// 선(path)에도 같은 data-id가 있으므로 라벨 영역 안에서만 찾는다
+const edgeLabelOf = (svg: SVGSVGElement, id: string) =>
+  svg.querySelector(`.edgeLabels [data-id="${id}"]`)?.closest('.edgeLabel') as SVGGElement | null;
+
+// 화살촉(marker)은 모든 선이 공유하므로 CSS로는 한 선만 칠할 수 없다 →
+// 파랗고 조금 큰 복제 마커를 만들어 강조된 선만 그 마커로 바꿔 끼운다
+const blueMarker = (svg: SVGSVGElement, url: string) => {
+  const id = url.match(/#([^)"']+)/)?.[1];
+  if (!id) return url;
+  const blueId = `${id}-eh`;
+  if (!svg.querySelector(`marker[id="${blueId}"]`)) {
+    const orig = svg.querySelector(`marker[id="${id}"]`);
+    if (!orig) return url;
+    const m = orig.cloneNode(true) as SVGMarkerElement;
+    m.id = blueId;
+    for (const k of ['markerWidth', 'markerHeight']) {
+      const v = parseFloat(m.getAttribute(k) ?? '');
+      if (v) m.setAttribute(k, String(v * 1.4));
+    }
+    m.querySelectorAll<SVGElement>('path, circle, polygon').forEach(el => {
+      el.style.setProperty('fill', '#2563eb', 'important');
+      el.style.setProperty('stroke', '#2563eb', 'important');
+    });
+    orig.after(m);
+  }
+  return `url(#${blueId})`;
+};
+
+const setEdgeMarkers = (svg: SVGSVGElement, path: SVGPathElement, on: boolean) => {
+  for (const attr of ['marker-end', 'marker-start']) {
+    const key = attr === 'marker-end' ? 'ehMarkerEnd' : 'ehMarkerStart'; // dataset 키는 하이픈 불가
+    const orig = path.dataset[key] ?? path.getAttribute(attr);
+    if (!orig) continue;
+    path.dataset[key] = orig;
+    path.setAttribute(attr, on ? blueMarker(svg, orig) : orig);
+  }
+};
+
+/**
+ * 도식에서 ids(mermaid 선 id, 예: "L_U_UI_0")만 선택 상태로 강조하고 나머지는 흐리게 — 클릭 선택과 같은 모양.
+ * 빈 배열이면 전체 해제. 강조된 선·라벨 요소들을 돌려준다 (스크롤 위치 계산용).
+ */
+export const selectEdges = (svg: SVGSVGElement, ids: string[]): Element[] => {
+  const want = new Set(ids);
+  const lit: Element[] = [];
+  svg.querySelectorAll<SVGPathElement>('path.flowchart-link[data-id]').forEach(path => {
+    const id = path.getAttribute('data-id')!;
+    const on = want.has(id);
+    const label = edgeLabelOf(svg, id);
+    for (const el of [path, label]) {
+      if (!el) continue;
+      el.classList.toggle('eh-sel', on);
+      el.classList.toggle('eh-on', on);
+      if (on) lit.push(el);
+    }
+    setEdgeMarkers(svg, path, on);
+  });
+  svg.classList.toggle('eh-has-sel', want.size > 0);
+  return lit;
+};
+
 const enableEdgeHighlight = (svg: SVGSVGElement) => {
   const doc = svg.ownerDocument;
   const style = doc.createElementNS('http://www.w3.org/2000/svg', 'style');
   style.textContent = EDGE_STYLE;
   svg.prepend(style);
-  // 선(path)에도 같은 data-id가 있으므로 라벨 영역 안에서만 찾는다
-  const labelOf = (id: string) => svg.querySelector(`.edgeLabels [data-id="${id}"]`)?.closest('.edgeLabel') as SVGGElement | null;
+  const labelOf = (id: string) => edgeLabelOf(svg, id);
   const refresh = () => svg.classList.toggle('eh-has-sel', !!svg.querySelector('.flowchart-link.eh-sel'));
-  // 화살촉(marker)은 모든 선이 공유하므로 CSS로는 한 선만 칠할 수 없다 →
-  // 파랗고 조금 큰 복제 마커를 만들어 강조된 선만 그 마커로 바꿔 끼운다
-  const blueMarker = (url: string) => {
-    const id = url.match(/#([^)"']+)/)?.[1];
-    if (!id) return url;
-    const blueId = `${id}-eh`;
-    if (!svg.querySelector(`marker[id="${blueId}"]`)) {
-      const orig = svg.querySelector(`marker[id="${id}"]`);
-      if (!orig) return url;
-      const m = orig.cloneNode(true) as SVGMarkerElement;
-      m.id = blueId;
-      for (const k of ['markerWidth', 'markerHeight']) {
-        const v = parseFloat(m.getAttribute(k) ?? '');
-        if (v) m.setAttribute(k, String(v * 1.4));
-      }
-      m.querySelectorAll<SVGElement>('path, circle, polygon').forEach(el => {
-        el.style.setProperty('fill', '#2563eb', 'important');
-        el.style.setProperty('stroke', '#2563eb', 'important');
-      });
-      orig.after(m);
-    }
-    return `url(#${blueId})`;
-  };
-  const setMarkers = (path: SVGPathElement, on: boolean) => {
-    for (const attr of ['marker-end', 'marker-start']) {
-      const key = attr === 'marker-end' ? 'ehMarkerEnd' : 'ehMarkerStart'; // dataset 키는 하이픈 불가
-      const orig = path.dataset[key] ?? path.getAttribute(attr);
-      if (!orig) continue;
-      path.dataset[key] = orig;
-      path.setAttribute(attr, on ? blueMarker(orig) : orig);
-    }
-  };
+  const setMarkers = (path: SVGPathElement, on: boolean) => setEdgeMarkers(svg, path, on);
   svg.querySelectorAll<SVGPathElement>('path.flowchart-link[data-id]').forEach(path => {
     const id = path.getAttribute('data-id')!;
     const label = labelOf(id);

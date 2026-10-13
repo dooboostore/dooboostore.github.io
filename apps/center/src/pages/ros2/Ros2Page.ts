@@ -19,7 +19,7 @@ type RosConcept =
   | 'distro' | 'install'
   | 'node' | 'patterns' | 'comm' | 'msgs' | 'param' | 'launch'
   | 'dds' | 'qos'
-  | 'cli' | 'pkg' | 'bag' | 'tf' | 'urdf' | 'ros2control'
+  | 'cli' | 'pkg' | 'bag' | 'tf' | 'slam' | 'urdf' | 'ros2control'
   | 'eco'
   | 'design';
 
@@ -38,6 +38,7 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'pkg', label: '패키지·colcon', el: 'center-ros2-pkg', group: 'tools' },
   { id: 'bag', label: 'rosbag', el: 'center-ros2-bag', group: 'tools' },
   { id: 'tf', label: 'TF2', el: 'center-ros2-tf', group: 'tools' },
+  { id: 'slam', label: '맵핑·위치추정', el: 'center-ros2-slam', group: 'tools' },
   { id: 'urdf', label: 'URDF·암', el: 'center-ros2-urdf', group: 'tools' },
   { id: 'ros2control', label: 'ros2_control', el: 'center-ros2-control', group: 'tools' },
   { id: 'eco', label: '생태계', el: 'center-ros2-eco', group: 'eco' },
@@ -182,7 +183,7 @@ export default (w: Window) => {
           @media(max-width:600px){ .header{padding:12px 14px} .header-title{font-size:17px} }
           .content { padding:16px; display:flex; flex-direction:column; gap:12px; }
           @media(max-width:600px){ .content{padding:10px;gap:10px} }
-          .card { background:#fff; border-radius:14px; box-shadow:0 4px 14px rgba(0,0,0,0.07); overflow:hidden; }
+          .card { background:#fff; border-radius:14px; box-shadow:0 4px 14px rgba(0,0,0,0.07); overflow:hidden; overflow:clip; /* clip: 모서리는 자르되 안쪽 position:sticky를 막지 않음 */ }
           .card-header { background:linear-gradient(135deg,#22314e,#3b82c4); color:#fff; padding:10px 14px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
           .card-title { font-size:14px; font-weight:700; }
           .card-body { padding:12px 14px; }
