@@ -21,7 +21,7 @@ type RosConcept =
   | 'dds' | 'qos'
   | 'cli' | 'pkg' | 'bag' | 'tf' | 'slam' | 'urdf' | 'ros2control'
   | 'eco'
-  | 'design';
+  | 'design' | 'provided';
 
 const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] = [
   { id: 'distro', label: '배포판 지도', el: 'center-ros2-distro', group: 'start' },
@@ -43,6 +43,7 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'ros2control', label: 'ros2_control', el: 'center-ros2-control', group: 'tools' },
   { id: 'eco', label: '생태계', el: 'center-ros2-eco', group: 'eco' },
   { id: 'design', label: '실전노드설계', el: 'center-ros2-design', group: 'real' },
+  { id: 'provided', label: '제공노드', el: 'center-ros2-provided', group: 'real' },
 ];
 
 export default (w: Window) => {

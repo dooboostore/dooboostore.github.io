@@ -665,6 +665,7 @@ ${F}
 **coordinator가 지키는 실행 규칙**
 
 1. **VLM 출력 검증:** 형식(JSON 스키마), 허용 동작(navigate·pick·place·say), 대상 id가 /tracked_objects에 실제로 있는지.
+   - pick·place의 대상 \`tray\` = 로봇 뒤 적재함 (MISSION ③ MOVE_TO_B — 손에 들고 옮기면 인정 안 됨). 칸은 coordinator 파라미터 \`tray_slots\`(base_footprint, MoveIt 실측으로 닿는 곳 — 앞줄 x −0.095 · 뒷줄 x −0.135, y ±0.05), 실린 수는 coordinator가 센다 (꽉 차면 \`tray_full\`, 비면 \`tray_empty\`). 같은 구역에 여러 번 place하면 \`place_spacing\`(0.08m)씩 비켜 놓는다. 템플릿(오프라인): 명령에 \`MOVE_TO_B\`가 있으면 퍽(최대 4개)마다 navigate·pick·place tray → navigate 구역 → (pick tray · place 구역)×개수
 2. **이동 전 팔 접기:** navigate 전에 팔을 stow 자세로. 컵을 든 채 이동하면 footprint를 키운 파라미터(\`/local_costmap/local_costmap/set_parameters\` footprint)로 바꾼다.
 3. **팔은 베이스가 멈췄을 때만:** NavigateToPose 성공 후 0.5초 안정 대기 → planning scene 갱신 → pick.
 4. **파지 재시도는 coordinator 몫:** grasp_scorer 후보를 점수순으로 최대 2개 시도. 모두 실패하면 그때 /task_status로 VLM에 재계획을 요청한다.
