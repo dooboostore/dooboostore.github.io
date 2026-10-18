@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "entry": "daytime",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdeɪtaɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "낮, 주간",
+              "examples": [
+                {
+                  "text": "in the <b>daytime</b>",
+                  "translatedText": "주간에, 낮 동안에(opp. at night)"
+                }
+              ],
+              "originalMeaning": "낮, 주간"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "낮[주간]의",
+              "examples": [
+                {
+                  "text": "<b>daytime</b> burglaries",
+                  "translatedText": "백주의 강도"
+                }
+              ],
+              "originalMeaning": "낮[주간]의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4bc7accacdf480eabdcc8294175828f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4bc7accacdf480eabdcc8294175828f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6b9460ea648cd9f504d4c35f5b7344c6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낮이 차차 길어진다",
+      "text": "The <b>daytime</b> grows longer and longer."
+    }
+  ],
+  "isWordType": true
+}

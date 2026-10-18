@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "entry": "cemetery",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│seməteri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(교회에 소속되지 않은) 공동묘지(cf. CHURCHYARD, GRAVEYARD)",
+              "examples": [],
+              "originalMeaning": "(교회에 소속되지 않은) 공동묘지(cf. CHURCHYARD, GRAVEYARD)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ccbd24c291c943e5a12acc137fe94372",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ccbd24c291c943e5a12acc137fe94372",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "cemeteries"
+        }
+      ],
+      "aliasConjugation": "cemeteries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "4a084c5674300a39a735bd42254c42b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 알링턴 묘지에 안장돼 있다.",
+      "text": "He reposes at Arlington <b>Cemetery</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 조상은 공동 묘지에 묻혀 있다.",
+      "text": "His ancestors lie in the <b>cemetery</b>."
+    }
+  ],
+  "isWordType": true
+}

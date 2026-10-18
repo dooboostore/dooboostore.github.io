@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "<b>casualty</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkæʒuəlti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] (사고로 인한) 사상자, (전시의) 인적(人的) 손실, 사고병",
+              "examples": [
+                {
+                  "text": "heavy <b>casualties</b>",
+                  "translatedText": "다수의 사상자"
+                }
+              ],
+              "originalMeaning": "[pl.] (사고로 인한) 사상자, (전시의) 인적(人的) 손실, 사고병"
+            },
+            {
+              "meaning": "((일반적으로)) 피해자, 희생자",
+              "examples": [],
+              "originalMeaning": "((일반적으로)) 피해자, 희생자"
+            },
+            {
+              "meaning": "참사, 불의의 재난, 사상(死傷)[상해] 사고",
+              "examples": [],
+              "originalMeaning": "참사, 불의의 재난, 사상(死傷)[상해] 사고"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb88acacb88243799270795c19c529d0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb88acacb88243799270795c19c529d0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "casualties"
+        }
+      ],
+      "aliasConjugation": "casualties",
+      "aliasConjugationPos": "복수형",
+      "gdid": "8600d2049eb08127ab8009092aa8944e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산사태로 많은 사상자를 냈다",
+      "text": "The landslide caused heavy <b>casualties</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다행히 사상자는 한 사람도 없었다",
+      "text": "Fortunately there were no <b>casualties</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사상자수가 예상보다 많다고 넌지시 알렸다.",
+      "text": "He intimated (to them) that the <b>casualties</b> were heavier than we anticipated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사상자는 합계 100명이었다.",
+      "text": "The <b>casualties</b> totaled 100."
+    }
+  ],
+  "isWordType": true
+}

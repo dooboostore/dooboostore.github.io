@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>moisten</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmɔɪsn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "축축하게 하다, 젖게 하다, 적시다",
+              "examples": [
+                {
+                  "text": "<b>moisten</b> one's lips[throat]",
+                  "translatedText": "목을 축이다, 술을 마시다"
+                }
+              ],
+              "originalMeaning": "축축하게 하다, 젖게 하다, 적시다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "젖다, 축축해지다",
+              "examples": [
+                {
+                  "text": "<b>moisten</b> at one's eyes",
+                  "translatedText": "눈물짓다, 눈물이 글썽해지다"
+                }
+              ],
+              "originalMeaning": "젖다, 축축해지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d2e206b3f41746668bf67b8967dd2b20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d2e206b3f41746668bf67b8967dd2b20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "moistens"
+        },
+        {
+          "type": "과거형",
+          "value": "moistened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "moistening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "moistened"
+        }
+      ],
+      "aliasConjugation": "moistens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "95a32a01b75e90d37bb41f08e586abb9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "슬픈 소식을 읽고 그 여자의 눈에 눈물이 어렸다",
+      "text": "Her eyes <b>moistened</b> as she read the sad news."
+    }
+  ],
+  "isWordType": true
+}

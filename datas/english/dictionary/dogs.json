@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "dog",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɔːɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "개, 갯과(科) 중의 몇 종류 ((늑대·들개 등))",
+              "examples": [
+                {
+                  "text": "have[own, keep] a <b>dog</b>",
+                  "translatedText": "개를 키우다[사육하다]"
+                }
+              ],
+              "originalMeaning": "개, 갯과(科) 중의 몇 종류 ((늑대·들개 등))"
+            },
+            {
+              "meaning": "(갯과(科) 동물의) 수컷, 수캐(opp. bitch)",
+              "examples": [
+                {
+                  "text": "a <b>dog</b> wolf",
+                  "translatedText": "이리의 수컷"
+                }
+              ],
+              "originalMeaning": "(갯과(科) 동물의) 수컷, 수캐(opp. bitch)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "미행하다, 귀찮게 따라다니다(shadow)",
+              "examples": [],
+              "originalMeaning": "미행하다, 귀찮게 따라다니다(shadow)"
+            },
+            {
+              "meaning": "<재난·불행 등이> …에 끝없이 따라다니다",
+              "examples": [],
+              "originalMeaning": "<재난·불행 등이> …에 끝없이 따라다니다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "끈질기게 따라다니다",
+              "examples": [],
+              "originalMeaning": "끈질기게 따라다니다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b25218b54805431e82f633d54511c5b5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b25218b54805431e82f633d54511c5b5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dogs"
+        },
+        {
+          "type": "과거형",
+          "value": "dogged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dogging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dogged"
+        }
+      ],
+      "aliasConjugation": "dogs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "151463b4804b1ea49464ae3b67fd2fcd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 억수같이 내린다",
+      "text": "It rains cats and <b>dogs</b>. or The rain is pouring down (in torrents). or It rains in sheets."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 맹렬히 퍼붓는다",
+      "text": "It rains cats and <b>dogs</b>[in torrents, heavily, hard]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 억수같이 퍼붓는다",
+      "text": "It rains cats and <b>dogs</b>. or It pours down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빗줄기가 세차다",
+      "text": "It pours down. or It rains cats and <b>dogs</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 들이퍼붓는다",
+      "text": "The rain pours down. or It rains cats and <b>dogs</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "curve",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɜːrv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "곡선, 곡면",
+              "examples": [],
+              "originalMeaning": "곡선, 곡면"
+            },
+            {
+              "meaning": "(도로 등의) 만곡부, 굽이, 커브, 굴곡; 곡선 운동; [보통 pl.] (여자의) 곡선미",
+              "examples": [],
+              "originalMeaning": "(도로 등의) 만곡부, 굽이, 커브, 굴곡; 곡선 운동; [보통 pl.] (여자의) 곡선미"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "굽히다, 만곡시키다 (=bend)",
+              "examples": [],
+              "originalMeaning": "굽히다, 만곡시키다 (=<span class='related_word' lang='en' >bend</span>)"
+            },
+            {
+              "meaning": "<공을> 커브시키다",
+              "examples": [],
+              "originalMeaning": "<공을> 커브시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구부러지다, 만곡하다; 곡선을 그리다",
+              "examples": [
+                {
+                  "text": "The road curves round[around] the gas station.",
+                  "translatedText": "도로가 그 주유소 주위를 돌아 나 있다."
+                }
+              ],
+              "originalMeaning": "구부러지다, 만곡하다; 곡선을 그리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/16f653f5b1114b9593175e5bd9003b59",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/16f653f5b1114b9593175e5bd9003b59",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "curves"
+        },
+        {
+          "type": "과거형",
+          "value": "curved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "curving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "curved"
+        }
+      ],
+      "aliasConjugation": "curves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a607bcf86273a7395b80b4e5fbd80e44",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 도로는 완만하게 구부러져 있다",
+      "text": "The road bends in a wide <b>curve</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 대의 차가 저 커브에서 충돌했다",
+      "text": "Two cars crashed on that <b>curve</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "열차는 산모퉁이에서 고부라져 갔다",
+      "text": "The train curved around the hill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도로는 왼쪽으로 약간 커브를 지었다",
+      "text": "The road curved slightly to the left."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강이 산모퉁이를 감돌며 흐른다",
+      "text": "The river curves around the bend of the mountain. or The river winds along the side of the mountain."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "risk",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪsk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 위험(성); 모험, 도박 (=danger)",
+              "examples": [],
+              "originalMeaning": "[UC/] 위험(성); 모험, 도박 (=<span class='related_word' lang='en' >danger</span>)"
+            },
+            {
+              "meaning": "[UC/] [보험] 위험(률), 보험금(액), 피보험자[물]",
+              "examples": [
+                {
+                  "text": "a good[bad] <b>risk</b>",
+                  "translatedText": "(보험 회사가 보아) 위험이 적은[많은] 피보험자; 신뢰할 수 있는[없는] 사람"
+                }
+              ],
+              "originalMeaning": "[UC/] [보험] 위험(률), 보험금(액), 피보험자[물]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위태롭게 하다(hazard), 모험하다",
+              "examples": [
+                {
+                  "text": "<b>risk</b> one's fortune[life]",
+                  "translatedText": "재산[생명]을 걸다"
+                }
+              ],
+              "originalMeaning": "위태롭게 하다(hazard), 모험하다"
+            },
+            {
+              "meaning": "<위험 등 을> 각오하고 하다",
+              "examples": [
+                {
+                  "text": "<b>risk</b> failure",
+                  "translatedText": "실패를 각오하고 하다"
+                }
+              ],
+              "originalMeaning": "<위험 등 을> 각오하고 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1f2477ed8df4e03b4e980ca141d2a4a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1f2477ed8df4e03b4e980ca141d2a4a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "risks"
+        },
+        {
+          "type": "과거형",
+          "value": "risked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "risking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "risked"
+        }
+      ],
+      "aliasConjugation": "risks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4b11bdb5fc25ecab44ce0f443ef70b63",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 조금도 모험이 아니다",
+      "text": "There is no <b>risk</b> in this. or This is by no means (taking) a leap in the dark."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사업은 많은 위험을 안고 있다",
+      "text": "This enterprise involves a lot of <b>risk</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 관련된 큰 위험을 지나쳤다",
+      "text": "They overlooked the enormous risks involved."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 모든 것을 잃는 한이 있어도 기꺼이 하겠다.",
+      "text": "I’m willing to <b>risk</b> losing everything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 모험을 하지 말도록 그를 납득시켰다",
+      "text": "I have dissuaded him from running such a <b>risk</b>."
+    }
+  ],
+  "isWordType": true
+}

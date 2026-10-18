@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "transport",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "수송[운송]하다",
+              "examples": [
+                {
+                  "text": "<b>transport</b> a machine by ship",
+                  "translatedText": "선편으로 기계를 수송하다"
+                }
+              ],
+              "originalMeaning": "수송[운송]하다"
+            },
+            {
+              "meaning": "[보통 수동형으로] 황홀하게 하다, 어쩔 줄 모르게 하다 ((with))",
+              "examples": [
+                {
+                  "text": "be transported with joy",
+                  "translatedText": "기뻐서 어쩔 줄 모르게 되다"
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] 황홀하게 하다, 어쩔 줄 모르게 하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 수송, 운송; [C] [영] 수송 기관([미] transportation)",
+              "examples": [
+                {
+                  "text": "the <b>transport</b> of mail by air",
+                  "translatedText": "우편물의 항공 수송"
+                }
+              ],
+              "originalMeaning": "[U] 수송, 운송; [C] [영] 수송 기관([미] transportation)"
+            },
+            {
+              "meaning": "군용 수송선[기]; 여객기, 화물 수송기",
+              "examples": [],
+              "originalMeaning": "군용 수송선[기]; 여객기, 화물 수송기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/185bd9078a744685890d0fce48b8c2fe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/185bd9078a744685890d0fce48b8c2fe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "transports"
+        },
+        {
+          "type": "과거형",
+          "value": "transported"
+        },
+        {
+          "type": "현재 분사",
+          "value": "transporting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "transported"
+        }
+      ],
+      "aliasConjugation": "transports",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0f6a398902225da5fd7c55ae13de436e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 성공해서 흥청거리고 있다",
+      "text": "He is transported with his success."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교통 기관은 혼란 상태에 있다",
+      "text": "The <b>transport</b> facilities are upset[out of order]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제품은 공장에서 역까지 운반되었다.",
+      "text": "The products were transported from the factory to the station."
+    }
+  ],
+  "isWordType": true
+}

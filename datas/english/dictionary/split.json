@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "entry": "split",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "splɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "쪼개다, 찢다, 째다, 세로로 쪼개다",
+              "examples": [
+                {
+                  "text": "<b>split</b> wood",
+                  "translatedText": "나무를 쪼개다"
+                }
+              ],
+              "originalMeaning": "쪼개다, 찢다, 째다, 세로로 쪼개다"
+            },
+            {
+              "meaning": "분열[분리]시키다 ((up; in, into)); 이간시키다",
+              "examples": [
+                {
+                  "text": "<b>split</b> (up) a party",
+                  "translatedText": "당을 분열시키다"
+                }
+              ],
+              "originalMeaning": "분열[분리]시키다 ((up; in, into)); 이간시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(세로로) 쪼개지다, 찢어지다, 갈라지다 ((up; in, into))",
+              "examples": [
+                {
+                  "text": "The tree <b>split</b> (up) by thunder.",
+                  "translatedText": "나무가 벼락을 맞아 쪼개졌다."
+                }
+              ],
+              "originalMeaning": "(세로로) 쪼개지다, 찢어지다, 갈라지다 ((up; in, into))"
+            },
+            {
+              "meaning": "<당 등이> 분열하다 ((up)); …에서 분리하다 ((away, off)); 사이가 나빠지다; 이혼하다, 헤어지다 ((in, into, on, [드물게] with))",
+              "examples": [
+                {
+                  "text": "They <b>split</b> off.",
+                  "translatedText": "그들은 갈라섰다."
+                }
+              ],
+              "originalMeaning": "<당 등이> 분열하다 ((up)); …에서 분리하다 ((away, off)); 사이가 나빠지다; 이혼하다, 헤어지다 ((in, into, on, [드물게] with))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(특히 세로로 또는 나뭇결처럼) 갈라진, 쪼개진; 분리한, 분열된",
+              "examples": [],
+              "originalMeaning": "(특히 세로로 또는 나뭇결처럼) 갈라진, 쪼개진; 분리한, 분열된"
+            },
+            {
+              "meaning": "갈라서 만든, 발라내어 말린[소금에 절인] <생선 ((등))>",
+              "examples": [],
+              "originalMeaning": "갈라서 만든, 발라내어 말린[소금에 절인] <생선 ((등))>"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/57d01ef95922422a99e62dc80bad7bb5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/57d01ef95922422a99e62dc80bad7bb5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "splits"
+        },
+        {
+          "type": "현재 분사",
+          "value": "splitting"
+        }
+      ],
+      "aliasConjugation": "splits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c801ec9687025d9920c354701b5afe89",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 나무는 잘 빠개진다",
+      "text": "This wood splits nicely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 돈을 똑같이 나누었다",
+      "text": "They <b>split</b> the sum equally."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나무가 벼락을 맞아 쪼개졌다.",
+      "text": "The tree <b>split</b> (up) by thunder."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 배꼽을 잡고 웃었다",
+      "text": "I laughed my head off. or I <b>split</b>[burst] my sides laughing[with laughter]. or I laughed like a drain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 당은 여러 파로 갈라졌다",
+      "text": "The party <b>split</b> into fractions."
+    }
+  ],
+  "isWordType": true
+}

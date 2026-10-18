@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "smooth",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "smuːð"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<표면 등이> 매끄러운(opp. rough), 반드러운",
+              "examples": [
+                {
+                  "text": "<b>smooth</b> skin",
+                  "translatedText": "매끈한 피부"
+                }
+              ],
+              "originalMeaning": "<표면 등이> 매끄러운(opp. rough), 반드러운"
+            },
+            {
+              "meaning": "<머리털 등이> 매끄러운, 윤기 있는; 손질이 잘된",
+              "examples": [
+                {
+                  "text": "<b>smooth</b> hair",
+                  "translatedText": "매끄러운 머리카락"
+                }
+              ],
+              "originalMeaning": "<머리털 등이> 매끄러운, 윤기 있는; 손질이 잘된"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "매끄럽게 하다, 평탄하게 하다, 고르다 ((down, out))",
+              "examples": [],
+              "originalMeaning": "매끄럽게 하다, 평탄하게 하다, 고르다 ((down, out))"
+            },
+            {
+              "meaning": "<천을> 다리미로 펴다, 주름을 펴다; 쓰다듬다 ((away, out, down))",
+              "examples": [
+                {
+                  "text": "<b>smooth</b> cloth with an iron",
+                  "translatedText": "다리미로 천을 펴다"
+                }
+              ],
+              "originalMeaning": "<천을> 다리미로 펴다, 주름을 펴다; 쓰다듬다 ((away, out, down))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "평탄하게 되다, 매끄럽게 되다 ((down))",
+              "examples": [],
+              "originalMeaning": "평탄하게 되다, 매끄럽게 되다 ((down))"
+            },
+            {
+              "meaning": "진정되다, 잔잔해지다, 원만하게 되어 가다 ((down))",
+              "examples": [
+                {
+                  "text": "His anger smoothed down.",
+                  "translatedText": "그의 노여움은 진정되었다."
+                }
+              ],
+              "originalMeaning": "진정되다, 잔잔해지다, 원만하게 되어 가다 ((down))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5a315316d5bf4206a959947459433833",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5a315316d5bf4206a959947459433833",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "smoother"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "smooths"
+        },
+        {
+          "type": "최상급",
+          "value": "smoothest"
+        },
+        {
+          "type": "과거형",
+          "value": "smoothed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "smoothing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "smoothed"
+        }
+      ],
+      "aliasConjugation": "smoother",
+      "aliasConjugationPos": "비교급",
+      "gdid": "20bc03af74221115f8714f89b77926f2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "춘풍에 돛 단 듯하다",
+      "text": "Everything goes all right[smoothly]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 자동차는 진동이 적다",
+      "text": "This motorcar drives smoothly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금 교통의 흐름은 순조롭다",
+      "text": "Traffic is now flowing smoothly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 판매원은 말솜씨가 능란했다",
+      "text": "The salesman was a clever[<b>smooth</b>] talker."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "민주주의로 가는 길은 결코 평탄하지 않다",
+      "text": "The road to democracy is never <b>smooth</b>."
+    }
+  ],
+  "isWordType": true
+}

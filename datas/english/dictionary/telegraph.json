@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "<b>telegraph</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│telɪɡræf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전신, 전보",
+              "examples": [
+                {
+                  "text": "a <b>telegraph</b> corps",
+                  "translatedText": "전신대(隊)"
+                }
+              ],
+              "originalMeaning": "전신, 전보"
+            },
+            {
+              "meaning": "[T~] …통신 ((신문명))",
+              "examples": [
+                {
+                  "text": "the Daily <b>Telegraph</b>",
+                  "translatedText": "(런던의) 데일리 텔레그래프"
+                }
+              ],
+              "originalMeaning": "[T~] …통신 ((신문명))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 전보를 치다, 전신으로 알리다, 타전하다, 전송하다",
+              "examples": [
+                {
+                  "text": "<b>telegraph</b> one's departure toone's friends",
+                  "translatedText": "친구에게 전보로 출발을 알리다"
+                }
+              ],
+              "originalMeaning": "…에게 전보를 치다, 전신으로 알리다, 타전하다, 전송하다"
+            },
+            {
+              "meaning": "전보로 <돈 등을> 부치다, 전신 주문으로 <선물 등을> 보내다",
+              "examples": [
+                {
+                  "text": "She telegraphed thirty dollars.",
+                  "translatedText": "그녀는 전신환으로 30달러를 부쳤다."
+                }
+              ],
+              "originalMeaning": "전보로 <돈 등을> 부치다, 전신 주문으로 <선물 등을> 보내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "전보[전신]를 치다, 타전하다",
+              "examples": [
+                {
+                  "text": "She telegraphed to her daughter.",
+                  "translatedText": "그녀는 딸에게 전보를 쳤다."
+                }
+              ],
+              "originalMeaning": "전보[전신]를 치다, 타전하다"
+            },
+            {
+              "meaning": "신호하다 ((to))",
+              "examples": [],
+              "originalMeaning": "신호하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4c068e349312461088e99ce4c75ada02",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4c068e349312461088e99ce4c75ada02",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "telegraphs"
+        },
+        {
+          "type": "과거형",
+          "value": "telegraphed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "telegraphing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "telegraphed"
+        }
+      ],
+      "aliasConjugation": "telegraphs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5e915ace4a004cb7a60faf31aa8e7840",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 뉴스를 타전해 왔다.",
+      "text": "He telegraphed us the news."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 딸에게 전보를 쳤다.",
+      "text": "She telegraphed to her daughter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 독단으로 회사에 전보를 쳤다",
+      "text": "He telegraphed to the office on his own responsibility. or He took upon himself to <b>telegraph</b> to the office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 전신환으로 30달러를 부쳤다.",
+      "text": "She telegraphed thirty dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내게 곧 오라고 전보를 보냈다.",
+      "text": "He telegraphed to me to come up at once."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "<b>metropolitan</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│metrə│pɑːlɪtən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "주요 도시의; 대도시의, 수도의; 도시(인)의, 도시적인, 수도[대도시] 특유의",
+              "examples": [
+                {
+                  "text": "<b>metropolitan</b> newspapers",
+                  "translatedText": "중앙지(紙) ((지방지(紙)에 대하여))"
+                }
+              ],
+              "originalMeaning": "주요 도시의; 대도시의, 수도의; 도시(인)의, 도시적인, 수도[대도시] 특유의"
+            },
+            {
+              "meaning": "[M~] 런던의",
+              "examples": [],
+              "originalMeaning": "[M~] 런던의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "주요 도시[대도시]의 시민, 도시인",
+              "examples": [],
+              "originalMeaning": "주요 도시[대도시]의 시민, 도시인"
+            },
+            {
+              "meaning": "(수도) 대주교[대감독]",
+              "examples": [],
+              "originalMeaning": "(수도) 대주교[대감독]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7cd5d66e65b44e6283e1b296d1116c6f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7cd5d66e65b44e6283e1b296d1116c6f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8b1190e5c2865b83382d68c3e546a964",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울특별시 경찰국",
+      "text": "Seoul <b>Metropolitan</b> Police Bureau[Headquarters]"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시 경찰국장",
+      "text": "<b>Metropolitan</b> Police Director"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>blackmail</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈblækmeɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공갈, 갈취; 갈취한 돈",
+              "examples": [],
+              "originalMeaning": "공갈, 갈취; 갈취한 돈"
+            },
+            {
+              "meaning": "(약탈 대신에 산적이 부과한) 공납물",
+              "examples": [],
+              "originalMeaning": "(약탈 대신에 산적이 부과한) 공납물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "공갈하다, 갈취하다; 공갈 협박하여 …시키다 ((into))",
+              "examples": [
+                {
+                  "text": "They blackmailed him into marrying her.",
+                  "translatedText": "그들은 그에게 그녀와 결혼하라고 협박했다."
+                }
+              ],
+              "originalMeaning": "공갈하다, 갈취하다; 공갈 협박하여 …시키다 ((into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37547b1375ce4820b273b7f8bf3c8d1e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37547b1375ce4820b273b7f8bf3c8d1e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blackmails"
+        },
+        {
+          "type": "과거형",
+          "value": "blackmailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blackmailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blackmailed"
+        }
+      ],
+      "aliasConjugation": "blackmails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "82d01eddc4507707f5c8b4ad80cd598c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 남을 등쳐 먹다가 잡혀갔다",
+      "text": "He was arrested on a charge of <b>blackmailing</b>."
+    }
+  ],
+  "isWordType": true
+}

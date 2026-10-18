@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "scissors",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsɪzərz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가위 ((",
+              "examples": [],
+              "originalMeaning": "가위 (("
+            },
+            {
+              "meaning": "다리 가위지르기 ((상대편의 머리[몸통]를 양 다리로 죄는 기술))",
+              "examples": [
+                {
+                  "text": "work <b>scissors</b>",
+                  "translatedText": "다리 가위지르기를 걸다"
+                }
+              ],
+              "originalMeaning": "다리 가위지르기 ((상대편의 머리[몸통]를 양 다리로 죄는 기술))"
+            },
+            {
+              "meaning": "두 다리 펴닫기",
+              "examples": [],
+              "originalMeaning": "두 다리 펴닫기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8926d5a2ddc54b708d2fb93f6f04aec2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8926d5a2ddc54b708d2fb93f6f04aec2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cfef5168b7bef50b5a0209d4d5f88077",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "scissor",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sízər"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가위로 자르다 ((off, up, into, etc.)); 오려내다 ((out))",
+              "examples": [],
+              "originalMeaning": "가위로 자르다 ((off, up, into, etc.)); 오려내다 ((out))"
+            },
+            {
+              "meaning": "<낱말·기록 등을> (…에서) 제거하다, 없애다 ((from))",
+              "examples": [],
+              "originalMeaning": "<낱말·기록 등을> (…에서) 제거하다, 없애다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "가위의",
+              "examples": [],
+              "originalMeaning": "가위의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6a1a83ce7a2a47c1842c51b58bcac598",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6a1a83ce7a2a47c1842c51b58bcac598",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2dd97fb8d81fb4a3ec522e246345bac4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 가위는 잘 든다",
+      "text": "These <b>scissors</b> cut well. or These <b>scissors</b> are sharp."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 가위는 잘 들지 않는다",
+      "text": "These <b>scissors</b> don't cut well. or These <b>scissors</b> aren't sharp enough."
+    }
+  ],
+  "isWordType": true
+}

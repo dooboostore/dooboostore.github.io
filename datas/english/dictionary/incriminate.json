@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>incriminate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈkrɪmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<남에게> 죄를 씌우다, 유죄로 하다",
+              "examples": [],
+              "originalMeaning": "<남에게> 죄를 씌우다, 유죄로 하다"
+            },
+            {
+              "meaning": "<…을> (사건 등에) 말려들게 하다, 연루시키다",
+              "examples": [
+                {
+                  "text": "The testimony of the defendant incriminatedmany others.",
+                  "translatedText": "피고인의 증언으로 여러 다른 사람들이 사건에 말려들었다."
+                }
+              ],
+              "originalMeaning": "<…을> (사건 등에) 말려들게 하다, 연루시키다"
+            },
+            {
+              "meaning": "(…의) 원인으로 간주하다[치다]",
+              "examples": [],
+              "originalMeaning": "(…의) 원인으로 간주하다[치다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/302732a050154ceca4d98629e0ce136a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/302732a050154ceca4d98629e0ce136a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "incriminates"
+        },
+        {
+          "type": "과거형",
+          "value": "incriminated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "incriminating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "incriminated"
+        }
+      ],
+      "aliasConjugation": "incriminates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "90be0cc63d1195af7527193bfadc73de",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "피고인의 증언으로 여러 다른 사람들이 사건에 말려들었다.",
+      "text": "The testimony of the defendant incriminated many others."
+    }
+  ],
+  "isWordType": true
+}

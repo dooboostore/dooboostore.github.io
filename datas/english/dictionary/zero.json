@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "zero",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│zɪroʊ; │ziːroʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "0, 영(naught) ((아라비아 숫자의))",
+              "examples": [],
+              "originalMeaning": "0, 영(naught) ((아라비아 숫자의))"
+            },
+            {
+              "meaning": "(성적·시합 등의) 영점; (온도계 등의) 0도, 빙점(氷點)",
+              "examples": [
+                {
+                  "text": "at 10 below <b>zero</b>",
+                  "translatedText": "영하 10도에서"
+                }
+              ],
+              "originalMeaning": "(성적·시합 등의) 영점; (온도계 등의) 0도, 빙점(氷點)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "0(도)의, 제로의",
+              "examples": [
+                {
+                  "text": "the <b>zero</b> meridian",
+                  "translatedText": "기준 자오선"
+                }
+              ],
+              "originalMeaning": "0(도)의, 제로의"
+            },
+            {
+              "meaning": "조금도 없는, 결여되어 있는",
+              "examples": [],
+              "originalMeaning": "조금도 없는, 결여되어 있는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<계기(計器)·미터의 바늘 등을> 0에 맞추다, 0의 자리로 돌려 놓다",
+              "examples": [],
+              "originalMeaning": "<계기(計器)·미터의 바늘 등을> 0에 맞추다, 0의 자리로 돌려 놓다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1598b36a685d4a3e9db3cbe14673bab4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1598b36a685d4a3e9db3cbe14673bab4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "zeroes"
+        },
+        {
+          "type": "복수형",
+          "value": "zeros, zeroes"
+        },
+        {
+          "type": "과거형",
+          "value": "zeroed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "zeroing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "zeroed"
+        }
+      ],
+      "aliasConjugation": "zeroes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "176f05e0cf7b446fe3f5a9b7b3c80f2f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "온도계가 영도로 내리면 물이 언다",
+      "text": "When thermometer is below <b>zero</b>, water will freeze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "온도계의 시도는 영하 12도이다",
+      "text": "The thermometer shows a reading of 12 degrees below <b>zero</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울에서는 수은주가 영하 15도까지 떨어진다",
+      "text": "The mercury dips as low as 15 degrees below <b>zero</b> in Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울에서는 수은주가 영하 15도까지 떨어진다",
+      "text": "The mercury dips as low as 15 degrees below <b>zero</b> in seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘밤 최저 온도가 영하 5도쯤 될 것이다",
+      "text": "The lowest temperature tonight will be about 5 degrees below <b>zero</b>."
+    }
+  ],
+  "isWordType": true
+}

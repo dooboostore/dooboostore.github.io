@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "acid",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈæsɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "산(酸)",
+              "examples": [],
+              "originalMeaning": "산(酸)"
+            },
+            {
+              "meaning": "신 것, 신맛이 나는 것",
+              "examples": [],
+              "originalMeaning": "신 것, 신맛이 나는 것"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "신, 신맛이 나는",
+              "examples": [],
+              "originalMeaning": "신, 신맛이 나는"
+            },
+            {
+              "meaning": "산(성)의(opp. alkaline)",
+              "examples": [],
+              "originalMeaning": "산(성)의(opp. alkaline)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3085f81f7f084ec191528a1c0c3036cf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3085f81f7f084ec191528a1c0c3036cf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1af74a51328771cf296426bad3fb8a12",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 산은 금속을 부식한다.",
+      "text": "This <b>acid</b> eats metal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금속은 산에 의해 부식된다",
+      "text": "<b>Acid</b> eats into metals. or <b>Acid</b> causes metal to corrode."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금속은 산에 의해서 쉽게 침식된다",
+      "text": "Metals are easily corroded by acids."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산은 염기와 반응하여 소금을 만든다",
+      "text": "The <b>acid</b> reacts with a base to form a salt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산이 철을 부식했다.",
+      "text": "The <b>acid</b> gnawed the iron."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "short",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ʃɔːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<길이가> 짧은(opp. long)",
+              "examples": [
+                {
+                  "text": "a <b>short</b> line[tail]",
+                  "translatedText": "짧은 선[꼬리]"
+                }
+              ],
+              "originalMeaning": "<길이가> 짧은(opp. long)"
+            },
+            {
+              "meaning": "<거리가> 짧은, 가까운",
+              "examples": [
+                {
+                  "text": "a <b>short</b> walk",
+                  "translatedText": "단거리의 보행"
+                }
+              ],
+              "originalMeaning": "<거리가> 짧은, 가까운"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "갑자기",
+              "examples": [
+                {
+                  "text": "pull[bring] up a horse <b>short</b>",
+                  "translatedText": "말을 갑자기 세우다"
+                }
+              ],
+              "originalMeaning": "갑자기"
+            },
+            {
+              "meaning": "짧게, 짤막하게, 간결히, 간단히",
+              "examples": [
+                {
+                  "text": "speak <b>short</b>",
+                  "translatedText": "간략히 말하다"
+                }
+              ],
+              "originalMeaning": "짧게, 짤막하게, 간결히, 간단히"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "((일반적으로)) 짧은 물건",
+              "examples": [],
+              "originalMeaning": "((일반적으로)) 짧은 물건"
+            },
+            {
+              "meaning": "[UC/] 부족, 결손, 부족분[액, 량];[the ~s] [속어] 자금난",
+              "examples": [],
+              "originalMeaning": "[UC/] 부족, 결손, 부족분[액, 량];[the ~s] [속어] 자금난"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/70963dccdf81488da4c8fe4fd3012d08",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/70963dccdf81488da4c8fe4fd3012d08",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "shorter"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shorts"
+        },
+        {
+          "type": "최상급",
+          "value": "shortest"
+        },
+        {
+          "type": "과거형",
+          "value": "shorted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shorting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shorted"
+        }
+      ],
+      "aliasConjugation": "shorter",
+      "aliasConjugationPos": "비교급",
+      "gdid": "f9402538c7b4764f324188c4bdab9af1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나보다 3인치 가량 키가 크다[작다]",
+      "text": "He is three inches taller[<b>shorter</b>] than I."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "갈수록 낮이 짧아진다",
+      "text": "The days are growing <b>shorter</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "몸 풀 때가 가까웠다",
+      "text": "She is nearing her confinement. or She is going to have a child shortly. or She is soon to become a mother. or She is expecting soon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나이가 20살이 안 찼다",
+      "text": "He's <b>short</b> of 20."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "돈이 5천 원 축난다",
+      "text": "The sum comes <b>short</b> by five thousand won. or There is a deficit[shortage] of five thousand won."
+    }
+  ],
+  "isWordType": true
+}

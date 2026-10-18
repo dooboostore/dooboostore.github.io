@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "incorporate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "inkɔ́ːrpərèit"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "법인[단체 조직]으로 만들다, [미] 유한 (책임) 회사[주식 회사]로 하다",
+              "examples": [
+                {
+                  "text": "<b>incorporate</b> a business",
+                  "translatedText": "사업을 회사 조직으로 만들다"
+                }
+              ],
+              "originalMeaning": "법인[단체 조직]으로 만들다, [미] 유한 (책임) 회사[주식 회사]로 하다"
+            },
+            {
+              "meaning": "통합[합동]시키다 ((with)); 합병하다, 편입하다; 짜 넣다 ((in, into))",
+              "examples": [
+                {
+                  "text": "a firm incorporated with another",
+                  "translatedText": "다른 회사와 합병한 회사"
+                }
+              ],
+              "originalMeaning": "통합[합동]시키다 ((with)); 합병하다, 편입하다; 짜 넣다 ((in, into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "법인이 되다, [미] 유한 (책임) 회사[주식 회사]가 되다",
+              "examples": [],
+              "originalMeaning": "법인이 되다, [미] 유한 (책임) 회사[주식 회사]가 되다"
+            },
+            {
+              "meaning": "합동[통합]하다, 결합하다; 섞이다 ((with))",
+              "examples": [
+                {
+                  "text": "His company incorporated with mine.",
+                  "translatedText": "그의 회사는 나의 회사와 합병했다."
+                }
+              ],
+              "originalMeaning": "합동[통합]하다, 결합하다; 섞이다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "법인의, 회사 조직의(incorporated)",
+              "examples": [],
+              "originalMeaning": "법인의, 회사 조직의(incorporated)"
+            },
+            {
+              "meaning": "결합한, 일체화된",
+              "examples": [],
+              "originalMeaning": "결합한, 일체화된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4e1d6beecbc54554a2ee4ea8e89ea564",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4e1d6beecbc54554a2ee4ea8e89ea564",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "incorporates"
+        },
+        {
+          "type": "과거형",
+          "value": "incorporated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "incorporating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "incorporated"
+        }
+      ],
+      "aliasConjugation": "incorporates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "890764489caf04aff5cf30563bae7bd8",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "incorporate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "inkɔ́ːrpərət"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "무형(無形)의, 영적(靈的)인(spiritual)",
+              "examples": [],
+              "originalMeaning": "무형(無形)의, 영적(靈的)인(spiritual)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1dccb5aae66743aeb6a855927f5ed5db",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1dccb5aae66743aeb6a855927f5ed5db",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "incorporates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "102da7c2ab8e33fd06d96aa928ccfffe",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 회사는 나의 회사와 합병했다.",
+      "text": "His company incorporated with mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제1차 세계 대전 후 독일의 일부는 폴란드에 편입되었다.",
+      "text": "Part of Germany was incorporated into Poland after World War I."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "propagate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│prɑːpəɡeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "번식[증식]시키다, 늘리다",
+              "examples": [
+                {
+                  "text": "<b>propagate</b> oneself",
+                  "translatedText": "번식하다"
+                }
+              ],
+              "originalMeaning": "번식[증식]시키다, 늘리다"
+            },
+            {
+              "meaning": "<성질 등을> 유전하다, 전염시키다, 만연시키다",
+              "examples": [],
+              "originalMeaning": "<성질 등을> 유전하다, 전염시키다, 만연시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "번식[증식]하다, 퍼지다",
+              "examples": [],
+              "originalMeaning": "번식[증식]하다, 퍼지다"
+            },
+            {
+              "meaning": "보급되다, <전자파·압축파 등이> 전파되다",
+              "examples": [],
+              "originalMeaning": "보급되다, <전자파·압축파 등이> 전파되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f630505a77f45bcac6e93f82d2aa0ae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f630505a77f45bcac6e93f82d2aa0ae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "propagates"
+        },
+        {
+          "type": "과거형",
+          "value": "propagated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "propagating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "propagated"
+        }
+      ],
+      "aliasConjugation": "propagates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b19c4a865a7ebd77934ed18ef9fcabb1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "철은 소리를 잘 전달한다.",
+      "text": "Iron propagates sound well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "맹자가 공자의 설을 조술했다",
+      "text": "Mencius propagated Confucian doctrines."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "음파는 공기 속을 전파한다",
+      "text": "Sound waves are propagated through the air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잡초는 재빨리 퍼진다",
+      "text": "The weeds <b>propagate</b> themselves rapidly."
+    }
+  ],
+  "isWordType": true
+}

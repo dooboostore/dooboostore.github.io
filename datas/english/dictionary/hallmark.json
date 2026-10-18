@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "hallmark",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│hɔːlmɑːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(금은의) 순분 인증 각인(純分認證刻印)(platemark)",
+              "examples": [],
+              "originalMeaning": "(금은의) 순분 인증 각인(純分認證刻印)(platemark)"
+            },
+            {
+              "meaning": "(사람·사물의) 성질[품질] 우량 증명, 보증",
+              "examples": [
+                {
+                  "text": "A diploma is the <b>hallmark</b> of capacity.",
+                  "translatedText": "졸업 증명서는 능력을 증명하는 보증서이다."
+                }
+              ],
+              "originalMeaning": "(사람·사물의) 성질[품질] 우량 증명, 보증"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 각인[인증]을 찍다, …의 품질을 보증하다",
+              "examples": [],
+              "originalMeaning": "…에 각인[인증]을 찍다, …의 품질을 보증하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/38726bac127743b0970e8de45c0a8a05",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/38726bac127743b0970e8de45c0a8a05",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hallmarks"
+        },
+        {
+          "type": "과거형",
+          "value": "hallmarked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hallmarking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hallmarked"
+        }
+      ],
+      "aliasConjugation": "hallmarks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0c24570e6c68fef01f9e4020e93836ab",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "졸업 증명서는 능력을 증명하는 보증서이다.",
+      "text": "A diploma is the <b>hallmark</b> of capacity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정확성은 훌륭한 학문의 특징이다.",
+      "text": "Accuracy is a <b>hallmark</b> of good scholarship."
+    }
+  ],
+  "isWordType": true
+}

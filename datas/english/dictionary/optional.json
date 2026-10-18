@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "optional",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɑːpʃənl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "마음대로의, 마음대로 선택 가능한, 임의의",
+              "examples": [
+                {
+                  "text": "It is optionalwith you.",
+                  "translatedText": "그것은 당신의 마음대로입니다."
+                }
+              ],
+              "originalMeaning": "마음대로의, 마음대로 선택 가능한, 임의의"
+            },
+            {
+              "meaning": "<과목이> 선택의, <부속품이> 옵션의",
+              "examples": [
+                {
+                  "text": "an <b>optional</b> subject",
+                  "translatedText": "선택 과목"
+                }
+              ],
+              "originalMeaning": "<과목이> 선택의, <부속품이> 옵션의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "선택을 본인에게 맡긴 사물, [영] 선택 과목([미] elective)",
+              "examples": [],
+              "originalMeaning": "선택을 본인에게 맡긴 사물, [영] 선택 과목([미] elective)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3af0357eca5a4600a0de2a5bf8a4f5c4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3af0357eca5a4600a0de2a5bf8a4f5c4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "18434ba82614aa7809726edbe89750ae",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 당신의 마음대로입니다.",
+      "text": "It is <b>optional</b> with you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예복 착용은 마음대로이다.",
+      "text": "Formal dress is <b>optional</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "에어백은 옵션 부속품입니다",
+      "text": "An air bag is an <b>optional</b> extra."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 선택은 자유이다",
+      "text": "It's <b>optional</b>. or You have an[the] option on it. or You have a free choice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "복장은 수의로",
+      "text": "Dress <b>optional</b>.(초대장에)"
+    }
+  ],
+  "isWordType": true
+}

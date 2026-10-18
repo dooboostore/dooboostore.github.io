@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>flit</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "flɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<새·박쥐·모기 등이> 휙휙[훨훨] 날다, 날아다니다 (=fly)",
+              "examples": [
+                {
+                  "text": "bees flitting from flower to flower",
+                  "translatedText": "꽃에서 꽃으로 빠르게 이동하는 꿀벌"
+                }
+              ],
+              "originalMeaning": "<새·박쥐·모기 등이> 휙휙[훨훨] 날다, 날아다니다 (=<span class='related_word' lang='en' >fly</span>)"
+            },
+            {
+              "meaning": "<사람·물건이> 가볍게 움직이다[지나가다], 오가다",
+              "examples": [
+                {
+                  "text": "A cloud <b>flit</b> ted acrossthe moon.",
+                  "translatedText": "한 점의 구름이 달을 스치며 지나갔다."
+                }
+              ],
+              "originalMeaning": "<사람·물건이> 가볍게 움직이다[지나가다], 오가다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "날아 지나감",
+              "examples": [],
+              "originalMeaning": "날아 지나감"
+            },
+            {
+              "meaning": "야반도주",
+              "examples": [
+                {
+                  "text": "do a (moonlight) <b>flit</b>",
+                  "translatedText": "야반도주하다, (몰래) 이사가다"
+                }
+              ],
+              "originalMeaning": "야반도주"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c540b5098e334e8aad72b9a0e63f5c61",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c540b5098e334e8aad72b9a0e63f5c61",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "flits"
+        },
+        {
+          "type": "과거형",
+          "value": "flitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "flitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "flitted"
+        }
+      ],
+      "aliasConjugation": "flits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b60fd75845089ff6940931d3ec7d0f17",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "환상이 그의 마음 속을 스쳐간다.",
+      "text": "Fancies <b>flit</b> through his mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공상이 내 머릿속을 스쳐갔다",
+      "text": "A fancy <b>flitted</b> through my mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 점의 구름이 달을 스치며 지나갔다.",
+      "text": "A cloud <b>flitted</b> across the moon."
+    }
+  ],
+  "isWordType": true
+}

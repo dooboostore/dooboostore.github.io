@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "patient",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpeɪʃnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "인내심[참을성] 있는, 끈기 있는, 느긋한 ((with)); 참을 수 있는 ((of, with))",
+              "examples": [
+                {
+                  "text": "Be <b>patient</b> with children.",
+                  "translatedText": "아이들에게는 성미 급하게 굴지 마시오."
+                }
+              ],
+              "originalMeaning": "인내심[참을성] 있는, 끈기 있는, 느긋한 ((with)); 참을 수 있는 ((of, with))"
+            },
+            {
+              "meaning": "끈기 있게 일하는, 근면한; <연구 등이> 지속적인",
+              "examples": [],
+              "originalMeaning": "끈기 있게 일하는, 근면한; <연구 등이> 지속적인"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "환자, 병자",
+              "examples": [
+                {
+                  "text": "treat[cure] a <b>patient</b>",
+                  "translatedText": "환자를 진찰하다[치료하다]"
+                }
+              ],
+              "originalMeaning": "환자, 병자"
+            },
+            {
+              "meaning": "어떤 행위를 당하는 것[사람], 수동자(受動者)(opp. agent)",
+              "examples": [],
+              "originalMeaning": "어떤 행위를 당하는 것[사람], 수동자(受動者)(opp. agent)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c0bd41b343b44d5b1bafdb91615dadc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c0bd41b343b44d5b1bafdb91615dadc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "043c314aaee27edb8721620b6afedf11",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "환자가 나를 만나러 왔다.",
+      "text": "A <b>patient</b> came to see me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모욕을 꾹 참을 수가 있다.",
+      "text": "He is <b>patient</b> of insults."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "환자가 마구 쇠약해져 간다",
+      "text": "The <b>patient</b> is sinking fast."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들에게는 성미 급하게 굴지 마시오.",
+      "text": "Be <b>patient</b> with children."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "병자는 곧 추설 것이다",
+      "text": "The <b>patient</b> will soon come round."
+    }
+  ],
+  "isWordType": true
+}

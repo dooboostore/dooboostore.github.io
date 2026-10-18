@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "exact",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪɡˈzækt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "정확[적확]한(accurate), (=correct)",
+              "examples": [
+                {
+                  "text": "the <b>exact</b> time",
+                  "translatedText": "정확한 시간"
+                }
+              ],
+              "originalMeaning": "정확[적확]한(accurate), (=<span class='related_word' lang='en' >correct</span>)"
+            },
+            {
+              "meaning": "엄중한, 엄격한",
+              "examples": [
+                {
+                  "text": "<b>exact</b> discipline",
+                  "translatedText": "엄격한 규율"
+                }
+              ],
+              "originalMeaning": "엄중한, 엄격한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<복종 등을> 강요하다, 무리하게 요구하다; <세금 등을> 가차없이 거두다(extort)",
+              "examples": [
+                {
+                  "text": "<b>exact</b> obedience from the students",
+                  "translatedText": "학생들을 억지로 복종시키다"
+                }
+              ],
+              "originalMeaning": "<복종 등을> 강요하다, 무리하게 요구하다; <세금 등을> 가차없이 거두다(extort)"
+            },
+            {
+              "meaning": "<항복·실행 등을> (권력 등에 의하여) 강요하다, 부득이 …하게 하다",
+              "examples": [],
+              "originalMeaning": "<항복·실행 등을> (권력 등에 의하여) 강요하다, 부득이 …하게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f8832afce6724ba09be5bdca2140ee97",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f8832afce6724ba09be5bdca2140ee97",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exacts"
+        },
+        {
+          "type": "과거형",
+          "value": "exacted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exacting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exacted"
+        }
+      ],
+      "aliasConjugation": "exacts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c2446b84faebbbd2f540f6647e79d1b5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강연은 꼭 1시간이 걸렸다",
+      "text": "The lecture lasted for just[exactly] an hour. or The lecture lasted for one hour to the minute."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "곡이 가사에 꼭 들어맞는다",
+      "text": "The tune exactly fits the words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 봐도 그는 장군 같다",
+      "text": "He looks exactly like a general."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 한 말을 그대로 되풀이해 보시오.",
+      "text": "Repeat exactly what he said."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "20은 5로 나뉘어 떨어진다",
+      "text": "Twenty is (exactly) divisible by five."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "account",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkaʊnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사건 등에 대한) 설명, 기술(記述), 보고, 기사(記事); (차례를 따라 하는 자세한) 이야기(narrative), 말",
+              "examples": [
+                {
+                  "text": "Accounts differ.",
+                  "translatedText": "사람에 따라 말이 다르다."
+                }
+              ],
+              "originalMeaning": "(사건 등에 대한) 설명, 기술(記述), 보고, 기사(記事); (차례를 따라 하는 자세한) 이야기(narrative), 말"
+            },
+            {
+              "meaning": "(금전·책임의 처리에 관한) 보고, 전말서; 답변, 변명",
+              "examples": [],
+              "originalMeaning": "(금전·책임의 처리에 관한) 보고, 전말서; 답변, 변명"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…을> (…이라고) 생각하다(consider), 간주하다(regard)",
+              "examples": [
+                {
+                  "text": "<b>account</b> oneself lucky",
+                  "translatedText": "스스로 행복하다고 생각하다"
+                }
+              ],
+              "originalMeaning": "<…을> (…이라고) 생각하다(consider), 간주하다(regard)"
+            },
+            {
+              "meaning": "<…을> (…탓으로) 돌리다 ((to))",
+              "examples": [],
+              "originalMeaning": "<…을> (…탓으로) 돌리다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> (…의 이유를) 밝히다, 설명하다 ((for))",
+              "examples": [
+                {
+                  "text": "I will <b>account</b> for the incident.",
+                  "translatedText": "내가 그 사건에 대해 설명하겠다."
+                }
+              ],
+              "originalMeaning": "<사람이> (…의 이유를) 밝히다, 설명하다 ((for))"
+            },
+            {
+              "meaning": "<사실이> (…의) 원인[설명]이 되다(cause) ((for))",
+              "examples": [
+                {
+                  "text": "His carelessness accounts for his failure.",
+                  "translatedText": "그의 실패는 부주의 탓이다."
+                }
+              ],
+              "originalMeaning": "<사실이> (…의) 원인[설명]이 되다(cause) ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a54d374758ea4323b7cb27e0f5eff51b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a54d374758ea4323b7cb27e0f5eff51b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accounts"
+        },
+        {
+          "type": "과거형",
+          "value": "accounted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accounting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accounted"
+        }
+      ],
+      "aliasConjugation": "accounts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "366c6eec75bc0e213eb4376bd67dc0fc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 계산이 뜬 편이다",
+      "text": "I am slow at accounts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 만 원만 입금했다",
+      "text": "He paid 10,000 won on <b>account</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 설명할 필요가 없다.",
+      "text": "This needs no accounting for."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "병 때문에 못 갔다",
+      "text": "I couldn't go on <b>account</b> of my illness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "음식값은 내 앞으로 그어 놓으시오",
+      "text": "Charge this to my <b>account</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "<b>airline</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│erlaɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "정기 항공(로)",
+              "examples": [
+                {
+                  "text": "<b>airline</b> passenger tariff",
+                  "translatedText": "국제 항공 운임표"
+                }
+              ],
+              "originalMeaning": "정기 항공(로)"
+            },
+            {
+              "meaning": "[종종 pl., 단수 취급] 항공 회사 ((Air Lines로도 씀))",
+              "examples": [],
+              "originalMeaning": "[종종 pl., 단수 취급] 항공 회사 ((Air Lines로도 씀))"
+            },
+            {
+              "meaning": "일직선, 최단 거리",
+              "examples": [],
+              "originalMeaning": "일직선, 최단 거리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/53543e0677984541a55205b78f5539ef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/53543e0677984541a55205b78f5539ef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "134d185e895e9cbe2de631392d248b7b",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "air-line",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "-làin"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[미] 일직선의, 직행의, 최단의",
+              "examples": [],
+              "originalMeaning": "[미] 일직선의, 직행의, 최단의"
+            },
+            {
+              "meaning": "(=AIR-LINE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >AIR-LINE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/65beb74d82ec40119de43ca6a8de39e1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/65beb74d82ec40119de43ca6a8de39e1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e2943e303a6c130aeee56119f0a776e7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "허리케인 때문에 항공로가 마비되었다.",
+      "text": "The hurricane immobilized the airlines."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "양국은 자국의 항공 회사의 이원권에 관한 협정에 조인했다",
+      "text": "The two countries signed an agreement on the fifth freedom rights of their airlines."
+    }
+  ],
+  "isWordType": true
+}

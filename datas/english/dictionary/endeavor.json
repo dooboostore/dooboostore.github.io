@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "endeavor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "indévər,en-"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "노력, 시도, 애씀 (→effort)",
+              "examples": [],
+              "originalMeaning": "노력, 시도, 애씀 (→<span class='related_word' lang='en' >effort</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "노력하다(strive) ((at, after))",
+              "examples": [
+                {
+                  "text": "Anyhow, he is <b>endeavor</b>[/hw]ing.",
+                  "translatedText": "하여간 그는 노력하고 있다."
+                }
+              ],
+              "originalMeaning": "노력하다(strive) ((at, after))"
+            },
+            {
+              "meaning": "시도하다(try)",
+              "examples": [],
+              "originalMeaning": "시도하다(try)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…하려고) 노력하다, 시도하다",
+              "examples": [
+                {
+                  "text": "( <b>endeavor</b>+to do) <b>endeavor</b> to do one's duty",
+                  "translatedText": "의무를 다하려고 노력하다"
+                }
+              ],
+              "originalMeaning": "(…하려고) 노력하다, 시도하다"
+            },
+            {
+              "meaning": "얻으려고 노력하다",
+              "examples": [],
+              "originalMeaning": "얻으려고 노력하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b0282a76a7349db97bbaa1d1418d499",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b0282a76a7349db97bbaa1d1418d499",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b6cb55568e340d74dc77988c4c574b36",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하여간 그는 노력하고 있다.",
+      "text": "Anyhow, he is endeavoring."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 열심히 노력하고 있다.",
+      "text": "He is earnest in his endeavors."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "apprentice",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈprentɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "도제(徒弟), 견습생, 수습[실습]생",
+              "examples": [
+                {
+                  "text": "an <b>apprentice</b> s' school",
+                  "translatedText": "도제 학교"
+                }
+              ],
+              "originalMeaning": "도제(徒弟), 견습생, 수습[실습]생"
+            },
+            {
+              "meaning": "초심자(novice)",
+              "examples": [],
+              "originalMeaning": "초심자(novice)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "도제로 보내다",
+              "examples": [],
+              "originalMeaning": "도제로 보내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "도제가 되다, 수습하다",
+              "examples": [],
+              "originalMeaning": "도제가 되다, 수습하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/689f477009df4029ab3587c0aecf5309",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/689f477009df4029ab3587c0aecf5309",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "apprentices"
+        },
+        {
+          "type": "과거형",
+          "value": "apprenticed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "apprenticing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "apprenticed"
+        }
+      ],
+      "aliasConjugation": "apprentices",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c64accd6be6d84535511caa04e921ffa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아직 수행 중인 몸이다",
+      "text": "He is still an <b>apprentice</b>."
+    }
+  ],
+  "isWordType": true
+}

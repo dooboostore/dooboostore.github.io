@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "decided",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈsaɪdɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "결정적인; 결연한, 단호한, 과단성 있는(resolute)",
+              "examples": [
+                {
+                  "text": "a <b>decided</b> person",
+                  "translatedText": "과단성 있는 사람"
+                }
+              ],
+              "originalMeaning": "결정적인; 결연한, 단호한, 과단성 있는(resolute)"
+            },
+            {
+              "meaning": "분명한, 명확한(distinct)",
+              "examples": [],
+              "originalMeaning": "분명한, 명확한(distinct)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fbfd0969e33d41a0a95e84721523a238",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fbfd0969e33d41a0a95e84721523a238",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d0a984cc5809abd692825982ed0f792b",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "decide",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈsaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "결심[결의]하다(resolve)",
+              "examples": [
+                {
+                  "text": "He has <b>decided</b> to become a doctor. = He has <b>decided</b> that he will become a doctor.",
+                  "translatedText": "그는 의사가 되려고 결심했다.((★ <b>decide</b> doing은 잘못))"
+                }
+              ],
+              "originalMeaning": "결심[결의]하다(resolve)"
+            },
+            {
+              "meaning": "결정하다",
+              "examples": [
+                {
+                  "text": "It has been <b>decide</b> d that the conference shall be held next month.",
+                  "translatedText": "다음 달에 회의를 개최하기로 결정되었다."
+                }
+              ],
+              "originalMeaning": "결정하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결심[결정]하다(determine) ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>decide</b> on a course of action",
+                  "translatedText": "행동 방침을 정하다"
+                }
+              ],
+              "originalMeaning": "결심[결정]하다(determine) ((on, upon))"
+            },
+            {
+              "meaning": "판결을 내리다",
+              "examples": [
+                {
+                  "text": "The judge <b>decided</b> against[for, in favor of] the defendant.",
+                  "translatedText": "판사는 피고에게 불리[유리]한 판결을 내렸다."
+                }
+              ],
+              "originalMeaning": "판결을 내리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fdf98f7b977247bf9fafd10dfda2af55",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fdf98f7b977247bf9fafd10dfda2af55",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "decides",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "02f263b70f21bde649fddaa82de6bed6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것이 저것보다 단연코 낫다.",
+      "text": "This is decidedly better than that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 집에 있기로 결정했다.",
+      "text": "We <b>decided</b> to stay in."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "최선을 다해 보고 안 되면 다시 생각하겠다",
+      "text": "I'll give it my best shot, and if I can't hack it, I'll <b>decide</b> what to do then."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "결정은 네게 달려 있다.",
+      "text": "It rests with you to <b>decide</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 당신이 결정할 일이다.",
+      "text": "That’s for you to <b>decide</b>."
+    }
+  ],
+  "isWordType": true
+}

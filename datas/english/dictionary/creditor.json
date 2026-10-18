@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "entry": "<b>creditor</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkredɪtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "채권자 (opp. debtor)",
+              "examples": [
+                {
+                  "text": "<b>creditor</b> 's ledger",
+                  "translatedText": "매입처 원장(元帳)"
+                }
+              ],
+              "originalMeaning": "채권자 (opp. debtor)"
+            },
+            {
+              "meaning": "대변(貸邊) ((略 cr))",
+              "examples": [],
+              "originalMeaning": "대변(貸邊) ((略 cr))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f2755953bd4f433f877b61bebab01479",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f2755953bd4f433f877b61bebab01479",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "24be3beb6997a330b062c106c128c2bf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "채권자는 그의 봉급을 압류했다",
+      "text": "The <b>creditor</b> attached[seized] his salaries."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그에게 채권이 있다",
+      "text": "I am his <b>creditor</b>. or He owes me some money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고리 대금업자 a usurer;a usury man;an extortionate <b>creditor</b>;a loan shark",
+      "text": ";a Shylock"
+    }
+  ],
+  "isWordType": true
+}

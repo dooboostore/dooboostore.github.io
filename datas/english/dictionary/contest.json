@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "contest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경쟁, 겨루기, 경기, 경연, 콘테스트; 다툼, 항쟁, 싸움(struggle)",
+              "examples": [
+                {
+                  "text": "a speech <b>contest</b>",
+                  "translatedText": "변론 대회"
+                }
+              ],
+              "originalMeaning": "경쟁, 겨루기, 경기, 경연, 콘테스트; 다툼, 항쟁, 싸움(struggle)"
+            },
+            {
+              "meaning": "논쟁, 논전(dispute)",
+              "examples": [],
+              "originalMeaning": "논쟁, 논전(dispute)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "논쟁하다, 다투다(dispute)",
+              "examples": [
+                {
+                  "text": "<b>contest</b> a suit",
+                  "translatedText": "소송 싸움을 하다"
+                }
+              ],
+              "originalMeaning": "논쟁하다, 다투다(dispute)"
+            },
+            {
+              "meaning": "<승리·상·의석 등을 얻고자> 다투다, 겨루다 ((with, against))",
+              "examples": [
+                {
+                  "text": "<b>contest</b> a victory with a person",
+                  "translatedText": "…을 상대로 승리를 겨루다"
+                }
+              ],
+              "originalMeaning": "<승리·상·의석 등을 얻고자> 다투다, 겨루다 ((with, against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 논쟁하다; 경쟁하다(contend) ((with, against))",
+              "examples": [],
+              "originalMeaning": "(…와) 논쟁하다; 경쟁하다(contend) ((with, against))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/21dcccc1009b4cbb81eb6fe2c95127be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/21dcccc1009b4cbb81eb6fe2c95127be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "contests"
+        },
+        {
+          "type": "과거형",
+          "value": "contested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "contesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "contested"
+        }
+      ],
+      "aliasConjugation": "contests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "45d41d41a900abb08cad19c98a9e2971",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 현상 논문에서 1등으로 당선되었다",
+      "text": "He won the first prize in the prize essay <b>contest</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 선거는 A씨와 B씨의 일대일의 대결이다",
+      "text": "The election is an exclusive <b>contest</b> between A and B."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다리 경련으로 도중에서 기권하다",
+      "text": "A cramp in the legs forced him to withdraw from the <b>contest</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 경시 대회에서는 우승자에게 장학금이 마련되어 있다.",
+      "text": "This <b>contest</b> holds a scholarship for the winner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다섯 사람의 미녀가 미인대회 예선을 통과했다",
+      "text": "Five girls passed the preliminary stage of the beauty <b>contest</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "measure",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmeʒə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "재다, 측정하다; …의 치수를 재다",
+              "examples": [
+                {
+                  "text": "<b>measure</b> a piece of ground",
+                  "translatedText": "토지를 측량하다"
+                }
+              ],
+              "originalMeaning": "재다, 측정하다; …의 치수를 재다"
+            },
+            {
+              "meaning": "(어느 분량에) 맞추어 나가다 ((off)), <분량을> 재서 꺼내다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>measure</b> off a foot of cloth",
+                  "translatedText": "옷감 1피트를 재서 끊다"
+                }
+              ],
+              "originalMeaning": "(어느 분량에) 맞추어 나가다 ((off)), <분량을> 재서 꺼내다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "측정하다, 치수를 재다",
+              "examples": [],
+              "originalMeaning": "측정하다, 치수를 재다"
+            },
+            {
+              "meaning": "…의 길이[폭, 높이]이다",
+              "examples": [
+                {
+                  "text": "The room measures 20 feet wide.",
+                  "translatedText": "방은 폭이 20피트이다."
+                }
+              ],
+              "originalMeaning": "…의 길이[폭, 높이]이다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "측정, 계측, 측량, 계량(measurement)",
+              "examples": [
+                {
+                  "text": "a <b>measure</b> of the distance",
+                  "translatedText": "거리의 측정"
+                }
+              ],
+              "originalMeaning": "측정, 계측, 측량, 계량(measurement)"
+            },
+            {
+              "meaning": "계량법, 도량법",
+              "examples": [],
+              "originalMeaning": "계량법, 도량법"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/abb6c2ae6b764131a55de3909a4f0333",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/abb6c2ae6b764131a55de3909a4f0333",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "measures"
+        },
+        {
+          "type": "과거형",
+          "value": "measured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "measuring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "measured"
+        }
+      ],
+      "aliasConjugation": "measures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fc894f9dc8be1331ae4f75df74386510",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 강경 조치를 취했다.",
+      "text": "They resorted to a drastic <b>measure</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어설프게 하는 일이 잘 될리 없다",
+      "text": "A half <b>measure</b> is always a failure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쌀은 밀가루보다 재기가 쉽다.",
+      "text": "Rice measures more easily than flour."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 가치는 돈으로 잴 수 없다",
+      "text": "Its value cannot be measured by money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마지못해 최후의 수단을 썼다",
+      "text": "I was driven[impelled] to extreme measures."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "entry": "classified",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈklæsɪfaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "분류된, <광고가> 항목별의",
+              "examples": [],
+              "originalMeaning": "분류된, <광고가> 항목별의"
+            },
+            {
+              "meaning": "<군사 정보·문서 등이> 기밀 취급의",
+              "examples": [],
+              "originalMeaning": "<군사 정보·문서 등이> 기밀 취급의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=CLASSIFIED AD[ADVERTISEMENT])",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>CLASSIFIED</b> AD[ADVERTISEMENT]</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d39e18c96739430ab226895770f17fe5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d39e18c96739430ab226895770f17fe5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "890d5a67c842d15a90504248f5d101c0",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "classify",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈklæsɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "분류[유별]하다, 등급으로 나누다",
+              "examples": [],
+              "originalMeaning": "분류[유별]하다, 등급으로 나누다"
+            },
+            {
+              "meaning": "<군사 정보·문서 등을> 기밀 등급에 따라서 나누다, 기밀 취급하다",
+              "examples": [],
+              "originalMeaning": "<군사 정보·문서 등을> 기밀 등급에 따라서 나누다, 기밀 취급하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4a10d3671c8a43cdb224cc13890bf8c5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4a10d3671c8a43cdb224cc13890bf8c5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "classifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7c39d42c4c9abc6a63e7eedcfefab195",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여러 항목으로 나눌 수 있다",
+      "text": "It is to be <b>classified</b> into many items."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이들은 세 가지 유형으로 대별될 수 있다",
+      "text": "These can be <b>classified</b> roughly into three types."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 연구실에 있는 책은 조항별로 구분되어 있다",
+      "text": "The books in his study are divided[<b>classified</b>] according to subjects."
+    }
+  ],
+  "isWordType": true
+}

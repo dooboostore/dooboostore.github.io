@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "compressed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəmprést"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "압축[압착]된, 간결한, [식물] 편평한, 굳게 다문",
+              "examples": [
+                {
+                  "text": "<b>compressed</b> gas",
+                  "translatedText": "압축 가스"
+                }
+              ],
+              "originalMeaning": "압축[압착]된, 간결한, [식물] 편평한, 굳게 다문"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/82d8e12e09d743afa41f5824589d8437",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/82d8e12e09d743afa41f5824589d8437",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a0c35798f1b2f6792ced3d08d5f029ad",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "compress",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "압축[압착]하다, [컴퓨터] <파일을> 압축하다",
+              "examples": [
+                {
+                  "text": "<b>compress</b> one's lips",
+                  "translatedText": "입술을 굳게 다물다"
+                }
+              ],
+              "originalMeaning": "압축[압착]하다, [컴퓨터] <파일을> 압축하다"
+            },
+            {
+              "meaning": "<사상·언어 등을> 요약하다, 집약하다 ((into))",
+              "examples": [],
+              "originalMeaning": "<사상·언어 등을> 요약하다, 집약하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "압축되다",
+              "examples": [],
+              "originalMeaning": "압축되다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[의학] (지혈을 위한) 압박 붕대, 습포, (원면) 압축기",
+              "examples": [],
+              "originalMeaning": "[의학] (지혈을 위한) 압박 붕대, 습포, (원면) 압축기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a0b65b09a4bf48a78efd537a7a677a8d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a0b65b09a4bf48a78efd537a7a677a8d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "compresses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4b42640fd261907033bc86810a7664ba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 기계는 전기[압축 공기]로 움직인다.",
+      "text": "The machine is driven by electricity[<b>compressed</b> air]."
+    }
+  ],
+  "isWordType": true
+}

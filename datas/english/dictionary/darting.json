@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "<b>dart</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɑːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "던지는 (화)살, 다트; [pl.; 단수 취급] 화살던지기 ((실내 놀이))",
+              "examples": [],
+              "originalMeaning": "던지는 (화)살, 다트; [pl.; 단수 취급] 화살던지기 ((실내 놀이))"
+            },
+            {
+              "meaning": "[a ~] 급격한 돌진, 투사(投射)",
+              "examples": [
+                {
+                  "text": "make a <b>dart</b> for the door",
+                  "translatedText": "문을 향해 돌진하다"
+                }
+              ],
+              "originalMeaning": "[a ~] 급격한 돌진, 투사(投射)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<시선·빛·화살 등을> 던지다, 쏘다; 발(사)하다 ((forth))",
+              "examples": [
+                {
+                  "text": "<b>dart</b> one's eyes around",
+                  "translatedText": "재빨리 둘러보다"
+                }
+              ],
+              "originalMeaning": "<시선·빛·화살 등을> 던지다, 쏘다; 발(사)하다 ((forth))"
+            },
+            {
+              "meaning": "<의복에> 다트를 달다",
+              "examples": [],
+              "originalMeaning": "<의복에> 다트를 달다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(던진 화살처럼) 날아가다 ((out, into, past, etc.)); 돌진하다 ((forward))",
+              "examples": [
+                {
+                  "text": "A bird darted through the air.",
+                  "translatedText": "새가 공중을 쏜살같이 날아갔다."
+                }
+              ],
+              "originalMeaning": "(던진 화살처럼) 날아가다 ((out, into, past, etc.)); 돌진하다 ((forward))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d7d9f5459a684c85920f747a268c3150",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d7d9f5459a684c85920f747a268c3150",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "darts"
+        },
+        {
+          "type": "과거형",
+          "value": "darted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "darting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "darted"
+        }
+      ],
+      "aliasConjugation": "darts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "27296e41dfbe3edfa5a9e8011abfc6b4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새가 공중을 쏜살같이 날아갔다.",
+      "text": "A bird darted through the air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 재빨리 나에게 시선을 보냈다.",
+      "text": "She darted a quick glance at me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사슴은 나를 보자 쏜살같이 달아났다.",
+      "text": "The deer saw me and darted away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "야만인들이 사자를 향해 창을 휙휙 던졌다",
+      "text": "The savages darted spears at the lion."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "머리 위에서 지저귀는 새들이 있는가 하면 발 밑을 달려가는 다람쥐들도 있다",
+      "text": "Not only are there birds chirping overhead but also squirrels <b>darting</b> underfoot."
+    }
+  ],
+  "isWordType": true
+}

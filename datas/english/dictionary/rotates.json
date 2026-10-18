@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "entry": "<b>rotate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈroʊteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(축을 중심으로 하여) 회전[순환]하다",
+              "examples": [
+                {
+                  "text": "The seasons <b>rotate</b>.",
+                  "translatedText": "사철은 돌고 돈다."
+                }
+              ],
+              "originalMeaning": "(축을 중심으로 하여) 회전[순환]하다"
+            },
+            {
+              "meaning": "<천체가> 자전(自轉)하다",
+              "examples": [],
+              "originalMeaning": "<천체가> 자전(自轉)하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "회전[순환]시키다 (=turn)",
+              "examples": [],
+              "originalMeaning": "회전[순환]시키다 (=<span class='related_word' lang='en' >turn</span>)"
+            },
+            {
+              "meaning": "주기적으로 순환시키다, [농업] <농작물을> 윤작하다",
+              "examples": [
+                {
+                  "text": "They <b>rotate</b> crops on the poor soil.",
+                  "translatedText": "그들은 그 메마른 토지에서 농작물을 윤작하고 있다."
+                }
+              ],
+              "originalMeaning": "주기적으로 순환시키다, [농업] <농작물을> 윤작하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fe5dc788b09947019066eb5d876e9f66",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fe5dc788b09947019066eb5d876e9f66",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rotates"
+        },
+        {
+          "type": "과거형",
+          "value": "rotated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rotating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rotated"
+        }
+      ],
+      "aliasConjugation": "rotates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "724090201aa88aaa4b34bce301a6e28f",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>rotate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(꽃부리 등이) 바퀴 모양의",
+              "examples": [],
+              "originalMeaning": "(꽃부리 등이) 바퀴 모양의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/06ce6b53520242889fba9f5b142b5c60",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/06ce6b53520242889fba9f5b142b5c60",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "rotates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "af3396e339a623070482ecb653b7a9d5",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지구는 서에서 동으로 회전한다",
+      "text": "The earth <b>rotates</b> from west to east."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그 메마른 토지에서 농작물을 윤작하고 있다.",
+      "text": "They <b>rotate</b> crops on the poor soil."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사철은 돌고 돈다.",
+      "text": "The seasons <b>rotate</b>."
+    }
+  ],
+  "isWordType": true
+}

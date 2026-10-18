@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "demolish",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│mɑːlɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<건물을> 헐다, <계획·지론 등을> 뒤집다, 파괴하다 ((destroy보다 딱딱한 말)); <제도 등을> 폐지하다",
+              "examples": [],
+              "originalMeaning": "<건물을> 헐다, <계획·지론 등을> 뒤집다, 파괴하다 ((destroy보다 딱딱한 말)); <제도 등을> 폐지하다"
+            },
+            {
+              "meaning": "모조리 먹어 치우다",
+              "examples": [],
+              "originalMeaning": "모조리 먹어 치우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c1c8533e7b1e48b3a40faa011f4fd261",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c1c8533e7b1e48b3a40faa011f4fd261",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "demolishes"
+        },
+        {
+          "type": "과거형",
+          "value": "demolished"
+        },
+        {
+          "type": "현재 분사",
+          "value": "demolishing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "demolished"
+        }
+      ],
+      "aliasConjugation": "demolishes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b31f22b641fd0b333eb7c31a18cb6b83",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "태풍으로 많은 집들이 요절났다",
+      "text": "Many houses were demolished by the typhoon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새 길을 터놓으려고 몇 집을 허물었다",
+      "text": "They demolished several houses to make way for the new road."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집이 헐렸다",
+      "text": "The house is demolished."
+    }
+  ],
+  "isWordType": true
+}

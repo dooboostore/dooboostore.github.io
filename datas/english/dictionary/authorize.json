@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "authorize",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɔːθəraɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "권위[권한]를 부여하다(empower), 위임하다",
+              "examples": [
+                {
+                  "text": "( <b>authorize</b> +[목]+to do) The Minister <b>authorize</b> d him to do it.",
+                  "translatedText": "장관은 그에게 그것을 행할 권한을 부여했다."
+                }
+              ],
+              "originalMeaning": "권위[권한]를 부여하다(empower), 위임하다"
+            },
+            {
+              "meaning": "<행동·계획·지출 등을> 정식으로 허가하다(sanction)",
+              "examples": [
+                {
+                  "text": "<b>authorize</b> any use of the company credit card",
+                  "translatedText": "법인 카드 사용을 허가하다"
+                }
+              ],
+              "originalMeaning": "<행동·계획·지출 등을> 정식으로 허가하다(sanction)"
+            },
+            {
+              "meaning": "(권위 또는 관례에 의한) <일·물건·사례 등을> 확립하다, 인정하다(establish)",
+              "examples": [],
+              "originalMeaning": "(권위 또는 관례에 의한) <일·물건·사례 등을> 확립하다, 인정하다(establish)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f84d83bf3a794999abd28ab9e2155a52",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f84d83bf3a794999abd28ab9e2155a52",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "authorizes"
+        },
+        {
+          "type": "과거형",
+          "value": "authorized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "authorizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "authorized"
+        }
+      ],
+      "aliasConjugation": "authorizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e2504058dd6997a2d5e1b41ea909637d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장관은 그에게 그것을 행할 권한을 부여했다.",
+      "text": "The Minister authorized him to do it."
+    }
+  ],
+  "isWordType": true
+}

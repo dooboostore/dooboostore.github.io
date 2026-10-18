@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "train",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "treɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "열차, 기차, 전차",
+              "examples": [
+                {
+                  "text": "(a) <b>train</b> service",
+                  "translatedText": "열차편"
+                }
+              ],
+              "originalMeaning": "열차, 기차, 전차"
+            },
+            {
+              "meaning": "(사람·차 등의) 긴 열(列), 줄, 행렬, 대상(隊商)",
+              "examples": [
+                {
+                  "text": "a long <b>train</b> of sightseers",
+                  "translatedText": "관광객의 긴 열"
+                }
+              ],
+              "originalMeaning": "(사람·차 등의) 긴 열(列), 줄, 행렬, 대상(隊商)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "훈련하다 ((up)), 양성하다, 교육하다, 가르치다 ((up)); (…하도록) 길들이다 ((to do))",
+              "examples": [
+                {
+                  "text": "It is important to <b>train</b> (up) children to be polite.",
+                  "translatedText": "어린이들을 예의바르게 교육하는 것은 중요하다."
+                }
+              ],
+              "originalMeaning": "훈련하다 ((up)), 양성하다, 교육하다, 가르치다 ((up)); (…하도록) 길들이다 ((to do))"
+            },
+            {
+              "meaning": "<몸을> 익숙하게 하다, 단련하다",
+              "examples": [
+                {
+                  "text": "<b>train</b> a person[oneself] for a boat race",
+                  "translatedText": "보트 레이스에 대비하여 몸을 단련하다"
+                }
+              ],
+              "originalMeaning": "<몸을> 익숙하게 하다, 단련하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연습[트레이닝]하다, 훈련하다, 교육하다",
+              "examples": [
+                {
+                  "text": "He is training for mountain climbing.",
+                  "translatedText": "그는 등산에 대비한 트레이닝을 하고 있다."
+                }
+              ],
+              "originalMeaning": "연습[트레이닝]하다, 훈련하다, 교육하다"
+            },
+            {
+              "meaning": "(…되도록) 훈련을 받다, 교육받다, 양성되다",
+              "examples": [
+                {
+                  "text": "( <b>train</b>+to do) <b>train</b> to be a doctor",
+                  "translatedText": "의사가 되도록 교육을 받다"
+                }
+              ],
+              "originalMeaning": "(…되도록) 훈련을 받다, 교육받다, 양성되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7979559a48da42f0b7ee955c7ec18811",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7979559a48da42f0b7ee955c7ec18811",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "trains"
+        },
+        {
+          "type": "과거형",
+          "value": "trained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "training"
+        },
+        {
+          "type": "과거 분사",
+          "value": "trained"
+        }
+      ],
+      "aliasConjugation": "trains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "df302b3ec0906ab72ce4435f349b9860",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "9 시 열차를 탔다.",
+      "text": "I got the <b>train</b> at 9."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 열차는 비어 있다",
+      "text": "The <b>train</b> is not crowded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리들은 보스턴에 기차로 갔다.",
+      "text": "We trained to Boston."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "열차는 레일 위를 달린다.",
+      "text": "Trains travel along rails."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "겨우 기차를 잡아 탔다.",
+      "text": "I (only) just caught the <b>train</b>."
+    }
+  ],
+  "isWordType": true
+}

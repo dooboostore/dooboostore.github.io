@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "dispute",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "논쟁하다 ((with)), (…에 대해) 논의하다 ((about, on)), (=discuss)",
+              "examples": [
+                {
+                  "text": "<b>dispute</b> with one's boss about[on] the project",
+                  "translatedText": "상사와 그 기획에 대해서 논쟁하다"
+                }
+              ],
+              "originalMeaning": "논쟁하다 ((with)), (…에 대해) 논의하다 ((about, on)), (=<span class='related_word' lang='en' >discuss</span>)"
+            },
+            {
+              "meaning": "(…에 대해) 반론하다, 이의를 말하다 ((against))",
+              "examples": [],
+              "originalMeaning": "(…에 대해) 반론하다, 이의를 말하다 ((against))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "논하다, 토의하다(discuss); 논박하다",
+              "examples": [
+                {
+                  "text": "<b>dispute</b> whether the decision is right",
+                  "translatedText": "그 결정이 옳은지 어떤지에 대해 논의하다"
+                }
+              ],
+              "originalMeaning": "논하다, 토의하다(discuss); 논박하다"
+            },
+            {
+              "meaning": "<사실 등에> 의심을 품다, 이의를 제기하다",
+              "examples": [],
+              "originalMeaning": "<사실 등에> 의심을 품다, 이의를 제기하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(감정적인) 논쟁, 논의 (=argument)",
+              "examples": [],
+              "originalMeaning": "(감정적인) 논쟁, 논의 (=<span class='related_word' lang='en' >argument</span>)"
+            },
+            {
+              "meaning": "분쟁, 쟁의, 항쟁; 언쟁, 싸움(quarrel) ((about, on))",
+              "examples": [
+                {
+                  "text": "a border <b>dispute</b>",
+                  "translatedText": "경계[국경] 분쟁"
+                }
+              ],
+              "originalMeaning": "분쟁, 쟁의, 항쟁; 언쟁, 싸움(quarrel) ((about, on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/981100f0e3894a43b179460073b7ec7f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/981100f0e3894a43b179460073b7ec7f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "disputes"
+        },
+        {
+          "type": "과거형",
+          "value": "disputed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disputing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disputed"
+        }
+      ],
+      "aliasConjugation": "disputes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c4b12c05aa5563d93b6a715cb1e9c972",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사실은 토론의 여지가 없다",
+      "text": "The fact is beyond[past] <b>dispute</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 논쟁의 여지가 없다",
+      "text": "The matter is beyond <b>dispute</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쟁의가 점점 심각해지고 있다",
+      "text": "The <b>dispute</b> threatens to be aggravated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서로 양보하여 분쟁을 해결했다",
+      "text": "They settled the <b>dispute</b> by mutual concession."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "울타리 문제로 심히 다투었다",
+      "text": "The neighbors had a violent <b>dispute</b> on[about] the boundary."
+    }
+  ],
+  "isWordType": true
+}

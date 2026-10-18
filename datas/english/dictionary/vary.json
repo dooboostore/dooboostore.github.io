@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>vary</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈveri; ˈværi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "바꾸다, 변경하다, 고치다 (=change)",
+              "examples": [
+                {
+                  "text": "<b>vary</b> the pressure",
+                  "translatedText": "압력을 바꾸다"
+                }
+              ],
+              "originalMeaning": "바꾸다, 변경하다, 고치다 (=<span class='related_word' lang='en' >change</span>)"
+            },
+            {
+              "meaning": "변화를 가하다, 다양하게 하다",
+              "examples": [
+                {
+                  "text": "<b>vary</b> one's meals",
+                  "translatedText": "식사에 변화를 주다"
+                }
+              ],
+              "originalMeaning": "변화를 가하다, 다양하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "여러 가지이다; 다르다, 차이 있다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>vary</b> a little from the original",
+                  "translatedText": "원전과 좀 다르다"
+                }
+              ],
+              "originalMeaning": "여러 가지이다; 다르다, 차이 있다 ((from))"
+            },
+            {
+              "meaning": "바뀌다, 변화하다, 달라지다",
+              "examples": [
+                {
+                  "text": "The weather varies hourly.",
+                  "translatedText": "날씨는 매시간 바뀐다."
+                }
+              ],
+              "originalMeaning": "바뀌다, 변화하다, 달라지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37ecc25039ba46b4aa93bbe75b5f179c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37ecc25039ba46b4aa93bbe75b5f179c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "varies"
+        },
+        {
+          "type": "과거형",
+          "value": "varied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "varying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "varied"
+        }
+      ],
+      "aliasConjugation": "varies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f05244844ad1aebcef120b5c76d34cf0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수입은 달마다 증감이 있다",
+      "text": "The receipts <b>vary</b> with the month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "품질은 값에 따라 다르다",
+      "text": "Quality varies with[according to] the prices."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경치는 철에 따라 바뀐다",
+      "text": "The scenery varies from season to season."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "운임은 거리에 따라 다르다",
+      "text": "The rates <b>vary</b> according to the distance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요금은 계절에 따라 부동한다",
+      "text": "The rent varies according to the season."
+    }
+  ],
+  "isWordType": true
+}

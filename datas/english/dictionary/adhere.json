@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "adhere",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ədˈhɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(두 면이 단단히 서로) 들러붙다, 접착하다, 부착하다 ((to))",
+              "examples": [
+                {
+                  "text": "Wax adhered to the finger.",
+                  "translatedText": "초가 손가락에 묻었다."
+                }
+              ],
+              "originalMeaning": "(두 면이 단단히 서로) 들러붙다, 접착하다, 부착하다 ((to))"
+            },
+            {
+              "meaning": "(주의·신념·의견에) 충실하다, 신봉하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>adhere</b> to a creed",
+                  "translatedText": "주의를 신봉하다"
+                }
+              ],
+              "originalMeaning": "(주의·신념·의견에) 충실하다, 신봉하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<물건을> (…에) 부착시키다 ((to))",
+              "examples": [],
+              "originalMeaning": "<물건을> (…에) 부착시키다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92e8afc189a6485e85f11001b2b97a7e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92e8afc189a6485e85f11001b2b97a7e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "adheres"
+        },
+        {
+          "type": "과거형",
+          "value": "adhered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "adhering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "adhered"
+        }
+      ],
+      "aliasConjugation": "adheres",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ecfebd4148a79e1aa284bc4e780754f2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신은 최초의 계획에 구애될 필요가 없다",
+      "text": "You need not <b>adhere</b> to your original plan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "초가 손가락에 묻었다.",
+      "text": "Wax adhered to the finger."
+    }
+  ],
+  "isWordType": true
+}

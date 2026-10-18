@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "university",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│juːnɪ│vɜːrsəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(종합) 대학교(cf. VARSITY, COLLEGE)",
+              "examples": [
+                {
+                  "text": "a women's <b>university</b>",
+                  "translatedText": "여자 대학교"
+                }
+              ],
+              "originalMeaning": "(종합) 대학교(cf. VARSITY, COLLEGE)"
+            },
+            {
+              "meaning": "대학의 건물과 부지",
+              "examples": [],
+              "originalMeaning": "대학의 건물과 부지"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "대학의[에 관계 있는]",
+              "examples": [
+                {
+                  "text": "a <b>university</b> man",
+                  "translatedText": "대학생; 대학 출신자"
+                }
+              ],
+              "originalMeaning": "대학의[에 관계 있는]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19767bdec36b405fbf22f1edc0517b4a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19767bdec36b405fbf22f1edc0517b4a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "universities"
+        }
+      ],
+      "aliasConjugation": "universities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "555df287c265e7374602bf48b0be8afb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 예일 대학 학생이다",
+      "text": "He is a student at Yale (<b>University</b>). or He is studying at Yale (<b>University</b>). 【참고】전치사 at에 주의할 것"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 대학을 다니고 있다",
+      "text": "He is in a <b>university</b>[in college]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "서울 대학교, 연세 대학교 등",
+      "text": "Seoul <b>University</b>, Yeonsei <b>University</b>, and so on"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는  고향에 돌아와 있다.",
+      "text": "He has come down (from the <b>University</b>)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 금년에 대학에 입학했다",
+      "text": "He entered college[(a) <b>university</b>] this year."
+    }
+  ],
+  "isWordType": true
+}

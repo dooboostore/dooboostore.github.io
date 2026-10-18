@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "code",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "koʊd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "신호법; 암호, 약호(略號)",
+              "examples": [],
+              "originalMeaning": "신호법; 암호, 약호(略號)"
+            },
+            {
+              "meaning": "(어떤 계급·동업자 등의) 규약, 관례; (사회의) 규범",
+              "examples": [],
+              "originalMeaning": "(어떤 계급·동업자 등의) 규약, 관례; (사회의) 규범"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "법전으로 성문화하다",
+              "examples": [],
+              "originalMeaning": "법전으로 성문화하다"
+            },
+            {
+              "meaning": "<전문을> 암호[약호]로 하다, [컴퓨터] <프로그램을> 코드화하다",
+              "examples": [],
+              "originalMeaning": "<전문을> 암호[약호]로 하다, [컴퓨터] <프로그램을> 코드화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…의) 유전 암호를 지정하다 ((for))",
+              "examples": [],
+              "originalMeaning": "(…의) 유전 암호를 지정하다 ((for))"
+            },
+            {
+              "meaning": "심장 발작을 일으키다",
+              "examples": [],
+              "originalMeaning": "심장 발작을 일으키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3dcb9443a9d2415cab0f468c37b62c17",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3dcb9443a9d2415cab0f468c37b62c17",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "codes"
+        },
+        {
+          "type": "과거형",
+          "value": "coded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coded"
+        }
+      ],
+      "aliasConjugation": "codes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "780b3b4e1fa24cde4bc3d81546d31c9d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 형법 제2조에 해당한다",
+      "text": "It comes under Article 2 of the Criminal <b>Code</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "제 우편 번호는 77840입니다―못 알아들었는데요. 다시 말씀해 주세요 My zip <b>code</b> is 77840.─",
+      "text": "I didn't quite get that. Again, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우편 번호제",
+      "text": "Zip <b>code</b> system"
+    }
+  ],
+  "isWordType": true
+}

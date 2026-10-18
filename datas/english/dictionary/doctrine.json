@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "doctrine",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│dɑːktrɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(종교의) 교의(敎義), 교리",
+              "examples": [
+                {
+                  "text": "Catholic doctrines",
+                  "translatedText": "가톨릭 교리"
+                }
+              ],
+              "originalMeaning": "(종교의) 교의(敎義), 교리"
+            },
+            {
+              "meaning": "(정치·학문상의) 주의; [미] 공식 (외교) 정책; 원칙, 학설(cf. THEORY); 교전(敎典)",
+              "examples": [
+                {
+                  "text": "the Monroe <b>Doctrine</b>",
+                  "translatedText": "먼로주의(Monroeism)"
+                }
+              ],
+              "originalMeaning": "(정치·학문상의) 주의; [미] 공식 (외교) 정책; 원칙, 학설(cf. THEORY); 교전(敎典)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6350346e441240f5a69d0dc4dfd72fda",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6350346e441240f5a69d0dc4dfd72fda",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "66eacd5bacfd9e9dd1b1697afca91d2f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "맹자가 공자의 설을 조술했다",
+      "text": "Mencius propagated Confucian doctrines."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가톨릭 교리",
+      "text": "Catholic doctrines"
+    }
+  ],
+  "isWordType": true
+}

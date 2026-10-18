@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "allegedly",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əlédʒidli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "주장한[전해진] 바에 의하면, 이른바",
+              "examples": [],
+              "originalMeaning": "주장한[전해진] 바에 의하면, 이른바"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a69bc3312bca4f6b87220e2309e38b1e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a69bc3312bca4f6b87220e2309e38b1e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2e9e642886c0453e15fcaba8f7f8faec",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "alleged",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əlédƷd,-dƷid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(증거 없이) 주장된",
+              "examples": [],
+              "originalMeaning": "(증거 없이) 주장된"
+            },
+            {
+              "meaning": "…이라고들 말하는",
+              "examples": [],
+              "originalMeaning": "…이라고들 말하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2b4b6835690740ca930807b0ce44fc1f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2b4b6835690740ca930807b0ce44fc1f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ba5acae4daee985a53aff15c905534b7",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "allege",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈledʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(충분한 증거도 없이) 단언하다, 강력히 주장하다, 우겨대다",
+              "examples": [
+                {
+                  "text": "allege (one's) innocence",
+                  "translatedText": "무죄를 주장하다"
+                }
+              ],
+              "originalMeaning": "(충분한 증거도 없이) 단언하다, 강력히 주장하다, 우겨대다"
+            },
+            {
+              "meaning": "(법정 등에서 선서하고) 증언하다(declare), 진술하다",
+              "examples": [],
+              "originalMeaning": "(법정 등에서 선서하고) 증언하다(declare), 진술하다"
+            },
+            {
+              "meaning": "(변명으로) 내세우다",
+              "examples": [
+                {
+                  "text": "allege illness",
+                  "translatedText": "병을 핑계대다"
+                }
+              ],
+              "originalMeaning": "(변명으로) 내세우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4a6a13c44c754b378dee2ab27b86b2db",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4a6a13c44c754b378dee2ab27b86b2db",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "alleges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "592ccb4a0789d37e20a5204d888ca64e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전하는 바에 의하면 그녀는 소매치기하다가 잡혔다고 한다",
+      "text": "She was <b>allegedly</b> caught pickpocketing."
+    }
+  ],
+  "isWordType": true
+}

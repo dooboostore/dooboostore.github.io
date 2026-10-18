@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "loose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "luːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "풀린, 벗겨진; 매여 있지 않은, 떼어 놓은; 묶여[닫혀] 있지 않은, 포장이 안 된, 흩어진",
+              "examples": [
+                {
+                  "text": "a <b>loose</b> cat",
+                  "translatedText": "묶어 놓지 않은 고양이"
+                }
+              ],
+              "originalMeaning": "풀린, 벗겨진; 매여 있지 않은, 떼어 놓은; 묶여[닫혀] 있지 않은, 포장이 안 된, 흩어진"
+            },
+            {
+              "meaning": "헐거운, 느슨한, 느즈러진(slack)",
+              "examples": [
+                {
+                  "text": "a <b>loose</b> sweater",
+                  "translatedText": "헐렁한 스웨터"
+                }
+              ],
+              "originalMeaning": "헐거운, 느슨한, 느즈러진(slack)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "느슨하게(loosely)",
+              "examples": [],
+              "originalMeaning": "느슨하게(loosely)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "방임, 방종, 해방",
+              "examples": [],
+              "originalMeaning": "방임, 방종, 해방"
+            },
+            {
+              "meaning": "발사, (활을) 내쏨",
+              "examples": [],
+              "originalMeaning": "발사, (활을) 내쏨"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f47a1dbebb2447b292b3759981ab61a8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f47a1dbebb2447b292b3759981ab61a8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "looser"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "looses"
+        },
+        {
+          "type": "최상급",
+          "value": "loosest"
+        },
+        {
+          "type": "과거형",
+          "value": "loosed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "loosing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "loosed"
+        }
+      ],
+      "aliasConjugation": "looser",
+      "aliasConjugationPos": "비교급",
+      "gdid": "5203aa62061892b68d46ed32b8fc9a1d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 피부가 축 처져 있다",
+      "text": "Her skin is <b>loose</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개를 풀어 놓지 마라.",
+      "text": "You shouldn’t let your dog <b>loose</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 천은 느릿느릿 짜였다",
+      "text": "This cloth[textile, fabric] was woven loosely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나사가 노니 단단히 죄라",
+      "text": "The screw is <b>loose</b> and tighten it firmly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 학교는 규율이 엄하다[느슨하다]",
+      "text": "Discipline is strict[<b>loose</b>] in that school."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "humanity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hjuːˈmænəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적; 단수·복수 취급] 인류, 인간(mankind)",
+              "examples": [
+                {
+                  "text": "for the benefit of <b>humanity</b>",
+                  "translatedText": "인류를 위하여"
+                }
+              ],
+              "originalMeaning": "[집합적; 단수·복수 취급] 인류, 인간(mankind)"
+            },
+            {
+              "meaning": "인간성, 인성",
+              "examples": [
+                {
+                  "text": "contrary to <b>humanity</b>",
+                  "translatedText": "인간성에 반대되는"
+                }
+              ],
+              "originalMeaning": "인간성, 인성"
+            },
+            {
+              "meaning": "[pl.] 사람의 속성, 인간다움",
+              "examples": [],
+              "originalMeaning": "[pl.] 사람의 속성, 인간다움"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7243b7e845e147be873d92b2622faf73",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7243b7e845e147be873d92b2622faf73",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "humanities"
+        }
+      ],
+      "aliasConjugation": "humanities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "148d9a0c47ea937a15739531e1c9aa80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 의리도 인정도 없는 사람이다",
+      "text": "He is a brute devoid of all sense of duty and <b>humanity</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "박애는 인륜의 대도이다",
+      "text": "Benevolence is the great principle of <b>humanity</b>."
+    }
+  ],
+  "isWordType": true
+}

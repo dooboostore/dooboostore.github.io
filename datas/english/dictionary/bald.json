@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "<b>bald</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɔːld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<머리 등이> 벗어진, 대머리의",
+              "examples": [],
+              "originalMeaning": "<머리 등이> 벗어진, 대머리의"
+            },
+            {
+              "meaning": "<산 등이> 민둥민둥한, 나무가 자라지 않는",
+              "examples": [
+                {
+                  "text": "a <b>bald</b> mountain",
+                  "translatedText": "민둥산"
+                }
+              ],
+              "originalMeaning": "<산 등이> 민둥민둥한, 나무가 자라지 않는"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "머리가 벗어지다",
+              "examples": [],
+              "originalMeaning": "머리가 벗어지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a5e994133cee47bba24ad2df3b3aae1d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a5e994133cee47bba24ad2df3b3aae1d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "balder"
+        },
+        {
+          "type": "최상급",
+          "value": "baldest"
+        }
+      ],
+      "aliasConjugation": "balder",
+      "aliasConjugationPos": "비교급",
+      "gdid": "4880068c701224563edd038ef7c06e13",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대머리인 것에 대해 콤플렉스를 가지고 있는 것 같다",
+      "text": "I think he's got a complex about being <b>bald</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경제가 위기라는 것은 숨김없는 사실이었다",
+      "text": "The <b>bald</b> facts were that the economy was in a state of crisis."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 남자는 대머리다",
+      "text": "He is <b>bald</b>."
+    }
+  ],
+  "isWordType": true
+}

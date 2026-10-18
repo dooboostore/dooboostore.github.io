@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "gear",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] [기계] 톱니바퀴 (장치), 기어, 전동(傳動) 장치; (자동차의) 변속 기어",
+              "examples": [
+                {
+                  "text": "high[low] <b>gear</b>",
+                  "translatedText": "고속[저속] 기어; [구어] 고속[저속]"
+                }
+              ],
+              "originalMeaning": "[CU] [기계] 톱니바퀴 (장치), 기어, 전동(傳動) 장치; (자동차의) 변속 기어"
+            },
+            {
+              "meaning": "(특정 용도의) 장치, 도구, 용구; 도르래, 활차(滑車)",
+              "examples": [],
+              "originalMeaning": "(특정 용도의) 장치, 도구, 용구; 도르래, 활차(滑車)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "근사한, 매력 있는, 멋진",
+              "examples": [
+                {
+                  "text": "John is <b>gear</b>.",
+                  "translatedText": "존은 참으로 멋지다."
+                }
+              ],
+              "originalMeaning": "근사한, 매력 있는, 멋진"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기어를 넣다, 전동 장치로 연결하다, <기계를> 연동시키다",
+              "examples": [],
+              "originalMeaning": "기어를 넣다, 전동 장치로 연결하다, <기계를> 연동시키다"
+            },
+            {
+              "meaning": "<장치 등을> 설치하다, <말 등에> 마구를 달다 ((up))",
+              "examples": [],
+              "originalMeaning": "<장치 등을> 설치하다, <말 등에> 마구를 달다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ddb8b136a091419eb405cfb4f25b6aa8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ddb8b136a091419eb405cfb4f25b6aa8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gears"
+        },
+        {
+          "type": "과거형",
+          "value": "geared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gearing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "geared"
+        }
+      ],
+      "aliasConjugation": "gears",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "23ecee644b7f570ca64ef15da7165590",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "눈·비 올 때 감속 운행",
+      "text": "Low <b>gear</b> when wet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기어를 고속으로 넣어 속도를 올렸다.",
+      "text": "I kicked the car into top <b>gear</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철강 산업은 전쟁 물자 생산에 돌려졌다.",
+      "text": "The steel industry was geared to the needs of war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "존은 참으로 멋지다.",
+      "text": "John is <b>gear</b>."
+    }
+  ],
+  "isWordType": true
+}

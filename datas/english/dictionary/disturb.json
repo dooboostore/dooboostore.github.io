@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>disturb</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ││stɜːrb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<마음·일 등을> 방해하다, 어지럽히다, 불안하게 하다; …에게 폐를 끼치다",
+              "examples": [
+                {
+                  "text": "The news disturbed us.",
+                  "translatedText": "그 소식은 우리를 불안하게 했다."
+                }
+              ],
+              "originalMeaning": "<마음·일 등을> 방해하다, 어지럽히다, 불안하게 하다; …에게 폐를 끼치다"
+            },
+            {
+              "meaning": "혼란시키다, 휘저어 놓다",
+              "examples": [
+                {
+                  "text": "<b>disturb</b> the water",
+                  "translatedText": "물을 휘저어 놓다"
+                }
+              ],
+              "originalMeaning": "혼란시키다, 휘저어 놓다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "어지럽히다, (수면·휴식 등을) 방해하다",
+              "examples": [],
+              "originalMeaning": "어지럽히다, (수면·휴식 등을) 방해하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/772daeabaaba43dea5e3ddd15f7ca936",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/772daeabaaba43dea5e3ddd15f7ca936",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "disturbs"
+        },
+        {
+          "type": "과거형",
+          "value": "disturbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disturbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disturbed"
+        }
+      ],
+      "aliasConjugation": "disturbs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "730cde0e29af3f42fe86b86775e07237",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식을 듣고 마음이 어수선했다",
+      "text": "My mind was disturbed at the news."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아주 경미한 소리조차도 그에게 방해가 된다.",
+      "text": "Even the slightest noise disturbs him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바람 소리 때문에 안면을 못했다",
+      "text": "My sleep was disturbed by the noise of the wind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아버지의 병환 소식을 듣고 마음이 뒤숭숭하였다",
+      "text": "He felt restless[was disturbed] to hear of his father's illness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자는 아기를 가만두어라",
+      "text": "Don't <b>disturb</b> the sleeping baby."
+    }
+  ],
+  "isWordType": true
+}

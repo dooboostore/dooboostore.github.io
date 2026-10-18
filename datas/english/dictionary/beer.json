@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "beer",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [종류를 말할 때에는 [C] 취급] 맥주, [C] 맥주 한 잔[병]",
+              "examples": [
+                {
+                  "text": "black <b>beer</b>",
+                  "translatedText": "흑맥주 ((porter, stout 등))"
+                }
+              ],
+              "originalMeaning": "[U] [종류를 말할 때에는 [C] 취급] 맥주, [C] 맥주 한 잔[병]"
+            },
+            {
+              "meaning": "발포성 음료",
+              "examples": [
+                {
+                  "text": "ginger <b>beer</b>",
+                  "translatedText": "생강을 가미한 발포성 음료"
+                }
+              ],
+              "originalMeaning": "발포성 음료"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c0e8449bab3a4f2f82c1a0c079ae0272",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c0e8449bab3a4f2f82c1a0c079ae0272",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b501bea37ca84520fc6f7eca65d05ef9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "맥주는 얼음에 채워져 있다",
+      "text": "The <b>beer</b> is on the ice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "안주가 맥주와 같이 나왔다",
+      "text": "Munchies are served with <b>beer</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "맥주 한 잔쯤은 괜찮겠지.",
+      "text": "I should not mind a glass of <b>beer</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 맥주를 마시면서 그것을 이야기했다.",
+      "text": "They talked about it over a glass of <b>beer</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 맥주를 단숨에 마시고 또 한 병 달라고 했다",
+      "text": "He downed his <b>beer</b> and asked for another."
+    }
+  ],
+  "isWordType": true
+}

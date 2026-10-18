@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "<b>necessitate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "nəˈsesɪteɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "필요로 하다, 요하다; …의 결과를 필연적으로 동반하다",
+              "examples": [
+                {
+                  "text": "Sickness necessitated her change of air.",
+                  "translatedText": "병 때문에 그녀는 전지 요양을 해야만 했다."
+                }
+              ],
+              "originalMeaning": "필요로 하다, 요하다; …의 결과를 필연적으로 동반하다"
+            },
+            {
+              "meaning": "[보통 수동형으로] 부득이 …하게 하다(force) ((to do))",
+              "examples": [],
+              "originalMeaning": "[보통 수동형으로] 부득이 …하게 하다(force) ((to do))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/24ced547021248209186cf568ed62630",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/24ced547021248209186cf568ed62630",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "necessitates"
+        },
+        {
+          "type": "과거형",
+          "value": "necessitated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "necessitating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "necessitated"
+        }
+      ],
+      "aliasConjugation": "necessitates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dbc1465bb047040cae903772b1a777dc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "상략상 그것은 부득이 하다",
+      "text": "It is necessitated by our business policy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "병 때문에 그녀는 전지 요양을 해야만 했다.",
+      "text": "Sickness necessitated her change of air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자네 제안에 의하면 우리 계획을 변경하지 않으면 안 된다.",
+      "text": "Your proposal necessitates changing our plans."
+    }
+  ],
+  "isWordType": true
+}

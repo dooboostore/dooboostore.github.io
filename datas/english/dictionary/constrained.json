@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "entry": "constrained",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈstreɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "강제적인; 압박당한, 무리[부자연]한; 거북살스러운; 갑갑한",
+              "examples": [
+                {
+                  "text": "a <b>constrained</b> manner",
+                  "translatedText": "부자연스러운 태도"
+                }
+              ],
+              "originalMeaning": "강제적인; 압박당한, 무리[부자연]한; 거북살스러운; 갑갑한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b5cedd215335434a9c66640b9f9b0c36",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b5cedd215335434a9c66640b9f9b0c36",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1a9a3d5589ede32e1582e048ed817041",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "constrain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈstreɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "억지로 …시키다, 강요하다(compel)",
+              "examples": [
+                {
+                  "text": "<b>constrain</b> obedience",
+                  "translatedText": "복종을 강요하다"
+                }
+              ],
+              "originalMeaning": "억지로 …시키다, 강요하다(compel)"
+            },
+            {
+              "meaning": "[보통 수동형으로] 억누르다, 억제하다, 압박하다(repress); 감금하다",
+              "examples": [
+                {
+                  "text": "He was <b>constrained</b> in the prison.",
+                  "translatedText": "그는 교도소에 수감되었다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] 억누르다, 억제하다, 압박하다(repress); 감금하다"
+            },
+            {
+              "meaning": "괴롭게 하다",
+              "examples": [],
+              "originalMeaning": "괴롭게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50b75bf39cdd4d22a8b853606a50155a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50b75bf39cdd4d22a8b853606a50155a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "constrains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ed53f441c31c0b5f61db010633975b37",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그녀를 억지로 가게 했다.",
+      "text": "He <b>constrained</b> her to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람 앞에서는 어렵다",
+      "text": "I feel <b>constrained</b>[ill at ease] in his presence. or I feel uneasy around him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 교도소에 수감되었다.",
+      "text": "He was <b>constrained</b> in the prison."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "string",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "strɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "끈, 줄, 실",
+              "examples": [
+                {
+                  "text": "a piece of <b>string</b>",
+                  "translatedText": "실 한 오라기"
+                }
+              ],
+              "originalMeaning": "끈, 줄, 실"
+            },
+            {
+              "meaning": "끈[실] 모양의 것, (꼭두각시의) 끈",
+              "examples": [],
+              "originalMeaning": "끈[실] 모양의 것, (꼭두각시의) 끈"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "실에 꿰다, 연달아 꿰다(thread on)",
+              "examples": [
+                {
+                  "text": "<b>string</b> beads",
+                  "translatedText": "구슬[염주알]을 실에 꿰다"
+                }
+              ],
+              "originalMeaning": "실에 꿰다, 연달아 꿰다(thread on)"
+            },
+            {
+              "meaning": "…에 끈[실]을 달다, <활에> 시위를 매다",
+              "examples": [],
+              "originalMeaning": "…에 끈[실]을 달다, <활에> 시위를 매다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "줄줄이 이어지다, 줄서다; 줄지어 나아가다 ((out, away, off, in))",
+              "examples": [],
+              "originalMeaning": "줄줄이 이어지다, 줄서다; 줄지어 나아가다 ((out, away, off, in))"
+            },
+            {
+              "meaning": "실같이 되다, <아교 등이> 실처럼 늘어나다",
+              "examples": [],
+              "originalMeaning": "실같이 되다, <아교 등이> 실처럼 늘어나다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/751d6ecd66dc41b294ed9d6a30637413",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/751d6ecd66dc41b294ed9d6a30637413",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "strings"
+        },
+        {
+          "type": "과거형",
+          "value": "strung"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stringing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "strung"
+        }
+      ],
+      "aliasConjugation": "strings",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7f1f5260e3a9a8b3dee7337399aa6275",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "북소리 때문에 현악기 소리가 죽는다.",
+      "text": "The drum kills the strings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람, 백을 쓰기라도 한 모양이지",
+      "text": "He must have pulled strings or something."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 처시하에 살고 있다",
+      "text": "He is tied to his wife's apron-strings. or The wife is the ruler in his home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 집에서 돈의 지출을 통제하는 사람은 엄마였다",
+      "text": "In our house it was my mom who held the purse strings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 말은 천편일률적이다",
+      "text": "He always harps on the same <b>string</b>."
+    }
+  ],
+  "isWordType": true
+}

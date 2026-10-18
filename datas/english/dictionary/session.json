@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "session",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈseʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(의회·회의가) 개회 중임; (법정이) 개정 중임; (거래소의) 개장, 입회",
+              "examples": [
+                {
+                  "text": "go into <b>session</b>",
+                  "translatedText": "개회하다"
+                }
+              ],
+              "originalMeaning": "(의회·회의가) 개회 중임; (법정이) 개정 중임; (거래소의) 개장, 입회"
+            },
+            {
+              "meaning": "회의, 회합",
+              "examples": [],
+              "originalMeaning": "회의, 회합"
+            },
+            {
+              "meaning": "(의회의) 회기, 개회기, 개정기",
+              "examples": [
+                {
+                  "text": "a long <b>session</b>",
+                  "translatedText": "긴 회기"
+                }
+              ],
+              "originalMeaning": "(의회의) 회기, 개회기, 개정기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5579ffff37c04fc8aabb33af11aee4ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5579ffff37c04fc8aabb33af11aee4ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ea32354ad84b189410f625ba33940f29",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "상원은 지금 개회[폐회] 중이다.",
+      "text": "Congress is now in[out of] <b>session</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회의는 워싱턴에서 개최 중이다",
+      "text": "The conference is now meeting[in <b>session</b>] in Washington."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국회의 회기는 11월 중순까지이다",
+      "text": "The National Assembly will stay in <b>session</b> until mid-November."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 회의는 목하 서울에서 열리고 있다",
+      "text": "The conference is now meeting[sitting, in <b>session</b>] in Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강연에 이어서 질의 응답이 있을 것이다",
+      "text": "The lecture will be followed by a question-and-answer <b>session</b>."
+    }
+  ],
+  "isWordType": true
+}

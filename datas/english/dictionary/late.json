@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "entry": "late",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "leɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "늦은, 지각한, 더딘",
+              "examples": [
+                {
+                  "text": "be <b>late</b> for[at] school",
+                  "translatedText": "학교에 지각하다"
+                }
+              ],
+              "originalMeaning": "늦은, 지각한, 더딘"
+            },
+            {
+              "meaning": "여느 때보다 늦은, 밤이 된 후의, 철 늦은(backward)",
+              "examples": [
+                {
+                  "text": "a <b>late</b> dinner",
+                  "translatedText": "늦은 만찬"
+                }
+              ],
+              "originalMeaning": "여느 때보다 늦은, 밤이 된 후의, 철 늦은(backward)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "늦게, 뒤늦게; 지각하여, 너무 늦어(too late)",
+              "examples": [
+                {
+                  "text": "We arrived an hour[one train] <b>late</b>.",
+                  "translatedText": "한 시간[한 열차] 뒤늦게 도착했다."
+                }
+              ],
+              "originalMeaning": "늦게, 뒤늦게; 지각하여, 너무 늦어(too <b>late</b>)"
+            },
+            {
+              "meaning": "(시각이) 늦어져, 날이 저물어; 밤이 깊어[깊도록]",
+              "examples": [
+                {
+                  "text": "dine <b>late</b>",
+                  "translatedText": "늦게 정찬을 들다"
+                }
+              ],
+              "originalMeaning": "(시각이) 늦어져, 날이 저물어; 밤이 깊어[깊도록]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[다음 성구로]",
+              "examples": [],
+              "originalMeaning": "[다음 성구로]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6879d189823b4d8893c89c35989bea28",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6879d189823b4d8893c89c35989bea28",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "later"
+        },
+        {
+          "type": "최상급",
+          "value": "latest"
+        }
+      ],
+      "aliasConjugation": "later",
+      "aliasConjugationPos": "비교급",
+      "gdid": "42baf00f0bacf287f1b83f1e20bbd784",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 지각을 잘한다",
+      "text": "She is often <b>late</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 하루 늦게 왔다",
+      "text": "He came a day too <b>late</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요새 그를 보지 못했다",
+      "text": "I haven't seen him lately."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대금 후불로 하고 값을 부르시오.",
+      "text": "Charge now, pay later."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 지각이 너무 잦다.",
+      "text": "He arrives <b>late</b> too often."
+    }
+  ],
+  "isWordType": true
+}

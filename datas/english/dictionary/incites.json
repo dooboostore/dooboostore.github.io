@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>incite</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈsaɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자극하다, 격려하다, 고무하다, 선동하다 ((to, to do))",
+              "examples": [
+                {
+                  "text": "<b>incite</b> a person to heroic deeds",
+                  "translatedText": "용기 있는 행위를 하도록 격려하다"
+                }
+              ],
+              "originalMeaning": "자극하다, 격려하다, 고무하다, 선동하다 ((to, to do))"
+            },
+            {
+              "meaning": "<분노·호기심을> 일으키게 하다, 유발하다",
+              "examples": [
+                {
+                  "text": "<b>incite</b> anger[curiosity]",
+                  "translatedText": "분노[호기심]를 일게 하다"
+                }
+              ],
+              "originalMeaning": "<분노·호기심을> 일으키게 하다, 유발하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9bf96246abf24d5480827e8ed84fc1db",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9bf96246abf24d5480827e8ed84fc1db",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "incites"
+        },
+        {
+          "type": "과거형",
+          "value": "incited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "inciting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "incited"
+        }
+      ],
+      "aliasConjugation": "incites",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6e05c6e33719c32947529631792a2ed7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 학생들을 부추기어 폭동을 일으켰다",
+      "text": "He incited the students to riot."
+    }
+  ],
+  "isWordType": true
+}

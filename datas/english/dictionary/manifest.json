@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "manifest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmænɪfest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "명백한, 일목요연한, 분명히 나타난; [정신의학] 의식에 나타난",
+              "examples": [
+                {
+                  "text": "a <b>manifest</b> error",
+                  "translatedText": "명백한 잘못"
+                }
+              ],
+              "originalMeaning": "명백한, 일목요연한, 분명히 나타난; [정신의학] 의식에 나타난"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "명백하게 하다, 명시하다; <감정 등을> 표명하다",
+              "examples": [
+                {
+                  "text": "<b>manifest</b> dissatisfaction",
+                  "translatedText": "불만을 나타내다"
+                }
+              ],
+              "originalMeaning": "명백하게 하다, 명시하다; <감정 등을> 표명하다"
+            },
+            {
+              "meaning": "[~ oneself로] 밝혀지다, <유령·징조가> 나타나다",
+              "examples": [],
+              "originalMeaning": "[~ oneself로] 밝혀지다, <유령·징조가> 나타나다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<유령 등이> 나타나다",
+              "examples": [],
+              "originalMeaning": "<유령 등이> 나타나다"
+            },
+            {
+              "meaning": "의견을 공표하다",
+              "examples": [],
+              "originalMeaning": "의견을 공표하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8bc9bf6f7bef4a358c50b406b0d2a580",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8bc9bf6f7bef4a358c50b406b0d2a580",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "manifests"
+        },
+        {
+          "type": "과거형",
+          "value": "manifested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "manifesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "manifested"
+        }
+      ],
+      "aliasConjugation": "manifests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "34074e0cc7c9c1929115f4fac77c015d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 증거로 유죄가 명백해지다.",
+      "text": "The evidence manifests the guilt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "증거가 역력하다",
+      "text": "The proof is <b>manifest</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일목요연하다.",
+      "text": "It’s <b>manifest</b> at a glance."
+    }
+  ],
+  "isWordType": true
+}

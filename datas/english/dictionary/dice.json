@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "dice",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "daɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "주사위",
+              "examples": [],
+              "originalMeaning": "주사위"
+            },
+            {
+              "meaning": "[단수 취급] 주사위 놀이, 도박",
+              "examples": [],
+              "originalMeaning": "[단수 취급] 주사위 놀이, 도박"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주사위 놀이를 하다, 노름하다 ((with))",
+              "examples": [],
+              "originalMeaning": "주사위 놀이를 하다, 노름하다 ((with))"
+            },
+            {
+              "meaning": "(자동차 경주에서) 유리한 위치를 다투다",
+              "examples": [],
+              "originalMeaning": "(자동차 경주에서) 유리한 위치를 다투다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "도박으로 잃다 ((away))",
+              "examples": [
+                {
+                  "text": "<b>dice</b> away one's fortune",
+                  "translatedText": "노름으로 재산을 탕진해 버리다"
+                }
+              ],
+              "originalMeaning": "도박으로 잃다 ((away))"
+            },
+            {
+              "meaning": "<고기·야채를> 주사위꼴로 자르다",
+              "examples": [],
+              "originalMeaning": "<고기·야채를> 주사위꼴로 자르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eeba77728e094b43b6853132489c79b8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eeba77728e094b43b6853132489c79b8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dices"
+        },
+        {
+          "type": "과거형",
+          "value": "diced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dicing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "diced"
+        }
+      ],
+      "aliasConjugation": "dices",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "af692425f96651c4e3e3456ad21970e7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그의 전 고용주를 충동질하여 또 주사위 게임을 하게 하였다",
+      "text": "He enticed his former employer into another <b>dice</b> game."
+    }
+  ],
+  "isWordType": true
+}

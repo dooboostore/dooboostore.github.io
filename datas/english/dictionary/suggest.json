@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "suggest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sə│dʒest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "암시하다, 시사하다, 완곡하게 말하다, 넌지시 비치다(imply)",
+              "examples": [
+                {
+                  "text": "Her words <b>suggest</b> that she loves him.",
+                  "translatedText": "그녀의 말은 그를 사랑하고 있음을 시사하고 있다."
+                }
+              ],
+              "originalMeaning": "암시하다, 시사하다, 완곡하게 말하다, 넌지시 비치다(imply)"
+            },
+            {
+              "meaning": "<사물이> 생각나게 하다, 연상시키다",
+              "examples": [
+                {
+                  "text": "Her eyes <b>suggest</b> a cat.",
+                  "translatedText": "그녀의 눈을 보면 고양이를 연상하게 된다."
+                }
+              ],
+              "originalMeaning": "<사물이> 생각나게 하다, 연상시키다"
+            },
+            {
+              "meaning": "제의[제창, 제안]하다, 말을 꺼내다, 권하다, 건의하다(propose)",
+              "examples": [
+                {
+                  "text": "<b>suggest</b> some idea to a person",
+                  "translatedText": "…에게 어떤 생각을 말하다"
+                }
+              ],
+              "originalMeaning": "제의[제창, 제안]하다, 말을 꺼내다, 권하다, 건의하다(propose)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/672e9a3025f5402498dcec2eee1ecfb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/672e9a3025f5402498dcec2eee1ecfb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "suggests"
+        },
+        {
+          "type": "과거형",
+          "value": "suggested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "suggesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "suggested"
+        }
+      ],
+      "aliasConjugation": "suggests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9477160d84158f83d6c1513e6b4fcc81",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 먼저 가라고 나에게 귀띔했다",
+      "text": "He suggested that I go first."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 음악은 조용한 밤을 연상시킨다.",
+      "text": "This music suggests a still night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내가 뚱뚱하다는 말을 비치고 있다",
+      "text": "He's trying to <b>suggest</b> that I'm fat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사실에서 암시를 얻어 소설을 썼다",
+      "text": "He wrote a novel suggested by this fact."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 계획 변경 제안에 응낙했다",
+      "text": "He assented to the suggested change in plans."
+    }
+  ],
+  "isWordType": true
+}

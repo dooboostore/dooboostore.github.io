@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "<b>duplicate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "중복의, 이중의, 두 배의, 한 쌍의",
+              "examples": [],
+              "originalMeaning": "중복의, 이중의, 두 배의, 한 쌍의"
+            },
+            {
+              "meaning": "똑같은, 꼭 닮은, 짝의",
+              "examples": [
+                {
+                  "text": "a <b>duplicate</b> key",
+                  "translatedText": "여벌 열쇠(cf. PASSKEY)"
+                }
+              ],
+              "originalMeaning": "똑같은, 꼭 닮은, 짝의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(동일물의) 두 통 중의 하나, 부본, 사본; 복사, 복제, 복제품",
+              "examples": [
+                {
+                  "text": "a <b>duplicate</b> of a letter",
+                  "translatedText": "편지의 사본"
+                }
+              ],
+              "originalMeaning": "(동일물의) 두 통 중의 하나, 부본, 사본; 복사, 복제, 복제품"
+            },
+            {
+              "meaning": "짝을 맞추는[이루는] 한 쪽의 표, 전당표",
+              "examples": [],
+              "originalMeaning": "짝을 맞추는[이루는] 한 쪽의 표, 전당표"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이중[2배]으로 하다, 두 번 되풀이하다",
+              "examples": [],
+              "originalMeaning": "이중[2배]으로 하다, 두 번 되풀이하다"
+            },
+            {
+              "meaning": "복사[복제]하다(reproduce), 정부 2통으로 만들다",
+              "examples": [],
+              "originalMeaning": "복사[복제]하다(reproduce), 정부 2통으로 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3f113e34576f43af86ae437832f4002d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3f113e34576f43af86ae437832f4002d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "duplicates"
+        },
+        {
+          "type": "과거형",
+          "value": "duplicated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "duplicating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "duplicated"
+        }
+      ],
+      "aliasConjugation": "duplicates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0ff51b3698d145388a1071f4c88105b0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이력서를 두 통 내십시오",
+      "text": "Turn in your resum in <b>duplicate</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일이 중복되었다",
+      "text": "Work is duplicated."
+    }
+  ],
+  "isWordType": true
+}

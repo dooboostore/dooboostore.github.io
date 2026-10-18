@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "luck",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lʌk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "운(chance), 운세; 운명, 천명, 천운",
+              "examples": [
+                {
+                  "text": "a man who has no <b>luck</b> with women",
+                  "translatedText": "여복이 없는 남자"
+                }
+              ],
+              "originalMeaning": "운(chance), 운세; 운명, 천명, 천운"
+            },
+            {
+              "meaning": "행운, 성공",
+              "examples": [
+                {
+                  "text": "( <b>luck</b>+todo) I had the <b>luck</b> to see her there.",
+                  "translatedText": "운 좋게 그곳에서 그녀를 만났다."
+                }
+              ],
+              "originalMeaning": "행운, 성공"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[미·구어] <사람이> 운이 좋다, 재수 있다 ((out)); 운 좋게 성공하다, (용케) 찾아내다 ((out))",
+              "examples": [],
+              "originalMeaning": "[미·구어] <사람이> 운이 좋다, 재수 있다 ((out)); 운 좋게 성공하다, (용케) 찾아내다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ebd41f020a304c089e18ce0115fc96a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ebd41f020a304c089e18ce0115fc96a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lucks"
+        },
+        {
+          "type": "과거형",
+          "value": "lucked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lucking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lucked"
+        }
+      ],
+      "aliasConjugation": "lucks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "50a14a66e427860573dbe23945e3ffc6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다행히도 그는 집에 있었다",
+      "text": "I had the <b>luck</b> to find him at home. or By good <b>luck</b>, I found him at home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 극히 운이 좋았다",
+      "text": "I had capital <b>luck</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그곳에서 그를 만난 것은 천만다행이었다",
+      "text": "It was by a stroke of good <b>luck</b> that I met him there. or I found him there by pure <b>luck</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이제 운이 다한 것 같다",
+      "text": "I'm afraid my <b>luck</b> has run out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나의 행운을 기뻐해 주었다.",
+      "text": "He joyed in my good <b>luck</b>."
+    }
+  ],
+  "isWordType": true
+}

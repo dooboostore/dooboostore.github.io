@@ -1,0 +1,3900 @@
+WEBVTT
+
+00:00:04.050 --> 00:00:05.820
+I love this library.
+
+00:00:05.820 --> 00:00:08.610
+It is, it is, it is
+absolutely beautiful library.
+
+00:00:08.610 --> 00:00:09.443
+Are you a big reader?
+
+00:00:09.443 --> 00:00:10.276
+You know, I mean, I, I,
+
+00:00:11.955 --> 00:00:12.990
+I read a lot in general.
+
+00:00:12.990 --> 00:00:15.870
+I don't know that I've
+had that much time in
+
+00:00:15.870 --> 00:00:17.160
+over the last year or so.
+
+00:00:18.780 --> 00:00:21.000
+Dario Amodei is an unlikely AI celebrity.
+
+00:00:22.080 --> 00:00:24.270
+He's known for warning
+the world about the risks
+
+00:00:24.270 --> 00:00:26.130
+of artificial intelligence.
+
+00:00:26.130 --> 00:00:29.910
+Now, his company is an AI
+frontrunner valued at nearly a
+
+00:00:29.910 --> 00:00:31.350
+trillion dollars.
+
+00:00:31.350 --> 00:00:34.290
+You're shipping so much, so
+fast. How are you doing that?
+
+00:00:34.290 --> 00:00:35.340
+We use Claude, you know,
+
+00:00:35.340 --> 00:00:36.900
+across the product development cycle,
+
+00:00:36.900 --> 00:00:39.510
+and it allows us to release very fast.
+
+00:00:40.710 --> 00:00:44.760
+Founded by a team of OpenAI
+defectors in 2021, Anthropic
+
+00:00:44.760 --> 00:00:47.310
+started out as an underdog lab.
+
+00:00:47.310 --> 00:00:50.940
+Today it's the breakout star,
+wiping billions in value off
+
+00:00:50.940 --> 00:00:54.060
+software stocks, going
+head-to-head with the Pentagon,
+
+00:00:54.060 --> 00:00:57.030
+and creating models allegedly
+powerful enough to burst
+
+00:00:57.030 --> 00:00:59.310
+through the walls of modern cybersecurity.
+
+00:00:59.310 --> 00:01:01.680
+Some of the early
+companies that we gave this
+
+00:01:01.680 --> 00:01:04.620
+to said things like,
+this is a super weapon,
+
+00:01:04.620 --> 00:01:06.180
+please don't release this.
+
+00:01:09.570 --> 00:01:13.230
+Guiding Anthropic through
+this is a sibling duo, Dario,
+
+00:01:13.230 --> 00:01:16.020
+the brother and visionary,
+and Daniela, the sister
+
+00:01:16.020 --> 00:01:18.630
+and operator who puts
+Dario's swirling cosmic
+
+00:01:18.630 --> 00:01:20.160
+thoughts into action.
+
+00:01:20.160 --> 00:01:22.590
+Dario and I, we've always
+been really close since we were
+
+00:01:22.590 --> 00:01:24.090
+little, but I think we
+always really wanted
+
+00:01:24.090 --> 00:01:25.410
+to do something big together.
+
+00:01:25.410 --> 00:01:27.150
+Okay, but when you argue who wins?
+
+00:01:28.680 --> 00:01:29.680
+No one,
+
+00:01:29.680 --> 00:01:30.570
+No one.
+
+00:01:30.570 --> 00:01:33.810
+As the AI arms race
+escalates, the Amodeis are eager
+
+00:01:33.810 --> 00:01:36.540
+to establish themselves as the good guys.
+
+00:01:36.540 --> 00:01:39.300
+But Anthropic's technology could
+have profound implications
+
+00:01:39.300 --> 00:01:43.590
+for how humanity works, learns
+thinks, even fights wars.
+
+00:01:43.590 --> 00:01:46.140
+Anthropic is run by
+an ideological lunatic.
+
+00:01:46.140 --> 00:01:50.130
+This is a debate about
+what the proper use of AI
+
+00:01:50.130 --> 00:01:51.780
+by the government is.
+
+00:01:51.780 --> 00:01:54.780
+At some point, the models
+become very dangerous, you know,
+
+00:01:54.780 --> 00:01:55.980
+the bad guys will have it too.
+
+00:01:55.980 --> 00:01:57.750
+And at that point, we have to make sure
+
+00:01:57.750 --> 00:01:59.970
+that good guys have an even better model.
+
+00:01:59.970 --> 00:02:02.730
+The name Anthropic actually
+comes from the Greek word
+
+00:02:02.730 --> 00:02:05.490
+for human, which speaks to their mission
+
+00:02:05.490 --> 00:02:07.440
+to build responsible AI
+
+00:02:07.440 --> 00:02:09.600
+for the long-term benefit of humanity.
+
+00:02:10.440 --> 00:02:12.600
+Can you actually do that
+when you're building the most
+
+00:02:12.600 --> 00:02:14.430
+powerful technology in the world?
+
+00:02:20.310 --> 00:02:23.220
+You are at the center of
+the AI universe right now.
+
+00:02:23.220 --> 00:02:24.840
+What does that feel like?
+
+00:02:24.840 --> 00:02:27.960
+The experience I've
+had for my whole career,
+
+00:02:27.960 --> 00:02:31.200
+and certainly the whole
+time at Anthropic, is
+
+00:02:31.200 --> 00:02:33.690
+that there's this kind
+of smooth exponential,
+
+00:02:33.690 --> 00:02:36.060
+and the experience of the
+smooth exponential is,
+
+00:02:36.060 --> 00:02:37.200
+nothing's happening, nothing's
+
+00:02:37.200 --> 00:02:38.490
+happening, nothing's happening.
+
+00:02:38.490 --> 00:02:41.760
+Little things happen, and
+then zoom, it goes crazy.
+
+00:02:41.760 --> 00:02:43.740
+So, you know, I was watching
+this graph for a while
+
+00:02:43.740 --> 00:02:46.260
+and I said, oh yeah, we'll
+probably become the, you know,
+
+00:02:46.260 --> 00:02:49.920
+the, the AI company with, you
+know, the, the most revenue
+
+00:02:49.920 --> 00:02:52.950
+and the most valuation some
+sometime around this time.
+
+00:02:52.950 --> 00:02:55.770
+And, and indeed, indeed, it has happened.
+
+00:02:55.770 --> 00:02:59.110
+We're just keeping in mind all
+the things we usually keep in
+
+00:02:59.110 --> 00:03:00.970
+mind, you know, how do
+we train good models?
+
+00:03:00.970 --> 00:03:02.500
+How do we put them in good products?
+
+00:03:02.500 --> 00:03:04.540
+How do we make sure
+that everything's safe?
+
+00:03:04.540 --> 00:03:07.150
+What were you like as a kid
+growing up in San Francisco?
+
+00:03:07.150 --> 00:03:08.920
+I know your, your dad
+was a leather craftsman.
+
+00:03:08.920 --> 00:03:12.610
+Your mom worked in libraries.
+How did that shape you?
+
+00:03:12.610 --> 00:03:15.070
+You know, the whole, you
+know, like first, you know,
+
+00:03:15.070 --> 00:03:17.230
+internet revolution
+was happening around me
+
+00:03:17.230 --> 00:03:19.240
+and I had absolutely no interest in it.
+
+00:03:20.620 --> 00:03:22.750
+I was just interested in like, doing math
+
+00:03:22.750 --> 00:03:24.580
+and like scra, you know,
+scrawling things.
+
+00:03:24.580 --> 00:03:26.740
+I was interested in, like, you know,
+
+00:03:26.740 --> 00:03:27.940
+understanding the universe.
+
+00:03:27.940 --> 00:03:29.860
+I was interested in science fiction.
+
+00:03:30.820 --> 00:03:33.580
+I think I just felt a lot of
+curiosity about the world.
+
+00:03:35.590 --> 00:03:37.510
+What was it like growing up with Dario?
+
+00:03:37.510 --> 00:03:39.280
+He was so smart.
+
+00:03:39.280 --> 00:03:43.120
+He was taking, you know,
+calculus when he was, you know,
+
+00:03:43.120 --> 00:03:45.220
+in I think like middle school.
+
+00:03:45.220 --> 00:03:47.080
+He took math classes at UC Berkeley,
+
+00:03:47.080 --> 00:03:51.460
+when he was in high school.
+I was actually more into
+
+00:03:51.460 --> 00:03:52.660
+to reading and arts.
+
+00:03:52.660 --> 00:03:55.210
+So we were almost like complete
+compliments in that way.
+
+00:03:56.260 --> 00:03:57.790
+Dario studied neuroscience
+
+00:03:57.790 --> 00:04:01.030
+before turning to AI at
+Baidu and later Google.
+
+00:04:01.030 --> 00:04:04.510
+While Daniela started out as
+an early employee at Stripe.
+
+00:04:04.510 --> 00:04:06.490
+They lived together in
+San Francisco, along
+
+00:04:06.490 --> 00:04:09.430
+with Daniela's husband, Holden Karnofsky.
+
+00:04:09.430 --> 00:04:11.260
+Then in 2016,
+
+00:04:11.260 --> 00:04:14.560
+Dario joined the newly formed
+OpenAI followed by Daniela.
+
+00:04:14.560 --> 00:04:17.800
+In 2018, the company began as a nonprofit
+
+00:04:17.800 --> 00:04:21.760
+that promised a safe, more open
+path to super intelligence.
+
+00:04:21.760 --> 00:04:23.920
+I think we need to think right now about
+
+00:04:23.920 --> 00:04:26.440
+how we want this deployed,
+how everyone gets
+
+00:04:26.440 --> 00:04:28.990
+to benefit from it, how we're
+gonna govern it, how we're
+
+00:04:28.990 --> 00:04:30.820
+gonna make it safe and
+sort of good for humanity.
+
+00:04:32.020 --> 00:04:35.740
+At OpenAI, Dario developed
+the concept of scaling laws,
+
+00:04:35.740 --> 00:04:38.740
+predicting that large language
+models would improve simply
+
+00:04:38.740 --> 00:04:39.790
+by adding more data
+
+00:04:39.790 --> 00:04:41.140
+and computing power,
+
+00:04:41.140 --> 00:04:44.020
+even if the underlying
+algorithm stayed the same
+
+00:04:44.020 --> 00:04:45.040
+At that point in time,
+
+00:04:45.040 --> 00:04:47.740
+I know it sounds crazy now,
+looking back, not a lot
+
+00:04:47.740 --> 00:04:49.840
+of people believed,
+Hey, scale up is the way
+
+00:04:49.840 --> 00:04:51.850
+that these models are gonna
+get smarter and better.
+
+00:04:51.850 --> 00:04:55.540
+That was sort of an unusual
+counter-cultural scientific
+
+00:04:55.540 --> 00:04:58.390
+perspective that I think was
+really held by our, you know,
+
+00:04:58.390 --> 00:04:59.980
+founding research team.
+
+00:04:59.980 --> 00:05:03.610
+That approach helped supercharge
+OpenAI's models, paving
+
+00:05:03.610 --> 00:05:05.620
+the way for chatGPT,
+
+00:05:05.620 --> 00:05:07.210
+but the Amodeis reportedly clashed
+
+00:05:07.210 --> 00:05:10.480
+with Altman over the company's
+direction and values.
+
+00:05:10.480 --> 00:05:12.760
+Altman has said, for all
+the differences I have
+
+00:05:12.760 --> 00:05:15.310
+with Anthropic, I mostly
+trust them as a company.
+
+00:05:16.780 --> 00:05:19.450
+Your decision to leave
+OpenAI has become Silicon
+
+00:05:19.450 --> 00:05:20.860
+Valley lore.
+
+00:05:20.860 --> 00:05:22.900
+What did you disagree on?
+
+00:05:22.900 --> 00:05:25.120
+Look, I'll, I'm gonna say it,
+
+00:05:25.120 --> 00:05:26.440
+I'm gonna say it very simply.
+
+00:05:26.440 --> 00:05:29.620
+There are many valid
+disagreements to be had on safety.
+
+00:05:29.620 --> 00:05:32.050
+We certainly had some of
+those disagreements with them,
+
+00:05:32.050 --> 00:05:34.390
+but you know, people that, that, that,
+
+00:05:34.390 --> 00:05:36.610
+that alone is not sufficient to leave.
+
+00:05:36.610 --> 00:05:39.670
+When you feel that you can't
+trust someone, when you feel
+
+00:05:39.670 --> 00:05:43.090
+that their values are not
+what they say they are,
+
+00:05:43.090 --> 00:05:45.580
+when you feel that they're not honest,
+
+00:05:45.580 --> 00:05:49.600
+that makes it very hard to,
+you know, to continue to work
+
+00:05:49.600 --> 00:05:51.850
+with a company, to continue
+to trust the company.
+
+00:05:51.850 --> 00:05:55.810
+And look, at the end of the day, why argue
+
+00:05:55.810 --> 00:05:57.290
+with someone when you don't have the same
+
+00:05:57.290 --> 00:05:58.550
+vision and you don't trust them?
+
+00:05:59.690 --> 00:06:02.750
+The way to resolve it is you
+go off and do your thing.
+
+00:06:02.750 --> 00:06:04.760
+They go off and do their thing.
+
+00:06:08.570 --> 00:06:10.700
+So this is Precita Park.
+
+00:06:10.700 --> 00:06:13.940
+When Dario and Daniela
+decided to leave OpenAI
+
+00:06:13.940 --> 00:06:15.800
+to start Anthropic, this is
+
+00:06:15.800 --> 00:06:18.560
+where the early team would get together.
+
+00:06:18.560 --> 00:06:19.970
+It was during the pandemic.
+
+00:06:19.970 --> 00:06:21.440
+So the story goes,
+
+00:06:21.440 --> 00:06:24.170
+and a bunch of early
+employees would come here,
+
+00:06:24.170 --> 00:06:27.110
+they'd pull up a chair on
+the grass, they'd have lunch,
+
+00:06:27.110 --> 00:06:29.210
+and they'd talk about
+what they were building.
+
+00:06:30.560 --> 00:06:33.050
+When we started this company,
+there were seven co-founders
+
+00:06:33.050 --> 00:06:34.760
+of which me and Daniela are two.
+
+00:06:34.760 --> 00:06:37.130
+And now, you know, we we're, we're the,
+
+00:06:37.130 --> 00:06:39.260
+we're the basically the
+only company in the space
+
+00:06:39.260 --> 00:06:41.420
+that has all of its
+co-founders still here.
+
+00:06:41.420 --> 00:06:43.580
+You don't get to, you know, be a company
+
+00:06:43.580 --> 00:06:45.410
+of the size and scale that we are.
+
+00:06:45.410 --> 00:06:47.750
+With that happening like
+that almost never happens.
+
+00:06:49.220 --> 00:06:51.170
+From the start, Anthropic pitched itself
+
+00:06:51.170 --> 00:06:53.690
+as the ultimate safety
+conscious AI company.
+
+00:06:54.560 --> 00:06:57.620
+Dario has published long
+essays with names like Machines
+
+00:06:57.620 --> 00:06:59.600
+of Loving Grace and The Adolescence
+
+00:06:59.600 --> 00:07:03.710
+of Technology, musing on the
+miraculous potential of AI,
+
+00:07:03.710 --> 00:07:05.510
+as well as the worst case scenarios.
+
+00:07:06.560 --> 00:07:09.500
+Anthropic's chatbot, Claude has
+been trained to follow a set
+
+00:07:09.500 --> 00:07:12.410
+of principles called a
+constitution, intended
+
+00:07:12.410 --> 00:07:14.600
+to keep it on the straight and narrow.
+
+00:07:14.600 --> 00:07:19.160
+Claude has a very distinct
+style and feel a human name.
+
+00:07:19.160 --> 00:07:20.720
+What are you trying to convey?
+
+00:07:20.720 --> 00:07:23.060
+I think when people interact
+with Claude versus, you know,
+
+00:07:23.060 --> 00:07:26.150
+other systems, there is
+more of a feeling of, I like
+
+00:07:26.150 --> 00:07:28.340
+to describe it as professional warmth.
+
+00:07:28.340 --> 00:07:31.160
+So the goal is not for it
+to be your best friend,
+
+00:07:31.160 --> 00:07:34.640
+but it's not for it to be sort
+of cold, rote, calculating.
+
+00:07:34.640 --> 00:07:35.780
+It should feel approachable,
+
+00:07:35.780 --> 00:07:37.730
+but distant, right? Professional.
+
+00:07:37.730 --> 00:07:41.630
+Anthropic has talked about
+teaching Claude to be good.
+
+00:07:41.630 --> 00:07:44.690
+What is a good model? What is a bad model?
+
+00:07:44.690 --> 00:07:46.520
+You don't want a model that lies
+
+00:07:46.520 --> 00:07:48.170
+accidentally or intentionally, right?
+
+00:07:48.170 --> 00:07:50.630
+Lying, we call hallucinations.
+It makes something up.
+
+00:07:50.630 --> 00:07:52.670
+The models are just trained
+to predict the next word.
+
+00:07:52.670 --> 00:07:56.060
+So sometimes they don't know
+and they just invent something.
+
+00:07:56.060 --> 00:07:58.280
+Models sometimes, as we've
+shown in our research,
+
+00:07:58.280 --> 00:08:00.260
+can purposely try to deceive you.
+
+00:08:00.260 --> 00:08:01.970
+We have to make sure that
+doesn't happen in production
+
+00:08:01.970 --> 00:08:03.920
+models that we expose to customers.
+
+00:08:03.920 --> 00:08:05.630
+And then there's a lot of
+work around harmlessness,
+
+00:08:05.630 --> 00:08:08.090
+just making sure that the
+model is not accidentally
+
+00:08:08.090 --> 00:08:11.480
+producing, you know, information
+that is wrong or harmful
+
+00:08:11.480 --> 00:08:13.430
+or, or could cause someone
+to do something bad
+
+00:08:13.430 --> 00:08:15.560
+Whose values are being put into Claude,
+
+00:08:15.560 --> 00:08:17.150
+like is there a universal good?
+
+00:08:17.150 --> 00:08:19.820
+There's so many religions, so
+many different beliefs, like
+
+00:08:19.820 --> 00:08:21.230
+how do you even decide that?
+
+00:08:21.230 --> 00:08:23.180
+So of course there's
+no universal standard for
+
+00:08:23.180 --> 00:08:25.250
+what makes something helpful or harmless,
+
+00:08:25.250 --> 00:08:27.950
+but there are founding
+documents in human history,
+
+00:08:27.950 --> 00:08:31.010
+like the UN Declaration of
+Human Rights that we can use
+
+00:08:31.010 --> 00:08:33.710
+to train Claude's character.
+
+00:08:33.710 --> 00:08:35.930
+And I think, you know, interestingly
+on the religious front,
+
+00:08:35.930 --> 00:08:38.330
+we've actually started to
+have a lot of conversations
+
+00:08:38.330 --> 00:08:41.270
+with religious leaders around
+how should we think about,
+
+00:08:41.270 --> 00:08:42.800
+you know, Claude, the entity,
+
+00:08:42.800 --> 00:08:46.130
+and how can we bake in some
+of the kind of core values
+
+00:08:46.130 --> 00:08:50.270
+that are consistent across
+religions types of belief
+
+00:08:50.270 --> 00:08:53.600
+that really just transcend,
+you know, a specific worldview,
+
+00:08:53.600 --> 00:08:55.530
+but that are really things that
+human beings been grappling
+
+00:08:55.530 --> 00:08:57.240
+with for, for millennia.
+
+00:08:57.240 --> 00:09:00.240
+Have you tried to give Claude
+a trait that didn't take,
+
+00:09:00.240 --> 00:09:03.780
+or was there any trait that
+emerged that surprised you?
+
+00:09:03.780 --> 00:09:06.420
+I think in the early days, it's funny
+
+00:09:06.420 --> 00:09:07.560
+to look back on them now, the kind
+
+00:09:07.560 --> 00:09:09.810
+of early Claudes, Claude two era,
+
+00:09:09.810 --> 00:09:12.030
+sometimes Claude would be
+almost a little bit nannyish.
+
+00:09:12.030 --> 00:09:13.710
+Claude was like, I'm
+really concerned about you,
+
+00:09:13.710 --> 00:09:14.730
+and you're like, Claude, I was
+
+00:09:14.730 --> 00:09:16.200
+asking for the weather, right?
+
+00:09:16.200 --> 00:09:17.820
+It was like, it was
+something really benign.
+
+00:09:17.820 --> 00:09:19.740
+Thankfully we didn't, you
+know, release most of, most
+
+00:09:19.740 --> 00:09:21.660
+of the most egregious versions of those.
+
+00:09:21.660 --> 00:09:23.850
+But I think it is, you know,
+it is, when you think about it,
+
+00:09:23.850 --> 00:09:25.110
+it's like tuning a dial.
+
+00:09:25.110 --> 00:09:27.540
+And so our researchers
+have this very fine needle
+
+00:09:27.540 --> 00:09:30.150
+to thread in order to land
+at the center of that.
+
+00:09:31.680 --> 00:09:33.930
+Whatever Anthropic is doing with Claude,
+
+00:09:33.930 --> 00:09:36.000
+it seems to be working.
+
+00:09:36.000 --> 00:09:38.790
+Anthropic's revenue has
+skyrocketed over the past year,
+
+00:09:38.790 --> 00:09:41.940
+making the company profitable
+for the first time.
+
+00:09:41.940 --> 00:09:42.990
+That's largely thanks
+
+00:09:42.990 --> 00:09:46.350
+to the company's focus on
+more lucrative business tools.
+
+00:09:46.350 --> 00:09:49.470
+Claude Code, a major leap
+that automated large chunks
+
+00:09:49.470 --> 00:09:50.940
+of software engineering
+
+00:09:50.940 --> 00:09:54.240
+and Claude Cowork, which gave
+that power to everyone else.
+
+00:09:55.140 --> 00:09:59.100
+Now, early on, others focused
+on fun splashy consumer apps.
+
+00:09:59.100 --> 00:10:02.160
+You made a bet on coding and enterprise.
+
+00:10:02.160 --> 00:10:03.690
+Why did you make that bet?
+
+00:10:03.690 --> 00:10:07.770
+Was it a, was it a values
+decision or a business decision?
+
+00:10:07.770 --> 00:10:09.330
+Look, if you pick a business model
+
+00:10:09.330 --> 00:10:11.970
+that fundamentally
+conflicts with your values,
+
+00:10:11.970 --> 00:10:13.920
+you're gonna have a hard time, right?
+
+00:10:13.920 --> 00:10:18.030
+Either you betray your own
+values or you become irrelevant.
+
+00:10:18.030 --> 00:10:20.520
+And so when we thought about
+it, we said, look, you know,
+
+00:10:20.520 --> 00:10:23.880
+we've seen the world of social
+media, the consumer world,
+
+00:10:23.880 --> 00:10:27.720
+it, it really seems to, you
+know, encourage engagement,
+
+00:10:27.720 --> 00:10:30.720
+even addiction, you
+know, the slop we've seen
+
+00:10:30.720 --> 00:10:33.030
+with AI video models, it's
+like, what's going on?
+
+00:10:33.030 --> 00:10:35.670
+Is it wants to maximize the
+number of minutes that you're,
+
+00:10:35.670 --> 00:10:36.750
+you're paying attention to
+
+00:10:36.750 --> 00:10:39.810
+because that's the advertising
+revenue-driven incentive.
+
+00:10:39.810 --> 00:10:43.440
+Whereas if we look at enterprise,
+look, I mean, you know,
+
+00:10:43.440 --> 00:10:46.110
+we want to make these
+models useful to people.
+
+00:10:46.110 --> 00:10:50.340
+We want to use AI to,
+you know, cure diseases
+
+00:10:50.340 --> 00:10:51.720
+that we couldn't cure before, right?
+
+00:10:51.720 --> 00:10:54.240
+Well, that's working with
+biotech, it's working with pharma,
+
+00:10:54.240 --> 00:10:56.550
+it's working with
+academic research groups.
+
+00:10:56.550 --> 00:10:58.650
+All of those are enterprises, right?
+
+00:10:58.650 --> 00:11:01.110
+We want to use AI to like, you know,
+
+00:11:01.110 --> 00:11:03.330
+to make energy cheaper and more efficient.
+
+00:11:03.330 --> 00:11:05.040
+That's, that's all enterprise.
+
+00:11:05.040 --> 00:11:08.100
+And so I think it served us
+well to have this business model
+
+00:11:08.100 --> 00:11:10.620
+that largely aligns with our values.
+
+00:11:10.620 --> 00:11:12.660
+Soon after Claude Cowork was released,
+
+00:11:12.660 --> 00:11:16.980
+$285 billion in market
+value vanished overnight.
+
+00:11:16.980 --> 00:11:18.990
+Traders called it the SaaSpocalypse.
+
+00:11:18.990 --> 00:11:21.180
+This kind of white
+collar wipeout story in
+
+00:11:21.180 --> 00:11:23.460
+the software sector. Terrifying.
+
+00:11:23.460 --> 00:11:25.350
+Some of those are down
+for nine days in a row,
+
+00:11:25.350 --> 00:11:27.210
+so clearly the tension is building.
+
+00:11:27.210 --> 00:11:30.600
+If AI continues improving
+at this pace, how much
+
+00:11:30.600 --> 00:11:34.500
+of traditional software
+gets replaced and how fast.
+
+00:11:34.500 --> 00:11:38.190
+I think with AI like the
+pie is getting bigger, right?
+
+00:11:38.190 --> 00:11:41.070
+So the existing incumbents may be smaller
+
+00:11:41.070 --> 00:11:44.670
+and relative terms, some of
+them may, may go down in value,
+
+00:11:44.670 --> 00:11:46.380
+some of them may even may even go out
+
+00:11:46.380 --> 00:11:47.670
+of business if they don't,
+
+00:11:47.670 --> 00:11:49.320
+if they don't adapt in the right way.
+
+00:11:49.320 --> 00:11:50.820
+But like, I would guess
+
+00:11:50.820 --> 00:11:53.440
+that the software
+industry gets larger, not
+
+00:11:53.440 --> 00:11:56.710
+although there will be some big
+losers, those who don't kind
+
+00:11:56.710 --> 00:11:58.810
+of see what's coming, who
+don't identify the moats they
+
+00:11:58.810 --> 00:12:00.130
+have, they're gonna
+have a really hard time.
+
+00:12:01.030 --> 00:12:02.410
+It's sort of the quiet cafe.
+
+00:12:02.410 --> 00:12:05.380
+Okay. Anthropic's recent growth
+spurt might not have happened
+
+00:12:05.380 --> 00:12:06.760
+without this man.
+
+00:12:06.760 --> 00:12:09.580
+Boris Cherny, the
+engineer behind Claude Code
+
+00:12:09.580 --> 00:12:13.630
+and Claude Cowork. When
+Anthropic hired him in 2024,
+
+00:12:13.630 --> 00:12:17.230
+Cherny was living a very
+different life in rural Japan.
+
+00:12:17.230 --> 00:12:19.450
+There was a lot of farmer's
+markets, like very slow.
+
+00:12:19.450 --> 00:12:21.580
+We were making miso. That
+was sort of the big hobby.
+
+00:12:21.580 --> 00:12:24.130
+And I remember using the first AI chatbot
+
+00:12:24.130 --> 00:12:27.670
+that I'd ever used, and it
+just took my breath away
+
+00:12:27.670 --> 00:12:30.250
+and I was just like, oh
+my God, I have to, I have
+
+00:12:30.250 --> 00:12:31.330
+to just be a part of this.
+
+00:12:31.330 --> 00:12:33.340
+And I, I'm also just such
+a big scifi reader
+
+00:12:33.340 --> 00:12:35.470
+and so I just know how
+bad this thing can go.
+
+00:12:35.470 --> 00:12:37.450
+Like this technology
+is incredibly powerful
+
+00:12:37.450 --> 00:12:38.980
+and so we move, move back.
+
+00:12:38.980 --> 00:12:42.790
+You created Claude Code,
+you led the development
+
+00:12:42.790 --> 00:12:44.440
+of Claude Cowork,
+
+00:12:44.440 --> 00:12:47.687
+what problem were you trying to solve?
+
+00:12:47.687 --> 00:12:48.543
+If you look at the coding
+
+00:12:48.543 --> 00:12:49.960
+products, they were all pretty simple.
+
+00:12:49.960 --> 00:12:51.460
+It was like, it was
+sort of like, you know,
+
+00:12:51.460 --> 00:12:53.920
+like complete the word,
+complete the sentence.
+
+00:12:53.920 --> 00:12:56.470
+That was the extent of AI in coding
+
+00:12:56.470 --> 00:12:59.440
+and we just wanted to
+make a way bigger bet.
+
+00:12:59.440 --> 00:13:01.450
+And our bet was, we
+think actually a coding
+
+00:13:01.450 --> 00:13:03.190
+agent can do all of it.
+
+00:13:03.190 --> 00:13:06.220
+A year and a half ago you
+wrote the code by hand
+
+00:13:06.220 --> 00:13:07.270
+and sometimes you press tab
+
+00:13:07.270 --> 00:13:08.950
+and it would auto complete a line.
+
+00:13:08.950 --> 00:13:12.400
+Now I talk to my Claude
+and it writes the code
+
+00:13:12.400 --> 00:13:13.510
+and then while it does that, I talk
+
+00:13:13.510 --> 00:13:15.280
+to the next Claude and
+it writes some code.
+
+00:13:15.280 --> 00:13:17.380
+And at any point I have either, you know,
+
+00:13:17.380 --> 00:13:18.550
+like a few Claudes running and up
+
+00:13:18.550 --> 00:13:21.430
+to a few thousand Claudes
+running, doing things.
+
+00:13:21.430 --> 00:13:24.850
+How much code is Claude writing internally
+
+00:13:24.850 --> 00:13:25.683
+for engineers here?
+
+00:13:25.683 --> 00:13:26.516
+It's writing almost
+all of it on my team.
+
+00:13:28.930 --> 00:13:31.780
+So for me personally, it's
+been writing a hundred percent
+
+00:13:31.780 --> 00:13:33.250
+of my code for at least six months.
+
+00:13:33.250 --> 00:13:36.190
+The work of engineering has
+just completely changed.
+
+00:13:36.190 --> 00:13:38.200
+I feel like I suddenly have superpowers.
+
+00:13:38.200 --> 00:13:40.420
+I have like a jet pack and the engineering
+
+00:13:40.420 --> 00:13:41.530
+has never been this fun.
+
+00:13:41.530 --> 00:13:44.080
+Can we give Claude a spin?
+Yeah, let's do this.
+
+00:13:44.080 --> 00:13:45.280
+All right.
+Alright, so let's,
+
+00:13:45.280 --> 00:13:46.870
+let's make like a little recipe app.
+
+00:13:46.870 --> 00:13:49.690
+So make a recipe app.
+What do you want it to do?
+
+00:13:51.130 --> 00:13:56.130
+I would love it to
+suggest meals for the week.
+
+00:13:56.205 --> 00:13:58.690
+So, you know, this is gonna
+take maybe a few minutes
+
+00:13:58.690 --> 00:14:01.630
+and let's, let's just
+see if Claude builds this.
+
+00:14:01.630 --> 00:14:05.775
+Oh, it gave me some
+options. Hmm. Let's do
+
+00:14:05.775 --> 00:14:07.810
+These look pretty tasty actually. Yeah,
+
+00:14:07.810 --> 00:14:09.880
+I could do a Greek chicken power bowl.
+
+00:14:09.880 --> 00:14:13.720
+When I click on a recipe, I want it
+
+00:14:13.720 --> 00:14:18.720
+to show me how to do it. Thank you.
+
+00:14:19.325 --> 00:14:22.585
+Aw, I'm sure Claude appreciates that.
+
+00:14:24.460 --> 00:14:25.720
+I always try to say thank you.
+
+00:14:25.720 --> 00:14:27.190
+Yeah, I always try to be nice too. I
+
+00:14:27.190 --> 00:14:30.400
+don't know. A recipe app
+might not be the most mind
+
+00:14:30.400 --> 00:14:32.800
+blowing demo of Anthropic's technology,
+
+00:14:32.800 --> 00:14:35.890
+but what Claude Code just did
+in minutes, used to take hours
+
+00:14:35.890 --> 00:14:39.910
+or days for some. That looks
+like a big opportunity.
+
+00:14:39.910 --> 00:14:42.010
+Are you like nervous about
+next week or is it like..
+
+00:14:42.010 --> 00:14:44.020
+What's next week,
+Your developer conference?
+
+00:14:44.020 --> 00:14:48.580
+Oh! Yes, yes. There's so many
+things happening every week.
+
+00:14:52.190 --> 00:14:55.985
+Year over year. API volume
+is up nearly 17 x on the cloud.
+
+00:14:55.985 --> 00:14:59.840
+In the last 12 months, we
+shipped eight frontier models
+
+00:14:59.840 --> 00:15:01.910
+to developers and users.
+
+00:15:01.910 --> 00:15:04.970
+Welcome to the second annual
+Code with Claude conference,
+
+00:15:04.970 --> 00:15:06.950
+where Claude superfans come, hoping
+
+00:15:06.950 --> 00:15:08.420
+to get a glimpse of the future.
+
+00:15:08.420 --> 00:15:11.180
+We're having a lot of fun.
+There's a ton of adrenaline.
+
+00:15:11.180 --> 00:15:13.070
+This is the first year we've grown
+
+00:15:13.070 --> 00:15:14.900
+faster than the exponential.
+
+00:15:14.900 --> 00:15:18.590
+In the first quarter of this
+year, we saw, if you were
+
+00:15:18.590 --> 00:15:22.130
+to annualize it, 80 x growth per year.
+
+00:15:22.130 --> 00:15:25.730
+Ooh.
+I
+
+00:15:25.730 --> 00:15:29.780
+use Claude every day
+in the form of Claude Code
+
+00:15:29.780 --> 00:15:31.010
+to do all sorts of stuff. Not
+
+00:15:31.010 --> 00:15:32.010
+just write code.
+
+00:15:32.010 --> 00:15:34.550
+I write way more code
+than I did five years ago.
+
+00:15:34.550 --> 00:15:36.950
+I've got the confidence of, I don't know,
+
+00:15:36.950 --> 00:15:40.550
+a 22-year-old with VC money. I'm not 22.
+
+00:15:40.550 --> 00:15:43.460
+My friend invited me and
+it's been, it's amazing.
+
+00:15:43.460 --> 00:15:45.170
+As someone that's not really technical,
+
+00:15:45.170 --> 00:15:47.270
+which I think it's really
+interesting just to see
+
+00:15:47.270 --> 00:15:49.220
+what everyone's working
+on, what's out there.
+
+00:15:49.220 --> 00:15:51.350
+I think the, the concerning part or the,
+
+00:15:51.350 --> 00:15:55.070
+and the exciting part is hey,
+they can do things that are,
+
+00:15:55.070 --> 00:15:58.940
+we couldn't dream of and
+timelines we couldn't ever expect.
+
+00:15:58.940 --> 00:16:00.650
+But the kind of alternate side of
+
+00:16:00.650 --> 00:16:03.530
+that reality is you
+really have to be prepared
+
+00:16:03.530 --> 00:16:05.240
+because they will really be a thousand
+
+00:16:05.240 --> 00:16:06.290
+times more productive.
+
+00:16:08.090 --> 00:16:10.670
+All of this raises an obvious question.
+
+00:16:10.670 --> 00:16:12.860
+Will engineers be the first casualties
+
+00:16:12.860 --> 00:16:14.480
+of the AI they're building?
+
+00:16:14.480 --> 00:16:17.750
+It's been revenge of the
+nerds for a while? Is that over?
+
+00:16:19.700 --> 00:16:21.170
+I think we all become nerds,
+
+00:16:21.170 --> 00:16:22.790
+But what happens to the actual nerds?
+
+00:16:24.170 --> 00:16:26.570
+I think the actual nerds will,
+
+00:16:26.570 --> 00:16:28.910
+they're they have to figure it out.
+
+00:16:28.910 --> 00:16:32.270
+Yeah. I I think for a lot of
+them, the skill that they had
+
+00:16:32.270 --> 00:16:34.730
+before is gonna help them in the future
+
+00:16:34.730 --> 00:16:37.460
+because they sort of have
+a pretty big head start.
+
+00:16:37.460 --> 00:16:39.260
+They do a lot of things
+that are not coding
+
+00:16:39.260 --> 00:16:41.000
+and general also have to talk to users.
+
+00:16:41.000 --> 00:16:44.180
+They have to plan, they have
+to think about what's next.
+
+00:16:44.180 --> 00:16:45.770
+So I, I think these are still parts
+
+00:16:45.770 --> 00:16:47.180
+of engineering that
+are gonna stick around.
+
+00:16:48.260 --> 00:16:50.870
+Silicon Valley may have AI fever,
+
+00:16:50.870 --> 00:16:53.660
+but elsewhere the mood is less upbeat.
+
+00:16:53.660 --> 00:16:56.960
+70% of Americans think AI will kill jobs
+
+00:16:56.960 --> 00:16:59.600
+and nearly a third worry,
+theirs will be one of them.
+
+00:17:00.770 --> 00:17:03.650
+Dario Amodei has been
+outspoken about this issue
+
+00:17:03.650 --> 00:17:06.980
+and some of his predictions
+don't exactly sound reassuring.
+
+00:17:06.980 --> 00:17:10.160
+I think we could have this
+very unusual combination
+
+00:17:10.160 --> 00:17:14.480
+of very fast GDP growth
+and high unemployment,
+
+00:17:14.480 --> 00:17:19.280
+or at least underemployment
+or, you know, low wage job.
+
+00:17:19.280 --> 00:17:21.680
+A lot of low wage jobs, high inequality.
+
+00:17:21.680 --> 00:17:24.470
+You've been really
+direct about job loss.
+
+00:17:24.470 --> 00:17:25.730
+AI could eliminate half
+
+00:17:25.730 --> 00:17:27.470
+of all entry level white collar jobs in
+
+00:17:27.470 --> 00:17:28.760
+the next one to five years.
+
+00:17:28.760 --> 00:17:32.570
+That was a year ago. AI
+has moved incredibly fast.
+
+00:17:32.570 --> 00:17:35.210
+Is it still 50% or is it higher?
+
+00:17:35.210 --> 00:17:37.340
+I don't know exactly,
+but I'm, I'm still,
+
+00:17:37.340 --> 00:17:38.690
+I'm still pretty concerned.
+
+00:17:38.690 --> 00:17:40.700
+I'm still the same order of concerns.
+
+00:17:40.700 --> 00:17:43.280
+You know, we are seeing right now
+
+00:17:43.280 --> 00:17:45.290
+that AI is making people more productive.
+
+00:17:45.290 --> 00:17:46.730
+But that's the usual hump.
+
+00:17:46.730 --> 00:17:48.590
+You automate 90% of the job,
+
+00:17:48.590 --> 00:17:51.330
+great people are 10 times more
+productive in the other 10%
+
+00:17:51.330 --> 00:17:53.070
+'cause they're 10 times more leveraged.
+
+00:17:53.070 --> 00:17:56.130
+But eventually it gets
+close to a hundred percent.
+
+00:17:56.130 --> 00:17:58.230
+Now the sequel to that
+is, well then you have
+
+00:17:58.230 --> 00:17:59.880
+to find something else for them to do.
+
+00:17:59.880 --> 00:18:02.250
+Right now AI makes the software
+engineers more productive,
+
+00:18:02.250 --> 00:18:05.550
+even though AI writes all the
+code or almost all the code.
+
+00:18:05.550 --> 00:18:08.730
+But we're already starting
+to see the beginning of like,
+
+00:18:08.730 --> 00:18:10.680
+you know, there may be
+some people that it's,
+
+00:18:10.680 --> 00:18:13.320
+it's not making more productive,
+that it's better for the AI
+
+00:18:13.320 --> 00:18:15.060
+to just, to just do the thing.
+
+00:18:15.060 --> 00:18:16.230
+How does that sit with you?
+
+00:18:17.610 --> 00:18:20.250
+It's, it's very uncomfortable. Yeah.
+
+00:18:21.085 --> 00:18:24.060
+I I think this is, this is
+the reason why I chose to go
+
+00:18:24.060 --> 00:18:26.730
+to Anthropic and I think
+this is the reason that a lot
+
+00:18:26.730 --> 00:18:30.540
+of people here chose to go
+here is artificial intelligence
+
+00:18:30.540 --> 00:18:33.480
+is this force that is
+far bigger than we are.
+
+00:18:33.480 --> 00:18:36.750
+But here we can hopefully make
+it go a little bit better.
+
+00:18:36.750 --> 00:18:39.840
+Do you feel like it's your
+job to do something about that?
+
+00:18:39.840 --> 00:18:42.240
+Or is that someone else's problem?
+
+00:18:42.240 --> 00:18:43.770
+I think it's a thing
+that we have to talk about.
+
+00:18:43.770 --> 00:18:45.150
+We have to advocate for it.
+
+00:18:45.150 --> 00:18:47.370
+Ultimately, it's up to
+society to solve it.
+
+00:18:47.370 --> 00:18:49.080
+This is bigger than one company.
+
+00:18:49.080 --> 00:18:51.990
+There has been a lot of
+pushback on, you know, your,
+
+00:18:51.990 --> 00:18:54.750
+and I know you've said
+you're trying to warn people,
+
+00:18:54.750 --> 00:18:56.790
+but that, you know, you're,
+you know, Jensen Huang said,
+
+00:18:56.790 --> 00:18:58.715
+you're conflating tasks with jobs.
+
+00:18:58.715 --> 00:19:00.660
+AI is creating jobs.
+
+00:19:00.660 --> 00:19:03.120
+Anybody who is saying
+that AI is wiping out jobs
+
+00:19:03.120 --> 00:19:04.380
+is scaring people.
+
+00:19:04.380 --> 00:19:06.420
+Other folks have said
+this, you know, it's sort
+
+00:19:06.420 --> 00:19:08.955
+of doom marketing that benefits anthropic.
+
+00:19:08.955 --> 00:19:11.310
+So, so I wanna be really clear
+
+00:19:11.310 --> 00:19:13.200
+and push back hard against this.
+
+00:19:13.200 --> 00:19:16.680
+In every interview I talk about the,
+
+00:19:16.680 --> 00:19:20.040
+the possible ways to
+address these risks from tax
+
+00:19:20.040 --> 00:19:21.870
+and macroeconomic policy to
+
+00:19:21.870 --> 00:19:25.200
+what the new jobs are in The
+Adolescence of Technology.
+
+00:19:25.200 --> 00:19:28.080
+I have like five pages where
+I lay out the difference
+
+00:19:28.080 --> 00:19:29.790
+between tasks and jobs.
+
+00:19:29.790 --> 00:19:32.340
+Why this time is different
+than other times,
+
+00:19:32.340 --> 00:19:34.890
+but social media, which I detest,
+
+00:19:34.890 --> 00:19:37.050
+which I detest as a category,
+
+00:19:37.050 --> 00:19:40.530
+people have these three
+second clips from, you know,
+
+00:19:40.530 --> 00:19:41.940
+from a year ago.
+
+00:19:41.940 --> 00:19:45.780
+I've, I've written much more
+carefully about these things
+
+00:19:45.780 --> 00:19:47.190
+where, where I talk about the risks.
+
+00:19:47.190 --> 00:19:49.440
+So these are this, this, the idea
+
+00:19:49.440 --> 00:19:52.410
+that this is cheap marketing
+is itself cheap marketing.
+
+00:19:52.410 --> 00:19:55.410
+I think it's, it's part of
+the disease of Silicon Valley.
+
+00:19:55.410 --> 00:19:59.460
+It's been caught up in
+this social media world of,
+
+00:19:59.460 --> 00:20:00.600
+of, of three seconds.
+
+00:20:00.600 --> 00:20:03.120
+And so my message is just
+definitely not doom is coming.
+
+00:20:03.120 --> 00:20:05.910
+My message is like, this
+is something, you know,
+
+00:20:05.910 --> 00:20:07.890
+that we should see coming,
+that we're worried about
+
+00:20:07.890 --> 00:20:10.590
+and that we need to actually
+respond to positively
+
+00:20:13.770 --> 00:20:15.300
+Beyond the software industry,
+
+00:20:15.300 --> 00:20:20.010
+the potential impact of AI on
+jobs seems harder to predict.
+
+00:20:20.010 --> 00:20:22.710
+Anthropic has published a
+paper estimating which fields
+
+00:20:22.710 --> 00:20:24.840
+could make the most use
+of AI in the near future.
+
+00:20:25.980 --> 00:20:28.980
+If its predictions are
+right, management, finance,
+
+00:20:28.980 --> 00:20:31.230
+and legal jobs could
+soon look very different.
+
+00:20:32.460 --> 00:20:34.980
+Which jobs go away, who gets replaced
+
+00:20:34.980 --> 00:20:36.930
+and what new jobs are created.
+
+00:20:36.930 --> 00:20:38.430
+So no one knows for sure
+
+00:20:39.420 --> 00:20:41.670
+because you know, the
+economy's unpredictable, right?
+
+00:20:41.670 --> 00:20:43.560
+The thing that that we have going
+
+00:20:43.560 --> 00:20:46.530
+for us here is the pie
+is gonna expand a lot.
+
+00:20:46.530 --> 00:20:49.390
+And so because the pie
+is gonna expand a lot,
+
+00:20:49.390 --> 00:20:52.030
+there are probably going to
+be places where people can go.
+
+00:20:52.030 --> 00:20:54.370
+It's just a matter of
+finding them fast enough.
+
+00:20:54.370 --> 00:20:56.170
+So play this out for me a little bit.
+
+00:20:56.170 --> 00:20:59.860
+You know, you wake up
+in five years, you know,
+
+00:20:59.860 --> 00:21:02.170
+what does this country look like?
+
+00:21:02.170 --> 00:21:03.880
+What are those people doing?
+
+00:21:03.880 --> 00:21:06.040
+Yeah, so 'cause if there's
+that much unemployment, is
+
+00:21:06.040 --> 00:21:08.740
+that not how revolutions start?
+
+00:21:08.740 --> 00:21:10.690
+Yeah, no, this is the
+outcome we wanna prevent.
+
+00:21:10.690 --> 00:21:12.790
+This is absolutely the
+outcome we want to prevent.
+
+00:21:12.790 --> 00:21:15.610
+I think there's a few places,
+none of them are guaranteed.
+
+00:21:15.610 --> 00:21:18.460
+We're not sure, but
+there's the physical world,
+
+00:21:18.460 --> 00:21:21.610
+we need a lot of more
+people to make, build,
+
+00:21:21.610 --> 00:21:24.100
+manufacture things in the physical world.
+
+00:21:24.100 --> 00:21:26.560
+Anything that's human centered, I think
+
+00:21:26.560 --> 00:21:27.940
+that's gonna be a big deal, right?
+
+00:21:27.940 --> 00:21:30.700
+People, or at least some
+people wanna talk to humans.
+
+00:21:30.700 --> 00:21:33.790
+So these kind of human
+relationship driven jobs, like,
+
+00:21:33.790 --> 00:21:35.350
+I think those are gonna be important
+
+00:21:35.350 --> 00:21:39.160
+and I think there'll be some
+effort by the humans to kind
+
+00:21:39.160 --> 00:21:42.430
+of direct AIs right at, at
+some level it has to be in line
+
+00:21:42.430 --> 00:21:45.490
+with someone's values and
+someone's intentions and,
+
+00:21:45.490 --> 00:21:48.490
+and so I, I think there's
+gonna be some role there,
+
+00:21:48.490 --> 00:21:51.490
+although I don't know how thin
+versus how thick it will be.
+
+00:21:51.490 --> 00:21:53.260
+I think I feel a little bit more hopeful
+
+00:21:53.260 --> 00:21:56.590
+that humans will continue
+to find ways to leverage AI
+
+00:21:56.590 --> 00:21:59.710
+to be productive, to do
+the parts of the work
+
+00:21:59.710 --> 00:22:01.990
+that are meaningful to us
+that only humans can do.
+
+00:22:01.990 --> 00:22:03.370
+I think the human
+
+00:22:03.370 --> 00:22:05.770
+to human interaction
+will never fully go away.
+
+00:22:05.770 --> 00:22:08.230
+The example I often reach for is, is
+
+00:22:08.230 --> 00:22:10.270
+what will happen in medicine today.
+
+00:22:10.270 --> 00:22:13.720
+We hire doctors who are
+expert diagnosticians.
+
+00:22:14.620 --> 00:22:17.440
+I think AI is gonna soon be
+pretty good at telling you
+
+00:22:17.440 --> 00:22:18.520
+what the suite of options of things
+
+00:22:18.520 --> 00:22:19.780
+that are wrong with you
+and what test to run.
+
+00:22:19.780 --> 00:22:21.910
+And you won't need a doctor to do that.
+
+00:22:21.910 --> 00:22:24.520
+But an AI can't physically examine you
+
+00:22:24.520 --> 00:22:27.400
+and say, Hey, does it hurt
+when I press, you know, here.
+
+00:22:27.400 --> 00:22:30.490
+They can't have a bedside
+manner with you that says like,
+
+00:22:30.490 --> 00:22:31.690
+tell me how you're feeling about this.
+
+00:22:31.690 --> 00:22:33.190
+How are you, how are you coping with going
+
+00:22:33.190 --> 00:22:34.465
+through this process?
+
+00:22:34.465 --> 00:22:36.550
+And I think we're going to
+pivot something like medicine
+
+00:22:36.550 --> 00:22:38.680
+to be much more focused
+on the interpersonal
+
+00:22:38.680 --> 00:22:40.300
+because the diagnostic tools are going
+
+00:22:40.300 --> 00:22:42.070
+to become much better.
+
+00:22:42.070 --> 00:22:44.860
+But the interpersonal human
+part, that's, that's not gonna
+
+00:22:44.860 --> 00:22:45.860
+change.
+
+00:22:49.360 --> 00:22:52.270
+Explain this to me. Daniela
+runs day-to-day operations.
+
+00:22:52.270 --> 00:22:54.730
+All the leadership team
+reports to you. Yes.
+
+00:22:54.730 --> 00:22:57.490
+No one reports to you. That
+sounds like a pretty sweet job.
+
+00:22:57.490 --> 00:22:59.200
+It's incredibly freeing.
+
+00:22:59.200 --> 00:23:00.820
+It lets me do all the things
+
+00:23:00.820 --> 00:23:05.350
+that I do much more easily
+than I would otherwise
+
+00:23:05.350 --> 00:23:06.610
+Because it's and she does all the work.
+
+00:23:06.610 --> 00:23:08.885
+Is that what you're saying?
+It's, it's, it's a, I'm just,
+
+00:23:08.885 --> 00:23:13.810
+I if if you, if you had to
+go through the things I had
+
+00:23:13.810 --> 00:23:18.340
+to go through during
+Department of War or no,
+
+00:23:19.420 --> 00:23:22.780
+The Amodeis hope AI can have a
+utopian influence on society,
+
+00:23:23.710 --> 00:23:26.110
+but there's no denying the
+technology's destructive
+
+00:23:26.110 --> 00:23:28.420
+and dystopian potential.
+
+00:23:28.420 --> 00:23:31.780
+Anthropic is at the center
+of a technological arms race
+
+00:23:31.780 --> 00:23:33.910
+with powerful governments
+vying for control.
+
+00:23:34.990 --> 00:23:37.810
+Dario has charged head on into this arena.
+
+00:23:37.810 --> 00:23:39.910
+He's not afraid to blast his competitors.
+
+00:23:39.910 --> 00:23:42.670
+And then I think there are
+some players who, you know,
+
+00:23:42.670 --> 00:23:44.590
+who, who are yoloing who, who pull,
+
+00:23:44.590 --> 00:23:46.520
+pull the risk dial too far.
+
+00:23:46.520 --> 00:23:48.290
+And I'm very concerned. Who is yoloing?
+
+00:23:48.290 --> 00:23:51.350
+So I, that's a question
+I'm not gonna answer
+
+00:23:51.350 --> 00:23:53.180
+Or critique the US government
+
+00:23:53.180 --> 00:23:56.930
+and Anthropic's own partners
+for selling AI chips to China.
+
+00:23:56.930 --> 00:24:00.020
+It's a bit like, you know,
+I I I don't know like selling,
+
+00:24:00.020 --> 00:24:03.590
+selling, you know, nuclear
+weapons to, to North Korea.
+
+00:24:03.590 --> 00:24:06.620
+I've been very outspoken about the need
+
+00:24:06.620 --> 00:24:08.960
+for export controls on chips to China.
+
+00:24:08.960 --> 00:24:11.270
+I say this because I think
+it would be really bad
+
+00:24:11.270 --> 00:24:13.730
+for America, for, you know, the state
+
+00:24:13.730 --> 00:24:16.430
+of democracy in the world
+for, you know, China
+
+00:24:16.430 --> 00:24:18.050
+to be ahead in AI capabilities.
+
+00:24:18.050 --> 00:24:20.000
+And you know, it's, it's like some
+
+00:24:20.000 --> 00:24:23.450
+of the chipmakers obviously
+don't agree with that view,
+
+00:24:23.450 --> 00:24:25.220
+but it hasn't stopped me from saying it.
+
+00:24:25.220 --> 00:24:27.650
+Even after we've signed more partnerships,
+
+00:24:27.650 --> 00:24:30.200
+I'm sure they wish we
+didn't say these things,
+
+00:24:30.200 --> 00:24:32.360
+but these things are
+what are what I believe.
+
+00:24:32.360 --> 00:24:34.340
+And so, you know, look,
+we're all adults here.
+
+00:24:34.340 --> 00:24:35.840
+We can work together on one thing while
+
+00:24:35.840 --> 00:24:37.130
+disagreeing about another thing.
+
+00:24:39.050 --> 00:24:41.120
+Amodei's statements about
+geopolitics date back
+
+00:24:41.120 --> 00:24:44.240
+to his days at Caltech. As a
+sophomore physics student,
+
+00:24:44.240 --> 00:24:47.210
+he developed a reputation
+as an anti-war advocate
+
+00:24:47.210 --> 00:24:50.420
+who believed scientists
+shouldn't sit in ivory towers.
+
+00:24:50.420 --> 00:24:53.630
+It's a worldview that would
+later define Anthropic's position
+
+00:24:53.630 --> 00:24:55.520
+on the future of war.
+
+00:24:55.520 --> 00:24:57.800
+You've had a longstanding anti-war stance
+
+00:24:57.800 --> 00:25:00.650
+and yet you were one of
+the first AI companies
+
+00:25:00.650 --> 00:25:03.290
+to sign a contract with
+the Department of Defense
+
+00:25:03.290 --> 00:25:04.790
+to operate on classified networks.
+
+00:25:04.790 --> 00:25:06.350
+These are the, are the networks
+
+00:25:06.350 --> 00:25:09.260
+that the US uses to
+fight wars. Explain that.
+
+00:25:09.260 --> 00:25:10.970
+Look, I mean, the world changes.
+
+00:25:10.970 --> 00:25:13.880
+Like, you know, my view of
+this technology, you know,
+
+00:25:13.880 --> 00:25:17.750
+when I see Russia invading
+Ukraine, when I see the risk
+
+00:25:17.750 --> 00:25:22.100
+of China invading Taiwan,
+you know, it worries me
+
+00:25:22.100 --> 00:25:25.370
+that we have a kind of
+resurgent authoritarian block
+
+00:25:26.270 --> 00:25:27.830
+that they're very aggressive
+
+00:25:27.830 --> 00:25:30.050
+and that we need to defend ourselves.
+
+00:25:30.050 --> 00:25:32.420
+You know, I may not agree
+with every policy of I
+
+00:25:32.420 --> 00:25:34.190
+of either administration,
+
+00:25:34.190 --> 00:25:35.960
+but you know, that's why we've generally
+
+00:25:35.960 --> 00:25:37.220
+been supportive of this.
+
+00:25:37.220 --> 00:25:39.470
+You've been working
+with Palantir since 2024.
+
+00:25:39.470 --> 00:25:41.210
+That's right.
+You know, their technology is used
+
+00:25:41.210 --> 00:25:43.640
+by ICE, police departments, in Gaza.
+
+00:25:43.640 --> 00:25:46.370
+Is Claude being used for
+surveillance in other ways?
+
+00:25:46.370 --> 00:25:49.790
+We, we don't work with
+ICE either through Palantir
+
+00:25:49.790 --> 00:25:50.810
+or anyone else.
+
+00:25:50.810 --> 00:25:54.560
+We don't work with CBP. I
+don't believe we work in Gaza.
+
+00:25:54.560 --> 00:25:57.860
+We're very careful about, you
+know, scoping our engagements
+
+00:25:57.860 --> 00:25:58.970
+to things that we believe in.
+
+00:26:00.080 --> 00:26:04.010
+In 2025, Anthropic along with OpenAI xAI
+
+00:26:04.010 --> 00:26:07.730
+and Google won a $200 million
+contract with the Pentagon.
+
+00:26:07.730 --> 00:26:09.650
+Anthropic framed it as an opportunity
+
+00:26:09.650 --> 00:26:11.990
+to become a leading AI
+vendor for the government.
+
+00:26:14.210 --> 00:26:15.650
+Claude was reportedly used
+
+00:26:15.650 --> 00:26:17.660
+by the US military in the operation
+
+00:26:17.660 --> 00:26:20.630
+to seize Venezuelan
+president Nicolas Maduro.
+
+00:26:20.630 --> 00:26:23.360
+Weeks later, everything
+started to unravel.
+
+00:26:23.360 --> 00:26:26.270
+We bring you breaking news
+from Anthropic, the Department
+
+00:26:26.270 --> 00:26:28.520
+of Defense demand that
+Anthropic allow full use
+
+00:26:28.520 --> 00:26:31.250
+of its AI technology without guardrails.
+
+00:26:31.250 --> 00:26:34.610
+Anthropic drew red lines
+refusing to let Claude be used
+
+00:26:34.610 --> 00:26:35.780
+for mass surveillance
+
+00:26:35.780 --> 00:26:38.420
+and autonomous weapons putting
+the company on a collision
+
+00:26:38.420 --> 00:26:39.950
+course with the Pentagon.
+
+00:26:39.950 --> 00:26:42.770
+The tech giant facing a deadline
+today to accept conditions
+
+00:26:42.770 --> 00:26:44.130
+or be blacklisted.
+
+00:26:44.130 --> 00:26:47.220
+Does a commercial entity
+have the right to determine
+
+00:26:47.220 --> 00:26:51.330
+how their products are
+used by the military?
+
+00:26:51.330 --> 00:26:52.560
+Lawsuits were filed
+
+00:26:52.560 --> 00:26:55.380
+and Anthropic was banned from
+the Pentagon, underscored
+
+00:26:55.380 --> 00:26:57.270
+by strong words from President Trump
+
+00:26:57.270 --> 00:26:59.760
+and defense secretary Pete Hegseth
+
+00:26:59.760 --> 00:27:02.280
+Anthropic is run by an
+ideological lunatic who
+
+00:27:02.280 --> 00:27:04.560
+shouldn't have a, so that's,
+but that's not my question.
+
+00:27:04.560 --> 00:27:07.765
+My question is AI decision
+making about what we do.
+
+00:27:07.765 --> 00:27:10.170
+Do you mind being called
+an ideological lunatic
+
+00:27:10.170 --> 00:27:12.030
+or a bunch of left wing nut jobs?
+
+00:27:12.030 --> 00:27:13.500
+You know, I've been called worse things
+
+00:27:13.500 --> 00:27:14.760
+than that all the time.
+
+00:27:14.760 --> 00:27:17.400
+What does winning this
+fight actually look like?
+
+00:27:17.400 --> 00:27:18.780
+I won't even call it a fight.
+
+00:27:18.780 --> 00:27:23.340
+This is more a debate about
+what the proper use of AI
+
+00:27:23.340 --> 00:27:24.810
+by the government is.
+
+00:27:24.810 --> 00:27:27.480
+And AI is an emerging new technology.
+
+00:27:27.480 --> 00:27:30.510
+We don't understand the ways in which it's
+
+00:27:30.510 --> 00:27:32.070
+reliable or unreliable.
+
+00:27:32.070 --> 00:27:35.100
+We don't understand the ways
+in which it promotes our values
+
+00:27:35.100 --> 00:27:36.630
+or undermines our values.
+
+00:27:36.630 --> 00:27:39.510
+And so one of the things that
+I thought was important was
+
+00:27:39.510 --> 00:27:43.110
+to establish a precedent
+on some of the, some
+
+00:27:43.110 --> 00:27:44.880
+of the use cases we think are good,
+
+00:27:44.880 --> 00:27:46.680
+which frankly is most of them.
+
+00:27:46.680 --> 00:27:50.370
+And, and some of the use cases
+that we're concerned about.
+
+00:27:50.370 --> 00:27:52.920
+A US official has said,
+with the help of LLMs,
+
+00:27:52.920 --> 00:27:54.810
+the US military has gone from being able
+
+00:27:54.810 --> 00:27:59.040
+to hit a thousand targets a
+day to 5,000 targets a day.
+
+00:27:59.040 --> 00:28:03.180
+That means Claude can help
+kill more people more quickly.
+
+00:28:03.180 --> 00:28:04.680
+Are you comfortable with that?
+
+00:28:04.680 --> 00:28:06.840
+Basically, you're, you're
+asking like, you know,
+
+00:28:06.840 --> 00:28:08.130
+do you believe in this country, right?
+
+00:28:08.130 --> 00:28:09.420
+Do you want this country
+
+00:28:09.420 --> 00:28:12.120
+to be a more powerful actor
+rather than a less powerful
+
+00:28:12.120 --> 00:28:13.590
+actor on the world stage?
+
+00:28:13.590 --> 00:28:15.780
+I do. I'm a patriot. It's not up to me.
+
+00:28:15.780 --> 00:28:18.720
+If we provide a technology,
+it's not up to us to say,
+
+00:28:18.720 --> 00:28:20.370
+you can do this military operation
+
+00:28:20.370 --> 00:28:22.500
+and you can't do that military operation.
+
+00:28:22.500 --> 00:28:24.570
+Now, I might privately believe
+
+00:28:24.570 --> 00:28:27.480
+that this military operation makes sense
+
+00:28:27.480 --> 00:28:29.850
+and that military operation is a bad idea,
+
+00:28:29.850 --> 00:28:31.800
+but we're not gonna deny the technology.
+
+00:28:31.800 --> 00:28:34.440
+You, you basically have
+to, you know, you have
+
+00:28:34.440 --> 00:28:36.240
+to leave policy in the hands
+
+00:28:36.240 --> 00:28:38.910
+of the military decision makers.
+
+00:28:38.910 --> 00:28:41.520
+Bloomberg has reported
+that Claude is being used
+
+00:28:41.520 --> 00:28:43.770
+by the US military and the war in Iran
+
+00:28:43.770 --> 00:28:47.250
+to do AI assisted targeting
+via a platform made
+
+00:28:47.250 --> 00:28:50.400
+by Palantir Maven Smart
+system. In February,
+
+00:28:50.400 --> 00:28:54.390
+US missile reportedly hit a
+girl school in Iran killing more
+
+00:28:54.390 --> 00:28:56.850
+than 150 people, most of them children.
+
+00:28:57.930 --> 00:29:00.120
+Did Claude play a role in that strike?
+
+00:29:00.120 --> 00:29:03.060
+We don't know exactly how, you know,
+
+00:29:03.060 --> 00:29:06.630
+these models were used, you
+know, obviously like, you know,
+
+00:29:07.980 --> 00:29:09.900
+these things that,
+that, you know, mistakes
+
+00:29:09.900 --> 00:29:12.510
+that happen in warfare are
+really, really terrible.
+
+00:29:12.510 --> 00:29:15.390
+Like this is a really
+terrible thing to happen.
+
+00:29:15.390 --> 00:29:17.550
+We were willing to risk
+the future of our company
+
+00:29:17.550 --> 00:29:21.750
+to like limit how, you
+know, these models are used
+
+00:29:21.750 --> 00:29:24.810
+and you know, what, what you're
+talking about is a use case
+
+00:29:24.810 --> 00:29:26.400
+that doesn't even violate our red lines.
+
+00:29:26.400 --> 00:29:29.340
+We're worried that there will
+be a hundred times as much,
+
+00:29:29.340 --> 00:29:31.920
+you know, with, with use cases that, that,
+
+00:29:31.920 --> 00:29:33.300
+that do violate our red lines.
+
+00:29:33.300 --> 00:29:35.430
+Now I, you know, I I I,
+you know, again, again,
+
+00:29:35.430 --> 00:29:39.420
+I would say I think overall
+the use of these, the, the use
+
+00:29:39.420 --> 00:29:41.320
+of these models is appropriate.
+
+00:29:41.320 --> 00:29:43.660
+I think it's good on net, you know,
+
+00:29:43.660 --> 00:29:48.040
+but military decision makers
+make terrible mistakes even
+
+00:29:48.040 --> 00:29:49.870
+when, even, even at the best of times,
+
+00:29:49.870 --> 00:29:51.910
+and I, I don't know if
+we're in the best of times.
+
+00:29:51.910 --> 00:29:54.880
+What we've seen here is Claude assists,
+
+00:29:54.880 --> 00:29:56.410
+but a human makes the final call.
+
+00:29:56.410 --> 00:29:59.200
+So a human made that
+final call, not Claude.
+
+00:29:59.200 --> 00:30:02.530
+Imagine if you had a world
+in which, not Claude,
+
+00:30:02.530 --> 00:30:05.290
+because we haven't allowed it,
+but someone else's AI model,
+
+00:30:05.290 --> 00:30:06.730
+the AI model just makes the decision
+
+00:30:06.730 --> 00:30:08.020
+and the human never sees it.
+
+00:30:08.020 --> 00:30:09.520
+That's what we were standing up for.
+
+00:30:09.520 --> 00:30:11.170
+That's what we were fighting against.
+
+00:30:11.170 --> 00:30:12.970
+This school had a website.
+
+00:30:12.970 --> 00:30:14.560
+You could have found
+it in a Google Search,
+
+00:30:14.560 --> 00:30:16.600
+like shouldn't Claude have spotted that?
+
+00:30:16.600 --> 00:30:20.200
+And it doesn't speak to a
+scarier issue about using
+
+00:30:20.200 --> 00:30:22.420
+technology as a shortcut in war.
+
+00:30:22.420 --> 00:30:26.620
+The principle that was obeyed
+here is a human makes the
+
+00:30:26.620 --> 00:30:28.420
+human makes the final decision.
+
+00:30:28.420 --> 00:30:31.600
+I don't know what role
+Claude or any other AI had,
+
+00:30:31.600 --> 00:30:34.720
+but like, if, if this
+isn't an illustration why
+
+00:30:34.720 --> 00:30:37.305
+that principle is so important,
+I don't know what is,
+
+00:30:37.305 --> 00:30:40.900
+Is AI warfare more likely
+
+00:30:40.900 --> 00:30:45.670
+to stop World War III, a war
+between the US and China?
+
+00:30:45.670 --> 00:30:48.190
+Or is it more likely to make it happen?
+
+00:30:48.190 --> 00:30:50.650
+I would say on balance it
+is more likely to stop it.
+
+00:30:50.650 --> 00:30:55.180
+But if we have no limits on
+how it's used, then I think,
+
+00:30:55.180 --> 00:30:56.980
+you know, it could be
+more likely to cause it.
+
+00:30:56.980 --> 00:30:58.630
+You've seen Dr. StrangeLove, right?
+
+00:30:58.630 --> 00:31:00.430
+The premise of it was like, you know,
+
+00:31:00.430 --> 00:31:01.780
+you have a doomsday device
+
+00:31:01.780 --> 00:31:04.090
+that automatically fires
+nuclear weapons when it thinks
+
+00:31:04.090 --> 00:31:05.590
+nuclear weapons are being fired at it.
+
+00:31:05.590 --> 00:31:07.150
+What could go wrong? Right?
+
+00:31:07.150 --> 00:31:10.450
+I think the way conflicts
+happen is that, you know, the,
+
+00:31:10.450 --> 00:31:11.830
+the two sides jump at each other.
+
+00:31:11.830 --> 00:31:13.420
+They misunderstand each other.
+
+00:31:13.420 --> 00:31:16.120
+And when we don't have proper
+oversight of this technology,
+
+00:31:16.120 --> 00:31:19.420
+I think those kinds of accidents
+are more likely to happen.
+
+00:31:19.420 --> 00:31:22.750
+Now, I think if AI is used in
+an appropriate way, in, in,
+
+00:31:22.750 --> 00:31:24.250
+in, not even warfare,
+
+00:31:24.250 --> 00:31:28.720
+but think of just, just
+intelligence collection, you know,
+
+00:31:28.720 --> 00:31:31.810
+let, let's say we're able to,
+you know, predict an invasion
+
+00:31:31.810 --> 00:31:34.330
+of Taiwan or a new movement in Ukraine.
+
+00:31:34.330 --> 00:31:38.860
+Like, you know, our adversaries
+will think twice about,
+
+00:31:38.860 --> 00:31:41.500
+you know, about conducting
+some kind of invasion
+
+00:31:41.500 --> 00:31:42.910
+or military operation if we know
+
+00:31:42.910 --> 00:31:43.960
+everything that they're doing.
+
+00:31:46.510 --> 00:31:49.360
+AI's role on the battlefield
+raises difficult questions,
+
+00:31:49.360 --> 00:31:52.090
+even for a company willing to
+debate the ethical dilemmas
+
+00:31:52.090 --> 00:31:53.890
+of its own technology.
+
+00:31:53.890 --> 00:31:57.160
+It's a conversation Amodei seems
+eager to have in public.
+
+00:31:58.090 --> 00:32:00.190
+How do you handle the pressure?
+
+00:32:00.190 --> 00:32:02.770
+I try very hard to communicate
+
+00:32:02.770 --> 00:32:04.840
+and always be straightforward and honest.
+
+00:32:04.840 --> 00:32:08.140
+I get up in front of the
+company every two weeks
+
+00:32:08.140 --> 00:32:11.260
+and just talk for an hour
+about just what's on my mind,
+
+00:32:11.260 --> 00:32:12.370
+what's going on in the industry,
+
+00:32:12.370 --> 00:32:14.230
+what's going on in the outside world.
+
+00:32:14.230 --> 00:32:15.730
+It's totally uncensored.
+
+00:32:15.730 --> 00:32:19.120
+And not only does it build
+trust, it's very freeing for me
+
+00:32:19.120 --> 00:32:22.090
+where I feel that I have 3,000 people
+
+00:32:22.090 --> 00:32:23.860
+who are on the same page as me.
+
+00:32:23.860 --> 00:32:26.410
+That is an incredible amplifier
+
+00:32:26.410 --> 00:32:28.450
+and is one of the most useful things in
+
+00:32:28.450 --> 00:32:29.980
+handing, handling the pressure.
+
+00:32:29.980 --> 00:32:33.460
+Then when we have to confront
+an external challenge,
+
+00:32:33.460 --> 00:32:37.240
+stand up to, you know, some
+very difficult situations
+
+00:32:37.240 --> 00:32:39.650
+that we've seen in the
+last few months, that is
+
+00:32:39.650 --> 00:32:42.950
+what allows us to have a
+consistent and coherent position.
+
+00:32:42.950 --> 00:32:45.680
+And, and I think, I think
+it's an incredible advantage
+
+00:32:45.680 --> 00:32:47.270
+because I never feel like I'm alone.
+
+00:32:54.020 --> 00:32:56.510
+Lurking in the background
+at Anthropic's headquarters was
+
+00:32:56.510 --> 00:32:59.660
+the surprise development of
+a new AI model called Mythos.
+
+00:33:01.160 --> 00:33:03.470
+A model so powerful, it spooked everyone.
+
+00:33:04.550 --> 00:33:06.650
+Anthropic is making headlines
+almost on a weekly basis.
+
+00:33:06.650 --> 00:33:08.450
+Yes,
+Most notably now around mythos.
+
+00:33:08.450 --> 00:33:11.630
+The company believes
+it's this enormous threat.
+
+00:33:11.630 --> 00:33:13.760
+Imagine a world where
+everyone had a nuclear
+
+00:33:13.760 --> 00:33:15.470
+bazooka basically
+
+00:33:15.470 --> 00:33:16.970
+Mythos identified thousands
+
+00:33:16.970 --> 00:33:18.860
+of cybersecurity vulnerabilities,
+
+00:33:18.860 --> 00:33:22.970
+exposing potential flaws in
+every major operating system.
+
+00:33:22.970 --> 00:33:26.210
+Anthropic signaled that if
+fully released mythos could hack
+
+00:33:26.210 --> 00:33:28.550
+banks, pry open state secrets
+
+00:33:28.550 --> 00:33:30.260
+and cripple critical infrastructure.
+
+00:33:31.310 --> 00:33:35.720
+I think the thing that
+surprised me most about it was the
+
+00:33:35.720 --> 00:33:38.240
+models had been climbing in their ability
+
+00:33:38.240 --> 00:33:39.560
+to find vulnerabilities.
+
+00:33:39.560 --> 00:33:41.330
+It was a particularly large jump.
+
+00:33:41.330 --> 00:33:43.640
+Some of the early
+companies that we gave this
+
+00:33:43.640 --> 00:33:47.030
+to said things like, this is a
+super weapon, you should have
+
+00:33:47.030 --> 00:33:49.310
+to own a gun license to use it.
+
+00:33:49.310 --> 00:33:51.230
+Please don't release this. In
+
+00:33:52.370 --> 00:33:54.230
+an initiative called Project Glasswing,
+
+00:33:54.230 --> 00:33:57.560
+Anthropic gave select
+organizations access to Mythos.
+
+00:33:58.490 --> 00:34:00.950
+Even federal agencies
+like the National Security
+
+00:34:00.950 --> 00:34:02.090
+Administration clamored
+
+00:34:02.090 --> 00:34:05.180
+to use it despite Anthropic's
+blacklisting by the Pentagon.
+
+00:34:06.050 --> 00:34:08.270
+I think the future is this kind of cat
+
+00:34:08.270 --> 00:34:11.210
+and mouse game where we need to make sure
+
+00:34:11.210 --> 00:34:15.230
+that the good guys have the
+tools that they need to defend,
+
+00:34:15.230 --> 00:34:16.970
+and then at some point the, you know,
+
+00:34:16.970 --> 00:34:18.020
+the bad guys will have it too.
+
+00:34:18.020 --> 00:34:19.520
+And, and at that point we have
+
+00:34:19.520 --> 00:34:21.770
+to make sure the good guys
+have an even better model
+
+00:34:21.770 --> 00:34:23.270
+so they can be ready for this.
+
+00:34:23.270 --> 00:34:24.950
+Is it possible to stay ahead
+
+00:34:24.950 --> 00:34:26.780
+of the bad guys really though?
+
+00:34:26.780 --> 00:34:29.450
+That's what we hope
+the criticism is.
+
+00:34:29.450 --> 00:34:32.570
+You're effectively deciding who
+gets access and who doesn't.
+
+00:34:32.570 --> 00:34:34.520
+Why should anyone be
+comfortable with that kind
+
+00:34:34.520 --> 00:34:36.860
+of concentration of power?
+
+00:34:36.860 --> 00:34:38.390
+It wasn't like, oh, it's so powerful
+
+00:34:38.390 --> 00:34:40.580
+and let's decide who gets the power.
+
+00:34:40.580 --> 00:34:44.450
+It was a very specific
+concern around cybersecurity
+
+00:34:44.450 --> 00:34:47.480
+and so the way that we
+decided who to give the model
+
+00:34:47.480 --> 00:34:49.760
+to was grounded in that specific fear.
+
+00:34:49.760 --> 00:34:51.350
+There's obviously nuance to decide, like
+
+00:34:51.350 --> 00:34:53.090
+where do you draw that circle?
+
+00:34:53.090 --> 00:34:54.500
+I think that's really complicated.
+
+00:34:54.500 --> 00:34:58.220
+I think we've tried to be
+as publicly open as possible
+
+00:34:58.220 --> 00:35:00.770
+to say we're trying our best
+to make this decision well,
+
+00:35:00.770 --> 00:35:03.380
+but like we might not do it perfectly.
+
+00:35:03.380 --> 00:35:05.780
+What about the folks who say
+this was just good marketing.
+
+00:35:06.710 --> 00:35:10.100
+You know, we, we have
+suffered enormously commercially
+
+00:35:10.100 --> 00:35:11.630
+from not releasing this model.
+
+00:35:11.630 --> 00:35:15.140
+This model has incredibly
+accelerated research within
+
+00:35:15.140 --> 00:35:17.960
+Anthropic and production and next models.
+
+00:35:17.960 --> 00:35:20.120
+It would do the same in
+the outside world if,
+
+00:35:20.120 --> 00:35:21.530
+if we were to release it.
+
+00:35:21.530 --> 00:35:24.440
+This has hurt us enormously commercially.
+
+00:35:24.440 --> 00:35:25.970
+Have you had to make trade-offs already
+
+00:35:25.970 --> 00:35:27.920
+that you're not entirely comfortable with?
+
+00:35:27.920 --> 00:35:29.690
+Throughout the entire history
+
+00:35:29.690 --> 00:35:32.180
+of Anthropic has been trade-offs, right?
+
+00:35:32.180 --> 00:35:34.370
+In some ideal world, you would prefer to,
+
+00:35:34.370 --> 00:35:36.680
+before you release the
+first chat bot, you know,
+
+00:35:36.680 --> 00:35:39.150
+you could spend years
+studying, you know, every,
+
+00:35:39.150 --> 00:35:41.280
+every possible thing that
+could go wrong with it.
+
+00:35:41.280 --> 00:35:44.250
+Now, we did delay, we did
+delay the initial release
+
+00:35:44.250 --> 00:35:46.620
+of Claude, but you know,
+we did it for a few months.
+
+00:35:46.620 --> 00:35:51.120
+So everything is a trade off
+now that we're in, you know,
+
+00:35:51.120 --> 00:35:54.180
+what I would describe as a
+commercially leading position,
+
+00:35:54.180 --> 00:35:56.550
+we can afford to move
+the dial even further
+
+00:35:56.550 --> 00:35:57.900
+towards being careful, right?
+
+00:35:57.900 --> 00:36:00.030
+That's what the Mythos
+release was about, right?
+
+00:36:00.030 --> 00:36:01.560
+It's very hard to do something like
+
+00:36:01.560 --> 00:36:04.080
+that if you're not the leading player.
+
+00:36:04.080 --> 00:36:06.660
+There's this argument, why wouldn't the
+
+00:36:06.660 --> 00:36:07.890
+government take you over?
+
+00:36:07.890 --> 00:36:10.800
+Why would they let a
+private company control
+
+00:36:10.800 --> 00:36:12.510
+technology? That's so powerful?
+
+00:36:12.510 --> 00:36:15.000
+So I think, I actually
+think that's a very,
+
+00:36:15.000 --> 00:36:18.360
+that's a very serious question
+and I share those concerns.
+
+00:36:18.360 --> 00:36:21.000
+I don't think the government
+should outright take us over.
+
+00:36:22.260 --> 00:36:26.820
+Every previous powerful technology
+we've seen in history was
+
+00:36:26.820 --> 00:36:28.140
+either built by the government
+
+00:36:28.140 --> 00:36:29.670
+or originated with the government.
+
+00:36:29.670 --> 00:36:33.180
+So nuclear weapons, obviously,
+you know, initially built
+
+00:36:33.180 --> 00:36:37.380
+by the government, the
+internet, GPS, cell phones,
+
+00:36:37.380 --> 00:36:38.970
+AI is the first technology
+
+00:36:38.970 --> 00:36:40.830
+that's been built in the private sector
+
+00:36:41.700 --> 00:36:44.550
+and where government has not
+really had a serious role
+
+00:36:44.550 --> 00:36:46.650
+and is coming in late to the game.
+
+00:36:46.650 --> 00:36:49.830
+I think that's actually a
+dangerous and unstable situation.
+
+00:36:49.830 --> 00:36:53.370
+It is not the situation I
+would've chosen this technology.
+
+00:36:53.370 --> 00:36:54.810
+I'm scared of companies having it,
+
+00:36:54.810 --> 00:36:56.910
+but I'm also scared of
+government having it.
+
+00:36:56.910 --> 00:36:58.020
+And then, you know,
+
+00:36:58.020 --> 00:37:00.690
+we need basic regulation
+of the technology.
+
+00:37:00.690 --> 00:37:01.830
+You know, more
+
+00:37:01.830 --> 00:37:04.710
+and more as I've seen what we've
+seen with Mythos, you know,
+
+00:37:04.710 --> 00:37:07.530
+I think we need to start
+doing pre-release testing,
+
+00:37:07.530 --> 00:37:09.900
+required pre-release testing, testing
+
+00:37:09.900 --> 00:37:11.730
+and auditing of the models.
+
+00:37:11.730 --> 00:37:13.680
+And this was an approach
+the White House rejected
+
+00:37:13.680 --> 00:37:17.430
+initially on his first day
+back in office, President Trump
+
+00:37:17.430 --> 00:37:18.750
+with the help of former AI
+
+00:37:18.750 --> 00:37:22.560
+and crypto czar, David Sachs
+dismantled President Biden's AI
+
+00:37:22.560 --> 00:37:24.810
+executive order seeking guardrails,
+
+00:37:24.810 --> 00:37:26.640
+instead favoring a hands-off,
+
+00:37:26.640 --> 00:37:29.460
+let Silicon Valley do its thing approach.
+
+00:37:29.460 --> 00:37:31.800
+We believe that excessive regulation
+
+00:37:31.800 --> 00:37:36.330
+of the AI sector could kill a
+transformative industry just
+
+00:37:36.330 --> 00:37:38.100
+as it's taking off.
+
+00:37:38.100 --> 00:37:40.740
+But with Mythos and its
+national security implications,
+
+00:37:40.740 --> 00:37:44.160
+proving hard to ignore the
+White House now seems to want
+
+00:37:44.160 --> 00:37:46.620
+to gatekeep the world's most powerful ai
+
+00:37:47.910 --> 00:37:51.120
+It's very funny to me how
+there's a particular group
+
+00:37:51.120 --> 00:37:54.120
+of people in the tech world in
+Silicon Valley, they started
+
+00:37:54.120 --> 00:37:57.930
+with a position of like, you
+know, even having transparency
+
+00:37:57.930 --> 00:38:00.450
+around this technology, even
+export control, you know,
+
+00:38:00.450 --> 00:38:02.790
+this is all, you know, just totally,
+
+00:38:02.790 --> 00:38:05.520
+it'll apocalyptically
+destroy our potential
+
+00:38:05.520 --> 00:38:06.720
+to create the technology.
+
+00:38:06.720 --> 00:38:08.520
+It'll kill innovation.
+
+00:38:08.520 --> 00:38:10.650
+And then as soon as they
+see the first real danger,
+
+00:38:10.650 --> 00:38:13.140
+which I've been expecting all
+along, there's all this talk
+
+00:38:13.140 --> 00:38:14.250
+of like nationalization
+
+00:38:14.250 --> 00:38:15.990
+and the government should just seize it.
+
+00:38:15.990 --> 00:38:17.340
+Come on folks here, you're yo,
+
+00:38:17.340 --> 00:38:22.080
+you're yo-yoing from like the
+most extreme anti-regulatory.
+
+00:38:22.080 --> 00:38:23.490
+If you look at us the wrong way,
+
+00:38:23.490 --> 00:38:25.350
+you're destroying the
+industry to, you know,
+
+00:38:25.350 --> 00:38:26.880
+this completely communist,
+
+00:38:26.880 --> 00:38:28.560
+the government should grab it all.
+
+00:38:28.560 --> 00:38:30.930
+We, we need, we, we need a more,
+
+00:38:30.930 --> 00:38:33.060
+we need a more sensible,
+moderate approach.
+
+00:38:33.060 --> 00:38:35.110
+That's the one we've
+been favoring all along
+
+00:38:35.110 --> 00:38:36.880
+because we've, we've understood the
+
+00:38:36.880 --> 00:38:38.320
+power of this technology.
+
+00:38:38.320 --> 00:38:41.170
+We're not panicking, we're not denying it.
+
+00:38:41.170 --> 00:38:42.760
+We see the smooth exponential
+
+00:38:42.760 --> 00:38:44.410
+and we're responding to it appropriately.
+
+00:38:51.820 --> 00:38:56.170
+The reaction to AI
+right now, it's intense.
+
+00:38:56.170 --> 00:38:59.020
+Anthropic has built this
+really loyal following.
+
+00:38:59.020 --> 00:39:01.720
+There are some people who
+just love what they stand for,
+
+00:39:01.720 --> 00:39:05.050
+but there've also been protests
+right outside their office.
+
+00:39:05.050 --> 00:39:07.900
+There's a lot of anxiety,
+a lot of confusion,
+
+00:39:07.900 --> 00:39:12.700
+there's some real anger right
+now about what's happening
+
+00:39:12.700 --> 00:39:15.130
+and it actually feels
+like it's escalating.
+
+00:39:15.130 --> 00:39:18.520
+Artificial intelligence is
+
+00:39:18.520 --> 00:39:20.530
+the next industrial revolution. Whoa.
+
+00:39:25.960 --> 00:39:27.400
+If you look at the data,
+
+00:39:27.400 --> 00:39:29.410
+people are more concerned than excited
+
+00:39:29.410 --> 00:39:31.210
+about what's going on.
+
+00:39:31.210 --> 00:39:33.430
+They think the risks outweigh the benefits
+
+00:39:33.430 --> 00:39:35.800
+and the truth is, if
+you talk to the people
+
+00:39:35.800 --> 00:39:37.180
+who are building this,
+
+00:39:37.180 --> 00:39:40.090
+even they will tell you
+they don't fully know
+
+00:39:40.090 --> 00:39:41.320
+how it's all going to play out.
+
+00:39:45.160 --> 00:39:47.950
+How do you think about
+the weight of this moment?
+
+00:39:47.950 --> 00:39:50.560
+I worry that something will go wrong.
+
+00:39:50.560 --> 00:39:52.510
+You know, are we doing
+literally everything we can?
+
+00:39:52.510 --> 00:39:54.130
+We're certainly trying our best,
+
+00:39:54.130 --> 00:39:55.990
+we're certainly trying very hard.
+
+00:39:55.990 --> 00:39:58.300
+What I want is to create a
+situation where if this set
+
+00:39:58.300 --> 00:40:00.280
+of people can't do it,
+it couldn't be done.
+
+00:40:00.280 --> 00:40:01.480
+You can't guarantee success,
+
+00:40:01.480 --> 00:40:02.740
+but maybe you can guarantee that
+
+00:40:04.030 --> 00:40:05.500
+It's getting personal.
+
+00:40:05.500 --> 00:40:08.500
+Sam Altman's home has been attacked.
+
+00:40:08.500 --> 00:40:10.240
+How is that affecting you?
+
+00:40:10.240 --> 00:40:11.800
+It was really scary to read that.
+
+00:40:11.800 --> 00:40:15.580
+I mean, it was, we were obviously
+extremely relieved that he
+
+00:40:15.580 --> 00:40:17.560
+and his family were okay in general.
+
+00:40:17.560 --> 00:40:20.080
+I think this is a time,
+you know, technologically,
+
+00:40:20.080 --> 00:40:23.830
+politically where unfortunately
+there's just a lot more
+
+00:40:23.830 --> 00:40:26.830
+rhetoric and, and words
+that I think can lead to,
+
+00:40:26.830 --> 00:40:29.680
+to bad outcomes and bad things happening.
+
+00:40:29.680 --> 00:40:31.660
+I hope that this is a topic
+we can all just debate,
+
+00:40:31.660 --> 00:40:34.090
+you know, as peacefully as possible.
+
+00:40:34.090 --> 00:40:35.200
+It was scary to me too.
+
+00:40:35.200 --> 00:40:38.320
+I mean, you know, this is
+like a, a less savory aspect
+
+00:40:38.320 --> 00:40:39.340
+of the exponential, right?
+
+00:40:39.340 --> 00:40:41.500
+That as AI gets more
+
+00:40:41.500 --> 00:40:43.540
+and more of, of a big
+thing like, you know,
+
+00:40:43.540 --> 00:40:46.870
+it becomes just such
+a big deal to society.
+
+00:40:46.870 --> 00:40:48.400
+There's more attention on it.
+
+00:40:48.400 --> 00:40:51.430
+There's been massive
+backlash against social media.
+
+00:40:51.430 --> 00:40:54.550
+Countries are starting to ban
+it. Could that happen to AI?
+
+00:40:55.960 --> 00:40:58.180
+I think it's, it's absolutely possible.
+
+00:40:58.180 --> 00:41:00.700
+If the social media companies
+could go back in time
+
+00:41:00.700 --> 00:41:02.590
+and see the world that they see today,
+
+00:41:02.590 --> 00:41:04.660
+would they do anything differently?
+
+00:41:04.660 --> 00:41:06.070
+I like to think the answer to that is yes.
+
+00:41:06.070 --> 00:41:09.760
+I don't know if we sort of
+project some of the challenges
+
+00:41:09.760 --> 00:41:11.680
+that the social media companies have faced
+
+00:41:11.680 --> 00:41:15.610
+around child welfare, mental
+health, election integrity, all
+
+00:41:15.610 --> 00:41:19.180
+of these topics we're really
+lucky that we're we're second.
+
+00:41:19.180 --> 00:41:20.800
+We view it as our job to try
+
+00:41:20.800 --> 00:41:22.390
+and proactively think about all
+
+00:41:22.390 --> 00:41:24.220
+of the things that could go wrong.
+
+00:41:24.220 --> 00:41:25.930
+Because if we don't, who's going to,
+
+00:41:25.930 --> 00:41:28.360
+You know, I don't know
+that they actually set out
+
+00:41:28.360 --> 00:41:30.790
+to do the right thing or make
+the world a better place.
+
+00:41:30.790 --> 00:41:33.020
+And so I don't think if
+they were going back,
+
+00:41:33.020 --> 00:41:34.580
+they would even knowing what they do,
+
+00:41:34.580 --> 00:41:36.770
+and they certainly should
+do things differently.
+
+00:41:36.770 --> 00:41:39.290
+I don't know if they
+actually will, but we can't.
+
+00:41:39.290 --> 00:41:40.520
+This is why we're trying
+
+00:41:40.520 --> 00:41:43.130
+to get this right the first
+time instead of waiting
+
+00:41:43.130 --> 00:41:46.400
+for things to go wrong, then scrambling
+
+00:41:46.400 --> 00:41:48.290
+to justify why it's all okay.
+
+00:41:48.290 --> 00:41:52.310
+The main way I could see a
+AI being, you know, banned
+
+00:41:52.310 --> 00:41:54.470
+or blocked is if something
+really went wrong
+
+00:41:54.470 --> 00:41:55.550
+and if something really went wrong,
+
+00:41:55.550 --> 00:41:56.930
+then maybe it deserves to be,
+
+00:41:56.930 --> 00:42:00.230
+You have technologists
+saying it's gonna be amazing
+
+00:42:00.230 --> 00:42:02.090
+and others saying it could be awful.
+
+00:42:02.090 --> 00:42:04.700
+Where are you on that spectrum?
+
+00:42:04.700 --> 00:42:07.400
+I hope for the best,
+but plan for the worst.
+
+00:42:07.400 --> 00:42:10.250
+For me, this is the most
+important work I've ever done.
+
+00:42:10.250 --> 00:42:13.070
+For some people it feels
+like this is the last job
+
+00:42:13.070 --> 00:42:16.460
+because this is sort of the,
+it could mean the end of work
+
+00:42:16.460 --> 00:42:18.740
+and I think for other
+people it's, you know,
+
+00:42:18.740 --> 00:42:20.630
+like maybe it's not the last job,
+
+00:42:20.630 --> 00:42:23.540
+but it's existential to get this right.
+
+00:42:23.540 --> 00:42:25.760
+And so there's just this,
+this kind of burden.
+
+00:42:25.760 --> 00:42:28.880
+If the impacts could be as significant
+
+00:42:28.880 --> 00:42:30.740
+as we're talking about, as significant
+
+00:42:30.740 --> 00:42:32.780
+as Anthropic has warned about,
+
+00:42:32.780 --> 00:42:35.510
+what responsibility do
+you think Anthropic has
+
+00:42:35.510 --> 00:42:37.340
+to cushion the blow?
+
+00:42:37.340 --> 00:42:41.810
+What do you owe the people
+whose lives you've upended?
+
+00:42:43.130 --> 00:42:45.830
+I think our view has always been,
+
+00:42:45.830 --> 00:42:48.650
+we ultimately are responsible
+as an industry, the industry
+
+00:42:48.650 --> 00:42:52.940
+that's developing this technology
+for thinking through what
+
+00:42:52.940 --> 00:42:55.940
+are the risks, what are the
+bad things that could happen?
+
+00:42:55.940 --> 00:42:57.740
+And if some of those things come to pass,
+
+00:42:57.740 --> 00:42:59.900
+what is our role in helping to fix them?
+
+00:42:59.900 --> 00:43:01.580
+That is our job, right?
+
+00:43:01.580 --> 00:43:03.860
+We should not just say,
+well, we were just trying
+
+00:43:03.860 --> 00:43:05.750
+to grow the product and
+suddenly there's an entire
+
+00:43:05.750 --> 00:43:09.350
+generation of young women
+who have eating disorders
+
+00:43:09.350 --> 00:43:11.060
+or who have mental health problems
+
+00:43:11.060 --> 00:43:13.250
+because whoops, we were just
+trying to grow the product.
+
+00:43:13.250 --> 00:43:14.360
+That's not the stance
+
+00:43:14.360 --> 00:43:16.220
+that I think any technology
+company should take.
+
+00:43:16.220 --> 00:43:17.960
+I don't think that's the stance
+that we're trying to take
+
+00:43:19.820 --> 00:43:22.550
+For a company whose
+identity is so wrapped up in,
+
+00:43:22.550 --> 00:43:23.570
+We want to do this right,
+
+00:43:23.570 --> 00:43:25.550
+We exist as a AI safety company.
+
+00:43:25.550 --> 00:43:27.920
+How can we just help
+all of this go? Well,
+
+00:43:27.920 --> 00:43:30.440
+It can be hard to understand
+why Anthropic is pushing
+
+00:43:30.440 --> 00:43:32.900
+so hard to advance AI while being
+
+00:43:32.900 --> 00:43:36.350
+so upfront about the
+dangers. In his essays,
+
+00:43:36.350 --> 00:43:39.050
+Dario lays out what the end
+game looks like if everything
+
+00:43:39.050 --> 00:43:42.260
+goes right with ai, a
+utopian future where machines
+
+00:43:42.260 --> 00:43:45.500
+and humans work side by side AI,
+
+00:43:45.500 --> 00:43:48.740
+an inevitable force steered
+toward prosperity rather than
+
+00:43:48.740 --> 00:43:53.180
+catastrophe to mitigate the
+devastation of job loss.
+
+00:43:53.180 --> 00:43:56.300
+He proposes solutions like
+universal basic income
+
+00:43:56.300 --> 00:43:58.820
+and progressive taxation of AI companies.
+
+00:44:00.920 --> 00:44:03.980
+But as the Amodeis confront the
+messy realities of power,
+
+00:44:03.980 --> 00:44:06.590
+politics, and profit,
+the real test is whether
+
+00:44:06.590 --> 00:44:08.240
+that founding mission can survive the
+
+00:44:08.240 --> 00:44:09.800
+scale of what they're building.
+
+00:44:11.390 --> 00:44:14.090
+Google started with the
+motto, don't be evil.
+
+00:44:14.090 --> 00:44:17.240
+A founding promise the company
+quietly retired as it grew.
+
+00:44:19.610 --> 00:44:22.250
+You are building something
+incredibly powerful
+
+00:44:22.250 --> 00:44:25.280
+and stand to gain enormously from it.
+
+00:44:25.280 --> 00:44:26.960
+Why should we trust you?
+
+00:44:26.960 --> 00:44:29.960
+I think starting from a
+position of distrust, you know,
+
+00:44:29.960 --> 00:44:31.170
+if you don't know anything about,
+
+00:44:31.170 --> 00:44:32.003
+if you don't know anything about
+
+00:44:32.003 --> 00:44:33.510
+philanthropic, it's pretty rational.
+
+00:44:33.510 --> 00:44:36.570
+I think Silicon Valley has
+lost a lot of the world's trust
+
+00:44:36.570 --> 00:44:38.460
+and kind of has to re-earn it,
+
+00:44:38.460 --> 00:44:41.340
+and the message, you know,
+we're trying to send is,
+
+00:44:41.340 --> 00:44:42.900
+we're actually different and,
+
+00:44:42.900 --> 00:44:46.020
+and that has to be earned in
+things that we actually do.
+
+00:44:46.020 --> 00:44:48.210
+I understand one of your
+favorite books is The Making
+
+00:44:48.210 --> 00:44:49.470
+of the Atomic Bomb.
+
+00:44:49.470 --> 00:44:51.180
+That is correct.
+Do you see parallels
+
+00:44:51.180 --> 00:44:52.980
+between yourself and Oppenheimer?
+
+00:44:52.980 --> 00:44:56.010
+The figure I most identified
+with was Leo Szilard
+
+00:44:56.010 --> 00:44:58.440
+who was the one who first had the idea
+
+00:44:58.440 --> 00:45:00.390
+that there could be a chain reaction.
+
+00:45:01.380 --> 00:45:04.080
+Look, my view is we're, we're
+not gonna get through this
+
+00:45:04.080 --> 00:45:06.240
+with like larger than life personalities
+
+00:45:06.240 --> 00:45:09.990
+or like figures who try and be
+at the center of everything.
+
+00:45:09.990 --> 00:45:13.020
+In some ways, I actually see
+Oppenheimer as a failure case, as
+
+00:45:13.020 --> 00:45:14.550
+what should not happen.
+
+00:45:14.550 --> 00:45:17.850
+There's a lot of powerful
+actors who have interests here,
+
+00:45:17.850 --> 00:45:19.620
+and the only way it's gonna end well
+
+00:45:19.620 --> 00:45:23.160
+for everyone is if there is
+some, there's basically checks
+
+00:45:23.160 --> 00:45:24.810
+and balances everywhere.
+
+00:45:24.810 --> 00:45:28.380
+You've said there's
+roughly a 10 to 25% chance
+
+00:45:28.380 --> 00:45:33.000
+of civilization collapse,
+that is not insignificant.
+
+00:45:33.000 --> 00:45:35.730
+Is there a scenario where it's something
+
+00:45:35.730 --> 00:45:38.910
+that Anthropic built, that caused that?
+
+00:45:38.910 --> 00:45:40.410
+I mean, I certainly hope not.
+
+00:45:40.410 --> 00:45:44.790
+My view is that that
+probability comes from the very
+
+00:45:44.790 --> 00:45:47.370
+straightforward recipe of
+the technology, the existence
+
+00:45:47.370 --> 00:45:49.170
+of many countries in the world.
+
+00:45:49.170 --> 00:45:51.990
+The existence of many
+companies within an economy
+
+00:45:51.990 --> 00:45:53.070
+and new ones created.
+
+00:45:53.070 --> 00:45:56.220
+If the void is isn't filled,
+like that's a dilemma
+
+00:45:56.220 --> 00:45:59.310
+that we're in half of what we
+do within the company is try
+
+00:45:59.310 --> 00:46:01.860
+and, you know, reduce the
+risk as much as we can,
+
+00:46:01.860 --> 00:46:03.630
+but it's never gonna be zero.
+
+00:46:03.630 --> 00:46:05.010
+Suppose there are a bunch of, you know,
+
+00:46:05.010 --> 00:46:06.300
+airline companies out there
+
+00:46:06.300 --> 00:46:07.470
+and you're like, well, I'm gonna make an
+
+00:46:07.470 --> 00:46:08.820
+airline company that's safer.
+
+00:46:08.820 --> 00:46:11.130
+It can both be the case that, you know,
+
+00:46:11.130 --> 00:46:13.800
+your airline company is 10
+times safer than all the other
+
+00:46:13.800 --> 00:46:15.060
+airline companies.
+
+00:46:15.060 --> 00:46:16.560
+But if someone comes
+
+00:46:16.560 --> 00:46:18.270
+and asks you, like, can you guarantee
+
+00:46:18.270 --> 00:46:20.430
+that your airplane will never crash?
+
+00:46:20.430 --> 00:46:22.770
+I mean, how could you,
+how could you possibly,
+
+00:46:22.770 --> 00:46:25.410
+But if there was a 25%
+chance of an airplane crashing,
+
+00:46:25.410 --> 00:46:26.820
+you wouldn't get on that plane.
+
+00:46:26.820 --> 00:46:28.500
+That's right. 25% is too high.
+
+00:46:28.500 --> 00:46:31.020
+We're trying to make that
+probability much, much lower.
+
+00:46:31.020 --> 00:46:33.210
+That's, that is, that is the goal.
+
+00:47:01.770 --> 00:47:04.680
+How do you find your
+zen? How do you relax?
+
+00:47:04.680 --> 00:47:06.240
+You know, it honestly, a lot
+
+00:47:06.240 --> 00:47:08.010
+of it's just exposure to, to it.
+
+00:47:08.010 --> 00:47:10.440
+You know, I sometimes
+I'll just like, you know,
+
+00:47:10.440 --> 00:47:11.610
+I'll just take a weekend
+
+00:47:11.610 --> 00:47:13.560
+and I'll like play some video games.
+
+00:47:13.560 --> 00:47:15.720
+Sometimes with Daniela
+Me and my wife go to Italy.
+
+00:47:15.720 --> 00:47:19.230
+Sometimes we have a horse
+there, so I'll just,
+
+00:47:19.230 --> 00:47:20.280
+I'll just sit there next.
+
+00:47:20.280 --> 00:47:21.570
+I'll just, I'll just look at the horse
+
+00:47:21.570 --> 00:47:25.230
+and I'll be like, you know,
+Calypso, who's her horse like,
+
+00:47:25.230 --> 00:47:27.300
+you know, she doesn't
+know about any of this,
+
+00:47:27.300 --> 00:47:29.800
+like she's just a happy horse.
+

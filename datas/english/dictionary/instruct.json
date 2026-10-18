@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "instruct",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈstrʌkt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가르치다, 교육하다 ((in)), (=teach)",
+              "examples": [
+                {
+                  "text": "<b>instruct</b> the young",
+                  "translatedText": "젊은 사람들을 가르치다"
+                }
+              ],
+              "originalMeaning": "가르치다, 교육하다 ((in)), (=<span class='related_word' lang='en' >teach</span>)"
+            },
+            {
+              "meaning": "지시[명령]하다",
+              "examples": [
+                {
+                  "text": "( <b>instruct</b>+[목]+to do) <b>instruct</b> a person to do something",
+                  "translatedText": "…에게 어떤 일을 하라고 지시[명령]하다"
+                }
+              ],
+              "originalMeaning": "지시[명령]하다"
+            },
+            {
+              "meaning": "통고하다, 알리다(inform)",
+              "examples": [
+                {
+                  "text": "The company instructed him of his dismissal. = The company instructed him that he would be dismissed.",
+                  "translatedText": "회사는 그에게 해고를 통고했다."
+                }
+              ],
+              "originalMeaning": "통고하다, 알리다(inform)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ac292983d2134bdbbc83f831bc07de8b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ac292983d2134bdbbc83f831bc07de8b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "instructs"
+        },
+        {
+          "type": "과거형",
+          "value": "instructed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "instructing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "instructed"
+        }
+      ],
+      "aliasConjugation": "instructs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "47cb5c13e7caaabdc37af2e2200cf7e9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회사는 그에게 해고를 통고했다.",
+      "text": "The company instructed him of his dismissal.=The company instructed him that he would be dismissed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들이 잘못을 되풀이하지 않도록 지도해야 한다.",
+      "text": "You must so <b>instruct</b> them that they will not repeat the mistake."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "<b>augment</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɔːɡˈment"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "증가시키다, 증대시키다(increase)",
+              "examples": [],
+              "originalMeaning": "증가시키다, 증대시키다(increase)"
+            },
+            {
+              "meaning": "[문법] 접두 모음자(接頭母音字)를 붙이다, [음악] 반음정 늘리다, <주제를> 확대하다",
+              "examples": [],
+              "originalMeaning": "[문법] 접두 모음자(接頭母音字)를 붙이다, [음악] 반음정 늘리다, <주제를> 확대하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "증대[증가]하다",
+              "examples": [],
+              "originalMeaning": "증대[증가]하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(그리스 어 등의) 접두 모음자",
+              "examples": [],
+              "originalMeaning": "(그리스 어 등의) 접두 모음자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e3b32ad68e0f46e99d4f3e763d13dc3f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e3b32ad68e0f46e99d4f3e763d13dc3f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "augments"
+        },
+        {
+          "type": "과거형",
+          "value": "augmented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "augmenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "augmented"
+        }
+      ],
+      "aliasConjugation": "augments",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6ccd0f8f50f1603b7eccf7f1f83e98b8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요즘 사고와 범죄가 놀랄 만큼 증가하고 있다",
+      "text": "Nowadays accidents and crimes <b>augment</b> in an alarming way."
+    }
+  ],
+  "isWordType": true
+}

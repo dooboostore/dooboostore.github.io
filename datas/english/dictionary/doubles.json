@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "double",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdʌbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<수량이> 두 배의, 갑절의; 두 배의 가치[성능, 농도, 세기]가 있는",
+              "examples": [
+                {
+                  "text": "a <b>double</b> portion",
+                  "translatedText": "두 배의 몫"
+                }
+              ],
+              "originalMeaning": "<수량이> 두 배의, 갑절의; 두 배의 가치[성능, 농도, 세기]가 있는"
+            },
+            {
+              "meaning": "2중의, 겹의(twofold); 쌍의; 둘로 접은, 두 장을 겹친, 겹으로 칠한",
+              "examples": [
+                {
+                  "text": "a <b>double</b> blanket",
+                  "translatedText": "두 겹으로 이어진 담요"
+                }
+              ],
+              "originalMeaning": "2중의, 겹의(twofold); 쌍의; 둘로 접은, 두 장을 겹친, 겹으로 칠한"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "곱절로; 이중으로, 겹으로, 두 가지로; 쌍으로",
+              "examples": [],
+              "originalMeaning": "곱절로; 이중으로, 겹으로, 두 가지로; 쌍으로"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "두 배(의 수·양), 곱, 갑절; (걸음의) 구보",
+              "examples": [],
+              "originalMeaning": "두 배(의 수·양), 곱, 갑절; (걸음의) 구보"
+            },
+            {
+              "meaning": "이중; 중복, 겹친 것, 접힌 주름(fold); [인쇄] 이중 인쇄",
+              "examples": [],
+              "originalMeaning": "이중; 중복, 겹친 것, 접힌 주름(fold); [인쇄] 이중 인쇄"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/665feb44118b484ab5e2d318df3855eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/665feb44118b484ab5e2d318df3855eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "doubles"
+        },
+        {
+          "type": "과거형",
+          "value": "doubled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "doubling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "doubled"
+        }
+      ],
+      "aliasConjugation": "doubles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fd4d8db86f76f8b045ad8675838dff5e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 내 나이보다 배가 많다",
+      "text": "She is <b>double</b> my age."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "봉급을 배로 올려 주겠다.",
+      "text": "I will <b>double</b> your salary."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 재산은 나의 갑절이나 된다",
+      "text": "His fortune <b>doubles</b> mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 웃옷은 담요도 된다",
+      "text": "His coat <b>doubles</b> as a blanket."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 고통 때문에 몸을 구부렸다.",
+      "text": "He doubled over[up] with pain."
+    }
+  ],
+  "isWordType": true
+}

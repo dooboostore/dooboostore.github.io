@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "<b>suffice</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səˈfaɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<음식 등이> <사람을> 만족시키다(satisfy), …의 필요를 충족시키다, …에 충분[흡족]하다",
+              "examples": [],
+              "originalMeaning": "<음식 등이> <사람을> 만족시키다(satisfy), …의 필요를 충족시키다, …에 충분[흡족]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(필요·목적 등에) 족하다, 충분하다 ((for))",
+              "examples": [
+                {
+                  "text": "Fifty dollars will <b>suffice</b> for the purpose.",
+                  "translatedText": "그 목적을 위해서는 50달러면 족할 것입니다."
+                }
+              ],
+              "originalMeaning": "(필요·목적 등에) 족하다, 충분하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cd7d8176600f447493ff9052ba88fa6a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cd7d8176600f447493ff9052ba88fa6a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "suffices"
+        },
+        {
+          "type": "과거형",
+          "value": "sufficed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sufficing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sufficed"
+        }
+      ],
+      "aliasConjugation": "suffices",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f79086af2c1a04f80d53847246c71a3d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 목적을 위해서는 50달러면 족할 것입니다.",
+      "text": "Fifty dollars will <b>suffice</b> for the purpose."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "천 원이면 넉넉하겠다",
+      "text": "One thousand won (or so) will be sufficient[will do, will <b>suffice</b>]."
+    }
+  ],
+  "isWordType": true
+}

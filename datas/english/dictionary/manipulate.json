@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "manipulate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "məˈnɪpjuleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "교묘하게 다루다, <문제 등을> 솜씨 있게 처리하다",
+              "examples": [],
+              "originalMeaning": "교묘하게 다루다, <문제 등을> 솜씨 있게 처리하다"
+            },
+            {
+              "meaning": "<여론 등을> 조종하다, <시장·가격 등을> 교묘하게 조작하다",
+              "examples": [],
+              "originalMeaning": "<여론 등을> 조종하다, <시장·가격 등을> 교묘하게 조작하다"
+            },
+            {
+              "meaning": "<장부 등을> 조작하여 속이다",
+              "examples": [
+                {
+                  "text": "<b>manipulate</b> accounts",
+                  "translatedText": "계정을 조작하다"
+                }
+              ],
+              "originalMeaning": "<장부 등을> 조작하여 속이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/55de327010e04616aa947c9bc5f04153",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/55de327010e04616aa947c9bc5f04153",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "manipulates"
+        },
+        {
+          "type": "과거형",
+          "value": "manipulated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "manipulating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "manipulated"
+        }
+      ],
+      "aliasConjugation": "manipulates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7ae524df8f0af121e10c9e54a0034eda",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 이용당하는 것을 깨닫지 못했다",
+      "text": "I didn't realize I was being manipulated."
+    }
+  ],
+  "isWordType": true
+}

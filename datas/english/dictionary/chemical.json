@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "chemical",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkemɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "화학의; 화학적인, 화학 작용의",
+              "examples": [
+                {
+                  "text": "<b>chemical</b> agents",
+                  "translatedText": "화학 시약"
+                }
+              ],
+              "originalMeaning": "화학의; 화학적인, 화학 작용의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 화학 제품[약품, 물질]; [속어] 마약, 약물",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 화학 제품[약품, 물질]; [속어] 마약, 약물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/55c67fec45374dce8532935b3edf72b5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/55c67fec45374dce8532935b3edf72b5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "66d0ae4bd72799720635298d4ff99474",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 화학 약품은 물을 청정하게 하는 데 사용된다",
+      "text": "These chemicals are used in the sterilization of water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여기에 묻은 위험한 화학 약품이 흙에 침투하기 시작했다",
+      "text": "The dangerous chemicals buried here have begun to seep into the soil."
+    }
+  ],
+  "isWordType": true
+}

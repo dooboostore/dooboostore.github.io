@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "cluster",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈklʌstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(포도·버찌·등꽃 등의) 송이(bunch)",
+              "examples": [],
+              "originalMeaning": "(포도·버찌·등꽃 등의) 송이(bunch)"
+            },
+            {
+              "meaning": "(같은 종류의 물건 또는 사람의) 떼, 무리, 집단; (사건의) 연속 발생; [천문] 성단(星團)",
+              "examples": [],
+              "originalMeaning": "(같은 종류의 물건 또는 사람의) 떼, 무리, 집단; (사건의) 연속 발생; [천문] 성단(星團)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "송이를 이루다, 주렁주렁 달리다; 군생(群生)하다",
+              "examples": [],
+              "originalMeaning": "송이를 이루다, 주렁주렁 달리다; 군생(群生)하다"
+            },
+            {
+              "meaning": "밀집하다",
+              "examples": [],
+              "originalMeaning": "밀집하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "송이 지게 하다",
+              "examples": [],
+              "originalMeaning": "송이 지게 하다"
+            },
+            {
+              "meaning": "떼를 짓게 하다",
+              "examples": [],
+              "originalMeaning": "떼를 짓게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d1b3877e0c1641d8a8cf0736041db780",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d1b3877e0c1641d8a8cf0736041db780",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "clusters"
+        },
+        {
+          "type": "과거형",
+          "value": "clustered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "clustering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "clustered"
+        }
+      ],
+      "aliasConjugation": "clusters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2dbd4cc5c7ff90459c85b01ab6cc134f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열매가 다닥다닥 달려 있다",
+      "text": "Fruits hang in <b>clusters</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사과가 한 가지에 뭉키어 달렸다",
+      "text": "Apples hung on a branch in <b>clusters</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 건너 경치가 숲에 가리어서 보이지 않는다",
+      "text": "The view is obstructed by a <b>cluster</b> of trees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "서울의 골동품점은 대부분 이 지역에 늘어서 있다",
+      "text": "Most of the curio shops in Seoul are clustered in this area."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "scary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈskeri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "놀라기 잘하는, 겁 많은",
+              "examples": [],
+              "originalMeaning": "놀라기 잘하는, 겁 많은"
+            },
+            {
+              "meaning": "무서운, 두려운",
+              "examples": [
+                {
+                  "text": "a <b>scary</b> movie",
+                  "translatedText": "무서운 영화"
+                }
+              ],
+              "originalMeaning": "무서운, 두려운"
+            },
+            {
+              "meaning": "[미·구어] <여성이> 못생긴, <남자가> 얼굴이 험상궂은",
+              "examples": [],
+              "originalMeaning": "[미·구어] <여성이> 못생긴, <남자가> 얼굴이 험상궂은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92e61e538ce04b97bfb3fdc267d07ed8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92e61e538ce04b97bfb3fdc267d07ed8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "scarier"
+        },
+        {
+          "type": "최상급",
+          "value": "scariest"
+        }
+      ],
+      "aliasConjugation": "scarier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "99e21ec0536b873cc68a3e9aa0925469",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 큰 집에서 혼자 있는 것은 무섭다",
+      "text": "It's <b>scary</b> being all alone in this big house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 겁내지 마시오.",
+      "text": "Don’t be so <b>scary</b>."
+    }
+  ],
+  "isWordType": true
+}

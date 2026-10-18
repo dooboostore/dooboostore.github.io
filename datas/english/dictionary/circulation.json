@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "circulation",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sɜːrkjə│leɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "순환",
+              "examples": [
+                {
+                  "text": "have a good[bad] <b>circulation</b>",
+                  "translatedText": "(혈액의) 순환이 좋다[나쁘다]"
+                }
+              ],
+              "originalMeaning": "순환"
+            },
+            {
+              "meaning": "[U] 유통; 유포, 전달",
+              "examples": [],
+              "originalMeaning": "[U] 유통; 유포, 전달"
+            },
+            {
+              "meaning": "[sing.] 발행 부수, 보급[판매] 부수; (도서의) 대출 부수",
+              "examples": [
+                {
+                  "text": "have a large[small, limited] <b>circulation</b>",
+                  "translatedText": "발행 부수가 많다[적다]"
+                }
+              ],
+              "originalMeaning": "[sing.] 발행 부수, 보급[판매] 부수; (도서의) 대출 부수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3f78e6da692c47ebba18cd6bb9402b22",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3f78e6da692c47ebba18cd6bb9402b22",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a2ccb5978368aa5140932dc24575abf5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 잡지는 발행 부수가 2만이다",
+      "text": "This magazine has a <b>circulation</b> of 20,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 신문은 백만 독자가 있다",
+      "text": "The paper has a <b>circulation</b> of a million."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 일요판은 꽤 나갑니다",
+      "text": "This Sunday edition enjoys[has] a large <b>circulation</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 신문은 백만 부가 팔린다",
+      "text": "The paper has a <b>circulation</b> of one million."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "활발히 걸으면 혈액 순환이 자극된다",
+      "text": "Brisk walking stimulates the <b>circulation</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "confess",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈfes"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자백하다, 고백하다, 실토하다",
+              "examples": [
+                {
+                  "text": "<b>confess</b> one's crime",
+                  "translatedText": "죄를 자백하다"
+                }
+              ],
+              "originalMeaning": "자백하다, 고백하다, 실토하다"
+            },
+            {
+              "meaning": "인정하다, 자인하다(acknowledge)",
+              "examples": [
+                {
+                  "text": "I must <b>confess</b> that I was surprised to hear it.",
+                  "translatedText": "실은 그것을 듣고 놀랐다."
+                }
+              ],
+              "originalMeaning": "인정하다, 자인하다(acknowledge)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고백하다, 자백하다; 인정[자인]하다",
+              "examples": [],
+              "originalMeaning": "고백하다, 자백하다; 인정[자인]하다"
+            },
+            {
+              "meaning": "[가톨릭] <신자가> (사제에게) 고해하다 ((to)), <신부가> 고해를 듣다",
+              "examples": [
+                {
+                  "text": "The woman confessed to the priest.",
+                  "translatedText": "그 여자는 신부에게 고해했다."
+                }
+              ],
+              "originalMeaning": "[가톨릭] <신자가> (사제에게) 고해하다 ((to)), <신부가> 고해를 듣다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/100b0d98f19d457ca938762014aade32",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/100b0d98f19d457ca938762014aade32",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "confesses"
+        },
+        {
+          "type": "과거형",
+          "value": "confessed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "confessing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "confessed"
+        }
+      ],
+      "aliasConjugation": "confesses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4be21429dfa0f9112b81eb54607e0117",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실은 나도 잘 모르겠어",
+      "text": "I must <b>confess</b> I don't know either."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 신부에게 고해했다.",
+      "text": "The woman confessed to the priest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "급기야는 그는 범행을 자백하고 말았다",
+      "text": "He finally confessed his crime."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그를 구슬러 사실을 말하게 했다.",
+      "text": "They wangled him into confessing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 실패를 부모에게 털어놓았다.",
+      "text": "He confessed his failure to his parents."
+    }
+  ],
+  "isWordType": true
+}

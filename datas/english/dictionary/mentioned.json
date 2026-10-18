@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "mentioned",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ménʃənd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[보통 복합어를 이루어] 언급한",
+              "examples": [
+                {
+                  "text": "above-<b>mentioned</b> = <b>mentioned</b> above",
+                  "translatedText": "전술한, 상기한"
+                }
+              ],
+              "originalMeaning": "[보통 복합어를 이루어] 언급한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4f0b37f1f4914a7f979993b899f82622",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4f0b37f1f4914a7f979993b899f82622",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3c619980670b59b9ddb04218c55961b2",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "mention",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmenʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(구두 또는 문서로 이야기 등을 하는 김에) 간단히 말하다, 언급하다",
+              "examples": [
+                {
+                  "text": "as <b>mentioned</b> above",
+                  "translatedText": "위에서 말한 바와 같이"
+                }
+              ],
+              "originalMeaning": "(구두 또는 문서로 이야기 등을 하는 김에) 간단히 말하다, 언급하다"
+            },
+            {
+              "meaning": "…의 이름을 들다[들먹이다]",
+              "examples": [
+                {
+                  "text": "be mentiond in the newspapers",
+                  "translatedText": "신문에 이름이 나다"
+                }
+              ],
+              "originalMeaning": "…의 이름을 들다[들먹이다]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 sing.] [UC/] 언급, 진술, 기재; 이름을 듦",
+              "examples": [],
+              "originalMeaning": "[보통 sing.] [UC/] 언급, 진술, 기재; 이름을 듦"
+            },
+            {
+              "meaning": "[C] 표창, 선외 가작(= honorable ~)",
+              "examples": [],
+              "originalMeaning": "[C] 표창, 선외 가작(= honorable ~)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0bcf10701c8a4a5bad9412ed0de5e28a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0bcf10701c8a4a5bad9412ed0de5e28a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "mentions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9912e4e7735b5ef2b3f3196860b597fa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 말씀을 하시니 황송합니다",
+      "text": "Please don't <b>mention</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그렇게 했다고 말했다.",
+      "text": "He <b>mentioned</b> having done that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 소설은 선외에도 못 들었다",
+      "text": "His story was not even <b>mentioned</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "외국 문헌에 나타난 한국",
+      "text": "Korea <b>mentioned</b> in foreign literature"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "집 같은 집이 없다",
+      "text": "There is no house to speak of[worth mentioning]."
+    }
+  ],
+  "isWordType": true
+}

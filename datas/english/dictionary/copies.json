@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "entry": "copy",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkɑːpi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사본; 베끼기, 복사(한 것)",
+              "examples": [
+                {
+                  "text": "a fair[clean] <b>copy</b>",
+                  "translatedText": "정서"
+                }
+              ],
+              "originalMeaning": "사본; 베끼기, 복사(한 것)"
+            },
+            {
+              "meaning": "(복사기에 의한) 복사, 카피",
+              "examples": [
+                {
+                  "text": "make a <b>copy</b> of the check for one's records",
+                  "translatedText": "기록용으로 그 수표를 복사하다"
+                }
+              ],
+              "originalMeaning": "(복사기에 의한) 복사, 카피"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "베끼다, 표절하다, 복사하다; 모사하다 (=imitate)",
+              "examples": [],
+              "originalMeaning": "베끼다, 표절하다, 복사하다; 모사하다 (=<span class='related_word' lang='en' >imitate</span>)"
+            },
+            {
+              "meaning": "모방하다",
+              "examples": [],
+              "originalMeaning": "모방하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "베끼다, 복사하다",
+              "examples": [
+                {
+                  "text": "<b>copy</b> into a notebook",
+                  "translatedText": "공책에 베끼다"
+                }
+              ],
+              "originalMeaning": "베끼다, 복사하다"
+            },
+            {
+              "meaning": "모방하다, 본받다 ((from, after, out of))",
+              "examples": [
+                {
+                  "text": "<b>copy</b> after a good precedent",
+                  "translatedText": "좋은 선례에 따르다"
+                }
+              ],
+              "originalMeaning": "모방하다, 본받다 ((from, after, out of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de4d3013e25d45e68fb12f613774d05f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de4d3013e25d45e68fb12f613774d05f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "copies"
+        },
+        {
+          "type": "복수형",
+          "value": "copies"
+        },
+        {
+          "type": "과거형",
+          "value": "copied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "copying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "copied"
+        }
+      ],
+      "aliasConjugation": "copies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "08fec29907a0d143d18f82083d7fef74",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 아이는 아버지를 빼쏘았다",
+      "text": "The boy is a carbon <b>copy</b> of his father. or The boy is the spitting image of his father."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 책은 백만 부 팔렸다.",
+      "text": "His book sold a million <b>copies</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "책이 싸기에 한 권을 샀다",
+      "text": "As the book was cheap, I bought a <b>copy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아버지를 쏙 뺐다.",
+      "text": "He is the express <b>copy</b> of his father."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소설은 만 부 인쇄되었다.",
+      "text": "They printed 10,000 <b>copies</b> of the novel."
+    }
+  ],
+  "isWordType": true
+}

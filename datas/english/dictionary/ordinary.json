@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "ordinary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɔːrdneri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "평상의, 보통의, 정규의, 정상의(opp. special)",
+              "examples": [
+                {
+                  "text": "an <b>ordinary</b> meeting",
+                  "translatedText": "정례회"
+                }
+              ],
+              "originalMeaning": "평상의, 보통의, 정규의, 정상의(opp. special)"
+            },
+            {
+              "meaning": "범상의, 평범한",
+              "examples": [
+                {
+                  "text": "an <b>ordinary</b> man",
+                  "translatedText": "보통 사람, 범인(凡人)"
+                }
+              ],
+              "originalMeaning": "범상의, 평범한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보통 일[것, 사람]; 예사, 상례; 보통의 상태[정도]",
+              "examples": [
+                {
+                  "text": "the little ordinaries of life",
+                  "translatedText": "인생의 일상적인 일"
+                }
+              ],
+              "originalMeaning": "보통 일[것, 사람]; 예사, 상례; 보통의 상태[정도]"
+            },
+            {
+              "meaning": "[영] 정식(定食), 정식이 나오는 여관",
+              "examples": [],
+              "originalMeaning": "[영] 정식(定食), 정식이 나오는 여관"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9dec873c77df4e53970185f3be29a815",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9dec873c77df4e53970185f3be29a815",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "ordinaries"
+        }
+      ],
+      "aliasConjugation": "ordinaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "59782284d1b0a17ff453ef5d4b335693",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여간한 사람이 아니다",
+      "text": "He is no <b>ordinary</b>[common] man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 종류는 세상에 수두룩하다",
+      "text": "This is quite an <b>ordinary</b> type."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "평소에 그녀는 일찍 일어나지 않는다.",
+      "text": "Ordinarily, she doesn’t get up early."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "평범한 것이 가장 행복하다",
+      "text": "The <b>ordinary</b> can give us the greatest happiness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 일견해서 그가 범상치 않은 사람이라는 것을 알았다",
+      "text": "I saw at a glance that he was no <b>ordinary</b> man."
+    }
+  ],
+  "isWordType": true
+}

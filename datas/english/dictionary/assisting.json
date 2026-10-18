@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "assist",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈsɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "거들다, 원조하다, 돕다; 조장하다(promote), (=help)",
+              "examples": [
+                {
+                  "text": "<b>assist</b> a person materially[financially]",
+                  "translatedText": "…을 물질적[재정적]으로 원조하다"
+                }
+              ],
+              "originalMeaning": "거들다, 원조하다, 돕다; 조장하다(promote), (=<span class='related_word' lang='en' >help</span>)"
+            },
+            {
+              "meaning": "<…의> 조수를 하다, <물건·일이> (…의 면에서) 도움이 되다",
+              "examples": [
+                {
+                  "text": "<b>assist</b> a professor",
+                  "translatedText": "교수의 조교를 하다"
+                }
+              ],
+              "originalMeaning": "<…의> 조수를 하다, <물건·일이> (…의 면에서) 도움이 되다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "돕다, 조력(助力)하다",
+              "examples": [
+                {
+                  "text": "<b>assist</b> with the campaign",
+                  "translatedText": "캠페인을 돕다"
+                }
+              ],
+              "originalMeaning": "돕다, 조력(助力)하다"
+            },
+            {
+              "meaning": "참가하다, 참석하다 ((at, in))",
+              "examples": [],
+              "originalMeaning": "참가하다, 참석하다 ((at, in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "원조, 조력; [야구] 보살(補殺); [스포츠] 어시스트",
+              "examples": [],
+              "originalMeaning": "원조, 조력; [야구] 보살(補殺); [스포츠] 어시스트"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aca2bdcd5c374569a8b814f60e9d2754",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aca2bdcd5c374569a8b814f60e9d2754",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assists"
+        },
+        {
+          "type": "과거형",
+          "value": "assisted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assisting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assisted"
+        }
+      ],
+      "aliasConjugation": "assists",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d4cb30b0f4e2caf5504da6072f79d8ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "비서가 그의 업무를 보조했다",
+      "text": "His secretary helped[assisted] him with the work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "밝은 빛은 독서하는 데 눈에 도움을 준다.",
+      "text": "A good light assists the eyes in reading."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "힘이 닿는 한 무엇이나 도와드리지요.",
+      "text": "I will do everything in my power to <b>assist</b> you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "양당은 식민지 건설을 원조하기로 협정했다.",
+      "text": "The two parties entered into an agreement to <b>assist</b> in planting a colony."
+    }
+  ],
+  "isWordType": true
+}

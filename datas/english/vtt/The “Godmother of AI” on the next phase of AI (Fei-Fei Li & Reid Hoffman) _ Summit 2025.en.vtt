@@ -1,0 +1,1856 @@
+WEBVTT
+
+00:00:00.160 --> 00:00:04.240
+If scientists need to be fearless, I
+
+00:00:02.240 --> 00:00:07.839
+think entrepreneurs need to be more
+
+00:00:04.240 --> 00:00:10.559
+fearless. Um, fearless to me, I love
+
+00:00:07.839 --> 00:00:13.519
+this word and this is part of the way I
+
+00:00:10.559 --> 00:00:15.519
+actually do hiring is look for people,
+
+00:00:13.519 --> 00:00:20.560
+especially young people with that
+
+00:00:15.519 --> 00:00:24.560
+fearlessness. Um, fearlessness. Um, fear
+
+00:00:20.560 --> 00:00:28.160
+fearless is to be free. is to be to get
+
+00:00:24.560 --> 00:00:31.760
+rid of the shackles that constrain your
+
+00:00:28.160 --> 00:00:35.360
+creativity, your courage, and your
+
+00:00:31.760 --> 00:00:37.360
+ability to just get done. And
+
+00:00:35.360 --> 00:00:37.680
+pardon my language, it's uh it's
+
+00:00:37.360 --> 00:00:38.800
+actually
+
+00:00:37.680 --> 00:00:40.559
+>> it's a technical term.
+
+00:00:38.800 --> 00:00:43.280
+>> Yes.
+
+00:00:40.559 --> 00:00:46.879
+One thing I feel very strongly is in the
+
+00:00:43.280 --> 00:00:50.399
+AI age, trust cannot be outsourced to
+
+00:00:46.879 --> 00:00:52.640
+machines. Trust is fundamentally human.
+
+00:00:50.399 --> 00:00:55.680
+It's at the individual level, community
+
+00:00:52.640 --> 00:00:57.760
+level, and societal level. Some of you
+
+00:00:55.680 --> 00:01:00.719
+might be just in the infrastructure,
+
+00:00:57.760 --> 00:01:03.359
+SAS, whatever. Um, you know, application
+
+00:01:00.719 --> 00:01:05.199
+that feels like maybe um that's more
+
+00:01:03.359 --> 00:01:06.640
+removed. That's not true cuz you're
+
+00:01:05.199 --> 00:01:09.119
+serving people. You're serving
+
+00:01:06.640 --> 00:01:12.720
+businesses. Trust is really important.
+
+00:01:09.119 --> 00:01:17.439
+Have that human agency as the as the the
+
+00:01:12.720 --> 00:01:19.280
+the um the source of of the trust.
+
+00:01:17.439 --> 00:01:21.280
+Hey folks, this week on the show we're
+
+00:01:19.280 --> 00:01:24.960
+sharing Reed Hoffman's conversation with
+
+00:01:21.280 --> 00:01:28.080
+Dr. Fay Lee from our 2025 Masters of
+
+00:01:24.960 --> 00:01:30.000
+Scale Summit. FE is a brilliant computer
+
+00:01:28.080 --> 00:01:33.119
+scientist and author who has been at the
+
+00:01:30.000 --> 00:01:35.360
+forefront of AI development for decades.
+
+00:01:33.119 --> 00:01:38.000
+She was a founding director of
+
+00:01:35.360 --> 00:01:40.799
+Stanford's human- centered AI institute
+
+00:01:38.000 --> 00:01:43.759
+and is now the co-founder and CEO of
+
+00:01:40.799 --> 00:01:46.000
+World Labs. She joined Reed on stage for
+
+00:01:43.759 --> 00:01:48.960
+candid reflections on where we are and
+
+00:01:46.000 --> 00:01:51.600
+where we're headed as AI evolves. I
+
+00:01:48.960 --> 00:01:56.040
+think you'll enjoy this.
+
+00:01:51.600 --> 00:01:56.040
+This is Masters of Scale.
+
+00:01:57.439 --> 00:02:00.479
+I've lost count of the number of times
+
+00:01:58.880 --> 00:02:01.840
+we've done this and it's always awesome
+
+00:02:00.479 --> 00:02:02.240
+and an honor. So, thank you for being
+
+00:02:01.840 --> 00:02:05.280
+here.
+
+00:02:02.240 --> 00:02:07.439
+>> Thank you. I I've lost count, too.
+
+00:02:05.280 --> 00:02:09.119
+Um, so one of the things that obviously
+
+00:02:07.439 --> 00:02:12.080
+anyone who's following your career knows
+
+00:02:09.119 --> 00:02:15.360
+that you're one of the OG in the in the
+
+00:02:12.080 --> 00:02:17.440
+wave of AI, you know, ImageNet,
+
+00:02:15.360 --> 00:02:19.440
+um, all of these things that are, uh,
+
+00:02:17.440 --> 00:02:21.599
+contributions that are fundamental to
+
+00:02:19.440 --> 00:02:25.120
+where we are today. So, by the way,
+
+00:02:21.599 --> 00:02:28.800
+thank you for that. Um, and now you're
+
+00:02:25.120 --> 00:02:31.760
+working on spatial intelligence and uh,
+
+00:02:28.800 --> 00:02:35.040
+kind of uh, world building. say a little
+
+00:02:31.760 --> 00:02:37.440
+bit about why you uh you know kind of
+
+00:02:35.040 --> 00:02:39.920
+took a a sbatical from the job you love
+
+00:02:37.440 --> 00:02:41.599
+with you know human- centered AI and and
+
+00:02:39.920 --> 00:02:43.200
+Stanford CS and started building this
+
+00:02:41.599 --> 00:02:45.840
+company and what you're doing
+
+00:02:43.200 --> 00:02:48.319
+>> right uh Reed again thank you for
+
+00:02:45.840 --> 00:02:50.480
+inviting me it's so uh what an honor to
+
+00:02:48.319 --> 00:02:53.920
+be here and I think you're referring to
+
+00:02:50.480 --> 00:02:56.640
+my startup that I'm a co-founder CEO of
+
+00:02:53.920 --> 00:03:00.640
+which is called World Labs so you know
+
+00:02:56.640 --> 00:03:03.440
+Reed you are one of the original uh
+
+00:03:00.640 --> 00:03:05.760
+supporters, investors of open AI. So
+
+00:03:03.440 --> 00:03:08.239
+when open AI was founded, you and I
+
+00:03:05.760 --> 00:03:11.760
+talked about the dream of AGI, right? As
+
+00:03:08.239 --> 00:03:14.879
+a AI scientist, um
+
+00:03:11.760 --> 00:03:16.959
+I'm torn between the word AI versus AGI
+
+00:03:14.879 --> 00:03:19.680
+because they more or less mean the same
+
+00:03:16.959 --> 00:03:19.920
+thing for me. But language aside, what
+
+00:03:19.680 --> 00:03:22.720
+is
+
+00:03:19.920 --> 00:03:23.599
+>> actually I use AGI for the AI we haven't
+
+00:03:22.720 --> 00:03:26.080
+invented yet.
+
+00:03:23.599 --> 00:03:28.959
+>> Okay, that's great.
+
+00:03:26.080 --> 00:03:32.640
+Um I think Alan T to actually John
+
+00:03:28.959 --> 00:03:36.159
+McCarthy probably meant the same but um
+
+00:03:32.640 --> 00:03:38.959
+so what is AGI to me? AGI to me is the
+
+00:03:36.159 --> 00:03:43.040
+capability of in intelligence of
+
+00:03:38.959 --> 00:03:46.480
+machines that um are on par with humans
+
+00:03:43.040 --> 00:03:49.200
+and in many cases can be uh superseding
+
+00:03:46.480 --> 00:03:52.400
+humans. And I think think about this as
+
+00:03:49.200 --> 00:03:54.879
+a door to the future and on this door
+
+00:03:52.400 --> 00:03:57.040
+there are multiple keyholes and language
+
+00:03:54.879 --> 00:03:59.360
+is one of them one of the major ones
+
+00:03:57.040 --> 00:04:02.159
+because language is an essential part of
+
+00:03:59.360 --> 00:04:04.959
+uh intelligence to to the point that I
+
+00:04:02.159 --> 00:04:07.200
+know you are a quasi philosophy major
+
+00:04:04.959 --> 00:04:10.640
+that uh Vigenstein
+
+00:04:07.200 --> 00:04:12.879
+quasi is actually a a positive word at
+
+00:04:10.640 --> 00:04:15.439
+at Stanford I have to say because Reed
+
+00:04:12.879 --> 00:04:19.359
+is an alumni uh there's a very special
+
+00:04:15.439 --> 00:04:21.440
+uh uh major called um Sims uh symbolic
+
+00:04:19.359 --> 00:04:23.520
+symbolic systems. They combine
+
+00:04:21.440 --> 00:04:24.160
+philosophy and cognitive science and
+
+00:04:23.520 --> 00:04:25.600
+computer science.
+
+00:04:24.160 --> 00:04:26.560
+>> By the way, I was the eighth person to
+
+00:04:25.600 --> 00:04:29.040
+declare that major.
+
+00:04:26.560 --> 00:04:32.240
+>> Oh my god. So many famous people uh come
+
+00:04:29.040 --> 00:04:35.199
+out of that major. Yeah. So quasi it
+
+00:04:32.240 --> 00:04:38.479
+just means the the the the proportion.
+
+00:04:35.199 --> 00:04:39.759
+So it's it's a good word. Um
+
+00:04:38.479 --> 00:04:40.320
+>> he'll correct me later, but that's all
+
+00:04:39.759 --> 00:04:44.160
+right.
+
+00:04:40.320 --> 00:04:48.960
+>> I'm digging myself out of a hole.
+
+00:04:44.160 --> 00:04:51.040
+Um Vigenstein says that um uh language
+
+00:04:48.960 --> 00:04:51.919
+defines the limit of world.
+
+00:04:51.040 --> 00:04:54.639
+>> Yes,
+
+00:04:51.919 --> 00:04:55.440
+>> I'm actually not disagreeing with that.
+
+00:04:54.639 --> 00:05:00.000
+>> Excellent.
+
+00:04:55.440 --> 00:05:02.400
+>> Because I think language um defines a
+
+00:05:00.000 --> 00:05:06.000
+certain level of boundary that the world
+
+00:05:02.400 --> 00:05:09.039
+can be described in symbolic forms but
+
+00:05:06.000 --> 00:05:12.960
+beyond that the world is actually
+
+00:05:09.039 --> 00:05:14.960
+limitless. uh and uh and what is that
+
+00:05:12.960 --> 00:05:16.960
+world? How do we define that? What does
+
+00:05:14.960 --> 00:05:19.440
+that have to do with intelligence? And
+
+00:05:16.960 --> 00:05:21.680
+how do we use machines to express that?
+
+00:05:19.440 --> 00:05:25.039
+I lump that whole thing into world
+
+00:05:21.680 --> 00:05:29.600
+modeling. World modeling is is very
+
+00:05:25.039 --> 00:05:33.199
+connected to language. But it's about um
+
+00:05:29.600 --> 00:05:36.320
+expressing, representing and eventually
+
+00:05:33.199 --> 00:05:38.400
+participating in the changes of uh the
+
+00:05:36.320 --> 00:05:41.520
+states of the world. And that could be
+
+00:05:38.400 --> 00:05:44.080
+virtual, it could be physical. And what
+
+00:05:41.520 --> 00:05:46.000
+does world modeling entail? It does
+
+00:05:44.080 --> 00:05:48.240
+entail language because language is one
+
+00:05:46.000 --> 00:05:51.520
+form of interrogation with the world.
+
+00:05:48.240 --> 00:05:55.120
+But it also in entails uh the visual,
+
+00:05:51.520 --> 00:05:58.000
+the lights, the semantics, the space,
+
+00:05:55.120 --> 00:06:00.639
+the physical actions. And all of that is
+
+00:05:58.000 --> 00:06:03.360
+still at the dawn and and and in the in
+
+00:06:00.639 --> 00:06:05.759
+the it's the next phase of AI. And
+
+00:06:03.360 --> 00:06:07.840
+that's what world labs is about. We are
+
+00:06:05.759 --> 00:06:10.000
+trying to do world modeling and we're
+
+00:06:07.840 --> 00:06:12.479
+trying to bring that level of spatial
+
+00:06:10.000 --> 00:06:13.360
+intelligence into the next chapter of
+
+00:06:12.479 --> 00:06:14.800
+AI.
+
+00:06:13.360 --> 00:06:16.639
+>> So two questions with the spatial
+
+00:06:14.800 --> 00:06:18.080
+intelligence one how would you know
+
+00:06:16.639 --> 00:06:20.000
+because there are a few people who will
+
+00:06:18.080 --> 00:06:22.160
+be deep here but a lot of people their
+
+00:06:20.000 --> 00:06:26.479
+primary experience of LLM is like you
+
+00:06:22.160 --> 00:06:28.800
+know chatbt Gemini etc. Um and um so
+
+00:06:26.479 --> 00:06:30.880
+like what what should they understand is
+
+00:06:28.800 --> 00:06:34.479
+different not just in the cognitive
+
+00:06:30.880 --> 00:06:37.280
+capabilities cuz the the our our our
+
+00:06:34.479 --> 00:06:39.360
+world is not just language and then two
+
+00:06:37.280 --> 00:06:40.800
+like what are the what is the the road
+
+00:06:39.360 --> 00:06:43.440
+ahead look like? What are some of the
+
+00:06:40.800 --> 00:06:46.160
+challenges to overcome in getting there?
+
+00:06:43.440 --> 00:06:49.600
+>> Yeah. What what would it get us when we
+
+00:06:46.160 --> 00:06:51.840
+have world modeling? Well um we're
+
+00:06:49.600 --> 00:06:54.560
+already seeing budding signs of that.
+
+00:06:51.840 --> 00:06:56.880
+Lots of storytellers are creatives with
+
+00:06:54.560 --> 00:07:01.840
+many media, right? Uh whether it's
+
+00:06:56.880 --> 00:07:05.680
+pixels, movies, um uh uh sculptures, um
+
+00:07:01.840 --> 00:07:07.919
+digital art. And that is a highly highly
+
+00:07:05.680 --> 00:07:10.800
+creative interactive
+
+00:07:07.919 --> 00:07:14.400
+world that you cannot just use language
+
+00:07:10.800 --> 00:07:19.199
+to express. and uh world modeling. The
+
+00:07:14.400 --> 00:07:22.080
+ability to generate things to generate
+
+00:07:19.199 --> 00:07:25.520
+worlds that you can immerse yourself in,
+
+00:07:22.080 --> 00:07:28.080
+you can interact with is highly uh
+
+00:07:25.520 --> 00:07:31.199
+enticing and and exciting for for
+
+00:07:28.080 --> 00:07:33.440
+creators. And that's one way you see
+
+00:07:31.199 --> 00:07:35.520
+world modeling could be applied for.
+
+00:07:33.440 --> 00:07:37.680
+This is not just for entertainment and
+
+00:07:35.520 --> 00:07:40.000
+and storytelling. This could be for
+
+00:07:37.680 --> 00:07:42.880
+design. This is could be for even
+
+00:07:40.000 --> 00:07:46.560
+industrial uses. uh all the way to
+
+00:07:42.880 --> 00:07:49.440
+healthcare, medicine, education. Also,
+
+00:07:46.560 --> 00:07:51.840
+um the the distance between passively
+
+00:07:49.440 --> 00:07:55.120
+being passively entertained and being
+
+00:07:51.840 --> 00:07:59.120
+actively participating in experiences
+
+00:07:55.120 --> 00:08:01.440
+right now has been closing um rapidly.
+
+00:07:59.120 --> 00:08:03.919
+And the ability to have machines to
+
+00:08:01.440 --> 00:08:06.960
+create world models that would allow
+
+00:08:03.919 --> 00:08:09.919
+that kind of immersive uh experiences is
+
+00:08:06.960 --> 00:08:12.960
+really powerful. and and that also
+
+00:08:09.919 --> 00:08:14.960
+seguates into simulation. Simulation is
+
+00:08:12.960 --> 00:08:17.440
+really important both for human
+
+00:08:14.960 --> 00:08:20.720
+experiences, human learning as well as
+
+00:08:17.440 --> 00:08:23.440
+for embodied AI. Robots needs to learn
+
+00:08:20.720 --> 00:08:25.919
+from simulation as well as much as it
+
+00:08:23.440 --> 00:08:29.120
+needs to learn from uh uh from the real
+
+00:08:25.919 --> 00:08:31.120
+world. And we can we can really nerd out
+
+00:08:29.120 --> 00:08:33.680
+about the the history of robots
+
+00:08:31.120 --> 00:08:36.080
+including self-driving cars and the the
+
+00:08:33.680 --> 00:08:39.680
+critical roles that simulation has has
+
+00:08:36.080 --> 00:08:43.519
+played. So, so the application and and
+
+00:08:39.680 --> 00:08:45.440
+uh uh it it really is boundless. Uh what
+
+00:08:43.519 --> 00:08:47.680
+are the challenges? I'll just call out
+
+00:08:45.440 --> 00:08:50.240
+one challenges. Well, there are actually
+
+00:08:47.680 --> 00:08:54.000
+many challenges. Uh one challenge is
+
+00:08:50.240 --> 00:08:56.800
+data unlike language where data is all
+
+00:08:54.000 --> 00:08:59.600
+over the internet. Um when it comes to
+
+00:08:56.800 --> 00:09:03.200
+world modeling, data is not as uh
+
+00:08:59.600 --> 00:09:05.600
+obvious and and and easily obtainable
+
+00:09:03.200 --> 00:09:07.920
+compared to language. Of course, there
+
+00:09:05.600 --> 00:09:10.240
+are video data that's one of the most uh
+
+00:09:07.920 --> 00:09:12.800
+critical form of data for world
+
+00:09:10.240 --> 00:09:16.160
+modeling. But the world like I said is
+
+00:09:12.800 --> 00:09:19.279
+very multimodel. It is very spatial. It
+
+00:09:16.160 --> 00:09:22.880
+it has fundamental 3D information,
+
+00:09:19.279 --> 00:09:26.640
+geometry, physics, dynamics and some of
+
+00:09:22.880 --> 00:09:29.200
+those are not easily obtainable. And so
+
+00:09:26.640 --> 00:09:32.640
+um there's obviously been a lot of
+
+00:09:29.200 --> 00:09:34.000
+discussion around robotics and
+
+00:09:32.640 --> 00:09:35.680
+one of the things I think we should draw
+
+00:09:34.000 --> 00:09:39.040
+the line for everyone is to understand
+
+00:09:35.680 --> 00:09:42.000
+how critical world modeling will be to
+
+00:09:39.040 --> 00:09:43.600
+any kind of robotic ele elevation of
+
+00:09:42.000 --> 00:09:46.160
+work and the human condition. So say a
+
+00:09:43.600 --> 00:09:48.080
+little bit about like why this cognitive
+
+00:09:46.160 --> 00:09:50.160
+set is so important there.
+
+00:09:48.080 --> 00:09:52.640
+>> Yeah great question. I spent a lot of
+
+00:09:50.160 --> 00:09:56.399
+time thinking about that because uh
+
+00:09:52.640 --> 00:10:00.560
+frankly after image that after the first
+
+00:09:56.399 --> 00:10:04.399
+wave of uh uh computer vision achieving
+
+00:10:00.560 --> 00:10:06.160
+a level of fidelity and quality I
+
+00:10:04.399 --> 00:10:09.279
+actually went into a little bit of a
+
+00:10:06.160 --> 00:10:12.399
+crisis myself and start to soul search
+
+00:10:09.279 --> 00:10:14.959
+what is perception about what is vision
+
+00:10:12.399 --> 00:10:16.959
+for right I thought it would take me
+
+00:10:14.959 --> 00:10:19.680
+aundred years to to work on the problem
+
+00:10:16.959 --> 00:10:21.760
+of uh of object recogn definition, but
+
+00:10:19.680 --> 00:10:24.399
+it it went a little faster than I
+
+00:10:21.760 --> 00:10:27.200
+thought. So, I needed another uh north
+
+00:10:24.399 --> 00:10:30.640
+star. And uh it took me back to uh
+
+00:10:27.200 --> 00:10:34.800
+evolution. And I I started to read a lot
+
+00:10:30.640 --> 00:10:37.440
+about um evolution and some philos I'm
+
+00:10:34.800 --> 00:10:41.120
+like literally this much of a philosophy
+
+00:10:37.440 --> 00:10:44.240
+uh student compared to Reed. um is that
+
+00:10:41.120 --> 00:10:46.640
+um about 530 million years ago there was
+
+00:10:44.240 --> 00:10:49.680
+an incredible evolutionary event called
+
+00:10:46.640 --> 00:10:52.880
+Cambrian explosion where the the animal
+
+00:10:49.680 --> 00:10:55.040
+speciation just exploded where it's also
+
+00:10:52.880 --> 00:10:57.440
+the beginning of the nervous system uh
+
+00:10:55.040 --> 00:11:01.360
+nervous system the beginning of uh
+
+00:10:57.440 --> 00:11:03.279
+photosensitive uh cells and it really
+
+00:11:01.360 --> 00:11:06.800
+after reading a lot of literature and
+
+00:11:03.279 --> 00:11:10.959
+thinking it really dawned on me the the
+
+00:11:06.800 --> 00:11:13.519
+um the goal the evolutionary reason
+
+00:11:10.959 --> 00:11:16.320
+animals have perception
+
+00:11:13.519 --> 00:11:18.880
+is actually for activity for
+
+00:11:16.320 --> 00:11:21.760
+interactivity. It's active. It's not
+
+00:11:18.880 --> 00:11:25.200
+percept uh it's not passive and that
+
+00:11:21.760 --> 00:11:27.680
+means perception and the perceptual
+
+00:11:25.200 --> 00:11:29.200
+intelligence is the foundation of
+
+00:11:27.680 --> 00:11:31.600
+movement
+
+00:11:29.200 --> 00:11:34.320
+and the beginning of movement is very uh
+
+00:11:31.600 --> 00:11:36.720
+simple. You just kind of translate your
+
+00:11:34.320 --> 00:11:39.360
+body somewhere. Quickly the movement
+
+00:11:36.720 --> 00:11:41.920
+becomes much more interactive and and
+
+00:11:39.360 --> 00:11:45.600
+you know from fighting for food to
+
+00:11:41.920 --> 00:11:49.040
+mating to nesting to uh rearing
+
+00:11:45.600 --> 00:11:51.360
+offsprings to much deeper. I mean look
+
+00:11:49.040 --> 00:11:54.320
+at mammals and and humans. Our ability
+
+00:11:51.360 --> 00:11:56.640
+to move is very very complex. The degree
+
+00:11:54.320 --> 00:12:00.800
+of freedom we have between our fingers,
+
+00:11:56.640 --> 00:12:04.000
+toes and body, torso is very high. And
+
+00:12:00.800 --> 00:12:07.600
+all this requires a fundamental
+
+00:12:04.000 --> 00:12:11.200
+perceptual spatial intelligence of the
+
+00:12:07.600 --> 00:12:14.480
+world we're in so that we know we
+
+00:12:11.200 --> 00:12:17.920
+understand and we can plan for all the
+
+00:12:14.480 --> 00:12:22.160
+movements. So really truly in my opinion
+
+00:12:17.920 --> 00:12:25.440
+that the the level of um nuanced complex
+
+00:12:22.160 --> 00:12:28.639
+spatial world understanding is the brain
+
+00:12:25.440 --> 00:12:29.360
+of embodied intelligence including
+
+00:12:28.639 --> 00:12:31.360
+robots.
+
+00:12:29.360 --> 00:12:34.720
+>> Yeah. Yeah. And and actually, you know,
+
+00:12:31.360 --> 00:12:35.920
+while the robots give a particular sense
+
+00:12:34.720 --> 00:12:37.040
+where you need that embodied
+
+00:12:35.920 --> 00:12:40.000
+intelligence for them to all be
+
+00:12:37.040 --> 00:12:41.440
+embodied, there will also of course be a
+
+00:12:40.000 --> 00:12:44.000
+little bit like your opening comment on
+
+00:12:41.440 --> 00:12:45.760
+Vickenstein. The question of actual
+
+00:12:44.000 --> 00:12:48.480
+cognitive reasoning capabilities that
+
+00:12:45.760 --> 00:12:50.079
+are not just purely linguistic like this
+
+00:12:48.480 --> 00:12:50.560
+is getting a little philosophical and
+
+00:12:50.079 --> 00:12:51.680
+looking forward.
+
+00:12:50.560 --> 00:12:53.600
+>> I love that.
+
+00:12:51.680 --> 00:12:55.279
+>> But part of what you get with spatial
+
+00:12:53.600 --> 00:12:56.959
+intelligence is other forms of
+
+00:12:55.279 --> 00:12:59.200
+intelligence that will even be important
+
+00:12:56.959 --> 00:13:01.440
+there. It isn't just in a pure
+
+00:12:59.200 --> 00:13:03.920
+perception action loop cuz you know the
+
+00:13:01.440 --> 00:13:06.399
+the old western perception as a camera
+
+00:13:03.920 --> 00:13:07.920
+and action as separate is clearly wrong.
+
+00:13:06.399 --> 00:13:09.440
+That was the thing that you were just
+
+00:13:07.920 --> 00:13:11.360
+you know referring to.
+
+00:13:09.440 --> 00:13:14.880
+>> But it will also increase our cognitive
+
+00:13:11.360 --> 00:13:17.040
+capabilities or like the what we how we
+
+00:13:14.880 --> 00:13:18.720
+imagine the world, how we model it in
+
+00:13:17.040 --> 00:13:20.240
+our heads. What are some of the
+
+00:13:18.720 --> 00:13:22.399
+reasoning characteristics you think
+
+00:13:20.240 --> 00:13:24.000
+might come out from when you add spatial
+
+00:13:22.399 --> 00:13:25.839
+intelligence not just to robots but to
+
+00:13:24.000 --> 00:13:27.760
+every AI system?
+
+00:13:25.839 --> 00:13:31.040
+>> That's wonderful. Reed, this is why I
+
+00:13:27.760 --> 00:13:33.279
+love talking to you. So throughout human
+
+00:13:31.040 --> 00:13:37.040
+civilization, if you look at the
+
+00:13:33.279 --> 00:13:39.200
+milestones of um humans building
+
+00:13:37.040 --> 00:13:42.000
+civilization, there's a lot of
+
+00:13:39.200 --> 00:13:45.040
+milestones that cannot possibly be
+
+00:13:42.000 --> 00:13:48.560
+achieved with just language. The the the
+
+00:13:45.040 --> 00:13:51.920
+nuance of uh space and spatial re
+
+00:13:48.560 --> 00:13:54.160
+reasoning, world modeling is very very
+
+00:13:51.920 --> 00:13:56.880
+clear. For example, let's just take uh
+
+00:13:54.160 --> 00:14:00.320
+early days the building of pyramid,
+
+00:13:56.880 --> 00:14:03.600
+right? The the the ability to start to
+
+00:14:00.320 --> 00:14:07.600
+abstract geometry, the sense of geometry
+
+00:14:03.600 --> 00:14:11.040
+and and also the construction of large
+
+00:14:07.600 --> 00:14:14.880
+um um bodies. There is a lot of things
+
+00:14:11.040 --> 00:14:19.680
+that goes on into that uh cognitive
+
+00:14:14.880 --> 00:14:24.399
+spatial um um reasoning that that's not
+
+00:14:19.680 --> 00:14:26.959
+this simplistic transa transactional
+
+00:14:24.399 --> 00:14:28.560
+uh behavior of I see something I want to
+
+00:14:26.959 --> 00:14:30.720
+move it right
+
+00:14:28.560 --> 00:14:33.600
+>> another example I I'll just give two
+
+00:14:30.720 --> 00:14:36.959
+example another example is the deduction
+
+00:14:33.600 --> 00:14:40.320
+of the structure of DNA if you know the
+
+00:14:36.959 --> 00:14:42.880
+history of how DNA was uh uh I've
+
+00:14:40.320 --> 00:14:45.279
+discovered of course many scientists
+
+00:14:42.880 --> 00:14:48.079
+were getting a vibe using today's
+
+00:14:45.279 --> 00:14:49.839
+language that there's something there's
+
+00:14:48.079 --> 00:14:52.480
+something that's going on in this
+
+00:14:49.839 --> 00:14:57.040
+fundamental building block of our uh uh
+
+00:14:52.480 --> 00:14:59.920
+genetics but it took um uh Franklin uh
+
+00:14:57.040 --> 00:15:03.199
+Rosalene Franklin under uh appreciated
+
+00:14:59.920 --> 00:15:05.760
+scientists to take these X-ray I think
+
+00:15:03.199 --> 00:15:08.800
+it was X-ray or some kind of X-ray
+
+00:15:05.760 --> 00:15:12.000
+imagery of the DNA molecules right?
+
+00:15:08.800 --> 00:15:16.320
+X-ray that looks like this on it's a
+
+00:15:12.000 --> 00:15:18.880
+cross on a on a flat uh imagery.
+
+00:15:16.320 --> 00:15:22.240
+>> But then Francis Crick and uh James
+
+00:15:18.880 --> 00:15:25.279
+Watson of course they they were deeply
+
+00:15:22.240 --> 00:15:30.079
+thinking about this. But to go from this
+
+00:15:25.279 --> 00:15:31.600
+imagery to a 3D double helix intertwined
+
+00:15:30.079 --> 00:15:33.519
+structure
+
+00:15:31.600 --> 00:15:34.079
+>> is deeply spatial.
+
+00:15:33.519 --> 00:15:36.720
+>> Yeah.
+
+00:15:34.079 --> 00:15:38.639
+>> You cannot language your way into this
+
+00:15:36.720 --> 00:15:41.040
+deduction. I'm sure language
+
+00:15:38.639 --> 00:15:42.720
+participated. I'm not anti- language,
+
+00:15:41.040 --> 00:15:44.639
+you know. I love being
+
+00:15:42.720 --> 00:15:50.560
+>> I speak I am pro language.
+
+00:15:44.639 --> 00:15:53.680
+>> Exactly. Exactly. Um but that is a a
+
+00:15:50.560 --> 00:15:57.279
+beautiful example of humans using
+
+00:15:53.680 --> 00:15:59.440
+spatial reasoning and cognitive ability
+
+00:15:57.279 --> 00:16:01.839
+uh to to do something or discover
+
+00:15:59.440 --> 00:16:05.680
+something uh we've never done. So I
+
+00:16:01.839 --> 00:16:09.040
+think that as we empower AI with this
+
+00:16:05.680 --> 00:16:12.800
+ability, this is not just for robots
+
+00:16:09.040 --> 00:16:16.399
+that can, you know, pick up a pick up a
+
+00:16:12.800 --> 00:16:19.120
+glasses or or a cube. This is for uh
+
+00:16:16.399 --> 00:16:22.399
+lifting all of humanity's capability
+
+00:16:19.120 --> 00:16:24.480
+because we can collaborate with machines
+
+00:16:22.399 --> 00:16:26.800
+um having this capability.
+
+00:16:24.480 --> 00:16:28.639
+>> Yeah. Awesome. And I actually have never
+
+00:16:26.800 --> 00:16:32.160
+heard the DNA answer from you before. So
+
+00:16:28.639 --> 00:16:33.600
+I love asking you questions that you've
+
+00:16:32.160 --> 00:16:35.279
+that I have never asked you before. It's
+
+00:16:33.600 --> 00:16:38.639
+one of the things that's that's awesome.
+
+00:16:35.279 --> 00:16:40.000
+Um so switching to you know kind of one
+
+00:16:38.639 --> 00:16:43.120
+general thing is obviously there's a lot
+
+00:16:40.000 --> 00:16:44.800
+of discourse around is AI overhyped
+
+00:16:43.120 --> 00:16:46.480
+underhyped. We're obviously here in the
+
+00:16:44.800 --> 00:16:48.560
+valley so everyone in the valley more or
+
+00:16:46.480 --> 00:16:51.839
+less thinks underhyped. you know, people
+
+00:16:48.560 --> 00:16:54.399
+want to say the um uh you know, kind of
+
+00:16:51.839 --> 00:16:55.600
+the question of like, well, is it um are
+
+00:16:54.399 --> 00:16:59.440
+we going to go through another AI
+
+00:16:55.600 --> 00:17:01.759
+winner? What's your kind of view about
+
+00:16:59.440 --> 00:17:03.680
+this discussion about what's going on
+
+00:17:01.759 --> 00:17:05.039
+with AI? What would you say? Hey, this
+
+00:17:03.680 --> 00:17:06.720
+is the parts that are underhyped. These
+
+00:17:05.039 --> 00:17:09.600
+are the parts that are maybe a little
+
+00:17:06.720 --> 00:17:11.760
+too soon, right? Versus overhyped.
+
+00:17:09.600 --> 00:17:16.240
+What should what's the guide to the wise
+
+00:17:11.760 --> 00:17:19.039
+on the current discourse and see uh
+
+00:17:16.240 --> 00:17:20.799
+sorting wheat from chaff a little bit?
+
+00:17:19.039 --> 00:17:22.480
+>> Oh boy, I have to be careful how I
+
+00:17:20.799 --> 00:17:25.120
+answer this question, but I totally
+
+00:17:22.480 --> 00:17:28.400
+appreciate this. Um
+
+00:17:25.120 --> 00:17:30.480
+AI is a civilizational um technology.
+
+00:17:28.400 --> 00:17:34.559
+I'm I'm not the only one saying this,
+
+00:17:30.480 --> 00:17:37.120
+but I truly believe because uh it is
+
+00:17:34.559 --> 00:17:39.520
+even if you're inspired by humans and
+
+00:17:37.120 --> 00:17:43.280
+evolution, this is the ability to
+
+00:17:39.520 --> 00:17:46.960
+intellectualize and to think to do is
+
+00:17:43.280 --> 00:17:49.200
+fundamental to um to to humans and a
+
+00:17:46.960 --> 00:17:52.799
+piece of technology that can do that is
+
+00:17:49.200 --> 00:17:57.120
+is phenomenal. uh it's in my opinion
+
+00:17:52.799 --> 00:18:00.240
+it's more or less not not overhyped as a
+
+00:17:57.120 --> 00:18:04.080
+intellectual future of the humanity
+
+00:18:00.240 --> 00:18:08.240
+because AI is the new computing if you
+
+00:18:04.080 --> 00:18:10.880
+look at today's world and just recognize
+
+00:18:08.240 --> 00:18:13.520
+where there are chips you know because
+
+00:18:10.880 --> 00:18:17.840
+chips are the physical places where
+
+00:18:13.520 --> 00:18:20.880
+computing happens from a light bulb to a
+
+00:18:17.840 --> 00:18:24.400
+self-driving car to an airplane
+
+00:18:20.880 --> 00:18:26.480
+everywhere there's chips well it's very
+
+00:18:24.400 --> 00:18:29.280
+obvious at this point wherever there is
+
+00:18:26.480 --> 00:18:31.919
+chip there's compute wherever there's
+
+00:18:29.280 --> 00:18:34.240
+compute there will be AI if it's not
+
+00:18:31.919 --> 00:18:36.240
+there so from that point of view both
+
+00:18:34.240 --> 00:18:39.440
+from a business as well as use case
+
+00:18:36.240 --> 00:18:42.720
+point of view a AI is the future
+
+00:18:39.440 --> 00:18:45.520
+obviously um when it comes to hype I do
+
+00:18:42.720 --> 00:18:48.160
+think we have to be uh a bit nuanced for
+
+00:18:45.520 --> 00:18:50.480
+example there are really you know we I
+
+00:18:48.160 --> 00:18:54.240
+think we were just saying backstage. It
+
+00:18:50.480 --> 00:18:57.039
+took more than 20 years to go from um
+
+00:18:54.240 --> 00:19:00.640
+Sebastian Thrum's um um first
+
+00:18:57.039 --> 00:19:03.120
+self-driving car that can drive a car
+
+00:19:00.640 --> 00:19:06.799
+130 miles in the Nevada desert which has
+
+00:19:03.120 --> 00:19:09.919
+no traffic apparently. Um to Whimo
+
+00:19:06.799 --> 00:19:11.919
+running in um uh San Francisco, right?
+
+00:19:09.919 --> 00:19:14.160
+Well, you might say, well, because part
+
+00:19:11.919 --> 00:19:17.200
+of it is software it was pre-deep
+
+00:19:14.160 --> 00:19:19.280
+learning age and uh software uh
+
+00:19:17.200 --> 00:19:21.280
+development was slower. You're right.
+
+00:19:19.280 --> 00:19:23.520
+It's uh definitely deep learning
+
+00:19:21.280 --> 00:19:26.400
+accelerated the brains of self-driving
+
+00:19:23.520 --> 00:19:29.360
+car. But let's also not forget that car
+
+00:19:26.400 --> 00:19:32.640
+industry, the entire supply chain as
+
+00:19:29.360 --> 00:19:34.880
+well as customer use basis has been
+
+00:19:32.640 --> 00:19:37.840
+established for more than 100 years and
+
+00:19:34.880 --> 00:19:41.360
+it's a very very mature business model
+
+00:19:37.840 --> 00:19:44.160
+and very mature infrastructure and and
+
+00:19:41.360 --> 00:19:47.440
+manufacturing and everything. So if it
+
+00:19:44.160 --> 00:19:51.760
+took 20 years to get just cars, which is
+
+00:19:47.440 --> 00:19:52.559
+the simplest form of robot um um on the
+
+00:19:51.760 --> 00:19:53.520
+street, you know,
+
+00:19:52.559 --> 00:19:56.000
+>> Roombas, but you know,
+
+00:19:53.520 --> 00:19:59.520
+>> I I was thinking I knew he's going to
+
+00:19:56.000 --> 00:20:02.160
+say that. Yes. So yeah. Well, Roombas
+
+00:19:59.520 --> 00:20:07.039
+are mini cars.
+
+00:20:02.160 --> 00:20:08.559
+>> Yes. So um rumors actually I think cars
+
+00:20:07.039 --> 00:20:11.200
+are
+
+00:20:08.559 --> 00:20:14.240
+you know it's literally a squareish box
+
+00:20:11.200 --> 00:20:16.400
+that moves on 2D surface and the only
+
+00:20:14.240 --> 00:20:18.080
+thing you have to do is not to touch
+
+00:20:16.400 --> 00:20:21.200
+anything
+
+00:20:18.080 --> 00:20:22.720
+right cuz if you touch you're screwed
+
+00:20:21.200 --> 00:20:25.600
+and
+
+00:20:22.720 --> 00:20:29.280
+robots does touch and by and large it's
+
+00:20:25.600 --> 00:20:32.400
+okay. Um but robots the the whole thing
+
+00:20:29.280 --> 00:20:35.679
+about robot is it's a threedimensional
+
+00:20:32.400 --> 00:20:36.480
+machine that that the whole goal is to
+
+00:20:35.679 --> 00:20:37.120
+touch things.
+
+00:20:36.480 --> 00:20:39.200
+>> Yeah.
+
+00:20:37.120 --> 00:20:41.600
+>> And touch it in the right way. I mean
+
+00:20:39.200 --> 00:20:44.080
+this is huge. So I think there's still
+
+00:20:41.600 --> 00:20:44.960
+going to be a journey for robotics for
+
+00:20:44.080 --> 00:20:48.400
+sure. Yeah.
+
+00:20:44.960 --> 00:20:53.120
+>> 100%. So one of the things to realize
+
+00:20:48.400 --> 00:20:56.400
+this uh civilization technology is to
+
+00:20:53.120 --> 00:20:58.480
+build trust and whether it's through
+
+00:20:56.400 --> 00:21:00.480
+technologists companies etc etc. What do
+
+00:20:58.480 --> 00:21:03.280
+you think the things we should be doing
+
+00:21:00.480 --> 00:21:05.520
+as leaders as as companies as
+
+00:21:03.280 --> 00:21:07.760
+entrepreneurs to help build trust
+
+00:21:05.520 --> 00:21:10.159
+because it's obviously we only start
+
+00:21:07.760 --> 00:21:10.799
+realizing the real benefits once we get
+
+00:21:10.159 --> 00:21:12.799
+there.
+
+00:21:10.799 --> 00:21:15.520
+>> Yeah great question. I know you and I
+
+00:21:12.799 --> 00:21:19.600
+both care about this. One thing I feel
+
+00:21:15.520 --> 00:21:22.720
+very strongly is in the AI age trust
+
+00:21:19.600 --> 00:21:25.280
+cannot be outsourced to machines. Trust
+
+00:21:22.720 --> 00:21:27.440
+is fundamentally human. It's at the
+
+00:21:25.280 --> 00:21:30.640
+individual level, community level and
+
+00:21:27.440 --> 00:21:32.960
+societal level. And this is why Reed was
+
+00:21:30.640 --> 00:21:36.080
+part of our supporters for the human
+
+00:21:32.960 --> 00:21:41.679
+center AI institute at uh Stanford. We
+
+00:21:36.080 --> 00:21:45.679
+we established that um 2018. So uh way
+
+00:21:41.679 --> 00:21:49.360
+before the this latest wave of uh uh uh
+
+00:21:45.679 --> 00:21:52.320
+AI u blossoming is because we re
+
+00:21:49.360 --> 00:21:55.039
+recognize that um as machines get more
+
+00:21:52.320 --> 00:21:58.960
+powerful in its computing and reasoning
+
+00:21:55.039 --> 00:22:02.400
+and and eventually even uh actionable uh
+
+00:21:58.960 --> 00:22:06.720
+capabilities. Uh we need to establish a
+
+00:22:02.400 --> 00:22:09.840
+new norm that is needs to be part of the
+
+00:22:06.720 --> 00:22:13.200
+fabric of the society where in within
+
+00:22:09.840 --> 00:22:17.520
+this norm humans continue to have the
+
+00:22:13.200 --> 00:22:21.840
+agency to uh build trust with each other
+
+00:22:17.520 --> 00:22:25.679
+with the newer tools like AI with more
+
+00:22:21.840 --> 00:22:28.720
+powerful product like chat bots and and
+
+00:22:25.679 --> 00:22:33.280
+other things and eventually this trust
+
+00:22:28.720 --> 00:22:36.000
+has to be renewed or or updated into our
+
+00:22:33.280 --> 00:22:37.840
+governance model not just the governance
+
+00:22:36.000 --> 00:22:40.880
+of community and companies but
+
+00:22:37.840 --> 00:22:44.000
+governance of of the society at large.
+
+00:22:40.880 --> 00:22:48.400
+So I do think trust is a very very
+
+00:22:44.000 --> 00:22:51.840
+important uh um element for though this
+
+00:22:48.400 --> 00:22:55.880
+audience is very entrepreneurheavy.
+
+00:22:51.840 --> 00:22:55.880
+I would just say that
+
+00:22:56.240 --> 00:23:00.320
+care about this from the beginning no
+
+00:22:58.000 --> 00:23:02.159
+matter what product or business you're
+
+00:23:00.320 --> 00:23:04.000
+doing. Some of you might be in
+
+00:23:02.159 --> 00:23:06.320
+healthcare. You know how important it
+
+00:23:04.000 --> 00:23:09.600
+is. Some of you might be just in the
+
+00:23:06.320 --> 00:23:12.159
+infrastructure SAS whatever um you know
+
+00:23:09.600 --> 00:23:14.000
+application that feels like maybe um
+
+00:23:12.159 --> 00:23:15.679
+that's more removed. That's not true
+
+00:23:14.000 --> 00:23:18.080
+because you're serving people. You're
+
+00:23:15.679 --> 00:23:21.440
+serving businesses. Trust is really
+
+00:23:18.080 --> 00:23:25.600
+important. have that human agency as the
+
+00:23:21.440 --> 00:23:26.240
+as the the the um the source of of the
+
+00:23:25.600 --> 00:23:29.919
+trust.
+
+00:23:26.240 --> 00:23:33.400
+>> Yep. Uh 100%. And uh you know part of
+
+00:23:29.919 --> 00:23:33.400
+when Yes.
+
+00:23:36.480 --> 00:23:41.120
+um you know part of the work that you
+
+00:23:38.880 --> 00:23:43.520
+know you and etch were leading with the
+
+00:23:41.120 --> 00:23:45.760
+human- centered AI which came from your
+
+00:23:43.520 --> 00:23:47.440
+uh New York Times column um which is
+
+00:23:45.760 --> 00:23:48.640
+part of the christristening of it is
+
+00:23:47.440 --> 00:23:50.159
+part of the thing that led me to
+
+00:23:48.640 --> 00:23:52.400
+focusing on agency is one of the things
+
+00:23:50.159 --> 00:23:56.080
+that elevation of human agency as one of
+
+00:23:52.400 --> 00:23:57.600
+the key things that we need to do. Um
+
+00:23:56.080 --> 00:23:58.960
+uh you know one of the things I love
+
+00:23:57.600 --> 00:24:01.280
+talking to you is like we could
+
+00:23:58.960 --> 00:24:03.280
+literally fee and I could go on for
+
+00:24:01.280 --> 00:24:06.159
+hours. We only have a few minutes left.
+
+00:24:03.280 --> 00:24:07.440
+Um, but it's like ambient intelligence,
+
+00:24:06.159 --> 00:24:09.120
+you know, for what does that mean for
+
+00:24:07.440 --> 00:24:11.520
+medical care? There's just all these
+
+00:24:09.120 --> 00:24:14.240
+things as part of the whole OG thing
+
+00:24:11.520 --> 00:24:17.200
+like and and and on every subject you go
+
+00:24:14.240 --> 00:24:19.039
+deep. So, let's go to kind of the
+
+00:24:17.200 --> 00:24:21.120
+science side of it.
+
+00:24:19.039 --> 00:24:24.240
+>> Um, for perhaps our closing question,
+
+00:24:21.120 --> 00:24:26.799
+which is um you said it's important for
+
+00:24:24.240 --> 00:24:28.400
+scientists to be intellectually
+
+00:24:26.799 --> 00:24:30.720
+fearless.
+
+00:24:28.400 --> 00:24:33.760
+So um you know kind of have a
+
+00:24:30.720 --> 00:24:36.000
+fearlessness about it. Um what does that
+
+00:24:33.760 --> 00:24:37.440
+mean for how we should think about
+
+00:24:36.000 --> 00:24:39.600
+inventing the future? What does that
+
+00:24:37.440 --> 00:24:41.919
+mean for how science should progress?
+
+00:24:39.600 --> 00:24:44.960
+What's the what in the terms of the next
+
+00:24:41.919 --> 00:24:47.760
+generation of innovators? Um where
+
+00:24:44.960 --> 00:24:49.600
+should fearlessness play into that?
+
+00:24:47.760 --> 00:24:51.840
+>> Great. Thanks for asking that question.
+
+00:24:49.600 --> 00:24:54.080
+Well, if scientists need to be fearless,
+
+00:24:51.840 --> 00:24:57.679
+I think entrepreneurs need to be more
+
+00:24:54.080 --> 00:25:00.320
+fearless. Um, fearless to me, I love
+
+00:24:57.679 --> 00:25:03.279
+this word that this is part of the way I
+
+00:25:00.320 --> 00:25:05.360
+actually do hiring is look for people,
+
+00:25:03.279 --> 00:25:06.720
+especially young people with that
+
+00:25:05.360 --> 00:25:09.120
+fearlessness.
+
+00:25:06.720 --> 00:25:13.120
+>> Um, fearlessness.
+
+00:25:09.120 --> 00:25:16.960
+>> Um, fear fearless is to be free, is to
+
+00:25:13.120 --> 00:25:20.640
+be to get rid of the shackles that
+
+00:25:16.960 --> 00:25:24.480
+constrain your creativity, your courage,
+
+00:25:20.640 --> 00:25:27.120
+and your ability to just get done.
+
+00:25:24.480 --> 00:25:27.520
+And pardon my language, it's uh it's
+
+00:25:27.120 --> 00:25:28.559
+actually
+
+00:25:27.520 --> 00:25:30.000
+>> it's a technical term.
+
+00:25:28.559 --> 00:25:32.480
+>> Yes.
+
+00:25:30.000 --> 00:25:34.000
+>> It's actually in our core culture of our
+
+00:25:32.480 --> 00:25:39.600
+company.
+
+00:25:34.000 --> 00:25:43.200
+So um is that um you know humans are not
+
+00:25:39.600 --> 00:25:47.360
+exactly the most fastest, strongest, you
+
+00:25:43.200 --> 00:25:49.440
+know, animals on earth, right? We
+
+00:25:47.360 --> 00:25:51.520
+we were if you look at many of the
+
+00:25:49.440 --> 00:25:53.840
+dimensions, I was just in Africa this
+
+00:25:51.520 --> 00:25:55.919
+summer with my kids. I mean there's
+
+00:25:53.840 --> 00:25:59.919
+there's so many animals that are just so
+
+00:25:55.919 --> 00:26:01.039
+much better than us but but I I do feel
+
+00:25:59.919 --> 00:26:01.840
+that way and
+
+00:26:01.039 --> 00:26:06.799
+>> lots
+
+00:26:01.840 --> 00:26:09.679
+>> yes and uh but there's something that is
+
+00:26:06.799 --> 00:26:12.640
+in our brain in our mind in our soul
+
+00:26:09.679 --> 00:26:15.760
+that can propel us to do incredible
+
+00:26:12.640 --> 00:26:18.960
+things for the world for ourselves for
+
+00:26:15.760 --> 00:26:21.840
+each other and a lot of that come from
+
+00:26:18.960 --> 00:26:25.440
+our fundamental uniqueness of our
+
+00:26:21.840 --> 00:26:28.640
+creativity. ity and our sense of
+
+00:26:25.440 --> 00:26:31.919
+community, our and all this. And in
+
+00:26:28.640 --> 00:26:35.039
+order to unleash that, especially as
+
+00:26:31.919 --> 00:26:38.080
+technology is moving so fast,
+
+00:26:35.039 --> 00:26:42.080
+to me the the foundational emotional
+
+00:26:38.080 --> 00:26:44.960
+criteria is be be creative, be free. And
+
+00:26:42.080 --> 00:26:48.960
+that translate into be fearless. Run
+
+00:26:44.960 --> 00:26:53.440
+into uncertainties. Run into bold ideas
+
+00:26:48.960 --> 00:26:57.120
+that no one has make it happen yet. Run
+
+00:26:53.440 --> 00:27:00.640
+into contrarian hypothesis. Run into
+
+00:26:57.120 --> 00:27:04.080
+hard hard tasks. Um, someone said, I
+
+00:27:00.640 --> 00:27:08.320
+forgot who said that the
+
+00:27:04.080 --> 00:27:10.880
+easy tasks tasks that are so uh certain
+
+00:27:08.320 --> 00:27:13.520
+versus tasks that are uncertain are
+
+00:27:10.880 --> 00:27:15.520
+sometimes equally hard.
+
+00:27:13.520 --> 00:27:18.320
+>> TR's the one that's more uncertain
+
+00:27:15.520 --> 00:27:21.279
+because you know your fre uh your
+
+00:27:18.320 --> 00:27:24.320
+creativity will be working harder and
+
+00:27:21.279 --> 00:27:27.440
+that's where the the magic happens. So,
+
+00:27:24.320 --> 00:27:29.520
+I I love the word fearless because
+
+00:27:27.440 --> 00:27:32.559
+that's where boundaries are broken and
+
+00:27:29.520 --> 00:27:35.039
+creativities are unleashed and uh and
+
+00:27:32.559 --> 00:27:38.039
+magical things happen.
+
+00:27:35.039 --> 00:27:38.039
+And
+
+00:27:41.760 --> 00:27:47.039
+and with that, you can see why we wanted
+
+00:27:44.320 --> 00:27:48.159
+to open the first fireside with Fay.
+
+00:27:47.039 --> 00:27:52.000
+Let's give her a hand.
+
+00:27:48.159 --> 00:27:53.600
+>> Thank you. Thank you.
+
+00:27:52.000 --> 00:27:55.440
+>> Thanks to Dr. Dr. Faith A Lee for
+
+00:27:53.600 --> 00:27:57.760
+joining us at the Masters of Scale
+
+00:27:55.440 --> 00:28:00.480
+Summit. This conversation was recorded
+
+00:27:57.760 --> 00:28:03.480
+on stage at the Presidio Theater in San
+
+00:28:00.480 --> 00:28:03.480
+Francisco.
+

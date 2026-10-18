@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "finance",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfaɪnæns; faɪˈnæns; fəˈnæns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (특히 공적인) 재정(財政), 재무; 재정학",
+              "examples": [
+                {
+                  "text": "public <b>finance</b>",
+                  "translatedText": "국가 재정"
+                }
+              ],
+              "originalMeaning": "[U] (특히 공적인) 재정(財政), 재무; 재정학"
+            },
+            {
+              "meaning": "자금 (조달), 융자",
+              "examples": [
+                {
+                  "text": "equity[debt] <b>finance</b>",
+                  "translatedText": "주식 발행[채권 발행, 차입]에 의한 자금 조달"
+                }
+              ],
+              "originalMeaning": "자금 (조달), 융자"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 돈을 융통하다, 융자하다, 자금을 조달[공급]하다",
+              "examples": [
+                {
+                  "text": "<b>finance</b> a daughter through college",
+                  "translatedText": "딸의 대학 학자금을 대다"
+                }
+              ],
+              "originalMeaning": "…에 돈을 융통하다, 융자하다, 자금을 조달[공급]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "재정을 처리하다, 자금을 조달하다",
+              "examples": [],
+              "originalMeaning": "재정을 처리하다, 자금을 조달하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/11e555487951499e9bae5ad205f89af2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/11e555487951499e9bae5ad205f89af2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "finances"
+        },
+        {
+          "type": "과거형",
+          "value": "financed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "financing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "financed"
+        }
+      ],
+      "aliasConjugation": "finances",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "25e7b98fd08d6aab854790a00665d9c4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사업은 박 씨가 출자한 사업이다",
+      "text": "This business is financed by Mr. Park."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자금 융통은 지방 은행이 뒤보아준다",
+      "text": "The financing is taken care of by a local bank."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회사의 재정은 콩켸팥켸가 됐다",
+      "text": "The finances of the company went to rack and ruin."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 밑천을 대주겠다고 한다",
+      "text": "He offers to <b>finance</b> the business[to supply us with business]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "임금을 인상해 줄 만한 재원이 없다",
+      "text": "We have no means to <b>finance</b> the desired raise in the wages."
+    }
+  ],
+  "isWordType": true
+}

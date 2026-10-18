@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "connect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈnekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "연결하다, 잇다, 결합하다, 접속하다 ((to, with)), (=unite)",
+              "examples": [
+                {
+                  "text": "a word which connects words, clauses, and sentences",
+                  "translatedText": "단어·절·문장을 잇는 낱말"
+                }
+              ],
+              "originalMeaning": "연결하다, 잇다, 결합하다, 접속하다 ((to, with)), (=<span class='related_word' lang='en' >unite</span>)"
+            },
+            {
+              "meaning": "<사람·장소를> 전화로 연결하다",
+              "examples": [
+                {
+                  "text": "You are connected.",
+                  "translatedText": "(전화에서) 연결되었습니다."
+                }
+              ],
+              "originalMeaning": "<사람·장소를> 전화로 연결하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연속하다, 이어지다 ((with))",
+              "examples": [],
+              "originalMeaning": "연속하다, 이어지다 ((with))"
+            },
+            {
+              "meaning": "<기차·비행기 등이> 연결되다, 접속[연락]되다 ((with))",
+              "examples": [
+                {
+                  "text": "The train connects with another at Daejeon.",
+                  "translatedText": "이 열차는 대전에서 딴 열차와 연결된다."
+                }
+              ],
+              "originalMeaning": "<기차·비행기 등이> 연결되다, 접속[연락]되다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "접속의",
+              "examples": [],
+              "originalMeaning": "접속의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3b4ff096c43b475a9febd7a7d3ec231e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3b4ff096c43b475a9febd7a7d3ec231e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "connects"
+        },
+        {
+          "type": "과거형",
+          "value": "connected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "connecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "connected"
+        }
+      ],
+      "aliasConjugation": "connects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5cddc050ed812e859045db3165db84d8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 철사를 저 철사에[와] 연결하라.",
+      "text": "<b>Connect</b> this wire to[with] that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 읍에서 그 마을까지 철도가 통하고 있다",
+      "text": "A railway runs from this town to that village. or A railway connects this town with that village."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 사건은 서로 관련되어 있다",
+      "text": "The two cases are related[connected with] each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철도가 우리 읍을 그 시에 연결한다.",
+      "text": "The railroad connects our town with the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 열차는 대전에서 딴 열차와 연결된다.",
+      "text": "The train connects with another at Daejeon."
+    }
+  ],
+  "isWordType": true
+}

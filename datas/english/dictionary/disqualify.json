@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "disqualify",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪs│kwɑːlɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "실격시키다, 실격자[부적임자]로 판정하다 ((for, from)); <병 등이> <사람을> 무능하게 만들다(disable) ((for))",
+              "examples": [
+                {
+                  "text": "<b>disqualify</b> a person for the work",
+                  "translatedText": "그 일을 하지 못하게 하다"
+                }
+              ],
+              "originalMeaning": "실격시키다, 실격자[부적임자]로 판정하다 ((for, from)); <병 등이> <사람을> 무능하게 만들다(disable) ((for))"
+            },
+            {
+              "meaning": "(법률상) 결격자라고 선고하다 ((for)); [스포츠] 출전 자격을 박탈하다 ((for, from))",
+              "examples": [
+                {
+                  "text": "He was disqualified from taking part in the competition.",
+                  "translatedText": "그는 그 경기에 참가할 자격을 잃었다."
+                }
+              ],
+              "originalMeaning": "(법률상) 결격자라고 선고하다 ((for)); [스포츠] 출전 자격을 박탈하다 ((for, from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9bd75aed26ef470dab46eccef3c0455c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9bd75aed26ef470dab46eccef3c0455c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "disqualifies"
+        },
+        {
+          "type": "과거형",
+          "value": "disqualified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disqualifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disqualified"
+        }
+      ],
+      "aliasConjugation": "disqualifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "06c4c43e9b63c75e24e482ca7a9c12ea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 눈이 나빠서 불합격이 되었다",
+      "text": "He was rejected[disqualified] because of his poor eyesight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 다리를 절기 때문에 활동적인 일을 하지 못했다",
+      "text": "His lame foot disqualified him for active work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 색맹이라서 징병에서 실격되었다",
+      "text": "His color blindness disqualified him for military service."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1년 동안 조종사 자격을 정지당했다",
+      "text": "He was disqualified pilot for a year. or He lost his pilot's license for a year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당일 면접에 빠지는 사람은 실격된다",
+      "text": "Those who do not come for interviews on the appointed day will be disqualified."
+    }
+  ],
+  "isWordType": true
+}

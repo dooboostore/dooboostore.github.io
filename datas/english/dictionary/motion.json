@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "motion",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈmoʊʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 운동, 움직임; 동요; 이동, (천체 등의) 운행",
+              "examples": [
+                {
+                  "text": "the laws of <b>motion</b>",
+                  "translatedText": "운동의 법칙"
+                }
+              ],
+              "originalMeaning": "[U] 운동, 움직임; 동요; 이동, (천체 등의) 운행"
+            },
+            {
+              "meaning": "(기계의) 작동, 운전",
+              "examples": [],
+              "originalMeaning": "(기계의) 작동, 운전"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "몸짓으로 지시[신호, 요구]하다 ((to, away))",
+              "examples": [
+                {
+                  "text": "<b>motion</b> a person to a seat",
+                  "translatedText": "앉으라고 몸짓으로 알리다"
+                }
+              ],
+              "originalMeaning": "몸짓으로 지시[신호, 요구]하다 ((to, away))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "몸짓으로 신호하다 ((to))",
+              "examples": [
+                {
+                  "text": "( <b>motion</b>+[전]+[명]+to do) <b>motion</b> to a person to come",
+                  "translatedText": "오라고 몸짓하다"
+                }
+              ],
+              "originalMeaning": "몸짓으로 신호하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/364b9bdece7448ba86fe14400713e686",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/364b9bdece7448ba86fe14400713e686",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "motions"
+        },
+        {
+          "type": "과거형",
+          "value": "motioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "motioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "motioned"
+        }
+      ],
+      "aliasConjugation": "motions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "11bd19ec4b146c83f03cf2a35775a23a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 번 변통이 있었다",
+      "text": "I had two motions."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 차멀미를 하기 일쑤다",
+      "text": "I am prone to <b>motion</b> sickness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 뒤로 비켜서라고 우리에게 손짓했다",
+      "text": "He motioned us to stand back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 제안에 찬성 연설을 했다",
+      "text": "He spoke for[in support of] the <b>motion</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 동의를 위원회에 제출했다.",
+      "text": "He put the <b>motion</b> to the committee."
+    }
+  ],
+  "isWordType": true
+}

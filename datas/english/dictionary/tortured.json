@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>tortured</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈtɔːrtʃərd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "무척 고통받는, 고뇌하는; 고난을 당하는",
+              "examples": [
+                {
+                  "text": "a <b>tortured</b> mind",
+                  "translatedText": "고뇌하는 마음"
+                }
+              ],
+              "originalMeaning": "무척 고통받는, 고뇌하는; 고난을 당하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a65d67028c044b978d62e15d5176481d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a65d67028c044b978d62e15d5176481d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8c8e37f00300c7c3f2c6aaf77525eeb3",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>torture</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│tɔːrtʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고문, 고문 방법, 가책",
+              "examples": [
+                {
+                  "text": "instruments of <b>torture</b>",
+                  "translatedText": "형구(刑具), 고문 도구"
+                }
+              ],
+              "originalMeaning": "고문, 고문 방법, 가책"
+            },
+            {
+              "meaning": "심한 고통, 고뇌",
+              "examples": [
+                {
+                  "text": "suffer <b>torture</b>(s) from a violent stomachache",
+                  "translatedText": "격렬한 복통으로 고통받다"
+                }
+              ],
+              "originalMeaning": "심한 고통, 고뇌"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고문하다",
+              "examples": [
+                {
+                  "text": "<b>torture</b> a confession from a prisoner",
+                  "translatedText": "고문으로 죄수를 자백시키다"
+                }
+              ],
+              "originalMeaning": "고문하다"
+            },
+            {
+              "meaning": "[종종 수동형으로] (몹시) 괴롭히다, 번민하게 하다 ((with, by))",
+              "examples": [
+                {
+                  "text": "be <b>tortured</b> by[with] neuralgia",
+                  "translatedText": "신경통으로 고생하다"
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] (몹시) 괴롭히다, 번민하게 하다 ((with, by))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8913bfe0802e4ec39e672bffe49cbdae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8913bfe0802e4ec39e672bffe49cbdae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "tortures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0c1e45a1ac9a6ee0d7bf1e5eb1d6f599",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자가 고통을 받는 것은 차마 볼 수 없다.",
+      "text": "I cannot endure to see her <b>tortured</b>.=I cannot endure seeing her <b>tortured</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 인터뷰는 시작부터 끝까지 피를 말리는 것이었다",
+      "text": "That interview was sheer <b>torture</b> from start to finish."
+    }
+  ],
+  "isWordType": true
+}

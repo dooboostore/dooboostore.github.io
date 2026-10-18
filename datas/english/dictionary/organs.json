@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "organ",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɔːrɡən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "오르간, 파이프 오르간, 리드[전자] 오르간(의 건반), = BARREL ORGAN",
+              "examples": [
+                {
+                  "text": "play on the <b>organ</b>",
+                  "translatedText": "오르간을 연주하다"
+                }
+              ],
+              "originalMeaning": "오르간, 파이프 오르간, 리드[전자] 오르간(의 건반), = BARREL <b>ORGAN</b>"
+            },
+            {
+              "meaning": "[생물] 기관(器官); 장기, 조직; (사람의) 발성 기관",
+              "examples": [
+                {
+                  "text": "internal <b>organ</b> s",
+                  "translatedText": "내장"
+                }
+              ],
+              "originalMeaning": "[생물] 기관(器官); 장기, 조직; (사람의) 발성 기관"
+            },
+            {
+              "meaning": "(정치적인) 기관(機關); 기관지 ((기관 잡지, 신문))",
+              "examples": [
+                {
+                  "text": "a government <b>organ</b>",
+                  "translatedText": "정부 기관지"
+                }
+              ],
+              "originalMeaning": "(정치적인) 기관(機關); 기관지 ((기관 잡지, 신문))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2ed0a775e43642a39d922ce69040acb7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2ed0a775e43642a39d922ce69040acb7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ffa9527ca628d3d540f00402923fee4a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사용하지 않는 기관은 퇴화한다",
+      "text": "An unused <b>organ</b> will atrophy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오르간이 장중한 환영곡을 연주하였다.",
+      "text": "The <b>organ</b> rolled out[forth] its stately welcome."
+    }
+  ],
+  "isWordType": true
+}

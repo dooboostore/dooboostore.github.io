@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "half",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hæf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "반(半), 절반, 2분의 1; (대충 나눈) 약 반 ((of))",
+              "examples": [
+                {
+                  "text": "two miles and a <b>half</b>",
+                  "translatedText": "2마일 반 ((★ two and a <b>half</b> miles쪽이 일반적임))"
+                }
+              ],
+              "originalMeaning": "반(半), 절반, 2분의 1; (대충 나눈) 약 반 ((of))"
+            },
+            {
+              "meaning": "반 시간, 30분",
+              "examples": [
+                {
+                  "text": "at <b>half</b> past ten",
+                  "translatedText": "10시 반에"
+                }
+              ],
+              "originalMeaning": "반 시간, 30분"
+            }
+          ]
+        },
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "(사물·집단 등의) 반, 절반 ((",
+              "examples": [
+                {
+                  "text": "<b>Half</b> of the apple is rotten.",
+                  "translatedText": "그 사과의 반은 썩었다."
+                }
+              ],
+              "originalMeaning": "(사물·집단 등의) 반, 절반 (("
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "반의, 절반의, 1/2의; 약 반의",
+              "examples": [
+                {
+                  "text": "a <b>half</b> share",
+                  "translatedText": "절반 몫"
+                }
+              ],
+              "originalMeaning": "반의, 절반의, 1/2의; 약 반의"
+            },
+            {
+              "meaning": "[관사 또는 one’s가 붙은 명사 앞에서] …의 반의 ((",
+              "examples": [
+                {
+                  "text": "<b>Half</b> a loaf is better than no bread.",
+                  "translatedText": "[속담] 반이라도 없는 것보다는 낫다."
+                }
+              ],
+              "originalMeaning": "[관사 또는 one’s가 붙은 명사 앞에서] …의 반의 (("
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6844f193ee5743abaeaa76d5a9429ee1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6844f193ee5743abaeaa76d5a9429ee1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "halves"
+        }
+      ],
+      "aliasConjugation": "halves",
+      "aliasConjugationPos": "복수형",
+      "gdid": "fdce28d694604b8f60ee3074c80105a3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 일은 반쯤 끝났다.",
+      "text": "My work is <b>half</b> done."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책을 반은 읽었다[썼다].",
+      "text": "I am <b>half</b> through the book."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 작업의 절반은 끝냈다.",
+      "text": "<b>Half</b> my work has been done."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사과의 반은 썩었다.",
+      "text": "<b>Half</b> of the apple is rotten."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 판자를 켜서 두쪽을 냈다",
+      "text": "He sawed the plank in <b>half</b>."
+    }
+  ],
+  "isWordType": true
+}

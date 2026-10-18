@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "park",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɑːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공원, 유원지; (벤치·화단 등이 있는) 광장; 자연 공원",
+              "examples": [
+                {
+                  "text": "a national <b>park</b>",
+                  "translatedText": "국립 공원"
+                }
+              ],
+              "originalMeaning": "공원, 유원지; (벤치·화단 등이 있는) 광장; 자연 공원"
+            },
+            {
+              "meaning": "[미] 운동장, 경기장; [종종 the ~] [영·구어] 축구장, 럭비장; …장",
+              "examples": [
+                {
+                  "text": "a baseball <b>park</b>",
+                  "translatedText": "야구장"
+                }
+              ],
+              "originalMeaning": "[미] 운동장, 경기장; [종종 the ~] [영·구어] 축구장, 럭비장; …장"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "주차시키다; <포·차 등을> 한 곳에 세워[정리하여] 두다, 대기시키다",
+              "examples": [],
+              "originalMeaning": "주차시키다; <포·차 등을> 한 곳에 세워[정리하여] 두다, 대기시키다"
+            },
+            {
+              "meaning": "[구어] <물건을> (어떤 곳에 잠시) 두다, <아이 등을> 남에게 맡기다",
+              "examples": [
+                {
+                  "text": "<b>Park</b> your hat on the table.",
+                  "translatedText": "모자를 탁자 위에 두어라."
+                }
+              ],
+              "originalMeaning": "[구어] <물건을> (어떤 곳에 잠시) 두다, <아이 등을> 남에게 맡기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주차하다",
+              "examples": [],
+              "originalMeaning": "주차하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/718e567e73a24e44a281407bc7e917bf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/718e567e73a24e44a281407bc7e917bf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "parks"
+        },
+        {
+          "type": "과거형",
+          "value": "parked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "parking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "parked"
+        }
+      ],
+      "aliasConjugation": "parks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e81b5cd29924284101f02868eb1ebab9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모자를 탁자 위에 두어라.",
+      "text": "<b>Park</b> your hat on the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차는 저 뒤에 주차시켜 놓았다.",
+      "text": "The car is parked out back."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 길은 공원으로 계속되고 있다",
+      "text": "This road leads[goes] to the <b>park</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그건 식은 죽 먹기야",
+      "text": "It's a cinch. or It's a piece of cake. or It's a walk in the <b>park</b>. or It's (as) easy as apple pie[duck soup]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네 추측이 대충 사실에 가깝다",
+      "text": "Your guess is in the ball <b>park</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "entry": "participant",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɑːr│tɪsɪpənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "참여하는, 더불어 하는, 함께하는, 관계하는 ((of))",
+              "examples": [],
+              "originalMeaning": "참여하는, 더불어 하는, 함께하는, 관계하는 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "참가자, 참여자, 관계자, 협동자",
+              "examples": [
+                {
+                  "text": "a <b>participant</b> in the event",
+                  "translatedText": "그 사건의 관계자"
+                }
+              ],
+              "originalMeaning": "참가자, 참여자, 관계자, 협동자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d390db298a064505af0dff62965a5060",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d390db298a064505af0dff62965a5060",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d42789e4510f1b6a9c5d0d38abd974d4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "참가자는 많아야 50명일 것이다",
+      "text": "We expect fifty participants at most."
+    }
+  ],
+  "isWordType": true
+}

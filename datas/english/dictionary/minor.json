@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "minor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmaɪnə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "작은 편의; 소(小, 少)… (smaller, lesser)",
+              "examples": [
+                {
+                  "text": "a <b>minor</b> party",
+                  "translatedText": "소수당"
+                }
+              ],
+              "originalMeaning": "작은 편의; 소(小, 少)… (smaller, lesser)"
+            },
+            {
+              "meaning": "중요치 않은, 둘째 가는, 2류의, 소(小)…(inferior); [의학] <수술 등> 위험이 따르지 않는",
+              "examples": [
+                {
+                  "text": "a <b>minor</b> poet",
+                  "translatedText": "2류 시인"
+                }
+              ],
+              "originalMeaning": "중요치 않은, 둘째 가는, 2류의, 소(小)…(inferior); [의학] <수술 등> 위험이 따르지 않는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "미성년자",
+              "examples": [
+                {
+                  "text": "No <b>minor</b> s.",
+                  "translatedText": "[게시] 미성년자 사절."
+                }
+              ],
+              "originalMeaning": "미성년자"
+            },
+            {
+              "meaning": "[미] 부전공 과목 ((전공 과목(major)보다 적은 단위의 것)), 부전공 학생",
+              "examples": [],
+              "originalMeaning": "[미] 부전공 과목 ((전공 과목(major)보다 적은 단위의 것)), 부전공 학생"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(대학에서 …을) 부전공하다 ((in))",
+              "examples": [],
+              "originalMeaning": "(대학에서 …을) 부전공하다 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cd2761198ab34e9e8efb894cdb05809e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cd2761198ab34e9e8efb894cdb05809e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "minors"
+        },
+        {
+          "type": "과거형",
+          "value": "minored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "minoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "minored"
+        }
+      ],
+      "aliasConjugation": "minors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "66dd768f7cd778b91e5b46997012a79a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 사소한 일에 신경쓰지 마라",
+      "text": "Don't worry over <b>minor</b> details like that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그만한 일을 가지고 소란 피우지 마라",
+      "text": "Don't make a fuss about a <b>minor</b> thing like that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주류는 미성년자에게 판금되어 있다",
+      "text": "The sale of liquors to minors is prohibited."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "상점이 미성년자에게 주류를 파는 것은 법으로 금지되어 있다.",
+      "text": "The law forbids stores to sell liquor to minors."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사소한 실수로 신참을 너무 나무라지 마라",
+      "text": "You shouldn't be so hard on a new employee for just a <b>minor</b> mistake."
+    }
+  ],
+  "isWordType": true
+}

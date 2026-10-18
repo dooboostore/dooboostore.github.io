@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "teach",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tiːtʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<학과 등을> 가르치다, 교수하다",
+              "examples": [
+                {
+                  "text": "He <b>teaches</b> a large class.",
+                  "translatedText": "그는 인원이 많은 학급을 가르치고 있다."
+                }
+              ],
+              "originalMeaning": "<학과 등을> 가르치다, 교수하다"
+            },
+            {
+              "meaning": "훈련하다, 길들이다",
+              "examples": [
+                {
+                  "text": "( <b>teach</b>+[목]+to do) <b>teach</b> a dog to sit up and beg",
+                  "translatedText": "개에게 앉아서 앞발을 드는 것을 가르치다"
+                }
+              ],
+              "originalMeaning": "훈련하다, 길들이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교사 노릇을 하다, (…에서) 가르치다 ((at))",
+              "examples": [
+                {
+                  "text": "He <b>teaches</b> for a living.",
+                  "translatedText": "그는 교원 생활을 하고 있다."
+                }
+              ],
+              "originalMeaning": "교사 노릇을 하다, (…에서) 가르치다 ((at))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08a7a891ff2a494b8d81df528cee2c10",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08a7a891ff2a494b8d81df528cee2c10",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "teaches"
+        },
+        {
+          "type": "과거형",
+          "value": "taught"
+        },
+        {
+          "type": "현재 분사",
+          "value": "teaching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "taught"
+        }
+      ],
+      "aliasConjugation": "teaches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "434215fac69766c3cfcf2d272292f607",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 맛을 봐야 해",
+      "text": "He should be taught manners."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 교원 생활을 하고 있다.",
+      "text": "He <b>teaches</b> for a living."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 두 학교 교사를 겸임하고 있다",
+      "text": "He <b>teaches</b> in both schools."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 인원이 많은 학급을 가르치고 있다.",
+      "text": "He <b>teaches</b> a large class."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 김 교수로부터 불어를 배웠다",
+      "text": "I was taught French by Prof. Kim."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "<b>successive</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səkˈsesɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "연속하는, 계속적인",
+              "examples": [
+                {
+                  "text": "It rained (for) three <b>successive</b> days(= three days <b>successive</b> ly).",
+                  "translatedText": "3일 계속해서 비가 왔다."
+                }
+              ],
+              "originalMeaning": "연속하는, 계속적인"
+            },
+            {
+              "meaning": "(순서가) 다음의",
+              "examples": [
+                {
+                  "text": "the second <b>successive</b> day",
+                  "translatedText": "그 이틀째"
+                }
+              ],
+              "originalMeaning": "(순서가) 다음의"
+            },
+            {
+              "meaning": "상속의, 계승의",
+              "examples": [],
+              "originalMeaning": "상속의, 계승의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6de70e1f0c54acbb980569492f0d91b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6de70e1f0c54acbb980569492f0d91b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c5aefc8c640b712f94a98eec3e9aada0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "3 일 계속해서 비가 왔다.",
+      "text": "It rained (for) three <b>successive</b> days(=three days successively)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 팀은 올해 네 번째 연승을 확보했다",
+      "text": "Our team has chalked up a fourth <b>successive</b> victory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들 자매는 연년생이다",
+      "text": "They are sisters born in two <b>successive</b>[consecutive] years."
+    }
+  ],
+  "isWordType": true
+}

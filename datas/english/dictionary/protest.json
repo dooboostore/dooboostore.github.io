@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "protest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에 대해> 항의하다, 이의를 제기하다",
+              "examples": [
+                {
+                  "text": "<b>protest</b> low wages",
+                  "translatedText": "저임금에 항의하다"
+                }
+              ],
+              "originalMeaning": "<…에 대해> 항의하다, 이의를 제기하다"
+            },
+            {
+              "meaning": "항의하여[이의를 제기하여] 말하다",
+              "examples": [
+                {
+                  "text": "He <b>protest</b> s that he did no such thing.",
+                  "translatedText": "그는 그런 일을 하지 않았다고 항변한다."
+                }
+              ],
+              "originalMeaning": "항의하여[이의를 제기하여] 말하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "항의하다, 이의를 제기하다 ((against)), (=object)",
+              "examples": [
+                {
+                  "text": "<b>protest</b> against an action[a measure]",
+                  "translatedText": "어떤 행동[조치]에 항의하다"
+                }
+              ],
+              "originalMeaning": "항의하다, 이의를 제기하다 ((against)), (=<span class='related_word' lang='en' >object</span>)"
+            },
+            {
+              "meaning": "주장하다, 확언하다",
+              "examples": [],
+              "originalMeaning": "주장하다, 확언하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 항의, 이의의 제기 ((against, to; about))",
+              "examples": [
+                {
+                  "text": "a <b>protest</b> movement",
+                  "translatedText": "항의 운동"
+                }
+              ],
+              "originalMeaning": "[UC/] 항의, 이의의 제기 ((against, to; about))"
+            },
+            {
+              "meaning": "단언, 주장",
+              "examples": [],
+              "originalMeaning": "단언, 주장"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6f720b60db6d4ebdb5a90200321fca25",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6f720b60db6d4ebdb5a90200321fca25",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "protests"
+        },
+        {
+          "type": "과거형",
+          "value": "protested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "protesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "protested"
+        }
+      ],
+      "aliasConjugation": "protests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8f6db3598b0320468ebb7ddd04b0f21a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 항의 데모를 벌였다.",
+      "text": "They staged a <b>protest</b> march."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그런 일을 안했다고 항변한다.",
+      "text": "He protests that he did no such thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리의 항의를 엄포로만 해석해서는 안 된다.",
+      "text": "You must not read our <b>protest</b> as nothing but bluff."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해롤드는 평생토록 동전 한 푼 훔친 적이 없다고 단언했다.",
+      "text": "Harold protested that he never stole a penny in his life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노조 지도자들은 저임금에 대항해서 스트라이크할 것을 요청했다",
+      "text": "Union leaders called a strike in <b>protest</b> over low pay."
+    }
+  ],
+  "isWordType": true
+}

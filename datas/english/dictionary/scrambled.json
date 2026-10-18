@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "scramble",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈskræmbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(민첩하게) 기어오르다 ((up)), 기어다니다 ((about)), 기어가다, 기어 나아가다 ((on, along))",
+              "examples": [
+                {
+                  "text": "<b>scramble</b> up a cliff",
+                  "translatedText": "벼랑을 기어오르다"
+                }
+              ],
+              "originalMeaning": "(민첩하게) 기어오르다 ((up)), 기어다니다 ((about)), 기어가다, 기어 나아가다 ((on, along))"
+            },
+            {
+              "meaning": "서로 다투다, 서로 빼앗다 ((for, after)); 앞을 다투어 빼앗다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>scramble</b> for a seat",
+                  "translatedText": "자리를 먼저 잡으려고 서로 다투다"
+                }
+              ],
+              "originalMeaning": "서로 다투다, 서로 빼앗다 ((for, after)); 앞을 다투어 빼앗다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(서둘러) 긁어모으다, 그러모으다; 뒤섞다, 뒤범벅을 만들다(jumble) ((up, together))",
+              "examples": [
+                {
+                  "text": "He <b>scrambled</b> the papers up on the desk.",
+                  "translatedText": "그는 허겁지겁 책상 위의 서류를 그러모았다."
+                }
+              ],
+              "originalMeaning": "(서둘러) 긁어모으다, 그러모으다; 뒤섞다, 뒤범벅을 만들다(jumble) ((up, together))"
+            },
+            {
+              "meaning": "당황하여 …을 혼동하다[뒤바꾸다]",
+              "examples": [
+                {
+                  "text": "She <b>scrambled</b> our names and faces.",
+                  "translatedText": "그녀는 당황하여 우리들의 얼굴과 이름을 혼동해 버렸다."
+                }
+              ],
+              "originalMeaning": "당황하여 …을 혼동하다[뒤바꾸다]"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~] 기어오르기",
+              "examples": [],
+              "originalMeaning": "[a ~] 기어오르기"
+            },
+            {
+              "meaning": "[a ~] 쟁탈(전), 서로 다투기 ((for))",
+              "examples": [],
+              "originalMeaning": "[a ~] 쟁탈(전), 서로 다투기 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8c0acb80ce394476ba6e1751966ae73e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8c0acb80ce394476ba6e1751966ae73e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "scrambles"
+        },
+        {
+          "type": "과거형",
+          "value": "scrambled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scrambling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scrambled"
+        }
+      ],
+      "aliasConjugation": "scrambles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "81f42753c40e7f570294a81f8bb7dc26",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 바위 산을 기어올랐다",
+      "text": "He <b>scrambled</b>[climbed] up the rocky mountain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 허겁지겁 책상 위의 서류를 그러모았다.",
+      "text": "He <b>scrambled</b> the papers up on the desk."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 당황하여 우리들의 얼굴과 이름을 혼동해 버렸다.",
+      "text": "She <b>scrambled</b> our names and faces."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 회사 안에서의 승진을 서로 다투었다.",
+      "text": "They <b>scrambled</b> after promotion in the office."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "discount",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "할인하다 ((게시에서는 10% OFF 또는 SAVE 10% 등으로 표기함))",
+              "examples": [
+                {
+                  "text": "<b>discount</b> men's wear at ten percent",
+                  "translatedText": "남성복을 10% 할인해서 팔다"
+                }
+              ],
+              "originalMeaning": "할인하다 ((게시에서는 10% OFF 또는 SAVE 10% 등으로 표기함))"
+            },
+            {
+              "meaning": "에누리하여 듣다[생각하다]; 신용하지 않다; 무시하다, 도외시하다, 고려에 넣지 않다",
+              "examples": [],
+              "originalMeaning": "에누리하여 듣다[생각하다]; 신용하지 않다; 무시하다, 도외시하다, 고려에 넣지 않다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "할인하다, 고려하다 ((for))",
+              "examples": [],
+              "originalMeaning": "할인하다, 고려하다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 할인, (액면 이하의) 감가(deduction); [상업] 할인액; (어음 등의) 할인율; (빚의) 선불 이자; [비유] 참작",
+              "examples": [],
+              "originalMeaning": "[CU] 할인, (액면 이하의) 감가(deduction); [상업] 할인액; (어음 등의) 할인율; (빚의) 선불 이자; [비유] 참작"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b173d67337547f19f8c547ca2a01c8d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b173d67337547f19f8c547ca2a01c8d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "discounts"
+        },
+        {
+          "type": "과거형",
+          "value": "discounted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "discounting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "discounted"
+        }
+      ],
+      "aliasConjugation": "discounts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "edc64ccd5164e3ff6f0ed9ffb8bd5dec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "깎아줄뿐더러 공짜 선물도 준다더라",
+      "text": "In addition to discounts, they offer a free gift."
+    }
+  ],
+  "isWordType": true
+}

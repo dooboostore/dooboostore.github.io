@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "revenge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈvendʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 복수(vengeance), 앙갚음; 보복",
+              "examples": [],
+              "originalMeaning": "[UC/] 복수(vengeance), 앙갚음; 보복"
+            },
+            {
+              "meaning": "복수심, 원한(怨恨), 원수",
+              "examples": [],
+              "originalMeaning": "복수심, 원한(怨恨), 원수"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[~ oneself 또는 수동형으로] 복수하다, 원수를 갚다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "revengeoneself on[upon] a person = be revenged on[upon] a person",
+                  "translatedText": "…에게 복수하다, 원한을 풀다"
+                }
+              ],
+              "originalMeaning": "[~ oneself 또는 수동형으로] 복수하다, 원수를 갚다 ((on, upon))"
+            },
+            {
+              "meaning": "<피해자·부당 행위 등의> 원한을 갚다, 보복하다",
+              "examples": [
+                {
+                  "text": "They revengedtheir dead cruelly.",
+                  "translatedText": "그들은 무자비한 방법으로 죽은 사람의 원한을 갚았다."
+                }
+              ],
+              "originalMeaning": "<피해자·부당 행위 등의> 원한을 갚다, 보복하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "원한을 풀다 ((upon))",
+              "examples": [],
+              "originalMeaning": "원한을 풀다 ((upon))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb4adf0e1ed94e24b85e9c0b130d8890",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb4adf0e1ed94e24b85e9c0b130d8890",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "revenges"
+        },
+        {
+          "type": "과거형",
+          "value": "revenged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "revenging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "revenged"
+        }
+      ],
+      "aliasConjugation": "revenges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e970393f5c28eed6ce91c95e0632e56d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그들에 대해서 복수할 작정이다",
+      "text": "I will <b>revenge</b> myself on them. or I will be revenged on them. or I will retaliate on them."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 무자비한 방법으로 죽은 사람의 원한을 갚았다.",
+      "text": "They revenged their dead cruelly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그녀에 대한 복수를 맹세했다.",
+      "text": "He swore that he would be revenged on her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 수모를 언젠가 반드시 보복하리라",
+      "text": "Surely I will <b>revenge</b> this insult someday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 복수심으로 노여움을 불태웠다.",
+      "text": "She fed her anger with thoughts of <b>revenge</b>."
+    }
+  ],
+  "isWordType": true
+}

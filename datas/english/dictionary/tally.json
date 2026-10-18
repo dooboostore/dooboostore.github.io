@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "tally",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtæli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "계정(計定), 계산; (경기의) 득점",
+              "examples": [
+                {
+                  "text": "make[earn] a <b>tally</b> in a game",
+                  "translatedText": "경기에서 득점하다"
+                }
+              ],
+              "originalMeaning": "계정(計定), 계산; (경기의) 득점"
+            },
+            {
+              "meaning": "부신(符信), 부절(符節), 신표(信標) ((나무에 금액을 새기고 그것을 둘로 갈라 후일의 증거로 쌍방이 하나씩 가진 것))",
+              "examples": [],
+              "originalMeaning": "부신(符信), 부절(符節), 신표(信標) ((나무에 금액을 새기고 그것을 둘로 갈라 후일의 증거로 쌍방이 하나씩 가진 것))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<부신·부절 등에> 새기다(score)",
+              "examples": [],
+              "originalMeaning": "<부신·부절 등에> 새기다(score)"
+            },
+            {
+              "meaning": "<득점 등을> 기록하다",
+              "examples": [],
+              "originalMeaning": "<득점 등을> 기록하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "계산서[기록]를 작성하다",
+              "examples": [],
+              "originalMeaning": "계산서[기록]를 작성하다"
+            },
+            {
+              "meaning": "(경기에서) 득점하다",
+              "examples": [],
+              "originalMeaning": "(경기에서) 득점하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/928e709f4d23403aaaf47d8effac00aa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/928e709f4d23403aaaf47d8effac00aa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tallies"
+        },
+        {
+          "type": "복수형",
+          "value": "tallies"
+        },
+        {
+          "type": "과거형",
+          "value": "tallied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tallying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tallied"
+        }
+      ],
+      "aliasConjugation": "tallies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e2fd21a1013dee84840e0a29e88b14aa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 계산과 네 계산이 맞아떨어진다",
+      "text": "My figures <b>tally</b>[check] with yours."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 이야기는 톰의 이야기와 부합한다.",
+      "text": "His story tallies with Tom’s."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 사람의 말이 들어맞는다",
+      "text": "Their accounts <b>tally</b> with each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 말은 사실과 맞지 않다",
+      "text": "His statement does not <b>tally</b> with the facts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신의 말은 사실과 합치하지 않는다",
+      "text": "Your statement does not square[check, <b>tally</b>] with the facts."
+    }
+  ],
+  "isWordType": true
+}

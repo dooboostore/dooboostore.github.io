@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "stack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stæk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "더미, 퇴적(堆積), 쌓아 올림",
+              "examples": [],
+              "originalMeaning": "더미, 퇴적(堆積), 쌓아 올림"
+            },
+            {
+              "meaning": "낟가리, 쌓은 짚[건초] 더미",
+              "examples": [],
+              "originalMeaning": "낟가리, 쌓은 짚[건초] 더미"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<낟가리 등을> 쌓다, 쌓아 올리다 ((up)); <총을> 걸다",
+              "examples": [],
+              "originalMeaning": "<낟가리 등을> 쌓다, 쌓아 올리다 ((up)); <총을> 걸다"
+            },
+            {
+              "meaning": "<패를> 속임수로 섞어 맞추다",
+              "examples": [],
+              "originalMeaning": "<패를> 속임수로 섞어 맞추다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(산더미같이) 쌓이다 ((up))",
+              "examples": [],
+              "originalMeaning": "(산더미같이) 쌓이다 ((up))"
+            },
+            {
+              "meaning": "열[무리]을 이루다 ((up))",
+              "examples": [],
+              "originalMeaning": "열[무리]을 이루다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72adc12160014ba0a77cd98f4d574cea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72adc12160014ba0a77cd98f4d574cea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stacks"
+        },
+        {
+          "type": "과거형",
+          "value": "stacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stacked"
+        }
+      ],
+      "aliasConjugation": "stacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f7a4d477858cf066415c8e3bfcc0f71c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "할 일이 태산같이 쌓였다",
+      "text": "I have stacks of work to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "접시가 설거지대에 산더미처럼 쌓여 있다",
+      "text": "Dishes are stacked up on the draining board."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "할 일이 산더미처럼 쌓여 있다",
+      "text": "I have lots of things to do. or I have stacks of work to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "포개서 쌓지 마시오",
+      "text": "Do not <b>stack</b>. or Not to be stowed below another."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "걸어총!",
+      "text": "Pile[<b>stack</b>] arms!"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "terminate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│tɜːrmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<행동·상태 등을> 끝내다, 종결시키다, 마무리하다",
+              "examples": [],
+              "originalMeaning": "<행동·상태 등을> 끝내다, 종결시키다, 마무리하다"
+            },
+            {
+              "meaning": "…의 끝을 이루다",
+              "examples": [],
+              "originalMeaning": "…의 끝을 이루다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<행동·상태 등이> 끝나다, 그치다, 종결하다 ((at, in, with))",
+              "examples": [],
+              "originalMeaning": "<행동·상태 등이> 끝나다, 그치다, 종결하다 ((at, in, with))"
+            },
+            {
+              "meaning": "다하다, 기한이 다하다",
+              "examples": [],
+              "originalMeaning": "다하다, 기한이 다하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5da4bcf070254fd5a39d319ec39906c9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5da4bcf070254fd5a39d319ec39906c9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "terminates"
+        },
+        {
+          "type": "과거형",
+          "value": "terminated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "terminating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "terminated"
+        }
+      ],
+      "aliasConjugation": "terminates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f7a6ad025ad6aff597cd5dff2ef30f5a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 길은 숲에서 끝난다",
+      "text": "The road terminates in woods."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "본 조약은 오는 7월 5일로 소멸한다",
+      "text": "This treaty shall <b>terminate</b> on the 5th of July."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그와는 거래가 끊어졌다",
+      "text": "The business with him has been terminated."
+    }
+  ],
+  "isWordType": true
+}

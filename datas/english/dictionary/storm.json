@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "storm",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "stɔːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "폭풍(우)",
+              "examples": [
+                {
+                  "text": "After a <b>storm</b> (comes) a calm.",
+                  "translatedText": "[속담] 폭풍이 지나가면 고요가 온다."
+                }
+              ],
+              "originalMeaning": "폭풍(우)"
+            },
+            {
+              "meaning": "큰 비[눈, 천둥, 우박]; 거친 날씨",
+              "examples": [],
+              "originalMeaning": "큰 비[눈, 천둥, 우박]; 거친 날씨"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<날씨가> 사나워지다, 폭풍이 불다",
+              "examples": [
+                {
+                  "text": "It storms.",
+                  "translatedText": "폭풍우가 일어난다."
+                }
+              ],
+              "originalMeaning": "<날씨가> 사나워지다, 폭풍이 불다"
+            },
+            {
+              "meaning": "(…에) 격노하다, 마구 고함치다, 호통치다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>storm</b> angrily at a person",
+                  "translatedText": "화가 나서 …에게 호통치다"
+                }
+              ],
+              "originalMeaning": "(…에) 격노하다, 마구 고함치다, 호통치다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(질문 등을) …에게 퍼붓다 [pattern]~+[목/]+[전/]+[명/] [/pattern] ~ a person with questions …에게 질문을 퍼붓다",
+              "examples": [],
+              "originalMeaning": "(질문 등을) …에게 퍼붓다 [pattern]~+[목/]+[전/]+[명/] [/pattern] ~ a person with questions …에게 질문을 퍼붓다"
+            },
+            {
+              "meaning": "…이라고 고함치다",
+              "examples": [
+                {
+                  "text": "“Get out!” he stormed.",
+                  "translatedText": "「나가라!」고 그는 소리질렀다."
+                }
+              ],
+              "originalMeaning": "…이라고 고함치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2b37dc12b5c14c358abdab41be6d96ee",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2b37dc12b5c14c358abdab41be6d96ee",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "storms"
+        },
+        {
+          "type": "과거형",
+          "value": "stormed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "storming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stormed"
+        }
+      ],
+      "aliasConjugation": "storms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "56ec239117f40b10f8ed5d962ae91709",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭풍우가 그 배를 덮쳤다",
+      "text": "A <b>storm</b> overtook the ship."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 날은 폭풍우로 저물었다.",
+      "text": "The day ended with a <b>storm</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비 온 뒤에 땅이 굳어지느니",
+      "text": "After a <b>storm</b> comes a calm."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭풍우는 최악의 상태에 있었다.",
+      "text": "The <b>storm</b> was at its worst."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭풍우가 맹위를 떨치다가 그쳤다.",
+      "text": "The <b>storm</b> raved itself out."
+    }
+  ],
+  "isWordType": true
+}

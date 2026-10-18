@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "remind",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪˈmaɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "생각나게 하다, 상기시키다, 일깨우다",
+              "examples": [
+                {
+                  "text": "He reminds me of his brother.",
+                  "translatedText": "그를 보니 그의 동생 생각이 난다."
+                }
+              ],
+              "originalMeaning": "생각나게 하다, 상기시키다, 일깨우다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "생각나다",
+              "examples": [],
+              "originalMeaning": "생각나다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb64d23820e44ea9a8b34c3c56c0e5aa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb64d23820e44ea9a8b34c3c56c0e5aa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reminds"
+        },
+        {
+          "type": "과거형",
+          "value": "reminded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reminding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reminded"
+        }
+      ],
+      "aliasConjugation": "reminds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e8ce24f23289087d796c7341a3ba92ab",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이렇게 되면 세상도 말세다",
+      "text": "The world is going to the dogs. or This reminds us of the age of decadence we live in."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 보니 옛날 생각이 난다",
+      "text": "That reminds me of the past."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그를 보니 그의 동생 생각이 난다.",
+      "text": "He reminds me of his brother."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그를 보면 죽은 동생이 연상된다",
+      "text": "He reminds me of my dead brother."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내일 간다고 그에게 일러 주게.",
+      "text": "<b>Remind</b> him that I’ll come tomorrow."
+    }
+  ],
+  "isWordType": true
+}

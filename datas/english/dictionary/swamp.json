@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>swamp</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "swɑːmp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "늪, 소택(지), 습지",
+              "examples": [],
+              "originalMeaning": "늪, 소택(지), 습지"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "늪에 빠지게 하다, 수렁에 처박다",
+              "examples": [],
+              "originalMeaning": "늪에 빠지게 하다, 수렁에 처박다"
+            },
+            {
+              "meaning": "<물이> 휩쓸다, 침수시키다; [항해] (물을 넣어) <배를> 침몰시키다",
+              "examples": [
+                {
+                  "text": "Some houses were swamped in the stream by the storm.",
+                  "translatedText": "어떤 집들은 폭풍우로 물에 잠겨 버렸다."
+                }
+              ],
+              "originalMeaning": "<물이> 휩쓸다, 침수시키다; [항해] (물을 넣어) <배를> 침몰시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<배 등이> 침수되다, 가라앉다",
+              "examples": [],
+              "originalMeaning": "<배 등이> 침수되다, 가라앉다"
+            },
+            {
+              "meaning": "늪에 빠지다, 궁지에 빠지다",
+              "examples": [],
+              "originalMeaning": "늪에 빠지다, 궁지에 빠지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3eda3f37c2064ad5a7b0c0d00f8544a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3eda3f37c2064ad5a7b0c0d00f8544a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "swamps"
+        },
+        {
+          "type": "과거형",
+          "value": "swamped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "swamping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "swamped"
+        }
+      ],
+      "aliasConjugation": "swamps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "316644226662cf639d9c018a208ba998",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 늪은 한없이 깊다",
+      "text": "This <b>swamp</b> is unfathomably deep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떤 집들은 폭풍우로 물에 잠겨 버렸다.",
+      "text": "Some houses were swamped in the stream by the storm."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "생일날에 그녀는 카드와 선물을 넘치게 받았다",
+      "text": "On her birthday she was swamped with cards and presents."
+    }
+  ],
+  "isWordType": true
+}

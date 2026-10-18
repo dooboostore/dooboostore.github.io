@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "order",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɔːrdə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "순서, 차례",
+              "examples": [
+                {
+                  "text": "in alphabetical <b>order</b> ABC",
+                  "translatedText": "순으로"
+                }
+              ],
+              "originalMeaning": "순서, 차례"
+            },
+            {
+              "meaning": "[U] 정돈, 정리, 정렬; [군사] 대형, 대열",
+              "examples": [
+                {
+                  "text": "battle <b>order</b>",
+                  "translatedText": "전투 대형"
+                }
+              ],
+              "originalMeaning": "[U] 정돈, 정리, 정렬; [군사] 대형, 대열"
+            },
+            {
+              "meaning": "[U] 서열, 석차, 순위; [C] 계급, 지위; 등급, 품등; 집단, 사회",
+              "examples": [
+                {
+                  "text": "the higher <b>order</b> s",
+                  "translatedText": "상류 사회"
+                }
+              ],
+              "originalMeaning": "[U] 서열, 석차, 순위; [C] 계급, 지위; 등급, 품등; 집단, 사회"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "명령하다, 지시하다(bid), …에 가[오]도록 명하다",
+              "examples": [
+                {
+                  "text": "( <b>order</b>+[목]+todo) I ordered him to leave the room.",
+                  "translatedText": "그에게 방에서 나가라고 명령했다."
+                }
+              ],
+              "originalMeaning": "명령하다, 지시하다(bid), …에 가[오]도록 명하다"
+            },
+            {
+              "meaning": "<의사가> <환자에게> 지시[처방]하다",
+              "examples": [
+                {
+                  "text": "The doctor ordered my aunt a rest.",
+                  "translatedText": "의사는 숙모에게 안정을 지시했다."
+                }
+              ],
+              "originalMeaning": "<의사가> <환자에게> 지시[처방]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "명령하다",
+              "examples": [],
+              "originalMeaning": "명령하다"
+            },
+            {
+              "meaning": "주문하다",
+              "examples": [
+                {
+                  "text": "<b>order</b> over the telephone",
+                  "translatedText": "전화로 주문하다"
+                }
+              ],
+              "originalMeaning": "주문하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/852bd045ec5b455c986e95926e633f5e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/852bd045ec5b455c986e95926e633f5e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "orders"
+        },
+        {
+          "type": "과거형",
+          "value": "ordered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ordering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ordered"
+        }
+      ],
+      "aliasConjugation": "orders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d9f941c65e7f21e7c6fa957c1c63d9a3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 주문 중이다",
+      "text": "The book is in <b>order</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "순서의 전후가 바뀌어 있다",
+      "text": "The <b>order</b> is inverted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그에게 물러가라고 명령했다.",
+      "text": "I ordered him away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "별명이 있을 때까지 대기하라",
+      "text": "Wait for another <b>order</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 커피를 두 잔 주문했다.",
+      "text": "They ordered two coffees."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>bleed</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bliːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "피가 나다, 출혈하다",
+              "examples": [
+                {
+                  "text": "<b>bleed</b> at the nose",
+                  "translatedText": "코피가 나다"
+                }
+              ],
+              "originalMeaning": "피가 나다, 출혈하다"
+            },
+            {
+              "meaning": "<나무가> 수액을 내다",
+              "examples": [],
+              "originalMeaning": "<나무가> 수액을 내다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "출혈시키다; [의학] 방혈하다; <피·수액을> 내다, 흐르게 하다",
+              "examples": [],
+              "originalMeaning": "출혈시키다; [의학] 방혈하다; <피·수액을> 내다, 흐르게 하다"
+            },
+            {
+              "meaning": "피눈물 나게 하다, …에게서 돈을 착취하다",
+              "examples": [],
+              "originalMeaning": "피눈물 나게 하다, …에게서 돈을 착취하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일부 잘리게 앉히는 도판[페이지]",
+              "examples": [],
+              "originalMeaning": "일부 잘리게 앉히는 도판[페이지]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15e22eabaf704b48bc1820acd02e8a6b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15e22eabaf704b48bc1820acd02e8a6b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bleeds"
+        },
+        {
+          "type": "과거형",
+          "value": "bled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bleeding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bled"
+        }
+      ],
+      "aliasConjugation": "bleeds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c55054e24d22329036ced78d90ab1022",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고무나무는 자르면 진액이 나온다",
+      "text": "A gum tree bleeds when cut."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상처에서 피가 줄줄 흐르고 있었다",
+      "text": "The wound was bleeding profusely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 출혈 과다로 중태이다",
+      "text": "He is seriously ill from heavy loss of blood[profuse bleeding]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 얼굴이 피투성이가 되어 병원에 실려갔다",
+      "text": "He was carried into the hospital, his face a mass of bleeding flesh."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 아이가 머리에 피를 흘리며 뛰어오자 정말 놀랐다",
+      "text": "I got the fright of my life when my child ran in with his head bleeding."
+    }
+  ],
+  "isWordType": true
+}

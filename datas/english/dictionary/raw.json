@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "raw",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɔː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "날[생]것의(opp. cooked), 덜 익은[구운]",
+              "examples": [
+                {
+                  "text": "a <b>raw</b> carrot",
+                  "translatedText": "생당근"
+                }
+              ],
+              "originalMeaning": "날[생]것의(opp. cooked), 덜 익은[구운]"
+            },
+            {
+              "meaning": "가공하지 않은, 원료 그대로의; 다루지 않은, 정제하지 않은, <명주 등이> 꼬지 않은; <술이> 물 타지 않은; <짐승 가죽이> 무두질되지 않은",
+              "examples": [
+                {
+                  "text": "<b>raw</b> spirits",
+                  "translatedText": "물 타지 않은 술"
+                }
+              ],
+              "originalMeaning": "가공하지 않은, 원료 그대로의; 다루지 않은, 정제하지 않은, <명주 등이> 꼬지 않은; <술이> 물 타지 않은; <짐승 가죽이> 무두질되지 않은"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 살갗이 벗겨진 곳, 생살, 찰과상, 아픈 곳, 약점",
+              "examples": [
+                {
+                  "text": "the <b>raw</b> on one's knee",
+                  "translatedText": "무릎의 찰과상"
+                }
+              ],
+              "originalMeaning": "[the ~] 살갗이 벗겨진 곳, 생살, 찰과상, 아픈 곳, 약점"
+            },
+            {
+              "meaning": "[the ~] 생것, 날것, ((특히)) 술의 원액",
+              "examples": [],
+              "originalMeaning": "[the ~] 생것, 날것, ((특히)) 술의 원액"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/82c7a92a64914e42bbfa53bc87f32daa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/82c7a92a64914e42bbfa53bc87f32daa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "rawer"
+        },
+        {
+          "type": "최상급",
+          "value": "rawest"
+        }
+      ],
+      "aliasConjugation": "rawer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "d19c21e6f38b2c811cd84530a70772e6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "원료 가격의 앙등으로 물가가 올랐다",
+      "text": "The price was raised owing to the appreciation of <b>raw</b> materials."
+    }
+  ],
+  "isWordType": true
+}

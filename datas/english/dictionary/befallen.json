@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "<b>befall</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪˈfɔːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<좋지 않은 일이> …에게 일어나다, 생기다, 들이닥치다",
+              "examples": [
+                {
+                  "text": "A misfortune befell him.",
+                  "translatedText": "불행이 그에게 들이닥쳤다."
+                }
+              ],
+              "originalMeaning": "<좋지 않은 일이> …에게 일어나다, 생기다, 들이닥치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<좋지 않은 일이> 일어나다, 생기다 ((to))",
+              "examples": [],
+              "originalMeaning": "<좋지 않은 일이> 일어나다, 생기다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c3ba7dacdcae453daba82b040a1992de",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c3ba7dacdcae453daba82b040a1992de",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "befalls"
+        },
+        {
+          "type": "과거형",
+          "value": "befell"
+        },
+        {
+          "type": "현재 분사",
+          "value": "befalling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "befallen"
+        }
+      ],
+      "aliasConjugation": "befalls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fa2ef1e58ff239d7485e9dab7aa595b5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "많은 재난이 그에게 닥쳤다.",
+      "text": "Many ills befell him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "무서운 액이 그들에게 닥쳤다",
+      "text": "A frightful calamity befell them."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "불행이 그에게 들이닥쳤다.",
+      "text": "A misfortune befell him."
+    }
+  ],
+  "isWordType": true
+}

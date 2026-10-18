@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "plague",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pleɪɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "역병(疫病), 전염병, 돌림병",
+              "examples": [],
+              "originalMeaning": "역병(疫病), 전염병, 돌림병"
+            },
+            {
+              "meaning": "[the ~] 페스트",
+              "examples": [],
+              "originalMeaning": "[the ~] 페스트"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "괴롭히다(vex), 귀찮게 하다 ((with))",
+              "examples": [
+                {
+                  "text": "be plagued to death",
+                  "translatedText": "귀찮아 죽을 지경이다"
+                }
+              ],
+              "originalMeaning": "괴롭히다(vex), 귀찮게 하다 ((with))"
+            },
+            {
+              "meaning": "역병에 걸리게 하다, 재앙을 입게 하다",
+              "examples": [],
+              "originalMeaning": "역병에 걸리게 하다, 재앙을 입게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b8b48af2edfd4eb0bde9b25a157693dd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b8b48af2edfd4eb0bde9b25a157693dd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "plagues"
+        },
+        {
+          "type": "과거형",
+          "value": "plagued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "plaguing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "plagued"
+        }
+      ],
+      "aliasConjugation": "plagues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1ecd6162f7dac47cd9684a81f1063b44",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 질문 공세에 시달렸다.",
+      "text": "He was plagued with questions."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 살이 가서 병들었다",
+      "text": "He has been plagued with illness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "초대받지 않은 손님은 정말 골칫거리다.",
+      "text": "Uninvited guests are a <b>plague</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "선원들 사이에 흑사병이 발생했다",
+      "text": "<b>Plague</b> has broken out among the crew."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전에는 역병을 인간의 죄에 대한 천벌로 여겼다",
+      "text": "<b>Plague</b> was formerly regarded as a visitation of God for the people's sins."
+    }
+  ],
+  "isWordType": true
+}

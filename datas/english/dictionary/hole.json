@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "hole",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hoʊl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "구멍, 틈, 터진 곳; 갱(坑)(pit); 구덩이, 웅덩이, 개울 바닥 등의 파인 곳; (짐승의) 굴, 소굴(burrow); 토옥(土獄), 지하 감옥; 아주 누추한 집[숙소]",
+              "examples": [
+                {
+                  "text": "a <b>hole</b> in the roof",
+                  "translatedText": "지붕의 구멍"
+                }
+              ],
+              "originalMeaning": "구멍, 틈, 터진 곳; 갱(坑)(pit); 구덩이, 웅덩이, 개울 바닥 등의 파인 곳; (짐승의) 굴, 소굴(burrow); 토옥(土獄), 지하 감옥; 아주 누추한 집[숙소]"
+            },
+            {
+              "meaning": "[a ~] 함정, 꼼짝할 수 없는 곤경, ((특히)) 경제적 곤경",
+              "examples": [],
+              "originalMeaning": "[a ~] 함정, 꼼짝할 수 없는 곤경, ((특히)) 경제적 곤경"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 구멍을 뚫다, …에 구멍을 파다(dig), <터널을> 파다 ((through)), [광산] <탄층을> 꿰뚫어 파다",
+              "examples": [
+                {
+                  "text": "They holed a tunnel through the hill.",
+                  "translatedText": "그들은 그 언덕을 뚫어 터널을 냈다."
+                }
+              ],
+              "originalMeaning": "…에 구멍을 뚫다, …에 구멍을 파다(dig), <터널을> 파다 ((through)), [광산] <탄층을> 꿰뚫어 파다"
+            },
+            {
+              "meaning": "<토끼 등을> 굴에 몰아넣다, <당구에서 공을> 구멍에 굴려 넣다, [종종 ~ out] <골프공을> 구멍에 쳐넣다",
+              "examples": [],
+              "originalMeaning": "<토끼 등을> 굴에 몰아넣다, <당구에서 공을> 구멍에 굴려 넣다, [종종 ~ out] <골프공을> 구멍에 쳐넣다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구멍을 파다",
+              "examples": [],
+              "originalMeaning": "구멍을 파다"
+            },
+            {
+              "meaning": "구멍에 기어들다",
+              "examples": [],
+              "originalMeaning": "구멍에 기어들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6abc657fca1044a9b69618fce73f4a9a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6abc657fca1044a9b69618fce73f4a9a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "holes"
+        },
+        {
+          "type": "과거형",
+          "value": "holed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "holing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "holed"
+        }
+      ],
+      "aliasConjugation": "holes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "df3ad799526c5d445986724340d0da1d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 양말은 펑크 났다",
+      "text": "His socks were in holes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 우산은 구멍이 났다",
+      "text": "This umbrella has a <b>hole</b> in it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 양말에 구멍이 뚫어져 있다",
+      "text": "There is a <b>hole</b> in his sock."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 방법이 최후의 수단이다",
+      "text": "That way is our ace in the <b>hole</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 뜰에 구멍을 팠다.",
+      "text": "He scraped out a <b>hole</b> in the garden."
+    }
+  ],
+  "isWordType": true
+}

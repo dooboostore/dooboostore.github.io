@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "hotel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hoʊ│tel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "호텔, 여관 ((넓고 최신식 설비를 갖춘 곳))",
+              "examples": [
+                {
+                  "text": "stay at[in] a <b>hotel</b>",
+                  "translatedText": "호텔에 묵다"
+                }
+              ],
+              "originalMeaning": "호텔, 여관 ((넓고 최신식 설비를 갖춘 곳))"
+            },
+            {
+              "meaning": "(프랑스의) 저택, 공공 건물",
+              "examples": [],
+              "originalMeaning": "(프랑스의) 저택, 공공 건물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "호텔[여관]에 묵게 하다",
+              "examples": [],
+              "originalMeaning": "호텔[여관]에 묵게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8283e53562174694bd7bc9b3f10e6dec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8283e53562174694bd7bc9b3f10e6dec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cd4f858764ecd2a5da2b4d4ca7d95bb5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 호텔은 설비가 좋다.",
+      "text": "The <b>hotel</b> is well lodged."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 뉴 호텔을 지나쳤다",
+      "text": "We passed the New <b>Hotel</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 호텔은 시설이 좋다",
+      "text": "This <b>hotel</b> has a nice setup."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전체적으로 보아, 좋은 호텔이다.",
+      "text": "Overall, it’s a good <b>hotel</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 호텔은 300인의 숙박 설비가 있다.",
+      "text": "The <b>hotel</b> sleeps 300 guests."
+    }
+  ],
+  "isWordType": true
+}

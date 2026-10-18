@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "near",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "nɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "(공간·시간적으로) 가까이, 근접하여, 이웃하여",
+              "examples": [
+                {
+                  "text": "come <b>near</b>",
+                  "translatedText": "접근하다"
+                }
+              ],
+              "originalMeaning": "(공간·시간적으로) 가까이, 근접하여, 이웃하여"
+            },
+            {
+              "meaning": "[종종 복합어로] <관계 등이> 가깝게, 밀접하게",
+              "examples": [
+                {
+                  "text": "He has <b>near</b>-native command of English.",
+                  "translatedText": "그는 영어를 모국어와 가깝게 말한다."
+                }
+              ],
+              "originalMeaning": "[종종 복합어로] <관계 등이> 가깝게, 밀접하게"
+            }
+          ]
+        },
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "((",
+              "examples": [
+                {
+                  "text": "[CE/] Her house is <b>near</b>[nearby(×)] the new airport.",
+                  "translatedText": "그녀의 집은 새로 생긴 공항 근처에 있다."
+                }
+              ],
+              "originalMeaning": "(("
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(거리·시간·단계적으로) 가까운(opp. far), 아주 가까운, 가까운 쪽의",
+              "examples": [
+                {
+                  "text": "the <b>near</b> side",
+                  "translatedText": "이쪽"
+                }
+              ],
+              "originalMeaning": "(거리·시간·단계적으로) 가까운(opp. far), 아주 가까운, 가까운 쪽의"
+            },
+            {
+              "meaning": "[A] <관계가> 가까운, 근친의; 친한; (이해) 관계가 깊은",
+              "examples": [],
+              "originalMeaning": "[A] <관계가> 가까운, 근친의; 친한; (이해) 관계가 깊은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4af11cd831854e3f9c26b23eb9012431",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4af11cd831854e3f9c26b23eb9012431",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "nearer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "nears"
+        },
+        {
+          "type": "최상급",
+          "value": "nearest"
+        },
+        {
+          "type": "과거형",
+          "value": "neared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "nearing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "neared"
+        }
+      ],
+      "aliasConjugation": "nearer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "c4e38f06218843bec779c7f48427a69c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "몸 풀 때가 가까웠다",
+      "text": "She is nearing her confinement. or She is going to have a child shortly. or She is soon to become a mother. or She is expecting soon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 못 갈 뻔했다",
+      "text": "He nearly didn't go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이제 곧 열 시다",
+      "text": "It is nearly ten o'clock."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 죽어 가고 있다",
+      "text": "He is dying[at the point of death]. or He is <b>near</b>[close] to death. or He is at death's door."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이제 곧 끝날 시간입니다",
+      "text": "The time is nearly up."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "textbook",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtekstbʊk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "교과서(course book), 교본",
+              "examples": [
+                {
+                  "text": "an English <b>textbook</b>",
+                  "translatedText": "영어 교과서"
+                }
+              ],
+              "originalMeaning": "교과서(course book), 교본"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "교과서의, 표준의",
+              "examples": [],
+              "originalMeaning": "교과서의, 표준의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a5d5ed145ad849bf93cbc1f2dc376a5d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a5d5ed145ad849bf93cbc1f2dc376a5d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1c68c642b496bdd2a5c8e62aa176020d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 새 교과서를 편집하고 있다",
+      "text": "We are editing a new <b>textbook</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 교과서는 10단원으로 되어 있다",
+      "text": "This <b>textbook</b> is composed of ten units."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 교과서는 몇몇 학교에서 채택되었다",
+      "text": "The <b>textbook</b> was used[adopted] in several schools."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해답을 교과서의 해답과 대조했다.",
+      "text": "I checked my answers with those in the <b>textbook</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국정 교과서에 오류가 있을 수 없다는 것은 상식적인 문제다",
+      "text": "Our common sense tells us positively that the state textbooks are free from errors."
+    }
+  ],
+  "isWordType": true
+}

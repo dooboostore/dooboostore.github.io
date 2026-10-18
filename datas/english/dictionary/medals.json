@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "medal",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmedl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "메달, 훈장, 기장(記章)",
+              "examples": [
+                {
+                  "text": "award a <b>medal</b> to a person",
+                  "translatedText": "훈장을 수여하다"
+                }
+              ],
+              "originalMeaning": "메달, 훈장, 기장(記章)"
+            },
+            {
+              "meaning": "(성자의 모습을 그린) 성패",
+              "examples": [],
+              "originalMeaning": "(성자의 모습을 그린) 성패"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 메달을 수여하다",
+              "examples": [],
+              "originalMeaning": "…에게 메달을 수여하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(스포츠에서) 메달을 따다",
+              "examples": [],
+              "originalMeaning": "(스포츠에서) 메달을 따다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b0ac4eb0a2ee4c558afafcf6d7c0779a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b0ac4eb0a2ee4c558afafcf6d7c0779a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "medals"
+        },
+        {
+          "type": "과거형",
+          "value": "medalled, medaled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "medalling, medaling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "medalled, medaled"
+        }
+      ],
+      "aliasConjugation": "medals",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c8d9a921dd4ddd4753eba03edb132001",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 메달은 우승자를 표창하기 위한 것이다.",
+      "text": "This <b>medal</b> is to honor the winner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 평균대 체조로 금메달을 땄다",
+      "text": "She won the gold <b>medal</b> in the beam event."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대통령은 그녀에게 공로 훈장을 내렸다",
+      "text": "The President conferred the <b>Medal</b> for Merit on her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 훌륭한 연주로 금메달을 받았다.",
+      "text": "He was awarded a gold <b>medal</b> for his excellent performance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 경기에서 금메달의 향방이 판가름 난다",
+      "text": "This match will decide the destination of the gold <b>medal</b>."
+    }
+  ],
+  "isWordType": true
+}

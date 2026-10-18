@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>reconsider</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriːkənˈsɪdə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "재고하다, 다시 생각하다",
+              "examples": [
+                {
+                  "text": "<b>reconsider</b> a refusal",
+                  "translatedText": "거부할지의 여부를 재고하다"
+                }
+              ],
+              "originalMeaning": "재고하다, 다시 생각하다"
+            },
+            {
+              "meaning": "<동의·투표 등을> 재의(再議)[재심]에 부치다",
+              "examples": [],
+              "originalMeaning": "<동의·투표 등을> 재의(再議)[재심]에 부치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "재고하다, 재의[재심]하다",
+              "examples": [],
+              "originalMeaning": "재고하다, 재의[재심]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/955f2b6a978b4fa8988b509002394960",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/955f2b6a978b4fa8988b509002394960",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reconsiders"
+        },
+        {
+          "type": "과거형",
+          "value": "reconsidered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reconsidering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reconsidered"
+        }
+      ],
+      "aliasConjugation": "reconsiders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ac798fd40bb002d6d3178d083196d974",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사직의 건은 재고해 보시오",
+      "text": "I would advise you to <b>reconsider</b> your intended resignation."
+    }
+  ],
+  "isWordType": true
+}

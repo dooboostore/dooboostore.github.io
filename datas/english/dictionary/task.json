@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "task",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tæsk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "직무, 과제, 과업",
+              "examples": [
+                {
+                  "text": "He has done his <b>task</b>.",
+                  "translatedText": "그는 자기 일을 해냈다."
+                }
+              ],
+              "originalMeaning": "직무, 과제, 과업"
+            },
+            {
+              "meaning": "힘든 일, 노역(勞役); ((일반적으로)) 일",
+              "examples": [],
+              "originalMeaning": "힘든 일, 노역(勞役); ((일반적으로)) 일"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "혹사하다, 괴롭히다",
+              "examples": [
+                {
+                  "text": "<b>task</b> one's brain",
+                  "translatedText": "머리를 쥐어짜다"
+                }
+              ],
+              "originalMeaning": "혹사하다, 괴롭히다"
+            },
+            {
+              "meaning": "…에게 일을 과하다[할당하다]",
+              "examples": [],
+              "originalMeaning": "…에게 일을 과하다[할당하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b744e956aafe4b88bf095615a5ce7ff3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b744e956aafe4b88bf095615a5ce7ff3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tasks"
+        },
+        {
+          "type": "과거형",
+          "value": "tasked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tasking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tasked"
+        }
+      ],
+      "aliasConjugation": "tasks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f76323445fc95a8beb638606e230fc3e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기 일을 해냈다.",
+      "text": "He has done his <b>task</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 일에 여념이 없다.",
+      "text": "He is intent on his <b>task</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그로서는 그 일이 역부족이다",
+      "text": "He is not equal to the <b>task</b>[doing it]. or He is not competent enough for the <b>task</b>. or The <b>task</b> is beyond his capacity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일은 내가 갈망할 수 없다",
+      "text": "I am not equal to the <b>task</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그나 나나 누가 그 일을 해야 한다",
+      "text": "He or I must do the <b>task</b>."
+    }
+  ],
+  "isWordType": true
+}

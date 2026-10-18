@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "debate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈbeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "논쟁[토론]하다, 토론에 참가하다 ((on, about)), (=discuss)",
+              "examples": [
+                {
+                  "text": "<b>debate</b> on[about] a question",
+                  "translatedText": "어떤 문제에 대해 토론하다"
+                }
+              ],
+              "originalMeaning": "논쟁[토론]하다, 토론에 참가하다 ((on, about)), (=<span class='related_word' lang='en' >discuss</span>)"
+            },
+            {
+              "meaning": "숙고하다 ((of, about))",
+              "examples": [],
+              "originalMeaning": "숙고하다 ((of, about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "토의[토론]하다",
+              "examples": [],
+              "originalMeaning": "토의[토론]하다"
+            },
+            {
+              "meaning": "숙고[검토]하다(consider)",
+              "examples": [
+                {
+                  "text": "( <b>debate</b> +wh. to do) I was debating in my mind whether to go or not.",
+                  "translatedText": "갈까 말까 숙고 중이었다."
+                }
+              ],
+              "originalMeaning": "숙고[검토]하다(consider)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 토론, 토의, 논쟁 ((upon)); [the ~s] (의회의) 토의록, 토론 보고서 (=argument)",
+              "examples": [
+                {
+                  "text": "the question under <b>debate</b>",
+                  "translatedText": "논쟁 중인 문제"
+                }
+              ],
+              "originalMeaning": "[UC/] 토론, 토의, 논쟁 ((upon)); [the ~s] (의회의) 토의록, 토론 보고서 (=<span class='related_word' lang='en' >argument</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b7731a68bfe3498ebd98af1df0b54b50",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b7731a68bfe3498ebd98af1df0b54b50",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "debates"
+        },
+        {
+          "type": "과거형",
+          "value": "debated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "debating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "debated"
+        }
+      ],
+      "aliasConjugation": "debates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aee2b5462234cc700948033d0e520844",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 여전히 논의할 여지가 있다",
+      "text": "That is still a matter of <b>debate</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "갈까 말까 숙고 중이었다.",
+      "text": "I was debating in my mind whether to go or not."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 토론에서 우리에게 그 점을 양보했다.",
+      "text": "He conceded the point to us in the <b>debate</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토론은 임신 중절의 도덕성을 주요 테마로 다루었다.",
+      "text": "The <b>debate</b> revolved around the morality of abortion."
+    }
+  ],
+  "isWordType": true
+}

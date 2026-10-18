@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "face",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "feɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "얼굴, 얼굴 생김새(look); 안색, 표정; [구어] 화장(품)",
+              "examples": [
+                {
+                  "text": "a broad <b>face</b>",
+                  "translatedText": "넓적한 얼굴"
+                }
+              ],
+              "originalMeaning": "얼굴, 얼굴 생김새(look); 안색, 표정; [구어] 화장(품)"
+            },
+            {
+              "meaning": "[종종 pl.] 찌푸린 얼굴(grimace)",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 찌푸린 얼굴(grimace)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·건물이> 향하다, …에 면하다(look toward(s))",
+              "examples": [
+                {
+                  "text": "<b>face</b> the light",
+                  "translatedText": "밝은 쪽으로 향하다"
+                }
+              ],
+              "originalMeaning": "<사람·건물이> 향하다, …에 면하다(look toward(s))"
+            },
+            {
+              "meaning": "<위험·재난 등에> 정면으로 대하다, 대항하다(confront); 용감하게 맞서다(brave)",
+              "examples": [
+                {
+                  "text": "<b>face</b> the future",
+                  "translatedText": "미래에 맞서다"
+                }
+              ],
+              "originalMeaning": "<위험·재난 등에> 정면으로 대하다, 대항하다(confront); 용감하게 맞서다(brave)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<건물이> (어느 방향을) 향하다, 면하다(look) ((on, onto, to, toward))",
+              "examples": [
+                {
+                  "text": "It faces north[to[toward] the north].",
+                  "translatedText": "북향입니다."
+                }
+              ],
+              "originalMeaning": "<건물이> (어느 방향을) 향하다, 면하다(look) ((on, onto, to, toward))"
+            },
+            {
+              "meaning": "방향 전환하다",
+              "examples": [],
+              "originalMeaning": "방향 전환하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1b80a7e4f84745f8889cdb67908001d9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1b80a7e4f84745f8889cdb67908001d9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "faces"
+        },
+        {
+          "type": "과거형",
+          "value": "faced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "facing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "faced"
+        }
+      ],
+      "aliasConjugation": "faces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "27339f7044ee72ea9cb8e50c5666cddc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 짓을 하면 부모님을 뵐 면목이 없어진다",
+      "text": "I could never look my parents in the <b>face</b>[<b>face</b> my parents] if I did such a thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 하면 내 낯이 선다",
+      "text": "That will save my <b>face</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "좌석은 뒤를 향해 있었다.",
+      "text": "The seats faced rearward."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 바다 쪽을 향했다.",
+      "text": "She faced toward the sea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 어려운 살림에 찌들었다",
+      "text": "Hardship of life has left its trace on her <b>face</b>. or Her <b>face</b> was worn out by hardship of life."
+    }
+  ],
+  "isWordType": true
+}

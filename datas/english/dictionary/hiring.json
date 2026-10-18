@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "hiring",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "háiəriŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 고용, 임대차",
+              "examples": [
+                {
+                  "text": "the <b>hiring</b> of a ship",
+                  "translatedText": "용선(傭船)"
+                }
+              ],
+              "originalMeaning": "[U] 고용, 임대차"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/62fe94b1f6ee4eb79fc7491b0abc7f5b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/62fe94b1f6ee4eb79fc7491b0abc7f5b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "654fdf66be873870c9ceb14e64fdbf2d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "hire",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhaɪə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고용하다; 세내다, 임차하다, (사용료를 내고) 빌리다 (=employ, borrow)",
+              "examples": [
+                {
+                  "text": "<b>hire</b> a clerk",
+                  "translatedText": "점원을 고용하다"
+                }
+              ],
+              "originalMeaning": "고용하다; 세내다, 임차하다, (사용료를 내고) 빌리다 (=<span class='related_word' lang='en' >employ, borrow</span>)"
+            },
+            {
+              "meaning": "(사용료를 받고) 빌려주다, 세주다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>hire</b> out cars",
+                  "translatedText": "차를 빌려주다"
+                }
+              ],
+              "originalMeaning": "(사용료를 받고) 빌려주다, 세주다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…로서) 고용되다 ((out))",
+              "examples": [],
+              "originalMeaning": "(…로서) 고용되다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사람의) 고용, (물건의) 임차",
+              "examples": [],
+              "originalMeaning": "(사람의) 고용, (물건의) 임차"
+            },
+            {
+              "meaning": "세, 사용 요금; 급료, 임금, 보수",
+              "examples": [
+                {
+                  "text": "pay for the <b>hire</b> of",
+                  "translatedText": "…의 사용료를 지불하다"
+                }
+              ],
+              "originalMeaning": "세, 사용 요금; 급료, 임금, 보수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0a25589269e3484285fe7a62a14734c8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0a25589269e3484285fe7a62a14734c8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "hires",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b2920312d368bcf548de9065ac6feafe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 잔디 깎는 사람을 고용했다",
+      "text": "We hired a man to mow the lawn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 일꾼을 사서 울타리를 고쳤다.",
+      "text": "He hired a workman to repair the fence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시간으로나 돈으로나 그를 고용할 여력이 없다",
+      "text": "I have neither time nor money to spare for <b>hiring</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 회사는 직원을 고용할 때 외국인을 차별한다",
+      "text": "That company discriminates against foreigners in its <b>hiring</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 유능한 변호사를 고용해서 처벌을 받지 않고 넘어갔다",
+      "text": "Because he hired clever lawyers he managed to escape punishment."
+    }
+  ],
+  "isWordType": true
+}

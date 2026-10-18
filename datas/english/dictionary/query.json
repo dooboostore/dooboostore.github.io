@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "query",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkwɪri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "질문, 의문; 의혹",
+              "examples": [],
+              "originalMeaning": "질문, 의문; 의혹"
+            },
+            {
+              "meaning": "물음표 ((?)), (교정쇄 등에서) 의문나는 곳에 붙이는 기호 ((?, q., qu. 등))",
+              "examples": [],
+              "originalMeaning": "물음표 ((?)), (교정쇄 등에서) 의문나는 곳에 붙이는 기호 ((?, q., qu. 등))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사실 여부를> 묻다, 질문하다, 의문을 가지다 ((whether, if))",
+              "examples": [
+                {
+                  "text": "I <b>query</b> the reliability of his word. = I <b>query</b> whetherhis word can be relied on.",
+                  "translatedText": "그의 말을 믿을 수 있을지 의심스럽다."
+                }
+              ],
+              "originalMeaning": "<사실 여부를> 묻다, 질문하다, 의문을 가지다 ((whether, if))"
+            },
+            {
+              "meaning": "<권위 있는 사람에게> 질문하다(question)",
+              "examples": [],
+              "originalMeaning": "<권위 있는 사람에게> 질문하다(question)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "질문하다, 의심을 표시하다",
+              "examples": [],
+              "originalMeaning": "질문하다, 의심을 표시하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7f15b7f84fe34e45a186a4e67d51e279",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7f15b7f84fe34e45a186a4e67d51e279",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "queries"
+        },
+        {
+          "type": "복수형",
+          "value": "queries"
+        },
+        {
+          "type": "과거형",
+          "value": "queried"
+        },
+        {
+          "type": "현재 분사",
+          "value": "querying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "queried"
+        }
+      ],
+      "aliasConjugation": "queries",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "96c6610298a298ff2898dd2a2ffa5095",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 말을 믿을 수 있을지 의심스럽다.",
+      "text": "I <b>query</b> the reliability of his word.=I <b>query</b> whether his word can be relied on."
+    }
+  ],
+  "isWordType": true
+}

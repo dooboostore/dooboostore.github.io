@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "disagree",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌdɪsəˈɡriː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "일치하지 않다 ((with))",
+              "examples": [
+                {
+                  "text": "His report disagrees with yours.",
+                  "translatedText": "그의 보고는 당신 것과 일치하지 않는다."
+                }
+              ],
+              "originalMeaning": "일치하지 않다 ((with))"
+            },
+            {
+              "meaning": "의견이 다르다(differ); 사이가 나쁘다, 다투다(quarrel) ((with))",
+              "examples": [
+                {
+                  "text": "<b>disagree</b> with him",
+                  "translatedText": "그와 의견이 맞지 않다"
+                }
+              ],
+              "originalMeaning": "의견이 다르다(differ); 사이가 나쁘다, 다투다(quarrel) ((with))"
+            },
+            {
+              "meaning": "<풍토·음식이> 체질에 맞지 않다 ((with))",
+              "examples": [
+                {
+                  "text": "Pork always disagrees with me.",
+                  "translatedText": "돼지고기는 내 체질에 맞지 않는다."
+                }
+              ],
+              "originalMeaning": "<풍토·음식이> 체질에 맞지 않다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2749324d4a684aeb96c53e5b7d0592d0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2749324d4a684aeb96c53e5b7d0592d0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "disagrees"
+        },
+        {
+          "type": "과거형",
+          "value": "disagreed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "disagreeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "disagreed"
+        }
+      ],
+      "aliasConjugation": "disagrees",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c1f2a95372d8cad9b686da2e57c24e4b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "생선을 먹고 얹힌 것 같다",
+      "text": "I'm afraid the fish disagreed with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그와 나는 언제나 의견이 맞지 않는다",
+      "text": "He always disagrees with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돼지고기는 내 체질에 맞지 않는다.",
+      "text": "Pork always disagrees with me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "생선 먹은 것이 식상했다",
+      "text": "The fish I ate upset[disagreed with] me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "친구라도 때로는 의견이 맞지 않는다",
+      "text": "Even friends sometimes <b>disagree</b>."
+    }
+  ],
+  "isWordType": true
+}

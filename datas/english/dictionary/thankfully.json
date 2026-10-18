@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "thankfully",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈθæŋkfəli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "감사하여, [문장 전체를 수식하여] 고맙게도",
+              "examples": [
+                {
+                  "text": "<b>Thankfully</b>, it has stopped snowing.",
+                  "translatedText": "다행히도 눈이 멎었다."
+                }
+              ],
+              "originalMeaning": "감사하여, [문장 전체를 수식하여] 고맙게도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e5eb256c73e946f78ae9339903478782",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e5eb256c73e946f78ae9339903478782",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3740aa26091a0faf41198dc48abf19c1",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "thankful",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈθæŋkfl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[P] 감사하는, 고맙게 여기는 ((to a person, for a thing)); 매우 기쁜 ((that …)), (=grateful)",
+              "examples": [
+                {
+                  "text": "I am <b>thankful</b> to have[<b>thankful</b> that I have] been rescued from the sinking boat.",
+                  "translatedText": "가라앉는 보트에서 구출된 데 대하여 감사를 드립니다."
+                }
+              ],
+              "originalMeaning": "[P] 감사하는, 고맙게 여기는 ((to a person, for a thing)); 매우 기쁜 ((that …)), (=<span class='related_word' lang='en' >grateful</span>)"
+            },
+            {
+              "meaning": "감사의, 사은(謝恩)의 <기도 등>",
+              "examples": [],
+              "originalMeaning": "감사의, 사은(謝恩)의 <기도 등>"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ab4eae8060dc47308278fbd869fef67e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ab4eae8060dc47308278fbd869fef67e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "574a61f0b7cdcdc275ac237b390abe0e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아주 사소한 일에도 고마워한다",
+      "text": "It takes so little to make him <b>thankful</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가라앉는 보트에서 구출된 데 대하여 감사를 드립니다.",
+      "text": "I am <b>thankful</b> to have[<b>thankful</b> that I have] been rescued from the sinking boat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다행히도 눈이 멎었다.",
+      "text": "<b>Thankfully</b>, it has stopped snowing."
+    }
+  ],
+  "isWordType": true
+}

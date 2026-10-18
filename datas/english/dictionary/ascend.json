@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "<b>ascend</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈsend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(위로) 오르다, 올라가다; <연기 등이> 올라가다 (=climb)",
+              "examples": [
+                {
+                  "text": "The balloon ascended high up in the sky.",
+                  "translatedText": "기구가 하늘 높이 올라갔다."
+                }
+              ],
+              "originalMeaning": "(위로) 오르다, 올라가다; <연기 등이> 올라가다 (=<span class='related_word' lang='en' >climb</span>)"
+            },
+            {
+              "meaning": "<길 등이> 오르막이 되다",
+              "examples": [
+                {
+                  "text": "The path <b>ascend</b> s here.",
+                  "translatedText": "길은 여기서 오르막이 된다."
+                }
+              ],
+              "originalMeaning": "<길 등이> 오르막이 되다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을[에] 오르다, 올라가다; <강 등을> 거슬러 올라가다",
+              "examples": [
+                {
+                  "text": "<b>ascend</b> the stairs[a hill]",
+                  "translatedText": "계단[언덕]을 올라가다"
+                }
+              ],
+              "originalMeaning": "…을[에] 오르다, 올라가다; <강 등을> 거슬러 올라가다"
+            },
+            {
+              "meaning": "<왕위에> 오르다, [음악] <음계 등이> 저음에서 고음으로 연주하다[노래하다]",
+              "examples": [
+                {
+                  "text": "<b>ascend</b> the throne",
+                  "translatedText": "왕위에 오르다"
+                }
+              ],
+              "originalMeaning": "<왕위에> 오르다, [음악] <음계 등이> 저음에서 고음으로 연주하다[노래하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9c1a0a8a92254d4982ed6413078732e4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9c1a0a8a92254d4982ed6413078732e4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ascends"
+        },
+        {
+          "type": "과거형",
+          "value": "ascended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ascending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ascended"
+        }
+      ],
+      "aliasConjugation": "ascends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f0549cb7e3698fd430964f166110c9c6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "길은 여기서 오르막이 된다.",
+      "text": "The path ascends here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "천 리 길도 한 걸음부터",
+      "text": "Step after step the ladder is ascended."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비행기가 구름 속으로 떴다",
+      "text": "The airplane ascended into the clouds."
+    }
+  ],
+  "isWordType": true
+}

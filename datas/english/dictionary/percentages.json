@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "entry": "percentage",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pər│sentɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 a ~] 백분율[비]; 비율, 율",
+              "examples": [
+                {
+                  "text": "a <b>percentage</b> of six",
+                  "translatedText": "6퍼센트"
+                }
+              ],
+              "originalMeaning": "[보통 a ~] 백분율[비]; 비율, 율"
+            },
+            {
+              "meaning": "수수료, 구전, 이율, 할인액",
+              "examples": [],
+              "originalMeaning": "수수료, 구전, 이율, 할인액"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "승산이 있는, 확률이 높은",
+              "examples": [],
+              "originalMeaning": "승산이 있는, 확률이 높은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/09a7bc32c1b048d7b955bb856045f19b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/09a7bc32c1b048d7b955bb856045f19b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0b7b7135fe805ca86a61efdb10913fbc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "위스키는 알코올 함유량이 많다",
+      "text": "Whisky contains a large <b>percentage</b> of alcohol."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오차는 플러스 마이너스 3 퍼센트 포인트이다",
+      "text": "The margin of error is plus or minus three <b>percentage</b> points."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "올해 대학 졸업자들의 취업률이 좋다",
+      "text": "The <b>percentage</b> of employment among the college graduates shows a favorable trend this year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "율이 1퍼센트 올랐다",
+      "text": "The ratio went up one percent. or The <b>percentage</b> was raised one point."
+    }
+  ],
+  "isWordType": true
+}

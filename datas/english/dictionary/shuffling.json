@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "shuffle",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈʃʌfl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<발을> 질질 끌다, 발을 끌며 걷다",
+              "examples": [
+                {
+                  "text": "The old man <b>shuffle</b> d his feet.",
+                  "translatedText": "그 노인은 발을 질질 끌며 걸었다."
+                }
+              ],
+              "originalMeaning": "<발을> 질질 끌다, 발을 끌며 걷다"
+            },
+            {
+              "meaning": "(댄스에서) 발을 끌며 추다",
+              "examples": [],
+              "originalMeaning": "(댄스에서) 발을 끌며 추다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "발을 질질 끌며 걷다",
+              "examples": [
+                {
+                  "text": "He shuffles along.",
+                  "translatedText": "그는 발을 질질 끌며 걸어다닌다."
+                }
+              ],
+              "originalMeaning": "발을 질질 끌며 걷다"
+            },
+            {
+              "meaning": "발을 끌며 춤추다",
+              "examples": [],
+              "originalMeaning": "발을 끌며 춤추다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "발을 끌며 걷기",
+              "examples": [],
+              "originalMeaning": "발을 끌며 걷기"
+            },
+            {
+              "meaning": "잰 걸음으로 발을 끌기[끌며 추기]",
+              "examples": [
+                {
+                  "text": "the double <b>shuffle</b>",
+                  "translatedText": "한쪽 발을 두 번씩 급히 끄는 스텝"
+                }
+              ],
+              "originalMeaning": "잰 걸음으로 발을 끌기[끌며 추기]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9db6553fb4bf43ed86cdaa96fa7321f4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9db6553fb4bf43ed86cdaa96fa7321f4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shuffles"
+        },
+        {
+          "type": "과거형",
+          "value": "shuffled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shuffling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shuffled"
+        }
+      ],
+      "aliasConjugation": "shuffles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2408aad352900b02d15bfb859d9d72aa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 노인은 발을 질질 끌며 걸었다.",
+      "text": "The old man shuffled his feet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "얼버무리지 말고 똑똑히 대답하라",
+      "text": "Don't <b>shuffle</b>. Give me a clear answer."
+    }
+  ],
+  "isWordType": true
+}

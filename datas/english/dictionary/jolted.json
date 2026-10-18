@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "<b>jolt</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dʒoʊlt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<마차 따위가 승객을> 갑자기 세게 흔들다, 덜커덩거리게 하다",
+              "examples": [
+                {
+                  "text": "The bus <b>jolted</b> its passengers over the rough road.",
+                  "translatedText": "버스는 울퉁불퉁한 길을 덜커덩거리며 승객을 태우고 갔다."
+                }
+              ],
+              "originalMeaning": "<마차 따위가 승객을> 갑자기 세게 흔들다, 덜커덩거리게 하다"
+            },
+            {
+              "meaning": "세게 치다[두드리다]; (정신적) 충격을 주다, 놀라게 하다; 간섭하다; <기억 등을> 갑자기 되살리다",
+              "examples": [
+                {
+                  "text": "He tried to <b>jolt</b> the nail free.",
+                  "translatedText": "그는 못을 쾅쾅 쳐서 흔들리게 하려고 했다."
+                }
+              ],
+              "originalMeaning": "세게 치다[두드리다]; (정신적) 충격을 주다, 놀라게 하다; 간섭하다; <기억 등을> 갑자기 되살리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "심하게 흔들리다, 흔들리며 가다",
+              "examples": [
+                {
+                  "text": "The car <b>jolted</b> along.",
+                  "translatedText": "차는 덜커덩덜커덩 흔들거리며 갔다."
+                }
+              ],
+              "originalMeaning": "심하게 흔들리다, 흔들리며 가다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "심한 상하 요동, 급격한 동요",
+              "examples": [],
+              "originalMeaning": "심한 상하 요동, 급격한 동요"
+            },
+            {
+              "meaning": "정신적 충격, 쇼크; 놀람",
+              "examples": [],
+              "originalMeaning": "정신적 충격, 쇼크; 놀람"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8da40c0fdeb0452b859d11fdc008a4ba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8da40c0fdeb0452b859d11fdc008a4ba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "jolts"
+        },
+        {
+          "type": "과거형",
+          "value": "jolted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "jolting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "jolted"
+        }
+      ],
+      "aliasConjugation": "jolts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b11cc179a32be1df8783b9a219dd3d29",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차는 덜커덩덜커덩 흔들거리며 갔다.",
+      "text": "The car <b>jolted</b> along."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 못을 쾅쾅 쳐서 흔들리게 하려고 했다.",
+      "text": "He tried to <b>jolt</b> the nail free."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사건으로 그들은 갑자기 행동을 취했다.",
+      "text": "The event <b>jolted</b> them into action."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "버스는 울퉁불퉁한 길을 덜커덩거리며 승객을 태우고 갔다.",
+      "text": "The bus <b>jolted</b> its passengers over the rough road."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차가 몹시 기우뚱거렸다",
+      "text": "The car received a tremendous jolting."
+    }
+  ],
+  "isWordType": true
+}

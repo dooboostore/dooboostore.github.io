@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>ebb</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "eb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 썰물, 간조(干潮)(opp. flood, flow)",
+              "examples": [],
+              "originalMeaning": "[the ~] 썰물, 간조(干潮)(opp. flood, flow)"
+            },
+            {
+              "meaning": "감퇴, 쇠퇴기",
+              "examples": [],
+              "originalMeaning": "감퇴, 쇠퇴기"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<조수가> 빠지다, 써다(opp. flow)",
+              "examples": [],
+              "originalMeaning": "<조수가> 빠지다, 써다(opp. flow)"
+            },
+            {
+              "meaning": "<혈액·힘 등이> 줄다, <가산 등이> 기울다(decline)",
+              "examples": [
+                {
+                  "text": "His life was slowly <b>ebbing</b> away.",
+                  "translatedText": "그의 생명은 서서히 쇠퇴해 가고 있었다."
+                }
+              ],
+              "originalMeaning": "<혈액·힘 등이> 줄다, <가산 등이> 기울다(decline)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a19265ec27f645f2b1fa5a63b814f13f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a19265ec27f645f2b1fa5a63b814f13f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ebbs"
+        },
+        {
+          "type": "과거형",
+          "value": "ebbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ebbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ebbed"
+        }
+      ],
+      "aliasConjugation": "ebbs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a86c4b7e26cc0bef8426bfdbda308334",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 가산이 기울기 시작했다",
+      "text": "His fortune began to <b>ebb</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 기력이 쇠하여 가고 있다",
+      "text": "His strength is <b>ebbing</b> away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 영향력은 점차 감소하고 있다",
+      "text": "His influence is on the <b>ebb</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "밀물이 있으면 썰물도 있다, 달도 차면 기운다.",
+      "text": "Every flow must have its <b>ebb</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 생명은 서서히 쇠퇴해 가고 있었다.",
+      "text": "His life was slowly <b>ebbing</b> away."
+    }
+  ],
+  "isWordType": true
+}

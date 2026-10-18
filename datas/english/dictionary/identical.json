@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "identical",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "aɪˈdentɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] 동일한, 꼭 같은 (=same)",
+              "examples": [
+                {
+                  "text": "the <b>identical</b> person",
+                  "translatedText": "동일한 사람, 본인"
+                }
+              ],
+              "originalMeaning": "[보통 the ~] 동일한, 꼭 같은 (=<span class='related_word' lang='en' >same</span>)"
+            },
+            {
+              "meaning": "<서로 별개의 것이> 똑같은; (…와) 꼭 일치하는 ((to, with))",
+              "examples": [
+                {
+                  "text": "an <b>identical</b> opinion",
+                  "translatedText": "꼭 같은 의견"
+                }
+              ],
+              "originalMeaning": "<서로 별개의 것이> 똑같은; (…와) 꼭 일치하는 ((to, with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] 아주 꼭 닮은 것",
+              "examples": [],
+              "originalMeaning": "[pl.] 아주 꼭 닮은 것"
+            },
+            {
+              "meaning": "일란성 쌍둥이(의 한쪽)",
+              "examples": [],
+              "originalMeaning": "일란성 쌍둥이(의 한쪽)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ded04a5cc8004bfcb2bbe46b168c60fd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ded04a5cc8004bfcb2bbe46b168c60fd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b17b034db940110058a793320722da3e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방이 그들이 작년에 묵었던 바로 그 방이다.",
+      "text": "This is the <b>identical</b> room they stayed in last year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영과 혼은 동일하다",
+      "text": "The spirit is one[<b>identical</b>] with the soul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이하 동문",
+      "text": "<b>Identical</b> wording thereafter[for the rest]. or The rest is the same as above."
+    }
+  ],
+  "isWordType": true
+}

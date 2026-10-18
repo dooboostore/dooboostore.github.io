@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "bomb",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɑːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "폭탄; [the ~] (정치적 입장에서 본) 원자[수소] 폭탄, 핵무기",
+              "examples": [
+                {
+                  "text": "a time <b>bomb</b>",
+                  "translatedText": "시한폭탄"
+                }
+              ],
+              "originalMeaning": "폭탄; [the ~] (정치적 입장에서 본) 원자[수소] 폭탄, 핵무기"
+            },
+            {
+              "meaning": "(무기로서 또는 군중을 해산시키기 위해 사용되는) 폭발물",
+              "examples": [
+                {
+                  "text": "a smoke <b>bomb</b>",
+                  "translatedText": "연막탄"
+                }
+              ],
+              "originalMeaning": "(무기로서 또는 군중을 해산시키기 위해 사용되는) 폭발물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "폭격하다, …에 폭탄을 투하하다",
+              "examples": [],
+              "originalMeaning": "폭격하다, …에 폭탄을 투하하다"
+            },
+            {
+              "meaning": "폭파하다",
+              "examples": [],
+              "originalMeaning": "폭파하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "폭탄을 투하하다",
+              "examples": [],
+              "originalMeaning": "폭탄을 투하하다"
+            },
+            {
+              "meaning": "<폭탄이> 폭발하다",
+              "examples": [],
+              "originalMeaning": "<폭탄이> 폭발하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9750183f5bdd419189686af6263eee21",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9750183f5bdd419189686af6263eee21",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bombs"
+        },
+        {
+          "type": "과거형",
+          "value": "bombed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bombing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bombed"
+        }
+      ],
+      "aliasConjugation": "bombs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0bd14fec821b983d7f5282f923e8b021",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다행히 폭탄이 폭발하지 않았다",
+      "text": "Luckily the <b>bomb</b> didn't go off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 열차에 폭탄을 던졌다",
+      "text": "He threw a <b>bomb</b> at the train."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 건물은 폭탄으로 파괴되었다.",
+      "text": "The building was destroyed by a <b>bomb</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭탄 위협은 속임수로 드러났다",
+      "text": "The <b>bomb</b> scare turned out to be a hoax."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 도시 중심부를 폭격했다",
+      "text": "They bombed the central part of the city."
+    }
+  ],
+  "isWordType": true
+}

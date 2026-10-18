@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "reconcile",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈrekənsaɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "화해시키다, 융화시키다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>reconcile</b> persons to each other = <b>reconcile</b> a person to[with] another",
+                  "translatedText": "두 사람을 화해시키다"
+                }
+              ],
+              "originalMeaning": "화해시키다, 융화시키다 ((with))"
+            },
+            {
+              "meaning": "<분쟁 등을> 조정하다, 중재하다",
+              "examples": [
+                {
+                  "text": "<b>reconcile</b> a dispute",
+                  "translatedText": "논쟁을 조정하다"
+                }
+              ],
+              "originalMeaning": "<분쟁 등을> 조정하다, 중재하다"
+            },
+            {
+              "meaning": "일치시키다, 조화시키다(harmonize) ((to, with))",
+              "examples": [
+                {
+                  "text": "<b>reconcile</b> accounts",
+                  "translatedText": "수지 결산을 맞추다"
+                }
+              ],
+              "originalMeaning": "일치시키다, 조화시키다(harmonize) ((to, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a2b78227dcfe4ebeada8331a1a62cc98",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a2b78227dcfe4ebeada8331a1a62cc98",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reconciles"
+        },
+        {
+          "type": "과거형",
+          "value": "reconciled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reconciling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reconciled"
+        }
+      ],
+      "aliasConjugation": "reconciles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "74f899501827c20d53de30563d0d0318",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 런던 생활에 만족하고 있다.",
+      "text": "He is reconciled to living in London."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서로 화해해서 다시 친구가 되자",
+      "text": "Let us become reconciled and friends again."
+    }
+  ],
+  "isWordType": true
+}

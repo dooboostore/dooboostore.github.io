@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "shift",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃɪft"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…의> 방향을 바꾸다; 바꾸어 놓다[끼우다], <장면 등을> 바꾸다",
+              "examples": [
+                {
+                  "text": "<b>shift</b> the helm",
+                  "translatedText": "키의 방향을 바꾸다"
+                }
+              ],
+              "originalMeaning": "<…의> 방향을 바꾸다; 바꾸어 놓다[끼우다], <장면 등을> 바꾸다"
+            },
+            {
+              "meaning": "물건을 이동시키다, 옮기다, …의 위치·장소를 바꾸다",
+              "examples": [
+                {
+                  "text": "<b>shift</b> a burden to the other shoulder",
+                  "translatedText": "짐을 다른 어깨로 옮기다"
+                }
+              ],
+              "originalMeaning": "물건을 이동시키다, 옮기다, …의 위치·장소를 바꾸다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "바뀌다, 옮다; 위치가 변경되다",
+              "examples": [
+                {
+                  "text": "She <b>shifted</b> about for many years.",
+                  "translatedText": "그녀는 여러 해 동안 여기저기 옮겨 살았다."
+                }
+              ],
+              "originalMeaning": "바뀌다, 옮다; 위치가 변경되다"
+            },
+            {
+              "meaning": "<무대 등이> 바뀌다",
+              "examples": [
+                {
+                  "text": "The scene shifts.",
+                  "translatedText": "장면이 바뀐다."
+                }
+              ],
+              "originalMeaning": "<무대 등이> 바뀌다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(위치·방향·상태 등의) 변화, 이동, 전환; 변천, 순환",
+              "examples": [
+                {
+                  "text": "a <b>shift</b> of wind",
+                  "translatedText": "풍향의 변화"
+                }
+              ],
+              "originalMeaning": "(위치·방향·상태 등의) 변화, 이동, 전환; 변천, 순환"
+            },
+            {
+              "meaning": "교체, 교대, 순환; (교대하는) 패, 교대조",
+              "examples": [
+                {
+                  "text": "a day[night] <b>shift</b>",
+                  "translatedText": "주간[야간] 조; 교대 시간; 교대 직공"
+                }
+              ],
+              "originalMeaning": "교체, 교대, 순환; (교대하는) 패, 교대조"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6fbe632ed8154300bcfdde3512e33044",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6fbe632ed8154300bcfdde3512e33044",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shifts"
+        },
+        {
+          "type": "과거형",
+          "value": "shifted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shifting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shifted"
+        }
+      ],
+      "aliasConjugation": "shifts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "50d7d44a1d56481554fb0cdd6003296b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오늘은 야간 근무하는 날이야",
+      "text": "I'm on a night <b>shift</b> today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 여덟 시간마다 번갈아 일한다",
+      "text": "They work in eight-hour shifts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것으로 이럭저럭 꾸려 나가겠습니다",
+      "text": "I will make do[<b>shift</b>] with it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "야근조는 오후 10시에 작업을 시작한다.",
+      "text": "The night <b>shift</b> goes on at 10p.m."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 여러 해 동안 여기저기 옮겨 살았다.",
+      "text": "She <b>shifted</b> about for many years."
+    }
+  ],
+  "isWordType": true
+}

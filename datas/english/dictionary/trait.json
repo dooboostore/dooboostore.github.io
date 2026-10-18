@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "trait",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "treɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "특성, 특색, 특징",
+              "examples": [
+                {
+                  "text": "American traits",
+                  "translatedText": "미국인의 국민성"
+                }
+              ],
+              "originalMeaning": "특성, 특색, 특징"
+            },
+            {
+              "meaning": "[드물게] (펜·연필 등의) 일필(一筆); [드물게] 기미(氣味), 기색, 기(touch); 소량 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>trait</b> of humor",
+                  "translatedText": "익살기"
+                }
+              ],
+              "originalMeaning": "[드물게] (펜·연필 등의) 일필(一筆); [드물게] 기미(氣味), 기색, 기(touch); 소량 ((of))"
+            },
+            {
+              "meaning": "얼굴 생김새, 이목구비, 인상",
+              "examples": [
+                {
+                  "text": "the <b>trait</b> s of her face",
+                  "translatedText": "그녀의 얼굴 생김새"
+                }
+              ],
+              "originalMeaning": "얼굴 생김새, 이목구비, 인상"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b964edefc373475d9b6c286f3d41cc88",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b964edefc373475d9b6c286f3d41cc88",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "826f37b83e0046de7528e5854fdb306e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 국민적 특색을 잃은 것처럼 보인다",
+      "text": "They seem to have divested themselves entirely of their national traits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "미국인의 국민성",
+      "text": "American traits"
+    }
+  ],
+  "isWordType": true
+}

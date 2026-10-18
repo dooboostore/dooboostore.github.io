@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "glue",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡluː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 아교, [일반적으로] 접착제",
+              "examples": [
+                {
+                  "text": "quick-drying <b>glue</b>",
+                  "translatedText": "순간접착제"
+                }
+              ],
+              "originalMeaning": "[UC/] 아교, [일반적으로] 접착제"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을 아교[접착제]로 붙이다, …에 아교[접착제, 풀]를 바르다;[종종 수동형으로] 달라붙어서 떨어지지 않다",
+              "examples": [
+                {
+                  "text": "<b>glue</b> a label on a package",
+                  "translatedText": "소포에 꼬리표를 붙이다"
+                }
+              ],
+              "originalMeaning": "…을 아교[접착제]로 붙이다, …에 아교[접착제, 풀]를 바르다;[종종 수동형으로] 달라붙어서 떨어지지 않다"
+            },
+            {
+              "meaning": "…에서 <눈[귀]을> 떼지 않다, 주의를 집중하다 ((to, on))",
+              "examples": [
+                {
+                  "text": "<b>glue</b> one's eyes to the TV screen",
+                  "translatedText": "텔레비전에 시선을 집중하다"
+                }
+              ],
+              "originalMeaning": "…에서 <눈[귀]을> 떼지 않다, 주의를 집중하다 ((to, on))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "접착하다, 아교로 붙다",
+              "examples": [
+                {
+                  "text": "The wood <b>glue</b> s well.",
+                  "translatedText": "목재는 아교로 잘 붙는다."
+                }
+              ],
+              "originalMeaning": "접착하다, 아교로 붙다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ae3534942e994015aef12003f6cc4308",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ae3534942e994015aef12003f6cc4308",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "glues"
+        },
+        {
+          "type": "과거형",
+          "value": "glued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gluing, glueing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "glued"
+        }
+      ],
+      "aliasConjugation": "glues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bf65a7e0e122c2987fd3661a92b0c36c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "목재는 아교로 잘 붙는다.",
+      "text": "The wood glues well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 모형 비행기에 날개를 붙였다.",
+      "text": "He <b>glued</b> the wings onto the model airplane."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 아이는 늘 텔레비전 앞에 붙어 있다",
+      "text": "The boy is always <b>glued</b> to the television."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "눈꺼풀이 맞붙어 떨어지지 않는다",
+      "text": "I cannot open my eyes. or They are <b>glued</b> together."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "갖풀을 녹이면 녹진녹진해진다",
+      "text": "<b>Glue</b> gets all soft and sticky when it is heated."
+    }
+  ],
+  "isWordType": true
+}

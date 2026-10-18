@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "joint",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dʒɔɪnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "이음매, 이은 자리[점, 선, 면]; 접합(법); [목공] (목재의) 장부로 이은 부분; [기계] 조인트",
+              "examples": [],
+              "originalMeaning": "이음매, 이은 자리[점, 선, 면]; 접합(법); [목공] (목재의) 장부로 이은 부분; [기계] 조인트"
+            },
+            {
+              "meaning": "관절",
+              "examples": [
+                {
+                  "text": "an elbow <b>joint</b>",
+                  "translatedText": "팔꿈치의 관절"
+                }
+              ],
+              "originalMeaning": "관절"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "공동의; 합동[연합]의, 공유의; 연대의",
+              "examples": [
+                {
+                  "text": "<b>joint</b> offense",
+                  "translatedText": "공범"
+                }
+              ],
+              "originalMeaning": "공동의; 합동[연합]의, 공유의; 연대의"
+            },
+            {
+              "meaning": "둘 이상의 변수를 갖는",
+              "examples": [],
+              "originalMeaning": "둘 이상의 변수를 갖는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "잇대다; 이음새[마디]로 나누다; <고기를> 관절에서 큰 덩어리로 자르다; [건축] <접합부를> 회칠하다, <판자를> 맞춰 끼우다",
+              "examples": [],
+              "originalMeaning": "잇대다; 이음새[마디]로 나누다; <고기를> 관절에서 큰 덩어리로 자르다; [건축] <접합부를> 회칠하다, <판자를> 맞춰 끼우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1aedfa6820644e99c296daaeb15cf2f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1aedfa6820644e99c296daaeb15cf2f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "joints"
+        },
+        {
+          "type": "과거형",
+          "value": "jointed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "jointing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "jointed"
+        }
+      ],
+      "aliasConjugation": "joints",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "552c640cc743f0ada2ac7cddf887f09b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 어깨 관절이 어그러졌다",
+      "text": "His shoulder was dislocated[out of <b>joint</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 학교는 합동 연주회를 열었다",
+      "text": "The two schools held a <b>joint</b> concert."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 넘어져서 무릎 관절이 탈골되었다",
+      "text": "He fell and put his knee out of <b>joint</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여러 교회가 연합해서 예배를 보았다",
+      "text": "Many of the churches held <b>joint</b> services."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "형과 나는 이 회사를 같이 소유하고 있다",
+      "text": "My brother and I own the company jointly."
+    }
+  ],
+  "isWordType": true
+}

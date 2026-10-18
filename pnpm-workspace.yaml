@@ -1,0 +1,8 @@
+packages:
+  - 'apps/**'
+  - 'shared/**'
+  - 'packages/@dooboostore/**'
+allowBuilds:
+  canvas: true
+  esbuild: true
+  protobufjs: true

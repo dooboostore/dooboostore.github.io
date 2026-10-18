@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "survey",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(총괄적으로) 바라보다, 둘러보다, 내려다보다, 전망하다; <사람 등을> 이리저리 뜯어보다",
+              "examples": [],
+              "originalMeaning": "(총괄적으로) 바라보다, 둘러보다, 내려다보다, 전망하다; <사람 등을> 이리저리 뜯어보다"
+            },
+            {
+              "meaning": "개관(槪觀)[개설(槪說)]하다, 살펴보다",
+              "examples": [
+                {
+                  "text": "<b>survey</b> a situation",
+                  "translatedText": "상황을 살펴보다"
+                }
+              ],
+              "originalMeaning": "개관(槪觀)[개설(槪說)]하다, 살펴보다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "측량을 하다",
+              "examples": [],
+              "originalMeaning": "측량을 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(총괄적으로) 바라다봄, 휘둘러봄",
+              "examples": [],
+              "originalMeaning": "(총괄적으로) 바라다봄, 휘둘러봄"
+            },
+            {
+              "meaning": "개관, 통람(通覽)",
+              "examples": [
+                {
+                  "text": "a <b>survey</b> of Italian painting",
+                  "translatedText": "이탈리아 회화 개론"
+                }
+              ],
+              "originalMeaning": "개관, 통람(通覽)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/399cd804f5654ed1a49971dca5c62aa9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/399cd804f5654ed1a49971dca5c62aa9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "surveys"
+        },
+        {
+          "type": "과거형",
+          "value": "surveyed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "surveying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "surveyed"
+        }
+      ],
+      "aliasConjugation": "surveys",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b904108490f1ff8d0ee371b3e64d7db9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 조사는 임시직 노동자들에 대한 어떤 정보도 입수하지 않았다",
+      "text": "The <b>survey</b> didn't collect any information about temporary workers."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "<b>saddle</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsædl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "안장 ((말 등의))",
+              "examples": [],
+              "originalMeaning": "안장 ((말 등의))"
+            },
+            {
+              "meaning": "(자전거의) 안장",
+              "examples": [],
+              "originalMeaning": "(자전거의) 안장"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "안장을 얹다 ((up))",
+              "examples": [
+                {
+                  "text": "<b>saddle</b> a horse",
+                  "translatedText": "말에 안장을 얹다"
+                }
+              ],
+              "originalMeaning": "안장을 얹다 ((up))"
+            },
+            {
+              "meaning": "<책임을> 지우다, …에게 과(課)하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>saddle</b> a person with responsibility",
+                  "translatedText": "…에게 책임을 지우다"
+                }
+              ],
+              "originalMeaning": "<책임을> 지우다, …에게 과(課)하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "말에 안장을 얹다 ((up))",
+              "examples": [],
+              "originalMeaning": "말에 안장을 얹다 ((up))"
+            },
+            {
+              "meaning": "안장을 얹은 말에 올라타다 ((up))",
+              "examples": [],
+              "originalMeaning": "안장을 얹은 말에 올라타다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3ec7beb3769042188a90d5db5c5ee273",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3ec7beb3769042188a90d5db5c5ee273",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "saddles"
+        },
+        {
+          "type": "과거형",
+          "value": "saddled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "saddling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "saddled"
+        }
+      ],
+      "aliasConjugation": "saddles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "73315d31ae5ffaea7bd74415dcc3508b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정부가 이제는 자리가 잡혔다",
+      "text": "The government is in the <b>saddle</b> now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "공화당이 정권을 장악하고 있다",
+      "text": "The Republican Party is in power[the <b>saddle</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그 이상 책임을 짊어질 수 없다",
+      "text": "I can not be saddled with any more responsibilities."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 안장도 없는 말을 걸터타고 달렸다",
+      "text": "She mounted the horse and rode off even without the <b>saddle</b>."
+    }
+  ],
+  "isWordType": true
+}

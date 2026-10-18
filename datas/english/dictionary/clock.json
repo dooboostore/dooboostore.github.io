@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "clock",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "klɑːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "시계 ((괘종시계·탁상시계 등 휴대용이 아닌 것, cf. WATCH))",
+              "examples": [],
+              "originalMeaning": "시계 ((괘종시계·탁상시계 등 휴대용이 아닌 것, cf. WATCH))"
+            },
+            {
+              "meaning": "(=TIME CLOCK)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >TIME <b>CLOCK</b></span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "시계[스톱워치]로 시간을 재다[기록하다] ((up))",
+              "examples": [],
+              "originalMeaning": "시계[스톱워치]로 시간을 재다[기록하다] ((up))"
+            },
+            {
+              "meaning": "(경기에서) 기록을 내다",
+              "examples": [],
+              "originalMeaning": "(경기에서) 기록을 내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "타임리코더로 취업 시간을 기록하다",
+              "examples": [],
+              "originalMeaning": "타임리코더로 취업 시간을 기록하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fb2ec1183847469583e8797bc6a05331",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fb2ec1183847469583e8797bc6a05331",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "clocks"
+        },
+        {
+          "type": "과거형",
+          "value": "clocked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "clocking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "clocked"
+        }
+      ],
+      "aliasConjugation": "clocks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cd5a4085ef9036854be9bcb7874717c6",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "clock",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "양말목의 자수 장식",
+              "examples": [],
+              "originalMeaning": "양말목의 자수 장식"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자수 장식을 하다",
+              "examples": [],
+              "originalMeaning": "자수 장식을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0f1811fd8954cd4be365eca52f6d7f0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0f1811fd8954cd4be365eca52f6d7f0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "clocks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "351f3f7d21a483dcd6b3cc134ea86810",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시계가 다섯 시를 쳤다.",
+      "text": "The <b>clock</b> chimed five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시계는 재깍재깍 일초일초 간다.",
+      "text": "A <b>clock</b> beats seconds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 시계는 잘 안 간다.",
+      "text": "The <b>clock</b> does not go well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "6 시 전에 전화해 줘.",
+      "text": "Call me before six o’<b>clock</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시계는 똑딱똑딱 초를 가리켰다",
+      "text": "The <b>clock</b> ticked the seconds."
+    }
+  ],
+  "isWordType": true
+}

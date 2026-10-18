@@ -1,0 +1,157 @@
+{
+  "items": [
+    {
+      "entry": "greeting",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɡriːtɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(만났을 때의) 인사, 경례, 환영의 말",
+              "examples": [],
+              "originalMeaning": "(만났을 때의) 인사, 경례, 환영의 말"
+            },
+            {
+              "meaning": "[보통 pl.] 인사말, 인사장",
+              "examples": [
+                {
+                  "text": "Christmas <b>greeting</b> s",
+                  "translatedText": "크리스마스 인사장"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 인사말, 인사장"
+            },
+            {
+              "meaning": "편지 서두의 인사말( salutation) ((Dear Mr …. 등))",
+              "examples": [],
+              "originalMeaning": "편지 서두의 인사말( salutation) ((Dear Mr …. 등))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/673b52b2c8534e17bdc9c1d35ff386b8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/673b52b2c8534e17bdc9c1d35ff386b8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "19166faa7e10464079fed8de02aa8c41",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "greet",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡriːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 인사하다; 환영하다, 맞이하다 ((with)); …에게 인사장을 보내다",
+              "examples": [
+                {
+                  "text": "greet a person with cheers",
+                  "translatedText": "…을 환호로 맞이하다"
+                }
+              ],
+              "originalMeaning": "…에게 인사하다; 환영하다, 맞이하다 ((with)); …에게 인사장을 보내다"
+            },
+            {
+              "meaning": "[보통 수동형으로] …에게 (…으로) 반응을 보이다 ((by, with))",
+              "examples": [
+                {
+                  "text": "The changes were greeted withsuspicion.",
+                  "translatedText": "그 변화는 의혹을 받았다"
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] …에게 (…으로) 반응을 보이다 ((by, with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "인사하다",
+              "examples": [],
+              "originalMeaning": "인사하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b2e2e2212ec3498eb95e9fb7ce51da5f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b2e2e2212ec3498eb95e9fb7ce51da5f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "greets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c4c04d0760758dee253d32f963e741f6",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "greet",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "울다, 비탄하다, 슬퍼하다",
+              "examples": [],
+              "originalMeaning": "울다, 비탄하다, 슬퍼하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aad55d73d78f4f8ea816a5e9d17fac70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aad55d73d78f4f8ea816a5e9d17fac70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "greets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a43e6b3ce3ae7315eb6a91a8eecfb554",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "인사는 일체 약합시다",
+      "text": "Let us do without formal <b>greetings</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "인사 편지",
+      "text": "(a letter of) <b>greetings</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "크리스마스 인사장",
+      "text": "Christmas <b>greetings</b>"
+    }
+  ],
+  "isWordType": true
+}

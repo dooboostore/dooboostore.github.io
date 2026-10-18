@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "telephone",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│telɪfoʊn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전화, 전화기, 수화기, [the ~] 전화 (통신) 조직",
+              "examples": [
+                {
+                  "text": "a public <b>telephone</b>",
+                  "translatedText": "공중전화"
+                }
+              ],
+              "originalMeaning": "전화, 전화기, 수화기, [the ~] 전화 (통신) 조직"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전화의[에 관한]",
+              "examples": [
+                {
+                  "text": "a <b>telephone</b> operator",
+                  "translatedText": "전화 교환수"
+                }
+              ],
+              "originalMeaning": "전화의[에 관한]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "전화를 걸다, 전화로 불러내다",
+              "examples": [
+                {
+                  "text": "<b>telephone</b> a person by long distance",
+                  "translatedText": "…에게 장거리 전화를 걸다"
+                }
+              ],
+              "originalMeaning": "전화를 걸다, 전화로 불러내다"
+            },
+            {
+              "meaning": "전화로 신청하여 <…에게 축전 등을> 보내다",
+              "examples": [
+                {
+                  "text": "<b>telephone</b> a person a congratulatory telegram = <b>telephone</b> a congratulatory telegram to a person",
+                  "translatedText": "전화국에 전화 신청을 해서 …에게 축전을 치다"
+                }
+              ],
+              "originalMeaning": "전화로 신청하여 <…에게 축전 등을> 보내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/867a4d22be3c46ce8d5383a9b68a097c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/867a4d22be3c46ce8d5383a9b68a097c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "telephones"
+        },
+        {
+          "type": "과거형",
+          "value": "telephoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "telephoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "telephoned"
+        }
+      ],
+      "aliasConjugation": "telephones",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1dd77736978dd12f7af5c546e752607a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 전화번호를 전화번호부에서 빼 주세요",
+      "text": "I want my <b>telephone</b> number unlisted. or I want my <b>telephone</b> number taken off the <b>telephone</b> directory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전화를 좀 걸고 싶었다.",
+      "text": "I wanted to do some telephoning."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전화가 고장 나 있었다.",
+      "text": "The <b>telephone</b> was not functioning."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 곧 오라고 전화했다.",
+      "text": "I telephoned him to come at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 전화는 내선 전용이다",
+      "text": "The <b>telephone</b> is only for in-house calls."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "chain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃeɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쇠사슬",
+              "examples": [
+                {
+                  "text": "keep a dog on a <b>chain</b>",
+                  "translatedText": "개를 사슬에 묶어 놓다"
+                }
+              ],
+              "originalMeaning": "쇠사슬"
+            },
+            {
+              "meaning": "일련(一連), 연쇄; (방송의) 네트워크",
+              "examples": [
+                {
+                  "text": "a <b>chain</b> of mountains",
+                  "translatedText": "산맥"
+                }
+              ],
+              "originalMeaning": "일련(一連), 연쇄; (방송의) 네트워크"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<동물 등을> 사슬로 매다",
+              "examples": [
+                {
+                  "text": "<b>Chain</b> up the dog.",
+                  "translatedText": "개를 사슬로 매어 둬라."
+                }
+              ],
+              "originalMeaning": "<동물 등을> 사슬로 매다"
+            },
+            {
+              "meaning": "(…에) 묶다 ((down, to)); <사람을> 속박하다",
+              "examples": [
+                {
+                  "text": "His work <b>chain</b> ed him to his desk.",
+                  "translatedText": "그는 일 때문에 책상에 매여 있었다."
+                }
+              ],
+              "originalMeaning": "(…에) 묶다 ((down, to)); <사람을> 속박하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연쇄하다, 쇠사슬 모양이 되다",
+              "examples": [],
+              "originalMeaning": "연쇄하다, 쇠사슬 모양이 되다"
+            },
+            {
+              "meaning": "사슬 모양으로 뜨다",
+              "examples": [],
+              "originalMeaning": "사슬 모양으로 뜨다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b344bea21934a898a20b9cb69311074",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b344bea21934a898a20b9cb69311074",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "chains"
+        },
+        {
+          "type": "과거형",
+          "value": "chained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "chaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "chained"
+        }
+      ],
+      "aliasConjugation": "chains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6e103ac063aa8b061dca328d3996eec5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개를 사슬로 매어 둬라.",
+      "text": "<b>Chain</b> up the dog."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 연거푸 담배를 피운다",
+      "text": "He is a <b>chain</b> smoker."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개는 사슬에 매여 있다.",
+      "text": "The dog is on the <b>chain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개가 쇠사슬에 매여 있다",
+      "text": "The dog is on the <b>chain</b>[is kept chained up, is enchained]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개는 쇠사슬로 울에 매여 있었다.",
+      "text": "The dog was chained to the fence."
+    }
+  ],
+  "isWordType": true
+}

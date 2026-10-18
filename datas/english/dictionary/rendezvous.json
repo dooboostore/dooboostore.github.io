@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "rendezvous",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│rɑːndɪvuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(시간과 장소를 정한) 회합(의 약속), 회동, 랑데부",
+              "examples": [
+                {
+                  "text": "arrange the <b>rendezvous</b>",
+                  "translatedText": "모임 약속을 하다"
+                }
+              ],
+              "originalMeaning": "(시간과 장소를 정한) 회합(의 약속), 회동, 랑데부"
+            },
+            {
+              "meaning": "회합 장소",
+              "examples": [],
+              "originalMeaning": "회합 장소"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(약속 장소에서) 만나다, 집합[집결]하다",
+              "examples": [],
+              "originalMeaning": "(약속 장소에서) 만나다, 집합[집결]하다"
+            },
+            {
+              "meaning": "<우주선이> 랑데부하다",
+              "examples": [],
+              "originalMeaning": "<우주선이> 랑데부하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/879e3fe8f31c49b3830095c6869e7e23",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/879e3fe8f31c49b3830095c6869e7e23",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rendezvous, rendezvouses"
+        },
+        {
+          "type": "과거형",
+          "value": "rendezvoused"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rendezvousing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rendezvoused"
+        }
+      ],
+      "aliasConjugation": "rendezvous, rendezvouses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "562eeb53652025604e35e9f2be94653d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "집합 시간은 한 시로 정해졌다",
+      "text": "The time for our <b>rendezvous</b> was fixed for one o'clock."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 두 우주선은 우주에서 랑데부에 성공했다",
+      "text": "The two spaceships effected a successful <b>rendezvous</b> in space."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 공원은 젊은 아베크족들에게는 안성맞춤인 곳이다",
+      "text": "This park is a favorite <b>rendezvous</b> for young men and women."
+    }
+  ],
+  "isWordType": true
+}

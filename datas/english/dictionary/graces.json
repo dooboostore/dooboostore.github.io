@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "entry": "grace",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡreɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "우아, 우미, 기품, 점잖음, 얌전함, 고상함; 예의범절; [보통 pl.] 거드름부리는 태도",
+              "examples": [
+                {
+                  "text": "airs and <b>grace</b> s",
+                  "translatedText": "새침뗌, 멋부림"
+                }
+              ],
+              "originalMeaning": "우아, 우미, 기품, 점잖음, 얌전함, 고상함; 예의범절; [보통 pl.] 거드름부리는 태도"
+            },
+            {
+              "meaning": "<문체·표현 등의> 아치, 세련미(polish)",
+              "examples": [
+                {
+                  "text": "literary <b>grace</b>",
+                  "translatedText": "문체의 문학적인 품격(品格)"
+                }
+              ],
+              "originalMeaning": "<문체·표현 등의> 아치, 세련미(polish)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "우아하게 하다, 아름답게 꾸미다; 명예[영광]를 주다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>grace</b> the occasion with one's presence",
+                  "translatedText": "참석함으로써 그 자리를 빛내 주다"
+                }
+              ],
+              "originalMeaning": "우아하게 하다, 아름답게 꾸미다; 명예[영광]를 주다 ((with))"
+            },
+            {
+              "meaning": "…에 꾸밈음[카덴차]을 더하다",
+              "examples": [],
+              "originalMeaning": "…에 꾸밈음[카덴차]을 더하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/32d9bd2471bb4f4a8089e8fb8790518e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/32d9bd2471bb4f4a8089e8fb8790518e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "graces"
+        },
+        {
+          "type": "과거형",
+          "value": "graced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gracing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "graced"
+        }
+      ],
+      "aliasConjugation": "graces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1ef71507cf9b6fe2f1e8cb0c59f3a86e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Grace",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여자 이름",
+              "examples": [],
+              "originalMeaning": "여자 이름"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ec6a861b434945a692a7900d86e6de4b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ec6a861b434945a692a7900d86e6de4b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "de7ce0badd8fdf2ecf13c356d38ef8f7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 그림은 기품이 없다",
+      "text": "This painting is lacking in <b>grace</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "염치가 없어 그에게는 부탁할 수 없다.",
+      "text": "We cannot with any <b>grace</b> ask him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기특하게도 그는 자진해서 하겠다고 나섰다",
+      "text": "He had the <b>grace</b> to offer to do it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "겸연쩍어서 그에게 부탁을 못하겠다",
+      "text": "I cannot with any <b>grace</b> make the request to him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나의 우위를 인정할 만큼 그는 아량이 있었다",
+      "text": "He had the <b>grace</b> to acknowledge my superiority."
+    }
+  ],
+  "isWordType": true
+}

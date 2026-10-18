@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "endorse",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪnˈdɔːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<어음·증권 등에> 배서하다, <설명·비평 따위를 서류의 뒷면에> 써넣다",
+              "examples": [],
+              "originalMeaning": "<어음·증권 등에> 배서하다, <설명·비평 따위를 서류의 뒷면에> 써넣다"
+            },
+            {
+              "meaning": "[문어] <남의 언설(言說) 등을> 뒷받침하다, 보증하다(confirm); 시인하다(approve)",
+              "examples": [],
+              "originalMeaning": "[문어] <남의 언설(言說) 등을> 뒷받침하다, 보증하다(confirm); 시인하다(approve)"
+            },
+            {
+              "meaning": "<자동차 등의 면허증에> 위반 죄과(罪科)를 이서하다",
+              "examples": [],
+              "originalMeaning": "<자동차 등의 면허증에> 위반 죄과(罪科)를 이서하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/62aa3fcaf86547c3bd91f6c3ebfd3ec1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/62aa3fcaf86547c3bd91f6c3ebfd3ec1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "endorses"
+        },
+        {
+          "type": "과거형",
+          "value": "endorsed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "endorsing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "endorsed"
+        }
+      ],
+      "aliasConjugation": "endorses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0ae6cd6b7131a6d9abe723771f70ee11",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 의견에는 수긍할 수가 없다",
+      "text": "I cannot <b>endorse</b> his opinion."
+    }
+  ],
+  "isWordType": true
+}

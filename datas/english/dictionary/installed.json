@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "install",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈstɔːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<기기 등을> 장치[설치]하다",
+              "examples": [
+                {
+                  "text": "have a telephone <b>installed</b>",
+                  "translatedText": "전화를 놓다"
+                }
+              ],
+              "originalMeaning": "<기기 등을> 장치[설치]하다"
+            },
+            {
+              "meaning": "취임시키다, 임명하다;[~ oneself 또는 수동형으로] 자리에 앉히다",
+              "examples": [
+                {
+                  "text": "<b>install</b> a chairman",
+                  "translatedText": "의장에 임명하다"
+                }
+              ],
+              "originalMeaning": "취임시키다, 임명하다;[~ oneself 또는 수동형으로] 자리에 앉히다"
+            },
+            {
+              "meaning": "<소프트웨어 등을> 인스톨하다",
+              "examples": [],
+              "originalMeaning": "<소프트웨어 등을> 인스톨하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/00339fb824bf48a886c99980309c145a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/00339fb824bf48a886c99980309c145a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "installs, instals"
+        },
+        {
+          "type": "과거형",
+          "value": "installed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "installing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "installed"
+        }
+      ],
+      "aliasConjugation": "installs, instals",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7521dc8ff69f2c1809e5cc77754ff3be",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방마다 전화가 비치되어 있다",
+      "text": "A telephone is <b>installed</b> in each room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "집에 전화를 달았다",
+      "text": "We have had a telephone <b>installed</b> in our house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전화가 달려 있다",
+      "text": "A telephone is <b>installed</b>. or The telephone service is operated."
+    }
+  ],
+  "isWordType": true
+}

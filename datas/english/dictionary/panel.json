@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "panel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpænl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "패널 ((넓은 직사각형의 문 판 또는 합판)), 벽판, 머름, (창)틀",
+              "examples": [],
+              "originalMeaning": "패널 ((넓은 직사각형의 문 판 또는 합판)), 벽판, 머름, (창)틀"
+            },
+            {
+              "meaning": "[사진] 패널판(判) ((보통보다 세로가 긺, 약 10×20센티미터))",
+              "examples": [],
+              "originalMeaning": "[사진] 패널판(判) ((보통보다 세로가 긺, 약 10×20센티미터))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<문·벽에> 패널[벽판]을 끼우다[발라 장식하다]",
+              "examples": [],
+              "originalMeaning": "<문·벽에> 패널[벽판]을 끼우다[발라 장식하다]"
+            },
+            {
+              "meaning": "<의복 등에> 세로의 색동 장식을 대다",
+              "examples": [],
+              "originalMeaning": "<의복 등에> 세로의 색동 장식을 대다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d98a00b85f04484191f88f5069932009",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d98a00b85f04484191f88f5069932009",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "panels"
+        },
+        {
+          "type": "과거형",
+          "value": "panelled, paneled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "panelling, paneling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "panelled, paneled"
+        }
+      ],
+      "aliasConjugation": "panels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a31164b03f4d39c3b8e29b3699bc8974",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 심사 위원들 앞에서 자기 논문의 정당성을 주장해야 했다",
+      "text": "He had to defend his dissertation before a <b>panel</b> of examiners."
+    }
+  ],
+  "isWordType": true
+}

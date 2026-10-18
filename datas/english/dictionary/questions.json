@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "question",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkwestʃən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "물음, 질문, 질의(opp. answer)",
+              "examples": [
+                {
+                  "text": "That's a good <b>question</b>!",
+                  "translatedText": "[구어] 좋은 질문입니다! ((대답을 잘 모를 때))"
+                }
+              ],
+              "originalMeaning": "물음, 질문, 질의(opp. answer)"
+            },
+            {
+              "meaning": "문제; 논점; 의제; 채결, 표결; 현안(懸案)",
+              "examples": [
+                {
+                  "text": "an open <b>question</b>",
+                  "translatedText": "미결 문제"
+                }
+              ],
+              "originalMeaning": "문제; 논점; 의제; 채결, 표결; 현안(懸案)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "질문하다, 묻다(ask); 심문하다(inquire of)",
+              "examples": [
+                {
+                  "text": "<b>question</b> a witness",
+                  "translatedText": "증인을 심문하다"
+                }
+              ],
+              "originalMeaning": "질문하다, 묻다(ask); 심문하다(inquire of)"
+            },
+            {
+              "meaning": "조사하다, 검사하다",
+              "examples": [],
+              "originalMeaning": "조사하다, 검사하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "질문을 하다",
+              "examples": [],
+              "originalMeaning": "질문을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e78219a827c04eb8921028f82f17e193",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e78219a827c04eb8921028f82f17e193",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "questions"
+        },
+        {
+          "type": "과거형",
+          "value": "questioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "questioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "questioned"
+        }
+      ],
+      "aliasConjugation": "questions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a9599bf44dc283cb81a159ba024abb44",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "난 그 문제를 전혀 이해하지 못하겠어",
+      "text": "I can't make heads or tails of the <b>question</b>. or I can't get my head around the <b>question</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조만간에 나는 면직될 것이다",
+      "text": "I am going to be fired sooner or later. or My dismissal is a <b>question</b> of time now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그 문제로 곤혹했다.",
+      "text": "The <b>question</b> puzzled me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국가의 존망에 관한 문제다",
+      "text": "It is a <b>question</b> of life or death for the nation. or The national existence is at stake."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "개인적인 질문을 하지 마라",
+      "text": "Don't ask personal <b>questions</b>."
+    }
+  ],
+  "isWordType": true
+}

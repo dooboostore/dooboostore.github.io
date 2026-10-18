@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "invest",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈvest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<자본·돈 등을> 투자하다, 운용하다 ((in))",
+              "examples": [
+                {
+                  "text": "invested capital",
+                  "translatedText": "투입 자본"
+                }
+              ],
+              "originalMeaning": "<자본·돈 등을> 투자하다, 운용하다 ((in))"
+            },
+            {
+              "meaning": "<시간·정력 등을> 들이다, 쓰다, 바치다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>invest</b> time and energy in one's study",
+                  "translatedText": "연구에 시간과 정력을 쏟다"
+                }
+              ],
+              "originalMeaning": "<시간·정력 등을> 들이다, 쓰다, 바치다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "투자[출자]하다 ((in)), 돈을 쓰다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>invest</b> in stocks",
+                  "translatedText": "주식에 투자하다"
+                }
+              ],
+              "originalMeaning": "투자[출자]하다 ((in)), 돈을 쓰다 ((in))"
+            },
+            {
+              "meaning": "사다 ((in))",
+              "examples": [],
+              "originalMeaning": "사다 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f790262061324c4c9075652fba6b8ac6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f790262061324c4c9075652fba6b8ac6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "invests"
+        },
+        {
+          "type": "과거형",
+          "value": "invested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "investing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "invested"
+        }
+      ],
+      "aliasConjugation": "invests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9e5b52037b55345a475ca8addfc0e881",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잘 투자된 돈은 충분한 이익을 올린다.",
+      "text": "Money well invested earns good interest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거부권은 대통령의 권한에 속한다",
+      "text": "The veto power is invested in the president."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 주식에 투자하여 축재했다",
+      "text": "By investing in stocks he accumulated a fortune."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 사업에 투자하여 땡잡았다",
+      "text": "He had invested in the business and made a killing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 돈을 현명하게 투자하는 신중함이 있었다.",
+      "text": "He had the foresight to <b>invest</b> his money wisely."
+    }
+  ],
+  "isWordType": true
+}

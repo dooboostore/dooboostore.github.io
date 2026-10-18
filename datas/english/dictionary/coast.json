@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "coast",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "koʊst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "연안, 해안; 해안 지대 (=shore)",
+              "examples": [
+                {
+                  "text": "the west <b>coast</b> of the United States",
+                  "translatedText": "미국 서부 해안"
+                }
+              ],
+              "originalMeaning": "연안, 해안; 해안 지대 (=<span class='related_word' lang='en' >shore</span>)"
+            },
+            {
+              "meaning": "[the C~] 태평양 연안 지방",
+              "examples": [],
+              "originalMeaning": "[the C~] 태평양 연안 지방"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "썰매로 미끄러져 내려가다, 자전거의 페달을 밟지 않고 내려가다, <자동차·로켓이> 타성으로 달리다",
+              "examples": [],
+              "originalMeaning": "썰매로 미끄러져 내려가다, 자전거의 페달을 밟지 않고 내려가다, <자동차·로켓이> 타성으로 달리다"
+            },
+            {
+              "meaning": "힘들이지 않고 해치우다[얻다], 명성[과거의 실적]에 구실을 붙여 쉽사리 성공하다",
+              "examples": [],
+              "originalMeaning": "힘들이지 않고 해치우다[얻다], 명성[과거의 실적]에 구실을 붙여 쉽사리 성공하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "타력[타성]으로 진행시키다[나아가게 하다]",
+              "examples": [],
+              "originalMeaning": "타력[타성]으로 진행시키다[나아가게 하다]"
+            },
+            {
+              "meaning": "해안을 따라서 나아가다",
+              "examples": [],
+              "originalMeaning": "해안을 따라서 나아가다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e26738dfa40440de86e440b3a22b0c08",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e26738dfa40440de86e440b3a22b0c08",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "coasts"
+        },
+        {
+          "type": "과거형",
+          "value": "coasted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coasting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coasted"
+        }
+      ],
+      "aliasConjugation": "coasts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e38c04a72758f2e00d1ae99dc72ac226",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배가 목포 해안에서 얹혔다",
+      "text": "The ship ran aground on the <b>coast</b> of Mokpo."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해적들이 연안의 도시들을 노략질하였다",
+      "text": "Pirates pillaged the towns along the <b>coast</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 바람을 거슬러[연안을 따라] 나아갔다.",
+      "text": "The ship beat against the wind[along the <b>coast</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서부 해안 철로선이 이제 통한다",
+      "text": "The west <b>coast</b> railway line has been electrified."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 부산 앞바다에서 좌초했다",
+      "text": "The ship ran aground[was stranded] on the <b>coast</b> of Busan."
+    }
+  ],
+  "isWordType": true
+}

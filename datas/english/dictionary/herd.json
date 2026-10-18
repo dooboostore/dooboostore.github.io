@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "<b>herd</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hə́ːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가축의 떼, 무리, ((특히)) 소떼, 돼지떼 ((of)), (=group)",
+              "examples": [
+                {
+                  "text": "a <b>herd</b> ofcattle[sheep]",
+                  "translatedText": "소[양]의 떼"
+                }
+              ],
+              "originalMeaning": "가축의 떼, 무리, ((특히)) 소떼, 돼지떼 ((of)), (=<span class='related_word' lang='en' >group</span>)"
+            },
+            {
+              "meaning": "[the ~] 군중, 민중, 대중, 서민",
+              "examples": [
+                {
+                  "text": "the common[vulgar] <b>herd</b>",
+                  "translatedText": "하층민"
+                }
+              ],
+              "originalMeaning": "[the ~] 군중, 민중, 대중, 서민"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "무리를 지어 가다 ((with)), 모이다 ((together)), <식물이> 군생하다",
+              "examples": [],
+              "originalMeaning": "무리를 지어 가다 ((with)), 모이다 ((together)), <식물이> 군생하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2897b4edc9784b6cbcad59042295116e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2897b4edc9784b6cbcad59042295116e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "herds"
+        },
+        {
+          "type": "과거형",
+          "value": "herded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "herding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "herded"
+        }
+      ],
+      "aliasConjugation": "herds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3801805036890ea514d1ed89266eeb22",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>herd</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 복합어를 이루어] 목자, 목동(herdsman)",
+              "examples": [
+                {
+                  "text": "a cowherd[goatherd]",
+                  "translatedText": "소[염소] 치는 사람"
+                }
+              ],
+              "originalMeaning": "[보통 복합어를 이루어] 목자, 목동(herdsman)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<소·양 등의> 망을 보다, 선도하다, 모으다",
+              "examples": [
+                {
+                  "text": "The teacher herded the children into the classroom.",
+                  "translatedText": "선생님이 아이들을 교실 안으로 데리고 갔다."
+                }
+              ],
+              "originalMeaning": "<소·양 등의> 망을 보다, 선도하다, 모으다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/17cf60883e1a499fa0b793fd0658d40b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/17cf60883e1a499fa0b793fd0658d40b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "herds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "04fe675de26cbc6093524a09a18f5d3a",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 떼의 사슴이 풀을 뜯고 있다",
+      "text": "A <b>herd</b> of deer are feeding on grass."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "선생님이 아이들을 교실 안으로 데리고 갔다.",
+      "text": "The teacher herded the children into the classroom."
+    }
+  ],
+  "isWordType": true
+}

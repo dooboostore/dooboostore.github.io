@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "entry": "<b>blunder</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈblʌndə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "큰 실수, 대실책 (=error)",
+              "examples": [
+                {
+                  "text": "commit[make] a <b>blunder</b>",
+                  "translatedText": "중대한 실수를 하다"
+                }
+              ],
+              "originalMeaning": "큰 실수, 대실책 (=<span class='related_word' lang='en' >error</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(부주의·정신적 혼란 등으로) 큰 실수를 하다 ((in))",
+              "examples": [],
+              "originalMeaning": "(부주의·정신적 혼란 등으로) 큰 실수를 하다 ((in))"
+            },
+            {
+              "meaning": "우물쭈물하다, 머뭇거리다; 머뭇머뭇 걷다 ((about, along)); 걸려서 넘어질 뻔하다 ((against, into)); (…에) 실수로[깜박하여] 들어가다 ((into, in)); (…을) 우연히 발견하다 ((on, upon))",
+              "examples": [
+                {
+                  "text": "<b>blunder</b> about",
+                  "translatedText": "어슬렁어슬렁 돌아다니다"
+                }
+              ],
+              "originalMeaning": "우물쭈물하다, 머뭇거리다; 머뭇머뭇 걷다 ((about, along)); 걸려서 넘어질 뻔하다 ((against, into)); (…에) 실수로[깜박하여] 들어가다 ((into, in)); (…을) 우연히 발견하다 ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<일 등을> 그르치다, <기회 등을> 잘못하여 놓치다[잃다] ((away))",
+              "examples": [
+                {
+                  "text": "<b>blunder</b> away one's fortune",
+                  "translatedText": "잘못하여 재산을 잃다"
+                }
+              ],
+              "originalMeaning": "<일 등을> 그르치다, <기회 등을> 잘못하여 놓치다[잃다] ((away))"
+            },
+            {
+              "meaning": "<비밀 등을> 무심코 입 밖에 내다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>blunder</b> out a secret",
+                  "translatedText": "얼떨결에 비밀을 누설하다"
+                }
+              ],
+              "originalMeaning": "<비밀 등을> 무심코 입 밖에 내다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de2c3ff7a5534e6abb414d8934de8699",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de2c3ff7a5534e6abb414d8934de8699",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blunders"
+        },
+        {
+          "type": "과거형",
+          "value": "blundered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blundering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blundered"
+        }
+      ],
+      "aliasConjugation": "blunders",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "79f5614c411f7ce812d6ef000c6f3266",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "용렬한 짓을 해서 미안하오",
+      "text": "I am sorry for the <b>blunder</b> I have committed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 그의 일평생의 큰 실수였다",
+      "text": "That was the gravest <b>blunder</b> in his life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 오류투성이이다.",
+      "text": "The book teems with <b>blunders</b>."
+    }
+  ],
+  "isWordType": true
+}

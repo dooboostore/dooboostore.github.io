@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "<b>presume</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prɪ│zuːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가정[추정]하다; 상상하다, …이라고 여기다, 생각하다",
+              "examples": [
+                {
+                  "text": "I <b>presume</b> that they have seen him.",
+                  "translatedText": "그들이 그를 만났을 것으로 생각되는데."
+                }
+              ],
+              "originalMeaning": "가정[추정]하다; 상상하다, …이라고 여기다, 생각하다"
+            },
+            {
+              "meaning": "반대의 증거가 없어 …으로 추정하다",
+              "examples": [
+                {
+                  "text": "be presumed (to be) innocent",
+                  "translatedText": "무죄로 추정되다"
+                }
+              ],
+              "originalMeaning": "반대의 증거가 없어 …으로 추정하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "가정[추정]하다",
+              "examples": [
+                {
+                  "text": "Mr. A, I <b>presume</b>? A",
+                  "translatedText": "씨이시죠? ((초면에 말을 건넬 때))"
+                }
+              ],
+              "originalMeaning": "가정[추정]하다"
+            },
+            {
+              "meaning": "참견하다, 우쭐대다, 버릇없이 …하다",
+              "examples": [],
+              "originalMeaning": "참견하다, 우쭐대다, 버릇없이 …하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/91d8fd98bf1947b9be2b2111785690f4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/91d8fd98bf1947b9be2b2111785690f4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "presumes"
+        },
+        {
+          "type": "과거형",
+          "value": "presumed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "presuming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "presumed"
+        }
+      ],
+      "aliasConjugation": "presumes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ec2ae7143793bf9863c9c28ec1406d58",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그녀의 친절을 악용하였다.",
+      "text": "He presumed on her kindness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그녀가 죽었다고 추정했다.",
+      "text": "They presumed her (to be) dead."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들이 그를 만났을 것으로 생각되는데.",
+      "text": "I <b>presume</b> that they have seen him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꽤 크겠구먼",
+      "text": "It must be very big, I <b>presume</b>."
+    }
+  ],
+  "isWordType": true
+}

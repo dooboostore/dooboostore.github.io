@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "spoken",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│spoʊkən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "SPEAK의 과거분사",
+              "examples": [],
+              "originalMeaning": "<b>SPEAK</b>의 과거분사"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "구두의, 입으로 말하는(oral; opp. written)",
+              "examples": [],
+              "originalMeaning": "구두의, 입으로 말하는(oral; opp. written)"
+            },
+            {
+              "meaning": "말[담화]에 사용되는, 구어의(colloquial; opp. literary)",
+              "examples": [
+                {
+                  "text": "<b>spoken</b> language",
+                  "translatedText": "구어"
+                }
+              ],
+              "originalMeaning": "말[담화]에 사용되는, 구어의(colloquial; opp. literary)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5ba284225f11429792d57f57b50d5e85",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5ba284225f11429792d57f57b50d5e85",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ff6e25a79a51bcc7f36c220e84c34a24",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "speak",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spiːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "말을 하다, 지껄이다 (=talk)",
+              "examples": [
+                {
+                  "text": "<b>speak</b> in undertones",
+                  "translatedText": "작은 소리로 말하다"
+                }
+              ],
+              "originalMeaning": "말을 하다, 지껄이다 (=<span class='related_word' lang='en' >talk</span>)"
+            },
+            {
+              "meaning": "담화(談話)를 하다, 이야기를 하다 ((with, to))",
+              "examples": [
+                {
+                  "text": "This is Jones <b>speak</b> ing.",
+                  "translatedText": "[전화에서] 존스입니다."
+                }
+              ],
+              "originalMeaning": "담화(談話)를 하다, 이야기를 하다 ((with, to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "말하다; <사실·사상 등을> 이야기하다, 전하다",
+              "examples": [
+                {
+                  "text": "<b>speak</b> one's mind",
+                  "translatedText": "심중을 털어놓고 이야기하다"
+                }
+              ],
+              "originalMeaning": "말하다; <사실·사상 등을> 이야기하다, 전하다"
+            },
+            {
+              "meaning": "나타내다, 증명하다",
+              "examples": [
+                {
+                  "text": "His action speaks him generous[a rogue].",
+                  "translatedText": "그의 행동으로 그가 관대하다는 것[악인임]을 알 수 있다."
+                }
+              ],
+              "originalMeaning": "나타내다, 증명하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3cff58c3d2ab49bbabd1abfc4ad28d90",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3cff58c3d2ab49bbabd1abfc4ad28d90",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "speaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5384a39ad36b78773011973a6c76534c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 다음과 같이 말하였다",
+      "text": "He spoke as follows."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "남을 나삐 말하지 마라",
+      "text": "Don't <b>speak</b> ill of others."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 세상의 악평을 받고 있다",
+      "text": "He is ill <b>spoken</b> of."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 한 마디도 하지 않았다.",
+      "text": "He spoke never a word."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너, 참말로 말 잘했다",
+      "text": "You have <b>spoken</b> well, indeed."
+    }
+  ],
+  "isWordType": true
+}

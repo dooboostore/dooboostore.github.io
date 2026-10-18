@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "<b>telegram</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtelɪɡræm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "전보, 전신, 전문(電文)",
+              "examples": [
+                {
+                  "text": "send a <b>telegram</b>",
+                  "translatedText": "전보를 치다"
+                }
+              ],
+              "originalMeaning": "전보, 전신, 전문(電文)"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "(=TELEGRAPH)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >TELEGRAPH</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e48aedc1b027478baf2448bcb98a293f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e48aedc1b027478baf2448bcb98a293f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "74b6cdd4138aa5ca605b40aa12ce5518",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 역까지 마중을 나오라는 전보를 보내왔다",
+      "text": "He wired me[asked me by wire, sent me a <b>telegram</b> asking me] to meet him at the station."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 아버지가 위독하시다는 전보를 받았다",
+      "text": "I got a <b>telegram</b> telling me of my father's serious condition."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전보가 분실됐다",
+      "text": "Your <b>telegram</b> has miscarried."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전보 취급역",
+      "text": "Telegrams Accepted."
+    }
+  ],
+  "isWordType": true
+}

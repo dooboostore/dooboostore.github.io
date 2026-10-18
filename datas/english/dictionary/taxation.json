@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "taxation",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tækˈseɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "과세, 징세; 세제(稅制)",
+              "examples": [
+                {
+                  "text": "a <b>taxation</b> office",
+                  "translatedText": "세무서"
+                }
+              ],
+              "originalMeaning": "과세, 징세; 세제(稅制)"
+            },
+            {
+              "meaning": "(세금의) 사정액, 과세액; 과세율",
+              "examples": [],
+              "originalMeaning": "(세금의) 사정액, 과세액; 과세율"
+            },
+            {
+              "meaning": "전조세(全租稅), 세수(稅收)",
+              "examples": [],
+              "originalMeaning": "전조세(全租稅), 세수(稅收)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b5fced90af214a8b95e9bb0a2bb44205",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b5fced90af214a8b95e9bb0a2bb44205",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4d21a5e26d6a148b092a693d2378430f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국민은 납세의 의무를 진다",
+      "text": "The people are liable to <b>taxation</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세무서 직원들이 압류하러 왔다",
+      "text": "The <b>taxation</b> officers came to levy on the property."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국민들은 무거운 세금에 중압감을 느꼈다",
+      "text": "The people felt a sense of oppression under the burden of heavy <b>taxation</b>."
+    }
+  ],
+  "isWordType": true
+}

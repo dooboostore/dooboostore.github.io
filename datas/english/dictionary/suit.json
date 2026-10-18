@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "suit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "suːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "슈트 ((coat, trousers 및 때로는 vest)), 신사복 한 벌; 여성복 한 벌, 슈트 ((jacket, skirt 및 때로는 blouse)); [수식어와 함께] …옷[복(服)]",
+              "examples": [],
+              "originalMeaning": "슈트 ((coat, trousers 및 때로는 vest)), 신사복 한 벌; 여성복 한 벌, 슈트 ((jacket, skirt 및 때로는 blouse)); [수식어와 함께] …옷[복(服)]"
+            },
+            {
+              "meaning": "마구(馬具) 한 벌 ((of))",
+              "examples": [],
+              "originalMeaning": "마구(馬具) 한 벌 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…에) 적응시키다 ((to)); …에 어울리게[적합하게] 하다 ((to, for)) (→suited)",
+              "examples": [
+                {
+                  "text": "<b>suit</b> the action to the word",
+                  "translatedText": "[문어] 언행을 일치시키다; (특히 협박 등에서) 말한 바를 곧 실행하다"
+                }
+              ],
+              "originalMeaning": "(…에) 적응시키다 ((to)); …에 어울리게[적합하게] 하다 ((to, for)) (→<span class='related_word' lang='en' >suited</span>)"
+            },
+            {
+              "meaning": "<의복 등이> 어울리다(become), …에 잘 맞다",
+              "examples": [
+                {
+                  "text": "Do these shoes <b>suit</b> you fine?",
+                  "translatedText": "이 구두는 당신에게 잘 맞습니까?"
+                }
+              ],
+              "originalMeaning": "<의복 등이> 어울리다(become), …에 잘 맞다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…에) (알)맞다, 적합하다, 어울리다 ((with, to))",
+              "examples": [
+                {
+                  "text": "The job suits with his abilities.",
+                  "translatedText": "그 일은 그의 재능에 알맞다."
+                }
+              ],
+              "originalMeaning": "(…에) (알)맞다, 적합하다, 어울리다 ((with, to))"
+            },
+            {
+              "meaning": "<일이> 형편에 알맞다",
+              "examples": [
+                {
+                  "text": "That date will <b>suit</b>.",
+                  "translatedText": "그 날이면 형편에 맞겠다."
+                }
+              ],
+              "originalMeaning": "<일이> 형편에 알맞다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/196334499a3546b18c23b3505c7c2355",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/196334499a3546b18c23b3505c7c2355",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "suits"
+        },
+        {
+          "type": "과거형",
+          "value": "suited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "suiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "suited"
+        }
+      ],
+      "aliasConjugation": "suits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5234fbc42ae3d50c5980bc547353a5d2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 날이면 형편에 맞겠다.",
+      "text": "That date will <b>suit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 검은 옷을 입고 있다.",
+      "text": "He wears a dark <b>suit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "옷을 새로 맞추면 좋을 텐데.",
+      "text": "You could use a new <b>suit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영어는 그녀의 특기 과목이다.",
+      "text": "English is her long <b>suit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 옷은 너무 짼다",
+      "text": "The <b>suit</b> is too tight for me."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "addition",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈdɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "추가, 부가 ((to))",
+              "examples": [],
+              "originalMeaning": "추가, 부가 ((to))"
+            },
+            {
+              "meaning": "덧셈, 가법",
+              "examples": [
+                {
+                  "text": "easy additions",
+                  "translatedText": "쉬운 덧셈 (문제)"
+                }
+              ],
+              "originalMeaning": "덧셈, 가법"
+            },
+            {
+              "meaning": "추가물, 증축 부분 ((to)), 늘어난 토지",
+              "examples": [],
+              "originalMeaning": "추가물, 증축 부분 ((to)), 늘어난 토지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6e891d1a60df4d30a549bc5ae7d41c1f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6e891d1a60df4d30a549bc5ae7d41c1f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4a2438148274a6f50b95d6d276893fac",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 영어 이외에 독일어를 한다",
+      "text": "He speaks German in <b>addition</b> to English."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 월급 외에 따로 한 달 20만 원의 수입이 있다",
+      "text": "He has an additional income of two hundred thousand won a month apart from his monthly salary."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "깎아줄뿐더러 공짜 선물도 준다더라",
+      "text": "In <b>addition</b> to discounts, they offer a free gift."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 70만 원을 추징당했다",
+      "text": "He was charged an additional seven hundred thousand won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "값이 1,000원하고 귀가 달린다",
+      "text": "The price is one thousand won and a little in <b>addition</b>."
+    }
+  ],
+  "isWordType": true
+}

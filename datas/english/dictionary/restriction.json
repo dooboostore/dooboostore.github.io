@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "<b>restriction</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈstrɪkʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 제한, 한정; [논리] 한정",
+              "examples": [
+                {
+                  "text": "without <b>restriction</b>",
+                  "translatedText": "무제한으로"
+                }
+              ],
+              "originalMeaning": "[UC/] 제한, 한정; [논리] 한정"
+            },
+            {
+              "meaning": "구속, 속박",
+              "examples": [],
+              "originalMeaning": "구속, 속박"
+            },
+            {
+              "meaning": "제한[제약]하는 것, 제약, 규정",
+              "examples": [
+                {
+                  "text": "parking restrictions",
+                  "translatedText": "주차 제한 규정"
+                }
+              ],
+              "originalMeaning": "제한[제약]하는 것, 제약, 규정"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c61e4538af82420e80499cf759951528",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c61e4538af82420e80499cf759951528",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7cd27073fe2e5b6c149662be07c3085b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공무원의 겸직에는 제한이 없다",
+      "text": "There are no restrictions on civil servants holding other jobs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "연령[인원]은 무제한이다",
+      "text": "There are no restrictions as to age[the number of persons]."
+    }
+  ],
+  "isWordType": true
+}

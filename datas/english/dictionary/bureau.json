@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "<b>bureau</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈbjʊroʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(관청의) 국(局)( department)",
+              "examples": [
+                {
+                  "text": "the <b>Bureau</b> of the Mint",
+                  "translatedText": "(미국 재무부의) 조폐국"
+                }
+              ],
+              "originalMeaning": "(관청의) 국(局)( department)"
+            },
+            {
+              "meaning": "(거울 달린) 침실용 장롱",
+              "examples": [],
+              "originalMeaning": "(거울 달린) 침실용 장롱"
+            },
+            {
+              "meaning": "[미] 사무소, 접수처; 사무[편집]국",
+              "examples": [
+                {
+                  "text": "a travel <b>bureau</b>",
+                  "translatedText": "여행 안내소"
+                }
+              ],
+              "originalMeaning": "[미] 사무소, 접수처; 사무[편집]국"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08cc85c670534609ac93d65b49e2691d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08cc85c670534609ac93d65b49e2691d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "bureaus, bureaux"
+        }
+      ],
+      "aliasConjugation": "bureaus, bureaux",
+      "aliasConjugationPos": "복수형",
+      "gdid": "5821b19eb86f535fa5200244b5fc35c5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 국은 여러 과로 나뉘어 있다",
+      "text": "The <b>bureau</b> is divided into a number of sections."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울특별시 경찰국",
+      "text": "Seoul Metropolitan Police <b>Bureau</b>[Headquarters]"
+    }
+  ],
+  "isWordType": true
+}

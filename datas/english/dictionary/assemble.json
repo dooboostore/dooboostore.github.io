@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "assemble",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈsembl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람을> 모으다, 집합시키다, 소집하다; <물건을> 모아 정리하다",
+              "examples": [
+                {
+                  "text": "<b>assemble</b> a committee",
+                  "translatedText": "위원회를 소집하다"
+                }
+              ],
+              "originalMeaning": "<사람을> 모으다, 집합시키다, 소집하다; <물건을> 모아 정리하다"
+            },
+            {
+              "meaning": "<기계 등을> 조립하다, <부품을> 조립하여 (…으로) 만들다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>assemble</b> parts into a machine",
+                  "translatedText": "부품을 조립하여 기계로 만들다"
+                }
+              ],
+              "originalMeaning": "<기계 등을> 조립하다, <부품을> 조립하여 (…으로) 만들다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "모이다, 집합하다, 회합하다; 조립되다",
+              "examples": [],
+              "originalMeaning": "모이다, 집합하다, 회합하다; 조립되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d73e9721814346169d7a746b958a9e08",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d73e9721814346169d7a746b958a9e08",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "assembles"
+        },
+        {
+          "type": "과거형",
+          "value": "assembled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "assembling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "assembled"
+        }
+      ],
+      "aliasConjugation": "assembles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a9ff3d98a55ea3b4f241e735516def1c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 그를 전송하기 위해 여기에 집합했다",
+      "text": "We are assembled here to see him off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 대광장에 집합했다",
+      "text": "They assembled themselves in the plaza."
+    }
+  ],
+  "isWordType": true
+}

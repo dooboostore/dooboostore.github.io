@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "entry": "Boston",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɔ́:stən,bɑ́s-"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보스턴 ((미국 Massachusetts 주의 주도; 속칭 the Puritan City, the Bean Town))",
+              "examples": [],
+              "originalMeaning": "보스턴 ((미국 Massachusetts 주의 주도; 속칭 the Puritan City, the Bean Town))"
+            },
+            {
+              "meaning": "[보통 b~] 보스턴 왈츠 ((사교댄스의 일종))",
+              "examples": [],
+              "originalMeaning": "[보통 b~] 보스턴 왈츠 ((사교댄스의 일종))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b620f080099409f86d2ee353d4f274f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b620f080099409f86d2ee353d4f274f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8c2770d644f1b98bb3bdd5a3d5eccea9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리들은 보스턴에 기차로 갔다.",
+      "text": "We trained to <b>Boston</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 배는 보스턴에 기항한다.",
+      "text": "The ship calls at <b>Boston</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 남편은 보스턴의 다른 지점으로 전임되었다.",
+      "text": "Her husband has been transferred to another branch in <b>Boston</b>."
+    }
+  ],
+  "isWordType": true
+}

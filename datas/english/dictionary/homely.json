@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "<b>homely</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│hoʊmli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[영] <사람·분위기 등이> 가정적인, 제집 같은(homelike); 검소한, 수수한(plain), 소박한",
+              "examples": [
+                {
+                  "text": "<b>homely</b> food",
+                  "translatedText": "검소한 음식"
+                }
+              ],
+              "originalMeaning": "[영] <사람·분위기 등이> 가정적인, 제집 같은(homelike); 검소한, 수수한(plain), 소박한"
+            },
+            {
+              "meaning": "<표현 등이> 흔히 있는(familiar)",
+              "examples": [
+                {
+                  "text": "a <b>homely</b> phrase",
+                  "translatedText": "누구나 알고 있는 문구"
+                }
+              ],
+              "originalMeaning": "<표현 등이> 흔히 있는(familiar)"
+            },
+            {
+              "meaning": "<사람·얼굴이> 못생긴, 매력없는",
+              "examples": [],
+              "originalMeaning": "<사람·얼굴이> 못생긴, 매력없는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7fc9c6e0cab7485a93ad96e04c96d4ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7fc9c6e0cab7485a93ad96e04c96d4ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "homelier"
+        },
+        {
+          "type": "최상급",
+          "value": "homeliest"
+        }
+      ],
+      "aliasConjugation": "homelier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "61b8d94d0fee54115a0fc85997f0cbd2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 식당은 가정적인 분위기가 있다",
+      "text": "There is a <b>homely</b> atmosphere in this restaurant."
+    }
+  ],
+  "isWordType": true
+}

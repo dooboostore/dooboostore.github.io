@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "hypothesis",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "haɪ│pɑːθəsɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가설, 가정",
+              "examples": [
+                {
+                  "text": "form a <b>hypothesis</b>",
+                  "translatedText": "가설을 세우다"
+                }
+              ],
+              "originalMeaning": "가설, 가정"
+            },
+            {
+              "meaning": "(조건 명제의) 전제; 단순한 추측, 억측",
+              "examples": [],
+              "originalMeaning": "(조건 명제의) 전제; 단순한 추측, 억측"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/df90eb5c3dc94911aa92de30aa906ddc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/df90eb5c3dc94911aa92de30aa906ddc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "hypotheses"
+        }
+      ],
+      "aliasConjugation": "hypotheses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "676381eb44b73bdab0d432160f8a1d2a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 어디까지나 가정에 지나지 않는다",
+      "text": "It is a mere <b>hypothesis</b>. or That is just an assumption."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 가설을 뒷받침해 주는 많은 증거가 있다.",
+      "text": "We find much evidence converging to support the <b>hypothesis</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 가설은 검증되었다",
+      "text": "The <b>hypothesis</b> was proved[verified]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,120 @@
+{
+  "quotes": [
+    {
+      "date": "2025-12-22T00:00:00.000Z",
+      "open": 118000,
+      "high": 119700,
+      "low": 116100,
+      "close": 118700,
+      "volume": 85451,
+      "adjclose": 118700
+    },
+    {
+      "date": "2025-12-23T00:00:00.000Z",
+      "open": 121900,
+      "high": 129500,
+      "low": 119400,
+      "close": 127700,
+      "volume": 417541,
+      "adjclose": 127700
+    },
+    {
+      "date": "2025-12-24T00:00:00.000Z",
+      "open": 126500,
+      "high": 129600,
+      "low": 125300,
+      "close": 128900,
+      "volume": 139879,
+      "adjclose": 128900
+    },
+    {
+      "date": "2025-12-26T00:00:00.000Z",
+      "open": 127300,
+      "high": 127900,
+      "low": 123600,
+      "close": 124400,
+      "volume": 135676,
+      "adjclose": 124400
+    },
+    {
+      "date": "2025-12-29T00:00:00.000Z",
+      "open": 122500,
+      "high": 128500,
+      "low": 121300,
+      "close": 128000,
+      "volume": 134059,
+      "adjclose": 128000
+    },
+    {
+      "date": "2025-12-30T00:00:00.000Z",
+      "open": 127600,
+      "high": 137500,
+      "low": 127400,
+      "close": 135000,
+      "volume": 450619,
+      "adjclose": 135000
+    },
+    {
+      "date": "2026-01-02T00:00:00.000Z",
+      "open": null,
+      "high": null,
+      "low": null,
+      "close": null,
+      "volume": null,
+      "adjclose": null
+    }
+  ],
+  "meta": {
+    "currency": "KRW",
+    "symbol": "041510.KS",
+    "exchangeName": "KOE",
+    "fullExchangeName": "KOSDAQ",
+    "instrumentType": "MUTUALFUND",
+    "firstTradeDate": 956880000,
+    "regularMarketTime": 1721419200,
+    "hasPrePostMarketData": false,
+    "gmtoffset": 32400,
+    "timezone": "KST",
+    "exchangeTimezoneName": "Asia/Seoul",
+    "regularMarketPrice": 73300,
+    "fiftyTwoWeekHigh": 155100,
+    "fiftyTwoWeekLow": 67200,
+    "longName": "S.M Entertainment Co",
+    "shortName": "041510.KS,0P0000AG7J,201310",
+    "chartPreviousClose": 117100,
+    "priceHint": 2,
+    "currentTradingPeriod": {
+      "pre": {
+        "timezone": "KST",
+        "start": 1767306600,
+        "end": 1767312000,
+        "gmtoffset": 32400
+      },
+      "regular": {
+        "timezone": "KST",
+        "start": 1767312000,
+        "end": 1767333600,
+        "gmtoffset": 32400
+      },
+      "post": {
+        "timezone": "KST",
+        "start": 1767333600,
+        "end": 1767344400,
+        "gmtoffset": 32400
+      }
+    },
+    "dataGranularity": "1d",
+    "range": "",
+    "validRanges": [
+      "1mo",
+      "3mo",
+      "6mo",
+      "ytd",
+      "1y",
+      "2y",
+      "5y",
+      "10y",
+      "max"
+    ]
+  }
+}

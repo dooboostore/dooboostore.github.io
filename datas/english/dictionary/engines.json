@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "engine",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈendʒɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "발동기; (복잡하고 정밀한) 기계 (장치), 기관, 엔진; 증기 기관(= steam ~)",
+              "examples": [
+                {
+                  "text": "a car <b>engine</b>",
+                  "translatedText": "자동차 엔진"
+                }
+              ],
+              "originalMeaning": "발동기; (복잡하고 정밀한) 기계 (장치), 기관, 엔진; 증기 기관(= steam ~)"
+            },
+            {
+              "meaning": "기관차(locomotive), 소방차",
+              "examples": [],
+              "originalMeaning": "기관차(locomotive), 소방차"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(증기) 기관을 장치하다",
+              "examples": [],
+              "originalMeaning": "(증기) 기관을 장치하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff5fea23ddc44c4f842664cddb4da7c7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff5fea23ddc44c4f842664cddb4da7c7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "78cb8fbba909978e800791f46c0f83ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 엔진은 지금 작동 중이다.",
+      "text": "The <b>engine</b> is going now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 기관은 증기로 움직인다",
+      "text": "This <b>engine</b> is driven by steam."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "엔진을 시동시킬 수가 없었다.",
+      "text": "I could not start (up) the <b>engine</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 엔진에는 석탄이 많이 쓰인다",
+      "text": "This <b>engine</b> consumes much coal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "와트는 증기 기관을 발명했다.",
+      "text": "J. Watt invented the steam <b>engine</b>."
+    }
+  ],
+  "isWordType": true
+}

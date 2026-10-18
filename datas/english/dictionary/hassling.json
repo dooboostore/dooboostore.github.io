@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "hassle",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhæsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "혼전, 혼란",
+              "examples": [],
+              "originalMeaning": "혼전, 혼란"
+            },
+            {
+              "meaning": "싸움, 말다툼, 격론",
+              "examples": [
+                {
+                  "text": "get in a <b>hassle</b>",
+                  "translatedText": "싸움[언쟁]을 하다"
+                }
+              ],
+              "originalMeaning": "싸움, 말다툼, 격론"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "괴롭히다, 들볶다",
+              "examples": [],
+              "originalMeaning": "괴롭히다, 들볶다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "말다툼하다, 싸우다 ((over, about)); 시간과 노력을 들이다 ((with))",
+              "examples": [],
+              "originalMeaning": "말다툼하다, 싸우다 ((over, about)); 시간과 노력을 들이다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/88ae3d1615f045bfa5386dc3e9867628",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/88ae3d1615f045bfa5386dc3e9867628",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hassles"
+        },
+        {
+          "type": "과거형",
+          "value": "hassled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hassling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hassled"
+        }
+      ],
+      "aliasConjugation": "hassles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bf8f2efeed4e2e2561f8c0925017dd00",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가정 생활의 풍파는 내게 견디기 힘들었다",
+      "text": "The hassles of family life got too much for me."
+    }
+  ],
+  "isWordType": true
+}

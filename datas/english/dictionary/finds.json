@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "find",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "faɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "우연히 발견하다, 우연히 만나다 (=discover)",
+              "examples": [
+                {
+                  "text": "<b>find</b> a coin on the street",
+                  "translatedText": "길에서 동전을 발견하다"
+                }
+              ],
+              "originalMeaning": "우연히 발견하다, 우연히 만나다 (=<span class='related_word' lang='en' >discover</span>)"
+            },
+            {
+              "meaning": "(찾아서) 발견하다, 찾아내다, 구하여 얻다",
+              "examples": [
+                {
+                  "text": "<b>find</b> favor with a person",
+                  "translatedText": "…의 호의를 사다"
+                }
+              ],
+              "originalMeaning": "(찾아서) 발견하다, 찾아내다, 구하여 얻다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<배심이> 평결하다",
+              "examples": [
+                {
+                  "text": "The jury found for[against] the plaintiff.",
+                  "translatedText": "배심은 원고에게 유리[불리]한 평결을 내렸다."
+                }
+              ],
+              "originalMeaning": "<배심이> 평결하다"
+            },
+            {
+              "meaning": "찾아내다",
+              "examples": [],
+              "originalMeaning": "찾아내다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(보물·광천(鑛泉) 등의) 발견(discovery), [수렵] 여우의 발견, [미·속어] 대발견",
+              "examples": [
+                {
+                  "text": "have[make] a great <b>find</b>",
+                  "translatedText": "희한한 것을 뜻밖에 찾아내다"
+                }
+              ],
+              "originalMeaning": "(보물·광천(鑛泉) 등의) 발견(discovery), [수렵] 여우의 발견, [미·속어] 대발견"
+            },
+            {
+              "meaning": "발견물, 발굴해낸 것; 주목되는 사람",
+              "examples": [],
+              "originalMeaning": "발견물, 발굴해낸 것; 주목되는 사람"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aa804cb640f943fdb8e7caf40612d75b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aa804cb640f943fdb8e7caf40612d75b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "finds"
+        },
+        {
+          "type": "과거형",
+          "value": "found"
+        },
+        {
+          "type": "현재 분사",
+          "value": "finding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "found"
+        }
+      ],
+      "aliasConjugation": "finds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f917ae246a2d05b7f2943f12ccb6b945",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다행히도 그는 집에 있었다",
+      "text": "I had the luck to <b>find</b> him at home. or By good luck, I found him at home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "혼자 갈 수 있다",
+      "text": "I can <b>find</b> my way"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "적의 편영도 볼 수가 없었다",
+      "text": "Not a sign of the enemy was to be found. or There was no sign of the enemy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 졸고 있는 것을 발견했다.",
+      "text": "I found him dozing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아까 자고 있더라",
+      "text": "I found him sleeping a little while ago. or He was noticed to be sleeping a while ago."
+    }
+  ],
+  "isWordType": true
+}

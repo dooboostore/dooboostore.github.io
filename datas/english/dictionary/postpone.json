@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>postpone</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "poʊˈspoʊn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "연기하다(put off), 늦추다, 뒤로 미루다 (=delay)",
+              "examples": [
+                {
+                  "text": "The match has been postponeduntil next Friday.",
+                  "translatedText": "그 경기는 다음 주 금요일까지 연기되었다."
+                }
+              ],
+              "originalMeaning": "연기하다(put off), 늦추다, 뒤로 미루다 (=<span class='related_word' lang='en' >delay</span>)"
+            },
+            {
+              "meaning": "(중요성·평가에 있어서) 차위(次位)에 두다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>postpone</b> private ambitions to public welfare",
+                  "translatedText": "자기의 공명보다 공공복지를 앞세우다"
+                }
+              ],
+              "originalMeaning": "(중요성·평가에 있어서) 차위(次位)에 두다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<병 등이> 손쓰기에 늦어지다",
+              "examples": [],
+              "originalMeaning": "<병 등이> 손쓰기에 늦어지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/deb3a9a19f964809acdc0cce5f72c479",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/deb3a9a19f964809acdc0cce5f72c479",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "postpones"
+        },
+        {
+          "type": "과거형",
+          "value": "postponed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "postponing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "postponed"
+        }
+      ],
+      "aliasConjugation": "postpones",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d7d33d351e6ca4b5d55533c6da5725a9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우천으로 인해서 경기가 연기되었다",
+      "text": "Owing to[On account of] the rain, the game was postponed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "콜레라의 유행 때문에 집회가 연기되었다",
+      "text": "Owing to the prevalence of cholera, the meeting was postponed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "진상은 그 기획을 연기하지 않을 수 없게 되었다는 것이다.",
+      "text": "The facts are such that the project has had to be postponed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의결이 연기되기를 요망합니다.",
+      "text": "I desire that action (should) be postponed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "중동 회담은 연기되었다",
+      "text": "The Middle-East talks were postponed. or The talks on Middle-Eastern problems were put off."
+    }
+  ],
+  "isWordType": true
+}

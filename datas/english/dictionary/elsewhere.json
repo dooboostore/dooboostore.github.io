@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "elsewhere",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│els│wer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "어떤 딴 곳에[에서, 으로]; 다른 장소에서는; 다른 경우에",
+              "examples": [
+                {
+                  "text": "here as <b>elsewhere</b>",
+                  "translatedText": "다른 경우와 마찬가지로 이 경우에도"
+                }
+              ],
+              "originalMeaning": "어떤 딴 곳에[에서, 으로]; 다른 장소에서는; 다른 경우에"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cf3ee247433045828a56017b57332489",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cf3ee247433045828a56017b57332489",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2b425c34f3ba0a75c396a644ba6a710f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 마음은 딴 곳에 있었다.",
+      "text": "His mind was <b>elsewhere</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다른 상점에서 더 염가로 구입할 수 있다",
+      "text": "We can get them cheaper[on better terms] <b>elsewhere</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "entry": "swap",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "swɑːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<물건을> (물건과) 바꾸다, 교환[교역]하다 ((for)); (남과) 바꾸다 ((with))",
+              "examples": [
+                {
+                  "text": "I <b>swap</b> ped my watch for his dictionary.",
+                  "translatedText": "내 시계를 그의 사전과 바꿨다."
+                }
+              ],
+              "originalMeaning": "<물건을> (물건과) 바꾸다, 교환[교역]하다 ((for)); (남과) 바꾸다 ((with))"
+            },
+            {
+              "meaning": "<배우자를> 교환하다",
+              "examples": [],
+              "originalMeaning": "<배우자를> 교환하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교환하다",
+              "examples": [],
+              "originalMeaning": "교환하다"
+            },
+            {
+              "meaning": "부부를 교환하다",
+              "examples": [],
+              "originalMeaning": "부부를 교환하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 a ~] 교환, 교환품; 교환물",
+              "examples": [
+                {
+                  "text": "He got the radio in a <b>swap</b>.",
+                  "translatedText": "그는 교환으로 라디오를 얻었다."
+                }
+              ],
+              "originalMeaning": "[보통 a ~] 교환, 교환품; 교환물"
+            },
+            {
+              "meaning": "(통화·금리 등의) 상환 거래",
+              "examples": [],
+              "originalMeaning": "(통화·금리 등의) 상환 거래"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff7687f1aac04b09ac6696ba972017f8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff7687f1aac04b09ac6696ba972017f8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "swaps, swops"
+        },
+        {
+          "type": "과거형",
+          "value": "swapped, swopped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "swapping, swopping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "swapped, swopped"
+        }
+      ],
+      "aliasConjugation": "swaps, swops",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "97c239ab18ea0efb4c5cd8b46c95203d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 교환으로 라디오를 얻었다.",
+      "text": "He got the radio in a <b>swap</b>."
+    }
+  ],
+  "isWordType": true
+}

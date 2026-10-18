@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "scarce",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "skers"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<식량·금전·생활 필수품이> 부족한, 적은, 모자라는 ((of))",
+              "examples": [
+                {
+                  "text": "be <b>scarce</b> offood",
+                  "translatedText": "식량이 모자라다"
+                }
+              ],
+              "originalMeaning": "<식량·금전·생활 필수품이> 부족한, 적은, 모자라는 ((of))"
+            },
+            {
+              "meaning": "드문, 진귀한 (=rare)",
+              "examples": [
+                {
+                  "text": "a <b>scarce</b> book",
+                  "translatedText": "진본(珍本)"
+                }
+              ],
+              "originalMeaning": "드문, 진귀한 (=<span class='related_word' lang='en' >rare</span>)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "(=SCARCELY)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >SCARCELY</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15a4ae4812a24e059c62b5b395a513e7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15a4ae4812a24e059c62b5b395a513e7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "scarcer"
+        },
+        {
+          "type": "최상급",
+          "value": "scarcest"
+        }
+      ],
+      "aliasConjugation": "scarcer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "33f5b6180d6421dc5b4edfc81ba682cc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거의 아무것도 얻지 못하였다",
+      "text": "I scarcely gained anything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "웃음을 누를 수 없었다",
+      "text": "I could scarcely suppress a laugh."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 거기에 있었을 리는 절대 없다.",
+      "text": "He can scarcely have been there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 거의 무의식적으로 뛰기 시작했다",
+      "text": "Scarcely witting, she began to run."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 극장에 가는 일이 좀처럼 없다.",
+      "text": "He scarcely ever goes to the theater."
+    }
+  ],
+  "isWordType": true
+}

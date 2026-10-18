@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "ski",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skiː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "스키(판)",
+              "examples": [],
+              "originalMeaning": "스키(판)"
+            },
+            {
+              "meaning": "수상 스키(판)",
+              "examples": [],
+              "originalMeaning": "수상 스키(판)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "스키의, 스키용의",
+              "examples": [
+                {
+                  "text": "a <b>ski</b> resort",
+                  "translatedText": "스키장"
+                }
+              ],
+              "originalMeaning": "스키의, 스키용의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "스키를 타다",
+              "examples": [],
+              "originalMeaning": "스키를 타다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce85fb0c2c6e4b1c8ecad4a5fbba6d4e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce85fb0c2c6e4b1c8ecad4a5fbba6d4e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "skis"
+        },
+        {
+          "type": "복수형",
+          "value": "skis, ski"
+        },
+        {
+          "type": "과거형",
+          "value": "skied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "skiing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "skied"
+        }
+      ],
+      "aliasConjugation": "skis",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d71b5fcb4b5a9142d7ac912d9d63381e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 스키에 있어서는 나보다 훨씬 뛰어나다.",
+      "text": "He is far above me in skiing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뭐니 뭐니 해도 겨울에는 스키가 최고다",
+      "text": "There's nothing like skiing in winter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "겨울은 스키타기에 가장 좋은 계절이다.",
+      "text": "Winter is the best season for skiing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "크로스컨트리 스키 경기",
+      "text": "X-C skiing"
+    }
+  ],
+  "isWordType": true
+}

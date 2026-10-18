@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "reject",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "거절하다, 각하하다, 거부[부인]하다 (=refuse)",
+              "examples": [
+                {
+                  "text": "<b>reject</b> a vote",
+                  "translatedText": "투표를 거부하다"
+                }
+              ],
+              "originalMeaning": "거절하다, 각하하다, 거부[부인]하다 (=<span class='related_word' lang='en' >refuse</span>)"
+            },
+            {
+              "meaning": "<사람·응모자 등을> 불합격시키다, 받아들이지 않다",
+              "examples": [
+                {
+                  "text": "<b>reject</b> a suitor",
+                  "translatedText": "구혼자를 퇴짜 놓다"
+                }
+              ],
+              "originalMeaning": "<사람·응모자 등을> 불합격시키다, 받아들이지 않다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "거부된 사람[것]; 불합격자[품], 흠 있는 물건",
+              "examples": [],
+              "originalMeaning": "거부된 사람[것]; 불합격자[품], 흠 있는 물건"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d910bbd8d9b34c7db83cebca778f3080",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d910bbd8d9b34c7db83cebca778f3080",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rejects"
+        },
+        {
+          "type": "과거형",
+          "value": "rejected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rejecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rejected"
+        }
+      ],
+      "aliasConjugation": "rejects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e4533593bda370cb0921f90bdf3bb570",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이식 피부가 거부 반응을 일으켰다",
+      "text": "The skin graft was rejected."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "본교에서는 평균 60점 이하는 낙제로 친다",
+      "text": "A student who fails to get an average mark of 60 is rejected[not promoted] at this school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국회는 그 안을 통과[부결]시킬 것이다",
+      "text": "The Congress will pass[<b>reject</b>] the bill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 어쩐지 마음이 떠름하여 춤을 거절했다",
+      "text": "I didn't feel like dancing and rejected it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "제안은 30대 22로 부결되었다",
+      "text": "The proposal was rejected by a vote of 30 to 22."
+    }
+  ],
+  "isWordType": true
+}

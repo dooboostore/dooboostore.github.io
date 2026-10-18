@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "learning",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈlɜːrnɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "배움, 학습, 습득",
+              "examples": [],
+              "originalMeaning": "배움, 학습, 습득"
+            },
+            {
+              "meaning": "[U] [또는 a ~] 학문, 학식, 지식; 박학, 박식",
+              "examples": [
+                {
+                  "text": "a man of <b>learning</b>",
+                  "translatedText": "학자"
+                }
+              ],
+              "originalMeaning": "[U] [또는 a ~] 학문, 학식, 지식; 박학, 박식"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a06ffedb404042bf91e8b2e3203eb032",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a06ffedb404042bf91e8b2e3203eb032",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "66dfad2e3d17b86569c846cceaa87b0a",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "learn",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "lɜːrn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(공부·연습 등에 의해) <지식·기술 등을> 배우다, 익히다, 습득하다",
+              "examples": [
+                {
+                  "text": "( <b>learn</b>+to do) <b>learn</b> to swim[ride]",
+                  "translatedText": "수영을[승마를] 배우다[익히다]"
+                }
+              ],
+              "originalMeaning": "(공부·연습 등에 의해) <지식·기술 등을> 배우다, 익히다, 습득하다"
+            },
+            {
+              "meaning": "(들어서) 알다, 듣다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>learn</b> the truth",
+                  "translatedText": "진실을 알다"
+                }
+              ],
+              "originalMeaning": "(들어서) 알다, 듣다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "배우다, 익히다, 공부하다, 외다 ((from, by))",
+              "examples": [
+                {
+                  "text": "<b>learn</b> from one's mistakes[experience]",
+                  "translatedText": "실수[경험]로 배우다"
+                }
+              ],
+              "originalMeaning": "배우다, 익히다, 공부하다, 외다 ((from, by))"
+            },
+            {
+              "meaning": "(들어서) 알다, 듣다 ((of, about; from))",
+              "examples": [
+                {
+                  "text": "<b>learn</b> of an accident",
+                  "translatedText": "사고에 관하여 듣다[알다]"
+                }
+              ],
+              "originalMeaning": "(들어서) 알다, 듣다 ((of, about; from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c152f3c1303740ad89b0e3b1276f9991",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c152f3c1303740ad89b0e3b1276f9991",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "learns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e3fd8e37d3e00028ae6a43013df46a6f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 춤을 익히고 있다.",
+      "text": "I’m <b>learning</b> to dance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "귀로 들어서 알게[배우게] 된다.",
+      "text": "We <b>learn</b> by listening."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배운 것을 복습해 보자",
+      "text": "Let's review what you learned."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 이미 요령을 터득했다",
+      "text": "I've already learned the ropes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "주의깊게 듣는 여성은 기억도 잘한다.",
+      "text": "She who listens learns."
+    }
+  ],
+  "isWordType": true
+}

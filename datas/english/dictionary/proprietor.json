@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>proprietor</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈpraɪətə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(상점·호텔·토지 등의) 소유자, 소유주, 경영자",
+              "examples": [
+                {
+                  "text": "a landed <b>proprietor</b>",
+                  "translatedText": "지주"
+                }
+              ],
+              "originalMeaning": "(상점·호텔·토지 등의) 소유자, 소유주, 경영자"
+            },
+            {
+              "meaning": "독점권 소유자, 사업주,[집합적] 소유자 단체",
+              "examples": [
+                {
+                  "text": "copyright proprietors",
+                  "translatedText": "저작권 소유자"
+                }
+              ],
+              "originalMeaning": "독점권 소유자, 사업주,[집합적] 소유자 단체"
+            },
+            {
+              "meaning": "독점 식민지 지배자",
+              "examples": [],
+              "originalMeaning": "독점 식민지 지배자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b81b68cc9bef43e1a4887321ce1f07d1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b81b68cc9bef43e1a4887321ce1f07d1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "여성 명사",
+          "value": "proprietress, proprietrix"
+        }
+      ],
+      "aliasConjugation": "proprietress, proprietrix",
+      "aliasConjugationPos": "여성 명사",
+      "gdid": "2809f04fefa9ac0f4bca0d9403993d11",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토지 개혁으로 많은 지주들이 몰락했다",
+      "text": "Many a landowner has become bankrupt due to the land reform. or Many landed proprietors were ruined due to the land reform."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 신발 가게에서는 주인이 직접 손님을 모신다",
+      "text": "The <b>proprietor</b> of that shoes store waits on customers himself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "주인이 죽은 후로 가게는 지위가 졌다",
+      "text": "Since the <b>proprietor</b>'s death, the store has declined."
+    }
+  ],
+  "isWordType": true
+}

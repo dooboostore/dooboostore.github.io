@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "guarantee",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌɡærənˈtiː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보증",
+              "examples": [
+                {
+                  "text": "a money-back <b>guarantee</b>",
+                  "translatedText": "환불 보증"
+                }
+              ],
+              "originalMeaning": "보증"
+            },
+            {
+              "meaning": "개런티 ((최저 보증 출연료)); 보증서, 담보(물)(security)",
+              "examples": [],
+              "originalMeaning": "개런티 ((최저 보증 출연료)); 보증서, 담보(물)(security)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "보증하다(affirm), 보증을 서다",
+              "examples": [
+                {
+                  "text": "<b>guarantee</b> a person against[from] loss",
+                  "translatedText": "…에게 손해를 안 끼칠 것을 보증하다"
+                }
+              ],
+              "originalMeaning": "보증하다(affirm), 보증을 서다"
+            },
+            {
+              "meaning": "<일의 실현·확실성 등을> 다짐하다, 약속하다, 확언하다, 장담하다",
+              "examples": [
+                {
+                  "text": "I <b>guarantee</b> (that) he will come.",
+                  "translatedText": "그가 올 것임을 내가 장담하지."
+                }
+              ],
+              "originalMeaning": "<일의 실현·확실성 등을> 다짐하다, 약속하다, 확언하다, 장담하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bfc485fbb6bb472981634fb848df2315",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bfc485fbb6bb472981634fb848df2315",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "guarantees"
+        },
+        {
+          "type": "과거형",
+          "value": "guaranteed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "guaranteeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "guaranteed"
+        }
+      ],
+      "aliasConjugation": "guarantees",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "78500633e548e3c086132e7a77dca9dc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 올 것임을 내가 장담하지.",
+      "text": "I <b>guarantee</b> (that) he will come."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국제 투자 보증 기구",
+      "text": "Multilateral Investment <b>Guarantee</b> Agency"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "재산이 행복을 보장하는 것은 아니다.",
+      "text": "Wealth is no <b>guarantee</b> of happiness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1년 보장이란 말을 신용하고 이 차를 샀다",
+      "text": "I bought this car on the strength of a one-year <b>guarantee</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 집이 6월까지는 우리 것이 된다는 것을 보증했다.",
+      "text": "He guaranteed us possession of the house by June."
+    }
+  ],
+  "isWordType": true
+}

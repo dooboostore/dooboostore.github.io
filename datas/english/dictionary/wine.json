@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "wine",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "waɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "포도주, 과실주",
+              "examples": [
+                {
+                  "text": "apple <b>wine</b>",
+                  "translatedText": "사과주"
+                }
+              ],
+              "originalMeaning": "포도주, 과실주"
+            },
+            {
+              "meaning": "포도주 용제(溶劑)",
+              "examples": [
+                {
+                  "text": "<b>wine</b> of opium",
+                  "translatedText": "아편 포도주"
+                }
+              ],
+              "originalMeaning": "포도주 용제(溶劑)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "암적색의, 와인색의",
+              "examples": [],
+              "originalMeaning": "암적색의, 와인색의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을 포도주로 대접하다",
+              "examples": [],
+              "originalMeaning": "…을 포도주로 대접하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e93e29c6fb2b4448b27b959194be15e3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e93e29c6fb2b4448b27b959194be15e3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wines"
+        },
+        {
+          "type": "과거형",
+          "value": "wined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wined"
+        }
+      ],
+      "aliasConjugation": "wines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "93cdfd4d95035c024eb02d3741851f01",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게서 술 냄새가 난다.",
+      "text": "He smells of <b>wine</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게서 독한 술냄새가 난다.",
+      "text": "He stinks of <b>wine</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "술에 취하면 본성이 나타난다",
+      "text": "<b>Wine</b> reveals the true man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 포도주는 통 맛이 없다[김빠진 맛이다].",
+      "text": "This <b>wine</b> drinks flat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 포도주를 그다지 마시지 않는다.",
+      "text": "I don’t drink much <b>wine</b>."
+    }
+  ],
+  "isWordType": true
+}

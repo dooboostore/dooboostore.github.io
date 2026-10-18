@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>undergo</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˌʌndərˈɡoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<검열·수술을> 받다, 만나다, 당하다(suffer)",
+              "examples": [
+                {
+                  "text": "<b>undergo</b> medical treatment",
+                  "translatedText": "치료를 받다"
+                }
+              ],
+              "originalMeaning": "<검열·수술을> 받다, 만나다, 당하다(suffer)"
+            },
+            {
+              "meaning": "<변화 등을> 겪다, 경험하다 (=experience)",
+              "examples": [
+                {
+                  "text": "<b>undergo</b> changes",
+                  "translatedText": "여러 가지 변화를 겪다"
+                }
+              ],
+              "originalMeaning": "<변화 등을> 겪다, 경험하다 (=<span class='related_word' lang='en' >experience</span>)"
+            },
+            {
+              "meaning": "<고난을> 견디다, 참다(endure)",
+              "examples": [
+                {
+                  "text": "<b>undergo</b> trials",
+                  "translatedText": "시련을 견디다"
+                }
+              ],
+              "originalMeaning": "<고난을> 견디다, 참다(endure)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dea0afe889d542879db2f423ef5e904e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dea0afe889d542879db2f423ef5e904e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "undergoes"
+        },
+        {
+          "type": "과거형",
+          "value": "underwent"
+        },
+        {
+          "type": "현재 분사",
+          "value": "undergoing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "undergone"
+        }
+      ],
+      "aliasConjugation": "undergoes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e79aaffd465e54facd57ef4b15fcf641",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 법안은 수정된 것이다",
+      "text": "The bill has undergone revision."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그때부터 나에 대한 그의 태도가 달라졌다",
+      "text": "From then on his attitude to me changed[was different]. or From that time his attitude toward me underwent a change."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국민된 자는 병역에 복무할지어다",
+      "text": "It shall be the duty of everybody to <b>undergo</b> military service."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나라는 정치적 무장 혁명을 겪었다",
+      "text": "That country had been undergoing political and armed revolution."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "곧 여론은 일변했다.",
+      "text": "Soon public opinion underwent a complete transformation."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "interface",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɪntərfeɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경계면, 접점, 공유[접촉] 영역",
+              "examples": [
+                {
+                  "text": "the <b>interface</b> between the scientist and society",
+                  "translatedText": "과학자와 사회의 접점"
+                }
+              ],
+              "originalMeaning": "경계면, 접점, 공유[접촉] 영역"
+            },
+            {
+              "meaning": "(이종간의) 대화, 연락, 의사소통",
+              "examples": [],
+              "originalMeaning": "(이종간의) 대화, 연락, 의사소통"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "조화시키다, 조정하다",
+              "examples": [],
+              "originalMeaning": "조화시키다, 조정하다"
+            },
+            {
+              "meaning": "인터페이스로 접속[연결]하다",
+              "examples": [],
+              "originalMeaning": "인터페이스로 접속[연결]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결부하다, 조화되다",
+              "examples": [],
+              "originalMeaning": "결부하다, 조화되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dbc0d76a241e4a86bcf13c9cae8e0bbb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dbc0d76a241e4a86bcf13c9cae8e0bbb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "interfaces"
+        },
+        {
+          "type": "과거형",
+          "value": "interfaced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "interfacing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "interfaced"
+        }
+      ],
+      "aliasConjugation": "interfaces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a21b3b4f439775ff82e48face71d4618",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 컴퓨터는 네트워크 인터페이스를 가지고 있다",
+      "text": "My computer has a network <b>interface</b>."
+    }
+  ],
+  "isWordType": true
+}

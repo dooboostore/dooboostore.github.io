@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "yield",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "jiːld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<작물·제품 등을> 산출(産出)하다, 내다",
+              "examples": [
+                {
+                  "text": "Sheep <b>yield</b> wool.",
+                  "translatedText": "양에서 양모가 나온다."
+                }
+              ],
+              "originalMeaning": "<작물·제품 등을> 산출(産出)하다, 내다"
+            },
+            {
+              "meaning": "<이자·이익 등을> 낳다, 가져오다; <결과 등을> 초래하다, 야기하다",
+              "examples": [],
+              "originalMeaning": "<이자·이익 등을> 낳다, 가져오다; <결과 등을> 초래하다, 야기하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<토지 등이> 농작물을 산출하다, <노력 등이> 보수를 가져오다; <나무 등에> 열매가 맺히다",
+              "examples": [
+                {
+                  "text": "The apple tree yields well[poorly] this year.",
+                  "translatedText": "금년은 사과의 수확이 좋다[나쁘다]."
+                }
+              ],
+              "originalMeaning": "<토지 등이> 농작물을 산출하다, <노력 등이> 보수를 가져오다; <나무 등에> 열매가 맺히다"
+            },
+            {
+              "meaning": "굴복하다, 지다, 굴하다, 따르다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>yield</b> todespair",
+                  "translatedText": "실망하다"
+                }
+              ],
+              "originalMeaning": "굴복하다, 지다, 굴하다, 따르다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "산출; 산출액, 생산량, 수확",
+              "examples": [
+                {
+                  "text": "a large <b>yield</b>",
+                  "translatedText": "풍작"
+                }
+              ],
+              "originalMeaning": "산출; 산출액, 생산량, 수확"
+            },
+            {
+              "meaning": "보수; 이윤율, 이익 배당",
+              "examples": [],
+              "originalMeaning": "보수; 이윤율, 이익 배당"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0d1cc99a97c14dc981ba2af2b1a58e73",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0d1cc99a97c14dc981ba2af2b1a58e73",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "yields"
+        },
+        {
+          "type": "과거형",
+          "value": "yielded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "yielding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "yielded"
+        }
+      ],
+      "aliasConjugation": "yields",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0f47130efb0c59ac4abcf3596bfa929e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "exact:example",
+      "translatedText": "양보하시오.",
+      "text": "<b>Yield</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나에게 재산을 양도해 주었다.",
+      "text": "He yielded me his property."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노력은 했으나 수확이 별로 없었다",
+      "text": "The effort yielded but a sorry crop."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무거운 상자로 마룻바닥이 휘었다.",
+      "text": "The floor yielded under the heavy box."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년은 사과의 수확이 좋다[나쁘다].",
+      "text": "The apple tree yields well[poorly] this year."
+    }
+  ],
+  "isWordType": true
+}

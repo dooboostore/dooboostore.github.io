@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "react",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "riˈækt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(작용·힘에 대하여) 반작용하다, 반동하다 ((on, upon))",
+              "examples": [],
+              "originalMeaning": "(작용·힘에 대하여) 반작용하다, 반동하다 ((on, upon))"
+            },
+            {
+              "meaning": "반대[반발]하다, 반항하다 ((against))",
+              "examples": [
+                {
+                  "text": "<b>react</b> against oppression",
+                  "translatedText": "압정에 반항하다"
+                }
+              ],
+              "originalMeaning": "반대[반발]하다, 반항하다 ((against))"
+            },
+            {
+              "meaning": "(자극 등에) 반응[대응]하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>react</b> to a shock by jumping",
+                  "translatedText": "충격에 반응해 뛰어오르다"
+                }
+              ],
+              "originalMeaning": "(자극 등에) 반응[대응]하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/18b639d92cad481f866497caf074e5d0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/18b639d92cad481f866497caf074e5d0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reacts"
+        },
+        {
+          "type": "과거형",
+          "value": "reacted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reacting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reacted"
+        }
+      ],
+      "aliasConjugation": "reacts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4b9a793c0a61ff062d52d5fe23688885",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-act",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:ǽkt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "재연하다; 다시 행하다, 반복하다",
+              "examples": [
+                {
+                  "text": "re-act the part in a film",
+                  "translatedText": "영화의 한 부분을 재연하다"
+                }
+              ],
+              "originalMeaning": "재연하다; 다시 행하다, 반복하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/455b6c03da954fb6902af95871cd589f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/455b6c03da954fb6902af95871cd589f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4965b6eaf3508b82a58b873342de0425",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산은 염기와 반응하여 소금을 만든다",
+      "text": "The acid <b>reacts</b> with a base to form a salt."
+    }
+  ],
+  "isWordType": true
+}

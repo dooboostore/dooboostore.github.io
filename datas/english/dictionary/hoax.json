@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>hoax</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hoʊks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "장난으로 속이다, 골탕먹이다; 속여서 …하게 하다 ((into))",
+              "examples": [],
+              "originalMeaning": "장난으로 속이다, 골탕먹이다; 속여서 …하게 하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사람을 속이기, 골탕먹임, 짓궂은 장난; 날조",
+              "examples": [
+                {
+                  "text": "play a <b>hoax</b> on a person",
+                  "translatedText": "…을 감쪽같이 속이다"
+                }
+              ],
+              "originalMeaning": "사람을 속이기, 골탕먹임, 짓궂은 장난; 날조"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50cdaec15c8c4f769952f8b30925a15d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50cdaec15c8c4f769952f8b30925a15d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hoaxes"
+        },
+        {
+          "type": "과거형",
+          "value": "hoaxed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hoaxing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hoaxed"
+        }
+      ],
+      "aliasConjugation": "hoaxes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c6c4d8efa029390521bb25334ec5d1ab",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭탄 위협은 속임수로 드러났다",
+      "text": "The bomb scare turned out to be a <b>hoax</b>."
+    }
+  ],
+  "isWordType": true
+}

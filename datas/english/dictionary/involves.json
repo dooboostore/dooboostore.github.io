@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "involve",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪnˈvɑːlv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "포함하다, (필연적으로) 수반하다; 뜻하다, 필요로 하다",
+              "examples": [
+                {
+                  "text": "This work <b>involves</b> long hours.",
+                  "translatedText": "이 일은 오랜 시간을 필요로 한다."
+                }
+              ],
+              "originalMeaning": "포함하다, (필연적으로) 수반하다; 뜻하다, 필요로 하다"
+            },
+            {
+              "meaning": "종사시키다(employ), 참가시키다 ((in))",
+              "examples": [],
+              "originalMeaning": "종사시키다(employ), 참가시키다 ((in))"
+            },
+            {
+              "meaning": "관계[관련]시키다 ((in, with))",
+              "examples": [],
+              "originalMeaning": "관계[관련]시키다 ((in, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/05e7091d1ff9468d9b7bdd514820d6ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/05e7091d1ff9468d9b7bdd514820d6ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "involves"
+        },
+        {
+          "type": "과거형",
+          "value": "involved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "involving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "involved"
+        }
+      ],
+      "aliasConjugation": "involves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "201c0c549f2c82131df9d995abde6af5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그렇게 하면 크게 밑진다",
+      "text": "It <b>involves</b> a big loss."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 사건에 관련되어 있다",
+      "text": "He is involved in the case."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "거기에는 많은 경비가 소요될 것이다",
+      "text": "It will <b>involve</b> a heavy outlay."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이 사건에 관계되지 않았다",
+      "text": "He was not involved in this affair."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "장관이 추문 사건에 걸렸다",
+      "text": "A minister was involved in the scandal."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "appear",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈpɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "나타나다, 출현하다, 나오다, 보이게 되다; (사교계에) 나오다(opp. disappear)",
+              "examples": [
+                {
+                  "text": "<b>appear</b> on the horizon",
+                  "translatedText": "지평선 위에 나타나다"
+                }
+              ],
+              "originalMeaning": "나타나다, 출현하다, 나오다, 보이게 되다; (사교계에) 나오다(opp. disappear)"
+            },
+            {
+              "meaning": "…인 것같이 보이다, …이라고 여겨지다, …인 듯하다 (=seem)",
+              "examples": [
+                {
+                  "text": "He <b>appear</b> s (to be) rich. = It <b>appear</b> s (to me) that he is rich.",
+                  "translatedText": "그는 부자인 듯하다."
+                }
+              ],
+              "originalMeaning": "…인 것같이 보이다, …이라고 여겨지다, …인 듯하다 (=<span class='related_word' lang='en' >seem</span>)"
+            },
+            {
+              "meaning": "<…임이> 분명하다, 분명해지다(be obvious)",
+              "examples": [
+                {
+                  "text": "for reasons that do not <b>appear</b>",
+                  "translatedText": "분명하지 않은 이유로"
+                }
+              ],
+              "originalMeaning": "<…임이> 분명하다, 분명해지다(be obvious)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4ac32e0881c46ff8e9b70ed1848f48c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4ac32e0881c46ff8e9b70ed1848f48c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "appears"
+        },
+        {
+          "type": "과거형",
+          "value": "appeared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "appearing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "appeared"
+        }
+      ],
+      "aliasConjugation": "appears",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "761cb88d67c0720396f4e69fef0a8dce",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "살이 빠진 것 같다",
+      "text": "You <b>appear</b> to have lost weight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 부자였던 것 같다.",
+      "text": "He <b>appears</b> to have been rich."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀가 그 다음으로 나타났다.",
+      "text": "She was the next to <b>appear</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 절망하고 있는 것 같았다",
+      "text": "He appeared (to be) in despair."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 계획은 좋을 성싶다",
+      "text": "The plan <b>appears</b> to be a good one."
+    }
+  ],
+  "isWordType": true
+}

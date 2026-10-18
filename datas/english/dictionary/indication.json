@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "indication",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌɪndɪˈkeɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지시, 지적; 암시; 표시; 징조, 조짐 ((of))",
+              "examples": [
+                {
+                  "text": "give an <b>indication</b> of",
+                  "translatedText": "…의 조짐을 보이다"
+                }
+              ],
+              "originalMeaning": "지시, 지적; 암시; 표시; 징조, 조짐 ((of))"
+            },
+            {
+              "meaning": "징후, 적응(증) ((of))",
+              "examples": [],
+              "originalMeaning": "징후, 적응(증) ((of))"
+            },
+            {
+              "meaning": "(계기(計器)의) 시도(示度), 표시 도수(度數)",
+              "examples": [],
+              "originalMeaning": "(계기(計器)의) 시도(示度), 표시 도수(度數)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d53fe8f72c644f9dacdbca479fd63c7d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d53fe8f72c644f9dacdbca479fd63c7d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8a7aa61898994ef6e47a19bc04e837fe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무래도 비가 올 것 같다",
+      "text": "Every <b>indication</b> favors rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경기 회복의 조짐이 나타났다",
+      "text": "There is an <b>indication</b> of the market picking up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경제 회복의 징조가 농후하다",
+      "text": "There is every <b>indication</b> the economy is improving."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "현 상태로서는 소요가 일어날 가능성이 있다",
+      "text": "The present <b>indication</b> of affairs points to the possibility of disturbances."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쌀값이 내릴 모양이다",
+      "text": "There are indications that the price of rice will fall."
+    }
+  ],
+  "isWordType": true
+}

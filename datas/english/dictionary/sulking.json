@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "<b>sulk</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sʌlk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~s] 샐쭉함, 부루퉁함, 앵돌아짐",
+              "examples": [],
+              "originalMeaning": "[the ~s] 샐쭉함, 부루퉁함, 앵돌아짐"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "샐쭉해지다, 부루퉁해지다, 앵돌아지다, 골나다",
+              "examples": [],
+              "originalMeaning": "샐쭉해지다, 부루퉁해지다, 앵돌아지다, 골나다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8ba3a6e8b12949fe857b2832a5f78021",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8ba3a6e8b12949fe857b2832a5f78021",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sulks"
+        },
+        {
+          "type": "과거형",
+          "value": "sulked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sulking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sulked"
+        }
+      ],
+      "aliasConjugation": "sulks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ec62a0c472ba15e59a652d2d40916ec0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 야단을 맞은 후로 시무룩해 있다",
+      "text": "He has been in a <b>sulk</b> ever since he received a rebuke."
+    }
+  ],
+  "isWordType": true
+}

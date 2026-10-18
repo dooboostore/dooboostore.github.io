@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "sack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sǽk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부대, 마대, 자루 ((삼베로 만든)); 한 부대(의 양)",
+              "examples": [],
+              "originalMeaning": "부대, 마대, 자루 ((삼베로 만든)); 한 부대(의 양)"
+            },
+            {
+              "meaning": "봉지, 한 봉지(의 양)",
+              "examples": [
+                {
+                  "text": "a <b>sack</b> of candy",
+                  "translatedText": "사탕 한 봉지"
+                }
+              ],
+              "originalMeaning": "봉지, 한 봉지(의 양)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(삼베) 자루에 넣다",
+              "examples": [],
+              "originalMeaning": "(삼베) 자루에 넣다"
+            },
+            {
+              "meaning": "[구어] 해고하다, 퇴짜 놓다 (=dismiss)",
+              "examples": [],
+              "originalMeaning": "[구어] 해고하다, 퇴짜 놓다 (=<span class='related_word' lang='en' >dismiss</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b45a2cc034c44f8997990abc15362458",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b45a2cc034c44f8997990abc15362458",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sacks"
+        },
+        {
+          "type": "과거형",
+          "value": "sacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sacked"
+        }
+      ],
+      "aliasConjugation": "sacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7df3c5a7e59e9b93b942e24f8f34cfff",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "sack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<점령군이> <도시를> 약탈하다",
+              "examples": [],
+              "originalMeaning": "<점령군이> <도시를> 약탈하다"
+            },
+            {
+              "meaning": "<도둑 등이> <물건을> 앗아 가다",
+              "examples": [],
+              "originalMeaning": "<도둑 등이> <물건을> 앗아 가다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] (점령지의) 약탈, 노략질",
+              "examples": [
+                {
+                  "text": "put to the <b>sack</b>",
+                  "translatedText": "약탈하다"
+                }
+              ],
+              "originalMeaning": "[the ~] (점령지의) 약탈, 노략질"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5cd7af61b6c542ee9607fbd60e5b838b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5cd7af61b6c542ee9607fbd60e5b838b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "sacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c7fd6af143cd5c866239c98ce6ff1366",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "헐렁한 옷은 유행이 지났다.",
+      "text": "<b>Sack</b> dresses are out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "힘껏 치받쳐 자루를 트럭에 들어 올렸다",
+      "text": "With a mighty heave I lifted the <b>sack</b> onto the truck."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자루는 오렌지로 불룩하다.",
+      "text": "The <b>sack</b> bulges with oranges."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지배인은 그녀를 해고했다",
+      "text": "The manager gave her the air[<b>sack</b>, bag]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사과 자루가 불쑥불쑥하다",
+      "text": "The <b>sack</b> of apples bulges here and there."
+    }
+  ],
+  "isWordType": true
+}

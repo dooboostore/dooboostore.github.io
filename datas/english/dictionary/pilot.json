@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "pilot",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpaɪlət"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(비행기·우주선 등의) 조종사, 파일럿",
+              "examples": [
+                {
+                  "text": "a test <b>pilot</b>",
+                  "translatedText": "시험 비행 조종사"
+                }
+              ],
+              "originalMeaning": "(비행기·우주선 등의) 조종사, 파일럿"
+            },
+            {
+              "meaning": "수로 안내인, 도선사(導船士); 키잡이",
+              "examples": [],
+              "originalMeaning": "수로 안내인, 도선사(導船士); 키잡이"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<배의> 수로를 안내하다, 안내[지도]하다(guide)",
+              "examples": [
+                {
+                  "text": "<b>pilot</b> New York Bay",
+                  "translatedText": "뉴욕 만의 수로 안내를 하다"
+                }
+              ],
+              "originalMeaning": "<배의> 수로를 안내하다, 안내[지도]하다(guide)"
+            },
+            {
+              "meaning": "<비행기·우주선 등을> 조종하다",
+              "examples": [],
+              "originalMeaning": "<비행기·우주선 등을> 조종하다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 지도[안내]의; 표시[지표]의; 시험적인(experimental), 예비의",
+              "examples": [],
+              "originalMeaning": "[A] 지도[안내]의; 표시[지표]의; 시험적인(experimental), 예비의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/18089180ed7a409188ee5930336cef65",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/18089180ed7a409188ee5930336cef65",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pilots"
+        },
+        {
+          "type": "과거형",
+          "value": "piloted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "piloting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "piloted"
+        }
+      ],
+      "aliasConjugation": "pilots",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0ee91cd21cfd2d3025ff662329ae9c2b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조종사는 비행기 속으로 기어 들어갔다",
+      "text": "The <b>pilot</b> climbed into his plane."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 최근에 조종사 자격을 취득했다",
+      "text": "She recently qualified as a <b>pilot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 비행사가 되는 훈련을 받았다",
+      "text": "He was trained[received training] as a <b>pilot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어른이 되면 비행사가 되고 싶다고 한다",
+      "text": "He says he wants to be a <b>pilot</b> when he grows up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1년 동안 조종사 자격을 정지당했다",
+      "text": "He was disqualified <b>pilot</b> for a year. or He lost his <b>pilot</b>'s license for a year."
+    }
+  ],
+  "isWordType": true
+}

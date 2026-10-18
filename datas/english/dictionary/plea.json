@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "plea",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pliː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "탄원, 청원; 간청, 기도 ((for))",
+              "examples": [
+                {
+                  "text": "make a <b>plea</b> for mercy",
+                  "translatedText": "자비를 빌다"
+                }
+              ],
+              "originalMeaning": "탄원, 청원; 간청, 기도 ((for))"
+            },
+            {
+              "meaning": "[보통 the ~] 변명, 구실, 해명",
+              "examples": [],
+              "originalMeaning": "[보통 the ~] 변명, 구실, 해명"
+            },
+            {
+              "meaning": "[법] 진술, 주장(allegation), 항변; (피고의) 답변(서); 소송",
+              "examples": [],
+              "originalMeaning": "[법] 진술, 주장(allegation), 항변; (피고의) 답변(서); 소송"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f6ab8caa5387404bb1c14c40bd150be1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f6ab8caa5387404bb1c14c40bd150be1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "128b734a17deefa8f286b1e41a818faa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 가족이 살 집을 달라고 눈물섞인 탄원을 했다",
+      "text": "She made a tearful <b>plea</b> for a home for her family."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자비를 애원했다",
+      "text": "He made a <b>plea</b> for mercy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저의 간청을 들으소서",
+      "text": "Please listen to my <b>plea</b>."
+    }
+  ],
+  "isWordType": true
+}

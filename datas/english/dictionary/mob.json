@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "mob",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mɑːb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적] 폭도; (폭도화할 것 같은) 군중, 집단",
+              "examples": [
+                {
+                  "text": "a <b>mob</b> of angry workers",
+                  "translatedText": "성난 노동자 무리"
+                }
+              ],
+              "originalMeaning": "[집합적] 폭도; (폭도화할 것 같은) 군중, 집단"
+            },
+            {
+              "meaning": "[the ~] [경멸] 하층민, 민중",
+              "examples": [],
+              "originalMeaning": "[the ~] [경멸] 하층민, 민중"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "폭도[군중]의",
+              "examples": [],
+              "originalMeaning": "폭도[군중]의"
+            },
+            {
+              "meaning": "대중 대상의",
+              "examples": [],
+              "originalMeaning": "대중 대상의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "떼 지어 습격하다, 떼 지어 환호[야유]하다",
+              "examples": [],
+              "originalMeaning": "떼 지어 습격하다, 떼 지어 환호[야유]하다"
+            },
+            {
+              "meaning": "떼 지어 모이다, 쇄도하다",
+              "examples": [],
+              "originalMeaning": "떼 지어 모이다, 쇄도하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8967edf6e9ce4854b96cb6217803f371",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8967edf6e9ce4854b96cb6217803f371",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mobs"
+        },
+        {
+          "type": "과거형",
+          "value": "mobbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mobbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mobbed"
+        }
+      ],
+      "aliasConjugation": "mobs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fe0c41684d55a2bd953e6c68c2d62185",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "차는 폭도에 의해서 엉망으로 파괴되었다.",
+      "text": "The car was wrecked by the <b>mob</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭도들이 거리를 날뛰며 지나갔다.",
+      "text": "The <b>mob</b> stormed through the streets."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "군중은 소리소리 질러 강연자를 침묵시켰다.",
+      "text": "The <b>mob</b> howled down the lecturer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 배우는 많은 군중들에게 포위되었다",
+      "text": "The actor was mobbed by a crowd of people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 폭도에게 맞아죽었다",
+      "text": "He was beaten to death by the <b>mob</b>."
+    }
+  ],
+  "isWordType": true
+}

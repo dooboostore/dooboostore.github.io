@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "trump",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "trʌmp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[카드] 으뜸패, [pl.] 으뜸패의 한 벌",
+              "examples": [],
+              "originalMeaning": "[카드] 으뜸패, [pl.] 으뜸패의 한 벌"
+            },
+            {
+              "meaning": "[구어] 훌륭한[믿음직한] 사람, 호한(好漢); [호주·뉴질] 권력자, 당국자",
+              "examples": [
+                {
+                  "text": "a <b>trump</b> boy",
+                  "translatedText": "멋있는 남자"
+                }
+              ],
+              "originalMeaning": "[구어] 훌륭한[믿음직한] 사람, 호한(好漢); [호주·뉴질] 권력자, 당국자"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "으뜸패를 내놓다[로 따다]",
+              "examples": [],
+              "originalMeaning": "으뜸패를 내놓다[로 따다]"
+            },
+            {
+              "meaning": "[구어·비유] 비방을 쓰다, (비방을 써서) 이기다",
+              "examples": [],
+              "originalMeaning": "[구어·비유] 비방을 쓰다, (비방을 써서) 이기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e82dfded6d54286b55ffa70fc03b0f2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e82dfded6d54286b55ffa70fc03b0f2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "trumps"
+        },
+        {
+          "type": "과거형",
+          "value": "trumped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "trumping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "trumped"
+        }
+      ],
+      "aliasConjugation": "trumps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c7f86c4c6c9dd73597710fc1230be621",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "trump",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "나팔(소리)",
+              "examples": [
+                {
+                  "text": "the last <b>trump</b>",
+                  "translatedText": "(세상의 종말을 알리는) 최후의 심판의 나팔"
+                }
+              ],
+              "originalMeaning": "나팔(소리)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "나팔을 불다",
+              "examples": [],
+              "originalMeaning": "나팔을 불다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "나팔로 널리 알리다[축하하다]",
+              "examples": [],
+              "originalMeaning": "나팔로 널리 알리다[축하하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e38fcaa438cc41a7b3ce9453126ae197",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e38fcaa438cc41a7b3ce9453126ae197",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "trumps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6c78f7b1faf2d1582a30803c6f4e6d7d",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아직 최후의 수단이 있다.",
+      "text": "He hold some trumps."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게는 으뜸패가 7장 돌라졌다.",
+      "text": "He had been dealt seven trumps."
+    }
+  ],
+  "isWordType": true
+}

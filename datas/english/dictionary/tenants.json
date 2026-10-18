@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "tenant",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtenənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(토지·가옥 등의) 차용자, 소작인, 차가인(借家人)",
+              "examples": [
+                {
+                  "text": "The landlord sent his <b>tenant</b> a reminder.",
+                  "translatedText": "집주인은 세입자에게 독촉장을 보냈다."
+                }
+              ],
+              "originalMeaning": "(토지·가옥 등의) 차용자, 소작인, 차가인(借家人)"
+            },
+            {
+              "meaning": "거주자, 주민 ((of))",
+              "examples": [],
+              "originalMeaning": "거주자, 주민 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형으로] <토지·가옥을> 임차하다, 점유하다, (임차하여) 거주하다 ((in))",
+              "examples": [],
+              "originalMeaning": "[보통 수동형으로] <토지·가옥을> 임차하다, 점유하다, (임차하여) 거주하다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "살다, 거주하다 ((in))",
+              "examples": [],
+              "originalMeaning": "살다, 거주하다 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3f1a790ea85249d19fee9439b499c50f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3f1a790ea85249d19fee9439b499c50f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tenants"
+        },
+        {
+          "type": "과거형",
+          "value": "tenanted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tenanting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tenanted"
+        }
+      ],
+      "aliasConjugation": "tenants",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3519ef991b6d95db33aa2db475703bfd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "집주인이 세 든 사람의 신세를 진다",
+      "text": "The landlord is overshadowed by his <b>tenant</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "세입자를 고소하는 것 이외에는 집세를 받을 방법이 없다.",
+      "text": "We can’t collect rent other than by suing the <b>tenant</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "만루가 되다",
+      "text": "The bases are full[choked]. or The sacks are tenanted[sold out]."
+    }
+  ],
+  "isWordType": true
+}

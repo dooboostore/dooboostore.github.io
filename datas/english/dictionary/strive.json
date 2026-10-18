@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "strive",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "straɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "노력하다, 힘쓰다, 얻으려고 애쓰다",
+              "examples": [
+                {
+                  "text": "( <b>strive</b>+to do) He always strives to be ahead of others in his class.",
+                  "translatedText": "그는 학급에서 남보다 앞서려고 언제나 노력하고 있다."
+                }
+              ],
+              "originalMeaning": "노력하다, 힘쓰다, 얻으려고 애쓰다"
+            },
+            {
+              "meaning": "(…와) 싸우다, 항쟁하다, 분투하다(struggle) ((with, against))",
+              "examples": [
+                {
+                  "text": "<b>strive</b> against fate[destiny]",
+                  "translatedText": "운명과 싸우다"
+                }
+              ],
+              "originalMeaning": "(…와) 싸우다, 항쟁하다, 분투하다(struggle) ((with, against))"
+            },
+            {
+              "meaning": "(…와) 경쟁하다, 겨루다(rival) ((with))",
+              "examples": [],
+              "originalMeaning": "(…와) 경쟁하다, 겨루다(rival) ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f4d1fe564f9747ffb56aca86abb30efb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f4d1fe564f9747ffb56aca86abb30efb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "strives"
+        },
+        {
+          "type": "과거형",
+          "value": "strove, strived"
+        },
+        {
+          "type": "현재 분사",
+          "value": "striving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "striven, strived"
+        }
+      ],
+      "aliasConjugation": "strives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d62d1f0b8fddf9aaa82fd72907b2f278",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 축재에 급급해 있다",
+      "text": "He is striving hard after wealth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새로운 한국의 건설에 매진하자",
+      "text": "Let all of us <b>strive</b> to build up (a) new Korea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떻게 해서든지 출세하려고 몸부림쳤다",
+      "text": "He strove hard to rise in the world somehow."
+    }
+  ],
+  "isWordType": true
+}

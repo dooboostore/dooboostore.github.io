@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "contrast",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대조, 대비 ((to, with)); [미술·수사학] 대조법",
+              "examples": [],
+              "originalMeaning": "대조, 대비 ((to, with)); [미술·수사학] 대조법"
+            },
+            {
+              "meaning": "(현저한) 차이; 대조적인 것; 정반대의 물건[사람] ((between, with, to))",
+              "examples": [
+                {
+                  "text": "What a <b>contrast</b> between them!",
+                  "translatedText": "두 사람은 정반대로구나!"
+                }
+              ],
+              "originalMeaning": "(현저한) 차이; 대조적인 것; 정반대의 물건[사람] ((between, with, to))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "대조하다, 대비하다 ((with)), (=compare)",
+              "examples": [
+                {
+                  "text": "<b>contrast</b> A with B",
+                  "translatedText": "A와 B를 대조시키다"
+                }
+              ],
+              "originalMeaning": "대조하다, 대비하다 ((with)), (=<span class='related_word' lang='en' >compare</span>)"
+            },
+            {
+              "meaning": "…와 좋은 대조를 이루다, …와 대조하여 (눈에) 뚜렷이 보이게 하다 ((with))",
+              "examples": [],
+              "originalMeaning": "…와 좋은 대조를 이루다, …와 대조하여 (눈에) 뚜렷이 보이게 하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 대조를 이루다, 대비하여 차이를 뚜렷이 나타내다",
+              "examples": [
+                {
+                  "text": "The snowcapped peak contrasted with the blue sky.",
+                  "translatedText": "눈 덮인 산봉우리가 푸른 하늘과 뚜렷이 대조를 이루고 있었다."
+                }
+              ],
+              "originalMeaning": "(…와) 대조를 이루다, 대비하여 차이를 뚜렷이 나타내다"
+            },
+            {
+              "meaning": "대비[대립]되다",
+              "examples": [],
+              "originalMeaning": "대비[대립]되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fc37eb6c725e4c208bac0581e6abddcf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fc37eb6c725e4c208bac0581e6abddcf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "contrasts"
+        },
+        {
+          "type": "과거형",
+          "value": "contrasted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "contrasting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "contrasted"
+        }
+      ],
+      "aliasConjugation": "contrasts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5032ce3edaa472daef27a658425479ba",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빨강은 초록과 아름다운 대조를 이룬다",
+      "text": "Red makes a beautiful <b>contrast</b> with green."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "눈 덮인 산봉우리가 푸른 하늘과 뚜렷이 대조를 이루고 있었다.",
+      "text": "The snowcapped peak contrasted with the blue sky."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 건물은 주변과 뚜렷한 대조를 이루고 있다",
+      "text": "This building presents a striking <b>contrast</b> to its surroundings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 사람은 정반대로구나!",
+      "text": "What a <b>contrast</b> between them!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "흑백의 대비가 인상적이다",
+      "text": "The <b>contrast</b> of[between] white and black is very impressive."
+    }
+  ],
+  "isWordType": true
+}

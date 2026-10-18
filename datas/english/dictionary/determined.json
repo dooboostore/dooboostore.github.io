@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "determined",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│tɜːrmɪnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "결연[단호]한(resolute), [P] 굳게 결심한",
+              "examples": [
+                {
+                  "text": "( <b>determined</b> +to do) She was <b>determined</b> to make no mention of this.",
+                  "translatedText": "그녀는 이 일에 대해 아무 말도 않기로 굳게 결심했다."
+                }
+              ],
+              "originalMeaning": "결연[단호]한(resolute), [P] 굳게 결심한"
+            },
+            {
+              "meaning": "결정[확정]된, 한정된",
+              "examples": [],
+              "originalMeaning": "결정[확정]된, 한정된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/225ce1748af6455aa65a5e71776f7aab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/225ce1748af6455aa65a5e71776f7aab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "386a338c4c8da97ef6bc1af496de59d8",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "determine",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪ│tɜːrmɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "결심시키다 (→determined)",
+              "examples": [
+                {
+                  "text": "( <b>determine</b> +[목]+to do) This <b>determined</b> me to act at once.",
+                  "translatedText": "이로써 나는 즉시 행동하기로 결심했다."
+                }
+              ],
+              "originalMeaning": "결심시키다 (→<span class='related_word' lang='en' ><b>determined</b></span>)"
+            },
+            {
+              "meaning": "결심하다, 결의하다 (=decide)",
+              "examples": [
+                {
+                  "text": "I <b>determined</b> to go. = I <b>determined</b> that I would go.",
+                  "translatedText": "나는 가기로 결심했다."
+                }
+              ],
+              "originalMeaning": "결심하다, 결의하다 (=<span class='related_word' lang='en' >decide</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결정하다, 결심하다 ((on))",
+              "examples": [
+                {
+                  "text": "They <b>determined</b> on their course of future.",
+                  "translatedText": "그들은 장래의 방침을 결정했다."
+                }
+              ],
+              "originalMeaning": "결정하다, 결심하다 ((on))"
+            },
+            {
+              "meaning": "<효력 등이> 끝나다(expire)",
+              "examples": [],
+              "originalMeaning": "<효력 등이> 끝나다(expire)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/78ee5ba391274fa9b84716c604b307ea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/78ee5ba391274fa9b84716c604b307ea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "determines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "876159975b42e74d9ae580026c3bc035",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 필사적으로 그 강도를 뒤쫓았으나 잡지 못했다",
+      "text": "The police determinedly ran after the robber, but could not catch him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 곧 가기로 정했다.",
+      "text": "We <b>determined</b> on going at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한번 결심하면 마지막까지 한다",
+      "text": "Once I am <b>determined</b>, I never give up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이로써 나는 즉시 행동하기로 결심했다.",
+      "text": "This <b>determined</b> me to act at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "최후의 5분 간이 중요하다",
+      "text": "The last five minutes determines the issue."
+    }
+  ],
+  "isWordType": true
+}

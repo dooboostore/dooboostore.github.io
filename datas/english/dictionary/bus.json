@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "entry": "bus",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bʌs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "버스(motorbus), 합승 자동차, 트롤리 버스, 합승 마차, 여객기(aerobus), [구어] ((일반적으로)) 탈것",
+              "examples": [],
+              "originalMeaning": "버스(motorbus), 합승 자동차, 트롤리 버스, 합승 마차, 여객기(aerobus), [구어] ((일반적으로)) 탈것"
+            },
+            {
+              "meaning": "(식당의) 식기 운반용 왜건",
+              "examples": [],
+              "originalMeaning": "(식당의) 식기 운반용 왜건"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "[미·속어] 버스를 타다[타고 가다, 통학하다]; [미·구어] (식당 등에서) 급사의 조수를 하다, 그릇을 치우다",
+              "examples": [],
+              "originalMeaning": "[미·속어] 버스를 타다[타고 가다, 통학하다]; [미·구어] (식당 등에서) 급사의 조수를 하다, 그릇을 치우다"
+            },
+            {
+              "meaning": "(인종 차별을 없애기 위해 먼 학교로) <학생을> 버스로 나르다",
+              "examples": [],
+              "originalMeaning": "(인종 차별을 없애기 위해 먼 학교로) <학생을> 버스로 나르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d8508962699d46088da4999f55cfefd5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d8508962699d46088da4999f55cfefd5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "buses, busses"
+        },
+        {
+          "type": "복수형",
+          "value": "buses, busses"
+        },
+        {
+          "type": "과거형",
+          "value": "bused, bussed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "busing, bussing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bused, bussed"
+        }
+      ],
+      "aliasConjugation": "buses, busses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "882392cb6fd2203e14df4aae0561e72f",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "bus.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "bushel(s), business",
+              "examples": [],
+              "originalMeaning": "bushel(s), business"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e8e93a859ac148d3b2cf19a51794ac2c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e8e93a859ac148d3b2cf19a51794ac2c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "buses, busses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b8d26888893d28626237d9343ff476cf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그곳까지 버스 편이 있다",
+      "text": "A <b>bus</b> service is available as far as there. or You can get there on the <b>bus</b>[by <b>bus</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저봐 우리 버스가 간다!",
+      "text": "There goes our <b>bus</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것이 우리가 탈 버스일 거야.",
+      "text": "This’ll be our <b>bus</b>, I guess."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "버스 앞쪽은 비어 있었다",
+      "text": "The front of the <b>bus</b> was empty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 근처에는 버스 편이 없다",
+      "text": "There is no <b>bus</b> service[no <b>bus</b> running] around here."
+    }
+  ],
+  "isWordType": true
+}

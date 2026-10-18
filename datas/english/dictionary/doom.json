@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "doom",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "duːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(보통 나쁜) 운명(fate), 파멸(ruin), (=fate)",
+              "examples": [],
+              "originalMeaning": "(보통 나쁜) 운명(fate), 파멸(ruin), (=<span class='related_word' lang='en' >fate</span>)"
+            },
+            {
+              "meaning": "(특히 불리한) 재판, 판결",
+              "examples": [],
+              "originalMeaning": "(특히 불리한) 재판, 판결"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형으로] (보통 나쁘게) 운명 짓다(fate), 운명을 정하다(destine) ((to))",
+              "examples": [
+                {
+                  "text": "( <b>doom</b>+[목]+to do) The plan was doomed to failure[doomed to fail].",
+                  "translatedText": "그 계획은 결국 실패하게 돼 있었다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] (보통 나쁘게) 운명 짓다(fate), 운명을 정하다(destine) ((to))"
+            },
+            {
+              "meaning": "…에게 (…의) 판결을 내리다 ((to)), <형을> 선고하다",
+              "examples": [
+                {
+                  "text": "( <b>doom</b>+[목]+to do) <b>doom</b> a person todeath[to die]",
+                  "translatedText": "…에게 사형을 선고하다"
+                }
+              ],
+              "originalMeaning": "…에게 (…의) 판결을 내리다 ((to)), <형을> 선고하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2339ab447e244dd3b2f1cee369598a20",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2339ab447e244dd3b2f1cee369598a20",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dooms"
+        },
+        {
+          "type": "과거형",
+          "value": "doomed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dooming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "doomed"
+        }
+      ],
+      "aliasConjugation": "dooms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aa4629372a7dd4c72d68d47e6328782d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 숙명적으로 실패하게 되어 있었다",
+      "text": "We are doomed to fail."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 평범한 운명을 타고났다",
+      "text": "He is doomed to mediocrity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 결국 실패하게 돼 있었다.",
+      "text": "The plan was doomed to failure[doomed to fail]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 실패하게 마련이다",
+      "text": "The scheme is doomed to failure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나라는 멸망의 날이 박두했다",
+      "text": "The hour of the <b>doom</b> of the country is at hand."
+    }
+  ],
+  "isWordType": true
+}

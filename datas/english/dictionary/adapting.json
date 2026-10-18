@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "adapt",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈdæpt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<언행·풍습 등을 환경·목적 등에> 적응[조화, 순응]시키다 ((to, for)) (→adapted)",
+              "examples": [
+                {
+                  "text": "You must <b>adapt</b> method to circumstances.",
+                  "translatedText": "방법을 상황에 적합하게 해야 한다."
+                }
+              ],
+              "originalMeaning": "<언행·풍습 등을 환경·목적 등에> 적응[조화, 순응]시키다 ((to, for)) (→<span class='related_word' lang='en' >adapted</span>)"
+            },
+            {
+              "meaning": "[~ oneself로] <새로운 환경 등에> 순응하다, 익숙해지다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>adapt</b> oneself to circumstances",
+                  "translatedText": "환경에 순응하다; 융통성 있게 행동하다"
+                }
+              ],
+              "originalMeaning": "[~ oneself로] <새로운 환경 등에> 순응하다, 익숙해지다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(환경 등에) 적응하다, 순응하다 ((to)); 익숙해지다",
+              "examples": [
+                {
+                  "text": "She had the ability to <b>adapt</b> easily to new circumstances.",
+                  "translatedText": "그녀는 새로운 상황에 적응하는 능력이 있었다."
+                }
+              ],
+              "originalMeaning": "(환경 등에) 적응하다, 순응하다 ((to)); 익숙해지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e9a2a583dfc6490a91b02748f8b30676",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e9a2a583dfc6490a91b02748f8b30676",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "adapts"
+        },
+        {
+          "type": "과거형",
+          "value": "adapted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "adapting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "adapted"
+        }
+      ],
+      "aliasConjugation": "adapts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3985425fcb66707f0fe59f5eccf2286c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일에는 그가 안성맞춤이다",
+      "text": "He is just the man for the position. or He is the right man in the right place. or He is cut out for the job. or He is admirably adapted for the work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 어린이에게 맞지 않다.",
+      "text": "The book is not adapted to children."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 환경에 잘 적응한다",
+      "text": "She adapts herself to her environment."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방법을 상황에 적합시켜야 한다.",
+      "text": "You must <b>adapt</b> method to circumstances."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소설은 영화[연극]로 각색되었다",
+      "text": "The novel was adapted for the screen[stage]."
+    }
+  ],
+  "isWordType": true
+}

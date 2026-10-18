@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "fraud",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "frɔːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 사기, 기만; [법] 사기(죄); 사기 행위, 부정 수단 (=deception)",
+              "examples": [
+                {
+                  "text": "election frauds",
+                  "translatedText": "선거 위반"
+                }
+              ],
+              "originalMeaning": "[U] 사기, 기만; [법] 사기(죄); 사기 행위, 부정 수단 (=<span class='related_word' lang='en' >deception</span>)"
+            },
+            {
+              "meaning": "[구어] 사기꾼, 협잡꾼",
+              "examples": [],
+              "originalMeaning": "[구어] 사기꾼, 협잡꾼"
+            },
+            {
+              "meaning": "부정품(不正品), 가짜",
+              "examples": [],
+              "originalMeaning": "부정품(不正品), 가짜"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/91d340463dbe43e4a56834de09577664",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/91d340463dbe43e4a56834de09577664",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8daaa21fcc9939f779eff30b0f30e96d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 사기를 친 것이 들통 났다",
+      "text": "He was detected in <b>fraud</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사기로 가진 것을 몽땅 긁혔다",
+      "text": "He was all fleeced his belongings by <b>fraud</b>."
+    }
+  ],
+  "isWordType": true
+}

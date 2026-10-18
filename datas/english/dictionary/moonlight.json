@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "<b>moonlight</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmuːnlaɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "달빛, 월광",
+              "examples": [],
+              "originalMeaning": "달빛, 월광"
+            },
+            {
+              "meaning": "(=<b>MOONLIGHT</b> FLIT.)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>MOONLIGHT</b> FLIT.</span>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 달빛의, 달밤의; 야간의",
+              "examples": [
+                {
+                  "text": "a <b>moonlight</b> ramble",
+                  "translatedText": "달밤의 산책"
+                }
+              ],
+              "originalMeaning": "[A] 달빛의, 달밤의; 야간의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(밤에) 부업을 하다",
+              "examples": [
+                {
+                  "text": "<b>moonlight</b> as a bartender",
+                  "translatedText": "바텐더로 야간 아르바이트하다"
+                }
+              ],
+              "originalMeaning": "(밤에) 부업을 하다"
+            },
+            {
+              "meaning": "야반도주하다",
+              "examples": [],
+              "originalMeaning": "야반도주하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4b552838ff14361a1de26d96f5f9fcc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4b552838ff14361a1de26d96f5f9fcc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "moonlights"
+        },
+        {
+          "type": "과거형",
+          "value": "moonlighted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "moonlighting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "moonlighted"
+        }
+      ],
+      "aliasConjugation": "moonlights",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a65662e51e53c4c8f41071ce65c15fb8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달빛에 비친 오늘 밤의 바다는 얼마나 아름다운가!",
+      "text": "How beautiful the sea is tonight in the <b>moonlight</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "달빛이 창문으로 들어온다.",
+      "text": "The <b>moonlight</b> sifts through the window."
+    }
+  ],
+  "isWordType": true
+}

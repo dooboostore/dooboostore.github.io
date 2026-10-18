@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "jail",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "교도소, 감옥, 구치소",
+              "examples": [
+                {
+                  "text": "detention <b>jail</b>",
+                  "translatedText": "구치소"
+                }
+              ],
+              "originalMeaning": "교도소, 감옥, 구치소"
+            },
+            {
+              "meaning": "구류, 감금, 구치",
+              "examples": [],
+              "originalMeaning": "구류, 감금, 구치"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "투옥하다, 수감하다(imprison)",
+              "examples": [],
+              "originalMeaning": "투옥하다, 수감하다(imprison)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/481e2e329ab643c0920db95535858ba2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/481e2e329ab643c0920db95535858ba2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "jails"
+        },
+        {
+          "type": "과거형",
+          "value": "jailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "jailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "jailed"
+        }
+      ],
+      "aliasConjugation": "jails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "992c94119a37e7129fee0bdb8417ce71",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감옥을 뚫고 튀었다",
+      "text": "He broke <b>jail</b> and ran away."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사나이는 몰래 권총을 교도소에 갖고 들어왔다.",
+      "text": "The man smuggled a revolver into the <b>jail</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 차량 절도죄로 수감 중이다",
+      "text": "He is now in <b>jail</b>[He is now doing time] for stealing a car."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 징역 1년에 집행 유예 2년을 선고받았다",
+      "text": "He was given a one-year <b>jail</b> sentence suspended for two years."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결국 그는 투옥되었다.",
+      "text": "After all he landed up in <b>jail</b>."
+    }
+  ],
+  "isWordType": true
+}

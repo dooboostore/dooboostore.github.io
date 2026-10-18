@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "roll",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "roʊl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구르다, 굴러가다[나아가다]; 회전하다; <눈알이> 이리저리 돌다",
+              "examples": [
+                {
+                  "text": "The ball rolled into the street.",
+                  "translatedText": "공이 길가로 굴러갔다."
+                }
+              ],
+              "originalMeaning": "구르다, 굴러가다[나아가다]; 회전하다; <눈알이> 이리저리 돌다"
+            },
+            {
+              "meaning": "우스워 데굴데굴 구르다, 포복절도하다 ((about))",
+              "examples": [],
+              "originalMeaning": "우스워 데굴데굴 구르다, 포복절도하다 ((about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "굴리다, 굴리며 가다, 회전시키다",
+              "examples": [
+                {
+                  "text": "The children were rollinga snowball along the playground.",
+                  "translatedText": "아이들은 운동장에서 눈뭉치를 굴리고 있었다."
+                }
+              ],
+              "originalMeaning": "굴리다, 굴리며 가다, 회전시키다"
+            },
+            {
+              "meaning": "때려서 굴러가게 하다, 때려눕히다",
+              "examples": [],
+              "originalMeaning": "때려서 굴러가게 하다, 때려눕히다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "두루마리; (두루마리로 된 양피지 등의) 기록, 공문서",
+              "examples": [],
+              "originalMeaning": "두루마리; (두루마리로 된 양피지 등의) 기록, 공문서"
+            },
+            {
+              "meaning": "명부, 목록, 표(list)",
+              "examples": [
+                {
+                  "text": "an honor <b>roll</b>",
+                  "translatedText": "우등생 명부"
+                }
+              ],
+              "originalMeaning": "명부, 목록, 표(list)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/908ed97138e545bfaf1094143fed0d15",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/908ed97138e545bfaf1094143fed0d15",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rolls"
+        },
+        {
+          "type": "과거형",
+          "value": "rolled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rolling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rolled"
+        }
+      ],
+      "aliasConjugation": "rolls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8923ccde080fde5be3e535e2268bac28",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 r음을 굴려서 발음한다.",
+      "text": "He rolls his r’s."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 몸을 흔들면서 걷는다.",
+      "text": "He rolls in his walk."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "솔방울이 대굴대굴 굴러 온다",
+      "text": "Pine cones come rolling down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 필름을 인화해 주시오.",
+      "text": "Please print this <b>roll</b> of film."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "필름 한 통 주십시오",
+      "text": "Give me a <b>roll</b> of film. or I need a <b>roll</b> of film."
+    }
+  ],
+  "isWordType": true
+}

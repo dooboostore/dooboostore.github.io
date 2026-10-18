@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "station",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsteɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "위치, 소재, 장소; 담당 일터, 부서",
+              "examples": [],
+              "originalMeaning": "위치, 소재, 장소; 담당 일터, 부서"
+            },
+            {
+              "meaning": "(철도의) 정거장, 역(= railway ~; [미] depot); (대합실이나 개찰구가 있는) 버스 등의 발착소; 역사(驛舍), 역 건물",
+              "examples": [],
+              "originalMeaning": "(철도의) 정거장, 역(= railway ~; [미] depot); (대합실이나 개찰구가 있는) 버스 등의 발착소; 역사(驛舍), 역 건물"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "부서에 배치하다, 주재[주둔]시키다 ((at, on))",
+              "examples": [
+                {
+                  "text": "The police were stationed inside the gate.",
+                  "translatedText": "경찰이 대문 안에 배치되었다."
+                }
+              ],
+              "originalMeaning": "부서에 배치하다, 주재[주둔]시키다 ((at, on))"
+            },
+            {
+              "meaning": "[~ oneself로] 위치를 잡다, 서다",
+              "examples": [],
+              "originalMeaning": "[~ oneself로] 위치를 잡다, 서다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/04c0af9d8c7641dfb7f9d5ebbed16bcd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/04c0af9d8c7641dfb7f9d5ebbed16bcd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stations"
+        },
+        {
+          "type": "과거형",
+          "value": "stationed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stationing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stationed"
+        }
+      ],
+      "aliasConjugation": "stations",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "167b3c2f348c17449b36132c65e88102",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 길로 죽 가면 역이 나옵니다",
+      "text": "This road leads you to the <b>station</b>. or If you go straight down this road, you'll find the <b>station</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 와르르 역으로 몰려갔다",
+      "text": "They rushed to the <b>station</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국에 주둔해 있는 미군",
+      "text": "U.S. troops stationed in Korea"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 역에 가는 길이다.",
+      "text": "I am going(=am on my way) to the <b>station</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 열차는 역마다 정차한다.",
+      "text": "The train stops at every <b>station</b>."
+    }
+  ],
+  "isWordType": true
+}

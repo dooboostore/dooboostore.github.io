@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "title",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtaɪtl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "표제; [보통 pl.] [영화·TV] 자막(subtitles), 타이틀(credits); 제목, 제명, 책이름",
+              "examples": [],
+              "originalMeaning": "표제; [보통 pl.] [영화·TV] 자막(subtitles), 타이틀(credits); 제목, 제명, 책이름"
+            },
+            {
+              "meaning": "[제본] 등에 책 이름을 쓴 부분 (=TITLE PAGE)",
+              "examples": [],
+              "originalMeaning": "[제본] 등에 책 이름을 쓴 부분 (=<span class='related_word' lang='en' ><b>TITLE</b> PAGE</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책 등에> 표제를 붙이다, 자기를 …이라고 부르다",
+              "examples": [
+                {
+                  "text": "( <b>title</b>+[목]+[목]) titling himself god",
+                  "translatedText": "스스로를 신이라 칭하면서"
+                }
+              ],
+              "originalMeaning": "<책 등에> 표제를 붙이다, 자기를 …이라고 부르다"
+            },
+            {
+              "meaning": "칭호[작위 ((등))]를 주다, <사람을> 칭호[경칭]로 부르다",
+              "examples": [],
+              "originalMeaning": "칭호[작위 ((등))]를 주다, <사람을> 칭호[경칭]로 부르다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] (책 등의) 제목과 같은, 선수권의",
+              "examples": [
+                {
+                  "text": "the <b>title</b> story in a collection",
+                  "translatedText": "표제작, 작품집 제목과 같은 이야기"
+                }
+              ],
+              "originalMeaning": "[A] (책 등의) 제목과 같은, 선수권의"
+            },
+            {
+              "meaning": "자막[타이틀]의, 자막[타이틀]이 붙은",
+              "examples": [],
+              "originalMeaning": "자막[타이틀]의, 자막[타이틀]이 붙은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a44bac92fc744fdf97d2f755c502f91b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a44bac92fc744fdf97d2f755c502f91b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "titles"
+        },
+        {
+          "type": "과거형",
+          "value": "titled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "titling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "titled"
+        }
+      ],
+      "aliasConjugation": "titles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f9debb9b524d4469ad5a1fac95293d83",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 칭호는 다시 그의 것이 되었다.",
+      "text": "The <b>title</b> revested in him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 타이틀 방어에 성공했다",
+      "text": "He made good his <b>title</b> defense."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이번 시즌의 타점왕이 되었다",
+      "text": "He won the RBI <b>title</b> this season."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "작년에 그들은 50가지를 출판했다.",
+      "text": "They published 50 <b>titles</b> last year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 우리에게 원조를 청할 자격이 없다.",
+      "text": "You have no <b>title</b> to ask for our support."
+    }
+  ],
+  "isWordType": true
+}

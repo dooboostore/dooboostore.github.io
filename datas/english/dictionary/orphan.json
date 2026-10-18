@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>orphan</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɔːrfn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고아, [드물게] 부모 중 한쪽이 없는 아이",
+              "examples": [],
+              "originalMeaning": "고아, [드물게] 부모 중 한쪽이 없는 아이"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "양친을 잃은, 부모가 없는; 부모 중 한쪽이 없는",
+              "examples": [],
+              "originalMeaning": "양친을 잃은, 부모가 없는; 부모 중 한쪽이 없는"
+            },
+            {
+              "meaning": "고아를 위한",
+              "examples": [
+                {
+                  "text": "an <b>orphan</b> asylum[home]",
+                  "translatedText": "고아원"
+                }
+              ],
+              "originalMeaning": "고아를 위한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형으로] <사건이> <아이를> 고아로 만들다, 부모를 잃게 하다",
+              "examples": [
+                {
+                  "text": "The boy was orphaned by war.",
+                  "translatedText": "그 소년은 전쟁 고아였다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] <사건이> <아이를> 고아로 만들다, 부모를 잃게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6080d3c75e6f41d0b99ca0a5e2da3541",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6080d3c75e6f41d0b99ca0a5e2da3541",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "orphans"
+        },
+        {
+          "type": "과거형",
+          "value": "orphaned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "orphaning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "orphaned"
+        }
+      ],
+      "aliasConjugation": "orphans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "466df93e7485e4c633c062c3cdc513de",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 고아를 양자로 삼았다",
+      "text": "He adopted the <b>orphan</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소년은 전쟁 고아였다.",
+      "text": "The boy was orphaned by war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 5세 때에 고아가 되었다.",
+      "text": "He was left <b>orphan</b> at the age of five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그 불쌍한 고아에게 큰 동정을 베풀었다.",
+      "text": "She poured pity on the poor <b>orphan</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그 고아를 불쌍히 여겼다.",
+      "text": "She yearned over[Her heart yearned for] the <b>orphan</b>."
+    }
+  ],
+  "isWordType": true
+}

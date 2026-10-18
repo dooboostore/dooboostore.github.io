@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "candy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkændi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "캔디, 사탕 과자( sweets) ((taffies, caramels, chocolates 등))",
+              "examples": [
+                {
+                  "text": "a piece of <b>candy</b>",
+                  "translatedText": "캔디 1개"
+                }
+              ],
+              "originalMeaning": "캔디, 사탕 과자( sweets) ((taffies, caramels, chocolates 등))"
+            },
+            {
+              "meaning": "[영] 얼음사탕([미] rock ~), [C] 얼음사탕 조각",
+              "examples": [],
+              "originalMeaning": "[영] 얼음사탕([미] rock ~), [C] 얼음사탕 조각"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "설탕 절임하다, 설탕을 바르다; 사탕 모양으로 굳히다[굳어지다]; <표현을> 감미롭게 하다",
+              "examples": [],
+              "originalMeaning": "설탕 절임하다, 설탕을 바르다; 사탕 모양으로 굳히다[굳어지다]; <표현을> 감미롭게 하다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "술에 취한",
+              "examples": [],
+              "originalMeaning": "술에 취한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6c69cf1589864facb1336abb0f08d365",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6c69cf1589864facb1336abb0f08d365",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "candies"
+        },
+        {
+          "type": "복수형",
+          "value": "candies"
+        },
+        {
+          "type": "과거형",
+          "value": "candied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "candying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "candied"
+        }
+      ],
+      "aliasConjugation": "candies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "182ab311715b2f20b7796a9d3a46a57c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개가 과자를 달라고 짖었다.",
+      "text": "The dog spoke for <b>candy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "캔디도 거기서 팔고 있다.",
+      "text": "<b>Candy</b> is also sold there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 호주머니는 사탕으로 볼록했다",
+      "text": "His pocket bulged with <b>candy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들은 일반적으로 사탕을 좋아한다",
+      "text": "Children in general are fond of <b>candy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 사탕 하나를 잽싸게 입에 넣었다.",
+      "text": "He clapped a piece of <b>candy</b> into his mouth."
+    }
+  ],
+  "isWordType": true
+}

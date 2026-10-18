@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "vocabulary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "və│kæbjəleri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(한 개인·저자·어느 계급의 사람 등의) 어휘, 용어수(數), 용어 범위",
+              "examples": [
+                {
+                  "text": "exhaust one's <b>vocabulary</b>",
+                  "translatedText": "알고 있는 말을 다 쓰다"
+                }
+              ],
+              "originalMeaning": "(한 개인·저자·어느 계급의 사람 등의) 어휘, 용어수(數), 용어 범위"
+            },
+            {
+              "meaning": "단어집[표]; 사전; 부호표, 기호표",
+              "examples": [],
+              "originalMeaning": "단어집[표]; 사전; 부호표, 기호표"
+            },
+            {
+              "meaning": "(예술에서의) 표현 형식[법], 형(型)",
+              "examples": [],
+              "originalMeaning": "(예술에서의) 표현 형식[법], 형(型)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4aea1a7fce894dcb846cbef292f1c3dc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4aea1a7fce894dcb846cbef292f1c3dc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "vocabularies"
+        }
+      ],
+      "aliasConjugation": "vocabularies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "bb5258e79132f127e5634adfb2d4eaad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 영어의 어휘가 풍부하다",
+      "text": "He has an extensive[a large, a wide] <b>vocabulary</b> of English. or His English <b>vocabulary</b> shows a wide range."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 영어 어휘는 한정되어 있다.",
+      "text": "His English <b>vocabulary</b> is limited."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 알고 있는 영어 단어는 많지 않다",
+      "text": "My English <b>vocabulary</b> is very small."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사전은 어휘가 풍부[빈약]하다",
+      "text": "This dictionary contains a rich[meager] <b>vocabulary</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 염치라는 말조차 모르는 사람이다",
+      "text": "Shame is a word that has no place in his <b>vocabulary</b>."
+    }
+  ],
+  "isWordType": true
+}

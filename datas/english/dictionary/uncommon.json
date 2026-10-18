@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "<b>uncommon</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ʌn│kɑːmən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "드문, 보기 드문, 희한한, 진귀한",
+              "examples": [
+                {
+                  "text": "an <b>uncommon</b> case",
+                  "translatedText": "드문 경우"
+                }
+              ],
+              "originalMeaning": "드문, 보기 드문, 희한한, 진귀한"
+            },
+            {
+              "meaning": "보통 아닌, 비상한, 비범한",
+              "examples": [
+                {
+                  "text": "an <b>uncommon</b> quality",
+                  "translatedText": "비범한 소질"
+                }
+              ],
+              "originalMeaning": "보통 아닌, 비상한, 비범한"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "(=UNCOMMONLY)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >UNCOMMONLY</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d8858ed88a2d46b3bb5d3d3964e50296",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d8858ed88a2d46b3bb5d3d3964e50296",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "uncommoner"
+        },
+        {
+          "type": "최상급",
+          "value": "uncommonest"
+        }
+      ],
+      "aliasConjugation": "uncommoner",
+      "aliasConjugationPos": "비교급",
+      "gdid": "3eb4916d9d659def2ddbff2c440235bd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 왕왕 있는 일이다",
+      "text": "It is a matter of no <b>uncommon</b> occurrence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 일이 왕왕 있다",
+      "text": "Such things are apt to happen. or Things like this are not <b>uncommon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어딘가 예사롭지 않은 데가 있다",
+      "text": "There is something <b>uncommon</b>[peculiar] about him. or He has something out of the common."
+    }
+  ],
+  "isWordType": true
+}

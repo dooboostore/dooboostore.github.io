@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "mammal",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmæml"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "포유동물",
+              "examples": [
+                {
+                  "text": "Whales are <b>mammal</b> s.",
+                  "translatedText": "고래는 포유동물이다."
+                }
+              ],
+              "originalMeaning": "포유동물"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ade60561c35e4f02bcf04ebfc109892b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ade60561c35e4f02bcf04ebfc109892b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f93c5d453daa0bddbc0a22199405ee28",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고래는 포유류에 속한다",
+      "text": "Whales belong to mammals."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고래는 포유동물이다.",
+      "text": "Whales are mammals."
+    }
+  ],
+  "isWordType": true
+}

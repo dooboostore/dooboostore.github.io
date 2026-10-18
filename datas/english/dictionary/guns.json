@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "gun",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡʌn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[군사] 대포, 포 ((보통 곡사포 및 박격포는 제외; cf. CANNON))",
+              "examples": [
+                {
+                  "text": "a 20-in. caliber <b>gun</b>",
+                  "translatedText": "구경 20인치 포"
+                }
+              ],
+              "originalMeaning": "[군사] 대포, 포 ((보통 곡사포 및 박격포는 제외; cf. CANNON))"
+            },
+            {
+              "meaning": "(통속적으로) 총 ((라이플·기병총·보병총 등, 단총은 제외)), 엽총(shotgun), (연발) 권총(revolver)",
+              "examples": [],
+              "originalMeaning": "(통속적으로) 총 ((라이플·기병총·보병총 등, 단총은 제외)), 엽총(shotgun), (연발) 권총(revolver)"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "총으로 (…을) 쏘다, 총사냥가다, [미·속어] (발동기의) 스로틀을 열어 가속하다",
+              "examples": [],
+              "originalMeaning": "총으로 (…을) 쏘다, 총사냥가다, [미·속어] (발동기의) 스로틀을 열어 가속하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25317451e740480ca069002878767f4c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25317451e740480ca069002878767f4c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "guns"
+        },
+        {
+          "type": "과거형",
+          "value": "gunned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gunning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gunned"
+        }
+      ],
+      "aliasConjugation": "guns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5ee9bc0b204011c5b4b674acfea4bb83",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쾅하고 대포 소리가 났다",
+      "text": "Bang went the <b>gun</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 총을 만지지 마라.",
+      "text": "Don’t meddle with my <b>gun</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 포의 사정 거리는 8마일이다.",
+      "text": "This <b>gun</b> ranges 8 miles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 총은 반동이 적다",
+      "text": "This <b>gun</b> kicks only slightly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 총에 탄환을 쟀다",
+      "text": "I charged the <b>gun</b> with a shot."
+    }
+  ],
+  "isWordType": true
+}

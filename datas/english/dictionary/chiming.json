@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "chime",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃáim"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "차임 ((교회 등의 조율된 한 벌의 종))",
+              "examples": [],
+              "originalMeaning": "차임 ((교회 등의 조율된 한 벌의 종))"
+            },
+            {
+              "meaning": "[종종 pl.] [음악] 차임, 관종(管鐘); [종종 pl.] 그 종소리, 종악(鐘樂)",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] [음악] 차임, 관종(管鐘); [종종 pl.] 그 종소리, 종악(鐘樂)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<한 벌의 종을> 울리다",
+              "examples": [],
+              "originalMeaning": "<한 벌의 종을> 울리다"
+            },
+            {
+              "meaning": "<종소리가> <시각을> 알리다, 종을 울려 <사람을> 부르다 ((to))",
+              "examples": [
+                {
+                  "text": "The clock chimed five.",
+                  "translatedText": "시계가 다섯 시를 쳤다."
+                }
+              ],
+              "originalMeaning": "<종소리가> <시각을> 알리다, 종을 울려 <사람을> 부르다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<한 벌의 종·시계가> 울리다",
+              "examples": [],
+              "originalMeaning": "<한 벌의 종·시계가> 울리다"
+            },
+            {
+              "meaning": "종악을 연주하다",
+              "examples": [],
+              "originalMeaning": "종악을 연주하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/83d0f1eccd3f46839729dec8aa3e9cab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/83d0f1eccd3f46839729dec8aa3e9cab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "chimes"
+        },
+        {
+          "type": "과거형",
+          "value": "chimed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "chiming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "chimed"
+        }
+      ],
+      "aliasConjugation": "chimes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1d1f88427fc1067b3f56067dd9011ffb",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "chime",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(술통 따위의 아래위 마구리의) 돌출한 가장자리[테두리]",
+              "examples": [],
+              "originalMeaning": "(술통 따위의 아래위 마구리의) 돌출한 가장자리[테두리]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d07db87c20545e8b7abf9b61baa35f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d07db87c20545e8b7abf9b61baa35f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "chimes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f4395a97a5ff91dc0bccd8e4ebe6de01",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시계가 다섯 시를 쳤다.",
+      "text": "The clock chimed five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "종이 울려 아이들의 귀가를 재촉했다.",
+      "text": "The bell chimed the children home."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 노래를 부르기 시작하자 딴 사람들도 덩달아 불렀다",
+      "text": "I began to sing and the rest chimed in."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시계가 땡땡 친다",
+      "text": "The clock is <b>chiming</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "교회의 종소리가 울린다",
+      "text": "Church bells <b>chime</b>."
+    }
+  ],
+  "isWordType": true
+}

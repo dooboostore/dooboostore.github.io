@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "entry": "<b>imprison</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪmˈprɪzn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "교도소[감옥]에 넣다, 수감하다",
+              "examples": [],
+              "originalMeaning": "교도소[감옥]에 넣다, 수감하다"
+            },
+            {
+              "meaning": "가두다, 구속하다",
+              "examples": [
+                {
+                  "text": "remain <b>imprisoned</b> at home",
+                  "translatedText": "집에 갇혀 있다"
+                }
+              ],
+              "originalMeaning": "가두다, 구속하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ad9a781748854ad3be06565ced9db0cc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ad9a781748854ad3be06565ced9db0cc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "imprisons"
+        },
+        {
+          "type": "과거형",
+          "value": "imprisoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "imprisoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "imprisoned"
+        }
+      ],
+      "aliasConjugation": "imprisons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b0a32fcf5cd5a9d88e5acc79e8888bd2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 대수롭지 않은 이유로 감금당했다.",
+      "text": "He has been <b>imprisoned</b> for less."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 아무런 증거도 없는데 감금되었다",
+      "text": "He was <b>imprisoned</b> on no evidence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자신의 정적들을 투옥시켰다.",
+      "text": "He had his political enemies <b>imprisoned</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쿠데타 지도자는 유배되고 다른 사람들은 수감되었다",
+      "text": "The leader of the coup was sent into exile and the others <b>imprisoned</b>."
+    }
+  ],
+  "isWordType": true
+}

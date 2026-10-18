@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>fruit</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fruːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적] (먹는) 과일 ((개개의 과일에는 잘 쓰지 않음))",
+              "examples": [
+                {
+                  "text": "much[plenty of] <b>fruit</b>",
+                  "translatedText": "많은 과일 ((many <b>fruits</b>는 종류를 말할 때 이외에는 못 씀))"
+                }
+              ],
+              "originalMeaning": "[집합적] (먹는) 과일 ((개개의 과일에는 잘 쓰지 않음))"
+            },
+            {
+              "meaning": "[집합적] (식물의) 열매",
+              "examples": [
+                {
+                  "text": "a tree in <b>fruit</b>",
+                  "translatedText": "열매를 맺고 있는 나무"
+                }
+              ],
+              "originalMeaning": "[집합적] (식물의) 열매"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "과일이 생기다, 열매를 맺다",
+              "examples": [
+                {
+                  "text": "a tree that <b>fruits</b> in late summer",
+                  "translatedText": "늦여름에 열매를 맺는 나무"
+                }
+              ],
+              "originalMeaning": "과일이 생기다, 열매를 맺다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 열매를 맺게 하다",
+              "examples": [],
+              "originalMeaning": "…에 열매를 맺게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5b0abfaeb86c4cbaaf33f6a35202b104",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5b0abfaeb86c4cbaaf33f6a35202b104",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fruits"
+        },
+        {
+          "type": "과거형",
+          "value": "fruited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fruiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fruited"
+        }
+      ],
+      "aliasConjugation": "fruits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bb69f190c3db4be4367d7ca2a4d0813c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어떤 파리는 과일에 쉬를 슨다",
+      "text": "Some flies blow <b>fruit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열매가 다닥다닥 달려 있다",
+      "text": "<b>Fruits</b> hang in clusters."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 과일을 재배하고 있다",
+      "text": "He is growing[raising] <b>fruit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 가게에서는 과일을 판다.",
+      "text": "That store handles <b>fruits</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 꿈이 열매를 맺었다",
+      "text": "His dream bore <b>fruit</b>[came true]."
+    }
+  ],
+  "isWordType": true
+}

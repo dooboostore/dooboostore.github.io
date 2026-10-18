@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "climb",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "klaɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "오르다, 등반하다; (특히 손발을 써서) <나무·사닥다리 등을> 기어오르다",
+              "examples": [
+                {
+                  "text": "<b>climb</b> up a mountain[ladder]",
+                  "translatedText": "산[사닥다리]을 기어오르다"
+                }
+              ],
+              "originalMeaning": "오르다, 등반하다; (특히 손발을 써서) <나무·사닥다리 등을> 기어오르다"
+            },
+            {
+              "meaning": "(손발을 써서) <자동차·비행기 등에> 타다, …에서 내리다",
+              "examples": [
+                {
+                  "text": "<b>climb</b> in(to) a jeep",
+                  "translatedText": "지프차에 타다"
+                }
+              ],
+              "originalMeaning": "(손발을 써서) <자동차·비행기 등에> 타다, …에서 내리다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "오르다, 기어오르다; 등반하다",
+              "examples": [
+                {
+                  "text": "<b>climb</b> a tree",
+                  "translatedText": "나무에 오르다"
+                }
+              ],
+              "originalMeaning": "오르다, 기어오르다; 등반하다"
+            },
+            {
+              "meaning": "<식물이> <벽 따위를> 기어오르다",
+              "examples": [],
+              "originalMeaning": "<식물이> <벽 따위를> 기어오르다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "오름, 기어오름",
+              "examples": [],
+              "originalMeaning": "오름, 기어오름"
+            },
+            {
+              "meaning": "오르는 곳, 치받이, 오르막길",
+              "examples": [],
+              "originalMeaning": "오르는 곳, 치받이, 오르막길"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f38ca60cec04dda9f31c2b487887b6f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f38ca60cec04dda9f31c2b487887b6f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "climbs"
+        },
+        {
+          "type": "과거형",
+          "value": "climbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "climbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "climbed"
+        }
+      ],
+      "aliasConjugation": "climbs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6e92f483dd2046e249e7ed7d61e76bad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 언덕은 오르기 힘들다.",
+      "text": "The hill is hard to <b>climb</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장시간의 등산이 그를 피곤하게 했다.",
+      "text": "The long <b>climb</b> fagged him out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 바위 산을 기어올랐다",
+      "text": "He scrambled[climbed] up the rocky mountain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조종사는 비행기 속으로 기어 들어갔다",
+      "text": "The pilot climbed into his plane."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "등산 후 온몸이 쑤시고 아팠다",
+      "text": "After climbing the mountain, I ached all over."
+    }
+  ],
+  "isWordType": true
+}

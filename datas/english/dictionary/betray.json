@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "betray",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bɪˈtreɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<국가·동지 등을> (적에게) 팔다",
+              "examples": [
+                {
+                  "text": "<b>betray</b> one's country to the enemy",
+                  "translatedText": "적에게 조국을 팔다"
+                }
+              ],
+              "originalMeaning": "<국가·동지 등을> (적에게) 팔다"
+            },
+            {
+              "meaning": "배반하다; 저버리다, 등지다",
+              "examples": [
+                {
+                  "text": "<b>betray</b> one's wife[husband]",
+                  "translatedText": "바람피우다"
+                }
+              ],
+              "originalMeaning": "배반하다; 저버리다, 등지다"
+            },
+            {
+              "meaning": "<비밀을> 누설하다, 밀고하다",
+              "examples": [
+                {
+                  "text": "<b>betray</b> a secret to a person",
+                  "translatedText": "…에게 비밀을 누설하다"
+                }
+              ],
+              "originalMeaning": "<비밀을> 누설하다, 밀고하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e81b335b5a8b40f09122d8524aa11484",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e81b335b5a8b40f09122d8524aa11484",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "betrays"
+        },
+        {
+          "type": "과거형",
+          "value": "betrayed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "betraying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "betrayed"
+        }
+      ],
+      "aliasConjugation": "betrays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dbfd07133afee5735e3581896402acac",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그녀를 배신하지 않겠다",
+      "text": "I won't <b>betray</b> her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당황하였기 때문에 그의 죄가 탄로났다.",
+      "text": "Confusion betrayed his guilt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 좀처럼 감정을 드러내지 않는다",
+      "text": "He seldom betrays[shows] his feelings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀를 배신했다니 그는 몹쓸 사람이다.",
+      "text": "It was foul of him to <b>betray</b> her.=He was foul to <b>betray</b> her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 친구를 배신했다고 비난받았다.",
+      "text": "He stood accused of having betrayed his friend."
+    }
+  ],
+  "isWordType": true
+}

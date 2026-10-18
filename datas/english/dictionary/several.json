@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "several",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsevrəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(두셋은 아니고) 몇몇의, 수개의, 몇 개의, 몇 명[사람]의, 몇 번의",
+              "examples": [
+                {
+                  "text": "<b>several</b> ways to do the same thing",
+                  "translatedText": "같은 일을 하는 몇몇의 방법"
+                }
+              ],
+              "originalMeaning": "(두셋은 아니고) 몇몇의, 수개의, 몇 개의, 몇 명[사람]의, 몇 번의"
+            },
+            {
+              "meaning": "[보통 one’s ~로] 따로따로의, 각각의, 각자의",
+              "examples": [
+                {
+                  "text": "They went their <b>several</b> ways.",
+                  "translatedText": "그들은 각자의 길을 갔다."
+                }
+              ],
+              "originalMeaning": "[보통 one’s ~로] 따로따로의, 각각의, 각자의"
+            }
+          ]
+        },
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "[복수 취급] 몇몇, 몇 개, 수개, 수명, 네댓 개",
+              "examples": [],
+              "originalMeaning": "[복수 취급] 몇몇, 몇 개, 수개, 수명, 네댓 개"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/64c4613ca00b45828b77745af2e7ebe9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/64c4613ca00b45828b77745af2e7ebe9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "77772c734da0b968f045687c922f378a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 각자 갈 길을 갔다",
+      "text": "They went their <b>several</b> ways."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 몇 차례 실전에 참가했다",
+      "text": "He has been in <b>several</b> wars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것에는 여러 가지가 있다",
+      "text": "There are <b>several</b> kinds of it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "몇 군데 들러서 알아보았다",
+      "text": "I checked into <b>several</b> places."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 포도주를 여러 잔 켰다",
+      "text": "He downed <b>several</b> glasses of wine."
+    }
+  ],
+  "isWordType": true
+}

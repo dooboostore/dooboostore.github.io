@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "accent",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "악센트, 강세",
+              "examples": [
+                {
+                  "text": "the primary[secondary] <b>accent</b>",
+                  "translatedText": "제1[제2] 악센트"
+                }
+              ],
+              "originalMeaning": "악센트, 강세"
+            },
+            {
+              "meaning": "악센트 부호",
+              "examples": [
+                {
+                  "text": "an acute <b>accent</b>",
+                  "translatedText": "양부호(揚符號)(′)"
+                }
+              ],
+              "originalMeaning": "악센트 부호"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<낱말·음절에> 악센트를 두다[주다]",
+              "examples": [],
+              "originalMeaning": "<낱말·음절에> 악센트를 두다[주다]"
+            },
+            {
+              "meaning": "악센트 부호를 붙이다",
+              "examples": [],
+              "originalMeaning": "악센트 부호를 붙이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a39e2724e8fa45a89817b78b3589e1a4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a39e2724e8fa45a89817b78b3589e1a4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accents"
+        },
+        {
+          "type": "복수형",
+          "value": "accents"
+        },
+        {
+          "type": "과거형",
+          "value": "accented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "accenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accented"
+        }
+      ],
+      "aliasConjugation": "accents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d708cfaace75739bb8c80079a9292648",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전라도 사투리를 쓴다",
+      "text": "He speaks with a Jeolla-do <b>accent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외국 말투가 섞인 영어",
+      "text": "English with a foreign <b>accent</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "둘째 음절에 악센트가 있다",
+      "text": "The <b>accent</b> is[falls] on the second syllable."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "악센트는 끝 음절에 온다.",
+      "text": "The <b>accent</b> falls on the last syllable."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 외국인 이었다,  그의 말투로 안 일이지만.",
+      "text": "He was foreigner, as I knew from his <b>accent</b>."
+    }
+  ],
+  "isWordType": true
+}

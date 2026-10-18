@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "mistake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "mɪˈsteɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "잘못, 틀림; 착오, 착각, 오해 (=error)",
+              "examples": [
+                {
+                  "text": "in <b>mistake</b> for",
+                  "translatedText": "…으로 잘못 알고[착각하여]"
+                }
+              ],
+              "originalMeaning": "잘못, 틀림; 착오, 착각, 오해 (=<span class='related_word' lang='en' >error</span>)"
+            },
+            {
+              "meaning": "[법] 착오, [컴퓨터] (사람의 조작) 실수",
+              "examples": [],
+              "originalMeaning": "[법] 착오, [컴퓨터] (사람의 조작) 실수"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<장소·날짜 등을> 틀리다, 잘못 알다; 오해하다, …의 해석을 잘못하다",
+              "examples": [
+                {
+                  "text": "She has mistaken me.",
+                  "translatedText": "그 여자는 내 말을 오해하였다."
+                }
+              ],
+              "originalMeaning": "<장소·날짜 등을> 틀리다, 잘못 알다; 오해하다, …의 해석을 잘못하다"
+            },
+            {
+              "meaning": "착각하다, 잘못 생각하다; 혼동하다",
+              "examples": [
+                {
+                  "text": "<b>mistake</b> sugar for the salt",
+                  "translatedText": "설탕을 소금으로 착각하다"
+                }
+              ],
+              "originalMeaning": "착각하다, 잘못 생각하다; 혼동하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "오해하다, 착각하다",
+              "examples": [],
+              "originalMeaning": "오해하다, 착각하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c54091e1de6043c680ba89a074a811cd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c54091e1de6043c680ba89a074a811cd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mistakes"
+        },
+        {
+          "type": "과거형",
+          "value": "mistook"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mistaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mistaken"
+        }
+      ],
+      "aliasConjugation": "mistakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "eff3ca556fc91da68355972226ca556f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 내 말을 오해하였다.",
+      "text": "She has mistaken me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 내 잘못을 비웃었다.",
+      "text": "She gibed my mistakes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 김씨로 잘못 알았다.",
+      "text": "He mistook me for Kim."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자를 남자로 잘못 보았다",
+      "text": "I mistook her for a man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 큰 과오를 범했다",
+      "text": "He made a terrible[big] <b>mistake</b>."
+    }
+  ],
+  "isWordType": true
+}

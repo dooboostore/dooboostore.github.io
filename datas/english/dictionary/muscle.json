@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "muscle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmʌsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "근(筋), 근육",
+              "examples": [
+                {
+                  "text": "an involuntary[a voluntary] <b>muscle</b>",
+                  "translatedText": "불수의(不隨意)[수의]근"
+                }
+              ],
+              "originalMeaning": "근(筋), 근육"
+            },
+            {
+              "meaning": "근력, 완력, 체력",
+              "examples": [
+                {
+                  "text": "a man of <b>muscle</b>",
+                  "translatedText": "근력이 센 사나이"
+                }
+              ],
+              "originalMeaning": "근력, 완력, 체력"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[구어] 억지로 나아가다[끼어들다] ((through, in, into)); 영역을 침범하다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>muscle</b> through a crowd",
+                  "translatedText": "군중을 헤치고 나아가다"
+                }
+              ],
+              "originalMeaning": "[구어] 억지로 나아가다[끼어들다] ((through, in, into)); 영역을 침범하다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "힘으로 밀고 들어가다[나아가다]",
+              "examples": [
+                {
+                  "text": "<b>muscle</b> one's way through the crowd",
+                  "translatedText": "군중을 헤치고 나아가다"
+                }
+              ],
+              "originalMeaning": "힘으로 밀고 들어가다[나아가다]"
+            },
+            {
+              "meaning": "<…의> 근육을 강화하다, 튼튼히 하다",
+              "examples": [],
+              "originalMeaning": "<…의> 근육을 강화하다, 튼튼히 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/92838cf8d74a47f68cb27212c205ef42",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/92838cf8d74a47f68cb27212c205ef42",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "muscles"
+        },
+        {
+          "type": "과거형",
+          "value": "muscled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "muscling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "muscled"
+        }
+      ],
+      "aliasConjugation": "muscles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "453504d46b1aaa13b2829ed874b6d70e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 근육은 불룩 솟아 있었다.",
+      "text": "His muscles bulged out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아주 아픈 근육 경련을 느꼈다",
+      "text": "He felt a painful <b>muscle</b> spasm."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 운동을 해서 근육이 단단해졌다.",
+      "text": "Exercise toughened her muscles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "테니스를 하면 팔심이 강해진다.",
+      "text": "Playing tennis will <b>muscle</b> your arms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과로해서 온 몸이 결리고 아프다",
+      "text": "My every <b>muscle</b> and nerve aches with overwork."
+    }
+  ],
+  "isWordType": true
+}

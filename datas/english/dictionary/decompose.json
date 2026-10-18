@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "decompose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│diːkəm│poʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(성분·요소로) 분해시키다 ((into))",
+              "examples": [
+                {
+                  "text": "A prism <b>decompose</b> s sunlight into its various colors.",
+                  "translatedText": "프리즘은 일광을 여러 색으로 분해한다."
+                }
+              ],
+              "originalMeaning": "(성분·요소로) 분해시키다 ((into))"
+            },
+            {
+              "meaning": "부패[변질]시키다",
+              "examples": [],
+              "originalMeaning": "부패[변질]시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "분해[붕괴]하다, 부패하다",
+              "examples": [],
+              "originalMeaning": "분해[붕괴]하다, 부패하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/871faf866ee243aeb1709d8582057e1c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/871faf866ee243aeb1709d8582057e1c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "decomposes"
+        },
+        {
+          "type": "과거형",
+          "value": "decomposed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "decomposing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "decomposed"
+        }
+      ],
+      "aliasConjugation": "decomposes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e62227ec13e18f90837c7c1e50a3389a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "프리즘은 일광을 여러 색으로 분해한다.",
+      "text": "A prism decomposes sunlight into its various colors."
+    }
+  ],
+  "isWordType": true
+}

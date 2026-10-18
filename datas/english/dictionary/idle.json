@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "idle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈaɪdl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "한가한, 일을 하지 않는, 놀고 있는, <시간이> 비어 있는 (=lazy)",
+              "examples": [
+                {
+                  "text": "an <b>idle</b> spectator",
+                  "translatedText": "방관하는 사람"
+                }
+              ],
+              "originalMeaning": "한가한, 일을 하지 않는, 놀고 있는, <시간이> 비어 있는 (=<span class='related_word' lang='en' >lazy</span>)"
+            },
+            {
+              "meaning": "<사람이> 게으른, 나태한, 빈둥거리는(lazy)",
+              "examples": [
+                {
+                  "text": "the <b>idle</b> rich",
+                  "translatedText": "유한 계급"
+                }
+              ],
+              "originalMeaning": "<사람이> 게으른, 나태한, 빈둥거리는(lazy)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빈둥거리고[놀고] 있다, 게으름을 피우고 있다, 하는 일 없이 지내다 ((about, around))",
+              "examples": [],
+              "originalMeaning": "빈둥거리고[놀고] 있다, 게으름을 피우고 있다, 하는 일 없이 지내다 ((about, around))"
+            },
+            {
+              "meaning": "<엔진 등이> (저속으로) 공회전하다, 헛돌다; <기계가> 부하(負荷)없이 회전하다, 조절 밸브를 잠그고 천천히 회전하다",
+              "examples": [],
+              "originalMeaning": "<엔진 등이> (저속으로) 공회전하다, 헛돌다; <기계가> 부하(負荷)없이 회전하다, 조절 밸브를 잠그고 천천히 회전하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<시간을> 빈둥거리며 보내다, 놀며 보내다 ((away))",
+              "examples": [
+                {
+                  "text": "<b>idle</b> one's time away",
+                  "translatedText": "시간을 헛되이 보내다"
+                }
+              ],
+              "originalMeaning": "<시간을> 빈둥거리며 보내다, 놀며 보내다 ((away))"
+            },
+            {
+              "meaning": "<기계·엔진 등을> (저속으로) 공회전시키다, 헛돌게 하다",
+              "examples": [],
+              "originalMeaning": "<기계·엔진 등을> (저속으로) 공회전시키다, 헛돌게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6cb16c9fa734869bdf1ea59ec78cbbf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6cb16c9fa734869bdf1ea59ec78cbbf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "idler"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "idles"
+        },
+        {
+          "type": "최상급",
+          "value": "idlest"
+        },
+        {
+          "type": "과거형",
+          "value": "idled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "idling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "idled"
+        }
+      ],
+      "aliasConjugation": "idler",
+      "aliasConjugationPos": "비교급",
+      "gdid": "8ace72a2bd7015e1bbf4c03cfa5a2298",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파니 놀고만 있을 수는 없다",
+      "text": "I can't <b>idle</b> away my time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "…이라 말하는 것은 무의미하다",
+      "text": "It is <b>idle</b> to say that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공사로 다망하여 영일이 없다",
+      "text": "Pressed by official business, I have hardly a minute to call my own[a day to <b>idle</b> away]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 공장은 놀고 있다",
+      "text": "The factory is lying <b>idle</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "안한히 있을 수 없다",
+      "text": "I can't bear sitting <b>idle</b>. or This is no time for idling."
+    }
+  ],
+  "isWordType": true
+}

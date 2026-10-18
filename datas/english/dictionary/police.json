@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "police",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pəˈliːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 the ~] 경찰; [집합적] 경찰관, 경관(대)",
+              "examples": [
+                {
+                  "text": "a <b>police</b> box[stand]",
+                  "translatedText": "파출소"
+                }
+              ],
+              "originalMeaning": "[보통 the ~] 경찰; [집합적] 경찰관, 경관(대)"
+            },
+            {
+              "meaning": "치안[보안](대)",
+              "examples": [
+                {
+                  "text": "the military <b>police</b>",
+                  "translatedText": "[미] 헌병대"
+                }
+              ],
+              "originalMeaning": "치안[보안](대)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 경찰을 두다; …의 치안을 유지하다, 경비하다",
+              "examples": [
+                {
+                  "text": "<b>police</b> the world",
+                  "translatedText": "세계의 치안을 유지하다"
+                }
+              ],
+              "originalMeaning": "…에 경찰을 두다; …의 치안을 유지하다, 경비하다"
+            },
+            {
+              "meaning": "단속하다",
+              "examples": [],
+              "originalMeaning": "단속하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/46d014d2daee4a8bb4699938d7a1500d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/46d014d2daee4a8bb4699938d7a1500d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "polices"
+        },
+        {
+          "type": "과거형",
+          "value": "policed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "policing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "policed"
+        }
+      ],
+      "aliasConjugation": "polices",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "29d40c5d8319526cf3d54f67a2004ce6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰에서는 범인을 수색하고 있다",
+      "text": "The <b>police</b> are on the trail[track] of the culprit. or The offender is wanted by the <b>police</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 그를 뒤쫓고 있다",
+      "text": "The <b>police</b> are on his track."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰이 우리를 도우러 왔다.",
+      "text": "The <b>police</b> came to our aid."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰이 그의 뒤를 밟고 있다",
+      "text": "He is shadowed by the <b>police</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰은 도둑을 쫓고 있다.",
+      "text": "The <b>police</b> are after the thief."
+    }
+  ],
+  "isWordType": true
+}

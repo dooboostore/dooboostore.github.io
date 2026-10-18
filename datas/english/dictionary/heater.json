@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "heater",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhiːtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가열[발열]기; 히터, 난로, 난방 장치",
+              "examples": [
+                {
+                  "text": "a gas[oil] <b>heater</b>",
+                  "translatedText": "가스[석유] 난로"
+                }
+              ],
+              "originalMeaning": "가열[발열]기; 히터, 난로, 난방 장치"
+            },
+            {
+              "meaning": "굽는 사람[기계]",
+              "examples": [],
+              "originalMeaning": "굽는 사람[기계]"
+            },
+            {
+              "meaning": "히터 ((진공관의 음극을 가열하기 위한 전열선))",
+              "examples": [],
+              "originalMeaning": "히터 ((진공관의 음극을 가열하기 위한 전열선))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4545ab691941459cab95ef0f0dddfca2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4545ab691941459cab95ef0f0dddfca2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "37b595b1cc48a756ee0fe8cd0459a108",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "히터를 켜니까 방이 서서히 따뜻해졌다",
+      "text": "I turned on the <b>heater</b>, and the room slowly warmed up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방 안을 녹일 만큼 충분히 히터를 틀어 놓아라",
+      "text": "Put the <b>heater</b> on for long enough to take the chill off the room."
+    }
+  ],
+  "isWordType": true
+}

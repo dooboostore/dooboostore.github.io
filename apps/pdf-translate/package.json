@@ -1,0 +1,26 @@
+{
+  "name": "dooboostore-pdf-translate",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node dist/index.cjs",
+    "build:start": "pnpm run build && pnpm run start",
+    "build": "node esbuild.config.mjs",
+    "dev": "node esbuild.config.mjs --dev",
+    "test": "node esbuild.config.mjs --test",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "dooboostore-english-dictionary": "workspace:*",
+    "jszip": "3.10.2",
+    "pdf-parse": "^1.1.1",
+    "playwright": "^1.56.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pdf-parse": "^1.1.5",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.9.2"
+  }
+}

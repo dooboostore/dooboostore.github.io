@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "balloon",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bəˈluːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(고무) 풍선",
+              "examples": [],
+              "originalMeaning": "(고무) 풍선"
+            },
+            {
+              "meaning": "기구(氣球)",
+              "examples": [
+                {
+                  "text": "a captive <b>balloon</b>",
+                  "translatedText": "계류 기구"
+                }
+              ],
+              "originalMeaning": "기구(氣球)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "기구를 타고 올라가다, <공 등이> 커브를 그리며 높이 날아가다",
+              "examples": [],
+              "originalMeaning": "기구를 타고 올라가다, <공 등이> 커브를 그리며 높이 날아가다"
+            },
+            {
+              "meaning": "부풀다 ((out, up))",
+              "examples": [],
+              "originalMeaning": "부풀다 ((out, up))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "부풀리다, [영] 공을 높이 차 올리다",
+              "examples": [],
+              "originalMeaning": "부풀리다, [영] 공을 높이 차 올리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9b3e143eac4c4dea987ccde68674b50e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9b3e143eac4c4dea987ccde68674b50e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "balloons"
+        },
+        {
+          "type": "과거형",
+          "value": "ballooned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ballooning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ballooned"
+        }
+      ],
+      "aliasConjugation": "balloons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "46ca78e1d4cc85ee2d8f972970cbcbe5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기구가 두둥실 높이 떠 있다",
+      "text": "A <b>balloon</b> is floating high up in the air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기구는 현대 비행선의 원형이다.",
+      "text": "The <b>balloon</b> is an ancestor of the modern dirigible."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너의 어색한 농담으로 흥이 깨져 버렸다",
+      "text": "That crummy joke you told went over like a lead <b>balloon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풍선이 탁탁 터진다",
+      "text": "The balloons burst with pops."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기구는 공중으로 떠올랐다.",
+      "text": "The <b>balloon</b> floated up into the air."
+    }
+  ],
+  "isWordType": true
+}

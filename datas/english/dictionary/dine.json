@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "<b>dine</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dáin"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와) 식사를 하다(have dinner) ((with)), 정찬을 먹다",
+              "examples": [],
+              "originalMeaning": "(…와) 식사를 하다(have dinner) ((with)), 정찬을 먹다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "정찬[만찬]을 대접하다, 정찬[만찬]에 초대하다",
+              "examples": [],
+              "originalMeaning": "정찬[만찬]을 대접하다, 정찬[만찬]에 초대하다"
+            },
+            {
+              "meaning": "<방·테이블이> (몇 사람) 식사할 수 있다",
+              "examples": [],
+              "originalMeaning": "<방·테이블이> (몇 사람) 식사할 수 있다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de299f54a4414ee9b9b391e3120b6010",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de299f54a4414ee9b9b391e3120b6010",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dines"
+        },
+        {
+          "type": "과거형",
+          "value": "dined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dined"
+        }
+      ],
+      "aliasConjugation": "dines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0e6274ebf506852425cfc17e7c661adc",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>dine</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=DYNAMITE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >DYNAMITE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4bb5e96ca7be4cea8bdcafad12280208",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4bb5e96ca7be4cea8bdcafad12280208",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "dines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c7102cf852b73670bc46f30f129532a4",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일주일에 한 번 외식을 한다",
+      "text": "We <b>dine</b> out once a week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 오늘 밤에 외식할 작정이다.",
+      "text": "We propose to <b>dine</b> out tonight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘 밤엔 집에서 저녁을 먹겠습니다",
+      "text": "I am going to <b>dine</b>[eat] in tonight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 열차에는 식당차가 붙어 있다",
+      "text": "There is a dining car attached to the train."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저녁이 다 준비된 모양이니 식당으로 가십시다",
+      "text": "As the dinner seems to be ready, let’s go to the dining room."
+    }
+  ],
+  "isWordType": true
+}

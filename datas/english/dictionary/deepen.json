@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "deepen",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdiːpən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<인상·감정·지식 등을> 깊게 하다, <사태 등을> 심화시키다, 심각하게 하다",
+              "examples": [
+                {
+                  "text": "<b>deepen</b> one's understanding of other cultures",
+                  "translatedText": "다른 (나라) 문화에 대한 이해를 깊게 하다"
+                }
+              ],
+              "originalMeaning": "<인상·감정·지식 등을> 깊게 하다, <사태 등을> 심화시키다, 심각하게 하다"
+            },
+            {
+              "meaning": "<색·어두움을> 짙게 하다, <소리 등을> 낮게 하다",
+              "examples": [],
+              "originalMeaning": "<색·어두움을> 짙게 하다, <소리 등을> 낮게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<인상·감정·지식 등이> 깊어지다, <사태 등이> 심화되다, 심각해지다",
+              "examples": [
+                {
+                  "text": "The recession may <b>deepen</b> still further.",
+                  "translatedText": "경기 침체는 더욱 심각해질지 모른다."
+                }
+              ],
+              "originalMeaning": "<인상·감정·지식 등이> 깊어지다, <사태 등이> 심화되다, 심각해지다"
+            },
+            {
+              "meaning": "<색·어두움이> 짙어지다, <소리 등이> 낮아지다, [기상] 기압이 저하하다[되다]",
+              "examples": [],
+              "originalMeaning": "<색·어두움이> 짙어지다, <소리 등이> 낮아지다, [기상] 기압이 저하하다[되다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cecaba5fae794465912ecc9ab770c261",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cecaba5fae794465912ecc9ab770c261",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "deepens"
+        },
+        {
+          "type": "과거형",
+          "value": "deepened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "deepening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "deepened"
+        }
+      ],
+      "aliasConjugation": "deepens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a1140440a93177bb845e355a3fd8c83b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경기 침체는 더욱 심각해질지 모른다.",
+      "text": "The recession may <b>deepen</b> still further."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "밤이 이슥해진다",
+      "text": "It's getting late. or The evening deepens."
+    }
+  ],
+  "isWordType": true
+}

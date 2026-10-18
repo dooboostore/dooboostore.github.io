@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "stadium",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsteɪdiəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(관람석으로 둘러싸인) 경기장, 스타디움, 육상 경기장, 야구장",
+              "examples": [],
+              "originalMeaning": "(관람석으로 둘러싸인) 경기장, 스타디움, 육상 경기장, 야구장"
+            },
+            {
+              "meaning": "도보 경주장",
+              "examples": [],
+              "originalMeaning": "도보 경주장"
+            },
+            {
+              "meaning": "길이의 단위 ((약 185 m, 원래 올림피아 경기장의 길이))",
+              "examples": [],
+              "originalMeaning": "길이의 단위 ((약 185 m, 원래 올림피아 경기장의 길이))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/20df31e9a2eb420db9bc46c02ed44d96",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/20df31e9a2eb420db9bc46c02ed44d96",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "stadiums, stadia"
+        }
+      ],
+      "aliasConjugation": "stadiums, stadia",
+      "aliasConjugationPos": "복수형",
+      "gdid": "0eed6f4342a31b31b9e117f3985b7594",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 스타디움은 10만 명의 관중을 수용할 수 있다",
+      "text": "This <b>stadium</b> can seat 100,000 spectators."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경기장 안에는 약 천 명이 있었다",
+      "text": "There were about a thousand of people inside of the <b>stadium</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "결승전을 보려고 축구팬들이 경기장으로 밀려갔다",
+      "text": "Soccer fans crowded into the <b>stadium</b> to watch the final game."
+    }
+  ],
+  "isWordType": true
+}

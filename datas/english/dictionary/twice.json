@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "twice",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "twaɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "두 번, 2회",
+              "examples": [],
+              "originalMeaning": "두 번, 2회"
+            },
+            {
+              "meaning": "두 배로",
+              "examples": [
+                {
+                  "text": "<b>Twice</b> two is[are] four.",
+                  "translatedText": "2×2는 4."
+                }
+              ],
+              "originalMeaning": "두 배로"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0e4fb18423e24abeb44e3af912442ac0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0e4fb18423e24abeb44e3af912442ac0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "def1caf9709c860a74a91ae361a37cdb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "3 곱하기 2는 6.",
+      "text": "<b>Twice</b> 3 is equal to 6."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 하면 비용이 배가 든다",
+      "text": "It would cost <b>twice</b> as much as that. or It would cost as much again as that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "12 를 6으로 나누면 2가 된다.",
+      "text": "Six into twelve goes <b>twice</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조수는 하루에 두 번 밀려온다.",
+      "text": "The tide flows <b>twice</b> a day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 저 길이의 두 배이다",
+      "text": "This is <b>twice</b> as long as that."
+    }
+  ],
+  "isWordType": true
+}

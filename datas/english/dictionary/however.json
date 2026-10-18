@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "however",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "haʊˈevə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[접속부사로서] 그렇지만, 그러나, …라고는 하지만 ((",
+              "examples": [
+                {
+                  "text": "I cannot, <b>however</b>, approve of it.",
+                  "translatedText": "그러나 나는 그것을 승인할 수 없다."
+                }
+              ],
+              "originalMeaning": "[접속부사로서] 그렇지만, 그러나, …라고는 하지만 (("
+            },
+            {
+              "meaning": "[양보 부사절을 이끌어] 아무리 …해도[할지라도](no matter how)",
+              "examples": [
+                {
+                  "text": "<b>However</b> hard I worked, she was never satisfied.",
+                  "translatedText": "아무리 열심히 공부한다 하더라도 그녀는 결코 만족하지 않았다."
+                }
+              ],
+              "originalMeaning": "[양보 부사절을 이끌어] 아무리 …해도[할지라도](no matter how)"
+            }
+          ]
+        },
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "그러나, 그렇지만; (…하는) 어떤 방법[방식]으로라도",
+              "examples": [
+                {
+                  "text": "You can do it <b>however</b> you like.",
+                  "translatedText": "네 좋을 대로 그것을 해도 된다."
+                }
+              ],
+              "originalMeaning": "그러나, 그렇지만; (…하는) 어떤 방법[방식]으로라도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/03af0984c48840c7ad356476cc827d6e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/03af0984c48840c7ad356476cc827d6e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "2a2c59d8bf459ce5b6c4767c5a9cd194",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네 좋을 대로 그것을 해도 된다.",
+      "text": "You can do it <b>however</b> you like."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 하려도 할 수 없다",
+      "text": "<b>However</b> much I may try, I cannot do it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그러나 나는 그것을 승인할 수 없다.",
+      "text": "I cannot, <b>however</b>, approve of it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇지마는 당신에게 찬성할 수는 없다",
+      "text": "I cannot agree with you, <b>however</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그러나 나중에 그는 마음을 고쳐 먹었다.",
+      "text": "Later, <b>however</b>, he changed his mind."
+    }
+  ],
+  "isWordType": true
+}

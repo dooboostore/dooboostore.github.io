@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "grocery",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│groʊsəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "식료 잡화점, 식품점([영] grocer’s (shop), grocery shop); [U] 식료 잡화 판매업",
+              "examples": [],
+              "originalMeaning": "식료 잡화점, 식품점([영] grocer’s (shop), <b>grocery</b> shop); [U] 식료 잡화 판매업"
+            },
+            {
+              "meaning": "[보통 pl.] 식료 잡화류",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 식료 잡화류"
+            },
+            {
+              "meaning": "술집",
+              "examples": [],
+              "originalMeaning": "술집"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bea9b096b3b943d9b8fd179a11c82be5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bea9b096b3b943d9b8fd179a11c82be5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "groceries"
+        }
+      ],
+      "aliasConjugation": "groceries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "0dd26ac126598631f8d953495ccc9892",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 식료품점에 5달러의 외상이 있다.",
+      "text": "She owes five dollars to the grocer(y).=She owes the grocer(y) five dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 식료품 가게로부터의 청구서를 합계했다.",
+      "text": "She summed up bills at the <b>grocery</b> store."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 식당과 식료품점을 겸업하고 있다",
+      "text": "He runs both a restaurant and a <b>grocery</b> store."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "식료품을 사러 가겠다",
+      "text": "I'm going to get some groceries."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 맞벌이 부부입니다",
+      "text": "Both of us bring home the bacon[groceries]."
+    }
+  ],
+  "isWordType": true
+}

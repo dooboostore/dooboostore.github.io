@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "floor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "flɔː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "방바닥; 마루; [pl.] 마루청, 마루 까는 널판",
+              "examples": [
+                {
+                  "text": "a bare <b>floor</b>",
+                  "translatedText": "(융단 등을 깔지 않은) 맨 방바닥"
+                }
+              ],
+              "originalMeaning": "방바닥; 마루; [pl.] 마루청, 마루 까는 널판"
+            },
+            {
+              "meaning": "(건물의) 층",
+              "examples": [
+                {
+                  "text": "the upper <b>floor</b>(s)",
+                  "translatedText": "위층"
+                }
+              ],
+              "originalMeaning": "(건물의) 층"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 (마룻)바닥을 깔다 ((with)), <돌·벽돌 등을> 바닥에 깔다(pave)",
+              "examples": [
+                {
+                  "text": "the place floored with flat stones",
+                  "translatedText": "판판한 돌이 깔린 곳"
+                }
+              ],
+              "originalMeaning": "…에 (마룻)바닥을 깔다 ((with)), <돌·벽돌 등을> 바닥에 깔다(pave)"
+            },
+            {
+              "meaning": "<상대방을> 마루[땅]에 쓰러뜨리다; [구어] 여지없이 패배시키다; <의론·난문제 등이> 골탕먹이다, 궁지에 빠뜨리다, 당황시키다",
+              "examples": [
+                {
+                  "text": "I was floored by the problem.",
+                  "translatedText": "나는 그 문제로 당황했다."
+                }
+              ],
+              "originalMeaning": "<상대방을> 마루[땅]에 쓰러뜨리다; [구어] 여지없이 패배시키다; <의론·난문제 등이> 골탕먹이다, 궁지에 빠뜨리다, 당황시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1072326c684d4ac280da56af5932da81",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1072326c684d4ac280da56af5932da81",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "floors"
+        },
+        {
+          "type": "과거형",
+          "value": "floored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "flooring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "floored"
+        }
+      ],
+      "aliasConjugation": "floors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c330bab120cbad69700a1e4675a85c50",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바닥에 침을 뱉지 말 것",
+      "text": "No spitting on the <b>floor</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바닥에 침을 뱉지 마시오",
+      "text": "No spitting (on the <b>floor</b>)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그 문제로 당황했다.",
+      "text": "I was floored by the problem."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "장난감이 방바닥에 흩어져 있었다.",
+      "text": "Toys littered up the <b>floor</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부끄러워서 쥐구멍이라도 있으면 들어가 숨고 싶었다",
+      "text": "I felt inclined to sink into the ground with shame. or I was so overwhelmed with shame that I wished the <b>floor</b> would open and engulf me."
+    }
+  ],
+  "isWordType": true
+}

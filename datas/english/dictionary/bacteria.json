@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "bacteria",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bæk│tɪrəriə"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "pl. 박테리아, 세균",
+              "examples": [],
+              "originalMeaning": "pl. 박테리아, 세균"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/069f615c73af45698290825db8923423",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/069f615c73af45698290825db8923423",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "25ac3e3baebbc19c501a234c6f6dd800",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "bacterium",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bæktíəriəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "BACTERIA의 단수",
+              "examples": [],
+              "originalMeaning": "<b>BACTERIA</b>의 단수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/195655d05c204db5a4ab82d5cc3decc5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/195655d05c204db5a4ab82d5cc3decc5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c6c91dd11d1971537274ffb39bb2f92a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "항생제는 박테리아에 효능이 있다",
+      "text": "Antibiotics act on the <b>bacteria</b>."
+    }
+  ],
+  "isWordType": true
+}

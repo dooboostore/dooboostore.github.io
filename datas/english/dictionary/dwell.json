@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>dwell</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dwel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "살다, 거주하다 ((at, in, near, on, among))",
+              "examples": [
+                {
+                  "text": "<b>dwell</b> at home",
+                  "translatedText": "국내에 거주하다"
+                }
+              ],
+              "originalMeaning": "살다, 거주하다 ((at, in, near, on, among))"
+            },
+            {
+              "meaning": "(어떤 상태에) 머무르다, 못 떠나다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>dwell</b> in one's mind",
+                  "translatedText": "마음에 남다"
+                }
+              ],
+              "originalMeaning": "(어떤 상태에) 머무르다, 못 떠나다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "휴지(休止), (기계 운전 중의) 규칙적인 휴지",
+              "examples": [],
+              "originalMeaning": "휴지(休止), (기계 운전 중의) 규칙적인 휴지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7d022fcaf7424b1ea5abddd63d83eb3c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7d022fcaf7424b1ea5abddd63d83eb3c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dwells"
+        },
+        {
+          "type": "과거형",
+          "value": "dwelled, dwelt"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dwelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dwelled, dwelt"
+        }
+      ],
+      "aliasConjugation": "dwells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3253402f971164f7fbbd45fb04fc2fa2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "건전한 정신은 건전한 신체에 깃든다",
+      "text": "A sound mind (dwells) in a sound body."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제에 대하여서는 다언할 필요가 없다",
+      "text": "There is no need to <b>dwell</b> on[upon] the subject."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교육의 중요성은 췌언할 필요가 없다",
+      "text": "There is no need of a pleonasm on the importance of education. or There is no need to <b>dwell</b> upon[to reiterate] the importance of education."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 책의 가치에 대해서는 누누이 말할 필요가 없다",
+      "text": "There is no need to <b>dwell</b> upon[reiterate] the value of this book."
+    }
+  ],
+  "isWordType": true
+}

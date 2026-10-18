@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>blur</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "blɜː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<광경·의식·눈 등을> 흐리게 하다",
+              "examples": [
+                {
+                  "text": "Fog <b>blur</b> red our view of the hills.",
+                  "translatedText": "안개 때문에 언덕의 경치가 잘 보이지 않았다."
+                }
+              ],
+              "originalMeaning": "<광경·의식·눈 등을> 흐리게 하다"
+            },
+            {
+              "meaning": "(잉크 따위로) 더럽히다, …에 얼룩이 지게 하다",
+              "examples": [],
+              "originalMeaning": "(잉크 따위로) 더럽히다, …에 얼룩이 지게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…으로) 흐릿해지다, <눈이> (…으로) 침침해지다 ((with))",
+              "examples": [],
+              "originalMeaning": "(…으로) 흐릿해지다, <눈이> (…으로) 침침해지다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흐림, 침침함(dimness)",
+              "examples": [],
+              "originalMeaning": "흐림, 침침함(dimness)"
+            },
+            {
+              "meaning": "더럼, 얼룩, 번진 자국",
+              "examples": [],
+              "originalMeaning": "더럼, 얼룩, 번진 자국"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6cb1dc1ffc146adb03d35b7ff36d200",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6cb1dc1ffc146adb03d35b7ff36d200",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blurs"
+        },
+        {
+          "type": "과거형",
+          "value": "blurred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blurring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blurred"
+        }
+      ],
+      "aliasConjugation": "blurs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "efd99c6cd41c847584c6a0833fc82bc4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "안경을 쓰면 눈이 흐릿합니다",
+      "text": "My vision blurs when I wear my glasses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "안개 때문에 언덕의 경치가 잘 보이지 않았다.",
+      "text": "Fog blurred our view of the hills."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "글자가 얼보여서 읽기 어렵다",
+      "text": "The writing is blurred and difficult to read."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 자기 아이를 보자 눈물이 앞을 가렸다",
+      "text": "When she saw her boy, she was blurred with tears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인쇄가 흐리다",
+      "text": "Printing is blurred."
+    }
+  ],
+  "isWordType": true
+}

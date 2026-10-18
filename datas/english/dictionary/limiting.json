@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "limiting",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪmɪtɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "제한하는",
+              "examples": [
+                {
+                  "text": "a <b>limiting</b> adjective",
+                  "translatedText": "[문법] 제한적 형용사 ((명사를 한정하는 구실뿐인 this, some, certain 등))"
+                }
+              ],
+              "originalMeaning": "제한하는"
+            },
+            {
+              "meaning": "극단적인",
+              "examples": [
+                {
+                  "text": "a <b>limiting</b> case",
+                  "translatedText": "극단적인 경우"
+                }
+              ],
+              "originalMeaning": "극단적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8488088768bd44bc90fddc513a3dbe9a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8488088768bd44bc90fddc513a3dbe9a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "772ed775c71a4449167e14500c5e9b8d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "limit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪmɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "한계(선), 극한, 한도; 제한",
+              "examples": [
+                {
+                  "text": "the upper[lower] <b>limit</b>",
+                  "translatedText": "상한[하한]"
+                }
+              ],
+              "originalMeaning": "한계(선), 극한, 한도; 제한"
+            },
+            {
+              "meaning": "[종종 pl.] [미] (나라·토지·구역 등의) 경계; 범위, 구역",
+              "examples": [
+                {
+                  "text": "within the <b>limit</b> of",
+                  "translatedText": "…의 범위 내에서"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] [미] (나라·토지·구역 등의) 경계; 범위, 구역"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "한정하다; 제한하다(restrict), …에 한계를 두다",
+              "examples": [
+                {
+                  "text": "<b>limit</b> one sentence to 15 words",
+                  "translatedText": "한 문장을 15단어로 제한하다"
+                }
+              ],
+              "originalMeaning": "한정하다; 제한하다(restrict), …에 한계를 두다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/632cc463f1814fadaf1649f6c2f69f0f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/632cc463f1814fadaf1649f6c2f69f0f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "limits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b9f52a2a0706ddf736f68b5754d4582",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 오만함은 한이 없다",
+      "text": "Her arrogance knows no limits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사람의 욕심은 한없기 짝이 없다",
+      "text": "There are no <b>limit</b> to man's greed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모든 일에는 한계가 있는 법이다.",
+      "text": "There is a <b>limit</b> to everything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사람을 놀려도 분수가 있지",
+      "text": "There is a <b>limit</b> in befooling one."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "회원은 200명으로 제한되어 있다",
+      "text": "Its membership is limited to 200."
+    }
+  ],
+  "isWordType": true
+}

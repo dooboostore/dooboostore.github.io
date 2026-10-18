@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "entry": "<b>recollect</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌrekəˈlekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(노력하여) 생각해 내다, 회상하다 (=remember)",
+              "examples": [
+                {
+                  "text": "I can't <b>recollect</b> you.",
+                  "translatedText": "당신을 본 기억이 없습니다."
+                }
+              ],
+              "originalMeaning": "(노력하여) 생각해 내다, 회상하다 (=<span class='related_word' lang='en' >remember</span>)"
+            },
+            {
+              "meaning": "[~ oneself로] (특히 기도 때) 몰두하다, (종교적인) 명상에 잠기다",
+              "examples": [],
+              "originalMeaning": "[~ oneself로] (특히 기도 때) 몰두하다, (종교적인) 명상에 잠기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "생각나다, 기억나다",
+              "examples": [
+                {
+                  "text": "as far as I <b>recollect</b>",
+                  "translatedText": "내가 기억하는 한에서는"
+                }
+              ],
+              "originalMeaning": "생각나다, 기억나다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8ddf9a1ee503467aadeecd07928951de",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8ddf9a1ee503467aadeecd07928951de",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "recollects"
+        },
+        {
+          "type": "과거형",
+          "value": "recollected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recollecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recollected"
+        }
+      ],
+      "aliasConjugation": "recollects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b8466c1c10f0f24c6e2bbc19ffd61a42",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-collect",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:kəlékt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 모으다",
+              "examples": [],
+              "originalMeaning": "다시 모으다"
+            },
+            {
+              "meaning": "[~ oneself로] <마음 등을> 진정시키다, 냉정[침착]하게 하다",
+              "examples": [],
+              "originalMeaning": "[~ oneself로] <마음 등을> 진정시키다, 냉정[침착]하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "다시 모이다",
+              "examples": [],
+              "originalMeaning": "다시 모이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d96de91a3c484c6da558a0866b1236a6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d96de91a3c484c6da558a0866b1236a6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6b4b0bfd43fe0728ce6e50397529a224",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신을 본 기억이 없습니다.",
+      "text": "I can’t <b>recollect</b> you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 그렇게 말한 것이 생각난다.",
+      "text": "I <b>recollect</b> him[his] saying so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전에 그녀를 만난 기억이 난다.",
+      "text": "I <b>recollect</b> that I have met her before."
+    }
+  ],
+  "isWordType": true
+}

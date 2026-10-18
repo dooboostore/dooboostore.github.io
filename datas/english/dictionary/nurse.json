@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "nurse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "nɜːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "간호사[인, 병]",
+              "examples": [
+                {
+                  "text": "a male <b>nurse</b>",
+                  "translatedText": "남자 간호사"
+                }
+              ],
+              "originalMeaning": "간호사[인, 병]"
+            },
+            {
+              "meaning": "[보통 wet ~] 유모,[보통 dry ~] 보모, 애 보는 사람",
+              "examples": [],
+              "originalMeaning": "[보통 wet ~] 유모,[보통 dry ~] 보모, 애 보는 사람"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "간호하다, 병구완하다",
+              "examples": [],
+              "originalMeaning": "간호하다, 병구완하다"
+            },
+            {
+              "meaning": "<병·환부를> 고치려고 애쓰다, 다스리다",
+              "examples": [
+                {
+                  "text": "<b>nurse</b> a bad cold by going to bed",
+                  "translatedText": "잠으로써 독감을 고치려고 하다"
+                }
+              ],
+              "originalMeaning": "<병·환부를> 고치려고 애쓰다, 다스리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<유모가> 젖을 먹이다; <젖먹이가> 젖을 먹다, (젖을) 빨다 ((at))",
+              "examples": [],
+              "originalMeaning": "<유모가> 젖을 먹이다; <젖먹이가> 젖을 먹다, (젖을) 빨다 ((at))"
+            },
+            {
+              "meaning": "간호사로 근무하다, 간호하다",
+              "examples": [],
+              "originalMeaning": "간호사로 근무하다, 간호하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0aebff3b70b644f9b6ab5fa974cc7815",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0aebff3b70b644f9b6ab5fa974cc7815",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "nurses"
+        },
+        {
+          "type": "과거형",
+          "value": "nursed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "nursing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "nursed"
+        }
+      ],
+      "aliasConjugation": "nurses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e4951e4acf0adb685b2f8adac4697994",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 아이는 유모가 기르고 있다",
+      "text": "The baby is at <b>nurse</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 간호사로서 양성되고 있다.",
+      "text": "She is training as a <b>nurse</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1 년 동안 그 식물을 가꾸었다.",
+      "text": "I nursed the plant along for a year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 간호사 자격을 딸 작정이다.",
+      "text": "She expects to qualify as a <b>nurse</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "간호사는 자지 않고 환자를 간호했다.",
+      "text": "The <b>nurse</b> watched with a sick person."
+    }
+  ],
+  "isWordType": true
+}

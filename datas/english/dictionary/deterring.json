@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "deter",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈtɜː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(겁먹어) 그만두게 하다, 단념시키다, (못하게) 막다 ((from))",
+              "examples": [
+                {
+                  "text": "The cold deterred him from going out.",
+                  "translatedText": "추위 때문에 그는 외출을 하지 못했다."
+                }
+              ],
+              "originalMeaning": "(겁먹어) 그만두게 하다, 단념시키다, (못하게) 막다 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6b162955a4de48d1b0d051f18f0f1bcb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6b162955a4de48d1b0d051f18f0f1bcb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "deters"
+        },
+        {
+          "type": "과거형",
+          "value": "deterred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "deterring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "deterred"
+        }
+      ],
+      "aliasConjugation": "deters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c6ab8a2ee8ef92214e055768ea5b824b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "추위 때문에 그는 외출을 하지 못했다.",
+      "text": "The cold deterred him from going out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "벌이 무서워서 죄를 범하지 않는 사람이 많다",
+      "text": "The fear of punishment deters many people from crime."
+    }
+  ],
+  "isWordType": true
+}

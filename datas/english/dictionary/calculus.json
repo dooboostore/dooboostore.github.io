@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "entry": "calculus",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkælkjələs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[병리] 결석(結石), [치과] 치석",
+              "examples": [],
+              "originalMeaning": "[병리] 결석(結石), [치과] 치석"
+            },
+            {
+              "meaning": "계산법, ((특히)) 미적분학",
+              "examples": [
+                {
+                  "text": "differential[integral] <b>calculus</b>",
+                  "translatedText": "미분[적분]학"
+                }
+              ],
+              "originalMeaning": "계산법, ((특히)) 미적분학"
+            },
+            {
+              "meaning": "계산 논법",
+              "examples": [],
+              "originalMeaning": "계산 논법"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/702dfad90324476dbb07f6f18d805601",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/702dfad90324476dbb07f6f18d805601",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "calculi"
+        }
+      ],
+      "aliasConjugation": "calculi",
+      "aliasConjugationPos": "복수형",
+      "gdid": "16c8415e46709103c76b397d72cce348",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대수나 기하도 잘 모른다, 하물며 미적분에 있어서야",
+      "text": "He does not know algebra or geometry, to say nothing of <b>calculus</b>."
+    }
+  ],
+  "isWordType": true
+}

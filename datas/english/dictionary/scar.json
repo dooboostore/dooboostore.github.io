@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "entry": "scar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skɑ́ːr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흉터, (화상·부스럼의) 자국",
+              "examples": [
+                {
+                  "text": "a vaccination <b>scar</b>",
+                  "translatedText": "우두 자국"
+                }
+              ],
+              "originalMeaning": "흉터, (화상·부스럼의) 자국"
+            },
+            {
+              "meaning": "(마음·명성 등의) 상처, 고통",
+              "examples": [
+                {
+                  "text": "leave a <b>scar</b> on one's good name",
+                  "translatedText": "명성에 오점을 남기다"
+                }
+              ],
+              "originalMeaning": "(마음·명성 등의) 상처, 고통"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 상처를 남기다, 자국을 남기다",
+              "examples": [
+                {
+                  "text": "She dropped the ashtray and scarred the table.",
+                  "translatedText": "그녀가 재떨이를 떨어뜨려서 테이블에 자국이 났다."
+                }
+              ],
+              "originalMeaning": "…에 상처를 남기다, 자국을 남기다"
+            },
+            {
+              "meaning": "<경관을> 망치다",
+              "examples": [],
+              "originalMeaning": "<경관을> 망치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "흉터가 남다, (자국을 남기고) 낫다 ((over))",
+              "examples": [
+                {
+                  "text": "The cut will <b>scar</b> over.",
+                  "translatedText": "그 벤 상처는 흉터가 남을 것이다."
+                }
+              ],
+              "originalMeaning": "흉터가 남다, (자국을 남기고) 낫다 ((over))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6ea162e2f8e24bab95bab59d01ff8c94",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6ea162e2f8e24bab95bab59d01ff8c94",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "scars"
+        },
+        {
+          "type": "과거형",
+          "value": "scarred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scarring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scarred"
+        }
+      ],
+      "aliasConjugation": "scars",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5c7418d1d8d7a0f848b35fa1204494ee",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "scar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[영] 절벽, 암초",
+              "examples": [],
+              "originalMeaning": "[영] 절벽, 암초"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce1e3125828b49e2b68c51175411b431",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce1e3125828b49e2b68c51175411b431",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "scars",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "95306039b22e857de4ed61979cfabdc2",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 부상으로 흉터가 남았다.",
+      "text": "The wound left a <b>scar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 벤 상처는 흉터가 남을 것이다.",
+      "text": "The cut will <b>scar</b> over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 얼굴에 흠이 있다",
+      "text": "He has[bears] a <b>scar</b> on his face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 종두 맞은 자리다",
+      "text": "This is a vaccination <b>scar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직도 얼굴에 몇 군데 상처가 남아 있다",
+      "text": "There still remain a few scars on the face."
+    }
+  ],
+  "isWordType": true
+}

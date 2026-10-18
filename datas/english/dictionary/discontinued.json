@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "discontinue",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌdɪskənˈtɪnjuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<계속하기를> 그만두다(stop) ((doing)); 정지하다; 중지[중단]하다(interrupt), (일시) 휴지(休止)하다; [법] <소송을> 취하하다(abandon)",
+              "examples": [
+                {
+                  "text": "<b>discontinue</b> the services",
+                  "translatedText": "서비스를 중지하다"
+                }
+              ],
+              "originalMeaning": "<계속하기를> 그만두다(stop) ((doing)); 정지하다; 중지[중단]하다(interrupt), (일시) 휴지(休止)하다; [법] <소송을> 취하하다(abandon)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "중지[휴지]되다, <잡지 등이> 폐간[휴간]되다",
+              "examples": [],
+              "originalMeaning": "중지[휴지]되다, <잡지 등이> 폐간[휴간]되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3d9943a2ea8943308cb87fd42245d434",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3d9943a2ea8943308cb87fd42245d434",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "discontinues"
+        },
+        {
+          "type": "과거형",
+          "value": "discontinued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "discontinuing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "discontinued"
+        }
+      ],
+      "aliasConjugation": "discontinues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d094ffc33aa400c5c19b13ace701c278",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 잡지는 폐간되었다",
+      "text": "The magazine has ceased publication[to appear]. or The magazine has been <b>discontinued</b>. or The magazine is no longer being published."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "판매는 중단되었다",
+      "text": "The sale was <b>discontinued</b>."
+    }
+  ],
+  "isWordType": true
+}

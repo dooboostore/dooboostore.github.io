@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "plant",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "plænt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "식물(opp. animal), 초목",
+              "examples": [
+                {
+                  "text": "flowering <b>plants</b>",
+                  "translatedText": "현화(顯花) 식물, 꽃식물"
+                }
+              ],
+              "originalMeaning": "식물(opp. animal), 초목"
+            },
+            {
+              "meaning": "초본(herb), 풀",
+              "examples": [],
+              "originalMeaning": "초본(herb), 풀"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<식물을> 심다, <씨를> 뿌리다, <식물을> 이식하다",
+              "examples": [
+                {
+                  "text": "<b>plant</b> seeds",
+                  "translatedText": "씨를 뿌리다"
+                }
+              ],
+              "originalMeaning": "<식물을> 심다, <씨를> 뿌리다, <식물을> 이식하다"
+            },
+            {
+              "meaning": "<정원에 …을> 심다",
+              "examples": [
+                {
+                  "text": "<b>plant</b> a garden with roses",
+                  "translatedText": "정원에 장미를 심다"
+                }
+              ],
+              "originalMeaning": "<정원에 …을> 심다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/95d84089195e4c6f9515555016cbc1e1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/95d84089195e4c6f9515555016cbc1e1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "plants"
+        },
+        {
+          "type": "과거형",
+          "value": "planted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "planting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "planted"
+        }
+      ],
+      "aliasConjugation": "plants",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "04c2259296bdd57c93355629f463f856",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 화초는 직사광선을 피해 주세요",
+      "text": "Keep this <b>plant</b> out of the direct rays of the sun. or Don't expose this <b>plant</b> directly to the sun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새 공장은 조업을 개시했다.",
+      "text": "A new <b>plant</b> went onstream."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 묘목들은 쉽게 이식된다.",
+      "text": "These <b>plants</b> transplant easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "벼가 노릇노릇 익어 간다",
+      "text": "The rice (<b>plant</b>) is ripening yellow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 식물은 아직 한국 풍토에 순화되지 않았다",
+      "text": "The <b>plant</b> is not yet acclimated in Korea. or The <b>plant</b> has not yet acclimatized itself to Korea."
+    }
+  ],
+  "isWordType": true
+}

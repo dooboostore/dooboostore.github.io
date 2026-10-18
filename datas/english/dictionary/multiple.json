@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "multiple",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmʌltɪpl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "복합적인, 복식의",
+              "examples": [
+                {
+                  "text": "a <b>multiple</b> tax",
+                  "translatedText": "복합세"
+                }
+              ],
+              "originalMeaning": "복합적인, 복식의"
+            },
+            {
+              "meaning": "다수의, 많은 부분[요소]으로 된; 다수의, 다양한",
+              "examples": [],
+              "originalMeaning": "다수의, 많은 부분[요소]으로 된; 다수의, 다양한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "배수",
+              "examples": [
+                {
+                  "text": "9 is a <b>multiple</b> of 3.",
+                  "translatedText": "9는 3의 배수이다."
+                }
+              ],
+              "originalMeaning": "배수"
+            },
+            {
+              "meaning": "[전기] 병렬, 집합, 다단자",
+              "examples": [],
+              "originalMeaning": "[전기] 병렬, 집합, 다단자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/83e6de7bed584f89af009a8e5f312c26",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/83e6de7bed584f89af009a8e5f312c26",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "662a64a688d300bef1f1dc7c5967a949",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "4는 2의 배수이다",
+      "text": "Four is a <b>multiple</b> of 2."
+    }
+  ],
+  "isWordType": true
+}

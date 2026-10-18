@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "lag",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lǽɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람·일이> 처지다, 뒤떨어지다 ((behind)); 천천히 걷다, 꾸물거리다(linger)",
+              "examples": [
+                {
+                  "text": "<b>lag</b> behind schedule",
+                  "translatedText": "일정에 뒤처지다"
+                }
+              ],
+              "originalMeaning": "<사람·일이> 처지다, 뒤떨어지다 ((behind)); 천천히 걷다, 꾸물거리다(linger)"
+            },
+            {
+              "meaning": "<경기 등이> 침체하다",
+              "examples": [],
+              "originalMeaning": "<경기 등이> 침체하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "뒤처짐, 뒤처진 사람",
+              "examples": [],
+              "originalMeaning": "뒤처짐, 뒤처진 사람"
+            },
+            {
+              "meaning": "지연, 지연 정도",
+              "examples": [],
+              "originalMeaning": "지연, 지연 정도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/58cc0930720042d08207263525d3ec28",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/58cc0930720042d08207263525d3ec28",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lags"
+        },
+        {
+          "type": "과거형",
+          "value": "lagged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lagging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lagged"
+        }
+      ],
+      "aliasConjugation": "lags",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "28e4e32231361b6fc18c3d5422309c27",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "lag",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "통의 널판",
+              "examples": [],
+              "originalMeaning": "통의 널판"
+            },
+            {
+              "meaning": "(보일러 등의) 외피(外皮), 피복재(被覆材)",
+              "examples": [],
+              "originalMeaning": "(보일러 등의) 외피(外皮), 피복재(被覆材)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<보일러·파이프 등을> (보온재 등으로) 싸다 ((with))",
+              "examples": [],
+              "originalMeaning": "<보일러·파이프 등을> (보온재 등으로) 싸다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/41e51a1274744d909a9698ed61b42666",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/41e51a1274744d909a9698ed61b42666",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "lags",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a68f42a5f8fa0b5d17cdc6917fbc9c3c",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "석탄 생산이 활발치 못하다",
+      "text": "Coal production is lagging."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국은 아직 과학에서 유럽에 뒤져 있다",
+      "text": "Korea still lags behind Europe in science."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국은 아직 몇 가지 점에서 유럽에 뒤떨어진다",
+      "text": "Korea still lags behind Europe in some respects."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 마라톤에서 다른 주자보다 훨씬 뒤졌다",
+      "text": "He <b>lagged</b> far behind the other runners in the marathon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 항공 개발에 있어서 다른 나라보다 낙후되어 있다",
+      "text": "We <b>lag</b> behind other nations in the exploitation of the air."
+    }
+  ],
+  "isWordType": true
+}

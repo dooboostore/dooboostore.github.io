@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "pour",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pɔː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "따르다, 붓다, 쏟다, 흘리다",
+              "examples": [
+                {
+                  "text": "Please <b>pour</b> it (in) carefully.",
+                  "translatedText": "주의해서 따라 주십시오."
+                }
+              ],
+              "originalMeaning": "따르다, 붓다, 쏟다, 흘리다"
+            },
+            {
+              "meaning": "<빛·열 등을> 쏟다, 쪼이다, 방사(放射)하다",
+              "examples": [
+                {
+                  "text": "The sun pours forth its rays.",
+                  "translatedText": "태양은 광선을 방사한다."
+                }
+              ],
+              "originalMeaning": "<빛·열 등을> 쏟다, 쪼이다, 방사(放射)하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "흐르듯이 이동하다, 쇄도하다",
+              "examples": [
+                {
+                  "text": "The crowds poured into the warehouse.",
+                  "translatedText": "군중이 창고로 우우 몰려들었다."
+                }
+              ],
+              "originalMeaning": "흐르듯이 이동하다, 쇄도하다"
+            },
+            {
+              "meaning": "흘러나오다, 넘쳐흐르다(flow) ((forth, out, down)); 억수같이 퍼붓다",
+              "examples": [
+                {
+                  "text": "It never rains but it pours.",
+                  "translatedText": "[속담] 비가 오면 억수로 퍼붓는다; 불행[일]은 겹치는 법."
+                }
+              ],
+              "originalMeaning": "흘러나오다, 넘쳐흐르다(flow) ((forth, out, down)); 억수같이 퍼붓다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "주입, 따르는 일, 유출",
+              "examples": [],
+              "originalMeaning": "주입, 따르는 일, 유출"
+            },
+            {
+              "meaning": "[구어] 호우(豪雨), 다량의 흐름",
+              "examples": [
+                {
+                  "text": "a <b>pour</b> of invective",
+                  "translatedText": "쏟아져 내리는 비난"
+                }
+              ],
+              "originalMeaning": "[구어] 호우(豪雨), 다량의 흐름"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fd96c6b900814f72b3186b508db61bb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fd96c6b900814f72b3186b508db61bb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pours"
+        },
+        {
+          "type": "과거형",
+          "value": "poured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pouring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "poured"
+        }
+      ],
+      "aliasConjugation": "pours",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7c45a315b7880c57cb83127730422437",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "눈물이 비 오듯이 흐른다",
+      "text": "Tears <b>pour</b> down like rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 스스로 한 잔 따랐다.",
+      "text": "He poured himself a drink."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "열차가 군중을 쏟아 놓는다.",
+      "text": "The trains <b>pour</b> the crowds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 막 퍼붓듯이 왔다",
+      "text": "The rain poured down terribly[heavily]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 강은 만으로 흘러들어 간다",
+      "text": "The river pours[falls] into the bay."
+    }
+  ],
+  "isWordType": true
+}

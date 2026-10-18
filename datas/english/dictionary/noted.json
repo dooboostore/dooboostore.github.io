@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "noted",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│noʊtɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "유명한, 저명한 ((for, as)), (=famous)",
+              "examples": [
+                {
+                  "text": "a <b>noted</b> author",
+                  "translatedText": "유명한 저자"
+                }
+              ],
+              "originalMeaning": "유명한, 저명한 ((for, as)), (=<span class='related_word' lang='en' >famous</span>)"
+            },
+            {
+              "meaning": "주목할 만한, 주목되는",
+              "examples": [],
+              "originalMeaning": "주목할 만한, 주목되는"
+            },
+            {
+              "meaning": "악보가 붙은",
+              "examples": [],
+              "originalMeaning": "악보가 붙은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4119b579294a467f967913c8cc99a265",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4119b579294a467f967913c8cc99a265",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ab7e9c69108845635c13907ca92c871c",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "note",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "noʊt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(짧은) 기록; [종종 pl.] 각서, 수기, 비망록 ((for, of)); [보통 pl.] 원고, 초고, 문안",
+              "examples": [
+                {
+                  "text": "speak from notes",
+                  "translatedText": "메모[원고]를 보면서 말하다"
+                }
+              ],
+              "originalMeaning": "(짧은) 기록; [종종 pl.] 각서, 수기, 비망록 ((for, of)); [보통 pl.] 원고, 초고, 문안"
+            },
+            {
+              "meaning": "주(註), 주석, 주해 ((on))",
+              "examples": [
+                {
+                  "text": "a marginal <b>note</b>",
+                  "translatedText": "난외의 주, 방주"
+                }
+              ],
+              "originalMeaning": "주(註), 주석, 주해 ((on))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "적어 두다 ((down))",
+              "examples": [
+                {
+                  "text": "He <b>noted</b> down the main points of the lecture.",
+                  "translatedText": "그는 강연의 요점을 적어 두었다."
+                }
+              ],
+              "originalMeaning": "적어 두다 ((down))"
+            },
+            {
+              "meaning": "주의하다, 유념하다, 주목하다; 특별히 언급하다",
+              "examples": [
+                {
+                  "text": "Please <b>note</b> the statue.",
+                  "translatedText": "그 상을 보십시오."
+                }
+              ],
+              "originalMeaning": "주의하다, 유념하다, 주목하다; 특별히 언급하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9ef466851d514c3c815cd0c630be4493",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9ef466851d514c3c815cd0c630be4493",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "notes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1570056f72fb1088fa96f3355370918c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네 노트 좀 빌려 줘",
+      "text": "Lend me your lecture notes, will you?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 기지가 있기로 유명하다",
+      "text": "He is famous[<b>noted</b>] for his wit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것이 필수적인 것임을 유념하라.",
+      "text": "<b>Note</b> that this is essential."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 메모를 보스에게 전해 주시오.",
+      "text": "Pass this <b>note</b> (on) to the boss."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 장의 지폐가 들러붙어 있다.",
+      "text": "The two notes are stuck together."
+    }
+  ],
+  "isWordType": true
+}

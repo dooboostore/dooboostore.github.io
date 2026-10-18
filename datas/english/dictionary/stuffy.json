@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "stuffy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈstʌfi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<방 등이> 통풍(通風)이 잘 안 되는, 숨 막히는; 무더운",
+              "examples": [],
+              "originalMeaning": "<방 등이> 통풍(通風)이 잘 안 되는, 숨 막히는; 무더운"
+            },
+            {
+              "meaning": "<공기 등이> 탁한, 냄새나는",
+              "examples": [
+                {
+                  "text": "<b>stuffy</b> odor",
+                  "translatedText": "곰팡내"
+                }
+              ],
+              "originalMeaning": "<공기 등이> 탁한, 냄새나는"
+            },
+            {
+              "meaning": "<코가> 막힌, <머리가> 무거운",
+              "examples": [],
+              "originalMeaning": "<코가> 막힌, <머리가> 무거운"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7459402d5da74ad88d4f31d26e6a1355",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7459402d5da74ad88d4f31d26e6a1355",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "stuffier"
+        },
+        {
+          "type": "최상급",
+          "value": "stuffiest"
+        }
+      ],
+      "aliasConjugation": "stuffier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "cc248874b718a7939d84b3c070c0beaa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 숨이 턱턱 막힌다",
+      "text": "This room is very <b>stuffy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 코가 막혀 냄새를 맡을 수 없다.",
+      "text": "I cannot smell because I am <b>stuffy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저녁이 너무 기름져서 속이 좀 징건하다",
+      "text": "The dinner was so rich that I feel <b>stuffy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 답답하다",
+      "text": "It is <b>stuffy</b> in this room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 무덥다",
+      "text": "This room is hot and damp[<b>stuffy</b>]."
+    }
+  ],
+  "isWordType": true
+}

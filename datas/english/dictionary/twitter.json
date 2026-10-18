@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "twitter",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtwɪtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "지저귀다; 지저귀듯 지껄이다 ((on, away, about))",
+              "examples": [],
+              "originalMeaning": "지저귀다; 지저귀듯 지껄이다 ((on, away, about))"
+            },
+            {
+              "meaning": "흥분하여 떨리다",
+              "examples": [],
+              "originalMeaning": "흥분하여 떨리다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "지저귀듯이 지껄이다, 앞뒤로 조금씩 흔들다",
+              "examples": [],
+              "originalMeaning": "지저귀듯이 지껄이다, 앞뒤로 조금씩 흔들다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(새의) 지저귐",
+              "examples": [],
+              "originalMeaning": "(새의) 지저귐"
+            },
+            {
+              "meaning": "흥분, (흥분으로) 떨림",
+              "examples": [],
+              "originalMeaning": "흥분, (흥분으로) 떨림"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d65f0ffdab4438f956b972d5d2a81f7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d65f0ffdab4438f956b972d5d2a81f7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "twitters"
+        },
+        {
+          "type": "과거형",
+          "value": "twittered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "twittering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "twittered"
+        }
+      ],
+      "aliasConjugation": "twitters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2edeb321b674e766b1bce33ec7da9263",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자식은 어버이를 본받는다",
+      "text": "As the old birds sing, so the young ones <b>twitter</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새가 지저귄다",
+      "text": "A bird sings[chirps, twitters, warbles]."
+    }
+  ],
+  "isWordType": true
+}

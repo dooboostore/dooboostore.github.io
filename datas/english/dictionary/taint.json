@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "taint",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "teɪnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "더러움, 얼룩, 오점(stain)",
+              "examples": [],
+              "originalMeaning": "더러움, 얼룩, 오점(stain)"
+            },
+            {
+              "meaning": "[U] 감염, 병독; 부패, 타락; 폐해",
+              "examples": [
+                {
+                  "text": "moral <b>taint</b>",
+                  "translatedText": "도덕적 부패"
+                }
+              ],
+              "originalMeaning": "[U] 감염, 병독; 부패, 타락; 폐해"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "더럽히다, 오염시키다; 감염시키다",
+              "examples": [],
+              "originalMeaning": "더럽히다, 오염시키다; 감염시키다"
+            },
+            {
+              "meaning": "<마음 등을> 해치다, 해독을 끼치다 ((with)), 부패[타락]시키다 ((with))",
+              "examples": [],
+              "originalMeaning": "<마음 등을> 해치다, 해독을 끼치다 ((with)), 부패[타락]시키다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "더러워지다, 오염되다; 감염되다, 해독을 입다",
+              "examples": [],
+              "originalMeaning": "더러워지다, 오염되다; 감염되다, 해독을 입다"
+            },
+            {
+              "meaning": "썩다, 타락하다",
+              "examples": [],
+              "originalMeaning": "썩다, 타락하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d96aae975375413581909808930d9cde",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d96aae975375413581909808930d9cde",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "taints"
+        },
+        {
+          "type": "과거형",
+          "value": "tainted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tainting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tainted"
+        }
+      ],
+      "aliasConjugation": "taints",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b3aa0cd1cda576bad7e3402cfa3527be",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "'taint",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "téint"
+        }
+      ],
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "it isn’t[hasn’t]의 단축형",
+              "examples": [],
+              "originalMeaning": "it isn’t[hasn’t]의 단축형"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/75d9eb096a254b9cb14fead5ef6714b2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/75d9eb096a254b9cb14fead5ef6714b2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cacb70b29cf6f6c29850efa7b6ca6937",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무더운 날씨에는 고기가 썩기 쉽다",
+      "text": "Meat readily taints in close weather."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "넌 정신이 썩었구나",
+      "text": "Your mind is tainted."
+    }
+  ],
+  "isWordType": true
+}

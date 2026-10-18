@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "<b>hare</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "her"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "산토끼",
+              "examples": [
+                {
+                  "text": "a buck[doe] <b>hare</b>",
+                  "translatedText": "수[암]토끼"
+                }
+              ],
+              "originalMeaning": "산토끼"
+            },
+            {
+              "meaning": "(「토끼와 사냥개(<b>hare</b> and hounds)」 놀이의) 토끼역",
+              "examples": [],
+              "originalMeaning": "(「토끼와 사냥개(<b>hare</b> and hounds)」 놀이의) 토끼역"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "질주하다 ((off))",
+              "examples": [],
+              "originalMeaning": "질주하다 ((off))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ec03dd9ce094d0288b0679621fe5009",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ec03dd9ce094d0288b0679621fe5009",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hares"
+        },
+        {
+          "type": "복수형",
+          "value": "hares, hare"
+        },
+        {
+          "type": "과거형",
+          "value": "hared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "haring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hared"
+        }
+      ],
+      "aliasConjugation": "hares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "65454e70b009373af303cde2d7e25c52",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산토끼는 숲 속에 있다.",
+      "text": "You can find hares[Hares are found] in the wood."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개는 토끼 한 마리를 덤불 속에서 몰아냈다.",
+      "text": "The dog roused a <b>hare</b> from the bushes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "독수리가 토끼를 엄습했다",
+      "text": "The eagle swooped down on a <b>hare</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토끼가 일격에 즉사했다",
+      "text": "A blow at the <b>hare</b> proved instantly fatal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토끼가 숨는다.",
+      "text": "The <b>hare</b> hides itself."
+    }
+  ],
+  "isWordType": true
+}

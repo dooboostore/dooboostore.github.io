@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "solve",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sɑːlv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<문제 등을> 풀다, 해석하다; 설명[해답]하다; <어려운 일을> 해결[타개]하다; 결말짓다",
+              "examples": [
+                {
+                  "text": "Nobody has ever <b>solve</b> d the mystery.",
+                  "translatedText": "아무도 그 신비를 풀지 못했다."
+                }
+              ],
+              "originalMeaning": "<문제 등을> 풀다, 해석하다; 설명[해답]하다; <어려운 일을> 해결[타개]하다; 결말짓다"
+            },
+            {
+              "meaning": "용해하다(melt)",
+              "examples": [],
+              "originalMeaning": "용해하다(melt)"
+            },
+            {
+              "meaning": "<부채를> 지불하다, 갚다",
+              "examples": [],
+              "originalMeaning": "<부채를> 지불하다, 갚다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a3dae0c3ba544ed98d64c5594a541a11",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a3dae0c3ba544ed98d64c5594a541a11",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "solves"
+        },
+        {
+          "type": "과거형",
+          "value": "solved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "solving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "solved"
+        }
+      ],
+      "aliasConjugation": "solves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "592b942ee8f2f2dc3b23a46fc36b8baa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 시간이 해결해 줄 것이다",
+      "text": "Time will <b>solve</b> the matter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 문제는 누구나 풀 수 있다",
+      "text": "Anyone can <b>solve</b> such a problem."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무도 그 신비를 풀지 못했다.",
+      "text": "Nobody has ever solved the mystery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 해 보려고 해도 그것을 해결하지 못하겠어",
+      "text": "Try as I may, I can't <b>solve</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 문제는 좀 까다롭다",
+      "text": "This problem is a little too hard to <b>solve</b>."
+    }
+  ],
+  "isWordType": true
+}

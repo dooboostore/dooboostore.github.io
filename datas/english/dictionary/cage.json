@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "cage",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "keɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "새장, 우리, 옥사(獄舍), [구어] 포로 수용소",
+              "examples": [],
+              "originalMeaning": "새장, 우리, 옥사(獄舍), [구어] 포로 수용소"
+            },
+            {
+              "meaning": "새장 비슷한 것, (승강기의) 타는 곳, (은행의) 출납 창구, [미·속어] 고물 자동차, (기중기의) 운전실, (탄갱의 광주리 모양의) 승강대, (철근 등의) 골조",
+              "examples": [],
+              "originalMeaning": "새장 비슷한 것, (승강기의) 타는 곳, (은행의) 출납 창구, [미·속어] 고물 자동차, (기중기의) 운전실, (탄갱의 광주리 모양의) 승강대, (철근 등의) 골조"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "새장[우리]에 넣다[가두다]",
+              "examples": [
+                {
+                  "text": "a <b>cage</b> d bird",
+                  "translatedText": "새장에 갇힌 새"
+                }
+              ],
+              "originalMeaning": "새장[우리]에 넣다[가두다]"
+            },
+            {
+              "meaning": "(농구·하키 등에서) <공·퍽(puck)을> 슛하다",
+              "examples": [],
+              "originalMeaning": "(농구·하키 등에서) <공·퍽(puck)을> 슛하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/47df721c90454ec58eba331087432063",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/47df721c90454ec58eba331087432063",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cages"
+        },
+        {
+          "type": "과거형",
+          "value": "caged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "caging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "caged"
+        }
+      ],
+      "aliasConjugation": "cages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "858dd1ba5005ced07ea80acc33f774e3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 새장에 갇힌 새 격이다",
+      "text": "She can be compared to a caged bird."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 말하자면 새장에 든 새다",
+      "text": "She may be likened[compared] to a caged bird."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 새장을 열어 새를 놓아주었다",
+      "text": "She opened the <b>cage</b> and set the bird free."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새가 새장에서 달아났다",
+      "text": "The bird flew out of its <b>cage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "곰은  천천히 왔다갔다했다.",
+      "text": "The bear paced up and down (his <b>cage</b>)."
+    }
+  ],
+  "isWordType": true
+}

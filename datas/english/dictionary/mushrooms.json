@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "mushroom",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│mʌʃrʊm; │mʌʃruːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "버섯 ((주로 식용))",
+              "examples": [],
+              "originalMeaning": "버섯 ((주로 식용))"
+            },
+            {
+              "meaning": "급속하게 발달한 것",
+              "examples": [],
+              "originalMeaning": "급속하게 발달한 것"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "버섯(모양)의",
+              "examples": [],
+              "originalMeaning": "버섯(모양)의"
+            },
+            {
+              "meaning": "우후죽순격의, 급성장하는",
+              "examples": [],
+              "originalMeaning": "우후죽순격의, 급성장하는"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빨리 생기다[발전하다], 급격히 퍼지다",
+              "examples": [],
+              "originalMeaning": "빨리 생기다[발전하다], 급격히 퍼지다"
+            },
+            {
+              "meaning": "버섯을 따다",
+              "examples": [],
+              "originalMeaning": "버섯을 따다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d2072026232f42b19267801a5ce61dc9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d2072026232f42b19267801a5ce61dc9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mushrooms"
+        },
+        {
+          "type": "과거형",
+          "value": "mushroomed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mushrooming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mushroomed"
+        }
+      ],
+      "aliasConjugation": "mushrooms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1d73104faefdc48096aabe398d6f2088",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새 집들이 속속 들어선다",
+      "text": "New houses spring up like <b>mushrooms</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 인기도 한때에 지나지 않았다",
+      "text": "He enjoyed a mere <b>mushroom</b>[transient] popularity."
+    }
+  ],
+  "isWordType": true
+}

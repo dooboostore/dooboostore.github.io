@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "vibrate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "vaɪ│breɪt ; 美 주로 │vaɪbreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "진동하다, (시계추처럼) 흔들리다",
+              "examples": [],
+              "originalMeaning": "진동하다, (시계추처럼) 흔들리다"
+            },
+            {
+              "meaning": "<목소리가> 떨리다; <음향이> 반향하다, 울려퍼지다 ((with))",
+              "examples": [
+                {
+                  "text": "His voice <b>vibrate</b> d with rage.",
+                  "translatedText": "노여움으로 그의 목소리가 떨렸다."
+                }
+              ],
+              "originalMeaning": "<목소리가> 떨리다; <음향이> 반향하다, 울려퍼지다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "진동시키다, 흔들다",
+              "examples": [],
+              "originalMeaning": "진동시키다, 흔들다"
+            },
+            {
+              "meaning": "<시간·주기 등을> 진동으로 표시하다",
+              "examples": [
+                {
+                  "text": "A pendulum <b>vibrate</b> s seconds.",
+                  "translatedText": "진자는 흔들리면서 초를 나타낸다."
+                }
+              ],
+              "originalMeaning": "<시간·주기 등을> 진동으로 표시하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c8d2ec202b194f148e1a3b2a1556c12f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c8d2ec202b194f148e1a3b2a1556c12f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "vibrates"
+        },
+        {
+          "type": "과거형",
+          "value": "vibrated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "vibrating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "vibrated"
+        }
+      ],
+      "aliasConjugation": "vibrates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1b42ace4cad58f6b7c3f66cc6ba87661",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "진자는 흔들리면서 초를 나타낸다.",
+      "text": "A pendulum vibrates seconds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "노여움으로 그의 목소리가 떨렸다.",
+      "text": "His voice vibrated with rage."
+    }
+  ],
+  "isWordType": true
+}

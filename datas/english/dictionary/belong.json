@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "belong",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɪ│lɔːŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…에) 속하다, (…의) 소유물이다 ((to))",
+              "examples": [
+                {
+                  "text": "The blue coat <b>belong</b> s to her.",
+                  "translatedText": "푸른 코트는 그녀의 것이다."
+                }
+              ],
+              "originalMeaning": "(…에) 속하다, (…의) 소유물이다 ((to))"
+            },
+            {
+              "meaning": "(…의) 일부를 이루다",
+              "examples": [
+                {
+                  "text": "The spoon <b>belong</b> s to that set.",
+                  "translatedText": "그 스푼은 저 세트의 일부이다."
+                }
+              ],
+              "originalMeaning": "(…의) 일부를 이루다"
+            },
+            {
+              "meaning": "(…에) 소속하다",
+              "examples": [
+                {
+                  "text": "He <b>belong</b> s to the Boy Scouts.",
+                  "translatedText": "그는 보이 스카우트이다."
+                }
+              ],
+              "originalMeaning": "(…에) 소속하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ec3224e6009848659887ade9c9d0cc39",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ec3224e6009848659887ade9c9d0cc39",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "belongs"
+        },
+        {
+          "type": "과거형",
+          "value": "belonged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "belonging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "belonged"
+        }
+      ],
+      "aliasConjugation": "belongs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "257774960cfbcbb72545eb842d9672b3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 같은 팀 소속이다.",
+      "text": "We <b>belong</b> to one team."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 토지는 나의 소유이다",
+      "text": "This land belongs to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나와 같은 교회에 다닌다",
+      "text": "He belongs to our church."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "푸른 코트는 그녀의 것이다.",
+      "text": "The blue coat belongs to her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 스푼은 저 세트의 일부이다.",
+      "text": "The spoon belongs to that set."
+    }
+  ],
+  "isWordType": true
+}

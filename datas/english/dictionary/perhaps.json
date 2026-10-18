@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "perhaps",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pər│hæps"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "아마, 어쩌면, 혹시",
+              "examples": [
+                {
+                  "text": "Perhapsthat's true.",
+                  "translatedText": "어쩌면 그것은 사실일지도 모른다."
+                }
+              ],
+              "originalMeaning": "아마, 어쩌면, 혹시"
+            },
+            {
+              "meaning": "[정중한 부탁·제의] 가능하시다면, 혹시 가능하면",
+              "examples": [
+                {
+                  "text": "<b>Perhaps</b> you would be good enough to write to me.",
+                  "translatedText": "혹시 가능하다면 저에게 편지 주십시오."
+                }
+              ],
+              "originalMeaning": "[정중한 부탁·제의] 가능하시다면, 혹시 가능하면"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "가정, 우연(한 일), 불확실한 일, 추측",
+              "examples": [],
+              "originalMeaning": "가정, 우연(한 일), 불확실한 일, 추측"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5cf2d83b067d4c42b32529a00c40b11b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5cf2d83b067d4c42b32529a00c40b11b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "48b501d20edd6b2719439bfee7b697c2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수면 부족 때문인지 어질어질하다",
+      "text": "My head swims, <b>perhaps</b> from lack of sleep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "혹시 가능하다면 저에게 편지 주십시오.",
+      "text": "<b>Perhaps</b> you would be good enough to write to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사건은 오래도록 우리의 기억에 남을 것이다",
+      "text": "<b>Perhaps</b> the event will linger long in our memory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어쩌면 그가 옳을지도 모른다",
+      "text": "He is <b>perhaps</b>[probably] right. or He may be right. or Maybe he is right."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 갈지도 모른다",
+      "text": "<b>Perhaps</b> he will go."
+    }
+  ],
+  "isWordType": true
+}

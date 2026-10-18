@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "entry": "<b>nucleus</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nuːkliəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "핵, 심(心); 핵심, 중축(中軸); 토대, 기점(基點); 중심 부분",
+              "examples": [],
+              "originalMeaning": "핵, 심(心); 핵심, 중축(中軸); 토대, 기점(基點); 중심 부분"
+            },
+            {
+              "meaning": "[생물] 세포핵, [해부] 신경핵, [물리] 원자핵, [천문] 혜성의 핵",
+              "examples": [],
+              "originalMeaning": "[생물] 세포핵, [해부] 신경핵, [물리] 원자핵, [천문] 혜성의 핵"
+            },
+            {
+              "meaning": "응결[동결] 핵",
+              "examples": [],
+              "originalMeaning": "응결[동결] 핵"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39f592eeb08d42059069dd8aadd2a79b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39f592eeb08d42059069dd8aadd2a79b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "nuclei, nucleuses"
+        }
+      ],
+      "aliasConjugation": "nuclei, nucleuses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "8a59cf71dd6fd85d718096943b27eca9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세포핵은 유전자 정보를 간직하고 있다",
+      "text": "The <b>nucleus</b> carries genetic information."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국에서는 가족이 사회의 중심이다",
+      "text": "The family is the <b>nucleus</b> of the community in Korea."
+    }
+  ],
+  "isWordType": true
+}

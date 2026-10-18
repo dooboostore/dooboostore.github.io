@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "<b>faintly</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "féintli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "희미하게, 어렴풋이; 힘없이, 가냘프게; 소심하게",
+              "examples": [],
+              "originalMeaning": "희미하게, 어렴풋이; 힘없이, 가냘프게; 소심하게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50392ca6a8d844ba8799d6b398881e12",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50392ca6a8d844ba8799d6b398881e12",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "770471c5e6d4444447955a1f22ffd909",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>faint</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "feɪnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<색·소리·빛 등이> 희미한, 가냘픈, 약한, 엷은",
+              "examples": [
+                {
+                  "text": "a <b>faint</b> light",
+                  "translatedText": "희미한 빛"
+                }
+              ],
+              "originalMeaning": "<색·소리·빛 등이> 희미한, 가냘픈, 약한, 엷은"
+            },
+            {
+              "meaning": "<생각·기억 등이> 어렴풋한, <희망 등이> 실날 같은",
+              "examples": [
+                {
+                  "text": "a <b>faint</b> hope[chance]",
+                  "translatedText": "실날 같은 희망[가망]"
+                }
+              ],
+              "originalMeaning": "<생각·기억 등이> 어렴풋한, <희망 등이> 실날 같은"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "졸도하다, 혼절하다, 기절하다(swoon) ((away))",
+              "examples": [
+                {
+                  "text": "I fainted from the heat.",
+                  "translatedText": "나는 더위 때문에 기절했다."
+                }
+              ],
+              "originalMeaning": "졸도하다, 혼절하다, 기절하다(swoon) ((away))"
+            },
+            {
+              "meaning": "희미해지다, 약해지다",
+              "examples": [],
+              "originalMeaning": "희미해지다, 약해지다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 a ~] 기절; 졸도, 실신",
+              "examples": [
+                {
+                  "text": "in a dead <b>faint</b>",
+                  "translatedText": "기절하여"
+                }
+              ],
+              "originalMeaning": "[보통 a ~] 기절; 졸도, 실신"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5c6b7a6c56b743a0b2acbe33a2102da2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5c6b7a6c56b743a0b2acbe33a2102da2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "fainter",
+      "aliasConjugationPos": "비교급",
+      "gdid": "c323cb12bca9ab9aa5c21dba67437510",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전혀 짐작이 가지 않는다.",
+      "text": "I haven't the faintest idea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 더위 때문에 기절했다.",
+      "text": "I fainted from the heat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "맥이 가냘프게 뛰고 있다",
+      "text": "The pulse is beating <b>faintly</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 가닥 희망도 없다.",
+      "text": "There is not the faintest hope."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그때의 일은 막연히 기억하고 있을 뿐이다",
+      "text": "I have but a <b>faint</b> remembrance of those days. or Those days dimly live in my memory."
+    }
+  ],
+  "isWordType": true
+}

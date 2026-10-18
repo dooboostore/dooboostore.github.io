@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "entry": "<b>tangle</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tǽŋɡl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "얽히게 하다, 엉키게 하다",
+              "examples": [
+                {
+                  "text": "The hedge is <b>tangle</b> d with morning glories.",
+                  "translatedText": "그 울타리에는 나팔꽃이 휘감겨 있다."
+                }
+              ],
+              "originalMeaning": "얽히게 하다, 엉키게 하다"
+            },
+            {
+              "meaning": "분규를 일으키다, 혼란시키다(complicate)",
+              "examples": [],
+              "originalMeaning": "분규를 일으키다, 혼란시키다(complicate)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "엉키다, 얽히다; 분규가 일어나다, 혼란해지다",
+              "examples": [],
+              "originalMeaning": "엉키다, 얽히다; 분규가 일어나다, 혼란해지다"
+            },
+            {
+              "meaning": "싸우다, 말다툼하다 ((with))",
+              "examples": [],
+              "originalMeaning": "싸우다, 말다툼하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(머리카락 등의) 얽힘, 엉킴",
+              "examples": [],
+              "originalMeaning": "(머리카락 등의) 얽힘, 엉킴"
+            },
+            {
+              "meaning": "혼란, 분규",
+              "examples": [],
+              "originalMeaning": "혼란, 분규"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/775851b13938483a97c6b719da1626b3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/775851b13938483a97c6b719da1626b3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tangles"
+        },
+        {
+          "type": "과거형",
+          "value": "tangled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tangling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tangled"
+        }
+      ],
+      "aliasConjugation": "tangles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "049e1a647e92a1ccdef6ab8d48981eb5",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>tangle</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "다시마류(類)",
+              "examples": [],
+              "originalMeaning": "다시마류(類)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2a8f9547bcc448b588ef57cdcd18aff0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2a8f9547bcc448b588ef57cdcd18aff0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "tangles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dafd7af17f6f75e989f8ef40d9f8631c",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실이 솔솔 잘 풀린다",
+      "text": "The tangled thread straightens out nicely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실이 옭히어 풀어지지 않는다",
+      "text": "Thread is so tangled up that it is impossible to straighten it out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 다리가 엉켰다.",
+      "text": "Her legs got tangled."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실이 엉클어졌다",
+      "text": "The thread is tangled."
+    }
+  ],
+  "isWordType": true
+}

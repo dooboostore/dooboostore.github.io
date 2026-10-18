@@ -1,0 +1,129 @@
+{
+  "items": [
+    {
+      "entry": "mellow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│meloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<과실이> 익은, (말랑말랑하고) 달콤한, 부드러운 (=ripe)",
+              "examples": [
+                {
+                  "text": "a <b>mellow</b> peach",
+                  "translatedText": "물이 많고 달콤한 복숭아"
+                }
+              ],
+              "originalMeaning": "<과실이> 익은, (말랑말랑하고) 달콤한, 부드러운 (=<span class='related_word' lang='en' >ripe</span>)"
+            },
+            {
+              "meaning": "<술이> 향기로운, 감칠맛 나는",
+              "examples": [
+                {
+                  "text": "<b>mellow</b> wine",
+                  "translatedText": "익어서 향긋한 포도주"
+                }
+              ],
+              "originalMeaning": "<술이> 향기로운, 감칠맛 나는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "익히다",
+              "examples": [],
+              "originalMeaning": "익히다"
+            },
+            {
+              "meaning": "원숙하게 하다",
+              "examples": [],
+              "originalMeaning": "원숙하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "익다",
+              "examples": [],
+              "originalMeaning": "익다"
+            },
+            {
+              "meaning": "원숙해지다",
+              "examples": [],
+              "originalMeaning": "원숙해지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3a4a9ca2a8ce4064bdd9d4611a0627e5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3a4a9ca2a8ce4064bdd9d4611a0627e5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "mellower"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mellows"
+        },
+        {
+          "type": "최상급",
+          "value": "mellowest"
+        },
+        {
+          "type": "과거형",
+          "value": "mellowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mellowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mellowed"
+        }
+      ],
+      "aliasConjugation": "mellower",
+      "aliasConjugationPos": "비교급",
+      "gdid": "f2065c596a05be989007c47826cb354a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나이를 먹으면 인격이 원숙해진다",
+      "text": "One's character mellows with age."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나이가 들어 원숙해졌다",
+      "text": "The years have[Time has] mellowed him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자가 있으면 언제나 화기애애한 기운이 감돈다",
+      "text": "The atmosphere mellows whenever she's around."
+    }
+  ],
+  "isWordType": true
+}

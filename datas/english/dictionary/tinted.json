@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "tint",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tɪnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "엷은 빛깔 (=color)",
+              "examples": [],
+              "originalMeaning": "엷은 빛깔 (=<span class='related_word' lang='en' >color</span>)"
+            },
+            {
+              "meaning": "색채의 배합, 색조(色調); 색의 농담",
+              "examples": [
+                {
+                  "text": "green of[with] a blue <b>tint</b>",
+                  "translatedText": "푸른빛 도는 초록빛"
+                }
+              ],
+              "originalMeaning": "색채의 배합, 색조(色調); 색의 농담"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 (연하게) 색칠하다, [판화] 음영(陰影)을 붙이다",
+              "examples": [
+                {
+                  "text": "<b>tinted</b> spectacles",
+                  "translatedText": "색안경"
+                }
+              ],
+              "originalMeaning": "…에 (연하게) 색칠하다, [판화] 음영(陰影)을 붙이다"
+            },
+            {
+              "meaning": "<머리를> 염색하다",
+              "examples": [],
+              "originalMeaning": "<머리를> 염색하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b00b6432496542ea9c78b311703c5564",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b00b6432496542ea9c78b311703c5564",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tints"
+        },
+        {
+          "type": "과거형",
+          "value": "tinted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tinting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tinted"
+        }
+      ],
+      "aliasConjugation": "tints",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2bf2b6c0a2a5db1b3ff15187ed51e15f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산들은 온통 단풍이 들어서 마치 불바다와 같다",
+      "text": "The hills are ablaze with autumnal tints."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "설악산은 가을 단풍으로 유명하다",
+      "text": "Mt. Seorak is noted for the glorious tints of its autumn foliage."
+    }
+  ],
+  "isWordType": true
+}

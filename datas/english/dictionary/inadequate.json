@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "inadequate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈædɪkwət"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "부적당한, 부적절한 ((to, for))",
+              "examples": [
+                {
+                  "text": "He's <b>inadequate</b> for the job. = He's <b>inadequate</b> to do the job.",
+                  "translatedText": "그는 그 일에는 부적당하다."
+                }
+              ],
+              "originalMeaning": "부적당한, 부적절한 ((to, for))"
+            },
+            {
+              "meaning": "불충분한 ((for)), 무력한",
+              "examples": [
+                {
+                  "text": "<b>inadequate</b> equipment",
+                  "translatedText": "불충분한 설비"
+                }
+              ],
+              "originalMeaning": "불충분한 ((for)), 무력한"
+            },
+            {
+              "meaning": "<사람이> (정신적·사회적으로) 적응성이 없는[부족한], 부적격의",
+              "examples": [],
+              "originalMeaning": "<사람이> (정신적·사회적으로) 적응성이 없는[부족한], 부적격의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/82c2f5197b99470e878e714a9a8e5372",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/82c2f5197b99470e878e714a9a8e5372",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "bbdfcb74f02f448aaa0c323e35747f53",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 일에는 부적당하다.",
+      "text": "He’s <b>inadequate</b> for the job.=He’s <b>inadequate</b> to do the job."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방의 크기는 우리가 큰 모임을 하기에는 충분하지 않다",
+      "text": "The room is <b>inadequate</b> for our large group."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 생산고로는 도저히 수요를 감당할 수 없다.",
+      "text": "The production is wholly <b>inadequate</b> to meet the demand."
+    }
+  ],
+  "isWordType": true
+}

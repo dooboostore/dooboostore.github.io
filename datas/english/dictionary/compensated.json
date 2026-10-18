@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>compensate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːmpenseɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "보상하다, 배상하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>compensate</b> a person for loss",
+                  "translatedText": "…에게 손실을 배상하다"
+                }
+              ],
+              "originalMeaning": "보상하다, 배상하다 ((for))"
+            },
+            {
+              "meaning": "보정(補整)하다",
+              "examples": [],
+              "originalMeaning": "보정(補整)하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<행동·사정 등이> 보충하다, 보상을 하다, 메우다(make amends) ((for))",
+              "examples": [
+                {
+                  "text": "Industry sometimes compensates for lack of ability.",
+                  "translatedText": "근면은 능력의 부족을 보충해 줄 때가 있다."
+                }
+              ],
+              "originalMeaning": "<행동·사정 등이> 보충하다, 보상을 하다, 메우다(make amends) ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/23eab484ca344908aa28afe99ac1b84c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/23eab484ca344908aa28afe99ac1b84c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "compensates"
+        },
+        {
+          "type": "과거형",
+          "value": "compensated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "compensating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "compensated"
+        }
+      ],
+      "aliasConjugation": "compensates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9356a97862459e4c1015021a0bf71506",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신이 그의 손실을 변상해야 합니다",
+      "text": "You have to <b>compensate</b> him for his loss."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 내 손해를 보상하기로 약속했다",
+      "text": "He promised to <b>compensate</b> me for my loss"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "회사는 그녀의 초과 근무에 대해 보수를 지불했다.",
+      "text": "The company <b>compensated</b> her for extra work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "근면은 능력의 부족을 보충해 줄 때가 있다.",
+      "text": "Industry sometimes compensates for lack of ability."
+    }
+  ],
+  "isWordType": true
+}

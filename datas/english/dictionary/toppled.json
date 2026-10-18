@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "topple",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈtɑːpl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "넘어질듯 근들거리다, 앞으로 비틀거리다, 넘어지다 ((down, over))",
+              "examples": [
+                {
+                  "text": "<b>topple</b> to the ground",
+                  "translatedText": "땅에 넘어지다"
+                }
+              ],
+              "originalMeaning": "넘어질듯 근들거리다, 앞으로 비틀거리다, 넘어지다 ((down, over))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "근들거리게 하다, 넘어뜨리다; (권좌 등에서) 끌어내리다, 몰락시키다 ((from))",
+              "examples": [
+                {
+                  "text": "The coup d'état <b>toppled</b> the dictator from his position.",
+                  "translatedText": "쿠데타로 독재자는 자리에서 쫓겨났다."
+                }
+              ],
+              "originalMeaning": "근들거리게 하다, 넘어뜨리다; (권좌 등에서) 끌어내리다, 몰락시키다 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de67ab23d3674631a7305ac8cd50b794",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de67ab23d3674631a7305ac8cd50b794",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "topples"
+        },
+        {
+          "type": "과거형",
+          "value": "toppled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "toppling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "toppled"
+        }
+      ],
+      "aliasConjugation": "topples",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "de79a9c5386704be2be150f1844691ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "독재가 데모대에 의해 넘어졌다",
+      "text": "The dictatorship was <b>toppled</b> over by the demontrators."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "쿠데타로 독재자는 자리에서 쫓겨났다.",
+      "text": "The coup d’tat <b>toppled</b> the dictator from his position."
+    }
+  ],
+  "isWordType": true
+}

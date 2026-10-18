@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "say",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "seɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…이라고) 말하다, 이야기하다; 말로 나타내다; (의견으로서 …이라고) 말하다, 주장하다, <견해 등을> 진술하다, 언명하다",
+              "examples": [
+                {
+                  "text": "I have nothing more to <b>say</b> (to you).",
+                  "translatedText": "더 이상 (자네한테) 할 말은 없다."
+                }
+              ],
+              "originalMeaning": "(…이라고) 말하다, 이야기하다; 말로 나타내다; (의견으로서 …이라고) 말하다, 주장하다, <견해 등을> 진술하다, 언명하다"
+            },
+            {
+              "meaning": "<신문·게시·편지 등에> …라고 쓰여 있다, <책 등에> 나와 있다",
+              "examples": [
+                {
+                  "text": "The notice <b>say</b> s, ‘No school on Tuesday.'",
+                  "translatedText": "게시에 ‘화요일은 휴교’라고 나와 있다."
+                }
+              ],
+              "originalMeaning": "<신문·게시·편지 등에> …라고 쓰여 있다, <책 등에> 나와 있다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "말하다, 언급하다",
+              "examples": [
+                {
+                  "text": "It is just as you <b>say</b>.",
+                  "translatedText": "정말 네가 말하는 그대로다."
+                }
+              ],
+              "originalMeaning": "말하다, 언급하다"
+            },
+            {
+              "meaning": "[부정 또는 의문문으로] 의견을 말하다",
+              "examples": [
+                {
+                  "text": "I cannot <b>say</b>.",
+                  "translatedText": "나는 뭐라고 말할 수가 없다, 모르겠다."
+                }
+              ],
+              "originalMeaning": "[부정 또는 의문문으로] 의견을 말하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[one’s ~] 말하고 싶은 것, 말(해야)할 것, 할 말",
+              "examples": [],
+              "originalMeaning": "[one’s ~] 말하고 싶은 것, 말(해야)할 것, 할 말"
+            },
+            {
+              "meaning": "[때로 a ~] 발언권, 발언할 차례[기회] ((in))",
+              "examples": [],
+              "originalMeaning": "[때로 a ~] 발언권, 발언할 차례[기회] ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e1e2350a3b5449bbb72716dbeeed094d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e1e2350a3b5449bbb72716dbeeed094d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "says"
+        },
+        {
+          "type": "과거형",
+          "value": "said"
+        },
+        {
+          "type": "현재 분사",
+          "value": "saying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "said"
+        }
+      ],
+      "aliasConjugation": "says",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8d071c89d05167fe1d896a560594592a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자네 말은 도무지 요령부득이야",
+      "text": "I can't catch[see] your point at all. or I can make neither head nor tail of what you <b>say</b>. or It is hard for me to catch your point."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너 말 다 했것다",
+      "text": "How dare you <b>say</b> such a thing to me? or You are a fine one to talk to me like that!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게도 말할 수 있다.",
+      "text": "You might <b>say</b> that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 본인이 그렇게 말했다",
+      "text": "He said so himself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "더 이상은 말할 수 없다.",
+      "text": "More cannot be said."
+    }
+  ],
+  "isWordType": true
+}

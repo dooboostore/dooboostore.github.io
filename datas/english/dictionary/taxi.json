@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "taxi",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtæksi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "택시(taxicab)",
+              "examples": [
+                {
+                  "text": "take a <b>taxi</b>",
+                  "translatedText": "택시를 타다"
+                }
+              ],
+              "originalMeaning": "택시(taxicab)"
+            },
+            {
+              "meaning": "(택시처럼) 전세 영업하는 배[비행기]",
+              "examples": [],
+              "originalMeaning": "(택시처럼) 전세 영업하는 배[비행기]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "택시로 가다",
+              "examples": [],
+              "originalMeaning": "택시로 가다"
+            },
+            {
+              "meaning": "<비행기가> 지상[수면]에서 자력으로 이동하다",
+              "examples": [],
+              "originalMeaning": "<비행기가> 지상[수면]에서 자력으로 이동하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "택시로 나르다[보내다]",
+              "examples": [],
+              "originalMeaning": "택시로 나르다[보내다]"
+            },
+            {
+              "meaning": "<비행기를> 지상[수면]에서 이동케 하다",
+              "examples": [],
+              "originalMeaning": "<비행기를> 지상[수면]에서 이동케 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bce48301cdfe4c208e44500f2a519b2f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bce48301cdfe4c208e44500f2a519b2f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "taxies"
+        },
+        {
+          "type": "복수형",
+          "value": "taxis, taxies"
+        },
+        {
+          "type": "과거형",
+          "value": "taxied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "taxiing, taxying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "taxied"
+        }
+      ],
+      "aliasConjugation": "taxies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "af5f4071683149d6b779adefe424b7ff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "택시로 가다니 너도 참 어리석구나.",
+      "text": "You are very silly to go by <b>taxi</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 택시는 고사하고 버스도 안 탄다",
+      "text": "He does not take a bus, let alone a <b>taxi</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다행히 빈 택시가 그때 왔다.",
+      "text": "Luckily an empty <b>taxi</b> came along just then."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "버스와 택시가 모퉁이에서 충돌했다",
+      "text": "A bus collided with a <b>taxi</b> at the corner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 그곳에 제시간에 도착하려고 택시를 탔다",
+      "text": "We took a <b>taxi</b> to get there in time."
+    }
+  ],
+  "isWordType": true
+}

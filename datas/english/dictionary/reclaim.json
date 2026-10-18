@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "entry": "<b>reclaim</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈkleɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "교정(矯正)[개선]하다(reform), 개심시키다 ((from)); <미개인을> 개화[교화]하다(civilize)",
+              "examples": [
+                {
+                  "text": "<b>reclaim</b> a person from a life of sin",
+                  "translatedText": "…을 죄악의 생활에서 개심케 하다"
+                }
+              ],
+              "originalMeaning": "교정(矯正)[개선]하다(reform), 개심시키다 ((from)); <미개인을> 개화[교화]하다(civilize)"
+            },
+            {
+              "meaning": "개간하다; <땅을> 메우다, 간척하다 (=recover)",
+              "examples": [
+                {
+                  "text": "<b>reclaim</b> ed land",
+                  "translatedText": "매립지"
+                }
+              ],
+              "originalMeaning": "개간하다; <땅을> 메우다, 간척하다 (=<span class='related_word' lang='en' >recover</span>)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "교정, 교화",
+              "examples": [
+                {
+                  "text": "past[beyond] <b>reclaim</b>",
+                  "translatedText": "개심[교정, 교화]의 가망이 없는"
+                }
+              ],
+              "originalMeaning": "교정, 교화"
+            },
+            {
+              "meaning": "개간, 개척, 매립",
+              "examples": [],
+              "originalMeaning": "개간, 개척, 매립"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de9fc7dcd6994ae495c955078f56b1cf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de9fc7dcd6994ae495c955078f56b1cf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reclaims"
+        },
+        {
+          "type": "과거형",
+          "value": "reclaimed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reclaiming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reclaimed"
+        }
+      ],
+      "aliasConjugation": "reclaims",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "452cb6af70309ffeb1fa415dbd4e52c2",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-claim",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:kléim"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<권리·소유물 등의> 반환을 요구하다; 되찾다, 회수하다",
+              "examples": [],
+              "originalMeaning": "<권리·소유물 등의> 반환을 요구하다; 되찾다, 회수하다"
+            },
+            {
+              "meaning": "다시 요구하다",
+              "examples": [],
+              "originalMeaning": "다시 요구하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f25e4887a4d345a68de6d504506ddf5d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f25e4887a4d345a68de6d504506ddf5d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "95f822838e7ebc6b6949a1cef866b479",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제아는 개심할 가망이[여지가] 없는 것 같았다",
+      "text": "The problem child seemed to be past[beyond] <b>reclaim</b>."
+    }
+  ],
+  "isWordType": true
+}

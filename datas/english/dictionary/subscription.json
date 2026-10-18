@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "subscription",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səbˈskrɪpʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기부 (신청), 기부금",
+              "examples": [
+                {
+                  "text": "make[take up] a <b>subscription</b>",
+                  "translatedText": "[미] 기부금을 거두다"
+                }
+              ],
+              "originalMeaning": "기부 (신청), 기부금"
+            },
+            {
+              "meaning": "출자(금), 기금(fund)",
+              "examples": [],
+              "originalMeaning": "출자(금), 기금(fund)"
+            },
+            {
+              "meaning": "(정기 간행물의) 예약 구독(의 유효 기간), 예약(대)금 ((to))",
+              "examples": [
+                {
+                  "text": "by <b>subscription</b>",
+                  "translatedText": "예약으로"
+                }
+              ],
+              "originalMeaning": "(정기 간행물의) 예약 구독(의 유효 기간), 예약(대)금 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4f64bed218a049878614b9474fb108eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4f64bed218a049878614b9474fb108eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f3a8189d2167f7029c9d0b361d2e4ab9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회비는 당일 납부할 것",
+      "text": "The <b>subscription</b> is to be paid at the meeting."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 학교는 기부금에 의해 유지되고 있다",
+      "text": "The school is entirely supported by subscriptions."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예약 끝마감은 이달 말까지이다",
+      "text": "The <b>subscription</b> list closes in the end of this month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기부금이 잘 걷히지 않았다",
+      "text": "The collection of the subscriptions was unsuccessful[far from satisfactory]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기부금이 전부 모였다",
+      "text": "All the subscriptions have been collected."
+    }
+  ],
+  "isWordType": true
+}

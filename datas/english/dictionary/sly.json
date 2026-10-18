@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "entry": "<b>sly</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "slaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "교활한, 음흉한",
+              "examples": [
+                {
+                  "text": "a <b>sly</b> dog",
+                  "translatedText": "교활한 녀석"
+                }
+              ],
+              "originalMeaning": "교활한, 음흉한"
+            },
+            {
+              "meaning": "남의 눈을 속이는, 은밀한, 비밀의",
+              "examples": [],
+              "originalMeaning": "남의 눈을 속이는, 은밀한, 비밀의"
+            },
+            {
+              "meaning": "익살맞은, 장난꾸러기의",
+              "examples": [
+                {
+                  "text": "<b>sly</b> humor",
+                  "translatedText": "익살맞은 유머"
+                }
+              ],
+              "originalMeaning": "익살맞은, 장난꾸러기의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fe08d39dc85f4346b3d47a606f5e0d3f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fe08d39dc85f4346b3d47a606f5e0d3f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "slyer"
+        },
+        {
+          "type": "최상급",
+          "value": "slyest"
+        }
+      ],
+      "aliasConjugation": "slyer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "1f791ea9fdab030e9fe0a0f45a8588f4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 여우같이 교활하다",
+      "text": "She is <b>sly</b> as a fox."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 정말 얌체야!",
+      "text": "He's really crafty[<b>sly</b>]!"
+    }
+  ],
+  "isWordType": true
+}

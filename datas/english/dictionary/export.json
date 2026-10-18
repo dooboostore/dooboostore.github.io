@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "export",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "수출하다(opp. import) ((to)), <사상 등을> 밖으로 전하다",
+              "examples": [
+                {
+                  "text": "<b>export</b> cars to foreign countries",
+                  "translatedText": "자동차를 외국에 수출하다"
+                }
+              ],
+              "originalMeaning": "수출하다(opp. import) ((to)), <사상 등을> 밖으로 전하다"
+            },
+            {
+              "meaning": "<정보를> 익스포트하다, (다른 시스템용으로) 이출(移出)하다",
+              "examples": [],
+              "originalMeaning": "<정보를> 익스포트하다, (다른 시스템용으로) 이출(移出)하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수출(exportation)",
+              "examples": [],
+              "originalMeaning": "수출(exportation)"
+            },
+            {
+              "meaning": "수출품, [보통 pl.] 수출액",
+              "examples": [],
+              "originalMeaning": "수출품, [보통 pl.] 수출액"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "수출의[에 관한]",
+              "examples": [
+                {
+                  "text": "<b>export</b> trade[business]",
+                  "translatedText": "수출 무역[업]"
+                }
+              ],
+              "originalMeaning": "수출의[에 관한]"
+            },
+            {
+              "meaning": "수출용의",
+              "examples": [],
+              "originalMeaning": "수출용의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f3df62d7748a41bebdf4f1344b04852a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f3df62d7748a41bebdf4f1344b04852a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exports"
+        },
+        {
+          "type": "과거형",
+          "value": "exported"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exporting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exported"
+        }
+      ],
+      "aliasConjugation": "exports",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "359ceb122b054fcd793827757d81549d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 나라의 수출은 증가하고 있다",
+      "text": "Our exports are increasing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 상품은 수출에 충당된다.",
+      "text": "These articles are ticketed for <b>export</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 수출부를 담당하고 있다",
+      "text": "He is in charge of the <b>Export</b> Department."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년 수출액은 작년을 하회한다",
+      "text": "This year's exports fall short of last year's."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수출이 수입을 2백만 불 초과했다",
+      "text": "Exports exceeded imports by 2 million dollars."
+    }
+  ],
+  "isWordType": true
+}

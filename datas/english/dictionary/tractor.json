@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "tractor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtræktə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "트랙터, 견인(자동)차",
+              "examples": [
+                {
+                  "text": "a farm <b>tractor</b>",
+                  "translatedText": "경작용 트랙터"
+                }
+              ],
+              "originalMeaning": "트랙터, 견인(자동)차"
+            },
+            {
+              "meaning": "끄는 사람[것]",
+              "examples": [],
+              "originalMeaning": "끄는 사람[것]"
+            },
+            {
+              "meaning": "견인식 비행기 ((추진기가 주익(主翼)보다 앞에 붙어 있는))",
+              "examples": [],
+              "originalMeaning": "견인식 비행기 ((추진기가 주익(主翼)보다 앞에 붙어 있는))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/16691f882d714ff39c6c778382ec6ca1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/16691f882d714ff39c6c778382ec6ca1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1ff4ad18de138c45103d7ecee0034474",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "트랙터가 1에이커의 밭을 갈아엎었다",
+      "text": "The <b>tractor</b> plowed up an acre of the field."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수륙 양용차",
+      "text": "Landing Vehicle <b>Tractor</b>"
+    }
+  ],
+  "isWordType": true
+}

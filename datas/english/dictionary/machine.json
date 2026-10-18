@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "machine",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "məˈʃiːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기계, 기계 장치",
+              "examples": [
+                {
+                  "text": "by <b>machine</b>",
+                  "translatedText": "기계로"
+                }
+              ],
+              "originalMeaning": "기계, 기계 장치"
+            },
+            {
+              "meaning": "힘·운동을 전달하거나 방향을 바꾸어 주는 장치",
+              "examples": [],
+              "originalMeaning": "힘·운동을 전달하거나 방향을 바꾸어 주는 장치"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "기계의, 기계에 의한, 기계용의",
+              "examples": [
+                {
+                  "text": "<b>machine</b> parts",
+                  "translatedText": "기계 부품"
+                }
+              ],
+              "originalMeaning": "기계의, 기계에 의한, 기계용의"
+            },
+            {
+              "meaning": "기계적인, 틀에 박힌",
+              "examples": [],
+              "originalMeaning": "기계적인, 틀에 박힌"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기계로 만들다[마무르다], 재봉틀로 박다, 인쇄기에 걸다; 기계화하다; 틀에 맞게 만들다; 규격화하다 ((down))",
+              "examples": [],
+              "originalMeaning": "기계로 만들다[마무르다], 재봉틀로 박다, 인쇄기에 걸다; 기계화하다; 틀에 맞게 만들다; 규격화하다 ((down))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/62fa4be93b6b44aaa22cfc9575245bc5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/62fa4be93b6b44aaa22cfc9575245bc5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "machines"
+        },
+        {
+          "type": "과거형",
+          "value": "machined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "machining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "machined"
+        }
+      ],
+      "aliasConjugation": "machines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3c04acfb20cfbd3749f2e3f49c0e4f4c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기계가 지금 쉬고 있다",
+      "text": "The <b>machine</b> is standing idle."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 기계는 자동으로 작업을 한다",
+      "text": "The <b>machine</b> works by itself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 기계는 쓰임새가 많다",
+      "text": "The <b>machine</b> has[serves] plenty of uses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 기계는 많은 이점이 있다",
+      "text": "This <b>machine</b> has many advantages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 구문을 받고 기계를 팔았다",
+      "text": "He sold the <b>machine</b> on commission."
+    }
+  ],
+  "isWordType": true
+}

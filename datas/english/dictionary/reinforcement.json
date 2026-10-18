@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "reinforcement",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│riːɪn│fɔːrsmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보강, 강화, 증원",
+              "examples": [],
+              "originalMeaning": "보강, 강화, 증원"
+            },
+            {
+              "meaning": "[pl.] 증원 부대[함대], 지원병",
+              "examples": [],
+              "originalMeaning": "[pl.] 증원 부대[함대], 지원병"
+            },
+            {
+              "meaning": "보강(재), 보급(품)",
+              "examples": [],
+              "originalMeaning": "보강(재), 보급(품)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bb07ac51e53540519d3147d600dcffce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bb07ac51e53540519d3147d600dcffce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e0494657b4b5a00aa192e16598d6dd4f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 다리는 약간의 보강이 필요하다",
+      "text": "The bridge needs some <b>reinforcement</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부대를 구원하기 위해 원군이 급파되었다",
+      "text": "Reinforcements were rushed for the relief of the army."
+    }
+  ],
+  "isWordType": true
+}

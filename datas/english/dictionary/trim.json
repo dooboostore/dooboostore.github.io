@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "trim",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "trɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(깎아) 다듬다, 정돈하다, 손질하다",
+              "examples": [
+                {
+                  "text": "<b>trim</b> a lamp",
+                  "translatedText": "램프의 심지를 자르다"
+                }
+              ],
+              "originalMeaning": "(깎아) 다듬다, 정돈하다, 손질하다"
+            },
+            {
+              "meaning": "다듬어 내다; <사진을> 트림하다 ((off, away)); 잘라내다, 없애다",
+              "examples": [
+                {
+                  "text": "<b>trim</b> away the edges of a picture",
+                  "translatedText": "사진 마구리를 트림하다"
+                }
+              ],
+              "originalMeaning": "다듬어 내다; <사진을> 트림하다 ((off, away)); 잘라내다, 없애다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<배가> 균형이 잘 잡히다",
+              "examples": [],
+              "originalMeaning": "<배가> 균형이 잘 잡히다"
+            },
+            {
+              "meaning": "<정치가가> 기회주의적 태도를 취하다, 양다리를 걸치다 ((between))",
+              "examples": [],
+              "originalMeaning": "<정치가가> 기회주의적 태도를 취하다, 양다리를 걸치다 ((between))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<복장·모양 등이> 산뜻한, 말끔한, 잘 손질된; 정비된",
+              "examples": [],
+              "originalMeaning": "<복장·모양 등이> 산뜻한, 말끔한, 잘 손질된; 정비된"
+            },
+            {
+              "meaning": "상태가 좋은, 기분 좋은",
+              "examples": [],
+              "originalMeaning": "상태가 좋은, 기분 좋은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a5de775354c14972a8575e5db69cddff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a5de775354c14972a8575e5db69cddff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "trimmer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "trims"
+        },
+        {
+          "type": "최상급",
+          "value": "trimmest"
+        },
+        {
+          "type": "과거형",
+          "value": "trimmed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "trimming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "trimmed"
+        }
+      ],
+      "aliasConjugation": "trimmer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "853bdde9572a0ef373f42353c6c1c0dc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 말쑥하게 몸치장했다",
+      "text": "She trimmed herself up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "약간 자르는 게 훨씬 보기가 낫겠어요",
+      "text": "A little <b>trim</b> would make it look much better."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "윗머리는 그냥 놔 두고 옆만 좀 쳐 주세요",
+      "text": "Leave the top alone and just <b>trim</b> the sides."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "예산이 백만 불 축소되었다",
+      "text": "The budget had been trimmed by one million dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 차는 외장은 좋지만 내장이 좀 빈약하다",
+      "text": "The <b>trim</b> on this car is fine, but the interior is rather poor."
+    }
+  ],
+  "isWordType": true
+}

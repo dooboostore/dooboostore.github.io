@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "early",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɜːrli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "일찍이, 일찍부터, 일찌감치; 초기에",
+              "examples": [
+                {
+                  "text": "<b>early</b> in the day[morning]",
+                  "translatedText": "아침 일찍이"
+                }
+              ],
+              "originalMeaning": "일찍이, 일찍부터, 일찌감치; 초기에"
+            },
+            {
+              "meaning": "시간 전에, 늦지 않게",
+              "examples": [],
+              "originalMeaning": "시간 전에, 늦지 않게"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<시각·계절 등이> 이른(opp. late)",
+              "examples": [
+                {
+                  "text": "an <b>early</b> riser",
+                  "translatedText": "아침 일찍이 일어나는 사람"
+                }
+              ],
+              "originalMeaning": "<시각·계절 등이> 이른(opp. late)"
+            },
+            {
+              "meaning": "(보통보다) 이른, 아직 젊은",
+              "examples": [
+                {
+                  "text": "an <b>early</b> death",
+                  "translatedText": "요절(夭折), 요사(夭死)"
+                }
+              ],
+              "originalMeaning": "(보통보다) 이른, 아직 젊은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/03851f3bafc3498ebf5ca9f3d23a1abe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/03851f3bafc3498ebf5ca9f3d23a1abe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "earlier"
+        },
+        {
+          "type": "최상급",
+          "value": "earliest"
+        }
+      ],
+      "aliasConjugation": "earlier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "7e39228cacd51ea9f2afe344bb08d340",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잘 시간이 아직 이르다",
+      "text": "It is too <b>early</b> for bed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내가 맨 먼저 일어난다",
+      "text": "I get up earliest of all."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일찍 출발하는 편이 낫다.",
+      "text": "I prefer to start <b>early</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 아침 일찍[늦게] 일어난다",
+      "text": "He is an <b>early</b>[a late] riser."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년에는 눈이 일찍 녹았다",
+      "text": "It thawed <b>early</b> this spring."
+    }
+  ],
+  "isWordType": true
+}

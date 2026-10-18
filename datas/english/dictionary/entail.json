@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "entail",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈteɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<폐단 등을> 남기다, (필연적 결과로서) 수반하다(involve), 일으키다",
+              "examples": [
+                {
+                  "text": "The loss entailed no regret on[upon] him.",
+                  "translatedText": "그는 손실을 아깝게 여기지 않았다."
+                }
+              ],
+              "originalMeaning": "<폐단 등을> 남기다, (필연적 결과로서) 수반하다(involve), 일으키다"
+            },
+            {
+              "meaning": "<노력·비용 등을> 들게 하다, 부과하다(impose)",
+              "examples": [
+                {
+                  "text": "if this would <b>entail</b> additional costs",
+                  "translatedText": "추가 비용이 들 경우에는"
+                }
+              ],
+              "originalMeaning": "<노력·비용 등을> 들게 하다, 부과하다(impose)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(성질·신념 등의) 숙명적인 유전[계승], 반드시 전해지는 것, 필연적 결과",
+              "examples": [],
+              "originalMeaning": "(성질·신념 등의) 숙명적인 유전[계승], 반드시 전해지는 것, 필연적 결과"
+            },
+            {
+              "meaning": "[U] [법] 한사 상속(限嗣相續), 계사 한정(繼嗣限定); [C] 한사 상속 재산",
+              "examples": [],
+              "originalMeaning": "[U] [법] 한사 상속(限嗣相續), 계사 한정(繼嗣限定); [C] 한사 상속 재산"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/90c232acd0cd473a8b85f8289c0f40ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/90c232acd0cd473a8b85f8289c0f40ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "entails"
+        },
+        {
+          "type": "과거형",
+          "value": "entailed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "entailing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "entailed"
+        }
+      ],
+      "aliasConjugation": "entails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d01a62bf0e36cac112c4fa50b8710f3a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 손실을 아깝게 여기지 않았다.",
+      "text": "The loss entailed no regret on[upon] him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 생활 방식에는 큰 비용이 든다.",
+      "text": "His way of living entails great expense."
+    }
+  ],
+  "isWordType": true
+}

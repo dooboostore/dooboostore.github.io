@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "store",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stɔː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[미] 가게, 상점, 점포([영] shop); 식료품점",
+              "examples": [
+                {
+                  "text": "a candy <b>store</b>",
+                  "translatedText": "과자점"
+                }
+              ],
+              "originalMeaning": "[미] 가게, 상점, 점포([영] shop); 식료품점"
+            },
+            {
+              "meaning": "[보통 pl., 단수·복수 취급] [영] 백화점([미] department store),[pl., 단수 취급] (보통) 잡화점",
+              "examples": [
+                {
+                  "text": "I get most things at the <b>store</b> s.",
+                  "translatedText": "대개의 물건은 백화점에서 구입한다."
+                }
+              ],
+              "originalMeaning": "[보통 pl., 단수·복수 취급] [영] 백화점([미] department <b>store</b>),[pl., 단수 취급] (보통) 잡화점"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "축적된, 저장용의",
+              "examples": [],
+              "originalMeaning": "축적된, 저장용의"
+            },
+            {
+              "meaning": "기성품의, 만들어 파는",
+              "examples": [
+                {
+                  "text": "<b>store</b> clothes",
+                  "translatedText": "기성복"
+                }
+              ],
+              "originalMeaning": "기성품의, 만들어 파는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<장소 따위에> (…을) 공급하다, 비축하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>store</b> the mind with knowledge",
+                  "translatedText": "머리 속에 지식을 주입하다"
+                }
+              ],
+              "originalMeaning": "<장소 따위에> (…을) 공급하다, 비축하다 ((with))"
+            },
+            {
+              "meaning": "(…에 대비하여) 저장하다, 쌓아 두다, 축적하다 ((for, against; away, up))",
+              "examples": [
+                {
+                  "text": "<b>store</b> (up[away]) food for the winter",
+                  "translatedText": "월동 준비로 식량을 저장하다"
+                }
+              ],
+              "originalMeaning": "(…에 대비하여) 저장하다, 쌓아 두다, 축적하다 ((for, against; away, up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e464e75e87a4dfd9a6b92eabbc2d12f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e464e75e87a4dfd9a6b92eabbc2d12f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stores"
+        },
+        {
+          "type": "과거형",
+          "value": "stored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "storing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stored"
+        }
+      ],
+      "aliasConjugation": "stores",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c18b98cc6398e00c32e1bfa9fed228b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 식품은 저장해 둘 수 있다.",
+      "text": "This food stores well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 가게에서는 과일을 판다.",
+      "text": "That <b>store</b> handles fruits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "훗날 쓰게 잘 간직해 두어라",
+      "text": "<b>Store</b> it away for future use."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "음식을 시원한 곳에 두어라",
+      "text": "<b>Store</b> the food in a cool place."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가게에서 청구서가 올 것이다.",
+      "text": "The <b>store</b> will bill me for it."
+    }
+  ],
+  "isWordType": true
+}

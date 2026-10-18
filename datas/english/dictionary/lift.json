@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "lift",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lɪft"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "올리다, 들어올리다; <값 등을> 올리다 ((up, off, out)), 들다; 들어서 내리다 ((down, from)); 안아 올리다",
+              "examples": [
+                {
+                  "text": "<b>lift</b> a box down from the shelf",
+                  "translatedText": "선반에서 상자를 내리다"
+                }
+              ],
+              "originalMeaning": "올리다, 들어올리다; <값 등을> 올리다 ((up, off, out)), 들다; 들어서 내리다 ((down, from)); 안아 올리다"
+            },
+            {
+              "meaning": "<눈·얼굴 등을> 들다(raise), 위를 향하게 하다, <탑 등을> 솟아오르게 하다 ((up, from))",
+              "examples": [
+                {
+                  "text": "The church lifts its spire.",
+                  "translatedText": "교회의 뾰족탑이 높이 솟아 있다."
+                }
+              ],
+              "originalMeaning": "<눈·얼굴 등을> 들다(raise), 위를 향하게 하다, <탑 등을> 솟아오르게 하다 ((up, from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보통 부정문에서] 올라가다, 들리다, 열리다 ((off))",
+              "examples": [
+                {
+                  "text": "The lid won't <b>lift</b> (off).",
+                  "translatedText": "뚜껑이 열리지 않는다."
+                }
+              ],
+              "originalMeaning": "[보통 부정문에서] 올라가다, 들리다, 열리다 ((off))"
+            },
+            {
+              "meaning": "(무거운 것을) 들어올리다 ((at))",
+              "examples": [],
+              "originalMeaning": "(무거운 것을) 들어올리다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "올림, 들어올림",
+              "examples": [
+                {
+                  "text": "give a stone a <b>lift</b>",
+                  "translatedText": "돌을 들어올리다"
+                }
+              ],
+              "originalMeaning": "올림, 들어올림"
+            },
+            {
+              "meaning": "승진, 승급, 입신출세(rise) ((in)); (물가의) 상승 ((in))",
+              "examples": [
+                {
+                  "text": "a <b>lift</b> in his career",
+                  "translatedText": "입신출세"
+                }
+              ],
+              "originalMeaning": "승진, 승급, 입신출세(rise) ((in)); (물가의) 상승 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2d71df5e56224a978b6bb8d6d330cceb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2d71df5e56224a978b6bb8d6d330cceb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lifts"
+        },
+        {
+          "type": "과거형",
+          "value": "lifted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lifting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lifted"
+        }
+      ],
+      "aliasConjugation": "lifts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e89aafd31be6003253e8bfce6769db6f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 해도 들 수가 없었다.",
+      "text": "I could <b>lift</b> it nohow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 지갑을 도둑 맞았다.",
+      "text": "She had her purse lifted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교회의 뾰족탑이 높이 솟아 있다.",
+      "text": "The church lifts its spire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 손가락 하나도 까딱하지 않으려 한다",
+      "text": "She wouldn't <b>lift</b> a finger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그를 내 자동차에 태워주었다",
+      "text": "I gave him a ride[<b>lift</b>] in my car."
+    }
+  ],
+  "isWordType": true
+}

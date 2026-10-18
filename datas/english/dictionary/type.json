@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "type",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "taɪp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "형(型), 정형, 양식, 원형, 유형, 타입; 종류; …타입의 사람",
+              "examples": [
+                {
+                  "text": "a new <b>type</b> of car = a car of a new <b>type</b>",
+                  "translatedText": "신형차"
+                }
+              ],
+              "originalMeaning": "형(型), 정형, 양식, 원형, 유형, 타입; 종류; …타입의 사람"
+            },
+            {
+              "meaning": "전형, 대표물, 모범, 본; 전형적 인물; 표상, 상징 ((of))",
+              "examples": [
+                {
+                  "text": "a perfect <b>type</b> of English gentleman",
+                  "translatedText": "영국 신사의 전형, 전형적인 영국 신사"
+                }
+              ],
+              "originalMeaning": "전형, 대표물, 모범, 본; 전형적 인물; 표상, 상징 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "분류하다",
+              "examples": [],
+              "originalMeaning": "분류하다"
+            },
+            {
+              "meaning": "<혈액 등의> 형을 정하다",
+              "examples": [],
+              "originalMeaning": "<혈액 등의> 형을 정하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "타이프라이터를 치다",
+              "examples": [
+                {
+                  "text": "She types well.",
+                  "translatedText": "그녀는 타이프라이터를 잘 친다."
+                }
+              ],
+              "originalMeaning": "타이프라이터를 치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b9cf447814a8448ab6b96e3f7f1cee1e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b9cf447814a8448ab6b96e3f7f1cee1e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "types"
+        },
+        {
+          "type": "과거형",
+          "value": "typed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "typing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "typed"
+        }
+      ],
+      "aliasConjugation": "types",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7a12fb96450cbbcb0ea4cff1e6e2f484",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그건 내 취향에 맞지 않아",
+      "text": "It's not my style[<b>type</b>]. or It isn't for me. or It's not my cup of tea. or It's not my thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금 이런 종류의 책이 인기다.",
+      "text": "This <b>type</b> of book is popular."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것을 타이프라이터로 쳐 주시오",
+      "text": "I want to have[get] it typed up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 종류는 세상에 수두룩하다",
+      "text": "This is quite an ordinary <b>type</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 정말 잘 떠드는구나",
+      "text": "You're a real life-of-the-party <b>type</b> of guy."
+    }
+  ],
+  "isWordType": true
+}

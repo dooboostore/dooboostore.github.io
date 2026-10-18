@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "atmospheric",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌætməsˈferɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "대기(중)의, 공기의; 대기에 의한",
+              "examples": [
+                {
+                  "text": "an <b>atmospheric</b> depression",
+                  "translatedText": "저기압"
+                }
+              ],
+              "originalMeaning": "대기(중)의, 공기의; 대기에 의한"
+            },
+            {
+              "meaning": "분위기의[를 내는]",
+              "examples": [
+                {
+                  "text": "<b>atmospheric</b> music",
+                  "translatedText": "무드 음악"
+                }
+              ],
+              "originalMeaning": "분위기의[를 내는]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f94c2d9375714f60b251de8121b47df6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f94c2d9375714f60b251de8121b47df6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "fb1ffc7eed44e41beaff78bd6166a8b2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외몽고는 고기압에 덮여 있다",
+      "text": "High <b>atmospheric</b> pressure overlies Outer Mongolia."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "태풍 24호의 중심 시도는 895밀리바였다",
+      "text": "The registered central <b>atmospheric</b> pressure of Typhoon No. 24 was 895 millibars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대기 상태가 불안정하다",
+      "text": "<b>Atmospheric</b> conditions are unsettled."
+    }
+  ],
+  "isWordType": true
+}

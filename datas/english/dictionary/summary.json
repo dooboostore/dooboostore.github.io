@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "summary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌməri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "요약, 개요, 대략; 적요(서), 대요, 일람",
+              "examples": [],
+              "originalMeaning": "요약, 개요, 대략; 적요(서), 대요, 일람"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "요약한, 개략의; 간략한, 간결한(brief)",
+              "examples": [
+                {
+                  "text": "a <b>summary</b> review",
+                  "translatedText": "간략한 비평"
+                }
+              ],
+              "originalMeaning": "요약한, 개략의; 간략한, 간결한(brief)"
+            },
+            {
+              "meaning": "약식의, 즉석의, 재빠른",
+              "examples": [
+                {
+                  "text": "be treated with <b>summary</b> dispatch",
+                  "translatedText": "재빨리 대접받다"
+                }
+              ],
+              "originalMeaning": "약식의, 즉석의, 재빠른"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/02f3da901d1c444380a88d86a37f8a3d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/02f3da901d1c444380a88d86a37f8a3d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "summaries"
+        }
+      ],
+      "aliasConjugation": "summaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "e9bb6e45e06b7b85add68bdc436a43af",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요지는 500단어를 넘지 않아야 한다",
+      "text": "The <b>summary</b> should not exceed 500 words (in length)."
+    }
+  ],
+  "isWordType": true
+}

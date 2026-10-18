@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>pierce</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɪrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "꿰뚫다, 꿰찌르다; 관통하다, 돌입하다 (=stab)",
+              "examples": [
+                {
+                  "text": "The spear pierced his arm.",
+                  "translatedText": "창이 그의 팔을 꿰뚫었다."
+                }
+              ],
+              "originalMeaning": "꿰뚫다, 꿰찌르다; 관통하다, 돌입하다 (=<span class='related_word' lang='en' >stab</span>)"
+            },
+            {
+              "meaning": "…에 구멍을 뚫다, <구멍을> 뚫다",
+              "examples": [
+                {
+                  "text": "have[get] one's ears <b>pierce</b> d",
+                  "translatedText": "(귀고리를 하기 위해) 귀에 구멍을 뚫다"
+                }
+              ],
+              "originalMeaning": "…에 구멍을 뚫다, <구멍을> 뚫다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "꽂히다",
+              "examples": [],
+              "originalMeaning": "꽂히다"
+            },
+            {
+              "meaning": "뚫고 들어가다; 간파하다; 관통하다 ((into, through)); 마음에 사무치다",
+              "examples": [
+                {
+                  "text": "They pierced to the heart of the jungle.",
+                  "translatedText": "그들은 정글 속 깊이 뚫고 들어갔다."
+                }
+              ],
+              "originalMeaning": "뚫고 들어가다; 간파하다; 관통하다 ((into, through)); 마음에 사무치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7fce22a21b9542beb44b7956b412bcd7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7fce22a21b9542beb44b7956b412bcd7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pierces"
+        },
+        {
+          "type": "과거형",
+          "value": "pierced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "piercing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pierced"
+        }
+      ],
+      "aliasConjugation": "pierces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c6bcb3a57634349a34663fe0a02e19c3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "살을 에는 듯이 춥다",
+      "text": "It is piercing[biting] cold."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 펀치는 안 뚫어진다",
+      "text": "This punch doesn't work[<b>pierce</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "창이 그의 팔을 꿰뚫었다.",
+      "text": "The spear pierced his arm."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "찬바람이 살을 베는 듯하다",
+      "text": "The wind is cutting[biting, piercing] cold."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 정글 속 깊이 뚫고 들어갔다.",
+      "text": "They pierced to the heart of the jungle."
+    }
+  ],
+  "isWordType": true
+}

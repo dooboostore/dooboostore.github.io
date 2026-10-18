@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "exercise",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│eksərsaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(몸의) 운동, 체조",
+              "examples": [
+                {
+                  "text": "lack of <b>exercise</b>",
+                  "translatedText": "운동 부족"
+                }
+              ],
+              "originalMeaning": "(몸의) 운동, 체조"
+            },
+            {
+              "meaning": "(습득한 기능을 닦는) 연습, 실습; 습작;[pl.] (군대의) 교련, 훈련",
+              "examples": [
+                {
+                  "text": "military exercises",
+                  "translatedText": "군사 훈련"
+                }
+              ],
+              "originalMeaning": "(습득한 기능을 닦는) 연습, 실습; 습작;[pl.] (군대의) 교련, 훈련"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·말·개 등을> 운동시키다, 연습시키다; 훈련하다; <손·발을> 움직이다",
+              "examples": [
+                {
+                  "text": "<b>exercise</b> troops",
+                  "translatedText": "군대를 훈련시키다"
+                }
+              ],
+              "originalMeaning": "<사람·말·개 등을> 운동시키다, 연습시키다; 훈련하다; <손·발을> 움직이다"
+            },
+            {
+              "meaning": "<힘·능력·지력 등을> 작용시키다, 사용하다, 발휘하다",
+              "examples": [],
+              "originalMeaning": "<힘·능력·지력 등을> 작용시키다, 사용하다, 발휘하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연습하다, 운동하다",
+              "examples": [],
+              "originalMeaning": "연습하다, 운동하다"
+            },
+            {
+              "meaning": "예배드리다",
+              "examples": [],
+              "originalMeaning": "예배드리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c3358757892c44f6b9e26c988e4e79d8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c3358757892c44f6b9e26c988e4e79d8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exercises"
+        },
+        {
+          "type": "과거형",
+          "value": "exercised"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exercising"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exercised"
+        }
+      ],
+      "aliasConjugation": "exercises",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "05525f3c3db29e072794cb55638a17bb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "연습을 하면 잘하게 된다",
+      "text": "You will improve by <b>exercise</b>[practice]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 내게 운동을 하게 했다",
+      "text": "She got me started on exercising."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "운동을 하면 식욕이 생긴다",
+      "text": "<b>Exercise</b> gives you a good appetite."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 운동을 해서 근육이 단단해졌다.",
+      "text": "<b>Exercise</b> toughened her muscles."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 운동을 위해 조깅하기를 좋아한다.",
+      "text": "She likes to jog for <b>exercise</b>."
+    }
+  ],
+  "isWordType": true
+}

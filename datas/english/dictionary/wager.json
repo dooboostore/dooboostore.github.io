@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "wager",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈweɪdʒə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "내기(bet), 노름; 내기한 것[돈]; 내기의 대상",
+              "examples": [
+                {
+                  "text": "win[lose] a <b>wager</b> of five dollars",
+                  "translatedText": "내기 돈 5달러를 따다[잃다]"
+                }
+              ],
+              "originalMeaning": "내기(bet), 노름; 내기한 것[돈]; 내기의 대상"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<돈 등을> (내기에) 걸다, 보증하다",
+              "examples": [
+                {
+                  "text": "<b>wager</b> a person one dollar",
+                  "translatedText": "…에게 1달러 걸다"
+                }
+              ],
+              "originalMeaning": "<돈 등을> (내기에) 걸다, 보증하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "내기를 걸다 ((on))",
+              "examples": [],
+              "originalMeaning": "내기를 걸다 ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/84aec28239ec4736b7a291dc2ff3c96e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/84aec28239ec4736b7a291dc2ff3c96e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wagers"
+        },
+        {
+          "type": "과거형",
+          "value": "wagered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wagering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wagered"
+        }
+      ],
+      "aliasConjugation": "wagers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7dc2855fc7a72a129620f17277b857c7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것에 10달러 걸겠다.",
+      "text": "I <b>wager</b> ten dollars on it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꼭 그들이 이길걸.",
+      "text": "I <b>wager</b> that they shall win."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "fail",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "feɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "실패하다, 실수하다; 낙제하다 ((in))(opp. succeed); (목적을) 이루지 못하다 ((of))",
+              "examples": [
+                {
+                  "text": "<b>fail</b> in the exam",
+                  "translatedText": "낙제하다"
+                }
+              ],
+              "originalMeaning": "실패하다, 실수하다; 낙제하다 ((in))(opp. succeed); (목적을) 이루지 못하다 ((of))"
+            },
+            {
+              "meaning": "(…하지) 못하다[않다], 게을리하다(neglect);[not과 함께] 꼭 …하다",
+              "examples": [
+                {
+                  "text": "( <b>fail</b>+todo) <b>fail</b> to keep one's word",
+                  "translatedText": "약속을 안 지키다"
+                }
+              ],
+              "originalMeaning": "(…하지) 못하다[않다], 게을리하다(neglect);[not과 함께] 꼭 …하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(정작 긴요할 때에) …의 도움이 되지 않다, …의 기대에 어긋나다; 저버리다, 실망시키다; 갑자기 나오지[작동하지] 않아 사람을 난처하게 만들다",
+              "examples": [
+                {
+                  "text": "He failed me at the last minute.",
+                  "translatedText": "그는 마지막 순간에 나를 저버렸다."
+                }
+              ],
+              "originalMeaning": "(정작 긴요할 때에) …의 도움이 되지 않다, …의 기대에 어긋나다; 저버리다, 실망시키다; 갑자기 나오지[작동하지] 않아 사람을 난처하게 만들다"
+            },
+            {
+              "meaning": "(시험에서) <교사가> <학생을> 낙제시키다, <학생에게> 낙제점을 매기다",
+              "examples": [
+                {
+                  "text": "The professor failed her in history.",
+                  "translatedText": "교수는 역사 과목에서 그녀에게 낙제점을 주었다."
+                }
+              ],
+              "originalMeaning": "(시험에서) <교사가> <학생을> 낙제시키다, <학생에게> 낙제점을 매기다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(시험의) 낙제",
+              "examples": [],
+              "originalMeaning": "(시험의) 낙제"
+            },
+            {
+              "meaning": "(증권의) 양도 불이행",
+              "examples": [],
+              "originalMeaning": "(증권의) 양도 불이행"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/274f5f85154c4d0db13195f84dcb8c00",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/274f5f85154c4d0db13195f84dcb8c00",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fails"
+        },
+        {
+          "type": "과거형",
+          "value": "failed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "failing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "failed"
+        }
+      ],
+      "aliasConjugation": "fails",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4922cd4316dbe00859982ec7ad744654",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 말을 하지 못했다.",
+      "text": "His tongue failed him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 친구는 그를 저버렸다.",
+      "text": "His friends failed him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 눈이 점점 나빠지고 있다",
+      "text": "My eyesight is failing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "또 실패할까 봐 걱정이다",
+      "text": "I'm afraid I shall <b>fail</b> again."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 숙명적으로 실패하게 되어 있었다",
+      "text": "We are doomed to <b>fail</b>."
+    }
+  ],
+  "isWordType": true
+}

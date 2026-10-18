@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "facility",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fəˈsɪləti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 설비, 시설; [군사] (보급) 기지; 편의, 편익, 편리함",
+              "examples": [
+                {
+                  "text": "a new research <b>facility</b>",
+                  "translatedText": "새로운 연구 설비"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 설비, 시설; [군사] (보급) 기지; 편의, 편익, 편리함"
+            },
+            {
+              "meaning": "[보통 pl.] 화장실 ((lavatory의 완곡한 말))",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 화장실 ((lavatory의 완곡한 말))"
+            },
+            {
+              "meaning": "쉬움(ease)(opp. difficulty)",
+              "examples": [
+                {
+                  "text": "with <b>facility</b>",
+                  "translatedText": "수월하게"
+                }
+              ],
+              "originalMeaning": "쉬움(ease)(opp. difficulty)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0f400390dcfc416fb71b76b32bd7b54e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0f400390dcfc416fb71b76b32bd7b54e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "facilities"
+        }
+      ],
+      "aliasConjugation": "facilities",
+      "aliasConjugationPos": "복수형",
+      "gdid": "359159b3e9c39362e9fd30c10ec69d9a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 도시에는 오락 시설이 없다",
+      "text": "The town lacks amusement <b>facilities</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "교통 기관은 혼란 상태에 있다",
+      "text": "The transport <b>facilities</b> are upset[out of order]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 시에는 오락 시설이 더 필요하다",
+      "text": "Our city needs more <b>facilities</b> for recreation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사태가 나서 교통이 마비되었다",
+      "text": "The landslip blocked all the transportation <b>facilities</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 공항에는 훌륭한 항공 관제 설비가 있다",
+      "text": "This airport has excellent flight control <b>facilities</b>."
+    }
+  ],
+  "isWordType": true
+}

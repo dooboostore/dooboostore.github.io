@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "target",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈtɑːrɡɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "과녁, 표적; (공격) 목표",
+              "examples": [
+                {
+                  "text": "a <b>target</b> ship",
+                  "translatedText": "표적함(艦)"
+                }
+              ],
+              "originalMeaning": "과녁, 표적; (공격) 목표"
+            },
+            {
+              "meaning": "(정치 운동·선전 활동 등의) 목표 ((for)); (비난·주목의) 대상, (웃음)거리 ((for))",
+              "examples": [],
+              "originalMeaning": "(정치 운동·선전 활동 등의) 목표 ((for)); (비난·주목의) 대상, (웃음)거리 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "표적[대상]이 되는, 목표의",
+              "examples": [],
+              "originalMeaning": "표적[대상]이 되는, 목표의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "목표로 삼다[정하다]",
+              "examples": [],
+              "originalMeaning": "목표로 삼다[정하다]"
+            },
+            {
+              "meaning": "…을 목표로 향하다",
+              "examples": [],
+              "originalMeaning": "…을 목표로 향하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72991757c38a4dd688a0e4fefbe13275",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72991757c38a4dd688a0e4fefbe13275",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "targets"
+        },
+        {
+          "type": "과거형",
+          "value": "targeted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "targeting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "targeted"
+        }
+      ],
+      "aliasConjugation": "targets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "48bb4b02fb1e9c6c2e3f7a59583f4d74",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 영락없이 과녁을 맞힌다",
+      "text": "He never misses the <b>target</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 권총으로 표적을 겨누었다",
+      "text": "He aimed his pistol at the <b>target</b>[mark]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 붓끝에 걸리면 경친다",
+      "text": "It is an awful thing to be made the <b>target</b> of his attack."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화살이 과녁 한가운데에 꽂혔다",
+      "text": "The arrow alighted[was fixed] in the very center of the <b>target</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "2002년도 수출 목표는 2,000억 달러로 정해졌다",
+      "text": "The export <b>target</b> for 2002 has been set at 200 billion dollars."
+    }
+  ],
+  "isWordType": true
+}

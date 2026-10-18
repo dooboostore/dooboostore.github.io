@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "noisy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈnɔɪzi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "떠들썩한, 시끄러운",
+              "examples": [
+                {
+                  "text": "Don't be <b>noisy</b>!",
+                  "translatedText": "조용히 해!"
+                }
+              ],
+              "originalMeaning": "떠들썩한, 시끄러운"
+            },
+            {
+              "meaning": "<색채·복장·문체 등이> 화려한, 야한, 요란한(cf. LOUD)",
+              "examples": [],
+              "originalMeaning": "<색채·복장·문체 등이> 화려한, 야한, 요란한(cf. LOUD)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/96f37278035d43498f6d284df03c9609",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/96f37278035d43498f6d284df03c9609",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "noisier"
+        },
+        {
+          "type": "최상급",
+          "value": "noisiest"
+        }
+      ],
+      "aliasConjugation": "noisier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "a4ab8efb21fb4db931a87aa37a35cf51",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "학생들이 일시에 떠들기 시작했다",
+      "text": "The students got <b>noisy</b> all at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들이 떠들어서 정신이 헷갈린다",
+      "text": "The children are too <b>noisy</b> for me to concentrate."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회전목마가 시끄럽게 회전했다",
+      "text": "The merry-go-round whirled noisily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바깥쪽이 떠지껄하다",
+      "text": "There is a commotion outside. or It is <b>noisy</b> outside."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조용히 해!",
+      "text": "Don’t be <b>noisy</b>!"
+    }
+  ],
+  "isWordType": true
+}

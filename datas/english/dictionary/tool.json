@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "tool",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tuːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "연장, 도구, 공구(工具); 공작 기계(= machine ~), (=instrument)",
+              "examples": [
+                {
+                  "text": "a multipurpose <b>tool</b>",
+                  "translatedText": "만능 공구"
+                }
+              ],
+              "originalMeaning": "연장, 도구, 공구(工具); 공작 기계(= machine ~), (=<span class='related_word' lang='en' >instrument</span>)"
+            },
+            {
+              "meaning": "장사 도구",
+              "examples": [
+                {
+                  "text": "A scholar's books are <b>tool</b> s.",
+                  "translatedText": "학자의 책은 직업 밑천이다."
+                }
+              ],
+              "originalMeaning": "장사 도구"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<물건을> 연장으로 만들다[꾸미다], [제본] <표지를> 압형하다",
+              "examples": [
+                {
+                  "text": "a huge Bible with a deeply tooledcover",
+                  "translatedText": "표지를 깊게 압형한 거대한 성경"
+                }
+              ],
+              "originalMeaning": "<물건을> 연장으로 만들다[꾸미다], [제본] <표지를> 압형하다"
+            },
+            {
+              "meaning": "<돌을> 정으로 다듬다",
+              "examples": [],
+              "originalMeaning": "<돌을> 정으로 다듬다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연장을 사용하다, 연장으로 세공하다",
+              "examples": [],
+              "originalMeaning": "연장을 사용하다, 연장으로 세공하다"
+            },
+            {
+              "meaning": "(마차·차로) 가다 ((along, around))",
+              "examples": [
+                {
+                  "text": "<b>tool</b> along the freeway",
+                  "translatedText": "차를 타고 고속도로를 달리다"
+                }
+              ],
+              "originalMeaning": "(마차·차로) 가다 ((along, around))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/eb326655398e4f0aa938da65c0cb9fba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/eb326655398e4f0aa938da65c0cb9fba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tools"
+        },
+        {
+          "type": "과거형",
+          "value": "tooled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tooling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tooled"
+        }
+      ],
+      "aliasConjugation": "tools",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9b2f46dd5929ccde3bd9ba810a03d4b3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 연장을 쓰는 데 솜씨가 있다",
+      "text": "He is handy with a <b>tool</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 독재자의 앞잡이에 불과했다",
+      "text": "He was a mere <b>tool</b> of the dictator. or He was merely an instrument of the dictator."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "넌 연장을 다루는 손재주가 퍽 좋구나",
+      "text": "You're very handy with tools."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "학자의 책은 직업 밑천이다.",
+      "text": "A scholar’s books are tools."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "말은 사고 표현의 방식이다.",
+      "text": "Words are the tools of thought."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "interpretation",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪn│tɜːrprɪ│teɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "해석, 설명",
+              "examples": [
+                {
+                  "text": "<b>interpretation</b> of a treaty",
+                  "translatedText": "조약의 해석"
+                }
+              ],
+              "originalMeaning": "해석, 설명"
+            },
+            {
+              "meaning": "(꿈·수수께끼 등의) 판단",
+              "examples": [],
+              "originalMeaning": "(꿈·수수께끼 등의) 판단"
+            },
+            {
+              "meaning": "통역",
+              "examples": [],
+              "originalMeaning": "통역"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c918c88a3cdf4da885aeea0afbad7e12",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c918c88a3cdf4da885aeea0afbad7e12",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "074e8e54b365093a5e88d53f6d27802d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 법률을 확대 해석했다",
+      "text": "He interpreted the law broadly. or He made a broad <b>interpretation</b> of the law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 해석은 온당하다",
+      "text": "That is a sensible <b>interpretation</b> of the passage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "동시통역",
+      "text": "(a) simultaneous <b>interpretation</b>"
+    }
+  ],
+  "isWordType": true
+}

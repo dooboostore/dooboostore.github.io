@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "toss",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tɔːs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(가볍게) 던지다, 치뜨리다; 버리다, 내던지다; <공을> 토스하다 (=throw)",
+              "examples": [
+                {
+                  "text": "<b>toss</b> a ball",
+                  "translatedText": "공을 토스하다"
+                }
+              ],
+              "originalMeaning": "(가볍게) 던지다, 치뜨리다; 버리다, 내던지다; <공을> 토스하다 (=<span class='related_word' lang='en' >throw</span>)"
+            },
+            {
+              "meaning": "<파도가 배를> 몹시 동요시키다 ((about))",
+              "examples": [
+                {
+                  "text": "be <b>tossed</b> about in the storms of life",
+                  "translatedText": "세파에 시달리다"
+                }
+              ],
+              "originalMeaning": "<파도가 배를> 몹시 동요시키다 ((about))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(상하로) 동요하다",
+              "examples": [],
+              "originalMeaning": "(상하로) 동요하다"
+            },
+            {
+              "meaning": "<새 깃 등이> 미풍에 흔들리다",
+              "examples": [],
+              "originalMeaning": "<새 깃 등이> 미풍에 흔들리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "던져 올림, 위로 던짐",
+              "examples": [],
+              "originalMeaning": "던져 올림, 위로 던짐"
+            },
+            {
+              "meaning": "낙마(落馬)",
+              "examples": [],
+              "originalMeaning": "낙마(落馬)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1dbe02d0260f4a509ddd9c75b4c1cae4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1dbe02d0260f4a509ddd9c75b4c1cae4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tosses"
+        },
+        {
+          "type": "과거형",
+          "value": "tossed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tossing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tossed"
+        }
+      ],
+      "aliasConjugation": "tosses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8e60f81e9456ebafeeed438e6108a8b1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 동전 던지기로 결정하자.",
+      "text": "Let’s <b>toss</b> up for it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저녁에 먹을 샐러드를 살살 섞었다.",
+      "text": "I <b>tossed</b> a salad for dinner."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 이틀 간이나 물결 가는 데로 떠다녔다",
+      "text": "We drifted about at the mercy of the waves[were <b>tossed</b> about by the waves] for two days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "말이 기수를 흔들어 떨어뜨렸다.",
+      "text": "The horse <b>tossed</b> the jockey off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 담배를 차 밖으로 던졌다",
+      "text": "She <b>tossed</b> a cigarette out of her car."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "characterize",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkærəktəraɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·사물의> 특성을 기술하다, 성격을 묘사하다; <사람·사물을> (…으로) 간주하다, 보다 ((as))",
+              "examples": [
+                {
+                  "text": "It must be <b>characterize</b> d as a success.",
+                  "translatedText": "그것은 성공으로 간주하지 않으면 안 된다."
+                }
+              ],
+              "originalMeaning": "<사람·사물의> 특성을 기술하다, 성격을 묘사하다; <사람·사물을> (…으로) 간주하다, 보다 ((as))"
+            },
+            {
+              "meaning": "<사물이> …에 특성[성격]을 부여하다, 특징 지우다",
+              "examples": [
+                {
+                  "text": "His style is <b>characterize</b> d by simplicity.",
+                  "translatedText": "그의 문체는 간결한 것이 특징이다."
+                }
+              ],
+              "originalMeaning": "<사물이> …에 특성[성격]을 부여하다, 특징 지우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7182404c55854971b57e8d47bfafd585",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7182404c55854971b57e8d47bfafd585",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "characterizes"
+        },
+        {
+          "type": "과거형",
+          "value": "characterized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "characterizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "characterized"
+        }
+      ],
+      "aliasConjugation": "characterizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b6180cf3e3948e30a4a807caf85f120",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 행동이 그의 특징을 나타내고 있다",
+      "text": "The conduct characterizes[marks] him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 성공으로 간주하지 않으면 안 된다.",
+      "text": "It must be characterized as a success."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 소설은 어딘가 심각한 데가 있다",
+      "text": "His novels are somehow incisive. or His novels are characterized by unsparing sincerity."
+    }
+  ],
+  "isWordType": true
+}

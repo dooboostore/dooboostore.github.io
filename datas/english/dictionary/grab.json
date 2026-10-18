@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "grab",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡræb"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "부여잡다, 붙들다, 움켜쥐다(snatch), 잡아채다, 체포하다; <기회 등을> 놓치지 않고 잡다",
+              "examples": [
+                {
+                  "text": "<b>grab</b> a purse",
+                  "translatedText": "지갑을 낚아채다"
+                }
+              ],
+              "originalMeaning": "부여잡다, 붙들다, 움켜쥐다(snatch), 잡아채다, 체포하다; <기회 등을> 놓치지 않고 잡다"
+            },
+            {
+              "meaning": "횡령하다, 가로채다, 빼앗다",
+              "examples": [
+                {
+                  "text": "<b>grab</b> the property from a person",
+                  "translatedText": "…에게서 재산을 횡령하다"
+                }
+              ],
+              "originalMeaning": "횡령하다, 가로채다, 빼앗다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "덮치다; 손을 쑥 뻗치다, 붙잡으려고 하다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>grab</b> at a chance",
+                  "translatedText": "기회를 잡다"
+                }
+              ],
+              "originalMeaning": "덮치다; 손을 쑥 뻗치다, 붙잡으려고 하다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부여잡기, 휘잡아 쥠; 횡령, 약탈, 날쌔게 채기; (권력·명성 등을) 가지려 함",
+              "examples": [],
+              "originalMeaning": "부여잡기, 휘잡아 쥠; 횡령, 약탈, 날쌔게 채기; (권력·명성 등을) 가지려 함"
+            },
+            {
+              "meaning": "(흙 등을 쳐 내는) 그랩, 물건을 잡는 기계(장치)",
+              "examples": [],
+              "originalMeaning": "(흙 등을 쳐 내는) 그랩, 물건을 잡는 기계(장치)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37e1a245b21e4418a5263e341ee689a9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37e1a245b21e4418a5263e341ee689a9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "grabs"
+        },
+        {
+          "type": "과거형",
+          "value": "grabbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "grabbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "grabbed"
+        }
+      ],
+      "aliasConjugation": "grabs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aa0abdc4a7f464e1ceff42bf4f319bf1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "점심 전에 한숨 자야겠다",
+      "text": "I'll <b>grab</b> some sleep before lunch."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내 멱살을 그러잡았다",
+      "text": "He grabbed me by the collar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외출하기 전에 간단히 들자",
+      "text": "Let's <b>grab</b> something to eat before we go out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한두 시간 눈을 붙이러 집에 가야겠다",
+      "text": "I'll go home and snatch[<b>grab</b>] a couple of hours' sleep"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 밤새 일하여서 잠시 수면을 취했다",
+      "text": "As I worked throughout the night I grabbed some sleep."
+    }
+  ],
+  "isWordType": true
+}

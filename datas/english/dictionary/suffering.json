@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "suffering",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌfərɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고통, 괴로움, 고난, 고생",
+              "examples": [],
+              "originalMeaning": "고통, 괴로움, 고난, 고생"
+            },
+            {
+              "meaning": "[종종 pl.] 재해, 재난, 수난; 손해",
+              "examples": [
+                {
+                  "text": "the sufferings of the slaves",
+                  "translatedText": "노예들의 수난"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] 재해, 재난, 수난; 손해"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e5ee6b15a17f4c759e32aed2e54ab589",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e5ee6b15a17f4c759e32aed2e54ab589",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e83b7ce8305a69f184aaf2b913d0e8b5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "suffer",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌfə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<고통·상해·손해·슬픔 등을> 경험하다, 겪다, 입다, 받다, 당하다",
+              "examples": [
+                {
+                  "text": "<b>suffer</b> great losses",
+                  "translatedText": "큰 손해를 입다"
+                }
+              ],
+              "originalMeaning": "<고통·상해·손해·슬픔 등을> 경험하다, 겪다, 입다, 받다, 당하다"
+            },
+            {
+              "meaning": "[주로 부정문에서] 견디다, 참다 (=endure)",
+              "examples": [
+                {
+                  "text": "I cannot <b>suffer</b> his insolence.",
+                  "translatedText": "나는 그의 무례함을 참을 수 없다."
+                }
+              ],
+              "originalMeaning": "[주로 부정문에서] 견디다, 참다 (=<span class='related_word' lang='en' >endure</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…로) 괴로워하다, 고민하다, 고생하다, 고통을 겪다 ((from, for, with))",
+              "examples": [],
+              "originalMeaning": "(…로) 괴로워하다, 고민하다, 고생하다, 고통을 겪다 ((from, for, with))"
+            },
+            {
+              "meaning": "(…을) 앓다, 병들다 ((from, with))",
+              "examples": [
+                {
+                  "text": "<b>suffer</b> from a bad headache",
+                  "translatedText": "심한 두통을 앓다"
+                }
+              ],
+              "originalMeaning": "(…을) 앓다, 병들다 ((from, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/797115e343ff4cb6852ac6b63f47e71e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/797115e343ff4cb6852ac6b63f47e71e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "suffers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ddd9c4ec22a9f35177e578ab6f833a38",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 수난은 이루 다 묘사할 수 없다.",
+      "text": "It is hard to picture his sufferings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 가족과 괴로움을 함께했다.",
+      "text": "They participated with the family in their sufferings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 마음을 냉혹하게 먹고 그들의 참상에 눈을 감았다.",
+      "text": "I steeled my heart[myself] against their sufferings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 안질을 앓고 있다",
+      "text": "He is <b>suffering</b> from an affection of the eyes. or He is afflicted with an eye disease."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 치명적인 타격을 받았다",
+      "text": "He suffered a fatal blow."
+    }
+  ],
+  "isWordType": true
+}

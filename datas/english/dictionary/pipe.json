@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "pipe",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(담배) 파이프, 담뱃대, (담배의) 한 대",
+              "examples": [],
+              "originalMeaning": "(담배) 파이프, 담뱃대, (담배의) 한 대"
+            },
+            {
+              "meaning": "관, 파이프, 도관(導管), 통(筒)",
+              "examples": [],
+              "originalMeaning": "관, 파이프, 도관(導管), 통(筒)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "피리를 불다, 피리 소리를 내다",
+              "examples": [],
+              "originalMeaning": "피리를 불다, 피리 소리를 내다"
+            },
+            {
+              "meaning": "<새가> 지저귀다",
+              "examples": [],
+              "originalMeaning": "<새가> 지저귀다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<곡을> 피리[관악기]로 불다",
+              "examples": [],
+              "originalMeaning": "<곡을> 피리[관악기]로 불다"
+            },
+            {
+              "meaning": "<사람이> 새된 목소리로 노래[말]하다",
+              "examples": [],
+              "originalMeaning": "<사람이> 새된 목소리로 노래[말]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b520579a69c34461bf131e9466441f16",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b520579a69c34461bf131e9466441f16",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pipes"
+        },
+        {
+          "type": "과거형",
+          "value": "piped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "piping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "piped"
+        }
+      ],
+      "aliasConjugation": "pipes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "724306d5376630a384f215ce78fd5440",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 관에서 기름이 똑똑 떨어진다.",
+      "text": "This <b>pipe</b> drips oil."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 연통은 연기가 잘 빠진다",
+      "text": "This smoke <b>pipe</b> draws well"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 파이프를 꺼내더니 불을 붙였다",
+      "text": "He took out a <b>pipe</b> and lit up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "파이프를 입에 문 채 말하지 마라",
+      "text": "Don't speak (with a) <b>pipe</b> in (your) mouth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물은 이 파이프를 흐르고 있다.",
+      "text": "The water passes through this <b>pipe</b>."
+    }
+  ],
+  "isWordType": true
+}

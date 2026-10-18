@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "change",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃeɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "바꾸다, 변화시키다, 변경하다, 고치다",
+              "examples": [
+                {
+                  "text": "<b>change</b> one's character",
+                  "translatedText": "성격을 고치다"
+                }
+              ],
+              "originalMeaning": "바꾸다, 변화시키다, 변경하다, 고치다"
+            },
+            {
+              "meaning": "<옷을> …으로 갈아입다, <침대의> 시트를 갈다, <어린아이의> 기저귀를 갈다",
+              "examples": [
+                {
+                  "text": "<b>change</b> soiled clothes for[into] clean ones",
+                  "translatedText": "더러운 옷을 깨끗한 옷으로 갈아입다"
+                }
+              ],
+              "originalMeaning": "<옷을> …으로 갈아입다, <침대의> 시트를 갈다, <어린아이의> 기저귀를 갈다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "변하다, 바뀌다, 변화하다 ((to, into, from))",
+              "examples": [
+                {
+                  "text": "Times <b>change</b> .",
+                  "translatedText": "세상은 변한다"
+                }
+              ],
+              "originalMeaning": "변하다, 바뀌다, 변화하다 ((to, into, from))"
+            },
+            {
+              "meaning": "갈아타다 ((for))",
+              "examples": [
+                {
+                  "text": "All <b>change</b> !",
+                  "translatedText": "모두 갈아타시오!"
+                }
+              ],
+              "originalMeaning": "갈아타다 ((for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "변화, 변천; 변경",
+              "examples": [
+                {
+                  "text": "a <b>change</b> for the better[worse]",
+                  "translatedText": "바람직한[바람직하지 않은] 변화"
+                }
+              ],
+              "originalMeaning": "변화, 변천; 변경"
+            },
+            {
+              "meaning": "바꿈, 교체; 이동; 기분 전환; 전지(轉地); 갈아탐, 환승; (옷을) 갈아입기;[the ~] [구어] (여성의) 갱년기",
+              "examples": [
+                {
+                  "text": "a <b>change</b> of clothes",
+                  "translatedText": "옷을 갈아입음"
+                }
+              ],
+              "originalMeaning": "바꿈, 교체; 이동; 기분 전환; 전지(轉地); 갈아탐, 환승; (옷을) 갈아입기;[the ~] [구어] (여성의) 갱년기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c7a644364e804b67bb14f9a4ee41003c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c7a644364e804b67bb14f9a4ee41003c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "changes"
+        },
+        {
+          "type": "과거형",
+          "value": "changed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "changing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "changed"
+        }
+      ],
+      "aliasConjugation": "changes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9e6c6dee3abfb8757f8f1762d2fd5a8c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 변화가 꼭 필요하다",
+      "text": "We badly need a <b>change</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 후 사정이 달라졌다.",
+      "text": "After that things changed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 전과 다름이 없었다",
+      "text": "He has not changed since."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "급행으로 갈아탈 수 있다.",
+      "text": "We can <b>change</b> to an express."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 술은 어쩐지 딴맛이 난다",
+      "text": "This liquor tastes changed."
+    }
+  ],
+  "isWordType": true
+}

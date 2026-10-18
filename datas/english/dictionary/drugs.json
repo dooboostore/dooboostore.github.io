@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "drug",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "drʌɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "약, 약제, 약품; [pl.] [미국] (치약 등) 위생 용품 (=medicine)",
+              "examples": [],
+              "originalMeaning": "약, 약제, 약품; [pl.] [미국] (치약 등) 위생 용품 (=<span class='related_word' lang='en' >medicine</span>)"
+            },
+            {
+              "meaning": "마약, 마취제(narcotic); 흥분제",
+              "examples": [],
+              "originalMeaning": "마약, 마취제(narcotic); 흥분제"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 약을 타다, <음식물에> 독약[마취제]을 넣다",
+              "examples": [],
+              "originalMeaning": "…에 약을 타다, <음식물에> 독약[마취제]을 넣다"
+            },
+            {
+              "meaning": "약[마취제]을 먹이다",
+              "examples": [],
+              "originalMeaning": "약[마취제]을 먹이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "마약을 상용하다",
+              "examples": [],
+              "originalMeaning": "마약을 상용하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/89e3afe1fb504d64a1f0e0f7f59c311f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/89e3afe1fb504d64a1f0e0f7f59c311f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "drugs"
+        },
+        {
+          "type": "과거형",
+          "value": "drugged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "drugging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "drugged"
+        }
+      ],
+      "aliasConjugation": "drugs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e86814ae41c4464bfba10f172018aa48",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약의 약효는 굉장하다",
+      "text": "This <b>drug</b> is extremely potent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 두통에 잘 듣는다",
+      "text": "The <b>drug</b> is good for headaches."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "약이 듣지 않게 됐다",
+      "text": "The <b>drug</b> has lost its effect on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 그의 신경에 효험이 있었다.",
+      "text": "This <b>drug</b> acted on his nerves."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약은 곧 약효를 나타냅니다",
+      "text": "The <b>drug</b> will soon work upon[on] you."
+    }
+  ],
+  "isWordType": true
+}

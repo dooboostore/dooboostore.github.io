@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "<b>odd</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɑːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "이상한, 기묘한, 이상야릇한; 상식 밖의; 생각하지 못한, 뜻밖의 (=strange)",
+              "examples": [
+                {
+                  "text": "Her behavior seemed a little <b>odd</b>.",
+                  "translatedText": "그녀의 행동은 약간 이상했다."
+                }
+              ],
+              "originalMeaning": "이상한, 기묘한, 이상야릇한; 상식 밖의; 생각하지 못한, 뜻밖의 (=<span class='related_word' lang='en' >strange</span>)"
+            },
+            {
+              "meaning": "홀수[기수]의(opp. even)",
+              "examples": [
+                {
+                  "text": "an <b>odd</b> month",
+                  "translatedText": "큰달 ((31일이 있는 달))"
+                }
+              ],
+              "originalMeaning": "홀수[기수]의(opp. even)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[pl.] ⇒ odds, 남은 것, 여분",
+              "examples": [],
+              "originalMeaning": "[pl.] ⇒ odds, 남은 것, 여분"
+            },
+            {
+              "meaning": "[골프] (약한 사람에게 핸디캡으로서 허용하는) 덤으로 주는 일타(一打), [the ~] 따고 들어가는 1점(cf. ODDS 3)",
+              "examples": [],
+              "originalMeaning": "[골프] (약한 사람에게 핸디캡으로서 허용하는) 덤으로 주는 일타(一打), [the ~] 따고 들어가는 1점(cf. ODDS 3)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb43e4583bc741fab7dc0c59d3483eb6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb43e4583bc741fab7dc0c59d3483eb6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "odder"
+        },
+        {
+          "type": "최상급",
+          "value": "oddest"
+        }
+      ],
+      "aliasConjugation": "odder",
+      "aliasConjugationPos": "비교급",
+      "gdid": "7f94ec88784c32ce06a383c2ae39160d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우수리 300원은 깎아 드리겠습니다",
+      "text": "I'll take off the <b>odd</b> 300 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 사람은 이상야릇한 데가 있다",
+      "text": "There's something <b>odd</b> about that man."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자의 이름이 생각나지 않다니 이상해.",
+      "text": "It’s <b>odd</b> (that) I can’t think of her name."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 뜨내기장사로 많은 돈을 모았다",
+      "text": "He has amassed a lot of money by doing a casual[an <b>odd</b>] business."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우수리 100원을 빼고 5,000원에 드리겠습니다",
+      "text": "I'll knock off the <b>odd</b> hundred won and make it a round five thousand."
+    }
+  ],
+  "isWordType": true
+}

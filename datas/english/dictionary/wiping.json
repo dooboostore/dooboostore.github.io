@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "<b>wipe</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "waɪp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "훔치다, 씻다, 닦다, 닦아 내다 ((away, up))",
+              "examples": [
+                {
+                  "text": "<b>Wipe</b> your eyes.",
+                  "translatedText": "눈물을 닦아라; 그만 울어."
+                }
+              ],
+              "originalMeaning": "훔치다, 씻다, 닦다, 닦아 내다 ((away, up))"
+            },
+            {
+              "meaning": "비벼대다, 북북 문지르다; <이음매에> 납땜하다; 문질러 바르다",
+              "examples": [
+                {
+                  "text": "<b>wipe</b> a cloth back and forth over the table",
+                  "translatedText": "걸레로 테이블을 북북 문지르다"
+                }
+              ],
+              "originalMeaning": "비벼대다, 북북 문지르다; <이음매에> 납땜하다; 문질러 바르다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(칼·지팡이 등으로 휩쓸듯이) 한 대 갈기다, 치다",
+              "examples": [
+                {
+                  "text": "<b>wipe</b> at a person with a stick",
+                  "translatedText": "지팡이로 …을 후려치다"
+                }
+              ],
+              "originalMeaning": "(칼·지팡이 등으로 휩쓸듯이) 한 대 갈기다, 치다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "닦음, 훔침, 닦아 냄",
+              "examples": [],
+              "originalMeaning": "닦음, 훔침, 닦아 냄"
+            },
+            {
+              "meaning": "주먹다짐",
+              "examples": [],
+              "originalMeaning": "주먹다짐"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/180b4c9ba00546e989b064f32f3ed50b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/180b4c9ba00546e989b064f32f3ed50b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wipes"
+        },
+        {
+          "type": "과거형",
+          "value": "wiped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wiping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wiped"
+        }
+      ],
+      "aliasConjugation": "wipes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ea4e79d9e943979e35d35a0d1c20d91b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 수건으로 손을 닦았다.",
+      "text": "He wiped his hands on[with] the towel."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 나라는 지도에서 말살되었다",
+      "text": "The country was wiped off the map."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전 시가의 거지반이 파괴되었다",
+      "text": "The bulk of the whole city was wiped out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 접시를 닦은 뒤에 마루를 닦았다",
+      "text": "He wiped the floor after drying dishes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 더 잘 보고자 안경을 닦았다",
+      "text": "He wiped his spectacles in order to see better."
+    }
+  ],
+  "isWordType": true
+}

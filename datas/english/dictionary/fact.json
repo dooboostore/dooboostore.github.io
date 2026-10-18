@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "fact",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fækt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(실제로 일어난[일어나고 있는]) 사실, (실제의) 일",
+              "examples": [
+                {
+                  "text": "an established <b>fact</b>",
+                  "translatedText": "움직일 수 없는 사실"
+                }
+              ],
+              "originalMeaning": "(실제로 일어난[일어나고 있는]) 사실, (실제의) 일"
+            },
+            {
+              "meaning": "(이론·의견·상상 등과 대비하여) 사실, 실제, 현실, 진상(cf. TRUTH)",
+              "examples": [
+                {
+                  "text": "a story founded on <b>fact</b>",
+                  "translatedText": "사실에 근거를 둔 이야기"
+                }
+              ],
+              "originalMeaning": "(이론·의견·상상 등과 대비하여) 사실, 실제, 현실, 진상(cf. TRUTH)"
+            },
+            {
+              "meaning": "[보통 the ~] (…이라는) 사실",
+              "examples": [
+                {
+                  "text": "due to the <b>fact</b> that …",
+                  "translatedText": "…이라는 사실로 인하여"
+                }
+              ],
+              "originalMeaning": "[보통 the ~] (…이라는) 사실"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a141b593a3514102919e5dab80149892",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a141b593a3514102919e5dab80149892",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a53e41c230599253587260d3ebe85773",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하기야 내가 잘못일지도 모르지",
+      "text": "I may, in <b>fact</b>, be wrong."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "옳건 옳지 않건 그것은 사실이다.",
+      "text": "Right or not, it is a <b>fact</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것이 사실임을 나는 장담한다",
+      "text": "I affirm it to be a <b>fact</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그것을 사실로 알고 있다.",
+      "text": "I know a thing for a <b>fact</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 사실에서 …하다는 것을 알 수가 있다.",
+      "text": "This <b>fact</b> shows us that ...."
+    }
+  ],
+  "isWordType": true
+}

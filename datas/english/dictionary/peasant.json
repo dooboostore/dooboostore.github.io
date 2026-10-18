@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "<b>peasant</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpeznt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(소규모 농사를 짓는) 농부, 영세 농민; 소작인, 소작농(cf. FARMER)",
+              "examples": [
+                {
+                  "text": "<b>peasant</b> folk",
+                  "translatedText": "소농민"
+                }
+              ],
+              "originalMeaning": "(소규모 농사를 짓는) 농부, 영세 농민; 소작인, 소작농(cf. FARMER)"
+            },
+            {
+              "meaning": "시골뜨기",
+              "examples": [
+                {
+                  "text": "a <b>peasant</b> girl",
+                  "translatedText": "시골 처녀"
+                }
+              ],
+              "originalMeaning": "시골뜨기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4427c4b0c40c4869b14b05da191ae64e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4427c4b0c40c4869b14b05da191ae64e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7c23c11d23af42ea7507f532a3bb0110",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 사장은 농민 출신이다",
+      "text": "The president of our concern comes from <b>peasant</b> stock."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 농민 출신이다.",
+      "text": "He is by pedigree a <b>peasant</b>."
+    }
+  ],
+  "isWordType": true
+}

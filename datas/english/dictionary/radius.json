@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "<b>radius</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈreɪdiəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "반지름, 반경(cf. DIAMETER)",
+              "examples": [
+                {
+                  "text": "The <b>radius</b> of a circle is half the diameter.",
+                  "translatedText": "원의 반지름은 지름의 반이다."
+                }
+              ],
+              "originalMeaning": "반지름, 반경(cf. DIAMETER)"
+            },
+            {
+              "meaning": "반경 범위, 반지름의 길이",
+              "examples": [
+                {
+                  "text": "every house within a <b>radius</b> of 50 miles",
+                  "translatedText": "반경 50마일 이내의 모든 집"
+                }
+              ],
+              "originalMeaning": "반경 범위, 반지름의 길이"
+            },
+            {
+              "meaning": "(활동·능력 등의) 범위, 구역, 행동 반경",
+              "examples": [],
+              "originalMeaning": "(활동·능력 등의) 범위, 구역, 행동 반경"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1c3d5012dff843f0b5f683781b0c3d53",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1c3d5012dff843f0b5f683781b0c3d53",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "radii, radiuses"
+        }
+      ],
+      "aliasConjugation": "radii, radiuses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "d436b6619471149b4461383aecf24757",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "원의 반지름은 지름의 반이다.",
+      "text": "The <b>radius</b> of a circle is half the diameter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "폭발 소리가 10마일 사방에 들렸다",
+      "text": "The explosion was heard within a <b>radius</b> of ten miles[over a ten mile range]."
+    }
+  ],
+  "isWordType": true
+}

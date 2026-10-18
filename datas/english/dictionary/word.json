@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "word",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "wɜːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "말, 낱말, 단어",
+              "examples": [],
+              "originalMeaning": "말, 낱말, 단어"
+            },
+            {
+              "meaning": "[pl.] (곡에 대하여) 가사, (배우의) 대사",
+              "examples": [],
+              "originalMeaning": "[pl.] (곡에 대하여) 가사, (배우의) 대사"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[well 등의 부사와 함께] …을 말로 표현하다, 말을 고르다",
+              "examples": [],
+              "originalMeaning": "[well 등의 부사와 함께] …을 말로 표현하다, 말을 고르다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f673fe28582e40fb84aa83432b602ddb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f673fe28582e40fb84aa83432b602ddb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "words"
+        },
+        {
+          "type": "과거형",
+          "value": "worded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wording"
+        },
+        {
+          "type": "과거 분사",
+          "value": "worded"
+        }
+      ],
+      "aliasConjugation": "words",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "17c7dc8f3bc9ed9fae587fbe520e0468",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 말을 믿어도 좋다",
+      "text": "Believe me. or Trust me. or Take my <b>word</b> for it. or You've got my <b>word</b> for it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 말해도 그에게는 마이동풍이었다",
+      "text": "All my words fell on deaf[heedless] ears. or All my advice was just so much sound to him. or All my words fell flat upon[were unheeded by] him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 말뿐이지 실행이 없는 친구다",
+      "text": "He is a man of words, and not of deeds. or He is all talk and no action."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나쁜 말을 하면 못쓴다",
+      "text": "Don't use bad words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 네 말을 믿는다.",
+      "text": "I depend on your <b>word</b>."
+    }
+  ],
+  "isWordType": true
+}

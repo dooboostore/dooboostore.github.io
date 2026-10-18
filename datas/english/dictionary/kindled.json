@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "<b>kindle</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkɪndl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "불붙이다, 태우다, 불을 켜다",
+              "examples": [
+                {
+                  "text": "<b>kindle</b> a lamp",
+                  "translatedText": "등불을 붙이다"
+                }
+              ],
+              "originalMeaning": "불붙이다, 태우다, 불을 켜다"
+            },
+            {
+              "meaning": "밝게 하다, 빛내다",
+              "examples": [
+                {
+                  "text": "<b>kindle</b> the sky",
+                  "translatedText": "하늘을 밝게 하다"
+                }
+              ],
+              "originalMeaning": "밝게 하다, 빛내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "불붙다, 타기 시작하다, 타오르다 ((up))",
+              "examples": [],
+              "originalMeaning": "불붙다, 타기 시작하다, 타오르다 ((up))"
+            },
+            {
+              "meaning": "흥분하다, 격하다 ((at))",
+              "examples": [],
+              "originalMeaning": "흥분하다, 격하다 ((at))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b65798b8ac624d7a91461c39e79d803d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b65798b8ac624d7a91461c39e79d803d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "kindles"
+        },
+        {
+          "type": "과거형",
+          "value": "kindled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "kindling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "kindled"
+        }
+      ],
+      "aliasConjugation": "kindles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dc301037096145f8fbf45a73663be26f",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>kindle</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<토끼가 새끼를> 낳다",
+              "examples": [],
+              "originalMeaning": "<토끼가 새끼를> 낳다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<토끼가> 새끼를 낳다",
+              "examples": [],
+              "originalMeaning": "<토끼가> 새끼를 낳다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(토끼·고양이 등의) 한배의 새끼",
+              "examples": [],
+              "originalMeaning": "(토끼·고양이 등의) 한배의 새끼"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f325932a8fc044fd90fd530379854bf4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f325932a8fc044fd90fd530379854bf4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "kindles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "df0c127211c091e9fc66744ffc3dd64c",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 눈은 행복으로 빛났다.",
+      "text": "Happiness <b>kindled</b> her eyes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 마음은 동정심으로 불탔다.",
+      "text": "Her heart was <b>kindled</b> up with[to] sympathy."
+    }
+  ],
+  "isWordType": true
+}

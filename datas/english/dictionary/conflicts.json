@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "conflict",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "투쟁(struggle), 전투(fight), 분쟁",
+              "examples": [
+                {
+                  "text": "a <b>conflict</b> of arms",
+                  "translatedText": "무력 충돌, 교전"
+                }
+              ],
+              "originalMeaning": "투쟁(struggle), 전투(fight), 분쟁"
+            },
+            {
+              "meaning": "(주의상의) 다툼, 논쟁, 언쟁, 쟁의; 알력",
+              "examples": [],
+              "originalMeaning": "(주의상의) 다툼, 논쟁, 언쟁, 쟁의; 알력"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사상·감정 등이> (…와) 충돌하다, 상충[상반]되다, 모순되다 ((with))",
+              "examples": [
+                {
+                  "text": "Our interests <b>conflict</b> with theirs.",
+                  "translatedText": "우리의 이해는 그들의 이해와 상충된다."
+                }
+              ],
+              "originalMeaning": "<사상·감정 등이> (…와) 충돌하다, 상충[상반]되다, 모순되다 ((with))"
+            },
+            {
+              "meaning": "(…와) 다투다, 싸우다 ((with))",
+              "examples": [],
+              "originalMeaning": "(…와) 다투다, 싸우다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d89a2129c02a4bfe9ec3227988b607ef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d89a2129c02a4bfe9ec3227988b607ef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "conflicts"
+        },
+        {
+          "type": "과거형",
+          "value": "conflicted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "conflicting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "conflicted"
+        }
+      ],
+      "aliasConjugation": "conflicts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "22e4e30aecef03e429b56be0e1152af2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리의 이해는 그들의 이해와 상충된다.",
+      "text": "Our interests <b>conflict</b> with theirs."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저 당은 내분이 끊이지 않는다",
+      "text": "There is constant <b>conflict</b> within that party."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 마음속에 갈등이 생겼다",
+      "text": "A psychological[emotional] <b>conflict</b> was created in my mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사건 탓으로 주요한 갈등이 시작되었다",
+      "text": "The incident triggered[sparked off] a major <b>conflict</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 점에 대해서는 의견이 첨예하게 대립하고 있다",
+      "text": "There is a sharp <b>conflict</b> of opinion on this point."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "<b>interpose</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˌɪntərˈpoʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "사이에 끼우다[두다], 삽입하다; <장애 등을> 개입시키다 ((between, in, among))",
+              "examples": [
+                {
+                  "text": "<b>interpose</b> oneself",
+                  "translatedText": "사이에 끼어들다"
+                }
+              ],
+              "originalMeaning": "사이에 끼우다[두다], 삽입하다; <장애 등을> 개입시키다 ((between, in, among))"
+            },
+            {
+              "meaning": "(이야기 도중에) <이의 등을> 제기하다, 간섭[개입]하다",
+              "examples": [],
+              "originalMeaning": "(이야기 도중에) <이의 등을> 제기하다, 간섭[개입]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "중재하다, 조정에 나서다 ((between, in))",
+              "examples": [
+                {
+                  "text": "<b>interpose</b> in a dispute",
+                  "translatedText": "분쟁을 중재하다"
+                }
+              ],
+              "originalMeaning": "중재하다, 조정에 나서다 ((between, in))"
+            },
+            {
+              "meaning": "간섭하다, 개입하다",
+              "examples": [],
+              "originalMeaning": "간섭하다, 개입하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a59aa639367b42299a6f9be9df7f20be",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a59aa639367b42299a6f9be9df7f20be",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "interposes"
+        },
+        {
+          "type": "과거형",
+          "value": "interposed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "interposing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "interposed"
+        }
+      ],
+      "aliasConjugation": "interposes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "992a394f3ce81d7dd1e52a92544dfba8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어떤 딱딱함이 독자와 저자 사이에 개재되어 있다.",
+      "text": "A certain formality is <b>interposed</b> between the reader and the author."
+    }
+  ],
+  "isWordType": true
+}

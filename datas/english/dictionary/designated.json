@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "entry": "<b>designated</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "déziɡnèitid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "지정된, 관선의",
+              "examples": [],
+              "originalMeaning": "지정된, 관선의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/54a2d0c2fb764090995315bb248d7a56",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/54a2d0c2fb764090995315bb248d7a56",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cfd380d436169602e235953991d560d5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>designate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "명시하다, 가리키다, 지적하다; 나타내다, 의미하다(denote, signify)",
+              "examples": [
+                {
+                  "text": "<b>designate</b> the boundaries of a country",
+                  "translatedText": "국경을 명시하다"
+                }
+              ],
+              "originalMeaning": "명시하다, 가리키다, 지적하다; 나타내다, 의미하다(denote, signify)"
+            },
+            {
+              "meaning": "지명하다, 선정하다; 임명하다(appoint) ((as, to, for))",
+              "examples": [
+                {
+                  "text": "They <b>designated</b> him to[for] the office.",
+                  "translatedText": "그들은 그를 그 직책에 임명했다."
+                }
+              ],
+              "originalMeaning": "지명하다, 선정하다; 임명하다(appoint) ((as, to, for))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[명사 뒤에서] 지명을 받은, 지정된",
+              "examples": [
+                {
+                  "text": "a bishop <b>designate</b>",
+                  "translatedText": "임명된 주교 ((아직 취임하지 않은))"
+                }
+              ],
+              "originalMeaning": "[명사 뒤에서] 지명을 받은, 지정된"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c56f0b4c54bb401bb2408de2a94893ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c56f0b4c54bb401bb2408de2a94893ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "designates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9d86d17162843871bfdc378692b2c25a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 그 직책에 임명했다.",
+      "text": "They <b>designated</b> him to[for] the office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 나라의 통치자는 왕이라고 일컬어졌다.",
+      "text": "The ruler of the country was <b>designated</b> (as) king."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "민방위 훈련",
+      "text": "(the day <b>designated</b> for) Civil Defense training"
+    }
+  ],
+  "isWordType": true
+}

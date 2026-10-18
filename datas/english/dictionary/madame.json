@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "entry": "<b>madame</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mǽdəm,mədǽm,-dɑ́:m"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부인, 마님, …부인 ((프랑스에서 기혼에 대한 호칭; 성·칭호 앞에 붙이는 경칭; 영어의 Mrs.와 거의 같음; 略 Mme., (pl.) Mmes.))",
+              "examples": [
+                {
+                  "text": "<b>Madame</b> Curie",
+                  "translatedText": "퀴리 부인"
+                }
+              ],
+              "originalMeaning": "부인, 마님, …부인 ((프랑스에서 기혼에 대한 호칭; 성·칭호 앞에 붙이는 경칭; 영어의 Mrs.와 거의 같음; 略 Mme., (pl.) Mmes.))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0be599fc070042f5bde3f58e17faf04c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0be599fc070042f5bde3f58e17faf04c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8e09631bbb3523e246bf7465156b6f6e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "박 여사",
+      "text": "Mrs[Lady, <b>Madame</b>] Park"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "퀴리 부인",
+      "text": "<b>Madame</b> Curie"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "entry": "hum",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hʌm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<벌·팽이·기계 등이> 윙윙거리다",
+              "examples": [
+                {
+                  "text": "A bee hums.",
+                  "translatedText": "벌이 윙윙거린다."
+                }
+              ],
+              "originalMeaning": "<벌·팽이·기계 등이> 윙윙거리다"
+            },
+            {
+              "meaning": "<청중 등이> 왁자지껄하다, 웅성대다",
+              "examples": [],
+              "originalMeaning": "<청중 등이> 왁자지껄하다, 웅성대다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "웅얼웅얼 말하다, <노래를> 콧노래로 부르다",
+              "examples": [
+                {
+                  "text": "He is <b>hum</b> minga song to himself.",
+                  "translatedText": "그는 혼자서 콧노래를 부르고 있다."
+                }
+              ],
+              "originalMeaning": "웅얼웅얼 말하다, <노래를> 콧노래로 부르다"
+            },
+            {
+              "meaning": "<…에게> 콧노래를 불러 …하게 하다",
+              "examples": [
+                {
+                  "text": "<b>hum</b> a child to sleep",
+                  "translatedText": "콧노래를 불러 아이를 재우다"
+                }
+              ],
+              "originalMeaning": "<…에게> 콧노래를 불러 …하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "윙윙(소리)",
+              "examples": [],
+              "originalMeaning": "윙윙(소리)"
+            },
+            {
+              "meaning": "멀리서 들리는 잡음, 와글와글",
+              "examples": [
+                {
+                  "text": "a <b>hum</b> of voices",
+                  "translatedText": "와글와글하는 소리"
+                }
+              ],
+              "originalMeaning": "멀리서 들리는 잡음, 와글와글"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/49ff354cead94eaf8952808cbdf787f8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/49ff354cead94eaf8952808cbdf787f8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hums"
+        },
+        {
+          "type": "과거형",
+          "value": "hummed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "humming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hummed"
+        }
+      ],
+      "aliasConjugation": "hums",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f13e2f4c141ef46f81c09916f0134a63",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "hum",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사기, 협잡(humbug)",
+              "examples": [],
+              "originalMeaning": "사기, 협잡(humbug)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/da06fe04e24b47e39829469a47074bef",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/da06fe04e24b47e39829469a47074bef",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "hums",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8c0add924d0a5c3f93305956a716fcd7",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 혼자서 콧노래를 부르고 있다.",
+      "text": "He is humming a song to himself."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모기가 앵앵거리는 소리를 들었다",
+      "text": "I heard the faint <b>hum</b> of a mosquito."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "벌이 윙윙거린다.",
+      "text": "A bee hums."
+    }
+  ],
+  "isWordType": true
+}

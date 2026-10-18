@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "perform",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pərˈfɔːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<임무·일·약속·명령 등을> 이행하다, 실행하다, 다하다; 수행하다; 성취하다",
+              "examples": [
+                {
+                  "text": "<b>perform</b> surgery",
+                  "translatedText": "외과 수술을 하다"
+                }
+              ],
+              "originalMeaning": "<임무·일·약속·명령 등을> 이행하다, 실행하다, 다하다; 수행하다; 성취하다"
+            },
+            {
+              "meaning": "<의식 등을> 집행[거행]하다",
+              "examples": [
+                {
+                  "text": "<b>perform</b> a marriage ceremony",
+                  "translatedText": "결혼식을 올리다"
+                }
+              ],
+              "originalMeaning": "<의식 등을> 집행[거행]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "명령[약속]을 실행하다, 일을 해내다",
+              "examples": [],
+              "originalMeaning": "명령[약속]을 실행하다, 일을 해내다"
+            },
+            {
+              "meaning": "<사람이> 연기하다, 연주하다, (악기를) 타다, 켜다, 불다, 노래하다 ((on)); <동물이> 재주를 부리다",
+              "examples": [
+                {
+                  "text": "<b>perform</b> before a large audience",
+                  "translatedText": "많은 관중 앞에서 연기[연주, 노래]하다"
+                }
+              ],
+              "originalMeaning": "<사람이> 연기하다, 연주하다, (악기를) 타다, 켜다, 불다, 노래하다 ((on)); <동물이> 재주를 부리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8408d4f5204b4ec1a6ce88724d7e1651",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8408d4f5204b4ec1a6ce88724d7e1651",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "performs"
+        },
+        {
+          "type": "과거형",
+          "value": "performed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "performing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "performed"
+        }
+      ],
+      "aliasConjugation": "performs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a4f7034cf2cdf12c7767cf285c56779b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 무난히 임무를 수행했다",
+      "text": "He performed his duty without difficulty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물개들이 곡마단에서 재주를 잘 부렸다.",
+      "text": "The seals performed well at the circus."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 수술하기에는 때가 늦었다",
+      "text": "It is too late to <b>perform</b> an operation on him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 왕 앞에서 공연할 영광을 차지했다.",
+      "text": "They had the honor to <b>perform</b>[of performing] the play before the king."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 신원 미상의 사체를 부검했다",
+      "text": "They performed[did] an autopsy on the unidentified body[corpse]."
+    }
+  ],
+  "isWordType": true
+}

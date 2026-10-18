@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "tree",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "triː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "나무, 수목, 교목; (꽃·열매와 구별하여) 줄기 부분",
+              "examples": [],
+              "originalMeaning": "나무, 수목, 교목; (꽃·열매와 구별하여) 줄기 부분"
+            },
+            {
+              "meaning": "(작은 나무나 초목이라도) 교목처럼 자라는 것",
+              "examples": [
+                {
+                  "text": "a rose <b>tree</b>",
+                  "translatedText": "장미 나무"
+                }
+              ],
+              "originalMeaning": "(작은 나무나 초목이라도) 교목처럼 자라는 것"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<짐승을> 나무 위로 쫓아올리다",
+              "examples": [],
+              "originalMeaning": "<짐승을> 나무 위로 쫓아올리다"
+            },
+            {
+              "meaning": "몰아대다, 궁지에 빠뜨리다",
+              "examples": [],
+              "originalMeaning": "몰아대다, 궁지에 빠뜨리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "나무에 오르다, 나무 위로 쫓겨가다",
+              "examples": [],
+              "originalMeaning": "나무에 오르다, 나무 위로 쫓겨가다"
+            },
+            {
+              "meaning": "나무 모양이 되다",
+              "examples": [],
+              "originalMeaning": "나무 모양이 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66640d0928324482b88029f9061d40e3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66640d0928324482b88029f9061d40e3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "trees"
+        },
+        {
+          "type": "과거형",
+          "value": "treed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "treeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "treed"
+        }
+      ],
+      "aliasConjugation": "trees",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "181ecba4cb361d80d9632a6b53f35213",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나무의 뿌리는 사람의 위에 상당한다",
+      "text": "What a root does for a <b>tree</b> is the same as what a stomach does for a man. or What a root is to a <b>tree</b> is what a stomach is to a human body."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 나무는 수액을 내뿜는다.",
+      "text": "The trees weep sap."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 나무는 열매가 잘 연다",
+      "text": "This <b>tree</b> bears well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나무를 마구 내려쳤다.",
+      "text": "He hacked at the <b>tree</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나무에 꽃이 활짝 피었다.",
+      "text": "Trees burst into bloom."
+    }
+  ],
+  "isWordType": true
+}

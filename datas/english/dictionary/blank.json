@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "blank",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "blæŋk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "백지의, 공백의; [상업] 백지식의, 무기명의 (=empty)",
+              "examples": [
+                {
+                  "text": "a <b>blank</b> sheet of paper",
+                  "translatedText": "백지 한 장"
+                }
+              ],
+              "originalMeaning": "백지의, 공백의; [상업] 백지식의, 무기명의 (=<span class='related_word' lang='en' >empty</span>)"
+            },
+            {
+              "meaning": "<공간 등이> 빈, <벽 등이> 창이나 출입구가 없는",
+              "examples": [
+                {
+                  "text": "a <b>blank</b> space",
+                  "translatedText": "여백; 빈 터"
+                }
+              ],
+              "originalMeaning": "<공간 등이> 빈, <벽 등이> 창이나 출입구가 없는"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "공백, 공란, 여백",
+              "examples": [
+                {
+                  "text": "Fill in[out] the <b>blank</b> s.",
+                  "translatedText": "(문제의) 공간을 메우시오."
+                }
+              ],
+              "originalMeaning": "공백, 공란, 여백"
+            },
+            {
+              "meaning": "(문서·답안 용지 등의) 빈 곳, 공간",
+              "examples": [],
+              "originalMeaning": "(문서·답안 용지 등의) 빈 곳, 공간"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "희게 하다; 지우다, 무효로 하다 ((out))",
+              "examples": [],
+              "originalMeaning": "희게 하다; 지우다, 무효로 하다 ((out))"
+            },
+            {
+              "meaning": "비우다",
+              "examples": [],
+              "originalMeaning": "비우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/041cbe5ddce0497d86a7576c74bfa9ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/041cbe5ddce0497d86a7576c74bfa9ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "blanker"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blanks"
+        },
+        {
+          "type": "최상급",
+          "value": "blankest"
+        },
+        {
+          "type": "과거형",
+          "value": "blanked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blanking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blanked"
+        }
+      ],
+      "aliasConjugation": "blanker",
+      "aliasConjugationPos": "비교급",
+      "gdid": "bc1e80fceeb546a1c5aa2517b00e6460",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전혀 기억이 나지 않아",
+      "text": "My mind is a complete <b>blank</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다음 빈 칸을 메우시오",
+      "text": "Fill in the following blanks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 차디찬 거절을 했다",
+      "text": "She gave a point-<b>blank</b>[flat] refusal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 교정지에는 결자가 많다",
+      "text": "These proof sheets are full of blanks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 공백의 페이지에 자기 이름을 써 넣었다.",
+      "text": "He lettered his name on the <b>blank</b> page."
+    }
+  ],
+  "isWordType": true
+}

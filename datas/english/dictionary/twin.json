@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "twin",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "twɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쌍둥이의 한 사람, [pl.] 쌍둥이",
+              "examples": [],
+              "originalMeaning": "쌍둥이의 한 사람, [pl.] 쌍둥이"
+            },
+            {
+              "meaning": "닮은 사람[물건], …의 한 쪽, [pl.] 쌍",
+              "examples": [],
+              "originalMeaning": "닮은 사람[물건], …의 한 쪽, [pl.] 쌍"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "쌍둥이의; [식물] 쌍생(雙生)의, 둘이 꼭 같은, 쌍을 이루는",
+              "examples": [
+                {
+                  "text": "<b>twin</b> brother",
+                  "translatedText": "쌍둥이 형제"
+                }
+              ],
+              "originalMeaning": "쌍둥이의; [식물] 쌍생(雙生)의, 둘이 꼭 같은, 쌍을 이루는"
+            },
+            {
+              "meaning": "한 쌍의, 많이 닮은",
+              "examples": [],
+              "originalMeaning": "한 쌍의, 많이 닮은"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "쌍둥이로 배다[낳다]",
+              "examples": [],
+              "originalMeaning": "쌍둥이로 배다[낳다]"
+            },
+            {
+              "meaning": "짝이 되게 하다 ((with))",
+              "examples": [],
+              "originalMeaning": "짝이 되게 하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f717d211e1dd4cf2bf7d6ffd827a03ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f717d211e1dd4cf2bf7d6ffd827a03ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "twins"
+        },
+        {
+          "type": "과거형",
+          "value": "twinned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "twinning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "twinned"
+        }
+      ],
+      "aliasConjugation": "twins",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "91d659faae41d42c18cc8cbc20b6a639",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 쌍동이를 구별할 수가 없다",
+      "text": "I couldn't tell the twins apart."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 쌍동이던데 전혀 다르더라",
+      "text": "Although they're twins, they are as different as night and day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쌍둥이는 똑같이 닮았다",
+      "text": "The twins are as like as two peas (in a pod)."
+    }
+  ],
+  "isWordType": true
+}

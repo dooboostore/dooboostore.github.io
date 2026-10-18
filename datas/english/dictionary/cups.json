@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "entry": "cup",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kʌp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "찻종, 찻잔, 잔 ((홍차·커피용))(cf. GLASS)",
+              "examples": [
+                {
+                  "text": "a coffee <b>cup</b>",
+                  "translatedText": "커피 잔"
+                }
+              ],
+              "originalMeaning": "찻종, 찻잔, 잔 ((홍차·커피용))(cf. GLASS)"
+            },
+            {
+              "meaning": "한 잔(의 양)(cupful) ((of))",
+              "examples": [
+                {
+                  "text": "a <b>cup</b> of coffee",
+                  "translatedText": "커피 한 잔"
+                }
+              ],
+              "originalMeaning": "한 잔(의 양)(cupful) ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "잔에 넣다[받다]",
+              "examples": [
+                {
+                  "text": "<b>cup</b> water from brook",
+                  "translatedText": "시냇물을 잔으로 뜨다"
+                }
+              ],
+              "originalMeaning": "잔에 넣다[받다]"
+            },
+            {
+              "meaning": "<환자에게서> 부항단지로 피를 빨아내다",
+              "examples": [],
+              "originalMeaning": "<환자에게서> 부항단지로 피를 빨아내다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잔 모양을 이루다",
+              "examples": [],
+              "originalMeaning": "잔 모양을 이루다"
+            },
+            {
+              "meaning": "부항단지를 사용하다",
+              "examples": [],
+              "originalMeaning": "부항단지를 사용하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4c8b5fc5c827428da1c772f4a11d7fa4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4c8b5fc5c827428da1c772f4a11d7fa4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cups"
+        },
+        {
+          "type": "과거형",
+          "value": "cupped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cupping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cupped"
+        }
+      ],
+      "aliasConjugation": "cups",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "01083330d958b844f7d79a085ded2b36",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "CUP",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "Cambridge University Press",
+              "examples": [],
+              "originalMeaning": "Cambridge University Press"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d81cd8720c1c4cc8bb41ab1bc1f67b81",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d81cd8720c1c4cc8bb41ab1bc1f67b81",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5898c3867c09951783775da400e250cd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "커피 한 잔 하면 기운이 날 것이다",
+      "text": "A <b>cup</b> of coffee will refresh you. or A <b>cup</b> of coffee will put you in good spirits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차 한 잔만 다오",
+      "text": "Will you give me a <b>cup</b> of tea?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그건 내 취향에 맞지 않아",
+      "text": "It's not my style[type]. or It isn't for me. or It's not my <b>cup</b> of tea. or It's not my thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람은 마시기만 하면 재미있거든",
+      "text": "He is merry in his <b>cups</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 내가 좋아하는 것이 아니다.",
+      "text": "That’s not my <b>cup</b> of tea."
+    }
+  ],
+  "isWordType": true
+}

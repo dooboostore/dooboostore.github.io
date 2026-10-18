@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "poor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɔːr; pʊr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "가난한(opp. rich)",
+              "examples": [
+                {
+                  "text": "<b>poor</b> people",
+                  "translatedText": "가난한 사람들"
+                }
+              ],
+              "originalMeaning": "가난한(opp. rich)"
+            },
+            {
+              "meaning": "생활 보호 대상의, 빈민의",
+              "examples": [],
+              "originalMeaning": "생활 보호 대상의, 빈민의"
+            },
+            {
+              "meaning": "[the ~; 명사적; 집합적; 복수 취급] 가난한 사람들, 빈민(opp. the rich)",
+              "examples": [
+                {
+                  "text": "We must help the <b>poor</b>.",
+                  "translatedText": "가난한 사람을 도와야 한다."
+                }
+              ],
+              "originalMeaning": "[the ~; 명사적; 집합적; 복수 취급] 가난한 사람들, 빈민(opp. the rich)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1e2091df738b4c26a2a64743d1a4470d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1e2091df738b4c26a2a64743d1a4470d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "poorer"
+        },
+        {
+          "type": "최상급",
+          "value": "poorest"
+        }
+      ],
+      "aliasConjugation": "poorer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "5ea9a3bfbb98d0c3b453458557f38c61",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가난한 사람을 도와야 한다.",
+      "text": "We must help the <b>poor</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 아들은 불행히도 전사했다.",
+      "text": "My <b>poor</b> son died in war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 판자는 잘 밀리지 않는다",
+      "text": "This board planes poorly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가난한 사람은 쉴 겨를이 없다",
+      "text": "<b>Poor</b> men have no leisure."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 남편은 박봉을 받고 있다",
+      "text": "My husband is poorly paid."
+    }
+  ],
+  "isWordType": true
+}

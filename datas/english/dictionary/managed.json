@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "manage",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmænɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "이럭저럭 해내다, 용케 …해내다; [비꼼] 어리석게도 …하다; 간신히[억지로] …하다",
+              "examples": [
+                {
+                  "text": "I'll <b>manage</b> it somehow.",
+                  "translatedText": "어떻게든 해보겠다."
+                }
+              ],
+              "originalMeaning": "이럭저럭 해내다, 용케 …해내다; [비꼼] 어리석게도 …하다; 간신히[억지로] …하다"
+            },
+            {
+              "meaning": "<사업 등을> 경영[관리]하다, 운영하다; <팀 등을> 감독하다",
+              "examples": [
+                {
+                  "text": "<b>manage</b> investment",
+                  "translatedText": "투자 자금을 운용하다"
+                }
+              ],
+              "originalMeaning": "<사업 등을> 경영[관리]하다, 운영하다; <팀 등을> 감독하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 잘 해 나가다, 그럭저럭 꾸려나가다 ((with, without)); <일이> 잘 처리되다",
+              "examples": [
+                {
+                  "text": "<b>manage</b> on his salary",
+                  "translatedText": "그의 급료로 이럭저럭 꾸려나가다"
+                }
+              ],
+              "originalMeaning": "<사람이> 잘 해 나가다, 그럭저럭 꾸려나가다 ((with, without)); <일이> 잘 처리되다"
+            },
+            {
+              "meaning": "일을 처리하다; 경영하다, 관리하다",
+              "examples": [],
+              "originalMeaning": "일을 처리하다; 경영하다, 관리하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3b3f79f0c08e40ae8c5ec5989a6b93de",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3b3f79f0c08e40ae8c5ec5989a6b93de",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "manages"
+        },
+        {
+          "type": "과거형",
+          "value": "managed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "managing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "managed"
+        }
+      ],
+      "aliasConjugation": "manages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9ecb58dad466dd1a0fc300dea4d2623f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 정도의 돈이라면 어떻게 되겠지",
+      "text": "If that is all the money required, I think I can <b>manage</b> (to raise) it for you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것 없이도 해나갈 수 있다.",
+      "text": "We can <b>manage</b> without it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 보트를 매우 잘 조종했다.",
+      "text": "He <b>managed</b> the boat efficiently."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그녀보다 잘 해나갈 것이다.",
+      "text": "He will <b>manage</b> better than she."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 혼자서 해 나갈 수 있을 것이라고 생각한다.",
+      "text": "I guess I can <b>manage</b> alone."
+    }
+  ],
+  "isWordType": true
+}

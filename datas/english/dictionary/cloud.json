@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "cloud",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "klaʊd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "구름",
+              "examples": [
+                {
+                  "text": "a bank of <b>cloud</b> s",
+                  "translatedText": "구름 봉우리"
+                }
+              ],
+              "originalMeaning": "구름"
+            },
+            {
+              "meaning": "(사방에 낀) 먼지[연기 ((등))], [구어] 담배 연기",
+              "examples": [],
+              "originalMeaning": "(사방에 낀) 먼지[연기 ((등))], [구어] 담배 연기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<하늘·산꼭대기 등을> 구름으로 덮다, <액체를> 흐리게 하다, 어둡게 하다 ((up))",
+              "examples": [],
+              "originalMeaning": "<하늘·산꼭대기 등을> 구름으로 덮다, <액체를> 흐리게 하다, 어둡게 하다 ((up))"
+            },
+            {
+              "meaning": "<명성·평판 등을> 더럽히다, <사람에게> 혐의를 걸다",
+              "examples": [],
+              "originalMeaning": "<명성·평판 등을> 더럽히다, <사람에게> 혐의를 걸다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<하늘·창문 등이> 흐리다, 흐려지다",
+              "examples": [],
+              "originalMeaning": "<하늘·창문 등이> 흐리다, 흐려지다"
+            },
+            {
+              "meaning": "<얼굴이> (고통·근심으로) 흐리다, 흐려지다",
+              "examples": [],
+              "originalMeaning": "<얼굴이> (고통·근심으로) 흐리다, 흐려지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c3bda08a314a4308b689f30c3e6642f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c3bda08a314a4308b689f30c3e6642f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "clouds"
+        },
+        {
+          "type": "과거형",
+          "value": "clouded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "clouding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "clouded"
+        }
+      ],
+      "aliasConjugation": "clouds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "56eedfb25477e992d5039362be255806",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하늘에 구름이 잔뜩 끼었다",
+      "text": "The sky clouded over."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구름이 산꼭대기에 걸려 있다",
+      "text": "Clouds are resting upon the mountaintop. or The top of the mountain is covered with[hidden under] <b>cloud</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하늘에 구름이 떠 있다",
+      "text": "Clouds float in the sky."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하늘에는 구름 한 점 없다",
+      "text": "There is not a speck of <b>cloud</b> to be seen (up) in the sky. or The sky is cloudless."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구름 한 점 보이지 않는다",
+      "text": "Not a <b>cloud</b> is in sight."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "chair",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tʃer"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(1인용) 의자",
+              "examples": [
+                {
+                  "text": "an easy <b>chair</b>",
+                  "translatedText": "안락의자"
+                }
+              ],
+              "originalMeaning": "(1인용) 의자"
+            },
+            {
+              "meaning": "[보통 the ~] 강좌; 대학 교수의 직(professorship); 학과장, 주임",
+              "examples": [],
+              "originalMeaning": "[보통 the ~] 강좌; 대학 교수의 직(professorship); 학과장, 주임"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "의자에 앉히다",
+              "examples": [],
+              "originalMeaning": "의자에 앉히다"
+            },
+            {
+              "meaning": "권위 있는 지위에 앉히다",
+              "examples": [],
+              "originalMeaning": "권위 있는 지위에 앉히다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사회[의장]를 맡다",
+              "examples": [],
+              "originalMeaning": "사회[의장]를 맡다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/698df7a5a4d343489822b681021c3771",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/698df7a5a4d343489822b681021c3771",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "chairs"
+        },
+        {
+          "type": "과거형",
+          "value": "chaired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "chairing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "chaired"
+        }
+      ],
+      "aliasConjugation": "chairs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c0cf7e3d83503026818d6d291028b8d4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 의자는 너무 높다.",
+      "text": "This <b>chair</b> is full high."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의자를 이편으로 끌고 오너라",
+      "text": "Pull up the <b>chair</b> here."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내 옆에 의자를 다가놓았다",
+      "text": "He placed his <b>chair</b> next to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 의자는 5달러에 팔린다.",
+      "text": "This <b>chair</b> sells for five dollars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상이나 의자 들을 팝니다",
+      "text": "We sell tables, chairs, and other things."
+    }
+  ],
+  "isWordType": true
+}

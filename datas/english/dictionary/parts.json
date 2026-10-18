@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "part",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɑːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부분(opp. whole); 일부, 약간",
+              "examples": [
+                {
+                  "text": "Only (a) <b>part</b> of the story is true.",
+                  "translatedText": "그 이야기의 일부만이 사실이다."
+                }
+              ],
+              "originalMeaning": "부분(opp. whole); 일부, 약간"
+            },
+            {
+              "meaning": "중요 부분, 요소, 성분",
+              "examples": [],
+              "originalMeaning": "중요 부분, 요소, 성분"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "부분적인, 일부의",
+              "examples": [
+                {
+                  "text": "<b>part</b> payment",
+                  "translatedText": "분할불"
+                }
+              ],
+              "originalMeaning": "부분적인, 일부의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "일부분은, 얼마간, 다소는(partly)",
+              "examples": [
+                {
+                  "text": "<b>part</b> black",
+                  "translatedText": "일부분은 검은"
+                }
+              ],
+              "originalMeaning": "일부분은, 얼마간, 다소는(partly)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4d9f8dedb1024f9b9a26d09d316fc7e7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4d9f8dedb1024f9b9a26d09d316fc7e7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "parts"
+        },
+        {
+          "type": "과거형",
+          "value": "parted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "parting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "parted"
+        }
+      ],
+      "aliasConjugation": "parts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c8e7c3def09c77c1e426d8fafb79faa2",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "part.",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "participial, participle, particular",
+              "examples": [],
+              "originalMeaning": "participial, participle, particular"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5f218a0a98944efca86ad52002a8a413",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5f218a0a98944efca86ad52002a8a413",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "parts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f1818178e63a0ad2e18ee54af76d15ad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "설탕 3에 밀가루 7의 비율",
+      "text": "3 <b>parts</b> of sugar to 7 (<b>parts</b>) of flour"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시내 각처에 물난리가 났다",
+      "text": "The city was flooded in various places. or There were floods in various <b>parts</b> of the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 건물의 일부는 이미 서 있다.",
+      "text": "<b>Part</b> of the building is up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내가 간섭할 일이 아니다.",
+      "text": "It’s not my <b>part</b> to interfere."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 속에는 내 몫도 들어 있었다",
+      "text": "My <b>part</b>[share] was included in it."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "carve",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɑːrv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(식탁에서) <고기를> 베다, 저미다; 베어 나누다",
+              "examples": [
+                {
+                  "text": "<b>carve</b> a roast turkey",
+                  "translatedText": "통구이 칠면조를 베어 나누다"
+                }
+              ],
+              "originalMeaning": "(식탁에서) <고기를> 베다, 저미다; 베어 나누다"
+            },
+            {
+              "meaning": "<나무·돌 등을> (어떤 모양으로) 새기다 ((into)); 새겨서 <상을> 만들다 ((out of, in, on)), 조각하다 ((on, in)); <이름 등을> 새겨 넣다",
+              "examples": [
+                {
+                  "text": "<b>carve</b> marble into a statue",
+                  "translatedText": "대리석으로 상을 만들다"
+                }
+              ],
+              "originalMeaning": "<나무·돌 등을> (어떤 모양으로) 새기다 ((into)); 새겨서 <상을> 만들다 ((out of, in, on)), 조각하다 ((on, in)); <이름 등을> 새겨 넣다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고기를 베어 나누다, 조각하다",
+              "examples": [],
+              "originalMeaning": "고기를 베어 나누다, 조각하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "깎는 동작, 한 번 새기기",
+              "examples": [],
+              "originalMeaning": "깎는 동작, 한 번 새기기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/70009febfd78498199c4f76dd11bfc5d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/70009febfd78498199c4f76dd11bfc5d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "carves"
+        },
+        {
+          "type": "과거형",
+          "value": "carved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "carving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "carved"
+        }
+      ],
+      "aliasConjugation": "carves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c5d047ec06bc80444f84677a0ca307d6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 땅을 사서 나누었다",
+      "text": "They purchased a lot and carved it up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소년은 나무에 자기의 이름을 새겼다.",
+      "text": "The boy carved his name on the tree."
+    }
+  ],
+  "isWordType": true
+}

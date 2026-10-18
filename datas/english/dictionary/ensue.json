@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "<b>ensue</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪn│suː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뒤이어 일어나다, 후에 일어나다, 계속되다",
+              "examples": [
+                {
+                  "text": "No applause <b>ensue</b> d.",
+                  "translatedText": "박수는 터지지 않았다."
+                }
+              ],
+              "originalMeaning": "뒤이어 일어나다, 후에 일어나다, 계속되다"
+            },
+            {
+              "meaning": "…의 결과로서 일어나다(result) ((from, on))",
+              "examples": [
+                {
+                  "text": "Heated discussions ensued.",
+                  "translatedText": "격론이 벌어졌다."
+                }
+              ],
+              "originalMeaning": "…의 결과로서 일어나다(result) ((from, on))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "찾다[구하다]",
+              "examples": [],
+              "originalMeaning": "찾다[구하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/149a2fa7b2a74a478d4715cd3466ff3a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/149a2fa7b2a74a478d4715cd3466ff3a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ensues"
+        },
+        {
+          "type": "과거형",
+          "value": "ensued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ensuing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ensued"
+        }
+      ],
+      "aliasConjugation": "ensues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "44b21a31a0f8bd27535bcaceef697029",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "격론이 벌어졌다.",
+      "text": "Heated discussions ensued."
+    }
+  ],
+  "isWordType": true
+}

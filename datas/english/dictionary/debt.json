@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "entry": "debt",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "det"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "빚, 부채, 채무(liability)",
+              "examples": [],
+              "originalMeaning": "빚, 부채, 채무(liability)"
+            },
+            {
+              "meaning": "(남에게) 빚진 것, 신세, 은혜",
+              "examples": [],
+              "originalMeaning": "(남에게) 빚진 것, 신세, 은혜"
+            },
+            {
+              "meaning": "죄(sin)",
+              "examples": [],
+              "originalMeaning": "죄(sin)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50448da02c264f98b096ff9b249fead5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50448da02c264f98b096ff9b249fead5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0c959836a3a013fab6b545fa5ae413e4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 큰 빚을 지고 있다",
+      "text": "He's deeply in <b>debt</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 죽은 뒤에 빚이 남았다",
+      "text": "He has left a <b>debt</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 빚을 남기고 죽었다.",
+      "text": "He left <b>debt</b> behind him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 빚은 내가 책임집니다",
+      "text": "I am liable for his debts."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 빚 독촉이 빗발쳤다",
+      "text": "He kept after me to pay the <b>debt</b>."
+    }
+  ],
+  "isWordType": true
+}

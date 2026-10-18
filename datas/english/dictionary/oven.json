@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "oven",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈʌvn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "솥, 오븐, 가마, 화덕; 찜통; 건조실",
+              "examples": [
+                {
+                  "text": "an electric <b>oven</b>",
+                  "translatedText": "전기 오븐"
+                }
+              ],
+              "originalMeaning": "솥, 오븐, 가마, 화덕; 찜통; 건조실"
+            },
+            {
+              "meaning": "(나치가 사용한) 시체 소각실",
+              "examples": [],
+              "originalMeaning": "(나치가 사용한) 시체 소각실"
+            },
+            {
+              "meaning": "자궁",
+              "examples": [],
+              "originalMeaning": "자궁"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a139fb0b417e459084e7dc25963b5f3b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a139fb0b417e459084e7dc25963b5f3b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "36dcb13f49ce78163593deab502bf3f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빵이 오븐 속에서 구워진다.",
+      "text": "Bread bakes in an <b>oven</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 파이는 오븐에서 갓 구운 것이다.",
+      "text": "The pie is fresh from the <b>oven</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "솥에 구멍이 송송 뚫려 있다",
+      "text": "The <b>oven</b> has holes all over the bottom."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전자레인지가 요리를 마치면 버저가 소리를 낼 것이다",
+      "text": "When your microwave <b>oven</b> has finished cooking, a buzzer will go off."
+    }
+  ],
+  "isWordType": true
+}

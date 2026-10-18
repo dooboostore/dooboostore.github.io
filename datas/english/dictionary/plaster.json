@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>plaster</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│plæstə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 회반죽, 벽토; 가루 석고",
+              "examples": [
+                {
+                  "text": "a <b>plaster</b> figure",
+                  "translatedText": "석고 모형"
+                }
+              ],
+              "originalMeaning": "[U] 회반죽, 벽토; 가루 석고"
+            },
+            {
+              "meaning": "[약학] 고약, [영] 반창고(sticking <b>plaster</b>)",
+              "examples": [],
+              "originalMeaning": "[약학] 고약, [영] 반창고(sticking <b>plaster</b>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "회반죽을 바르다 ((over, up))",
+              "examples": [],
+              "originalMeaning": "회반죽을 바르다 ((over, up))"
+            },
+            {
+              "meaning": "빈틈없이 칠하다, 메우다",
+              "examples": [],
+              "originalMeaning": "빈틈없이 칠하다, 메우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7b452835226e4921a6192906ef3e474d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7b452835226e4921a6192906ef3e474d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "plasters"
+        },
+        {
+          "type": "과거형",
+          "value": "plastered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "plastering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "plastered"
+        }
+      ],
+      "aliasConjugation": "plasters",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5f07fea7515073bf3a319201bd4dc416",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 고약은 진기가 없어졌다",
+      "text": "This <b>plaster</b> has lost its adhesiveness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "벽보가 너덕너덕 붙어 있다",
+      "text": "The wall is plastered all over with bills[posters]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "낡은 벽이 회반죽을 발라 새로와졌다.",
+      "text": "The old walls have been renewed by plastering."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "석고는 빨리 굳는다",
+      "text": "<b>Plaster</b> of Paris sets quickly."
+    }
+  ],
+  "isWordType": true
+}

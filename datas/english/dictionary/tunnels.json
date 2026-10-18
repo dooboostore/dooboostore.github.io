@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "tunnel",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtʌnl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "터널, 굴, 지하도, 지하 수로",
+              "examples": [],
+              "originalMeaning": "터널, 굴, 지하도, 지하 수로"
+            },
+            {
+              "meaning": "갱도(adit)",
+              "examples": [],
+              "originalMeaning": "갱도(adit)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 터널[굴]을 파다",
+              "examples": [],
+              "originalMeaning": "…에 터널[굴]을 파다"
+            },
+            {
+              "meaning": "[~ one’s way 또는 ~ oneself로] 갱도[터널]를 파고 나아가다",
+              "examples": [
+                {
+                  "text": "<b>tunnel</b> one's way out of a prison",
+                  "translatedText": "탈옥하다"
+                }
+              ],
+              "originalMeaning": "[~ one’s way 또는 ~ oneself로] 갱도[터널]를 파고 나아가다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…에) 터널을 파다 ((in, through, into))",
+              "examples": [
+                {
+                  "text": "<b>tunnel</b> through[into] a hill",
+                  "translatedText": "터널을 파서 산을 관통하다[산속에 들어가다]"
+                }
+              ],
+              "originalMeaning": "(…에) 터널을 파다 ((in, through, into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b8c7d1848ef74d2c95dad09e9e35f89d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b8c7d1848ef74d2c95dad09e9e35f89d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tunnels"
+        },
+        {
+          "type": "과거형",
+          "value": "tunnelled, tunneled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tunnelling, tunneling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tunnelled, tunneled"
+        }
+      ],
+      "aliasConjugation": "tunnels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "15c78fb2c7f79c878bc0159db4141dca",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그 언덕을 뚫어 터널을 냈다.",
+      "text": "They holed a <b>tunnel</b> through the hill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "갱도가 무너져 광부들이 갇혔다",
+      "text": "The miners were trapped by the collapse of the <b>tunnel</b> roof."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 마침내 터널 끝의 빛을 보기 시작했다",
+      "text": "We began to see some light at the end of the <b>tunnel</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "터널을 빠져나가자 바로 눈앞에 바다가 펼쳐졌다",
+      "text": "When I came out of the <b>tunnel</b>, the sea was just in front of me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "터널을 관통하기까지는 1년쯤 걸릴 것이다",
+      "text": "It will be one year or so before the <b>tunnel</b> is driven through."
+    }
+  ],
+  "isWordType": true
+}

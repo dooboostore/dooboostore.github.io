@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "loop",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lúːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(실이나 끈 등으로 만든) 고리, 올가미",
+              "examples": [],
+              "originalMeaning": "(실이나 끈 등으로 만든) 고리, 올가미"
+            },
+            {
+              "meaning": "고리 모양으로 생긴 것; [철도·전신] 측선(側線) ((본선에서 갈라졌다가 다시 합치는 선로)), (도로의) 환상선(環狀線); [전기] 폐[환상]회로; (도로·하천 등의) 만곡(부)",
+              "examples": [
+                {
+                  "text": "a <b>loop</b> of road",
+                  "translatedText": "도로의 만곡부"
+                }
+              ],
+              "originalMeaning": "고리 모양으로 생긴 것; [철도·전신] 측선(側線) ((본선에서 갈라졌다가 다시 합치는 선로)), (도로의) 환상선(環狀線); [전기] 폐[환상]회로; (도로·하천 등의) 만곡(부)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<끈 등을> 고리로 만들다, 고리로 두르다",
+              "examples": [],
+              "originalMeaning": "<끈 등을> 고리로 만들다, 고리로 두르다"
+            },
+            {
+              "meaning": "귀를 달다",
+              "examples": [],
+              "originalMeaning": "귀를 달다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "동그라미를 만들다, 고리가 되다",
+              "examples": [],
+              "originalMeaning": "동그라미를 만들다, 고리가 되다"
+            },
+            {
+              "meaning": "공중제비를 하다, 원을 그리며 비행하다",
+              "examples": [],
+              "originalMeaning": "공중제비를 하다, 원을 그리며 비행하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a19fb0de0e7b448d93449cadd9c1bd64",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a19fb0de0e7b448d93449cadd9c1bd64",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "loops"
+        },
+        {
+          "type": "과거형",
+          "value": "looped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "looping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "looped"
+        }
+      ],
+      "aliasConjugation": "loops",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c373dda38d35bcb27ca556e6753718c4",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "loop",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(=LOOPHOLE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >LOOPHOLE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2e23e748a17b4c6e9e654a06aadd12ae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2e23e748a17b4c6e9e654a06aadd12ae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "loops",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dab98c1ea6780a27ed6bb90a2d31dc65",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개천이 숲 속을 물굽이 져 흐른다",
+      "text": "A brook winds[runs in twists and loops] through the woods."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소식은 내게 너무 놀랍다",
+      "text": "The news blows my mind. or The news knocks me for a <b>loop</b>."
+    }
+  ],
+  "isWordType": true
+}

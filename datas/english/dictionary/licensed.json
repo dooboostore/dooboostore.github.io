@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "licensed",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlaɪsnst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "인가[허가]된, 면허를 받은, 감찰을 받은",
+              "examples": [
+                {
+                  "text": "a <b>licensed</b> retailer[shop]",
+                  "translatedText": "주류 판매 허가점"
+                }
+              ],
+              "originalMeaning": "인가[허가]된, 면허를 받은, 감찰을 받은"
+            },
+            {
+              "meaning": "세상이 인정하는",
+              "examples": [
+                {
+                  "text": "a <b>licensed</b> jester",
+                  "translatedText": "(임금 옆에 있으면서) 직언(直言)이 허용된 어릿광대"
+                }
+              ],
+              "originalMeaning": "세상이 인정하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f728dce808141189c522479bfcfade5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f728dce808141189c522479bfcfade5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "b76b6d8d6aace37e550a15c26408b664",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "license",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 면허, 인가; 승낙, 허락 ((to))",
+              "examples": [
+                {
+                  "text": "under <b>license</b>",
+                  "translatedText": "면허[허가]를 받고"
+                }
+              ],
+              "originalMeaning": "[CU] 면허, 인가; 승낙, 허락 ((to))"
+            },
+            {
+              "meaning": "면허장, 인가서, 감찰(鑑札)",
+              "examples": [
+                {
+                  "text": "a <b>license</b> to practice medicine",
+                  "translatedText": "의사의 개업 면허장"
+                }
+              ],
+              "originalMeaning": "면허장, 인가서, 감찰(鑑札)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "면허[인가, 허가, 특허]를 내주다; 면허장을 주다; 허용하다(allow)",
+              "examples": [
+                {
+                  "text": "( <b>license</b>+[목]+todo) The office <b>licensed</b> me to sell tobacco.",
+                  "translatedText": "관청은 내게 담배 판매를 허가했다."
+                }
+              ],
+              "originalMeaning": "면허[인가, 허가, 특허]를 내주다; 면허장을 주다; 허용하다(allow)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/19944979c349450d956761a6f7aab22a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/19944979c349450d956761a6f7aab22a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "licenses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1a5eda1409813bb18a1a503d7f673daf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 교원 자격을 얻었다",
+      "text": "He obtained a teacher's <b>license</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "운전 면허증을 갱신해야 한다",
+      "text": "I must renew my driver's <b>license</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "관청은 내게 담배 판매를 허가했다.",
+      "text": "The office <b>licensed</b> me to sell tobacco."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "면허장은 신청하면 얻을 수 있다",
+      "text": "A <b>license</b> may be obtained upon application."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "면허증은 2년마다 경신해야 한다",
+      "text": "The <b>license</b> must be renewed every two years."
+    }
+  ],
+  "isWordType": true
+}

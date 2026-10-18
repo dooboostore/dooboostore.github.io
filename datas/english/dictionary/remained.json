@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "remain",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈmeɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보어를 동반하여] …대로이다, 여전히 …이다",
+              "examples": [
+                {
+                  "text": "<b>remain</b> faithful",
+                  "translatedText": "변함없이 충성을 바치다"
+                }
+              ],
+              "originalMeaning": "[보어를 동반하여] …대로이다, 여전히 …이다"
+            },
+            {
+              "meaning": "남다, 잔존[존속]하다, 살아남다",
+              "examples": [
+                {
+                  "text": "<b>remain</b> on[in] one's memory",
+                  "translatedText": "기억에 남다"
+                }
+              ],
+              "originalMeaning": "남다, 잔존[존속]하다, 살아남다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "나머지, 남은 것; 잔고, 잔액; 잔재",
+              "examples": [],
+              "originalMeaning": "나머지, 남은 것; 잔고, 잔액; 잔재"
+            },
+            {
+              "meaning": "잔존자, 유족, 생환자",
+              "examples": [],
+              "originalMeaning": "잔존자, 유족, 생환자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a599d557676e428392dad7421110ed4d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a599d557676e428392dad7421110ed4d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "remains"
+        },
+        {
+          "type": "과거형",
+          "value": "remained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "remaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "remained"
+        }
+      ],
+      "aliasConjugation": "remains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dcf7a43d760256b72a7aad4fc17c7756",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "더 할 말은 거의 없다.",
+      "text": "Little remains to be said."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사람은 죽어도 이름은 남는다",
+      "text": "Man lives but for one generation, his name for many. or A man dies but his name remains."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지금도 해야 할 일이 많다.",
+      "text": "Much yet remains to be done."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 죽는 순간까지 의식이 있었다",
+      "text": "He <b>remained</b> conscious to the last moment of his life. or He was conscious to the last."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "창문은 깨지지 않고 고스란했다",
+      "text": "The window <b>remained</b> intact."
+    }
+  ],
+  "isWordType": true
+}

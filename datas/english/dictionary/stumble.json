@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "stumble",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈstʌmbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "발부리가 걸리다, (…에) 채어 비틀거리다 ((on, over))",
+              "examples": [
+                {
+                  "text": "<b>stumble</b> over[on] a stone",
+                  "translatedText": "돌에 발부리를 채다"
+                }
+              ],
+              "originalMeaning": "발부리가 걸리다, (…에) 채어 비틀거리다 ((on, over))"
+            },
+            {
+              "meaning": "비틀거리며 걷다 ((along, down, about))",
+              "examples": [
+                {
+                  "text": "The old man stumbled along.",
+                  "translatedText": "그 노인은 비틀거리며 걸어갔다."
+                }
+              ],
+              "originalMeaning": "비틀거리며 걷다 ((along, down, about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발부리가 걸리게 하다",
+              "examples": [],
+              "originalMeaning": "발부리가 걸리게 하다"
+            },
+            {
+              "meaning": "난처[당황]하게 하다, 주저하게 하다",
+              "examples": [],
+              "originalMeaning": "난처[당황]하게 하다, 주저하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "비트적거림, 비틀거림;[pl.] 보행 불능",
+              "examples": [
+                {
+                  "text": "take a bad <b>stumble</b>",
+                  "translatedText": "크게 비틀거리다"
+                }
+              ],
+              "originalMeaning": "비트적거림, 비틀거림;[pl.] 보행 불능"
+            },
+            {
+              "meaning": "(도덕상의) 죄, 실수, 과실(blunder)",
+              "examples": [],
+              "originalMeaning": "(도덕상의) 죄, 실수, 과실(blunder)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/226d7b21635441ee8b1008d254c5e58c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/226d7b21635441ee8b1008d254c5e58c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stumbles"
+        },
+        {
+          "type": "과거형",
+          "value": "stumbled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stumbling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stumbled"
+        }
+      ],
+      "aliasConjugation": "stumbles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bf866d15afcde2fc0bcb939bf42162b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 노인은 비틀거리며 걸어갔다.",
+      "text": "The old man stumbled along."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우연히 옛 친구를 만났다.",
+      "text": "He stumbled across an old friend."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 돌에 채여 둥그러졌다",
+      "text": "He stumbled[tripped] over a stone and fell down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "초초해서 말을 계속 더듬었다",
+      "text": "I panicked and kept stumbling over my words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 도서관에서 우연히도 진귀한 책을 발견했다",
+      "text": "I stumbled upon a rare book in the library."
+    }
+  ],
+  "isWordType": true
+}

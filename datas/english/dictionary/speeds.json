@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "speed",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spiːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "속력, 속도",
+              "examples": [
+                {
+                  "text": "the <b>speed</b> of light",
+                  "translatedText": "광속"
+                }
+              ],
+              "originalMeaning": "속력, 속도"
+            },
+            {
+              "meaning": "(동작·행동의) 빠름, 신속",
+              "examples": [
+                {
+                  "text": "a horse of <b>speed</b>",
+                  "translatedText": "빨리 달리는 말"
+                }
+              ],
+              "originalMeaning": "(동작·행동의) 빠름, 신속"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "급속하게 진행[작용, 발생]하다",
+              "examples": [],
+              "originalMeaning": "급속하게 진행[작용, 발생]하다"
+            },
+            {
+              "meaning": "급히 가다, 서두르다 ((along)); 질주하다",
+              "examples": [
+                {
+                  "text": "The yellow car sped along[down] the street.",
+                  "translatedText": "노란색 차가 거리를 질주했다."
+                }
+              ],
+              "originalMeaning": "급히 가다, 서두르다 ((along)); 질주하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "서두르게 하다; 빨리 가게 하다[보내다]; 촉진하다, 추진하다",
+              "examples": [],
+              "originalMeaning": "서두르게 하다; 빨리 가게 하다[보내다]; 촉진하다, 추진하다"
+            },
+            {
+              "meaning": "<기관·기계 등의> 속력을 더하다, 능률을 올리다 ((up))",
+              "examples": [
+                {
+                  "text": "<b>speed</b> up an engine",
+                  "translatedText": "엔진 회전을 빠르게 하다"
+                }
+              ],
+              "originalMeaning": "<기관·기계 등의> 속력을 더하다, 능률을 올리다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/14227bd8bea64d908cd56ea997a787ed",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/14227bd8bea64d908cd56ea997a787ed",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "speeds"
+        },
+        {
+          "type": "과거형",
+          "value": "sped, speeded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "speeding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sped, speeded"
+        }
+      ],
+      "aliasConjugation": "speeds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d6f8f8ef24dd951de05ea08822121a60",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 차는 곧 속도를 냈다.",
+      "text": "The car soon speeded up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 속도 위반으로 적발되었다",
+      "text": "He was caught for speeding."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 속도 위반으로 기소되었다.",
+      "text": "He’s been done for speeding."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "톰은 속력을 즐기는 운전자이다",
+      "text": "Tom is a real <b>speed</b> freak[merchant]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모든 것이 속도[능률]를 더해 가고 있다.",
+      "text": "Everything is getting speeded up."
+    }
+  ],
+  "isWordType": true
+}

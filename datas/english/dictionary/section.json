@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "section",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsekʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "잘라낸 부분, (오렌지·귤 등 알맹이의) 한 쪽[조각]",
+              "examples": [
+                {
+                  "text": "a <b>section</b> of pie",
+                  "translatedText": "파이 한 쪽"
+                }
+              ],
+              "originalMeaning": "잘라낸 부분, (오렌지·귤 등 알맹이의) 한 쪽[조각]"
+            },
+            {
+              "meaning": "부분, 구분, 구획, 마디",
+              "examples": [],
+              "originalMeaning": "부분, 구분, 구획, 마디"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "구분[구획]하다, 단면도를 그리다, 부분품을 그림으로 표시하다, (현미경으로 검사하기 위해) 얇은 조각을 만들다, 단락[절]으로 나누다[나누어 배열하다], [외과] 절개하다",
+              "examples": [],
+              "originalMeaning": "구분[구획]하다, 단면도를 그리다, 부분품을 그림으로 표시하다, (현미경으로 검사하기 위해) 얇은 조각을 만들다, 단락[절]으로 나누다[나누어 배열하다], [외과] 절개하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/26dc11f78db344159090f3e4b4009ba0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/26dc11f78db344159090f3e4b4009ba0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sections"
+        },
+        {
+          "type": "과거형",
+          "value": "sectioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sectioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sectioned"
+        }
+      ],
+      "aliasConjugation": "sections",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4a913220837f0491e9a3ee3ecfcad6db",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "버스 요금은 구간 600원이다",
+      "text": "The bus fare is 600 won a <b>section</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "100만 원이 우리 과에 할당되었다",
+      "text": "One million won was allotted to our <b>section</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 이번에 과장으로 승격되었다",
+      "text": "He was promoted to a <b>section</b> chief this time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 국은 여러 과로 나뉘어 있다",
+      "text": "The bureau is divided into a number of sections."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 과장은 사람 부리는 것이 거칠다",
+      "text": "The chief of our <b>section</b> is a real slave driver."
+    }
+  ],
+  "isWordType": true
+}

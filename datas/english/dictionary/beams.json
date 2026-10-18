@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "beam",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "biːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "들보, 도리",
+              "examples": [],
+              "originalMeaning": "들보, 도리"
+            },
+            {
+              "meaning": "(배의) 갑판보, 빔; 선폭(船幅); [구어] (사람의) 엉덩이폭",
+              "examples": [],
+              "originalMeaning": "(배의) 갑판보, 빔; 선폭(船幅); [구어] (사람의) 엉덩이폭"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<빛을> 발하다, 비추다",
+              "examples": [],
+              "originalMeaning": "<빛을> 발하다, 비추다"
+            },
+            {
+              "meaning": "[라디오] <전파를> 향하게 하다(direct), <뉴스 등을> 방송하다, 레이더로 탐지하다",
+              "examples": [
+                {
+                  "text": "<b>beam</b> programs at[to] Korea",
+                  "translatedText": "한국을 향해 방송하다"
+                }
+              ],
+              "originalMeaning": "[라디오] <전파를> 향하게 하다(direct), <뉴스 등을> 방송하다, 레이더로 탐지하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "빛나다, 빛을 발하다",
+              "examples": [
+                {
+                  "text": "The sun beamed through the clouds.",
+                  "translatedText": "태양이 구름 사이로 빛났다."
+                }
+              ],
+              "originalMeaning": "빛나다, 빛을 발하다"
+            },
+            {
+              "meaning": "기쁨으로 빛나다, 밝게 미소짓다",
+              "examples": [
+                {
+                  "text": "He <b>beam</b> ed with joy.",
+                  "translatedText": "그는 희색이 만면했다."
+                }
+              ],
+              "originalMeaning": "기쁨으로 빛나다, 밝게 미소짓다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6acc7c51bc77474e8fddf7482c9b1ff5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6acc7c51bc77474e8fddf7482c9b1ff5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "beams"
+        },
+        {
+          "type": "과거형",
+          "value": "beamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "beaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "beamed"
+        }
+      ],
+      "aliasConjugation": "beams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c9aabaedb8b4a24b31db2ea63eed208e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 만면에 희색을 띠고 있었다",
+      "text": "His face beamed with joy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 평균대 체조로 금메달을 땄다",
+      "text": "She won the gold medal in the <b>beam</b> event."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어린애가 그의 손을 잡고 얼굴을 쳐다보며 뱅글거렸다",
+      "text": "The child took his hand and beamed up at him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이번 생일에 만 열 살이다",
+      "text": "I shall be[am coming] ten years old next birthday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 희색이 만면했다.",
+      "text": "He beamed with joy."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "<b>cement</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sɪˈment"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "시멘트, 양회; [구어] 콘크리트; 접합제",
+              "examples": [],
+              "originalMeaning": "시멘트, 양회; [구어] 콘크리트; 접합제"
+            },
+            {
+              "meaning": "결합시키는 것, (우정 따위의) 유대",
+              "examples": [],
+              "originalMeaning": "결합시키는 것, (우정 따위의) 유대"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "시멘트로 바르다[굳게 하다], 접합하다; [비유] <우정 등을> 굳히다; [야금] 삼탄(渗炭)하다",
+              "examples": [],
+              "originalMeaning": "시멘트로 바르다[굳게 하다], 접합하다; [비유] <우정 등을> 굳히다; [야금] 삼탄(渗炭)하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/521531e870fe4df4a63d22ac4b6917af",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/521531e870fe4df4a63d22ac4b6917af",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cements"
+        },
+        {
+          "type": "과거형",
+          "value": "cemented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cementing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cemented"
+        }
+      ],
+      "aliasConjugation": "cements",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b8130faac6f86f640873915d50096ac1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 역사적인 회담은 양국간의 오랜 우호 관계를 한층 더 강화할 것이다",
+      "text": "This historic meeting will <b>cement</b>[promote] the friendship that has long existed between the two countries."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시멘트는 마르면 굳는다",
+      "text": "<b>Cement</b> sets as it dries."
+    }
+  ],
+  "isWordType": true
+}

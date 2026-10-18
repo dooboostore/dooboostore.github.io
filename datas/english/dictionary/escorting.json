@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "escort",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "호위자[대], 호송자[대]; 경호선, 호송선[함]",
+              "examples": [],
+              "originalMeaning": "호위자[대], 호송자[대]; 경호선, 호송선[함]"
+            },
+            {
+              "meaning": "호위, 호송",
+              "examples": [],
+              "originalMeaning": "호위, 호송"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<군함 등을> 호위[경호]하다, 호송하다",
+              "examples": [],
+              "originalMeaning": "<군함 등을> 호위[경호]하다, 호송하다"
+            },
+            {
+              "meaning": "<여성과> 동행하다, 수행하다; 바래다 주다",
+              "examples": [
+                {
+                  "text": "George offered to <b>escort</b> Mrs. Green (home).",
+                  "translatedText": "조지는 그린 부인을 (집까지) 바래다 드리겠다고 제의했다."
+                }
+              ],
+              "originalMeaning": "<여성과> 동행하다, 수행하다; 바래다 주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39bf26d20e0d4b0fadeee5bbc1382377",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39bf26d20e0d4b0fadeee5bbc1382377",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "escorts"
+        },
+        {
+          "type": "과거형",
+          "value": "escorted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "escorting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "escorted"
+        }
+      ],
+      "aliasConjugation": "escorts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1fea3d43cfbc8cdc060558fd1ede6bd6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그녀를 정거장까지 바래다 주었다.",
+      "text": "He escorted her to the station."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 신변은 언제나 경찰 호위 하에 있다",
+      "text": "He is always under police <b>escort</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 손님들을 식탁으로 모셨다.",
+      "text": "She escorted the guests to the table."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여왕은 무장한 수행원을 데리고 여행했다",
+      "text": "The queen traveled under armed <b>escort</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "조지는 그린 부인을  바래다 드리겠다고 제의했다.",
+      "text": "George offered to <b>escort</b> Mrs. Green (home)."
+    }
+  ],
+  "isWordType": true
+}

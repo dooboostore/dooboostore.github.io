@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "hurry",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈhɜːri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "서두르다, 서둘러 가다",
+              "examples": [
+                {
+                  "text": "Don't <b>hurry</b>.",
+                  "translatedText": "서둘지 마라."
+                }
+              ],
+              "originalMeaning": "서두르다, 서둘러 가다"
+            },
+            {
+              "meaning": "서둘러[허둥지둥] …하다; 안달해하다, 초조해하다 ((up, on, along))",
+              "examples": [
+                {
+                  "text": "<b>hurry</b> tocatch a bus = <b>hurry</b> for a bus",
+                  "translatedText": "버스를 타려고 서두르다"
+                }
+              ],
+              "originalMeaning": "서둘러[허둥지둥] …하다; 안달해하다, 초조해하다 ((up, on, along))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·동작 등을> 서두르게 하다 ((up)), 재촉하다",
+              "examples": [
+                {
+                  "text": "It's no use hurrying him.",
+                  "translatedText": "그 사람은 재촉해도 소용없다."
+                }
+              ],
+              "originalMeaning": "<사람·동작 등을> 서두르게 하다 ((up)), 재촉하다"
+            },
+            {
+              "meaning": "<사람·물건을> (…으로) 급히 보내다 ((to)), …의 속도를 빨리하다",
+              "examples": [
+                {
+                  "text": "<b>hurry</b> one's steps",
+                  "translatedText": "발걸음을 재촉하다"
+                }
+              ],
+              "originalMeaning": "<사람·물건을> (…으로) 급히 보내다 ((to)), …의 속도를 빨리하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "서두름, 황급, 허둥지둥함",
+              "examples": [
+                {
+                  "text": "Everything was <b>hurry</b> and confusion.",
+                  "translatedText": "허둥지둥 야단법석이었다."
+                }
+              ],
+              "originalMeaning": "서두름, 황급, 허둥지둥함"
+            },
+            {
+              "meaning": "열망, 간절한 소망 ((to do, for))",
+              "examples": [],
+              "originalMeaning": "열망, 간절한 소망 ((to do, for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7c28b22082784d25b6e5e3a02986e861",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7c28b22082784d25b6e5e3a02986e861",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hurries"
+        },
+        {
+          "type": "과거형",
+          "value": "hurried"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hurrying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hurried"
+        }
+      ],
+      "aliasConjugation": "hurries",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "55d57675fcafd51753262415d142cf8b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가만, 그리 서두를 것 없어",
+      "text": "Wait, there is no <b>hurry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구태여 그렇게 서둘 건 없네",
+      "text": "There is no <b>hurry</b>[rush]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게까지 서두를 것은 없다",
+      "text": "Don't be in such a <b>hurry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "갈 길이 바쁜데 차까지 고장났다",
+      "text": "I was in a <b>hurry</b>[pressed for time] and, to make matters worse, even the car broke down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "빨리 가지 않으면 늦는다",
+      "text": "Unless we <b>hurry</b>, we will be late."
+    }
+  ],
+  "isWordType": true
+}

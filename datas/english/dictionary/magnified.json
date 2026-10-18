@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "magnify",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmæɡnɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "확대하다, 확대하여 보여 주다 ((with))",
+              "examples": [
+                {
+                  "text": "This microscope magnifies an object 200 times.",
+                  "translatedText": "이 현미경은 물체를 200배로 확대한다."
+                }
+              ],
+              "originalMeaning": "확대하다, 확대하여 보여 주다 ((with))"
+            },
+            {
+              "meaning": "과장하다(exaggerate)",
+              "examples": [
+                {
+                  "text": "<b>magnify</b> losses",
+                  "translatedText": "손실을 과장하다"
+                }
+              ],
+              "originalMeaning": "과장하다(exaggerate)"
+            },
+            {
+              "meaning": "찬미하다",
+              "examples": [],
+              "originalMeaning": "찬미하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/39a960bd35aa4dc0a115ff90f80b48b3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/39a960bd35aa4dc0a115ff90f80b48b3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "magnifies"
+        },
+        {
+          "type": "과거형",
+          "value": "magnified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "magnifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "magnified"
+        }
+      ],
+      "aliasConjugation": "magnifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d028356c4ba28f1074a94ad3ba697a44",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 지도는 몇 배로 확대되었다.",
+      "text": "The chart was <b>magnified</b> several times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 현미경은 물체를 200배로 확대한다.",
+      "text": "This microscope magnifies an object 200 times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 현미경은 물체를 800배까지 확대한다",
+      "text": "This microscope magnifies an object up to eight hundred times."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "recommend",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌrekəˈmend"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "추천[천거]하다",
+              "examples": [
+                {
+                  "text": "<b>recommend</b> one's own person",
+                  "translatedText": "자천하다"
+                }
+              ],
+              "originalMeaning": "추천[천거]하다"
+            },
+            {
+              "meaning": "권하다, 충고[권고]하다(advise); 제시하다",
+              "examples": [
+                {
+                  "text": "<b>recommend</b> a person a long rest = <b>recommend</b> a long rest for a person",
+                  "translatedText": "…에게 장기 휴양을 권하다"
+                }
+              ],
+              "originalMeaning": "권하다, 충고[권고]하다(advise); 제시하다"
+            },
+            {
+              "meaning": "<행위·성질 등이> …을 (남의) 마음에 들게 하다 ((to))",
+              "examples": [
+                {
+                  "text": "His manners <b>recommend</b> him.",
+                  "translatedText": "태도가 좋아서 누구나 그를 좋아한다[남의 호감을 산다]."
+                }
+              ],
+              "originalMeaning": "<행위·성질 등이> …을 (남의) 마음에 들게 하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e8e346b9474143e7ad560ce9625dd692",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e8e346b9474143e7ad560ce9625dd692",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "recommends"
+        },
+        {
+          "type": "과거형",
+          "value": "recommended"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recommending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recommended"
+        }
+      ],
+      "aliasConjugation": "recommends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "80575a8b9f0e1d2f5347a02b774c62d8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 자네에게 휴가를 얻도록 권한다",
+      "text": "I <b>recommend</b> you to take a holiday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "태도가 좋아서 누구나 그를 좋아한다[남의 호감을 산다].",
+      "text": "His manners <b>recommend</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대학에 추천되려면 80점 이상 따지 않으면 안 된다",
+      "text": "You are required to get more than 80 points (if you want) to be <b>recommended</b> to the college."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일을 즉시 하도록 권합니다.",
+      "text": "I <b>recommend</b> that the work (should) be done at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 한 자리에 자천 타천의 후보자가 10여 명이나 모였다",
+      "text": "For that one post, a dozen candidates turned up, some on their own, and some <b>recommended</b> by others."
+    }
+  ],
+  "isWordType": true
+}

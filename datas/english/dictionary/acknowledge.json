@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "acknowledge",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ək│nɑːlɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "인정하다, <…이> 사실임[존재함]을 인정하다, <…이> 진실임에 동의하다; 승인하다(admit)",
+              "examples": [
+                {
+                  "text": "<b>acknowledge</b> one's fault",
+                  "translatedText": "자기의 잘못을 시인하다"
+                }
+              ],
+              "originalMeaning": "인정하다, <…이> 사실임[존재함]을 인정하다, <…이> 진실임에 동의하다; 승인하다(admit)"
+            },
+            {
+              "meaning": "사례하다, 감사하다; <경례에> 답하다",
+              "examples": [
+                {
+                  "text": "<b>acknowledge</b> a favor",
+                  "translatedText": "호의에 감사하다"
+                }
+              ],
+              "originalMeaning": "사례하다, 감사하다; <경례에> 답하다"
+            },
+            {
+              "meaning": "<편지 등을> 받았음을 알리다",
+              "examples": [
+                {
+                  "text": "I <b>acknowledge</b> (the receipt of) your letter.",
+                  "translatedText": "편지는 잘 받아보았습니다."
+                }
+              ],
+              "originalMeaning": "<편지 등을> 받았음을 알리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/96a26fbe13094b188d7c3450b40c2dfc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/96a26fbe13094b188d7c3450b40c2dfc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "acknowledges"
+        },
+        {
+          "type": "과거형",
+          "value": "acknowledged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "acknowledging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "acknowledged"
+        }
+      ],
+      "aliasConjugation": "acknowledges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "609694e5334bc2186be5b5a0bc9c3ced",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일금 5만원을 정히 영수하였습니다",
+      "text": "I <b>acknowledge</b> the receipt of the sum of 50,000 won. or Received the sum of 50,000 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "선물을 받았다고 즉시 답장을 내시오.",
+      "text": "<b>Acknowledge</b> the gift at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자타가 다 인정하는 위대한 학자이다",
+      "text": "He is generally admitted to be a great scholar. or It is commonly acknowledged that he is a great scholar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 우위를 인정할 만큼 그는 아량이 있었다",
+      "text": "He had the grace to <b>acknowledge</b> my superiority."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 고인의 법적 상속인으로 승인받았다",
+      "text": "He was recognized[acknowledged] as a lawful heir to the deceased."
+    }
+  ],
+  "isWordType": true
+}

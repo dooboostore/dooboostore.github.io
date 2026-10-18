@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "entry": "<b>picky</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpɪki"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(하찮은 일에) 법석대는",
+              "examples": [],
+              "originalMeaning": "(하찮은 일에) 법석대는"
+            },
+            {
+              "meaning": "성미 까다로운",
+              "examples": [],
+              "originalMeaning": "성미 까다로운"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b7b48bbbcb934654ac62aa82632a433d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b7b48bbbcb934654ac62aa82632a433d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "pickier"
+        },
+        {
+          "type": "최상급",
+          "value": "pickiest"
+        }
+      ],
+      "aliasConjugation": "pickier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "4d492d6d5daee27e4c9691f4bf898bdf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 입이 짧은 사람이다",
+      "text": "She is a <b>picky</b> eater."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 아들은 식성이 까다롭다",
+      "text": "My son is a <b>picky</b> eater."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자는 입맛이 매우 까다롭고 옷을 고르는 데도 매우 까다롭다",
+      "text": "She is very fussy about food and very <b>picky</b> about clothes."
+    }
+  ],
+  "isWordType": true
+}

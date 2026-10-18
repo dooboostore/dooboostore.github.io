@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "shorten",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈʃɔːrtn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "짧게 하다, <치수 등을> 줄이다, 단축하다",
+              "examples": [
+                {
+                  "text": "<b>shorten</b> a dress",
+                  "translatedText": "옷을 줄이다"
+                }
+              ],
+              "originalMeaning": "짧게 하다, <치수 등을> 줄이다, 단축하다"
+            },
+            {
+              "meaning": "짧아 보이게 하다; <시간·여행 등의 지루함을> 이야기 등으로 덜다, 짧게 느끼게 하다",
+              "examples": [],
+              "originalMeaning": "짧아 보이게 하다; <시간·여행 등의 지루함을> 이야기 등으로 덜다, 짧게 느끼게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "짧아지다, 줄다; 감소[축소]하다",
+              "examples": [],
+              "originalMeaning": "짧아지다, 줄다; 감소[축소]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/07aa141641154534bb12ffabb2bcfa4c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/07aa141641154534bb12ffabb2bcfa4c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shortens"
+        },
+        {
+          "type": "과거형",
+          "value": "shortened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shortening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shortened"
+        }
+      ],
+      "aliasConjugation": "shortens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "83a9aebf6519220efe3d808a98cecb14",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비행기는 세계의 거리를 단축시켰다",
+      "text": "Airplanes have shortened[cut] the distance of the world."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "짧아지다",
+      "text": "It shortens[gets short]."
+    }
+  ],
+  "isWordType": true
+}

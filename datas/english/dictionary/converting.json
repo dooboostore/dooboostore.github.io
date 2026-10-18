@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "convert",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "변하게 하다, 전환하다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>convert</b> cotton into cloth",
+                  "translatedText": "면사를 천으로 만들다"
+                }
+              ],
+              "originalMeaning": "변하게 하다, 전환하다 ((into))"
+            },
+            {
+              "meaning": "개장[개조]하다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>convert</b> the basement into the spare bedroom",
+                  "translatedText": "지하실을 여분의 침실로 개조하다"
+                }
+              ],
+              "originalMeaning": "개장[개조]하다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "변화하다, 개조되다, 바꾸다 ((from))",
+              "examples": [],
+              "originalMeaning": "변화하다, 개조되다, 바꾸다 ((from))"
+            },
+            {
+              "meaning": "개종하다, 전향하다",
+              "examples": [],
+              "originalMeaning": "개종하다, 전향하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "개심[전향]자; 개종[회심]자, (새) 귀의자",
+              "examples": [],
+              "originalMeaning": "개심[전향]자; 개종[회심]자, (새) 귀의자"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e6da9d2361be413793385d10af150767",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e6da9d2361be413793385d10af150767",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "converts"
+        },
+        {
+          "type": "과거형",
+          "value": "converted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "converting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "converted"
+        }
+      ],
+      "aliasConjugation": "converts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "dbb04329580d16984a0aa7a4437396f9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "총 금액은 오늘의 환율로 환산해서 1,000달러입니다",
+      "text": "The total charges come to one thousand dollars converted at today's rates."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기독교 신자가 되다 become a Christian;turn Christian;be converted to Christianity",
+      "text": ";embrace Christianity"
+    }
+  ],
+  "isWordType": true
+}

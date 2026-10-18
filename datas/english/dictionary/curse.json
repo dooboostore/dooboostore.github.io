@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "curse",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɜːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "저주하다, 재앙을 빌다",
+              "examples": [],
+              "originalMeaning": "저주하다, 재앙을 빌다"
+            },
+            {
+              "meaning": "욕지거리하다, 악담하다; <신(神) 등에> 불경한 말을 하다, 모독하다",
+              "examples": [
+                {
+                  "text": "The thief cursed the police for finding him.",
+                  "translatedText": "도둑은 들키자 경관에게 욕지거리를 했다."
+                }
+              ],
+              "originalMeaning": "욕지거리하다, 악담하다; <신(神) 등에> 불경한 말을 하다, 모독하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "저주하다 ((at))",
+              "examples": [],
+              "originalMeaning": "저주하다 ((at))"
+            },
+            {
+              "meaning": "욕지거리하다, 불경한 말을 하다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>curse</b> at a person",
+                  "translatedText": "…을 매도하다"
+                }
+              ],
+              "originalMeaning": "욕지거리하다, 불경한 말을 하다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "저주",
+              "examples": [],
+              "originalMeaning": "저주"
+            },
+            {
+              "meaning": "저주의 말, 악담, 독설 ((Damn!, Confound you! Deuce take it! 등))",
+              "examples": [
+                {
+                  "text": "Curses(, like chickens,) come home to roost.",
+                  "translatedText": "[속담] 하늘에 침뱉기, 남을 해치면 나 먼저 해를 입는다."
+                }
+              ],
+              "originalMeaning": "저주의 말, 악담, 독설 ((Damn!, Confound you! Deuce take it! 등))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ca22d3becffe49fc8cb1a709fbe7d6c4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ca22d3becffe49fc8cb1a709fbe7d6c4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "curses"
+        },
+        {
+          "type": "과거형",
+          "value": "cursed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cursing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cursed"
+        }
+      ],
+      "aliasConjugation": "curses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d6d38a964bfe71594901014c6d41527a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내게 그렇게 욕하지 마",
+      "text": "Stop cursing me out like that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 허약 체질을 타고났다.",
+      "text": "He is cursed with poor health."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 검에는 어떤 저주가 붙어 있다.",
+      "text": "A <b>curse</b> is attached to this sword."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "술에 취하면 그는 항상 욕설을 한다",
+      "text": "He always curses when he is drunk."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도둑은 들키자 경관에게 욕지거리를 했다.",
+      "text": "The thief cursed the police for finding him."
+    }
+  ],
+  "isWordType": true
+}

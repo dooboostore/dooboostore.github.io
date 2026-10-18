@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "<b>ventilate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈventɪleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<방·건물·갱도 등에> 공기[바람]를 통하다, <방 등을> 통풍이 잘되게 하다, 환기하다",
+              "examples": [],
+              "originalMeaning": "<방·건물·갱도 등에> 공기[바람]를 통하다, <방 등을> 통풍이 잘되게 하다, 환기하다"
+            },
+            {
+              "meaning": "<혈액에> 산소를 공급하다",
+              "examples": [],
+              "originalMeaning": "<혈액에> 산소를 공급하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "감정[의견, 불평]을 표현하다",
+              "examples": [],
+              "originalMeaning": "감정[의견, 불평]을 표현하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/11c95e4351bf46a0bde83fb03b86ceeb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/11c95e4351bf46a0bde83fb03b86ceeb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ventilates"
+        },
+        {
+          "type": "과거형",
+          "value": "ventilated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "ventilating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ventilated"
+        }
+      ],
+      "aliasConjugation": "ventilates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b0da8f5944daf412f0b170e7068885ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 공기의 유통이 나쁘다",
+      "text": "This room is poorly[ill] ventilated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집은 시원한 바람이 잘 통했다.",
+      "text": "Cool breezes ventilated the house."
+    }
+  ],
+  "isWordType": true
+}

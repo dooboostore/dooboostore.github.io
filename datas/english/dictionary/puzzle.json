@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "puzzle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpʌzl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수수께끼, 알아맞히기, 퍼즐, 퀴즈 (=mystery)",
+              "examples": [
+                {
+                  "text": "do a crossword <b>puzzle</b>",
+                  "translatedText": "크로스워드 퍼즐을 풀다 ((낱말을 가로세로 맞추다))"
+                }
+              ],
+              "originalMeaning": "수수께끼, 알아맞히기, 퍼즐, 퀴즈 (=<span class='related_word' lang='en' >mystery</span>)"
+            },
+            {
+              "meaning": "[a ~] 곤혹, 혼란",
+              "examples": [
+                {
+                  "text": "be in a <b>puzzle</b>",
+                  "translatedText": "곤혹하다"
+                }
+              ],
+              "originalMeaning": "[a ~] 곤혹, 혼란"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[종종 수동형으로] 당황[곤혹]하게 하다, 어쩔 줄 모르게 하다 (=bewilder)",
+              "examples": [
+                {
+                  "text": "The question puzzled me.",
+                  "translatedText": "나는 그 문제로 곤혹했다."
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 당황[곤혹]하게 하다, 어쩔 줄 모르게 하다 (=<span class='related_word' lang='en' >bewilder</span>)"
+            },
+            {
+              "meaning": "<머리를> 아프게 하다, 짜내게 하다",
+              "examples": [
+                {
+                  "text": "<b>puzzle</b> one's mind[brains] over[about] the solution of a problem",
+                  "translatedText": "문제 해결에 부심하다[골머리를 앓다]"
+                }
+              ],
+              "originalMeaning": "<머리를> 아프게 하다, 짜내게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "머리를 짜다, 이리저리 생각하다 ((over, about))",
+              "examples": [
+                {
+                  "text": "<b>puzzle</b> over a problem",
+                  "translatedText": "문제를 해결하려고 머리를 짜내다"
+                }
+              ],
+              "originalMeaning": "머리를 짜다, 이리저리 생각하다 ((over, about))"
+            },
+            {
+              "meaning": "곤혹하다 ((about, over)), 쩔쩔 매다",
+              "examples": [],
+              "originalMeaning": "곤혹하다 ((about, over)), 쩔쩔 매다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b9c9d693a2094a2dbee41023fe65a041",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b9c9d693a2094a2dbee41023fe65a041",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "puzzles"
+        },
+        {
+          "type": "과거형",
+          "value": "puzzled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "puzzling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "puzzled"
+        }
+      ],
+      "aliasConjugation": "puzzles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "998e16b8eb52817b97ef390c98e5ee16",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그 문제로 곤혹했다.",
+      "text": "The question puzzled me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뭐라고 대답해야 할지 난처했다.",
+      "text": "I was puzzled what to answer."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 어쩌면 좋을지 당혹했다",
+      "text": "I was puzzled (over)[at a loss] what to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 어찌 해야 좋을지 몰라 당황했다",
+      "text": "I was at a loss[was puzzled] what to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 정말 머리를 짜내게 하는 문제이다.",
+      "text": "This is a very puzzling question."
+    }
+  ],
+  "isWordType": true
+}

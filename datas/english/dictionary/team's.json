@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "team",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tiːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "팀, 조(組)",
+              "examples": [],
+              "originalMeaning": "팀, 조(組)"
+            },
+            {
+              "meaning": "(협동하여 일하는) 그룹, 반(班), 한 조의 직공들; [속어] (범죄) 조직",
+              "examples": [
+                {
+                  "text": "a <b>team</b> of advisers",
+                  "translatedText": "고문단"
+                }
+              ],
+              "originalMeaning": "(협동하여 일하는) 그룹, 반(班), 한 조의 직공들; [속어] (범죄) 조직"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<마소 등을> 한 수레에 이어 매다, [미] 한데 맨 짐승으로 <짐을> 나르다",
+              "examples": [],
+              "originalMeaning": "<마소 등을> 한 수레에 이어 매다, [미] 한데 맨 짐승으로 <짐을> 나르다"
+            },
+            {
+              "meaning": "[구어] <일을> 도급 주다, 한 조(組)로 하다",
+              "examples": [],
+              "originalMeaning": "[구어] <일을> 도급 주다, 한 조(組)로 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "조[팀]가 되다, 협력하다 ((up, together)); [미] 한데 맨 짐승을 부리다",
+              "examples": [],
+              "originalMeaning": "조[팀]가 되다, 협력하다 ((up, together)); [미] 한데 맨 짐승을 부리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0cac97a173b4480eaf827a3b5487e7a8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0cac97a173b4480eaf827a3b5487e7a8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "teams"
+        },
+        {
+          "type": "과거형",
+          "value": "teamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "teaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "teamed"
+        }
+      ],
+      "aliasConjugation": "teams",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5a78874d9efdd45bd87c2b8c89f01884",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 A팀의 회원으로 선출되었다.",
+      "text": "He made the A <b>team</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 같은 팀 소속이다.",
+      "text": "We belong to one <b>team</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 팀은 꼭 이긴다.",
+      "text": "Our <b>team</b> is bound to win."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 팀은 쉽게 너희 팀을 이길 수 있다.",
+      "text": "Our <b>team</b> can easily beat your <b>team</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 팀은 3위로 하락했다",
+      "text": "The <b>team</b> fell three places."
+    }
+  ],
+  "isWordType": true
+}

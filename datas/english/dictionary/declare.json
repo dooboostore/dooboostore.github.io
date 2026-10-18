@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "declare",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈkler"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "선언[포고]하다, 공표하다(proclaim); 선고하다",
+              "examples": [
+                {
+                  "text": "<b>declare</b> a state of emergency",
+                  "translatedText": "비상사태를 선포하다"
+                }
+              ],
+              "originalMeaning": "선언[포고]하다, 공표하다(proclaim); 선고하다"
+            },
+            {
+              "meaning": "언명[단언]하다(affirm)",
+              "examples": [
+                {
+                  "text": "He <b>declare</b> d that her allegation was a lie.",
+                  "translatedText": "그는 그녀의 주장이 허위라고 단언했다."
+                }
+              ],
+              "originalMeaning": "언명[단언]하다(affirm)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(찬성·반대 등을) 선언[단언, 언명]하다; [법] (원고로서의) 주장을 진술하다",
+              "examples": [],
+              "originalMeaning": "(찬성·반대 등을) 선언[단언, 언명]하다; [법] (원고로서의) 주장을 진술하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1ebe8b46317a4284a1e5d9a4f518b1df",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1ebe8b46317a4284a1e5d9a4f518b1df",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "declares"
+        },
+        {
+          "type": "과거형",
+          "value": "declared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "declaring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "declared"
+        }
+      ],
+      "aliasConjugation": "declares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "74537f534941c16c4818f19f41fd0d2d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그녀에게 사랑을 고백했다",
+      "text": "He declared his love for her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "김 씨의 당선은 무효가 되었다",
+      "text": "Mr. Kim's election was declared invalid."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하늘이 하나님의 영광을 나타내도다.",
+      "text": "The heavens <b>declare</b> the glory of God."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 네 주장이 허위라고 단언했다",
+      "text": "He declared that your allegation was a lie."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그녀의 주장이 허위라고 단언했다.",
+      "text": "He declared that her allegation was a lie."
+    }
+  ],
+  "isWordType": true
+}

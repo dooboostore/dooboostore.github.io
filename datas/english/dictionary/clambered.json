@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "<b>clamber</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈklæmbə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(애쓰며) 기어 올라가다 ((over, about))",
+              "examples": [],
+              "originalMeaning": "(애쓰며) 기어 올라가다 ((over, about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(손발을 사용하여) 기어올라가다 ((up)), 기어 내려가다 ((down))",
+              "examples": [],
+              "originalMeaning": "(손발을 사용하여) 기어올라가다 ((up)), 기어 내려가다 ((down))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~] 등반, 기어 올라가기",
+              "examples": [],
+              "originalMeaning": "[a ~] 등반, 기어 올라가기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/46596ad8b7f44eb28e1ca0c293f6ce63",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/46596ad8b7f44eb28e1ca0c293f6ce63",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "clambers"
+        },
+        {
+          "type": "과거형",
+          "value": "clambered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "clambering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "clambered"
+        }
+      ],
+      "aliasConjugation": "clambers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "41091f39b83ce954875897656ee8c77f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 숨이 찰 때까지 계단을 올라갔다",
+      "text": "He <b>clambered</b> the stairs until he was breathless."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 암벽을 기어 올라갔다",
+      "text": "We climbed up the side of a cliff. or We <b>clambered</b> over a rocky hillside."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "entry": "concept",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːnsept"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "개념",
+              "examples": [
+                {
+                  "text": "the <b>concept</b> (of) “horse”",
+                  "translatedText": "「말」이란 개념"
+                }
+              ],
+              "originalMeaning": "개념"
+            },
+            {
+              "meaning": "구상, 발상",
+              "examples": [],
+              "originalMeaning": "구상, 발상"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "개념을 전개하다, 생각해 내다",
+              "examples": [],
+              "originalMeaning": "개념을 전개하다, 생각해 내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/24c8a1ed39b64b0cb8765901baefb3d9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/24c8a1ed39b64b0cb8765901baefb3d9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c09f6d97f8606fe5e35c2d8d789968bf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "미의 개념은 시대에 따라 변한다",
+      "text": "The <b>concept</b> of beauty changes according to the times."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "fork",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɔːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(식탁용) 포크(= table ~)",
+              "examples": [],
+              "originalMeaning": "(식탁용) 포크(= table ~)"
+            },
+            {
+              "meaning": "(농업용) 포크, 갈퀴, 쇠스랑",
+              "examples": [],
+              "originalMeaning": "(농업용) 포크, 갈퀴, 쇠스랑"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "서서 먹는, 입식의, 나이프를 사용하지 않는 <식사>(cf. FORK LUNCH[SUPPER])",
+              "examples": [],
+              "originalMeaning": "서서 먹는, 입식의, 나이프를 사용하지 않는 <식사>(cf. <b>FORK</b> LUNCH[SUPPER])"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "갈래가 지다, 분기하다",
+              "examples": [],
+              "originalMeaning": "갈래가 지다, 분기하다"
+            },
+            {
+              "meaning": "포크를 쓰다",
+              "examples": [],
+              "originalMeaning": "포크를 쓰다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bed074869fe14f01a0c9cc68ccb80b5b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bed074869fe14f01a0c9cc68ccb80b5b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "forks"
+        },
+        {
+          "type": "과거형",
+          "value": "forked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "forking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "forked"
+        }
+      ],
+      "aliasConjugation": "forks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b5dfbab824f47d23c5aff539ba84f765",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "길은 여기서 세 갈래로 갈라진다",
+      "text": "Here the road breaks[forks, divides, branches] into three."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모퉁이를 돌면 길은 세 갈래로 갈라진다",
+      "text": "Turning the corner, the road breaks[forks, branches, divides] into three."
+    }
+  ],
+  "isWordType": true
+}

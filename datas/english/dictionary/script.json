@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "script",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "skrɪpt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 손으로 쓰기(handwriting), 필적, 필기 문자(opp. print)",
+              "examples": [
+                {
+                  "text": "in the ordinary <b>script</b>",
+                  "translatedText": "보통 필기체로"
+                }
+              ],
+              "originalMeaning": "[U] 손으로 쓰기(handwriting), 필적, 필기 문자(opp. print)"
+            },
+            {
+              "meaning": "(연극·영화·라디오[TV] 방송 등의) 대본, 각본, 스크립트",
+              "examples": [
+                {
+                  "text": "a film <b>script</b>",
+                  "translatedText": "영화 대본"
+                }
+              ],
+              "originalMeaning": "(연극·영화·라디오[TV] 방송 등의) 대본, 각본, 스크립트"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "대본을 쓰다",
+              "examples": [],
+              "originalMeaning": "대본을 쓰다"
+            },
+            {
+              "meaning": "입안하다",
+              "examples": [],
+              "originalMeaning": "입안하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4e1cb319599e4b12b48762dc58728b95",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4e1cb319599e4b12b48762dc58728b95",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "scripts"
+        },
+        {
+          "type": "과거형",
+          "value": "scripted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "scripting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "scripted"
+        }
+      ],
+      "aliasConjugation": "scripts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cdcdd583aa4bc2e9a7ab267678cd6520",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Script.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "Scriptural, Scripture",
+              "examples": [],
+              "originalMeaning": "Scriptural, Scripture"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cb9b81643d9045099544d7295de7edba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cb9b81643d9045099544d7295de7edba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "964e237915867ef0fd68ca26f009f9ee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대본 없는 TV 인터뷰는 대본이 있는 것보다 훨씬 재미있다",
+      "text": "Unscripted TV interviews are far more interesting than scripted ones."
+    }
+  ],
+  "isWordType": true
+}

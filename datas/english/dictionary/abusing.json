@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "abuse",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(권력·지위 따위의) 남용, 악용, 오용",
+              "examples": [
+                {
+                  "text": "drug <b>abuse</b>",
+                  "translatedText": "약물 남용"
+                }
+              ],
+              "originalMeaning": "(권력·지위 따위의) 남용, 악용, 오용"
+            },
+            {
+              "meaning": "욕설, 독설",
+              "examples": [
+                {
+                  "text": "personal <b>abuse</b>",
+                  "translatedText": "인신공격"
+                }
+              ],
+              "originalMeaning": "욕설, 독설"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<권리 등을> 남용하다, 악용[오용]하다",
+              "examples": [
+                {
+                  "text": "<b>abuse</b> one's authority",
+                  "translatedText": "직권을 남용하다"
+                }
+              ],
+              "originalMeaning": "<권리 등을> 남용하다, 악용[오용]하다"
+            },
+            {
+              "meaning": "학대하다, 혹사하다(treat badly)",
+              "examples": [
+                {
+                  "text": "<b>abuse</b> one's health",
+                  "translatedText": "무리하여 건강을 해치다"
+                }
+              ],
+              "originalMeaning": "학대하다, 혹사하다(treat badly)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/35f37e2896514fa69fff837461f6c4da",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/35f37e2896514fa69fff837461f6c4da",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "abuses"
+        },
+        {
+          "type": "과거형",
+          "value": "abused"
+        },
+        {
+          "type": "현재 분사",
+          "value": "abusing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "abused"
+        }
+      ],
+      "aliasConjugation": "abuses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ad8ed4d080410183786463150bd5065a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 욕은 나에게는 아무렇지도 않다.",
+      "text": "The <b>abuse</b> does not touch me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들의 욕설에는 면역이 되었다",
+      "text": "I am impervious[callous] to their <b>abuse</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 재임 중 전단의 행패가 많았다",
+      "text": "He abused his authority while in office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 사회의 악폐를 바로잡으려고 했다",
+      "text": "They tried to reform social abuses. or They tried to clear society of its evils."
+    }
+  ],
+  "isWordType": true
+}

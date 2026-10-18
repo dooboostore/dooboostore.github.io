@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "entry": "consistency",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈsɪstənsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(주의·방침·형식 등에 대한) 일관성, 언행일치, 모순이 없음 ((of, with))",
+              "examples": [],
+              "originalMeaning": "(주의·방침·형식 등에 대한) 일관성, 언행일치, 모순이 없음 ((of, with))"
+            },
+            {
+              "meaning": "견실성",
+              "examples": [],
+              "originalMeaning": "견실성"
+            },
+            {
+              "meaning": "(액체의) 농도, 밀도; (물질의) 경도",
+              "examples": [],
+              "originalMeaning": "(액체의) 농도, 밀도; (물질의) 경도"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/59184623e5af41e1817e15720ec9e50d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/59184623e5af41e1817e15720ec9e50d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "consistencies, consistences"
+        }
+      ],
+      "aliasConjugation": "consistencies, consistences",
+      "aliasConjugationPos": "복수형",
+      "gdid": "a87cbbc6a4bc73d560b0cf8c9719669a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 국수는 찰기가 좋다",
+      "text": "These noodles have a good <b>consistency</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "정부의 교육 정책은 일관성이 없다",
+      "text": "The government lacks <b>consistency</b> in its educational policies."
+    }
+  ],
+  "isWordType": true
+}

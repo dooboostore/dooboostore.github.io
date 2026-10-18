@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "<b>huff</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hʌf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "발끈 화를 냄, 화",
+              "examples": [],
+              "originalMeaning": "발끈 화를 냄, 화"
+            },
+            {
+              "meaning": "말을 잡기",
+              "examples": [],
+              "originalMeaning": "말을 잡기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "호통치다, 야단치다; <남에게> 으르대다; 위협하여 (…) 시키다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>huff</b> a person into silence",
+                  "translatedText": "…을 위협하여 침묵시키다"
+                }
+              ],
+              "originalMeaning": "호통치다, 야단치다; <남에게> 으르대다; 위협하여 (…) 시키다 ((into))"
+            },
+            {
+              "meaning": "화나게 하다",
+              "examples": [
+                {
+                  "text": "He was much <b>huff</b> ed.",
+                  "translatedText": "그는 몹시 화가 나 있었다."
+                }
+              ],
+              "originalMeaning": "화나게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "벌컥 성내다",
+              "examples": [],
+              "originalMeaning": "벌컥 성내다"
+            },
+            {
+              "meaning": "가쁘게 숨쉬다, 헐떡이다; 바람이 심하게 몰아치다",
+              "examples": [],
+              "originalMeaning": "가쁘게 숨쉬다, 헐떡이다; 바람이 심하게 몰아치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f3e9b786b0d14212a6bdb3f07c186c06",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f3e9b786b0d14212a6bdb3f07c186c06",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "huffs"
+        },
+        {
+          "type": "과거형",
+          "value": "huffed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "huffing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "huffed"
+        }
+      ],
+      "aliasConjugation": "huffs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "103fe58927bd741ce27d58c6173b2bdb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 몹시 화가 나 있었다.",
+      "text": "He was much <b>huffed</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 분연히 자리를 박차고 가 버렸다",
+      "text": "He went away in indignation[a <b>huff</b>]. or He shook the dust off his feet."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 정말 화났어",
+      "text": "She is in a real <b>huff</b>."
+    }
+  ],
+  "isWordType": true
+}

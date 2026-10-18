@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "entry": "virus",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvaɪrəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "바이러스; [속칭] (전염성) 병독, 병원체",
+              "examples": [],
+              "originalMeaning": "바이러스; [속칭] (전염성) 병독, 병원체"
+            },
+            {
+              "meaning": "바이러스성의 병(virus disease)",
+              "examples": [],
+              "originalMeaning": "바이러스성의 병(<b>virus</b> disease)"
+            },
+            {
+              "meaning": "(도덕·정신상의) 해독, 악영향",
+              "examples": [],
+              "originalMeaning": "(도덕·정신상의) 해독, 악영향"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/476cda1929894f9aacdc4632578a51d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/476cda1929894f9aacdc4632578a51d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "viruses"
+        }
+      ],
+      "aliasConjugation": "viruses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "7f4e57d31f30ef913129ddf5957f87fc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "바이러스가 전체 데이터베이스에 오류를 일으켰다.",
+      "text": "The <b>virus</b> corrupted the entire database."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 바이러스는 신체적 접촉을 통하여 감염된다",
+      "text": "The <b>virus</b> is transmitted via physical contact."
+    }
+  ],
+  "isWordType": true
+}

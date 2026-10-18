@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "entry": "psych",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sáik"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "정신적으로 혼란시키다, 불안하게 하다, 겁나게 하다 ((out)), 흥분시키다 ((up))",
+              "examples": [],
+              "originalMeaning": "정신적으로 혼란시키다, 불안하게 하다, 겁나게 하다 ((out)), 흥분시키다 ((up))"
+            },
+            {
+              "meaning": "직감적으로 이해하다, …의 심리를 꿰뚫어보다 ((out))",
+              "examples": [],
+              "originalMeaning": "직감적으로 이해하다, …의 심리를 꿰뚫어보다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "정신적으로 혼란에 빠지다",
+              "examples": [],
+              "originalMeaning": "정신적으로 혼란에 빠지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4a7d5f253d134689ae51fcd8a3326cab",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4a7d5f253d134689ae51fcd8a3326cab",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "psyches"
+        },
+        {
+          "type": "과거형",
+          "value": "psyched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "psyching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "psyched"
+        }
+      ],
+      "aliasConjugation": "psyches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "48a3d98e6490b8ec12bed5917adb4411",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "psych",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "심리학(psychology)",
+              "examples": [],
+              "originalMeaning": "심리학(psychology)"
+            },
+            {
+              "meaning": "(=PSYCHIATRIST)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >PSYCHIATRIST</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4eed85841e4b4b13b18272864769207f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4eed85841e4b4b13b18272864769207f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "psyches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0e7700573078c63472e16ab7728a5812",
+      "expEntrySuperscript": "2"
+    },
+    {
+      "entry": "psych.",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "psychic(al), psychological, psychology",
+              "examples": [],
+              "originalMeaning": "psychic(al), psychological, psychology"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1c15aec3b3954426a7038d9e72f8b3d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1c15aec3b3954426a7038d9e72f8b3d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "psyches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9cae0a3ccaff6b59e96e776c3d734baa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 면접을 보려고 마음의 준비를 했다",
+      "text": "He tried to <b>psych</b> himself up for an interview."
+    }
+  ],
+  "isWordType": true
+}

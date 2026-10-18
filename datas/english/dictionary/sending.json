@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "send",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "send"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(명령·의뢰 등에 의해서) <사람을> 가게 하다, 파견하다",
+              "examples": [
+                {
+                  "text": "<b>send</b> an emissary",
+                  "translatedText": "밀사를 보내다"
+                }
+              ],
+              "originalMeaning": "(명령·의뢰 등에 의해서) <사람을> 가게 하다, 파견하다"
+            },
+            {
+              "meaning": "<물건 등을> 보내다; 부치다, 발송하다, 송달하다",
+              "examples": [
+                {
+                  "text": "<b>send</b> help",
+                  "translatedText": "구원을 보내다"
+                }
+              ],
+              "originalMeaning": "<물건 등을> 보내다; 부치다, 발송하다, 송달하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사람을 보내다, 심부름꾼을 보내다",
+              "examples": [
+                {
+                  "text": "( <b>send</b>+to do) He sent to me to come soon.",
+                  "translatedText": "그는 나에게 곧 오라고 사람을 보냈다."
+                }
+              ],
+              "originalMeaning": "사람을 보내다, 심부름꾼을 보내다"
+            },
+            {
+              "meaning": "편지를 보내다, 전언을 써 보내다, 알리다",
+              "examples": [],
+              "originalMeaning": "편지를 보내다, 전언을 써 보내다, 알리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/36e62cf4012246768bbc541be1a893c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/36e62cf4012246768bbc541be1a893c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sends"
+        },
+        {
+          "type": "과거형",
+          "value": "sent"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sent"
+        }
+      ],
+      "aliasConjugation": "sends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "86dfd8c90ef8b038f2c105de9b5653ed",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "send",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "파도에 배가 들어올려짐, 배의 뒷질",
+              "examples": [],
+              "originalMeaning": "파도에 배가 들어올려짐, 배의 뒷질"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "파도에 들어올려지다, <배가> 뒷질하다(cf. PITCH)",
+              "examples": [],
+              "originalMeaning": "파도에 들어올려지다, <배가> 뒷질하다(cf. PITCH)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6a24d7a3c6d04340b46c8bdc26392d0e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6a24d7a3c6d04340b46c8bdc26392d0e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "sends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b19710f99470ecd1a5952758f334015a",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "차를 한 대 보내주시오.",
+      "text": "<b>Send</b> a car for us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 학교에서 귀가 조치를 당했다.",
+      "text": "He was sent down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신이여 그를 성공하게 하옵소서!",
+      "text": "God <b>send</b> him success!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 성대한 전송을 받았다",
+      "text": "He was given a good <b>send</b>-off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "짐은 미리 부쳐 두십시오",
+      "text": "<b>Send</b> your baggage in advance."
+    }
+  ],
+  "isWordType": true
+}

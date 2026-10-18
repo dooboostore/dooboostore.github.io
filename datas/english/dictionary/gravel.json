@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "<b>gravel</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɡrævl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [집합적] 자갈, [미국] 밸러스트(ballast), [C] [지질] 사력층(砂礫層) ((특히 사금(砂金)을 함유하는)), (=stone)",
+              "examples": [],
+              "originalMeaning": "[U] [집합적] 자갈, [미국] 밸러스트(ballast), [C] [지질] 사력층(砂礫層) ((특히 사금(砂金)을 함유하는)), (=<span class='related_word' lang='en' >stone</span>)"
+            },
+            {
+              "meaning": "신사(腎砂), 요사(尿砂), 요결석(尿結石), 요사증(症)",
+              "examples": [],
+              "originalMeaning": "신사(腎砂), 요사(尿砂), 요결석(尿結石), 요사증(症)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자갈로 덮다[보수하다], …에 자갈을 깔다",
+              "examples": [],
+              "originalMeaning": "자갈로 덮다[보수하다], …에 자갈을 깔다"
+            },
+            {
+              "meaning": "어리둥절케 하다, 곤혹스럽게 하다(puzzle, perplex)",
+              "examples": [],
+              "originalMeaning": "어리둥절케 하다, 곤혹스럽게 하다(puzzle, perplex)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<주로 목소리가> 귀에 거슬리는",
+              "examples": [],
+              "originalMeaning": "<주로 목소리가> 귀에 거슬리는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/27582bbecd7240c8bbc040319bc81e65",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/27582bbecd7240c8bbc040319bc81e65",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gravels"
+        },
+        {
+          "type": "과거형",
+          "value": "gravelled, graveled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gravelling, graveling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gravelled, graveled"
+        }
+      ],
+      "aliasConjugation": "gravels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2fd16bbf9e9a3912f8388242ee94f700",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 무례함에 화가 난다.",
+      "text": "His impudence gravels me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "격류가 토사를 나른다.",
+      "text": "The torrent bears along silt and <b>gravel</b>."
+    }
+  ],
+  "isWordType": true
+}

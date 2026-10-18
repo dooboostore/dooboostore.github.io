@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "profile",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│proʊfaɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "옆얼굴, 반면상(半面像); (조상(彫像)의) 측면",
+              "examples": [
+                {
+                  "text": "have a handsome <b>profile</b>",
+                  "translatedText": "옆얼굴이 잘생기다"
+                }
+              ],
+              "originalMeaning": "옆얼굴, 반면상(半面像); (조상(彫像)의) 측면"
+            },
+            {
+              "meaning": "윤곽(outline), 소묘(素描)",
+              "examples": [],
+              "originalMeaning": "윤곽(outline), 소묘(素描)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 윤곽을 그리다, …의 측면도를 그리다",
+              "examples": [],
+              "originalMeaning": "…의 윤곽을 그리다, …의 측면도를 그리다"
+            },
+            {
+              "meaning": "…의 개요를 쓰다; …의 인물평을 쓰다, 인물을 소개하다",
+              "examples": [],
+              "originalMeaning": "…의 개요를 쓰다; …의 인물평을 쓰다, 인물을 소개하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d5ec58b1230f497a8d857934a2147173",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d5ec58b1230f497a8d857934a2147173",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "profiles"
+        },
+        {
+          "type": "과거형",
+          "value": "profiled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "profiling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "profiled"
+        }
+      ],
+      "aliasConjugation": "profiles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f8428ea018f19f8b27bf82b3223940d2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대통령은 그 문제에 관해 명확한 입장을 취했다.",
+      "text": "The President adopted a high <b>profile</b> on that issue."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "submit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səbˈmɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(…에) 복종[종속]시키다, 따르게 하다 ((to))",
+              "examples": [],
+              "originalMeaning": "(…에) 복종[종속]시키다, 따르게 하다 ((to))"
+            },
+            {
+              "meaning": "[~ oneself로] (…을) 감수(甘受)하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>submit</b> oneself to insult",
+                  "translatedText": "모욕을 달게 받다"
+                }
+              ],
+              "originalMeaning": "[~ oneself로] (…을) 감수(甘受)하다 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(적 등에) 복종[굴복, 항복]하다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>submit</b> to authority",
+                  "translatedText": "권위에 복종하다"
+                }
+              ],
+              "originalMeaning": "(적 등에) 복종[굴복, 항복]하다 ((to))"
+            },
+            {
+              "meaning": "(의견 등에) 따르다, (특히 불쾌한 일을) 감수하다, (조치·치료 등을) 받다 ((to))",
+              "examples": [
+                {
+                  "text": "<b>submit</b> to one's fate",
+                  "translatedText": "운명을 달게 받다"
+                }
+              ],
+              "originalMeaning": "(의견 등에) 따르다, (특히 불쾌한 일을) 감수하다, (조치·치료 등을) 받다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5fdda024c30941d5b933401e3f937bea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5fdda024c30941d5b933401e3f937bea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "submits"
+        },
+        {
+          "type": "과거형",
+          "value": "submitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "submitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "submitted"
+        }
+      ],
+      "aliasConjugation": "submits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b58f5411a7ad607b0c7511ca2a734571",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모든 보고는 문서로 제출하라",
+      "text": "<b>Submit</b> all reports in writing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 수술을 받기로 했다.",
+      "text": "He has <b>submitted</b> to an operation."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "완전한 증거가 필요하다고 생각합니다.",
+      "text": "I <b>submit</b> that full proof should be required."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "실례지만 당신이 잘못 생각하고 있다고 말씀드리고자 합니다.",
+      "text": "I <b>submit</b> that you are mistaken."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 싸울까 항복할까 망설였다",
+      "text": "They hesitated between fighting and submitting."
+    }
+  ],
+  "isWordType": true
+}

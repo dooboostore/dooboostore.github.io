@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "address",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(청중을 향한 공식적인) 인사말; 연설, 강연 (=speech)",
+              "examples": [
+                {
+                  "text": "an opening[a closing] <b>address</b>",
+                  "translatedText": "개회[폐회]사"
+                }
+              ],
+              "originalMeaning": "(청중을 향한 공식적인) 인사말; 연설, 강연 (=<span class='related_word' lang='en' >speech</span>)"
+            },
+            {
+              "meaning": "[ǽdres] (수신인) 주소 (성명), (편지나 소포의) 겉봉 주소; [컴퓨터] 번지, 어드레스 ((기억 장치 안에 특정 정보가 있는 위치 또는 그것의 번호))",
+              "examples": [
+                {
+                  "text": "What is your <b>address</b> ?",
+                  "translatedText": "주소가 어디죠?"
+                }
+              ],
+              "originalMeaning": "[ǽdres] (수신인) 주소 (성명), (편지나 소포의) 겉봉 주소; [컴퓨터] 번지, 어드레스 ((기억 장치 안에 특정 정보가 있는 위치 또는 그것의 번호))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에게> 말을 걸다, <청중에게> 연설[강연]하다",
+              "examples": [
+                {
+                  "text": "<b>address</b> an audience",
+                  "translatedText": "청중에게 연설[강연, 설법]하다"
+                }
+              ],
+              "originalMeaning": "<…에게> 말을 걸다, <청중에게> 연설[강연]하다"
+            },
+            {
+              "meaning": "<…을 …이라고> 부르다, (정식 호칭이나 올바른 경칭을 써서) <…을 …이라고> 부르다",
+              "examples": [
+                {
+                  "text": "How should one <b>address</b> the Mayor?",
+                  "translatedText": "시장은 어떻게[어떠한 경칭으로] 불러야 합니까?"
+                }
+              ],
+              "originalMeaning": "<…을 …이라고> 부르다, (정식 호칭이나 올바른 경칭을 써서) <…을 …이라고> 부르다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "준비하다",
+              "examples": [],
+              "originalMeaning": "준비하다"
+            },
+            {
+              "meaning": "연설하다",
+              "examples": [],
+              "originalMeaning": "연설하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ccf15bb4f352465eaafe59fbd2feeee0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ccf15bb4f352465eaafe59fbd2feeee0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "addresses"
+        },
+        {
+          "type": "과거형",
+          "value": "addressed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "addressing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "addressed"
+        }
+      ],
+      "aliasConjugation": "addresses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "26b7ea5a7ec91a023f54b608bc299a2c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 거처를 밝히지 않는다",
+      "text": "He doesn't give me his <b>address</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 종이에 주소를 쓰시오",
+      "text": "Write your <b>address</b> on this paper."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다음에 검사의 논고가 있었다",
+      "text": "Then the prosecutor <b>addressed</b> the court."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 숙소를 알고 있다",
+      "text": "I know where he stays. or I have his <b>address</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 우편물을 이 주소로 보내 주세요",
+      "text": "Please forward my mail to this <b>address</b>."
+    }
+  ],
+  "isWordType": true
+}

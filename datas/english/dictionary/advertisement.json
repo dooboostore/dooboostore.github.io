@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "advertisement",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ædvər│taɪzmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "광고",
+              "examples": [
+                {
+                  "text": "place an <b>advertisement</b> for a situation",
+                  "translatedText": "구직 광고를 내다"
+                }
+              ],
+              "originalMeaning": "광고"
+            },
+            {
+              "meaning": "(특히 인쇄물·방송에 의한) 고지, 통지, 통고, 공시",
+              "examples": [],
+              "originalMeaning": "(특히 인쇄물·방송에 의한) 고지, 통지, 통고, 공시"
+            },
+            {
+              "meaning": "널리 알리는 것, 주지",
+              "examples": [],
+              "originalMeaning": "널리 알리는 것, 주지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d4e8b482d914bb8a31f3f5e67be3167",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d4e8b482d914bb8a31f3f5e67be3167",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7a1c4838eba0ab481dfab42cd09988ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "광고 때문에 공원이 살풍경하다",
+      "text": "The advertisements mar the beauty of the public park."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 광고에 대해 대중은 아무런 반향이 없었다",
+      "text": "The <b>advertisement</b> was not at all responded to by the public."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 광고는 각처의 독자들을 사로잡을 것이다",
+      "text": "This <b>advertisement</b> will capture the attention of readers everywhere."
+    }
+  ],
+  "isWordType": true
+}

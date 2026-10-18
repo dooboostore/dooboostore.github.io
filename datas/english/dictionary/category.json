@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "category",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kætəɡɔːri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "범주, 카테고리",
+              "examples": [],
+              "originalMeaning": "범주, 카테고리"
+            },
+            {
+              "meaning": "부문, 구분, 종류",
+              "examples": [],
+              "originalMeaning": "부문, 구분, 종류"
+            },
+            {
+              "meaning": "[pl., 단수 취급] 카테고리스 ((몇 개인가의 키워드를 가지고 하는 문자 놀이))",
+              "examples": [],
+              "originalMeaning": "[pl., 단수 취급] 카테고리스 ((몇 개인가의 키워드를 가지고 하는 문자 놀이))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ea890f3629514fadb84f1962946ba8ca",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ea890f3629514fadb84f1962946ba8ca",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "categories"
+        }
+      ],
+      "aliasConjugation": "categories",
+      "aliasConjugationPos": "복수형",
+      "gdid": "440e111f5f4742f09af03693aa607bed",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 책은 자서전 류에 속해 있다",
+      "text": "This book falls into the <b>category</b> of autobiography."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 이 항목에 들어 있다",
+      "text": "It is included under this head. or It belongs in[to] this <b>category</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "편의상 그걸 세 종류로 나누었다",
+      "text": "I divided it into three categories for convenience' sake[for the sake of convenience]."
+    }
+  ],
+  "isWordType": true
+}

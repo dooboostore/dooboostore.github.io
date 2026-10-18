@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "toy",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tɔɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "장난감, 완구(plaything)",
+              "examples": [
+                {
+                  "text": "play with a <b>toy</b>",
+                  "translatedText": "장난감을 갖고 놀다"
+                }
+              ],
+              "originalMeaning": "장난감, 완구(plaything)"
+            },
+            {
+              "meaning": "실용이 안 되는 물건",
+              "examples": [],
+              "originalMeaning": "실용이 안 되는 물건"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 장난감(용)의, (크기가) 장난감 같은, <개 등이> 소형의",
+              "examples": [
+                {
+                  "text": "a <b>toy</b> car",
+                  "translatedText": "장난감 자동차"
+                }
+              ],
+              "originalMeaning": "[A] 장난감(용)의, (크기가) 장난감 같은, <개 등이> 소형의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "장난하다, 희롱하다 ((with)); 가지고 놀다, 집적거리다 ((with))",
+              "examples": [
+                {
+                  "text": "Don't <b>toy</b> with the cat's tail!",
+                  "translatedText": "고양이 꼬리를 가지고 장난치지 마라."
+                }
+              ],
+              "originalMeaning": "장난하다, 희롱하다 ((with)); 가지고 놀다, 집적거리다 ((with))"
+            },
+            {
+              "meaning": "장난삼아 생각하다 ((with))",
+              "examples": [
+                {
+                  "text": "I'm toying with the idea of buying a car.",
+                  "translatedText": "자동차를 살까 하고 그냥 생각하고 있어."
+                }
+              ],
+              "originalMeaning": "장난삼아 생각하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/69a2029631c54e85b16c6d7df8c5b204",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/69a2029631c54e85b16c6d7df8c5b204",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "toys"
+        },
+        {
+          "type": "과거형",
+          "value": "toyed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "toying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "toyed"
+        }
+      ],
+      "aliasConjugation": "toys",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1d1cf14a911cb4550cb37226f4fb6b32",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "장난감이 방바닥에 흩어져 있었다.",
+      "text": "<b>Toys</b> littered up the floor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "장난감들로 마루는 수라장이 되었다",
+      "text": "<b>Toys</b> cluttered up the floor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 그녀의 감정을 갖고 놀면 안된다",
+      "text": "You can't <b>toy</b> with her affection."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고양이 꼬리를 가지고 장난치지 마라.",
+      "text": "Don’t <b>toy</b> with the cat’s tail!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 장난감 가게는 엄청나게 수지맞는 사업이다",
+      "text": "This <b>toy</b> shop is a real money-spinner."
+    }
+  ],
+  "isWordType": true
+}

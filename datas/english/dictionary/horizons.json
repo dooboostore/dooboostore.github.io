@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "horizon",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "həˈraɪzn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지평[수평]선",
+              "examples": [
+                {
+                  "text": "below the <b>horizon</b>",
+                  "translatedText": "지평선 아래에"
+                }
+              ],
+              "originalMeaning": "지평[수평]선"
+            },
+            {
+              "meaning": "지평(선[면]), 수평(선[면])",
+              "examples": [],
+              "originalMeaning": "지평(선[면]), 수평(선[면])"
+            },
+            {
+              "meaning": "[보통 pl.] (인식·사고·지식 등의) 범위, 한계, 시야; 전망 ((of))",
+              "examples": [
+                {
+                  "text": "a mental <b>horizon</b>",
+                  "translatedText": "식견"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] (인식·사고·지식 등의) 범위, 한계, 시야; 전망 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d21020f574964371943b89a453af88c9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d21020f574964371943b89a453af88c9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cb93a4e7638e743616eeb0a6b12c88b3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달이 지평선 아래로 졌다",
+      "text": "The moon sank below the <b>horizon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달이 지[수]평선 위에 떠올랐다.",
+      "text": "The moon came up above the <b>horizon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해가 지평선 쪽으로 기울었다",
+      "text": "The sun went down toward the <b>horizon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배가 수평선 너머로 사라졌다",
+      "text": "The ship vanished beyond the <b>horizon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "달이 지평선 위에 떠오르고 있다.",
+      "text": "The moon is rising above the <b>horizon</b>."
+    }
+  ],
+  "isWordType": true
+}

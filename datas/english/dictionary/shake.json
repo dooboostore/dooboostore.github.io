@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "shake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃeɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "흔들다, 잡아 흔들다, 뒤흔들다; 흔들어 …하다, 흔들어 움직이다, 흔들어 떨어뜨리다",
+              "examples": [
+                {
+                  "text": "<b>shake</b> a bottle of milk",
+                  "translatedText": "우유병을 흔들다"
+                }
+              ],
+              "originalMeaning": "흔들다, 잡아 흔들다, 뒤흔들다; 흔들어 …하다, 흔들어 움직이다, 흔들어 떨어뜨리다"
+            },
+            {
+              "meaning": "진동시키다, 떨리게 하다; (전후좌우로) 흔들리게 하다(rock)",
+              "examples": [
+                {
+                  "text": "The earthquake shook the tall building.",
+                  "translatedText": "지진이 고층 빌딩을 흔들리게 했다[뒤흔들었다]."
+                }
+              ],
+              "originalMeaning": "진동시키다, 떨리게 하다; (전후좌우로) 흔들리게 하다(rock)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "흔들리다, 진동하다(vibrate), 흔들어 섞다",
+              "examples": [
+                {
+                  "text": "The trees are shaking in the wind.",
+                  "translatedText": "나무들이 바람에 흔들리고 있다."
+                }
+              ],
+              "originalMeaning": "흔들리다, 진동하다(vibrate), 흔들어 섞다"
+            },
+            {
+              "meaning": "<몸·목소리가> 떨리다; (추위·노여움 등으로) 벌벌 떨다 ((with, from)); 동요되다, <자신·결심·용기 등이> 흔들리다",
+              "examples": [
+                {
+                  "text": "Her courage began to <b>shake</b> when she heard the news.",
+                  "translatedText": "그 소식을 듣자 그녀의 용기는 흔들리기 시작했다."
+                }
+              ],
+              "originalMeaning": "<몸·목소리가> 떨리다; (추위·노여움 등으로) 벌벌 떨다 ((with, from)); 동요되다, <자신·결심·용기 등이> 흔들리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "흔듦, 한 번 흔들기; 진동, 떨림, 동요; (마차 등의) 흔들거림, 격동",
+              "examples": [],
+              "originalMeaning": "흔듦, 한 번 흔들기; 진동, 떨림, 동요; (마차 등의) 흔들거림, 격동"
+            },
+            {
+              "meaning": "악수",
+              "examples": [],
+              "originalMeaning": "악수"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/584244a063e847dcb43222b7ca3f6063",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/584244a063e847dcb43222b7ca3f6063",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shakes"
+        },
+        {
+          "type": "과거형",
+          "value": "shook"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shaken"
+        }
+      ],
+      "aliasConjugation": "shakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8819db04f2acb1265e0ac143339036b8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "손이 오들오들 떨려서 쓸 수 없었다",
+      "text": "I could not write as my hand shook. or My hand shook so much that I could not write."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 협박해서 돈을 사기 쳤어",
+      "text": "He's shaken me down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사용 전에 잘 흔드시오.",
+      "text": "<b>Shake</b> well before using."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 뒤쫓는 자들을 따돌렸다.",
+      "text": "He shook his pursuers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나를 향해 주먹을 휘둘렀다",
+      "text": "He shook his fist at me."
+    }
+  ],
+  "isWordType": true
+}

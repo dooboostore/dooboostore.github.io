@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "<b>crop</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "krɑːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "농작물, 수확물 ((곡물·과실·야채 등)); [the ~s] (한 지방·한 계절의) 모든 농작물; 수확고, 생산고",
+              "examples": [
+                {
+                  "text": "an abundant <b>crop</b>",
+                  "translatedText": "풍작"
+                }
+              ],
+              "originalMeaning": "농작물, 수확물 ((곡물·과실·야채 등)); [the ~s] (한 지방·한 계절의) 모든 농작물; 수확고, 생산고"
+            },
+            {
+              "meaning": "(새의) 멀떠구니, 모이주머니(craw)",
+              "examples": [],
+              "originalMeaning": "(새의) 멀떠구니, 모이주머니(craw)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "자르다, 베다(clip); <머리털 등을> 짧게 깎다, 막깎다; <표시로서 동물의 귀나 벌로서 사람의 귀의> 끝을 자르다, 잘라내다; (책) 페이지의 여백을 잘라 버리다",
+              "examples": [],
+              "originalMeaning": "자르다, 베다(clip); <머리털 등을> 짧게 깎다, 막깎다; <표시로서 동물의 귀나 벌로서 사람의 귀의> 끝을 자르다, 잘라내다; (책) 페이지의 여백을 잘라 버리다"
+            },
+            {
+              "meaning": "<동물이 풀 등의 끄트머리를> 잘라 먹다(eat down)",
+              "examples": [
+                {
+                  "text": "The sheep have cropped grass very short.",
+                  "translatedText": "양이 풀을 아주 짧게 뜯어 먹었다."
+                }
+              ],
+              "originalMeaning": "<동물이 풀 등의 끄트머리를> 잘라 먹다(eat down)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[well 등의 부사와 함께] 농작물이 (…하게) 되다",
+              "examples": [
+                {
+                  "text": "The beans <b>crop</b> ped well[badly] that year.",
+                  "translatedText": "그해는 콩이 잘 되었다[잘 안 되었다]."
+                }
+              ],
+              "originalMeaning": "[well 등의 부사와 함께] 농작물이 (…하게) 되다"
+            },
+            {
+              "meaning": "작물을 심다",
+              "examples": [],
+              "originalMeaning": "작물을 심다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d42be0d017e485ca76e52948c9339d3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d42be0d017e485ca76e52948c9339d3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "crops"
+        },
+        {
+          "type": "과거형",
+          "value": "cropped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cropping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cropped"
+        }
+      ],
+      "aliasConjugation": "crops",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fec48c528429d31c0daaac559e4241dd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "풍작이 될 것 같다.",
+      "text": "The <b>crops</b> promise well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "작물에는 거의 해가 없었다",
+      "text": "The <b>crops</b> suffered little harm."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금년 농작물은 잘 안되었다",
+      "text": "The <b>crops</b> are very bad this year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "큰 비가 농작물을 망쳐 버렸다.",
+      "text": "The heavy rain spoiled the <b>crops</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "올해는 가물이 들어 흉작이었다",
+      "text": "Owing to the drought, the <b>crops</b> have failed this year. or Due to the drought, the farmers have had poor <b>crops</b> this year."
+    }
+  ],
+  "isWordType": true
+}

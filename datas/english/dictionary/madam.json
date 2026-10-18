@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>madam</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmædəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "아씨, 부인",
+              "examples": [
+                {
+                  "text": "<b>Madam</b> Chairman",
+                  "translatedText": "여성 의장"
+                }
+              ],
+              "originalMeaning": "아씨, 부인"
+            },
+            {
+              "meaning": "주부, 아내",
+              "examples": [],
+              "originalMeaning": "주부, 아내"
+            },
+            {
+              "meaning": "건방진 계집애",
+              "examples": [],
+              "originalMeaning": "건방진 계집애"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/406476139b194beb896fe1bdb8729ded",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/406476139b194beb896fe1bdb8729ded",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "madams, mesdames"
+        }
+      ],
+      "aliasConjugation": "madams, mesdames",
+      "aliasConjugationPos": "복수형",
+      "gdid": "d78feb46409da895d3f2095ee573139e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사모님",
+      "text": "<b>Madam</b>;Mrs.;your (good) lady;Milady"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대통령 영부인",
+      "text": "<b>Madam</b> President"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여성 의장",
+      "text": "<b>Madam</b> Chairman"
+    }
+  ],
+  "isWordType": true
+}

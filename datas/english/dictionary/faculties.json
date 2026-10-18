@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "faculty",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfæklti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 능력, 재능; [미·구어] 수완(skill), 재산; 자력(資力), (=ability)",
+              "examples": [
+                {
+                  "text": "a <b>faculty</b> for making friends",
+                  "translatedText": "친구를 사귀는 재주"
+                }
+              ],
+              "originalMeaning": "[CU] 능력, 재능; [미·구어] 수완(skill), 재산; 자력(資力), (=<span class='related_word' lang='en' >ability</span>)"
+            },
+            {
+              "meaning": "정신적[지적] 능력",
+              "examples": [
+                {
+                  "text": "the <b>faculty</b> of memory",
+                  "translatedText": "기억력"
+                }
+              ],
+              "originalMeaning": "정신적[지적] 능력"
+            },
+            {
+              "meaning": "(신체·정신의) 기능(function)",
+              "examples": [
+                {
+                  "text": "the <b>faculty</b> of hearing[speech]",
+                  "translatedText": "청각[언어] 능력"
+                }
+              ],
+              "originalMeaning": "(신체·정신의) 기능(function)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ed92ecb05e214a7c8762972073d52bb9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ed92ecb05e214a7c8762972073d52bb9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "faculties"
+        }
+      ],
+      "aliasConjugation": "faculties",
+      "aliasConjugationPos": "복수형",
+      "gdid": "e34debe4e67be80c6f73eb8d13d6b740",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오늘은 교수 회의[직원 회의]가 있다.",
+      "text": "The <b>faculty</b> are meeting today."
+    }
+  ],
+  "isWordType": true
+}

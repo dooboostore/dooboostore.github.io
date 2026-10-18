@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "entry": "<b>avert</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈvɜːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<눈·생각 등을> (…에서) 돌리다, 비키다, 외면하다(turn away) ((from))",
+              "examples": [
+                {
+                  "text": "She <b>avert</b> ed her eyes from the terrible sight.",
+                  "translatedText": "그녀는 그 무서운 광경으로부터 눈을 돌렸다."
+                }
+              ],
+              "originalMeaning": "<눈·생각 등을> (…에서) 돌리다, 비키다, 외면하다(turn away) ((from))"
+            },
+            {
+              "meaning": "<타격·위험을> 피하다, 막다(prevent)",
+              "examples": [],
+              "originalMeaning": "<타격·위험을> 피하다, 막다(prevent)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b8c732455f554440a6c779790258455c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b8c732455f554440a6c779790258455c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "averts"
+        },
+        {
+          "type": "과거형",
+          "value": "averted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "averting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "averted"
+        }
+      ],
+      "aliasConjugation": "averts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cf65cedb1397040530076af5decf46a2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 죽은 쥐를 보자 곧바로 외면했다",
+      "text": "When I found a dead rat, I <b>averted</b> my eyes at once."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 그 무서운 광경으로부터 눈을 돌렸다.",
+      "text": "She <b>averted</b> her eyes from the terrible sight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나를 외면하고 지나갔다",
+      "text": "He passed by with his face <b>averted</b>. or He cut me (dead) in the street."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "원려에 근환없다",
+      "text": "Prudence averts danger."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "statement",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsteɪtmənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 말함, 말해진 것; 표현[진술]법, 말하는 방식",
+              "examples": [],
+              "originalMeaning": "[U] 말함, 말해진 것; 표현[진술]법, 말하는 방식"
+            },
+            {
+              "meaning": "[UC/] (문서·구두에 의한) 진술, 신고, 성명; 하나의 의견[주장], (진술·성명서 중의) 한마디[절]; [C] 성명서",
+              "examples": [
+                {
+                  "text": "make a <b>statement</b>",
+                  "translatedText": "성명을 발표하다"
+                }
+              ],
+              "originalMeaning": "[UC/] (문서·구두에 의한) 진술, 신고, 성명; 하나의 의견[주장], (진술·성명서 중의) 한마디[절]; [C] 성명서"
+            },
+            {
+              "meaning": "계산서, 대차표, 일람표, (사업) 보고(서)",
+              "examples": [
+                {
+                  "text": "the new consolidated monthly <b>statement</b>",
+                  "translatedText": "새로 통합된 월 명세표"
+                }
+              ],
+              "originalMeaning": "계산서, 대차표, 일람표, (사업) 보고(서)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a39271eab8db4dd791c39545953d2771",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a39271eab8db4dd791c39545953d2771",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "statements"
+        },
+        {
+          "type": "과거형",
+          "value": "statemented"
+        },
+        {
+          "type": "과거 분사",
+          "value": "statemented"
+        }
+      ],
+      "aliasConjugation": "statements",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3269ac4c3d2b75bb6083497eac596d05",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어느 쪽 주장도 사실이 아니다.",
+      "text": "Neither <b>statement</b> is true."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 진술은 너무 막연하다.",
+      "text": "The <b>statement</b> is too general."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 자기 말이 옳다고 우겨댄다",
+      "text": "He asserts his <b>statement</b> to be true."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이야기에는 좀 풍이 섞였다",
+      "text": "His <b>statement</b> is rather exaggerated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그의 말이 사실이라고 여기고 있다",
+      "text": "I hold his <b>statement</b> to be true."
+    }
+  ],
+  "isWordType": true
+}

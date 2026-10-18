@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "course",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɔːrs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 the ~] 진행, 전진, 추이(progress)",
+              "examples": [
+                {
+                  "text": "the <b>course</b> of life",
+                  "translatedText": "인생 행로"
+                }
+              ],
+              "originalMeaning": "[종종 the ~] 진행, 전진, 추이(progress)"
+            },
+            {
+              "meaning": "진로, 방향, 수로, 침로, 항로; 노정",
+              "examples": [
+                {
+                  "text": "a ship's <b>course</b>",
+                  "translatedText": "침로, 운항로"
+                }
+              ],
+              "originalMeaning": "진로, 방향, 수로, 침로, 항로; 노정"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<말 등을> 달리다",
+              "examples": [],
+              "originalMeaning": "<말 등을> 달리다"
+            },
+            {
+              "meaning": "사냥개를 부려서 사냥하다, <사냥개로 하여금> 몰게 하다; <사냥개가 토끼를> 쫓아가다(chase)",
+              "examples": [],
+              "originalMeaning": "사냥개를 부려서 사냥하다, <사냥개로 하여금> 몰게 하다; <사냥개가 토끼를> 쫓아가다(chase)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<말·개·아이 등이> 뛰어다니다(run)",
+              "examples": [],
+              "originalMeaning": "<말·개·아이 등이> 뛰어다니다(run)"
+            },
+            {
+              "meaning": "(사냥개를 부려) 사냥을 하다",
+              "examples": [],
+              "originalMeaning": "(사냥개를 부려) 사냥을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5f622291e5254922ba2cc4f6f6220031",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5f622291e5254922ba2cc4f6f6220031",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "courses"
+        },
+        {
+          "type": "과거형",
+          "value": "coursed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "coursing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "coursed"
+        }
+      ],
+      "aliasConjugation": "courses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d63bc8dcda5e17f505d9ebec4b7c6b9d",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "course",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "물론, 당연히",
+              "examples": [],
+              "originalMeaning": "물론, 당연히"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5fd104ad2e97484e9a9f38dd3d9f67c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5fd104ad2e97484e9a9f38dd3d9f67c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "courses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "08dc1e9eaf2f97a065ec701f006b3d29",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "참 그런 수도 있어",
+      "text": "I see that's another <b>course</b> open."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 비행기는 코스를 맞게[틀리게] 갔다",
+      "text": "The plane was on[off] <b>course</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "식사의 주요 코스는 구운 쇠고기였다",
+      "text": "The main <b>course</b> was roast beef."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "행성은 그 궤도를 운행한다",
+      "text": "The planets roll on in their <b>courses</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 매일 라디오 강좌를 듣는다",
+      "text": "I listen to a radio <b>course</b> everyday."
+    }
+  ],
+  "isWordType": true
+}

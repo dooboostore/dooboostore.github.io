@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "lunch",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lʌntʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(dinner를 저녁에 먹는 사람의) 점심(luncheon), (낮에 dinner를 먹을 때는 아침과 dinner 사이의) 경식사, 스낵",
+              "examples": [],
+              "originalMeaning": "(dinner를 저녁에 먹는 사람의) 점심(luncheon), (낮에 dinner를 먹을 때는 아침과 dinner 사이의) 경식사, 스낵"
+            },
+            {
+              "meaning": "간단한 식사 ((시간을 가리지 않는)), 도시락",
+              "examples": [],
+              "originalMeaning": "간단한 식사 ((시간을 가리지 않는)), 도시락"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "점심을 먹다[…에게 주다]",
+              "examples": [],
+              "originalMeaning": "점심을 먹다[…에게 주다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2580922a20034b3aa91d2e4a2b8d961c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2580922a20034b3aa91d2e4a2b8d961c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lunches"
+        },
+        {
+          "type": "과거형",
+          "value": "lunched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lunching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lunched"
+        }
+      ],
+      "aliasConjugation": "lunches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8c750e568a136a620454b6401e237ca0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "혼자서 점심 먹는 것은 싫다.",
+      "text": "I despise lunching alone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내주 점심이나 같이 하자.",
+      "text": "Let’s do <b>lunch</b> next week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "점심 전에 한숨 자야겠다",
+      "text": "I'll grab some sleep before <b>lunch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘 점심은 거를 참이다",
+      "text": "I am going to skip <b>lunch</b> today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "호텔에서 점심을 들도록 하지.",
+      "text": "We will get <b>lunch</b> at the hotel."
+    }
+  ],
+  "isWordType": true
+}

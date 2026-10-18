@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "entry": "sag",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sæɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<길·땅 등이> 가라앉다, 꺼지다; <문·교량 등이> 기울다; <천장·대들보·밧줄 등이> 중간이 휘다, 처지다; <초 등이> 구부러지다",
+              "examples": [
+                {
+                  "text": "a <b>sag</b> ging roof",
+                  "translatedText": "내려앉은 지붕"
+                }
+              ],
+              "originalMeaning": "<길·땅 등이> 가라앉다, 꺼지다; <문·교량 등이> 기울다; <천장·대들보·밧줄 등이> 중간이 휘다, 처지다; <초 등이> 구부러지다"
+            },
+            {
+              "meaning": "<의류·바지 등이> 느슨해지다, 처지다",
+              "examples": [],
+              "originalMeaning": "<의류·바지 등이> 느슨해지다, 처지다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "축 늘어지게 하다, 처지게 하다; 약하게 하다",
+              "examples": [],
+              "originalMeaning": "축 늘어지게 하다, 처지게 하다; 약하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "늘어짐, 처짐; (길의) 침하(沈下)",
+              "examples": [],
+              "originalMeaning": "늘어짐, 처짐; (길의) 침하(沈下)"
+            },
+            {
+              "meaning": "(시세의) 하락, 점락(漸落)",
+              "examples": [],
+              "originalMeaning": "(시세의) 하락, 점락(漸落)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6095005bd57241da8f2b8af61c017193",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6095005bd57241da8f2b8af61c017193",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sags"
+        },
+        {
+          "type": "과거형",
+          "value": "sagged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sagging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sagged"
+        }
+      ],
+      "aliasConjugation": "sags",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ed66db6e3c63aa55af74d02423f5389e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "SAG",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "screen actors guild 영화배우 조합",
+              "examples": [],
+              "originalMeaning": "screen actors guild 영화배우 조합"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7184208944bd4f64a21e20daac42c698",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7184208944bd4f64a21e20daac42c698",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4c0849527dad23bfd547dca0e875bdc9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "광산주는 2만 원대로 떨어졌다",
+      "text": "The mine stocks sagged to the twenty-thousand won level."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "로프를 팽팽히 당기지 않으면 텐트가 처진다",
+      "text": "If you don't pull the rope taut, the tent will <b>sag</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시세가 내림세이다 The market sags.;",
+      "text": "Prices show a downtrend. or Prices are on the decline."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "consider",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈsɪdə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "잘 생각하다, 숙고하다; 고찰하다(examine); …할 것을 생각하다 (=regard)",
+              "examples": [
+                {
+                  "text": "<b>consider</b> a matter in all aspects",
+                  "translatedText": "문제를 모든 면에서 고찰하다"
+                }
+              ],
+              "originalMeaning": "잘 생각하다, 숙고하다; 고찰하다(examine); …할 것을 생각하다 (=<span class='related_word' lang='en' >regard</span>)"
+            },
+            {
+              "meaning": "…이라고 생각하다;[목적 보어와 함께] …으로 보다, 간주하다, 여기다",
+              "examples": [
+                {
+                  "text": "He considered “Hamlet” as an example of a Shakespearian tragedy.",
+                  "translatedText": "그는 「햄릿」을 셰익스피어 비극의 한 전형으로 생각했다."
+                }
+              ],
+              "originalMeaning": "…이라고 생각하다;[목적 보어와 함께] …으로 보다, 간주하다, 여기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고려[숙고]하다(reflect), 주시하다",
+              "examples": [],
+              "originalMeaning": "고려[숙고]하다(reflect), 주시하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c314db4933f441a08ce41e759b8b0ba9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c314db4933f441a08ce41e759b8b0ba9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "considers"
+        },
+        {
+          "type": "과거형",
+          "value": "considered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "considering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "considered"
+        }
+      ],
+      "aliasConjugation": "considers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e49d9b11f178f99baf4431e8bf094ba5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비교적 일이 잘 되었다.",
+      "text": "It went off well, considering."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런대로 그다지 나쁘지 않다.",
+      "text": "That is not so bad, considering."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그를 바보인 줄 알았다",
+      "text": "They considered him (to be) a fool."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나이에 비해서 젊어 보인다.",
+      "text": "He looks young considering his age."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 처사를 서운해하고 있다",
+      "text": "He considers that treatment unfair."
+    }
+  ],
+  "isWordType": true
+}

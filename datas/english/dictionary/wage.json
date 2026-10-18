@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>wage</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "weɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 임금, 노임, 품삯; 급료(cf. SALARY), (=pay)",
+              "examples": [
+                {
+                  "text": "His wages are $300 a week.",
+                  "translatedText": "1주당 300달러의 임금을 받는다."
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 임금, 노임, 품삯; 급료(cf. SALARY), (=<span class='related_word' lang='en' >pay</span>)"
+            },
+            {
+              "meaning": "[보통 pl.; [고어]는 단수 취급] (죄)값, 응보",
+              "examples": [],
+              "originalMeaning": "[보통 pl.; [고어]는 단수 취급] (죄)값, 응보"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "임금의",
+              "examples": [
+                {
+                  "text": "a <b>wage</b> raise",
+                  "translatedText": "임금 인상"
+                }
+              ],
+              "originalMeaning": "임금의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<전쟁·투쟁 등을> (수)행하다 ((against))",
+              "examples": [
+                {
+                  "text": "<b>wage</b> successful campaigns",
+                  "translatedText": "성공적인 (선거) 운동을 하다"
+                }
+              ],
+              "originalMeaning": "<전쟁·투쟁 등을> (수)행하다 ((against))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f452451c4c3540cdb7b9795b06989430",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f452451c4c3540cdb7b9795b06989430",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wages"
+        },
+        {
+          "type": "과거형",
+          "value": "waged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "waging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "waged"
+        }
+      ],
+      "aliasConjugation": "wages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d309d3b42c6c887c39dbf3830b88a0e3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "1 주에 300달러의 임금을 받는다.",
+      "text": "His wages are $300 a week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 임금 인상을 위해 파업 중이다",
+      "text": "They are on strike for better wages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 비용은 그의 급료에서 공제되었다.",
+      "text": "The cost was stopped from[out of] his wages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지위가 낮은 사람들의 임금은 낮다",
+      "text": "Wages for those below level are very low."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노동자들은 소란하게 임금 인상을 요구했다.",
+      "text": "The workers clamored for higher wages."
+    }
+  ],
+  "isWordType": true
+}

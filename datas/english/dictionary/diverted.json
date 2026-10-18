@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>divert</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "daɪ│vɜːrt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…을 …으로 전환하다, 딴 데로 돌리다 ((from; to, into)); 유용[전용]하다; [영] <교통을> 우회시키다",
+              "examples": [
+                {
+                  "text": "<b>divert</b> the course of a river = <b>divert</b> a river from its course",
+                  "translatedText": "강의 흐름을 바꾸다"
+                }
+              ],
+              "originalMeaning": "…을 …으로 전환하다, 딴 데로 돌리다 ((from; to, into)); 유용[전용]하다; [영] <교통을> 우회시키다"
+            },
+            {
+              "meaning": "다른 대상을 향하게 하다, <주의를> 딴 곳으로 돌리다 ((from, to)); [군사] 견제하다",
+              "examples": [],
+              "originalMeaning": "다른 대상을 향하게 하다, <주의를> 딴 곳으로 돌리다 ((from, to)); [군사] 견제하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(본래의 일 등에서) 벗어나다",
+              "examples": [],
+              "originalMeaning": "(본래의 일 등에서) 벗어나다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5ad6ae0df1324f149fdf6191932d14bc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5ad6ae0df1324f149fdf6191932d14bc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "diverts"
+        },
+        {
+          "type": "과거형",
+          "value": "diverted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "diverting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "diverted"
+        }
+      ],
+      "aliasConjugation": "diverts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "100a12bc388ef17bf2ced254b713014c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "만일 한 시간쯤 안에 안개가 걷히지 않으면 012편은 다른 공항으로 가서 착륙할 것입니다",
+      "text": "If the fog does not lift within an hour or so, flight 012 will be <b>diverted</b> to a different airport."
+    }
+  ],
+  "isWordType": true
+}

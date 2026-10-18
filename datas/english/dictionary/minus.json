@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "minus",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmaɪnəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "마이너스의[를 나타내는](opp. plus)",
+              "examples": [],
+              "originalMeaning": "마이너스의[를 나타내는](opp. plus)"
+            },
+            {
+              "meaning": "음(陰)의(negative)(opp. positive)",
+              "examples": [
+                {
+                  "text": "<b>minus</b> charge",
+                  "translatedText": "[전기] 음전하"
+                }
+              ],
+              "originalMeaning": "음(陰)의(negative)(opp. positive)"
+            }
+          ]
+        },
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "…을 뺀, …마이너스(less)",
+              "examples": [
+                {
+                  "text": "8 <b>minus</b> 3 is 5.",
+                  "translatedText": "8빼기 3은 5이다."
+                }
+              ],
+              "originalMeaning": "…을 뺀, …마이너스(less)"
+            },
+            {
+              "meaning": "…이 없는[없이](wanting)",
+              "examples": [
+                {
+                  "text": "He came <b>minus</b> his hat.",
+                  "translatedText": "그는 모자를 안 쓰고 왔다."
+                }
+              ],
+              "originalMeaning": "…이 없는[없이](wanting)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "마이너스, 음호(陰號)(= ~ sign); 음량(陰量), 음수(陰數)",
+              "examples": [],
+              "originalMeaning": "마이너스, 음호(陰號)(= ~ sign); 음량(陰量), 음수(陰數)"
+            },
+            {
+              "meaning": "부족, 결손",
+              "examples": [
+                {
+                  "text": "a terrible <b>minus</b>",
+                  "translatedText": "대량 손실"
+                }
+              ],
+              "originalMeaning": "부족, 결손"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dce2ca3deccb463ba111772e542df690",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dce2ca3deccb463ba111772e542df690",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d388eb89dbfa919f52b47f60aaa881d4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "8 빼기 3은 5이다.",
+      "text": "8 <b>minus</b> 3 is 5."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모자를 안 쓰고 왔다.",
+      "text": "He came <b>minus</b> his hat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "8 마이너스 3은 5이다",
+      "text": "Eight <b>minus</b> three leaves[is] five."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "열에서 여섯을 덜면 넷이 남는다",
+      "text": "Six from ten leaves four. or Ten less[<b>minus</b>] six leaves four."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "10에서 5를 제하면 5가 남는다",
+      "text": "Five from ten leaves five. or Ten <b>minus</b> five equals five."
+    }
+  ],
+  "isWordType": true
+}

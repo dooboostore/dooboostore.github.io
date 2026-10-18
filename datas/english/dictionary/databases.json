@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "entry": "database",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│deɪtəbeɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "데이터베이스 ((컴퓨터 정보의 축적 및 이 정보의 제공 서비스))",
+              "examples": [],
+              "originalMeaning": "데이터베이스 ((컴퓨터 정보의 축적 및 이 정보의 제공 서비스))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b8339b4034e447d098b918dc3ff615b9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b8339b4034e447d098b918dc3ff615b9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7281ea9c08bfda19236eb8c7ba7b0598",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "바이러스가 전체 데이터베이스에 오류를 일으켰다.",
+      "text": "The virus corrupted the entire <b>database</b>."
+    }
+  ],
+  "isWordType": true
+}

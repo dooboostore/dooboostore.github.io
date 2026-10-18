@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "mercury",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɜːrkjəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] [화학] 수은 ((유일한 액체 금속; 기호 Hg, 번호 80))",
+              "examples": [],
+              "originalMeaning": "[U] [화학] 수은 ((유일한 액체 금속; 기호 Hg, 번호 80))"
+            },
+            {
+              "meaning": "(기압계·온도계의) 수은주; 기압계, 온도계",
+              "examples": [],
+              "originalMeaning": "(기압계·온도계의) 수은주; 기압계, 온도계"
+            },
+            {
+              "meaning": "수은제",
+              "examples": [
+                {
+                  "text": "The <b>mercury</b> fell to 5°F.",
+                  "translatedText": "온도계는 화씨 5도까지 내려갔다."
+                }
+              ],
+              "originalMeaning": "수은제"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0774710a1fa045e6a3d279657f4b925a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0774710a1fa045e6a3d279657f4b925a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "mercuries"
+        }
+      ],
+      "aliasConjugation": "mercuries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "940bbe238d638525752c4c9ac84eab70",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "5 °F. 온도계는 화씨 5도까지 내려갔다.",
+      "text": "The <b>mercury</b> fell to"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수은은 열을 가하면 팽창한다",
+      "text": "<b>Mercury</b> expands by heat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내륙 분지에서는 수은주가 30도 이상까지 올라갔었지요",
+      "text": "The <b>mercury</b> hit upper 30's in the valley."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울에서는 수은주가 영하 15도까지 떨어진다",
+      "text": "The <b>mercury</b> dips as low as 15 degrees below zero in Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "서울에서는 수은주가 영하 15도까지 떨어진다",
+      "text": "The <b>mercury</b> dips as low as 15 degrees below zero in seoul."
+    }
+  ],
+  "isWordType": true
+}

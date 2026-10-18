@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "entry": "catalog",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kǽtəlɔ́:ɡ,-lɑ̀ɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(물품·책 등의) 목록, 카탈로그; 일람표; (도서관의) 도서[장서] 목록",
+              "examples": [
+                {
+                  "text": "a library <b>catalog</b>",
+                  "translatedText": "도서 목록"
+                }
+              ],
+              "originalMeaning": "(물품·책 등의) 목록, 카탈로그; 일람표; (도서관의) 도서[장서] 목록"
+            },
+            {
+              "meaning": "대학 요람[편람]( calendar)",
+              "examples": [
+                {
+                  "text": "the summer course <b>catalog</b>",
+                  "translatedText": "여름 학기 수강 편람"
+                }
+              ],
+              "originalMeaning": "대학 요람[편람]( calendar)"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "목록을 작성하다, 목록에 싣다, 분류하다",
+              "examples": [],
+              "originalMeaning": "목록을 작성하다, 목록에 싣다, 분류하다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "카탈로그 (통신) 판매의",
+              "examples": [],
+              "originalMeaning": "카탈로그 (통신) 판매의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a132519c154842c198ff8b3cdba980ba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a132519c154842c198ff8b3cdba980ba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "419c3409919ac81086b4e2cfa463bb5b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "목록을 송부해 주시기 앙망합니다",
+      "text": "Please oblige[favor] us with your <b>catalog</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도서 목록은 청구하시는 대로 곧 보내 드립니다",
+      "text": "Catalogs of our books will be sent on request."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "카탈로그 무료 증정",
+      "text": "Catalogs (are) sent free (upon request)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "카탈로그 무료 증정",
+      "text": "<b>Catalog</b> offered free."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "exploded",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪk│sploʊdɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "폭발[파열]한",
+              "examples": [],
+              "originalMeaning": "폭발[파열]한"
+            },
+            {
+              "meaning": "논파[타파]된",
+              "examples": [],
+              "originalMeaning": "논파[타파]된"
+            },
+            {
+              "meaning": "<모형·그림이> 기계를 분해하여 부품의 상호 관계를 나타내는",
+              "examples": [],
+              "originalMeaning": "<모형·그림이> 기계를 분해하여 부품의 상호 관계를 나타내는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/393b3f0a8858418eb8125db81847d4cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/393b3f0a8858418eb8125db81847d4cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "dfbee8fd23733e7a449c96b71ff942b2",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "explode",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪkˈsploʊd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "폭발하다, 파열하다(opp. implode)",
+              "examples": [
+                {
+                  "text": "The gas main <b>explode</b> d.",
+                  "translatedText": "가스 본관이 폭발했다."
+                }
+              ],
+              "originalMeaning": "폭발하다, 파열하다(opp. implode)"
+            },
+            {
+              "meaning": "<감정이> 격발하다",
+              "examples": [
+                {
+                  "text": "<b>explode</b> with[into] laughter",
+                  "translatedText": "와 하고 웃음을 터뜨리다"
+                }
+              ],
+              "originalMeaning": "<감정이> 격발하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<폭탄 등을> 폭발시키다, 파열시키다",
+              "examples": [
+                {
+                  "text": "<b>explode</b> a bomb",
+                  "translatedText": "폭탄을 폭발시키다"
+                }
+              ],
+              "originalMeaning": "<폭탄 등을> 폭발시키다, 파열시키다"
+            },
+            {
+              "meaning": "<미신을> 타파하다, <학설을> 논파하다",
+              "examples": [],
+              "originalMeaning": "<미신을> 타파하다, <학설을> 논파하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/41d588b0752348678baeb37bffde58a4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/41d588b0752348678baeb37bffde58a4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "explodes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7fc4459e2bda528db8782e8dc8e732ee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 화가 나서 미칠 지경이다",
+      "text": "He's going to <b>explode</b>. or He's coming apart at the seams."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가스 본관이 폭발했다.",
+      "text": "The gas main <b>exploded</b>."
+    }
+  ],
+  "isWordType": true
+}

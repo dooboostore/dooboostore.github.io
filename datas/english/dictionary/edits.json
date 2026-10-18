@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "edit",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈedɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "편집하다",
+              "examples": [],
+              "originalMeaning": "편집하다"
+            },
+            {
+              "meaning": "<신문·잡지·영화 등을> 편집 (발행)하다",
+              "examples": [],
+              "originalMeaning": "<신문·잡지·영화 등을> 편집 (발행)하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[구어] 편집 (작업), 편집 항목, (신문의) 사설",
+              "examples": [],
+              "originalMeaning": "[구어] 편집 (작업), 편집 항목, (신문의) 사설"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c19c77251ad24e669dafa5a61d37fd8d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c19c77251ad24e669dafa5a61d37fd8d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "edits"
+        },
+        {
+          "type": "과거형",
+          "value": "edited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "editing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "edited"
+        }
+      ],
+      "aliasConjugation": "edits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "09a6b21b806c3f8598d53a1322475dc3",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "edit.",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "edited, edition, editor",
+              "examples": [],
+              "originalMeaning": "edited, edition, editor"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6d7f96d51d234e1faba1d085f829454e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6d7f96d51d234e1faba1d085f829454e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "edits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b2d2dddc4ecc230ddf882a97343bbd01",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책은 편집이 잘됐다",
+      "text": "This book is ingeniously edited."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사전은 가능한 한 사용하기에 편하도록 만들어져야 한다",
+      "text": "This dictionary should be edited to be as user-friendly as possible."
+    }
+  ],
+  "isWordType": true
+}

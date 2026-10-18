@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "demonstrate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdemənstreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "논증[증명]하다 ((prove쪽이 적용 범위가 넓음)), <사물이> …의 증거가 되다",
+              "examples": [
+                {
+                  "text": "<b>demonstrate</b> the law of gravitation",
+                  "translatedText": "인력의 법칙을 증명하다"
+                }
+              ],
+              "originalMeaning": "논증[증명]하다 ((prove쪽이 적용 범위가 넓음)), <사물이> …의 증거가 되다"
+            },
+            {
+              "meaning": "(모형·실험 등으로) 설명하다, 실지로 해보이다",
+              "examples": [
+                {
+                  "text": "( <b>demonstrate</b> +wh. to do) He <b>demonstrated</b> how to use the instrument.",
+                  "translatedText": "그는 그 기계의 사용법을 설명했다."
+                }
+              ],
+              "originalMeaning": "(모형·실험 등으로) 설명하다, 실지로 해보이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "시위운동[데모]을 하다 ((against, for))",
+              "examples": [
+                {
+                  "text": "<b>demonstrate</b> against a racial prejudice",
+                  "translatedText": "인종 차별에 항의해서 시위운동을 하다"
+                }
+              ],
+              "originalMeaning": "시위운동[데모]을 하다 ((against, for))"
+            },
+            {
+              "meaning": "실지 교수로 가르치다",
+              "examples": [],
+              "originalMeaning": "실지 교수로 가르치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ed7ce9ece2b45bf97f420acc405529a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ed7ce9ece2b45bf97f420acc405529a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "demonstrates"
+        },
+        {
+          "type": "과거형",
+          "value": "demonstrated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "demonstrating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "demonstrated"
+        }
+      ],
+      "aliasConjugation": "demonstrates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "db5e7a516e101d0fad7ff969e65596fc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새 차를 실물로 선전했다.",
+      "text": "He <b>demonstrated</b> the new car."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 지구가 둥글다는 것을 증명했다.",
+      "text": "He <b>demonstrated</b> that the earth is round."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 기계의 사용법을 설명했다.",
+      "text": "He <b>demonstrated</b> how to use the instrument."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "판매원은 그 신차를 실제로 시범해 보였다",
+      "text": "The salesman <b>demonstrated</b> the new car."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "진급은 연장 여부에 구애됨이 없이 능력에 따라 실시할 것임",
+      "text": "Promotion will be made on the basis of <b>demonstrated</b> abilities regardless of seniority."
+    }
+  ],
+  "isWordType": true
+}

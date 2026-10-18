@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "hungry",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhʌŋɡri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "배고픈, 주린",
+              "examples": [],
+              "originalMeaning": "배고픈, 주린"
+            },
+            {
+              "meaning": "<표정 등이> 시장한 듯한; <일이> 배고프게 만드는, 힘든; <식사의 양이> 배부르지 않은",
+              "examples": [
+                {
+                  "text": "a <b>hungry</b> look",
+                  "translatedText": "시장해 보이는 표정"
+                }
+              ],
+              "originalMeaning": "<표정 등이> 시장한 듯한; <일이> 배고프게 만드는, 힘든; <식사의 양이> 배부르지 않은"
+            },
+            {
+              "meaning": "…을 갈망하는, 동경하는 ((for))",
+              "examples": [
+                {
+                  "text": "be <b>hungry</b> for success",
+                  "translatedText": "성공을 갈망하다"
+                }
+              ],
+              "originalMeaning": "…을 갈망하는, 동경하는 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b91a3cdc10d84f36afc4d42ba5ac99d2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b91a3cdc10d84f36afc4d42ba5ac99d2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "hungrier"
+        },
+        {
+          "type": "최상급",
+          "value": "hungriest"
+        }
+      ],
+      "aliasConjugation": "hungrier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "02358ba2e2fa0189a3957ae31f7f0eea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 항상 배곯고 지낸다",
+      "text": "He always goes <b>hungry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 여러 날 굶었다",
+      "text": "They went <b>hungry</b> for days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 고픈데 밥맛은 없다",
+      "text": "I am <b>hungry</b> but (have) no appetite."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "피로하지는 않다. 다만 배가 고플 뿐이다",
+      "text": "I am not tired, but I am <b>hungry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "자식들의 배를 곯려서는 안 되겠다",
+      "text": "My children must not go <b>hungry</b>."
+    }
+  ],
+  "isWordType": true
+}

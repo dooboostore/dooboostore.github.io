@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "entry": "fancy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfænsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 공상, 몽상, 상상(력); 심상, 이미지, 기상(奇想), 환상(illusion)",
+              "examples": [
+                {
+                  "text": "happy fancies of being famous",
+                  "translatedText": "유명하게 되리라는 행복한 상상"
+                }
+              ],
+              "originalMeaning": "[UC/] 공상, 몽상, 상상(력); 심상, 이미지, 기상(奇想), 환상(illusion)"
+            },
+            {
+              "meaning": "[UC/] 홀연히 내킨 생각; 변덕(whim), 일시적 기분; 추측, 예상, 억측, 가정",
+              "examples": [
+                {
+                  "text": "a passing <b>fancy</b>",
+                  "translatedText": "일시적인 생각, 변덕"
+                }
+              ],
+              "originalMeaning": "[UC/] 홀연히 내킨 생각; 변덕(whim), 일시적 기분; 추측, 예상, 억측, 가정"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[종종 부정문·의문문으로] 공상하다, 상상하다, 마음에 그리다(imagine);[명령형으로] 생각해 보라 ((놀람을 나타내거나 주의를 촉구하는 감탄사로 쓰임))",
+              "examples": [
+                {
+                  "text": "<b>Fancy</b> his doing a thing like that!",
+                  "translatedText": "원 그 사람이 그런 짓을 하다니!"
+                }
+              ],
+              "originalMeaning": "[종종 부정문·의문문으로] 공상하다, 상상하다, 마음에 그리다(imagine);[명령형으로] 생각해 보라 ((놀람을 나타내거나 주의를 촉구하는 감탄사로 쓰임))"
+            },
+            {
+              "meaning": "(까닭없이 …하다고) 생각하다, …이라고 믿다",
+              "examples": [
+                {
+                  "text": "I fancied that I heard a noise.",
+                  "translatedText": "무슨 소리가 들린 듯했다."
+                }
+              ],
+              "originalMeaning": "(까닭없이 …하다고) 생각하다, …이라고 믿다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "공상[상상]하다,[명령형으로] [구어] 상상[생각]해 보라",
+              "examples": [],
+              "originalMeaning": "공상[상상]하다,[명령형으로] [구어] 상상[생각]해 보라"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a224b45591a4251923fa8365c1caddc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a224b45591a4251923fa8365c1caddc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "fancier"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fancies"
+        },
+        {
+          "type": "최상급",
+          "value": "fanciest"
+        },
+        {
+          "type": "복수형",
+          "value": "fancies"
+        },
+        {
+          "type": "과거형",
+          "value": "fancied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fancying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fancied"
+        }
+      ],
+      "aliasConjugation": "fancier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "db38d568b1c34fda92e30981de629adb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어럽쇼, 여기서 널 만나다니!",
+      "text": "Imagine[<b>Fancy</b>] meeting you here!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무슨 소리가 들린 듯했다.",
+      "text": "I fancied that I heard a noise."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그녀가 40세 정도라고 생각해.",
+      "text": "I <b>fancy</b> she’s about forty."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 이 빨간 블라우스를 좋아한다.",
+      "text": "She fancies this red blouse."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "원 그 사람이 그런 짓을 하다니!",
+      "text": "<b>Fancy</b> his doing a thing like that!"
+    }
+  ],
+  "isWordType": true
+}

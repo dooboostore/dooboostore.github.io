@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "entry": "fox",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɑːks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[동물] 여우, 수여우(cf. VIXEN)",
+              "examples": [],
+              "originalMeaning": "[동물] 여우, 수여우(cf. VIXEN)"
+            },
+            {
+              "meaning": "교활한 사람",
+              "examples": [],
+              "originalMeaning": "교활한 사람"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형으로] <책장·인화(印畵) 등을> 변색시키다",
+              "examples": [
+                {
+                  "text": "be badly foxed",
+                  "translatedText": "몹시 변색되어 있다"
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] <책장·인화(印畵) 등을> 변색시키다"
+            },
+            {
+              "meaning": "<맥주 등을> (발효시킬 때) 시게 하다",
+              "examples": [],
+              "originalMeaning": "<맥주 등을> (발효시킬 때) 시게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "교활한 짓을 하다",
+              "examples": [],
+              "originalMeaning": "교활한 짓을 하다"
+            },
+            {
+              "meaning": "시치미 떼다",
+              "examples": [],
+              "originalMeaning": "시치미 떼다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/57207236b2c44f6689bf506d032804b4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/57207236b2c44f6689bf506d032804b4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "foxes"
+        },
+        {
+          "type": "복수형",
+          "value": "Fox, Foxes"
+        },
+        {
+          "type": "과거형",
+          "value": "foxed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "foxing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "foxed"
+        }
+      ],
+      "aliasConjugation": "foxes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b0a4008f4507add389fb6fcaa8a7a157",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여우는 방향을 갑자기 바꾸면서 도망갔다.",
+      "text": "The <b>fox</b> ran in a broken line."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여우는 먹을 것을 찾아 헤맸다.",
+      "text": "The <b>fox</b> scoured about in search of food."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 여우가 굴로 재빨리 뛰어 들어가는 것을 보았다.",
+      "text": "I saw a <b>fox</b> scamper into an earth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고양이한테 생선 가게를 맡긴 꼴이 되었다",
+      "text": "It's like having the <b>fox</b> guard the henhouse."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 여우같이 교활하다",
+      "text": "She is sly as a <b>fox</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "hundred",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhʌndrəd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "100(개), 100명",
+              "examples": [
+                {
+                  "text": "two <b>hundred</b>",
+                  "translatedText": "200"
+                }
+              ],
+              "originalMeaning": "100(개), 100명"
+            },
+            {
+              "meaning": "백의 기호 ((100, C))",
+              "examples": [],
+              "originalMeaning": "백의 기호 ((100, C))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "100(개)의, 100명의; 100번째의",
+              "examples": [
+                {
+                  "text": "two <b>hundred</b> people",
+                  "translatedText": "200명의 사람들"
+                }
+              ],
+              "originalMeaning": "100(개)의, 100명의; 100번째의"
+            },
+            {
+              "meaning": "수백의, 다수의",
+              "examples": [],
+              "originalMeaning": "수백의, 다수의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/74e99fcaf84b478d9946149a162c78c8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/74e99fcaf84b478d9946149a162c78c8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "hundreds, hundred"
+        }
+      ],
+      "aliasConjugation": "hundreds, hundred",
+      "aliasConjugationPos": "복수형",
+      "gdid": "747803e019b758ee14598ead2d2efdde",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "백 번 듣는 것이 한 번 보는 것보다 못하다",
+      "text": "It is better to see a thing one time than to hear about it a <b>hundred</b> times."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 백까지 셀 것이다.",
+      "text": "I’ll count (up) to a <b>hundred</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수가 500 가까이 된다",
+      "text": "The number approaches five <b>hundred</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 700원을 거슬러 받았다",
+      "text": "I got seven <b>hundred</b> won in change."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이것은 정가 5백 원입니다",
+      "text": "This is priced at five <b>hundred</b> won."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "<b>drawback</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdrɔːbæk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "약점, 결점 ((in)); 장애, 고장 ((to))",
+              "examples": [],
+              "originalMeaning": "약점, 결점 ((in)); 장애, 고장 ((to))"
+            },
+            {
+              "meaning": "공제 ((from))",
+              "examples": [],
+              "originalMeaning": "공제 ((from))"
+            },
+            {
+              "meaning": "환불금, 환불 세금, 관세 환급(還給)",
+              "examples": [
+                {
+                  "text": "<b>drawback</b> cargo",
+                  "translatedText": "관세 환급 화물"
+                }
+              ],
+              "originalMeaning": "환불금, 환불 세금, 관세 환급(還給)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de766b36d83b404bac15e85864d7f697",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de766b36d83b404bac15e85864d7f697",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "26ed9ee5546bdd874cc89b99431aa1db",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 여러 결점이 있음에도 불구하고 모든 사람에게서 귀염을 받는다.",
+      "text": "With all her drawbacks, she is loved by everybody."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 계획의 유일한 난점은 비용이 너무 많이 든다는 것이다",
+      "text": "The only <b>drawback</b> to this project is that it will cost too much."
+    }
+  ],
+  "isWordType": true
+}

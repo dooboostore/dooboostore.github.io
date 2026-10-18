@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "entry": "map",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "mæp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지도; 지도식 도표, 도해(圖解)",
+              "examples": [
+                {
+                  "text": "consult a <b>map</b>",
+                  "translatedText": "지도를 살피다"
+                }
+              ],
+              "originalMeaning": "지도; 지도식 도표, 도해(圖解)"
+            },
+            {
+              "meaning": "천체도",
+              "examples": [],
+              "originalMeaning": "천체도"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 지도[천체도]를 만들다, (지도 작성을 위해) 측량하다",
+              "examples": [],
+              "originalMeaning": "…의 지도[천체도]를 만들다, (지도 작성을 위해) 측량하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a540f976cc0741adbaaba15779dcc850",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a540f976cc0741adbaaba15779dcc850",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "maps"
+        },
+        {
+          "type": "과거형",
+          "value": "mapped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mapping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mapped"
+        }
+      ],
+      "aliasConjugation": "maps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f60e0325750611e05083adf50eba7cce",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "MAP",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "[컴퓨터] manufacturing automation protocol, modified American plan",
+              "examples": [],
+              "originalMeaning": "[컴퓨터] manufacturing automation protocol, modified American plan"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/41d77c8242ef47e9a6df0d7f43ef5894",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/41d77c8242ef47e9a6df0d7f43ef5894",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6630e693bdc41f9f45d25eb9d8a444d2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지도에 나와 있지 않다",
+      "text": "It is not on the <b>map</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지도에서 서울의 위치를 찾아라.",
+      "text": "Locate Seoul on a <b>map</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 산은 지도에 안 나와 있다",
+      "text": "The mountain is not on the <b>map</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지도에서 그 도시를 찾았다",
+      "text": "I looked up the town on the <b>map</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 지도의 한 점을 가리켰다",
+      "text": "He pointed at[to] a spot on the <b>map</b>."
+    }
+  ],
+  "isWordType": true
+}

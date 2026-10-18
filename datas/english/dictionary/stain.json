@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "stain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "steɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "얼룩, 때, 녹 (=blot)",
+              "examples": [],
+              "originalMeaning": "얼룩, 때, 녹 (=<span class='related_word' lang='en' >blot</span>)"
+            },
+            {
+              "meaning": "오점, 흠 ((on, upon))",
+              "examples": [
+                {
+                  "text": "a <b>stain</b> on one's reputation",
+                  "translatedText": "명성의 오점"
+                }
+              ],
+              "originalMeaning": "오점, 흠 ((on, upon))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "더럽히다(soil), 얼룩지게 하다 ((with))",
+              "examples": [
+                {
+                  "text": "hands stained with blood",
+                  "translatedText": "피로 더러워진 손"
+                }
+              ],
+              "originalMeaning": "더럽히다(soil), 얼룩지게 하다 ((with))"
+            },
+            {
+              "meaning": "<명성·인격을> 더럽히다, 훼손하다",
+              "examples": [
+                {
+                  "text": "<b>stain</b> one's reputation",
+                  "translatedText": "명성을 더럽히다"
+                }
+              ],
+              "originalMeaning": "<명성·인격을> 더럽히다, 훼손하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "더러워지다, 얼룩지다; 녹슬다",
+              "examples": [],
+              "originalMeaning": "더러워지다, 얼룩지다; 녹슬다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c3da6af7256c47f8ae7313292b721165",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c3da6af7256c47f8ae7313292b721165",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stains"
+        },
+        {
+          "type": "과거형",
+          "value": "stained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "staining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stained"
+        }
+      ],
+      "aliasConjugation": "stains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cd0ed643a32ad13462e26fe8dc436d1e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "얼룩이 잘 빠지지 않는다",
+      "text": "The stains will not come off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 이빨은 누레져 있다.",
+      "text": "His teeth are stained yellow."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 얼룩은 빨아도 지지 않는다.",
+      "text": "This <b>stain</b> won’t wash out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 얼룩은 빠질 것 같습니다",
+      "text": "I think this <b>stain</b> will come off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 직물은 얼룩에도 손상되지 않는다.",
+      "text": "Stains can’t hurt that fabric."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>conspire</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈspaɪə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "공모하다, 음모를 꾸미다 ((against)); (…와) 기맥을 통하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>conspire</b> against the state",
+                  "translatedText": "국가에 대한 반란을 꾀하다"
+                }
+              ],
+              "originalMeaning": "공모하다, 음모를 꾸미다 ((against)); (…와) 기맥을 통하다 ((with))"
+            },
+            {
+              "meaning": "협력하다; 동시에 발생하다, 상호 작용하여 …하다",
+              "examples": [
+                {
+                  "text": "( <b>conspire</b> +to do) All things conspired to make him prosperous.",
+                  "translatedText": "모든 일이 잘 맞아떨어져 그는 성공했다."
+                }
+              ],
+              "originalMeaning": "협력하다; 동시에 발생하다, 상호 작용하여 …하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<나쁜 일을> 꾸미다, 음모하다",
+              "examples": [],
+              "originalMeaning": "<나쁜 일을> 꾸미다, 음모하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6300553ab8424f44b88af4d84914405e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6300553ab8424f44b88af4d84914405e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "conspires"
+        },
+        {
+          "type": "과거형",
+          "value": "conspired"
+        },
+        {
+          "type": "현재 분사",
+          "value": "conspiring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "conspired"
+        }
+      ],
+      "aliasConjugation": "conspires",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "14d076ab9e2ef7145a7881abfddeb062",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 죽이려고 공모했다",
+      "text": "They conspired together to kill him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모든 일이 잘 맞아 떨어져 그는 성공했다.",
+      "text": "All things conspired to make him prosperous."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 그를 국외로 추방하려고 공모했다.",
+      "text": "They conspired to drive him out of the country."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 은행을 털려고 공범과 짰다",
+      "text": "He had conspired with an accomplice to rob the bank."
+    }
+  ],
+  "isWordType": true
+}

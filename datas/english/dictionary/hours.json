@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "hour",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈaʊə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "한 시간(cf. MINUTE, SECOND)",
+              "examples": [
+                {
+                  "text": "half an <b>hour</b>",
+                  "translatedText": "반시간"
+                }
+              ],
+              "originalMeaning": "한 시간(cf. MINUTE, SECOND)"
+            },
+            {
+              "meaning": "(일정한) 시각",
+              "examples": [
+                {
+                  "text": "ask the <b>hour</b>",
+                  "translatedText": "시각을 묻다"
+                }
+              ],
+              "originalMeaning": "(일정한) 시각"
+            },
+            {
+              "meaning": "[보통 pl.] (24시간제의) 시각",
+              "examples": [
+                {
+                  "text": "as of 0100 <b>hour</b> s",
+                  "translatedText": "오전 1시 현재 ((24시간제에서의 표시; oh one hundred <b>hours</b>라고 읽음))"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] (24시간제의) 시각"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/253b6298a77249a3ac6521c977b1efff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/253b6298a77249a3ac6521c977b1efff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "585dac9e6e95f06204af1b7bb4bb11f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 시간 폭은 된다",
+      "text": "It's about two <b>hours</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가는 데만 한 시간이 걸린다",
+      "text": "An <b>hour</b> one way."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "강연은 꼭 1시간이 걸렸다",
+      "text": "The lecture lasted for just[exactly] an <b>hour</b>. or The lecture lasted for one <b>hour</b> to the minute."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 주 40시간제로 일한다.",
+      "text": "He works a 40-<b>hour</b> week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 임종이 왔다[수명이 다했다].",
+      "text": "His <b>hour</b> has struck."
+    }
+  ],
+  "isWordType": true
+}

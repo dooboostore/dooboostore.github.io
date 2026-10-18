@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "pirate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpaɪrət"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "해적, 해적선",
+              "examples": [],
+              "originalMeaning": "해적, 해적선"
+            },
+            {
+              "meaning": "표절자, 저작권 침해자",
+              "examples": [
+                {
+                  "text": "a <b>pirate</b> label",
+                  "translatedText": "해적판 레코드 (회사)"
+                }
+              ],
+              "originalMeaning": "표절자, 저작권 침해자"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "해적 행위를 하다, 약탈하다",
+              "examples": [],
+              "originalMeaning": "해적 행위를 하다, 약탈하다"
+            },
+            {
+              "meaning": "표절하다, 저작[특허]권을 침해하다",
+              "examples": [
+                {
+                  "text": "a pirated edition",
+                  "translatedText": "해적판"
+                }
+              ],
+              "originalMeaning": "표절하다, 저작[특허]권을 침해하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "해적 행위를 하다, 저작[특허]권을 침해하다",
+              "examples": [],
+              "originalMeaning": "해적 행위를 하다, 저작[특허]권을 침해하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/349e6a15d9b2427caf6d1e80ad82eb76",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/349e6a15d9b2427caf6d1e80ad82eb76",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pirates"
+        },
+        {
+          "type": "과거형",
+          "value": "pirated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pirating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pirated"
+        }
+      ],
+      "aliasConjugation": "pirates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "47e8260cc251e18c88637af12e194625",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 해적 놀이를 하자",
+      "text": "Let's pretend we are <b>pirates</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 해역은 해적이 들끓고 있었다.",
+      "text": "The sea was infested by[with] <b>pirates</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해적 떼가 상선을 급습했다",
+      "text": "A wave of <b>pirate</b> raided on merchant ships."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "해적들이 연안의 도시들을 노략질하였다",
+      "text": "<b>Pirates</b> pillaged the towns along the coast."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책의 해적판은 만 부 이상 팔렸다",
+      "text": "The pirated edition of the book sold more than 10,000 copies."
+    }
+  ],
+  "isWordType": true
+}

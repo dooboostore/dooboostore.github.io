@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "rumor",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "소문, 풍문, 풍설, 유언비어 ((that…, of))",
+              "examples": [],
+              "originalMeaning": "소문, 풍문, 풍설, 유언비어 ((that…, of))"
+            },
+            {
+              "meaning": "[고어] 소음, 평판",
+              "examples": [],
+              "originalMeaning": "[고어] 소음, 평판"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[보통 수동형으로] 소문내다",
+              "examples": [
+                {
+                  "text": "It is rumored that he is ill. = He is rumored to be ill.",
+                  "translatedText": "그가 앓고 있다는 소문이 있다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] 소문내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/870edb83c6c446199431ab9b0cccdeb4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/870edb83c6c446199431ab9b0cccdeb4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "598288d9f36a23d55a66baeb63cce9db",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 앓고 있다는 소문이다.",
+      "text": "It is rumored that he is ill.=He is rumored to be ill."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 풍문에 지나지 않는다",
+      "text": "That is mere hearsay[a mere <b>rumor</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "듣는 것과 보는 것은 크게 다르다",
+      "text": "<b>Rumor</b> and fact are miles apart."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 체포되었다는 소문이 왜자하다",
+      "text": "A <b>rumor</b> of his arrest is rife."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소문이 사실일까 걱정이다.",
+      "text": "I fear lest the <b>rumor</b> may be true."
+    }
+  ],
+  "isWordType": true
+}

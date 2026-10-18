@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "vulgar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvʌlɡə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(교양 있는 상층 계급에 대하여) 상스러운, 비속한; 저속한, 야비한, 천박한",
+              "examples": [
+                {
+                  "text": "<b>vulgar</b> words",
+                  "translatedText": "비어(卑語)"
+                }
+              ],
+              "originalMeaning": "(교양 있는 상층 계급에 대하여) 상스러운, 비속한; 저속한, 야비한, 천박한"
+            },
+            {
+              "meaning": "통속적인, 속세의, 세속적인; 일반 (대중)의; 널리 알려진, 유포한",
+              "examples": [
+                {
+                  "text": "<b>vulgar</b> superstitions",
+                  "translatedText": "세속의 미신"
+                }
+              ],
+              "originalMeaning": "통속적인, 속세의, 세속적인; 일반 (대중)의; 널리 알려진, 유포한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] 평민, 서민",
+              "examples": [],
+              "originalMeaning": "[the ~] 평민, 서민"
+            },
+            {
+              "meaning": "[폐어] 모국어, 자국어; 지방어, 방언",
+              "examples": [],
+              "originalMeaning": "[폐어] 모국어, 자국어; 지방어, 방언"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9521e72635694862ac7b9adae469065b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9521e72635694862ac7b9adae469065b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5c9371cee6d98ae3186cacb4a8101318",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 비속한 말을 쓴다",
+      "text": "He uses <b>vulgar</b> language[expressions]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 말씨가 저속하다",
+      "text": "He is <b>vulgar</b> in his speech."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비속한 취미",
+      "text": "(a) bad[<b>vulgar</b>] taste"
+    }
+  ],
+  "isWordType": true
+}

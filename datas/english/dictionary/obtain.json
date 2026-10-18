@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>obtain</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əbˈteɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "얻다, 손에 넣다; 획득하다 ((from, through)), (=get)",
+              "examples": [
+                {
+                  "text": "<b>obtain</b> a loan of a person",
+                  "translatedText": "…으로부터 돈을 빌리다"
+                }
+              ],
+              "originalMeaning": "얻다, 손에 넣다; 획득하다 ((from, through)), (=<span class='related_word' lang='en' >get</span>)"
+            },
+            {
+              "meaning": "<사물이> <사람에게> <지위·명성 등을> 얻게 하다",
+              "examples": [
+                {
+                  "text": "His work obtained him great fame. = His work obtained great famefor him.",
+                  "translatedText": "그 연구로써 그는 명성을 얻었다."
+                }
+              ],
+              "originalMeaning": "<사물이> <사람에게> <지위·명성 등을> 얻게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(널리) 행해지다, 유행하다, 통용되다",
+              "examples": [
+                {
+                  "text": "The custom still obtains in some districts.",
+                  "translatedText": "그 풍습은 곳에 따라 아직 행해지고 있다."
+                }
+              ],
+              "originalMeaning": "(널리) 행해지다, 유행하다, 통용되다"
+            },
+            {
+              "meaning": "<관계 등이> 맺어져 있다",
+              "examples": [],
+              "originalMeaning": "<관계 등이> 맺어져 있다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a80362337b142bc92f72bb086c9477a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a80362337b142bc92f72bb086c9477a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "obtains"
+        },
+        {
+          "type": "과거형",
+          "value": "obtained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "obtaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "obtained"
+        }
+      ],
+      "aliasConjugation": "obtains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fc61ab4841deaf1cfa74ade54a95869e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 교원 자격을 얻었다",
+      "text": "He obtained a teacher's license."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그의 승낙을 얻었다",
+      "text": "I have obtained his consent."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이것은 대부분의 사람의 인정을 받고 있다.",
+      "text": "This obtains with most people."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 작년에 박사 학위를 취득했다",
+      "text": "I obtained a doctor's degree last year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "애쓰지 않으면 얻는 것이 없다",
+      "text": "Nothing can be obtained without effort."
+    }
+  ],
+  "isWordType": true
+}

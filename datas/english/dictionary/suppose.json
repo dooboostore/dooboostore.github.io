@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "suppose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "səˈpoʊz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가정하다, 상상[상정]하다",
+              "examples": [
+                {
+                  "text": "Let us <b>suppose</b> that he is innocent.",
+                  "translatedText": "그가 결백하다고 가정해 보자."
+                }
+              ],
+              "originalMeaning": "가정하다, 상상[상정]하다"
+            },
+            {
+              "meaning": "[명령형으로] 만약 …이면(cf. SUPPOSING), …하면 어떨까",
+              "examples": [
+                {
+                  "text": "<b>Suppose</b> we (= Let's) go for a walk.",
+                  "translatedText": "산책하러 가면 어떻겠니."
+                }
+              ],
+              "originalMeaning": "[명령형으로] 만약 …이면(cf. SUPPOSING), …하면 어떨까"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "가정[상상, 추측, 생각]하다",
+              "examples": [],
+              "originalMeaning": "가정[상상, 추측, 생각]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/94a1bab343d845a4afc70b959d29730f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/94a1bab343d845a4afc70b959d29730f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "supposes"
+        },
+        {
+          "type": "과거형",
+          "value": "supposed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "supposing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "supposed"
+        }
+      ],
+      "aliasConjugation": "supposes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7cad2f8ceb7ea58faba3538f49a8472f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것이 사실이라고 가정해 보자",
+      "text": "Let us <b>suppose</b> that it is true."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자는 어수룩하지 않다고 생각한다",
+      "text": "I <b>suppose</b> she is sophisticated."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오히려 그 반대를 생각해야 한다.",
+      "text": "The contrary is rather to be supposed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그곳에 약 50명 정도가 있었을걸",
+      "text": "There were, I <b>suppose</b>, about fifty people there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그가 결석한 줄 알았다",
+      "text": "I thought[supposed] that he was absent from school."
+    }
+  ],
+  "isWordType": true
+}

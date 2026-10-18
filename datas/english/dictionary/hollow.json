@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "hollow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈhɑːloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "속이 빈; 텅 빈, 공동(空洞)의",
+              "examples": [
+                {
+                  "text": "a <b>hollow</b> tree",
+                  "translatedText": "속이 빈 나무"
+                }
+              ],
+              "originalMeaning": "속이 빈; 텅 빈, 공동(空洞)의"
+            },
+            {
+              "meaning": "오목한, 우묵한, 움푹 팬, 움푹 들어간(sunk), 야윈; <목소리가> 힘없는, 희미한, 분명치 않은",
+              "examples": [
+                {
+                  "text": "a <b>hollow</b> surface",
+                  "translatedText": "움푹 팬 표면"
+                }
+              ],
+              "originalMeaning": "오목한, 우묵한, 움푹 팬, 움푹 들어간(sunk), 야윈; <목소리가> 힘없는, 희미한, 분명치 않은"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "움푹한 곳, 팬 곳(depression)",
+              "examples": [
+                {
+                  "text": "the <b>hollow</b> of the hand[neck]",
+                  "translatedText": "손바닥[목덜미]의 오목한 곳"
+                }
+              ],
+              "originalMeaning": "움푹한 곳, 팬 곳(depression)"
+            },
+            {
+              "meaning": "계곡, 우묵한 땅, 분지(盆地)(basin)",
+              "examples": [],
+              "originalMeaning": "계곡, 우묵한 땅, 분지(盆地)(basin)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "텅 비어; 불성실하게; [구어] 완전히, 철저히",
+              "examples": [
+                {
+                  "text": "The accusations rang <b>hollow</b>.",
+                  "translatedText": "비난의 말은 공허하게 울렸다."
+                }
+              ],
+              "originalMeaning": "텅 비어; 불성실하게; [구어] 완전히, 철저히"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d4b706fef68e4696999cf88380202282",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d4b706fef68e4696999cf88380202282",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "hollower"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hollows"
+        },
+        {
+          "type": "최상급",
+          "value": "hollowest"
+        },
+        {
+          "type": "과거형",
+          "value": "hollowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hollowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hollowed"
+        }
+      ],
+      "aliasConjugation": "hollower",
+      "aliasConjugationPos": "비교급",
+      "gdid": "14f0eee0835667dabdee873a131a59fd",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 이야기는 공허하게 울렸다",
+      "text": "His story sounded <b>hollow</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 와서 땅이 우물졌다",
+      "text": "The rain formed small hollows in the ground. or The rain formed a pool in the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비난의 말은 공허하게 울렸다.",
+      "text": "The accusations rang <b>hollow</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 남자는 공허한 미소를 띠었다",
+      "text": "The man gave a <b>hollow</b> smile."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 작품은 다른 것들을 앞질렀다",
+      "text": "Her works beat the others all <b>hollow</b>."
+    }
+  ],
+  "isWordType": true
+}

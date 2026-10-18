@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "<b>diary</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdaɪəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일기, 일지; 일기장",
+              "examples": [
+                {
+                  "text": "keep a <b>diary</b> = write in one's <b>diary</b> every day",
+                  "translatedText": "일기를 쓰다"
+                }
+              ],
+              "originalMeaning": "일기, 일지; 일기장"
+            },
+            {
+              "meaning": "일기장식 수첩, 연간 예정 수첩( calendar)",
+              "examples": [],
+              "originalMeaning": "일기장식 수첩, 연간 예정 수첩( calendar)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ebae9f94b75e4523bfcd158d70a862f3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ebae9f94b75e4523bfcd158d70a862f3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "diaries"
+        }
+      ],
+      "aliasConjugation": "diaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "fbc2b408f41442141589709c83a2cf3a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 매일 일기를 적고 있다",
+      "text": "He keeps a <b>diary</b> every day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그날 일기에는 아무런 기입도 없었다",
+      "text": "There was no entry for the day in his <b>diary</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다른 사람의 일기를 훔쳐보는 것은 터무니없는 일이다",
+      "text": "That's terrible, sneaking a look into someone else's <b>diary</b>."
+    }
+  ],
+  "isWordType": true
+}

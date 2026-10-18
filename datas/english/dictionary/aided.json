@@ -1,0 +1,187 @@
+{
+  "items": [
+    {
+      "entry": "<b>aid</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "eɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "돕다, 거들다, 원조하다 ((help보다 딱딱한 말; ⇒ help [유의어/] ))",
+              "examples": [
+                {
+                  "text": "<b>aid</b> flood victims",
+                  "translatedText": "홍수 피해자를 원조하다"
+                }
+              ],
+              "originalMeaning": "돕다, 거들다, 원조하다 ((help보다 딱딱한 말; ⇒ help [유의어/] ))"
+            },
+            {
+              "meaning": "조성(助成)하다, 촉진하다(promote)",
+              "examples": [
+                {
+                  "text": "<b>aid</b> recovery",
+                  "translatedText": "회복을 촉진하다"
+                }
+              ],
+              "originalMeaning": "조성(助成)하다, 촉진하다(promote)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "돕다, 원조하다, 도움이 되다 ((in))",
+              "examples": [],
+              "originalMeaning": "돕다, 원조하다, 도움이 되다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 도움, 조력; 원조, 부조; 구원",
+              "examples": [],
+              "originalMeaning": "[U] 도움, 조력; 원조, 부조; 구원"
+            },
+            {
+              "meaning": "조력자, 보조자, 조수 ((이 뜻으로는 aide 형태가 많이 쓰임))",
+              "examples": [],
+              "originalMeaning": "조력자, 보조자, 조수 ((이 뜻으로는 aide 형태가 많이 쓰임))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/15eb14b854b3422e83b21b2a77b6696c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/15eb14b854b3422e83b21b2a77b6696c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "aids"
+        },
+        {
+          "type": "과거형",
+          "value": "aided"
+        },
+        {
+          "type": "현재 분사",
+          "value": "aiding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "aided"
+        }
+      ],
+      "aliasConjugation": "aids",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5409f2d5a27ea637ce444a7d8de38ff8",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>AID</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "Agency for International Development, artificial insemination by donor 비배우자(非配偶者)간 인공 수정(cf. AIH)",
+              "examples": [],
+              "originalMeaning": "Agency for International Development, artificial insemination by donor 비배우자(非配偶者)간 인공 수정(cf. AIH)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dedd3608681f47faa3a3ef0c7e515442",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dedd3608681f47faa3a3ef0c7e515442",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "df608fd161b792a6ca5ef543e552d5bb",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "aide-de-camp",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈkæmp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(장성에게 딸린) 부관, 보좌관(cf. ADJUTANT)",
+              "examples": [],
+              "originalMeaning": "(장성에게 딸린) 부관, 보좌관(cf. ADJUTANT)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bf6346eebc244c5c8cebe3bdec70d883",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bf6346eebc244c5c8cebe3bdec70d883",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "aides-de-camp, aids-de-camp",
+      "aliasConjugationPos": "복수형",
+      "gdid": "596101b8257d630e41f61595d861920b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "경찰이 우리를 도우러 왔다.",
+      "text": "The police came to our <b>aid</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "응급 치료로 살아난 사람이 많다",
+      "text": "Many were saved by first <b>aid</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 내가 요리하는 것을 거들어 주었다.",
+      "text": "She <b>aided</b> me to cook[in cooking]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수해 지역에서 도움을 청해 왔다",
+      "text": "<b>Aid</b> was requested from the flooded area."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "응급 치료를 위하여 간호사가 출장해 있었다",
+      "text": "Nurses were on duty to give first-<b>aid</b>."
+    }
+  ],
+  "isWordType": true
+}

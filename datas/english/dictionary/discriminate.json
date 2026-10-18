@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "<b>discriminate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈskrɪmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "구별하다, 식별[분간]하다 ((between)), (=distinguish)",
+              "examples": [
+                {
+                  "text": "<b>discriminate</b> between right and wrong",
+                  "translatedText": "옳고 그른 것을 분간하다"
+                }
+              ],
+              "originalMeaning": "구별하다, 식별[분간]하다 ((between)), (=<span class='related_word' lang='en' >distinguish</span>)"
+            },
+            {
+              "meaning": "차별하다, 차별 대우하다 ((against))",
+              "examples": [
+                {
+                  "text": "It is illegal to <b>discriminate</b> against women.",
+                  "translatedText": "여성을 차별하는 것은 불법이다."
+                }
+              ],
+              "originalMeaning": "차별하다, 차별 대우하다 ((against))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "구별하다, 식별[분간]하다; …의 차이를 나타내다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>discriminate</b> one thing from another",
+                  "translatedText": "갑과 을을 구별하다"
+                }
+              ],
+              "originalMeaning": "구별하다, 식별[분간]하다; …의 차이를 나타내다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[고어] 식별된, 명확한; 차별적인",
+              "examples": [],
+              "originalMeaning": "[고어] 식별된, 명확한; 차별적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d77852c97b2649c28877f54bc310f72a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d77852c97b2649c28877f54bc310f72a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "discriminates"
+        },
+        {
+          "type": "과거형",
+          "value": "discriminated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "discriminating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "discriminated"
+        }
+      ],
+      "aliasConjugation": "discriminates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e5d5ca87e8c08133c8a6c2ef34da5e32",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "A와 B 를 식별하다",
+      "text": "distinguish[<b>discriminate</b>] A from B;distinguish[discern] between A and B"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 회사는 직원을 고용할 때 외국인을 차별한다",
+      "text": "That company discriminates against foreigners in its hiring."
+    }
+  ],
+  "isWordType": true
+}

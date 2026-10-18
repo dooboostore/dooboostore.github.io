@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>consent</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈsent"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…에) 동의하다, 승낙하다, 찬성하다(opp. dissent) ((to))",
+              "examples": [
+                {
+                  "text": "a consenting party",
+                  "translatedText": "찬성자"
+                }
+              ],
+              "originalMeaning": "(…에) 동의하다, 승낙하다, 찬성하다(opp. dissent) ((to))"
+            },
+            {
+              "meaning": "기분[의견 등]이 일치하다, 합의하다",
+              "examples": [],
+              "originalMeaning": "기분[의견 등]이 일치하다, 합의하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 동의, 승낙; (의견·감정의) 일치; 찬성, 허가; 조화",
+              "examples": [
+                {
+                  "text": "without the <b>consent</b> of both parties",
+                  "translatedText": "쌍방의 동의 없이는"
+                }
+              ],
+              "originalMeaning": "[U] 동의, 승낙; (의견·감정의) 일치; 찬성, 허가; 조화"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cfba6c96db6c40c9b18baba7a03f2017",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cfba6c96db6c40c9b18baba7a03f2017",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "consents"
+        },
+        {
+          "type": "과거형",
+          "value": "consented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "consenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "consented"
+        }
+      ],
+      "aliasConjugation": "consents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d9787b29d1aca164b821e2f2e27ade8e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 여간해서는 승낙하지 않을 것이다",
+      "text": "He won't <b>consent</b> easily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그의 승낙을 얻었다",
+      "text": "I have obtained his <b>consent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 연설할 것을 승낙했다.",
+      "text": "He <b>consented</b> to make a speech."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 마지못해 승낙을 하였다",
+      "text": "He gave an unwilling <b>consent</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "침묵은 종종 동의의 표시이다.",
+      "text": "Silence often infers <b>consent</b>."
+    }
+  ],
+  "isWordType": true
+}

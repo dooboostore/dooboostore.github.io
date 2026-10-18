@@ -1,0 +1,146 @@
+{
+  "items": [
+    {
+      "entry": "hot",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hɑːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "뜨거운, 더운(opp. cold)",
+              "examples": [
+                {
+                  "text": "a <b>hot</b> day",
+                  "translatedText": "더운 날"
+                }
+              ],
+              "originalMeaning": "뜨거운, 더운(opp. cold)"
+            },
+            {
+              "meaning": "<몸이> 열이 있는, 달아오른",
+              "examples": [],
+              "originalMeaning": "<몸이> 열이 있는, 달아오른"
+            },
+            {
+              "meaning": "(혀·코를) 톡 쏘는, 얼얼한(pungent), 타는 듯한, 매운; 강렬한(strong)",
+              "examples": [
+                {
+                  "text": "This curry is too <b>hot</b>.",
+                  "translatedText": "이 카레는 너무 맵다."
+                }
+              ],
+              "originalMeaning": "(혀·코를) 톡 쏘는, 얼얼한(pungent), 타는 듯한, 매운; 강렬한(strong)"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "뜨겁게, 열심히, 심하게, 성내어",
+              "examples": [],
+              "originalMeaning": "뜨겁게, 열심히, 심하게, 성내어"
+            },
+            {
+              "meaning": "뜨거울 때, 빨리",
+              "examples": [],
+              "originalMeaning": "뜨거울 때, 빨리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<식은 음식을> 데우다, 뜨겁게 하다(heat)",
+              "examples": [],
+              "originalMeaning": "<식은 음식을> 데우다, 뜨겁게 하다(heat)"
+            },
+            {
+              "meaning": "<음식을> (조미료를 쳐서) 맵게 하다 ((up))",
+              "examples": [],
+              "originalMeaning": "<음식을> (조미료를 쳐서) 맵게 하다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0fe54aa8fa741fca0e00652e5a96339",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0fe54aa8fa741fca0e00652e5a96339",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "hotter"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hots"
+        },
+        {
+          "type": "최상급",
+          "value": "hottest"
+        },
+        {
+          "type": "과거형",
+          "value": "hotted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hotting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hotted"
+        }
+      ],
+      "aliasConjugation": "hotter",
+      "aliasConjugationPos": "비교급",
+      "gdid": "913e115e166bfc2f196a090ea397e24c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "홍차는 따끈한 것이 좋다.",
+      "text": "I like my tea <b>hot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "날씨 한번 경치게 덥다",
+      "text": "It is terribly <b>hot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 뜨거운 음식이 좋다",
+      "text": "I like my food <b>hot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 카레는 너무 맵다.",
+      "text": "This curry is too <b>hot</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 참 덥다",
+      "text": "This room is really <b>hot</b>."
+    }
+  ],
+  "isWordType": true
+}

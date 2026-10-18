@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "entry": "spread",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spred"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "펴다, 펼치다, 뻗다, 벌리다 ((out))",
+              "examples": [
+                {
+                  "text": "The eagle <b>spread</b> its wings.",
+                  "translatedText": "독수리가 날개를 폈다."
+                }
+              ],
+              "originalMeaning": "펴다, 펼치다, 뻗다, 벌리다 ((out))"
+            },
+            {
+              "meaning": "<담요·식탁보 등을> (펴서 …을) 덮다, (…에) 펴다 ((on, over, with))",
+              "examples": [
+                {
+                  "text": "She <b>spread</b> the table with a cloth. = She <b>spread</b> a cloth on[over] the table.",
+                  "translatedText": "그녀는 식탁에 식탁보를 폈다."
+                }
+              ],
+              "originalMeaning": "<담요·식탁보 등을> (펴서 …을) 덮다, (…에) 펴다 ((on, over, with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "펼쳐지다, 뻗다, 미치다(expand); 전개되다 ((out, over, along, around))",
+              "examples": [
+                {
+                  "text": "The desert spreads (out) for miles and miles.",
+                  "translatedText": "사막은 몇 마일이고 뻗어 있다."
+                }
+              ],
+              "originalMeaning": "펼쳐지다, 뻗다, 미치다(expand); 전개되다 ((out, over, along, around))"
+            },
+            {
+              "meaning": "<인구·동식물 등이> 분포하다",
+              "examples": [],
+              "originalMeaning": "<인구·동식물 등이> 분포하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 sing.] 퍼짐, 폭, 넓이(extent)",
+              "examples": [],
+              "originalMeaning": "[보통 sing.] 퍼짐, 폭, 넓이(extent)"
+            },
+            {
+              "meaning": "[a ~; the ~] 확장, 유포, 보급, 유행; (병의) 만연",
+              "examples": [],
+              "originalMeaning": "[a ~; the ~] 확장, 유포, 보급, 유행; (병의) 만연"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/63ffff9066244ce884be53c51a8ac859",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/63ffff9066244ce884be53c51a8ac859",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "spreads"
+        },
+        {
+          "type": "현재 분사",
+          "value": "spreading"
+        }
+      ],
+      "aliasConjugation": "spreads",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "600db70af0e39165385c29dad1fb99ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 얘기를 퍼뜨렸다",
+      "text": "He <b>spread</b> the story."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소식은 급속히 퍼졌다.",
+      "text": "The news <b>spread</b> fast."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "불은 바람 부는 쪽으로 연소했다",
+      "text": "The fire <b>spread</b> leeward."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 소식은 금새 퍼졌다.",
+      "text": "The news quickly <b>spread</b> abroad."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "콜레라는 접촉 전염으로 퍼진다.",
+      "text": "Cholera spreads by contagion."
+    }
+  ],
+  "isWordType": true
+}

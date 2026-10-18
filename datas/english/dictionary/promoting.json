@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "entry": "promote",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prə│moʊt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "증진[촉진]하다, 진척시키다, 진행시키다, 활성화시키다",
+              "examples": [
+                {
+                  "text": "<b>promote</b> digestion",
+                  "translatedText": "소화를 촉진하다"
+                }
+              ],
+              "originalMeaning": "증진[촉진]하다, 진척시키다, 진행시키다, 활성화시키다"
+            },
+            {
+              "meaning": "장려하다, 고무하다",
+              "examples": [],
+              "originalMeaning": "장려하다, 고무하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<졸(pawn)이> 퀸으로 승격하다",
+              "examples": [],
+              "originalMeaning": "<졸(pawn)이> 퀸으로 승격하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff7628ddf554464db82e5984d912f831",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff7628ddf554464db82e5984d912f831",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "promotes"
+        },
+        {
+          "type": "과거형",
+          "value": "promoted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "promoting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "promoted"
+        }
+      ],
+      "aliasConjugation": "promotes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "770d6c4665241f556786cc54d9a2a684",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "본교에서는 평균 60점 이하는 낙제로 친다",
+      "text": "A student who fails to get an average mark of 60 is rejected[not promoted] at this school."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 정실에 의해서 승진되었다",
+      "text": "He got promoted through favoritism."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 공익을 도모했었야 했다",
+      "text": "They should have promoted the public interest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 이번에 과장으로 승격되었다",
+      "text": "He was promoted to a section chief this time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 공적이 인정되어 승진했다",
+      "text": "He was promoted in recognition of his achievement."
+    }
+  ],
+  "isWordType": true
+}

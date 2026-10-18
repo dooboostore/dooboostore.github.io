@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "rice",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "raɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쌀, 밥",
+              "examples": [
+                {
+                  "text": "boil[cook] <b>rice</b>",
+                  "translatedText": "밥을 짓다"
+                }
+              ],
+              "originalMeaning": "쌀, 밥"
+            },
+            {
+              "meaning": "벼",
+              "examples": [
+                {
+                  "text": "a <b>rice</b> crop",
+                  "translatedText": "미작, 벼농사"
+                }
+              ],
+              "originalMeaning": "벼"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<삶은 감자 등을> ricer로 으깨다, 쌀알 모양으로 만들다",
+              "examples": [],
+              "originalMeaning": "<삶은 감자 등을> ricer로 으깨다, 쌀알 모양으로 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/068996582d62411b8e87d5cf41b9f3c4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/068996582d62411b8e87d5cf41b9f3c4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "227882a6de8eba4b52d3f1c8fd966ad4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 쌀을 가지고는 연말까지 동댈 수가 없을 것 같다",
+      "text": "I am afraid we shall have run out of <b>rice</b> before the end of this year. or The <b>rice</b> won't last until the end of the year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "벼가 잘 자라고 있다",
+      "text": "The <b>rice</b> is doing well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쌀에 모래가 들어 있다",
+      "text": "There are grits in the <b>rice</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 쌀을 군대에 받힌다",
+      "text": "We handle <b>rice</b> for the army."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "밥이 너무 질게 되었다",
+      "text": "The <b>rice</b> has come out too soft."
+    }
+  ],
+  "isWordType": true
+}

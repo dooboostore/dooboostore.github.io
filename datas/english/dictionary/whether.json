@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "whether",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈweðə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "[간접의문문의 명사절을 이끌어] …인지 어떤지",
+              "examples": [
+                {
+                  "text": "He asked <b>whether</b> he could help.",
+                  "translatedText": "그는 자신이 도울 수 있나를 물었다."
+                }
+              ],
+              "originalMeaning": "[간접의문문의 명사절을 이끌어] …인지 어떤지"
+            },
+            {
+              "meaning": "[양보의 부사절을 이끌어] …이든지 아니든지 (간에), …이든지 …이든지 (여하간에)",
+              "examples": [
+                {
+                  "text": "<b>whether</b> for good or for evil",
+                  "translatedText": "좋건 나쁘건"
+                }
+              ],
+              "originalMeaning": "[양보의 부사절을 이끌어] …이든지 아니든지 (간에), …이든지 …이든지 (여하간에)"
+            }
+          ]
+        },
+        {
+          "type": "대명사",
+          "meanings": [
+            {
+              "meaning": "(둘 중의) 어느 하나",
+              "examples": [],
+              "originalMeaning": "(둘 중의) 어느 하나"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a49d86dd0e4c40e0a0ac62056bcceb43",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a49d86dd0e4c40e0a0ac62056bcceb43",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "94fbd2f37886c8a5f8d98ed73ad017cc",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 싫건 좋건 가야 한다",
+      "text": "I have no choice but to go. or I have to go <b>whether</b> I like it or not."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어쩔 줄 몰라 당황했다",
+      "text": "He lost his head. or He did not know <b>whether</b> he is standing on his head or heels."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것이 뜨거운지 만져 보아라.",
+      "text": "Feel <b>whether</b> it is hot."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 갈까 말까 잠시 엉거주춤했다",
+      "text": "He hovered for a while unable to make up his mind <b>whether</b> he should go or not."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 아는지 물어 보아라.",
+      "text": "Ask him <b>whether</b>[if] he knows."
+    }
+  ],
+  "isWordType": true
+}

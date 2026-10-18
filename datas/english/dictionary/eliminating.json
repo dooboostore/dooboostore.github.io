@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "eliminate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪˈlɪmɪneɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "제거하다, 삭제하다; (예선에서) 탈락시키다, 떨어뜨리다; [수학] 소거하다",
+              "examples": [
+                {
+                  "text": "She eliminated all errors from the typescript.",
+                  "translatedText": "그녀는 타이프 원고에서 잘못된 곳을 모두 삭제했다."
+                }
+              ],
+              "originalMeaning": "제거하다, 삭제하다; (예선에서) 탈락시키다, 떨어뜨리다; [수학] 소거하다"
+            },
+            {
+              "meaning": "배출[배설]하다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>eliminate</b> waste matter from the system",
+                  "translatedText": "노폐물을 몸에서 배출하다"
+                }
+              ],
+              "originalMeaning": "배출[배설]하다 ((from))"
+            },
+            {
+              "meaning": "고려하지 않다, 무시하다",
+              "examples": [],
+              "originalMeaning": "고려하지 않다, 무시하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fdb87b9abcdf481b931f65fc85886259",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fdb87b9abcdf481b931f65fc85886259",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "eliminates"
+        },
+        {
+          "type": "과거형",
+          "value": "eliminated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "eliminating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "eliminated"
+        }
+      ],
+      "aliasConjugation": "eliminates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0589fa1b4bd7615b57227749d6c67fe4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 타이프 원고에서 잘못된 곳을 모두 삭제했다.",
+      "text": "She eliminated all errors from the typescript."
+    }
+  ],
+  "isWordType": true
+}

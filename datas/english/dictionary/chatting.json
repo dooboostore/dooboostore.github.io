@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "chatting",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃǽtiŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "채팅 ((컴퓨터 통신에 접속하고 있는 사용자들이 서로 키보드로 입력한 글을 화면으로 보면서 대화하기))",
+              "examples": [],
+              "originalMeaning": "채팅 ((컴퓨터 통신에 접속하고 있는 사용자들이 서로 키보드로 입력한 글을 화면으로 보면서 대화하기))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4ff633df9344457b900388b2fe80c60",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4ff633df9344457b900388b2fe80c60",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "944eea84a1a0e1b07c94b28bb4ebce31",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "chat",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tʃæt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "잡담, 담소, 한담, 수다(gossip)",
+              "examples": [
+                {
+                  "text": "have a <b>chat</b> with",
+                  "translatedText": "…와 잡담하다"
+                }
+              ],
+              "originalMeaning": "잡담, 담소, 한담, 수다(gossip)"
+            },
+            {
+              "meaning": "[U] 잡담(하기), [컴퓨터] 채팅(하기)",
+              "examples": [],
+              "originalMeaning": "[U] 잡담(하기), [컴퓨터] 채팅(하기)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "담소[잡담]하다, 수다 떨다; [컴퓨터] 채팅하다",
+              "examples": [
+                {
+                  "text": "We chatted away in the lobby.",
+                  "translatedText": "우리는 로비에서 많은 잡담을 하였다."
+                }
+              ],
+              "originalMeaning": "담소[잡담]하다, 수다 떨다; [컴퓨터] 채팅하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 말을 걸다, <여자에게> 말을 걸다, <여자를> 설득하다 ((up))",
+              "examples": [],
+              "originalMeaning": "…에게 말을 걸다, <여자에게> 말을 걸다, <여자를> 설득하다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/03e0dfea1a8b44be908e59e458647a48",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/03e0dfea1a8b44be908e59e458647a48",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "chats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bcea1a99ceaf2f77ed216c725d983e1d",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "chat",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지빠귓과(科)의 작은 새",
+              "examples": [],
+              "originalMeaning": "지빠귓과(科)의 작은 새"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/156a732f89ea4f17a8e19527a5473e89",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/156a732f89ea4f17a8e19527a5473e89",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "chats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f9719cfcf87bf9c99ed136e1ef97ad33",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 로비에서 많은 잡담을 하였다.",
+      "text": "We chatted away in the lobby."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 밤이 늦도록 담소했다",
+      "text": "They chatted until late at night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그와 얼마 동안 잡담을 했다",
+      "text": "I had a <b>chat</b> with him for some time."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 그 사고에 관해서 잡담하고 있었다.",
+      "text": "We were <b>chatting</b> about the accident."
+    }
+  ],
+  "isWordType": true
+}

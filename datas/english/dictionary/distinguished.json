@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "entry": "distinguished",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈstɪŋɡwɪʃt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "두드러진, 현저한(eminent), 발군의; 저명한 ((for, as)); 뛰어난, 빼어난",
+              "examples": [],
+              "originalMeaning": "두드러진, 현저한(eminent), 발군의; 저명한 ((for, as)); 뛰어난, 빼어난"
+            },
+            {
+              "meaning": "<태도 등이> 기품 있는, 품위 있는",
+              "examples": [],
+              "originalMeaning": "<태도 등이> 기품 있는, 품위 있는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/84f9999360dd49f69f59a481ba1dff49",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/84f9999360dd49f69f59a481ba1dff49",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "73e8c4e40d1ac44988380f3b58393d56",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "distinguish",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈstɪŋɡwɪʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "구별하다, 식별[분간]하다(discern) ((from)); 구분하다, 분류하다(classify) ((into))",
+              "examples": [
+                {
+                  "text": "<b>distinguish</b> colors",
+                  "translatedText": "색깔을 식별하다"
+                }
+              ],
+              "originalMeaning": "구별하다, 식별[분간]하다(discern) ((from)); 구분하다, 분류하다(classify) ((into))"
+            },
+            {
+              "meaning": "…을 특징지우다, …의 차이를 나타내다 ((from))",
+              "examples": [
+                {
+                  "text": "A trunk distinguishes the elephant.",
+                  "translatedText": "긴 코가 코끼리의 특징이다."
+                }
+              ],
+              "originalMeaning": "…을 특징지우다, …의 차이를 나타내다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…와의 차이를) 구별[분간]하다 ((between))",
+              "examples": [
+                {
+                  "text": "<b>distinguish</b> sharply between the two words",
+                  "translatedText": "두 낱말을 분명히 구별하다"
+                }
+              ],
+              "originalMeaning": "(…와의 차이를) 구별[분간]하다 ((between))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66d467b948124cad83c16b08a793b0fb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66d467b948124cad83c16b08a793b0fb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "distinguishes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "aaa22d57b215567f9e8775224ff07c80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "긴 코가 코끼리의 특징이다.",
+      "text": "A trunk distinguishes the elephant."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "A와 B 의 이동을 말할 수 있습니까?",
+      "text": "Can you <b>distinguish</b>[tell] A from B?"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 학자로서 영명이 높다",
+      "text": "He is <b>distinguished</b>[well-known] as a scholar."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "A와 B 를 식별하다",
+      "text": "<b>distinguish</b>[discriminate] A from B;<b>distinguish</b>[discern] between A and B"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이성에 의하여 인간과 동물이 구별된다.",
+      "text": "Reason distinguishes man from the animals."
+    }
+  ],
+  "isWordType": true
+}

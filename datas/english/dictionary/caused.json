@@ -1,0 +1,159 @@
+{
+  "items": [
+    {
+      "entry": "cause",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kɔːz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "원인(opp. effect)",
+              "examples": [
+                {
+                  "text": "<b>cause</b> and effect",
+                  "translatedText": "원인과 결과, 인과 ((무관사))"
+                }
+              ],
+              "originalMeaning": "원인(opp. effect)"
+            },
+            {
+              "meaning": "[UC/] 이유(reason); 근거 ((for)), 정당한[충분한] 이유",
+              "examples": [
+                {
+                  "text": "show <b>cause</b>",
+                  "translatedText": "정당한 이유를 대다"
+                }
+              ],
+              "originalMeaning": "[UC/] 이유(reason); 근거 ((for)), 정당한[충분한] 이유"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 원인이 되다; 일으키다; 초래하다, 야기시키다",
+              "examples": [
+                {
+                  "text": "a cancer-causing factor",
+                  "translatedText": "발암 요인"
+                }
+              ],
+              "originalMeaning": "…의 원인이 되다; 일으키다; 초래하다, 야기시키다"
+            },
+            {
+              "meaning": "…으로 하여금 (…)하게 하다",
+              "examples": [
+                {
+                  "text": "( <b>cause</b> +[목]+to do) The rain <b>caused</b> the river to overflow.",
+                  "translatedText": "비 때문에 강이 범람했다."
+                }
+              ],
+              "originalMeaning": "…으로 하여금 (…)하게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bbc28c66f0c840238e938dbe118b439c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bbc28c66f0c840238e938dbe118b439c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "causes"
+        },
+        {
+          "type": "과거형",
+          "value": "caused"
+        },
+        {
+          "type": "현재 분사",
+          "value": "causing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "caused"
+        }
+      ],
+      "aliasConjugation": "causes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "54ed4eae8e2b5755c82ff39be74a8524",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "'cause",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kɔ́:z,kʌ́z"
+        }
+      ],
+      "pos": [
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "(=BECAUSE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >BECAUSE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ba144ea9f2944e39cccce57e00e7f30",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ba144ea9f2944e39cccce57e00e7f30",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1874694e717a1e40ec876ab1201b7c31",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "걱정할 필요는 전혀 없다.",
+      "text": "You have no <b>cause</b> for worry."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "원인 없이 결과가 생기지 않는다",
+      "text": "An effect presupposes a <b>cause</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "천식으로 그는 헐떡이며 숨을 쉬었다.",
+      "text": "Asthma <b>caused</b> him to wheeze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 병은 과로에 기인한다",
+      "text": "This disease is <b>caused</b> by overwork."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "뭇입이 시끄러울 테니 그만두게",
+      "text": "Don't (do it) or it may <b>cause</b> scandal."
+    }
+  ],
+  "isWordType": true
+}

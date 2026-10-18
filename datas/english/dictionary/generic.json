@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "generic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dʒəˈnerɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[생물] 속(genus)의, 속에 특유한",
+              "examples": [
+                {
+                  "text": "a <b>generic</b> name[term]",
+                  "translatedText": "속명"
+                }
+              ],
+              "originalMeaning": "[생물] 속(genus)의, 속에 특유한"
+            },
+            {
+              "meaning": "<명칭 등이> 일반적인, 포괄적인(general)(opp. specific)",
+              "examples": [],
+              "originalMeaning": "<명칭 등이> 일반적인, 포괄적인(general)(opp. specific)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(상표명이 아닌) 일반명",
+              "examples": [],
+              "originalMeaning": "(상표명이 아닌) 일반명"
+            },
+            {
+              "meaning": "[pl.] 상표 없는 상품(= ~ product)",
+              "examples": [],
+              "originalMeaning": "[pl.] 상표 없는 상품(= ~ product)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/86b2c3f37077476cadbf2c14cc794976",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/86b2c3f37077476cadbf2c14cc794976",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e758ce00c3cefac54f093a024020958e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 동물들을 포유류라고 총칭한다",
+      "text": "Mammalia is the general term for these animals. or These are known generically as Mammalia."
+    }
+  ],
+  "isWordType": true
+}

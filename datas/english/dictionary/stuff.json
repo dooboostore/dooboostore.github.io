@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "stuff",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "stʌf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "물질, 성분",
+              "examples": [
+                {
+                  "text": "synthetic <b>stuff</b>",
+                  "translatedText": "합성 물질"
+                }
+              ],
+              "originalMeaning": "물질, 성분"
+            },
+            {
+              "meaning": "재료, 원료, 자료",
+              "examples": [],
+              "originalMeaning": "재료, 원료, 자료"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 (…을) 채우다, (…로) 채워 넣다(pack, cram) ((with)); <솜[털, 짚]을> (…에) 넣다, 속을 채우다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>stuff</b> a pillow with feathers = <b>stuff</b> feathers into a pillow",
+                  "translatedText": "베개에 깃털을 넣다"
+                }
+              ],
+              "originalMeaning": "…에 (…을) 채우다, (…로) 채워 넣다(pack, cram) ((with)); <솜[털, 짚]을> (…에) 넣다, 속을 채우다 ((into))"
+            },
+            {
+              "meaning": "<구멍·귀·틈 등을> (…로) 메워 막다(block) ((up, with)); <물건을> (용기 등에) 밀어[쑤셔] 넣다(thrust), 메우다 ((into))",
+              "examples": [
+                {
+                  "text": "<b>stuff</b> one's ears with cotton",
+                  "translatedText": "귀에 솜을 틀어막다"
+                }
+              ],
+              "originalMeaning": "<구멍·귀·틈 등을> (…로) 메워 막다(block) ((up, with)); <물건을> (용기 등에) 밀어[쑤셔] 넣다(thrust), 메우다 ((into))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잔뜩[게걸스럽게] 먹다(gorge)",
+              "examples": [],
+              "originalMeaning": "잔뜩[게걸스럽게] 먹다(gorge)"
+            },
+            {
+              "meaning": "덩크슛으로 결판을 내다",
+              "examples": [],
+              "originalMeaning": "덩크슛으로 결판을 내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/176f7d4f3bcb4e6490ec14e35c7157d5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/176f7d4f3bcb4e6490ec14e35c7157d5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stuffs"
+        },
+        {
+          "type": "과거형",
+          "value": "stuffed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stuffing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stuffed"
+        }
+      ],
+      "aliasConjugation": "stuffs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ba029b43412a7dbc7a8cbc7d70e3d2b4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 지독히 서툰[난해한] 글을 쓴다.",
+      "text": "He writes sad <b>stuff</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘밤은 정말 배부르게 먹었다",
+      "text": "I really stuffed myself tonight."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 됨됨이가 변변치 못하다",
+      "text": "He is wretched[sorry, poor, sad] <b>stuff</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 물건은 오래 못 가겠는데요",
+      "text": "I am afraid this <b>stuff</b> won't wear well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "감기로 코가 막혔다[머리가 무겁다].",
+      "text": "My nose[head] is stuffed up from a cold."
+    }
+  ],
+  "isWordType": true
+}

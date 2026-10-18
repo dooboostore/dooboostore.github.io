@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "field",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fiːld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] (수풀·건물이 없는) 들판, 벌판, 들, 벌",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] (수풀·건물이 없는) 들판, 벌판, 들, 벌"
+            },
+            {
+              "meaning": "[보통 pl.] (도시 주변의) 들판",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] (도시 주변의) 들판"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(트랙에 대하여) 필드의",
+              "examples": [],
+              "originalMeaning": "(트랙에 대하여) 필드의"
+            },
+            {
+              "meaning": "야전의",
+              "examples": [
+                {
+                  "text": "<b>field</b> operations",
+                  "translatedText": "야전, 야외 작전"
+                }
+              ],
+              "originalMeaning": "야전의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[크리켓·야구] 야수를 맡아하다, ((외)야수로서) 수비하다",
+              "examples": [],
+              "originalMeaning": "[크리켓·야구] 야수를 맡아하다, ((외)야수로서) 수비하다"
+            },
+            {
+              "meaning": "(인기마 이외의) 출전마에 걸다",
+              "examples": [],
+              "originalMeaning": "(인기마 이외의) 출전마에 걸다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2b25536d844f4f4db3a377765b98e99a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2b25536d844f4f4db3a377765b98e99a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fields"
+        },
+        {
+          "type": "과거형",
+          "value": "fielded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fielding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fielded"
+        }
+      ],
+      "aliasConjugation": "fields",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4e8569eabdb25eb2e6892a1180d22d96",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 체육 대회를 했다",
+      "text": "We had a <b>field</b> day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소들이 들에 점재하고 있었다.",
+      "text": "Cows dotted the <b>field</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 내 영역이 아니다",
+      "text": "That is not my <b>field</b>. or That is not in my line. or That is outside my <b>field</b>[sphere]. or That is out of my domain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 밭은 경작하기가 쉽다[힘들다].",
+      "text": "The <b>field</b> plows easily[hard]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "러시아어는 내 전문이 아니다",
+      "text": "Russian is outside my <b>field</b>."
+    }
+  ],
+  "isWordType": true
+}

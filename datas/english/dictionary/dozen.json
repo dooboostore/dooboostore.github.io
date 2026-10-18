@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "dozen",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdʌzn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(동류의 물건의) 1다스, 1타(打), 12개; [구어] 상당히 많음; [~s] 다수 ((略 doz., dz.))",
+              "examples": [],
+              "originalMeaning": "(동류의 물건의) 1다스, 1타(打), 12개; [구어] 상당히 많음; [~s] 다수 ((略 doz., dz.))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "1다스의, 12의",
+              "examples": [
+                {
+                  "text": "a <b>dozen</b> apples",
+                  "translatedText": "12개의 사과"
+                }
+              ],
+              "originalMeaning": "1다스의, 12의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d373d955f35f409c992f790aeb56014c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d373d955f35f409c992f790aeb56014c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "dozens, dozen"
+        }
+      ],
+      "aliasConjugation": "dozens, dozen",
+      "aliasConjugationPos": "복수형",
+      "gdid": "b4aec2ab50824293443d1e4ca443aac0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그걸 두 다스만 주시오",
+      "text": "I will take two dozens of them."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한국에는 박사 학위를 가진 사람들이 쌔고 쌨다",
+      "text": "Ph. D's are a dime a <b>dozen</b> in Korea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 달걀은 한 다스에 3실링에 팔렸다.",
+      "text": "The eggs went for 3 shillings a <b>dozen</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 변설은 도도하여 그칠 줄 몰랐다",
+      "text": "His tongue went nineteen to the <b>dozen</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "가지가 긴 붉은 장미 12송이만 보내 주세요",
+      "text": "Send a <b>dozen</b> long-stemmed red roses, please."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "<b>borrowed</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bɑ́roud,bɔ́:r-"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "빌린, 차용한; 다른 데서 따온",
+              "examples": [
+                {
+                  "text": "words <b>borrowed</b> from French",
+                  "translatedText": "프랑스 말에서 온 차용어"
+                }
+              ],
+              "originalMeaning": "빌린, 차용한; 다른 데서 따온"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7eba6a9a480441be8272a1ad17db94d2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7eba6a9a480441be8272a1ad17db94d2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "aa8c3b53b18c2b7130e2ac140bd61b84",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>borrow</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│bɑːroʊ; │bɔːroʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "빌리다 ((from, of))",
+              "examples": [
+                {
+                  "text": "I <b>borrowed</b> books from the library.",
+                  "translatedText": "나는 도서관에서 책을 빌렸다."
+                }
+              ],
+              "originalMeaning": "빌리다 ((from, of))"
+            },
+            {
+              "meaning": "(뺄셈할 때 윗자리에서) 꾸어 오다",
+              "examples": [],
+              "originalMeaning": "(뺄셈할 때 윗자리에서) 꾸어 오다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…에서) 빌리다, 꾸다, 차용하다 ((from))",
+              "examples": [],
+              "originalMeaning": "(…에서) 빌리다, 꾸다, 차용하다 ((from))"
+            },
+            {
+              "meaning": "바람[언덕]을 참작하여 치다",
+              "examples": [],
+              "originalMeaning": "바람[언덕]을 참작하여 치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f18634f94464efaa6884fa6d705517d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f18634f94464efaa6884fa6d705517d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "borrows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6da7d80ffd5bde47fa39b660f6863731",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 넥타이 중 하나를 빌렸다.",
+      "text": "I <b>borrowed</b> a tie of his."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 늘 남의 것을 잘라먹는다",
+      "text": "He is always keeping <b>borrowed</b> things."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "돈은 꾸지도 꾸어주지도 않는다는 것이 내 원칙이다",
+      "text": "It's my principle neither to <b>borrow</b> nor to lend money. or I make it a rule neither to <b>borrow</b> nor to lend money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그에게 차를 빌려 달라고 부탁했다",
+      "text": "I asked him if I could <b>borrow</b>[use] his car."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "A군 집에 책을 빌리러 갔더니 외출 중이었다",
+      "text": "I called at A's to <b>borrow</b> a book and found him out."
+    }
+  ],
+  "isWordType": true
+}

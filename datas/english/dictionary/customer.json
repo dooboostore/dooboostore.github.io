@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "customer",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkʌstəmə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(상점의) 고객, 단골, 거래처(patron)",
+              "examples": [
+                {
+                  "text": "regular <b>customer</b>",
+                  "translatedText": "단골 손님"
+                }
+              ],
+              "originalMeaning": "(상점의) 고객, 단골, 거래처(patron)"
+            },
+            {
+              "meaning": "놈, 녀석(fellow)",
+              "examples": [
+                {
+                  "text": "an awkward[a rum] <b>customer</b>",
+                  "translatedText": "다루기 어려운 녀석, 보기 싫은 놈"
+                }
+              ],
+              "originalMeaning": "놈, 녀석(fellow)"
+            },
+            {
+              "meaning": "매춘부, 세관 관리",
+              "examples": [],
+              "originalMeaning": "매춘부, 세관 관리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d6637474915042e38c2d12d1d9e4ed16",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d6637474915042e38c2d12d1d9e4ed16",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "29bdc6695f7b87eddc4be5a6dc488271",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 가게는 손님이 많다",
+      "text": "That shop has many customers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고객이 없으면 장사는 망하는 거다.",
+      "text": "No customers will kill us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "단골손님 하나 잃은 줄 아시오",
+      "text": "You've just lost a steady <b>customer</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "점원이 손님을 받고 있다",
+      "text": "A clerk is attending to customers."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 가게에는 천객만래하고 있다",
+      "text": "That store draws a lot of customers."
+    }
+  ],
+  "isWordType": true
+}

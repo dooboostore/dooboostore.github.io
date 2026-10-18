@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "entry": "echo",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈekoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "메아리, 반향",
+              "examples": [],
+              "originalMeaning": "메아리, 반향"
+            },
+            {
+              "meaning": "(의견·심정에의) 공감, 공명; (여론 등의) 반향, 반응",
+              "examples": [],
+              "originalMeaning": "(의견·심정에의) 공감, 공명; (여론 등의) 반향, 반응"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "반향하다, 울리다, 울려 퍼지다",
+              "examples": [
+                {
+                  "text": "The sound of the cannon echoed around.",
+                  "translatedText": "대포 소리가 사방에 울려 퍼졌다."
+                }
+              ],
+              "originalMeaning": "반향하다, 울리다, 울려 퍼지다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<소리를> 반향하다, <감정을> 반영하다",
+              "examples": [
+                {
+                  "text": "<b>echo</b> back a noise",
+                  "translatedText": "소리를 반향시키다"
+                }
+              ],
+              "originalMeaning": "<소리를> 반향하다, <감정을> 반영하다"
+            },
+            {
+              "meaning": "<남의 말·의견을> 앵무새처럼 되풀이하다, 그대로 흉내내다",
+              "examples": [],
+              "originalMeaning": "<남의 말·의견을> 앵무새처럼 되풀이하다, 그대로 흉내내다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/00cc5bfe71fd46e5a38b4a06ebd76d1c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/00cc5bfe71fd46e5a38b4a06ebd76d1c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "echoes"
+        },
+        {
+          "type": "복수형",
+          "value": "echoes"
+        },
+        {
+          "type": "과거형",
+          "value": "echoed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "echoing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "echoed"
+        }
+      ],
+      "aliasConjugation": "echoes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7640b8218194835967d5b0a4adf7b43d",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "ECHO",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[의학] 초음파 검사법 ((체내 장기의 이상을 조사하는 방법, 종양·돌 검출에 유용))",
+              "examples": [],
+              "originalMeaning": "[의학] 초음파 검사법 ((체내 장기의 이상을 조사하는 방법, 종양·돌 검출에 유용))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7fc976cefb4642e5949a69fcf51c4bbb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7fc976cefb4642e5949a69fcf51c4bbb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a0931bf053c883319ee3fd2b180bf77a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나도 너와 똑같은 생각이다",
+      "text": "Your thoughts <b>echo</b> mine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "대포 소리가 사방에 울려 퍼졌다.",
+      "text": "The sound of the cannon echoed around."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "베토벤의 초기 작품의 어떤 것은 모차르트의 모방이다",
+      "text": "Some of Beethoven's early works are an <b>echo</b> of Mozart."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "산들이 천둥으로 울렸다.",
+      "text": "The hills echoed with the roll of thunder."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 소리가 울린다",
+      "text": "This room echoes."
+    }
+  ],
+  "isWordType": true
+}

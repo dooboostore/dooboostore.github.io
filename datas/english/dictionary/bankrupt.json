@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "bankrupt",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbæŋkrʌpt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "파산자, 지불 불능자",
+              "examples": [],
+              "originalMeaning": "파산자, 지불 불능자"
+            },
+            {
+              "meaning": "성격 파탄자",
+              "examples": [],
+              "originalMeaning": "성격 파탄자"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "파산한, 지불 능력이 없는",
+              "examples": [
+                {
+                  "text": "<b>bankrupt</b> laws",
+                  "translatedText": "파산법"
+                }
+              ],
+              "originalMeaning": "파산한, 지불 능력이 없는"
+            },
+            {
+              "meaning": "(정신적으로) 파탄한",
+              "examples": [],
+              "originalMeaning": "(정신적으로) 파탄한"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "파산시키다",
+              "examples": [],
+              "originalMeaning": "파산시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7a607e2ac204406788d27c0295745758",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7a607e2ac204406788d27c0295745758",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bankrupts"
+        },
+        {
+          "type": "과거형",
+          "value": "bankrupted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bankrupting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bankrupted"
+        }
+      ],
+      "aliasConjugation": "bankrupts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ebbc51befc7b8a7550198de4e81f63ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "법정은 그에게 유죄[파산]를 선고했다.",
+      "text": "The court adjudicated him (to be) guilty[<b>bankrupt</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 파산했다는 소문이 왜자하다",
+      "text": "A rumor is widely abroad that he has gone <b>bankrupt</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경영에 실패하여 도산했다",
+      "text": "He went <b>bankrupt</b> because he had managed his business badly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "토지 개혁으로 많은 지주들이 몰락했다",
+      "text": "Many a landowner has become <b>bankrupt</b> due to the land reform. or Many landed proprietors were ruined due to the land reform."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 회사들이 최근 몇 년 동안 파산하였다",
+      "text": "A lot of companies have gone <b>bankrupt</b>[bust, out of business] in recent years."
+    }
+  ],
+  "isWordType": true
+}

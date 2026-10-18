@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "tendency",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈtendənsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경향, 풍조, 추세 ((to, toward))",
+              "examples": [
+                {
+                  "text": "( <b>tendency</b>+to do) Juvenile crimes show a <b>tendency</b> to increase.",
+                  "translatedText": "소년 범죄는 증가하는 경향을 보이고 있다."
+                }
+              ],
+              "originalMeaning": "경향, 풍조, 추세 ((to, toward))"
+            },
+            {
+              "meaning": "성향, 성벽(性癖), 버릇 ((to, toward))",
+              "examples": [],
+              "originalMeaning": "성향, 성벽(性癖), 버릇 ((to, toward))"
+            },
+            {
+              "meaning": "(작품·발언 등의) 특정한 경향, 의도, 관점, 취향, 취지",
+              "examples": [],
+              "originalMeaning": "(작품·발언 등의) 특정한 경향, 의도, 관점, 취향, 취지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/298769d8c279455cbad019982fd77bea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/298769d8c279455cbad019982fd77bea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "tendencies"
+        }
+      ],
+      "aliasConjugation": "tendencies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "4e1360951c95c1533f453314e70206d1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가 등귀 경향이 있다",
+      "text": "Prices have an upward <b>tendency</b>[are tending upward]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소년 범죄는 증가하는 경향이 있다",
+      "text": "Juvenile crimes show a <b>tendency</b> to increase."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "세계 정세의 추세로 보아 전쟁이 일어날 것 같다",
+      "text": "The <b>tendency</b> of the world affairs[situation] is toward war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가는 하락[상승]하는 추세를 보이고 있다",
+      "text": "Prices are tending downwards[upwards]. or The <b>tendency</b> is toward lower[higher] prices."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 최근에 보수주의적 편향을 보이기 시작했다",
+      "text": "Recently he has begun to show an inclination[a <b>tendency</b>, a leaning] toward conservatism."
+    }
+  ],
+  "isWordType": true
+}

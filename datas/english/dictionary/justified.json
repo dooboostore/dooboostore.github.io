@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "justified",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdʒʌstɪfaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "납득이 되는, 이치에 맞는",
+              "examples": [],
+              "originalMeaning": "납득이 되는, 이치에 맞는"
+            },
+            {
+              "meaning": "행을 고른",
+              "examples": [],
+              "originalMeaning": "행을 고른"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f4ebbcade9d24a0caa84e92f6ff5aa5a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f4ebbcade9d24a0caa84e92f6ff5aa5a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d30a92772071c72d93a0cc6b1bb82787",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "justify",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdʒʌstɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<사람의 행위·진술 등을> 옳다고 하다, 정당하다고 주장하다, 정당성을 증명하다",
+              "examples": [],
+              "originalMeaning": "<사람의 행위·진술 등을> 옳다고 하다, 정당하다고 주장하다, 정당성을 증명하다"
+            },
+            {
+              "meaning": "…의 정당한 이유가 되다, <사정이 행위를> 정당화하다",
+              "examples": [
+                {
+                  "text": "The fine quality justifies the high cost.",
+                  "translatedText": "질이 좋기 때문에 값이 비싼 것은 당연하다."
+                }
+              ],
+              "originalMeaning": "…의 정당한 이유가 되다, <사정이 행위를> 정당화하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[법] 충분한 근거를 보이다; 면책 사유를 대다, 보증(인)이 되다; [신학] <신이> 사람을 용서하고 받아들이다",
+              "examples": [],
+              "originalMeaning": "[법] 충분한 근거를 보이다; 면책 사유를 대다, 보증(인)이 되다; [신학] <신이> 사람을 용서하고 받아들이다"
+            },
+            {
+              "meaning": "정판되다",
+              "examples": [],
+              "originalMeaning": "정판되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b1ad5013525b40d38e915583be88c3ec",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b1ad5013525b40d38e915583be88c3ec",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "justifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2366d937e62f858d249a0d7fe66953e1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 믿는 것도 마땅하다",
+      "text": "You are <b>justified</b> in believing it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "친한 사이에도 예의가 있어야 한다",
+      "text": "Intimacy does not <b>justify</b> lack of courtesy among friends. or There should be courtesy even among intimates."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "질이 좋기 때문에 값이 비싼 것은 당연하다.",
+      "text": "The fine quality justifies the high cost."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "거짓말도 하나의 방편일 수 있다",
+      "text": "Circumstances may <b>justify</b> a lie. or The end justifies the means."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 그것을 거절한 것은 어떠한 사유로도 정당화될 수 없다.",
+      "text": "Nothing can <b>justify</b> him in refusing it."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,981 @@
+import { Sim } from '@dooboostore/simple-boot';
+import { ConstructorType } from '@dooboostore/core';
+
+export namespace TossService {
+  export const SYMBOL = Symbol.for('TossService');
+}
+
+// ── TICS Category Ranking ──────────────────────────────────────────
+
+/** TICS 비교 차트 — /api/v1/dashboard/wts/overview/tics/{id}/comparison-chart */
+export interface TicsFluctuationRate {
+  readonly range: TicsDuration;
+  readonly value: number;
+  readonly date: string;
+}
+export interface TicsPricePoint {
+  readonly date: string;
+  readonly value: number;
+}
+export interface TicsComparisonIndicator {
+  readonly type: string;
+  readonly code: string;
+  readonly name: string;
+  readonly nation: TicsNation;
+  readonly securitiesType: string;
+  readonly isPrimary: boolean;
+  readonly fluctuationRates: readonly TicsFluctuationRate[];
+  readonly prices: readonly TicsPricePoint[];
+}
+export interface TicsComparisonChartResult {
+  readonly baseDate: string;
+  readonly indicators: readonly TicsComparisonIndicator[];
+}
+interface TicsComparisonChartApiResponse {
+  readonly result: TicsComparisonChartResult;
+}
+export interface TicsComparisonChartRequest {
+  readonly ticsId: number | string;
+  readonly nation: TicsNation;
+  readonly securitiesType?: string; // default 'STOCK'
+  readonly indicatorCode?: string; // default 'KGG01P'
+}
+
+/** 랭킹 조회 기간 */
+export type TicsDuration = '1d' | '1w' | '1m' | '3m' | '1y';
+
+/** 랭킹 정렬 기준 */
+export type TicsSortBy = 'TRADING_AMOUNT' | 'FLUCTUATION_RATE';
+
+/** 국가 구분 */
+export type TicsNation = 'KR' | 'US';
+
+/** TICS 랭킹 요청 파라미터 */
+export interface TicsRankingRequest {
+  readonly nation: TicsNation;
+  readonly duration: TicsDuration;
+  readonly sortBy: TicsSortBy;
+}
+
+/** 대표 종목 정보 */
+export interface TicsLeadingStock {
+  readonly productCode: string;   // e.g. "A005930"
+  readonly name: string;          // e.g. "삼성전자"
+  readonly logoImageUrl: string;
+  readonly signal: string;        // e.g. "관세 확대 부담"
+  readonly signalId: string;      // e.g. "STOCKS:005930:20260828"
+}
+
+/** TICS 카테고리 랭킹 항목 */
+export interface TicsCategoryItem {
+  readonly rank: number;
+  readonly ticsId: number;
+  readonly name: string;
+  readonly imageUrl: string;
+  /** 등락률 (소수 표현, e.g. -0.0341 = -3.41%) */
+  readonly fluctuationRate: number;
+  /** 거래대금 (KRW) */
+  readonly tradingAmountKrw: number;
+  /** 거래대금 (USD) */
+  readonly tradingAmountUsd: number;
+  /** 시가총액 (KRW) */
+  readonly totalMarketCapKrw: number;
+  /** 시가총액 (USD) */
+  readonly totalMarketCapUsd: number;
+  /** 포함 종목 수 */
+  readonly stockCount: number;
+  /** 대표 종목 */
+  readonly leadingStock: TicsLeadingStock;
+}
+
+/** TICS 카테고리 랭킹 응답 결과 */
+export interface TicsRankingResult {
+  readonly basedAt: string;         // ISO timestamp
+  readonly duration: TicsDuration;
+  readonly tics: readonly TicsCategoryItem[];
+}
+
+interface TicsRankingApiResponse {
+  readonly result: TicsRankingResult;
+}
+
+// ── Chart ──────────────────────────────────────────────────────────
+export type TossChartSession = 'all' | 'regular';
+export type TossInvestMode = 'integrated' | string;
+
+// 분/일/주/월 타임프레임 — 분은 1,3,5,15,30,60만 허용
+export type TossChartTimeframe =
+  | 'min:1' | 'min:3' | 'min:5' | 'min:15' | 'min:30' | 'min:60'
+  | 'day:1'
+  | 'week:1'
+  | 'month:1';
+
+export interface TossChartOptions {
+  readonly count?: number; // default 61 (week/month/min은 450 권장)
+  readonly timeframe?: TossChartTimeframe; // default 'day:1'
+  readonly session?: TossChartSession;
+  readonly investMode?: TossInvestMode;
+  readonly useAdjustedRate?: boolean;
+  /** 종료 시점 ISO (inclusive) — 지정 시 과거로 count개 반환 */
+  readonly from?: string;
+}
+
+export interface TossCandle {
+  readonly dt: string; // ISO 2026-08-26T00:00:00+09:00
+  readonly base: number;
+  readonly open: number;
+  readonly high: number;
+  readonly low: number;
+  readonly close: number;
+  readonly volume: number;
+  readonly amount: number;
+}
+
+export interface TossChartResult {
+  readonly code: string;
+  readonly nextDateTime: string;
+  readonly exchangeRate: number;
+  readonly exchange: string;
+  readonly candles: readonly TossCandle[];
+}
+
+interface TossChartApiResponse {
+  readonly result: {
+    readonly code: string;
+    readonly nextDateTime: string;
+    readonly exchangeRate: number;
+    readonly exchange: string;
+    readonly candles: readonly TossCandle[];
+  };
+}
+
+// ── Search AutoComplete ────────────────────────────────────────────
+export const TOSS_SEARCH_SECTION_TYPES = ['SCREENER', 'NEWS', 'PRODUCT', 'TICS', 'MARKET_INDEX', 'COMPANY_REPORT', 'ETF', 'RELATED_TOPIC', 'COMPANY_TICS', 'PRODUCT_DETAIL'] as const;
+export type TossSearchSectionType = typeof TOSS_SEARCH_SECTION_TYPES[number];
+
+export interface TossSearchSection {
+  readonly type: TossSearchSectionType;
+  readonly option?: Readonly<{ addIntegratedSearchResult?: boolean; companyCode?: string; productCode?: string }>;
+}
+
+export interface TossSearchRequest {
+  readonly query: string;
+  readonly sections: readonly TossSearchSection[];
+}
+
+// Discriminated section results
+export interface TossProductItem {
+  readonly keyword: string;
+  readonly subKeyword: string;
+  readonly keywordType: string | null;
+  readonly productCode: string; // A005930 / US19990122001 / A483320
+  readonly productName: string;
+  readonly symbol: string; // 005930 / NVDA
+  readonly companyCode: string; // 005930 / NAS00208X-E0
+  readonly logoImageUrl: string;
+  readonly market: string; // KSP, KSD, NSQ, NYS 등
+  readonly base: Readonly<{ krw: number | null; usd: number | null }>;
+  readonly close: Readonly<{ krw: number | null; usd: number | null }>;
+  readonly stockStatus: string;
+  readonly autoComplete: boolean;
+  readonly code: string;
+  readonly subSectionQuery: string;
+  readonly notice?: Readonly<{ splitMerge: boolean; earningsAnnouncement: boolean }>;
+}
+
+export interface TossProductSearchData {
+  readonly type: 'PRODUCT';
+  readonly items: readonly TossProductItem[];
+  readonly subSections: readonly string[];
+}
+
+export interface TossNewsItem {
+  readonly id: string;
+  readonly title: string;
+  readonly summary: string;
+  readonly source: string;
+  readonly imageUrls: readonly string[];
+  readonly createdAt: string;
+  readonly updatedAt: string;
+}
+
+export interface TossNewsSearchData {
+  readonly type: 'NEWS';
+  readonly items: readonly TossNewsItem[];
+}
+
+export interface TossMarketIndexItem {
+  readonly code: string; // KGG01P
+  readonly name: string; // 코스피
+  readonly description: string; // 지수
+  readonly logoImageUrl: string;
+}
+
+export interface TossMarketIndexData {
+  readonly type: 'MARKET_INDEX';
+  readonly items: readonly TossMarketIndexItem[];
+  readonly subSections: readonly string[];
+}
+
+export interface TossETFItem {
+  readonly productName: string;
+  readonly productCode: string;
+  readonly logoImageUrl: string;
+  readonly holdingRatio: string;
+  readonly base: Readonly<{ krw: number | null; usd: number | null }>;
+  readonly close: Readonly<{ krw: number | null; usd: number | null }>;
+  readonly code: string;
+}
+
+export interface TossETFData {
+  readonly type: 'ETF';
+  readonly items: readonly TossETFItem[];
+  readonly subSections: readonly string[];
+}
+
+export interface TossProductDetailData {
+  readonly type: 'PRODUCT_DETAIL';
+  readonly title: string;
+  readonly description: string;
+  readonly subSections: readonly string[];
+}
+
+export type TossSearchResultItem =
+  | { readonly type: 'PRODUCT'; readonly data: TossProductSearchData }
+  | { readonly type: 'NEWS'; readonly data: TossNewsSearchData }
+  | { readonly type: 'MARKET_INDEX'; readonly data: TossMarketIndexData }
+  | { readonly type: 'ETF'; readonly data: TossETFData }
+  | { readonly type: 'PRODUCT_DETAIL'; readonly data: TossProductDetailData }
+  | { readonly type: TossSearchSectionType; readonly data: unknown };
+
+interface TossSearchApiResponse {
+  readonly result: readonly TossSearchResultItem[];
+}
+
+// ── Stock Finance (stability) ──────────────────────────────────────
+export type TossStabilityPosition = 'LOW' | 'HIGH' | 'MEDIUM' | string;
+
+export interface TossStability {
+  readonly liabilityRatio: number; // 부채비율
+  readonly currentRatio: number; // 유동비율
+  readonly interestCoverageRatio: number; // 이자보상배율
+  readonly median: number;
+  readonly position: TossStabilityPosition;
+}
+
+interface TossStabilityApiResponse {
+  readonly result: TossStability;
+}
+
+// ── Investment Indicators (가치평가/수익/배당) ─────────────────────
+export interface TossValuation {
+  readonly displayPer: string; // "11.7배"
+  readonly displayPbr: string; // "3.0배"
+  readonly displayPsr: string; // "3.6배"
+}
+
+export interface TossProfit {
+  readonly eps: number;
+  readonly epsKrw: number;
+  readonly bps: number;
+  readonly bpsKrw: number;
+  readonly roe: string; // "31.4%"
+}
+
+export interface TossDividendInfo {
+  readonly dividendCount: number;
+  readonly dividendMonths: readonly number[];
+  readonly dividendCash: number;
+  readonly dividendCashKrw: number;
+  readonly dividendCashJpy: number | null;
+  readonly dividendYieldRatio: number;
+  readonly ttmDividendYieldRatio: number;
+  readonly ttmDividendMonths: readonly string[];
+  readonly ttmDps: number;
+  readonly ttmDpsKrw: number;
+  readonly ttmDpsJpy: number | null;
+  readonly ttmDividendTotalCount: number;
+  readonly dividendGrowthRatio: number;
+  readonly currency: string;
+}
+
+export interface TossDividend {
+  readonly dividendFrequency: 'QUARTERLY' | 'ANNUAL' | 'MONTHLY' | string;
+  readonly dividendYieldRatio: number;
+  readonly currency: string;
+  readonly annualCash: number;
+  readonly annualCashKrw: number;
+  readonly months: readonly number[];
+  readonly exDate: string;
+  readonly lastYear: number;
+  readonly lastYearDividendInfo: TossDividendInfo;
+}
+
+export interface TossInvestmentIndicators {
+  readonly valuation: TossValuation;
+  readonly profit: TossProfit;
+  readonly dividend: TossDividend;
+}
+
+interface TossInvestmentApiResponse {
+  readonly result: {
+    readonly indicatorSections: readonly {
+      readonly sectionName: '가치평가' | '수익' | '배당' | string;
+      readonly data: unknown;
+    }[];
+  };
+}
+
+// ── Overview (기본정보) GET /stock-infos/{code}/overview ───────────
+export interface TossOverviewMarket {
+  readonly code: string;
+  readonly displayName: string;
+}
+
+export interface TossOverviewWics {
+  readonly code: string;
+  readonly displayName: string;
+}
+
+export interface TossOverviewTics {
+  readonly id: number;
+  readonly title: string;
+  readonly imageUrl: string;
+  readonly depth: number;
+  readonly parentId: number | null;
+  readonly companyCount: number;
+}
+
+export interface TossOverviewComment {
+  readonly code: string;
+  readonly comments: readonly string[];
+  readonly forecasts: readonly string[];
+}
+
+export interface TossOverviewResult {
+  readonly type: string;
+  readonly market: TossOverviewMarket;
+  readonly company: {
+    readonly code: string;
+    readonly name: string;
+    readonly englishName: string;
+    readonly fullName: string;
+    readonly fullEnglishName: string;
+    readonly wics: TossOverviewWics;
+    readonly industry: TossOverviewWics;
+    readonly tics: readonly TossOverviewTics[];
+    readonly description: string;
+    readonly establishDate: string;
+    readonly listDate: string;
+    readonly delistDate: string | null;
+    readonly ceo: string;
+    readonly homepageUrl: string;
+    readonly logoImageUrl: string;
+    readonly sharesOutstanding: number;
+    readonly marketValue: number;
+    readonly marketValueKrw: number;
+    readonly currency: string;
+    readonly comment: TossOverviewComment;
+  };
+  readonly enterpriseValue: number;
+  readonly enterpriseValueKrw: number;
+  readonly marketValue: number;
+  readonly marketValueKrw: number;
+  readonly dataSource: string;
+  readonly listDate: string;
+}
+
+interface TossOverviewApiResponse {
+  readonly result: TossOverviewResult;
+}
+
+// ── Trade Trends — 투자자별/프로그램/신용/대차/공매도/CFD ─────────
+export interface TossTradingTrend {
+  readonly baseDate: string;
+  readonly individualsBuyVolume: number;
+  readonly individualsSellVolume: number;
+  readonly netIndividualsBuyVolume: number;
+  readonly foreignerBuyVolume: number;
+  readonly foreignerSellVolume: number;
+  readonly netForeignerBuyVolume: number;
+  readonly institutionBuyVolume: number;
+  readonly institutionSellVolume: number;
+  readonly netInstitutionBuyVolume: number;
+  readonly foreignerHoldingVolume: number;
+  readonly foreignerRatio: number;
+  readonly base: number;
+  readonly close: number;
+  readonly [key: string]: number | string | boolean | null;
+}
+
+export interface TossProgramTrading {
+  readonly baseDate: string;
+  readonly arbitrageBuyQuantity: number;
+  readonly arbitrageSellQuantity: number;
+  readonly arbitrageNetBuyQuantity: number;
+  readonly nonArbitrageBuyQuantity: number;
+  readonly nonArbitrageSellQuantity: number;
+  readonly nonArbitrageNetBuyQuantity: number;
+  readonly totalBuyQuantity: number;
+  readonly totalSellQuantity: number;
+  readonly totalNetBuyQuantity: number;
+  readonly [key: string]: number | string | boolean | null;
+}
+
+export interface TossMarginLoan {
+  readonly baseDate: string;
+  readonly newQuantity: number;
+  readonly returnQuantity: number;
+  readonly balanceQuantity: number;
+  readonly lendingRate: number;
+  readonly balanceRate: number;
+  readonly close: number;
+  readonly [key: string]: number | string | boolean | null;
+}
+
+export interface TossLendingTrading {
+  readonly baseDate: string;
+  readonly executionQuantity: number;
+  readonly repaymentQuantity: number;
+  readonly lendingTradingBalanceVolume: number;
+  readonly lendingTradingBalanceAmount: number;
+  readonly close: number;
+  readonly [key: string]: number | string | boolean | null;
+}
+
+export interface TossShortSellingTrend {
+  readonly baseDate: string;
+  readonly shortTradingVolume: number;
+  readonly shortTradingAmount: number;
+  readonly shortSellingRatio: number;
+  readonly close: number;
+  readonly [key: string]: number | string | boolean | null;
+}
+
+export interface TossCFD {
+  readonly baseDate: string;
+  readonly buyBalanceQuantity: number;
+  readonly sellBalanceQuantity: number;
+  readonly buyBalanceRate: number;
+  readonly [key: string]: number | string | boolean | null;
+}
+
+interface TossPaginatedBody<T> {
+  readonly pagingParam: { readonly number: number; readonly size: number; readonly key: string };
+  readonly body: readonly T[];
+}
+
+// ── Service Interface ──────────────────────────────────────────────
+export type TossChartTarget = string | TossProductItem | TossOverviewResult;
+
+export interface TossService {
+  /** 차트 캔들 조회 — code/상품/개요 객체로 국내(KSP) 해외(NSQ) 자동 분기, timeframe으로 일/주/월/분봉 지정 */
+  getChart(target: TossChartTarget, options?: TossChartOptions): Promise<TossChartResult>;
+  /** 차트 캔들 조회 (상품 객체) — market으로 us-s/kr-s 자동 선택 */
+  getChart(product: TossProductItem, options?: TossChartOptions): Promise<TossChartResult>;
+  /** 차트 캔들 조회 (개요 객체) — market.code로 us-s/kr-s 자동 선택 */
+  getChart(overview: TossOverviewResult, options?: TossChartOptions): Promise<TossChartResult>;
+  /** 통합 검색 — PRODUCT/NEWS/MARKET_INDEX 등 섹션별 결과 반환 (discriminated union) */
+  searchAutoComplete(query: string, sections?: readonly TossSearchSection[]): Promise<readonly TossSearchResultItem[]>;
+  /** 상품 검색 편의 — PRODUCT 섹션만, TossProductItem[] 반환 */
+  searchProduct(query: string): Promise<readonly TossProductItem[]>;
+  /** 지수 검색 편의 — MARKET_INDEX 섹션만, TossMarketIndexItem[] 반환 */
+  searchMarketIndex(query: string): Promise<readonly TossMarketIndexItem[]>;
+  /** 재무 안정성 — POST /stock-infos/stability/{code}, TossStability 반환 */
+  getStability(code: string): Promise<TossStability>;
+  /** 투자지표 전체 — GET /stock-detail/ui/wts/{code}/investment-indicators, 3섹션 통합 */
+  getInvestmentIndicators(code: string): Promise<TossInvestmentIndicators>;
+  /** 가치평가 — investment-indicators 중 valuation 섹션만 */
+  getValuation(code: string): Promise<TossValuation>;
+  /** 수익 — investment-indicators 중 profit 섹션만 */
+  getProfit(code: string): Promise<TossProfit>;
+  /** 배당 — investment-indicators 중 dividend 섹션만 */
+  getDividend(code: string): Promise<TossDividend>;
+  /** 기본정보 — GET /stock-infos/{code}/overview, 회사/산업/시총 등 */
+  getOverview(code: string): Promise<TossOverviewResult>;
+  /** 상품 상세 — POST /search-all (PRODUCT_DETAIL), TossProductItem로 조회 */
+  getProductDetail(product: TossProductItem): Promise<TossProductDetailData | null>;
+  /** 상품 상세 — 코드 직접 지정 */
+  getProductDetail(productCode: string, companyCode: string, query?: string): Promise<TossProductDetailData | null>;
+  /** 투자자별 매매 동향 — GET /trade/trend/trading-trend?productCode=&size=60 */
+  getTradingTrend(code: string, size?: number): Promise<readonly TossTradingTrend[]>;
+  /** 프로그램매매 — GET /trade/trend/program-trading?productCode=&size=50 */
+  getProgramTrading(code: string, size?: number): Promise<readonly TossProgramTrading[]>;
+  /** 신용거래 — GET /mds/info/margin-loan?stockCode=&size=50 */
+  getMarginLoan(code: string, size?: number): Promise<readonly TossMarginLoan[]>;
+  /** 대차거래 — GET /mds/info/lending-trading?stockCode=&size=50 */
+  getLendingTrading(code: string, size?: number): Promise<readonly TossLendingTrading[]>;
+  /** 공매도 — GET /mds/info/short-selling-trend?stockCode=&size=50 */
+  getShortSellingTrend(code: string, size?: number): Promise<readonly TossShortSellingTrend[]>;
+  /** CFD — GET /mds/info/cfd?stockCode=&size=50 */
+  getCFD(code: string, size?: number): Promise<readonly TossCFD[]>;
+  /** TICS 카테고리 랭킹 — POST /api/v2/dashboard/wts/overview/tics/ranking */
+  getTicsRanking(params: TicsRankingRequest): Promise<TicsRankingResult>;
+  /** 국내 거래대금 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingKrByAmount(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 국내 등락률 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingKrByFluctuation(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 해외 거래대금 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingUsByAmount(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 해외 등락률 기준 TICS 랭킹 편의 메서드 */
+  getTicsRankingUsByFluctuation(duration?: TicsDuration): Promise<TicsRankingResult>;
+  /** 현재가 조회 — GET /api/v1/product/stock-prices?meta=true&productCodes=... */
+  getStockPrices(productCodes: readonly string[]): Promise<readonly TossStockPrice[]>;
+  getStockPrice(productCode: string): Promise<TossStockPrice | null>;
+
+  /** TICS 비교 차트 — GET /api/v1/dashboard/wts/overview/tics/{id}/comparison-chart */
+  getTicsComparisonChart(req: TicsComparisonChartRequest): Promise<TicsComparisonChartResult>;
+  /** TICS 전체 카테고리 트리 — GET /api/v1/tics/all */
+  getTicsAll(): Promise<TossTicsAllResult>;
+  /** TICS 카테고리 상세 + 구성종목 — GET /api/v1/tics/{id}/details */
+  getTicsDetails(id: number | string): Promise<TossTicsDetailsResult>;
+  /** 주요지수 대시보드 — GET wts-cert-api/api/v4/dashboard/wts/overview/indicator */
+  getIndicators(): Promise<TossIndicatorResult>;
+  /** 종목 미니차트 배치 — POST wts-cert-api/api/v1/dashboard/common/stocks/mini-chart */
+  getMiniCharts(codes: readonly string[]): Promise<TossMiniChartResult>;
+}
+
+/** 주요지수 1건 (indicators[].price + miniChart.candles) */
+export interface TossIndicatorItem {
+  readonly code: string;
+  readonly name: string;
+  readonly displayName: string;
+  readonly logoImageUrl: string;
+  readonly nation: 'us' | 'kr';
+  readonly price: {
+    readonly code: string;
+    readonly displayName: string;
+    readonly changeType: 'UP' | 'DOWN' | 'SAME';
+    readonly latestPrice: number;
+    readonly basePrice: number;
+  };
+  readonly miniChart: {
+    readonly timezone: string;
+    readonly candles: readonly { readonly startDate: string; readonly price: number }[];
+  };
+}
+
+/** 주요지수 대시보드 */
+export interface TossIndicatorResult {
+  readonly indicators: readonly TossIndicatorItem[];
+  readonly landingUrl: string;
+  readonly badgedIndices: readonly {
+    readonly indexCode: string;
+    readonly displayName: string;
+    readonly category: string;
+    readonly direction: 'UP' | 'DOWN';
+    readonly isAnomaly: boolean;
+    readonly changeRate: number;
+    readonly aiSignalTitle: string;
+    readonly aiSignalId: string;
+    readonly keyword: string;
+    readonly zscore: number;
+  }[];
+}
+
+/** 종목 미니차트 배치 */
+export interface TossMiniChartResult {
+  readonly baseDateTime: string;
+  readonly baseRange: string;
+  readonly baseStep: string;
+  readonly miniCharts: readonly {
+    readonly code: string;
+    readonly timezone: string;
+    readonly candles: readonly {
+      readonly startDate: string;
+      readonly open: number;
+      readonly close: number;
+      readonly low: number;
+      readonly high: number;
+    }[];
+  }[];
+}
+
+/** TICS 구성종목 1건 (details.stocks[]) */
+export interface TossTicsStockItem {
+  readonly code: string;
+  readonly name: string;
+  readonly detailName: string;
+  readonly companyCode: string;
+  readonly companyName: string;
+  readonly representative: boolean;
+  readonly type: string;
+  readonly logoImageUrl: string;
+}
+
+/** TICS 카테고리 상세 (구성종목 포함) */
+export interface TossTicsDetailsResult {
+  readonly id: number;
+  readonly title: string;
+  readonly depth: number;
+  readonly companyCount: number;
+  readonly etfCount: number;
+  readonly summary: string | null;
+  readonly description: string | null;
+  readonly stocks: readonly TossTicsStockItem[];
+}
+
+/** TICS 전체 트리 노드 */
+export interface TossTicsAllItem {
+  readonly id: number;
+  readonly title: string;
+  readonly depth: number;
+  readonly parentId: number | null;
+  readonly companyCount: number;
+  readonly subItems: readonly TossTicsAllItem[] | null;
+}
+
+/** TICS 전체 카테고리 — GET /api/v1/tics/all */
+export interface TossTicsAllResult {
+  readonly baseDateTime: string;
+  readonly ticsItems: readonly TossTicsAllItem[];
+}
+
+// ── Stock Prices — GET /api/v1/product/stock-prices ─────────────────────
+export interface TossStockPrice {
+  readonly productCode: string;
+  readonly currency: string; // KRW / USD
+  readonly base: number; // 전일 종가
+  readonly close: number; // 현재가
+  readonly volume: number;
+  readonly exchange?: string; // integrated (KR)
+  readonly baseKrw?: number;
+  readonly closeKrw?: number;
+  readonly session?: string; // DAY_PRE_MAIN 등 (US)
+  readonly meta?: Readonly<{ baseKrwDecimal?: number; closeKrwDecimal?: number }>;
+}
+
+interface TossStockPricesApiResponse {
+  readonly result: readonly TossStockPrice[];
+}
+
+export default (container: symbol): ConstructorType<TossService> => {
+  @Sim({ symbol: TossService.SYMBOL, container })
+  class TossServiceImpl implements TossService {
+    // allorigins는 서버/브라우저 모두 동작 (간헐적 522 타임아웃 발생)
+    private readonly CORS_PROXY = 'https://sparkling-dew-b13c.visualkhh.workers.dev/?url=';
+    private readonly CHART_BASE = 'https://wts-info-api.tossinvest.com/api/v1/c-chart';
+    private readonly SEARCH_BASE = 'https://wts-info-api.tossinvest.com/api/v3/search-all/wts-auto-complete';
+    private readonly STOCK_INFO_BASE = 'https://wts-info-api.tossinvest.com/api/v2/stock-infos';
+    private readonly STOCK_DETAIL_BASE = 'https://wts-info-api.tossinvest.com/api/v1/stock-detail/ui/wts';
+    private readonly DASHBOARD_BASE = 'https://wts-info-api.tossinvest.com/api/v2/dashboard/wts';
+
+    private async fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
+      // 정적 배포 전제: 전부 workers 프록시 경유 (dev 포함)
+      const proxied = `${this.CORS_PROXY}${encodeURIComponent(url)}`;
+      const res = await fetch(proxied, init);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return (await res.json()) as T;
+    }
+
+    async getChart(target: TossChartTarget, options: TossChartOptions = {}): Promise<TossChartResult> {
+      const {
+        count = 61,
+        timeframe = 'day:1',
+        session = 'all',
+        investMode = 'integrated',
+        useAdjustedRate = true,
+        from,
+      } = options;
+
+      // target 정규화: 문자열 코드 또는 회사 정보 객체
+      let code: string;
+      let marketHint: string | undefined;
+      if (typeof target === 'string') {
+        code = target;
+      } else if ('productCode' in target) {
+        code = (target as TossProductItem).productCode;
+        marketHint = (target as TossProductItem).market;
+      } else {
+        code = (target as TossOverviewResult).company.code;
+        marketHint = (target as TossOverviewResult).market.code;
+      }
+
+      // code 정규화: 영문 시작(A/US/KGG 등) 그대로, 숫자 6자리 → A prefix
+      const normalizedCode = /^[A-Z]/.test(code) ? code : `A${code}`;
+      // 회사 정보가 있으면 market으로 해외 여부 판단 (NSQ/NYS/NAS/AMX), 없으면 코드 prefix로 판단 (US/NAS/AMX/NYS)
+      const isUS =
+        /^(US|NAS|AMX|NYS)/.test(normalizedCode) ||
+        (marketHint ? /^(NSQ|NYS|NAS|AMX)/.test(marketHint) : false);
+      const marketPath = isUS ? 'us-s' : 'kr-s';
+      const params = new URLSearchParams({
+        count: String(count),
+        session,
+        investMode,
+        useAdjustedRate: String(useAdjustedRate),
+        ...(from ? { from } : {}),
+      });
+      // week/month/min은 session 파라미터 불필요 시 제외 (서버가 무시하지만 URL 정리)
+      const isIntradayOrWeekly = timeframe.startsWith('min:') || timeframe.startsWith('week:') || timeframe.startsWith('month:');
+      if (isIntradayOrWeekly && params.has('session')) {
+        // 분/주/월은 session=all이 무의미할 수 있으나 기존 호출 호환을 위해 유지
+      }
+      const url = `${this.CHART_BASE}/${marketPath}/${normalizedCode}/${timeframe}?${params.toString()}`;
+
+      const json = await this.fetchJson<TossChartApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+
+      if (!json.result) throw new Error('Invalid chart response');
+      return json.result;
+    }
+
+    async searchAutoComplete(
+      query: string,
+      sections: readonly TossSearchSection[] = [
+        { type: 'SCREENER' },
+        { type: 'NEWS' },
+        { type: 'PRODUCT', option: { addIntegratedSearchResult: true } },
+        { type: 'TICS' },
+        { type: 'MARKET_INDEX' },
+      ],
+    ): Promise<readonly TossSearchResultItem[]> {
+      const body: TossSearchRequest = { query, sections: [...sections] };
+
+      const json = await this.fetchJson<TossSearchApiResponse>(this.SEARCH_BASE, {
+        method: 'POST',
+        headers: {
+          accept: 'application/json',
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+
+      return json.result ?? [];
+    }
+
+    async searchProduct(query: string): Promise<readonly TossProductItem[]> {
+      const results = await this.searchAutoComplete(query, [
+        { type: 'PRODUCT', option: { addIntegratedSearchResult: true } },
+      ]);
+      const productSection = results.find((r): r is { type: 'PRODUCT'; data: TossProductSearchData } => r.type === 'PRODUCT');
+      return productSection?.data.items ?? [];
+    }
+
+    async searchMarketIndex(query: string): Promise<readonly TossMarketIndexItem[]> {
+      const results = await this.searchAutoComplete(query, [{ type: 'MARKET_INDEX' }]);
+      const section = results.find((r): r is { type: 'MARKET_INDEX'; data: TossMarketIndexData } => r.type === 'MARKET_INDEX');
+      return section?.data.items ?? [];
+    }
+
+    async getStability(code: string): Promise<TossStability> {
+      const normalizedCode = code.startsWith('A') ? code : `A${code}`;
+      const url = `${this.STOCK_INFO_BASE}/stability/${normalizedCode}`;
+      const json = await this.fetchJson<TossStabilityApiResponse>(url, {
+        method: 'POST',
+        headers: { accept: 'application/json' },
+      });
+      if (!json.result) throw new Error('Invalid stability response');
+      return json.result;
+    }
+
+    async getInvestmentIndicators(code: string): Promise<TossInvestmentIndicators> {
+      const normalizedCode = code.startsWith('A') ? code : `A${code}`;
+      const url = `${this.STOCK_DETAIL_BASE}/${normalizedCode}/investment-indicators`;
+      const json = await this.fetchJson<TossInvestmentApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+      const sections = json.result?.indicatorSections ?? [];
+      const find = <T>(name: string): T => {
+        const sec = sections.find(s => s.sectionName === name);
+        if (!sec) throw new Error(`Missing section: ${name}`);
+        return sec.data as T;
+      };
+      return {
+        valuation: find<TossValuation>('가치평가'),
+        profit: find<TossProfit>('수익'),
+        dividend: find<TossDividend>('배당'),
+      };
+    }
+
+    async getValuation(code: string): Promise<TossValuation> {
+      return (await this.getInvestmentIndicators(code)).valuation;
+    }
+
+    async getProfit(code: string): Promise<TossProfit> {
+      return (await this.getInvestmentIndicators(code)).profit;
+    }
+
+    async getDividend(code: string): Promise<TossDividend> {
+      return (await this.getInvestmentIndicators(code)).dividend;
+    }
+
+    async getOverview(code: string): Promise<TossOverviewResult> {
+      const normalizedCode = code.startsWith('A') ? code : `A${code}`;
+      const url = `https://wts-info-api.tossinvest.com/api/v2/stock-infos/${normalizedCode}/overview`;
+      const json = await this.fetchJson<TossOverviewApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+      if (!json.result) throw new Error('Invalid overview response');
+      return json.result;
+    }
+
+    async getProductDetail(product: TossProductItem): Promise<TossProductDetailData | null>;
+    async getProductDetail(productCode: string, companyCode: string, query?: string): Promise<TossProductDetailData | null>;
+    async getProductDetail(
+      productOrCode: TossProductItem | string,
+      companyCode?: string,
+      query?: string,
+    ): Promise<TossProductDetailData | null> {
+      let productCode: string;
+      let cCode: string;
+      let q: string;
+      if (typeof productOrCode === 'string') {
+        productCode = productOrCode;
+        cCode = companyCode!;
+        q = query ?? productCode;
+      } else {
+        productCode = productOrCode.productCode;
+        cCode = productOrCode.companyCode;
+        q = productOrCode.productName;
+      }
+      const results = await this.searchAutoComplete(q, [
+        { type: 'COMPANY_REPORT', option: { companyCode: cCode } },
+        { type: 'ETF' },
+        { type: 'RELATED_TOPIC', option: { productCode } },
+        { type: 'COMPANY_TICS', option: { companyCode: cCode } },
+        { type: 'PRODUCT_DETAIL', option: { productCode } },
+      ]);
+      const sec = results.find((r): r is { type: 'PRODUCT_DETAIL'; data: TossProductDetailData } => r.type === 'PRODUCT_DETAIL');
+      return sec?.data ?? null;
+    }
+
+    private normalizeTradeCode(code: string): string {
+      return /^[A-Z]/.test(code) ? code : `A${code}`;
+    }
+
+    private async fetchTradeBody<T>(path: string, code: string, size: number, paramName: 'productCode' | 'stockCode'): Promise<readonly T[]> {
+      const normalizedCode = this.normalizeTradeCode(code);
+      const url = `https://wts-info-api.tossinvest.com/api/v1/${path}?${paramName}=${normalizedCode}&size=${size}`;
+      const json = await this.fetchJson<{ result: TossPaginatedBody<T> }>(url, {
+        headers: { accept: 'application/json' },
+      });
+      return json.result?.body ?? [];
+    }
+
+    async getTradingTrend(code: string, size = 60): Promise<readonly TossTradingTrend[]> {
+      return this.fetchTradeBody<TossTradingTrend>('stock-infos/trade/trend/trading-trend', code, size, 'productCode');
+    }
+
+    async getProgramTrading(code: string, size = 50): Promise<readonly TossProgramTrading[]> {
+      return this.fetchTradeBody<TossProgramTrading>('stock-infos/trade/trend/program-trading', code, size, 'productCode');
+    }
+
+    async getMarginLoan(code: string, size = 50): Promise<readonly TossMarginLoan[]> {
+      return this.fetchTradeBody<TossMarginLoan>('mds/info/margin-loan', code, size, 'stockCode');
+    }
+
+    async getLendingTrading(code: string, size = 50): Promise<readonly TossLendingTrading[]> {
+      return this.fetchTradeBody<TossLendingTrading>('mds/info/lending-trading', code, size, 'stockCode');
+    }
+
+    async getShortSellingTrend(code: string, size = 50): Promise<readonly TossShortSellingTrend[]> {
+      return this.fetchTradeBody<TossShortSellingTrend>('mds/info/short-selling-trend', code, size, 'stockCode');
+    }
+
+    async getCFD(code: string, size = 50): Promise<readonly TossCFD[]> {
+      return this.fetchTradeBody<TossCFD>('mds/info/cfd', code, size, 'stockCode');
+    }
+
+    async getTicsRanking(params: TicsRankingRequest): Promise<TicsRankingResult> {
+      const url = `${this.DASHBOARD_BASE}/overview/tics/ranking`;
+      const json = await this.fetchJson<TicsRankingApiResponse>(url, {
+        method: 'POST',
+        headers: {
+          accept: 'application/json',
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(params),
+      });
+      if (!json.result) throw new Error('Invalid TICS ranking response');
+      return json.result;
+    }
+
+    async getTicsRankingKrByAmount(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'KR', duration, sortBy: 'TRADING_AMOUNT' });
+    }
+
+    async getTicsRankingKrByFluctuation(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'KR', duration, sortBy: 'FLUCTUATION_RATE' });
+    }
+
+    async getTicsRankingUsByAmount(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'US', duration, sortBy: 'TRADING_AMOUNT' });
+    }
+
+    async getTicsRankingUsByFluctuation(duration: TicsDuration = '1d'): Promise<TicsRankingResult> {
+      return this.getTicsRanking({ nation: 'US', duration, sortBy: 'FLUCTUATION_RATE' });
+    }
+
+    async getTicsComparisonChart(req: TicsComparisonChartRequest): Promise<TicsComparisonChartResult> {
+      const defaultIndicator = req.nation === 'US' ? 'SPX.CBI' : 'KGG01P';
+      const { ticsId, nation, securitiesType = 'STOCK', indicatorCode = defaultIndicator } = req;
+      const url = `https://wts-info-api.tossinvest.com/api/v1/dashboard/wts/overview/tics/${ticsId}/comparison-chart?nation=${encodeURIComponent(nation)}&securitiesType=${encodeURIComponent(securitiesType)}&indicatorCode=${encodeURIComponent(indicatorCode)}`;
+      const json = await this.fetchJson<TicsComparisonChartApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+      if (!json.result) throw new Error('Invalid TICS comparison chart response');
+      return json.result;
+    }
+
+    async getStockPrices(productCodes: readonly string[]): Promise<readonly TossStockPrice[]> {
+      if (!productCodes.length) return [];
+      const codes = productCodes.map(c => /^[A-Z]/.test(c) ? c : `A${c}`).join(',');
+      const url = `https://wts-info-api.tossinvest.com/api/v1/product/stock-prices?meta=true&productCodes=${encodeURIComponent(codes)}`;
+      const json = await this.fetchJson<TossStockPricesApiResponse>(url, {
+        headers: { accept: 'application/json' },
+      });
+      return json.result ?? [];
+    }
+
+    async getStockPrice(productCode: string): Promise<TossStockPrice | null> {
+      const list = await this.getStockPrices([productCode]);
+      return list[0] ?? null;
+    }
+
+    async getTicsAll(): Promise<TossTicsAllResult> {
+      const json = await this.fetchJson<{ result: TossTicsAllResult }>(
+        'https://wts-info-api.tossinvest.com/api/v1/tics/all',
+        { headers: { accept: 'application/json' } },
+      );
+      if (!json.result) throw new Error('Invalid TICS all response');
+      return json.result;
+    }
+
+    async getTicsDetails(id: number | string): Promise<TossTicsDetailsResult> {
+      const json = await this.fetchJson<{ result: TossTicsDetailsResult }>(
+        `https://wts-info-api.tossinvest.com/api/v1/tics/${id}/details`,
+        { headers: { accept: 'application/json' } },
+      );
+      if (!json.result) throw new Error('Invalid TICS details response');
+      return json.result;
+    }
+
+    async getIndicators(): Promise<TossIndicatorResult> {
+      const json = await this.fetchJson<{ result: TossIndicatorResult }>(
+        'https://wts-cert-api.tossinvest.com/api/v4/dashboard/wts/overview/indicator',
+        { headers: { accept: 'application/json' } },
+      );
+      if (!json.result) throw new Error('Invalid indicator response');
+      return json.result;
+    }
+
+    async getMiniCharts(codes: readonly string[]): Promise<TossMiniChartResult> {
+      if (!codes.length) {
+        return { baseDateTime: '', baseRange: '', baseStep: '', miniCharts: [] };
+      }
+      const json = await this.fetchJson<{ result: TossMiniChartResult }>(
+        'https://wts-cert-api.tossinvest.com/api/v1/dashboard/common/stocks/mini-chart',
+        {
+          method: 'POST',
+          headers: { accept: 'application/json', 'content-type': 'application/json' },
+          body: JSON.stringify({ codes: [...codes] }),
+        },
+      );
+      if (!json.result) throw new Error('Invalid mini-chart response');
+      return json.result;
+    }
+  }
+
+  return TossServiceImpl;
+};

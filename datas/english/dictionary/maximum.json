@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "maximum",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmæksɪməm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "최대한, 최대량, 최대수, 최고점, 최댓값, 최고액, 극한",
+              "examples": [
+                {
+                  "text": "the <b>maximum</b> of ten years in prison",
+                  "translatedText": "최고 10년 형(刑)"
+                }
+              ],
+              "originalMeaning": "최대한, 최대량, 최대수, 최고점, 최댓값, 최고액, 극한"
+            },
+            {
+              "meaning": "극대(점)",
+              "examples": [],
+              "originalMeaning": "극대(점)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "최대의, 최고의; 극대의",
+              "examples": [
+                {
+                  "text": "the <b>maximum</b> value",
+                  "translatedText": "[수학] 극댓값"
+                }
+              ],
+              "originalMeaning": "최대의, 최고의; 극대의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b0e3d7fb2da84d5e999e0b78893efe63",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b0e3d7fb2da84d5e999e0b78893efe63",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "maximums, maxima"
+        }
+      ],
+      "aliasConjugation": "maximums, maxima",
+      "aliasConjugationPos": "복수형",
+      "gdid": "44ab411ccaa0f4bf627144857fa6da18",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘의 최고 기온은 34℃였다",
+      "text": "The <b>maximum</b> temperature today was 34 degrees Celsius."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "건축비의 최대한도는 8천만 원이다",
+      "text": "The building cost must not exceed eighty million won. or The <b>maximum</b> appropriation for building is eighty million won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "순간 최대 풍속이 30미터에 달했다",
+      "text": "The <b>maximum</b> instantaneous wind velocity reached 30 meters."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 자동차는 최대 150마일까지의 속력을 낼 수 있다",
+      "text": "This motorcar develops a <b>maximum</b> speed of 150 miles."
+    }
+  ],
+  "isWordType": true
+}

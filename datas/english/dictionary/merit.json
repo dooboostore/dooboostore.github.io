@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "merit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmerɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "장점, 취할 점(opp. demerit)",
+              "examples": [
+                {
+                  "text": "The plan is without <b>merit</b>.",
+                  "translatedText": "그 계획에는 취할 만한 점이 없다."
+                }
+              ],
+              "originalMeaning": "장점, 취할 점(opp. demerit)"
+            },
+            {
+              "meaning": "[종종 pl.] 공적, 공로, 공훈",
+              "examples": [
+                {
+                  "text": "according to one's <b>merit</b>",
+                  "translatedText": "공로에 따라"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] 공적, 공로, 공훈"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "공로로 얻다",
+              "examples": [],
+              "originalMeaning": "공로로 얻다"
+            },
+            {
+              "meaning": "<상·벌·감사·비난 등을> 마땅히 받을 만하다(deserve)",
+              "examples": [],
+              "originalMeaning": "<상·벌·감사·비난 등을> 마땅히 받을 만하다(deserve)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1194516a9d6a46dbaaa38f27cb15a5a2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1194516a9d6a46dbaaa38f27cb15a5a2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "merits"
+        },
+        {
+          "type": "과거형",
+          "value": "merited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "meriting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "merited"
+        }
+      ],
+      "aliasConjugation": "merits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9a74ee2228382f660b003dea0324e73f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획에는 취할 만한 점이 없다.",
+      "text": "The plan is without <b>merit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람은 제각기 장단점이 있다",
+      "text": "Each man has his merits and faults."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람은 누구나 장단을 가지고 있다",
+      "text": "Everyman has his merits and demerits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계획은 장점도 있고 단점도 있다",
+      "text": "The plan has both merits and demerits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무엇이든지 이해득실이 없는 것은 없다",
+      "text": "Everything has its merits and demerits[faults]."
+    }
+  ],
+  "isWordType": true
+}

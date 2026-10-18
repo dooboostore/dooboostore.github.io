@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "institute",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɪnstɪtuːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "세우다, 설립하다(establish), 제정하다",
+              "examples": [
+                {
+                  "text": "<b>institute</b> a government",
+                  "translatedText": "정부를 조직하다"
+                }
+              ],
+              "originalMeaning": "세우다, 설립하다(establish), 제정하다"
+            },
+            {
+              "meaning": "[문어] <조사를> 시작하다; <소송을> 제기하다; 실행에 옮기다, 시행[실시]하다",
+              "examples": [
+                {
+                  "text": "<b>institute</b> a new course",
+                  "translatedText": "새로운 강좌를 개설하다"
+                }
+              ],
+              "originalMeaning": "[문어] <조사를> 시작하다; <소송을> 제기하다; 실행에 옮기다, 시행[실시]하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(학술·미술 등의) 회(會), 협회, 연구소",
+              "examples": [],
+              "originalMeaning": "(학술·미술 등의) 회(會), 협회, 연구소"
+            },
+            {
+              "meaning": "(학회 등의) 회관",
+              "examples": [],
+              "originalMeaning": "(학회 등의) 회관"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f98c2ef85af6471a957929c5df598652",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f98c2ef85af6471a957929c5df598652",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "institutes"
+        },
+        {
+          "type": "과거형",
+          "value": "instituted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "instituting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "instituted"
+        }
+      ],
+      "aliasConjugation": "institutes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "89197fc846afa441d5607989db56caa3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "매사추세츠 공과 대학",
+      "text": "Massachusetts <b>Institute</b> of Technology"
+    }
+  ],
+  "isWordType": true
+}

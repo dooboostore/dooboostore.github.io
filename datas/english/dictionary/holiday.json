@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "holiday",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│hɒlədeɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "휴일, 공휴일, 휴업일(opp. workday)",
+              "examples": [
+                {
+                  "text": "a legal <b>holiday</b>",
+                  "translatedText": "법정 휴일"
+                }
+              ],
+              "originalMeaning": "휴일, 공휴일, 휴업일(opp. workday)"
+            },
+            {
+              "meaning": "축제일(holy day)",
+              "examples": [],
+              "originalMeaning": "축제일(holy day)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "휴일의, 휴가 중의",
+              "examples": [],
+              "originalMeaning": "휴일의, 휴가 중의"
+            },
+            {
+              "meaning": "즐거운, 들뜬, 축제일 같은; 나들이의, 외출할 때의; (평소와는 달리) 격식을 차린",
+              "examples": [
+                {
+                  "text": "a <b>holiday</b> mood",
+                  "translatedText": "축제 기분"
+                }
+              ],
+              "originalMeaning": "즐거운, 들뜬, 축제일 같은; 나들이의, 외출할 때의; (평소와는 달리) 격식을 차린"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "휴가를 가지다, 휴가를 보내다( vacation)",
+              "examples": [
+                {
+                  "text": "<b>holiday</b> at the seaside",
+                  "translatedText": "해변에서 휴가를 지내다"
+                }
+              ],
+              "originalMeaning": "휴가를 가지다, 휴가를 보내다( vacation)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/00869df18af34a888eba5cbad414d9f6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/00869df18af34a888eba5cbad414d9f6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "holidays"
+        },
+        {
+          "type": "과거형",
+          "value": "holidayed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "holidaying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "holidayed"
+        }
+      ],
+      "aliasConjugation": "holidays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "694489b3db0c97f23316ed8be04810b8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 와서 휴일을 잡쳤다",
+      "text": "The rain spoiled my <b>holiday</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 휴일을 따분하게 보냈다",
+      "text": "He spent his <b>holiday</b> gloomily."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "휴가를 가질 여유가 없다.",
+      "text": "I cannot afford (to have) holidays."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "곧 여름 방학이 된다",
+      "text": "We shall soon have the summer holidays."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 휴일 계획을 너와 맞추겠다",
+      "text": "I'll fit my <b>holiday</b> plan in with yours."
+    }
+  ],
+  "isWordType": true
+}

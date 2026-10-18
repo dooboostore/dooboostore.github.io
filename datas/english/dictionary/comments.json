@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "comment",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːment"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(시사 문제 등의) 논평(remark), 의견, 비평, 비판(criticism) ((on, about))",
+              "examples": [
+                {
+                  "text": "No <b>comment</b> .",
+                  "translatedText": "할 말이 없다."
+                }
+              ],
+              "originalMeaning": "(시사 문제 등의) 논평(remark), 의견, 비평, 비판(criticism) ((on, about))"
+            },
+            {
+              "meaning": "(책·논설 등에 대한) 주해, 주석; 해설, 설명",
+              "examples": [],
+              "originalMeaning": "(책·논설 등에 대한) 주해, 주석; 해설, 설명"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "비평[논평]하다; 주석[해설]하다 ((on, upon, about))",
+              "examples": [
+                {
+                  "text": "<b>comment</b> favorably on his latest work",
+                  "translatedText": "그의 최근작을 호평하다"
+                }
+              ],
+              "originalMeaning": "비평[논평]하다; 주석[해설]하다 ((on, upon, about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "의견으로서 진술하다, 논평하다",
+              "examples": [],
+              "originalMeaning": "의견으로서 진술하다, 논평하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1ce63a253fb144a3a9593fecf5f0fabc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1ce63a253fb144a3a9593fecf5f0fabc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "comments"
+        },
+        {
+          "type": "과거형",
+          "value": "commented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "commenting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "commented"
+        }
+      ],
+      "aliasConjugation": "comments",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "80cd76d2979ffbe13c39d95d69ffcf88",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그것에 대해 아무런 평도 하지 않았다",
+      "text": "He made no <b>comment</b> on it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 일에 관해서 언급을 회피하였다",
+      "text": "He evaded making his <b>comment</b> on it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 긍정도 부정도 하지 않았다",
+      "text": "He refused to deny or confirm. or He made no <b>comment</b> either way. or He said neither “yes” or “no”."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 말을 빗댄 것으로 받아들이지 마시오.",
+      "text": "Don’t take his <b>comments</b> personally."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 본문에 대한 해석은 사실과 차이가 난다",
+      "text": "His <b>comments</b> on the text jar with the facts."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "entry": "central",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsentrəl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "중심의, 중앙의; 중심[중앙]에 있는, 중심부의",
+              "examples": [
+                {
+                  "text": "the <b>central</b> area of the city",
+                  "translatedText": "그 도시의 중심부"
+                }
+              ],
+              "originalMeaning": "중심의, 중앙의; 중심[중앙]에 있는, 중심부의"
+            },
+            {
+              "meaning": "중심적인, 주요한",
+              "examples": [
+                {
+                  "text": "the <b>central</b> figure",
+                  "translatedText": "(그림·극 등의) 중심[주요] 인물"
+                }
+              ],
+              "originalMeaning": "중심적인, 주요한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "본부, 본사, 본점",
+              "examples": [],
+              "originalMeaning": "본부, 본사, 본점"
+            },
+            {
+              "meaning": "전화 교환국(exchange)",
+              "examples": [
+                {
+                  "text": "get <b>central</b>",
+                  "translatedText": "교환국을 불러내다"
+                }
+              ],
+              "originalMeaning": "전화 교환국(exchange)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/90e722c0024e4d4a83d175fc8ee39afc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/90e722c0024e4d4a83d175fc8ee39afc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4393eb2ab48f1c1a15dfa62b65e0d5a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 도시 중심부를 폭격했다",
+      "text": "They bombed the <b>central</b> part of the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "태풍 24호의 중심 시도는 895밀리바였다",
+      "text": "The registered <b>central</b> atmospheric pressure of Typhoon No. 24 was 895 millibars."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "중앙 아시아",
+      "text": "<b>Central</b> Asia"
+    }
+  ],
+  "isWordType": true
+}

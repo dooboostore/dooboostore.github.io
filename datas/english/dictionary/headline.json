@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "headline",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈhedlaɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(신문 기사 등의) 큰 표제, [종종 pl.] (방송 뉴스의) 주요 제목",
+              "examples": [
+                {
+                  "text": "a <b>headline</b> hunter",
+                  "translatedText": "매명가(賣名家)"
+                }
+              ],
+              "originalMeaning": "(신문 기사 등의) 큰 표제, [종종 pl.] (방송 뉴스의) 주요 제목"
+            },
+            {
+              "meaning": "(책의) 꼭대기 난 ((제목·페이지 수 따위를 기입함))",
+              "examples": [],
+              "originalMeaning": "(책의) 꼭대기 난 ((제목·페이지 수 따위를 기입함))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 표제를 달다, 큰 표제로 다루다[언급하다]",
+              "examples": [],
+              "originalMeaning": "…에 표제를 달다, 큰 표제로 다루다[언급하다]"
+            },
+            {
+              "meaning": "<배우·연기자·작품 등을> 대서특필하다, 대대적으로 선전하다",
+              "examples": [],
+              "originalMeaning": "<배우·연기자·작품 등을> 대서특필하다, 대대적으로 선전하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "주역을 맡아 하다",
+              "examples": [],
+              "originalMeaning": "주역을 맡아 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/deb744288be44436a6fa39a0c04c71e0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/deb744288be44436a6fa39a0c04c71e0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "headlines"
+        },
+        {
+          "type": "과거형",
+          "value": "headlined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "headlining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "headlined"
+        }
+      ],
+      "aliasConjugation": "headlines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a8bf4b6b924d7362cd754f053cc9fb33",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 외설적인 책으로 갑자기 유명해졌다",
+      "text": "She hit the headlines with her indecent book."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 라디오를 켜서 8시 헤드라인 뉴스를 들었다",
+      "text": "I turned on the radio to get the eight o'clock headlines."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신문들은 워터게이트 사건을 대서특필하고 있다",
+      "text": "The newspapers are headlining a story about the Watergate scandal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 사망 소식이 모든 신문에 헤드라인으로 다루어졌다",
+      "text": "The news of his death was splashed in headlines across all the newspaper."
+    }
+  ],
+  "isWordType": true
+}

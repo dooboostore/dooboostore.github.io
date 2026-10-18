@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "<b>bulletin</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbʊlətɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "고시, 게시",
+              "examples": [],
+              "originalMeaning": "고시, 게시"
+            },
+            {
+              "meaning": "보고, 공보; 회보; 사보; 정기 보고서; (중요 인물의) 병상 발표",
+              "examples": [
+                {
+                  "text": "an annual <b>bulletin</b>",
+                  "translatedText": "연보(年報)"
+                }
+              ],
+              "originalMeaning": "보고, 공보; 회보; 사보; 정기 보고서; (중요 인물의) 병상 발표"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고시[게시]하다",
+              "examples": [],
+              "originalMeaning": "고시[게시]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/377b66eef611459e90e678244e0b34a7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/377b66eef611459e90e678244e0b34a7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5e6b2815e6ce6e5e29eee2969752776b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "책상에는 보고서가 퇴적해 있었다",
+      "text": "I found the table heaped with bulletins."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 연설이 속보로 보도되었다",
+      "text": "His speech was reported in news <b>bulletin</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "협회는 연 2회 회보를 내기로 되어 있다",
+      "text": "The society is to issue a <b>bulletin</b> twice a year."
+    }
+  ],
+  "isWordType": true
+}

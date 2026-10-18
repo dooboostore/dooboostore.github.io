@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "succumb",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səˈkʌm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(유혹 등에) 굴복하다, 압도당하다, 굽히다, 지다(give way) ((to))",
+              "examples": [
+                {
+                  "text": "<b>succumb</b> to[before] temptation",
+                  "translatedText": "유혹에 굴복하다[지다]"
+                }
+              ],
+              "originalMeaning": "(유혹 등에) 굴복하다, 압도당하다, 굽히다, 지다(give way) ((to))"
+            },
+            {
+              "meaning": "(병·부상·노령 등으로) 쓰러지다, 죽다(die) ((to))",
+              "examples": [
+                {
+                  "text": "<b>succumb</b> to pneumonia",
+                  "translatedText": "폐렴으로 쓰러지다"
+                }
+              ],
+              "originalMeaning": "(병·부상·노령 등으로) 쓰러지다, 죽다(die) ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f2c6fafa7d97408787f66150be0b3eb2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f2c6fafa7d97408787f66150be0b3eb2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "succumbs"
+        },
+        {
+          "type": "과거형",
+          "value": "succumbed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "succumbing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "succumbed"
+        }
+      ],
+      "aliasConjugation": "succumbs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7dd78a40fe237d943653ed641cf86b15",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 중상을 입고 쓰러졌다",
+      "text": "He succumbed to a severe wound."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "결국 그는 숙환으로 쓰러졌다",
+      "text": "He succumbed to the inveterate disease at length."
+    }
+  ],
+  "isWordType": true
+}

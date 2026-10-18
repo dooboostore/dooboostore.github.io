@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "<b>devour</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈvaʊə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람·동물이> 게걸스레 먹다, 탐식하다",
+              "examples": [
+                {
+                  "text": "The lion <b>devour</b> ed its prey.",
+                  "translatedText": "사자는 잡은 먹이를 게걸스레 먹었다."
+                }
+              ],
+              "originalMeaning": "<사람·동물이> 게걸스레 먹다, 탐식하다"
+            },
+            {
+              "meaning": "<질병·화재 등이> 멸망시키다, <바다·어둠·시간·망각 등이> 삼켜버리다",
+              "examples": [],
+              "originalMeaning": "<질병·화재 등이> 멸망시키다, <바다·어둠·시간·망각 등이> 삼켜버리다"
+            },
+            {
+              "meaning": "탐독하다, 뚫어지게 보다, 열심히 듣다",
+              "examples": [],
+              "originalMeaning": "탐독하다, 뚫어지게 보다, 열심히 듣다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72ba92347ffb4ac78a0282bfc9bcd68e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72ba92347ffb4ac78a0282bfc9bcd68e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "devours"
+        },
+        {
+          "type": "과거형",
+          "value": "devoured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "devouring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "devoured"
+        }
+      ],
+      "aliasConjugation": "devours",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b39157e5386605c616c0bf1ce288362a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사자는 잡은 먹이를 게걸스레 먹었다.",
+      "text": "The lion <b>devoured</b> its prey."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 한 마디도 빠뜨리지 않고 열심히 경청하였다",
+      "text": "She listened devouring every word."
+    }
+  ],
+  "isWordType": true
+}

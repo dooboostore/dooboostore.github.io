@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "interest",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│ɪntrəst; │ɪntrest"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "관심, 흥미, 감흥, 재미, 호기심 ((in))",
+              "examples": [
+                {
+                  "text": "This has no <b>interest</b> for me.",
+                  "translatedText": "나는 이것에 흥미가 없다."
+                }
+              ],
+              "originalMeaning": "관심, 흥미, 감흥, 재미, 호기심 ((in))"
+            },
+            {
+              "meaning": "흥미의 대상, 관심사, 취미",
+              "examples": [
+                {
+                  "text": "a man with wide <b>interest</b> s",
+                  "translatedText": "다방면에 취미를 가진 사람"
+                }
+              ],
+              "originalMeaning": "흥미의 대상, 관심사, 취미"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에게> 흥미를 일으키게 하다, 관심을 갖게 하다 ((in)) (→interested)",
+              "examples": [
+                {
+                  "text": "a book that interested her",
+                  "translatedText": "그녀의 흥미를 끈 책"
+                }
+              ],
+              "originalMeaning": "<…에게> 흥미를 일으키게 하다, 관심을 갖게 하다 ((in)) (→<span class='related_word' lang='en' >interested</span>)"
+            },
+            {
+              "meaning": "관계[가입]시키다, 관여하게 하다; 끌어넣다 ((in)) (→interested)",
+              "examples": [
+                {
+                  "text": "Can I <b>interest</b> you inchess?",
+                  "translatedText": "장기 한 판 어떻습니까?"
+                }
+              ],
+              "originalMeaning": "관계[가입]시키다, 관여하게 하다; 끌어넣다 ((in)) (→<span class='related_word' lang='en' >interested</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2c10e1e5a250464d85c3840b6ce3219a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2c10e1e5a250464d85c3840b6ce3219a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "interests"
+        },
+        {
+          "type": "과거형",
+          "value": "interested"
+        },
+        {
+          "type": "현재 분사",
+          "value": "interesting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "interested"
+        }
+      ],
+      "aliasConjugation": "interests",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "27742be2ce7ef0aa635592e6ee88f227",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 제 앞만 차린다",
+      "text": "He is out for his own <b>interest</b> only. or He is out to feather his own nest."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 이것에 흥미가 없다.",
+      "text": "This has no <b>interest</b> for me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가는 것이 너에게 이롭다.",
+      "text": "It is (to) your <b>interest</b> to go."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 대부에는 9%의 이자가 붙는다.",
+      "text": "The loan carries 9% <b>interest</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "흥미는 연구의 자극이 된다",
+      "text": "<b>Interest</b> is an incitement to study."
+    }
+  ],
+  "isWordType": true
+}

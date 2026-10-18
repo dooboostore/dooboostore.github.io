@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "ministry",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmɪnɪstri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 M~] (정부의) 부, 성(省); 부의 건물",
+              "examples": [],
+              "originalMeaning": "[보통 M~] (정부의) 부, 성(省); 부의 건물"
+            },
+            {
+              "meaning": "내각, 장관의 직무[임기], [the M~, 집합적] 전체 장관",
+              "examples": [
+                {
+                  "text": "form a new party <b>ministry</b>",
+                  "translatedText": "신정당 내각을 조직하다"
+                }
+              ],
+              "originalMeaning": "내각, 장관의 직무[임기], [the M~, 집합적] 전체 장관"
+            },
+            {
+              "meaning": "[the ~] 목사의 직[임기], 목회;[집합적] 성직자들",
+              "examples": [
+                {
+                  "text": "go into[enter] the <b>ministry</b>",
+                  "translatedText": "성직에 취임하다, 목사가 되다"
+                }
+              ],
+              "originalMeaning": "[the ~] 목사의 직[임기], 목회;[집합적] 성직자들"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/32e5ebd640d64634b3a885bc2e481469",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/32e5ebd640d64634b3a885bc2e481469",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "ministries"
+        }
+      ],
+      "aliasConjugation": "ministries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "3753c2b6299a663b29a55967a1227399",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "목사가 되는 것이 나의 천직이다",
+      "text": "I have a call to the <b>ministry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "김 군은 재정 경제부에 들어갔다",
+      "text": "Mr. Kim has found a position in the <b>Ministry</b> of Finance and Economy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "교육부 검인정필",
+      "text": "Approved by the <b>Ministry</b> of Education"
+    }
+  ],
+  "isWordType": true
+}

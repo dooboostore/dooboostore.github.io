@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "visit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvɪzɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "방문하다, <의사가> 왕진하다, <병자를> 문안가다",
+              "examples": [
+                {
+                  "text": "<b>visit</b> a friend",
+                  "translatedText": "친구를 방문하다"
+                }
+              ],
+              "originalMeaning": "방문하다, <의사가> 왕진하다, <병자를> 문안가다"
+            },
+            {
+              "meaning": "찾아가다, 참관하다, 구경가다, 참배하다",
+              "examples": [
+                {
+                  "text": "<b>visit</b> a museum",
+                  "translatedText": "박물관에 가다"
+                }
+              ],
+              "originalMeaning": "찾아가다, 참관하다, 구경가다, 참배하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "방문하다 ((with)); [미] (장소를) 찾아가다, (…에) 체류하다 ((at, in))",
+              "examples": [
+                {
+                  "text": "<b>visit</b> at a new hotel",
+                  "translatedText": "새 호텔에 묵다"
+                }
+              ],
+              "originalMeaning": "방문하다 ((with)); [미] (장소를) 찾아가다, (…에) 체류하다 ((at, in))"
+            },
+            {
+              "meaning": "이야기[잡담]하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>visit</b> on the phone with a friend",
+                  "translatedText": "전화로 친구와 이야기를 나누다"
+                }
+              ],
+              "originalMeaning": "이야기[잡담]하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "방문, 심방, 문안 ((to))",
+              "examples": [
+                {
+                  "text": "a <b>visit</b> to Chicago",
+                  "translatedText": "시카고 방문"
+                }
+              ],
+              "originalMeaning": "방문, 심방, 문안 ((to))"
+            },
+            {
+              "meaning": "순회, 시찰, 순시, 왕진, (환자의) 병원다니기 ((to))",
+              "examples": [
+                {
+                  "text": "one's daily <b>visit</b> to a dentist",
+                  "translatedText": "매일 치과에 가기"
+                }
+              ],
+              "originalMeaning": "순회, 시찰, 순시, 왕진, (환자의) 병원다니기 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/40b8d59815e04029bc76942f58e9f0d1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/40b8d59815e04029bc76942f58e9f0d1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "visits"
+        },
+        {
+          "type": "과거형",
+          "value": "visited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "visiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "visited"
+        }
+      ],
+      "aliasConjugation": "visits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "577101f373c9db577eea93e87e30746b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그를 자주 방문한다.",
+      "text": "I often <b>visit</b> him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그곳에는 한 번 가 본 일이 있다",
+      "text": "I once visited there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "메리 아주머니가 우리를 방문하셨다",
+      "text": "Aunt Mary visited us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 서로 내왕하는 사이다",
+      "text": "They are on visiting terms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그와 왕래가 있다",
+      "text": "I am on visiting terms with him."
+    }
+  ],
+  "isWordType": true
+}

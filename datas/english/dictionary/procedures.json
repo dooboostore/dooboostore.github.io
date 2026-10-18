@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "procedure",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prəˈsiːdʒə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "순서, 차례; (행동·상태·사정 등의) 진행, 경과;",
+              "examples": [
+                {
+                  "text": "follow the prearranged <b>procedure</b>",
+                  "translatedText": "사전에 협의된 순서를 따르다"
+                }
+              ],
+              "originalMeaning": "순서, 차례; (행동·상태·사정 등의) 진행, 경과;"
+            },
+            {
+              "meaning": "(진행상의) 절차; 수속; [법] 소송(訴訟) 절차, 의사(議事) 진행; 처리",
+              "examples": [
+                {
+                  "text": "legal <b>procedure</b>",
+                  "translatedText": "소송 절차"
+                }
+              ],
+              "originalMeaning": "(진행상의) 절차; 수속; [법] 소송(訴訟) 절차, 의사(議事) 진행; 처리"
+            },
+            {
+              "meaning": "(프로그램의) 처리 절차",
+              "examples": [],
+              "originalMeaning": "(프로그램의) 처리 절차"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f527832da434be49cb7fba429e4ee3e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f527832da434be49cb7fba429e4ee3e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "1cc02e656509a1205bfd23d5f8d8e85d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 단지 절차상의 문제이다",
+      "text": "It is just a matter of <b>procedure</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "입국[출국] 수속을 다 마쳤다",
+      "text": "I have gone through the entry[departure] <b>procedure</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일은 복잡한 행정 절차로 인해 수렁에 빠졌다",
+      "text": "The project get bogged down by complicated bureaucratic <b>procedures</b>."
+    }
+  ],
+  "isWordType": true
+}

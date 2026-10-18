@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "sell",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "팔다, 매도(賣渡)하다, 매각하다(opp. buy)",
+              "examples": [
+                {
+                  "text": "a house to <b>sell</b>",
+                  "translatedText": "팔 집"
+                }
+              ],
+              "originalMeaning": "팔다, 매도(賣渡)하다, 매각하다(opp. buy)"
+            },
+            {
+              "meaning": "<가게가 물건을> 판매하다, 장사하다",
+              "examples": [
+                {
+                  "text": "Do you <b>sell</b> sugar?",
+                  "translatedText": "설탕 있습니까?"
+                }
+              ],
+              "originalMeaning": "<가게가 물건을> 판매하다, 장사하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 팔다, 장사하다; 팔러 가다, 팔려고 하다",
+              "examples": [
+                {
+                  "text": "My brother sellsin New York.",
+                  "translatedText": "내 형은 뉴욕에서 장사를 하고 있다."
+                }
+              ],
+              "originalMeaning": "<사람이> 팔다, 장사하다; 팔러 가다, 팔려고 하다"
+            },
+            {
+              "meaning": "<물건이> 팔리다; (얼마에) 팔리다, 판매되다, 판매 성적이 …하다 ((at, for))",
+              "examples": [
+                {
+                  "text": "The book <b>sells</b> well.",
+                  "translatedText": "그 책은 잘 팔린다."
+                }
+              ],
+              "originalMeaning": "<물건이> 팔리다; (얼마에) 팔리다, 판매되다, 판매 성적이 …하다 ((at, for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "판매(술), 판매 면에서 본 매력",
+              "examples": [],
+              "originalMeaning": "판매(술), 판매 면에서 본 매력"
+            },
+            {
+              "meaning": "잘 팔리는 물건, 인기 상품",
+              "examples": [],
+              "originalMeaning": "잘 팔리는 물건, 인기 상품"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7089a01a7f6d414495e68dee079e6453",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7089a01a7f6d414495e68dee079e6453",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sells"
+        },
+        {
+          "type": "과거형",
+          "value": "sold"
+        },
+        {
+          "type": "현재 분사",
+          "value": "selling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sold"
+        }
+      ],
+      "aliasConjugation": "sells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "810dd8ca0dd998b95af8ad02ff142014",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 값에 팔면 제가 밑집니다",
+      "text": "I will be losing money if I <b>sell</b> it at that price. or But I'm losing by it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 잘 팔린다.",
+      "text": "The book <b>sells</b> well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 생각은 환영받을 것이다.",
+      "text": "His idea will <b>sell</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "캔디도 거기서 팔고 있다.",
+      "text": "Candy is also sold there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "1원도 싸게 팔 수 없다",
+      "text": "I won't <b>sell</b> it for a won less."
+    }
+  ],
+  "isWordType": true
+}

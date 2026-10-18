@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "surface",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈsɜːrfɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "표면, 수면, 겉, 외면; 외부, 지(표)면, 표층",
+              "examples": [
+                {
+                  "text": "the <b>surface</b> of the earth",
+                  "translatedText": "지표면"
+                }
+              ],
+              "originalMeaning": "표면, 수면, 겉, 외면; 외부, 지(표)면, 표층"
+            },
+            {
+              "meaning": "[기하] 면, 평면",
+              "examples": [
+                {
+                  "text": "the six surfaces of a cube",
+                  "translatedText": "입방체의 6개의 면"
+                }
+              ],
+              "originalMeaning": "[기하] 면, 평면"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "표면만의, 외관의, 외면의, 피상적인",
+              "examples": [],
+              "originalMeaning": "표면만의, 외관의, 외면의, 피상적인"
+            },
+            {
+              "meaning": "지상[길바닥]의, 갱외의",
+              "examples": [],
+              "originalMeaning": "지상[길바닥]의, 갱외의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<종이 등에> 얇은 표지를 달다, 표면을 달다; <길바닥을> 포장하다",
+              "examples": [
+                {
+                  "text": "<b>surface</b> a road with gravel",
+                  "translatedText": "도로를 자갈로 포장하다"
+                }
+              ],
+              "originalMeaning": "<종이 등에> 얇은 표지를 달다, 표면을 달다; <길바닥을> 포장하다"
+            },
+            {
+              "meaning": "<잠수함을> 부상(浮上)시키다",
+              "examples": [],
+              "originalMeaning": "<잠수함을> 부상(浮上)시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7256545a47c6495eb89eaac413789841",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7256545a47c6495eb89eaac413789841",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "surfaces"
+        },
+        {
+          "type": "과거형",
+          "value": "surfaced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "surfacing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "surfaced"
+        }
+      ],
+      "aliasConjugation": "surfaces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "462157c8a272ad8baa471f68862b1c5a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 사물의 거죽만 본다",
+      "text": "You look only at the <b>surface</b> of things."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바다 위에 해파리가 떠 있다",
+      "text": "A jellyfish is floating on the <b>surface</b> of the sea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 고속도로를 안 타고 일반 도로로만 왔다",
+      "text": "I didn't take the freeways. I came by <b>surface</b> streets only."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고래는 숨을 쉬기 위해 가끔 해면으로 부상한다",
+      "text": "Whales periodically come up[rise] to the <b>surface</b> of the sea to breathe."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 겉으론 태연한 체했으나 내심은 동요하고 있었다",
+      "text": "I pretended to remain calm on the <b>surface</b> but was internally upset."
+    }
+  ],
+  "isWordType": true
+}

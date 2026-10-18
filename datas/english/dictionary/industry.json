@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "industry",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪndəstri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 산업, 공업; 제조업, 생산업; 사업, 기업; [C] …업",
+              "examples": [
+                {
+                  "text": "the chemical <b>industry</b>",
+                  "translatedText": "화학 공업"
+                }
+              ],
+              "originalMeaning": "[U] 산업, 공업; 제조업, 생산업; 사업, 기업; [C] …업"
+            },
+            {
+              "meaning": "[U] [집합적] 산업계, 경영자측(management)",
+              "examples": [
+                {
+                  "text": "friction between labor and <b>industry</b>",
+                  "translatedText": "노사간의 알력"
+                }
+              ],
+              "originalMeaning": "[U] [집합적] 산업계, 경영자측(management)"
+            },
+            {
+              "meaning": "근면, 열심, 노력(diligence)",
+              "examples": [
+                {
+                  "text": "Poverty is a stranger to <b>industry</b>.",
+                  "translatedText": "[속담] 부지런하면 가난이 있을 수 없다."
+                }
+              ],
+              "originalMeaning": "근면, 열심, 노력(diligence)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e5cfff56bd3e4b8ca450cc496074357c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e5cfff56bd3e4b8ca450cc496074357c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "industries"
+        }
+      ],
+      "aliasConjugation": "industries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "2346e231dc0d8865671fd3764387f7d9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 성공은 근면 덕택이다",
+      "text": "His success is due to <b>industry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 그 산업에 치명적인 타격이다",
+      "text": "It is a deathblow to the <b>industry</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "최근 각종 공업이 일어났다",
+      "text": "Various industries have sprung up lately."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 공업은 크게 발달하였다",
+      "text": "The <b>industry</b> has made great development[strides]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "호텔 업계는 경쟁이 심하다",
+      "text": "There is keen competition in the hotel <b>industry</b>."
+    }
+  ],
+  "isWordType": true
+}

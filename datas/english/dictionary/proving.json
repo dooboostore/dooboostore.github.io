@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "prove",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pruːv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(증거·논증 등으로) 입증[증명]하다, [~ oneself로] 자기가 …임을 입증[증명]하다",
+              "examples": [
+                {
+                  "text": "How can you <b>prove</b> the truth of what he says[thatwhat he says is true]?",
+                  "translatedText": "그의 말이 사실이라는 것을 어떻게 증명할 수 있는가?"
+                }
+              ],
+              "originalMeaning": "(증거·논증 등으로) 입증[증명]하다, [~ oneself로] 자기가 …임을 입증[증명]하다"
+            },
+            {
+              "meaning": "<성질·정확성 등을> 시험하다, 실험하다, <기재(器材)를> 시험해 보다",
+              "examples": [
+                {
+                  "text": "<b>prove</b> a new rifle",
+                  "translatedText": "새 총을 시험해보다"
+                }
+              ],
+              "originalMeaning": "<성질·정확성 등을> 시험하다, 실험하다, <기재(器材)를> 시험해 보다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "…임이 알려지다, …으로 판명되다(turn out)",
+              "examples": [
+                {
+                  "text": "It proved(to be) insufficient.",
+                  "translatedText": "그것은 불충분하다는 것이 드러났다."
+                }
+              ],
+              "originalMeaning": "…임이 알려지다, …으로 판명되다(turn out)"
+            },
+            {
+              "meaning": "<빵·케이크 등이> 알맞게 부풀다",
+              "examples": [],
+              "originalMeaning": "<빵·케이크 등이> 알맞게 부풀다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/97f78aa5fdb64320b987532ff2296185",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/97f78aa5fdb64320b987532ff2296185",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "proves"
+        },
+        {
+          "type": "과거형",
+          "value": "proved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "proving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "proved, proven"
+        }
+      ],
+      "aliasConjugation": "proves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "6bc10b2e15fc395b118f911bdaf2b167",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 상처가 치명상이 되었다",
+      "text": "The wound proved fatal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 뒷받침할 이론이 없다",
+      "text": "There is no theory to <b>prove</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 시도는 주효하지 않았다",
+      "text": "His attempt proved ineffectual."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 불충분하다는 것이 드러났다.",
+      "text": "It proved (to be) insufficient."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 모임은 매우 뜻있었다",
+      "text": "The meeting proved very significant."
+    }
+  ],
+  "isWordType": true
+}

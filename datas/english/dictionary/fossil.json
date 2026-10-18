@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "fossil",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈfɑːsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "화석(化石)",
+              "examples": [],
+              "originalMeaning": "화석(化石)"
+            },
+            {
+              "meaning": "[구어] 구식 사람, 구제도, 낡은 사고 방식",
+              "examples": [],
+              "originalMeaning": "[구어] 구식 사람, 구제도, 낡은 사고 방식"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "화석의, 화석이 된; 발굴한",
+              "examples": [
+                {
+                  "text": "a <b>fossil</b> leaf",
+                  "translatedText": "화석이 된 나뭇잎"
+                }
+              ],
+              "originalMeaning": "화석의, 화석이 된; 발굴한"
+            },
+            {
+              "meaning": "구식의, 시대에 뒤떨어진",
+              "examples": [],
+              "originalMeaning": "구식의, 시대에 뒤떨어진"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a3242d53c9dc46b89f57c319ce3ec700",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a3242d53c9dc46b89f57c319ce3ec700",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "f71ed1cda9002f2b9a76495eb3a0029f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고생물학은 화석을 연구하는 학문이다",
+      "text": "Paleontology is the study of fossils."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이대로 가면 화석 연료는 고갈될 우려가 있다",
+      "text": "If we do nothing about it, <b>fossil</b> fuels are in danger of running out."
+    }
+  ],
+  "isWordType": true
+}

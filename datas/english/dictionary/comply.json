@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "entry": "<b>comply</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəmˈplaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(명령·요구·규칙에) 응하다, 따르다, 좇다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>comply</b> with a person's request",
+                  "translatedText": "…의 요구에 응하다"
+                }
+              ],
+              "originalMeaning": "(명령·요구·규칙에) 응하다, 따르다, 좇다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/66da8a347cbf40c9a0025ca1f8b11218",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/66da8a347cbf40c9a0025ca1f8b11218",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "complies"
+        },
+        {
+          "type": "과거형",
+          "value": "complied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "complying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "complied"
+        }
+      ],
+      "aliasConjugation": "complies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ac4561c199d87a80c256c393bd0f144f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저는 당신의 요구에 응해 드릴 처지가 못 됩니다.",
+      "text": "I am not in a position to <b>comply</b> with your request."
+    }
+  ],
+  "isWordType": true
+}

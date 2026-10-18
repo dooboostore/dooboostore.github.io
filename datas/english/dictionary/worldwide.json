@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "worldwide",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│wɜːrldwaɪd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "세계적인, 전 세계로 미치는; 전 세계에 알려진",
+              "examples": [
+                {
+                  "text": "<b>worldwide</b> inflation",
+                  "translatedText": "세계적인 인플레이션"
+                }
+              ],
+              "originalMeaning": "세계적인, 전 세계로 미치는; 전 세계에 알려진"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "전 세계에",
+              "examples": [
+                {
+                  "text": "distributed <b>worldwide</b>",
+                  "translatedText": "전 세계에 분포된"
+                }
+              ],
+              "originalMeaning": "전 세계에"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aed2d1a7f15a4537b7289a52f4f68e9a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aed2d1a7f15a4537b7289a52f4f68e9a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "179d68ce0c3d013281270ed212d76476",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 세계적으로 유명한 학자이다",
+      "text": "He is a scholar of <b>worldwide</b> fame."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한글의 우수성은 가히 세계에 자랑할 만하다",
+      "text": "You can rightly take pride in the <b>worldwide</b> recognition of Hangeul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 세계적으로 유명한 화학자다",
+      "text": "He is a chemist of <b>worldwide</b> fame. or He is a world-famous[world-renowned, world-famed] chemist."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "entry": "participate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɑːr│tɪsɪpeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "참여하다, 관여하다, 함께하다 ((in, with))",
+              "examples": [
+                {
+                  "text": "<b>participate</b> in a debate",
+                  "translatedText": "토론에 참가하다"
+                }
+              ],
+              "originalMeaning": "참여하다, 관여하다, 함께하다 ((in, with))"
+            },
+            {
+              "meaning": "얼마간 (…의) 성질을 띠다 ((of))",
+              "examples": [],
+              "originalMeaning": "얼마간 (…의) 성질을 띠다 ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<기쁨·괴로움 등을> 함께하다, <일에> 참가[관여]하다",
+              "examples": [],
+              "originalMeaning": "<기쁨·괴로움 등을> 함께하다, <일에> 참가[관여]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e059417d8a364a458a4668f3578eb208",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e059417d8a364a458a4668f3578eb208",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "participates"
+        },
+        {
+          "type": "과거형",
+          "value": "participated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "participating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "participated"
+        }
+      ],
+      "aliasConjugation": "participates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d65d893c7b449065fc8a680093f51bd7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수십 명의 젊은 건각들이 경주에 참가했다",
+      "text": "Scores of iron-legged youths participated in the race."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 가족과 괴로움을 함께했다.",
+      "text": "They participated with the family in their sufferings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "올림픽에 나간다는 것은 아주 명예로운 일이다",
+      "text": "It is a great honor to <b>participate</b>[take part] in the Olympics."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경부 역전 경주에는 8개 팀이 참가했다",
+      "text": "Eight teams participated in the long-distance relay race between Seoul and Busan."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "<b>commence</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈmens"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[문어] 개시하다, 시작하다, 착수하다; [고어] 개업하다, …라는 직업에 오르다",
+              "examples": [
+                {
+                  "text": "<b>commence</b> the study of law",
+                  "translatedText": "법학 공부를 시작하다"
+                }
+              ],
+              "originalMeaning": "[문어] 개시하다, 시작하다, 착수하다; [고어] 개업하다, …라는 직업에 오르다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "시작되다(begin) ((with))",
+              "examples": [
+                {
+                  "text": "The special course commences in (the) fall.",
+                  "translatedText": "특별 강좌는 가을부터 시작된다."
+                }
+              ],
+              "originalMeaning": "시작되다(begin) ((with))"
+            },
+            {
+              "meaning": "(M.A. 등의) 학위를 받다",
+              "examples": [
+                {
+                  "text": "<b>commence</b> in the Bachelor of Arts",
+                  "translatedText": "문학사 학위를 받다"
+                }
+              ],
+              "originalMeaning": "(M.A. 등의) 학위를 받다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ebfe368f7cf49c8bd4fa9644f2a7512",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ebfe368f7cf49c8bd4fa9644f2a7512",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "commences"
+        },
+        {
+          "type": "과거형",
+          "value": "commenced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "commencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "commenced"
+        }
+      ],
+      "aliasConjugation": "commences",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d07c4f3c2ce0cd3726b7705674542945",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리는 이 일부터 시작합니다.",
+      "text": "We will <b>commence</b> with this work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "초봉은 70만원에서 75만원이다",
+      "text": "The commencing[starting] salary ranges from 700,000 to 750,000 won."
+    }
+  ],
+  "isWordType": true
+}

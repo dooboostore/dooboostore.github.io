@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>bean</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "biːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "콩(cf. PEA), 잠두, 강낭콩",
+              "examples": [
+                {
+                  "text": "soy(a) <b>bean</b> s",
+                  "translatedText": "대두, 콩"
+                }
+              ],
+              "originalMeaning": "콩(cf. PEA), 잠두, 강낭콩"
+            },
+            {
+              "meaning": "(콩 같은) 열매",
+              "examples": [
+                {
+                  "text": "coffee <b>bean</b> s",
+                  "translatedText": "커피 열매"
+                }
+              ],
+              "originalMeaning": "(콩 같은) 열매"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(야구공 등으로) …의 머리를 치다",
+              "examples": [],
+              "originalMeaning": "(야구공 등으로) …의 머리를 치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4368ed1bced447a6b8872e177f4ded63",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4368ed1bced447a6b8872e177f4ded63",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "beans"
+        },
+        {
+          "type": "과거형",
+          "value": "beaned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "beaning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "beaned"
+        }
+      ],
+      "aliasConjugation": "beans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0aefb31e87691e5d295261ad4fe413c5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그것에 관해서 전혀 아는 게 없다.",
+      "text": "He doesn’t know beans about it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그해는 콩이 잘 되었다[잘 안 되었다].",
+      "text": "The beans cropped well[badly] that year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 여든 살임에도 여전히 원기 왕성하다",
+      "text": "He is still full of beans at 80."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "간장은 메주콩과 소금으로 만든다",
+      "text": "Soy sauce is made from soy beans and salt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 방바닥의 콩을 낱낱이 다 주웠다",
+      "text": "He picked up every last <b>bean</b> on the floor."
+    }
+  ],
+  "isWordType": true
+}

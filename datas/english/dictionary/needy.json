@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "needy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈniːdi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(매우) 가난한",
+              "examples": [
+                {
+                  "text": "a <b>needy</b> family",
+                  "translatedText": "가난한 가정"
+                }
+              ],
+              "originalMeaning": "(매우) 가난한"
+            },
+            {
+              "meaning": "[the ~, 집합적, 복수취급] 빈곤한 사람들",
+              "examples": [
+                {
+                  "text": "the (poor and) <b>needy</b>",
+                  "translatedText": "궁핍한 사람들"
+                }
+              ],
+              "originalMeaning": "[the ~, 집합적, 복수취급] 빈곤한 사람들"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7589c73651ef40f191135ebbe911e0d9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7589c73651ef40f191135ebbe911e0d9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "needier"
+        },
+        {
+          "type": "최상급",
+          "value": "neediest"
+        }
+      ],
+      "aliasConjugation": "needier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "27cd8d88facc287b9ecd4aa4359c9337",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "동정심에 이끌려 어려운 사람들을 도왔다.",
+      "text": "His heart moved him to help the <b>needy</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 1년 내내 쪼들리고 있다",
+      "text": "He is badly off all the year round. or He is always in <b>needy</b>[straitened, narrow] circumstances."
+    }
+  ],
+  "isWordType": true
+}

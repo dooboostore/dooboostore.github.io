@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "escalate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈeskəleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<전쟁 등이> 단계적으로 확대되다 ((into))",
+              "examples": [],
+              "originalMeaning": "<전쟁 등이> 단계적으로 확대되다 ((into))"
+            },
+            {
+              "meaning": "<임금·물가가> 차츰 오르다",
+              "examples": [],
+              "originalMeaning": "<임금·물가가> 차츰 오르다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<전쟁 등을> 단계적으로 확대하다",
+              "examples": [],
+              "originalMeaning": "<전쟁 등을> 단계적으로 확대하다"
+            },
+            {
+              "meaning": "<임금·물가 등을> 차츰 올리다",
+              "examples": [],
+              "originalMeaning": "<임금·물가 등을> 차츰 올리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/90ddf17e5edf4600b674cb6c059c34c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/90ddf17e5edf4600b674cb6c059c34c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "escalates"
+        },
+        {
+          "type": "과거형",
+          "value": "escalated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "escalating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "escalated"
+        }
+      ],
+      "aliasConjugation": "escalates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c8657c8b677d7b2d800c99d63e64e1c9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "건축 비용이 우려할 정도로 늘었다",
+      "text": "The cost of building has escalated to a worrying level."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "국지전이 세계대전으로 확대될 가능성이 있다",
+      "text": "The local war is likely to <b>escalate</b> into a global war."
+    }
+  ],
+  "isWordType": true
+}

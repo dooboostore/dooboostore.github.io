@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "goods",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡʊdz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상품, 물품; 물자",
+              "examples": [
+                {
+                  "text": "<b>goods</b> in stock",
+                  "translatedText": "재고품"
+                }
+              ],
+              "originalMeaning": "상품, 물품; 물자"
+            },
+            {
+              "meaning": "옷감, 천, 피륙",
+              "examples": [
+                {
+                  "text": "leather <b>goods</b>",
+                  "translatedText": "가죽 제품"
+                }
+              ],
+              "originalMeaning": "옷감, 천, 피륙"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(철도) 화물의",
+              "examples": [],
+              "originalMeaning": "(철도) 화물의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1b89b4ff7f5948a08fcadf870bb04099",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1b89b4ff7f5948a08fcadf870bb04099",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c0d6039e4ce1ff710cec9e10a485fd3f",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "good",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡʊd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사, 감탄사, 부사, 명사",
+          "meanings": [
+            {
+              "meaning": "(opp. bad)",
+              "examples": [],
+              "originalMeaning": "(opp. bad)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(품질·수량·정도 등의 점에서) 좋은, 착한, 우량한, 훌륭한, 고급의, 맛있는; <성적이> 우(優)의, 만족할 수 있는",
+              "examples": [
+                {
+                  "text": "a <b>good</b> house",
+                  "translatedText": "좋은 집"
+                }
+              ],
+              "originalMeaning": "(품질·수량·정도 등의 점에서) 좋은, 착한, 우량한, 훌륭한, 고급의, 맛있는; <성적이> 우(優)의, 만족할 수 있는"
+            },
+            {
+              "meaning": "<의류가> 비교적 새것인, 품질이 좋은",
+              "examples": [],
+              "originalMeaning": "<의류가> 비교적 새것인, 품질이 좋은"
+            }
+          ]
+        },
+        {
+          "type": "감탄사",
+          "meanings": [
+            {
+              "meaning": "[찬성·만족 등의 뜻을 나타내어] 좋소, 좋아, 찬성이요, 잘했어",
+              "examples": [],
+              "originalMeaning": "[찬성·만족 등의 뜻을 나타내어] 좋소, 좋아, 찬성이요, 잘했어"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d0acdc5168dd4d0fa1a93aff8259fc16",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d0acdc5168dd4d0fa1a93aff8259fc16",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "better",
+      "aliasConjugationPos": "비교급",
+      "gdid": "c115c1b18e1278070733eefedb7bed7b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 상품들은 과세 대상입니다",
+      "text": "These <b>goods</b> are taxable."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 물건은 품질이 나쁘다",
+      "text": "The <b>goods</b> are of poor quality."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 상품은 모두 담보로 잡혀 있다",
+      "text": "All the <b>goods</b> lie[are] in pledge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시장에는 상품이 넘치고 있다",
+      "text": "The market is overflowing with <b>goods</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 상점에서는 외제품을 팔고 있다.",
+      "text": "The store has foreign <b>goods</b> for sale."
+    }
+  ],
+  "isWordType": true
+}

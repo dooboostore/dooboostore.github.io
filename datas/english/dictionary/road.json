@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "entry": "road",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "roʊd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "길, 도로, 가도(highway); (도시의) 거리 ((略 Rd.)), (=street)",
+              "examples": [
+                {
+                  "text": "30 York Rd., London",
+                  "translatedText": "런던 시 요크로(路) 30번지"
+                }
+              ],
+              "originalMeaning": "길, 도로, 가도(highway); (도시의) 거리 ((略 Rd.)), (=<span class='related_word' lang='en' >street</span>)"
+            },
+            {
+              "meaning": "행로, 진로 ((to))",
+              "examples": [],
+              "originalMeaning": "행로, 진로 ((to))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "지방 순회의",
+              "examples": [],
+              "originalMeaning": "지방 순회의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "개가 <엽조(獵鳥)의> 냄새 자국을 쫓다, 도로 운송을 하다",
+              "examples": [],
+              "originalMeaning": "개가 <엽조(獵鳥)의> 냄새 자국을 쫓다, 도로 운송을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/004513ea532845df939feaa30a580db3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/004513ea532845df939feaa30a580db3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d3faed3d77a7a2776fa150908ac7e9a5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "길은 거기서 갑자기 고부라진다",
+      "text": "There is a sharp bend[turn] in the <b>road</b> there. or The <b>road</b> makes an abrupt turn there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 길로 죽 가면 역이 나옵니다",
+      "text": "This <b>road</b> leads you to the station. or If you go straight down this <b>road</b>, you'll find the station."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 길은 서울로 통한다.",
+      "text": "This <b>road</b> goes to Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 도로는 확장 중이다",
+      "text": "This <b>road</b> is being widened."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 길로 가면 부산에 이른다",
+      "text": "This <b>road</b> leads to Busan."
+    }
+  ],
+  "isWordType": true
+}

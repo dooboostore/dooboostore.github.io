@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "<b>exceeding</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "iksí:diŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "엄청난; 대단한, 굉장한",
+              "examples": [],
+              "originalMeaning": "엄청난; 대단한, 굉장한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1495aa28334b4323ba67da3feb6a6cac",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1495aa28334b4323ba67da3feb6a6cac",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3a8e0e06d1389f738194bcb89476c875",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>exceed</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈsiːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<수·양·정도를> 넘다, 상회하다",
+              "examples": [
+                {
+                  "text": "The task exceeds his ability.",
+                  "translatedText": "그 일은 그의 능력으로는 할 수 없다."
+                }
+              ],
+              "originalMeaning": "<수·양·정도를> 넘다, 상회하다"
+            },
+            {
+              "meaning": "<…의 한도를> 넘다",
+              "examples": [
+                {
+                  "text": "<b>exceed</b> one's authority",
+                  "translatedText": "월권 행위를 하다"
+                }
+              ],
+              "originalMeaning": "<…의 한도를> 넘다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<수량·정도가> 도를 넘다, 지나치다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>exceed</b> in eating",
+                  "translatedText": "과식하다"
+                }
+              ],
+              "originalMeaning": "<수량·정도가> 도를 넘다, 지나치다 ((in))"
+            },
+            {
+              "meaning": "탁월하다, 남보다 뛰어나다 ((in))",
+              "examples": [
+                {
+                  "text": "<b>exceed</b> in number",
+                  "translatedText": "수에 있어서 능가하다"
+                }
+              ],
+              "originalMeaning": "탁월하다, 남보다 뛰어나다 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1d6e73c07da34b3083ffae0c283669f4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1d6e73c07da34b3083ffae0c283669f4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "exceeds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b8ef3ecac4d8883d0b4f2aee0d36355",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일은 자못 어렵다",
+      "text": "It is an exceedingly hard job."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인생은 매우 복잡하다",
+      "text": "Life is exceedingly complex."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "벌금은 300달러를 넘지 못한다.",
+      "text": "The fine shall not <b>exceed</b> $300."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금은 은보다 값어치가 있다.",
+      "text": "Gold exceeds silver in value."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "청중의 수는 1,000명이 넘었다",
+      "text": "The audience exceeded[was over] one thousand."
+    }
+  ],
+  "isWordType": true
+}

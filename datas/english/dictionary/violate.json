@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>violate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈvaɪəleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "위배[위반]하다, 범하다, 어기다; <양심 등을> 저버리다",
+              "examples": [
+                {
+                  "text": "<b>violate</b> the speed limit",
+                  "translatedText": "속도 제한을 위반하다"
+                }
+              ],
+              "originalMeaning": "위배[위반]하다, 범하다, 어기다; <양심 등을> 저버리다"
+            },
+            {
+              "meaning": "…의 신성을 더럽히다, …에 불경한 짓을 하다, 모독하다",
+              "examples": [
+                {
+                  "text": "<b>violate</b> a shrine",
+                  "translatedText": "성당의 신성을 더럽히다"
+                }
+              ],
+              "originalMeaning": "…의 신성을 더럽히다, …에 불경한 짓을 하다, 모독하다"
+            },
+            {
+              "meaning": "<정적·수면·프라이버시 등을> 방해하다, 침해하다",
+              "examples": [
+                {
+                  "text": "<b>violate</b> personal rights",
+                  "translatedText": "인권을 침해하다"
+                }
+              ],
+              "originalMeaning": "<정적·수면·프라이버시 등을> 방해하다, 침해하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5cbbf42902ee4965a628f0edf9b6555e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5cbbf42902ee4965a628f0edf9b6555e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "violates"
+        },
+        {
+          "type": "과거형",
+          "value": "violated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "violating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "violated"
+        }
+      ],
+      "aliasConjugation": "violates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1267bb577625a7a9c336799f8702748e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 교통 법규를 예사로 위반한다",
+      "text": "He does not hesitate to <b>violate</b> the traffic regulations."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 비행기는 다른 나라의 영공을 침입했다",
+      "text": "The plane violated[trespassed upon] another country's airspace."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "국적 불명의 항공기가 아국 영공을 침범하였다",
+      "text": "An unidentified aircraft violated our territorial air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 비행기는 타국의 영역을 침범했다",
+      "text": "The plane has violated[intruded into] the territory of another country."
+    }
+  ],
+  "isWordType": true
+}

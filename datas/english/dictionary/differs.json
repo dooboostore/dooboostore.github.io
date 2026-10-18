@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>differ</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈdɪfə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "다르다 ((in, as to, from))",
+              "examples": [
+                {
+                  "text": "French <b>differs</b> from English in many respects.",
+                  "translatedText": "프랑스어는 많은 점에서 영어와 다르다."
+                }
+              ],
+              "originalMeaning": "다르다 ((in, as to, from))"
+            },
+            {
+              "meaning": "의견을 달리하다 ((with, from)) ((disagree보다 딱딱한 말))",
+              "examples": [
+                {
+                  "text": "He <b>differs</b> with me entirely.",
+                  "translatedText": "그는 나와 의견이 전혀 다르다."
+                }
+              ],
+              "originalMeaning": "의견을 달리하다 ((with, from)) ((disagree보다 딱딱한 말))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c391d54467434811892ea63b6d87f525",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c391d54467434811892ea63b6d87f525",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "differs"
+        },
+        {
+          "type": "과거형",
+          "value": "differed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "differing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "differed"
+        }
+      ],
+      "aliasConjugation": "differs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f07603ad2df170addac8329c5e627245",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나와 의견이 전혀 다르다.",
+      "text": "He <b>differs</b> with me entirely."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 점에서 너와 의견이 다르다",
+      "text": "I <b>differ</b> with you on that point."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "실례이지만 당신과는 의견이 다릅니다.",
+      "text": "I venture to <b>differ</b> from you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가격은 물건에 따라 다르다",
+      "text": "Prices <b>differ</b> according to quality."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수컷과 암컷은 크기가 다르다",
+      "text": "The male and female <b>differ</b> in size."
+    }
+  ],
+  "isWordType": true
+}

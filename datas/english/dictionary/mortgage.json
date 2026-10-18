@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "<b>mortgage</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɔːrɡɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] [법] (양도) 저당, 저당잡힘",
+              "examples": [
+                {
+                  "text": "a double <b>mortgage</b>",
+                  "translatedText": "이중 저당"
+                }
+              ],
+              "originalMeaning": "[UC/] [법] (양도) 저당, 저당잡힘"
+            },
+            {
+              "meaning": "(양도) 저당권[증서]",
+              "examples": [],
+              "originalMeaning": "(양도) 저당권[증서]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<토지·재산을> 저당잡히다",
+              "examples": [
+                {
+                  "text": "The estate is <b>mortgage</b> d.",
+                  "translatedText": "그 대지는 저당잡혀 있다."
+                }
+              ],
+              "originalMeaning": "<토지·재산을> 저당잡히다"
+            },
+            {
+              "meaning": "<목숨·명예 등을> 내걸고 덤비다, 헌신하다",
+              "examples": [
+                {
+                  "text": "<b>mortgage</b> oneself[one's life] to a cause",
+                  "translatedText": "주의를 위하여 목숨을 걸다"
+                }
+              ],
+              "originalMeaning": "<목숨·명예 등을> 내걸고 덤비다, 헌신하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/55ffd3a0790845dfbbdf969c4ddfdddf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/55ffd3a0790845dfbbdf969c4ddfdddf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mortgages"
+        },
+        {
+          "type": "과거형",
+          "value": "mortgaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mortgaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mortgaged"
+        }
+      ],
+      "aliasConjugation": "mortgages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fae3bb193033196782137a113567efe3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 대지는 저당잡혀 있다.",
+      "text": "The estate is mortgaged."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 집은 800만 원에 저당잡혀 있다",
+      "text": "The house is mortgaged for 8,000,000 won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 집은 3,000만원에 저당잡혀 있다",
+      "text": "There is a <b>mortgage</b> of thirty million won on the house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 집을 담보로 잡고 돈을 빌려 주겠다고 제의했다",
+      "text": "He offered a <b>mortgage</b> on house property as security."
+    }
+  ],
+  "isWordType": true
+}

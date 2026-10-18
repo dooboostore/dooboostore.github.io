@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "entry": "stammer",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈstæmə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "말을 더듬다",
+              "examples": [
+                {
+                  "text": "<b>stammer</b> bad[slightly]",
+                  "translatedText": "심하게[약간] 말을 더듬다."
+                }
+              ],
+              "originalMeaning": "말을 더듬다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "더듬으며 말하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>stammer</b> out an excuse[apology]",
+                  "translatedText": "더듬거리며 변명[사과]하다"
+                }
+              ],
+              "originalMeaning": "더듬으며 말하다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "말더듬음, 웅얼거림",
+              "examples": [],
+              "originalMeaning": "말더듬음, 웅얼거림"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/37e74ef078b74c2ebc5e2bc1c45094a6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/37e74ef078b74c2ebc5e2bc1c45094a6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "stammers"
+        },
+        {
+          "type": "과거형",
+          "value": "stammered"
+        },
+        {
+          "type": "현재 분사",
+          "value": "stammering"
+        },
+        {
+          "type": "과거 분사",
+          "value": "stammered"
+        }
+      ],
+      "aliasConjugation": "stammers",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7a0f5bbe5e0bae760464887fe9ed3a80",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 몇 마디 더듬더듬 말했다.",
+      "text": "He stammered over a few words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 말을 더듬기 때문에 남과의 교제를 피하는 경향이 있었다.",
+      "text": "His <b>stammer</b> predisposed him to avoidance of company[to avoid company]."
+    }
+  ],
+  "isWordType": true
+}

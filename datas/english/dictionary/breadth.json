@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "entry": "breadth",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bredθ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "폭, 너비(width)",
+              "examples": [
+                {
+                  "text": "This table is one meter in <b>breadth</b> .",
+                  "translatedText": "이 테이블은 폭이 1미터이다."
+                }
+              ],
+              "originalMeaning": "폭, 너비(width)"
+            },
+            {
+              "meaning": "(피륙 등의) 일정한 폭, 한 폭",
+              "examples": [],
+              "originalMeaning": "(피륙 등의) 일정한 폭, 한 폭"
+            },
+            {
+              "meaning": "(토지·수면 등의) 퍼짐, 넓이",
+              "examples": [],
+              "originalMeaning": "(토지·수면 등의) 퍼짐, 넓이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3853e9aa066844d187de9658efb983f9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3853e9aa066844d187de9658efb983f9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "50ef466e08a78950c839ead31c354c7c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 테이블은 폭이 1미터이다.",
+      "text": "This table is one meter in <b>breadth</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하마터면 죽을 것을 살았다",
+      "text": "I was saved from death by a hair's <b>breadth</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 간신히 도망쳤다",
+      "text": "He had a narrow escape. or He escaped by a hair <b>breadth</b>."
+    }
+  ],
+  "isWordType": true
+}

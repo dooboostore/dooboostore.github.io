@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "unlikely",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʌnˈlaɪkli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "있음직하지 않은, 정말 같지 않은",
+              "examples": [
+                {
+                  "text": "an <b>unlikely</b> tale",
+                  "translatedText": "믿기 어려운 이야기"
+                }
+              ],
+              "originalMeaning": "있음직하지 않은, 정말 같지 않은"
+            },
+            {
+              "meaning": "가망 없는, 성공할 것 같지 않은",
+              "examples": [
+                {
+                  "text": "( <b>unlikely</b>+to do) He was <b>unlikely</b> to win the race.",
+                  "translatedText": "그는 그 경주에서 이길 것 같지 않았다."
+                }
+              ],
+              "originalMeaning": "가망 없는, 성공할 것 같지 않은"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "있을[…할] 것 같지 않게",
+              "examples": [],
+              "originalMeaning": "있을[…할] 것 같지 않게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/da22683217794bacbc652147e4440b5e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/da22683217794bacbc652147e4440b5e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "unlikelier"
+        },
+        {
+          "type": "최상급",
+          "value": "unlikeliest"
+        }
+      ],
+      "aliasConjugation": "unlikelier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "f8651ce4064bb03213ac6b83db9711d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경주에서 이길 것 같지 않았다.",
+      "text": "He was <b>unlikely</b> to win the race."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 이상은 실현될 것 같지 않다",
+      "text": "His ideal is <b>unlikely</b> to be realized."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "논쟁의 기세가 숙을 것 같지 않다",
+      "text": "The controversy is <b>unlikely</b> to die down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들이 신당의 목표에 동조하는 일은 없을 것이다",
+      "text": "They are <b>unlikely</b> to sympathize with the aims of the new party."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "withdraw",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɪð│drɔː; wɪθ│drɔː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "<손 등을> 빼다, 움츠리다, 뒤로 물리다, <커튼 등을> 당겨 젖히다",
+              "examples": [
+                {
+                  "text": "<b>withdraw</b> one's head from the window",
+                  "translatedText": "창문에서 안으로 머리를 들여보내다"
+                }
+              ],
+              "originalMeaning": "<손 등을> 빼다, 움츠리다, 뒤로 물리다, <커튼 등을> 당겨 젖히다"
+            },
+            {
+              "meaning": "<시선을> 딴 데로 돌리다 ((from))",
+              "examples": [
+                {
+                  "text": "She withdrew her eyes from me.",
+                  "translatedText": "그녀는 나로부터 시선을 돌렸다."
+                }
+              ],
+              "originalMeaning": "<시선을> 딴 데로 돌리다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "물러나다, 물러나오다; 쑥 들어가다",
+              "examples": [
+                {
+                  "text": "<b>withdraw</b> from a person's presence",
+                  "translatedText": "…앞에서 물러가다"
+                }
+              ],
+              "originalMeaning": "물러나다, 물러나오다; 쑥 들어가다"
+            },
+            {
+              "meaning": "(모임 등에서) 탈퇴하다, 은퇴하다, (학교·직장을) 그만두다 ((from))",
+              "examples": [
+                {
+                  "text": "<b>withdraw</b> from politics",
+                  "translatedText": "정계에서 은퇴하다"
+                }
+              ],
+              "originalMeaning": "(모임 등에서) 탈퇴하다, 은퇴하다, (학교·직장을) 그만두다 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ba0146ac71a943aeb9079febf7cac7b7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ba0146ac71a943aeb9079febf7cac7b7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "withdraws"
+        },
+        {
+          "type": "과거형",
+          "value": "withdrew"
+        },
+        {
+          "type": "현재 분사",
+          "value": "withdrawing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "withdrawn"
+        }
+      ],
+      "aliasConjugation": "withdraws",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9107947cf7ec79212d56b9c839c54e2f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물러날래야 물러날 수 없다",
+      "text": "I am in for it now. or I have gone too far to retreat. or I cannot <b>withdraw</b>[turn back] now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 나로부터 시선을 돌렸다.",
+      "text": "She withdrew her eyes from me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "약속을 했으니 이제 와서 나가자빠질 수 없다",
+      "text": "After all my promise I can't <b>withdraw</b> now."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 회담에서 손떼겠다고 위협했다",
+      "text": "They threatened to <b>withdraw</b> from the talks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이미 내친 걸음이라 물러설 도리가 없다",
+      "text": "Now I've set about it, there is no turning back. or I have gone too far to retreat[<b>withdraw</b>]. or The die is cast."
+    }
+  ],
+  "isWordType": true
+}

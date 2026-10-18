@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "produce",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<곡물 등을> 생산하다, 산출하다, 생기게 하다, <열매를> 맺다",
+              "examples": [
+                {
+                  "text": "The tree <b>produces</b> big fruit.",
+                  "translatedText": "그 나무에는 큰 열매가 맺힌다."
+                }
+              ],
+              "originalMeaning": "<곡물 등을> 생산하다, 산출하다, 생기게 하다, <열매를> 맺다"
+            },
+            {
+              "meaning": "<상품을> 제조[생산]하다",
+              "examples": [],
+              "originalMeaning": "<상품을> 제조[생산]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "산출하다; 만들어내다, 생산하다; 창작하다",
+              "examples": [],
+              "originalMeaning": "산출하다; 만들어내다, 생산하다; 창작하다"
+            },
+            {
+              "meaning": "돈을 지불하다",
+              "examples": [],
+              "originalMeaning": "돈을 지불하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 생산액[고], [집합적] 농산물, 천연 산물",
+              "examples": [
+                {
+                  "text": "country <b>produce</b>",
+                  "translatedText": "농산물"
+                }
+              ],
+              "originalMeaning": "[U] 생산액[고], [집합적] 농산물, 천연 산물"
+            },
+            {
+              "meaning": "[집합적] 생산물[품], 제품; 작품",
+              "examples": [],
+              "originalMeaning": "[집합적] 생산물[품], 제품; 작품"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1a3a7a83c66a47c5a73683379fb570ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1a3a7a83c66a47c5a73683379fb570ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "produces"
+        },
+        {
+          "type": "과거형",
+          "value": "produced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "producing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "produced"
+        }
+      ],
+      "aliasConjugation": "produces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "21a0d267209efc27528772f75a147f66",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 나무에는 큰 열매가 맺힌다.",
+      "text": "The tree <b>produces</b> big fruit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나쁜 씨에서는 나쁜 열매가 맺게 마련이다.",
+      "text": "Bad seed must <b>produce</b> bad corn."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 지방에서는 사과가 많이 나온다",
+      "text": "The country <b>produces</b> a lot of apples."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 한국이 낳은 가장 위대한 군인이라고 해도 과언이 아니다",
+      "text": "It is no exaggeration to say that he is the greatest soldier that Korea has ever produced."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 연료가 타면 이산화탄소를 낸다",
+      "text": "The burning of this fuel <b>produces</b> carbon dioxide."
+    }
+  ],
+  "isWordType": true
+}

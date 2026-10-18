@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "shoe",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃuː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 구두, [미] (발목을 덮는) 편상화; [영] 단화(cf. BOOT)",
+              "examples": [
+                {
+                  "text": "a pair of shoes",
+                  "translatedText": "구두 한 켤레"
+                }
+              ],
+              "originalMeaning": "[보통 pl.] 구두, [미] (발목을 덮는) 편상화; [영] 단화(cf. BOOT)"
+            },
+            {
+              "meaning": "구두 모양의 것, (자동차의) 브레이크 슈(= brake ~), (타이어의) 제동 쐐기, [미] (자동차) 타이어의 외피(外被)[케이싱] ((접지면의 피복(被服)))",
+              "examples": [],
+              "originalMeaning": "구두 모양의 것, (자동차의) 브레이크 슈(= brake ~), (타이어의) 제동 쐐기, [미] (자동차) 타이어의 외피(外被)[케이싱] ((접지면의 피복(被服)))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "구두를 신기다, 말에 편자를 박다",
+              "examples": [],
+              "originalMeaning": "구두를 신기다, 말에 편자를 박다"
+            },
+            {
+              "meaning": "쇠굴레를 끼우다, 마구리를 달다 ((with))",
+              "examples": [
+                {
+                  "text": "shod with iron",
+                  "translatedText": "쇠 장식을 단"
+                }
+              ],
+              "originalMeaning": "쇠굴레를 끼우다, 마구리를 달다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f6522167b476421dbe801a0198e1b78e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f6522167b476421dbe801a0198e1b78e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shoes"
+        },
+        {
+          "type": "과거형",
+          "value": "shod"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shoeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shod"
+        }
+      ],
+      "aliasConjugation": "shoes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f310e9d516e2d803e8f69c9f1f153eed",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새 신발이 꼭 낀다",
+      "text": "My new shoes pinch."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 신을 신어 보시죠",
+      "text": "Try those shoes on."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 갈색 구두를 신고 있다.",
+      "text": "He wears brown shoes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 구두는 수리해야 한다.",
+      "text": "My shoes want mending."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "구두 밑창에 껌이 붙었는데 뗄 수가 없다",
+      "text": "I've got some chewing gum stuck to the sole of my <b>shoe</b> and can't get it off."
+    }
+  ],
+  "isWordType": true
+}

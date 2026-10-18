@@ -1,0 +1,162 @@
+{
+  "items": [
+    {
+      "entry": "gross",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡróus"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(공제하기 전의) 총체의, 모두 합친, 전체의(total); (무게가) 포장까지 친(opp. net), (=whole)",
+              "examples": [
+                {
+                  "text": "the <b>gross</b> amount",
+                  "translatedText": "총액"
+                }
+              ],
+              "originalMeaning": "(공제하기 전의) 총체의, 모두 합친, 전체의(total); (무게가) 포장까지 친(opp. net), (=<span class='related_word' lang='en' >whole</span>)"
+            },
+            {
+              "meaning": "철저한",
+              "examples": [
+                {
+                  "text": "a <b>gross</b> reform",
+                  "translatedText": "철저한 개혁"
+                }
+              ],
+              "originalMeaning": "철저한"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] (공제 없는) 총체, 총계",
+              "examples": [],
+              "originalMeaning": "[the ~] (공제 없는) 총체, 총계"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(경비 등의 공제 없이) …의 총이익을 올리다",
+              "examples": [],
+              "originalMeaning": "(경비 등의 공제 없이) …의 총이익을 올리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6eca704370814fd0856f25d186f228bf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6eca704370814fd0856f25d186f228bf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "grosser"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "grosses"
+        },
+        {
+          "type": "최상급",
+          "value": "grossest"
+        },
+        {
+          "type": "복수형",
+          "value": "gross, grosses"
+        },
+        {
+          "type": "과거형",
+          "value": "grossed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "grossing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "grossed"
+        }
+      ],
+      "aliasConjugation": "grosser",
+      "aliasConjugationPos": "비교급",
+      "gdid": "74e4f727fa54405519de2958bdc0b061",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "gross",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "그로스 ((12다스, 144개))",
+              "examples": [
+                {
+                  "text": "a <b>gross</b>[ten <b>gross</b> ] of buttons",
+                  "translatedText": "단추 1그로스[10그로스]"
+                }
+              ],
+              "originalMeaning": "그로스 ((12다스, 144개))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/385ac01508594d788f7f266debbb09e9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/385ac01508594d788f7f266debbb09e9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "grosser",
+      "aliasConjugationPos": "비교급",
+      "gdid": "5756fb31851e460d3706ba2b21d2be88",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 거동은 숙녀로서 너무 잡상스럽다",
+      "text": "Her manners are too <b>gross</b> for a lady."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 세금 공제 전의 총수입이 한 달에 5,000달러쯤 된다",
+      "text": "I make about five thousand dollars before taxes a month. or I <b>gross</b> about five thousand dollars a month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 상품은 모두 500만 원으로 평가되었다",
+      "text": "The goods were valued in the <b>gross</b> at five million won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한통쳐서",
+      "text": "(lumping) all together;as a group;in the <b>gross</b>;in one lot;including;inclusive of"
+    }
+  ],
+  "isWordType": true
+}

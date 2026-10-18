@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "entry": "surgery",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sɜːrdʒəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 외과, (외과) 수술, 외과적 처치",
+              "examples": [
+                {
+                  "text": "plastic <b>surgery</b>",
+                  "translatedText": "성형외과"
+                }
+              ],
+              "originalMeaning": "[U] 외과, (외과) 수술, 외과적 처치"
+            },
+            {
+              "meaning": "수술실",
+              "examples": [],
+              "originalMeaning": "수술실"
+            },
+            {
+              "meaning": "(외과) 의원 ((진찰실과 약국을 갖춘)), (의원의) 진찰실",
+              "examples": [],
+              "originalMeaning": "(외과) 의원 ((진찰실과 약국을 갖춘)), (의원의) 진찰실"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/cc3b72664bcd4978b2208cf5a69e6f3d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/cc3b72664bcd4978b2208cf5a69e6f3d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "surgeries"
+        }
+      ],
+      "aliasConjugation": "surgeries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "a9162ff353e5779b35d04f752942515e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수술은 잘 되었습니다",
+      "text": "The <b>surgery</b> was fine[a success]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "entry": "<b>workman</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│wɜːrkmən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "노동자, 장인, 직공, 공원",
+              "examples": [
+                {
+                  "text": "a good[skilled] <b>workman</b>",
+                  "translatedText": "숙련공"
+                }
+              ],
+              "originalMeaning": "노동자, 장인, 직공, 공원"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/95896319b6b44943a4d1cb26b1dee8d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/95896319b6b44943a4d1cb26b1dee8d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "workmen"
+        }
+      ],
+      "aliasConjugation": "workmen",
+      "aliasConjugationPos": "복수형",
+      "gdid": "0efd5059c4053c5fc3c2aa21bff076f6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "노동자들은 파업을 하고 있다.",
+      "text": "The <b>workmen</b> are out (on (a) strike)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "노동자들이 줄줄이 공장에서 나왔다.",
+      "text": "<b>Workmen</b> streamed from the factory."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산업 재해 보상 보험",
+      "text": "<b>Workmen</b>’s Accident Compensation Insurance"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 일꾼을 사서 울타리를 고쳤다.",
+      "text": "He hired a <b>workman</b> to repair the fence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "일꾼들이 하수 시설을 살피러 왔다.",
+      "text": "The <b>workmen</b> have come to look at the drains."
+    }
+  ],
+  "isWordType": true
+}

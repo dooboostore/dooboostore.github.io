@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "degree",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈɡriː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 정도, 등급(grade); 단계",
+              "examples": [],
+              "originalMeaning": "[CU] 정도, 등급(grade); 단계"
+            },
+            {
+              "meaning": "학위",
+              "examples": [
+                {
+                  "text": "take the doctor's <b>degree</b> in economics",
+                  "translatedText": "경제학 박사 학위를 받다"
+                }
+              ],
+              "originalMeaning": "학위"
+            },
+            {
+              "meaning": "[법] 친등(親等), 촌수; [미국법] 범죄의 등급",
+              "examples": [
+                {
+                  "text": "a relation[murder] in the first <b>degree</b>",
+                  "translatedText": "1등친[제1급 살인]"
+                }
+              ],
+              "originalMeaning": "[법] 친등(親等), 촌수; [미국법] 범죄의 등급"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/729cb7fb30964caea075040555ac124f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/729cb7fb30964caea075040555ac124f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9e2f5f66b14e8719534a4a6e8be90a7f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자의 열은 39도 3분이었다",
+      "text": "Her temperature was 39.3 degrees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "온도계는 70도를 나타내고 있다.",
+      "text": "The thermometer reads 70 degrees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 어느 정도 신용할 수 있다",
+      "text": "They deserve some <b>degree</b> of credit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 작년에 박사 학위를 취득했다",
+      "text": "I obtained a doctor's <b>degree</b> last year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘은 기온이 3도 올라갔다.",
+      "text": "The temperature is up 3 degrees today."
+    }
+  ],
+  "isWordType": true
+}

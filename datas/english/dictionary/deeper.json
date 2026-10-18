@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "entry": "deep",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "diːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(아래로) 깊은(opp. shallow), 깊숙이 들어간; (안으로) 깊은; (상당히) 두꺼운; 깊이가 …인",
+              "examples": [
+                {
+                  "text": "a pond 5 feet <b>deep</b>",
+                  "translatedText": "깊이 5피트의 못"
+                }
+              ],
+              "originalMeaning": "(아래로) 깊은(opp. shallow), 깊숙이 들어간; (안으로) 깊은; (상당히) 두꺼운; 깊이가 …인"
+            },
+            {
+              "meaning": "심원한(profound); 난해한; 뿌리 깊은; 깊이 빠진[몰두한], 열심인 ((in))",
+              "examples": [
+                {
+                  "text": "<b>deep</b> in love",
+                  "translatedText": "사랑에 빠진"
+                }
+              ],
+              "originalMeaning": "심원한(profound); 난해한; 뿌리 깊은; 깊이 빠진[몰두한], 열심인 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "깊이, 깊게; 지나치게",
+              "examples": [
+                {
+                  "text": "go <b>deep</b> into the cave",
+                  "translatedText": "동굴 안으로 깊이 들어가다"
+                }
+              ],
+              "originalMeaning": "깊이, 깊게; 지나치게"
+            },
+            {
+              "meaning": "밤 늦게까지",
+              "examples": [],
+              "originalMeaning": "밤 늦게까지"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] 심연(深淵)(abyss), 심해 ((6,000 m 이상 깊은 곳)), 깊은 못, 깊숙한 곳",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] 심연(深淵)(abyss), 심해 ((6,000 m 이상 깊은 곳)), 깊은 못, 깊숙한 곳"
+            },
+            {
+              "meaning": "[the ~] [시어] 대양, 대해",
+              "examples": [
+                {
+                  "text": "monsters[wonders] of the <b>deep</b>",
+                  "translatedText": "대해의 괴물[경이]"
+                }
+              ],
+              "originalMeaning": "[the ~] [시어] 대양, 대해"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1359f56099fe4e5e9f9b33f88e9d2cc3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1359f56099fe4e5e9f9b33f88e9d2cc3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "deeper"
+        },
+        {
+          "type": "최상급",
+          "value": "deepest"
+        }
+      ],
+      "aliasConjugation": "deeper",
+      "aliasConjugationPos": "비교급",
+      "gdid": "e7f2c7a199d30ed0a17bf933b1fd5d06",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 큰 일이 났다",
+      "text": "I'm in <b>deep</b> trouble."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 큰 빚을 지고 있다",
+      "text": "He's deeply in debt."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너무 깊은 곳에 가지 마라",
+      "text": "Don't go out too <b>deep</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 못의 깊이는 이만큼이다",
+      "text": "The pond is about this <b>deep</b>[so <b>deep</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 이 정도의 깊이였다.",
+      "text": "It was about this <b>deep</b>."
+    }
+  ],
+  "isWordType": true
+}

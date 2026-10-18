@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "flatten",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈflætn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "평평하게 하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>flatten</b> the ground",
+                  "translatedText": "땅을 평평하게 하다"
+                }
+              ],
+              "originalMeaning": "평평하게 하다 ((out))"
+            },
+            {
+              "meaning": "발딱 넘어뜨리다; <몸을> 납작하게 엎어뜨리다 ((on, against))",
+              "examples": [
+                {
+                  "text": "The cat flattened himself on the ground.",
+                  "translatedText": "고양이는 땅바닥에 납작 엎드렸다."
+                }
+              ],
+              "originalMeaning": "발딱 넘어뜨리다; <몸을> 납작하게 엎어뜨리다 ((on, against))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "평평해지다 ((out)), 납작해지다",
+              "examples": [],
+              "originalMeaning": "평평해지다 ((out)), 납작해지다"
+            },
+            {
+              "meaning": "<사람이> 맥이 빠지다; <맥주 등이> 김이 빠지다, 맛이 없어지다",
+              "examples": [],
+              "originalMeaning": "<사람이> 맥이 빠지다; <맥주 등이> 김이 빠지다, 맛이 없어지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1b8d079914ff4694ba19a98bdcf20bbc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1b8d079914ff4694ba19a98bdcf20bbc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "flattens"
+        },
+        {
+          "type": "과거형",
+          "value": "flattened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "flattening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "flattened"
+        }
+      ],
+      "aliasConjugation": "flattens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a1e1ddbc48625e696022ec38196e93f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고양이는 땅바닥에 납작 엎드렸다.",
+      "text": "The cat flattened himself on the ground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "바지 주름이 펴져야 한다",
+      "text": "The wrinkles of the pants should be flattened out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "언덕을 넘으니 길은 평탄해졌다",
+      "text": "The road went over the crest of the hill and flattened out."
+    }
+  ],
+  "isWordType": true
+}

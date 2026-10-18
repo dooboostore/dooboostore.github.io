@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "entry": "<b>rend</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "<b>rend</b>"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "[문어] 째다, 찢다(tear), 비틀어 뜯다; 잘게 부수다",
+              "examples": [],
+              "originalMeaning": "[문어] 째다, 찢다(tear), 비틀어 뜯다; 잘게 부수다"
+            },
+            {
+              "meaning": "나누다, 분열[분리]시키다",
+              "examples": [
+                {
+                  "text": "The country was rent in two.",
+                  "translatedText": "국토는 둘로 갈라졌다."
+                }
+              ],
+              "originalMeaning": "나누다, 분열[분리]시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "째지다, 쪼개지다; 산산조각이 나다, 분열하다",
+              "examples": [
+                {
+                  "text": "<b>rend</b> asunder",
+                  "translatedText": "산산조각이 나다"
+                }
+              ],
+              "originalMeaning": "째지다, 쪼개지다; 산산조각이 나다, 분열하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5cfdf12be46f4a2489a5dce11663d111",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5cfdf12be46f4a2489a5dce11663d111",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rends"
+        },
+        {
+          "type": "과거형",
+          "value": "rent"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rending"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rent"
+        }
+      ],
+      "aliasConjugation": "rends",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b4961e7cfba806f1fc065d39aa64cff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사자는 먹으면서 이빨로 고기를 찢는다",
+      "text": "Lions <b>rend</b> meat with their teeth as they eat."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "<b>dissolve</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "dɪˈzɑːlv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<물질을> (액체로) 용해하다, 녹이다; <물건을> 분해하다",
+              "examples": [
+                {
+                  "text": "Water dissolves sugar.",
+                  "translatedText": "물은 설탕을 녹인다."
+                }
+              ],
+              "originalMeaning": "<물질을> (액체로) 용해하다, 녹이다; <물건을> 분해하다"
+            },
+            {
+              "meaning": "<의회·단체 등을> 해산하다",
+              "examples": [
+                {
+                  "text": "<b>dissolve</b> Parliament",
+                  "translatedText": "의회를 해산하다"
+                }
+              ],
+              "originalMeaning": "<의회·단체 등을> 해산하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(…으로) 용해하다, 녹다 ((in)) ((가열하지 않고서도 고체가 액체로 녹다)); 녹아서 (…이) 되다 ((into)); 녹듯이 사라지다 ((into, in))",
+              "examples": [
+                {
+                  "text": "Sugar dissolves in water.",
+                  "translatedText": "설탕은 물에 녹는다."
+                }
+              ],
+              "originalMeaning": "(…으로) 용해하다, 녹다 ((in)) ((가열하지 않고서도 고체가 액체로 녹다)); 녹아서 (…이) 되다 ((into)); 녹듯이 사라지다 ((into, in))"
+            },
+            {
+              "meaning": "<의회·단체 등이> 해산(을 선언)하다",
+              "examples": [
+                {
+                  "text": "The crowds <b>dissolved</b>.",
+                  "translatedText": "군중들은 해산했다."
+                }
+              ],
+              "originalMeaning": "<의회·단체 등이> 해산(을 선언)하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "디졸브, 오버랩(overlap) ((한 화면 위에 다른 화면이 겹치면서 먼저 화면이 차차 사라지게 하는 장면 전환 기법))",
+              "examples": [],
+              "originalMeaning": "디졸브, 오버랩(overlap) ((한 화면 위에 다른 화면이 겹치면서 먼저 화면이 차차 사라지게 하는 장면 전환 기법))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/734e766373534348a93ea15350856784",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/734e766373534348a93ea15350856784",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dissolves"
+        },
+        {
+          "type": "과거형",
+          "value": "dissolved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dissolving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dissolved"
+        }
+      ],
+      "aliasConjugation": "dissolves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8dee92fdf07580252ac5d3a14958fb12",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 설탕을 물에 풀었다",
+      "text": "I <b>dissolved</b> some sugar in water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내각은 머지않아 와해될 것이다",
+      "text": "The Cabinet will soon be <b>dissolved</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 물질은 물에 풀린다",
+      "text": "This substance dissolves[is soluble] in water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "위험에 직면하여 그의 용기는 꺾였다.",
+      "text": "His courage <b>dissolved</b> in the face of the danger."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "설탕은 물에 녹는다.",
+      "text": "Sugar dissolves in water."
+    }
+  ],
+  "isWordType": true
+}

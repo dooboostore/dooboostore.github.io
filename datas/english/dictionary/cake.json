@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "cake",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "keɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 케이크, 양과자; [C] 케이크 한 개",
+              "examples": [],
+              "originalMeaning": "[UC/] 케이크, 양과자; [C] 케이크 한 개"
+            },
+            {
+              "meaning": "[미] 얇고 납작한 빵(pancake), 핫케이크; [스코] 귀리로 만든 딱딱한 비스킷(oatcake)",
+              "examples": [
+                {
+                  "text": "brown a <b>cake</b>",
+                  "translatedText": "과자를 갈색으로 굽다"
+                }
+              ],
+              "originalMeaning": "[미] 얇고 납작한 빵(pancake), 핫케이크; [스코] 귀리로 만든 딱딱한 비스킷(oatcake)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "뭉치다, 굳히다; 두껍게 바르다[뒤덮다] ((with))",
+              "examples": [],
+              "originalMeaning": "뭉치다, 굳히다; 두껍게 바르다[뒤덮다] ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "들러붙다, 뭉쳐지다, 덩어리지다",
+              "examples": [],
+              "originalMeaning": "들러붙다, 뭉쳐지다, 덩어리지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b279e664e3be469fa99be16cf1156a0b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b279e664e3be469fa99be16cf1156a0b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cakes"
+        },
+        {
+          "type": "과거형",
+          "value": "caked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "caking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "caked"
+        }
+      ],
+      "aliasConjugation": "cakes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bdaaeb05d8f004583abedbebcd8ee743",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아주 손쉽다 be child's play;be a snap[breeze]",
+      "text": ";be a piece of <b>cake</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 과자는 맛이 파삭파삭하다.",
+      "text": "This <b>cake</b> eats crisp."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 과자는 탄내가 난다",
+      "text": "The <b>cake</b> tastes scorched."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그건 식은 죽 먹기야",
+      "text": "It's a cinch. or It's a piece of <b>cake</b>. or It's a walk in the park. or It's (as) easy as apple pie[duck soup]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책은 불티같이 팔린다",
+      "text": "The book is selling[going] like hot cakes."
+    }
+  ],
+  "isWordType": true
+}

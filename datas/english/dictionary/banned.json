@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "entry": "ban",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bæn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "금지, 금제(禁制), 금지령 ((on))",
+              "examples": [
+                {
+                  "text": "a total <b>ban</b> on nuclear arms",
+                  "translatedText": "핵무기 전면 금지"
+                }
+              ],
+              "originalMeaning": "금지, 금제(禁制), 금지령 ((on))"
+            },
+            {
+              "meaning": "(여론의) 반대, 비난 ((on))",
+              "examples": [],
+              "originalMeaning": "(여론의) 반대, 비난 ((on))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "금지하다(prohibit)",
+              "examples": [
+                {
+                  "text": "<b>ban</b> a person from driving a car",
+                  "translatedText": "…에게 자동차 운전을 금지하다"
+                }
+              ],
+              "originalMeaning": "금지하다(prohibit)"
+            },
+            {
+              "meaning": "[고어] 저주하다, 파문하다",
+              "examples": [],
+              "originalMeaning": "[고어] 저주하다, 파문하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/44e8671440f1421dbb03108031f2ef7f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/44e8671440f1421dbb03108031f2ef7f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bans"
+        },
+        {
+          "type": "복수형",
+          "value": "bani"
+        },
+        {
+          "type": "과거형",
+          "value": "banned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "banning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "banned"
+        }
+      ],
+      "aliasConjugation": "bans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a07718fba1d77186ab7b1a99040ff876",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "ban",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bǽn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "반 ((루마니아의 화폐 단위, = 1/100 leu))",
+              "examples": [],
+              "originalMeaning": "반 ((루마니아의 화폐 단위, = 1/100 leu))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff3aceb5655142c581eb5462d92c39c7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff3aceb5655142c581eb5462d92c39c7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "bans",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0839604183e826e6dcf91a551f447981",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 총기의 사용을 금했다[허용했다]",
+      "text": "They <b>banned</b>[allowed] the use of firearms."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 저수지에서는 수영과 뱃놀이를 금하고 있다",
+      "text": "No one is permitted to swim or row in this reservoir. or Swimming and boating are <b>banned</b> in this reservoir."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정상 회담은 핵실험 금지 문제로 깨지고 말았다",
+      "text": "The summit talks blew up over the nuclear test <b>ban</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 연극은 상연을 금지당했다",
+      "text": "The play has been interdicted. or A stage <b>ban</b> is placed on the play."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정상 회담은 핵 실험 금지 문제로 결렬되었다",
+      "text": "The summit conference broke down over the nuclear test <b>ban</b>."
+    }
+  ],
+  "isWordType": true
+}

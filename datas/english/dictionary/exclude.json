@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>exclude</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈskluːd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "못 들어오[가]게 하다, 들이지 않다, 차단하다; 제외하다, 배제하다(expel) ((from))(opp. include)",
+              "examples": [
+                {
+                  "text": "Shutters <b>exclude</b> light.",
+                  "translatedText": "셔터는 빛을 차단한다."
+                }
+              ],
+              "originalMeaning": "못 들어오[가]게 하다, 들이지 않다, 차단하다; 제외하다, 배제하다(expel) ((from))(opp. include)"
+            },
+            {
+              "meaning": "쫓아내다, 제명하다, 몰아내다, 추방하다(expel)",
+              "examples": [
+                {
+                  "text": "<b>exclude</b> a person out of[from] a club",
+                  "translatedText": "클럽에서 …을 추방[제명]하다"
+                }
+              ],
+              "originalMeaning": "쫓아내다, 제명하다, 몰아내다, 추방하다(expel)"
+            },
+            {
+              "meaning": "<증거 등을> 채택하지 않다, 물리치다(reject)",
+              "examples": [],
+              "originalMeaning": "<증거 등을> 채택하지 않다, 물리치다(reject)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/661dc5556e964659ad52961326db8c5f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/661dc5556e964659ad52961326db8c5f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "excludes"
+        },
+        {
+          "type": "과거형",
+          "value": "excluded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "excluding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "excluded"
+        }
+      ],
+      "aliasConjugation": "excludes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "17b29c6788c10003c6453a335716f049",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "셔터는 빛을 차단한다.",
+      "text": "Shutters <b>exclude</b> light."
+    }
+  ],
+  "isWordType": true
+}

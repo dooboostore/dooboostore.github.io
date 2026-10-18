@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "beef",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "biːf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 쇠고기, 고기 (→cow)",
+              "examples": [
+                {
+                  "text": "roast <b>beef</b>",
+                  "translatedText": "불고기"
+                }
+              ],
+              "originalMeaning": "[U] 쇠고기, 고기 (→<span class='related_word' lang='en' >cow</span>)"
+            },
+            {
+              "meaning": "[C] 육우(肉牛), 식용우; (도살하여 내장을 뺀 육우의) 몸뚱이",
+              "examples": [],
+              "originalMeaning": "[C] 육우(肉牛), 식용우; (도살하여 내장을 뺀 육우의) 몸뚱이"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "불평하다 ((about))",
+              "examples": [
+                {
+                  "text": "They are always beefing about something.",
+                  "translatedText": "그들은 항상 어떤 일에 불평을 해댄다."
+                }
+              ],
+              "originalMeaning": "불평하다 ((about))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9f79f50d985e4e4fa38ebcc1c60c23ba",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9f79f50d985e4e4fa38ebcc1c60c23ba",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "beefs"
+        },
+        {
+          "type": "복수형",
+          "value": "beeves, beefs"
+        },
+        {
+          "type": "과거형",
+          "value": "beefed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "beefing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "beefed"
+        }
+      ],
+      "aliasConjugation": "beefs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ce5f9e0386892ad900ee5b3b6b5cc598",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 일에 대해 투덜대고 있다",
+      "text": "He's beefing about that job."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고기가 올강거려 잘 씹히지 않는다",
+      "text": "This <b>beef</b> is tough to chew."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "식사의 주요 코스는 구운 쇠고기였다",
+      "text": "The main course was roast <b>beef</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쇠고기는 한 근에 8,000원 꼴로 판매되고 있다",
+      "text": "<b>Beef</b> is sold at the rate of 8,000 won a geun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쇠고기가 딱딱하다",
+      "text": "This <b>beef</b> is tough."
+    }
+  ],
+  "isWordType": true
+}

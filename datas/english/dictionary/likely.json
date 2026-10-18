@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "likely",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlaɪkli"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "…할 것 같은",
+              "examples": [
+                {
+                  "text": "( <b>likely</b>+to do) He is <b>likely</b> to lose the game.",
+                  "translatedText": "그는 경기에 질 것 같다."
+                }
+              ],
+              "originalMeaning": "…할 것 같은"
+            },
+            {
+              "meaning": "있음직한, …함직한(probable); 정말 같은",
+              "examples": [
+                {
+                  "text": "A <b>likely</b> story!",
+                  "translatedText": "설마! ((종종 반어적))"
+                }
+              ],
+              "originalMeaning": "있음직한, …함직한(probable); 정말 같은"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[종종 very, most를 앞에 붙여서] 아마(probably)",
+              "examples": [
+                {
+                  "text": "We will very <b>likely</b> stay home this evening.",
+                  "translatedText": "오늘 밤엔 아마 집에 있을 것 같다."
+                }
+              ],
+              "originalMeaning": "[종종 very, most를 앞에 붙여서] 아마(probably)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1619a22c7b7748058efb3fc6608d9c60",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1619a22c7b7748058efb3fc6608d9c60",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "likelier"
+        },
+        {
+          "type": "최상급",
+          "value": "likeliest"
+        }
+      ],
+      "aliasConjugation": "likelier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "fc56125ed2707e6bcd32a11782ebac2e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아마 그는 올 것이다",
+      "text": "He will probably come. or He is <b>likely</b> to come. or It is <b>likely</b> that he will come."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비가 올 것 같다.",
+      "text": "It is <b>likely</b> to rain."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일이 될 법하다",
+      "text": "It seems <b>likely</b> to succeed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "설마 그렇게 되지는 않을 것이다",
+      "text": "It is not at all <b>likely</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 경기에 질 것 같다.",
+      "text": "He is <b>likely</b> to lose the game."
+    }
+  ],
+  "isWordType": true
+}

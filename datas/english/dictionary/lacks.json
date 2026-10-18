@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "lack",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "læk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부족, 결핍(want), 결여",
+              "examples": [
+                {
+                  "text": "lackof skill",
+                  "translatedText": "기술 부족"
+                }
+              ],
+              "originalMeaning": "부족, 결핍(want), 결여"
+            },
+            {
+              "meaning": "부족한[결핍된] 것",
+              "examples": [],
+              "originalMeaning": "부족한[결핍된] 것"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…이 없다, 결핍되다, 필요로 하다",
+              "examples": [
+                {
+                  "text": "A desert <b>lacks</b> water.",
+                  "translatedText": "사막에는 물이 없다."
+                }
+              ],
+              "originalMeaning": "…이 없다, 결핍되다, 필요로 하다"
+            },
+            {
+              "meaning": "…만큼 모자라다",
+              "examples": [
+                {
+                  "text": "She <b>lacks</b> five votes to win.",
+                  "translatedText": "그녀가 이기기에는 다섯 표가 모자란다."
+                }
+              ],
+              "originalMeaning": "…만큼 모자라다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "결핍하다, 모자라다 ((in, for))",
+              "examples": [
+                {
+                  "text": "She is <b>lack</b> ing in common sense.",
+                  "translatedText": "그녀는 상식이 없다."
+                }
+              ],
+              "originalMeaning": "결핍하다, 모자라다 ((in, for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2c8d93e389554288b0464d93f1bbf060",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2c8d93e389554288b0464d93f1bbf060",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lacks"
+        },
+        {
+          "type": "과거형",
+          "value": "lacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lacked"
+        }
+      ],
+      "aliasConjugation": "lacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "483b9d4416a54458daec9926cfca1cda",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 그림에는 기백이 없다.",
+      "text": "His picture <b>lacks</b> soul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잠을 덜 자서 피곤하다",
+      "text": "I am tired for <b>lack</b> of sleep."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나이가 어려서 진득한 데가 없다",
+      "text": "He <b>lacks</b> dignity, being still young. or He is too young to have (any) weight of character."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 태도는 떳떳하지 못하다",
+      "text": "His attitude <b>lacks</b> fairness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 처세할 줄 모른다",
+      "text": "He is lacking in worldly wisdom."
+    }
+  ],
+  "isWordType": true
+}

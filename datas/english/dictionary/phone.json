@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "phone",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fóun"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 the ~] 전화",
+              "examples": [
+                {
+                  "text": "answer the <b>phone</b>",
+                  "translatedText": "전화를 받다"
+                }
+              ],
+              "originalMeaning": "[종종 the ~] 전화"
+            },
+            {
+              "meaning": "전화기, 수화기",
+              "examples": [
+                {
+                  "text": "a touch-tone <b>phone</b>",
+                  "translatedText": "푸시버튼[누름단추]식 전화기"
+                }
+              ],
+              "originalMeaning": "전화기, 수화기"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전화의[에 관한]",
+              "examples": [],
+              "originalMeaning": "전화의[에 관한]"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "(…에게) 전화하다, 전화를 걸다 ((to)), 전화로 불러내다 ((up)), 전화로 알려주다",
+              "examples": [
+                {
+                  "text": "Please <b>phone</b> me tomorrow.",
+                  "translatedText": "내일 전화 주세요."
+                }
+              ],
+              "originalMeaning": "(…에게) 전화하다, 전화를 걸다 ((to)), 전화로 불러내다 ((up)), 전화로 알려주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ef3ba69938b64d8c96bd2d2206fb2187",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ef3ba69938b64d8c96bd2d2206fb2187",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "phones"
+        },
+        {
+          "type": "과거형",
+          "value": "phoned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "phoning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "phoned"
+        }
+      ],
+      "aliasConjugation": "phones",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "04b5787f8bde6a256ccb8badebeacbb8",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "phone",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "음, 단음(單音) ((모음 또는 자음))",
+              "examples": [],
+              "originalMeaning": "음, 단음(單音) ((모음 또는 자음))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1ff4ae38e58142d1b373fadae14ba513",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1ff4ae38e58142d1b373fadae14ba513",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "phones",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "de50c83c4a5c2625cbfad1821d9647ac",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 아직 통화 중입니다",
+      "text": "She is still on the <b>phone</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 전화번호를 적어 놓으시오.",
+      "text": "Get his <b>phone</b> number down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게서 전화가 걸려 왔다",
+      "text": "I had a <b>phone</b> call from him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 전화기는 잡음이 많이 난다",
+      "text": "My <b>phone</b> has lots of static."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "언제 전화하면 좋을지 말해 주십시오",
+      "text": "Tell me when I should <b>phone</b>."
+    }
+  ],
+  "isWordType": true
+}

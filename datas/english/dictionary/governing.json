@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "entry": "governing",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɡʌvərnɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "통치하는, 관리하는, 통할하는, 통제하는; 지배[지도]적인",
+              "examples": [
+                {
+                  "text": "the <b>governing</b> classes",
+                  "translatedText": "지배 계급"
+                }
+              ],
+              "originalMeaning": "통치하는, 관리하는, 통할하는, 통제하는; 지배[지도]적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/559358427e9449fe868efac766e723f5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/559358427e9449fe868efac766e723f5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "5bfa3c00ec53187821506603b2239bb9",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "govern",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɡʌvərn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<나라·국민을> 다스리다, 통치하다, 지배하다",
+              "examples": [
+                {
+                  "text": "ability to <b>govern</b>",
+                  "translatedText": "통치 능력"
+                }
+              ],
+              "originalMeaning": "<나라·국민을> 다스리다, 통치하다, 지배하다"
+            },
+            {
+              "meaning": "<공공 기관·학교·기업체 등을> 운영하다, 관리[주관]하다; <마을 등을> 군의 지배하에 두다",
+              "examples": [],
+              "originalMeaning": "<공공 기관·학교·기업체 등을> 운영하다, 관리[주관]하다; <마을 등을> 군의 지배하에 두다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(나라·도시를) 통치하다, 정무(政務)를 보다, 지배하다",
+              "examples": [
+                {
+                  "text": "The King reigns but does not <b>govern</b>.",
+                  "translatedText": "왕은 군림하되 통치하지 않는다."
+                }
+              ],
+              "originalMeaning": "(나라·도시를) 통치하다, 정무(政務)를 보다, 지배하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6edd5295bb87458e90637a9f4e3fc043",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6edd5295bb87458e90637a9f4e3fc043",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "governs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "60f7400bb9e0de3c7602dadae8ffa5da",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 논법에 맞지 않는 말을 한다",
+      "text": "He is not governed by logic."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "위정자는 국민의 목소리를 들어야 한다",
+      "text": "Those who <b>govern</b> the people must listen to their voice."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 자치를 모른다",
+      "text": "They do not know how to <b>govern</b> themselves."
+    }
+  ],
+  "isWordType": true
+}

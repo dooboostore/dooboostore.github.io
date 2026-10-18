@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "<b>abnormal</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "æb│nɔːrml"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "비정상의, 이상한, 예외적인; 변칙의; 정상 이상[이하]의, 변태적인(opp. normal)",
+              "examples": [
+                {
+                  "text": "<b>abnormal</b> behavior",
+                  "translatedText": "이상 행동"
+                }
+              ],
+              "originalMeaning": "비정상의, 이상한, 예외적인; 변칙의; 정상 이상[이하]의, 변태적인(opp. normal)"
+            },
+            {
+              "meaning": "지나치게 큰, 막대한",
+              "examples": [
+                {
+                  "text": "<b>abnormal</b> profit",
+                  "translatedText": "거액의 이익"
+                }
+              ],
+              "originalMeaning": "지나치게 큰, 막대한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6eab8843097468dae6ba6e41af59242",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6eab8843097468dae6ba6e41af59242",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "c5d2e106fc07776a44f5a9f244ba1146",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금년 추위는 보통이 아니다",
+      "text": "It is unusually[exceptionally, abnormally] cold this year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "올해는 이상 난동이다",
+      "text": "We have an abnormally[unusually] warm weather this winter."
+    }
+  ],
+  "isWordType": true
+}

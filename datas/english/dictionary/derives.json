@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "derive",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "diráiv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(다른 것·근원에서) <이익·즐거움 등을> 끌어내다, 얻다 ((from))",
+              "examples": [
+                {
+                  "text": "He  derived a lot of profit from the business.",
+                  "translatedText": "그는 그 일에서 많은 이익을 얻었다."
+                }
+              ],
+              "originalMeaning": "(다른 것·근원에서) <이익·즐거움 등을> 끌어내다, 얻다 ((from))"
+            },
+            {
+              "meaning": "<단어·관습 등이> …에서 비롯되다, <사람이> …의 유래를 찾다(trace);[종종 수동형으로] …에 기원을 두다, …에서 나오다 ((from)); 추론[추리]하다; <영화 등을> (소설에서) 각색하다 ((from))",
+              "examples": [
+                {
+                  "text": "The belief is entirely  derived from the wish for safety.",
+                  "translatedText": "그 신앙은 오로지 안전을 바라는 마음에서 비롯된 것이다."
+                }
+              ],
+              "originalMeaning": "<단어·관습 등이> …에서 비롯되다, <사람이> …의 유래를 찾다(trace);[종종 수동형으로] …에 기원을 두다, …에서 나오다 ((from)); 추론[추리]하다; <영화 등을> (소설에서) 각색하다 ((from))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "유래하다, 파생하다, 나오다 ((from))",
+              "examples": [
+                {
+                  "text": "The term  <b>derives</b> from Greek.",
+                  "translatedText": "이 용어는 그리스어에서 유래한다."
+                }
+              ],
+              "originalMeaning": "유래하다, 파생하다, 나오다 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/96c7c0bc3ae1489c87e0fb070a9a3004",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/96c7c0bc3ae1489c87e0fb070a9a3004",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "antonymWordList": [
+        {
+          "entry": "give rise to",
+          "link": "https://en.dict.naver.com/#/search?range=all&query=give rise to"
+        }
+      ],
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "derives"
+        },
+        {
+          "type": "과거형",
+          "value": "derived"
+        },
+        {
+          "type": "현재 분사",
+          "value": "deriving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "derived"
+        }
+      ],
+      "aliasConjugation": "derives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "17eb204f5f529a3b16715d681e0e628e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 용어는 그리스어에서 유래한다.",
+      "text": "The term <b>derives</b> from Greek."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리의 지식은 모두 경험에서 온다",
+      "text": "All our knowledge is derived from experience."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 일에서 많은 이익을 얻었다.",
+      "text": "He derived a lot of profit from the business."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "영어의 수천 단어가 라틴어에서 파생되었다",
+      "text": "Thousands of English words were derived from Latin."
+    }
+  ],
+  "isWordType": true
+}

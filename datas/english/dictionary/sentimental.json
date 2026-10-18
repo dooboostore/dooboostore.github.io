@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "sentimental",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌsentɪˈmentl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "감상적인, 정에 약한, 다감한, 정에 호소하는",
+              "examples": [
+                {
+                  "text": "a <b>sentimental</b> song",
+                  "translatedText": "감상적인 노래"
+                }
+              ],
+              "originalMeaning": "감상적인, 정에 약한, 다감한, 정에 호소하는"
+            },
+            {
+              "meaning": "(이성·사고보다는) 감정에 바탕을 둔, 감정적인, 정서적인",
+              "examples": [],
+              "originalMeaning": "(이성·사고보다는) 감정에 바탕을 둔, 감정적인, 정서적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bf806ff0a7204af9a33f2c92692fc463",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bf806ff0a7204af9a33f2c92692fc463",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ffd1d4bcc74779f767af665e18dd29d1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그 책을 읽고 감상적인 기분이 되었다",
+      "text": "She became <b>sentimental</b> reading the book."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 나이를 먹어 감에 따라 점점 감상적이 된다",
+      "text": "She is getting <b>sentimental</b> in her old age."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,669 @@
+WEBVTT
+
+00:00:04.402 --> 00:00:08.172
+I've always found it curious
+how biologists study life.
+
+00:00:09.173 --> 00:00:10.941
+There's this saying,
+
+00:00:10.975 --> 00:00:14.278
+"A biologist will learn
+how a car works by poking at it,
+
+00:00:14.311 --> 00:00:16.514
+removing one part at a time,
+
+00:00:16.514 --> 00:00:19.016
+and seeing how it affects
+the rest of the car.
+
+00:00:19.917 --> 00:00:23.354
+On the other hand, an engineer
+will learn how a car works
+
+00:00:23.387 --> 00:00:27.191
+by taking it completely apart
+and rebuilding it."
+
+00:00:28.659 --> 00:00:31.495
+Take, for example,
+the Human Genome Project,
+
+00:00:31.495 --> 00:00:34.632
+one of the biggest breakthroughs
+of the last century.
+
+00:00:34.665 --> 00:00:39.136
+We spent over a decade mapping out
+all three billion letters of our genome,
+
+00:00:39.170 --> 00:00:41.138
+the complete set of DNA.
+
+00:00:41.639 --> 00:00:46.010
+We thought that once we could read DNA
+and apply that same principle,
+
+00:00:46.010 --> 00:00:48.946
+poking and dissecting
+one letter at a time,
+
+00:00:48.979 --> 00:00:52.116
+that we could start
+eradicating all human diseases.
+
+00:00:53.384 --> 00:00:58.889
+But instead, we began to realize
+just how little we actually understood
+
+00:00:58.889 --> 00:01:01.492
+about the true function of DNA.
+
+00:01:03.561 --> 00:01:04.895
+As a researcher,
+
+00:01:04.929 --> 00:01:09.400
+I work on artificial intelligence
+and trained as an engineer.
+
+00:01:09.934 --> 00:01:14.405
+I learn by building things
+and understand by creating.
+
+00:01:16.340 --> 00:01:18.309
+Today, I want to share an idea
+
+00:01:18.342 --> 00:01:24.081
+that can fundamentally change
+how we study biology and life itself.
+
+00:01:25.182 --> 00:01:29.854
+Instead of just reading and dissecting
+DNA, we should be generating it.
+
+00:01:30.821 --> 00:01:35.459
+And we can do this
+by treating DNA as a language:
+
+00:01:35.493 --> 00:01:41.298
+one that AI can learn to read,
+write and, ultimately, build.
+
+00:01:43.901 --> 00:01:47.471
+This idea led myself
+and a team of researchers
+
+00:01:47.471 --> 00:01:50.274
+at Stanford and the Arc Institute
+
+00:01:50.307 --> 00:01:52.076
+with a sort of moonshot:
+
+00:01:52.977 --> 00:01:58.449
+Can we generate an entire genome
+from scratch using AI?
+
+00:01:59.383 --> 00:02:01.852
+Build life from the ground up?
+
+00:02:04.622 --> 00:02:09.426
+Now I understand the thought of feeding
+the code of life into a generative AI
+
+00:02:09.460 --> 00:02:13.697
+is both thrilling,
+and, perhaps, unsettling.
+
+00:02:14.865 --> 00:02:18.269
+But I came to realize
+that if this was possible,
+
+00:02:18.302 --> 00:02:21.038
+it could unlock some of the most
+powerful breakthroughs
+
+00:02:21.071 --> 00:02:23.440
+in science and medicine.
+
+00:02:25.476 --> 00:02:31.115
+But I'll be honest, we had no idea
+if AI could actually generate DNA.
+
+00:02:31.148 --> 00:02:34.318
+In many ways, DNA is like a language.
+
+00:02:34.351 --> 00:02:36.520
+It has grammar, structure,
+
+00:02:36.554 --> 00:02:41.458
+sort of like sentences and paragraphs
+that group together to form a story.
+
+00:02:42.126 --> 00:02:45.196
+And these stories are passed down
+through evolution,
+
+00:02:45.229 --> 00:02:46.897
+generation by generation.
+
+00:02:48.465 --> 00:02:53.604
+For humans, it’s been hard to comprehend
+these stories written in DNA
+
+00:02:53.637 --> 00:02:55.673
+in large part because of its scale.
+
+00:02:56.607 --> 00:02:59.410
+DNA is extremely long,
+
+00:02:59.410 --> 00:03:03.080
+and yet, at the same time,
+sensitive to the smallest mistakes.
+
+00:03:04.582 --> 00:03:08.786
+Imagine trying to write
+something the length of 30,000 books
+
+00:03:08.819 --> 00:03:10.487
+in a foreign language.
+
+00:03:11.455 --> 00:03:16.160
+And that when you're off
+by a single letter, one of billions,
+
+00:03:16.193 --> 00:03:19.830
+this can mean the difference
+between a healthy person
+
+00:03:19.863 --> 00:03:22.266
+and a person
+with a life-threatening disease.
+
+00:03:24.368 --> 00:03:30.040
+And so to tackle these challenges,
+together with my colleague Michael Poli,
+
+00:03:30.074 --> 00:03:35.346
+we developed an AI that could generate
+extremely long sequences of DNA,
+
+00:03:35.379 --> 00:03:38.549
+500 times longer than previous AI models,
+
+00:03:38.582 --> 00:03:40.618
+at high levels of detail.
+
+00:03:41.852 --> 00:03:45.889
+We assembled a team
+of scientists and AI experts
+
+00:03:45.923 --> 00:03:50.194
+and gathered the largest collection
+of DNA used to train AI,
+
+00:03:50.227 --> 00:03:54.999
+80,000 whole genomes
+fed into a model that we called ...
+
+00:03:55.799 --> 00:03:56.967
+Evo.
+
+00:03:58.102 --> 00:04:01.972
+And our goal was to create
+something like a ChatGPT for DNA,
+
+00:04:01.972 --> 00:04:05.209
+where you can prompt Evo
+and describe the DNA you want,
+
+00:04:05.209 --> 00:04:08.712
+and it would generate new sequences,
+one letter at a time.
+
+00:04:10.714 --> 00:04:12.850
+But there is one key difference.
+
+00:04:14.285 --> 00:04:16.587
+With chatbots, you can
+just read what it writes,
+
+00:04:16.620 --> 00:04:19.123
+and you can decide
+if it makes sense to you.
+
+00:04:19.123 --> 00:04:21.625
+With DNA, it's not so simple.
+
+00:04:22.526 --> 00:04:24.662
+It's not an intuitive human language.
+
+00:04:24.662 --> 00:04:26.730
+How do you know if it's any real or good?
+
+00:04:26.730 --> 00:04:28.599
+What does that even mean?
+
+00:04:29.233 --> 00:04:32.002
+What we needed was a test,
+
+00:04:32.036 --> 00:04:35.839
+a way to verify that what it wrote
+would actually function.
+
+00:04:37.775 --> 00:04:42.479
+And so we started with a familiar tool
+in biology called CRISPR.
+
+00:04:42.513 --> 00:04:47.051
+CRISPR is like a pair of molecular
+scissors that can edit DNA,
+
+00:04:47.084 --> 00:04:49.219
+used for things like gene therapy.
+
+00:04:50.321 --> 00:04:52.289
+We asked Evo to make its own,
+
+00:04:52.323 --> 00:04:55.859
+and generate its own version
+of CRISPR from scratch,
+
+00:04:55.893 --> 00:04:58.095
+which had never been done before.
+
+00:04:58.862 --> 00:05:01.231
+It's got proteins and RNA inside,
+
+00:05:01.265 --> 00:05:02.599
+it's a complex system.
+
+00:05:03.534 --> 00:05:06.704
+And so our biologists
+would take that generated DNA
+
+00:05:06.737 --> 00:05:10.307
+and analyze it to see
+how realistic does it look,
+
+00:05:10.341 --> 00:05:12.242
+does it resemble something in nature?
+
+00:05:12.242 --> 00:05:13.977
+How do its proteins fold?
+
+00:05:14.311 --> 00:05:16.914
+Which all gave us a sense of its function.
+
+00:05:18.015 --> 00:05:19.216
+But ultimately,
+
+00:05:19.216 --> 00:05:23.854
+we have to test their ability to cut DNA
+by actually building them in the lab.
+
+00:05:24.922 --> 00:05:26.457
+And so that's what we did.
+
+00:05:27.925 --> 00:05:33.731
+Now waiting for lab results can sometimes
+be a nerve-racking experience.
+
+00:05:34.465 --> 00:05:37.901
+Honestly, it's kind of like waiting
+for the results of a pregnancy test.
+
+00:05:39.069 --> 00:05:43.540
+You’re excited, anxious
+and hopeful for a positive outcome.
+
+00:05:43.974 --> 00:05:45.376
+And then, all of a sudden ...
+
+00:05:46.543 --> 00:05:48.479
+these two little lines appear.
+
+00:05:49.012 --> 00:05:53.183
+Just to be crystal clear,
+these two lines are a good thing.
+
+00:05:53.217 --> 00:05:54.485
+That's what we want.
+
+00:05:54.485 --> 00:05:57.187
+(Laughter)
+
+00:05:57.187 --> 00:06:01.759
+It means that our CRISPRs
+cut a single strand of DNA into two,
+
+00:06:01.759 --> 00:06:06.196
+in the exact right spot,
+just like natural CRISPRs in the lab.
+
+00:06:06.864 --> 00:06:08.499
+And so that's when we knew ...
+
+00:06:09.600 --> 00:06:10.734
+it worked.
+
+00:06:11.235 --> 00:06:13.670
+(Laughter)
+
+00:06:13.704 --> 00:06:14.705
+(Applause)
+
+00:06:14.738 --> 00:06:15.973
+Thank you.
+
+00:06:16.006 --> 00:06:17.107
+(Applause)
+
+00:06:17.107 --> 00:06:21.545
+What you're seeing here
+is the world's first CRISPR system
+
+00:06:21.578 --> 00:06:24.081
+designed entirely by AI.
+
+00:06:24.848 --> 00:06:30.220
+Evo generated DNA that not only looked
+realistic, but that actually functioned.
+
+00:06:32.956 --> 00:06:36.160
+And so next, we decided
+to go for that moonshot,
+
+00:06:36.193 --> 00:06:39.096
+to try and generate
+a whole genome from scratch.
+
+00:06:39.763 --> 00:06:42.633
+And Evo was able to generate
+hundreds of synthetic proteins
+
+00:06:42.666 --> 00:06:46.003
+in a genome that resembled
+those in nature.
+
+00:06:46.036 --> 00:06:49.306
+But ultimately,
+it was missing a few parts.
+
+00:06:49.306 --> 00:06:51.208
+It wasn't yet complete,
+
+00:06:51.208 --> 00:06:53.210
+more like a rough sketch of the genome.
+
+00:06:55.012 --> 00:06:57.414
+However, this is just the first version.
+
+00:06:57.448 --> 00:07:01.819
+That rough sketch of the genome
+will become more detailed over time.
+
+00:07:01.819 --> 00:07:03.720
+In fact, within years,
+
+00:07:03.754 --> 00:07:08.992
+we anticipate AI will be able to generate
+whole functional genomes.
+
+00:07:10.227 --> 00:07:15.532
+In other words, AI will be able
+to generate new life.
+
+00:07:16.967 --> 00:07:19.136
+As this technology improves,
+
+00:07:19.169 --> 00:07:23.941
+biology will shift
+from discovery to design.
+
+00:07:25.542 --> 00:07:27.878
+What might this world look like?
+
+00:07:27.911 --> 00:07:29.580
+Let's look ahead.
+
+00:07:30.647 --> 00:07:34.785
+In this future, we can make
+truly personalized medicine.
+
+00:07:34.818 --> 00:07:38.755
+Imagine prompting an AI like Evo
+with your genome,
+
+00:07:38.789 --> 00:07:41.191
+finding sources of diseases,
+
+00:07:41.225 --> 00:07:44.194
+predicting your reaction to drugs,
+
+00:07:44.228 --> 00:07:47.631
+and guiding treatment options
+based on your own DNA.
+
+00:07:49.633 --> 00:07:53.737
+But why even take medicine
+when you might have a permanent cure?
+
+00:07:54.671 --> 00:07:57.274
+We might choose to alter our DNA outright,
+
+00:07:57.274 --> 00:07:59.476
+and we are beginning to see this today.
+
+00:08:00.544 --> 00:08:05.349
+Recently, the FDA approved the first
+gene therapy for sickle cell disease,
+
+00:08:05.382 --> 00:08:08.652
+a painful, lifelong
+condition of the blood.
+
+00:08:08.685 --> 00:08:12.389
+And it works by just changing
+a single gene in a person's DNA
+
+00:08:12.422 --> 00:08:14.258
+to permanently cure the patient.
+
+00:08:15.792 --> 00:08:19.830
+And now, there are
+over 500 DNA-altering treatments
+
+00:08:19.830 --> 00:08:21.298
+awaiting approval.
+
+00:08:22.466 --> 00:08:25.602
+But let's say you're not comfortable
+with changing your DNA.
+
+00:08:26.136 --> 00:08:28.272
+What if we added new DNA?
+
+00:08:30.207 --> 00:08:33.677
+All of our DNA is organized
+into 23 pairs of chromosomes.
+
+00:08:34.244 --> 00:08:38.015
+Chapters, if you will, in the book
+that is our genome.
+
+00:08:38.982 --> 00:08:42.753
+What if Evo learned to generate
+a 24th chapter?
+
+00:08:42.786 --> 00:08:43.954
+A whole new chromosome,
+
+00:08:43.987 --> 00:08:49.192
+equipped with all the machinery needed
+to fight hundreds of diseases on demand.
+
+00:08:52.029 --> 00:08:55.799
+With DNA generation,
+what is the limit of what's possible?
+
+00:08:57.367 --> 00:08:58.902
+We've all seen "Jurassic Park."
+
+00:09:00.170 --> 00:09:02.005
+We all thought it was science fiction.
+
+00:09:02.039 --> 00:09:03.473
+And it is ...
+
+00:09:03.941 --> 00:09:05.242
+mostly.
+
+00:09:05.275 --> 00:09:09.680
+Researchers are now reconstructing
+the genomes of extinct species,
+
+00:09:09.713 --> 00:09:13.350
+with one company planning
+to resurrect the woolly mammoth
+
+00:09:13.383 --> 00:09:16.053
+by as early as 2028.
+
+00:09:16.086 --> 00:09:19.256
+Now instead of bringing back
+extinct species,
+
+00:09:19.256 --> 00:09:21.325
+can we create new ones?
+
+00:09:22.492 --> 00:09:26.463
+Researchers are now engineering
+microbes for colonizing Mars.
+
+00:09:27.764 --> 00:09:31.368
+If we one day wish
+to be a multiplanetary species,
+
+00:09:31.368 --> 00:09:35.439
+we'd have to figure out how to grow things
+on Mars, make it more hospitable,
+
+00:09:35.439 --> 00:09:36.773
+and possibly terraform.
+
+00:09:37.541 --> 00:09:38.775
+And it is possible.
+
+00:09:38.809 --> 00:09:40.210
+We have microbes on Earth
+
+00:09:40.243 --> 00:09:42.879
+that can handle a range
+of extreme conditions
+
+00:09:42.913 --> 00:09:45.015
+that we call extremophiles.
+
+00:09:46.016 --> 00:09:49.653
+Now I understand some
+of these things might sound scary.
+
+00:09:50.587 --> 00:09:54.224
+One of the biggest concerns
+is biosecurity,
+
+00:09:54.257 --> 00:09:56.827
+the potential to create bioweapons.
+
+00:09:57.995 --> 00:10:01.031
+Can AI be used to generate
+more infectious viruses?
+
+00:10:01.865 --> 00:10:03.333
+Yes.
+
+00:10:03.367 --> 00:10:07.237
+But AI can also defend and monitor
+against these threats as well.
+
+00:10:09.272 --> 00:10:11.341
+And so perhaps you feel like me
+
+00:10:11.375 --> 00:10:16.880
+in that you have to choose between
+advocating for innovation versus safety.
+
+00:10:18.515 --> 00:10:23.887
+I'd encourage you to embrace both,
+because stopping progress entirely,
+
+00:10:23.920 --> 00:10:25.489
+I don't think it's practical.
+
+00:10:26.056 --> 00:10:28.925
+We need to evolve with the technology,
+
+00:10:28.925 --> 00:10:30.927
+monitor its capabilities,
+
+00:10:30.927 --> 00:10:33.563
+and constantly be asking ourselves,
+
+00:10:33.597 --> 00:10:36.466
+"What possible futures are we enabling?"
+
+00:10:37.801 --> 00:10:42.639
+As humans, we've always sought
+to understand the world around us.
+
+00:10:43.306 --> 00:10:44.741
+That is in our nature.
+
+00:10:46.009 --> 00:10:49.780
+But understanding alone
+has rarely been enough.
+
+00:10:51.181 --> 00:10:55.318
+For centuries, we've studied life
+by observing and dissecting it.
+
+00:10:56.219 --> 00:10:59.022
+But now, we're no longer
+just reading life's code.
+
+00:11:00.190 --> 00:11:02.392
+We now have the power to generate it.
+
+00:11:03.927 --> 00:11:10.033
+And with AI, we’re at the beginning
+of unlocking new medicines, science
+
+00:11:10.067 --> 00:11:12.903
+and even entire new forms of life.
+
+00:11:15.038 --> 00:11:16.740
+Do we make small edits?
+
+00:11:17.774 --> 00:11:19.810
+Do we write entirely new chapters?
+
+00:11:21.111 --> 00:11:24.281
+Or do we one day design life itself?
+
+00:11:26.450 --> 00:11:29.486
+Because to truly understand biology,
+
+00:11:29.519 --> 00:11:31.021
+we must create it.
+
+00:11:31.755 --> 00:11:35.459
+And the future of life,
+it's ours to build.
+
+00:11:37.027 --> 00:11:38.195
+Thank you.
+
+00:11:38.228 --> 00:11:42.699
+(Cheers and applause)
+

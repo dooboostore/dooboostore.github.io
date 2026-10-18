@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "decrease",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "줄다, 감소하다",
+              "examples": [
+                {
+                  "text": "His influence slowly decreased.",
+                  "translatedText": "그의 영향력은 서서히 줄었다."
+                }
+              ],
+              "originalMeaning": "줄다, 감소하다"
+            },
+            {
+              "meaning": "<온도계 등이> 내리다",
+              "examples": [],
+              "originalMeaning": "<온도계 등이> 내리다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "줄이다, 감소[축소, 저하]시키다; (뜨개질의) <코수를> 줄이다",
+              "examples": [],
+              "originalMeaning": "줄이다, 감소[축소, 저하]시키다; (뜨개질의) <코수를> 줄이다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 감소, 축소; [C] 감소량[액]",
+              "examples": [
+                {
+                  "text": "a rapid[sharp] <b>decrease</b> in population",
+                  "translatedText": "인구의 급감"
+                }
+              ],
+              "originalMeaning": "[UC/] 감소, 축소; [C] 감소량[액]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/87f8b88359574d69a2e08d501e544021",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/87f8b88359574d69a2e08d501e544021",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "decreases"
+        },
+        {
+          "type": "과거형",
+          "value": "decreased"
+        },
+        {
+          "type": "현재 분사",
+          "value": "decreasing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "decreased"
+        }
+      ],
+      "aliasConjugation": "decreases",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5dcb5041920bed31653653f817bb593a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 영향력은 서서히 줄었다.",
+      "text": "His influence slowly decreased."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "인구가 감소할 것으로 예상된다.",
+      "text": "The population is projected to <b>decrease</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "추위도 한풀 꺾인 것 같다",
+      "text": "The cold seems to have decreased in severity."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "지원자 수가 현격히 줄었다",
+      "text": "The number of applicants has decreased sharply."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "방문자 수가 꾸준히 줄었다",
+      "text": "There had been a steady <b>decrease</b> in the number of visitors."
+    }
+  ],
+  "isWordType": true
+}

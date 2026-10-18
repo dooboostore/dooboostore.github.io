@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "synchronize",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "동시에 일어나다, (…와) 동시성을 가지다 ((with))",
+              "examples": [
+                {
+                  "text": "One event synchronizes with another.",
+                  "translatedText": "한 사건이 다른 사건과 동시에 발생한다."
+                }
+              ],
+              "originalMeaning": "동시에 일어나다, (…와) 동시성을 가지다 ((with))"
+            },
+            {
+              "meaning": "<몇 개의 시계가> 표준 시각[일정한 시각]을 표시하다, 같은 시간을 표시하다",
+              "examples": [],
+              "originalMeaning": "<몇 개의 시계가> 표준 시각[일정한 시각]을 표시하다, 같은 시간을 표시하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "동시에 일어나게 하다, 동시성을 가지게 하다",
+              "examples": [],
+              "originalMeaning": "동시에 일어나게 하다, 동시성을 가지게 하다"
+            },
+            {
+              "meaning": "<시계 등의> 시간을 맞추다",
+              "examples": [
+                {
+                  "text": "Synchronize your watches.",
+                  "translatedText": "너희들 시계의 시간을 맞춰라."
+                }
+              ],
+              "originalMeaning": "<시계 등의> 시간을 맞추다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/42adc7fc0d9f43f48f4b762bb00443fe",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/42adc7fc0d9f43f48f4b762bb00443fe",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "synchronizes"
+        },
+        {
+          "type": "과거형",
+          "value": "synchronized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "synchronizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "synchronized"
+        }
+      ],
+      "aliasConjugation": "synchronizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4f07cd33b717a145deb1afd5378e3029",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 사건이 다른 사건과 동시에 발생한다.",
+      "text": "One event synchronizes with another."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "필름 녹음대의 발성은 화면과 일치되어야 한다.",
+      "text": "The sound track of a film should be <b>synchronized</b> with the scenes."
+    }
+  ],
+  "isWordType": true
+}

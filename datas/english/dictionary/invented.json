@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "entry": "invent",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈvent"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발명하다, 창안하다; <이야기 등을> (상상력으로) 만들다, 창조[창작]하다",
+              "examples": [
+                {
+                  "text": "J. Watt <b>invent</b> edthe steam engine.",
+                  "translatedText": "와트는 증기 기관을 발명했다."
+                }
+              ],
+              "originalMeaning": "발명하다, 창안하다; <이야기 등을> (상상력으로) 만들다, 창조[창작]하다"
+            },
+            {
+              "meaning": "날조하다, 조작하다",
+              "examples": [
+                {
+                  "text": "<b>invent</b> an excuse",
+                  "translatedText": "핑계를 꾸며내다"
+                }
+              ],
+              "originalMeaning": "날조하다, 조작하다"
+            },
+            {
+              "meaning": "훔치다(steal)",
+              "examples": [],
+              "originalMeaning": "훔치다(steal)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c98ec9ef73294b9aa16b0d17991cea07",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c98ec9ef73294b9aa16b0d17991cea07",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "invents"
+        },
+        {
+          "type": "과거형",
+          "value": "invented"
+        },
+        {
+          "type": "현재 분사",
+          "value": "inventing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "invented"
+        }
+      ],
+      "aliasConjugation": "invents",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "db5d6d2be585ab3c20ada0fb34b1f1fe",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "와트는 증기 기관을 발명했다.",
+      "text": "J. Watt <b>invented</b> the steam engine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 천신만고 끝에 그 기계를 발명하였다",
+      "text": "He had gone through all sorts of hard works before he got the machine <b>invented</b>."
+    }
+  ],
+  "isWordType": true
+}

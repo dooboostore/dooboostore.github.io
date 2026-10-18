@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "photograph",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈfoʊtəɡræf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "사진",
+              "examples": [
+                {
+                  "text": "a family <b>photograph</b>",
+                  "translatedText": "가족사진"
+                }
+              ],
+              "originalMeaning": "사진"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 사진을 찍다, 촬영하다",
+              "examples": [],
+              "originalMeaning": "…의 사진을 찍다, 촬영하다"
+            },
+            {
+              "meaning": "말로 선명하게 나타내다, …의 인상을 깊이 새기다",
+              "examples": [],
+              "originalMeaning": "말로 선명하게 나타내다, …의 인상을 깊이 새기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "사진을 찍다;[well, badly와 함께] 사진발이 …하다",
+              "examples": [
+                {
+                  "text": "He <b>photographs</b> well[badly].",
+                  "translatedText": "그는 사진발이 잘[잘 안] 받는다."
+                }
+              ],
+              "originalMeaning": "사진을 찍다;[well, badly와 함께] 사진발이 …하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b98aac70d5ea455d87e9506552f1e0c0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b98aac70d5ea455d87e9506552f1e0c0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "photographs"
+        },
+        {
+          "type": "과거형",
+          "value": "photographed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "photographing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "photographed"
+        }
+      ],
+      "aliasConjugation": "photographs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ab971e6d50dd24de922e38f0f5f15c8f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "제 사진을 한 장 보냅니다",
+      "text": "I'll sending you a <b>photograph</b> of me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 사진을 촬영하게 했다",
+      "text": "I had[got] my <b>photograph</b> taken. or I sat for a <b>photograph</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사진은 나의 자랑거리이다",
+      "text": "This <b>photograph</b> is my pride and joy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 사진은 그의 실물보다 훨씬 못하다.",
+      "text": "This <b>photograph</b> is a libel on him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "동생은 사진발이 잘 받는다",
+      "text": "My sister <b>photographs</b> well. or My sister is very photogenic. or My sister always comes out well in photos."
+    }
+  ],
+  "isWordType": true
+}

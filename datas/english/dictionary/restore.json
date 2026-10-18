@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "restore",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈstɔː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "복구[재건]하다, 부흥하다, 회복하다, 부활시키다, <고건물·미술품 등을> 복원[수복]하다; <멸종 동물 등을> 원형 복구하다",
+              "examples": [
+                {
+                  "text": "<b>restore</b> law and order",
+                  "translatedText": "치안을 회복하다"
+                }
+              ],
+              "originalMeaning": "복구[재건]하다, 부흥하다, 회복하다, 부활시키다, <고건물·미술품 등을> 복원[수복]하다; <멸종 동물 등을> 원형 복구하다"
+            },
+            {
+              "meaning": "[보통 수동형으로] <건강·원기·의식 등을> 회복시키다 ((to))",
+              "examples": [
+                {
+                  "text": "He is restored to health.",
+                  "translatedText": "그는 건강을 회복했다."
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] <건강·원기·의식 등을> 회복시키다 ((to))"
+            },
+            {
+              "meaning": "복직[복위]시키다 ((to))",
+              "examples": [
+                {
+                  "text": "The banished king was restored to the throne.",
+                  "translatedText": "추방되었던 왕은 복위하였다."
+                }
+              ],
+              "originalMeaning": "복직[복위]시키다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/36bc0088a5134ca2ac0ec4cd7577f699",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/36bc0088a5134ca2ac0ec4cd7577f699",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "restores"
+        },
+        {
+          "type": "과거형",
+          "value": "restored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "restoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "restored"
+        }
+      ],
+      "aliasConjugation": "restores",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b184601c06a1defdaa658a6fd82b639c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "시내는 다시 질서가 잡혔다",
+      "text": "Order was restored to the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잠은 피로한 몸의 기력을 회복해 준다",
+      "text": "Sleep restores energy to the tired body."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 지방의 소동은 진정되었다",
+      "text": "Tranquility has been restored in that district."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "철도는 평상시 상태로 복구되었다",
+      "text": "The railroad service has been restored to normal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 낡은 차가 원래 상태로 환원되었다",
+      "text": "The old car was restored to its original condition."
+    }
+  ],
+  "isWordType": true
+}

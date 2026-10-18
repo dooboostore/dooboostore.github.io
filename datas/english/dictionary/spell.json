@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "spell",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spél"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "철자하다, <낱말을> 맞춤법에 따라 쓰다, 철자를 말하다",
+              "examples": [],
+              "originalMeaning": "철자하다, <낱말을> 맞춤법에 따라 쓰다, 철자를 말하다"
+            },
+            {
+              "meaning": "…의 철자이다, …이라고 읽다",
+              "examples": [
+                {
+                  "text": "O-n-e spells ‘one.'",
+                  "translatedText": "오·엔·이로 철자하여 one(이란 낱말)이 된다."
+                }
+              ],
+              "originalMeaning": "…의 철자이다, …이라고 읽다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "철자하다, 바르게 쓰다[읽다]",
+              "examples": [],
+              "originalMeaning": "철자하다, 바르게 쓰다[읽다]"
+            },
+            {
+              "meaning": "고찰[검토]하다, 연구하다",
+              "examples": [],
+              "originalMeaning": "고찰[검토]하다, 연구하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f5687d3908a24f528b14a6482a9f1d28",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f5687d3908a24f528b14a6482a9f1d28",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "spells"
+        },
+        {
+          "type": "과거형",
+          "value": "spelled, spelt"
+        },
+        {
+          "type": "현재 분사",
+          "value": "spelling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "spelled, spelt"
+        }
+      ],
+      "aliasConjugation": "spells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3e381b8af91c0751ca4278291d9e23ec",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "spell",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "spél"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "주문(呪文), 주술; 마력(魔力), 마법",
+              "examples": [],
+              "originalMeaning": "주문(呪文), 주술; 마력(魔力), 마법"
+            },
+            {
+              "meaning": "매력",
+              "examples": [],
+              "originalMeaning": "매력"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[드물게] 주문으로 얽어매다; 호리다, 매혹하다",
+              "examples": [],
+              "originalMeaning": "[드물게] 주문으로 얽어매다; 호리다, 매혹하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f037a8527ea4615bad9d2c524d8e855",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f037a8527ea4615bad9d2c524d8e855",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "spells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0bed9244b02b87f915c3dd11719b9270",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 단어의 철자를 가르쳐 주세요",
+      "text": "Tell me how to <b>spell</b> the word."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 단어의 스펠링을 가르쳐 주십시오",
+      "text": "Please tell me how to <b>spell</b> that word."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "영어 철자의 법칙에 대해 설명하겠다",
+      "text": "I will illustrate the spelling rules of English."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "흥이 깨져 버렸다",
+      "text": "The <b>spell</b> is broken."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "들어와서 잠시 앉아라.",
+      "text": "Come in and set a <b>spell</b>."
+    }
+  ],
+  "isWordType": true
+}

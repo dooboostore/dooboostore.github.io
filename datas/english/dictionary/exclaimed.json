@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "<b>exclaim</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈskleɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "외치다, 소리[고함]치다, 고함지르다; 감탄하며 외치다 (=cry)",
+              "examples": [
+                {
+                  "text": "<b>exclaim</b> at the extraordinary price",
+                  "translatedText": "엄청난 값에 놀라서 소리지르다"
+                }
+              ],
+              "originalMeaning": "외치다, 소리[고함]치다, 고함지르다; 감탄하며 외치다 (=<span class='related_word' lang='en' >cry</span>)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…이라고 큰 소리로 말하다, 외치다",
+              "examples": [
+                {
+                  "text": "“You fool!” he <b>exclaimed</b>. 「",
+                  "translatedText": "바보야!」라고 그는 소리쳤다."
+                }
+              ],
+              "originalMeaning": "…이라고 큰 소리로 말하다, 외치다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ac7f2f9d6fdf47e1a74a345c3e260ca0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ac7f2f9d6fdf47e1a74a345c3e260ca0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "exclaims"
+        },
+        {
+          "type": "과거형",
+          "value": "exclaimed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "exclaiming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "exclaimed"
+        }
+      ],
+      "aliasConjugation": "exclaims",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fd9d5ca6bdd10a3ec6522ae3fc965ad8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그 총을 만지지 말라고 내게 큰 소리로 말했다.",
+      "text": "He <b>exclaimed</b> that I should not touch that gun."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어쩜 이토록 아름다운 호수가 있나 하고 그녀는 소리쳤다.",
+      "text": "She <b>exclaimed</b> what a beautiful lake it was."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "「바보야!」라고 그는 소리쳤다.",
+      "text": "“You fool!” he <b>exclaimed</b>."
+    }
+  ],
+  "isWordType": true
+}

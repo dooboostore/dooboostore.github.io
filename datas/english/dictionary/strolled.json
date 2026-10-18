@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "entry": "<b>stroll</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "stroʊl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "한가로이[이리저리, 어슬렁어슬렁] 거닐다(ramble), 산책하다",
+              "examples": [
+                {
+                  "text": "<b>stroll</b> about in the suburbs",
+                  "translatedText": "교외를 이리저리 거닐다"
+                }
+              ],
+              "originalMeaning": "한가로이[이리저리, 어슬렁어슬렁] 거닐다(ramble), 산책하다"
+            },
+            {
+              "meaning": "방랑하다, (정처없이) 떠돌다(wander)",
+              "examples": [],
+              "originalMeaning": "방랑하다, (정처없이) 떠돌다(wander)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<거리 등을> 한가히 거닐다",
+              "examples": [
+                {
+                  "text": "<b>stroll</b> the countryside",
+                  "translatedText": "시골길을 거닐다"
+                }
+              ],
+              "originalMeaning": "<거리 등을> 한가히 거닐다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "이리저리 거닐기, 산책",
+              "examples": [
+                {
+                  "text": "go for[have, take] a <b>stroll</b>",
+                  "translatedText": "산책하다, 어슬렁거리며 거닐다"
+                }
+              ],
+              "originalMeaning": "이리저리 거닐기, 산책"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b4ca61a3309948c09d59771d14706930",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b4ca61a3309948c09d59771d14706930",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "strolls"
+        },
+        {
+          "type": "과거형",
+          "value": "strolled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "strolling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "strolled"
+        }
+      ],
+      "aliasConjugation": "strolls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a1cd6a83c882d0f703c310c0402b04c7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "토요일 오후에 그녀와 공원을 거닐었다",
+      "text": "I took a <b>stroll</b> along the park with her Saturday afternoon."
+    }
+  ],
+  "isWordType": true
+}

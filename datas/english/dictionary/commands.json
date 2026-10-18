@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "command",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kəˈmænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "명령하다, 명하다, …에게 호령하다(order); (권위를 갖고) 요구하다, 강요하다(demand)",
+              "examples": [
+                {
+                  "text": "He <b>command</b> ed silence.",
+                  "translatedText": "그는 조용히 하라고 명령했다."
+                }
+              ],
+              "originalMeaning": "명령하다, 명하다, …에게 호령하다(order); (권위를 갖고) 요구하다, 강요하다(demand)"
+            },
+            {
+              "meaning": "지휘하다, 통솔하다(lead)",
+              "examples": [
+                {
+                  "text": "The captain <b>command</b> s his ship.",
+                  "translatedText": "선장은 배를 지휘한다."
+                }
+              ],
+              "originalMeaning": "지휘하다, 통솔하다(lead)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "명령하다, 지휘하다",
+              "examples": [
+                {
+                  "text": "God <b>command</b> s and man obeys.",
+                  "translatedText": "신은 명하고 사람은 그에 따른다."
+                }
+              ],
+              "originalMeaning": "명령하다, 지휘하다"
+            },
+            {
+              "meaning": "<경치가> 내려다보이다",
+              "examples": [],
+              "originalMeaning": "<경치가> 내려다보이다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "명령(order), 분부",
+              "examples": [
+                {
+                  "text": "The king issued a <b>command</b> for the slave to be[a <b>command</b> that the slave (should) be] set free.",
+                  "translatedText": "왕은 노예를 석방하라는 어명을 내렸다."
+                }
+              ],
+              "originalMeaning": "명령(order), 분부"
+            },
+            {
+              "meaning": "[U] 지휘, 지휘권",
+              "examples": [],
+              "originalMeaning": "[U] 지휘, 지휘권"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f7648aad14304d0a924bc4c65ca4e776",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f7648aad14304d0a924bc4c65ca4e776",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "commands"
+        },
+        {
+          "type": "과거형",
+          "value": "commanded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "commanding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "commanded"
+        }
+      ],
+      "aliasConjugation": "commands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "199b5b7950689afc6f107875bfccf3ea",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "왕은 노예를 석방하라는 어명을 내렸다.",
+      "text": "The king issued a <b>command</b> for the slave to be[a <b>command</b> that the slave (should) be] set free."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그만한 돈은 내 마음대로 할 수 없다.",
+      "text": "I cannot <b>command</b> the sum."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "신은 명하고 사람은 그에 따른다.",
+      "text": "God <b>commands</b> and man obeys."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 언덕은 경치가 아름답다",
+      "text": "The hill has[<b>commands</b>] a fine view."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 독일어를 능란하게 한다",
+      "text": "He has a good <b>command</b> of German."
+    }
+  ],
+  "isWordType": true
+}

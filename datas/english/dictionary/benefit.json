@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "benefit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbenɪfɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 이익, [상업] 이득",
+              "examples": [
+                {
+                  "text": "(a) public <b>benefit</b>",
+                  "translatedText": "공익"
+                }
+              ],
+              "originalMeaning": "[CU] 이익, [상업] 이득"
+            },
+            {
+              "meaning": "[C] 자선 공연, 구제",
+              "examples": [
+                {
+                  "text": "a <b>benefit</b> concert",
+                  "translatedText": "자선 콘서트"
+                }
+              ],
+              "originalMeaning": "[C] 자선 공연, 구제"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…의 이익이 되다, …에게 이롭다",
+              "examples": [],
+              "originalMeaning": "…의 이익이 되다, …에게 이롭다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이익을 얻다, 득을 보다 ((by, from))",
+              "examples": [
+                {
+                  "text": "<b>benefit</b> by the medicine",
+                  "translatedText": "약에서 효험을 보다"
+                }
+              ],
+              "originalMeaning": "이익을 얻다, 득을 보다 ((by, from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff6aa3516700450e93d215c75c9ff6f8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff6aa3516700450e93d215c75c9ff6f8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "benefits"
+        },
+        {
+          "type": "과거형",
+          "value": "benefited, benefitted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "benefiting, benefitting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "benefited, benefitted"
+        }
+      ],
+      "aliasConjugation": "benefits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "773624a2f3aaa8940ba7614768ccb8fa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 하면 당신 자신을 위해서도, 나아가서 이 도시를 위해서도 득이 될 것이다",
+      "text": "It will be good for you. Not only for you, but also for the town. or It will <b>benefit</b> you, and will be to the good of the town as well."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다만 당신을 위하여 그렇게 했을 뿐입니다",
+      "text": "I did it only[just] for your sake[<b>benefit</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무도 공공의 이익을 독차지 못하게 해야 한다.",
+      "text": "Let no one appropriate a common <b>benefit</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 협약은 종업원의 이익이 된다.",
+      "text": "The agreement inures to the <b>benefit</b> of the employees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신을 위해서 전력을 다하겠다",
+      "text": "I will use all my influence in your favor[for your <b>benefit</b>]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "entry": "infectious",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈfekʃəs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "전염성의, 전염병의; <공기·물·의복·벌레 등이> 병을 옮기는, 전염력을 가진 (=contagious)",
+              "examples": [
+                {
+                  "text": "an <b>infectious</b> disease",
+                  "translatedText": "전염병"
+                }
+              ],
+              "originalMeaning": "전염성의, 전염병의; <공기·물·의복·벌레 등이> 병을 옮기는, 전염력을 가진 (=<span class='related_word' lang='en' >contagious</span>)"
+            },
+            {
+              "meaning": "<영향·감정 등이> 옮기[전달되기] 쉬운",
+              "examples": [
+                {
+                  "text": "Laughter is <b>infectious</b>.",
+                  "translatedText": "웃음은 옮는다."
+                }
+              ],
+              "originalMeaning": "<영향·감정 등이> 옮기[전달되기] 쉬운"
+            },
+            {
+              "meaning": "위법성을 띠게 하는",
+              "examples": [],
+              "originalMeaning": "위법성을 띠게 하는"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1415da2bb73140298b7059cb48de9bcf",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1415da2bb73140298b7059cb48de9bcf",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "53d3e47adeb6087376737505533f2ab2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "하품은 전염된다",
+      "text": "Yawning is <b>infectious</b>[catching]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "웃음은 옮는다.",
+      "text": "Laughter is <b>infectious</b>."
+    }
+  ],
+  "isWordType": true
+}

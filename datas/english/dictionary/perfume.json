@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "perfume",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pərˈfjuːm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "향수, 향료, 방향 물질",
+              "examples": [
+                {
+                  "text": "a bottle of <b>perfume</b>",
+                  "translatedText": "향수 한 병"
+                }
+              ],
+              "originalMeaning": "향수, 향료, 방향 물질"
+            },
+            {
+              "meaning": "향기(fragrance), 방향(芳香)",
+              "examples": [],
+              "originalMeaning": "향기(fragrance), 방향(芳香)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 향수를 바르다[뿌리다], <꽃 등이 방·공기를> 향기로 채우다",
+              "examples": [],
+              "originalMeaning": "…에 향수를 바르다[뿌리다], <꽃 등이 방·공기를> 향기로 채우다"
+            },
+            {
+              "meaning": "…에 향내를 풍기다",
+              "examples": [],
+              "originalMeaning": "…에 향내를 풍기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4f8c4f4097d41aca73f97a92ceb2658",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4f8c4f4097d41aca73f97a92ceb2658",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "perfumes"
+        },
+        {
+          "type": "과거형",
+          "value": "perfumed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "perfuming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "perfumed"
+        }
+      ],
+      "aliasConjugation": "perfumes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f5fe108193f9cca80a39376ed8041892",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 프랑스 향수를 아주 좋아한다",
+      "text": "She adores French <b>perfume</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "꽃이 좋은 냄새를 피웠다",
+      "text": "The flowers scented[perfumed] the air."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "방에는 화향이 그득하였다",
+      "text": "Flowers perfumed the room."
+    }
+  ],
+  "isWordType": true
+}

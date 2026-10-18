@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "commit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈmɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<죄·과실 등을> 범하다, 저지르다",
+              "examples": [
+                {
+                  "text": "<b>commit</b> an error",
+                  "translatedText": "잘못을 저지르다"
+                }
+              ],
+              "originalMeaning": "<죄·과실 등을> 범하다, 저지르다"
+            },
+            {
+              "meaning": "위탁하다, 맡기다; 수용하다, 수감하다, 인도하다(entrust) ((to)); <의안 등을> 위원회에 회부하다",
+              "examples": [
+                {
+                  "text": "<b>commit</b> one's soul to God",
+                  "translatedText": "영혼을 신에게 맡기다, 죽다"
+                }
+              ],
+              "originalMeaning": "위탁하다, 맡기다; 수용하다, 수감하다, 인도하다(entrust) ((to)); <의안 등을> 위원회에 회부하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "책임지다, 약속하다 ((to))",
+              "examples": [],
+              "originalMeaning": "책임지다, 약속하다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3e31cea7a621498888727a564d9ee2eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3e31cea7a621498888727a564d9ee2eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "commits"
+        },
+        {
+          "type": "과거형",
+          "value": "committed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "committing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "committed"
+        }
+      ],
+      "aliasConjugation": "commits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4298a677687c22f0c64e8ac90a683e40",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어느 쪽이라고 단언할 수 없다",
+      "text": "I cannot <b>commit</b> myself either way."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 자기가 지은 죄를 마치 남의 일같이 말했다",
+      "text": "He talked about the crime that he had committed as if he had nothing to do with it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그 문제에 얽매여 버렸다.",
+      "text": "She became committed in the matter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 그가 했다면 그는 죄를 범한 거다.",
+      "text": "If he did it, he committed a crime."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 문제는 전문가에게 의뢰해야 한다",
+      "text": "The matter should be entrusted[committed] to an expert. or We should entrust an expert with the matter."
+    }
+  ],
+  "isWordType": true
+}

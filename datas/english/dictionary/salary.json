@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "salary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsæləri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "봉급, 급료 ((공무원·회사원의)), (=pay)",
+              "examples": [
+                {
+                  "text": "a monthly[an annual] <b>salary</b>",
+                  "translatedText": "월급[연봉]"
+                }
+              ],
+              "originalMeaning": "봉급, 급료 ((공무원·회사원의)), (=<span class='related_word' lang='en' >pay</span>)"
+            },
+            {
+              "meaning": "사례, 보수",
+              "examples": [],
+              "originalMeaning": "사례, 보수"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…에게> 봉급[급료]을 지불하다",
+              "examples": [],
+              "originalMeaning": "<…에게> 봉급[급료]을 지불하다"
+            },
+            {
+              "meaning": "…에 보답하다",
+              "examples": [],
+              "originalMeaning": "…에 보답하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/78c30fd675334a4f9863295717394be5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/78c30fd675334a4f9863295717394be5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "salaries"
+        },
+        {
+          "type": "복수형",
+          "value": "salaries"
+        },
+        {
+          "type": "과거형",
+          "value": "salaried"
+        },
+        {
+          "type": "현재 분사",
+          "value": "salarying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "salaried"
+        }
+      ],
+      "aliasConjugation": "salaries",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "34464f229f8af584f72232705cbbf487",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 사람은 연봉이 8,000만 원이다",
+      "text": "He draws an annual <b>salary</b> of eighty million won. or His <b>salary</b> is eighty million won a year."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "봉급을 배로 올려 주겠다.",
+      "text": "I will double your <b>salary</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 주급 30만 원을 받는다",
+      "text": "I draw a <b>salary</b> of 300,000 won a week."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 월급을 책 사는 데 다 썼다",
+      "text": "He spent all his <b>salary</b> on books."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "봉급은 맨 아래가 40만 원이다",
+      "text": "The <b>salary</b> is 400,000 won at the lowest."
+    }
+  ],
+  "isWordType": true
+}

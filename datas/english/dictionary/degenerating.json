@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "<b>degenerate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "퇴보하다 ((from)), 타락하다 ((into)), [생물] 퇴화하다 ((to)), [병리] 변성[변질]하다, [물리] 축퇴하다",
+              "examples": [
+                {
+                  "text": "<b>degenerate</b> into commonplace",
+                  "translatedText": "평범한 일이 되어 버리다"
+                }
+              ],
+              "originalMeaning": "퇴보하다 ((from)), 타락하다 ((into)), [생물] 퇴화하다 ((to)), [병리] 변성[변질]하다, [물리] 축퇴하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "쇠퇴[퇴보, 퇴행]시키다; 타락시키다",
+              "examples": [],
+              "originalMeaning": "쇠퇴[퇴보, 퇴행]시키다; 타락시키다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "퇴화한, 타락한, 변질한, [물리] 축퇴(縮退)한, [수학] 축중(縮重)한",
+              "examples": [
+                {
+                  "text": "a <b>degenerate</b> star",
+                  "translatedText": "축퇴성"
+                }
+              ],
+              "originalMeaning": "퇴화한, 타락한, 변질한, [물리] 축퇴(縮退)한, [수학] 축중(縮重)한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/89f576abea3748dba11afe09c918980c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/89f576abea3748dba11afe09c918980c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "degenerates"
+        },
+        {
+          "type": "과거형",
+          "value": "degenerated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "degenerating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "degenerated"
+        }
+      ],
+      "aliasConjugation": "degenerates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a9a16dfa26887f5a37d4d2e44c49baad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자유는 자칫하면 방종으로 흐른다",
+      "text": "Liberty often degenerates into lawlessness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 거지로 전락했다",
+      "text": "He degenerated into a beggar."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "mix",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "mɪks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "섞다, 혼합하다 ((with, in))",
+              "examples": [
+                {
+                  "text": "<b>mix</b> whiskey and water",
+                  "translatedText": "위스키에 물을 섞다"
+                }
+              ],
+              "originalMeaning": "섞다, 혼합하다 ((with, in))"
+            },
+            {
+              "meaning": "(섞어서) 만들다, 조제하다; <재료 등을> 섞어 넣다",
+              "examples": [
+                {
+                  "text": "<b>mix</b> a drink",
+                  "translatedText": "칵테일 등을 만들다"
+                }
+              ],
+              "originalMeaning": "(섞어서) 만들다, 조제하다; <재료 등을> 섞어 넣다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "섞이다, 혼합되다",
+              "examples": [
+                {
+                  "text": "Oil and water will not <b>mix</b>. = Oil will not <b>mix</b> with water.",
+                  "translatedText": "기름과 물은 섞이지 않는다."
+                }
+              ],
+              "originalMeaning": "섞이다, 혼합되다"
+            },
+            {
+              "meaning": "사이좋게 어울리다; 교제하다, 친하게 사귀다 ((with))",
+              "examples": [
+                {
+                  "text": "The husband and wife do not <b>mix</b> well.",
+                  "translatedText": "저 부부는 금실이 좋지 않다."
+                }
+              ],
+              "originalMeaning": "사이좋게 어울리다; 교제하다, 친하게 사귀다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "혼합, 혼합물",
+              "examples": [
+                {
+                  "text": "a <b>mix</b> of two to one",
+                  "translatedText": "2대 1의 혼합"
+                }
+              ],
+              "originalMeaning": "혼합, 혼합물"
+            },
+            {
+              "meaning": "[미·구어] 즉석 조리 식품, 인스턴트 식품; 술에 타는 음료 ((소다수 등))",
+              "examples": [
+                {
+                  "text": "an ice cream <b>mix</b>",
+                  "translatedText": "아이스크림 믹스"
+                }
+              ],
+              "originalMeaning": "[미·구어] 즉석 조리 식품, 인스턴트 식품; 술에 타는 음료 ((소다수 등))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/191139e44e4a44829810a26eebf2a4ff",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/191139e44e4a44829810a26eebf2a4ff",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "mixes"
+        },
+        {
+          "type": "과거형",
+          "value": "mixed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "mixing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "mixed"
+        }
+      ],
+      "aliasConjugation": "mixes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "be8a813f4337a892080a1a7a0dc2d0ee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 모두 합해 버렸다",
+      "text": "I mixed all of them up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "알쏭달쏭한 태도를 취하지 마라",
+      "text": "Don't give me mixed signals."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물과 기름은 섞이지 않는다",
+      "text": "Oil and water will not <b>mix</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "과실을 몇 종류 섞어서 주시오",
+      "text": "<b>Mix</b> (up) several kinds of fruits, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 계속 나를 알쏭달쏭하게 하였다",
+      "text": "They kept trying to <b>mix</b> me up."
+    }
+  ],
+  "isWordType": true
+}

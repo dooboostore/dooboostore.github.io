@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "<b>rave</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "réiv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "헛소리하다; (미친 사람처럼) 지껄이다; 떠들다, 소리치다, 고함치다 ((against, about, of))",
+              "examples": [
+                {
+                  "text": "<b>rave</b> against one's fate",
+                  "translatedText": "자신의 불운을 한탄하다"
+                }
+              ],
+              "originalMeaning": "헛소리하다; (미친 사람처럼) 지껄이다; 떠들다, 소리치다, 고함치다 ((against, about, of))"
+            },
+            {
+              "meaning": "열심히 이야기하다[설명하다]; 격찬하다 ((about, over))",
+              "examples": [
+                {
+                  "text": "They <b>raved</b> abouttheir trip.",
+                  "translatedText": "그들은 그들의 여행에 관하여 열심히 이야기하였다."
+                }
+              ],
+              "originalMeaning": "열심히 이야기하다[설명하다]; 격찬하다 ((about, over))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[~ oneself로] (미친 사람처럼) 정신없이 지껄이다, 외치다, 절규하다",
+              "examples": [
+                {
+                  "text": "<b>rave</b> oneself hoarse",
+                  "translatedText": "소리를 질러 목이 쉬다"
+                }
+              ],
+              "originalMeaning": "[~ oneself로] (미친 사람처럼) 정신없이 지껄이다, 외치다, 절규하다"
+            },
+            {
+              "meaning": "[~ oneself로] <폭풍우 등이> 사납게 불다[치다], …(의 상태)가 되다",
+              "examples": [
+                {
+                  "text": "The storm <b>raved</b> itself out.",
+                  "translatedText": "폭풍우가 맹위를 떨치다가 그쳤다."
+                }
+              ],
+              "originalMeaning": "[~ oneself로] <폭풍우 등이> 사납게 불다[치다], …(의 상태)가 되다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "격찬하는, 마구 칭찬하는",
+              "examples": [],
+              "originalMeaning": "격찬하는, 마구 칭찬하는"
+            },
+            {
+              "meaning": "열광적인",
+              "examples": [],
+              "originalMeaning": "열광적인"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8f1e85199da24a7e8d82ae45f45e8101",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8f1e85199da24a7e8d82ae45f45e8101",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "raves"
+        },
+        {
+          "type": "과거형",
+          "value": "raved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "raving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "raved"
+        }
+      ],
+      "aliasConjugation": "raves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c3f17f397cd337bcaad349ef001ffb2e",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>rave</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[보통 pl.] (짐을 더 싣기 위한 짐수레 등의) 옆둘레판, 가로로 댄 (보조)틀",
+              "examples": [],
+              "originalMeaning": "[보통 pl.] (짐을 더 싣기 위한 짐수레 등의) 옆둘레판, 가로로 댄 (보조)틀"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e30ed7b47e5947b1aefab0e3ed36eb04",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e30ed7b47e5947b1aefab0e3ed36eb04",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "raves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b2a2981a5b7b5deac75571a5b19c11ab",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "폭풍우가 맹위를 떨치다가 그쳤다.",
+      "text": "The storm <b>raved</b> itself out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "심한 파도가 벼랑에 부딪치고 있다.",
+      "text": "The sea raves against the cliffs."
+    }
+  ],
+  "isWordType": true
+}

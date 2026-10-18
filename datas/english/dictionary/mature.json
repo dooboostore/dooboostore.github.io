@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "mature",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "mə│tʃʊr; mə│tʊr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<과일 등이> 익은, 성숙한, 잘 발육한; <포도주·치즈 등이> 숙성한 (=ripe)",
+              "examples": [
+                {
+                  "text": "<b>mature</b> wine",
+                  "translatedText": "숙성된 포도주"
+                }
+              ],
+              "originalMeaning": "<과일 등이> 익은, 성숙한, 잘 발육한; <포도주·치즈 등이> 숙성한 (=<span class='related_word' lang='en' >ripe</span>)"
+            },
+            {
+              "meaning": "<사람·동물이> 완전히 발달한; 원숙한, 분별 있는",
+              "examples": [
+                {
+                  "text": "<b>mature</b> plants",
+                  "translatedText": "완전히 자란 식물"
+                }
+              ],
+              "originalMeaning": "<사람·동물이> 완전히 발달한; 원숙한, 분별 있는"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "성숙[발달]시키다(ripen), 익히다",
+              "examples": [
+                {
+                  "text": "Experience has matured him.",
+                  "translatedText": "경험이 그를 성숙시켰다."
+                }
+              ],
+              "originalMeaning": "성숙[발달]시키다(ripen), 익히다"
+            },
+            {
+              "meaning": "<계획 등을> 완성하다",
+              "examples": [
+                {
+                  "text": "<b>mature</b> a plan",
+                  "translatedText": "계획을 완성하다"
+                }
+              ],
+              "originalMeaning": "<계획 등을> 완성하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<과일·치즈 등이> 익다, 성숙[원숙]하다",
+              "examples": [],
+              "originalMeaning": "<과일·치즈 등이> 익다, 성숙[원숙]하다"
+            },
+            {
+              "meaning": "<어음이> 만기가 되다",
+              "examples": [],
+              "originalMeaning": "<어음이> 만기가 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/db886348ceaa4c3596a048924c8b65e3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/db886348ceaa4c3596a048924c8b65e3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "maturer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "matures"
+        },
+        {
+          "type": "최상급",
+          "value": "maturest"
+        },
+        {
+          "type": "과거형",
+          "value": "matured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "maturing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "matured"
+        }
+      ],
+      "aliasConjugation": "maturer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "59f6f9ab3f95150ac04db495ca076cb9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 사람의 사랑이 열매를 맺었다",
+      "text": "Their love matured into marriage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신채권은 10년으로 만기가 된다",
+      "text": "The new bonds <b>mature</b> in ten years."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "포도주는 맛이 들 때까지 통속에 저장된다",
+      "text": "The wine will be kept in the barrels until it is <b>mature</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경험이 그를 성숙시켰다.",
+      "text": "Experience has matured him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "올해는 작물이 늦된다",
+      "text": "The crops ripen[<b>mature</b>] late this year. or The crops come to late maturity this year."
+    }
+  ],
+  "isWordType": true
+}

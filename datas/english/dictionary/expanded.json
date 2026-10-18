@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "expanded",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ikspǽndid"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "넓어진, 확대된, 확장된, 열린; [인쇄] (활자의) 폭이 넓은",
+              "examples": [],
+              "originalMeaning": "넓어진, 확대된, 확장된, 열린; [인쇄] (활자의) 폭이 넓은"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0f66390a543d414eb693c939f1570cc3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0f66390a543d414eb693c939f1570cc3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7abb4ba6b6bfc5bc6abbd917a80968a5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "expand",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪkˈspænd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<정도·크기·용적 등을> 넓히다, 펼치다",
+              "examples": [],
+              "originalMeaning": "<정도·크기·용적 등을> 넓히다, 펼치다"
+            },
+            {
+              "meaning": "<부피 등을> 팽창시키다(opp. contract)",
+              "examples": [],
+              "originalMeaning": "<부피 등을> 팽창시키다(opp. contract)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "퍼지다, 넓어지다; 팽창하다(opp. contract); <봉오리·꽃이> 벌어지다, 피다",
+              "examples": [
+                {
+                  "text": "Mercury expands with heat.",
+                  "translatedText": "수은은 가열하면 팽창한다."
+                }
+              ],
+              "originalMeaning": "퍼지다, 넓어지다; 팽창하다(opp. contract); <봉오리·꽃이> 벌어지다, 피다"
+            },
+            {
+              "meaning": "발전하다(develop) ((into))",
+              "examples": [
+                {
+                  "text": "The small college has <b>expanded</b> into a big university.",
+                  "translatedText": "그 조그만 단과 대학은 큰 종합 대학으로 발전하였다."
+                }
+              ],
+              "originalMeaning": "발전하다(develop) ((into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/54eb9523fdb44c558a88b017fe7f6758",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/54eb9523fdb44c558a88b017fe7f6758",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "expands",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "84dbf86b3f535d18706e3662e4fa993d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "수은은 열을 가하면 팽창한다",
+      "text": "Mercury expands by heat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열은 대개의 금속을 팽창시킨다",
+      "text": "Heat expands most metals."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사업을 확장하려 하고 있었다.",
+      "text": "He was trying to <b>expand</b> his business."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 한 문장을 한 단락으로 늘여라.",
+      "text": "<b>Expand</b> this one sentence into a paragraph."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "취급하는 상품이 늘었기 때문에 가게를 조금 넓히고 싶다",
+      "text": "We've increased the volume of merchandise we handle, so I'd like to <b>expand</b> the store a little."
+    }
+  ],
+  "isWordType": true
+}

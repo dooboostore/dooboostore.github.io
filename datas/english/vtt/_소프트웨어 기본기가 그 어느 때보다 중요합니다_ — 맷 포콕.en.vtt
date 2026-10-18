@@ -1,0 +1,1643 @@
+WEBVTT
+
+00:00:07.205 --> 00:00:09.225
+[music]
+
+00:00:14.640 --> 00:00:18.280
+>> Hello everyone. Having a good conference
+
+00:00:16.280 --> 00:00:20.480
+so far? Yeah. Are you having a good
+
+00:00:18.280 --> 00:00:22.160
+conference so far? Yeah. Good.
+
+00:00:20.480 --> 00:00:24.000
+Wonderful.
+
+00:00:22.160 --> 00:00:27.000
+I have a message for you that I hope
+
+00:00:24.000 --> 00:00:29.400
+will be um a comforting message for
+
+00:00:27.000 --> 00:00:31.280
+folks who believe that uh
+
+00:00:29.400 --> 00:00:33.960
+their skill set is no longer worth
+
+00:00:31.280 --> 00:00:35.320
+anything in this new age, which is I
+
+00:00:33.960 --> 00:00:37.400
+believe that software fundamentals
+
+00:00:35.320 --> 00:00:39.040
+matter now more than they actually ever
+
+00:00:37.400 --> 00:00:40.640
+have.
+
+00:00:39.040 --> 00:00:42.480
+And
+
+00:00:40.640 --> 00:00:44.520
+I'm a teacher,
+
+00:00:42.480 --> 00:00:47.240
+and I've been recently teaching a course
+
+00:00:44.520 --> 00:00:49.320
+called Clojure Code for Real Engineers.
+
+00:00:47.240 --> 00:00:50.840
+Nice and provocative. And
+
+00:00:49.320 --> 00:00:52.040
+in the process of kind of working on
+
+00:00:50.840 --> 00:00:54.800
+this course, I had to come up with a
+
+00:00:52.040 --> 00:00:57.560
+curriculum about
+
+00:00:54.800 --> 00:00:59.000
+AI coding, which is a bit of a nightmare
+
+00:00:57.560 --> 00:01:02.280
+because things are changing all the
+
+00:00:59.000 --> 00:01:03.720
+time, right? AI is a whole new paradigm.
+
+00:01:02.280 --> 00:01:05.920
+We need to chuck out all of the old
+
+00:01:03.720 --> 00:01:08.000
+rules, surely, so that we can bring in
+
+00:01:05.920 --> 00:01:09.760
+the new stuff.
+
+00:01:08.000 --> 00:01:12.160
+And there's
+
+00:01:09.760 --> 00:01:14.480
+a kind of movement that has come up
+
+00:01:12.160 --> 00:01:16.480
+around this, which is the specs-to-code
+
+00:01:14.480 --> 00:01:18.040
+movement. And the specs-to-code movement
+
+00:01:16.480 --> 00:01:19.640
+says that, "Okay, you can write a
+
+00:01:18.040 --> 00:01:21.960
+specification about how an application
+
+00:01:19.640 --> 00:01:23.880
+is supposed to work. Then you can use AI
+
+00:01:21.960 --> 00:01:26.200
+to turn it into code. If there's a
+
+00:01:23.880 --> 00:01:27.680
+problem with the application, you then
+
+00:01:26.200 --> 00:01:29.120
+go back to the spec. You don't really
+
+00:01:27.680 --> 00:01:32.240
+look at the code. You just change the
+
+00:01:29.120 --> 00:01:34.480
+spec, you run the compiler again, and
+
+00:01:32.240 --> 00:01:37.160
+you end up with more code." Raise your
+
+00:01:34.480 --> 00:01:38.480
+hand if you've heard of that.
+
+00:01:37.160 --> 00:01:39.800
+Keep your hand raised if you've tried
+
+00:01:38.480 --> 00:01:41.240
+it.
+
+00:01:39.800 --> 00:01:42.800
+Okay, I've tried it, too. You can put
+
+00:01:41.240 --> 00:01:45.360
+your hands down.
+
+00:01:42.800 --> 00:01:48.480
+And what I noticed was I would run it,
+
+00:01:45.360 --> 00:01:50.080
+and I would try not to look at the code,
+
+00:01:48.480 --> 00:01:51.880
+but I would look at the code, and I
+
+00:01:50.080 --> 00:01:53.240
+realized I would get code out, first of
+
+00:01:51.880 --> 00:01:55.440
+all, and then I would run it, I would
+
+00:01:53.240 --> 00:01:58.040
+get worse code. And I did it again, I
+
+00:01:55.440 --> 00:01:59.680
+got even worse code. I got it again, I
+
+00:01:58.040 --> 00:02:00.760
+kept running the compiler, kept running
+
+00:01:59.680 --> 00:02:03.520
+the compiler, and I would just end up
+
+00:02:00.760 --> 00:02:03.520
+with garbage.
+
+00:02:03.640 --> 00:02:06.000
+You know, raise your hand if that's
+
+00:02:04.440 --> 00:02:09.160
+happened to you.
+
+00:02:06.000 --> 00:02:10.880
+Yes. I don't think this works. The idea
+
+00:02:09.160 --> 00:02:13.400
+that we can just ignore the code and
+
+00:02:10.880 --> 00:02:14.840
+just have the code let it manage itself
+
+00:02:13.400 --> 00:02:16.560
+is just sort of vibe coding by another
+
+00:02:14.840 --> 00:02:18.960
+name.
+
+00:02:16.560 --> 00:02:20.280
+And I didn't believe that back then. I
+
+00:02:18.960 --> 00:02:22.240
+thought, "Okay, how do I fix the
+
+00:02:20.280 --> 00:02:23.960
+compiler? How do I make it so that it
+
+00:02:22.240 --> 00:02:25.360
+doesn't produce bad code each time, or
+
+00:02:23.960 --> 00:02:26.520
+worse code?"
+
+00:02:25.360 --> 00:02:30.040
+And so I thought, "Okay, I need to
+
+00:02:26.520 --> 00:02:32.160
+explain to the LLM in English what a
+
+00:02:30.040 --> 00:02:34.960
+good code base looks like." Let me dig
+
+00:02:32.160 --> 00:02:36.320
+out one of my old favorite books, which
+
+00:02:34.960 --> 00:02:37.760
+is a Philosophy of Software Design by
+
+00:02:36.320 --> 00:02:39.320
+John Osterhout.
+
+00:02:37.760 --> 00:02:40.880
+Go on Amazon, get it.
+
+00:02:39.320 --> 00:02:43.240
+Um
+
+00:02:40.880 --> 00:02:45.360
+and he has a definition for what bad
+
+00:02:43.240 --> 00:02:47.240
+code looks like.
+
+00:02:45.360 --> 00:02:48.680
+He calls it complex code. Complexity is
+
+00:02:47.240 --> 00:02:50.880
+anything related to the structure of a
+
+00:02:48.680 --> 00:02:53.480
+software system that makes it hard to
+
+00:02:50.880 --> 00:02:55.520
+understand and modify the system, right?
+
+00:02:53.480 --> 00:02:58.200
+So a a bad code base is a code base
+
+00:02:55.520 --> 00:03:00.280
+that's hard to change. If you can't
+
+00:02:58.200 --> 00:03:01.880
+change a code base without causing bugs,
+
+00:03:00.280 --> 00:03:04.200
+then it's a bad code base. Good code
+
+00:03:01.880 --> 00:03:05.880
+bases are easy to change.
+
+00:03:04.200 --> 00:03:06.960
+So I thought, "Ooh, that was good.
+
+00:03:05.880 --> 00:03:08.640
+Let's try another book. Let's try The
+
+00:03:06.960 --> 00:03:10.680
+Pragmatic Programmer."
+
+00:03:08.640 --> 00:03:12.520
+Go on Amazon, get it.
+
+00:03:10.680 --> 00:03:14.480
+They have a whole chapter on something
+
+00:03:12.520 --> 00:03:16.960
+called software entropy. And this is
+
+00:03:14.480 --> 00:03:19.520
+exactly what I was seeing. Entropy is
+
+00:03:16.960 --> 00:03:21.760
+the idea that things tend towards um
+
+00:03:19.520 --> 00:03:23.920
+disaster and uh floating away from each
+
+00:03:21.760 --> 00:03:25.520
+other and collapse. And this is exactly
+
+00:03:23.920 --> 00:03:27.080
+how most software systems behave, too,
+
+00:03:25.520 --> 00:03:28.760
+is that every time you make a change to
+
+00:03:27.080 --> 00:03:30.480
+a code base, if you're only thinking
+
+00:03:28.760 --> 00:03:32.840
+about that change and not thinking about
+
+00:03:30.480 --> 00:03:34.000
+the design of the whole system, your
+
+00:03:32.840 --> 00:03:35.840
+code base is going to get worse and
+
+00:03:34.000 --> 00:03:36.880
+worse and worse. And that's what I was
+
+00:03:35.840 --> 00:03:39.120
+seeing.
+
+00:03:36.880 --> 00:03:40.440
+Everything inside the specs-to-code idea
+
+00:03:39.120 --> 00:03:43.200
+that you just run the compiler again and
+
+00:03:40.440 --> 00:03:46.120
+again was making worse code.
+
+00:03:43.200 --> 00:03:47.920
+Now, there's an idea that sort of drives
+
+00:03:46.120 --> 00:03:50.440
+the specs-to-code movement,
+
+00:03:47.920 --> 00:03:51.760
+which is that code is cheap. Raise your
+
+00:03:50.440 --> 00:03:55.000
+hand if you've heard that phrase before,
+
+00:03:51.760 --> 00:03:57.560
+that code is cheap. Yeah.
+
+00:03:55.000 --> 00:04:00.280
+Well, I don't think this is right.
+
+00:03:57.560 --> 00:04:02.440
+I think code is not cheap. In fact, bad
+
+00:04:00.280 --> 00:04:03.600
+code is the most expensive it's ever
+
+00:04:02.440 --> 00:04:04.960
+been.
+
+00:04:03.600 --> 00:04:07.760
+Because if you have a code base that's
+
+00:04:04.960 --> 00:04:10.080
+hard to change, you're not able to take
+
+00:04:07.760 --> 00:04:12.480
+all of the bounty that AI can offer, cuz
+
+00:04:10.080 --> 00:04:15.120
+AI in a good code base actually does
+
+00:04:12.480 --> 00:04:16.920
+really, really well.
+
+00:04:15.120 --> 00:04:18.600
+And this means good code bases matter
+
+00:04:16.920 --> 00:04:20.400
+more than ever, which means software
+
+00:04:18.600 --> 00:04:22.880
+fundamentals matter more than ever.
+
+00:04:20.400 --> 00:04:23.960
+That's the thesis of this talk.
+
+00:04:22.880 --> 00:04:25.400
+So let's actually get into practical
+
+00:04:23.960 --> 00:04:26.480
+stuff.
+
+00:04:25.400 --> 00:04:27.760
+I'm going to talk about different
+
+00:04:26.480 --> 00:04:28.840
+failure modes that you may have
+
+00:04:27.760 --> 00:04:30.880
+experienced, or you may not have
+
+00:04:28.840 --> 00:04:32.840
+experienced yet with AI, and how you can
+
+00:04:30.880 --> 00:04:34.160
+avoid them by just going back to old
+
+00:04:32.840 --> 00:04:36.640
+books and looking at good software
+
+00:04:34.160 --> 00:04:38.680
+practices. Sound good?
+
+00:04:36.640 --> 00:04:40.720
+So the first one is that the AI didn't
+
+00:04:38.680 --> 00:04:42.440
+do what I wanted.
+
+00:04:40.720 --> 00:04:43.680
+You know, I I thought I had a good idea
+
+00:04:42.440 --> 00:04:45.120
+in my head, and the AI just did
+
+00:04:43.680 --> 00:04:47.880
+something totally different, or it did
+
+00:04:45.120 --> 00:04:49.160
+some uh like specs that I, you know, it
+
+00:04:47.880 --> 00:04:51.720
+just made something I didn't want. Raise
+
+00:04:49.160 --> 00:04:53.280
+your hand if you've hit this mode.
+
+00:04:51.720 --> 00:04:54.800
+Cool. Okay.
+
+00:04:53.280 --> 00:04:55.800
+Well,
+
+00:04:54.800 --> 00:04:57.760
+this is what they say in The Pragmatic
+
+00:04:55.800 --> 00:05:00.360
+Programmer, is that no one knows exactly
+
+00:04:57.760 --> 00:05:02.360
+what they want. It's that you and the
+
+00:05:00.360 --> 00:05:04.000
+AI, there is a communication barrier
+
+00:05:02.360 --> 00:05:05.640
+there, right?
+
+00:05:04.000 --> 00:05:07.080
+And so when you're talking to the AI,
+
+00:05:05.640 --> 00:05:09.440
+that's kind of like the AI doing its
+
+00:05:07.080 --> 00:05:11.400
+requirements gathering. It's basically
+
+00:05:09.440 --> 00:05:12.760
+working out from you what it is that you
+
+00:05:11.400 --> 00:05:14.320
+need.
+
+00:05:12.760 --> 00:05:16.680
+And
+
+00:05:14.320 --> 00:05:17.840
+I realized that there was another book,
+
+00:05:16.680 --> 00:05:19.040
+Frederick P. Brooks' The Design of
+
+00:05:17.840 --> 00:05:20.520
+Design,
+
+00:05:19.040 --> 00:05:22.280
+and it talks about this idea called the
+
+00:05:20.520 --> 00:05:23.440
+design concept.
+
+00:05:22.280 --> 00:05:25.840
+It's that when you have more than one
+
+00:05:23.440 --> 00:05:28.480
+person designing something together, you
+
+00:05:25.840 --> 00:05:30.600
+have this idea sort of floating between
+
+00:05:28.480 --> 00:05:32.400
+you, this ephemeral idea of the thing
+
+00:05:30.600 --> 00:05:34.000
+that you're building. And that thing
+
+00:05:32.400 --> 00:05:36.000
+that you're building, or the idea of it,
+
+00:05:34.000 --> 00:05:37.720
+is called the design concept. It's not
+
+00:05:36.000 --> 00:05:40.280
+an asset, it's not something you can put
+
+00:05:37.720 --> 00:05:41.400
+in a markdown file, it is the invisible
+
+00:05:40.280 --> 00:05:44.040
+sort of
+
+00:05:41.400 --> 00:05:46.000
+theory of what you're building.
+
+00:05:44.040 --> 00:05:48.120
+And so I thought, "Okay, that's what's
+
+00:05:46.000 --> 00:05:50.080
+going on. Me and the AI don't share a
+
+00:05:48.120 --> 00:05:51.280
+design concept." So I came up with a
+
+00:05:50.080 --> 00:05:53.400
+skill.
+
+00:05:51.280 --> 00:05:54.800
+The skill is very, very simple. It's
+
+00:05:53.400 --> 00:05:57.080
+called Grill Me,
+
+00:05:54.800 --> 00:05:58.920
+and it looks like this.
+
+00:05:57.080 --> 00:06:01.440
+"Interview me relentlessly about every
+
+00:05:58.920 --> 00:06:03.880
+aspect of this plan until we reach a
+
+00:06:01.440 --> 00:06:05.200
+shared understanding. Walk down each
+
+00:06:03.880 --> 00:06:07.440
+branch of the design tree, which is
+
+00:06:05.200 --> 00:06:09.040
+another thing from Frederick P. Brooks,
+
+00:06:07.440 --> 00:06:10.480
+resolving dependencies between decisions
+
+00:06:09.040 --> 00:06:12.680
+one by one."
+
+00:06:10.480 --> 00:06:14.320
+This skill is like uh the repo
+
+00:06:12.680 --> 00:06:15.680
+containing this skill has like 13,000
+
+00:06:14.320 --> 00:06:17.520
+stars or something. Like, it just went
+
+00:06:15.680 --> 00:06:20.240
+nuts, went viral. People love this
+
+00:06:17.520 --> 00:06:23.480
+thing. It These couple of lines means
+
+00:06:20.240 --> 00:06:25.880
+the AI asks you like 40 questions, 60
+
+00:06:23.480 --> 00:06:27.920
+questions. I've had it ask uh people 100
+
+00:06:25.880 --> 00:06:29.680
+questions before it's satisfied they've
+
+00:06:27.920 --> 00:06:32.120
+reached a shared understanding. And it
+
+00:06:29.680 --> 00:06:34.080
+means it turns the AI into a kind of
+
+00:06:32.120 --> 00:06:36.240
+adversary, where it's just continually
+
+00:06:34.080 --> 00:06:38.120
+pinging you ideas and trying to reach a
+
+00:06:36.240 --> 00:06:39.480
+shared understanding.
+
+00:06:38.120 --> 00:06:41.520
+And that means that the conversation
+
+00:06:39.480 --> 00:06:43.520
+that you then generate, you can take
+
+00:06:41.520 --> 00:06:45.520
+that and turn it into a product
+
+00:06:43.520 --> 00:06:48.520
+requirements document or something. Or
+
+00:06:45.520 --> 00:06:49.440
+if it's a small change, you can just uh
+
+00:06:48.520 --> 00:06:52.000
+do
+
+00:06:49.440 --> 00:06:53.480
+uh turn it directly into issues.
+
+00:06:52.000 --> 00:06:54.640
+And then your AFK agent will then pick
+
+00:06:53.480 --> 00:06:55.560
+it up.
+
+00:06:54.640 --> 00:06:57.200
+And
+
+00:06:55.560 --> 00:06:59.360
+don't at me on this, but I personally
+
+00:06:57.200 --> 00:07:02.200
+believe this is better than the default
+
+00:06:59.360 --> 00:07:04.440
+plan mode in uh the
+
+00:07:02.200 --> 00:07:07.040
+tool that I use, which is Clojure Code.
+
+00:07:04.440 --> 00:07:09.520
+Plan mode is extremely eager to create
+
+00:07:07.040 --> 00:07:12.240
+an asset. It really wants to uh just
+
+00:07:09.520 --> 00:07:15.600
+create a plan and start working.
+
+00:07:12.240 --> 00:07:18.760
+Whereas I think it's a lot nicer to
+
+00:07:15.600 --> 00:07:21.440
+reach a shared design concept first.
+
+00:07:18.760 --> 00:07:22.760
+So that's tip number one.
+
+00:07:21.440 --> 00:07:25.960
+Now, failure mode number two is that the
+
+00:07:22.760 --> 00:07:27.200
+AI is just way too verbose.
+
+00:07:25.960 --> 00:07:29.160
+It's like you're almost talking at
+
+00:07:27.200 --> 00:07:31.680
+cross-purposes with the AI. Raise your
+
+00:07:29.160 --> 00:07:33.240
+hand if you uh feel this. If you've ever
+
+00:07:31.680 --> 00:07:34.720
+experienced that failure mode. Yeah.
+
+00:07:33.240 --> 00:07:36.840
+It's kind of like the AI is like talking
+
+00:07:34.720 --> 00:07:38.600
+just using too many words to try to
+
+00:07:36.840 --> 00:07:40.280
+communicate what it's doing. It's not
+
+00:07:38.600 --> 00:07:41.920
+like you're talking uh using the same
+
+00:07:40.280 --> 00:07:44.560
+language.
+
+00:07:41.920 --> 00:07:46.600
+And this to me felt very, very familiar,
+
+00:07:44.560 --> 00:07:48.280
+right? If you've ever been a developer
+
+00:07:46.600 --> 00:07:49.720
+for a long time, and you've worked with,
+
+00:07:48.280 --> 00:07:52.000
+let's say, domain experts, someone
+
+00:07:49.720 --> 00:07:53.320
+building an application, um let's say
+
+00:07:52.000 --> 00:07:54.400
+the domain expert wants you to build
+
+00:07:53.320 --> 00:07:55.680
+something on uh I don't know,
+
+00:07:54.400 --> 00:07:57.040
+microchips. You have no idea what
+
+00:07:55.680 --> 00:07:58.480
+microchips are.
+
+00:07:57.040 --> 00:08:00.960
+You need to establish some kind of
+
+00:07:58.480 --> 00:08:01.880
+shared language, right? Cuz otherwise,
+
+00:08:00.960 --> 00:08:02.800
+they're going to be using terms you
+
+00:08:01.880 --> 00:08:04.480
+don't understand. You're going to be
+
+00:08:02.800 --> 00:08:06.160
+translating that into code that maybe
+
+00:08:04.480 --> 00:08:07.760
+you don't even understand, and certainly
+
+00:08:06.160 --> 00:08:11.720
+the domain expert won't.
+
+00:08:07.760 --> 00:08:11.720
+And so there's this kind of language
+
+00:08:11.840 --> 00:08:17.880
+gap between you and the domain I went
+
+00:08:14.320 --> 00:08:19.040
+back to domain-driven design, DDD.
+
+00:08:17.880 --> 00:08:20.400
+This is something I'm still kind of on
+
+00:08:19.040 --> 00:08:23.200
+the edge of exploring, but everything
+
+00:08:20.400 --> 00:08:25.600
+I'm reading about DDD is just music to
+
+00:08:23.200 --> 00:08:27.960
+my ears. I freaking love it.
+
+00:08:25.600 --> 00:08:30.640
+And DDD has a concept of a ubiquitous
+
+00:08:27.960 --> 00:08:30.640
+language.
+
+00:08:30.880 --> 00:08:34.200
+With a ubiquitous language,
+
+00:08:32.320 --> 00:08:35.599
+conversations among developers, and
+
+00:08:34.200 --> 00:08:37.039
+expressions of the code, and
+
+00:08:35.599 --> 00:08:39.120
+conversations with domain experts are
+
+00:08:37.039 --> 00:08:41.640
+all derived from the same domain model.
+
+00:08:39.120 --> 00:08:43.680
+It's essentially a markdown file full of
+
+00:08:41.640 --> 00:08:46.000
+a list of terms that you and the AI have
+
+00:08:43.680 --> 00:08:47.440
+in common. And you really focus on those
+
+00:08:46.000 --> 00:08:49.160
+terms, and you really make sure that
+
+00:08:47.440 --> 00:08:51.520
+they're aligned with what it actually
+
+00:08:49.160 --> 00:08:52.960
+means, and you use them all the time in
+
+00:08:51.520 --> 00:08:54.280
+the code, when you're talking about the
+
+00:08:52.960 --> 00:08:55.920
+code, when you're talking to domain
+
+00:08:54.280 --> 00:08:57.640
+experts, or in our case, when you're
+
+00:08:55.920 --> 00:08:59.760
+talking with AI.
+
+00:08:57.640 --> 00:09:01.880
+So I made a skill.
+
+00:08:59.760 --> 00:09:03.720
+This skill is the ubiquitous language
+
+00:09:01.880 --> 00:09:07.480
+skill. Basically just scans your code
+
+00:09:03.720 --> 00:09:09.760
+base, looks for terminology, and then um
+
+00:09:07.480 --> 00:09:11.160
+creates a markdown file. Creates the
+
+00:09:09.760 --> 00:09:13.480
+ubiquitous language markdown file, a
+
+00:09:11.160 --> 00:09:14.840
+bunch of markdown tables with all of the
+
+00:09:13.480 --> 00:09:17.440
+terminology.
+
+00:09:14.840 --> 00:09:19.640
+And this, then I pass it to the AI,
+
+00:09:17.440 --> 00:09:21.120
+and I'm able to read it, too. And I
+
+00:09:19.640 --> 00:09:22.720
+actually have it open all the time when
+
+00:09:21.120 --> 00:09:24.960
+I'm grilling with the AI and planning
+
+00:09:22.720 --> 00:09:26.760
+and that. What I noticed by reading the
+
+00:09:24.960 --> 00:09:29.080
+thinking traces of the AI, it not only
+
+00:09:26.760 --> 00:09:32.200
+improves the planning, but it allows the
+
+00:09:29.080 --> 00:09:33.760
+AI to think in a less verbose way, and
+
+00:09:32.200 --> 00:09:36.040
+actually means that the implementation
+
+00:09:33.760 --> 00:09:38.440
+is more aligned with what you actually
+
+00:09:36.040 --> 00:09:41.320
+planned. So this has absolutely been a
+
+00:09:38.440 --> 00:09:42.600
+powerhouse. It's been unbelievably good.
+
+00:09:41.320 --> 00:09:45.920
+So that's tip number two. Create a
+
+00:09:42.600 --> 00:09:47.240
+shared language with the AI.
+
+00:09:45.920 --> 00:09:49.800
+So okay, let's imagine that you've
+
+00:09:47.240 --> 00:09:51.280
+aligned with the AI. You know what it is
+
+00:09:49.800 --> 00:09:53.520
+you're supposed to be building. The AI
+
+00:09:51.280 --> 00:09:55.440
+has built the right thing,
+
+00:09:53.520 --> 00:09:56.480
+but it doesn't work.
+
+00:09:55.440 --> 00:09:57.840
+Raise your hands if that's happened to
+
+00:09:56.480 --> 00:09:59.800
+you.
+
+00:09:57.840 --> 00:10:01.040
+Yeah, just doesn't work.
+
+00:09:59.800 --> 00:10:03.760
+Well, there's an obvious thing that we
+
+00:10:01.040 --> 00:10:06.200
+can do to make that better, which is we
+
+00:10:03.760 --> 00:10:07.680
+can use feedback loops. We can use um
+
+00:10:06.200 --> 00:10:09.240
+static types, you know, if you're not
+
+00:10:07.680 --> 00:10:12.280
+using TypeScript, uh
+
+00:10:09.240 --> 00:10:13.520
+that's crazy. Uh if you're not using uh
+
+00:10:12.280 --> 00:10:15.360
+if you're building a front-end app and
+
+00:10:13.520 --> 00:10:17.240
+you're not giving it the LLM access to
+
+00:10:15.360 --> 00:10:19.040
+the browser so it can look around,
+
+00:10:17.240 --> 00:10:21.120
+absolutely needs that.
+
+00:10:19.040 --> 00:10:23.240
+And you obviously also need automated
+
+00:10:21.120 --> 00:10:26.080
+tests.
+
+00:10:23.240 --> 00:10:28.120
+And one sort of
+
+00:10:26.080 --> 00:10:30.440
+thing I notice here is that even with
+
+00:10:28.120 --> 00:10:32.400
+these feedback loops, the LLM doesn't
+
+00:10:30.440 --> 00:10:34.680
+use them very well. It doesn't kind of
+
+00:10:32.400 --> 00:10:35.760
+like get the most out of its feedback
+
+00:10:34.680 --> 00:10:38.160
+loops in the way that a veteran
+
+00:10:35.760 --> 00:10:40.720
+developer would. And so it does what it
+
+00:10:38.160 --> 00:10:42.520
+tends to do is just does way too much at
+
+00:10:40.720 --> 00:10:44.280
+once. It will produce like a huge
+
+00:10:42.520 --> 00:10:45.280
+amounts of code and then think, "Oh, I
+
+00:10:44.280 --> 00:10:47.040
+should probably type check that
+
+00:10:45.280 --> 00:10:48.880
+actually." Or I should uh you know,
+
+00:10:47.040 --> 00:10:50.560
+maybe check a test on that or maybe do
+
+00:10:48.880 --> 00:10:52.520
+something like that.
+
+00:10:50.560 --> 00:10:53.960
+And this in the Pragmatic Programmer
+
+00:10:52.520 --> 00:10:56.400
+they describe as outrunning your
+
+00:10:53.960 --> 00:10:58.240
+headlights. It's essentially driving too
+
+00:10:56.400 --> 00:11:00.960
+fast because
+
+00:10:58.240 --> 00:11:02.040
+the rate of feedback is your speed
+
+00:11:00.960 --> 00:11:03.600
+limit.
+
+00:11:02.040 --> 00:11:05.240
+The rate of feedback is your speed
+
+00:11:03.600 --> 00:11:07.520
+limit, which means that you should be
+
+00:11:05.240 --> 00:11:09.880
+testing as you go, taking small
+
+00:11:07.520 --> 00:11:11.920
+deliberate steps. And the AI by default
+
+00:11:09.880 --> 00:11:14.880
+is really not very good at that.
+
+00:11:11.920 --> 00:11:16.560
+So, skill number three is TDD.
+
+00:11:14.880 --> 00:11:17.880
+You should be using test-driven
+
+00:11:16.560 --> 00:11:21.680
+development
+
+00:11:17.880 --> 00:11:24.040
+because TDD forces the LLM to
+
+00:11:21.680 --> 00:11:27.120
+really take small steps. You create a
+
+00:11:24.040 --> 00:11:29.040
+test first, you make that test pass, and
+
+00:11:27.120 --> 00:11:32.280
+then you refactor the code to make it
+
+00:11:29.040 --> 00:11:33.960
+nicer and consider the design.
+
+00:11:32.280 --> 00:11:36.280
+The issue here
+
+00:11:33.960 --> 00:11:38.800
+is that testing is really hard.
+
+00:11:36.280 --> 00:11:41.560
+Testing has always been hard.
+
+00:11:38.800 --> 00:11:43.280
+And the reason for that
+
+00:11:41.560 --> 00:11:44.960
+is there are a ton
+
+00:11:43.280 --> 00:11:46.760
+of different decisions you need to make
+
+00:11:44.960 --> 00:11:48.960
+when you write a test.
+
+00:11:46.760 --> 00:11:50.520
+You need to figure out how big a unit do
+
+00:11:48.960 --> 00:11:52.000
+you want to test?
+
+00:11:50.520 --> 00:11:54.000
+You need to figure out what to mock. You
+
+00:11:52.000 --> 00:11:55.680
+need to figure out what behaviors do you
+
+00:11:54.000 --> 00:11:56.680
+even want to test in the first place?
+
+00:11:55.680 --> 00:11:58.360
+And all of these decisions are
+
+00:11:56.680 --> 00:12:00.920
+dependent. So, if you are testing a
+
+00:11:58.360 --> 00:12:03.000
+really big unit like an entire uh
+
+00:12:00.920 --> 00:12:04.520
+massive application, then it might be
+
+00:12:03.000 --> 00:12:06.760
+quite flaky. You might not want to test
+
+00:12:04.520 --> 00:12:08.360
+that many behaviors. You know, if you
+
+00:12:06.760 --> 00:12:09.760
+only test this unit, you need to mock
+
+00:12:08.360 --> 00:12:11.240
+this unit, you know. It's all
+
+00:12:09.760 --> 00:12:12.720
+interlinked. And I've been thinking
+
+00:12:11.240 --> 00:12:15.160
+about this for years, for my entire
+
+00:12:12.720 --> 00:12:17.720
+development career.
+
+00:12:15.160 --> 00:12:20.760
+And what we notice is that good
+
+00:12:17.720 --> 00:12:22.640
+codebases are easy codebases to test.
+
+00:12:20.760 --> 00:12:24.040
+Right? So, here we're starting to get
+
+00:12:22.640 --> 00:12:26.120
+back to the idea of code being
+
+00:12:24.040 --> 00:12:27.880
+important. It's that the better your
+
+00:12:26.120 --> 00:12:31.640
+codebase is, the better your feedback
+
+00:12:27.880 --> 00:12:33.200
+loops are because you're able to um
+
+00:12:31.640 --> 00:12:35.560
+give better feedback to the LLM, it
+
+00:12:33.200 --> 00:12:37.000
+produces better code.
+
+00:12:35.560 --> 00:12:38.800
+And so I thought, what does a good
+
+00:12:37.000 --> 00:12:41.080
+codebase, what does a testable codebase
+
+00:12:38.800 --> 00:12:42.440
+look like? Again, we go to John
+
+00:12:41.080 --> 00:12:45.280
+Ousterhout. [clears throat]
+
+00:12:42.440 --> 00:12:47.920
+He talks about having deep modules in
+
+00:12:45.280 --> 00:12:50.280
+your codebase. Not shallow modules, not
+
+00:12:47.920 --> 00:12:52.440
+lots of modules that expose type kind of
+
+00:12:50.280 --> 00:12:54.960
+um lots of functions.
+
+00:12:52.440 --> 00:12:57.480
+They should be relatively few large deep
+
+00:12:54.960 --> 00:12:59.480
+modules with simple interfaces.
+
+00:12:57.480 --> 00:13:01.400
+Let's compare them quickly.
+
+00:12:59.480 --> 00:13:04.040
+Deep modules, lots of functionality
+
+00:13:01.400 --> 00:13:05.640
+hidden behind a simple interface. Hiding
+
+00:13:04.040 --> 00:13:06.960
+the complexity.
+
+00:13:05.640 --> 00:13:08.080
+You can look inside the deep module if
+
+00:13:06.960 --> 00:13:10.000
+you want to, but you don't need to. You
+
+00:13:08.080 --> 00:13:12.320
+can just use the interface. Shallow
+
+00:13:10.000 --> 00:13:13.880
+modules, not much functionality, complex
+
+00:13:12.320 --> 00:13:15.200
+interface.
+
+00:13:13.880 --> 00:13:16.440
+And
+
+00:13:15.200 --> 00:13:18.360
+I'll just wait for you to take the
+
+00:13:16.440 --> 00:13:19.920
+photos.
+
+00:13:18.360 --> 00:13:22.280
+Shallow modules in a codebase kind of
+
+00:13:19.920 --> 00:13:24.839
+look like this, where you have a ton of
+
+00:13:22.280 --> 00:13:26.839
+different tiny little blobs that the AI
+
+00:13:24.839 --> 00:13:29.200
+has to walk through and navigate. And
+
+00:13:26.839 --> 00:13:30.960
+this is really hard for the AI to
+
+00:13:29.200 --> 00:13:32.320
+explore actually.
+
+00:13:30.960 --> 00:13:33.960
+And so often what you'll see is if you
+
+00:13:32.320 --> 00:13:35.560
+have a codebase like this, which AI is
+
+00:13:33.960 --> 00:13:36.520
+really good at creating codebases like
+
+00:13:35.560 --> 00:13:38.560
+this,
+
+00:13:36.520 --> 00:13:40.160
+is that you'll have a situation where AI
+
+00:13:38.560 --> 00:13:42.400
+doesn't understand what your code is
+
+00:13:40.160 --> 00:13:45.080
+doing. It will attempt to explore the
+
+00:13:42.400 --> 00:13:47.280
+code, but because it's poorly laid out,
+
+00:13:45.080 --> 00:13:49.240
+filled with shallow modules, it doesn't
+
+00:13:47.280 --> 00:13:50.880
+maybe get to the right module in time or
+
+00:13:49.240 --> 00:13:52.120
+doesn't understand all the dependencies,
+
+00:13:50.880 --> 00:13:53.720
+all that stuff. It doesn't understand
+
+00:13:52.120 --> 00:13:54.960
+your code.
+
+00:13:53.720 --> 00:13:57.960
+And so what does a
+
+00:13:54.960 --> 00:14:00.280
+codebase full of deep modules look like?
+
+00:13:57.960 --> 00:14:02.200
+Well, it looks like this.
+
+00:14:00.280 --> 00:14:04.600
+Where it's the same code, but it's just
+
+00:14:02.200 --> 00:14:08.560
+structured inside boundaries, where you
+
+00:14:04.600 --> 00:14:10.400
+have these interfaces on the top.
+
+00:14:08.560 --> 00:14:12.240
+And these interfaces, you should
+
+00:14:10.400 --> 00:14:14.600
+probably have a lot of control over them
+
+00:14:12.240 --> 00:14:17.120
+and design them really well. Otherwise,
+
+00:14:14.600 --> 00:14:18.680
+you know, AI might mess up the design.
+
+00:14:17.120 --> 00:14:20.920
+But the implementation, you can kind of
+
+00:14:18.680 --> 00:14:23.600
+leave that to the AI bit.
+
+00:14:20.920 --> 00:14:26.800
+So, how do you turn a codebase that
+
+00:14:23.600 --> 00:14:29.120
+looks like this into a codebase that
+
+00:14:26.800 --> 00:14:31.200
+looks like that?
+
+00:14:29.120 --> 00:14:33.280
+Well, I've got a skill for that. Improve
+
+00:14:31.200 --> 00:14:35.680
+codebase architecture. Turns out this is
+
+00:14:33.280 --> 00:14:36.880
+not It's it's quite complicated to do
+
+00:14:35.680 --> 00:14:38.280
+this, but it's a
+
+00:14:36.880 --> 00:14:40.640
+like a set of steps that you can
+
+00:14:38.280 --> 00:14:42.839
+reusably do again and again. You just
+
+00:14:40.640 --> 00:14:44.400
+sort of explore the codebase, look for
+
+00:14:42.839 --> 00:14:45.640
+opportunities where there's code that's
+
+00:14:44.400 --> 00:14:47.880
+kind of look um
+
+00:14:45.640 --> 00:14:50.000
+related, and wrap all of that in a deep
+
+00:14:47.880 --> 00:14:52.000
+module.
+
+00:14:50.000 --> 00:14:54.640
+And this is a testable codebase because
+
+00:14:52.000 --> 00:14:56.959
+the boundaries around this code are so
+
+00:14:54.640 --> 00:14:59.160
+so simple. You test at the interface,
+
+00:14:56.959 --> 00:15:00.480
+you verify using that interface,
+
+00:14:59.160 --> 00:15:04.240
+and you're good to go. And so this is a
+
+00:15:00.480 --> 00:15:06.480
+codebase that rewards TDD.
+
+00:15:04.240 --> 00:15:07.839
+But how about failure mode number six?
+
+00:15:06.480 --> 00:15:09.440
+Which is your Okay, let's say your
+
+00:15:07.839 --> 00:15:11.120
+feedback loops are working. Let's say
+
+00:15:09.440 --> 00:15:12.400
+that things are kicking into gear.
+
+00:15:11.120 --> 00:15:14.880
+You're able to ship more code than you
+
+00:15:12.400 --> 00:15:16.520
+ever have before, but your brain can't
+
+00:15:14.880 --> 00:15:18.560
+keep up.
+
+00:15:16.520 --> 00:15:20.440
+Right? Uh raise your hand if you've felt
+
+00:15:18.560 --> 00:15:22.320
+more tired than you have ever before in
+
+00:15:20.440 --> 00:15:25.160
+your development career.
+
+00:15:22.320 --> 00:15:27.680
+Yeah, me too. It's knackering.
+
+00:15:25.160 --> 00:15:30.600
+And I think that this is a codebase that
+
+00:15:27.680 --> 00:15:32.320
+actually makes it harder for your brain
+
+00:15:30.600 --> 00:15:33.520
+because you, as well as the AI, need to
+
+00:15:32.320 --> 00:15:34.800
+keep all of that information in your
+
+00:15:33.520 --> 00:15:38.320
+head.
+
+00:15:34.800 --> 00:15:40.760
+Whereas this, not only is it simpler
+
+00:15:38.320 --> 00:15:42.720
+for you to read and understand, it also
+
+00:15:40.760 --> 00:15:45.560
+means you can kind of treat these
+
+00:15:42.720 --> 00:15:47.360
+modules, or these deep modules, as gray
+
+00:15:45.560 --> 00:15:49.040
+boxes.
+
+00:15:47.360 --> 00:15:50.120
+You can kind of say,
+
+00:15:49.040 --> 00:15:52.200
+"Okay,
+
+00:15:50.120 --> 00:15:53.720
+I'm going to just design the interface,
+
+00:15:52.200 --> 00:15:57.000
+but I'm not going to worry too much or
+
+00:15:53.720 --> 00:15:58.520
+not review the implementation too much."
+
+00:15:57.000 --> 00:15:59.400
+You can do this obviously with uh things
+
+00:15:58.520 --> 00:16:01.600
+that are less critical in your
+
+00:15:59.400 --> 00:16:03.640
+application. Can't do this with uh you
+
+00:16:01.600 --> 00:16:05.920
+know, various things like finance or
+
+00:16:03.640 --> 00:16:07.720
+whatever, but in many many modules in
+
+00:16:05.920 --> 00:16:09.280
+your app, you don't need to think about
+
+00:16:07.720 --> 00:16:11.240
+the implementation too much as long as
+
+00:16:09.280 --> 00:16:13.079
+you have a testable boundary outside the
+
+00:16:11.240 --> 00:16:14.560
+module, and as long as you understand
+
+00:16:13.079 --> 00:16:17.280
+its purpose and can design it from the
+
+00:16:14.560 --> 00:16:19.280
+outside. I have found this has really
+
+00:16:17.280 --> 00:16:21.280
+saved my brain because I can just go,
+
+00:16:19.280 --> 00:16:23.000
+"Okay, the AI, I'll let you handle
+
+00:16:21.280 --> 00:16:24.040
+what's inside the big blob. I'm just
+
+00:16:23.000 --> 00:16:26.000
+going to test from the outside and
+
+00:16:24.040 --> 00:16:27.760
+verify it."
+
+00:16:26.000 --> 00:16:32.000
+So, that's tip number five. Design the
+
+00:16:27.760 --> 00:16:34.079
+interface, delegate the implementation.
+
+00:16:32.000 --> 00:16:35.320
+But this means that whenever we're
+
+00:16:34.079 --> 00:16:37.680
+touching the code, whenever we're
+
+00:16:35.320 --> 00:16:39.360
+planning stuff, we need to think about
+
+00:16:37.680 --> 00:16:41.400
+and be aware of the modules in our
+
+00:16:39.360 --> 00:16:43.560
+application. We need to know that map
+
+00:16:41.400 --> 00:16:45.720
+really well. It needs to be part of our
+
+00:16:43.560 --> 00:16:47.959
+ubiquitous language. We need to build it
+
+00:16:45.720 --> 00:16:50.560
+into our planning skills as well. So, my
+
+00:16:47.959 --> 00:16:52.000
+write a PRD, inside the PRD I'm specific
+
+00:16:50.560 --> 00:16:54.240
+about the module changes and the
+
+00:16:52.000 --> 00:16:55.360
+interfaces inside those modules, how
+
+00:16:54.240 --> 00:16:57.160
+they're being modified. I'm thinking
+
+00:16:55.360 --> 00:16:58.760
+about them all the time. And this comes
+
+00:16:57.160 --> 00:17:01.360
+from Kent Beck.
+
+00:16:58.760 --> 00:17:02.720
+Invest in the design of the system every
+
+00:17:01.360 --> 00:17:03.920
+day.
+
+00:17:02.720 --> 00:17:06.679
+And this is the core of it, right?
+
+00:17:03.920 --> 00:17:08.560
+Because specs to code, we are not
+
+00:17:06.679 --> 00:17:10.720
+investing in the design of the system.
+
+00:17:08.560 --> 00:17:12.240
+We are divesting from it. We're getting
+
+00:17:10.720 --> 00:17:13.959
+rid of that.
+
+00:17:12.240 --> 00:17:16.320
+Whereas this, I think, is absolutely
+
+00:17:13.959 --> 00:17:16.320
+key.
+
+00:17:16.400 --> 00:17:19.880
+And so
+
+00:17:18.040 --> 00:17:21.600
+code is not cheap. That's the message I
+
+00:17:19.880 --> 00:17:23.439
+want you to take away. Code is
+
+00:17:21.600 --> 00:17:25.079
+important.
+
+00:17:23.439 --> 00:17:27.880
+And if we think about AI as a really
+
+00:17:25.079 --> 00:17:29.600
+great on-the-ground programmer,
+
+00:17:27.880 --> 00:17:32.080
+a kind of tactical programmer, a
+
+00:17:29.600 --> 00:17:35.520
+sergeant on the ground making the code
+
+00:17:32.080 --> 00:17:36.720
+changes, you need someone above that.
+
+00:17:35.520 --> 00:17:39.600
+You need someone thinking on the
+
+00:17:36.720 --> 00:17:41.280
+strategic level. And that's you.
+
+00:17:39.600 --> 00:17:43.560
+And that requires software fundamental
+
+00:17:41.280 --> 00:17:46.400
+skills that we've been using for 20
+
+00:17:43.560 --> 00:17:48.000
+years, for longer.
+
+00:17:46.400 --> 00:17:49.560
+Now, if you were interested in any of
+
+00:17:48.000 --> 00:17:52.000
+the skills I put up here, it's in the
+
+00:17:49.560 --> 00:17:53.520
+GitHub repo macpocockskills.
+
+00:17:52.000 --> 00:17:55.920
+And if you're interested in the training
+
+00:17:53.520 --> 00:17:57.600
+that I do or any free stuff, I'm on
+
+00:17:55.920 --> 00:17:59.600
+YouTube, I'm on Twitter, but I'm also at
+
+00:17:57.600 --> 00:18:01.000
+aihero.dev, where I have a newsletter
+
+00:17:59.600 --> 00:18:03.080
+you can check out.
+
+00:18:01.000 --> 00:18:05.640
+Thank you so much. I hope that this
+
+00:18:03.080 --> 00:18:06.440
+gives you confidence in this new AI age
+
+00:18:05.640 --> 00:18:07.840
+that you can actually make a good
+
+00:18:06.440 --> 00:18:09.277
+impact.
+
+00:18:07.840 --> 00:18:10.587
+Thank you.
+
+00:18:09.277 --> 00:18:12.607
+>> [music]
+
+00:18:10.587 --> 00:18:12.607
+[applause]
+
+00:18:15.827 --> 00:18:17.847
+[music]
+
+00:18:21.067 --> 00:18:23.087
+[music]
+

@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "secondary",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sekənderi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "제2위의, 제2류의(cf. PRIMARY 1)",
+              "examples": [
+                {
+                  "text": "of <b>secondary</b> importance",
+                  "translatedText": "둘째로 중요한"
+                }
+              ],
+              "originalMeaning": "제2위의, 제2류의(cf. PRIMARY 1)"
+            },
+            {
+              "meaning": "부(副)의, 종(從)의, 부차적인, 파생적인; 종속적인, 보조의; 별로 중요하지 않은",
+              "examples": [
+                {
+                  "text": "many <b>secondary</b> effects of air pollution",
+                  "translatedText": "대기 오염에 관한 많은 부수적인 영향"
+                }
+              ],
+              "originalMeaning": "부(副)의, 종(從)의, 부차적인, 파생적인; 종속적인, 보조의; 별로 중요하지 않은"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "제2차적인 것",
+              "examples": [],
+              "originalMeaning": "제2차적인 것"
+            },
+            {
+              "meaning": "대리자, 보좌",
+              "examples": [],
+              "originalMeaning": "대리자, 보좌"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ab00dabafae14d078f250b2a1e2683d8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ab00dabafae14d078f250b2a1e2683d8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "secondaries"
+        }
+      ],
+      "aliasConjugation": "secondaries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "ec71333325084002df8aa3671a9156e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 문제는 그 문제에 비하면 부차적이다",
+      "text": "This matter is <b>secondary</b> to that."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 일은 이차적인 문제다",
+      "text": "A question like that is of <b>secondary</b> importance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "외모는 둘째 문제다",
+      "text": "Personal appearance is of <b>secondary</b> importance."
+    }
+  ],
+  "isWordType": true
+}

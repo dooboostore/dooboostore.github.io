@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "entry": "treat",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "triːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "대우하다, 다루다, 취급하다",
+              "examples": [
+                {
+                  "text": "<b>treat</b> a person kindly",
+                  "translatedText": "…을 친절하게 대하다"
+                }
+              ],
+              "originalMeaning": "대우하다, 다루다, 취급하다"
+            },
+            {
+              "meaning": "간주하다, 여기다",
+              "examples": [
+                {
+                  "text": "Let's <b>treat</b> the matter lightly.",
+                  "translatedText": "그 문제는 간단히 다루기로 합시다."
+                }
+              ],
+              "originalMeaning": "간주하다, 여기다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<문제를> 다루다, 논하다 ((of))",
+              "examples": [
+                {
+                  "text": "This book treats of magic.",
+                  "translatedText": "이 책은 마술을 다루고 있다."
+                }
+              ],
+              "originalMeaning": "<문제를> 다루다, 논하다 ((of))"
+            },
+            {
+              "meaning": "<적국·정복자 등과> 담판하다, 절충하다, 교섭하다(negotiate) ((with))",
+              "examples": [
+                {
+                  "text": "They were to <b>treat</b> with their enemy for peace.",
+                  "translatedText": "그들은 적과 화평 교섭을 하기로 했다."
+                }
+              ],
+              "originalMeaning": "<적국·정복자 등과> 담판하다, 절충하다, 교섭하다(negotiate) ((with))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "한턱내기, 대접, 향응; 한턱낼 차례",
+              "examples": [
+                {
+                  "text": "It is my <b>treat</b> now.",
+                  "translatedText": "내가 한턱낼 차례다."
+                }
+              ],
+              "originalMeaning": "한턱내기, 대접, 향응; 한턱낼 차례"
+            },
+            {
+              "meaning": "((일반적으로)) 큰 기쁨, 만족[즐거움]을 주는 것[사람], [속어] 귀여운 아가씨",
+              "examples": [
+                {
+                  "text": "It is a <b>treat</b> to see you.",
+                  "translatedText": "당신을 만나서 매우 기쁩니다."
+                }
+              ],
+              "originalMeaning": "((일반적으로)) 큰 기쁨, 만족[즐거움]을 주는 것[사람], [속어] 귀여운 아가씨"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/582d92d426ba4143bb57b623ee6f9235",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/582d92d426ba4143bb57b623ee6f9235",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "treats"
+        },
+        {
+          "type": "과거형",
+          "value": "treated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "treating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "treated"
+        }
+      ],
+      "aliasConjugation": "treats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1fab14fe3259ac2304eab4666549bc98",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이번에는 내가 한턱낼 차례다.",
+      "text": "It is my turn to <b>treat</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 나를 개처럼 다루었다",
+      "text": "He <b>treated</b> me like a dog."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신을 만나서 매우 기쁩니다.",
+      "text": "It is a <b>treat</b> to see you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리에게 술을 한턱냈다",
+      "text": "He <b>treated</b> us to a drink."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 책은 마술을 다루고 있다.",
+      "text": "This book treats of magic."
+    }
+  ],
+  "isWordType": true
+}

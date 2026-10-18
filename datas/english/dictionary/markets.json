@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "market",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│mɑːrkɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "장 ((특히 가축·식료품의)), 시장",
+              "examples": [
+                {
+                  "text": "a cattle[a fish, a flower] <b>market</b>",
+                  "translatedText": "가축[생선, 꽃] 시장"
+                }
+              ],
+              "originalMeaning": "장 ((특히 가축·식료품의)), 시장"
+            },
+            {
+              "meaning": "장날(= ~ day)",
+              "examples": [],
+              "originalMeaning": "장날(= ~ day)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "시장에서 매매하다, 거래하다, 팔다, 사다",
+              "examples": [],
+              "originalMeaning": "시장에서 매매하다, 거래하다, 팔다, 사다"
+            },
+            {
+              "meaning": "식료품 등을 사러 가다, 쇼핑하다",
+              "examples": [],
+              "originalMeaning": "식료품 등을 사러 가다, 쇼핑하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<상품을> 시장에 내놓다",
+              "examples": [],
+              "originalMeaning": "<상품을> 시장에 내놓다"
+            },
+            {
+              "meaning": "팔다",
+              "examples": [],
+              "originalMeaning": "팔다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3f02c08a86574ec085ea00ea3134e23c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3f02c08a86574ec085ea00ea3134e23c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "markets"
+        },
+        {
+          "type": "과거형",
+          "value": "marketed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "marketing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "marketed"
+        }
+      ],
+      "aliasConjugation": "markets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "95bc45eada1a810b7edd91d10b1f6181",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시장 경기가 활발치 못하다.",
+      "text": "The <b>market</b> is flat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "어느 시장이나 경기가 좋다",
+      "text": "Every <b>market</b> is booming."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "시황은 활황을 띠고 있다",
+      "text": "The <b>market</b> is active[brisk]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "다음 장은 10일에 선다",
+      "text": "The next <b>market</b> is on the 10th."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "금융 시장이 정체되어 있다",
+      "text": "The money <b>market</b> is sluggish."
+    }
+  ],
+  "isWordType": true
+}

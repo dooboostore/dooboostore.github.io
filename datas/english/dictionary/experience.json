@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "experience",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪk│spɪriəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "경험, 체험",
+              "examples": [
+                {
+                  "text": "learn by[from] <b>experience</b>",
+                  "translatedText": "경험에 의하여 배우다"
+                }
+              ],
+              "originalMeaning": "경험, 체험"
+            },
+            {
+              "meaning": "경험 내용 ((경험으로 얻은 지식·능력·기능))",
+              "examples": [
+                {
+                  "text": "a man of ripe <b>experience</b>",
+                  "translatedText": "경험이 풍부한 사람"
+                }
+              ],
+              "originalMeaning": "경험 내용 ((경험으로 얻은 지식·능력·기능))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경험하다, 체험하다",
+              "examples": [
+                {
+                  "text": "<b>experience</b> both joy and sorrow",
+                  "translatedText": "기쁨과 슬픔도 경험하다"
+                }
+              ],
+              "originalMeaning": "경험하다, 체험하다"
+            },
+            {
+              "meaning": "경험하여 알다 ((how, that …))",
+              "examples": [],
+              "originalMeaning": "경험하여 알다 ((how, that …))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2ad71d9ef3e740469aeda1e5ef783ad5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2ad71d9ef3e740469aeda1e5ef783ad5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "experiences"
+        },
+        {
+          "type": "과거형",
+          "value": "experienced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "experiencing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "experienced"
+        }
+      ],
+      "aliasConjugation": "experiences",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "76b78f36448255546bab225577098b59",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "실지로 경험한 바를 말하는 것입니다",
+      "text": "I speak from <b>experience</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "…이라는 것을 경험에서 알고 있다",
+      "text": "I know from <b>experience</b> that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직 가르쳐 본 일이 없다",
+      "text": "I am not experienced in teaching."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 구역질이 날 것처럼 느껴졌다",
+      "text": "I experienced a feeling of nausea."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 일은 숙련을 요한다",
+      "text": "The job demands[calls for] skill and <b>experience</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,161 @@
+{
+  "items": [
+    {
+      "entry": "patch",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pætʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "헝겊 조각 ((깁는 데 쓰는)), 천조각; 판자 조각 ((수리용)); 덧대는 쇳조각 ((수리용))",
+              "examples": [
+                {
+                  "text": "put a <b>patch</b> on",
+                  "translatedText": "…에 헝겊을 대다"
+                }
+              ],
+              "originalMeaning": "헝겊 조각 ((깁는 데 쓰는)), 천조각; 판자 조각 ((수리용)); 덧대는 쇳조각 ((수리용))"
+            },
+            {
+              "meaning": "상처에 대는 헝겊, 반창고, 안대",
+              "examples": [
+                {
+                  "text": "a <b>patch</b> over the eye",
+                  "translatedText": "안대"
+                }
+              ],
+              "originalMeaning": "상처에 대는 헝겊, 반창고, 안대"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 헝겊[천조각]을 대고 깁다 ((up))",
+              "examples": [],
+              "originalMeaning": "…에 헝겊[천조각]을 대고 깁다 ((up))"
+            },
+            {
+              "meaning": "수선하다, 고치다",
+              "examples": [],
+              "originalMeaning": "수선하다, 고치다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "옷에 헝겊을 대다",
+              "examples": [],
+              "originalMeaning": "옷에 헝겊을 대다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f77dbbcddd0e47a2823fc78b8d66f5bc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f77dbbcddd0e47a2823fc78b8d66f5bc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "patches"
+        },
+        {
+          "type": "과거형",
+          "value": "patched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "patching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "patched"
+        }
+      ],
+      "aliasConjugation": "patches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5dec1e4d385a2bf7a64970bf675d71f2",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "patch",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "익살 광대",
+              "examples": [],
+              "originalMeaning": "익살 광대"
+            },
+            {
+              "meaning": "바보, 멍청이",
+              "examples": [],
+              "originalMeaning": "바보, 멍청이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/48b3db455465439b8ca3dd4c692ec24e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/48b3db455465439b8ca3dd4c692ec24e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "patches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bd934d7aa67befc709547257d3e7185b",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 논밭 뙈기나 가졌다",
+      "text": "He has a few <b>patches</b> of rice paddy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "너는 그에게 대적할 상대가 안 된다",
+      "text": "You are no match for[not a <b>patch</b> on] him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 지붕이 새지 않게 급한 대로 수리했다",
+      "text": "We patched up the roof enough to stop it leaking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 가족은 땅 한 뙈기 농사로 용신하였다",
+      "text": "Our family managed to eke out a living by farming a <b>patch</b>[piece] of land."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 한동안 싸웠지만 결국은 의견 차이를 조정할 수 있었다고 생각해",
+      "text": "They were fighting for a while, but I guess they managed to <b>patch</b> things up."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "occur",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈkɜː(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<일이> 일어나다, 생기다, 발생하다 (=happen)",
+              "examples": [
+                {
+                  "text": "She described the accident as it occurred.",
+                  "translatedText": "그녀는 사건을 일어난 그대로 묘사했다."
+                }
+              ],
+              "originalMeaning": "<일이> 일어나다, 생기다, 발생하다 (=<span class='related_word' lang='en' >happen</span>)"
+            },
+            {
+              "meaning": "<동식물·광물이> 발견되다, 나타나다;[종종 부정문에서] <무생물이> …에 존재하다, 분포하다, 서식하다 ((in, on)); <물건이> 출현하다 ((in))",
+              "examples": [
+                {
+                  "text": "This word <b>occur</b> stwice in the first chapter.",
+                  "translatedText": "이 말은 제1장에 두 번 나온다."
+                }
+              ],
+              "originalMeaning": "<동식물·광물이> 발견되다, 나타나다;[종종 부정문에서] <무생물이> …에 존재하다, 분포하다, 서식하다 ((in, on)); <물건이> 출현하다 ((in))"
+            },
+            {
+              "meaning": "머리에 떠오르다, 생각이 나다 ((to))",
+              "examples": [
+                {
+                  "text": "A good idea occurred to me.",
+                  "translatedText": "좋은 생각이 떠올랐다."
+                }
+              ],
+              "originalMeaning": "머리에 떠오르다, 생각이 나다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/91c16677a9424f5c9d464f46a6c6fddd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/91c16677a9424f5c9d464f46a6c6fddd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "occurs"
+        },
+        {
+          "type": "과거형",
+          "value": "occurred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "occurring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "occurred"
+        }
+      ],
+      "aliasConjugation": "occurs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f09b251a390bce62d0b51e00ba749a6b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "적리 환자가 2명 발생했다",
+      "text": "Two cases of dysentery occurred."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 병은 연령에 관계 없이 생긴다",
+      "text": "The malady occurs at all ages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 지난달에 일어났던 일이다",
+      "text": "It took place[occurred] last month."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어려운 일은 일어나게 마련이다.",
+      "text": "Difficulties are liable to <b>occur</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이런 일이 늘 있는 것은 아니다",
+      "text": "Such things do not <b>occur</b> everyday."
+    }
+  ],
+  "isWordType": true
+}

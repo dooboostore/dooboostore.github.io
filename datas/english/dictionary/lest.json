@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "<b>lest</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "<b>lest</b>"
+        }
+      ],
+      "pos": [
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "…하지 않게, …하면 안 되니까(for fear that …)",
+              "examples": [
+                {
+                  "text": "Hide it <b>lest</b> he (should) see it.",
+                  "translatedText": "그가 보면 안 되니 감추어라."
+                }
+              ],
+              "originalMeaning": "…하지 않게, …하면 안 되니까(for fear that …)"
+            },
+            {
+              "meaning": "[fear, afraid 등에 계속되어] …하지나 않을까 하고(that …)",
+              "examples": [
+                {
+                  "text": "I fear <b>lest</b> he (should) die.",
+                  "translatedText": "그가 죽지나 않을까 걱정이다."
+                }
+              ],
+              "originalMeaning": "[fear, afraid 등에 계속되어] …하지나 않을까 하고(that …)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/93f6820d701146da90554c4a2743e9d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/93f6820d701146da90554c4a2743e9d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3a12caf623f5360e904c9317a76a1b11",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 죽지나 않을까 걱정이다.",
+      "text": "I fear <b>lest</b> he (should) die."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 보면 안 되니 감추어라.",
+      "text": "Hide it <b>lest</b> he (should) see it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 살해될까 봐 도망쳤다",
+      "text": "He fled <b>lest</b> he (should) be killed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 실패하지 않을까 걱정이다.",
+      "text": "I am anxious <b>lest</b> he (should) fail."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 소문이 사실일까 걱정이다.",
+      "text": "I fear <b>lest</b> the rumor may be true."
+    }
+  ],
+  "isWordType": true
+}

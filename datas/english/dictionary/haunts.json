@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "<b>haunt</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hɔːnt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<장소에> 자주 가다, 노상 다니다, 무상 출입하다",
+              "examples": [
+                {
+                  "text": "He hauntsbars.",
+                  "translatedText": "그는 주점에 자주 간다."
+                }
+              ],
+              "originalMeaning": "<장소에> 자주 가다, 노상 다니다, 무상 출입하다"
+            },
+            {
+              "meaning": "[종종 수동형으로] <유령 등이> …에 출몰하다, 자주 나타나다 (→haunted)",
+              "examples": [
+                {
+                  "text": "<b>haunt</b> a house",
+                  "translatedText": " 집에 자주 나오다"
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] <유령 등이> …에 출몰하다, 자주 나타나다 (→<span class='related_word' lang='en' >haunted</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "자주 다니다 ((in, about))",
+              "examples": [],
+              "originalMeaning": "자주 다니다 ((in, about))"
+            },
+            {
+              "meaning": "<유령 등이> 출몰하다",
+              "examples": [],
+              "originalMeaning": "<유령 등이> 출몰하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 늘 드나드는 곳, 자주 가는 곳; 무상 출입하는 곳; (짐승 등이) 잘 나오는 곳, 서식지, 사는 곳; (범인 등의) 소굴, 근거지",
+              "examples": [
+                {
+                  "text": "holiday <b>haunt</b> s",
+                  "translatedText": "휴일의 행락지"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] 늘 드나드는 곳, 자주 가는 곳; 무상 출입하는 곳; (짐승 등이) 잘 나오는 곳, 서식지, 사는 곳; (범인 등의) 소굴, 근거지"
+            },
+            {
+              "meaning": "유령, 도깨비",
+              "examples": [],
+              "originalMeaning": "유령, 도깨비"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bf05b31dd3944174b945f137397d6e29",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bf05b31dd3944174b945f137397d6e29",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "haunts"
+        },
+        {
+          "type": "과거형",
+          "value": "haunted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "haunting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "haunted"
+        }
+      ],
+      "aliasConjugation": "haunts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c6c465b93a2343f936269470e0f8e734",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집에는 도깨비가 나온다",
+      "text": "The house is haunted."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 집에는 귀신이 나온다",
+      "text": "A ghost <b>haunts</b> the house."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "사랑의 기억이 나를 괴롭혔다.",
+      "text": "Memories of love haunted me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자의 모습이 내 눈에 아른거리다",
+      "text": "Her figure still <b>haunts</b> me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "모두 전쟁의 공포로 시달렸다.",
+      "text": "Everyone was haunted by the fear of war."
+    }
+  ],
+  "isWordType": true
+}

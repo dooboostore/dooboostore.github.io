@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>accord</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "əˈkɔːrd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "일치[조화, 화합]하다 ((with))",
+              "examples": [
+                {
+                  "text": "The theory accords with the known facts.",
+                  "translatedText": "그 이론은 알려진 사실과 일치한다."
+                }
+              ],
+              "originalMeaning": "일치[조화, 화합]하다 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…을> 조화[일치, 적응]시키다",
+              "examples": [],
+              "originalMeaning": "<…을> 조화[일치, 적응]시키다"
+            },
+            {
+              "meaning": "<…에게 허가·칭찬·명예 등을> 주다, 허용하다(grant), 수여하다(bestow), 용인하다(concede) ((to))",
+              "examples": [
+                {
+                  "text": "<b>accord</b> due praise",
+                  "translatedText": "마땅한 칭찬을 하다"
+                }
+              ],
+              "originalMeaning": "<…에게 허가·칭찬·명예 등을> 주다, 허용하다(grant), 수여하다(bestow), 용인하다(concede) ((to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "일치, 조화",
+              "examples": [],
+              "originalMeaning": "일치, 조화"
+            },
+            {
+              "meaning": "(색·음 등의) 조화",
+              "examples": [],
+              "originalMeaning": "(색·음 등의) 조화"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3da516e1508448fb85087fc0f4e57644",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3da516e1508448fb85087fc0f4e57644",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "accords"
+        },
+        {
+          "type": "과거형",
+          "value": "accorded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "according"
+        },
+        {
+          "type": "과거 분사",
+          "value": "accorded"
+        }
+      ],
+      "aliasConjugation": "accords",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bd2e11745fd23134230e18a508cea1c5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 그가 스스로 한 짓이다",
+      "text": "He did it of his own <b>accord</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 의견은 이치에 맞는다.",
+      "text": "His opinion is accordant to reason."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람들은 이구동성으로 그를 칭찬했다",
+      "text": "They praised him with one <b>accord</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모두 약속이나 한 듯이 침묵했다",
+      "text": "All fell dumb as if with one <b>accord</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 주의는 내 주의와 일치하지 않았다.",
+      "text": "His principles did not <b>accord</b> with mine."
+    }
+  ],
+  "isWordType": true
+}

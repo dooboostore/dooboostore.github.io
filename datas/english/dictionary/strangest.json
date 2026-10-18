@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "entry": "<b>strange</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "streɪndʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "이상한, 야릇한, 묘한, 색다른, 별스러운; 예상 밖의",
+              "examples": [
+                {
+                  "text": "a <b>strange</b> accident",
+                  "translatedText": "이상한 사건"
+                }
+              ],
+              "originalMeaning": "이상한, 야릇한, 묘한, 색다른, 별스러운; 예상 밖의"
+            },
+            {
+              "meaning": "<사람·장소가> 모르는, 미지의, 낯선, 눈[귀]에 선",
+              "examples": [
+                {
+                  "text": "a <b>strange</b> face",
+                  "translatedText": "낯선 얼굴"
+                }
+              ],
+              "originalMeaning": "<사람·장소가> 모르는, 미지의, 낯선, 눈[귀]에 선"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[구어] 이상하게, 묘하게; 서먹하게",
+              "examples": [
+                {
+                  "text": "act <b>strange</b>",
+                  "translatedText": "이상한 행동을 하다"
+                }
+              ],
+              "originalMeaning": "[구어] 이상하게, 묘하게; 서먹하게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/84e8c42f12c145d2b89a29d1ba3837d7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/84e8c42f12c145d2b89a29d1ba3837d7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "stranger"
+        },
+        {
+          "type": "최상급",
+          "value": "strangest"
+        }
+      ],
+      "aliasConjugation": "stranger",
+      "aliasConjugationPos": "비교급",
+      "gdid": "ea87c0a972ea8645cb63df19cbf58df1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그가 그런 말을 하다니 이상하군.",
+      "text": "It is <b>strange</b> that he says so."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여기는 처음 와 보는 곳이다.",
+      "text": "I am quite <b>strange</b> here[to this place]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 눈치가 좀 이상하다",
+      "text": "He is somewhat <b>strange</b> in his manners."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그날 밤 기괴한 일이 일어났다",
+      "text": "A <b>strange</b> thing happened that night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 여자는 펜을 이상한 모양으로 쥔다",
+      "text": "She holds a pen in a <b>strange</b> way."
+    }
+  ],
+  "isWordType": true
+}

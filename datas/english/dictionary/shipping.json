@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "entry": "shipping",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈʃɪpɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[집합적] 선박(수), 선박 톤수(數)(tonnage)",
+              "examples": [],
+              "originalMeaning": "[집합적] 선박(수), 선박 톤수(數)(tonnage)"
+            },
+            {
+              "meaning": "적하, 선적(船積), 적송(積送)",
+              "examples": [],
+              "originalMeaning": "적하, 선적(船積), 적송(積送)"
+            },
+            {
+              "meaning": "해운(업), 선박 회사 대리업",
+              "examples": [],
+              "originalMeaning": "해운(업), 선박 회사 대리업"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/07200dce83314c87b7dc4a6d081be971",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/07200dce83314c87b7dc4a6d081be971",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "29a3227ca88f101face70a4c0d9686f5",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "ship",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃɪp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[여성 취급] (큰) 배, 함선; (교통 수단으로서의) 배",
+              "examples": [
+                {
+                  "text": "a <b>ship</b>'s doctor",
+                  "translatedText": "선의(船醫)"
+                }
+              ],
+              "originalMeaning": "[여성 취급] (큰) 배, 함선; (교통 수단으로서의) 배"
+            },
+            {
+              "meaning": "(세대박이 이상의) 범선",
+              "examples": [],
+              "originalMeaning": "(세대박이 이상의) 범선"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "배에 싣다[쌓다], 배로 보내다[나르다]; [미] (기차·트럭 등으로) 보내다, 수송하다(transport)",
+              "examples": [
+                {
+                  "text": "<b>ship</b> cattle by railroad",
+                  "translatedText": "소를 철도로 수송하다"
+                }
+              ],
+              "originalMeaning": "배에 싣다[쌓다], 배로 보내다[나르다]; [미] (기차·트럭 등으로) 보내다, 수송하다(transport)"
+            },
+            {
+              "meaning": "<배가 파도를> 뒤집어쓰다",
+              "examples": [],
+              "originalMeaning": "<배가 파도를> 뒤집어쓰다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "배에 타다, 승선하다",
+              "examples": [],
+              "originalMeaning": "배에 타다, 승선하다"
+            },
+            {
+              "meaning": "(…에) 배로 가다 ((to)), 배로 여행하다",
+              "examples": [],
+              "originalMeaning": "(…에) 배로 가다 ((to)), 배로 여행하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ddbaf3864e304c6aa1d7f3eb28dcaf33",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ddbaf3864e304c6aa1d7f3eb28dcaf33",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "ships",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f0d09839e9e7dc5a6565ca0a6af28eff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배는 닻을 내리고 있었다",
+      "text": "The <b>ship</b> was at anchor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "폭풍우가 그 배를 덮쳤다",
+      "text": "A storm overtook the <b>ship</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 배는 보스턴에 기항한다.",
+      "text": "The <b>ship</b> calls at Boston."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배는 맞바람 때문에 발이 묶이었다",
+      "text": "The <b>ship</b> was wind-bound."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배는 닻을 내리고 정박해 있다.",
+      "text": "The <b>ship</b> rides at anchor."
+    }
+  ],
+  "isWordType": true
+}

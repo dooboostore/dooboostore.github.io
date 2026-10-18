@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "drift",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "drɪft"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 표류, 떠내려감(drifting); 흐름, 흐름의 방향; 이동, 방랑",
+              "examples": [],
+              "originalMeaning": "[UC/] 표류, 떠내려감(<b>drifting</b>); 흐름, 흐름의 방향; 이동, 방랑"
+            },
+            {
+              "meaning": "밀어 보냄, 미는 힘, 추진력",
+              "examples": [],
+              "originalMeaning": "밀어 보냄, 미는 힘, 추진력"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "표류하다, 떠돌다 ((with, on, down))",
+              "examples": [
+                {
+                  "text": "<b>drifting</b> clouds",
+                  "translatedText": "뜬구름"
+                }
+              ],
+              "originalMeaning": "표류하다, 떠돌다 ((with, on, down))"
+            },
+            {
+              "meaning": "무작정 나아가다, 되는 대로 지내다; 부지중에 빠지다 ((into, toward)); 방랑하다, 전전하다, [구어] 어슬렁거리다",
+              "examples": [
+                {
+                  "text": "<b>drift</b> into a bad habit",
+                  "translatedText": "부지중에 나쁜 습관에 빠지다"
+                }
+              ],
+              "originalMeaning": "무작정 나아가다, 되는 대로 지내다; 부지중에 빠지다 ((into, toward)); 방랑하다, 전전하다, [구어] 어슬렁거리다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "표류시키다, 떠내려 보내다",
+              "examples": [
+                {
+                  "text": "be drifted into war",
+                  "translatedText": "(어쩌다) 전쟁에 휘말려 들다"
+                }
+              ],
+              "originalMeaning": "표류시키다, 떠내려 보내다"
+            },
+            {
+              "meaning": "<바람이> 날려 보내다, 불어서 쌓이게 하다",
+              "examples": [
+                {
+                  "text": "the back garden drifted with fallen leaves",
+                  "translatedText": "낙엽이 휘날려서 쌓인 뒤뜰"
+                }
+              ],
+              "originalMeaning": "<바람이> 날려 보내다, 불어서 쌓이게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7d33c78aa4c24bafa546927cab641bb0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7d33c78aa4c24bafa546927cab641bb0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "drifts"
+        },
+        {
+          "type": "과거형",
+          "value": "drifted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "drifting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "drifted"
+        }
+      ],
+      "aliasConjugation": "drifts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b75665cd0afcfac61e983328de39130d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가을은 어느새 겨울이 되었다",
+      "text": "Fall drifted into winter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 사랑이 그에게로 옮겨 갔다",
+      "text": "Her love drifted to him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리는 이틀 간이나 물결 가는 데로 떠다녔다",
+      "text": "We drifted about at the mercy of the waves[were tossed about by the waves] for two days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 배는 6일 간 표류했다",
+      "text": "The vessel drifted about[was adrift] six days."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "눈이 바람에 흩날려 쌓였다.",
+      "text": "The snow was swept into drifts by the wind."
+    }
+  ],
+  "isWordType": true
+}

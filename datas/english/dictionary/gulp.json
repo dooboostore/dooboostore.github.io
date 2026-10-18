@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>gulp</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡʌlp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "꿀꺽꿀꺽 마시다, 쭉 들이켜다; 꿀떡꿀떡 급히 먹다 ((down))",
+              "examples": [
+                {
+                  "text": "<b>gulp</b> down lunch",
+                  "translatedText": "점심을 급히 먹다"
+                }
+              ],
+              "originalMeaning": "꿀꺽꿀꺽 마시다, 쭉 들이켜다; 꿀떡꿀떡 급히 먹다 ((down))"
+            },
+            {
+              "meaning": "<눈물 등을> 삼키다, 참다, 억누르다 ((back, down)); <이야기를> 덮어놓고 믿다",
+              "examples": [
+                {
+                  "text": "<b>gulp</b> down[back] tears",
+                  "translatedText": "눈물을 삼키다, 울음을 꾹 참다"
+                }
+              ],
+              "originalMeaning": "<눈물 등을> 삼키다, 참다, 억누르다 ((back, down)); <이야기를> 덮어놓고 믿다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "숨을 죽이다; 들이켜다, 꿀꺽꿀꺽 마시다",
+              "examples": [],
+              "originalMeaning": "숨을 죽이다; 들이켜다, 꿀꺽꿀꺽 마시다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "꿀꺽꿀꺽[쭉] 마심, 들이켜는 소리[분량]; 입속에 하나 가득(한 양); [컴퓨터] 걸프 ((여러 바이트로 이루어지는 2진 숫자의 그룹))",
+              "examples": [],
+              "originalMeaning": "꿀꺽꿀꺽[쭉] 마심, 들이켜는 소리[분량]; 입속에 하나 가득(한 양); [컴퓨터] 걸프 ((여러 바이트로 이루어지는 2진 숫자의 그룹))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2bbf3ab7907e4cc888bce4d71cf74bc9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2bbf3ab7907e4cc888bce4d71cf74bc9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gulps"
+        },
+        {
+          "type": "과거형",
+          "value": "gulped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gulping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gulped"
+        }
+      ],
+      "aliasConjugation": "gulps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b3135f848989fc98a5cc30ed4351650e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 마지막 잔을 켰다",
+      "text": "I took a final <b>gulp</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 애써 눈물을 삼켰다",
+      "text": "I made an effort to <b>gulp</b> down tears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "단숨에 들이켜다 drink down[up] in a single draft[<b>gulp</b>];chug-a-lug",
+      "text": ";empty[swallow] the glass at a <b>gulp</b>;toss off"
+    }
+  ],
+  "isWordType": true
+}

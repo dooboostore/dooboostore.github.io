@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "entry": "<b>pistol</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpɪstl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "권총, 피스톨 ((회전 탄창이 없는 소형의 총; cf. REVOLVER))",
+              "examples": [],
+              "originalMeaning": "권총, 피스톨 ((회전 탄창이 없는 소형의 총; cf. REVOLVER))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "권총으로 쏘다[상처를 입히다]",
+              "examples": [],
+              "originalMeaning": "권총으로 쏘다[상처를 입히다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f0787043e8944cf39332321b4d01ec50",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f0787043e8944cf39332321b4d01ec50",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "pistols"
+        },
+        {
+          "type": "과거형",
+          "value": "pistolled, pistoled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "pistolling, pistoling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "pistolled, pistoled"
+        }
+      ],
+      "aliasConjugation": "pistols",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e9e41b6048ca4bebb4bcdb9fbd92ae3e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 권총을 차고 있다.",
+      "text": "He wears a <b>pistol</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 권총으로 표적을 겨누었다",
+      "text": "He aimed his <b>pistol</b> at the target[mark]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "권총을 가지고 장난치지 마라.",
+      "text": "Don’t fool around with the <b>pistol</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "권총을 들고 있다",
+      "text": "He is armed with a <b>pistol</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "fear",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɪr"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "무서움, 두려움, 공포(심), 공포감",
+              "examples": [
+                {
+                  "text": "with <b>fear</b>",
+                  "translatedText": "무서워하며"
+                }
+              ],
+              "originalMeaning": "무서움, 두려움, 공포(심), 공포감"
+            },
+            {
+              "meaning": "[U] 불안, 근심, 걱정(anxiety; opp. hope); (나쁜 일이 일어날) 가능성, 우려, 염려 ((for, of, about)); [C] 걱정거리",
+              "examples": [
+                {
+                  "text": "a <b>fear</b> for a person's safety",
+                  "translatedText": "…의 안부에 대한 걱정"
+                }
+              ],
+              "originalMeaning": "[U] 불안, 근심, 걱정(anxiety; opp. hope); (나쁜 일이 일어날) 가능성, 우려, 염려 ((for, of, about)); [C] 걱정거리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "무서워하다, 두려워하다, 겁내다( be afraid of)",
+              "examples": [
+                {
+                  "text": "<b>fear</b> the unknown",
+                  "translatedText": "미지(未知)의 것을 두려워하다"
+                }
+              ],
+              "originalMeaning": "무서워하다, 두려워하다, 겁내다( be afraid of)"
+            },
+            {
+              "meaning": "걱정하다, 근심하다, 염려하다(opp. hope)",
+              "examples": [
+                {
+                  "text": "I <b>fear</b> (that) we are too late.",
+                  "translatedText": "아무래도 많이 늦을 것 같다."
+                }
+              ],
+              "originalMeaning": "걱정하다, 근심하다, 염려하다(opp. hope)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "걱정하다, 염려하다 ((for))",
+              "examples": [
+                {
+                  "text": "I feared for your safety.",
+                  "translatedText": "나는 당신의 안부를 걱정했다."
+                }
+              ],
+              "originalMeaning": "걱정하다, 염려하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f1ee90475c0e4da5838da24c12b0274e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f1ee90475c0e4da5838da24c12b0274e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fears"
+        },
+        {
+          "type": "과거형",
+          "value": "feared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fearing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "feared"
+        }
+      ],
+      "aliasConjugation": "fears",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a52a8f7e9ce7df58903f1dc4afb6c165",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그것을 하기가 두렵다.",
+      "text": "I <b>fear</b> doing it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람은 죽는 것을 두려워한다.",
+      "text": "Man fears to die."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 공포를 제거해 주었다.",
+      "text": "I quitted her of <b>fear</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 공포에 질려 떨었다",
+      "text": "She shivered with <b>fear</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공포로 그는 그 자리에 못박혔다.",
+      "text": "<b>Fear</b> made him freeze."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "prepare",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "prɪ│per"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "준비하다, 마련하다, 채비를 갖추다 ((for)); 준비시키다, …의 채비를 하게 하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>prepare</b> a lecture",
+                  "translatedText": "강의 준비를 하다"
+                }
+              ],
+              "originalMeaning": "준비하다, 마련하다, 채비를 갖추다 ((for)); 준비시키다, …의 채비를 하게 하다 ((for))"
+            },
+            {
+              "meaning": "각오시키다 ((for)) (→prepared)",
+              "examples": [
+                {
+                  "text": "<b>prepare</b> children for unhappy news",
+                  "translatedText": "아이들에게 불행한 소식을 들을 각오를 시키다"
+                }
+              ],
+              "originalMeaning": "각오시키다 ((for)) (→<span class='related_word' lang='en' >prepared</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "준비하다 ((for, against)); 각오하다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>prepare</b> for examinations",
+                  "translatedText": "시험 준비를 하다"
+                }
+              ],
+              "originalMeaning": "준비하다 ((for, against)); 각오하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d41ff5c5114749f3928b5856f00a34b0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d41ff5c5114749f3928b5856f00a34b0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "prepares"
+        },
+        {
+          "type": "과거형",
+          "value": "prepared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "preparing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "prepared"
+        }
+      ],
+      "aliasConjugation": "prepares",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8cfd00cb5bcd2e069f395c3ec7476634",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 죽음을 각오하고 있다",
+      "text": "He is prepared for death."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "최악의 사태를 각오하고 있다.",
+      "text": "I am prepared for the worst."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떤 일이 일어나도 나는 태세가 돼 있다",
+      "text": "I am prepared for anything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 해외 여행 준비를 하고 있다",
+      "text": "He is preparing for a trip abroad."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나의 잘못을 시인할 각오가 되어 있다.",
+      "text": "I am prepared to admit my fault."
+    }
+  ],
+  "isWordType": true
+}

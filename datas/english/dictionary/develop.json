@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "develop",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈveləp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발달시키다, 발전[발육]시키다; 계발하다; <의론 등을> 전개하다",
+              "examples": [
+                {
+                  "text": "<b>develop</b> muscles",
+                  "translatedText": "근육을 발달시키다"
+                }
+              ],
+              "originalMeaning": "발달시키다, 발전[발육]시키다; 계발하다; <의론 등을> 전개하다"
+            },
+            {
+              "meaning": "<자원·토지를> 개발하다",
+              "examples": [
+                {
+                  "text": "<b>develop</b> natural resources",
+                  "translatedText": "천연자원을 개발하다"
+                }
+              ],
+              "originalMeaning": "<자원·토지를> 개발하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "발달하다; 발전하다; 전개되다, 발육하다 ((from, into))",
+              "examples": [
+                {
+                  "text": "The situation developed rapidly.",
+                  "translatedText": "국면이 급속히 진전되었다."
+                }
+              ],
+              "originalMeaning": "발달하다; 발전하다; 전개되다, 발육하다 ((from, into))"
+            },
+            {
+              "meaning": "<사실 등이> 밝혀지다; <숨었던 것이> 밖으로 나타나다; 우연히 (…이) 알려지다; [사진] <사진의 상(像)이> 나타나다, 현상되다; (유리한 위치에) 말을 움직이다; [생물] 발생하다, 진화하다 ((from))",
+              "examples": [
+                {
+                  "text": "It has developed that …",
+                  "translatedText": "…하다는 것이 밝혀졌다"
+                }
+              ],
+              "originalMeaning": "<사실 등이> 밝혀지다; <숨었던 것이> 밖으로 나타나다; 우연히 (…이) 알려지다; [사진] <사진의 상(像)이> 나타나다, 현상되다; (유리한 위치에) 말을 움직이다; [생물] 발생하다, 진화하다 ((from))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3657f956c2664b739da61bc002e66ccc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3657f956c2664b739da61bc002e66ccc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "develops"
+        },
+        {
+          "type": "과거형",
+          "value": "developed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "developing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "developed"
+        }
+      ],
+      "aliasConjugation": "develops",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "07605dfa9882b4766fb86877493541ee",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그에게 지독한 치통이 생겼다.",
+      "text": "He developed an appalling toothache."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 소설은 템포가 빠르다",
+      "text": "The plot develops rapidly in this novel."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "너는 독서하는 습관을 붙여야 한다.",
+      "text": "You should <b>develop</b> a reading habit."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 감기가 악화되어 폐렴이 되었다.",
+      "text": "His cold developed into pneumonia."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 독감은 폐렴을 병발했다",
+      "text": "His influenza developed into pneumonia."
+    }
+  ],
+  "isWordType": true
+}

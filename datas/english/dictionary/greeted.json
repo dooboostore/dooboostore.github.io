@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "greet",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɡriːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에게 인사하다; 환영하다, 맞이하다 ((with)); …에게 인사장을 보내다",
+              "examples": [
+                {
+                  "text": "<b>greet</b> a person with cheers",
+                  "translatedText": "…을 환호로 맞이하다"
+                }
+              ],
+              "originalMeaning": "…에게 인사하다; 환영하다, 맞이하다 ((with)); …에게 인사장을 보내다"
+            },
+            {
+              "meaning": "[보통 수동형으로] …에게 (…으로) 반응을 보이다 ((by, with))",
+              "examples": [
+                {
+                  "text": "The changes were <b>greeted</b> withsuspicion.",
+                  "translatedText": "그 변화는 의혹을 받았다"
+                }
+              ],
+              "originalMeaning": "[보통 수동형으로] …에게 (…으로) 반응을 보이다 ((by, with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "인사하다",
+              "examples": [],
+              "originalMeaning": "인사하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b2e2e2212ec3498eb95e9fb7ce51da5f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b2e2e2212ec3498eb95e9fb7ce51da5f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "greets"
+        },
+        {
+          "type": "과거형",
+          "value": "greeted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "greeting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "greeted"
+        }
+      ],
+      "aliasConjugation": "greets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c4c04d0760758dee253d32f963e741f6",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "greet",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "울다, 비탄하다, 슬퍼하다",
+              "examples": [],
+              "originalMeaning": "울다, 비탄하다, 슬퍼하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/aad55d73d78f4f8ea816a5e9d17fac70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/aad55d73d78f4f8ea816a5e9d17fac70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "greets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a43e6b3ce3ae7315eb6a91a8eecfb554",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 손을 흔들어 그녀에게 인사했다.",
+      "text": "He waved a greeting to her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "넓은 바다가 눈에 들어온다.",
+      "text": "A wide extent of sea greets the eye."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "청중은 그의 재담에 폭소를 터뜨렸다",
+      "text": "The audience burst out laughing at his joke. or His joke was <b>greeted</b> with bursts of laughter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그의 어머니를 그러안으며 인사했다",
+      "text": "He <b>greeted</b> his mother with a hug."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 정답게 악수하면서 나를 맞아 주었다",
+      "text": "He <b>greeted</b> me with a hearty[warm] handshake."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "parallel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpærəlel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "평행의, 나란한 ((with, to))",
+              "examples": [
+                {
+                  "text": "<b>parallel</b> lines",
+                  "translatedText": "평행선"
+                }
+              ],
+              "originalMeaning": "평행의, 나란한 ((with, to))"
+            },
+            {
+              "meaning": "<목적·경향 등이> 서로 같은; 같은 방향의; 같은 종류의, 비슷한",
+              "examples": [
+                {
+                  "text": "an <b>parallel</b> occasion",
+                  "translatedText": "유사한 경우, 유례(類例)"
+                }
+              ],
+              "originalMeaning": "<목적·경향 등이> 서로 같은; 같은 방향의; 같은 종류의, 비슷한"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "평행하여 ((with, to))",
+              "examples": [],
+              "originalMeaning": "평행하여 ((with, to))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "평행선, 평행하는 것",
+              "examples": [],
+              "originalMeaning": "평행선, 평행하는 것"
+            },
+            {
+              "meaning": "필적하는 것, 대등한 사람[것] ((to))",
+              "examples": [],
+              "originalMeaning": "필적하는 것, 대등한 사람[것] ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/43019a3184c746acb155dc0da401dee7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/43019a3184c746acb155dc0da401dee7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "parallels"
+        },
+        {
+          "type": "과거형",
+          "value": "paralleled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "paralleling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "paralleled"
+        }
+      ],
+      "aliasConjugation": "parallels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "561a1d502f8d1ac07237c11365a48b2b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "길은 강과 나란히 나 있다.",
+      "text": "The road parallels the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 선이 평행이라고 가정하자.",
+      "text": "Let the two lines be <b>parallel</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도로가 철도와 평행하게 나 있다",
+      "text": "The road parallels the railroad."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수영에서는 그에 필적할 자가 없다.",
+      "text": "Nobody parallels him in swimming."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여태 그런 예가 없다",
+      "text": "There is no precedent[<b>parallel</b>] for this. or This case is unprecedented. or There has never been a case like this (before)."
+    }
+  ],
+  "isWordType": true
+}

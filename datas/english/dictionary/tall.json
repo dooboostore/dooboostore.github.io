@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "entry": "tall",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tɔːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "키가 큰(opp. short), <건물·나무 등이> 높은",
+              "examples": [
+                {
+                  "text": "a <b>tall</b> woman",
+                  "translatedText": "키가 큰 여자"
+                }
+              ],
+              "originalMeaning": "키가 큰(opp. short), <건물·나무 등이> 높은"
+            },
+            {
+              "meaning": "높이[키]가 …인",
+              "examples": [
+                {
+                  "text": "He is six feet <b>tall</b>.",
+                  "translatedText": "그는 키가 6피트이다."
+                }
+              ],
+              "originalMeaning": "높이[키]가 …인"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "[구어] 거창하게, 의기양양하게",
+              "examples": [],
+              "originalMeaning": "[구어] 거창하게, 의기양양하게"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(차량과 교량 사이 등의) 공간, 자동차 높이의 최고 제한",
+              "examples": [],
+              "originalMeaning": "(차량과 교량 사이 등의) 공간, 자동차 높이의 최고 제한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4d47457ccca24f6aa885f47a9ff70b39",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4d47457ccca24f6aa885f47a9ff70b39",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "taller"
+        },
+        {
+          "type": "최상급",
+          "value": "tallest"
+        }
+      ],
+      "aliasConjugation": "taller",
+      "aliasConjugationPos": "비교급",
+      "gdid": "7697d946bdf19c1f97c69f773f9853af",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나만큼 키가 크다.",
+      "text": "He is as <b>tall</b> as I[me]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "키가 나와 같다[나보다 더 크다].",
+      "text": "You’re as <b>tall</b> as[taller than] me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나보다 키가 크다.",
+      "text": "He is taller than me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람 키가 무던히도 크다!",
+      "text": "What a <b>tall</b> man he is!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 키가 머쓱하니 크다",
+      "text": "He is <b>tall</b> and lanky."
+    }
+  ],
+  "isWordType": true
+}

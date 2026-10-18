@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "bay",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "béi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(작은) 만(灣), 후미, 내포 ((보통 gulf보다 작음))",
+              "examples": [
+                {
+                  "text": "the <b>Bay</b> of Wonsan = Wonsan <b>Bay</b>",
+                  "translatedText": "원산만"
+                }
+              ],
+              "originalMeaning": "(작은) 만(灣), 후미, 내포 ((보통 gulf보다 작음))"
+            },
+            {
+              "meaning": "3면이 산으로 둘러싸인 평지",
+              "examples": [],
+              "originalMeaning": "3면이 산으로 둘러싸인 평지"
+            },
+            {
+              "meaning": "(삼림 속에) 만의 형태로 들어서 있는 초원",
+              "examples": [],
+              "originalMeaning": "(삼림 속에) 만의 형태로 들어서 있는 초원"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a4f198dfa9414b928ef8efc882eb8713",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a4f198dfa9414b928ef8efc882eb8713",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bays"
+        },
+        {
+          "type": "과거형",
+          "value": "bayed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "baying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bayed"
+        }
+      ],
+      "aliasConjugation": "bays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "eff246fb7ed9378670aa9107fe1c00d2",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "bay",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[건축] 기둥과 기둥 사이의 한 구획, = BAY WINDOW, [항공] (비행기 동체 내부의) 격실(隔室), 방죽, 교각(橋脚) 사이, [선박] 중갑판 앞부분의 구획 ((병실용))",
+              "examples": [
+                {
+                  "text": "a sick <b>bay</b>",
+                  "translatedText": "(군함의) 병실"
+                }
+              ],
+              "originalMeaning": "[건축] 기둥과 기둥 사이의 한 구획, = <b>BAY</b> WINDOW, [항공] (비행기 동체 내부의) 격실(隔室), 방죽, 교각(橋脚) 사이, [선박] 중갑판 앞부분의 구획 ((병실용))"
+            },
+            {
+              "meaning": "(헛간의) 건초 두는 곳",
+              "examples": [
+                {
+                  "text": "a horse <b>bay</b>",
+                  "translatedText": "마구간"
+                }
+              ],
+              "originalMeaning": "(헛간의) 건초 두는 곳"
+            },
+            {
+              "meaning": "측선용 플랫폼",
+              "examples": [],
+              "originalMeaning": "측선용 플랫폼"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/633c1501971640b7bfc82a54b5db02e6",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/633c1501971640b7bfc82a54b5db02e6",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "bays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "78752757410d283b92f08d8109c3ef99",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 강은 만으로 흘러들어 간다",
+      "text": "The river pours[falls] into the <b>bay</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "개는 때때로 달을 보고 짖는다.",
+      "text": "Dogs sometimes <b>bay</b> at the moon."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수많은 섬들이 그 만에 산재해 있다.",
+      "text": "Numerous islands stud the <b>bay</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "궁서는 오히려 고양이를 문다",
+      "text": "A stag at <b>bay</b> is a dangerous foe."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "인천만",
+      "text": "Incheon <b>Bay</b>"
+    }
+  ],
+  "isWordType": true
+}

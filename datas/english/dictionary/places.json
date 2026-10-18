@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "place",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pleɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "장소, 곳",
+              "examples": [],
+              "originalMeaning": "장소, 곳"
+            },
+            {
+              "meaning": "지점, 군데",
+              "examples": [],
+              "originalMeaning": "지점, 군데"
+            },
+            {
+              "meaning": "지역, 지방; 시, 동, 리, 마을",
+              "examples": [],
+              "originalMeaning": "지역, 지방; 시, 동, 리, 마을"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "두다, 놓다, 앉히다; 자리를 잡아 주다, 배치하다, 정돈하다, 배열하다, 늘어놓다 (=put)",
+              "examples": [
+                {
+                  "text": "<b>place</b> books on the desk",
+                  "translatedText": "책을 책상 위에 놓다"
+                }
+              ],
+              "originalMeaning": "두다, 놓다, 앉히다; 자리를 잡아 주다, 배치하다, 정돈하다, 배열하다, 늘어놓다 (=<span class='related_word' lang='en' >put</span>)"
+            },
+            {
+              "meaning": "<신뢰·희망 등을> 두다, 걸다 ((in, on)); <중요성 등을> …에 두다, 인정하다; <의제·문제 등을> 제기하다, (검토·심의를 위해) 제출하다 ((before))",
+              "examples": [
+                {
+                  "text": "<b>place</b> one's trust ina person",
+                  "translatedText": "…을 신임하다"
+                }
+              ],
+              "originalMeaning": "<신뢰·희망 등을> 두다, 걸다 ((in, on)); <중요성 등을> …에 두다, 인정하다; <의제·문제 등을> 제기하다, (검토·심의를 위해) 제출하다 ((before))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[미] (경마 등에서) 3등 안에 들다, ((특히)) 2등이 되다",
+              "examples": [],
+              "originalMeaning": "[미] (경마 등에서) 3등 안에 들다, ((특히)) 2등이 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4ce5291fa3874574a5cf4ab62e4af3aa",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4ce5291fa3874574a5cf4ab62e4af3aa",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "places"
+        },
+        {
+          "type": "과거형",
+          "value": "placed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "placing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "placed"
+        }
+      ],
+      "aliasConjugation": "places",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a0e7475f85bce2c5107839e4a48645b6",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그런 장소는 존재하지 않는다.",
+      "text": "No such <b>place</b> exists."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일에는 그가 안성맞춤이다",
+      "text": "He is just the man for the position. or He is the right man in the right <b>place</b>. or He is cut out for the job. or He is admirably adapted for the work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 사람 대신 그 여자가 왔다",
+      "text": "She came in his <b>place</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그곳은 기가 막힐 정도로 지저분해",
+      "text": "That <b>place</b> looks like a tornado hit it. or That <b>place</b> looks like it went through the war."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것을 단단히 간수해 둬라",
+      "text": "Keep it in a safe <b>place</b>."
+    }
+  ],
+  "isWordType": true
+}

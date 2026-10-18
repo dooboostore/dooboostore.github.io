@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "grammar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɡræmə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 문법, 문법학, 문법 연구[론]; 말투, (표준) 어법",
+              "examples": [],
+              "originalMeaning": "[U] 문법, 문법학, 문법 연구[론]; 말투, (표준) 어법"
+            },
+            {
+              "meaning": "문법책, 문전(文典); 외국어의 초급 교본",
+              "examples": [
+                {
+                  "text": "a Russian <b>grammar</b>",
+                  "translatedText": "러시아어 문법서"
+                }
+              ],
+              "originalMeaning": "문법책, 문전(文典); 외국어의 초급 교본"
+            },
+            {
+              "meaning": "(학술의) 초보, 원리",
+              "examples": [
+                {
+                  "text": "the <b>grammar</b> of finance",
+                  "translatedText": "재정학 원리"
+                }
+              ],
+              "originalMeaning": "(학술의) 초보, 원리"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/bbe3c023c4e34f55b8ee477f8ac06838",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/bbe3c023c4e34f55b8ee477f8ac06838",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7185805a4af9a3831f342b7efdaabbaa",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 변변히 문법도 모른다",
+      "text": "He has little knowledge of <b>grammar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 곧잘 문법상의 잘못을 저지른다.",
+      "text": "He often slips (up) in his <b>grammar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들은 문법 같은 것들은 암기하여 배운다",
+      "text": "Children learn things like <b>grammar</b> by rote."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 영문법에 있어서는 초보 지식도 없다",
+      "text": "He lacks even a rudimentary knowledge of English <b>grammar</b>. or He is ill-grounded in English <b>grammar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "초급 영문법",
+      "text": "English <b>Grammar</b> for Beginners"
+    }
+  ],
+  "isWordType": true
+}

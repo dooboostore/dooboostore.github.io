@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "network",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│netwɜːrk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(운하·철도·전선·혈관 등의) 망상(網狀) 조직, 연락망; (상점 등의) 체인",
+              "examples": [
+                {
+                  "text": "a <b>network</b> of railroads",
+                  "translatedText": "철도망"
+                }
+              ],
+              "originalMeaning": "(운하·철도·전선·혈관 등의) 망상(網狀) 조직, 연락망; (상점 등의) 체인"
+            },
+            {
+              "meaning": "(전국) 방송망, 네트워크",
+              "examples": [
+                {
+                  "text": "TV <b>networks</b>",
+                  "translatedText": "텔레비전 방송망"
+                }
+              ],
+              "originalMeaning": "(전국) 방송망, 네트워크"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<프로그램이> 네트워크 방송의",
+              "examples": [],
+              "originalMeaning": "<프로그램이> 네트워크 방송의"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 방송망을 설치하다, 방송망으로 방송하다",
+              "examples": [],
+              "originalMeaning": "…에 방송망을 설치하다, 방송망으로 방송하다"
+            },
+            {
+              "meaning": "통신망[네트워크]에 접속하다",
+              "examples": [],
+              "originalMeaning": "통신망[네트워크]에 접속하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e7860f90007841439946d9e12a9780ae",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e7860f90007841439946d9e12a9780ae",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "networks"
+        },
+        {
+          "type": "과거형",
+          "value": "networked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "networking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "networked"
+        }
+      ],
+      "aliasConjugation": "networks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2599d3c4a83d5f6c278bc743b65d333f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 컴퓨터는 네트워크 인터페이스를 가지고 있다",
+      "text": "My computer has a <b>network</b> interface."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 비밀 범죄 조직의 일원이다",
+      "text": "He is a member of an underground crime <b>network</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철도가 그물처럼 전국에 퍼져 있다",
+      "text": "A <b>network</b> of railroads covers the whole country."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전국에 중계 방송되었다",
+      "text": "The broadcast was carried on a national <b>network</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "철도가 사통팔달해 있다",
+      "text": "There is a whole <b>network</b> of railways. or The country is crisscrossed with railroads."
+    }
+  ],
+  "isWordType": true
+}

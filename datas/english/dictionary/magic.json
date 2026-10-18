@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "magic",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmædʒɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "마법, 마술, 주술(呪術)",
+              "examples": [
+                {
+                  "text": "practice[work, make] <b>magic</b>",
+                  "translatedText": "마법을 걸다"
+                }
+              ],
+              "originalMeaning": "마법, 마술, 주술(呪術)"
+            },
+            {
+              "meaning": "기술(奇術), 요술",
+              "examples": [
+                {
+                  "text": "pull a rabbit out of a hat by <b>magic</b>",
+                  "translatedText": "요술로 모자에서 토끼를 꺼내다"
+                }
+              ],
+              "originalMeaning": "기술(奇術), 요술"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "[A] 마술의[같은]; 마법의; 매력 있는, 신비한; 요술의; [영·구어] 굉장한",
+              "examples": [
+                {
+                  "text": "a <b>magic</b> mirror",
+                  "translatedText": "마법의 거울 ((먼 곳이나 미래를 비추는))"
+                }
+              ],
+              "originalMeaning": "[A] 마술의[같은]; 마법의; 매력 있는, 신비한; 요술의; [영·구어] 굉장한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/30b04f0feda7459cab29d2abc1e19ffb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/30b04f0feda7459cab29d2abc1e19ffb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "magics"
+        },
+        {
+          "type": "과거형",
+          "value": "magicked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "magicking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "magicked"
+        }
+      ],
+      "aliasConjugation": "magics",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2d6b3850e589a76dccad520973e41c9a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 책은 마술을 다루고 있다.",
+      "text": "This book treats of <b>magic</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 계책은 아주 잘 들었다",
+      "text": "The trick worked like <b>magic</b>[a charm]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "두 시간가량이나 퍼붓던 비가 거짓말같이 멎었다",
+      "text": "It had been raining hard for nearly two hours, but it stopped suddenly as if by <b>magic</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요술을 부리다 juggle;do conjuring tricks;play a trick",
+      "text": ";practice the black art;use <b>magic</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "난 별수나 있는가 했지",
+      "text": "I was thinking you would have the <b>magic</b> touch."
+    }
+  ],
+  "isWordType": true
+}

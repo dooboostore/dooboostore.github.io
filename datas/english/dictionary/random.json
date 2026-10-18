@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "random",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈrændəm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "닥치는 대로의, 되는대로의",
+              "examples": [
+                {
+                  "text": "a <b>random</b> guess",
+                  "translatedText": "어림짐작"
+                }
+              ],
+              "originalMeaning": "닥치는 대로의, 되는대로의"
+            },
+            {
+              "meaning": "임의의, [통계] 무작위(無作爲)의",
+              "examples": [],
+              "originalMeaning": "임의의, [통계] 무작위(無作爲)의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[다음 성구로]",
+              "examples": [],
+              "originalMeaning": "[다음 성구로]"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "<크기·모양이> 각기 다르게, 일정하지 않게",
+              "examples": [
+                {
+                  "text": "<b>random</b>-sized slates",
+                  "translatedText": "각기 다른 크기의 슬레이트"
+                }
+              ],
+              "originalMeaning": "<크기·모양이> 각기 다르게, 일정하지 않게"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9c63f7decfd6479e9960aaf6f608df5f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9c63f7decfd6479e9960aaf6f608df5f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "afab3c5710b05651ab62cf57f1fbae28",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 내가 대충 짐작한 것이다",
+      "text": "That's my <b>random</b> guess."
+    }
+  ],
+  "isWordType": true
+}

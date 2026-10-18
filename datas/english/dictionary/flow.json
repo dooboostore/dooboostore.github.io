@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "entry": "flow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "floʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "흐르다; 흘러 나오다 ((from, out)), 흘러 들다 ((to, into))",
+              "examples": [
+                {
+                  "text": "tears flowing from her eyes",
+                  "translatedText": "그녀의 눈에서 흐르는 눈물"
+                }
+              ],
+              "originalMeaning": "흐르다; 흘러 나오다 ((from, out)), 흘러 들다 ((to, into))"
+            },
+            {
+              "meaning": "<피·전류 등이> 순환하다, 통하다(circulate)",
+              "examples": [
+                {
+                  "text": "Royal blood flows in his veins.",
+                  "translatedText": "그의 몸에는 왕족의 피가 흐르고 있다."
+                }
+              ],
+              "originalMeaning": "<피·전류 등이> 순환하다, 통하다(circulate)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<액체를> 흘리다, 흘러나오게 하다",
+              "examples": [],
+              "originalMeaning": "<액체를> 흘리다, 흘러나오게 하다"
+            },
+            {
+              "meaning": "범람시키다, 넘치게 하다(flood)",
+              "examples": [],
+              "originalMeaning": "범람시키다, 넘치게 하다(flood)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~ 또는 the ~] 흐름, 유수(流水), 유동 ((of))",
+              "examples": [
+                {
+                  "text": "<b>flow</b> velocity",
+                  "translatedText": "유속(流速)"
+                }
+              ],
+              "originalMeaning": "[a ~ 또는 the ~] 흐름, 유수(流水), 유동 ((of))"
+            },
+            {
+              "meaning": "[a ~] (말이) 콸콸 샘솟듯 함, (거침없는) 흐름 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>flow</b> of conversation",
+                  "translatedText": "거침없는 담화"
+                }
+              ],
+              "originalMeaning": "[a ~] (말이) 콸콸 샘솟듯 함, (거침없는) 흐름 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f3c950a1f25c44fbbb615999ae2e8a8c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f3c950a1f25c44fbbb615999ae2e8a8c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "flows"
+        },
+        {
+          "type": "과거형",
+          "value": "flowed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "flowing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "flowed"
+        }
+      ],
+      "aliasConjugation": "flows",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "da185574685a522a153be92d0cd8473c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조수는 하루에 두 번 밀려온다.",
+      "text": "The tide flows twice a day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금이 그 나라에서 유출되고 있다",
+      "text": "Gold flows out of the country."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지금 교통의 흐름은 순조롭다",
+      "text": "Traffic is now flowing smoothly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "괸 물이 빠지기 시작한다",
+      "text": "A pool of water begins to <b>flow</b> off."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강이 숲 사이로 흐른다",
+      "text": "The river flows through the forests."
+    }
+  ],
+  "isWordType": true
+}

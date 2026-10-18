@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "wing",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(새·곤충 등의) 날개, (천사·악마 등의) 날개",
+              "examples": [],
+              "originalMeaning": "(새·곤충 등의) 날개, (천사·악마 등의) 날개"
+            },
+            {
+              "meaning": "팔, (야구 선수의) 투구하는 팔",
+              "examples": [],
+              "originalMeaning": "팔, (야구 선수의) 투구하는 팔"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "날개를 달다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>wing</b> an arrow with feathers",
+                  "translatedText": "화살에 깃을 달다"
+                }
+              ],
+              "originalMeaning": "날개를 달다 ((with))"
+            },
+            {
+              "meaning": "신속하게 움직이게 하다; 촉진하다, 빠르게 하다",
+              "examples": [
+                {
+                  "text": "Fear winged my steps.",
+                  "translatedText": "무서워서 빨리 걸었다."
+                }
+              ],
+              "originalMeaning": "신속하게 움직이게 하다; 촉진하다, 빠르게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<새가> 날아가다, (높이) 날다",
+              "examples": [
+                {
+                  "text": "The plane winged over the Alps.",
+                  "translatedText": "비행기는 알프스 산맥 위를 날아갔다."
+                }
+              ],
+              "originalMeaning": "<새가> 날아가다, (높이) 날다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/60002458a16a41a4bd8c6d37fa80e68b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/60002458a16a41a4bd8c6d37fa80e68b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wings"
+        },
+        {
+          "type": "과거형",
+          "value": "winged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "winging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "winged"
+        }
+      ],
+      "aliasConjugation": "wings",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "a4891b60a9e6beb9918636a2916a08c8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 정당은 우익계가 지배한다",
+      "text": "The party is dominated by its right <b>wing</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 모형 비행기에 날개를 붙였다.",
+      "text": "He glued the wings onto the model airplane."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "김 중위는 자기 비행기의 오른쪽 날개에 명중탄을 맞았다",
+      "text": "Lieut. Kim took a hit on the right <b>wing</b> of his plane."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새가 날개를 파닥거린다",
+      "text": "A bird flaps its wings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새가 날개를 친다.",
+      "text": "A bird claps its wings."
+    }
+  ],
+  "isWordType": true
+}

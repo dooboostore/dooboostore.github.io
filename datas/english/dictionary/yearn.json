@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "yearn",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "jɜːrn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "동경하다, 사모하다 ((for, after)); 그리워하다, 사모의 정을 품다 ((toward, to))",
+              "examples": [
+                {
+                  "text": "<b>yearn</b> for[after] home",
+                  "translatedText": "고향을 그리워하다"
+                }
+              ],
+              "originalMeaning": "동경하다, 사모하다 ((for, after)); 그리워하다, 사모의 정을 품다 ((toward, to))"
+            },
+            {
+              "meaning": "몹시 …하고 싶어하다, 열망하다(desire)",
+              "examples": [
+                {
+                  "text": "( <b>yearn</b>+to do) They yearned to see their motherland again.",
+                  "translatedText": "그들은 모국을 다시 한번 보기를 갈망했다."
+                }
+              ],
+              "originalMeaning": "몹시 …하고 싶어하다, 열망하다(desire)"
+            },
+            {
+              "meaning": "동정하다, 불쌍히 여기다 ((over, toward(s), for))",
+              "examples": [
+                {
+                  "text": "She <b>yearn</b> ed over[Her heart yearned for] the orphan.",
+                  "translatedText": "그녀는 그 고아를 불쌍히 여겼다."
+                }
+              ],
+              "originalMeaning": "동정하다, 불쌍히 여기다 ((over, toward(s), for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6d0caf8c92a24e81a7de561bbcac9a45",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6d0caf8c92a24e81a7de561bbcac9a45",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "yearns"
+        },
+        {
+          "type": "과거형",
+          "value": "yearned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "yearning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "yearned"
+        }
+      ],
+      "aliasConjugation": "yearns",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "eab351e755bbef4c8e82965c5ae3e20d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그 고아를 불쌍히 여겼다.",
+      "text": "She yearned over[Her heart yearned for] the orphan."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 모국을 다시 한번 보기를 갈망했다.",
+      "text": "They yearned to see their motherland again."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이는 진리를 알려는 인간의 무한한 욕구이다.",
+      "text": "This is man’s infinite yearning to know the truth."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "고향 생각이 간절하다",
+      "text": "I feel homesick. or I <b>yearn</b>[long] for my home[hometown]."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "grass",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡræs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "((종류를 말할 때는 [C] )) [집합적] (잎이 가는) 풀, 꼴풀, 목초; [pl.] 풀의 잎이나 줄기",
+              "examples": [],
+              "originalMeaning": "((종류를 말할 때는 [C] )) [집합적] (잎이 가는) 풀, 꼴풀, 목초; [pl.] 풀의 잎이나 줄기"
+            },
+            {
+              "meaning": "풀밭, 초원, 목장, [보통 the ~] 잔디밭",
+              "examples": [],
+              "originalMeaning": "풀밭, 초원, 목장, [보통 the ~] 잔디밭"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "풀을 나게 하다, 풀로 덮다; 잔디밭으로 만들다",
+              "examples": [],
+              "originalMeaning": "풀을 나게 하다, 풀로 덮다; 잔디밭으로 만들다"
+            },
+            {
+              "meaning": "<가축에> 풀을 먹이다, 방목하다",
+              "examples": [],
+              "originalMeaning": "<가축에> 풀을 먹이다, 방목하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<가축이> 풀을 뜯다, 풀이 나다",
+              "examples": [],
+              "originalMeaning": "<가축이> 풀을 뜯다, 풀이 나다"
+            },
+            {
+              "meaning": "(경찰에) 밀고하다 ((on))",
+              "examples": [],
+              "originalMeaning": "(경찰에) 밀고하다 ((on))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/59a17a3a5c044af2bdf43a896536e438",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/59a17a3a5c044af2bdf43a896536e438",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "grasses"
+        },
+        {
+          "type": "과거형",
+          "value": "grassed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "grassing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "grassed"
+        }
+      ],
+      "aliasConjugation": "grasses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d31caec03df46dc66dcecab35e8fd176",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "잔디밭에 들어가지 말 것",
+      "text": "Keep off the <b>grass</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "소는 풀을 먹고 산다.",
+      "text": "Cattle live[feed] on <b>grass</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "봄이 되면 풀이 돋아난다",
+      "text": "In spring the <b>grass</b> comes out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "풀이 산들바람에 나부끼고 있다.",
+      "text": "The <b>grass</b> is swaying in the breeze."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "한 떼의 사슴이 풀을 뜯고 있다",
+      "text": "A herd of deer are feeding on <b>grass</b>."
+    }
+  ],
+  "isWordType": true
+}

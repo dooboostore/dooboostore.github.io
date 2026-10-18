@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "<b>snowball</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│snoʊbɔːl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "눈뭉치, 눈덩이",
+              "examples": [
+                {
+                  "text": "play at snowballs",
+                  "translatedText": "눈싸움하다"
+                }
+              ],
+              "originalMeaning": "눈뭉치, 눈덩이"
+            },
+            {
+              "meaning": "백발의 흑인",
+              "examples": [],
+              "originalMeaning": "백발의 흑인"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 눈덩이를 집어던지다",
+              "examples": [],
+              "originalMeaning": "…에 눈덩이를 집어던지다"
+            },
+            {
+              "meaning": "눈덩이식으로 늘리다",
+              "examples": [],
+              "originalMeaning": "눈덩이식으로 늘리다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "눈싸움을 하다",
+              "examples": [],
+              "originalMeaning": "눈싸움을 하다"
+            },
+            {
+              "meaning": "(눈덩이처럼) 점점 커지다",
+              "examples": [],
+              "originalMeaning": "(눈덩이처럼) 점점 커지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a65838253c4e4c2a9d708b87d1b404a0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a65838253c4e4c2a9d708b87d1b404a0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "snowballs"
+        },
+        {
+          "type": "과거형",
+          "value": "snowballed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "snowballing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "snowballed"
+        }
+      ],
+      "aliasConjugation": "snowballs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9a15d52b23ff98a45ca026890098b1e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어린이들이 눈싸움을 하고 있다",
+      "text": "The children are throwing snowballs at each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들은 운동장에서 눈뭉치를 굴리고 있었다.",
+      "text": "The children were rolling a <b>snowball</b> along the playground."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 일은 있을 수 없어",
+      "text": "Pigs may fly. or There isn't a <b>snowball</b>'s chance in hell."
+    }
+  ],
+  "isWordType": true
+}

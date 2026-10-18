@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "snack",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "snæk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "간단한[가벼운] 식사, 간식, 스낵",
+              "examples": [],
+              "originalMeaning": "간단한[가벼운] 식사, 간식, 스낵"
+            },
+            {
+              "meaning": "한 입, 소량",
+              "examples": [],
+              "originalMeaning": "한 입, 소량"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "가벼운 식사를 하다",
+              "examples": [],
+              "originalMeaning": "가벼운 식사를 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0e2c7e676362483bb2d5d4454418e38a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0e2c7e676362483bb2d5d4454418e38a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "snacks"
+        },
+        {
+          "type": "과거형",
+          "value": "snacked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "snacking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "snacked"
+        }
+      ],
+      "aliasConjugation": "snacks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "059020f72f723a7411f6aa97513683eb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여보, 간식 좀 먹고 싶은데",
+      "text": "I feel like some snacks, honey."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "거리에는 포장마차가 즐비하다",
+      "text": "The street is lined with <b>snack</b> stalls."
+    }
+  ],
+  "isWordType": true
+}

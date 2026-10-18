@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+      "entry": "transform",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "træns│fɔːrm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "변형시키다, 변모[변태]시키다, <외관·모양을> 일변시키다 ((in, into)), (=change)",
+              "examples": [
+                {
+                  "text": "Joy transformed her face.",
+                  "translatedText": "기쁨으로 그녀의 얼굴은 싹 달라졌다."
+                }
+              ],
+              "originalMeaning": "변형시키다, 변모[변태]시키다, <외관·모양을> 일변시키다 ((in, into)), (=<span class='related_word' lang='en' >change</span>)"
+            },
+            {
+              "meaning": "다른 물질로 만들다 ((특히 연금술에서))",
+              "examples": [],
+              "originalMeaning": "다른 물질로 만들다 ((특히 연금술에서))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<형상·성질이> 변하다, 변질하다, 변형하다",
+              "examples": [],
+              "originalMeaning": "<형상·성질이> 변하다, 변질하다, 변형하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "변환",
+              "examples": [],
+              "originalMeaning": "변환"
+            },
+            {
+              "meaning": "변형[변화, 변질](의 결과)",
+              "examples": [],
+              "originalMeaning": "변형[변화, 변질](의 결과)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dee9bdc36e3d42bcbc6c1b1fefcc2985",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dee9bdc36e3d42bcbc6c1b1fefcc2985",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "transforms"
+        },
+        {
+          "type": "과거형",
+          "value": "transformed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "transforming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "transformed"
+        }
+      ],
+      "aliasConjugation": "transforms",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3b539f4c7053886372168e90be9cbfc2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기쁨으로 그녀의 얼굴은 싹 달라졌다.",
+      "text": "Joy transformed her face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "요정은 호박을 마차로 둔갑시켰다",
+      "text": "The fairy transformed[changed, turned] the pumpkin into a carriage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "쐐기벌레는 나비로 변한다.",
+      "text": "A caterpillar is transformed into a butterfly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여우가 여자로 둔갑했다",
+      "text": "A fox transformed himself into[took the shape of] a woman."
+    }
+  ],
+  "isWordType": true
+}

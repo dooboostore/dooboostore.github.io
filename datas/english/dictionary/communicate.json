@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "communicate",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈmjuːnɪkeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<정보·뉴스 등을> 전달하다(impart) ((to)), <동력·열 등을> 전하다(transmit) ((to))",
+              "examples": [
+                {
+                  "text": "<b>communicate</b> opinions[ideas, wishes] to others",
+                  "translatedText": "의견[사상, 희망]을 남에게 전하다"
+                }
+              ],
+              "originalMeaning": "<정보·뉴스 등을> 전달하다(impart) ((to)), <동력·열 등을> 전하다(transmit) ((to))"
+            },
+            {
+              "meaning": "<병을> 전염[감염]시키다",
+              "examples": [],
+              "originalMeaning": "<병을> 전염[감염]시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "의사를 소통하다, 서로 이해하다; 통신하다, 연락하다 ((with))",
+              "examples": [
+                {
+                  "text": "They <b>communicate</b> with each other by mail.",
+                  "translatedText": "그들은 서로 편지로 연락하고 있다."
+                }
+              ],
+              "originalMeaning": "의사를 소통하다, 서로 이해하다; 통신하다, 연락하다 ((with))"
+            },
+            {
+              "meaning": "<길·방 등이> 통해[이어져] 있다 ((with))",
+              "examples": [
+                {
+                  "text": "The bedroom <b>communicate</b> s with the bathroom.",
+                  "translatedText": "침실은 욕실로 통해 있다."
+                }
+              ],
+              "originalMeaning": "<길·방 등이> 통해[이어져] 있다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff0883836c6a46f58ea2c1b9c8aaccf0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff0883836c6a46f58ea2c1b9c8aaccf0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "communicates"
+        },
+        {
+          "type": "과거형",
+          "value": "communicated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "communicating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "communicated"
+        }
+      ],
+      "aliasConjugation": "communicates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2b7a95abd610be2ebd776758169b452e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "난로는 방을 따뜻하게 한다.",
+      "text": "A stove communicates heat to a room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "침실은 욕실로 통해 있다.",
+      "text": "The bedroom communicates with the bathroom."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 서로 편지로 연락하고 있다.",
+      "text": "They <b>communicate</b> with each other by mail."
+    }
+  ],
+  "isWordType": true
+}

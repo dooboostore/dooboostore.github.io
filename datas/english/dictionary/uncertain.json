@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "uncertain",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ʌnˈsɜːrtn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<시간·수량 등이> 불확실한, 미정의; 모호한",
+              "examples": [],
+              "originalMeaning": "<시간·수량 등이> 불확실한, 미정의; 모호한"
+            },
+            {
+              "meaning": "<여성의 나이가> 분명하지 않은",
+              "examples": [
+                {
+                  "text": "a lady of <b>uncertain</b> age",
+                  "translatedText": "나이가 분명하지 않은 부인 ((실제보다 젊게 보이려고 하는 중년 부인))"
+                }
+              ],
+              "originalMeaning": "<여성의 나이가> 분명하지 않은"
+            },
+            {
+              "meaning": "확신이 없는, 분명히[확실히] 알지 못하는, 단정할 수 없는 ((of, about, as to))",
+              "examples": [
+                {
+                  "text": "She was <b>uncertain</b> of success.",
+                  "translatedText": "그녀는 성공의 확신이 없었다."
+                }
+              ],
+              "originalMeaning": "확신이 없는, 분명히[확실히] 알지 못하는, 단정할 수 없는 ((of, about, as to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b6dace3dc3974ab28eafa00d43b3bf43",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b6dace3dc3974ab28eafa00d43b3bf43",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "cfaa7c96293f76e4bfd21b2b8999d88b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 성공의 확신이 없었다.",
+      "text": "She was <b>uncertain</b> of success."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 어찌할 줄 몰라 서성거렸다",
+      "text": "He walked back and forth, <b>uncertain</b> what to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 사람은 어떤 원인으로 죽었는지 불명하다",
+      "text": "The cause of his death is unknown[<b>uncertain</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아직은 승패를 헤아릴 수 없다",
+      "text": "The issue is in doubt. or The issue is <b>uncertain</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그가 직접 오려는지 모르겠다",
+      "text": "I am <b>uncertain</b> whether he will come himself or not."
+    }
+  ],
+  "isWordType": true
+}

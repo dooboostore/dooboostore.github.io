@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "buddy",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbʌdi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "동료, 친구, 동지",
+              "examples": [],
+              "originalMeaning": "동료, 친구, 동지"
+            },
+            {
+              "meaning": "여보게, 자네 ((호칭))",
+              "examples": [],
+              "originalMeaning": "여보게, 자네 ((호칭))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "친해지다 ((up, with))",
+              "examples": [],
+              "originalMeaning": "친해지다 ((up, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/883fa6bbff0e4b45ad920e04bd00748f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/883fa6bbff0e4b45ad920e04bd00748f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "buddies"
+        },
+        {
+          "type": "과거형",
+          "value": "buddied"
+        },
+        {
+          "type": "현재 분사",
+          "value": "buddying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "buddied"
+        }
+      ],
+      "aliasConjugation": "buddies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "8532174ea55789d8b8726392b052f665",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 대학교 때의 고우이다",
+      "text": "He is an old college <b>buddy</b> of mine."
+    }
+  ],
+  "isWordType": true
+}

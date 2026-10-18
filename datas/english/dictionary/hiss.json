@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "<b>hiss</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "hɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<증기·뱀·거위 등이> 쉿 하는 소리를 내다",
+              "examples": [
+                {
+                  "text": "The serpent hisses.",
+                  "translatedText": "뱀이 쉿 하고 소리를 낸다."
+                }
+              ],
+              "originalMeaning": "<증기·뱀·거위 등이> 쉿 하는 소리를 내다"
+            },
+            {
+              "meaning": "쉿 하고 불만[비난, 경멸, 노여움]의 소리를 내다 ((at))",
+              "examples": [
+                {
+                  "text": "<b>hiss</b> at an actor",
+                  "translatedText": "쉿쉿 하고 배우를 야유하다"
+                }
+              ],
+              "originalMeaning": "쉿 하고 불만[비난, 경멸, 노여움]의 소리를 내다 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "쉿 하고 꾸짖다[제지하다], 쉿 하는 소리로 비난을 나타내다; 쉿 소리를 내며 말하다",
+              "examples": [
+                {
+                  "text": "The audience hissed the controversial play.",
+                  "translatedText": "관중들은 그 논란이 많은 연극을 쉿쉿 하며 비난했다."
+                }
+              ],
+              "originalMeaning": "쉿 하고 꾸짖다[제지하다], 쉿 하는 소리로 비난을 나타내다; 쉿 소리를 내며 말하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "쉿 ((제지·힐책의 소리)), 쉬쉬하는 소리; 슛슛[솨] 하고 나는 소리 ((압축 가스·증기 등이 작은 구멍에서 샐 때))",
+              "examples": [
+                {
+                  "text": "the <b>hiss</b> of soda",
+                  "translatedText": "소다수의 쉿 하고 거품이 이는 소리"
+                }
+              ],
+              "originalMeaning": "쉿 ((제지·힐책의 소리)), 쉬쉬하는 소리; 슛슛[솨] 하고 나는 소리 ((압축 가스·증기 등이 작은 구멍에서 샐 때))"
+            },
+            {
+              "meaning": "[음성] = HISSING SOUND, [전자] 히스 ((고음역의 잡음))",
+              "examples": [],
+              "originalMeaning": "[음성] = HISSING SOUND, [전자] 히스 ((고음역의 잡음))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0e3d7ad8855b4022a62fa401a718b3a2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0e3d7ad8855b4022a62fa401a718b3a2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "hisses"
+        },
+        {
+          "type": "과거형",
+          "value": "hissed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "hissing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "hissed"
+        }
+      ],
+      "aliasConjugation": "hisses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e206f8e7323ebed84e70750046ca4e05",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그 안을 야유를 보내며 저지시켰다",
+      "text": "They howled[hissed] down the proposal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "픽 소리를 내며 타이어의 바람이 빠졌다",
+      "text": "Air hissed to escape from the tire."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 연설은 관중들의 야유로 중단되었다",
+      "text": "His speech was interrupted by boos and hisses."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "관중들은 그 논란이 많은 연극을 쉿쉿 하며 비난했다.",
+      "text": "The audience hissed the controversial play."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "바람이 윙윙 불어댔다",
+      "text": "The wind hissed and raged."
+    }
+  ],
+  "isWordType": true
+}

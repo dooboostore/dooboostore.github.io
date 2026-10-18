@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "entry": "manufacture",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌmænjuˈfæktʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (대규모의) 제조, 제작; 생산; 형성; 제조업",
+              "examples": [
+                {
+                  "text": "steel <b>manufacture</b>",
+                  "translatedText": "제강업"
+                }
+              ],
+              "originalMeaning": "[U] (대규모의) 제조, 제작; 생산; 형성; 제조업"
+            },
+            {
+              "meaning": "[pl.] 제품, 제조품",
+              "examples": [
+                {
+                  "text": "cotton manufactures",
+                  "translatedText": "면제품"
+                }
+              ],
+              "originalMeaning": "[pl.] 제품, 제조품"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(대규모로) 제조[제작]하다",
+              "examples": [
+                {
+                  "text": "<b>manufacture</b> d goods",
+                  "translatedText": "(생산) 제품"
+                }
+              ],
+              "originalMeaning": "(대규모로) 제조[제작]하다"
+            },
+            {
+              "meaning": "<문학 작품 등을> 남작하다",
+              "examples": [],
+              "originalMeaning": "<문학 작품 등을> 남작하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9969d59075da431b861cee7258d22db9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9969d59075da431b861cee7258d22db9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "manufactures"
+        },
+        {
+          "type": "과거형",
+          "value": "manufactured"
+        },
+        {
+          "type": "현재 분사",
+          "value": "manufacturing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "manufactured"
+        }
+      ],
+      "aliasConjugation": "manufactures",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "66041426a0523e2695527a0fcd1413d2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 제조 방법은 극비다",
+      "text": "The process of <b>manufacture</b> is a closely guarded secret."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한국산은 이곳에서는 외국산에 압도당하고 있다",
+      "text": "Foreign manufactures drive Korean goods out of the market here."
+    }
+  ],
+  "isWordType": true
+}

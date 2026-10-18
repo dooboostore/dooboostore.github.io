@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "link",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "lɪŋk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(사슬의) 고리, 고리 모양의 것; [pl.] 커프스 버튼(= cuff ~s); (뜨개질의) 코, 끈 꿰는 구멍; (순대 등의) 한 토막",
+              "examples": [
+                {
+                  "text": "heavy links",
+                  "translatedText": "무거운 사슬 고리"
+                }
+              ],
+              "originalMeaning": "(사슬의) 고리, 고리 모양의 것; [pl.] 커프스 버튼(= cuff ~s); (뜨개질의) 코, 끈 꿰는 구멍; (순대 등의) 한 토막"
+            },
+            {
+              "meaning": "결합시키는 사람[것]; 연결, 유대, 관련 ((between))",
+              "examples": [
+                {
+                  "text": "the <b>link</b> of brotherhood",
+                  "translatedText": "형제간의 유대"
+                }
+              ],
+              "originalMeaning": "결합시키는 사람[것]; 연결, 유대, 관련 ((between))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "연결[연접]하다, 잇다 ((together, up; to, with))",
+              "examples": [
+                {
+                  "text": "<b>link</b> the human heart with nature",
+                  "translatedText": "인간의 마음과 자연을 이어주다"
+                }
+              ],
+              "originalMeaning": "연결[연접]하다, 잇다 ((together, up; to, with))"
+            },
+            {
+              "meaning": "<손을> 맞잡다(clasp); <팔을> 끼다(hook) ((in, through))",
+              "examples": [
+                {
+                  "text": "<b>link</b> one's arm in[through] another's",
+                  "translatedText": "남과 팔을 끼다"
+                }
+              ],
+              "originalMeaning": "<손을> 맞잡다(clasp); <팔을> 끼다(hook) ((in, through))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "연결되다, 이어지다 ((up, together; with))",
+              "examples": [],
+              "originalMeaning": "연결되다, 이어지다 ((up, together; with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/625e056fcf694c6cb3ece703dfde5793",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/625e056fcf694c6cb3ece703dfde5793",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "links"
+        },
+        {
+          "type": "과거형",
+          "value": "linked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "linking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "linked"
+        }
+      ],
+      "aliasConjugation": "links",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fe8f37056aa8405d0042593f67758033",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "link",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "횃불(torch)",
+              "examples": [],
+              "originalMeaning": "횃불(torch)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/505e1c2113014bfbb62de147144f1ef9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/505e1c2113014bfbb62de147144f1ef9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "links",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "14c64a1522564c907e60f2bf94a8d723",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새 다리는 그 섬과 본토를 연결할 것이다.",
+      "text": "The new bridge will <b>link</b> the island to the mainland."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 두 사건이 어떤 식으로 관련된 것은 틀림없다",
+      "text": "There is no doubt that the two incidents are connected[linked, related] in some way."
+    }
+  ],
+  "isWordType": true
+}

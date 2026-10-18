@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "amalgamate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈmælɡəmeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<회사 등을> 통합[합병]하다(combine)",
+              "examples": [],
+              "originalMeaning": "<회사 등을> 통합[합병]하다(combine)"
+            },
+            {
+              "meaning": "<다른 종족·사상 등을> 혼합[융합]시키다",
+              "examples": [],
+              "originalMeaning": "<다른 종족·사상 등을> 혼합[융합]시키다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<회사 등이> 합병하다",
+              "examples": [],
+              "originalMeaning": "<회사 등이> 합병하다"
+            },
+            {
+              "meaning": "융합[혼합]하다",
+              "examples": [],
+              "originalMeaning": "융합[혼합]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de05796fd1504dcdba79864e4ce55861",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de05796fd1504dcdba79864e4ce55861",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "amalgamates"
+        },
+        {
+          "type": "과거형",
+          "value": "amalgamated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "amalgamating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "amalgamated"
+        }
+      ],
+      "aliasConjugation": "amalgamates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "37a45870820087548c7ad5b45004e7e0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 회사는 다른 회사에 병합되었다",
+      "text": "The firm was <b>amalgamated</b> into another."
+    }
+  ],
+  "isWordType": true
+}

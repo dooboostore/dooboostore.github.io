@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "spare",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "sper"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "용서하다, 벌주지 않다, ((특히)) 목숨을 살려주다",
+              "examples": [
+                {
+                  "text": "I hope to see you again if I am spared.",
+                  "translatedText": "(하느님의 가호로) 목숨이 붙어 있으면 다시 뵙기를 바랍니다."
+                }
+              ],
+              "originalMeaning": "용서하다, 벌주지 않다, ((특히)) 목숨을 살려주다"
+            },
+            {
+              "meaning": "<…에게> <고생 등을> 시키지 않다, 면하게 하다, <사람이> …당하지 않게 하다",
+              "examples": [
+                {
+                  "text": "<b>Spare</b> his blushes.",
+                  "translatedText": "그에게 창피를 주지 마라."
+                }
+              ],
+              "originalMeaning": "<…에게> <고생 등을> 시키지 않다, 면하게 하다, <사람이> …당하지 않게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "절약하다, 아끼다",
+              "examples": [],
+              "originalMeaning": "절약하다, 아끼다"
+            },
+            {
+              "meaning": "[드물게] (사람에게) 위해를 가하지 않다, 벌하지 않다, 관대하게 다루다",
+              "examples": [],
+              "originalMeaning": "[드물게] (사람에게) 위해를 가하지 않다, 벌하지 않다, 관대하게 다루다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "예비품, 비상용품, 준비품; [pl.] [영] (기계 등의) 예비 부품; 스페어 타이어[키]",
+              "examples": [],
+              "originalMeaning": "예비품, 비상용품, 준비품; [pl.] [영] (기계 등의) 예비 부품; 스페어 타이어[키]"
+            },
+            {
+              "meaning": "[볼링] 공을 두 번 굴려 핀 10개를 전부 넘어뜨리기, 그로 인한 득점",
+              "examples": [],
+              "originalMeaning": "[볼링] 공을 두 번 굴려 핀 10개를 전부 넘어뜨리기, 그로 인한 득점"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/9dbc22129f7d45c1bcbc6ba5a85cb3fc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/9dbc22129f7d45c1bcbc6ba5a85cb3fc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "sparer"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "spares"
+        },
+        {
+          "type": "최상급",
+          "value": "sparest"
+        },
+        {
+          "type": "과거형",
+          "value": "spared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sparing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "spared"
+        }
+      ],
+      "aliasConjugation": "sparer",
+      "aliasConjugationPos": "비교급",
+      "gdid": "3d0b3769a212536334518ae78041a49e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 것 좀 남겨 놔라",
+      "text": "<b>Spare</b> some for me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여분의 돈을 가지고 있다",
+      "text": "I have some money to <b>spare</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이제 10원의 여유도 없다",
+      "text": "Now I can't really <b>spare</b> ten won."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것에 시간을 낼 수 없다.",
+      "text": "I cannot <b>spare</b> time for it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "부디 그의 목숨을 살려 주십시오.",
+      "text": "Please <b>spare</b> him his life."
+    }
+  ],
+  "isWordType": true
+}

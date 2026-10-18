@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "entry": "publicity",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pʌbˈlɪsəti"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "널리 알려짐, 주지(周知), 공표; 명성, 평판",
+              "examples": [
+                {
+                  "text": "a <b>publicity</b> hound",
+                  "translatedText": "[미] 신문에 이름을 올리고 싶어하는 사람"
+                }
+              ],
+              "originalMeaning": "널리 알려짐, 주지(周知), 공표; 명성, 평판"
+            },
+            {
+              "meaning": "광고, 선전, 홍보",
+              "examples": [
+                {
+                  "text": "a <b>publicity</b> campaign",
+                  "translatedText": "공보[선전] 활동"
+                }
+              ],
+              "originalMeaning": "광고, 선전, 홍보"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ff238852e9b8455b9024d1ffc4aa59c5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ff238852e9b8455b9024d1ffc4aa59c5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "6e76f056322b1e87f748fb58724d5df8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사건은 국내에 널리 알려졌다",
+      "text": "The case received wide <b>publicity</b> in the country."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것을 널리 세상에 알려야 한다",
+      "text": "The matter must be given wider <b>publicity</b>. or The matter must become public."
+    }
+  ],
+  "isWordType": true
+}

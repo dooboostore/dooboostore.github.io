@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "entry": "interrogation",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "intèrəɡéiʃən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC] 질문, 심문; 의문",
+              "examples": [],
+              "originalMeaning": "[UC] 질문, 심문; 의문"
+            },
+            {
+              "meaning": "의문 부호",
+              "examples": [],
+              "originalMeaning": "의문 부호"
+            },
+            {
+              "meaning": "질문장",
+              "examples": [],
+              "originalMeaning": "질문장"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/77abd3cb433340bd9e6234577455b076",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/77abd3cb433340bd9e6234577455b076",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "213379260a757400d48ca172b44cf23b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 예심에서 이를 부인했다",
+      "text": "In the pretrial <b>interrogation</b> he denied it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 취조를 받기 위해 경찰서에 연행되었다",
+      "text": "He was taken to the police station for <b>interrogation</b>."
+    }
+  ],
+  "isWordType": true
+}

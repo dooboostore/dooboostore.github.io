@@ -1,0 +1,151 @@
+{
+  "items": [
+    {
+      "entry": "sold",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "SELL의 과거·과거분사",
+              "examples": [],
+              "originalMeaning": "<b>SELL</b>의 과거·과거분사"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/1528c18b029a4e71aba93ede0a78c9a3",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/1528c18b029a4e71aba93ede0a78c9a3",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "0e1529816ae94d81753f743698d83fd1",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "sell",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sel"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "팔다, 매도(賣渡)하다, 매각하다(opp. buy)",
+              "examples": [
+                {
+                  "text": "a house to <b>sell</b>",
+                  "translatedText": "팔 집"
+                }
+              ],
+              "originalMeaning": "팔다, 매도(賣渡)하다, 매각하다(opp. buy)"
+            },
+            {
+              "meaning": "<가게가 물건을> 판매하다, 장사하다",
+              "examples": [
+                {
+                  "text": "Do you <b>sell</b> sugar?",
+                  "translatedText": "설탕 있습니까?"
+                }
+              ],
+              "originalMeaning": "<가게가 물건을> 판매하다, 장사하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<사람이> 팔다, 장사하다; 팔러 가다, 팔려고 하다",
+              "examples": [
+                {
+                  "text": "My brother sellsin New York.",
+                  "translatedText": "내 형은 뉴욕에서 장사를 하고 있다."
+                }
+              ],
+              "originalMeaning": "<사람이> 팔다, 장사하다; 팔러 가다, 팔려고 하다"
+            },
+            {
+              "meaning": "<물건이> 팔리다; (얼마에) 팔리다, 판매되다, 판매 성적이 …하다 ((at, for))",
+              "examples": [
+                {
+                  "text": "The book sells well.",
+                  "translatedText": "그 책은 잘 팔린다."
+                }
+              ],
+              "originalMeaning": "<물건이> 팔리다; (얼마에) 팔리다, 판매되다, 판매 성적이 …하다 ((at, for))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "판매(술), 판매 면에서 본 매력",
+              "examples": [],
+              "originalMeaning": "판매(술), 판매 면에서 본 매력"
+            },
+            {
+              "meaning": "잘 팔리는 물건, 인기 상품",
+              "examples": [],
+              "originalMeaning": "잘 팔리는 물건, 인기 상품"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7089a01a7f6d414495e68dee079e6453",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7089a01a7f6d414495e68dee079e6453",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "sells",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "810dd8ca0dd998b95af8ad02ff142014",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 물건은 떨어졌습니다",
+      "text": "The article is out of stock[is all <b>sold</b> out]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "만루가 되다",
+      "text": "The bases are full[choked]. or The sacks are tenanted[<b>sold</b> out]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "금일 매진",
+      "text": "<b>Sold</b> out today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 값에 팔면 제가 밑집니다",
+      "text": "I will be losing money if I <b>sell</b> it at that price. or But I'm losing by it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 책은 잘 팔린다.",
+      "text": "The book sells well."
+    }
+  ],
+  "isWordType": true
+}

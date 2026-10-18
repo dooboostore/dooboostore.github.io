@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "certify",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│sɜːrtɪfaɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "(서명 날인한 문서로) 증명하다, <사실·임명(任名) 등을> 인증(認證)하다; [미] <은행 등이> <수표의> 지급을 보증하다; <…의 질·가치 등을> 보증하다",
+              "examples": [
+                {
+                  "text": "<b>certify</b> a check",
+                  "translatedText": " 수표의 지급을 보증하다"
+                }
+              ],
+              "originalMeaning": "(서명 날인한 문서로) 증명하다, <사실·임명(任名) 등을> 인증(認證)하다; [미] <은행 등이> <수표의> 지급을 보증하다; <…의 질·가치 등을> 보증하다"
+            },
+            {
+              "meaning": "…에게 증명서[면허장]를 교부[발행]하다",
+              "examples": [],
+              "originalMeaning": "…에게 증명서[면허장]를 교부[발행]하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(사실 등을) 보증[증명]하다 ((to)), (…의) 증인이 되다 ((for))",
+              "examples": [
+                {
+                  "text": "<b>certify</b> to a person's character",
+                  "translatedText": "…의 사람됨을 보증하다"
+                }
+              ],
+              "originalMeaning": "(사실 등을) 보증[증명]하다 ((to)), (…의) 증인이 되다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8ac1bda89e48416f89d56ccb744bc7b5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8ac1bda89e48416f89d56ccb744bc7b5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "certifies"
+        },
+        {
+          "type": "과거형",
+          "value": "certified"
+        },
+        {
+          "type": "현재 분사",
+          "value": "certifying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "certified"
+        }
+      ],
+      "aliasConjugation": "certifies",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "36c0d25e7e8951842a0f219e006bb5d3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이는 …임을 증명하기 위한 것이다, 이에 …임을 증명함",
+      "text": "This is to <b>certify</b> that ..."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 보고는 정확한 것임이 증명되었다.",
+      "text": "His report was certified (as) correct."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "상기와 같이 상위 없음",
+      "text": "I affirm the above to be true in every particular. or I hereby <b>certify</b> the above statement to be true and correct in every detail."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 미래의 어떤 일도 진실하다는 보증이 되지 못한다.",
+      "text": "That does not <b>certify</b> us of the truth of any event in the future."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "…임을 이에 증명한다",
+      "text": "This is to <b>certify</b> that"
+    }
+  ],
+  "isWordType": true
+}

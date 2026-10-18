@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "array",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈreɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<군대를> 정렬시키다(arrange), 배열하다, 배치하다",
+              "examples": [],
+              "originalMeaning": "<군대를> 정렬시키다(arrange), 배열하다, 배치하다"
+            },
+            {
+              "meaning": "<증거 등을> 열거하다",
+              "examples": [],
+              "originalMeaning": "<증거 등을> 열거하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(군대의) 정렬, 포진(布陣)(order), 군세(軍勢)",
+              "examples": [],
+              "originalMeaning": "(군대의) 정렬, 포진(布陣)(order), 군세(軍勢)"
+            },
+            {
+              "meaning": "군대(military force)",
+              "examples": [],
+              "originalMeaning": "군대(military force)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/984848c8259041fab45f647635b4d705",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/984848c8259041fab45f647635b4d705",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "arrays"
+        },
+        {
+          "type": "과거형",
+          "value": "arrayed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "arraying"
+        },
+        {
+          "type": "과거 분사",
+          "value": "arrayed"
+        }
+      ],
+      "aliasConjugation": "arrays",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bcf7bf13e17f9d8bb8112693a4f978f7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그들은 모두 예복을 차려 입고 있었다.",
+      "text": "They all arrayed themselves[were all arrayed] in ceremonial robes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "죽 늘어섰다",
+      "text": "They made an <b>array</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기라성같이 늘어서다",
+      "text": "There is a galaxy[a fine <b>array</b>] of..."
+    }
+  ],
+  "isWordType": true
+}

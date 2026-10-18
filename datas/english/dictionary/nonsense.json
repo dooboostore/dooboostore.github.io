@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "nonsense",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│nɑːnsens; │nɑːnsns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] 무의미한 말, 허튼소리; 어리석은 생각, 난센스",
+              "examples": [
+                {
+                  "text": "sheer <b>nonsense</b>",
+                  "translatedText": "전혀 터무니없는 말"
+                }
+              ],
+              "originalMeaning": "[U] 무의미한 말, 허튼소리; 어리석은 생각, 난센스"
+            },
+            {
+              "meaning": "바보같은[허튼] 짓",
+              "examples": [
+                {
+                  "text": "None of your <b>nonsense</b> now!",
+                  "translatedText": "이젠 바보 같은 짓 그만 해라!"
+                }
+              ],
+              "originalMeaning": "바보같은[허튼] 짓"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "무의미한, 어리석은",
+              "examples": [
+                {
+                  "text": "a <b>nonsense</b> book",
+                  "translatedText": "난센스 책 ((실없는 이야기를 모은 오락용의 책))"
+                }
+              ],
+              "originalMeaning": "무의미한, 어리석은"
+            },
+            {
+              "meaning": "무의미한 유전 암호의, 난센스의",
+              "examples": [],
+              "originalMeaning": "무의미한 유전 암호의, 난센스의"
+            }
+          ]
+        },
+        {
+          "type": "감탄사",
+          "meanings": [
+            {
+              "meaning": "되지 않은 소리 (그만둬)",
+              "examples": [],
+              "originalMeaning": "되지 않은 소리 (그만둬)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f64df5ebb3cd495f85465e13a0363473",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f64df5ebb3cd495f85465e13a0363473",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "06ad8297ff7516b5fc8b556225cfb526",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 것은 모두 허튼소리다.",
+      "text": "All that is <b>nonsense</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그런 말은 정말 난센스다",
+      "text": "That is sheer <b>nonsense</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 따위 바보같은 소리 하지 마라!",
+      "text": "None of that <b>nonsense</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이젠 바보 같은 짓 그만 해라!",
+      "text": "None of your <b>nonsense</b> now!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "뚱딴지 같은 소리 하지 마라!",
+      "text": "Don't talk rot! or <b>Nonsense</b>!"
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "roof",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ruːf"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지붕",
+              "examples": [],
+              "originalMeaning": "지붕"
+            },
+            {
+              "meaning": "지붕 모양의 물건, 차의 지붕",
+              "examples": [
+                {
+                  "text": "the <b>roof</b> of a car",
+                  "translatedText": "차의 지붕"
+                }
+              ],
+              "originalMeaning": "지붕 모양의 물건, 차의 지붕"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 지붕을 이다, 지붕을 해 덮다",
+              "examples": [
+                {
+                  "text": "The shed was roofed over with tin.",
+                  "translatedText": "그 오두막은 지붕이 함석으로 되어 있었다."
+                }
+              ],
+              "originalMeaning": "…에 지붕을 이다, 지붕을 해 덮다"
+            },
+            {
+              "meaning": "<빈 터를> 지붕으로[처럼] 덮다 ((in))",
+              "examples": [],
+              "originalMeaning": "<빈 터를> 지붕으로[처럼] 덮다 ((in))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/14047b1136704d2db15fa70e07da698a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/14047b1136704d2db15fa70e07da698a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "roofs"
+        },
+        {
+          "type": "복수형",
+          "value": "roofs"
+        },
+        {
+          "type": "과거형",
+          "value": "roofed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "roofing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "roofed"
+        }
+      ],
+      "aliasConjugation": "roofs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "589824bacc05b030b174f48bac6091d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "집들이 다닥다닥 붙어 있다",
+      "text": "Houses stand <b>roof</b> to <b>roof</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "불길이 지붕에 옮겨 붙었다.",
+      "text": "The flames caught the <b>roof</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우로를 피할 곳도 없다",
+      "text": "He has no <b>roof</b> over his head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기와를 다시 이어야 하겠다",
+      "text": "We must have our <b>roof</b> retiled."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지붕의 물매가 너무 뜨다",
+      "text": "The <b>roof</b> is pitched too gentle."
+    }
+  ],
+  "isWordType": true
+}

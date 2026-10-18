@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "sugar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈʃʊɡə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "설탕",
+              "examples": [
+                {
+                  "text": "a lump of <b>sugar</b>",
+                  "translatedText": "(각)설탕 한 개"
+                }
+              ],
+              "originalMeaning": "설탕"
+            },
+            {
+              "meaning": "설탕 한 개[숟가락]",
+              "examples": [
+                {
+                  "text": "How many sugars in your tea?",
+                  "translatedText": "홍차에 설탕을 얼마나 넣을까요?"
+                }
+              ],
+              "originalMeaning": "설탕 한 개[숟가락]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "설탕을 넣다, 설탕을 쳐 달게 하다",
+              "examples": [],
+              "originalMeaning": "설탕을 넣다, 설탕을 쳐 달게 하다"
+            },
+            {
+              "meaning": "설탕을 입히다[뿌리다]",
+              "examples": [],
+              "originalMeaning": "설탕을 입히다[뿌리다]"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "설탕이 되다, 당화하다",
+              "examples": [],
+              "originalMeaning": "설탕이 되다, 당화하다"
+            },
+            {
+              "meaning": "단풍당(糖)을 만들다",
+              "examples": [],
+              "originalMeaning": "단풍당(糖)을 만들다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5937eafb123a4b7d9c49072985cde7ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5937eafb123a4b7d9c49072985cde7ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sugars"
+        },
+        {
+          "type": "과거형",
+          "value": "sugared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sugaring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sugared"
+        }
+      ],
+      "aliasConjugation": "sugars",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5731d0b1a2a579a9d605b73059336921",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "설탕에 개미가 끓고 있다",
+      "text": "Ants swarm upon <b>sugar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "설탕을 좀 더[덜] 넣어 주십시오.",
+      "text": "A little more[less] <b>sugar</b>, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 설탕을 물에 풀었다",
+      "text": "I dissolved some <b>sugar</b> in water."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "설탕이 모두 알코올이 되었다",
+      "text": "All the <b>sugar</b> turned into alcohol."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "설탕 3에 밀가루 7의 비율",
+      "text": "3 parts of <b>sugar</b> to 7 (parts) of flour"
+    }
+  ],
+  "isWordType": true
+}

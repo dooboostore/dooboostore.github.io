@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "realize",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│riːəlaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "실감하다, 깨닫다, (명확히) 이해하다, 분명히 파악하다",
+              "examples": [
+                {
+                  "text": "She <b>realized</b> that no one loved her as much as her parents did.",
+                  "translatedText": "그녀는 부모만큼 자기를 사랑하는 사람은 없다는 것을 깨달았다."
+                }
+              ],
+              "originalMeaning": "실감하다, 깨닫다, (명확히) 이해하다, 분명히 파악하다"
+            },
+            {
+              "meaning": "[종종 수동형으로] 실현하다, 달성하다, 실행하다",
+              "examples": [
+                {
+                  "text": "His dream of going abroad was finally <b>realized</b>.",
+                  "translatedText": "외국에 가는 그의 꿈은 마침내 실현되었다."
+                }
+              ],
+              "originalMeaning": "[종종 수동형으로] 실현하다, 달성하다, 실행하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "돈으로 바꾸다, 환금하다; 돈이 되다",
+              "examples": [],
+              "originalMeaning": "돈으로 바꾸다, 환금하다; 돈이 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0a2fdd872ae34a3db146d228edd067ce",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0a2fdd872ae34a3db146d228edd067ce",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "realizes"
+        },
+        {
+          "type": "과거형",
+          "value": "realized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "realizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "realized"
+        }
+      ],
+      "aliasConjugation": "realizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ebc3054d76cfd551a9637576be34ae38",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 그림은 2만 달러에 팔렸다.",
+      "text": "His picture <b>realized</b> $20,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 인생의 무상함을 깨달았다",
+      "text": "I <b>realized</b> the transience of life."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나의 소망이 마침내 이루어졌다",
+      "text": "My hopes have at last been <b>realized</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그것이 얼마나 어려운가를 알았다.",
+      "text": "He <b>realized</b> how difficult it was."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 이상은 실현될 것 같지 않다",
+      "text": "His ideal is unlikely to be <b>realized</b>."
+    }
+  ],
+  "isWordType": true
+}

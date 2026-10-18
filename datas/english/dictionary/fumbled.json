@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>fumble</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfʌmbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "손으로 더듬다, 찾다, 더듬어 찾다(grope about) ((for, after, in)); 서투른 솜씨로 만지다, 만지작거리다 ((with, at))",
+              "examples": [
+                {
+                  "text": "<b>fumble</b> for[after] a key",
+                  "translatedText": "손으로 더듬어 열쇠를 찾다"
+                }
+              ],
+              "originalMeaning": "손으로 더듬다, 찾다, 더듬어 찾다(grope about) ((for, after, in)); 서투른 솜씨로 만지다, 만지작거리다 ((with, at))"
+            },
+            {
+              "meaning": "실수[실패]하다",
+              "examples": [],
+              "originalMeaning": "실수[실패]하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "어설프게 다루다, 우물우물 말하다, [야구·미식축구] <공을> 실수하여 놓치다",
+              "examples": [
+                {
+                  "text": "<b>fumble</b> an attempt",
+                  "translatedText": "어설프게 시도하다"
+                }
+              ],
+              "originalMeaning": "어설프게 다루다, 우물우물 말하다, [야구·미식축구] <공을> 실수하여 놓치다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "실수, 서투름; [야구·미식축구] 펌블 ((공을 잡았다 놓침))",
+              "examples": [],
+              "originalMeaning": "실수, 서투름; [야구·미식축구] 펌블 ((공을 잡았다 놓침))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c27eda52cffc44078f480723f5e410d1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c27eda52cffc44078f480723f5e410d1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fumbles"
+        },
+        {
+          "type": "과거형",
+          "value": "fumbled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "fumbling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "fumbled"
+        }
+      ],
+      "aliasConjugation": "fumbles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fd9fb876717054f15ed707710d47aafb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "잔돈을 꺼내려고 주머니를 뒤적거렸다",
+      "text": "I <b>fumbled</b> in my pockets for change."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 지갑을 찾으려고 주머니를 뒤졌다",
+      "text": "I felt[<b>fumbled</b>] in my pocket for my purse."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 어둠 속에서 라이터를 찾으려고 더듬거렸다.",
+      "text": "He <b>fumbled</b> about trying to find his lighter in the dark."
+    }
+  ],
+  "isWordType": true
+}

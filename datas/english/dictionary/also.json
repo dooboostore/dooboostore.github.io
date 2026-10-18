@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "also",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈɔːlsoʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "(…도) 또한, 역시, 마찬가지로; 게다가, …뿐만 아니라(too, as well)",
+              "examples": [
+                {
+                  "text": "Candy is <b>also</b> sold there.",
+                  "translatedText": "캔디도 거기서 팔고 있다."
+                }
+              ],
+              "originalMeaning": "(…도) 또한, 역시, 마찬가지로; 게다가, …뿐만 아니라(too, as well)"
+            }
+          ]
+        },
+        {
+          "type": "접속사",
+          "meanings": [
+            {
+              "meaning": "그리고 또한(and also)",
+              "examples": [
+                {
+                  "text": "He was mean, <b>also</b> ugly.",
+                  "translatedText": "그는 천하고 또 못생겼었다."
+                }
+              ],
+              "originalMeaning": "그리고 또한(and <b>also</b>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fc807a0b7cb140d98c0288c1a7009eac",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fc807a0b7cb140d98c0288c1a7009eac",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8cc2a00bacee4861ed7726b1662b7606",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 천하고 또 못생겼었다.",
+      "text": "He was mean, <b>also</b> ugly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "캔디도 거기서 팔고 있다.",
+      "text": "Candy is <b>also</b> sold there."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그렇게 되면 나도 면난다",
+      "text": "That will <b>also</b> save my face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그도 나를 알고 있다",
+      "text": "He knows me, too. or He <b>also</b> knows me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 부업으로 보험 판매도 합니다",
+      "text": "I <b>also</b> sell insurance on the side."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "entry": "flight",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fláit"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "날기, 비행",
+              "examples": [
+                {
+                  "text": "a long-distance[nonstop] <b>flight</b>",
+                  "translatedText": "장거리[무착륙] 비행"
+                }
+              ],
+              "originalMeaning": "날기, 비행"
+            },
+            {
+              "meaning": "비행기 여행, 항공 여행; (항공 회사의) (정기) 항공편; 비행 거리",
+              "examples": [
+                {
+                  "text": "announce the departure of <b>flight</b> 708",
+                  "translatedText": "708편의 출발을 알리다 ((★ 「708」은[sévn-òu-éit]로 읽음))"
+                }
+              ],
+              "originalMeaning": "비행기 여행, 항공 여행; (항공 회사의) (정기) 항공편; 비행 거리"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<떼지어 나는 새를> 쏘다",
+              "examples": [],
+              "originalMeaning": "<떼지어 나는 새를> 쏘다"
+            },
+            {
+              "meaning": "<화살에> 깃털을 붙이다(fletch)",
+              "examples": [],
+              "originalMeaning": "<화살에> 깃털을 붙이다(fletch)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<새가> 떼지어 날다",
+              "examples": [],
+              "originalMeaning": "<새가> 떼지어 날다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/00b916f34ee84ffb9e8d53f95371d681",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/00b916f34ee84ffb9e8d53f95371d681",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "flights"
+        },
+        {
+          "type": "과거형",
+          "value": "flighted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "flighting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "flighted"
+        }
+      ],
+      "aliasConjugation": "flights",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "73d325a80715230b1e9e39adf8e2d6a2",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "flight",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fláit"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 도주, 패주; 탈출",
+              "examples": [
+                {
+                  "text": "a <b>flight</b> of capital",
+                  "translatedText": "자본의 도피"
+                }
+              ],
+              "originalMeaning": "[UC/] 도주, 패주; 탈출"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ce485e0533284045b3ee238e8e983c69",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ce485e0533284045b3ee238e8e983c69",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "flights",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4bae695cc685a0ba589a9e640c56c40d",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "험한 항해가 될 것이다",
+      "text": "It will be a bumpy <b>flight</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내빼는 것 밖에는 수단이 없었다",
+      "text": "<b>Flight</b> was my only resource."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 항공편은 뉴욕 발이다.",
+      "text": "The <b>flight</b> originates in New York."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "서울행 항공편 예약을 하려고 합니다",
+      "text": "I'd like to book a <b>flight</b> to Seoul."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아버지가 다음 비행기편으로 오신다.",
+      "text": "My father is arriving on the next <b>flight</b>."
+    }
+  ],
+  "isWordType": true
+}

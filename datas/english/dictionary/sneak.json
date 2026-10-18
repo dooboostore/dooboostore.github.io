@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "sneak",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "sniːk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "동사",
+          "meanings": [
+            {
+              "meaning": "살금살금 들어오다[나가다] ((in, out)), 몰래 돌아다니다 ((about, off, away, past, round)), 살짝 달아나다 ((about, off, away, round))",
+              "examples": [
+                {
+                  "text": "<b>sneak</b> into[out of] a room",
+                  "translatedText": "살짝 방에 들어가다[방에서 나가다]"
+                }
+              ],
+              "originalMeaning": "살금살금 들어오다[나가다] ((in, out)), 몰래 돌아다니다 ((about, off, away, past, round)), 살짝 달아나다 ((about, off, away, round))"
+            },
+            {
+              "meaning": "숨다 ((in, behind))",
+              "examples": [
+                {
+                  "text": "<b>sneak</b> behind the curtain",
+                  "translatedText": "커튼 뒤에 숨다"
+                }
+              ],
+              "originalMeaning": "숨다 ((in, behind))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "몰래 움직이다, 슬쩍 넣다[집다]",
+              "examples": [
+                {
+                  "text": "He sneakedhis handto the pistol.",
+                  "translatedText": "그는 몰래 손을 권총쪽으로 가져갔다."
+                }
+              ],
+              "originalMeaning": "몰래 움직이다, 슬쩍 넣다[집다]"
+            },
+            {
+              "meaning": "훔치다, 슬쩍하다",
+              "examples": [],
+              "originalMeaning": "훔치다, 슬쩍하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "살금살금 몰래 함[하는 사람]",
+              "examples": [],
+              "originalMeaning": "살금살금 몰래 함[하는 사람]"
+            },
+            {
+              "meaning": "남몰래 빠져 나감",
+              "examples": [],
+              "originalMeaning": "남몰래 빠져 나감"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/feaff063ccbe43af9136747f357aaf64",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/feaff063ccbe43af9136747f357aaf64",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sneaks"
+        },
+        {
+          "type": "과거형",
+          "value": "sneaked, snuck"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sneaking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sneaked, snuck"
+        }
+      ],
+      "aliasConjugation": "sneaks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "bedf778075a1508b39259ed73c51187a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그에게 슬그머니 다가갔다",
+      "text": "I sneaked up on him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 방에서 슬쩍 빠져나갔다",
+      "text": "He sneaked[slipped] away out of the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 직장에서 매일 일찍 빠져 나간다",
+      "text": "She sneaks away from work early every day."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "다른 사람의 일기를 훔쳐보는 것은 터무니없는 일이다",
+      "text": "That's terrible, sneaking a look into someone else's diary."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 슬금슬금 도망쳤다",
+      "text": "He sneaked away."
+    }
+  ],
+  "isWordType": true
+}

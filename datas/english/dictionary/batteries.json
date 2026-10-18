@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "battery",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│bætri; │bætəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "배터리, 전지",
+              "examples": [],
+              "originalMeaning": "배터리, 전지"
+            },
+            {
+              "meaning": "한 벌의 기구[장치]",
+              "examples": [
+                {
+                  "text": "a cooking <b>battery</b>",
+                  "translatedText": "요리 도구 한 벌"
+                }
+              ],
+              "originalMeaning": "한 벌의 기구[장치]"
+            },
+            {
+              "meaning": "(사람·물건의) 다수, 수많음",
+              "examples": [
+                {
+                  "text": "a <b>battery</b> of questions",
+                  "translatedText": "일련의 질문들"
+                }
+              ],
+              "originalMeaning": "(사람·물건의) 다수, 수많음"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2b83ae44d03f41ba863fca45a319abe4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2b83ae44d03f41ba863fca45a319abe4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "batteries"
+        }
+      ],
+      "aliasConjugation": "batteries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "569effafc2a423c674b8161c9dab57d7",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "Battery (Park)",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "[the ~] 배터리 공원 ((미국 뉴욕 시의 Manhattan섬 남단의 공원))",
+              "examples": [],
+              "originalMeaning": "[the ~] 배터리 공원 ((미국 뉴욕 시의 Manhattan섬 남단의 공원))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3aa9f730ad844f4a9316a6e68716d523",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3aa9f730ad844f4a9316a6e68716d523",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "7479a980e9f5fe4df8027f93c9cb9705",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 차 배터리가 나갔다",
+      "text": "My car <b>battery</b> is dead."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대포는 그 시를 사정권 내에 두었다.",
+      "text": "The <b>battery</b> covered the city."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "배터리가 떨어져 간다[떨어졌다]",
+      "text": "The <b>battery</b> dies[is dead]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전지가 닳았다",
+      "text": "The <b>battery</b> went dead."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전지가 닳았다",
+      "text": "The <b>battery</b> is run down."
+    }
+  ],
+  "isWordType": true
+}

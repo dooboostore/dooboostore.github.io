@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "hello",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "həˈloʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "감탄사",
+          "meanings": [
+            {
+              "meaning": "여보, 이봐; 어이; 어머; 여, 안녕하세요 ((가벼운 인사; [영]에서 많이 씀)); ((전화로)) 여보세요",
+              "examples": [
+                {
+                  "text": "<b>Hello</b>, this is Jane speaking.",
+                  "translatedText": "여보세요, 제인입니다."
+                }
+              ],
+              "originalMeaning": "여보, 이봐; 어이; 어머; 여, 안녕하세요 ((가벼운 인사; [영]에서 많이 씀)); ((전화로)) 여보세요"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "hello라고 말하기",
+              "examples": [
+                {
+                  "text": "Say <b>hello</b> to your mother.",
+                  "translatedText": "어머니에게 안부 전해 주시오."
+                }
+              ],
+              "originalMeaning": "<b>hello</b>라고 말하기"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "(…에게) hello라고 부르다[말하다]",
+              "examples": [],
+              "originalMeaning": "(…에게) <b>hello</b>라고 부르다[말하다]"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d98f52f3b6c74cc48efceb611518852f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d98f52f3b6c74cc48efceb611518852f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "hellos"
+        }
+      ],
+      "aliasConjugation": "hellos",
+      "aliasConjugationPos": "복수형",
+      "gdid": "fbb4dafc375cf5246dc41fc72c3002c9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어머니에게 안부 전해 주시오.",
+      "text": "Say <b>hello</b> to your mother."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전화에서] 여보세요, 나는 존 스미스입니다.",
+      "text": "<b>Hello</b>! This is John Smith speaking. ["
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀에게 안부 전해 주세요",
+      "text": "Please say hi to her. or Tell her I said <b>hello</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 동네에 온 김에 인사나 하고 갈까 해서 들렀습니다",
+      "text": "I happened to be in the neighborhood and thought I'd stop by and say <b>hello</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "안부 전해주시오.",
+      "text": "Say <b>hello</b> for me."
+    }
+  ],
+  "isWordType": true
+}

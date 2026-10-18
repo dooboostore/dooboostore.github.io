@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "converge",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "kən│vɜːrdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "한 점[선]에 모이다(opp. diverge)",
+              "examples": [
+                {
+                  "text": "The mountains <b>converge</b> into a single ridge.",
+                  "translatedText": "산들은 모여서 하나의 산등성이를 이룬다."
+                }
+              ],
+              "originalMeaning": "한 점[선]에 모이다(opp. diverge)"
+            },
+            {
+              "meaning": "모이다, 집중하다",
+              "examples": [
+                {
+                  "text": "( <b>converge</b> +to do) We find much evidence <b>converging</b> to support the hypothesis.",
+                  "translatedText": "그 가설을 뒷받침해 주는 많은 증거가 있다."
+                }
+              ],
+              "originalMeaning": "모이다, 집중하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "한 점에 모으다, 집중시키다",
+              "examples": [],
+              "originalMeaning": "한 점에 모으다, 집중시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/52975397fcb4465aa7c467cf63197e69",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/52975397fcb4465aa7c467cf63197e69",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "converges"
+        },
+        {
+          "type": "과거형",
+          "value": "converged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "converging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "converged"
+        }
+      ],
+      "aliasConjugation": "converges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3ce578384fa841b19757271470e86f9d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "산들은 모여서 하나의 산등성이를 이룬다.",
+      "text": "The mountains <b>converge</b> into a single ridge."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 가설을 뒷받침해 주는 많은 증거가 있다.",
+      "text": "We find much evidence <b>converging</b> to support the hypothesis."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "entry": "counsel",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈkaʊnsl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "상담, 의논, 협의, 평의(consultation)",
+              "examples": [],
+              "originalMeaning": "상담, 의논, 협의, 평의(consultation)"
+            },
+            {
+              "meaning": "조언, 권고, 충고(advice)",
+              "examples": [],
+              "originalMeaning": "조언, 권고, 충고(advice)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "충고[조언]하다(advise)",
+              "examples": [
+                {
+                  "text": "<b>counsel</b> prudence",
+                  "translatedText": "신중한 태도를 취하라고 충고하다"
+                }
+              ],
+              "originalMeaning": "충고[조언]하다(advise)"
+            },
+            {
+              "meaning": "권고하다(recommend)",
+              "examples": [
+                {
+                  "text": "<b>counsel</b> submission",
+                  "translatedText": "항복을 권하다"
+                }
+              ],
+              "originalMeaning": "권고하다(recommend)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "조언하다, 상의하다",
+              "examples": [],
+              "originalMeaning": "조언하다, 상의하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/21d4b4f2bbef431dacebdc4c7ae5746b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/21d4b4f2bbef431dacebdc4c7ae5746b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "counsels"
+        },
+        {
+          "type": "과거형",
+          "value": "counselled, counseled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "counselling, counseling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "counselled, counseled"
+        }
+      ],
+      "aliasConjugation": "counsels",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d52e0e2fe64e4adb542dca1dc3c0738e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 나에게 담배를 끊으라고 충고했다.",
+      "text": "He counseled me to quit smoking."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "왕은 대신의 진언을 가납하셨다",
+      "text": "The king appreciated the minister's <b>counsel</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "목구멍이 포도청",
+      "text": "The hungry belly has no ears. or A full belly counsels well. or The devil dances in an empty pocket. or Need makes the naked man run and sorrow makes websters spin. or Need makes the old wife trot. or Poverty is an enemy to good manners."
+    }
+  ],
+  "isWordType": true
+}

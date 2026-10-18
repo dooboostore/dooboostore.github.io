@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "entry": "temperature",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "│temprətʃə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(온도계로 잰) 온도",
+              "examples": [
+                {
+                  "text": "atmospheric <b>temperature</b>",
+                  "translatedText": "기온"
+                }
+              ],
+              "originalMeaning": "(온도계로 잰) 온도"
+            },
+            {
+              "meaning": "체온",
+              "examples": [],
+              "originalMeaning": "체온"
+            },
+            {
+              "meaning": "(평열 이상의) 열, 고열, 발열 상태",
+              "examples": [
+                {
+                  "text": "running a <b>temperature</b>",
+                  "translatedText": "열이 있는"
+                }
+              ],
+              "originalMeaning": "(평열 이상의) 열, 고열, 발열 상태"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/04301c5b48c34809a030ab4291fe7846",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/04301c5b48c34809a030ab4291fe7846",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4c7bd73090150ed21b104468a04b3da2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 여자의 열은 39도 3분이었다",
+      "text": "Her <b>temperature</b> was 39.3 degrees."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘은 기온이 3도 올라갔다.",
+      "text": "The <b>temperature</b> is up 3 degrees today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "맥박과 체온에는 이상이 없다",
+      "text": "Your pulse and <b>temperature</b> are normal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "해진 후에는 기온이 차다",
+      "text": "The <b>temperature</b> is chilly[goes down] after sundown."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기온은 빙점을 훨씬 밑돌고 있다.",
+      "text": "The <b>temperature</b> is away[way] below the freezing point."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "entry": "gasp",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɡæsp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "헐떡거림",
+              "examples": [
+                {
+                  "text": "breathe with <b>gasps</b>",
+                  "translatedText": "숨을 헐떡이다"
+                }
+              ],
+              "originalMeaning": "헐떡거림"
+            },
+            {
+              "meaning": "(공포·놀람 등으로) 숨막힘",
+              "examples": [],
+              "originalMeaning": "(공포·놀람 등으로) 숨막힘"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "헐떡거리다, (놀람 등으로) 숨이 막히다",
+              "examples": [
+                {
+                  "text": "<b>gasp</b> in amazement",
+                  "translatedText": "놀란 나머지 숨이 막히다"
+                }
+              ],
+              "originalMeaning": "헐떡거리다, (놀람 등으로) 숨이 막히다"
+            },
+            {
+              "meaning": "열망[갈망]하다 ((after, for))",
+              "examples": [
+                {
+                  "text": "<b>gasp</b> for peace",
+                  "translatedText": "평화를 갈망하다"
+                }
+              ],
+              "originalMeaning": "열망[갈망]하다 ((after, for))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<말을> 헐떡거리며 하다 ((out))",
+              "examples": [],
+              "originalMeaning": "<말을> 헐떡거리며 하다 ((out))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5731d050033d441092b2d785840bd54a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5731d050033d441092b2d785840bd54a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "gasps"
+        },
+        {
+          "type": "과거형",
+          "value": "gasped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "gasping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "gasped"
+        }
+      ],
+      "aliasConjugation": "gasps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "30ba6c051fd6f523f1f97eabb7b3ec9a",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "GASP",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "[미] Group Against Smoker’s Pollution; Gals Against Smoke and Pollution; Greater Washington Alliance to Stop Pollution, etc. 반공해·반흡연 단체명들",
+              "examples": [],
+              "originalMeaning": "[미] Group Against Smoker’s Pollution; Gals Against Smoke and Pollution; Greater Washington Alliance to Stop Pollution, etc. 반공해·반흡연 단체명들"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6661a5596bdd4c27bcda4fcf51a8dd99",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6661a5596bdd4c27bcda4fcf51a8dd99",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9783f300cae73e13adcb25bd04dd1406",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 너무 화가 나서 숨도 못쉴 정도였다.",
+      "text": "I gasped with rage."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 헐떡거리며 몇 마디 말했다",
+      "text": "She gasped a few words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀는 말하는 중에 때때로 숨이 차서 말이 끊겼다.",
+      "text": "Her speech was punctuated by little <b>gasps</b>."
+    }
+  ],
+  "isWordType": true
+}

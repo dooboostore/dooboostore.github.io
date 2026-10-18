@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "fund",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fʌnd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기금, 자금, 기본금(cf. CAPITAL); [보통 pl.] (수표·어음 결제용의) 예금",
+              "examples": [
+                {
+                  "text": "a relief <b>fund</b>",
+                  "translatedText": "구제 기금"
+                }
+              ],
+              "originalMeaning": "기금, 자금, 기본금(cf. CAPITAL); [보통 pl.] (수표·어음 결제용의) 예금"
+            },
+            {
+              "meaning": "[pl.] 재원, 소지금",
+              "examples": [],
+              "originalMeaning": "[pl.] 재원, 소지금"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사업 등에> 자금을 제공하다",
+              "examples": [],
+              "originalMeaning": "<사업 등에> 자금을 제공하다"
+            },
+            {
+              "meaning": "<일시 차입금을> 장기 부채[공채]로 바꾸다",
+              "examples": [],
+              "originalMeaning": "<일시 차입금을> 장기 부채[공채]로 바꾸다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f72cb5e2d16946f98104c80a87ee1e82",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f72cb5e2d16946f98104c80a87ee1e82",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "funds"
+        },
+        {
+          "type": "과거형",
+          "value": "funded"
+        },
+        {
+          "type": "현재 분사",
+          "value": "funding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "funded"
+        }
+      ],
+      "aliasConjugation": "funds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "da9322ddc84bcea5707fb06b0451dea6",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "fund.",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": null,
+          "meanings": [
+            {
+              "meaning": "fundamental",
+              "examples": [],
+              "originalMeaning": "fundamental"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a0d101e4aaa8458d952884715bd6f089",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a0d101e4aaa8458d952884715bd6f089",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "funds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f2e65b3e6ea4dc8298aa5935a6bd148b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우선 돈을 마련하여야 한다",
+      "text": "First you must raise funds ."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자금 부족으로 공사가 중단되었다",
+      "text": "Lack of funds halted the work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 회사 기금을 횡령하였다",
+      "text": "He helped himself to company funds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 회사 자금을 도용했다",
+      "text": "He misappropriated[embezzled] company funds."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 모임은 기금을 모으기 위한 것이었다",
+      "text": "The meeting was intended to raise funds."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "underneath",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ʌndər│niːθ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "…의 아래에[를, 의](under, beneath)",
+              "examples": [
+                {
+                  "text": "<b>underneath</b> the table",
+                  "translatedText": "테이블 아래에"
+                }
+              ],
+              "originalMeaning": "…의 아래에[를, 의](under, beneath)"
+            },
+            {
+              "meaning": "…의 지배하에",
+              "examples": [],
+              "originalMeaning": "…의 지배하에"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "아래에, 하부(下部)에",
+              "examples": [
+                {
+                  "text": "put a stone <b>underneath</b>",
+                  "translatedText": "밑에 돌을 받치다[괴다]"
+                }
+              ],
+              "originalMeaning": "아래에, 하부(下部)에"
+            },
+            {
+              "meaning": "밑면에",
+              "examples": [
+                {
+                  "text": "He appears pompous but he is a good man <b>underneath</b>.",
+                  "translatedText": "그는 오만하게 보이지만 속은 좋은 사람이다."
+                }
+              ],
+              "originalMeaning": "밑면에"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "낮은, 아래의; 표면에 나타나지 않는; 비밀의",
+              "examples": [],
+              "originalMeaning": "낮은, 아래의; 표면에 나타나지 않는; 비밀의"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/275484480ff94f8799118af790813365",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/275484480ff94f8799118af790813365",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9168c0f20122fbd833b6fff86af983c3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 오만하게 보이지만 속은 좋은 사람이다.",
+      "text": "He appears pompous but he is a good man <b>underneath</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돌이 밑에서 와각거렸다",
+      "text": "The stones did rattle <b>underneath</b>."
+    }
+  ],
+  "isWordType": true
+}

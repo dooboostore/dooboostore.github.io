@@ -1,0 +1,169 @@
+{
+  "items": [
+    {
+      "entry": "dash",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dæʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "내던지다(fling, hurl) ((to, against; away, off, out, down)); (때려) 부수다(shatter)",
+              "examples": [
+                {
+                  "text": "<b>dash</b> a book to[on] the floor",
+                  "translatedText": "책을 마룻바닥에 내동댕이치다"
+                }
+              ],
+              "originalMeaning": "내던지다(fling, hurl) ((to, against; away, off, out, down)); (때려) 부수다(shatter)"
+            },
+            {
+              "meaning": "<물 등을> 끼얹다(sprinkle) ((in, over)); 튀기다(splash) ((with))",
+              "examples": [
+                {
+                  "text": "<b>dash</b> cold water in[into] the face",
+                  "translatedText": "얼굴에 찬물을 끼얹다"
+                }
+              ],
+              "originalMeaning": "<물 등을> 끼얹다(sprinkle) ((in, over)); 튀기다(splash) ((with))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "돌진하다 ((along, forward, off, on, etc.))",
+              "examples": [
+                {
+                  "text": "<b>dash</b> from[out of] a room",
+                  "translatedText": "방에서 달려 나오다"
+                }
+              ],
+              "originalMeaning": "돌진하다 ((along, forward, off, on, etc.))"
+            },
+            {
+              "meaning": "(세차게) 충돌하다 ((against, into, upon))",
+              "examples": [],
+              "originalMeaning": "(세차게) 충돌하다 ((against, into, upon))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the ~] (액체가) 세차게 부딪치는 소리",
+              "examples": [],
+              "originalMeaning": "[the ~] (액체가) 세차게 부딪치는 소리"
+            },
+            {
+              "meaning": "[a ~] 돌진, 돌격(onset) ((at));[보통 sing.] (단거리의) 경주",
+              "examples": [
+                {
+                  "text": "a hundred-meter <b>dash</b>",
+                  "translatedText": "100미터 경주"
+                }
+              ],
+              "originalMeaning": "[a ~] 돌진, 돌격(onset) ((at));[보통 sing.] (단거리의) 경주"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3559ce4d8140454898d16e039d882455",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3559ce4d8140454898d16e039d882455",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dashes"
+        },
+        {
+          "type": "과거형",
+          "value": "dashed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dashing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dashed"
+        }
+      ],
+      "aliasConjugation": "dashes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f5b40b35de3b7fee3881ec2256713355",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "DASH",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "대(對)잠수함 무인 헬리콥터",
+              "examples": [],
+              "originalMeaning": "대(對)잠수함 무인 헬리콥터"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b27bdbc7183e48dbb8024f231735a524",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b27bdbc7183e48dbb8024f231735a524",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "77654bb358871aa25cc94165263f6a2c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 눈물을 싹 닦았다.",
+      "text": "He dashed away his tears."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 서둘러 방에서 나갔다",
+      "text": "He made a mad <b>dash</b> out of the room."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "홍차에 위스키를 좀 타 주시오",
+      "text": "Give me tea with a <b>dash</b> of whisky in it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "여객선이 암초에 부딪혀 산산이 부서졌다",
+      "text": "A liner was dashed to pieces against the rocks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "100미터 경주에서 9초의 벽을 무너뜨리는 것은 불가능하다",
+      "text": "It is impossible to break the nine-second barrier in the 100-meter <b>dash</b>."
+    }
+  ],
+  "isWordType": true
+}

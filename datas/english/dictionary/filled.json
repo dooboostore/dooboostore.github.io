@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "fill",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "fɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "채우다; (잔뜩) 채워 넣다; 가득 부어 넣다, 채워 담다",
+              "examples": [
+                {
+                  "text": "<b>fill</b> a glass with water",
+                  "translatedText": "잔에 물을 가득 따르다"
+                }
+              ],
+              "originalMeaning": "채우다; (잔뜩) 채워 넣다; 가득 부어 넣다, 채워 담다"
+            },
+            {
+              "meaning": "<장소·공간을> 차지하다, 메우다; <연기·냄새 등이> <장소에> 가득 차다, 충만하다",
+              "examples": [
+                {
+                  "text": "Fish <b>filled</b> the river.",
+                  "translatedText": "그 강에는 물고기가 가득 있다."
+                }
+              ],
+              "originalMeaning": "<장소·공간을> 차지하다, 메우다; <연기·냄새 등이> <장소에> 가득 차다, 충만하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "…으로 가득 차다, 충만하다 ((with))",
+              "examples": [
+                {
+                  "text": "Her eyes <b>fill</b> ed with tears.",
+                  "translatedText": "그녀는 눈물이 글썽했다."
+                }
+              ],
+              "originalMeaning": "…으로 가득 차다, 충만하다 ((with))"
+            },
+            {
+              "meaning": "기압이 늘다, 저기압이 약해지다",
+              "examples": [],
+              "originalMeaning": "기압이 늘다, 저기압이 약해지다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[a ~] (그릇에) 가득 찬 양 ((of))",
+              "examples": [
+                {
+                  "text": "a <b>fill</b> of tobacco",
+                  "translatedText": "담배 한 대 분"
+                }
+              ],
+              "originalMeaning": "[a ~] (그릇에) 가득 찬 양 ((of))"
+            },
+            {
+              "meaning": "[one’s ~] 원하는 만큼의 양, 배부를 만큼의 양",
+              "examples": [
+                {
+                  "text": "drink[eat, have, take] one's <b>fill</b>",
+                  "translatedText": "잔뜩 마시다[먹다]"
+                }
+              ],
+              "originalMeaning": "[one’s ~] 원하는 만큼의 양, 배부를 만큼의 양"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b6cc74038e04181bef579cbe6a8ea40",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b6cc74038e04181bef579cbe6a8ea40",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "fills"
+        },
+        {
+          "type": "과거형",
+          "value": "filled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "filling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "filled"
+        }
+      ],
+      "aliasConjugation": "fills",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "782c0a5bf569f95514e09723735f66c0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "만복이 될 때까지 먹었다",
+      "text": "He ate his <b>fill</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "기름을 가득 채워 주세요",
+      "text": "Please <b>fill</b> it up. or <b>Fill</b> 'er up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 강에는 물고기가 가득 있다.",
+      "text": "Fish <b>filled</b> the river."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 용지에 기입해 주십시오",
+      "text": "<b>Fill</b> this form out, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "저녁이 내게는 좀 나빴다",
+      "text": "The supper didn't <b>fill</b> me up."
+    }
+  ],
+  "isWordType": true
+}

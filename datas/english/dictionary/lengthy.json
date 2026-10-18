@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "entry": "<b>lengthy</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈleŋθi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "<시간이> 긴, 오랜",
+              "examples": [],
+              "originalMeaning": "<시간이> 긴, 오랜"
+            },
+            {
+              "meaning": "<연설 등이> 장황한, 지루한",
+              "examples": [],
+              "originalMeaning": "<연설 등이> 장황한, 지루한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4a54b5dc3b904a2bbd9992071d5d6123",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4a54b5dc3b904a2bbd9992071d5d6123",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "lengthier"
+        },
+        {
+          "type": "최상급",
+          "value": "lengthiest"
+        }
+      ],
+      "aliasConjugation": "lengthier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "de6f7c1bc901c7675424c953911a2f54",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "강연이 지루하여 나는 흥미를 잃었다.",
+      "text": "The <b>lengthy</b> lecture palled upon me."
+    }
+  ],
+  "isWordType": true
+}

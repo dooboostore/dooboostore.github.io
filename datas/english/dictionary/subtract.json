@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "entry": "<b>subtract</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "səbˈtrækt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(…에서) 빼다, 덜다, 공제(控除)하다 ((from))(opp. add)",
+              "examples": [
+                {
+                  "text": "<b>subtract</b> 2 from 5",
+                  "translatedText": "5에서 2를 빼다"
+                }
+              ],
+              "originalMeaning": "(…에서) 빼다, 덜다, 공제(控除)하다 ((from))(opp. add)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "뺄셈을 하다",
+              "examples": [],
+              "originalMeaning": "뺄셈을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/838bb1049bfb40dfbf699d5d07f5b247",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/838bb1049bfb40dfbf699d5d07f5b247",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "subtracts"
+        },
+        {
+          "type": "과거형",
+          "value": "subtracted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "subtracting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "subtracted"
+        }
+      ],
+      "aliasConjugation": "subtracts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "229b1775411303bd37f6f32561ec748b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "10 에서 4를 빼면 6이 남는다.",
+      "text": "If you take[<b>subtract</b>] 4 from 10, 6 remains.=4 from 10 is[leaves] 6."
+    }
+  ],
+  "isWordType": true
+}

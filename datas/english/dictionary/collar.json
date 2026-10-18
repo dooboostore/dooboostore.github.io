@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "collar",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│kɑːlə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "칼라, 깃",
+              "examples": [
+                {
+                  "text": "a stand-up[turndown] <b>collar</b>",
+                  "translatedText": "세운[접은] 칼라"
+                }
+              ],
+              "originalMeaning": "칼라, 깃"
+            },
+            {
+              "meaning": "(목에 거는) 훈장, (장식용) 목걸이(necklace)",
+              "examples": [
+                {
+                  "text": "a <b>collar</b> of pearls",
+                  "translatedText": "진주 목걸이"
+                }
+              ],
+              "originalMeaning": "(목에 거는) 훈장, (장식용) 목걸이(necklace)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "깃[목걸이]을 달다",
+              "examples": [],
+              "originalMeaning": "깃[목걸이]을 달다"
+            },
+            {
+              "meaning": "[구어] …의 목덜미를 잡다, 체포하다; (난폭하게) 붙잡다",
+              "examples": [
+                {
+                  "text": "The policeman <b>collar</b> ed the thief.",
+                  "translatedText": "경찰관이 그 도둑을 잡았다."
+                }
+              ],
+              "originalMeaning": "[구어] …의 목덜미를 잡다, 체포하다; (난폭하게) 붙잡다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<재료가> 압연기 롤에 휘감기다",
+              "examples": [],
+              "originalMeaning": "<재료가> 압연기 롤에 휘감기다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6215432c1e584a7f89854c66e9afaf83",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6215432c1e584a7f89854c66e9afaf83",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "collars"
+        },
+        {
+          "type": "과거형",
+          "value": "collared"
+        },
+        {
+          "type": "현재 분사",
+          "value": "collaring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "collared"
+        }
+      ],
+      "aliasConjugation": "collars",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "30f9559c0f251a4478073094b60e0b87",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내 멱살을 그러잡았다",
+      "text": "He grabbed me by the <b>collar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "경찰관이 그 도둑을 잡았다.",
+      "text": "The policeman collared the thief."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 소년의 목덜미[멱살]를 잡았다.",
+      "text": "He held the boy by the <b>collar</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 빳빳한 옷깃에 목이 쓸려 아프다.",
+      "text": "This stiff <b>collar</b> chafes my neck."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "깃이 빳빳하면 목이 쓸리기 쉽다",
+      "text": "A stiff <b>collar</b> may chafe your neck."
+    }
+  ],
+  "isWordType": true
+}

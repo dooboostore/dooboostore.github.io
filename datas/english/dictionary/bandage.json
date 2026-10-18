@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "<b>bandage</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈbændɪdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "붕대; 눈가리개, 안대",
+              "examples": [
+                {
+                  "text": "apply a <b>bandage</b>",
+                  "translatedText": "붕대를 감다 (( to ))"
+                }
+              ],
+              "originalMeaning": "붕대; 눈가리개, 안대"
+            },
+            {
+              "meaning": "감는 것, 묶는 것",
+              "examples": [],
+              "originalMeaning": "감는 것, 묶는 것"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 붕대를 감다 ((up))",
+              "examples": [
+                {
+                  "text": "( <b>bandage</b> +[목](+[부])) <b>bandage</b> (up) a person's leg",
+                  "translatedText": "…의 다리에 붕대를 감다"
+                }
+              ],
+              "originalMeaning": "…에 붕대를 감다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/766e6e8d5d804c17ac8150dbf90c24dc",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/766e6e8d5d804c17ac8150dbf90c24dc",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bandages"
+        },
+        {
+          "type": "과거형",
+          "value": "bandaged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bandaging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bandaged"
+        }
+      ],
+      "aliasConjugation": "bandages",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "2b05966169bf9ec6e6dedeb7a4351907",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 발에 붕대를 하고 있다",
+      "text": "He has his foot in bandages."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "피가 붕대를 붉게 물들였다.",
+      "text": "The blood reddened the <b>bandage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "붕대에 피가 내배어 있었다",
+      "text": "The <b>bandage</b> was saturated with blood. or Blood oozed out of the <b>bandage</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "손가락을 벴어, 붕대를 세게 둘러매다오",
+      "text": "I've cut my finger. Tie a <b>bandage</b> round it tightly, please."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "3개월 만에 상처는 완치되었다",
+      "text": "At the end of three months the last bandages were removed."
+    }
+  ],
+  "isWordType": true
+}

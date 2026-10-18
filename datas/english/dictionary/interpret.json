@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "interpret",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪn│tɜːrprɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "해석하다, 설명하다; 해몽(解夢)하다",
+              "examples": [
+                {
+                  "text": "<b>interpret</b> the hidden meaning of a parable",
+                  "translatedText": "우화의 숨은 의미를 밝히다"
+                }
+              ],
+              "originalMeaning": "해석하다, 설명하다; 해몽(解夢)하다"
+            },
+            {
+              "meaning": "(…의 뜻으로) 이해하다, 판단하다",
+              "examples": [
+                {
+                  "text": "I interpreted his silenceasrefusal.",
+                  "translatedText": "나는 그의 침묵을 거절의 뜻으로 이해했다."
+                }
+              ],
+              "originalMeaning": "(…의 뜻으로) 이해하다, 판단하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "통역을 하다; 설명하다, 해석하다",
+              "examples": [
+                {
+                  "text": "He interpreted for the American tourist.",
+                  "translatedText": "그는 미국 관광객에게 통역을 해 주었다."
+                }
+              ],
+              "originalMeaning": "통역을 하다; 설명하다, 해석하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/965dd4d4c5b64257bdb06733215f1346",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/965dd4d4c5b64257bdb06733215f1346",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "interprets"
+        },
+        {
+          "type": "과거형",
+          "value": "interpreted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "interpreting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "interpreted"
+        }
+      ],
+      "aliasConjugation": "interprets",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "732ce348718c262cdadfdc6e60f4d6a9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 말을 거꾸로 받아들이게",
+      "text": "<b>Interpret</b> his remarks by contraries."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 부호를 나에게 설명해 주었다.",
+      "text": "He interpreted those signs to me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 여러 가지로 풀이될 수 있다",
+      "text": "It can be interpreted in various ways."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그의 침묵을 거절의 뜻으로 이해했다.",
+      "text": "I interpreted his silence as refusal."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 미국 관광객에게 통역을 해주었다.",
+      "text": "He interpreted for the American tourist."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "entry": "<b>regain</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rɪˈɡeɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<잃은 것을> 되찾다, 회복하다; 탈환하다 (=recover)",
+              "examples": [
+                {
+                  "text": "<b>regain</b> one's health",
+                  "translatedText": "건강을 회복하다"
+                }
+              ],
+              "originalMeaning": "<잃은 것을> 되찾다, 회복하다; 탈환하다 (=<span class='related_word' lang='en' >recover</span>)"
+            },
+            {
+              "meaning": "<장소·상태에> 복귀[귀착]하다, 다시 도착하다",
+              "examples": [],
+              "originalMeaning": "<장소·상태에> 복귀[귀착]하다, 다시 도착하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dbb945b3c3f546a48e748e1e8daf71b5",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dbb945b3c3f546a48e748e1e8daf71b5",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "regains"
+        },
+        {
+          "type": "과거형",
+          "value": "regained"
+        },
+        {
+          "type": "현재 분사",
+          "value": "regaining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "regained"
+        }
+      ],
+      "aliasConjugation": "regains",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b7da8f9d2ef0fe1dfd32e956c099266b",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그것을 되찾기로 결심했다.",
+      "text": "He bethought to <b>regain</b> it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "악의 세력이 다시 살아났다",
+      "text": "The wicked have regained their strength."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "마을은 평온을 되찾았다",
+      "text": "The village regained its usual tranquility."
+    }
+  ],
+  "isWordType": true
+}

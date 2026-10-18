@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "<b>forgery</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│fɔːrdʒəri"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[U] (문서·지폐의) 위조, [법] 문서 위조(죄)",
+              "examples": [],
+              "originalMeaning": "[U] (문서·지폐의) 위조, [법] 문서 위조(죄)"
+            },
+            {
+              "meaning": "위조 문서[도장, 작품, 화폐]",
+              "examples": [],
+              "originalMeaning": "위조 문서[도장, 작품, 화폐]"
+            },
+            {
+              "meaning": "허구, 허위",
+              "examples": [],
+              "originalMeaning": "허구, 허위"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/525e34a69b794307bf1d88571b2cb72d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/525e34a69b794307bf1d88571b2cb72d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "forgeries"
+        }
+      ],
+      "aliasConjugation": "forgeries",
+      "aliasConjugationPos": "복수형",
+      "gdid": "8150abcd92b35f352213d4f4ea4c7cc1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그 문서가 위조 문서임을 인정한다.",
+      "text": "I own the document (to be) a <b>forgery</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 위조죄로 기소되었다",
+      "text": "He was prosecuted for <b>forgery</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 서명은 가짜다",
+      "text": "This signature is a <b>forgery</b>."
+    }
+  ],
+  "isWordType": true
+}

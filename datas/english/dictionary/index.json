@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "entry": "index",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈɪndeks"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(책 등의) 색인(索引), 반달 색인(= thumb ~)",
+              "examples": [],
+              "originalMeaning": "(책 등의) 색인(索引), 반달 색인(= thumb ~)"
+            },
+            {
+              "meaning": "카드식 색인(= card ~), (출판 안내 등의) 목록",
+              "examples": [
+                {
+                  "text": "a library <b>index</b>",
+                  "translatedText": "장서 카드"
+                }
+              ],
+              "originalMeaning": "카드식 색인(= card ~), (출판 안내 등의) 목록"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책에> 색인을 달다, <단어·항목을> 색인에 올리다",
+              "examples": [
+                {
+                  "text": "an indexed book",
+                  "translatedText": "색인이 붙은 책"
+                }
+              ],
+              "originalMeaning": "<책에> 색인을 달다, <단어·항목을> 색인에 올리다"
+            },
+            {
+              "meaning": "<급여·이율·세금 등을> 물가(지수)에 연동시키다",
+              "examples": [],
+              "originalMeaning": "<급여·이율·세금 등을> 물가(지수)에 연동시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0f156121937840d681c19c1f2b979e54",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0f156121937840d681c19c1f2b979e54",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "indexes"
+        },
+        {
+          "type": "복수형",
+          "value": "indexes, indices"
+        },
+        {
+          "type": "과거형",
+          "value": "indexed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "indexing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "indexed"
+        }
+      ],
+      "aliasConjugation": "indexes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "864d69c704b30c9fa084e593344156e1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 책에는 색인이 있다.",
+      "text": "The book has an <b>index</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물가 지수가 최고에 달했다",
+      "text": "The price <b>index</b> hit[reached] a new high."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "현 물가 지수에 비추어 그의 봉급이 인상되어야 한다",
+      "text": "In view of the current price <b>index</b>, he should get an increase in pay."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "글은 마음의 거울이다.",
+      "text": "Style is an <b>index</b> of the mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "도서 총색인",
+      "text": "Cumulative Book <b>Index</b>"
+    }
+  ],
+  "isWordType": true
+}

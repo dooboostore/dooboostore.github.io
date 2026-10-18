@@ -1,0 +1,141 @@
+{
+  "items": [
+    {
+      "entry": "league",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "líːɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "연맹, 동맹, 리그; 맹약",
+              "examples": [],
+              "originalMeaning": "연맹, 동맹, 리그; 맹약"
+            },
+            {
+              "meaning": "[집합적] 연맹 참가자[단체, 국](leaguers)",
+              "examples": [],
+              "originalMeaning": "[집합적] 연맹 참가자[단체, 국](leaguers)"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "동맹[연맹, 맹약]하다[시키다]; 단결[연합]하다[시키다] ((with))",
+              "examples": [
+                {
+                  "text": "We three were leagued together.",
+                  "translatedText": "우리 3명은 동맹을 맺고 있었다."
+                }
+              ],
+              "originalMeaning": "동맹[연맹, 맹약]하다[시키다]; 단결[연합]하다[시키다] ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/42004e9180304f3690a1ef7320dea4ee",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/42004e9180304f3690a1ef7320dea4ee",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "leagues"
+        },
+        {
+          "type": "과거형",
+          "value": "leagued"
+        },
+        {
+          "type": "현재 분사",
+          "value": "leaguing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "leagued"
+        }
+      ],
+      "aliasConjugation": "leagues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b15329854f1f5a3098fbde4769c3af67",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "league",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "리그 ((거리의 단위, 영·미에서는 약 3마일))",
+              "examples": [],
+              "originalMeaning": "리그 ((거리의 단위, 영·미에서는 약 3마일))"
+            },
+            {
+              "meaning": "평방 리그 ((지적(地積)의 단위))",
+              "examples": [],
+              "originalMeaning": "평방 리그 ((지적(地積)의 단위))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ab6a05c374794ea2a3dc8ed4cac932e0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ab6a05c374794ea2a3dc8ed4cac932e0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "leagues",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "cda77700a72778189b4a3c43239938df",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 사구로 리그 제1위다",
+      "text": "He leads the <b>league</b> in walks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 3명은 동맹을 맺고 있었다.",
+      "text": "We three were leagued together."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 우리와 같은 그룹은 아니다.",
+      "text": "He is not in the same <b>league</b> with us."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 용의자들은 서로 내통하고 있다고 확신한다",
+      "text": "I'm sure those two suspects are in <b>league</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "우리 중의 누군가 적과 내통하고 있는 것 같다",
+      "text": "It seems that someone among us is secretly in <b>league</b> with the enemy."
+    }
+  ],
+  "isWordType": true
+}

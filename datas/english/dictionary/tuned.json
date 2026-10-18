@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "tune",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tuːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] 곡조, 곡, 가곡; 선율(melody)",
+              "examples": [],
+              "originalMeaning": "[CU] 곡조, 곡, 가곡; 선율(melody)"
+            },
+            {
+              "meaning": "[U] (노래·음률의) 가락, 장단; (다른 악기와의) 조화 ((with))",
+              "examples": [],
+              "originalMeaning": "[U] (노래·음률의) 가락, 장단; (다른 악기와의) 조화 ((with))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<악기를> 조율하다 ((up))",
+              "examples": [],
+              "originalMeaning": "<악기를> 조율하다 ((up))"
+            },
+            {
+              "meaning": "<기계 등을> 조정하다, <엔진을> 튠업하다 ((up))",
+              "examples": [],
+              "originalMeaning": "<기계 등을> 조정하다, <엔진을> 튠업하다 ((up))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "악기를 조율하다 ((up)); 음악적인 음을 발하다; 가락이 맞다, 조화하다 ((with))",
+              "examples": [],
+              "originalMeaning": "악기를 조율하다 ((up)); 음악적인 음을 발하다; 가락이 맞다, 조화하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e8278eeef411439caecf4a509a98bb8a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e8278eeef411439caecf4a509a98bb8a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tunes"
+        },
+        {
+          "type": "과거형",
+          "value": "tuned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tuning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tuned"
+        }
+      ],
+      "aliasConjugation": "tunes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f5a7ae5edab0a4a5ff549265594d2461",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "엔진을 점검해야 할 것 같습니다",
+      "text": "Maybe you need a <b>tune</b>-up."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "말 할 기분이 아니다.",
+      "text": "I am not in <b>tune</b> for a talk."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "곡이 가사에 꼭 들어맞는다",
+      "text": "The <b>tune</b> exactly fits the words."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 목소리는 무디고 불친절했다",
+      "text": "His <b>tune</b> was curt and unfriendly."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 매달 피아노 조음을 한다",
+      "text": "I have the piano <b>tuned</b> every month."
+    }
+  ],
+  "isWordType": true
+}

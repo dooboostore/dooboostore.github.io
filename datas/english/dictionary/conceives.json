@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>conceive</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kənˈsiːv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "상상하다(imagine); <…라고> 생각하다(think); <생각·의견·원한 등을> 품다(entertain); <계획 등을> 생각해 내다, 착상하다(devise)",
+              "examples": [
+                {
+                  "text": "a badly conceived scheme",
+                  "translatedText": "졸렬한 계획"
+                }
+              ],
+              "originalMeaning": "상상하다(imagine); <…라고> 생각하다(think); <생각·의견·원한 등을> 품다(entertain); <계획 등을> 생각해 내다, 착상하다(devise)"
+            },
+            {
+              "meaning": "이해하다",
+              "examples": [
+                {
+                  "text": "I <b>conceive</b> you.",
+                  "translatedText": "네 말뜻을 알겠다."
+                }
+              ],
+              "originalMeaning": "이해하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[보통 부정문] 상상하다, 생각하다; 이해하다 ((of))",
+              "examples": [
+                {
+                  "text": "I cannot <b>conceive</b> of your doing such a silly thing.",
+                  "translatedText": "당신이 그렇게 어리석은 짓을 하리라고는 생각할 수 없다."
+                }
+              ],
+              "originalMeaning": "[보통 부정문] 상상하다, 생각하다; 이해하다 ((of))"
+            },
+            {
+              "meaning": "임신하다",
+              "examples": [],
+              "originalMeaning": "임신하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3aafc927273d4a84bfce5f41466544cb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3aafc927273d4a84bfce5f41466544cb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "conceives"
+        },
+        {
+          "type": "과거형",
+          "value": "conceived"
+        },
+        {
+          "type": "현재 분사",
+          "value": "conceiving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "conceived"
+        }
+      ],
+      "aliasConjugation": "conceives",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "ce1c92b945ddf810e90b222ea8eeacad",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 그녀만을 외곬으로 생각했다",
+      "text": "He conceived a single-minded affection for her."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 그가 무엇인가 잘못된 게 틀림없다고 생각했다.",
+      "text": "I conceived that something must be wrong with him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "당신이 그렇게 어리석은 짓을 하리라고는 생각할 수 없다.",
+      "text": "I cannot <b>conceive</b> of your doing such a silly thing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것이 사실이라고 생각한다.",
+      "text": "I <b>conceive</b> it to be true."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "네 말뜻을 알겠다.",
+      "text": "I <b>conceive</b> you."
+    }
+  ],
+  "isWordType": true
+}

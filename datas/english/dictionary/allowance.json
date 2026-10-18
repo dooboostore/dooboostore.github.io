@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "entry": "<b>allowance</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈlaʊəns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(정기적으로 지급하는) 수당, 급여액, …비(費); [미] (가족에게 주는) 용돈([영] pocket money)",
+              "examples": [
+                {
+                  "text": "clothing[family] <b>allowance</b>",
+                  "translatedText": "피복[가족] 수당"
+                }
+              ],
+              "originalMeaning": "(정기적으로 지급하는) 수당, 급여액, …비(費); [미] (가족에게 주는) 용돈([영] pocket money)"
+            },
+            {
+              "meaning": "공제, 할인(deduction)",
+              "examples": [
+                {
+                  "text": "make an <b>allowance</b> of 20%",
+                  "translatedText": "20% 할인하다"
+                }
+              ],
+              "originalMeaning": "공제, 할인(deduction)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<수당·식량 등을> 일정량[일정액]으로 제한하다, 배급하다",
+              "examples": [],
+              "originalMeaning": "<수당·식량 등을> 일정량[일정액]으로 제한하다, 배급하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fc2a4bab24de44dcb0900c1ab0958273",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fc2a4bab24de44dcb0900c1ab0958273",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "allowances"
+        },
+        {
+          "type": "과거형",
+          "value": "allowanced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "allowancing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "allowanced"
+        }
+      ],
+      "aliasConjugation": "allowances",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "89304d80b17f311bbc857ef1d9578f94",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 내 용돈을 속여서 빼앗았다.",
+      "text": "He conned me out of my <b>allowance</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 아버지는 그에게 다달이 용돈을 주신다",
+      "text": "His father gives him a monthly <b>allowance</b> of pocket money."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사람이 나이가 어리다는 점을 참작해야 한다",
+      "text": "You must make allowances for his youth. or You must take his youth into consideration."
+    }
+  ],
+  "isWordType": true
+}

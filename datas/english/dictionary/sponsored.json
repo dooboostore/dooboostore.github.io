@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "sponsor",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│spɑːnsə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "보증인(surety)",
+              "examples": [],
+              "originalMeaning": "보증인(surety)"
+            },
+            {
+              "meaning": "[종교] 대부(godfather), 교모(godmother); (진수식의) 명명자",
+              "examples": [
+                {
+                  "text": "stand <b>sponsor</b> to a person",
+                  "translatedText": "…의 대부[대모]가 되다"
+                }
+              ],
+              "originalMeaning": "[종교] 대부(godfather), 교모(godmother); (진수식의) 명명자"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "후원하다; …의 보증인이 되다; 지지하다, 발기[주창]하다",
+              "examples": [],
+              "originalMeaning": "후원하다; …의 보증인이 되다; 지지하다, 발기[주창]하다"
+            },
+            {
+              "meaning": "<상업 방송의> 광고주가 되다, 스폰서가 되다",
+              "examples": [],
+              "originalMeaning": "<상업 방송의> 광고주가 되다, 스폰서가 되다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0af6c49ffd05428ba184730324bfb4f0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0af6c49ffd05428ba184730324bfb4f0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sponsors"
+        },
+        {
+          "type": "과거형",
+          "value": "sponsored"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sponsoring"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sponsored"
+        }
+      ],
+      "aliasConjugation": "sponsors",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "fba144f3c2dd2579b7891624057700ef",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 프로그램은 B출판사 제공이었습니다",
+      "text": "This program is <b>sponsored</b> by B publishing company."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 자선 바자회는 A신문사 주최로 열렸다",
+      "text": "The charity bazaar was held under the sponsorship of[<b>sponsored</b> by] the A press."
+    }
+  ],
+  "isWordType": true
+}

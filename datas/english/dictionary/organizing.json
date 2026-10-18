@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "entry": "organize",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɔːrɡənaɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "조직하다, 편성하다, …의 계통을 세우다, 체계화하다; 정리하다, 구성하다",
+              "examples": [
+                {
+                  "text": "<b>organize</b> a committee",
+                  "translatedText": "위원회를 조직하다"
+                }
+              ],
+              "originalMeaning": "조직하다, 편성하다, …의 계통을 세우다, 체계화하다; 정리하다, 구성하다"
+            },
+            {
+              "meaning": "<회사 등을> 창립하다, 설립하다",
+              "examples": [
+                {
+                  "text": "<b>organize</b> a venture business",
+                  "translatedText": "벤처 기업을 설립하다"
+                }
+              ],
+              "originalMeaning": "<회사 등을> 창립하다, 설립하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "조직적으로 단결하다; 단체를 조직하다, 조직화하다; 노동조합을 결성하다, 노동조합에 가입하다",
+              "examples": [],
+              "originalMeaning": "조직적으로 단결하다; 단체를 조직하다, 조직화하다; 노동조합을 결성하다, 노동조합에 가입하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/8b9e413bcfb04230b6dcb7556be0ff41",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/8b9e413bcfb04230b6dcb7556be0ff41",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "organizes"
+        },
+        {
+          "type": "과거형",
+          "value": "organized"
+        },
+        {
+          "type": "현재 분사",
+          "value": "organizing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "organized"
+        }
+      ],
+      "aliasConjugation": "organizes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5f5d9c4cb4aa27205aa2b4c9edd05bd8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 가게는 조직 범죄의 위장 사업이었다.",
+      "text": "The store was a front for organized crime."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 협회는 그가 중심이 되어 조직되었다",
+      "text": "The association was organized with him as a leader."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "오늘 행사 일정은 탄력적으로 짜여졌으므로 하고 싶은 것을 결정할 수 있다",
+      "text": "Today's schedule of events is organized flexibly so that people can decide for themselves what they want to do."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "강을 오염에서 지키려는 운동이 시작되었다",
+      "text": "A campaign was organized to protect the river from pollution[contamination]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "본회의 설립 취지는 빈민 구제에 있습니다",
+      "text": "The society has been organized with the relief of the poor for its main object."
+    }
+  ],
+  "isWordType": true
+}

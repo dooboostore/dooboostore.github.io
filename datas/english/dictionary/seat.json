@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "seat",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "siːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "좌석, 자리; 걸상, 의자 ((chair, bench, sofa 등))",
+              "examples": [
+                {
+                  "text": "have[[영] take] a <b>seat</b>",
+                  "translatedText": "앉다, 착석하다"
+                }
+              ],
+              "originalMeaning": "좌석, 자리; 걸상, 의자 ((chair, bench, sofa 등))"
+            },
+            {
+              "meaning": "(극장·열차 등의) 좌석, 예약석, 지정석",
+              "examples": [
+                {
+                  "text": "reserve a <b>seat</b> on a plane",
+                  "translatedText": "비행기의 좌석을 예약하다"
+                }
+              ],
+              "originalMeaning": "(극장·열차 등의) 좌석, 예약석, 지정석"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "착석시키다, 앉히다",
+              "examples": [
+                {
+                  "text": "<b>seat</b> a person in a sofa",
+                  "translatedText": "…을 소파에 앉히다"
+                }
+              ],
+              "originalMeaning": "착석시키다, 앉히다"
+            },
+            {
+              "meaning": "<기계·부품을> 고정시키다, 설치[장치]하다 ((in, on))",
+              "examples": [],
+              "originalMeaning": "<기계·부품을> 고정시키다, 설치[장치]하다 ((in, on))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "딱 끼워지다, <뚜껑 등이> 딱 맞다",
+              "examples": [],
+              "originalMeaning": "딱 끼워지다, <뚜껑 등이> 딱 맞다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/5d86edf6fab74addb0d94ce24a8d1079",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/5d86edf6fab74addb0d94ce24a8d1079",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "seats"
+        },
+        {
+          "type": "과거형",
+          "value": "seated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "seating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "seated"
+        }
+      ],
+      "aliasConjugation": "seats",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8a4e5528aaa21117dc2e70d94713568a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 자리는 내 차지야!",
+      "text": "Bags I this <b>seat</b>!"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회관에 2,000개의 객석이 있다",
+      "text": "The hall seats[has seats for] 2,000."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "당신의 좌석은 예약되어 있습니다.",
+      "text": "Your <b>seat</b> is engaged."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "좌석은 뒤를 향해 있었다.",
+      "text": "The seats faced rearward."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 우리에게 앉을 것을 권했다.",
+      "text": "He invited us to be seated."
+    }
+  ],
+  "isWordType": true
+}

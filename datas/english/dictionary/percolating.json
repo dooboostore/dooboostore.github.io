@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "percolate",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɜːrkəleɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<액체가> 삼투(渗透)하다, 스며 나오다 ((through)); 여과되다",
+              "examples": [
+                {
+                  "text": "Water percolates through the sand.",
+                  "translatedText": "물이 모래에 스며든다."
+                }
+              ],
+              "originalMeaning": "<액체가> 삼투(渗透)하다, 스며 나오다 ((through)); 여과되다"
+            },
+            {
+              "meaning": "<사상 등이> 스며들다, 서서히 퍼지다, 침투하다",
+              "examples": [],
+              "originalMeaning": "<사상 등이> 스며들다, 서서히 퍼지다, 침투하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<액체가> …에 삼투하다, 스며 나오게 하다",
+              "examples": [],
+              "originalMeaning": "<액체가> …에 삼투하다, 스며 나오게 하다"
+            },
+            {
+              "meaning": "<액체를> 거르다, 여과하다",
+              "examples": [],
+              "originalMeaning": "<액체를> 거르다, 여과하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "여과액, [약학] 삼출액",
+              "examples": [],
+              "originalMeaning": "여과액, [약학] 삼출액"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/4000bc1390454888baf64dcd08b0aab8",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/4000bc1390454888baf64dcd08b0aab8",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "percolates"
+        },
+        {
+          "type": "과거형",
+          "value": "percolated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "percolating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "percolated"
+        }
+      ],
+      "aliasConjugation": "percolates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5fbafdbe01edded0e6b3453bd55064de",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "물이 모래에 스며든다.",
+      "text": "Water percolates through the sand."
+    }
+  ],
+  "isWordType": true
+}

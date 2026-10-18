@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "ache",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "eɪk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<이·머리·마음 등이> 아프다, 쑤시다",
+              "examples": [
+                {
+                  "text": "My head[heart] <b>ache</b> s.",
+                  "translatedText": "머리[가슴]가 아프다."
+                }
+              ],
+              "originalMeaning": "<이·머리·마음 등이> 아프다, 쑤시다"
+            },
+            {
+              "meaning": "…하고 싶어 못 견디다(be eager)",
+              "examples": [
+                {
+                  "text": "( <b>ache</b> +to do) Miss Johnson <b>aches</b> to see you.",
+                  "translatedText": "존슨 양이 당신을 몹시 만나고 싶어해요."
+                }
+              ],
+              "originalMeaning": "…하고 싶어 못 견디다(be eager)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] [종종 복합어를 이루어] 아픔, 쑤심, 아림; 동경, 열망 (=pain)",
+              "examples": [
+                {
+                  "text": "have an <b>ache</b> in the back",
+                  "translatedText": "등이 아프다"
+                }
+              ],
+              "originalMeaning": "[CU] [종종 복합어를 이루어] 아픔, 쑤심, 아림; 동경, 열망 (=<span class='related_word' lang='en' >pain</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0b9a1c5a7a4d445092fe13b8a5d5c371",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0b9a1c5a7a4d445092fe13b8a5d5c371",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "aches"
+        },
+        {
+          "type": "과거형",
+          "value": "ached"
+        },
+        {
+          "type": "현재 분사",
+          "value": "aching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "ached"
+        }
+      ],
+      "aliasConjugation": "aches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "56496b1f4c226ee6b1d547b50a4bbdbb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그녀의 이야기가 너무 웃겨서 우리는 모두 포복절도했다",
+      "text": "Her story was so funny that we were all in convulsions. or Her story was so funny that we all laughed till our sides began to <b>ache</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "미스 김이 당신을 몹시 만나고 싶어 해요.",
+      "text": "Miss Kim <b>aches</b> to see you."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열 때문에 그녀는 온몸이 아팠다",
+      "text": "The fever caused her body to <b>ache</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "날이 차가워지면 허리에 통증이 온다",
+      "text": "When it gets cold, my lower back <b>aches</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "등산 후 온몸이 쑤시고 아팠다",
+      "text": "After climbing the mountain, I ached all over."
+    }
+  ],
+  "isWordType": true
+}

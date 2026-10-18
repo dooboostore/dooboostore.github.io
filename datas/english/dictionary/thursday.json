@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "Thursday",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│θɜːrzdeɪ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "목요일 ((略 Thurs., Thur., Th.))",
+              "examples": [],
+              "originalMeaning": "목요일 ((略 Thurs., Thur., Th.))"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "목요일의",
+              "examples": [
+                {
+                  "text": "on <b>Thursday</b> afternoon",
+                  "translatedText": "목요일 오후에"
+                }
+              ],
+              "originalMeaning": "목요일의"
+            }
+          ]
+        },
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "목요일에(on Thursday)",
+              "examples": [],
+              "originalMeaning": "목요일에(on <b>Thursday</b>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/28a4a735cac04d64af0f4d6c130fc14e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/28a4a735cac04d64af0f4d6c130fc14e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "df8384f0ac52b3216f630422a4817be5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "목요일 밤 채결 예정임",
+      "text": "The vote is to be taken <b>Thursday</b> night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "수요일 오후 1시 30분 로스엔젤레스를 출발해서 목요일 6시 30분 서울에 도착하는 012편에 예약이 되셨습니다",
+      "text": "Your reservation is confirmed for flight 012 departing from Los Angeles at 1:30 p.m. Wednesday and arriving in Seoul at 6:30 p.m. <b>Thursday</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "prominent",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│prɑːmɪnənt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "현저한, 두드러진",
+              "examples": [
+                {
+                  "text": "a <b>prominent</b> symptom",
+                  "translatedText": "현저한 징후"
+                }
+              ],
+              "originalMeaning": "현저한, 두드러진"
+            },
+            {
+              "meaning": "돌기한, 양각된",
+              "examples": [
+                {
+                  "text": "<b>prominent</b> eyes[teeth]",
+                  "translatedText": "퉁방울눈[뻐드렁니]"
+                }
+              ],
+              "originalMeaning": "돌기한, 양각된"
+            },
+            {
+              "meaning": "탁월한, 걸출한, 유명한; 중요한",
+              "examples": [
+                {
+                  "text": "a <b>prominent</b> writer",
+                  "translatedText": "특출한 작가"
+                }
+              ],
+              "originalMeaning": "탁월한, 걸출한, 유명한; 중요한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7ed2f1c1bf544009ba7717177ae81b74",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7ed2f1c1bf544009ba7717177ae81b74",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "a68d16e87eefc57eb32c800f705b152f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "많은 저명한 사람들이 공직에서 추방되었다",
+      "text": "Many a <b>prominent</b> man was purged from public office."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 출중한 인물이다",
+      "text": "He is an outstanding figure[a <b>prominent</b> person]."
+    }
+  ],
+  "isWordType": true
+}

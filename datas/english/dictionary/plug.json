@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "entry": "plug",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "plʌɡ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "마개; 소화전(消火栓); [군사] 화문(火門) 마개, 총구멍 마개; [전기] 플러그; [속어] 소켓 ((비표준적 용법)); (이빨의) 충전물; [기계] (내연 기관의) 점화전, 플러그(= spark ~); 배 바닥의 물 구멍 마개, 수세식 변소의 방수전(放水栓)",
+              "examples": [
+                {
+                  "text": "put a <b>plug</b> into the socket",
+                  "translatedText": "소켓에 플러그를 꽂다"
+                }
+              ],
+              "originalMeaning": "마개; 소화전(消火栓); [군사] 화문(火門) 마개, 총구멍 마개; [전기] 플러그; [속어] 소켓 ((비표준적 용법)); (이빨의) 충전물; [기계] (내연 기관의) 점화전, 플러그(= spark ~); 배 바닥의 물 구멍 마개, 수세식 변소의 방수전(放水栓)"
+            },
+            {
+              "meaning": "씹는 담배",
+              "examples": [],
+              "originalMeaning": "씹는 담배"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "마개를 하다, 막다, 틀어막다 ((up))",
+              "examples": [
+                {
+                  "text": "<b>plug</b> up a leak",
+                  "translatedText": "새는 곳을 막다"
+                }
+              ],
+              "originalMeaning": "마개를 하다, 막다, 틀어막다 ((up))"
+            },
+            {
+              "meaning": "[미·속어] 주먹으로 갈기다, [미·속어] 탄환을 쏘아 박다, [미·속어] 쏘아 죽이다",
+              "examples": [],
+              "originalMeaning": "[미·속어] 주먹으로 갈기다, [미·속어] 탄환을 쏘아 박다, [미·속어] 쏘아 죽이다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[구어] 꾸준히[부지런히] 일하다, 공부하다 ((along, away; at))",
+              "examples": [
+                {
+                  "text": "<b>plug</b> along",
+                  "translatedText": "일을 꾸준히 계속하다"
+                }
+              ],
+              "originalMeaning": "[구어] 꾸준히[부지런히] 일하다, 공부하다 ((along, away; at))"
+            },
+            {
+              "meaning": "[미·속어] 치다, 총을 쏘다",
+              "examples": [
+                {
+                  "text": "<b>plug</b> at a person",
+                  "translatedText": "…을 치다[쏘다]"
+                }
+              ],
+              "originalMeaning": "[미·속어] 치다, 총을 쏘다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/db017300f3b74af1bef376239bf407c2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/db017300f3b74af1bef376239bf407c2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "plugs"
+        },
+        {
+          "type": "과거형",
+          "value": "plugged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "plugging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "plugged"
+        }
+      ],
+      "aliasConjugation": "plugs",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5478332032b70e8b9b72d1ef50efaeb7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "은행이 손을 놓을 때까지 그 사업은 잘 되고 있었다",
+      "text": "The business was going fine till the bank pulled the <b>plug</b> on it."
+    }
+  ],
+  "isWordType": true
+}

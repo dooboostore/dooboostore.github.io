@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "entry": "<b>damp</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dæmp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "축축한, 습기 찬 (=wet)",
+              "examples": [
+                {
+                  "text": "a cold, <b>damp</b> day",
+                  "translatedText": "춥고 습기 찬 날"
+                }
+              ],
+              "originalMeaning": "축축한, 습기 찬 (=<span class='related_word' lang='en' >wet</span>)"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "습기, 물기, 안개(fog), 수증기(vapor)",
+              "examples": [],
+              "originalMeaning": "습기, 물기, 안개(fog), 수증기(vapor)"
+            },
+            {
+              "meaning": "[보통 a ~] 의기소침(dejection), 낙담(시키는 것)",
+              "examples": [],
+              "originalMeaning": "[보통 a ~] 의기소침(dejection), 낙담(시키는 것)"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "축축하게 하다",
+              "examples": [],
+              "originalMeaning": "축축하게 하다"
+            },
+            {
+              "meaning": "[종종 ~ down] <불을> 끄다, <소리를> 약하게 하다, [전기] <진폭을> 줄이다, [음악] <현의> 진동을 멈추다",
+              "examples": [
+                {
+                  "text": "<b>damp</b> (down) a fire",
+                  "translatedText": "불을 끄다 ((재를 덮거나 송풍을 중지하여))"
+                }
+              ],
+              "originalMeaning": "[종종 ~ down] <불을> 끄다, <소리를> 약하게 하다, [전기] <진폭을> 줄이다, [음악] <현의> 진동을 멈추다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/25c6cea781814d638cd055b981bf1d64",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/25c6cea781814d638cd055b981bf1d64",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "damper"
+        },
+        {
+          "type": "3인칭 단수 현재",
+          "value": "damps"
+        },
+        {
+          "type": "최상급",
+          "value": "dampest"
+        },
+        {
+          "type": "과거형",
+          "value": "damped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "damping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "damped"
+        }
+      ],
+      "aliasConjugation": "damper",
+      "aliasConjugationPos": "비교급",
+      "gdid": "0d5073a354d4204474098145f4b5729c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "김에 습기가 찼다",
+      "text": "The laver has become <b>damp</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "등골에 땀이 축축하다",
+      "text": "His back is <b>damp</b> with sweat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 방은 무덥다",
+      "text": "This room is hot and <b>damp</b>[stuffy]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "담배가 눅다",
+      "text": "The tobacco is <b>damp</b>."
+    }
+  ],
+  "isWordType": true
+}

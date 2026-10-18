@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "somehow",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsʌmhaʊ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "부사",
+          "meanings": [
+            {
+              "meaning": "어떻게든지 해서, 그럭저럭, 아무튼 ((종종 or other가 뒤에 옴))",
+              "examples": [
+                {
+                  "text": "I must get it finished <b>somehow</b> (or other).",
+                  "translatedText": "나는 어떻게 해서든지 그것을 해치워야겠다."
+                }
+              ],
+              "originalMeaning": "어떻게든지 해서, 그럭저럭, 아무튼 ((종종 or other가 뒤에 옴))"
+            },
+            {
+              "meaning": "어쩐지, 웬일인지, 아무래도 ((종종 or other가 뒤에 옴))",
+              "examples": [
+                {
+                  "text": "<b>Somehow</b> I don't trust him.",
+                  "translatedText": "어쩐지 그를 믿을 수 없다."
+                }
+              ],
+              "originalMeaning": "어쩐지, 웬일인지, 아무래도 ((종종 or other가 뒤에 옴))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/789fa6e0868a4d118c16342721b792e7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/789fa6e0868a4d118c16342721b792e7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "887eb2af5efcc2fef90b9613c5369ef9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "애오라지 해놓고 볼 일이다",
+      "text": "It must be done <b>somehow</b> or other[in one way or another]. or At any rate I will try."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어쩐지 그를 믿을 수 없다.",
+      "text": "<b>Somehow</b> I don’t trust him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘은 어쩐지 몸이 나른하다",
+      "text": "<b>Somehow</b> I feel listless today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그게 잘 될 것 같지 않는데 무어",
+      "text": "<b>Somehow</b>, I just don't think it'll work."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "일이 그러구러 다 됐다",
+      "text": "The work got finished <b>somehow</b> or other."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "limit",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈlɪmɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "한계(선), 극한, 한도; 제한",
+              "examples": [
+                {
+                  "text": "the upper[lower] <b>limit</b>",
+                  "translatedText": "상한[하한]"
+                }
+              ],
+              "originalMeaning": "한계(선), 극한, 한도; 제한"
+            },
+            {
+              "meaning": "[종종 pl.] [미] (나라·토지·구역 등의) 경계; 범위, 구역",
+              "examples": [
+                {
+                  "text": "within the <b>limit</b> of",
+                  "translatedText": "…의 범위 내에서"
+                }
+              ],
+              "originalMeaning": "[종종 pl.] [미] (나라·토지·구역 등의) 경계; 범위, 구역"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "한정하다; 제한하다(restrict), …에 한계를 두다",
+              "examples": [
+                {
+                  "text": "<b>limit</b> one sentence to 15 words",
+                  "translatedText": "한 문장을 15단어로 제한하다"
+                }
+              ],
+              "originalMeaning": "한정하다; 제한하다(restrict), …에 한계를 두다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/632cc463f1814fadaf1649f6c2f69f0f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/632cc463f1814fadaf1649f6c2f69f0f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "limits"
+        },
+        {
+          "type": "과거형",
+          "value": "limited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "limiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "limited"
+        }
+      ],
+      "aliasConjugation": "limits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5b9f52a2a0706ddf736f68b5754d4582",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 조금 머리가 나빴다.",
+      "text": "He was a bit limited."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀의 오만함은 한이 없다",
+      "text": "Her arrogance knows no limits."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람의 욕심은 한없기 짝이 없다",
+      "text": "There are no <b>limit</b> to man's greed."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "모든 일에는 한계가 있는 법이다.",
+      "text": "There is a <b>limit</b> to everything."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사람을 놀려도 분수가 있지",
+      "text": "There is a <b>limit</b> in befooling one."
+    }
+  ],
+  "isWordType": true
+}

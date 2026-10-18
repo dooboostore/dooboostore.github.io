@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>examine</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪɡˈzæmɪn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "검사[조사, 심사]하다, 검토[검열]하다(inspect, investigate); 고찰하다",
+              "examples": [
+                {
+                  "text": "<b>examine</b> a proposal",
+                  "translatedText": "제안을 검토하다"
+                }
+              ],
+              "originalMeaning": "검사[조사, 심사]하다, 검토[검열]하다(inspect, investigate); 고찰하다"
+            },
+            {
+              "meaning": "진찰하다",
+              "examples": [
+                {
+                  "text": "have one's health examined",
+                  "translatedText": "건강 진단을 받다"
+                }
+              ],
+              "originalMeaning": "진찰하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "조사[심리, 검토]하다(inquire) ((into))",
+              "examples": [
+                {
+                  "text": "<b>examine</b> into details",
+                  "translatedText": "상세히 조사하다"
+                }
+              ],
+              "originalMeaning": "조사[심리, 검토]하다(inquire) ((into))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/438fdfe81c0c48ae99005dc38bd24a24",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/438fdfe81c0c48ae99005dc38bd24a24",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "examines"
+        },
+        {
+          "type": "과거형",
+          "value": "examined"
+        },
+        {
+          "type": "현재 분사",
+          "value": "examining"
+        },
+        {
+          "type": "과거 분사",
+          "value": "examined"
+        }
+      ],
+      "aliasConjugation": "examines",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "64922f3c878d743673e058b0c0b73b64",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 친절하게도 그것을 조사해 주었다",
+      "text": "He was kind[good] enough to <b>examine</b> it. or He had the goodness[kindness] to <b>examine</b> it for me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 어제 눈을 진찰받았다",
+      "text": "I had my eyes examined yesterday."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 결정을 이해하려면 그에 앞서는 과정을 살펴보아야 할 것이다",
+      "text": "In order to understand the decision, you have to <b>examine</b> the process that led up to it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "머리가 어떻게 되었나 진찰을 받아보지 그래.",
+      "text": "You should have your head examined[tested, seen to]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그의 이번 학기 결석 횟수를 조사해 주시오",
+      "text": "Please <b>examine</b> how many times he was absent this term."
+    }
+  ],
+  "isWordType": true
+}

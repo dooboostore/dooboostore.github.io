@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "wrangle",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈræŋɡl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "말다툼하다, 언쟁하다; 논쟁하다",
+              "examples": [
+                {
+                  "text": "<b>wrangle</b> with a person about[over] a matter",
+                  "translatedText": "어떤 일로 …와 언쟁하다"
+                }
+              ],
+              "originalMeaning": "말다툼하다, 언쟁하다; 논쟁하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<사람을> 말하여 설득하다 ((into, out of))",
+              "examples": [],
+              "originalMeaning": "<사람을> 말하여 설득하다 ((into, out of))"
+            },
+            {
+              "meaning": "<가축을> 돌보다, 지키다",
+              "examples": [],
+              "originalMeaning": "<가축을> 돌보다, 지키다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "논쟁(dispute), 언쟁, 말다툼",
+              "examples": [],
+              "originalMeaning": "논쟁(dispute), 언쟁, 말다툼"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/b097ab76349f4ca98264ffc2e6321992",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/b097ab76349f4ca98264ffc2e6321992",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "wrangles"
+        },
+        {
+          "type": "과거형",
+          "value": "wrangled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "wrangling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "wrangled"
+        }
+      ],
+      "aliasConjugation": "wrangles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f8fb93521ae420d0fb50c6ee816157ec",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그와 말다툼했다",
+      "text": "I fell wrangling[had angry words] with him."
+    }
+  ],
+  "isWordType": true
+}

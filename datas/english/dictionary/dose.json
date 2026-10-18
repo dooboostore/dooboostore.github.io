@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "entry": "dose",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "doʊs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(약의) 1회분(량), 복용량",
+              "examples": [],
+              "originalMeaning": "(약의) 1회분(량), 복용량"
+            },
+            {
+              "meaning": "(쓴) 약, 약간의 경험",
+              "examples": [
+                {
+                  "text": "a <b>dose</b> of hard work",
+                  "translatedText": "약간의 고된 일"
+                }
+              ],
+              "originalMeaning": "(쓴) 약, 약간의 경험"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "투약하다, 복용시키다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>dose</b> pyridine toa person = <b>dose</b> a person with pyridine",
+                  "translatedText": "…에게 피리딘을 복용시키다"
+                }
+              ],
+              "originalMeaning": "투약하다, 복용시키다 ((with))"
+            },
+            {
+              "meaning": "<약을> 조제하다, 적량으로 나누다",
+              "examples": [
+                {
+                  "text": "<b>dose</b> out aspirinto a person",
+                  "translatedText": "…에게 아스피린을 지어 주다"
+                }
+              ],
+              "originalMeaning": "<약을> 조제하다, 적량으로 나누다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "약을 먹다",
+              "examples": [],
+              "originalMeaning": "약을 먹다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/a13bb0aef40b415995d5f77a87ce6dd7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/a13bb0aef40b415995d5f77a87ce6dd7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "doses"
+        },
+        {
+          "type": "과거형",
+          "value": "dosed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dosing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dosed"
+        }
+      ],
+      "aliasConjugation": "doses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "06bcee1fcc8b4d861af3b9c4bbf6687d",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아버지는 아이에게 약을 두 봉지 먹으라고 지시하였다.",
+      "text": "The father ordered his child to take two doses of medicine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나는 그에게 앙갚음하고야 말겠다",
+      "text": "I will pay him back for this. or I’ll fix him for that. or I’ll fix his wagon. or I’ll give him a <b>dose</b> of his own medicine. or I’ll get back at[get even with] him. or I’ll settle a score with him. or I’ll give him tit for tat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 임질에 걸렸다.",
+      "text": "He came down with a <b>dose</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "네게 복수할 거야",
+      "text": "I'll fix your wagon. or I'll give you a <b>dose</b> of your own medicine."
+    }
+  ],
+  "isWordType": true
+}

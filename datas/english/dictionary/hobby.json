@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "hobby",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "hɑ́bi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "취미, 도락; 장기(長技), 가장 능한 것",
+              "examples": [
+                {
+                  "text": "a <b>hobby</b> shop",
+                  "translatedText": "모형 공작 전문점"
+                }
+              ],
+              "originalMeaning": "취미, 도락; 장기(長技), 가장 능한 것"
+            },
+            {
+              "meaning": "(=HOBBYHORSE)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' >HOBBYHORSE</span>)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2b1ac7ae94424e46bddc1d0a21d343df",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2b1ac7ae94424e46bddc1d0a21d343df",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "hobbies"
+        }
+      ],
+      "aliasConjugation": "hobbies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "ac080d0588c96807d68af086199b63ce",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "hobby",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "새호리기",
+              "examples": [],
+              "originalMeaning": "새호리기"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/62bb6ac7c7884c099d7d8b98d124e91e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/62bb6ac7c7884c099d7d8b98d124e91e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "hobbies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "abf430d273022d0ee311334802fd2c67",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 재미로 꽃을 기른다",
+      "text": "He grows flowers for a <b>hobby</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 취미로는 좋지만 직업으로는 흥미가 없다",
+      "text": "It may be nice as a <b>hobby</b>, but will lose its interest as a job."
+    }
+  ],
+  "isWordType": true
+}

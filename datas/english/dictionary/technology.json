@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "technology",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "tek│nɑːlədʒi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "과학 기술, 생산[공업] 기술; 공학",
+              "examples": [],
+              "originalMeaning": "과학 기술, 생산[공업] 기술; 공학"
+            },
+            {
+              "meaning": "(과학 기술의) 전문어, 술어",
+              "examples": [],
+              "originalMeaning": "(과학 기술의) 전문어, 술어"
+            },
+            {
+              "meaning": "과학 기술상의 과정, 응용 과학",
+              "examples": [],
+              "originalMeaning": "과학 기술상의 과정, 응용 과학"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/08eba97ccd0d40d998ccd15019b6307a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/08eba97ccd0d40d998ccd15019b6307a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "technologies"
+        }
+      ],
+      "aliasConjugation": "technologies",
+      "aliasConjugationPos": "복수형",
+      "gdid": "14556af4a33b5f917908e418a48c2137",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 잡지에 새 컴퓨터 기술에 관한 기사가 나 있다",
+      "text": "There is a report on new computer <b>technology</b> in the magazine."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새로운 인쇄 기술이 전 아시아에 확산되었다",
+      "text": "The new <b>technology</b> of printing was disseminated throughout Asia."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "매사추세츠 공과 대학",
+      "text": "Massachusetts Institute of <b>Technology</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공업 기술",
+      "text": "(engineering) <b>technology</b>"
+    }
+  ],
+  "isWordType": true
+}

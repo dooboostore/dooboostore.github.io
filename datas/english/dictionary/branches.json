@@ -1,0 +1,133 @@
+{
+  "items": [
+    {
+      "entry": "branch",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "bræntʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(나뭇)가지, 분지(分枝)",
+              "examples": [
+                {
+                  "text": "a fallen tree <b>branch</b>",
+                  "translatedText": "떨어진 나뭇가지"
+                }
+              ],
+              "originalMeaning": "(나뭇)가지, 분지(分枝)"
+            },
+            {
+              "meaning": "가지 모양의 물건",
+              "examples": [],
+              "originalMeaning": "가지 모양의 물건"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<나무가> 가지를 내다[뻗다] ((forth, out))",
+              "examples": [],
+              "originalMeaning": "<나무가> 가지를 내다[뻗다] ((forth, out))"
+            },
+            {
+              "meaning": "갈라지다, 분기(分岐)하다, 분화하다 ((off, away, out))",
+              "examples": [
+                {
+                  "text": "<b>branch</b> off in all directions",
+                  "translatedText": "사방으로 갈라지다"
+                }
+              ],
+              "originalMeaning": "갈라지다, 분기(分岐)하다, 분화하다 ((off, away, out))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "…에 가지가 갈라지게 하다",
+              "examples": [],
+              "originalMeaning": "…에 가지가 갈라지게 하다"
+            },
+            {
+              "meaning": "…에 꽃무늬를 수놓다",
+              "examples": [],
+              "originalMeaning": "…에 꽃무늬를 수놓다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/2a4de723941342c6addf05dcd72560eb",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/2a4de723941342c6addf05dcd72560eb",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "branches"
+        },
+        {
+          "type": "과거형",
+          "value": "branched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "branching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "branched"
+        }
+      ],
+      "aliasConjugation": "branches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "45a1eea638db7c95acf9f77b062d7ceb",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나뭇가지가 축축 늘어져 있다",
+      "text": "The <b>branches</b> all droop low."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새 한 마리가 나뭇가지에 앉았다",
+      "text": "A bird perched on a <b>branch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "새가 나뭇가지에 내려 앉았다.",
+      "text": "The bird lighted on the <b>branch</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "내 몸무게로 나뭇가지가 부러졌다",
+      "text": "The <b>branch</b> gave way under me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이슬 방울이 나뭇가지에 맺었다",
+      "text": "Dewdrops formed on the <b>branches</b>."
+    }
+  ],
+  "isWordType": true
+}

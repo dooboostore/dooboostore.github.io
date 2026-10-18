@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "entry": "<b>lodge</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "lɑːdʒ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조그만 집, 오두막; [미] (행락지 등의) 여관, 소규모 별장; (캠프 등의) 주요 건물",
+              "examples": [
+                {
+                  "text": "a lakeside <b>lodge</b>",
+                  "translatedText": "호반의 별장"
+                }
+              ],
+              "originalMeaning": "조그만 집, 오두막; [미] (행락지 등의) 여관, 소규모 별장; (캠프 등의) 주요 건물"
+            },
+            {
+              "meaning": "(큰 집의) 문간방, 문간채; 수위실",
+              "examples": [],
+              "originalMeaning": "(큰 집의) 문간방, 문간채; 수위실"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "(일시적으로) 숙박하다, 묵다, 머무르다; [영] 하숙[기숙]하다 ((at, with))",
+              "examples": [
+                {
+                  "text": "<b>lodge</b> at a hotel",
+                  "translatedText": "호텔에 묵다"
+                }
+              ],
+              "originalMeaning": "(일시적으로) 숙박하다, 묵다, 머무르다; [영] 하숙[기숙]하다 ((at, with))"
+            },
+            {
+              "meaning": "<총알 등이> (체내에) 박히다, <화살 등이> 꽂히다 ((in))",
+              "examples": [
+                {
+                  "text": "The fishbone lodged in his throat.",
+                  "translatedText": "생선 가시가 그의 목구멍에 박혔다."
+                }
+              ],
+              "originalMeaning": "<총알 등이> (체내에) 박히다, <화살 등이> 꽂히다 ((in))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(일시적으로) 숙박시키다, 묵게 하다; 하숙[동거]시키다 ((at, in, with))",
+              "examples": [
+                {
+                  "text": "a house lodging students",
+                  "translatedText": "학생용 하숙집"
+                }
+              ],
+              "originalMeaning": "(일시적으로) 숙박시키다, 묵게 하다; 하숙[동거]시키다 ((at, in, with))"
+            },
+            {
+              "meaning": "<돈 등을> (은행에) 맡기다, 예치하다 ((in, with))",
+              "examples": [
+                {
+                  "text": "<b>lodge</b> money in a bank[with a person]",
+                  "translatedText": "돈을 은행에[…에게] 맡기다"
+                }
+              ],
+              "originalMeaning": "<돈 등을> (은행에) 맡기다, 예치하다 ((in, with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fd73ea495a114cf9b32c1b03b68cdd70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fd73ea495a114cf9b32c1b03b68cdd70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "lodges"
+        },
+        {
+          "type": "과거형",
+          "value": "lodged"
+        },
+        {
+          "type": "현재 분사",
+          "value": "lodging"
+        },
+        {
+          "type": "과거 분사",
+          "value": "lodged"
+        }
+      ],
+      "aliasConjugation": "lodges",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "7cb26556f4965e8717fc2cc1ff8855df",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 호텔은 설비가 좋다.",
+      "text": "The hotel is well lodged."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사실은 그의 마음속에 박혀 있었다.",
+      "text": "The fact lodged in his mind."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "생선 가시가 그의 목구멍에 박혔다.",
+      "text": "The fishbone lodged in his throat."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "저 하숙집에서는 학생을 우대한다",
+      "text": "That lodging house treats students with kindness."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "친구를 밀고하는 것은 옳지 않다",
+      "text": "It's not right to <b>lodge</b> an information against your friend."
+    }
+  ],
+  "isWordType": true
+}

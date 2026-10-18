@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "blame",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bleɪm"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "나무라다, 비난하다 ((for))",
+              "examples": [
+                {
+                  "text": "The teacher blamed him for neglect of duty[for neglecting his duty].",
+                  "translatedText": "의무를 태만히 한 탓으로 선생님은 그를 꾸짖었다."
+                }
+              ],
+              "originalMeaning": "나무라다, 비난하다 ((for))"
+            },
+            {
+              "meaning": "<죄과를> (…에게) 책임지우다, …의 탓으로 돌리다",
+              "examples": [
+                {
+                  "text": "<b>blame</b> something upon a person",
+                  "translatedText": "책임을 …에게 지우다"
+                }
+              ],
+              "originalMeaning": "<죄과를> (…에게) 책임지우다, …의 탓으로 돌리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "비난, 책망(censure)",
+              "examples": [
+                {
+                  "text": "incur <b>blame</b> for",
+                  "translatedText": "…때문에 비난을 받다"
+                }
+              ],
+              "originalMeaning": "비난, 책망(censure)"
+            },
+            {
+              "meaning": "[보통 the ~] 책임",
+              "examples": [
+                {
+                  "text": "bear[take] the <b>blame</b> for",
+                  "translatedText": "…의 책임을 지다"
+                }
+              ],
+              "originalMeaning": "[보통 the ~] 책임"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/493b955ef1fd4443b15ad19c93ff1e9a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/493b955ef1fd4443b15ad19c93ff1e9a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "blames"
+        },
+        {
+          "type": "과거형",
+          "value": "blamed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "blaming"
+        },
+        {
+          "type": "과거 분사",
+          "value": "blamed"
+        }
+      ],
+      "aliasConjugation": "blames",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e4baec1c6c269dd1496eec262853f276",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "내 탓으로 돌리지 마라.",
+      "text": "Don’t <b>blame</b> it on me."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나쁜 것은 너 쪽이다.",
+      "text": "It is you that are to <b>blame</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이건 누구의 죄도 아니다",
+      "text": "Nobody is to <b>blame</b> for this."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "나를 책망하는 것은 번지수가 틀린다",
+      "text": "You are laying the <b>blame</b> at the wrong door. or You're barking up the wrong tree if you think I'm to <b>blame</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 제 탓이라고 한다",
+      "text": "He takes the <b>blame</b> upon himself."
+    }
+  ],
+  "isWordType": true
+}
