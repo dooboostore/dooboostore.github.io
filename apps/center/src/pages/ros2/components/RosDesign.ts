@@ -356,8 +356,8 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 
 **토픽 이름 규칙 — 명령은 /cmd, 상태는 /state**
 
-- **외부에서 들어오는 명령은 전부 \`/cmd/...\`.** 보내고 끝 (cmd_vel 관례 — 응답 없음). \`/cmd/user_command\` · \`/cmd/manual/cmd_vel\` · \`/cmd/manual/arm\` · \`/cmd/e_stop\` · \`/cmd/operation_mode\` · \`/cmd/map_mode\` · \`/cmd/fake_opencr/set_pose\`(테스트베드).
-- **상태는 \`/state/<이름>\`, 발행은 state_manager 하나만.** 다른 노드는 구독만 한다. 상태를 바꾸고 싶으면 \`/cmd/<이름>\`을 보내고 결과는 \`/state/<이름>\`으로 본다 (\`/cmd/operation_mode\` → \`/state/operation_mode\`, \`/cmd/map_mode\` → \`/state/map_mode\`, \`/cmd/e_stop\` → \`/state/emergency\`). ROS에는 발행자 제한 기능이 없으므로 규칙으로 지키고, 테스트베드 input_manager(호스트 파일 → 토픽)는 \`/state/*\` 를 거부한다.
+- **외부에서 들어오는 명령은 전부 \`/cmd/...\`.** 보내고 끝 (cmd_vel 관례 — 응답 없음). \`/cmd/user_command\` · \`/cmd/manual/cmd_vel\` · \`/cmd/manual/arm\` · \`/cmd/e_stop\` · \`/cmd/operation_mode\` · \`/cmd/map_mode\` · \`/cmd/restart\`("all [인자]"·"node <이름>") · \`/cmd/fake_opencr/set_pose\`(테스트베드).
+- **상태는 \`/state/<이름>\`, 발행은 state_manager 하나만.** 다른 노드는 구독만 한다. 상태를 바꾸고 싶으면 \`/cmd/<이름>\`을 보내고 결과는 \`/state/<이름>\`으로 본다 (\`/cmd/operation_mode\` → \`/state/operation_mode\`, \`/cmd/map_mode\` → \`/state/map_mode\`, \`/cmd/e_stop\` → \`/state/emergency\`, \`/cmd/restart\` → \`/state/restart\`). ROS에는 발행자 제한 기능이 없으므로 규칙으로 지키고, 테스트베드 input_manager(호스트 파일 → 토픽)는 \`/state/*\` 를 거부한다.
 - **응답이 꼭 필요한 요청은 토픽이 아니라 서비스** (예: \`/map_saver/save_map\`).
 
 ### 외부 서비스 (ROS 바깥)
@@ -451,6 +451,7 @@ flowchart TB
     PC -->|"✉️ /pole_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| PER
     U -->|"🖱️ 조작 창"| SIM
     SIM -->|"✉️ /cmd/e_stop<br/>(조작 창)"| SM
+    SIM -->|"✉️ /cmd/restart<br/>(조작 창)"| SM
         SIM -.->|"📁 렌더 파일"| FC
     FC -->|"✉️ 같은 토픽명<br/>(PC·GC 자리 대체)"| PER
     SIM -.->|"📁 가상 시리얼 C/S<br/>(fake_opencr — faker 기본)"| CM
