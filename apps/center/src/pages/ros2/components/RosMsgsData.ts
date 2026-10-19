@@ -53,8 +53,8 @@ string frame_id                  # 이 데이터가 표현된 좌표계 (예: ba
     def: `string data`,
     desc: '문자열 하나. 디버그·간단한 명령 전달용.',
     notes: ['의미가 있는 데이터라면 전용 메시지를 만드는 게 좋다 (필드 이름이 곧 문서).'],
-    usedIn: ['/user_command (사람 명령 → vlm_task_planner)', '/robot_description (URDF 문자열, transient_local)'],
-    cli: `ros2 topic pub --once /user_command std_msgs/msg/String "{data: '테이블 위 컵 가져다줘'}"`,
+    usedIn: ['/cmd/user_command (사람 명령 → vlm_task_planner)', '/robot_description (URDF 문자열, transient_local)'],
+    cli: `ros2 topic pub --once /cmd/user_command std_msgs/msg/String "{data: '테이블 위 컵 가져다줘'}"`,
   },
   {
     id: 'std_msgs/Bool', kind: 'msg', def: `bool data`,

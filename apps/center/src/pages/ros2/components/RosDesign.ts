@@ -43,11 +43,12 @@ const ARCH_FLOWS: Flow[] = [
   {
     label: '컵 가져오기 — 처음부터 끝까지',
     steps: [
-      { e: ['U>UI'], t: '사람이 말한다', d: '"테이블 위 컵 가져다줘" — voice_ui가 음성을 텍스트로 바꿉니다. 모든 일은 여기서 시작합니다.' },
-      { e: ['UI>VLM'], t: '명령이 VLM으로', d: '✉️ /user_command (std_msgs/String) 문자열 하나가 vlm_task_planner에 들어갑니다.' },
+      { e: ['U>UI'], t: '사람이 명령한다', d: '"테이블 위 컵 가져다줘" — user_input(콘솔)에 입력합니다. 모든 일은 여기서 시작합니다.' },
+      { e: ['UI>VLM'], t: '명령이 VLM으로', d: '✉️ /cmd/user_command (std_msgs/String) 문자열 하나가 vlm_task_planner에 들어갑니다.' },
       { e: ['PCH>PC', 'PC>PER'], t: '카메라는 늘 보고 있다', d: 'pole_cam 영상·depth가 USB로 드라이버 → perception으로 계속 흐릅니다. 명령과 상관없이 상시 입력입니다.' },
       { e: ['PER>VLM', 'PER>CO'], t: '무엇이 어디 있나', d: '✉️ /tracked_objects — 컵 id 3, 테이블 id 5, 의자 id 7. VLM은 계획에, coordinator는 id 검증에 씁니다.' },
       { e: ['VLM>CO'], t: 'VLM이 순서만 정한다', d: '✉️ /sub_goals [navigate(테이블 앞) → pick(컵) → navigate(사람) → place]. 어떻게 움직일지는 정하지 않습니다.' },
+      { e: ['VLM>SIM'], t: '계획 응답이 조작 창에', d: '📁 /sub_goals 파일 → 시뮬레이터 조작 창 응답줄. VLM 거절(보류)도 say 계획으로 보여준다.' },
       { e: ['CO>NAV'], t: '이동 시작', d: 'coordinator가 검증 후 테이블 앞 (3.45, 0.9)을 계산해 🎬 /navigate_to_pose 액션을 보냅니다. 팔은 stow.' },
       { e: ['PC>RTAB', 'CM>EKF', 'EKF>RTAB', 'RTAB>NAV', 'EKF>NAV'], t: '내가 지도 어디에 있나', d: 'rtabmap이 map→odom, EKF가 odom→base_footprint를 냅니다. 둘을 이으면 Nav2가 지도 기준 로봇 위치를 압니다.' },
       { e: ['PC>COST', 'COST>NAV'], t: '장애물 지도', d: 'pole_cam 점구름이 costmap voxel layer에 쌓여 의자를 피하는 경로를 만듭니다.' },
@@ -59,12 +60,12 @@ const ARCH_FLOWS: Flow[] = [
       { e: ['CMN>CM'], t: '최종 /cmd_vel', d: 'diff_drive_controller가 바퀴 속도로 바꿉니다 (좌 2.72, 우 5.76 rad/s).' },
       { e: ['CM>HW', 'HW>CM'], t: '모터로', d: '100Hz로 쓰기(SyncWrite) · 읽기(SyncRead). 테이블 앞에 도착하면 Nav2 액션 결과가 "성공".' },
       { e: ['GCH>GC', 'GC>GS', 'PER>GS', 'CO>GS'], t: '어떻게 잡을까', d: '/tracked_objects로 대상 컵을 찾고 gripper_cam 근접 점구름으로 후보를 매김. 📞 /score_grasps → [B 0.87, C 0.62, A 0.41].' },
-      { e: ['CO>MTC'], t: '집기 실행', d: '🎬 /execute_task_solution 후보 B — 접근·열기·파지·attach·들어올리기를 MTC가 계획.' },
-      { e: ['MTC>CM'], t: '팔 궤적', d: '🎬 /arm_controller/follow_joint_trajectory로 관절 궤적이 controller_manager에 들어갑니다.' },
+      { e: ['CO>MG'], t: '집기 실행', d: '🎬 /plan_kinematic_path 후보 B → /execute_trajectory — 접근·파지·들어올리기를 move_group이 직접 계획·실행.' },
+      { e: ['MG>CM'], t: '팔 궤적', d: '🎬 /arm_controller/follow_joint_trajectory로 관절 궤적이 controller_manager에 들어갑니다.' },
       { e: ['CM>RLA', 'RLA>CM'], t: '팔 처짐 보정', d: 'JTC 목표 [0.00, 0.62, −0.31, 1.10] + Δ[0, +0.03, −0.01, 0] → joint2 중력 처짐 보상.' },
       { e: ['CM>HW', 'HW>CM'], t: '팔 모터로', d: '같은 OpenCR 버스로 팔 관절 목표를 쓰고 현재값을 읽습니다.' },
       { e: ['CM>ASM', 'ASM>CO'], t: '안전 감시는 항상', d: '/joint_states를 arm_safety_monitor가 계속 봅니다. 이상이 없으면 조용합니다.' },
-      { e: ['CO>NAV', 'CO>MTC'], t: '사람에게 가서 내려놓기', d: '컵을 든 채 footprint를 키우고 이동 → place → detach. 경로는 위 이동 단계와 같습니다.' },
+      { e: ['CO>NAV', 'CO>MG'], t: '사람에게 가서 내려놓기', d: '컵을 든 채 footprint를 키우고 이동 → place(위로 이동 후 벌리기). 경로는 위 이동 단계와 같습니다.' },
       { e: ['CO>VLM'], t: '완료 보고', d: '✉️ /task_status 완료 — VLM은 다음 명령을 기다립니다.' },
       { e: ['CO>UI', 'UI>U'], t: '사람에게 알림', d: '✉️ /robot_say → 🔊 "컵 가져왔어요". 끝.' },
     ],
@@ -83,7 +84,7 @@ const ARCH_FLOWS: Flow[] = [
   {
     label: '팔 한 주기 — controller_manager read → update → write',
     steps: [
-      { e: ['MTC>CM'], t: '입력', d: 'MTC가 팔 궤적을 보냅니다 (동작 시작 때 1회). 다음 update에서 쓰입니다.' },
+      { e: ['MG>CM'], t: '입력', d: 'move_group이 팔 궤적을 보냅니다 (동작 시작 때 1회). 다음 update에서 쓰입니다.' },
       { e: ['HW>CM'], t: 'read', d: 'OpenCR에서 관절 위치·속도·전류와 IMU를 읽습니다.' },
       { e: ['CM>ASM', 'CM>EKF', 'CM>RLN'], t: 'update — 상태 발행', d: '/joint_states(→ arm_safety_monitor), /odom·/imu(→ EKF, rl_nav_correction).' },
       { e: ['CM>RLA'], t: 'update — JTC 목표', d: 'JTC가 이번 주기 목표 관절각을 rl_arm_correction에 reference로 넘깁니다.' },
@@ -106,13 +107,13 @@ const ARCH_FLOWS: Flow[] = [
     label: '파지 실패 → 재시도 → 재계획 → 다시 집기',
     steps: [
       { e: ['CO>GS'], t: '후보 점수', d: '📞 /score_grasps → [B 0.87, C 0.62, A 0.41].' },
-      { e: ['CO>MTC'], t: '1순위 B 시도 → 실패', d: '그리퍼가 완전히 닫힘(빈손) → coordinator가 놓친 것으로 판단.' },
-      { e: ['CO>MTC'], t: '2순위 C 재시도 → 또 실패', d: 'VLM을 부르지 않고 coordinator가 직접 다음 후보로. 실행 세부는 coordinator의 권한입니다.' },
+      { e: ['CO>MG'], t: '1순위 B 시도 → 실패', d: '그리퍼가 완전히 닫힘(빈손) → coordinator가 놓친 것으로 판단.' },
+      { e: ['CO>MG'], t: '2순위 C 재시도 → 또 실패', d: 'VLM을 부르지 않고 coordinator가 직접 다음 후보로. 실행 세부는 coordinator의 권한입니다.' },
       { e: ['CO>VLM'], t: '재계획 요청', d: '✉️ /task_status (step 2, FAILED, reason: grasp_failed_all). 후보를 다 써서 이제 VLM 차례입니다.' },
       { e: ['PER>VLM', 'VLM>CO'], t: 'VLM이 새 계획', d: '지금 보이는 물체(/tracked_objects)를 다시 보고 ✉️ /sub_goals — 예) [navigate(테이블 옆, 컵 방향으로 정렬), pick(컵 3), navigate(사람), place].' },
       { e: ['CO>NAV'], t: '새 계획 실행 — 다른 방향으로 이동', d: '검증 후 팔을 접고 🎬 /navigate_to_pose 새 접근 위치. 4축 팔은 컵이 팔 평면 안에 있어야 옆 파지가 되므로 방향이 중요합니다.' },
       { e: ['GC>GS', 'CO>GS'], t: '새 위치에서 후보 다시', d: '장면을 갱신하고 gripper_cam 새 점구름으로 📞 /score_grasps를 다시 — 예) [D 0.81, B 0.70].' },
-      { e: ['CO>MTC'], t: '다시 집기 → 성공', d: '🎬 /execute_task_solution 후보 D → 컵 attach. 성공하면 원래 계획대로 사람에게 전달하러 이어갑니다.' },
+      { e: ['CO>MG'], t: '다시 집기 → 성공', d: '🎬 plan+execute 후보 D → 파지 성공. 성공하면 원래 계획대로 사람에게 전달하러 이어갑니다.' },
       { e: ['CO>UI', 'UI>U'], t: '재계획도 실패하면 — 알리고 정지', d: 'pick 단계가 두 번째로 실패(같은 단계 2회 연속)하면 ✉️ /robot_say → 🔊 "컵을 잡을 수 없어요" 후 정지. 이건 재계획을 해 보고도 안 될 때만입니다.' },
     ],
   },
@@ -165,7 +166,7 @@ const PLAN_FLOWS: Flow[] = [
     label: '명령 하나 처리',
     steps: [
       { e: ['USER>UI'], t: '사람이 말한다', d: '"테이블 위 컵 가져다줘".' },
-      { e: ['UI>VLM', 'TO>VLM'], t: 'VLM에 명령', d: '/user_command 문자열 + 지금 보이는 물체 목록(/tracked_objects)을 함께 보고 계획합니다.' },
+      { e: ['UI>VLM', 'TO>VLM'], t: 'VLM에 명령', d: '/cmd/user_command 문자열 + 지금 보이는 물체 목록(/tracked_objects)을 함께 보고 계획합니다.' },
       { e: ['VLM>CO', 'TO>CO'], t: '계획 → coordinator 검증', d: '/sub_goals [navigate, pick, navigate, place]. coordinator가 형식·허용 동작·대상 id가 /tracked_objects에 실제 있는지 확인합니다.' },
       { e: ['CO>O3a'], t: '이동', d: '팔을 stow로 접고 🎬 NavigateToPose (3.45, 0.9).' },
       { e: ['NI>NT', 'NT>O3b', 'NT>O3b#2'], t: '이동 중 속도 프리셋', d: 'rl_nav_tuner가 costmap·현재 속도·남은 거리를 보고 1~2초마다 /speed_limit과 set_parameters로 바꿉니다.' },
@@ -352,6 +353,19 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 - **학습 노드는 끌 수 있어야 한다.** 노드를 내리지 않고 \`enabled:=false\`(Δ=0, 기본 프리셋)로 바꾸면 원래 시스템과 같아야 한다.
 - **위는 느리고 추상적, 아래는 빠르고 구체적.** VLM은 제어 루프에 넣지 않는다.
 - **판단 권한은 한 층에 하나.** 파지점 2순위 선택 같은 실행 세부는 coordinator가 하고, VLM은 작업 순서만 다시 짠다.
+
+**토픽 이름 규칙 — 명령은 /cmd, 상태는 /state**
+
+- **외부에서 들어오는 명령은 전부 \`/cmd/...\`.** 보내고 끝 (cmd_vel 관례 — 응답 없음). \`/cmd/user_command\` · \`/cmd/manual/cmd_vel\` · \`/cmd/manual/arm\` · \`/cmd/e_stop\` · \`/cmd/operation_mode\` · \`/cmd/map_mode\` · \`/cmd/fake_opencr/set_pose\`(테스트베드).
+- **상태는 \`/state/<이름>\`, 발행은 state_manager 하나만.** 다른 노드는 구독만 한다. 상태를 바꾸고 싶으면 \`/cmd/<이름>\`을 보내고 결과는 \`/state/<이름>\`으로 본다 (\`/cmd/operation_mode\` → \`/state/operation_mode\`, \`/cmd/map_mode\` → \`/state/map_mode\`, \`/cmd/e_stop\` → \`/state/emergency\`). ROS에는 발행자 제한 기능이 없으므로 규칙으로 지키고, 테스트베드 input_manager(호스트 파일 → 토픽)는 \`/state/*\` 를 거부한다.
+- **응답이 꼭 필요한 요청은 토픽이 아니라 서비스** (예: \`/map_saver/save_map\`).
+
+### 외부 서비스 (ROS 바깥)
+
+| | 역할 | 연결 |
+| --- | --- | --- |
+| 시뮬레이터 (SIL, \`lv2_module6/simulator\`) | 실기 없이 테스트베드를 돌리는 상대역. ROS 토픽을 직접 쏘지 않고 **\`lv2_module6/debug/\` 파일로** 주고받는다: 장면 렌더 (fake_camera가 읽음), 플랜트 물리 C/S (가상 시리얼), 조작 창 (명령·수동·지도·스캔), 스캔 지도 오버레이·저장 (\`ros2_ws/map/\`) | 파일 |
+| ai-service | 호스트 VLM 서버. vlm_task_planner가 HTTP로 계획을 받아온다 | HTTP |
 `,
   },
 
@@ -367,6 +381,11 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 ${F}mermaid
 flowchart TB
     U(((사람)))
+    subgraph EXT["외부 서비스 (ROS 바깥)"]
+        SIM["🖥️ simulator (SIL)<br/>장면 렌더·플랜트"]
+        AIS["🖥️ ai-service<br/>호스트 VLM 서버"]
+        FC["🧪 fake_camera ×2<br/>테스트베드 전용"]
+    end
     subgraph S0["센서·인지"]
         subgraph SHS["물리 하드웨어 (센서)"]
             PCH{{"pole_cam<br/>RealSense RGB-D"}}
@@ -377,18 +396,19 @@ flowchart TB
         PER["🛠️ perception"]
     end
     subgraph S1["① 작업 계획"]
-        UI["🛠️ voice_ui<br/>음성인식 · TTS · 입력 UI"]
+        UI["🖥️ user_input<br/>콘솔 명령 입력"]
         VLM["🛠️ vlm_task_planner"]
     end
     subgraph S2["② 임무 관리"]
         CO["🛠️ coordinator"]
+        SM["🛠️ state_manager<br/>상태 주인"]
     end
     subgraph S3["③ 앞단 판단 보조"]
         GS["🛠️ grasp_scorer"]
         NT["🛠️ rl_nav_tuner"]
     end
     subgraph S4["④ 확정 실행"]
-        MTC["📦 MoveIt Task Constructor<br/>+ move_group"]
+        MG["📦 move_group<br/>plan + execute"]
         NAV["📦 Nav2<br/>bt_navigator · planner · controller"]
         RTAB["📦 rtabmap<br/>RGB-D SLAM<br/>매핑 · 위치추정 모드"]
         EKF["📦 robot_localization<br/>ekf_node<br/>휠 + IMU 융합"]
@@ -400,8 +420,11 @@ flowchart TB
     end
     subgraph S6["⑥ 안전"]
         ASM["🛠️ arm_safety_monitor"]
+        TM["📦 twist_mux<br/>자동·수동 선택"]
         VS["📦 velocity_smoother"]
         CMN["📦 collision_monitor"]
+        MC["🛠️ manual_control<br/>수동 패스스루"]
+
     end
     subgraph S7["⑦ 하드웨어"]
         CM["📦 controller_manager<br/>JTC · gripper · diff_drive · imu"]
@@ -409,12 +432,28 @@ flowchart TB
             HW{{"OpenCR → 다이나믹셀<br/>팔 4축·그리퍼·바퀴 2·IMU"}}
         end
     end
-    U -->|"🗣️ 말·텍스트<br/>“테이블 위 컵 가져다줘”"| UI
-    UI -->|"✉️ /user_command<br/>(std_msgs/String)"| VLM
-    UI -->|"🔊 음성 안내<br/>“컵 가져왔어요”<br/>“컵을 잡을 수 없어요”"| U
+    U -->|"⌨️ 명령 입력"| UI
+    U -->|"🕹️ 수동 조작<br/>(조작 창)"| MC
+    U -->|"🕹️ /cmd/operation_mode<br/>(수동 시작)"| SM
+    SIM -->|"📁 /cmd/map_mode<br/>(SLAM 패널)"| SM
+    UI -->|"✉️ /cmd/user_command<br/>(std_msgs/String)"| VLM
+    VLM -->|"🌐 HTTP VLM 호출"| AIS
+    AIS -->|"🌐 계획"| VLM
+    UI -->|"🔊 안내<br/>“컵 가져왔어요”"| U
+    SM -->|"✉️ /state/operation_mode<br/>AUTO · MANUAL"| CO
+    SM -->|"✉️ /state/operation_mode<br/>AUTO · MANUAL"| MC
+    MC -->|"✉️ /cmd_vel_manual<br/>(geometry_msgs/<br/>TwistStamped)"| TM
+    SM -->|"✉️ /state/emergency"| TM
+
+    SM -->|"✉️ /state/emergency"| CO
     PCH -->|"🔌 USB 3<br/>(RealSense SDK)"| PC
     GCH -->|"🔌 USB 3<br/>(RealSense SDK)"| GC
     PC -->|"✉️ /pole_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| PER
+    U -->|"🖱️ 조작 창"| SIM
+    U -->|"🛑 /cmd/e_stop<br/>(std_msgs/Bool)"| SM
+        SIM -.->|"📁 렌더 파일"| FC
+    FC -->|"✉️ 같은 토픽명<br/>(PC·GC 자리 대체)"| PER
+    SIM -.->|"📁 가상 시리얼 C/S<br/>(fake_opencr — faker 기본)"| CM
     GC -->|"✉️ /gripper_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| PER
     GC -->|"✉️ /gripper_cam/depth<br/>/color/points<br/>(sensor_msgs/<br/>PointCloud2)"| GS
     PC -->|"✉️ /pole_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| RTAB
@@ -428,6 +467,7 @@ flowchart TB
     PER -->|"✉️ /tracked_objects<br/>(cupbot_interfaces/<br/>TrackedObjectArray)"| CO
     PER -->|"✉️ /tracked_objects<br/>대상 컵 위치·크기<br/>(cupbot_interfaces/<br/>TrackedObjectArray)"| GS
     VLM -->|"✉️ /sub_goals<br/>(cupbot_interfaces/<br/>SubGoalArray)"| CO
+    VLM -.->|"📁 /sub_goals 파일<br/>→ 조작 창 응답줄<br/>(VLM 거절도 say로)"| SIM
     CO -->|"✉️ /task_status<br/>(cupbot_interfaces/<br/>TaskStatus)"| VLM
     CO -.->|"📞 /score_grasps<br/>(cupbot_interfaces/srv/<br/>ScoreGrasps)"| GS
     COST -->|"✉️ /local_costmap/costmap<br/>통로 폭·최근접 장애물<br/>(nav_msgs/OccupancyGrid)"| NT
@@ -435,14 +475,16 @@ flowchart TB
     NAV -->|"✉️ /plan<br/>남은 거리<br/>(nav_msgs/Path)"| NT
     NT -.->|"✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)<br/>📞 set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| NAV
     NT -->|"✉️ /speed_limit<br/>재클리핑 상한<br/>(nav2_msgs/SpeedLimit)"| RLN
-    CO ==>|"🎬 /execute_task_solution<br/>(moveit_task_<br/>constructor_msgs/action/<br/>ExecuteTaskSolution)"| MTC
+    CO ==>|"🎬 /plan_kinematic_path<br/>(moveit_msgs/srv/<br/>GetMotionPlan)"| MG
+    CO ==>|"🎬 /execute_trajectory<br/>(moveit_msgs/action/<br/>ExecuteTrajectory)"| MG
     CO ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| NAV
-    MTC ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| CM
+    MG ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| CM
     CM -->|"🧩 읽기 reference<br/>JTC 목표 관절각<br/>+ 관절·그리퍼 state"| RLA
     RLA -->|"🧩 쓰기 command<br/>목표각 + Δ<br/>(±0.05rad 클리핑)"| CM
-    NAV -->|"✉️ /cmd_vel_nav · /plan<br/>(geometry_msgs/<br/>TwistStamped ·<br/>nav_msgs/Path)"| RLN
+    NAV -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| RLN
     CM -->|"✉️ /odom · /imu<br/>실제 속도·각속도<br/>(nav_msgs/Odometry ·<br/>sensor_msgs/Imu)"| RLN
-    RLN -->|"✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| VS
+    RLN -->|"✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| TM
+    TM -->|"✉️ /cmd_vel_mux<br/>(geometry_msgs/<br/>TwistStamped)"| VS
     VS -->|"✉️ /cmd_vel_smoothed<br/>(geometry_msgs/<br/>TwistStamped)"| CMN
     CMN -->|"✉️ /cmd_vel<br/>(geometry_msgs/<br/>TwistStamped)"| CM
     %% 보이지 않는 배치 힌트: /cmd_vel 라벨이 reference 라벨을 덮지 않게 한다
@@ -455,12 +497,14 @@ flowchart TB
     CM -->|"🔌 쓰기 SyncWrite<br/>Goal Position·Velocity<br/>(Dynamixel Protocol 2.0)"| HW
     HW -->|"🔌 읽기 SyncRead<br/>Present Pos·Vel·Current<br/>+ IMU (OpenCR)"| CM
 ${CLS}
-    class PER,CO,PC,GC,UI std;
+    class PER,CO,PC,GC,UI,MG,TM,MC,SM std;
+    class AIS,SIM,FC ext;
     class VLM ai;
     class GS,NT,RLA,RLN rl;
     class MTC,NAV,RTAB,EKF,COST,CM std;
     class ASM,VS,CMN safe;
     class PCH,GCH,HW hw;
+    style EXT fill:#ffffff,stroke:#8A97A0,stroke-dasharray:4 3
     style S0 fill:#f8fafc,stroke:#94a3b8
     style S1 fill:#f8fafc,stroke:#94a3b8
     style S2 fill:#f8fafc,stroke:#94a3b8
@@ -486,9 +530,10 @@ ${F}
     links: { S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
     nodes: {
       PCH: 'realsense_pole', PC: 'realsense_pole', GCH: 'realsense_gripper', GC: 'realsense_gripper', PER: 'perception',
-      UI: 'voice_ui', VLM: 'vlm_task_planner', CO: 'coordinator', GS: 'grasp_scorer', NT: 'rl_nav_tuner',
-      MTC: 'move_group', NAV: 'bt_navigator', RTAB: 'rtabmap', EKF: 'ekf', COST: 'costmap',
-      RLA: 'rl_arm_correction', RLN: 'rl_nav_correction', ASM: 'arm_safety_monitor', VS: 'velocity_smoother', CMN: 'collision_monitor',
+      UI: 'user_input', VLM: 'vlm_task_planner', CO: 'coordinator', GS: 'grasp_scorer', NT: 'rl_nav_tuner',
+      MG: 'move_group', NAV: 'bt_navigator', RTAB: 'rtabmap', EKF: 'ekf', COST: 'costmap',
+      RLA: 'rl_arm_correction', RLN: 'rl_nav_correction', ASM: 'arm_safety_monitor', TM: 'twist_mux', VS: 'velocity_smoother', CMN: 'collision_monitor',
+      MC: 'manual_control', SM: 'state_manager',
       CM: 'controller_manager', HW: 'hw_interface',
     },
     flows: ARCH_FLOWS,
@@ -500,6 +545,7 @@ ${F}
 ## 1. 센서·인지
 
 센서 장치(육각형)는 🔌 USB로 드라이버 노드에 연결되고, **토픽은 드라이버 노드가 발행**합니다. 카메라 드라이버가 영상·depth·camera_info를 내고, perception이 물체를 map 기준 3D로 추적합니다. gripper_cam은 팔과 함께 움직이므로 **영상 시각의 TF**로 변환해야 위치가 어긋나지 않습니다(\`lookupTransform\`에 header.stamp 사용, 메시지 필터로 동기화).
+
 
 ${F}mermaid
 flowchart TB
@@ -580,7 +626,7 @@ flowchart TB
     O3b(["→ 3 controller_server"])
     O4a(["→ 4 move_group (MTC)"])
     USER -->|"🗣️ 말·텍스트<br/>“테이블 위 컵 가져다줘”"| UI
-    UI -->|"✉️ /user_command<br/>(std_msgs/String)"| VLM
+    UI -->|"✉️ /cmd/user_command<br/>(std_msgs/String)"| VLM
     CO -->|"✉️ /robot_say<br/>(std_msgs/String)"| UI
     UI -->|"🔊 음성 안내<br/>“컵 가져왔어요”<br/>“컵을 잡을 수 없어요”"| USER
     TO --> VLM
@@ -604,7 +650,7 @@ ${F}
 
 | 이름 | 종류 | 메시지 타입 | 보내는 쪽 → 받는 쪽 | 주기 · QoS |
 | --- | --- | --- | --- | --- |
-| /user_command | 토픽 | std_msgs/String | voice_ui → vlm_task_planner | 명령마다 · reliable |
+| /cmd/user_command | 토픽 | std_msgs/String | voice_ui → vlm_task_planner | 명령마다 · reliable |
 | /robot_say | 토픽 | std_msgs/String | coordinator → voice_ui (TTS) | 알릴 때 · reliable |
 | /sub_goals | 토픽 | 커스텀 SubGoalArray | vlm_task_planner → coordinator | 계획마다 · reliable + transient_local |
 | /task_status | 토픽 | 커스텀 TaskStatus | coordinator → vlm_task_planner, UI | 단계 완료·실패 시 · reliable |
@@ -619,6 +665,7 @@ ${F}
 **coordinator가 지키는 실행 규칙**
 
 1. **VLM 출력 검증:** 형식(JSON 스키마), 허용 동작(navigate·pick·place·say), 대상 id가 /tracked_objects에 실제로 있는지.
+   - pick·place의 대상 \`tray\` = 로봇 뒤 적재함 (MISSION ③ MOVE_TO_B — 손에 들고 옮기면 인정 안 됨). 칸은 coordinator 파라미터 \`tray_slots\`(base_footprint, MoveIt 실측으로 닿는 곳 — 앞줄 x −0.095 · 뒷줄 x −0.135, y ±0.05), 실린 수는 coordinator가 센다 (꽉 차면 \`tray_full\`, 비면 \`tray_empty\`). 같은 구역에 여러 번 place하면 \`place_spacing\`(0.08m)씩 비켜 놓는다. 템플릿(오프라인): 명령에 \`MOVE_TO_B\`가 있으면 퍽(최대 4개)마다 navigate·pick·place tray → navigate 구역 → (pick tray · place 구역)×개수
 2. **이동 전 팔 접기:** navigate 전에 팔을 stow 자세로. 컵을 든 채 이동하면 footprint를 키운 파라미터(\`/local_costmap/local_costmap/set_parameters\` footprint)로 바꾼다.
 3. **팔은 베이스가 멈췄을 때만:** NavigateToPose 성공 후 0.5초 안정 대기 → planning scene 갱신 → pick.
 4. **파지 재시도는 coordinator 몫:** grasp_scorer 후보를 점수순으로 최대 2개 시도. 모두 실패하면 그때 /task_status로 VLM에 재계획을 요청한다.
@@ -708,10 +755,10 @@ ${F}
 - 번호 없는 화살표(/map, map→odom, 점구름, /odometry/filtered, rl_nav_tuner)는 늘 들어오는 입력이다.
 
 - **costmap 장애물 층:** LaserScan이 없으므로 \`voxel_layer\`(또는 STVL)에 PointCloud2를 \`observation_sources\`로 넣는다. \`min_obstacle_height 0.03\`, \`max_obstacle_height 0.40\`으로 바닥과 테이블 상판 위를 거른다.
-- **시야 사각지대:** pole_cam 수평 화각은 약 87°라 옆·뒤가 안 보인다. 한 번 본 장애물이 시야 밖에서도 남도록 voxel layer의 clearing을 보수적으로 두고, BT의 **BackUp 복구는 빼거나 거리를 0.1m 이하로** 제한한다(뒤를 못 보므로 collision_monitor도 막아 주지 못한다). Spin도 짧게.
+- **시야 사각지대:** pole_cam 수평 화각은 약 87°라 옆·뒤가 안 보인다. 한 번 본 장애물이 시야 밖에서도 남도록 voxel layer의 clearing을 보수적으로 두고, BT의 **BackUp 복구는 빼거나 거리를 0.1m 이하로** 제한한다(뒤를 못 보므로 collision_monitor도 막아 주지 못한다). Spin도 짧게. 구현: \`ros_system/config/navigate_to_pose.xml\`(Nav2 기본 BT 복사본에서 BackUp만 0.10m · 0.05m/s)을 \`ros_system.launch.py\`가 \`default_nav_to_pose_bt_xml\`로 넘긴다. 기본 0.30m로는 벽에 박혀 odom이 밀리고 → 위치추정이 벽 안으로 → 출발점부터 경로 실패 → 또 후진이 반복되는 것을 테스트베드에서 봤다.
 - **lifecycle:** rtabmap은 Nav2 lifecycle 관리 대상이 아니다. localization용 lifecycle_manager는 필요 없고, navigation용 하나만 둔다.
 - **나머지 Nav2 서버:** smoother_server, waypoint_follower는 이 작업에 필수는 아니지만 기본 bringup에 포함돼 있어 같이 띄워도 된다. velocity_smoother·collision_monitor는 5장에서 다룬다.
-- **리매핑 하나:** Nav2 기본 bringup은 controller_server 출력을 /cmd_vel_nav, velocity_smoother 입력을 /cmd_vel_nav로 잇는다. 여기서는 velocity_smoother 입력만 /cmd_vel_corrected로 바꿔 사이에 rl_nav_correction을 끼운다. behavior_server의 출력도 같은 /cmd_vel_nav로 맞춰 복구 동작도 안전 필터를 거치게 한다.
+- **리매핑 둘:** Nav2 기본 bringup은 controller_server 출력을 /cmd_vel_nav, velocity_smoother 입력을 /cmd_vel_nav로 잇는다. 여기서는 (1) velocity_smoother 입력을 /cmd_vel_mux로 바꿔 twist_mux를 끼우고, (2) rl_nav_correction 출력 /cmd_vel_corrected를 twist_mux 자동 입력에 잇는다. behavior_server의 출력도 같은 /cmd_vel_nav로 맞춰 복구 동작도 안전 필터를 거치게 한다. 수동(/cmd_vel_manual)은 twist_mux가 자동보다 우선, /cmd/e_stop이면 전부 차단.
 - **Twist vs TwistStamped:** Jazzy에서는 Nav2 \`enable_stamped_cmd_vel: true\`, diff_drive_controller는 TwistStamped만 받는다. 체인 전체를 하나로 통일한다.
 
 ## 3-1. 지도 생성 (SLAM) — RTAB-Map
@@ -767,7 +814,7 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   camera_info_topic:=/pole_cam/color/camera_info \
   frame_id:=base_footprint odom_topic:=/odometry/filtered \
   visual_odometry:=false approx_sync:=true qos:=1 \
-  rtabmap_args:="-d --Reg/Force3DoF true --Grid/Sensor 1"
+  rtabmap_args:="-d --Reg/Force3DoF true --Grid/Sensor 0" subscribe_scan_cloud:=true scan_cloud_topic:=/pole_cam/depth/color/points_filtered
 
 # 2) (선택) Nav2·RViz용 2D 지도 파일 따로 보관
 ros2 run nav2_map_server map_saver_cli -f ~/maps/home
@@ -978,7 +1025,9 @@ ${F}
 
 | 이름 | 종류 | 메시지 타입 | 보내는 쪽 → 받는 쪽 | 주기 |
 | --- | --- | --- | --- | --- |
-| /cmd_vel_corrected | 토픽 | geometry_msgs/TwistStamped | rl_nav_correction → velocity_smoother | 20Hz |
+| /cmd_vel_corrected | 토픽 | geometry_msgs/TwistStamped | rl_nav_correction → twist_mux (자동 입력) | 20Hz |
+| /cmd_vel_manual | 토픽 | geometry_msgs/TwistStamped | manual_control → twist_mux (자동보다 우선) | 수동 때만 |
+| /cmd_vel_mux | 토픽 | geometry_msgs/TwistStamped | twist_mux → velocity_smoother (/state/emergency ← /cmd/e_stop 이면 차단) | 20Hz |
 | /cmd_vel_smoothed | 토픽 | geometry_msgs/TwistStamped | velocity_smoother → collision_monitor | 20Hz |
 | /cmd_vel | 토픽 | geometry_msgs/TwistStamped | collision_monitor → diff_drive_controller | 20Hz |
 | /odom | 토픽 | nav_msgs/Odometry | diff_drive_controller → ekf, rl_nav_correction | 50Hz |
@@ -1163,7 +1212,7 @@ ${F}
 ### 노드 외에 직접 만드는 것
 
 - **커스텀 인터페이스 패키지 (\`cupbot_interfaces\`):** TrackedObject(Array), SubGoal(Array), TaskStatus, ArmSafetyEvent, ScoreGrasps.srv
-- **launch 파일:** 전체 기동, 리매핑 (velocity_smoother 입력 → /cmd_vel_corrected, diff_drive_controller 토픽 → /cmd_vel·/odom), 학습 노드 on/off 인자
+- **launch 파일:** 전체 기동, 리매핑 (velocity_smoother 입력 → /cmd_vel_mux, diff_drive_controller 토픽 → /cmd_vel·/odom), 학습 노드 on/off 인자
 - **설정 파일:** nav2_params.yaml, ekf.yaml, controllers.yaml, collision_monitor 다각형, MoveIt 설정 패키지
 - **Isaac Lab 환경 코드:** 관측·행동·보상·랜덤화 정의 (ROS 노드 아님)
 
@@ -1375,7 +1424,7 @@ sequenceDiagram
     participant G as grasp_scorer
     participant M as move_group (MTC)
     U->>I: 🗣️ “테이블 위 컵 가져다줘”
-    I->>V: ✉️ /user_command "테이블 위 컵 가져다줘" (std_msgs/String)
+    I->>V: ✉️ /cmd/user_command "테이블 위 컵 가져다줘" (std_msgs/String)
     V->>C: ✉️ /sub_goals [navigate, pick, navigate, place] (cupbot_interfaces/SubGoalArray)
     C->>C: 검증 (허용 동작, id 존재) · 팔 stow
     C->>N: 🎬 /navigate_to_pose x 3.45, y 0.9, yaw 0 (nav2_msgs/action/NavigateToPose)
@@ -1396,7 +1445,7 @@ ${F}
 
 ### 1단계: 인식과 계획
 
-1. **사람:** "테이블 위 컵 가져다줘" → /user_command
+1. **사람:** "테이블 위 컵 가져다줘" → /cmd/user_command
 2. **perception:** pole_cam 영상·depth로 물체 추적
 
 ${F}yaml
@@ -1590,7 +1639,7 @@ sequenceDiagram
     participant N as Nav2
     Note over T: 지도와 맞는 장면 찾는 중 · map→odom 아직 없음
     U->>I: 🗣️ “테이블 위 컵 가져다줘”
-    I->>V: ✉️ /user_command
+    I->>V: ✉️ /cmd/user_command
     V->>C: ✉️ /sub_goals
     C->>C: 검증 OK · map→odom TF 대기
     T-->>C: ✉️ /tf map→odom 발행 시작
@@ -1718,7 +1767,7 @@ ${F}
 | 21 | QoS 언급 없음 | QoS 표 추가 | best_effort ↔ reliable 불일치는 연결 자체가 안 됨 |
 | 22 | gripper_cam RGB, LiDAR 탑재 가정 | 카메라 2대 모두 Intel RealSense, LiDAR 없음 | 실제 하드웨어 구성 반영 — 근접 점구름은 gripper_cam, 장애물·SLAM은 pole_cam 담당 |
 | 23 | 후방 감지 가정 | BackUp 복구 제한, voxel layer 보수적 clearing | 전방 카메라 하나라 옆·뒤 사각지대 |
-| 24 | rtabmap Grid/FromDepth | Grid/Sensor 1 (depth) | 현재 rtabmap에서 Grid/FromDepth는 Grid/Sensor(0 레이저, 1 depth, 2 둘 다)로 바뀜 — rtabmap Parameters.h 확인 |
+| 24 | rtabmap Grid/FromDepth | Grid/Sensor 0 + scan_cloud = points_filtered (처음엔 1 depth — 팔이 지도에 벽으로 남아 바꿈) | 현재 rtabmap에서 Grid/FromDepth는 Grid/Sensor(0 레이저, 1 depth, 2 둘 다)로 바뀜 — rtabmap Parameters.h 확인 |
 | 25 | 공식 TurtleBot3 플러그인으로 전류(effort) 사용 | 플러그인 fork해서 effort state 추가 | 공식 jazzy 플러그인은 position·velocity만 내보냄 — OpenCR 제어 테이블의 present_current를 읽어 effort로 내보내야 arm_safety_monitor·rl_arm_correction이 동작 |
 | 26 | /failure_report (실패할 때만, coordinator → VLM) | /task_status (RUNNING·SUCCEEDED·FAILED + reason) | 실패만이 아니라 진행·완료도 같은 토픽으로 — VLM은 FAILED에 재계획, voice_ui는 완료 안내·진행 표시에 사용 |
 `,
