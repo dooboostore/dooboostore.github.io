@@ -12,7 +12,7 @@ import { renderCatalog, NODE_IDS } from './RosDesignNodes';
 const tagName = 'center-ros2-design';
 
 type Section =
-  | 'overview' | 'arch' | 'sense' | 'plan' | 'nav' | 'arm' | 'base' | 'tf'
+  | 'overview' | 'arch' | 'sense' | 'plan' | 'nav' | 'map' | 'arm' | 'base' | 'tf'
   | 'ctrl' | 'nodes' | 'catalog' | 'learn' | 'isaac' | 'scenario' | 'check' | 'changes';
 
 const F = '```';
@@ -829,6 +829,8 @@ ${F}
 - **시작 위치:** 위치추정 모드는 처음 몇 초간 지도와 맞는 장면을 찾아야 map→odom이 나온다. 그 전에는 Nav2 목표를 보내지 않는다(coordinator가 TF를 기다림).
 - **가구가 크게 바뀌면** 다시 매핑한다. 의자처럼 자주 움직이는 물체는 costmap이 실시간 점구름으로 잡는다.
 - **대안:** \`pointcloud_to_laserscan\`으로 가짜 스캔을 만들어 slam_toolbox + amcl을 쓸 수도 있지만, 화각 87°의 짧은 스캔이라 매칭이 자주 실패한다. RGB-D만 있다면 RTAB-Map이 표준 선택이다.
+
+<p><button class="rd-sec" data-sec="map">🗺️ 지도 맵핑 실습(따라하기)으로 →</button></p>
 `,
     nodes: {
       IN: 'coordinator', TUNE: 'rl_nav_tuner', PTS: 'realsense_pole', RGBD: 'realsense_pole', ODOM: 'ekf',
@@ -838,6 +840,57 @@ ${F}
       CH2: 'realsense_pole', RS2: 'realsense_pole', RT1: 'rtabmap', RT2: 'rtabmap', NAV2: 'bt_navigator',
     },
     flows: NAV_FLOWS,
+  },
+
+  map: {
+    label: '3-1 지도 맵핑',
+    md: `
+## 3-1. 지도 맵핑 — 직접 따라하기
+
+개념·launch 명령 원문은 **3 Nav2·SLAM의 §3-1**에 있습니다. 여기는 손으로 직접 해보는 순서와 확인·문제 해결만 모았습니다.
+
+<p><button class="rd-sec" data-sec="nav">◀ 개념·명령은 3 Nav2·SLAM에서 보기</button></p>
+
+${F}mermaid
+flowchart LR
+    A["준비<br/>DB 지우기 · 토픽 확인"] --> B["매핑 주행<br/>teleop 저속"]
+    B --> C["루프 클로저<br/>출발점 복귀"]
+    C --> D["저장<br/>rtabmap.db"]
+    D --> E["위치추정 확인<br/>map to odom"]
+${CLS}
+    class A,B,C,D,E std;
+${F}
+
+### 따라하기
+
+1. **매핑 모드로 띄우기** — \`localization:=false\`, 기존 DB는 \`-d\`로 지우고 새로 시작. 전체 launch 명령은 3 Nav2·SLAM §3-1 그대로.
+2. **천천히 주행 (0.1~0.15m/s)** — teleop_twist_keyboard로. 같은 공간을 여러 방향에서 보고, 특징 없는 흰 벽·유리 앞에선 근처 가구를 함께 비추며 지나간다.
+3. **출발점으로 돌아오기 (루프 클로저)** — 같은 장소를 다시 보면 누적 오차가 잡히고 지도가 하나로 붙는다. 안 붙으면 지도가 두 겹으로 어긋난다.
+4. **저장 확인** — 종료 시 \`~/.ros/rtabmap.db\`에 자동 저장. 2D 지도 파일이 따로 필요하면 \`ros2 run nav2_map_server map_saver_cli -f ~/maps/home\`.
+5. **위치추정 모드로 전환** — 같은 토픽 인자에 \`localization:=true\`. 처음 몇 초는 지도와 맞는 장면을 찾는 중이라 map→odom이 없다 — Nav2 목표는 TF가 나온 뒤에 보낸다(coordinator가 대기).
+
+### 확인 명령
+
+${F}bash
+ros2 run tf2_ros tf2_echo map odom     # 위치추정 중이면 변환이 찍힘
+ros2 topic echo /map --once            # 2D 지도 1장 수신 확인
+${F}
+
+### 안 되면
+
+| 증상 | 원인·대처 |
+| --- | --- |
+| map→odom이 안 나온다 | 아직 장면 탐색 중 — 매핑했던 장소를 천천히 비추며 기다린다. 그래도 안 되면 조명(낮/밤)이 달라진 것. 해당 조건에서 다시 매핑한다 |
+| 지도가 두 겹·찌그러짐 | 루프 클로저 실패 — 속도를 낮추고 겹치게 주행한다. \`Reg/Force3DoF true\` 확인 |
+| 위치가 튄다 | 오도메트리 입력 확인 — \`/odometry/filtered\`(ekf)가 들어오는지, \`visual_odometry:=false\`인지 |
+| 가구를 옮겼더니 길을 못 찾음 | 정상 — 크게 바뀌면 다시 매핑한다. 의자 같은 이동 물체는 costmap 실시간 점구름이 처리한다 |
+
+### 학습 포인트
+
+- 왜 천천히 도나: 좁은 화각 + 빠른 회전 = 특징점 추적 실패 → 지도 어긋남.
+- 왜 출발점으로 돌아오나: 루프 클로저가 쌓인 오차를 한 번에 잡아준다.
+- 왜 DB 하나인가: 지도·그래프·특징점이 한 파일이라 운영 때는 읽기만 하면 된다.
+`,
   },
 
   arm: {
@@ -1129,15 +1182,15 @@ flowchart TB
     end
     D1{{"OpenCR → 다이나믹셀<br/>팔·그리퍼·바퀴·IMU"}}
     D2{{"다른 장치"}}
-    URDF -->|"❶ ✉️ /robot_description<br/>(std_msgs/String)"| RM
-    YAML -->|"❷ ⚙️ 파라미터 파일"| CTRL
-    SP -->|"❸ 📞 load · switch_controller<br/>(controller_manager_msgs)"| CTRL
-    CTRL -->|"❼ 🧩 command 쓰기<br/>(double)"| RM
-    RM -->|"❻ 🧩 state 읽기<br/>(double)"| CTRL
-    RM -->|"❽ 🧩 write()"| HWC
-    HWC -->|"❺ 🧩 read()"| RM
-    P1 -->|"❾ 🔌 쓰기 SyncWrite<br/>(Dynamixel Protocol 2.0)"| D1
-    D1 -->|"❹ 🔌 읽기 SyncRead<br/>(Dynamixel Protocol 2.0)"| P1
+    URDF -->|"✉️ ❶ /robot_description<br/>(std_msgs/String)"| RM
+    YAML -->|"⚙️ ❷ 파라미터 파일"| CTRL
+    SP -->|"📞 ❸ load · switch_controller<br/>(controller_manager_msgs)"| CTRL
+    CTRL -->|"🧩 ❼ command 쓰기<br/>(double)"| RM
+    RM -->|"🧩 ❻ state 읽기<br/>(double)"| CTRL
+    RM -->|"🧩 ❽ write()"| HWC
+    HWC -->|"🧩 ❺ read()"| RM
+    P1 -->|"🔌 ❾ 쓰기 SyncWrite<br/>(Dynamixel Protocol 2.0)"| D1
+    D1 -->|"🔌 ❹ 읽기 SyncRead<br/>(Dynamixel Protocol 2.0)"| P1
     P2 -.->|"🔌 장치 고유 프로토콜"| D2
 ${CLS}
     class C1,C3,C4,RM,P1,P2,SP std;
