@@ -433,9 +433,9 @@ flowchart TB
         end
     end
     U -->|"⌨️ 명령 입력"| UI
-    SIM -->|"✉️ 📁 /cmd/manual/cmd_vel<br/>(조작 창)"| MC
-    SIM -->|"✉️ 📁 /cmd/operation_mode<br/>(조작 창)"| SM
-    SIM -->|"✉️ 📁 /cmd/map_mode<br/>(SLAM 패널)"| SM
+    SIM -->|"✉️ /cmd/manual/cmd_vel<br/>(조작 창)"| MC
+    SIM -->|"✉️ /cmd/operation_mode<br/>(조작 창)"| SM
+    SIM -->|"✉️ /cmd/map_mode<br/>(SLAM 패널)"| SM
     UI -->|"✉️ /cmd/user_command<br/>(std_msgs/String)"| VLM
     VLM -->|"🌐 HTTP VLM 호출"| AIS
     AIS -->|"🌐 계획"| VLM
@@ -450,7 +450,7 @@ flowchart TB
     GCH -->|"🔌 USB 3<br/>(RealSense SDK)"| GC
     PC -->|"✉️ /pole_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| PER
     U -->|"🖱️ 조작 창"| SIM
-    SIM -->|"✉️ 📁 /cmd/e_stop<br/>(조작 창)"| SM
+    SIM -->|"✉️ /cmd/e_stop<br/>(조작 창)"| SM
         SIM -.->|"📁 렌더 파일"| FC
     FC -->|"✉️ 같은 토픽명<br/>(PC·GC 자리 대체)"| PER
     SIM -.->|"📁 가상 시리얼 C/S<br/>(fake_opencr — faker 기본)"| CM
