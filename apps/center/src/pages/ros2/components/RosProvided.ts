@@ -281,6 +281,7 @@ ${F}
 **우리 설정**
 - 모델 하나 = 폴더 하나 \`urdf/<이름>/urdf.xacro\` — launch \`urdf:=beebot_mesh\`(기본) · \`beebot_normal\` · \`beebot_slam\`
 - xacro 인자: \`mock_hardware\` · \`mock_effort\` · \`port\` · \`mesh_uri\`(launch가 \`package://ros_system/urdf/<이름>/meshes\`로)
+- 팔·그리퍼 영점 오프셋: \`<ros2_control>\` 관절별 \`<param name="offset">\` (서보 값 = 관절값 + offset, 펌웨어 재업로드 없이 URDF만)
 - 카메라 프레임도 URDF가 낸다 → RealSense 드라이버 \`publish_tf: false\` (프레임 주인은 하나만)
 - 링크·관절 이름은 세 모델 모두 같게 (바꿔 끼워도 노드·설정 그대로)
 
