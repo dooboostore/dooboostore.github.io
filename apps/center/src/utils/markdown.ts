@@ -35,6 +35,11 @@ export const createMarked = async () => {
   return marked;
 };
 
+// highlight.js는 코드에 hljs-*= 색상 span을 넣지만, 전역 테마 CSS(index.html의
+// github-dark 링크)는 Shadow DOM 안으로 스며들지 않는다. 그래서 마크다운 렌더
+// 결과와 함께 테마를 넣어준다 (EnglishPlayerPage의 @import와 같은 CDN).
+const HLJS_THEME_CSS = `@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css');`;
+
 // scope별 호출 순번 — 늦게 끝난 이전 호출이 새 내용을 덮어쓰지 않게
 const renderSeq = new WeakMap<Element, number>();
 
@@ -60,6 +65,13 @@ export const markdownParse = async (scope: Element, src: string): Promise<void> 
   staging.innerHTML = html;
   await runMermaid(staging);
   if (renderSeq.get(scope) !== seq) return;
+  // Shadow DOM 안이면 전역 하이라이트 테마가 안 보이므로 결과와 함께 넣어준다
+  if (scope.getRootNode() instanceof ShadowRoot && !staging.querySelector('style[data-hljs-theme]')) {
+    const theme = scope.ownerDocument.createElement('style');
+    theme.setAttribute('data-hljs-theme', 'github-dark');
+    theme.textContent = HLJS_THEME_CSS;
+    staging.prepend(theme);
+  }
   scope.replaceChildren(...Array.from(staging.childNodes));
 };
 

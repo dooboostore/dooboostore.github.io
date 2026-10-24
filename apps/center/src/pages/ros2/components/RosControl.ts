@@ -389,6 +389,150 @@ TurtleBot3 Waffle + OpenMANIPULATOR-X는 **OpenCR 하나**에 바퀴·팔·그�
 
 > ⚠️ **★ effort는 공식 플러그인에 없다.** 공식 플러그인은 팔·그리퍼의 position·velocity만 내보낸다. OpenCR 제어 테이블에는 전류(\`present_current_joint_1~4\` 주소 264~270, \`present_current_gripper\` 272, 각 2바이트)가 있으므로 fork해서 ① \`read()\`에서 읽고 ② \`export_state_interfaces()\`에 effort 추가 ③ URDF 관절에 \`<state_interface name="effort"/>\` 추가. arm_safety_monitor(접촉 감지)와 rl_arm_correction(파지 판단)이 이 값을 쓴다. 단위 변환은 OpenCR 펌웨어·모터 문서로 확인.
 
+### 진짜 URDF 예시 (이 로봇 그대로)
+
+\`<ros2_control>\` 블록 하나 = 하드웨어 플러그인 객체 하나. OpenCR 하나에 전부 붙어 있으니 블록도 하나다. 관절·센서 이름은 컨트롤러가 찾는 변수 이름(\`joint2/position\`, \`imu/orientation.x\`)이 된다.
+
+${F}xml
+<ros2_control name="TurtleBot3ManipulationSystem" type="system">
+  <hardware>
+    <plugin>turtlebot3_manipulation_hardware/TurtleBot3ManipulationSystemHardware</plugin>
+    <param name="opencr_usb_port">/dev/ttyACM0</param>
+    <param name="opencr_baud_rate">1000000</param>
+    <param name="opencr_id">200</param>
+    <param name="dxl_joints_profile_velocity">500</param>
+    <param name="dxl_joints_profile_acceleration">100</param>
+    <param name="dxl_gripper_profile_velocity">200</param>
+    <param name="dxl_gripper_profile_acceleration">20</param>
+  </hardware>
+  <!-- 바퀴: 속도 명령 -->
+  <joint name="wheel_left_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="wheel_right_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <!-- 팔: 위치 명령 + effort(★ fork) -->
+  <joint name="joint1">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+  <joint name="joint2">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+  <joint name="joint3">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+  <joint name="joint4">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+  <!-- 그리퍼: 왼쪽만 명령, 오른쪽은 mimic이라 상태만 -->
+  <joint name="gripper_left_joint">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+  <joint name="gripper_right_joint">
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <sensor name="imu">
+    <state_interface name="orientation.x"/>
+    <state_interface name="orientation.y"/>
+    <state_interface name="orientation.z"/>
+    <state_interface name="orientation.w"/>
+    <state_interface name="angular_velocity.x"/>
+    <state_interface name="angular_velocity.y"/>
+    <state_interface name="angular_velocity.z"/>
+    <state_interface name="linear_acceleration.x"/>
+    <state_interface name="linear_acceleration.y"/>
+    <state_interface name="linear_acceleration.z"/>
+  </sensor>
+  <sensor name="battery">
+    <state_interface name="voltage"/>
+    <state_interface name="percentage"/>
+    <state_interface name="design_capacity"/>
+    <state_interface name="present"/>
+  </sensor>
+</ros2_control>
+${F}
+
+- 장치를 바꾸거나 추가할 때는 controller_manager가 아니라 이 블록의 \`<plugin>\`·\`<param>\`을 바꾼다 (장치마다 블록 하나).
+- \`gripper_right_joint\`에 명령이 없는 이유: URDF에서 mimic으로 왼쪽을 따라가게 해 두어 컨트롤러는 왼쪽만 잡는다.
+
+### 진짜 controllers.yaml 예시 (6개, 체인 포함)
+
+${F}yaml
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    imu_sensor_broadcaster:
+      type: imu_sensor_broadcaster/IMUSensorBroadcaster
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
+    rl_arm_correction:
+      type: cupbot_controllers/RlArmCorrection
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    gripper_controller:
+      type: position_controllers/GripperActionController
+
+diff_drive_controller:
+  ros__parameters:
+    enable_odom_tf: false          # odom→base_link TF는 ekf가 발행
+    joints: [wheel_left_joint, wheel_right_joint]
+
+arm_controller:
+  ros__parameters:
+    joints: [joint1, joint2, joint3, joint4]
+    command_joints: [rl_arm_correction/joint1, rl_arm_correction/joint2,
+                     rl_arm_correction/joint3, rl_arm_correction/joint4]  # 체인: 하드웨어 대신 앞자리(reference)에 씀
+    state_interfaces: [position, velocity]
+
+gripper_controller:
+  ros__parameters:
+    joint: gripper_left_joint
+${F}
+
+### launch · 확인 (이 로봇 순서 그대로)
+
+${F}python
+Node(package='robot_state_publisher', executable='robot_state_publisher',
+     parameters=[{'robot_description': urdf}]),
+Node(package='controller_manager', executable='ros2_control_node',
+     parameters=[controllers_yaml],
+     remappings=[('~/cmd_vel', '/cmd_vel')]),
+# 체인은 뒤(rl_arm_correction)를 먼저!
+for c in ['joint_state_broadcaster', 'imu_sensor_broadcaster',
+          'diff_drive_controller', 'rl_arm_correction',
+          'arm_controller', 'gripper_controller']:
+    Node(package='controller_manager', executable='spawner', arguments=[c]),
+${F}
+
+${F}bash
+ros2 control list_hardware_interfaces   # joint2/effort 보이면 fork 성공
+ros2 control list_controllers            # 6개 전부 active
+ros2 control view_controller_chains      # arm_controller → rl_arm_correction 체인 확인
+${F}
+
 ### 컨트롤러 6개
 
 | 이름 | 타입 | 쓰기(command) | 읽기(state) |
