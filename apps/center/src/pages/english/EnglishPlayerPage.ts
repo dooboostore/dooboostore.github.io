@@ -810,13 +810,17 @@ export default (w: Window) => {
     private async loadWordsFromCurrentSubtitle(): Promise<void> {
       if (this.currentActiveIndex < 0) return;
 
-      // Find the English subtitle at currentActiveIndex
+      // 비동기 작업 시작 시점의 인덱스를 스냅샷으로 저장
+      // 단어 로딩 중 다른 문장으로 이동했을 경우 stale 업데이트를 방지
+      const targetIndex = this.currentActiveIndex;
+
+      // Find the English subtitle at targetIndex
       let englishCount = 0;
       let currentEnglishItem = null;
       
       for (const translation of this.allTranslations) {
         if (translation.type === "en") {
-          if (englishCount === this.currentActiveIndex) {
+          if (englishCount === targetIndex) {
             currentEnglishItem = translation;
             break;
           }
@@ -833,16 +837,24 @@ export default (w: Window) => {
 
       // Load dictionary for each word
       for (const word of words) {
+        // 루프 도중 다른 문장으로 이동했으면 즉시 중단
+        if (this.currentActiveIndex !== targetIndex) return;
+
         const cleanWord = word.replace(/[,.":!?;[\](){}]/g, "").toLowerCase();
         if (cleanWord) {
           try {
             const dict = await this.dictionaryService.getWord(cleanWord);
+            // await 이후 다시 확인 (await 동안 인덱스가 변경될 수 있음)
+            if (this.currentActiveIndex !== targetIndex) return;
             this.currentDictionaries.push(dict);
           } catch (e) {
             console.error("Failed to load dictionary for word:", cleanWord, e);
           }
         }
       }
+
+      // 최종 렌더링 전에도 확인
+      if (this.currentActiveIndex !== targetIndex) return;
 
       this.renderDictionaries();
       
@@ -1380,20 +1392,21 @@ export default (w: Window) => {
       } else {
         // 다음 문장으로 이동
         this.onNextCue();
-        
-        // 다음 문장의 첫 번째 단어로 선택
+
+        // onNextCue() 호출 직후 인덱스를 스냅샷으로 캡처
+        // requestAnimationFrame 내에서 this.currentActiveIndex를 그대로 읽으면
+        // 그 사이 모니터링 루프가 값을 바꿀 수 있어 클로저로 고정
+        const capturedIndex = this.currentActiveIndex;
+
         requestAnimationFrame(() => {
-          // Find the English subtitle at new currentActiveIndex
-          let englishCount = 0;
+          if (capturedIndex !== this.currentActiveIndex) return;
+
+          let ec = 0;
           let nextEnglishItem = null;
-          
           for (const translation of this.allTranslations) {
             if (translation.type === "en") {
-              if (englishCount === this.currentActiveIndex) {
-                nextEnglishItem = translation;
-                break;
-              }
-              englishCount++;
+              if (ec === capturedIndex) { nextEnglishItem = translation; break; }
+              ec++;
             }
           }
 
@@ -1401,20 +1414,16 @@ export default (w: Window) => {
             const nextWords = nextEnglishItem.text
               .split(/(\s+)/)
               .filter((w) => !/^\s+$/.test(w));
-            
-            // 첫 번째 단어로 설정
+
             this.currentWordIndex = 0;
-            const firstWord = nextWords[this.currentWordIndex]
+            const firstWord = nextWords[0]
               .replace(/[,.":!?;]/g, "")
               .toLowerCase();
             this.currentSelectedWord = firstWord;
 
-            if (this.soundEnabled && firstWord) {
-              this.voiceService.speakWord(firstWord);
-            }
+            if (this.soundEnabled && firstWord) this.voiceService.speakWord(firstWord);
             this.loadDictionaryForWord(firstWord);
             this.highlightSelectedWord();
-            
             console.log("[onNextWord] Moved to next sentence, selected first word:", firstWord);
           }
         });
@@ -2173,6 +2182,8 @@ export default (w: Window) => {
           }
 
           .dict-entry {
+           border-top: #41464b solid 1px;
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -2762,6 +2773,8 @@ export default (w: Window) => {
             .translation-text {
               font-size: 13px;
             }
+          }   /* @media (max-width: 480px) 닫기 */
+
           .copyright {
             text-align: center; padding: 20px 16px; color: #aaa; font-size: 13px;
             border-top: 1px solid var(--color-border); background: white;
