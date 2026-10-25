@@ -128,13 +128,29 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', '/tracked_objects', 'cupbot_interfaces/TrackedObjectArray', 'perception', '최신 목록을 프롬프트에 넣음'],
       ['✉️ 구독', '/pole_cam/color/image_raw', 'sensor_msgs/Image', 'realsense2_camera (pole_cam)', '계획할 때 한 장만'],
       ['✉️ 구독', '/task_status', 'cupbot_interfaces/TaskStatus', 'coordinator', 'FAILED면 재계획'],
+      ['✉️ 구독', '/mission_signal', 'plan/MissionSignal', 'signal_decoder', '신호등 암호 미션 — VLM 없이 규칙으로 (inspect → 번호 합 조합 → 적재함 → 목적지 장소 → 수납 확인)'],
+      ['✉️ 구독', '/state/operation_mode', 'std_msgs/String', 'state_manager', '주기 수납 확인은 AUTO일 때만'],
+      ['✉️ 구독', '/mission_qr', 'std_msgs/String', 'perception', '장소 바코드 작업 지시 — VLM이 해석'],
     ],
     outputs: [
       ['✉️ 발행', '/sub_goals', 'cupbot_interfaces/SubGoalArray', 'coordinator', 'reliable + transient_local'],
       ['🌐 외부', 'VLM API', 'HTTPS (JSON 응답 강제)', 'VLM 서비스', '수 초 걸림 — 제어 루프 밖'],
     ],
-    params: ['model', 'allowed_skills: [navigate, pick, place, say]', 'max_replans: 2', 'timeout_s: 20'],
-    notes: ['출력은 JSON 스키마로 강제하고, 파싱 실패하면 재요청 1회 후 사람에게 알린다.'],
+    params: ['model', 'allowed_skills: [navigate, pick, place, inspect, say]', 'max_replans: 2', 'timeout_s: 20', 'verify_period_s: 60 (0 = 주기 확인 끔)', 'verify_radius_m: 0.20'],
+    notes: ['출력은 JSON 스키마로 강제하고, 파싱 실패하면 재요청 1회 후 사람에게 알린다.',
+      '수납 확인 — 신호등 미션 옮기기가 끝나면 바로, 그 뒤 verify_period_s마다 (AUTO · 하던 계획 없을 때) 목적지로 가서 옮긴 번호가 verify_radius_m 안에 다 있는지 본다. 다른 곳에 보이면 다시 옮기고, 안 보이면 say. 확인 계획이 실패하면 재계획 없이 다음 주기에. 새 명령·신호가 오면 그만.'],
+  },
+  {
+    id: 'signal_decoder', name: 'signal_decoder', tag: 'custom', pkg: 'plan', form: 'ROS 2 노드 (C++)', group: '계획·임무',
+    role: '신호등 암호 미션 — 신호등 깜빡임(색·횟수·순서)을 시간축으로 쌓아 1단계(색·개수) · 2단계(점수 합 = 번호 합) · 3단계(노랑 횟수 → 목적지 태그)를 읽는다.',
+    inputs: [
+      ['✉️ 구독', '/tracked_objects', 'perception/TrackedObjectArray', 'perception', 'traffic_light의 color (red·yellow·green·off·all)'],
+    ],
+    outputs: [
+      ['✉️ 발행', '/mission_signal', 'plan/MissionSignal', 'vlm_task_planner', '확정될 때마다 · reliable + transient_local'],
+    ],
+    params: ['separator_s: 2.0 (세 색 동시 = 단계 구분)', 'gap_s: 3.0', 'min_on_s: 0.15', 'score_red/yellow/green: 1', 'dest_tags: [12, 13, 14]', 'confirm: 1'],
+    notes: ['단계 구분·점수·반복은 MISSION §6 미정 — 제안값이 기본, plan.yaml에서 바꾼다.', '끝난 단계 셋이 [한 색만 · 아무거나 · 노랑만 1~3번] 모양일 때만 답 — 반복 신호의 중간부터 봐도 1단계를 찾는다.'],
   },
   {
     id: 'coordinator', name: 'coordinator', tag: 'custom', pkg: 'cupbot_mission', form: 'ROS 2 노드 (C++ + BehaviorTree.CPP)', group: '계획·임무',

@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>persist</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pər│sɪst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고집하다, 우기다, (계속) 주장하다 ((in)), 끝까지 하다",
+              "examples": [
+                {
+                  "text": "<b>persist</b> in one's opinion",
+                  "translatedText": "자기 의견을 고집하다"
+                }
+              ],
+              "originalMeaning": "고집하다, 우기다, (계속) 주장하다 ((in)), 끝까지 하다"
+            },
+            {
+              "meaning": "지속하다(last) ((in)); 존속[잔존]하다, 살아남다",
+              "examples": [
+                {
+                  "text": "The rain persisted throughoutthe night.",
+                  "translatedText": "비는 밤새도록 계속 내렸다."
+                }
+              ],
+              "originalMeaning": "지속하다(last) ((in)); 존속[잔존]하다, 살아남다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c7267542a3cf469196979f005c677213",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c7267542a3cf469196979f005c677213",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "persists"
+        },
+        {
+          "type": "과거형",
+          "value": "persisted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "persisting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "persisted"
+        }
+      ],
+      "aliasConjugation": "persists",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "b9be2aff42c7f2c4af418d106652beb0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 끝끝내 모른다고 버티었다",
+      "text": "He persisted in asserting his innocence. or He persisted to the last, denying his knowledge (of it)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비는 밤새도록 계속 내렸다.",
+      "text": "The rain persisted throughout the night."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 끝까지 모른다고 우겨댔다",
+      "text": "He persisted in denying his knowledge of it."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아무리 물어봐도 그는 모른다고 잡아뗐다",
+      "text": "However much I asked, he persisted in feigning ignorance."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 끝까지 모르쇠를 잡았다",
+      "text": "He persisted in denying all knowledge of it to the very last."
+    }
+  ],
+  "isWordType": true
+}

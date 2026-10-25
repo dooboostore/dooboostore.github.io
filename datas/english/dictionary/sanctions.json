@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "entry": "<b>sanction</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈsæŋkʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "재가(裁可), 인가, 시인; ((일반적으로)) 허용, 찬성(approval)",
+              "examples": [
+                {
+                  "text": "( <b>sanction</b>+to do) We have the <b>sanction</b> of the law to hunt in this place.",
+                  "translatedText": "이곳에서 사냥하는 것은 법률로 인가되어 있다."
+                }
+              ],
+              "originalMeaning": "재가(裁可), 인가, 시인; ((일반적으로)) 허용, 찬성(approval)"
+            },
+            {
+              "meaning": "도덕적[사회적] 구속력",
+              "examples": [
+                {
+                  "text": "the <b>sanction</b> of conscience",
+                  "translatedText": "양심의 구속력"
+                }
+              ],
+              "originalMeaning": "도덕적[사회적] 구속력"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "인가[재가]하다, 시인하다, 찬성하다",
+              "examples": [
+                {
+                  "text": "His conscience didn't <b>sanction</b> stealing.",
+                  "translatedText": "그의 양심은 도둑질하는 것을 용납하지 않았다."
+                }
+              ],
+              "originalMeaning": "인가[재가]하다, 시인하다, 찬성하다"
+            },
+            {
+              "meaning": "<법령 등에> 제재 규정을 설정하다",
+              "examples": [],
+              "originalMeaning": "<법령 등에> 제재 규정을 설정하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/73ad20a660a5462da74ba5e81680ef17",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/73ad20a660a5462da74ba5e81680ef17",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "sanctions"
+        },
+        {
+          "type": "과거형",
+          "value": "sanctioned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "sanctioning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "sanctioned"
+        }
+      ],
+      "aliasConjugation": "sanctions",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "3ccbc05ae01f1cd5705ad5085777b8f1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "아직 장관의 결재를 못 받았다",
+      "text": "It remains to be sanctioned by the Minister."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 양심은 도둑질하는 것을 용납하지 않았다.",
+      "text": "His conscience didn’t <b>sanction</b> stealing."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이곳에서 사냥하는 것은 법률로 인가되어 있다.",
+      "text": "We have the <b>sanction</b> of the law to hunt in this place."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "정부는 두 대학의 신설을 허가했다",
+      "text": "The government has sanctioned the establishment of two new universities."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "관행으로 허용되어 있다",
+      "text": "It is sanctioned by usage."
+    }
+  ],
+  "isWordType": true
+}

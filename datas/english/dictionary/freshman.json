@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "entry": "<b>freshman</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈfreʃmən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(대학의) 신입생, 1학년생 (( [미]에서는 고교생도 포함))",
+              "examples": [],
+              "originalMeaning": "(대학의) 신입생, 1학년생 (( [미]에서는 고교생도 포함))"
+            },
+            {
+              "meaning": "초년생 ((의원(議員) 등)), 신출내기, 신참자",
+              "examples": [],
+              "originalMeaning": "초년생 ((의원(議員) 등)), 신출내기, 신참자"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "(대학·고교의) 1학년생의",
+              "examples": [],
+              "originalMeaning": "(대학·고교의) 1학년생의"
+            },
+            {
+              "meaning": "신참의, 미숙한",
+              "examples": [
+                {
+                  "text": "a <b>freshman</b> senator",
+                  "translatedText": "새 상원의원"
+                }
+              ],
+              "originalMeaning": "신참의, 미숙한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de157d1d9e13499996528b37f5325a68",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de157d1d9e13499996528b37f5325a68",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "eccdaa53c3f98057cd61292ac71567a1",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "새로 사원 한 사람이 들어왔다",
+      "text": "A new member[<b>freshman</b>] joined our company."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "신입생 환영 파티가 학생 회관에서 열렸다",
+      "text": "A welcome party was held for freshmen at the student hall."
+    }
+  ],
+  "isWordType": true
+}

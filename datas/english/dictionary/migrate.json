@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "entry": "<b>migrate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈmaɪɡreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "이주하다 ((from, to))",
+              "examples": [
+                {
+                  "text": "<b>migrate</b> fromthe Northern tothe Southern States",
+                  "translatedText": "북부 주에서 남부 주로 이주하다"
+                }
+              ],
+              "originalMeaning": "이주하다 ((from, to))"
+            },
+            {
+              "meaning": "<새·짐승·물고기가> 철따라 정기적으로 이주하다",
+              "examples": [
+                {
+                  "text": "Some birds <b>migrate</b> towarmer countries in (the) winter.",
+                  "translatedText": "어떤 새들은 겨울에는 따뜻한 지방으로 이주한다."
+                }
+              ],
+              "originalMeaning": "<새·짐승·물고기가> 철따라 정기적으로 이주하다"
+            },
+            {
+              "meaning": "(계절마다 일을 구해) 이동하다",
+              "examples": [],
+              "originalMeaning": "(계절마다 일을 구해) 이동하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/72ef07ccc0434459969d6e31a8bb35c0",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/72ef07ccc0434459969d6e31a8bb35c0",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "migrates"
+        },
+        {
+          "type": "과거형",
+          "value": "migrated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "migrating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "migrated"
+        }
+      ],
+      "aliasConjugation": "migrates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "824253ea6919dc999badf1a6d00ed047",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "어떤 새는 겨울에 따뜻한 지방으로 건너온다",
+      "text": "Some birds <b>migrate</b> to warmer countries in (the) winter."
+    }
+  ],
+  "isWordType": true
+}

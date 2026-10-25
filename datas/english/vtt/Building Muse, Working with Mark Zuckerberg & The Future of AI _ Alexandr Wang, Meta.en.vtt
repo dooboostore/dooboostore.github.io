@@ -1,0 +1,6257 @@
+WEBVTT
+
+00:00:02.879 --> 00:00:06.720
+Tell me the history of Muse. The first
+
+00:00:05.120 --> 00:00:09.040
+thing to start with is probably like
+
+00:00:06.720 --> 00:00:11.840
+what our vision was when we started Meta
+
+00:00:09.040 --> 00:00:14.000
+Super Intelligence Labs. And when we
+
+00:00:11.840 --> 00:00:15.679
+started it, Mark published this memo
+
+00:00:14.000 --> 00:00:16.880
+that myself and Natt Friedman and a
+
+00:00:15.679 --> 00:00:18.640
+bunch of others like worked together
+
+00:00:16.880 --> 00:00:20.400
+with him closely on called Personal
+
+00:00:18.640 --> 00:00:24.320
+Super Intelligence. And the whole idea
+
+00:00:20.400 --> 00:00:26.880
+was like how do we make
+
+00:00:24.320 --> 00:00:29.359
+AI how do we build powerful AI that
+
+00:00:26.880 --> 00:00:30.640
+actually makes all of our lives better?
+
+00:00:29.359 --> 00:00:33.040
+like how do we build something that
+
+00:00:30.640 --> 00:00:34.480
+actually like lifts the human experience
+
+00:00:33.040 --> 00:00:36.719
+broadly speaking. You know, in that
+
+00:00:34.480 --> 00:00:39.200
+memo, we we spoke to a bunch of the
+
+00:00:36.719 --> 00:00:41.680
+ideas and we basically alluded to I
+
+00:00:39.200 --> 00:00:44.239
+think a lot of what muses ultimately
+
+00:00:41.680 --> 00:00:47.039
+become, but we were gesturing at it like
+
+00:00:44.239 --> 00:00:50.879
+very very early like this was in you
+
+00:00:47.039 --> 00:00:53.120
+know June 2025 um before really agents
+
+00:00:50.879 --> 00:00:55.360
+had happened in any meaningful way you
+
+00:00:53.120 --> 00:00:57.280
+know in the summer of 2025 like AI was
+
+00:00:55.360 --> 00:00:58.800
+just you know in a totally different
+
+00:00:57.280 --> 00:01:00.399
+spot. But that's where what we wanted to
+
+00:00:58.800 --> 00:01:02.879
+build towards. That was the mission of
+
+00:01:00.399 --> 00:01:04.799
+MSL and that was really the where we
+
+00:01:02.879 --> 00:01:07.119
+wanted to take everything. Then we kind
+
+00:01:04.799 --> 00:01:09.439
+of just got to work building models
+
+00:01:07.119 --> 00:01:11.119
+because you know the endto-end process
+
+00:01:09.439 --> 00:01:14.000
+of developing any of these frontier
+
+00:01:11.119 --> 00:01:15.680
+models is many many many months. Um like
+
+00:01:14.000 --> 00:01:17.840
+you have to go through you have to build
+
+00:01:15.680 --> 00:01:19.600
+your entire stack you have to produce
+
+00:01:17.840 --> 00:01:20.880
+the data sets you have to you know
+
+00:01:19.600 --> 00:01:22.159
+pre-train the model then you have to do
+
+00:01:20.880 --> 00:01:23.600
+pro training the model you have to build
+
+00:01:22.159 --> 00:01:26.159
+a whole stack for that. like is an it's
+
+00:01:23.600 --> 00:01:28.240
+a very lengthy end to- end process. Um
+
+00:01:26.159 --> 00:01:32.079
+and kind of this whole um production
+
+00:01:28.240 --> 00:01:35.520
+line at the start of this year um you
+
+00:01:32.079 --> 00:01:37.759
+know Opus 4.5 obviously like really
+
+00:01:35.520 --> 00:01:39.280
+caused many people including including
+
+00:01:37.759 --> 00:01:42.000
+us to sort of like see what the future
+
+00:01:39.280 --> 00:01:44.720
+of agents could be or was and really
+
+00:01:42.000 --> 00:01:48.240
+brought the sort of like potential of
+
+00:01:44.720 --> 00:01:50.240
+agents to the foreground and openclaw
+
+00:01:48.240 --> 00:01:52.320
+was happening at the start of the year.
+
+00:01:50.240 --> 00:01:55.040
+Natt Freriedman, who you know I work
+
+00:01:52.320 --> 00:01:59.119
+closely with, was I think the first
+
+00:01:55.040 --> 00:02:02.479
+person within MSL to uh work with
+
+00:01:59.119 --> 00:02:05.040
+OpenClaw and try OpenClaw. He had an
+
+00:02:02.479 --> 00:02:07.520
+experience I would I would describe as
+
+00:02:05.040 --> 00:02:11.039
+somewhere between terrifying and
+
+00:02:07.520 --> 00:02:13.440
+euphoric. Like I think he [laughter] he
+
+00:02:11.039 --> 00:02:15.440
+really like I think went all in. He
+
+00:02:13.440 --> 00:02:17.360
+trusted entirely. you know, he's told
+
+00:02:15.440 --> 00:02:19.840
+some of these stories that uh he had
+
+00:02:17.360 --> 00:02:21.520
+like a a Stripe Sessions interview where
+
+00:02:19.840 --> 00:02:23.760
+he talked about some of this where, you
+
+00:02:21.520 --> 00:02:26.239
+know, he told his open claw that he
+
+00:02:23.760 --> 00:02:28.640
+wanted to drink more water and then, you
+
+00:02:26.239 --> 00:02:30.160
+know, his openclaw would like watch him
+
+00:02:28.640 --> 00:02:31.760
+in security footage to make sure that he
+
+00:02:30.160 --> 00:02:34.000
+was drinking water and tell him good job
+
+00:02:31.760 --> 00:02:36.080
+and he had like many many crazy stories
+
+00:02:34.000 --> 00:02:37.920
+like this and it also makes you realize
+
+00:02:36.080 --> 00:02:40.319
+like, oh, there's something quite quite
+
+00:02:37.920 --> 00:02:41.840
+magical about what's happening here. And
+
+00:02:40.319 --> 00:02:43.519
+I remember one of the things that that
+
+00:02:41.840 --> 00:02:45.200
+Nat told me and this is one of the
+
+00:02:43.519 --> 00:02:48.000
+things I remember the most is he said I
+
+00:02:45.200 --> 00:02:50.319
+think there really is something here and
+
+00:02:48.000 --> 00:02:52.879
+I don't know like early adopter Nat
+
+00:02:50.319 --> 00:02:54.640
+Freedman is like a pretty good indicator
+
+00:02:52.879 --> 00:02:56.160
+cuz he was one of the he was one of the
+
+00:02:54.640 --> 00:02:58.319
+first customers of Stripe back in the
+
+00:02:56.160 --> 00:03:00.080
+day and then was really ear early on a
+
+00:02:58.319 --> 00:03:02.480
+lot of open source developer stuff and
+
+00:03:00.080 --> 00:03:04.480
+he also you know helped create GitHub
+
+00:03:02.480 --> 00:03:05.920
+copilot and many other things. So that
+
+00:03:04.480 --> 00:03:07.519
+was like a clear signal. It's like,
+
+00:03:05.920 --> 00:03:10.239
+okay, there's clearly something pretty
+
+00:03:07.519 --> 00:03:12.159
+magical about personal agents generally
+
+00:03:10.239 --> 00:03:14.159
+speaking. But you know, when you
+
+00:03:12.159 --> 00:03:16.080
+actually kind of trust the personal
+
+00:03:14.159 --> 00:03:18.400
+agent and and really bring it into your
+
+00:03:16.080 --> 00:03:20.480
+life, it is the ability to do so many
+
+00:03:18.400 --> 00:03:22.239
+things. And after hearing all of these
+
+00:03:20.480 --> 00:03:24.560
+crazy stories, I start using it very
+
+00:03:22.239 --> 00:03:26.640
+deeply. You know, I think for many weeks
+
+00:03:24.560 --> 00:03:28.239
+I think both of us were sort of like
+
+00:03:26.640 --> 00:03:30.239
+every spare moment we would just spend
+
+00:03:28.239 --> 00:03:32.400
+talking to our open claws and like you
+
+00:03:30.239 --> 00:03:34.000
+know, you know, really immersing
+
+00:03:32.400 --> 00:03:34.799
+ourselves in like what personal agents
+
+00:03:34.000 --> 00:03:37.280
+could be.
+
+00:03:34.799 --> 00:03:38.319
+>> What was your initial reaction? Euphoria
+
+00:03:37.280 --> 00:03:41.280
+or terror?
+
+00:03:38.319 --> 00:03:44.080
+>> Nat at the time he had this um he had
+
+00:03:41.280 --> 00:03:46.799
+built this prompt to do this like
+
+00:03:44.080 --> 00:03:49.280
+basically like full psychoanalysis of
+
+00:03:46.799 --> 00:03:51.760
+yourself. There were like multiple waves
+
+00:03:49.280 --> 00:03:53.040
+of like deep psychological probing. He
+
+00:03:51.760 --> 00:03:55.200
+basically wrote this prompt for you to
+
+00:03:53.040 --> 00:03:56.480
+to use an open claw. And I think that
+
+00:03:55.200 --> 00:03:58.400
+was like one of the very first things I
+
+00:03:56.480 --> 00:04:00.560
+did with with my own openclaw. It was
+
+00:03:58.400 --> 00:04:02.959
+maybe the equivalent of like 3 years of
+
+00:04:00.560 --> 00:04:04.239
+therapy all, you know, compressed into
+
+00:04:02.959 --> 00:04:06.400
+this one moment.
+
+00:04:04.239 --> 00:04:08.720
+>> Wait, I'm curious why when you get your
+
+00:04:06.400 --> 00:04:09.760
+first shot at open call, this is one of
+
+00:04:08.720 --> 00:04:11.599
+the first things you do.
+
+00:04:09.760 --> 00:04:13.280
+>> You know, I downloaded it. I installed
+
+00:04:11.599 --> 00:04:14.560
+it. And then Nat was like, "Oh, you
+
+00:04:13.280 --> 00:04:16.000
+should do this." I was like I was like
+
+00:04:14.560 --> 00:04:17.519
+next to him. He was like, "Okay, I'll
+
+00:04:16.000 --> 00:04:18.160
+just do the thing you're telling me to
+
+00:04:17.519 --> 00:04:19.680
+do." And then
+
+00:04:18.160 --> 00:04:21.759
+>> okay um [laughter]
+
+00:04:19.680 --> 00:04:23.280
+>> and then you know this crazy experience.
+
+00:04:21.759 --> 00:04:23.919
+>> Wait say more about the crazy experience
+
+00:04:23.280 --> 00:04:26.240
+though.
+
+00:04:23.919 --> 00:04:28.160
+>> Oh well it was just like very intense. I
+
+00:04:26.240 --> 00:04:29.759
+mean it was like again it was like 3
+
+00:04:28.160 --> 00:04:32.639
+years of therapy because it was just
+
+00:04:29.759 --> 00:04:35.120
+like successive rounds of like deep uh
+
+00:04:32.639 --> 00:04:36.479
+psychological probing cuz it had other
+
+00:04:35.120 --> 00:04:38.479
+information about me. It had you know
+
+00:04:36.479 --> 00:04:40.000
+access to my email and access to a bunch
+
+00:04:38.479 --> 00:04:41.520
+of my photos and like it could like go
+
+00:04:40.000 --> 00:04:42.720
+and look up other information and sort
+
+00:04:41.520 --> 00:04:44.800
+of pull it all together. I was very
+
+00:04:42.720 --> 00:04:48.000
+vulnerable through that process. This
+
+00:04:44.800 --> 00:04:50.000
+was in February. uh both of us I think
+
+00:04:48.000 --> 00:04:54.160
+had come to this like joint conclusion
+
+00:04:50.000 --> 00:04:56.160
+that this is this is clearly like you
+
+00:04:54.160 --> 00:04:58.960
+know there's clearly something really
+
+00:04:56.160 --> 00:05:01.600
+special happening here and we both wrote
+
+00:04:58.960 --> 00:05:03.280
+memos at that time I wrote a memo about
+
+00:05:01.600 --> 00:05:05.280
+and both of these we you know kind of
+
+00:05:03.280 --> 00:05:06.800
+like sent up through the meta board um
+
+00:05:05.280 --> 00:05:10.000
+cuz you know for whatever reason it's
+
+00:05:06.800 --> 00:05:13.039
+board season I wrote a memo about how I
+
+00:05:10.000 --> 00:05:15.840
+felt that in many ways this was like the
+
+00:05:13.039 --> 00:05:17.919
+final consumer product and that the
+
+00:05:15.840 --> 00:05:20.960
+super agent was something that was like
+
+00:05:17.919 --> 00:05:23.360
+as far as consumer products went like a
+
+00:05:20.960 --> 00:05:25.360
+clear end point in many ways. And then
+
+00:05:23.360 --> 00:05:27.360
+he wrote one called he wrote actually
+
+00:05:25.360 --> 00:05:29.840
+two uh which had very memorable blames
+
+00:05:27.360 --> 00:05:32.960
+the clause the law and trust is a must
+
+00:05:29.840 --> 00:05:34.560
+which ultimately defined um a lot of the
+
+00:05:32.960 --> 00:05:36.560
+a lot of the core of how we built these
+
+00:05:34.560 --> 00:05:37.840
+products. So we came to this conclusion.
+
+00:05:36.560 --> 00:05:40.080
+This was in February. There was
+
+00:05:37.840 --> 00:05:42.479
+something very important here. Um and
+
+00:05:40.080 --> 00:05:45.680
+then we built you know our teams we
+
+00:05:42.479 --> 00:05:49.199
+built a prototype within
+
+00:05:45.680 --> 00:05:50.720
+like a a week maybe two weeks. Um and
+
+00:05:49.199 --> 00:05:53.360
+demoed it to the board like it was this
+
+00:05:50.720 --> 00:05:55.120
+like very fast cycle and many of the
+
+00:05:53.360 --> 00:05:57.520
+decisions that made its way into the
+
+00:05:55.120 --> 00:06:00.639
+final Muse product were present in the
+
+00:05:57.520 --> 00:06:02.240
+first prototype. The Jollybot was there
+
+00:06:00.639 --> 00:06:04.080
+know the early version of the Muse Charm
+
+00:06:02.240 --> 00:06:06.479
+was in that first that very first
+
+00:06:04.080 --> 00:06:07.919
+meeting. Not all of the ideas and not
+
+00:06:06.479 --> 00:06:10.720
+all the tabs were there but a lot of
+
+00:06:07.919 --> 00:06:12.960
+them were present. Then from there, you
+
+00:06:10.720 --> 00:06:15.039
+know, obviously that was February, we
+
+00:06:12.960 --> 00:06:18.319
+launched the product 7 months later was
+
+00:06:15.039 --> 00:06:22.000
+like the really really hard process of
+
+00:06:18.319 --> 00:06:24.080
+taking this, you know, prototype where
+
+00:06:22.000 --> 00:06:26.319
+it it like sometimes worked and was
+
+00:06:24.080 --> 00:06:28.160
+magical but most of the time didn't work
+
+00:06:26.319 --> 00:06:29.600
+and would constantly break and like
+
+00:06:28.160 --> 00:06:33.199
+going from there to something that would
+
+00:06:29.600 --> 00:06:35.440
+be highly reliable like you know kind of
+
+00:06:33.199 --> 00:06:38.080
+like a beautiful crafted consumer
+
+00:06:35.440 --> 00:06:41.039
+product that we felt confident as a
+
+00:06:38.080 --> 00:06:42.960
+contribution to the consumer world. And
+
+00:06:41.039 --> 00:06:44.560
+that that was like this very lengthy and
+
+00:06:42.960 --> 00:06:45.680
+quite painful process. And
+
+00:06:44.560 --> 00:06:46.639
+>> before we get there, I want to go back
+
+00:06:45.680 --> 00:06:47.600
+to the idea that you wrote the
+
+00:06:46.639 --> 00:06:50.080
+prototype. You guys created the
+
+00:06:47.600 --> 00:06:51.919
+prototype in like a one to two weeks.
+
+00:06:50.080 --> 00:06:53.520
+You show to the board. What's Mark's
+
+00:06:51.919 --> 00:06:57.120
+role in all this?
+
+00:06:53.520 --> 00:07:00.080
+>> He was like experiencing the sort of
+
+00:06:57.120 --> 00:07:01.680
+like euphoria/ terror of the product at
+
+00:07:00.080 --> 00:07:02.800
+the same time as all of us. I think he's
+
+00:07:01.680 --> 00:07:05.120
+talked about this in various interviews,
+
+00:07:02.800 --> 00:07:07.120
+but like I think he he used it for a
+
+00:07:05.120 --> 00:07:08.960
+bunch of things around the home and he
+
+00:07:07.120 --> 00:07:12.479
+was using it with his kids and he used
+
+00:07:08.960 --> 00:07:15.520
+it in his um uh in his MMA training.
+
+00:07:12.479 --> 00:07:18.240
+Like he had it watch videos of his of
+
+00:07:15.520 --> 00:07:19.599
+himself doing MMA training and like it
+
+00:07:18.240 --> 00:07:22.000
+would give him tips on like how to
+
+00:07:19.599 --> 00:07:23.599
+improve. there were like some staff
+
+00:07:22.000 --> 00:07:25.440
+meetings and by the way like you know
+
+00:07:23.599 --> 00:07:28.880
+this kind of became a thing for for much
+
+00:07:25.440 --> 00:07:30.960
+of the the meta team um was like having
+
+00:07:28.880 --> 00:07:33.199
+these having a staff meeting and saying
+
+00:07:30.960 --> 00:07:35.440
+like what were the what were the crazy
+
+00:07:33.199 --> 00:07:37.360
+experiences that you had with [laughter]
+
+00:07:35.440 --> 00:07:39.039
+um with with your agent again this was
+
+00:07:37.360 --> 00:07:42.160
+back in February. It's very interesting
+
+00:07:39.039 --> 00:07:45.680
+to kind of um think back to this whole
+
+00:07:42.160 --> 00:07:48.479
+cycle because obviously the openclaw
+
+00:07:45.680 --> 00:07:50.479
+phenomena it peaked and then
+
+00:07:48.479 --> 00:07:52.319
+disappeared. Yeah, there were, you know,
+
+00:07:50.479 --> 00:07:53.520
+it didn't it didn't persist and and I
+
+00:07:52.319 --> 00:07:56.240
+think a lot of people kind of had this
+
+00:07:53.520 --> 00:07:57.680
+experience which was it was just like
+
+00:07:56.240 --> 00:07:58.879
+you'd have these magic moments but for
+
+00:07:57.680 --> 00:08:00.240
+the most part didn't like work that well
+
+00:07:58.879 --> 00:08:01.840
+and there were all these problems and
+
+00:08:00.240 --> 00:08:06.080
+then you know it just kind of like died
+
+00:08:01.840 --> 00:08:08.400
+down and so part of I think the building
+
+00:08:06.080 --> 00:08:09.680
+the product a lot of the focus of the
+
+00:08:08.400 --> 00:08:12.560
+product was just like how do you make
+
+00:08:09.680 --> 00:08:15.520
+this into an actual reliable consumer
+
+00:08:12.560 --> 00:08:17.520
+experience that you feel comfortable
+
+00:08:15.520 --> 00:08:19.919
+putting in front of over time billions
+
+00:08:17.520 --> 00:08:21.039
+of people and you can feel confident
+
+00:08:19.919 --> 00:08:21.680
+that like most of those people have an
+
+00:08:21.039 --> 00:08:23.199
+amazing experience.
+
+00:08:21.680 --> 00:08:25.039
+>> Why were you able to do that and the
+
+00:08:23.199 --> 00:08:27.039
+developers open call were not?
+
+00:08:25.039 --> 00:08:29.599
+>> Well, first of all, I think we respect
+
+00:08:27.039 --> 00:08:31.039
+Peter Seinberger and everyone who's
+
+00:08:29.599 --> 00:08:32.959
+contributed to OpenClaw immensely. Like
+
+00:08:31.039 --> 00:08:34.560
+I think Peter is definitely a visionary.
+
+00:08:32.959 --> 00:08:38.080
+I think whatever happened in his
+
+00:08:34.560 --> 00:08:39.760
+beautiful brain that created OpenClaw is
+
+00:08:38.080 --> 00:08:42.880
+magical. And I think maybe the
+
+00:08:39.760 --> 00:08:48.320
+unglamorous part of what made made Muse
+
+00:08:42.880 --> 00:08:50.720
+so magical was just really grinding out
+
+00:08:48.320 --> 00:08:54.080
+and sanding out all of the details to
+
+00:08:50.720 --> 00:08:58.240
+make the combined model plus product
+
+00:08:54.080 --> 00:09:00.560
+experience really amazing and we did
+
+00:08:58.240 --> 00:09:03.839
+many many iterations on the model
+
+00:09:00.560 --> 00:09:06.399
+itself. We aimed the overall model
+
+00:09:03.839 --> 00:09:07.760
+roadmap towards building towards
+
+00:09:06.399 --> 00:09:09.519
+personal super intelligence broadly
+
+00:09:07.760 --> 00:09:10.160
+speaking but certainly personal agents
+
+00:09:09.519 --> 00:09:11.519
+as like
+
+00:09:10.160 --> 00:09:13.040
+>> say more about that and how that
+
+00:09:11.519 --> 00:09:14.080
+differentiates between your other
+
+00:09:13.040 --> 00:09:15.600
+competitors.
+
+00:09:14.080 --> 00:09:16.640
+>> Yeah. Well, this is this is kind of
+
+00:09:15.600 --> 00:09:18.640
+>> that's actually really interesting.
+
+00:09:16.640 --> 00:09:22.160
+>> Yeah. It's actually useful to go back to
+
+00:09:18.640 --> 00:09:24.800
+the moment because if you go back to the
+
+00:09:22.160 --> 00:09:26.959
+start of the year, February, Opus and
+
+00:09:24.800 --> 00:09:28.800
+Claude were way ahead in coding, way
+
+00:09:26.959 --> 00:09:30.800
+ahead of anyone else and they were
+
+00:09:28.800 --> 00:09:33.040
+exploding. It was the beginning of the
+
+00:09:30.800 --> 00:09:34.880
+sort of like you know enthropic takeover
+
+00:09:33.040 --> 00:09:36.480
+in the whole industry and it was a very
+
+00:09:34.880 --> 00:09:38.000
+scary moment I think generally speaking
+
+00:09:36.480 --> 00:09:40.000
+which is like oh wow this is you know
+
+00:09:38.000 --> 00:09:41.680
+they're so ahead on coding and and then
+
+00:09:40.000 --> 00:09:43.760
+obviously they had mythos and you know
+
+00:09:41.680 --> 00:09:47.360
+they were they had like this clear lead.
+
+00:09:43.760 --> 00:09:50.160
+I think the the conventional wisdom in
+
+00:09:47.360 --> 00:09:52.000
+the industry was that coding agents were
+
+00:09:50.160 --> 00:09:53.279
+the only form factor that mattered or
+
+00:09:52.000 --> 00:09:54.560
+maybe the only technology that mattered
+
+00:09:53.279 --> 00:09:57.040
+or only the only capability that
+
+00:09:54.560 --> 00:09:58.800
+mattered for advanced AI. you know
+
+00:09:57.040 --> 00:10:01.360
+there's this incredible force in the
+
+00:09:58.800 --> 00:10:03.440
+industry to just like go and crowd that
+
+00:10:01.360 --> 00:10:06.959
+use case and compete with enthropic on
+
+00:10:03.440 --> 00:10:08.720
+coding agents because of our experiences
+
+00:10:06.959 --> 00:10:10.720
+and our conviction that I think formed
+
+00:10:08.720 --> 00:10:13.760
+around this idea of personal agents and
+
+00:10:10.720 --> 00:10:15.839
+the sort of taking a step back I think
+
+00:10:13.760 --> 00:10:17.600
+the reason why we did personal super
+
+00:10:15.839 --> 00:10:20.160
+intelligence in the first place was that
+
+00:10:17.600 --> 00:10:22.320
+it was also what we believed meta was
+
+00:10:20.160 --> 00:10:23.680
+uniquely positioned to do and we can
+
+00:10:22.320 --> 00:10:24.240
+talk more about that but like I think
+
+00:10:23.680 --> 00:10:25.440
+because of that
+
+00:10:24.240 --> 00:10:27.120
+>> well let's talk about that now
+
+00:10:25.440 --> 00:10:29.680
+>> okay we'll just do do the weave. I think
+
+00:10:27.120 --> 00:10:32.640
+one of the first things I told Mark even
+
+00:10:29.680 --> 00:10:34.560
+before the whole scale and meta deal
+
+00:10:32.640 --> 00:10:37.360
+happened and and everything, one of the
+
+00:10:34.560 --> 00:10:39.839
+first things I told him was I think Meta
+
+00:10:37.360 --> 00:10:42.880
+is actually a really special company if
+
+00:10:39.839 --> 00:10:45.760
+we have AGI or ASI or whatever you want
+
+00:10:42.880 --> 00:10:48.560
+to call it. Because part of the promise
+
+00:10:45.760 --> 00:10:50.079
+of AI is that for all of us, we have a
+
+00:10:48.560 --> 00:10:52.480
+mix of things that we want to do and
+
+00:10:50.079 --> 00:10:55.760
+things that we have to do. And the
+
+00:10:52.480 --> 00:10:57.760
+promise of AGI is that we're going to
+
+00:10:55.760 --> 00:10:59.519
+spend almost none of the time doing
+
+00:10:57.760 --> 00:11:01.600
+things that we have to do because the
+
+00:10:59.519 --> 00:11:03.279
+AIS will just start doing a lot of that
+
+00:11:01.600 --> 00:11:05.279
+for us and we can spend all of our time
+
+00:11:03.279 --> 00:11:09.200
+on things that we want to do. And for
+
+00:11:05.279 --> 00:11:12.480
+me, Meta's products represent the things
+
+00:11:09.200 --> 00:11:14.480
+that we all want to do. Like my use of
+
+00:11:12.480 --> 00:11:16.720
+Instagram or WhatsApp or Facebook like
+
+00:11:14.480 --> 00:11:19.360
+these are products that represent what
+
+00:11:16.720 --> 00:11:20.720
+I, you know, I follow my interests. I
+
+00:11:19.360 --> 00:11:22.959
+follow my hobbies. I follow all people
+
+00:11:20.720 --> 00:11:26.560
+that I like my friends and the people I
+
+00:11:22.959 --> 00:11:29.040
+care about like the product span of meta
+
+00:11:26.560 --> 00:11:30.959
+encapsulates the sort of like what we
+
+00:11:29.040 --> 00:11:34.480
+want to spend our times doing sort of
+
+00:11:30.959 --> 00:11:36.160
+realm. I think on a long arc meta is an
+
+00:11:34.480 --> 00:11:39.279
+incredible winner through all this.
+
+00:11:36.160 --> 00:11:42.079
+That's like one of the first things that
+
+00:11:39.279 --> 00:11:43.920
+I believed about meta and super
+
+00:11:42.079 --> 00:11:46.079
+intelligence. And then ultimately a lot
+
+00:11:43.920 --> 00:11:47.920
+of those ideas made its way into this
+
+00:11:46.079 --> 00:11:49.200
+concept of personal super intelligence.
+
+00:11:47.920 --> 00:11:51.680
+You know, you can kind of look at it a
+
+00:11:49.200 --> 00:11:54.240
+few ways. One is what's the heritage of
+
+00:11:51.680 --> 00:11:56.640
+the company? The heritage of meta is
+
+00:11:54.240 --> 00:11:58.800
+connecting people with their friends and
+
+00:11:56.640 --> 00:11:59.920
+family. Um, helping them discover their
+
+00:11:58.800 --> 00:12:02.399
+interests. Like these are things that
+
+00:11:59.920 --> 00:12:04.320
+are very human. And then there's also
+
+00:12:02.399 --> 00:12:06.639
+the sort of like you can take the
+
+00:12:04.320 --> 00:12:08.320
+business lens which is Meta has
+
+00:12:06.639 --> 00:12:12.000
+distribution to three and a half billion
+
+00:12:08.320 --> 00:12:14.079
+people using the apps every day. And the
+
+00:12:12.000 --> 00:12:16.880
+natural
+
+00:12:14.079 --> 00:12:18.399
+area where Meadow was going to be
+
+00:12:16.880 --> 00:12:20.079
+successful is consumer AI.
+
+00:12:18.399 --> 00:12:20.720
+>> It's not work. It's not coding. It's
+
+00:12:20.079 --> 00:12:24.800
+personal.
+
+00:12:20.720 --> 00:12:28.160
+>> Yeah. Exactly. So personal agents and
+
+00:12:24.800 --> 00:12:30.880
+personal AI and and consumer AI, broadly
+
+00:12:28.160 --> 00:12:32.320
+speaking, were always the zones where we
+
+00:12:30.880 --> 00:12:33.600
+always felt that Meta was going to do
+
+00:12:32.320 --> 00:12:36.639
+some be able to do something very
+
+00:12:33.600 --> 00:12:39.680
+special. [sighs] So that brings us to uh
+
+00:12:36.639 --> 00:12:41.360
+okay, early 2026. Now you have the
+
+00:12:39.680 --> 00:12:43.760
+prototype, you have the buy in,
+
+00:12:41.360 --> 00:12:45.920
+everybody knows Mark's on board and now
+
+00:12:43.760 --> 00:12:48.079
+you're doing the seven months of the
+
+00:12:45.920 --> 00:12:50.320
+difficult work of refining this product.
+
+00:12:48.079 --> 00:12:52.399
+>> Yes. There was kind of the spectre which
+
+00:12:50.320 --> 00:12:55.360
+was like oh personal agents like they
+
+00:12:52.399 --> 00:12:57.360
+came and went and we always felt that it
+
+00:12:55.360 --> 00:12:58.880
+was because you know the the experience
+
+00:12:57.360 --> 00:13:00.079
+wasn't perfect. It wasn't polished yet
+
+00:12:58.880 --> 00:13:02.079
+you know all that kind of stuff. But
+
+00:13:00.079 --> 00:13:03.920
+like we knew that that was something
+
+00:13:02.079 --> 00:13:05.760
+that we had to like think about as you
+
+00:13:03.920 --> 00:13:08.560
+know as we were developing this product.
+
+00:13:05.760 --> 00:13:12.079
+We focused our model development road
+
+00:13:08.560 --> 00:13:14.560
+map. The top focus uh or one of the top
+
+00:13:12.079 --> 00:13:16.880
+focuses was towards building on personal
+
+00:13:14.560 --> 00:13:19.839
+agents and we had like these long
+
+00:13:16.880 --> 00:13:22.480
+spreadsheets of hundreds or even
+
+00:13:19.839 --> 00:13:24.959
+thousands of different not thousands but
+
+00:13:22.480 --> 00:13:27.279
+but more than a hundred like specific
+
+00:13:24.959 --> 00:13:29.040
+behaviors and capabilities that we knew
+
+00:13:27.279 --> 00:13:31.600
+the model needed to have to be able to
+
+00:13:29.040 --> 00:13:33.839
+build the ideal personal agent. Like it
+
+00:13:31.600 --> 00:13:36.079
+was very very meticulous. And then over
+
+00:13:33.839 --> 00:13:37.519
+time we built evals for all of those. We
+
+00:13:36.079 --> 00:13:38.959
+figured out how to train the model to be
+
+00:13:37.519 --> 00:13:40.240
+really really good at every single one
+
+00:13:38.959 --> 00:13:41.440
+of those things. And we have these
+
+00:13:40.240 --> 00:13:42.720
+reviews where we like look at that
+
+00:13:41.440 --> 00:13:44.160
+spreadsheet and we figure out the things
+
+00:13:42.720 --> 00:13:46.240
+that we're bad at and make sure that
+
+00:13:44.160 --> 00:13:48.320
+we're improving on them. Like we did
+
+00:13:46.240 --> 00:13:50.639
+this like very meticulous process to
+
+00:13:48.320 --> 00:13:52.720
+slowly just keep improving and sanding
+
+00:13:50.639 --> 00:13:54.399
+out all the edges of the model so that
+
+00:13:52.720 --> 00:13:56.160
+it could power the product.
+
+00:13:54.399 --> 00:13:58.480
+>> Is that really the culture of meta too?
+
+00:13:56.160 --> 00:13:59.360
+This like constant like sanding of the
+
+00:13:58.480 --> 00:14:00.800
+products?
+
+00:13:59.360 --> 00:14:02.320
+>> Yeah. A lot of the culture of meta is
+
+00:14:00.800 --> 00:14:04.959
+like once you know what you're
+
+00:14:02.320 --> 00:14:06.720
+measuring, there's very talented people
+
+00:14:04.959 --> 00:14:08.079
+and you can optimize for those things,
+
+00:14:06.720 --> 00:14:09.600
+you can send out all the details, you
+
+00:14:08.079 --> 00:14:12.959
+can make those things amazing. I think
+
+00:14:09.600 --> 00:14:14.399
+in the sort of like preAI consumer um
+
+00:14:12.959 --> 00:14:16.560
+product era, like a lot of this was
+
+00:14:14.399 --> 00:14:18.560
+around how do you optimize your
+
+00:14:16.560 --> 00:14:20.160
+conversion? How do you optimize the
+
+00:14:18.560 --> 00:14:22.000
+referral rates? How do you optimize like
+
+00:14:20.160 --> 00:14:23.920
+every part of the onboarding flow? Like
+
+00:14:22.000 --> 00:14:26.160
+how do you make all that stuff just
+
+00:14:23.920 --> 00:14:28.720
+perfect? And then I think the AI era I
+
+00:14:26.160 --> 00:14:31.199
+think uh a lot of that especially from
+
+00:14:28.720 --> 00:14:33.199
+Muse has been in the form of sanding out
+
+00:14:31.199 --> 00:14:34.720
+every detail of the model to be perfect
+
+00:14:33.199 --> 00:14:35.920
+for the product.
+
+00:14:34.720 --> 00:14:38.079
+>> I want to tell you about the presenting
+
+00:14:35.920 --> 00:14:40.160
+sponsor of this podcast ramp. I have
+
+00:14:38.079 --> 00:14:41.600
+been reading a lot about SpaceX lately.
+
+00:14:40.160 --> 00:14:43.120
+SpaceX is one of the most valuable
+
+00:14:41.600 --> 00:14:45.199
+businesses in the world and one of the
+
+00:14:43.120 --> 00:14:47.279
+main themes in the history of SpaceX is
+
+00:14:45.199 --> 00:14:49.279
+constantly attacking and questioning
+
+00:14:47.279 --> 00:14:51.120
+your cost. Ramp helps many of the most
+
+00:14:49.279 --> 00:14:53.120
+innovative businesses in the world do
+
+00:14:51.120 --> 00:14:56.160
+exactly that. The median company running
+
+00:14:53.120 --> 00:14:58.480
+on ramp cuts their expenses by 5%. And
+
+00:14:56.160 --> 00:15:00.000
+one thing SpaceX has demonstrated is
+
+00:14:58.480 --> 00:15:02.000
+that a religious dedication to
+
+00:15:00.000 --> 00:15:04.160
+controlling costs can help actually
+
+00:15:02.000 --> 00:15:06.320
+increase revenue because you can pursue
+
+00:15:04.160 --> 00:15:08.880
+opportunities you couldn't otherwise.
+
+00:15:06.320 --> 00:15:10.959
+And we see that in the RAMP data, too.
+
+00:15:08.880 --> 00:15:14.160
+The median company running on ramp also
+
+00:15:10.959 --> 00:15:15.760
+grows their revenue by 16%. So, when
+
+00:15:14.160 --> 00:15:17.519
+you're running your business on ramp and
+
+00:15:15.760 --> 00:15:19.519
+your competitors are not, you have a
+
+00:15:17.519 --> 00:15:21.760
+massive competitive advantage that
+
+00:15:19.519 --> 00:15:23.360
+compounds over time. Ramp is the only
+
+00:15:21.760 --> 00:15:25.920
+platform designed to make your finance
+
+00:15:23.360 --> 00:15:27.600
+team faster and happier. Many of the top
+
+00:15:25.920 --> 00:15:29.440
+founders and CEOs I know run their
+
+00:15:27.600 --> 00:15:32.160
+business on RAMP. I run my business on
+
+00:15:29.440 --> 00:15:33.680
+RAMP and you should too. Go to ramp.com
+
+00:15:32.160 --> 00:15:36.560
+to learn how it can help your business
+
+00:15:33.680 --> 00:15:38.720
+save time, save money, and grow revenue.
+
+00:15:36.560 --> 00:15:40.800
+That is ramp.com.
+
+00:15:38.720 --> 00:15:42.880
+Deal is how the best founders turn the
+
+00:15:40.800 --> 00:15:44.240
+world into their talent pool. I've been
+
+00:15:42.880 --> 00:15:46.240
+studying how history's greatest founders
+
+00:15:44.240 --> 00:15:47.519
+operate for a decade. And one thing they
+
+00:15:46.240 --> 00:15:49.680
+all have in common is they understand
+
+00:15:47.519 --> 00:15:51.920
+that recruiting and hiring the very best
+
+00:15:49.680 --> 00:15:53.839
+talent is your most important priority.
+
+00:15:51.920 --> 00:15:55.759
+A players recognize other A players,
+
+00:15:53.839 --> 00:15:58.399
+which is why top companies like Ramp,
+
+00:15:55.759 --> 00:16:00.480
+Shopify, 11 Labs, Uber, and Door Dash
+
+00:15:58.399 --> 00:16:02.880
+all use deal. Many of the top founders I
+
+00:16:00.480 --> 00:16:04.639
+know have personally invested in Deal
+
+00:16:02.880 --> 00:16:06.000
+after using their product. And what they
+
+00:16:04.639 --> 00:16:07.120
+discovered is that Deal is the best
+
+00:16:06.000 --> 00:16:08.800
+company in the world at building
+
+00:16:07.120 --> 00:16:10.560
+infrastructure for global hiring. Deal
+
+00:16:08.800 --> 00:16:13.040
+will help your business hire, pay, and
+
+00:16:10.560 --> 00:16:14.639
+manage any worker anywhere in the world.
+
+00:16:13.040 --> 00:16:16.720
+So you can retain the best talent
+
+00:16:14.639 --> 00:16:18.800
+anywhere and spend the rest of your time
+
+00:16:16.720 --> 00:16:20.800
+focusing on what you do best, delivering
+
+00:16:18.800 --> 00:16:22.959
+value to your customers. The founder of
+
+00:16:20.800 --> 00:16:24.800
+11 Labs has a great description of the
+
+00:16:22.959 --> 00:16:27.120
+value Deal can give your company. He
+
+00:16:24.800 --> 00:16:28.959
+said, "We built 11 Labs to break down
+
+00:16:27.120 --> 00:16:30.959
+language and communication barriers.
+
+00:16:28.959 --> 00:16:33.519
+With deal enabling us to hire and
+
+00:16:30.959 --> 00:16:35.360
+support exceptional talent anywhere, we
+
+00:16:33.519 --> 00:16:38.160
+can accelerate our innovation and bring
+
+00:16:35.360 --> 00:16:40.639
+more voices, stories, and ideas to every
+
+00:16:38.160 --> 00:16:43.360
+corner of the world. Deal is trusted by
+
+00:16:40.639 --> 00:16:45.040
+over 40,000 companies and growing fast.
+
+00:16:43.360 --> 00:16:47.920
+Learn how they can help your business by
+
+00:16:45.040 --> 00:16:51.240
+going to deal.comra.
+
+00:16:47.920 --> 00:16:51.240
+That is deal.com/enra.
+
+00:16:51.519 --> 00:16:56.320
+>> Did you see this profile that's written
+
+00:16:53.759 --> 00:16:57.199
+on Zuck in Colossus written by Jeremy
+
+00:16:56.320 --> 00:16:59.279
+Stern?
+
+00:16:57.199 --> 00:17:00.880
+>> I saw it. If I'm being honest, it was
+
+00:16:59.279 --> 00:17:03.040
+like too long. Didn't read. But
+
+00:17:00.880 --> 00:17:04.959
+>> it's 15,000 words. I just had Jeremy on
+
+00:17:03.040 --> 00:17:07.439
+the podcast. He's he's my favorite.
+
+00:17:04.959 --> 00:17:08.640
+>> I saw I saw I saw that. He's he's just I
+
+00:17:07.439 --> 00:17:10.240
+think he's writing the best profiles on
+
+00:17:08.640 --> 00:17:11.520
+on entrepreneurs and investors in the
+
+00:17:10.240 --> 00:17:12.640
+world right now. I think he's literally
+
+00:17:11.520 --> 00:17:15.039
+the best in the world at what he does.
+
+00:17:12.640 --> 00:17:16.720
+But in that Zach says he was talking
+
+00:17:15.039 --> 00:17:18.799
+about the advantage that he has relative
+
+00:17:16.720 --> 00:17:20.400
+to I think Elon and like Sam Alman and
+
+00:17:18.799 --> 00:17:21.839
+he's just like listen my skill set is
+
+00:17:20.400 --> 00:17:23.600
+very unsexy but I'm really good at
+
+00:17:21.839 --> 00:17:25.280
+building teams and then just improving a
+
+00:17:23.600 --> 00:17:28.480
+product slowly over a long period of
+
+00:17:25.280 --> 00:17:30.160
+time and relative to Elon and and Sam
+
+00:17:28.480 --> 00:17:31.440
+Alman and others. like I'm not going to
+
+00:17:30.160 --> 00:17:32.880
+lose control of my company and I don't
+
+00:17:31.440 --> 00:17:34.480
+need to raise any more money and so I
+
+00:17:32.880 --> 00:17:36.960
+can just do this for an excessively long
+
+00:17:34.480 --> 00:17:38.960
+period of time. That section of the
+
+00:17:36.960 --> 00:17:41.600
+profile is popping in my mind when
+
+00:17:38.960 --> 00:17:43.760
+you're talking about this 7-month uh
+
+00:17:41.600 --> 00:17:44.640
+stretch of trying to refine and build
+
+00:17:43.760 --> 00:17:46.160
+muse.
+
+00:17:44.640 --> 00:17:49.520
+>> I think that's exactly right. Like I
+
+00:17:46.160 --> 00:17:51.600
+think that it took immense patience. I
+
+00:17:49.520 --> 00:17:53.120
+mean 7 months like you know maybe it
+
+00:17:51.600 --> 00:17:55.360
+doesn't sound like that long but AI is
+
+00:17:53.120 --> 00:17:56.720
+like fierce. seven months in AI time.
+
+00:17:55.360 --> 00:17:58.960
+>> Seven months in AI time, which maybe
+
+00:17:56.720 --> 00:18:01.600
+like a decade and like nonAI time. And I
+
+00:17:58.960 --> 00:18:02.799
+think it it for all of us. Um but but I
+
+00:18:01.600 --> 00:18:05.919
+really give Mark a lot of credit for
+
+00:18:02.799 --> 00:18:08.720
+this. Like it took a lot of patience and
+
+00:18:05.919 --> 00:18:10.559
+restraint and a lot of trust in the
+
+00:18:08.720 --> 00:18:13.520
+process. And like you'll you can go back
+
+00:18:10.559 --> 00:18:16.240
+and look at the you know what Mark said
+
+00:18:13.520 --> 00:18:18.640
+in earnings calls for this entire period
+
+00:18:16.240 --> 00:18:22.080
+from February through through um
+
+00:18:18.640 --> 00:18:24.080
+September and he will allude to the fact
+
+00:18:22.080 --> 00:18:25.440
+that we were building personal agents
+
+00:18:24.080 --> 00:18:27.520
+and we weren't really trying to hide it
+
+00:18:25.440 --> 00:18:29.520
+like we were we were building personal
+
+00:18:27.520 --> 00:18:31.360
+agents and we were talking about it but
+
+00:18:29.520 --> 00:18:33.760
+I think you know there's a lot of doubt
+
+00:18:31.360 --> 00:18:35.919
+in the company for that entire period
+
+00:18:33.760 --> 00:18:38.320
+like people obviously the one of the
+
+00:18:35.919 --> 00:18:39.919
+dominant Wall Street narratives is like
+
+00:18:38.320 --> 00:18:41.520
+oh my god Gosh, Meta is just burning all
+
+00:18:39.919 --> 00:18:43.120
+this money. Like, are they even going to
+
+00:18:41.520 --> 00:18:45.679
+pull anything off in AI?
+
+00:18:43.120 --> 00:18:47.280
+>> It's more than that. It's like Zuck
+
+00:18:45.679 --> 00:18:48.960
+cannot win AI. It's said over and over
+
+00:18:47.280 --> 00:18:50.240
+again for a long period of time. And
+
+00:18:48.960 --> 00:18:53.440
+again, going back to Jeremy Stern's
+
+00:18:50.240 --> 00:18:54.799
+profile on him. He then off the record
+
+00:18:53.440 --> 00:18:57.520
+starts talking to his competitors,
+
+00:18:54.799 --> 00:18:58.720
+including one former researcher that is
+
+00:18:57.520 --> 00:19:01.919
+now at a competitor that used to work
+
+00:18:58.720 --> 00:19:03.520
+for with Zuck and is now at another lab.
+
+00:19:01.919 --> 00:19:04.559
+And he goes, "I don't want to have to
+
+00:19:03.520 --> 00:19:06.000
+compete with them cuz Mark's like the
+
+00:19:04.559 --> 00:19:07.760
+I think the line is Mark is the
+
+00:19:06.000 --> 00:19:10.080
+Terminator." [laughter] And it
+
+00:19:07.760 --> 00:19:12.960
+was like he just does will not stop. And
+
+00:19:10.080 --> 00:19:14.720
+he's like uh then he talks about um one
+
+00:19:12.960 --> 00:19:15.840
+of his superpowers that he's never happy
+
+00:19:14.720 --> 00:19:16.960
+with the state of the product. So he
+
+00:19:15.840 --> 00:19:19.360
+always wants to constant prove but he's
+
+00:19:16.960 --> 00:19:20.720
+not an Like he's not you know
+
+00:19:19.360 --> 00:19:23.840
+dict he's he is definitely a dictator
+
+00:19:20.720 --> 00:19:25.440
+but like he's not you know rude and like
+
+00:19:23.840 --> 00:19:26.799
+kind of will destroy the chemistry of a
+
+00:19:25.440 --> 00:19:28.880
+team. He actually talks about in the in
+
+00:19:26.799 --> 00:19:30.559
+the piece that team cohesion is
+
+00:19:28.880 --> 00:19:32.320
+excessively important to him.
+
+00:19:30.559 --> 00:19:35.120
+>> I think it's all right. I think one of
+
+00:19:32.320 --> 00:19:36.720
+the magical things about Muse was that
+
+00:19:35.120 --> 00:19:38.960
+we
+
+00:19:36.720 --> 00:19:41.919
+really like took quite a bit of time to
+
+00:19:38.960 --> 00:19:43.440
+sweat all the details before ultimately
+
+00:19:41.919 --> 00:19:45.440
+coming out with a product because I
+
+00:19:43.440 --> 00:19:48.080
+think that that personal agents was one
+
+00:19:45.440 --> 00:19:50.640
+of these product areas that kind of
+
+00:19:48.080 --> 00:19:52.240
+rested on a knife's edge, which is if it
+
+00:19:50.640 --> 00:19:53.919
+can reliably deliver these magical
+
+00:19:52.240 --> 00:19:55.039
+experiences, it has the potential to be
+
+00:19:53.919 --> 00:19:57.039
+one of the greatest consumer products
+
+00:19:55.039 --> 00:19:57.520
+ever. But you're dealing with models,
+
+00:19:57.039 --> 00:19:58.640
+you're dealing with something
+
+00:19:57.520 --> 00:20:01.360
+nondeterministic, you're dealing with
+
+00:19:58.640 --> 00:20:03.120
+agents, they can break, they can be uh
+
+00:20:01.360 --> 00:20:04.640
+unreliable. Like if people have these
+
+00:20:03.120 --> 00:20:06.640
+unreliable experiences, they think it's
+
+00:20:04.640 --> 00:20:09.039
+trash. It was one of these things where
+
+00:20:06.640 --> 00:20:12.000
+like getting to the product to a point
+
+00:20:09.039 --> 00:20:14.480
+of like quality and value such that it
+
+00:20:12.000 --> 00:20:16.240
+resonated with so many of the people who
+
+00:20:14.480 --> 00:20:18.320
+downloaded and used it. I want to talk
+
+00:20:16.240 --> 00:20:20.000
+more about this process. I'm curious how
+
+00:20:18.320 --> 00:20:21.280
+much resources, how big the team, how
+
+00:20:20.000 --> 00:20:23.440
+many people working on it. Do you guys
+
+00:20:21.280 --> 00:20:26.799
+have any data on like okay I'm using
+
+00:20:23.440 --> 00:20:28.240
+Muse nine great experiences two like
+
+00:20:26.799 --> 00:20:30.559
+inconsistent or you know shitty
+
+00:20:28.240 --> 00:20:32.080
+experiences and then I turn out like do
+
+00:20:30.559 --> 00:20:33.600
+you have any information on this? You
+
+00:20:32.080 --> 00:20:35.600
+can see this from like a lot of the
+
+00:20:33.600 --> 00:20:37.600
+other agent products at the start of the
+
+00:20:35.600 --> 00:20:38.720
+year like almost everyone turned out of
+
+00:20:37.600 --> 00:20:42.080
+those and it's because they were
+
+00:20:38.720 --> 00:20:46.400
+unreliable. We did a lot of user testing
+
+00:20:42.080 --> 00:20:49.360
+of Muse. Like we did many many rounds of
+
+00:20:46.400 --> 00:20:51.840
+new people trying to like download it
+
+00:20:49.360 --> 00:20:55.120
+and and use it from scratch and just
+
+00:20:51.840 --> 00:20:57.679
+seeing what that experience was like. A
+
+00:20:55.120 --> 00:21:00.799
+huge part of the premise of Muse and I
+
+00:20:57.679 --> 00:21:03.919
+think what's really landed is that it is
+
+00:21:00.799 --> 00:21:05.760
+like a different thing from what most
+
+00:21:03.919 --> 00:21:08.559
+people have experienced with consumer
+
+00:21:05.760 --> 00:21:11.039
+AI. Like it is not a chatbot. It is an
+
+00:21:08.559 --> 00:21:14.400
+agent and it can do agent things for
+
+00:21:11.039 --> 00:21:15.840
+you. And like I think to a developer
+
+00:21:14.400 --> 00:21:17.280
+this is kind of like old news because
+
+00:21:15.840 --> 00:21:18.480
+they've had to like you know download
+
+00:21:17.280 --> 00:21:20.640
+agents and have been using them for a
+
+00:21:18.480 --> 00:21:22.799
+while. But for most people like just
+
+00:21:20.640 --> 00:21:25.600
+even that graduation process like you
+
+00:21:22.799 --> 00:21:28.159
+know it needs to be explained and needs
+
+00:21:25.600 --> 00:21:29.840
+to be onboarded on on a very thoughtful
+
+00:21:28.159 --> 00:21:32.960
+way. And then for sure we definitely
+
+00:21:29.840 --> 00:21:34.799
+have seen like when because we've done
+
+00:21:32.960 --> 00:21:36.799
+tests with like different versions of
+
+00:21:34.799 --> 00:21:39.200
+the model and various model versions and
+
+00:21:36.799 --> 00:21:40.559
+continuously do those AB tests. You know
+
+00:21:39.200 --> 00:21:42.799
+the product experience is very very
+
+00:21:40.559 --> 00:21:46.400
+sensitive to model quality. It's very
+
+00:21:42.799 --> 00:21:48.080
+sensitive to how reliably the models can
+
+00:21:46.400 --> 00:21:49.840
+undergo these tasks, how reliably they
+
+00:21:48.080 --> 00:21:51.679
+communicate with the user about them,
+
+00:21:49.840 --> 00:21:52.960
+how reliably they like, you know, check
+
+00:21:51.679 --> 00:21:54.720
+back with the user if there's things
+
+00:21:52.960 --> 00:21:56.640
+that they require guidance on.
+
+00:21:54.720 --> 00:22:00.880
+>> But how'd you know it was ready to be
+
+00:21:56.640 --> 00:22:03.760
+released? Part of it was was pretty
+
+00:22:00.880 --> 00:22:05.520
+numerical which is like we had set you
+
+00:22:03.760 --> 00:22:07.120
+know you go back to that spreadsheet of
+
+00:22:05.520 --> 00:22:09.520
+100 plus things.
+
+00:22:07.120 --> 00:22:11.280
+>> We had set for each of those rows what
+
+00:22:09.520 --> 00:22:13.360
+threshold is launch blocking and above
+
+00:22:11.280 --> 00:22:15.440
+what threshold is good. We had many
+
+00:22:13.360 --> 00:22:17.440
+checkpoints that like were like green on
+
+00:22:15.440 --> 00:22:18.960
+80 of the rows but red on 20 of the
+
+00:22:17.440 --> 00:22:21.200
+rows. We knew that wasn't good enough.
+
+00:22:18.960 --> 00:22:23.440
+And we had our first model checkpoint
+
+00:22:21.200 --> 00:22:25.600
+which was green across the board which
+
+00:22:23.440 --> 00:22:28.400
+was a specially trained version of
+
+00:22:25.600 --> 00:22:30.480
+Musepark 1.3. So there was like the very
+
+00:22:28.400 --> 00:22:33.600
+numerical part of it and then there was
+
+00:22:30.480 --> 00:22:35.280
+just the experiential part which is we
+
+00:22:33.600 --> 00:22:36.880
+tried the model. We could tell that it
+
+00:22:35.280 --> 00:22:38.720
+was a lot better than than anything we
+
+00:22:36.880 --> 00:22:39.760
+had iterated with before. So going back
+
+00:22:38.720 --> 00:22:40.559
+to that seven-month period you were
+
+00:22:39.760 --> 00:22:41.600
+talking about, how many people were
+
+00:22:40.559 --> 00:22:44.320
+working on the product
+
+00:22:41.600 --> 00:22:47.919
+>> between the model work, model work and
+
+00:22:44.320 --> 00:22:49.760
+the product work? Like under 200 people
+
+00:22:47.919 --> 00:22:51.200
+total, which I guess sounds like a lot,
+
+00:22:49.760 --> 00:22:52.720
+but in big company land is
+
+00:22:51.200 --> 00:22:54.240
+>> it's actually a lot smaller.
+
+00:22:52.720 --> 00:22:56.000
+>> It's not very many. That was kind of
+
+00:22:54.240 --> 00:22:58.320
+cool looking back on this and thinking
+
+00:22:56.000 --> 00:23:00.799
+about it is like we knew this was going
+
+00:22:58.320 --> 00:23:02.799
+to be the most important product that
+
+00:23:00.799 --> 00:23:06.240
+the whole executive team, everyone knew
+
+00:23:02.799 --> 00:23:08.159
+that this was probably going to be one
+
+00:23:06.240 --> 00:23:11.840
+of the most important products that Meta
+
+00:23:08.159 --> 00:23:13.760
+would ship this year, but we had the
+
+00:23:11.840 --> 00:23:15.520
+restraint organizationally I think to
+
+00:23:13.760 --> 00:23:17.679
+make sure that like it was a really
+
+00:23:15.520 --> 00:23:20.480
+small focused team working on it and
+
+00:23:17.679 --> 00:23:22.559
+that it didn't balloon to this like oh
+
+00:23:20.480 --> 00:23:23.840
+you have like you know huge swasts of
+
+00:23:22.559 --> 00:23:25.520
+the company working on because we knew
+
+00:23:23.840 --> 00:23:29.120
+it was a single work of art. Like it
+
+00:23:25.520 --> 00:23:31.760
+required strong point of view and strong
+
+00:23:29.120 --> 00:23:33.360
+focus to like pull that through into one
+
+00:23:31.760 --> 00:23:35.200
+beautiful experience. Say more about
+
+00:23:33.360 --> 00:23:36.559
+this. Why did you just call it like a
+
+00:23:35.200 --> 00:23:38.480
+single piece of art and you need a
+
+00:23:36.559 --> 00:23:40.720
+single perspective or point of view? I
+
+00:23:38.480 --> 00:23:43.039
+think one
+
+00:23:40.720 --> 00:23:45.840
+um
+
+00:23:43.039 --> 00:23:48.000
+criticism of products that come from
+
+00:23:45.840 --> 00:23:52.320
+larger organizations and I think this
+
+00:23:48.000 --> 00:23:54.400
+like is even now starting to plague
+
+00:23:52.320 --> 00:23:57.120
+a lot of the AI labs is that they become
+
+00:23:54.400 --> 00:24:00.480
+kind of this Frankenstein
+
+00:23:57.120 --> 00:24:02.240
+almost like Croninberg amalgamation of a
+
+00:24:00.480 --> 00:24:06.080
+bunch of different people's points of
+
+00:24:02.240 --> 00:24:08.640
+view and visions and and beliefs and
+
+00:24:06.080 --> 00:24:11.360
+it's sort of like it's sort of PM hell
+
+00:24:08.640 --> 00:24:13.120
+in some sense where like every PM has
+
+00:24:11.360 --> 00:24:14.559
+like a thing that they're trying to get
+
+00:24:13.120 --> 00:24:15.840
+into the product and jam into the
+
+00:24:14.559 --> 00:24:18.159
+product and then all that kind of like
+
+00:24:15.840 --> 00:24:22.000
+blends together into this like like
+
+00:24:18.159 --> 00:24:23.760
+smoothie almost. People feel it as users
+
+00:24:22.000 --> 00:24:25.840
+and consumers like you feel you can feel
+
+00:24:23.760 --> 00:24:27.440
+when a product is just like it feels
+
+00:24:25.840 --> 00:24:28.960
+like lots of different people worked on
+
+00:24:27.440 --> 00:24:30.720
+it and there were like clearly different
+
+00:24:28.960 --> 00:24:32.240
+people who were gold differently so they
+
+00:24:30.720 --> 00:24:34.480
+just kind of like jammed it all
+
+00:24:32.240 --> 00:24:36.240
+together. Muse had to be the exact
+
+00:24:34.480 --> 00:24:39.760
+opposite, which is like there's one
+
+00:24:36.240 --> 00:24:41.279
+clear point of view. There is one
+
+00:24:39.760 --> 00:24:44.000
+cohesive experience that we're trying to
+
+00:24:41.279 --> 00:24:45.600
+deliver um to the world. I love that you
+
+00:24:44.000 --> 00:24:46.880
+said that and it just happens to be pure
+
+00:24:45.600 --> 00:24:47.760
+coincidence. Like we're I don't know
+
+00:24:46.880 --> 00:24:48.960
+when this is going to come out, but
+
+00:24:47.760 --> 00:24:50.799
+we're recording this on the 15th
+
+00:24:48.960 --> 00:24:52.400
+anniversary of Steve Jobs death. And
+
+00:24:50.799 --> 00:24:54.240
+when you think of somebody like a pro
+
+00:24:52.400 --> 00:24:56.159
+consumer products that had a single
+
+00:24:54.240 --> 00:24:58.080
+point of view, you obviously think of
+
+00:24:56.159 --> 00:24:59.600
+Steve first. I've read every single book
+
+00:24:58.080 --> 00:25:00.960
+on Steve and the history of Apple and
+
+00:24:59.600 --> 00:25:03.200
+I've done like I don't know 15 or 20
+
+00:25:00.960 --> 00:25:04.720
+episodes on them uh for my other podcast
+
+00:25:03.200 --> 00:25:07.520
+founders, but one of my favorite lines
+
+00:25:04.720 --> 00:25:09.600
+to describe Steve's impact was it says
+
+00:25:07.520 --> 00:25:12.720
+that um Apple is just Steve Jobs with
+
+00:25:09.600 --> 00:25:14.559
+10,000 lives. The products are to his
+
+00:25:12.720 --> 00:25:16.240
+taste, his perspective, his point of
+
+00:25:14.559 --> 00:25:18.559
+view. What he wanted to see in the world
+
+00:25:16.240 --> 00:25:21.200
+is exactly what the the the end user
+
+00:25:18.559 --> 00:25:23.279
+got. In Muse's case, like Nat Friedman
+
+00:25:21.200 --> 00:25:25.600
+deserves a lot of credit. like his taste
+
+00:25:23.279 --> 00:25:27.520
+and sensibilities ultimately dictated
+
+00:25:25.600 --> 00:25:29.039
+and shaped what that product became.
+
+00:25:27.520 --> 00:25:30.159
+>> Do you talk about how many people are
+
+00:25:29.039 --> 00:25:31.440
+using Muse? Are you guys talking about
+
+00:25:30.159 --> 00:25:36.320
+this publicly or no?
+
+00:25:31.440 --> 00:25:40.720
+>> We have said millions and then I have
+
+00:25:36.320 --> 00:25:43.440
+retweeted other people who have shown
+
+00:25:40.720 --> 00:25:45.840
+graphs where we would imply that Muse is
+
+00:25:43.440 --> 00:25:48.159
+the fastest growing consumer app of all
+
+00:25:45.840 --> 00:25:49.520
+time. Consumer AI app of all time.
+
+00:25:48.159 --> 00:25:51.120
+>> So you won't say a number though.
+
+00:25:49.520 --> 00:25:53.440
+>> We've said millions. Yeah. Well,
+
+00:25:51.120 --> 00:25:55.039
+millions could be hundreds of millions.
+
+00:25:53.440 --> 00:25:56.960
+That's also millions. So, you're just
+
+00:25:55.039 --> 00:25:58.640
+not adding the the the beginning to
+
+00:25:56.960 --> 00:26:00.240
+that. I want to like go into like you've
+
+00:25:58.640 --> 00:26:03.360
+been kind of going like uh and I mean
+
+00:26:00.240 --> 00:26:05.760
+this in a loving way like unhinged
+
+00:26:03.360 --> 00:26:07.200
+on X. So, you talk about like your is
+
+00:26:05.760 --> 00:26:08.400
+this like marketing strategy? Like what
+
+00:26:07.200 --> 00:26:10.320
+is going on? Like I feel like you're
+
+00:26:08.400 --> 00:26:13.440
+there's a distinct difference in your
+
+00:26:10.320 --> 00:26:14.400
+public tweeting since Muse launch. What
+
+00:26:13.440 --> 00:26:15.760
+are you doing?
+
+00:26:14.400 --> 00:26:17.360
+>> There's a few pieces of what's happening
+
+00:26:15.760 --> 00:26:18.960
+here. This has got to be more fun than
+
+00:26:17.360 --> 00:26:20.240
+scale AI when you were building scale.
+
+00:26:18.960 --> 00:26:22.000
+It has to [laughter] be. We'll talk
+
+00:26:20.240 --> 00:26:23.840
+about that later, but it has to be the
+
+00:26:22.000 --> 00:26:27.039
+past few weeks have been some of my most
+
+00:26:23.840 --> 00:26:28.720
+fun uh building like yeah certainly my
+
+00:26:27.039 --> 00:26:31.120
+career and I think there's a few things
+
+00:26:28.720 --> 00:26:34.000
+happening. So, one is it felt important
+
+00:26:31.120 --> 00:26:36.559
+that we figured out a way to make Muse
+
+00:26:34.000 --> 00:26:38.559
+break through. It's a pretty like
+
+00:26:36.559 --> 00:26:40.480
+torrential going back to this like this
+
+00:26:38.559 --> 00:26:43.200
+torrential stream of updates. Like for
+
+00:26:40.480 --> 00:26:46.080
+most people, there's just so they're
+
+00:26:43.200 --> 00:26:48.400
+just like constantly being like like
+
+00:26:46.080 --> 00:26:50.480
+kind of bombarded with new AI products
+
+00:26:48.400 --> 00:26:52.320
+and startups and releases and things and
+
+00:26:50.480 --> 00:26:53.440
+models and here's another model and
+
+00:26:52.320 --> 00:26:55.440
+here's another product and here's
+
+00:26:53.440 --> 00:26:57.679
+another feature and it's just like this
+
+00:26:55.440 --> 00:26:59.200
+torrential stream. We had actually
+
+00:26:57.679 --> 00:27:00.640
+meeting large meetings where we talked
+
+00:26:59.200 --> 00:27:03.039
+about this as a team. It was like we
+
+00:27:00.640 --> 00:27:04.720
+need to break through and obviously like
+
+00:27:03.039 --> 00:27:06.480
+meta we have lots of distribution like
+
+00:27:04.720 --> 00:27:07.919
+we can make sure everyone knows about it
+
+00:27:06.480 --> 00:27:11.440
+but that's not enough to like make it
+
+00:27:07.919 --> 00:27:14.159
+break through in an interesting cultural
+
+00:27:11.440 --> 00:27:17.520
+or fascinating way for the world to kind
+
+00:27:14.159 --> 00:27:21.200
+of like you know pay attention to. I
+
+00:27:17.520 --> 00:27:25.360
+separately in my life have happened to
+
+00:27:21.200 --> 00:27:30.000
+have met and um become friends with like
+
+00:27:25.360 --> 00:27:31.520
+memers and and uh I have these uh I
+
+00:27:30.000 --> 00:27:33.520
+affectionately call them my skitso
+
+00:27:31.520 --> 00:27:35.520
+friends but but people who like
+
+00:27:33.520 --> 00:27:37.279
+literally they spend all their day like
+
+00:27:35.520 --> 00:27:39.279
+thinking about memes in the internet and
+
+00:27:37.279 --> 00:27:41.120
+and understanding that I have people
+
+00:27:39.279 --> 00:27:43.600
+that are obsessed with Muse and they're
+
+00:27:41.120 --> 00:27:44.720
+also obsessed with your X feed and
+
+00:27:43.600 --> 00:27:46.880
+they're convinced that you have like a
+
+00:27:44.720 --> 00:27:49.360
+hundred muses coming up with memes. to
+
+00:27:46.880 --> 00:27:51.120
+to be used.
+
+00:27:49.360 --> 00:27:52.720
+Um, turns out you just have a collection
+
+00:27:51.120 --> 00:27:53.679
+of schizophrenic friends that are
+
+00:27:52.720 --> 00:27:55.679
+terminally online.
+
+00:27:53.679 --> 00:27:57.520
+>> The X feed, just for what it's worth, is
+
+00:27:55.679 --> 00:28:00.240
+like literally every one of those tweets
+
+00:27:57.520 --> 00:28:02.320
+I write. There were like a few a quite a
+
+00:28:00.240 --> 00:28:03.600
+period where I was like, it was like
+
+00:28:02.320 --> 00:28:04.799
+really hard for me to pay attention in
+
+00:28:03.600 --> 00:28:06.399
+meetings because I would just like think
+
+00:28:04.799 --> 00:28:07.954
+of a meme and I'd be like, "Oh god, I
+
+00:28:06.399 --> 00:28:08.720
+have to get this out." And I would like
+
+00:28:07.954 --> 00:28:10.320
+[laughter]
+
+00:28:08.720 --> 00:28:13.360
+it was like moments of inspiration.
+
+00:28:10.320 --> 00:28:15.600
+There was like um I was uh I was with
+
+00:28:13.360 --> 00:28:17.600
+one of my like I was trying to have like
+
+00:28:15.600 --> 00:28:19.600
+dinner with one of my co-workers and
+
+00:28:17.600 --> 00:28:20.960
+then during the dinner I was like wait I
+
+00:28:19.600 --> 00:28:23.200
+figured it out and then I like posted a
+
+00:28:20.960 --> 00:28:24.320
+different me. It was like it was almost
+
+00:28:23.200 --> 00:28:26.559
+I almost felt like I was like an
+
+00:28:24.320 --> 00:28:28.080
+engineer solving bugs again cuz it was
+
+00:28:26.559 --> 00:28:29.600
+like you know you could tell when
+
+00:28:28.080 --> 00:28:31.039
+something was going to click. But yeah
+
+00:28:29.600 --> 00:28:33.039
+so one things we wanted to break
+
+00:28:31.039 --> 00:28:34.960
+through. Another thing that like I just
+
+00:28:33.039 --> 00:28:38.559
+thought was important is like how do we
+
+00:28:34.960 --> 00:28:41.279
+make meta cool again? cuz like for
+
+00:28:38.559 --> 00:28:42.960
+whatever reason despite having like
+
+00:28:41.279 --> 00:28:46.080
+these incredible pieces of cultural
+
+00:28:42.960 --> 00:28:49.200
+software um like Instagram and and uh
+
+00:28:46.080 --> 00:28:53.120
+Facebook historically meta was not cool
+
+00:28:49.200 --> 00:28:54.960
+for a while and so wanted to make meta
+
+00:28:53.120 --> 00:28:57.840
+cool and interesting and kind of like
+
+00:28:54.960 --> 00:29:00.720
+funny and then the unhingedness was
+
+00:28:57.840 --> 00:29:03.120
+something that happened kind of like
+
+00:29:00.720 --> 00:29:05.039
+naturally over time when Muse first came
+
+00:29:03.120 --> 00:29:06.399
+out I was just like mostly focused on
+
+00:29:05.039 --> 00:29:08.880
+promoting all the interesting use cases
+
+00:29:06.399 --> 00:29:11.919
+that I saw I was like retweeting like
+
+00:29:08.880 --> 00:29:14.720
+tens of interesting use cases that I saw
+
+00:29:11.919 --> 00:29:16.399
+of people using Muse. And then at some
+
+00:29:14.720 --> 00:29:18.240
+point it was like because I was just
+
+00:29:16.399 --> 00:29:20.159
+like tweeting so much. There were like a
+
+00:29:18.240 --> 00:29:21.360
+few tweets where I was just like didn't
+
+00:29:20.159 --> 00:29:23.279
+think that much about it and just said
+
+00:29:21.360 --> 00:29:25.279
+it post. And then some of those
+
+00:29:23.279 --> 00:29:26.960
+tweets like did really well. Have you
+
+00:29:25.279 --> 00:29:29.279
+seen this like time spent thinking about
+
+00:29:26.960 --> 00:29:30.720
+it and then banger you seen that? Great.
+
+00:29:29.279 --> 00:29:32.880
+>> I haven't se but I agree with that.
+
+00:29:30.720 --> 00:29:34.559
+That's like I just some of these I
+
+00:29:32.880 --> 00:29:35.919
+didn't spend that much time on. I like
+
+00:29:34.559 --> 00:29:36.880
+tweeted them. I didn't even check my
+
+00:29:35.919 --> 00:29:38.480
+phone for a few hours and I was like,
+
+00:29:36.880 --> 00:29:39.679
+"Oh, wow. That one went really well."
+
+00:29:38.480 --> 00:29:41.600
+And then I kind of like remembered
+
+00:29:39.679 --> 00:29:42.799
+something about the internet which I it
+
+00:29:41.600 --> 00:29:45.120
+wasn't super intentional, but I
+
+00:29:42.799 --> 00:29:48.480
+remembered like the internet rewards
+
+00:29:45.120 --> 00:29:49.679
+risk and it rewards like surprise and
+
+00:29:48.480 --> 00:29:52.159
+like things that like people don't
+
+00:29:49.679 --> 00:29:54.640
+expect. And so then I just kind of like
+
+00:29:52.159 --> 00:29:57.520
+went off. A lot of my co-workers uh I
+
+00:29:54.640 --> 00:29:59.840
+think were somewhat surprised at uh
+
+00:29:57.520 --> 00:30:01.200
+something that um Nat said for for the
+
+00:29:59.840 --> 00:30:02.880
+whole week when I was posting all the
+
+00:30:01.200 --> 00:30:05.360
+memes. He was like, "You know, I thought
+
+00:30:02.880 --> 00:30:06.399
+we would learn." He said this like in a
+
+00:30:05.360 --> 00:30:07.360
+bunch of meetings. He was like, "I
+
+00:30:06.399 --> 00:30:10.640
+thought we were going to learn a lot
+
+00:30:07.360 --> 00:30:12.720
+about um you know, Muse users and like
+
+00:30:10.640 --> 00:30:14.159
+how people were using Muse, but actually
+
+00:30:12.720 --> 00:30:16.335
+like we're just learning a lot about
+
+00:30:14.159 --> 00:30:17.120
+Alex's mind."
+
+00:30:16.335 --> 00:30:19.120
+[laughter]
+
+00:30:17.120 --> 00:30:21.360
+It was a lot of fun. I felt like I was
+
+00:30:19.120 --> 00:30:24.399
+drawing on all of my internet knowledge
+
+00:30:21.360 --> 00:30:26.480
+for years and years and years to like
+
+00:30:24.399 --> 00:30:27.679
+pull into those moments. And I think it
+
+00:30:26.480 --> 00:30:28.640
+actually, you know, I don't know, we
+
+00:30:27.679 --> 00:30:30.799
+don't have the tracking and it's like
+
+00:30:28.640 --> 00:30:32.399
+hard to tell, but I actually think it
+
+00:30:30.799 --> 00:30:34.240
+actually genuinely made an impact on
+
+00:30:32.399 --> 00:30:36.880
+grow growth, which is kind of hilarious.
+
+00:30:34.240 --> 00:30:38.640
+>> I definitely think it did. I I can't
+
+00:30:36.880 --> 00:30:39.919
+stop hearing about it. So, and all the
+
+00:30:38.640 --> 00:30:41.840
+people I'm hearing about it from also
+
+00:30:39.919 --> 00:30:43.039
+downloaded the app and are now using it.
+
+00:30:41.840 --> 00:30:44.080
+Go back to what you were saying though.
+
+00:30:43.039 --> 00:30:45.600
+It's like, hey, we have distribution,
+
+00:30:44.080 --> 00:30:46.799
+but that doesn't make mean that we can
+
+00:30:45.600 --> 00:30:48.320
+make something that people are going to
+
+00:30:46.799 --> 00:30:49.919
+come back to and actually sticky. So,
+
+00:30:48.320 --> 00:30:51.200
+like, how did you do this with Muse?
+
+00:30:49.919 --> 00:30:53.279
+>> I think it was like, how do you make
+
+00:30:51.200 --> 00:30:54.320
+this into how do we how do we make this
+
+00:30:53.279 --> 00:30:55.679
+breakthrough as a product? And I think
+
+00:30:54.320 --> 00:30:57.919
+there were like a few parts of that, but
+
+00:30:55.679 --> 00:30:59.679
+I think one is how do you get people to
+
+00:30:57.919 --> 00:31:03.600
+a match the experience? Like how do you
+
+00:30:59.679 --> 00:31:05.520
+get someone to to a wow moment with the
+
+00:31:03.600 --> 00:31:07.440
+product as early as possible? And this
+
+00:31:05.520 --> 00:31:09.279
+product I think naturally lends itself
+
+00:31:07.440 --> 00:31:11.520
+to that because I think you know there's
+
+00:31:09.279 --> 00:31:14.159
+it's like it's AI. It can do a lot. It
+
+00:31:11.520 --> 00:31:16.799
+can there's like if if someone has never
+
+00:31:14.159 --> 00:31:18.399
+used an AI agent, there's a lot that it
+
+00:31:16.799 --> 00:31:20.559
+can do that will surprise you. So that I
+
+00:31:18.399 --> 00:31:23.440
+think was a big part of it. I think
+
+00:31:20.559 --> 00:31:26.159
+another part of it was like how do you
+
+00:31:23.440 --> 00:31:28.799
+harness all of those stories of people
+
+00:31:26.159 --> 00:31:32.000
+having these wow moments and like use
+
+00:31:28.799 --> 00:31:33.200
+those to help make the product sing and
+
+00:31:32.000 --> 00:31:34.559
+make the product fly.
+
+00:31:33.200 --> 00:31:36.000
+>> How are you using the stories though?
+
+00:31:34.559 --> 00:31:36.640
+Cuz you you guys aren't running ads for
+
+00:31:36.000 --> 00:31:39.120
+me, are you?
+
+00:31:36.640 --> 00:31:41.039
+>> We ran a few ads. I mean honestly like I
+
+00:31:39.120 --> 00:31:43.760
+think at first it was just the fact that
+
+00:31:41.039 --> 00:31:44.480
+I would retweet so many of them. Like I
+
+00:31:43.760 --> 00:31:45.760
+was just
+
+00:31:44.480 --> 00:31:47.360
+>> anytime I saw someone do something
+
+00:31:45.760 --> 00:31:49.120
+interesting about news I was like quote
+
+00:31:47.360 --> 00:31:52.720
+tweet. I couldn't understand why both
+
+00:31:49.120 --> 00:31:54.320
+Enthropic and OpenAI's um ads are so bad
+
+00:31:52.720 --> 00:31:56.480
+because remember Anthropic was doing
+
+00:31:54.320 --> 00:31:58.399
+this huge like outdoor campaign and it's
+
+00:31:56.480 --> 00:32:00.880
+all about them and same thing with um
+
+00:31:58.399 --> 00:32:02.320
+Chet. It's like they'd have like the the
+
+00:32:00.880 --> 00:32:03.840
+icon which I don't even think people
+
+00:32:02.320 --> 00:32:05.360
+recognize that as a logo and it just say
+
+00:32:03.840 --> 00:32:06.720
+CEX and just be two people sitting at a
+
+00:32:05.360 --> 00:32:08.240
+desk. I'm like what the does this
+
+00:32:06.720 --> 00:32:10.320
+mean? Where it's like you have all these
+
+00:32:08.240 --> 00:32:12.272
+use cases. All you have to do your ad is
+
+00:32:10.320 --> 00:32:13.519
+to show the benefit of your product.
+
+00:32:12.272 --> 00:32:15.360
+[laughter] That's it.
+
+00:32:13.519 --> 00:32:17.600
+>> You have millions of them. Run those
+
+00:32:15.360 --> 00:32:19.039
+ads. It's it's so like elementary that
+
+00:32:17.600 --> 00:32:20.159
+it's interesting that people make this
+
+00:32:19.039 --> 00:32:21.440
+mistake over and over again.
+
+00:32:20.159 --> 00:32:24.720
+>> Yeah. I think one thing that we came
+
+00:32:21.440 --> 00:32:26.240
+back to a lot in in both building news
+
+00:32:24.720 --> 00:32:29.120
+as well as just like building stuff in
+
+00:32:26.240 --> 00:32:30.880
+general at me was just like why would
+
+00:32:29.120 --> 00:32:32.080
+someone care? They don't care about you
+
+00:32:30.880 --> 00:32:33.519
+or your company. They care about
+
+00:32:32.080 --> 00:32:36.159
+everybody's self-interested. This is
+
+00:32:33.519 --> 00:32:37.519
+like I'm there's this very old book.
+
+00:32:36.159 --> 00:32:39.760
+It's called Scientific Advertising. It
+
+00:32:37.519 --> 00:32:41.279
+was written in the early 1900s. is now
+
+00:32:39.760 --> 00:32:42.960
+it was so valuable that the guy that
+
+00:32:41.279 --> 00:32:46.000
+made the most money as an advertising
+
+00:32:42.960 --> 00:32:47.360
+agency founder in the like 1920s and 30s
+
+00:32:46.000 --> 00:32:49.039
+he it was written by this guy named
+
+00:32:47.360 --> 00:32:50.480
+Hopkins who was this best copyriter he's
+
+00:32:49.039 --> 00:32:51.600
+like these are all the ideas how I'm
+
+00:32:50.480 --> 00:32:54.000
+making this money I'm putting this
+
+00:32:51.600 --> 00:32:55.279
+manuscript in a safe for 20 years right
+
+00:32:54.000 --> 00:32:56.559
+but essentially it's not about
+
+00:32:55.279 --> 00:32:58.080
+advertising it's about human nature
+
+00:32:56.559 --> 00:32:59.840
+which doesn't change and his whole point
+
+00:32:58.080 --> 00:33:01.200
+was just like your ads are about you
+
+00:32:59.840 --> 00:33:03.200
+your ads about your product your ads are
+
+00:33:01.200 --> 00:33:04.000
+like hey I have this thing buy people
+
+00:33:03.200 --> 00:33:05.519
+don't care about that they're
+
+00:33:04.000 --> 00:33:07.360
+self-interested and if you just all you
+
+00:33:05.519 --> 00:33:10.240
+have to do is just do the work of what
+
+00:33:07.360 --> 00:33:12.480
+this does if for you and you just lead
+
+00:33:10.240 --> 00:33:14.080
+with that and there's people that took
+
+00:33:12.480 --> 00:33:15.840
+that ideas those ideas were written in
+
+00:33:14.080 --> 00:33:17.600
+the early 1900s and went on to build
+
+00:33:15.840 --> 00:33:19.440
+massive companies advertising agency
+
+00:33:17.600 --> 00:33:20.399
+foundations in the ' 50s ' 60s7s and
+
+00:33:19.440 --> 00:33:23.440
+even to this day
+
+00:33:20.399 --> 00:33:25.840
+>> yeah 100%. I think there are a few
+
+00:33:23.440 --> 00:33:28.159
+insights. Let's say first is most people
+
+00:33:25.840 --> 00:33:31.360
+in the world, they don't give a
+
+00:33:28.159 --> 00:33:32.480
+about like OpenAI or the research or you
+
+00:33:31.360 --> 00:33:34.399
+know these other companies or the
+
+00:33:32.480 --> 00:33:36.159
+research or even us or our research or
+
+00:33:34.399 --> 00:33:38.960
+whatever. They care about like what it
+
+00:33:36.159 --> 00:33:42.399
+can do for them. We had this gift of the
+
+00:33:38.960 --> 00:33:44.320
+mascot which was the little jolly guy. I
+
+00:33:42.399 --> 00:33:46.720
+remember the tweet where I where I
+
+00:33:44.320 --> 00:33:48.480
+realized I was like, "Oh, wow. This is
+
+00:33:46.720 --> 00:33:52.399
+mileage." because I was basically I was
+
+00:33:48.480 --> 00:33:56.240
+um I was driving into work uh and while
+
+00:33:52.399 --> 00:33:58.320
+I was on the way I like generated a a
+
+00:33:56.240 --> 00:34:01.679
+version of the guy holding a briefcase
+
+00:33:58.320 --> 00:34:03.440
+and I tweeted MFW I go to work on
+
+00:34:01.679 --> 00:34:04.960
+Monday. I remember thinking like this is
+
+00:34:03.440 --> 00:34:06.799
+like one of my best tweets in a while
+
+00:34:04.960 --> 00:34:08.639
+and then I kind of realized like you can
+
+00:34:06.799 --> 00:34:11.359
+put him into a lot of situations. One
+
+00:34:08.639 --> 00:34:13.599
+thing I like kind of realized as we were
+
+00:34:11.359 --> 00:34:16.240
+going through that process was like how
+
+00:34:13.599 --> 00:34:18.000
+do you create surprising moments that
+
+00:34:16.240 --> 00:34:19.599
+are very different from any other
+
+00:34:18.000 --> 00:34:21.760
+marketing that you've seen of like a
+
+00:34:19.599 --> 00:34:23.760
+product. I don't like really remember
+
+00:34:21.760 --> 00:34:27.200
+the last time someone like you know
+
+00:34:23.760 --> 00:34:28.879
+leaned into racy memes to like market a
+
+00:34:27.200 --> 00:34:30.320
+product. Um I don't actually know if
+
+00:34:28.879 --> 00:34:32.079
+it's been done before but I kind of like
+
+00:34:30.320 --> 00:34:34.000
+realize like oh wow this is like a thing
+
+00:34:32.079 --> 00:34:34.879
+that we can do with this little guy. And
+
+00:34:34.000 --> 00:34:36.000
+that's something that like is
+
+00:34:34.879 --> 00:34:38.320
+interesting. That's something that like
+
+00:34:36.000 --> 00:34:38.800
+drives intrigue to like the average
+
+00:34:38.320 --> 00:34:40.399
+person.
+
+00:34:38.800 --> 00:34:42.000
+>> Okay. But that might get them raise
+
+00:34:40.399 --> 00:34:43.520
+awareness, might even get them to
+
+00:34:42.000 --> 00:34:46.000
+download the app. But then how do you
+
+00:34:43.520 --> 00:34:48.240
+get them to stay engaged once the app is
+
+00:34:46.000 --> 00:34:52.320
+they the app is on their phone? There's
+
+00:34:48.240 --> 00:34:55.119
+a cycle that people who who really love
+
+00:34:52.320 --> 00:34:58.480
+the app and and we even like we back in
+
+00:34:55.119 --> 00:35:00.480
+February had which is you try to give it
+
+00:34:58.480 --> 00:35:02.720
+a little thing and it does it. You're
+
+00:35:00.480 --> 00:35:03.839
+like, "Oh, wow. It did that." And then
+
+00:35:02.720 --> 00:35:05.920
+you try to give it a little bit
+
+00:35:03.839 --> 00:35:07.200
+something like a little bit more and
+
+00:35:05.920 --> 00:35:09.280
+then it does it and you're like, "Oh,
+
+00:35:07.200 --> 00:35:10.560
+wow. It can do that. It could do that
+
+00:35:09.280 --> 00:35:12.000
+first thing. It could do the second
+
+00:35:10.560 --> 00:35:14.960
+thing." And then you give it like a
+
+00:35:12.000 --> 00:35:17.280
+little bit bigger of a of a problem. And
+
+00:35:14.960 --> 00:35:20.320
+it's kind of this like trust fall almost
+
+00:35:17.280 --> 00:35:22.079
+that you have with an AI agent, which is
+
+00:35:20.320 --> 00:35:24.320
+at first you like don't really trust it,
+
+00:35:22.079 --> 00:35:25.280
+but you're like kind of intrigued. So
+
+00:35:24.320 --> 00:35:27.040
+you're going to give it a little bit
+
+00:35:25.280 --> 00:35:28.079
+nibble and then you give it like
+
+00:35:27.040 --> 00:35:29.200
+something a little bigger and something
+
+00:35:28.079 --> 00:35:30.880
+a little bigger and something a little
+
+00:35:29.200 --> 00:35:32.720
+bigger. Certainly like when I talk to
+
+00:35:30.880 --> 00:35:34.480
+like college students or whatever like
+
+00:35:32.720 --> 00:35:36.480
+some of the ways that people use AI it's
+
+00:35:34.480 --> 00:35:38.400
+like a full trust fault. They just like
+
+00:35:36.480 --> 00:35:40.079
+are recording voice notes and brain
+
+00:35:38.400 --> 00:35:41.760
+dumping to the AI and they send it and
+
+00:35:40.079 --> 00:35:43.760
+then they just trust the AI to like
+
+00:35:41.760 --> 00:35:45.680
+organize all the thoughts and give them
+
+00:35:43.760 --> 00:35:48.160
+like clear plans and think clear things
+
+00:35:45.680 --> 00:35:50.240
+to do etc. I think for the successful
+
+00:35:48.160 --> 00:35:53.280
+users of Muse it really is like getting
+
+00:35:50.240 --> 00:35:55.520
+them onto this trust fall process of
+
+00:35:53.280 --> 00:35:57.280
+using it for slightly bigger and bigger
+
+00:35:55.520 --> 00:35:59.760
+and bigger things and then having it
+
+00:35:57.280 --> 00:36:01.440
+work every one of those times.
+
+00:35:59.760 --> 00:36:02.720
+I found one of my all-time favorite
+
+00:36:01.440 --> 00:36:04.560
+quotes when I was reading the book 0ero
+
+00:36:02.720 --> 00:36:06.640
+to1. The quote says, "The single most
+
+00:36:04.560 --> 00:36:08.560
+powerful pattern I have noticed is that
+
+00:36:06.640 --> 00:36:11.359
+successful people find value in
+
+00:36:08.560 --> 00:36:13.040
+unexpected places." And they do this by
+
+00:36:11.359 --> 00:36:15.200
+thinking about business from first
+
+00:36:13.040 --> 00:36:17.200
+principles instead of formulas. That is
+
+00:36:15.200 --> 00:36:19.200
+exactly what Apploven has done with
+
+00:36:17.200 --> 00:36:20.400
+their advertising platform. Apploven
+
+00:36:19.200 --> 00:36:22.720
+connects you with over a billion
+
+00:36:20.400 --> 00:36:24.960
+potential new customers in mobile games.
+
+00:36:22.720 --> 00:36:27.440
+Apploven allows you to capture undivided
+
+00:36:24.960 --> 00:36:29.119
+attention. Apploving ads are full screen
+
+00:36:27.440 --> 00:36:31.839
+videos that are watched for an average
+
+00:36:29.119 --> 00:36:34.000
+of 35 seconds. That is retention that
+
+00:36:31.839 --> 00:36:36.320
+blows other ad platforms out of the
+
+00:36:34.000 --> 00:36:38.560
+water. And you can launch on Apploven in
+
+00:36:36.320 --> 00:36:40.640
+minutes. You set the goal and Apploven
+
+00:36:38.560 --> 00:36:43.200
+achieves it. No complex setup, no
+
+00:36:40.640 --> 00:36:45.040
+expertise needed. And Apploven scales
+
+00:36:43.200 --> 00:36:47.359
+quickly. They can put your ads in front
+
+00:36:45.040 --> 00:36:49.200
+of over a billion potential customers.
+
+00:36:47.359 --> 00:36:51.280
+Other businesses have seen immediate
+
+00:36:49.200 --> 00:36:53.440
+results scale to hundreds of thousands
+
+00:36:51.280 --> 00:36:55.520
+of dollars of spend per day and increase
+
+00:36:53.440 --> 00:36:57.200
+their revenue by millions. So, you want
+
+00:36:55.520 --> 00:36:59.359
+to get started quickly before all of
+
+00:36:57.200 --> 00:37:00.560
+your competitors are on AppLoven. And
+
+00:36:59.359 --> 00:37:02.079
+you can do that by going to
+
+00:37:00.560 --> 00:37:04.960
+apploven.com.
+
+00:37:02.079 --> 00:37:06.800
+That's apploven.com.
+
+00:37:04.960 --> 00:37:09.920
+I wonder how much of this is actually
+
+00:37:06.800 --> 00:37:11.200
+driven by word of mouth. So, obviously
+
+00:37:09.920 --> 00:37:12.560
+talking to you, I was going to have to
+
+00:37:11.200 --> 00:37:14.160
+download the app no matter what. But
+
+00:37:12.560 --> 00:37:15.680
+what really piqued my interest is a
+
+00:37:14.160 --> 00:37:18.800
+friend of mine was sending me
+
+00:37:15.680 --> 00:37:20.240
+screenshots of how he was using Muse.
+
+00:37:18.800 --> 00:37:21.599
+So, like when you download the app, it's
+
+00:37:20.240 --> 00:37:22.640
+it doesn't really tell you like too much
+
+00:37:21.599 --> 00:37:24.640
+of like what you can do. It was kind of
+
+00:37:22.640 --> 00:37:27.520
+like open-ended like a you know like a
+
+00:37:24.640 --> 00:37:28.560
+open text box but a friend of mine who's
+
+00:37:27.520 --> 00:37:32.320
+running like a hundred billion dollar
+
+00:37:28.560 --> 00:37:33.760
+company he left his ID on a flexjet and
+
+00:37:32.320 --> 00:37:35.599
+then he went through and he's just like
+
+00:37:33.760 --> 00:37:37.119
+well I want to he tell me I don't want
+
+00:37:35.599 --> 00:37:39.119
+to be involved in this process at all
+
+00:37:37.119 --> 00:37:40.560
+you have to figure out how to get the ID
+
+00:37:39.119 --> 00:37:41.760
+that like go pick up the ID this is
+
+00:37:40.560 --> 00:37:43.040
+where it's at and then this is where I'm
+
+00:37:41.760 --> 00:37:44.560
+at and then figure out all the steps
+
+00:37:43.040 --> 00:37:46.640
+along the way and then like arranged the
+
+00:37:44.560 --> 00:37:48.720
+courier went there got to his security
+
+00:37:46.640 --> 00:37:51.200
+in his office somehow and got upstairs
+
+00:37:48.720 --> 00:37:52.880
+to his office like and it was like holy
+
+00:37:51.200 --> 00:37:54.960
+this is the best marketing. It's
+
+00:37:52.880 --> 00:37:56.480
+just three or four screenshots of Muse
+
+00:37:54.960 --> 00:37:57.920
+going back and forth and him saying, "I
+
+00:37:56.480 --> 00:37:59.200
+don't want to be involved. You have to
+
+00:37:57.920 --> 00:38:00.880
+do everything." And it figuring out on
+
+00:37:59.200 --> 00:38:04.400
+the way. Yeah. Know, this is actually
+
+00:38:00.880 --> 00:38:05.920
+one of the things about um uh I don't
+
+00:38:04.400 --> 00:38:08.960
+know how it was like somewhat
+
+00:38:05.920 --> 00:38:10.800
+intentional, but definitely like modern
+
+00:38:08.960 --> 00:38:12.560
+product marketing is like very
+
+00:38:10.800 --> 00:38:14.960
+screenshot driven. Like I think to have
+
+00:38:12.560 --> 00:38:16.400
+a modern consumer product like it has to
+
+00:38:14.960 --> 00:38:20.480
+work on the screenshot. like the
+
+00:38:16.400 --> 00:38:22.240
+screenshot has to has to fly so to speak
+
+00:38:20.480 --> 00:38:24.480
+either through like group chats or word
+
+00:38:22.240 --> 00:38:25.839
+of mouth or like online. And I think
+
+00:38:24.480 --> 00:38:27.680
+that's been a big part of it. This
+
+00:38:25.839 --> 00:38:29.920
+wasn't intentional or engineered, but I
+
+00:38:27.680 --> 00:38:33.119
+think the fact that we had the little
+
+00:38:29.920 --> 00:38:36.480
+guy in the screenshot is like was a big
+
+00:38:33.119 --> 00:38:38.000
+deal because I think having Jolly or
+
+00:38:36.480 --> 00:38:40.400
+whoever your muse is like in the
+
+00:38:38.000 --> 00:38:42.240
+screenshot immediately communicates this
+
+00:38:40.400 --> 00:38:43.680
+is a Muse screenshot. It's just like the
+
+00:38:42.240 --> 00:38:45.280
+best marketing you could possibly have.
+
+00:38:43.680 --> 00:38:46.720
+So, are you on your Muse like all day
+
+00:38:45.280 --> 00:38:47.680
+long? like what is your own personal
+
+00:38:46.720 --> 00:38:49.920
+usage?
+
+00:38:47.680 --> 00:38:54.320
+>> I mostly like set up a lot of workflows
+
+00:38:49.920 --> 00:38:57.280
+using it and then I um I guess my
+
+00:38:54.320 --> 00:38:59.440
+meetings a lot of the time but um so in
+
+00:38:57.280 --> 00:39:00.640
+practice like I think in my job
+
+00:38:59.440 --> 00:39:02.800
+quoteunquote I'm supposed to like pay
+
+00:39:00.640 --> 00:39:04.480
+attention and and be pretty present and
+
+00:39:02.800 --> 00:39:06.560
+interact with people. I set up a bunch
+
+00:39:04.480 --> 00:39:08.000
+of workflows and like kind of treated as
+
+00:39:06.560 --> 00:39:10.320
+like a second brain.
+
+00:39:08.000 --> 00:39:12.000
+>> Yeah. You said that in the post that you
+
+00:39:10.320 --> 00:39:13.200
+wrote and it was like really short and I
+
+00:39:12.000 --> 00:39:15.200
+think I saw last time it was like 5 and
+
+00:39:13.200 --> 00:39:16.720
+a half million views so far but you said
+
+00:39:15.200 --> 00:39:18.240
+uh I love how you describe Muse like
+
+00:39:16.720 --> 00:39:21.680
+well if everyone had a second mind
+
+00:39:18.240 --> 00:39:24.480
+beyond their own. I think this is
+
+00:39:21.680 --> 00:39:26.480
+philosophically speaking one of the most
+
+00:39:24.480 --> 00:39:28.240
+interesting questions about like what
+
+00:39:26.480 --> 00:39:31.440
+does it mean to be human when you have
+
+00:39:28.240 --> 00:39:33.680
+like powerful AI and what is that
+
+00:39:31.440 --> 00:39:35.760
+relationship like and and how exactly
+
+00:39:33.680 --> 00:39:37.680
+does that look and different people have
+
+00:39:35.760 --> 00:39:38.960
+different takes on what exactly that
+
+00:39:37.680 --> 00:39:41.280
+looks like. I think the sort of like
+
+00:39:38.960 --> 00:39:42.960
+fear cases obviously that you know AI is
+
+00:39:41.280 --> 00:39:45.440
+above us and that we're just sort of
+
+00:39:42.960 --> 00:39:46.880
+like doing what they do and there's like
+
+00:39:45.440 --> 00:39:48.160
+other worlds where that relationship is
+
+00:39:46.880 --> 00:39:49.520
+different. And before you go on, what is
+
+00:39:48.160 --> 00:39:50.960
+your own personal view though?
+
+00:39:49.520 --> 00:39:53.200
+>> I really believe in muse. I believe in
+
+00:39:50.960 --> 00:39:55.680
+the personal agent as like a long-term
+
+00:39:53.200 --> 00:39:58.240
+form factor of just it is human nature
+
+00:39:55.680 --> 00:40:02.079
+to have wants and desires and dreams.
+
+00:39:58.240 --> 00:40:05.760
+And I think like AI and personal agents
+
+00:40:02.079 --> 00:40:07.119
+like muse will be the mechanism and the
+
+00:40:05.760 --> 00:40:08.960
+bridge that enables us to accomplish
+
+00:40:07.119 --> 00:40:10.640
+those things and continue accomplishing
+
+00:40:08.960 --> 00:40:12.000
+them. And then like humans will dream
+
+00:40:10.640 --> 00:40:13.680
+bigger and bigger and bigger and bigger.
+
+00:40:12.000 --> 00:40:15.520
+Kids will dream of like having their own
+
+00:40:13.680 --> 00:40:16.800
+star systems or whatever. And like Muse
+
+00:40:15.520 --> 00:40:21.119
+will help them do that. Like there's
+
+00:40:16.800 --> 00:40:23.520
+this thing that like um Bezos uh wrote
+
+00:40:21.119 --> 00:40:25.280
+in like well I think it was one of his
+
+00:40:23.520 --> 00:40:27.680
+shareholder letters which is like the
+
+00:40:25.280 --> 00:40:29.680
+beautiful thing about uh consumers is
+
+00:40:27.680 --> 00:40:31.119
+that they're like always beautifully
+
+00:40:29.680 --> 00:40:33.119
+unhappy or something like that or like
+
+00:40:31.119 --> 00:40:35.839
+beautifully unsatisfied with the options
+
+00:40:33.119 --> 00:40:37.440
+they have. That is like one modality of
+
+00:40:35.839 --> 00:40:39.280
+our relationship with AI. I think that
+
+00:40:37.440 --> 00:40:41.839
+there's other modalities like I think
+
+00:40:39.280 --> 00:40:44.079
+that AI will start doing more and more
+
+00:40:41.839 --> 00:40:46.160
+of the scientific discovery process. I
+
+00:40:44.079 --> 00:40:48.560
+think AIs will start inserting more and
+
+00:40:46.160 --> 00:40:51.760
+more into various parts of the economy,
+
+00:40:48.560 --> 00:40:54.560
+but I do believe in this mod in this
+
+00:40:51.760 --> 00:40:57.280
+like form factor long term of everyone
+
+00:40:54.560 --> 00:40:58.960
+having an AI that supports them and what
+
+00:40:57.280 --> 00:41:01.359
+they want. So you see AI as kind of like
+
+00:40:58.960 --> 00:41:02.560
+removing all like the cludge of life,
+
+00:41:01.359 --> 00:41:04.079
+right? The stuff that we don't want to
+
+00:41:02.560 --> 00:41:05.440
+do. I think in the the piece you said
+
+00:41:04.079 --> 00:41:07.839
+something like the world is full of like
+
+00:41:05.440 --> 00:41:09.520
+gatekeepers and obstacles and like Muse
+
+00:41:07.839 --> 00:41:10.640
+can get around this for you without
+
+00:41:09.520 --> 00:41:11.680
+spending any more of your time so you
+
+00:41:10.640 --> 00:41:15.520
+can actually focus on the stuff you want
+
+00:41:11.680 --> 00:41:19.599
+to do. I think Muse can
+
+00:41:15.520 --> 00:41:21.680
+give everyone the adulthood they dreamed
+
+00:41:19.599 --> 00:41:24.319
+of in childhood. Everyone when they're
+
+00:41:21.680 --> 00:41:27.599
+kids, they have like big ideas and big
+
+00:41:24.319 --> 00:41:29.520
+dreams and when they like imagine their
+
+00:41:27.599 --> 00:41:31.200
+life and they sort of like, you know,
+
+00:41:29.520 --> 00:41:33.119
+play it out. They they imagine this life
+
+00:41:31.200 --> 00:41:34.560
+where they can like be an astronaut or
+
+00:41:33.119 --> 00:41:36.160
+they can save the planet or they can
+
+00:41:34.560 --> 00:41:38.240
+change the world or, you know, whatever
+
+00:41:36.160 --> 00:41:41.680
+it might be. It's like a big they they
+
+00:41:38.240 --> 00:41:44.560
+think big and then for, you know, a
+
+00:41:41.680 --> 00:41:46.560
+variety of reasons by the time people
+
+00:41:44.560 --> 00:41:48.960
+finish school, they enter the workforce,
+
+00:41:46.560 --> 00:41:51.040
+by the time they get to their, you know,
+
+00:41:48.960 --> 00:41:54.480
+have been in a job for a while, it's
+
+00:41:51.040 --> 00:41:56.640
+that like all that hope and ambition and
+
+00:41:54.480 --> 00:41:56.960
+and ability to dream has been sucked out
+
+00:41:56.640 --> 00:41:58.504
+of them.
+
+00:41:56.960 --> 00:41:59.040
+>> No, it's been beaten out of them.
+
+00:41:58.504 --> 00:42:01.359
+[laughter]
+
+00:41:59.040 --> 00:42:03.760
+The life is beaten beaten out of them. I
+
+00:42:01.359 --> 00:42:05.760
+think as adults, I don't think we like
+
+00:42:03.760 --> 00:42:08.160
+just like appreciate the degree to which
+
+00:42:05.760 --> 00:42:10.720
+we're all zombies. We lost our agency
+
+00:42:08.160 --> 00:42:12.880
+and we lost our I think ambition is
+
+00:42:10.720 --> 00:42:16.160
+really a good word for it. One of the
+
+00:42:12.880 --> 00:42:19.040
+promises of AI broadly speaking and I
+
+00:42:16.160 --> 00:42:20.720
+think through products like Muse is to
+
+00:42:19.040 --> 00:42:22.560
+um keep it going from when you're a kid.
+
+00:42:20.720 --> 00:42:24.400
+Like you're a kid, you have big dreams,
+
+00:42:22.560 --> 00:42:26.000
+use AI, help make those things happen.
+
+00:42:24.400 --> 00:42:27.440
+Then like dream bigger, make those
+
+00:42:26.000 --> 00:42:29.520
+things happen, dream bigger, make those
+
+00:42:27.440 --> 00:42:31.359
+things happen. and kind of like
+
+00:42:29.520 --> 00:42:34.160
+experience this like escalator of
+
+00:42:31.359 --> 00:42:37.280
+agency, an increase in agency throughout
+
+00:42:34.160 --> 00:42:38.720
+your life versus a sort of like you have
+
+00:42:37.280 --> 00:42:40.319
+lots of agency and then it gets like
+
+00:42:38.720 --> 00:42:42.160
+crushed. You know what I was thinking of
+
+00:42:40.319 --> 00:42:43.599
+when you were speaking just now? You you
+
+00:42:42.160 --> 00:42:45.119
+mentioned earlier this this experience
+
+00:42:43.599 --> 00:42:47.599
+that you and Nat Freeman went through
+
+00:42:45.119 --> 00:42:50.400
+where you had this like disturbing uh
+
+00:42:47.599 --> 00:42:52.160
+psychological audit and like coming in
+
+00:42:50.400 --> 00:42:53.200
+waves from this AI. It's like yeah, what
+
+00:42:52.160 --> 00:42:53.839
+if we had that but it's like the
+
+00:42:53.200 --> 00:42:54.720
+opposite of what you're saying. It's
+
+00:42:53.839 --> 00:42:56.800
+like actually gave you more
+
+00:42:54.720 --> 00:42:57.839
+self-confidence like gave you
+
+00:42:56.800 --> 00:42:59.280
+understanding like the world is
+
+00:42:57.839 --> 00:43:00.319
+malleable and if you push on it hard
+
+00:42:59.280 --> 00:43:01.599
+enough you go after it with enough
+
+00:43:00.319 --> 00:43:02.800
+energy and drive you can actually change
+
+00:43:01.599 --> 00:43:04.160
+it around you.
+
+00:43:02.800 --> 00:43:06.400
+>> Yeah. I think this is something that
+
+00:43:04.160 --> 00:43:08.480
+like certainly the most impressive
+
+00:43:06.400 --> 00:43:10.720
+entrepreneurs exhibit which is like I
+
+00:43:08.480 --> 00:43:12.640
+think they like dream big they
+
+00:43:10.720 --> 00:43:14.800
+accomplish that then they dream bigger
+
+00:43:12.640 --> 00:43:16.400
+and then maybe they work on that for
+
+00:43:14.800 --> 00:43:17.440
+like a decade but then like you know if
+
+00:43:16.400 --> 00:43:19.359
+they accomplish that then they dream
+
+00:43:17.440 --> 00:43:21.280
+bigger. Like Elon is obviously a great
+
+00:43:19.359 --> 00:43:22.880
+example of this. Um I think Mark is a
+
+00:43:21.280 --> 00:43:24.640
+great example of this. I think but I
+
+00:43:22.880 --> 00:43:26.880
+think a lot of like the iconic
+
+00:43:24.640 --> 00:43:30.160
+entrepreneurs this is like like kind of
+
+00:43:26.880 --> 00:43:31.920
+like their lived experience and I think
+
+00:43:30.160 --> 00:43:34.640
+there's a version of that that should be
+
+00:43:31.920 --> 00:43:38.240
+true for every person and I think what's
+
+00:43:34.640 --> 00:43:40.720
+kind of like tragic is I think for most
+
+00:43:38.240 --> 00:43:44.000
+people you have like bigger dreams big
+
+00:43:40.720 --> 00:43:46.640
+ideas you enter the corporate workforce
+
+00:43:44.000 --> 00:43:49.599
+you're you kind of become a zombie maybe
+
+00:43:46.640 --> 00:43:51.040
+at some point you want to go tackle your
+
+00:43:49.599 --> 00:43:52.880
+dreams but then it's like really really
+
+00:43:51.040 --> 00:43:54.160
+hard cuz you all these commitments. You
+
+00:43:52.880 --> 00:43:56.319
+maybe you have a family, maybe you have
+
+00:43:54.160 --> 00:43:58.720
+whatever it is. It's just like it's
+
+00:43:56.319 --> 00:44:01.200
+almost you become trapped in the sort of
+
+00:43:58.720 --> 00:44:03.200
+like zombiehood. There's one more thing
+
+00:44:01.200 --> 00:44:06.079
+on miuse before I want to get to scale
+
+00:44:03.200 --> 00:44:08.000
+AI and like the the partnership that you
+
+00:44:06.079 --> 00:44:10.319
+do that you did with Meta and making
+
+00:44:08.000 --> 00:44:11.520
+that decision. But in this essay that
+
+00:44:10.319 --> 00:44:12.720
+you wrote or this like short postage you
+
+00:44:11.520 --> 00:44:14.240
+wrote, I love what you said. said, "The
+
+00:44:12.720 --> 00:44:15.680
+world until now has been shaped by the
+
+00:44:14.240 --> 00:44:17.280
+small number of fanatics who have
+
+00:44:15.680 --> 00:44:19.520
+somehow found a way to make their wants
+
+00:44:17.280 --> 00:44:21.520
+real, but we've never seen humanity with
+
+00:44:19.520 --> 00:44:24.079
+every single person's agency fully
+
+00:44:21.520 --> 00:44:27.200
+switched on." I think the promise of
+
+00:44:24.079 --> 00:44:30.240
+this world that I'm describing where
+
+00:44:27.200 --> 00:44:31.680
+every single person has this like agency
+
+00:44:30.240 --> 00:44:34.079
+increase throughout their lifetime and
+
+00:44:31.680 --> 00:44:36.240
+they have the ability to accomplish
+
+00:44:34.079 --> 00:44:39.119
+their wants and their dreams. I think
+
+00:44:36.240 --> 00:44:41.760
+that world looks crazy in a very good
+
+00:44:39.119 --> 00:44:44.400
+way. Like I think it will be very
+
+00:44:41.760 --> 00:44:46.079
+interesting. It'll be artistic and cool
+
+00:44:44.400 --> 00:44:47.760
+and you'll like go into different
+
+00:44:46.079 --> 00:44:50.160
+pockets of the world and it will be very
+
+00:44:47.760 --> 00:44:52.480
+like diverse. It'll be kind of insane to
+
+00:44:50.160 --> 00:44:54.079
+think about what exactly that looks like
+
+00:44:52.480 --> 00:44:56.400
+where
+
+00:44:54.079 --> 00:44:57.680
+literally billions of people have, you
+
+00:44:56.400 --> 00:44:59.520
+know, all of a sudden because of
+
+00:44:57.680 --> 00:45:02.960
+abundant intelligence like the resources
+
+00:44:59.520 --> 00:45:04.800
+to make incredible things happen. I
+
+00:45:02.960 --> 00:45:06.480
+think that's part of the promise. Like I
+
+00:45:04.800 --> 00:45:08.640
+think in my head it's almost like the
+
+00:45:06.480 --> 00:45:11.280
+Rick and Morty interdimensional cable
+
+00:45:08.640 --> 00:45:13.760
+but but just like somehow manifested
+
+00:45:11.280 --> 00:45:16.880
+into like reality for humans. Like it
+
+00:45:13.760 --> 00:45:19.119
+could just be really awesome. So I keep
+
+00:45:16.880 --> 00:45:20.720
+hearing uh this line from that show
+
+00:45:19.119 --> 00:45:22.400
+where it's like the universe eats smart
+
+00:45:20.720 --> 00:45:24.640
+people. [laughter]
+
+00:45:22.400 --> 00:45:27.839
+>> Um okay so I want to go back. What I'm
+
+00:45:24.640 --> 00:45:29.359
+personally curious uh about is you're
+
+00:45:27.839 --> 00:45:31.440
+you founded Scale AI, you're running
+
+00:45:29.359 --> 00:45:32.800
+Scale AI, and then one day Mark
+
+00:45:31.440 --> 00:45:34.640
+Zuckerberg reaches out and says, "Hey,"
+
+00:45:32.800 --> 00:45:36.560
+I assume he says, "Hey, I want to talk.
+
+00:45:34.640 --> 00:45:38.000
+Can you tell me about this?"
+
+00:45:36.560 --> 00:45:39.440
+>> Yeah, I think the exact message was
+
+00:45:38.000 --> 00:45:40.079
+something like, "Hey, do you have time
+
+00:45:39.440 --> 00:45:41.440
+for a call?"
+
+00:45:40.079 --> 00:45:42.720
+>> Did you have a relationship with Mark
+
+00:45:41.440 --> 00:45:44.480
+previously? Did you spend any time with
+
+00:45:42.720 --> 00:45:47.359
+him? Like what was what's the background
+
+00:45:44.480 --> 00:45:49.440
+there? I had a friend who uh this guy
+
+00:45:47.359 --> 00:45:52.960
+Alex Schultz uh who I've known actually
+
+00:45:49.440 --> 00:45:55.040
+for many many years um from when scale
+
+00:45:52.960 --> 00:45:56.880
+was maybe a year old. I met him in San
+
+00:45:55.040 --> 00:46:00.319
+Francisco is currently the chief data
+
+00:45:56.880 --> 00:46:02.560
+officer at Meta but was longtime Meta
+
+00:46:00.319 --> 00:46:04.560
+executive lieutenant and he introduced
+
+00:46:02.560 --> 00:46:06.400
+me to Mark
+
+00:46:04.560 --> 00:46:10.079
+I want to say in about like I think it
+
+00:46:06.400 --> 00:46:11.839
+was 2021 or 2022 to talk about AI
+
+00:46:10.079 --> 00:46:13.280
+because I think at that time Mark was
+
+00:46:11.839 --> 00:46:14.480
+getting a lot more interested in AI
+
+00:46:13.280 --> 00:46:16.560
+scale. We were doing a lot of stuff in
+
+00:46:14.480 --> 00:46:19.520
+AI. My memory is that I think it took
+
+00:46:16.560 --> 00:46:22.240
+like 1 year to schedule that first
+
+00:46:19.520 --> 00:46:23.520
+meeting. Like from from the intro to the
+
+00:46:22.240 --> 00:46:25.839
+meeting being scheduled, I think it was
+
+00:46:23.520 --> 00:46:27.520
+like a full year. Why? Mark obviously
+
+00:46:25.839 --> 00:46:28.880
+has like an insane calendar and like has
+
+00:46:27.520 --> 00:46:31.520
+like a bajillion different things to
+
+00:46:28.880 --> 00:46:34.960
+deal with. And he's also very good at
+
+00:46:31.520 --> 00:46:37.280
+prioritization. Like he will spend a lot
+
+00:46:34.960 --> 00:46:39.280
+of time on the things that are really
+
+00:46:37.280 --> 00:46:40.560
+really important in some ways like too
+
+00:46:39.280 --> 00:46:42.319
+much time on the things that are like
+
+00:46:40.560 --> 00:46:44.079
+really really important. the only way
+
+00:46:42.319 --> 00:46:45.760
+he's able to do that and like be a good
+
+00:46:44.079 --> 00:46:47.920
+dad and be a good partner and all this
+
+00:46:45.760 --> 00:46:50.319
+other stuff is to just like ruthlessly
+
+00:46:47.920 --> 00:46:52.240
+prioritize. I had spoken to him a few
+
+00:46:50.319 --> 00:46:54.400
+times kind of after that and had gotten
+
+00:46:52.240 --> 00:46:56.720
+his advice as a founder to get advice
+
+00:46:54.400 --> 00:46:58.400
+from you know Mark Zuckerberg obviously
+
+00:46:56.720 --> 00:46:59.920
+like a really big deal. Um and I
+
+00:46:58.400 --> 00:47:03.280
+actually remember at that time like he
+
+00:46:59.920 --> 00:47:05.520
+he wrote these like like I would ask him
+
+00:47:03.280 --> 00:47:07.680
+a question on WhatsApp and then he would
+
+00:47:05.520 --> 00:47:09.200
+write these like really long responses
+
+00:47:07.680 --> 00:47:11.359
+and I was really confused. I was like,
+
+00:47:09.200 --> 00:47:12.960
+how does he have time to write these
+
+00:47:11.359 --> 00:47:16.000
+like really long responses? But now I
+
+00:47:12.960 --> 00:47:18.960
+realize he like is just like really fast
+
+00:47:16.000 --> 00:47:20.240
+and rigorous at writing to like a lot of
+
+00:47:18.960 --> 00:47:22.560
+WhatsApp messages. He'll write like
+
+00:47:20.240 --> 00:47:24.000
+write a very rigorous like long response
+
+00:47:22.560 --> 00:47:24.880
+very quickly. It's like a very
+
+00:47:24.000 --> 00:47:25.920
+impressive skill of his.
+
+00:47:24.880 --> 00:47:26.880
+>> Gives you a sneak peek in what's going
+
+00:47:25.920 --> 00:47:29.680
+on his mind.
+
+00:47:26.880 --> 00:47:32.400
+>> Yeah. Like yeah, there's racing. Meta
+
+00:47:29.680 --> 00:47:34.800
+was a important customer of scale. Um,
+
+00:47:32.400 --> 00:47:37.440
+and I would say like prior to this
+
+00:47:34.800 --> 00:47:39.119
+instance, maybe we spoke once every like
+
+00:47:37.440 --> 00:47:41.920
+six months or so. Maybe that was like
+
+00:47:39.119 --> 00:47:44.079
+the cadence of our interactions. And
+
+00:47:41.920 --> 00:47:46.800
+then yeah, I think he he had called and
+
+00:47:44.079 --> 00:47:50.400
+I think it was it was actually like not
+
+00:47:46.800 --> 00:47:53.200
+obvious at first what the like end point
+
+00:47:50.400 --> 00:47:55.040
+was going to be because the first
+
+00:47:53.200 --> 00:47:57.200
+conversation was just like, you know,
+
+00:47:55.040 --> 00:47:59.520
+this was after Llama 4 and it was kind
+
+00:47:57.200 --> 00:48:01.280
+of just like asking what do you think we
+
+00:47:59.520 --> 00:48:02.480
+should be doing? Why is that an
+
+00:48:01.280 --> 00:48:04.319
+important point that this is this
+
+00:48:02.480 --> 00:48:07.280
+conversation is happening after Llama 4?
+
+00:48:04.319 --> 00:48:09.280
+>> Llama 4 was not on the trajectory that
+
+00:48:07.280 --> 00:48:11.200
+Meta wanted as a company. It definitely
+
+00:48:09.280 --> 00:48:12.880
+was like I think internally speaking a
+
+00:48:11.200 --> 00:48:16.160
+disappointment and it was also at a time
+
+00:48:12.880 --> 00:48:17.920
+where AI was clearly becoming just like
+
+00:48:16.160 --> 00:48:19.200
+increasingly increasingly important. It
+
+00:48:17.920 --> 00:48:20.720
+was clear that AI was going to be like
+
+00:48:19.200 --> 00:48:22.720
+really critical to the future of meta.
+
+00:48:20.720 --> 00:48:24.880
+So yeah the first few conversations we
+
+00:48:22.720 --> 00:48:26.400
+spoke on the phone and he was sort of as
+
+00:48:24.880 --> 00:48:28.079
+saying you know asking for advice on
+
+00:48:26.400 --> 00:48:29.119
+like what do you think we should be
+
+00:48:28.079 --> 00:48:30.480
+doing? What do you think we should be
+
+00:48:29.119 --> 00:48:32.720
+focused on? This is what I've heard
+
+00:48:30.480 --> 00:48:34.400
+about him privately that he has this
+
+00:48:32.720 --> 00:48:36.240
+insane it's not a board of directors
+
+00:48:34.400 --> 00:48:37.520
+like a meta board although there's some
+
+00:48:36.240 --> 00:48:39.280
+people on the board that he also does
+
+00:48:37.520 --> 00:48:41.280
+this with but he's got this group of
+
+00:48:39.280 --> 00:48:42.640
+world-class entrepreneurs around him and
+
+00:48:41.280 --> 00:48:43.680
+I've spoken to some of them like you
+
+00:48:42.640 --> 00:48:45.839
+don't understand like he asked for
+
+00:48:43.680 --> 00:48:46.960
+advice constantly he's like hitting us
+
+00:48:45.839 --> 00:48:49.359
+up he's like here's what's going on in
+
+00:48:46.960 --> 00:48:50.559
+my life or the work would you do and
+
+00:48:49.359 --> 00:48:52.319
+he'll do that over and over and over
+
+00:48:50.559 --> 00:48:54.319
+again I think this is like quite an
+
+00:48:52.319 --> 00:48:56.640
+impressive trait yes because it takes
+
+00:48:54.319 --> 00:48:58.720
+humility obviously like continue doing
+
+00:48:56.640 --> 00:49:00.000
+that even you know after all the
+
+00:48:58.720 --> 00:49:01.680
+incredible things that, you know, he's
+
+00:49:00.000 --> 00:49:04.640
+been able to accomplish. I mean, the
+
+00:49:01.680 --> 00:49:08.000
+whole, you know, timeline from when he
+
+00:49:04.640 --> 00:49:10.559
+first reached out to when we announced
+
+00:49:08.000 --> 00:49:12.319
+the deal was like five, six weeks. Like,
+
+00:49:10.559 --> 00:49:14.079
+it was like pretty quick. Another thing
+
+00:49:12.319 --> 00:49:15.359
+that world-class entrepreneurs have in
+
+00:49:14.079 --> 00:49:17.119
+common. We had Jonathan Ross, the
+
+00:49:15.359 --> 00:49:19.280
+founder of Grock, on this podcast. The
+
+00:49:17.119 --> 00:49:21.119
+first time we ever spoke uh publicly
+
+00:49:19.280 --> 00:49:23.280
+about the $20 billion deal he did with
+
+00:49:21.119 --> 00:49:25.520
+Nvidia was on the show. And he's like,
+
+00:49:23.280 --> 00:49:27.520
+"From the time first call from Jensen to
+
+00:49:25.520 --> 00:49:29.200
+money's in my bank account was 3 weeks."
+
+00:49:27.520 --> 00:49:31.680
+>> Yeah. That's amazing. [laughter]
+
+00:49:29.200 --> 00:49:34.240
+Um, I just had lots of ideas on like
+
+00:49:31.680 --> 00:49:35.760
+what I'd be doing if I choose and like
+
+00:49:34.240 --> 00:49:37.200
+how I'd be thinking about Meta's AI
+
+00:49:35.760 --> 00:49:38.480
+strategy. One of the first things I said
+
+00:49:37.200 --> 00:49:41.520
+was what I said earlier, which is like,
+
+00:49:38.480 --> 00:49:43.920
+hey, I actually think because Meta is
+
+00:49:41.520 --> 00:49:47.200
+like heritage wise focus on the things
+
+00:49:43.920 --> 00:49:49.200
+that people want to do is actually one
+
+00:49:47.200 --> 00:49:52.400
+of the most specially placed companies
+
+00:49:49.200 --> 00:49:54.640
+with this incredible shift AI. I like
+
+00:49:52.400 --> 00:49:57.599
+had lots and lots of ideas that I sort
+
+00:49:54.640 --> 00:49:59.200
+of sent his way and then that was kind
+
+00:49:57.599 --> 00:50:01.680
+of this like conversation happening in
+
+00:49:59.200 --> 00:50:03.520
+parallel with this like oh yeah maybe we
+
+00:50:01.680 --> 00:50:04.640
+should potentially consider if there's a
+
+00:50:03.520 --> 00:50:06.640
+way to work together.
+
+00:50:04.640 --> 00:50:08.079
+>> So when he says that what do you think
+
+00:50:06.640 --> 00:50:09.280
+cuz this kid you this was not
+
+00:50:08.079 --> 00:50:11.040
+predictable to you.
+
+00:50:09.280 --> 00:50:13.839
+>> Not predictable. No. The whole thing was
+
+00:50:11.040 --> 00:50:15.839
+like it was like a really crazy um
+
+00:50:13.839 --> 00:50:17.599
+sequence at the time. I was just like,
+
+00:50:15.839 --> 00:50:18.319
+"Oh, that's nice, but like there's no
+
+00:50:17.599 --> 00:50:19.520
+way that
+
+00:50:18.319 --> 00:50:22.079
+>> Well, you know what that means when they
+
+00:50:19.520 --> 00:50:23.680
+say that, right? They want to buy you.
+
+00:50:22.079 --> 00:50:24.720
+It's always the same thing, but they say
+
+00:50:23.680 --> 00:50:25.839
+it's like, "Oh, we got to find a way to
+
+00:50:24.720 --> 00:50:27.680
+work together."
+
+00:50:25.839 --> 00:50:29.599
+>> Yeah. I don't think I'd had that that
+
+00:50:27.680 --> 00:50:31.680
+kind of coaching at the [laughter]
+
+00:50:29.599 --> 00:50:34.319
+at the time. One thing that I explicitly
+
+00:50:31.680 --> 00:50:36.160
+felt at the time was like, "Yeah, like
+
+00:50:34.319 --> 00:50:37.839
+it probably doesn't make that much sense
+
+00:50:36.160 --> 00:50:40.240
+even." Like I think I personally was
+
+00:50:37.839 --> 00:50:43.040
+like, "Yeah, like you know, maybe he's
+
+00:50:40.240 --> 00:50:44.400
+like, you know, teasing it or or like
+
+00:50:43.040 --> 00:50:45.680
+throwing it out there, but like does he
+
+00:50:44.400 --> 00:50:47.119
+even like make that much sense?"
+
+00:50:45.680 --> 00:50:49.520
+>> Why wouldn't you think it makes sense?
+
+00:50:47.119 --> 00:50:50.880
+>> I mean, obviously like a deal ended up
+
+00:50:49.520 --> 00:50:51.200
+happening, so you know, what do I know?
+
+00:50:50.880 --> 00:50:52.880
+But um
+
+00:50:51.200 --> 00:50:54.400
+>> No, no, but back then, not we know what
+
+00:50:52.880 --> 00:50:56.000
+happened, but like I'm very curious your
+
+00:50:54.400 --> 00:50:57.920
+thinking as you're going experiencing
+
+00:50:56.000 --> 00:50:59.200
+this like the fact that you said, "Oh,
+
+00:50:57.920 --> 00:51:00.400
+yeah, you said this was like that
+
+00:50:59.200 --> 00:51:01.280
+doesn't make sense." Like why wouldn't
+
+00:51:00.400 --> 00:51:03.040
+it make sense?
+
+00:51:01.280 --> 00:51:05.760
+>> Taking a step back. Obviously the the
+
+00:51:03.040 --> 00:51:07.920
+like iconic meta acquisitions have been
+
+00:51:05.760 --> 00:51:11.119
+Instagram and WhatsApp and these were
+
+00:51:07.920 --> 00:51:14.960
+like very
+
+00:51:11.119 --> 00:51:19.119
+clear you know product logic driven
+
+00:51:14.960 --> 00:51:22.000
+decisions. Scale is like you know a deep
+
+00:51:19.119 --> 00:51:23.599
+enterprise government sales like you
+
+00:51:22.000 --> 00:51:27.520
+know a entirely different kind of
+
+00:51:23.599 --> 00:51:29.839
+business from from Meta. And so the the
+
+00:51:27.520 --> 00:51:32.800
+logic that I had thought at the time
+
+00:51:29.839 --> 00:51:35.119
+would have made sense is if meta wanted
+
+00:51:32.800 --> 00:51:36.720
+to get into those things that then I
+
+00:51:35.119 --> 00:51:38.319
+think you know like you know maybe
+
+00:51:36.720 --> 00:51:39.760
+that's that's the industrial logic that
+
+00:51:38.319 --> 00:51:42.400
+would have made sense but this wasn't
+
+00:51:39.760 --> 00:51:45.520
+that cuz I think Mark clearly was like
+
+00:51:42.400 --> 00:51:47.440
+predominantly interested in getting the
+
+00:51:45.520 --> 00:51:48.000
+llama program and over his overall AI
+
+00:51:47.440 --> 00:51:48.800
+program on
+
+00:51:48.000 --> 00:51:50.240
+>> he wanted talent.
+
+00:51:48.800 --> 00:51:52.160
+>> Yeah he wanted talent. It was kind of
+
+00:51:50.240 --> 00:51:53.599
+shrouded and unclear the whole time, you
+
+00:51:52.160 --> 00:51:55.680
+know, a lot of the way.
+
+00:51:53.599 --> 00:51:57.119
+>> When did it become clear? After the
+
+00:51:55.680 --> 00:51:59.920
+money hit the account [laughter]
+
+00:51:57.119 --> 00:52:01.680
+when, you know, when we started talking
+
+00:51:59.920 --> 00:52:04.559
+numbers, I was like, "Oh, wow. Okay. All
+
+00:52:01.680 --> 00:52:06.319
+right." Um, [laughter]
+
+00:52:04.559 --> 00:52:06.800
+that's when things became like more
+
+00:52:06.319 --> 00:52:08.000
+clear.
+
+00:52:06.800 --> 00:52:09.520
+>> At first, you're like, "Oh, this this
+
+00:52:08.000 --> 00:52:11.359
+will make sense." Then you guys keep
+
+00:52:09.520 --> 00:52:13.599
+talking. And how fast did he convince
+
+00:52:11.359 --> 00:52:14.960
+you like this is a good path for you?
+
+00:52:13.599 --> 00:52:18.160
+>> There was a part of it was just like,
+
+00:52:14.960 --> 00:52:20.720
+"Wow, this is like a really fascinating
+
+00:52:18.160 --> 00:52:25.119
+deal construct." We ultimately landed on
+
+00:52:20.720 --> 00:52:28.880
+this deal where you know Meta invested
+
+00:52:25.119 --> 00:52:31.520
+uh owns 49% of scale scale continues.
+
+00:52:28.880 --> 00:52:33.040
+Myself and a few people join join Meta.
+
+00:52:31.520 --> 00:52:35.839
+What I was kind of incredulous about at
+
+00:52:33.040 --> 00:52:39.680
+the time was like it's such a weird kind
+
+00:52:35.839 --> 00:52:43.520
+of deal but is one that I think
+
+00:52:39.680 --> 00:52:46.400
+genuinely kind of was like this very
+
+00:52:43.520 --> 00:52:47.680
+interesting winwin win so to speak.
+
+00:52:46.400 --> 00:52:50.079
+There's a win for the shareholders of
+
+00:52:47.680 --> 00:52:52.960
+scale because all shareholders of scale
+
+00:52:50.079 --> 00:52:55.599
+got a great deal, benefited a lot. Scale
+
+00:52:52.960 --> 00:52:57.200
+continues and I truly believe the best
+
+00:52:55.599 --> 00:52:58.640
+days of scale are ahead of it. My
+
+00:52:57.200 --> 00:53:00.559
+question to you is like or what I'm
+
+00:52:58.640 --> 00:53:04.400
+personally interested in is like okay is
+
+00:53:00.559 --> 00:53:06.480
+this he can explain this to you and you
+
+00:53:04.400 --> 00:53:08.240
+come around to that perspective in one
+
+00:53:06.480 --> 00:53:10.240
+phone call. Is this just like wait Mark
+
+00:53:08.240 --> 00:53:11.599
+I got to think this is so crazy.
+
+00:53:10.240 --> 00:53:13.280
+I got to think about this for a few
+
+00:53:11.599 --> 00:53:16.240
+days. Like explain this process as much
+
+00:53:13.280 --> 00:53:18.960
+as you can. many weeks of being like,
+
+00:53:16.240 --> 00:53:21.359
+"This is insane. Is this even real? Does
+
+00:53:18.960 --> 00:53:24.240
+this make any sense? If it does make
+
+00:53:21.359 --> 00:53:27.200
+sense, like how do I feel about it?" The
+
+00:53:24.240 --> 00:53:28.960
+predominant emotion was more like
+
+00:53:27.200 --> 00:53:30.079
+this is kind of insane. And then as I
+
+00:53:28.960 --> 00:53:31.440
+thought more about like, oh, I actually
+
+00:53:30.079 --> 00:53:33.920
+have to make a decision of whether or
+
+00:53:31.440 --> 00:53:35.839
+not I do this. That was it in and of
+
+00:53:33.920 --> 00:53:38.880
+itself. There were like a lot of like
+
+00:53:35.839 --> 00:53:40.400
+conversations there with the people at
+
+00:53:38.880 --> 00:53:41.760
+scale, with our investors. Like there
+
+00:53:40.400 --> 00:53:44.640
+were a lot of interesting conversations
+
+00:53:41.760 --> 00:53:47.520
+in in that uh on that side. I mean it's
+
+00:53:44.640 --> 00:53:49.359
+obviously like really hard to to like
+
+00:53:47.520 --> 00:53:50.640
+let go of or give up your baby
+
+00:53:49.359 --> 00:53:51.440
+>> cuz you worked on scale for how long?
+
+00:53:50.640 --> 00:53:53.760
+How many years?
+
+00:53:51.440 --> 00:53:54.880
+>> Yeah. 9 years from founding until the
+
+00:53:53.760 --> 00:53:56.800
+>> And you're still young. You're not even
+
+00:53:54.880 --> 00:53:57.280
+30 yet. So this is like a third of your
+
+00:53:56.800 --> 00:53:58.640
+life.
+
+00:53:57.280 --> 00:54:00.400
+>> There was something that Paul Graham
+
+00:53:58.640 --> 00:54:02.319
+said for a long time which is like you
+
+00:54:00.400 --> 00:54:04.720
+know if you think of your company as
+
+00:54:02.319 --> 00:54:06.800
+your life's work like you will operate
+
+00:54:04.720 --> 00:54:09.760
+differently. I did really genuinely
+
+00:54:06.800 --> 00:54:11.280
+think of of scales my life's work for
+
+00:54:09.760 --> 00:54:13.119
+the whole time that I was I was working
+
+00:54:11.280 --> 00:54:15.040
+on it. That was a tough emotional
+
+00:54:13.119 --> 00:54:16.880
+process. And then I think what
+
+00:54:15.040 --> 00:54:21.359
+ultimately got me was like a combination
+
+00:54:16.880 --> 00:54:24.559
+of wow this is like a win-win winwin
+
+00:54:21.359 --> 00:54:26.880
+like kind of all um it's it's a good
+
+00:54:24.559 --> 00:54:29.280
+deal for all parties and also just this
+
+00:54:26.880 --> 00:54:32.319
+like I saw the potential of what could
+
+00:54:29.280 --> 00:54:36.400
+happen at Meta. And you know, this is a
+
+00:54:32.319 --> 00:54:38.400
+point at which like I think meta on AI
+
+00:54:36.400 --> 00:54:40.640
+certainly
+
+00:54:38.400 --> 00:54:42.720
+looked like damaged goods in many ways
+
+00:54:40.640 --> 00:54:46.480
+and like was maybe not the most
+
+00:54:42.720 --> 00:54:49.680
+appealing place to work on AI, but I
+
+00:54:46.480 --> 00:54:51.359
+think that kind of like triggered my
+
+00:54:49.680 --> 00:54:52.720
+entrepreneur side where I was like
+
+00:54:51.359 --> 00:54:54.640
+>> you can essentially rebuild it. It's
+
+00:54:52.720 --> 00:54:57.359
+like a refounding of the lab.
+
+00:54:54.640 --> 00:54:59.119
+>> Yeah. Yeah. Like I think this is this is
+
+00:54:57.359 --> 00:55:01.280
+one of the things that ended up being
+
+00:54:59.119 --> 00:55:03.119
+kind of fascinating which is like
+
+00:55:01.280 --> 00:55:05.119
+because
+
+00:55:03.119 --> 00:55:07.440
+it was you know it was clear that there
+
+00:55:05.119 --> 00:55:11.119
+was so much work to do. It really like
+
+00:55:07.440 --> 00:55:12.559
+cleared the way for me to be able to to
+
+00:55:11.119 --> 00:55:14.079
+kind of build a lot of stuff up from
+
+00:55:12.559 --> 00:55:16.160
+scratch, set up the right principles,
+
+00:55:14.079 --> 00:55:18.800
+build the right culture. Like it it
+
+00:55:16.160 --> 00:55:19.520
+created a the conditions for us to build
+
+00:55:18.800 --> 00:55:20.960
+something amazing.
+
+00:55:19.520 --> 00:55:22.319
+>> And is that how you and Mark discuss it?
+
+00:55:20.960 --> 00:55:25.040
+It's like hey we have to hit a reset
+
+00:55:22.319 --> 00:55:26.559
+here. Like obviously like we're not if
+
+00:55:25.040 --> 00:55:28.160
+we keep on this path like we're
+
+00:55:26.559 --> 00:55:30.880
+essentially going to throw out what we
+
+00:55:28.160 --> 00:55:33.040
+have and redo it with a completely
+
+00:55:30.880 --> 00:55:34.559
+different uh like level of talent. Are
+
+00:55:33.040 --> 00:55:36.240
+these the conversations that are that
+
+00:55:34.559 --> 00:55:37.839
+occurring between you and him? It didn't
+
+00:55:36.240 --> 00:55:39.440
+seem like he wanted like a minor
+
+00:55:37.839 --> 00:55:41.119
+adjustment. You understand what I'm
+
+00:55:39.440 --> 00:55:42.720
+saying? He's just like, "Oh, this is not
+
+00:55:41.119 --> 00:55:44.319
+working at all. It's not going to work.
+
+00:55:42.720 --> 00:55:46.640
+Then let's, you know, rip it down to the
+
+00:55:44.319 --> 00:55:48.240
+foundation and rebuild." Correct. It was
+
+00:55:46.640 --> 00:55:49.839
+an evolving conversation where I think
+
+00:55:48.240 --> 00:55:52.000
+there were like like one of the things
+
+00:55:49.839 --> 00:55:54.480
+that I believe really strongly I think
+
+00:55:52.000 --> 00:55:57.520
+Elon is like has has demonstrated this
+
+00:55:54.480 --> 00:56:00.000
+in in various times in his career where
+
+00:55:57.520 --> 00:56:01.839
+you just have like a small incredibly
+
+00:56:00.000 --> 00:56:03.839
+cracked highly technical team that's
+
+00:56:01.839 --> 00:56:05.680
+like very flat and like if you do that
+
+00:56:03.839 --> 00:56:08.400
+you can accomplish a lot very very
+
+00:56:05.680 --> 00:56:10.079
+quickly. So that was something that I
+
+00:56:08.400 --> 00:56:12.960
+had a lot of conviction in and like I
+
+00:56:10.079 --> 00:56:14.960
+believed in AI like that is the right
+
+00:56:12.960 --> 00:56:16.240
+approach especially if you had to you
+
+00:56:14.960 --> 00:56:19.040
+know do what we had to do which is like
+
+00:56:16.240 --> 00:56:21.520
+move very very quickly and I think early
+
+00:56:19.040 --> 00:56:24.400
+on that was one of the things I talked
+
+00:56:21.520 --> 00:56:26.000
+to Mark a lot about and I think he was
+
+00:56:24.400 --> 00:56:28.319
+excited about as well that ended up
+
+00:56:26.000 --> 00:56:31.520
+becoming one of the tent poles of our
+
+00:56:28.319 --> 00:56:33.599
+overall strategies like small very flat
+
+00:56:31.520 --> 00:56:35.599
+highly technical team very high talent
+
+00:56:33.599 --> 00:56:36.799
+density how quickly can you move if you
+
+00:56:35.599 --> 00:56:38.079
+have those ingredients
+
+00:56:36.799 --> 00:56:40.240
+From an outside perspective, it just
+
+00:56:38.079 --> 00:56:42.000
+seems like Mark like empties the clip is
+
+00:56:40.240 --> 00:56:42.960
+the way I think about this, right? Where
+
+00:56:42.000 --> 00:56:44.160
+um have you ever read this book called
+
+00:56:42.960 --> 00:56:44.400
+The Mind of Napoleon?
+
+00:56:44.160 --> 00:56:45.760
+>> No.
+
+00:56:44.400 --> 00:56:48.160
+>> Okay. So, mind and Napoleon published in
+
+00:56:45.760 --> 00:56:49.839
+1957. Um I found it because I saw this
+
+00:56:48.160 --> 00:56:51.680
+interview. I think Tyler Cowan
+
+00:56:49.839 --> 00:56:53.119
+interviewed Sam Alman. And uh I think
+
+00:56:51.680 --> 00:56:54.400
+this is 2018 and he asked him like
+
+00:56:53.119 --> 00:56:55.359
+what's the most important book that you
+
+00:56:54.400 --> 00:56:57.359
+read this year? And he said the mind of
+
+00:56:55.359 --> 00:56:58.799
+Napoleon. So it's very hard to find. I
+
+00:56:57.359 --> 00:57:00.319
+buy the book. It's 300 pages of just
+
+00:56:58.799 --> 00:57:02.079
+Napoleon his own words organized by
+
+00:57:00.319 --> 00:57:03.839
+topic. And in that he talks about over
+
+00:57:02.079 --> 00:57:05.599
+and over again that hesitation is fatal.
+
+00:57:03.839 --> 00:57:07.440
+But he says before you engage in a
+
+00:57:05.599 --> 00:57:09.520
+course of action, there's a lot of
+
+00:57:07.440 --> 00:57:11.119
+deliberation. He'll like study from
+
+00:57:09.520 --> 00:57:12.400
+every angle, make sure he's making the
+
+00:57:11.119 --> 00:57:15.520
+right decision. I feel there's like a
+
+00:57:12.400 --> 00:57:17.119
+echo with the way Mark operates. Does a
+
+00:57:15.520 --> 00:57:18.480
+lot of deliberation, make sure he's on
+
+00:57:17.119 --> 00:57:20.400
+the right path. But once he makes that
+
+00:57:18.480 --> 00:57:21.920
+decision, he just goes all in. He won't
+
+00:57:20.400 --> 00:57:23.839
+like he just empties the clip. And
+
+00:57:21.920 --> 00:57:25.839
+that's the way I felt about like what
+
+00:57:23.839 --> 00:57:27.200
+was was occurring right at this point
+
+00:57:25.839 --> 00:57:28.319
+where he comes and gets you and then you
+
+00:57:27.200 --> 00:57:30.960
+guys start rebuilding this entire
+
+00:57:28.319 --> 00:57:33.599
+organization. I think he really has
+
+00:57:30.960 --> 00:57:35.839
+internalized that failure doesn't
+
+00:57:33.599 --> 00:57:38.400
+matter. It matters like when you win,
+
+00:57:35.839 --> 00:57:40.640
+how big you win. And I think this
+
+00:57:38.400 --> 00:57:42.640
+overall concept I think enables him to
+
+00:57:40.640 --> 00:57:44.799
+operate I think truly without fear in a
+
+00:57:42.640 --> 00:57:46.319
+lot of circumstances because I think he
+
+00:57:44.799 --> 00:57:46.640
+is just very comfortable taking lots of
+
+00:57:46.319 --> 00:57:48.559
+risk.
+
+00:57:46.640 --> 00:57:50.160
+>> He's got that great line where it's like
+
+00:57:48.559 --> 00:57:51.680
+in a world that's changing all the time,
+
+00:57:50.160 --> 00:57:53.680
+the biggest risk is not taking any.
+
+00:57:51.680 --> 00:57:55.119
+>> Yeah, exactly. I think he's internalized
+
+00:57:53.680 --> 00:57:56.880
+this quite deeply. Like there's
+
+00:57:55.119 --> 00:58:00.319
+certainly like versions of the world
+
+00:57:56.880 --> 00:58:01.839
+where Meta looks a lot more like Google
+
+00:58:00.319 --> 00:58:03.680
+in some sense like it's just like you
+
+00:58:01.839 --> 00:58:06.319
+know more slowm moving and more
+
+00:58:03.680 --> 00:58:08.720
+bureaucratic and just like looks very
+
+00:58:06.319 --> 00:58:09.920
+different as a company but I think he
+
+00:58:08.720 --> 00:58:11.839
+because he's internalized some of these
+
+00:58:09.920 --> 00:58:14.480
+lessons so deeply keeps the thing
+
+00:58:11.839 --> 00:58:17.040
+dynamic and moving and live. talk me
+
+00:58:14.480 --> 00:58:18.960
+through the difference between how like
+
+00:58:17.040 --> 00:58:20.880
+how you were as like you're you're the
+
+00:58:18.960 --> 00:58:24.240
+founder, you're running scale, now
+
+00:58:20.880 --> 00:58:26.720
+you're refounding this lab, working with
+
+00:58:24.240 --> 00:58:28.400
+Mark, like the different ways that you
+
+00:58:26.720 --> 00:58:30.799
+approach your work in those two uh
+
+00:58:28.400 --> 00:58:33.200
+environments at scale. One of the things
+
+00:58:30.799 --> 00:58:34.720
+like I really
+
+00:58:33.200 --> 00:58:36.319
+internalized and I don't even remember
+
+00:58:34.720 --> 00:58:38.640
+where this advice came from, but it was
+
+00:58:36.319 --> 00:58:40.240
+kind of one of these ideas that like if
+
+00:58:38.640 --> 00:58:42.480
+you want to be a good founder, you have
+
+00:58:40.240 --> 00:58:43.760
+to be able to do every job. had a very
+
+00:58:42.480 --> 00:58:45.760
+strong point of view about how like
+
+00:58:43.760 --> 00:58:47.280
+every little thing at the company should
+
+00:58:45.760 --> 00:58:49.200
+happen and should work. And that
+
+00:58:47.280 --> 00:58:53.359
+resulted in a company that was like very
+
+00:58:49.200 --> 00:58:55.440
+much so a product of my effort and like
+
+00:58:53.359 --> 00:58:56.720
+my point of view and it like expressed
+
+00:58:55.440 --> 00:58:58.559
+itself in all sorts of ways throughout
+
+00:58:56.720 --> 00:59:01.280
+the company but also made me the
+
+00:58:58.559 --> 00:59:03.040
+bottleneck in very big ways. There's
+
+00:59:01.280 --> 00:59:05.040
+like pros and cons of that for a
+
+00:59:03.040 --> 00:59:06.400
+company. I think definitely I think
+
+00:59:05.040 --> 00:59:07.920
+that's like you know if you were to
+
+00:59:06.400 --> 00:59:08.880
+start a company and it's your first time
+
+00:59:07.920 --> 00:59:09.839
+starting a company you should like
+
+00:59:08.880 --> 00:59:10.960
+definitely take that approach because
+
+00:59:09.839 --> 00:59:12.720
+it's like much more likely to be
+
+00:59:10.960 --> 00:59:13.680
+successful than if you don't take that.
+
+00:59:12.720 --> 00:59:15.280
+>> Scale your first company.
+
+00:59:13.680 --> 00:59:17.599
+>> Scale is my first company.
+
+00:59:15.280 --> 00:59:20.000
+>> Yeah. But at Meta like it was a very
+
+00:59:17.599 --> 00:59:23.440
+different assignment because we had to
+
+00:59:20.000 --> 00:59:25.200
+accomplish so much in so little time.
+
+00:59:23.440 --> 00:59:27.520
+Like I didn't have the luxury of being
+
+00:59:25.200 --> 00:59:30.319
+able to quote unquote do every job
+
+00:59:27.520 --> 00:59:32.960
+within the lab. I
+
+00:59:30.319 --> 00:59:35.839
+uh certainly am not an AI researcher.
+
+00:59:32.960 --> 00:59:37.280
+I'm also not a like product designer.
+
+00:59:35.839 --> 00:59:40.559
+I'm not you know I'm not all these
+
+00:59:37.280 --> 00:59:43.119
+things that are like totally pivotal to
+
+00:59:40.559 --> 00:59:48.400
+um the organization being successful. So
+
+00:59:43.119 --> 00:59:52.160
+at Meta very much so I adopted this like
+
+00:59:48.400 --> 00:59:54.559
+philosophy around just how do we create
+
+00:59:52.160 --> 00:59:57.359
+an environment where we're going to hire
+
+00:59:54.559 --> 01:00:01.280
+incredible people like it was like job
+
+00:59:57.359 --> 01:00:02.799
+number one hire brilliant and incredible
+
+01:00:01.280 --> 01:00:04.720
+people like who are at the top of their
+
+01:00:02.799 --> 01:00:06.000
+field across every discipline.
+
+01:00:04.720 --> 01:00:07.280
+>> Why do you think you're able to do that
+
+01:00:06.000 --> 01:00:09.119
+at Meta? Is it just because you have
+
+01:00:07.280 --> 01:00:13.680
+more resources? Like why can you do
+
+01:00:09.119 --> 01:00:15.839
+that? I think one of the things that was
+
+01:00:13.680 --> 01:00:20.720
+charis very charismatic and attractive
+
+01:00:15.839 --> 01:00:23.920
+about the founding moment of MSL was
+
+01:00:20.720 --> 01:00:26.799
+there was an opportunity to build a lab
+
+01:00:23.920 --> 01:00:29.440
+from scratch with a really really small
+
+01:00:26.799 --> 01:00:30.799
+team and we had a strong point of view
+
+01:00:29.440 --> 01:00:33.520
+of where we're going personal super
+
+01:00:30.799 --> 01:00:34.960
+intelligence that I think resonated with
+
+01:00:33.520 --> 01:00:37.119
+people like I think everyone who works
+
+01:00:34.960 --> 01:00:38.799
+on AI wants to help people like wants it
+
+01:00:37.119 --> 01:00:40.480
+to ultimately like mean something to
+
+01:00:38.799 --> 01:00:42.559
+their mom or to their grandma or to
+
+01:00:40.480 --> 01:00:44.240
+their grandpa wants it to like be
+
+01:00:42.559 --> 01:00:46.480
+something that's like meaningful to
+
+01:00:44.240 --> 01:00:48.319
+every single person in the world because
+
+01:00:46.480 --> 01:00:50.480
+of the fact that we're doing this with
+
+01:00:48.319 --> 01:00:52.079
+the resources of meta. There was an
+
+01:00:50.480 --> 01:00:53.359
+opportunity to we weren't going to be
+
+01:00:52.079 --> 01:00:55.040
+bottlenecked by comput. We weren't going
+
+01:00:53.359 --> 01:00:56.240
+to be bottlenecked by like
+
+01:00:55.040 --> 01:00:57.920
+infrastructure. We weren't going to be
+
+01:00:56.240 --> 01:00:58.880
+bottlenecked by by distribution. like we
+
+01:00:57.920 --> 01:01:00.000
+weren't going to be bottlenecked by the
+
+01:00:58.880 --> 01:01:01.359
+things that like startups often are
+
+01:01:00.000 --> 01:01:03.760
+bottlenecked, but it was an opportunity
+
+01:01:01.359 --> 01:01:06.400
+to like really build something that you
+
+01:01:03.760 --> 01:01:08.559
+could like put your stamp on and have
+
+01:01:06.400 --> 01:01:10.160
+like a lot of influence over and really
+
+01:01:08.559 --> 01:01:11.200
+shape. I think that was like quite
+
+01:01:10.160 --> 01:01:13.359
+exciting for a lot of people.
+
+01:01:11.200 --> 01:01:14.480
+>> And so that's why he chooses to spend an
+
+01:01:13.359 --> 01:01:16.319
+insane amount of money, what looks like
+
+01:01:14.480 --> 01:01:18.799
+an insane amount of money, getting a
+
+01:01:16.319 --> 01:01:21.119
+handful of top talent because then he
+
+01:01:18.799 --> 01:01:23.440
+knows that that those top talent will
+
+01:01:21.119 --> 01:01:25.359
+recruit in turn other top talent. But
+
+01:01:23.440 --> 01:01:26.400
+you need that as a starting point.
+
+01:01:25.359 --> 01:01:27.599
+Correct.
+
+01:01:26.400 --> 01:01:29.200
+>> Yeah. Yeah. And I think one thing that
+
+01:01:27.599 --> 01:01:33.359
+like is maybe somewhat underappreciated
+
+01:01:29.200 --> 01:01:36.480
+about that specific part is that like I
+
+01:01:33.359 --> 01:01:40.240
+mean the stock prices of OpenAI and
+
+01:01:36.480 --> 01:01:42.400
+Anthropic like ran up a lot. So it just
+
+01:01:40.240 --> 01:01:44.640
+happened to be the case that like you
+
+01:01:42.400 --> 01:01:47.680
+know if you looked at how much these
+
+01:01:44.640 --> 01:01:50.000
+people were making if they stayed at
+
+01:01:47.680 --> 01:01:52.319
+Open Eye or Enthropic like it also was
+
+01:01:50.000 --> 01:01:53.680
+like it was a lot of money. So I think
+
+01:01:52.319 --> 01:01:55.520
+for a lot of the talent it ended up
+
+01:01:53.680 --> 01:01:58.240
+being like kind of net neutral in many
+
+01:01:55.520 --> 01:01:59.520
+ways. um compwise, but obviously I think
+
+01:01:58.240 --> 01:02:01.599
+it's kind of like the same thing like
+
+01:01:59.520 --> 01:02:02.880
+oftentimes we don't we don't a lot of us
+
+01:02:01.599 --> 01:02:05.520
+don't think about how much like the
+
+01:02:02.880 --> 01:02:07.647
+early employees or the early researchers
+
+01:02:05.520 --> 01:02:09.760
+at these like labs that have had immense
+
+01:02:07.647 --> 01:02:11.839
+[snorts] stock uh stock value
+
+01:02:09.760 --> 01:02:14.559
+appreciation you know what their comp
+
+01:02:11.839 --> 01:02:17.359
+looks like we started this like fully on
+
+01:02:14.559 --> 01:02:20.160
+the belief of having and hiring like
+
+01:02:17.359 --> 01:02:22.640
+most brilliant people that's one Slar
+
+01:02:20.160 --> 01:02:24.720
+personal super intelligence um those two
+
+01:02:22.640 --> 01:02:28.960
+how do we create the environment where
+
+01:02:24.720 --> 01:02:32.240
+people do their best work at Meta and in
+
+01:02:28.960 --> 01:02:33.920
+MSL. I'm doing much more of like quote
+
+01:02:32.240 --> 01:02:35.280
+unquote traditional management, so to
+
+01:02:33.920 --> 01:02:36.559
+speak. Cuz these are the things I'm like
+
+01:02:35.280 --> 01:02:38.559
+thinking a lot about is like how do I
+
+01:02:36.559 --> 01:02:41.760
+create the environment where all these
+
+01:02:38.559 --> 01:02:45.520
+brilliant people who are exceptional and
+
+01:02:41.760 --> 01:02:47.200
+very very special can all operate and
+
+01:02:45.520 --> 01:02:49.280
+achieve the greatest expression of their
+
+01:02:47.200 --> 01:02:52.319
+talent. I'm thinking a lot more like a
+
+01:02:49.280 --> 01:02:54.799
+almost like a coach in some in some ways
+
+01:02:52.319 --> 01:02:56.640
+versus at scale it was like very
+
+01:02:54.799 --> 01:02:58.000
+different like I was the aur I was like
+
+01:02:56.640 --> 01:02:59.520
+the person whose like point of view had
+
+01:02:58.000 --> 01:02:59.920
+to be expressed in everything that we
+
+01:02:59.520 --> 01:03:01.359
+did.
+
+01:02:59.920 --> 01:03:05.839
+>> Say more about that you're you feel like
+
+01:03:01.359 --> 01:03:09.760
+a coach. I think that like my job is to
+
+01:03:05.839 --> 01:03:11.599
+a like help set the like north star and
+
+01:03:09.760 --> 01:03:14.000
+the like directionality of where we want
+
+01:03:11.599 --> 01:03:16.240
+to go, which again personal super
+
+01:03:14.000 --> 01:03:19.039
+intelligence, winning on consumer AI,
+
+01:03:16.240 --> 01:03:22.319
+like building AI that means something to
+
+01:03:19.039 --> 01:03:26.400
+every person and then spotting in the
+
+01:03:22.319 --> 01:03:28.319
+team special talent and then giving
+
+01:03:26.400 --> 01:03:30.880
+people the environment and resources to
+
+01:03:28.319 --> 01:03:32.799
+be able to express that maximally. Like
+
+01:03:30.880 --> 01:03:35.200
+I think one thing that big companies
+
+01:03:32.799 --> 01:03:37.200
+often mess up is that there's like
+
+01:03:35.200 --> 01:03:39.200
+exceptional people at most big companies
+
+01:03:37.200 --> 01:03:41.119
+but they just like are not empowered to
+
+01:03:39.200 --> 01:03:42.720
+do their best work and that's why they
+
+01:03:41.119 --> 01:03:44.640
+often leave to go to smaller companies
+
+01:03:42.720 --> 01:03:46.160
+or to startups or whatever it might be.
+
+01:03:44.640 --> 01:03:47.599
+You mentioned Jeff Bezos's shareholder
+
+01:03:46.160 --> 01:03:49.200
+letters earlier. That's something he
+
+01:03:47.599 --> 01:03:50.319
+would repeat as well and all the books I
+
+01:03:49.200 --> 01:03:51.359
+read about him but also shareholder
+
+01:03:50.319 --> 01:03:52.799
+letters like if you have great people
+
+01:03:51.359 --> 01:03:55.599
+that can't build they're going to leave.
+
+01:03:52.799 --> 01:03:58.480
+>> Yeah, exactly. And AI is such like a
+
+01:03:55.599 --> 01:04:00.720
+it's like such a special thing. Like I
+
+01:03:58.480 --> 01:04:02.240
+think you know this term research now it
+
+01:04:00.720 --> 01:04:05.760
+it feels like it almost doesn't mean
+
+01:04:02.240 --> 01:04:09.359
+anything but like by definition humanity
+
+01:04:05.760 --> 01:04:11.520
+doesn't know the limits of what these
+
+01:04:09.359 --> 01:04:12.880
+like models are capable of and what are
+
+01:04:11.520 --> 01:04:15.680
+the things you can do with them. Like
+
+01:04:12.880 --> 01:04:17.520
+they really are these like unknown
+
+01:04:15.680 --> 01:04:20.079
+artifacts that we don't understand super
+
+01:04:17.520 --> 01:04:22.160
+world. So like it really is science and
+
+01:04:20.079 --> 01:04:24.319
+research. Like we are exploring the
+
+01:04:22.160 --> 01:04:25.520
+limits of what you can do with this
+
+01:04:24.319 --> 01:04:28.079
+technology and what are the things that
+
+01:04:25.520 --> 01:04:31.599
+can be built and it is a process that
+
+01:04:28.079 --> 01:04:33.359
+requires lots of trial and error. It
+
+01:04:31.599 --> 01:04:34.960
+requires like brilliant people to have
+
+01:04:33.359 --> 01:04:37.119
+incredible insight. Like it's one of
+
+01:04:34.960 --> 01:04:39.839
+these things that you can't think about
+
+01:04:37.119 --> 01:04:43.039
+this process like a very opishly intense
+
+01:04:39.839 --> 01:04:45.680
+process. Like people need space and time
+
+01:04:43.039 --> 01:04:47.760
+and resources to be able to like you
+
+01:04:45.680 --> 01:04:49.920
+know do their best work. And I think
+
+01:04:47.760 --> 01:04:53.280
+about in many dimensions, right? Like I
+
+01:04:49.920 --> 01:04:56.240
+think Nat Freiedman is absolutely
+
+01:04:53.280 --> 01:04:58.160
+brilliant and as I mentioned like so
+
+01:04:56.240 --> 01:05:00.000
+much of Muse if there were a single
+
+01:04:58.160 --> 01:05:02.400
+person whose like single point of view
+
+01:05:00.000 --> 01:05:04.000
+came through on Muse it is now it's
+
+01:05:02.400 --> 01:05:06.000
+important for him to be in a position
+
+01:05:04.000 --> 01:05:07.839
+where where he can like fully express
+
+01:05:06.000 --> 01:05:10.240
+all of that. And then we have some
+
+01:05:07.839 --> 01:05:11.839
+brilliant researchers. They have like
+
+01:05:10.240 --> 01:05:12.960
+very very exciting ideas. How do we
+
+01:05:11.839 --> 01:05:15.039
+create an environment where they are
+
+01:05:12.960 --> 01:05:16.559
+able to explore those? And like most of
+
+01:05:15.039 --> 01:05:18.240
+them won't work out. Some of them will
+
+01:05:16.559 --> 01:05:20.720
+work out incredibly well. The cases
+
+01:05:18.240 --> 01:05:23.839
+where that works out justify all the
+
+01:05:20.720 --> 01:05:26.240
+investment. So there's two kinds of
+
+01:05:23.839 --> 01:05:28.079
+problems so to speak and that analogy is
+
+01:05:26.240 --> 01:05:30.400
+like diamond mining or building
+
+01:05:28.079 --> 01:05:32.640
+skyscrapers and it depends on what the
+
+01:05:30.400 --> 01:05:34.640
+distribution of the payoff of the things
+
+01:05:32.640 --> 01:05:37.200
+that you're working on are. So there's
+
+01:05:34.640 --> 01:05:38.720
+like some areas where the distribution
+
+01:05:37.200 --> 01:05:40.880
+is super power. Like most of the things
+
+01:05:38.720 --> 01:05:42.160
+you do will be kind of useless, but then
+
+01:05:40.880 --> 01:05:44.240
+some of the things you do can be like
+
+01:05:42.160 --> 01:05:46.240
+literally a million times more valuable
+
+01:05:44.240 --> 01:05:47.760
+than everything else. VC I think is a
+
+01:05:46.240 --> 01:05:49.920
+great like diamond mining kind of
+
+01:05:47.760 --> 01:05:52.000
+industry to give a sense. It's just all
+
+01:05:49.920 --> 01:05:54.960
+about like being able to identify the
+
+01:05:52.000 --> 01:05:56.880
+special ideas and like see those through
+
+01:05:54.960 --> 01:05:58.799
+>> and that's easy to do. Just look at just
+
+01:05:56.880 --> 01:06:01.520
+go to your 19th birthday party.
+
+01:05:58.799 --> 01:06:01.839
+>> Yeah. I mean that's like unbelievable.
+
+01:06:01.520 --> 01:06:02.960
+Um
+
+01:06:01.839 --> 01:06:04.400
+>> do people listening that don't know what
+
+01:06:02.960 --> 01:06:06.240
+the hell I just referenced? Can you talk
+
+01:06:04.400 --> 01:06:07.680
+about real quick what who was at your
+
+01:06:06.240 --> 01:06:08.880
+19th birthday party and why that was
+
+01:06:07.680 --> 01:06:11.039
+would have been a good bet if they just
+
+01:06:08.880 --> 01:06:12.480
+invested everybody around the table?
+
+01:06:11.039 --> 01:06:14.640
+>> This is like a really crazy thing to
+
+01:06:12.480 --> 01:06:16.079
+think about. my 19th birthday party. I
+
+01:06:14.640 --> 01:06:18.720
+was a freshman at MIT. It was in
+
+01:06:16.079 --> 01:06:21.599
+January. I was doing a win internship, a
+
+01:06:18.720 --> 01:06:24.400
+winter internship, win internship at a
+
+01:06:21.599 --> 01:06:26.559
+trading firm called HRT. There were like
+
+01:06:24.400 --> 01:06:28.000
+10 of us, 12 of us, um, something like
+
+01:06:26.559 --> 01:06:30.960
+that. Almost all of whom were students
+
+01:06:28.000 --> 01:06:32.960
+at either Harvard or MIT. Most of us
+
+01:06:30.960 --> 01:06:35.280
+already knew each other from various
+
+01:06:32.960 --> 01:06:36.960
+math and science or computer science
+
+01:06:35.280 --> 01:06:40.640
+competitions. Some of the other people
+
+01:06:36.960 --> 01:06:44.160
+were Jeffrey Yan who went on to start
+
+01:06:40.640 --> 01:06:46.480
+Hyperlquid very successful. Um Scott Woo
+
+01:06:44.160 --> 01:06:49.039
+went on to start Cognition very
+
+01:06:46.480 --> 01:06:51.920
+successful. Another person there was uh
+
+01:06:49.039 --> 01:06:54.160
+uh Jesse Zang went to start Decagon also
+
+01:06:51.920 --> 01:06:57.280
+quite successful. Um another person was
+
+01:06:54.160 --> 01:06:59.599
+Vicky Yei who is I think a brilliant
+
+01:06:57.280 --> 01:07:01.440
+researcher works at Anthropic. Everyone
+
+01:06:59.599 --> 01:07:04.640
+was like incredibly talented. I actually
+
+01:07:01.440 --> 01:07:07.839
+talked to the uh the founder of HRT
+
+01:07:04.640 --> 01:07:09.920
+recently and HRT itself by the way now
+
+01:07:07.839 --> 01:07:11.039
+is like crushing it. Unbelievable.
+
+01:07:09.920 --> 01:07:13.119
+>> What does HRT do?
+
+01:07:11.039 --> 01:07:17.119
+>> HRT it's a proprietary trading firm. So
+
+01:07:13.119 --> 01:07:18.799
+they they trade their own money in Q2 of
+
+01:07:17.119 --> 01:07:23.119
+2020
+
+01:07:18.799 --> 01:07:25.520
+um 6 had 11 billion of revenue and like
+
+01:07:23.119 --> 01:07:28.480
+I think 8 billion of profit is the the
+
+01:07:25.520 --> 01:07:30.160
+record number. This is a I think it's
+
+01:07:28.480 --> 01:07:32.079
+under a thousand people work at HRT. I
+
+01:07:30.160 --> 01:07:34.240
+mean, it's like unbelievable. But I I
+
+01:07:32.079 --> 01:07:35.680
+recently uh met up with the founder of
+
+01:07:34.240 --> 01:07:36.640
+HRT and they were talking about like,
+
+01:07:35.680 --> 01:07:38.319
+"Oh yeah, we're starting to do some
+
+01:07:36.640 --> 01:07:41.359
+private investments." I was like, "Just
+
+01:07:38.319 --> 01:07:45.359
+invest into the interns. All [laughter]
+
+01:07:41.359 --> 01:07:46.079
+the interns get seed checks."
+
+01:07:45.359 --> 01:07:50.640
+That's great.
+
+01:07:46.079 --> 01:07:52.319
+>> I grew up doing uh math and uh science
+
+01:07:50.640 --> 01:07:55.520
+and computer science competitions and
+
+01:07:52.319 --> 01:07:57.920
+Olympiads and got to know like all sorts
+
+01:07:55.520 --> 01:07:59.839
+of people from all around America doing
+
+01:07:57.920 --> 01:08:01.920
+this kind of stuff. It's like quite
+
+01:07:59.839 --> 01:08:03.599
+surreal to see
+
+01:08:01.920 --> 01:08:04.559
+the people that I did competitions with
+
+01:08:03.599 --> 01:08:05.839
+become so successful.
+
+01:08:04.559 --> 01:08:07.760
+>> It's going to be fascinating what all of
+
+01:08:05.839 --> 01:08:08.880
+you do the next few decades. Before I
+
+01:08:07.760 --> 01:08:10.720
+interrupted you, did you have more to
+
+01:08:08.880 --> 01:08:12.240
+say about diamond mining and skyscraper
+
+01:08:10.720 --> 01:08:14.720
+stuff? Basically, it's like does it have
+
+01:08:12.240 --> 01:08:17.199
+a power law payoff where some things
+
+01:08:14.720 --> 01:08:19.839
+just like pay for like literally like a
+
+01:08:17.199 --> 01:08:21.759
+million times the investment or is it
+
+01:08:19.839 --> 01:08:23.920
+something more like building skyscrapers
+
+01:08:21.759 --> 01:08:26.799
+which I would I would describe data
+
+01:08:23.920 --> 01:08:28.719
+annotation or or or data businesses as
+
+01:08:26.799 --> 01:08:30.239
+more like this which is like Amazon
+
+01:08:28.719 --> 01:08:32.480
+Prime deliveries is another example
+
+01:08:30.239 --> 01:08:33.920
+where the payoff is pretty linear and
+
+01:08:32.480 --> 01:08:35.359
+you have to just get develop a process
+
+01:08:33.920 --> 01:08:37.120
+where you're like really really amazing
+
+01:08:35.359 --> 01:08:38.480
+at doing it. If you're building
+
+01:08:37.120 --> 01:08:40.319
+skyscrapers, then it's like a very
+
+01:08:38.480 --> 01:08:43.759
+operational business and it's all about
+
+01:08:40.319 --> 01:08:45.600
+like squeezing every ounce of efficiency
+
+01:08:43.759 --> 01:08:47.520
+out of that process and you just look at
+
+01:08:45.600 --> 01:08:49.839
+it and you figure out like I can make it
+
+01:08:47.520 --> 01:08:51.600
+like 2% more efficient this way and 1%
+
+01:08:49.839 --> 01:08:53.199
+more efficient that way and half a
+
+01:08:51.600 --> 01:08:55.040
+percent more efficient that way and you
+
+01:08:53.199 --> 01:08:58.239
+just try to squeeze every ounce of
+
+01:08:55.040 --> 01:08:59.839
+optimization out of it. And then there's
+
+01:08:58.239 --> 01:09:03.600
+diamond mining where you're kind of
+
+01:08:59.839 --> 01:09:06.319
+like, "Hey everyone, just like you know,
+
+01:09:03.600 --> 01:09:08.239
+go forth, try all your crazy ideas and
+
+01:09:06.319 --> 01:09:09.279
+like you're just nurturing the ideas
+
+01:09:08.239 --> 01:09:10.159
+that seem promising."
+
+01:09:09.279 --> 01:09:10.719
+>> That's what you feel you're doing at
+
+01:09:10.159 --> 01:09:12.239
+Meta right now.
+
+01:09:10.719 --> 01:09:14.400
+>> That's what I feel I'm doing at Meta.
+
+01:09:12.239 --> 01:09:15.920
+And and and the building server stuff
+
+01:09:14.400 --> 01:09:18.239
+generally speaking is what I felt I was
+
+01:09:15.920 --> 01:09:21.040
+doing at at scale. And that's like this
+
+01:09:18.239 --> 01:09:22.480
+big paradigm um paradigm difference.
+
+01:09:21.040 --> 01:09:24.319
+Going back to the coaching and the way
+
+01:09:22.480 --> 01:09:26.000
+the difference of how you're essentially
+
+01:09:24.319 --> 01:09:26.880
+managing now at meta compared to way
+
+01:09:26.000 --> 01:09:28.239
+scale. Why do you have so many direct
+
+01:09:26.880 --> 01:09:29.520
+reports? You have like what 100 direct
+
+01:09:28.239 --> 01:09:31.759
+reports? How many direct reports?
+
+01:09:29.520 --> 01:09:33.440
+>> Yeah, I think more than 200. Yeah. H
+
+01:09:31.759 --> 01:09:35.440
+>> how and why?
+
+01:09:33.440 --> 01:09:39.359
+>> Going back to it like one of the one of
+
+01:09:35.440 --> 01:09:41.040
+the founding thesis of MSL and and and
+
+01:09:39.359 --> 01:09:44.480
+what we want to do and like rebuilding
+
+01:09:41.040 --> 01:09:46.640
+this this lab was how do you have like
+
+01:09:44.480 --> 01:09:49.679
+really really high talent density? How
+
+01:09:46.640 --> 01:09:51.359
+do you make it like the best place for a
+
+01:09:49.679 --> 01:09:54.080
+lot of these brilliant people to do
+
+01:09:51.359 --> 01:09:56.080
+their best work and how do you build an
+
+01:09:54.080 --> 01:09:58.080
+organization that's like technically
+
+01:09:56.080 --> 01:09:59.679
+focused where the technical people are
+
+01:09:58.080 --> 01:10:01.920
+doing their best work, you know, have
+
+01:09:59.679 --> 01:10:04.159
+have the opportunity to really do their
+
+01:10:01.920 --> 01:10:05.440
+life's work. And one of the design
+
+01:10:04.159 --> 01:10:07.120
+principles around this was making it
+
+01:10:05.440 --> 01:10:09.040
+very flat. you know, effectively all the
+
+01:10:07.120 --> 01:10:11.120
+researchers that we hired into this
+
+01:10:09.040 --> 01:10:13.679
+group called TBD, they report directly
+
+01:10:11.120 --> 01:10:15.679
+to me. And it's more of a statement of
+
+01:10:13.679 --> 01:10:17.920
+the fact that like this is like
+
+01:10:15.679 --> 01:10:20.640
+anti-bureaucracy. Like TBD is like
+
+01:10:17.920 --> 01:10:23.520
+literally anti-bureaucracy. The point is
+
+01:10:20.640 --> 01:10:25.920
+we're hiring brilliant people and you
+
+01:10:23.520 --> 01:10:28.320
+all have like demonstrated clearly that
+
+01:10:25.920 --> 01:10:29.600
+you can do brilliant, brilliant work.
+
+01:10:28.320 --> 01:10:31.840
+You have like done it before in your
+
+01:10:29.600 --> 01:10:34.320
+careers. So I don't need to be
+
+01:10:31.840 --> 01:10:36.000
+micromanaging you to do brilliant work.
+
+01:10:34.320 --> 01:10:38.480
+you're going to be able to do that on
+
+01:10:36.000 --> 01:10:39.600
+your own. We need technical leadership.
+
+01:10:38.480 --> 01:10:41.360
+So, some of you are going to be
+
+01:10:39.600 --> 01:10:43.520
+responsible for like setting clear
+
+01:10:41.360 --> 01:10:44.880
+technical directions for your groups and
+
+01:10:43.520 --> 01:10:47.199
+we have this kind of like pod structure
+
+01:10:44.880 --> 01:10:48.880
+where we have various pods and there's
+
+01:10:47.199 --> 01:10:50.320
+various technical leads of the pods who
+
+01:10:48.880 --> 01:10:52.480
+who tie break on the technical
+
+01:10:50.320 --> 01:10:54.880
+decisions. So, there's like a technical
+
+01:10:52.480 --> 01:10:56.560
+leadership structure in place, but from
+
+01:10:54.880 --> 01:10:58.080
+a quote unquote people management
+
+01:10:56.560 --> 01:10:59.840
+perspective or from a bureaucracy
+
+01:10:58.080 --> 01:11:02.480
+perspective, we're just
+
+01:10:59.840 --> 01:11:04.719
+anti-bureaucracy. And then the other
+
+01:11:02.480 --> 01:11:07.120
+part of this is like we do make a lot of
+
+01:11:04.719 --> 01:11:09.920
+group decisions. Like we want to debate
+
+01:11:07.120 --> 01:11:11.840
+because it is like a very talent dense
+
+01:11:09.920 --> 01:11:13.920
+group of like brilliant people. We want
+
+01:11:11.840 --> 01:11:15.760
+to have those conversations where we're
+
+01:11:13.920 --> 01:11:17.679
+all discussing what do we think the
+
+01:11:15.760 --> 01:11:19.040
+right path is. Everyone [snorts] in the
+
+01:11:17.679 --> 01:11:20.159
+lab has done brilliant things. Like we
+
+01:11:19.040 --> 01:11:22.159
+want to hear all these opinions. We want
+
+01:11:20.159 --> 01:11:24.080
+to arrive at things that we all believe
+
+01:11:22.159 --> 01:11:26.080
+are the best path forward. So it's
+
+01:11:24.080 --> 01:11:28.080
+certainly like an unconventional way to
+
+01:11:26.080 --> 01:11:30.640
+run the team. And like I would be lying
+
+01:11:28.080 --> 01:11:33.440
+if I said I was like the best manager to
+
+01:11:30.640 --> 01:11:36.000
+more than 200 um people. But this part
+
+01:11:33.440 --> 01:11:38.159
+of the point is that like they don't
+
+01:11:36.000 --> 01:11:40.960
+need managers, they need a great
+
+01:11:38.159 --> 01:11:42.719
+environment. They are all brilliant.
+
+01:11:40.960 --> 01:11:44.159
+They're all extremely capable. They just
+
+01:11:42.719 --> 01:11:45.679
+need the room to cook.
+
+01:11:44.159 --> 01:11:46.880
+>> Yeah. And so maybe not a coach. You're
+
+01:11:45.679 --> 01:11:48.480
+kind of like the steward of a great
+
+01:11:46.880 --> 01:11:50.000
+environment so they can do great work.
+
+01:11:48.480 --> 01:11:51.360
+>> Yeah. Exactly.
+
+01:11:50.000 --> 01:11:52.239
+>> Alex, this was awesome, man. Thanks for
+
+01:11:51.360 --> 01:11:54.000
+making taking the time.
+
+01:11:52.239 --> 01:11:55.520
+>> Yeah.
+
+01:11:54.000 --> 01:11:57.040
+>> I hope you enjoyed this episode. Please
+
+01:11:55.520 --> 01:11:58.960
+remember to subscribe wherever you're
+
+01:11:57.040 --> 01:12:00.239
+listening and leave a review. And make
+
+01:11:58.960 --> 01:12:02.159
+sure you listen to my other podcast,
+
+01:12:00.239 --> 01:12:04.640
+Founders. For almost a decade, I've
+
+01:12:02.159 --> 01:12:06.080
+obsessively read over 400 biographies of
+
+01:12:04.640 --> 01:12:08.000
+history's greatest entrepreneurs,
+
+01:12:06.080 --> 01:12:10.000
+searching for ideas that you can use in
+
+01:12:08.000 --> 01:12:12.159
+your work. Most of the guests you hear
+
+01:12:10.000 --> 01:12:15.159
+on this show first found me through
+
+01:12:12.159 --> 01:12:15.159
+founders.
+

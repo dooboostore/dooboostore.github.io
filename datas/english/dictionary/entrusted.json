@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "entry": "<b>entrust</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɪnˈtrʌst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<책임·임무 등을> 맡기다, 위임하다(confide) ((to)); <금전 등을> 맡기다, 위탁하다 ((with))",
+              "examples": [
+                {
+                  "text": "<b>entrust</b> a person with a task = <b>entrust</b> a task to a person",
+                  "translatedText": "임무를 …에게 위임하다"
+                }
+              ],
+              "originalMeaning": "<책임·임무 등을> 맡기다, 위임하다(confide) ((to)); <금전 등을> 맡기다, 위탁하다 ((with))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3a5c4fbac68b4aff8e6ed9b9e212a952",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3a5c4fbac68b4aff8e6ed9b9e212a952",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "entrusts"
+        },
+        {
+          "type": "과거형",
+          "value": "entrusted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "entrusting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "entrusted"
+        }
+      ],
+      "aliasConjugation": "entrusts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "f98b51f4bef8a3efe4fccd042c2378d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 문제는 전문가에게 의뢰해야 한다",
+      "text": "The matter should be <b>entrusted</b>[committed] to an expert. or We should <b>entrust</b> an expert with the matter."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 일은 베이커 씨에게 위촉했다",
+      "text": "I <b>entrusted</b> the matter to Mr. Baker."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 전문가에게 위촉해야 한다",
+      "text": "It should be <b>entrusted</b>[committed] to an expert."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 가게를 종업원들에게 의탁했다",
+      "text": "He <b>entrusted</b>[trusted] his employees with his store."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이런 사람들에게 나라를 맡겨 둘 수 없다",
+      "text": "We just can't <b>entrust</b> the country to these people."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "entry": "pharmaceutic",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "fɑ̀:rməsú:tik(əl)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "조제의, 제약의, 약학의; 약제(사)의",
+              "examples": [],
+              "originalMeaning": "조제의, 제약의, 약학의; 약제(사)의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조합약(調合藥), 제약",
+              "examples": [],
+              "originalMeaning": "조합약(調合藥), 제약"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d76f78b8b5d64898b8472096a19a4e5f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d76f78b8b5d64898b8472096a19a4e5f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "8cf221cb8a7e51121a37c30477f1b8f5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 회사는 미국의 제약 회사와 기술 제휴를 했다",
+      "text": "We secured the technical cooperation of a <b>pharmaceutical</b> company in the U.S."
+    }
+  ],
+  "isWordType": true
+}

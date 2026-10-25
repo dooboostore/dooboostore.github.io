@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "entry": "<b>ration</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈræʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(식료품·연료 등의) 일정한 배급량, 할당량, 정량",
+              "examples": [
+                {
+                  "text": "a daily <b>ration</b> of meat and bread",
+                  "translatedText": "고기와 빵의 하루 할당량"
+                }
+              ],
+              "originalMeaning": "(식료품·연료 등의) 일정한 배급량, 할당량, 정량"
+            },
+            {
+              "meaning": "[pl.] 식량, 양식",
+              "examples": [],
+              "originalMeaning": "[pl.] 식량, 양식"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<식량·의류·연료 등을> 배급[지급, 공급]하다 ((to)); <사병에게> 급식하다 ((out))",
+              "examples": [
+                {
+                  "text": "<b>ration</b> out food to an army",
+                  "translatedText": "군대에 식량을 배급하다"
+                }
+              ],
+              "originalMeaning": "<식량·의류·연료 등을> 배급[지급, 공급]하다 ((to)); <사병에게> 급식하다 ((out))"
+            },
+            {
+              "meaning": "…을 배급제로 하다",
+              "examples": [
+                {
+                  "text": "<b>ration</b> meat",
+                  "translatedText": "고기를 배급제로 하다"
+                }
+              ],
+              "originalMeaning": "…을 배급제로 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/fb4d4cb10b85451d8d70509c2ce0e000",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/fb4d4cb10b85451d8d70509c2ce0e000",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "rations"
+        },
+        {
+          "type": "과거형",
+          "value": "rationed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rationing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rationed"
+        }
+      ],
+      "aliasConjugation": "rations",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "44af2ffbacf40d5a2a39c326430d8d09",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열흘치 쌀이 배급되었다",
+      "text": "Ten days' <b>ration</b> of rice was distributed."
+    }
+  ],
+  "isWordType": true
+}

@@ -462,16 +462,23 @@ export default (w: Window) => {
     private startVideoTimeMonitoring(): void {
       if (this.videoTimeMonitoringInterval) return;
 
+      // 진행 중 플래그로 interval 콜백 중복 실행 방지
+      let isRunning = false;
+
       this.videoTimeMonitoringInterval = window.setInterval(() => {
         if (!this.youtubePlayer || !this.youtubePlayerReady) return;
+        if (isRunning) return; // 이전 콜백이 아직 실행 중이면 스킵
 
+        isRunning = true;
         try {
           const currentTimeMs = this.youtubePlayer.getCurrentTime() * 1000;
           this.updateSubtitleByVideoTime(currentTimeMs);
         } catch (e) {
           console.error("Error monitoring video time", e);
+        } finally {
+          isRunning = false;
         }
-      }, 500) as any;
+      }, 250) as any; // 250ms로 축소: 500ms면 자막 타이밍 오차 최대 500ms 발생
     }
 
     private stopVideoTimeMonitoring(): void {
@@ -535,25 +542,27 @@ export default (w: Window) => {
       }
 
       // Check if current subtitle has ended and user manually selected it
+      // userManuallySelected를 먼저 false로 바꾼 뒤 pauseVideo 호출:
+      // pauseVideo → onYouTubeStateChange(PAUSED) → stopVideoTimeMonitoring 순서로
+      // 이 블록이 다시 진입하지 않도록 보장
       if (this.userManuallySelected && this.currentActiveIndex >= 0) {
-        // Find the English subtitle at currentActiveIndex
-        let englishCount = 0;
+        let ecIdx = 0;
         let currentEnglishItem = null;
         for (const item of this.allTranslations) {
           if (item.type === "en") {
-            if (englishCount === this.currentActiveIndex) {
+            if (ecIdx === this.currentActiveIndex) {
               currentEnglishItem = item;
               break;
             }
-            englishCount++;
+            ecIdx++;
           }
         }
-        
+
         if (currentEnglishItem && currentTimeMs >= currentEnglishItem.endMs) {
           console.log("[updateSubtitleByVideoTime] Manually selected subtitle ended, pausing video");
-          // Pause video when manually selected subtitle ends
-          this.pauseYouTubeVideo();
+          // 먼저 플래그 초기화 → 이후 루프에서 중복 실행 방지
           this.userManuallySelected = false;
+          this.pauseYouTubeVideo();
         }
       }
     }
@@ -1285,20 +1294,26 @@ export default (w: Window) => {
       } else {
         // 이전 문장으로 이동
         this.onPrevCue();
-        
-        // 이전 문장의 마지막 단어로 선택
+
+        // onPrevCue() 호출 직후 currentActiveIndex를 스냅샷으로 캡처
+        // requestAnimationFrame 내에서 this.currentActiveIndex를 다시 읽으면
+        // 그 사이 모니터링 루프가 변경할 수 있어 클로저 캡처로 고정
+        const capturedIndex = this.currentActiveIndex;
+
+        // 이전 문장의 마지막 단어로 선택 (DOM 렌더링 이후)
         requestAnimationFrame(() => {
-          // Find the English subtitle at new currentActiveIndex
-          let englishCount = 0;
+          // capturedIndex가 여전히 현재 인덱스와 같을 때만 동작
+          if (capturedIndex !== this.currentActiveIndex) return;
+
+          let ec = 0;
           let prevEnglishItem = null;
-          
           for (const translation of this.allTranslations) {
             if (translation.type === "en") {
-              if (englishCount === this.currentActiveIndex) {
+              if (ec === capturedIndex) {
                 prevEnglishItem = translation;
                 break;
               }
-              englishCount++;
+              ec++;
             }
           }
 
@@ -1306,8 +1321,7 @@ export default (w: Window) => {
             const prevWords = prevEnglishItem.text
               .split(/(\s+)/)
               .filter((w) => !/^\s+$/.test(w));
-            
-            // 마지막 단어로 설정
+
             this.currentWordIndex = prevWords.length - 1;
             const lastWord = prevWords[this.currentWordIndex]
               .replace(/[,.":!?;]/g, "")
@@ -1319,7 +1333,7 @@ export default (w: Window) => {
             }
             this.loadDictionaryForWord(lastWord);
             this.highlightSelectedWord();
-            
+
             console.log("[onPrevWord] Moved to previous sentence, selected last word:", lastWord);
           }
         });

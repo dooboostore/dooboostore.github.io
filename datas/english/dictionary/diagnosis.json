@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "entry": "<b>diagnosis</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│daɪəɡ│noʊsɪs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[CU] [의학] 진단(법); [생물] (특징을 기술하는) 정확한 분류; 식별; (문제의 원인이나 성질의) 판단 분석; (문제의) 해답, 해결 ((of))",
+              "examples": [
+                {
+                  "text": "make an accurate <b>diagnosis</b>",
+                  "translatedText": "정확한 진단을 내리다"
+                }
+              ],
+              "originalMeaning": "[CU] [의학] 진단(법); [생물] (특징을 기술하는) 정확한 분류; 식별; (문제의 원인이나 성질의) 판단 분석; (문제의) 해답, 해결 ((of))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/301376f9ea914f9b8a4bdea52f70206a",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/301376f9ea914f9b8a4bdea52f70206a",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "복수형",
+          "value": "diagnoses"
+        }
+      ],
+      "aliasConjugation": "diagnoses",
+      "aliasConjugationPos": "복수형",
+      "gdid": "4ec709d0c57f7a1757dd397b8a49df25",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 의사의 진단은 백발백중이다",
+      "text": "That doctor never makes a wrong <b>diagnosis</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 진단과 치료를 위하여 입원했다.",
+      "text": "He was hospitalized for <b>diagnosis</b> and treatment."
+    }
+  ],
+  "isWordType": true
+}

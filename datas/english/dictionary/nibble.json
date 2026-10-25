@@ -1,0 +1,131 @@
+{
+  "items": [
+    {
+      "entry": "<b>nibble</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈnɪbl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<짐승·물고기가> 조금씩 물어뜯다, 갉아먹다",
+              "examples": [
+                {
+                  "text": "A hamster <b>nibble</b> d a hole in the sofa.",
+                  "translatedText": "햄스터가 소파를 물어뜯어 구멍을 냈다."
+                }
+              ],
+              "originalMeaning": "<짐승·물고기가> 조금씩 물어뜯다, 갉아먹다"
+            },
+            {
+              "meaning": "(갉아먹듯) 조금씩 가져가다 ((away))",
+              "examples": [],
+              "originalMeaning": "(갉아먹듯) 조금씩 가져가다 ((away))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "조금씩 갉아먹다[물어뜯다], <물고기가> 입질하다",
+              "examples": [
+                {
+                  "text": "<b>nibble</b> at one's nails",
+                  "translatedText": "손톱을 물어뜯다"
+                }
+              ],
+              "originalMeaning": "조금씩 갉아먹다[물어뜯다], <물고기가> 입질하다"
+            },
+            {
+              "meaning": "조금씩 줄이다, 서서히 잠식하다 ((away, at))",
+              "examples": [
+                {
+                  "text": "All these expenses are nibbling away at our savings.",
+                  "translatedText": "이 모든 경비가 우리의 저축액을 축내고 있다."
+                }
+              ],
+              "originalMeaning": "조금씩 줄이다, 서서히 잠식하다 ((away, at))"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "조금씩 물어뜯기, (물고기의) 입질",
+              "examples": [],
+              "originalMeaning": "조금씩 물어뜯기, (물고기의) 입질"
+            },
+            {
+              "meaning": "한 입 분량",
+              "examples": [
+                {
+                  "text": "have a <b>nibble</b> on … ",
+                  "translatedText": " 한 입 먹어 보다"
+                }
+              ],
+              "originalMeaning": "한 입 분량"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/ffa52992fb874a65879747ae4fc69de9",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/ffa52992fb874a65879747ae4fc69de9",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "nibbles"
+        },
+        {
+          "type": "과거형",
+          "value": "nibbled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "nibbling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "nibbled"
+        }
+      ],
+      "aliasConjugation": "nibbles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "30bd710c649854e4f051062d5de5d495",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "햄스터 한 마리가 소파를 물어뜯어 구멍을 냈다.",
+      "text": "A hamster nibbled a hole in the sofa."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 모든 경비가 우리의 저축액을 축내고 있다.",
+      "text": "All these expenses are nibbling away at our savings."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "벌레는 잎을 먹는다",
+      "text": "Worms <b>nibble</b> green leaves."
+    }
+  ],
+  "isWordType": true
+}
