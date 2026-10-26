@@ -98,6 +98,19 @@ export const NODE_DOCS: NodeDoc[] = [
     notes: ['Lyrical엔 robot_body_filter가 없고 pcl_ros CropBox는 고정 상자 하나뿐이라 직접 작성.'],
   },
   {
+    id: 'signal_decoder', name: 'signal_decoder', tag: 'custom', pkg: 'perception', form: 'ROS 2 노드 (C++)', group: '센서·인지',
+    role: '신호등 암호 미션 — 신호등 깜빡임(색·횟수·순서)을 시간축으로 쌓아 1단계(색·개수) · 2단계(점수 합 = 번호 합) · 3단계(노랑 횟수 → 목적지 태그)를 읽는다.',
+    inputs: [
+      ['✉️ 구독', '/tracked_objects', 'perception/TrackedObjectArray', 'perception', 'traffic_light의 color (red·yellow·green·off·all)'],
+    ],
+    outputs: [
+      ['✉️ 발행', '/mission/signal', 'perception/MissionSignal', 'vlm_task_planner', '확정될 때마다 · ' + LATCH],
+      ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', ''],
+    ],
+    params: ['separator_s: 2.0 (세 색 동시 = 단계 구분)', 'gap_s: 3.0', 'min_on_s: 0.15', 'score_red/yellow/green: 1', 'dest_tags: [12, 13, 14]', 'confirm: 1'],
+    notes: ['단계 구분·점수·반복은 MISSION §6 미정 — 제안값이 기본, perception.yaml에서 바꾼다.', '인지 쪽이 신호를 해석해 미션 토픽으로 낸다 (바코드 → /mission/qr와 같은 자리) — plan은 받아서 계획만.', '끝난 단계 셋이 [한 색만 · 아무거나 · 노랑만 1~3번] 모양일 때만 답 — 반복 신호의 중간부터 봐도 1단계를 찾는다.'],
+  },
+  {
     id: 'robot_state_publisher', name: 'robot_state_publisher', tag: 'provided', pkg: 'robot_state_publisher', form: 'ROS 2 노드', group: '센서·인지',
     role: 'URDF와 관절 각도로 로봇 몸의 모든 링크 좌표(TF)를 계산해 낸다. 카메라·팔·그리퍼 위치가 전부 여기서 이어진다.',
     inputs: [
@@ -147,7 +160,7 @@ export const NODE_DOCS: NodeDoc[] = [
     inputs: [
       ['✉️ 구독', '/cmd/user_command', 'std_msgs/String', 'user_input', '명령마다'],
       ['✉️ 구독', '/mission/qr', 'std_msgs/String', 'perception', '장소 바코드 작업 지시 — VLM이 해석 · ' + LATCH],
-      ['✉️ 구독', '/mission/signal', 'plan/MissionSignal', 'signal_decoder', '신호등 암호 미션 — 규칙으로 (inspect → 번호 합 조합 → 적재함 → 목적지 장소 → 수납 확인)'],
+      ['✉️ 구독', '/mission/signal', 'perception/MissionSignal', 'signal_decoder (perception)', '신호등 암호 미션 — 규칙으로 (inspect → 번호 합 조합 → 적재함 → 목적지 장소 → 수납 확인)'],
       ['✉️ 구독', '/tracked_objects', 'perception/TrackedObjectArray', 'perception', '최신 목록을 프롬프트에 넣음'],
       ['✉️ 구독', '/pole_front_cam/color/image_raw', 'sensor_msgs/Image', 'realsense2_camera (pole_front_cam)', '최신 1장만 보관 → VLM 호출 때'],
       ['✉️ 구독', '/gripper_cam/color/image_raw', 'sensor_msgs/Image', 'realsense2_camera (gripper_cam)', '최신 1장만 보관'],
@@ -162,19 +175,6 @@ export const NODE_DOCS: NodeDoc[] = [
     params: ['vlm_endpoint: "" (예: http://127.0.0.1:8000)', 'vlm_timeout_s: 120.0', 'max_replans: 1', 'tray_capacity: 4', 'verify_period_s: 60 (0 = 주기 확인 끔)', 'verify_radius_m: 0.20'],
     notes: ['허용 skill: navigate · pick · place · inspect · say. target = 물체 id · "x,y" · "tray"(적재함) · 말할 내용.',
       '수납 확인 — 신호등 미션 옮기기가 끝나면 바로, 그 뒤 verify_period_s마다 (AUTO · 하던 계획 없을 때) 목적지로 가서 옮긴 번호가 verify_radius_m 안에 다 있는지 본다. 다른 곳에 보이면 다시 옮기고, 안 보이면 say. 확인 계획이 실패하면 재계획 없이 다음 주기에.'],
-  },
-  {
-    id: 'signal_decoder', name: 'signal_decoder', tag: 'custom', pkg: 'plan', form: 'ROS 2 노드 (C++)', group: '계획·임무',
-    role: '신호등 암호 미션 — 신호등 깜빡임(색·횟수·순서)을 시간축으로 쌓아 1단계(색·개수) · 2단계(점수 합 = 번호 합) · 3단계(노랑 횟수 → 목적지 태그)를 읽는다.',
-    inputs: [
-      ['✉️ 구독', '/tracked_objects', 'perception/TrackedObjectArray', 'perception', 'traffic_light의 color (red·yellow·green·off·all)'],
-    ],
-    outputs: [
-      ['✉️ 발행', '/mission/signal', 'plan/MissionSignal', 'vlm_task_planner', '확정될 때마다 · ' + LATCH],
-      ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', ''],
-    ],
-    params: ['separator_s: 2.0 (세 색 동시 = 단계 구분)', 'gap_s: 3.0', 'min_on_s: 0.15', 'score_red/yellow/green: 1', 'dest_tags: [12, 13, 14]', 'confirm: 1'],
-    notes: ['단계 구분·점수·반복은 MISSION §6 미정 — 제안값이 기본, plan.yaml에서 바꾼다.', '끝난 단계 셋이 [한 색만 · 아무거나 · 노랑만 1~3번] 모양일 때만 답 — 반복 신호의 중간부터 봐도 1단계를 찾는다.'],
   },
   {
     id: 'coordinator', name: 'coordinator', tag: 'custom', pkg: 'plan', form: 'ROS 2 노드 (C++)', group: '계획·임무',

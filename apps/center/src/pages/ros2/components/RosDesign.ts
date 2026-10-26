@@ -49,12 +49,12 @@ const ARCH_FLOWS: Flow[] = [
       { e: ['PER>VLM', 'PER>CO'], t: '무엇이 어디 있나', d: '✉️ /tracked_objects — 컵 id 3, 테이블 id 5, 의자 id 7. VLM은 계획에, coordinator는 id 검증에 씁니다.' },
       { e: ['VLM>CO'], t: 'VLM이 순서만 정한다', d: '✉️ /task/sub_goals [navigate(테이블 앞) → pick(컵) → navigate(사람) → place]. 어떻게 움직일지는 정하지 않습니다.' },
       { e: ['VLM>SIM'], t: '계획 응답이 조작 창에', d: '📁 /task/sub_goals 파일 → 시뮬레이터 조작 창 응답줄. VLM 거절(보류)도 say 계획으로 보여준다.' },
-      { e: ['CO>NAV'], t: '이동 시작', d: 'coordinator가 검증 후 테이블 앞 (3.45, 0.9)을 계산해 🎬 /navigate_to_pose 액션을 보냅니다 (이동 전 팔 stow는 아직 TODO).' },
-      { e: ['PC>RTAB', 'BF>RTAB', 'DDC>EKF', 'IMB>EKF', 'EKF>RTAB', 'RTAB>NAV', 'EKF>NAV'], t: '내가 지도 어디에 있나', d: 'rtabmap이 map→odom, EKF가 odom→base_footprint를 냅니다. 둘을 이으면 Nav2가 지도 기준 로봇 위치를 압니다.' },
-      { e: ['PC>BF', 'BF>COST', 'COST>NAV'], t: '장애물 지도', d: 'body_filter가 pole_front_cam 점구름에서 팔·차체 점을 뺀 /points_filtered가 costmap(local voxel · global obstacle)에 쌓여 의자를 피하는 경로를 만듭니다.' },
-      { e: ['COST>NT', 'EKF>NT', 'NAV>NT'], t: '앞단 판단 보조 — 무엇을 보고 판단하나', d: 'rl_nav_tuner 입력: local costmap(통로 폭 0.9m, 의자까지 거리), /odometry/filtered(현재 속도), /plan(남은 거리).' },
-      { e: ['NT>NAV', 'NT>RLN'], t: '앞단 판단 보조 — 결정', d: '좁은 통로·의자 근처 → 프리셋 B. /speed_limit 60%(≈0.15m/s)를 Nav2와 rl_nav_correction에, max_vel_theta 1.0을 set_parameters로.' },
-      { e: ['NAV>RLN'], t: 'Nav2 속도 명령', d: '✉️ /cmd_vel_nav = (0.12 m/s, 0.30 rad/s), 20Hz. 같은 선으로 /plan도 받습니다(경로 오차 계산용).' },
+      { e: ['CO>BT'], t: '이동 시작', d: 'coordinator가 검증 후 테이블 앞 (3.45, 0.9)을 계산해 🎬 /navigate_to_pose 액션을 보냅니다 (이동 전 팔 stow는 아직 TODO).' },
+      { e: ['PC>PRS', 'PRS>RXS', 'RXS>RTAB', 'BF>PCA', 'PCA>RTAB', 'DDC>EKF', 'IMB>EKF', 'EKF>RTAB', 'RTAB>PS', 'EKF>CS'], t: '내가 지도 어디에 있나', d: 'rtabmap이 map→odom, EKF가 odom→base_footprint를 냅니다. 둘을 이으면 Nav2가 지도 기준 로봇 위치를 압니다.' },
+      { e: ['PC>BF', 'BF>COST', 'COST>PS'], t: '장애물 지도', d: 'body_filter가 pole_front_cam 점구름에서 팔·차체 점을 뺀 /points_filtered가 costmap(local voxel · global obstacle)에 쌓여 의자를 피하는 경로를 만듭니다.' },
+      { e: ['COST>NT', 'EKF>NT', 'PS>NT'], t: '앞단 판단 보조 — 무엇을 보고 판단하나', d: 'rl_nav_tuner 입력: local costmap(통로 폭 0.9m, 의자까지 거리), /odometry/filtered(현재 속도), /plan(남은 거리).' },
+      { e: ['NT>CS', 'NT>RLN'], t: '앞단 판단 보조 — 결정', d: '좁은 통로·의자 근처 → 프리셋 B. /speed_limit 60%(≈0.15m/s)를 Nav2와 rl_nav_correction에, max_vel_theta 1.0을 set_parameters로.' },
+      { e: ['BT>CS', 'CS>RLN'], t: 'Nav2 속도 명령', d: '✉️ /cmd_vel_nav = (0.12 m/s, 0.30 rad/s), 20Hz. 같은 선으로 /plan도 받습니다(경로 오차 계산용).' },
       { e: ['DDC>RLN', 'IMB>RLN', 'RLN>TM', 'TM>VS'], t: '뒷단 RL 보정', d: '/odom·/imu로 실제 움직임을 보니 카펫에서 경로를 4cm 벗어남 → Δ(+0.02, +0.05) → (0.14, 0.35). /speed_limit 상한 0.15 안이라 통과.' },
       { e: ['VS>CMN', 'BF>CMN'], t: '안전 — 가속 제한 → 충돌 감시', d: 'velocity_smoother가 가속을 자르고, collision_monitor가 몸 뺀 점구름으로 의자까지 거리를 봅니다(0.5m — SlowZone 0.3m 밖이라 통과).' },
       { e: ['CMN>DDC', 'DDC>HWI'], t: '최종 /cmd_vel', d: 'controller_manager 안의 diff_drive_controller가 받아 바퀴 각속도 command로 바꿉니다 (좌 2.72, 우 5.76 rad/s).' },
@@ -66,7 +66,7 @@ const ARCH_FLOWS: Flow[] = [
       { e: ['CO>GRC', 'GRC>HWI'], t: '그리퍼', d: '🎬 /gripper_controller/gripper_cmd (ParallelGripperCommand)는 coordinator가 직접 보냅니다 (MoveIt 경유 아님). gripper_controller가 gripper_left_joint command를 씁니다.' },
       { e: ['HWI>HW', 'HW>HWI'], t: '팔 모터로', d: '같은 OpenCR 시리얼로 팔 관절 목표를 쓰고 현재값(위치·속도·전류·온도)을 읽습니다.' },
       { e: ['HWI>JSB', 'JSB>ASM', 'ASM>CO'], t: '안전 감시는 항상', d: 'joint_state_broadcaster가 낸 /joint_states를 arm_safety_monitor가 계속 봅니다. 이상이 없으면 조용합니다.' },
-      { e: ['CO>NAV', 'CO>MG#2', 'CO>GRC'], t: '사람에게 가서 내려놓기', d: '컵을 든 채 이동 → place(위로 이동 후 그리퍼 벌리기). 경로는 위 이동 단계와 같습니다 (든 채 footprint 확장은 TODO).' },
+      { e: ['CO>BT', 'CO>MG#2', 'CO>GRC'], t: '사람에게 가서 내려놓기', d: '컵을 든 채 이동 → place(위로 이동 후 그리퍼 벌리기). 경로는 위 이동 단계와 같습니다 (든 채 footprint 확장은 TODO).' },
       { e: ['CO>VLM'], t: '완료 보고', d: '✉️ /task/status 완료 — VLM은 다음 명령을 기다립니다.' },
       { e: ['CO>UI', 'UI>U'], t: '사람에게 알림', d: '✉️ /robot/say → user_input이 터미널에 "컵 가져왔어요" (음성 voice_ui 자리). 끝.' },
     ],
@@ -74,12 +74,12 @@ const ARCH_FLOWS: Flow[] = [
   {
     label: '베이스 속도 명령 한 주기 (20Hz)',
     steps: [
-      { e: ['NAV>RLN'], t: 'Nav2 controller', d: '경로를 따라가는 속도 /cmd_vel_nav를 냅니다.' },
+      { e: ['BT>CS', 'CS>RLN'], t: 'Nav2 controller', d: '경로를 따라가는 속도 /cmd_vel_nav를 냅니다.' },
       { e: ['DDC>RLN', 'IMB>RLN', 'NT>RLN', 'RLN>TM', 'TM>VS'], t: 'RL 보정', d: '/odom·/imu(실제 움직임)를 보고 Δ를 더한 뒤(±0.05m/s, ±0.10rad/s) /speed_limit 상한으로 다시 자릅니다.' },
       { e: ['VS>CMN', 'BF>CMN'], t: '가속 제한 → 충돌 감시', d: '갑작스러운 가속을 막고, 몸 뺀 점구름이 다각형(Approach·SlowZone)에 걸리면 감속·정지.' },
       { e: ['CMN>DDC', 'DDC>HWI'], t: 'diff_drive_controller', d: '/cmd_vel을 바퀴 각속도 command로 바꿉니다.' },
       { e: ['HWI>HW', 'HW>HWI'], t: '쓰고 읽기', d: 'BeebotSystemHardware가 바퀴 목표 속도를 쓰고, 실제 바퀴 회전과 IMU를 읽습니다.' },
-      { e: ['DDC>EKF', 'IMB>EKF', 'EKF>NAV'], t: '피드백', d: '/odom(diff_drive)·/imu(imu broadcaster) → EKF → /odometry/filtered. Nav2가 다음 명령을 계산할 때 현재 속도로 씁니다.' },
+      { e: ['DDC>EKF', 'IMB>EKF', 'EKF>CS'], t: '피드백', d: '/odom(diff_drive)·/imu(imu broadcaster) → EKF → /odometry/filtered. Nav2가 다음 명령을 계산할 때 현재 속도로 씁니다.' },
     ],
   },
   {
@@ -99,9 +99,9 @@ const ARCH_FLOWS: Flow[] = [
     steps: [
       { e: ['HW>HWI', 'HWI>IMB'], t: '바퀴·IMU 원자료', d: 'BeebotSystemHardware가 OpenCR에서 바퀴 회전과 IMU를 읽습니다.' },
       { e: ['DDC>EKF', 'IMB>EKF'], t: '/odom · /imu', d: 'diff_drive가 바퀴만으로 계산한 /odom, imu broadcaster의 /imu가 EKF로.' },
-      { e: ['EKF>NAV'], t: 'odom→base_footprint', d: 'EKF가 둘을 융합해 연속적인(대신 드리프트 있는) odom→base_footprint TF를 냅니다.' },
-      { e: ['PCH>PC', 'PC>RTAB', 'GC>RTAB', 'BF>RTAB', 'EKF>RTAB'], t: 'RTAB-Map 입력', d: 'pole_front_cam 컬러·depth(+ 스캔 자세일 때 gripper_cam) · 몸 뺀 점구름(scan_cloud) + 오도메트리(EKF의 odom TF)로 지도와 맞춰봅니다.' },
-      { e: ['RTAB>NAV'], t: 'map→odom', d: 'rtabmap이 드리프트를 상쇄하는 map→odom을 냅니다. 가끔 점프하지만 odom 쪽은 끊기지 않습니다 (맵핑·위치추정 탭 참고).' },
+      { e: ['EKF>CS'], t: 'odom→base_footprint', d: 'EKF가 둘을 융합해 연속적인(대신 드리프트 있는) odom→base_footprint TF를 냅니다.' },
+      { e: ['PCH>PC', 'PC>PRS', 'PRS>RXS', 'RXS>RTAB', 'GC>SCG', 'SCG>GRS', 'GRS>RXS', 'BF>PCA', 'PCA>RTAB', 'EKF>RTAB'], t: 'RTAB-Map 입력', d: 'pole_front_cam 컬러·depth(+ 스캔 자세일 때 gripper_cam) · 몸 뺀 점구름(scan_cloud) + 오도메트리(EKF의 odom TF)로 지도와 맞춰봅니다.' },
+      { e: ['RTAB>PS'], t: 'map→odom', d: 'rtabmap이 드리프트를 상쇄하는 map→odom을 냅니다. 가끔 점프하지만 odom 쪽은 끊기지 않습니다 (맵핑·위치추정 탭 참고).' },
     ],
   },
   {
@@ -112,7 +112,7 @@ const ARCH_FLOWS: Flow[] = [
       { e: ['CO>MG#2', 'CO>GRC'], t: '2순위 C 재시도 → 또 실패', d: 'VLM을 부르지 않고 coordinator가 직접 다음 후보로. 실행 세부는 coordinator의 권한입니다.' },
       { e: ['CO>VLM'], t: '재계획 요청', d: '✉️ /task/status (step 2, FAILED, reason: grasp_failed_all). 후보를 다 써서 이제 VLM 차례입니다.' },
       { e: ['PER>VLM', 'VLM>CO'], t: 'VLM이 새 계획', d: '지금 보이는 물체(/tracked_objects)를 다시 보고 ✉️ /task/sub_goals — 예) [navigate(테이블 옆, 컵 방향으로 정렬), pick(컵 3), navigate(사람), place].' },
-      { e: ['CO>NAV'], t: '새 계획 실행 — 다른 방향으로 이동', d: '검증 후 🎬 /navigate_to_pose 새 접근 위치. 팔이 5축(OM-X 4축 + 손목 roll)이라 컵이 팔 평면 안에 있어야 옆 파지가 되므로 방향이 중요합니다.' },
+      { e: ['CO>BT'], t: '새 계획 실행 — 다른 방향으로 이동', d: '검증 후 🎬 /navigate_to_pose 새 접근 위치. 팔이 5축(OM-X 4축 + 손목 roll)이라 컵이 팔 평면 안에 있어야 옆 파지가 되므로 방향이 중요합니다.' },
       { e: ['GC>GS', 'CO>GS'], t: '새 위치에서 후보 다시', d: '장면을 갱신하고 gripper_cam 새 점구름으로 📞 /score_grasps를 다시 — 예) [D 0.81, B 0.70].' },
       { e: ['CO>MG', 'CO>MG#2', 'CO>GRC'], t: '다시 집기 → 성공', d: '📞 plan + 🎬 execute 후보 D → 그리퍼 닫기 → 파지 성공. 성공하면 원래 계획대로 사람에게 전달하러 이어갑니다.' },
       { e: ['CO>UI', 'UI>U'], t: '재계획도 실패하면 — 알리고 정지', d: 'pick 단계가 두 번째로 실패(같은 단계 2회 연속)하면 ✉️ /robot/say → "컵을 잡을 수 없어요" 표시 후 정지. 이건 재계획을 해 보고도 안 될 때만입니다.' },
@@ -121,12 +121,12 @@ const ARCH_FLOWS: Flow[] = [
   {
     label: '이동 실패 → 복구 → 재계획',
     steps: [
-      { e: ['CO>NAV'], t: '이동 중 막힘', d: '🎬 /navigate_to_pose 진행 중, 의자가 통로를 막아 경로가 안 나오거나 로봇이 제자리에 갇힙니다.' },
-      { e: ['NAV>RLN', 'RLN>TM', 'TM>VS', 'VS>CMN', 'CMN>DDC'], t: 'Nav2가 먼저 스스로 복구', d: 'bt_navigator가 Spin·BackUp·Wait 복구를 시도합니다. 복구 중 속도 명령도 같은 안전 체인을 거칩니다 (BackUp은 0.1m 이하).' },
-      { e: ['CO>NAV'], t: '복구도 실패 → ABORTED', d: '정해진 재시도 횟수를 넘기면 NavigateToPose가 ABORTED로 끝나고, 결과가 coordinator에 돌아옵니다.' },
+      { e: ['CO>BT'], t: '이동 중 막힘', d: '🎬 /navigate_to_pose 진행 중, 의자가 통로를 막아 경로가 안 나오거나 로봇이 제자리에 갇힙니다.' },
+      { e: ['BT>CS', 'CS>RLN', 'RLN>TM', 'TM>VS', 'VS>CMN', 'CMN>DDC'], t: 'Nav2가 먼저 스스로 복구', d: 'bt_navigator가 Spin·BackUp·Wait 복구를 시도합니다. 복구 중 속도 명령도 같은 안전 체인을 거칩니다 (BackUp은 0.1m 이하).' },
+      { e: ['CO>BT'], t: '복구도 실패 → ABORTED', d: '정해진 재시도 횟수를 넘기면 NavigateToPose가 ABORTED로 끝나고, 결과가 coordinator에 돌아옵니다.' },
       { e: ['CO>VLM'], t: '실패 보고', d: '✉️ /task/status (step 1, FAILED, reason: nav_failed). VLM은 FAILED를 받으면 재계획합니다.' },
       { e: ['VLM>CO'], t: '재계획', d: '✉️ /task/sub_goals 다시 — 예) "테이블 반대편으로 접근", "의자를 피해 다른 방향". coordinator가 다시 검증합니다.' },
-      { e: ['CO>NAV'], t: '새 목표로 재시도', d: '🎬 /navigate_to_pose (새 접근 위치).' },
+      { e: ['CO>BT'], t: '새 목표로 재시도', d: '🎬 /navigate_to_pose (새 접근 위치).' },
       { e: ['CO>UI', 'UI>U'], t: '또 실패하면 알리고 정지', d: '같은 단계가 2회 연속 실패하면 ✉️ /robot/say → "테이블까지 갈 수 없어요" 표시.' },
     ],
   },
@@ -139,7 +139,14 @@ const SENSE_FLOWS: Flow[] = [
       { e: ['PCH>PC'], t: '카메라 → 드라이버', d: '카메라는 🔌 USB 3로 realsense2_camera 드라이버에 붙습니다. 카메라 자체는 토픽을 내지 않고, 토픽은 드라이버 노드가 발행합니다.' },
       { e: ['PC>PER', 'PC>PER#2'], t: '영상 + depth → perception', d: '컬러 영상·camera_info와 컬러에 정렬된 depth가 30Hz(best_effort)로 들어갑니다. 정렬(align_depth)이 돼 있어야 픽셀마다 거리를 바로 읽습니다.' },
       { e: ['JS>RSP', 'RSP>PER'], t: '카메라가 어디 있나 (TF)', d: '/joint_states → robot_state_publisher → /tf. perception이 카메라 좌표의 물체를 map 기준으로 바꿀 때 이 TF를 씁니다.' },
-      { e: ['PER>O2'], t: '추적 결과 발행', d: '✉️ /tracked_objects 10Hz(reliable) — 두 카메라를 융합한 id·class_name·map 기준 위치·크기·색·태그. VLM·coordinator·grasp_scorer·signal_decoder가 같은 물체를 id로 가리킵니다. 바코드·QR은 /mission/qr로.' },
+      { e: ['PER>O2'], t: '추적 결과 발행', d: '✉️ /tracked_objects 10Hz(reliable) — 두 카메라를 융합한 id·class_name·map 기준 위치·크기·색·태그. VLM·coordinator·grasp_scorer가 같은 물체를 id로 가리키고, signal_decoder는 신호등 색을 읽습니다. 바코드·QR은 /mission/qr로.' },
+    ],
+  },
+  {
+    label: '신호등 → 미션 답 (인지가 해석까지)',
+    steps: [
+      { e: ['PER>SD'], t: '신호등 색', d: 'perception이 /tracked_objects의 traffic_light에 color(red·yellow·green·off · 두 색 이상 동시 = all)를 프레임마다 싣습니다.' },
+      { e: ['SD>O2'], t: '깜빡임 해석 → 미션 토픽', d: '같은 perception 패키지의 signal_decoder가 깜빡임을 시간축으로 쌓아 1·2·3단계를 읽고 ✉️ /mission/signal {color, count, sum, dest_tag, raw}로 냅니다. 바코드 → /mission/qr와 같은 자리 — plan은 받아서 계획만.' },
     ],
   },
   {
@@ -206,8 +213,7 @@ const PLAN_FLOWS: Flow[] = [
   {
     label: '신호등 암호 미션 — 읽기 → 계획',
     steps: [
-      { e: ['TO>SD'], t: '신호등을 시간축으로', d: 'signal_decoder가 /tracked_objects의 traffic_light color(red·yellow·green·off·all)를 이어 보며 단계(세 색 동시 = 구분)를 나눕니다.' },
-      { e: ['SD>VLM'], t: '미션 답', d: '✉️ /mission/signal {color, count, sum, dest_tag, raw} — 확정될 때마다 (transient_local).' },
+      { e: ['SD>VLM'], t: '미션 답 받기', d: '✉️ /mission/signal {color, count, sum, dest_tag, raw} — 신호 해석은 인지(perception signal_decoder, 1 센서·인지 탭) 몫이고, planner는 확정된 답만 받습니다 (transient_local).' },
       { e: ['VLM>CO'], t: '규칙으로 계획', d: '번호를 모르면 inspect(퍽 윗면 태그) → 합이 맞는 조합 → pick·place tray → navigate 목적지 장소 → pick tray·place. VLM 없이 planner 규칙.' },
       { e: ['CO>O4a', 'CO>O4b', 'CO>O3a'], t: '실행', d: 'inspect는 손끝을 퍽 위 inspect_height_m로, tray는 로봇 뒤 적재함 칸(tray_slots)에 싣고 꺼냅니다.' },
       { e: ['CO>VLM'], t: '수납 확인', d: '/task/status SUCCEEDED마다 다음 판단 — 옮긴 뒤와 verify_period_s마다 목적지에 퍽이 있는지 보고 다시 옮깁니다.' },
@@ -361,7 +367,7 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 
 | 계층 | 역할 | 대표 노드 | 결정 주기 | 학습 |
 | --- | --- | --- | --- | --- |
-| ① 작업 계획 | 무엇을, 어떤 순서로 | vlm_task_planner (+ user_input 입력, signal_decoder 신호등 암호) | 명령·최종 실패마다 (수 초) | 사전학습 VLM, 추가 학습 없음 |
+| ① 작업 계획 | 무엇을, 어떤 순서로 | vlm_task_planner (+ user_input 입력 · 신호등 암호 답은 perception signal_decoder가 /mission/signal로) | 명령·최종 실패마다 (수 초) | 사전학습 VLM, 추가 학습 없음 |
 | ② 임무 관리 | 검증·실행·재시도·안전 규칙 | coordinator (+ state_manager 모드·상태, explorer 자동 탐사) | 이벤트마다 | 없음 |
 | ③ 앞단 판단 보조 | 어떤 방식으로 할지 고르기 | grasp_scorer, rl_nav_tuner | pick 직전 1회 / 1~2초에 1회 | 지도학습 / 강화학습(또는 규칙) |
 | ④ 확정 실행 | 궤적·속도 계산, 충돌 회피 | Nav2, MoveIt 2 (MTC는 TODO), RTAB-Map, EKF | 20~100Hz | 없음 |
@@ -404,6 +410,7 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 ${F}mermaid
 flowchart TB
     U(((사람)))
+    CLI["🛠️ operator_tool<br/>운영자 CLI (tool/run-cli)"]
     subgraph EXT["외부 서비스 (ROS 바깥)"]
         SIM["🖥️ simulator (SIL)<br/>장면 렌더·플랜트"]
         AIS["🖥️ ai-service<br/>호스트 VLM 서버"]
@@ -418,27 +425,44 @@ flowchart TB
         GC["📦 realsense2_camera<br/>gripper_cam 드라이버"]
         PER["🛠️ perception"]
         BF["🛠️ body_filter<br/>자기 몸 점 제거"]
+        SD["🛠️ signal_decoder<br/>신호등 암호 → 미션 답"]
     end
     subgraph S1["① 작업 계획"]
         UI["🛠️ user_input<br/>텍스트 명령 입력"]
         VLM["🛠️ vlm_task_planner"]
-        SD["🛠️ signal_decoder<br/>신호등 암호 → 미션 답"]
     end
     subgraph S2["② 임무 관리"]
         CO["🛠️ coordinator"]
         SM["🛠️ state_manager<br/>상태 주인"]
         EXP["🛠️ explorer<br/>자동 탐사 (프론티어)"]
+        DA["📦 diagnostic_aggregator<br/>/diagnostics → 계층별 묶음 (bringup)"]
+        ALL(["모든 🛠️ 노드 · 📦 Nav2·controller_manager<br/>/diagnostics"])
     end
     subgraph S3["③ 앞단 판단 보조"]
         GS["🛠️ grasp_scorer"]
         NT["🛠️ rl_nav_tuner"]
     end
     subgraph S4["④ 확정 실행"]
-        MG["📦 move_group<br/>plan + execute"]
-        NAV["📦 Nav2<br/>bt_navigator · planner · controller"]
-        RTAB["📦 rtabmap<br/>RGB-D SLAM<br/>매핑 · 위치추정 모드"]
-        EKF["📦 robot_localization<br/>ekf_node<br/>휠 + IMU 융합"]
-        COST["📦 costmap_2d<br/>local: voxel · global: static + obstacle"]
+        MG["📦 move_group<br/>plan + execute<br/>(use_moveit — bringup 기본 켬)"]
+        subgraph N2["📦 Nav2 (ros_system nav2_nodes · 서버를 직접 띄움)"]
+            BT["📦 bt_navigator<br/>NavigateToPose 행동 트리"]
+            PS["📦 planner_server<br/>+ global_costmap"]
+            CS["📦 controller_server<br/>+ local_costmap · DWB"]
+            BS["📦 behavior_server<br/>후진 · 회전 · 대기"]
+            COST["📦 costmap_2d<br/>local: voxel · global: static + obstacle"]
+            LMN["📦 lifecycle_manager_navigation<br/>planner·controller·behavior·bt (map 필요)"]
+        end
+        subgraph RT["📦 RTAB-Map (이름공간 /rtabmap)"]
+            SCG["🛠️ scan_cam_gate<br/>스캔 자세일 때만 gripper_cam 통과"]
+            PRS["📦 pole_rgbd_sync<br/>rgbd_sync"]
+            GRS["📦 gripper_rgbd_sync<br/>rgbd_sync"]
+            RXS["📦 rgbdx_sync<br/>카메라 둘 묶음"]
+            PCA["📦 scan_cloud_merge<br/>point_cloud_aggregator"]
+            RTAB["📦 rtabmap<br/>RGB-D SLAM<br/>매핑 · 위치추정 모드"]
+            MS["📦 map_saver<br/>map_saver_server (bringup)"]
+            LMS["📦 lifecycle_manager_map_saver"]
+        end
+        EKF["📦 robot_localization<br/>ekf_filter_node<br/>휠 + IMU 융합"]
     end
     subgraph S5["⑤ 뒷단 보정"]
         RLN["🛠️ rl_nav_correction"]
@@ -448,10 +472,13 @@ flowchart TB
         TM["📦 twist_mux<br/>자동·수동 선택"]
         VS["📦 velocity_smoother"]
         CMN["📦 collision_monitor"]
+        LMB["📦 lifecycle_manager_base<br/>velocity_smoother · collision_monitor<br/>(odom만 있으면 뜸)"]
         MC["🛠️ manual_control<br/>수동 패스스루 · 모드별 안전 전환"]
 
     end
     subgraph S7["⑦ 하드웨어"]
+        RSP["📦 robot_state_publisher<br/>URDF → /robot_description · /tf"]
+        SPW["📦 spawner<br/>컨트롤러 6개 올리고 끝남 (1회)"]
         subgraph CM["📦 controller_manager (ros2_control_node · 한 프로세스 100Hz)"]
             JTC["📦 arm_controller<br/>JointTrajectoryController"]
             RLA["🛠️ rl_arm_correction<br/>chainable controller (ml)"]
@@ -466,6 +493,12 @@ flowchart TB
         end
     end
     U -->|"⌨️ 명령 입력"| UI
+    U -->|"⌨️ 수동 조작"| CLI
+    CLI -->|"✉️ /cmd/operation_mode · /cmd/e_stop<br/>/cmd/map_mode · /cmd/restart"| SM
+    CLI -->|"✉️ /cmd/manual/cmd_vel · arm<br/>· reboot_motors"| MC
+    ALL -->|"✉️ /diagnostics<br/>(diagnostic_msgs/<br/>DiagnosticArray)"| DA
+    DA -->|"✉️ /diagnostics_agg<br/>(사람이 보는 것 — 노드는 의존 안 함)"| CLI
+    DA -.->|"✉️ /diagnostics_agg<br/>→ 상태 패널"| SIM
     SIM -->|"✉️ /cmd/manual/cmd_vel<br/>(조작 창)"| MC
     SIM -->|"✉️ /cmd/operation_mode<br/>(조작 창)"| SM
     SIM -->|"✉️ /cmd/map_mode<br/>(SLAM 패널)"| SM
@@ -490,20 +523,42 @@ flowchart TB
     SIM -.->|"📁 가상 시리얼 C/S<br/>(fake_opencr — faker 기본)"| HWI
     GC -->|"✉️ /gripper_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| PER
     GC -->|"✉️ /gripper_cam/depth<br/>/color/points<br/>(sensor_msgs/<br/>PointCloud2)<br/>gripper_cam_pointcloud:=true일 때"| GS
-    PC -->|"✉️ /pole_front_cam/color ·<br/>aligned_depth_to_color<br/>→ rgbd_sync<br/>(sensor_msgs/Image)"| RTAB
-    GC -.->|"✉️ /gripper_cam color · depth<br/>scan_cam_gate 거침<br/>(지도 만들 때 스캔 자세만)"| RTAB
-    RTAB -->|"✉️ /map · /tf map→odom<br/>(nav_msgs/<br/>OccupancyGrid ·<br/>tf2_msgs/TFMessage)"| NAV
+    PC -->|"✉️ /pole_front_cam/color ·<br/>aligned_depth_to_color · camera_info<br/>(sensor_msgs/Image)"| PRS
+    GC -->|"✉️ /gripper_cam/color<br/>· camera_info"| GRS
+    GC -.->|"✉️ /gripper_cam depth · points<br/>(지도 만들 때 스캔 자세만 의미)"| SCG
+    JSB -->|"✉️ /joint_states<br/>스캔 자세인가"| SCG
+    SCG -->|"✉️ …/image_scan<br/>(아니면 0 depth)"| GRS
+    SCG -->|"✉️ …/points_scan<br/>(아니면 빈 점구름)"| PCA
+    PRS -->|"✉️ /rtabmap/rgbd_image0<br/>(rtabmap_msgs/RGBDImage)"| RXS
+    GRS -->|"✉️ /rtabmap/rgbd_image1"| RXS
+    RXS -->|"✉️ /rtabmap/rgbd_images<br/>(rtabmap_msgs/RGBDImages)"| RTAB
+    PCA -->|"✉️ /rtabmap/scan_cloud<br/>(base_footprint)"| RTAB
+    RTAB -->|"✉️ /map"| MS
+    LMS -.->|"📞 lifecycle<br/>change_state"| MS
+    CLI -.->|"📞 /map_saver/save_map<br/>(nav2_msgs/srv/SaveMap)"| MS
+    SIM -.->|"📞 /map_saver/save_map<br/>(지도 저장 버튼)"| MS
+    RTAB -->|"✉️ /map · /tf map→odom<br/>(nav_msgs/<br/>OccupancyGrid ·<br/>tf2_msgs/TFMessage)"| PS
     DDC -->|"✉️ /odom<br/>(nav_msgs/Odometry)"| EKF
     IMB -->|"✉️ /imu<br/>(sensor_msgs/Imu)"| EKF
     EKF -->|"✉️ /odometry/filtered<br/>(nav_msgs/Odometry)"| RTAB
-    EKF -->|"✉️ /odometry/filtered ·<br/>/tf odom→base_footprint<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| NAV
+    EKF -->|"✉️ /odometry/filtered ·<br/>/tf odom→base_footprint<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| CS
     PC -->|"✉️ /pole_front_cam/depth<br/>/color/points<br/>(sensor_msgs/<br/>PointCloud2)"| BF
     BF -->|"✉️ /pole_front_cam/depth<br/>/color/points_filtered<br/>팔·차체 뺀 점구름<br/>(sensor_msgs/<br/>PointCloud2)"| COST
-    BF -->|"✉️ …/points_filtered<br/>→ point_cloud_aggregator<br/>→ /rtabmap/scan_cloud"| RTAB
-    COST ---|"🧩 planner·controller<br/>서버 안 플러그인<br/>(같은 프로세스)"| NAV
+    BF -->|"✉️ …/points_filtered<br/>(sensor_msgs/<br/>PointCloud2)"| PCA
+    COST ---|"🧩 서버 안 플러그인<br/>(같은 프로세스)"| PS
+    COST --- CS
+    BT ==>|"🎬 compute_path_to_pose"| PS
+    BT ==>|"🎬 follow_path"| CS
+    BT ==>|"🎬 backup · spin · wait"| BS
+    LMN -.->|"📞 lifecycle<br/>change_state"| BT
+    LMN -.-> PS
+    LMN -.-> CS
+    LMN -.-> BS
+    LMB -.->|"📞 lifecycle<br/>change_state"| VS
+    LMB -.-> CMN
     PER -->|"✉️ /tracked_objects · /mission/qr<br/>(perception/<br/>TrackedObjectArray ·<br/>std_msgs/String)"| VLM
     PER -->|"✉️ /tracked_objects<br/>신호등 색<br/>(perception/<br/>TrackedObjectArray)"| SD
-    SD -->|"✉️ /mission/signal<br/>(plan/MissionSignal)"| VLM
+    SD -->|"✉️ /mission/signal<br/>(perception/MissionSignal)"| VLM
     PER -->|"✉️ /tracked_objects<br/>(perception/<br/>TrackedObjectArray)"| CO
     PER -->|"✉️ /tracked_objects<br/>대상 컵 위치·크기<br/>(perception/<br/>TrackedObjectArray)"| GS
     VLM -->|"✉️ /task/sub_goals<br/>(plan/<br/>SubGoalArray)"| CO
@@ -512,14 +567,14 @@ flowchart TB
     CO -.->|"📞 /score_grasps<br/>(ml/srv/<br/>ScoreGrasps)"| GS
     COST -->|"✉️ /local_costmap/costmap<br/>통로 폭·최근접 장애물<br/>(nav_msgs/OccupancyGrid)"| NT
     EKF -->|"✉️ /odometry/filtered<br/>현재 속도<br/>(nav_msgs/Odometry)"| NT
-    NAV -->|"✉️ /plan<br/>남은 거리<br/>(nav_msgs/Path)"| NT
-    NT -.->|"✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)<br/>📞 set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| NAV
+    PS -->|"✉️ /plan<br/>남은 거리<br/>(nav_msgs/Path)"| NT
+    NT -.->|"✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)<br/>📞 set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| CS
     NT -->|"✉️ /speed_limit<br/>재클리핑 상한<br/>(nav2_msgs/SpeedLimit)"| RLN
     CO -.->|"📞 /plan_kinematic_path ·<br/>/clear_octomap · /apply_planning_scene<br/>(moveit_msgs/srv/<br/>GetMotionPlan 등)"| MG
     CO ==>|"🎬 /execute_trajectory<br/>(moveit_msgs/action/<br/>ExecuteTrajectory)"| MG
-    CO ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| NAV
+    CO ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| BT
     SM -->|"✉️ /state/operation_mode<br/>EXPLORE"| EXP
-    EXP ==>|"🎬 /navigate_to_pose<br/>프론티어 목표"| NAV
+    EXP ==>|"🎬 /navigate_to_pose<br/>프론티어 목표"| BT
     EXP -->|"✉️ /explore/result<br/>DONE · FAILED → AUTO"| SM
     MG ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| JTC
     CO -->|"✉️ /arm_controller/joint_trajectory<br/>시작 자세 (MoveIt 없이)<br/>(trajectory_msgs/<br/>JointTrajectory)"| JTC
@@ -532,7 +587,8 @@ flowchart TB
     DDC -->|"🧩 command<br/>wheel_*_joint/velocity"| HWI
     HWI -->|"🧩 state<br/>모든 관절 pos·vel·effort"| JSB
     HWI -->|"🧩 state<br/>imu"| IMB
-    NAV -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| RLN
+    CS -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| RLN
+    BS -->|"✉️ /cmd_vel_nav<br/>후진·회전"| RLN
     DDC -->|"✉️ /odom<br/>실제 속도<br/>(nav_msgs/Odometry)"| RLN
     IMB -->|"✉️ /imu<br/>실제 각속도<br/>(sensor_msgs/Imu)"| RLN
     RLN -->|"✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| TM
@@ -546,6 +602,11 @@ flowchart TB
     JSB -->|"✉️ /joint_states<br/>현재 팔 각도 (스캔 자세 확인)"| CO
     JSB -->|"✉️ /joint_states<br/>수동 팔 기준값"| MC
     JSB -->|"✉️ /joint_states<br/>OpenCR 살아 있나"| SM
+    JSB -->|"✉️ /joint_states"| RSP
+    RSP -->|"✉️ /robot_description<br/>(URDF)"| CM
+    RSP -->|"✉️ /robot_description · /tf<br/>몸 모양·관절 위치"| BF
+    SPW -.->|"📞 load · configure · activate<br/>(controller_manager_msgs/srv)"| CM
+    SPW -.->|"끝나면 기동<br/>(OnProcessExit)"| MG
     SM -.->|"📞 /rtabmap/rtabmap/set_mode_*<br/>· load_database<br/>(지도 모드·지도 바꾸기)"| RTAB
     ASM -.->|"📞 cancel_goal<br/>이상 시에만<br/>(action_msgs/srv/<br/>CancelGoal)"| JTC
     ASM -->|"✉️ /arm_safety_event<br/>(control/<br/>ArmSafetyEvent)"| CO
@@ -557,11 +618,12 @@ flowchart TB
     MC -.->|"📞 /beebotsystem/set_arm_torque<br/>TEACH면 팔·그리퍼 토크 끔<br/>(std_srvs/srv/SetBool)"| HWI
     MC -.->|"📞 /collision_monitor/toggle<br/>MANUAL이면 끔(통과) · 나가면 켬<br/>(nav2_msgs/srv/Toggle)"| CMN
 ${CLS}
-    class PER,BF,CO,PC,GC,UI,SD,EXP,MG,TM,MC,SM std;
+    class PER,BF,CO,PC,GC,UI,SD,EXP,MG,TM,MC,SM,RSP,SPW,SCG,PRS,GRS,RXS,PCA,LMN,LMB,MS,LMS,DA,CLI std;
+    class ALL ext;
     class AIS,SIM,FC ext;
     class VLM ai;
     class GS,NT,RLA,RLN rl;
-    class NAV,RTAB,EKF,COST,JTC,GRC,DDC,JSB,IMB,HWI std;
+    class BT,PS,CS,BS,RTAB,EKF,COST,JTC,GRC,DDC,JSB,IMB,HWI std;
     class ASM,VS,CMN safe;
     class PCH,GCH,HW hw;
     style EXT fill:#ffffff,stroke:#8A97A0,stroke-dasharray:4 3
@@ -574,6 +636,8 @@ ${CLS}
     style S6 fill:#f8fafc,stroke:#94a3b8
     style S7 fill:#f8fafc,stroke:#94a3b8
     style CM fill:#eef2ff,stroke:#6366f1,stroke-dasharray:4 3
+    style N2 fill:#eef2ff,stroke:#6366f1,stroke-dasharray:4 3
+    style RT fill:#eef2ff,stroke:#6366f1,stroke-dasharray:4 3
     style SHS fill:#fffde7,stroke:#f9a825,stroke-width:2px
     style SHA fill:#fffde7,stroke:#f9a825,stroke-width:2px
 ${F}
@@ -585,18 +649,22 @@ ${F}
 - **rl_arm_correction은 ROS 노드가 아니다.** controller_manager 안에서 JTC 바로 뒤에 체인으로 붙는 컨트롤러 플러그인(ml/RlArmCorrection)이다 — arm_controller의 command_joints가 rl_arm_correction/joint1~5 (컨트롤러 탭 참고).
 - **그리퍼는 MoveIt을 거치지 않는다.** moveit_controllers.yaml엔 arm_controller만 있고, ParallelGripperCommand 액션은 coordinator·manual_control이 직접 호출한다.
 - **controller_manager 한 주기(100Hz)는 read → update → write.** move_group의 팔 궤적(→ arm_controller)과 collision_monitor의 \`/cmd_vel\`(→ diff_drive_controller)은 언제든 도착해 다음 update에서 쓰인다. update에서 broadcaster·diff_drive가 \`/joint_states\`(→ arm_safety_monitor 전류 감시 · coordinator 현재 각도 · manual_control 수동 기준 · state_manager 연결 확인 · scan_cam_gate · robot_state_publisher · move_group)와 \`/odom\`·\`/imu\`(→ EKF, rl_nav_correction)를 발행하고, JTC 목표에 rl_arm_correction의 Δ를 더해 write로 BeebotSystemHardware가 OpenCR에 C 줄로 보낸다. arm_safety_monitor의 궤적 취소만 주기와 무관한 비동기 호출이다. 단계별로는 **흐름 따라가기 → "팔 한 주기"**에서 볼 수 있다.
+- **bringup이 띄우는 노드도 전부 있다.** ros_system 묶음 외에 bringup이 직접 올리는 map_saver(+ lifecycle_manager_map_saver — RTAB-Map일 때 \`/map_saver/save_map\`)와 diagnostic_aggregator(모든 노드의 \`/diagnostics\` → \`/diagnostics_agg\`, 사람이 보는 것). 운영자 CLI(operator_tool)는 bringup 밖에서 따로 띄우는 노드다.
+- **ros_system.launch.py가 띄우는 노드는 전부 이 도식에 있다.** robot_state_publisher · controller_manager(+ spawner 1회 · 컨트롤러 6) · move_group(spawner가 끝난 뒤) · twist_mux · RealSense ×2 · ekf_filter_node · RTAB-Map 묶음(scan_cam_gate · pole/gripper_rgbd_sync · rgbdx_sync · scan_cloud_merge · rtabmap) · Nav2 서버(planner · controller · behavior · bt_navigator · velocity_smoother · collision_monitor)와 lifecycle 관리자 둘. 관리자를 둘로 나눈 이유: 바퀴 명령 체인(base)은 odom만 있으면 뜨게 — 하나로 묶으면 지도가 없을 때 global_costmap 실패로 수동 조작까지 막혔음.
 - **controller_manager는 하나.** 베이스·팔·그리퍼·IMU가 같은 OpenCR에 붙어 있으므로 hardware component 하나(BeebotSystemHardware)에 컨트롤러 6개를 함께 올린다.
 - **LiDAR가 없으므로 /scan도 없다.** 장애물은 pole_front_cam PointCloud2에서 **body_filter**(perception 패키지)가 팔·차체 점(URDF collision + padding)을 뺀 \`/pole_front_cam/depth/color/points_filtered\`를 Nav2 costmap(local voxel · global obstacle layer)·collision_monitor에 넣는다. 원본을 그대로 넣으면 카메라에 찍힌 자기 팔이 로봇 둘레 벽으로 남는다. MoveIt octomap 센서는 아직 설정 전.
 - **SLAM·위치추정은 RTAB-Map.** pole_front_cam RGB-D(+ 지도 만들 때 팔을 scan_pose에 세운 gripper_cam — scan_cam_gate가 그 자세일 때만 통과) + 몸 뺀 점구름(point_cloud_aggregator → \`/rtabmap/scan_cloud\`, 격자 /map·ICP) + EKF 오도메트리로 지도를 만들고(매핑 모드), 운영 중에는 같은 DB로 위치만 추정한다(위치추정 모드). slam_toolbox·amcl은 LaserScan이 필요해서 쓰지 않는다 (Nav2·SLAM 섹션의 3-1).
 - **TF 발행자는 딱 둘로 나뉜다.** map→odom은 rtabmap, odom→base_footprint는 robot_localization EKF(바퀴 \`/odom\` + \`/imu\` 융합)만 낸다. EKF의 \`/odometry/filtered\`는 rtabmap의 오도메트리 입력이자 Nav2 controller의 현재 속도 입력이다. diff_drive_controller는 \`enable_odom_tf: false\`로 TF를 내지 않는다 (베이스·TF 섹션 참고).
 - **gripper_cam도 RealSense.** perception의 두 번째 눈(퍽 윗면 AprilTag는 coordinator \`inspect\`로 위에서 봐야 읽힘), 파지 직전 근접 점구름(grasp_scorer, \`gripper_cam_pointcloud:=true\`일 때), 지도 만들 때는 두 번째 SLAM 카메라.
-- **/state는 state_manager 하나만.** 조작 모드(AUTO·MANUAL·EXPLORE)·비상정지(\`/state/emergency\` → twist_mux 잠금)·지도 모드를 정하고, BeebotSystemHardware의 \`/motor_status\`로 \`/state/devices/<이름>\`을 낸다. EXPLORE면 explorer가 프론티어로 Nav2를 보내고 끝나면 \`/explore/result\`. 신호등 암호는 signal_decoder가 \`/tracked_objects\`의 신호등 색을 시간축으로 읽어 \`/mission/signal\`로 planner에 준다.
+- **/state는 state_manager 하나만.** 조작 모드(AUTO·MANUAL·EXPLORE)·비상정지(\`/state/emergency\` → twist_mux 잠금)·지도 모드를 정하고, BeebotSystemHardware의 \`/motor_status\`로 \`/state/devices/<이름>\`을 낸다. EXPLORE면 explorer가 프론티어로 Nav2를 보내고 끝나면 \`/explore/result\`. 신호등 암호는 인지 쪽 signal_decoder(perception 패키지)가 \`/tracked_objects\`의 신호등 색을 시간축으로 읽어 \`/mission/signal\`로 planner에 준다.
 `,
-    links: { S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
+    links: { S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
     nodes: {
       PCH: 'realsense_pole', PC: 'realsense_pole', GCH: 'realsense_gripper', GC: 'realsense_gripper', PER: 'perception', BF: 'body_filter',
       UI: 'user_input', VLM: 'vlm_task_planner', SD: 'signal_decoder', CO: 'coordinator', EXP: 'explorer', GS: 'grasp_scorer', NT: 'rl_nav_tuner',
-      MG: 'move_group', NAV: 'bt_navigator', RTAB: 'rtabmap', EKF: 'ekf', COST: 'costmap',
+      MG: 'move_group', BT: 'bt_navigator', PS: 'planner_server', CS: 'controller_server', BS: 'behavior_server', LMN: 'lifecycle_manager', LMB: 'lifecycle_manager',
+      RTAB: 'rtabmap', SCG: 'scan_cam_gate', PRS: 'rgbd_sync', GRS: 'rgbd_sync', RXS: 'rgbd_sync', PCA: 'point_cloud_aggregator', EKF: 'ekf', COST: 'costmap',
+      RSP: 'robot_state_publisher', SPW: 'controller_manager', MS: 'map_saver', LMS: 'lifecycle_manager', DA: 'diagnostic_aggregator',
       RLA: 'rl_arm_correction', RLN: 'rl_nav_correction', ASM: 'arm_safety_monitor', TM: 'twist_mux', VS: 'velocity_smoother', CMN: 'collision_monitor',
       MC: 'manual_control', SM: 'state_manager',
       JTC: 'arm_controller', GRC: 'gripper_controller', DDC: 'diff_drive_controller', JSB: 'joint_state_broadcaster', IMB: 'imu_sensor_broadcaster',
@@ -610,7 +678,7 @@ ${F}
     md: `
 ## 1. 센서·인지
 
-센서 장치(육각형)는 🔌 USB로 드라이버 노드에 연결되고, **토픽은 드라이버 노드가 발행**합니다. 카메라 드라이버가 영상·depth·camera_info를 내고, perception이 두 카메라의 검출을 map 기준 3D로 융합·추적합니다. 점구름은 body_filter가 자기 몸(팔·차체)을 뺀 뒤 Nav2·RTAB-Map으로 갑니다. gripper_cam은 팔과 함께 움직이므로 **영상 시각의 TF**로 변환해야 위치가 어긋나지 않습니다(\`lookupTransform\`에 header.stamp 사용, 메시지 필터로 동기화).
+센서 장치(육각형)는 🔌 USB로 드라이버 노드에 연결되고, **토픽은 드라이버 노드가 발행**합니다. 카메라 드라이버가 영상·depth·camera_info를 내고, perception이 두 카메라의 검출을 map 기준 3D로 융합·추적합니다. 점구름은 body_filter가 자기 몸(팔·차체)을 뺀 뒤 Nav2·RTAB-Map으로 갑니다. 신호등 깜빡임은 signal_decoder가 해석해 미션 토픽(\`/mission/signal\`)으로 냅니다 — 바코드(\`/mission/qr\`)처럼 인지가 해석까지 하고 plan은 받아서 계획만. gripper_cam은 팔과 함께 움직이므로 **영상 시각의 TF**로 변환해야 위치가 어긋나지 않습니다(\`lookupTransform\`에 header.stamp 사용, 메시지 필터로 동기화).
 
 
 ${F}mermaid
@@ -625,7 +693,8 @@ flowchart TB
     BF["🛠️ body_filter<br/>자기 몸 점 제거"]
     SCG["🛠️ scan_cam_gate<br/>스캔 자세일 때만 통과"]
     PCA["📦 point_cloud_aggregator<br/>점구름 둘 → base_footprint"]
-    O2(["→ 2 vlm · coordinator · grasp_scorer<br/>· signal_decoder"])
+    SD["🛠️ signal_decoder<br/>신호등 깜빡임 → 미션 답"]
+    O2(["→ 2 vlm · coordinator · grasp_scorer"])
     O3(["→ 3 rtabmap<br/>SLAM · 위치추정"])
     O4(["→ 3 costmap · 5 collision_monitor"])
     O5(["→ 2 grasp_scorer<br/>근접 파지 점구름"])
@@ -649,8 +718,10 @@ flowchart TB
     SCG -->|"✉️ /gripper_cam/depth<br/>/color/points_scan<br/>(sensor_msgs/<br/>PointCloud2)"| PCA
     PCA -->|"✉️ /rtabmap/scan_cloud<br/>(sensor_msgs/<br/>PointCloud2)"| O3
     PER -->|"✉️ /tracked_objects · /mission/qr<br/>(perception/<br/>TrackedObjectArray ·<br/>std_msgs/String)"| O2
+    PER -->|"✉️ /tracked_objects<br/>신호등 색"| SD
+    SD -->|"✉️ /mission/signal<br/>(perception/<br/>MissionSignal)"| O2
 ${CLS}
-    class PER,BF,SCG,PCA,RSP,GC,PC std;
+    class PER,BF,SCG,PCA,SD,RSP,GC,PC std;
     class GCH,PCH hw;
     class JS,O2,O3,O4,O5 ext;
 ${F}
@@ -669,11 +740,13 @@ ${F}
 | /rtabmap/scan_cloud | 토픽 | sensor_msgs/PointCloud2 (base_footprint) | point_cloud_aggregator → rtabmap | 몸 뺀 pole_front_cam + 스캔 자세 gripper_cam — 격자 /map · ICP |
 | /tf, /tf_static | 토픽 | tf2_msgs/TFMessage | robot_state_publisher, rtabmap, ekf → 전체 | 10~100Hz |
 | /tracked_objects | 토픽 | perception/TrackedObjectArray | perception → vlm_task_planner, coordinator, grasp_scorer, signal_decoder | 10Hz · reliable |
+| /mission/signal | 토픽 | perception/MissionSignal | signal_decoder → vlm_task_planner | 신호등 암호 답 {color, count, sum, dest_tag, raw} — 확정될 때마다 · reliable + transient_local |
 | \`/perception/<cam>/detections\` | 토픽 | perception/TrackedObjectArray | perception → (시뮬레이터·디버그) | 추론마다(카메라당 ≤4Hz) — 융합 전 카메라별 검출 |
 | /mission/qr | 토픽 | std_msgs/String | perception → vlm_task_planner | 읽은 바코드·QR 내용이 바뀔 때만 · reliable + transient_local |
 
 - **TrackedObject 한 항목:** id, class_name, confidence, map 기준 pose(+공분산), size, last_seen, cameras(본 카메라 — 빈 배열이면 기억만), px(VLM 마킹용 픽셀), color, details(tag·content 등). VLM·coordinator·grasp_scorer가 같은 물체를 id로 가리킨다. 정의 원문은 \`perception/msg/TrackedObject.msg\`.
 - **body_filter:** \`/robot_description\`(URDF collision)과 TF로 팔·차체 모양을 알고, 그 안(+ padding)의 점을 지운다. 원본 점구름을 costmap·RTAB-Map에 그대로 넣으면 카메라에 찍힌 자기 팔이 로봇 둘레 장애물로 남아 출발점부터 경로가 막혔다 (실측).
+- **signal_decoder:** \`/tracked_objects\`의 신호등 색을 시간축으로 쌓아 1단계(색·개수) · 2단계(점수 합 = 번호 합) · 3단계(노랑 횟수 → 목적지 태그)를 읽는다. 단계 구분(두 색 이상 동시 \`all\` · 꺼짐)·점수·목적지 태그는 \`perception.yaml\` — 발제 미정이라 제안값.
 - **scan_cam_gate:** 지도 만들 때 coordinator가 팔을 scan_pose로 세우면 gripper_cam이 왼쪽 뒤를 보는 두 번째 고정 카메라가 된다. 팔이 그 자세에 멈춰 있을 때만 depth·점구름을 통과시켜, 움직이는 카메라가 지도를 망치지 않게 한다.
 - **/scan이 없다:** LiDAR를 쓰지 않으므로 LaserScan 기반 노드(slam_toolbox, amcl)는 빠진다. 거리 정보는 전부 RealSense depth에서 온다. 굳이 스캔이 필요하면 \`pointcloud_to_laserscan\`(target_frame=base_footprint, 높이 범위 지정)을 쓰고, \`depthimage_to_laserscan\`은 하향 카메라에선 바닥을 장애물로 잡으니 쓰지 않는다.
 - **RealSense 2대 운용:** 드라이버를 카메라마다 하나씩 띄우고 \`serial_no\`로 구분, \`camera_namespace:=''\`·\`camera_name:=pole_front_cam / gripper_cam\`으로 토픽을 위 이름에 맞춘다. 가능하면 서로 다른 USB 3 컨트롤러에 꽂고, 대역폭·CPU를 아끼려 640×360 · 15fps(depth decimation 2)로 둔다. 둘 다 \`align_depth.enable:=true\`, IR 스트림 끔, \`publish_tf:=false\`(카메라 프레임은 URDF가 냄).
@@ -683,7 +756,7 @@ ${F}
     nodes: {
       GCH: 'realsense_gripper', GC: 'realsense_gripper', PCH: 'realsense_pole', PC: 'realsense_pole',
       RSP: 'robot_state_publisher', JS: 'joint_state_broadcaster', PER: 'perception',
-      BF: 'body_filter', SCG: 'scan_cam_gate', PCA: 'point_cloud_aggregator',
+      BF: 'body_filter', SCG: 'scan_cam_gate', PCA: 'point_cloud_aggregator', SD: 'signal_decoder',
       O2: 'coordinator', O3: 'rtabmap', O4: 'costmap', O5: 'grasp_scorer',
     },
     flows: SENSE_FLOWS,
@@ -694,7 +767,7 @@ ${F}
     md: `
 ## 2. 계획·임무
 
-VLM이 작업 순서를 정하고, coordinator가 검증한 뒤 Nav2·MoveIt·그리퍼 컨트롤러에 **액션·서비스**로 실행을 맡깁니다. 앞단 학습 노드 두 개가 여기에 붙습니다. 신호등 암호 미션은 signal_decoder가 읽은 답(\`/mission/signal\`)으로 planner가 규칙대로 계획합니다.
+VLM이 작업 순서를 정하고, coordinator가 검증한 뒤 Nav2·MoveIt·그리퍼 컨트롤러에 **액션·서비스**로 실행을 맡깁니다. 앞단 학습 노드 두 개가 여기에 붙습니다. 신호등 암호 미션은 인지(1 — perception signal_decoder)가 읽은 답(\`/mission/signal\`)으로 planner가 규칙대로 계획합니다.
 
 ${F}mermaid
 flowchart TB
@@ -706,7 +779,7 @@ flowchart TB
     SE(["/arm_safety_event ← 4"])
     AIS(["ai-service (호스트 VLM, HTTP)"])
     VLM["🛠️ vlm_task_planner"]
-    SD["🛠️ signal_decoder<br/>신호등 암호 → 미션 답"]
+    SD(["/mission/signal ← 1 signal_decoder"])
     CO["🛠️ coordinator<br/>검증 · 실행 · 재시도 · 안전규칙"]
     GS["🛠️ grasp_scorer"]
     NT["🛠️ rl_nav_tuner"]
@@ -721,12 +794,11 @@ flowchart TB
     UI -->|"🔊 안내 (터미널 텍스트)<br/>“컵 가져왔어요”<br/>“컵을 잡을 수 없어요”"| USER
     TO --> VLM
     TO --> CO
-    TO --> SD
     ST --> CO
     ST --> VLM
     SE --> CO
     VLM -->|"🌐 HTTP 계획 요청<br/>명령 · 물체 · 카메라 영상"| AIS
-    SD -->|"✉️ /mission/signal<br/>(plan/MissionSignal)"| VLM
+    SD -->|"✉️ /mission/signal<br/>(perception/MissionSignal)"| VLM
     VLM -->|"✉️ /task/sub_goals<br/>(plan/<br/>SubGoalArray)"| CO
     CO -->|"✉️ /task/status<br/>(plan/<br/>TaskStatus)"| VLM
     CO -.->|"📞 /score_grasps<br/>(ml/srv/<br/>ScoreGrasps)"| GS
@@ -740,9 +812,9 @@ flowchart TB
     CO -->|"✉️ /arm_controller<br/>/joint_trajectory<br/>시작 자세 (MoveIt 없이)<br/>(trajectory_msgs/<br/>JointTrajectory)"| O4c
 ${CLS}
     class VLM ai;
-    class CO,UI,SD std;
+    class CO,UI std;
     class GS,NT rl;
-    class TO,ST,NI,SE,AIS,O3a,O3b,O4a,O4b,O4c ext;
+    class TO,SD,ST,NI,SE,AIS,O3a,O3b,O4a,O4b,O4c ext;
 ${F}
 
 | 이름 | 종류 | 메시지 타입 | 보내는 쪽 → 받는 쪽 | 주기 · QoS |
@@ -752,7 +824,7 @@ ${F}
 | /task/sub_goals | 토픽 | plan/SubGoalArray | vlm_task_planner → coordinator | 계획마다 · reliable + transient_local |
 | /task/status | 토픽 | plan/TaskStatus | coordinator → vlm_task_planner, user_input | 단계 완료·실패 시 · reliable + transient_local |
 | /mission/qr | 토픽 | std_msgs/String | perception → vlm_task_planner | 내용이 바뀔 때만 · reliable + transient_local |
-| /mission/signal | 토픽 | plan/MissionSignal | signal_decoder → vlm_task_planner | 확정될 때마다 · reliable + transient_local |
+| /mission/signal | 토픽 | perception/MissionSignal | signal_decoder (perception) → vlm_task_planner | 확정될 때마다 · reliable + transient_local |
 | /score_grasps | 서비스 | ml/srv/ScoreGrasps | coordinator → grasp_scorer | pick 직전 1회 |
 | /speed_limit | 토픽 | nav2_msgs/SpeedLimit | rl_nav_tuner → controller_server, rl_nav_correction | 프리셋 변경 시 · reliable |
 | /controller_server/set_parameters | 서비스 | rcl_interfaces/srv/SetParameters | rl_nav_tuner → controller_server | 프리셋 변경 시 |
@@ -1373,10 +1445,10 @@ ${F}
 | --- | --- | --- | --- |
 | perception | 직접 | ROS 2 노드 Python (perception) | YOLO 검출, 두 카메라 융합·칼만 추적, AprilTag·바코드·QR, /tracked_objects · /mission/qr |
 | body_filter | 직접 | ROS 2 노드 C++ (perception) | URDF collision으로 자기 몸 점 제거 → /pole_front_cam/depth/color/points_filtered |
+| signal_decoder | 직접 | ROS 2 노드 C++ (perception) | 신호등 색을 시간축으로 읽어 /mission/signal (인지가 해석해 미션 토픽으로) |
 | user_input | 직접 | ROS 2 노드 (plan) | 텍스트 명령 → /cmd/user_command, /robot/say·/task/status 표시 (voice_ui 자리) |
 | vlm_task_planner | 직접 | ROS 2 노드 (plan) | ai-service HTTP 호출, 신호등 미션 규칙 계획 → /task/sub_goals |
 | coordinator | 직접 | ROS 2 노드 (plan) | 계획 검증, Nav2·MoveIt·그리퍼 호출, 재시도, 적재함(tray), 시작·스캔 자세 |
-| signal_decoder | 직접 | ROS 2 노드 (plan) | 신호등 색을 시간축으로 읽어 /mission/signal |
 | explorer | 직접 | ROS 2 노드 (plan) | EXPLORE 모드에서 프론티어로 /navigate_to_pose, /explore/result |
 | grasp_scorer | 직접 | ROS 2 서비스 노드 (ml) | /score_grasps 응답 — 모델·IK 확인은 TODO (지금 대상 위치 하나) |
 | rl_nav_tuner | 직접 | ROS 2 노드 (ml) | 상황 요약 → 프리셋 선택 → /speed_limit + set_parameters (판단 TODO) |
@@ -1412,8 +1484,8 @@ ${F}text
 lv2_module6/ros2_ws/src/
 ├── bringup/      # 전체 launch (ros_system + 🛠 노드) · diagnostics.yaml
 ├── ros_system/   # 📦 기동 launch · controllers/nav2/ekf/twist_mux yaml · config/moveit · scan_cam_gate
-├── perception/   # perception_node · body_filter · msg TrackedObject(Array)
-├── plan/         # user_input · vlm_task_planner · coordinator · explorer · signal_decoder · msg SubGoal(Array)·TaskStatus·MissionSignal
+├── perception/   # perception_node · body_filter · signal_decoder · msg TrackedObject(Array)·MissionSignal
+├── plan/         # user_input · vlm_task_planner · coordinator · explorer · msg SubGoal(Array)·TaskStatus
 ├── ml/           # grasp_scorer · rl_nav_tuner · rl_nav_correction · rl_arm_correction(플러그인) · srv ScoreGrasps
 ├── control/      # BeebotSystemHardware(플러그인) · arm_safety_monitor · manual_control · msg ArmSafetyEvent·MotorStatus
 ├── manager/      # state_manager (/state/... 주인)
