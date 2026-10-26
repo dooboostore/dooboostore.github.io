@@ -77,6 +77,56 @@ export const markdownParse = async (scope: Element, src: string): Promise<void> 
 
 let mermaidSeq = 0;
 
+// 끌어서 가로·세로 이동 — 큰 도식은 가로 스크롤바가 도식 맨 아래라 안 보인다.
+// 5px 넘게 끌었을 때만 이동으로 보고, 그 뒤 click은 막아 노드·선 클릭과 겹치지 않게 한다.
+const enableDragPan = (box: HTMLElement) => {
+  let sx = 0, sy = 0, sl = 0, st = 0, down = false, moved = false;
+  const win = box.ownerDocument.defaultView;
+  box.style.cursor = 'grab';
+  box.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse' || e.button !== 0 || box.scrollWidth <= box.clientWidth) return;  // 터치는 기본 스크롤
+    down = true; moved = false;
+    sx = e.clientX; sy = e.clientY; sl = box.scrollLeft; st = win?.scrollY ?? 0;
+  });
+  box.addEventListener('pointermove', e => {
+    if (!down) return;
+    const dx = e.clientX - sx, dy = e.clientY - sy;
+    if (!moved && Math.abs(dx) + Math.abs(dy) < 5) return;
+    if (!moved) { moved = true; box.setPointerCapture(e.pointerId); box.style.cursor = 'grabbing'; }
+    box.scrollLeft = sl - dx;
+    win?.scrollTo({ top: st - dy });
+  });
+  const up = () => { down = false; box.style.cursor = 'grab'; };
+  box.addEventListener('pointerup', up);
+  box.addEventListener('pointercancel', up);
+  box.addEventListener('click', e => { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);
+};
+
+// 브라우저 확대(Ctrl +)에 도식도 같이 커지게 — mermaid 기본은 width=100%라 확대해도 칸 폭에 맞춰 줄어들어 그대로 보인다.
+// 처음 자리를 잡았을 때 폭(칸에 맞춘 크기, 원래 크기보다 크게는 안 함)을 px로 고정한다.
+// px는 확대 배율을 따라가므로 이후 확대하면 커지고, 칸을 넘치면 pre.mermaid 안에서 가로 스크롤.
+// staging(문서 밖)에서 그리므로 폭은 화면에 붙은 뒤 ResizeObserver로 한 번만 잰다.
+const pinMermaidWidth = (svg: SVGSVGElement) => {
+  const natural = svg.viewBox?.baseVal?.width || parseFloat(svg.style.maxWidth) || 0;
+  const box = svg.parentElement;
+  if (!natural || !box || typeof ResizeObserver === 'undefined') return;
+  box.style.overflowX = 'auto';
+  // 넓어진 svg가 칸(과 flex·grid 조상)을 밀어 넓히면 스크롤이 안 생기고 화면 밖으로 잘린다 → 칸 폭은 내용과 무관하게
+  box.style.contain = 'inline-size';
+  box.style.maxWidth = '100%';
+  enableDragPan(box);
+  const ro = new ResizeObserver(entries => {
+    const room = entries[0]?.contentRect.width ?? 0;
+    if (room <= 0) return;
+    ro.disconnect();
+    svg.style.maxWidth = 'none';
+    svg.style.width = `${Math.min(natural, room)}px`;
+    svg.style.height = 'auto';
+    svg.removeAttribute('width');
+  });
+  ro.observe(box);
+};
+
 // 선(엣지) 강조 — 마우스를 올리면 두껍게, 클릭하면 선택 고정(여러 개 가능)하고 나머지는 흐리게.
 // 스타일을 SVG 안에 넣어서 어느 shadow DOM 안에 그려져도 똑같이 동작한다.
 const EDGE_STYLE = `
@@ -219,6 +269,7 @@ export const runMermaid = async (scope: ParentNode): Promise<void> => {
       el.innerHTML = svg;
       bindFunctions?.(el);
       const svgEl = el.querySelector('svg');
+      if (svgEl) pinMermaidWidth(svgEl);
       if (svgEl && svgEl.querySelector('path.flowchart-link')) enableEdgeHighlight(svgEl);
       el.setAttribute('data-processed', 'true');
     } catch (e) {
