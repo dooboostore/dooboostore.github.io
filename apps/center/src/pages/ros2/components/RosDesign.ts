@@ -407,6 +407,8 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 
 > 👆 **섹터 영역을 누르면 해당 상세 섹션으로, 노드를 누르면 노드 사전의 해당 카드로 이동합니다.**
 
+<p class="rd-slam"><b>SLAM·인지 구성</b> <button class="rd-slam-btn active" data-slam="rtab">RTAB-Map + YOLO (현재)</button> <button class="rd-slam-btn" data-slam="isaac">🟪 cuVSLAM + nvblox + YOLO·CenterPose (Isaac ROS 전환안)</button></p>
+
 ${F}mermaid
 flowchart TB
     U(((사람)))
@@ -423,7 +425,7 @@ flowchart TB
         end
         PC["📦 realsense2_camera<br/>pole_front_cam 드라이버"]
         GC["📦 realsense2_camera<br/>gripper_cam 드라이버"]
-        PER["🛠️ perception"]
+        PER["🛠️ perception<br/>YOLO 검출 · 칼만 융합 추적"]
         BF["🛠️ body_filter<br/>자기 몸 점 제거"]
         SD["🛠️ signal_decoder<br/>신호등 암호 → 미션 답"]
     end
@@ -658,7 +660,7 @@ ${F}
 - **gripper_cam도 RealSense.** perception의 두 번째 눈(퍽 윗면 AprilTag는 coordinator \`inspect\`로 위에서 봐야 읽힘), 파지 직전 근접 점구름(grasp_scorer, \`gripper_cam_pointcloud:=true\`일 때), 지도 만들 때는 두 번째 SLAM 카메라.
 - **/state는 state_manager 하나만.** 조작 모드(AUTO·MANUAL·EXPLORE)·비상정지(\`/state/emergency\` → twist_mux 잠금)·지도 모드를 정하고, BeebotSystemHardware의 \`/motor_status\`로 \`/state/devices/<이름>\`을 낸다. EXPLORE면 explorer가 프론티어로 Nav2를 보내고 끝나면 \`/explore/result\`. 신호등 암호는 인지 쪽 signal_decoder(perception 패키지)가 \`/tracked_objects\`의 신호등 색을 시간축으로 읽어 \`/mission/signal\`로 planner에 준다.
 `,
-    links: { S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
+    links: { IR: 'sense', S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
     nodes: {
       PCH: 'realsense_pole', PC: 'realsense_pole', GCH: 'realsense_gripper', GC: 'realsense_gripper', PER: 'perception', BF: 'body_filter',
       UI: 'user_input', VLM: 'vlm_task_planner', SD: 'signal_decoder', CO: 'coordinator', EXP: 'explorer', GS: 'grasp_scorer', NT: 'rl_nav_tuner',
@@ -669,6 +671,7 @@ ${F}
       MC: 'manual_control', SM: 'state_manager',
       JTC: 'arm_controller', GRC: 'gripper_controller', DDC: 'diff_drive_controller', JSB: 'joint_state_broadcaster', IMB: 'imu_sensor_broadcaster',
       HWI: 'hw_interface', HW: 'hw_interface',
+      RLP: 'rl_residual_controller', VSLAM: 'cuvslam', NVB: 'nvblox', YOLO: 'isaac_yolo', CPOSE: 'centerpose', UNET: 'peoplesemsegnet',
     },
     flows: ARCH_FLOWS,
   },
@@ -689,7 +692,7 @@ flowchart TB
     PC["📦 realsense2_camera<br/>pole_front_cam 드라이버"]
     RSP["📦 robot_state_publisher"]
     JS(["/joint_states ← 4"])
-    PER["🛠️ perception<br/>detect · fusion · tracking"]
+    PER["🛠️ perception<br/>YOLO detect · fusion · tracking"]
     BF["🛠️ body_filter<br/>자기 몸 점 제거"]
     SCG["🛠️ scan_cam_gate<br/>스캔 자세일 때만 통과"]
     PCA["📦 point_cloud_aggregator<br/>점구름 둘 → base_footprint"]
@@ -2048,6 +2051,123 @@ ${F}
 
 const ORDER = Object.keys(SECTIONS) as Section[];
 
+/*
+ * 전체 아키텍처 "Isaac ROS 전환안" — 같은 도식에서 SLAM 묶음과 인지 검출만 바꿔 끼운다.
+ * 원본 md를 고쳐 만들므로 나머지 노드·선은 원본과 항상 같다.
+ */
+// RLN: 별도 보정 노드 → controller_server 안 FollowPath 플러그인(RLP)으로 옮김
+const ISAAC_DROP = new Set(['SCG', 'PRS', 'GRS', 'RXS', 'PCA', 'RTAB', 'MS', 'LMS', 'RLN']);
+const ISAAC_RT = `        subgraph RT["🟪 Isaac ROS SLAM·3D 지도 (GPU 컨테이너)"]
+            VSLAM["📦 visual_slam_node<br/>cuVSLAM — 스테레오 VIO + 루프 클로저<br/>매핑 · 위치추정(load_map)"]
+            NVB["📦 nvblox_human_node<br/>human_with_static_tsdf<br/>고정 지도 + 사람(동적) 지도"]
+        end
+`;
+// UNET(사람 분할)은 nvblox 사람 모드용 — 마스크는 첫 카메라(camera_0 = pole_front_cam)만 지원
+const ISAAC_EDGES = `    PC -->|"✉️ /pole_front_cam/infra1·infra2<br/>/image_rect_raw · camera_info<br/>(sensor_msgs/Image, emitter off)"| VSLAM
+    IMB -.->|"✉️ /imu → visual_slam/imu<br/>(enable_imu_fusion)"| VSLAM
+    VSLAM -->|"✉️ visual_slam/tracking/odometry<br/>(nav_msgs/Odometry)"| EKF
+    VSLAM -->|"✉️ /tf map→odom<br/>(odom→base TF는 끔)"| PS
+    PC -->|"✉️ aligned_depth_to_color<br/>· color · camera_info<br/>(sensor_msgs/Image)"| NVB
+    PC -->|"✉️ /pole_front_cam/color<br/>· camera_info"| UNET
+    UNET -->|"✉️ unet/raw_segmentation_mask<br/>→ mask/image · camera_info<br/>(sensor_msgs/Image, 사람=1)"| NVB
+    RLP ---|"🧩 FollowPath 플러그인<br/>(nav2_core::Controller 상속 · 같은 프로세스)"| CS
+    IMB -->|"✉️ /imu<br/>실제 각속도 (플러그인이 구독)"| RLP
+    NVB -->|"✉️ ~/dynamic_map_slice<br/>사람까지 거리 (사람 층만)<br/>(nvblox_msgs/DistanceMapSlice)"| RLP
+    PER -->|"✉️ /tracked_objects<br/>사람 위치·속도 (class=person)<br/>(perception/TrackedObjectArray)"| RLP
+    CS -->|"✉️ /cmd_vel_nav<br/>MPPI + Δ<br/>(geometry_msgs/<br/>TwistStamped)"| TM
+    BS -->|"✉️ /cmd_vel_nav<br/>후진·회전"| TM
+    NVB -->|"✉️ ~/combined_map_slice<br/>고정 + 사람(decay)<br/>(nvblox_msgs/DistanceMapSlice)<br/>→ 🧩 NvbloxCostmapLayer"| COST
+    SM -.->|"🎬 visual_slam/save_map<br/>· load_map_and_localize<br/>(지도 저장·불러오기)"| VSLAM
+    PC -->|"✉️ /pole_front_cam/color"| YOLO
+    GC -->|"✉️ /gripper_cam/color"| YOLO
+    YOLO -->|"✉️ detections_output<br/>(vision_msgs/<br/>Detection2DArray)"| PER
+    GC -->|"✉️ /gripper_cam/color<br/>· camera_info"| CPOSE
+    CPOSE -->|"✉️ centerpose/detections<br/>컵 6DoF 자세·크기<br/>(vision_msgs/<br/>Detection3DArray)"| PER
+    CPOSE -->|"✉️ centerpose/detections"| GS
+    classDef nv fill:#ede9fe,stroke:#7c3aed,color:#1b1b1b,stroke-width:2px;
+    class VSLAM,NVB,YOLO,CPOSE,UNET nv;
+    class RLP rl;
+    style RLP stroke:#7c3aed,stroke-width:3px
+    style RT fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
+    style IR fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
+`;
+// 전환안 전용 흐름 — nvblox 지도가 Nav2 컨트롤러를 거쳐 PPO 보정까지 가는 길
+const ISAAC_FLOWS: Flow[] = [
+  {
+    label: '사람 피하기 — nvblox → Nav2 컨트롤러(RL 플러그인)',
+    steps: [
+      { e: ['PC>NVB', 'PC>UNET', 'UNET>NVB'], t: '보고, 사람 가르기', d: 'pole_front_cam depth가 nvblox_human_node로, 같은 카메라 컬러는 PeopleSemSegNet으로 갑니다. 사람 픽셀 마스크를 받은 nvblox가 사람 depth만 동적 층으로 뺍니다.' },
+      { e: ['VSLAM>PS', 'VSLAM>EKF'], t: '어디서 봤나', d: 'cuVSLAM의 map→odom과 EKF의 odom→base_footprint로 영상 시각의 카메라 자세를 알아야 depth를 지도 위 제자리에 쌓습니다.' },
+      { e: ['NVB>COST'], t: '3D 지도 → costmap', d: '고정 ESDF와 사람 occupancy(decay)를 합친 ✉️ ~/combined_map_slice를 NvbloxCostmapLayer가 받아 local·global costmap에 칠합니다. 사람은 지나가면 금방 지워집니다.' },
+      { e: ['COST>PS', 'COST>CS', 'BT>CS'], t: 'Nav2가 경로·속도를 정한다', d: 'planner_server가 사람을 돌아가는 경로를, controller_server(DWB)가 그 경로를 따르는 속도를 계산합니다. 여기까지는 규칙 기반입니다.' },
+      { e: ['RLP>CS', 'COST>CS'], t: 'controller_server 안의 RL 플러그인', d: 'FollowPath 자리에 끼운 RlResidualController(nav2_core::Controller 상속)가 매 주기 computeVelocityCommands()로 불립니다. costmap(nvblox 레이어 포함)·경로·현재 위치·속도를 토픽이 아니라 함수 인자로 받습니다.' },
+      { e: ['NVB>RLP', 'PER>RLP', 'IMB>RLP', 'EKF>CS', 'NT>CS'], t: 'MPPI + PPO Δ — 벽과 사람을 따로 본다', d: 'costmap은 칸마다 비용 숫자 하나라 벽인지 사람인지 모릅니다. 그래서 사람은 따로 받습니다: nvblox ~/dynamic_map_slice(사람까지 거리)와 perception /tracked_objects(사람 위치·속도 — 다가오는지 비키는지). 플러그인은 MPPI 기본 속도에, 이 관측(벽 거리·사람 거리·사람 속도·경로 오차·속도·/imu)으로 PPO 정책(ONNX)을 추론한 Δ를 더합니다 — 사람 근처에선 더 멀리·천천히. /speed_limit은 setSpeedLimit()으로 바로 들어옵니다. 주기(20Hz) 안에 추론이 끝나야 합니다.' },
+      { e: ['CS>TM', 'TM>VS', 'VS>CMN', 'CMN>DDC'], t: '보정 뒤에도 안전 단계', d: 'controller_server가 바로 ✉️ /cmd_vel_nav(MPPI + Δ)를 냅니다 → twist_mux → velocity_smoother(가속 제한) → collision_monitor(멈춤 구역) → diff_drive_controller. PPO가 틀려도 뒤 단계가 막습니다.' },
+    ],
+  },
+];
+
+const ISAAC_NOTE = `
+### 🟪 Isaac ROS 전환안에서 바뀐 것
+
+| | 현재 (RTAB-Map + YOLO) | 전환안 (Isaac ROS) |
+| --- | --- | --- |
+| 위치추정 입력 | 컬러·depth 2대(rgbd_sync ×3) + 몸 뺀 점구름 + EKF | **pole_front_cam 스테레오 IR(infra1·2) + IMU** — 프로젝터(emitter)를 끄거나 번갈이 |
+| map→odom | rtabmap | **visual_slam_node (cuVSLAM)** · 시각 오도메트리는 EKF 입력에 추가 |
+| odom→base_footprint | EKF | EKF 그대로 — cuVSLAM의 \`publish_odom_to_base_tf: false\` |
+| 장애물 지도 | 2D /map (rtabmap) + voxel·obstacle 레이어 | **nvblox_human_node** (\`human_with_static_tsdf\`) — 고정 ESDF + 사람 occupancy를 합친 \`combined_map_slice\` → Nav2 \`NvbloxCostmapLayer\` (정적 /map 없음) |
+| PPO 보정 | rl_nav_correction **별도 노드** — controller 뒤에서 /cmd_vel_nav + Δ → /cmd_vel_corrected | **RlResidualController 플러그인** — controller_server 안 FollowPath 자리(\`nav2_core::Controller\` 상속), MPPI + Δ. costmap(nvblox 포함)·경로·속도를 함수 인자로 받고 노드·토픽 하나가 줄어듦 |
+| PPO가 사람을 아는 법 | (없음 — 점구름 속 장애물) | costmap은 벽·사람이 섞인 비용뿐이라 **사람은 따로**: nvblox \`~/dynamic_map_slice\`(거리) + perception \`/tracked_objects\`(위치·속도). 학습 환경에도 움직이는 사람과 같은 관측이 필요 |
+| 사람 | 점구름에 섞여 장애물로 남음 (지나가도 costmap에 흔적) | **PeopleSemSegNet**(isaac_ros_unet) 마스크로 사람만 동적 층에 — 고정 지도엔 안 박히고, 지나가면 decay로 금방 사라짐 |
+| 지도 저장·전환 | rtabmap.db · set_mode_* · map_saver | cuVSLAM \`save_map\`·\`load_map_and_localize\` 액션 |
+| 물체 검출 | perception 안 YOLO (CPU, model.pt) | **isaac_ros_yolov8** (TensorRT) → perception은 3D화·융합 추적만 |
+| 컵 자세 | 없음 (박스 중심 + depth 점) | **CenterPose** — gripper_cam으로 컵 6DoF·크기 → perception · grasp_scorer |
+| 사라지는 노드 | — | scan_cam_gate · rgbd_sync ×3 · point_cloud_aggregator · rtabmap · map_saver(+ 관리자) |
+| 하드웨어 | CPU로 충분 | **NVIDIA GPU 필수** (Jetson Orin급) · Isaac ROS composable 컨테이너 |
+
+> ⚠️ **확인할 것:** ① emitter를 끄면 같은 카메라의 depth(nvblox·perception)가 나빠진다 — on/off 번갈이 모드나 카메라 분리. ② odom→base를 EKF가 내면 cuVSLAM의 map→odom이 EKF odom과 맞는지 실기 검증. ③ nvblox는 depth 영상을 받으므로 body_filter(점구름) 대신 depth에서 자기 팔을 지워야 한다. ④ 파라미터·토픽 이름은 Isaac ROS 버전마다 다르다.
+
+아래 설명은 두 구성 공통이고, SLAM 관련 줄은 현재(RTAB-Map) 기준입니다. 흐름 따라가기의 SLAM 단계는 현재 구성 기준이라 전환안에선 일부 선이 강조되지 않습니다.
+`;
+const ISAAC_ARCH_MD = (() => {
+  const md = SECTIONS.arch.md;
+  const lines = md
+    .replace(/        subgraph RT\[[\s\S]*?\n        end\n/, ISAAC_RT)
+    .replace('        SD["🛠️ signal_decoder', `        subgraph IR["🟪 Isaac ROS 인지 (TensorRT)"]
+            YOLO["📦 isaac_ros_yolov8 ×2<br/>encoder → TensorRT → decoder"]
+            CPOSE["📦 CenterPose<br/>컵 6DoF 자세"]
+            UNET["📦 isaac_ros_unet<br/>PeopleSemSegNet<br/>사람 픽셀 분할"]
+        end
+        SD["🛠️ signal_decoder`)
+    .replace('PER["🛠️ perception<br/>YOLO 검출 · 칼만 융합 추적"]', 'PER["🛠️ perception<br/>검출 받아 3D화 · 칼만 융합 추적"]')
+    .replace('local: voxel · global: static + obstacle', 'local · global: nvblox 레이어')
+    .replace('CS["📦 controller_server<br/>+ local_costmap · DWB"]', 'CS["📦 controller_server<br/>+ local_costmap<br/>FollowPath = RL 플러그인"]')
+    .replace('    subgraph S5["⑤ 뒷단 보정"]\n        RLN["🛠️ rl_nav_correction"]\n    end\n', '')
+    .replace('            LMN["📦 lifecycle_manager_navigation', '            RLP["🛠️ RlResidualController (ml)<br/>FollowPath 플러그인<br/>MPPI + PPO Δ (ONNX)"]\n            LMN["📦 lifecycle_manager_navigation')
+    .replace('rd-slam-btn active" data-slam="rtab"', 'rd-slam-btn" data-slam="rtab"')
+    .replace('rd-slam-btn" data-slam="isaac"', 'rd-slam-btn active" data-slam="isaac"')
+    .split('\n');
+  const out: string[] = [];
+  for (const l of lines) {
+    // 빠지는 노드가 끝점인 선은 버린다
+    const m = l.match(/^\s*([A-Za-z]\w*)\s+(?:-->|-\.->|==>|---|~~~)/);
+    const to = l.match(/(\w+)\s*$/)?.[1];
+    if (m && (ISAAC_DROP.has(m[1]) || (to && ISAAC_DROP.has(to)))) continue;
+    // class 지정에서도 빼야 mermaid가 빈 노드를 새로 만들지 않는다
+    const c = l.match(/^(\s*class )([\w,]+)( \w+;)$/);
+    if (c) {
+      const ids = c[2].split(',').filter(id => !ISAAC_DROP.has(id));
+      if (ids.length) out.push(c[1] + ids.join(',') + c[3]);
+      continue;
+    }
+    if (l.trim() === 'style EXT fill:#ffffff,stroke:#8A97A0,stroke-dasharray:4 3') out.push(...ISAAC_EDGES.trimEnd().split('\n'));
+    out.push(l);
+  }
+  // style RT(원본)가 뒤에 오면 보라색을 덮으므로 원본 쪽을 뺀다
+  return out.filter(l => !['style RT fill:#eef2ff,stroke:#6366f1,stroke-dasharray:4 3', 'style S5 fill:#f8fafc,stroke:#94a3b8'].includes(l.trim())).join('\n')
+    .replace(/(\n```\n)(?![\s\S]*\n```\n)/, `$1${ISAAC_NOTE}`);
+})();
+
 export default (w: Window) => {
   const existing = w.customElements.get(tagName);
   if (existing) return tagName;
@@ -2060,6 +2180,7 @@ export default (w: Window) => {
     private section?: Section;
     private focusNode?: string;   // 노드 사전에서 스크롤할 카드 id
     private back?: Section;       // 노드 사전으로 오기 전 섹션 (?from=, 돌아가기 버튼)
+    private slam: 'rtab' | 'isaac' = 'rtab'; // 전체 아키텍처 SLAM·인지 구성 (?slam=isaac)
     private scrollMemo = new Map<string, number>(); // 화면(sec|node)별 마지막 스크롤 위치 — 뒤로가기 때 복원
 
     private static key(sec?: Section, node?: string) {
@@ -2072,14 +2193,18 @@ export default (w: Window) => {
       @swcAppRouteQueryParam('sec') secParam: string | null,
       @swcAppRouteQueryParam('node') nodeParam: string | null,
       @swcAppRouteQueryParam('from') fromParam: string | null,
+      @swcAppRouteQueryParam('slam') slamParam: string | null,
     ) {
       if (concept !== 'design') return;
       const sec: Section = secParam && secParam in SECTIONS ? (secParam as Section) : 'overview';
       const node = sec === 'catalog' && nodeParam && NODE_IDS.has(nodeParam) ? nodeParam : undefined;
       const from = sec === 'catalog' && fromParam && fromParam in SECTIONS && fromParam !== 'catalog' ? (fromParam as Section) : undefined;
-      if (sec === this.section && node === this.focusNode && from === this.back) return;
+      const slam = slamParam === 'isaac' ? 'isaac' : 'rtab';
+      const slamChanged = sec === 'arch' && slam !== this.slam;
+      this.slam = slam;
+      if (sec === this.section && node === this.focusNode && from === this.back && !slamChanged) return;
       const first = this.section === undefined;
-      const sameSection = sec === this.section && from === this.back;
+      const sameSection = sec === this.section && from === this.back && !slamChanged;
       this.back = from;
       this.section = sec;
       this.focusNode = node;
@@ -2112,7 +2237,22 @@ export default (w: Window) => {
         const from = this.section === 'catalog' ? this.back : this.section;
         if (from) q.set('from', from);
       }
+      if (sec === 'arch' && this.slam === 'isaac') q.set('slam', 'isaac');
       return { path: `/ros2?${q.toString()}`, scrollToTop: false };
+    }
+
+    /** 전체 아키텍처 SLAM·인지 구성 전환 — 같은 자리에서 도식만 바뀌도록 스크롤 위치를 기억해 둔다 */
+    @swcAppRouteGo
+    private goSlam(slam: 'rtab' | 'isaac') {
+      if (slam === this.slam) return false;
+      this.scrollMemo.set(RosDesign.key('arch'), w.scrollY);
+      return { path: `/ros2?concept=design&sec=arch${slam === 'isaac' ? '&slam=isaac' : ''}`, scrollToTop: false };
+    }
+
+    @addEventListener('.rd-slam-btn', 'click', { delegate: true })
+    onSlam(e: Event) {
+      const b = (e.target as HTMLElement).closest('.rd-slam-btn') as HTMLElement;
+      if (b?.dataset.slam) this.goSlam(b.dataset.slam as 'rtab' | 'isaac');
     }
 
     private async refresh() {
@@ -2127,10 +2267,10 @@ export default (w: Window) => {
         el.innerHTML = renderCatalog(this.back ? SECTIONS[this.back].label : undefined);
         return;
       }
-      await markdownParse(el, SECTIONS[sec].md);
+      await markdownParse(el, sec === 'arch' && this.slam === 'isaac' ? ISAAC_ARCH_MD : SECTIONS[sec].md);
       if (sec !== this.section) return;
       this.bindLinks(el, SECTIONS[sec].links, SECTIONS[sec].nodes);
-      this.mountFlow(el, SECTIONS[sec].flows);
+      this.mountFlow(el, sec === 'arch' && this.slam === 'isaac' ? [...ISAAC_FLOWS, ...ARCH_FLOWS] : SECTIONS[sec].flows);
     }
 
     /* ---------- 흐름 따라가기: 도식 위 컨트롤 바 (재생 중엔 화면 위에 붙음) ---------- */
@@ -2442,6 +2582,9 @@ export default (w: Window) => {
           .rd-guide { margin:8px 0 4px; padding:6px 14px; border-radius:16px; border:1.5px solid #3b82c4; background:#eff6ff; color:#1e3a8a; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer; }
           .rd-guide:hover { background:#dbeafe; }
           .rd-tab { margin:2px 4px 2px 0; padding:6px 14px; border-radius:16px; border:1.5px solid #3b82c4; background:#eff6ff; color:#1e3a8a; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer; }
+          .rd-slam { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:10px 0 !important; }
+          .rd-slam-btn { padding:6px 14px; border-radius:16px; border:1.5px solid #c4b5fd; background:#fff; color:#3b0764; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer; }
+          .rd-slam-btn.active { background:#7c3aed; border-color:#7c3aed; color:#fff; }
           .rd-tab:hover { background:#dbeafe; }
           .rd-cgroup { margin-top:22px !important; padding:4px 10px; background:#f0f9ff; border-left:4px solid #3b82c4; border-radius:0 6px 6px 0; }
           .rd-card { border:1px solid #e2e8f0; border-left:5px solid #2e7d32; border-radius:10px; padding:10px 14px; margin:12px 0; scroll-margin-top:52px; background:#fff; }

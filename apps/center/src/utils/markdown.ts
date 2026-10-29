@@ -250,6 +250,55 @@ const enableEdgeHighlight = (svg: SVGSVGElement) => {
   });
 };
 
+// 큰 도식은 컨테이너 폭에 맞춰 줄여 그리므로(max-width:100%) 브라우저 확대(Ctrl +)로는 같이 안 커진다
+// (페이지가 커지면 폭도 같이 줄어 상쇄됨) → 도식 자체 확대 버튼. 확대하면 가로는 도식 안에서 스크롤.
+const ZOOMS = [1, 1.5, 2, 3, 4]; // 1 = 폭에 맞춤
+const addZoom = (pre: HTMLElement, svg: SVGSVGElement) => {
+  if ((svg.viewBox?.baseVal?.width ?? 0) < 900) return; // 작은 도식은 맞춤으로 충분
+  const doc = pre.ownerDocument;
+  const bar = doc.createElement('div');
+  bar.className = 'mm-zoom';
+  bar.style.cssText = 'position:sticky;left:0;display:flex;gap:4px;justify-content:flex-end;align-items:center;margin-bottom:4px;font:12px sans-serif;';
+  const btn = (text: string, title: string) => {
+    const b = doc.createElement('button');
+    b.type = 'button';
+    b.textContent = text;
+    b.title = title;
+    b.setAttribute('aria-label', title);
+    b.style.cssText = 'min-width:30px;padding:3px 8px;border:1px solid #cbd5e1;border-radius:6px;background:#fff;color:#1e293b;font:inherit;font-weight:700;cursor:pointer;';
+    bar.append(b);
+    return b;
+  };
+  const out = btn('－', '도식 축소');
+  const label = btn('맞춤', '폭에 맞추기');
+  const inn = btn('＋', '도식 확대');
+  let i = 0;
+  const apply = (next: number) => {
+    // 확대해도 보던 곳(가운데)이 그대로 보이게 비율로 스크롤을 옮긴다
+    const cx = pre.scrollWidth ? (pre.scrollLeft + pre.clientWidth / 2) / pre.scrollWidth : 0.5;
+    i = Math.max(0, Math.min(ZOOMS.length - 1, next));
+    const z = ZOOMS[i];
+    if (z === 1) {
+      svg.style.removeProperty('width');
+      svg.style.maxWidth = '100%';
+      pre.style.removeProperty('overflow-x');
+    } else {
+      svg.style.width = `${pre.clientWidth * z}px`;
+      svg.style.maxWidth = 'none';
+      pre.style.overflowX = 'auto';
+    }
+    label.textContent = z === 1 ? '맞춤' : `${z * 100}%`;
+    out.disabled = i === 0;
+    inn.disabled = i === ZOOMS.length - 1;
+    pre.scrollLeft = cx * pre.scrollWidth - pre.clientWidth / 2;
+  };
+  out.addEventListener('click', e => { e.stopPropagation(); apply(i - 1); });
+  inn.addEventListener('click', e => { e.stopPropagation(); apply(i + 1); });
+  label.addEventListener('click', e => { e.stopPropagation(); apply(0); });
+  out.disabled = true;
+  svg.before(bar);
+};
+
 // scope 안 pre.mermaid를 SVG로 렌더. 브라우저에서만 동작(SSR no-op),
 // dynamic import라 mermaid 없을 땐 번들에 안 탐.
 export const runMermaid = async (scope: ParentNode): Promise<void> => {
@@ -271,6 +320,7 @@ export const runMermaid = async (scope: ParentNode): Promise<void> => {
       const svgEl = el.querySelector('svg');
       if (svgEl) pinMermaidWidth(svgEl);
       if (svgEl && svgEl.querySelector('path.flowchart-link')) enableEdgeHighlight(svgEl);
+      if (svgEl) addZoom(el as HTMLElement, svgEl);
       el.setAttribute('data-processed', 'true');
     } catch (e) {
       console.warn('[mermaid] render failed — leaving the source text', e);

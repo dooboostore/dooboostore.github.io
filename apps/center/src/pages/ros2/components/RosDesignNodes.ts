@@ -478,7 +478,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', ''],
     ],
     params: ['enabled (false면 Δ=0 통과)', 'max_vel_x: 0.26', 'max_vel_theta: 1.82', 'timeout_s: 0.2', 'Δ 한계: 선속도 ±0.05 · 각속도 ±0.10 (코드 고정)'],
-    notes: ['관측 벡터 순서·단위·정규화가 Isaac Lab 학습 환경과 완전히 같아야 한다.', '테스트베드는 faker fake_rl_nav_correction이 대신할 수 있다.'],
+    notes: ['관측 벡터 순서·단위·정규화가 Isaac Lab 학습 환경과 완전히 같아야 한다.', 'Isaac ROS 전환안에서는 이 노드 대신 controller_server 안 RlResidualController 플러그인(MPPI + Δ)을 쓴다.', '테스트베드는 faker fake_rl_nav_correction이 대신할 수 있다.'],
   },
   {
     id: 'twist_mux', name: 'twist_mux', tag: 'provided', pkg: 'twist_mux', form: 'ROS 2 노드', group: '베이스 명령 체인',
@@ -741,6 +741,104 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 발행', '/joint_states', 'sensor_msgs/JointState', 'robot_state_publisher, move_group, arm_safety_monitor, manual_control, coordinator, scan_cam_gate, state_manager', '100Hz'],
       ['✉️ 발행', '/dynamic_joint_states', 'control_msgs/msg/DynamicJointState', '디버그', ''],
     ],
+  },
+  // ── 전체 아키텍처 "cuVSLAM + nvblox" 전환안에만 있는 노드 (Isaac ROS, NVIDIA GPU 필요) ──
+  {
+    id: 'cuvslam', name: 'visual_slam_node (cuVSLAM)', tag: 'provided', pkg: 'isaac_ros_visual_slam', form: 'composable 노드 (GPU 컨테이너)', group: 'Isaac ROS 전환안 (GPU)',
+    role: 'GPU 스테레오 시각-관성 오도메트리(VIO) + SLAM. RealSense 적외선 카메라 두 장(infra1·infra2)과 IMU로 위치를 추적하고, 루프 클로저로 map→odom을 낸다. 지도는 save_map 액션으로 저장하고 load_map_and_localize로 불러와 위치만 추정한다. 전환안에서 rtabmap 묶음(rgbd_sync ×3 · scan_cam_gate · point_cloud_aggregator)을 대신한다.',
+    inputs: [
+      ['✉️ 구독', 'visual_slam/image_0 · image_1 ← /pole_front_cam/infra1·infra2/image_rect_raw', 'sensor_msgs/Image', 'realsense2_camera (pole_front_cam)', '스테레오 IR · 프로젝터 점무늬가 추적을 방해 → emitter 끄거나 on/off 번갈이'],
+      ['✉️ 구독', 'visual_slam/camera_info_0 · camera_info_1', 'sensor_msgs/CameraInfo', 'realsense2_camera (pole_front_cam)', 'rectified_images: true'],
+      ['✉️ 구독', 'visual_slam/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster (또는 카메라 IMU)', 'enable_imu_fusion: true일 때 · 카메라와의 외부 파라미터(TF)가 정확해야 함'],
+      ['🎬 서버', 'visual_slam/save_map · visual_slam/load_map_and_localize', 'isaac_ros_visual_slam_interfaces/action/SaveMap · LoadMapAndLocalize', 'state_manager', 'rtabmap set_mode_*·load_database 자리'],
+    ],
+    outputs: [
+      ['✉️ 발행', 'visual_slam/tracking/odometry', 'nav_msgs/Odometry', 'ekf', '시각 오도메트리 — EKF가 바퀴·IMU와 융합'],
+      ['✉️ 발행', '/tf', 'tf2_msgs/TFMessage', '전체', 'map → odom (publish_map_to_odom_tf: true)'],
+      ['✉️ 발행', 'visual_slam/status · tracking/slam_path', 'isaac_ros_visual_slam_interfaces/VisualSlamStatus · nav_msgs/Path', 'state_manager · RViz', '추적 상태 · 경로'],
+    ],
+    params: ['num_cameras: 2', 'rectified_images: true', 'enable_imu_fusion: true', 'base_frame: base_footprint · map_frame: map · odom_frame: odom', 'publish_map_to_odom_tf: true', 'publish_odom_to_base_tf: false (odom→base_footprint는 EKF만)', 'enable_localization_n_mapping: true'],
+    notes: ['TF 발행자를 지금처럼 둘로 유지하려면 odom→base TF를 꺼야 한다. 그러면 cuVSLAM이 계산한 map→odom이 EKF odom과 어긋나지 않는지 실기에서 확인해야 한다.', '실습 워크스페이스(waffle-lyrical-slam)의 cuvslam.launch.py는 시뮬레이터 스테레오에 두 TF를 다 켠 설정이다.', '파라미터·토픽 이름은 Isaac ROS 버전마다 조금씩 다르다 — 쓰는 버전 문서 확인.'],
+  },
+  {
+    id: 'nvblox', name: 'nvblox_human_node (nvblox)', tag: 'provided', pkg: 'isaac_ros_nvblox', form: 'composable 노드 (GPU 컨테이너)', group: 'Isaac ROS 전환안 (GPU)',
+    role: 'GPU 3D 재구성. depth 영상과 카메라 자세(TF)로 고정 지도(TSDF → ESDF)를 만들고, 사람 분할 마스크에 걸린 픽셀은 따로 동적(사람) occupancy 층에 넣는다. 사람 층은 decay로 금방 사라져 지나간 사람이 벽처럼 남지 않는다. 두 층을 합친 단면을 Nav2 costmap 레이어로 넘긴다. 전환안에서 2D /map(rtabmap)과 map_saver를 대신한다.',
+    inputs: [
+      ['✉️ 구독', 'camera_0/depth/image · camera_0/depth/camera_info ← /pole_front_cam/aligned_depth_to_color', 'sensor_msgs/Image · CameraInfo', 'realsense2_camera (pole_front_cam)', 'float(m) 또는 uint16(mm) · cuVSLAM 때문에 emitter를 끄면 depth 품질이 떨어진다'],
+      ['✉️ 구독', 'camera_0/color/image · camera_info', 'sensor_msgs/Image · CameraInfo', 'realsense2_camera (pole_front_cam)', '메시 색칠용 (선택)'],
+      ['✉️ 구독', 'mask/image · mask/camera_info', 'sensor_msgs/Image · CameraInfo', 'isaac_ros_unet (PeopleSemSegNet)', '사람 픽셀 마스크 — nvblox_human_node만 · 첫 카메라(camera_0)만 지원'],
+      ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'visual_slam_node · ekf', '영상 시각의 map → 카메라 자세 (use_tf_transforms)'],
+    ],
+    outputs: [
+      ['✉️ 발행', '~/combined_map_slice', 'nvblox_msgs/DistanceMapSlice', 'costmap (NvbloxCostmapLayer)', '고정 + 사람 ESDF 중 가까운 쪽 — Nav2가 이걸 구독'],
+      ['✉️ 발행', '~/static_map_slice · ~/dynamic_map_slice', 'nvblox_msgs/DistanceMapSlice', '(필요하면 레이어 두 개로 따로)', '고정만 · 사람만'],
+      ['✉️ 발행', '~/human_voxels · ~/dynamic_color_frame_overlay', 'visualization_msgs/Marker · sensor_msgs/Image', 'RViz', '사람 복셀 · 마스크 겹친 영상 (확인용)'],
+      ['✉️ 발행', '~/mesh · ~/static_esdf_pointcloud', 'nvblox_msgs/Mesh · sensor_msgs/PointCloud2', 'RViz', '확인용'],
+    ],
+    params: ['mapping_type: human_with_static_tsdf (static_tsdf · static_occupancy · dynamic · human_with_static_occupancy)', 'global_frame: map · use_tf_transforms: true', 'voxel_size: 0.05', 'decay_dynamic_occupancy_rate_hz: 10.0 (사람 층이 사라지는 속도)', 'remove_small_connected_components: true · connected_mask_component_size_threshold: 2000', 'esdf_slice_height · esdf_slice_min_height · esdf_slice_max_height'],
+    notes: ['mapping_type별 노드: static_* · dynamic은 nvblox_node, human_*는 nvblox_human_node. dynamic은 DNN 없이 "비어 있던 곳이 차면" 움직이는 물체로 본다 (사람 말고 다른 것도).', 'body_filter는 점구름을 거르는데 nvblox는 depth 영상을 받는다 → 카메라에 찍힌 자기 팔은 depth 마스크로 지워야 한다 (전환안 TODO).', 'Nav2 쪽 설정: costmap plugins에 nvblox::nav2::NvbloxCostmapLayer, nvblox_map_slice_topic: /nvblox_node/combined_map_slice.'],
+  },
+  {
+    id: 'isaac_yolo', name: 'isaac_ros_yolov8 (encoder → TensorRT → decoder)', tag: 'provided', pkg: 'isaac_ros_yolov8 · isaac_ros_tensor_rt · isaac_ros_dnn_image_encoder', form: 'composable 노드 3개 (GPU 컨테이너, 카메라당 1벌)', group: 'Isaac ROS 전환안 (GPU)',
+    role: 'YOLO 검출을 GPU(TensorRT)로 옮긴다. 영상 → 크기·정규화(dnn_image_encoder) → 추론(tensor_rt_node) → 박스·클래스 해석(yolov8_decoder_node). 지금 perception 안에서 CPU로 돌리는 YOLO 자리다 — perception은 검출을 받아 depth로 3D화·칼만 융합 추적만 한다.',
+    inputs: [
+      ['✉️ 구독', '/pole_front_cam/color/image_raw · /gripper_cam/color/image_raw', 'sensor_msgs/Image', 'realsense2_camera ×2', 'image → dnn_image_encoder'],
+    ],
+    outputs: [
+      ['✉️ 발행', 'detections_output', 'vision_msgs/Detection2DArray', 'perception', '박스 · 클래스 · 점수 (카메라별 이름공간)'],
+    ],
+    params: ['model_file_path (ONNX) · engine_file_path (TensorRT 엔진)', 'input_binding_names · output_binding_names', 'confidence_threshold: 0.4 · nms_threshold: 0.45', 'network_image_width/height: 640'],
+    notes: ['지금 perception의 model.pt를 ONNX로 내보내고, 처음 실행 때 대상 GPU에서 TensorRT 엔진으로 변환한다 (엔진은 GPU·TensorRT 버전에 묶임).'],
+  },
+  {
+    id: 'peoplesemsegnet', name: 'isaac_ros_unet (PeopleSemSegNet)', tag: 'provided', pkg: 'isaac_ros_unet · isaac_ros_tensor_rt · isaac_ros_dnn_image_encoder', form: 'composable 노드 3개 (encoder → TensorRT → unet decoder, GPU 컨테이너)', group: 'Isaac ROS 전환안 (GPU)',
+    role: '컬러 영상의 픽셀마다 "사람인가"를 고르는 의미 분할(지도학습 모델 PeopleSemSegNet). 결과 마스크를 nvblox_human_node에 주면 사람 depth만 동적 층으로 빠진다. 검출 박스(YOLO)가 아니라 픽셀 단위라 사람 윤곽대로 지운다.',
+    inputs: [
+      ['✉️ 구독', '/pole_front_cam/color/image_raw · camera_info', 'sensor_msgs/Image · CameraInfo', 'realsense2_camera (pole_front_cam)', 'nvblox camera_0과 같은 카메라여야 함'],
+    ],
+    outputs: [
+      ['✉️ 발행', 'unet/raw_segmentation_mask → mask/image', 'sensor_msgs/Image', 'nvblox_human_node', '클래스 번호 영상 (사람=1) · 리매핑해서 연결'],
+      ['✉️ 발행', 'unet/colored_segmentation_mask', 'sensor_msgs/Image', 'RViz', '확인용'],
+    ],
+    params: ['model_file_path · engine_file_path (PeopleSemSegNet — NGC 배포 모델)', 'network_image_width/height (모델 입력 크기 · 인코더가 맞춤)', 'network_output_type: argmax', 'color_segmentation_mask_encoding: rgb8'],
+    notes: ['PPO 같은 강화학습과는 상관없다 — 정답 마스크로 학습한 분할 모델이다.', '컵 검출 YOLO와 같은 영상을 쓰므로 GPU 시간을 나눠 쓴다 (Jetson에선 주기 조절).', '토픽·파라미터 이름은 Isaac ROS 버전마다 다르다 — 쓰는 버전 문서 확인.'],
+  },
+  {
+    id: 'rl_residual_controller', name: 'RlResidualController (FollowPath 플러그인)', tag: 'custom', pkg: 'ml', form: 'Nav2 controller 플러그인 (C++ · pluginlib · nav2_core::Controller 상속)', group: 'Isaac ROS 전환안 (GPU)',
+    role: 'controller_server 안 FollowPath 자리에 끼우는 내 컨트롤러. 안에서 MPPI를 불러 기본 속도를 받고, PPO로 학습한 정책(ONNX)의 Δ를 더한다(residual). DWB·MPPI와 같은 기본 클래스를 상속하므로 Nav2의 BT·progress/goal checker·speed limit·lifecycle이 그대로 붙는다. rl_nav_correction 별도 노드를 대신한다.',
+    inputs: [
+      ['🧩 인자', 'computeVelocityCommands(pose, velocity, goal_checker)', 'geometry_msgs/PoseStamped · Twist', 'controller_server', '매 주기(controller_frequency 20Hz) 호출 — 여기서 관측을 만들고 추론'],
+      ['🧩 인자', 'setPlan(path)', 'nav_msgs/Path', 'controller_server (planner 경로)', '경로 오차 관측'],
+      ['🧩 인자', 'costmap_ros (configure 때 받음)', 'nav2_costmap_2d::Costmap2DROS', 'local costmap (nvblox 레이어 포함)', '가까운 장애물·사람까지 거리 관측 — 토픽 구독 필요 없음'],
+      ['🧩 인자', 'setSpeedLimit(limit, percentage)', 'double · bool', 'controller_server ← /speed_limit (rl_nav_tuner)', '최종 속도 상한'],
+      ['✉️ 구독', '/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster', '실제 각속도 (미끄러짐) — 플러그인이 부모 노드로 직접 구독'],
+      ['✉️ 구독', '/nvblox_node/dynamic_map_slice', 'nvblox_msgs/DistanceMapSlice', 'nvblox_human_node', '사람 층만의 거리장 — 가장 가까운 사람까지 거리·방향 (costmap에선 벽과 섞여 구분 불가)'],
+      ['✉️ 구독', '/tracked_objects', 'perception/TrackedObjectArray', 'perception', 'class=person만 — 위치·속도(칼만 추적)로 다가오는지 비키는지'],
+    ],
+    outputs: [
+      ['🧩 반환', 'TwistStamped (MPPI + Δ)', 'geometry_msgs/TwistStamped', 'controller_server → ✉️ /cmd_vel_nav → twist_mux', 'Δ는 ±상한으로 자르고 speed limit 적용'],
+    ],
+    params: ['controller_plugins: [FollowPath]', 'FollowPath.plugin: ml::RlResidualController', 'FollowPath.base_plugin: nav2_mppi_controller::MPPIController (안에서 pluginlib로 로드)', 'FollowPath.model_path: rl_nav.onnx', 'FollowPath.max_delta_v: 0.05 · max_delta_w: 0.2', 'FollowPath.enable_rl: true (false면 MPPI 그대로)'],
+    setup: [
+      'class RlResidualController : public nav2_core::Controller — configure · cleanup · activate · deactivate · setPlan · computeVelocityCommands · setSpeedLimit 구현',
+      'configure()에서 pluginlib::ClassLoader<nav2_core::Controller>로 base_plugin(MPPI)을 만들고 같은 인자로 configure, ONNX Runtime 세션 로드',
+      'computeVelocityCommands(): base->computeVelocityCommands() → 관측(costmap 벽 거리 · 사람 거리·속도 · 경로 오차 · 속도 · imu) → 추론 → Δ 클리핑 → 합산',
+      'PLUGINLIB_EXPORT_CLASS(ml::RlResidualController, nav2_core::Controller) + plugins.xml + package.xml export에 <nav2_core plugin="..."/>',
+      'nav2_params.yaml의 FollowPath.plugin만 바꾸면 켜고, MPPI로 되돌리면 끈다',
+    ],
+    notes: ['C++만 가능 — pluginlib은 공유 라이브러리를 불러오는 방식이라 Python 플러그인은 없다.', 'nvblox는 물체 인식을 하지 않는다 — 기하(거리) + 사람/아님 구분뿐. 클래스(컵·의자·사람)는 perception이 낸다.', '사람 관측(거리·속도)을 넣으면 Isaac Lab 학습 환경에도 움직이는 사람 에이전트와 같은 관측을 만들어야 한다.', '추론이 controller 주기 안에 끝나야 한다. 늦으면 그 주기 명령이 늦게 나간다 (TensorRT·작은 MLP 권장).', '학습 환경(Isaac Lab)에도 같은 기본 제어기(MPPI 근사)와 같은 관측을 넣어야 Δ가 맞는다.', 'max_delta_v·max_delta_w·enable_rl·base_plugin·model_path는 이 플러그인이 정의하는 파라미터(설계안)다.'],
+  },
+  {
+    id: 'centerpose', name: 'centerpose_decoder_node (CenterPose)', tag: 'provided', pkg: 'isaac_ros_centerpose', form: 'composable 노드 (encoder → TensorRT → decoder, GPU 컨테이너)', group: 'Isaac ROS 전환안 (GPU)',
+    role: '영상 한 장으로 물체의 6DoF 자세와 3D 상자 크기를 추정한다 (범주 단위 — cup 등). gripper_cam 근접 영상으로 컵의 기울기·손잡이 방향까지 알아 파지 후보 계산을 돕는다. YOLO는 "무엇·어디(2D)", CenterPose는 "어떤 자세로(3D)".',
+    inputs: [
+      ['✉️ 구독', '/gripper_cam/color/image_raw · camera_info', 'sensor_msgs/Image · CameraInfo', 'realsense2_camera (gripper_cam)', '카메라 내부 파라미터로 3D 복원'],
+    ],
+    outputs: [
+      ['✉️ 발행', 'centerpose/detections', 'vision_msgs/Detection3DArray', 'perception, grasp_scorer', '자세(Pose) + 크기 + 점수 · 카메라 프레임'],
+    ],
+    params: ['model_file_path · engine_file_path (범주별 모델 — cup)', 'output_field_size · cuboid_scaling_factor', 'score_threshold: 0.3'],
+    notes: ['범주별로 학습된 모델이 필요하다 — 컵 모델이 없으면 Isaac Sim Replicator 합성 데이터로 학습 (Isaac 파이프라인 섹션).', '크기는 상대값이라 cuboid_scaling_factor로 실제 크기를 맞추거나 depth로 보정한다.'],
   },
 ];
 
