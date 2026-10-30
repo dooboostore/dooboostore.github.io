@@ -584,7 +584,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 발행', '/monitored_planning_scene', 'moveit_msgs/PlanningScene', 'RViz', ''],
     ],
     params: ['kinematics_solver: pick_ik/PickIkPlugin (mode global · rotation_scale 0.0 = 위치만)', 'planning_pipelines: [ompl]', 'moveit_controller_manager: MoveItSimpleControllerManager', 'controller_names: [arm_controller] (그리퍼 없음)'],
-    notes: ['5축 팔이라 KDL은 위치+방향 목표를 못 풀었다 → pick_ik 위치 우선.', 'MTC(/execute_task_solution)·octomap 센서(pole_front_cam 점구름)는 아직 설정 없음.'],
+    notes: ['5축 팔이라 KDL은 위치+방향 목표를 못 풀었다 → pick_ik 위치 우선.', 'Isaac 전환안: move_group은 그대로, 계획기 플러그인만 OMPL → cuMotion(isaac_ros_cumotion_moveit → GPU 서버 cumotion/move_group).', 'MTC(/execute_task_solution)·octomap 센서(pole_front_cam 점구름)는 아직 설정 없음.'],
   },
   {
     id: 'arm_controller', name: 'arm_controller (JointTrajectoryController)', tag: 'provided', pkg: 'joint_trajectory_controller', form: 'ros2_control 컨트롤러 플러그인', group: '팔·MoveIt',
@@ -777,7 +777,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 발행', '~/mesh · ~/static_esdf_pointcloud', 'nvblox_msgs/Mesh · sensor_msgs/PointCloud2', 'RViz', '확인용'],
     ],
     params: ['mapping_type: human_with_static_tsdf (static_tsdf · static_occupancy · dynamic · human_with_static_occupancy)', 'global_frame: map · use_tf_transforms: true', 'voxel_size: 0.05', 'decay_dynamic_occupancy_rate_hz: 10.0 (사람 층이 사라지는 속도)', 'remove_small_connected_components: true · connected_mask_component_size_threshold: 2000', 'esdf_slice_height · esdf_slice_min_height · esdf_slice_max_height'],
-    notes: ['mapping_type별 노드: static_* · dynamic은 nvblox_node, human_*는 nvblox_human_node. dynamic은 DNN 없이 "비어 있던 곳이 차면" 움직이는 물체로 본다 (사람 말고 다른 것도).', 'body_filter는 점구름을 거르는데 nvblox는 depth 영상을 받는다 → 카메라에 찍힌 자기 팔은 depth 마스크로 지워야 한다 (전환안 TODO).', 'Nav2 쪽 설정: costmap plugins에 nvblox::nav2::NvbloxCostmapLayer, nvblox_map_slice_topic: /nvblox_node/combined_map_slice.'],
+    notes: ['mapping_type별 노드: static_* · dynamic은 nvblox_node, human_*는 nvblox_human_node. dynamic은 DNN 없이 "비어 있던 곳이 차면" 움직이는 물체로 본다 (사람 말고 다른 것도).', 'body_filter는 점구름을 거르는데 nvblox는 depth 영상을 받는다 → 자기 팔은 cuMotion robot_segmenter가 depth에서 지운 영상을 받는다 (Isaac 전환안).', 'Nav2 쪽 설정: costmap plugins에 nvblox::nav2::NvbloxCostmapLayer, nvblox_map_slice_topic: /nvblox_node/combined_map_slice.'],
   },
   {
     id: 'isaac_yolo', name: 'isaac_ros_yolov8 (encoder → TensorRT → decoder)', tag: 'provided', pkg: 'isaac_ros_yolov8 · isaac_ros_tensor_rt · isaac_ros_dnn_image_encoder', form: 'composable 노드 3개 (GPU 컨테이너, 카메라당 1벌)', group: 'Isaac ROS 전환안 (GPU)',
@@ -828,6 +828,36 @@ export const NODE_DOCS: NodeDoc[] = [
       'nav2_params.yaml의 FollowPath.plugin만 바꾸면 켜고, MPPI로 되돌리면 끈다',
     ],
     notes: ['C++만 가능 — pluginlib은 공유 라이브러리를 불러오는 방식이라 Python 플러그인은 없다.', 'nvblox는 물체 인식을 하지 않는다 — 기하(거리) + 사람/아님 구분뿐. 클래스(컵·의자·사람)는 perception이 낸다.', '사람 관측(거리·속도)을 넣으면 Isaac Lab 학습 환경에도 움직이는 사람 에이전트와 같은 관측을 만들어야 한다.', '추론이 controller 주기 안에 끝나야 한다. 늦으면 그 주기 명령이 늦게 나간다 (TensorRT·작은 MLP 권장).', '학습 환경(Isaac Lab)에도 같은 기본 제어기(MPPI 근사)와 같은 관측을 넣어야 Δ가 맞는다.', 'max_delta_v·max_delta_w·enable_rl·base_plugin·model_path는 이 플러그인이 정의하는 파라미터(설계안)다.'],
+  },
+  {
+    id: 'cumotion_planner', name: 'cumotion_planner_node (cuMotion)', tag: 'provided', pkg: 'isaac_ros_cumotion · isaac_ros_cumotion_moveit', form: 'ROS 2 노드 (GPU · cuRobo) + MoveIt 계획기 플러그인', group: 'Isaac ROS 전환안 (GPU)',
+    role: '팔 경로 계획을 GPU로. MoveIt 2를 대체하지 않는다 — move_group의 계획기 자리(OMPL)에 플러그인(isaac_ros_cumotion_moveit)을 끼우면, 그 플러그인이 요청을 이 노드의 cumotion/move_group 액션으로 넘기고 cuRobo가 충돌 없는 매끄러운 궤적을 최적화해 돌려준다. 실행(execute_trajectory → arm_controller)은 MoveIt 그대로.',
+    inputs: [
+      ['🎬 서버', '/cumotion/move_group', 'moveit_msgs/action/MoveGroup', 'move_group (cuMotion 플러그인)', '계획 요청 → 궤적 결과'],
+      ['📞 호출', '/nvblox_node/get_esdf_and_gradient', 'nvblox_msgs/srv/EsdfAndGradients', 'nvblox_human_node', 'read_esdf_world: true일 때 — 주변 장애물 거리장 (nvblox를 따로 띄워야 함)'],
+      ['💾 파일', '로봇 URDF + XRDF', 'URDF · XRDF(YAML)', '디스크', 'XRDF = 충돌 구(sphere)·관절 한계 등 cuRobo용 로봇 정의'],
+      ['✉️ 구독', '/joint_states', 'sensor_msgs/JointState', 'joint_state_broadcaster', '시작 관절각'],
+    ],
+    outputs: [
+      ['🎬 결과', '/cumotion/move_group result', 'moveit_msgs/MotionPlanResponse (궤적)', 'move_group', 'move_group이 받아 execute_trajectory로 실행'],
+    ],
+    params: ['robot: <로봇>.xrdf · urdf_path', 'read_esdf_world: true · esdf_service_name: /nvblox_node/get_esdf_and_gradient', 'time_dilation_factor (속도 비율)', '파라미터 접두어는 버전마다 다름 (cumotion_planner.* · cumotion_action_server.*)'],
+    notes: ['MoveIt 쪽 설정: planning_pipelines에 isaac_ros_cumotion_moveit (OMPL과 함께 두고 고를 수도 있음).', '5축 OpenMANIPULATOR-X용 XRDF는 직접 만들어야 한다 — 충돌 구가 실제 링크를 덮도록.', 'GPU를 nvblox·YOLO·cuVSLAM과 나눠 쓴다 (Jetson에선 계획 주기·해상도 조절).'],
+  },
+  {
+    id: 'robot_segmenter', name: 'cumotion robot_segmenter', tag: 'provided', pkg: 'isaac_ros_cumotion', form: 'ROS 2 노드 (GPU)', group: 'Isaac ROS 전환안 (GPU)',
+    role: 'depth 영상에서 로봇 자기 몸(팔)을 지운다. XRDF의 충돌 구를 /joint_states로 지금 자세에 놓고, 그 안에 들어간 depth 픽셀을 지운 영상을 낸다. nvblox가 자기 팔을 장애물로 쌓지 않게 한다 — 점구름용 body_filter의 depth 버전.',
+    inputs: [
+      ['✉️ 구독', '/pole_front_cam/aligned_depth_to_color/image_raw · camera_info', 'sensor_msgs/Image · CameraInfo', 'realsense2_camera (pole_front_cam)', ''],
+      ['✉️ 구독', '/joint_states', 'sensor_msgs/JointState', 'joint_state_broadcaster', 'joint_states_topic'],
+      ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'robot_state_publisher', '카메라 ↔ 링크 위치'],
+    ],
+    outputs: [
+      ['✉️ 발행', 'depth (로봇 제거) → nvblox camera_0/depth/image', 'sensor_msgs/Image', 'nvblox_human_node', '리매핑해서 연결'],
+      ['✉️ 발행', 'robot 충돌 구 (디버그)', 'visualization_msgs/MarkerArray', 'RViz', 'XRDF 구가 팔을 덮는지 확인'],
+    ],
+    params: ['robot: <로봇>.xrdf · urdf_path', 'joint_states_topic: /joint_states', 'depth_image_topics · depth_camera_infos'],
+    notes: ['body_filter는 collision_monitor용 점구름에 그대로 남는다 (cuMotion과 무관).', 'XRDF 구가 작으면 팔 가장자리가 남아 장애물로 찍힌다 — RViz 마커로 확인.'],
   },
   {
     id: 'centerpose', name: 'centerpose_decoder_node (CenterPose)', tag: 'provided', pkg: 'isaac_ros_centerpose', form: 'composable 노드 (encoder → TensorRT → decoder, GPU 컨테이너)', group: 'Isaac ROS 전환안 (GPU)',

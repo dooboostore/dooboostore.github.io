@@ -708,7 +708,7 @@ ${F}
 - **gripper_cam도 RealSense.** perception의 두 번째 눈(퍽 윗면 AprilTag는 coordinator \`inspect\`로 위에서 봐야 읽힘), 파지 직전 근접 점구름(grasp_scorer, \`gripper_cam_pointcloud:=true\`일 때), 지도 만들 때는 두 번째 SLAM 카메라.
 - **/state는 state_manager 하나만.** 조작 모드(AUTO·MANUAL·EXPLORE)·비상정지(\`/state/emergency\` → twist_mux 잠금)·지도 모드를 정하고, BeebotSystemHardware의 \`/motor_status\`로 \`/state/devices/<이름>\`을 낸다. EXPLORE면 explorer가 프론티어로 Nav2를 보내고 끝나면 \`/explore/result\`. 신호등 암호는 인지 쪽 signal_decoder(perception 패키지)가 \`/tracked_objects\`의 신호등 색을 시간축으로 읽어 \`/mission/signal\`로 planner에 준다.
 `,
-    links: { NB: 'nav', IR: 'sense', S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
+    links: { CUM: 'arm', NB: 'nav', IR: 'sense', S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
     nodes: {
       PCH: 'realsense_pole', PC: 'realsense_pole', GCH: 'realsense_gripper', GC: 'realsense_gripper', PER: 'perception', BF: 'body_filter',
       UI: 'user_input', VLM: 'vlm_task_planner', SD: 'signal_decoder', CO: 'coordinator', EXP: 'explorer', GS: 'grasp_scorer', NT: 'rl_nav_tuner',
@@ -719,7 +719,7 @@ ${F}
       MC: 'manual_control', SM: 'state_manager',
       JTC: 'arm_controller', GRC: 'gripper_controller', DDC: 'diff_drive_controller', JSB: 'joint_state_broadcaster', IMB: 'imu_sensor_broadcaster',
       HWI: 'hw_interface', HW: 'hw_interface',
-      RLP: 'rl_residual_controller', LDH: 'lidar_driver', LDD: 'lidar_driver', CART: 'cartographer_node', OGN: 'cartographer_occupancy_grid_node', MSV: 'map_server', AMCL: 'amcl', VSLAM: 'cuvslam', NVB: 'nvblox', YOLO: 'isaac_yolo', CPOSE: 'centerpose', UNET: 'peoplesemsegnet',
+      RLP: 'rl_residual_controller', CUMP: 'cumotion_planner', RSEG: 'robot_segmenter', LDH: 'lidar_driver', LDD: 'lidar_driver', CART: 'cartographer_node', OGN: 'cartographer_occupancy_grid_node', MSV: 'map_server', AMCL: 'amcl', VSLAM: 'cuvslam', NVB: 'nvblox', YOLO: 'isaac_yolo', CPOSE: 'centerpose', UNET: 'peoplesemsegnet',
     },
     flows: ARCH_FLOWS,
   },
@@ -2234,7 +2234,12 @@ const ISAAC_EDGES = `    PC -->|"✉️ /pole_front_cam/infra1·infra2<br/>/imag
     VSLAM -->|"✉️ visual_slam/tracking/odometry<br/>(nav_msgs/Odometry)"| EKF
     VSLAM -->|"✉️ /tf (map→odom 변환)<br/>(odom→base TF는 끔)"| PS
     VSLAM -->|"✉️ /tf (tf2_msgs/TFMessage)<br/>map→odom 변환 → nvblox가 조회해<br/>카메라 자세 계산 (+ EKF odom→base · URDF)<br/>depth를 지도 제자리에 쌓기"| NVB
-    PC -->|"✉️ aligned_depth_to_color<br/>· color · camera_info<br/>(sensor_msgs/Image)"| NVB
+    PC -->|"✉️ color · camera_info<br/>(메시 색칠)"| NVB
+    PC -->|"✉️ aligned_depth_to_color<br/>(sensor_msgs/Image)"| RSEG
+    JSB -->|"✉️ /joint_states<br/>팔이 지금 어디 있나"| RSEG
+    RSEG -->|"✉️ depth (로봇 몸 지움)<br/>(sensor_msgs/Image)"| NVB
+    MG ==>|"🎬 /cumotion/move_group<br/>(moveit_msgs/action/MoveGroup)<br/>플러그인이 계획 요청 → 궤적 결과"| CUMP
+    NVB -.->|"📞 /nvblox_node/get_esdf_and_gradient<br/>(read_esdf_world: true)<br/>충돌 세계 = nvblox ESDF"| CUMP
     PC -->|"✉️ /pole_front_cam/color<br/>· camera_info"| UNET
     UNET -->|"✉️ unet/raw_segmentation_mask<br/>→ mask/image · camera_info<br/>(sensor_msgs/Image, 사람=1)"| NVB
     RLP -->|"🧩 FollowPath 플러그인 — 매 주기 호출되어<br/>Twist 반환 (extends nav2_core::Controller · 같은 프로세스)"| CS
@@ -2258,7 +2263,8 @@ const ISAAC_EDGES = `    PC -->|"✉️ /pole_front_cam/infra1·infra2<br/>/imag
     CPOSE -->|"✉️ centerpose/detections<br/>컵 6DoF 자세·크기<br/>(vision_msgs/<br/>Detection3DArray)"| PER
     CPOSE -->|"✉️ centerpose/detections"| GS
     classDef nv fill:#ede9fe,stroke:#7c3aed,color:#1b1b1b,stroke-width:2px;
-    class VSLAM,NVB,YOLO,CPOSE,UNET nv;
+    class VSLAM,NVB,YOLO,CPOSE,UNET,CUMP,RSEG nv;
+    style CUM fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
     class RLP rl;
     style RLP stroke:#7c3aed,stroke-width:3px
     style RT fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
@@ -2273,11 +2279,20 @@ const ISAAC_FLOWS: Flow[] = [
       { e: ['CLI>SM'], t: '매핑 모드', d: '✉️ /cmd/map_mode "MAPPING" — cuVSLAM은 새 지도를 쌓기 시작하고, nvblox도 같이 쌓습니다.' },
       { e: ['PC>VSLAM', 'IMB>VSLAM'], t: '위치 추적', d: 'cuVSLAM이 스테레오 IR + IMU로 위치를 추적하며 특징점 지도를 쌓습니다.' },
       { e: ['VSLAM>PS', 'VSLAM>EKF'], t: 'map→odom · 시각 오도메트리', d: '/tf (map→odom 변환)은 Nav2로, 시각 오도메트리는 EKF 입력으로.' },
-      { e: ['PC>UNET', 'UNET>NVB', 'PC>NVB', 'VSLAM>NVB'], t: 'nvblox가 같이 쌓는다', d: 'depth를 cuVSLAM이 준 카메라 자세(TF)로 제자리에 쌓고, PeopleSemSegNet 마스크의 사람 픽셀은 사람 층으로 뺍니다.' },
+      { e: ['PC>RSEG', 'JSB>RSEG', 'RSEG>NVB', 'PC>UNET', 'UNET>NVB', 'VSLAM>NVB'], t: 'nvblox가 같이 쌓는다', d: 'robot_segmenter가 depth에서 자기 팔을 지운 뒤, nvblox가 cuVSLAM이 준 카메라 자세(TF)로 제자리에 쌓습니다. PeopleSemSegNet 마스크의 사람 픽셀은 사람 층으로 뺍니다.' },
       { e: ['NVB>COST'], t: '장애물 지도 → costmap', d: '~/combined_map_slice → NvbloxCostmapLayer. 2D /map은 없습니다.' },
       { e: ['CLI>SM', 'SM>EXP'], t: '자동 탐사 시작', d: '✉️ /cmd/operation_mode "EXPLORE" → explorer.' },
       { e: ['COST>EXP', 'EXP>BT'], t: '프론티어 — costmap에서', d: '/map이 없으므로 explorer는 global costmap(nvblox)에서 프론티어를 찾아 🎬 /navigate_to_pose (explorer 수정 필요).' },
       { e: ['EXP>SM'], t: '탐사 끝', d: '✉️ /explore/result "DONE" → state_manager.' },
+    ],
+  },
+  {
+    label: '팔 계획 — cuMotion (MoveIt 2 플러그인, Isaac)',
+    steps: [
+      { e: ['CO>MG'], t: '집기 계획 요청', d: 'coordinator가 지금처럼 move_group에 📞 /plan_kinematic_path. 바깥 인터페이스는 그대로라 coordinator는 바뀌는 게 없습니다.' },
+      { e: ['MG>CUMP'], t: '플러그인 → GPU 서버', d: 'move_group의 계획기 플러그인(isaac_ros_cumotion_moveit)이 요청을 🎬 /cumotion/move_group으로 넘깁니다. OMPL 대신 cuRobo가 GPU에서 충돌 없는 매끄러운 궤적을 한 번에 최적화합니다.' },
+      { e: ['NVB>CUMP', 'RSEG>NVB'], t: '충돌 세계 = nvblox', d: 'read_esdf_world: true면 cuMotion이 📞 /nvblox_node/get_esdf_and_gradient로 주변 장애물 거리장을 받습니다. 자기 팔은 robot_segmenter가 이미 지워서 장애물로 안 잡힙니다.' },
+      { e: ['CO>MG#2', 'MG>JTC'], t: '실행은 그대로', d: '궤적 결과를 받은 move_group이 🎬 /execute_trajectory → /arm_controller/follow_joint_trajectory로 실행합니다. 이후는 지금과 같습니다 (rl_arm_correction · 안전 감시).' },
     ],
   },
   {
@@ -2332,6 +2347,8 @@ const ISAAC_NOTE = `
 | map→odom | rtabmap | **visual_slam_node (cuVSLAM)** · 시각 오도메트리는 EKF 입력에 추가 |
 | odom→base_footprint | EKF | EKF 그대로 — cuVSLAM의 \`publish_odom_to_base_tf: false\` |
 | 장애물 지도 | 2D /map (rtabmap) + voxel·obstacle 레이어 | **nvblox_human_node** (\`human_with_static_tsdf\`) — 고정 ESDF + 사람 occupancy를 합친 \`combined_map_slice\` → Nav2 \`NvbloxCostmapLayer\` (정적 /map 없음) |
+| 팔 계획 | move_group + OMPL·pick_ik (CPU) | **move_group 그대로** + 계획기 플러그인 **cuMotion**(isaac_ros_cumotion_moveit) → GPU 서버 \`cumotion/move_group\`(cuRobo). 충돌 세계는 nvblox ESDF(\`get_esdf_and_gradient\`). URDF 외에 **XRDF**(충돌 구 정의) 필요 |
+| 자기 몸 지우기 | body_filter (점구름) | **cuMotion robot_segmenter** — depth 영상에서 로봇 몸을 지워 nvblox에 줌 (body_filter는 collision_monitor용으로 남음) |
 | PPO 보정 | rl_nav_correction **별도 노드** — controller 뒤에서 /cmd_vel_nav + Δ → /cmd_vel_corrected | **RlResidualController 플러그인** — controller_server 안 FollowPath 자리(\`nav2_core::Controller\` 상속), MPPI + Δ. costmap(nvblox 포함)·경로·속도를 함수 인자로 받고 노드·토픽 하나가 줄어듦 |
 | PPO가 사람을 아는 법 | (없음 — 점구름 속 장애물) | costmap은 벽·사람이 섞인 비용뿐이라 **사람은 따로**: nvblox \`~/dynamic_map_slice\`(거리) + perception \`/tracked_objects\`(위치·속도). 학습 환경에도 움직이는 사람과 같은 관측이 필요 |
 | 사람 | 점구름에 섞여 장애물로 남음 (지나가도 costmap에 흔적) | **PeopleSemSegNet**(isaac_ros_unet) 마스크로 사람만 동적 층에 — 고정 지도엔 안 박히고, 지나가면 decay로 금방 사라짐 |
@@ -2341,7 +2358,7 @@ const ISAAC_NOTE = `
 | 사라지는 노드 | — | scan_cam_gate · rgbd_sync ×3 · point_cloud_aggregator · rtabmap · map_saver(+ 관리자) |
 | 하드웨어 | CPU로 충분 | **NVIDIA GPU 필수** (Jetson Orin급) · Isaac ROS composable 컨테이너 |
 
-> ⚠️ **확인할 것:** ① emitter를 끄면 같은 카메라의 depth(nvblox·perception)가 나빠진다 — on/off 번갈이 모드나 카메라 분리. ② odom→base를 EKF가 내면 cuVSLAM의 map→odom이 EKF odom과 맞는지 실기 검증. ③ nvblox는 depth 영상을 받으므로 body_filter(점구름) 대신 depth에서 자기 팔을 지워야 한다. ④ 파라미터·토픽 이름은 Isaac ROS 버전마다 다르다. ⑤ **2D /map이 없다** — explorer(프론티어 탐사)는 /map 대신 global costmap(nvblox 레이어)에서 프론티어를 찾도록 고쳐야 하고, map_saver·map_server도 쓰지 않는다.
+> ⚠️ **확인할 것:** ① emitter를 끄면 같은 카메라의 depth(nvblox·perception)가 나빠진다 — on/off 번갈이 모드나 카메라 분리. ② odom→base를 EKF가 내면 cuVSLAM의 map→odom이 EKF odom과 맞는지 실기 검증. ③ nvblox는 depth 영상을 받으므로 자기 팔은 depth에서 지운다 → **cuMotion robot_segmenter**가 맡는다 (XRDF 충돌 구가 실제 팔과 맞아야 함). ④ 파라미터·토픽 이름은 Isaac ROS 버전마다 다르다. ⑤ **2D /map이 없다** — explorer(프론티어 탐사)는 /map 대신 global costmap(nvblox 레이어)에서 프론티어를 찾도록 고쳐야 하고, map_saver·map_server도 쓰지 않는다.
 
 <p><button class="rd-tab" data-concept="slamstack">📘 cuVSLAM과 nvblox는 어떤 관계? — SLAM 구성 비교 탭</button></p>
 
@@ -2388,6 +2405,12 @@ const ISAAC_ARCH_MD = variantMd('isaac', ISAAC_DROP, [
   ['PER["🛠️ perception<br/>YOLO 검출 · 칼만 융합 추적"]', 'PER["🛠️ perception<br/>검출 받아 3D화 · 칼만 융합 추적"]'],
   ['local: voxel · global: static + obstacle', 'local · global: nvblox 레이어'],
   ['CS["📦 controller_server<br/>+ local_costmap · DWB"]', 'CS["📦 controller_server<br/>+ local_costmap<br/>FollowPath = RL 플러그인"]'],
+  // MoveIt 2는 그대로 — 계획기 플러그인만 OMPL → cuMotion, 계산은 GPU 서버가
+  ['        MG["📦 move_group<br/>plan + execute<br/>(use_moveit — bringup 기본 켬)"]', `        MG["📦 move_group (MoveIt 2 그대로)<br/>plan + execute<br/>계획기 플러그인 = cuMotion (OMPL 대신)"]
+        subgraph CUM["🟪 Isaac ROS cuMotion (GPU · cuRobo)"]
+            CUMP["📦 cumotion_planner_node<br/>cumotion/move_group 액션 서버<br/>URDF + XRDF(충돌 구)"]
+            RSEG["📦 cumotion robot_segmenter<br/>depth에서 로봇 몸 지우기"]
+        end`],
   // costmap은 nvblox 레이어만 — body_filter 점구름은 collision_monitor로만 간다
   ['    BF -->|"✉️ /pole_front_cam/depth<br/>/color/points_filtered<br/>팔·차체 뺀 점구름<br/>(sensor_msgs/<br/>PointCloud2)"| COST\n', ''],
   ['planner·controller·behavior·bt (map 필요)', 'planner·controller·behavior·bt (정적 /map 없이)'],
