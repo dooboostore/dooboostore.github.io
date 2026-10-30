@@ -602,7 +602,7 @@ export const NODE_DOCS: NodeDoc[] = [
     params: ['joints: [joint1..joint5]', 'command_joints: [rl_arm_correction/joint1..5]', 'command_interfaces: [position]', 'state_interfaces: [position, velocity]', 'constraints.stopped_velocity_tolerance: 0.02', 'constraints.goal_time: 0.5'],
   },
   {
-    id: 'rl_arm_correction', name: 'rl_arm_correction', tag: 'custom', pkg: 'ml', form: 'ros2_control chainable 컨트롤러 플러그인 (C++)', group: '팔·MoveIt',
+    id: 'rl_arm_correction', name: 'rl_arm_correction', tag: 'custom', pkg: 'ml', form: 'ros2_control chainable 컨트롤러 플러그인 (C++ · extends controller_interface::ChainableControllerInterface · controller_manager 안에 로드)', group: '팔·MoveIt',
     role: 'JTC가 낸 관절 목표에 작은 Δ(±max_delta)를 더해 중력 처짐 같은 오차를 보정하고 하드웨어에 쓴다. ROS 노드가 아니라 controller_manager 안에서 같은 주기에 돈다. 지금은 골격 — Δ 정책(ONNX)은 TODO.',
     inputs: [
       ['🧩 읽기', 'rl_arm_correction/joint1~5/position', 'reference interface (double)', 'arm_controller', '자기가 내놓은 입력 자리'],
@@ -681,7 +681,7 @@ export const NODE_DOCS: NodeDoc[] = [
     notes: ['controller_manager는 장치를 모른다 — OpenCR 연결·전송은 BeebotSystemHardware가 맡고, controller_manager는 read/update/write만 돌린다.', 'URDF는 /robot_description 토픽(robot_state_publisher)에서 받는다.', '/motor_status · /beebotsystem/reboot_motors는 이 프로세스 안의 BeebotSystemHardware가 낸다.'],
   },
   {
-    id: 'hw_interface', name: 'BeebotSystemHardware (hardware interface)', tag: 'custom', pkg: 'control', form: 'ros2_control SystemInterface 플러그인 (C++)', group: 'ros2_control',
+    id: 'hw_interface', name: 'BeebotSystemHardware (hardware interface)', tag: 'custom', pkg: 'control', form: 'ros2_control 하드웨어 플러그인 (C++ · extends hardware_interface::SystemInterface · controller_manager 안에 로드)', group: 'ros2_control',
     role: 'controller_manager의 변수(double)를 OpenCR ASCII 줄로 바꿔 보내고, OpenCR 상태 줄을 state interface로 되돌린다. OpenCR 펌웨어가 DYNAMIXEL 8개(바퀴 2 · joint1~5 · 그리퍼)를 BulkWrite/SyncRead로, 내장 IMU를 맡고 단위 변환(rad ↔ 서보 값)도 펌웨어가 한다. 영점 오프셋만 여기서.',
     inputs: [
       ['🧩 읽기', 'wheel_left/right_joint/velocity', 'command interface (double, rad/s)', 'diff_drive_controller', ''],
@@ -750,15 +750,15 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', 'visual_slam/image_0 · image_1 ← /pole_front_cam/infra1·infra2/image_rect_raw', 'sensor_msgs/Image', 'realsense2_camera (pole_front_cam)', '스테레오 IR · 프로젝터 점무늬가 추적을 방해 → emitter 끄거나 on/off 번갈이'],
       ['✉️ 구독', 'visual_slam/camera_info_0 · camera_info_1', 'sensor_msgs/CameraInfo', 'realsense2_camera (pole_front_cam)', 'rectified_images: true'],
       ['✉️ 구독', 'visual_slam/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster (또는 카메라 IMU)', 'enable_imu_fusion: true일 때 · 카메라와의 외부 파라미터(TF)가 정확해야 함'],
-      ['🎬 서버', 'visual_slam/save_map · visual_slam/load_map_and_localize', 'isaac_ros_visual_slam_interfaces/action/SaveMap · LoadMapAndLocalize', 'state_manager', 'rtabmap set_mode_*·load_database 자리'],
+      ['🎬 서버', 'visual_slam/save_map · visual_slam/load_map_and_localize (버전에 따라 📞 서비스 save_map · localize_in_map)', 'isaac_ros_visual_slam_interfaces/action/SaveMap(map_url) · LoadMapAndLocalize(map_url, localize_near_point) — 새 버전은 srv/FilePath(file_path) · LocalizeInMap', 'state_manager', 'rtabmap set_mode_*·load_database 자리 — nvblox ~/save_map·~/load_map과 짝으로 (지도가 두 개)'],
     ],
     outputs: [
       ['✉️ 발행', 'visual_slam/tracking/odometry', 'nav_msgs/Odometry', 'ekf', '시각 오도메트리 — EKF가 바퀴·IMU와 융합'],
-      ['✉️ 발행', '/tf', 'tf2_msgs/TFMessage', '전체', 'map → odom (publish_map_to_odom_tf: true)'],
+      ['✉️ 발행', '/tf', 'tf2_msgs/TFMessage', '전체 — nvblox는 이걸로 카메라 자세를 얻어 depth를 쌓음', 'map → odom (publish_map_to_odom_tf: true)'],
       ['✉️ 발행', 'visual_slam/status · tracking/slam_path', 'isaac_ros_visual_slam_interfaces/VisualSlamStatus · nav_msgs/Path', 'state_manager · RViz', '추적 상태 · 경로'],
     ],
     params: ['num_cameras: 2', 'rectified_images: true', 'enable_imu_fusion: true', 'base_frame: base_footprint · map_frame: map · odom_frame: odom', 'publish_map_to_odom_tf: true', 'publish_odom_to_base_tf: false (odom→base_footprint는 EKF만)', 'enable_localization_n_mapping: true'],
-    notes: ['TF 발행자를 지금처럼 둘로 유지하려면 odom→base TF를 꺼야 한다. 그러면 cuVSLAM이 계산한 map→odom이 EKF odom과 어긋나지 않는지 실기에서 확인해야 한다.', '실습 워크스페이스(waffle-lyrical-slam)의 cuvslam.launch.py는 시뮬레이터 스테레오에 두 TF를 다 켠 설정이다.', '파라미터·토픽 이름은 Isaac ROS 버전마다 조금씩 다르다 — 쓰는 버전 문서 확인.'],
+    notes: ['TF 발행자를 지금처럼 둘로 유지하려면 odom→base TF를 꺼야 한다. 그러면 cuVSLAM이 계산한 map→odom이 EKF odom과 어긋나지 않는지 실기에서 확인해야 한다.', '실습 워크스페이스(waffle-lyrical-slam)의 cuvslam.launch.py는 시뮬레이터 스테레오에 두 TF를 다 켠 설정이다.', '파라미터·토픽 이름은 Isaac ROS 버전마다 조금씩 다르다 — 쓰는 버전 문서 확인.', 'save_map이 쓰는 것: 지도 폴더 하나 — 랜드마크(3D 특징점 + 기술자)와 키프레임 포즈 그래프. 불러올 땐 그 폴더(버전에 따라 안의 data.mbd)를 지정한다. 위치를 다시 찾는 용도라 격자 지도·장애물 정보는 없다 — 그건 nvblox .nvblx.', '확인: ros2 action list | grep visual_slam · ros2 service list | grep visual_slam 으로 설치 버전의 인터페이스를 본다.'],
   },
   {
     id: 'nvblox', name: 'nvblox_human_node (nvblox)', tag: 'provided', pkg: 'isaac_ros_nvblox', form: 'composable 노드 (GPU 컨테이너)', group: 'Isaac ROS 전환안 (GPU)',
@@ -768,6 +768,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', 'camera_0/color/image · camera_info', 'sensor_msgs/Image · CameraInfo', 'realsense2_camera (pole_front_cam)', '메시 색칠용 (선택)'],
       ['✉️ 구독', 'mask/image · mask/camera_info', 'sensor_msgs/Image · CameraInfo', 'isaac_ros_unet (PeopleSemSegNet)', '사람 픽셀 마스크 — nvblox_human_node만 · 첫 카메라(camera_0)만 지원'],
       ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'visual_slam_node · ekf', '영상 시각의 map → 카메라 자세 (use_tf_transforms)'],
+      ['📞 서버', '~/save_map · ~/load_map · ~/save_ply', 'nvblox_msgs/srv/FilePath', 'state_manager · 운영자', '장애물 지도 .nvblx 저장·불러오기 (TSDF·ESDF 전체) · 메시 .ply — 매핑 때 저장, 운행 때 불러옴'],
     ],
     outputs: [
       ['✉️ 발행', '~/combined_map_slice', 'nvblox_msgs/DistanceMapSlice', 'costmap (NvbloxCostmapLayer)', '고정 + 사람 ESDF 중 가까운 쪽 — Nav2가 이걸 구독'],
@@ -804,7 +805,7 @@ export const NODE_DOCS: NodeDoc[] = [
     notes: ['PPO 같은 강화학습과는 상관없다 — 정답 마스크로 학습한 분할 모델이다.', '컵 검출 YOLO와 같은 영상을 쓰므로 GPU 시간을 나눠 쓴다 (Jetson에선 주기 조절).', '토픽·파라미터 이름은 Isaac ROS 버전마다 다르다 — 쓰는 버전 문서 확인.'],
   },
   {
-    id: 'rl_residual_controller', name: 'RlResidualController (FollowPath 플러그인)', tag: 'custom', pkg: 'ml', form: 'Nav2 controller 플러그인 (C++ · pluginlib · nav2_core::Controller 상속)', group: 'Isaac ROS 전환안 (GPU)',
+    id: 'rl_residual_controller', name: 'RlResidualController (FollowPath 플러그인)', tag: 'custom', pkg: 'ml', form: 'Nav2 controller 플러그인 (C++ · extends nav2_core::Controller · controller_server 안에 로드)', group: 'Isaac ROS 전환안 (GPU)',
     role: 'controller_server 안 FollowPath 자리에 끼우는 내 컨트롤러. 안에서 MPPI를 불러 기본 속도를 받고, PPO로 학습한 정책(ONNX)의 Δ를 더한다(residual). DWB·MPPI와 같은 기본 클래스를 상속하므로 Nav2의 BT·progress/goal checker·speed limit·lifecycle이 그대로 붙는다. rl_nav_correction 별도 노드를 대신한다.',
     inputs: [
       ['🧩 인자', 'computeVelocityCommands(pose, velocity, goal_checker)', 'geometry_msgs/PoseStamped · Twist', 'controller_server', '매 주기(controller_frequency 20Hz) 호출 — 여기서 관측을 만들고 추론'],
@@ -839,6 +840,67 @@ export const NODE_DOCS: NodeDoc[] = [
     ],
     params: ['model_file_path · engine_file_path (범주별 모델 — cup)', 'output_field_size · cuboid_scaling_factor', 'score_threshold: 0.3'],
     notes: ['범주별로 학습된 모델이 필요하다 — 컵 모델이 없으면 Isaac Sim Replicator 합성 데이터로 학습 (Isaac 파이프라인 섹션).', '크기는 상대값이라 cuboid_scaling_factor로 실제 크기를 맞추거나 depth로 보정한다.'],
+  },
+  // ── 전체 아키텍처 "2D LiDAR + Cartographer" 전환안에만 있는 노드 ──
+  {
+    id: 'lidar_driver', name: 'LiDAR 드라이버 (ld08_driver · rplidar_ros)', tag: 'provided', pkg: 'ld08_driver (TurtleBot3 LDS-02) · rplidar_ros · laser_filters', form: 'ROS 2 노드 (+ laser_filters scan_to_scan_filter_chain)', group: 'LiDAR 전환안 (2D LiDAR + Cartographer)',
+    role: '2D LiDAR를 USB 시리얼로 읽어 한 바퀴(360°)마다 거리 배열을 LaserScan으로 낸다. 팔(OpenMANIPULATOR-X)에 가리는 각도는 laser_filters로 지운 뒤 Cartographer·AMCL·costmap·collision_monitor에 준다.',
+    inputs: [
+      ['🔌 시리얼', '/dev/ttyUSB0', 'USB 시리얼 (UART)', '2D LiDAR', 'udev 규칙으로 고정 이름 권장 (OpenCR /dev/ttyACM0과 안 섞이게)'],
+    ],
+    outputs: [
+      ['✉️ 발행', '/scan', 'sensor_msgs/LaserScan', 'cartographer_node, amcl, costmap, collision_monitor', '5~10Hz · frame_id base_scan · SensorData QoS(best_effort)'],
+    ],
+    params: ['frame_id: base_scan (URDF 링크와 같아야 함)', 'port_name / serial_port: /dev/ttyUSB0', 'laser_filters: LaserScanAngularBoundsFilterInPlace — 팔이 가리는 각도 범위', 'range_min · range_max (LDS-02 0.16~8 m)'],
+    notes: ['TurtleBot3 bringup은 환경 변수 LDS_MODEL(LDS-01 · LDS-02)로 드라이버를 고른다.', '2D LiDAR는 한 높이(약 0.17 m)만 본다 — 테이블 상판·의자 다리 사이는 카메라 voxel 층이 맡는다.'],
+  },
+  {
+    id: 'cartographer_node', name: 'cartographer_node', tag: 'provided', pkg: 'cartographer_ros', form: 'ROS 2 노드 (C++)', group: 'LiDAR 전환안 (2D LiDAR + Cartographer)',
+    role: '매핑 모드 SLAM. /scan을 지금 서브맵에 맞추고(스캔 매칭) 오도메트리로 다음 위치를 예측하며 서브맵을 쌓는다. 포즈 그래프 최적화(루프 클로저)로 드리프트를 지우고 map→odom을 낸다. 작업 상태 전체를 .pbstream으로 저장해 이어서 매핑할 수 있다.',
+    inputs: [
+      ['✉️ 구독', '/scan', 'sensor_msgs/LaserScan', 'LiDAR 드라이버', 'num_laser_scans: 1'],
+      ['✉️ 구독', '/odom ← /odometry/filtered', 'nav_msgs/Odometry', 'ekf', 'use_odometry: true · 리매핑'],
+      ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'robot_state_publisher, ekf', 'base_footprint → base_scan · odom → base_footprint'],
+      ['📞 서버', '/write_state · /finish_trajectory · /start_trajectory', 'cartographer_ros_msgs/srv/WriteState · FinishTrajectory · StartTrajectory', 'state_manager · 운영자', '.pbstream 저장 · 경로 끝내기 · 이어서 매핑'],
+    ],
+    outputs: [
+      ['✉️ 발행', '/tf', 'tf2_msgs/TFMessage', '전체', 'map → odom (published_frame: odom)'],
+      ['✉️ 발행', '/submap_list', 'cartographer_ros_msgs/SubmapList', 'cartographer_occupancy_grid_node, RViz', ''],
+      ['✉️ 발행', '/trajectory_node_list · /scan_matched_points2', 'visualization_msgs/MarkerArray · sensor_msgs/PointCloud2', 'RViz', '확인용'],
+    ],
+    params: ['-configuration_directory · -configuration_basename (예: robot_2d.lua)', 'map_frame: map · tracking_frame: base_footprint', 'published_frame: odom · odom_frame: odom', 'provide_odom_frame: false (odom→base_footprint는 EKF)', 'use_odometry: true · num_laser_scans: 1', 'TRAJECTORY_BUILDER_2D.min_range · max_range (LiDAR 스펙)', 'POSE_GRAPH.constraint_builder.min_score (루프 클로저 기준)'],
+    notes: ['운행 땐 끄고 amcl을 쓴다 — 둘 다 map→odom을 내므로 동시에 켜지 않는다.', '.pbstream은 Cartographer 전용(이어서 매핑), Nav2는 map_saver의 map.pgm·yaml을 쓴다.'],
+  },
+  {
+    id: 'cartographer_occupancy_grid_node', name: 'cartographer_occupancy_grid_node', tag: 'provided', pkg: 'cartographer_ros', form: 'ROS 2 노드 (C++)', group: 'LiDAR 전환안 (2D LiDAR + Cartographer)',
+    role: '서브맵 목록을 받아 Nav2가 쓰는 2D 격자 지도 /map으로 그린다.',
+    inputs: [['✉️ 구독', '/submap_list', 'cartographer_ros_msgs/SubmapList', 'cartographer_node', '서브맵 이미지는 /submap_query 서비스로 받아 옴']],
+    outputs: [['✉️ 발행', '/map', 'nav_msgs/OccupancyGrid', 'planner_server, explorer, map_saver, RViz', 'publish_period_sec마다']],
+    params: ['-resolution 0.05', '-publish_period_sec 1.0'],
+  },
+  {
+    id: 'map_server', name: 'map_server', tag: 'provided', pkg: 'nav2_map_server', form: 'ROS 2 lifecycle 노드', group: 'LiDAR 전환안 (2D LiDAR + Cartographer)',
+    role: '운행 모드에서 저장한 map.yaml(+ map.pgm)을 읽어 /map으로 한 번 낸다. 늦게 뜬 노드도 받도록 transient_local.',
+    inputs: [['💾 파일', '<map_dir>/<map_name>/map.yaml · map.pgm', 'YAML + PGM', '디스크 (map_saver가 저장)', 'resolution · origin · 임계값']],
+    outputs: [['✉️ 발행', '/map', 'nav_msgs/OccupancyGrid', 'amcl, planner_server(global costmap static layer), explorer', 'transient_local']],
+    params: ['yaml_filename', 'topic_name: map', 'frame_id: map'],
+    notes: ['lifecycle_manager_navigation이 amcl과 함께 켠다 (map:=saved).'],
+  },
+  {
+    id: 'amcl', name: 'amcl', tag: 'provided', pkg: 'nav2_amcl', form: 'ROS 2 lifecycle 노드', group: 'LiDAR 전환안 (2D LiDAR + Cartographer)',
+    role: '운행 모드 위치추정. 저장 지도 위에 파티클 수백~수천 개를 뿌리고 /scan이 잘 맞는 파티클만 남겨 로봇 위치를 찾고 map→odom을 낸다. 지도는 고치지 않는다.',
+    inputs: [
+      ['✉️ 구독', '/scan', 'sensor_msgs/LaserScan', 'LiDAR 드라이버', 'scan_topic'],
+      ['✉️ 구독', '/map', 'nav_msgs/OccupancyGrid', 'map_server', 'transient_local'],
+      ['✉️ 구독', '/initialpose', 'geometry_msgs/PoseWithCovarianceStamped', 'RViz 2D Pose Estimate · 시뮬레이터', '처음 위치 — 없으면 파티클이 수렴하지 않는다'],
+      ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'ekf', 'odom → base_footprint'],
+    ],
+    outputs: [
+      ['✉️ 발행', '/tf', 'tf2_msgs/TFMessage', '전체', 'map → odom'],
+      ['✉️ 발행', '/amcl_pose · /particle_cloud', 'geometry_msgs/PoseWithCovarianceStamped · nav2_msgs/ParticleCloud', 'coordinator · RViz', '추정 위치 · 파티클'],
+    ],
+    params: ['base_frame_id: base_footprint · odom_frame_id: odom · global_frame_id: map', 'robot_model_type: nav2_amcl::DifferentialMotionModel', 'min_particles: 500 · max_particles: 2000', 'laser_model_type: likelihood_field', 'set_initial_pose · initial_pose (시작 위치 고정이면)'],
+    notes: ['Cartographer와 동시에 켜지 않는다 (둘 다 map→odom).', 'LaserScan이 필요하다 — 현재 구성(RealSense만)엔 /scan이 없어 RTAB-Map 위치추정 모드가 대신한다.'],
   },
 ];
 

@@ -55,12 +55,12 @@ flowchart TB
     RV["👀 run_rviz.sh — RViz"]
     PB[("~/slam_maps/*.pbstream")]
     PG[("~/slam_maps/*.pgm · *.yaml")]
-    GZ --- BR
-    BR -->|"✉️ /scan /odom /clock<br/>/tf odom→base_footprint"| CA
+    GZ -->|"gz 토픽 (gz-transport)"| BR
+    BR -->|"✉️ /scan /odom /clock<br/>/tf (odom→base_footprint 변환)"| CA
     TEL -->|"✉️ /cmd_vel"| BR
     CA -->|"🧩 서브맵 (같은 데이터)"| OG
     OG -->|"✉️ /map"| RV
-    CA -->|"✉️ /tf map→odom"| RV
+    CA -->|"✉️ /tf (map→odom 변환)"| RV
     CA -->|"📞 /write_state<br/>save_pbstream.sh"| PB
     OG -->|"✉️ /map → map_saver<br/>save_map.sh"| PG
     PB -.->|"💾 불러오기<br/>run_slam_resume.sh"| CA
@@ -139,11 +139,11 @@ flowchart LR
         T0["trajectory 0<br/>어제 지도 (불러옴)"]
         T1["trajectory 1<br/>오늘 새로 도는 경로"]
         PG["포즈 그래프 최적화<br/>loop closure"]
-        T0 --> PG
-        T1 --> PG
+        T0 -->|"어제 서브맵·노드"| PG
+        T1 -->|"오늘 스캔 매칭 결과"| PG
     end
     PB -->|"💾 -load_state_filename"| T0
-    ST["📞 /start_trajectory<br/>0번 기준 (x, y, yaw)에서 시작"] --> T1
+    ST["📞 /start_trajectory<br/>0번 기준 (x, y, yaw)에서 시작"] -->|"시작 위치"| T1
     PG -->|"✉️ /map · map→odom"| OUT["한 장으로 합쳐진 지도"]
 ${CLS}
     class T0,T1,PG std;
@@ -212,10 +212,10 @@ flowchart TB
     MS -->|"✉️ /map"| AM
     MS -->|"✉️ /map"| PL
     RV -->|"❶ ✉️ /initialpose<br/>2D Pose Estimate"| AM
-    AM -->|"❷ ✉️ /tf map→odom"| PL
+    AM -->|"❷ ✉️ /tf (map→odom 변환)"| PL
     RV ==>|"❸ 🎬 /navigate_to_pose<br/>Nav2 Goal"| BT
     BT ==>|"❹ 🎬 경로 계산 · 따라가기"| PL
-    BT ==> CT
+    BT ==>|"🎬 /follow_path"| CT
     CT -->|"❺ ✉️ /cmd_vel (TwistStamped)"| GZ
     GZ -->|"✉️ /scan /odom /tf"| AM
 ${CLS}

@@ -19,7 +19,7 @@ type RosConcept =
   | 'distro' | 'install'
   | 'node' | 'patterns' | 'comm' | 'msgs' | 'param' | 'launch'
   | 'dds' | 'qos'
-  | 'cli' | 'pkg' | 'bag' | 'tf' | 'slam' | 'urdf' | 'ros2control'
+  | 'cli' | 'pkg' | 'bag' | 'tf' | 'slam' | 'slamstack' | 'localization' | 'urdf' | 'ros2control'
   | 'eco'
   | 'design' | 'provided';
 
@@ -39,6 +39,8 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'bag', label: 'rosbag', el: 'center-ros2-bag', group: 'tools' },
   { id: 'tf', label: 'TF2', el: 'center-ros2-tf', group: 'tools' },
   { id: 'slam', label: '맵핑·위치추정', el: 'center-ros2-slam', group: 'tools' },
+  { id: 'slamstack', label: 'SLAM 구성 비교', el: 'center-ros2-slamstack', group: 'tools' },
+  { id: 'localization', label: '위치추정', el: 'center-ros2-localization', group: 'tools' },
   { id: 'urdf', label: 'URDF·암', el: 'center-ros2-urdf', group: 'tools' },
   { id: 'ros2control', label: 'ros2_control', el: 'center-ros2-control', group: 'tools' },
   { id: 'eco', label: '생태계', el: 'center-ros2-eco', group: 'eco' },

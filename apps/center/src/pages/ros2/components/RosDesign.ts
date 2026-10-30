@@ -130,6 +130,48 @@ const ARCH_FLOWS: Flow[] = [
       { e: ['CO>UI', 'UI>U'], t: '또 실패하면 알리고 정지', d: '같은 단계가 2회 연속 실패하면 ✉️ /robot/say → "테이블까지 갈 수 없어요" 표시.' },
     ],
   },
+  {
+    label: '운영 ① SLAM 시작 — 새 지도 만들기 (자동 탐사)',
+    steps: [
+      { e: ['CLI>SM'], t: '지도 모드 MAPPING', d: '운영자가 ✉️ /cmd/map_mode "MAPPING" (또는 bringup map:=slam — 새 DB). 시뮬레이터 SLAM 패널도 같은 토픽입니다.' },
+      { e: ['SM>RTAB'], t: 'rtabmap을 매핑 모드로', d: 'state_manager가 📞 /rtabmap/rtabmap/set_mode_mapping. 응답이 와야 /state/map_mode를 바꿉니다 (발행 값 = 진짜 상태).' },
+      { e: ['SM>CO#3', 'CO>JTC'], t: '팔을 스캔 자세로', d: '✉️ /state/map_mode "MAPPING"을 받은 coordinator가 작업이 없으면 팔을 scan_pose로 세웁니다 (/arm_controller/joint_trajectory). gripper_cam도 지도에 쓰기 위해서입니다.' },
+      { e: ['JSB>SCG', 'SCG>GRS', 'SCG>PCA'], t: '스캔 자세면 gripper_cam 통과', d: 'scan_cam_gate가 /joint_states로 스캔 자세를 확인한 뒤에만 gripper_cam depth·점구름을 SLAM 쪽으로 넘깁니다.' },
+      { e: ['CLI>SM', 'SM>EXP'], t: '자동 탐사 시작', d: '✉️ /cmd/operation_mode "EXPLORE" → state_manager → ✉️ /state/operation_mode "EXPLORE" → explorer가 일을 시작합니다 (MAPPING일 때만 허락).' },
+      { e: ['RTAB>EXP', 'EXP>BT'], t: '프론티어로 이동', d: 'explorer가 /map에서 아는 곳과 모르는 곳의 경계(프론티어)를 골라 🎬 /navigate_to_pose. 도착하거나 실패하면 다음 프론티어로.' },
+      { e: ['RXS>RTAB', 'PCA>RTAB', 'EKF>RTAB', 'RTAB>PS'], t: '지도가 커진다', d: '두 카메라 RGB-D + 몸 뺀 점구름 + EKF 오도메트리로 rtabmap이 지도를 키우고 /map·map→odom을 냅니다. 출발점에 돌아오면 루프 클로저로 붙습니다.' },
+      { e: ['EXP>SM'], t: '탐사 끝 → AUTO', d: '프론티어가 다 떨어지면 ✉️ /explore/result "DONE" → state_manager가 AUTO로 되돌립니다. 못 가는 프론티어만 남아도 끝나므로, 일찍 끝나면 Nav2 실패 이유를 봅니다.' },
+    ],
+  },
+  {
+    label: '운영 ② 지도 저장',
+    steps: [
+      { e: ['CLI>MS', 'SIM>MS'], t: '저장 요청', d: '운영자 CLI나 시뮬레이터 [지도 저장]이 📞 /map_saver/save_map (nav2_msgs/srv/SaveMap).' },
+      { e: ['RTAB>MS', 'LMS>MS', 'MS>MAPDIR'], t: '/map 한 장 → 파일', d: 'map_saver가 rtabmap의 /map을 한 장 받아 <map_dir>/<이름>/map.pgm · map.yaml(2D 미리보기)로 씁니다. SLAM이 켜져 있어야 /map이 있습니다.' },
+      { e: ['RTAB>MAPDIR'], t: '지도 원본은 rtabmap.db', d: '운행에 쓰는 원본은 rtabmap.db 하나(특징점·그래프·지도)로, 매핑 내내 기록되고 종료 때 확정됩니다. map.pgm은 사람이 보는 그림입니다.' },
+    ],
+  },
+  {
+    label: '운영 ③ 저장 지도로 위치추정 시작',
+    steps: [
+      { e: ['CLI>SM'], t: '지도 고르기', d: '✉️ /cmd/map_name "거실" (또는 bringup map:=saved map_name:=거실).' },
+      { e: ['SM>RTAB', 'MAPDIR>RTAB'], t: 'DB 불러오기 + 위치추정 모드', d: '📞 /rtabmap/rtabmap/load_database(거실/rtabmap.db) → 📞 set_mode_localization. 지도는 고정되고 위치만 찾습니다.' },
+      { e: ['RXS>RTAB', 'EKF>RTAB'], t: '장면 찾기', d: '지금 카메라 장면과 맞는 과거 장면을 찾는 중 — 이때는 map→odom이 없습니다. 매핑했던 곳을 천천히 비추면 빨리 찾고, 틀리면 /initialpose로 대략 위치를 알려 줍니다.' },
+      { e: ['RTAB>PS'], t: 'map→odom 시작', d: '장면이 맞으면 ✉️ /map(transient_local)과 /tf (map→odom 변환)이 나옵니다. 이제 지도 기준 로봇 위치를 압니다.' },
+      { e: ['LMN>BT', 'LMN>PS', 'LMN>CS', 'LMN>BS'], t: 'Nav2 활성', d: 'lifecycle_manager_navigation이 서버들을 configure → activate. 이제 목표를 받을 수 있습니다 (map→odom 전에 목표를 보내면 실패 — 시나리오 6).' },
+    ],
+  },
+  {
+    label: '운영 ④ 목표 지정 → Nav2 주행',
+    steps: [
+      { e: ['CO>BT'], t: '목표 보내기', d: '🎬 /navigate_to_pose — coordinator가 작업 중에, 또는 사람이 RViz Nav2 Goal(✉️ /goal_pose)로. 조작 모드는 AUTO여야 합니다.' },
+      { e: ['BT>PS', 'COST>PS'], t: '경로 계산', d: 'bt_navigator가 🎬 /compute_path_to_pose → planner_server가 global costmap 위에서 경로(/plan)를 냅니다.' },
+      { e: ['BT>CS', 'COST>CS', 'EKF>CS'], t: '경로 따라가기', d: '🎬 /follow_path → controller_server(DWB)가 local costmap과 현재 속도를 보며 20Hz로 속도를 계산합니다.' },
+      { e: ['CS>RLN', 'NT>RLN'], t: 'RL 보정', d: '✉️ /cmd_vel_nav → rl_nav_correction이 Δ를 더하고 /speed_limit 상한으로 다시 자릅니다.' },
+      { e: ['RLN>TM', 'TM>VS', 'VS>CMN', 'CMN>DDC'], t: '안전 단계 → 바퀴', d: 'twist_mux(자동·수동 선택) → velocity_smoother(가속 제한) → collision_monitor(감속·정지) → ✉️ /cmd_vel → diff_drive_controller.' },
+      { e: ['DDC>EKF', 'IMB>EKF', 'EKF>CS'], t: '실제 움직임이 돌아온다', d: '/odom·/imu → EKF → /odometry/filtered가 controller_server로 — 다음 주기 계산에 씁니다. 도착하면 follow_path 성공 → NavigateToPose SUCCEEDED.' },
+    ],
+  },
 ];
 
 const SENSE_FLOWS: Flow[] = [
@@ -407,7 +449,7 @@ const SECTIONS: Record<Section, { label: string; md: string; links?: Record<stri
 
 > 👆 **섹터 영역을 누르면 해당 상세 섹션으로, 노드를 누르면 노드 사전의 해당 카드로 이동합니다.**
 
-<p class="rd-slam"><b>SLAM·인지 구성</b> <button class="rd-slam-btn active" data-slam="rtab">RTAB-Map + YOLO (현재)</button> <button class="rd-slam-btn" data-slam="isaac">🟪 cuVSLAM + nvblox + YOLO·CenterPose (Isaac ROS 전환안)</button></p>
+<p class="rd-slam"><b>SLAM·인지 구성</b> <button class="rd-slam-btn active" data-slam="rtab">RTAB-Map + YOLO (현재)</button> <button class="rd-slam-btn" data-slam="isaac">🟪 cuVSLAM + nvblox + YOLO·CenterPose (Isaac ROS 전환안)</button> <button class="rd-slam-btn" data-slam="lidar">🟦 2D LiDAR + Cartographer (LiDAR 전환안)</button></p>
 
 ${F}mermaid
 flowchart TB
@@ -464,6 +506,7 @@ flowchart TB
             MS["📦 map_saver<br/>map_saver_server (bringup)"]
             LMS["📦 lifecycle_manager_map_saver"]
         end
+        MAPDIR[("💾 지도 폴더<br/>map_dir/이름/")]
         EKF["📦 robot_localization<br/>ekf_filter_node<br/>휠 + IMU 융합"]
     end
     subgraph S5["⑤ 뒷단 보정"]
@@ -483,12 +526,12 @@ flowchart TB
         SPW["📦 spawner<br/>컨트롤러 6개 올리고 끝남 (1회)"]
         subgraph CM["📦 controller_manager (ros2_control_node · 한 프로세스 100Hz)"]
             JTC["📦 arm_controller<br/>JointTrajectoryController"]
-            RLA["🛠️ rl_arm_correction<br/>chainable controller (ml)"]
+            RLA["🛠️ rl_arm_correction (ml)<br/>extends controller_interface::<br/>ChainableControllerInterface<br/>플러그인 · ROS 노드 아님"]
             GRC["📦 gripper_controller<br/>parallel_gripper_action"]
             DDC["📦 diff_drive_controller"]
             JSB["📦 joint_state_broadcaster"]
             IMB["📦 imu_sensor_broadcaster"]
-            HWI["🛠️ BeebotSystemHardware<br/>hardware interface (control)"]
+            HWI["🛠️ BeebotSystemHardware (control)<br/>extends hardware_interface::<br/>SystemInterface<br/>플러그인 · ROS 노드 아님"]
         end
         subgraph SHA["물리 하드웨어 (구동)"]
             HW{{"OpenCR 펌웨어 → 다이나믹셀<br/>팔 5축·그리퍼·바퀴 2·IMU"}}
@@ -536,28 +579,31 @@ flowchart TB
     RXS -->|"✉️ /rtabmap/rgbd_images<br/>(rtabmap_msgs/RGBDImages)"| RTAB
     PCA -->|"✉️ /rtabmap/scan_cloud<br/>(base_footprint)"| RTAB
     RTAB -->|"✉️ /map"| MS
+    RTAB -->|"💾 rtabmap.db 쓰기<br/>(매핑 중 기록 · 종료 때 확정)"| MAPDIR
+    MAPDIR -->|"💾 rtabmap.db 읽기<br/>(load_database · 위치추정)"| RTAB
+    MS -->|"💾 map.pgm · map.yaml<br/>(2D 미리보기)"| MAPDIR
     LMS -.->|"📞 lifecycle<br/>change_state"| MS
     CLI -.->|"📞 /map_saver/save_map<br/>(nav2_msgs/srv/SaveMap)"| MS
     SIM -.->|"📞 /map_saver/save_map<br/>(지도 저장 버튼)"| MS
-    RTAB -->|"✉️ /map · /tf map→odom<br/>(nav_msgs/<br/>OccupancyGrid ·<br/>tf2_msgs/TFMessage)"| PS
+    RTAB -->|"✉️ /map · /tf (map→odom 변환)<br/>(nav_msgs/<br/>OccupancyGrid ·<br/>tf2_msgs/TFMessage)"| PS
     DDC -->|"✉️ /odom<br/>(nav_msgs/Odometry)"| EKF
     IMB -->|"✉️ /imu<br/>(sensor_msgs/Imu)"| EKF
     EKF -->|"✉️ /odometry/filtered<br/>(nav_msgs/Odometry)"| RTAB
-    EKF -->|"✉️ /odometry/filtered ·<br/>/tf odom→base_footprint<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| CS
+    EKF -->|"✉️ /odometry/filtered ·<br/>/tf (odom→base_footprint 변환)<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| CS
     PC -->|"✉️ /pole_front_cam/depth<br/>/color/points<br/>(sensor_msgs/<br/>PointCloud2)"| BF
     BF -->|"✉️ /pole_front_cam/depth<br/>/color/points_filtered<br/>팔·차체 뺀 점구름<br/>(sensor_msgs/<br/>PointCloud2)"| COST
     BF -->|"✉️ …/points_filtered<br/>(sensor_msgs/<br/>PointCloud2)"| PCA
-    COST ---|"🧩 서버 안 플러그인<br/>(같은 프로세스)"| PS
-    COST --- CS
+    COST -->|"🧩 global costmap 읽기<br/>(planner_server 안 · 같은 프로세스)"| PS
+    COST -->|"🧩 local costmap 읽기<br/>(controller_server 안 · 같은 프로세스)"| CS
     BT ==>|"🎬 compute_path_to_pose"| PS
     BT ==>|"🎬 follow_path"| CS
     BT ==>|"🎬 backup · spin · wait"| BS
     LMN -.->|"📞 lifecycle<br/>change_state"| BT
-    LMN -.-> PS
-    LMN -.-> CS
-    LMN -.-> BS
+    LMN -.->|"📞 lifecycle change_state<br/>(configure · activate)"| PS
+    LMN -.->|"📞 lifecycle change_state"| CS
+    LMN -.->|"📞 lifecycle change_state"| BS
     LMB -.->|"📞 lifecycle<br/>change_state"| VS
-    LMB -.-> CMN
+    LMB -.->|"📞 lifecycle change_state"| CMN
     PER -->|"✉️ /tracked_objects · /mission/qr<br/>(perception/<br/>TrackedObjectArray ·<br/>std_msgs/String)"| VLM
     PER -->|"✉️ /tracked_objects<br/>신호등 색<br/>(perception/<br/>TrackedObjectArray)"| SD
     SD -->|"✉️ /mission/signal<br/>(perception/MissionSignal)"| VLM
@@ -578,6 +624,8 @@ flowchart TB
     SM -->|"✉️ /state/operation_mode<br/>EXPLORE"| EXP
     EXP ==>|"🎬 /navigate_to_pose<br/>프론티어 목표"| BT
     EXP -->|"✉️ /explore/result<br/>DONE · FAILED → AUTO"| SM
+    RTAB -->|"✉️ /map<br/>프론티어 찾기<br/>(nav_msgs/OccupancyGrid)"| EXP
+    SM -->|"✉️ /state/map_mode<br/>MAPPING이면 팔 scan_pose<br/>(std_msgs/String)"| CO
     MG ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| JTC
     CO -->|"✉️ /arm_controller/joint_trajectory<br/>시작 자세 (MoveIt 없이)<br/>(trajectory_msgs/<br/>JointTrajectory)"| JTC
     MC -->|"✉️ /arm_controller/joint_trajectory<br/>수동 팔<br/>(trajectory_msgs/<br/>JointTrajectory)"| JTC
@@ -660,7 +708,7 @@ ${F}
 - **gripper_cam도 RealSense.** perception의 두 번째 눈(퍽 윗면 AprilTag는 coordinator \`inspect\`로 위에서 봐야 읽힘), 파지 직전 근접 점구름(grasp_scorer, \`gripper_cam_pointcloud:=true\`일 때), 지도 만들 때는 두 번째 SLAM 카메라.
 - **/state는 state_manager 하나만.** 조작 모드(AUTO·MANUAL·EXPLORE)·비상정지(\`/state/emergency\` → twist_mux 잠금)·지도 모드를 정하고, BeebotSystemHardware의 \`/motor_status\`로 \`/state/devices/<이름>\`을 낸다. EXPLORE면 explorer가 프론티어로 Nav2를 보내고 끝나면 \`/explore/result\`. 신호등 암호는 인지 쪽 signal_decoder(perception 패키지)가 \`/tracked_objects\`의 신호등 색을 시간축으로 읽어 \`/mission/signal\`로 planner에 준다.
 `,
-    links: { IR: 'sense', S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
+    links: { NB: 'nav', IR: 'sense', S0: 'sense', S1: 'plan', S2: 'plan', S3: 'learn', S4: 'nav', N2: 'nav', RT: 'nav', S5: 'learn', S6: 'base', S7: 'ctrl', CM: 'ctrl', SHS: 'sense', SHA: 'ctrl', U: 'scenario' },
     nodes: {
       PCH: 'realsense_pole', PC: 'realsense_pole', GCH: 'realsense_gripper', GC: 'realsense_gripper', PER: 'perception', BF: 'body_filter',
       UI: 'user_input', VLM: 'vlm_task_planner', SD: 'signal_decoder', CO: 'coordinator', EXP: 'explorer', GS: 'grasp_scorer', NT: 'rl_nav_tuner',
@@ -671,7 +719,7 @@ ${F}
       MC: 'manual_control', SM: 'state_manager',
       JTC: 'arm_controller', GRC: 'gripper_controller', DDC: 'diff_drive_controller', JSB: 'joint_state_broadcaster', IMB: 'imu_sensor_broadcaster',
       HWI: 'hw_interface', HW: 'hw_interface',
-      RLP: 'rl_residual_controller', VSLAM: 'cuvslam', NVB: 'nvblox', YOLO: 'isaac_yolo', CPOSE: 'centerpose', UNET: 'peoplesemsegnet',
+      RLP: 'rl_residual_controller', LDH: 'lidar_driver', LDD: 'lidar_driver', CART: 'cartographer_node', OGN: 'cartographer_occupancy_grid_node', MSV: 'map_server', AMCL: 'amcl', VSLAM: 'cuvslam', NVB: 'nvblox', YOLO: 'isaac_yolo', CPOSE: 'centerpose', UNET: 'peoplesemsegnet',
     },
     flows: ARCH_FLOWS,
   },
@@ -701,7 +749,7 @@ flowchart TB
     O3(["→ 3 rtabmap<br/>SLAM · 위치추정"])
     O4(["→ 3 costmap · 5 collision_monitor"])
     O5(["→ 2 grasp_scorer<br/>근접 파지 점구름"])
-    JS --> RSP
+    JS -->|"✉️ /joint_states<br/>(sensor_msgs/JointState)<br/>관절각 → 링크 TF"| RSP
     GCH -->|"🔌 USB 3<br/>(RealSense SDK)"| GC
     PCH -->|"🔌 USB 3<br/>(RealSense SDK)"| PC
     GC -->|"✉️ /gripper_cam/color<br/>/image_raw · camera_info<br/>(sensor_msgs/Image ·<br/>CameraInfo)"| PER
@@ -715,7 +763,7 @@ flowchart TB
     RSP -->|"✉️ /robot_description · /tf<br/>몸 모양 · 관절 위치<br/>(std_msgs/String ·<br/>tf2_msgs/TFMessage)"| BF
     BF -->|"✉️ /pole_front_cam/depth<br/>/color/points_filtered<br/>(sensor_msgs/<br/>PointCloud2)"| O4
     BF -->|"✉️ …/points_filtered<br/>(sensor_msgs/<br/>PointCloud2)"| PCA
-    JS --> SCG
+    JS -->|"✉️ /joint_states<br/>스캔 자세인가<br/>(sensor_msgs/JointState)"| SCG
     GC -->|"✉️ /gripper_cam depth ·<br/>points<br/>(sensor_msgs/Image ·<br/>PointCloud2)"| SCG
     SCG -->|"✉️ /gripper_cam/aligned_depth<br/>_to_color/image_scan<br/>→ rgbd_sync<br/>(sensor_msgs/Image)"| O3
     SCG -->|"✉️ /gripper_cam/depth<br/>/color/points_scan<br/>(sensor_msgs/<br/>PointCloud2)"| PCA
@@ -795,17 +843,17 @@ flowchart TB
     UI -->|"✉️ /cmd/user_command<br/>(std_msgs/String)"| VLM
     CO -->|"✉️ /robot/say · /task/status<br/>(std_msgs/String ·<br/>plan/TaskStatus)"| UI
     UI -->|"🔊 안내 (터미널 텍스트)<br/>“컵 가져왔어요”<br/>“컵을 잡을 수 없어요”"| USER
-    TO --> VLM
-    TO --> CO
-    ST --> CO
-    ST --> VLM
-    SE --> CO
+    TO -->|"✉️ /tracked_objects · /mission/qr<br/>(perception/TrackedObjectArray ·<br/>std_msgs/String)"| VLM
+    TO -->|"✉️ /tracked_objects<br/>id 검증 · 위치<br/>(perception/TrackedObjectArray)"| CO
+    ST -->|"✉️ /state/operation_mode ·<br/>/state/emergency<br/>(std_msgs/String · Bool)"| CO
+    ST -->|"✉️ /state/operation_mode<br/>(std_msgs/String)"| VLM
+    SE -->|"✉️ /arm_safety_event<br/>(control/ArmSafetyEvent)"| CO
     VLM -->|"🌐 HTTP 계획 요청<br/>명령 · 물체 · 카메라 영상"| AIS
     SD -->|"✉️ /mission/signal<br/>(perception/MissionSignal)"| VLM
     VLM -->|"✉️ /task/sub_goals<br/>(plan/<br/>SubGoalArray)"| CO
     CO -->|"✉️ /task/status<br/>(plan/<br/>TaskStatus)"| VLM
     CO -.->|"📞 /score_grasps<br/>(ml/srv/<br/>ScoreGrasps)"| GS
-    NI --> NT
+    NI -->|"✉️ /local_costmap/costmap ·<br/>/odometry/filtered · /plan<br/>(nav_msgs/OccupancyGrid ·<br/>Odometry · Path)"| NT
     NT -->|"✉️ /speed_limit<br/>(nav2_msgs/SpeedLimit)"| O3b
     NT -.->|"📞 /controller_server<br/>/set_parameters<br/>(rcl_interfaces/srv/<br/>SetParameters)"| O3b
     CO ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| O3a
@@ -891,18 +939,18 @@ flowchart TB
     RTAB["📦 rtabmap<br/>위치추정 모드"]
     LMN["📦 lifecycle_manager_navigation"]
     O5a(["→ 5 rl_nav_correction"])
-    IN ==> BT
+    IN ==>|"🎬 /navigate_to_pose<br/>(nav2_msgs/action/<br/>NavigateToPose)"| BT
     BT ==>|"🎬 /compute_path_to_pose<br/>(nav2_msgs/action/<br/>ComputePathToPose)"| PS
     BT ==>|"🎬 /follow_path<br/>(nav2_msgs/action/<br/>FollowPath)"| CS
     BT ==>|"🎬 /spin · /backup ·<br/>/wait<br/>(nav2_msgs/action/<br/>Spin · BackUp · Wait)"| BS
-    RGBD --> RTAB
-    ODOM --> RTAB
+    RGBD -->|"✉️ /rtabmap/rgbd_images ·<br/>/rtabmap/scan_cloud<br/>(rtabmap_msgs/RGBDImages ·<br/>sensor_msgs/PointCloud2)"| RTAB
+    ODOM -->|"✉️ /odometry/filtered<br/>(nav_msgs/Odometry)"| RTAB
     RTAB -->|"✉️ /map transient_local<br/>(nav_msgs/OccupancyGrid)"| PS
-    RTAB -->|"✉️ /tf map→odom<br/>(tf2_msgs/TFMessage)"| CS
-    PTS --> PS
-    PTS --> CS
-    ODOM --> CS
-    TUNE -.-> CS
+    RTAB -->|"✉️ /tf (map→odom 변환)<br/>(tf2_msgs/TFMessage)"| CS
+    PTS -->|"✉️ …/points_filtered<br/>global obstacle 층<br/>(sensor_msgs/PointCloud2)"| PS
+    PTS -->|"✉️ …/points_filtered<br/>local voxel 층<br/>(sensor_msgs/PointCloud2)"| CS
+    ODOM -->|"✉️ /odometry/filtered<br/>현재 속도<br/>(nav_msgs/Odometry)"| CS
+    TUNE -.->|"✉️ /speed_limit (nav2_msgs/SpeedLimit)<br/>📞 set_parameters<br/>(rcl_interfaces/srv/SetParameters)"| CS
     PS -->|"✉️ /plan<br/>(nav_msgs/Path)"| O5a
     CS -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| O5a
     BS -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/<br/>TwistStamped)"| O5a
@@ -972,7 +1020,7 @@ flowchart TB
         CH2 -->|"🔌 USB 3<br/>(RealSense SDK)"| RS2
         RS2 -->|"✉️ /pole_front_cam/color ·<br/>aligned_depth_to_color<br/>(sensor_msgs/Image)"| RT2
         RT2 -->|"✉️ /map transient_local<br/>(nav_msgs/OccupancyGrid)"| NAV2
-        RT2 -->|"✉️ /tf map→odom<br/>(tf2_msgs/TFMessage)"| NAV2
+        RT2 -->|"✉️ /tf (map→odom 변환)<br/>(tf2_msgs/TFMessage)"| NAV2
     end
     DB -.->|"💾 같은 DB를 불러옴<br/>(rtabmap.db)"| RT2
 ${CLS}
@@ -1028,14 +1076,14 @@ ${F}
 
 개념·launch 명령 원문은 **3 Nav2·SLAM의 §3-1**에 있습니다. 여기는 손으로 직접 해보는 순서와 확인·문제 해결만 모았습니다.
 
-<p><button class="rd-sec" data-sec="nav">◀ 개념·명령은 3 Nav2·SLAM에서 보기</button></p>
+<p><button class="rd-sec" data-sec="nav">◀ 개념·명령은 3 Nav2·SLAM에서 보기</button> <button class="rd-sec" data-sec="scenario">▶ 노드끼리 주고받는 순서는 시나리오 8~11</button></p>
 
 ${F}mermaid
 flowchart LR
-    A["준비<br/>DB 지우기 · 토픽 확인"] --> B["매핑 주행<br/>teleop 저속"]
-    B --> C["루프 클로저<br/>출발점 복귀"]
-    C --> D["저장<br/>rtabmap.db"]
-    D --> E["위치추정 확인<br/>map to odom"]
+    A["준비<br/>DB 지우기 · 토픽 확인"] -->|"토픽 정상 확인 후<br/>map:=slam 기동"| B["매핑 주행<br/>teleop 저속"]
+    B -->|"다 돌았으면<br/>출발점으로"| C["루프 클로저<br/>출발점 복귀"]
+    C -->|"지도가 맞춰지면<br/>SLAM 켠 채로"| D["저장<br/>rtabmap.db"]
+    D -->|"map:=saved로<br/>다시 기동"| E["위치추정 확인<br/>map to odom"]
 ${CLS}
     class A,B,C,D,E std;
 ${F}
@@ -1089,10 +1137,10 @@ flowchart TB
     ASM["🛠️ arm_safety_monitor<br/>전류 기반 접촉 감지"]
     subgraph CM["controller_manager (프로세스 내부 100Hz)"]
         JTC["📦 arm_controller<br/>JTC + 경로 허용오차"]
-        RAC["🛠️ rl_arm_correction<br/>chainable controller (ml)"]
+        RAC["🛠️ rl_arm_correction (ml)<br/>extends ChainableControllerInterface<br/>플러그인 · ROS 노드 아님"]
         GRC["📦 gripper_controller<br/>parallel_gripper_action"]
         JSB["📦 joint_state_broadcaster"]
-        HWI["🛠️ BeebotSystemHardware<br/>hardware interface (control)"]
+        HWI["🛠️ BeebotSystemHardware (control)<br/>extends hardware_interface::<br/>SystemInterface<br/>플러그인 · ROS 노드 아님"]
         JTC -->|"🧩 reference interface<br/>rl_arm_correction/joint1~5<br/>(double)"| RAC
         RAC -->|"🧩 command interface<br/>joint1~5/position<br/>(double)"| HWI
         GRC -->|"🧩 command interface<br/>gripper_left_joint/position (m)"| HWI
@@ -1104,8 +1152,8 @@ flowchart TB
     MOT{{"OpenCR 펌웨어 → DYNAMIXEL<br/>팔 5축 · 그리퍼"}}
     O1(["→ 1 robot_state_publisher · move_group<br/>· 2 coordinator · manual_control · state_manager"])
     O2(["→ 2 coordinator"])
-    IN ==> MG
-    SC -.-> MG
+    IN ==>|"📞 /plan_kinematic_path<br/>🎬 /execute_trajectory<br/>(moveit_msgs)"| MG
+    SC -.->|"📞 /apply_planning_scene ·<br/>/clear_octomap<br/>(moveit_msgs/srv · std_srvs/srv)"| MG
     MG ==>|"🎬 /arm_controller<br/>/follow_joint_trajectory<br/>(control_msgs/action/<br/>FollowJointTrajectory)"| JTC
     GIN ==>|"🎬 /gripper_controller<br/>/gripper_cmd<br/>(control_msgs/action/<br/>ParallelGripperCommand)"| GRC
     TIN -->|"✉️ (trajectory_msgs/<br/>JointTrajectory)"| JTC
@@ -1224,22 +1272,22 @@ flowchart TB
     subgraph CM["controller_manager (프로세스 내부)"]
         DD["📦 diff_drive_controller"]
         IMUB["📦 imu_sensor_broadcaster"]
-        BHW["🛠️ BeebotSystemHardware"]
+        BHW["🛠️ BeebotSystemHardware<br/>extends SystemInterface (플러그인)"]
         DD -->|"🧩 command interface<br/>wheel_*_joint/velocity"| BHW
         BHW -->|"🧩 state interface<br/>(double)"| DD
         BHW -->|"🧩 state interface<br/>(double)"| IMUB
     end
     WM{{"OpenCR 펌웨어 → 바퀴 모터 ×2 · IMU"}}
     O3(["→ 3 Nav2 · rtabmap · 2 rl_nav_tuner"])
-    CIN --> RNC
-    PIN --> RNC
-    SL --> RNC
+    CIN -->|"✉️ /cmd_vel_nav<br/>(geometry_msgs/TwistStamped)"| RNC
+    PIN -->|"✉️ /plan 경로 오차<br/>(nav_msgs/Path)"| RNC
+    SL -->|"✉️ /speed_limit 상한<br/>(nav2_msgs/SpeedLimit)"| RNC
     RNC -->|"✉️ /cmd_vel_corrected<br/>(geometry_msgs/<br/>TwistStamped)"| TM
     MAN -->|"✉️ /cmd_vel_manual<br/>(geometry_msgs/<br/>TwistStamped)"| TM
     EST -->|"✉️ /state/emergency<br/>(std_msgs/Bool)"| TM
     TM -->|"✉️ /cmd_vel_mux<br/>(geometry_msgs/<br/>TwistStamped)"| VS
     VS -->|"✉️ /cmd_vel_smoothed<br/>(geometry_msgs/<br/>TwistStamped)"| CMN
-    PTS --> CMN
+    PTS -->|"✉️ …/points_filtered<br/>충돌 감시<br/>(sensor_msgs/PointCloud2)"| CMN
     MCT -.->|"📞 /collision_monitor/toggle<br/>MANUAL이면 끔 → 그대로 통과<br/>(nav2_msgs/srv/Toggle)"| CMN
     CMN -->|"✉️ /cmd_vel<br/>(geometry_msgs/<br/>TwistStamped)"| DD
     BHW -->|"🔌 USB 시리얼 C 줄<br/>바퀴 속도 rad/s<br/>(OpenCR가 BulkWrite)"| WM
@@ -1248,7 +1296,7 @@ flowchart TB
     IMUB -->|"✉️ /imu<br/>(sensor_msgs/Imu)"| EKF
     IMUB -->|"✉️ /imu<br/>(sensor_msgs/Imu)"| RNC
     DD -->|"✉️ /odom<br/>(nav_msgs/Odometry)"| RNC
-    EKF -->|"✉️ /odometry/filtered ·<br/>/tf odom→base_footprint<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| O3
+    EKF -->|"✉️ /odometry/filtered ·<br/>/tf (odom→base_footprint 변환)<br/>(nav_msgs/Odometry ·<br/>tf2_msgs/TFMessage)"| O3
 ${CLS}
     class TM,VS,EKF,DD,IMUB,BHW std;
     class RNC rl;
@@ -1367,16 +1415,16 @@ flowchart TB
     YAML["📄 controllers.yaml<br/>컨트롤러 이름 · 타입 · 파라미터"]
     SP["📦 spawner<br/>컨트롤러 올리기 · 켜기"]
     subgraph CMG["📦 controller_manager (ros2_control_node · 100Hz)"]
-        subgraph CTRL["컨트롤러 — 장치를 모름"]
+        subgraph CTRL["컨트롤러 — 장치를 모름 · 전부 플러그인<br/>extends ControllerInterface (체인이면 ChainableControllerInterface)"]
             C1["arm_controller (JTC)"]
-            C2["rl_arm_correction"]
+            C2["rl_arm_correction<br/>(Chainable)"]
             C3["diff_drive_controller"]
             C4["broadcaster들"]
             C5["gripper_controller<br/>(parallel_gripper)"]
         end
         RM["Resource Manager<br/>인터페이스 목록 · 쓰기 소유권"]
-        subgraph HWC["hardware component — 장치마다 하나"]
-            P1["🛠️ BeebotSystemHardware<br/>(control 패키지 · 직접 작성)"]
+        subgraph HWC["hardware component — 장치마다 하나<br/>extends SystemInterface · ActuatorInterface · SensorInterface"]
+            P1["🛠️ BeebotSystemHardware<br/>extends SystemInterface<br/>(control 패키지 · 직접 작성)"]
             P2["예: 다른 모터용 플러그인<br/>(CAN · EtherCAT …)"]
         end
     end
@@ -1605,10 +1653,10 @@ flowchart LR
     end
     ONNX["ONNX"]
     ROS["ROS 2 노드 · 컨트롤러"]
-    URDF --> SYS --> ENV
-    ENV --> GEN --> DS --> TR --> ONNX
-    ENV --> LAB --> ONNX
-    ONNX --> ROS
+    URDF -->|"USD 로봇"| SYS -->|"맞춘 질량·마찰·게인"| ENV
+    ENV -->|"장면"| GEN -->|"(점구름, 자세, 성공/실패)"| DS -->|"학습 데이터"| TR -->|"학습한 모델 내보내기"| ONNX
+    ENV -->|"장면 + 랜덤화"| LAB -->|"정책 내보내기"| ONNX
+    ONNX -->|"같은 관측·정규화로<br/>추론 (배포)"| ROS
 ${CLS}
     class GEN,TR,LAB rl;
     class ROS std;
@@ -1664,7 +1712,7 @@ ${F}
     md: `
 ## 시나리오
 
-같은 설계가 상황마다 어떻게 움직이는지 봅니다. 1번이 정상 흐름이고, 2~7번은 일이 꼬였을 때입니다.
+같은 설계가 상황마다 어떻게 움직이는지 봅니다. 1번이 정상 흐름, 2~7번은 일이 꼬였을 때, 8~11번은 지도 만들기부터 주행까지 **운영 절차**입니다.
 
 | # | 시나리오 | 무엇을 보나 |
 | --- | --- | --- |
@@ -1675,6 +1723,10 @@ ${F}
 | 5 | 집는 중 사람이 팔을 잡았다 | 전류로 접촉 감지 → 궤적 취소 |
 | 6 | 전원 켜자마자 명령 | 위치(map→odom)를 찾을 때까지 기다림 |
 | 7 | 학습 노드를 모두 끄고 같은 명령 | 끄면 무엇이 달라지나 |
+| 8 | SLAM 시작 — 새 지도 만들기 | MAPPING 모드 → EXPLORE 자동 탐사 → 끝나면 AUTO |
+| 9 | 지도 저장 | rtabmap.db(원본) + map_saver 2D 미리보기 |
+| 10 | 저장 지도로 위치추정 시작 | DB 불러오기 → 장면 찾기 → map→odom → Nav2 활성 |
+| 11 | 목표 지정 → Nav2 주행 | Nav2 Goal → 경로 → 20 Hz 속도 명령 체인 → 도착 |
 
 ## 시나리오 1: 테이블 위 컵 가져오기 (정상 흐름)
 
@@ -1913,7 +1965,7 @@ sequenceDiagram
     I->>V: ✉️ /cmd/user_command
     V->>C: ✉️ /task/sub_goals
     C->>C: 검증 OK · map→odom TF 대기 (TODO)
-    T-->>C: ✉️ /tf map→odom 발행 시작
+    T-->>C: ✉️ /tf (map→odom 변환) 발행 시작
     C->>N: 🎬 /navigate_to_pose
 ${F}
 
@@ -1931,6 +1983,118 @@ ${F}
 
 - **노드를 내리지 않고 끈다.** \`enabled:=false\`면 원래 시스템과 같아야 합니다(개요의 규칙). 그래서 학습 노드를 넣기 전·후를 같은 조건에서 비교할 수 있습니다.
 - **시나리오 1은 끝까지 동작합니다.** 차이는 카펫에서 경로를 조금 더 벗어나고, 팔이 처져 파지 성공률이 떨어지는 정도입니다. 그만큼 시나리오 2(재시도·재계획)가 더 자주 일어납니다.
+
+## 시나리오 8: SLAM 시작 — 새 지도 만들기 (자동 탐사)
+
+새 장소에 처음 왔을 때입니다. 지도 모드를 MAPPING으로 바꾸고, EXPLORE로 탐사를 맡깁니다 (손으로 몰려면 MANUAL + teleop).
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant O as 운영자 (operator_tool · 시뮬레이터)
+    participant S as state_manager
+    participant R as rtabmap
+    participant C as coordinator
+    participant E as explorer
+    participant N as Nav2
+    O->>S: ✉️ /cmd/map_mode "MAPPING" (또는 bringup map:=slam — 새 DB)
+    S->>R: 📞 /rtabmap/rtabmap/set_mode_mapping
+    R-->>S: 응답 OK
+    S->>C: ✉️ /state/map_mode "MAPPING"
+    C->>C: 작업 없음 → 팔을 scan_pose로 (gripper_cam도 지도에 씀)
+    O->>S: ✉️ /cmd/operation_mode "EXPLORE"
+    S->>E: ✉️ /state/operation_mode "EXPLORE"
+    loop 프론티어가 남아 있는 동안
+        R-->>E: ✉️ /map · /tf (map→odom 변환)
+        E->>N: 🎬 /navigate_to_pose (가장 좋은 프론티어)
+        N-->>E: 결과 (성공 · 실패 → 다음 프론티어)
+    end
+    E->>S: ✉️ /explore/result "DONE"
+    S-->>O: ✉️ /state/operation_mode "AUTO"
+${F}
+
+- **MAPPING일 때만 EXPLORE가 허락됩니다.** 위치추정 모드에서 탐사하면 지도가 안 바뀌어 프론티어가 영원히 남습니다.
+- 천천히(0.1~0.15 m/s) 돌고, 마지막엔 **출발점으로 돌아와** 루프 클로저로 지도를 붙입니다. 자세한 순서·문제 해결은 3-1 지도 맵핑.
+- **탐사가 일찍 끝나면:** explorer가 못 가는 프론티어를 계속 실패(블랙리스트)해 "갈 곳 없음"으로 끝난 경우입니다. 실패 이유(경로 없음 · 진척 없음 타임아웃)를 Nav2 로그로 보고, 다시 EXPLORE로 이어 갑니다.
+- 전환안: LiDAR는 \`map:=slam\`으로 Cartographer를 띄우고, Isaac은 cuVSLAM + nvblox가 같이 쌓습니다 (전체 아키텍처의 구성 버튼).
+
+## 시나리오 9: 지도 저장
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant O as 운영자 (시뮬레이터 [지도 저장])
+    participant MS as map_saver
+    participant R as rtabmap
+    participant D as 디스크 <map_dir>/<이름>/
+    Note over R,D: rtabmap.db는 매핑 내내 기록 · 종료 시 확정 (지도 원본)
+    O->>MS: 📞 /map_saver/save_map (nav2_msgs/srv/SaveMap)
+    R-->>MS: ✉️ /map 한 장 (nav_msgs/OccupancyGrid)
+    MS->>D: 💾 map.pgm · map.yaml (2D 미리보기)
+    MS-->>O: 응답 result=true
+${F}
+
+- **지도 원본은 \`rtabmap.db\` 하나**입니다 (특징점·그래프·지도). \`map.pgm·yaml\`은 사람이 보는 2D 미리보기라 운행에 꼭 필요하지 않습니다.
+- **SLAM이 켜져 있을 때** 저장합니다. 끄면 \`/map\`을 내는 노드가 없어 map_saver가 실패합니다.
+- 전환안: LiDAR는 Cartographer \`/write_state\`(.pbstream) + map_saver(map.pgm·yaml) **둘 다**, Isaac은 cuVSLAM \`save_map\` + nvblox \`~/save_map\`(.nvblx) **둘 다** 짝 맞춰 저장합니다.
+
+## 시나리오 10: 저장 지도로 위치추정 시작
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant O as 운영자
+    participant S as state_manager
+    participant R as rtabmap
+    participant L as lifecycle_manager_navigation
+    participant N as Nav2 서버들
+    O->>S: ✉️ /cmd/map_name "거실" (또는 bringup map:=saved map_name:=거실)
+    S->>R: 📞 /rtabmap/rtabmap/load_database (거실/rtabmap.db)
+    S->>R: 📞 /rtabmap/rtabmap/set_mode_localization
+    S-->>O: ✉️ /state/map_mode "LOCALIZATION" · /state/map_name
+    R-->>N: ✉️ /map (transient_local)
+    Note over R: 지금 장면과 맞는 과거 장면 찾는 중 — map→odom 아직 없음
+    O-->>R: (선택) ✉️ /initialpose — 대략 위치 알려 주기
+    R-->>N: ✉️ /tf (map→odom 변환) 발행 시작
+    L->>N: 📞 lifecycle change_state (configure → activate)
+    N-->>O: 목표 받을 준비 완료
+${F}
+
+- **map→odom이 나온 뒤에** 목표를 보냅니다 (시나리오 6). 매핑했던 장소를 천천히 비추면 빨리 찾습니다.
+- 위치가 틀리게 잡히면 \`/initialpose\`(RViz 2D Pose Estimate)로 다시 알려 줍니다. 원리는 위치추정 탭.
+- 전환안: LiDAR는 Cartographer를 끄고 **map_server + AMCL**(처음 위치가 꼭 필요), Isaac은 cuVSLAM \`load_map_and_localize\` + nvblox \`~/load_map\`.
+
+## 시나리오 11: 목표 지정 → Nav2 주행
+
+RViz의 **Nav2 Goal**로 찍거나, coordinator가 작업 중에 보냅니다. 둘 다 같은 NavigateToPose 액션입니다.
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant O as 운영자 (RViz Nav2 Goal) · coordinator
+    participant BT as bt_navigator
+    participant PS as planner_server
+    participant CS as controller_server
+    participant RL as rl_nav_correction
+    participant M as twist_mux → velocity_smoother → collision_monitor
+    participant D as diff_drive_controller
+    O->>BT: ✉️ /goal_pose (RViz) 또는 🎬 /navigate_to_pose (coordinator)
+    BT->>PS: 🎬 /compute_path_to_pose
+    PS-->>BT: 경로 (nav_msgs/Path) · ✉️ /plan
+    BT->>CS: 🎬 /follow_path
+    loop 20 Hz, 도착할 때까지
+        CS->>RL: ✉️ /cmd_vel_nav (TwistStamped)
+        RL->>M: ✉️ /cmd_vel_corrected (명령 + Δ)
+        M->>D: ✉️ /cmd_vel (가속 제한 · 충돌 감속 뒤)
+        D-->>CS: ✉️ /odom → EKF → /odometry/filtered (현재 속도)
+    end
+    CS-->>BT: follow_path 성공
+    BT-->>O: 🎬 결과 SUCCEEDED
+${F}
+
+- **조작 모드는 AUTO.** MANUAL이면 twist_mux에서 수동 명령이 이기고 collision_monitor가 꺼져 있습니다.
+- 경로가 막히면 BT가 재계획·후진·회전을 시도합니다 (시나리오 3). 장애물이 갑자기 나타나면 collision_monitor가 감속·정지합니다 (시나리오 4).
+- 전환안: Isaac은 rl_nav_correction 대신 controller_server 안 **RlResidualController 플러그인**이 Δ를 더해 바로 \`/cmd_vel_nav\`를 냅니다.
 `,
   },
 
@@ -1983,13 +2147,13 @@ ${F}
 
 ${F}mermaid
 flowchart LR
-    A["1 기반<br/>URDF·SLAM·Nav2·MoveIt"] --> B["2 coordinator<br/>+ perception"]
-    B --> C["3 vlm_task_planner"]
-    C --> D["4 오차 측정"]
-    D --> E["5 rl_nav_correction"]
-    E --> F["6 grasp_scorer"]
-    F --> G["7 rl_arm_correction"]
-    G --> H["8 rl_nav_tuner (RL)"]
+    A["1 기반<br/>URDF·SLAM·Nav2·MoveIt"] -->|"이동·팔이 되면"| B["2 coordinator<br/>+ perception"]
+    B -->|"규칙 실행이 되면"| C["3 vlm_task_planner"]
+    C -->|"전 과정이 돌면"| D["4 오차 측정"]
+    D -->|"주행 오차 큼"| E["5 rl_nav_correction"]
+    E -->|"파지 실패 많음"| F["6 grasp_scorer"]
+    F -->|"팔 처짐 남음"| G["7 rl_arm_correction"]
+    G -->|"규칙 프리셋 한계"| H["8 rl_nav_tuner (RL)"]
 ${CLS}
     class A,B,C,D std;
     class E,F,G,H rl;
@@ -2057,27 +2221,36 @@ const ORDER = Object.keys(SECTIONS) as Section[];
  */
 // RLN: 별도 보정 노드 → controller_server 안 FollowPath 플러그인(RLP)으로 옮김
 const ISAAC_DROP = new Set(['SCG', 'PRS', 'GRS', 'RXS', 'PCA', 'RTAB', 'MS', 'LMS', 'RLN']);
-const ISAAC_RT = `        subgraph RT["🟪 Isaac ROS SLAM·3D 지도 (GPU 컨테이너)"]
+const ISAAC_RT = `        subgraph RT["🟪 위치 — cuVSLAM (rtabmap의 위치 부분 자리 · GPU)"]
             VSLAM["📦 visual_slam_node<br/>cuVSLAM — 스테레오 VIO + 루프 클로저<br/>매핑 · 위치추정(load_map)"]
-            NVB["📦 nvblox_human_node<br/>human_with_static_tsdf<br/>고정 지도 + 사람(동적) 지도"]
+        end
+        subgraph NB["🟪 3D 장애물 지도 — nvblox (costmap voxel 층 · 2D /map 자리 · Voxblox 후속)"]
+            NVB["📦 nvblox_human_node<br/>human_with_static_tsdf<br/>고정 층 + 사람 층<br/>(사람 판단은 마스크가 함)"]
         end
 `;
 // UNET(사람 분할)은 nvblox 사람 모드용 — 마스크는 첫 카메라(camera_0 = pole_front_cam)만 지원
 const ISAAC_EDGES = `    PC -->|"✉️ /pole_front_cam/infra1·infra2<br/>/image_rect_raw · camera_info<br/>(sensor_msgs/Image, emitter off)"| VSLAM
     IMB -.->|"✉️ /imu → visual_slam/imu<br/>(enable_imu_fusion)"| VSLAM
     VSLAM -->|"✉️ visual_slam/tracking/odometry<br/>(nav_msgs/Odometry)"| EKF
-    VSLAM -->|"✉️ /tf map→odom<br/>(odom→base TF는 끔)"| PS
+    VSLAM -->|"✉️ /tf (map→odom 변환)<br/>(odom→base TF는 끔)"| PS
+    VSLAM -->|"✉️ /tf (tf2_msgs/TFMessage)<br/>map→odom 변환 → nvblox가 조회해<br/>카메라 자세 계산 (+ EKF odom→base · URDF)<br/>depth를 지도 제자리에 쌓기"| NVB
     PC -->|"✉️ aligned_depth_to_color<br/>· color · camera_info<br/>(sensor_msgs/Image)"| NVB
     PC -->|"✉️ /pole_front_cam/color<br/>· camera_info"| UNET
     UNET -->|"✉️ unet/raw_segmentation_mask<br/>→ mask/image · camera_info<br/>(sensor_msgs/Image, 사람=1)"| NVB
-    RLP ---|"🧩 FollowPath 플러그인<br/>(nav2_core::Controller 상속 · 같은 프로세스)"| CS
+    RLP -->|"🧩 FollowPath 플러그인 — 매 주기 호출되어<br/>Twist 반환 (extends nav2_core::Controller · 같은 프로세스)"| CS
     IMB -->|"✉️ /imu<br/>실제 각속도 (플러그인이 구독)"| RLP
     NVB -->|"✉️ ~/dynamic_map_slice<br/>사람까지 거리 (사람 층만)<br/>(nvblox_msgs/DistanceMapSlice)"| RLP
     PER -->|"✉️ /tracked_objects<br/>사람 위치·속도 (class=person)<br/>(perception/TrackedObjectArray)"| RLP
     CS -->|"✉️ /cmd_vel_nav<br/>MPPI + Δ<br/>(geometry_msgs/<br/>TwistStamped)"| TM
     BS -->|"✉️ /cmd_vel_nav<br/>후진·회전"| TM
     NVB -->|"✉️ ~/combined_map_slice<br/>고정 + 사람(decay)<br/>(nvblox_msgs/DistanceMapSlice)<br/>→ 🧩 NvbloxCostmapLayer"| COST
-    SM -.->|"🎬 visual_slam/save_map<br/>· load_map_and_localize<br/>(지도 저장·불러오기)"| VSLAM
+    SM -.->|"🎬 visual_slam/save_map<br/>· load_map_and_localize<br/>(위치용 지도 저장·불러오기)"| VSLAM
+    SM -.->|"📞 /nvblox_node/save_map · load_map<br/>(nvblox_msgs/srv/FilePath, .nvblx)<br/>장애물 지도 저장·불러오기"| NVB
+    VSLAM -->|"💾 cuVSLAM 지도 폴더 쓰기<br/>랜드마크 + 포즈 그래프 (data.mbd 등)<br/>(save_map)"| MAPDIR
+    MAPDIR -->|"💾 cuVSLAM 지도 폴더 읽기<br/>(load_map_and_localize · localize_in_map)"| VSLAM
+    NVB -->|"💾 .nvblx 쓰기<br/>(~/save_map · TSDF·ESDF)"| MAPDIR
+    MAPDIR -->|"💾 .nvblx 읽기<br/>(~/load_map)"| NVB
+    COST -->|"✉️ /global_costmap/costmap<br/>프론티어 (/map 대신)"| EXP
     PC -->|"✉️ /pole_front_cam/color"| YOLO
     GC -->|"✉️ /gripper_cam/color"| YOLO
     YOLO -->|"✉️ detections_output<br/>(vision_msgs/<br/>Detection2DArray)"| PER
@@ -2089,15 +2262,57 @@ const ISAAC_EDGES = `    PC -->|"✉️ /pole_front_cam/infra1·infra2<br/>/imag
     class RLP rl;
     style RLP stroke:#7c3aed,stroke-width:3px
     style RT fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
+    style NB fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
     style IR fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
 `;
 // 전환안 전용 흐름 — nvblox 지도가 Nav2 컨트롤러를 거쳐 PPO 보정까지 가는 길
 const ISAAC_FLOWS: Flow[] = [
   {
+    label: '운영 ① SLAM 시작 — cuVSLAM + nvblox로 새 지도 (Isaac)',
+    steps: [
+      { e: ['CLI>SM'], t: '매핑 모드', d: '✉️ /cmd/map_mode "MAPPING" — cuVSLAM은 새 지도를 쌓기 시작하고, nvblox도 같이 쌓습니다.' },
+      { e: ['PC>VSLAM', 'IMB>VSLAM'], t: '위치 추적', d: 'cuVSLAM이 스테레오 IR + IMU로 위치를 추적하며 특징점 지도를 쌓습니다.' },
+      { e: ['VSLAM>PS', 'VSLAM>EKF'], t: 'map→odom · 시각 오도메트리', d: '/tf (map→odom 변환)은 Nav2로, 시각 오도메트리는 EKF 입력으로.' },
+      { e: ['PC>UNET', 'UNET>NVB', 'PC>NVB', 'VSLAM>NVB'], t: 'nvblox가 같이 쌓는다', d: 'depth를 cuVSLAM이 준 카메라 자세(TF)로 제자리에 쌓고, PeopleSemSegNet 마스크의 사람 픽셀은 사람 층으로 뺍니다.' },
+      { e: ['NVB>COST'], t: '장애물 지도 → costmap', d: '~/combined_map_slice → NvbloxCostmapLayer. 2D /map은 없습니다.' },
+      { e: ['CLI>SM', 'SM>EXP'], t: '자동 탐사 시작', d: '✉️ /cmd/operation_mode "EXPLORE" → explorer.' },
+      { e: ['COST>EXP', 'EXP>BT'], t: '프론티어 — costmap에서', d: '/map이 없으므로 explorer는 global costmap(nvblox)에서 프론티어를 찾아 🎬 /navigate_to_pose (explorer 수정 필요).' },
+      { e: ['EXP>SM'], t: '탐사 끝', d: '✉️ /explore/result "DONE" → state_manager.' },
+    ],
+  },
+  {
+    label: '운영 ② 지도 저장 (Isaac — 둘 다, 짝 맞춰)',
+    steps: [
+      { e: ['SM>VSLAM', 'VSLAM>MAPDIR'], t: '위치용 지도 → 디스크', d: 'visual_slam/save_map — cuVSLAM이 지도 **폴더** 하나를 씁니다: 랜드마크(3D 특징점 + 기술자)와 키프레임 포즈 그래프. 안에 data.mbd 같은 NVIDIA 전용 바이너리가 생기고, 사람이 보는 그림·격자 지도는 아닙니다 (장애물 지도는 nvblox 몫).' },
+      { e: ['SM>NVB', 'NVB>MAPDIR'], t: '장애물 지도 → 디스크', d: '📞 /nvblox_node/save_map → nvblox가 .nvblx(TSDF·ESDF)를 같은 지도 폴더에 씁니다. 같은 map 좌표계라 cuVSLAM 지도와 짝으로 보관합니다. 루프 클로저 이중 벽이 없는지 RViz 메시로 확인.' },
+    ],
+  },
+  {
+    label: '운영 ③ 저장 지도로 위치추정 시작 (Isaac)',
+    steps: [
+      { e: ['CLI>SM'], t: '지도 고르기', d: '✉️ /cmd/map_name "거실".' },
+      { e: ['SM>VSLAM', 'MAPDIR>VSLAM'], t: '위치 다시 찾기', d: '🎬 visual_slam/load_map_and_localize — 근처 힌트를 주면 빨리 찾습니다.' },
+      { e: ['SM>NVB', 'MAPDIR>NVB'], t: '장애물 지도 올리기', d: '📞 /nvblox_node/load_map — 안 본 곳까지 global planner가 압니다 (빈 상태로 시작하면 본 곳만).' },
+      { e: ['PC>VSLAM', 'VSLAM>PS', 'VSLAM>NVB'], t: 'map→odom 시작', d: '지도에서 위치를 찾으면 /tf (map→odom 변환)이 나오고, nvblox도 같은 좌표로 이어서 쌓습니다.' },
+      { e: ['LMN>BT', 'LMN>PS', 'LMN>CS', 'LMN>BS'], t: 'Nav2 활성', d: '서버들을 configure → activate. 이제 목표를 받습니다.' },
+    ],
+  },
+  {
+    label: '운영 ④ 목표 지정 → Nav2 주행 (Isaac — RL 플러그인)',
+    steps: [
+      { e: ['CO>BT'], t: '목표 보내기', d: '🎬 /navigate_to_pose — coordinator, 또는 RViz Nav2 Goal. 조작 모드 AUTO.' },
+      { e: ['BT>PS', 'COST>PS'], t: '경로 계산', d: 'planner_server가 nvblox 층이 칠한 global costmap 위에서 /plan.' },
+      { e: ['BT>CS', 'COST>CS', 'EKF>CS'], t: '경로 따라가기', d: '🎬 /follow_path → controller_server.' },
+      { e: ['RLP>CS', 'NVB>RLP', 'PER>RLP', 'IMB>RLP'], t: 'MPPI + PPO Δ (플러그인 안)', d: 'FollowPath 자리의 RlResidualController가 MPPI 속도에 Δ를 더합니다 — 벽은 costmap, 사람은 nvblox 거리·perception 속도로 따로 봅니다.' },
+      { e: ['CS>TM', 'TM>VS', 'VS>CMN', 'CMN>DDC'], t: '안전 단계 → 바퀴', d: 'controller_server가 바로 /cmd_vel_nav → twist_mux → velocity_smoother → collision_monitor → diff_drive_controller.' },
+      { e: ['DDC>EKF', 'IMB>EKF', 'VSLAM>EKF', 'EKF>CS'], t: '실제 움직임이 돌아온다', d: '/odom·/imu·시각 오도메트리 → EKF → controller_server. 도착하면 SUCCEEDED.' },
+    ],
+  },
+  {
     label: '사람 피하기 — nvblox → Nav2 컨트롤러(RL 플러그인)',
     steps: [
       { e: ['PC>NVB', 'PC>UNET', 'UNET>NVB'], t: '보고, 사람 가르기', d: 'pole_front_cam depth가 nvblox_human_node로, 같은 카메라 컬러는 PeopleSemSegNet으로 갑니다. 사람 픽셀 마스크를 받은 nvblox가 사람 depth만 동적 층으로 뺍니다.' },
-      { e: ['VSLAM>PS', 'VSLAM>EKF'], t: '어디서 봤나', d: 'cuVSLAM의 map→odom과 EKF의 odom→base_footprint로 영상 시각의 카메라 자세를 알아야 depth를 지도 위 제자리에 쌓습니다.' },
+      { e: ['VSLAM>NVB', 'VSLAM>PS', 'VSLAM>EKF'], t: '어디서 봤나', d: 'cuVSLAM의 map→odom과 EKF의 odom→base_footprint로 영상 시각의 카메라 자세를 알아야 depth를 지도 위 제자리에 쌓습니다.' },
       { e: ['NVB>COST'], t: '3D 지도 → costmap', d: '고정 ESDF와 사람 occupancy(decay)를 합친 ✉️ ~/combined_map_slice를 NvbloxCostmapLayer가 받아 local·global costmap에 칠합니다. 사람은 지나가면 금방 지워집니다.' },
       { e: ['COST>PS', 'COST>CS', 'BT>CS'], t: 'Nav2가 경로·속도를 정한다', d: 'planner_server가 사람을 돌아가는 경로를, controller_server(DWB)가 그 경로를 따르는 속도를 계산합니다. 여기까지는 규칙 기반입니다.' },
       { e: ['RLP>CS', 'COST>CS'], t: 'controller_server 안의 RL 플러그인', d: 'FollowPath 자리에 끼운 RlResidualController(nav2_core::Controller 상속)가 매 주기 computeVelocityCommands()로 불립니다. costmap(nvblox 레이어 포함)·경로·현재 위치·속도를 토픽이 아니라 함수 인자로 받습니다.' },
@@ -2112,6 +2327,7 @@ const ISAAC_NOTE = `
 
 | | 현재 (RTAB-Map + YOLO) | 전환안 (Isaac ROS) |
 | --- | --- | --- |
+| 무엇을 대체하나 | — | **cuVSLAM** = rtabmap의 **위치 부분** (시각 SLAM — ORB-SLAM·VINS 계열을 GPU로) · **nvblox** = costmap의 **3D 장애물 층(voxel)과 2D /map** (Voxblox·OctoMap 계열을 GPU로). rtabmap 한 노드가 하던 일을 위치·지도 두 노드로 나눈 것 |
 | 위치추정 입력 | 컬러·depth 2대(rgbd_sync ×3) + 몸 뺀 점구름 + EKF | **pole_front_cam 스테레오 IR(infra1·2) + IMU** — 프로젝터(emitter)를 끄거나 번갈이 |
 | map→odom | rtabmap | **visual_slam_node (cuVSLAM)** · 시각 오도메트리는 EKF 입력에 추가 |
 | odom→base_footprint | EKF | EKF 그대로 — cuVSLAM의 \`publish_odom_to_base_tf: false\` |
@@ -2119,54 +2335,181 @@ const ISAAC_NOTE = `
 | PPO 보정 | rl_nav_correction **별도 노드** — controller 뒤에서 /cmd_vel_nav + Δ → /cmd_vel_corrected | **RlResidualController 플러그인** — controller_server 안 FollowPath 자리(\`nav2_core::Controller\` 상속), MPPI + Δ. costmap(nvblox 포함)·경로·속도를 함수 인자로 받고 노드·토픽 하나가 줄어듦 |
 | PPO가 사람을 아는 법 | (없음 — 점구름 속 장애물) | costmap은 벽·사람이 섞인 비용뿐이라 **사람은 따로**: nvblox \`~/dynamic_map_slice\`(거리) + perception \`/tracked_objects\`(위치·속도). 학습 환경에도 움직이는 사람과 같은 관측이 필요 |
 | 사람 | 점구름에 섞여 장애물로 남음 (지나가도 costmap에 흔적) | **PeopleSemSegNet**(isaac_ros_unet) 마스크로 사람만 동적 층에 — 고정 지도엔 안 박히고, 지나가면 decay로 금방 사라짐 |
-| 지도 저장·전환 | rtabmap.db · set_mode_* · map_saver | cuVSLAM \`save_map\`·\`load_map_and_localize\` 액션 |
+| 지도 저장·전환 | rtabmap.db 하나 · set_mode_* · map_saver | **두 개를 따로**: cuVSLAM \`save_map\`·\`load_map_and_localize\` 액션(위치용 특징점 지도) + nvblox \`~/save_map\`·\`~/load_map\` 서비스(장애물 지도 .nvblx) — 같은 map 좌표계로 짝 맞춰 저장 |
 | 물체 검출 | perception 안 YOLO (CPU, model.pt) | **isaac_ros_yolov8** (TensorRT) → perception은 3D화·융합 추적만 |
 | 컵 자세 | 없음 (박스 중심 + depth 점) | **CenterPose** — gripper_cam으로 컵 6DoF·크기 → perception · grasp_scorer |
 | 사라지는 노드 | — | scan_cam_gate · rgbd_sync ×3 · point_cloud_aggregator · rtabmap · map_saver(+ 관리자) |
 | 하드웨어 | CPU로 충분 | **NVIDIA GPU 필수** (Jetson Orin급) · Isaac ROS composable 컨테이너 |
 
-> ⚠️ **확인할 것:** ① emitter를 끄면 같은 카메라의 depth(nvblox·perception)가 나빠진다 — on/off 번갈이 모드나 카메라 분리. ② odom→base를 EKF가 내면 cuVSLAM의 map→odom이 EKF odom과 맞는지 실기 검증. ③ nvblox는 depth 영상을 받으므로 body_filter(점구름) 대신 depth에서 자기 팔을 지워야 한다. ④ 파라미터·토픽 이름은 Isaac ROS 버전마다 다르다.
+> ⚠️ **확인할 것:** ① emitter를 끄면 같은 카메라의 depth(nvblox·perception)가 나빠진다 — on/off 번갈이 모드나 카메라 분리. ② odom→base를 EKF가 내면 cuVSLAM의 map→odom이 EKF odom과 맞는지 실기 검증. ③ nvblox는 depth 영상을 받으므로 body_filter(점구름) 대신 depth에서 자기 팔을 지워야 한다. ④ 파라미터·토픽 이름은 Isaac ROS 버전마다 다르다. ⑤ **2D /map이 없다** — explorer(프론티어 탐사)는 /map 대신 global costmap(nvblox 레이어)에서 프론티어를 찾도록 고쳐야 하고, map_saver·map_server도 쓰지 않는다.
+
+<p><button class="rd-tab" data-concept="slamstack">📘 cuVSLAM과 nvblox는 어떤 관계? — SLAM 구성 비교 탭</button></p>
 
 아래 설명은 두 구성 공통이고, SLAM 관련 줄은 현재(RTAB-Map) 기준입니다. 흐름 따라가기의 SLAM 단계는 현재 구성 기준이라 전환안에선 일부 선이 강조되지 않습니다.
 `;
-const ISAAC_ARCH_MD = (() => {
-  const md = SECTIONS.arch.md;
-  const lines = md
-    .replace(/        subgraph RT\[[\s\S]*?\n        end\n/, ISAAC_RT)
-    .replace('        SD["🛠️ signal_decoder', `        subgraph IR["🟪 Isaac ROS 인지 (TensorRT)"]
+/**
+ * 전체 아키텍처 전환안 만들기 — 원본 md에 replaces를 적용하고, drop 노드가 끝점인 선·class 지정을 빼고,
+ * edges를 style 줄 앞에 끼우고, note를 도식 바로 뒤에 붙인다. 원본을 고치면 전환안에도 그대로 반영된다.
+ */
+const variantMd = (slam: string, drop: Set<string>, replaces: [string | RegExp, string][], edges: string, note: string, dropStyles: string[]) => {
+  let md = SECTIONS.arch.md
+    .replace('rd-slam-btn active" data-slam="rtab"', 'rd-slam-btn" data-slam="rtab"')
+    .replace(`rd-slam-btn" data-slam="${slam}"`, `rd-slam-btn active" data-slam="${slam}"`);
+  for (const [from, to] of replaces) md = md.replace(from, to);
+  const out: string[] = [];
+  for (const l of md.split('\n')) {
+    // 빠지는 노드가 끝점인 선은 버린다
+    const m = l.match(/^\s*([A-Za-z]\w*)\s+(?:-->|-\.->|==>|---|~~~)/);
+    const to = l.match(/(\w+)\s*$/)?.[1];
+    if (m && (drop.has(m[1]) || (to && drop.has(to)))) continue;
+    // class 지정에서도 빼야 mermaid가 빈 노드를 새로 만들지 않는다
+    const c = l.match(/^(\s*class )([\w,]+)( \w+;)$/);
+    if (c) {
+      const ids = c[2].split(',').filter(id => !drop.has(id));
+      if (ids.length) out.push(c[1] + ids.join(',') + c[3]);
+      continue;
+    }
+    if (dropStyles.includes(l.trim())) continue; // 원본 style이 뒤에 오면 전환안 색을 덮는다
+    if (l.trim() === 'style EXT fill:#ffffff,stroke:#8A97A0,stroke-dasharray:4 3') out.push(...edges.trimEnd().split('\n'));
+    out.push(l);
+  }
+  return out.join('\n').replace(/(\n```\n)(?![\s\S]*\n```\n)/, `$1${note}`);
+};
+const RT_STYLE = 'style RT fill:#eef2ff,stroke:#6366f1,stroke-dasharray:4 3';
+
+const ISAAC_ARCH_MD = variantMd('isaac', ISAAC_DROP, [
+  [/        subgraph RT\[[\s\S]*?\n        end\n/, ISAAC_RT],
+  ['        SD["🛠️ signal_decoder', `        subgraph IR["🟪 Isaac ROS 인지 (TensorRT)"]
             YOLO["📦 isaac_ros_yolov8 ×2<br/>encoder → TensorRT → decoder"]
             CPOSE["📦 CenterPose<br/>컵 6DoF 자세"]
             UNET["📦 isaac_ros_unet<br/>PeopleSemSegNet<br/>사람 픽셀 분할"]
         end
-        SD["🛠️ signal_decoder`)
-    .replace('PER["🛠️ perception<br/>YOLO 검출 · 칼만 융합 추적"]', 'PER["🛠️ perception<br/>검출 받아 3D화 · 칼만 융합 추적"]')
-    .replace('local: voxel · global: static + obstacle', 'local · global: nvblox 레이어')
-    .replace('CS["📦 controller_server<br/>+ local_costmap · DWB"]', 'CS["📦 controller_server<br/>+ local_costmap<br/>FollowPath = RL 플러그인"]')
-    .replace('    subgraph S5["⑤ 뒷단 보정"]\n        RLN["🛠️ rl_nav_correction"]\n    end\n', '')
-    .replace('            LMN["📦 lifecycle_manager_navigation', '            RLP["🛠️ RlResidualController (ml)<br/>FollowPath 플러그인<br/>MPPI + PPO Δ (ONNX)"]\n            LMN["📦 lifecycle_manager_navigation')
-    .replace('rd-slam-btn active" data-slam="rtab"', 'rd-slam-btn" data-slam="rtab"')
-    .replace('rd-slam-btn" data-slam="isaac"', 'rd-slam-btn active" data-slam="isaac"')
-    .split('\n');
-  const out: string[] = [];
-  for (const l of lines) {
-    // 빠지는 노드가 끝점인 선은 버린다
-    const m = l.match(/^\s*([A-Za-z]\w*)\s+(?:-->|-\.->|==>|---|~~~)/);
-    const to = l.match(/(\w+)\s*$/)?.[1];
-    if (m && (ISAAC_DROP.has(m[1]) || (to && ISAAC_DROP.has(to)))) continue;
-    // class 지정에서도 빼야 mermaid가 빈 노드를 새로 만들지 않는다
-    const c = l.match(/^(\s*class )([\w,]+)( \w+;)$/);
-    if (c) {
-      const ids = c[2].split(',').filter(id => !ISAAC_DROP.has(id));
-      if (ids.length) out.push(c[1] + ids.join(',') + c[3]);
-      continue;
-    }
-    if (l.trim() === 'style EXT fill:#ffffff,stroke:#8A97A0,stroke-dasharray:4 3') out.push(...ISAAC_EDGES.trimEnd().split('\n'));
-    out.push(l);
-  }
-  // style RT(원본)가 뒤에 오면 보라색을 덮으므로 원본 쪽을 뺀다
-  return out.filter(l => !['style RT fill:#eef2ff,stroke:#6366f1,stroke-dasharray:4 3', 'style S5 fill:#f8fafc,stroke:#94a3b8'].includes(l.trim())).join('\n')
-    .replace(/(\n```\n)(?![\s\S]*\n```\n)/, `$1${ISAAC_NOTE}`);
-})();
+        SD["🛠️ signal_decoder`],
+  ['PER["🛠️ perception<br/>YOLO 검출 · 칼만 융합 추적"]', 'PER["🛠️ perception<br/>검출 받아 3D화 · 칼만 융합 추적"]'],
+  ['local: voxel · global: static + obstacle', 'local · global: nvblox 레이어'],
+  ['CS["📦 controller_server<br/>+ local_costmap · DWB"]', 'CS["📦 controller_server<br/>+ local_costmap<br/>FollowPath = RL 플러그인"]'],
+  // costmap은 nvblox 레이어만 — body_filter 점구름은 collision_monitor로만 간다
+  ['    BF -->|"✉️ /pole_front_cam/depth<br/>/color/points_filtered<br/>팔·차체 뺀 점구름<br/>(sensor_msgs/<br/>PointCloud2)"| COST\n', ''],
+  ['planner·controller·behavior·bt (map 필요)', 'planner·controller·behavior·bt (정적 /map 없이)'],
+  ['    subgraph S5["⑤ 뒷단 보정"]\n        RLN["🛠️ rl_nav_correction"]\n    end\n', ''],
+  ['            LMN["📦 lifecycle_manager_navigation', '            RLP["🛠️ RlResidualController (ml)<br/>extends nav2_core::Controller<br/>FollowPath 플러그인 · ROS 노드 아님<br/>MPPI + PPO Δ (ONNX)"]\n            LMN["📦 lifecycle_manager_navigation'],
+], ISAAC_EDGES, ISAAC_NOTE, [RT_STYLE, 'style S5 fill:#f8fafc,stroke:#94a3b8']);
+
+/*
+ * 전체 아키텍처 "2D LiDAR + Cartographer" 전환안 — SLAM만 LiDAR로. 카메라는 인지(YOLO·파지)·3D 장애물용으로 남는다.
+ * 매핑은 Cartographer, 운행은 저장 지도 + AMCL (Nav2 표준 운용).
+ */
+const LIDAR_DROP = new Set(['SCG', 'PRS', 'GRS', 'RXS', 'PCA', 'RTAB']);
+const LIDAR_RT = `        subgraph RT["🟦 2D LiDAR SLAM · 위치추정"]
+            CART["📦 cartographer_node<br/>매핑 모드 — 스캔 매칭 + 서브맵<br/>+ 루프 클로저"]
+            OGN["📦 cartographer_occupancy_grid_node<br/>서브맵 → /map (5cm, 1초)"]
+            MSV["📦 map_server<br/>운행 모드 — map.yaml"]
+            AMCL["📦 amcl<br/>운행 모드 — 파티클 필터"]
+            MS["📦 map_saver<br/>map_saver_server (bringup)"]
+            LMS["📦 lifecycle_manager_map_saver"]
+        end
+`;
+const LIDAR_EDGES = `    LDH -->|"🔌 USB 시리얼<br/>(/dev/ttyUSB0)"| LDD
+    LDD -->|"✉️ /scan<br/>(sensor_msgs/LaserScan)"| CART
+    EKF -->|"✉️ /odometry/filtered → odom<br/>(use_odometry: true)"| CART
+    CART -->|"✉️ /submap_list<br/>(cartographer_ros_msgs/<br/>SubmapList)"| OGN
+    OGN -->|"✉️ /map<br/>(nav_msgs/OccupancyGrid)"| MS
+    OGN -->|"✉️ /map<br/>프론티어 찾기"| EXP
+    CART -->|"💾 .pbstream 쓰기<br/>(/write_state · 이어서 매핑용)"| MAPDIR
+    MAPDIR -->|"💾 map.yaml · map.pgm 읽기<br/>(운행 모드)"| MSV
+    CART -->|"✉️ /tf (map→odom 변환)<br/>(매핑 모드)"| PS
+    OGN -->|"✉️ /map<br/>(매핑 모드)"| PS
+    MSV -->|"✉️ /map<br/>(transient_local, 운행 모드)"| PS
+    MSV -->|"✉️ /map"| AMCL
+    LDD -->|"✉️ /scan"| AMCL
+    AMCL -->|"✉️ /tf (map→odom 변환) · /amcl_pose<br/>(운행 모드)"| PS
+    LMN -.->|"📞 lifecycle<br/>(운행 모드)"| AMCL
+    LMN -.->|"📞 lifecycle change_state<br/>(운행 모드)"| MSV
+    LDD -->|"✉️ /scan<br/>(obstacle layer — 2D)"| COST
+    LDD -->|"✉️ /scan<br/>(polygon 감시)"| CMN
+    SM -.->|"📞 /write_state · /finish_trajectory<br/>(cartographer_ros_msgs/srv<br/>지도 작업 저장·끝내기)"| CART
+    classDef ld fill:#e0f2fe,stroke:#0284c7,color:#1b1b1b,stroke-width:2px;
+    class CART,OGN,MSV,AMCL,LDD ld;
+    class LDH hw;
+    style RT fill:#f0f9ff,stroke:#0284c7,stroke-width:2px
+`;
+const LIDAR_NOTE = `
+### 🟦 2D LiDAR + Cartographer 전환안에서 바뀐 것
+
+| | 현재 (RTAB-Map + RealSense) | 전환안 (2D LiDAR + Cartographer) |
+| --- | --- | --- |
+| SLAM 센서 | pole_front_cam·gripper_cam RGB-D (rgbd_sync ×3 · scan_cam_gate · point_cloud_aggregator) | **2D LiDAR 하나** (\\\`/scan\\\`, LaserScan) — 카메라는 SLAM에서 빠짐 |
+| 매핑 | rtabmap (매핑 모드, rtabmap.db) | **cartographer_node + occupancy_grid_node** — 지도 작업 파일 \\\`.pbstream\\\` (\\\`/write_state\\\`) + map_saver의 \\\`map.pgm·yaml\\\` |
+| 운행 중 위치 | rtabmap (위치추정 모드, 같은 DB) | **map_server + amcl** (저장 지도 위 파티클 필터, Nav2 표준) — Cartographer는 끈다 |
+| map→odom | rtabmap | 매핑 땐 cartographer_node, 운행 땐 amcl — **동시에 켜지 않는다** (둘 다 map→odom) |
+| odom→base_footprint | EKF | EKF 그대로 — Cartographer \\\`provide_odom_frame: false\\\`, \\\`published_frame: odom\\\` |
+| 장애물 | 카메라 점구름(body_filter) → voxel·obstacle | **/scan → obstacle layer**(2D, 넓은 시야) + 카메라 점구름 → voxel(테이블 상판·낮은 물체) 그대로 |
+| collision_monitor | 몸 뺀 점구름 | **/scan** 추가 (360° — 뒤·옆도 봄) |
+| 인지 | perception (YOLO) | **그대로** — 카메라 2대는 인지·파지·3D 장애물용 |
+| 지도 모드 전환 | state_manager → rtabmap set_mode_* (재시작 없이) | 매핑·운행이 다른 노드라 **launch를 다시 띄움** (\\\`map:=slam\\\` ↔ \\\`map:=saved\\\`) |
+| 하드웨어 | RealSense 2대 | + **2D LiDAR** (TurtleBot3 LDS-02 · RPLIDAR 등) |
+
+> ⚠️ **확인할 것:** ① 팔(OpenMANIPULATOR-X)이 LiDAR 시야를 가리는 각도는 \\\`laser_filters\\\`(angular bounds)로 지운다 — 안 지우면 자기 팔이 /scan 장애물로 남는다. ② 2D LiDAR는 한 높이만 본다 — 테이블 상판·의자 다리 사이는 못 보므로 카메라 voxel 층을 빼지 않는다. ③ Cartographer \\\`tracking_frame\\\`·\\\`published_frame\\\`이 EKF와 맞는지 (base_footprint · odom, provide_odom_frame: false). ④ AMCL은 시작 위치를 줘야 한다 (2D Pose Estimate 또는 \\\`/initialpose\\\`).
+
+<p><button class="rd-tab" data-concept="slamstack">📘 SLAM 구성 비교 탭 — RTAB-Map · Cartographer · cuVSLAM+nvblox</button> <button class="rd-tab" data-concept="slam">📘 맵핑·위치추정 탭 — map→odom 원리</button></p>
+
+아래 설명은 세 구성 공통이고, SLAM 관련 줄은 현재(RTAB-Map) 기준입니다.
+`;
+const LIDAR_ARCH_MD = variantMd('lidar', LIDAR_DROP, [
+  [/        subgraph RT\[[\s\S]*?\n        end\n/, LIDAR_RT],
+  ['            GCH{{"gripper_cam<br/>RealSense RGB-D"}}', '            GCH{{"gripper_cam<br/>RealSense RGB-D"}}\n            LDH{{"2D LiDAR<br/>LDS-02 · RPLIDAR 등"}}'],
+  ['        PER["🛠️ perception', '        LDD["📦 LiDAR 드라이버<br/>ld08_driver · rplidar_ros<br/>(+ laser_filters 팔 각도 제거)"]\n        PER["🛠️ perception'],
+  ['local: voxel · global: static + obstacle', 'local: voxel(카메라) + obstacle(/scan) · global: static + obstacle'],
+], LIDAR_EDGES, LIDAR_NOTE, [RT_STYLE]);
+
+// 전환안 흐름 — 매핑과 운행
+const LIDAR_FLOWS: Flow[] = [
+  {
+    label: '운영 ① SLAM 시작 — Cartographer로 새 지도 (LiDAR)',
+    steps: [
+      { e: ['LDH>LDD'], t: 'LiDAR가 돈다', d: '2D LiDAR가 🔌 USB 시리얼로 드라이버에 360° 거리를 보내고, 드라이버가 ✉️ /scan(LaserScan)을 냅니다. 팔에 가리는 각도는 laser_filters로 지웁니다.' },
+      { e: ['CLI>SM'], t: '매핑 모드로 기동', d: 'Cartographer와 AMCL은 다른 노드라 실행 중 전환이 아니라 bringup map:=slam으로 다시 띄웁니다 (map_server·AMCL은 안 뜸).' },
+      { e: ['LDD>CART', 'EKF>CART'], t: '스캔 매칭', d: 'cartographer_node가 /scan을 지금 서브맵에 맞추고 EKF 오도메트리로 다음 위치를 예측합니다.' },
+      { e: ['CART>OGN', 'OGN>PS', 'CART>PS'], t: '지도와 map→odom', d: 'occupancy_grid_node가 서브맵을 /map 격자로 1초마다 그리고, cartographer_node가 /tf (map→odom 변환)을 냅니다. 출발점에 돌아오면 루프 클로저.' },
+      { e: ['CLI>SM', 'SM>EXP'], t: '자동 탐사 시작', d: '✉️ /cmd/operation_mode "EXPLORE" → state_manager → explorer.' },
+      { e: ['OGN>EXP', 'EXP>BT'], t: '프론티어로 이동', d: 'explorer가 /map에서 프론티어를 골라 🎬 /navigate_to_pose. 실패한 곳은 다시 안 가므로 못 가는 곳만 남으면 일찍 끝납니다.' },
+      { e: ['EXP>SM'], t: '탐사 끝', d: '✉️ /explore/result "DONE" → state_manager가 조작 모드를 되돌립니다.' },
+    ],
+  },
+  {
+    label: '운영 ② 지도 저장 (LiDAR — 둘 다)',
+    steps: [
+      { e: ['SM>CART', 'CART>MAPDIR'], t: '작업 파일 .pbstream → 디스크', d: '📞 /write_state → Cartographer가 서브맵·경로·포즈 그래프 전체를 .pbstream으로 씁니다 (이어서 매핑용). 경로는 절대 경로.' },
+      { e: ['CLI>MS', 'SIM>MS', 'OGN>MS', 'LMS>MS', 'MS>MAPDIR'], t: 'Nav2용 map.pgm·yaml → 디스크', d: '📞 /map_saver/save_map → map_saver가 /map 한 장을 map.pgm·map.yaml로. **운행(map_server)은 이 파일을 씁니다** — RTAB-Map과 달리 꼭 저장해야 합니다. SLAM이 켜져 있을 때 저장.' },
+    ],
+  },
+  {
+    label: '운영 ③ 저장 지도로 위치추정 시작 (LiDAR — AMCL)',
+    steps: [
+      { e: ['CLI>SM'], t: '운행 모드로 기동', d: 'Cartographer를 끄고 bringup map:=saved map_name:=거실로 다시 띄웁니다. 둘 다 map→odom을 내므로 동시에 켜지 않습니다.' },
+      { e: ['LMN>MSV', 'LMN>AMCL'], t: 'map_server · AMCL 켜기', d: 'lifecycle_manager_navigation이 map_server와 amcl을 configure → activate.' },
+      { e: ['MAPDIR>MSV', 'MSV>PS', 'MSV>AMCL'], t: '저장 지도 올리기', d: 'map_server가 map.yaml을 ✉️ /map(transient_local)으로 — planner의 static 층과 AMCL이 받습니다.' },
+      { e: ['LDD>AMCL'], t: '처음 위치가 꼭 필요', d: 'RViz 2D Pose Estimate(✉️ /initialpose)로 대략 위치를 주면 AMCL이 /scan을 지도와 맞춰 파티클을 좁힙니다. 조금 움직여야 수렴합니다.' },
+      { e: ['AMCL>PS'], t: 'map→odom 시작', d: 'amcl이 /tf (map→odom 변환)과 /amcl_pose를 냅니다. 매핑 때 Cartographer가 내던 바로 그 자리입니다.' },
+      { e: ['LMN>BT', 'LMN>PS', 'LMN>CS', 'LMN>BS'], t: 'Nav2 활성', d: 'planner·controller·behavior·bt가 active — 이제 목표를 받습니다.' },
+    ],
+  },
+  {
+    label: '운영 ④ 목표 지정 → Nav2 주행 (LiDAR)',
+    steps: [
+      { e: ['CO>BT'], t: '목표 보내기', d: '🎬 /navigate_to_pose — coordinator, 또는 RViz Nav2 Goal(✉️ /goal_pose). 조작 모드 AUTO.' },
+      { e: ['LDD>COST'], t: '장애물은 /scan + 카메라', d: '/scan은 obstacle 층(2D, 360°)으로, 카메라 점구름은 voxel 층(LiDAR 높이에 없는 테이블 상판 등)으로 costmap에 쌓입니다.' },
+      { e: ['BT>PS', 'COST>PS'], t: '경로 계산', d: '🎬 /compute_path_to_pose → planner_server가 global costmap(static 지도 + 장애물) 위에서 /plan.' },
+      { e: ['BT>CS', 'COST>CS', 'EKF>CS'], t: '경로 따라가기', d: '🎬 /follow_path → controller_server가 20Hz로 속도 계산.' },
+      { e: ['CS>RLN', 'NT>RLN'], t: 'RL 보정', d: '/cmd_vel_nav → rl_nav_correction이 Δ를 더하고 /speed_limit으로 다시 자릅니다.' },
+      { e: ['RLN>TM', 'TM>VS', 'VS>CMN', 'LDD>CMN', 'CMN>DDC'], t: '안전 단계 → 바퀴', d: 'twist_mux → velocity_smoother → collision_monitor(/scan으로 360° 감시) → /cmd_vel → diff_drive_controller.' },
+      { e: ['DDC>EKF', 'IMB>EKF', 'EKF>CS'], t: '실제 움직임이 돌아온다', d: '/odom·/imu → EKF → /odometry/filtered → controller_server. 도착하면 SUCCEEDED.' },
+    ],
+  },
+];
+
+const VARIANTS = { isaac: { md: ISAAC_ARCH_MD, flows: ISAAC_FLOWS }, lidar: { md: LIDAR_ARCH_MD, flows: LIDAR_FLOWS } };
+type Slam = 'rtab' | keyof typeof VARIANTS;
 
 export default (w: Window) => {
   const existing = w.customElements.get(tagName);
@@ -2180,7 +2523,7 @@ export default (w: Window) => {
     private section?: Section;
     private focusNode?: string;   // 노드 사전에서 스크롤할 카드 id
     private back?: Section;       // 노드 사전으로 오기 전 섹션 (?from=, 돌아가기 버튼)
-    private slam: 'rtab' | 'isaac' = 'rtab'; // 전체 아키텍처 SLAM·인지 구성 (?slam=isaac)
+    private slam: Slam = 'rtab'; // 전체 아키텍처 SLAM·인지 구성 (?slam=isaac|lidar)
     private scrollMemo = new Map<string, number>(); // 화면(sec|node)별 마지막 스크롤 위치 — 뒤로가기 때 복원
 
     private static key(sec?: Section, node?: string) {
@@ -2199,7 +2542,7 @@ export default (w: Window) => {
       const sec: Section = secParam && secParam in SECTIONS ? (secParam as Section) : 'overview';
       const node = sec === 'catalog' && nodeParam && NODE_IDS.has(nodeParam) ? nodeParam : undefined;
       const from = sec === 'catalog' && fromParam && fromParam in SECTIONS && fromParam !== 'catalog' ? (fromParam as Section) : undefined;
-      const slam = slamParam === 'isaac' ? 'isaac' : 'rtab';
+      const slam: Slam = slamParam && slamParam in VARIANTS ? (slamParam as Slam) : 'rtab';
       const slamChanged = sec === 'arch' && slam !== this.slam;
       this.slam = slam;
       if (sec === this.section && node === this.focusNode && from === this.back && !slamChanged) return;
@@ -2237,22 +2580,22 @@ export default (w: Window) => {
         const from = this.section === 'catalog' ? this.back : this.section;
         if (from) q.set('from', from);
       }
-      if (sec === 'arch' && this.slam === 'isaac') q.set('slam', 'isaac');
+      if (sec === 'arch' && this.slam !== 'rtab') q.set('slam', this.slam);
       return { path: `/ros2?${q.toString()}`, scrollToTop: false };
     }
 
     /** 전체 아키텍처 SLAM·인지 구성 전환 — 같은 자리에서 도식만 바뀌도록 스크롤 위치를 기억해 둔다 */
     @swcAppRouteGo
-    private goSlam(slam: 'rtab' | 'isaac') {
+    private goSlam(slam: Slam) {
       if (slam === this.slam) return false;
       this.scrollMemo.set(RosDesign.key('arch'), w.scrollY);
-      return { path: `/ros2?concept=design&sec=arch${slam === 'isaac' ? '&slam=isaac' : ''}`, scrollToTop: false };
+      return { path: `/ros2?concept=design&sec=arch${slam === 'rtab' ? '' : `&slam=${slam}`}`, scrollToTop: false };
     }
 
     @addEventListener('.rd-slam-btn', 'click', { delegate: true })
     onSlam(e: Event) {
       const b = (e.target as HTMLElement).closest('.rd-slam-btn') as HTMLElement;
-      if (b?.dataset.slam) this.goSlam(b.dataset.slam as 'rtab' | 'isaac');
+      if (b?.dataset.slam) this.goSlam(b.dataset.slam as Slam);
     }
 
     private async refresh() {
@@ -2267,10 +2610,12 @@ export default (w: Window) => {
         el.innerHTML = renderCatalog(this.back ? SECTIONS[this.back].label : undefined);
         return;
       }
-      await markdownParse(el, sec === 'arch' && this.slam === 'isaac' ? ISAAC_ARCH_MD : SECTIONS[sec].md);
+      const v = sec === 'arch' && this.slam !== 'rtab' ? VARIANTS[this.slam] : undefined;
+      await markdownParse(el, v?.md ?? SECTIONS[sec].md);
       if (sec !== this.section) return;
       this.bindLinks(el, SECTIONS[sec].links, SECTIONS[sec].nodes);
-      this.mountFlow(el, sec === 'arch' && this.slam === 'isaac' ? [...ISAAC_FLOWS, ...ARCH_FLOWS] : SECTIONS[sec].flows);
+      // 전환안: 운영 ①~④·위치 추정은 그 구성의 노드로 만든 것으로 바꿔 끼운다 (RTAB-Map 기준 것은 선이 없어 강조가 안 됨)
+      this.mountFlow(el, v ? [...v.flows, ...ARCH_FLOWS.filter(f => !/^(운영|위치 추정)/.test(f.label))] : SECTIONS[sec].flows);
     }
 
     /* ---------- 흐름 따라가기: 도식 위 컨트롤 바 (재생 중엔 화면 위에 붙음) ---------- */
@@ -2339,7 +2684,8 @@ export default (w: Window) => {
       const lit = selectEdges(svg, edges.map(x => x.id));
       const ends = new Set(edges.flatMap(x => [x.from, x.to]));
       svg.querySelectorAll('g.node').forEach(g => { if (ends.has(RosDesign.nodeKey(svg, g))) RosDesign.markNode(g, true); });
-      cap.innerHTML = `<b>${i + 1}. ${step.t}</b> ${step.d}`;
+      cap.innerHTML = `<b>${i + 1}. ${step.t}</b> ${step.d}`
+        + (lit.length ? '' : ' <span class="rd-flow-miss">⚠️ 이 구성의 도식에는 이 단계의 선이 없습니다 (현재 구성 RTAB-Map 기준 흐름).</span>');
       if (scroll && lit.length) this.scrollToEdges(lit, bar);
     }
 
@@ -2582,6 +2928,7 @@ export default (w: Window) => {
           .rd-guide { margin:8px 0 4px; padding:6px 14px; border-radius:16px; border:1.5px solid #3b82c4; background:#eff6ff; color:#1e3a8a; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer; }
           .rd-guide:hover { background:#dbeafe; }
           .rd-tab { margin:2px 4px 2px 0; padding:6px 14px; border-radius:16px; border:1.5px solid #3b82c4; background:#eff6ff; color:#1e3a8a; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer; }
+          .rd-flow-miss { color:#b45309; font-weight:700; }
           .rd-slam { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:10px 0 !important; }
           .rd-slam-btn { padding:6px 14px; border-radius:16px; border:1.5px solid #c4b5fd; background:#fff; color:#3b0764; font:inherit; font-size:12.5px; font-weight:800; cursor:pointer; }
           .rd-slam-btn.active { background:#7c3aed; border-color:#7c3aed; color:#fff; }
@@ -2651,7 +2998,6 @@ export default (w: Window) => {
             <span><svg width="30" height="16" viewBox="0 0 30 16" aria-hidden="true"><line x1="2" y1="8" x2="23" y2="8" stroke="#334155" stroke-width="3.5"/><path d="M22,3 L29,8 L22,13z" fill="#334155"/></svg>굵은 선 = 액션 (goal → feedback → result)</span>
             <span><svg width="30" height="16" viewBox="0 0 30 16" aria-hidden="true"><line x1="2" y1="8" x2="24" y2="8" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"/><path d="M23,4 L29,8 L23,12z" fill="#334155"/></svg>점선 = 서비스·파라미터·피드백·매핑 단계 전용</span>
             <span><svg width="30" height="16" viewBox="0 0 30 16" aria-hidden="true"><line x1="2" y1="5" x2="23" y2="5" stroke="#334155" stroke-width="1.5"/><path d="M22,2 L28,5 L22,8z" fill="#334155"/><line x1="7" y1="12" x2="28" y2="12" stroke="#334155" stroke-width="1.5"/><path d="M8,9 L2,12 L8,15z" fill="#334155"/></svg>오가는 내용이 다르면 화살표 2개 (예: 버스 쓰기 SyncWrite ↓ · 읽기 SyncRead ↑)</span>
-            <span><svg width="30" height="16" viewBox="0 0 30 16" aria-hidden="true"><line x1="2" y1="8" x2="28" y2="8" stroke="#334155" stroke-width="1.5"/></svg>화살촉 없음 = 체인 결합 (같은 프로세스)</span>
             <span>화살표 방향 = 데이터가 흐르는 방향</span>
             <span>👆 선·라벨에 마우스 = 강조 · 클릭 = 선택 고정 (여러 개, 다시 누르면 해제, 빈 곳 누르면 전체 해제)</span>
           </div>
@@ -2660,11 +3006,13 @@ export default (w: Window) => {
             <span>🎬 액션</span>
             <span>📞 서비스</span>
             <span>🔌 시리얼·USB</span>
-            <span>🧩 ros2_control 내부 인터페이스</span>
+            <span>🧩 같은 프로세스 안 — 토픽 아님 (ros2_control 인터페이스 · costmap · 플러그인 호출), 화살표 = 데이터 방향</span>
             <span>💾 파일</span>
             <span>🗣️ 사람 → 로봇 (말·텍스트) · ⌨️ 키보드</span>
             <span>🔊 로봇 → 사람 (안내 — 지금은 user_input 터미널 텍스트)</span>
             <span>형식: <b>이모지 이름 (메시지 타입)</b></span>
+            <span>/tf (A→B 변환) = <b>/tf 토픽</b>에 실린 A→B 프레임 변환 (토픽 이름은 /tf 하나)</span>
+            <span>extends X = <b>기본 클래스 X를 상속한 플러그인</b> — ROS 노드가 아니라 부모 노드(controller_manager · controller_server) 안에 pluginlib로 로드됨</span>
           </div>
         </div>
 

@@ -18,7 +18,7 @@ const MD = `
 - 확인: \`ros2 run tf2_ros tf2_echo map camera_link\`, 전체 트리: \`ros2 run rqt_tf_tree rqt_tf_tree\`
 \`\`\`mermaid
 flowchart LR
-    map -- "보정 (뚝뚝)" --> odom -- "매끄러움 (연속)" --> base_link --> camera_link
+    map -- "보정 (뚝뚝)" --> odom -- "매끄러움 (연속)" --> base_link -- "고정 (URDF)" --> camera_link
 \`\`\`
 `;
 

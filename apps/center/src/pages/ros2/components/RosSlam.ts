@@ -1,4 +1,4 @@
-import { addEventListener, elementDefine, onConnectedAfter, onConnectedBodyShadow, onDisconnected } from '@dooboostore/simple-web-component';
+import { addEventListener, elementDefine, onConnectedAfter, onConnectedBodyShadow, onDisconnected, swcAppRouteGo } from '@dooboostore/simple-web-component';
 import { markdownParse } from '@center-src/utils/markdown';
 
 const tagName = 'center-ros2-slam';
@@ -570,11 +570,11 @@ const MD_CMP_SIGNAL = `
 ### 제어기에는 어떤 신호가 가나
 \`\`\`mermaid
 flowchart LR
-    ENC["바퀴 엔코더"] --> ODOM["odom→base_link<br/>(TF · /odom)"]
-    ODOM --> VEL["속도 추정<br/>v = Δx ÷ Δt"]
-    CMD["목표 속도<br/>(cmd_vel)"] --> CTRL["속도 제어기<br/>오차 = 목표 − 추정"]
-    VEL --> CTRL --> MOTOR["모터 명령"]
-    ODOM --> CM["로컬 코스트맵<br/>(odom 좌표로 장애물 저장)"]
+    ENC["바퀴 엔코더"] -->|"회전수 적분"| ODOM["odom→base_link<br/>(TF · /odom)"]
+    ODOM -->|"주기마다 위치 변화"| VEL["속도 추정<br/>v = Δx ÷ Δt"]
+    CMD["목표 속도<br/>(cmd_vel)"] -->|"목표"| CTRL["속도 제어기<br/>오차 = 목표 − 추정"]
+    VEL -->|"추정 속도"| CTRL -->|"오차 × 이득"| MOTOR["모터 명령"]
+    ODOM -->|"장애물 좌표 기준"| CM["로컬 코스트맵<br/>(odom 좌표로 장애물 저장)"]
 \`\`\`
 제어기는 정해진 주기마다(예: 50 Hz → Δt = 0.02 s) **odom 위치가 직전 주기보다 얼마나 바뀌었는지**를 Δt로 나눠 속도를 봅니다. 평소엔 한 주기에 1 cm 남짓 바뀌니 약 0.55 m/s로 보입니다.
 
@@ -797,6 +797,25 @@ ekf_global:
 \`\`\`
 > 글로벌 EKF와 SLAM(또는 AMCL)을 동시에 켜면 map→odom 발행자가 둘이 됩니다. 하나만 남기세요.
 
+### 5. 지도는 Cartographer로 만들고, 운행은 AMCL로
+매핑과 운행에서 map→odom을 내는 노드가 **바뀝니다**. 매핑 땐 Cartographer가 지도를 만들며 map→odom을 내고, 저장한 지도로 운행할 땐 Cartographer를 끄고 AMCL이 같은 자리(map→odom)를 이어받습니다. odom→base 쪽은 그대로라 Nav2는 차이를 모릅니다.
+\`\`\`mermaid
+flowchart LR
+    map -- "매핑: Cartographer / 운행: AMCL" --> odom -- "EKF (바퀴+IMU)" --> base_footprint
+\`\`\`
+> 두 노드를 **동시에 켜면 안 됩니다** — 둘 다 map→odom을 냅니다. Cartographer는 \`provide_odom_frame: false\`, \`published_frame: odom\`으로 odom 칸을 EKF에 맡깁니다.
+
+### 6. 카메라 SLAM — cuVSLAM (+ nvblox)
+cuVSLAM이 map→odom을 내고, 자기가 계산한 시각 오도메트리는 **TF로 내지 않고** EKF 입력으로 넘깁니다(\`publish_odom_to_base_tf: false\`). 그래야 odom→base 발행자가 EKF 하나로 유지됩니다. nvblox는 TF를 **내지 않고 받기만** 합니다 — 이 TF 사슬로 카메라 자세를 알아 depth를 지도에 쌓습니다.
+\`\`\`mermaid
+flowchart LR
+    map -- "cuVSLAM" --> odom -- "EKF (바퀴+IMU+시각 오도메트리)" --> base_footprint -- "URDF" --> camera
+    camera -. "nvblox는 읽기만" .-> nvblox
+\`\`\`
+
+<p><button class="slam-go" data-path="/ros2?concept=slamstack">🧭 SLAM 구성 비교 — 한 노드 · 단계로 · 역할로 나누기</button> <button class="slam-go" data-path="/ros2?concept=localization">📍 위치추정 — 오도메트리 · AMCL · 처음 위치</button></p>
+
+
 ## 문제 상황
 
 ### 1. 로봇이 RViz에서 덜덜 떨리거나 순간이동
@@ -889,6 +908,18 @@ export default (w: Window) => {
           ? '보정 순간 map→odom만 바뀜 → 제어기는 아무것도 모름. 속도 그대로'
           : '오차는 odom에 쌓이고, map→odom이 상쇄 중';
       }
+    }
+
+    /** 관련 개념 탭으로 (SLAM 구성 비교 · 위치추정) */
+    @swcAppRouteGo
+    private goTab(path: string) {
+      return { path, scrollToTop: true };
+    }
+
+    @addEventListener('.slam-go', 'click', { delegate: true })
+    onGoTab(e: Event) {
+      const b = (e.target as HTMLElement).closest('.slam-go') as HTMLElement;
+      if (b?.dataset.path) this.goTab(b.dataset.path);
     }
 
     @addEventListener('#slam-cmp-play', 'click')
@@ -1043,6 +1074,8 @@ export default (w: Window) => {
           .md table { width:100%; border-collapse:collapse; font-size:12px; margin:8px 0; }
           .md th, .md td { border:1px solid #e2e8f0; padding:6px 8px; text-align:left; vertical-align:top; }
           .md th { background:#f0f9ff; color:#0c4a6e; }
+          .slam-go { margin:2px 4px 2px 0; padding:5px 12px; border-radius:14px; border:1.5px solid #3b82c4; background:#eff6ff; color:#1e3a8a; font:inherit; font-size:12px; font-weight:800; cursor:pointer; }
+          .slam-go:hover { background:#dbeafe; }
           .slam-title { font-size:17px; font-weight:800; color:#1e293b; line-height:1.4; margin:0 0 10px; }
           .slam-title small { display:block; font-size:12.5px; font-weight:700; color:#3b82c4; margin-top:2px; }
           .slam-tour { background:#fff; border:2px solid #3b82c4; border-radius:14px; padding:16px; margin:0 0 18px; }

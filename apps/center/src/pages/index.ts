@@ -42,6 +42,8 @@ import RosPkg from './ros2/components/RosPkg';
 import RosBag from './ros2/components/RosBag';
 import RosTf from './ros2/components/RosTf';
 import RosSlam from './ros2/components/RosSlam';
+import RosSlamStack from './ros2/components/RosSlamStack';
+import RosLocalization from './ros2/components/RosLocalization';
 import RosUrdf from './ros2/components/RosUrdf';
 import RosEco from './ros2/components/RosEco';
 import RosDesign from './ros2/components/RosDesign';
@@ -202,6 +204,8 @@ export const pageFactories = [
   RosBag,
   RosTf,
   RosSlam,
+  RosSlamStack,
+  RosLocalization,
   RosUrdf,
   RosEco,
   RosDesign,

@@ -222,7 +222,7 @@ chainable 컨트롤러는 **입력 자리(reference interface)**를 내놓습니
 ${F}mermaid
 flowchart LR
     MG["📦 move_group"] ==>|"🎬 FollowJointTrajectory"| JTC["📦 arm_controller<br/>(JTC)"]
-    JTC -->|"🧩 reference 쓰기<br/>rl_arm_correction/joint2/position"| RAC["🛠️ rl_arm_correction<br/>(chainable)"]
+    JTC -->|"🧩 reference 쓰기<br/>rl_arm_correction/joint2/position"| RAC["🛠️ rl_arm_correction<br/>extends ChainableControllerInterface"]
     RAC -->|"🧩 command 쓰기<br/>joint2/position = 목표 + Δ"| HW["📦 하드웨어 플러그인"]
     HW -->|"🧩 state<br/>position·velocity·effort"| RAC
     HW -->|"🧩 state<br/>position·velocity"| JTC

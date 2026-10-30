@@ -53,11 +53,11 @@ flowchart LR
     C[🛠️ coordinator<br/>pick · place] -->|"📞 /plan_kinematic_path<br/>(moveit_msgs/srv/GetMotionPlan)"| MG
     C -->|"🎬 /execute_trajectory<br/>(moveit_msgs/action/ExecuteTrajectory)"| MG
     subgraph MG[📦 move_group]
-        IK[pick_ik 역기구학] --> OMPL[OMPL 경로 계획] --> TP[시간 매개변수화<br/>TOTG]
+        IK[pick_ik 역기구학] -->|"목표 관절값"| OMPL[OMPL 경로 계획] -->|"충돌 없는 경로점"| TP[시간 매개변수화<br/>TOTG]
         PS[planning scene<br/>URDF+SRDF 충돌 모델]
     end
     MG -->|"🎬 /arm_controller/follow_joint_trajectory"| JTC[📦 arm_controller<br/>JointTrajectoryController]
-    JS[✉️ /joint_states] --> MG
+    JS[✉️ /joint_states] -->|"✉️ 현재 관절각<br/>(sensor_msgs/JointState)"| MG
 ${F}
 **입력이 되는 파일 (ros_system/config/moveit)**
 - \`beebot.srdf\` — 그룹 \`arm\` = joint1~5, 이름 자세 \`home\`(전부 0), 늘 붙어 있는 링크쌍 충돌 검사 제외(disable_collisions)
@@ -111,10 +111,10 @@ flowchart TD
     CT -->|"✉️ /cmd_vel_nav"| RLN[🛠️ rl_nav_correction] -->|"✉️ /cmd_vel_corrected"| MUX[📦 twist_mux]
     BH -->|"✉️ /cmd_vel_nav"| RLN
     MUX -->|"✉️ /cmd_vel_mux"| VS -->|"✉️ /cmd_vel_smoothed"| CMN -->|"✉️ /cmd_vel"| DD[📦 diff_drive_controller]
-    PC[✉️ pole_cam 점구름<br/>points_filtered] --> CT
-    PC --> PL
-    PC --> CMN
-    MAP[✉️ /map RTAB-Map] --> PL
+    PC[✉️ pole_cam 점구름<br/>points_filtered] -->|"local voxel 층"| CT
+    PC -->|"global obstacle 층"| PL
+    PC -->|"충돌 감시"| CMN
+    MAP[✉️ /map RTAB-Map] -->|"global static 층<br/>(transient_local)"| PL
 ${F}
 **관리자 둘로 나눔 (lifecycle_manager)**
 - \`lifecycle_manager_base\` — velocity_smoother · collision_monitor (바퀴 명령 체인 — 지도 없이도 떠서 수동 조작 가능)
@@ -150,12 +150,12 @@ ${F}
     md: `**📦 RTAB-Map — 카메라로 지도 만들기 + 그 지도에서 위치 찾기.** 매핑 모드는 들어오는 영상을 노드로 쌓으며 2D 격자 지도(\`/map\`)를 키우고, 위치추정 모드는 저장한 DB의 노드와 지금 영상을 맞춰 **map→odom** 보정만 낸다. 지도 한 벌 = 폴더 하나 \`<map_dir>/<날짜_시각>/rtabmap.db\` (+ 미리보기 map.pgm·yaml).
 ${F}mermaid
 flowchart LR
-    RGB[✉️ /pole_cam/color/image_raw] --> R
-    D[✉️ aligned_depth_to_color] --> R
+    RGB[✉️ /pole_cam/color/image_raw] -->|"특징점 (rgbd_sync로 묶음)"| R
+    D[✉️ aligned_depth_to_color] -->|"특징점 깊이 (rgbd_sync로 묶음)"| R
     PC[✉️ points_filtered<br/>자기 몸 뺀 점구름] -->|"격자 재료 (Grid/Sensor 0)"| R
-    TF[TF odom→base_footprint<br/>EKF] --> R
+    TF[TF odom→base_footprint<br/>EKF] -->|"✉️ /tf 오도메트리"| R
     subgraph R[📦 rtabmap]
-        MEM[노드·특징점 DB] --> LC[루프 클로저]
+        MEM[노드·특징점 DB] -->|"과거 장면과 비교"| LC[루프 클로저]
         GRID[2D 격자 생성]
     end
     R -->|"✉️ /map (OccupancyGrid)"| NAV[📦 Nav2 global_costmap]
@@ -207,13 +207,13 @@ flowchart TD
         GR[gripper_controller<br/>ParallelGripperAction]
         HW[🛠️ BeebotSystemHardware<br/>URDF ros2_control 태그]
     end
-    CMD[✉️ /cmd_vel] --> DD
+    CMD[✉️ /cmd_vel] -->|"✉️ geometry_msgs/TwistStamped"| DD
     MG[📦 move_group] -->|"🎬 /arm_controller/follow_joint_trajectory"| ARM
     ARM -->|"reference"| RLA
     GRC[🛠️ coordinator · manual_control] -->|"🎬 /gripper_controller/gripper_cmd"| GR
-    DD --> HW
-    RLA --> HW
-    GR --> HW
+    DD -->|"🧩 command wheel_*/velocity"| HW
+    RLA -->|"🧩 command joint1~5/position"| HW
+    GR -->|"🧩 command gripper/position"| HW
     HW <-->|"시리얼 /dev/opencr 1Mbps"| OCR[OpenCR 펌웨어]
     JSB -->|"✉️ /joint_states"| OUT1[robot_state_publisher · MoveIt]
     DD -->|"✉️ /odom"| OUT2[EKF]
@@ -274,7 +274,7 @@ ${F}
 ${F}mermaid
 flowchart LR
     X[urdf/&lt;모델&gt;/urdf.xacro<br/>launch urdf:=] -->|"xacro 펼침"| R[📦 robot_state_publisher]
-    JS[✉️ /joint_states] --> R
+    JS[✉️ /joint_states] -->|"관절각"| R
     R -->|"✉️ /tf · /tf_static"| ALL[Nav2 · RTAB-Map · MoveIt · body_filter]
     R -->|"✉️ /robot_description"| CM[📦 controller_manager · 시뮬레이터]
 ${F}
@@ -302,8 +302,8 @@ ${F}
     md: `**📦 twist_mux — 여러 속도 명령 중 하나 고르기.** 입력마다 우선순위와 timeout을 두고, 살아 있는(최근에 온) 것 중 우선순위가 높은 걸 내보낸다. lock 토픽이 true면 전부 막는다.
 ${F}mermaid
 flowchart LR
-    A[✉️ /cmd_vel_corrected<br/>자동 · 우선순위 10] --> M[📦 twist_mux]
-    B[✉️ /cmd_vel_manual<br/>수동 · 우선순위 100] --> M
+    A[✉️ /cmd_vel_corrected<br/>자동 · 우선순위 10] -->|"timeout 0.5 s"| M[📦 twist_mux]
+    B[✉️ /cmd_vel_manual<br/>수동 · 우선순위 100] -->|"살아 있으면 이김"| M
     L[✉️ /state/emergency<br/>lock · 255] -.->|"true면 0"| M
     M -->|"✉️ /cmd_vel_mux"| VS[📦 velocity_smoother]
 ${F}
@@ -382,9 +382,9 @@ ${F}
 ${F}mermaid
 flowchart LR
     SIM[시뮬레이터 지도 저장] -->|"📞 /map_saver/save_map"| MS[📦 map_saver]
-    MAP[✉️ /map RTAB-Map] --> MS
+    MAP[✉️ /map RTAB-Map] -->|"요청 때 한 장"| MS
     MS -->|"map.pgm · map.yaml"| DIR[&lt;map_dir&gt;/&lt;map_name&gt;/]
-    YAML[코스 지도 yaml] --> SRV[📦 map_server<br/>테스트베드 course 모드만] -->|"✉️ /map"| NAV[📦 Nav2]
+    YAML[코스 지도 yaml] -->|"읽기"| SRV[📦 map_server<br/>테스트베드 course 모드만] -->|"✉️ /map"| NAV[📦 Nav2]
 ${F}
 **우리 구성**
 - RTAB-Map(slam · saved)일 때 bringup이 \`map_saver\` + \`lifecycle_manager_map_saver\`를 띄움 → 저장 위치 = 지금 지도 폴더

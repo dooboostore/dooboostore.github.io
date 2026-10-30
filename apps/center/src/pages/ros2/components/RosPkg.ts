@@ -29,8 +29,8 @@ const MD = `
 - 의존성 설치: \`rosdep install --from-paths src --ignore-src -r -y\`
 ${'```'}mermaid
 flowchart TD
-    U[/opt/ros - underlay/] --> O[~/ros2_ws - overlay/]
-    O --> R[ros2 run / ros2 launch]
+    U[/opt/ros - underlay/] -->|"source 위에 겹침"| O[~/ros2_ws - overlay/]
+    O -->|"source install/setup.bash"| R[ros2 run / ros2 launch]
 ${'```'}
 `;
 

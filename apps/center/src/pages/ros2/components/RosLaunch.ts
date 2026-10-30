@@ -11,9 +11,9 @@ const MD = `
 - 실행: \`ros2 launch my_bot bringup.launch.py\`, 목록 확인: \`ros2 launch my_bot --show-args\`
 ${'```'}mermaid
 flowchart TD
-    L[bringup.launch.py] --> T[talker]
-    L --> LS[listener]
-    T -- chatter --> LS
+    L[bringup.launch.py] -->|"Node 실행"| T[talker]
+    L -->|"Node 실행"| LS[listener]
+    T -- "✉️ /chatter (std_msgs/String)" --> LS
 ${'```'}
 `;
 
