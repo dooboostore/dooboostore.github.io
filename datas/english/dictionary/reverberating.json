@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>reverberate</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "rɪ│vɜːrbəreɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "반향하다(echo), 울려퍼지다",
+              "examples": [
+                {
+                  "text": "A loud voice reverberated through the hall.",
+                  "translatedText": "고함 소리가 회장 안에 울려 퍼졌다."
+                }
+              ],
+              "originalMeaning": "반향하다(echo), 울려퍼지다"
+            },
+            {
+              "meaning": "<음파 등이> 잔향하다",
+              "examples": [],
+              "originalMeaning": "<음파 등이> 잔향하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "반향시키다",
+              "examples": [
+                {
+                  "text": "The steam whistle of the train was reverberated through the hills.",
+                  "translatedText": "열차의 기적 소리가 이 산 저 산에 메아리쳤다."
+                }
+              ],
+              "originalMeaning": "반향시키다"
+            },
+            {
+              "meaning": "<빛·열을> 반사하다, 굴절시키다",
+              "examples": [],
+              "originalMeaning": "<빛·열을> 반사하다, 굴절시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d191a35c2b6448ae991c12f71d64718b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d191a35c2b6448ae991c12f71d64718b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "reverberates"
+        },
+        {
+          "type": "과거형",
+          "value": "reverberated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "reverberating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "reverberated"
+        }
+      ],
+      "aliasConjugation": "reverberates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4c9757bef9819b70017fafd4fed8ad8f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "고함소리가 회장 안에 울려 퍼졌다.",
+      "text": "A loud voice reverberated through the hall."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대포 소리가 산에 울렸다",
+      "text": "The report of the gun reverberated through the hills."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "열차의 기적 소리가 이 산 저 산에 메아리쳤다.",
+      "text": "The steam whistle of the train was reverberated through the hills."
+    }
+  ],
+  "isWordType": true
+}

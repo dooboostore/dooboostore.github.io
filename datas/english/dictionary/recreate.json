@@ -1,0 +1,120 @@
+{
+  "items": [
+    {
+      "entry": "<b>recreate</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˌriːkriˈeɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "[~ oneself로] 휴양하다, 기분 전환을 하다, 심심하거나 답답한 마음을 풀다 ((with, by))",
+              "examples": [
+                {
+                  "text": "<b>recreate</b> oneself with",
+                  "translatedText": "…을 하고 즐기다"
+                }
+              ],
+              "originalMeaning": "[~ oneself로] 휴양하다, 기분 전환을 하다, 심심하거나 답답한 마음을 풀다 ((with, by))"
+            },
+            {
+              "meaning": "기운을 회복시키다, 상쾌하게 하다",
+              "examples": [
+                {
+                  "text": "A cup of coffee will <b>recreate</b> you.",
+                  "translatedText": "커피를 한 잔 마시면 기운이 날 겁니다."
+                }
+              ],
+              "originalMeaning": "기운을 회복시키다, 상쾌하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "휴양하다, 기분 전환을 하다",
+              "examples": [],
+              "originalMeaning": "휴양하다, 기분 전환을 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/55ee3d9ce83342e99056a86baf894b7f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/55ee3d9ce83342e99056a86baf894b7f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "recreates"
+        },
+        {
+          "type": "과거형",
+          "value": "recreated"
+        },
+        {
+          "type": "현재 분사",
+          "value": "recreating"
+        },
+        {
+          "type": "과거 분사",
+          "value": "recreated"
+        }
+      ],
+      "aliasConjugation": "recreates",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e0837de52f53ba78a2e18513310d8734",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "re-create",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "rì:kriéit"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "다시 만들다, 개조하다; 재현하다",
+              "examples": [],
+              "originalMeaning": "다시 만들다, 개조하다; 재현하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/09d958c1748f4cfd97c54da82439529d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/09d958c1748f4cfd97c54da82439529d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "51e4fb6eb06248caf1b8c575cce5cc02",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "커피를 한 잔 마시면 기운이 날 겁니다.",
+      "text": "A cup of coffee will <b>recreate</b> you."
+    }
+  ],
+  "isWordType": true
+}

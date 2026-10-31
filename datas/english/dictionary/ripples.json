@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "<b>ripple</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈrɪpl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "잔물결이 일다, 잔물결을 일으키며 흐르다, <배가> 잔물결을 일으키며 나아가다",
+              "examples": [
+                {
+                  "text": "The lake <b>ripple</b> d gently.",
+                  "translatedText": "호수에 조용히 잔물결이 일었다."
+                }
+              ],
+              "originalMeaning": "잔물결이 일다, 잔물결을 일으키며 흐르다, <배가> 잔물결을 일으키며 나아가다"
+            },
+            {
+              "meaning": "<식물·머리털 등이> 찰랑찰랑 흔들리다; <천 등이> 물결치듯 처지다, 주름지다",
+              "examples": [],
+              "originalMeaning": "<식물·머리털 등이> 찰랑찰랑 흔들리다; <천 등이> 물결치듯 처지다, 주름지다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "잔물결을 일으키다, 파문을 일으키다",
+              "examples": [],
+              "originalMeaning": "잔물결을 일으키다, 파문을 일으키다"
+            },
+            {
+              "meaning": "<머리털 등을> 곱슬곱슬하게 하다",
+              "examples": [],
+              "originalMeaning": "<머리털 등을> 곱슬곱슬하게 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "잔물결(wavelet), 파문, 영향 (=wave)",
+              "examples": [],
+              "originalMeaning": "잔물결(wavelet), 파문, 영향 (=<span class='related_word' lang='en' >wave</span>)"
+            },
+            {
+              "meaning": "파동; 작은 기복(起伏); (머리털 등의) 물결 모양, 웨이브",
+              "examples": [],
+              "originalMeaning": "파동; 작은 기복(起伏); (머리털 등의) 물결 모양, 웨이브"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/50c230cf98334b1282b98d13476ea85b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/50c230cf98334b1282b98d13476ea85b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "ripples"
+        },
+        {
+          "type": "과거형",
+          "value": "rippled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "rippling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "rippled"
+        }
+      ],
+      "aliasConjugation": "ripples",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "859195b4b53524dcbcae16ee92b76a3f",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>ripple</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사, 타동사",
+          "meanings": [
+            {
+              "meaning": "삼바디(로 빗다)",
+              "examples": [],
+              "originalMeaning": "삼바디(로 빗다)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3aec416e0bf04293947660b67559457c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3aec416e0bf04293947660b67559457c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "ripples",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "520d8bb05399fb594da8c5fcdb05e586",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "호수에 조용히 잔물결이 일었다.",
+      "text": "The lake rippled gently."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 은행의 파산은 전 사회에 파급 효과를 가져왔다",
+      "text": "The bank crash has had a <b>ripple</b> effect on the whole community."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "entry": "<b>wireless</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ˈwaɪərləs"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "무선의, 무선 전신[전화]의",
+              "examples": [
+                {
+                  "text": "a <b>wireless</b> license",
+                  "translatedText": "무선 통신 면허"
+                }
+              ],
+              "originalMeaning": "무선의, 무선 전신[전화]의"
+            },
+            {
+              "meaning": "라디오의",
+              "examples": [],
+              "originalMeaning": "라디오의"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[UC/] 무선 전신, 무선 전화; 무선 전보",
+              "examples": [
+                {
+                  "text": "telegraph by <b>wireless</b>",
+                  "translatedText": "무선으로 전보를 치다"
+                }
+              ],
+              "originalMeaning": "[UC/] 무선 전신, 무선 전화; 무선 전보"
+            },
+            {
+              "meaning": "[the ~] 라디오 ((현재는 radio가 일반적))",
+              "examples": [],
+              "originalMeaning": "[the ~] 라디오 ((현재는 radio가 일반적))"
+            }
+          ]
+        },
+        {
+          "type": "자동사, 타동사",
+          "meanings": [
+            {
+              "meaning": "[영] 무선 전신을 치다, 무선[라디오]으로 알리다",
+              "examples": [],
+              "originalMeaning": "[영] 무선 전신을 치다, 무선[라디오]으로 알리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/62713bb0b06043b08d7c3fad0b677a70",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/62713bb0b06043b08d7c3fad0b677a70",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "659b79f111b0ae9655536b9982e925c8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 기선에는 무전 장치가 있다.",
+      "text": "The steamer is fitted with <b>wireless</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "탐험대는 본국과 무전으로 통신을 계속했다",
+      "text": "The expedition kept in touch[communication] with home by <b>wireless</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "무선 전신실 a <b>wireless</b> cabin",
+      "text": ";a radioroom"
+    }
+  ],
+  "isWordType": true
+}
