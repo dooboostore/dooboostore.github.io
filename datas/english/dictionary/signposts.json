@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "entry": "<b>signpost</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│saɪnpoʊst"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "푯말; 도표(道標); 교통 표지판 설치용 기둥; (명확한) 길잡이, 지침",
+              "examples": [],
+              "originalMeaning": "푯말; 도표(道標); 교통 표지판 설치용 기둥; (명확한) 길잡이, 지침"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(도로에) 표지를 세우다, …에 방향을 지시[표시]하다 ((for))",
+              "examples": [],
+              "originalMeaning": "(도로에) 표지를 세우다, …에 방향을 지시[표시]하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f4357e129d374e7294ba136956e71d95",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f4357e129d374e7294ba136956e71d95",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "signposts"
+        },
+        {
+          "type": "과거형",
+          "value": "signposted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "signposting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "signposted"
+        }
+      ],
+      "aliasConjugation": "signposts",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "334afe4c947ea406e92bf3fbd239f9d3",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 표지판에는 뉴욕으로 가는 길이 표시되어 있다.",
+      "text": "This <b>signpost</b> tells the way to New York."
+    }
+  ],
+  "isWordType": true
+}

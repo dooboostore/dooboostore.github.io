@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>shred</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ʃred"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[종종 pl.] 조각, 단편, 파편, 끄트러기",
+              "examples": [],
+              "originalMeaning": "[종종 pl.] 조각, 단편, 파편, 끄트러기"
+            },
+            {
+              "meaning": "[a ~; 부정·의문문에서] 아주 조금, 소량(bit) ((of))",
+              "examples": [
+                {
+                  "text": "There's not a <b>shred</b> of evidence to convict him.",
+                  "translatedText": "그를 기소할 증거는 조금도 없다."
+                }
+              ],
+              "originalMeaning": "[a ~; 부정·의문문에서] 아주 조금, 소량(bit) ((of))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "조각조각으로 찢다[째다]",
+              "examples": [],
+              "originalMeaning": "조각조각으로 찢다[째다]"
+            },
+            {
+              "meaning": "절단하다",
+              "examples": [],
+              "originalMeaning": "절단하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<천이> 갈가리 찢어지다",
+              "examples": [],
+              "originalMeaning": "<천이> 갈가리 찢어지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c68024282e9047cca0d7746bc7f54969",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c68024282e9047cca0d7746bc7f54969",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "shreds"
+        },
+        {
+          "type": "과거형",
+          "value": "shredded, shred"
+        },
+        {
+          "type": "현재 분사",
+          "value": "shredding"
+        },
+        {
+          "type": "과거 분사",
+          "value": "shredded, shred"
+        }
+      ],
+      "aliasConjugation": "shreds",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c16f59ffe992e5fc412621b7ccd6a203",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "옷이 떨어져 녹초가 되었다",
+      "text": "My clothes are worn to tatters[<b>shreds</b>]."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그를 기소할 증거는 조금도 없다.",
+      "text": "There’s not a <b>shred</b> of evidence to convict him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그의 집이 도둑 맞은 표가 전혀 없었다",
+      "text": "There was not a <b>shred</b> of evidence that his house was robbed."
+    }
+  ],
+  "isWordType": true
+}

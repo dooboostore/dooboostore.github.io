@@ -5,7 +5,7 @@ import process from 'process';
 import { PapagoClient, extractEnglishWords, resolveCredentials } from 'dooboostore-english-dictionary';
 
 // YouTube Video ID를 여기서 변경하세요
-const YOUTUBE_VIDEO_ID = "1cPWIICepAA";
+const YOUTUBE_VIDEO_ID = "dZBBcfvXutg";
 
 // 번역 방식 선택: 'youtube' (YouTube 자동번역) 또는 'papago' (Papago API 번역)
 const TRANSLATION_METHOD: 'youtube' | 'papago' = 'youtube';

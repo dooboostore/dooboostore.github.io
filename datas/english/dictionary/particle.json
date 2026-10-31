@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "entry": "<b>particle</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│pɑːrtɪkl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "극소량(極小量), 아주 작은 조각 ((of)), 미진, 티끌",
+              "examples": [
+                {
+                  "text": "He has not a <b>particle</b> of sense.",
+                  "translatedText": "조금도 지각이 없다."
+                }
+              ],
+              "originalMeaning": "극소량(極小量), 아주 작은 조각 ((of)), 미진, 티끌"
+            },
+            {
+              "meaning": "[물리] 입자(粒子), 미립자, 분자; 질점(質點)",
+              "examples": [],
+              "originalMeaning": "[물리] 입자(粒子), 미립자, 분자; 질점(質點)"
+            },
+            {
+              "meaning": "(문서 등의) 항목, 조항",
+              "examples": [],
+              "originalMeaning": "(문서 등의) 항목, 조항"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/80cbce75536c4d369a872ac2eac44a10",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/80cbce75536c4d369a872ac2eac44a10",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "e2382919026c09999ce64646e302328c",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "분자는 결합하는 경향이 있다.",
+      "text": "The particles tend to unite."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 동정심이라고는 전혀 없다",
+      "text": "He has not a <b>particle</b> of sympathy."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 인정이라고 터럭 끝만큼도 없다",
+      "text": "He has not a <b>particle</b> of tender feeling."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "조금도 지각이 없다.",
+      "text": "He has not a <b>particle</b> of sense."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "음식이 잇새에 끼이다",
+      "text": "A food <b>particle</b> gets in between the teeth."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "entry": "<b>attach</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "əˈtætʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "붙이다, 달다, 바르다, 첨부하다, 접착하다(opp. detach) ((to, on))",
+              "examples": [
+                {
+                  "text": "<b>attach</b> a label to a parcel",
+                  "translatedText": "소포에 꼬리표를 붙이다"
+                }
+              ],
+              "originalMeaning": "붙이다, 달다, 바르다, 첨부하다, 접착하다(opp. detach) ((to, on))"
+            },
+            {
+              "meaning": "[흔히 ~ oneself로] <…을> (단체 등에) 소속시키다, 부속시키다, 가입시키다 ((to)) (→attached)",
+              "examples": [
+                {
+                  "text": "He attached himself to the Socialist Party.",
+                  "translatedText": "그는 사회당에 입당했다."
+                }
+              ],
+              "originalMeaning": "[흔히 ~ oneself로] <…을> (단체 등에) 소속시키다, 부속시키다, 가입시키다 ((to)) (→<span class='related_word' lang='en' >attached</span>)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "[문어] 부착하다, 부수하다 ((to)), 소속되다 ((to))",
+              "examples": [
+                {
+                  "text": "No blame attaches to me in the affair.",
+                  "translatedText": "그 일에 대해서 나는 하등 비난받을 일이 없다."
+                }
+              ],
+              "originalMeaning": "[문어] 부착하다, 부수하다 ((to)), 소속되다 ((to))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c4022f0af4bc4b74b2008463774b42f1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c4022f0af4bc4b74b2008463774b42f1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "attaches"
+        },
+        {
+          "type": "과거형",
+          "value": "attached"
+        },
+        {
+          "type": "현재 분사",
+          "value": "attaching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "attached"
+        }
+      ],
+      "aliasConjugation": "attaches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "828f1c6dd7470c554d6e2e7f1ac093b0",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 그를 깊이 사모하고 있다",
+      "text": "She is deeply attached to him."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 검에는 어떤 저주가 붙어 있다.",
+      "text": "A curse is attached to this sword."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 부모를 깊이 사랑하고 있다.",
+      "text": "He is deeply attached to his parents."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "채권자는 그의 봉급을 압류했다",
+      "text": "The creditor attached[seized] his salaries."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "우리 학교에는 기숙사가 있다",
+      "text": "Our school has a dormitory attached to it."
+    }
+  ],
+  "isWordType": true
+}

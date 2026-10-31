@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>bulk</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "bʌlk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "부피, 용적, 크기",
+              "examples": [
+                {
+                  "text": "It is of vast <b>bulk</b> .",
+                  "translatedText": "그것은 엄청 크다."
+                }
+              ],
+              "originalMeaning": "부피, 용적, 크기"
+            },
+            {
+              "meaning": "[the ~] 대부분, 태반",
+              "examples": [],
+              "originalMeaning": "[the ~] 대부분, 태반"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "대량의, 대량으로 판매되는; 적하의",
+              "examples": [],
+              "originalMeaning": "대량의, 대량으로 판매되는; 적하의"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "부피가 커지다 ((up)), 덩어리가 되다 ((up))",
+              "examples": [],
+              "originalMeaning": "부피가 커지다 ((up)), 덩어리가 되다 ((up))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6769065e64f94fe3899e4c88a4c77511",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6769065e64f94fe3899e4c88a4c77511",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bulks"
+        },
+        {
+          "type": "과거형",
+          "value": "bulked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bulking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bulked"
+        }
+      ],
+      "aliasConjugation": "bulks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0c9cb547c3c8cb596c07681291236d91",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전 시가의 거지반이 파괴되었다",
+      "text": "The <b>bulk</b> of the whole city was wiped out."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비용의 대부분은 회원들에게서 갹출하였다",
+      "text": "The <b>bulk</b> of the expenses was collected from the members."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그것은 엄청 크다.",
+      "text": "It is of vast <b>bulk</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "entry": "<b>belch</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "beltʃ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "트림을 하다",
+              "examples": [],
+              "originalMeaning": "트림을 하다"
+            },
+            {
+              "meaning": "<화산·대포 등이> 불꽃·연기 등을 내뿜다 ((out))",
+              "examples": [],
+              "originalMeaning": "<화산·대포 등이> 불꽃·연기 등을 내뿜다 ((out))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<화산·대포 등이> <불꽃·연기 등을> 내뿜다, 분출하다 ((out, forth))",
+              "examples": [],
+              "originalMeaning": "<화산·대포 등이> <불꽃·연기 등을> 내뿜다, 분출하다 ((out, forth))"
+            },
+            {
+              "meaning": "<트림을> 하다",
+              "examples": [],
+              "originalMeaning": "<트림을> 하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "트림 (소리)",
+              "examples": [],
+              "originalMeaning": "트림 (소리)"
+            },
+            {
+              "meaning": "분출하는 불길, 분화; 폭(발)음",
+              "examples": [],
+              "originalMeaning": "분출하는 불길, 분화; 폭(발)음"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/126c3c72d79f478db67b10290f8d8737",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/126c3c72d79f478db67b10290f8d8737",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "belches"
+        },
+        {
+          "type": "과거형",
+          "value": "belched"
+        },
+        {
+          "type": "현재 분사",
+          "value": "belching"
+        },
+        {
+          "type": "과거 분사",
+          "value": "belched"
+        }
+      ],
+      "aliasConjugation": "belches",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "9cf7d9b607da3557b95ad297c77ef7ff",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화산이 연기와 재를 토해 낸다",
+      "text": "A volcano <b>belches</b> out smoke and ash."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그 화산은 연기와 재를 내뿜었다",
+      "text": "The volcano belched (out) smoke and ashes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "대포가 굉연히 불을 뿜었다",
+      "text": "The artillery belched fire with a deafening roar."
+    }
+  ],
+  "isWordType": true
+}

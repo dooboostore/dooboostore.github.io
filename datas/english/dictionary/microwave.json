@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "entry": "<b>microwave</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈmaɪkrəweɪv"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "극초단파, 마이크로파(波) ((파장 1mm-1m))",
+              "examples": [],
+              "originalMeaning": "극초단파, 마이크로파(波) ((파장 1mm-1m))"
+            },
+            {
+              "meaning": "(=<b>MICROWAVE</b> OVEN)",
+              "examples": [],
+              "originalMeaning": "(=<span class='related_word' lang='en' ><b>MICROWAVE</b> OVEN</span>)"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "마이크로파의",
+              "examples": [
+                {
+                  "text": "a <b>microwave</b> detector",
+                  "translatedText": "마이크로파 검출기"
+                }
+              ],
+              "originalMeaning": "마이크로파의"
+            }
+          ]
+        },
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "전자 레인지로 조리[가열]하다",
+              "examples": [],
+              "originalMeaning": "전자 레인지로 조리[가열]하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/3887be500ead43b68cae6c02d7677185",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/3887be500ead43b68cae6c02d7677185",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "microwaves"
+        },
+        {
+          "type": "과거형",
+          "value": "microwaved"
+        },
+        {
+          "type": "현재 분사",
+          "value": "microwaving"
+        },
+        {
+          "type": "과거 분사",
+          "value": "microwaved"
+        }
+      ],
+      "aliasConjugation": "microwaves",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "671a6e9495e7f127cacbc55ec04238b8",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "전자레인지가 요리를 마치면 버저가 소리를 낼 것이다",
+      "text": "When your <b>microwave</b> oven has finished cooking, a buzzer will go off."
+    }
+  ],
+  "isWordType": true
+}

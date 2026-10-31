@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "entry": "<b>dilute</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "daɪ│luːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사, 자동사",
+          "meanings": [
+            {
+              "meaning": "묽게 하다, 묽어지다, 희석하다[되다], 희박하게 하다, 희박해지다; 강도[효력]를 약하게 하다",
+              "examples": [],
+              "originalMeaning": "묽게 하다, 묽어지다, 희석하다[되다], 희박하게 하다, 희박해지다; 강도[효력]를 약하게 하다"
+            },
+            {
+              "meaning": "<1주당 이익·자산 등을> 실질적으로 가치 저하시키다",
+              "examples": [],
+              "originalMeaning": "<1주당 이익·자산 등을> 실질적으로 가치 저하시키다"
+            }
+          ]
+        },
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "묽게 한, 희석한; 묽은, 심심한",
+              "examples": [],
+              "originalMeaning": "묽게 한, 희석한; 묽은, 심심한"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/d730111288974eacb7c5442252d023b1",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/d730111288974eacb7c5442252d023b1",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dilutes"
+        },
+        {
+          "type": "과거형",
+          "value": "diluted"
+        },
+        {
+          "type": "현재 분사",
+          "value": "diluting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "diluted"
+        }
+      ],
+      "aliasConjugation": "dilutes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "0d1a4c21bb5b08db1f0734977b54556e",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 술은 물을 섞었다",
+      "text": "This drink is adulterated with water.(나쁜 술) or This drink is diluted with water.(먹기 좋게 하기 위해서)"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아기에게 주스를 주려면 끓여 식힌 물로 잘 희석해라",
+      "text": "If you give your baby juice, <b>dilute</b> it well with cooled, boiled water."
+    }
+  ],
+  "isWordType": true
+}

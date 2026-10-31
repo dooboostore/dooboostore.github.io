@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "<b>intersect</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│ɪntər│sekt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "가로지르다, 가로질러 둘로 가르다, (…와) 교차하다",
+              "examples": [],
+              "originalMeaning": "가로지르다, 가로질러 둘로 가르다, (…와) 교차하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<선·면 등이> 교차하다, 엇갈리다",
+              "examples": [],
+              "originalMeaning": "<선·면 등이> 교차하다, 엇갈리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/23bd9c63211c49dba1654d4768e0146c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/23bd9c63211c49dba1654d4768e0146c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "intersects"
+        },
+        {
+          "type": "과거형",
+          "value": "intersected"
+        },
+        {
+          "type": "현재 분사",
+          "value": "intersecting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "intersected"
+        }
+      ],
+      "aliasConjugation": "intersects",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "c817c9fd25f5e3e0730c5ad8f7b461b9",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "한 줄기 길이 들판을 횡단하고 있다",
+      "text": "A single path intersects the field."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "두 개의 원은 두 지점에서 만난다",
+      "text": "The two circles <b>intersect</b> in two places."
+    }
+  ],
+  "isWordType": true
+}
