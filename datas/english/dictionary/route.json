@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "entry": "<b>route</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ruːt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "길(road), 노정; 루트; 항로(航路)",
+              "examples": [
+                {
+                  "text": "an air <b>route</b>",
+                  "translatedText": "항공로"
+                }
+              ],
+              "originalMeaning": "길(road), 노정; 루트; 항로(航路)"
+            },
+            {
+              "meaning": "수단, 방법, 길",
+              "examples": [],
+              "originalMeaning": "수단, 방법, 길"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<…의> 루트를 정하다",
+              "examples": [],
+              "originalMeaning": "<…의> 루트를 정하다"
+            },
+            {
+              "meaning": "<화물 등을> (…의 루트로) 발송하다 ((by, through))",
+              "examples": [],
+              "originalMeaning": "<화물 등을> (…의 루트로) 발송하다 ((by, through))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/0bbd2aaca59444048f347723982c7d90",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/0bbd2aaca59444048f347723982c7d90",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "routes"
+        },
+        {
+          "type": "과거형",
+          "value": "routed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "routing, routeing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "routed"
+        }
+      ],
+      "aliasConjugation": "routes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "8cbe0a8508df4a7fbaa95b41eba9ef3a",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 열차표는 이 노선에는 무효이다",
+      "text": "This rail pass is invalid on this <b>route</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "배는 항해 도중에 많은 곳에 기항했다",
+      "text": "The vessel called at many ports on her <b>route</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "연도는 물샐틈없이 경비되어 있었다",
+      "text": "The <b>route</b> was rigorously[closely, carefully] guarded."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 항로에 신형 유조선을 배선할 예정이다",
+      "text": "We will place[put] a new-model tanker on that <b>route</b>."
+    }
+  ],
+  "isWordType": true
+}

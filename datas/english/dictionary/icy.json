@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "entry": "<b>icy</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈaɪsi"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "얼음의, 얼음으로 덮인",
+              "examples": [
+                {
+                  "text": "<b>icy</b> roads",
+                  "translatedText": "빙판길"
+                }
+              ],
+              "originalMeaning": "얼음의, 얼음으로 덮인"
+            },
+            {
+              "meaning": "얼음 같은, 매우 차가운, 싸늘한",
+              "examples": [
+                {
+                  "text": "<b>icy</b> winds",
+                  "translatedText": "살을 에는 듯한 바람"
+                }
+              ],
+              "originalMeaning": "얼음 같은, 매우 차가운, 싸늘한"
+            },
+            {
+              "meaning": "[부사적으로] 얼음같이",
+              "examples": [],
+              "originalMeaning": "[부사적으로] 얼음같이"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/90fe4ecddce9462e807f14f9feef0be2",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/90fe4ecddce9462e807f14f9feef0be2",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "비교급",
+          "value": "icier"
+        },
+        {
+          "type": "최상급",
+          "value": "iciest"
+        }
+      ],
+      "aliasConjugation": "icier",
+      "aliasConjugationPos": "비교급",
+      "gdid": "975d6bc1932e60abdabc4cf0d5173d60",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "찬 바람이 뼛속까지 스며들었다.",
+      "text": "The <b>icy</b> wind cut me to the bone."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "노면 결빙 주의",
+      "text": "Beware of <b>Icy</b> Roads."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "<b>embolden</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "ɪm│boʊldən"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "대담하게 하다",
+              "examples": [],
+              "originalMeaning": "대담하게 하다"
+            },
+            {
+              "meaning": "용기를 돋우어 주다",
+              "examples": [
+                {
+                  "text": "( <b>embolden</b>+[목]+to do) This <b>emboldened</b> me to ask for more help.",
+                  "translatedText": "나는 이것으로 용기를 얻어 더 원조해 달라고 부탁했다."
+                }
+              ],
+              "originalMeaning": "용기를 돋우어 주다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/7cedbaf4327343d7921b85fa3bf557c4",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/7cedbaf4327343d7921b85fa3bf557c4",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "emboldens"
+        },
+        {
+          "type": "과거형",
+          "value": "emboldened"
+        },
+        {
+          "type": "현재 분사",
+          "value": "emboldening"
+        },
+        {
+          "type": "과거 분사",
+          "value": "emboldened"
+        }
+      ],
+      "aliasConjugation": "emboldens",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "265015c94be4df7b083f59af73d237d7",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "나는 이것으로 용기를 얻어 더 원조해 달라고 부탁했다.",
+      "text": "This <b>emboldened</b> me to ask for more help."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "돈을 구해 주었더니 맛 들여 또 찾아왔다",
+      "text": "<b>Emboldened</b> by his first success in borrowing money from me, he has come again for another."
+    }
+  ],
+  "isWordType": true
+}

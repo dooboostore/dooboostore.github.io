@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "entry": "<b>awe</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ɔː"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "외경(畏敬), 외경심(reverential fear)",
+              "examples": [],
+              "originalMeaning": "외경(畏敬), 외경심(reverential fear)"
+            },
+            {
+              "meaning": "공포, 두려움",
+              "examples": [],
+              "originalMeaning": "공포, 두려움"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "경외하게 하다",
+              "examples": [
+                {
+                  "text": "be awed",
+                  "translatedText": "두려워하다"
+                }
+              ],
+              "originalMeaning": "경외하게 하다"
+            },
+            {
+              "meaning": "위압하여 …시키다",
+              "examples": [
+                {
+                  "text": "He awed the boy into obedience[doing it].",
+                  "translatedText": "그는 소년을 위압하여 복종시켰다[그것을 하게 했다]."
+                }
+              ],
+              "originalMeaning": "위압하여 …시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/6311d0e50c5245e4b2cb8154984db03f",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/6311d0e50c5245e4b2cb8154984db03f",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "awes"
+        },
+        {
+          "type": "과거형",
+          "value": "awed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "awing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "awed"
+        }
+      ],
+      "aliasConjugation": "awes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "73b7af7be891104d94d02dc98b124d92",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그녀는 두려워서 말도 못했다",
+      "text": "She was awed into silence."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그들은 그의 위세에 눌려서 복종했다",
+      "text": "He awed them into obedience."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 그 산의 웅장함에 두려운 느낌마저 들었다",
+      "text": "He was awed by the majesty of the mountain."
+    }
+  ],
+  "isWordType": true
+}

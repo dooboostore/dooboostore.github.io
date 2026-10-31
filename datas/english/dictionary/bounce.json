@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "entry": "<b>bounce</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "baʊns"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<공 등이> 튀다, 뛰어오르다; <사람이> 벌떡 일어나다, 펄쩍 뛰다 ((up)); <소리·빛이> 반사하다 ((off))",
+              "examples": [
+                {
+                  "text": "<b>bounce</b> up",
+                  "translatedText": "펄쩍 뛰다"
+                }
+              ],
+              "originalMeaning": "<공 등이> 튀다, 뛰어오르다; <사람이> 벌떡 일어나다, 펄쩍 뛰다 ((up)); <소리·빛이> 반사하다 ((off))"
+            },
+            {
+              "meaning": "급히 움직이다, 뛰어다니다 ((about))",
+              "examples": [
+                {
+                  "text": "<b>bounce</b> out of[into] the room",
+                  "translatedText": "방에서 뛰어나오다[방으로 뛰어들어가다]"
+                }
+              ],
+              "originalMeaning": "급히 움직이다, 뛰어다니다 ((about))"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "<공 등을> 튀게 하다, 바운드시키다",
+              "examples": [
+                {
+                  "text": "<b>bounce</b> a boy up and down",
+                  "translatedText": "소년을 들어올렸다 내렸다 하다"
+                }
+              ],
+              "originalMeaning": "<공 등을> 튀게 하다, 바운드시키다"
+            },
+            {
+              "meaning": "<수표·어음 등을> 부도 처리하다[지불 거절하다]; [컴퓨터] <전자 우편 등을> (주소 착오 등으로) 반송하다, 발신자에게 되돌리다",
+              "examples": [],
+              "originalMeaning": "<수표·어음 등을> 부도 처리하다[지불 거절하다]; [컴퓨터] <전자 우편 등을> (주소 착오 등으로) 반송하다, 발신자에게 되돌리다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "되튐, 튐, 바운드(bound); 튀어오름; [U] 탄력(성)",
+              "examples": [],
+              "originalMeaning": "되튐, 튐, 바운드(bound); 튀어오름; [U] 탄력(성)"
+            },
+            {
+              "meaning": "[U] [구어] 활기, 활력; [영] 허풍, 허세",
+              "examples": [],
+              "originalMeaning": "[U] [구어] 활기, 활력; [영] 허풍, 허세"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/351ac74500ea42ad8cb6cbe649186bdd",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/351ac74500ea42ad8cb6cbe649186bdd",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "bounces"
+        },
+        {
+          "type": "과거형",
+          "value": "bounced"
+        },
+        {
+          "type": "현재 분사",
+          "value": "bouncing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "bounced"
+        }
+      ],
+      "aliasConjugation": "bounces",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "90705ae0d5670781646e2bff120fffdf",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "아이들이 펄쩍펄쩍 뛰고 있었다",
+      "text": "Kids were jumping[bouncing] up and down."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "돌로 네 머리를 치겠다.",
+      "text": "I’ll take and <b>bounce</b> a rock off on your head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "차가 울퉁불퉁한 길을 상하로 흔들리며 달리고 있다.",
+      "text": "A car is bouncing along the rough road."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공은 바운드하여 2루수 머리 위를 넘어갔다",
+      "text": "The ball bounded[bounced] over the second baseman."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "공은 불규칙하게 바운드되었다",
+      "text": "The ball took a bad <b>bounce</b>."
+    }
+  ],
+  "isWordType": true
+}

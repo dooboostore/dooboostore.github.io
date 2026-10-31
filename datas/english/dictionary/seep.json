@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "entry": "<b>seep</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "síːp"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "<액체·빛 등이> 스며 나오다, 뚝뚝 떨어지다, 새다",
+              "examples": [
+                {
+                  "text": "Cold seeped into my bones.",
+                  "translatedText": "냉기가 뼛속에 스며들었다."
+                }
+              ],
+              "originalMeaning": "<액체·빛 등이> 스며 나오다, 뚝뚝 떨어지다, 새다"
+            },
+            {
+              "meaning": "<사상·이해 등이> 침투하다, 서서히 확산하다, 퍼지다",
+              "examples": [],
+              "originalMeaning": "<사상·이해 등이> 침투하다, 서서히 확산하다, 퍼지다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/de9b697140684aa2905b6f4fe356491b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/de9b697140684aa2905b6f4fe356491b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "seeps"
+        },
+        {
+          "type": "과거형",
+          "value": "seeped"
+        },
+        {
+          "type": "현재 분사",
+          "value": "seeping"
+        },
+        {
+          "type": "과거 분사",
+          "value": "seeped"
+        }
+      ],
+      "aliasConjugation": "seeps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "d0631458c2807757d8c383505e1ebf55",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>seep</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": null,
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수륙 양용 지프",
+              "examples": [],
+              "originalMeaning": "수륙 양용 지프"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/f775f571f15647d29b5ca240b8dc5d3e",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/f775f571f15647d29b5ca240b8dc5d3e",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "seeps",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "4a0ff5fe3f61f005b0c1ef3c72a842e2",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "냉기가 뼈 속에 스며들었다.",
+      "text": "Cold seeped into my bones."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "여기에 묻은 위험한 화학 약품이 흙에 침투하기 시작했다",
+      "text": "The dangerous chemicals buried here have begun to <b>seep</b> into the soil."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물이 지하실에 스며들었다",
+      "text": "Water has seeped into the basement."
+    }
+  ],
+  "isWordType": true
+}

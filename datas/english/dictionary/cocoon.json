@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "<b>cocoon</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "kəˈkuːn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(누에) 고치",
+              "examples": [],
+              "originalMeaning": "(누에) 고치"
+            },
+            {
+              "meaning": "(거미 등의) 난낭(卵囊)",
+              "examples": [],
+              "originalMeaning": "(거미 등의) 난낭(卵囊)"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "고치를 만들다",
+              "examples": [],
+              "originalMeaning": "고치를 만들다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "고치로 싸다, …을 (고치처럼) 휩싸다, 둘러싸서 호위하다, <물건을> 장래를 위해 모으다",
+              "examples": [],
+              "originalMeaning": "고치로 싸다, …을 (고치처럼) 휩싸다, 둘러싸서 호위하다, <물건을> 장래를 위해 모으다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/dfd19a3f7b124256a8483419fea2118d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/dfd19a3f7b124256a8483419fea2118d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "cocoons"
+        },
+        {
+          "type": "과거형",
+          "value": "cocooned"
+        },
+        {
+          "type": "현재 분사",
+          "value": "cocooning"
+        },
+        {
+          "type": "과거 분사",
+          "value": "cocooned"
+        }
+      ],
+      "aliasConjugation": "cocoons",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "e1913530e9e58c8b6779268bb8092e42",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "누에는 고치를 만든다",
+      "text": "The silkworm spins a <b>cocoon</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "누에는 고치를 짓는다.",
+      "text": "Silkworms spin cocoons."
+    }
+  ],
+  "isWordType": true
+}

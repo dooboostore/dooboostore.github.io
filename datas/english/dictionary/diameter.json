@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "entry": "<b>diameter</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "daɪˈæmɪtə(r)"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(원·구체·원뿔 곡선 등의) 지름, 직경",
+              "examples": [
+                {
+                  "text": "3 inches in <b>diameter</b>",
+                  "translatedText": "지름이 3인치 ★ in ~은 관사 없음."
+                }
+              ],
+              "originalMeaning": "(원·구체·원뿔 곡선 등의) 지름, 직경"
+            },
+            {
+              "meaning": "…배 ((렌즈의 확대 단위))",
+              "examples": [
+                {
+                  "text": "magnify an object 1,000 diameters",
+                  "translatedText": "물체를 1,000배로 확대하다"
+                }
+              ],
+              "originalMeaning": "…배 ((렌즈의 확대 단위))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/86c5d726900e487b9c79d827ebd8540c",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/86c5d726900e487b9c79d827ebd8540c",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "4a69720c4dc29f3bdca4bd8ecf8e50a4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 동맥의 직경을 측정했다",
+      "text": "He measured the <b>diameter</b> of the artery."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "원의 반지름은 지름의 반이다.",
+      "text": "The radius of a circle is half the <b>diameter</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지름이 3인치",
+      "text": "3 inches in <b>diameter</b>"
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지름이 5cm이다",
+      "text": "It is[measures] five centimeters in <b>diameter</b>."
+    }
+  ],
+  "isWordType": true
+}

@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "entry": "whiz(z)",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "wɪz"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "윙, 핑, 씽 ((화살·총알 등이 내는 소리)); 씽[윙] 하며 재빨리 움직이는 것",
+              "examples": [],
+              "originalMeaning": "윙, 핑, 씽 ((화살·총알 등이 내는 소리)); 씽[윙] 하며 재빨리 움직이는 것"
+            },
+            {
+              "meaning": "[미·속어] 민완가, 수완가; 명수, 전문가 ((at))",
+              "examples": [
+                {
+                  "text": "a whiz at math",
+                  "translatedText": "수학의 도사"
+                }
+              ],
+              "originalMeaning": "[미·속어] 민완가, 수완가; 명수, 전문가 ((at))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "씽[윙] 소리 나다; 씽[윙] 하며 움직이다[날다, 회전하다]",
+              "examples": [
+                {
+                  "text": "The bullet whizzed past.",
+                  "translatedText": "총알이 핑하고 날아갔다."
+                }
+              ],
+              "originalMeaning": "씽[윙] 소리 나다; 씽[윙] 하며 움직이다[날다, 회전하다]"
+            },
+            {
+              "meaning": "소매치기를 하다",
+              "examples": [],
+              "originalMeaning": "소매치기를 하다"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "윙[핑, 씽] 소리나게 하다",
+              "examples": [],
+              "originalMeaning": "윙[핑, 씽] 소리나게 하다"
+            },
+            {
+              "meaning": "원심 탈수기에 걸다, 급속하게 회전시키다",
+              "examples": [],
+              "originalMeaning": "원심 탈수기에 걸다, 급속하게 회전시키다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c94b1232177c4843bf412441cc98f180",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c94b1232177c4843bf412441cc98f180",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "whizzes"
+        },
+        {
+          "type": "과거형",
+          "value": "whizzed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "whizzing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "whizzed"
+        }
+      ],
+      "aliasConjugation": "whizzes",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5d5cfed76d875e26626c83c42f7d12a4",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "총알이 씽하고 머리를 스쳐갔다",
+      "text": "A bullet whistled[whizzed] past my head."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "화살이 휙하고 날아갔다",
+      "text": "An arrow whizzed past."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "총알이 핑하고 날아갔다.",
+      "text": "The bullet whizzed past."
+    }
+  ],
+  "isWordType": true
+}

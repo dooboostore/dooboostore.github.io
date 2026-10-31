@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "entry": "<b>vapor</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "véipər"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "증기  ((공기 중의 수증기·김·안개·운무 등))",
+              "examples": [],
+              "originalMeaning": "증기  ((공기 중의 수증기·김·안개·운무 등))"
+            },
+            {
+              "meaning": "증기",
+              "examples": [],
+              "originalMeaning": "증기"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "발산시키다, 증발[기화]시키다(vaporize) ((away))",
+              "examples": [],
+              "originalMeaning": "발산시키다, 증발[기화]시키다(vaporize) ((away))"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "증발하다",
+              "examples": [],
+              "originalMeaning": "증발하다"
+            },
+            {
+              "meaning": "허풍떨다, 허세부리다",
+              "examples": [],
+              "originalMeaning": "허풍떨다, 허세부리다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/e588627b84754b33a87a1795357fe89b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/e588627b84754b33a87a1795357fe89b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "d6290aedc2a56226411495fd8bc65518",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "비행운이 길게 뻗쳐 있다",
+      "text": "<b>Vapor</b> is trailing in the sky."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "물은 증발한다",
+      "text": "The water turns into <b>vapor</b>."
+    }
+  ],
+  "isWordType": true
+}
