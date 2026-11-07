@@ -252,30 +252,94 @@ const enableEdgeHighlight = (svg: SVGSVGElement) => {
 
 // 큰 도식은 컨테이너 폭에 맞춰 줄여 그리므로(max-width:100%) 브라우저 확대(Ctrl +)로는 같이 안 커진다
 // (페이지가 커지면 폭도 같이 줄어 상쇄됨) → 도식 자체 확대 버튼. 확대하면 가로는 도식 안에서 스크롤.
+// 바는 pre 밖(도식과 같은 래퍼)에 sticky로 둔다 — pre는 가로 스크롤 컨테이너라 안에 두면
+// 세로로 페이지를 내릴 때 바가 도식과 함께 화면 밖으로 올라가 버린다.
 const ZOOMS = [1, 1.5, 2, 3, 4]; // 1 = 폭에 맞춤
+
+// 키보드 -·=/+ 로 지금 보고 있는 도식만 확대·축소. 도식마다 apply를 등록해 둔다.
+const zoomApply = new WeakMap<HTMLElement, (dir: number) => void>();
+const zoomKeysBound = new WeakSet<Document>();
+
+const collectZoomFigures = (root: ParentNode, out: HTMLElement[]) => {
+  root.querySelectorAll<HTMLElement>('.mm-fig').forEach(el => out.push(el));
+  root.querySelectorAll<HTMLElement>('*').forEach(el => {
+    if (el.shadowRoot) collectZoomFigures(el.shadowRoot, out);
+  });
+};
+
+/** 화면에 가장 넓게 보이는 도식 — 여러 도식이 있어도 사용자가 보고 있는 것을 고른다 */
+const visibleZoomFigure = (doc: Document): HTMLElement | null => {
+  const win = doc.defaultView;
+  if (!win) return null;
+  const figs: HTMLElement[] = [];
+  collectZoomFigures(doc, figs);
+  let best: HTMLElement | null = null;
+  let bestArea = 0;
+  for (const fig of figs) {
+    const r = fig.getBoundingClientRect();
+    const w = Math.min(r.right, win.innerWidth) - Math.max(r.left, 0);
+    const h = Math.min(r.bottom, win.innerHeight) - Math.max(r.top, 0);
+    const area = Math.max(0, w) * Math.max(0, h);
+    if (area > bestArea) { best = fig; bestArea = area; }
+  }
+  return bestArea > 0 ? best : null;
+};
+
+const bindZoomKeys = (doc: Document) => {
+  if (zoomKeysBound.has(doc)) return;
+  zoomKeysBound.add(doc);
+  doc.addEventListener('keydown', e => {
+    if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.isComposing) return;
+    const t = e.composedPath?.()[0] as HTMLElement | undefined;
+    if (t?.closest?.('input, textarea, select, [contenteditable=""], [contenteditable="true"]')) return;
+    let dir = 0;
+    if (e.key === '=' || e.key === '+' || e.code === 'NumpadAdd') dir = 1;
+    else if (e.key === '-' || e.key === '_' || e.code === 'NumpadSubtract') dir = -1;
+    if (!dir) return;
+    const fig = visibleZoomFigure(doc);
+    const apply = fig && zoomApply.get(fig);
+    if (!apply) return;
+    apply(dir);
+    e.preventDefault();
+  }, { capture: true });
+};
+
 const addZoom = (pre: HTMLElement, svg: SVGSVGElement) => {
   if ((svg.viewBox?.baseVal?.width ?? 0) < 900) return; // 작은 도식은 맞춤으로 충분
   const doc = pre.ownerDocument;
+  const fig = doc.createElement('div');
+  fig.className = 'mm-fig';
   const bar = doc.createElement('div');
   bar.className = 'mm-zoom';
-  bar.style.cssText = 'position:sticky;left:0;display:flex;gap:4px;justify-content:flex-end;align-items:center;margin-bottom:4px;font:12px sans-serif;';
+  // 높이 0으로 두어 줄을 차지하지 않고 버튼만 도식 위에 떠 있게 한다 (sticky는 이 0높이 상자를 따라간다)
+  bar.style.cssText = 'position:sticky;top:var(--mm-zoom-top,0px);z-index:4;display:flex;gap:4px;justify-content:flex-end;align-items:flex-start;height:0;font:12px sans-serif;pointer-events:none;';
   const btn = (text: string, title: string) => {
     const b = doc.createElement('button');
     b.type = 'button';
     b.textContent = text;
     b.title = title;
     b.setAttribute('aria-label', title);
-    b.style.cssText = 'min-width:30px;padding:3px 8px;border:1px solid #cbd5e1;border-radius:6px;background:#fff;color:#1e293b;font:inherit;font-weight:700;cursor:pointer;';
+    b.style.cssText = 'min-width:30px;margin-top:4px;padding:3px 8px;border:1px solid #cbd5e1;border-radius:6px;background:#fff;color:#1e293b;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 1px 4px rgba(15,23,42,0.18);pointer-events:auto;';
     bar.append(b);
     return b;
   };
-  const out = btn('－', '도식 축소');
+  const out = btn('－', '도식 축소 (-)');
   const label = btn('맞춤', '폭에 맞추기');
-  const inn = btn('＋', '도식 확대');
+  const inn = btn('＋', '도식 확대 (=, +)');
   let i = 0;
   const apply = (next: number) => {
-    // 확대해도 보던 곳(가운데)이 그대로 보이게 비율로 스크롤을 옮긴다
-    const cx = pre.scrollWidth ? (pre.scrollLeft + pre.clientWidth / 2) / pre.scrollWidth : 0.5;
+    // 지금 화면에 보이는 도식 부분의 가운데를 기준점으로 잡는다.
+    // 확대/축소로 SVG 폭·높이가 바뀌어도 그 점이 같은 화면 위치에 남도록 가로 스크롤·페이지 스크롤을 같이 옮긴다.
+    const win = doc.defaultView;
+    const before = svg.getBoundingClientRect();
+    const figRect = fig.getBoundingClientRect();
+    const vw = win?.innerWidth ?? doc.documentElement.clientWidth;
+    const vh = win?.innerHeight ?? doc.documentElement.clientHeight;
+    const ax = (Math.max(figRect.left, 0) + Math.min(figRect.right, vw)) / 2;
+    const ay = (Math.max(figRect.top, 0) + Math.min(figRect.bottom, vh)) / 2;
+    const fx = before.width ? Math.min(1, Math.max(0, (ax - before.left) / before.width)) : 0.5;
+    const fy = before.height ? Math.min(1, Math.max(0, (ay - before.top) / before.height)) : 0.5;
+
     i = Math.max(0, Math.min(ZOOMS.length - 1, next));
     const z = ZOOMS[i];
     if (z === 1) {
@@ -290,13 +354,33 @@ const addZoom = (pre: HTMLElement, svg: SVGSVGElement) => {
     label.textContent = z === 1 ? '맞춤' : `${z * 100}%`;
     out.disabled = i === 0;
     inn.disabled = i === ZOOMS.length - 1;
-    pre.scrollLeft = cx * pre.scrollWidth - pre.clientWidth / 2;
+
+    // 가로: 기준점 x가 같은 화면 x에 오도록 pre 안 스크롤을 맞춘다. (맞춤이면 스크롤 없음)
+    const after = svg.getBoundingClientRect();
+    if (z === 1) {
+      pre.scrollLeft = 0;
+    } else {
+      const targetX = after.left + fx * after.width;
+      const maxX = Math.max(0, pre.scrollWidth - pre.clientWidth);
+      pre.scrollLeft = Math.min(maxX, Math.max(0, pre.scrollLeft + (targetX - ax)));
+    }
+    // 세로: 기준점 y가 같은 화면 y에 오도록 페이지를 스크롤한다.
+    const laid = svg.getBoundingClientRect();
+    const dy = (laid.top + fy * laid.height) - ay;
+    if (win && Math.abs(dy) > 0.5) {
+      const maxY = Math.max(0, doc.documentElement.scrollHeight - vh);
+      win.scrollTo({ top: Math.min(maxY, Math.max(0, win.scrollY + dy)), behavior: 'auto' });
+    }
   };
   out.addEventListener('click', e => { e.stopPropagation(); apply(i - 1); });
   inn.addEventListener('click', e => { e.stopPropagation(); apply(i + 1); });
   label.addEventListener('click', e => { e.stopPropagation(); apply(0); });
   out.disabled = true;
-  svg.before(bar);
+  fig.append(bar);
+  pre.before(fig);
+  fig.append(pre);
+  zoomApply.set(fig, dir => apply(i + dir));
+  bindZoomKeys(doc);
 };
 
 // scope 안 pre.mermaid를 SVG로 렌더. 브라우저에서만 동작(SSR no-op),

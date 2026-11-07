@@ -1980,7 +1980,7 @@ export const PARAM_GROUPS: ParamGroup[] = [
     "name": "speed_limit_topic",
     "type": "string",
     "default": "\"speed_limit\"",
-    "ko": "속도 상한(nav2_msgs/SpeedLimit)을 받을 토픽.",
+    "ko": "속도 상한(nav2_msgs/SpeedLimit)을 받을 토픽. 현재 발행자 없음 — 값이 오면 controller_server가 컨트롤러에 전달한다.",
     "en": "Speed limiting topic name to subscribe. This could be published by Speed Filter (please refer to [Speed Filter Parameters][speed-filter-parameters] configuration page). You can also use this without the Speed Filter as well if you provide an external server to publish [these messages](https://github.com/ros-navigation/navigation2/blob/jazzy/nav2_msgs/msg/SpeedLimit.msg).",
     "key": "speed_limit_topic"
    },
@@ -2013,13 +2013,38 @@ export const PARAM_GROUPS: ParamGroup[] = [
   ]
  },
  {
+  "id": "ml_rl_nav_controller",
+  "cat": "Nav2",
+  "title": "RlNavController (ml)",
+  "pkg": "ml · nav2_core",
+  "node": "/controller_server",
+  "kind": "FollowPath 플러그인",
+  "desc": "controller_server의 FollowPath 자리에 로드되는 우리 컨트롤러. ONNX 정책이 v·ω를 직접 내고, enable=false·모델 없음·점구름 stale이면 inner DWB로 바이패스한다.",
+  "source": "lv2_module6/ros2_ws/src/ros_system/config/nav2_params.yaml (FollowPath)",
+  "params": [
+   { "name": "plugin", "type": "string", "default": "\"dwb_core::DWBLocalPlanner\"", "ko": "FollowPath에 로드할 컨트롤러 플러그인 클래스.", "key": "FollowPath.plugin", "design": "ml::RlNavController" },
+   { "name": "enable", "type": "bool", "default": "false", "ko": "정책 사용 여부. false·모델 로드 실패·점구름 stale이면 inner DWB가 그대로 주행한다.", "key": "FollowPath.enable", "design": "true (모델 없으면 자동 바이패스)" },
+   { "name": "model_path", "type": "string", "default": "\"rl_nav_controller/policy.onnx\"", "ko": "ONNX 정책 경로 — share/ml/model 아래.", "key": "FollowPath.model_path", "design": "rl_nav_controller/policy.onnx" },
+   { "name": "scan_source", "type": "string", "default": "\"points\"", "ko": "가상 스캔 입력 — points(점구름) 또는 scan(실제 LaserScan).", "key": "FollowPath.scan_source", "design": "points (LiDAR 전환안은 scan)" },
+   { "name": "points_topic", "type": "string", "default": "\"…/points_filtered\"", "ko": "scan_source=points일 때 구독할 점구름. 우리 기본은 nvblox 2D ESDF height slice.", "key": "FollowPath.points_topic", "design": "/nvblox_node/combined_esdf_pointcloud" },
+   { "name": "lidar_rays", "type": "int", "default": "36", "ko": "가상 스캔 방향 수. 학습 모델 입력과 같아야 한다.", "key": "FollowPath.lidar_rays", "design": "360 (nvblox 0.05m voxel)" },
+   { "name": "lidar_max", "type": "double", "default": "3.5", "ko": "가상 스캔 최대거리(m) — 정규화 기준.", "key": "FollowPath.lidar_max", "design": "3.5" },
+   { "name": "lookahead · wp_step · wp_scale", "type": "int · double · double", "default": "5 · 0.30 · 2.0", "ko": "경로 웨이포인트 관측 — 개수·간격(m)·정규화 배율.", "key": "FollowPath.lookahead", "design": "5 · 0.30 · 2.0" },
+   { "name": "max_lin · max_ang", "type": "double", "default": "0.26 · 1.82", "ko": "정책 출력 스케일 — v·ω 상한.", "key": "FollowPath.max_lin", "design": "0.26 · 1.82" },
+   { "name": "v_min_ratio", "type": "double", "default": "−0.2", "ko": "후진 허용 비율 — v 하한 = v_min_ratio × max_lin.", "key": "FollowPath.v_min_ratio", "design": "−0.2" },
+   { "name": "extra_lin_vel · extra_ang_vel", "type": "double", "default": "0.0", "ko": "정책 출력에 더하는 추가 속도. 상한(max_lin·max_ang)은 유지.", "key": "FollowPath.extra_lin_vel", "design": "0.0 · 0.0" },
+   { "name": "cloud_timeout", "type": "double", "default": "0.5", "ko": "점구름이 이 시간(s)보다 오래되면 정책을 건너뛰고 inner DWB로 주행.", "key": "FollowPath.cloud_timeout", "design": "0.5" },
+   { "name": "fallback_controller · inner.*", "type": "string · YAML", "default": "\"dwb\"", "ko": "정책이 꺼졌을 때 쓸 기본 컨트롤러와 그 파라미터.", "key": "FollowPath.fallback_controller", "design": "dwb · inner.max_vel_x 0.26 · inner.max_vel_theta 1.82 …" }
+  ]
+ },
+ {
   "id": "nav2_dwb_controller",
   "cat": "Nav2",
   "title": "DWB 컨트롤러",
   "pkg": "dwb_core",
   "node": "/controller_server",
   "kind": "플러그인",
-  "desc": "controller_server의 FollowPath 플러그인. 속도 후보를 시뮬레이션해 critic 점수로 고른다.",
+  "desc": "controller_server의 FollowPath 플러그인. 우리 구성의 FollowPath는 ml::RlNavController(ONNX 정책)이고, 정책이 꺼지면 inner DWB(이 그룹)가 대신 주행한다.",
   "source": "github.com/ros-navigation/docs.nav2.org (jazzy)",
   "params": [
    {
@@ -2201,7 +2226,7 @@ export const PARAM_GROUPS: ParamGroup[] = [
     "ko": "최대 각속도(rad/s).",
     "en": "Maximum angular velocity (rad/s).",
     "key": "FollowPath.max_vel_theta",
-    "design": "1.82 / 1.0 / 0.8 (프리셋 A/B/C, set_parameters)"
+    "design": "1.82 (고정 — inner.max_vel_theta)"
    },
    {
     "name": "<dwb plugin>.min_speed_xy",
@@ -2250,7 +2275,7 @@ export const PARAM_GROUPS: ParamGroup[] = [
     "ko": "최대 x 속도(m/s).",
     "en": "Maximum velocity X (m/s).",
     "key": "FollowPath.max_vel_x",
-    "design": "0.26 (rl_nav_tuner가 /speed_limit으로 낮춤)"
+    "design": "0.26 (FollowPath.max_lin · 고정)"
    },
    {
     "name": "<dwb plugin>.max_vel_y",
@@ -2267,7 +2292,7 @@ export const PARAM_GROUPS: ParamGroup[] = [
     "ko": "최대 x 가속도(m/s²).",
     "en": "Maximum acceleration X (m/s^2).",
     "key": "FollowPath.acc_lim_x",
-    "design": "2.5 / 1.5 / 1.0 (프리셋 A/B/C)"
+    "design": "2.5 (고정 — inner.acc_lim_x)"
    },
    {
     "name": "<dwb plugin>.acc_lim_y",
@@ -2292,7 +2317,7 @@ export const PARAM_GROUPS: ParamGroup[] = [
     "ko": "최대 x 감속도(m/s², 음수).",
     "en": "Maximum deceleration X (m/s^2).",
     "key": "FollowPath.decel_lim_x",
-    "design": "-2.5 / -1.5 / -1.0 (프리셋 A/B/C)"
+    "design": "-2.5 (고정 — inner.decel_lim_x)"
    },
    {
     "name": "<dwb plugin>.decel_lim_y",

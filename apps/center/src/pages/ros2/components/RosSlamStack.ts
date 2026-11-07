@@ -88,7 +88,7 @@ flowchart LR
 
 ## 실전 세 구성 한눈에 — 이 로봇(컵 가져오기)에 붙이면
 
-| | 🧩 RTAB-Map (현재) | 🟦 2D LiDAR + Cartographer | 🟪 cuVSLAM + nvblox (Isaac ROS) |
+| | 🟩 RTAB-Map (현재) | 🟦 2D LiDAR + Cartographer | 🟪 cuVSLAM + nvblox (Isaac ROS) |
 | --- | --- | --- | --- |
 | 나누는 방식 | ① 한 노드 | ② 단계로 (매핑 → 운행) | ③ 역할로 (위치 + 지도) |
 | SLAM 센서 | RealSense RGB-D 2대 | 2D LiDAR 1대 | RealSense 스테레오 IR + IMU |
@@ -165,7 +165,7 @@ export default (w: Window) => {
           <div class="ss-links">
             ${btn('/ros2?concept=slam', '📘 맵핑·위치추정 (원리)')}
             ${btn('/ros2?concept=localization', '📍 위치추정 (방법 비교·AMCL)')}
-            ${btn('/ros2?concept=design&sec=arch', '🧩 실전 구성: RTAB-Map')}
+            ${btn('/ros2?concept=design&sec=arch', '🟩 실전 구성: RTAB-Map')}
             ${btn('/ros2?concept=design&sec=arch&slam=lidar', '🟦 실전 구성: 2D LiDAR + Cartographer')}
             ${btn('/ros2?concept=design&sec=arch&slam=isaac', '🟪 실전 구성: cuVSLAM + nvblox')}
           </div>

@@ -339,7 +339,7 @@ geometry_msgs/Vector3 angular   # rad/s — 차동 구동은 angular.z(좌회전
 geometry_msgs/Twist twist`,
     desc: '시각·좌표계가 붙은 속도 명령. 오래된 명령을 stamp로 걸러낼 수 있다.',
     notes: ['체인 중 한 노드라도 Twist를 쓰면 타입 불일치로 연결이 안 된다 — 전부 통일.', 'teleop_twist_keyboard는 stamped:=true 파라미터로 TwistStamped를 낸다.'],
-    usedIn: ['/cmd_vel_nav → /cmd_vel_corrected → /cmd_vel_smoothed → /cmd_vel (베이스 명령 체인 전체)'],
+    usedIn: ['/cmd_vel_nav → /cmd_vel_mux → /cmd_vel_smoothed → /cmd_vel (베이스 명령 체인 전체)'],
     cli: `ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/TwistStamped "{header: {frame_id: base_footprint}, twist: {linear: {x: 0.1}, angular: {z: 0.3}}}"`,
   },
   {
@@ -572,7 +572,7 @@ geometry_msgs/Vector3 linear_acceleration     # m/s² (중력 포함)
 float64[9] linear_acceleration_covariance`,
     desc: '관성 센서. 회전 속도(자이로)와 가속도, 필요하면 자세.',
     notes: ['covariance[0] = -1은 "그 값이 없음"이라는 약속.', '가속도에는 중력(약 9.8)이 들어 있다.', 'ekf에는 보통 angular_velocity.z(yaw rate)만 넣는다.'],
-    usedIn: ['/imu (imu_sensor_broadcaster → ekf, rl_nav_correction)'],
+    usedIn: ['/imu (imu_sensor_broadcaster → ekf, controller_server의 FollowPath 플러그인)'],
   },
   {
     id: 'sensor_msgs/MagneticField', kind: 'msg',
@@ -776,7 +776,7 @@ geometry_msgs/PoseWithCovariance pose     # odom 기준 로봇 위치
 geometry_msgs/TwistWithCovariance twist   # 로봇 몸 기준 속도`,
     desc: '오도메트리 — 시작점(odom) 기준으로 얼마나 움직였나 + 지금 속도. 연속적이지만 시간이 지나면 드리프트한다.',
     notes: ['pose와 twist의 좌표계가 다르다 (header.frame_id vs child_frame_id) — 가장 많이 헷갈리는 부분.', 'map 기준 위치는 rtabmap/amcl의 map→odom을 곱해서 얻는다.'],
-    usedIn: ['/odom (diff_drive_controller → ekf, rl_nav_correction)', '/odometry/filtered (ekf → rtabmap, Nav2, rl_nav_tuner)'],
+    usedIn: ['/odom (diff_drive_controller → ekf)', '/odometry/filtered (ekf → rtabmap, controller_server(FollowPath 인자), velocity_smoother)'],
     cli: `ros2 topic echo /odometry/filtered --field pose.pose.position`,
   },
   {
@@ -784,7 +784,7 @@ geometry_msgs/TwistWithCovariance twist   # 로봇 몸 기준 속도`,
     def: `std_msgs/Header header             # frame_id: map
 geometry_msgs/PoseStamped[] poses  # 경로점 순서대로`,
     desc: '경로 — 자세의 나열.',
-    usedIn: ['/plan (planner_server → rl_nav_correction, rl_nav_tuner, RViz)', 'FollowPath 액션의 goal'],
+    usedIn: ['/plan (planner_server → controller_server의 FollowPath 인자, RViz)', 'FollowPath 액션의 goal'],
   },
   {
     id: 'nav_msgs/OccupancyGrid', kind: 'msg',
@@ -793,7 +793,7 @@ nav_msgs/MapMetaData info    # 해상도·크기·원점
 int8[] data                  # 행 우선, -1 = 모름, 0 = 비어 있음, 100 = 막힘`,
     desc: '2D 격자 지도. 셀마다 점유 확률(0~100).',
     notes: ['셀 (i, j)의 월드 좌표 = origin + (j + 0.5, i + 0.5) × resolution.', 'costmap도 같은 타입으로 발행하지만 값 의미가 다르다 (비용 0~100, 99 = 내접 반경, 100 = 충돌).', '지도는 transient_local로 발행해 늦게 붙는 노드도 받게 한다.'],
-    usedIn: ['/map (rtabmap → global_costmap static layer)', '/local_costmap/costmap (→ rl_nav_tuner)'],
+    usedIn: ['/map (rtabmap → global_costmap static layer)', '/local_costmap/costmap (→ RViz)'],
   },
   {
     id: 'nav_msgs/MapMetaData', kind: 'msg',
@@ -1446,8 +1446,8 @@ float32 speed`,
     def: `std_msgs/Header header
 bool percentage       # true면 speed_limit이 백분율, false면 m/s
 float64 speed_limit   # 0이면 제한 해제`,
-    desc: 'controller_server의 속도 상한을 실행 중에 바꾼다. Nav2 speed filter도 이 토픽을 쓴다.',
-    usedIn: ['/speed_limit (rl_nav_tuner → controller_server, rl_nav_correction)'],
+    desc: 'controller_server의 속도 상한을 실행 중에 바꾼다. 현재 발행자 없음 — controller_server가 구독만 하고, setSpeedLimit()는 Nav2 표준 인터페이스로 남아 있다.',
+    usedIn: ['/speed_limit (발행자 없음 — controller_server가 구독만)'],
     cli: `ros2 topic pub --once /speed_limit nav2_msgs/msg/SpeedLimit "{percentage: true, speed_limit: 60.0}"`,
   },
   {
@@ -2240,7 +2240,7 @@ rcl_interfaces/Parameter[] parameters
 rcl_interfaces/SetParametersResult[] results   # 파라미터마다 성공 여부`,
     desc: '실행 중인 노드의 파라미터 변경. 모든 노드에 <노드>/set_parameters로 자동으로 붙는다.',
     notes: ['노드가 파라미터 콜백에서 거절하면 successful=false와 이유가 온다.', '바뀐 값은 메모리에만 — yaml 파일은 그대로라 재시작하면 원래대로.'],
-    usedIn: ['/controller_server/set_parameters (rl_nav_tuner)', '/local_costmap/local_costmap/set_parameters (coordinator: footprint)'],
+    usedIn: ['/local_costmap/local_costmap/set_parameters (coordinator: footprint)'],
     cli: `ros2 param set /controller_server FollowPath.max_vel_theta 1.0
 ros2 param get /controller_server FollowPath.max_vel_x`,
   },

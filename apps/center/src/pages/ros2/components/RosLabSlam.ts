@@ -58,7 +58,7 @@ flowchart TB
     GZ -->|"gz 토픽 (gz-transport)"| BR
     BR -->|"✉️ /scan /odom /clock<br/>/tf (odom→base_footprint 변환)"| CA
     TEL -->|"✉️ /cmd_vel"| BR
-    CA -->|"🧩 서브맵 (같은 데이터)"| OG
+    CA -->|"🔗 서브맵 (같은 데이터)"| OG
     OG -->|"✉️ /map"| RV
     CA -->|"✉️ /tf (map→odom 변환)"| RV
     CA -->|"📞 /write_state<br/>save_pbstream.sh"| PB

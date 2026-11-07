@@ -34,7 +34,7 @@ flowchart TD
     CM -->|"✉️ /odom · /imu"| EKF
     EKF -->|"TF odom→base_footprint"| NAV
     RT -->|"✉️ /map · TF map→odom"| NAV
-    NAV -->|"✉️ /cmd_vel_nav → … → /cmd_vel_corrected"| MUX
+    NAV -->|"✉️ /cmd_vel_nav → twist_mux"| MUX
     MUX -->|"✉️ /cmd_vel_mux → velocity_smoother → collision_monitor → /cmd_vel"| CM
     MG -->|"🎬 /arm_controller/follow_joint_trajectory"| CM
     RSP -->|"TF 고정 프레임"| NAV
@@ -103,13 +103,13 @@ flowchart TD
     X[🛠️ coordinator · explorer · 시뮬레이터 '여기로 이동'] -->|"🎬 /navigate_to_pose"| BT
     subgraph NAV[📦 Nav2]
         BT[bt_navigator<br/>행동 트리] -->|"🎬 /compute_path_to_pose"| PL[planner_server<br/>NavFn + global_costmap]
-        BT -->|"🎬 /follow_path"| CT[controller_server<br/>DWB + local_costmap]
+        BT -->|"🎬 /follow_path"| CT[controller_server<br/>+ local_costmap<br/>FollowPath = 🧩 rl_nav_controller]
         BT -->|"🎬 /spin · /backup · /wait"| BH[behavior_server]
         VS[velocity_smoother]
         CMN[collision_monitor]
     end
-    CT -->|"✉️ /cmd_vel_nav"| RLN[🛠️ rl_nav_correction] -->|"✉️ /cmd_vel_corrected"| MUX[📦 twist_mux]
-    BH -->|"✉️ /cmd_vel_nav"| RLN
+    CT -->|"🔗 FollowPath 호출"| RLN[🧩 rl_nav_controller<br/>FollowPath 플러그인] -->|"✉️ /cmd_vel_nav"| MUX[📦 twist_mux]
+    BH -->|"✉️ /cmd_vel_nav"| MUX
     MUX -->|"✉️ /cmd_vel_mux"| VS -->|"✉️ /cmd_vel_smoothed"| CMN -->|"✉️ /cmd_vel"| DD[📦 diff_drive_controller]
     PC[✉️ pole_cam 점구름<br/>points_filtered] -->|"local voxel 층"| CT
     PC -->|"global obstacle 층"| PL
@@ -124,10 +124,10 @@ ${F}
 **우리 설정 핵심 (nav2_params.yaml)**
 - 행동 트리 = \`config/navigate_to_pose.xml\` — 기본 BT 복사본에서 **후진 복구만 0.30m → 0.10m** (뒤를 보는 센서가 없음)
 - planner: NavFn, \`allow_unknown: true\`(모르는 곳도 지나감), tolerance 0.2m
-- controller: DWB 20Hz, 최대 0.26m/s, 후진 안 함(\`min_vel_x: 0\`), 회전 1.82rad/s (rl_nav_tuner가 실행 중 바꿈)
+- controller: FollowPath = ml::RlNavController(ONNX 정책, 없으면 inner DWB), 20Hz, 최대 0.26m/s, 후진 안 함(\`min_vel_x: 0\`), 회전 1.82rad/s — 파라미터는 yaml 고정 (프리셋 노드 제거)
 - costmap: 로봇 반경 0.18m · 팽창 0.25m. local = VoxelLayer(점구름 3cm~0.6m), global = 정적 지도 + 장애물 + 팽창
 - collision_monitor: \`approach\` 다각형 — 지금 속도로 1초 안에 몸이 점에 닿을 때만 멈춤 · 가까우면 감속. 점구름이 1초 넘게 끊기면 정지(invalid source)
-- \`/speed_limit\`(rl_nav_tuner) — 속도 상한 %
+- 정책 토글 \`~/FollowPath/toggle\` · 상태 \`~/FollowPath/status\` · 디버그 \`~/FollowPath/debug\` — \`/speed_limit\` 발행자는 없다
 
 **직접 해보기**
 ${F}bash
@@ -135,7 +135,7 @@ ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose \\
   "{pose: {header: {frame_id: map}, pose: {position: {x: 1.0, y: 0.0}, orientation: {w: 1.0}}}}"
 ros2 topic echo /lifecycle_manager_navigation/managed_nodes_activated   # true = 주행 계획 켜짐
 ros2 lifecycle get /velocity_smoother                                    # active [3] 이어야 바퀴가 돎
-ros2 param set /controller_server FollowPath.max_vel_x 0.10              # 최대 속도 줄이기
+ros2 param set /controller_server FollowPath.max_lin 0.10               # 정책 최대 속도 (inner DWB는 inner.max_vel_x)
 ${F}
 
 **겪은 문제**
@@ -211,9 +211,9 @@ flowchart TD
     MG[📦 move_group] -->|"🎬 /arm_controller/follow_joint_trajectory"| ARM
     ARM -->|"reference"| RLA
     GRC[🛠️ coordinator · manual_control] -->|"🎬 /gripper_controller/gripper_cmd"| GR
-    DD -->|"🧩 command wheel_*/velocity"| HW
-    RLA -->|"🧩 command joint1~5/position"| HW
-    GR -->|"🧩 command gripper/position"| HW
+    DD -->|"🔗 command wheel_*/velocity"| HW
+    RLA -->|"🔗 command joint1~5/position"| HW
+    GR -->|"🔗 command gripper/position"| HW
     HW <-->|"시리얼 /dev/opencr 1Mbps"| OCR[OpenCR 펌웨어]
     JSB -->|"✉️ /joint_states"| OUT1[robot_state_publisher · MoveIt]
     DD -->|"✉️ /odom"| OUT2[EKF]
@@ -302,14 +302,14 @@ ${F}
     md: `**📦 twist_mux — 여러 속도 명령 중 하나 고르기.** 입력마다 우선순위와 timeout을 두고, 살아 있는(최근에 온) 것 중 우선순위가 높은 걸 내보낸다. lock 토픽이 true면 전부 막는다.
 ${F}mermaid
 flowchart LR
-    A[✉️ /cmd_vel_corrected<br/>자동 · 우선순위 10] -->|"timeout 0.5 s"| M[📦 twist_mux]
+    A[✉️ /cmd_vel_nav<br/>자동 · 우선순위 10] -->|"timeout 0.5 s"| M[📦 twist_mux]
     B[✉️ /cmd_vel_manual<br/>수동 · 우선순위 100] -->|"살아 있으면 이김"| M
     L[✉️ /state/emergency<br/>lock · 255] -.->|"true면 0"| M
     M -->|"✉️ /cmd_vel_mux"| VS[📦 velocity_smoother]
 ${F}
 **우리 설정 (twist_mux.yaml)**
 - \`use_stamped: true\` — 체인 전체 TwistStamped
-- 자동 \`/cmd_vel_corrected\`(Nav2 → rl_nav_correction) 10 · 수동 \`/cmd_vel_manual\`(manual_control) 100 — **수동이 이긴다**, 둘 다 timeout 0.5s
+- 자동 \`/cmd_vel_nav\`(Nav2 FollowPath 플러그인·behavior_server) 10 · 수동 \`/cmd_vel_manual\`(manual_control) 100 — **수동이 이긴다**, 둘 다 timeout 0.5s
 - lock \`/state/emergency\` (state_manager가 \`/cmd/e_stop\`을 받아 냄)
 - 수동 명령도 이 뒤의 안전 체인(velocity_smoother · collision_monitor)을 지난다 — 장애물 앞에선 수동이어도 멈춤
 

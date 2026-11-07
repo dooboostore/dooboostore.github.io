@@ -113,7 +113,7 @@ ros2 service call /reinitialize_global_localization std_srvs/srv/Empty   # 전�
 
 | 구성 | 오도메트리 층 | 지도 대조 층 | 처음 위치 |
 | --- | --- | --- | --- |
-| 🧩 RTAB-Map (현재) | EKF (바퀴 + IMU) | rtabmap 위치추정 모드 (장소 인식) | 장면이 맞으면 스스로 · \`/initialpose\`도 받음 |
+| 🟩 RTAB-Map (현재) | EKF (바퀴 + IMU) | rtabmap 위치추정 모드 (장소 인식) | 장면이 맞으면 스스로 · \`/initialpose\`도 받음 |
 | 🟦 2D LiDAR + Cartographer | EKF (바퀴 + IMU) | **AMCL** (운행) | **필요** — 2D Pose Estimate 또는 고정 시작점 |
 | 🟪 cuVSLAM + nvblox | EKF (바퀴 + IMU + **시각 오도메트리**) | cuVSLAM \`load_map_and_localize\` — 장애물 지도는 nvblox \`~/load_map\`으로 따로 올림 (nvblox는 위치를 안 찾음) | 근처 힌트를 주면 빠름 |
 `;

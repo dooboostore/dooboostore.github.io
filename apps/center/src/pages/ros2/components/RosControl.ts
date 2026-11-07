@@ -34,11 +34,11 @@ flowchart TB
         direction TB
         CM["📦 controller_manager<br/>틀: 주기 · 호출 순서 · 소유권"]
         C["📦 컨트롤러 플러그인<br/>update()만 구현"]
-        H["🛠️ 내 하드웨어 플러그인<br/>read() · write()만 구현"]
-        CM -->|"🧩 1. read() 호출"| H
-        CM -->|"🧩 2. update() 호출"| C
-        CM -->|"🧩 3. write() 호출"| H
-        C -.->|"🧩 같은 메모리의<br/>double 변수"| H
+        H["🧩 내 하드웨어 플러그인<br/>read() · write()만 구현"]
+        CM -->|"🔗 1. read() 호출"| H
+        CM -->|"🔗 2. update() 호출"| C
+        CM -->|"🔗 3. write() 호출"| H
+        C -.->|"🔗 같은 메모리의<br/>double 변수"| H
     end
     subgraph A["일반 노드 방식"]
         direction TB
@@ -222,10 +222,10 @@ chainable 컨트롤러는 **입력 자리(reference interface)**를 내놓습니
 ${F}mermaid
 flowchart LR
     MG["📦 move_group"] ==>|"🎬 FollowJointTrajectory"| JTC["📦 arm_controller<br/>(JTC)"]
-    JTC -->|"🧩 reference 쓰기<br/>rl_arm_correction/joint2/position"| RAC["🛠️ rl_arm_correction<br/>extends ChainableControllerInterface"]
-    RAC -->|"🧩 command 쓰기<br/>joint2/position = 목표 + Δ"| HW["📦 하드웨어 플러그인"]
-    HW -->|"🧩 state<br/>position·velocity·effort"| RAC
-    HW -->|"🧩 state<br/>position·velocity"| JTC
+    JTC -->|"🔗 reference 쓰기<br/>rl_arm_correction/joint2/position"| RAC["🧩 rl_arm_correction<br/>extends ChainableControllerInterface"]
+    RAC -->|"🔗 command 쓰기<br/>joint2/position = 목표 + Δ"| HW["📦 하드웨어 플러그인"]
+    HW -->|"🔗 state<br/>position·velocity·effort"| RAC
+    HW -->|"🔗 state<br/>position·velocity"| JTC
 ${CLS}
     class MG,JTC,HW std;
     class RAC rl;
@@ -270,10 +270,10 @@ flowchart TB
         CTRL["컨트롤러 플러그인들"]
         RM["Resource Manager<br/>변수 목록 · 쓰기 소유권"]
         HWC["하드웨어 플러그인 (장치마다 하나)"]
-        CTRL -->|"🧩 command"| RM
-        RM -->|"🧩 state"| CTRL
-        RM -->|"🧩 write()"| HWC
-        HWC -->|"🧩 read()"| RM
+        CTRL -->|"🔗 command"| RM
+        RM -->|"🔗 state"| CTRL
+        RM -->|"🔗 write()"| HWC
+        HWC -->|"🔗 read()"| RM
     end
     DEV{{"장치 (모터 · 센서)"}}
     URDF -->|"✉️ /robot_description<br/>(std_msgs/String)"| RM
@@ -540,7 +540,7 @@ ${F}
 | joint_state_broadcaster | joint_state_broadcaster/JointStateBroadcaster | — | 모든 관절 → /joint_states |
 | imu_sensor_broadcaster | imu_sensor_broadcaster/IMUSensorBroadcaster | — | imu/* → /imu |
 | diff_drive_controller | diff_drive_controller/DiffDriveController | wheel_*/velocity | wheel_*/position·velocity |
-| rl_arm_correction 🛠️ | cupbot_controllers/RlArmCorrection (chainable) | joint1~4/position | joint1~4 position·velocity, gripper effort |
+| rl_arm_correction 🧩 | cupbot_controllers/RlArmCorrection (chainable) | joint1~4/position | joint1~4 position·velocity, gripper effort |
 | arm_controller | joint_trajectory_controller/JointTrajectoryController | **rl_arm_correction/joint1~4/position** (체인) | joint1~4 position·velocity |
 | gripper_controller | position_controllers/GripperActionController | gripper_left_joint/position | gripper_left_joint position |
 

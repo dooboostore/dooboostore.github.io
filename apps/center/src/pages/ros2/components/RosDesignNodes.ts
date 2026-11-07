@@ -91,7 +91,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'robot_state_publisher', '점구름 시각의 링크 위치'],
     ],
     outputs: [
-      ['✉️ 발행', PTF, 'sensor_msgs/PointCloud2', 'costmap, collision_monitor, point_cloud_aggregator', 'output_topic · 자기 몸 뺀 점구름'],
+      ['✉️ 발행', PTF, 'sensor_msgs/PointCloud2', 'costmap, collision_monitor, point_cloud_aggregator, controller_server(FollowPath 가상 스캔)', 'output_topic · 자기 몸 뺀 점구름'],
       ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', ''],
     ],
     params: ['input_topic: ' + PTS, 'output_topic: ' + PTF, 'padding: 0.03 (m)', 'stride: 4 (4점당 1점)'],
@@ -267,22 +267,6 @@ export const NODE_DOCS: NodeDoc[] = [
     notes: ['TODO(송정혁): 후보 생성 → /compute_ik(move_group)로 닿는 것만 → ONNX 분류 모델. 아직 /compute_ik는 부르지 않는다.', '테스트베드는 faker fake_grasp_scorer가 대신할 수 있다 (use_grasp_scorer:=false).'],
   },
   {
-    id: 'rl_nav_tuner', name: 'rl_nav_tuner', tag: 'custom', pkg: 'ml', form: 'ROS 2 노드 (C++ · 규칙 → 필요 시 RL)', group: '계획·임무',
-    role: '주변 상황(통로 폭, 장애물 거리, 목표 거리)을 보고 1초마다 주행 프리셋 A(넓은 공간)/B(좁은 통로)/C(목표 직전) 중 하나를 골라, 바뀔 때만 속도 상한과 DWB 운동 파라미터를 바꾼다.',
-    inputs: [
-      ['✉️ 구독', '/local_costmap/costmap', 'nav_msgs/OccupancyGrid', 'controller_server', '통로 폭·최근접 장애물'],
-      ['✉️ 구독', '/odometry/filtered', 'nav_msgs/Odometry', 'ekf', '현재 속도'],
-      ['✉️ 구독', '/plan', 'nav_msgs/Path', 'planner_server', '목표까지 남은 거리'],
-    ],
-    outputs: [
-      ['✉️ 발행', '/speed_limit', 'nav2_msgs/SpeedLimit', 'controller_server, rl_nav_correction', 'percentage: true · 프리셋별 %'],
-      ['📞 호출', '/controller_server/set_parameters', 'rcl_interfaces/srv/SetParameters', 'controller_server', 'FollowPath.max_vel_theta · acc_lim_x · decel_lim_x'],
-      ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', ''],
-    ],
-    params: ['enabled (false면 프리셋 A 고정)'],
-    notes: ['DWB critic 가중치는 실행 중 바꿔도 반영되지 않을 수 있어 건드리지 않는다.', 'TODO(송정혁): choose()를 규칙으로 → 필요하면 RL 정책으로.'],
-  },
-  {
     id: 'diagnostic_aggregator', name: 'diagnostic_aggregator', tag: 'provided', pkg: 'diagnostic_aggregator', form: 'ROS 2 노드 (aggregator_node)', group: '계획·임무',
     role: '모든 노드의 /diagnostics를 패키지별 계층(인지 · 계획·임무 · 학습 · 상태 · 제어 · Nav2 관리자 · 제공 패키지)으로 묶어 사람이 보는 건강 상태로 낸다. 노드는 진단 문자열에 기대지 않는다.',
     inputs: [
@@ -397,28 +381,26 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', '/tf', 'tf2_msgs/TFMessage', 'rtabmap, ekf', ''],
     ],
     outputs: [
-      ['✉️ 발행', '/plan', 'nav_msgs/Path', 'rl_nav_correction, rl_nav_tuner, RViz', '계획마다'],
+      ['✉️ 발행', '/plan', 'nav_msgs/Path', 'controller_server(FollowPath 인자), RViz', '계획마다'],
       ['✉️ 발행', '/global_costmap/costmap', 'nav_msgs/OccupancyGrid', 'explorer, RViz', ''],
     ],
     params: ['planner_plugins: [GridBased] (nav2_navfn_planner::NavfnPlanner)', 'GridBased.tolerance: 0.20 · allow_unknown: true', 'expected_planner_frequency: 5.0', 'global_costmap.plugins: [static_layer, obstacle_layer, inflation_layer]', 'robot_base_frame: base_footprint'],
   },
   {
-    id: 'controller_server', name: 'controller_server', tag: 'provided', pkg: 'nav2_controller', form: 'ROS 2 lifecycle 노드 (+ local_costmap · DWB)', group: 'Nav2·위치추정',
-    role: '전역 경로를 따라가는 속도 명령을 20Hz로 계산한다. 안에 local_costmap과 DWB 컨트롤러가 들어 있다. 출력 cmd_vel은 launch 리매핑으로 /cmd_vel_nav.',
+    id: 'controller_server', name: 'controller_server', tag: 'provided', pkg: 'nav2_controller', form: 'ROS 2 lifecycle 노드 (+ local_costmap · FollowPath = ml::RlNavController)', group: 'Nav2·위치추정',
+    role: '전역 경로를 따라가는 속도 명령을 20Hz로 계산한다. 안에 local_costmap과 FollowPath 플러그인(ml::RlNavController — ONNX 정책, 없으면 inner DWB)이 들어 있다. 출력 cmd_vel은 launch 리매핑으로 /cmd_vel_nav.',
     inputs: [
       ['🎬 서버', '/follow_path', 'nav2_msgs/action/FollowPath', 'bt_navigator', ''],
       ['✉️ 구독', '/odometry/filtered', 'nav_msgs/Odometry', 'ekf', ''],
-      ['✉️ 구독', '/speed_limit', 'nav2_msgs/SpeedLimit', 'rl_nav_tuner', '속도 상한 (백분율, 100% = max_vel_x 0.26)'],
       ['✉️ 구독', PTF, 'sensor_msgs/PointCloud2', 'body_filter', 'local voxel layer'],
-      ['📞 서버', '/controller_server/set_parameters', 'rcl_interfaces/srv/SetParameters', 'rl_nav_tuner', 'FollowPath 운동 파라미터 런타임 변경'],
     ],
     outputs: [
-      ['✉️ 발행', '/cmd_vel_nav', TW, 'rl_nav_correction', '20Hz'],
-      ['✉️ 발행', '/local_costmap/costmap', 'nav_msgs/OccupancyGrid', 'rl_nav_tuner, RViz', ''],
+      ['✉️ 발행', '/cmd_vel_nav', TW, 'twist_mux (자동 입력)', '20Hz'],
+      ['✉️ 발행', '/local_costmap/costmap', 'nav_msgs/OccupancyGrid', 'RViz', ''],
       ['✉️ 발행', '/local_costmap/costmap_raw', 'nav2_msgs/Costmap', 'behavior_server', ''],
     ],
-    params: ['controller_frequency: 20.0', 'FollowPath.plugin: dwb_core::DWBLocalPlanner', 'FollowPath.max_vel_x: 0.26', 'speed_limit_topic: /speed_limit', 'enable_stamped_cmd_vel: true'],
-    notes: ['퍽을 들면 footprint를 키우는 /local_costmap/local_costmap/set_parameters 호출은 설계만 — coordinator TODO.'],
+    params: ['controller_frequency: 20.0', 'FollowPath.plugin: ml::RlNavController', 'FollowPath.enable: true · model_path: rl_nav_controller/policy.onnx', 'FollowPath.points_topic: /nvblox_node/combined_esdf_pointcloud · scan_source: points', 'FollowPath.lidar_rays: 360 · lidar_max: 3.5 · cloud_timeout: 0.5', 'FollowPath.fallback_controller: dwb · inner.* (DWB 파라미터)', 'enable_stamped_cmd_vel: true'],
+    notes: ['FollowPath는 별도 노드가 아니라 이 프로세스에 로드되는 플러그인이다 — 노드·토픽이 늘지 않는다.', '정책 토글 ~/FollowPath/toggle · 상태 ~/FollowPath/status · 디버그 ~/FollowPath/debug.', '정책이 없거나 꺼지면 inner DWB가 그대로 주행한다 (안전 체인은 동일).', '퍽을 들면 footprint를 키우는 /local_costmap/local_costmap/set_parameters 호출은 설계만 — coordinator TODO.'],
   },
   {
     id: 'behavior_server', name: 'behavior_server', tag: 'provided', pkg: 'nav2_behaviors', form: 'ROS 2 lifecycle 노드', group: 'Nav2·위치추정',
@@ -428,7 +410,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', '/local_costmap/costmap_raw', 'nav2_msgs/Costmap', 'controller_server', '충돌 검사'],
     ],
     outputs: [
-      ['✉️ 발행', '/cmd_vel_nav', TW, 'rl_nav_correction', 'launch 리매핑 — 안전 체인을 똑같이 지나게 함'],
+      ['✉️ 발행', '/cmd_vel_nav', TW, 'twist_mux (자동 입력)', 'launch 리매핑 — 안전 체인을 똑같이 지나게 함'],
     ],
     params: ['behavior_plugins: [spin, backup, wait]', 'robot_base_frame: base_footprint', 'enable_stamped_cmd_vel: true'],
   },
@@ -440,8 +422,8 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', '/map', 'nav_msgs/OccupancyGrid', 'rtabmap', 'global만 (static layer)'],
     ],
     outputs: [
-      ['🧩 내부', '비용 격자', 'Costmap2D (메모리)', 'planner_server, controller_server', '같은 프로세스'],
-      ['✉️ 발행', '/global_costmap/costmap, /local_costmap/costmap', 'nav_msgs/OccupancyGrid', 'explorer, rl_nav_tuner, RViz', ''],
+      ['🔗 내부', '비용 격자', 'Costmap2D (메모리)', 'planner_server, controller_server', '같은 프로세스'],
+      ['✉️ 발행', '/global_costmap/costmap, /local_costmap/costmap', 'nav_msgs/OccupancyGrid', 'explorer, RViz', ''],
     ],
     params: ['local: plugins [voxel_layer, inflation_layer]', 'global: plugins [static_layer, obstacle_layer, inflation_layer] · resolution 0.05', 'min_obstacle_height: 0.03', 'max_obstacle_height: 0.6', 'inflation_layer.inflation_radius: 0.25'],
     notes: ['화각 밖 장애물이 바로 지워지지 않게 clearing을 보수적으로 둔다.'],
@@ -464,27 +446,33 @@ export const NODE_DOCS: NodeDoc[] = [
 
   // ── 베이스 명령 체인
   {
-    id: 'rl_nav_correction', name: 'rl_nav_correction', tag: 'custom', pkg: 'ml', form: 'ROS 2 노드 (C++)', group: '베이스 명령 체인',
-    role: 'Nav2 속도 명령에 작은 Δ를 더해 미끄러짐 같은 현실 오차를 보정한다. 결과는 다시 min(프리셋 상한, /speed_limit)으로 자른다. 지금은 골격 — Δ=0 통과, 정책(ONNX)은 TODO.',
+    id: 'rl_nav_controller', name: 'rl_nav_controller (RlNavController)', tag: 'custom', pkg: 'ml', form: 'Nav2 controller 플러그인 (C++ · extends nav2_core::Controller · controller_server 안 FollowPath에 로드)', group: '베이스 명령 체인',
+    role: 'controller_server의 FollowPath 자리에서 경로 추종 속도를 직접 낸다. 관측(경로 웨이포인트 5×2 · 가상 스캔 lidar_rays · 현재 v·ω · IMU gyro_z · 이전 행동 2)을 ONNX 정책에 넣어 v·ω를 출력한다. enable=false·모델 없음/로드 실패·점구름 stale이면 inner DWB가 그대로 주행한다 (ROS 노드 아님, 플러그인).',
     inputs: [
-      ['✉️ 구독', '/cmd_vel_nav', TW, 'controller_server, behavior_server', '이 메시지가 올 때마다 1회'],
-      ['✉️ 구독', '/plan', 'nav_msgs/Path', 'planner_server', '경로 대비 횡·방향 오차'],
-      ['✉️ 구독', '/odom', 'nav_msgs/Odometry', 'diff_drive_controller', '바퀴 속도 (끊기면 Δ=0)'],
-      ['✉️ 구독', '/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster', '실제 각속도'],
-      ['✉️ 구독', '/speed_limit', 'nav2_msgs/SpeedLimit', 'rl_nav_tuner', '재클리핑 상한'],
+      ['🔗 인자', 'computeVelocityCommands(pose, velocity, goal_checker, path, goal)', 'nav2_core::Controller', 'controller_server', '매 주기(20Hz) 호출 — costmap·경로·현재 속도는 함수 인자'],
+      ['✉️ 구독', 'points_topic', 'sensor_msgs/PointCloud2', 'body_filter / nvblox_node', '가상 스캔 입력 — 기본 /nvblox_node/combined_esdf_pointcloud, z 0.03~0.30m 점만'],
+      ['✉️ 구독', '/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster', 'gyro_z 관측'],
     ],
     outputs: [
-      ['✉️ 발행', '/cmd_vel_corrected', TW, 'twist_mux', '20Hz · 자동 입력 (priority 10)'],
-      ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', ''],
+      ['✉️ 발행', '/cmd_vel_nav', TW, 'twist_mux (자동 입력)', '20Hz — controller_server가 발행'],
+      ['📞 서버', '~/FollowPath/toggle', 'std_srvs/srv/SetBool', 'CLI · 테스트베드', 'true=정책, false=inner DWB'],
+      ['✉️ 발행', '~/FollowPath/status', 'std_msgs/Float32MultiArray', 'CLI 노드 상태', 'rl_active · reason · cloud_age · scan_min · v · w …'],
+      ['✉️ 발행', '~/FollowPath/debug', 'std_msgs/Float32MultiArray', 'bag · 디버그', '관측·출력 요약'],
     ],
-    params: ['enabled (false면 Δ=0 통과)', 'max_vel_x: 0.26', 'max_vel_theta: 1.82', 'timeout_s: 0.2', 'Δ 한계: 선속도 ±0.05 · 각속도 ±0.10 (코드 고정)'],
-    notes: ['관측 벡터 순서·단위·정규화가 Isaac Lab 학습 환경과 완전히 같아야 한다.', 'Isaac ROS 전환안에서는 이 노드 대신 controller_server 안 RlResidualController 플러그인(MPPI + Δ)을 쓴다.', '테스트베드는 faker fake_rl_nav_correction이 대신할 수 있다.'],
+    params: ['FollowPath.plugin: ml::RlNavController', 'enable: true (모델 없으면 자동 바이패스)', 'model_path: rl_nav_controller/policy.onnx', 'scan_source: points | scan', 'points_topic · points_stride · z_min/z_max · esdf_max_distance · cloud_timeout', 'lookahead 5 · wp_step 0.30 · wp_scale 2.0 · lidar_rays 360 · lidar_max 3.5 · lidar_inflation 0.02', 'max_lin 0.26 · max_ang 1.82 · v_min_ratio −0.2 · extra_lin_vel · extra_ang_vel', 'fallback_controller: dwb · inner.* (DWB 파라미터)'],
+    setup: [
+      'controller_server의 controller_plugins: [FollowPath] · FollowPath.plugin만 바꾸면 정책이 붙는다 (BT·goal/progress checker·lifecycle은 그대로).',
+      'configure()에서 pluginlib::ClassLoader로 fallback controller(DWB)를 만들고 같은 인자로 configure, ONNX 세션·가상 스캔 버퍼를 미리 만든다.',
+      'computeVelocityCommands(): 관측(웨이포인트 5×2 + 360 가상 스캔 + v·ω·gyro + 이전 행동 2) → ONNX 추론 → max_lin/max_ang·extra_* 적용 → TwistStamped 반환. 추론 실패·모델 없음·점구름 stale이면 inner->computeVelocityCommands().',
+      'PLUGINLIB_EXPORT_CLASS(ml::RlNavController, nav2_core::Controller) + rl_nav_controller.xml을 nav2_core로 export.',
+    ],
+    notes: ['ROS 노드가 아니라 controller_server 안에 pluginlib로 로드되는 클래스다 — 별도 프로세스·노드가 없다.', '정책이 꺼지면 inner DWB가 같은 자리에서 주행한다 — 안전 체인(twist_mux·velocity_smoother·collision_monitor)은 그대로.', '관측 순서·단위·정규화가 학습과 같아야 한다. lidar_rays·lookahead·wp_step을 바꾸면 모델 입력도 다시 맞춘다.', '테스트베드에서도 진짜 플러그인을 쓴다 (test-nav-policy가 ONNX 로드·toggle·DWB/정책 주행을 검사).', '/speed_limit 발행자는 없다 — setSpeedLimit()는 Nav2 표준 인터페이스로 남아 있지만 쓰지 않는다.'],
   },
   {
     id: 'twist_mux', name: 'twist_mux', tag: 'provided', pkg: 'twist_mux', form: 'ROS 2 노드', group: '베이스 명령 체인',
     role: '속도 명령 교환기 — 자동·수동 중 priority 높은 쪽 하나만 통과, /state/emergency(← /cmd/e_stop, state_manager)가 true면 전부 차단.',
     inputs: [
-      ['✉️ 구독', '/cmd_vel_corrected', TW, 'rl_nav_correction', 'auto · priority 10 · timeout 0.5'],
+      ['✉️ 구독', '/cmd_vel_nav', TW, 'controller_server(FollowPath) · behavior_server', 'auto · priority 10 · timeout 0.5'],
       ['✉️ 구독', '/cmd_vel_manual', TW, 'manual_control', 'manual · priority 100 · timeout 0.5'],
       ['✉️ 구독', '/state/emergency', 'std_msgs/Bool', 'state_manager', '잠금 e_stop · priority 255'],
     ],
@@ -529,7 +517,7 @@ export const NODE_DOCS: NodeDoc[] = [
       ['✉️ 구독', '/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster', 'imu0: vyaw'],
     ],
     outputs: [
-      ['✉️ 발행', '/odometry/filtered', 'nav_msgs/Odometry', 'bt_navigator, controller_server, rl_nav_tuner, velocity_smoother', '50Hz'],
+      ['✉️ 발행', '/odometry/filtered', 'nav_msgs/Odometry', 'bt_navigator, controller_server(FollowPath 인자), velocity_smoother', '50Hz'],
       ['✉️ 발행', '/tf', 'tf2_msgs/TFMessage', '전체 (rtabmap은 이 TF로 odom을 읽음)', 'odom → base_footprint'],
     ],
     params: ['two_d_mode: true', 'frequency: 50.0', 'world_frame: odom', 'base_link_frame: base_footprint', 'publish_tf: true'],
@@ -593,10 +581,10 @@ export const NODE_DOCS: NodeDoc[] = [
       ['🎬 서버', '/arm_controller/follow_joint_trajectory', 'control_msgs/action/FollowJointTrajectory', 'move_group', ''],
       ['✉️ 구독', '/arm_controller/joint_trajectory', 'trajectory_msgs/JointTrajectory', 'coordinator, manual_control', 'JTC 표준 토픽 입력 — 5축 전체여야 함'],
       ['📞 서버', '/arm_controller/follow_joint_trajectory/_action/cancel_goal', 'action_msgs/srv/CancelGoal', 'arm_safety_monitor', '취소 → 현재 자세 유지'],
-      ['🧩 읽기', 'joint1~5/position, velocity', 'state interface (double)', 'BeebotSystemHardware', '100Hz'],
+      ['🔗 읽기', 'joint1~5/position, velocity', 'state interface (double)', 'BeebotSystemHardware', '100Hz'],
     ],
     outputs: [
-      ['🧩 쓰기', 'rl_arm_correction/joint1~5/position', 'reference interface (double)', 'rl_arm_correction', 'command_joints로 체인'],
+      ['🔗 쓰기', 'rl_arm_correction/joint1~5/position', 'reference interface (double)', 'rl_arm_correction', 'command_joints로 체인'],
       ['✉️ 발행', '/arm_controller/controller_state', 'control_msgs/msg/JointTrajectoryControllerState', '모니터링·RViz', ''],
     ],
     params: ['joints: [joint1..joint5]', 'command_joints: [rl_arm_correction/joint1..5]', 'command_interfaces: [position]', 'state_interfaces: [position, velocity]', 'constraints.stopped_velocity_tolerance: 0.02', 'constraints.goal_time: 0.5'],
@@ -605,12 +593,12 @@ export const NODE_DOCS: NodeDoc[] = [
     id: 'rl_arm_correction', name: 'rl_arm_correction', tag: 'custom', pkg: 'ml', form: 'ros2_control chainable 컨트롤러 플러그인 (C++ · extends controller_interface::ChainableControllerInterface · controller_manager 안에 로드)', group: '팔·MoveIt',
     role: 'JTC가 낸 관절 목표에 작은 Δ(±max_delta)를 더해 중력 처짐 같은 오차를 보정하고 하드웨어에 쓴다. ROS 노드가 아니라 controller_manager 안에서 같은 주기에 돈다. 지금은 골격 — Δ 정책(ONNX)은 TODO.',
     inputs: [
-      ['🧩 읽기', 'rl_arm_correction/joint1~5/position', 'reference interface (double)', 'arm_controller', '자기가 내놓은 입력 자리'],
-      ['🧩 읽기', 'joint1~5/position, velocity', 'state interface (double)', 'BeebotSystemHardware', '현재 관절각·속도 → 추종 오차'],
+      ['🔗 읽기', 'rl_arm_correction/joint1~5/position', 'reference interface (double)', 'arm_controller', '자기가 내놓은 입력 자리'],
+      ['🔗 읽기', 'joint1~5/position, velocity', 'state interface (double)', 'BeebotSystemHardware', '현재 관절각·속도 → 추종 오차'],
       ['⚙️ 파라미터', 'enabled', 'bool', 'controllers.yaml · ros2 param set', 'false면 Δ=0 (보정 끔)'],
     ],
     outputs: [
-      ['🧩 쓰기', 'joint1~5/position', 'command interface (double)', 'BeebotSystemHardware', 'reference + Δ, ±0.05rad 클리핑'],
+      ['🔗 쓰기', 'joint1~5/position', 'command interface (double)', 'BeebotSystemHardware', 'reference + Δ, ±0.05rad 클리핑'],
     ],
     setup: [
       'ml 패키지에 controller_interface::ChainableControllerInterface를 상속한 ml::RlArmCorrection 클래스를 만든다.',
@@ -628,10 +616,10 @@ export const NODE_DOCS: NodeDoc[] = [
     role: '평행 그리퍼(gripper_left_joint, 오른쪽은 mimic)를 열고 닫는다. 퍽을 쥐어 손가락이 멈추면(stalled) 실패가 아니라 파지로 본다. MoveIt을 거치지 않고 coordinator·manual_control이 액션을 직접 부른다.',
     inputs: [
       ['🎬 서버', '/gripper_controller/gripper_cmd', 'control_msgs/action/ParallelGripperCommand', 'coordinator, manual_control', 'goal: command (JointState — gripper_left_joint m)'],
-      ['🧩 읽기', 'gripper_left_joint/position, velocity', 'state interface (double)', 'BeebotSystemHardware', ''],
+      ['🔗 읽기', 'gripper_left_joint/position, velocity', 'state interface (double)', 'BeebotSystemHardware', ''],
     ],
     outputs: [
-      ['🧩 쓰기', 'gripper_left_joint/position', 'command interface (double, m)', 'BeebotSystemHardware', '0 = 닫힘 · 0.0265 = 열림'],
+      ['🔗 쓰기', 'gripper_left_joint/position', 'command interface (double, m)', 'BeebotSystemHardware', '0 = 닫힘 · 0.0265 = 열림'],
       ['🎬 결과', 'result', 'state · stalled · reached_goal', 'coordinator', '완전히 닫힘에 가까우면 빈손'],
     ],
     params: ['joint: gripper_left_joint', 'max_effort: 1.0', 'allow_stalling: true'],
@@ -665,8 +653,8 @@ export const NODE_DOCS: NodeDoc[] = [
       ['📞 서버', '/controller_manager/list_controllers', 'controller_manager_msgs/srv/ListControllers', 'ros2 control CLI', '상태 확인'],
     ],
     outputs: [
-      ['🧩 호출', 'read() / write()', 'hardware component 플러그인', 'BeebotSystemHardware', '100Hz — 장치 통신은 플러그인이 함'],
-      ['🧩 호출', 'update()', '컨트롤러 플러그인', 'arm_controller, rl_arm_correction, gripper_controller, diff_drive_controller, imu_sensor_broadcaster, joint_state_broadcaster', '체인 순서대로'],
+      ['🔗 호출', 'read() / write()', 'hardware component 플러그인', 'BeebotSystemHardware', '100Hz — 장치 통신은 플러그인이 함'],
+      ['🔗 호출', 'update()', '컨트롤러 플러그인', 'arm_controller, rl_arm_correction, gripper_controller, diff_drive_controller, imu_sensor_broadcaster, joint_state_broadcaster', '체인 순서대로'],
       ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', '루프 주기·실행 시간 경고'],
     ],
     params: ['update_rate: 100', '<컨트롤러이름>.type (6개, 아래 단계 2)'],
@@ -684,19 +672,19 @@ export const NODE_DOCS: NodeDoc[] = [
     id: 'hw_interface', name: 'BeebotSystemHardware (hardware interface)', tag: 'custom', pkg: 'control', form: 'ros2_control 하드웨어 플러그인 (C++ · extends hardware_interface::SystemInterface · controller_manager 안에 로드)', group: 'ros2_control',
     role: 'controller_manager의 변수(double)를 OpenCR ASCII 줄로 바꿔 보내고, OpenCR 상태 줄을 state interface로 되돌린다. OpenCR 펌웨어가 DYNAMIXEL 8개(바퀴 2 · joint1~5 · 그리퍼)를 BulkWrite/SyncRead로, 내장 IMU를 맡고 단위 변환(rad ↔ 서보 값)도 펌웨어가 한다. 영점 오프셋만 여기서.',
     inputs: [
-      ['🧩 읽기', 'wheel_left/right_joint/velocity', 'command interface (double, rad/s)', 'diff_drive_controller', ''],
-      ['🧩 읽기', 'joint1~5/position', 'command interface (double, rad)', 'rl_arm_correction', '체인 끝 — JTC 목표 + Δ'],
-      ['🧩 읽기', 'gripper_left_joint/position', 'command interface (double, m)', 'gripper_controller', 'gripper_right_joint는 mimic'],
+      ['🔗 읽기', 'wheel_left/right_joint/velocity', 'command interface (double, rad/s)', 'diff_drive_controller', ''],
+      ['🔗 읽기', 'joint1~5/position', 'command interface (double, rad)', 'rl_arm_correction', '체인 끝 — JTC 목표 + Δ'],
+      ['🔗 읽기', 'gripper_left_joint/position', 'command interface (double, m)', 'gripper_controller', 'gripper_right_joint는 mimic'],
       ['🔌 장치', 'OpenCR → SBC', 'USB 시리얼 /dev/opencr (ASCII 줄)', 'OpenCR 펌웨어 (beebot_opencr)', 'S,<40값> 10ms마다 (바퀴 pos·vel · joint1~5·그리퍼 pos·vel·전류A · IMU 10 · 모터 온도 8) · E,<8정수> 0.5s마다 (Hardware Error)'],
       ['📞 서버', '/beebotsystem/reboot_motors', 'std_srvs/srv/Trigger', 'manual_control', '에러 난 모터만 재부팅'],
       ['📞 서버', '/beebotsystem/set_arm_torque', 'std_srvs/srv/SetBool', 'manual_control (TEACH)', '팔 joint1~5·그리퍼 토크 — 펌웨어 T 줄 (바퀴는 그대로)'],
     ],
     outputs: [
       ['🔌 장치', 'SBC → OpenCR', 'USB 시리얼 ASCII 줄', 'OpenCR 펌웨어', 'C,<바퀴L·R rad/s>,<j1~j5 rad>,<그리퍼 m> 매 주기 (빈칸 = 유지) · R,<8필드> 재부팅 요청 때'],
-      ['🧩 쓰기', 'wheel_*_joint/position·velocity', 'state interface (double)', 'diff_drive_controller, joint_state_broadcaster', ''],
-      ['🧩 쓰기', 'joint1~5/position·velocity·effort', 'state interface (double)', 'arm_controller, rl_arm_correction, joint_state_broadcaster', 'effort = Present Current [A]'],
-      ['🧩 쓰기', 'gripper_left_joint/position·velocity·effort', 'state interface (double)', 'gripper_controller, joint_state_broadcaster', ''],
-      ['🧩 쓰기', 'imu/orientation·angular_velocity·linear_acceleration', 'state interface (double)', 'imu_sensor_broadcaster', ''],
+      ['🔗 쓰기', 'wheel_*_joint/position·velocity', 'state interface (double)', 'diff_drive_controller, joint_state_broadcaster', ''],
+      ['🔗 쓰기', 'joint1~5/position·velocity·effort', 'state interface (double)', 'arm_controller, rl_arm_correction, joint_state_broadcaster', 'effort = Present Current [A]'],
+      ['🔗 쓰기', 'gripper_left_joint/position·velocity·effort', 'state interface (double)', 'gripper_controller, joint_state_broadcaster', ''],
+      ['🔗 쓰기', 'imu/orientation·angular_velocity·linear_acceleration', 'state interface (double)', 'imu_sensor_broadcaster', ''],
       ['✉️ 발행', '/motor_status', 'control/MotorStatus', 'state_manager', '모터별 error·text·temperature — 0.5초마다 보고 바뀔 때만 · ' + LATCH],
       ['✉️ 발행', '/diagnostics', 'diagnostic_msgs/DiagnosticArray', 'diagnostic_aggregator', '"BeebotSystem: OpenCR 연결" — 마지막 S 수신 · 해석 실패 · 70°C 이상 WARN'],
     ],
@@ -717,26 +705,26 @@ export const NODE_DOCS: NodeDoc[] = [
     role: '(선속도, 각속도)를 좌·우 바퀴 속도로 바꾸고, 바퀴 회전량으로 오도메트리를 계산한다.',
     inputs: [
       ['✉️ 구독', '/cmd_vel', TW, 'collision_monitor', '기본 ~/cmd_vel을 spawner --controller-ros-args로 리매핑'],
-      ['🧩 읽기', 'wheel_left/right position, velocity', 'state interface (double)', 'BeebotSystemHardware', ''],
+      ['🔗 읽기', 'wheel_left/right position, velocity', 'state interface (double)', 'BeebotSystemHardware', ''],
     ],
     outputs: [
-      ['🧩 쓰기', 'wheel_left/right/velocity', 'command interface (double, rad/s)', 'BeebotSystemHardware', ''],
-      ['✉️ 발행', '/odom', 'nav_msgs/Odometry', 'ekf, rl_nav_correction', '50Hz · 기본 ~/odom을 리매핑'],
+      ['🔗 쓰기', 'wheel_left/right/velocity', 'command interface (double, rad/s)', 'BeebotSystemHardware', ''],
+      ['✉️ 발행', '/odom', 'nav_msgs/Odometry', 'ekf', '50Hz · 기본 ~/odom을 리매핑'],
     ],
     params: ['wheel_separation: 0.287', 'wheel_radius: 0.033', 'base_frame_id: base_footprint', 'odom_frame_id: odom', 'enable_odom_tf: false', 'publish_rate: 50.0', 'twist_covariance_diagonal: vx·vy 0.001 · vyaw 0.01'],
   },
   {
     id: 'imu_sensor_broadcaster', name: 'imu_sensor_broadcaster', tag: 'provided', pkg: 'imu_sensor_broadcaster', form: 'ros2_control 브로드캐스터 플러그인', group: 'ros2_control',
     role: 'OpenCR 내장 IMU(S 줄 IMU 10값)의 state interface를 Imu 메시지로 발행한다.',
-    inputs: [['🧩 읽기', 'imu/orientation·angular_velocity·linear_acceleration', 'state interface (double)', 'BeebotSystemHardware', '']],
-    outputs: [['✉️ 발행', '/imu', 'sensor_msgs/Imu', 'ekf, rl_nav_correction, state_manager', '100Hz · 기본 ~/imu를 리매핑']],
+    inputs: [['🔗 읽기', 'imu/orientation·angular_velocity·linear_acceleration', 'state interface (double)', 'BeebotSystemHardware', '']],
+    outputs: [['✉️ 발행', '/imu', 'sensor_msgs/Imu', 'ekf, controller_server(FollowPath gyro), state_manager', '100Hz · 기본 ~/imu를 리매핑']],
     params: ['sensor_name: imu', 'frame_id: imu_link', 'static_covariance_angular_velocity: 1e-4 대각'],
     notes: ['공분산이 0이면 EKF가 IMU를 완벽으로 받아 섞는 비율이 의미 없어진다 (실측 yaw 4.5° 틀어짐).'],
   },
   {
     id: 'joint_state_broadcaster', name: 'joint_state_broadcaster', tag: 'provided', pkg: 'joint_state_broadcaster', form: 'ros2_control 브로드캐스터 플러그인', group: 'ros2_control',
     role: '모든 관절의 state interface를 JointState로 발행한다. TF·MoveIt·안전 감시·수동 조작·장치 상태가 이걸 본다.',
-    inputs: [['🧩 읽기', '모든 관절 position·velocity·effort', 'state interface (double)', 'BeebotSystemHardware', '']],
+    inputs: [['🔗 읽기', '모든 관절 position·velocity·effort', 'state interface (double)', 'BeebotSystemHardware', '']],
     outputs: [
       ['✉️ 발행', '/joint_states', 'sensor_msgs/JointState', 'robot_state_publisher, move_group, arm_safety_monitor, manual_control, coordinator, scan_cam_gate, state_manager', '100Hz'],
       ['✉️ 발행', '/dynamic_joint_states', 'control_msgs/msg/DynamicJointState', '디버그', ''],
@@ -803,31 +791,6 @@ export const NODE_DOCS: NodeDoc[] = [
     ],
     params: ['model_file_path · engine_file_path (PeopleSemSegNet — NGC 배포 모델)', 'network_image_width/height (모델 입력 크기 · 인코더가 맞춤)', 'network_output_type: argmax', 'color_segmentation_mask_encoding: rgb8'],
     notes: ['PPO 같은 강화학습과는 상관없다 — 정답 마스크로 학습한 분할 모델이다.', '컵 검출 YOLO와 같은 영상을 쓰므로 GPU 시간을 나눠 쓴다 (Jetson에선 주기 조절).', '토픽·파라미터 이름은 Isaac ROS 버전마다 다르다 — 쓰는 버전 문서 확인.'],
-  },
-  {
-    id: 'rl_residual_controller', name: 'RlResidualController (FollowPath 플러그인)', tag: 'custom', pkg: 'ml', form: 'Nav2 controller 플러그인 (C++ · extends nav2_core::Controller · controller_server 안에 로드)', group: 'Isaac ROS 전환안 (GPU)',
-    role: 'controller_server 안 FollowPath 자리에 끼우는 내 컨트롤러. 안에서 MPPI를 불러 기본 속도를 받고, PPO로 학습한 정책(ONNX)의 Δ를 더한다(residual). DWB·MPPI와 같은 기본 클래스를 상속하므로 Nav2의 BT·progress/goal checker·speed limit·lifecycle이 그대로 붙는다. rl_nav_correction 별도 노드를 대신한다.',
-    inputs: [
-      ['🧩 인자', 'computeVelocityCommands(pose, velocity, goal_checker)', 'geometry_msgs/PoseStamped · Twist', 'controller_server', '매 주기(controller_frequency 20Hz) 호출 — 여기서 관측을 만들고 추론'],
-      ['🧩 인자', 'setPlan(path)', 'nav_msgs/Path', 'controller_server (planner 경로)', '경로 오차 관측'],
-      ['🧩 인자', 'costmap_ros (configure 때 받음)', 'nav2_costmap_2d::Costmap2DROS', 'local costmap (nvblox 레이어 포함)', '가까운 장애물·사람까지 거리 관측 — 토픽 구독 필요 없음'],
-      ['🧩 인자', 'setSpeedLimit(limit, percentage)', 'double · bool', 'controller_server ← /speed_limit (rl_nav_tuner)', '최종 속도 상한'],
-      ['✉️ 구독', '/imu', 'sensor_msgs/Imu', 'imu_sensor_broadcaster', '실제 각속도 (미끄러짐) — 플러그인이 부모 노드로 직접 구독'],
-      ['✉️ 구독', '/nvblox_node/dynamic_map_slice', 'nvblox_msgs/DistanceMapSlice', 'nvblox_human_node', '사람 층만의 거리장 — 가장 가까운 사람까지 거리·방향 (costmap에선 벽과 섞여 구분 불가)'],
-      ['✉️ 구독', '/tracked_objects', 'perception/TrackedObjectArray', 'perception', 'class=person만 — 위치·속도(칼만 추적)로 다가오는지 비키는지'],
-    ],
-    outputs: [
-      ['🧩 반환', 'TwistStamped (MPPI + Δ)', 'geometry_msgs/TwistStamped', 'controller_server → ✉️ /cmd_vel_nav → twist_mux', 'Δ는 ±상한으로 자르고 speed limit 적용'],
-    ],
-    params: ['controller_plugins: [FollowPath]', 'FollowPath.plugin: ml::RlResidualController', 'FollowPath.base_plugin: nav2_mppi_controller::MPPIController (안에서 pluginlib로 로드)', 'FollowPath.model_path: rl_nav.onnx', 'FollowPath.max_delta_v: 0.05 · max_delta_w: 0.2', 'FollowPath.enable_rl: true (false면 MPPI 그대로)'],
-    setup: [
-      'class RlResidualController : public nav2_core::Controller — configure · cleanup · activate · deactivate · setPlan · computeVelocityCommands · setSpeedLimit 구현',
-      'configure()에서 pluginlib::ClassLoader<nav2_core::Controller>로 base_plugin(MPPI)을 만들고 같은 인자로 configure, ONNX Runtime 세션 로드',
-      'computeVelocityCommands(): base->computeVelocityCommands() → 관측(costmap 벽 거리 · 사람 거리·속도 · 경로 오차 · 속도 · imu) → 추론 → Δ 클리핑 → 합산',
-      'PLUGINLIB_EXPORT_CLASS(ml::RlResidualController, nav2_core::Controller) + plugins.xml + package.xml export에 <nav2_core plugin="..."/>',
-      'nav2_params.yaml의 FollowPath.plugin만 바꾸면 켜고, MPPI로 되돌리면 끈다',
-    ],
-    notes: ['C++만 가능 — pluginlib은 공유 라이브러리를 불러오는 방식이라 Python 플러그인은 없다.', 'nvblox는 물체 인식을 하지 않는다 — 기하(거리) + 사람/아님 구분뿐. 클래스(컵·의자·사람)는 perception이 낸다.', '사람 관측(거리·속도)을 넣으면 Isaac Lab 학습 환경에도 움직이는 사람 에이전트와 같은 관측을 만들어야 한다.', '추론이 controller 주기 안에 끝나야 한다. 늦으면 그 주기 명령이 늦게 나간다 (TensorRT·작은 MLP 권장).', '학습 환경(Isaac Lab)에도 같은 기본 제어기(MPPI 근사)와 같은 관측을 넣어야 Δ가 맞는다.', 'max_delta_v·max_delta_w·enable_rl·base_plugin·model_path는 이 플러그인이 정의하는 파라미터(설계안)다.'],
   },
   {
     id: 'cumotion_planner', name: 'cumotion_planner_node (cuMotion)', tag: 'provided', pkg: 'isaac_ros_cumotion · isaac_ros_cumotion_moveit', form: 'ROS 2 노드 (GPU · cuRobo) + MoveIt 계획기 플러그인', group: 'Isaac ROS 전환안 (GPU)',
@@ -1030,11 +993,11 @@ const NODE_PARAM_GROUPS: Record<string, string[]> = {
   realsense_pole: ['realsense2_camera'], realsense_gripper: ['realsense2_camera'],
   robot_state_publisher: ['robot_state_publisher'], rtabmap: ['rtabmap_node', 'rtabmap_core'],
   bt_navigator: ['nav2_bt_navigator'], planner_server: ['nav2_planner_server', 'nav2_navfn', 'nav2_costmap', 'nav2_static_layer', 'nav2_obstacle_layer', 'nav2_inflation_layer'],
-  controller_server: ['nav2_controller_server', 'nav2_dwb_kinematic', 'nav2_dwb_controller', 'nav2_dwb_traj_gen', 'nav2_costmap'],
+  controller_server: ['nav2_controller_server', 'ml_rl_nav_controller', 'nav2_dwb_kinematic', 'nav2_dwb_controller', 'nav2_dwb_traj_gen', 'nav2_costmap'],
   behavior_server: ['nav2_behavior_server'], costmap: ['nav2_costmap', 'nav2_voxel_layer', 'nav2_obstacle_layer', 'nav2_inflation_layer', 'nav2_static_layer'],
   lifecycle_manager: ['nav2_lifecycle_manager'], velocity_smoother: ['nav2_velocity_smoother'], collision_monitor: ['nav2_collision_monitor'],
   ekf: ['robot_localization'], diff_drive_controller: ['ctl_diff_drive_controller'], imu_sensor_broadcaster: ['ctl_imu_sensor_broadcaster'],
-  joint_state_broadcaster: ['ctl_joint_state_broadcaster'], arm_controller: ['ctl_joint_trajectory_controller'],
+  joint_state_broadcaster: ['ctl_joint_state_broadcaster'], arm_controller: ['ctl_joint_trajectory_controller'], rl_nav_controller: ['ml_rl_nav_controller'],
   gripper_controller: ['ctl_parallel_gripper_action_controller'], controller_manager: ['ctl_controller_manager'], teleop: [], voice_ui: [],
 };
 
@@ -1082,7 +1045,7 @@ export const renderCatalog = (backLabel?: string) => {
     ${backLabel ? `<button class="rd-back">↩ ${esc(backLabel)}(으)로 돌아가기</button>` : ''}
     <h2>노드 사전</h2>
     <p>도식의 노드를 누르면 여기로 옵니다. 카드마다 <b>제공/직접 작성</b>, 패키지, 형태, <b>받는 것</b>(구독·서비스 서버·액션 서버·인터페이스)과 <b>내보내는 것</b>(발행·호출·요청)을 메시지 타입과 함께 적었습니다. 표 안의 노드 이름을 누르면 그 카드로 이동합니다.</p>
-    <p class="rd-howlegend">메시지 타입을 누르면 <b>메시지 타입</b> 탭에서 필드 정의를 볼 수 있습니다 (뒤로가기로 돌아옴).<br/>방식: ✉️ 구독/발행 = 토픽 · 📞 서버/호출/응답 = 서비스 · 🎬 서버/요청/결과 = 액션 · 🧩 읽기/쓰기 = ros2_control 인터페이스 · 🔌 장치 = USB·시리얼 · 🗣️ 사람 → 로봇 · 🔊 로봇 → 사람 · 💾 파일 · ⚙️ 파라미터 · 🌐 외부 API</p>
+    <p class="rd-howlegend">메시지 타입을 누르면 <b>메시지 타입</b> 탭에서 필드 정의를 볼 수 있습니다 (뒤로가기로 돌아옴).<br/>방식: ✉️ 구독/발행 = 토픽 · 📞 서버/호출/응답 = 서비스 · 🎬 서버/요청/결과 = 액션 · 🔗 읽기/쓰기 = ros2_control 인터페이스 · 🔌 장치 = USB·시리얼 · 🗣️ 사람 → 로봇 · 🔊 로봇 → 사람 · 💾 파일 · ⚙️ 파라미터 · 🌐 외부 API</p>
     <div class="rd-cindex">${index}</div>
     ${cards}
     <h3 class="rd-cgroup" id="node-msgs">커스텀 인터페이스 정의 (패키지별 — perception · plan · control · ml)</h3>
