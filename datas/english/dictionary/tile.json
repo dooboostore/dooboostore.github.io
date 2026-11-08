@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "entry": "<b>tile</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "taɪl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "기와, 타일",
+              "examples": [
+                {
+                  "text": "a plain <b>tile</b>",
+                  "translatedText": "평기와"
+                }
+              ],
+              "originalMeaning": "기와, 타일"
+            },
+            {
+              "meaning": "타일형의 것 [건재]",
+              "examples": [],
+              "originalMeaning": "타일형의 것 [건재]"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "기와를 이다, 타일로 덮다, 타일을 붙이다; 토관을 부설하다",
+              "examples": [],
+              "originalMeaning": "기와를 이다, 타일로 덮다, 타일을 붙이다; 토관을 부설하다"
+            },
+            {
+              "meaning": "비밀 지킬 것을 맹세케 하다, <회의 등을> 극비로 하다, <문 등에> 보초를 세우다",
+              "examples": [],
+              "originalMeaning": "비밀 지킬 것을 맹세케 하다, <회의 등을> 극비로 하다, <문 등에> 보초를 세우다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/913277484e434210ad760f2b321ad238",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/913277484e434210ad760f2b321ad238",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tiles"
+        },
+        {
+          "type": "과거형",
+          "value": "tiled"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tiling"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tiled"
+        }
+      ],
+      "aliasConjugation": "tiles",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "1a1dfdc9485abcdb519edeecbe61965f",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지붕의 기와는 서로 미늘 달고 있다",
+      "text": "The tiles on the roof overlap each other."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "지붕 위의 기와가 서로 겹쳐져 있다",
+      "text": "The tiles on the roof overlap one another."
+    }
+  ],
+  "isWordType": true
+}

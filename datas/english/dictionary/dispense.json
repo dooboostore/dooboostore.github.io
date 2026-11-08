@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "entry": "<b>dispense</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "dɪˈspens"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "분배하다, 나누어 주다, 베풀다(distribute); <법을> 시행하다(administer), 집행하다",
+              "examples": [
+                {
+                  "text": "<b>dispense</b> justice",
+                  "translatedText": "법을 시행하다"
+                }
+              ],
+              "originalMeaning": "분배하다, 나누어 주다, 베풀다(distribute); <법을> 시행하다(administer), 집행하다"
+            },
+            {
+              "meaning": "<기계·용기 등이> <물건을> 내주게 되어 있다, <자판기가> <상품을> 판매하고 있다",
+              "examples": [
+                {
+                  "text": "This vending machine <b>dispense</b> s hot coffee.",
+                  "translatedText": "이 자판기는 뜨거운 커피가 나온다."
+                }
+              ],
+              "originalMeaning": "<기계·용기 등이> <물건을> 내주게 되어 있다, <자판기가> <상품을> 판매하고 있다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "면제하다, [가톨릭] 특면하다",
+              "examples": [],
+              "originalMeaning": "면제하다, [가톨릭] 특면하다"
+            },
+            {
+              "meaning": "조제하다",
+              "examples": [],
+              "originalMeaning": "조제하다"
+            }
+          ]
+        },
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "지출, 경비",
+              "examples": [],
+              "originalMeaning": "지출, 경비"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/43580a507207416ba0d2fe4cd6de2c35",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/43580a507207416ba0d2fe4cd6de2c35",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "dispenses"
+        },
+        {
+          "type": "과거형",
+          "value": "dispensed"
+        },
+        {
+          "type": "현재 분사",
+          "value": "dispensing"
+        },
+        {
+          "type": "과거 분사",
+          "value": "dispensed"
+        }
+      ],
+      "aliasConjugation": "dispenses",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "78889e72df89dc536cfca8515d4101d5",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "기계는 많은 노력을 던다",
+      "text": "Machinery dispenses with much labor."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "이 자판기는 뜨거운 커피가 나온다.",
+      "text": "This vending machine dispenses hot coffee."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "오늘은 격식을 차린 인사는 집어치웁시다",
+      "text": "Let's <b>dispense</b> with such formal exchanges today."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그는 지금 사자어금니와도 같은 존재다",
+      "text": "I cannot spare him. or His service can't be dispensed with."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "의안은 독회 생략으로 가결되었다",
+      "text": "The bill was passed, the discussion stage having been dispensed with."
+    }
+  ],
+  "isWordType": true
+}

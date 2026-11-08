@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "entry": "<b>transportation</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "│trænspɔːr│teɪʃn"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "수송, 운송; [미] 수송 기관([영] transport)",
+              "examples": [
+                {
+                  "text": "means of <b>transportation</b>",
+                  "translatedText": "교통[수송] 기관"
+                }
+              ],
+              "originalMeaning": "수송, 운송; [미] 수송 기관([영] transport)"
+            },
+            {
+              "meaning": "추방형, 유형(流刑)",
+              "examples": [
+                {
+                  "text": "<b>transportation</b> for life",
+                  "translatedText": "종신 유형"
+                }
+              ],
+              "originalMeaning": "추방형, 유형(流刑)"
+            },
+            {
+              "meaning": "운송료, 운임(fare)",
+              "examples": [],
+              "originalMeaning": "운송료, 운임(fare)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/166d52aa164348f69dc9bfad59e22dea",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/166d52aa164348f69dc9bfad59e22dea",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "3be7eebf8c90f1007a2557d3ac7f0ee2",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "회사가 차를 준비하기로 되어 있다.",
+      "text": "<b>Transportation</b> will be supplied by the company."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "사태가 나서 교통이 마비되었다",
+      "text": "The landslip blocked all the <b>transportation</b> facilities."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 생선은 원거리로 수송할 수 없다",
+      "text": "The fish will not bear <b>transportation</b> to any great distance."
+    }
+  ],
+  "isWordType": true
+}

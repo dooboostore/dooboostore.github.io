@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "entry": "<b>tank</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "tæŋk"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(물·기름·가스 등의) 탱크, 물통, 유조",
+              "examples": [
+                {
+                  "text": "<b>tank</b> s for storing oil",
+                  "translatedText": "석유 저장 탱크"
+                }
+              ],
+              "originalMeaning": "(물·기름·가스 등의) 탱크, 물통, 유조"
+            },
+            {
+              "meaning": "[인도] 저수지; [미·영·방언] 못, 호수",
+              "examples": [],
+              "originalMeaning": "[인도] 저수지; [미·영·방언] 못, 호수"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "탱크에 저장하다, 탱크 속에서 처리하다",
+              "examples": [],
+              "originalMeaning": "탱크에 저장하다, 탱크 속에서 처리하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "탱크처럼 움직이다",
+              "examples": [],
+              "originalMeaning": "탱크처럼 움직이다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/678d22631d474da28682782b68eb22df",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/678d22631d474da28682782b68eb22df",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "tanks"
+        },
+        {
+          "type": "과거형",
+          "value": "tanked"
+        },
+        {
+          "type": "현재 분사",
+          "value": "tanking"
+        },
+        {
+          "type": "과거 분사",
+          "value": "tanked"
+        }
+      ],
+      "aliasConjugation": "tanks",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "5017d470e8747c5ffad2b1720cafec00",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "가스 탱크가 내 코 앞에서 폭발했다",
+      "text": "The gas <b>tank</b> blew up in my face."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "물통에서 장구벌레가 우물거리고 있다",
+      "text": "The water <b>tank</b> teems with mosquito larvae."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "탱크가 누수하고 있다",
+      "text": "Water is leaking from the <b>tank</b>. or The <b>tank</b> leaks."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "전차가 출동했다",
+      "text": "<b>Tanks</b> went into action."
+    }
+  ],
+  "isWordType": true
+}

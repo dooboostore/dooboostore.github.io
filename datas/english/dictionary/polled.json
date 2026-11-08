@@ -1,0 +1,163 @@
+{
+  "items": [
+    {
+      "entry": "<b>polled</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "póuld"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "둥글게 친 <나뭇가지 등>, 대머리의, 뿔을 자른 <소·사슴 등>",
+              "examples": [],
+              "originalMeaning": "둥글게 친 <나뭇가지 등>, 대머리의, 뿔을 자른 <소·사슴 등>"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/90777398342b420897e23488788edc1b",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/90777398342b420897e23488788edc1b",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "942b74a4ae5bae1c5abfda982b26544e",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>poll</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "poʊl"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "(선거 등의) 투표",
+              "examples": [
+                {
+                  "text": "head the <b>poll</b>",
+                  "translatedText": "선거에서 선두를 달리다"
+                }
+              ],
+              "originalMeaning": "(선거 등의) 투표"
+            },
+            {
+              "meaning": "투표소",
+              "examples": [],
+              "originalMeaning": "투표소"
+            }
+          ]
+        },
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "여론 조사를 하다",
+              "examples": [],
+              "originalMeaning": "여론 조사를 하다"
+            },
+            {
+              "meaning": "명부에 등록하다",
+              "examples": [],
+              "originalMeaning": "명부에 등록하다"
+            }
+          ]
+        },
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "투표하다 ((for))",
+              "examples": [],
+              "originalMeaning": "투표하다 ((for))"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/221c1ffdda244b1092f35cb5ec64b0da",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/221c1ffdda244b1092f35cb5ec64b0da",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "polls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "761ae3ba0899b2c0619ff9dac04c2aec",
+      "expEntrySuperscript": "1"
+    },
+    {
+      "entry": "<b>poll</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국식",
+          "sign": "pɑ́l"
+        }
+      ],
+      "pos": [
+        {
+          "type": "명사",
+          "meanings": [
+            {
+              "meaning": "[the P~] (케임브리지 대학의) 보통 학위 졸업생(passman)",
+              "examples": [],
+              "originalMeaning": "[the P~] (케임브리지 대학의) 보통 학위 졸업생(passman)"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/73046bc7563b4dfb915771a50b98001d",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/73046bc7563b4dfb915771a50b98001d",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "aliasConjugation": "polls",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "72f5c689b2374cf12205b2e070260f85",
+      "expEntrySuperscript": "2"
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "김 씨의 득표는 8만이었다",
+      "text": "Mr. Kim <b>polled</b>[got] 80,000 votes."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 최고 득표로 당선되었다",
+      "text": "He was returned at the head of the <b>poll</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그는 5백 표로 차점이 되었다",
+      "text": "He <b>polled</b> 500 votes, heading the list of unsuccessful candidates."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "선거가 시작되어 후보자들은 일희일비의 상태이다",
+      "text": "Now that the <b>poll</b>[voting] is going on, candidates are agitated, now being optimistic, now pessimistic."
+    }
+  ],
+  "isWordType": true
+}

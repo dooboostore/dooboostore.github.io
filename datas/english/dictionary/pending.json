@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+      "entry": "<b>pending</b>",
+      "subEntry": null,
+      "matchType": "exact:entry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "ˈpendɪŋ"
+        }
+      ],
+      "pos": [
+        {
+          "type": "형용사",
+          "meanings": [
+            {
+              "meaning": "미결정의, 현안의; [법] 계류중의",
+              "examples": [
+                {
+                  "text": "<b>pending</b> litigation",
+                  "translatedText": "계류 중인 소송"
+                }
+              ],
+              "originalMeaning": "미결정의, 현안의; [법] 계류중의"
+            },
+            {
+              "meaning": "절박한, 임박한",
+              "examples": [],
+              "originalMeaning": "절박한, 임박한"
+            }
+          ]
+        },
+        {
+          "type": "전치사",
+          "meanings": [
+            {
+              "meaning": "…동안에, …중(during)",
+              "examples": [
+                {
+                  "text": "<b>pending</b> the negotiations",
+                  "translatedText": "교섭을 하는 동안에"
+                }
+              ],
+              "originalMeaning": "…동안에, …중(during)"
+            },
+            {
+              "meaning": "…까지",
+              "examples": [
+                {
+                  "text": "<b>pending</b> his return",
+                  "translatedText": "그가 돌아올 때까지"
+                }
+              ],
+              "originalMeaning": "…까지"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/886da3b25b954f05bdbf5445ab6e3af7",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/886da3b25b954f05bdbf5445ab6e3af7",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "ad017afcdc1137bc95e5df1ce0513f01",
+      "expEntrySuperscript": ""
+    },
+    {
+      "entry": "<b>pend</b>",
+      "subEntry": null,
+      "matchType": "exact:revert",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "pénd"
+        }
+      ],
+      "pos": [
+        {
+          "type": "자동사",
+          "meanings": [
+            {
+              "meaning": "매달리다",
+              "examples": [],
+              "originalMeaning": "매달리다"
+            },
+            {
+              "meaning": "미해결인 채로 있다, 현안(懸案)인 채 있다",
+              "examples": [],
+              "originalMeaning": "미해결인 채로 있다, 현안(懸案)인 채 있다"
+            },
+            {
+              "meaning": "의존하다",
+              "examples": [],
+              "originalMeaning": "의존하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/c6de5cb6a9154264946f50dba0fa3879",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/c6de5cb6a9154264946f50dba0fa3879",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "gdid": "9eaad45131eeb816bc082046631b9a21",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "그 사건은 재판 중이다",
+      "text": "The case is on trial. or The matter is <b>pending</b> in court."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "특허 신청 중이다",
+      "text": "Application for a patent is <b>pending</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "특허 출원중",
+      "text": "Patent applied for. or Patent <b>pending</b>."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "특허 출원중",
+      "text": "Patent <b>pending</b>. or Patent applied for."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:1.000000",
+      "translatedText": "심리 중이다",
+      "text": "The case is <b>pending</b> . or The case is on trial."
+    }
+  ],
+  "isWordType": true
+}

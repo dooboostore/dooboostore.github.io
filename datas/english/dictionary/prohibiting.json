@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "entry": "<b>prohibit</b>",
+      "subEntry": null,
+      "matchType": "exact:subEntry",
+      "hanjaEntry": null,
+      "phoneticSigns": [
+        {
+          "type": "미국∙영국",
+          "sign": "prə│hɪbɪt"
+        }
+      ],
+      "pos": [
+        {
+          "type": "타동사",
+          "meanings": [
+            {
+              "meaning": "(법률·권한에 따라) 금하다, 금지하다; (…하는 것을) 금하다 ((doing)), (=forbid)",
+              "examples": [
+                {
+                  "text": "<b>prohibit</b> the sale of alcoholic liquors",
+                  "translatedText": "주류 판매를 금지하다"
+                }
+              ],
+              "originalMeaning": "(법률·권한에 따라) 금하다, 금지하다; (…하는 것을) 금하다 ((doing)), (=<span class='related_word' lang='en' >forbid</span>)"
+            },
+            {
+              "meaning": "<사물이> 방해하다, 불가능하게 하다",
+              "examples": [
+                {
+                  "text": "Heavy rain prohibited him from going out. = Heavy rain prohibited his going out.",
+                  "translatedText": "폭우로 그는 외출하지 못했다."
+                }
+              ],
+              "originalMeaning": "<사물이> 방해하다, 불가능하게 하다"
+            }
+          ]
+        }
+      ],
+      "source": "동아출판 프라임 영한사전",
+      "url": "https://en.dict.naver.com/#/entry/enko/616c1f5d3cfc4cdcbd4d452815a1bd66",
+      "mUrl": "https://en.dict.naver.com/#/entry/enko/616c1f5d3cfc4cdcbd4d452815a1bd66",
+      "expDicTypeForm": "단어",
+      "locale": "ko",
+      "conjugationList": [
+        {
+          "type": "3인칭 단수 현재",
+          "value": "prohibits"
+        },
+        {
+          "type": "과거형",
+          "value": "prohibited"
+        },
+        {
+          "type": "현재 분사",
+          "value": "prohibiting"
+        },
+        {
+          "type": "과거 분사",
+          "value": "prohibited"
+        }
+      ],
+      "aliasConjugation": "prohibits",
+      "aliasConjugationPos": "3인칭 단수 현재",
+      "gdid": "19e30f5b59dea486853b131faa363058",
+      "expEntrySuperscript": ""
+    }
+  ],
+  "examples": [
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "그것은 법으로 금하고 있다",
+      "text": "It is prohibited by law."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "자습서 사용은 금지되어 있다",
+      "text": "The use of cribs is prohibited."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약품은 판매 금지품이다",
+      "text": "The sale of this drug is prohibited (by law)."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "주류는 미성년자에게 판금되어 있다",
+      "text": "The sale of liquors to minors is prohibited."
+    },
+    {
+      "source": "동아출판 프라임 영한사전",
+      "matchType": "allterm:proximity:0.000000",
+      "translatedText": "이 약품의 판매는 법으로 금지되어 있다",
+      "text": "The sale of this drug is prohibited by law."
+    }
+  ],
+  "isWordType": true
+}

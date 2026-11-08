@@ -1,11 +1,11 @@
-import { chromium } from 'playwright';
+import { chromium, type Page } from 'playwright';
 import fs from 'fs';
 import path from 'path';
 import process from 'process';
 import { PapagoClient, extractEnglishWords, resolveCredentials } from 'dooboostore-english-dictionary';
 
 // YouTube Video ID를 여기서 변경하세요
-const YOUTUBE_VIDEO_ID = "lLFbuhCSwiI";
+const YOUTUBE_VIDEO_ID = "8ySMdUIF3cY";
 
 // 번역 방식 선택: 'youtube' (YouTube 자동번역) 또는 'papago' (Papago API 번역)
 const TRANSLATION_METHOD: 'youtube' | 'papago' = 'youtube';
@@ -52,25 +52,34 @@ function convertJson3ToVtt(jsonData: any): string {
       return '';
     }
 
-    let vttContent = 'WEBVTT\n\n';
-    let cueCount = 0;
-    
-    for (const event of jsonData.events) {
-      if (event.segs && Array.isArray(event.segs)) {
-        const startTime = formatTime(event.tStartMs || 0);
-        const duration = event.dDurationMs || 3000;
-        const endTime = formatTime((event.tStartMs || 0) + duration);
-        
-        const text = event.segs.map((seg: any) => seg.utf8 || '').join('').trim();
-        
-        if (text) {
-          vttContent += `${startTime} --> ${endTime}\n${text}\n\n`;
-          cueCount++;
-        }
+    // YouTube 자동 자막은 이전 줄을 화면에 남겨두느라 dDurationMs가
+    // 다음 줄 시작보다 길다. 각 줄의 끝을 다음 줄 시작으로 잘라
+    // 타임라인 겹침을 없앤다. (병합하면 연속 발화가 한 덩어리가 됨)
+    const entries = jsonData.events
+      .map((event: any) => {
+        const startMs = event.tStartMs || 0;
+        return {
+          startMs,
+          endMs: startMs + (event.dDurationMs || 3000),
+          text: (event.segs || []).map((seg: any) => seg.utf8 || '').join('').trim(),
+        };
+      })
+      .filter((entry: any) => entry.text);
+
+    for (let i = 0; i < entries.length - 1; i++) {
+      const current = entries[i];
+      const next = entries[i + 1];
+      if (next.startMs > current.startMs && current.endMs > next.startMs) {
+        current.endMs = next.startMs;
       }
     }
-    
-    console.log(`✅ Converted ${cueCount} subtitle cues to VTT format`);
+
+    let vttContent = 'WEBVTT\n\n';
+    for (const entry of entries) {
+      vttContent += `${formatTime(entry.startMs)} --> ${formatTime(entry.endMs)}\n${entry.text}\n\n`;
+    }
+
+    console.log(`✅ Converted ${entries.length} subtitle cues to VTT format`);
     return vttContent;
   } catch (error) {
     console.log('❌ Error converting JSON3 to VTT:', error);
@@ -101,6 +110,24 @@ function parseVttTime(timeStr: string): number {
 
 async function delay(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// 플레이어 설정 메뉴(.ytp-settings-menu) 내부의 보이는 항목만 클릭한다.
+// 페이지 전체 text= 셀렉터는 추천 영상 오버레이의 "[한글자막]" 같은 텍스트와
+// 충돌(strict mode violation)하므로 반드시 설정 메뉴로 범위를 좁힌다.
+async function clickSettingsMenuItem(page: Page, labelPattern: RegExp): Promise<void> {
+  const item = page
+    .locator('.ytp-settings-menu .ytp-menuitem:visible')
+    .filter({ has: page.locator('.ytp-menuitem-label', { hasText: labelPattern }) })
+    .first();
+  await item.click({ timeout: 5000 });
+}
+
+async function getSettingsMenuItem(page: Page, labelPattern: RegExp) {
+  return page
+    .locator('.ytp-settings-menu .ytp-menuitem:visible')
+    .filter({ has: page.locator('.ytp-menuitem-label', { hasText: labelPattern }) })
+    .first();
 }
 
 async function processDictionary(subtitles: SubtitleEntry[]): Promise<void> {
@@ -775,7 +802,7 @@ async function downloadYouTubeSubtitles() {
     await page.waitForTimeout(1000);
     
     console.log('📝 Opening subtitles menu...');
-    await page.locator('text=자막').click({ timeout: 5000 });
+    await clickSettingsMenuItem(page, /^자막/);
     await page.waitForTimeout(1500);
     
     console.log('❌ Setting subtitles to "사용 안함"...');
@@ -800,7 +827,7 @@ async function downloadYouTubeSubtitles() {
     await page.waitForTimeout(1000);
     
     console.log('📝 Clicking subtitles menu...');
-    await page.locator('text=자막').click({ timeout: 5000 });
+    await clickSettingsMenuItem(page, /^자막/);
     await page.waitForTimeout(1500);
     
     console.log('🇺🇸 Selecting English subtitles...');
@@ -853,11 +880,12 @@ async function downloadYouTubeSubtitles() {
     // 3순위: 자동 번역으로 영어 선택
     if (!englishSelected) {
       console.log('⚠️ No direct English subtitle found, trying auto-translate...');
-      const autoTranslateExists = await page.locator('text=자동 번역').isVisible({ timeout: 2000 }).catch(() => false);
+      const autoTranslateItem = await getSettingsMenuItem(page, /자동 번역/);
+      const autoTranslateExists = await autoTranslateItem.isVisible({ timeout: 2000 }).catch(() => false);
       
       if (autoTranslateExists) {
         console.log('✅ Found auto-translate menu');
-        await page.locator('text=자동 번역').click({ timeout: 5000 });
+        await autoTranslateItem.click({ timeout: 5000 });
         await page.waitForTimeout(1500);
         
         console.log('🇺🇸 Selecting English from auto-translate...');
@@ -890,7 +918,7 @@ async function downloadYouTubeSubtitles() {
     await page.waitForTimeout(1000);
     
     console.log('📝 Clicking subtitles menu...');
-    await page.locator('text=자막').click({ timeout: 5000 });
+    await clickSettingsMenuItem(page, /^자막/);
     await page.waitForTimeout(1500);
     
     console.log('🌐 Looking for Korean subtitle options...');
@@ -906,11 +934,12 @@ async function downloadYouTubeSubtitles() {
       console.log('⚠️ Direct Korean subtitle not found, checking auto-translate...');
       
       // 2순위: 자동 번역 메뉴 확인
-      const autoTranslateExists = await page.locator('text=자동 번역').isVisible({ timeout: 2000 }).catch(() => false);
+      const autoTranslateItem = await getSettingsMenuItem(page, /자동 번역/);
+      const autoTranslateExists = await autoTranslateItem.isVisible({ timeout: 2000 }).catch(() => false);
       
       if (autoTranslateExists) {
         console.log('✅ Found auto-translate menu');
-        await page.locator('text=자동 번역').click({ timeout: 5000 });
+        await autoTranslateItem.click({ timeout: 5000 });
         await page.waitForTimeout(1500);
         
         console.log('🇰🇷 Selecting Korean language from auto-translate...');

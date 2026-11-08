@@ -64,6 +64,9 @@ export default (w: Window) => {
     private videoTimeMonitoringInterval: number | null = null;
     private userManuallySelected: boolean = false;
     private lastManualSelectionTime: number = 0;
+    // 문장 단위 재생(p, 스페이스, AutoPlay 이동)의 목표 구간.
+    // 자막 큐가 시간상 겹쳐도 "사용자가 재생을 시작한 문장"의 endMs에서 멈추기 위함.
+    private pendingPauseRange: { startMs: number; endMs: number } | null = null;
     private currentWordIndex: number = -1;
     private currentSelectedWord: string = "";
 
@@ -99,6 +102,18 @@ export default (w: Window) => {
       if (!this.youtubePlayer || !this.youtubePlayer.getPlayerState)
         return false;
       return this.youtubePlayer.getPlayerState() === 2;
+    }
+
+    /** currentActiveIndex(영어 기준)에 해당하는 자막 항목 */
+    private getEnglishItem(index: number): TranslationItemSet | null {
+      if (index < 0) return null;
+      let englishCount = 0;
+      for (const item of this.allTranslations) {
+        if (item.type !== "en") continue;
+        if (englishCount === index) return item;
+        englishCount++;
+      }
+      return null;
     }
     @onInitialize
     onInit(
@@ -450,6 +465,14 @@ export default (w: Window) => {
     private onYouTubeStateChange(event: any): void {
       const YT = (window as any).YT;
       if (event.data === YT.PlayerState.PLAYING) {
+        // 수동 선택 후 네이티브 플레이 버튼으로 재생한 경우에도
+        // 현재 문장 끝에서 멈추도록 목표 구간을 잡아둔다.
+        if (!this.pendingPauseRange && this.userManuallySelected) {
+          const item = this.getEnglishItem(this.currentActiveIndex);
+          if (item) {
+            this.pendingPauseRange = { startMs: item.startMs, endMs: item.endMs };
+          }
+        }
         this.startVideoTimeMonitoring();
       } else if (
         event.data === YT.PlayerState.PAUSED ||
@@ -491,18 +514,42 @@ export default (w: Window) => {
     private updateSubtitleByVideoTime(currentTimeMs: number): void {
       if (!this.allTranslations || this.allTranslations.length === 0) return;
 
-      // Find the subtitle that matches the current video time (using allTranslations as reference)
+      // 문장 단위 재생 목표에 도달하면 자막 인덱스 갱신보다 먼저 멈춘다.
+      // YouTube 자동 자막은 인접 큐가 시간상 겹치는 경우가 많아, 인덱스를
+      // 먼저 갱신하면 "재생을 시작한 문장의 endMs"가 다음 문장의 endMs로
+      // 바뀌어 멈춤 시점을 계속 놓친다.
+      const pending = this.pendingPauseRange;
+      if (pending) {
+        // 사용자가 플레이어에서 임의 위치로 이동한 경우 목표 폐기
+        const SEEK_MARGIN_MS = 3000;
+        if (
+          currentTimeMs < pending.startMs - SEEK_MARGIN_MS ||
+          currentTimeMs > pending.endMs + SEEK_MARGIN_MS
+        ) {
+          this.pendingPauseRange = null;
+        } else if (currentTimeMs >= pending.endMs) {
+          console.log("[updateSubtitleByVideoTime] Step playback ended, pausing video");
+          this.pendingPauseRange = null;
+          this.userManuallySelected = false;
+          this.pauseYouTubeVideo();
+          return;
+        }
+      }
+
+      // Find the subtitle that matches the current video time.
+      // 겹치는 큐가 있으면 가장 늦게 시작한 큐(현재 읽고 있는 줄)를 고른다.
       let newIndex = -1;
+      let matchedStartMs = -Infinity;
       let englishCount = 0;
-      for (let i = 0; i < this.allTranslations.length; i++) {
-        const item = this.allTranslations[i];
+      for (const item of this.allTranslations) {
         if (item.type === "en") {
           if (
             currentTimeMs >= item.startMs &&
-            currentTimeMs < item.endMs
+            currentTimeMs < item.endMs &&
+            item.startMs >= matchedStartMs
           ) {
             newIndex = englishCount;
-            break;
+            matchedStartMs = item.startMs;
           }
           englishCount++;
         }
@@ -538,31 +585,6 @@ export default (w: Window) => {
           });
         } else {
           console.log("[updateSubtitleByVideoTime] SKIPPED - within 5 second grace period");
-        }
-      }
-
-      // Check if current subtitle has ended and user manually selected it
-      // userManuallySelected를 먼저 false로 바꾼 뒤 pauseVideo 호출:
-      // pauseVideo → onYouTubeStateChange(PAUSED) → stopVideoTimeMonitoring 순서로
-      // 이 블록이 다시 진입하지 않도록 보장
-      if (this.userManuallySelected && this.currentActiveIndex >= 0) {
-        let ecIdx = 0;
-        let currentEnglishItem = null;
-        for (const item of this.allTranslations) {
-          if (item.type === "en") {
-            if (ecIdx === this.currentActiveIndex) {
-              currentEnglishItem = item;
-              break;
-            }
-            ecIdx++;
-          }
-        }
-
-        if (currentEnglishItem && currentTimeMs >= currentEnglishItem.endMs) {
-          console.log("[updateSubtitleByVideoTime] Manually selected subtitle ended, pausing video");
-          // 먼저 플래그 초기화 → 이후 루프에서 중복 실행 방지
-          this.userManuallySelected = false;
-          this.pauseYouTubeVideo();
         }
       }
     }
@@ -657,6 +679,21 @@ export default (w: Window) => {
           this.youtubePlayer.pauseVideo();
         } else {
           console.log("[playSentenceAndStop] Playing video from current position");
+          const currentItem = this.getEnglishItem(this.currentActiveIndex);
+          if (currentItem) {
+            const currentTimeMs = this.youtubePlayer.getCurrentTime() * 1000;
+            // 멈춰있는 위치가 문장 밖이면 문장 시작으로 되돌려 재생
+            if (
+              currentTimeMs < currentItem.startMs ||
+              currentTimeMs >= currentItem.endMs
+            ) {
+              this.seekYouTubeToTime(currentItem.startMs);
+            }
+            this.pendingPauseRange = {
+              startMs: currentItem.startMs,
+              endMs: currentItem.endMs,
+            };
+          }
           this.youtubePlayer.playVideo();
         }
       } catch (e) {
@@ -672,19 +709,7 @@ export default (w: Window) => {
         return;
       }
 
-      // allTranslations에서 영어 항목을 찾기
-      let englishCount = 0;
-      let currentEnglishItem = null;
-      
-      for (const item of this.allTranslations) {
-        if (item.type === "en") {
-          if (englishCount === this.currentActiveIndex) {
-            currentEnglishItem = item;
-            break;
-          }
-          englishCount++;
-        }
-      }
+      const currentEnglishItem = this.getEnglishItem(this.currentActiveIndex);
 
       if (!currentEnglishItem || currentEnglishItem.startMs === undefined) {
         console.log("[replayCurrentSentence] Could not find English item or startMs is undefined");
@@ -696,6 +721,10 @@ export default (w: Window) => {
       // Mark as manually selected so video pauses at sentence end
       this.userManuallySelected = true;
       this.lastManualSelectionTime = Date.now();
+      this.pendingPauseRange = {
+        startMs: currentEnglishItem.startMs,
+        endMs: currentEnglishItem.endMs,
+      };
       
       this.seekYouTubeToTime(currentEnglishItem.startMs);
       
@@ -1094,27 +1123,27 @@ export default (w: Window) => {
         this.lastManualSelectionTime = Date.now();
 
         // Find the English subtitle at this index
-        let englishCount = 0;
-        for (const translation of this.allTranslations) {
-          if (translation.type === "en") {
-            if (englishCount === this.currentActiveIndex) {
-              if (translation && translation.startMs !== undefined) {
-                this.seekYouTubeToTime(translation.startMs);
+        const translation = this.getEnglishItem(this.currentActiveIndex);
+        if (translation && translation.startMs !== undefined) {
+          if (this.autoPlayEnabled) {
+            this.pendingPauseRange = {
+              startMs: translation.startMs,
+              endMs: translation.endMs,
+            };
+          } else {
+            this.pendingPauseRange = null;
+          }
+          this.seekYouTubeToTime(translation.startMs);
 
-                // Auto-play if enabled, otherwise pause
-                if (this.autoPlayEnabled) {
-                  setTimeout(() => {
-                    this.playYouTubeVideo();
-                  }, 100);
-                } else {
-                  setTimeout(() => {
-                    this.pauseYouTubeVideo();
-                  }, 100);
-                }
-              }
-              break;
-            }
-            englishCount++;
+          // Auto-play if enabled, otherwise pause
+          if (this.autoPlayEnabled) {
+            setTimeout(() => {
+              this.playYouTubeVideo();
+            }, 100);
+          } else {
+            setTimeout(() => {
+              this.pauseYouTubeVideo();
+            }, 100);
           }
         }
       }
@@ -1145,27 +1174,27 @@ export default (w: Window) => {
         this.lastManualSelectionTime = Date.now();
 
         // Find the English subtitle at this index
-        let englishIdx = 0;
-        for (const translation of this.allTranslations) {
-          if (translation.type === "en") {
-            if (englishIdx === this.currentActiveIndex) {
-              if (translation && translation.startMs !== undefined) {
-                this.seekYouTubeToTime(translation.startMs);
+        const translation = this.getEnglishItem(this.currentActiveIndex);
+        if (translation && translation.startMs !== undefined) {
+          if (this.autoPlayEnabled) {
+            this.pendingPauseRange = {
+              startMs: translation.startMs,
+              endMs: translation.endMs,
+            };
+          } else {
+            this.pendingPauseRange = null;
+          }
+          this.seekYouTubeToTime(translation.startMs);
 
-                // Auto-play if enabled, otherwise pause
-                if (this.autoPlayEnabled) {
-                  setTimeout(() => {
-                    this.playYouTubeVideo();
-                  }, 100);
-                } else {
-                  setTimeout(() => {
-                    this.pauseYouTubeVideo();
-                  }, 100);
-                }
-              }
-              break;
-            }
-            englishIdx++;
+          // Auto-play if enabled, otherwise pause
+          if (this.autoPlayEnabled) {
+            setTimeout(() => {
+              this.playYouTubeVideo();
+            }, 100);
+          } else {
+            setTimeout(() => {
+              this.pauseYouTubeVideo();
+            }, 100);
           }
         }
       }
@@ -1908,27 +1937,27 @@ export default (w: Window) => {
       this.loadWordsFromCurrentSubtitle();
 
       // Find the translation with this English index
-      let englishCount = 0;
-      for (const translation of this.allTranslations) {
-        if (translation.type === "en") {
-          if (englishCount === enIndex) {
-            if (translation && translation.startMs !== undefined) {
-              this.seekYouTubeToTime(translation.startMs);
-              
-              // Auto-play if enabled, otherwise pause
-              if (this.autoPlayEnabled) {
-                setTimeout(() => {
-                  this.playYouTubeVideo();
-                }, 100);
-              } else {
-                setTimeout(() => {
-                  this.pauseYouTubeVideo();
-                }, 100);
-              }
-            }
-            break;
-          }
-          englishCount++;
+      const translation = this.getEnglishItem(enIndex);
+      if (translation && translation.startMs !== undefined) {
+        if (this.autoPlayEnabled) {
+          this.pendingPauseRange = {
+            startMs: translation.startMs,
+            endMs: translation.endMs,
+          };
+        } else {
+          this.pendingPauseRange = null;
+        }
+        this.seekYouTubeToTime(translation.startMs);
+
+        // Auto-play if enabled, otherwise pause
+        if (this.autoPlayEnabled) {
+          setTimeout(() => {
+            this.playYouTubeVideo();
+          }, 100);
+        } else {
+          setTimeout(() => {
+            this.pauseYouTubeVideo();
+          }, 100);
         }
       }
     }

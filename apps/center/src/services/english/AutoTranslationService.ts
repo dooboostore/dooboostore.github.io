@@ -55,14 +55,30 @@ export default (container: symbol): ConstructorType<AutoTranslationServiceType> 
       return segments;
     }
     private calculateEventTiming(event: AutoTranslationEvent): { startMs: number; endMs: number } {
-      const segments = this.extractSegmentsWithTime(event);
-      if (segments.length === 0) {
-        return { startMs: event.tStartMs, endMs: event.tStartMs + 1000 };
-      }
-      return { startMs: segments[0].startMs, endMs: segments[segments.length - 1].endMs };
+      // dDurationMs는 이벤트 전체 길이. 세그먼트 오프셋에 다시 더하면
+      // endMs가 실제보다 늘어나 인접 자막과 겹치는 원인이 된다.
+      const startMs = event.tStartMs || 0;
+      return { startMs, endMs: startMs + (event.dDurationMs || 1000) };
     }
     private extractTextFromEvent(event: AutoTranslationEvent): string {
       return this.extractSegmentsWithTime(event).map(s => s.text).join('').trim();
+    }
+    /**
+     * YouTube 자동 자막은 화면에 이전 줄을 남겨두느라 dDurationMs가
+     * 다음 줄 시작보다 길다(중앙값 약 2초). 각 줄의 endMs를 다음 줄
+     * 시작으로 잘라 타임라인 겹침을 없앤다. (병합하지 않음 — 병합하면
+     * 연속 발화가 한 덩어리로 이어져 최대 60초짜리 스텝이 생긴다)
+     */
+    private removeOverlaps(items: TranslationItemSet[]): TranslationItemSet[] {
+      items.sort((a, b) => a.startMs - b.startMs || a.endMs - b.endMs);
+      for (let i = 0; i < items.length - 1; i++) {
+        const current = items[i];
+        const next = items[i + 1];
+        if (next.startMs > current.startMs && current.endMs > next.startMs) {
+          current.endMs = next.startMs;
+        }
+      }
+      return items;
     }
     private async getTranslationData(name: string, lang: 'en' | 'ko'): Promise<TranslationItemSet[]> {
       try {
@@ -77,7 +93,7 @@ export default (container: symbol): ConstructorType<AutoTranslationServiceType> 
           const fixedEndMs = endMs < startMs ? startMs + 1000 : endMs;
           items.push({ type: lang, text, startMs, endMs: fixedEndMs });
         }
-        return items;
+        return this.removeOverlaps(items);
       } catch {
         return [];
       }
