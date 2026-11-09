@@ -233,13 +233,120 @@ ${F}
 
 ${F}cpp
 // chainable 컨트롤러 (Jazzy ChainableControllerInterface)
-std::vector<hardware_interface::CommandInterface> on_export_reference_interfaces() override;
-  // → "rl_arm_correction/joint1~4/position" 입력 자리를 내놓음
+std::vector<hardware_interface::CommandInterface::SharedPtr> on_export_reference_interfaces_list() override;
+  // → "rl_arm_correction/joint1~5/position" 입력 자리를 내놓음 (이 로봇은 팔 5축)
 return_type update_reference_from_subscribers(const rclcpp::Time &, const rclcpp::Duration &) override;
   // 체인이 아닐 때 토픽으로 받은 값을 reference에 (체인 모드에선 안 불림)
 return_type update_and_write_commands(const rclcpp::Time &, const rclcpp::Duration &) override;
   // reference + Δ → command (±0.05rad 클리핑, enabled=false면 Δ=0)
 ${F}
+
+### controller_manager는 체인에서 데이터를 어떻게 옮겨 주나
+
+먼저 오해 하나. **\`controller_manager\`는 값을 복사해서 한 컨트롤러에서 다음 컨트롤러로 옮겨 주지 않습니다.** 하는 일은 세 가지입니다.
+
+1. 모든 **칸**(변수)의 이름과 주인을 목록으로 관리한다 (Resource Manager)
+2. 컨트롤러가 "이 칸 주세요" 하면 그 칸을 **빌려준다** (소유권 확인 후 loan)
+3. 매 주기 **어떤 순서로 \`update()\`를 부를지** 정한다
+
+값이 넘어가는 것은 앞 컨트롤러가 칸에 **쓰고**, 뒤 컨트롤러가 같은 칸에서 **읽을** 때입니다. 같은 변수를 둘이 보고 있을 뿐, 중간에 복사나 전송이 없습니다.
+
+#### 칸 목록 — Resource Manager가 들고 있는 것 (이 로봇 팔 기준)
+
+${F}mermaid
+flowchart LR
+    subgraph RM["📦 Resource Manager — 칸 이름 · 주인 · 누가 빌려 갔나"]
+        direction TB
+        subgraph HWI["하드웨어가 내놓은 칸 (BeebotSystemHardware)"]
+            S1["state<br/>joint1~5/position · velocity<br/>gripper_left_joint/effort"]
+            C1["command<br/>joint1~5/position"]
+        end
+        subgraph REFI["체인 컨트롤러가 내놓은 칸 (rl_arm_correction)"]
+            R1["reference<br/>rl_arm_correction/joint1~5/position"]
+        end
+    end
+    JTC["arm_controller (JTC)"]
+    RLA["🛠 rl_arm_correction"]
+    JTC ==>|"🔑 빌림(쓰기 소유권)<br/>command_joints 이름으로 요청"| R1
+    RLA ==>|"🔑 빌림(쓰기 소유권)<br/>command_interface_configuration()"| C1
+    S1 -.->|"👀 읽기만 (여럿 가능)"| JTC
+    S1 -.->|"👀 읽기만 (여럿 가능)"| RLA
+    R1 -.->|"자기 reference 라 직접 읽음"| RLA
+${CLS}
+    class JTC,S1,C1 std;
+    class RLA,R1 rl;
+${F}
+
+| 칸 종류 | 소유권 | 이 로봇 예 |
+| --- | --- | --- |
+| state | 여러 컨트롤러가 **읽기** | \`joint2/position\` = 현재 각도 |
+| command | **한 컨트롤러만** 쓰기. 두 번째가 잡으려 하면 활성화 실패 | \`joint2/position\` → 지금은 \`rl_arm_correction\`이 소유 |
+| reference | 체인의 **앞 컨트롤러가** 쓰기, 주인(뒤 컨트롤러)이 읽기 | \`rl_arm_correction/joint2/position\` → \`arm_controller\`가 쓰는 칸 |
+
+#### 연결되는 순간 — arm_controller를 켤 때
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant SP as spawner
+    participant CM as controller_manager
+    participant RM as Resource Manager
+    participant JTC as arm_controller (JTC)
+    participant RLA as rl_arm_correction
+    Note over RLA,RM: 이미 켜져 있다 — reference 칸이 목록에 올라 있음
+    SP->>CM: arm_controller 를 켜라
+    CM->>JTC: 어떤 칸이 필요해? (command_interface_configuration)
+    JTC-->>CM: rl_arm_correction/joint1~5/position
+    CM->>RM: 이 이름들 있어? 다른 컨트롤러가 이미 잡았어?
+    RM-->>CM: 있음 — 체인 컨트롤러의 reference 칸이고 아직 주인 없음
+    CM->>RLA: 너를 체인 모드로 바꾼다 (이제 토픽 대신 앞 컨트롤러 값을 받는다)
+    CM->>RM: 소유권 JTC 로 기록
+    CM-->>JTC: 칸을 빌려줌 (이후 JTC 가 set_value 로 직접 씀)
+    Note over CM,RLA: 이름이 틀리거나 이미 잡혀 있으면 여기서 활성화 실패
+${F}
+
+- **이름 찾기는 글자 일치**다. \`command_joints\`에 적은 \`rl_arm_correction/joint1\` + \`position\`이 reference 칸 전체 이름과 같아서 찾아진다.
+- reference 칸이 목록에 있으려면 \`rl_arm_correction\`이 **먼저** 켜져 있어야 한다. 그래서 켜는 순서가 \`rl_arm_correction → arm_controller\`다.
+- 체인 모드가 되면 \`rl_arm_correction\`의 \`update_reference_from_subscribers()\`는 호출되지 않는다 (이 로봇 구현은 원래 \`return_type::OK\`만 돌려줘서 영향도 없다).
+
+#### 매 주기 — 칸을 사이에 두고 만나는 모습
+
+${F}mermaid
+flowchart TB
+    subgraph CYC["controller_manager 한 주기 (100Hz) — 호출 순서"]
+        direction TB
+        A["① 하드웨어 read()<br/>S 줄 → state 칸 갱신"]
+        B["② arm_controller update()<br/>받아 둔 경로 보간 → reference 칸에 쓰기"]
+        C["③ rl_arm_correction update_and_write_commands()<br/>reference · state 읽기 → 보정 → command 칸에 쓰기"]
+        D["④ 하드웨어 write()<br/>command 칸 읽기 → C 줄 전송"]
+        A --> B --> C --> D
+    end
+    B -. "reference 칸 (같은 메모리)" .-> C
+    A -. "state 칸" .-> B
+    A -. "state 칸" .-> C
+    C -. "command 칸" .-> D
+${CLS}
+    class A,B,D std;
+    class C rl;
+${F}
+
+- 점선이 **칸**, 실선이 **\`controller_manager\`가 부르는 순서**다. \`controller_manager\`가 하는 일은 실선(순서)뿐이고 점선(값)은 컨트롤러와 하드웨어가 직접 읽고 쓴다.
+- **②가 ③보다 먼저**여야 같은 주기 안에서 값이 전달된다 (한 주기 지연 없음). 체인에서는 \`controller_manager\`가 값을 쓰는 쪽을 먼저 돌리도록 순서를 정한다.
+- 체인이 아니라 JTC가 하드웨어 command 칸에 바로 쓰면 ③이 없는 구조가 된다.
+
+#### 이 로봇의 코드에서 보면
+
+| 단계 | 코드 (\`ml/src/rl_arm_correction.cpp\`) |
+| --- | --- |
+| reference 칸을 만들어 내놓음 | \`on_export_reference_interfaces_list()\` — \`info.name = joint + "/position"\`, \`InterfaceDescription(get_node()->get_name(), info)\`. 컨트롤러 이름이 앞에 붙어 \`rl_arm_correction/joint1/position\`이 된다 |
+| 빌릴 command · state 칸 선언 | \`command_interface_configuration()\` · \`state_interface_configuration()\` |
+| 읽기 | \`refs_[i]->get_optional<double>()\` · \`state_interfaces_[2*i].get_optional<double>()\` |
+| 쓰기 | \`command_interfaces_[i].set_value(ref[i] + corr_[i] + total)\` |
+| JTC 쪽 설정 | \`controllers.yaml\` — \`arm_controller.command_joints: [rl_arm_correction/joint1, …]\` |
+
+> 💡 **직접 확인하려면:** \`ros2 control list_hardware_interfaces\`로 칸 목록과 사용 중 여부를, \`ros2 control list_controllers\`로 켜진 컨트롤러를 본다. 이 로봇에서 체인이 정상이면 \`rl_arm_correction/joint*/position\` 칸이 목록에 나타나야 한다.
+>
+> ⚠️ 이 절의 소유권 확인·체인 모드 전환·호출 순서는 ros2_control의 일반 설계를 설명한 것이다. 이 로봇 코드로 직접 확인한 부분은 위 표의 코드 항목이고, 버전(Lyrical)에 따라 세부 동작이 다를 수 있다.
 
 - **켜는 순서:** 뒤(rl_arm_correction)를 먼저 activate해야 앞(JTC)이 그 reference를 잡을 수 있다.
 - **끄는 법:** 체인에 묶인 뒤쪽만 deactivate할 수 없다 → 파라미터 \`enabled: false\`로 Δ=0 통과.

@@ -1387,6 +1387,88 @@ controller_manager는 장치를 모릅니다. 장치별 연결·전송은 **하�
 
 <p><button class="rd-tab" data-concept="ros2control" data-cs="concept">📘 ros2_control 탭 — 개념부터 보기 →</button> <button class="rd-tab" data-concept="ros2control" data-cs="flow">▶ 한 주기 흐름 스텝퍼</button> <button class="rd-tab" data-concept="ros2control" data-cs="connect">🔧 연결 5단계</button> <button class="rd-tab" data-concept="ros2control" data-cs="robot">🤖 이 로봇 적용</button></p>
 
+### 한눈에 보기 — 누가 누구를 갖고 · 상속하고 · 부르는가
+
+**① 구성과 소유 — 한 프로세스 안에 뭐가 들어 있나**
+
+${F}mermaid
+flowchart TB
+    subgraph PROC["📦 ros2_control_node — 프로세스 1개"]
+        CM["<b>controller_manager</b><br/>100Hz 루프 · 호출 순서를 쥠"]
+        subgraph RMB["Resource Manager — controller_manager 가 소유 (칸 장부)"]
+            HWL["하드웨어 컴포넌트 목록"]
+            IFL["칸 장부<br/>state · command · reference<br/>이름 · 주인 · 빌려 간 곳"]
+        end
+        subgraph CTLS["컨트롤러들 — spawner 요청으로 로드 · controller_manager 가 소유"]
+            direction LR
+            JTC["arm_controller<br/>(JTC · ROS 기본)"]
+            RLA["🛠 rl_arm_correction<br/>ChainableControllerInterface"]
+            DD["diff_drive_controller"]
+            GR["gripper_controller"]
+            BC["broadcaster 2개"]
+        end
+        subgraph HWS["하드웨어 컴포넌트 — URDF ros2_control 태그로 로드"]
+            BSH["🛠 BeebotSystemHardware<br/>SystemInterface"]
+        end
+    end
+    OC{{"OpenCR → DYNAMIXEL 8개 + IMU"}}
+    CM -->|"소유"| RMB
+    CM -->|"매 주기 update() 호출<br/>+ 순서 결정"| CTLS
+    RMB -->|"로드 · read() · write() 호출"| HWS
+    HWS -->|"칸 등록<br/>state · command"| IFL
+    RLA -->|"칸 등록<br/>reference"| IFL
+    CTLS -.->|"칸 빌림 (소유권)"| IFL
+    BSH -->|"🔌 USB 시리얼<br/>C 줄 ↔ S 줄"| OC
+${CLS}
+    class CM,RMB,HWL,IFL,JTC,DD,GR,BC std;
+    class RLA rl;
+    class BSH std;
+    class OC hw;
+${F}
+
+**② 상속 — 우리가 만든 둘은 서로 다른 뿌리**
+
+${F}mermaid
+classDiagram
+    direction LR
+    class ControllerInterfaceBase
+    class ControllerInterface
+    class ChainableControllerInterface {
+        +on_export_reference_interfaces_list()
+        +update_reference_from_subscribers()
+        +update_and_write_commands()
+    }
+    class RlArmCorrection
+    class ActuatorInterface
+    class SensorInterface
+    class SystemInterface {
+        +read()
+        +write()
+    }
+    class BeebotSystemHardware
+    ControllerInterfaceBase <|-- ControllerInterface
+    ControllerInterfaceBase <|-- ChainableControllerInterface
+    ChainableControllerInterface <|-- RlArmCorrection
+    SystemInterface <|-- BeebotSystemHardware
+${F}
+
+위쪽 줄은 **컨트롤러 계열**(계산), 아래쪽은 **하드웨어 계열**(장치 입출력)입니다. \`ActuatorInterface\` · \`SensorInterface\` · \`SystemInterface\`는 하드웨어를 나누는 세 가지 형태이고, 이 로봇은 모터 8개와 IMU를 한 장치(OpenCR)로 묶어 \`SystemInterface\` 하나로 만들었습니다.
+
+**③ 관계를 한 표로**
+
+| 관계 | 누가 → 누구 | 이 로봇에서는 |
+| --- | --- | --- |
+| **소유** | \`controller_manager\` → Resource Manager · 컨트롤러 목록 | 컨트롤러 6개 + 하드웨어 1개를 한 프로세스에서 관리 |
+| **상속** | 우리 클래스 → ros2_control 기반 클래스 | \`RlArmCorrection\` → \`ChainableControllerInterface\`, \`BeebotSystemHardware\` → \`SystemInterface\` |
+| **로드** | spawner → 컨트롤러 / URDF → 하드웨어 | \`CONTROLLERS\` 목록 순서 / \`<ros2_control>\` 태그 |
+| **호출** | \`controller_manager\` → 컨트롤러 \`update()\` · 하드웨어 \`read()\` \`write()\` | 100Hz, read → update(체인 순서) → write |
+| **칸 등록** | 하드웨어 → state · command, 체인 컨트롤러 → reference | \`joint1/position\` 등 / \`rl_arm_correction/joint1/position\` 등 |
+| **칸 빌림** | 컨트롤러 → 칸 (쓰기는 한 컨트롤러만) | \`command_joints\` 이름 일치 + \`command_interface_configuration()\` |
+| **장치 통신** | 하드웨어 ↔ 장치 | \`BeebotSystemHardware\` ↔ OpenCR (USB 시리얼 C · S 줄) |
+
+> 위 상속 그림은 ros2_control의 일반 클래스 구조입니다. 이 저장소 코드로 직접 확인한 것은 \`RlArmCorrection : ChainableControllerInterface\`(\`ml/src/rl_arm_correction.cpp\`)와 \`BeebotSystemHardware : SystemInterface\`(\`control/src/beebot_system_hardware.cpp\`) 두 가지입니다. 중간 기반 클래스 이름은 버전(Lyrical)에 따라 다를 수 있습니다.
+
+
 ${F}mermaid
 flowchart TB
     URDF["📄 URDF 속 ros2_control 태그<br/>플러그인 · 포트 · 관절별 인터페이스"]
@@ -1442,8 +1524,280 @@ ${F}
 | URDF param | port /dev/opencr (udev 고정 이름) · baud_rate 1000000 · mock · mock_effort · 관절별 offset |
 | 관절·센서 | wheel_left/right_joint (velocity) · joint1~5 · gripper_left_joint (position, 오른쪽은 mimic) · imu |
 | 컨트롤러 | joint_state_broadcaster · imu_sensor_broadcaster · diff_drive_controller · rl_arm_correction(ml/RlArmCorrection, chainable) · arm_controller(JTC, 체인) · gripper_controller(parallel_gripper_action_controller) |
-| spawner 순서 | joint_state_broadcaster → imu_sensor_broadcaster → diff_drive_controller → **rl_arm_correction → arm_controller** → gripper_controller (체인은 뒤에서부터) |
+| spawner 순서 | joint_state_broadcaster → imu_sensor_broadcaster → diff_drive_controller → gripper_controller → **rl_arm_correction → arm_controller** (체인은 뒤에서부터 · 실패하기 쉬운 팔 체인을 맨 뒤에 — 팔이 안 켜져도 바퀴·그리퍼는 이미 켜져 있다) |
 | 그 밖에 여는 것 | ✉️ \`/motor_status\` (control/MotorStatus — E 줄 Hardware Error · S 줄 온도) · 📞 \`/beebotsystem/reboot_motors\` (펌웨어 R 줄) · 진단 "OpenCR 연결" |
+
+### 헷갈리는 것 하나씩 — 이 로봇 코드로 따라가기
+
+ros2_control은 "노드끼리 메시지를 주고받는" 일반 ROS와 달라서 처음엔 누가 누구를 어떻게 부르는지 안 보입니다. 아래는 **rl_arm_correction(팔 보정)** 하나를 예로 질문 순서대로 따라간 것입니다.
+
+#### ❓ 1. 컨트롤러는 누가 켜나 — spawner
+
+\`controllers.yaml\`에 컨트롤러를 **선언**만 해서는 안 켜집니다. launch가 띄우는 **spawner**가 이름 목록을 받아 순서대로 \`controller_manager\`에 "올려라 → 켜라"를 요청합니다 (\`ros_system/launch/ros_system.launch.py\`의 \`CONTROLLERS\`).
+
+${F}python
+CONTROLLERS = ['joint_state_broadcaster', 'imu_sensor_broadcaster', 'diff_drive_controller',
+               'gripper_controller',
+               'rl_arm_correction', 'arm_controller']
+${F}
+
+- **목록에 없으면 안 켜진다.** yaml에 \`rl_arm_correction:\`이 있어도 이 목록에 이름이 없으면 올라오지 않는다.
+- **한 spawner가 순서대로 켜고, 하나가 실패하면 거기서 멈춘다.** 그래서 실패하기 쉬운 팔 체인(관절이 URDF 한계 밖이면 예외)을 맨 뒤에 둔다 — 팔이 안 떠도 바퀴·그리퍼는 이미 떠 있다.
+- spawner가 \`--param-file controllers.yaml\`도 컨트롤러에 넘긴다. \`rl_arm_correction:\` 블록의 \`enabled\`·\`sag_gain\` 같은 값이 이렇게 들어간다.
+
+#### ❓ 2. \`type: ml/RlArmCorrection\` 한 줄로 어떻게 우리 클래스를 찾나 — pluginlib
+
+${F}yaml
+controller_manager:
+  ros__parameters:
+    rl_arm_correction:                 # ← 이름은 우리가 정한 것 (아무거나)
+      type: ml/RlArmCorrection         # ← 이 글자로 클래스를 찾는다
+${F}
+
+이 줄은 "이 이름으로 이 타입을 만들어라"일 뿐 **붙여 주는 설정이 아닙니다.** 글자가 클래스까지 이어지는 길은 세 군데로 이어져 있습니다 (pluginlib).
+
+| 단계 | 파일 | 내용 |
+| --- | --- | --- |
+| ① 클래스에 도장 | \`ml/src/rl_arm_correction.cpp\` 맨 끝 | \`PLUGINLIB_EXPORT_CLASS(ml::RlArmCorrection, controller_interface::ChainableControllerInterface)\` |
+| ② 이름표 파일 | \`ml/rl_arm_correction.xml\` | \`<class name="ml/RlArmCorrection" type="ml::RlArmCorrection" base_class_type="controller_interface::ChainableControllerInterface">\` |
+| ③ 시스템에 등록 | \`ml/CMakeLists.txt\` | \`pluginlib_export_plugin_description_file(controller_interface rl_arm_correction.xml)\` |
+
+yaml의 \`type\`이 ②의 \`name\`과 **글자가 같아서** 찾아집니다. \`controller_manager\`는 등록된 이름표에서 찾아 \`.so\`를 열고 클래스를 만듭니다. 같은 \`ml\` 패키지의 \`rl_nav_controller\`도 방식은 같고 등록 대상만 \`nav2_core\`입니다.
+
+> 하드웨어 플러그인(\`BeebotSystemHardware\`)은 \`control/control_plugins.xml\` + \`pluginlib_export_plugin_description_file(hardware_interface …)\`로 같은 방식이지만, **spawner 목록이 아니라 URDF의 \`<ros2_control>\` 태그**를 보고 시작할 때 같이 올라옵니다.
+
+#### ❓ 3. "JTC 뒤에 붙인다"는 설정은 어디 — 이름 일치
+
+\`controller_manager\`가 "이건 앞, 이건 뒤"를 따로 알지 않습니다. **이름이 글자로 맞는 것**으로 이어집니다.
+
+${F}text
+① rl_arm_correction 이 켜질 때 on_export_reference_interfaces_list() 로 입구를 내놓는다
+     info.name = "joint1/position"
+     InterfaceDescription(get_node()->get_name(), info)   ← 컨트롤러 이름이 앞에 붙는다
+     → 전체 이름:  rl_arm_correction/joint1/position   (이름을 abc로 바꾸면 abc/joint1/position)
+
+② arm_controller(JTC)의 파라미터에 이 이름을 적어 둔다 (controllers.yaml)
+     command_joints: [rl_arm_correction/joint1, … joint5]
+     command_interfaces: [position]          → rl_arm_correction/joint1/position 을 달라고 요청
+
+③ controller_manager 가 가진 입구 목록에서 그 이름을 찾아 연결한다
+     하드웨어 입구      joint1/position
+     컨트롤러가 내놓은 입구   rl_arm_correction/joint1/position   ← 일치 → JTC 가 여기에 쓴다
+${F}
+
+- **"붙이는" 설정 = \`arm_controller.command_joints\`** 한 항목. 하드웨어 이름(\`joint1\`) 대신 보정기의 입구 이름을 적었을 뿐이고, **JTC 코드는 한 줄도 고치지 않았다.**
+- 이름이 틀리면(예: \`rl_arm_corection/joint1\`) 목록에 없어서 JTC가 켜지지 않는다.
+- **순서가 필요한 이유:** 입구는 \`rl_arm_correction\`이 켜져야 목록에 나타난다. 그래서 \`rl_arm_correction → arm_controller\` 순서로 켠다.
+- JTC를 갈아끼운 게 아니라 **JTC 출력 뒤에 한 단을 끼운** 것이다. 보정을 빼면 JTC가 하드웨어에 바로 쓰는 원래 구조다.
+
+${F}text
+원래:   JTC ────────────────────────────▶ 하드웨어
+지금:   JTC ──▶ rl_arm_correction(보정) ──▶ 하드웨어
+${F}
+
+**시작할 때 일어나는 일 (1회)**
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant L as launch
+    participant CM as controller_manager
+    participant HW as BeebotSystemHardware
+    participant SP as spawner
+    participant RLA as rl_arm_correction
+    participant JTC as arm_controller (JTC)
+    L->>CM: ros2_control_node 시작 (URDF + controllers.yaml)
+    CM->>HW: URDF ros2_control 태그를 보고 플러그인 로드
+    HW-->>CM: state·command 칸 등록 (joint1/position 등)
+    L->>SP: spawner 시작 (CONTROLLERS 목록을 인자로)
+    SP->>CM: rl_arm_correction 올려라 (type: ml/RlArmCorrection)
+    CM->>RLA: pluginlib 으로 클래스 생성 → on_configure (구독 열기)
+    RLA-->>CM: reference 입구 내놓음 (rl_arm_correction/joint1~5/position)
+    SP->>CM: arm_controller 올려라
+    CM->>JTC: 생성 → command_joints 의 이름으로 입구 요청
+    CM-->>JTC: 이름이 일치하는 reference 칸을 연결
+    SP->>CM: 활성화 (switch_controller)
+    Note over CM,JTC: 이 순서 때문에 rl_arm_correction 이 arm_controller 보다 먼저
+${F}
+
+#### ❓ 4. 컨트롤러와 하드웨어 플러그인은 뭐가 다른가
+
+둘 다 \`controller_manager\` **한 프로세스 안**에 올라가는 플러그인이지만 구현하는 인터페이스와 하는 일이 다릅니다.
+
+| | \`RlArmCorrection\` (컨트롤러) | \`BeebotSystemHardware\` (하드웨어) |
+| --- | --- | --- |
+| 상속 | \`controller_interface::ChainableControllerInterface\` | \`hardware_interface::SystemInterface\` |
+| 하는 일 | **계산** — 칸을 읽어 고쳐서 다시 씀 | **입출력** — 실제 장치(OpenCR 시리얼)와 통신 |
+| 주기 함수 | \`update_and_write_commands()\` | \`read()\` · \`write()\` |
+| 칸(인터페이스) | **빌려 씀** (하드웨어가 만든 칸을 읽고 쓴다) | **내놓음** (state·command 칸을 만든다, URDF 정의) |
+| 선언 | \`command_interface_configuration()\` · \`state_interface_configuration()\` | URDF \`<ros2_control>\`의 관절·센서 정의 (\`on_init\`) |
+| 체인용 입구 | \`on_export_reference_interfaces_list()\` (이것만 있다) | 없음 |
+| 올라오는 길 | spawner 목록 | URDF \`<ros2_control>\` 태그 |
+
+컨트롤러에는 시리얼 코드가 없고, 하드웨어 플러그인은 값을 가공하지 않고 칸과 장치 사이에서 옮기기만 합니다.
+
+#### ❓ 5. 컨트롤러끼리는 토픽으로 주고받나 — 아니오, 칸(메모리)을 공유한다
+
+각 컨트롤러는 자기 입구(토픽·액션)를 **저마다 구독**하지만, 콜백은 받은 값을 **저장만** 합니다. 계산과 전달은 \`controller_manager\`가 100Hz로 부르는 \`update()\` 안에서 칸을 읽고 쓰며 일어납니다.
+
+${F}text
+[ 구독 콜백 ]    값을 박스에 저장만 (rl_arm_correction: /skill_context → ctx_box_ , /hand_relative → hand_box_)
+
+[ 한 주기 · 100Hz ]
+  ① 하드웨어 read()          OpenCR 상태(S 줄) → state 칸
+  ② 컨트롤러 update()        읽기 → 계산 → 쓰기   (칸끼리 같은 프로세스 변수 — 토픽 아님)
+  ③ 하드웨어 write()         command 칸 → C 줄로 OpenCR 에 전송
+${F}
+
+\`rl_arm_correction\`의 \`update_and_write_commands()\`가 하는 일:
+
+${F}cpp
+// 읽기 — JTC가 쓴 기준 각도(reference 칸) · 엔코더 각도·속도(state 칸)
+const auto r = refs_[i]->get_optional<double>();                    // JTC 가 이 칸에 썼다
+const auto p = state_interfaces_[2 * i].get_optional<double>();     // 현재 각도 (하드웨어가 채움)
+const auto v = state_interfaces_[2 * i + 1].get_optional<double>(); // 현재 속도
+
+// 쓰기 — 하드웨어의 command 칸
+command_interfaces_[i].set_value(ref[i] + corr_[i] + total);
+//   ref   = JTC 기준 각도    corr = 처짐 보정 적분    total = 학습 Δ + 중력 앞먹임
+${F}
+
+하드웨어는 \`write()\`에서 같은 command 칸을 직접 읽습니다 (\`get_command<double>(name + "/position")\`). 컨트롤러가 하드웨어를 부르지도, \`controller_manager\`가 값을 옮겨 적지도 않고, **둘이 같은 칸을 보고 있을 뿐**입니다.
+
+**한 주기(100Hz)에서 일어나는 일**
+
+${F}mermaid
+sequenceDiagram
+    autonumber
+    participant HW as BeebotSystemHardware
+    participant CM as controller_manager
+    participant JTC as arm_controller (JTC)
+    participant RLA as rl_arm_correction
+    participant DD as diff_drive_controller
+    loop 100Hz 반복
+        CM->>HW: read()
+        HW-->>CM: OpenCR 의 S 줄을 state 칸에 채움
+        CM->>JTC: update()
+        JTC-->>CM: reference 칸에 기준 각도 5개 쓰기
+        CM->>RLA: update_and_write_commands()
+        RLA-->>CM: reference·state 칸 읽고 → 보정 → command 칸에 쓰기
+        CM->>DD: update()
+        DD-->>CM: 바퀴 velocity command 칸에 쓰기
+        CM->>HW: write()
+        HW-->>CM: command 칸을 읽어 C 줄 하나로 OpenCR 에 전송
+    end
+    Note over JTC,RLA: 체인에서는 값을 쓰는 쪽이 읽는 쪽보다 먼저 돈다 (ros2_control 일반 설계)
+${F}
+
+#### ❓ 6. 맨 끝에서 OpenCR로 가는 모양 — C 줄 8칸
+
+\`BeebotSystemHardware::write()\`가 바퀴 2 · 팔 5 · 그리퍼 1을 **한 줄**로 합쳐 보냅니다.
+
+${F}text
+C, 바퀴L(rad/s), 바퀴R(rad/s), joint1, joint2, joint3, joint4, joint5, 그리퍼(m) [, 그리퍼 쥐는 힘 A]
+     ▲ velocity 칸                ▲ position 칸 (관절 offset 을 더해 서보 값으로)    ▲ 9번째는 생략 가능
+${F}
+
+- 바퀴는 \`wheel_left_joint/velocity\` · \`wheel_right_joint/velocity\`, 팔·그리퍼는 \`<joint>/position\` 칸을 읽는다.
+- 9번째 칸 = 그리퍼 쥐는 힘 한계(전류 A). \`gripper_controller\`의 \`max_effort\` / 액션 goal의 effort → \`gripper_left_joint/effort\` 칸 → 이 칸.
+
+#### ❓ 7. 바퀴만 / 팔만 명령하면 나머지는 — 안 튀게 처리돼 있다
+
+C 줄에는 **항상 바퀴와 팔 칸이 모두** 들어갑니다. 명령을 안 쓴 쪽은 이렇게 보냅니다.
+
+| 상황 | 바퀴 칸 | 팔 칸 |
+| --- | --- | --- |
+| 바퀴만 명령 (\`diff_drive_controller\`만 씀) | 속도 값 | 명령 없음(NaN) → **빈칸** → 펌웨어가 **현재 자세 유지** |
+| 팔만 명령 (\`arm_controller\` 체인만 씀) | 명령 없음(NaN) → **0.0** → 정지 | 각도 값 |
+
+팔 칸은 NaN이면 상태로 채우지 않고 빈칸으로 둡니다 — S를 받기 전에 0rad를 보내 팔이 튀는 것을 막기 위해서입니다.
+
+#### ❓ 8. 명령은 누가 어디서 넣나 — 입구는 컨트롤러마다 따로
+
+| 대상 | 입구 | 보내는 쪽 |
+| --- | --- | --- |
+| 바퀴 (diff_drive_controller) | 토픽 \`/cmd_vel\` | 자동: Nav2·\`approach_skill\` → \`/cmd_vel_nav\` → twist_mux → velocity_smoother → collision_monitor → \`/cmd_vel\`<br/>수동: \`manual_control\` → \`/cmd_vel_manual\` → (같은 안전 체인) |
+| 팔 (arm_controller) | 액션 \`/arm_controller/follow_joint_trajectory\` | 자동: 스킬 노드 → MoveIt (\`/plan_kinematic_path\` · \`/execute_trajectory\`) → JTC |
+| 팔 (arm_controller) | 토픽 \`/arm_controller/joint_trajectory\` | \`pose_skill\`(시작 자세) · \`manual_control\`(수동) — MoveIt 없이 JTC로 직접 |
+| 그리퍼 | 액션 \`/gripper_controller/gripper_cmd\` | 스킬 노드 · \`manual_control\` — MoveIt을 거치지 않는다 |
+| 보정기 힌트 | 토픽 \`/skill_context\` · \`/hand_relative\` | 스킬 노드 · perception |
+
+수동 명령은 \`/state/operation_mode\`가 MANUAL일 때만 \`manual_control\`이 통과시키고, 아니면 버립니다.
+
+#### ❓ 9. 그래서 어디까지가 우리가 만든 것인가
+
+| 이름 | 누가 만들었나 | 올라오는 길 |
+| --- | --- | --- |
+| \`joint_state_broadcaster\` · \`imu_sensor_broadcaster\` | ROS 기본 | spawner |
+| \`diff_drive_controller\` | ROS 기본 (설정만) | spawner |
+| \`gripper_controller\` (parallel_gripper_action_controller) | ROS 기본 (설정만) | spawner |
+| \`arm_controller\` (JointTrajectoryController) | ROS 기본 (설정만) | spawner |
+| **\`rl_arm_correction\`** | **우리** — \`ml/src/rl_arm_correction.cpp\` | spawner |
+| **\`BeebotSystemHardware\`** | **우리** — \`control/src/beebot_system_hardware.cpp\` | URDF \`<ros2_control>\` (컨트롤러가 아니라 spawner 목록에 없다) |
+
+\`CONTROLLERS\` 목록 6개 중 직접 만든 컨트롤러는 \`rl_arm_correction\` 하나이고, 하드웨어 플러그인 \`BeebotSystemHardware\`는 목록 밖에서 따로 올라옵니다. (\`rl_nav_controller\`는 Nav2 \`controller_server\`의 플러그인이라 ros2_control과는 별개 계통, \`faker\`의 \`FakeRlArmCorrection\`은 시뮬용 대체품입니다.)
+
+#### 전체 배선도 — 누가 어디로 무엇을 보내나
+
+${F}mermaid
+flowchart LR
+    subgraph IN["📥 명령을 넣는 쪽 (다른 노드)"]
+        SK["🛠 skills 노드<br/>pick · place · pose …"]
+        MV["📦 MoveIt move_group<br/>계획 + 실행"]
+        MC["🛠 manual_control<br/>MANUAL 모드일 때만 통과"]
+        NAV["📦 Nav2 · 🛠 approach_skill<br/>/cmd_vel_nav"]
+        SAFE["📦 twist_mux → velocity_smoother<br/>→ collision_monitor"]
+        PE["🛠 perception<br/>/hand_relative"]
+    end
+    subgraph CMG["📦 controller_manager — ros2_control_node 한 프로세스 · 100Hz"]
+        direction TB
+        subgraph CTL["컨트롤러 — 각자 입구를 구독 (콜백은 저장만)"]
+            JTC["arm_controller (JTC)<br/>입구: 액션 follow_joint_trajectory<br/>토픽 joint_trajectory"]
+            RLA["🛠 rl_arm_correction<br/>입구: /skill_context · /hand_relative"]
+            DD["diff_drive_controller<br/>입구: /cmd_vel"]
+            GR["gripper_controller<br/>입구: 액션 gripper_cmd"]
+        end
+        subgraph CELL["칸 — 같은 프로세스 메모리 (double)"]
+            REF["reference 칸<br/>rl_arm_correction/joint1~5/position"]
+            CMD["command 칸<br/>wheel_left·right/velocity<br/>joint1~5/position<br/>gripper_left_joint/position · effort"]
+            ST["state 칸<br/>position · velocity · effort"]
+        end
+        HW["🛠 BeebotSystemHardware<br/>read() · write()"]
+    end
+    OC{{"OpenCR 펌웨어<br/>DYNAMIXEL 8개 + IMU"}}
+    SK -->|"📞 계획 · 🎬 실행"| MV
+    MV -->|"🎬 follow_joint_trajectory"| JTC
+    SK -->|"✉️ joint_trajectory<br/>(pose_skill 시작 자세)"| JTC
+    MC -->|"✉️ joint_trajectory"| JTC
+    SK -->|"🎬 gripper_cmd"| GR
+    MC -->|"🎬 gripper_cmd"| GR
+    SK -->|"✉️ /skill_context"| RLA
+    PE -->|"✉️ /hand_relative"| RLA
+    NAV -->|"/cmd_vel_nav"| SAFE
+    MC -->|"/cmd_vel_manual"| SAFE
+    SAFE -->|"✉️ /cmd_vel"| DD
+    JTC -->|"🔗 쓰기<br/>command_joints 이름 일치"| REF
+    REF -->|"🔗 읽기"| RLA
+    ST -->|"🔗 읽기"| RLA
+    ST -->|"🔗 읽기"| JTC
+    ST -->|"🔗 읽기(odom)"| DD
+    RLA -->|"🔗 쓰기<br/>ref + 처짐 + Δ − 중력"| CMD
+    DD -->|"🔗 쓰기"| CMD
+    GR -->|"🔗 쓰기"| CMD
+    HW -->|"read: 채움"| ST
+    CMD -->|"write: 읽음"| HW
+    HW -->|"🔌 C 줄 (8칸 + 힘)"| OC
+    OC -->|"🔌 S 줄 · E 줄"| HW
+${CLS}
+    class JTC,DD,GR,SAFE,MV,NAV,REF,CMD,ST std;
+    class RLA rl;
+    class SK,MC,PE,HW std;
+    class OC hw;
+${F}
+
+- **실선 화살표 중 🔗는 토픽이 아니라 같은 프로세스 메모리의 칸 읽기·쓰기**다. 컨트롤러끼리도 컨트롤러와 하드웨어도 칸을 사이에 두고 만난다.
+- **주황색 \`rl_arm_correction\`** 만 컨트롤러 중 직접 만든 것이고, \`BeebotSystemHardware\`는 하드웨어 플러그인으로 따로 올라온다.
+- 팔만 움직이면 바퀴 command 칸은 NaN이라 C 줄에 0.0(정지)이, 바퀴만 움직이면 팔 칸은 빈칸(펌웨어가 현재 자세 유지)이 나간다.
 
 > ⚠️ 공식 TurtleBot3 Manipulation 플러그인은 팔·그리퍼의 effort(전류)를 내보내지 않아 직접 만든 BeebotSystemHardware로 바꿨다 (검토 반영 25번). PC ↔ OpenCR는 USB 시리얼 ASCII 줄 — \`C\`(바퀴 rad/s · 관절 rad · 그리퍼 m) 쓰기, \`S\`(위치·속도·전류·IMU·온도, 10ms) · \`E\`(모터 에러, 0.5초) 읽기. DYNAMIXEL BulkWrite·SyncRead와 단위 변환은 펌웨어(\`lv2_module6/firmware/beebot_opencr\`)가 한다.
 
