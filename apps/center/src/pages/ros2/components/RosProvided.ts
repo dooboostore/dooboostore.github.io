@@ -60,11 +60,11 @@ flowchart LR
     JS[✉️ /joint_states] -->|"✉️ 현재 관절각<br/>(sensor_msgs/JointState)"| MG
 ${F}
 **입력이 되는 파일 (ros_system/config/moveit)**
-- \`beebot.srdf\` — 그룹 \`arm\` = joint1~5, 이름 자세 \`home\`(전부 0), 늘 붙어 있는 링크쌍 충돌 검사 제외(disable_collisions)
+- \`beebot.srdf\` — 그룹 \`arm\` = joint1–5, 이름 자세 \`home\`(전부 0), 늘 붙어 있는 링크쌍 충돌 검사 제외(disable_collisions)
 - \`kinematics.yaml\` — \`pick_ik/PickIkPlugin\` (mode global · 회전 가중 0.5). Lyrical apt에 없어 소스 빌드 (Dockerfile)
 - \`ompl_planning.yaml\` — OMPL + 요청/응답 어댑터(시작 자세 범위·충돌 검사, 시간 최적화, 결과 검증)
 - \`joint_limits.yaml\` — 계획에 쓰는 속도·가속 한계
-- \`moveit_controllers.yaml\` — 실행 대상 = \`arm_controller\` (FollowJointTrajectory, joint1~5). 그리퍼는 MoveIt이 아니라 \`/gripper_controller/gripper_cmd\` 액션으로 따로
+- \`moveit_controllers.yaml\` — 실행 대상 = \`arm_controller\` (FollowJointTrajectory, joint1–5). 그리퍼는 MoveIt이 아니라 \`/gripper_controller/gripper_cmd\` 액션으로 따로
 
 **우리가 부르는 방식 (coordinator.cpp)**
 - 그룹 \`arm\`, 목표 = \`end_effector_link\`(손가락 끝)를 퍽 위치 2cm 상자 안에 · 방향은 위에서 아래(손끝이 바닥을 봄, 수직축 회전은 자유)
@@ -85,7 +85,7 @@ ros2 action send_goal /move_action moveit_msgs/action/MoveGroup "{
   planning_options: {plan_only: false}}"
 ${F}
 - 결과 \`error_code.val: 1\` = 성공. 실패 코드는 \`moveit_msgs/msg/MoveItErrorCodes\` (−1 계획 실패 · −31 IK 없음 등)
-- 손끝 위치 목표는 \`position_constraints\`(+\`orientation_constraints\`)로 — 팔이 닿는 범위(팔 받침에서 대략 0.3~0.4m)를 넘으면 계획 실패
+- 손끝 위치 목표는 \`position_constraints\`(+\`orientation_constraints\`)로 — 팔이 닿는 범위(팔 받침에서 대략 0.3–0.4m)를 넘으면 계획 실패
 
 **겪은 문제**
 - **5축 팔 + KDL = 계획 실패:** '위치 + 위→아래 방향' 목표에 'Unable to sample any valid states for goal tree'. MoveIt은 방향 허용 범위(±0.15rad) 안에서 목표 자세를 뽑아 IK로 정확히 맞추는데, 5축은 팔 평면 밖으로 기울 수 없어 뽑힌 자세 대부분이 불가능 → KDL 실패. **pick_ik**(오차 비용을 줄이는 방식)로 바꾸니 성공 — 손끝 오차 5.5mm · 기울기 5.5°
@@ -228,19 +228,19 @@ ros2 topic echo /cuvslam/path --once --field poses       # 경로
 grep -a 'cuvslam_slam\]' /tmp/bringup.log | tail -3
 ${F}
 
-**겪은 문제 (2026-11-09~10 실기)**
+**겪은 문제 (2026-11-09–10 실기)**
 - **\`initialpose\` 를 보내면 TF가 사라졌다** — 적용 로그의 \`get_logger().warn(...)\` 이 없는 함수라 \`AttributeError\` 가 콜백 밖으로 나가 노드가 죽음 (프로세스는 남고 \`map→odom\` 만 0개). \`warning\` 으로 고침
 - **추적이 4프레임에서 멈춤** — 카메라 serial을 안 줘서 두 RealSense 노드가 같은 장치를 잡음 (\`Device or resource busy\`). serial을 주고 재시작
 - **목표 이동이 \`Failed to transform end pose\` (error 102)** — 최신 \`map→odom\` 이 요청 시각보다 과거. 미래 여유를 0.2 → 0.5 s로 늘림. 단 목표 시작 순간 \`map→odom\` 이 1 s 넘게 비는 현상은 **원인 미확정**
-- **EKF odom이 시작 후 약 500~600 m로 발산** — \`map\` 기준 위치는 정상(map→odom이 상쇄). **원인 모름**
-- 알아 둘 점: \`map→odom\` 을 만들 때 그 영상 시각의 EKF 자세를 못 찾으면 **로그 없이 그 프레임을 건너뛴다**. EKF가 늦으면 TF 간격이 벌어진다 (평균 0.07~0.10 s, 최대 0.33~0.47 s)
+- **EKF odom이 시작 후 약 500–600 m로 발산** — \`map\` 기준 위치는 정상(map→odom이 상쇄). **원인 모름**
+- 알아 둘 점: \`map→odom\` 을 만들 때 그 영상 시각의 EKF 자세를 못 찾으면 **로그 없이 그 프레임을 건너뛴다**. EKF가 늦으면 TF 간격이 벌어진다 (평균 0.07–0.10 s, 최대 0.33–0.47 s)
 
 **\`map→odom\` 을 만드는 순서 (그래서 약한 고리)**
 1. 영상이 오면 cuVSLAM이 추적 → 카메라 자세
 2. \`publish_map\` 이 **그 영상 시각의 \`odom→base_footprint\`(EKF)** 를 TF 버퍼에서 찾는다
 3. 못 찾으면 **예외를 삼키고 이 프레임을 건너뛴다** (코드 \`except: return\`, 로그 없음 — 코드만 읽음)
 4. 찾으면 \`map→odom\` 을 계산해 **0.5 s 미래 스탬프**로 낸다
-- EKF가 늦거나(CPU 포화) 영상이 밀리면 간격이 벌어진다. 관찰: 평균 0.07~0.10 s, 최대 0.33~0.47 s, **목표 이동을 시작하는 순간 1.1~1.6 s까지** 비었다 (그때 Nav2 \`Failed to transform end pose\`, error 102)
+- EKF가 늦거나(CPU 포화) 영상이 밀리면 간격이 벌어진다. 관찰: 평균 0.07–0.10 s, 최대 0.33–0.47 s, **목표 이동을 시작하는 순간 1.1–1.6 s까지** 비었다 (그때 Nav2 \`Failed to transform end pose\`, error 102)
 
 **왜 0.5 s 미래로 내나 (\`map_tf_tolerance\`)** — Nav2가 경로 끝점을 \`map→odom\` 으로 바꿀 때 요청 시각이 최신 TF보다 미래면 실패한다. 영상 지연 때문에 최신 \`map→odom\` 이 늘 약간 과거라서 미래 시각으로 내 여유를 둔다 (map→odom은 천천히 바뀌어 안전).
 
@@ -255,7 +255,7 @@ ${F}
 - \`publish_map_tf\` (true) — false면 시각 오도메트리만 (map→odom을 다른 곳이 낼 때) · \`depth_scale_factor\` 1000 (16UC1 mm→m)
 - \`base_frame · odom_frame · map_frame\` = base_footprint · odom · map · \`initialpose_topic · odom_topic\` = /initialpose · /cuvslam/odom
 - 입력: \`/pole_front_cam/color/image_raw\` · \`aligned_depth_to_color/image_raw\` · \`camera_info\` · 띄우는 곳 \`ros_system.launch.py slam_nodes()\` (\`use_slam\` 일 때만, 지도 모드 NONE이면 안 뜸)
-- 자원: CPU 코어 약 60~65% (파이썬 노드 하나는 코어 1개를 못 넘음) · GPU 메모리 약 211 MB · RSS 약 640 MB (PSS 331 MB). 노드별 정밀 측정은 미완
+- 자원: CPU 코어 약 60–65% (파이썬 노드 하나는 코어 1개를 못 넘음) · GPU 메모리 약 211 MB · RSS 약 640 MB (PSS 331 MB). 노드별 정밀 측정은 미완
 
 **initialpose (위치 보정)**
 - RViz **2D Pose Estimate** 나 TUI(4→8 위치 지정)가 \`/initialpose\`(프레임 \`map\`)를 보내면 \`map\` 프레임을 **보정**한다. cuVSLAM은 리셋하지 않고 추적은 계속된다
@@ -273,7 +273,7 @@ ${F}
 
 **열린 질문 · TODO**
 - [ ] 목표 시작 순간 \`map→odom\` 이 1 s 넘게 비는 **근본 원인** (CPU 포화 추정, 확정 못 함)
-- [ ] EKF odom 500~600 m 발산 원인 (cuVSLAM 속도 스파이크? 바퀴 odom? 초기 전이?)
+- [ ] EKF odom 500–600 m 발산 원인 (cuVSLAM 속도 스파이크? 바퀴 odom? 초기 전이?)
 - [ ] initialpose 저장·자동 적용 (지도 폴더에 저장하고 위치추정 시작 때 적용)
 - [ ] cuVSLAM 노드별 정밀 CPU·GPU·메모리 (측정기를 돌리다 bee가 멈춰 못 얻음)
 - [ ] \`publish_map\` 이 TF를 못 찾아 건너뛰는 횟수를 로그·진단으로 노출
@@ -293,7 +293,7 @@ flowchart LR
     GG --> N
     TF[TF map→카메라<br/>cuVSLAM + URDF] --> N
     subgraph N[📦 nvblox_node]
-        VOX[3D 복셀 지도 0.05 m<br/>mapping_type dynamic] --> SL[높이 0.08~0.3 m로 자름]
+        VOX[3D 복셀 지도 0.05 m<br/>mapping_type dynamic] --> SL[높이 0.08–0.3 m로 자름]
     end
     N -->|"✉️ ~/static_occupancy_grid"| NM[🛠️ nvblox_map]
     NM -->|"✉️ /map (latched, 1 Hz)"| NAV[📦 Nav2 global_costmap]
@@ -308,8 +308,9 @@ ${F}
 - 저장은 TUI 지도 저장(4→6): \`map_saver\` 다음 \`/nvblox_node/save_map\`. 불러오기는 \`nvblox_map\` 이 시작할 때 \`/nvblox_node/load_map\`
 
 **⚠ 위치추정 모드에서도 지도는 계속 바뀐다 (실측)**
+- **그리고 안 보는 곳은 잊는다 (맵핑 녹화 실측):** 정지한 로봇의 \`/map\` 아는 칸이 5349 → 약 4445로 줄고 시야 크기에서 멈췄고, 움직이면 6938까지 늘었다가 다시 서자 32초 만에 약 1570칸 줄었다. 자세한 표와 "안 보이는 곳에 goal을 찍으면?"은 **노드동작 탭 → "⚠ 실측" 절**.
 - nvblox에는 매핑을 멈추는 설정이 없다. \`load_map\` 은 저장 지도를 **초기값으로** 불러올 뿐, 그 뒤 새 depth가 계속 쌓인다. 우리 launch는 위치추정에서 **저장만 안 한다** (디스크의 지도는 안 덮어씀)
-- 위치추정 중 40초 동안 \`/map\` 41개 중 **17~21개**에서 내용이 달랐고, 전역 코스트맵(\`/global_costmap/costmap\`) 도 13번 바뀌었다. 크기도 바뀐 적이 있다 (105×113 → 105×104)
+- 위치추정 중 40초 동안 \`/map\` 41개 중 **17–21개**에서 내용이 달랐고, 전역 코스트맵(\`/global_costmap/costmap\`) 도 13번 바뀌었다. 크기도 바뀐 적이 있다 (105×113 → 105×104)
 - Nav2의 일반 구성(map_server가 파일을 한 번 읽어 **고정**)과 다르다. 플래너가 보는 "정적 지도"가 사실은 정적이 아니다 — 가짜 장애물이 지도에 굳거나, 출발 자리가 어긋나면 어긋난 위치에 새 벽이 덧그려질 수 있다 (추정 · 실제 오염은 미확인)
 
 **플래너가 보는 지도는 \`/map\` 이 아니다**
@@ -321,7 +322,7 @@ ${F}
 - \`esdf_slice_min/max_height: 0.08 / 0.3\` — 2D로 자르는 높이. 0.03이던 것을 올렸다: depth 오차로 바닥이 3 cm 위로 찍혀 앞이 트여도 **검은 부채꼴(가짜 장애물)** 이 생겼다 (효과는 미검증)
 - \`max_integration_distance_m: 4.5\` — 3.0에서 올림. 멀리 볼수록 depth 잡음이 커진다 (미검증)
 - 카메라 2대(\`num_cameras: 2\`): camera_0 = pole_front_cam(늘), camera_1 = gripper_cam(스캔 자세일 때만, 안 꽂혀 있으면 노드째 안 뜸)
-- 자원: GPU 메모리 약 808 MB · CPU 코어 약 33~45% · 시스템 GPU 순간 최대 94% — Jetson 메모리가 빠듯해 가장 큰 부담 중 하나
+- 자원: GPU 메모리 약 808 MB · CPU 코어 약 33–45% · 시스템 GPU 순간 최대 94% — Jetson 메모리가 빠듯해 가장 큰 부담 중 하나
 
 **직접 해보기**
 ${F}bash
@@ -345,7 +346,7 @@ ${F}
 | \`…/combined_occupancy_grid\` · \`dynamic_occupancy_grid\` | OccupancyGrid | (안 씀) |
 | \`…/mesh\` | nvblox_msgs/Mesh (3D 메시 전체, 색 없으면 회색) | RViz nvblox 플러그인만 |
 | \`…/static_esdf_pointcloud\` | PointCloud2 | 보기용 (지도 전체) |
-| \`…/combined_esdf_pointcloud\` | PointCloud2 | **\`rl_nav_controller\`** (\`nav2_params.yaml points_topic\`) — 정적+동적, 높이 0.03~0.30 m 슬라이스 |
+| \`…/combined_esdf_pointcloud\` | PointCloud2 | **\`rl_nav_controller\`** (\`nav2_params.yaml points_topic\`) — 정적+동적, 높이 0.03–0.30 m 슬라이스 |
 | \`…/{static,dynamic,combined,pessimistic_static}_map_slice\` | DistanceMapSlice | (안 씀) |
 
 - 진단·디버그: \`~/esdf_slice_bounds · workspace_bounds · dynamic_points · groundplane_estimator_* · save_rates · save_timings · *_frame_overlay\`
@@ -371,7 +372,7 @@ ${F}
 | \`global_frame\` | map | cuVSLAM이 map→odom을 냄 |
 | \`integrate_depth_rate_hz\` | 15 | 카메라 15 fps에 맞춤 |
 | \`update_mesh_rate_hz / update_esdf_rate_hz / publish_layer_rate_hz\` | 2 / 5 / 2 | |
-| \`map_clearing_radius_m\` | -1 | 멀어져도 지우지 않음 (경기장 약 4.4×6.3 m 통째 기억) |
+| \`map_clearing_radius_m\` | -1 | 로봇에서 멀리 떨어진 블록을 지우는 **반경** 기능을 끔 (경기장 약 4.4×6.3 m 통째 기억하려는 의도). ⚠ **TSDF decay는 별개** — \`decay_tsdf_rate_hz\`(기본 5 Hz, **우리는 0으로 설정 — 반영 전**) · \`tsdf_decay_factor\` 0.95 때문에 기본값에선 **안 보이는 곳이 실제로 잊힘 (맵핑 녹화로 실측 — 노드동작 탭 "⚠ 실측" 절)** |
 | \`workspace_bounds_*_height_m\` | -0.1 / 0.8 | |
 
 - 값을 바꾸면 nvblox를 다시 띄워야 반영된다 (지도 모드 전환·재시작). 시야 4.5 m · 슬라이스 0.08은 **아직 실기 효과 미확인** — 바닥 잡음이 늘면 4.0 → 3.0으로 되돌릴 것. 8 cm 미만 낮은 물체는 안 남는다
@@ -387,26 +388,26 @@ ${F}
 | 항목 | 값 |
 |---|---|
 | GPU 메모리 | 약 808 MB (cuVSLAM 211 · rl_nav_controller 83 · 데스크톱 약 120 — 합계 약 1.2 GB) |
-| CPU | 약 33~45% (코어 1개 = 100%) |
+| CPU | 약 33–45% (코어 1개 = 100%) |
 | RAM(PSS) | 약 218 MB (프로세스 RSS 약 1 GB, 가상 12 GB) |
 | GPU 사용률 | 시스템 전체 평균 25%, **순간 최대 94%** (nvblox + cuVSLAM 합) |
 
 - **메모리가 가장 큰 제약.** SLAM 매핑 중 free 메모리가 약 100 MB(최소 70 MB), 스왑 사용, 연속 빈 메모리 4 MB까지 줄었다. 시야 4.5 m로 키우면 nvblox 메모리가 늘 수 있다 (미확인)
 
-**실측 — 위치추정 중에도 지도가 계속 바뀐다 (2026-11-10 11:43~44, LOCALIZATION m100, 40초씩 2회, 2회째는 사람이 카메라 앞에서 움직임)**
+**실측 — 위치추정 중에도 지도가 계속 바뀐다 (2026-11-10 11:43–44, LOCALIZATION m100, 40초씩 2회, 2회째는 사람이 카메라 앞에서 움직임)**
 
 | 토픽 | 1회 | 2회 (사람 움직임) |
 |---|---|---|
 | nvblox 원본 \`static_occupancy_grid\` | 초당 4.8 · 73번 바뀜 | 초당 4.8 · 32번 바뀜 |
 | **\`/map\`** | 초당 1.0 · **21/40** | 초당 1.0 · **17/40** |
 | **\`/global_costmap/costmap\`** | 초당 0.65 · **13/25** | 초당 0.6 · **13/23** |
-| \`/map\` 점유 칸 | 1130~1199 | 1003~1144 (변동폭 2배) |
+| \`/map\` 점유 칸 | 1130–1199 | 1003–1144 (변동폭 2배) |
 | \`/map\` 모름 칸 | 7682 → 6868 (줄어듦) | 6872 → **8252 (늘어남)** |
 | \`/map\` 크기 | 105×113 | 105×**104** |
 
 - \`/global_costmap/static_layer\` 라는 **토픽은 없다.** static_layer는 코스트맵 안의 플러그인 이름이고 실제 토픽은 \`/global_costmap/costmap\`
 - 미확인(가장 중요): 사람이 지나간 자리가 \`/map\` 에 **남는지** — 칸 단위 비교를 못 얻었다. 조용한 40초 → 움직이는 40초로 나눠 다시 재야 인과가 분리된다. 2회째 크기가 줄고 모름 칸이 늘어난 이유도 모른다
-- 코스트맵 값: 0~100, 99 = 내접, 100 = 치명, -1 = 모름
+- 코스트맵 값: 0–100, 99 = 내접, 100 = 치명, -1 = 모름
 
 **보는 법**
 
@@ -457,7 +458,7 @@ flowchart TD
     ARM -->|"reference"| RLA
     GRC[🛠️ coordinator · manual_control] -->|"🎬 /gripper_controller/gripper_cmd"| GR
     DD -->|"🔗 command wheel_*/velocity"| HW
-    RLA -->|"🔗 command joint1~5/position"| HW
+    RLA -->|"🔗 command joint1–5/position"| HW
     GR -->|"🔗 command gripper/position"| HW
     HW <-->|"시리얼 /dev/opencr 1Mbps"| OCR[OpenCR 펌웨어]
     JSB -->|"✉️ /joint_states"| OUT1[robot_state_publisher · MoveIt]

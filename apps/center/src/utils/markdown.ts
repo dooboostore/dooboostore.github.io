@@ -250,6 +250,117 @@ const enableEdgeHighlight = (svg: SVGSVGElement) => {
   });
 };
 
+
+// ── 클릭 툴팁 ─────────────────────────────────────────────────────────────────
+// 도식 소스에 주석 줄로 설명을 적는다 (mermaid는 %% 줄을 무시하므로 그림에는 영향 없음):
+//   %% tip HW: 제목 | 자세한 설명        ← 노드(또는 subgraph) id
+//   %% tip JTC>RLA: 제목 | 설명          ← 선(엣지) 출발>도착 id
+// tip 줄이 하나라도 있는 flowchart에만 켜진다. 노드를 누르면 그 노드·이웃·연결선만 선명하게 남고
+// 도식 위쪽에 설명 카드가 뜬다. 선·라벨을 눌러도 같은 카드. 빈 곳을 누르면 닫힌다.
+const parseTips = (src: string) => {
+  const tips = new Map<string, { title: string; body: string }>();
+  for (const line of src.split('\n')) {
+    const m = line.match(/^\s*%%\s*tip\s+([^:]+?)\s*:\s*(.+)$/);
+    if (!m) continue;
+    const [title, ...rest] = m[2].split('|');
+    tips.set(m[1].replace(/\s+/g, ''), rest.length ? { title: title.trim(), body: rest.join('|').trim() } : { title: '', body: title.trim() });
+  }
+  return tips;
+};
+
+const TIP_STYLE = `
+  svg.eh-nhas g.node:not(.eh-nsel):not(.eh-near), svg.eh-nhas g.cluster:not(.eh-nsel) { opacity:.22; transition:opacity .15s; }
+  g.node.eh-nsel rect, g.node.eh-nsel polygon, g.node.eh-nsel circle, g.node.eh-nsel path, g.cluster.eh-nsel rect { stroke:#2563eb !important; stroke-width:3px !important; }
+  g.node, g.cluster > .cluster-label, g.cluster > g.cluster-label { cursor:pointer; }
+`;
+
+const enableTips = (pre: HTMLElement, svg: SVGSVGElement, tips: Map<string, { title: string; body: string }>) => {
+  const doc = svg.ownerDocument;
+  const st = doc.createElementNS('http://www.w3.org/2000/svg', 'style');
+  st.textContent = TIP_STYLE;
+  svg.prepend(st);
+  // 설명 카드 — 도식 바로 위, 스크롤해도 위에 붙어 있게 sticky
+  const card = doc.createElement('div');
+  card.style.cssText = 'display:none;position:sticky;top:var(--mm-zoom-top,0px);z-index:5;margin:0 0 6px;padding:8px 12px;background:#eff6ff;border:1px solid #93c5fd;border-left:5px solid #2563eb;border-radius:8px;color:#1e3a8a;font:13px/1.65 sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.12);overflow-wrap:anywhere;';
+  (pre.parentElement?.classList.contains('mm-fig') ? pre.parentElement : pre).before(card);
+  const show = (key: string, fallbackTitle: string) => {
+    const t = tips.get(key);
+    if (!t) { card.style.display = 'none'; return; }
+    card.replaceChildren();
+    const h = doc.createElement('b');
+    h.textContent = t.title || fallbackTitle;
+    const p = doc.createElement('div');
+    p.textContent = t.body;
+    card.append(h, p);
+    card.style.display = 'block';
+  };
+
+  const prefix = `${svg.id}-`;
+  const nodeKey = (g: Element) => g.id.match(/flowchart-(.+)-\d+$/)?.[1] ?? '';
+  const clusterKey = (g: Element) => (g.id.startsWith(prefix) ? g.id.slice(prefix.length) : g.id);
+  const nodes = new Map<string, Element>();
+  svg.querySelectorAll('g.node').forEach(g => { const k = nodeKey(g); if (k) nodes.set(k, g); });
+  // 선 id = L_출발_도착_번호 — 노드 id에 _가 있어도 알려진 id 쌍으로 맞춰 본다
+  const edges: { id: string; a: string; b: string }[] = [];
+  svg.querySelectorAll('path.flowchart-link[data-id]').forEach(path => {
+    const id = path.getAttribute('data-id')!;
+    const body = id.replace(/^L_/, '').replace(/_\d+$/, '');
+    for (const a of nodes.keys()) {
+      if (!body.startsWith(`${a}_`)) continue;
+      const b = body.slice(a.length + 1);
+      if (nodes.has(b)) { edges.push({ id, a, b }); break; }
+    }
+  });
+  const clear = () => {
+    svg.classList.remove('eh-nhas');
+    svg.querySelectorAll('.eh-nsel, .eh-near').forEach(el => el.classList.remove('eh-nsel', 'eh-near'));
+    selectEdges(svg, []);
+    card.style.display = 'none';
+  };
+
+  nodes.forEach((g, key) => {
+    g.addEventListener('click', e => {
+      e.stopPropagation();
+      const inc = edges.filter(x => x.a === key || x.b === key);
+      clear();
+      svg.classList.add('eh-nhas');
+      g.classList.add('eh-nsel');
+      inc.forEach(x => { nodes.get(x.a)?.classList.add('eh-near'); nodes.get(x.b)?.classList.add('eh-near'); });
+      selectEdges(svg, inc.map(x => x.id));
+      show(key, key);
+    });
+  });
+  svg.querySelectorAll('g.cluster').forEach(g => {
+    const key = clusterKey(g);
+    if (!tips.has(key)) return;
+    g.addEventListener('click', e => {
+      e.stopPropagation();
+      clear();
+      svg.classList.add('eh-nhas');
+      g.classList.add('eh-nsel');
+      show(key, key);
+    });
+  });
+  // 선·라벨 — 기존 강조(파란 선)는 그대로 두고 설명 카드만 더한다
+  for (const ed of edges) {
+    const key = `${ed.a}>${ed.b}`;
+    const els = [edgeLabelOf(svg, ed.id)].filter(Boolean) as Element[];
+    svg.querySelectorAll(`path.flowchart-link[data-id="${ed.id}"]`).forEach(path => {
+      const hit = path.nextElementSibling;
+      if (hit?.classList.contains('eh-hit')) els.push(hit);
+    });
+    els.forEach(el => el.addEventListener('click', () => {
+      svg.classList.remove('eh-nhas');
+      svg.querySelectorAll('.eh-nsel, .eh-near').forEach(n => n.classList.remove('eh-nsel', 'eh-near'));
+      show(key, key.replace('>', ' → '));
+    }));
+  }
+  svg.addEventListener('click', e => {
+    if ((e.target as Element).closest('.node, .cluster, .edgeLabel, .eh-hit')) return;
+    clear();
+  });
+};
+
 // 큰 도식은 컨테이너 폭에 맞춰 줄여 그리므로(max-width:100%) 브라우저 확대(Ctrl +)로는 같이 안 커진다
 // (페이지가 커지면 폭도 같이 줄어 상쇄됨) → 도식 자체 확대 버튼. 확대하면 가로는 도식 안에서 스크롤.
 // 바는 pre 밖(도식과 같은 래퍼)에 sticky로 둔다 — pre는 가로 스크롤 컨테이너라 안에 두면
@@ -398,13 +509,16 @@ export const runMermaid = async (scope: ParentNode): Promise<void> => {
   // 문서에 붙지 않은 staging 컨테이너도 그려야 하므로 isConnected로 거르지 않는다.
   for (const el of targets) {
     try {
-      const { svg, bindFunctions } = await mermaid.render(`mermaid-${++mermaidSeq}`, el.textContent ?? '');
+      const source = el.textContent ?? '';
+      const { svg, bindFunctions } = await mermaid.render(`mermaid-${++mermaidSeq}`, source);
       el.innerHTML = svg;
       bindFunctions?.(el);
       const svgEl = el.querySelector('svg');
       if (svgEl) pinMermaidWidth(svgEl);
       if (svgEl && svgEl.querySelector('path.flowchart-link')) enableEdgeHighlight(svgEl);
       if (svgEl) addZoom(el as HTMLElement, svgEl);
+      const tips = parseTips(source);
+      if (svgEl && tips.size && svgEl.querySelector('path.flowchart-link, g.node')) enableTips(el as HTMLElement, svgEl, tips);
       el.setAttribute('data-processed', 'true');
     } catch (e) {
       console.warn('[mermaid] render failed — leaving the source text', e);
