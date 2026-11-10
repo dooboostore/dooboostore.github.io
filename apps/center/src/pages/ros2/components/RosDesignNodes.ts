@@ -1037,7 +1037,7 @@ export const renderCatalog = (backLabel?: string) => {
       ${ioTable(d.outputs, d.id, '받는 쪽')}
       ${d.params?.length ? `<h5>⚙️ 주요 파라미터</h5><ul class="rd-params">${d.params.map(p => `<li>${linkParam(p, d.id)}</li>`).join('')}</ul>` : ''}
       ${d.setup?.length ? `<h5>🔧 직접 연결·설정할 것</h5><ol class="rd-setup">${d.setup.map(n => `<li>${esc(n)}</li>`).join('')}</ol>` : ''}
-      ${d.guide ? `<button class="rd-guide" data-concept="${d.guide.split(':')[0]}" data-cs="${d.guide.split(':')[1] ?? ''}">📘 ros2_control 탭에서 자세히 →</button>` : ''}
+      ${d.guide ? `<button class="rd-guide" data-concept="${d.guide.split(':')[0]}" data-cs="${d.guide.split(':')[1] ?? ''}">📘 노드동작 → ros2_control 에서 자세히 →</button>` : ''}
       ${d.notes?.length ? `<h5>📝 주의</h5><ul>${d.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}
     </section>`).join('')).join('');
   const msgs = MSG_DEFS.map(([f, body]) => `<div class="rd-msg"><div class="rd-msgf">${esc(f)}</div><pre><code>${esc(body)}</code></pre></div>`).join('');

@@ -694,10 +694,10 @@ export default (w: Window) => {
     private step = 0;
     private timer?: number;
 
-    /** ?concept=ros2control&cs=섹션 — 클릭 push·뒤로가기·딥링크 */
+    /** ?concept=nodeops&tab=ros2control&cs=섹션 — 클릭 push·뒤로가기·딥링크 */
     @subscribeSwcAppRouteChange('/ros2', { trigger: 'connectedDone' })
-    onRoute(@swcAppRouteQueryParam('concept') concept: string | null, @swcAppRouteQueryParam('cs') cs: string | null) {
-      if (concept !== 'ros2control') return;
+    onRoute(@swcAppRouteQueryParam('concept') concept: string | null, @swcAppRouteQueryParam('tab') tab: string | null, @swcAppRouteQueryParam('cs') cs: string | null) {
+      if (concept !== 'nodeops' || tab !== 'ros2control') return;
       const sec: Sec = cs && cs in SECTIONS ? (cs as Sec) : 'concept';
       if (sec === this.sec) return;
       const first = this.sec === undefined;
@@ -709,7 +709,7 @@ export default (w: Window) => {
     @swcAppRouteGo
     private goSec(sec: Sec) {
       if (sec === this.sec) return false;
-      return { path: `/ros2?concept=ros2control&cs=${sec}`, scrollToTop: false };
+      return { path: `/ros2?concept=nodeops&tab=ros2control&cs=${sec}`, scrollToTop: false };
     }
 
     private async render2() {

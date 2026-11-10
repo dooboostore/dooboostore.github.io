@@ -19,9 +19,9 @@ type RosConcept =
   | 'distro' | 'install'
   | 'node' | 'patterns' | 'comm' | 'msgs' | 'param' | 'launch'
   | 'dds' | 'qos'
-  | 'cli' | 'pkg' | 'bag' | 'tf' | 'slam' | 'slamstack' | 'localization' | 'urdf' | 'ros2control'
+  | 'cli' | 'pkg' | 'bag' | 'tf' | 'slam' | 'slamstack' | 'localization' | 'urdf'
   | 'eco'
-  | 'design' | 'provided';
+  | 'design' | 'provided' | 'nodeops';
 
 const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] = [
   { id: 'distro', label: '배포판 지도', el: 'center-ros2-distro', group: 'start' },
@@ -42,10 +42,10 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'slamstack', label: 'SLAM 구성 비교', el: 'center-ros2-slamstack', group: 'tools' },
   { id: 'localization', label: '위치추정', el: 'center-ros2-localization', group: 'tools' },
   { id: 'urdf', label: 'URDF·암', el: 'center-ros2-urdf', group: 'tools' },
-  { id: 'ros2control', label: 'ros2_control', el: 'center-ros2-control', group: 'tools' },
   { id: 'eco', label: '생태계', el: 'center-ros2-eco', group: 'eco' },
   { id: 'design', label: '실전노드설계', el: 'center-ros2-design', group: 'real' },
   { id: 'provided', label: '제공노드', el: 'center-ros2-provided', group: 'real' },
+  { id: 'nodeops', label: '노드동작', el: 'center-ros2-nodeops', group: 'real' },
 ];
 
 export default (w: Window) => {

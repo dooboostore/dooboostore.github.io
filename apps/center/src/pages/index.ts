@@ -51,6 +51,7 @@ import RosMsgs from './ros2/components/RosMsgs';
 import RosParamDict from './ros2/components/RosParamDict';
 import RosControl from './ros2/components/RosControl';
 import RosProvided from './ros2/components/RosProvided';
+import RosNodeOps from './ros2/components/RosNodeOps';
 import RosSim from './ai/components/RosSim';
 import AiPage from './ai/AiPage';
 import EnglishListPage from './english/EnglishListPage';
@@ -213,6 +214,7 @@ export const pageFactories = [
   RosParamDict,
   RosControl,
   RosProvided,
+  RosNodeOps,
   RosSim,
   AiPage,
   EnglishListPage,

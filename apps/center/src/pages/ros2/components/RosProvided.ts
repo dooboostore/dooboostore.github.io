@@ -4,7 +4,7 @@ import { markdownParse } from '@center-src/utils/markdown';
 const tagName = 'center-ros2-provided';
 
 // 제공 노드(📦) — 직접 만들지 않고 가져다 쓰는 ROS 2 패키지. 실전노드설계(beebot)에서 실제로 띄우는 설정 기준.
-type Pkg = 'map' | 'moveit' | 'nav2' | 'rtabmap' | 'control' | 'ekf' | 'rsp' | 'mux' | 'realsense' | 'diag' | 'mapsaver';
+type Pkg = 'map' | 'moveit' | 'nav2' | 'rtabmap' | 'cuvslam' | 'nvblox' | 'control' | 'ekf' | 'rsp' | 'mux' | 'realsense' | 'diag' | 'mapsaver';
 
 const F = '```';
 
@@ -191,6 +191,251 @@ ${F}
 **겪은 문제**
 - depth 영상으로 격자(Grid/Sensor 1)를 만들면 pole_cam에 찍힌 **팔이 로봇 둘레 벽**으로 남아 출발점이 늘 장애물 → 자동 탐사가 한 곳도 못 감 → points_filtered로
 - 팔이 pole_cam 앞을 가리면 그 뒤가 영영 '모름' → 매핑할 땐 팔을 접어 둔다`,
+  },
+
+  cuvslam: {
+    label: 'cuVSLAM (위치)',
+    md: `**📦 cuVSLAM — 카메라 영상으로 "내가 지금 어디 있나"를 계산해 \`map→odom\` 을 낸다.** NVIDIA의 GPU 시각 SLAM(PyCuVSLAM)을 우리 파이썬 노드 \`cuvslam_slam\` 이 감싸서 쓴다. **지도는 만들지 않는다 — 지도는 nvblox 담당.** 앞 카메라의 컬러+depth(RGBD)로 로봇의 이동량을 구하고, 출발 자리를 원점 \`(0,0)\` 으로 삼은 \`map\` 좌표에서의 위치를 낸다.
+${F}mermaid
+flowchart LR
+    RGB[✉️ /pole_front_cam/color/image_raw] -->|"컬러"| C
+    D[✉️ aligned_depth_to_color] -->|"깊이 (0.5 m 안 = 자기 팔은 마스크로 뺌)"| C
+    subgraph C[📦 cuvslam_slam — cuVSLAM RGBD + 루프 클로저]
+        TRK[영상 추적] --> POSE[map 좌표의 로봇 자세]
+    end
+    EKFIN[📦 EKF<br/>TF odom→base_footprint] -->|"그 영상 시각의 odom 자세를 읽음"| C
+    C -->|"TF map→odom<br/>영상 시각 + 0.5 s 미래로 발행"| NAV[📦 Nav2 · nvblox]
+    C -->|"✉️ /cuvslam/odom<br/>속도만 (vx·vy·ωz)"| EKFOUT[📦 EKF 입력 odom1<br/>바퀴·IMU와 합침]
+    C -->|"✉️ /cuvslam/path<br/>최근 3000개"| VIEW[RViz]
+    INIT[✉️ /initialpose] -->|"map 프레임 보정"| C
+${F}
+- 위치는 두 단계다: **EKF**(바퀴+IMU+시각)가 부드러운 \`odom→base_footprint\`, **cuVSLAM**이 \`map→odom\` 보정을 낸다. 둘을 곱하면 지도 안의 로봇 위치.
+- \`/cuvslam/odom\` 은 **속도만** 낸다. 추적을 잃으면 cuVSLAM 좌표가 새로 시작해서 자세를 EKF에 넣으면 튀기 때문이다.
+- **저장 지도를 불러오지 않는다.** 위치추정 모드에서도 cuVSLAM은 출발 자리를 \`(0,0)\` 으로 *새로 시작*한다 (자체 지도 저장·재위치추정 없음). 그래서 **출발 자리·방향이 저장할 때와 같아야** 지도와 맞는다. 어긋나면 \`/initialpose\` 로 사람이 보정.
+
+**우리 설정 (cuvslam_slam.py 파라미터)**
+- 모드 **RGBD** (D435는 IMU가 없어 VIO 불가) · 루프 클로저 + 평면 제약(x·y·yaw만 — 경기장 바닥은 평평)
+- \`min_depth: 0.5\` m — 화면 가운데 찍히는 자기 팔은 로봇과 같이 움직여 회전을 덜 잡게 하므로 추적에서 뺌
+- \`map_tf_tolerance: 0.5\` s — \`map→odom\` 을 영상 시각보다 **미래**로 발행. Nav2가 경로 끝점을 변환할 때 요청 시각이 최신 TF보다 미래면 실패하기 때문 (0.2 s일 때 목표 이동이 \`Failed to transform end pose\` 로 중단됐다)
+- \`linear_variance · angular_variance: 0.0025\` — EKF에 주는 속도 분산 (실측으로 맞출 값)
+- 입력은 \`ApproximateTimeSynchronizer\` 로 컬러·depth를 묶음 (허용 차이 0.02 s)
+
+**직접 해보기**
+${F}bash
+ros2 run tf2_ros tf2_echo map odom                       # map→odom 이 나오나
+ros2 topic echo /cuvslam/path --once --field poses       # 경로
+# bringup 로그에서 10초마다: "추적 N · 잃음 M · 경로 K" — 정상은 N이 초당 약 15씩 늘고 M은 0
+grep -a 'cuvslam_slam\]' /tmp/bringup.log | tail -3
+${F}
+
+**겪은 문제 (2026-11-09~10 실기)**
+- **\`initialpose\` 를 보내면 TF가 사라졌다** — 적용 로그의 \`get_logger().warn(...)\` 이 없는 함수라 \`AttributeError\` 가 콜백 밖으로 나가 노드가 죽음 (프로세스는 남고 \`map→odom\` 만 0개). \`warning\` 으로 고침
+- **추적이 4프레임에서 멈춤** — 카메라 serial을 안 줘서 두 RealSense 노드가 같은 장치를 잡음 (\`Device or resource busy\`). serial을 주고 재시작
+- **목표 이동이 \`Failed to transform end pose\` (error 102)** — 최신 \`map→odom\` 이 요청 시각보다 과거. 미래 여유를 0.2 → 0.5 s로 늘림. 단 목표 시작 순간 \`map→odom\` 이 1 s 넘게 비는 현상은 **원인 미확정**
+- **EKF odom이 시작 후 약 500~600 m로 발산** — \`map\` 기준 위치는 정상(map→odom이 상쇄). **원인 모름**
+- 알아 둘 점: \`map→odom\` 을 만들 때 그 영상 시각의 EKF 자세를 못 찾으면 **로그 없이 그 프레임을 건너뛴다**. EKF가 늦으면 TF 간격이 벌어진다 (평균 0.07~0.10 s, 최대 0.33~0.47 s)
+
+**\`map→odom\` 을 만드는 순서 (그래서 약한 고리)**
+1. 영상이 오면 cuVSLAM이 추적 → 카메라 자세
+2. \`publish_map\` 이 **그 영상 시각의 \`odom→base_footprint\`(EKF)** 를 TF 버퍼에서 찾는다
+3. 못 찾으면 **예외를 삼키고 이 프레임을 건너뛴다** (코드 \`except: return\`, 로그 없음 — 코드만 읽음)
+4. 찾으면 \`map→odom\` 을 계산해 **0.5 s 미래 스탬프**로 낸다
+- EKF가 늦거나(CPU 포화) 영상이 밀리면 간격이 벌어진다. 관찰: 평균 0.07~0.10 s, 최대 0.33~0.47 s, **목표 이동을 시작하는 순간 1.1~1.6 s까지** 비었다 (그때 Nav2 \`Failed to transform end pose\`, error 102)
+
+**왜 0.5 s 미래로 내나 (\`map_tf_tolerance\`)** — Nav2가 경로 끝점을 \`map→odom\` 으로 바꿀 때 요청 시각이 최신 TF보다 미래면 실패한다. 영상 지연 때문에 최신 \`map→odom\` 이 늘 약간 과거라서 미래 시각으로 내 여유를 둔다 (map→odom은 천천히 바뀌어 안전).
+
+| 값 | 결과 |
+|---|---|
+| 0.2 s (예전) | 실제 여유는 평균 +0.07 s뿐 → 목표 이동이 error 102로 중단 |
+| **0.5 s (현재, 2026-11-10)** | 평균 +0.38 s, 최소 +0.18 s. 단 목표 시작 순간의 1 s 넘는 빈틈은 이것만으로는 못 막음 |
+
+**EKF 연결 (ekf.yaml)** — \`odom1: /cuvslam/odom\` 에서 **vx·vy만** 사용, yaw는 IMU만. 바퀴 \`/odom\`(vx·vy)·IMU(ωz)와 합쳐 \`odom→base_footprint\` TF와 \`/odometry/filtered\` 를 **EKF 하나만** 낸다.
+
+**그 밖의 파라미터 · 입력**
+- \`publish_map_tf\` (true) — false면 시각 오도메트리만 (map→odom을 다른 곳이 낼 때) · \`depth_scale_factor\` 1000 (16UC1 mm→m)
+- \`base_frame · odom_frame · map_frame\` = base_footprint · odom · map · \`initialpose_topic · odom_topic\` = /initialpose · /cuvslam/odom
+- 입력: \`/pole_front_cam/color/image_raw\` · \`aligned_depth_to_color/image_raw\` · \`camera_info\` · 띄우는 곳 \`ros_system.launch.py slam_nodes()\` (\`use_slam\` 일 때만, 지도 모드 NONE이면 안 뜸)
+- 자원: CPU 코어 약 60~65% (파이썬 노드 하나는 코어 1개를 못 넘음) · GPU 메모리 약 211 MB · RSS 약 640 MB (PSS 331 MB). 노드별 정밀 측정은 미완
+
+**initialpose (위치 보정)**
+- RViz **2D Pose Estimate** 나 TUI(4→8 위치 지정)가 \`/initialpose\`(프레임 \`map\`)를 보내면 \`map\` 프레임을 **보정**한다. cuVSLAM은 리셋하지 않고 추적은 계속된다
+- 첫 추적 프레임 전에 받으면 **대기**했다가 첫 프레임 뒤에 적용 (로그 \`initialpose 대기 — 첫 추적 프레임 뒤 적용\`)
+- **메모리에만 저장** — 파일에 안 남는다. 재시작하면 사라지고 저장 지도로 위치추정을 올릴 때마다 원점부터 새로 시작하므로 출발 자리·방향이 다르면 **매번 다시 찍어야** 한다. (자동 적용·저장은 아직 없음 — TODO)
+- 안 찍어도 \`map→odom\` 은 나온다. 필요한 건 "지도와 실제 위치 맞추기"지 TF 발행 조건이 아니다
+
+**운영 규칙 · 주의**
+- 카메라 serial을 항상 지정한다 (\`start.sh\` 는 환경변수 \`POLE_FRONT_CAM_SERIAL · GRIPPER_CAM_SERIAL\` 또는 launch 인자). state_manager의 launch 재시작은 \`start.sh\` 를 거치지 않고 **기록된 인자 그대로** 다시 띄운다
+- 그립퍼 캠은 \`use_gripper_cam:=auto\` 라서 안 꽂혀 있으면 관련 노드가 안 뜬다. cuVSLAM은 pole_front_cam만 쓰므로 영향 없음
+- 추적을 잃으면(\`잃음 N\` 증가) cuVSLAM 좌표가 새로 시작해 \`map→odom\` 이 튈 수 있다
+- 새 프로세스가 스택을 못 보는 현상 때문에 **스택 시작 후 1분 안에** 재야 안정적이다. 같은 이유로 \`run-cli restart cuvslam_slam\` 은 \`/cmd/restart 구독자 없음\` → 스택 전체 재시작으로 우회
+
+**cuvslam.rviz** (TUI 4 지도/위치 → \`e\`, 또는 \`RVIZ_CONFIG=cuvslam ./run-rviz\`) — 위에서 내려다보는 시점에 \`cuVSLAM Path\` · **odom 3종 비교**: EKF 융합 \`/odometry/filtered\`(초록, Nav2가 쓰는 것, 켜짐) · 바퀴 \`/odom\`(주황, 꺼짐) · \`/cuvslam/odom\`(보라, 꺼짐; 속도만이라 자세 화살표는 의미 없음) · \`/map\` 배경. 실기에서 열어 본 적은 없다. \`/odometry/filtered\` 가 \`map\` 에서 500 m 떨어져 보이면 EKF 발산이다.
+
+**열린 질문 · TODO**
+- [ ] 목표 시작 순간 \`map→odom\` 이 1 s 넘게 비는 **근본 원인** (CPU 포화 추정, 확정 못 함)
+- [ ] EKF odom 500~600 m 발산 원인 (cuVSLAM 속도 스파이크? 바퀴 odom? 초기 전이?)
+- [ ] initialpose 저장·자동 적용 (지도 폴더에 저장하고 위치추정 시작 때 적용)
+- [ ] cuVSLAM 노드별 정밀 CPU·GPU·메모리 (측정기를 돌리다 bee가 멈춰 못 얻음)
+- [ ] \`publish_map\` 이 TF를 못 찾아 건너뛰는 횟수를 로그·진단으로 노출
+- [ ] 추적 잃음 복구 동작 정리
+
+**관련 코드** — 노드 \`ros_system/scripts/cuvslam_slam.py\` · EKF \`ros_system/config/ekf.yaml\` · Nav2 TF 허용 \`nav2_params.yaml\`(\`transform_tolerance\`) · 위치 지정 UI \`tools/cli/op/pages/ab/core.py _publish_initialpose\``,
+  },
+
+  nvblox: {
+    label: 'nvblox (지도)',
+    md: `**📦 nvblox — 깊이 영상을 3D 복셀 지도로 쌓고, 그걸 2D 점유 격자 \`/map\` 으로 만든다.** NVIDIA Isaac ROS nvblox(GPU). **위치는 cuVSLAM이 알려 주고, nvblox는 그 위치에서 본 depth를 \`map\` 좌표에 쌓을 뿐이다.** 그래서 위치가 틀리면 지도도 틀어진다.
+${F}mermaid
+flowchart LR
+    PD[✉️ pole_front_cam 정렬 depth] -->|"카메라 0.5 m 안 = 자기 몸 → 0"| PG[🛠️ pole_depth_gate]
+    GD[✉️ gripper_cam 정렬 depth] -->|"스캔 자세일 때만 통과"| GG[🛠️ gripper_depth_gate]
+    PG --> N
+    GG --> N
+    TF[TF map→카메라<br/>cuVSLAM + URDF] --> N
+    subgraph N[📦 nvblox_node]
+        VOX[3D 복셀 지도 0.05 m<br/>mapping_type dynamic] --> SL[높이 0.08~0.3 m로 자름]
+    end
+    N -->|"✉️ ~/static_occupancy_grid"| NM[🛠️ nvblox_map]
+    NM -->|"✉️ /map (latched, 1 Hz)"| NAV[📦 Nav2 global_costmap]
+    N -->|"✉️ ~/combined_esdf_pointcloud"| RL[🛠️ rl_nav_controller]
+    N -->|"✉️ ~/mesh 3D 메시 (회색)"| VIEW[RViz nvblox 플러그인]
+    SM[🛠️ state_manager] -.->|"launch째 다시 띄움 (map:=slam / saved)"| N
+${F}
+**지도 한 벌 = 폴더 하나 \`<map_dir>/<이름>/\`**
+- \`nvblox.nvblx\` — **위치추정의 정본** (3D, 예: 12.5 MB). 지도 목록은 이 파일이 있는 폴더만 인식
+- \`map.pgm\` + \`map.yaml\` — 사람이 보는 미리보기 (map_saver가 \`/map\` 을 저장)
+- \`nvblox.nvblx.png\` · \`.yaml\` — nvblox가 저장할 때 같이 쓰는 같은 2D 격자 (사실상 중복)
+- 저장은 TUI 지도 저장(4→6): \`map_saver\` 다음 \`/nvblox_node/save_map\`. 불러오기는 \`nvblox_map\` 이 시작할 때 \`/nvblox_node/load_map\`
+
+**⚠ 위치추정 모드에서도 지도는 계속 바뀐다 (실측)**
+- nvblox에는 매핑을 멈추는 설정이 없다. \`load_map\` 은 저장 지도를 **초기값으로** 불러올 뿐, 그 뒤 새 depth가 계속 쌓인다. 우리 launch는 위치추정에서 **저장만 안 한다** (디스크의 지도는 안 덮어씀)
+- 위치추정 중 40초 동안 \`/map\` 41개 중 **17~21개**에서 내용이 달랐고, 전역 코스트맵(\`/global_costmap/costmap\`) 도 13번 바뀌었다. 크기도 바뀐 적이 있다 (105×113 → 105×104)
+- Nav2의 일반 구성(map_server가 파일을 한 번 읽어 **고정**)과 다르다. 플래너가 보는 "정적 지도"가 사실은 정적이 아니다 — 가짜 장애물이 지도에 굳거나, 출발 자리가 어긋나면 어긋난 위치에 새 벽이 덧그려질 수 있다 (추정 · 실제 오염은 미확인)
+
+**플래너가 보는 지도는 \`/map\` 이 아니다**
+- 전역 플래너(NavfnPlanner, A*) = \`/global_costmap/costmap\` : \`static_layer\`(= /map) + \`inflation_layer\`(0.18 m). **\`obstacle_layer\` 설정은 있지만 plugins 목록에 없어 꺼져 있다** — 새 장애물은 전역 계획에 안 들어가고 로컬 코스트맵만 피한다
+- 컨트롤러 = \`/local_costmap/costmap\` (3×3 m가 로봇을 따라감) + ESDF 점구름 \`/nvblox_node/combined_esdf_pointcloud\`
+
+**우리 설정 (nvblox.yaml)**
+- \`voxel_size: 0.05\` · \`mapping_type: dynamic\` · \`esdf_mode: 2d\` · \`use_color: false\` (GPU·메모리 절약 — 그래서 RViz 메시가 **회색**)
+- \`esdf_slice_min/max_height: 0.08 / 0.3\` — 2D로 자르는 높이. 0.03이던 것을 올렸다: depth 오차로 바닥이 3 cm 위로 찍혀 앞이 트여도 **검은 부채꼴(가짜 장애물)** 이 생겼다 (효과는 미검증)
+- \`max_integration_distance_m: 4.5\` — 3.0에서 올림. 멀리 볼수록 depth 잡음이 커진다 (미검증)
+- 카메라 2대(\`num_cameras: 2\`): camera_0 = pole_front_cam(늘), camera_1 = gripper_cam(스캔 자세일 때만, 안 꽂혀 있으면 노드째 안 뜸)
+- 자원: GPU 메모리 약 808 MB · CPU 코어 약 33~45% · 시스템 GPU 순간 최대 94% — Jetson 메모리가 빠듯해 가장 큰 부담 중 하나
+
+**직접 해보기**
+${F}bash
+ros2 topic hz /nvblox_node/static_occupancy_grid         # nvblox 원본 격자 (초당 약 5)
+ros2 topic hz /map                                       # nvblox_map이 다시 낸 것 (초당 1, 새 격자일 때만)
+ros2 topic echo /map --once --field info                 # 지도 크기·해상도·원점
+ros2 service call /nvblox_node/save_map nvblox_msgs/srv/FilePath "{file_path: /tmp/test.nvblx}"
+rviz2 -d lv2_module6/tools/rviz/nvblox.rviz              # 3D 메시 · ESDF · 코스트맵 (TUI 4 → d)
+${F}
+
+**겪은 문제**
+- 지도 저장이 \`tools/\` 에 떨어지고 위치추정이 NONE으로 시작 — 이름이 경로로 처리됨 / 저장 뒤 전환이 nvblx 없는 폴더로 감. 고침
+- 이름 저장 시 \`map_saver가 저장하지 못했습니다\` — 새 이름 폴더가 없었음. 폴더를 만들게 고침
+- nvblox 3D 메시·ESDF 표시 설정(\`nvblox.rviz\`)은 만들었지만 **실기에서 열어 본 적은 없다**
+
+**토픽 (nvblox_node가 내는 것)** — 출처: \`nvblox_node.cpp\` 의 \`"~/…"\` 정의 + 우리 코드 사용처 (코드만 읽음, 실행 중인 노드에서 직접 확인 안 함 — 새 프로세스가 스택을 못 보는 현상 때문에 \`ros2 topic list\` 가 비었음)
+
+| 토픽 | 타입 | 누가 쓰나 |
+|---|---|---|
+| \`/nvblox_node/static_occupancy_grid\` | OccupancyGrid | **\`nvblox_map\`** → \`/map\` 으로 다시 냄 |
+| \`…/combined_occupancy_grid\` · \`dynamic_occupancy_grid\` | OccupancyGrid | (안 씀) |
+| \`…/mesh\` | nvblox_msgs/Mesh (3D 메시 전체, 색 없으면 회색) | RViz nvblox 플러그인만 |
+| \`…/static_esdf_pointcloud\` | PointCloud2 | 보기용 (지도 전체) |
+| \`…/combined_esdf_pointcloud\` | PointCloud2 | **\`rl_nav_controller\`** (\`nav2_params.yaml points_topic\`) — 정적+동적, 높이 0.03~0.30 m 슬라이스 |
+| \`…/{static,dynamic,combined,pessimistic_static}_map_slice\` | DistanceMapSlice | (안 씀) |
+
+- 진단·디버그: \`~/esdf_slice_bounds · workspace_bounds · dynamic_points · groundplane_estimator_* · save_rates · save_timings · *_frame_overlay\`
+- 서비스: \`/nvblox_node/save_map\` (CLI/TUI 지도 저장) · \`/nvblox_node/load_map\` (\`nvblox_map\` 이 \`map:=saved\` 로 시작할 때) — 둘 다 nvblox_msgs/FilePath, 실기 확인. \`~/save_ply · get_esdf_and_gradient\` 는 안 씀
+- 입력: \`camera_0/depth/image · camera_info · color/…\`, \`camera_1/…\` — 모두 **게이트를 거친 depth**(\`/…/aligned_depth_to_color/image_nvblox\`)로 리맵 (\`ros_system.launch.py camera_remaps\`), QoS \`SENSOR_DATA\`
+
+**지도 파일 (저장·불러오기)** — 지도 한 벌 = 폴더 하나 \`<map_dir>/<이름>/\` (실기 \`map_dir\` = \`lv2_module6/ros2_ws/map\`)
+
+| 파일 | 만든 쪽 | 용도 | 크기 (예: m100) |
+|---|---|---|---|
+| \`nvblox.nvblx\` | nvblox \`~/save_map\` | 위치추정 정본 (3D). 목록은 이 파일이 있는 폴더만 인식 | 12.5 MB |
+| \`map.pgm\` + \`map.yaml\` | \`map_saver\` | 사람이 보는 미리보기 · TUI 지도 화면 | 28 KB |
+| \`nvblox.nvblx.png\` + \`.yaml\` | nvblox가 같이 씀 | \`map.pgm\` 과 같은 2D 격자 — 사실상 중복, 지워도 다시 생김 | 작음 |
+
+- **매핑(\`map:=slam\`)**: 새 폴더를 만든다 (이미 있으면 덮어쓰지 않고 중단). TUI 저장은 \`map_saver\` → \`nvblox save_map\` 순서로 둘 다
+- **위치추정(\`map:=saved map_name:=…\`)**: 시작할 때 \`load_map\`. 폴더에 \`nvblox.nvblx\` 가 없으면 NONE(지도 없음)으로 시작
+- 지도 이름을 입력하면 \`<map_dir>/<이름>/\`, 경로 문자를 넣으면 그 경로. 이름만 넣고 폴더가 없으면 만든다 (예전엔 \`Unable to open file\` 로 실패)
+
+**설정 (nvblox.yaml) — 위에 없는 값**
+
+| 파라미터 | 값 | 뜻 |
+|---|---|---|
+| \`global_frame\` | map | cuVSLAM이 map→odom을 냄 |
+| \`integrate_depth_rate_hz\` | 15 | 카메라 15 fps에 맞춤 |
+| \`update_mesh_rate_hz / update_esdf_rate_hz / publish_layer_rate_hz\` | 2 / 5 / 2 | |
+| \`map_clearing_radius_m\` | -1 | 멀어져도 지우지 않음 (경기장 약 4.4×6.3 m 통째 기억) |
+| \`workspace_bounds_*_height_m\` | -0.1 / 0.8 | |
+
+- 값을 바꾸면 nvblox를 다시 띄워야 반영된다 (지도 모드 전환·재시작). 시야 4.5 m · 슬라이스 0.08은 **아직 실기 효과 미확인** — 바닥 잡음이 늘면 4.0 → 3.0으로 되돌릴 것. 8 cm 미만 낮은 물체는 안 남는다
+
+**입력 depth를 거르는 곳 (\`scan_cam_gate\`)** — nvblox는 점구름이 아니라 depth **영상**을 받으므로 자기 몸을 영상에서 뺀다
+- \`pole_depth_gate\`: 카메라 0.5 m 안 픽셀 → 0 (자기 팔·폴대). 늘 켜짐
+- \`gripper_depth_gate\`: 팔이 **스캔 자세일 때만** 통과, 아니면 전부 0. 그립퍼 캠이 안 꽂혀 있으면 이 노드도 안 뜸 (\`use_gripper_cam:=auto\`)
+- \`skill_pose\` 의 자동 스캔 자세는 **기본 꺼짐** (\`scan_pose_enabled=false\`) — 팔을 돌리면 무게중심이 쏠려 매핑 중엔 stow 유지
+- 0.5 m 안의 실제 장애물은 nvblox에 안 들어간다. 대신 Nav2 local costmap(몸 뺀 점구름 \`body_filter\`)이 피한다
+
+**자원 (Jetson Orin Nano, 6코어 · RAM 7.4 GiB · GPU 공유 메모리)**
+
+| 항목 | 값 |
+|---|---|
+| GPU 메모리 | 약 808 MB (cuVSLAM 211 · rl_nav_controller 83 · 데스크톱 약 120 — 합계 약 1.2 GB) |
+| CPU | 약 33~45% (코어 1개 = 100%) |
+| RAM(PSS) | 약 218 MB (프로세스 RSS 약 1 GB, 가상 12 GB) |
+| GPU 사용률 | 시스템 전체 평균 25%, **순간 최대 94%** (nvblox + cuVSLAM 합) |
+
+- **메모리가 가장 큰 제약.** SLAM 매핑 중 free 메모리가 약 100 MB(최소 70 MB), 스왑 사용, 연속 빈 메모리 4 MB까지 줄었다. 시야 4.5 m로 키우면 nvblox 메모리가 늘 수 있다 (미확인)
+
+**실측 — 위치추정 중에도 지도가 계속 바뀐다 (2026-11-10 11:43~44, LOCALIZATION m100, 40초씩 2회, 2회째는 사람이 카메라 앞에서 움직임)**
+
+| 토픽 | 1회 | 2회 (사람 움직임) |
+|---|---|---|
+| nvblox 원본 \`static_occupancy_grid\` | 초당 4.8 · 73번 바뀜 | 초당 4.8 · 32번 바뀜 |
+| **\`/map\`** | 초당 1.0 · **21/40** | 초당 1.0 · **17/40** |
+| **\`/global_costmap/costmap\`** | 초당 0.65 · **13/25** | 초당 0.6 · **13/23** |
+| \`/map\` 점유 칸 | 1130~1199 | 1003~1144 (변동폭 2배) |
+| \`/map\` 모름 칸 | 7682 → 6868 (줄어듦) | 6872 → **8252 (늘어남)** |
+| \`/map\` 크기 | 105×113 | 105×**104** |
+
+- \`/global_costmap/static_layer\` 라는 **토픽은 없다.** static_layer는 코스트맵 안의 플러그인 이름이고 실제 토픽은 \`/global_costmap/costmap\`
+- 미확인(가장 중요): 사람이 지나간 자리가 \`/map\` 에 **남는지** — 칸 단위 비교를 못 얻었다. 조용한 40초 → 움직이는 40초로 나눠 다시 재야 인과가 분리된다. 2회째 크기가 줄고 모름 칸이 늘어난 이유도 모른다
+- 코스트맵 값: 0~100, 99 = 내접, 100 = 치명, -1 = 모름
+
+**보는 법**
+
+| 보고 싶은 것 | 방법 |
+|---|---|
+| 2D 점유 지도 | TUI 4) 지도/위치 → 7) 지도 보기, 또는 RViz \`/map\` (\`nav.rviz\` · \`mapping.rviz\`) |
+| **3D 메시 전체** | RViz nvblox 플러그인(\`nvblox_rviz_plugin\`, bee에 설치됨)으로 \`/nvblox_node/mesh\` — 색이 꺼져 있어 회색 |
+| ESDF 점구름 | RViz PointCloud2 → \`static_esdf_pointcloud\`(전체) / \`combined_esdf_pointcloud\`(로컬) |
+| 코스트맵 겹침 | TUI 4) → 7) 지도 보기 → **\`c\`**: GLOBAL → LOCAL → OFF (주황 = 팽창, 빨강 = 내접·치명) — 코드만 확인 |
+| 목표 이동 전용 | TUI 4) → \`c\` (\`nav.rviz\`): \`/map\` + Global/Local Costmap + \`/plan\` + footprint — 설정 문법까지만 확인 |
+
+- **nvblox.rviz** (TUI 4 → \`d\`, 또는 \`RVIZ_CONFIG=nvblox ./run-rviz\`): \`/map\` 원본 · 3D 메시(\`nvblox_rviz_plugin/NvbloxMesh\`) · ESDF 점구름 2개(static 꺼짐 / combined 켜짐) · Global·Local 코스트맵(꺼짐) · 시점 Orbit · 메시 QoS Reliable. 실기에서 열어 본 적 없음 (\`NvbloxMesh\`·\`Odometry\` 표시는 비교할 기존 파일이 없어 로드 여부 미확인)
+- 기존 \`nav.rviz\` · \`mapping.rviz\` 는 메시를 안 그린다. RViz는 Jetson CPU를 쓰고(코어 약 20%) 메모리 여유가 없어서 이미 떠 있는 RViz에 표시만 더하는 게 좋다
+
+**알려진 문제 · 이력 (추가분)**
+- 11-10 앞이 트인 곳이 검은 부채꼴 — depth 바닥 잡음이 슬라이스 3 cm를 넘음(추정). 슬라이스 0.08로 대응, **효과 미검증**
+- 11-10 그립퍼 캠 CPU·USB 부담 — 미연결 시 respawn 루프 / 연결 시 depth·게이트·인지. \`use_gripper_cam:=auto\` 로 고침
+- 11-10 매핑 중 SLAM 부하로 주행 끊김 — CPU·메모리 포화 (nvblox 자체는 약 40% 코어, GPU 808 MB). 부분 대응
+
+**열린 질문 · TODO**
+- [ ] nvblox.rviz를 실기에서 열어 메시가 실제로 나오는지 확인
+- [ ] **전역 코스트맵 \`obstacle_layer\` 가 꺼져 있는 게 의도인지** (새 장애물이 전역 계획에 안 들어감)
+- [ ] **(결정 필요) 위치추정에서 \`/map\` 고정**: \`nvblox_map\` 이 처음 불러온 격자만 한 번 \`/map\` 에 내고 이후 새 격자는 무시 (Nav2 표준과 같음). 새 장애물은 로컬 코스트맵 담당. 대안인 nvblox depth 입력 차단은 RL 컨트롤러 입력(\`combined_esdf_pointcloud\`)도 멈춰 비추천
+- [ ] 실행 중 노드에서 토픽 목록·Hz를 직접 확인해 위 토픽 표를 실측으로
+- [ ] 시야 4.5 m · 슬라이스 0.08 효과 확인 (검은 부채꼴이 사라지는지, GPU·메모리 증가폭)
+- [ ] \`use_color: false\` 인 채 메시를 보기 좋게 할 방법 (색 켜면 GPU·메모리 증가)
+- [ ] 지도 크기·복셀 수와 메모리의 관계 · 실행 중 지도 전환 시 nvblox가 launch째 다시 뜨는 시간·비용
+
+**관련 코드** — 설정 \`ros_system/config/nvblox.yaml\` · 구성 \`ros_system.launch.py slam_nodes()\` · \`nvblox_map.py\`(격자 → /map, 저장 지도 불러오기) · \`scan_cam_gate.py\` · 저장 흐름 \`tools/cli/op/bus.py _map_save · _save_nvblox_map · localize_saved\` · 테스트베드 대역 \`faker/src/fake_nvblox.cpp\``,
   },
 
   control: {

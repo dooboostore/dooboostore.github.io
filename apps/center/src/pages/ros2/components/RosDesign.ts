@@ -1385,7 +1385,7 @@ ${F}
 
 controller_manager는 장치를 모릅니다. 장치별 연결·전송은 **하드웨어 플러그인**이 맡고, controller_manager는 그 플러그인과 컨트롤러 플러그인을 정해진 순서로 불러 쓰기만 합니다 — "인터페이스만 맞춰라, 내가 불러다 쓸게." 개념·한 주기 흐름·플러그인 만들기·연결 5단계는 **ros2_control 탭**에 따로 정리했습니다.
 
-<p><button class="rd-tab" data-concept="ros2control" data-cs="concept">📘 ros2_control 탭 — 개념부터 보기 →</button> <button class="rd-tab" data-concept="ros2control" data-cs="flow">▶ 한 주기 흐름 스텝퍼</button> <button class="rd-tab" data-concept="ros2control" data-cs="connect">🔧 연결 5단계</button> <button class="rd-tab" data-concept="ros2control" data-cs="robot">🤖 이 로봇 적용</button></p>
+<p><button class="rd-tab" data-concept="ros2control" data-cs="concept">📘 노드동작 → ros2_control — 개념부터 보기 →</button> <button class="rd-tab" data-concept="ros2control" data-cs="flow">▶ 한 주기 흐름 스텝퍼</button> <button class="rd-tab" data-concept="ros2control" data-cs="connect">🔧 연결 5단계</button> <button class="rd-tab" data-concept="ros2control" data-cs="robot">🤖 이 로봇 적용</button></p>
 
 ### 한눈에 보기 — 누가 누구를 갖고 · 상속하고 · 부르는가
 
@@ -3154,7 +3154,9 @@ export default (w: Window) => {
     @swcAppRouteGo
     private goConcept(concept: string, cs?: string) {
       this.scrollMemo.set(RosDesign.key(this.section, this.focusNode), w.scrollY);
-      return { path: `/ros2?concept=${concept}${cs ? `&cs=${cs}` : ''}`, scrollToTop: false };
+      // ros2_control 은 노드동작 탭의 서브메뉴로 옮겨짐
+      const to = concept === 'ros2control' ? 'nodeops&tab=ros2control' : concept;
+      return { path: `/ros2?concept=${to}${cs ? `&cs=${cs}` : ''}`, scrollToTop: false };
     }
 
     /** 노드 사전의 메시지 타입 → 메시지 타입 탭 해당 카드 (뒤로가기로 이 카드에 돌아옴) */
