@@ -5,18 +5,20 @@ const tagName = 'center-ros2-nodeops';
 
 // 노드동작 — "맵핑 → 위치추정 → 네비게이션" 이 노드들 사이에서 실제로 어떻게 흘러가는가.
 // cuVSLAM+nvblox 는 beebot 실기 확인 내용. 나머지는 이 로봇에서 돌리지 않은 일반 설명(라벨로 구분).
-type Tab = 'overview' | 'cunv' | 'rtabmap' | 'carto' | 'slamtb' | 'ros2control';
+type Tab = 'overview' | 'cunv' | 'rtabmap' | 'carto' | 'slamtb' | 'ros2control' | 'robottf';
 
 const F = '```';
 
 // 맨 위 메뉴: 서브메뉴 묶음. 'slam' 은 가운데 메뉴(스택)와 아래 메뉴(단계)를 가진다
-const TOPS: { id: 'slam' | 'ros2control'; label: string }[] = [
+const TOPS: { id: 'slam' | 'ros2control' | 'robottf'; label: string }[] = [
   { id: 'slam', label: '맵핑 → 위치추정 → 네비게이션' },
   { id: 'ros2control', label: 'ros2_control(controller_manager)' },
+  { id: 'robottf', label: '로봇 TF(robot_state_publisher · odom · map)' },
 ];
 const SLAM_TABS = (Object.keys({ overview: 0, cunv: 0, rtabmap: 0, carto: 0, slamtb: 0 })) as Tab[];
 
-// ros2control 은 md 가 없다 — 기존 center-ros2-control 컴포넌트를 그대로 꽂는다
+// ros2control · robottf 는 md 가 없다 — 각자 컴포넌트(center-ros2-control · center-ros2-robottf)를 그대로 꽂는다
+const EMBED: Partial<Record<Tab, string>> = { ros2control: 'center-ros2-control', robottf: 'center-ros2-robottf' };
 const TABS: Record<Tab, { label: string; md: string }> = {
   overview: {
     label: '개요',
@@ -747,6 +749,7 @@ ${F}
 - AMCL(고정 지도 + 파티클 필터)과 비교: **위치추정** 탭.`,
   },
   ros2control: { label: 'ros2_control(controller_manager)', md: '' },
+  robottf: { label: '로봇 TF(robot_state_publisher · odom · map)', md: '' },
 };
 
 const MD = `
@@ -775,15 +778,16 @@ export default (w: Window) => {
       const root = this.shadowRoot;
       root?.querySelectorAll('.rv-pkg').forEach(el =>
         (el as HTMLElement).classList.toggle('active', (el as HTMLElement).dataset.tab === this.tab));
-      const ctl = this.tab === 'ros2control';
+      const embed = EMBED[this.tab];
+      const ctl = !!embed;
       root?.querySelectorAll('.rv-top').forEach(el =>
-        (el as HTMLElement).classList.toggle('active', (el as HTMLElement).dataset.top === (ctl ? 'ros2control' : 'slam')));
+        (el as HTMLElement).classList.toggle('active', (el as HTMLElement).dataset.top === (ctl ? this.tab : 'slam')));
       (root?.querySelector('#rv-pkgs') as HTMLElement).style.display = ctl ? 'none' : 'flex';
       (root?.querySelector('#rv-pkg') as HTMLElement).style.display = ctl ? 'none' : '';
       (root?.querySelector('#rv-md') as HTMLElement).style.display = ctl ? 'none' : '';
       const host = root?.querySelector('#rv-ctl') as HTMLElement;
       if (ctl) {
-        if (!host.firstElementChild) host.innerHTML = '<center-ros2-control></center-ros2-control>';
+        if (host.firstElementChild?.tagName.toLowerCase() !== embed) host.innerHTML = `<${embed}></${embed}>`;
         return;
       }
       host.innerHTML = '';
@@ -818,8 +822,9 @@ export default (w: Window) => {
     onTop(e: Event) {
       const btn = (e.target as HTMLElement).closest('.rv-top') as HTMLElement;
       if (!btn) return;
-      if (btn.dataset.top === 'ros2control') this.goTab('ros2control');
-      else if (this.tab === 'ros2control') this.goTab('overview');
+      const top = btn.dataset.top as Tab;
+      if (EMBED[top]) this.goTab(top);
+      else if (EMBED[this.tab]) this.goTab('overview');
     }
 
     @onConnectedAfter

@@ -52,7 +52,8 @@ import RosParamDict from './ros2/components/RosParamDict';
 import RosControl from './ros2/components/RosControl';
 import RosProvided from './ros2/components/RosProvided';
 import RosNodeOps from './ros2/components/RosNodeOps';
-import RosBoot from './ros2/components/RosBoot';
+import RosRobotTf from './ros2/components/RosRobotTf';
+// import RosBoot from './ros2/components/RosBoot'; // TODO: RosBoot.ts 미커밋(회사 PC에서 찾기) — 복구되면 주석 해제
 import RosSim from './ai/components/RosSim';
 import AiPage from './ai/AiPage';
 import EnglishListPage from './english/EnglishListPage';
@@ -216,7 +217,8 @@ export const pageFactories = [
   RosControl,
   RosProvided,
   RosNodeOps,
-  RosBoot,
+  RosRobotTf,
+  // RosBoot,
   RosSim,
   AiPage,
   EnglishListPage,

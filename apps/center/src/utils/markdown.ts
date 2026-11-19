@@ -256,7 +256,7 @@ const enableEdgeHighlight = (svg: SVGSVGElement) => {
 //   %% tip HW: 제목 | 자세한 설명        ← 노드(또는 subgraph) id
 //   %% tip JTC>RLA: 제목 | 설명          ← 선(엣지) 출발>도착 id
 // tip 줄이 하나라도 있는 flowchart에만 켜진다. 노드를 누르면 그 노드·이웃·연결선만 선명하게 남고
-// 도식 위쪽에 설명 카드가 뜬다. 선·라벨을 눌러도 같은 카드. 빈 곳을 누르면 닫힌다.
+// 도식 위쪽에 설명 카드가 뜬다. 선·라벨을 눌러도 같은 카드. 빈 곳이나 선택된 도형을 다시 누르면 닫힌다.
 const parseTips = (src: string) => {
   const tips = new Map<string, { title: string; body: string }>();
   for (const line of src.split('\n')) {
@@ -321,6 +321,8 @@ const enableTips = (pre: HTMLElement, svg: SVGSVGElement, tips: Map<string, { ti
   nodes.forEach((g, key) => {
     g.addEventListener('click', e => {
       e.stopPropagation();
+      // 이미 선택된 도형을 다시 누르면 풀기 (토글)
+      if (g.classList.contains('eh-nsel')) { clear(); return; }
       const inc = edges.filter(x => x.a === key || x.b === key);
       clear();
       svg.classList.add('eh-nhas');
@@ -335,6 +337,7 @@ const enableTips = (pre: HTMLElement, svg: SVGSVGElement, tips: Map<string, { ti
     if (!tips.has(key)) return;
     g.addEventListener('click', e => {
       e.stopPropagation();
+      if (g.classList.contains('eh-nsel')) { clear(); return; }  // 다시 누르면 풀기 (토글)
       clear();
       svg.classList.add('eh-nhas');
       g.classList.add('eh-nsel');

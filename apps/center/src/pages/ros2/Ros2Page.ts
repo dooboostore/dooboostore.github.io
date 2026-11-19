@@ -46,7 +46,8 @@ const CONCEPTS: { id: RosConcept; label: string; el: string; group?: string }[] 
   { id: 'design', label: '실전노드설계', el: 'center-ros2-design', group: 'real' },
   { id: 'provided', label: '제공노드', el: 'center-ros2-provided', group: 'real' },
   { id: 'nodeops', label: '노드동작', el: 'center-ros2-nodeops', group: 'real' },
-  { id: 'boot', label: '실전 부팅·동작', el: 'center-ros2-boot', group: 'real' },
+  // TODO: RosBoot.ts 복구되면 주석 해제
+  // { id: 'boot', label: '실전 부팅·동작', el: 'center-ros2-boot', group: 'real' },
 ];
 
 export default (w: Window) => {
