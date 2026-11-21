@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 32" data-foot="0.5 0.78">
+  <!-- 빙산: 물 위에 뜬 둥글둥글한 푸른빛 흰 얼음산. 기준점은 물높이 선. 물속 부분은 옅게 비치고, 둘레에 흰 물결이 살랑 -->
+  <path d="M6 25 C4 28 8 31 14 31.4 C22 32 32 31 35 28 C36.4 26.6 35.6 25.4 34 25 Z" fill="#5fa8d0" opacity="0.35"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 25 C3 22 4.6 19.6 7 19 C7.4 15 9.6 12.4 12.6 12.4 C13.6 8 16.4 4.6 20 4.4 C23.6 4.2 26 7 26.8 10.6 C30 10.6 32.4 13 32.6 16.4 C35.4 17 37 19.6 36.4 22.4 C36.2 23.6 35.6 24.6 35 25 Z" fill="#f4fbff"/>
+    <path d="M20 4.6 C23.6 4.2 26 7 26.8 10.6 C30 10.6 32.4 13 32.6 16.4 C35.4 17 37 19.6 36.4 22.4 C36.2 23.6 35.6 24.6 35 25 L22 25 C24 21 24.4 15 22.6 10.6 C21.8 8.4 21 6.2 20 4.6 Z" fill="#cfe6f4" stroke="none"/>
+  </g>
+  <path d="M10 14.6 Q13 12.2 16 9 M17.6 7 Q19.4 5.6 21 5.6" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M8 21 Q11 19.4 13 16.4" stroke="#bcdcef" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+  <path d="M26 18 Q28 16 29 13.6" stroke="#a9cfe6" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+  <path d="M4.2 24.4 L35 24.4" stroke="#a9cfe6" stroke-width="0.9" stroke-linecap="round"/>
+  <g stroke="#ffffff" stroke-width="0.8" fill="none" stroke-linecap="round">
+    <path d="M1 25.4 Q3 24.8 5 25.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.8s" repeatCount="indefinite"/></path>
+    <path d="M34.6 25.4 Q36.6 24.8 38.8 25.4"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></path>
+    <path d="M14 26.6 Q20 27.4 27 26.6" opacity="0.6"/>
+  </g>
+</svg>

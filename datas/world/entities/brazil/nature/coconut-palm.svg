@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 38">
+  <!-- 코코넛 야자: 바다 쪽으로 길게 휘어 기운 마디 줄기, 축 늘어진 깃털 잎, 초록 코코넛 송이. 바닷바람에 살랑 -->
+  <ellipse cx="9" cy="37" rx="5" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M7.6 37.2 C7.4 28 9.6 18 15.4 9.4 L17 10.4 C11.8 18.6 9.8 28.4 10.4 37.2 Z" fill="#b08a62" stroke-width="0.55"/>
+  </g>
+  <g stroke="#8a6650" stroke-width="0.35" stroke-linecap="round" opacity="0.7"><path d="M7.8 34 L10.2 34.2 M8 30 L10.4 30.4 M8.6 26 L11 26.6 M9.6 22 L11.8 22.8 M10.8 18.4 L13 19.2 M12.4 14.8 L14.4 15.8 M14 12 L15.8 13"/></g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-2 16 9.6;2 16 9.6;-2 16 9.6" dur="4.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" fill="var(--leaf, #4fa35a)">
+      <path d="M16 9.4 C12 6.4 6.4 6.6 2.4 10.4 C2 11.4 2.8 11.6 3.6 11 C7 8.6 11.6 8.4 16 10 Z"/>
+      <path d="M16 9.4 C20 6.4 24 7.4 25.6 11.6 C25.6 12.6 24.8 12.6 24.4 11.8 C22.6 8.8 19.6 8.6 16.4 10.2 Z"/>
+      <path d="M16 9.4 C13.4 5.4 9 3.4 4.6 4 C3.8 4.4 4.2 5 5 5 C9 4.8 12.6 6.6 15.4 10 Z"/>
+      <path d="M16 9.4 C18.6 4.6 22.4 2.6 25 3.6 C25.6 4.2 25 4.8 24.2 4.6 C21.6 4 18.8 6.2 16.6 10 Z"/>
+      <path d="M16 9.4 C15.6 5.4 15.8 2.4 17.6 0.8 C18.4 0.6 18.4 1.4 18 2 C16.8 4 16.8 6.4 16.6 9.8 Z"/>
+      <path d="M16 9.4 C13.4 10.6 11.2 13.4 10.4 16.8 C10.6 17.6 11.2 17.4 11.6 16.8 C12.6 14 14.2 11.8 16.4 10.4 Z"/>
+      <path d="M16 9.4 C19 10.6 21.4 13.4 21.8 17 C21.6 17.8 20.8 17.6 20.6 16.8 C20 14.2 18.4 12 15.8 10.4 Z"/>
+    </g>
+    <g stroke="#3f8448" stroke-width="0.3" fill="none" stroke-linecap="round"><path d="M15 9.4 C11 8 7 8.6 3.6 10.6 M17 9.6 C20 8.4 22.6 9 24.6 11.4 M15.4 9 C13 6.2 9.4 4.8 5.4 4.8 M16.6 9 C18.6 5.6 21.4 4 24 4.2"/></g>
+    <g fill="#8fc46a" stroke="#5b4636" stroke-width="0.35"><circle cx="15" cy="10.8" r="1"/><circle cx="16.8" cy="11" r="1"/><circle cx="15.9" cy="12.2" r="1"/></g>
+  </g>
+</svg>

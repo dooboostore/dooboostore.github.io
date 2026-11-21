@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 18" data-foot="0.5 0.88">
+  <!-- 보스포루스 시내 여객선 바푸르 (오른쪽을 향함, 옆모습): 흰 선체와 짙은 아랫배, 2층 선실, 흰·빨간 띠를 두른 검은 굴뚝, 뒤에 튀르키예 국기. 물결에 흔들리고 뒤로 물거품. 밤엔 선실 불빛 -->
+  <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
+    <path d="M1 15.4 Q3 14.8 5 15.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path>
+    <path d="M0 16.6 Q2.5 16 5.5 16.6"><animate attributeName="opacity" values="0;0.7;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></path>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+      <line x1="6.4" y1="7" x2="6.4" y2="2.4"/>
+      <line x1="37" y1="7" x2="37" y2="1.6"/>
+      <path d="M22.2 4.4 L22.6 1.4 Q22.7 0.6 23.4 0.6 L25.4 0.6 Q26.1 0.6 26.2 1.4 L26.6 4.4 Z" fill="#2f2a2a"/>
+      <path d="M11.4 7 L11.4 4.8 Q11.4 3.8 12.4 3.8 L31.4 3.8 Q33.2 3.8 33.8 5 L34.6 7 Z" fill="#fbfaf6"/>
+      <path d="M6.4 11 L6.4 7.8 Q6.4 6.8 7.4 6.8 L37 6.8 Q39 6.8 39.6 8.2 L40.4 11 Z" fill="#f6f1e4"/>
+      <path d="M3 11 L42.2 11 Q40.8 15.4 36.2 15.6 L8.2 15.6 Q4.4 15 3 11 Z" fill="#fbfaf6"/>
+      <path d="M4.4 13.6 L41.2 13.6 Q39.8 15.4 36.2 15.6 L8.2 15.6 Q5.6 15.2 4.4 13.6 Z" fill="var(--hull, #2f3f52)" stroke-width="0.4"/>
+    </g>
+    <rect x="22.5" y="1.6" width="3.8" height="0.8" fill="#fbfaf6"/>
+    <rect x="22.4" y="2.4" width="4" height="0.45" fill="#e2483c"/>
+    <path d="M6.4 2.4 L9.4 2.4 L9.4 4.4 L6.4 4.4 Z" fill="#e2483c" stroke="#5b4636" stroke-width="0.25"/>
+    <circle cx="7.6" cy="3.4" r="0.6" fill="#fff"/><circle cx="7.85" cy="3.4" r="0.48" fill="#e2483c"/><circle cx="8.6" cy="3.4" r="0.22" fill="#fff"/>
+    <g fill="#9fc6e0" stroke="#5b4636" stroke-width="0.25"><rect x="8.4" y="8" width="2.4" height="2" rx="0.6"/><rect x="12" y="8" width="2.4" height="2" rx="0.6"/><rect x="15.6" y="8" width="2.4" height="2" rx="0.6"/><rect x="19.2" y="8" width="2.4" height="2" rx="0.6"/><rect x="22.8" y="8" width="2.4" height="2" rx="0.6"/><rect x="26.4" y="8" width="2.4" height="2" rx="0.6"/><rect x="30" y="8" width="2.4" height="2" rx="0.6"/><rect x="33.6" y="8" width="2.4" height="2" rx="0.6"/>
+      <rect x="13" y="4.8" width="2" height="1.4" rx="0.5"/><rect x="16" y="4.8" width="2" height="1.4" rx="0.5"/><rect x="19" y="4.8" width="2" height="1.4" rx="0.5"/><rect x="28" y="4.8" width="2" height="1.4" rx="0.5"/><path d="M31 4.8 L32.6 4.8 Q33.2 5 33.4 6.2 L31 6.2 Z"/></g>
+    <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="8.6" y="8.2" width="2" height="1.6" rx="0.5"/><rect x="15.8" y="8.2" width="2" height="1.6" rx="0.5"/><rect x="19.4" y="8.2" width="2" height="1.6" rx="0.5"/><rect x="30.2" y="8.2" width="2" height="1.6" rx="0.5"/><rect x="33.8" y="8.2" width="2" height="1.6" rx="0.5"/><rect x="16.2" y="5" width="1.6" height="1" rx="0.4"/></g>
+    <g fill="#f08a3c" stroke="#5b4636" stroke-width="0.25"><circle cx="14" cy="12.2" r="0.65"/><circle cx="30" cy="12.2" r="0.65"/></g>
+    <g fill="#fff"><circle cx="14" cy="12.2" r="0.25"/><circle cx="30" cy="12.2" r="0.25"/></g>
+    <path d="M8 11.6 L40 11.6" stroke="#000" stroke-opacity="0.08" stroke-width="0.5"/>
+    <path d="M12.4 4.3 L31 4.3 M8 7.3 L36 7.3" stroke="#fff" stroke-width="0.5" opacity="0.7" stroke-linecap="round"/>
+  </g>
+</svg>

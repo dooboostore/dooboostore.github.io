@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 9">
+  <!-- 이스탄불 길고양이 (걷는 옆모습, 오른쪽을 향함): 치즈색 줄무늬 털(변수 fur), 꼬리를 세우고 살랑 -->
+  <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-8 2 5.2;8 2 5.2;-8 2 5.2" dur="1.8s" repeatCount="indefinite"/>
+      <path d="M2.2 5.6 C1 4.8 0.6 3.4 1 2.2 C1.2 1.6 1.8 1.6 1.8 2.2 C1.6 3.2 2 4.2 2.8 4.8 Z" fill="var(--fur, #e9a65a)"/>
+    </g>
+    <g fill="var(--fur, #e9a65a)"><rect x="2.4" y="5.4" width="1" height="3" rx="0.5"/><rect x="6" y="5.4" width="1" height="3" rx="0.5"/></g>
+    <ellipse cx="4.6" cy="5.4" rx="2.8" ry="1.6" fill="var(--fur, #e9a65a)"/>
+    <g fill="var(--fur, #e9a65a)"><rect x="3.4" y="5.8" width="1" height="2.8" rx="0.5"/><rect x="6.8" y="5.8" width="1" height="2.8" rx="0.5"/></g>
+    <path d="M6.6 2.4 C6.6 1.4 6.8 0.8 7.2 0.6 C7.6 1 7.8 1.4 7.8 1.8 Z" fill="var(--fur, #e9a65a)"/>
+    <path d="M8.2 2.2 C8.4 1.2 8.8 0.8 9.2 0.8 C9.4 1.4 9.4 2 9.2 2.4 Z" fill="var(--fur, #e9a65a)"/>
+    <ellipse cx="7.9" cy="3.4" rx="1.9" ry="1.7" fill="var(--fur, #e9a65a)"/>
+    <path d="M6.6 6.6 Q7.8 6.4 8 5" fill="none" stroke="none"/>
+    <g fill="#fbf8f0"><ellipse cx="3.9" cy="8.6" rx="0.6" ry="0.3"/><ellipse cx="7.3" cy="8.6" rx="0.6" ry="0.3"/></g>
+  </g>
+  <g stroke="#c47e3a" stroke-width="0.3" stroke-linecap="round" fill="none"><path d="M3.4 4.2 L3.6 4.9 M4.4 3.9 L4.5 4.7 M5.4 4 L5.4 4.8 M7.6 1.9 L7.7 2.5"/></g>
+  <path d="M5.8 6.6 Q6.8 6.8 7.6 5" stroke="none" fill="none"/>
+  <ellipse cx="5.6" cy="6.4" rx="1.6" ry="0.6" fill="#fbf8f0"/>
+  <ellipse cx="8.6" cy="3.3" rx="0.28" ry="0.4" fill="#3d2b22"/>
+  <circle cx="8.68" cy="3.16" r="0.09" fill="#fff"/>
+  <path d="M9.6 3.8 L9.8 4 L9.5 4.1 Z" fill="#f08a9a"/>
+  <ellipse cx="8.8" cy="4.1" rx="0.4" ry="0.22" fill="#ff9e9e" opacity="0.5"/>
+</svg>

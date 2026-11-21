@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18" data-foot="0.5 0.5">
+  <!-- 국제우주정거장: 가로로 긴 뼈대(트러스) 양끝에 금빛 태양전지판 날개 여덟 장, 가운데 하얀 원통 모듈과 흰 방열판. 불빛이 깜빡인다 -->
+  <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="-13.6" y="-0.6" width="27.2" height="1.2" rx="0.6" fill="#c9ccd1"/>
+    <g fill="#5b7fc4">
+      <rect x="-13.4" y="-8" width="2.4" height="6.8" rx="0.5"/><rect x="-10.4" y="-8" width="2.4" height="6.8" rx="0.5"/>
+      <rect x="-13.4" y="1.2" width="2.4" height="6.8" rx="0.5"/><rect x="-10.4" y="1.2" width="2.4" height="6.8" rx="0.5"/>
+      <rect x="8" y="-8" width="2.4" height="6.8" rx="0.5"/><rect x="11" y="-8" width="2.4" height="6.8" rx="0.5"/>
+      <rect x="8" y="1.2" width="2.4" height="6.8" rx="0.5"/><rect x="11" y="1.2" width="2.4" height="6.8" rx="0.5"/>
+    </g>
+    <g fill="#fbfaf6"><rect x="-6" y="1" width="1.8" height="4.4" rx="0.5"/><rect x="4.2" y="1" width="1.8" height="4.4" rx="0.5"/></g>
+    <rect x="-1.4" y="-5.6" width="2.8" height="11.2" rx="1.4" fill="#fbfaf6"/>
+    <rect x="-4" y="-2.8" width="8" height="2.2" rx="1.1" fill="#ecedef"/>
+    <rect x="-1" y="5.4" width="2" height="2.6" rx="0.8" fill="#f2c14e"/>
+  </g>
+  <g stroke="#f6c944" stroke-width="0.25" opacity="0.8"><path d="M-12.2 -8 L-12.2 -1.2 M-9.2 -8 L-9.2 -1.2 M-12.2 1.2 L-12.2 8 M-9.2 1.2 L-9.2 8 M9.2 -8 L9.2 -1.2 M12.2 -8 L12.2 -1.2 M9.2 1.2 L9.2 8 M12.2 1.2 L12.2 8"/></g>
+  <path d="M-0.6 -4.6 L-0.6 3" stroke="#fff" stroke-width="0.4" stroke-linecap="round"/>
+  <circle cx="13.6" cy="0" r="0.45" fill="#4ade80"><animate attributeName="opacity" values="1;0.1;1" dur="1.2s" repeatCount="indefinite"/></circle>
+  <circle cx="-13.6" cy="0" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.2s" repeatCount="indefinite"/></circle>
+</svg>

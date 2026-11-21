@@ -1,0 +1,39 @@
+{
+  "local": {"size": [960, 1112], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "china/landmark/forbidden-gate.svg", "at": [556, 578], "scale": 0.5},
+    {"use": "china/landmark/tiananmen.svg", "at": [557, 624], "scale": 0.6},
+    {"use": "china/landmark/temple-of-heaven.svg", "at": [641, 875], "scale": 0.85},
+    {"use": "china/building/siheyuan.svg", "count": 12, "area": [575, 330, 110, 70], "scale": 0.6, "spacing": 16, "vars": {"--door": ["#b8392f", "#9e2f27"]}},
+    {"use": "china/building/siheyuan.svg", "count": 5, "area": [488, 698, 40, 50], "scale": 0.6, "spacing": 16},
+    {"use": "china/building/siheyuan.svg", "count": 8, "area": [640, 250, 90, 80], "scale": 0.6, "spacing": 16},
+    {"use": "china/structure/lantern-pole.svg", "at": [[600, 382], [628, 352], [566, 712], [600, 705]], "scale": 0.7},
+    {"use": "china/nature/willow.svg", "count": 10, "area": [480, 330, 100, 150], "scale": 0.7, "spacing": 12},
+    {"use": "china/building/siheyuan.svg", "count": 5, "area": [590, 698, 45, 50], "scale": 0.6, "spacing": 16},
+    {"use": "nature/pine.svg", "count": 5, "area": [540, 455, 30, 30], "scale": 0.6, "spacing": 8},
+    {"use": "nature/pine.svg", "count": 10, "area": [600, 830, 90, 90], "scale": 0.6, "spacing": 12},
+    {"use": "china/people/taichi-elder", "count": 4, "area": [610, 840, 60, 50], "scale": 0.7, "spacing": 6},
+    {"use": "china/people/taichi-elder", "count": 2, "area": [540, 455, 30, 25], "scale": 0.7, "spacing": 6},
+    {"use": "china/people/student", "count": 4, "area": [640, 540, 40, 70], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 4, "area": [536, 645, 42, 40], "scale": 0.7, "spacing": 6},
+    {"use": "animal/pigeon", "count": 4, "area": [540, 650, 30, 30], "spacing": 5},
+    {"use": "china/vehicle/taxi", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M397.4 640.2 L702.3 630.3", "dur": 31}},
+    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#d9443a"}, "behavior": {"type": "route", "path": "M470.1 799.5 L399.9 801.1 L399.3 707.4", "dur": 20}},
+    {"use": "china/vehicle/tricycle", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M580 348 L650 348", "dur": 40}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 420 C240 380 560 500 1020 420", "dur": 76}}
+  ],
+  "info": {
+    "자금성": {"title": "자금성", "emoji": "🏯", "kind": "지명", "desc": "명·청 두 왕조의 황제가 살던 궁궐로, 1420년에 완공되었어요. 지금은 고궁박물원이 되었고, 1987년 유네스코 세계유산에 등재되었어요. 붉은 벽과 황금 기와가 끝없이 이어져요."},
+    "천안문": {"title": "천안문", "emoji": "🏯", "kind": "지명", "desc": "자금성 남쪽 앞에 선 톈안먼(천안문)이에요. 명나라 때 처음 세워진 황성의 정문으로, 붉은 성루와 노란 기와가 웅장한 모습을 자랑해요."},
+    "천안문 광장": {"title": "천안문 광장", "emoji": "🇨🇳", "kind": "지명", "desc": "천안문 앞에 펼쳐진 세계에서 손꼽히게 넓은 광장이에요. 매일 아침 해 뜰 무렵 국기 게양식을 보려고 많은 사람이 모여요. 광장 남쪽으로는 첸먼까지 이어지는 베이징의 중심축이 뻗어 있어요."},
+    "천단": {"title": "천단", "emoji": "🛕", "kind": "지명", "desc": "명·청 황제가 하늘에 제사를 지내고 풍년을 빌던 곳이에요. 둥근 기년전이 상징이고, 넓은 공원에서는 아침마다 태극권과 춤을 즐기는 시민들을 만날 수 있어요."},
+    "징산 공원": {"title": "징산 공원", "emoji": "⛰️", "kind": "지명", "desc": "자금성 바로 북쪽의 작은 언덕 공원이에요. 꼭대기 정자에 오르면 자금성의 황금 지붕들이 한눈에 내려다보여요. 봄이면 모란이 피어 정원이 화사해져요."},
+    "베이하이 공원": {"title": "베이하이 공원", "emoji": "🛶", "kind": "지명", "desc": "호수와 하얀 불탑이 있는 오래된 황실 정원이에요. 호수에서 배를 타거나 버드나무 길을 따라 산책하기 좋아요. 겨울이면 얼어붙은 호수가 스케이트장으로 변신해요."},
+    "스차하이": {"title": "스차하이", "emoji": "🏮", "kind": "지명", "desc": "세 개의 호수가 이어진 베이징의 물가 동네예요. 호숫가를 따라 카페와 찻집이 늘어서 있고, 겨울엔 꽁꽁 언 호수에서 썰매를 타요."},
+    "왕푸징": {"title": "왕푸징", "emoji": "🛍️", "kind": "지명", "desc": "베이징의 대표적인 쇼핑 거리 왕푸징이에요. 보행자 거리를 따라 큰 상점과 노포가 모여 있고, 꼬치 같은 길거리 간식도 즐길 수 있어요."},
+    "첸먼": {"title": "첸먼", "emoji": "🏯", "kind": "지명", "desc": "자금성 남쪽 축선 위의 옛 성문 첸먼과 그 앞 거리예요. 오래된 상점과 음식점이 복원된 거리 풍경 속에 옛 베이징의 분위기가 남아 있어요."},
+    "옹화궁": {"title": "옹화궁", "emoji": "🛕", "kind": "지명", "desc": "베이징에서 가장 큰 티베트 불교 사원 옹화궁이에요. 원래는 청나라 옹정제가 황자 시절 살던 저택이었어요. 향 냄새가 은은하게 퍼지는 고즈넉한 곳이에요."},
+    "고루": {"title": "고루", "emoji": "🥁", "kind": "지명", "desc": "옛날 북을 울려 시간을 알리던 누각 고루예요. 바로 옆 종루와 짝을 이루어, 시계가 없던 시절 베이징 사람들의 하루를 알려 주었어요."},
+    "난뤄구샹 후퉁": {"title": "난뤄구샹 후퉁", "emoji": "🏘️", "kind": "지명", "desc": "원나라 때부터 이어진 오래된 골목 난뤄구샹이에요. 회색 벽돌의 사합원 사이로 작은 가게와 카페가 들어서 있어 옛 베이징 골목을 거닐기 좋아요."}
+  }
+}

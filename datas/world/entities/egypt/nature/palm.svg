@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36">
+  <!-- 야자수: 굽은 줄기, 둥근 잎, 코코넛. 잎색은 frond 변수 -->
+  <ellipse cx="13" cy="35.2" rx="11" ry="0.9" fill="#3b5a2e" opacity="0.16"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M11 35 Q10 24 13 14 Q14 10 16 8 L18 8 Q16 12 15 16 Q12 25 13 35 Z" fill="#a8784f"/>
+    <g fill="var(--frond, #5fae55)">
+      <path d="M17 9 Q22 4 26 7 Q21 9 17.4 11 Z"/>
+      <path d="M17 8 Q20 1 25 2 Q21 5 18.2 10 Z"/>
+      <path d="M16 9 Q11 2 6 4 Q11 6 15.2 11 Z"/>
+      <path d="M15 10 Q8 6 4 10 Q10 11 14.4 12 Z"/>
+      <path d="M17 10 Q24 12 24 17 Q20 13 16.4 12 Z"/>
+      <path d="M16 11 Q9 14 8 19 Q12 15 15.6 13 Z"/>
+    </g>
+    <circle cx="15.4" cy="11.6" r="1.6" fill="#8a5a3f"/>
+    <circle cx="17.6" cy="12.2" r="1.4" fill="#8a5a3f"/>
+  </g>
+  <path d="M12 34 Q16 33 20 34" stroke="#5b4636" stroke-width="0.3" opacity="0.4"/>
+</svg>

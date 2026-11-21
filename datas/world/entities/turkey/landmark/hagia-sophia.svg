@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 52">
+  <!-- 아야 소피아: 거대한 중앙 돔과 반돔, 네 미나레트, 따뜻한 돌벽. 밤엔 창이 환하다 -->
+  <ellipse cx="35" cy="50.2" rx="31" ry="1.6" fill="#3b5a2e" opacity="0.18"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="8" y="30" width="54" height="16" rx="1.4" fill="var(--stone, #d9a57a)"/>
+    <path d="M14 30 Q14 18 35 16 Q56 18 56 30 Z" fill="var(--stone2, #e0b08a)"/>
+    <path d="M20 30 Q20 12 35 10 Q50 12 50 30 Z" fill="var(--stone, #d9a57a)"/>
+    <path d="M24 18 Q28 8 35 8 Q42 8 46 18 Q40 16 35 16 Q30 16 24 18 Z" fill="var(--dome, #c98a6a)"/>
+    <rect x="31" y="2.6" width="8" height="5.4" rx="2" fill="var(--dome, #c98a6a)"/>
+    <circle cx="35" cy="2.2" r="1" fill="#e8b64a"/>
+    <path d="M10 30 Q22 22 35 20 Q48 22 60 30" fill="var(--dome, #c98a6a)"/>
+    <rect x="4" y="26" width="5" height="22" rx="1.6" fill="var(--stone2, #e0b08a)"/>
+    <rect x="61" y="26" width="5" height="22" rx="1.6" fill="var(--stone2, #e0b08a)"/>
+    <path d="M4 26 Q6.5 18 9 26 Z" fill="var(--dome, #c98a6a)"/>
+    <path d="M61 26 Q63.5 18 66 26 Z" fill="var(--dome, #c98a6a)"/>
+    <rect x="30" y="38" width="10" height="8" rx="4" fill="var(--door, #7a3f3a)"/>
+  </g>
+  <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.25">
+    <rect x="12" y="34" width="4" height="6" rx="1.6"/><rect x="18" y="34" width="4" height="6" rx="1.6"/><rect x="48" y="34" width="4" height="6" rx="1.6"/><rect x="54" y="34" width="4" height="6" rx="1.6"/>
+    <rect x="30" y="20" width="3" height="5" rx="1.4"/><rect x="37" y="20" width="3" height="5" rx="1.4"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <rect x="12" y="34" width="4" height="6" rx="1.6"/><rect x="48" y="34" width="4" height="6" rx="1.6"/>
+    <rect x="30" y="20" width="3" height="5" rx="1.4"/><rect x="37" y="20" width="3" height="5" rx="1.4"/>
+  </g>
+  <g fill="#6db85e"><circle cx="4" cy="48" r="2.2"/><circle cx="66" cy="48" r="2"/></g>
+</svg>

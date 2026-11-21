@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15">
+  <!-- 스발바르 순록 (오른쪽을 향함): 다리가 짧고 통통한 몸, 북슬북슬한 크림빛 회갈색 털, 끝이 둥근 큰 뿔, 흰 목털. 꼬리가 살랑 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 2.6 7.6;-14 2.6 7.6;0 2.6 7.6" dur="1.8s" repeatCount="indefinite"/>
+      <ellipse cx="2.2" cy="7.6" rx="0.9" ry="0.7" fill="#fbf6ea"/>
+    </g>
+    <rect x="3.8" y="10" width="1.3" height="4" rx="0.65" fill="#8a6a52"/>
+    <rect x="10" y="10" width="1.3" height="4" rx="0.65" fill="#8a6a52"/>
+    <path d="M2.4 8.6 C2.4 6.6 4.2 5.6 7.6 5.6 C10.6 5.6 12.8 6.2 13 8.4 C13.2 10.6 11 11.4 7.6 11.4 C4.4 11.4 2.4 10.6 2.4 8.6 Z" fill="var(--coat, #b8a48c)"/>
+    <rect x="5.2" y="10" width="1.3" height="4.2" rx="0.65" fill="var(--coat, #b8a48c)"/>
+    <rect x="11.4" y="10" width="1.3" height="4.2" rx="0.65" fill="var(--coat, #b8a48c)"/>
+    <path d="M10.6 7.4 C11.2 6.2 11.6 5.2 11.6 4.4 L13.6 4.2 C13.8 5.6 13.4 7.4 12.6 8.6 Z" fill="#efe6d6"/>
+    <path d="M13 2.6 C12.6 1.6 12.6 0.8 13 0.4 M12.9 1.6 C12.2 1.2 11.8 0.8 11.9 0.3 M13.8 2.6 C14.4 1.6 15 1 15.6 1 M14.4 1.8 C14.6 1.2 14.6 0.6 14.3 0.3" fill="none" stroke="#a5846a" stroke-width="0.7"/>
+    <ellipse cx="13.4" cy="4" rx="1.9" ry="1.6" fill="var(--coat, #b8a48c)"/>
+    <ellipse cx="15" cy="4.7" rx="0.9" ry="0.75" fill="#d6c6b0"/>
+    <ellipse cx="11.8" cy="2.9" rx="0.9" ry="0.45" fill="var(--coat, #b8a48c)" transform="rotate(30 11.8 2.9)"/>
+  </g>
+  <circle cx="15.6" cy="4.5" r="0.3" fill="#3d2b22"/>
+  <ellipse cx="13.8" cy="3.6" rx="0.33" ry="0.42" fill="#3d2b22"/>
+  <circle cx="13.9" cy="3.45" r="0.12" fill="#fff"/>
+  <ellipse cx="14" cy="4.6" rx="0.45" ry="0.25" fill="#ff9e9e" opacity="0.5"/>
+  <path d="M4 6.8 Q7.6 5.8 11 6.6" stroke="#fff" stroke-opacity="0.35" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M3.6 10.4 Q7.6 11.6 12 10.4" stroke="#000" stroke-opacity="0.1" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <g fill="#3e3530"><ellipse cx="4.45" cy="14.1" rx="0.75" ry="0.3"/><ellipse cx="10.65" cy="14.1" rx="0.75" ry="0.3"/><ellipse cx="5.85" cy="14.3" rx="0.75" ry="0.3"/><ellipse cx="12.05" cy="14.3" rx="0.75" ry="0.3"/></g>
+</svg>

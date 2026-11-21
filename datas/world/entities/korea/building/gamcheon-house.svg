@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+  <!-- 감천문화마을 집: 언덕에 붙은 계단식 집, 파스텔 벽과 둥근 지붕, 작은 뜰. 벽색은 wall 변수 -->
+  <ellipse cx="11" cy="19.2" rx="10" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2.2" y="7.4" width="17.6" height="11.4" rx="1.2" fill="var(--wall, #f3d38a)"/>
+    <path d="M1.2 7.6 Q2 4.2 5 4.2 L17 4.2 Q20 4.2 20.8 7.6 Z" fill="var(--roof, #c2523f)"/>
+    <rect x="4.4" y="10" width="4.2" height="4.4" rx="0.8" fill="#d8eff9"/>
+    <rect x="13.4" y="10" width="4.4" height="4.4" rx="0.8" fill="#d8eff9"/>
+    <rect x="9.4" y="11" width="3.2" height="7.8" rx="1.2" fill="#7a4a32"/>
+    <path d="M2.2 17.2 L19.8 17.2" stroke-width="0.5"/>
+    <path d="M3 8.2 L19 8.2" stroke="#8a5a3f" stroke-width="0.4"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <rect x="4.6" y="10.2" width="3.8" height="4" rx="0.6"/><rect x="13.6" y="10.2" width="4" height="4" rx="0.6"/>
+  </g>
+  <path d="M3.4 18.6 L8 18.6 L8.4 19.6 L3 19.6 Z" fill="#c9b49a" stroke="#5b4636" stroke-width="0.3"/>
+  <g fill="#7cc36a"><circle cx="4" cy="18.4" r="1.1"/><circle cx="18.4" cy="18.2" r="1.2"/></g>
+  <g fill="var(--flower, #ff9eb8)"><circle cx="2.8" cy="9.4" r="0.6"/><circle cx="19.2" cy="9.4" r="0.5"/></g>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "foot": [0.5, 1],
+  "views": { "right": { "svg": "right.svg" }, "left": { "mirror": "right" } },
+  "parts": [ { "use": "parts/shadow.svg", "at": [6, 8.6], "scale": 0.6, "under": true } ],
+  "behavior": { "type": "wander", "speed": 3, "pause": [2, 10], "avoid": ["water", "road"] }
+}

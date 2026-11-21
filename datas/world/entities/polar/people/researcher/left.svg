@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 극지 연구원 (left, 왼쪽을 향함): 빵빵한 빨간 파카, 털 후드가 정수리와 뒤통수를 덮고 앞쪽만 얼굴이 보임, 고글, 털장화 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.2" cy="16.9" rx="1.6" ry="0.85" fill="#4a3f3a"/>
+    <ellipse cx="7" cy="16.9" rx="1.6" ry="0.85" fill="#4a3f3a"/>
+    <path d="M3.8 16.4 L4 14 L8 14 L8.2 16.4 Z" fill="var(--pants, #3e4b5c)"/>
+    <path d="M3 14.6 C2.6 11.6 3.8 9.8 6 9.8 C8.2 9.8 9.4 11.6 9 14.6 C7.6 15.2 4.4 15.2 3 14.6 Z" fill="var(--parka, #e2574c)"/>
+    <circle cx="6.2" cy="6" r="5.2" fill="var(--parka, #e2574c)"/>
+  </g>
+  <g fill="#efe6d6" stroke="#5b4636" stroke-width="0.35">
+    <circle cx="4.4" cy="2" r="1"/><circle cx="2.6" cy="3.2" r="1"/><circle cx="1.6" cy="5.2" r="1"/><circle cx="1.5" cy="7.4" r="1"/><circle cx="2.2" cy="9.3" r="1"/><circle cx="3.8" cy="10.4" r="1"/>
+  </g>
+  <path d="M5 2.5 C3 3.2 1.9 5.2 2 7.2 C2.1 8.8 3 9.9 4.6 10 C6.2 10 7.2 9 7.3 7.4 C7.4 5.2 6.8 3.2 5 2.5 Z" fill="#efe6d6"/>
+  <path d="M5 3.1 C3.5 3.8 2.6 5.4 2.7 7.2 C2.8 8.5 3.5 9.3 4.7 9.4 C5.9 9.4 6.6 8.6 6.7 7.4 C6.8 5.6 6.4 3.8 5 3.1 Z" fill="var(--skin, #f6d7bd)" stroke="#5b4636" stroke-width="0.35"/>
+  <path d="M2.6 4.4 L7.8 3.2" stroke="#3e4348" stroke-width="1" stroke-linecap="round"/>
+  <ellipse cx="3.6" cy="4.15" rx="0.9" ry="0.65" fill="#8fd0ee" stroke="#5b4636" stroke-width="0.3"/>
+  <circle cx="3.35" cy="3.95" r="0.2" fill="#fff" opacity="0.7"/>
+  <ellipse cx="3.4" cy="6.8" rx="0.42" ry="0.6" fill="#3d2b22"/>
+  <circle cx="3.55" cy="6.6" r="0.15" fill="#fff"/>
+  <ellipse cx="3.6" cy="8.2" rx="0.6" ry="0.38" fill="#ff8f8f" opacity="0.7"/>
+  <path d="M5.8 1.6 Q8 1 9.6 2.6" stroke="#fff" stroke-opacity="0.35" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"><ellipse cx="6" cy="12.4" rx="1.15" ry="1.7" fill="var(--parka, #e2574c)" transform="rotate(-18 6 12.4)"/><circle cx="5.2" cy="14" r="0.75" fill="#3e4348"/></g>
+  <path d="M4 12.6 L4 14.6" stroke="#5b4636" stroke-width="0.3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "local": {"size": [960, 1111], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "korea/structure/lighthouse.svg", "at": [575, 695], "scale": 0.7},
+    {"use": "korea/structure/flagpole.svg", "at": [617, 735], "scale": 0.8},
+    {"use": "nature/flowers.svg", "count": 4, "area": [320, 540, 120, 130], "scale": 0.6},
+    {"use": "nature/flowers.svg", "count": 3, "area": [530, 680, 120, 90], "scale": 0.55},
+    {"use": "korea/people/hiker", "count": 1, "area": [545, 735, 60, 35], "scale": 0.55},
+    {"use": "usa/people/tourist", "count": 2, "area": [545, 735, 60, 35], "scale": 0.55},
+    {"use": "korea/vehicle/ferry.svg", "count": 1, "scale": 0.5, "layer": "water", "behavior": {"type": "route", "path": "M957.4 984.5 L957.3 971 L955.3 969.1 L927.8 957.2 L858.6 928.5 L777.5 897.1 L718.3 875.8 L641.4 850.4 L621 845.8 L606.2 843.5 L585.2 842 L570.3 842.5 L552.5 845.2 L541 848.7 L530.1 853.6 L520 860", "dur": 90}},
+    {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M160 820 Q300 880 480 880 Q720 900 820 760 Q860 620 760 560 Q620 470 500 440 Q300 400 200 520 Q140 640 160 820", "dur": 160}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 540 C240 500 560 620 1020 540", "dur": 70}}
+  ],
+  "info": {
+    "서도": {"title": "서도", "emoji": "🏝️", "kind": "지명", "desc": "독도의 두 큰 섬 가운데 서쪽 섬이에요. 동도보다 조금 더 크고 높으며, 주민 숙소가 자리하고 있어요. 가파른 봉우리에 바닷새들이 둥지를 틀어요."},
+    "동도": {"title": "동도", "emoji": "🏝️", "kind": "지명", "desc": "독도의 동쪽 섬이에요. 독도경비대와 등대가 있어서 늘 바다를 지켜보고 있어요. 배가 접안하는 선착장도 동도에 있답니다. 바위틈에는 괭이갈매기가 둥지를 틀고 살아요."},
+    "독도": {"title": "독도", "emoji": "🇰🇷", "kind": "지명", "desc": "대한민국 동쪽 끝의 섬 독도예요. 화산 활동으로 생겨났고, 동도와 서도, 여러 바위섬으로 이루어져 있어요. 괭이갈매기의 소중한 번식지이기도 해요."}
+  }
+}

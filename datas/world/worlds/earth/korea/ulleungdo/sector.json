@@ -1,0 +1,29 @@
+{
+  "local": {"size": [960, 954], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "korea/landmark/ulleungdo-rock.svg", "at": [394, 232], "scale": 0.9, "layer": "water"},
+    {"use": "korea/structure/lighthouse.svg", "at": [[768, 606]], "scale": 0.7},
+    {"use": "korea/structure/squid-racks.svg", "at": [[776, 500], [772, 514], [758, 588]], "scale": 0.7},
+    {"use": "nature/pine.svg", "count": 36, "area": [400, 400, 280, 200], "scale": 0.7, "spacing": 11, "vars": {"--leaf": ["#4f9a4a", "#5fae55", "#3f8a4a", "#6db85e"]}},
+    {"use": "nature/pine.svg", "count": 14, "area": [220, 300, 160, 160], "scale": 0.65, "spacing": 12, "vars": {"--leaf": ["#4f9a4a", "#5fae55", "#3f8a4a"]}},
+    {"use": "nature/round-tree.svg", "count": 10, "area": [510, 330, 100, 60], "scale": 0.6, "spacing": 8, "vars": {"--leaf": ["#7cc36a", "#8fcf72", "#6db85e"]}},
+    {"use": "nature/flowers.svg", "count": 6, "area": [530, 350, 56, 22], "scale": 0.6, "spacing": 5, "vars": {"--petal": ["#ffb3c8", "#fff1a8", "#ffffff"]}},
+    {"use": "korea/people/hiker", "count": 5, "area": [500, 470, 90, 60], "scale": 0.75, "spacing": 6, "vars": {"--pants": ["#3d4a6b", "#56627e"], "--hair": ["#3d302a", "#2a2421"], "--skin": ["#f4d6bd", "#eac3a2"], "--jacket": ["#e9785a", "#3f8fbf", "#6fbf73"]}},
+    {"use": "korea/people/ajumma", "count": 2, "area": [745, 575, 30, 25], "scale": 0.7, "spacing": 5, "vars": {"--pants": ["#3d4a6b", "#56627e"], "--hair": ["#2a2421", "#3d302a"], "--skin": ["#f4d6bd", "#eac3a2"], "--blouse": ["#e9785a", "#8cbfdc"]}},
+    {"use": "usa/people/tourist", "count": 2, "area": [745, 575, 30, 25], "scale": 0.7, "spacing": 5},
+    {"use": "korea/structure/cafe.svg", "at": [[752, 582]], "scale": 0.6},
+    {"use": "korea/structure/convenience-store.svg", "at": [[766, 572]], "scale": 0.55},
+    {"use": "korea/vehicle/ferry.svg", "count": 1, "scale": 0.7, "layer": "water", "behavior": {"type": "route", "path": "M957.2 821.1 L957.4 818.4 L954.4 813 L918.5 769.4 L889.4 735.6 L841.4 682.7 L800 640", "dur": 90}},
+    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M850 440 Q890 500 860 570", "dur": 70}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M40 500 C285 436 547 567 923 486", "dur": 80}}
+  ],
+  "info": {
+    "성인봉": {"title": "성인봉", "emoji": "⛰️", "kind": "지명", "desc": "울릉도에서 가장 높은 봉우리 성인봉이에요. 원시림이 우거진 등산로를 오르면 섬과 동해가 발아래 펼쳐져요. 정상에서 북쪽으로 나리분지가 내려다보여요."},
+    "나리분지": {"title": "나리분지", "emoji": "🌾", "kind": "지명", "desc": "울릉도에서 거의 유일하게 넓은 평지인 나리분지예요. 화산 분화구가 내려앉아 생긴 땅이에요. 전통 너와집과 투막집도 남아 있어요."},
+    "도동항": {"title": "도동항", "emoji": "⚓", "kind": "지명", "desc": "울릉도의 관문 도동항이에요. 육지에서 오는 여객선이 닿는 곳으로, 좁은 골짜기를 따라 가게와 숙소가 빼곡히 들어서 있어요. 항구 옆 해안 산책로를 따라 걸으면 맑은 바닷속이 훤히 보여요."},
+    "저동항": {"title": "저동항", "emoji": "🦑", "kind": "지명", "desc": "울릉도 동쪽의 어항 저동항이에요. 오징어잡이 배들의 보금자리로, 밤바다를 밝히는 집어등 불빛이 아름다워요. 촛대바위도 이곳에 있어요."},
+    "태하": {"title": "태하", "emoji": "🗼", "kind": "지명", "desc": "울릉도 서쪽의 마을 태하예요. 모노레일을 타고 오르면 태하등대와 해안 절벽 전망대가 나오는데, 이곳 풍경은 울릉도 최고의 절경으로 꼽혀요."},
+    "코끼리바위": {"title": "코끼리바위", "emoji": "🐘", "kind": "지명", "desc": "코끼리가 바다에 코를 담근 모양의 바위예요. 기둥 모양 주상절리로 이루어졌고, 가운데 뚫린 구멍이 코끼리 코와 몸 사이처럼 보여요. 유람선에서 볼 수 있어요."},
+    "관음도": {"title": "관음도", "emoji": "🌉", "kind": "지명", "desc": "울릉도 북동쪽의 작은 섬 관음도예요. 보행 연도교로 울릉도와 연결되어 걸어서 들어갈 수 있어요. 섬 위 산책길에서 바라보는 바다가 시원해요."}
+  }
+}

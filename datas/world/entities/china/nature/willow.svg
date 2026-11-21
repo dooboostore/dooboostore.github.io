@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28">
+  <!-- 수양버들: 굵고 짧은 줄기, 둥근 머리에서 축 늘어진 연두색 가지들이 바람에 살랑 -->
+  <ellipse cx="12" cy="27" rx="7" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10.4 27.2 C10.8 23 10 19.6 11 15 L13.2 15 C14 19.6 13.2 23 13.6 27.2 Z" fill="#8a6650" stroke-width="0.5"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.5 12 6;1.5 12 6;-1.5 12 6" dur="5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" fill="var(--leaf, #9ccc6a)">
+      <path d="M2.4 20 C1.6 14 1.8 9 3.6 6.4 C4.8 7.6 5 12 4.6 19.4 C4.2 20.6 2.8 21 2.4 20 Z"/>
+      <path d="M19.4 19.4 C19 12 19.2 7.6 20.4 6.4 C22.2 9 22.4 14 21.6 20 C21.2 21 19.8 20.6 19.4 19.4 Z"/>
+      <path d="M2.6 8 C2.2 3.8 6.4 1 12 1 C17.6 1 21.8 3.8 21.4 8 C20.6 10.4 3.4 10.4 2.6 8 Z"/>
+      <path d="M5.4 22 C4.8 16 5 11 6.4 8.4 C7.8 9.6 8 14 7.6 21.4 C7.2 22.6 5.8 23 5.4 22 Z"/>
+      <path d="M16.4 21.4 C16 14 16.2 9.6 17.6 8.4 C19 11 19.2 16 18.6 22 C18.2 23 16.8 22.6 16.4 21.4 Z"/>
+      <path d="M8.8 18.6 C8.4 14 8.8 10.6 10 8.8 C11.2 10.6 11.4 14 11 18.6 C10.6 19.6 9.2 19.6 8.8 18.6 Z"/>
+      <path d="M13 18.6 C12.6 14 12.8 10.6 14 8.8 C15.2 10.6 15.6 14 15.2 18.6 C14.8 19.6 13.4 19.6 13 18.6 Z"/>
+    </g>
+    <g fill="#c4e39a" opacity="0.9"><ellipse cx="9" cy="3.6" rx="3.4" ry="0.9"/><ellipse cx="15.6" cy="4.6" rx="2.6" ry="0.7"/></g>
+    <g stroke="#7aae52" stroke-width="0.35" fill="none" stroke-linecap="round"><path d="M3.4 9 L3.4 18 M6.4 10.6 L6.4 20 M17.6 10.6 L17.6 20 M20.6 9 L20.6 18 M10 10.6 L10 17.6 M14 10.6 L14 17.6"/></g>
+  </g>
+</svg>

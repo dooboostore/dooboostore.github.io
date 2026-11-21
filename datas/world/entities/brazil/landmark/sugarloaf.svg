@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 48">
+  <!-- 슈거로프 산: 화강암 돔, 초록 산허리, 케이블카. 밤엔 정상 조명 -->
+  <ellipse cx="27" cy="46.2" rx="25" ry="1.4" fill="#3b5a2e" opacity="0.16"/>
+  <path d="M2 46 Q8 30 16 18 Q22 8 30 10 Q40 14 46 30 Q50 38 52 46 Z" fill="#8fcb72" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M16 18 Q20 8 28 6 Q36 6 42 18 Q38 26 27 28 Q20 26 16 18 Z" fill="#a8a094" stroke="#5b4636" stroke-width="0.5"/>
+  <path d="M20 20 Q24 12 30 11 Q36 12 39 20 Q34 24 28 24 Q24 23 20 20 Z" fill="#bdb4a5"/>
+  <path d="M8 46 Q14 34 22 26 M46 46 Q42 34 36 26" stroke="#fff" stroke-opacity="0.3" stroke-width="0.8" fill="none"/>
+  <g stroke="#5b4636" stroke-width="0.4" fill="none">
+    <path d="M4 20 L48 32"/>
+    <rect x="24" y="25" width="6" height="4" rx="1.4" fill="#d9c7a8"/>
+  </g>
+  <g fill="#ffe08a" style="opacity: var(--night, 0)">
+    <circle cx="27" cy="8" r="1"/><rect x="24" y="25" width="6" height="4" rx="1.4" opacity="0.7"/>
+  </g>
+  <g fill="#5fae55"><circle cx="4" cy="43" r="3"/><circle cx="50" cy="43" r="2.6"/></g>
+</svg>

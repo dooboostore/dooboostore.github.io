@@ -1,0 +1,35 @@
+{
+  "local": {"size": [960, 1044], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "italy/landmark/colosseum.svg", "at": [631, 718], "scale": 0.8},
+    {"use": "france/structure/obelisk.svg", "at": [187, 534], "scale": 0.7},
+    {"use": "italy/landmark/trevi.svg", "at": [529, 555], "scale": 0.45},
+    {"use": "italy/building/palazzo.svg", "count": 12, "area": [360, 480, 220, 210], "scale": 0.55, "spacing": 18, "vars": {"--wall": ["#e8b878", "#d99a62", "#efc98f", "#e3a86f", "#f0d4a0"]}},
+    {"use": "italy/building/palazzo.svg", "count": 6, "area": [560, 560, 90, 100], "scale": 0.5, "spacing": 18, "vars": {"--wall": ["#e8b878", "#d99a62", "#efc98f", "#e3a86f", "#f0d4a0"]}},
+    {"use": "italy/nature/umbrella-pine.svg", "count": 10, "area": [360, 480, 280, 250], "scale": 0.6, "spacing": 12},
+    {"use": "nature/flowers.svg", "count": 8, "area": [420, 550, 200, 160], "scale": 0.6, "spacing": 6, "vars": {"--petal": ["#ffb3c8", "#fff1a8", "#ffffff", "#c9b6ff"]}},
+    {"use": "italy/landmark/st-peters.svg", "at": [191, 525], "scale": 0.75},
+    {"use": "italy/landmark/pantheon.svg", "at": [455, 592], "scale": 0.45},
+    {"use": "italy/nature/umbrella-pine.svg", "count": 6, "area": [440, 380, 80, 40], "scale": 0.7, "spacing": 14},
+    {"use": "italy/people/nonna", "count": 3, "area": [400, 560, 120, 80], "scale": 0.7, "spacing": 6},
+    {"use": "italy/people/gelato-kid", "count": 3, "area": [500, 540, 60, 40], "scale": 0.7, "spacing": 6},
+    {"use": "people/walker", "count": 10, "area": [400, 520, 260, 220], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e", "#b97f55"], "--hair": ["#2a2421", "#3d302a", "#6b4a35", "#a7a29d"], "--shirt": ["#e9785a", "#8cbfdc", "#f3d38a", "#a8d5b0"], "--pants": ["#3d4a6b", "#56627e", "#6b5a4e"]}},
+    {"use": "usa/people/tourist", "count": 8, "area": [430, 550, 220, 180], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f7e0cc", "#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#3d302a", "#2a2421", "#6b4a35", "#a7a29d"], "--shirt": ["#f3d38a", "#a8d5b0", "#f1f1f1", "#8cbfdc"], "--cap": ["#d6453d", "#4f6fb0", "#f2c641"], "--pants": ["#c9b48a", "#8d8f94", "#5d7aa6"]}},
+    {"use": "animal/pigeon", "count": 6, "area": [430, 550, 200, 160], "spacing": 5},
+    {"use": "animal/butterfly", "count": 3, "area": [430, 550, 200, 160], "spacing": 5, "vars": {"--wing": ["#ffc4e0", "#ffffff", "#ffd36e"]}},
+    {"use": "italy/vehicle/fiat500", "count": 2, "scale": 0.5, "vars": {"--car": ["#9fd4c4", "#f4f1e8", "#e9785a", "#f2d675"]}, "behavior": {"type": "route", "path": "M677.5 1008 L609.8 992.8 L487.8 905 L449.8 829.7 L493.1 767.5 L496.7 742.3 L488.7 717.8 L464.2 694.8 L401.5 688.5 L332.2 616.6 L311.5 571.3", "dur": 76}},
+    {"use": "italy/vehicle/vespa", "count": 3, "scale": 0.55, "spacing": 8, "vars": {"--vespa": ["#9fd4c4", "#f2d675", "#e9785a"]}, "behavior": {"type": "route", "path": "M677.5 1008 L609.8 992.8 L487.8 905 L449.8 829.7 L493.1 767.5 L496.7 742.3 L488.7 717.8 L464.2 694.8 L401.5 688.5 L332.2 616.6 L311.5 571.3", "dur": 133}},
+    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#c2523f"}, "behavior": {"type": "route", "path": "M677.5 1008 L609.8 992.8 L487.8 905 L449.8 829.7 L493.1 767.5 L496.7 742.3 L488.7 717.8 L464.2 694.8 L401.5 688.5 L332.2 616.6 L311.5 571.3", "dur": 142}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 600 C240 560 560 680 1020 580", "dur": 80}}
+  ],
+  "info": {
+    "콜로세움": {"title": "콜로세움", "emoji": "🏟️", "kind": "지명", "desc": "서기 80년에 문을 연 고대 로마의 원형 경기장이에요. 검투사 경기가 열리던 곳으로, 지금도 로마를 대표하는 풍경이에요. 약 5만 명의 관중이 들어갈 수 있었다고 해요."},
+    "트레비 분수": {"title": "트레비 분수", "emoji": "⛲", "kind": "지명", "desc": "로마에서 가장 큰 바로크 분수예요. 동전을 등 뒤로 던지면 다시 로마에 온다는 전설이 있어요. 밤에 조명이 켜지면 더욱 아름다워요."},
+    "판테온": {"title": "판테온", "emoji": "🏛️", "kind": "지명", "desc": "약 2천 년 전에 지금 모습으로 지어진 신전이에요. 둥근 돔 꼭대기 구멍으로 햇빛이 쏟아지고, 비 오는 날엔 빗방울이 그대로 떨어져요. 바닥에는 물 빠지는 구멍이 있대요."},
+    "바티칸": {"title": "바티칸", "emoji": "⛪", "kind": "지명", "desc": "로마 안에 있는 세계에서 가장 작은 나라 바티칸 시국이에요. 교황이 사는 곳으로, 성 베드로 대성당과 시스티나 성당의 미켈란젤로 천장화가 있어요."},
+    "포로 로마노": {"title": "포로 로마노", "emoji": "🏛️", "kind": "지명", "desc": "고대 로마의 정치와 생활의 중심이던 광장 유적이에요. 신전과 개선문, 기둥들이 남아 있어 2천 년 전 로마 사람들의 하루를 상상해 볼 수 있어요."},
+    "스페인 광장": {"title": "스페인 광장", "emoji": "🪜", "kind": "지명", "desc": "넓은 스페인 계단이 있는 광장이에요. 근처에 스페인 대사관이 있어 이런 이름이 붙었어요. 영화 '로마의 휴일'에서 젤라토를 먹던 장면으로 유명해요."},
+    "나보나": {"title": "나보나", "emoji": "⛲", "kind": "지명", "desc": "고대 도미티아누스 경기장 터를 따라 길쭉한 모양이 된 나보나 광장이에요. 가운데에는 베르니니의 '4대 강의 분수'가 있고, 거리 화가와 악사들로 활기차요."},
+    "트라스테베레": {"title": "트라스테베레", "emoji": "🍝", "kind": "지명", "desc": "테베레강 건너편의 옛 골목 동네예요. 담쟁이 덮인 집과 자갈길 사이로 작은 식당이 많아서 저녁이면 로마 사람들의 웃음소리로 가득해요."}
+  }
+}

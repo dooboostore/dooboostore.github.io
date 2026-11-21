@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 11">
+  <!-- 젠투펭귄 (오른쪽을 향함, 옆모습): 동글한 검은 등, 흰 배, 눈 위 흰 띠, 주황 부리와 발. 날개를 파닥이며 뒤뚱 -->
+  <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
+    <g fill="#f29a3a"><ellipse cx="3.4" cy="10.5" rx="1" ry="0.38"/><ellipse cx="5" cy="10.5" rx="1" ry="0.38"/></g>
+    <path d="M1.4 9.6 C0.8 7 1 4 2.4 2.4 C3.2 1.4 4.6 1.2 5.6 1.8 C6.4 2.3 6.6 3.2 6.4 4 C6.8 5.6 6.8 8 6 9.6 C5 10.4 2.4 10.4 1.4 9.6 Z" fill="var(--back, #2f3640)"/>
+    <path d="M3.4 9.9 C4.6 9.2 5.2 7.6 5.4 5.6 C5.6 4.6 5.8 4 6.4 4 C6.8 5.6 6.8 8 6 9.6 C5.4 10.1 4.4 10.1 3.4 9.9 Z" fill="#fbf8f0"/>
+    <path d="M6.2 2.8 L7.7 3.2 Q7.8 3.5 7.6 3.6 L6.3 3.7 Z" fill="#f2793a"/>
+    <path d="M2.8 4.6 C2 5.8 1.8 7.2 2.4 8 C3.2 7.4 3.6 6 3.6 4.8 Z" fill="var(--back, #2f3640)">
+      <animateTransform attributeName="transform" type="rotate" values="0 3.2 4.6;-14 3.2 4.6;0 3.2 4.6" dur="0.9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <path d="M3.9 2.2 Q4.8 1.8 5.4 2.4" stroke="#fbf8f0" stroke-width="0.55" fill="none" stroke-linecap="round"/>
+  <circle cx="5.3" cy="2.9" r="0.36" fill="#1f2228"/>
+  <circle cx="5.4" cy="2.8" r="0.12" fill="#fff"/>
+  <ellipse cx="5.7" cy="3.7" rx="0.4" ry="0.22" fill="#ff9e9e" opacity="0.6"/>
+  <path d="M2.4 2.6 Q3.4 1.8 4.4 1.8" stroke="#fff" stroke-opacity="0.3" stroke-width="0.4" fill="none" stroke-linecap="round"/>
+</svg>

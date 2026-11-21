@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -14 14 32" data-foot="0.5 0.5">
+  <!-- 혜성: 위쪽(진행 방향)에 빛나는 둥근 머리, 아래로 부드럽게 퍼지며 사라지는 꼬리 두 줄기. 머리가 은은히 일렁인다 -->
+  <defs>
+    <linearGradient id="tail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe6ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#bfe6ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tail2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4c2" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff4c2" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#fffbe6" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#ffe9a3" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffe9a3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M-3 -9 C-5.6 0 -5 9 -2 17.6 Q0 18 2 17.6 C5 9 5.6 0 3 -9 Z" fill="url(#tail)"/>
+  <path d="M-1.6 -9 C-2.4 -1 -1.4 6 0.4 13 C2.2 6 2.8 -1 1.6 -9 Z" fill="url(#tail2)"/>
+  <circle cx="0" cy="-9" r="4.6" fill="url(#glow)">
+    <animate attributeName="r" values="4.2;5;4.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="0" cy="-9" r="2.2" fill="#fffbe6" stroke="#e9c46a" stroke-width="0.35"/>
+  <circle cx="-0.6" cy="-9.6" r="0.7" fill="#fff"/>
+</svg>

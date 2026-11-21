@@ -1,0 +1,26 @@
+{
+  "local": {"size": [960, 875], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "polar/building/research-station.svg", "at": [430, 520], "scale": 0.75},
+    {"use": "korea/structure/flagpole.svg", "at": [462, 524], "scale": 0.8},
+    {"use": "polar/structure/weather-tower.svg", "at": [430, 470], "scale": 0.7},
+    {"use": "polar/structure/signpost.svg", "at": [462, 494], "scale": 0.6},
+    {"use": "polar/people/researcher", "count": 4, "area": [430, 480, 70, 30], "scale": 0.7, "spacing": 6},
+    {"use": "polar/animal/reindeer", "count": 4, "area": [250, 480, 200, 140], "scale": 0.7, "spacing": 12},
+    {"use": "polar/animal/arctic-fox", "count": 2, "area": [520, 560, 160, 120], "scale": 0.6, "spacing": 12},
+    {"use": "polar/animal/polar-bear", "count": 2, "area": [100, 650, 250, 150], "scale": 0.8, "spacing": 40},
+    {"use": "polar/animal/walrus", "count": 2, "area": [600, 520, 90, 40], "scale": 0.7, "spacing": 10},
+    {"use": "polar/nature/snow-rock.svg", "count": 8, "area": [100, 500, 700, 300], "scale": 0.8, "spacing": 40},
+    {"use": "polar/nature/iceberg.svg", "at": [[300, 260], [620, 300], [760, 430], [201, 251]], "scale": 0.8, "layer": "water"},
+    {"use": "polar/nature/ice-floe.svg", "at": [[420, 230], [540, 380], [680, 250]], "scale": 0.8, "layer": "water"},
+    {"use": "polar/vehicle/icebreaker.svg", "count": 1, "scale": 0.7, "layer": "water", "behavior": {"type": "route", "path": "M957.2 331.1 L957 330.1 L954 330.2 L721.1 340 L560 395", "dur": 120}},
+    {"use": "polar/vehicle/snowmobile", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M440 500 L520 540 L600 560", "dur": 40}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
+  ],
+  "info": {
+    "다산과학기지": {"title": "다산과학기지", "emoji": "🇰🇷", "kind": "지명", "desc": "2002년 노르웨이 스발바르 뉘올레순에 문을 연 우리나라 첫 북극 과학기지예요. 북극의 바다·대기·생물을 연구해요."},
+    "뉘올레순": {"title": "뉘올레순", "emoji": "🏘️", "kind": "지명", "desc": "북위 79도 가까이에 있는 작은 연구 마을이에요. 여러 나라의 연구기지가 모여 있어 북극 연구의 마을로 불려요."},
+    "콩스피오르": {"title": "콩스피오르", "emoji": "🌊", "kind": "지명", "desc": "뉘올레순 앞에 길게 들어온 피오르예요. 빙하가 바다로 흘러들어 빙산이 둥둥 떠다니곤 해요."},
+    "블롬스트란 반도": {"title": "블롬스트란 반도", "emoji": "🏔️", "kind": "지명", "desc": "콩스피오르 건너편의 땅이에요. 빙하가 물러나면서 섬처럼 드러난 곳이랍니다."}
+  }
+}

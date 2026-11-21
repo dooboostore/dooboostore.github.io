@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30">
+  <!-- 유칼립투스: 껍질이 벗겨진 하얀 얼룩 줄기가 갈라져 오르고, 은빛 초록 잎 덩어리가 듬성듬성. 바람에 살랑 -->
+  <ellipse cx="12" cy="29" rx="6" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10.4 29.2 C11 24 10.2 20 11.2 15 L13.2 15 C13.8 20 13.4 24 14 29.2 Z" fill="#ece6da" stroke-width="0.5"/>
+    <path d="M11.6 16 C10 13 7.6 11.6 5.6 10" fill="none" stroke-width="1.5"/>
+    <path d="M11.6 16 C10 13 7.6 11.6 5.6 10" fill="none" stroke="#ece6da" stroke-width="0.8"/>
+    <path d="M12.6 15.6 C14 12.6 16.4 10.6 18.6 9.6" fill="none" stroke-width="1.5"/>
+    <path d="M12.6 15.6 C14 12.6 16.4 10.6 18.6 9.6" fill="none" stroke="#ece6da" stroke-width="0.8"/>
+    <path d="M12.2 15.4 C12.4 11.6 12 8.4 12.6 5" fill="none" stroke-width="1.3"/>
+    <path d="M12.2 15.4 C12.4 11.6 12 8.4 12.6 5" fill="none" stroke="#ece6da" stroke-width="0.65"/>
+  </g>
+  <g fill="#c9b99a" opacity="0.7"><ellipse cx="11.8" cy="21" rx="0.6" ry="1.4"/><ellipse cx="12.8" cy="25.4" rx="0.5" ry="1.2"/><ellipse cx="11.6" cy="17.4" rx="0.4" ry="0.9"/></g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="7s" repeatCount="indefinite"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" fill="var(--leaf, #8fb59a)">
+      <path d="M1 10.6 C0.4 8 2.4 6.2 5 6.6 C7 6 9 7.4 8.6 9.6 C8.2 11.6 1.8 12.4 1 10.6 Z"/>
+      <path d="M15 9.8 C14.6 7.4 16.8 5.8 19.2 6.2 C21.6 6 23.4 7.8 22.8 10 C22 11.6 15.8 11.8 15 9.8 Z"/>
+      <path d="M8.2 5 C7.6 2.4 10 0.6 12.6 1 C15.2 0.8 17 2.6 16.4 4.8 C15.8 6.6 9 7 8.2 5 Z"/>
+      <path d="M6.4 14.6 C6 12.8 7.4 11.8 9 12 C10.4 11.8 11.4 12.8 11 14.2 C10.6 15.4 7 15.8 6.4 14.6 Z"/>
+    </g>
+    <g fill="#b6d4bc" opacity="0.9"><ellipse cx="4.6" cy="7.8" rx="2.2" ry="0.6"/><ellipse cx="18.8" cy="7.4" rx="2.2" ry="0.6"/><ellipse cx="12.2" cy="2.2" rx="2.4" ry="0.6"/><ellipse cx="8.6" cy="12.8" rx="1.2" ry="0.4"/></g>
+  </g>
+</svg>

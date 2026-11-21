@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 48">
+  <!-- 천단 기년전: 원형 3층 푸른 지붕, 붉은 기둥, 흰 대리석 단. 밤엔 처마등이 빛난다 -->
+  <ellipse cx="25" cy="46.2" rx="22" ry="1.4" fill="#3b5a2e" opacity="0.18"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="8" y="40" width="34" height="5" rx="1.4" fill="#e9e1d2"/>
+    <rect x="12" y="35" width="26" height="5.4" rx="1.2" fill="#f3efe6"/>
+    <rect x="16" y="20" width="18" height="15" rx="1.2" fill="#c2523f"/>
+    <path d="M6 22 Q10 12 25 12 Q40 12 44 22 Q34 25 25 25 Q16 25 6 22 Z" fill="#3f7fa8"/>
+    <path d="M10 15 Q14 7 25 7 Q36 7 40 15 Q32 18 25 18 Q18 18 10 15 Z" fill="#4f8fbf"/>
+    <path d="M14 9 Q18 3 25 3 Q32 3 36 9 Q30 11 25 11 Q20 11 14 9 Z" fill="#3f7fa8"/>
+    <circle cx="25" cy="2.6" r="1.6" fill="#e8b64a"/>
+    <rect x="22" y="27" width="6" height="8" rx="1" fill="#a84334"/>
+  </g>
+  <g stroke="#8a5a3f" stroke-width="0.4">
+    <path d="M18 21 L18 34 M22 21 L22 34 M28 21 L28 34 M32 21 L32 34"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <circle cx="17" cy="24" r="1.2"/><circle cx="25" cy="24" r="1.2"/><circle cx="33" cy="24" r="1.2"/>
+    <rect x="23" y="29" width="4" height="4" rx="1"/>
+  </g>
+  <g fill="#5fae55"><circle cx="4" cy="44" r="2.6"/><circle cx="46" cy="44" r="2.2"/></g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 32">
+  <!-- 돌하르방: 제주 현무암 할아버지, 둥근 모자와 코, 배 위에 두 손. 색은 stone 변수 -->
+  <ellipse cx="9" cy="31.2" rx="8" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M5.4 30.4 L5.8 17 Q9 15.6 12.2 17 L12.6 30.4 Z" fill="var(--stone, #8d8f94)"/>
+    <circle cx="9" cy="12.4" r="4.4" fill="var(--stone, #8d8f94)"/>
+    <path d="M4.6 10.6 Q9 6.6 13.4 10.6 Q9 11.8 4.6 10.6 Z" fill="var(--cap, #6f7278)"/>
+    <ellipse cx="9" cy="14.2" rx="1.6" ry="1" fill="var(--cap, #6f7278)"/>
+    <circle cx="7.2" cy="11.6" r="0.55" fill="#3e4348"/>
+    <circle cx="10.8" cy="11.6" r="0.55" fill="#3e4348"/>
+    <path d="M6.8 16.4 Q9 17.2 11.2 16.4" stroke-width="0.35" fill="none"/>
+    <path d="M5.8 20 Q9 21.6 12.2 20" stroke-width="0.35" fill="none"/>
+  </g>
+  <g fill="#000" opacity="0.1"><ellipse cx="7" cy="24" rx="1.2" ry="0.7"/><ellipse cx="11" cy="24" rx="1.2" ry="0.7"/></g>
+  <g fill="#b3de92" opacity="0.5"><circle cx="6.4" cy="30.8" r="0.8"/><circle cx="12" cy="30.8" r="0.6"/></g>
+</svg>

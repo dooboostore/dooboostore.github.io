@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" data-foot="0.5 0.89">
+  <!-- 나일강 펠루카 (오른쪽을 향함, 옆모습): 초승달 같은 나무 배(띠 색 변수 band), 비스듬한 활대에 걸린 큰 흰 삼각돛. 물결에 흔들리고 뒤로 물거품 -->
+  <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
+    <path d="M0.6 25.4 Q2.4 24.8 4.4 25.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.4s" repeatCount="indefinite"/></path>
+    <path d="M0 26.6 Q2.2 26 4.8 26.6"><animate attributeName="opacity" values="0;0.7;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></path>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.5 14 24;1.5 14 24;-1.5 14 24" dur="4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+      <line x1="13" y1="21" x2="13" y2="8.4" stroke-width="0.9"/>
+      <line x1="13" y1="21" x2="13" y2="8.4" stroke="#a8784e" stroke-width="0.45"/>
+      <path d="M3.2 2.4 Q13.6 8.4 23.8 17.4 Q15 18.6 5.8 18.8 Q2.2 10.6 3.2 2.4 Z" fill="var(--sail, #fbf8f0)" stroke-width="0.5"/>
+      <path d="M2.4 1.4 Q13.6 8 24.8 17.6" fill="none" stroke-width="1"/>
+      <path d="M2.4 1.4 Q13.6 8 24.8 17.6" fill="none" stroke="#a8784e" stroke-width="0.5"/>
+      <path d="M1.6 20.6 C6 21.4 20 21.4 26.4 19.6 C25.4 23.4 22.4 24.8 18.4 24.8 L8 24.8 C4.8 24.8 2.6 23.2 1.6 20.6 Z" fill="var(--hull, #b07a4e)" stroke-width="0.55"/>
+    </g>
+    <path d="M2.6 22 C7 22.8 20 22.6 25.8 21" stroke="var(--band, #3f9ac9)" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+    <path d="M3.4 23.4 C8 23.9 19 23.8 24.6 22.6" stroke="var(--band2, #f6c944)" stroke-width="0.45" fill="none" stroke-linecap="round"/>
+    <path d="M5.6 6 Q5.2 12 7 17.6" stroke="#e9e0cc" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+    <path d="M9 7.8 Q8.6 13 10 17.6" stroke="#e9e0cc" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+    <path d="M4.2 4 Q4 7 4.6 9.6" stroke="#fff" stroke-width="0.6" opacity="0.8" fill="none" stroke-linecap="round"/>
+    <rect x="1.6" y="23.6" width="24.4" height="1.2" rx="0.6" fill="#000" opacity="0.1"/>
+  </g>
+</svg>

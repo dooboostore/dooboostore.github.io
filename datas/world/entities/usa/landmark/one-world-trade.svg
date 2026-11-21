@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 98">
+  <!-- 원 월드 트레이드 센터: 유리면이 위로 갈수록 좁아지는 둥근 삼각 기둥, 꼭대기 첨탑. 밤엔 세로 줄눈과 상층이 빛난다 -->
+  <ellipse cx="15" cy="96.2" rx="14" ry="1.6" fill="#3b5a2e" opacity="0.2"/>
+  <path d="M8 18 L22 18 L24 90 Q15 96 6 90 Z" fill="#cbe6f3" opacity="0.35" style="mix-blend-mode: screen"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 18 L22 18 L24.4 88.6 Q15 94.6 5.6 88.6 Z" fill="#cfe8f4"/>
+    <path d="M8 18 L12.4 18 L11.4 91.4 Q8.2 90.2 5.6 88.6 Z" fill="#e4f4fb"/>
+    <rect x="5.6" y="88" width="18.8" height="7" rx="1.4" fill="#d8d2c6"/>
+    <rect x="12.4" y="9.6" width="5.2" height="8.6" rx="1.2" fill="#c6dbe6"/>
+    <rect x="14.4" y="3.4" width="1.2" height="6.6" rx="0.6" fill="#8b9197"/>
+  </g>
+  <g stroke="#9dbfd0" stroke-width="0.35" opacity="0.8">
+    <path d="M10.6 22 L9.8 86 M15 20 L15 91.4 M19.4 22 L20.2 86"/>
+    <path d="M7.4 40 H22.6 M6.9 58 H23.1 M6.4 76 H23.6"/>
+  </g>
+  <g fill="#ffe08a" style="opacity: var(--night, 0)">
+    <rect x="7.6" y="30" width="4" height="1.2" rx="0.5"/><rect x="13" y="30" width="4" height="1.2" rx="0.5"/><rect x="18.4" y="30" width="4" height="1.2" rx="0.5"/>
+    <rect x="7.2" y="48" width="4" height="1.2" rx="0.5"/><rect x="13" y="48" width="4" height="1.2" rx="0.5"/><rect x="18.8" y="48" width="4" height="1.2" rx="0.5"/>
+    <rect x="6.8" y="66" width="4" height="1.2" rx="0.5"/><rect x="13" y="66" width="4" height="1.2" rx="0.5"/><rect x="19.2" y="66" width="4" height="1.2" rx="0.5"/>
+    <rect x="13.2" y="12.4" width="3.6" height="4.2" rx="0.8"/>
+  </g>
+  <path d="M8.6 20 L10 24 M22.4 20 L21.2 24" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" stroke-linecap="round"/>
+  <circle cx="15" cy="2.8" r="0.8" fill="#ff5d55" style="opacity: var(--night, 0)"><animate attributeName="r" values="0.6;1.1;0.6" dur="2.6s" repeatCount="indefinite"/></circle>
+</svg>

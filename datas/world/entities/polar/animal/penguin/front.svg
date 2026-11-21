@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 11">
+  <!-- 젠투펭귄 (정면): 검은 머리와 등, 흰 배, 눈 위 흰 띠, 주황 부리와 발, 양 날개 -->
+  <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
+    <g fill="#f29a3a"><ellipse cx="3" cy="10.5" rx="0.9" ry="0.38"/><ellipse cx="5" cy="10.5" rx="0.9" ry="0.38"/></g>
+    <path d="M1.2 7.4 C0.6 8 0.4 8.8 0.6 9.2 C1.4 9 1.8 8.4 2 7.6 Z" fill="var(--back, #2f3640)"/>
+    <path d="M6.8 7.4 C7.4 8 7.6 8.8 7.4 9.2 C6.6 9 6.2 8.4 6 7.6 Z" fill="var(--back, #2f3640)"/>
+    <path d="M1.4 9.6 C0.8 7 1 4 2 2.6 C2.6 1.6 3.2 1.2 4 1.2 C4.8 1.2 5.4 1.6 6 2.6 C7 4 7.2 7 6.6 9.6 C5.6 10.4 2.4 10.4 1.4 9.6 Z" fill="var(--back, #2f3640)"/>
+    <path d="M2.2 9.8 C1.8 8 2 5.4 3 4.4 C3.4 4 4.6 4 5 4.4 C6 5.4 6.2 8 5.8 9.8 C4.8 10.2 3.2 10.2 2.2 9.8 Z" fill="#fbf8f0"/>
+    <path d="M3.5 3.5 L4.5 3.5 L4 4.4 Z" fill="#f2793a"/>
+  </g>
+  <path d="M2.4 2.6 Q3 2 3.4 2.4 M4.6 2.4 Q5 2 5.6 2.6" stroke="#fbf8f0" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <g fill="#1f2228"><circle cx="3" cy="3.1" r="0.34"/><circle cx="5" cy="3.1" r="0.34"/></g>
+  <g fill="#fff"><circle cx="3.1" cy="3" r="0.11"/><circle cx="5.1" cy="3" r="0.11"/></g>
+  <g fill="#ff9e9e" opacity="0.6"><ellipse cx="2.4" cy="4" rx="0.4" ry="0.22"/><ellipse cx="5.6" cy="4" rx="0.4" ry="0.22"/></g>
+</svg>

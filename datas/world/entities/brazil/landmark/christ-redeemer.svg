@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 64">
+  <!-- 리우 그리스도상: 팔을 벌린 흰 조각상, 코르코바도 산 위 받침대. 밤엔 조명이 비춘다 -->
+  <ellipse cx="22" cy="62.2" rx="20" ry="1.5" fill="#3b5a2e" opacity="0.18"/>
+  <path d="M2 62 Q10 46 22 42 Q34 46 42 62 Z" fill="#6db85e" stroke="#5b4636" stroke-width="0.5"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="17" y="36" width="10" height="7" rx="2" fill="#cbbfa8"/>
+    <path d="M18 36 Q18 24 22 22 Q26 24 26 36 Z" fill="#fbf8f2"/>
+    <path d="M4 20 Q10 16 18 24 Q24 28 22 32 Q18 32 12 28 Q6 24 4 20 Z" fill="#fbf8f2"/>
+    <path d="M40 20 Q34 16 26 24 Q20 28 22 32 Q26 32 32 28 Q38 24 40 20 Z" fill="#fbf8f2"/>
+    <circle cx="22" cy="18" r="3" fill="#fbf8f2"/>
+    <path d="M19.4 15.6 Q22 12.4 24.6 15.6 Q22 16.8 19.4 15.6 Z" fill="#e9e1d2"/>
+    <rect x="20" y="30" width="4" height="7" rx="1.4" fill="#e9e1d2"/>
+  </g>
+  <g fill="#fff" opacity="0.55"><circle cx="20" cy="17" r="0.5"/><circle cx="24" cy="17" r="0.5"/></g>
+  <g fill="#ffe08a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <circle cx="22" cy="18" r="4" opacity="0.3"/><rect x="19" y="30" width="6" height="10" rx="2" opacity="0.2"/>
+  </g>
+  <g fill="#5fae55"><circle cx="8" cy="58" r="3"/><circle cx="36" cy="58" r="2.6"/></g>
+</svg>

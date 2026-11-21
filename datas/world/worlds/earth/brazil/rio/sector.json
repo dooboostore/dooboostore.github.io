@@ -1,0 +1,27 @@
+{
+  "local": {"size": [960, 1027], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "brazil/landmark/christ-redeemer.svg", "at": [18, 438], "scale": 0.8},
+    {"use": "brazil/landmark/sugarloaf.svg", "at": [781, 383], "scale": 1},
+    {"use": "brazil/building/colorful-house.svg", "count": 16, "area": [280, 500, 320, 250], "scale": 0.5, "spacing": 14, "vars": {"--wall": ["#f2b8a2", "#f6d38a", "#a8d5e8", "#c6e0a8", "#e9a6a1", "#f4ead6", "#c6b2e3"]}},
+    {"use": "brazil/nature/coconut-palm.svg", "count": 20, "area": [120, 450, 500, 360], "scale": 0.7, "spacing": 18},
+    {"use": "korea/structure/beach-umbrella.svg", "count": 6, "area": [360, 700, 100, 40], "scale": 0.5, "spacing": 20, "vars": {"--canopy": ["#e9785a", "#6fa8dc", "#f4c84f", "#ff9eb8", "#7fd1b9", "#ffffff"]}},
+    {"use": "brazil/structure/kiosk.svg", "at": [[352, 790], [300, 830], [372, 770]], "scale": 0.5},
+    {"use": "brazil/people/beach-goer", "count": 5, "area": [300, 770, 110, 50], "scale": 0.8, "spacing": 6},
+    {"use": "brazil/people/samba", "count": 2, "area": [330, 760, 60, 30], "scale": 0.8, "spacing": 6},
+    {"use": "brazil/vehicle/bondinho.svg", "count": 2, "z": 40, "scale": 0.6, "behavior": {"type": "route", "path": "M656 484 L695 436 L779 383", "dur": 60}},
+    {"use": "people/walker", "count": 12, "area": [280, 520, 320, 240], "scale": 0.9, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e", "#b97f55", "#8d5a3b"], "--hair": ["#2a2421", "#3d302a", "#6b4a35", "#a7a29d"], "--shirt": ["#e9785a", "#8cbfdc", "#f3d38a", "#a8d5b0", "#c6b2e3"], "--pants": ["#3d4a6b", "#56627e", "#c9b48a"]}},
+    {"use": "usa/people/tourist", "count": 8, "area": [340, 690, 120, 60], "scale": 0.9, "spacing": 6, "vars": {"--skin": ["#f7e0cc", "#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#3d302a", "#2a2421", "#6b4a35"], "--shirt": ["#f3d38a", "#a8d5b0", "#f1f1f1"], "--cap": ["#d6453d", "#4f6fb0"], "--pants": ["#c9b48a", "#8d8f94"]}},
+    {"use": "vehicle/boat", "count": 3, "scale": 0.45, "layer": "water", "spacing": 30, "vars": {"--sail": "#fbf8f2"}, "behavior": {"type": "route", "path": "M525 412.5 L554.1 429.8 L574.4 429 L575.9 427.5 L580.6 427.4 L586.3 425.7 L600 420", "dur": 80}},
+    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M680 480 Q710 495 740 485", "dur": 90}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 460 C240 400 560 560 1020 480", "dur": 80}}
+  ],
+  "info": {
+    "그리스도상": {"title": "그리스도상", "emoji": "✝️", "kind": "지명", "desc": "코르코바두 언덕 위의 그리스도상이에요. 1931년에 완성되었고, 두 팔을 벌려 리우 시내를 감싸 안는 듯한 모습이에요. 2007년 신 세계 7대 불가사의에 뽑혔어요."},
+    "슈거로프": {"title": "슈거로프", "emoji": "⛰️", "kind": "지명", "desc": "과나바라만 입구의 바위산 팡 지 아수카르예요. 1912년에 시작된 케이블카를 타고 오르면 리우의 해변과 그리스도상이 한눈에 들어와요."},
+    "코파카바나": {"title": "코파카바나", "emoji": "🏖️", "kind": "지명", "desc": "약 4km에 걸친 리우의 대표 해변 코파카바나예요. 물결무늬 보도가 해변을 따라 이어지고, 새해 전야에는 바다 위 불꽃놀이로 유명해요."},
+    "보타포구": {"title": "보타포구", "emoji": "⛵", "kind": "지명", "desc": "과나바라만 안쪽의 동네 보타포구예요. 요트가 떠 있는 잔잔한 만 너머로 슈거로프 산이 보여 사진 명소로 꼽혀요. 저녁이면 근처 거리의 작은 술집과 식당들이 활기를 띠어요."},
+    "이파네마": {"title": "이파네마", "emoji": "🌅", "kind": "지명", "desc": "노래 '이파네마의 소녀'로 세계에 알려진 해변이에요. 해 질 녘이면 사람들이 바위에 모여 노을을 보며 박수를 치는 정겨운 풍경이 펼쳐져요."},
+    "리우데자네이루": {"title": "리우데자네이루", "emoji": "🏖️", "kind": "지명", "desc": "'1월의 강'이라는 뜻의 이름을 가진 리우데자네이루예요. 산과 바다, 숲이 도시와 어우러진 풍경은 2012년 유네스코 세계유산이 되었어요."}
+  }
+}

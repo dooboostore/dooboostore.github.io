@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 32">
+  <!-- 마라카낭 경기장: 둥근 타원 그릇 모양, 흰 지붕 고리와 기둥 띠, 안쪽 관중석과 초록 잔디 경기장. 밤엔 조명이 켜진다 -->
+  <ellipse cx="33" cy="30.8" rx="32" ry="1.2" fill="#3b5a2e" opacity="0.18"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 11 L2 23 C2 27.4 16 30.4 33 30.4 C50 30.4 64 27.4 64 23 L64 11 Z" fill="var(--wall, #e9e4da)"/>
+    <ellipse cx="33" cy="11" rx="31" ry="9" fill="#f8f6f0"/>
+    <ellipse cx="33" cy="11.4" rx="25.4" ry="6.8" fill="#9fb0c4"/>
+    <ellipse cx="33" cy="11.8" rx="17" ry="4.4" fill="#6fbf5e"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="0.4" opacity="0.9"><rect x="19" y="8.4" width="28" height="6.8" rx="1.6"/><line x1="33" y1="8.4" x2="33" y2="15.2"/><circle cx="33" cy="11.8" r="1.6"/></g>
+  <g fill="none" stroke="#5f7a90" stroke-width="0.35" opacity="0.6"><ellipse cx="33" cy="11.6" rx="21.6" ry="5.6"/></g>
+  <g fill="#cfc9bd"><rect x="5" y="16.6" width="1.4" height="9" rx="0.7"/><rect x="10.6" y="18.4" width="1.4" height="9" rx="0.7"/><rect x="16.6" y="19.4" width="1.4" height="9" rx="0.7"/><rect x="23" y="20" width="1.4" height="9.4" rx="0.7"/><rect x="29.6" y="20.2" width="1.4" height="9.4" rx="0.7"/><rect x="35" y="20.2" width="1.4" height="9.4" rx="0.7"/><rect x="41.6" y="20" width="1.4" height="9.4" rx="0.7"/><rect x="48" y="19.4" width="1.4" height="9" rx="0.7"/><rect x="54" y="18.4" width="1.4" height="9" rx="0.7"/><rect x="59.6" y="16.6" width="1.4" height="9" rx="0.7"/></g>
+  <path d="M3 22.6 C8 26 20 28.4 33 28.4 C46 28.4 58 26 63 22.6" stroke="#3f9a80" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M8 6 Q20 2.4 33 2.4" stroke="#fff" stroke-width="0.8" opacity="0.8" fill="none" stroke-linecap="round"/>
+  <g fill="#e9574a" stroke="#5b4636" stroke-width="0.2"><path d="M14 3.6 L14 1 L16 1.6 L14 2.2"/><path d="M52 3.6 L52 1 L54 1.6 L52 2.2" fill="#f6c944"/></g>
+  <g fill="#fff6c9" style="opacity: var(--night, 0)"><ellipse cx="33" cy="11.8" rx="17" ry="4.4" opacity="0.5"/><circle cx="8" cy="6.4" r="0.8"/><circle cx="58" cy="6.4" r="0.8"/><circle cx="33" cy="2.6" r="0.8"/></g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32">
+  <!-- 타임스퀘어 전광판: 강철 기둥 위 큰 화면, 색이 천천히 바뀌는 광고. 밤엔 화면 빛이 퍼진다 -->
+  <ellipse cx="14" cy="31.2" rx="9" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="12.2" y="20" width="3.6" height="11.4" rx="1.2" fill="#8b9197"/>
+    <rect x="1.6" y="1.4" width="24.8" height="19.6" rx="1.8" fill="#3e4348"/>
+    <rect x="3.4" y="3.2" width="21.2" height="15.8" rx="1.1" fill="#ff9eb8"/>
+  </g>
+  <rect x="3.4" y="3.2" width="21.2" height="15.8" rx="1.1" fill="#ff9eb8">
+    <animate attributeName="fill" values="#ff9eb8;#8cd0ff;#ffd36e;#a8e6a1;#c9b6ff;#ff9eb8" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <g fill="#ffffff" opacity="0.85" style="opacity: calc(0.45 + var(--night, 0) * 0.5)">
+    <rect x="5.4" y="5.2" width="7.4" height="1.6" rx="0.8"/>
+    <rect x="5.4" y="8.4" width="5.2" height="1.2" rx="0.6"/>
+    <rect x="15.4" y="5.2" width="7.2" height="5.2" rx="1.2"/>
+    <rect x="5.4" y="12.6" width="11.2" height="1.2" rx="0.6"/>
+    <rect x="18" y="12.6" width="4.6" height="1.2" rx="0.6"/>
+    <rect x="5.4" y="15.6" width="8.6" height="1.2" rx="0.6"/>
+  </g>
+  <rect x="1.6" y="1.4" width="24.8" height="19.6" rx="1.8" fill="#fff" opacity="0.12"/>
+  <rect x="2.6" y="2.4" width="22.8" height="1" rx="0.5" fill="#fff" opacity="0.3"/>
+  <circle cx="14" cy="28.6" r="1.2" fill="#ffcf7a" style="opacity: var(--night, 0)"/>
+</svg>

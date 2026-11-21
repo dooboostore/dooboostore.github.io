@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 22">
+  <!-- 해운대 파라솔: 줄무늬 둥근 차양, 돗자리, 아이스박스, 모래 위 작은 조개. 차양색은 canopy 변수 -->
+  <ellipse cx="14" cy="21" rx="13" ry="1" fill="#3b5a2e" opacity="0.16"/>
+  <ellipse cx="14" cy="19.6" rx="10.4" ry="2.2" fill="#f3e4bf" opacity="0.9"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4.2 9.4 Q14 0.6 23.8 9.4 Q14 12.2 4.2 9.4 Z" fill="var(--canopy, #e9785a)"/>
+    <path d="M14 2.2 L14 19.2" stroke-width="0.55"/>
+    <path d="M4.2 9.4 Q9 10.6 14 9.8 Q19 10.6 23.8 9.4 L23.2 11.4 Q18.6 12.8 14 12 Q9.4 12.8 4.8 11.4 Z" fill="#fbf8f2"/>
+    <rect x="17.6" y="15.2" width="5.2" height="4.2" rx="1" fill="#7cc6ea"/>
+    <rect x="18.2" y="14.4" width="4" height="1.2" rx="0.6" fill="#d8eff9"/>
+    <path d="M6.4 17.4 L10 17.4 L10.6 19.4 L5.8 19.4 Z" fill="#f6c944"/>
+  </g>
+  <g fill="var(--canopy, #e9785a)" opacity="0.75"><path d="M8.2 5.2 Q10.6 8 9.6 10.8 L7 10.2 Q8.2 7.8 8.2 5.2 Z"/><path d="M19.8 5.2 Q17.4 8 18.4 10.8 L21 10.2 Q19.8 7.8 19.8 5.2 Z"/></g>
+  <g fill="#fbf8f2" opacity="0.5"><path d="M12 3.4 Q13.2 6 13 9.6 L15 9.6 Q15.2 6 16 3.6 Z"/></g>
+  <g stroke="#5b4636" stroke-width="0.25" fill="#fff"><circle cx="5" cy="19.8" r="0.6"/><circle cx="11.4" cy="20.2" r="0.5"/><circle cx="22.8" cy="20" r="0.6"/></g>
+  <rect x="5.8" y="17.6" width="4.4" height="0.8" rx="0.4" fill="#fff" opacity="0.25"/>
+</svg>

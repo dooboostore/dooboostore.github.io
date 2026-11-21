@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 44">
+  <!-- 콜로세움: 타원형 투기장, 3층 아치, 한쪽이 무너진 상층. 밤엔 아치 안쪽이 따뜻하게 빛난다 -->
+  <ellipse cx="40" cy="42.2" rx="37" ry="1.8" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="40" cy="20" rx="34" ry="15" fill="#d9c7a8"/>
+    <path d="M6 20 Q6 38 22 41 L58 41 Q74 38 74 20 L74 18 L6 18 Z" fill="#cbb894"/>
+    <path d="M6 20 Q12 32 28 36 L52 36 Q68 32 74 20" fill="#e3d3b4" opacity="0.7"/>
+    <path d="M18 5 Q34 -1 50 3 Q66 7 72 18 L64 18 Q58 9 44 6 Q30 5 20 12 Z" fill="#d9c7a8"/>
+    <rect x="6" y="17.4" width="68" height="2.4" rx="1" fill="#b8a482"/>
+    <rect x="6" y="28.6" width="68" height="2.2" rx="1" fill="#b8a482"/>
+    <rect x="6" y="37.4" width="68" height="2.6" rx="1" fill="#b8a482"/>
+  </g>
+  <g fill="#8a7a62" stroke="#5b4636" stroke-width="0.35">
+    <path d="M10 21 Q12 26 15 27 L15 21 Z"/><path d="M19 21 Q21 26 24 27 L24 21 Z"/><path d="M28 21 Q30 26 33 27 L33 21 Z"/><path d="M37 21 Q39 26 42 27 L42 21 Z"/><path d="M46 21 Q48 26 51 27 L51 21 Z"/><path d="M55 21 Q57 26 60 27 L60 21 Z"/><path d="M64 21 Q66 26 69 27 L69 21 Z"/>
+    <path d="M13 30 Q14.5 34 17 35 L17 30 Z"/><path d="M22 30 Q23.5 34 26 35 L26 30 Z"/><path d="M31 30 Q32.5 34 35 35 L35 30 Z"/><path d="M40 30 Q41.5 34 44 35 L44 30 Z"/><path d="M49 30 Q50.5 34 53 35 L53 30 Z"/><path d="M58 30 Q59.5 34 62 35 L62 30 Z"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <path d="M10.4 21 Q12 24 14.6 25 L14.6 21 Z"/><path d="M28.4 21 Q30 24 32.6 25 L32.6 21 Z"/><path d="M46.4 21 Q48 24 50.6 25 L50.6 21 Z"/><path d="M64.4 21 Q66 24 68.6 25 L68.6 21 Z"/>
+    <path d="M13.4 30 Q14.6 33 16.6 33.6 L16.6 30 Z"/><path d="M40.4 30 Q41.6 33 43.6 33.6 L43.6 30 Z"/><path d="M58.4 30 Q59.6 33 61.6 33.6 L61.6 30 Z"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.3" fill="#7c8a58">
+    <path d="M20 12 Q24 8 32 7 Q28 11 22 13 Z"/><path d="M58 11 Q54 7 47 6 Q52 10 57 12 Z"/>
+  </g>
+  <ellipse cx="52" cy="34" rx="10" ry="2.4" fill="#9a8a70" opacity="0.5"/>
+</svg>

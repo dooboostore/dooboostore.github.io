@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-13 -7 26 14" data-foot="0.5 0.5">
+  <!-- 인공위성: 금박 두른 네모 몸통과 양쪽 파란 태양전지판, 작은 접시 안테나. 불빛이 깜빡인다 -->
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-4 0 L-5 0 M4 0 L5 0" stroke="#8b9197" stroke-width="0.7"/>
+    <rect x="-12.4" y="-3" width="7.4" height="6" rx="0.9" fill="#3f6fb8"/>
+    <rect x="5" y="-3" width="7.4" height="6" rx="0.9" fill="#3f6fb8"/>
+    <rect x="-3.6" y="-3.6" width="7.2" height="7.2" rx="1.4" fill="#f2c14e"/>
+    <path d="M1 -3.6 L1.6 -5.6" stroke="#8b9197" stroke-width="0.4"/>
+    <ellipse cx="1.8" cy="-5.8" rx="1.6" ry="0.8" fill="#fbfaf6"/>
+  </g>
+  <g stroke="#9fc6ea" stroke-width="0.3" opacity="0.8"><path d="M-9.9 -3 L-9.9 3 M-7.5 -3 L-7.5 3 M-12.4 0 L-5 0 M7.5 -3 L7.5 3 M9.9 -3 L9.9 3 M5 0 L12.4 0"/></g>
+  <path d="M-2.6 -2.4 Q0 -3 2.6 -2.4" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M-3 1 L3 1 M-3 2.2 L3 2.2" stroke="#d39a2c" stroke-width="0.3"/>
+  <circle cx="-2" cy="-1" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</svg>

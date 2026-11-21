@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -16 12 34" data-foot="0.5 0.47">
+  <!-- 잠수함 (위에서 본 모습, 뱃머리가 위쪽): 반쯤 잠긴 둥근 몸통, 작은 함교와 잠망경, 뒤로 하얀 V자 물결 -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="0.7">
+    <path d="M-1.2 13 Q-3 15.4 -4 17.4"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M1.2 13 Q3 15.4 4 17.4"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M-0.6 -6.6 Q-1.6 -5.2 -2 -4" opacity="0.8"/>
+    <path d="M0.6 -6.6 Q1.6 -5.2 2 -4" opacity="0.8"/>
+  </g>
+  <path d="M0 -14 C2.8 -14 3.4 -10 3.4 -6 L3.4 7 C3.4 11 2 13.6 0 13.6 C-2 13.6 -3.4 11 -3.4 7 L-3.4 -6 C-3.4 -10 -2.8 -14 0 -14 Z" fill="var(--hull, #4a5a6e)" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M-2.2 -10 Q0 -12.6 2.2 -10" stroke="#ffffff" stroke-opacity="0.4" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+  <path d="M-3.6 10.4 L-4.8 12.6 Q-4.8 13.2 -4.2 13 L-2.4 11.6 Z M3.6 10.4 L4.8 12.6 Q4.8 13.2 4.2 13 L2.4 11.6 Z" fill="var(--hull, #4a5a6e)" stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round"/>
+  <rect x="-1.4" y="-5" width="2.8" height="5.6" rx="1.4" fill="#5d6f84" stroke="#5b4636" stroke-width="0.4"/>
+  <path d="M-1.4 -2.6 L-3 -2.6 M1.4 -2.6 L3 -2.6" stroke="#5b4636" stroke-width="0.5" stroke-linecap="round"/>
+  <circle cx="0" cy="-6.6" r="0.55" fill="#3e4348" stroke="#5b4636" stroke-width="0.25"/>
+  <path d="M-3 4 Q0 5.2 3 4 L3 12 Q0 14 -3 12 Z" fill="#7cc6ea" opacity="0.45"/>
+  <circle cx="0" cy="-1.6" r="0.4" fill="#f6c944"/>
+</svg>

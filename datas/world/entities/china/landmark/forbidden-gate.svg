@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 46">
+  <!-- 자금성 오문: 붉은 성벽, 황금 처마, 중앙 문, 좌우 익랑. 밤엔 홍등이 켜진다 -->
+  <ellipse cx="40" cy="44.2" rx="37" ry="1.6" fill="#3b5a2e" opacity="0.18"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2" y="24" width="76" height="18" rx="1.4" fill="#c2523f"/>
+    <rect x="6" y="14" width="68" height="12" rx="1.2" fill="#d96a50"/>
+    <path d="M0 16 Q8 8 20 10 L60 10 Q72 8 80 16 L74 18 Q66 13 40 13 Q14 13 6 18 Z" fill="#e8b64a"/>
+    <path d="M0 16 Q6 14 12 16 M68 16 Q74 14 80 16" stroke="#f4d27a" stroke-width="1"/>
+    <rect x="26" y="20" width="28" height="22" rx="1.4" fill="#a84334"/>
+    <path d="M30 42 L30 28 Q40 22 50 28 L50 42 Z" fill="#7a3a2c"/>
+    <rect x="10" y="28" width="12" height="14" rx="1" fill="#e8b64a"/>
+    <rect x="58" y="28" width="12" height="14" rx="1" fill="#e8b64a"/>
+    <path d="M10 28 Q16 24 22 28 M58 28 Q64 24 70 28" fill="#f4d27a"/>
+    <rect x="34" y="34" width="12" height="1.4" rx="0.7" fill="#e8b64a"/>
+    <circle cx="40" cy="36" r="1" fill="#f4d27a"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <rect x="12" y="30" width="8" height="10" rx="0.8"/><rect x="60" y="30" width="8" height="10" rx="0.8"/>
+    <circle cx="34" cy="24" r="1.6"/><circle cx="40" cy="24" r="1.6"/><circle cx="46" cy="24" r="1.6"/>
+  </g>
+  <g fill="#4f8a4a"><circle cx="6" cy="42" r="2.4"/><circle cx="74" cy="42" r="2"/></g>
+  <rect x="2" y="24" width="76" height="1.4" rx="0.7" fill="#e8b64a"/>
+</svg>

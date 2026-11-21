@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 44">
+  <!-- 시드니 하버 브리지: 강철 아치, 석조 교탑 두 개, 매달린 상판. 밤엔 차량 불빛 -->
+  <ellipse cx="45" cy="42.2" rx="42" ry="1.6" fill="#3b5a2e" opacity="0.16"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 38 Q6 30 14 30 L76 30 Q84 30 88 38" fill="none" stroke="#8b9197" stroke-width="3.4"/>
+    <path d="M2 38 Q6 32 14 32 L76 32 Q84 32 88 38" fill="none" stroke="#b8c0c6" stroke-width="1.2"/>
+    <path d="M4 32 Q20 2 45 2 Q70 2 86 32" fill="none" stroke="#7d858c" stroke-width="2.6"/>
+    <path d="M4 32 Q20 5 45 5 Q70 5 86 32" fill="none" stroke="#c9d1d6" stroke-width="0.9"/>
+    <rect x="16" y="12" width="8" height="26" rx="1.6" fill="#b8a482"/>
+    <rect x="66" y="12" width="8" height="26" rx="1.6" fill="#b8a482"/>
+    <rect x="18" y="12" width="4" height="4" rx="1" fill="#d9c7a8"/>
+    <rect x="68" y="12" width="4" height="4" rx="1" fill="#d9c7a8"/>
+    <path d="M8 38 L82 38" stroke="#3e4348" stroke-width="2.6"/>
+    <path d="M8 38 L82 38" stroke="#6d7680" stroke-width="1"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.3" opacity="0.6">
+    <path d="M22 18 L45 8 M30 24 L45 18 M38 28 L45 24 M68 18 L45 8 M60 24 L45 18 M52 28 L45 24"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <circle cx="26" cy="38" r="0.8"/><circle cx="37" cy="38" r="0.8"/><circle cx="48" cy="38" r="0.8"/><circle cx="59" cy="38" r="0.8"/>
+  </g>
+  <path d="M2 40 Q24 43 45 41 Q66 43 88 40" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.55"/>
+</svg>

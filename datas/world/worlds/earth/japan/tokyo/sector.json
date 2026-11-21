@@ -20,7 +20,6 @@
     {"use": "japan/nature/sakura.svg", "at": [[379.2, 454.7], [389, 447.7], [372.7, 449.8], [397.8, 449.6], [415.4, 446.6], [430.8, 451.2]], "vars": {"--leaf": ["#e8935a", "#d9774a"]}},
     {"use": "japan/nature/momiji.svg", "at": [[419.8, 454.9], [389.9, 455.4], [429.5, 455.2], [407.8, 451.2]], "vars": {"--leaf": ["#e2553f", "#ea6a3c", "#d9473f", "#f08a4b"]}},
     {"use": "japan/nature/momiji.svg", "at": [[511.2, 503.2], [512.2, 508.1], [508.8, 513.6]], "vars": {"--leaf": ["#e2553f", "#ea6a3c", "#d9473f", "#f08a4b"]}},
-    {"use": "japan/nature/kuromatsu.svg", "at": [[615.1, 645.5], [602.3, 656.7], [582.8, 652.1]]},
     {"use": "japan/nature/momiji.svg", "at": [[623.7, 320.3], [588.3, 317.3], [624.8, 325.4]], "vars": {"--leaf": ["#e2553f", "#ea6a3c", "#d9473f", "#f08a4b"]}},
     {"use": "nature/ginkgo.svg", "at": [[687.4, 351.5], [691.5, 339.8], [708.1, 348.4]]},
     {"use": "japan/building/shrine.svg", "at": [[593.2, 300.4]], "scale": 0.6},
@@ -34,8 +33,6 @@
     {"use": "japan/building/office-tower.svg", "at": [[539.7, 415], [580.6, 401.7], [582.3, 438.9]], "scale": 0.7, "vars": {"--glass": ["#9cc8e4", "#a9d3e8", "#8fb9d8", "#b5d6c8"]}},
     {"use": "japan/building/office-tower.svg", "at": [[560.9, 510.7], [583, 480.4], [569.1, 498.6]], "scale": 0.7, "vars": {"--glass": ["#9cc8e4", "#a9d3e8", "#8fb9d8", "#b5d6c8"]}},
     {"use": "japan/building/office-tower.svg", "at": [[470.8, 491.4], [445.4, 507.5], [453.3, 535.9]], "scale": 0.7, "vars": {"--glass": ["#9cc8e4", "#a9d3e8", "#8fb9d8", "#b5d6c8"]}},
-    {"use": "japan/building/office-tower.svg", "at": [[596.6, 647.6], [621.2, 633.6]], "scale": 0.8, "vars": {"--glass": ["#b5d6c8", "#9cc8e4"]}},
-    {"use": "japan/building/mansion.svg", "at": [[605.1, 674.9]], "scale": 0.8, "vars": {"--wall": ["#efe3cf", "#f3ece0", "#e9dccb", "#f1e6e6", "#e6ebe2"], "--accent": ["#b9c9d6", "#c9b8a6", "#a9c7b5", "#d6b9b0"]}},
     {"use": "japan/building/mansion.svg", "at": [[321.3, 240.7], [243.5, 200.4]], "scale": 0.85, "vars": {"--wall": ["#efe3cf", "#f3ece0", "#e9dccb", "#f1e6e6", "#e6ebe2"], "--accent": ["#b9c9d6", "#c9b8a6", "#a9c7b5", "#d6b9b0"]}},
     {"use": "japan/building/machiya.svg", "at": [[291.9, 227.2], [315.2, 292.2]], "scale": 0.75, "vars": {"--noren": ["#3f5f8a", "#c2523f", "#5a8a5e", "#7a5a8a"], "--wall": ["#f3e9d6", "#efe2cc"], "--wood": ["#7a5038", "#6e4a36", "#86593e"]}},
     {"use": "japan/building/konbini.svg", "at": [[263.1, 241.2]], "scale": 0.7, "vars": {"--stripe1": "#f08a3c", "--stripe2": "#4bae6e", "--stripe3": "#e2574c"}},
@@ -129,8 +126,20 @@
     {"use": "japan/vehicle/toei-bus", "count": 1, "behavior": {"type": "route", "path": "M803 390 L878 395", "dur": 30}},
     {"use": "japan/vehicle/train", "count": 1, "scale": 0.55, "vars": {"--line": ["#f08a3c"]}, "behavior": {"type": "route", "path": "M232 403 H500", "dur": 26}},
     {"use": "japan/vehicle/train", "count": 1, "scale": 0.55, "flip": true, "vars": {"--line": ["#f6c244", "#9acd32"]}, "behavior": {"type": "route", "path": "M500 409 H232", "dur": 30}},
-    {"use": "japan/vehicle/water-bus", "count": 1, "scale": 0.8, "layer": "water", "behavior": {"type": "route", "path": "M600 716 H980", "dur": 120}},
-    {"use": "japan/vehicle/water-bus", "count": 1, "scale": 0.8, "layer": "water", "flip": true, "behavior": {"type": "route", "path": "M980 790 H630", "dur": 110}},
+    {"use": "japan/vehicle/water-bus", "count": 1, "scale": 0.8, "layer": "water", "behavior": {"type": "route", "path": "M600 716 L609 716 L610.6 712.9 L610.6 714.4 L609.1 715.9 L609.1 717.4 L607.6 718.9 L607.6 720.4 L604.6 724.9 L604.6 729.4 L607.6 732.4 L615.1 732.4 L616.6 730.9 L618.1 730.9 L626.6 721.7 L634.3 716.6 L641.9 716 L643.5 716.6 L645.4 719.7 L644 717.5 L644 714.5 L649.4 708.6 L663.7 699.4 L668.2 697.9 L671.2 694.9 L672.7 694.9 L680.2 688.9 L681.7 688.9 L683.2 690.4 L683.2 691.9 L686.2 694.9 L686.2 696.4 L687.7 697.9 L689.2 702.4 L690.5 703.3 L694.2 709.1 L696.6 714.8 L698.7 716 L956.1 716 L957.4 717.1 L957.4 720.5", "dur": 120}},
+    {"use": "japan/vehicle/water-bus", "count": 1, "scale": 0.8, "layer": "water", "flip": true, "behavior": {"type": "route", "path": "M957.4 794.5 L957.4 791.1 L956.1 790 L630 790", "dur": 110}},
     {"use": "animal/birds.svg", "count": 2, "z": 36, "behavior": {"type": "route", "path": "M-60 260 C240 180 600 320 1020 210", "dur": 60}}
-  ]
+  ],
+  "info": {
+    "신주쿠": {"title": "신주쿠", "emoji": "🏙️", "kind": "지명", "desc": "도쿄 도청과 고층 빌딩이 모인 번화가 신주쿠예요. 신주쿠역은 하루 이용객이 세계에서 가장 많은 역으로 알려져 있어요. 큰 정원인 신주쿠 교엔도 있어 쉬어 가기 좋아요."},
+    "시부야": {"title": "시부야", "emoji": "🚦", "kind": "지명", "desc": "젊음의 거리 시부야예요. 사방에서 사람들이 한꺼번에 건너는 스크램블 교차로가 유명하고, 역 앞에는 충견 하치코 동상이 있어요."},
+    "우에노": {"title": "우에노", "emoji": "🐼", "kind": "지명", "desc": "넓은 우에노 공원에 동물원과 박물관, 미술관이 모인 우에노예요. 우에노 동물원은 일본에서 가장 오래된 동물원이고, 봄엔 벚꽃 명소로도 사랑받아요."},
+    "아사쿠사": {"title": "아사쿠사", "emoji": "🏮", "kind": "지명", "desc": "옛 에도의 정취가 남은 동네 아사쿠사예요. 도쿄에서 가장 오래된 절 센소지와 가미나리몬, 기념품 가게가 늘어선 나카미세 거리가 있어요."},
+    "이케부쿠로": {"title": "이케부쿠로", "emoji": "🛍️", "kind": "지명", "desc": "도쿄 북서쪽의 번화가 이케부쿠로예요. 큰 역과 백화점, 선샤인 시티 같은 쇼핑·놀거리가 모여 있어 늘 활기가 넘쳐요. 애니메이션과 만화 관련 가게도 많아 팬들이 즐겨 찾는 곳이에요."},
+    "긴자": {"title": "긴자", "emoji": "🛍️", "kind": "지명", "desc": "도쿄의 대표적인 고급 쇼핑 거리 긴자예요. 주말이면 큰길을 보행자 천국으로 만들어 차 없이 느긋하게 걸을 수 있어요. 오래된 백화점과 노포 사이를 걷다 보면 도쿄의 우아한 얼굴을 만날 수 있어요."},
+    "롯폰기": {"title": "롯폰기", "emoji": "🌃", "kind": "지명", "desc": "미술관과 전망대, 세계 각국 식당이 모인 롯폰기예요. 롯폰기 힐스와 도쿄 미드타운에서 도쿄 타워가 보이는 야경이 아름다워요. 가을과 겨울에는 거리 나무들이 반짝이는 조명으로 꾸며져요."},
+    "오다이바": {"title": "오다이바", "emoji": "🌉", "kind": "지명", "desc": "도쿄만에 매립지로 만든 오다이바예요. 레인보우 브리지가 섬과 도심을 잇고, 해변 공원에서 바라보는 도쿄의 야경이 근사해요. 해변 공원 모래사장에서 바닷바람을 맞으며 쉬어 가기 좋아요."},
+    "고쿄": {"title": "고쿄", "emoji": "🏯", "kind": "지명", "desc": "일본 천황이 사는 고쿄(황거)예요. 옛 에도성 자리에 있고, 해자와 돌담이 도심 한가운데 넓은 녹지를 이뤄요. 둘레를 달리는 조깅 코스로도 유명해요."},
+    "도쿄만": {"title": "도쿄만", "emoji": "🌊", "kind": "지명", "desc": "도쿄와 요코하마, 지바가 둘러싼 바다 도쿄만이에요. 많은 배가 오가는 큰 항구이고, 바다 아래로 터널과 다리가 이어진 '도쿄만 아쿠아라인'도 있어요."}
+  }
 }

@@ -2,7 +2,7 @@ import { attribute, elementDefine, event, eventDelegate, innerHtml, onConnectedA
 import { Router } from '@dooboostore/core-web';
 import { geoArea, geoCentroid, geoCircle, geoContains, geoDistance, geoGraticule10, geoOrthographic, geoPath } from 'd3-geo';
 import { EntityRegistry, SVGNS, Win } from './entity';
-import { mountScene, Scene } from './scene';
+import { mountScene, Picked, Scene } from './scene';
 import { distanceKm, Station, stationsNear } from './radio';
 import { Route, Traffic } from './traffic';
 
@@ -13,7 +13,7 @@ type LL = [number, number];
 type LonLat = { lon: number; lat: number };
 type View = LonLat & { k: number };
 type Bounds = [[number, number], [number, number]]; // [[서경, 남위], [동경, 북위]]
-type Sector = { id: string; name: string; geo: LonLat; zoom: [number, number]; local?: boolean; bounds?: Bounds };
+type Sector = { id: string; name: string; geo: LonLat; zoom: [number, number]; local?: boolean; bounds?: Bounds; focus?: Bounds; country?: string };
 type WorldMeta = { id: string; name: string; icon: string; sectors: Sector[] };
 type Style = { fill?: string; stroke?: string; opacity?: number };
 type WorldJson = {
@@ -33,10 +33,14 @@ type WorldJson = {
 type Country = { type: 'Feature'; properties: { iso: string; name: string }; geometry: any };
 type FeatureJson = { name: string; kind: string; circle?: [number, number, number]; line?: LL[]; width?: number };
 type Feat = { f: FeatureJson; geo: any; el: SVGPathElement };
-type Mounted = { scene: Scene; wrap: SVGGElement; clip: SVGClipPathElement; line: SVGPathElement };
+// 도감 항목: entities.json 의 개체 항목, sector.json 의 info[지명]
+type DexEntry = { name?: string; title?: string; emoji?: string; kind?: string; desc?: string };
+// 누른 것: 장면 개체(use)·지명(label) 또는 지구본 교통(use + place = 항로 이름). geo = 지금 위치
+type Dex = { use?: string; label?: string; sectorId?: string; place?: string; moving: boolean; geo?: () => LL | undefined };
+type Mounted = { scene: Scene; wrap: SVGGElement; clip: SVGClipPathElement; line: SVGPathElement; at: number };
 
 const K_MIN = 0.7;
-const K_MAX = 4000;
+const K_MAX = 30000; // 독도처럼 아주 작은 섬도 화면에 채울 수 있게
 const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 const wrap = (d: number) => ((((d + 180) % 360) + 360) % 360) - 180;
 const flagOf = (iso?: string) => (iso && /^[A-Z]{2}$/.test(iso) ? String.fromCodePoint(...[...iso].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65)) : '');
@@ -46,7 +50,7 @@ const pick = <T>(a: T[]) => a[Math.floor(Math.random() * a.length)];
 
 // 낮밤: 화면 중심의 현지 태양시(UTC + 경도/15) → 색조와 --night(창문·가로등 불빛)
 type Phase = 'dawn' | 'morning' | 'day' | 'sunset' | 'dusk' | 'night';
-type TimeMode = 'auto' | Phase;
+type TimeMode = 'auto' | 'random' | Phase; // random: 일정 간격으로 시간대가 저절로 바뀜
 type Weather = 'clear' | 'cloudy' | 'rain' | 'storm' | 'snow' | 'fog';
 const WEATHERS: Record<Weather, { icon: string; label: string }> = {
   clear: { icon: '☀️', label: '맑음' },
@@ -64,7 +68,13 @@ const PHASES: Record<Phase, { tint: string; op: number; night: number; icon: str
   dusk: { tint: '#5d4fb0', op: 0.4, night: 0.85, icon: '🌆', label: '저녁' },
   night: { tint: '#1c2a78', op: 0.55, night: 1, icon: '🌙', label: '밤' },
 };
+type WeatherMode = Weather | 'random';
 const ENV_KEY = 'world.env';
+const ENV_SHUFFLE_MS = 30000; // 랜덤 시간·날씨가 바뀌는 간격
+const TOUR_STAY_MS = 25000; // 자동 여행: 한 지역에 머무는 시간
+const isTime = (t: unknown): t is TimeMode => t === 'auto' || t === 'random' || (typeof t === 'string' && t in PHASES);
+const isWeather = (x: unknown): x is WeatherMode => x === 'random' || (typeof x === 'string' && x in WEATHERS);
+const pickOther = <T>(a: T[], cur: T) => pick(a.filter((x) => x !== cur)) ?? cur;
 const solarHour = (lon: number, now = new Date()) => (((now.getUTCHours() + now.getUTCMinutes() / 60 + lon / 15) % 24) + 24) % 24;
 const phaseOf = (h: number): Phase => (h < 5 ? 'night' : h < 6.5 ? 'dawn' : h < 9 ? 'morning' : h < 17 ? 'day' : h < 18.5 ? 'sunset' : h < 20 ? 'dusk' : 'night');
 
@@ -118,10 +128,16 @@ export default (win: Window) => {
     private traffic?: Traffic;
     private scenes = new Map<string, Promise<Scene>>();
     private mounted = new Map<string, Mounted>();
+    // 불러오는 중인 장면: 경계선을 먼저 그려 두고(boundary.json 은 작다) 장면이 붙으면 그 선을 넘겨준다
+    private pending = new Map<string, { line: SVGPathElement; boundary?: any }>();
+    // 날아가는 목적지 장면: 아직 작게 보여도 비행 시작부터 미리 불러온다 (손으로 움직이면 해제)
+    private wantId?: string;
     private me?: LonLat;
     private toastTimer = 0;
     private timeMode: TimeMode = 'auto';
-    private weather: Weather = 'clear';
+    private weather: WeatherMode = 'clear';
+    private rndPhase: Phase = 'day'; // random 일 때 지금 고른 값
+    private rndWeather: Weather = 'clear';
     private proj = geoOrthographic().clipAngle(90).precision(0.6);
     private path = geoPath(this.proj);
     private lastUrl = '';
@@ -146,11 +162,11 @@ export default (win: Window) => {
     @query('#audio') private audioEl!: HTMLAudioElement;
     @query('#boundaries') private boundariesEl!: SVGGElement;
     @query('#btn-env') private btnEnvEl!: HTMLElement;
+    @query('#btn-tour') private btnTourEl!: HTMLElement;
     @query('#btn-fab') private btnFabEl!: HTMLElement;
     @query('#btn-pin') private btnPinEl!: HTMLElement;
     @query('#btn-radio') private btnRadioEl!: HTMLElement;
     @query('#btn-world') private btnWorldEl!: HTMLElement;
-    @query('#clouds') private cloudsEl!: SVGGElement;
     @query('#countries') private countriesEl!: SVGGElement;
     @query('#entity-defs') private entityDefsEl!: SVGDefsElement;
     @query('#env') private envEl!: HTMLElement;
@@ -168,6 +184,12 @@ export default (win: Window) => {
     @query('#scene-defs') private sceneDefsEl!: SVGDefsElement;
     @query('#scenes') private scenesEl!: SVGGElement;
     @query('#soon') private soonEl!: HTMLElement;
+    @query('#loading') private loadingEl!: HTMLElement;
+    @query('#info') private infoEl!: HTMLElement;
+    @query('#info-title') private infoTitleEl!: HTMLElement;
+    @query('#info-kind') private infoKindEl!: HTMLElement;
+    @query('#info-desc') private infoDescEl!: HTMLElement;
+    @query('#btn-follow') private btnFollowEl!: HTMLElement;
     @query('#soon-text') private soonTextEl!: HTMLElement;
     @query('#stage') private stageEl!: SVGSVGElement;
     @query('#stars') private starsEl!: SVGGElement;
@@ -201,8 +223,8 @@ export default (win: Window) => {
       // 저장된 시간·날씨 → URL 파라미터가 있으면 그게 우선 (공유 링크로 들어온 경우)
       try {
         const saved = JSON.parse(w.localStorage.getItem(ENV_KEY) ?? 'null');
-        if (saved?.time && (saved.time === 'auto' || saved.time in PHASES)) this.timeMode = saved.time;
-        if (saved?.weather && saved.weather in WEATHERS) this.weather = saved.weather;
+        if (isTime(saved?.time)) this.timeMode = saved.time;
+        if (isWeather(saved?.weather)) this.weather = saved.weather;
       } catch {
         /* 기본값 */
       }
@@ -218,9 +240,10 @@ export default (win: Window) => {
       const q = new URLSearchParams(w.location.search);
       const num = (k: string) => (q.get(k) != null && q.get(k) !== '' && isFinite(Number(q.get(k))) ? Number(q.get(k)) : undefined);
       const t = q.get('t');
-      if (t && (t === 'auto' || t in PHASES)) this.timeMode = t as TimeMode;
+      if (isTime(t)) this.timeMode = t;
       const wx = q.get('wx');
-      if (wx && wx in WEATHERS) this.weather = wx as Weather;
+      if (isWeather(wx)) this.weather = wx;
+      this.onEnvShuffle();
       const lat = num('lat'), lon = num('lon'), z = num('z');
       const view = lat != null && lon != null ? { lat: clamp(lat, -85, 85), lon: wrap(lon), k: clamp(z ?? 1, K_MIN, K_MAX) } : undefined;
 
@@ -333,11 +356,10 @@ export default (win: Window) => {
       this.markerEls.clear();
       for (const s of this.sectors) {
         const top = id === 'earth' && !s.id.includes('/');
-        const iso = top ? countries.find((c) => geoContains(c, [s.geo.lon, s.geo.lat]))?.properties.iso : undefined;
-        if (id === 'earth') {
-          const ciso = countries.find((c) => geoContains(c, [s.geo.lon, s.geo.lat]))?.properties.iso;
-          if (ciso) this.isoOf.set(s.id, ciso);
-        }
+        // 국가 코드는 sector 의 country (섬·해안 도시는 110m 국가 폴리곤 밖이라 위치로는 못 찾는다)
+        const ciso = id === 'earth' ? (s.country ?? countries.find((c) => geoContains(c, [s.geo.lon, s.geo.lat]))?.properties.iso) : undefined;
+        if (ciso) this.isoOf.set(s.id, ciso);
+        const iso = top ? ciso : undefined;
         const m = ns('g') as SVGGElement;
         m.setAttribute('class', 'marker' + (top ? ' top' : ''));
         m.setAttribute('data-id', s.id);
@@ -347,7 +369,7 @@ export default (win: Window) => {
         this.markerEls.set(s.id, m);
       }
 
-      this.traffic?.set(world.traffic ?? []);
+      this.traffic?.set(world.traffic ?? [], world.radiusKm);
       const v = view ?? { lon: id === 'earth' ? 127.5 : this.lon, lat: id === 'earth' ? 28 : 15, k: 1 };
       Object.assign(this, { lon: v.lon, lat: v.lat, k: v.k, target: null });
       this.renderWorldMenu();
@@ -368,6 +390,7 @@ export default (win: Window) => {
     frame(t: number) {
       const dt = Math.min(0.05, (t - (this.last || t)) / 1000);
       this.last = t;
+      if (this.follow) this.followStep(dt);
       if (this.target) {
         const f = 1 - Math.exp(-dt * 3.2);
         this.lon += wrap(this.target.lon - this.lon) * f;
@@ -390,7 +413,7 @@ export default (win: Window) => {
       } else if (this.world?.traffic) {
         this.syncProj(); // 교통은 카메라가 멈춰 있어도 움직인다
       }
-      if (this.world?.traffic) this.traffic?.update(this.proj, [this.lon, this.lat], this.k, t / 1000, this.camAltKm, this.W, this.H);
+      if (this.world?.traffic) this.traffic?.update(this.proj, [this.lon, this.lat], this.k, t / 1000, this.camAltKm, this.W, this.H, this.covered);
       return true;
     }
 
@@ -421,7 +444,6 @@ export default (win: Window) => {
       glow.setAttribute('cy', String(H / 2));
       glow.setAttribute('r', String(R * 1.12));
       glow.style.display = k > 3 ? 'none' : '';
-      this.cloudsEl.style.opacity = String(this.world?.atmosphere ? clamp((4 - k) / 2, 0, 1) : 0);
       this.graticuleEl.setAttribute('d', k < 12 ? this.path(geoGraticule10()) ?? '' : '');
       this.countryEls.forEach((el, i) => el.setAttribute('d', this.path(this.countries[i]) ?? ''));
       this.countriesEl.style.strokeWidth = String(clamp(0.6 + Math.log(k) * 0.25, 0.6, 1.6));
@@ -431,6 +453,11 @@ export default (win: Window) => {
         if (f.line) el.style.strokeWidth = String(Math.max(1, (f.width ?? 1) * pxPerDeg));
       }
 
+      const loading = this.loadingShown;
+      if (this.loadingEl.classList.contains('show') !== loading) {
+        if (loading) this.loadingEl.querySelector('span')!.textContent = `${this.sectors.find((x) => x.id === this.wantId)?.name ?? ''} 불러오는 중…`;
+        this.loadingEl.classList.toggle('show', loading);
+      }
       const center: LL = [this.lon, this.lat];
       for (const s of this.sectors) {
         const m = this.markerEls.get(s.id)!;
@@ -454,6 +481,21 @@ export default (win: Window) => {
       }
     }
 
+    // 목적지 장면을 아직 불러오는 중이고 거의 다 왔으면 "불러오는 중" 표시
+    private get loadingShown() {
+      const id = this.wantId;
+      return !!id && !this.mounted.has(id) && (!this.target || this.k > this.target.k * 0.1);
+    }
+
+    // 지역 장면이 보이는 곳인가 (bounds 안 + 장면이 반 이상 나타남)
+    private covered = ([lon, lat]: LL) => {
+      for (const id of this.mounted.keys()) {
+        const b = this.sectors.find((x) => x.id === id)?.bounds;
+        if (b && lon >= b[0][0] && lon <= b[1][0] && lat >= b[0][1] && lat <= b[1][1] && this.sceneOpacity(id) > 0.3) return true;
+      }
+      return false;
+    };
+
     private sceneOpacity(id: string) {
       return parseFloat(this.mounted.get(id)?.wrap.style.opacity || '0');
     }
@@ -466,10 +508,16 @@ export default (win: Window) => {
       const px = se[0] - nw[0];
       // 화면 밖으로 반 화면 이상 벗어난 장면도 뗀다 (붙어 있으면 안 보여도 애니메이션·경로 계산이 계속 돈다)
       const off = se[0] < -this.W * 0.5 || nw[0] > this.W * 1.5 || se[1] < -this.H * 0.5 || nw[1] > this.H * 1.5;
-      if (!front || px < 40 || off) return this.unmount(s.id);
+      const want = s.id === this.wantId;
+      if ((!front || px < 40 || off) && !want) return this.unmount(s.id);
       const m = this.mounted.get(s.id);
       if (!m) {
-        if (px > 80) this.ensureScene(s);
+        if (px > 80 || want) this.ensureScene(s);
+        const pend = this.pending.get(s.id);
+        if (pend?.boundary) {
+          pend.line.setAttribute('d', front ? this.path(pend.boundary) ?? '' : '');
+          pend.line.style.opacity = String(clamp((px - 30) / 100, 0, 1));
+        }
         return;
       }
       const [sw, sh] = m.scene.size;
@@ -480,12 +528,15 @@ export default (win: Window) => {
       const d = m.scene.boundary ? this.path(m.scene.boundary) ?? '' : '';
       m.clip.firstElementChild!.setAttribute('d', d);
       m.line.setAttribute('d', d);
-      const op = String(clamp((px - 80) / 220, 0, 1));
+      // 붙은 직후에는 0.6초 동안 서서히 나타난다 (뚝 하고 생기지 않게)
+      const age = clamp((w.performance.now() - m.at) / 600, 0, 1);
+      if (age < 1) this.dirty = true;
+      const op = String(Math.min(clamp((px - 80) / 220, 0, 1), age));
       // 카메라 높이를 장면 로컬 단위로: bounds 실제 폭(km) / 로컬 폭
       const kmPerUnit = ((e0 - w0) * Math.PI * this.world!.radiusKm * Math.cos((((s0 + n0) / 2) * Math.PI) / 180)) / 180 / sw;
       m.scene.setCamera(this.camAltKm / kmPerUnit);
       m.wrap.style.opacity = op;
-      m.line.style.opacity = op;
+      m.line.style.opacity = String(Math.max(+op, clamp((px - 30) / 100, 0, 1)));
     }
 
     private ensureScene(s: Sector) {
@@ -497,10 +548,21 @@ export default (win: Window) => {
         const wrapEl = ns('g') as SVGGElement;
         wrapEl.style.opacity = '0';
         this.scenesEl.appendChild(wrapEl);
-        p = mountScene(w, this.registry!, `${DATA}worlds/${this.worldId}/${s.id}/`, slug, wrapEl).then((scene) => {
+        const dir = `${DATA}worlds/${this.worldId}/${s.id}/`;
+        const line = ns('path') as SVGPathElement;
+        line.setAttribute('class', 'boundary');
+        this.boundariesEl.appendChild(line);
+        const pend: { line: SVGPathElement; boundary?: any } = { line };
+        this.pending.set(s.id, pend);
+        w.fetch(dir + 'boundary.json').then((r) => (r.ok ? r.json() : undefined)).then((b) => {
+          pend.boundary = b;
+          this.dirty = true;
+        }).catch(() => undefined);
+        p = mountScene(w, this.registry!, dir, slug, wrapEl).then((scene) => {
           if (this.scenes.get(s.id) !== p) {
             scene.stop(); // 로딩 중에 멀어짐
             wrapEl.remove();
+            line.remove();
             return scene;
           }
           const clip = ns('clipPath') as SVGClipPathElement;
@@ -508,16 +570,16 @@ export default (win: Window) => {
           clip.appendChild(ns('path'));
           this.sceneDefsEl.appendChild(clip);
           if (scene.boundary) wrapEl.setAttribute('clip-path', `url(#${clip.id})`);
-          const line = ns('path') as SVGPathElement;
-          line.setAttribute('class', 'boundary');
-          this.boundariesEl.appendChild(line);
-          this.mounted.set(s.id, { scene, wrap: wrapEl, clip, line });
+          this.pending.delete(s.id);
+          this.mounted.set(s.id, { scene, wrap: wrapEl, clip, line, at: w.performance.now() });
           this.dirty = true;
           return scene;
         });
         p.catch((e) => {
           console.error('[world] 장면 로드 실패', s.id, e); // 실패한 promise 는 남겨 둬서 매 프레임 재시도하지 않는다 (멀어졌다 다시 오면 재시도)
           wrapEl.remove();
+          line.remove();
+          this.pending.delete(s.id);
         });
         this.scenes.set(s.id, p);
       }
@@ -527,6 +589,8 @@ export default (win: Window) => {
     private unmount(id: string) {
       const m = this.mounted.get(id);
       this.scenes.delete(id);
+      this.pending.get(id)?.line.remove();
+      this.pending.delete(id);
       if (!m) return;
       m.scene.stop();
       m.wrap.remove();
@@ -544,9 +608,11 @@ export default (win: Window) => {
     }
 
     private flyTo(s: Sector) {
-      if (s.bounds) {
-        const [[w0, s0], [e0, n0]] = s.bounds;
-        this.target = { lon: (w0 + e0) / 2, lat: (s0 + n0) / 2, k: clamp(this.fitK(s.bounds), K_MIN, K_MAX) };
+      this.wantId = s.local ? s.id : undefined;
+      const b = s.focus ?? s.bounds;
+      if (b) {
+        const [[w0, s0], [e0, n0]] = b;
+        this.target = { lon: (w0 + e0) / 2, lat: (s0 + n0) / 2, k: clamp(this.fitK(b), K_MIN, K_MAX) };
       } else {
         this.target = { lon: s.geo.lon, lat: s.geo.lat, k: clamp(s.zoom[0] * 3, K_MIN, K_MAX) };
       }
@@ -562,7 +628,9 @@ export default (win: Window) => {
       let place: string;
       let soon: boolean;
       if (this.worldId === 'earth') {
-        const here = this.countries.find((c) => geoContains(c, center));
+        // 장면 안이면 sector 의 국가 코드가 우선 (섬·해안 도시는 110m 국가 폴리곤 밖으로 판정된다)
+        const iso = sub && this.isoOf.get(sub.id);
+        const here = (iso && this.countries.find((c) => c.properties.iso === iso)) || this.countries.find((c) => geoContains(c, center));
         if (here !== this.here) {
           this.countryEls.forEach((el, i) => el.classList.toggle('here', this.countries[i] === here));
           this.here = here;
@@ -582,7 +650,7 @@ export default (win: Window) => {
         soon = this.k >= 4 && !sceneShown;
       }
       this.soonTextEl.textContent = this.worldId === 'earth' ? '🚧 아직 준비 중인 곳이에요' : '🚧 아직 아무도 살지 않는 곳이에요';
-      this.soonEl.classList.toggle('show', soon);
+      this.soonEl.classList.toggle('show', soon && !this.loadingShown);
       this.setPlace(place);
       this.writeUrl();
     }
@@ -835,6 +903,8 @@ export default (win: Window) => {
       (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
       this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, moved: 0, t: w.performance.now() });
       this.target = null;
+      this.wantId = undefined;
+      this.stopFollow();
       this.touch();
     }
 
@@ -865,6 +935,7 @@ export default (win: Window) => {
       const p = this.pointers.get(e.pointerId);
       this.pointers.delete(e.pointerId);
       this.touch();
+      if (p && e.type === 'pointerup' && p.moved < 8 && w.performance.now() - p.t < 450 && !this.pointers.size) this.tapPick(e.clientX, e.clientY);
       // 터치 더블탭 → 그 자리로 확대 (모바일은 dblclick 이 안정적으로 오지 않는다)
       if (!p || e.type !== 'pointerup' || e.pointerType !== 'touch' || p.moved > 10 || w.performance.now() - p.t > 300) return;
       const now = w.performance.now();
@@ -877,6 +948,8 @@ export default (win: Window) => {
     @event('#stage', 'wheel', { passive: false })
     onWheel(e: WheelEvent) {
       e.preventDefault();
+      this.wantId = undefined;
+      this.stopFollow();
       this.zoomAround(e.clientX, e.clientY, Math.exp(-e.deltaY * 0.0018));
       this.touch();
     }
@@ -885,6 +958,98 @@ export default (win: Window) => {
     onDbl(e: MouseEvent) {
       if (this.lastPointerType === 'touch') return; // 터치는 onUp 의 더블탭이 처리
       this.zoomInAt(e.clientX, e.clientY);
+    }
+
+    // ---------------- 📖 도감: 개체·지명·지구본 교통을 누르면 정보 팝업, 🎥 따라가기 ----------------
+    // Dex: 누른 것 하나. geo = 지금 위치(경위도) — 따라가기는 이것만 본다 (장면 개체든 지구본 교통이든 같다)
+    private follow?: { dex: Dex; k: number };
+    private dex?: Promise<Map<string, DexEntry>>;
+    private sectorInfo = new Map<string, Promise<Record<string, DexEntry>>>();
+    private infoPick?: Dex;
+
+    // 손가락 끝은 크다: 누른 점과 주변 몇 점을 훑어 처음 걸리는 것 (장면 개체·지명, 지구본 교통)
+    private tapPick(x: number, y: number) {
+      const root = this.shadowRoot ?? w.document;
+      for (const [dx, dy] of [[0, 0], [7, 0], [-7, 0], [0, 7], [0, -7], [10, 10], [-10, 10], [10, -10], [-10, -10]]) {
+        for (const el of root.elementsFromPoint(x + dx, y + dy)) {
+          for (const [id, m] of this.mounted) {
+            if (!m.wrap.contains(el) || this.sceneOpacity(id) < 0.5) continue;
+            const picked = m.scene.pick(el);
+            if (picked) return void this.showInfo(this.sceneDex(id, picked));
+          }
+          const tr = this.trafficEl.contains(el) ? this.traffic?.locate(el) : undefined;
+          if (tr) return void this.showInfo({ use: tr.route.use, place: tr.route.name, moving: true, geo: tr.geo });
+        }
+      }
+    }
+
+    // 장면 개체·지명 → Dex (로컬 좌표 → 경위도)
+    private sceneDex(id: string, picked: Picked): Dex {
+      const sector = this.sectors.find((s) => s.id === id);
+      const geo = (): LL | undefined => {
+        const m = this.mounted.get(id);
+        const b = sector?.bounds;
+        if (!m || !b) return undefined;
+        const [x, y] = picked.pos();
+        const [sw, sh] = m.scene.size;
+        return [b[0][0] + (x / sw) * (b[1][0] - b[0][0]), b[1][1] - (y / sh) * (b[1][1] - b[0][1])];
+      };
+      return { use: picked.use, label: picked.label, sectorId: id, place: sector?.name, moving: picked.moving, geo };
+    }
+
+    private async showInfo(d: Dex) {
+      this.infoPick = d;
+      let e: DexEntry | undefined;
+      if (d.use) {
+        this.dex ??= w.fetch(DATA + 'entities.json').then((r) => r.json()).then((j: { entities: ({ id: string } & DexEntry)[] }) => new Map(j.entities.map((it) => [it.id, it] as const)));
+        e = (await this.dex).get(d.use);
+      } else if (d.label && d.sectorId) {
+        let p = this.sectorInfo.get(d.sectorId);
+        if (!p) this.sectorInfo.set(d.sectorId, (p = w.fetch(`${DATA}worlds/${this.worldId}/${d.sectorId}/sector.json`).then((r) => r.json()).then((j) => j.info ?? {})));
+        e = (await p)[d.label];
+      }
+      if (this.infoPick !== d) return; // 그 사이 다른 걸 눌렀다
+      const title = e?.title ?? e?.name ?? d.label ?? d.use ?? '';
+      this.infoTitleEl.textContent = `${e?.emoji ?? (d.label ? '📍' : '🔎')} ${title}`;
+      this.infoKindEl.textContent = [e?.kind ?? (d.label ? '지명' : ''), d.place].filter(Boolean).join(' · ');
+      this.infoDescEl.textContent = e?.desc ?? '아직 도감에 적힌 이야기가 없어요.';
+      this.btnFollowEl.style.display = d.moving ? '' : 'none';
+      this.btnFollowEl.textContent = this.follow?.dex === d ? '⏹ 그만 따라가기' : '🎥 따라가기';
+      this.onSheetClose();
+      this.infoEl.classList.add('show');
+    }
+
+    @event('#btn-follow', 'click')
+    onFollow() {
+      const d = this.infoPick;
+      if (!d) return;
+      if (this.follow?.dex === d) return this.stopFollow();
+      // 장면 개체는 지역 전체 화면의 4배까지 다가간다. 지구본 교통은 지금 줌 그대로 (이미 더 가까우면 그대로)
+      const b = d.sectorId ? this.sectors.find((s) => s.id === d.sectorId)?.bounds : undefined;
+      this.follow = { dex: d, k: clamp(Math.max(this.k, b ? this.fitK(b) * 4 : this.k), K_MIN, K_MAX) };
+      this.target = null;
+      this.wantId = d.sectorId; // 따라가는 동안 장면이 떨어지지 않게
+      this.btnFollowEl.textContent = '⏹ 그만 따라가기';
+      this.onSheetClose();
+      this.toast('🎥 따라가는 중이에요 · 화면을 움직이면 멈춰요');
+    }
+
+    private stopFollow() {
+      if (!this.follow) return;
+      this.follow = undefined;
+      if (this.btnFollowEl) this.btnFollowEl.textContent = '🎥 따라가기';
+    }
+
+    // 따라가는 것의 지금 경위도로 카메라 중심을 부드럽게 옮긴다
+    private followStep(dt: number) {
+      const f = this.follow!;
+      const ll = f.dex.geo?.();
+      if (!ll) return this.stopFollow();
+      const a = 1 - Math.exp(-dt * 4);
+      this.lon += wrap(ll[0] - this.lon) * a;
+      this.lat += (clamp(ll[1], -85, 85) - this.lat) * a;
+      this.k = Math.exp(Math.log(this.k) + (Math.log(f.k) - Math.log(this.k)) * a);
+      this.dirty = true;
     }
 
     @eventDelegate('.marker', 'click')
@@ -983,6 +1148,31 @@ export default (win: Window) => {
       this.toast(`🎲 ${d.name}(으)로 떠나요`);
     }
 
+    // ▶️ 자동 여행: 켜 두면 만들어진 지역(모든 세계)을 무작위로 돌아다닌다. 손으로 움직이면 그만큼 더 머문다
+    private touring = false;
+
+    @event('#btn-tour', 'click')
+    onTourToggle() {
+      this.touring = !this.touring;
+      const b = this.btnTourEl;
+      b.textContent = this.touring ? '⏸️' : '▶️';
+      b.title = this.touring ? '자동 여행 끄기' : '만들어진 지역 자동 여행 켜기';
+      b.classList.toggle('on', this.touring);
+      if (!this.touring) return this.toast('⏸️ 자동 여행을 멈췄어요');
+      this.lastInteract = -Infinity;
+      this.onTourTick();
+    }
+
+    @setInterval(1000)
+    onTourTick() {
+      if (!this.touring || w.performance.now() - this.lastInteract < TOUR_STAY_MS) return;
+      const r = pick(this.regions().filter((it) => !(it.wm.id === this.worldId && this.sceneOpacity(it.s.id) > 0.5)));
+      if (!r) return;
+      this.touch();
+      this.toast(`▶️ ${r.wm.icon} ${r.s.name}(으)로 가요`);
+      this.goRegion(r.wm.id, r.s.id);
+    }
+
     @event('#btn-share', 'click')
     async onShare() {
       this.writeUrl();
@@ -1039,10 +1229,20 @@ export default (win: Window) => {
       this.applyTime();
     }
 
+    // 랜덤 시간·날씨: 고른 쪽만 일정 간격으로 다른 값으로 바뀐다
+    @setInterval(ENV_SHUFFLE_MS)
+    onEnvShuffle() {
+      if (this.timeMode !== 'random' && this.weather !== 'random') return;
+      if (this.timeMode === 'random') this.rndPhase = pickOther(Object.keys(PHASES) as Phase[], this.rndPhase);
+      if (this.weather === 'random') this.rndWeather = pickOther(Object.keys(WEATHERS) as Weather[], this.rndWeather);
+      if (this.weatherEl) this.applyTime();
+    }
+
     // 화면 중심 경도의 현지 시각으로 화면 전체에 색조, 장면에는 --night (불빛). 멀리 볼 때·대기 없는 세계는 색조·날씨 없음
     private applyTime() {
       const h = solarHour(this.lon);
-      const key = this.timeMode === 'auto' ? phaseOf(h) : this.timeMode;
+      const key = this.timeMode === 'auto' ? phaseOf(h) : this.timeMode === 'random' ? this.rndPhase : this.timeMode;
+      const weather = this.weather === 'random' ? this.rndWeather : this.weather;
       const ph = PHASES[key];
       const air = this.world?.atmosphere !== false;
       const near = air ? clamp((this.k - 4) / 6, 0, 1) : 0;
@@ -1051,26 +1251,27 @@ export default (win: Window) => {
       tint.style.opacity = String(ph.op * near);
       this.scenesEl.style.setProperty('--night', String(ph.night));
       const wx = this.weatherEl;
-      wx.setAttribute('data-w', this.weather);
+      wx.setAttribute('data-w', weather);
       wx.style.opacity = String(near);
       // 위쪽 버튼 = 지금 고른 시간대 아이콘 (+ 맑음이 아니면 날씨 배지)
-      this.btnEnvEl.innerHTML = air ? `${ph.icon}${this.weather !== 'clear' ? `<span class="badge">${WEATHERS[this.weather].icon}</span>` : ''}` : '🌌';
-      this.renderEnv(key, h, air);
+      this.btnEnvEl.innerHTML = air ? `${ph.icon}${weather !== 'clear' ? `<span class="badge">${WEATHERS[weather].icon}</span>` : ''}` : '🌌';
+      this.renderEnv(key, weather, h, air);
       return { h, ph };
     }
 
-    private renderEnv(current: Phase, h: number, air: boolean) {
+    private renderEnv(current: Phase, weather: Weather, h: number, air: boolean) {
       if (!air) {
         this.envTimeEl.innerHTML = `<div class="st-empty">🌌 ${esc(this.meta?.name ?? '')}에는 대기가 없어 하늘빛·날씨가 없어요</div>`;
         this.envWeatherEl.innerHTML = '';
         return;
       }
       const t = `${String(Math.floor(h)).padStart(2, '0')}:${String(Math.floor((h % 1) * 60)).padStart(2, '0')}`;
-      this.envTimeEl.innerHTML = (['auto', 'dawn', 'morning', 'day', 'sunset', 'dusk', 'night'] as TimeMode[])
-        .map((m) => `<button class="chip${this.timeMode === m ? ' on' : ''}" data-time="${m}">${m === 'auto' ? `🕐 현지 ${t} (${PHASES[current].icon})` : `${PHASES[m].icon} ${PHASES[m].label}`}</button>`)
+      const label = (m: TimeMode) => (m === 'auto' ? `🕐 현지 ${t} (${PHASES[current].icon})` : m === 'random' ? `🔀 랜덤${this.timeMode === 'random' ? ` (${PHASES[current].icon})` : ''}` : `${PHASES[m].icon} ${PHASES[m].label}`);
+      this.envTimeEl.innerHTML = (['auto', 'random', 'dawn', 'morning', 'day', 'sunset', 'dusk', 'night'] as TimeMode[])
+        .map((m) => `<button class="chip${this.timeMode === m ? ' on' : ''}" data-time="${m}">${label(m)}</button>`)
         .join('');
-      this.envWeatherEl.innerHTML = (Object.keys(WEATHERS) as Weather[])
-        .map((k) => `<button class="chip${this.weather === k ? ' on' : ''}" data-weather="${k}">${WEATHERS[k].icon} ${WEATHERS[k].label}</button>`)
+      this.envWeatherEl.innerHTML = (['random', ...Object.keys(WEATHERS)] as WeatherMode[])
+        .map((k) => `<button class="chip${this.weather === k ? ' on' : ''}" data-weather="${k}">${k === 'random' ? `🔀 랜덤${this.weather === 'random' ? ` (${WEATHERS[weather].icon})` : ''}` : `${WEATHERS[k].icon} ${WEATHERS[k].label}`}</button>`)
         .join('');
     }
 
@@ -1084,8 +1285,10 @@ export default (win: Window) => {
     onEnvPick(e: MouseEvent) {
       const b = (e.target as Element).closest<HTMLElement>('button');
       if (!b?.dataset.time && !b?.dataset.weather) return;
-      if (b.dataset.time) this.timeMode = b.dataset.time as TimeMode;
-      if (b.dataset.weather) this.weather = b.dataset.weather as Weather;
+      const changed = (b.dataset.time && b.dataset.time !== this.timeMode) || (b.dataset.weather && b.dataset.weather !== this.weather);
+      if (isTime(b.dataset.time)) this.timeMode = b.dataset.time;
+      if (isWeather(b.dataset.weather)) this.weather = b.dataset.weather;
+      if (changed) this.onEnvShuffle(); // 랜덤을 고르면 바로 한 번 바뀐다
       try {
         w.localStorage.setItem(ENV_KEY, JSON.stringify({ time: this.timeMode, weather: this.weather }));
       } catch {
@@ -1109,7 +1312,6 @@ export default (win: Window) => {
 
     @onConnectedBodyShadow
     template() {
-      const cloud = '<path d="M10 30 q-10 0 -8 -10 q2 -10 14 -8 q4 -10 16 -8 q12 0 14 10 q12 0 10 12 q-2 6 -10 6 z"/>';
       return `
         <style>
           :host { display: block; position: fixed; inset: 0; font-family: var(--font-family, -apple-system, 'Apple SD Gothic Neo', sans-serif); color: #3b4a5a;
@@ -1130,8 +1332,8 @@ export default (win: Window) => {
           .marker text { font-size: 13px; font-weight: 700; text-anchor: middle; fill: #34465a; paint-order: stroke; stroke: rgba(255,255,255,0.92); stroke-width: 3.5px; stroke-linejoin: round; }
           .marker.top text { font-size: 15px; }
           .marker .soon-tag { font-size: 10px; font-weight: 700; fill: #9a7b3c; }
-          .boundary { fill: none; stroke: #5b4636; stroke-opacity: 0.8; stroke-width: 2.2; stroke-linejoin: round; stroke-dasharray: 7 4; }
-          #traffic { pointer-events: none; }
+          /* 경계: 칼선 대신 동글동글한 크림색 점선 (힐링 그림체) */
+          .boundary { fill: none; stroke: #fff6df; stroke-opacity: 0.95; stroke-width: 4.2; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 0.1 9; }
           /* ---- 날씨 (HTML 레이어, 합성 스레드 애니메이션) ---- */
           #weather { position: absolute; inset: 0; overflow: hidden; pointer-events: none; transition: opacity .6s; opacity: 0; }
           #weather .wx { position: absolute; display: none; pointer-events: none; }
@@ -1164,9 +1366,6 @@ export default (win: Window) => {
           .wx-flash { inset: 0; background: #fff; opacity: 0; will-change: opacity; animation: wxFlash 9s linear infinite; }
           @keyframes wxFlash { 0%, 80% { opacity: 0; } 81.5% { opacity: 0.55; } 84% { opacity: 0; } 86% { opacity: 0.32; } 100% { opacity: 0; } }
           .tint { mix-blend-mode: multiply; transition: opacity 2s ease, fill 2s ease; pointer-events: none; }
-          #clouds { pointer-events: none; transition: opacity .6s; }
-          #clouds .cloud { fill: #ffffff; stroke: #c9d6e6; stroke-width: 1.5; opacity: 0.92; animation: drift var(--d) linear infinite; }
-          @keyframes drift { from { transform: translateX(-140px); } to { transform: translateX(calc(100vw + 140px)); } }
           #me .dot { fill: #3b82f6; stroke: #fff; stroke-width: 2.5; }
           #me .pulse { fill: #3b82f6; opacity: 0.35; transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-out infinite; }
           @keyframes pulse { from { transform: scale(0.6); opacity: 0.5; } to { transform: scale(2.4); opacity: 0; } }
@@ -1198,27 +1397,32 @@ export default (win: Window) => {
           .now button { width: 36px; height: 36px; font-size: 15px; border-radius: 12px; }
           #btn-pin { filter: grayscale(1); opacity: 0.55; }
           #btn-pin.on { filter: none; opacity: 1; background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; }
-          #toast, #soon { position: absolute; left: 50%; transform: translate(-50%, -8px); opacity: 0; pointer-events: none; transition: opacity .35s, transform .35s;
+          #toast, #soon, #loading { position: absolute; left: 50%; transform: translate(-50%, -8px); opacity: 0; pointer-events: none; transition: opacity .35s, transform .35s;
             padding: 10px 16px; font-weight: 700; font-size: 14px; max-width: calc(100vw - 32px); text-align: center; }
           #toast { top: calc(70px + env(safe-area-inset-top, 0px)); z-index: 20; }
           #soon { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; gap: 10px; white-space: nowrap; }
-          #toast.show, #soon.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+          #loading { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+          #loading i { width: 14px; height: 14px; border-radius: 50%; border: 2.5px solid #ead7b8; border-top-color: #e0a84f; animation: spin .8s linear infinite; }
+          @keyframes spin { to { transform: rotate(360deg); } }
+          #toast.show, #soon.show, #loading.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
           #btn-soon, .chip, .st { width: auto; height: 34px; padding: 0 12px; font-size: 13px; font-weight: 800; border-radius: 12px; box-shadow: 0 2px 0 #dcc29b; }
           #btn-soon { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; white-space: nowrap; }
-          .chip.on, .st.on { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; }
+          #btn-tour.on, .chip.on, .st.on { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; }
           /* 시트: 데스크톱은 오른쪽 위 패널, 모바일은 아래에서 올라오는 시트 */
           .sheet { position: absolute; top: calc(70px + env(safe-area-inset-top, 0px)); right: 16px; width: min(400px, calc(100vw - 32px)); max-height: min(70vh, 560px); overflow: hidden;
             padding: 12px 14px 14px; display: none; flex-direction: column; gap: 10px; z-index: 10; }
           .sheet.show { display: flex; }
           .sheet > * { flex: none; }
           .sheet > .sheet-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; margin: 0 -4px; padding: 2px 4px 4px; }
+          .info-kind { font-size: 12px; font-weight: 800; color: #9a7b5c; margin: 2px 0 6px; }
+          .info-desc { margin: 0 0 12px; font-size: 14px; line-height: 1.65; color: #5b4636; word-break: keep-all; }
           .sheet-head { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 14px; gap: 8px; }
           .sheet-close { width: 32px; height: 32px; font-size: 14px; border-radius: 10px; box-shadow: 0 2px 0 #dcc29b; flex: none; }
           .env-row { display: flex; gap: 10px; align-items: flex-start; }
           .env-label { font-size: 13px; font-weight: 800; padding-top: 8px; min-width: 28px; }
           .chips { display: flex; flex-wrap: wrap; gap: 6px; }
           #stations-list { display: flex; flex-direction: column; gap: 6px; }
-          .st { display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%; height: 40px; text-align: left; }
+          .st { display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%; height: auto; min-height: 44px; padding: 9px 12px; text-align: left; flex: none; }
           .st-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
           .st-km { font-size: 12px; color: #9a7b5c; flex: none; }
           .st-empty { font-size: 13px; font-weight: 700; color: #8a6d52; padding: 8px 2px; }
@@ -1240,7 +1444,7 @@ export default (win: Window) => {
             #toast { top: calc(60px + env(safe-area-inset-top, 0px)); font-size: 13px; }
             .sheet { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-height: 62vh; border-radius: 20px 20px 0 0; border-bottom: 0;
               padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -6px 24px rgba(20,26,48,0.25); }
-            .st { height: 46px; font-size: 14px; }
+            .st { min-height: 48px; font-size: 14px; }
             .chip { height: 38px; font-size: 14px; }
           }
         </style>
@@ -1269,12 +1473,6 @@ export default (win: Window) => {
             <g id="traffic"></g>
             <rect id="tint" class="tint" x="0" y="0" width="100%" height="100%" style="opacity:0"/>
             <g id="markers"></g>
-            <g id="clouds">
-              <g class="cloud" style="--d:95s; animation-delay:-20s"><g transform="translate(0 150) scale(1.1)">${cloud}</g></g>
-              <g class="cloud" style="--d:130s; animation-delay:-80s"><g transform="translate(0 290) scale(0.8)">${cloud}</g></g>
-              <g class="cloud" style="--d:110s; animation-delay:-55s"><g transform="translate(0 520) scale(1.3)">${cloud}</g></g>
-              <g class="cloud" style="--d:150s; animation-delay:-10s"><g transform="translate(0 660) scale(0.9)">${cloud}</g></g>
-            </g>
             <g id="me" style="display:none"><circle class="pulse" r="9"/><circle class="dot" r="6"/></g>
           </svg>
           <!-- 날씨: SVG 밖 HTML 레이어. transform 애니메이션은 GPU 합성 스레드에서 돌아서 폰의 메인 스레드가 바빠도 멈추지 않는다 -->
@@ -1291,10 +1489,19 @@ export default (win: Window) => {
             <div class="btns">
               <button id="btn-env" title="시간·날씨">⛅</button>
               <button id="btn-random" title="랜덤 여행">🎲</button>
+              <button id="btn-tour" title="만들어진 지역 자동 여행 켜기">▶️</button>
               <button id="btn-me" title="내 위치로">📍</button>
               <button id="btn-share" title="지금 보는 곳 공유">🔗</button>
               <button id="btn-search" title="지역 찾기">🔍</button>
               <button id="btn-world" title="세계 고르기">🌏</button>
+            </div>
+          </div>
+          <div id="info" class="sheet panel">
+            <div class="sheet-head"><span id="info-title"></span><button class="sheet-close" title="닫기">✕</button></div>
+            <div class="sheet-body">
+              <div id="info-kind" class="info-kind"></div>
+              <p id="info-desc" class="info-desc"></p>
+              <div class="chips"><button id="btn-follow" class="chip">🎥 따라가기</button></div>
             </div>
           </div>
           <div id="env" class="sheet panel">
@@ -1319,6 +1526,7 @@ export default (win: Window) => {
             <div id="stations-list" class="sheet-body"></div>
           </div>
           <div id="toast" class="panel"></div>
+          <div id="loading" class="panel"><i></i><span>불러오는 중…</span></div>
           <div id="soon" class="panel"><span id="soon-text">🚧 아직 준비 중인 곳이에요</span><button id="btn-soon">서울 가기 →</button></div>
           <div class="hud">
             <div id="place" class="panel">지구</div>

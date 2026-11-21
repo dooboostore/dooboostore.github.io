@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 56">
+  <!-- 갈라타 탑: 둥근 돌 원통 탑, 층층 아치 창, 꼭대기 전망 회랑, 둥근 끝의 원뿔 지붕. 밤엔 회랑이 환하다 -->
+  <ellipse cx="10" cy="54.8" rx="9" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M3.4 54.2 L4.2 20 L15.8 20 L16.6 54.2 Q10 55 3.4 54.2 Z" fill="var(--stone, #d9c9b0)"/>
+    <rect x="3" y="16.4" width="14" height="5" rx="1" fill="#e6d8c0"/>
+    <rect x="2.2" y="15.6" width="15.6" height="1.4" rx="0.7" fill="#efe4d0"/>
+    <rect x="2.2" y="20.6" width="15.6" height="1.4" rx="0.7" fill="#efe4d0"/>
+    <path d="M2.6 16 Q4.6 8.4 8.6 4.6 Q10 3.4 11.4 4.6 Q15.4 8.4 17.4 16 Z" fill="var(--roof, #5d6c7a)"/>
+    <circle cx="10" cy="3.4" r="0.8" fill="#e8b64a"/>
+  </g>
+  <path d="M10 2.6 L10 1" stroke="#5b4636" stroke-width="0.4" stroke-linecap="round"/>
+  <path d="M6.4 13 Q8 8.4 9.4 6" stroke="#fff" stroke-width="0.6" opacity="0.3" fill="none" stroke-linecap="round"/>
+  <g fill="#7a6a5c" stroke="#5b4636" stroke-width="0.25"><rect x="4.4" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="7.2" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="10" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="12.8" y="17.4" width="1.6" height="2.8" rx="0.8"/></g>
+  <g stroke="#000" stroke-opacity="0.07" stroke-width="0.35"><path d="M4.2 26 L15.8 26 M4 32 L16 32 M3.9 38 L16.1 38 M3.7 44 L16.3 44 M3.6 50 L16.4 50"/></g>
+  <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.25"><rect x="9" y="23" width="2" height="3.4" rx="1"/><rect x="6" y="29" width="1.8" height="3" rx="0.9"/><rect x="12.2" y="29" width="1.8" height="3" rx="0.9"/><rect x="9" y="35" width="2" height="3.4" rx="1"/><rect x="6" y="41" width="1.8" height="3" rx="0.9"/><rect x="12.2" y="41" width="1.8" height="3" rx="0.9"/></g>
+  <path d="M8 54.2 L8 50.6 C8 48.8 12 48.8 12 50.6 L12 54.2 Z" fill="var(--door, #6b4a3a)" stroke="#5b4636" stroke-width="0.4"/>
+  <rect x="4.6" y="21.6" width="1" height="32" rx="0.5" fill="#fff" opacity="0.25"/>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)"><rect x="4.4" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="7.2" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="10" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="12.8" y="17.4" width="1.6" height="2.8" rx="0.8"/><rect x="9" y="35" width="2" height="3.4" rx="1"/></g>
+</svg>

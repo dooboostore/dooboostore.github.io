@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 14">
+  <!-- 스노모빌 (오른쪽을 향함): 앞에 둥근 스키, 뒤에 고무 무한궤도(바퀴 없음), 노란 차체와 바람막이, 빨간 파카를 입은 연구원이 탐. 뒤로 눈가루가 날린다 -->
+  <g fill="#fbfdff" stroke="#cfe6f4" stroke-width="0.25">
+    <circle cx="1.6" cy="11.6" r="0.9"><animate attributeName="opacity" values="0.9;0;0.9" dur="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="0.8" cy="10" r="0.6"><animate attributeName="opacity" values="0;0.9;0" dur="0.8s" repeatCount="indefinite"/></circle>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M15 10 L16.6 12.4" stroke="#3e4348" stroke-width="0.6"/>
+    <path d="M13.4 12.6 L21.6 12.6 Q23.4 12.6 23.4 11.2" fill="none" stroke="#3e4348" stroke-width="0.9"/>
+    <rect x="2.6" y="9.2" width="11" height="3.6" rx="1.8" fill="#3e4348"/>
+    <path d="M3 9.8 C3 7.8 4.4 7 6.6 7 L15.6 7 C18.4 7 20.6 8 21.6 9.6 C21.8 10.2 21.4 10.6 20.8 10.6 L4.4 10.6 C3.6 10.6 3 10.4 3 9.8 Z" fill="var(--sled, #f6c944)"/>
+    <path d="M14.4 7.2 L16 4.4 Q16.4 3.8 17 4.2 L17.4 7.2 Z" fill="#cfe9f5"/>
+    <rect x="5" y="5.8" width="6" height="1.6" rx="0.8" fill="#3e4348"/>
+    <rect x="6.2" y="7.6" width="3.4" height="2.4" rx="1" fill="var(--pants, #3e4b5c)"/>
+    <path d="M6.4 7 C6 4.6 6.8 3 8.6 3 C10 3 10.8 4 10.6 5.6 L10.2 7 Z" fill="var(--parka, #e2574c)"/>
+    <path d="M9.6 5 L13.8 6.6" stroke="var(--parka, #e2574c)" stroke-width="1.2"/>
+    <circle cx="14" cy="6.6" r="0.6" fill="#3e4348"/>
+    <circle cx="8.6" cy="2.4" r="2.3" fill="var(--parka, #e2574c)"/>
+    <path d="M9.4 0.6 C10.8 0.8 11.4 2 11.2 3.2 C11 4.2 10.2 4.6 9.4 4.4 C9.8 3.4 9.8 1.6 9.4 0.6 Z" fill="#efe6d6"/>
+  </g>
+  <path d="M9.8 1.2 C10.6 1.6 10.8 2.6 10.6 3.4 C10.2 3.8 9.9 3.8 9.8 3.6 Z" fill="var(--skin, #f6d7bd)"/>
+  <path d="M8.6 1.4 L11 1.2" stroke="#3e4348" stroke-width="0.5" stroke-linecap="round"/>
+  <circle cx="10.6" cy="1.3" r="0.35" fill="#8fd0ee"/>
+  <g fill="#5b6168">
+    <circle cx="4.4" cy="11" r="0.55"/><circle cx="7" cy="11" r="0.55"/><circle cx="9.6" cy="11" r="0.55"/><circle cx="12" cy="11" r="0.55"/>
+  </g>
+  <path d="M3.4 12.6 L12.8 12.6" stroke="#8b9197" stroke-width="0.4" stroke-dasharray="0.6 0.6">
+    <animate attributeName="stroke-dashoffset" values="0;1.2" dur="0.3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M5 8 Q12 7.4 18 7.8" stroke="#fff" stroke-opacity="0.5" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <circle cx="20.6" cy="9.4" r="0.5" fill="#fff4b8" stroke="#5b4636" stroke-width="0.2"/>
+  <path d="M21 9.2 L30 7.6 L30 11.6 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+</svg>

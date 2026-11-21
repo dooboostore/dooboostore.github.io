@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 80">
+  <!-- 부산타워 (용두산): 둥근 전망대와 기둥, 아래 공원 언덕. 밤엔 전망대 고리가 빛난다 -->
+  <ellipse cx="13" cy="78.2" rx="12.2" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+  <ellipse cx="13" cy="76" rx="11.4" ry="3" fill="#8fcb72" stroke="#5b4636" stroke-width="0.4"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="6.4" y="72.4" width="13.2" height="3.8" rx="1" fill="#e9e1d2"/>
+    <path d="M9.2 72.4 L11.4 30.2 L14.6 30.2 L16.8 72.4 Z" fill="#f3efe6"/>
+    <path d="M12.4 30.2 L13 30.2 L12.4 72.4 L11.2 72.4 Z" fill="#d9cfbd"/>
+    <rect x="7.6" y="24.6" width="10.8" height="6" rx="2.6" fill="#f7f4ec"/>
+    <rect x="8.6" y="18.4" width="8.8" height="6.2" rx="2.2" fill="#e9e1d2"/>
+    <path d="M12.4 18.4 L12.4 10.8" stroke-width="0.8"/>
+    <path d="M12.4 11 L10.8 13.8 L14 13.8 Z" fill="#d9cfbd"/>
+    <circle cx="12.4" cy="9.6" r="1.1" fill="#cfc0a8"/>
+    <rect x="8" y="25.4" width="10" height="1.1" rx="0.55" fill="#3f7f68"/>
+    <rect x="8.8" y="19.2" width="8.4" height="1" rx="0.5" fill="#3f7f68"/>
+  </g>
+  <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.25">
+    <rect x="9" y="20.4" width="1.6" height="2.4" rx="0.4"/><rect x="11.4" y="20.4" width="1.6" height="2.4" rx="0.4"/><rect x="13.8" y="20.4" width="1.6" height="2.4" rx="0.4"/>
+    <rect x="8.8" y="26.4" width="1.6" height="2.4" rx="0.4"/><rect x="11.4" y="26.4" width="1.6" height="2.4" rx="0.4"/><rect x="14" y="26.4" width="1.6" height="2.4" rx="0.4"/>
+  </g>
+  <g fill="#ffe08a" style="opacity: var(--night, 0)">
+    <rect x="9" y="20.6" width="1.4" height="2" rx="0.4"/><rect x="14" y="26.6" width="1.4" height="2" rx="0.4"/>
+    <circle cx="12.4" cy="9.6" r="1.6" opacity="0.5"/>
+  </g>
+  <path d="M10.2 30.6 L11.6 70" stroke="#fff" stroke-opacity="0.55" stroke-width="0.7"/>
+  <g fill="#7cc36a"><circle cx="5" cy="74.4" r="1.4"/><circle cx="20.6" cy="74.6" r="1.2"/><circle cx="8" cy="76.2" r="0.9"/></g>
+</svg>

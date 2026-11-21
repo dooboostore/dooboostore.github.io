@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.3 21.6">
+  <!-- 낙타 (오른쪽을 향함, 옆모습): 둥근 혹 위에 알록달록 안장 담요(변수 blanket)와 술, 긴 목, 졸린 눈, 꼬리가 살랑 -->
+  <g transform="scale(1.35)">
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-8 2.6 6.6;8 2.6 6.6;-8 2.6 6.6" dur="2.6s" repeatCount="indefinite"/>
+      <path d="M2.6 6.6 C1.8 7.6 1.6 8.8 1.8 9.8" fill="none" stroke-width="0.8"/>
+      <path d="M2.6 6.6 C1.8 7.6 1.6 8.8 1.8 9.8" fill="none" stroke="var(--camel, #d9a86a)" stroke-width="0.4"/>
+      <ellipse cx="1.8" cy="10.2" rx="0.5" ry="0.7" fill="#8a6650"/>
+    </g>
+    <g fill="#c4935a"><rect x="4" y="9.4" width="1.4" height="5.4" rx="0.7"/><rect x="10.6" y="9.4" width="1.4" height="5.4" rx="0.7"/></g>
+    <path d="M2.4 9 C2.2 6.4 3.6 5.2 5 5 C5.6 2.6 7 1.8 8.4 2 C9.8 2.2 10.6 3.4 11 5 C12.2 5.2 12.8 6 13 7 L13.4 9.4 C12.8 11 10.6 11.4 7.4 11.4 C4.4 11.4 2.6 10.8 2.4 9 Z" fill="var(--camel, #d9a86a)"/>
+    <path d="M11.8 6.8 C13.2 6.4 13.6 4.6 13.8 3 C14 1.8 14.8 1.2 16 1.4 C17.2 1.6 17.6 2.6 17.4 3.4 C17.2 4 16.4 4.2 15.8 4.2 C15.4 5.4 15.2 7.8 13.6 9.6 Z" fill="var(--camel, #d9a86a)"/>
+    <g fill="var(--camel, #d9a86a)"><rect x="5.4" y="9.6" width="1.5" height="5.2" rx="0.75"/><rect x="12" y="9.6" width="1.5" height="5.2" rx="0.75"/></g>
+    <g fill="#8a6650"><ellipse cx="6.15" cy="14.8" rx="1" ry="0.45"/><ellipse cx="12.75" cy="14.8" rx="1" ry="0.45"/><ellipse cx="4.7" cy="14.8" rx="0.9" ry="0.4"/><ellipse cx="11.3" cy="14.8" rx="0.9" ry="0.4"/></g>
+    <path d="M5 5.2 C6 4.6 10 4.6 11 5.2 L11.4 8.2 Q8 9 4.6 8.2 Z" fill="var(--blanket, #c2523f)"/>
+    <ellipse cx="14.6" cy="1.8" rx="0.4" ry="0.6" fill="var(--camel, #d9a86a)" transform="rotate(-30 14.6 1.8)"/>
+  </g>
+  <path d="M5 6.4 Q8 6 11.2 6.4" stroke="#f6c944" stroke-width="0.45" fill="none" stroke-linecap="round"/>
+  <g fill="#f6c944" stroke="#5b4636" stroke-width="0.2"><circle cx="5" cy="8.6" r="0.35"/><circle cx="6.6" cy="8.9" r="0.35"/><circle cx="8.2" cy="9" r="0.35"/><circle cx="9.8" cy="8.9" r="0.35"/><circle cx="11.3" cy="8.6" r="0.35"/></g>
+  <path d="M15.4 2.6 Q15.9 2.2 16.4 2.6" stroke="#3d2b22" stroke-width="0.3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="16.2" cy="3.4" rx="0.5" ry="0.3" fill="#ff9e9e" opacity="0.55"/>
+  <circle cx="17.1" cy="3" r="0.15" fill="#5b4636"/>
+  <path d="M6.6 2.8 Q8 2 9.6 2.6" stroke="#fff" stroke-opacity="0.35" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

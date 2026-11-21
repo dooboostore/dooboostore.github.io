@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15">
+  <!-- 황제펭귄 (오른쪽을 향함): 키 큰 엄마 펭귄, 노란 귀깃과 가슴, 발 앞에 보송보송한 회색 아기 펭귄(변수 chick). 아기가 살짝 들썩인다 -->
+  <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
+    <g fill="#3e4348"><ellipse cx="3.6" cy="14.4" rx="1.1" ry="0.4"/><ellipse cx="5.6" cy="14.4" rx="1.1" ry="0.4"/></g>
+    <path d="M1.4 13.6 C0.6 10 0.8 5.6 2 3.2 C2.8 1.6 4.4 1 5.8 1.4 C6.8 1.8 7.4 2.6 7.4 3.6 C8 6 8 10.4 7.2 13.6 C6 14.4 2.6 14.4 1.4 13.6 Z" fill="#2f3640"/>
+    <path d="M4 14 C5.6 13 6.2 10.6 6.4 7.6 C6.4 5.8 6.8 4.6 7.4 4.4 C8 6.4 8 10.4 7.2 13.6 C6.4 14.2 5.2 14.2 4 14 Z" fill="#fbf8f0"/>
+    <path d="M6.4 6 C6.6 5 7 4.4 7.5 4.4 C7.7 5 7.7 5.8 7.6 6.6 C7.2 6.4 6.8 6.2 6.4 6 Z" fill="#f6c944"/>
+    <path d="M7.2 2.6 Q8.8 2.8 9.6 3.6 Q8.8 3.8 7.3 3.6 Z" fill="#3e4348"/>
+    <path d="M3.2 6 C2.4 7.6 2.2 9.6 2.8 11 C3.8 10 4.2 8 4.2 6.2 Z" fill="#4a5560"/>
+  </g>
+  <path d="M8.2 3.4 L9.2 3.6" stroke="#f29a3a" stroke-width="0.35" stroke-linecap="round"/>
+  <path d="M5.4 3.6 C6 4.2 6.6 4.6 7.2 4.8" stroke="#f6c944" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+  <circle cx="6.4" cy="2.7" r="0.36" fill="#1f2228"/>
+  <circle cx="6.5" cy="2.6" r="0.12" fill="#fff"/>
+  <ellipse cx="6.9" cy="3.6" rx="0.4" ry="0.22" fill="#ff9e9e" opacity="0.55"/>
+  <path d="M2.6 3.4 Q3.6 2 5 1.8" stroke="#fff" stroke-opacity="0.3" stroke-width="0.45" fill="none" stroke-linecap="round"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.3;0 0" dur="1.4s" repeatCount="indefinite"/>
+    <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
+      <g fill="#3e4348"><ellipse cx="9.8" cy="14.5" rx="0.7" ry="0.3"/><ellipse cx="11" cy="14.5" rx="0.7" ry="0.3"/></g>
+      <path d="M8.6 14.2 C8 12.4 8.4 10.2 9.6 9.6 C10.8 9 12.4 9.6 12.6 11 C12.8 12.4 12.4 13.6 11.8 14.2 C10.8 14.6 9.6 14.6 8.6 14.2 Z" fill="var(--chick, #c9ccd1)"/>
+      <circle cx="10.8" cy="8.6" r="1.6" fill="#3e4348"/>
+      <path d="M12.2 8.7 L13 8.9 L12.2 9.1 Z" fill="#3e4348"/>
+    </g>
+    <path d="M10.8 8.4 C11.8 8.2 12.3 8.8 12.2 9.4 C11.8 9.9 11 9.9 10.8 9.4 Z" fill="#fbf8f0"/>
+    <circle cx="11.5" cy="8.8" r="0.24" fill="#1f2228"/>
+    <g fill="#fff" opacity="0.6"><circle cx="9.4" cy="11" r="0.3"/><circle cx="10.4" cy="12.2" r="0.3"/><circle cx="11.6" cy="11.2" r="0.25"/></g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 32">
+  <!-- 태극기 게양대: 흰 바탕, 위 빨강 아래 파랑의 태극(두 반원으로 된 S자), 건(왼쪽 위)·곤(오른쪽 아래)·감(오른쪽 위)·리(왼쪽 아래) 네 괘. 깃발 전체가 살짝 기울며 펄럭인다 -->
+  <ellipse cx="6" cy="31.2" rx="5" ry="0.8" fill="#3b5a2e" opacity="0.18"/>
+  <rect x="4.4" y="4" width="1.2" height="27" rx="0.6" fill="#8b9197" stroke="#5b4636" stroke-width="0.3"/>
+  <path d="M4.8 5.4 L4.8 30" stroke="#fff" stroke-opacity="0.35" stroke-width="0.3" stroke-linecap="round"/>
+  <circle cx="5" cy="4" r="1" fill="#f2c14e" stroke="#5b4636" stroke-width="0.25"/>
+  <g transform="translate(5.7 5)">
+    <g>
+      <animateTransform attributeName="transform" type="skewY" values="0;4;-1;3;0" dur="5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.55;0.8;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+      <g transform="scale(0.264)">
+      <rect x="0" y="0" width="36" height="24" rx="1.6" fill="#fbfaf6" stroke="#5b4636" stroke-width="1.2" stroke-linejoin="round"/>
+      <circle cx="18" cy="12" r="5.96" fill="#2f5aa8"/>
+      <path d="M13.008 8.672 A6 6 0 0 1 22.992 15.328 A3 3 0 0 0 18 12 A3 3 0 0 1 13.008 8.672 Z" fill="#d6363f"/>
+      <g fill="#2b2a2e">
+      <!-- 건 ☰ 왼쪽 위 -->
+      <g transform="translate(8.847 5.898) rotate(-56.31)"><rect x="-3" y="-2.0" width="6" height="1" rx="0.25"/><rect x="-3" y="-0.5" width="6" height="1" rx="0.25"/><rect x="-3" y="1.0" width="6" height="1" rx="0.25"/></g>
+      <!-- 곤 ☷ 오른쪽 아래 -->
+      <g transform="translate(27.153 18.102) rotate(-56.31)"><rect x="-3" y="-2.0" width="2.6" height="1" rx="0.25"/><rect x="0.4" y="-2.0" width="2.6" height="1" rx="0.25"/><rect x="-3" y="-0.5" width="2.6" height="1" rx="0.25"/><rect x="0.4" y="-0.5" width="2.6" height="1" rx="0.25"/><rect x="-3" y="1.0" width="2.6" height="1" rx="0.25"/><rect x="0.4" y="1.0" width="2.6" height="1" rx="0.25"/></g>
+      <!-- 감 ☵ 오른쪽 위 -->
+      <g transform="translate(27.153 5.898) rotate(56.31)"><rect x="-3" y="-2.0" width="2.6" height="1" rx="0.25"/><rect x="0.4" y="-2.0" width="2.6" height="1" rx="0.25"/><rect x="-3" y="-0.5" width="6" height="1" rx="0.25"/><rect x="-3" y="1.0" width="2.6" height="1" rx="0.25"/><rect x="0.4" y="1.0" width="2.6" height="1" rx="0.25"/></g>
+      <!-- 리 ☲ 왼쪽 아래 -->
+      <g transform="translate(8.847 18.102) rotate(56.31)"><rect x="-3" y="-2.0" width="6" height="1" rx="0.25"/><rect x="-3" y="-0.5" width="2.6" height="1" rx="0.25"/><rect x="0.4" y="-0.5" width="2.6" height="1" rx="0.25"/><rect x="-3" y="1.0" width="6" height="1" rx="0.25"/></g>
+      </g>
+      <path d="M2 2.2 Q18 0.6 34 2.2" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+      </g>
+    </g>
+  </g>
+</svg>

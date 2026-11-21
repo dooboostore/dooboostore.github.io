@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 22">
+  <!-- 홍등 기둥: 붉은 나무 기둥과 둥글게 휜 팔, 금색 술이 달린 빨간 등롱이 흔들린다. 밤엔 등이 켜진다 -->
+  <ellipse cx="3.4" cy="21" rx="3" ry="0.7" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="1.4" y="19.4" width="4" height="1.8" rx="0.8" fill="#d6cfc3"/>
+    <rect x="2.6" y="2.6" width="1.6" height="17.2" rx="0.7" fill="#a8322e"/>
+    <path d="M3.4 3.4 C5 2 7.4 2 8 3.6" fill="none" stroke-width="1.1"/>
+    <path d="M3.4 3.4 C5 2 7.4 2 8 3.6" fill="none" stroke="#a8322e" stroke-width="0.55"/>
+    <circle cx="3.4" cy="2.4" r="0.8" fill="#e8b64a"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-5 8 3.6;5 8 3.6;-5 8 3.6" dur="3.4s" repeatCount="indefinite"/>
+    <line x1="8" y1="3.6" x2="8" y2="4.8" stroke="#5b4636" stroke-width="0.3"/>
+    <rect x="6.3" y="4.6" width="3.4" height="3.2" rx="1.5" fill="#e9413a" stroke="#5b4636" stroke-width="0.4"/>
+    <rect x="7.1" y="4.3" width="1.8" height="0.6" rx="0.25" fill="#e8b64a" stroke="#5b4636" stroke-width="0.2"/>
+    <rect x="7.1" y="7.6" width="1.8" height="0.6" rx="0.25" fill="#e8b64a" stroke="#5b4636" stroke-width="0.2"/>
+    <path d="M8 8.2 L8 9.6" stroke="#e8b64a" stroke-width="0.4" stroke-linecap="round"/>
+    <rect x="6.3" y="4.6" width="3.4" height="3.2" rx="1.5" fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.75)"/>
+    <ellipse cx="7.3" cy="5.4" rx="0.4" ry="0.6" fill="#fff" opacity="0.4"/>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 80">
+  <!-- 카이로 타워: 연꽃 격자 무늬 원통 기둥, 꼭대기에 활짝 핀 연꽃 전망대와 안테나, 아래 둥근 받침. 안테나 끝 불빛이 깜빡인다 -->
+  <defs>
+    <pattern id="lat" width="2.4" height="2.4" patternUnits="userSpaceOnUse">
+      <path d="M0 0 L2.4 2.4 M2.4 0 L0 2.4" stroke="#b07a5c" stroke-width="0.35"/>
+    </pattern>
+  </defs>
+  <ellipse cx="9" cy="78.6" rx="8" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="8.5" y="2" width="1" height="9" rx="0.5" fill="#d9d2c2"/>
+    <rect x="7.2" y="9" width="3.6" height="3" rx="1" fill="#e9e4da"/>
+    <path d="M6.6 74 L7.2 21 Q7.3 20 8.2 20 L9.8 20 Q10.7 20 10.8 21 L11.4 74 Z" fill="var(--tower, #dcb08e)"/>
+    <path d="M6.6 74 L7.2 21 Q7.3 20 8.2 20 L9.8 20 Q10.7 20 10.8 21 L11.4 74 Z" fill="url(#lat)"/>
+    <path d="M3.8 12.4 C4.8 16 6.4 19 7.6 21 L10.4 21 C11.6 19 13.2 16 14.2 12.4 C12.6 13.4 10.8 13.8 9 13.8 C7.2 13.8 5.4 13.4 3.8 12.4 Z" fill="var(--tower, #dcb08e)"/>
+    <path d="M3.8 12.4 C4.8 16 6.4 19 7.6 21 L10.4 21 C11.6 19 13.2 16 14.2 12.4 C12.6 13.4 10.8 13.8 9 13.8 C7.2 13.8 5.4 13.4 3.8 12.4 Z" fill="url(#lat)"/>
+    <rect x="4.6" y="11.2" width="8.8" height="2.4" rx="1.2" fill="#e9e4da"/>
+    <path d="M2.4 78.2 L2.4 74.6 Q2.4 73 4 73 L14 73 Q15.6 73 15.6 74.6 L15.6 78.2 Z" fill="#e9e0cc"/>
+  </g>
+  <rect x="5" y="11.8" width="8" height="0.9" rx="0.45" fill="#9fc6e0"/>
+  <path d="M8 24 L8 70" stroke="#fff" stroke-width="0.5" opacity="0.3" stroke-linecap="round"/>
+  <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.25"><rect x="4.6" y="75" width="2" height="2.4" rx="0.8"/><rect x="11.4" y="75" width="2" height="2.4" rx="0.8"/><path d="M8 78.2 L8 76 Q9 74.8 10 76 L10 78.2 Z"/></g>
+  <circle cx="9" cy="2" r="0.7" fill="#ef6a5e" stroke="#5b4636" stroke-width="0.25"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)"><rect x="5" y="11.8" width="8" height="0.9" rx="0.45"/><rect x="4.6" y="75" width="2" height="2.4" rx="0.8"/><rect x="11.4" y="75" width="2" height="2.4" rx="0.8"/></g>
+</svg>

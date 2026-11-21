@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22">
+  <!-- 빵산(팡지아수카르) 케이블카 봉지뉴 (옆모습): 케이블 위 도르래, 매달린 둥근 유리 객실(테두리 변수 frame), 안에 관광객. 살랑살랑 흔들린다. 밤엔 실내등 -->
+  <line x1="0" y1="1.4" x2="20" y2="1.4" stroke="#5b4636" stroke-width="0.4"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="7" y="0.6" width="6" height="1.8" rx="0.9" fill="#8c939a"/>
+    <circle cx="8.4" cy="1.4" r="0.5" fill="#3e4348"/><circle cx="11.6" cy="1.4" r="0.5" fill="#3e4348"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-3 10 2.4;3 10 2.4;-3 10 2.4" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M10 2.4 L10 6.4" stroke-width="0.9"/>
+      <path d="M10 2.4 L10 6.4" stroke="#8c939a" stroke-width="0.45"/>
+      <rect x="3.6" y="5.8" width="12.8" height="2" rx="1" fill="var(--frame, #e9783a)"/>
+      <rect x="2" y="7.4" width="16" height="11" rx="3.4" fill="#cfe9f5"/>
+      <rect x="2" y="17" width="16" height="3.6" rx="1.6" fill="var(--frame, #e9783a)"/>
+    </g>
+    <g stroke="#5b4636" stroke-width="0.3">
+      <circle cx="6.4" cy="14" r="1.6" fill="#ffe0c7"/><path d="M4.75 14 A1.7 1.7 0 1 1 8.05 14 Q6.4 12.8 4.75 14 Z" fill="#4a3329"/>
+      <circle cx="10.2" cy="14.2" r="1.6" fill="#d9a47c"/><path d="M8.55 14.2 A1.7 1.7 0 1 1 11.85 14.2 Q10.2 13 8.55 14.2 Z" fill="#2a2421"/>
+      <circle cx="13.8" cy="14" r="1.6" fill="#f6d2b2"/><path d="M12.15 14 A1.7 1.7 0 1 1 15.45 14 Q13.8 12.8 12.15 14 Z" fill="#e3be72"/>
+    </g>
+    <g fill="#3d2b22"><circle cx="5.9" cy="14.6" r="0.25"/><circle cx="9.7" cy="14.8" r="0.25"/><circle cx="13.3" cy="14.6" r="0.25"/></g>
+    <g stroke="#5b4636" stroke-width="0.4" fill="none"><line x1="7.4" y1="7.6" x2="7.4" y2="17"/><line x1="12.6" y1="7.6" x2="12.6" y2="17"/></g>
+    <rect x="2.2" y="7.6" width="15.6" height="9.6" rx="3.2" fill="#ffe9a3" style="opacity: calc(var(--night, 0) * 0.5)"/>
+    <path d="M3.8 9.4 Q4.4 8.4 6 8.2" stroke="#fff" stroke-width="0.7" opacity="0.8" fill="none" stroke-linecap="round"/>
+    <rect x="3" y="17.6" width="14" height="0.8" rx="0.4" fill="#fff" opacity="0.3"/>
+  </g>
+</svg>

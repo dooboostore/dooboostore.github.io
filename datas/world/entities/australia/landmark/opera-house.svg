@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 40">
+  <!-- 시드니 오페라 하우스: 하얀 조가비 지붕들이 겹친 곡선, 돌 단상과 항구. 밤엔 지붕이 은은히 빛난다 -->
+  <ellipse cx="35" cy="38.4" rx="32" ry="1.6" fill="#3b5a2e" opacity="0.18"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 32 Q10 24 18 20 Q26 16 30 20 Q26 26 22 32 Z" fill="#f7f4ec"/>
+    <path d="M14 32 Q20 20 30 14 Q40 8 46 14 Q40 22 34 32 Z" fill="#fbf8f2"/>
+    <path d="M30 32 Q36 22 44 16 Q52 11 58 16 Q52 24 46 32 Z" fill="#f7f4ec"/>
+    <path d="M44 32 Q48 25 54 21 Q60 17 65 21 Q60 27 56 32 Z" fill="#fbf8f2"/>
+    <path d="M2 32 L68 32 L68 36 L2 36 Z" fill="#e9e1d2"/>
+    <path d="M6 36 L64 36 L60 38 L10 38 Z" fill="#cbbfa8"/>
+  </g>
+  <g fill="#d8cfc0" opacity="0.7">
+    <path d="M18 20 Q26 16 30 20 Q26 24 22 28 Z"/>
+    <path d="M30 14 Q40 8 46 14 Q40 19 34 24 Z"/>
+    <path d="M44 16 Q52 11 58 16 Q52 20 46 25 Z"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.25" fill="#3e4348" opacity="0.6">
+    <path d="M8 33 L8 35 M14 33 L14 35 M20 33 L20 35 M26 33 L26 35 M32 33 L32 35 M38 33 L38 35 M44 33 L44 35 M50 33 L50 35 M56 33 L56 35 M62 33 L62 35"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)">
+    <path d="M10 33 L10 35 M18 33 L18 35 M24 33 L24 35 M36 33 L36 35 M48 33 L48 35 M58 33 L58 35"/>
+  </g>
+  <path d="M2 37 Q20 39 35 37 Q52 39 68 37" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.6"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 극지 연구원 (front): 빵빵한 빨간 파카(변수 parka), 털 달린 후드가 정수리까지 덮음, 이마 위 고글, 두툼한 장갑과 털장화 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.5" cy="16.9" rx="1.5" ry="0.85" fill="#4a3f3a"/>
+    <ellipse cx="7.5" cy="16.9" rx="1.5" ry="0.85" fill="#4a3f3a"/>
+    <path d="M3.4 16.4 L3.6 14 L8.4 14 L8.6 16.4 Z" fill="var(--pants, #3e4b5c)"/>
+    <ellipse cx="2.4" cy="12.6" rx="1.15" ry="1.6" fill="var(--parka, #e2574c)" transform="rotate(14 2.4 12.6)"/>
+    <ellipse cx="9.6" cy="12.6" rx="1.15" ry="1.6" fill="var(--parka, #e2574c)" transform="rotate(-14 9.6 12.6)"/>
+    <path d="M2.6 14.6 C2.2 11.6 3.4 9.8 6 9.8 C8.6 9.8 9.8 11.6 9.4 14.6 C8 15.2 4 15.2 2.6 14.6 Z" fill="var(--parka, #e2574c)"/>
+    <g fill="#3e4348"><circle cx="1.9" cy="14.1" r="0.75"/><circle cx="10.1" cy="14.1" r="0.75"/></g>
+    <circle cx="6" cy="6" r="5.2" fill="var(--parka, #e2574c)"/>
+  </g>
+  <path d="M6 10.2 L6 14.8" stroke="#5b4636" stroke-width="0.35" stroke-linecap="round"/>
+  <path d="M3 12.4 Q6 13.2 9 12.4" stroke="#000" stroke-opacity="0.12" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <g fill="#efe6d6" stroke="#5b4636" stroke-width="0.35">
+    <circle cx="6" cy="2.4" r="1"/><circle cx="3.8" cy="3" r="1"/><circle cx="8.2" cy="3" r="1"/><circle cx="2.4" cy="4.8" r="1"/><circle cx="9.6" cy="4.8" r="1"/><circle cx="2" cy="7" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="2.8" cy="9" r="1"/><circle cx="9.2" cy="9" r="1"/><circle cx="4.6" cy="10.2" r="1"/><circle cx="7.4" cy="10.2" r="1"/><circle cx="6" cy="10.5" r="1"/>
+  </g>
+  <circle cx="6" cy="6.6" r="3.7" fill="#efe6d6"/>
+  <circle cx="6" cy="6.8" r="3.2" fill="var(--skin, #f6d7bd)" stroke="#5b4636" stroke-width="0.35"/>
+  <rect x="3.2" y="3.4" width="5.6" height="1.9" rx="0.95" fill="#3e4348" stroke="#5b4636" stroke-width="0.3"/>
+  <g fill="#8fd0ee"><ellipse cx="4.7" cy="4.35" rx="1" ry="0.6"/><ellipse cx="7.3" cy="4.35" rx="1" ry="0.6"/></g>
+  <g fill="#fff" opacity="0.7"><circle cx="4.4" cy="4.15" r="0.2"/><circle cx="7" cy="4.15" r="0.2"/></g>
+  <g fill="#3d2b22"><ellipse cx="4.7" cy="6.9" rx="0.45" ry="0.62"/><ellipse cx="7.3" cy="6.9" rx="0.45" ry="0.62"/></g>
+  <g fill="#fff"><circle cx="4.85" cy="6.7" r="0.16"/><circle cx="7.45" cy="6.7" r="0.16"/></g>
+  <g fill="#ff8f8f" opacity="0.7"><ellipse cx="3.7" cy="8" rx="0.7" ry="0.42"/><ellipse cx="8.3" cy="8" rx="0.7" ry="0.42"/></g>
+  <path d="M5.4 8.4 Q6 9 6.6 8.4" stroke="#b0453e" stroke-width="0.35" fill="none" stroke-linecap="round"/>
+  <ellipse cx="3.6" cy="1.8" rx="1.2" ry="0.4" fill="#fff" opacity="0.35" transform="rotate(-25 3.6 1.8)"/>
+  <g fill="#f6c944" stroke="#5b4636" stroke-width="0.2"><rect x="7" y="11" width="1.4" height="0.9" rx="0.3"/></g>
+</svg>

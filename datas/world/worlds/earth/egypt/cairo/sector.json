@@ -1,0 +1,37 @@
+{
+  "local": {"size": [960, 762], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "egypt/landmark/pyramid.svg", "at": [136, 648], "scale": 0.9},
+    {"use": "egypt/landmark/pyramid.svg", "at": [116, 669], "scale": 0.85},
+    {"use": "egypt/landmark/pyramid.svg", "at": [102, 691], "scale": 0.55},
+    {"use": "egypt/landmark/sphinx.svg", "at": [156, 676], "scale": 0.45},
+    {"use": "egypt/landmark/cairo-tower.svg", "at": [646, 212], "scale": 0.75},
+    {"use": "egypt/landmark/mosque.svg", "at": [854, 320], "scale": 0.8},
+    {"use": "egypt/landmark/mosque.svg", "at": [858, 195], "scale": 0.55},
+    {"use": "egypt/building/cairo-house.svg", "count": 18, "area": [690, 150, 170, 200], "scale": 0.55, "spacing": 14, "vars": {"--wall": ["#e8cfa0", "#dcc093", "#efd9b0", "#d8b88a"]}},
+    {"use": "egypt/building/cairo-house.svg", "count": 14, "area": [430, 250, 170, 260], "scale": 0.55, "spacing": 14, "vars": {"--wall": ["#e8cfa0", "#dcc093", "#efd9b0"]}},
+    {"use": "egypt/nature/palm.svg", "count": 16, "area": [560, 100, 160, 560], "scale": 0.65, "spacing": 14},
+    {"use": "egypt/animal/camel", "count": 3, "area": [100, 620, 90, 80], "scale": 0.7, "spacing": 8},
+    {"use": "usa/people/tourist", "count": 4, "area": [120, 640, 70, 60], "scale": 0.7, "spacing": 6},
+    {"use": "egypt/people/galabeya", "count": 4, "area": [800, 170, 70, 70], "scale": 0.7, "spacing": 6},
+    {"use": "egypt/people/hijab-woman", "count": 3, "area": [800, 170, 70, 70], "scale": 0.7, "spacing": 6},
+    {"use": "egypt/people/galabeya", "count": 2, "area": [690, 200, 40, 40], "scale": 0.7, "spacing": 6},
+    {"use": "egypt/vehicle/felucca.svg", "count": 2, "scale": 0.6, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M643.5 30 L648 50 L652.5 100 L659 130 L667 160 L674.5 190 L677 215 L672 240 L661.5 260 L643.5 280 L635 300 L627.5 320 L624 340 L623 370 L622.5 400 L623.5 430 L628 450 L641 470 L643 490 L634.5 500 L632 520 L627.5 540 L624 560 L618 580 L619.5 600 L618 610 L620 640 L625 660 L634 680 L647 700 L666 720 L695.5 740", "dur": 150}},
+    {"use": "egypt/vehicle/felucca.svg", "count": 2, "scale": 0.55, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M695.5 740 L666 720 L647 700 L634 680 L625 660 L620 640 L618 610 L619.5 600 L618 580 L624 560 L627.5 540 L632 520 L634.5 500 L643 490 L641 470 L628 450 L623.5 430 L622.5 400 L623 370 L624 340 L627.5 320 L635 300 L643.5 280 L661.5 260 L672 240 L677 215 L674.5 190 L667 160 L659 130 L652.5 100 L648 50 L643.5 30", "dur": 170}},
+    {"use": "egypt/vehicle/taxi", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M529.9 413.8 L513.3 416.3 L320.9 503.9", "dur": 22}},
+    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#3f7fbf"}, "behavior": {"type": "route", "path": "M529.9 413.8 L513.3 416.3 L320.9 503.9", "dur": 30}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 380 C240 340 560 460 1020 380", "dur": 76}}
+  ],
+  "info": {
+    "기자 피라미드": {"title": "기자 피라미드", "emoji": "🔺", "kind": "지명", "desc": "카이로 서쪽 기자 고원에 선 세 개의 큰 피라미드예요. 약 4,500년 전에 쿠푸, 카프레, 멘카우레 왕의 무덤으로 지어졌어요. 고대 7대 불가사의 중 유일하게 남아 있어요."},
+    "스핑크스": {"title": "스핑크스", "emoji": "🦁", "kind": "지명", "desc": "사자의 몸과 사람의 얼굴을 가진 대스핑크스예요. 피라미드 곁에서 커다란 바위를 깎아 만든 모습으로 수천 년을 버텨 왔어요. 밤에는 조명과 함께 펼쳐지는 빛과 소리의 쇼도 열려요."},
+    "나일 강": {"title": "나일 강", "emoji": "🌊", "kind": "지명", "desc": "세계에서 가장 긴 강 가운데 하나인 나일강이에요. 해마다 범람하며 기름진 흙을 날라 와 고대 이집트 문명을 꽃피웠어요. 지금도 카이로의 생명줄이에요."},
+    "카이로 타워": {"title": "카이로 타워", "emoji": "🗼", "kind": "지명", "desc": "나일강 게지라섬에 선 1961년 완공의 전망 타워예요. 연꽃 모양을 본뜬 외관이 특징이고, 꼭대기에서 카이로 시내와 멀리 피라미드가 보여요."},
+    "자말렉": {"title": "자말렉", "emoji": "🌳", "kind": "지명", "desc": "나일강의 게지라섬 북쪽에 있는 조용한 동네예요. 가로수 길을 따라 대사관과 카페, 갤러리가 모여 있어 카이로 속 작은 쉼터 같아요."},
+    "이집트 박물관": {"title": "이집트 박물관", "emoji": "🏺", "kind": "지명", "desc": "타흐리르 광장 옆의 분홍빛 건물로, 1902년에 문을 연 이집트 고대 유물 박물관이에요. 미라와 조각상 등 수많은 보물이 전시되어 있어요."},
+    "타흐리르 광장": {"title": "타흐리르 광장", "emoji": "🏙️", "kind": "지명", "desc": "카이로 도심 한가운데의 큰 광장이에요. '타흐리르'는 아랍어로 해방이라는 뜻이에요. 이집트 박물관과 가까워 도시 탐방의 출발점이 되곤 해요."},
+    "칸 엘칼릴리": {"title": "칸 엘칼릴리", "emoji": "🛍️", "kind": "지명", "desc": "14세기부터 이어진 카이로의 오래된 시장이에요. 좁은 골목에 향신료, 등불, 은세공 가게가 빼곡하고, 오래된 찻집에서 민트 차를 마시며 쉬어 갈 수 있어요."},
+    "시타델": {"title": "시타델", "emoji": "🏰", "kind": "지명", "desc": "12세기 살라딘이 세운 언덕 위의 성채예요. 안에는 커다란 돔의 무함마드 알리 모스크가 있고, 성벽에서 카이로 시내가 한눈에 내려다보여요."},
+    "알아즈하르 공원": {"title": "알아즈하르 공원", "emoji": "🌳", "kind": "지명", "desc": "옛 쓰레기 매립지를 바꿔 2005년에 문을 연 공원이에요. 이슬람식 정원과 분수가 어우러지고, 언덕 위에서 이슬람 카이로의 첨탑들을 감상할 수 있어요."}
+  }
+}

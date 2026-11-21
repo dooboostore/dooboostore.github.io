@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -14 14 30" data-foot="0.5 0.5">
+  <!-- 로켓 (뾰족 끝 대신 둥근 코가 위쪽): 흰 몸통, 빨간 코와 날개 세 장, 둥근 창, 아래로 일렁이는 작은 불꽃 -->
+  <g>
+    <animateTransform attributeName="transform" type="scale" values="1 1;0.85 1.25;1 1" dur="0.4s" repeatCount="indefinite" additive="sum"/>
+    <path d="M-2 9 Q-2.4 13 0 15.4 Q2.4 13 2 9 Z" fill="#ff8a3d" opacity="0.9"/>
+    <path d="M-1 9 Q-1.2 11.6 0 13 Q1.2 11.6 1 9 Z" fill="#ffe27a"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-2.8 4 L-5.6 8 Q-5.8 9.4 -4.6 9.2 L-2.6 8.2 Z" fill="var(--trim, #e2574c)"/>
+    <path d="M2.8 4 L5.6 8 Q5.8 9.4 4.6 9.2 L2.6 8.2 Z" fill="var(--trim, #e2574c)"/>
+    <rect x="-2" y="7.6" width="4" height="2" rx="0.8" fill="#8b9197"/>
+    <path d="M0 -12.6 C2.8 -10.6 3.4 -6 3.2 -1 L3 7 Q3 8.6 0 8.6 Q-3 8.6 -3 7 L-3.2 -1 C-3.4 -6 -2.8 -10.6 0 -12.6 Z" fill="#fbfaf6"/>
+    <path d="M0 -12.6 C1.8 -11.4 2.6 -9.4 2.9 -7.4 Q0 -6.6 -2.9 -7.4 C-2.6 -9.4 -1.8 -11.4 0 -12.6 Z" fill="var(--trim, #e2574c)"/>
+    <circle cx="0" cy="-2.4" r="1.6" fill="#8fd0ee"/>
+    <path d="M-0.4 4.6 L0.4 4.6 L0.6 8.4 L-0.6 8.4 Z" fill="var(--trim, #e2574c)"/>
+  </g>
+  <circle cx="-0.5" cy="-2.9" r="0.45" fill="#fff" opacity="0.8"/>
+  <path d="M-2.2 -5.6 L-2.2 5" stroke="#fff" stroke-opacity="0.7" stroke-width="0.5" stroke-linecap="round"/>
+  <path d="M2.2 -5 L2.2 6" stroke="#000" stroke-opacity="0.08" stroke-width="0.8" stroke-linecap="round"/>
+</svg>

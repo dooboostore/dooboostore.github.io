@@ -1,0 +1,24 @@
+{
+  "local": {"size": [960, 1053], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "polar/building/research-station.svg", "at": [166, 560], "scale": 0.75},
+    {"use": "korea/structure/flagpole.svg", "at": [190, 566], "scale": 0.8},
+    {"use": "polar/structure/weather-tower.svg", "at": [150, 568], "scale": 0.7},
+    {"use": "polar/structure/signpost.svg", "at": [178, 584], "scale": 0.6},
+    {"use": "polar/people/researcher", "count": 4, "area": [150, 570, 60, 30], "scale": 0.7, "spacing": 6},
+    {"use": "polar/animal/penguin", "count": 10, "area": [230, 700, 200, 140], "scale": 0.6, "spacing": 8},
+    {"use": "polar/animal/seal", "count": 3, "area": [200, 620, 200, 100], "scale": 0.6, "spacing": 20},
+    {"use": "polar/nature/snow-rock.svg", "count": 8, "area": [200, 300, 600, 400], "scale": 0.8, "spacing": 40},
+    {"use": "polar/nature/iceberg.svg", "at": [[60, 700], [90, 850], [300, 950], [120, 444]], "scale": 0.8, "layer": "water"},
+    {"use": "polar/nature/ice-floe.svg", "at": [[80, 600], [200, 880]], "scale": 0.8, "layer": "water"},
+    {"use": "polar/vehicle/icebreaker.svg", "count": 1, "scale": 0.7, "layer": "water", "behavior": {"type": "route", "path": "M0 900 L80 720 L130 600", "dur": 120}},
+    {"use": "polar/vehicle/snowmobile", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M190 560 L260 520 L330 500", "dur": 40}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 400 C240 360 560 480 1020 400", "dur": 76}}
+  ],
+  "info": {
+    "세종과학기지": {"title": "세종과학기지", "emoji": "🇰🇷", "kind": "지명", "desc": "1988년 킹조지섬 바톤 반도에 세운 우리나라 첫 남극 과학기지예요. 연구원들이 일 년 내내 머물며 남극을 연구해요."},
+    "바톤 반도": {"title": "바톤 반도", "emoji": "🐧", "kind": "지명", "desc": "세종기지가 자리한 반도예요. 해안에는 젠투펭귄과 턱끈펭귄이 모여 사는 곳이 있어요."},
+    "마리안 소만": {"title": "마리안 소만", "emoji": "🧊", "kind": "지명", "desc": "세종기지 옆으로 들어온 작은 만이에요. 안쪽 빙하가 해마다 조금씩 물러나는 모습이 관측돼요."},
+    "맥스웰 만": {"title": "맥스웰 만", "emoji": "🌊", "kind": "지명", "desc": "킹조지섬과 넬슨섬 사이의 넓은 만이에요. 여러 나라 기지가 이 만을 둘러싸고 있어요."}
+  }
+}

@@ -29,6 +29,7 @@ export type Placement = {
   layer?: 'water';
   z?: number;
   avoid?: string[]; // 무작위 배치 시 피할 구역 (기본 ["water"])
+  spacing?: number; // 같은 배치의 인스턴스 사이 최소 거리 (로컬 좌표) — 빽빽한 군집 방지
   behavior?: Behavior;
 };
 export type SectorJson = {
@@ -36,7 +37,9 @@ export type SectorJson = {
   local: { size: XY; ground: string; boundary?: string };
   placements: Placement[];
 };
-export type Scene = { el: SVGGElement; size: XY; boundary?: any; stop: () => void; issues: string[]; inZone: (x: number, y: number, z: string) => boolean; setCamera: (altitude: number) => void; setView: (view: [number, number, number, number], pxPerUnit: number) => void; walkable: (x: number, y: number, avoid?: string[], allow?: string[]) => boolean };
+// pick: 화면에서 누른 요소 → 무엇인가 (도감 팝업·카메라 따라가기용). 개체면 use, 지면 지명 라벨이면 label. pos 는 로컬 좌표 (움직이면 계속 바뀜)
+export type Picked = { use?: string; label?: string; pos: () => XY; moving: boolean };
+export type Scene = { pick: (target: Element) => Picked | undefined; el: SVGGElement; size: XY; boundary?: any; stop: () => void; issues: string[]; inZone: (x: number, y: number, z: string) => boolean; setCamera: (altitude: number) => void; setView: (view: [number, number, number, number], pxPerUnit: number) => void; walkable: (x: number, y: number, avoid?: string[], allow?: string[]) => boolean };
 
 const DEFAULT_AVOID = ['water'];
 const DEFAULT_ALLOW = ['bridge'];
@@ -188,7 +191,7 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
 
   const entities = await Promise.all(sector.placements.map((p) => reg.load(p.use)));
   // 모든 배치 개체: 현재 발 위치(pos)와 크기 — 화면 밖·너무 작게 보이는 것은 숨기고(컬링·LOD), 보이는 것만 깊이 정렬한다
-  type Item = { el: SVGGElement; pos: () => XY; w: number; h: number; foot: XY; z: number; minPx: number; inWorld: boolean; shown: boolean };
+  type Item = { el: SVGGElement; use: string; moving: boolean; pos: () => XY; w: number; h: number; foot: XY; z: number; minPx: number; inWorld: boolean; shown: boolean };
   const items: Item[] = [];
   const issues: string[] = [];
   const flying: { el: SVGGElement; z: number }[] = [];
@@ -206,7 +209,19 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
     } else {
       const area = p.area ?? [0, 0, sw, sh];
       const dry = behavior ? undefined : (pt: XY) => footprintDry(e, p.scale ?? 1, pt); // 정적 무작위 배치는 바닥 전체가 물 밖이어야
-      pts = Array.from({ length: p.count ?? 1 }, () => (behavior?.type === 'route' ? ([0, 0] as XY) : randomIn(area, avoid, allow, dry))).filter((it): it is XY => !!it);
+      const spacing = p.spacing ?? 0;
+      const taken: XY[] = [];
+      const pickSpaced = (): XY | undefined => {
+        for (let t = 0; t < 50; t++) {
+          const pt = randomIn(area, avoid, allow, dry);
+          if (!pt) return undefined;
+          if (spacing && taken.some(([x, y]) => Math.hypot(x - pt[0], y - pt[1]) < spacing)) continue;
+          taken.push(pt);
+          return pt;
+        }
+        return undefined;
+      };
+      pts = Array.from({ length: p.count ?? 1 }, () => (behavior?.type === 'route' ? ([0, 0] as XY) : pickSpaced())).filter((it): it is XY => !!it);
     }
 
     pts.forEach(([x, y], i) => {
@@ -214,6 +229,13 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
       Object.entries(p.vars ?? {}).forEach(([k, v]) => inst.style.setProperty(k, pick(v)));
       const flip = g();
       if (p.flip) flip.setAttribute('transform', 'scale(-1 1)');
+      // 움직이는 것은 가는 쪽을 보게: 옆모습 그림은 오른쪽을 보고 그린다(전조등·물살이 오른쪽 앞). left/right view 가 없으면 좌우 반전으로
+      let mirrored = !!p.flip;
+      const face = (dx: number) => {
+        if (Math.abs(dx) < 0.01 || (e.views.left && e.views.right) || mirrored === dx < 0) return;
+        mirrored = dx < 0;
+        flip.setAttribute('transform', mirrored ? 'scale(-1 1)' : '');
+      };
       const body = g('body');
       body.style.animationDelay = `${-Math.random()}s`;
       const u = useAt(w, e, 'front', p.scale ?? 1);
@@ -234,7 +256,7 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
       const layerEl = p.layer === 'water' ? waterL : undefined;
       const sc = p.scale ?? 1;
       const add = (pos: () => XY) => {
-        items.push({ el: inst, pos, w: e.box.w * sc, h: e.box.h * sc, foot: e.foot, z, minPx: behavior ? 8 : 3, inWorld: !layerEl, shown: true });
+        items.push({ el: inst, use: p.use, moving: !!behavior, pos, w: e.box.w * sc, h: e.box.h * sc, foot: e.foot, z, minPx: behavior ? 8 : 3, inWorld: !layerEl, shown: true });
         (layerEl ?? worldL).appendChild(inst);
       };
 
@@ -252,14 +274,29 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
         geo.setAttribute('d', behavior.path);
         routeDefs.appendChild(geo);
         const len = geo.getTotalLength();
+        // 물 위 교통은 경로 전체가 실제 물인지 확인한다. 육지를 지나면 배가 땅으로 올라가므로 건너뛴다.
+        if (p.layer === 'water') {
+          let wet = true;
+          for (let t = 0; t <= 30; t++) {
+            const pt = geo.getPointAtLength((len * t) / 30);
+            if (!inZone(pt.x, pt.y, 'water')) { wet = false; break; }
+          }
+          if (!wet) {
+            geo.remove();
+            issues.push(`${p.use} 의 물길이 육지를 지남 — 배치 건너뜀`);
+            return;
+          }
+        }
         const beginSec = parseFloat(begin);
         const svg = root.ownerSVGElement!;
         add(() => {
-          const pt = geo.getPointAtLength(((((svg.getCurrentTime() - beginSec) / behavior.dur) % 1) + 1) % 1 * len);
+          const s = ((((svg.getCurrentTime() - beginSec) / behavior.dur) % 1) + 1) % 1 * len;
+          const pt = geo.getPointAtLength(s);
+          face(geo.getPointAtLength(Math.min(len, s + 2)).x - pt.x);
           return [pt.x, pt.y];
         });
       } else if (wanderB) {
-        add(wander(inst, u, e, wanderB, p.area ?? [0, 0, sw, sh], [x, y], avoid, allow));
+        add(wander(inst, u, e, wanderB, p.area ?? [0, 0, sw, sh], [x, y], avoid, allow, face));
       } else {
         // 명시 좌표(at)로 놓은 건물·언덕이 강을 덮으면 경고 (무작위 배치는 애초에 걸러진다)
         if (!p.layer && !footprintDry(e, p.scale ?? 1, [x, y])) issues.push(`${p.use} @${Math.round(x)},${Math.round(y)} 바닥이 물에 걸침`);
@@ -302,7 +339,7 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
   const sortTimer = w.setInterval(update, 200);
 
   // 이동은 Web Animations API: DOM 순서를 바꿔도(깊이 정렬) 끊기지 않는다 (CSS transition 은 재삽입 시 취소됨)
-  function wander(inst: SVGGElement, u: SVGUseElement, e: Entity, b: Wander, area: number[], start: XY, avoid: string[], allow: string[]) {
+  function wander(inst: SVGGElement, u: SVGUseElement, e: Entity, b: Wander, area: number[], start: XY, avoid: string[], allow: string[], face: (dx: number) => void) {
     let [cx, cy] = start;
     let from: XY = start;
     let t0 = 0;
@@ -314,6 +351,7 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
       const v = e.views;
       const name = Math.abs(dy) > Math.abs(dx) && v.front && v.back ? (dy > 0 ? 'front' : 'back') : v.left && v.right ? (dx < 0 ? 'left' : 'right') : 'front';
       u.setAttribute('href', '#' + (v[name] ?? Object.values(v)[0]));
+      face(dx);
     };
     const go = () => {
       let plan: XY[] | undefined;
@@ -351,7 +389,24 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
     };
   }
 
+  const pickAt = (target: Element): Picked | undefined => {
+    const inst = target.closest('.inst');
+    const it = inst && items.find((x) => x.el === inst);
+    if (it) return { use: it.use, pos: it.pos, moving: it.moving };
+    const text = target.closest('text');
+    if (text && groundL.contains(text)) {
+      // 라벨이 장식 그룹 transform 안에 있을 수 있어 화면 좌표 → 지면 로컬 좌표로 바꾼다
+      const b = (text as SVGTextElement).getBBox();
+      const m = groundL.getCTM()?.inverse().multiply((text as SVGTextElement).getCTM()!);
+      const pt = new w.DOMPoint(b.x + b.width / 2, b.y + b.height).matrixTransform(m);
+      const at: XY = [pt.x, pt.y];
+      return { label: text.textContent?.trim(), pos: () => at, moving: false };
+    }
+    return undefined;
+  };
+
   return {
+    pick: pickAt,
     el: root,
     size: sector.local.size,
     boundary,

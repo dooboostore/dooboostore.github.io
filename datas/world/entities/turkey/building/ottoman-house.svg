@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 32">
+  <!-- 오스만 목조 가옥: 알록달록한 나무 벽(변수 wall), 흰 테두리 창, 위층이 튀어나온 돌출창(쿰바)과 곡선 받침, 넓은 처마의 테라코타 지붕, 돌 기단 1층. 밤엔 창 불빛 -->
+  <ellipse cx="13" cy="30.9" rx="12" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="3.6" y="22" width="18.8" height="8.6" rx="0.8" fill="#d6cfc3"/>
+    <rect x="3" y="8.4" width="20" height="14.2" rx="0.8" fill="var(--wall, #e9a66a)"/>
+    <rect x="7.6" y="9.6" width="10.8" height="14" rx="0.9" fill="var(--wall, #e9a66a)"/>
+    <path d="M8 23.6 C8.4 25.4 9.4 26.4 10.4 26.6 L10.4 23.6 Z M18 23.6 C17.6 25.4 16.6 26.4 15.6 26.6 L15.6 23.6 Z" fill="#8a5a3f"/>
+    <path d="M2 9.6 Q13 10.8 24 9.6 L23.4 7.6 L2.6 7.6 Z" fill="#8a5a3f"/>
+    <path d="M0.6 9.2 C1.6 9.8 3 9.4 4 8 L22 8 C23 9.4 24.4 9.8 25.4 9.2 C24.2 7.4 22.4 5.4 20.4 4 L5.6 4 C3.6 5.4 1.8 7.4 0.6 9.2 Z" fill="var(--roof, #c8714e)"/>
+  </g>
+  <path d="M6 4.5 L20 4.5 L21 5.4 L5 5.4 Z" fill="#fff" opacity="0.25"/>
+  <rect x="8" y="22.8" width="10" height="1" rx="0.5" fill="#000" opacity="0.12"/>
+  <rect x="16.8" y="10.4" width="1.2" height="12.8" rx="0.6" fill="#000" opacity="0.1"/>
+  <g stroke="#000" stroke-opacity="0.08" stroke-width="0.3"><path d="M3.4 11 L7.4 11 M3.4 13.4 L7.4 13.4 M3.4 15.8 L7.4 15.8 M3.4 18.2 L7.4 18.2 M3.4 20.6 L7.4 20.6 M18.6 11 L22.6 11 M18.6 13.4 L22.6 13.4 M18.6 15.8 L22.6 15.8 M18.6 18.2 L22.6 18.2 M18.6 20.6 L22.6 20.6"/></g>
+  <g fill="#a9c4d6" stroke="#fbf8f0" stroke-width="0.55"><rect x="9" y="11.4" width="2.2" height="4" rx="0.5"/><rect x="11.9" y="11.4" width="2.2" height="4" rx="0.5"/><rect x="14.8" y="11.4" width="2.2" height="4" rx="0.5"/><rect x="9" y="17.6" width="2.2" height="4" rx="0.5"/><rect x="11.9" y="17.6" width="2.2" height="4" rx="0.5"/><rect x="14.8" y="17.6" width="2.2" height="4" rx="0.5"/><rect x="4.4" y="12.4" width="2" height="3.6" rx="0.5"/><rect x="19.6" y="12.4" width="2" height="3.6" rx="0.5"/></g>
+  <g fill="none" stroke="#fbf8f0" stroke-width="0.5" stroke-linecap="round"><path d="M7.8 16.6 L18.2 16.6 M7.8 22.8 L18.2 22.8 M3.2 22.2 L22.8 22.2"/></g>
+  <g stroke="#5b4636" stroke-width="0.35"><rect x="5.6" y="24.6" width="2.4" height="2.8" rx="0.6" fill="#a9c4d6"/><rect x="18" y="24.6" width="2.4" height="2.8" rx="0.6" fill="#a9c4d6"/><path d="M11 30.6 L11 27.8 C11 26.4 15 26.4 15 27.8 L15 30.6 Z" fill="var(--door, #6b4a3a)"/></g>
+  <g fill="var(--flower, #e9574a)"><circle cx="5.2" cy="16.6" r="0.45"/><circle cx="6" cy="16.5" r="0.45"/><circle cx="20.2" cy="16.6" r="0.45"/><circle cx="21" cy="16.5" r="0.45"/></g>
+  <rect x="21.2" y="9.6" width="1.2" height="12.6" rx="0.6" fill="#000" opacity="0.08"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="9.2" y="11.6" width="1.8" height="3.6" rx="0.4"/><rect x="15" y="11.6" width="1.8" height="3.6" rx="0.4"/><rect x="12.1" y="17.8" width="1.8" height="3.6" rx="0.4"/><rect x="19.8" y="12.6" width="1.6" height="3.2" rx="0.4"/><rect x="5.8" y="24.8" width="2" height="2.4" rx="0.4"/></g>
+</svg>

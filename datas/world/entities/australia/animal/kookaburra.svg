@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 11">
+  <!-- 웃음물총새 쿠카부라 (나뭇가지에 앉음, 오른쪽을 향함): 큰 머리와 갈색 눈줄, 파란 날개 무늬, 긴 부리를 벌렸다 닫으며 웃는다 -->
+  <ellipse cx="6" cy="10.4" rx="4.4" ry="0.5" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="0.6" y="8.2" width="10.8" height="1.4" rx="0.7" fill="#9a6e52"/>
+    <path d="M3.6 6.8 C2.4 7.4 1.4 8.6 0.8 9.6 C1.8 9.6 3 8.8 4 8 Z" fill="#8a6650"/>
+    <ellipse cx="5.2" cy="6.2" rx="2.4" ry="2.2" fill="#f2e8d6"/>
+    <path d="M3 5.8 C3 4.4 4.4 3.8 5.6 4.4 C6 5.6 5.6 7.4 4.2 8 C3.4 7.6 3 6.8 3 5.8 Z" fill="#8a6650"/>
+    <ellipse cx="4.4" cy="6.4" rx="0.7" ry="1.1" fill="#6fa8c9"/>
+    <circle cx="6.8" cy="3.6" r="2.2" fill="#f2e8d6"/>
+    <path d="M5 2.6 C5.6 1.4 7.4 1.2 8.4 2.2 C7.2 2.4 6 2.6 5 2.6 Z" fill="#8a6650"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 8.6 3.8;-8 8.6 3.8;0 8.6 3.8;0 8.6 3.8" keyTimes="0;0.15;0.3;1" dur="3s" repeatCount="indefinite"/>
+      <path d="M8.6 3.4 L11.4 3.6 Q11.8 3.8 11.4 4 L8.8 4 Z" fill="#3d3d44"/>
+    </g>
+    <path d="M8.8 4 L11 4.2 Q11.2 4.4 10.8 4.5 L8.6 4.4 Z" fill="#e9e4da"/>
+    <g fill="#6b4f3a"><ellipse cx="4.8" cy="8.4" rx="0.5" ry="0.3"/><ellipse cx="6" cy="8.4" rx="0.5" ry="0.3"/></g>
+  </g>
+  <path d="M5.4 3.6 L8.6 3.8" stroke="#8a6650" stroke-width="0.6" stroke-linecap="round"/>
+  <circle cx="7.6" cy="3.6" r="0.35" fill="#2b2626"/>
+  <circle cx="7.7" cy="3.5" r="0.1" fill="#fff"/>
+</svg>

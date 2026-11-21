@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60">
+  <!-- 기자 피라미드: 큰 피라미드 셋, 모래 언덕과 낙타 실루엣. 밤엔 별이 뜬다 -->
+  <ellipse cx="45" cy="58.4" rx="42" ry="2" fill="#3b5a2e" opacity="0.16"/>
+  <path d="M2 58 Q20 46 44 48 Q68 46 88 58 Z" fill="#e6d6a8"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 57 Q24 22 38 14 Q40 12 42 14 Q56 24 70 57 Z" fill="#e3c98f"/>
+    <path d="M28 57 Q36 34 42 24 L42 14 Q56 24 70 57 Z" fill="#cbb07a"/>
+    <path d="M46 57 Q56 38 63 30 Q64 29 65 30 Q74 40 80 57 Z" fill="#e8d29c"/>
+    <path d="M58 57 Q63 44 68 38 L68 57 Z" fill="#d4ba84"/>
+    <path d="M66 57 Q73 46 78 42 Q84 48 88 57 Z" fill="#ead6a4"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M16 57 Q30 40 38 26 M22 57 Q34 40 40 30 M50 57 Q58 44 64 36"/>
+  </g>
+  <g fill="#8a6a44" stroke="#5b4636" stroke-width="0.35">
+    <ellipse cx="22" cy="53" rx="4" ry="1.6"/><path d="M25 53 Q27 49 29 50 Q29 52 28 53 Z"/><path d="M19 53 L18 56 M24 53 L25 56"/>
+  </g>
+  <g fill="#fff" opacity="0.65"><circle cx="14" cy="10" r="0.8"/><circle cx="30" cy="6" r="0.6"/><circle cx="76" cy="12" r="0.7"/><circle cx="64" cy="5" r="0.5"/></g>
+  <circle cx="80" cy="8" r="3" fill="#ffe9a3" opacity="0.7"/>
+</svg>

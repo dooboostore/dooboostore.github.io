@@ -5,6 +5,136 @@
       "name": "지구",
       "sectors": [
         {
+          "id": "brazil",
+          "name": "브라질",
+          "geo": {
+            "lat": -14.2,
+            "lon": -51.9
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "BR"
+        },
+        {
+          "id": "turkey",
+          "name": "튀르키예",
+          "geo": {
+            "lat": 39,
+            "lon": 35.2
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "TR"
+        },
+        {
+          "id": "china",
+          "name": "중화인민공화국",
+          "geo": {
+            "lat": 35.9,
+            "lon": 104.2
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "CN"
+        },
+        {
+          "id": "australia",
+          "name": "호주",
+          "geo": {
+            "lat": -25.3,
+            "lon": 133.8
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "AU"
+        },
+        {
+          "id": "egypt",
+          "name": "이집트",
+          "geo": {
+            "lat": 26.8,
+            "lon": 30.8
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "EG"
+        },
+        {
+          "id": "italy",
+          "name": "이탈리아",
+          "geo": {
+            "lat": 42.8,
+            "lon": 12.5
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "IT"
+        },
+        {
+          "id": "usa",
+          "name": "미국",
+          "geo": {
+            "lat": 39.8,
+            "lon": -98.5
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "US"
+        },
+        {
+          "id": "uk",
+          "name": "영국",
+          "geo": {
+            "lat": 54,
+            "lon": -2
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "GB"
+        },
+        {
+          "id": "france",
+          "name": "프랑스",
+          "geo": {
+            "lat": 46.2,
+            "lon": 2.2
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "FR"
+        },
+        {
+          "id": "japan",
+          "name": "일본",
+          "geo": {
+            "lat": 36.2,
+            "lon": 138.2
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "JP"
+        },
+        {
           "id": "korea",
           "name": "대한민국",
           "geo": {
@@ -12,9 +142,2142 @@
             "lon": 127.9
           },
           "zoom": [
-            1.8,
+            0.7,
             30
-          ]
+          ],
+          "country": "KR"
+        },
+        {
+          "id": "canada",
+          "name": "캐나다",
+          "geo": {
+            "lat": 60.32,
+            "lon": -101.91
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "CA"
+        },
+        {
+          "id": "chile",
+          "name": "칠레",
+          "geo": {
+            "lat": -38.15,
+            "lon": -72.32
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "CL"
+        },
+        {
+          "id": "germany",
+          "name": "독일",
+          "geo": {
+            "lat": 50.96,
+            "lon": 9.68
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "DE"
+        },
+        {
+          "id": "greenland",
+          "name": "그린란드",
+          "geo": {
+            "lat": 74.32,
+            "lon": -39.34
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "GL"
+        },
+        {
+          "id": "india",
+          "name": "인도",
+          "geo": {
+            "lat": 22.69,
+            "lon": 79.36
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "IN"
+        },
+        {
+          "id": "indonesia",
+          "name": "인도네시아",
+          "geo": {
+            "lat": -0.95,
+            "lon": 101.89
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "ID"
+        },
+        {
+          "id": "kenya",
+          "name": "케냐",
+          "geo": {
+            "lat": 0.55,
+            "lon": 37.91
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "KE"
+        },
+        {
+          "id": "nigeria",
+          "name": "나이지리아",
+          "geo": {
+            "lat": 9.44,
+            "lon": 7.5
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "NG"
+        },
+        {
+          "id": "russia",
+          "name": "러시아",
+          "geo": {
+            "lat": 58.25,
+            "lon": 44.69
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "RU"
+        },
+        {
+          "id": "saudi-arabia",
+          "name": "사우디아라비아",
+          "geo": {
+            "lat": 23.81,
+            "lon": 44.7
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "SA"
+        },
+        {
+          "id": "south-africa",
+          "name": "남아프리카 공화국",
+          "geo": {
+            "lat": -29.71,
+            "lon": 23.67
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "ZA"
+        },
+        {
+          "id": "argentina",
+          "name": "아르헨티나",
+          "geo": {
+            "lat": -33.5,
+            "lon": -64.17
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "AR"
+        },
+        {
+          "id": "democratic-republic-of-the-congo",
+          "name": "콩고 민주 공화국",
+          "geo": {
+            "lat": -1.86,
+            "lon": 23.46
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "CD"
+        },
+        {
+          "id": "ethiopia",
+          "name": "에티오피아",
+          "geo": {
+            "lat": 8.03,
+            "lon": 39.09
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "ET"
+        },
+        {
+          "id": "iceland",
+          "name": "아이슬란드",
+          "geo": {
+            "lat": 64.78,
+            "lon": -18.67
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "IS"
+        },
+        {
+          "id": "mexico",
+          "name": "멕시코",
+          "geo": {
+            "lat": 23.92,
+            "lon": -102.29
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "MX"
+        },
+        {
+          "id": "new-zealand",
+          "name": "뉴질랜드",
+          "geo": {
+            "lat": -39.76,
+            "lon": 172.79
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "NZ"
+        },
+        {
+          "id": "peru",
+          "name": "페루",
+          "geo": {
+            "lat": -12.98,
+            "lon": -72.9
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "PE"
+        },
+        {
+          "id": "spain",
+          "name": "스페인",
+          "geo": {
+            "lat": 40.09,
+            "lon": -3.46
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "ES"
+        },
+        {
+          "id": "sweden",
+          "name": "스웨덴",
+          "geo": {
+            "lat": 65.86,
+            "lon": 19.02
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "SE"
+        },
+        {
+          "id": "vietnam",
+          "name": "베트남",
+          "geo": {
+            "lat": 21.72,
+            "lon": 105.39
+          },
+          "zoom": [
+            0.7,
+            30
+          ],
+          "country": "VN"
+        },
+        {
+          "id": "algeria",
+          "name": "알제리",
+          "geo": {
+            "lat": 27.4,
+            "lon": 2.81
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "DZ"
+        },
+        {
+          "id": "costa-rica",
+          "name": "코스타리카",
+          "geo": {
+            "lat": 10.07,
+            "lon": -84.08
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "CR"
+        },
+        {
+          "id": "iran",
+          "name": "이란",
+          "geo": {
+            "lat": 32.17,
+            "lon": 54.93
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "IR"
+        },
+        {
+          "id": "ivory-coast",
+          "name": "코트디부아르",
+          "geo": {
+            "lat": 7.49,
+            "lon": -5.57
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "CI"
+        },
+        {
+          "id": "papua-new-guinea",
+          "name": "파푸아뉴기니",
+          "geo": {
+            "lat": -5.7,
+            "lon": 143.91
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "PG"
+        },
+        {
+          "id": "philippines",
+          "name": "필리핀",
+          "geo": {
+            "lat": 11.2,
+            "lon": 122.47
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "PH"
+        },
+        {
+          "id": "poland",
+          "name": "폴란드",
+          "geo": {
+            "lat": 51.99,
+            "lon": 19.49
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "PL"
+        },
+        {
+          "id": "sudan",
+          "name": "수단",
+          "geo": {
+            "lat": 16.33,
+            "lon": 29.26
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "SD"
+        },
+        {
+          "id": "venezuela",
+          "name": "베네수엘라",
+          "geo": {
+            "lat": 7.18,
+            "lon": -64.6
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "VE"
+        },
+        {
+          "id": "zimbabwe",
+          "name": "짐바브웨",
+          "geo": {
+            "lat": -18.91,
+            "lon": 29.93
+          },
+          "zoom": [
+            1.0,
+            30
+          ],
+          "country": "ZW"
+        },
+        {
+          "id": "cuba",
+          "name": "쿠바",
+          "geo": {
+            "lat": 21.33,
+            "lon": -77.98
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "CU"
+        },
+        {
+          "id": "ghana",
+          "name": "가나",
+          "geo": {
+            "lat": 7.72,
+            "lon": -1.04
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "GH"
+        },
+        {
+          "id": "greece",
+          "name": "그리스",
+          "geo": {
+            "lat": 39.49,
+            "lon": 21.73
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "GR"
+        },
+        {
+          "id": "kazakhstan",
+          "name": "카자흐스탄",
+          "geo": {
+            "lat": 49.05,
+            "lon": 68.69
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "KZ"
+        },
+        {
+          "id": "madagascar",
+          "name": "마다가스카르",
+          "geo": {
+            "lat": -18.63,
+            "lon": 46.7
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "MG"
+        },
+        {
+          "id": "morocco",
+          "name": "모로코",
+          "geo": {
+            "lat": 31.65,
+            "lon": -7.19
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "MA"
+        },
+        {
+          "id": "pakistan",
+          "name": "파키스탄",
+          "geo": {
+            "lat": 29.33,
+            "lon": 68.55
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "PK"
+        },
+        {
+          "id": "senegal",
+          "name": "세네갈",
+          "geo": {
+            "lat": 15.14,
+            "lon": -14.78
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "SN"
+        },
+        {
+          "id": "thailand",
+          "name": "태국",
+          "geo": {
+            "lat": 15.46,
+            "lon": 101.07
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "TH"
+        },
+        {
+          "id": "ukraine",
+          "name": "우크라이나",
+          "geo": {
+            "lat": 49.72,
+            "lon": 32.14
+          },
+          "zoom": [
+            1.1,
+            30
+          ],
+          "country": "UA"
+        },
+        {
+          "id": "afghanistan",
+          "name": "아프가니스탄",
+          "geo": {
+            "lat": 34.16,
+            "lon": 66.5
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "AF"
+        },
+        {
+          "id": "angola",
+          "name": "앙골라",
+          "geo": {
+            "lat": -12.18,
+            "lon": 17.98
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "AO"
+        },
+        {
+          "id": "austria",
+          "name": "오스트리아",
+          "geo": {
+            "lat": 47.52,
+            "lon": 14.13
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "AT"
+        },
+        {
+          "id": "bangladesh",
+          "name": "방글라데시",
+          "geo": {
+            "lat": 24.21,
+            "lon": 89.68
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "BD"
+        },
+        {
+          "id": "belarus",
+          "name": "벨라루스",
+          "geo": {
+            "lat": 53.82,
+            "lon": 28.42
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "BY"
+        },
+        {
+          "id": "bolivia",
+          "name": "볼리비아",
+          "geo": {
+            "lat": -16.67,
+            "lon": -64.59
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "BO"
+        },
+        {
+          "id": "burkina-faso",
+          "name": "부르키나파소",
+          "geo": {
+            "lat": 12.67,
+            "lon": -1.36
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "BF"
+        },
+        {
+          "id": "cambodia",
+          "name": "캄보디아",
+          "geo": {
+            "lat": 12.65,
+            "lon": 104.5
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "KH"
+        },
+        {
+          "id": "cameroon",
+          "name": "카메룬",
+          "geo": {
+            "lat": 4.59,
+            "lon": 12.47
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "CM"
+        },
+        {
+          "id": "chad",
+          "name": "차드",
+          "geo": {
+            "lat": 15.14,
+            "lon": 18.65
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "TD"
+        },
+        {
+          "id": "colombia",
+          "name": "콜롬비아",
+          "geo": {
+            "lat": 3.37,
+            "lon": -73.17
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "CO"
+        },
+        {
+          "id": "denmark",
+          "name": "덴마크",
+          "geo": {
+            "lat": 55.97,
+            "lon": 9.02
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "DK"
+        },
+        {
+          "id": "ecuador",
+          "name": "에콰도르",
+          "geo": {
+            "lat": -1.26,
+            "lon": -78.19
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "EC"
+        },
+        {
+          "id": "estonia",
+          "name": "에스토니아",
+          "geo": {
+            "lat": 58.72,
+            "lon": 25.87
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "EE"
+        },
+        {
+          "id": "fiji",
+          "name": "피지",
+          "geo": {
+            "lat": -17.83,
+            "lon": 177.98
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "FJ"
+        },
+        {
+          "id": "finland",
+          "name": "핀란드",
+          "geo": {
+            "lat": 63.25,
+            "lon": 27.28
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "FI"
+        },
+        {
+          "id": "gabon",
+          "name": "가봉",
+          "geo": {
+            "lat": -0.44,
+            "lon": 11.84
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "GA"
+        },
+        {
+          "id": "guatemala",
+          "name": "과테말라",
+          "geo": {
+            "lat": 14.98,
+            "lon": -90.5
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "GT"
+        },
+        {
+          "id": "guinea",
+          "name": "기니",
+          "geo": {
+            "lat": 10.62,
+            "lon": -10.02
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "GN"
+        },
+        {
+          "id": "iraq",
+          "name": "이라크",
+          "geo": {
+            "lat": 33.09,
+            "lon": 43.26
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "IQ"
+        },
+        {
+          "id": "ireland",
+          "name": "아일랜드",
+          "geo": {
+            "lat": 53.08,
+            "lon": -7.8
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "IE"
+        },
+        {
+          "id": "israel",
+          "name": "이스라엘",
+          "geo": {
+            "lat": 30.91,
+            "lon": 34.85
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "IL"
+        },
+        {
+          "id": "kyrgyzstan",
+          "name": "키르기스스탄",
+          "geo": {
+            "lat": 41.67,
+            "lon": 74.53
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "KG"
+        },
+        {
+          "id": "libya",
+          "name": "리비아",
+          "geo": {
+            "lat": 26.64,
+            "lon": 18.01
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "LY"
+        },
+        {
+          "id": "malaysia",
+          "name": "말레이시아",
+          "geo": {
+            "lat": 2.53,
+            "lon": 113.84
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "MY"
+        },
+        {
+          "id": "mali",
+          "name": "말리",
+          "geo": {
+            "lat": 18.69,
+            "lon": -2.04
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "ML"
+        },
+        {
+          "id": "mauritania",
+          "name": "모리타니",
+          "geo": {
+            "lat": 19.59,
+            "lon": -9.74
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "MR"
+        },
+        {
+          "id": "mongolia",
+          "name": "몽골",
+          "geo": {
+            "lat": 46.0,
+            "lon": 104.15
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "MN"
+        },
+        {
+          "id": "mozambique",
+          "name": "모잠비크",
+          "geo": {
+            "lat": -13.94,
+            "lon": 37.84
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "MZ"
+        },
+        {
+          "id": "myanmar",
+          "name": "미얀마",
+          "geo": {
+            "lat": 21.57,
+            "lon": 95.8
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "MM"
+        },
+        {
+          "id": "namibia",
+          "name": "나미비아",
+          "geo": {
+            "lat": -20.58,
+            "lon": 17.11
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "NA"
+        },
+        {
+          "id": "nepal",
+          "name": "네팔",
+          "geo": {
+            "lat": 28.3,
+            "lon": 83.64
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "NP"
+        },
+        {
+          "id": "niger",
+          "name": "니제르",
+          "geo": {
+            "lat": 17.45,
+            "lon": 9.5
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "NE"
+        },
+        {
+          "id": "north-korea",
+          "name": "조선민주주의인민공화국",
+          "geo": {
+            "lat": 39.89,
+            "lon": 126.44
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "KP"
+        },
+        {
+          "id": "norway",
+          "name": "노르웨이",
+          "geo": {
+            "lat": 61.36,
+            "lon": 9.68
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "NO"
+        },
+        {
+          "id": "paraguay",
+          "name": "파라과이",
+          "geo": {
+            "lat": -21.67,
+            "lon": -60.15
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "PY"
+        },
+        {
+          "id": "portugal",
+          "name": "포르투갈",
+          "geo": {
+            "lat": 39.61,
+            "lon": -8.27
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "PT"
+        },
+        {
+          "id": "puerto-rico",
+          "name": "푸에르토리코",
+          "geo": {
+            "lat": 18.23,
+            "lon": -66.48
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "PR"
+        },
+        {
+          "id": "romania",
+          "name": "루마니아",
+          "geo": {
+            "lat": 45.73,
+            "lon": 24.97
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "RO"
+        },
+        {
+          "id": "rwanda",
+          "name": "르완다",
+          "geo": {
+            "lat": -1.9,
+            "lon": 30.1
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "RW"
+        },
+        {
+          "id": "solomon-islands",
+          "name": "솔로몬 제도",
+          "geo": {
+            "lat": -8.03,
+            "lon": 159.17
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "SB"
+        },
+        {
+          "id": "south-sudan",
+          "name": "남수단",
+          "geo": {
+            "lat": 7.23,
+            "lon": 30.39
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "SS"
+        },
+        {
+          "id": "sri-lanka",
+          "name": "스리랑카",
+          "geo": {
+            "lat": 7.58,
+            "lon": 80.7
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "LK"
+        },
+        {
+          "id": "syria",
+          "name": "시리아",
+          "geo": {
+            "lat": 35.01,
+            "lon": 38.28
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "SY"
+        },
+        {
+          "id": "tanzania",
+          "name": "탄자니아",
+          "geo": {
+            "lat": -6.05,
+            "lon": 34.96
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "TZ"
+        },
+        {
+          "id": "tunisia",
+          "name": "튀니지",
+          "geo": {
+            "lat": 33.69,
+            "lon": 9.01
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "TN"
+        },
+        {
+          "id": "turkmenistan",
+          "name": "투르크메니스탄",
+          "geo": {
+            "lat": 39.86,
+            "lon": 58.68
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "TM"
+        },
+        {
+          "id": "uganda",
+          "name": "우간다",
+          "geo": {
+            "lat": 1.97,
+            "lon": 32.95
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "UG"
+        },
+        {
+          "id": "uruguay",
+          "name": "우루과이",
+          "geo": {
+            "lat": -32.96,
+            "lon": -55.97
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "UY"
+        },
+        {
+          "id": "uzbekistan",
+          "name": "우즈베키스탄",
+          "geo": {
+            "lat": 41.69,
+            "lon": 64.01
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "UZ"
+        },
+        {
+          "id": "yemen",
+          "name": "예멘",
+          "geo": {
+            "lat": 15.33,
+            "lon": 45.87
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "YE"
+        },
+        {
+          "id": "zambia",
+          "name": "잠비아",
+          "geo": {
+            "lat": -14.66,
+            "lon": 26.4
+          },
+          "zoom": [
+            1.4,
+            30
+          ],
+          "country": "ZM"
+        },
+        {
+          "id": "antarctica",
+          "name": "남극",
+          "geo": {
+            "lat": -79.84,
+            "lon": 35.89
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "AQ"
+        },
+        {
+          "id": "azerbaijan",
+          "name": "아제르바이잔",
+          "geo": {
+            "lat": 40.4,
+            "lon": 47.21
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "AZ"
+        },
+        {
+          "id": "belgium",
+          "name": "벨기에",
+          "geo": {
+            "lat": 50.79,
+            "lon": 4.8
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BE"
+        },
+        {
+          "id": "benin",
+          "name": "베냉",
+          "geo": {
+            "lat": 10.32,
+            "lon": 2.35
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BJ"
+        },
+        {
+          "id": "bhutan",
+          "name": "부탄",
+          "geo": {
+            "lat": 27.54,
+            "lon": 90.04
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BT"
+        },
+        {
+          "id": "botswana",
+          "name": "보츠와나",
+          "geo": {
+            "lat": -22.1,
+            "lon": 24.18
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BW"
+        },
+        {
+          "id": "brunei",
+          "name": "브루나이",
+          "geo": {
+            "lat": 4.45,
+            "lon": 114.55
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BN"
+        },
+        {
+          "id": "bulgaria",
+          "name": "불가리아",
+          "geo": {
+            "lat": 42.51,
+            "lon": 25.16
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BG"
+        },
+        {
+          "id": "burundi",
+          "name": "부룬디",
+          "geo": {
+            "lat": -3.33,
+            "lon": 29.92
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BI"
+        },
+        {
+          "id": "central-african-republic",
+          "name": "중앙아프리카 공화국",
+          "geo": {
+            "lat": 6.99,
+            "lon": 20.91
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "CF"
+        },
+        {
+          "id": "croatia",
+          "name": "크로아티아",
+          "geo": {
+            "lat": 45.81,
+            "lon": 16.37
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "HR"
+        },
+        {
+          "id": "czech-republic",
+          "name": "체코",
+          "geo": {
+            "lat": 49.88,
+            "lon": 15.38
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "CZ"
+        },
+        {
+          "id": "djibouti",
+          "name": "지부티",
+          "geo": {
+            "lat": 11.98,
+            "lon": 42.5
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "DJ"
+        },
+        {
+          "id": "east-timor",
+          "name": "동티모르",
+          "geo": {
+            "lat": -8.8,
+            "lon": 125.85
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "TL"
+        },
+        {
+          "id": "equatorial-guinea",
+          "name": "적도 기니",
+          "geo": {
+            "lat": 2.33,
+            "lon": 8.99
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "GQ"
+        },
+        {
+          "id": "eritrea",
+          "name": "에리트레아",
+          "geo": {
+            "lat": 15.79,
+            "lon": 38.29
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "ER"
+        },
+        {
+          "id": "eswatini",
+          "name": "에스와티니",
+          "geo": {
+            "lat": -26.53,
+            "lon": 31.47
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "SZ"
+        },
+        {
+          "id": "french-southern-and-antarctic-lands",
+          "name": "프랑스령 남방 및 남극",
+          "geo": {
+            "lat": -49.3,
+            "lon": 69.12
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "TF"
+        },
+        {
+          "id": "georgia",
+          "name": "조지아",
+          "geo": {
+            "lat": 41.87,
+            "lon": 43.74
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "GE"
+        },
+        {
+          "id": "guyana",
+          "name": "가이아나",
+          "geo": {
+            "lat": 5.12,
+            "lon": -58.94
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "GY"
+        },
+        {
+          "id": "haiti",
+          "name": "아이티",
+          "geo": {
+            "lat": 19.26,
+            "lon": -72.22
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "HT"
+        },
+        {
+          "id": "hungary",
+          "name": "헝가리",
+          "geo": {
+            "lat": 47.09,
+            "lon": 19.45
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "HU"
+        },
+        {
+          "id": "jamaica",
+          "name": "자메이카",
+          "geo": {
+            "lat": 18.14,
+            "lon": -77.32
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "JM"
+        },
+        {
+          "id": "jordan",
+          "name": "요르단",
+          "geo": {
+            "lat": 30.81,
+            "lon": 36.38
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "JO"
+        },
+        {
+          "id": "laos",
+          "name": "라오스",
+          "geo": {
+            "lat": 19.43,
+            "lon": 102.53
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "LA"
+        },
+        {
+          "id": "latvia",
+          "name": "라트비아",
+          "geo": {
+            "lat": 57.07,
+            "lon": 25.46
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "LV"
+        },
+        {
+          "id": "lebanon",
+          "name": "레바논",
+          "geo": {
+            "lat": 34.13,
+            "lon": 35.99
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "LB"
+        },
+        {
+          "id": "lesotho",
+          "name": "레소토",
+          "geo": {
+            "lat": -29.48,
+            "lon": 28.25
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "LS"
+        },
+        {
+          "id": "liberia",
+          "name": "라이베리아",
+          "geo": {
+            "lat": 6.45,
+            "lon": -9.46
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "LR"
+        },
+        {
+          "id": "lithuania",
+          "name": "리투아니아",
+          "geo": {
+            "lat": 55.1,
+            "lon": 24.09
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "LT"
+        },
+        {
+          "id": "malawi",
+          "name": "말라위",
+          "geo": {
+            "lat": -13.39,
+            "lon": 33.61
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "MW"
+        },
+        {
+          "id": "netherlands",
+          "name": "네덜란드",
+          "geo": {
+            "lat": 52.42,
+            "lon": 5.61
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "NL"
+        },
+        {
+          "id": "nicaragua",
+          "name": "니카라과",
+          "geo": {
+            "lat": 12.67,
+            "lon": -85.07
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "NI"
+        },
+        {
+          "id": "oman",
+          "name": "오만",
+          "geo": {
+            "lat": 22.12,
+            "lon": 57.34
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "OM"
+        },
+        {
+          "id": "panama",
+          "name": "파나마",
+          "geo": {
+            "lat": 8.72,
+            "lon": -80.35
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "PA"
+        },
+        {
+          "id": "qatar",
+          "name": "카타르",
+          "geo": {
+            "lat": 25.24,
+            "lon": 51.14
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "QA"
+        },
+        {
+          "id": "republic-of-the-congo",
+          "name": "콩고 공화국",
+          "geo": {
+            "lat": 0.14,
+            "lon": 15.9
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "CG"
+        },
+        {
+          "id": "serbia",
+          "name": "세르비아",
+          "geo": {
+            "lat": 44.19,
+            "lon": 20.79
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "RS"
+        },
+        {
+          "id": "sierra-leone",
+          "name": "시에라리온",
+          "geo": {
+            "lat": 8.62,
+            "lon": -11.76
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "SL"
+        },
+        {
+          "id": "slovakia",
+          "name": "슬로바키아",
+          "geo": {
+            "lat": 48.73,
+            "lon": 19.05
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "SK"
+        },
+        {
+          "id": "somalia",
+          "name": "소말리아",
+          "geo": {
+            "lat": 3.57,
+            "lon": 45.19
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "SO"
+        },
+        {
+          "id": "suriname",
+          "name": "수리남",
+          "geo": {
+            "lat": 4.14,
+            "lon": -55.91
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "SR"
+        },
+        {
+          "id": "switzerland",
+          "name": "스위스",
+          "geo": {
+            "lat": 46.72,
+            "lon": 7.46
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "CH"
+        },
+        {
+          "id": "tajikistan",
+          "name": "타지키스탄",
+          "geo": {
+            "lat": 38.2,
+            "lon": 72.59
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "TJ"
+        },
+        {
+          "id": "the-bahamas",
+          "name": "바하마",
+          "geo": {
+            "lat": 26.4,
+            "lon": -77.15
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "BS"
+        },
+        {
+          "id": "united-arab-emirates",
+          "name": "아랍에미리트",
+          "geo": {
+            "lat": 23.47,
+            "lon": 54.55
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "AE"
+        },
+        {
+          "id": "vanuatu",
+          "name": "바누아투",
+          "geo": {
+            "lat": -15.37,
+            "lon": 166.91
+          },
+          "zoom": [
+            2.8,
+            30
+          ],
+          "country": "VU"
+        },
+        {
+          "id": "bosnia-and-herzegovina",
+          "name": "보스니아 헤르체고비나",
+          "geo": {
+            "lat": 44.09,
+            "lon": 18.07
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "BA"
+        },
+        {
+          "id": "cyprus",
+          "name": "키프로스",
+          "geo": {
+            "lat": 34.91,
+            "lon": 33.08
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "CY"
+        },
+        {
+          "id": "dominican-republic",
+          "name": "도미니카 공화국",
+          "geo": {
+            "lat": 19.1,
+            "lon": -70.65
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "DO"
+        },
+        {
+          "id": "falkland-islands",
+          "name": "포클랜드 제도",
+          "geo": {
+            "lat": -51.61,
+            "lon": -58.74
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "FK"
+        },
+        {
+          "id": "honduras",
+          "name": "온두라스",
+          "geo": {
+            "lat": 14.79,
+            "lon": -86.89
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "HN"
+        },
+        {
+          "id": "palestine",
+          "name": "팔레스타인",
+          "geo": {
+            "lat": 32.05,
+            "lon": 35.29
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "PS"
+        },
+        {
+          "id": "taiwan",
+          "name": "중화민국",
+          "geo": {
+            "lat": 23.65,
+            "lon": 120.87
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "TW"
+        },
+        {
+          "id": "trinidad-and-tobago",
+          "name": "트리니다드 토바고",
+          "geo": {
+            "lat": 11.0,
+            "lon": -60.92
+          },
+          "zoom": [
+            4.0,
+            30
+          ],
+          "country": "TT"
+        },
+        {
+          "id": "new-caledonia",
+          "name": "누벨칼레도니",
+          "geo": {
+            "lat": -21.06,
+            "lon": 165.08
+          },
+          "zoom": [
+            4.3,
+            30
+          ],
+          "country": "NC"
+        },
+        {
+          "id": "albania",
+          "name": "알바니아",
+          "geo": {
+            "lat": 40.65,
+            "lon": 20.11
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "AL"
+        },
+        {
+          "id": "armenia",
+          "name": "아르메니아",
+          "geo": {
+            "lat": 40.46,
+            "lon": 44.8
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "AM"
+        },
+        {
+          "id": "belize",
+          "name": "벨리즈",
+          "geo": {
+            "lat": 17.2,
+            "lon": -88.71
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "BZ"
+        },
+        {
+          "id": "el-salvador",
+          "name": "엘살바도르",
+          "geo": {
+            "lat": 13.69,
+            "lon": -88.89
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "SV"
+        },
+        {
+          "id": "guinea-bissau",
+          "name": "기니비사우",
+          "geo": {
+            "lat": 12.16,
+            "lon": -14.52
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "GW"
+        },
+        {
+          "id": "kosovo",
+          "name": "코소보",
+          "geo": {
+            "lat": 42.59,
+            "lon": 20.86
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "XK"
+        },
+        {
+          "id": "kuwait",
+          "name": "쿠웨이트",
+          "geo": {
+            "lat": 29.41,
+            "lon": 47.31
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "KW"
+        },
+        {
+          "id": "moldova",
+          "name": "몰도바",
+          "geo": {
+            "lat": 47.43,
+            "lon": 28.49
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "MD"
+        },
+        {
+          "id": "montenegro",
+          "name": "몬테네그로",
+          "geo": {
+            "lat": 42.8,
+            "lon": 19.14
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "ME"
+        },
+        {
+          "id": "north-macedonia",
+          "name": "북마케도니아",
+          "geo": {
+            "lat": 41.56,
+            "lon": 21.56
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "MK"
+        },
+        {
+          "id": "slovenia",
+          "name": "슬로베니아",
+          "geo": {
+            "lat": 46.06,
+            "lon": 14.92
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "SI"
+        },
+        {
+          "id": "the-gambia",
+          "name": "감비아",
+          "geo": {
+            "lat": 13.64,
+            "lon": -15.0
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "GM"
+        },
+        {
+          "id": "togo",
+          "name": "토고",
+          "geo": {
+            "lat": 8.81,
+            "lon": 1.06
+          },
+          "zoom": [
+            5.7,
+            30
+          ],
+          "country": "TG"
+        },
+        {
+          "id": "luxembourg",
+          "name": "룩셈부르크",
+          "geo": {
+            "lat": 49.73,
+            "lon": 6.08
+          },
+          "zoom": [
+            9.2,
+            30
+          ],
+          "country": "LU"
+        },
+        {
+          "id": "western-sahara",
+          "name": "서사하라",
+          "geo": {
+            "lat": 23.97,
+            "lon": -12.63
+          },
+          "zoom": [
+            11.3,
+            30
+          ],
+          "country": "EH"
         },
         {
           "id": "korea/seoul",
@@ -37,7 +2300,8 @@
             9,
             400
           ],
-          "local": true
+          "local": true,
+          "country": "KR"
         },
         {
           "id": "japan/tokyo",
@@ -60,7 +2324,8 @@
             3,
             400
           ],
-          "local": true
+          "local": true,
+          "country": "JP"
         },
         {
           "id": "france/paris",
@@ -83,7 +2348,8 @@
             3,
             400
           ],
-          "local": true
+          "local": true,
+          "country": "FR"
         },
         {
           "id": "uk/london",
@@ -106,7 +2372,8 @@
             3,
             400
           ],
-          "local": true
+          "local": true,
+          "country": "GB"
         },
         {
           "id": "usa/washington",
@@ -129,31 +2396,350 @@
             3,
             400
           ],
-          "local": true
+          "local": true,
+          "country": "US"
         },
         {
           "id": "korea/busan",
           "name": "부산",
           "geo": {
-            "lat": 35.18,
-            "lon": 129.08
+            "lat": 35.1,
+            "lon": 129.04
           },
           "zoom": [
             9,
             400
-          ]
+          ],
+          "bounds": [
+            [
+              128.735,
+              34.705
+            ],
+            [
+              129.511,
+              35.409
+            ]
+          ],
+          "focus": [
+            [
+              128.96,
+              35.04
+            ],
+            [
+              129.26,
+              35.23
+            ]
+          ],
+          "local": true,
+          "country": "KR"
         },
         {
           "id": "usa/new-york",
           "name": "뉴욕",
           "geo": {
-            "lat": 40.71,
-            "lon": -74.0
+            "lat": 40.7128,
+            "lon": -74.006
           },
           "zoom": [
             3,
             400
-          ]
+          ],
+          "bounds": [
+            [
+              -74.276,
+              40.463
+            ],
+            [
+              -73.683,
+              40.931
+            ]
+          ],
+          "focus": [
+            [
+              -74.08,
+              40.6
+            ],
+            [
+              -73.82,
+              40.85
+            ]
+          ],
+          "local": true,
+          "country": "US"
+        },
+        {
+          "id": "korea/jeju",
+          "name": "제주",
+          "geo": {
+            "lat": 33.3805,
+            "lon": 126.5535
+          },
+          "bounds": [
+            [
+              126.137,
+              33.184
+            ],
+            [
+              126.97,
+              33.577
+            ]
+          ],
+          "focus": [
+            [
+              126.16,
+              33.2
+            ],
+            [
+              126.95,
+              33.56
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "KR"
+        },
+        {
+          "id": "korea/ulleungdo",
+          "name": "울릉도",
+          "geo": {
+            "lat": 37.5011,
+            "lon": 130.8562
+          },
+          "bounds": [
+            [
+              130.7724,
+              37.4351
+            ],
+            [
+              130.9399,
+              37.5672
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "KR"
+        },
+        {
+          "id": "korea/dokdo",
+          "name": "독도",
+          "geo": {
+            "lat": 37.2429,
+            "lon": 131.8671
+          },
+          "bounds": [
+            [
+              131.8562,
+              37.2329
+            ],
+            [
+              131.8779,
+              37.2529
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "KR"
+        },
+        {
+          "id": "italy/rome",
+          "name": "로마",
+          "geo": {
+            "lat": 41.903,
+            "lon": 12.479
+          },
+          "bounds": [
+            [
+              12.437,
+              41.869
+            ],
+            [
+              12.521,
+              41.937
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "IT"
+        },
+        {
+          "id": "egypt/cairo",
+          "name": "카이로",
+          "geo": {
+            "lat": 30.02,
+            "lon": 31.195
+          },
+          "bounds": [
+            [
+              31.1102,
+              29.9617
+            ],
+            [
+              31.2798,
+              30.0783
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "EG"
+        },
+        {
+          "id": "australia/sydney",
+          "name": "시드니",
+          "geo": {
+            "lat": -33.889,
+            "lon": 151.204
+          },
+          "bounds": [
+            [
+              151.1731,
+              -33.9265
+            ],
+            [
+              151.2348,
+              -33.8515
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "AU"
+        },
+        {
+          "id": "china/beijing",
+          "name": "베이징",
+          "geo": {
+            "lat": 39.915,
+            "lon": 116.3798
+          },
+          "bounds": [
+            [
+              116.311,
+              39.8538
+            ],
+            [
+              116.4486,
+              39.9761
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "CN"
+        },
+        {
+          "id": "turkey/istanbul",
+          "name": "이스탄불",
+          "geo": {
+            "lat": 41.0328,
+            "lon": 29.0058
+          },
+          "bounds": [
+            [
+              28.9148,
+              40.985
+            ],
+            [
+              29.0968,
+              41.0806
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "TR"
+        },
+        {
+          "id": "brazil/rio",
+          "name": "리우데자네이루",
+          "geo": {
+            "lat": -22.957,
+            "lon": -43.1775
+          },
+          "bounds": [
+            [
+              -43.211,
+              -22.99
+            ],
+            [
+              -43.144,
+              -22.924
+            ]
+          ],
+          "zoom": [
+            3,
+            400
+          ],
+          "local": true,
+          "country": "BR"
+        },
+        {
+          "id": "arctic/ny-alesund",
+          "name": "북극 다산과학기지",
+          "geo": {
+            "lat": 78.93,
+            "lon": 11.95
+          },
+          "bounds": [
+            [
+              11.526,
+              78.8558
+            ],
+            [
+              12.374,
+              79.0042
+            ]
+          ],
+          "zoom": [
+            9,
+            400
+          ],
+          "local": true,
+          "country": "NO"
+        },
+        {
+          "id": "antarctica/king-george",
+          "name": "남극 세종과학기지",
+          "geo": {
+            "lat": -62.22,
+            "lon": -58.7178
+          },
+          "bounds": [
+            [
+              -58.8215,
+              -62.273
+            ],
+            [
+              -58.6141,
+              -62.167
+            ]
+          ],
+          "zoom": [
+            9,
+            400
+          ],
+          "local": true,
+          "country": "AQ"
         }
       ],
       "icon": "🌏"
