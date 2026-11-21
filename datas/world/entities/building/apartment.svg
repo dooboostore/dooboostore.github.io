@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 46">
+  <!-- 한강변 아파트: 파스텔 외벽, 줄지은 베란다, 옥상 물탱크. 밤이면 집집마다 불이 켜진다 -->
+  <ellipse cx="13" cy="45" rx="12" ry="1.3" fill="#3b5a2e" opacity="0.22"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="9" y="0.6" width="7" height="3.6" rx="1.6" fill="#dcd6cc"/>
+    <rect x="2" y="4" width="22" height="41" rx="2.6" fill="var(--wall, #f6f1e7)"/>
+    <rect x="2" y="3" width="22" height="3.4" rx="1.7" fill="var(--accent, #8fb6d8)"/>
+    <path d="M10 45 L10 41.6 Q13 39.4 16 41.6 L16 45 Z" fill="#a9b6c2"/>
+  </g>
+  <rect x="18.6" y="6" width="5.4" height="38.4" rx="2.4" fill="#000" opacity="0.06"/>
+  <g fill="#c9dcea">
+    <rect x="4" y="8" width="4" height="2.4" rx="0.6"/><rect x="11" y="8" width="4" height="2.4" rx="0.6"/><rect x="18" y="8" width="4" height="2.4" rx="0.6"/>
+    <rect x="4" y="12.6" width="4" height="2.4" rx="0.6"/><rect x="11" y="12.6" width="4" height="2.4" rx="0.6"/><rect x="18" y="12.6" width="4" height="2.4" rx="0.6"/>
+    <rect x="4" y="17.2" width="4" height="2.4" rx="0.6"/><rect x="11" y="17.2" width="4" height="2.4" rx="0.6"/><rect x="18" y="17.2" width="4" height="2.4" rx="0.6"/>
+    <rect x="4" y="21.8" width="4" height="2.4" rx="0.6"/><rect x="11" y="21.8" width="4" height="2.4" rx="0.6"/><rect x="18" y="21.8" width="4" height="2.4" rx="0.6"/>
+    <rect x="4" y="26.4" width="4" height="2.4" rx="0.6"/><rect x="11" y="26.4" width="4" height="2.4" rx="0.6"/><rect x="18" y="26.4" width="4" height="2.4" rx="0.6"/>
+    <rect x="4" y="31" width="4" height="2.4" rx="0.6"/><rect x="11" y="31" width="4" height="2.4" rx="0.6"/><rect x="18" y="31" width="4" height="2.4" rx="0.6"/>
+    <rect x="4" y="35.6" width="4" height="2.4" rx="0.6"/><rect x="18" y="35.6" width="4" height="2.4" rx="0.6"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.35 + var(--night, 0) * 0.65)">
+    <rect x="11" y="8" width="4" height="2.4" rx="0.6"/><rect x="4" y="12.6" width="4" height="2.4" rx="0.6"/><rect x="18" y="17.2" width="4" height="2.4" rx="0.6"/>
+    <rect x="11" y="21.8" width="4" height="2.4" rx="0.6"/><rect x="4" y="26.4" width="4" height="2.4" rx="0.6"/><rect x="18" y="31" width="4" height="2.4" rx="0.6"/><rect x="4" y="35.6" width="4" height="2.4" rx="0.6"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="18" y="8" width="4" height="2.4" rx="0.6"/><rect x="11" y="12.6" width="4" height="2.4" rx="0.6"/><rect x="4" y="21.8" width="4" height="2.4" rx="0.6"/><rect x="11" y="31" width="4" height="2.4" rx="0.6"/><rect x="18" y="26.4" width="4" height="2.4" rx="0.6"/>
+  </g>
+  <g fill="#fff" opacity="0.7">
+    <rect x="2.6" y="10.8" width="20.8" height="0.8" rx="0.4"/><rect x="2.6" y="15.4" width="20.8" height="0.8" rx="0.4"/><rect x="2" y="20" width="22" height="0.7"/><rect x="2.6" y="24.6" width="20.8" height="0.8" rx="0.4"/>
+    <rect x="2.6" y="29.2" width="20.8" height="0.8" rx="0.4"/><rect x="2.6" y="33.8" width="20.8" height="0.8" rx="0.4"/><rect x="2.6" y="38.4" width="20.8" height="0.8" rx="0.4"/>
+  </g>
+</svg>

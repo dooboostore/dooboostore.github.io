@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+  <!-- 붉은 도리이(신사 입구 문): 위로 살짝 휜 가사기, 검은 띠, 둥근 기둥, 기둥 밑 검은 받침. 색 변수 torii -->
+  <ellipse cx="11" cy="19.2" rx="9.6" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="4.6" y="4.6" width="1.8" height="14.2" rx="0.8" fill="var(--torii, #e05a3f)"/>
+    <rect x="15.6" y="4.6" width="1.8" height="14.2" rx="0.8" fill="var(--torii, #e05a3f)"/>
+    <rect x="4.2" y="16.8" width="2.6" height="2.2" rx="0.6" fill="#3e3a3a"/>
+    <rect x="15.2" y="16.8" width="2.6" height="2.2" rx="0.6" fill="#3e3a3a"/>
+    <rect x="2.6" y="6.6" width="16.8" height="1.6" rx="0.7" fill="var(--torii, #e05a3f)"/>
+    <rect x="10.2" y="4.4" width="1.6" height="2.4" rx="0.4" fill="var(--torii, #e05a3f)"/>
+    <path d="M0.8 3.2 C1.6 3.6 3 4.2 4.6 4.2 L17.4 4.2 C19 4.2 20.4 3.6 21.2 3.2 C21.4 2.4 20.8 1.6 19.8 1.6 C16 2.2 6 2.2 2.2 1.6 C1.2 1.6 0.6 2.4 0.8 3.2 Z" fill="#3e3a3a"/>
+    <path d="M1.4 4.4 C2.2 4.8 3.4 5.2 4.6 5.2 L17.4 5.2 C18.6 5.2 19.8 4.8 20.6 4.4 L20.4 3.4 C17 3.8 5 3.8 1.6 3.4 Z" fill="var(--torii, #e05a3f)"/>
+  </g>
+  <rect x="5" y="5.6" width="0.6" height="10.6" rx="0.3" fill="#fff" opacity="0.3"/><rect x="16" y="5.6" width="0.6" height="10.6" rx="0.3" fill="#fff" opacity="0.3"/>
+  <path d="M3 2.4 C7 2.9 15 2.9 19 2.4" stroke="#fff" stroke-opacity="0.3" stroke-width="0.4" fill="none" stroke-linecap="round"/>
+</svg>

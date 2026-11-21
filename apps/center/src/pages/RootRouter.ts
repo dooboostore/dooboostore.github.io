@@ -160,6 +160,12 @@ export default (w: Window) => {
       return `<center-ros2-page/>`;
     }
 
+    @subscribeSwcAppRouteChange(["/world"], { order: 17 })
+    @innerHtmlLight
+    handleWorld() {
+      return `<center-world-page/>`;
+    }
+
     @subscribeSwcAppRouteChange(["/ai"], { order: 16 })
     @innerHtmlLight({ filter: skipIfExists('center-ai-page') })
     handleAi() {

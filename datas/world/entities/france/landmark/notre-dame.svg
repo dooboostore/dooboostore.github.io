@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 28">
+  <!-- 노트르담 대성당 서쪽 정면: 둥근 쌍탑, 장미창, 세 개의 둥근 문, 뒤로 솟은 첨탑(끝은 둥글게). 밤엔 장미창과 문에 불빛 -->
+  <ellipse cx="11" cy="27" rx="10" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10.4 9 L10.8 1.6 Q11 0.8 11.2 1.6 L11.6 9 Z" fill="#7f8c97"/>
+    <path d="M6.8 9.6 L11 6.6 L15.2 9.6 Z" fill="#6c7b88"/>
+    <rect x="1.6" y="5.2" width="6.2" height="21.4" rx="1" fill="#efe2c4"/>
+    <rect x="14.2" y="5.2" width="6.2" height="21.4" rx="1" fill="#efe2c4"/>
+    <rect x="7.4" y="9" width="7.2" height="17.6" rx="0.6" fill="#f4e9cf"/>
+    <rect x="1.2" y="4.2" width="7" height="1.6" rx="0.7" fill="#f6ecd4"/>
+    <rect x="13.8" y="4.2" width="7" height="1.6" rx="0.7" fill="#f6ecd4"/>
+    <rect x="1.2" y="15.4" width="19.6" height="1.4" rx="0.6" fill="#e6d7b6"/>
+    <circle cx="11" cy="12.4" r="2.6" fill="#7aa6d6"/>
+    <path d="M2.6 26.6 L2.6 22.4 C2.6 20 6.8 20 6.8 22.4 L6.8 26.6 Z" fill="#8a6a4e"/>
+    <path d="M8.6 26.6 L8.6 21.6 C8.6 18.6 13.4 18.6 13.4 21.6 L13.4 26.6 Z" fill="#8a6a4e"/>
+    <path d="M15.2 26.6 L15.2 22.4 C15.2 20 19.4 20 19.4 22.4 L19.4 26.6 Z" fill="#8a6a4e"/>
+    <rect x="2.8" y="7.4" width="1.4" height="5" rx="0.7" fill="#b9a27c"/>
+    <rect x="5.2" y="7.4" width="1.4" height="5" rx="0.7" fill="#b9a27c"/>
+    <rect x="15.4" y="7.4" width="1.4" height="5" rx="0.7" fill="#b9a27c"/>
+    <rect x="17.8" y="7.4" width="1.4" height="5" rx="0.7" fill="#b9a27c"/>
+  </g>
+  <g fill="#f4e9cf" stroke="#5b4636" stroke-width="0.3"><circle cx="2.4" cy="3.9" r="0.5"/><circle cx="4.7" cy="3.9" r="0.5"/><circle cx="7" cy="3.9" r="0.5"/><circle cx="15" cy="3.9" r="0.5"/><circle cx="17.3" cy="3.9" r="0.5"/><circle cx="19.6" cy="3.9" r="0.5"/></g>
+  <g stroke="#fff" stroke-width="0.3" opacity="0.8"><line x1="11" y1="9.9" x2="11" y2="14.9"/><line x1="8.5" y1="12.4" x2="13.5" y2="12.4"/><line x1="9.2" y1="10.6" x2="12.8" y2="14.2"/><line x1="12.8" y1="10.6" x2="9.2" y2="14.2"/></g>
+  <g fill="#f4c84f"><circle cx="11" cy="12.4" r="0.7"/></g>
+  <g fill="#e9785a" opacity="0.8"><circle cx="11" cy="10.5" r="0.4"/><circle cx="11" cy="14.3" r="0.4"/><circle cx="9.1" cy="12.4" r="0.4"/><circle cx="12.9" cy="12.4" r="0.4"/></g>
+  <g fill="#fff" opacity="0.3"><rect x="2" y="5.6" width="1" height="20" rx="0.5"/><rect x="14.6" y="5.6" width="1" height="20" rx="0.5"/></g>
+  <rect x="18.8" y="6" width="1.4" height="20.4" rx="0.7" fill="#000" opacity="0.08"/>
+  <g style="opacity: var(--night, 0)" fill="#ffd77a">
+    <circle cx="11" cy="12.4" r="2.4" opacity="0.8"/>
+    <path d="M9 26.4 L9 21.8 C9 19.2 13 19.2 13 21.8 L13 26.4 Z" opacity="0.7"/>
+    <rect x="3" y="7.6" width="1" height="4.6" rx="0.5"/><rect x="5.4" y="7.6" width="1" height="4.6" rx="0.5"/><rect x="15.6" y="7.6" width="1" height="4.6" rx="0.5"/><rect x="18" y="7.6" width="1" height="4.6" rx="0.5"/>
+  </g>
+</svg>

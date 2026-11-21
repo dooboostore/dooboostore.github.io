@@ -132,6 +132,7 @@ import PhysicalEncoder from './physical/components/PhysicalEncoder';
 import PhysicalXm430 from './physical/components/PhysicalXm430';
 import RamPricePage from './ram-price/RamPricePage';
 import VisionPage from './vision/VisionPage';
+import WorldPage from './world/WorldPage';
 import VisionSaturateWrap from './vision/components/VisionSaturateWrap';
 import VisionColorSpace from './vision/components/VisionColorSpace';
 import VisionFiltering from './vision/components/VisionFiltering';
@@ -165,6 +166,7 @@ import VisionPipelineValidation from './vision/components/VisionPipelineValidati
 export const pageFactories = [
   RootRouter,
   HomePage,
+  WorldPage,
   Ros2Page,
   MlMarket,
   MlSplit,

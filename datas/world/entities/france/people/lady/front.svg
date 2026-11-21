@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 챙 넓은 모자와 핸드백을 든 우아한 숙녀 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.3" ry="0.8" fill="#7a3f3a"/>
+    <ellipse cx="7.4" cy="16.9" rx="1.3" ry="0.8" fill="#7a3f3a"/>
+    <path d="M4.6 16.4 L4.8 15 L5.6 15 L5.6 16.4 Z M6.4 16.4 L6.4 15 L7.2 15 L7.4 16.4 Z" fill="#f5d5bd"/>
+    <path d="M2.6 15.6 L3.7 11.4 C3.9 10.6 4.6 10.2 6 10.2 C7.4 10.2 8.1 10.6 8.3 11.4 L9.4 15.6 Q6 16.4 2.6 15.6 Z" fill="var(--dress, #e9a6a1)"/>
+    <rect x="3.6" y="12.4" width="4.8" height="0.7" rx="0.35" fill="#fff" fill-opacity="0.55" stroke="none"/>
+    <ellipse cx="2.9" cy="12.6" rx="0.9" ry="1.4" fill="var(--dress, #e9a6a1)" transform="rotate(14 2.9 12.6)"/>
+    <ellipse cx="9.1" cy="12.6" rx="0.9" ry="1.4" fill="var(--dress, #e9a6a1)" transform="rotate(-14 9.1 12.6)"/>
+    <path d="M8.9 12.2 Q9.9 11 10.6 12.6" fill="none" stroke-width="0.35"/>
+    <rect x="8.7" y="12.5" width="2.4" height="1.9" rx="0.6" fill="var(--bag, #b07a52)"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--skin, #ffe0c7)"/>
+    <path d="M1.15 8.6 L1.15 7.2 A4.95 4.95 0 1 1 10.85 7.2 L10.85 8.6 C10.6 9.4 9.6 9.4 9.4 8.6 C9.4 6 8.4 4.6 6.6 4.4 C5.4 5.2 3.4 5 2.6 6.4 L2.6 8.6 C2.4 9.4 1.4 9.4 1.15 8.6 Z" fill="var(--hair, #4a3329)"/>
+    <ellipse cx="6" cy="3" rx="5.9" ry="1.3" fill="var(--hat, #f4ead6)"/>
+    <path d="M3.4 3 C3.4 0.6 8.6 0.6 8.6 3 Z" fill="var(--hat, #f4ead6)"/>
+    <path d="M3.5 2.3 L8.5 2.3 L8.6 3 L3.4 3 Z" fill="var(--ribbon, #c2523f)" stroke-width="0.3"/>
+  </g>
+  <ellipse cx="4.2" cy="7" rx="0.55" ry="0.75" fill="#3d2b22"/>
+  <ellipse cx="7.8" cy="7" rx="0.55" ry="0.75" fill="#3d2b22"/>
+  <circle cx="4.38" cy="6.75" r="0.2" fill="#fff"/>
+  <circle cx="7.98" cy="6.75" r="0.2" fill="#fff"/>
+  <ellipse cx="3.1" cy="8.3" rx="0.85" ry="0.5" fill="#ff9e9e" opacity="0.55"/>
+  <ellipse cx="8.9" cy="8.3" rx="0.85" ry="0.5" fill="#ff9e9e" opacity="0.55"/>
+  <path d="M5.4 8.5 Q6 9 6.6 8.5" stroke="#8a4f3f" stroke-width="0.35" fill="none" stroke-linecap="round"/>
+</svg>

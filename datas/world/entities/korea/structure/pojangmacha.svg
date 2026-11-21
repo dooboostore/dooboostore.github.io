@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+  <!-- 포장마차: 둥근 주황 천막, 비닐 창 너머 따뜻한 불빛, 빨간 등, 파란 플라스틱 의자, 오뎅 김. 밤이면 환하게 -->
+  <ellipse cx="12" cy="11" rx="13" ry="10" fill="#ffb860" style="opacity: calc(var(--night, 0) * 0.35)"/>
+  <ellipse cx="12" cy="19.1" rx="11.5" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g fill="#fbf7ef">
+    <circle cx="12" cy="2" r="0.8"><animate attributeName="cy" values="2;-3" dur="3.6s" repeatCount="indefinite"/><animate attributeName="r" values="0.6;1.8" dur="3.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3.6s" repeatCount="indefinite"/></circle>
+    <circle cx="13" cy="2" r="0.8"><animate attributeName="cy" values="2;-3" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="r" values="0.6;1.8" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 18.4 L2 9.4 C2 5 5.4 3 12 3 C18.6 3 22 5 22 9.4 L22 18.4 Q12 19.2 2 18.4 Z" fill="var(--tarp, #ef7a3d)"/>
+    <rect x="4" y="9" width="16" height="7.4" rx="1.6" fill="#fde9c8"/>
+    <rect x="3.4" y="7.4" width="17.2" height="2" rx="1" fill="#e0662e"/>
+  </g>
+  <rect x="4" y="9" width="16" height="7.4" rx="1.6" fill="#ffcf73" style="opacity: var(--night, 0)"/>
+  <g fill="#c9895a" opacity="0.55"><circle cx="8" cy="13" r="1.6"/><rect x="6.6" y="13.6" width="2.8" height="2.6" rx="1"/><circle cx="15.6" cy="12.8" r="1.6"/><rect x="14.2" y="13.4" width="2.8" height="2.8" rx="1"/></g>
+  <path d="M12 9.2 L12 16.2" stroke="#5b4636" stroke-width="0.3" opacity="0.4"/>
+  <path d="M5 4.6 C7 3.8 9.4 3.6 12 3.6" stroke="#fff" stroke-opacity="0.35" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M2.6 17.4 Q12 18.2 21.4 17.4" stroke="#000" stroke-opacity="0.12" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round">
+    <ellipse cx="4.2" cy="6.4" rx="1" ry="1.2" fill="#e2493b"/>
+    <ellipse cx="19.8" cy="6.4" rx="1" ry="1.2" fill="#e2493b"/>
+    <rect x="0.4" y="16.4" width="2.4" height="2.4" rx="0.7" fill="#4c8fd6"/>
+    <rect x="21.2" y="16.4" width="2.4" height="2.4" rx="0.7" fill="#4c8fd6"/>
+  </g>
+  <g fill="#ffd36e" style="opacity: var(--night, 0)"><circle cx="4.2" cy="6.4" r="0.6"/><circle cx="19.8" cy="6.4" r="0.6"/></g>
+  <g fill="#fff" opacity="0.4"><rect x="0.8" y="16.7" width="1.6" height="0.5" rx="0.25"/><rect x="21.6" y="16.7" width="1.6" height="0.5" rx="0.25"/></g>
+</svg>

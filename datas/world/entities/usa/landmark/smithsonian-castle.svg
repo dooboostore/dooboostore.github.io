@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40">
+  <!-- 스미소니언 캐슬: 붉은 사암 성, 뾰족탑 대신 둥근 지붕을 얹은 탑들, 아치 창. 밤엔 창 불빛 -->
+  <ellipse cx="26" cy="38.6" rx="25" ry="1.4" fill="#3b5a2e" opacity="0.22"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="3" y="22" width="46" height="16" rx="1.4" fill="#b9574a"/>
+  <rect x="2.4" y="20.4" width="47.2" height="2.4" rx="1.1" fill="#9e463c"/>
+  <rect x="21" y="9" width="8" height="29" rx="1.2" fill="#c2604f"/>
+  <path d="M20.4 9.4 C20.4 3.2 29.6 3.2 29.6 9.4 Z" fill="#8e3f36"/>
+  <rect x="31" y="13" width="6" height="25" rx="1.2" fill="#c2604f"/>
+  <path d="M30.6 13.4 C30.6 8.6 37.4 8.6 37.4 13.4 Z" fill="#8e3f36"/>
+  <rect x="5" y="15" width="6" height="23" rx="1.2" fill="#c2604f"/>
+  <path d="M4.6 15.4 C4.6 10.8 11.4 10.8 11.4 15.4 Z" fill="#8e3f36"/>
+  <rect x="42" y="17" width="5" height="21" rx="1.2" fill="#c2604f"/>
+  <path d="M41.6 17.4 C41.6 13.4 47.4 13.4 47.4 17.4 Z" fill="#8e3f36"/>
+  <rect x="22.6" y="31" width="4.8" height="7" rx="2.4" fill="#6b3a30"/>
+  </g>
+  <circle cx="25" cy="4.2" r="0.7" fill="#f2c641" stroke="#5b4636" stroke-width="0.3"/>
+  <g fill="#f2dfbb">
+  <path d="M14 30 V27 Q14 25.6 15 25.6 Q16 25.6 16 27 V30 Z"/><path d="M17 30 V27 Q17 25.6 18 25.6 Q19 25.6 19 27 V30 Z"/><path d="M39 30 V27 Q39 25.6 40 25.6 Q41 25.6 41 27 V30 Z"/>
+  <path d="M24 20 V16.6 Q24 15 25 15 Q26 15 26 16.6 V20 Z"/><path d="M33 22 V19 Q33 17.8 34 17.8 Q35 17.8 35 19 V22 Z"/><path d="M7 25 V22 Q7 20.8 8 20.8 Q9 20.8 9 22 V25 Z"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+  <path d="M14 30 V27 Q14 25.6 15 25.6 Q16 25.6 16 27 V30 Z"/><path d="M17 30 V27 Q17 25.6 18 25.6 Q19 25.6 19 27 V30 Z"/><path d="M39 30 V27 Q39 25.6 40 25.6 Q41 25.6 41 27 V30 Z"/>
+  <path d="M24 20 V16.6 Q24 15 25 15 Q26 15 26 16.6 V20 Z"/>
+  </g>
+  <g fill="#fff" opacity="0.22"><rect x="21.6" y="10" width="1.4" height="20" rx="0.7"/><rect x="5.6" y="16" width="1.2" height="16" rx="0.6"/><path d="M22 7.6 C23 5 26 4.6 27.4 5.6"/></g>
+  <rect x="3.4" y="34" width="45.2" height="3.6" rx="1" fill="#000" opacity="0.1"/>
+</svg>

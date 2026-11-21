@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -28 18 62" data-foot="0.5 0.45">
+  <!-- 항공모함 (위에서 본 모습, 뱃머리가 위쪽): 비스듬한 활주로, 오른쪽 함교, 갑판 위 작은 비행기들 -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="1">
+    <path d="M-3 27 Q-5 30 -6 33"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M3 27 Q5 30 6 33"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+  </g>
+  <path d="M0 -27 C4 -24 5.5 -18 5.5 -12 L8 -4 L8 10 L5.5 14 L5.5 24 Q5.5 27 0 27.5 Q-5.5 27 -5.5 24 L-5.5 2 L-8.2 -6 L-8.2 -12 L-5.5 -14 C-5.5 -20 -4 -24 0 -27 Z"
+        fill="#8d97a3" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M0 -25.5 C3.4 -23 4.6 -18 4.6 -12 L4.6 24 L-4.6 24 L-4.6 -12 C-4.6 -18 -3.4 -23 0 -25.5 Z" fill="#6f7985"/>
+  <g stroke="#f4f1e8" stroke-width="0.35" stroke-dasharray="1.4 1.2" fill="none">
+    <line x1="0" y1="-24" x2="0" y2="22"/>
+    <line x1="-6.6" y1="-8" x2="2" y2="20"/>
+  </g>
+  <g stroke="#f2c14e" stroke-width="0.3"><line x1="-4" y1="20" x2="4" y2="20"/></g>
+  <rect x="5.2" y="-2" width="2.4" height="7" rx="0.4" fill="#d9dde2" stroke="#5b4636" stroke-width="0.4"/>
+  <circle cx="6.4" cy="0" r="0.6" fill="#5b4636"/>
+  <g fill="#e9ecef" stroke="#5b4636" stroke-width="0.2">
+    <path d="M-2.5 -16 l0.6 -1.6 l0.6 1.6 l1.4 0.6 l-1.4 0.3 l0 0.8 l0.5 0.4 l-1.1 0 l-1.1 0 l0.5 -0.4 l0 -0.8 l-1.4 -0.3 Z"/>
+    <path d="M2 -10 l0.6 -1.6 l0.6 1.6 l1.4 0.6 l-1.4 0.3 l0 0.8 l0.5 0.4 l-1.1 0 l-1.1 0 l0.5 -0.4 l0 -0.8 l-1.4 -0.3 Z"/>
+    <path d="M-2.4 10 l0.6 -1.6 l0.6 1.6 l1.4 0.6 l-1.4 0.3 l0 0.8 l0.5 0.4 l-1.1 0 l-1.1 0 l0.5 -0.4 l0 -0.8 l-1.4 -0.3 Z"/>
+  </g>
+</svg>

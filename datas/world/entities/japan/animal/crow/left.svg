@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 8">
+  <!-- 동글 까마귀(왼쪽을 봄): 윤기 나는 검정, 굵은 부리, 콩콩 뛰며 고개를 갸웃 -->
+  <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M7 4 L9.6 3.4 L9.2 5.4 Z" fill="#2e3138"/>
+    <ellipse cx="5.4" cy="4.8" rx="3" ry="2.1" fill="#3a3e48"/>
+    <path d="M4.4 4.2 C5.6 3.4 7.4 3.8 8 4.8 C6.8 5.4 5.4 5.4 4.4 4.2 Z" fill="#2e3138"/>
+    <g fill="none" stroke="#5b4636"><line x1="4.8" y1="6.8" x2="4.6" y2="7.8"/><line x1="6" y1="6.8" x2="6.1" y2="7.8"/></g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 3.4 3.6;0 3.4 3.6;-18 3.4 3.6;0 3.4 3.6;0 3.4 3.6" keyTimes="0;0.5;0.6;0.75;1" dur="3.6s" repeatCount="indefinite"/>
+      <circle cx="2.8" cy="2.6" r="1.4" fill="#3a3e48"/>
+      <path d="M1.6 2.2 C1 2.2 0.4 2.6 0.2 3.1 C0.8 3.3 1.4 3.2 1.8 3 Z" fill="#2e3138"/>
+    </g>
+  </g>
+  <g><animateTransform attributeName="transform" type="rotate" values="0 3.4 3.6;0 3.4 3.6;-18 3.4 3.6;0 3.4 3.6;0 3.4 3.6" keyTimes="0;0.5;0.6;0.75;1" dur="3.6s" repeatCount="indefinite"/>
+    <circle cx="2.5" cy="2.3" r="0.34" fill="#fff"/><circle cx="2.45" cy="2.35" r="0.2" fill="#1d1f24"/></g>
+  <ellipse cx="5.6" cy="3.6" rx="1.2" ry="0.4" fill="#8ea6c8" opacity="0.45"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28">
+  <!-- 일본 정원 곰솔(구로마쓰): 구름처럼 다듬은 납작한 솔잎 층, 늦가을 유키쓰리(눈 받침 새끼줄)가 우산처럼 -->
+  <ellipse cx="12" cy="27" rx="6.4" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10.6 27.2 C11 23 9 20.4 10.6 17 C11.8 14.6 13.4 13 12.8 9 L14.2 9 C15 13 13.4 15.4 12.8 17.6 C11.8 20.4 13.4 23.4 13 27.2 Z" fill="#8a6650" stroke-width="0.5"/>
+    <path d="M11.2 18.6 C9 17.2 6.4 17.4 4.2 16.4" fill="none" stroke-width="1.4"/>
+    <path d="M11.2 18.6 C9 17.2 6.4 17.4 4.2 16.4" fill="none" stroke="#8a6650" stroke-width="0.7"/>
+    <path d="M13.2 14 C15.4 13.4 17.6 13.6 19.4 12.4" fill="none" stroke-width="1.3"/>
+    <path d="M13.2 14 C15.4 13.4 17.6 13.6 19.4 12.4" fill="none" stroke="#8a6650" stroke-width="0.6"/>
+    <path d="M12.2 21.6 C14 21 15.6 21.2 17.2 20.4" fill="none" stroke-width="1.2"/>
+    <path d="M12.2 21.6 C14 21 15.6 21.2 17.2 20.4" fill="none" stroke="#8a6650" stroke-width="0.55"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0.25 0;0 0" dur="9s" repeatCount="indefinite"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round">
+      <path d="M9.2 9.6 C8.8 7.6 11 6.6 13.4 7 C15.8 6.6 18 7.8 17.4 9.6 C16.8 10.8 9.8 11 9.2 9.6 Z" fill="#3f7f52"/>
+      <path d="M10.2 5.2 C10 3.8 11.4 3 13 3.2 C14.6 3 15.8 3.8 15.4 5.2 C15 6.2 10.6 6.2 10.2 5.2 Z" fill="#43865a"/>
+      <path d="M0.8 17 C0.4 15.2 2.6 14 4.8 14.4 C6.8 14 8.8 15.2 8.2 17 C7.4 18 1.6 18.2 0.8 17 Z" fill="#3f7f52"/>
+      <path d="M15.6 13.2 C15.4 11.6 17.6 10.6 19.6 11 C21.6 10.8 23.4 12 22.8 13.4 C22 14.4 16.4 14.6 15.6 13.2 Z" fill="#3a774c"/>
+      <path d="M14.4 21 C14.2 19.6 16 18.8 17.6 19.1 C19.2 18.9 20.6 19.8 20.2 21 C19.6 21.9 15 22 14.4 21 Z" fill="#3a774c"/>
+    </g>
+    <g fill="#78b874" opacity="0.9"><ellipse cx="13.4" cy="7.8" rx="3.2" ry="0.8"/><ellipse cx="12.8" cy="3.9" rx="2" ry="0.55"/><ellipse cx="4.4" cy="15.2" rx="2.6" ry="0.7"/><ellipse cx="19.2" cy="12" rx="2.2" ry="0.6"/><ellipse cx="17.4" cy="19.7" rx="1.8" ry="0.5"/></g>
+  </g>
+  <g stroke="#f0dfb4" stroke-width="0.3" stroke-linecap="round">
+    <line x1="12.8" y1="0.6" x2="1.4" y2="15.6"/><line x1="12.8" y1="0.6" x2="5" y2="14.6"/><line x1="12.8" y1="0.6" x2="9.6" y2="7.6"/>
+    <line x1="12.8" y1="0.6" x2="16.8" y2="7.6"/><line x1="12.8" y1="0.6" x2="18" y2="11"/><line x1="12.8" y1="0.6" x2="22.2" y2="11.8"/><line x1="12.8" y1="0.6" x2="17" y2="18.8"/>
+  </g>
+  <rect x="12.5" y="0.4" width="0.6" height="3" rx="0.3" fill="#c9a774" stroke="#5b4636" stroke-width="0.2"/>
+  <circle cx="12.8" cy="0.6" r="0.7" fill="#f0dfb4" stroke="#5b4636" stroke-width="0.25"/>
+</svg>

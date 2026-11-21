@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24">
+  <!-- 늦가을 단풍나무(모미지): 우산처럼 퍼진 붉은 수관 두 층, 바람에 살랑, 붉은 잎이 팔랑. 잎 색은 CSS 변수 leaf -->
+  <ellipse cx="10" cy="23" rx="5.6" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M9 23 C9.3 20.4 8.6 18.4 9.2 15.4 L10.8 15.4 C11.2 18.4 10.7 20.4 11 23 Z" fill="#8a5a3f"/>
+    <path d="M9.6 17.6 C8 16.6 6.6 16.4 5.4 15.2" fill="none" stroke-width="1.3"/>
+    <path d="M9.6 17.6 C8 16.6 6.6 16.4 5.4 15.2" fill="none" stroke="#8a5a3f" stroke-width="0.6"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.4 10 17;1.4 10 17;-1.4 10 17" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="var(--leaf, #e2553f)" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round">
+      <path d="M2 14.6 C0.2 14 0.4 11.2 2.4 10.8 C1.8 8.6 3.8 7 5.8 7.6 C6 5 8.6 3.4 10.4 4.4 C12.4 3.2 15.2 4.8 14.8 7.4 C16.8 7.2 18.6 9 17.8 10.8 C19.8 11.4 19.6 14.2 17.8 14.6 C15 16.4 5 16.4 2 14.6 Z"/>
+    </g>
+    <path d="M2 13.6 C3.4 15.8 16.6 15.8 18 13.6 C15.6 15 4.4 15 2 13.6 Z" fill="#000" opacity="0.13"/>
+    <path d="M5.4 9.6 C7 10.8 13 10.8 14.6 9.6 C12.6 10.2 7.4 10.2 5.4 9.6 Z" fill="#000" opacity="0.1"/>
+    <g fill="#ffb26b" opacity="0.85"><circle cx="6.4" cy="12" r="1"/><circle cx="13.8" cy="11.6" r="0.9"/><circle cx="12.4" cy="7" r="0.8"/><circle cx="9" cy="10.6" r="0.7"/></g>
+    <g fill="#fff" opacity="0.28"><ellipse cx="7.4" cy="6.6" rx="1.8" ry="0.8" transform="rotate(-20 7.4 6.6)"/><ellipse cx="4" cy="11.8" rx="1.3" ry="0.6" transform="rotate(-15 4 11.8)"/><circle cx="9.4" cy="5.2" r="0.7"/></g>
+  </g>
+  <g fill="#e2553f" stroke="#a8392b" stroke-width="0.15">
+    <path d="M0 -0.8 C0.5 -0.8 0.9 -0.4 0.8 0.1 C0.6 0.6 -0.6 0.6 -0.8 0.1 C-0.9 -0.4 -0.5 -0.8 0 -0.8 Z">
+      <animateMotion path="M13 15 C15 17 12 19 14 21 C16 23 13 24 14 25" dur="6.5s" repeatCount="indefinite" rotate="auto"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="6.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0 -0.8 C0.5 -0.8 0.9 -0.4 0.8 0.1 C0.6 0.6 -0.6 0.6 -0.8 0.1 C-0.9 -0.4 -0.5 -0.8 0 -0.8 Z" fill="#f08a4b">
+      <animateMotion path="M5 15 C3 17 6 19 4 21 C2 23 5 24 4 25" dur="8.5s" begin="3s" repeatCount="indefinite" rotate="auto"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="8.5s" begin="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

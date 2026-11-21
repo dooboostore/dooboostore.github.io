@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39">
+  <!-- 광화문: 둥근 석축 홍예문 3칸 + 2층 누각, 단청, 처마 밑 서까래(빈틈 없이), 끝이 부드럽게 들린 지붕. 밤엔 누각에 은은한 조명 -->
+  <ellipse cx="32" cy="37.8" rx="31" ry="1.6" fill="#3b5a2e" opacity="0.22"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="3" y="19.6" width="58" height="17.8" rx="2.4" fill="#ecdcc0"/>
+    <path d="M27 37.4 L27 28.6 C27 25.4 29.2 23.6 32 23.6 C34.8 23.6 37 25.4 37 28.6 L37 37.4 Z" fill="#5a463c"/>
+    <path d="M15 37.4 L15 30.4 C15 28.4 16.6 27 18.5 27 C20.4 27 22 28.4 22 30.4 L22 37.4 Z" fill="#5a463c"/>
+    <path d="M42 37.4 L42 30.4 C42 28.4 43.6 27 45.5 27 C47.4 27 49 28.4 49 30.4 L49 37.4 Z" fill="#5a463c"/>
+    <rect x="11" y="12.4" width="42" height="7.8" rx="0.8" fill="#f6ecd6"/>
+    <rect x="18" y="4.4" width="28" height="3.8" rx="0.6" fill="#f6ecd6"/>
+  </g>
+  <g stroke="#d9c6a4" stroke-width="0.4" stroke-linecap="round">
+    <line x1="4" y1="24" x2="60" y2="24"/><line x1="4" y1="28" x2="26" y2="28"/><line x1="38" y1="28" x2="60" y2="28"/><line x1="4" y1="32" x2="14" y2="32"/><line x1="50" y1="32" x2="60" y2="32"/>
+    <line x1="10" y1="20" x2="10" y2="24"/><line x1="44" y1="20" x2="44" y2="24"/><line x1="56" y1="20" x2="56" y2="24"/><line x1="8" y1="32" x2="8" y2="36"/>
+  </g>
+  <rect x="4" y="20.4" width="56" height="1.4" rx="0.7" fill="#fff" opacity="0.35"/>
+  <g fill="#c2523f" stroke="#5b4636" stroke-width="0.35">
+    <rect x="12" y="13.4" width="1.4" height="6.8" rx="0.5"/><rect x="19" y="13.4" width="1.4" height="6.8" rx="0.5"/><rect x="26" y="13.4" width="1.4" height="6.8" rx="0.5"/>
+    <rect x="36.6" y="13.4" width="1.4" height="6.8" rx="0.5"/><rect x="43.6" y="13.4" width="1.4" height="6.8" rx="0.5"/><rect x="50.6" y="13.4" width="1.4" height="6.8" rx="0.5"/>
+    <rect x="19" y="5.4" width="1.1" height="2.8" rx="0.4"/><rect x="31.4" y="5.4" width="1.1" height="2.8" rx="0.4"/><rect x="43.9" y="5.4" width="1.1" height="2.8" rx="0.4"/>
+  </g>
+  <g fill="#ffcf6e" style="opacity: var(--night, 0)"><rect x="13.6" y="14.4" width="5.2" height="5.4" rx="0.6" opacity="0.7"/><rect x="27.6" y="14.4" width="8.8" height="5.4" rx="0.6" opacity="0.7"/><rect x="45.2" y="14.4" width="5.2" height="5.4" rx="0.6" opacity="0.7"/></g>
+  <!-- 아래층 처마 밑 (서까래 + 단청) -->
+  <path d="M8 12.8 Q32 14.6 56 12.8 L55 9.8 L9 9.8 Z" fill="#8a5a3f" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M10 12.6 Q32 14 54 12.6" stroke="#3f9a80" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+  <path d="M10 12.6 Q32 14 54 12.6" stroke="#e0614f" stroke-width="0.3" fill="none" stroke-linecap="round" transform="translate(0 -0.6)"/>
+  <path d="M3.6 12.4 C5.6 13 8.6 12 12.8 9.8 L51.2 9.8 C55.4 12 58.4 13 60.4 12.4 C59.4 11 56.6 9.2 53.6 7.8 C52.8 7.4 52 7.2 51.2 7.2 L12.8 7.2 C12 7.2 11.2 7.4 10.4 7.8 C7.4 9.2 4.6 11 3.6 12.4 Z"
+        fill="#5d6c7a" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M12.8 7.2 L51.2 7.2 C52 7.2 52.4 7.8 52.2 8.6 L11.8 8.6 C11.6 7.8 12 7.2 12.8 7.2 Z" fill="#fff" opacity="0.25"/>
+  <!-- 위층 처마 밑 -->
+  <path d="M14.4 4.8 Q32 6.2 49.6 4.8 L48.8 2.6 L15.2 2.6 Z" fill="#8a5a3f" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+  <path d="M10.8 4.8 C12.6 5.3 15.4 4.6 18.8 2.6 L45.2 2.6 C48.6 4.6 51.4 5.3 53.2 4.8 C52.2 3.6 49.8 2.2 47.4 1.3 C46.8 1.1 46.2 1 45.6 1 L18.4 1 C17.8 1 17.2 1.1 16.6 1.3 C14.2 2.2 11.8 3.6 10.8 4.8 Z"
+        fill="#5d6c7a" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
+  <rect x="16.6" y="0.2" width="30.8" height="1.3" rx="0.65" fill="#46525e" stroke="#5b4636" stroke-width="0.4"/>
+  <rect x="28.8" y="9.6" width="6.4" height="2.6" rx="0.5" fill="#2f3a44" stroke="#5b4636" stroke-width="0.3"/>
+  <rect x="29.4" y="10.1" width="5.2" height="1.6" rx="0.3" fill="#e2bd62"/>
+</svg>

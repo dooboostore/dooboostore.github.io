@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 17">
+  <!-- 푸드트럭 (오른쪽을 향함): 줄무늬 차양, 열린 판매창, 메뉴판, 김. 색은 truck 변수. 밤엔 판매창 불빛 -->
+  <g fill="#fbf7ef">
+  <circle cx="8" cy="4" r="0.8"><animate attributeName="cy" values="4;0" dur="3.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3.4s" repeatCount="indefinite"/></circle>
+  <circle cx="11" cy="4" r="0.8"><animate attributeName="cy" values="4;0" dur="3.4s" begin="1.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3.4s" begin="1.7s" repeatCount="indefinite"/></circle>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="1" y="3.6" width="20" height="11" rx="1.8" fill="var(--truck, #7fc6b8)"/>
+  <path d="M20.4 6.6 L24.6 6.6 Q27 7 27 10 L27 13.4 Q27 14.6 25.8 14.6 L20.4 14.6 Z" fill="var(--truck, #7fc6b8)"/>
+  <rect x="4" y="6.4" width="12" height="4.4" rx="0.8" fill="#fff3d6"/>
+  </g>
+  <rect x="4" y="6.4" width="12" height="4.4" rx="0.8" fill="#ffd77a" style="opacity: var(--night, 0)"/>
+  <path d="M22.4 7.4 L24.6 7.4 Q26.2 7.8 26.2 10 L22.4 10 Z" fill="#d8eff9" stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"><path d="M3 6.6 L17 6.6 L17.6 4.6 L2.4 4.6 Z" fill="#fbf8f2"/></g>
+  <g fill="#e9785a"><path d="M2.6 4.6 L4.8 4.6 L4.5 6.6 L3.2 6.6 Z"/><path d="M7.4 4.6 L9.6 4.6 L9.5 6.6 L7.6 6.6 Z"/><path d="M12.2 4.6 L14.4 4.6 L14.6 6.6 L12.4 6.6 Z"/></g>
+  <rect x="4" y="10.2" width="12" height="1" rx="0.5" fill="#c9ced3" stroke="#5b4636" stroke-width="0.3"/>
+  <circle cx="8" cy="8.8" r="0.9" fill="#e9a34a"/><circle cx="11.4" cy="8.6" r="0.8" fill="#f2c641"/>
+  <rect x="1.4" y="12.4" width="25.2" height="1.8" rx="0.9" fill="#000" opacity="0.1"/>
+  <rect x="1.4" y="4" width="19" height="0.8" rx="0.4" fill="#fff" opacity="0.35"/>
+</svg>

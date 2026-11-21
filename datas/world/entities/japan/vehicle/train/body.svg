@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 14">
+  <!-- 야마노테선 같은 전철 3량 (오른쪽을 향함): 은빛 차체에 연두 띠(색 변수 line), 둥근 앞머리. 밤엔 창마다 불빛 -->
+  <path d="M95.4 7 L110 4 L110 12 L95.4 9.6 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linecap="round"><line x1="31.4" y1="7" x2="33.4" y2="7"/><line x1="63.4" y1="7" x2="65.4" y2="7"/></g>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"><rect x="1" y="1" width="30.6" height="10.6" rx="1.8" fill="#e9edf0"/><rect x="3.0" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="8.6" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="14.2" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="19.8" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="25.4" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/></g>
+  <rect x="1.4" y="7.6" width="29.8" height="1.3" fill="var(--line, #9acd32)"/>
+  <g fill="#ffe9a3" style="opacity: calc(0.15 + var(--night, 0) * 0.85)"><rect x="3.0" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="8.6" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="14.2" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="19.8" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="25.4" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/></g>
+  <rect x="1.6" y="9.8" width="29.4" height="1.4" rx="0.6" fill="#000" opacity="0.1"/>
+  <rect x="3.6" y="3.3" width="1.8" height="0.5" rx="0.25" fill="#fff" opacity="0.8"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"><rect x="33" y="1" width="30.6" height="10.6" rx="1.8" fill="#e9edf0"/><rect x="35.0" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="40.6" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="46.2" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="51.8" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="57.4" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/></g>
+  <rect x="33.4" y="7.6" width="29.8" height="1.3" fill="var(--line, #9acd32)"/>
+  <g fill="#ffe9a3" style="opacity: calc(0.15 + var(--night, 0) * 0.85)"><rect x="35.0" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="40.6" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="46.2" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="51.8" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="57.4" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/></g>
+  <rect x="33.6" y="9.8" width="29.4" height="1.4" rx="0.6" fill="#000" opacity="0.1"/>
+  <rect x="35.6" y="3.3" width="1.8" height="0.5" rx="0.25" fill="#fff" opacity="0.8"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"><path d="M65 2.6 C65 1.6 65.8 1 66.8 1 L90 1 C93.6 1 95.6 4 95.6 8 L95.6 10.6 C95.6 11.2 95.2 11.6 94.6 11.6 L66 11.6 C65.4 11.6 65 11.2 65 10.6 Z" fill="#e9edf0"/><rect x="67.0" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="72.6" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="78.2" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/><rect x="83.8" y="2.8" width="4" height="3.4" rx="0.8" fill="#d8eff9"/></g>
+  <rect x="65.4" y="7.6" width="29.8" height="1.3" fill="var(--line, #9acd32)"/>
+  <g fill="#ffe9a3" style="opacity: calc(0.15 + var(--night, 0) * 0.85)"><rect x="67.0" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="72.6" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="78.2" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/><rect x="83.8" y="2.8" width="4" height="3.4" rx="0.8" fill="#ffe9a3"/></g>
+  <rect x="65.6" y="9.8" width="29.4" height="1.4" rx="0.6" fill="#000" opacity="0.1"/>
+  <rect x="67.6" y="3.3" width="1.8" height="0.5" rx="0.25" fill="#fff" opacity="0.8"/>
+  <path d="M90.6 2.6 C92.8 3 94.6 4.6 95 7 L90.6 7 Z" fill="#b9dcef" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+  <circle cx="94.8" cy="9.4" r="0.6" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+</svg>

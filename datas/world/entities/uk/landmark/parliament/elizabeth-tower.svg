@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 50">
+  <!-- 엘리자베스 타워 (빅벤): 꿀색 석탑, 금빛 테두리 큰 시계, 돌아가는 분침, 둥근 지붕 첨탑. 밤엔 시계판이 빛난다 -->
+  <circle cx="6" cy="17.4" r="5.6" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.4)"/>
+  <ellipse cx="6" cy="49.2" rx="5.4" ry="0.8" fill="#3b5a2e" opacity="0.22"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2.2" y="21" width="7.6" height="28.4" rx="0.6" fill="#e8d29a"/>
+    <rect x="1.4" y="12.6" width="9.2" height="9.4" rx="0.8" fill="#e8d29a"/>
+    <rect x="1" y="21.4" width="10" height="1.2" rx="0.5" fill="#d9be7c"/>
+    <rect x="2" y="8.8" width="8" height="4.4" rx="0.7" fill="#e8d29a"/>
+    <path d="M1.6 9.2 C2 5.6 3.6 2.4 6 1.4 C8.4 2.4 10 5.6 10.4 9.2 Z" fill="#7d8c99"/>
+    <circle cx="6" cy="17.4" r="3.4" fill="#e9c35a"/>
+    <circle cx="6" cy="17.4" r="2.7" fill="#fbf6e6"/>
+  </g>
+  <circle cx="6" cy="17.4" r="2.7" fill="#fff2b0" style="opacity: var(--night, 0)"/>
+  <g fill="#5b4636"><circle cx="6" cy="15.1" r="0.22"/><circle cx="8.3" cy="17.4" r="0.22"/><circle cx="6" cy="19.7" r="0.22"/><circle cx="3.7" cy="17.4" r="0.22"/></g>
+  <line x1="6" y1="17.4" x2="7.2" y2="16.4" stroke="#2f2c33" stroke-width="0.4" stroke-linecap="round"/>
+  <line x1="6" y1="17.4" x2="6" y2="15.4" stroke="#2f2c33" stroke-width="0.3" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="rotate" from="0 6 17.4" to="360 6 17.4" dur="60s" repeatCount="indefinite"/>
+  </line>
+  <circle cx="6" cy="17.4" r="0.35" fill="#2f2c33"/>
+  <circle cx="6" cy="1" r="0.7" fill="#e9c35a" stroke="#5b4636" stroke-width="0.3"/>
+  <g fill="#e9c35a" opacity="0.9"><rect x="3.2" y="7" width="5.6" height="0.6" rx="0.3"/></g>
+  <g fill="#c7dfe8" stroke="#5b4636" stroke-width="0.3">
+    <rect x="3" y="10" width="1.4" height="2.4" rx="0.6"/><rect x="5.3" y="10" width="1.4" height="2.4" rx="0.6"/><rect x="7.6" y="10" width="1.4" height="2.4" rx="0.6"/>
+  </g>
+  <g fill="#c7dfe8" stroke="#5b4636" stroke-width="0.3">
+    <path d="M4 30 L4 26.4 C4 25.4 5.2 25.4 5.2 26.4 L5.2 30 Z"/><path d="M6.8 30 L6.8 26.4 C6.8 25.4 8 25.4 8 26.4 L8 30 Z"/>
+    <path d="M4 38 L4 34.4 C4 33.4 5.2 33.4 5.2 34.4 L5.2 38 Z"/><path d="M6.8 38 L6.8 34.4 C6.8 33.4 8 33.4 8 34.4 L8 38 Z"/>
+    <path d="M4 46 L4 42.4 C4 41.4 5.2 41.4 5.2 42.4 L5.2 46 Z"/><path d="M6.8 46 L6.8 42.4 C6.8 41.4 8 41.4 8 42.4 L8 46 Z"/>
+  </g>
+  <path d="M3 7.4 Q4 4 6 2.6" stroke="#fff" stroke-opacity="0.3" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <rect x="2.8" y="22.8" width="0.7" height="26" rx="0.35" fill="#fff" opacity="0.22"/>
+  <rect x="8.4" y="22.8" width="1" height="26" rx="0.4" fill="#000" opacity="0.1"/>
+</svg>

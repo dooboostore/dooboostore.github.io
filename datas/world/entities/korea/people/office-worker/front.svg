@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 직장인: 정장 + 넥타이, 목에 사원증 줄, 손에 아이스 아메리카노 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.3" ry="0.8" fill="#3a3533"/>
+    <ellipse cx="7.4" cy="16.9" rx="1.3" ry="0.8" fill="#3a3533"/>
+    <path d="M3.6 16.4 L4 13.6 L8 13.6 L8.4 16.4 Z" fill="var(--pants, #4a5160)"/>
+    <ellipse cx="2.9" cy="12.6" rx="0.9" ry="1.4" fill="var(--suit, #5a6478)" transform="rotate(14 2.9 12.6)"/>
+    <ellipse cx="9.1" cy="12.6" rx="0.9" ry="1.4" fill="var(--suit, #5a6478)" transform="rotate(-14 9.1 12.6)"/>
+    <path d="M3.2 14 C3 11.6 3.8 10.2 6 10.2 C8.2 10.2 9 11.6 8.8 14 Z" fill="var(--suit, #5a6478)"/>
+    <path d="M4.9 10.3 L6 13.2 L7.1 10.3 Z" fill="#ffffff"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--skin, #ffe0c7)"/>
+    <path d="M1.15 7.2 A4.95 4.95 0 1 1 10.85 7.2 C10.2 5 9.2 4.2 7.6 4 C6.4 4.8 4.6 4.8 3.4 4.4 C2.4 4.8 1.8 5.6 1.4 6.6 Z" fill="var(--hair, #2f2622)"/>
+  </g>
+  <path d="M6 10.9 L5.65 12.3 L6 13.2 L6.35 12.3 Z" fill="var(--tie, #6f8fbf)" stroke="#5b4636" stroke-width="0.2" stroke-linejoin="round"/>
+  <path d="M4.6 10.4 Q4.6 12.4 5.5 13" stroke="var(--lanyard, #3f7fd6)" stroke-width="0.35" fill="none" stroke-linecap="round"/>
+  <rect x="4.6" y="12.8" width="1.3" height="1.6" rx="0.3" fill="#ffffff" stroke="#5b4636" stroke-width="0.2"/>
+  <rect x="4.85" y="13.05" width="0.8" height="0.45" rx="0.1" fill="var(--lanyard, #3f7fd6)"/>
+  <path d="M3.9 12 Q4.2 11 4.8 10.6" stroke="#ffffff" stroke-opacity="0.25" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <g transform="translate(9.9 13.4)"><g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"><path d="M-0.9 -1.6 L0.9 -1.6 L0.7 1.4 Q0 1.8 -0.7 1.4 Z" fill="#e6f4fb"/><path d="M-0.8 -0.6 L0.8 -0.6 L0.66 1.3 Q0 1.65 -0.66 1.3 Z" fill="#7a4a2e" stroke="none"/><rect x="-1.05" y="-1.95" width="2.1" height="0.5" rx="0.25" fill="#f8fbfd"/><path d="M0.2 -1.9 L0.7 -3.1" stroke="#3f9a80" stroke-width="0.35"/></g><rect x="-0.55" y="-0.4" width="0.5" height="0.45" rx="0.12" fill="#fff" opacity="0.75"/><rect x="0.05" y="0.2" width="0.45" height="0.4" rx="0.12" fill="#fff" opacity="0.6"/></g>
+  <circle cx="9.5" cy="13.9" r="0.6" fill="var(--skin, #ffe0c7)" stroke="#5b4636" stroke-width="0.3"/>
+  <ellipse cx="4.2" cy="7" rx="0.55" ry="0.75" fill="#3d2b22"/>
+  <ellipse cx="7.8" cy="7" rx="0.55" ry="0.75" fill="#3d2b22"/>
+  <circle cx="4.38" cy="6.75" r="0.2" fill="#fff"/>
+  <circle cx="7.98" cy="6.75" r="0.2" fill="#fff"/>
+  <ellipse cx="3.1" cy="8.3" rx="0.85" ry="0.5" fill="#ff9e9e" opacity="0.5"/>
+  <ellipse cx="8.9" cy="8.3" rx="0.85" ry="0.5" fill="#ff9e9e" opacity="0.5"/>
+  <path d="M5.4 8.5 Q6 9 6.6 8.5" stroke="#8a4f3f" stroke-width="0.35" fill="none" stroke-linecap="round"/>
+  <ellipse cx="4.3" cy="3.4" rx="1.6" ry="0.6" fill="#fff" opacity="0.25" transform="rotate(-20 4.3 3.4)"/>
+</svg>

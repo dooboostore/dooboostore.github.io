@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 28">
+  <!-- 개선문: 둥근 모서리 석조 아치, 아치 안은 그늘로 메우고 삼색기가 걸려 펄럭인다. 밤엔 무명용사의 불꽃과 조명 -->
+  <ellipse cx="16" cy="26.6" rx="15" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
+  <ellipse cx="16" cy="14" rx="15" ry="12" fill="#ffe7a8" style="opacity: calc(var(--night, 0) * 0.25)"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="3.4" y="6" width="25.2" height="20" rx="1.4" fill="#efe2c4"/>
+    <path d="M10.4 26 L10.4 17 C10.4 12.6 21.6 12.6 21.6 17 L21.6 26 Z" fill="#b9a27c"/>
+    <rect x="2.4" y="2.6" width="27.2" height="4.4" rx="1.4" fill="#f6ecd4"/>
+    <rect x="3" y="8.4" width="26" height="1.4" rx="0.7" fill="#e3d3b0"/>
+    <rect x="4.6" y="12" width="4.2" height="6.4" rx="0.8" fill="#e6d7b6"/>
+    <rect x="23.2" y="12" width="4.2" height="6.4" rx="0.8" fill="#e6d7b6"/>
+  </g>
+  <path d="M10.8 25.6 L10.8 17.2 C10.8 15.2 14 14 16 14 C14.4 15 13.2 16.6 13.2 18.4 L13.2 25.6 Z" fill="#000" opacity="0.12"/>
+  <g>
+    <line x1="16" y1="14.4" x2="16" y2="15.4" stroke="#5b4636" stroke-width="0.35"/>
+    <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round">
+      <path d="M13.4 15.4 L15.2 15.4 L15.2 21.6 C14.6 21.2 14 21.4 13.4 21.8 Z" fill="#3d64b4"/>
+      <path d="M15.2 15.4 L16.8 15.4 L16.8 21.4 C16.2 21 15.8 21.2 15.2 21.6 Z" fill="#fbf8f0"/>
+      <path d="M16.8 15.4 L18.6 15.4 L18.6 21.8 C18 21.4 17.4 21.2 16.8 21.4 Z" fill="#e0554b"/>
+      <animateTransform attributeName="transform" type="skewX" values="0;3;0;-3;0" dur="3.4s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <g fill="#fff" opacity="0.3"><rect x="3.2" y="3.1" width="25.6" height="1" rx="0.5"/><rect x="4" y="6.6" width="1.2" height="18.6" rx="0.6"/></g>
+  <rect x="23.6" y="7" width="4.6" height="18.6" rx="0.8" fill="#000" opacity="0.07"/>
+  <g stroke="#cdb991" stroke-width="0.35" stroke-linecap="round" fill="none"><path d="M5.6 14 L7.8 14 M5.6 15.6 L7.8 15.6 M24.2 14 L26.4 14 M24.2 15.6 L26.4 15.6"/><path d="M6 21 L6 24.6 M26 21 L26 24.6"/></g>
+  <g fill="#e3d3b0" stroke="#5b4636" stroke-width="0.3"><circle cx="7" cy="5" r="0.55"/><circle cx="11.6" cy="5" r="0.55"/><circle cx="16" cy="5" r="0.55"/><circle cx="20.4" cy="5" r="0.55"/><circle cx="25" cy="5" r="0.55"/></g>
+  <g style="opacity: var(--night, 0)">
+    <path d="M15.2 25.8 C15 24.6 15.8 24 16 23 C16.4 24 17 24.6 16.8 25.8 Z" fill="#ffb347"><animate attributeName="d" values="M15.2 25.8 C15 24.6 15.8 24 16 23 C16.4 24 17 24.6 16.8 25.8 Z;M15.2 25.8 C15 24.4 16.2 23.8 15.8 22.6 C16.6 23.8 17 24.6 16.8 25.8 Z;M15.2 25.8 C15 24.6 15.8 24 16 23 C16.4 24 17 24.6 16.8 25.8 Z" dur="0.8s" repeatCount="indefinite"/></path>
+    <rect x="3.4" y="6" width="25.2" height="20" rx="1.4" fill="#ffd77a" opacity="0.18"/>
+  </g>
+</svg>

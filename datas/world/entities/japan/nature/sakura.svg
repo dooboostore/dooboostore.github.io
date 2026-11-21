@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24">
+  <!-- 늦가을 벚나무: 짙은 줄기가 옆으로 퍼지고, 듬성듬성 남은 주황빛 잎 뭉치. 잎 색은 CSS 변수 leaf -->
+  <ellipse cx="11" cy="23" rx="6" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M10 23 C10.4 19 9.6 16 11 13 M10.6 16.4 C8.6 14.8 6 14.4 4 12 M11 13 C12.6 11.4 15.4 11.2 17.6 9.6 M11 13 C10.6 10.6 9 8.6 9.6 6 M14.4 11.2 C15.4 9 15 7 16 5.4" stroke-width="2"/>
+    <path d="M10 23 C10.4 19 9.6 16 11 13 M10.6 16.4 C8.6 14.8 6 14.4 4 12 M11 13 C12.6 11.4 15.4 11.2 17.6 9.6 M11 13 C10.6 10.6 9 8.6 9.6 6 M14.4 11.2 C15.4 9 15 7 16 5.4" stroke="#6e4a3a" stroke-width="1.1"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1 11 16;1 11 16;-1 11 16" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="var(--leaf, #e8935a)" stroke="#5b4636" stroke-width="0.5">
+      <circle cx="4.4" cy="10.6" r="2.8"/><circle cx="9.4" cy="5.2" r="3"/><circle cx="16" cy="4.8" r="2.6"/><circle cx="18" cy="9" r="2.6"/><circle cx="12.6" cy="8.6" r="2.2"/><circle cx="6.8" cy="7.6" r="2"/>
+    </g>
+    <g fill="#f6c06a" opacity="0.8"><circle cx="5.2" cy="11.2" r="1"/><circle cx="17.2" cy="9.8" r="0.9"/><circle cx="10" cy="6" r="0.9"/></g>
+    <g fill="#fff" opacity="0.3"><circle cx="3.6" cy="9.6" r="0.8"/><circle cx="8.4" cy="4" r="1"/><circle cx="15.2" cy="3.8" r="0.8"/></g>
+  </g>
+  <path d="M0 -0.7 C0.5 -0.7 0.8 -0.3 0.7 0.1 C0.5 0.5 -0.5 0.5 -0.7 0.1 C-0.8 -0.3 -0.5 -0.7 0 -0.7 Z" fill="#e8935a" stroke="#b0643a" stroke-width="0.15">
+    <animateMotion path="M16 12 C18 14 15 17 17 20 C19 22 16 23 17 24" dur="7.5s" repeatCount="indefinite" rotate="auto"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="7.5s" repeatCount="indefinite"/>
+  </path>
+</svg>

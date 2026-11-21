@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- 붕어빵 수레: 빨강 흰 줄무늬 차양, 철판 위 노릇한 붕어빵, 김이 모락모락. 밤엔 알전구 -->
+  <circle cx="8" cy="7" r="7.6" fill="#ffd27a" style="opacity: calc(var(--night, 0) * 0.35)"/>
+  <ellipse cx="8" cy="15.3" rx="7" ry="0.8" fill="#3b5a2e" opacity="0.2"/>
+  <g fill="#fbf7ef">
+    <circle cx="6" cy="6.6" r="0.6"><animate attributeName="cy" values="6.6;3" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="10" cy="6.6" r="0.6"><animate attributeName="cy" values="6.6;3" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2.4 4 L2.4 9 M13.6 4 L13.6 9" stroke-width="0.55"/>
+    <rect x="1.4" y="9" width="13.2" height="4.4" rx="1" fill="var(--cart, #c99a6b)"/>
+    <rect x="1" y="8" width="14" height="1.6" rx="0.8" fill="#55606b"/>
+    <path d="M1 4.2 C1 2.4 3.4 1.4 8 1.4 C12.6 1.4 15 2.4 15 4.2 Q8 5 1 4.2 Z" fill="#ffffff"/>
+    <circle cx="4.4" cy="14.2" r="1" fill="#3e4348"/>
+    <circle cx="11.6" cy="14.2" r="1" fill="#3e4348"/>
+  </g>
+  <g fill="#e2493b"><path d="M3 4.4 C3 3 3.6 2.2 4.6 1.9 L5.6 1.6 C5.2 2.4 5.2 3.4 5.4 4.6 Z"/><path d="M7 4.7 C7 3.2 7.2 2.2 7.6 1.4 L8.6 1.4 C8.8 2.2 9 3.2 9 4.7 Z"/><path d="M10.6 4.6 C10.8 3.4 10.8 2.4 10.4 1.6 L11.4 1.9 C12.4 2.2 13 3 13 4.4 Z"/></g>
+  <path d="M1 4.2 C1 2.4 3.4 1.4 8 1.4 C12.6 1.4 15 2.4 15 4.2 Q8 5 1 4.2 Z" fill="none" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+  <g fill="#e8a94c" stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round">
+    <path d="M2.6 7.6 C2.6 6.6 3.6 6.2 4.6 6.4 L5.6 6 Q5.8 7 5.6 7.8 L4.6 7.6 C3.6 8 2.6 8.2 2.6 7.6 Z"/>
+    <path d="M6.4 7.6 C6.4 6.6 7.4 6.2 8.4 6.4 L9.4 6 Q9.6 7 9.4 7.8 L8.4 7.6 C7.4 8 6.4 8.2 6.4 7.6 Z"/>
+    <path d="M10.2 7.6 C10.2 6.6 11.2 6.2 12.2 6.4 L13.2 6 Q13.4 7 13.2 7.8 L12.2 7.6 C11.2 8 10.2 8.2 10.2 7.6 Z"/>
+  </g>
+  <g fill="#3d2b22"><circle cx="3.3" cy="7" r="0.2"/><circle cx="7.1" cy="7" r="0.2"/><circle cx="10.9" cy="7" r="0.2"/></g>
+  <rect x="3" y="10.2" width="10" height="2" rx="0.6" fill="#fff3c4" opacity="0.85"/>
+  <path d="M4.4 11.2 H11.6" stroke="#c2523f" stroke-width="0.6" stroke-linecap="round" stroke-dasharray="1.2 0.8"/>
+  <rect x="1.8" y="9.6" width="12.4" height="0.6" rx="0.3" fill="#fff" opacity="0.3"/>
+  <circle cx="8" cy="4.8" r="0.55" fill="#fff4b8" stroke="#5b4636" stroke-width="0.2"/>
+  <circle cx="8" cy="4.8" r="0.5" fill="#ffd36e" style="opacity: var(--night, 0)"/>
+</svg>

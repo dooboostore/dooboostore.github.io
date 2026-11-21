@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 62">
+  <!-- 더 샤드: 끝이 둥글게 모인 유리 피라미드 빌딩, 하늘 비치는 유리면, 꼭대기 불빛 -->
+  <ellipse cx="9" cy="61" rx="8" ry="0.9" fill="#3b5a2e" opacity="0.22"/>
+  <ellipse cx="9" cy="5" rx="4" ry="4" fill="#fff2c8" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M1.6 60.6 L7.6 3.6 Q9 1.6 10.4 3.6 L16.4 60.6 Z" fill="#b6d3e6"/>
+    <path d="M9 2.4 L9.6 60.6 L16.4 60.6 L10.4 3.6 Q9.8 2.6 9 2.4 Z" fill="#94b8d2"/>
+    <rect x="1" y="59.4" width="16" height="2" rx="0.7" fill="#d6cfc3"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.4" stroke-width="0.3" stroke-linecap="round">
+    <line x1="3" y1="52" x2="15" y2="52"/><line x1="3.8" y1="44" x2="14.2" y2="44"/><line x1="4.6" y1="36" x2="13.4" y2="36"/><line x1="5.4" y1="28" x2="12.6" y2="28"/><line x1="6.2" y1="20" x2="11.8" y2="20"/><line x1="7" y1="12" x2="11" y2="12"/>
+  </g>
+  <path d="M4 56 L8.2 12" stroke="#fff" stroke-opacity="0.5" stroke-width="0.7" stroke-linecap="round"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="3.2" y="48" width="11.6" height="1" rx="0.5"/><rect x="4.4" y="38" width="9.2" height="1" rx="0.5"/><rect x="5.4" y="28.6" width="7.2" height="1" rx="0.5"/>
+    <path d="M7.4 9 L10.6 9 L10.2 4.4 Q9 2.6 7.8 4.4 Z"/>
+  </g>
+  <circle cx="9" cy="2.2" r="0.6" fill="#ff7a6e" stroke="#5b4636" stroke-width="0.25">
+    <animate attributeName="opacity" values="1;0.25;1" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

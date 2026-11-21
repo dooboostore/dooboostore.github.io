@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 한복 남자 옆모습 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.4" ry="0.8" fill="#4a3f3a"/>
+    <ellipse cx="7.2" cy="16.9" rx="1.4" ry="0.8" fill="#4a3f3a"/>
+    <path d="M3.9 16.4 L4.2 14.8 L7.8 14.8 L8.1 16.4 Z" fill="var(--pants, #f4efe4)"/>
+    <path d="M3.4 15.8 C3.3 12.6 4 10.2 6 10.2 C8 10.2 8.8 12.6 8.8 15.8 Q6 16.5 3.4 15.8 Z" fill="var(--coat, #b9d6e8)"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--skin, #ffe0c7)"/>
+    <path d="M4 3.4 C6.4 2.4 10.4 2.8 10.6 6.8 C10.4 8.6 9.2 9.4 8 9.2 C8.4 8 7.8 6.4 6.8 5.6 C5.8 4.8 4.6 4.6 3.4 4.8 C3.4 4.2 3.6 3.7 4 3.4 Z" fill="var(--hair, #2e2622)"/>
+    <ellipse cx="6" cy="3.9" rx="5.7" ry="1" fill="#3a3430"/>
+    <rect x="4" y="0.4" width="4.2" height="3.6" rx="1.4" fill="#3a3430"/>
+    <ellipse cx="6.2" cy="12.6" rx="1" ry="1.55" fill="var(--coat, #b9d6e8)" transform="rotate(-18 6.2 12.6)"/>
+  </g>
+  <path d="M4.5 0.9 Q6.1 0.5 7.7 0.9" stroke="#fff" stroke-opacity="0.3" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M4.4 11.6 C4 12.8 3.9 13.6 4 14.4" stroke="var(--ribbon, #7a8fa8)" stroke-width="0.55" fill="none" stroke-linecap="round"/>
+  <path d="M3.8 15.2 Q6 15.9 8.4 15.2" stroke="#000" stroke-opacity="0.1" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M5.2 4.6 C5 7.4 5.6 9.4 6.6 10.2" stroke="#3a3430" stroke-width="0.25" fill="none" stroke-linecap="round"/>
+  <ellipse cx="2.9" cy="7.1" rx="0.5" ry="0.75" fill="#3d2b22"/>
+  <circle cx="3.05" cy="6.85" r="0.18" fill="#fff"/>
+  <ellipse cx="2.6" cy="8.5" rx="0.8" ry="0.45" fill="#ff9e9e" opacity="0.5"/>
+  <circle cx="6.9" cy="7.3" r="0.75" fill="#f5cdb0" stroke="#5b4636" stroke-width="0.3"/>
+</svg>

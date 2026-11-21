@@ -1,0 +1,32 @@
+{
+  "svg": "body.svg",
+  "foot": [
+    0.5,
+    1
+  ],
+  "parts": [
+    {
+      "use": "parts/shadow.svg",
+      "at": [
+        14,
+        17
+      ],
+      "scale": 2.8,
+      "under": true
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        6,
+        14.8
+      ]
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        23,
+        14.8
+      ]
+    }
+  ]
+}

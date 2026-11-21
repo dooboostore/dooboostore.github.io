@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.5" ry="0.8" fill="#2b2626"/>
+    <ellipse cx="7.4" cy="16.9" rx="1.5" ry="0.8" fill="#2b2626"/>
+    <path d="M3.6 16.4 L4 13.6 L8 13.6 L8.4 16.4 Z" fill="var(--tartan, #c43c3c)"/>
+    <path d="M3.2 14 C3 11.6 3.8 10.2 6 10.2 C8.2 10.2 9 11.6 8.8 14 Z" fill="#2f2c33"/>
+    <ellipse cx="2.9" cy="12.6" rx="0.9" ry="1.4" fill="#2f2c33" transform="rotate(14 2.9 12.6)"/>
+    <ellipse cx="9.1" cy="12.6" rx="0.9" ry="1.4" fill="#2f2c33" transform="rotate(-14 9.1 12.6)"/>
+    <circle cx="1.6" cy="6.8" r="0.8" fill="var(--skin, #ffe0c7)"/>
+    <circle cx="10.4" cy="6.8" r="0.8" fill="var(--skin, #ffe0c7)"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--hair, #5a4a46)"/>
+    <path d="M4.9 7 C4.4 3.4 4.9 0.4 6 0.3 C7.1 0.4 7.6 3.4 7.1 7 Q6 7.5 4.9 7 Z" fill="var(--mohawk, #ff6fae)"/>
+  </g>
+  <path d="M4.9 13.8 L4.7 16.3 M7.1 13.8 L7.3 16.3 M3.9 14.8 L8.1 14.8 M3.8 15.7 L8.2 15.7" stroke="#2b2626" stroke-opacity="0.45" stroke-width="0.25" stroke-linecap="round"/>
+  <path d="M4.3 13.8 L4.1 16.3 M7.7 13.8 L7.9 16.3" stroke="#f3d38a" stroke-opacity="0.6" stroke-width="0.15" stroke-linecap="round"/>
+  <circle cx="6" cy="12.2" r="1.2" fill="#f1f1f1" stroke="#5b4636" stroke-width="0.25"/>
+  <path d="M5.4 12.2 L6.6 12.2 M6 11.6 L6 12.8" stroke="var(--mohawk, #ff6fae)" stroke-width="0.35" stroke-linecap="round"/>
+  <g fill="#cfd3d8"><circle cx="3.9" cy="11.2" r="0.2"/><circle cx="8.1" cy="11.2" r="0.2"/></g>
+  <path d="M2.6 4.4 Q3.4 3.2 4.4 2.8" stroke="#000" stroke-opacity="0.08" stroke-width="1" fill="none" stroke-linecap="round"/>
+</svg>

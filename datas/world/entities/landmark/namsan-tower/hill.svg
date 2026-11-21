@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 44">
+  <!-- 남산: 둥근 언덕(밑단도 둥글게 땅에 앉음), 동글동글 단풍 숲, 산책로, 오르내리는 케이블카 -->
+  <ellipse cx="46" cy="41.2" rx="44" ry="2.6" fill="#3b5a2e" opacity="0.2"/>
+  <path d="M3 40 C7 34 18 13 46 10 C74 13 85 34 89 40 C80 43.4 12 43.4 3 40 Z" fill="#8fc47a" stroke="#5b4636" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M28 17.5 C36 12.6 56 12.6 64 17.5 C56 15.2 36 15.2 28 17.5 Z" fill="#fff" opacity="0.28"/>
+  <path d="M8 39.6 C20 36 32 33.6 46 33.6 C60 33.6 72 36 84 39.6 C70 42.4 22 42.4 8 39.6 Z" fill="#000" opacity="0.07"/>
+  <g stroke="#5b4636" stroke-width="0.45">
+    <circle cx="22" cy="31" r="3.2" fill="#ef9a5a"/><circle cx="28" cy="25" r="2.8" fill="#79b866"/><circle cx="34" cy="31.5" r="3" fill="#f4c84f"/>
+    <circle cx="40" cy="21.5" r="2.4" fill="#e9785a"/><circle cx="54" cy="21" r="2.4" fill="#79b866"/><circle cx="60" cy="27" r="3" fill="#ef9a5a"/>
+    <circle cx="68" cy="32" r="3.2" fill="#f4c84f"/><circle cx="48" cy="29" r="2.8" fill="#79b866"/><circle cx="15" cy="36.5" r="2.6" fill="#79b866"/>
+    <circle cx="77" cy="36.5" r="2.6" fill="#e9785a"/><circle cx="58" cy="35.5" r="2.6" fill="#79b866"/><circle cx="27" cy="37" r="2.4" fill="#f4c84f"/>
+  </g>
+  <g fill="#fff" opacity="0.35"><circle cx="21" cy="30" r="1"/><circle cx="33" cy="30.5" r="0.9"/><circle cx="59" cy="26" r="0.9"/><circle cx="67" cy="31" r="1"/></g>
+  <path d="M32 41 C37 35 34 29 42 25 C50 21 46 16 47 12" stroke="#f6ead0" stroke-width="1.4" fill="none" stroke-dasharray="2 1.4" stroke-linecap="round"/>
+  <line x1="6" y1="37" x2="38" y2="13.6" stroke="#5b4636" stroke-width="0.35" stroke-linecap="round"/>
+  <g>
+    <rect x="-1.5" y="0" width="3" height="2.3" rx="0.8" fill="#ff6b5a" stroke="#5b4636" stroke-width="0.35"/>
+    <rect x="-1" y="0.45" width="2" height="0.9" rx="0.4" fill="#fff6dc"/>
+    <line x1="0" y1="-0.9" x2="0" y2="0" stroke="#5b4636" stroke-width="0.35"/>
+    <animateMotion path="M6 37.9 L38 14.5" dur="24s" repeatCount="indefinite" keyPoints="0;1;1;0;0" keyTimes="0;0.42;0.5;0.92;1" calcMode="linear"/>
+  </g>
+</svg>

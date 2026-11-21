@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -12 30 24" data-foot="0.5 0.5">
+  <!-- 해상 풍력단지 (위에서 본 모습): 줄지어 선 풍력발전기 여섯 기, 날개가 바람에 빙글빙글 -->
+  <defs>
+    <g id="t">
+      <circle r="0.9" fill="#fbfbf8" stroke="#5b4636" stroke-width="0.3"/>
+      <g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3.2s" repeatCount="indefinite"/>
+        <g fill="#fbfbf8" stroke="#5b4636" stroke-width="0.22" stroke-linejoin="round">
+          <path d="M0 0 L-0.45 -4.2 Q0 -4.8 0.45 -4.2 Z"/>
+          <path d="M0 0 L-0.45 -4.2 Q0 -4.8 0.45 -4.2 Z" transform="rotate(120)"/>
+          <path d="M0 0 L-0.45 -4.2 Q0 -4.8 0.45 -4.2 Z" transform="rotate(240)"/>
+        </g>
+      </g>
+      <circle r="0.45" fill="#e8655a"/>
+    </g>
+  </defs>
+  <g fill="#ffffff" opacity="0.3"><circle cx="-10" cy="-5" r="2"/><circle cx="0" cy="-5" r="2"/><circle cx="10" cy="-5" r="2"/><circle cx="-10" cy="5" r="2"/><circle cx="0" cy="5" r="2"/><circle cx="10" cy="5" r="2"/></g>
+  <use href="#t" x="-10" y="-5"/><use href="#t" x="0" y="-5"/><use href="#t" x="10" y="-5"/>
+  <use href="#t" x="-10" y="5"/><use href="#t" x="0" y="5"/><use href="#t" x="10" y="5"/>
+</svg>

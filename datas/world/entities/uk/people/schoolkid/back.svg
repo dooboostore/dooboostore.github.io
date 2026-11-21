@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.2" ry="0.8" fill="#2b2626"/>
+    <ellipse cx="7.4" cy="16.9" rx="1.2" ry="0.8" fill="#2b2626"/>
+    <path d="M3.6 16.4 L4 13.6 L8 13.6 L8.4 16.4 Z" fill="var(--bottom, #8d8f94)"/>
+    <path d="M3.2 14 C3 11.6 3.8 10.2 6 10.2 C8.2 10.2 9 11.6 8.8 14 Z" fill="var(--blazer, #2f4a7a)"/>
+    <ellipse cx="2.9" cy="12.6" rx="0.9" ry="1.4" fill="var(--blazer, #2f4a7a)" transform="rotate(14 2.9 12.6)"/>
+    <ellipse cx="9.1" cy="12.6" rx="0.9" ry="1.4" fill="var(--blazer, #2f4a7a)" transform="rotate(-14 9.1 12.6)"/>
+    <rect x="3.9" y="10.6" width="4.2" height="3.8" rx="1.2" fill="#c25a4a"/>
+    <path d="M4.2 11.8 Q6 12.6 7.8 11.8" fill="none" stroke-width="0.35"/>
+    <circle cx="1.6" cy="6.8" r="0.8" fill="var(--skin, #ffe0c7)"/>
+    <circle cx="10.4" cy="6.8" r="0.8" fill="var(--skin, #ffe0c7)"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--hair, #6b4a35)"/>
+    <path d="M1.15 5 A4.95 4.95 0 0 1 10.85 5 Z" fill="var(--blazer, #2f4a7a)"/>
+    <circle cx="6" cy="0.9" r="0.45" fill="var(--tie, #d9b44a)" stroke-width="0.25"/>
+  </g>
+  <rect x="5.5" y="12.8" width="1" height="0.7" rx="0.25" fill="#f3c74f"/>
+  <ellipse cx="4.4" cy="11.2" rx="0.9" ry="0.35" fill="#fff" opacity="0.25"/>
+</svg>

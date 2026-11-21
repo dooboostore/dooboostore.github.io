@@ -20,7 +20,9 @@
     "@dooboostore/simple-boot": "workspace:*",
     "@dooboostore/simple-boot-front": "workspace:*",
     "@dooboostore/simple-web-component": "workspace:*",
-    "@dooboostore/simple-web-component-library": "workspace:*",    "highlight.js": "^11.9.0",
+    "@dooboostore/simple-web-component-library": "workspace:*",
+    "d3-geo": "^3.1.1",
+    "highlight.js": "^11.9.0",
     "lz-string": "^1.5.0",
     "marked": "^12.0.0",
     "marked-highlight": "^2.1.1",
@@ -28,6 +30,7 @@
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
     "@types/marked": "^4.0.0",
     "@types/node": "^20.0.0",
     "copy-webpack-plugin": "^12.0.2",

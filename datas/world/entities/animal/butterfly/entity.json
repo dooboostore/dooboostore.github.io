@@ -1,0 +1,17 @@
+{
+  "svg": "body.svg",
+  "foot": [
+    0.5,
+    1
+  ],
+  "behavior": {
+    "type": "wander",
+    "speed": 9,
+    "pause": [
+      0.4,
+      2.5
+    ],
+    "avoid": []
+  },
+  "z": 7
+}

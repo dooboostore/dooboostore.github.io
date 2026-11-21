@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -16 20 34" data-foot="0.5 0.47">
+  <!-- 혹등고래 (위에서 본 모습, 머리가 위쪽): 긴 가슴지느러미, 꼬리, 가끔 물을 뿜는다. 바다 위로 천천히 오르내린다 -->
+  <g>
+    <animate attributeName="opacity" values="1;1;0.55;0.55;1" keyTimes="0;0.45;0.6;0.85;1" dur="14s" repeatCount="indefinite"/>
+    <ellipse cx="0" cy="2" rx="6.4" ry="12" fill="#ffffff" opacity="0.35"/>
+    <path d="M-3.8 -3 C-8.5 -1 -9.4 3 -8.8 5.4 C-6.6 4 -4.6 1.4 -3.2 0 Z" fill="#6f8ba6" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <path d="M3.8 -3 C8.5 -1 9.4 3 8.8 5.4 C6.6 4 4.6 1.4 3.2 0 Z" fill="#6f8ba6" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <path d="M0 -12 C3.8 -12 4.6 -6 4.2 1 C3.9 6.5 2 10.5 0 12 C-2 10.5 -3.9 6.5 -4.2 1 C-4.6 -6 -3.8 -12 0 -12 Z" fill="#7d9ab8" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+    <path d="M0 11 C2.4 12.4 5 13 6.4 15 C4 15.4 1.6 14.6 0 13.4 C-1.6 14.6 -4 15.4 -6.4 15 C-5 13 -2.4 12.4 0 11 Z" fill="#6f8ba6" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <path d="M-1.6 -9 Q0 -10.2 1.6 -9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-7.4" rx="0.5" ry="0.3" fill="#3d4f63"/>
+  </g>
+  <g fill="#ffffff" stroke="#bcdcef" stroke-width="0.3">
+    <circle cx="0" cy="-8" r="0"><animate attributeName="r" values="0;0;2;3;0" keyTimes="0;0.7;0.76;0.85;1" dur="9s" repeatCount="indefinite"/><animate attributeName="cy" values="-8;-8;-10;-12;-12" keyTimes="0;0.7;0.76;0.85;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0.6;0" keyTimes="0;0.7;0.76;0.85;1" dur="9s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+{
+  "foot": [
+    0.5,
+    1
+  ],
+  "views": {
+    "front": {
+      "svg": "front.svg"
+    },
+    "left": {
+      "svg": "left.svg"
+    },
+    "right": {
+      "mirror": "left"
+    },
+    "back": {
+      "svg": "back.svg"
+    }
+  },
+  "parts": [
+    {
+      "use": "parts/shadow.svg",
+      "at": [
+        6,
+        17.6
+      ],
+      "scale": 0.75,
+      "under": true
+    }
+  ],
+  "behavior": {
+    "type": "wander",
+    "speed": 12,
+    "pause": [
+      0.5,
+      3
+    ],
+    "avoid": [
+      "water",
+      "road"
+    ],
+    "allow": [
+      "bridge"
+    ]
+  }
+}

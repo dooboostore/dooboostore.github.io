@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 8" data-foot="0.5 0.86">
+  <!-- 포토맥 카약 (오른쪽을 향함): 가늘고 둥근 배, 노 젓는 사람, 좌우로 번갈아 젓는 노. 색은 kayak 변수 -->
+  <g stroke="#ffffff" stroke-width="0.5" fill="none" stroke-linecap="round"><path d="M0.4 7.2 Q2 6.6 3.6 7.2"><animate attributeName="opacity" values="0;0.9;0" dur="1.6s" repeatCount="indefinite"/></path></g>
+  <g>
+  <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.25;0 0" dur="2.2s" repeatCount="indefinite"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="9.4" y="2.6" width="3.2" height="3.4" rx="1.4" fill="var(--vest, #ffb347)"/>
+  <circle cx="11" cy="1.6" r="1.4" fill="#ffe0c7"/>
+  <path d="M2 5.4 Q11 4.4 21 5.4 Q19.6 7.2 11 7.2 Q3.4 7.2 2 5.4 Z" fill="var(--kayak, #e9785a)"/>
+  </g>
+  <path d="M9.6 1.4 C9.6 -0.2 12.4 -0.2 12.4 1.2 Z" fill="#4a3329"/>
+  <g><animateTransform attributeName="transform" type="rotate" values="-28 11 4;28 11 4;-28 11 4" dur="1.4s" repeatCount="indefinite"/>
+  <line x1="5" y1="4" x2="17" y2="4" stroke="#8a5a3f" stroke-width="0.4" stroke-linecap="round"/>
+  <ellipse cx="4.6" cy="4" rx="1" ry="0.5" fill="#f2c641" stroke="#5b4636" stroke-width="0.25"/><ellipse cx="17.4" cy="4" rx="1" ry="0.5" fill="#f2c641" stroke="#5b4636" stroke-width="0.25"/></g>
+  <path d="M4 5.6 Q11 5 18.6 5.6" stroke="#fff" stroke-opacity="0.5" stroke-width="0.4" fill="none"/>
+  </g>
+</svg>

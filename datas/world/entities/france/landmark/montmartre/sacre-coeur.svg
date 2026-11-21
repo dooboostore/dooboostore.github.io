@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+  <!-- 사크레쾨르 대성당: 하얀 돌 둥근 돔 셋 + 뒤 종탑, 앞 계단. 밤엔 은은한 조명 -->
+  <ellipse cx="15" cy="15" rx="15" ry="13" fill="#fff4cf" style="opacity: calc(var(--night, 0) * 0.3)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="21.4" y="5.6" width="4.2" height="14" rx="1" fill="#f1ede4"/>
+    <path d="M21.2 6 C21.2 2.6 25.8 2.6 25.8 6 Z" fill="#f7f4ee"/>
+    <rect x="23.1" y="1" width="0.8" height="2.4" rx="0.4" fill="#e7e2d8"/>
+    <rect x="3" y="15" width="24" height="10.6" rx="1.2" fill="#f7f4ee"/>
+    <rect x="8.6" y="10.6" width="12.8" height="5" rx="1" fill="#f1ede4"/>
+    <path d="M9.2 11 C9.2 3.6 20.8 3.6 20.8 11 Z" fill="#fbf9f4"/>
+    <path d="M14.2 4.8 C14.2 3 15.8 3 15.8 4.8 Z" fill="#f1ede4"/>
+    <rect x="14.6" y="0.8" width="0.8" height="2.6" rx="0.4" fill="#e7e2d8"/>
+    <path d="M3.6 15.4 C3.6 11 9 11 9 15.4 Z" fill="#fbf9f4"/>
+    <path d="M21 15.4 C21 11 26.4 11 26.4 15.4 Z" fill="#fbf9f4"/>
+    <path d="M11.6 25.6 L11.6 21 C11.6 18.4 18.4 18.4 18.4 21 L18.4 25.6 Z" fill="#c9b89a"/>
+    <rect x="1.6" y="25" width="26.8" height="2.2" rx="1" fill="#e9e2d2"/>
+  </g>
+  <g fill="#b9c7d4" stroke="#5b4636" stroke-width="0.3"><rect x="5" y="18" width="1.6" height="3.2" rx="0.8"/><rect x="8.2" y="18" width="1.6" height="3.2" rx="0.8"/><rect x="20.2" y="18" width="1.6" height="3.2" rx="0.8"/><rect x="23.4" y="18" width="1.6" height="3.2" rx="0.8"/><rect x="10.6" y="12.2" width="1.4" height="2.4" rx="0.7"/><rect x="14.3" y="12.2" width="1.4" height="2.4" rx="0.7"/><rect x="18" y="12.2" width="1.4" height="2.4" rx="0.7"/><rect x="22.9" y="8" width="1.2" height="2.6" rx="0.6"/></g>
+  <g fill="#fff" opacity="0.6"><path d="M10.6 9.4 C11 6.6 13.4 5.4 15 5.4 C13.2 6.2 11.8 7.6 11.6 9.8 Z"/></g>
+  <path d="M15 5.4 C18.6 5.4 20.8 7.6 20.8 11 L17.6 11 C17.6 8 16.6 6.2 15 5.4 Z" fill="#000" opacity="0.06"/>
+  <g style="opacity: var(--night, 0)" fill="#ffd77a"><rect x="5.2" y="18.2" width="1.2" height="2.8" rx="0.6"/><rect x="8.4" y="18.2" width="1.2" height="2.8" rx="0.6"/><rect x="20.4" y="18.2" width="1.2" height="2.8" rx="0.6"/><rect x="23.6" y="18.2" width="1.2" height="2.8" rx="0.6"/><path d="M12 25.4 L12 21.2 C12 19 18 19 18 21.2 L18 25.4 Z" opacity="0.7"/></g>
+</svg>

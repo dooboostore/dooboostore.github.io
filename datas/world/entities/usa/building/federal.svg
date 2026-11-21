@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 30">
+  <!-- 연방 청사(신고전주의): 흰 대리석, 둥근 기둥 열, 모서리를 둥글린 낮은 박공, 넓은 계단. 색은 stone 변수. 밤엔 창 불빛 -->
+  <ellipse cx="24" cy="28.8" rx="23.4" ry="1.3" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="1.4" y="25" width="45.2" height="3.6" rx="1.2" fill="#e6e0d3"/>
+  <rect x="2.6" y="9" width="42.8" height="16.4" rx="1" fill="var(--stone, #efe9dd)"/>
+  <rect x="1.6" y="7" width="44.8" height="2.6" rx="1.2" fill="#f7f4ec"/>
+  <path d="M13 7.4 Q13.4 6 15.2 5.4 L22.4 2.4 Q24 1.8 25.6 2.4 L32.8 5.4 Q34.6 6 35 7.4 Z" fill="#fbf8f2"/>
+  </g>
+  <circle cx="24" cy="5.2" r="1" fill="#e0d8c8"/>
+  <rect x="14" y="10" width="20" height="15" rx="0.6" fill="#000" opacity="0.08"/>
+  <g fill="#fbf8f2" stroke="#5b4636" stroke-width="0.35"><rect x="14.4" y="9.6" width="1.8" height="15.2" rx="0.9"/><rect x="17.6" y="9.6" width="1.8" height="15.2" rx="0.9"/><rect x="20.8" y="9.6" width="1.8" height="15.2" rx="0.9"/><rect x="24" y="9.6" width="1.8" height="15.2" rx="0.9"/><rect x="27.2" y="9.6" width="1.8" height="15.2" rx="0.9"/><rect x="30.4" y="9.6" width="1.8" height="15.2" rx="0.9"/></g>
+  <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.3">
+  <rect x="4.4" y="11.4" width="2.2" height="3.6" rx="0.8"/><rect x="4.4" y="18" width="2.2" height="3.6" rx="0.8"/><rect x="8.6" y="11.4" width="2.2" height="3.6" rx="0.8"/><rect x="8.6" y="18" width="2.2" height="3.6" rx="0.8"/><rect x="37.4" y="11.4" width="2.2" height="3.6" rx="0.8"/><rect x="37.4" y="18" width="2.2" height="3.6" rx="0.8"/><rect x="41.6" y="11.4" width="2.2" height="3.6" rx="0.8"/><rect x="41.6" y="18" width="2.2" height="3.6" rx="0.8"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="4.4" y="11.4" width="2.2" height="3.6" rx="0.8"/><rect x="41.6" y="18" width="2.2" height="3.6" rx="0.8"/><rect x="8.6" y="18" width="2.2" height="3.6" rx="0.8"/></g>
+  <rect x="2.4" y="7.4" width="43.2" height="0.8" rx="0.4" fill="#fff" opacity="0.5"/>
+</svg>

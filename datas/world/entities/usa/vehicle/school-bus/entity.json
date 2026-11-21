@@ -1,0 +1,34 @@
+{
+  "svg": "body.svg",
+  "foot": [
+    0.5,
+    1
+  ],
+  "parts": [
+    {
+      "use": "parts/shadow.svg",
+      "at": [
+        18,
+        15
+      ],
+      "scale": 3.4,
+      "under": true
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        8,
+        12.6
+      ],
+      "anim": "spin"
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        28,
+        12.6
+      ],
+      "anim": "spin"
+    }
+  ]
+}

@@ -187,6 +187,15 @@ export default (w: Window) => {
       badge: 'New'
     },
     {
+      id: 'world',
+      icon: '🌏',
+      title: '작은 지구',
+      description: '지구본을 천천히 돌리며 각 나라의 일상을 구경하고, 그곳의 라디오를 들어보세요.',
+      path: '/world',
+      color: '#33406b',
+      badge: 'New'
+    },
+    {
       id: 'ram-price',
       icon: '💾',
       title: '반도체 RAM 가격 추이',

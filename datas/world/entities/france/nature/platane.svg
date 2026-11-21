@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 26">
+  <!-- 플라타너스(가로수): 얼룩무늬 수피, 넓은 둥근 잎 덩어리. 잎 색은 변수 leaf (가을 노랑·주황) -->
+  <ellipse cx="10" cy="25" rx="6.4" ry="1.3" fill="#3b5a2e" opacity="0.2"/>
+  <path d="M8.8 25 L9.2 15 L10.8 15 L11.2 25 Z" fill="#b8b4a0" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <g fill="#e8e4d2"><ellipse cx="9.8" cy="18" rx="0.5" ry="0.8"/><ellipse cx="10.4" cy="21.4" rx="0.5" ry="0.9"/></g>
+  <g fill="#8a8a74"><ellipse cx="10.2" cy="16.6" rx="0.4" ry="0.6"/><ellipse cx="9.6" cy="23" rx="0.4" ry="0.7"/></g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.2 10 16;1.2 10 16;-1.2 10 16" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="var(--leaf, #e9a94a)" stroke="#5b4636" stroke-width="0.55">
+      <circle cx="4.8" cy="11.4" r="4.2"/>
+      <circle cx="15.2" cy="11.4" r="4.2"/>
+      <circle cx="7.4" cy="6.8" r="4.4"/>
+      <circle cx="12.8" cy="6.6" r="4.4"/>
+      <circle cx="10" cy="11.6" r="4.4"/>
+    </g>
+    <path d="M1.4 12.6 C2.4 16.4 17.6 16.4 18.6 12.6 C16 14.6 4 14.6 1.4 12.6 Z" fill="#000" opacity="0.12"/>
+    <circle cx="6.4" cy="5" r="1.8" fill="#fff" opacity="0.28"/>
+    <circle cx="12" cy="4.6" r="1.2" fill="#fff" opacity="0.2"/>
+  </g>
+  <path d="M15 14 q0.6 0.6 0 1.2 q-0.6 0.6 0 1.2" stroke="var(--leaf, #e9a94a)" stroke-width="0.7" fill="none" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="translate" values="0 0;1.4 9" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0" dur="5s" repeatCount="indefinite"/>
+  </path>
+</svg>

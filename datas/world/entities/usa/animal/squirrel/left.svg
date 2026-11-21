@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10">
+  <!-- 회색 다람쥐 (왼쪽을 향함): 동그랗게 말린 복슬 꼬리가 살랑, 도토리를 든 앞발 -->
+  <g>
+  <animateTransform attributeName="transform" type="rotate" values="0 8 7.6;-10 8 7.6;0 8 7.6;0 8 7.6" keyTimes="0;0.15;0.3;1" dur="2.6s" repeatCount="indefinite"/>
+  <path d="M7.6 8 C11.6 8.4 12.4 4.4 10.6 2 C9.2 0.4 6.8 1 7.2 2.8 C8.8 2.4 10 3.6 9.4 5.2 C8.8 6.6 7.4 6.6 7 7.2 Z" fill="#a39a92" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+  <path d="M8.2 2.4 C9.6 2 10.8 3.2 10.4 4.8" stroke="#fff" stroke-opacity="0.4" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="5.6" cy="7.2" rx="2.6" ry="2.1" fill="#9a8f86"/>
+  <circle cx="3.4" cy="4.6" r="2" fill="#a39a92"/>
+  <ellipse cx="4.2" cy="2.6" rx="0.55" ry="0.8" fill="#a39a92"/>
+  <ellipse cx="2.8" cy="7.4" rx="0.7" ry="0.6" fill="#c19a6b"/>
+  </g>
+  <ellipse cx="5.2" cy="7.8" rx="1.4" ry="1" fill="#efe6dc"/>
+  <circle cx="2.6" cy="4.4" r="0.38" fill="#2b2b2b"/><circle cx="2.7" cy="4.28" r="0.12" fill="#fff"/>
+  <circle cx="1.5" cy="5" r="0.25" fill="#5b4636"/>
+  <ellipse cx="2.9" cy="5.5" rx="0.5" ry="0.3" fill="#ff9e9e" opacity="0.5"/>
+  <g fill="#7d736b"><ellipse cx="4.4" cy="9.3" rx="0.7" ry="0.35"/><ellipse cx="6.8" cy="9.3" rx="0.8" ry="0.35"/></g>
+</svg>

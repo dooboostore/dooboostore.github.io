@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12">
+  <!-- 도쿄 택시 (오른쪽을 향함): 키 큰 둥근 차체(색 변수 taxi, 기본 남색), 지붕 위 둥근 표시등(안돈), 노란 줄. 밤엔 표시등·전조등 -->
+  <path d="M22.6 7 L32 5 L32 11 L22.6 9.2 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="10.4" y="0.6" width="3.6" height="1.8" rx="0.8" fill="#fff6d6"/>
+    <path d="M1.2 10 L1.2 6.6 C1.2 5 2 4.4 3.2 4.2 L5.6 2.6 C6.4 2.1 7.2 2 8 2 L16.4 2 C17.4 2 18.2 2.4 18.8 3.2 L20.6 5.4 L22 5.8 C22.8 6 23.2 6.6 23.2 7.4 L23.2 10 C23.2 10.6 22.8 11 22.2 11 L2.2 11 C1.6 11 1.2 10.6 1.2 10 Z" fill="var(--taxi, #2f3f66)"/>
+    <path d="M6.2 4.6 L7.6 3.2 L11.6 3.2 L11.6 5.6 L6.2 5.6 Z" fill="#cfe6f4"/>
+    <path d="M12.8 3.2 L16.6 3.2 L18.8 5.6 L12.8 5.6 Z" fill="#cfe6f4"/>
+  </g>
+  <rect x="10.4" y="0.6" width="3.6" height="1.8" rx="0.8" fill="#ffcf5e" style="opacity: calc(0.2 + var(--night, 0) * 0.8)"/>
+  <rect x="1.6" y="7.2" width="21.2" height="0.7" fill="#f6d34a"/>
+  <rect x="1.6" y="9.2" width="21.4" height="1.4" rx="0.6" fill="#000" opacity="0.12"/>
+  <path d="M7.4 3.8 L9 3.8" stroke="#fff" stroke-width="0.5" opacity="0.8" stroke-linecap="round"/>
+  <line x1="12.2" y1="3.2" x2="12.2" y2="9" stroke="#5b4636" stroke-width="0.3" opacity="0.6"/>
+  <circle cx="22.4" cy="7" r="0.6" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <rect x="1.2" y="6.4" width="0.8" height="1" rx="0.3" fill="#ef6a5e"/>
+</svg>

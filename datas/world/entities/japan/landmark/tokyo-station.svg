@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 36">
+  <!-- 도쿄역 마루노우치 역사: 붉은 벽돌에 흰 돌 띠, 3층 아치 창, 남북 양 끝의 둥근 돔(슬레이트), 가운데 박공 현관. 밤이면 창마다 불빛 -->
+  <ellipse cx="50" cy="34.8" rx="49" ry="1.4" fill="#3b5a2e" opacity="0.22"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2" y="14" width="96" height="20.6" rx="1.6" fill="#c8644a"/>
+    <rect x="1.4" y="12.6" width="97.2" height="2.2" rx="1.1" fill="#6b7b8a"/>
+    <rect x="2" y="31.2" width="96" height="3.4" rx="1.2" fill="#e8dcc8"/>
+    <!-- 남·북 돔 -->
+    <rect x="4" y="9" width="16" height="24" rx="1.4" fill="#c8644a"/>
+    <rect x="80" y="9" width="16" height="24" rx="1.4" fill="#c8644a"/>
+    <path d="M3.2 9.6 C3.2 3.6 7 1.4 12 1.4 C17 1.4 20.8 3.6 20.8 9.6 Z" fill="#6b7b8a"/>
+    <path d="M79.2 9.6 C79.2 3.6 83 1.4 88 1.4 C93 1.4 96.8 3.6 96.8 9.6 Z" fill="#6b7b8a"/>
+    <rect x="11" y="-0.2" width="2" height="2.2" rx="0.8" fill="#8f9ba6"/><rect x="87" y="-0.2" width="2" height="2.2" rx="0.8" fill="#8f9ba6"/>
+    <!-- 가운데 현관 -->
+    <rect x="42" y="9.6" width="16" height="23" rx="1" fill="#c8644a"/>
+    <path d="M40.8 10.4 C42 7.4 46 6.2 50 6.2 C54 6.2 58 7.4 59.2 10.4 Z" fill="#6b7b8a"/>
+    <path d="M46.6 33 L46.6 27.6 C46.6 25.6 48.2 24.4 50 24.4 C51.8 24.4 53.4 25.6 53.4 27.6 L53.4 33 Z" fill="#5a463c"/>
+  </g>
+  <g fill="#e8dcc8"><rect x="2" y="19.4" width="96" height="1" rx="0.5"/><rect x="2" y="25.2" width="96" height="1" rx="0.5"/><rect x="4" y="13.4" width="16" height="0.9"/><rect x="80" y="13.4" width="16" height="0.9"/></g>
+  <g fill="#cfe2ee" stroke="#5b4636" stroke-width="0.3">
+    <rect x="23" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="28" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="33" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="38" y="15.6" width="2.6" height="2.8" rx="1"/>
+    <rect x="59.4" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="64.4" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="69.4" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="74.4" y="15.6" width="2.6" height="2.8" rx="1"/>
+    <rect x="23" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="28" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="33" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="38" y="21.4" width="2.6" height="2.8" rx="1"/>
+    <rect x="59.4" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="64.4" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="69.4" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="74.4" y="21.4" width="2.6" height="2.8" rx="1"/>
+    <rect x="23" y="27" width="2.6" height="3.2" rx="1"/><rect x="28" y="27" width="2.6" height="3.2" rx="1"/><rect x="33" y="27" width="2.6" height="3.2" rx="1"/><rect x="38" y="27" width="2.6" height="3.2" rx="1"/>
+    <rect x="59.4" y="27" width="2.6" height="3.2" rx="1"/><rect x="64.4" y="27" width="2.6" height="3.2" rx="1"/><rect x="69.4" y="27" width="2.6" height="3.2" rx="1"/><rect x="74.4" y="27" width="2.6" height="3.2" rx="1"/>
+    <rect x="7" y="15.6" width="3" height="3" rx="1.2"/><rect x="14" y="15.6" width="3" height="3" rx="1.2"/><rect x="7" y="21.4" width="3" height="3" rx="1.2"/><rect x="14" y="21.4" width="3" height="3" rx="1.2"/>
+    <rect x="83" y="15.6" width="3" height="3" rx="1.2"/><rect x="90" y="15.6" width="3" height="3" rx="1.2"/><rect x="83" y="21.4" width="3" height="3" rx="1.2"/><rect x="90" y="21.4" width="3" height="3" rx="1.2"/>
+    <rect x="44.6" y="13" width="3" height="3.4" rx="1.2"/><rect x="52.4" y="13" width="3" height="3.4" rx="1.2"/><rect x="44.6" y="19" width="3" height="3.4" rx="1.2"/><rect x="52.4" y="19" width="3" height="3.4" rx="1.2"/>
+    <path d="M9.4 33 L9.4 29.2 Q12 27 14.6 29.2 L14.6 33 Z"/><path d="M85.4 33 L85.4 29.2 Q88 27 90.6 29.2 L90.6 33 Z"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: calc(0.15 + var(--night, 0) * 0.85)">
+    <rect x="28" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="38" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="23" y="27" width="2.6" height="3.2" rx="1"/><rect x="33" y="27" width="2.6" height="3.2" rx="1"/>
+    <rect x="64.4" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="59.4" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="74.4" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="69.4" y="27" width="2.6" height="3.2" rx="1"/>
+    <rect x="7" y="21.4" width="3" height="3" rx="1.2"/><rect x="90" y="21.4" width="3" height="3" rx="1.2"/><rect x="44.6" y="19" width="3" height="3.4" rx="1.2"/><rect x="52.4" y="19" width="3" height="3.4" rx="1.2"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="23" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="33" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="28" y="27" width="2.6" height="3.2" rx="1"/><rect x="38" y="27" width="2.6" height="3.2" rx="1"/>
+    <rect x="69.4" y="15.6" width="2.6" height="2.8" rx="1"/><rect x="64.4" y="21.4" width="2.6" height="2.8" rx="1"/><rect x="59.4" y="27" width="2.6" height="3.2" rx="1"/><rect x="74.4" y="27" width="2.6" height="3.2" rx="1"/>
+    <rect x="14" y="15.6" width="3" height="3" rx="1.2"/><rect x="83" y="15.6" width="3" height="3" rx="1.2"/><rect x="44.6" y="13" width="3" height="3.4" rx="1.2"/><rect x="52.4" y="13" width="3" height="3.4" rx="1.2"/>
+  </g>
+  <g fill="#fff" opacity="0.25"><path d="M6 6 C7 3.6 9.4 2.6 12 2.6 C9.6 3.4 7.6 4.6 6 6 Z"/><path d="M82 6 C83 3.6 85.4 2.6 88 2.6 C85.6 3.4 83.6 4.6 82 6 Z"/><path d="M44 9 C46 7.6 48 7.2 50 7.2 C48 7.6 46 8.2 44 9 Z"/></g>
+  <g fill="#e8dcc8"><rect x="7" y="5.6" width="2" height="1.6" rx="0.6"/><rect x="11" y="4.8" width="2" height="1.6" rx="0.6"/><rect x="15" y="5.6" width="2" height="1.6" rx="0.6"/><rect x="83" y="5.6" width="2" height="1.6" rx="0.6"/><rect x="87" y="4.8" width="2" height="1.6" rx="0.6"/><rect x="91" y="5.6" width="2" height="1.6" rx="0.6"/></g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 13">
+  <!-- 파리 RATP 버스 (오른쪽을 향함): 흰 차체에 청록 띠, 둥근 앞창. 밤엔 전조등과 실내등 -->
+  <path d="M31 6.2 L44 3.6 L44 12 L31 9.6 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round">
+    <rect x="1" y="1" width="30" height="10" rx="2.4" fill="#f6f6f2"/>
+    <path d="M1.4 7.4 L30.6 7.4 L30.6 8.6 Q30.6 11 28.6 11 L3.4 11 Q1.4 11 1.4 8.6 Z" fill="var(--bus, #3fa98a)"/>
+    <rect x="2.6" y="2.8" width="21" height="3.6" rx="0.9" fill="#d8eff9"/>
+    <path d="M25 2.8 L29.4 2.8 Q30.8 3.4 30.8 6.4 L25 6.4 Z" fill="#cbe8f5"/>
+  </g>
+  <rect x="2.6" y="2.8" width="21" height="3.6" rx="0.9" fill="#ffe9a3" style="opacity: var(--night, 0)"/>
+  <g stroke="#f6f6f2" stroke-width="0.7"><line x1="7.8" y1="2.8" x2="7.8" y2="6.4"/><line x1="13" y1="2.8" x2="13" y2="6.4"/><line x1="18.2" y1="2.8" x2="18.2" y2="6.4"/></g>
+  <path d="M3.4 3.4 L7 3.4" stroke="#fff" stroke-width="0.6" opacity="0.8" stroke-linecap="round"/>
+  <rect x="25.6" y="7" width="2.4" height="3.6" rx="0.4" fill="#000" opacity="0.12"/>
+  <rect x="3" y="1.4" width="6" height="1" rx="0.4" fill="#4f6fb0"/>
+  <circle cx="30.2" cy="8.8" r="0.7" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+</svg>

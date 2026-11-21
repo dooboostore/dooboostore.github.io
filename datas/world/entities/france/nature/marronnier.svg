@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24">
+  <!-- 마로니에(서양칠엽수): 짙은 초록 둥근 잎, 위로 솟은 하얀 꽃송이 촛대 -->
+  <ellipse cx="10" cy="23" rx="6" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <path d="M9 23 L9.3 15 L10.7 15 L11 23 Z" fill="#8a5f42" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1 10 15;1 10 15;-1 10 15" dur="7.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="var(--leaf, #5fa255)" stroke="#5b4636" stroke-width="0.55">
+      <circle cx="5" cy="11" r="4.2"/>
+      <circle cx="15" cy="11" r="4.2"/>
+      <circle cx="10" cy="6.6" r="5.4"/>
+      <circle cx="10" cy="11.6" r="4"/>
+    </g>
+    <path d="M1.6 12 C2.4 15.6 17.6 15.6 18.4 12 C16 14 4 14 1.6 12 Z" fill="#000" opacity="0.12"/>
+    <g fill="var(--bloom, #fff6f0)" stroke="#5b4636" stroke-width="0.3">
+      <path d="M6.4 6.2 C5.8 6.2 5.8 4.4 6.4 3.4 C7 4.4 7 6.2 6.4 6.2 Z"/>
+      <path d="M12.4 4.4 C11.8 4.4 11.8 2.6 12.4 1.6 C13 2.6 13 4.4 12.4 4.4 Z"/>
+      <path d="M3.6 10.6 C3 10.6 3 8.8 3.6 7.8 C4.2 8.8 4.2 10.6 3.6 10.6 Z"/>
+      <path d="M15.8 9.8 C15.2 9.8 15.2 8 15.8 7 C16.4 8 16.4 9.8 15.8 9.8 Z"/>
+      <path d="M9.8 10.4 C9.2 10.4 9.2 8.6 9.8 7.6 C10.4 8.6 10.4 10.4 9.8 10.4 Z"/>
+    </g>
+    <circle cx="8" cy="4.6" r="1.6" fill="#fff" opacity="0.25"/>
+  </g>
+</svg>

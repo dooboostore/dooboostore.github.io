@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 20 20" data-foot="0.5 0.5">
+  <!-- 프로펠러 지역 항공기 (위에서 본 모습, 기수가 위쪽): 곧은 날개 위 엔진 2개, 프로펠러가 빙글빙글 -->
+  <g transform="translate(1.8 2.6)" fill="#1f2d4a" opacity="0.15">
+    <path d="M0 -8 C0.9 -8 1.1 -6.6 1.1 -5 L1.1 -2.4 L8.6 -2 L8.6 -0.4 L1.1 0 L0.9 5.4 L3.4 6.8 L3.4 7.8 L0 7.2 L-3.4 7.8 L-3.4 6.8 L-0.9 5.4 L-1.1 0 L-8.6 -0.4 L-8.6 -2 L-1.1 -2.4 L-1.1 -5 C-1.1 -6.6 -0.9 -8 0 -8 Z"/>
+  </g>
+  <path d="M0 -8 C0.9 -8 1.1 -6.6 1.1 -5 L1.1 -2.4 L8.6 -2 L8.6 -0.4 L1.1 0 L0.9 5.4 L3.4 6.8 L3.4 7.8 L0 7.2 L-3.4 7.8 L-3.4 6.8 L-0.9 5.4 L-1.1 0 L-8.6 -0.4 L-8.6 -2 L-1.1 -2.4 L-1.1 -5 C-1.1 -6.6 -0.9 -8 0 -8 Z"
+        fill="var(--body, #fbfbf8)" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M-3.4 6.8 L-0.9 5.4 L0.9 5.4 L3.4 6.8 L3.4 7.8 L0 7.2 L-3.4 7.8 Z" fill="var(--tail, #5fb37a)" stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round"/>
+  <g fill="#e9eef3" stroke="#5b4636" stroke-width="0.3"><rect x="-4.6" y="-3.6" width="1.4" height="3.6" rx="0.7"/><rect x="3.2" y="-3.6" width="1.4" height="3.6" rx="0.7"/></g>
+  <g transform="translate(-3.9 -3.9)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.3s" repeatCount="indefinite"/>
+    <line x1="-2" y1="0" x2="2" y2="0" stroke="#5b4636" stroke-width="0.5" stroke-linecap="round"/><line x1="0" y1="-2" x2="0" y2="2" stroke="#5b4636" stroke-width="0.5" stroke-linecap="round" opacity="0.5"/></g></g>
+  <g transform="translate(3.9 -3.9)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.3s" repeatCount="indefinite"/>
+    <line x1="-2" y1="0" x2="2" y2="0" stroke="#5b4636" stroke-width="0.5" stroke-linecap="round"/><line x1="0" y1="-2" x2="0" y2="2" stroke="#5b4636" stroke-width="0.5" stroke-linecap="round" opacity="0.5"/></g></g>
+  <path d="M-0.6 -6.6 Q0 -7.3 0.6 -6.6 L0.5 -5.9 L-0.5 -5.9 Z" fill="#5a7d9a"/>
+</svg>

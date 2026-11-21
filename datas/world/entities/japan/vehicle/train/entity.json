@@ -1,0 +1,72 @@
+{
+  "svg": "body.svg",
+  "foot": [
+    0.5,
+    1
+  ],
+  "parts": [
+    {
+      "use": "parts/shadow.svg",
+      "at": [
+        49,
+        13.4
+      ],
+      "scale": 9.6,
+      "under": true
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        6,
+        12
+      ],
+      "scale": 0.7,
+      "anim": "spin"
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        26.6,
+        12
+      ],
+      "scale": 0.7,
+      "anim": "spin"
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        38,
+        12
+      ],
+      "scale": 0.7,
+      "anim": "spin"
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        58.6,
+        12
+      ],
+      "scale": 0.7,
+      "anim": "spin"
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        70,
+        12
+      ],
+      "scale": 0.7,
+      "anim": "spin"
+    },
+    {
+      "use": "parts/wheel.svg",
+      "at": [
+        90.6,
+        12
+      ],
+      "scale": 0.7,
+      "anim": "spin"
+    }
+  ]
+}

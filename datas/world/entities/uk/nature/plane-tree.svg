@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 28">
+  <!-- 런던 플라타너스: 키 큰 둥근 수관, 얼룩무늬 껍질 줄기 (가로수) -->
+  <ellipse cx="9" cy="27.1" rx="5" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <path d="M7.9 27.2 L8.2 14 L9.8 14 L10.1 27.2 Z" fill="#c9bd9c" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <g fill="#8f8a6c" opacity="0.7"><ellipse cx="8.8" cy="17.4" rx="0.6" ry="0.9"/><ellipse cx="9.4" cy="20.6" rx="0.5" ry="0.8"/><ellipse cx="8.7" cy="23.6" rx="0.5" ry="0.9"/></g>
+  <g fill="#ece4cf" opacity="0.9"><ellipse cx="9.5" cy="18.8" rx="0.4" ry="0.6"/><ellipse cx="8.6" cy="22" rx="0.35" ry="0.5"/></g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.2 9 16;1.2 9 16;-1.2 9 16" dur="6.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="var(--leaf, #86c46a)" stroke="#5b4636" stroke-width="0.55">
+      <circle cx="4.8" cy="12.6" r="3.8"/>
+      <circle cx="13.2" cy="12.6" r="3.8"/>
+      <circle cx="9" cy="13.2" r="4.2"/>
+      <circle cx="6" cy="7.4" r="4"/>
+      <circle cx="12" cy="7.4" r="4"/>
+      <circle cx="9" cy="4.6" r="3.8"/>
+    </g>
+    <path d="M1.4 13.6 C2.6 17.8 15.4 17.8 16.6 13.6 C13.6 15.6 4.4 15.6 1.4 13.6 Z" fill="#000" opacity="0.12"/>
+    <circle cx="7.6" cy="3.4" r="1.5" fill="#fff" opacity="0.28"/>
+    <circle cx="4" cy="7" r="1" fill="#fff" opacity="0.2"/>
+  </g>
+</svg>

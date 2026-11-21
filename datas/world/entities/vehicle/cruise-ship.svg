@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -25 16 58" data-foot="0.5 0.43">
+  <!-- 크루즈선 (위에서 본 모습, 뱃머리가 위쪽): 하얀 여러 층 갑판, 파란 수영장, 굴뚝. 밤엔 객실 불빛 -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="1">
+    <path d="M-3 25 Q-5 28.5 -6.5 32"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M3 25 Q5 28.5 6.5 32"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+  </g>
+  <path d="M0 -24 C4.4 -20 6 -14 6 -8 L6 20 Q6 25 0 25.5 Q-6 25 -6 20 L-6 -8 C-6 -14 -4.4 -20 0 -24 Z" fill="#fdfcf8" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M0 -21 C3.2 -18 4.4 -13 4.4 -8 L4.4 19 Q4.4 22.6 0 23 Q-4.4 22.6 -4.4 19 L-4.4 -8 C-4.4 -13 -3.2 -18 0 -21 Z" fill="#eef1f4"/>
+  <rect x="-3.4" y="-14" width="6.8" height="26" rx="2.4" fill="#fdfcf8" stroke="#c9d2da" stroke-width="0.4"/>
+  <rect x="-2" y="-6" width="4" height="6" rx="1.6" fill="#7cc6ea" stroke="#5b4636" stroke-width="0.35"/>
+  <path d="M-1.2 -4.2 q0.6 -0.6 1.2 0 q0.6 0.6 1.2 0" stroke="#ffffff" stroke-width="0.35" fill="none" stroke-linecap="round"/>
+  <rect x="-1.7" y="5" width="3.4" height="3.4" rx="1" fill="var(--funnel, #e8655a)" stroke="#5b4636" stroke-width="0.4"/>
+  <g fill="#9bcbe6"><rect x="-5.4" y="-10" width="0.7" height="26" rx="0.35"/><rect x="4.7" y="-10" width="0.7" height="26" rx="0.35"/></g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="-5.4" y="-10" width="0.7" height="26" rx="0.35"/><rect x="4.7" y="-10" width="0.7" height="26" rx="0.35"/></g>
+  <circle cx="0" cy="-17" r="1.1" fill="#f2c14e" stroke="#5b4636" stroke-width="0.3"/>
+</svg>

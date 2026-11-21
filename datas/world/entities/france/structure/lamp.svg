@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 20">
+  <!-- 파리 가로등: 진녹색 주철 기둥, 둥근 받침, 육각 등롱. 밤엔 따뜻한 불빛 -->
+  <circle cx="4" cy="4" r="4" fill="#ffd98a" style="opacity: calc(var(--night, 0) * 0.45)"/>
+  <ellipse cx="4" cy="19.3" rx="1.8" ry="0.5" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round" fill="#2f4a3e">
+    <rect x="2.6" y="17" width="2.8" height="2.4" rx="0.8"/>
+    <rect x="3.5" y="6.6" width="1" height="10.6" rx="0.4"/>
+    <rect x="3" y="11" width="2" height="0.8" rx="0.4"/>
+    <path d="M2.4 6.6 L5.6 6.6 L5 7.6 L3 7.6 Z"/>
+    <path d="M2.2 2.8 L5.8 2.8 L5.2 6.6 L2.8 6.6 Z" fill="#fff4cf"/>
+    <path d="M1.8 3 C1.8 0.8 6.2 0.8 6.2 3 Z"/>
+    <circle cx="4" cy="0.8" r="0.4"/>
+  </g>
+  <path d="M3 3.2 L5 3.2 L4.6 6.2 L3.4 6.2 Z" fill="#ffc95c" style="opacity: var(--night, 0)"/>
+</svg>

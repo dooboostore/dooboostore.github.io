@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 16">
+  <!-- 워싱턴 글로브 가로등: 초록 철제 기둥 위 둥근 유리구. 밤엔 불이 켜진다 -->
+  <ellipse cx="3" cy="15.4" rx="1.8" ry="0.5" fill="#3b5a2e" opacity="0.2"/>
+  <circle cx="3" cy="3" r="3" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="2.4" y="5" width="1.2" height="10.4" rx="0.5" fill="#3f6b5a"/>
+  <rect x="1.6" y="14.2" width="2.8" height="1.3" rx="0.5" fill="#3f6b5a"/>
+  <rect x="2" y="4.6" width="2" height="1" rx="0.4" fill="#3f6b5a"/>
+  <circle cx="3" cy="3" r="1.8" fill="#f4f1e8"/>
+  </g>
+  <circle cx="3" cy="3" r="1.6" fill="#ffe28a" style="opacity: var(--night, 0)"/>
+  <circle cx="2.4" cy="2.4" r="0.5" fill="#fff" opacity="0.8"/>
+</svg>

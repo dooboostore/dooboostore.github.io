@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 10" data-foot="0.5 0.5">
+  <!-- 하늘을 가로지르는 새 떼 -->
+  <g fill="none" stroke="#5b4636" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 4 Q4 2 6 4 Q8 2 10 4"><animate attributeName="d" values="M2 4 Q4 2 6 4 Q8 2 10 4;M2 3 Q4 5 6 4 Q8 5 10 3;M2 4 Q4 2 6 4 Q8 2 10 4" dur="0.9s" repeatCount="indefinite"/></path>
+    <path d="M12 7 Q14 5 16 7 Q18 5 20 7"><animate attributeName="d" values="M12 7 Q14 5 16 7 Q18 5 20 7;M12 6 Q14 8 16 7 Q18 8 20 6;M12 7 Q14 5 16 7 Q18 5 20 7" dur="1s" repeatCount="indefinite"/></path>
+    <path d="M15 1.5 Q16.4 0.2 17.8 1.5 Q19.2 0.2 20.6 1.5"><animate attributeName="d" values="M15 1.5 Q16.4 0.2 17.8 1.5 Q19.2 0.2 20.6 1.5;M15 1 Q16.4 2.6 17.8 1.5 Q19.2 2.6 20.6 1;M15 1.5 Q16.4 0.2 17.8 1.5 Q19.2 0.2 20.6 1.5" dur="0.8s" repeatCount="indefinite"/></path>
+  </g>
+</svg>

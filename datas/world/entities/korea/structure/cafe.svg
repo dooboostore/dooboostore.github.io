@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+  <!-- 동네 카페: 줄무늬 차양, 큰 창 안 따뜻한 조명, 커피잔 간판, 화분과 바깥 의자. 밤엔 창이 환하다 -->
+  <ellipse cx="13" cy="25" rx="12.4" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2" y="4" width="22" height="20.6" rx="1.4" fill="var(--wall, #f3e4cf)"/>
+    <rect x="1.4" y="2.8" width="23.2" height="2.4" rx="1.1" fill="#8a5a3f"/>
+    <rect x="4" y="13.6" width="11.4" height="8.8" rx="1" fill="#d8eff9"/>
+    <rect x="17" y="13.6" width="5" height="10.8" rx="1" fill="#b07a52"/>
+    <path d="M1.4 9.6 L2.6 6.4 L23.4 6.4 L24.6 9.6 Q24.6 11.2 23 11.2 Q21.6 11.2 21.4 9.8 Q21 11.2 19.6 11.2 Q18.2 11.2 17.8 9.8 Q17.4 11.2 16 11.2 Q14.6 11.2 14.2 9.8 Q13.8 11.2 12.4 11.2 Q11 11.2 10.6 9.8 Q10.2 11.2 8.8 11.2 Q7.4 11.2 7 9.8 Q6.6 11.2 5.2 11.2 Q3.8 11.2 3.4 9.8 Q3 11.2 2.4 11 Q1.4 10.8 1.4 9.6 Z" fill="#ffffff"/>
+  </g>
+  <clipPath id="aw"><path d="M1.4 9.6 L2.6 6.4 L23.4 6.4 L24.6 9.6 Q24.6 11.2 23 11.2 Q21.6 11.2 21.4 9.8 Q21 11.2 19.6 11.2 Q18.2 11.2 17.8 9.8 Q17.4 11.2 16 11.2 Q14.6 11.2 14.2 9.8 Q13.8 11.2 12.4 11.2 Q11 11.2 10.6 9.8 Q10.2 11.2 8.8 11.2 Q7.4 11.2 7 9.8 Q6.6 11.2 5.2 11.2 Q3.8 11.2 3.4 9.8 Q3 11.2 2.4 11 Q1.4 10.8 1.4 9.6 Z"/></clipPath>
+  <g fill="var(--awning, #3f9a80)" clip-path="url(#aw)"><rect x="3.4" y="6" width="3.6" height="6"/><rect x="10.6" y="6" width="3.6" height="6"/><rect x="17.8" y="6" width="3.6" height="6"/></g>
+  <path d="M1.4 9.6 L2.6 6.4 L23.4 6.4 L24.6 9.6 Q24.6 11.2 23 11.2 Q21.6 11.2 21.4 9.8 Q21 11.2 19.6 11.2 Q18.2 11.2 17.8 9.8 Q17.4 11.2 16 11.2 Q14.6 11.2 14.2 9.8 Q13.8 11.2 12.4 11.2 Q11 11.2 10.6 9.8 Q10.2 11.2 8.8 11.2 Q7.4 11.2 7 9.8 Q6.6 11.2 5.2 11.2 Q3.8 11.2 3.4 9.8 Q3 11.2 2.4 11 Q1.4 10.8 1.4 9.6 Z" fill="none" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>
+  <rect x="4.3" y="13.9" width="10.8" height="8.2" rx="0.8" fill="#ffd77a" style="opacity: calc(0.25 + var(--night, 0) * 0.75)"/>
+  <g fill="#c9895a" opacity="0.5"><circle cx="7.4" cy="17.6" r="1.4"/><rect x="6.2" y="18.2" width="2.4" height="3.6" rx="1"/></g>
+  <g stroke="#8a5a3f" stroke-width="0.4" stroke-linecap="round"><path d="M5.6 13.6 Q5.6 15 5.6 15.2 M9.7 13.6 L9.7 15.4 M13.8 13.6 L13.8 15.2"/></g>
+  <g fill="#ffe27a" stroke="#5b4636" stroke-width="0.25"><circle cx="5.6" cy="15.6" r="0.5"/><circle cx="9.7" cy="15.8" r="0.5"/><circle cx="13.8" cy="15.6" r="0.5"/></g>
+  <circle cx="20.6" cy="19" r="0.45" fill="#f6c944" stroke="#5b4636" stroke-width="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 0.6 L16 0.6 L15.6 2.6 Q13 3.4 10.4 2.6 Z" fill="#ffffff"/>
+    <path d="M16 1 Q17.4 1.2 15.8 2.2" fill="none"/>
+    <path d="M3.6 21.6 L6 21.6 L5.6 24.4 L4 24.4 Z" fill="#c99a6b"/>
+    <circle cx="4.8" cy="20.4" r="1.6" fill="#7cc36a"/>
+  </g>
+  <path d="M11.4 1.4 Q13 1.8 14.6 1.4" stroke="#8a5a3f" stroke-width="0.4" fill="none" stroke-linecap="round"/>
+  <rect x="2.4" y="3.2" width="21.2" height="0.7" rx="0.35" fill="#fff" opacity="0.3"/>
+  <path d="M4.8 14.6 L7 13.9 M10.4 16.4 L13.2 14.4" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" stroke-linecap="round"/>
+  <rect x="2.4" y="23.2" width="21.2" height="1.1" rx="0.5" fill="#000" opacity="0.1"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 배낭 여행자: 모자, 배낭, 목에 건 카메라 (left) -->
+<g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.4" ry="0.8" fill="#e8e4dc"/>
+    <ellipse cx="7.2" cy="16.9" rx="1.4" ry="0.8" fill="#e8e4dc"/>
+    <path d="M4 16.4 L4.4 13.6 L7.8 13.6 L8 16.4 Z" fill="var(--pants, #5d6f94)"/>
+    <rect x="7.4" y="9.8" width="3.4" height="4.8" rx="1.2" fill="var(--bag, #5d8fd6)"/>
+    <path d="M3.6 14 C3.4 11.6 4.2 10.2 6 10.2 C7.8 10.2 8.6 11.6 8.4 14 Z" fill="var(--shirt, #f0a45a)"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--skin, #ffe0c7)"/>
+    <path d="M1.1 6.6 A4.95 4.95 0 1 1 10.9 6.6 C10.8 8.7 9.6 10.1 7.9 9.8 C8.4 8.3 7.9 6.6 6.8 5.9 C5.5 5.1 3 4.9 1.1 6.6 Z" fill="var(--hair, #6b4a35)"/>
+    <path d="M1.05 6 A4.95 4.95 0 1 1 10.95 6 Z" fill="var(--cap, #3f9a80)"/>
+    <path d="M3.2 4.6 Q0.6 4.6 0.4 5.6 Q2 6 3.6 5.4 Z" fill="var(--cap, #3f9a80)"/>
+    <path d="M7.2 10.4 L7.6 13.8" fill="none" stroke="var(--bag, #5d8fd6)" stroke-width="0.8"/>
+    <ellipse cx="6.4" cy="12.6" rx="0.95" ry="1.45" fill="var(--shirt, #f0a45a)" transform="rotate(-18 6.4 12.6)"/>
+  </g>
+  <ellipse cx="2.9" cy="7.1" rx="0.5" ry="0.75" fill="#3d2b22"/>
+  <circle cx="3.05" cy="6.85" r="0.18" fill="#fff"/>
+  <ellipse cx="2.6" cy="8.5" rx="0.8" ry="0.45" fill="#ff9e9e" opacity="0.55"/>
+  <circle cx="6.9" cy="7.3" r="0.75" fill="var(--skin, #ffe0c7)" stroke="#5b4636" stroke-width="0.3"/>
+</svg>

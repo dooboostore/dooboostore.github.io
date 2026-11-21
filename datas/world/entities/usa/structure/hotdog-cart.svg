@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18">
+  <!-- 핫도그 카트: 줄무늬 둥근 파라솔, 은색 카트, 바퀴, 모락모락 김 -->
+  <ellipse cx="8" cy="17.2" rx="7" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g fill="#fbf7ef">
+  <circle cx="6" cy="9" r="0.6"><animate attributeName="cy" values="9;5" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="9" cy="9" r="0.6"><animate attributeName="cy" values="9;5" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <line x1="8" y1="4" x2="8" y2="10.4" stroke="#8b9197" stroke-width="0.5" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M1.4 5 C1.6 0.8 14.4 0.8 14.6 5 Q8 4 1.4 5 Z" fill="#ffd36e"/>
+  <path d="M5.4 4.6 C5.6 1.6 6.6 1 8 1 C6.8 1.6 6.6 3 6.8 4.4 Z M9.2 4.4 C9.4 3 9.2 1.6 8 1 C9.4 1 10.4 1.6 10.6 4.6 Z" fill="#e9785a"/>
+  <rect x="2" y="10" width="12" height="5" rx="1.4" fill="#dfe5ea"/>
+  <rect x="2.6" y="9.4" width="10.8" height="1.2" rx="0.6" fill="#c3cbd2"/>
+  </g>
+  <rect x="3.6" y="11.4" width="5" height="2.2" rx="0.6" fill="#d6453d"/>
+  <path d="M4.4 12.5 Q6.1 11.7 7.8 12.5" stroke="#f2c641" stroke-width="0.4" fill="none" stroke-linecap="round"/>
+  <rect x="2.4" y="10.6" width="11.2" height="0.6" rx="0.3" fill="#fff" opacity="0.6"/>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="4.6" cy="15.6" r="1.3" fill="#3e4348"/><circle cx="11.4" cy="15.6" r="1.3" fill="#3e4348"/></g>
+  <circle cx="4.6" cy="15.6" r="0.5" fill="#d3d8dd"/><circle cx="11.4" cy="15.6" r="0.5" fill="#d3d8dd"/>
+</svg>

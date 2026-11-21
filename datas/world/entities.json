@@ -1,0 +1,684 @@
+{
+  "entities": [
+    {
+      "id": "parts/shadow.svg",
+      "name": "그림자"
+    },
+    {
+      "id": "parts/wheel.svg",
+      "name": "바퀴"
+    },
+    {
+      "id": "nature/ginkgo.svg",
+      "name": "은행나무"
+    },
+    {
+      "id": "nature/pine.svg",
+      "name": "소나무"
+    },
+    {
+      "id": "people/walker",
+      "name": "산책하는 사람"
+    },
+    {
+      "id": "animal/pigeon",
+      "name": "비둘기"
+    },
+    {
+      "id": "landmark/namsan-tower",
+      "name": "남산서울타워"
+    },
+    {
+      "id": "landmark/namsan-tower/tower.svg",
+      "name": "N타워 (탑)"
+    },
+    {
+      "id": "building/gwanghwamun.svg",
+      "name": "광화문"
+    },
+    {
+      "id": "building/hanok.svg",
+      "name": "한옥"
+    },
+    {
+      "id": "building/apartment.svg",
+      "name": "아파트"
+    },
+    {
+      "id": "vehicle/bus",
+      "name": "시내버스"
+    },
+    {
+      "id": "vehicle/boat",
+      "name": "한강 유람선"
+    },
+    {
+      "id": "nature/round-tree.svg",
+      "name": "동글 나무"
+    },
+    {
+      "id": "nature/flowers.svg",
+      "name": "꽃밭"
+    },
+    {
+      "id": "animal/butterfly",
+      "name": "나비"
+    },
+    {
+      "id": "animal/birds.svg",
+      "name": "새 떼"
+    },
+    {
+      "id": "structure/street-lamp.svg",
+      "name": "가로등"
+    },
+    {
+      "id": "vehicle/airplane.svg",
+      "name": "여객기 (위에서)"
+    },
+    {
+      "id": "vehicle/container-ship.svg",
+      "name": "컨테이너선 (위에서)"
+    },
+    {
+      "id": "vehicle/carrier.svg",
+      "name": "항공모함 (위에서)"
+    },
+    {
+      "id": "vehicle/jumbo.svg",
+      "name": "점보 여객기 (위에서)"
+    },
+    {
+      "id": "vehicle/turboprop.svg",
+      "name": "프로펠러 지역 항공기 (위에서)"
+    },
+    {
+      "id": "vehicle/cruise-ship.svg",
+      "name": "크루즈선 (위에서)"
+    },
+    {
+      "id": "vehicle/tanker.svg",
+      "name": "유조선 (위에서)"
+    },
+    {
+      "id": "vehicle/fishing-boat.svg",
+      "name": "어선 (위에서)"
+    },
+    {
+      "id": "vehicle/sailboat.svg",
+      "name": "요트 (위에서)"
+    },
+    {
+      "id": "korea/people/hanbok-woman",
+      "name": "한복 입은 여자"
+    },
+    {
+      "id": "korea/people/hanbok-man",
+      "name": "한복 입은 남자 (두루마기·갓)"
+    },
+    {
+      "id": "korea/people/student",
+      "name": "교복 입은 고등학생"
+    },
+    {
+      "id": "korea/people/office-worker",
+      "name": "커피 든 직장인"
+    },
+    {
+      "id": "korea/people/hiker",
+      "name": "등산복 어르신"
+    },
+    {
+      "id": "korea/people/ajumma",
+      "name": "장바구니 끄는 아주머니"
+    },
+    {
+      "id": "korea/people/kid-balloon",
+      "name": "풍선 든 아이"
+    },
+    {
+      "id": "korea/vehicle/taxi",
+      "name": "서울 택시"
+    },
+    {
+      "id": "korea/vehicle/scooter",
+      "name": "배달 스쿠터"
+    },
+    {
+      "id": "korea/vehicle/bicycle",
+      "name": "한강 자전거"
+    },
+    {
+      "id": "korea/structure/pojangmacha.svg",
+      "name": "포장마차"
+    },
+    {
+      "id": "korea/structure/convenience-store.svg",
+      "name": "편의점"
+    },
+    {
+      "id": "korea/structure/bus-stop.svg",
+      "name": "버스 정류장"
+    },
+    {
+      "id": "korea/structure/bungeoppang-cart.svg",
+      "name": "붕어빵 수레"
+    },
+    {
+      "id": "korea/structure/cafe.svg",
+      "name": "동네 카페"
+    },
+    {
+      "id": "animal/whale.svg",
+      "name": "혹등고래 (위에서)"
+    },
+    {
+      "id": "animal/dolphins.svg",
+      "name": "돌고래 떼 (위에서)"
+    },
+    {
+      "id": "structure/oil-rig.svg",
+      "name": "해양 석유 시추선 (위에서)"
+    },
+    {
+      "id": "structure/wind-farm.svg",
+      "name": "해상 풍력단지 (위에서)"
+    },
+    {
+      "id": "usa/people/business",
+      "name": "직장인 (커피·출입증)"
+    },
+    {
+      "id": "usa/people/jogger",
+      "name": "조깅하는 사람"
+    },
+    {
+      "id": "usa/people/tourist",
+      "name": "관광객 (모자·지도)"
+    },
+    {
+      "id": "usa/people/ranger",
+      "name": "공원 레인저"
+    },
+    {
+      "id": "usa/people/student",
+      "name": "대학생 (후드티·백팩)"
+    },
+    {
+      "id": "usa/people/kid",
+      "name": "풍선 든 아이"
+    },
+    {
+      "id": "usa/landmark/capitol.svg",
+      "name": "미 국회의사당"
+    },
+    {
+      "id": "usa/landmark/washington-monument.svg",
+      "name": "워싱턴 기념탑"
+    },
+    {
+      "id": "usa/landmark/lincoln-memorial.svg",
+      "name": "링컨 기념관"
+    },
+    {
+      "id": "usa/landmark/white-house.svg",
+      "name": "백악관"
+    },
+    {
+      "id": "usa/landmark/jefferson-memorial.svg",
+      "name": "제퍼슨 기념관"
+    },
+    {
+      "id": "usa/landmark/smithsonian-castle.svg",
+      "name": "스미소니언 캐슬"
+    },
+    {
+      "id": "usa/building/rowhouse.svg",
+      "name": "조지타운 컬러 연립주택"
+    },
+    {
+      "id": "usa/building/brownstone.svg",
+      "name": "브라운스톤 주택"
+    },
+    {
+      "id": "usa/building/federal.svg",
+      "name": "연방 대리석 청사"
+    },
+    {
+      "id": "usa/structure/hotdog-cart.svg",
+      "name": "핫도그 카트"
+    },
+    {
+      "id": "usa/structure/globe-lamp.svg",
+      "name": "워싱턴 글로브 가로등"
+    },
+    {
+      "id": "usa/nature/cherry-tree.svg",
+      "name": "벚나무"
+    },
+    {
+      "id": "usa/nature/oak.svg",
+      "name": "참나무 (느릅·참나무 가로수)"
+    },
+    {
+      "id": "usa/nature/red-maple.svg",
+      "name": "붉은 단풍나무"
+    },
+    {
+      "id": "usa/vehicle/school-bus",
+      "name": "스쿨버스"
+    },
+    {
+      "id": "usa/vehicle/city-bus",
+      "name": "시내버스 (서큘레이터·메트로버스)"
+    },
+    {
+      "id": "usa/vehicle/car",
+      "name": "승용차"
+    },
+    {
+      "id": "usa/vehicle/food-truck",
+      "name": "푸드트럭"
+    },
+    {
+      "id": "usa/vehicle/paddle-boat.svg",
+      "name": "패들보트 (오리배)"
+    },
+    {
+      "id": "usa/vehicle/kayak.svg",
+      "name": "카약"
+    },
+    {
+      "id": "usa/animal/squirrel",
+      "name": "회색 다람쥐"
+    },
+    {
+      "id": "usa/animal/goose.svg",
+      "name": "캐나다 거위"
+    },
+    {
+      "id": "usa/animal/ducks.svg",
+      "name": "청둥오리 가족"
+    },
+    {
+      "id": "uk/landmark/parliament",
+      "name": "국회의사당 (웨스트민스터 궁전)"
+    },
+    {
+      "id": "uk/landmark/parliament/elizabeth-tower.svg",
+      "name": "엘리자베스 타워 (빅벤)"
+    },
+    {
+      "id": "uk/landmark/buckingham-palace.svg",
+      "name": "버킹엄 궁전"
+    },
+    {
+      "id": "uk/landmark/london-eye.svg",
+      "name": "런던 아이"
+    },
+    {
+      "id": "uk/landmark/st-pauls.svg",
+      "name": "세인트폴 대성당"
+    },
+    {
+      "id": "uk/landmark/tower-of-london.svg",
+      "name": "런던탑"
+    },
+    {
+      "id": "uk/landmark/tower-bridge.svg",
+      "name": "타워 브리지"
+    },
+    {
+      "id": "uk/landmark/shard.svg",
+      "name": "더 샤드"
+    },
+    {
+      "id": "uk/building/terraced-house.svg",
+      "name": "벽돌 테라스 하우스"
+    },
+    {
+      "id": "uk/building/georgian-townhouse.svg",
+      "name": "조지안 타운하우스"
+    },
+    {
+      "id": "uk/building/pub.svg",
+      "name": "영국 펍"
+    },
+    {
+      "id": "uk/structure/phone-box.svg",
+      "name": "빨간 공중전화 부스"
+    },
+    {
+      "id": "uk/structure/post-box.svg",
+      "name": "빨간 우체통"
+    },
+    {
+      "id": "uk/structure/lamp-post.svg",
+      "name": "빅토리아풍 가로등"
+    },
+    {
+      "id": "uk/structure/sentry-box.svg",
+      "name": "근위병 초소"
+    },
+    {
+      "id": "uk/nature/oak.svg",
+      "name": "참나무"
+    },
+    {
+      "id": "uk/nature/plane-tree.svg",
+      "name": "런던 플라타너스"
+    },
+    {
+      "id": "uk/nature/rose-bed.svg",
+      "name": "장미 화단"
+    },
+    {
+      "id": "uk/people/kings-guard",
+      "name": "근위병 (곰털모자)"
+    },
+    {
+      "id": "uk/people/gentleman",
+      "name": "중절모 신사"
+    },
+    {
+      "id": "uk/people/trench-coat",
+      "name": "트렌치코트 여성"
+    },
+    {
+      "id": "uk/people/schoolkid",
+      "name": "교복 입은 학생"
+    },
+    {
+      "id": "uk/people/punk",
+      "name": "펑크족"
+    },
+    {
+      "id": "uk/people/jogger",
+      "name": "조깅하는 사람"
+    },
+    {
+      "id": "uk/people/tourist",
+      "name": "관광객"
+    },
+    {
+      "id": "uk/vehicle/double-decker",
+      "name": "빨간 2층 버스"
+    },
+    {
+      "id": "uk/vehicle/black-cab",
+      "name": "블랙캡 택시"
+    },
+    {
+      "id": "uk/vehicle/river-boat.svg",
+      "name": "템스강 리버보트"
+    },
+    {
+      "id": "uk/animal/swan.svg",
+      "name": "백조"
+    },
+    {
+      "id": "uk/animal/raven",
+      "name": "런던탑 까마귀"
+    },
+    {
+      "id": "uk/animal/deer",
+      "name": "리치먼드 공원 사슴"
+    },
+    {
+      "id": "uk/animal/squirrel",
+      "name": "회색 다람쥐"
+    },
+    {
+      "id": "france/landmark/eiffel-tower.svg",
+      "name": "에펠탑"
+    },
+    {
+      "id": "france/landmark/arc-de-triomphe.svg",
+      "name": "개선문"
+    },
+    {
+      "id": "france/landmark/notre-dame.svg",
+      "name": "노트르담 대성당"
+    },
+    {
+      "id": "france/landmark/montmartre",
+      "name": "몽마르트르 언덕"
+    },
+    {
+      "id": "france/landmark/montmartre/sacre-coeur.svg",
+      "name": "사크레쾨르 대성당"
+    },
+    {
+      "id": "france/landmark/louvre",
+      "name": "루브르 궁전과 유리 피라미드"
+    },
+    {
+      "id": "france/landmark/moulin-rouge.svg",
+      "name": "물랭루주"
+    },
+    {
+      "id": "france/building/haussmann.svg",
+      "name": "오스만 양식 아파트"
+    },
+    {
+      "id": "france/building/cafe.svg",
+      "name": "파리 카페"
+    },
+    {
+      "id": "france/building/boulangerie.svg",
+      "name": "불랑제리 (빵집)"
+    },
+    {
+      "id": "france/structure/carousel.svg",
+      "name": "회전목마"
+    },
+    {
+      "id": "france/structure/kiosk.svg",
+      "name": "신문 가판대"
+    },
+    {
+      "id": "france/structure/wallace-fountain.svg",
+      "name": "월리스 분수"
+    },
+    {
+      "id": "france/structure/morris-column.svg",
+      "name": "모리스 광고탑"
+    },
+    {
+      "id": "france/structure/lamp.svg",
+      "name": "파리 가로등"
+    },
+    {
+      "id": "france/structure/bouquiniste.svg",
+      "name": "센 강변 헌책방"
+    },
+    {
+      "id": "france/structure/obelisk.svg",
+      "name": "콩코르드 오벨리스크"
+    },
+    {
+      "id": "france/nature/platane.svg",
+      "name": "플라타너스"
+    },
+    {
+      "id": "france/nature/marronnier.svg",
+      "name": "마로니에"
+    },
+    {
+      "id": "france/people/marin",
+      "name": "마리니에르 입은 파리지앵"
+    },
+    {
+      "id": "france/people/trench",
+      "name": "트렌치코트 산책객"
+    },
+    {
+      "id": "france/people/baguette",
+      "name": "바게트 든 사람"
+    },
+    {
+      "id": "france/people/lady",
+      "name": "모자 쓴 숙녀"
+    },
+    {
+      "id": "france/people/jogger",
+      "name": "조깅하는 사람"
+    },
+    {
+      "id": "france/people/tourist",
+      "name": "관광객"
+    },
+    {
+      "id": "france/people/kid",
+      "name": "풍선 든 꼬마"
+    },
+    {
+      "id": "france/people/painter.svg",
+      "name": "이젤 앞 화가"
+    },
+    {
+      "id": "france/vehicle/car",
+      "name": "파리 소형차"
+    },
+    {
+      "id": "france/vehicle/bus",
+      "name": "RATP 버스"
+    },
+    {
+      "id": "france/vehicle/velib",
+      "name": "벨리브 자전거"
+    },
+    {
+      "id": "france/vehicle/bateau-mouche",
+      "name": "바토무슈 유람선"
+    },
+    {
+      "id": "france/animal/swan.svg",
+      "name": "백조"
+    },
+    {
+      "id": "france/animal/ducks.svg",
+      "name": "오리 가족"
+    },
+    {
+      "id": "japan/landmark/tokyo-tower.svg",
+      "name": "도쿄타워"
+    },
+    {
+      "id": "japan/landmark/skytree.svg",
+      "name": "도쿄 스카이트리"
+    },
+    {
+      "id": "japan/landmark/kaminarimon.svg",
+      "name": "가미나리몬 (센소지)"
+    },
+    {
+      "id": "japan/landmark/pagoda.svg",
+      "name": "센소지 오층탑"
+    },
+    {
+      "id": "japan/landmark/otorii.svg",
+      "name": "메이지 신궁 오토리이"
+    },
+    {
+      "id": "japan/landmark/yagura.svg",
+      "name": "고쿄 후시미야구라"
+    },
+    {
+      "id": "japan/landmark/tokyo-station.svg",
+      "name": "도쿄역 마루노우치 역사"
+    },
+    {
+      "id": "japan/landmark/hachiko.svg",
+      "name": "하치코 동상"
+    },
+    {
+      "id": "japan/building/machiya.svg",
+      "name": "마치야 (목조 상가 주택)"
+    },
+    {
+      "id": "japan/building/office-tower.svg",
+      "name": "유리 오피스 빌딩"
+    },
+    {
+      "id": "japan/building/mansion.svg",
+      "name": "맨션 (일본식 아파트)"
+    },
+    {
+      "id": "japan/building/konbini.svg",
+      "name": "편의점"
+    },
+    {
+      "id": "japan/building/vending.svg",
+      "name": "자판기"
+    },
+    {
+      "id": "japan/building/shrine.svg",
+      "name": "동네 신사"
+    },
+    {
+      "id": "japan/structure/torii.svg",
+      "name": "붉은 도리이"
+    },
+    {
+      "id": "japan/nature/momiji.svg",
+      "name": "단풍나무 (모미지)"
+    },
+    {
+      "id": "japan/nature/sakura.svg",
+      "name": "늦가을 벚나무"
+    },
+    {
+      "id": "japan/nature/kuromatsu.svg",
+      "name": "정원 곰솔 (유키쓰리)"
+    },
+    {
+      "id": "japan/people/salaryman",
+      "name": "샐러리맨"
+    },
+    {
+      "id": "japan/people/schoolgirl",
+      "name": "세일러복 여학생"
+    },
+    {
+      "id": "japan/people/kimono",
+      "name": "기모노 여성"
+    },
+    {
+      "id": "japan/people/elder",
+      "name": "지팡이 짚은 어르신"
+    },
+    {
+      "id": "japan/people/tourist",
+      "name": "배낭 여행자"
+    },
+    {
+      "id": "japan/people/schoolkid",
+      "name": "란도셀 초등학생"
+    },
+    {
+      "id": "japan/vehicle/taxi",
+      "name": "도쿄 택시"
+    },
+    {
+      "id": "japan/vehicle/toei-bus",
+      "name": "도에이 버스"
+    },
+    {
+      "id": "japan/vehicle/kei-truck",
+      "name": "경트럭"
+    },
+    {
+      "id": "japan/vehicle/train",
+      "name": "전철 (주오·야마노테)"
+    },
+    {
+      "id": "japan/vehicle/water-bus",
+      "name": "수상버스"
+    },
+    {
+      "id": "japan/animal/crow",
+      "name": "까마귀"
+    }
+  ]
+}

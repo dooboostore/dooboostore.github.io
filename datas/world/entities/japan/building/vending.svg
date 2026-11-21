@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- 길가 자판기 두 대: 진열 칸 음료 캔, 버튼, 꺼내는 구멍. 색 변수 vm, vm2. 밤엔 환하게 빛난다 -->
+  <ellipse cx="8" cy="15.2" rx="7.4" ry="0.8" fill="#3b5a2e" opacity="0.22"/>
+  <rect x="1" y="1" width="14" height="14" rx="1.2" fill="#fff8d8" style="opacity: calc(var(--night, 0) * 0.4)"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="1.4" y="1.6" width="6.4" height="13.4" rx="1" fill="var(--vm, #e2574c)"/>
+    <rect x="8.2" y="1.6" width="6.4" height="13.4" rx="1" fill="var(--vm2, #f4f2ec)"/>
+    <rect x="2.2" y="2.6" width="4.8" height="5.8" rx="0.5" fill="#f9f6ee"/>
+    <rect x="9" y="2.6" width="4.8" height="5.8" rx="0.5" fill="#f9f6ee"/>
+    <rect x="2.6" y="12.2" width="4" height="1.6" rx="0.4" fill="#3e3a3a"/>
+    <rect x="9.4" y="12.2" width="4" height="1.6" rx="0.4" fill="#3e3a3a"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.2">
+    <rect x="2.6" y="3.2" width="0.9" height="1.4" rx="0.3" fill="#5d8fd6"/><rect x="4.1" y="3.2" width="0.9" height="1.4" rx="0.3" fill="#f6d34a"/><rect x="5.6" y="3.2" width="0.9" height="1.4" rx="0.3" fill="#6cc07a"/>
+    <rect x="2.6" y="5.6" width="0.9" height="1.4" rx="0.3" fill="#8a5a3f"/><rect x="4.1" y="5.6" width="0.9" height="1.4" rx="0.3" fill="#e2574c"/><rect x="5.6" y="5.6" width="0.9" height="1.4" rx="0.3" fill="#f4b6c2"/>
+    <rect x="9.4" y="3.2" width="0.9" height="1.4" rx="0.3" fill="#e2574c"/><rect x="10.9" y="3.2" width="0.9" height="1.4" rx="0.3" fill="#3f9a80"/><rect x="12.4" y="3.2" width="0.9" height="1.4" rx="0.3" fill="#f08a3c"/>
+    <rect x="9.4" y="5.6" width="0.9" height="1.4" rx="0.3" fill="#f6d34a"/><rect x="10.9" y="5.6" width="0.9" height="1.4" rx="0.3" fill="#5d8fd6"/><rect x="12.4" y="5.6" width="0.9" height="1.4" rx="0.3" fill="#e9e3d7"/>
+  </g>
+  <g fill="#fff6cc" style="opacity: calc(0.15 + var(--night, 0) * 0.6)"><rect x="2.2" y="2.6" width="4.8" height="5.8" rx="0.5"/><rect x="9" y="2.6" width="4.8" height="5.8" rx="0.5"/></g>
+  <g fill="#ff8f7a"><circle cx="3" cy="9.4" r="0.3"/><circle cx="4" cy="9.4" r="0.3"/><circle cx="5" cy="9.4" r="0.3"/><circle cx="6" cy="9.4" r="0.3"/><circle cx="9.8" cy="9.4" r="0.3"/><circle cx="10.8" cy="9.4" r="0.3"/><circle cx="11.8" cy="9.4" r="0.3"/><circle cx="12.8" cy="9.4" r="0.3"/></g>
+  <rect x="5.4" y="10.4" width="1.2" height="1" rx="0.3" fill="#3e3a3a"/><rect x="12.2" y="10.4" width="1.2" height="1" rx="0.3" fill="#3e3a3a"/>
+  <rect x="1.8" y="2" width="0.6" height="12" rx="0.3" fill="#fff" opacity="0.35"/>
+</svg>

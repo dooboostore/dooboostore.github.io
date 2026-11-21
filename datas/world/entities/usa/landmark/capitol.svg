@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 50">
+  <!-- 미 국회의사당: 흰 대리석 양 날개 + 열주, 둥근 원형 드럼 위 둥근 돔, 꼭대기 랜턴과 자유의 여신상(동글게). 밤엔 돔이 은은히 빛난다 -->
+  <ellipse cx="42" cy="48.4" rx="41" ry="1.6" fill="#3b5a2e" opacity="0.22"/>
+  <ellipse cx="42" cy="18" rx="16" ry="14" fill="#fff4c8" style="opacity: calc(var(--night, 0) * 0.45)"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="2" y="43.6" width="80" height="4.6" rx="1.6" fill="#e6e0d3"/>
+  <rect x="4" y="30" width="24" height="14" rx="1.4" fill="#f7f4ec"/>
+  <rect x="56" y="30" width="24" height="14" rx="1.4" fill="#f7f4ec"/>
+  <rect x="3" y="27.6" width="26" height="3" rx="1.4" fill="#ece7dc"/>
+  <rect x="55" y="27.6" width="26" height="3" rx="1.4" fill="#ece7dc"/>
+  <rect x="26" y="26" width="32" height="18" rx="1.4" fill="#fbf8f2"/>
+  <path d="M32 26.4 Q42 20.6 52 26.4 Z" fill="#f7f4ec"/>
+  <rect x="31" y="15.6" width="22" height="9.6" rx="2" fill="#f7f4ec"/>
+  <rect x="30" y="14" width="24" height="2.4" rx="1.2" fill="#ece7dc"/>
+  <path d="M32 14.4 C32 4.4 52 4.4 52 14.4 Z" fill="#fbf8f2"/>
+  <rect x="39.6" y="1.8" width="4.8" height="5" rx="1.6" fill="#f7f4ec"/>
+  <circle cx="42" cy="1.4" r="1.2" fill="#d9cfbd"/>
+  <rect x="36" y="43.6" width="12" height="4.6" rx="0.8" fill="#ece7dc"/>
+  </g>
+  <g stroke="#e0d8c8" stroke-width="0.9" stroke-linecap="round">
+  <path d="M34.4 26.4 V40.6 M37.6 27 V40.6 M40.8 27 V40.6 M43.2 27 V40.6 M46.4 27 V40.6 M49.6 26.4 V40.6"/>
+  <path d="M33.6 17 V24 M36.8 17 V24 M40 17 V24 M44 17 V24 M47.2 17 V24 M50.4 17 V24"/>
+  </g>
+  <g stroke="#000" stroke-opacity="0.12" stroke-width="0.35" fill="none"><path d="M36 13 Q37 8 40 6.4 M48 13 Q47 8 44 6.4 M42 6 V13.8"/></g>
+  <path d="M34.4 11 C35.6 7.4 39 5.6 42 5.4" stroke="#fff" stroke-opacity="0.55" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <rect x="4.4" y="38.4" width="75" height="5" rx="1" fill="#000" opacity="0.06"/>
+  <g fill="#b9d6ea">
+  <rect x="7" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="12" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="17" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="22" y="33" width="2.4" height="3.2" rx="0.8"/>
+  <rect x="59.6" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="64.6" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="69.6" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="74.6" y="33" width="2.4" height="3.2" rx="0.8"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+  <rect x="7" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="17" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="64.6" y="33" width="2.4" height="3.2" rx="0.8"/><rect x="74.6" y="33" width="2.4" height="3.2" rx="0.8"/>
+  <rect x="35" y="17.4" width="14" height="5.6" rx="1"/>
+  </g>
+  <g transform="translate(6 21.4) scale(0.9)">
+  <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
+  <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
+  </g>
+  <g transform="translate(74 21.4) scale(0.9)">
+  <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
+  <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
+  </g>
+</svg>

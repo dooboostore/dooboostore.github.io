@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 등산객 옆모습: 앞으로 짚는 스틱, 등에 작은 배낭, 썬캡 챙 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.6" cy="16.9" rx="1.4" ry="0.8" fill="#8a6a4f"/>
+    <ellipse cx="7.2" cy="16.9" rx="1.4" ry="0.8" fill="#8a6a4f"/>
+    <path d="M4 16.4 L4.4 13.6 L7.8 13.6 L8 16.4 Z" fill="var(--pants, #4a4f5c)"/>
+    <rect x="7.8" y="10.4" width="2.4" height="3.6" rx="1" fill="var(--bag, #5d8fd6)"/>
+    <path d="M3.6 14 C3.4 11.6 4.2 10.2 6 10.2 C7.8 10.2 8.6 11.6 8.4 14 Z" fill="var(--jacket, #e8584a)"/>
+    <circle cx="6" cy="6" r="4.7" fill="var(--skin, #f2d2b6)"/>
+    <path d="M1.3 5.6 A4.95 4.95 0 1 1 10.75 7.4 C10.2 9 9 9.6 8 9.2 C8.4 8 7.8 6.4 6.8 5.8 C5.6 5 4.2 4.8 2.8 5.2 C2.6 4.4 2.8 3.6 3.4 3.1 Z" fill="var(--hair, #a9a4a0)"/>
+    <path d="M10.6 4.6 Q6.4 3.4 3 4.2 L3.2 5 Q6.6 4.4 10.4 5.4 Z" fill="var(--visor, #ffd36e)"/>
+    <path d="M3.6 4.2 Q1.6 4.2 0.6 5 Q0.6 5.7 1.6 5.6 Q2.6 5.2 3.6 5.2 Z" fill="var(--visor, #ffd36e)"/>
+    <path d="M4.6 10.4 Q5.6 11.4 7 10.6 Q6.8 11.6 5.8 11.6 Q4.8 11.4 4.6 10.4 Z" fill="var(--scarf, #8fcf72)"/>
+  </g>
+  <path d="M3.6 13 L2 17.4" stroke="#5b4636" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M3.6 13 L2 17.4" stroke="#8c939a" stroke-width="0.45" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"><ellipse cx="5.4" cy="12.2" rx="0.95" ry="1.45" fill="var(--jacket, #e8584a)" transform="rotate(30 5.4 12.2)"/><circle cx="3.9" cy="13" r="0.6" fill="var(--skin, #f2d2b6)"/></g>
+  <rect x="8.2" y="10.8" width="1.4" height="0.6" rx="0.3" fill="#fff" opacity="0.3"/>
+  <path d="M2.6 7.2 Q3 6.7 3.4 7.2" stroke="#3d2b22" stroke-width="0.4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="2.6" cy="8.5" rx="0.8" ry="0.45" fill="#ff9e9e" opacity="0.6"/>
+  <circle cx="6.9" cy="7.3" r="0.75" fill="#ecc6a8" stroke="#5b4636" stroke-width="0.3"/>
+</svg>

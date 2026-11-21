@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -7 20 8">
+  <!-- 백조: 물 위에서 천천히 오가며 몸을 돌린다 (물 레이어에 놓음) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;8 0;8 0;0 0;0 0" keyTimes="0;0.45;0.5;0.95;1" dur="22s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1 1;-1 1" keyTimes="0;0.5" calcMode="discrete" dur="22s" repeatCount="indefinite"/>
+      <path d="M-4 0 Q0 0.9 4 0" stroke="#fff" stroke-width="0.4" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M-4 -1.6 C-4.4 -3.2 -2.6 -3.4 -1 -2.8 C0.6 -2.2 2 -2.2 2.6 -1.6 C3 -0.4 1.6 0 -0.6 0 C-2.6 0 -3.8 -0.6 -4 -1.6 Z" fill="#fdfcf8"/>
+        <path d="M1.4 -2 C2.2 -2.6 2.2 -4 1.8 -5 C1.6 -6 2.4 -6.6 3.2 -6.2 C3.6 -6 3.6 -5.6 3.4 -5.4 C2.8 -5.6 2.6 -5.2 2.8 -4.6 C3.2 -3.4 3.2 -2.2 2.6 -1.6 Z" fill="#fdfcf8"/>
+        <path d="M3.4 -6.2 L4.6 -5.6 L3.4 -5.3 Z" fill="#f0884a"/>
+        <path d="M-3 -2.2 C-1.6 -3.2 0.4 -2.6 0.6 -1.6 C-0.6 -1.4 -2 -1.4 -3 -2.2 Z" fill="#eeeae0"/>
+      </g>
+      <circle cx="2.9" cy="-5.8" r="0.22" fill="#2b2b2b"/>
+    </g>
+  </g>
+</svg>

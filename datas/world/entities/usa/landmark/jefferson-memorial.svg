@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 30">
+  <!-- 제퍼슨 기념관: 둥근 열주 원형당 위 낮은 반구 돔, 앞쪽 박공 현관(모서리 둥글게), 넓은 계단. 밤엔 안쪽이 환해진다 -->
+  <ellipse cx="18" cy="28.6" rx="17.4" ry="1.4" fill="#3b5a2e" opacity="0.22"/>
+  <ellipse cx="18" cy="11" rx="12" ry="9" fill="#fff4c8" style="opacity: calc(var(--night, 0) * 0.4)"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="1.6" y="24.6" width="32.8" height="3.8" rx="1.4" fill="#e6e0d3"/>
+  <rect x="3.6" y="13.6" width="28.8" height="11.4" rx="1" fill="#e8e1d3"/>
+  <rect x="3" y="12" width="30" height="2.4" rx="1.1" fill="#f3efe6"/>
+  <path d="M6.6 12.4 C6.6 2.4 29.4 2.4 29.4 12.4 Z" fill="#fbf8f2"/>
+  <rect x="11" y="15.4" width="14" height="10" rx="0.6" fill="#f7f4ec"/>
+  <path d="M10 15.8 Q10.4 14.4 12 13.8 L17 11.2 Q18 10.7 19 11.2 L24 13.8 Q25.6 14.4 26 15.8 Z" fill="#fbf8f2"/>
+  </g>
+  <rect x="12.6" y="17" width="10.8" height="8" rx="0.6" fill="#c9bfae"/>
+  <rect x="12.6" y="17" width="10.8" height="8" rx="0.6" fill="#ffe3a0" style="opacity: var(--night, 0)"/>
+  <g fill="#fbf8f2" stroke="#5b4636" stroke-width="0.35"><rect x="11.6" y="16" width="1.6" height="9" rx="0.8"/><rect x="14.4" y="16" width="1.6" height="9" rx="0.8"/><rect x="17.2" y="16" width="1.6" height="9" rx="0.8"/><rect x="20" y="16" width="1.6" height="9" rx="0.8"/><rect x="22.8" y="16" width="1.6" height="9" rx="0.8"/></g>
+  <g fill="#fbf8f2" stroke="#5b4636" stroke-width="0.3" opacity="0.9"><rect x="4.6" y="14.4" width="1.3" height="10.2" rx="0.65"/><rect x="7" y="14.4" width="1.3" height="10.2" rx="0.65"/><rect x="9" y="14.4" width="1.3" height="10.2" rx="0.65"/><rect x="27.4" y="14.4" width="1.3" height="10.2" rx="0.65"/><rect x="29.4" y="14.4" width="1.3" height="10.2" rx="0.65"/></g>
+  <path d="M9 9.6 C10 6 14 4.8 18 4.6" stroke="#fff" stroke-opacity="0.6" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+  <path d="M18 4.6 C24 4.8 28.6 7 29.4 12.4 L18 12.4 Z" fill="#000" opacity="0.06"/>
+</svg>

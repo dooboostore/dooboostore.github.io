@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -22 14 50" data-foot="0.5 0.44">
+  <!-- 컨테이너선 (위에서 본 모습, 뱃머리가 위쪽). 뒤로 하얀 물결 -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="0.9">
+    <path d="M-2 20 Q-4 24 -5 27"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.6s" repeatCount="indefinite"/></path>
+    <path d="M2 20 Q4 24 5 27"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.6s" repeatCount="indefinite"/></path>
+    <path d="M0 21 L0 26" opacity="0.6"/>
+  </g>
+  <path d="M0 -21 C3.6 -17 4.6 -12 4.6 -8 L4.6 17 Q4.6 20 0 20.5 Q-4.6 20 -4.6 17 L-4.6 -8 C-4.6 -12 -3.6 -17 0 -21 Z" fill="var(--hull, #c2433a)" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>
+  <path d="M0 -19.4 C2.8 -16 3.6 -12 3.6 -9 L3.6 15 L-3.6 15 L-3.6 -9 C-3.6 -12 -2.8 -16 0 -19.4 Z" fill="#7a8794"/>
+  <g stroke="#5b4636" stroke-width="0.25">
+    <rect x="-3.4" y="-12" width="3.2" height="4" fill="#5aa0d8"/><rect x="0.2" y="-12" width="3.2" height="4" fill="#f2c14e"/>
+    <rect x="-3.4" y="-7.6" width="3.2" height="4" fill="#ef7d57"/><rect x="0.2" y="-7.6" width="3.2" height="4" fill="#5fb37a"/>
+    <rect x="-3.4" y="-3.2" width="3.2" height="4" fill="#f2c14e"/><rect x="0.2" y="-3.2" width="3.2" height="4" fill="#5aa0d8"/>
+    <rect x="-3.4" y="1.2" width="3.2" height="4" fill="#5fb37a"/><rect x="0.2" y="1.2" width="3.2" height="4" fill="#ef7d57"/>
+    <rect x="-3.4" y="5.6" width="3.2" height="4" fill="#9b7fd1"/><rect x="0.2" y="5.6" width="3.2" height="4" fill="#f2c14e"/>
+  </g>
+  <rect x="-3.4" y="11" width="6.8" height="4.4" rx="0.6" fill="#fbfbf8" stroke="#5b4636" stroke-width="0.4"/>
+  <rect x="-2.6" y="11.8" width="5.2" height="1" fill="#8fb4cf"/>
+</svg>

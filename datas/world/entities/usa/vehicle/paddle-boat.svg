@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11" data-foot="0.5 0.86">
+  <!-- 타이달 베이슨 패들보트 (오른쪽을 향함): 하늘색 둥근 배, 지붕 차양, 둘이 탄 동글 머리, 뒤쪽 물바퀴가 빙글. 물결에 흔들림 -->
+  <g stroke="#ffffff" stroke-width="0.5" fill="none" stroke-linecap="round">
+  <path d="M0.4 9.6 Q2 9 3.6 9.6"><animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/></path>
+  </g>
+  <g>
+  <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.35;0 0" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g transform="translate(3.6 7.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
+  <circle r="1.6" fill="#f4f1e8" stroke="#5b4636" stroke-width="0.35"/><path d="M-1.6 0 H1.6 M0 -1.6 V1.6" stroke="#5b4636" stroke-width="0.3"/></g></g>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+  <circle cx="8.4" cy="5" r="1.5" fill="#ffe0c7"/><circle cx="12" cy="5" r="1.5" fill="#eac3a2"/>
+  <path d="M7 4.6 C7 3 9.8 3 9.8 4.4 Z" fill="#4a3329"/><path d="M10.6 4.6 C10.6 3 13.4 3 13.4 4.4 Z" fill="#3d302a"/>
+  <path d="M4.4 6.4 L17 6.4 Q16.6 9.8 13.4 9.8 L6.4 9.8 Q4.6 9.4 4.4 6.4 Z" fill="#7fb4e6"/>
+  <path d="M6.4 1.8 Q10.4 0.6 14.4 1.8 L14 2.6 L6.8 2.6 Z" fill="#fbf8f2"/>
+  </g>
+  <path d="M7.2 2.6 V6.4 M13.6 2.6 V6.4" stroke="#5b4636" stroke-width="0.35"/>
+  <rect x="5" y="7.4" width="11.4" height="0.8" rx="0.4" fill="#fff" opacity="0.5"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "svg": "hill.svg",
+  "foot": [0.5, 0.95],
+  "parts": [
+    { "use": "france/landmark/montmartre/sacre-coeur.svg", "at": [56, 22], "scale": 0.95 },
+    { "use": "france/people/painter.svg", "at": [33, 30], "scale": 0.5 }
+  ]
+}

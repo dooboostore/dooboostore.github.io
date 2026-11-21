@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44">
+  <!-- 런던 아이: 천천히 도는 큰 관람차, 둥근 캡슐, A자 받침다리, 강변 매표소. 밤엔 바퀴 테가 푸르게 빛난다 -->
+  <ellipse cx="20" cy="42.8" rx="14" ry="1.3" fill="#3b5a2e" opacity="0.22"/>
+  <circle cx="20" cy="20" r="18" fill="none" stroke="#9fd8ff" stroke-width="2.4" style="opacity: calc(var(--night, 0) * 0.6)"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 20 L12 41.4" stroke-width="2.2"/>
+    <path d="M20 20 L12 41.4" stroke="#f4f6f8" stroke-width="1.2"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="120s" repeatCount="indefinite"/>
+    <circle cx="20" cy="20" r="17" fill="none" stroke="#5b4636" stroke-width="1.6"/>
+    <circle cx="20" cy="20" r="17" fill="none" stroke="#f4f6f8" stroke-width="0.8"/>
+    <circle cx="20" cy="20" r="15.6" fill="none" stroke="#5b4636" stroke-width="0.35"/>
+    <g stroke="#c9d3db" stroke-width="0.3">
+      <line x1="20" y1="3" x2="20" y2="37"/><line x1="3" y1="20" x2="37" y2="20"/>
+      <line x1="8" y1="8" x2="32" y2="32"/><line x1="32" y1="8" x2="8" y2="32"/>
+      <line x1="13.5" y1="4.3" x2="26.5" y2="35.7"/><line x1="26.5" y1="4.3" x2="13.5" y2="35.7"/>
+      <line x1="4.3" y1="13.5" x2="35.7" y2="26.5"/><line x1="4.3" y1="26.5" x2="35.7" y2="13.5"/>
+    </g>
+    <g fill="#e6f3fa" stroke="#5b4636" stroke-width="0.35">
+      <ellipse cx="20" cy="2.4" rx="1.5" ry="1"/><ellipse cx="26.7" cy="3.7" rx="1.5" ry="1"/><ellipse cx="32.4" cy="7.6" rx="1.5" ry="1"/><ellipse cx="36.3" cy="13.3" rx="1.5" ry="1"/>
+      <ellipse cx="37.6" cy="20" rx="1.5" ry="1"/><ellipse cx="36.3" cy="26.7" rx="1.5" ry="1"/><ellipse cx="32.4" cy="32.4" rx="1.5" ry="1"/><ellipse cx="26.7" cy="36.3" rx="1.5" ry="1"/>
+      <ellipse cx="20" cy="37.6" rx="1.5" ry="1"/><ellipse cx="13.3" cy="36.3" rx="1.5" ry="1"/><ellipse cx="7.6" cy="32.4" rx="1.5" ry="1"/><ellipse cx="3.7" cy="26.7" rx="1.5" ry="1"/>
+      <ellipse cx="2.4" cy="20" rx="1.5" ry="1"/><ellipse cx="3.7" cy="13.3" rx="1.5" ry="1"/><ellipse cx="7.6" cy="7.6" rx="1.5" ry="1"/><ellipse cx="13.3" cy="3.7" rx="1.5" ry="1"/>
+    </g>
+    <g fill="#ffd77a" style="opacity: var(--night, 0)">
+      <ellipse cx="20" cy="2.4" rx="1" ry="0.6"/><ellipse cx="37.6" cy="20" rx="1" ry="0.6"/><ellipse cx="20" cy="37.6" rx="1" ry="0.6"/><ellipse cx="2.4" cy="20" rx="1" ry="0.6"/>
+      <ellipse cx="32.4" cy="7.6" rx="1" ry="0.6"/><ellipse cx="32.4" cy="32.4" rx="1" ry="0.6"/><ellipse cx="7.6" cy="32.4" rx="1" ry="0.6"/><ellipse cx="7.6" cy="7.6" rx="1" ry="0.6"/>
+    </g>
+  </g>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 20 L28 41.4" stroke-width="2.2"/>
+    <path d="M20 20 L28 41.4" stroke="#f4f6f8" stroke-width="1.2"/>
+  </g>
+  <circle cx="20" cy="20" r="2" fill="#dfe6ec" stroke="#5b4636" stroke-width="0.45"/>
+  <circle cx="19.4" cy="19.4" r="0.6" fill="#fff" opacity="0.6"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
+    <rect x="8" y="39.6" width="24" height="3" rx="1" fill="#e9e3d7"/>
+    <rect x="16.4" y="38.4" width="7.2" height="4" rx="0.8" fill="#5aa0d8"/>
+  </g>
+  <rect x="17.2" y="39.2" width="5.6" height="1.4" rx="0.5" fill="#d8eef7"/>
+</svg>

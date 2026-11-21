@@ -1,0 +1,19 @@
+{
+  "radiusKm": 1737.4,
+  "surface": ["#ecebf0", "#a9a8b5"],
+  "glow": "#ffffff",
+  "features": "features.json",
+  "styles": {
+    "basin": { "fill": "#8f8e9c", "opacity": 0.18 },
+    "mare": { "fill": "#9a99a8", "opacity": 0.85 },
+    "mare-line": { "stroke": "#9a99a8", "opacity": 0.8 },
+    "crater-s": { "fill": "#dad9e0", "stroke": "#a3a2ae", "opacity": 0.9 },
+    "crater": { "fill": "#d4d3db", "stroke": "#8c8b98" },
+    "crater-dark": { "fill": "#8a8998", "stroke": "#6f6e7c" },
+    "crater-bright": { "fill": "#f7f7fa", "stroke": "#a3a2ae" },
+    "ray": { "stroke": "#fbfbfd", "opacity": 0.55 }
+  },
+  "spin": 2,
+  "radio": false,
+  "atmosphere": false
+}
