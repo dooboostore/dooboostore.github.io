@@ -187,6 +187,7 @@ async function main() {
     "/math",
     "/ros2",
     "/ai",
+    "/world",
   ];
   const outDir = path.resolve(__dirname, '../dist');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });

@@ -351,7 +351,8 @@ export default (win: Window) => {
       const v = view ?? { lon: id === 'earth' ? 127.5 : this.lon, lat: id === 'earth' ? 28 : 15, k: 1 };
       Object.assign(this, { lon: v.lon, lat: v.lat, k: v.k, target: null });
       this.renderWorldMenu();
-      this.applyTime();
+      // 세계를 바꾼 직후에는 자전 중이어도 HUD 가 이전 세계 이름을 들고 있지 않게 즉시 갱신한다
+      this.updatePlace();
       this.dirty = true;
     }
 
