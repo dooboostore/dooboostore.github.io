@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 120"><style>
+    @keyframes sjhxh2f_0{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    .sjhxh2fe1{animation:sjhxh2f_0 2s linear 0s infinite}
+  </style>
   <!-- 타이베이 101: 대나무 마디처럼 여덟 칸씩 쌓은 탑 몸통, 아래 허리의 금빛 여의 장식, 꼭대기 첨탑. 밤엔 마디마다 띠 불빛 -->
   <ellipse cx="16" cy="118.2" rx="15" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -20,6 +23,6 @@
   <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.3"><rect x="4.4" y="108" width="5" height="3.6" rx="0.8"/><rect x="22.6" y="108" width="5" height="3.6" rx="0.8"/></g>
   <path d="M12.6 117.4 L12.6 112.2 C12.6 110 19.4 110 19.4 112.2 L19.4 117.4 Z" fill="var(--door, #4f6f7a)" stroke="#5b4636" stroke-width="0.4"/>
   <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="9.2" y="20.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="28.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="36.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="44.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="52.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="60.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="68.4" width="13.6" height="0.9" rx="0.45"/><rect x="9.2" y="76.4" width="13.6" height="0.9" rx="0.45"/><rect x="4.6" y="108.2" width="4.6" height="3.2" rx="0.7"/><rect x="22.8" y="108.2" width="4.6" height="3.2" rx="0.7"/><rect x="13.2" y="11" width="5.6" height="0.9" rx="0.45"/><rect x="11.8" y="16" width="8.4" height="0.9" rx="0.45"/></g>
-  <circle cx="16" cy="1.8" r="0.7" fill="#ff6b5e" style="opacity: var(--night, 0)"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="16" cy="1.8" r="0.7" fill="#ff6b5e" style="opacity: var(--night, 0)" class="sjhxh2fe1"/>
   <g fill="#6db85e" stroke="#5b4636" stroke-width="0.4"><circle cx="2.6" cy="116" r="2"/><circle cx="29.4" cy="116" r="2"/></g>
 </svg>

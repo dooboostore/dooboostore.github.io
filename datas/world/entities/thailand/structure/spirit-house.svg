@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 24"><style>
+    @keyframes s1k3fpru_0{0%{opacity:0}50%{opacity:0.8}100%{opacity:0}}
+    .s1k3fprue1{animation:s1k3fpru_0 3s linear 0s infinite}
+  </style>
   <!-- 산 프라 품(정령의 집): 기둥 받침 위에 올린 작은 태국식 집, 주황·초록 겹지붕과 금빛 초파, 앞에 걸린 금잔화·재스민 화환과 작은 공양 그릇, 피어오르는 향 연기 -->
   <ellipse cx="7" cy="23.2" rx="4.4" ry="0.7" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
@@ -17,7 +20,7 @@
   <g stroke="#5b4636" stroke-width="0.2"><circle cx="4" cy="14.6" r="0.35" fill="#e9574a"/><circle cx="10" cy="14.6" r="0.35" fill="#e9574a"/></g>
   <g fill="#fbf6ea" stroke="#5b4636" stroke-width="0.25"><rect x="2.2" y="11.6" width="1" height="1" rx="0.3"/><rect x="10.8" y="11.6" width="1" height="1" rx="0.3"/></g>
   <path d="M11.4 12.6 L11.4 10.6" stroke="#8a6650" stroke-width="0.3"/>
-  <path d="M11.4 10.4 Q10.8 9.4 11.4 8.4 Q12 7.4 11.4 6.4" fill="none" stroke="#fff" stroke-width="0.35" stroke-linecap="round" opacity="0.7"><animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/></path>
+  <path d="M11.4 10.4 Q10.8 9.4 11.4 8.4 Q12 7.4 11.4 6.4" fill="none" stroke="#fff" stroke-width="0.35" stroke-linecap="round" opacity="0.7" class="s1k3fprue1"/>
   <path d="M6.4 14.4 L6.4 21" stroke="#fff" stroke-width="0.4" opacity="0.6" stroke-linecap="round"/>
   <path d="M6.2 12.6 L6.2 10.48 C6.2 9.84 6.71 9.6 7.0 9.6 C7.29 9.6 7.8 9.84 7.8 10.48 L7.8 12.6 Z" fill="#ffd77a" style="opacity: var(--night, 0)"/>
 </svg>

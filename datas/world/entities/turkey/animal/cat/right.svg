@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 9">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 9"><style>
+    @keyframes s1t0ktpf_0{0%{transform:translate(2px, 5.2px) rotate(-8deg) translate(-2px, -5.2px)}50%{transform:translate(2px, 5.2px) rotate(8deg) translate(-2px, -5.2px)}100%{transform:translate(2px, 5.2px) rotate(-8deg) translate(-2px, -5.2px)}}
+    .s1t0ktpfe1{transform-box:view-box;transform-origin:0 0;animation:s1t0ktpf_0 1.8s linear 0s infinite}
+  </style>
   <!-- 이스탄불 길고양이 (걷는 옆모습, 오른쪽을 향함): 치즈색 줄무늬 털(변수 fur), 꼬리를 세우고 살랑 -->
   <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="-8 2 5.2;8 2 5.2;-8 2 5.2" dur="1.8s" repeatCount="indefinite"/>
+    <g class="s1t0ktpfe1">
+      
       <path d="M2.2 5.6 C1 4.8 0.6 3.4 1 2.2 C1.2 1.6 1.8 1.6 1.8 2.2 C1.6 3.2 2 4.2 2.8 4.8 Z" fill="var(--fur, #e9a65a)"/>
     </g>
     <g fill="var(--fur, #e9a65a)"><rect x="2.4" y="5.4" width="1" height="3" rx="0.5"/><rect x="6" y="5.4" width="1" height="3" rx="0.5"/></g>

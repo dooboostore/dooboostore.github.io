@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5"><style>
+    @keyframes s1y7ppzf_0{0%{transform:translate(3.2px, 3.2px) rotate(0deg) translate(-3.2px, -3.2px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(3.2px, 3.2px) rotate(80deg) translate(-3.2px, -3.2px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(3.2px, 3.2px) rotate(0deg) translate(-3.2px, -3.2px)}}
+    @keyframes s1y7ppzf_1{0%{r:1.1px}25%{r:1.7px}50%{r:1.2px}75%{r:1.5px}100%{r:1.1px}}
+    .s1y7ppzfe2{transform-box:view-box;transform-origin:0 0;animation:s1y7ppzf_0 16s linear 0s infinite}
+    .s1y7ppzfe3{animation:s1y7ppzf_1 1.4s linear 0s infinite}
+  </style>
   <!-- 해양 석유 시추선 (위에서 본 모습): 노란 갑판, 헬기장, 천천히 도는 크레인, 일렁이는 불꽃. 밤엔 조명 -->
   <rect x="-8.6" y="-8.6" width="17.2" height="17.2" rx="2.6" fill="#ffffff" opacity="0.35"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
@@ -10,12 +15,12 @@
   </g>
   <path d="M-4 -4.2 L-4 -1.8 M-2 -4.2 L-2 -1.8 M-4 -3 L-2 -3" stroke="#ffffff" stroke-width="0.45" stroke-linecap="round"/>
   <circle cx="-3" cy="-3" r="2.2" fill="none" stroke="#f2c14e" stroke-width="0.3"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="0 3.2 3.2;80 3.2 3.2;0 3.2 3.2" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1y7ppzfe2">
+    
     <rect x="2.6" y="-6.8" width="1.2" height="10" rx="0.6" fill="#f29a3a" stroke="#5b4636" stroke-width="0.3"/>
   </g>
   <line x1="6.4" y1="-6.4" x2="9.6" y2="-9.6" stroke="#5b4636" stroke-width="0.6" stroke-linecap="round"/>
-  <circle cx="10" cy="-10" r="1.3" fill="#ff8a3d"><animate attributeName="r" values="1.1;1.7;1.2;1.5;1.1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <circle cx="10" cy="-10" r="1.3" fill="#ff8a3d" class="s1y7ppzfe3"/>
   <circle cx="10" cy="-10" r="0.6" fill="#ffe27a"/>
   <g fill="#fff4b8" style="opacity: var(--night, 0)"><circle cx="-6" cy="6" r="0.6"/><circle cx="6" cy="6" r="0.6"/><circle cx="-6" cy="-6" r="0.6"/></g>
 </svg>

@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"><style>
+    @keyframes s11t5v4w_0{0%{transform:translate(13px, 7px) rotate(0deg) translate(-13px, -7px)}50%{transform:translate(13px, 7px) rotate(14deg) translate(-13px, -7px)}100%{transform:translate(13px, 7px) rotate(0deg) translate(-13px, -7px)}}
+    .s11t5v4we1{transform-box:view-box;transform-origin:0 0;animation:s11t5v4w_0 1.8s linear 0s infinite}
+  </style>
   <!-- 리치먼드 공원 사슴 (왼쪽을 향함): 밤색 몸에 흰 점, 동글게 갈라진 뿔(끝이 둥근), 귀 쫑긋, 꼬리 살랑 -->
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 13 7;14 13 7;0 13 7" dur="1.8s" repeatCount="indefinite"/>
+    <g class="s11t5v4we1">
+      
       <ellipse cx="13.6" cy="7.2" rx="0.9" ry="0.7" fill="#fbf6ea"/>
     </g>
     <rect x="5" y="10" width="1.2" height="4.4" rx="0.6" fill="#b07a52"/>

@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18"><style>
+    @keyframes s2knpee_0{0%{transform:translate(6.452px, 14.256px) rotate(-6deg) translate(-6.452px, -14.256px)}50%{transform:translate(6.452px, 14.256px) rotate(6deg) translate(-6.452px, -14.256px)}100%{transform:translate(6.452px, 14.256px) rotate(-6deg) translate(-6.452px, -14.256px)}}
+    .s2knpeee1{transform-box:view-box;transform-origin:0 0;animation:s2knpee_0 3s linear 0s infinite}
+  </style>
   <g transform="translate(1.7 5.04) scale(0.72)">
   <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
     <ellipse cx="4.6" cy="16.9" rx="1.4" ry="0.8" fill="#6b4f3a"/>
@@ -14,8 +17,8 @@
   <ellipse cx="2.6" cy="8.5" rx="0.8" ry="0.45" fill="#ff9e9e" opacity="0.55"/>
   <circle cx="6.9" cy="7.3" r="0.75" fill="#f5cdb0" stroke="#5b4636" stroke-width="0.3"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-6 6.452 14.256;6 6.452 14.256;-6 6.452 14.256" dur="3s" repeatCount="indefinite"/>
+  <g class="s2knpeee1">
+    
     <path d="M6.452 14.256 Q8.726 11.256 9.4 4.6" stroke="#8a7a6a" stroke-width="0.25" fill="none"/>
     <ellipse cx="9.4" cy="2.6" rx="1.7" ry="2.1" fill="var(--balloon, #ff8a7a)" stroke="#5b4636" stroke-width="0.35"/>
     <path d="M9.1 4.6 L9.700000000000001 4.6 L9.4 4.1 Z" fill="var(--balloon, #ff8a7a)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/>

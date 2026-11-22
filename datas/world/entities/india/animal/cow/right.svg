@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15"><style>
+    @keyframes sasee2f_0{0%{transform:translate(3px, 6.8px) rotate(0deg) translate(-3px, -6.8px)}50%{transform:translate(3px, 6.8px) rotate(10deg) translate(-3px, -6.8px)}100%{transform:translate(3px, 6.8px) rotate(0deg) translate(-3px, -6.8px)}}
+    .sasee2fe1{transform-box:view-box;transform-origin:0 0;animation:sasee2f_0 2.6s linear 0s infinite}
+  </style>
   <!-- 인도의 흰 제부 소 (오른쪽을 향함): 어깨의 둥근 혹, 목 아래 늘어진 군턱, 처진 귀와 짧고 둥근 뿔, 목에 건 금잔화 화환. 꼬리가 살랑 -->
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 3 6.8;10 3 6.8;0 3 6.8" dur="2.6s" repeatCount="indefinite"/>
+    <g class="sasee2fe1">
+      
       <path d="M3 6.8 C2 7.6 1.6 9 1.6 10.6" fill="none" stroke-width="0.6"/>
       <ellipse cx="1.6" cy="11" rx="0.6" ry="0.9" fill="#8a7a6a"/>
     </g>

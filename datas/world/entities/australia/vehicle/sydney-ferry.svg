@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 18" data-foot="0.5 0.88">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 18" data-foot="0.5 0.88"><style>
+    @keyframes sh9kflp_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes sh9kflp_1{0%{opacity:0}50%{opacity:0.7}100%{opacity:0}}
+    @keyframes sh9kflp_2{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    .sh9kflpe3{animation:sh9kflp_0 2.2s linear 0s infinite}
+    .sh9kflpe4{animation:sh9kflp_1 2.2s linear 1.1s infinite}
+    .sh9kflpe5{transform-box:view-box;transform-origin:0 0;animation:sh9kflp_2 3.2s linear 0s infinite}
+  </style>
   <!-- 시드니 페리 (오른쪽을 향함, 옆모습): 초록 선체(변수 hull), 크림·노랑 2층 선실, 둥근 조타실, 작은 굴뚝. 물결에 흔들리고 뒤로 물거품. 밤엔 선실 불빛 -->
   <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
-    <path d="M1 15.4 Q3 14.8 5 15.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path>
-    <path d="M0 16.6 Q2.5 16 5.5 16.6"><animate attributeName="opacity" values="0;0.7;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></path>
+    <path d="M1 15.4 Q3 14.8 5 15.4" class="sh9kflpe3"/>
+    <path d="M0 16.6 Q2.5 16 5.5 16.6" class="sh9kflpe4"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="3.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="sh9kflpe5">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
       <line x1="34" y1="4" x2="34" y2="0.8"/>
       <path d="M20.4 4.2 L20.8 2 Q20.9 1.4 21.6 1.4 L23.4 1.4 Q24.1 1.4 24.2 2 L24.6 4.2 Z" fill="#f3e2a6"/>

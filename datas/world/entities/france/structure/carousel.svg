@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24"><style>
+    @keyframes s1udtx6q_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -1.6px)}100%{transform:translate(0px, 0px)}}
+    @keyframes s1udtx6q_1{0%{transform:translate(0px, -1.6px)}50%{transform:translate(0px, 0px)}100%{transform:translate(0px, -1.6px)}}
+    .s1udtx6qe2{transform-box:view-box;transform-origin:0 0;animation:s1udtx6q_0 1.6s linear 0s infinite}
+    .s1udtx6qe3{transform-box:view-box;transform-origin:0 0;animation:s1udtx6q_1 1.6s linear 0s infinite}
+  </style>
   <!-- 회전목마: 줄무늬 둥근 천막 지붕, 오르내리는 목마. 밤엔 전구 -->
   <ellipse cx="13" cy="23" rx="12" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
@@ -7,11 +12,11 @@
     <g fill="#f6ead2">
       <line x1="6" y1="9.6" x2="6" y2="20.4"/><line x1="20" y1="9.6" x2="20" y2="20.4"/>
     </g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.6;0 0" dur="1.6s" repeatCount="indefinite"/>
+    <g class="s1udtx6qe2">
       <path d="M3.6 16 C3.6 14.6 5 14.2 6.4 14.4 L7.6 13 C8.2 12.4 9 12.8 8.6 13.6 L8 15 C8.4 16.4 7.6 17 6.4 17 L4.4 17 C3.8 17 3.6 16.6 3.6 16 Z" fill="#fbf8f0"/>
       <path d="M4.6 17 L4.4 18.4 M7 17 L7.2 18.4" fill="none"/>
     </g>
-    <g><animateTransform attributeName="transform" type="translate" values="0 -1.6;0 0;0 -1.6" dur="1.6s" repeatCount="indefinite"/>
+    <g class="s1udtx6qe3">
       <path d="M17.4 16 C17.4 14.6 18.8 14.2 20.2 14.4 L21.4 13 C22 12.4 22.8 12.8 22.4 13.6 L21.8 15 C22.2 16.4 21.4 17 20.2 17 L18.2 17 C17.6 17 17.4 16.6 17.4 16 Z" fill="#f4b6c8"/>
       <path d="M18.4 17 L18.2 18.4 M20.8 17 L21 18.4" fill="none"/>
     </g>

@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24"><style>
+    @keyframes s1wlt3vt_0{0%{transform:translate(10px, 15px) rotate(-1deg) translate(-10px, -15px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(10px, 15px) rotate(1deg) translate(-10px, -15px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(10px, 15px) rotate(-1deg) translate(-10px, -15px)}}
+    .s1wlt3vte1{transform-box:view-box;transform-origin:0 0;animation:s1wlt3vt_0 7.5s linear 0s infinite}
+  </style>
   <!-- 마로니에(서양칠엽수): 짙은 초록 둥근 잎, 위로 솟은 하얀 꽃송이 촛대 -->
   <ellipse cx="10" cy="23" rx="6" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
   <path d="M9 23 L9.3 15 L10.7 15 L11 23 Z" fill="#8a5f42" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1 10 15;1 10 15;-1 10 15" dur="7.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1wlt3vte1">
+    
     <g fill="var(--leaf, #5fa255)" stroke="#5b4636" stroke-width="0.55">
       <circle cx="5" cy="11" r="4.2"/>
       <circle cx="15" cy="11" r="4.2"/>

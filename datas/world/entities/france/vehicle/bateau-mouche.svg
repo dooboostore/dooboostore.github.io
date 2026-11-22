@@ -1,12 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 14" data-foot="0.5 0.86">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 14" data-foot="0.5 0.86"><style>
+    @keyframes s1nc1hmh_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s1nc1hmh_1{0%{opacity:0}50%{opacity:0.7}100%{opacity:0}}
+    @keyframes s1nc1hmh_2{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    .s1nc1hmhe3{animation:s1nc1hmh_0 2.2s linear 0s infinite}
+    .s1nc1hmhe4{animation:s1nc1hmh_1 2.2s linear 1.1s infinite}
+    .s1nc1hmhe5{transform-box:view-box;transform-origin:0 0;animation:s1nc1hmh_2 3.4s linear 0s infinite}
+  </style>
   <!-- bateau-mouche — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <!-- 바토무슈 유람선 (오른쪽을 향함): 낮고 긴 흰 선체, 둥근 유리 지붕 선실, 위층 관광객, 뒤에 삼색기. 물결에 흔들린다. 밤엔 선실 불빛 -->
   <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
-    <path d="M1 12.4 Q3 11.8 5 12.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path>
-    <path d="M0 13.4 Q2.5 12.8 5.5 13.4"><animate attributeName="opacity" values="0;0.7;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></path>
+    <path d="M1 12.4 Q3 11.8 5 12.4" class="s1nc1hmhe3"/>
+    <path d="M0 13.4 Q2.5 12.8 5.5 13.4" class="s1nc1hmhe4"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="3.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1nc1hmhe5">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
       <line x1="6" y1="8.4" x2="6" y2="2"/>
       <path d="M4.6 8.6 L42.4 8.6 Q41 12.6 37 12.8 L8.4 12.8 Q5.6 12.2 4.6 8.6 Z" fill="#fdfcf8"/>

@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-6 4.148 13.968;6 4.148 13.968;-6 4.148 13.968" dur="3s" repeatCount="indefinite"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18"><style>
+    @keyframes s98b392_0{0%{transform:translate(4.148px, 13.968px) rotate(-6deg) translate(-4.148px, -13.968px)}50%{transform:translate(4.148px, 13.968px) rotate(6deg) translate(-4.148px, -13.968px)}100%{transform:translate(4.148px, 13.968px) rotate(-6deg) translate(-4.148px, -13.968px)}}
+    .s98b392e1{transform-box:view-box;transform-origin:0 0;animation:s98b392_0 3s linear 0s infinite}
+  </style>
+  <g class="s98b392e1">
+    
     <path d="M4.148 13.968 Q3.974 10.968 2.2 4.6" stroke="#8a7a6a" stroke-width="0.25" fill="none"/>
     <ellipse cx="2.2" cy="2.6" rx="1.7" ry="2.1" fill="var(--balloon, #ff8a7a)" stroke="#5b4636" stroke-width="0.35"/>
     <path d="M1.9000000000000001 4.6 L2.5 4.6 L2.2 4.1 Z" fill="var(--balloon, #ff8a7a)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/>

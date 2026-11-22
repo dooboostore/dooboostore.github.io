@@ -1,12 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 14">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 14"><style>
+    @keyframes s1s53oab_0{0%{opacity:0.9}50%{opacity:0}100%{opacity:0.9}}
+    @keyframes s1s53oab_1{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s1s53oab_2{0%{stroke-dashoffset:0}100%{stroke-dashoffset:1.2}}
+    .s1s53oabe3{animation:s1s53oab_0 0.8s linear 0s infinite}
+    .s1s53oabe4{animation:s1s53oab_1 0.8s linear 0s infinite}
+    .s1s53oabe5{animation:s1s53oab_2 0.3s linear 0s infinite}
+  </style>
   <!-- snowmobile — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <g transform="translate(12 13.4) translate(0 0) scale(2.2)">
   <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
 </g>
   <!-- 스노모빌 (오른쪽을 향함): 앞에 둥근 스키, 뒤에 고무 무한궤도(바퀴 없음), 노란 차체와 바람막이, 빨간 파카를 입은 연구원이 탐. 뒤로 눈가루가 날린다 -->
   <g fill="#fbfdff" stroke="#cfe6f4" stroke-width="0.25">
-    <circle cx="1.6" cy="11.6" r="0.9"><animate attributeName="opacity" values="0.9;0;0.9" dur="0.8s" repeatCount="indefinite"/></circle>
-    <circle cx="0.8" cy="10" r="0.6"><animate attributeName="opacity" values="0;0.9;0" dur="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1.6" cy="11.6" r="0.9" class="s1s53oabe3"/>
+    <circle cx="0.8" cy="10" r="0.6" class="s1s53oabe4"/>
   </g>
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
     <path d="M15 10 L16.6 12.4" stroke="#3e4348" stroke-width="0.6"/>
@@ -28,8 +35,8 @@
   <g fill="#5b6168">
     <circle cx="4.4" cy="11" r="0.55"/><circle cx="7" cy="11" r="0.55"/><circle cx="9.6" cy="11" r="0.55"/><circle cx="12" cy="11" r="0.55"/>
   </g>
-  <path d="M3.4 12.6 L12.8 12.6" stroke="#8b9197" stroke-width="0.4" stroke-dasharray="0.6 0.6">
-    <animate attributeName="stroke-dashoffset" values="0;1.2" dur="0.3s" repeatCount="indefinite"/>
+  <path d="M3.4 12.6 L12.8 12.6" stroke="#8b9197" stroke-width="0.4" stroke-dasharray="0.6 0.6" class="s1s53oabe5">
+    
   </path>
   <path d="M5 8 Q12 7.4 18 7.8" stroke="#fff" stroke-opacity="0.5" stroke-width="0.5" fill="none" stroke-linecap="round"/>
   <circle cx="20.6" cy="9.4" r="0.5" fill="#fff4b8" stroke="#5b4636" stroke-width="0.2"/>

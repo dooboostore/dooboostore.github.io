@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30"><style>
+    @keyframes s1c7gnxk_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, 0px)}100%{transform:translate(0px, 0px)}}
+    .s1c7gnxke1{transform-box:view-box;transform-origin:0 0;animation:s1c7gnxk_0 7s linear 0s infinite}
+  </style>
   <!-- 유칼립투스: 껍질이 벗겨진 하얀 얼룩 줄기가 갈라져 오르고, 은빛 초록 잎 덩어리가 듬성듬성. 바람에 살랑 -->
   <ellipse cx="12" cy="29" rx="6" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
@@ -11,8 +14,8 @@
     <path d="M12.2 15.4 C12.4 11.6 12 8.4 12.6 5" fill="none" stroke="#ece6da" stroke-width="0.65"/>
   </g>
   <g fill="#c9b99a" opacity="0.7"><ellipse cx="11.8" cy="21" rx="0.6" ry="1.4"/><ellipse cx="12.8" cy="25.4" rx="0.5" ry="1.2"/><ellipse cx="11.6" cy="17.4" rx="0.4" ry="0.9"/></g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="7s" repeatCount="indefinite"/>
+  <g class="s1c7gnxke1">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" fill="var(--leaf, #8fb59a)">
       <path d="M1 10.6 C0.4 8 2.4 6.2 5 6.6 C7 6 9 7.4 8.6 9.6 C8.2 11.6 1.8 12.4 1 10.6 Z"/>
       <path d="M15 9.8 C14.6 7.4 16.8 5.8 19.2 6.2 C21.6 6 23.4 7.8 22.8 10 C22 11.6 15.8 11.8 15 9.8 Z"/>

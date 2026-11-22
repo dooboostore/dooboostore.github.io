@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5">
-  <g>
-    <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="10s" repeatCount="indefinite"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5"><style>
+    @keyframes s1f3rn75_0{0%{transform:translate(0px, 0px) rotate(0deg) translate(0px, 0px)}100%{transform:translate(0px, 0px) rotate(-360deg) translate(0px, 0px)}}
+    .s1f3rn75e1{transform-box:view-box;transform-origin:0 0;animation:s1f3rn75_0 10s linear 0s infinite}
+  </style>
+  <g class="s1f3rn75e1">
+    
     <g transform="scale(-1 1)">
   <!-- 태풍 소용돌이 팔 (부품): 위에서 본 세 갈래 흰 구름 팔. 북반구 태풍처럼 반시계 방향으로 천천히 돈다 (좌우 뒤집어 팔이 뒤로 끌리게) -->
   <circle r="11" fill="#e8f2f8" opacity="0.35"/>

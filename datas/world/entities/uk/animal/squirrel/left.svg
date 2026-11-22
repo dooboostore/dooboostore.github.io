@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 8">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 8"><style>
+    @keyframes s10f3dh_0{0%{transform:translate(5.6px, 6px) rotate(0deg) translate(-5.6px, -6px)}50%{transform:translate(5.6px, 6px) rotate(-8deg) translate(-5.6px, -6px)}100%{transform:translate(5.6px, 6px) rotate(0deg) translate(-5.6px, -6px)}}
+    .s10f3dhe1{transform-box:view-box;transform-origin:0 0;animation:s10f3dh_0 1.4s linear 0s infinite}
+  </style>
   <!-- 회색 다람쥐 (왼쪽을 향함): 복슬 꼬리가 살랑, 도토리를 쥔 앞발 -->
   <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 5.6 6;-8 5.6 6;0 5.6 6" dur="1.4s" repeatCount="indefinite"/>
+    <g class="s10f3dhe1">
+      
       <path d="M5.6 6.4 C8.6 6.6 9 3.6 8 2 C7.2 0.8 5.6 0.8 5.8 2.2 C7 2.4 7.4 3.8 6.4 4.8 Z" fill="#a9a6a8"/>
       <path d="M7.4 2 C7.8 2.6 7.8 3.4 7.4 4" stroke="#fff" stroke-opacity="0.5" fill="none"/>
     </g>

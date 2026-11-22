@@ -1,10 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 5"><style>
+    @keyframes s18z464j_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.6px)}100%{transform:translate(0px, 0px)}}
+    @keyframes s18z464j_1{0%{transform:scale(1, 1)}50%{transform:scale(0.25, 1)}100%{transform:scale(1, 1)}}
+    .s18z464je2{transform-box:view-box;transform-origin:0 0;animation:s18z464j_0 1.1s linear 0s infinite}
+    .s18z464je3{transform-box:view-box;transform-origin:0 0;animation:s18z464j_1 0.32s linear 0s infinite}
+  </style>
   <!-- 팔랑팔랑 나비 (그림자보다 위에 떠 있다: entity.json foot y=2.4) -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.6;0 0" dur="1.1s" repeatCount="indefinite"/>
+  <g class="s18z464je2">
+    
     <g transform="translate(3 0)">
-      <g stroke="#5b4636" stroke-width="0.25" fill="var(--wing, #ffd36e)">
-        <animateTransform attributeName="transform" type="scale" values="1 1;0.25 1;1 1" dur="0.32s" repeatCount="indefinite"/>
+      <g stroke="#5b4636" stroke-width="0.25" fill="var(--wing, #ffd36e)" class="s18z464je3">
+        
         <path d="M0 2 C-2.6 -0.6 -3 2.4 -1.6 3 C-2.4 4.4 -0.6 4.6 0 2.8 Z"/>
         <path d="M0 2 C2.6 -0.6 3 2.4 1.6 3 C2.4 4.4 0.6 4.6 0 2.8 Z"/>
       </g>

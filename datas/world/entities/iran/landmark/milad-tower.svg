@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 120"><style>
+    @keyframes s1ckf66b_0{0%{opacity:1}50%{opacity:0.25}100%{opacity:1}}
+    .s1ckf66be1{animation:s1ckf66b_0 2s linear 0s infinite}
+  </style>
   <!-- 밀라드 타워: 팔각 콘크리트 기둥, 유리로 감싼 둥근 전망 머리, 그 위 격자 안테나와 깜빡이는 항공등, 아래 넓은 로비 건물. 밤엔 머리가 띠처럼 환하다 -->
   <ellipse cx="15" cy="118.4" rx="12" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <clipPath id="pod"><path d="M7.4 44.6 C5.4 42.6 5 38.6 6.8 35.6 C8.6 32.6 11.4 31.4 15 31.4 C18.6 31.4 21.4 32.6 23.2 35.6 C25 38.6 24.6 42.6 22.6 44.6 Q15 46.6 7.4 44.6 Z"/></clipPath>
@@ -19,6 +22,6 @@
   <g stroke="#5b4636" stroke-width="0.3" stroke-opacity="0.5"><path d="M8 109.6 L8 117.6 M12 109.6 L12 117.6 M18 109.6 L18 117.6 M22 109.6 L22 117.6"/></g>
   <path d="M12.8 117.6 L12.8 114.2 C12.8 112.6 17.2 112.6 17.2 114.2 L17.2 117.6 Z" fill="var(--door, #4f6f7a)" stroke="#5b4636" stroke-width="0.4"/>
   <g fill="#ffd77a" style="opacity: var(--night, 0)"><path d="M6 37.2 L24 37.2 L24 40.2 L6 40.2 Z" opacity="0.8"/><rect x="9.4" y="45.4" width="11.2" height="1.6" rx="0.8"/><rect x="5" y="111" width="20" height="2" rx="1" opacity="0.6"/></g>
-  <circle cx="15" cy="2" r="0.8" fill="#ff5a4e" stroke="#5b4636" stroke-width="0.3"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="15" cy="2" r="0.8" fill="#ff5a4e" stroke="#5b4636" stroke-width="0.3" class="s1ckf66be1"/>
   <g fill="#6db85e" stroke="#5b4636" stroke-width="0.4"><circle cx="3" cy="116.4" r="2"/><circle cx="27" cy="116.4" r="2"/></g>
 </svg>

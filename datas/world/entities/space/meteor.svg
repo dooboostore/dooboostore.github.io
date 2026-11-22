@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -8 10 32" data-foot="0.5 0.5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -8 10 32" data-foot="0.5 0.5"><style>
+    @keyframes s1awyyr3_0{0%{r:3.2px}50%{r:4.2px}100%{r:3.2px}}
+    .s1awyyr3e1{animation:s1awyyr3_0 0.8s linear 0s infinite}
+  </style>
   <!-- 별똥별: 위쪽(진행 방향)에 반짝이는 작은 머리, 아래로 가늘게 길어지며 사라지는 빛꼬리. 머리가 반짝인다 -->
   <defs>
     <linearGradient id="tail" x1="0" y1="0" x2="0" y2="1">
@@ -13,8 +16,8 @@
     </radialGradient>
   </defs>
   <path d="M-1.8 -4.6 Q-1.2 8 0 23.4 Q1.2 8 1.8 -4.6 Z" fill="url(#tail)"/>
-  <circle cx="0" cy="-4.6" r="3.6" fill="url(#glow)">
-    <animate attributeName="r" values="3.2;4.2;3.2" dur="0.8s" repeatCount="indefinite"/>
+  <circle cx="0" cy="-4.6" r="3.6" fill="url(#glow)" class="s1awyyr3e1">
+    
   </circle>
   <circle cx="0" cy="-4.6" r="1.4" fill="#fffbe6" stroke="#e9c46a" stroke-width="0.3"/>
   <circle cx="-0.4" cy="-5" r="0.45" fill="#fff"/>

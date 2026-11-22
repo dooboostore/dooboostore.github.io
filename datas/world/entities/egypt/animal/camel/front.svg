@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.3 21.6">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.3 21.6"><style>
+    @keyframes s6t4897_0{0%{transform:translate(2.6px, 6.6px) rotate(-8deg) translate(-2.6px, -6.6px)}50%{transform:translate(2.6px, 6.6px) rotate(8deg) translate(-2.6px, -6.6px)}100%{transform:translate(2.6px, 6.6px) rotate(-8deg) translate(-2.6px, -6.6px)}}
+    .s6t4897e1{transform-box:view-box;transform-origin:0 0;animation:s6t4897_0 2.6s linear 0s infinite}
+  </style>
   <!-- 낙타 (오른쪽을 향함, 옆모습): 둥근 혹 위에 알록달록 안장 담요(변수 blanket)와 술, 긴 목, 졸린 눈, 꼬리가 살랑 -->
   <g transform="scale(1.35)">
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="-8 2.6 6.6;8 2.6 6.6;-8 2.6 6.6" dur="2.6s" repeatCount="indefinite"/>
+    <g class="s6t4897e1">
+      
       <path d="M2.6 6.6 C1.8 7.6 1.6 8.8 1.8 9.8" fill="none" stroke-width="0.8"/>
       <path d="M2.6 6.6 C1.8 7.6 1.6 8.8 1.8 9.8" fill="none" stroke="var(--camel, #d9a86a)" stroke-width="0.4"/>
       <ellipse cx="1.8" cy="10.2" rx="0.5" ry="0.7" fill="#8a6650"/>

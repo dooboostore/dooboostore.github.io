@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44"><style>
+    @keyframes s199sydq_0{0%{transform:translate(58.4px, 40.4px)}4.167%{transform:translate(58.7px, 39.61px)}8.333%{transform:translate(59px, 38.82px)}12.5%{transform:translate(59.3px, 38.03px)}16.667%{transform:translate(59.6px, 37.23px)}20.833%{transform:translate(59.9px, 36.44px)}25%{transform:translate(60.2px, 35.65px)}29.167%{transform:translate(60.5px, 34.86px)}33.333%{transform:translate(60.8px, 34.07px)}37.5%{transform:translate(61.1px, 33.28px)}41.667%{transform:translate(61.4px, 32.48px)}45.833%{transform:translate(61.7px, 31.69px)}50%{transform:translate(62px, 30.9px)}54.167%{transform:translate(62.3px, 30.11px)}58.333%{transform:translate(62.6px, 29.32px)}62.5%{transform:translate(62.9px, 28.52px)}66.667%{transform:translate(63.2px, 27.73px)}70.833%{transform:translate(63.5px, 26.94px)}75%{transform:translate(63.8px, 26.15px)}79.167%{transform:translate(64.1px, 25.36px)}83.333%{transform:translate(64.4px, 24.57px)}87.5%{transform:translate(64.7px, 23.77px)}91.667%{transform:translate(65px, 22.98px)}95.833%{transform:translate(65.3px, 22.19px)}100%{transform:translate(65.6px, 21.4px)}}
+    .s199sydqe1{transform-box:view-box;transform-origin:0 0;animation:s199sydq_0 20s linear 0s infinite}
+  </style>
   <!-- 몽마르트르 언덕: 둥근 언덕(밑단까지 둥글게), 작은 집과 포도밭, 지그재그 계단, 오르내리는 푸니쿨라 -->
   <ellipse cx="55" cy="41.4" rx="53" ry="2.6" fill="#3b5a2e" opacity="0.2"/>
   <path d="M3 40 C8 33 22 13 55 11 C88 13 102 33 107 40 C96 43.6 14 43.6 3 40 Z" fill="#9bcc7f" stroke="#5b4636" stroke-width="0.7" stroke-linejoin="round"/>
@@ -14,9 +17,9 @@
   <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="15.6" y="32.4" width="1.4" height="1.6" rx="0.3"/><rect x="23.4" y="27.6" width="1.2" height="1.4" rx="0.3"/><rect x="71.6" y="31.4" width="1.4" height="1.6" rx="0.3"/></g>
   <path d="M48 41 L44 37 L52 33.6 L46 29.4 L53 25.6 L50 21" stroke="#f6ead0" stroke-width="1.4" fill="none" stroke-dasharray="1.6 1" stroke-linecap="round" stroke-linejoin="round"/>
   <line x1="58" y1="41" x2="66" y2="20" stroke="#5b4636" stroke-width="0.45" stroke-linecap="round"/>
-  <g>
+  <g class="s199sydqe1">
     <rect x="-1.6" y="-2.4" width="3.2" height="2.6" rx="0.8" fill="#f4c84f" stroke="#5b4636" stroke-width="0.35"/>
     <rect x="-1.1" y="-1.9" width="2.2" height="1" rx="0.4" fill="#d8eff9"/>
-    <animateMotion path="M58.4 40.4 L65.6 21.4" dur="20s" repeatCount="indefinite" keyPoints="0;1;1;0;0" keyTimes="0;0.42;0.5;0.92;1" calcMode="linear"/>
+    
   </g>
 </svg>

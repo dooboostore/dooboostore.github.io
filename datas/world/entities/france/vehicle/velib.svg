@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18"><style>
+    @keyframes s11g486x_0{0%{transform:translate(7px, 15.2px) rotate(0deg) translate(-7px, -15.2px)}100%{transform:translate(7px, 15.2px) rotate(360deg) translate(-7px, -15.2px)}}
+    @keyframes s11g486x_1_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s11g486x_1_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .s11g486x_1_0{animation:s11g486x_1_0 0.9s linear 0s infinite}
+    .s11g486x_1_1{animation:s11g486x_1_1 0.9s linear 0s infinite}
+    .s11g486xe2{transform-box:view-box;transform-origin:0 0;animation:s11g486x_0 0.9s linear 0s infinite}
+  </style>
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
   <!-- velib — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <g transform="translate(8 17.4) translate(0 0) scale(1.4)">
   <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
@@ -15,22 +23,24 @@
       <circle cx="7.4" cy="3" r="2.9" fill="var(--skin, #ffe0c7)"/>
       <path d="M4.45 3.9 A3.05 3.05 0 1 1 10.3 2.2 C9.4 1.7 8.4 1.7 7.6 2 C7.2 3 6.2 3.2 5.6 2.8 C5.1 3 4.7 3.4 4.45 3.9 Z" fill="var(--hair, #4a3329)"/>
     </g>
-    <g stroke-width="0.4"><animateTransform attributeName="transform" type="rotate" values="0 7 15.2;360 7 15.2" dur="0.9s" repeatCount="indefinite"/>
+    <g stroke-width="0.4" class="s11g486xe2">
       <path d="M7 15.2 L7 13.4" fill="none" stroke="#3d3d44" stroke-width="0.5"/>
     </g>
-    <path d="M5.8 9 L7.6 12.4 L7 14.6" fill="none" stroke="var(--pants, #5d6f94)" stroke-width="1.1">
-      <animate attributeName="d" values="M5.8 9 L7.6 12.4 L7 14.6;M5.8 9 L8.4 11 L8.6 13;M5.8 9 L7.6 12.4 L7 14.6" dur="0.9s" repeatCount="indefinite"/>
+    <path d="M5.8 9 L7.6 12.4 L7 14.6" fill="none" stroke="var(--pants, #5d6f94)" stroke-width="1.1" class="s11g486x_1_0">
+      
+    </path><path d="M5.8 9 L8.4 11 L8.6 13" fill="none" stroke="var(--pants, #5d6f94)" stroke-width="1.1" class="s11g486x_1_1">
+      
     </path>
   </g>
   <ellipse cx="8.8" cy="3.4" rx="0.4" ry="0.6" fill="#3d2b22"/>
   <ellipse cx="9.2" cy="4.4" rx="0.6" ry="0.35" fill="#ff9e9e" opacity="0.55"/>
   <g fill="#e9785a"><circle cx="12.4" cy="9.2" r="0.5"/><circle cx="13.4" cy="9" r="0.5" fill="#f4c84f"/></g>
-  <g transform="translate(3.4 15.2)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1.05)">
+  <g transform="translate(3.4 15.2)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1.05)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
 </g></g></g>
-  <g transform="translate(12.6 15.2)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1.05)">
+  <g transform="translate(12.6 15.2)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1.05)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>

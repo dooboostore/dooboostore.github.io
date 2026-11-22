@@ -1,4 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 34">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 34"><style>
+    @keyframes sn94z9l_0{0%{opacity:0.4}50%{opacity:1}100%{opacity:0.4}}
+    @keyframes sn94z9l_1{0%{opacity:1}50%{opacity:0.4}100%{opacity:1}}
+    @keyframes sn94z9l_2{0%{opacity:0.4}50%{opacity:1}100%{opacity:0.4}}
+    @keyframes sn94z9l_3{0%{opacity:0.2}50%{opacity:0.9}100%{opacity:0.2}}
+    @keyframes sn94z9l_4{0%{opacity:0.2}50%{opacity:0.9}100%{opacity:0.2}}
+    @keyframes sn94z9l_5{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes sn94z9l_6{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes sn94z9l_7{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .sn94z9le8{animation:sn94z9l_0 1.2s linear 0s infinite}
+    .sn94z9le9{animation:sn94z9l_1 1.2s linear 0s infinite}
+    .sn94z9le10{animation:sn94z9l_2 1.2s linear 0.6s infinite}
+    .sn94z9le11{animation:sn94z9l_3 1.6s linear 0s infinite}
+    .sn94z9le12{animation:sn94z9l_4 1.6s linear 0.8s infinite}
+    .sn94z9le13{animation:sn94z9l_5 2s linear 0s infinite}
+    .sn94z9le14{animation:sn94z9l_6 2s linear 0.7s infinite}
+    .sn94z9le15{animation:sn94z9l_7 2s linear 1.3s infinite}
+  </style>
   <!-- 트레비 분수: 크림색 바로크 궁전 벽, 가운데 아치 벽감의 오케아노스 상, 흘러내리는 바위, 반짝이는 옥빛 연못. 물이 쏟아지고 동전이 반짝인다 -->
   <ellipse cx="25" cy="32.8" rx="24" ry="1.2" fill="#3b5a2e" opacity="0.18"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -27,13 +44,13 @@
     <rect x="3.6" y="24.4" width="42.8" height="6" rx="3" fill="#7fd3d6"/>
   </g>
   <g fill="none" stroke="#ffffff" stroke-linecap="round">
-    <path d="M22.4 19.6 Q22 22 21.4 24.6" stroke-width="0.9"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.2s" repeatCount="indefinite"/></path>
-    <path d="M25 19.8 L25 24.6" stroke-width="1.1"><animate attributeName="opacity" values="1;0.4;1" dur="1.2s" repeatCount="indefinite"/></path>
-    <path d="M27.6 19.6 Q28 22 28.6 24.6" stroke-width="0.9"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.2s" begin="0.6s" repeatCount="indefinite"/></path>
-    <path d="M14 22.6 Q15 23.6 16 24.6" stroke-width="0.6"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="1.6s" repeatCount="indefinite"/></path>
-    <path d="M36 22.6 Q35 23.6 34 24.6" stroke-width="0.6"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="1.6s" begin="0.8s" repeatCount="indefinite"/></path>
+    <path d="M22.4 19.6 Q22 22 21.4 24.6" stroke-width="0.9" class="sn94z9le8"/>
+    <path d="M25 19.8 L25 24.6" stroke-width="1.1" class="sn94z9le9"/>
+    <path d="M27.6 19.6 Q28 22 28.6 24.6" stroke-width="0.9" class="sn94z9le10"/>
+    <path d="M14 22.6 Q15 23.6 16 24.6" stroke-width="0.6" class="sn94z9le11"/>
+    <path d="M36 22.6 Q35 23.6 34 24.6" stroke-width="0.6" class="sn94z9le12"/>
     <path d="M6 26.6 Q8 26 10 26.6 M40 26.6 Q42 26 44 26.6 M18 28.4 Q20 27.8 22 28.4 M28 28.6 Q30 28 32 28.6" stroke-width="0.5" opacity="0.8"/>
   </g>
-  <g fill="#f6c944"><circle cx="12" cy="28.6" r="0.3"><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></circle><circle cx="36.4" cy="27.6" r="0.3"><animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.7s" repeatCount="indefinite"/></circle><circle cx="25" cy="29.2" r="0.3"><animate attributeName="opacity" values="0;1;0" dur="2s" begin="1.3s" repeatCount="indefinite"/></circle></g>
+  <g fill="#f6c944"><circle cx="12" cy="28.6" r="0.3" class="sn94z9le13"/><circle cx="36.4" cy="27.6" r="0.3" class="sn94z9le14"/><circle cx="25" cy="29.2" r="0.3" class="sn94z9le15"/></g>
   <g fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.7)"><rect x="20.8" y="11" width="8.4" height="9.8" rx="3"/><rect x="3.8" y="24.6" width="42.4" height="5.6" rx="2.8" opacity="0.5"/></g>
 </svg>

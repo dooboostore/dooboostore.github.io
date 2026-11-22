@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11" data-foot="0.5 0.86">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11" data-foot="0.5 0.86"><style>
+    @keyframes s1ok223q_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s1ok223q_1{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.35px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    @keyframes s1ok223q_2{0%{transform:translate(0px, 0px) rotate(0deg) translate(0px, 0px)}100%{transform:translate(0px, 0px) rotate(360deg) translate(0px, 0px)}}
+    .s1ok223qe3{animation:s1ok223q_0 2s linear 0s infinite}
+    .s1ok223qe4{transform-box:view-box;transform-origin:0 0;animation:s1ok223q_1 2.8s linear 0s infinite}
+    .s1ok223qe5{transform-box:view-box;transform-origin:0 0;animation:s1ok223q_2 2s linear 0s infinite}
+  </style>
   <!-- 타이달 베이슨 패들보트 (오른쪽을 향함): 하늘색 둥근 배, 지붕 차양, 둘이 탄 동글 머리, 뒤쪽 물바퀴가 빙글. 물결에 흔들림 -->
   <g stroke="#ffffff" stroke-width="0.5" fill="none" stroke-linecap="round">
-  <path d="M0.4 9.6 Q2 9 3.6 9.6"><animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/></path>
+  <path d="M0.4 9.6 Q2 9 3.6 9.6" class="s1ok223qe3"/>
   </g>
-  <g>
-  <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.35;0 0" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
-  <g transform="translate(3.6 7.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
+  <g class="s1ok223qe4">
+  
+  <g transform="translate(3.6 7.4)"><g class="s1ok223qe5">
   <circle r="1.6" fill="#f4f1e8" stroke="#5b4636" stroke-width="0.35"/><path d="M-1.6 0 H1.6 M0 -1.6 V1.6" stroke="#5b4636" stroke-width="0.3"/></g></g>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
   <circle cx="8.4" cy="5" r="1.5" fill="#ffe0c7"/><circle cx="12" cy="5" r="1.5" fill="#eac3a2"/>

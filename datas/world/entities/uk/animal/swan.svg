@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" data-foot="0.5 0.85">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" data-foot="0.5 0.85"><style>
+    @keyframes s1c8ixd1_0{0%{opacity:0.2}50%{opacity:0.9}100%{opacity:0.2}}
+    @keyframes s1c8ixd1_1{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.25px)}100%{transform:translate(0px, 0px)}}
+    .s1c8ixd1e2{animation:s1c8ixd1_0 2.4s linear 0s infinite}
+    .s1c8ixd1e3{transform-box:view-box;transform-origin:0 0;animation:s1c8ixd1_1 2.6s linear 0s infinite}
+  </style>
   <!-- 백조 (오른쪽을 향함): 하얀 몸, S자 목, 주황 부리. 물 위에서 살랑 흔들림 -->
-  <g stroke="#ffffff" stroke-width="0.4" fill="none" stroke-linecap="round" opacity="0.8"><path d="M1 8.2 Q3 7.6 5 8.2 Q7 8.8 9 8.2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="2.4s" repeatCount="indefinite"/></path></g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.25;0 0" dur="2.6s" repeatCount="indefinite"/>
+  <g stroke="#ffffff" stroke-width="0.4" fill="none" stroke-linecap="round" opacity="0.8"><path d="M1 8.2 Q3 7.6 5 8.2 Q7 8.8 9 8.2" class="s1c8ixd1e2"/></g>
+  <g class="s1c8ixd1e3">
+    
     <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
       <path d="M1.2 5 C2 4.2 3 4.6 4 5.2 C5.6 4.4 7.4 4.6 8.4 5.6 C8.6 7 7.4 7.8 5.4 7.8 L3 7.8 C1.8 7.6 1.2 6.6 1.2 5 Z" fill="#fbfaf6"/>
       <path d="M7.6 6 C8.6 4.6 8.4 3.2 8.4 2.4 C8.4 1.2 9.8 0.8 10.4 1.8" fill="none" stroke-width="1.3"/>

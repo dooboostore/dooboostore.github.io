@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 26">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 26"><style>
+    @keyframes so66jan_0{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    @keyframes so66jan_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    .so66jane2{animation:so66jan_0 2.4s linear 0s infinite}
+    .so66jane3{animation:so66jan_1 2.4s linear 0s infinite}
+  </style>
   <!-- 루브르 궁: ㄷ자 석조 궁전(회색 지붕), 가운데 둥근 꼭짓점의 유리 피라미드와 분수. 밤엔 피라미드가 금빛으로 -->
   <ellipse cx="30" cy="24.8" rx="29" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -21,7 +26,7 @@
   <g fill="#b9c7d4" stroke="#5b4636" stroke-width="0.25"><rect x="10.6" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="13.6" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="16.6" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="19.6" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="22.6" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="36" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="39" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="42" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="45" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="48" y="7.6" width="1.4" height="2.8" rx="0.5"/><rect x="29.3" y="6" width="1.4" height="3" rx="0.6"/><rect x="3.4" y="10.4" width="1.4" height="3" rx="0.5"/><rect x="7.8" y="10.4" width="1.4" height="3" rx="0.5"/><rect x="3.4" y="16" width="1.4" height="3" rx="0.5"/><rect x="7.8" y="16" width="1.4" height="3" rx="0.5"/><rect x="50.8" y="10.4" width="1.4" height="3" rx="0.5"/><rect x="55.2" y="10.4" width="1.4" height="3" rx="0.5"/><rect x="50.8" y="16" width="1.4" height="3" rx="0.5"/><rect x="55.2" y="16" width="1.4" height="3" rx="0.5"/></g>
   <g fill="#fff" opacity="0.3"><rect x="9" y="3" width="40" height="0.8" rx="0.4"/><rect x="2.2" y="8.2" width="1" height="14.6" rx="0.5"/></g>
   <rect x="56.8" y="8.2" width="1.2" height="15" rx="0.6" fill="#000" opacity="0.08"/>
-  <g stroke="#fff" stroke-width="0.5" stroke-linecap="round" fill="none"><path d="M15 21.2 Q16 20.6 17 21.2"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/></path><path d="M43 21.2 Q44 20.6 45 21.2"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></path></g>
+  <g stroke="#fff" stroke-width="0.5" stroke-linecap="round" fill="none"><path d="M15 21.2 Q16 20.6 17 21.2" class="so66jane2"/><path d="M43 21.2 Q44 20.6 45 21.2" class="so66jane3"/></g>
   <g style="opacity: var(--night, 0)" fill="#ffd77a">
     <path d="M21.6 23.4 L29.4 11.4 Q30 10.6 30.6 11.4 L38.4 23.4 Q30 24.4 21.6 23.4 Z" opacity="0.85"/>
     <rect x="10.8" y="7.8" width="1" height="2.4" rx="0.4"/><rect x="16.8" y="7.8" width="1" height="2.4" rx="0.4"/><rect x="22.8" y="7.8" width="1" height="2.4" rx="0.4"/><rect x="39.2" y="7.8" width="1" height="2.4" rx="0.4"/><rect x="45.2" y="7.8" width="1" height="2.4" rx="0.4"/><rect x="3.6" y="16.2" width="1" height="2.6" rx="0.4"/><rect x="55.4" y="16.2" width="1" height="2.6" rx="0.4"/>

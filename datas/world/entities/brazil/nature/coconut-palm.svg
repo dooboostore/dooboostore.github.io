@@ -1,12 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 38">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 38"><style>
+    @keyframes s1xbsf1l_0{0%{transform:translate(16px, 9.6px) rotate(-2deg) translate(-16px, -9.6px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(16px, 9.6px) rotate(2deg) translate(-16px, -9.6px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(16px, 9.6px) rotate(-2deg) translate(-16px, -9.6px)}}
+    .s1xbsf1le1{transform-box:view-box;transform-origin:0 0;animation:s1xbsf1l_0 4.4s linear 0s infinite}
+  </style>
   <!-- 코코넛 야자: 바다 쪽으로 길게 휘어 기운 마디 줄기, 축 늘어진 깃털 잎, 초록 코코넛 송이. 바닷바람에 살랑 -->
   <ellipse cx="9" cy="37" rx="5" ry="1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
     <path d="M7.6 37.2 C7.4 28 9.6 18 15.4 9.4 L17 10.4 C11.8 18.6 9.8 28.4 10.4 37.2 Z" fill="#b08a62" stroke-width="0.55"/>
   </g>
   <g stroke="#8a6650" stroke-width="0.35" stroke-linecap="round" opacity="0.7"><path d="M7.8 34 L10.2 34.2 M8 30 L10.4 30.4 M8.6 26 L11 26.6 M9.6 22 L11.8 22.8 M10.8 18.4 L13 19.2 M12.4 14.8 L14.4 15.8 M14 12 L15.8 13"/></g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-2 16 9.6;2 16 9.6;-2 16 9.6" dur="4.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1xbsf1le1">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" fill="var(--leaf, #4fa35a)">
       <path d="M16 9.4 C12 6.4 6.4 6.6 2.4 10.4 C2 11.4 2.8 11.6 3.6 11 C7 8.6 11.6 8.4 16 10 Z"/>
       <path d="M16 9.4 C20 6.4 24 7.4 25.6 11.6 C25.6 12.6 24.8 12.6 24.4 11.8 C22.6 8.8 19.6 8.6 16.4 10.2 Z"/>

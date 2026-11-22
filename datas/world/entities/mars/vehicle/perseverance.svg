@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 22">
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
   <!-- perseverance — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <g transform="translate(15 21.7) translate(0 0) scale(2.9)">
   <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
@@ -34,7 +35,7 @@
   <path d="M8 10.2 V12 M12 10.2 V12 M16 10.2 V12" stroke="#5b4636" stroke-width="0.2" opacity="0.3"/>
   <circle cx="16.2" cy="13.8" r="0.6" fill="#8b9197" stroke="#5b4636" stroke-width="0.25"/>
   <circle cx="10.4" cy="16.4" r="0.5" fill="#8b9197" stroke="#5b4636" stroke-width="0.25"/>
-  <g transform="translate(6 19.8)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <g transform="translate(6 19.8)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1)">
   <!-- 퍼서비어런스 바퀴 (부품): 알루미늄 바퀴, 둥근 돌기(그라우저)가 난 바깥 테, 굽은 티타늄 바큇살. 굴러가면 바큇살이 돈다 -->
   <g fill="#9aa0a6" stroke="#5b4636" stroke-width="0.2">
     <circle cx="0" cy="-2.15" r="0.28"/><circle cx="1.52" cy="-1.52" r="0.28"/><circle cx="2.15" cy="0" r="0.28"/><circle cx="1.52" cy="1.52" r="0.28"/><circle cx="0" cy="2.15" r="0.28"/><circle cx="-1.52" cy="1.52" r="0.28"/><circle cx="-2.15" cy="0" r="0.28"/><circle cx="-1.52" cy="-1.52" r="0.28"/>
@@ -47,7 +48,7 @@
   <circle r="0.5" fill="#d3d8dd" stroke="#5b4636" stroke-width="0.2"/>
   <path d="M-1.2 -1.4 Q0 -2 1.2 -1.4" stroke="#fff" stroke-opacity="0.5" stroke-width="0.25" fill="none" stroke-linecap="round"/>
 </g></g></g>
-  <g transform="translate(14.4 19.8)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <g transform="translate(14.4 19.8)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1)">
   <!-- 퍼서비어런스 바퀴 (부품): 알루미늄 바퀴, 둥근 돌기(그라우저)가 난 바깥 테, 굽은 티타늄 바큇살. 굴러가면 바큇살이 돈다 -->
   <g fill="#9aa0a6" stroke="#5b4636" stroke-width="0.2">
     <circle cx="0" cy="-2.15" r="0.28"/><circle cx="1.52" cy="-1.52" r="0.28"/><circle cx="2.15" cy="0" r="0.28"/><circle cx="1.52" cy="1.52" r="0.28"/><circle cx="0" cy="2.15" r="0.28"/><circle cx="-1.52" cy="1.52" r="0.28"/><circle cx="-2.15" cy="0" r="0.28"/><circle cx="-1.52" cy="-1.52" r="0.28"/>
@@ -60,7 +61,7 @@
   <circle r="0.5" fill="#d3d8dd" stroke="#5b4636" stroke-width="0.2"/>
   <path d="M-1.2 -1.4 Q0 -2 1.2 -1.4" stroke="#fff" stroke-opacity="0.5" stroke-width="0.25" fill="none" stroke-linecap="round"/>
 </g></g></g>
-  <g transform="translate(23 19.8)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <g transform="translate(23 19.8)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1)">
   <!-- 퍼서비어런스 바퀴 (부품): 알루미늄 바퀴, 둥근 돌기(그라우저)가 난 바깥 테, 굽은 티타늄 바큇살. 굴러가면 바큇살이 돈다 -->
   <g fill="#9aa0a6" stroke="#5b4636" stroke-width="0.2">
     <circle cx="0" cy="-2.15" r="0.28"/><circle cx="1.52" cy="-1.52" r="0.28"/><circle cx="2.15" cy="0" r="0.28"/><circle cx="1.52" cy="1.52" r="0.28"/><circle cx="0" cy="2.15" r="0.28"/><circle cx="-1.52" cy="1.52" r="0.28"/><circle cx="-2.15" cy="0" r="0.28"/><circle cx="-1.52" cy="-1.52" r="0.28"/>

@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -14 14 30" data-foot="0.5 0.5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -14 14 30" data-foot="0.5 0.5"><style>
+    @keyframes s1uvmxjk_0{0%{transform:scale(1, 1)}50%{transform:scale(0.85, 1.25)}100%{transform:scale(1, 1)}}
+    .s1uvmxjke1{transform-box:view-box;transform-origin:0 0;animation:s1uvmxjk_0 0.4s linear 0s infinite}
+  </style>
   <!-- 로켓 (뾰족 끝 대신 둥근 코가 위쪽): 흰 몸통, 빨간 코와 날개 세 장, 둥근 창, 아래로 일렁이는 작은 불꽃 -->
-  <g>
-    <animateTransform attributeName="transform" type="scale" values="1 1;0.85 1.25;1 1" dur="0.4s" repeatCount="indefinite" additive="sum"/>
+  <g class="s1uvmxjke1">
+    
     <path d="M-2 9 Q-2.4 13 0 15.4 Q2.4 13 2 9 Z" fill="#ff8a3d" opacity="0.9"/>
     <path d="M-1 9 Q-1.2 11.6 0 13 Q1.2 11.6 1 9 Z" fill="#ffe27a"/>
   </g>

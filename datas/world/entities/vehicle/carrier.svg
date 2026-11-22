@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -28 18 62" data-foot="0.5 0.45">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -28 18 62" data-foot="0.5 0.45"><style>
+    @keyframes s142hcrr_0{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    @keyframes s142hcrr_1{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    .s142hcrre2{animation:s142hcrr_0 1.8s linear 0s infinite}
+    .s142hcrre3{animation:s142hcrr_1 1.8s linear 0s infinite}
+  </style>
   <!-- 항공모함 (위에서 본 모습, 뱃머리가 위쪽): 비스듬한 활주로, 오른쪽 함교, 갑판 위 작은 비행기들 -->
   <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="1">
-    <path d="M-3 27 Q-5 30 -6 33"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
-    <path d="M3 27 Q5 30 6 33"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M-3 27 Q-5 30 -6 33" class="s142hcrre2"/>
+    <path d="M3 27 Q5 30 6 33" class="s142hcrre3"/>
   </g>
-  <path d="M0 -27 C4 -24 5.5 -18 5.5 -12 L8 -4 L8 10 L5.5 14 L5.5 24 Q5.5 27 0 27.5 Q-5.5 27 -5.5 24 L-5.5 2 L-8.2 -6 L-8.2 -12 L-5.5 -14 C-5.5 -20 -4 -24 0 -27 Z"
-        fill="#8d97a3" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M0 -27 C4 -24 5.5 -18 5.5 -12 L8 -4 L8 10 L5.5 14 L5.5 24 Q5.5 27 0 27.5 Q-5.5 27 -5.5 24 L-5.5 2 L-8.2 -6 L-8.2 -12 L-5.5 -14 C-5.5 -20 -4 -24 0 -27 Z" fill="#8d97a3" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
   <path d="M0 -25.5 C3.4 -23 4.6 -18 4.6 -12 L4.6 24 L-4.6 24 L-4.6 -12 C-4.6 -18 -3.4 -23 0 -25.5 Z" fill="#6f7985"/>
   <g stroke="#f4f1e8" stroke-width="0.35" stroke-dasharray="1.4 1.2" fill="none">
     <line x1="0" y1="-24" x2="0" y2="22"/>

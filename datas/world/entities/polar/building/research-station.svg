@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36"><style>
+    @keyframes s15k5tby_0{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    .s15k5tbye1{animation:s15k5tby_0 1.6s linear 0s infinite}
+  </style>
   <!-- 극지 과학기지 (세종·다산 공용): 기둥 위에 올린 알록달록 모듈 세 동과 둥근 연결 통로, 안테나 철탑과 흰 기상 레이돔, 계단. 밤엔 창이 빛난다 -->
   <ellipse cx="30" cy="34.6" rx="29" ry="1.4" fill="#3b5a2e" opacity="0.18"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -35,7 +38,7 @@
   </g>
   <path d="M8.4 5.6 Q9.6 4.6 11 4.8" stroke="#cfe6f4" stroke-width="0.6" fill="none" stroke-linecap="round"/>
   <path d="M7 10 Q10.3 11.2 13.6 10" stroke="#5b4636" stroke-width="0.3" fill="none" stroke-linecap="round" opacity="0.5"/>
-  <circle cx="52.6" cy="0.8" r="0.8" fill="#ff5d55"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-  <g stroke="#5b4636" stroke-width="0.25"><path d="M44 12 L44 15.6" /><path d="M44 12 L46.4 12.8 L44 13.6 Z" fill="#fbfaf6"/></g>
+  <circle cx="52.6" cy="0.8" r="0.8" fill="#ff5d55" class="s15k5tbye1"/>
+  <g stroke="#5b4636" stroke-width="0.25"><path d="M44 12 L44 15.6"/><path d="M44 12 L46.4 12.8 L44 13.6 Z" fill="#fbfaf6"/></g>
   <circle cx="45" cy="12.8" r="0.3" fill="#d6363f"/>
 </svg>

@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"><style>
+    @keyframes s4kdz0n_0{0%{transform:translate(2.6px, 7.6px) rotate(0deg) translate(-2.6px, -7.6px)}50%{transform:translate(2.6px, 7.6px) rotate(-14deg) translate(-2.6px, -7.6px)}100%{transform:translate(2.6px, 7.6px) rotate(0deg) translate(-2.6px, -7.6px)}}
+    .s4kdz0ne1{transform-box:view-box;transform-origin:0 0;animation:s4kdz0n_0 1.8s linear 0s infinite}
+  </style>
   <!-- 스발바르 순록 (오른쪽을 향함): 다리가 짧고 통통한 몸, 북슬북슬한 크림빛 회갈색 털, 끝이 둥근 큰 뿔, 흰 목털. 꼬리가 살랑 -->
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 2.6 7.6;-14 2.6 7.6;0 2.6 7.6" dur="1.8s" repeatCount="indefinite"/>
+    <g class="s4kdz0ne1">
+      
       <ellipse cx="2.2" cy="7.6" rx="0.9" ry="0.7" fill="#fbf6ea"/>
     </g>
     <rect x="3.8" y="10" width="1.3" height="4" rx="0.65" fill="#8a6a52"/>

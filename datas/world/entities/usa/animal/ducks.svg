@@ -1,17 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 8" data-foot="0.5 0.9">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 8" data-foot="0.5 0.9"><style>
+    @keyframes s9cincd_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s9cincd_1{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.5px)}100%{transform:translate(0px, 0px)}}
+    @keyframes s9cincd_2{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.5px)}100%{transform:translate(0px, 0px)}}
+    @keyframes s9cincd_3{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.5px)}100%{transform:translate(0px, 0px)}}
+    @keyframes s9cincd_4{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.3px)}100%{transform:translate(0px, 0px)}}
+    .s9cincde5{animation:s9cincd_0 2s linear 0s infinite}
+    .s9cincde6{transform-box:view-box;transform-origin:0 0;animation:s9cincd_1 1.2s linear 0s infinite}
+    .s9cincde7{transform-box:view-box;transform-origin:0 0;animation:s9cincd_2 1.2s linear 0.4s infinite}
+    .s9cincde8{transform-box:view-box;transform-origin:0 0;animation:s9cincd_3 1.2s linear 0.8s infinite}
+    .s9cincde9{transform-box:view-box;transform-origin:0 0;animation:s9cincd_4 2.4s linear 0s infinite}
+  </style>
   <!-- 청둥오리 가족 (오른쪽을 향함): 엄마 오리 뒤로 동글 새끼 셋이 졸졸, 저마다 까딱까딱 -->
-  <g stroke="#fff" stroke-width="0.4" fill="none" stroke-linecap="round"><path d="M0.4 7.4 Q2 6.8 3.6 7.4"><animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/></path></g>
-  <g transform="translate(3.4 7) scale(0.6)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -0.5;0 0" dur="1.2s" begin="0s" repeatCount="indefinite"/>
+  <g stroke="#fff" stroke-width="0.4" fill="none" stroke-linecap="round"><path d="M0.4 7.4 Q2 6.8 3.6 7.4" class="s9cincde5"/></g>
+  <g transform="translate(3.4 7) scale(0.6)"><g class="s9cincde6">
   <ellipse cx="0" cy="-1.6" rx="2.6" ry="1.6" fill="#e8c97a" stroke="#5b4636" stroke-width="0.5"/><circle cx="1.8" cy="-3.4" r="1.4" fill="#f2d58e" stroke="#5b4636" stroke-width="0.5"/>
   <path d="M3 -3.4 L4.2 -3.1 L3 -2.8 Z" fill="#f0a45a"/><circle cx="2.2" cy="-3.7" r="0.3" fill="#2b2b2b"/></g></g>
-  <g transform="translate(7.4 7) scale(0.7)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -0.5;0 0" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
+  <g transform="translate(7.4 7) scale(0.7)"><g class="s9cincde7">
   <ellipse cx="0" cy="-1.6" rx="2.6" ry="1.6" fill="#e8c97a" stroke="#5b4636" stroke-width="0.5"/><circle cx="1.8" cy="-3.4" r="1.4" fill="#f2d58e" stroke="#5b4636" stroke-width="0.5"/>
   <path d="M3 -3.4 L4.2 -3.1 L3 -2.8 Z" fill="#f0a45a"/><circle cx="2.2" cy="-3.7" r="0.3" fill="#2b2b2b"/></g></g>
-  <g transform="translate(11.4 7) scale(0.6)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -0.5;0 0" dur="1.2s" begin="0.8s" repeatCount="indefinite"/>
+  <g transform="translate(11.4 7) scale(0.6)"><g class="s9cincde8">
   <ellipse cx="0" cy="-1.6" rx="2.6" ry="1.6" fill="#e8c97a" stroke="#5b4636" stroke-width="0.5"/><circle cx="1.8" cy="-3.4" r="1.4" fill="#f2d58e" stroke="#5b4636" stroke-width="0.5"/>
   <path d="M3 -3.4 L4.2 -3.1 L3 -2.8 Z" fill="#f0a45a"/><circle cx="2.2" cy="-3.7" r="0.3" fill="#2b2b2b"/></g></g>
-  <g>
-  <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.3;0 0" dur="2.4s" repeatCount="indefinite"/>
+  <g class="s9cincde9">
+  
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
   <path d="M14.4 5 C14.4 3.4 16.6 2.8 19 3.2 C20.6 3.6 21 5 20.6 6 Q19.6 7 17.4 7 Q15 7 14.4 5 Z" fill="#b8a48a"/>
   <circle cx="20.6" cy="2.2" r="1.5" fill="#3f8a5a"/>

@@ -1,8 +1,15 @@
-<svg data-foot="0.5 0.86" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 16">
+<svg xmlns="http://www.w3.org/2000/svg" data-foot="0.5 0.86" viewBox="0 0 46 16"><style>
+    @keyframes scvxf2o_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes scvxf2o_1{0%{opacity:0}50%{opacity:0.7}100%{opacity:0}}
+    @keyframes scvxf2o_2{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    .scvxf2oe3{animation:scvxf2o_0 2.2s linear 0s infinite}
+    .scvxf2oe4{animation:scvxf2o_1 2.2s linear 1.1s infinite}
+    .scvxf2oe5{transform-box:view-box;transform-origin:0 0;animation:scvxf2o_2 3.6s linear 0s infinite}
+  </style>
   <!-- 긴꼬리배 (오른쪽을 향함, 옆모습): 좁고 긴 나무배, 오색 천을 감아 높이 들린 뱃머리, 파란 천 차양, 뒤쪽 엔진에서 물속으로 길게 뻗은 프로펠러 축, 모자 쓴 뱃사공. 물결에 흔들리고 뒤로 물거품 -->
-  <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round"><path d="M1 13.4 Q3 12.8 5 13.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path><path d="M0 14.6 Q2.5 14.0 5.5 14.6"><animate attributeName="opacity" values="0;0.7;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></path></g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round"><path d="M1 13.4 Q3 12.8 5 13.4" class="scvxf2oe3"/><path d="M0 14.6 Q2.5 14.0 5.5 14.6" class="scvxf2oe4"/></g>
+  <g class="scvxf2oe5">
+    
     <path d="M1 13.8 L8 10.8" stroke="#5b4636" stroke-width="0.9" stroke-linecap="round"/>
     <path d="M1 13.8 L8 10.8" stroke="#8c939a" stroke-width="0.4" stroke-linecap="round"/>
     <ellipse cx="1.2" cy="13.8" rx="0.5" ry="0.9" fill="#d3d8dd" stroke="#5b4636" stroke-width="0.25"/>

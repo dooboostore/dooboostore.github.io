@@ -1725,6 +1725,9 @@ export default (win: Window) => {
           @keyframes pulse { from { transform: scale(0.6); opacity: 0.5; } to { transform: scale(2.4); opacity: 0; } }
           .walking .body { animation: bob 0.44s ease-in-out infinite alternate; }
           @keyframes bob { to { transform: translateY(-0.7px); } }
+          /* entity 부품 회전 (바퀴 등): entity.ts 의 anim: "spin" */
+          .part-spin { transform-box: view-box; transform-origin: 0 0; animation: partSpin 0.9s linear infinite; }
+          @keyframes partSpin { to { transform: rotate(360deg); } }
 
           /* ---- UI: 크림색 게임 패널 ---- */
           button { border: 2px solid #ead7b8; border-radius: 14px; background: #fff8ec; color: #6b4f3a; font-size: 17px; width: 42px; height: 42px; cursor: pointer;

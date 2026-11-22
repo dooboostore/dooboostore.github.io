@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 26" data-foot="0.5 0.86">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 26" data-foot="0.5 0.86"><style>
+    @keyframes sihj8b3_0{0%{opacity:1}50%{opacity:0.3}100%{opacity:1}}
+    @keyframes sihj8b3_1{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    @keyframes sihj8b3_2{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    .sihj8b3e3{animation:sihj8b3_0 2.4s linear 0s infinite}
+    .sihj8b3e4{transform-box:view-box;transform-origin:0 0;animation:sihj8b3_1 4s linear 0s infinite}
+    .sihj8b3e5{animation:sihj8b3_2 2.2s linear 0s infinite}
+  </style>
   <!-- 쇄빙연구선 아라온호 (오른쪽을 향함, 옆모습): 빨간 선체에 흰 띠, 둥글게 솟은 쇄빙 뱃머리, 뱃머리 쪽 흰 선교, 노란 크레인, 고물 쪽 헬기 갑판. 물결에 흔들리고 앞으로 얼음 조각이 밀려난다. 밤엔 창이 빛난다 -->
   <g fill="#f4fbff" stroke="#5b4636" stroke-width="0.3">
-    <path d="M60 21.6 Q61.2 20.8 62.6 21.6 Q61.6 22.4 60 21.6 Z"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></path>
+    <path d="M60 21.6 Q61.2 20.8 62.6 21.6 Q61.6 22.4 60 21.6 Z" class="sihj8b3e3"/>
     <path d="M57 22.4 Q58 21.8 59.2 22.4 Q58 22.8 57 22.4 Z"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="sihj8b3e4">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
       <rect x="38.4" y="0.8" width="1.2" height="7" rx="0.6" fill="#8b9197"/>
       <path d="M36.6 2.8 L41.4 2.8" stroke-width="0.5"/>
@@ -41,7 +48,7 @@
     <circle cx="39" cy="0.8" r="0.6" fill="#ff5d55" style="opacity: var(--night, 0)"/>
   </g>
   <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
-    <path d="M1 22.6 Q3 22 5 22.6"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path>
+    <path d="M1 22.6 Q3 22 5 22.6" class="sihj8b3e5"/>
     <path d="M14 22.8 Q30 23.4 50 22.8" opacity="0.5"/>
   </g>
 </svg>

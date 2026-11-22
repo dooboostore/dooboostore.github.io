@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 60 31">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 60 31"><style>
+    @keyframes s1oym3uk_0{0%{transform:skewY(0deg)}25%{transform:skewY(4deg)}50%{transform:skewY(0deg)}75%{transform:skewY(-3deg)}100%{transform:skewY(0deg)}}
+    .s1oym3uke1{transform-box:view-box;transform-origin:0 0;animation:s1oym3uk_0 2.6s linear 0s infinite}
+  </style>
   <!-- 버킹엄 궁전: 크림색 긴 정면, 가운데 기둥 현관과 발코니, 지붕 위 왕실기, 앞쪽 검정·금색 철문. 밤엔 창에 불 -->
   <ellipse cx="30" cy="28.8" rx="29" ry="1.4" fill="#3b5a2e" opacity="0.22"/>
   <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
@@ -24,8 +27,8 @@
   </g>
   <!-- 왕실기 -->
   <line x1="30" y1="3.4" x2="30" y2="-0.6" stroke="#5b4636" stroke-width="0.35" stroke-linecap="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="skewY" values="0;4;0;-3;0" dur="2.6s" repeatCount="indefinite"/>
+  <g class="s1oym3uke1">
+    
     <rect x="30.2" y="-0.6" width="4" height="2.4" rx="0.3" fill="#e9c35a" stroke="#5b4636" stroke-width="0.2"/>
     <rect x="30.4" y="-0.4" width="1.7" height="1" fill="#d8463c"/><rect x="32.3" y="0.6" width="1.7" height="1" fill="#d8463c"/><rect x="32.3" y="-0.4" width="1.7" height="1" fill="#4a6fb5"/>
   </g>

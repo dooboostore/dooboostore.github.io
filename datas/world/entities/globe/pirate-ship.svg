@@ -1,8 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -15 16 32" data-foot="0.5 0.47">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -15 16 32" data-foot="0.5 0.47"><style>
+    @keyframes s1opw3fk_0{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    @keyframes s1opw3fk_1{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    @keyframes s1opw3fk_2{0%{transform:translate(0px, -7.2px) rotate(0deg) translate(0px, 7.2px)}50%{transform:translate(0px, -7.2px) rotate(-10deg) translate(0px, 7.2px)}100%{transform:translate(0px, -7.2px) rotate(0deg) translate(0px, 7.2px)}}
+    .s1opw3fke3{animation:s1opw3fk_0 1.8s linear 0s infinite}
+    .s1opw3fke4{animation:s1opw3fk_1 1.8s linear 0s infinite}
+    .s1opw3fke5{transform-box:view-box;transform-origin:0 0;animation:s1opw3fk_2 1.4s linear 0s infinite}
+  </style>
   <!-- 해적선 (위에서 본 모습, 뱃머리가 위쪽): 둥근 갈색 나무 선체와 갑판 널, 바람에 부푼 검은 돛 두 장, 큰 돛에 웃는 해골 무늬, 돛대 꼭대기 깃발이 펄럭인다. 뒤로 하얀 물결 -->
   <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="0.7">
-    <path d="M-1.6 13 Q-3.2 15 -4.2 16.6"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
-    <path d="M1.6 13 Q3.2 15 4.2 16.6"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M-1.6 13 Q-3.2 15 -4.2 16.6" class="s1opw3fke3"/>
+    <path d="M1.6 13 Q3.2 15 4.2 16.6" class="s1opw3fke4"/>
   </g>
   <path d="M0 -14 C3.6 -10 4.6 -5 4.6 0 L4.6 9 Q4.6 13 0 13.4 Q-4.6 13 -4.6 9 L-4.6 0 C-4.6 -5 -3.6 -10 0 -14 Z" fill="var(--hull, #6b4a35)" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>
   <path d="M0 -12.2 C2.6 -9 3.5 -5 3.5 0 L3.5 8.6 Q3.5 11.8 0 12.2 Q-3.5 11.8 -3.5 8.6 L-3.5 0 C-3.5 -5 -2.6 -9 0 -12.2 Z" fill="#c49a6c"/>
@@ -17,8 +24,8 @@
   <path d="M-0.5 0.7 Q0 1.1 0.5 0.7" stroke="#2f2a2e" stroke-width="0.2" fill="none" stroke-linecap="round"/>
   <path d="M-2.2 -0.4 L-1.6 0.2 M2.2 -0.4 L1.6 0.2" stroke="#fbf8f0" stroke-width="0.45" stroke-linecap="round"/>
   <circle cx="0" cy="-7.2" r="0.6" fill="#8a5a3f" stroke="#5b4636" stroke-width="0.25"/>
-  <path d="M0 -7.2 L3 -8 L0 -8.8 Z" fill="#2f2a2e" stroke="#5b4636" stroke-width="0.2">
-    <animateTransform attributeName="transform" type="rotate" values="0 0 -7.2;-10 0 -7.2;0 0 -7.2" dur="1.4s" repeatCount="indefinite"/>
+  <path d="M0 -7.2 L3 -8 L0 -8.8 Z" fill="#2f2a2e" stroke="#5b4636" stroke-width="0.2" class="s1opw3fke5">
+    
   </path>
   <path d="M-4 -5.8 Q0 -7.6 4 -5.8 M-5 1.4 Q0 -1 5 1.4" stroke="#fff" stroke-opacity="0.25" stroke-width="0.4" fill="none" stroke-linecap="round"/>
 </svg>

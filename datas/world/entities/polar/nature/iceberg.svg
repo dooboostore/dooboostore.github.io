@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 32" data-foot="0.5 0.78">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 32" data-foot="0.5 0.78"><style>
+    @keyframes s1nl5jdy_0{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    @keyframes s1nl5jdy_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    .s1nl5jdye2{animation:s1nl5jdy_0 2.8s linear 0s infinite}
+    .s1nl5jdye3{animation:s1nl5jdy_1 2.8s linear 0s infinite}
+  </style>
   <!-- 빙산: 물 위에 뜬 둥글둥글한 푸른빛 흰 얼음산. 기준점은 물높이 선. 물속 부분은 옅게 비치고, 둘레에 흰 물결이 살랑 -->
   <path d="M6 25 C4 28 8 31 14 31.4 C22 32 32 31 35 28 C36.4 26.6 35.6 25.4 34 25 Z" fill="#5fa8d0" opacity="0.35"/>
   <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
@@ -10,8 +15,8 @@
   <path d="M26 18 Q28 16 29 13.6" stroke="#a9cfe6" stroke-width="0.7" fill="none" stroke-linecap="round"/>
   <path d="M4.2 24.4 L35 24.4" stroke="#a9cfe6" stroke-width="0.9" stroke-linecap="round"/>
   <g stroke="#ffffff" stroke-width="0.8" fill="none" stroke-linecap="round">
-    <path d="M1 25.4 Q3 24.8 5 25.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.8s" repeatCount="indefinite"/></path>
-    <path d="M34.6 25.4 Q36.6 24.8 38.8 25.4"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></path>
+    <path d="M1 25.4 Q3 24.8 5 25.4" class="s1nl5jdye2"/>
+    <path d="M34.6 25.4 Q36.6 24.8 38.8 25.4" class="s1nl5jdye3"/>
     <path d="M14 26.6 Q20 27.4 27 26.6" opacity="0.6"/>
   </g>
 </svg>

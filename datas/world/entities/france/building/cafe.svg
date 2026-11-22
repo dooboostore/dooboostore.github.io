@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><style>
+    @keyframes s17ce9fi_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    .s17ce9fie1{animation:s17ce9fi_0 2.6s linear 0s infinite}
+  </style>
   <!-- 파리 카페: 줄무늬 차양(물결 끝), 큰 유리창, 바깥 동그란 테이블과 등나무 의자, 커피 김. 밤엔 창 불빛과 전구줄 -->
   <ellipse cx="13" cy="21" rx="12.6" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
@@ -24,7 +27,7 @@
     <line x1="23.2" y1="18" x2="23.2" y2="20.6" fill="none"/>
     <ellipse cx="23.2" cy="17.8" rx="2" ry="0.6" fill="#f6f6f2"/>
   </g>
-  <path d="M6.1 16.2 Q5.6 15.4 6.2 14.6" stroke="#fff" stroke-width="0.35" fill="none" stroke-linecap="round"><animate attributeName="opacity" values="0;0.9;0" dur="2.6s" repeatCount="indefinite"/></path>
+  <path d="M6.1 16.2 Q5.6 15.4 6.2 14.6" stroke="#fff" stroke-width="0.35" fill="none" stroke-linecap="round" class="s17ce9fie1"/>
   <g fill="#fff" opacity="0.45"><rect x="4" y="12.6" width="0.8" height="5.8" rx="0.4"/><rect x="19.4" y="12.6" width="0.7" height="5.8" rx="0.35"/></g>
   <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="3.7" y="13.2" width="8" height="5.6" rx="0.5"/><rect x="19.1" y="13.2" width="3.4" height="5.6" rx="0.5"/><rect x="4.7" y="3.3" width="2.4" height="2.6" rx="0.4"/><rect x="18.9" y="3.3" width="2.4" height="2.6" rx="0.4"/><circle cx="2" cy="14" r="0.4"/><circle cx="24" cy="14" r="0.4"/></g>
 </svg>

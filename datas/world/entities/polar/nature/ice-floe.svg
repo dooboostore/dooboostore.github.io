@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" data-foot="0.5 0.7">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" data-foot="0.5 0.7"><style>
+    @keyframes s12e0lmv_0{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    @keyframes s12e0lmv_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    .s12e0lmve2{animation:s12e0lmv_0 2.6s linear 0s infinite}
+    .s12e0lmve3{animation:s12e0lmv_1 2.6s linear 0s infinite}
+  </style>
   <!-- 유빙: 물 위에 납작하게 뜬 둥근 얼음판. 윗면은 눈처럼 희고 옆면은 푸른빛, 둘레에 흰 물결 -->
   <path d="M2.4 5.6 C3 7.2 8 7.8 15 7.8 C22 7.8 27.4 7.2 27.8 5.6 Z" fill="#5fa8d0" opacity="0.3"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
@@ -8,7 +13,7 @@
   <path d="M5 2.2 Q12 1.4 20 1.8" stroke="#fff" stroke-width="0.6" fill="none" stroke-linecap="round"/>
   <path d="M18 3.2 Q22 3 25 2.6" stroke="#cfe6f4" stroke-width="0.6" fill="none" stroke-linecap="round"/>
   <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
-    <path d="M0.2 6.4 Q1.6 6 3 6.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite"/></path>
-    <path d="M27 6.4 Q28.4 6 29.8 6.4"><animate attributeName="opacity" values="1;0.2;1" dur="2.6s" repeatCount="indefinite"/></path>
+    <path d="M0.2 6.4 Q1.6 6 3 6.4" class="s12e0lmve2"/>
+    <path d="M27 6.4 Q28.4 6 29.8 6.4" class="s12e0lmve3"/>
   </g>
 </svg>

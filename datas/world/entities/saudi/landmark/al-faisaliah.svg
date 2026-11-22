@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 110">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 110"><style>
+    @keyframes s9fbves_0{0%{opacity:1}50%{opacity:0.25}100%{opacity:1}}
+    .s9fbvese1{animation:s9fbves_0 2s linear 0s infinite}
+  </style>
   <!-- 알 파이살리아 타워: 네 모서리가 위로 모이는 뾰족한 피라미드형 유리 탑, 위쪽에 박힌 금빛 유리 공, 꼭대기 첨탑. 밤엔 금빛 공이 환하다 -->
   <ellipse cx="15" cy="108.4" rx="13" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -14,5 +17,5 @@
   <path d="M10.6 30 L19.4 30 M15 25.4 L15 34.6 M11.6 27 Q15 28 18.4 27 M11.6 33 Q15 32 18.4 33" stroke="#b8862a" stroke-width="0.3" fill="none" opacity="0.7"/>
   <path d="M12.6 107.6 L12.6 103.4 C12.6 101.6 17.4 101.6 17.4 103.4 L17.4 107.6 Z" fill="var(--door, #4f6f7a)" stroke="#5b4636" stroke-width="0.4"/>
   <g style="opacity: var(--night, 0)"><circle cx="15" cy="30" r="4.2" fill="#ffd77a"/><rect x="2.6" y="101" width="8" height="2" rx="1" fill="#ffd77a"/><rect x="19.4" y="101" width="8" height="2" rx="1" fill="#ffd77a"/></g>
-  <circle cx="15" cy="3" r="0.6" fill="#ff5a4e" stroke="#5b4636" stroke-width="0.25"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="15" cy="3" r="0.6" fill="#ff5a4e" stroke="#5b4636" stroke-width="0.25" class="s9fbvese1"/>
 </svg>

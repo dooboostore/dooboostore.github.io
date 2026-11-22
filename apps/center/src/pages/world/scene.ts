@@ -283,15 +283,10 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
       };
 
       if (behavior?.type === 'route') {
-        const m = doc.createElementNS(SVGNS, 'animateMotion');
-        const begin = `${-(behavior.dur * i) / pts.length - rand(0, 3)}s`;
-        Object.entries({ path: behavior.path, dur: behavior.dur + 's', begin, repeatCount: 'indefinite' }).forEach(([k, v]) => m.setAttribute(k, v));
-        // 길 끝에서 툭 나타나고 사라지지 않게 양 끝에서 서서히
-        const fade = doc.createElementNS(SVGNS, 'animate');
-        Object.entries({ attributeName: 'opacity', values: '0;1;1;0', keyTimes: '0;0.04;0.96;1', dur: behavior.dur + 's', begin, repeatCount: 'indefinite' }).forEach(([k, v]) => fade.setAttribute(k, v));
-        inst.append(m, fade);
-        // 경로 위 현재 위치: SMIL 시계(getCurrentTime)와 경로 길이로 직접 계산 (animateMotion 은 기본 paced = 거리 ∝ 시간)
-        // getCTM 으로 읽으면 순간적으로 0 이 나오는 때가 있어 깊이가 틀어졌다
+        // 경로 따라가기: Web Animations (SMIL animateMotion 은 Safari 에서 우리 장면 안에서 멈출 때가 있었다).
+        // 경로를 길이 기준으로 잘게 잘라 translate 키프레임으로 — 길이에 비례해 움직이므로 animateMotion 의 paced 와 같다.
+        // 양 끝 4% 에서는 서서히 나타나고 사라진다
+        const begin = -(behavior.dur * i) / pts.length - rand(0, 3);
         const geo = doc.createElementNS(SVGNS, 'path');
         geo.setAttribute('d', behavior.path);
         routeDefs.appendChild(geo);
@@ -309,10 +304,18 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
             return;
           }
         }
-        const beginSec = parseFloat(begin);
-        const svg = root.ownerSVGElement!;
+        const N = Math.max(24, Math.min(400, Math.ceil(len / 3)));
+        const offs = [...new Set([...Array.from({ length: N + 1 }, (_, k) => k / N), 0.04, 0.96])].sort((a, b) => a - b);
+        const frames = offs.map((o) => {
+          const q = geo.getPointAtLength(o * len);
+          return { offset: o, transform: `translate(${q.x.toFixed(2)}px, ${q.y.toFixed(2)}px)`, opacity: o < 0.04 ? o / 0.04 : o > 0.96 ? (1 - o) / 0.04 : 1 };
+        });
+        const durMs = behavior.dur * 1000;
+        const anim = inst.animate(frames, { duration: durMs, delay: begin * 1000, iterations: Infinity, easing: 'linear' });
+        // 지금 위치: 애니메이션 시계로 직접 계산 (깊이 정렬·화면 컬링·진행 방향에 쓴다)
         add(() => {
-          const s = ((((svg.getCurrentTime() - beginSec) / behavior.dur) % 1) + 1) % 1 * len;
+          const ct = Number(anim.currentTime ?? 0) - begin * 1000;
+          const s = ((((ct / durMs) % 1) + 1) % 1) * len;
           const pt = geo.getPointAtLength(s);
           face(geo.getPointAtLength(Math.min(len, s + 2)).x - pt.x);
           return [pt.x, pt.y];

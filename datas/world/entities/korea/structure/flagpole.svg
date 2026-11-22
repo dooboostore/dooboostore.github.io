@@ -1,12 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 32"><style>
+    @keyframes s1caqmov_0{0%{transform:skewY(0deg);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}30%{transform:skewY(4deg);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}55%{transform:skewY(-1deg);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}80%{transform:skewY(3deg);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:skewY(0deg)}}
+    .s1caqmove1{transform-box:view-box;transform-origin:0 0;animation:s1caqmov_0 5s linear 0s infinite}
+  </style>
   <!-- 태극기 게양대: 흰 바탕, 위 빨강 아래 파랑의 태극(두 반원으로 된 S자), 건(왼쪽 위)·곤(오른쪽 아래)·감(오른쪽 위)·리(왼쪽 아래) 네 괘. 깃발 전체가 살짝 기울며 펄럭인다 -->
   <ellipse cx="6" cy="31.2" rx="5" ry="0.8" fill="#3b5a2e" opacity="0.18"/>
   <rect x="4.4" y="4" width="1.2" height="27" rx="0.6" fill="#8b9197" stroke="#5b4636" stroke-width="0.3"/>
   <path d="M4.8 5.4 L4.8 30" stroke="#fff" stroke-opacity="0.35" stroke-width="0.3" stroke-linecap="round"/>
   <circle cx="5" cy="4" r="1" fill="#f2c14e" stroke="#5b4636" stroke-width="0.25"/>
   <g transform="translate(5.7 5)">
-    <g>
-      <animateTransform attributeName="transform" type="skewY" values="0;4;-1;3;0" dur="5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.55;0.8;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g class="s1caqmove1">
+      
       <g transform="scale(0.264)">
       <rect x="0" y="0" width="36" height="24" rx="1.6" fill="#fbfaf6" stroke="#5b4636" stroke-width="1.2" stroke-linejoin="round"/>
       <circle cx="18" cy="12" r="5.96" fill="#2f5aa8"/>

@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -11 30 18" data-foot="0.5 0.5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -11 30 18" data-foot="0.5 0.5"><style>
+    @keyframes s15jvixg_0{0%{opacity:1}50%{opacity:0.1}100%{opacity:1}}
+    .s15jvixge1{animation:s15jvixg_0 1.4s linear 0s infinite}
+  </style>
   <!-- 메이븐 MAVEN: 금박 네모 몸통 위에 하얀 접시 안테나, 양쪽 태양전지판이 갈매기 날개처럼 바깥 끝에서 위로 꺾여 올라간다 -->
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
     <path d="M-3.4 1 L-4.4 1 M3.4 1 L4.4 1" stroke="#8b9197" stroke-width="0.7"/>
@@ -13,5 +16,5 @@
   <circle cx="0" cy="-5.4" r="0.6" fill="#8b9197"/>
   <path d="M-2.8 -6.8 Q-1.4 -8.2 0.6 -8.2" stroke="#fff" stroke-width="0.5" fill="none" stroke-linecap="round"/>
   <path d="M-2.6 1.6 L2.6 1.6 M-2.6 2.8 L2.6 2.8" stroke="#d39a2c" stroke-width="0.3"/>
-  <circle cx="2" cy="-1.2" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <circle cx="2" cy="-1.2" r="0.45" fill="#ff5d55" class="s15jvixge1"/>
 </svg>

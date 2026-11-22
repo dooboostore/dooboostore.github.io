@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 12 27">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 12 27"><style>
+    @keyframes strqc0r_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, -0.6px)}100%{transform:translate(0px, 0px)}}
+    .strqc0re1{transform-box:view-box;transform-origin:0 0;animation:strqc0r_0 2.6s linear 0s infinite}
+  </style>
   <!-- 풍선 든 아이 뒷모습 -->
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
     <ellipse cx="4.6" cy="16.9" rx="1.3" ry="0.8" fill="var(--shoes, #f2a0a0)"/>
@@ -15,8 +18,8 @@
     <path d="M1.2 5.1 Q6 6.4 10.8 5.1 Q11 5.9 10 6 Q6 6.6 2 6 Q1 5.9 1.2 5.1 Z" fill="var(--hat, #f6cf4a)"/>
   </g>
   <ellipse cx="4.4" cy="2.4" rx="1.4" ry="0.6" fill="#fff" opacity="0.35" transform="rotate(-20 4.4 2.4)"/>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 -0.6;0 0" dur="2.6s" repeatCount="indefinite"/>
+  <g class="strqc0re1">
+    
     <path d="M2.4 -2.6 C1.8 1 3.2 6 2.4 12.6" stroke="#8a7a6a" stroke-width="0.25" fill="none" stroke-linecap="round"/>
     <path d="M2.4 -2.8 L1.9 -2.1 L2.9 -2.1 Z" fill="var(--balloon, #ff7b7b)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/>
     <ellipse cx="2.4" cy="-5.6" rx="2.4" ry="2.8" fill="var(--balloon, #ff7b7b)" stroke="#5b4636" stroke-width="0.4"/>

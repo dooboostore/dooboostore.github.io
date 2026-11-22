@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 98">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 98"><style>
+    @keyframes sqehcup_0{0%{r:0.6px}50%{r:1.1px}100%{r:0.6px}}
+    .sqehcupe1{animation:sqehcup_0 2.6s linear 0s infinite}
+  </style>
   <!-- 원 월드 트레이드 센터: 유리면이 위로 갈수록 좁아지는 둥근 삼각 기둥, 꼭대기 첨탑. 밤엔 세로 줄눈과 상층이 빛난다 -->
   <ellipse cx="15" cy="96.2" rx="14" ry="1.6" fill="#3b5a2e" opacity="0.2"/>
   <path d="M8 18 L22 18 L24 90 Q15 96 6 90 Z" fill="#cbe6f3" opacity="0.35" style="mix-blend-mode: screen"/>
@@ -20,5 +23,5 @@
     <rect x="13.2" y="12.4" width="3.6" height="4.2" rx="0.8"/>
   </g>
   <path d="M8.6 20 L10 24 M22.4 20 L21.2 24" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" stroke-linecap="round"/>
-  <circle cx="15" cy="2.8" r="0.8" fill="#ff5d55" style="opacity: var(--night, 0)"><animate attributeName="r" values="0.6;1.1;0.6" dur="2.6s" repeatCount="indefinite"/></circle>
+  <circle cx="15" cy="2.8" r="0.8" fill="#ff5d55" style="opacity: var(--night, 0)" class="sqehcupe1"/>
 </svg>

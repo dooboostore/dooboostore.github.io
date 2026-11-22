@@ -1,10 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"><style>
+    @keyframes sacr8lm_0{0%{cy:2px}100%{cy:-3px}}
+    @keyframes sacr8lm_1{0%{r:0.6px}100%{r:1.8px}}
+    @keyframes sacr8lm_2{0%{opacity:0.8}100%{opacity:0}}
+    @keyframes sacr8lm_3{0%{cy:2px}100%{cy:-3px}}
+    @keyframes sacr8lm_4{0%{r:0.6px}100%{r:1.8px}}
+    @keyframes sacr8lm_5{0%{opacity:0.8}100%{opacity:0}}
+    .sacr8lme6{animation:sacr8lm_0 3.6s linear 0s infinite,sacr8lm_1 3.6s linear 0s infinite,sacr8lm_2 3.6s linear 0s infinite}
+    .sacr8lme7{animation:sacr8lm_3 3.6s linear 1.8s infinite,sacr8lm_4 3.6s linear 1.8s infinite,sacr8lm_5 3.6s linear 1.8s infinite}
+  </style>
   <!-- 포장마차: 둥근 주황 천막, 비닐 창 너머 따뜻한 불빛, 빨간 등, 파란 플라스틱 의자, 오뎅 김. 밤이면 환하게 -->
   <ellipse cx="12" cy="11" rx="13" ry="10" fill="#ffb860" style="opacity: calc(var(--night, 0) * 0.35)"/>
   <ellipse cx="12" cy="19.1" rx="11.5" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g fill="#fbf7ef">
-    <circle cx="12" cy="2" r="0.8"><animate attributeName="cy" values="2;-3" dur="3.6s" repeatCount="indefinite"/><animate attributeName="r" values="0.6;1.8" dur="3.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3.6s" repeatCount="indefinite"/></circle>
-    <circle cx="13" cy="2" r="0.8"><animate attributeName="cy" values="2;-3" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="r" values="0.6;1.8" dur="3.6s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="12" cy="2" r="0.8" class="sacr8lme6"/>
+    <circle cx="13" cy="2" r="0.8" class="sacr8lme7"/>
   </g>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
     <path d="M2 18.4 L2 9.4 C2 5 5.4 3 12 3 C18.6 3 22 5 22 9.4 L22 18.4 Q12 19.2 2 18.4 Z" fill="var(--tarp, #ef7a3d)"/>

@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 12 27">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 12 27"><style>
+    @keyframes s1f9qzj5_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, -0.6px)}100%{transform:translate(0px, 0px)}}
+    .s1f9qzj5e1{transform-box:view-box;transform-origin:0 0;animation:s1f9qzj5_0 2.6s linear 0s infinite}
+  </style>
   <!-- 풍선 든 아이: 유치원 노란 모자, 손에 둥실둥실 풍선 -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 -0.6;0 0" dur="2.6s" repeatCount="indefinite"/>
+  <g class="s1f9qzj5e1">
+    
     <path d="M9.6 -2.6 C9.0 1 10.4 6 9.6 12.6" stroke="#8a7a6a" stroke-width="0.25" fill="none" stroke-linecap="round"/>
     <path d="M9.6 -2.8 L9.1 -2.1 L10.1 -2.1 Z" fill="var(--balloon, #ff7b7b)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/>
     <ellipse cx="9.6" cy="-5.6" rx="2.4" ry="2.8" fill="var(--balloon, #ff7b7b)" stroke="#5b4636" stroke-width="0.4"/>

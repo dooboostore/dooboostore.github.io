@@ -1,8 +1,15 @@
-<svg data-foot="0.5 0.86" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 14">
+<svg xmlns="http://www.w3.org/2000/svg" data-foot="0.5 0.86" viewBox="0 0 38 14"><style>
+    @keyframes s14m4o8r_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s14m4o8r_1{0%{opacity:0}50%{opacity:0.7}100%{opacity:0}}
+    @keyframes s14m4o8r_2{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    .s14m4o8re3{animation:s14m4o8r_0 2.2s linear 0s infinite}
+    .s14m4o8re4{animation:s14m4o8r_1 2.2s linear 1.1s infinite}
+    .s14m4o8re5{transform-box:view-box;transform-origin:0 0;animation:s14m4o8r_2 3.6s linear 0s infinite}
+  </style>
   <!-- 상트페테르부르크 운하 유람선 (오른쪽을 향함, 옆모습): 다리 밑을 지나도록 낮게 만든 남색 선체(hull 변수)와 흰 띠, 길쭉한 유리 지붕 객실 안의 승객들, 고물의 러시아 국기. 물결에 흔들리고 뒤로 물거품. 밤엔 객실 불빛 -->
-  <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round"><path d="M1 11.8 Q3 11.200000000000001 5 11.8"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path><path d="M0 13.0 Q2.5 12.4 5.5 13.0"><animate attributeName="opacity" values="0;0.7;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></path></g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round"><path d="M1 11.8 Q3 11.200000000000001 5 11.8" class="s14m4o8re3"/><path d="M0 13.0 Q2.5 12.4 5.5 13.0" class="s14m4o8re4"/></g>
+  <g class="s14m4o8re5">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
       <path d="M3.4 8 L3.4 3.6"/>
       <rect x="3.4" y="3.6" width="3" height="2.1" rx="0.3" fill="#fbfaf6" stroke-width="0.25"/>

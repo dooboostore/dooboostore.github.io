@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24"><style>
+    @keyframes s1ml8dta_0{0%{transform:translate(10px, 17px) rotate(-1.4deg) translate(-10px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(10px, 17px) rotate(1.4deg) translate(-10px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(10px, 17px) rotate(-1.4deg) translate(-10px, -17px)}}
+    @keyframes s1ml8dta_1{0%{transform:translate(13px, 15px) rotate(49.7deg)}4.167%{transform:translate(13.3px, 15.35px) rotate(60deg)}8.333%{transform:translate(13.53px, 15.74px) rotate(72.1deg)}12.5%{transform:translate(13.67px, 16.17px) rotate(84.3deg)}16.667%{transform:translate(13.72px, 16.62px) rotate(94deg)}20.833%{transform:translate(13.69px, 17.08px) rotate(100.4deg)}25%{transform:translate(13.61px, 17.52px) rotate(103.4deg)}29.167%{transform:translate(13.51px, 17.97px) rotate(103.5deg)}33.333%{transform:translate(13.4px, 18.41px) rotate(100.6deg)}37.5%{transform:translate(13.31px, 18.86px) rotate(94.4deg)}41.667%{transform:translate(13.28px, 19.31px) rotate(84.8deg)}45.833%{transform:translate(13.31px, 19.77px) rotate(72.8deg)}50%{transform:translate(13.44px, 20.2px) rotate(60.5deg)}54.167%{transform:translate(13.66px, 20.6px) rotate(50.2deg)}58.333%{transform:translate(13.95px, 20.95px) rotate(47.9deg)}62.5%{transform:translate(14.26px, 21.29px) rotate(56.8deg)}66.667%{transform:translate(14.51px, 21.67px) rotate(70.2deg)}70.833%{transform:translate(14.67px, 22.09px) rotate(88.2deg)}75%{transform:translate(14.69px, 22.54px) rotate(105.8deg)}79.167%{transform:translate(14.58px, 22.98px) rotate(117.7deg)}83.333%{transform:translate(14.37px, 23.39px) rotate(122.7deg)}87.5%{transform:translate(14.12px, 23.77px) rotate(119.9deg)}91.667%{transform:translate(13.89px, 24.16px) rotate(100.7deg)}95.833%{transform:translate(13.79px, 24.6px) rotate(62.4deg)}100%{transform:translate(14px, 25px) rotate(0deg)}}
+    @keyframes s1ml8dta_2{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    @keyframes s1ml8dta_3{0%{transform:translate(5px, 15px) rotate(130.3deg)}4.167%{transform:translate(4.7px, 15.35px) rotate(120deg)}8.333%{transform:translate(4.47px, 15.74px) rotate(107.9deg)}12.5%{transform:translate(4.33px, 16.17px) rotate(95.7deg)}16.667%{transform:translate(4.28px, 16.62px) rotate(86deg)}20.833%{transform:translate(4.31px, 17.08px) rotate(79.6deg)}25%{transform:translate(4.39px, 17.52px) rotate(76.6deg)}29.167%{transform:translate(4.49px, 17.97px) rotate(76.5deg)}33.333%{transform:translate(4.6px, 18.41px) rotate(79.4deg)}37.5%{transform:translate(4.69px, 18.86px) rotate(85.6deg)}41.667%{transform:translate(4.72px, 19.31px) rotate(95.2deg)}45.833%{transform:translate(4.69px, 19.77px) rotate(107.2deg)}50%{transform:translate(4.56px, 20.2px) rotate(119.5deg)}54.167%{transform:translate(4.34px, 20.6px) rotate(129.8deg)}58.333%{transform:translate(4.05px, 20.95px) rotate(132.1deg)}62.5%{transform:translate(3.74px, 21.29px) rotate(123.2deg)}66.667%{transform:translate(3.49px, 21.67px) rotate(109.8deg)}70.833%{transform:translate(3.33px, 22.09px) rotate(91.8deg)}75%{transform:translate(3.31px, 22.54px) rotate(74.2deg)}79.167%{transform:translate(3.42px, 22.98px) rotate(62.3deg)}83.333%{transform:translate(3.63px, 23.39px) rotate(57.3deg)}87.5%{transform:translate(3.88px, 23.77px) rotate(60.1deg)}91.667%{transform:translate(4.11px, 24.16px) rotate(79.3deg)}95.833%{transform:translate(4.21px, 24.6px) rotate(117.6deg)}100%{transform:translate(4px, 25px) rotate(0deg)}}
+    @keyframes s1ml8dta_4{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    .s1ml8dtae5{transform-box:view-box;transform-origin:0 0;animation:s1ml8dta_0 7s linear 0s infinite}
+    .s1ml8dtae6{transform-box:view-box;transform-origin:0 0;animation:s1ml8dta_1 6.5s linear 0s infinite,s1ml8dta_2 6.5s linear 0s infinite}
+    .s1ml8dtae7{transform-box:view-box;transform-origin:0 0;animation:s1ml8dta_3 8.5s linear 3s infinite,s1ml8dta_4 8.5s linear 3s infinite}
+  </style>
   <!-- 늦가을 단풍나무(모미지): 우산처럼 퍼진 붉은 수관 두 층, 바람에 살랑, 붉은 잎이 팔랑. 잎 색은 CSS 변수 leaf -->
   <ellipse cx="10" cy="23" rx="5.6" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
@@ -6,8 +15,8 @@
     <path d="M9.6 17.6 C8 16.6 6.6 16.4 5.4 15.2" fill="none" stroke-width="1.3"/>
     <path d="M9.6 17.6 C8 16.6 6.6 16.4 5.4 15.2" fill="none" stroke="#8a5a3f" stroke-width="0.6"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1.4 10 17;1.4 10 17;-1.4 10 17" dur="7s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1ml8dtae5">
+    
     <g fill="var(--leaf, #e2553f)" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round">
       <path d="M2 14.6 C0.2 14 0.4 11.2 2.4 10.8 C1.8 8.6 3.8 7 5.8 7.6 C6 5 8.6 3.4 10.4 4.4 C12.4 3.2 15.2 4.8 14.8 7.4 C16.8 7.2 18.6 9 17.8 10.8 C19.8 11.4 19.6 14.2 17.8 14.6 C15 16.4 5 16.4 2 14.6 Z"/>
     </g>
@@ -17,13 +26,13 @@
     <g fill="#fff" opacity="0.28"><ellipse cx="7.4" cy="6.6" rx="1.8" ry="0.8" transform="rotate(-20 7.4 6.6)"/><ellipse cx="4" cy="11.8" rx="1.3" ry="0.6" transform="rotate(-15 4 11.8)"/><circle cx="9.4" cy="5.2" r="0.7"/></g>
   </g>
   <g fill="#e2553f" stroke="#a8392b" stroke-width="0.15">
-    <path d="M0 -0.8 C0.5 -0.8 0.9 -0.4 0.8 0.1 C0.6 0.6 -0.6 0.6 -0.8 0.1 C-0.9 -0.4 -0.5 -0.8 0 -0.8 Z">
-      <animateMotion path="M13 15 C15 17 12 19 14 21 C16 23 13 24 14 25" dur="6.5s" repeatCount="indefinite" rotate="auto"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="6.5s" repeatCount="indefinite"/>
+    <path d="M0 -0.8 C0.5 -0.8 0.9 -0.4 0.8 0.1 C0.6 0.6 -0.6 0.6 -0.8 0.1 C-0.9 -0.4 -0.5 -0.8 0 -0.8 Z" class="s1ml8dtae6">
+      
+      
     </path>
-    <path d="M0 -0.8 C0.5 -0.8 0.9 -0.4 0.8 0.1 C0.6 0.6 -0.6 0.6 -0.8 0.1 C-0.9 -0.4 -0.5 -0.8 0 -0.8 Z" fill="#f08a4b">
-      <animateMotion path="M5 15 C3 17 6 19 4 21 C2 23 5 24 4 25" dur="8.5s" begin="3s" repeatCount="indefinite" rotate="auto"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="8.5s" begin="3s" repeatCount="indefinite"/>
+    <path d="M0 -0.8 C0.5 -0.8 0.9 -0.4 0.8 0.1 C0.6 0.6 -0.6 0.6 -0.8 0.1 C-0.9 -0.4 -0.5 -0.8 0 -0.8 Z" fill="#f08a4b" class="s1ml8dtae7">
+      
+      
     </path>
   </g>
 </svg>

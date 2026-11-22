@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 160">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 160"><style>
+    @keyframes snvhiaz_0{0%{opacity:1}50%{opacity:0.25}100%{opacity:1}}
+    .snvhiaze1{animation:snvhiaz_0 2.2s linear 0s infinite}
+  </style>
   <!-- 도쿄 스카이트리: 푸른 기 도는 흰 격자탑(아이지로), 텐보 데크·텐보 갤러리아 두 고리, 발밑 소라마치 건물. 밤이면 보랏빛(미야비)으로 물들고 고리가 빛난다 -->
   <ellipse cx="14" cy="158.4" rx="13.6" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
   <ellipse cx="14" cy="64" rx="12" ry="40" fill="#c9a6ff" style="opacity: calc(var(--night, 0) * 0.22)"/>
@@ -21,5 +24,5 @@
   </g>
   <g fill="#c9dcea"><rect x="2.6" y="150.4" width="3.6" height="2.4" rx="0.6"/><rect x="7" y="150.4" width="3.6" height="2.4" rx="0.6"/><rect x="17.4" y="150.4" width="3.6" height="2.4" rx="0.6"/><rect x="21.8" y="150.4" width="3.6" height="2.4" rx="0.6"/></g>
   <g fill="#ffd77a" style="opacity: calc(0.3 + var(--night, 0) * 0.7)"><rect x="2.6" y="150.4" width="3.6" height="2.4" rx="0.6"/><rect x="17.4" y="150.4" width="3.6" height="2.4" rx="0.6"/><rect x="21.8" y="150.4" width="3.6" height="2.4" rx="0.6"/></g>
-  <circle cx="14" cy="3.6" r="0.9" fill="#ff5d55" stroke="#5b4636" stroke-width="0.3"><animate attributeName="opacity" values="1;0.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="14" cy="3.6" r="0.9" fill="#ff5d55" stroke="#5b4636" stroke-width="0.3" class="snvhiaze1"/>
 </svg>

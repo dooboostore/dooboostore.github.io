@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 18" data-foot="0.5 0.88">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 18" data-foot="0.5 0.88"><style>
+    @keyframes s92xrh4_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s92xrh4_1{0%{opacity:0}50%{opacity:0.7}100%{opacity:0}}
+    @keyframes s92xrh4_2{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0px, -0.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    .s92xrh4e3{animation:s92xrh4_0 2.2s linear 0s infinite}
+    .s92xrh4e4{animation:s92xrh4_1 2.2s linear 1.1s infinite}
+    .s92xrh4e5{transform-box:view-box;transform-origin:0 0;animation:s92xrh4_2 3.6s linear 0s infinite}
+  </style>
   <!-- 보스포루스 시내 여객선 바푸르 (오른쪽을 향함, 옆모습): 흰 선체와 짙은 아랫배, 2층 선실, 흰·빨간 띠를 두른 검은 굴뚝, 뒤에 튀르키예 국기. 물결에 흔들리고 뒤로 물거품. 밤엔 선실 불빛 -->
   <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
-    <path d="M1 15.4 Q3 14.8 5 15.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/></path>
-    <path d="M0 16.6 Q2.5 16 5.5 16.6"><animate attributeName="opacity" values="0;0.7;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></path>
+    <path d="M1 15.4 Q3 14.8 5 15.4" class="s92xrh4e3"/>
+    <path d="M0 16.6 Q2.5 16 5.5 16.6" class="s92xrh4e4"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.4;0 0" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s92xrh4e5">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
       <line x1="6.4" y1="7" x2="6.4" y2="2.4"/>
       <line x1="37" y1="7" x2="37" y2="1.6"/>

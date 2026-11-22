@@ -1,9 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 30">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 30"><style>
+    @keyframes s198qxio_0{0%{cy:2px}100%{cy:-5px}}
+    @keyframes s198qxio_1{0%{r:0.8px}100%{r:2.4px}}
+    @keyframes s198qxio_2{0%{opacity:0.8}100%{opacity:0}}
+    @keyframes s198qxio_3{0%{cy:2px}100%{cy:-5px}}
+    @keyframes s198qxio_4{0%{r:0.8px}100%{r:2.4px}}
+    @keyframes s198qxio_5{0%{opacity:0.8}100%{opacity:0}}
+    .s198qxioe6{animation:s198qxio_0 5s linear 0s infinite,s198qxio_1 5s linear 0s infinite,s198qxio_2 5s linear 0s infinite}
+    .s198qxioe7{animation:s198qxio_3 5s linear 2.5s infinite,s198qxio_4 5s linear 2.5s infinite,s198qxio_5 5s linear 2.5s infinite}
+  </style>
   <!-- 한옥: 둥근 돌기단, 흰 회벽, 나무 기둥, 처마 밑 서까래(빈틈 없이), 끝이 부드럽게 들린 기와지붕, 굴뚝 연기. 밤엔 창호지에 불이 든다 -->
   <ellipse cx="18" cy="28.6" rx="16" ry="1.6" fill="#3b5a2e" opacity="0.2"/>
   <g fill="#fbf7ef">
-    <circle cx="5.4" cy="2" r="1"><animate attributeName="cy" values="2;-5" dur="5s" repeatCount="indefinite"/><animate attributeName="r" values="0.8;2.4" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="5s" repeatCount="indefinite"/></circle>
-    <circle cx="5.4" cy="2" r="1"><animate attributeName="cy" values="2;-5" dur="5s" begin="2.5s" repeatCount="indefinite"/><animate attributeName="r" values="0.8;2.4" dur="5s" begin="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="5s" begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="5.4" cy="2" r="1" class="s198qxioe6"/>
+    <circle cx="5.4" cy="2" r="1" class="s198qxioe7"/>
   </g>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
     <rect x="4.4" y="2.4" width="2" height="6" rx="0.7" fill="#b8a898"/>
@@ -20,8 +29,7 @@
   <!-- 처마 밑: 서까래 띠가 지붕과 벽 사이를 메운다 -->
   <path d="M3.4 12.6 Q18 14.2 32.6 12.6 L32 10.2 L4 10.2 Z" fill="#8a5a3f" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
   <g stroke="#6b4430" stroke-width="0.35" stroke-linecap="round"><line x1="8" y1="10.6" x2="8" y2="12.9"/><line x1="12" y1="10.6" x2="12" y2="13.3"/><line x1="16" y1="10.6" x2="16" y2="13.5"/><line x1="20" y1="10.6" x2="20" y2="13.5"/><line x1="24" y1="10.6" x2="24" y2="13.3"/><line x1="28" y1="10.6" x2="28" y2="12.9"/></g>
-  <path d="M1.2 12.6 C2.6 13.2 4.4 12.4 6.6 10.4 L29.4 10.4 C31.6 12.4 33.4 13.2 34.8 12.6 C34.4 11.2 32.4 9.2 30.2 7 C29.4 6.1 28.6 5.6 27.6 5.6 L8.4 5.6 C7.4 5.6 6.6 6.1 5.8 7 C3.6 9.2 1.6 11.2 1.2 12.6 Z"
-        fill="var(--roof, #66788a)" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M1.2 12.6 C2.6 13.2 4.4 12.4 6.6 10.4 L29.4 10.4 C31.6 12.4 33.4 13.2 34.8 12.6 C34.4 11.2 32.4 9.2 30.2 7 C29.4 6.1 28.6 5.6 27.6 5.6 L8.4 5.6 C7.4 5.6 6.6 6.1 5.8 7 C3.6 9.2 1.6 11.2 1.2 12.6 Z" fill="var(--roof, #66788a)" stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round"/>
   <path d="M8.4 5.6 L27.6 5.6 C28.4 5.6 28.8 6.4 28.6 7.6 L7.4 7.6 C7.2 6.4 7.6 5.6 8.4 5.6 Z" fill="#ffffff" opacity="0.24"/>
   <g stroke="#000" stroke-opacity="0.12" stroke-width="0.35" stroke-linecap="round"><line x1="10" y1="6.2" x2="9.4" y2="10"/><line x1="14" y1="6.2" x2="13.7" y2="10"/><line x1="18" y1="6.2" x2="18" y2="10"/><line x1="22" y1="6.2" x2="22.3" y2="10"/><line x1="26" y1="6.2" x2="26.6" y2="10"/></g>
   <rect x="6.4" y="4.2" width="23.2" height="2" rx="1" fill="#4f5d6b" stroke="#5b4636" stroke-width="0.5"/>

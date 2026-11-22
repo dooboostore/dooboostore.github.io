@@ -1,12 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34"><style>
+    @keyframes s1ohf54b_0{0%{transform:translate(15px, 22px) rotate(-1.2deg) translate(-15px, -22px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(15px, 22px) rotate(1.2deg) translate(-15px, -22px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(15px, 22px) rotate(-1.2deg) translate(-15px, -22px)}}
+    @keyframes s1ohf54b_1{0%{transform:translate(0px, 0px)}4.167%{transform:translate(0.16px, 0.45px)}8.333%{transform:translate(0.3px, 0.9px)}12.5%{transform:translate(0.42px, 1.36px)}16.667%{transform:translate(0.53px, 1.82px)}20.833%{transform:translate(0.61px, 2.29px)}25%{transform:translate(0.68px, 2.76px)}29.167%{transform:translate(0.72px, 3.23px)}33.333%{transform:translate(0.75px, 3.71px)}37.5%{transform:translate(0.75px, 4.18px)}41.667%{transform:translate(0.73px, 4.66px)}45.833%{transform:translate(0.69px, 5.13px)}50%{transform:translate(0.63px, 5.6px)}54.167%{transform:translate(0.55px, 6.07px)}58.333%{transform:translate(0.45px, 6.54px)}62.5%{transform:translate(0.33px, 7px)}66.667%{transform:translate(0.19px, 7.45px)}70.833%{transform:translate(0.04px, 7.9px)}75%{transform:translate(-0.16px, 8.33px)}79.167%{transform:translate(-0.33px, 8.78px)}83.333%{transform:translate(-0.45px, 9.24px)}87.5%{transform:translate(-0.5px, 9.71px)}91.667%{transform:translate(-0.45px, 10.18px)}95.833%{transform:translate(-0.29px, 10.62px)}100%{transform:translate(0px, 11px)}}
+    @keyframes s1ohf54b_2{0%{opacity:0}33.333%{opacity:1}66.667%{opacity:1}100%{opacity:0}}
+    @keyframes s1ohf54b_3{0%{transform:translate(0px, 0px)}4.167%{transform:translate(-0.17px, 0.47px)}8.333%{transform:translate(-0.31px, 0.95px)}12.5%{transform:translate(-0.44px, 1.43px)}16.667%{transform:translate(-0.55px, 1.92px)}20.833%{transform:translate(-0.63px, 2.41px)}25%{transform:translate(-0.69px, 2.9px)}29.167%{transform:translate(-0.73px, 3.4px)}33.333%{transform:translate(-0.75px, 3.9px)}37.5%{transform:translate(-0.74px, 4.39px)}41.667%{transform:translate(-0.71px, 4.89px)}45.833%{transform:translate(-0.66px, 5.39px)}50%{transform:translate(-0.58px, 5.88px)}54.167%{transform:translate(-0.49px, 6.37px)}58.333%{transform:translate(-0.37px, 6.85px)}62.5%{transform:translate(-0.23px, 7.33px)}66.667%{transform:translate(-0.07px, 7.8px)}70.833%{transform:translate(0.12px, 8.26px)}75%{transform:translate(0.3px, 8.73px)}79.167%{transform:translate(0.43px, 9.21px)}83.333%{transform:translate(0.49px, 9.7px)}87.5%{transform:translate(0.49px, 10.2px)}91.667%{transform:translate(0.4px, 10.69px)}95.833%{transform:translate(0.23px, 11.16px)}100%{transform:translate(0px, 11.6px)}}
+    @keyframes s1ohf54b_4{0%{opacity:0}33.333%{opacity:1}66.667%{opacity:1}100%{opacity:0}}
+    .s1ohf54be5{transform-box:view-box;transform-origin:0 0;animation:s1ohf54b_0 6s linear 0s infinite}
+    .s1ohf54be6{transform-box:view-box;transform-origin:0 0;animation:s1ohf54b_1 5s linear 0s infinite,s1ohf54b_2 5s linear 0s infinite}
+    .s1ohf54be7{transform-box:view-box;transform-origin:0 0;animation:s1ohf54b_3 6s linear -2.4s infinite,s1ohf54b_4 6s linear -2.4s infinite}
+  </style>
   <!-- 자카란다 나무: 봄마다 거리를 보랏빛으로 물들이는 나무, 두 갈래로 갈라진 갈색 줄기 위에 동글동글 뭉친 연보라 꽃구름, 바닥에 떨어진 꽃잎과 살랑 떨어지는 꽃잎 -->
   <ellipse cx="15" cy="33" rx="9" ry="1" fill="#3b5a2e" opacity="0.2"/>
   <g fill="#b79be8" opacity="0.6"><ellipse cx="9" cy="33" rx="1" ry="0.4"/><ellipse cx="21" cy="32.8" rx="1" ry="0.4"/><ellipse cx="13" cy="33.4" rx="0.8" ry="0.35"/><ellipse cx="18.6" cy="33.5" rx="0.8" ry="0.35"/></g>
   <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
     <path d="M13.4 33.2 C13.8 28 13.6 24 11 19 L12.6 18.4 C14.6 21.6 15 23.4 15.2 24.8 C15.8 22 17 20 18.8 18 L20.2 19 C17.4 22.6 16.6 27 16.8 33.2 Z" fill="#8a6650"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1.2 15 22;1.2 15 22;-1.2 15 22" dur="6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1ohf54be5">
+    
     <g fill="var(--bloom, #a98be0)" stroke="#5b4636" stroke-width="0.5"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="8" r="6.6"/><circle cx="21" cy="12" r="6"/><circle cx="12" cy="16" r="5.6"/><circle cx="19" cy="16" r="5.6"/><circle cx="5.6" cy="15.6" r="4"/><circle cx="24.4" cy="15.6" r="4"/><circle cx="15" cy="13" r="6"/></g>
     <g fill="var(--bloom, #a98be0)"><circle cx="9" cy="12" r="5.75"/><circle cx="15" cy="8" r="6.35"/><circle cx="21" cy="12" r="5.75"/><circle cx="12" cy="16" r="5.35"/><circle cx="19" cy="16" r="5.35"/><circle cx="5.6" cy="15.6" r="3.75"/><circle cx="24.4" cy="15.6" r="3.75"/><circle cx="15" cy="13" r="5.75"/></g>
     <g fill="#8f6fd0" opacity="0.55"><circle cx="12.8" cy="17.4" r="3.08"/><circle cx="19.8" cy="17.4" r="3.08"/><circle cx="15" cy="17" r="3.4"/></g>
@@ -14,7 +23,7 @@
     <g fill="#fff" opacity="0.35"><ellipse cx="12.4" cy="5" rx="2.4" ry="1.1" transform="rotate(-20 12.4 5)"/><ellipse cx="6.6" cy="9.6" rx="1.6" ry="0.8" transform="rotate(-30 6.6 9.6)"/></g>
   </g>
   <g fill="#c2a8f0">
-    <ellipse cx="8" cy="22" rx="0.5" ry="0.35"><animateMotion path="M0 0 Q1.5 4 0 8 Q-1 10 0 11" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="22" cy="21" rx="0.5" ry="0.35"><animateMotion path="M0 0 Q-1.5 4 0 8 Q1 10 0 11.6" dur="6s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="6s" begin="-2.4s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="8" cy="22" rx="0.5" ry="0.35" class="s1ohf54be6"/>
+    <ellipse cx="22" cy="21" rx="0.5" ry="0.35" class="s1ohf54be7"/>
   </g>
 </svg>

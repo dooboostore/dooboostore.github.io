@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 44"><style>
+    @keyframes s1wjef8x_0{0%{transform:translate(6px, 37.9px)}4.167%{transform:translate(7.33px, 36.93px)}8.333%{transform:translate(8.67px, 35.95px)}12.5%{transform:translate(10px, 34.97px)}16.667%{transform:translate(11.33px, 34px)}20.833%{transform:translate(12.67px, 33.03px)}25%{transform:translate(14px, 32.05px)}29.167%{transform:translate(15.33px, 31.08px)}33.333%{transform:translate(16.67px, 30.1px)}37.5%{transform:translate(18px, 29.13px)}41.667%{transform:translate(19.33px, 28.15px)}45.833%{transform:translate(20.67px, 27.17px)}50%{transform:translate(22px, 26.2px)}54.167%{transform:translate(23.33px, 25.23px)}58.333%{transform:translate(24.67px, 24.25px)}62.5%{transform:translate(26px, 23.27px)}66.667%{transform:translate(27.33px, 22.3px)}70.833%{transform:translate(28.67px, 21.33px)}75%{transform:translate(30px, 20.35px)}79.167%{transform:translate(31.33px, 19.38px)}83.333%{transform:translate(32.67px, 18.4px)}87.5%{transform:translate(34px, 17.43px)}91.667%{transform:translate(35.33px, 16.45px)}95.833%{transform:translate(36.67px, 15.47px)}100%{transform:translate(38px, 14.5px)}}
+    .s1wjef8xe1{transform-box:view-box;transform-origin:0 0;animation:s1wjef8x_0 24s linear 0s infinite}
+  </style>
   <!-- 남산: 둥근 언덕(밑단도 둥글게 땅에 앉음), 동글동글 단풍 숲, 산책로, 오르내리는 케이블카 -->
   <ellipse cx="46" cy="41.2" rx="44" ry="2.6" fill="#3b5a2e" opacity="0.2"/>
   <path d="M3 40 C7 34 18 13 46 10 C74 13 85 34 89 40 C80 43.4 12 43.4 3 40 Z" fill="#8fc47a" stroke="#5b4636" stroke-width="0.7" stroke-linejoin="round"/>
@@ -13,10 +16,10 @@
   <g fill="#fff" opacity="0.35"><circle cx="21" cy="30" r="1"/><circle cx="33" cy="30.5" r="0.9"/><circle cx="59" cy="26" r="0.9"/><circle cx="67" cy="31" r="1"/></g>
   <path d="M32 41 C37 35 34 29 42 25 C50 21 46 16 47 12" stroke="#f6ead0" stroke-width="1.4" fill="none" stroke-dasharray="2 1.4" stroke-linecap="round"/>
   <line x1="6" y1="37" x2="38" y2="13.6" stroke="#5b4636" stroke-width="0.35" stroke-linecap="round"/>
-  <g>
+  <g class="s1wjef8xe1">
     <rect x="-1.5" y="0" width="3" height="2.3" rx="0.8" fill="#ff6b5a" stroke="#5b4636" stroke-width="0.35"/>
     <rect x="-1" y="0.45" width="2" height="0.9" rx="0.4" fill="#fff6dc"/>
     <line x1="0" y1="-0.9" x2="0" y2="0" stroke="#5b4636" stroke-width="0.35"/>
-    <animateMotion path="M6 37.9 L38 14.5" dur="24s" repeatCount="indefinite" keyPoints="0;1;1;0;0" keyTimes="0;0.42;0.5;0.92;1" calcMode="linear"/>
+    
   </g>
 </svg>

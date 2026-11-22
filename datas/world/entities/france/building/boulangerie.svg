@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24"><style>
+    @keyframes s1w982lm_0{0%{cy:1.6px}100%{cy:-4px}}
+    @keyframes s1w982lm_1{0%{r:0.6px}100%{r:1.8px}}
+    @keyframes s1w982lm_2{0%{opacity:0.8}100%{opacity:0}}
+    .s1w982lme3{animation:s1w982lm_0 4s linear 0s infinite,s1w982lm_1 4s linear 0s infinite,s1w982lm_2 4s linear 0s infinite}
+  </style>
   <!-- 불랑제리(빵집): 색칠한 나무 가게 앞면, 금색 간판에 밀 이삭, 창에 바게트와 크루아상. 굴뚝에서 빵 굽는 김. 밤엔 창 불빛 -->
   <ellipse cx="11" cy="23" rx="10.6" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
   <g fill="#fbf7ef">
-    <circle cx="17" cy="1.6" r="0.8"><animate attributeName="cy" values="1.6;-4" dur="4s" repeatCount="indefinite"/><animate attributeName="r" values="0.6;1.8" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="17" cy="1.6" r="0.8" class="s1w982lme3"/>
   </g>
   <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
     <rect x="16" y="1.6" width="2" height="3.6" rx="0.6" fill="#d98a6a"/>

@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 30">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 30"><style>
+    @keyframes s1kmic5_0{0%{transform:scale(1, 1)}25%{transform:scale(0.2, 1)}50%{transform:scale(-1, 1)}75%{transform:scale(0.2, 1)}100%{transform:scale(1, 1)}}
+    .s1kmic5e1{transform-box:view-box;transform-origin:0 0;animation:s1kmic5_0 1s linear 0s infinite}
+  </style>
   <!-- 자동 기상관측탑: 빨강·흰 줄무늬 철탑, 꼭대기에서 빙글 도는 풍속계 컵, 풍향계, 태양광 판, 관측 상자 -->
   <ellipse cx="6" cy="29.2" rx="4.6" ry="0.8" fill="#3b5a2e" opacity="0.18"/>
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
@@ -10,8 +13,8 @@
     <rect x="1.4" y="19" width="3.2" height="3.6" rx="0.7" fill="#fbfaf6"/>
   </g>
   <g transform="translate(6 4)">
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1 1;0.2 1;-1 1;0.2 1;1 1" dur="1s" repeatCount="indefinite"/>
+    <g class="s1kmic5e1">
+      
       <g fill="#f6c944" stroke="#5b4636" stroke-width="0.3"><circle cx="-3" cy="0" r="0.8"/><circle cx="3" cy="0" r="0.8"/></g>
     </g>
   </g>

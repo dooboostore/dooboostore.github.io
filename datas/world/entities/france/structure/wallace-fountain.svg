@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 14">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 14"><style>
+    @keyframes s1btkld6_0{0%{cy:6.4px}100%{cy:10.4px}}
+    @keyframes s1btkld6_1{0%{opacity:1}100%{opacity:0.2}}
+    .s1btkld6e2{animation:s1btkld6_0 1.2s linear 0s infinite,s1btkld6_1 1.2s linear 0s infinite}
+  </style>
   <!-- 월리스 분수: 진녹색 주철, 네 여인상(둥근 기둥으로 단순화)이 돔 지붕을 받친다. 가운데로 물이 똑똑 -->
   <ellipse cx="4" cy="13.4" rx="3.6" ry="0.55" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round" fill="#2f5d4a">
@@ -10,5 +14,5 @@
     <circle cx="4" cy="1.3" r="0.45"/>
   </g>
   <path d="M2.2 3.4 C2.6 2.4 3.4 2 4 2" stroke="#fff" stroke-opacity="0.35" stroke-width="0.4" fill="none" stroke-linecap="round"/>
-  <circle cx="4" cy="7" r="0.3" fill="#9fd8ff"><animate attributeName="cy" values="6.4;10.4" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.2" dur="1.2s" repeatCount="indefinite"/></circle>
+  <circle cx="4" cy="7" r="0.3" fill="#9fd8ff" class="s1btkld6e2"/>
 </svg>

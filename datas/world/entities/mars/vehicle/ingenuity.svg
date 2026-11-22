@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><style>
+    @keyframes s5t38f5_0{0%{transform:scale(1, 1)}50%{transform:scale(0.1, 1)}100%{transform:scale(1, 1)}}
+    @keyframes s5t38f5_1{0%{transform:scale(0.1, 1)}50%{transform:scale(1, 1)}100%{transform:scale(0.1, 1)}}
+    .s5t38f5e2{transform-box:view-box;transform-origin:0 0;animation:s5t38f5_0 0.18s linear 0s infinite}
+    .s5t38f5e3{transform-box:view-box;transform-origin:0 0;animation:s5t38f5_1 0.18s linear 0s infinite}
+  </style>
   <!-- 인저뉴어티 화성 헬리콥터 (옆모습): 작은 상자 몸통, 가늘게 벌어진 다리 네 개, 위아래로 겹친 두 쌍의 날개가 서로 반대로 빙글빙글(옆에서 보면 폭이 늘었다 줄었다), 맨 위 작은 태양전지판 -->
   <g stroke="#5b4636" stroke-linecap="round" fill="none">
     <path d="M6 10 L4.6 13.2 M8 10 L9.4 13.2" stroke="#8b9197" stroke-width="0.35"/>
@@ -14,14 +19,14 @@
   <ellipse cx="7" cy="5.4" rx="6.4" ry="0.5" fill="#8b9197" opacity="0.22"/>
   <ellipse cx="7" cy="3.8" rx="6.4" ry="0.5" fill="#8b9197" opacity="0.22"/>
   <g transform="translate(7 5.4)">
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1 1;0.1 1;1 1" dur="0.18s" repeatCount="indefinite"/>
+    <g class="s5t38f5e2">
+      
       <path d="M-6.3 0 Q-6.3 -0.35 -5.6 -0.3 L5.6 -0.3 Q6.3 -0.35 6.3 0 Q6.3 0.35 5.6 0.3 L-5.6 0.3 Q-6.3 0.35 -6.3 0 Z" fill="#4a4f57" stroke="#5b4636" stroke-width="0.15"/>
     </g>
   </g>
   <g transform="translate(7 3.8)">
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="0.1 1;1 1;0.1 1" dur="0.18s" repeatCount="indefinite"/>
+    <g class="s5t38f5e3">
+      
       <path d="M-6.3 0 Q-6.3 -0.35 -5.6 -0.3 L5.6 -0.3 Q6.3 -0.35 6.3 0 Q6.3 0.35 5.6 0.3 L-5.6 0.3 Q-6.3 0.35 -6.3 0 Z" fill="#4a4f57" stroke="#5b4636" stroke-width="0.15"/>
     </g>
   </g>

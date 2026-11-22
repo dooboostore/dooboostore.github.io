@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 32"><style>
+    @keyframes skhrccg_0{0%{transform:translate(16.8px, 19.6px) rotate(-3deg) translate(-16.8px, -19.6px)}50%{transform:translate(16.8px, 19.6px) rotate(3deg) translate(-16.8px, -19.6px)}100%{transform:translate(16.8px, 19.6px) rotate(-3deg) translate(-16.8px, -19.6px)}}
+    .skhrccge1{transform-box:view-box;transform-origin:0 0;animation:skhrccg_0 4s linear 0s infinite}
+  </style>
   <!-- 마치야(목조 상가 주택): 2층 격자창, 1층 차양 지붕, 가게 앞 노렌(색 변수 noren), 초롱. 밤엔 격자 사이로 불빛 -->
   <ellipse cx="17" cy="30.8" rx="15.6" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -23,8 +26,8 @@
   <path d="M3.4 19.6 Q17 20.6 30.6 19.6 L30.2 18.2 L3.8 18.2 Z" fill="#8a5a3f" stroke="#5b4636" stroke-width="0.45"/>
   <path d="M2 19.4 C3 19.8 4.4 19.4 5.4 18.4 L28.6 18.4 C29.6 19.4 31 19.8 32 19.4 C31.4 18.4 30.4 17.4 29.4 16.8 L4.6 16.8 C3.6 17.4 2.6 18.4 2 19.4 Z" fill="var(--roof, #5d6c7a)" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
   <!-- 초롱 -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-3 16.8 19.6;3 16.8 19.6;-3 16.8 19.6" dur="4s" repeatCount="indefinite"/>
+  <g class="skhrccge1">
+    
     <line x1="16.8" y1="19.6" x2="16.8" y2="20.6" stroke="#5b4636" stroke-width="0.35"/>
     <rect x="15.6" y="20.4" width="2.4" height="3.2" rx="1.1" fill="#f0634f" stroke="#5b4636" stroke-width="0.4"/>
     <rect x="15.6" y="20.4" width="2.4" height="3.2" rx="1.1" fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.7)"/>

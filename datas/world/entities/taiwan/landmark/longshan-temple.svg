@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 40">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 40"><style>
+    @keyframes s1f4ni1q_0{0%{transform:translate(22px, 20.4px) rotate(-4deg) translate(-22px, -20.4px)}50%{transform:translate(22px, 20.4px) rotate(4deg) translate(-22px, -20.4px)}100%{transform:translate(22px, 20.4px) rotate(-4deg) translate(-22px, -20.4px)}}
+    @keyframes s1f4ni1q_1{0%{transform:translate(34px, 20.4px) rotate(-4deg) translate(-34px, -20.4px)}50%{transform:translate(34px, 20.4px) rotate(4deg) translate(-34px, -20.4px)}100%{transform:translate(34px, 20.4px) rotate(-4deg) translate(-34px, -20.4px)}}
+    .s1f4ni1qe2{transform-box:view-box;transform-origin:0 0;animation:s1f4ni1q_0 3.6s linear 0s infinite}
+    .s1f4ni1qe3{transform-box:view-box;transform-origin:0 0;animation:s1f4ni1q_1 3.6s linear 1.2s infinite}
+  </style>
   <!-- 룽산사(용산사): 제비꼬리처럼 둥글게 말려 올라간 용마루, 지붕 위 초록 용 한 쌍과 금빛 여의주, 돌기둥과 붉은 문, 홍등. 밤엔 등과 문이 환하다 -->
   <ellipse cx="28" cy="38.8" rx="26" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
@@ -35,6 +40,6 @@
   <rect x="25.4" y="22.2" width="5.2" height="0.6" rx="0.3" fill="#f2c14e"/>
   <path d="M3.4 36.2 L52.6 36.2" stroke="#000" stroke-opacity="0.08" stroke-width="0.4"/>
   <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="23.9" y="24.9" width="8.2" height="9.2" rx="0.5" opacity="0.6"/><circle cx="8.6" cy="28.6" r="1.8"/><circle cx="47.4" cy="28.6" r="1.8"/></g>
-  <g><animateTransform attributeName="transform" type="rotate" values="-4 22 20.4;4 22 20.4;-4 22 20.4" dur="3.6s" repeatCount="indefinite"/><line x1="22" y1="20.4" x2="22" y2="21.2" stroke="#5b4636" stroke-width="0.3"/><rect x="20.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#e9413a" stroke="#5b4636" stroke-width="0.4"/><rect x="21.3" y="20.9" width="1.4" height="0.5" rx="0.2" fill="#e8b64a"/><rect x="20.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.7)"/></g>
-  <g><animateTransform attributeName="transform" type="rotate" values="-4 34 20.4;4 34 20.4;-4 34 20.4" dur="3.6s" begin="1.2s" repeatCount="indefinite"/><line x1="34" y1="20.4" x2="34" y2="21.2" stroke="#5b4636" stroke-width="0.3"/><rect x="32.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#e9413a" stroke="#5b4636" stroke-width="0.4"/><rect x="33.3" y="20.9" width="1.4" height="0.5" rx="0.2" fill="#e8b64a"/><rect x="32.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.7)"/></g>
+  <g class="s1f4ni1qe2"><line x1="22" y1="20.4" x2="22" y2="21.2" stroke="#5b4636" stroke-width="0.3"/><rect x="20.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#e9413a" stroke="#5b4636" stroke-width="0.4"/><rect x="21.3" y="20.9" width="1.4" height="0.5" rx="0.2" fill="#e8b64a"/><rect x="20.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.7)"/></g>
+  <g class="s1f4ni1qe3"><line x1="34" y1="20.4" x2="34" y2="21.2" stroke="#5b4636" stroke-width="0.3"/><rect x="32.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#e9413a" stroke="#5b4636" stroke-width="0.4"/><rect x="33.3" y="20.9" width="1.4" height="0.5" rx="0.2" fill="#e8b64a"/><rect x="32.7" y="21.1" width="2.6" height="2.4" rx="1.1" fill="#ffd77a" style="opacity: calc(var(--night, 0) * 0.7)"/></g>
 </svg>

@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 30">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 30"><style>
+    @keyframes s170unzi_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, 0px)}100%{transform:translate(0px, 0px)}}
+    .s170unzie1{transform-box:view-box;transform-origin:0 0;animation:s170unzi_0 7s linear 0s infinite}
+  </style>
   <!-- 자작나무: 검은 무늬가 드문드문 있는 하얀 줄기, 가볍게 흔들리는 연두빛 잎 무리 -->
   <ellipse cx="9" cy="29" rx="5" ry="1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
@@ -10,8 +13,8 @@
   </g>
   <g fill="#3e3430"><rect x="8.2" y="26" width="1.4" height="0.5" rx="0.25"/><rect x="9.2" y="23.4" width="1.1" height="0.45" rx="0.22"/><rect x="8.2" y="20.6" width="1.6" height="0.5" rx="0.25"/><rect x="9.4" y="18" width="0.9" height="0.4" rx="0.2"/><rect x="8.5" y="15.8" width="1.2" height="0.45" rx="0.22"/><rect x="9.3" y="12.6" width="0.8" height="0.4" rx="0.2"/></g>
   <path d="M8.6 28 C8.8 22 9 16 9.4 9" stroke="#fff" stroke-width="0.4" opacity="0.8" fill="none" stroke-linecap="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="7s" repeatCount="indefinite"/>
+  <g class="s170unzie1">
+    
     <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
       <ellipse cx="9.6" cy="6.4" rx="4.4" ry="5" fill="#8cc46a"/>
       <ellipse cx="5" cy="11.4" rx="3.2" ry="3.6" fill="#9ccf78"/>

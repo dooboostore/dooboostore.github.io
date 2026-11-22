@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9"><style>
+    @keyframes s1jo6adb_0{0%{transform:translate(3.4px, 5.2px) rotate(-6deg) translate(-3.4px, -5.2px)}50%{transform:translate(3.4px, 5.2px) rotate(6deg) translate(-3.4px, -5.2px)}100%{transform:translate(3.4px, 5.2px) rotate(-6deg) translate(-3.4px, -5.2px)}}
+    .s1jo6adbe1{transform-box:view-box;transform-origin:0 0;animation:s1jo6adb_0 2s linear 0s infinite}
+  </style>
   <!-- 북극여우 (오른쪽을 향함, 걷는 옆모습): 눈처럼 흰 털(변수 fur), 짧고 둥근 귀, 아주 풍성한 꼬리가 살랑 -->
   <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="-6 3.4 5.2;6 3.4 5.2;-6 3.4 5.2" dur="2s" repeatCount="indefinite"/>
+    <g class="s1jo6adbe1">
+      
       <path d="M3.6 5.2 C2.4 4.4 0.8 4.6 0.4 5.8 C0.2 6.8 1 7.6 2 7.4 C2.8 7.2 3.4 6.6 3.8 6 Z" fill="var(--fur, #fbfaf6)"/>
     </g>
     <g fill="#e6e6e0"><rect x="3.6" y="5.6" width="0.9" height="2.9" rx="0.45"/><rect x="7.2" y="5.6" width="0.9" height="2.9" rx="0.45"/></g>

@@ -1,4 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32"><style>
+    @keyframes ssk876s_0{0%{transform:translate(12px, 9px) rotate(0deg) translate(-12px, -9px)}100%{transform:translate(12px, 9px) rotate(360deg) translate(-12px, -9px)}}
+    @keyframes ssk876s_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    @keyframes ssk876s_2{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    @keyframes ssk876s_3{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    @keyframes ssk876s_4{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    .ssk876se5{transform-box:view-box;transform-origin:0 0;animation:ssk876s_0 10s linear 0s infinite}
+    .ssk876se6{animation:ssk876s_1 0.8s linear 0s infinite}
+    .ssk876se7{animation:ssk876s_2 0.8s linear 0s infinite}
+    .ssk876se8{animation:ssk876s_3 0.8s linear 0s infinite}
+    .ssk876se9{animation:ssk876s_4 0.8s linear 0s infinite}
+  </style>
   <!-- 물랭루주: 빨간 극장 위의 빨간 풍차, 날개가 천천히 돈다. 밤엔 전구 간판과 날개 불빛 -->
   <ellipse cx="12" cy="30.8" rx="11" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
@@ -12,8 +23,8 @@
   <rect x="2.6" y="27.8" width="18.8" height="2.2" rx="0.8" fill="#000" opacity="0.1"/>
   <g fill="#ffd77a" stroke="#5b4636" stroke-width="0.2"><circle cx="4.2" cy="24.6" r="0.4"/><circle cx="6" cy="24.6" r="0.4"/><circle cx="7.8" cy="24.6" r="0.4"/><circle cx="16.2" cy="24.6" r="0.4"/><circle cx="18" cy="24.6" r="0.4"/><circle cx="19.8" cy="24.6" r="0.4"/></g>
   <g stroke="#c2523f" stroke-width="0.4" stroke-linecap="round"><path d="M5 22.3 L8 22.3 M9.4 22.3 L14.6 22.3 M16 22.3 L19 22.3"/></g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" from="0 12 9" to="360 12 9" dur="10s" repeatCount="indefinite"/>
+  <g class="ssk876se5">
+    
     <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" fill="#f6ead2">
       <rect x="11" y="0.6" width="2" height="7.4" rx="0.8"/>
       <rect x="11" y="10" width="2" height="7.4" rx="0.8"/>
@@ -26,6 +37,6 @@
   <circle cx="12" cy="9" r="1" fill="#8a4a3e" stroke="#5b4636" stroke-width="0.35"/>
   <g style="opacity: var(--night, 0)">
     <rect x="3.4" y="21" width="17.2" height="2.6" rx="1.2" fill="#ffe27a" opacity="0.8"/>
-    <g fill="#fff6c9"><circle cx="4.2" cy="24.6" r="0.5"><animate attributeName="opacity" values="1;0.2;1" dur="0.8s" repeatCount="indefinite"/></circle><circle cx="7.8" cy="24.6" r="0.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="0.8s" repeatCount="indefinite"/></circle><circle cx="16.2" cy="24.6" r="0.5"><animate attributeName="opacity" values="1;0.2;1" dur="0.8s" repeatCount="indefinite"/></circle><circle cx="19.8" cy="24.6" r="0.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="0.8s" repeatCount="indefinite"/></circle></g>
+    <g fill="#fff6c9"><circle cx="4.2" cy="24.6" r="0.5" class="ssk876se6"/><circle cx="7.8" cy="24.6" r="0.5" class="ssk876se7"/><circle cx="16.2" cy="24.6" r="0.5" class="ssk876se8"/><circle cx="19.8" cy="24.6" r="0.5" class="ssk876se9"/></g>
   </g>
 </svg>

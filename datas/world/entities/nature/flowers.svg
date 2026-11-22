@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><style>
+    @keyframes s1s61w6i_0{0%{transform:skewX(-4deg);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:skewX(4deg);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:skewX(-4deg)}}
+    .s1s61w6ie1{transform-box:view-box;transform-origin:0 0;animation:s1s61w6i_0 5s linear 0s infinite}
+  </style>
   <!-- 작은 꽃밭: 바람에 살랑. CSS 변수 petal 로 색 변주 -->
-  <g>
-    <animateTransform attributeName="transform" type="skewX" values="-4;4;-4" dur="5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1s61w6ie1">
+    
     <g stroke="#5f9a4e" stroke-width="0.4" stroke-linecap="round"><line x1="2.5" y1="6" x2="2.5" y2="3"/><line x1="6" y1="6" x2="6" y2="2"/><line x1="9.5" y1="6" x2="9.5" y2="3.4"/></g>
     <path d="M1 6 Q2 4.4 3 6 M4.6 6 Q5.6 4.6 6.6 6 M8.4 6 Q9.6 4.6 10.8 6" stroke="#6aab55" stroke-width="0.5" fill="none"/>
     <g fill="var(--petal, #ffb3c8)" stroke="#5b4636" stroke-width="0.25">

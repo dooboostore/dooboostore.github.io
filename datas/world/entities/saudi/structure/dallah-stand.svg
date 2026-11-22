@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20"><style>
+    @keyframes s188bl9i_0{0%{opacity:0}50%{opacity:0.85}100%{opacity:0}}
+    @keyframes s188bl9i_1{0%{transform:translate(0px, 0.6px)}100%{transform:translate(0px, -1.2px)}}
+    @keyframes s188bl9i_2{0%{opacity:0}50%{opacity:0.85}100%{opacity:0}}
+    @keyframes s188bl9i_3{0%{transform:translate(0px, 0.6px)}100%{transform:translate(0px, -1.2px)}}
+    .s188bl9ie4{transform-box:view-box;transform-origin:0 0;animation:s188bl9i_0 2.6s linear 0s infinite,s188bl9i_1 2.6s linear 0s infinite}
+    .s188bl9ie5{transform-box:view-box;transform-origin:0 0;animation:s188bl9i_2 2.6s linear 1.3s infinite,s188bl9i_3 2.6s linear 1.3s infinite}
+  </style>
   <!-- 아랍 커피 노점: 사두 직물(빨강·검정·흰 기하무늬)을 덮은 탁자, 부리 모양 주둥이의 놋쇠 달라 주전자에서 피어나는 김, 손잡이 없는 작은 잔들과 대추야자 접시 -->
   <ellipse cx="11" cy="19.2" rx="10" ry="0.8" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
@@ -19,5 +26,5 @@
   <path d="M3.3 10.6 L4.3 10.6 M5.2 10.6 L6.2 10.6" stroke="#3f9a80" stroke-width="0.25"/>
   <path d="M8.4 7.6 Q8.6 6.8 9.2 6.6 M8.2 9.6 L11.8 9.6" stroke="#fff" stroke-width="0.4" opacity="0.6" fill="none" stroke-linecap="round"/>
   <path d="M8.2 9.6 L11.8 9.6" stroke="#b8862a" stroke-width="0.3"/>
-  <path d="M9.6 5.2 Q9.0 4.2 9.6 3.4 Q10.2 2.6 9.6 1.8" fill="none" stroke="#fff" stroke-width="0.6" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;0.85;0" dur="2.6s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0.6;0 -1.2" dur="2.6s" begin="0.0s" repeatCount="indefinite"/></path><path d="M10.6 5.2 Q10.0 4.2 10.6 3.4 Q11.2 2.6 10.6 1.8" fill="none" stroke="#fff" stroke-width="0.6" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;0.85;0" dur="2.6s" begin="1.3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0.6;0 -1.2" dur="2.6s" begin="1.3s" repeatCount="indefinite"/></path>
+  <path d="M9.6 5.2 Q9.0 4.2 9.6 3.4 Q10.2 2.6 9.6 1.8" fill="none" stroke="#fff" stroke-width="0.6" stroke-linecap="round" opacity="0" class="s188bl9ie4"/><path d="M10.6 5.2 Q10.0 4.2 10.6 3.4 Q11.2 2.6 10.6 1.8" fill="none" stroke="#fff" stroke-width="0.6" stroke-linecap="round" opacity="0" class="s188bl9ie5"/>
 </svg>

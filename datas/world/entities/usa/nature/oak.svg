@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26"><style>
+    @keyframes s1obm32v_0{0%{transform:translate(11px, 17px) rotate(-1deg) translate(-11px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(11px, 17px) rotate(1deg) translate(-11px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(11px, 17px) rotate(-1deg) translate(-11px, -17px)}}
+    .s1obm32ve1{transform-box:view-box;transform-origin:0 0;animation:s1obm32v_0 8s linear 0s infinite}
+  </style>
   <!-- 크고 둥근 참나무: 넓은 수관이 몽글몽글, 바람에 살랑. 색은 leaf 변수 -->
   <ellipse cx="11" cy="25" rx="7.4" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
   <path d="M9.6 25 L10 16 L12 16 L12.4 25 Z" fill="#8f6446" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
-  <g>
-  <animateTransform attributeName="transform" type="rotate" values="-1 11 17;1 11 17;-1 11 17" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1obm32ve1">
+  
   <g fill="var(--leaf, #6db85e)" stroke="#5b4636" stroke-width="0.55">
   <circle cx="5.4" cy="13" r="4.4"/><circle cx="16.6" cy="13" r="4.4"/><circle cx="7.6" cy="7.4" r="5"/><circle cx="14.6" cy="7.6" r="4.8"/><circle cx="11" cy="12.6" r="5"/>
   </g>

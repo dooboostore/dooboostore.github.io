@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" data-foot="0.5 0.89">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" data-foot="0.5 0.89"><style>
+    @keyframes s1g6ys6s_0{0%{opacity:0}50%{opacity:0.9}100%{opacity:0}}
+    @keyframes s1g6ys6s_1{0%{opacity:0}50%{opacity:0.7}100%{opacity:0}}
+    @keyframes s1g6ys6s_2{0%{transform:translate(14px, 24px) rotate(-1.5deg) translate(-14px, -24px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(14px, 24px) rotate(1.5deg) translate(-14px, -24px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(14px, 24px) rotate(-1.5deg) translate(-14px, -24px)}}
+    .s1g6ys6se3{animation:s1g6ys6s_0 2.4s linear 0s infinite}
+    .s1g6ys6se4{animation:s1g6ys6s_1 2.4s linear 1.2s infinite}
+    .s1g6ys6se5{transform-box:view-box;transform-origin:0 0;animation:s1g6ys6s_2 4s linear 0s infinite}
+  </style>
   <!-- 나일강 펠루카 (오른쪽을 향함, 옆모습): 초승달 같은 나무 배(띠 색 변수 band), 비스듬한 활대에 걸린 큰 흰 삼각돛. 물결에 흔들리고 뒤로 물거품 -->
   <g stroke="#ffffff" stroke-width="0.6" fill="none" stroke-linecap="round">
-    <path d="M0.6 25.4 Q2.4 24.8 4.4 25.4"><animate attributeName="opacity" values="0;0.9;0" dur="2.4s" repeatCount="indefinite"/></path>
-    <path d="M0 26.6 Q2.2 26 4.8 26.6"><animate attributeName="opacity" values="0;0.7;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M0.6 25.4 Q2.4 24.8 4.4 25.4" class="s1g6ys6se3"/>
+    <path d="M0 26.6 Q2.2 26 4.8 26.6" class="s1g6ys6se4"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1.5 14 24;1.5 14 24;-1.5 14 24" dur="4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="s1g6ys6se5">
+    
     <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
       <line x1="13" y1="21" x2="13" y2="8.4" stroke-width="0.9"/>
       <line x1="13" y1="21" x2="13" y2="8.4" stroke="#a8784e" stroke-width="0.45"/>

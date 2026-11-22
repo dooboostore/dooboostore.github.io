@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -22 14 50" data-foot="0.5 0.44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -22 14 50" data-foot="0.5 0.44"><style>
+    @keyframes snbv17p_0{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    @keyframes snbv17p_1{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    .snbv17pe2{animation:snbv17p_0 1.6s linear 0s infinite}
+    .snbv17pe3{animation:snbv17p_1 1.6s linear 0s infinite}
+  </style>
   <!-- 컨테이너선 (위에서 본 모습, 뱃머리가 위쪽). 뒤로 하얀 물결 -->
   <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="0.9">
-    <path d="M-2 20 Q-4 24 -5 27"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.6s" repeatCount="indefinite"/></path>
-    <path d="M2 20 Q4 24 5 27"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.6s" repeatCount="indefinite"/></path>
+    <path d="M-2 20 Q-4 24 -5 27" class="snbv17pe2"/>
+    <path d="M2 20 Q4 24 5 27" class="snbv17pe3"/>
     <path d="M0 21 L0 26" opacity="0.6"/>
   </g>
   <path d="M0 -21 C3.6 -17 4.6 -12 4.6 -8 L4.6 17 Q4.6 20 0 20.5 Q-4.6 20 -4.6 17 L-4.6 -8 C-4.6 -12 -3.6 -17 0 -21 Z" fill="var(--hull, #c2433a)" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>

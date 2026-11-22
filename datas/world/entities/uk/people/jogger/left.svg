@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18"><style>
+    @keyframes s6h0rnz_0{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .s6h0rnze1{animation:s6h0rnz_0 1.6s linear 0s infinite}
+  </style>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
     <ellipse cx="4.6" cy="16.9" rx="1.4" ry="0.8" fill="#f5f3ee"/>
     <ellipse cx="7.2" cy="16.9" rx="1.4" ry="0.8" fill="#f5f3ee"/>
@@ -15,5 +18,5 @@
   <ellipse cx="2.9" cy="7.1" rx="0.5" ry="0.75" fill="#3d2b22"/>
   <circle cx="3.05" cy="6.85" r="0.18" fill="#fff"/>
   <ellipse cx="2.6" cy="8.5" rx="0.8" ry="0.45" fill="#ff9e9e" opacity="0.55"/>
-  <path d="M11 2.2 Q11.6 3.2 11.2 3.6 Q10.6 3.8 10.6 3.2 Q10.6 2.8 11 2.2 Z" fill="#bfe6ff" stroke="#5b4636" stroke-width="0.15"><animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M11 2.2 Q11.6 3.2 11.2 3.6 Q10.6 3.8 10.6 3.2 Q10.6 2.8 11 2.2 Z" fill="#bfe6ff" stroke="#5b4636" stroke-width="0.15" class="s6h0rnze1"/>
 </svg>

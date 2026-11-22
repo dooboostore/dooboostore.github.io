@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 94">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 94"><style>
+    @keyframes slqutat_0{0%{r:0.6px}50%{r:1.2px}100%{r:0.6px}}
+    .slqutate1{animation:slqutat_0 2.2s linear 0s infinite}
+  </style>
   <!-- 엠파이어 스테이트 빌딩: 5층 기단 위로 아르데코 계단식 세트백, 가늘고 긴 탑신, 둥근 전망대 왕관과 첨탑. 단마다 고르게 맞춘 세로 창 띠. 밤엔 창 띠와 왕관이 빛난다 -->
   <ellipse cx="18" cy="92.2" rx="18.2" ry="1.7" fill="#3b5a2e" opacity="0.22"/>
   <rect x="12" y="12" width="12" height="54" rx="3" fill="#ffe8a8" style="opacity: calc(var(--night, 0) * 0.22)"/>
@@ -104,5 +107,5 @@
     <rect x="16.4" y="10" width="0.9" height="3.4" rx="0.45"/><rect x="18.7" y="10" width="0.9" height="3.4" rx="0.45"/>
     <path d="M16.3 86.8 Q16.3 85.4 18 85.4 Q19.7 85.4 19.7 86.8 L19.7 91 L16.3 91 Z"/>
   </g>
-  <circle cx="18" cy="1.4" r="0.85" fill="#ff5d55" style="opacity: var(--night, 0)"><animate attributeName="r" values="0.6;1.2;0.6" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="18" cy="1.4" r="0.85" fill="#ff5d55" style="opacity: var(--night, 0)" class="slqutate1"/>
 </svg>

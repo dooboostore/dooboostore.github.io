@@ -137,12 +137,12 @@ export class EntityRegistry {
       const g = this.w.document.createElementNS(SVGNS, 'g');
       g.setAttribute('transform', `translate(${p.at[0]} ${p.at[1]}) rotate(${p.rotate ?? 0})`);
       const u = useAt(this.w, e, 'front', p.scale ?? 1);
-      // 회전은 SMIL 로: CSS transform-box 는 <use> 안쪽(인스턴스 트리)에서 중심이 어긋난다. foot(0,0) 을 축으로 돈다
+      // 회전은 CSS 로 (Safari 가 우리 심볼 안 SMIL 을 돌리지 않을 때가 있다). transform-box: view-box + origin 0 0 = 이 g 의 좌표 원점(foot) 을 축으로.
+      // fill-box 로 하면 <use> 인스턴스 안에서 중심이 어긋난다. 키프레임 part-spin 은 페이지 스타일에 있다
       if (p.anim === 'spin') {
         const spin = this.w.document.createElementNS(SVGNS, 'g');
-        const a = this.w.document.createElementNS(SVGNS, 'animateTransform');
-        Object.entries({ attributeName: 'transform', type: 'rotate', from: '0', to: '360', dur: '0.9s', repeatCount: 'indefinite' }).forEach(([k, v]) => a.setAttribute(k, v));
-        spin.append(a, u);
+        spin.setAttribute('class', 'part-spin');
+        spin.appendChild(u);
         g.appendChild(spin);
       } else g.appendChild(u);
       return g;

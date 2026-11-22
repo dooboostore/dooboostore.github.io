@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15"><style>
+    @keyframes s18vnt30_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0px, -0.3px)}100%{transform:translate(0px, 0px)}}
+    .s18vnt30e1{transform-box:view-box;transform-origin:0 0;animation:s18vnt30_0 1.4s linear 0s infinite}
+  </style>
   <!-- 황제펭귄 (오른쪽을 향함): 키 큰 엄마 펭귄, 노란 귀깃과 가슴, 발 앞에 보송보송한 회색 아기 펭귄(변수 chick). 아기가 살짝 들썩인다 -->
   <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
     <g fill="#3e4348"><ellipse cx="3.6" cy="14.4" rx="1.1" ry="0.4"/><ellipse cx="5.6" cy="14.4" rx="1.1" ry="0.4"/></g>
@@ -14,8 +17,8 @@
   <circle cx="6.5" cy="2.6" r="0.12" fill="#fff"/>
   <ellipse cx="6.9" cy="3.6" rx="0.4" ry="0.22" fill="#ff9e9e" opacity="0.55"/>
   <path d="M2.6 3.4 Q3.6 2 5 1.8" stroke="#fff" stroke-opacity="0.3" stroke-width="0.45" fill="none" stroke-linecap="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -0.3;0 0" dur="1.4s" repeatCount="indefinite"/>
+  <g class="s18vnt30e1">
+    
     <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round">
       <g fill="#3e4348"><ellipse cx="9.8" cy="14.5" rx="0.7" ry="0.3"/><ellipse cx="11" cy="14.5" rx="0.7" ry="0.3"/></g>
       <path d="M8.6 14.2 C8 12.4 8.4 10.2 9.6 9.6 C10.8 9 12.4 9.6 12.6 11 C12.8 12.4 12.4 13.6 11.8 14.2 C10.8 14.6 9.6 14.6 8.6 14.2 Z" fill="var(--chick, #c9ccd1)"/>

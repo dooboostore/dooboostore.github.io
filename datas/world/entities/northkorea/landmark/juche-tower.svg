@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 86">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 86"><style>
+    @keyframes sr04hi_0{0%{opacity:0.75}50%{opacity:1}100%{opacity:0.75}}
+    .sr04hie1{animation:sr04hi_0 2.4s linear 0s infinite}
+  </style>
   <!-- 대동강 가의 높은 돌탑: 위로 갈수록 가늘어지는 하얀 화강암 사각 탑, 꼭대기의 전망대와 붉은 횃불 모양 장식, 넓은 계단 기단. 밤엔 횃불이 은은하게 빛난다 -->
   <ellipse cx="11" cy="85" rx="10.6" ry="1" fill="#3b5a2e" opacity="0.2"/>
   <clipPath id="shaft"><path d="M6 76.6 L8.4 20.4 L13.6 20.4 L16 76.6 Z"/></clipPath>
@@ -18,8 +21,8 @@
     <rect x="8.2" y="15" width="5.6" height="2.8" rx="0.8" fill="#efe9dc"/>
     <path d="M10.3 2 Q11 0.6 11.7 2 C13.1 4.2 14.8 6 14.8 9.2 C14.8 12.6 13 14.8 11 14.8 C9 14.8 7.2 12.6 7.2 9.2 C7.2 6 9 4 10.6 1.6 Z" fill="#e9574a"/>
   </g>
-  <path d="M10.8 6 C12 7.6 13 9 13 10.8 C13 12.6 12 13.6 11 13.6 C10 13.6 9 12.6 9 10.8 C9 9 9.8 7.6 10.8 6 Z" fill="#f6a04a">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.4s" repeatCount="indefinite"/>
+  <path d="M10.8 6 C12 7.6 13 9 13 10.8 C13 12.6 12 13.6 11 13.6 C10 13.6 9 12.6 9 10.8 C9 9 9.8 7.6 10.8 6 Z" fill="#f6a04a" class="sr04hie1">
+    
   </path>
   <path d="M9 6.4 Q9.6 4.8 10.6 3.6" stroke="#fff" stroke-width="0.5" opacity="0.5" fill="none" stroke-linecap="round"/>
   <g fill="#9fc6e0" stroke="#5b4636" stroke-width="0.25"><rect x="7.6" y="18.4" width="1.4" height="1.4" rx="0.4"/><rect x="10.3" y="18.4" width="1.4" height="1.4" rx="0.4"/><rect x="13" y="18.4" width="1.4" height="1.4" rx="0.4"/></g>

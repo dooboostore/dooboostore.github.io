@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24"><style>
+    @keyframes s1mymxpm_0{0%{opacity:0}50%{opacity:0.8}100%{opacity:0}}
+    @keyframes s1mymxpm_1{0%{transform:translate(0px, 0.6px)}100%{transform:translate(0px, -0.6px)}}
+    .s1mymxpme2{transform-box:view-box;transform-origin:0 0;animation:s1mymxpm_0 3s linear 0s infinite,s1mymxpm_1 3s linear 0s infinite}
+  </style>
   <!-- 타코 가게: 빨강·흰 줄무늬 차양 아래 나무 노점, 김이 오르는 둥근 철판 코말과 고기 꼬챙이, 라임·고수·살사 그릇, 색색 의자. 밤엔 차양 아래 전구 -->
   <ellipse cx="14" cy="23" rx="13" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
@@ -26,7 +30,7 @@
   <g fill="none" stroke="#fbf6ea" stroke-width="0.45" stroke-linecap="round"><path d="M4.4 18.4 Q5.2 17.6 6 18.4 T7.6 18.4 T9.2 18.4 M11 18.4 L16.4 18.4 M11 19.8 L14.4 19.8"/></g>
   <g fill="#f6c944" stroke="#5b4636" stroke-width="0.25"><circle cx="20" cy="19" r="1.2"/></g>
   <path d="M14.6 11.6 L15 13.4 M16.6 11.4 L16.3 13.6" stroke="#a04a2a" stroke-width="0.3" stroke-linecap="round"/><path d="M15.4 9.8 L15.2 9.2 M16.2 9.8 L16.5 9.2" stroke="#6aa84f" stroke-width="0.35" stroke-linecap="round"/><g fill="#c2523f" font-family="sans-serif" font-weight="bold" font-size="1.1" text-anchor="middle"><text x="12" y="9.9">TACOS</text></g>
-  <g fill="none" stroke="#fff" stroke-width="0.5" stroke-linecap="round" opacity="0.7"><path d="M7.6 12.6 Q7.0 11.6 7.6 10.6 Q8.2 9.6 7.6 8.6"><animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0.6;0 -0.6" dur="3s" repeatCount="indefinite"/></path></g>
+  <g fill="none" stroke="#fff" stroke-width="0.5" stroke-linecap="round" opacity="0.7"><path d="M7.6 12.6 Q7.0 11.6 7.6 10.6 Q8.2 9.6 7.6 8.6" class="s1mymxpme2"/></g>
   <g stroke="#5b4636" stroke-width="0.4" stroke-linecap="round"><rect x="0.4" y="19.4" width="2.4" height="0.9" rx="0.4" fill="#f2a7c4"/><path d="M0.8 20.3 L0.7 22.6 M2.4 20.3 L2.5 22.6" fill="none"/></g>
   <path d="M0.8 20.3 L0.7 22.6 M2.4 20.3 L2.5 22.6" stroke="#f2a7c4" stroke-width="0.2" fill="none"/>
   <g style="opacity: var(--night, 0)"><path d="M3 8.6 Q14 10.2 25 8.6" stroke="#5b4636" stroke-width="0.2" fill="none"/><circle cx="5" cy="9.05" r="0.5" fill="#ffd77a"/><circle cx="9" cy="9.81" r="0.5" fill="#ffd77a"/><circle cx="13" cy="10.18" r="0.5" fill="#ffd77a"/><circle cx="17" cy="10.06" r="0.5" fill="#ffd77a"/><circle cx="21" cy="9.47" r="0.5" fill="#ffd77a"/><rect x="3" y="8" width="22" height="7" rx="1" fill="#ffd77a" opacity="0.18"/></g>

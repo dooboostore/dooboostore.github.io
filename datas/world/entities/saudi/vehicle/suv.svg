@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 14">
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
   <!-- suv — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <g transform="translate(13 13.6) translate(0 0) scale(2.6)">
   <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
@@ -21,12 +22,12 @@
   <rect x="23.6" y="6.6" width="1" height="1.4" rx="0.4" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
   <rect x="1.2" y="6" width="0.7" height="1.6" rx="0.3" fill="#ef6a5e"/>
   <rect x="1.6" y="8.8" width="22.8" height="0.8" rx="0.4" fill="#000" opacity="0.08"/>
-  <g transform="translate(6.6 12.2)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <g transform="translate(6.6 12.2)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
 </g></g></g>
-  <g transform="translate(19.8 12.2)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <g transform="translate(19.8 12.2)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>

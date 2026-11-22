@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 22">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 22"><style>
+    @keyframes s1ck17nx_0{0%{transform:translate(8px, 3.6px) rotate(-5deg) translate(-8px, -3.6px)}50%{transform:translate(8px, 3.6px) rotate(5deg) translate(-8px, -3.6px)}100%{transform:translate(8px, 3.6px) rotate(-5deg) translate(-8px, -3.6px)}}
+    .s1ck17nxe1{transform-box:view-box;transform-origin:0 0;animation:s1ck17nx_0 3.4s linear 0s infinite}
+  </style>
   <!-- 홍등 기둥: 붉은 나무 기둥과 둥글게 휜 팔, 금색 술이 달린 빨간 등롱이 흔들린다. 밤엔 등이 켜진다 -->
   <ellipse cx="3.4" cy="21" rx="3" ry="0.7" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
@@ -8,8 +11,8 @@
     <path d="M3.4 3.4 C5 2 7.4 2 8 3.6" fill="none" stroke="#a8322e" stroke-width="0.55"/>
     <circle cx="3.4" cy="2.4" r="0.8" fill="#e8b64a"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-5 8 3.6;5 8 3.6;-5 8 3.6" dur="3.4s" repeatCount="indefinite"/>
+  <g class="s1ck17nxe1">
+    
     <line x1="8" y1="3.6" x2="8" y2="4.8" stroke="#5b4636" stroke-width="0.3"/>
     <rect x="6.3" y="4.6" width="3.4" height="3.2" rx="1.5" fill="#e9413a" stroke="#5b4636" stroke-width="0.4"/>
     <rect x="7.1" y="4.3" width="1.8" height="0.6" rx="0.25" fill="#e8b64a" stroke="#5b4636" stroke-width="0.2"/>

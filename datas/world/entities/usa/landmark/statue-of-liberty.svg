@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 58">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 58"><style>
+    @keyframes s1qm6yvt_0{0%{r:0.8px}50%{r:1.4px}100%{r:0.8px}}
+    .s1qm6yvte1{animation:s1qm6yvt_0 2.1s linear 0s infinite}
+  </style>
   <!-- 자유의 여신상: 초록 구리빛 로브, 뾰족 왕관, 횃불과 서판. 밤엔 횃불이 주황으로 빛난다 -->
   <ellipse cx="14" cy="56.4" rx="12" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
   <circle cx="20.4" cy="12.6" r="4" fill="#ffcf7a" style="opacity: calc(var(--night, 0) * 0.45)"/>
@@ -18,6 +21,6 @@
   </g>
   <path d="M11.2 26.2 Q12.4 24 13.6 24.2" stroke="#fff" stroke-opacity="0.4" stroke-width="0.5" fill="none"/>
   <g stroke="#5b4636" stroke-width="0.3" fill="#e9e1d2"><rect x="13.6" y="9.8" width="2.2" height="2.6" rx="0.3"/><rect x="10.2" y="34.8" width="1.6" height="2.2" rx="0.3"/></g>
-  <circle cx="18.2" cy="9" r="1.1" fill="#ffb45e" style="opacity: var(--night, 0)"><animate attributeName="r" values="0.8;1.4;0.8" dur="2.1s" repeatCount="indefinite"/></circle>
+  <circle cx="18.2" cy="9" r="1.1" fill="#ffb45e" style="opacity: var(--night, 0)" class="s1qm6yvte1"/>
   <g fill="#8ccdbd"><circle cx="8.8" cy="44.6" r="0.8"/><circle cx="20.2" cy="44.8" r="0.7"/><circle cx="18.6" cy="41.8" r="0.6"/></g>
 </svg>

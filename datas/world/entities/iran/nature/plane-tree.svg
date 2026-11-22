@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 34">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 34"><style>
+    @keyframes s1854raw_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, 0px)}100%{transform:translate(0px, 0px)}}
+    .s1854rawe1{transform-box:view-box;transform-origin:0 0;animation:s1854raw_0 8s linear 0s infinite}
+  </style>
   <!-- 체나르(플라타너스): 얼룩덜룩 벗겨진 굵은 줄기, 넓게 펼쳐진 큰 잎 무리. 바람에 살랑인다 -->
   <ellipse cx="13" cy="33" rx="8" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
@@ -10,8 +13,8 @@
   </g>
   <g fill="#8f9a6a" opacity="0.7"><ellipse cx="12.2" cy="22" rx="0.9" ry="1.4"/><ellipse cx="14" cy="25.6" rx="0.8" ry="1.2"/><ellipse cx="12" cy="29" rx="1" ry="1.3"/><ellipse cx="14.2" cy="31.2" rx="0.7" ry="0.9"/></g>
   <g fill="#ece6d4"><ellipse cx="13.6" cy="20.4" rx="0.7" ry="1"/><ellipse cx="12.4" cy="26.6" rx="0.6" ry="0.9"/><ellipse cx="14.2" cy="28.6" rx="0.6" ry="0.8"/></g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="8s" repeatCount="indefinite"/>
+  <g class="s1854rawe1">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round">
       <circle cx="13" cy="9" r="7.6" fill="#6fae5c"/>
       <circle cx="5.6" cy="13" r="4.6" fill="#7cbc66"/>

@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 50">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 50"><style>
+    @keyframes s1axroq1_0_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s1axroq1_0_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes s1axroq1_1_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s1axroq1_1_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .s1axroq1_0_0{animation:s1axroq1_0_0 1.6s linear 0s infinite}
+    .s1axroq1_0_1{animation:s1axroq1_0_1 1.6s linear 0s infinite}
+    .s1axroq1_1_0{animation:s1axroq1_1_0 1.6s linear 0s infinite}
+    .s1axroq1_1_1{animation:s1axroq1_1_1 1.6s linear 0s infinite}
+  </style>
   <!-- 미 국회의사당: 흰 대리석 양 날개 + 열주, 둥근 원형 드럼 위 둥근 돔, 꼭대기 랜턴과 자유의 여신상(동글게). 밤엔 돔이 은은히 빛난다 -->
   <ellipse cx="42" cy="48.4" rx="41" ry="1.6" fill="#3b5a2e" opacity="0.22"/>
   <ellipse cx="42" cy="18" rx="16" ry="14" fill="#fff4c8" style="opacity: calc(var(--night, 0) * 0.45)"/>
@@ -34,13 +43,13 @@
   </g>
   <g transform="translate(6 21.4) scale(0.9)">
   <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
-  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s1axroq1_0_0"/><path d="M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s1axroq1_0_1"/>
   <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
   <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
   </g>
   <g transform="translate(74 21.4) scale(0.9)">
   <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
-  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s1axroq1_1_0"/><path d="M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s1axroq1_1_1"/>
   <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
   <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
   </g>

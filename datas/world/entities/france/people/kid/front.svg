@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18"><style>
+    @keyframes s1htmxgm_0{0%{transform:translate(7.8919999999999995px, 13.968px) rotate(-6deg) translate(-7.8919999999999995px, -13.968px)}50%{transform:translate(7.8919999999999995px, 13.968px) rotate(6deg) translate(-7.8919999999999995px, -13.968px)}100%{transform:translate(7.8919999999999995px, 13.968px) rotate(-6deg) translate(-7.8919999999999995px, -13.968px)}}
+    .s1htmxgme1{transform-box:view-box;transform-origin:0 0;animation:s1htmxgm_0 3s linear 0s infinite}
+  </style>
   <!-- 빨간 풍선을 든 꼬마 -->
   <g transform="translate(1.7 5.04) scale(0.72)">
   <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
@@ -20,8 +23,8 @@
   <path d="M5.4 8.5 Q6 9 6.6 8.5" stroke="#8a4f3f" stroke-width="0.35" fill="none" stroke-linecap="round"/>
   <ellipse cx="4.3" cy="3.4" rx="1.6" ry="0.6" fill="#fff" opacity="0.25" transform="rotate(-20 4.3 3.4)"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-6 7.8919999999999995 13.968;6 7.8919999999999995 13.968;-6 7.8919999999999995 13.968" dur="3s" repeatCount="indefinite"/>
+  <g class="s1htmxgme1">
+    
     <path d="M7.8919999999999995 13.968 Q9.746 10.968 10 4.6" stroke="#8a7a6a" stroke-width="0.25" fill="none"/>
     <ellipse cx="10" cy="2.6" rx="1.7" ry="2.1" fill="var(--balloon, #ff8a7a)" stroke="#5b4636" stroke-width="0.35"/>
     <path d="M9.7 4.6 L10.3 4.6 L10 4.1 Z" fill="var(--balloon, #ff8a7a)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/>

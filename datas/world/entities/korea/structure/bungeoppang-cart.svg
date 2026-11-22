@@ -1,10 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><style>
+    @keyframes s199u2xw_0{0%{cy:6.6px}100%{cy:3px}}
+    @keyframes s199u2xw_1{0%{opacity:0.8}100%{opacity:0}}
+    @keyframes s199u2xw_2{0%{cy:6.6px}100%{cy:3px}}
+    @keyframes s199u2xw_3{0%{opacity:0.8}100%{opacity:0}}
+    .s199u2xwe4{animation:s199u2xw_0 3s linear 0s infinite,s199u2xw_1 3s linear 0s infinite}
+    .s199u2xwe5{animation:s199u2xw_2 3s linear 1.5s infinite,s199u2xw_3 3s linear 1.5s infinite}
+  </style>
   <!-- 붕어빵 수레: 빨강 흰 줄무늬 차양, 철판 위 노릇한 붕어빵, 김이 모락모락. 밤엔 알전구 -->
   <circle cx="8" cy="7" r="7.6" fill="#ffd27a" style="opacity: calc(var(--night, 0) * 0.35)"/>
   <ellipse cx="8" cy="15.3" rx="7" ry="0.8" fill="#3b5a2e" opacity="0.2"/>
   <g fill="#fbf7ef">
-    <circle cx="6" cy="6.6" r="0.6"><animate attributeName="cy" values="6.6;3" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite"/></circle>
-    <circle cx="10" cy="6.6" r="0.6"><animate attributeName="cy" values="6.6;3" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="6" cy="6.6" r="0.6" class="s199u2xwe4"/>
+    <circle cx="10" cy="6.6" r="0.6" class="s199u2xwe5"/>
   </g>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
     <path d="M2.4 4 L2.4 9 M13.6 4 L13.6 9" stroke-width="0.55"/>

@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 18"><style>
+    @keyframes s1qlit9a_0{0%{transform:skewY(0deg)}25%{transform:skewY(-6deg)}50%{transform:skewY(0deg)}75%{transform:skewY(5deg)}100%{transform:skewY(0deg)}}
+    .s1qlit9ae1{transform-box:view-box;transform-origin:0 0;animation:s1qlit9a_0 2.4s linear 0s infinite}
+  </style>
   <!-- 서프 라이프세이버 깃발: 모래 둔덕에 꽂힌 깃대, 위는 빨강 아래는 노랑인 깃발이 바닷바람에 펄럭 -->
   <ellipse cx="3" cy="17.2" rx="2.8" ry="0.7" fill="#3b5a2e" opacity="0.18"/>
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
@@ -6,8 +9,8 @@
     <rect x="2.5" y="1" width="1" height="16" rx="0.5" fill="#d3d8dd"/>
     <circle cx="3" cy="1" r="0.6" fill="#e8b64a"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="skewY" values="0;-6;0;5;0" dur="2.4s" repeatCount="indefinite"/>
+  <g class="s1qlit9ae1">
+    
     <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round">
       <path d="M3.5 1.8 L8.8 1.8 Q9.4 1.8 9.4 2.4 L9.4 4.4 L3.5 4.4 Z" fill="#e2483c"/>
       <path d="M3.5 4.4 L9.4 4.4 L9.4 6.4 Q9.4 7 8.8 7 L3.5 7 Z" fill="#f6c944"/>

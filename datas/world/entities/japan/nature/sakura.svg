@@ -1,20 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24"><style>
+    @keyframes sbhdja0_0{0%{transform:translate(11px, 16px) rotate(-1deg) translate(-11px, -16px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(11px, 16px) rotate(1deg) translate(-11px, -16px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(11px, 16px) rotate(-1deg) translate(-11px, -16px)}}
+    @keyframes sbhdja0_1{0%{transform:translate(16px, 12px) rotate(50.5deg)}4.167%{transform:translate(16.34px, 12.42px) rotate(63.4deg)}8.333%{transform:translate(16.57px, 12.89px) rotate(76.4deg)}12.5%{transform:translate(16.7px, 13.42px) rotate(86.8deg)}16.667%{transform:translate(16.72px, 13.95px) rotate(93.9deg)}20.833%{transform:translate(16.68px, 14.48px) rotate(98.1deg)}25%{transform:translate(16.61px, 15.01px) rotate(100deg)}29.167%{transform:translate(16.51px, 15.54px) rotate(100deg)}33.333%{transform:translate(16.42px, 16.07px) rotate(98.7deg)}37.5%{transform:translate(16.34px, 16.6px) rotate(95.7deg)}41.667%{transform:translate(16.29px, 17.13px) rotate(91.4deg)}45.833%{transform:translate(16.28px, 17.67px) rotate(85.8deg)}50%{transform:translate(16.32px, 18.2px) rotate(79.1deg)}54.167%{transform:translate(16.42px, 18.73px) rotate(71.8deg)}58.333%{transform:translate(16.59px, 19.24px) rotate(64.3deg)}62.5%{transform:translate(16.83px, 19.72px) rotate(54.3deg)}66.667%{transform:translate(17.14px, 20.15px) rotate(52.7deg)}70.833%{transform:translate(17.46px, 20.58px) rotate(66.7deg)}75%{transform:translate(17.67px, 21.07px) rotate(87.2deg)}79.167%{transform:translate(17.69px, 21.6px) rotate(107.6deg)}83.333%{transform:translate(17.52px, 22.11px) rotate(119.9deg)}87.5%{transform:translate(17.25px, 22.57px) rotate(122.6deg)}91.667%{transform:translate(16.96px, 23.02px) rotate(110.3deg)}95.833%{transform:translate(16.79px, 23.52px) rotate(67.6deg)}100%{transform:translate(17px, 24px) rotate(0deg)}}
+    @keyframes sbhdja0_2{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    .sbhdja0e3{transform-box:view-box;transform-origin:0 0;animation:sbhdja0_0 8s linear 0s infinite}
+    .sbhdja0e4{transform-box:view-box;transform-origin:0 0;animation:sbhdja0_1 7.5s linear 0s infinite,sbhdja0_2 7.5s linear 0s infinite}
+  </style>
   <!-- 늦가을 벚나무: 짙은 줄기가 옆으로 퍼지고, 듬성듬성 남은 주황빛 잎 뭉치. 잎 색은 CSS 변수 leaf -->
   <ellipse cx="11" cy="23" rx="6" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round" fill="none">
     <path d="M10 23 C10.4 19 9.6 16 11 13 M10.6 16.4 C8.6 14.8 6 14.4 4 12 M11 13 C12.6 11.4 15.4 11.2 17.6 9.6 M11 13 C10.6 10.6 9 8.6 9.6 6 M14.4 11.2 C15.4 9 15 7 16 5.4" stroke-width="2"/>
     <path d="M10 23 C10.4 19 9.6 16 11 13 M10.6 16.4 C8.6 14.8 6 14.4 4 12 M11 13 C12.6 11.4 15.4 11.2 17.6 9.6 M11 13 C10.6 10.6 9 8.6 9.6 6 M14.4 11.2 C15.4 9 15 7 16 5.4" stroke="#6e4a3a" stroke-width="1.1"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1 11 16;1 11 16;-1 11 16" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="sbhdja0e3">
+    
     <g fill="var(--leaf, #e8935a)" stroke="#5b4636" stroke-width="0.5">
       <circle cx="4.4" cy="10.6" r="2.8"/><circle cx="9.4" cy="5.2" r="3"/><circle cx="16" cy="4.8" r="2.6"/><circle cx="18" cy="9" r="2.6"/><circle cx="12.6" cy="8.6" r="2.2"/><circle cx="6.8" cy="7.6" r="2"/>
     </g>
     <g fill="#f6c06a" opacity="0.8"><circle cx="5.2" cy="11.2" r="1"/><circle cx="17.2" cy="9.8" r="0.9"/><circle cx="10" cy="6" r="0.9"/></g>
     <g fill="#fff" opacity="0.3"><circle cx="3.6" cy="9.6" r="0.8"/><circle cx="8.4" cy="4" r="1"/><circle cx="15.2" cy="3.8" r="0.8"/></g>
   </g>
-  <path d="M0 -0.7 C0.5 -0.7 0.8 -0.3 0.7 0.1 C0.5 0.5 -0.5 0.5 -0.7 0.1 C-0.8 -0.3 -0.5 -0.7 0 -0.7 Z" fill="#e8935a" stroke="#b0643a" stroke-width="0.15">
-    <animateMotion path="M16 12 C18 14 15 17 17 20 C19 22 16 23 17 24" dur="7.5s" repeatCount="indefinite" rotate="auto"/>
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="7.5s" repeatCount="indefinite"/>
+  <path d="M0 -0.7 C0.5 -0.7 0.8 -0.3 0.7 0.1 C0.5 0.5 -0.5 0.5 -0.7 0.1 C-0.8 -0.3 -0.5 -0.7 0 -0.7 Z" fill="#e8935a" stroke="#b0643a" stroke-width="0.15" class="sbhdja0e4">
+    
+    
   </path>
 </svg>

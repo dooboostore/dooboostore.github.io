@@ -1,12 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22"><style>
+    @keyframes swfllmv_0{0%{transform:translate(10px, 2.4px) rotate(-3deg) translate(-10px, -2.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(10px, 2.4px) rotate(3deg) translate(-10px, -2.4px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(10px, 2.4px) rotate(-3deg) translate(-10px, -2.4px)}}
+    .swfllmve1{transform-box:view-box;transform-origin:0 0;animation:swfllmv_0 3.6s linear 0s infinite}
+  </style>
   <!-- 빵산(팡지아수카르) 케이블카 봉지뉴 (옆모습): 케이블 위 도르래, 매달린 둥근 유리 객실(테두리 변수 frame), 안에 관광객. 살랑살랑 흔들린다. 밤엔 실내등 -->
   <line x1="0" y1="1.4" x2="20" y2="1.4" stroke="#5b4636" stroke-width="0.4"/>
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
     <rect x="7" y="0.6" width="6" height="1.8" rx="0.9" fill="#8c939a"/>
     <circle cx="8.4" cy="1.4" r="0.5" fill="#3e4348"/><circle cx="11.6" cy="1.4" r="0.5" fill="#3e4348"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-3 10 2.4;3 10 2.4;-3 10 2.4" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="swfllmve1">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
       <path d="M10 2.4 L10 6.4" stroke-width="0.9"/>
       <path d="M10 2.4 L10 6.4" stroke="#8c939a" stroke-width="0.45"/>

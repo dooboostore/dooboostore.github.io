@@ -1,7 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -16 20 34" data-foot="0.5 0.47">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -16 20 34" data-foot="0.5 0.47"><style>
+    @keyframes sqm5awg_0{0%{opacity:1}45%{opacity:1}60%{opacity:0.55}85%{opacity:0.55}100%{opacity:1}}
+    @keyframes sqm5awg_1{0%{r:0px}70%{r:0px}76%{r:2px}85%{r:3px}100%{r:0px}}
+    @keyframes sqm5awg_2{0%{cy:-8px}70%{cy:-8px}76%{cy:-10px}85%{cy:-12px}100%{cy:-12px}}
+    @keyframes sqm5awg_3{0%{opacity:0}70%{opacity:0}76%{opacity:1}85%{opacity:0.6}100%{opacity:0}}
+    .sqm5awge4{animation:sqm5awg_0 14s linear 0s infinite}
+    .sqm5awge5{animation:sqm5awg_1 9s linear 0s infinite,sqm5awg_2 9s linear 0s infinite,sqm5awg_3 9s linear 0s infinite}
+  </style>
   <!-- 혹등고래 (위에서 본 모습, 머리가 위쪽): 긴 가슴지느러미, 꼬리, 가끔 물을 뿜는다. 바다 위로 천천히 오르내린다 -->
-  <g>
-    <animate attributeName="opacity" values="1;1;0.55;0.55;1" keyTimes="0;0.45;0.6;0.85;1" dur="14s" repeatCount="indefinite"/>
+  <g class="sqm5awge4">
+    
     <ellipse cx="0" cy="2" rx="6.4" ry="12" fill="#ffffff" opacity="0.35"/>
     <path d="M-3.8 -3 C-8.5 -1 -9.4 3 -8.8 5.4 C-6.6 4 -4.6 1.4 -3.2 0 Z" fill="#6f8ba6" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
     <path d="M3.8 -3 C8.5 -1 9.4 3 8.8 5.4 C6.6 4 4.6 1.4 3.2 0 Z" fill="#6f8ba6" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
@@ -11,6 +18,6 @@
     <ellipse cx="0" cy="-7.4" rx="0.5" ry="0.3" fill="#3d4f63"/>
   </g>
   <g fill="#ffffff" stroke="#bcdcef" stroke-width="0.3">
-    <circle cx="0" cy="-8" r="0"><animate attributeName="r" values="0;0;2;3;0" keyTimes="0;0.7;0.76;0.85;1" dur="9s" repeatCount="indefinite"/><animate attributeName="cy" values="-8;-8;-10;-12;-12" keyTimes="0;0.7;0.76;0.85;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;0.6;0" keyTimes="0;0.7;0.76;0.85;1" dur="9s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="-8" r="0" class="sqm5awge5"/>
   </g>
 </svg>

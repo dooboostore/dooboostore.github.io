@@ -1,4 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><style>
+    @keyframes s1brf0j4_0{0%{transform:translate(15.6px, 15.2px) rotate(0deg) translate(-15.6px, -15.2px)}100%{transform:translate(15.6px, 15.2px) rotate(360deg) translate(-15.6px, -15.2px)}}
+    @keyframes s1brf0j4_1_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s1brf0j4_1_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes s1brf0j4_2{0%{transform:translate(2px, 9.8px) rotate(-6deg) translate(-2px, -9.8px)}50%{transform:translate(2px, 9.8px) rotate(6deg) translate(-2px, -9.8px)}100%{transform:translate(2px, 9.8px) rotate(-6deg) translate(-2px, -9.8px)}}
+    .s1brf0j4_1_0{animation:s1brf0j4_1_0 0.9s linear 0s infinite}
+    .s1brf0j4_1_1{animation:s1brf0j4_1_1 0.9s linear 0s infinite}
+    .s1brf0j4e3{transform-box:view-box;transform-origin:0 0;animation:s1brf0j4_0 0.9s linear 0s infinite}
+    .s1brf0j4e4{transform-box:view-box;transform-origin:0 0;animation:s1brf0j4_2 2.4s linear 0s infinite}
+  </style>
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
   <!-- tricycle — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <g transform="translate(12 17.4) translate(0 0) scale(2.2)">
   <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
@@ -18,28 +28,30 @@
       <circle cx="16" cy="3" r="2.9" fill="var(--skin, #ffe3c8)"/>
       <path d="M13.05 3.9 A3.05 3.05 0 1 1 18.9 2.2 C18 1.7 17 1.7 16.2 2 C15.8 3 14.8 3.2 14.2 2.8 C13.7 3 13.3 3.4 13.05 3.9 Z" fill="var(--hair, #2a2421)"/>
     </g>
-    <g stroke-width="0.4"><animateTransform attributeName="transform" type="rotate" values="0 15.6 15.2;360 15.6 15.2" dur="0.9s" repeatCount="indefinite"/>
+    <g stroke-width="0.4" class="s1brf0j4e3">
       <path d="M15.6 15.2 L15.6 13.4" fill="none" stroke="#3d3d44" stroke-width="0.5"/>
     </g>
-    <path d="M14.4 9 L16.2 12.4 L15.6 14.6" fill="none" stroke="var(--pants, #3d4a6b)" stroke-width="1.1">
-      <animate attributeName="d" values="M14.4 9 L16.2 12.4 L15.6 14.6;M14.4 9 L17 11 L17.2 13;M14.4 9 L16.2 12.4 L15.6 14.6" dur="0.9s" repeatCount="indefinite"/>
+    <path d="M14.4 9 L16.2 12.4 L15.6 14.6" fill="none" stroke="var(--pants, #3d4a6b)" stroke-width="1.1" class="s1brf0j4_1_0">
+      
+    </path><path d="M14.4 9 L17 11 L17.2 13" fill="none" stroke="var(--pants, #3d4a6b)" stroke-width="1.1" class="s1brf0j4_1_1">
+      
     </path>
   </g>
   <path d="M1.6 10.6 L10.6 10.6" stroke="#f6c944" stroke-width="0.4"/>
   <path d="M1.8 6 Q3 3.8 5.6 3.6" stroke="#fff" stroke-opacity="0.3" stroke-width="0.6" fill="none" stroke-linecap="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-6 2 9.8;6 2 9.8;-6 2 9.8" dur="2.4s" repeatCount="indefinite"/>
+  <g class="s1brf0j4e4">
+    
     <line x1="2" y1="9.8" x2="2" y2="10.6" stroke="#5b4636" stroke-width="0.3"/>
     <rect x="1.2" y="10.5" width="1.6" height="2" rx="0.7" fill="#e9413a" stroke="#5b4636" stroke-width="0.3"/>
   </g>
   <ellipse cx="17.4" cy="3.4" rx="0.4" ry="0.6" fill="#3d2b22"/>
   <ellipse cx="17.8" cy="4.4" rx="0.6" ry="0.35" fill="#ff9e9e" opacity="0.55"/>
-  <g transform="translate(5.6 15.2)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1.05)">
+  <g transform="translate(5.6 15.2)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1.05)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
 </g></g></g>
-  <g transform="translate(21.2 15.2)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1.05)">
+  <g transform="translate(21.2 15.2)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1.05)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>

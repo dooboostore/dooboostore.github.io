@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -10 24 18" data-foot="0.5 0.5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -10 24 18" data-foot="0.5 0.5"><style>
+    @keyframes s19tv05a_0{0%{opacity:1}50%{opacity:0.1}100%{opacity:1}}
+    .s19tv05ae1{animation:s19tv05a_0 1.4s linear 0s infinite}
+  </style>
   <!-- 다누리 (한국 달 궤도선): 금박 두른 네모 몸통, 오른쪽으로 길게 뻗은 파란 태양전지판 날개 하나, 위쪽 하얀 접시 안테나와 섀도캠 통, 몸통에 작은 태극기 -->
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
     <path d="M4 0 L5.4 0" stroke="#8b9197" stroke-width="0.8"/>
@@ -14,5 +17,5 @@
   <circle cx="-1.4" cy="2.1" r="0.85" fill="#3f6fb8"/>
   <path d="M-2.25 2.1 A0.85 0.85 0 0 1 -0.55 2.1 Z" fill="#e2574c"/>
   <path d="M-3.4 -3.4 Q-0.3 -4 2.8 -3.4" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" fill="none" stroke-linecap="round"/>
-  <circle cx="2.6" cy="2.8" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <circle cx="2.6" cy="2.8" r="0.45" fill="#ff5d55" class="s19tv05ae1"/>
 </svg>

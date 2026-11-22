@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 12 27">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 12 27"><style>
+    @keyframes sn42y63_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, -0.6px)}100%{transform:translate(0px, 0px)}}
+    .sn42y63e1{transform-box:view-box;transform-origin:0 0;animation:sn42y63_0 2.6s linear 0s infinite}
+  </style>
   <!-- 풍선 든 아이 옆모습: 풍선이 뒤따라온다 -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 -0.6;0 0" dur="2.6s" repeatCount="indefinite"/>
+  <g class="sn42y63e1">
+    
     <path d="M8.4 -2.6 C7.8 1 8.0 6 7.2 12.6" stroke="#8a7a6a" stroke-width="0.25" fill="none" stroke-linecap="round"/>
     <path d="M8.4 -2.8 L7.9 -2.1 L8.9 -2.1 Z" fill="var(--balloon, #ff7b7b)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/>
     <ellipse cx="8.4" cy="-5.6" rx="2.4" ry="2.8" fill="var(--balloon, #ff7b7b)" stroke="#5b4636" stroke-width="0.4"/>

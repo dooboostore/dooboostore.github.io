@@ -1,20 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 26">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 26"><style>
+    @keyframes sf0ig01_0{0%{transform:translate(9px, 17px) rotate(-1.6deg) translate(-9px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(9px, 17px) rotate(1.6deg) translate(-9px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(9px, 17px) rotate(-1.6deg) translate(-9px, -17px)}}
+    @keyframes sf0ig01_1{0%{transform:translate(12px, 16px) rotate(49.7deg)}4.167%{transform:translate(12.3px, 16.35px) rotate(60deg)}8.333%{transform:translate(12.53px, 16.74px) rotate(72.1deg)}12.5%{transform:translate(12.67px, 17.17px) rotate(84.3deg)}16.667%{transform:translate(12.72px, 17.62px) rotate(94deg)}20.833%{transform:translate(12.69px, 18.08px) rotate(100.4deg)}25%{transform:translate(12.61px, 18.52px) rotate(103.4deg)}29.167%{transform:translate(12.51px, 18.97px) rotate(103.5deg)}33.333%{transform:translate(12.4px, 19.41px) rotate(100.6deg)}37.5%{transform:translate(12.31px, 19.86px) rotate(94.4deg)}41.667%{transform:translate(12.28px, 20.31px) rotate(84.8deg)}45.833%{transform:translate(12.31px, 20.77px) rotate(72.8deg)}50%{transform:translate(12.44px, 21.2px) rotate(60.5deg)}54.167%{transform:translate(12.66px, 21.6px) rotate(50.2deg)}58.333%{transform:translate(12.95px, 21.95px) rotate(47.9deg)}62.5%{transform:translate(13.26px, 22.29px) rotate(56.8deg)}66.667%{transform:translate(13.51px, 22.67px) rotate(70.2deg)}70.833%{transform:translate(13.67px, 23.09px) rotate(88.2deg)}75%{transform:translate(13.69px, 23.54px) rotate(105.8deg)}79.167%{transform:translate(13.58px, 23.98px) rotate(117.7deg)}83.333%{transform:translate(13.37px, 24.39px) rotate(122.7deg)}87.5%{transform:translate(13.12px, 24.77px) rotate(119.9deg)}91.667%{transform:translate(12.89px, 25.16px) rotate(100.7deg)}95.833%{transform:translate(12.79px, 25.6px) rotate(62.4deg)}100%{transform:translate(13px, 26px) rotate(0deg)}}
+    @keyframes sf0ig01_2{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    @keyframes sf0ig01_3{0%{transform:translate(5px, 16px) rotate(130.3deg)}4.167%{transform:translate(4.7px, 16.35px) rotate(120deg)}8.333%{transform:translate(4.47px, 16.74px) rotate(107.9deg)}12.5%{transform:translate(4.33px, 17.17px) rotate(95.7deg)}16.667%{transform:translate(4.28px, 17.62px) rotate(86deg)}20.833%{transform:translate(4.31px, 18.08px) rotate(79.6deg)}25%{transform:translate(4.39px, 18.52px) rotate(76.6deg)}29.167%{transform:translate(4.49px, 18.97px) rotate(76.5deg)}33.333%{transform:translate(4.6px, 19.41px) rotate(79.4deg)}37.5%{transform:translate(4.69px, 19.86px) rotate(85.6deg)}41.667%{transform:translate(4.72px, 20.31px) rotate(95.2deg)}45.833%{transform:translate(4.69px, 20.77px) rotate(107.2deg)}50%{transform:translate(4.56px, 21.2px) rotate(119.5deg)}54.167%{transform:translate(4.34px, 21.6px) rotate(129.8deg)}58.333%{transform:translate(4.05px, 21.95px) rotate(132.1deg)}62.5%{transform:translate(3.74px, 22.29px) rotate(123.2deg)}66.667%{transform:translate(3.49px, 22.67px) rotate(109.8deg)}70.833%{transform:translate(3.33px, 23.09px) rotate(91.8deg)}75%{transform:translate(3.31px, 23.54px) rotate(74.2deg)}79.167%{transform:translate(3.42px, 23.98px) rotate(62.3deg)}83.333%{transform:translate(3.63px, 24.39px) rotate(57.3deg)}87.5%{transform:translate(3.88px, 24.77px) rotate(60.1deg)}91.667%{transform:translate(4.11px, 25.16px) rotate(79.3deg)}95.833%{transform:translate(4.21px, 25.6px) rotate(117.6deg)}100%{transform:translate(4px, 26px) rotate(0deg)}}
+    @keyframes sf0ig01_4{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    .sf0ig01e5{transform-box:view-box;transform-origin:0 0;animation:sf0ig01_0 6.5s linear 0s infinite}
+    .sf0ig01e6{transform-box:view-box;transform-origin:0 0;animation:sf0ig01_1 6s linear 0s infinite,sf0ig01_2 6s linear 0s infinite}
+    .sf0ig01e7{transform-box:view-box;transform-origin:0 0;animation:sf0ig01_3 8s linear 3s infinite,sf0ig01_4 8s linear 3s infinite}
+  </style>
   <!-- 늦가을 은행나무: 노란 물방울 수관, 바람에 살랑, 잎이 팔랑팔랑 -->
   <ellipse cx="9" cy="25" rx="5" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <path d="M8.1 25 L8.4 15 L9.6 15 L9.9 25 Z" fill="#9a6b48" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1.6 9 17;1.6 9 17;-1.6 9 17" dur="6.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="sf0ig01e5">
+    
     <path d="M9 1 C14.6 4 17.4 10.6 15.6 15.6 C14 19.4 4 19.4 2.4 15.6 C0.6 10.6 3.4 4 9 1 Z" fill="#f6c944" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>
     <path d="M2.6 14 C3.6 18.6 14.4 18.6 15.4 14 C13 16.6 5 16.6 2.6 14 Z" fill="#d9a12a" opacity="0.6"/>
     <path d="M6.6 4.4 C5 6 4.4 8.4 4.8 10" stroke="#fff3b0" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.8"/>
     <circle cx="11.8" cy="9" r="0.9" fill="#ffe58a"/><circle cx="7.6" cy="13" r="0.8" fill="#ffe58a"/>
   </g>
-  <path d="M0 0 l0.9 -0.7 l0.9 0.7 l-0.9 0.5 Z" fill="#f2c641" stroke="#c8932a" stroke-width="0.15">
-    <animateMotion path="M12 16 C14 18 11 20 13 22 C15 24 12 25 13 26" dur="6s" repeatCount="indefinite" rotate="auto"/>
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="6s" repeatCount="indefinite"/>
+  <path d="M0 0 l0.9 -0.7 l0.9 0.7 l-0.9 0.5 Z" fill="#f2c641" stroke="#c8932a" stroke-width="0.15" class="sf0ig01e6">
+    
+    
   </path>
-  <path d="M0 0 l0.9 -0.7 l0.9 0.7 l-0.9 0.5 Z" fill="#f6d35b" stroke="#c8932a" stroke-width="0.15">
-    <animateMotion path="M5 16 C3 18 6 20 4 22 C2 24 5 25 4 26" dur="8s" begin="3s" repeatCount="indefinite" rotate="auto"/>
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="8s" begin="3s" repeatCount="indefinite"/>
+  <path d="M0 0 l0.9 -0.7 l0.9 0.7 l-0.9 0.5 Z" fill="#f6d35b" stroke="#c8932a" stroke-width="0.15" class="sf0ig01e7">
+    
+    
   </path>
 </svg>

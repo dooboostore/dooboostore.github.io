@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 50">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 50"><style>
+    @keyframes s1kuzh2e_0{0%{transform:translate(6px, 17.4px) rotate(0deg) translate(-6px, -17.4px)}100%{transform:translate(6px, 17.4px) rotate(360deg) translate(-6px, -17.4px)}}
+    .s1kuzh2ee1{transform-box:view-box;transform-origin:0 0;animation:s1kuzh2e_0 60s linear 0s infinite}
+  </style>
   <!-- 엘리자베스 타워 (빅벤): 꿀색 석탑, 금빛 테두리 큰 시계, 돌아가는 분침, 둥근 지붕 첨탑. 밤엔 시계판이 빛난다 -->
   <circle cx="6" cy="17.4" r="5.6" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.4)"/>
   <ellipse cx="6" cy="49.2" rx="5.4" ry="0.8" fill="#3b5a2e" opacity="0.22"/>
@@ -14,8 +17,8 @@
   <circle cx="6" cy="17.4" r="2.7" fill="#fff2b0" style="opacity: var(--night, 0)"/>
   <g fill="#5b4636"><circle cx="6" cy="15.1" r="0.22"/><circle cx="8.3" cy="17.4" r="0.22"/><circle cx="6" cy="19.7" r="0.22"/><circle cx="3.7" cy="17.4" r="0.22"/></g>
   <line x1="6" y1="17.4" x2="7.2" y2="16.4" stroke="#2f2c33" stroke-width="0.4" stroke-linecap="round"/>
-  <line x1="6" y1="17.4" x2="6" y2="15.4" stroke="#2f2c33" stroke-width="0.3" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate" from="0 6 17.4" to="360 6 17.4" dur="60s" repeatCount="indefinite"/>
+  <line x1="6" y1="17.4" x2="6" y2="15.4" stroke="#2f2c33" stroke-width="0.3" stroke-linecap="round" class="s1kuzh2ee1">
+    
   </line>
   <circle cx="6" cy="17.4" r="0.35" fill="#2f2c33"/>
   <circle cx="6" cy="1" r="0.7" fill="#e9c35a" stroke="#5b4636" stroke-width="0.3"/>

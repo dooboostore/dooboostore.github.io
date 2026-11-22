@@ -1,9 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -7 20 8">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -7 20 8"><style>
+    @keyframes s28ob8q_0{0%{transform:translate(0px, 0px)}45%{transform:translate(8px, 0px)}50%{transform:translate(8px, 0px)}95%{transform:translate(0px, 0px)}100%{transform:translate(0px, 0px)}}
+    @keyframes s28ob8q_1{0%{transform:scale(1, 1);animation-timing-function:steps(1, end)}50%{transform:scale(-1, 1)}}
+    .s28ob8qe2{transform-box:view-box;transform-origin:0 0;animation:s28ob8q_0 22s linear 0s infinite}
+    .s28ob8qe3{transform-box:view-box;transform-origin:0 0;animation:s28ob8q_1 22s linear 0s infinite}
+  </style>
   <!-- 백조: 물 위에서 천천히 오가며 몸을 돌린다 (물 레이어에 놓음) -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;8 0;8 0;0 0;0 0" keyTimes="0;0.45;0.5;0.95;1" dur="22s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1 1;-1 1" keyTimes="0;0.5" calcMode="discrete" dur="22s" repeatCount="indefinite"/>
+  <g class="s28ob8qe2">
+    
+    <g class="s28ob8qe3">
+      
       <path d="M-4 0 Q0 0.9 4 0" stroke="#fff" stroke-width="0.4" fill="none" stroke-linecap="round" opacity="0.8"/>
       <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
         <path d="M-4 -1.6 C-4.4 -3.2 -2.6 -3.4 -1 -2.8 C0.6 -2.2 2 -2.2 2.6 -1.6 C3 -0.4 1.6 0 -0.6 0 C-2.6 0 -3.8 -0.6 -4 -1.6 Z" fill="#fdfcf8"/>

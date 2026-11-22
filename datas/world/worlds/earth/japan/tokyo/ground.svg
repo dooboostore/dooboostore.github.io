@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1113">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1113"><style>
+    @keyframes snmmfh4_0{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    @keyframes snmmfh4_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    .snmmfh4e2{animation:snmmfh4_0 2.6s linear 0s infinite}
+    .snmmfh4e3{animation:snmmfh4_1 2.6s linear 1.3s infinite}
+  </style>
   <!-- 도쿄 지면 — tools/build-city.py 로 생성한 기본 틀 + 아래 '도시 장식' 손그림.
        로컬 좌표 = bounds [[139.552,35.472],[139.93,35.828]] 등장방형. 물: OSM 수면 + Natural Earth 10m 바다. 도로: OSM (motorway|trunk) -->
   <defs>
@@ -88,7 +93,7 @@
       <g fill="#f7f4ee" stroke="#5b4636" stroke-width="0.6">
         <rect x="536.6" y="584.4" width="2.8" height="15.2" rx="1"/><rect x="557.6" y="586.4" width="2.8" height="15.2" rx="1"/>
       </g>
-      <g fill="#ff5d55"><circle cx="538" cy="584" r="0.7"><animate attributeName="opacity" values="1;0.2;1" dur="2.6s" repeatCount="indefinite"/></circle><circle cx="559" cy="586" r="0.7"><animate attributeName="opacity" values="1;0.2;1" dur="2.6s" begin="1.3s" repeatCount="indefinite"/></circle></g>
+      <g fill="#ff5d55"><circle cx="538" cy="584" r="0.7" class="snmmfh4e2"/><circle cx="559" cy="586" r="0.7" class="snmmfh4e3"/></g>
     </g>
   </g>
 

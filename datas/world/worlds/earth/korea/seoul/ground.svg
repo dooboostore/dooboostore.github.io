@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 789">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 789"><style>
+    @keyframes s1skz0km_0{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    @keyframes s1skz0km_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    @keyframes s1skz0km_2{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    .s1skz0kme3{animation:s1skz0km_0 3s linear 0s infinite}
+    .s1skz0kme4{animation:s1skz0km_1 3s linear 0s infinite}
+    .s1skz0kme5{animation:s1skz0km_2 3s linear 1s infinite}
+  </style>
   <!-- 서울 지면 (힐링 게임 스타일). 로컬 좌표 = bounds [[126.76,37.42],[127.19,37.70]] 등장방형 (tools/geo-local.mjs)
        한강: Natural Earth 10m 하천 중심선. 경계 밖은 엔진이 boundary.json 으로 잘라낸다 -->
   <defs>
@@ -62,9 +69,9 @@
   </g>
   <!-- 반포대교 달빛무지개분수 -->
   <g stroke-width="1.4" fill="none" stroke-linecap="round">
-    <path d="M524 494 q-10 3 -16 12" stroke="#9fd8ff"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></path>
-    <path d="M524 507 q-11 3 -17 12" stroke="#ffc4e0"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/></path>
-    <path d="M524 520 q-10 3 -16 12" stroke="#c9f2b8"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></path>
+    <path d="M524 494 q-10 3 -16 12" stroke="#9fd8ff" class="s1skz0kme3"/>
+    <path d="M524 507 q-11 3 -17 12" stroke="#ffc4e0" class="s1skz0kme4"/>
+    <path d="M524 520 q-10 3 -16 12" stroke="#c9f2b8" class="s1skz0kme5"/>
   </g>
 
   </g>

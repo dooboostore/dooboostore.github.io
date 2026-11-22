@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -16 12 34" data-foot="0.5 0.47">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -16 12 34" data-foot="0.5 0.47"><style>
+    @keyframes s2l5xo2_0{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    @keyframes s2l5xo2_1{0%{opacity:0.9}50%{opacity:0.2}100%{opacity:0.9}}
+    .s2l5xo2e2{animation:s2l5xo2_0 1.8s linear 0s infinite}
+    .s2l5xo2e3{animation:s2l5xo2_1 1.8s linear 0s infinite}
+  </style>
   <!-- 잠수함 (위에서 본 모습, 뱃머리가 위쪽): 반쯤 잠긴 둥근 몸통, 작은 함교와 잠망경, 뒤로 하얀 V자 물결 -->
   <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="0.7">
-    <path d="M-1.2 13 Q-3 15.4 -4 17.4"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
-    <path d="M1.2 13 Q3 15.4 4 17.4"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/></path>
+    <path d="M-1.2 13 Q-3 15.4 -4 17.4" class="s2l5xo2e2"/>
+    <path d="M1.2 13 Q3 15.4 4 17.4" class="s2l5xo2e3"/>
     <path d="M-0.6 -6.6 Q-1.6 -5.2 -2 -4" opacity="0.8"/>
     <path d="M0.6 -6.6 Q1.6 -5.2 2 -4" opacity="0.8"/>
   </g>

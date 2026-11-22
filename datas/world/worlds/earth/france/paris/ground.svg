@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 516">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 516"><style>
+    @keyframes ssq7obw_0{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    @keyframes ssq7obw_1{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+    @keyframes ssq7obw_2{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+    .ssq7obwe3{animation:ssq7obw_0 1.6s linear 0s infinite}
+    .ssq7obwe4{animation:ssq7obw_1 1.6s linear 0s infinite}
+    .ssq7obwe5{animation:ssq7obw_2 1.6s linear 0s infinite}
+  </style>
   <!-- 파리 지면 — tools/build-city.py 로 생성한 기본 틀 + 아래 '도시 장식' 손그림.
        로컬 좌표 = bounds [[2.217,48.813],[2.477,48.905]] 등장방형. 물: OSM 수면 + Natural Earth 10m 바다. 도로: OSM (motorway|trunk|primary) -->
   <defs>
@@ -103,9 +110,9 @@
     <rect x="259.5" y="222.5" width="8" height="4.4" rx="2" fill="#7cc6ea"/>
   </g>
   <g stroke="#ffffff" stroke-width="0.6" stroke-linecap="round" fill="none">
-    <path d="M261.6 225 L261.6 222.6"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.6s" repeatCount="indefinite"/></path>
-    <path d="M263.5 225 L263.5 221.6"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></path>
-    <path d="M265.4 225 L265.4 222.6"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.6s" repeatCount="indefinite"/></path>
+    <path d="M261.6 225 L261.6 222.6" class="ssq7obwe3"/>
+    <path d="M263.5 225 L263.5 221.6" class="ssq7obwe4"/>
+    <path d="M265.4 225 L265.4 222.6" class="ssq7obwe5"/>
   </g>
 
 

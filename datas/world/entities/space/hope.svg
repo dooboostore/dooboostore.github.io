@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -12 28 24" data-foot="0.5 0.5">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -12 28 24" data-foot="0.5 0.5"><style>
+    @keyframes s137xmin_0{0%{opacity:1}50%{opacity:0.1}100%{opacity:1}}
+    .s137xmine1{animation:s137xmin_0 1.4s linear 0s infinite}
+  </style>
   <!-- 아랍에미리트 화성 탐사선 아말(희망): 금박 육각형 몸통, 세 방향으로 뻗은 파란 태양전지판 세 장, 가운데 하얀 접시 안테나 -->
   <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
     <g fill="#3f6fb8">
@@ -16,5 +19,5 @@
   </g>
   <circle cx="0" cy="0" r="0.6" fill="#8b9197"/>
   <path d="M-1.8 -1.4 Q-0.8 -2.4 0.6 -2.4" stroke="#8fd0ee" stroke-width="0.5" fill="none" stroke-linecap="round"/>
-  <circle cx="3.2" cy="1.6" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <circle cx="3.2" cy="1.6" r="0.45" fill="#ff5d55" class="s137xmine1"/>
 </svg>

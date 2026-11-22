@@ -1,4 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 66">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 66"><style>
+    @keyframes s15iv7ar_0{0%{r:0.6px}50%{r:1.2px}100%{r:0.6px}}
+    @keyframes s15iv7ar_1_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s15iv7ar_1_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes s15iv7ar_2_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s15iv7ar_2_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes s15iv7ar_3_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s15iv7ar_3_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    @keyframes s15iv7ar_4_0{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+    @keyframes s15iv7ar_4_1{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .s15iv7ar_1_0{animation:s15iv7ar_1_0 1.6s linear 0s infinite}
+    .s15iv7ar_1_1{animation:s15iv7ar_1_1 1.6s linear 0s infinite}
+    .s15iv7ar_2_0{animation:s15iv7ar_2_0 1.6s linear 0s infinite}
+    .s15iv7ar_2_1{animation:s15iv7ar_2_1 1.6s linear 0s infinite}
+    .s15iv7ar_3_0{animation:s15iv7ar_3_0 1.6s linear 0s infinite}
+    .s15iv7ar_3_1{animation:s15iv7ar_3_1 1.6s linear 0s infinite}
+    .s15iv7ar_4_0{animation:s15iv7ar_4_0 1.6s linear 0s infinite}
+    .s15iv7ar_4_1{animation:s15iv7ar_4_1 1.6s linear 0s infinite}
+    .s15iv7are5{animation:s15iv7ar_0 2.4s linear 0s infinite}
+  </style>
   <!-- 워싱턴 기념탑: 둥글게 마감한 오벨리스크(뾰족하지 않게), 1/3 높이의 돌 색 변화, 발치에 둥글게 선 성조기들, 밤엔 꼭대기 빨간 항공등 -->
   <ellipse cx="13" cy="64" rx="12.4" ry="1.8" fill="#3b5a2e" opacity="0.22"/>
   <ellipse cx="13" cy="62.6" rx="11.4" ry="2.4" fill="#f3ead6" stroke="#5b4636" stroke-width="0.45"/>
@@ -9,28 +28,28 @@
   <path d="M13 4.6 Q14 5.6 14.4 8.2 L16.6 62.4 Q15 62.9 13.4 62.9 Z" fill="#000" opacity="0.08"/>
   <path d="M11.8 10 L11 36" stroke="#fff" stroke-opacity="0.6" stroke-width="0.6" stroke-linecap="round"/>
   <g fill="#5b4636" opacity="0.55"><rect x="12.1" y="9.4" width="0.6" height="0.9" rx="0.3"/><rect x="13.3" y="9.4" width="0.6" height="0.9" rx="0.3"/></g>
-  <circle cx="13" cy="4.4" r="0.8" fill="#ff5d55" style="opacity: var(--night, 0)"><animate attributeName="r" values="0.6;1.2;0.6" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="13" cy="4.4" r="0.8" fill="#ff5d55" style="opacity: var(--night, 0)" class="s15iv7are5"/>
   <g transform="translate(3 58.6) scale(0.6)">
   <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
-  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_1_0"/><path d="M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_1_1"/>
   <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
   <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
   </g>
   <g transform="translate(6.4 56.8) scale(0.6)">
   <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
-  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_2_0"/><path d="M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_2_1"/>
   <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
   <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
   </g>
   <g transform="translate(19.6 56.8) scale(0.6)">
   <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
-  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_3_0"/><path d="M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_3_1"/>
   <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
   <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
   </g>
   <g transform="translate(23 58.6) scale(0.6)">
   <line x1="0" y1="0" x2="0" y2="7" stroke="#8b9197" stroke-width="0.4" stroke-linecap="round"/>
-  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><animate attributeName="d" values="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z;M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z;M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" dur="1.6s" repeatCount="indefinite"/></path>
+  <path d="M0.2 0.3 Q2 -0.3 3.8 0.3 L3.8 2.6 Q2 2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_4_0"/><path d="M0.2 0.3 Q2 0.9 3.8 0.3 L3.8 2.6 Q2 3.2 0.2 2.6 Z" fill="#fbf8f2" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round" class="s15iv7ar_4_1"/>
   <path d="M0.3 1 L3.7 1 M0.3 1.8 L3.7 1.8" stroke="#d6453d" stroke-width="0.35"/>
   <rect x="0.3" y="0.3" width="1.5" height="1.1" rx="0.2" fill="#4f6fb0"/>
   </g>

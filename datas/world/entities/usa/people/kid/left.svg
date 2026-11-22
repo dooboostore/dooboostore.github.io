@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -7 12 25">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -7 12 25"><style>
+    @keyframes s1ha0l4m_0{0%{transform:translate(0px, 0px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(0.3px, -0.6px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(0px, 0px)}}
+    .s1ha0l4me1{transform-box:view-box;transform-origin:0 0;animation:s1ha0l4m_0 2.8s linear 0s infinite}
+  </style>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
   <ellipse cx="4.6" cy="16.9" rx="1.4" ry="0.8" fill="#e9785a"/><ellipse cx="7.2" cy="16.9" rx="1.4" ry="0.8" fill="#e9785a"/>
   <rect x="4.5" y="14.2" width="1.3" height="2.4" rx="0.6" fill="var(--skin, #ffe0c7)"/><rect x="6.4" y="14.2" width="1.3" height="2.4" rx="0.6" fill="var(--skin, #ffe0c7)"/><path d="M4 15.1 L4.3 13.6 L7.9 13.6 L8.1 15.1 Q6 15.6 4 15.1 Z" fill="var(--pants, #f3d38a)"/>
@@ -8,7 +11,7 @@
   <path d="M1.3 5.6 A4.95 4.95 0 1 1 10.9 6.6 C10.8 8.7 9.6 10.1 7.9 9.8 C8.4 8.3 7.9 6.6 6.8 5.9 C5.5 5.1 3.4 4.9 1.3 5.6 Z" fill="var(--hair, #4a3329)"/>
   </g>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="6.4" cy="12.6" rx="0.95" ry="1.45" fill="var(--shirt, #a8d5b0)" transform="rotate(-150 6.4 12.6)"/></g>
-  <path d="M5.4 11.4 C5 5.4 4.2 2.4000000000000004 3.4 -1.2" stroke="#8a7a6a" stroke-width="0.25" fill="none"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0.3 -0.6;0 0" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><ellipse cx="3.4" cy="-4" rx="2.2" ry="2.6" fill="var(--balloon, #ff8fa8)" stroke="#5b4636" stroke-width="0.4"/><path d="M3 -1.5 L3.4 -1.1 L3.8 -1.5 Z" fill="var(--balloon, #ff8fa8)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><ellipse cx="2.5999999999999996" cy="-4.9" rx="0.6" ry="0.9" fill="#fff" opacity="0.55" transform="rotate(20 2.5999999999999996 -4.9)"/></g>
+  <path d="M5.4 11.4 C5 5.4 4.2 2.4000000000000004 3.4 -1.2" stroke="#8a7a6a" stroke-width="0.25" fill="none"/><g class="s1ha0l4me1"><ellipse cx="3.4" cy="-4" rx="2.2" ry="2.6" fill="var(--balloon, #ff8fa8)" stroke="#5b4636" stroke-width="0.4"/><path d="M3 -1.5 L3.4 -1.1 L3.8 -1.5 Z" fill="var(--balloon, #ff8fa8)" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><ellipse cx="2.5999999999999996" cy="-4.9" rx="0.6" ry="0.9" fill="#fff" opacity="0.55" transform="rotate(20 2.5999999999999996 -4.9)"/></g>
   <ellipse cx="2.9" cy="7.1" rx="0.5" ry="0.75" fill="#3d2b22"/><circle cx="3.05" cy="6.85" r="0.18" fill="#fff"/><ellipse cx="2.6" cy="8.5" rx="0.8" ry="0.45" fill="#ff9e9e" opacity="0.55"/>
   <circle cx="6.9" cy="7.3" r="0.75" fill="#f5cdb0" stroke="#5b4636" stroke-width="0.3"/>
 </svg>

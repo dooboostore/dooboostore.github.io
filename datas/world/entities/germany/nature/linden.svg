@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 32"><style>
+    @keyframes s1z09q2_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, 0px)}100%{transform:translate(0px, 0px)}}
+    .s1z09q2e1{transform-box:view-box;transform-origin:0 0;animation:s1z09q2_0 7.5s linear 0s infinite}
+  </style>
   <!-- 보리수(린덴): 곧은 짙은 줄기, 달걀꼴로 둥글게 솟은 잎 지붕, 하트 모양 잎과 연노랑 꽃송이. 바람에 살랑인다 -->
   <ellipse cx="11" cy="31.2" rx="6.4" ry="1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
@@ -7,8 +10,8 @@
     <path d="M10.8 20 C9.4 18.6 8 18.2 6.8 17.2" fill="none" stroke="#6b5a4e" stroke-width="0.6"/>
   </g>
   <path d="M10.4 30 C10.6 26 10.4 22 10.6 18" stroke="#fff" stroke-width="0.35" opacity="0.3" fill="none" stroke-linecap="round"/>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="7.5s" repeatCount="indefinite"/>
+  <g class="s1z09q2e1">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round">
       <ellipse cx="11" cy="10.4" rx="8.6" ry="9.4" fill="#5f9e55"/>
       <ellipse cx="6" cy="14" rx="4.4" ry="4.4" fill="#6aaa5c"/>

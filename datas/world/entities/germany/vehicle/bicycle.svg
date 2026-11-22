@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
   <!-- bicycle — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
   <g transform="translate(8 17) translate(0 0) scale(1.6)">
   <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
@@ -33,12 +34,12 @@
   <path d="M8.4 2 Q10 1.2 11.8 1.7" stroke="#fff" stroke-opacity="0.35" stroke-width="0.45" fill="none" stroke-linecap="round"/>
   <ellipse cx="12.2" cy="5.1" rx="0.4" ry="0.55" fill="#3d2b22"/>
   <ellipse cx="12.4" cy="6" rx="0.6" ry="0.32" fill="#ff9e9e" opacity="0.6"/>
-  <g transform="translate(3.4 14.6)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1.1)">
+  <g transform="translate(3.4 14.6)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1.1)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
 </g></g></g>
-  <g transform="translate(12.6 14.6)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1.1)">
+  <g transform="translate(12.6 14.6)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(1.1)">
   <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
   <circle r="1" fill="var(--hub, #d3d8dd)"/>
   <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>

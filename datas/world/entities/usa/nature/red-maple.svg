@@ -1,14 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 26">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 26"><style>
+    @keyframes sspcwk7_0{0%{transform:translate(9px, 17px) rotate(-1.4deg) translate(-9px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}50%{transform:translate(9px, 17px) rotate(1.4deg) translate(-9px, -17px);animation-timing-function:cubic-bezier(0.45, 0, 0.55, 1)}100%{transform:translate(9px, 17px) rotate(-1.4deg) translate(-9px, -17px)}}
+    @keyframes sspcwk7_1{0%{transform:translate(12px, 16px)}4.167%{transform:translate(12.3px, 16.35px)}8.333%{transform:translate(12.53px, 16.74px)}12.5%{transform:translate(12.67px, 17.17px)}16.667%{transform:translate(12.72px, 17.62px)}20.833%{transform:translate(12.69px, 18.08px)}25%{transform:translate(12.61px, 18.52px)}29.167%{transform:translate(12.51px, 18.97px)}33.333%{transform:translate(12.4px, 19.41px)}37.5%{transform:translate(12.31px, 19.86px)}41.667%{transform:translate(12.28px, 20.31px)}45.833%{transform:translate(12.31px, 20.77px)}50%{transform:translate(12.44px, 21.2px)}54.167%{transform:translate(12.66px, 21.6px)}58.333%{transform:translate(12.95px, 21.95px)}62.5%{transform:translate(13.26px, 22.29px)}66.667%{transform:translate(13.51px, 22.67px)}70.833%{transform:translate(13.67px, 23.09px)}75%{transform:translate(13.69px, 23.54px)}79.167%{transform:translate(13.58px, 23.98px)}83.333%{transform:translate(13.37px, 24.39px)}87.5%{transform:translate(13.12px, 24.77px)}91.667%{transform:translate(12.89px, 25.16px)}95.833%{transform:translate(12.79px, 25.6px)}100%{transform:translate(13px, 26px)}}
+    @keyframes sspcwk7_2{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    @keyframes sspcwk7_3{0%{transform:translate(6px, 16px)}4.167%{transform:translate(5.7px, 16.35px)}8.333%{transform:translate(5.47px, 16.74px)}12.5%{transform:translate(5.33px, 17.17px)}16.667%{transform:translate(5.28px, 17.62px)}20.833%{transform:translate(5.31px, 18.08px)}25%{transform:translate(5.39px, 18.52px)}29.167%{transform:translate(5.49px, 18.97px)}33.333%{transform:translate(5.6px, 19.41px)}37.5%{transform:translate(5.69px, 19.86px)}41.667%{transform:translate(5.72px, 20.31px)}45.833%{transform:translate(5.69px, 20.77px)}50%{transform:translate(5.56px, 21.2px)}54.167%{transform:translate(5.34px, 21.6px)}58.333%{transform:translate(5.05px, 21.95px)}62.5%{transform:translate(4.74px, 22.29px)}66.667%{transform:translate(4.49px, 22.67px)}70.833%{transform:translate(4.33px, 23.09px)}75%{transform:translate(4.31px, 23.54px)}79.167%{transform:translate(4.42px, 23.98px)}83.333%{transform:translate(4.63px, 24.39px)}87.5%{transform:translate(4.88px, 24.77px)}91.667%{transform:translate(5.11px, 25.16px)}95.833%{transform:translate(5.21px, 25.6px)}100%{transform:translate(5px, 26px)}}
+    @keyframes sspcwk7_4{0%{opacity:0}10%{opacity:1}80%{opacity:1}100%{opacity:0}}
+    .sspcwk7e5{transform-box:view-box;transform-origin:0 0;animation:sspcwk7_0 6.8s linear 0s infinite}
+    .sspcwk7e6{transform-box:view-box;transform-origin:0 0;animation:sspcwk7_1 6.5s linear 0s infinite,sspcwk7_2 6.5s linear 0s infinite}
+    .sspcwk7e7{transform-box:view-box;transform-origin:0 0;animation:sspcwk7_3 8s linear 3s infinite,sspcwk7_4 8s linear 3s infinite}
+  </style>
   <!-- 붉은 단풍나무: 길쭉한 달걀형 수관, 2톤 명암, 동글 잎이 팔랑. 색은 leaf 변수 -->
   <ellipse cx="9" cy="25" rx="5.4" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <path d="M8.1 25 L8.4 15 L9.6 15 L9.9 25 Z" fill="#8a5a46" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
-  <g>
-  <animateTransform attributeName="transform" type="rotate" values="-1.4 9 17;1.4 9 17;-1.4 9 17" dur="6.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <g class="sspcwk7e5">
+  
   <path d="M9 1.4 C14.4 1.4 17 7 16.2 12.4 C15.6 17.4 12.6 18.8 9 18.8 C5.4 18.8 2.4 17.4 1.8 12.4 C1 7 3.6 1.4 9 1.4 Z" fill="var(--leaf, #e9785a)" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>
   <path d="M2.2 13 C3.4 18.6 14.6 18.6 15.8 13 C13.2 16 4.8 16 2.2 13 Z" fill="#000" opacity="0.13"/>
   <path d="M6 4.2 C4.4 6 4 8.4 4.4 10" stroke="#fff" stroke-opacity="0.4" stroke-width="1.3" stroke-linecap="round" fill="none"/>
   <g fill="#000" opacity="0.08"><circle cx="11.6" cy="8" r="1.2"/><circle cx="7.4" cy="12.6" r="1.1"/></g>
   </g>
-  <circle r="0.55" fill="var(--leaf, #e9785a)" stroke="#9a4a3a" stroke-width="0.15"><animateMotion path="M12 16 C14 18 11 20 13 22 C15 24 12 25 13 26" dur="6.5s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="6.5s" begin="0s" repeatCount="indefinite"/></circle>
-  <circle r="0.55" fill="var(--leaf, #e9785a)" stroke="#9a4a3a" stroke-width="0.15"><animateMotion path="M6 16 C4 18 7 20 5 22 C3 24 6 25 5 26" dur="8s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="8s" begin="3s" repeatCount="indefinite"/></circle>
+  <circle r="0.55" fill="var(--leaf, #e9785a)" stroke="#9a4a3a" stroke-width="0.15" class="sspcwk7e6"/>
+  <circle r="0.55" fill="var(--leaf, #e9785a)" stroke="#9a4a3a" stroke-width="0.15" class="sspcwk7e7"/>
 </svg>

@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 32"><style>
+    @keyframes s17x1avt_0{0%{transform:translate(0px, 0px)}50%{transform:translate(0.3px, 0px)}100%{transform:translate(0px, 0px)}}
+    .s17x1avte1{transform-box:view-box;transform-origin:0 0;animation:s17x1avt_0 8s linear 0s infinite}
+  </style>
   <!-- 반얀나무: 넓게 퍼진 잎 지붕, 굵은 줄기, 가지에서 땅까지 내려와 기둥이 되는 공기뿌리. 바람에 살랑인다 -->
   <ellipse cx="18" cy="31.2" rx="16" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
   <g stroke-linecap="round" fill="none">
@@ -13,8 +16,8 @@
     <path d="M20 20.6 C23.4 18.4 27 17.6 30.4 16.4" fill="none" stroke="#9a7a5e" stroke-width="1"/>
   </g>
   <g fill="none" stroke="#7a5e48" stroke-width="0.35" stroke-linecap="round" opacity="0.7"><path d="M16.6 22 C16.4 25 16.2 28 15.6 30.6 M19.2 22 C19.4 25 19.8 28 20.4 30.6"/></g>
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="8s" repeatCount="indefinite"/>
+  <g class="s17x1avte1">
+    
     <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round">
       <ellipse cx="18" cy="8.6" rx="9" ry="7.4" fill="#5c9e50"/>
       <ellipse cx="8.6" cy="11" rx="6.4" ry="5.2" fill="#67aa58"/>

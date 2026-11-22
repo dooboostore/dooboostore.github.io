@@ -1,9 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18"><style>
+    @keyframes s126sa6g_0{0%{cy:9px}100%{cy:5px}}
+    @keyframes s126sa6g_1{0%{opacity:0.8}100%{opacity:0}}
+    @keyframes s126sa6g_2{0%{cy:9px}100%{cy:5px}}
+    @keyframes s126sa6g_3{0%{opacity:0.8}100%{opacity:0}}
+    .s126sa6ge4{animation:s126sa6g_0 3s linear 0s infinite,s126sa6g_1 3s linear 0s infinite}
+    .s126sa6ge5{animation:s126sa6g_2 3s linear 1.5s infinite,s126sa6g_3 3s linear 1.5s infinite}
+  </style>
   <!-- 핫도그 카트: 줄무늬 둥근 파라솔, 은색 카트, 바퀴, 모락모락 김 -->
   <ellipse cx="8" cy="17.2" rx="7" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
   <g fill="#fbf7ef">
-  <circle cx="6" cy="9" r="0.6"><animate attributeName="cy" values="9;5" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite"/></circle>
-  <circle cx="9" cy="9" r="0.6"><animate attributeName="cy" values="9;5" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="6" cy="9" r="0.6" class="s126sa6ge4"/>
+  <circle cx="9" cy="9" r="0.6" class="s126sa6ge5"/>
   </g>
   <line x1="8" y1="4" x2="8" y2="10.4" stroke="#8b9197" stroke-width="0.5" stroke-linecap="round"/>
   <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">

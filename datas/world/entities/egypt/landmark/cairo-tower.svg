@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 80">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 80"><style>
+    @keyframes savfliz_0{0%{opacity:1}50%{opacity:0.3}100%{opacity:1}}
+    .savflize1{animation:savfliz_0 2s linear 0s infinite}
+  </style>
   <!-- 카이로 타워: 연꽃 격자 무늬 원통 기둥, 꼭대기에 활짝 핀 연꽃 전망대와 안테나, 아래 둥근 받침. 안테나 끝 불빛이 깜빡인다 -->
   <defs>
     <pattern id="lat" width="2.4" height="2.4" patternUnits="userSpaceOnUse">
@@ -19,6 +22,6 @@
   <rect x="5" y="11.8" width="8" height="0.9" rx="0.45" fill="#9fc6e0"/>
   <path d="M8 24 L8 70" stroke="#fff" stroke-width="0.5" opacity="0.3" stroke-linecap="round"/>
   <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.25"><rect x="4.6" y="75" width="2" height="2.4" rx="0.8"/><rect x="11.4" y="75" width="2" height="2.4" rx="0.8"/><path d="M8 78.2 L8 76 Q9 74.8 10 76 L10 78.2 Z"/></g>
-  <circle cx="9" cy="2" r="0.7" fill="#ef6a5e" stroke="#5b4636" stroke-width="0.25"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="9" cy="2" r="0.7" fill="#ef6a5e" stroke="#5b4636" stroke-width="0.25" class="savflize1"/>
   <g fill="#ffd77a" style="opacity: calc(0.2 + var(--night, 0) * 0.8)"><rect x="5" y="11.8" width="8" height="0.9" rx="0.45"/><rect x="4.6" y="75" width="2" height="2.4" rx="0.8"/><rect x="11.4" y="75" width="2" height="2.4" rx="0.8"/></g>
 </svg>

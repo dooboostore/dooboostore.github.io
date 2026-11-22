@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8"><style>
+    @keyframes sf022uk_0{0%{transform:translate(3px, 6.4px) rotate(0deg) translate(-3px, -6.4px)}50%{transform:translate(3px, 6.4px) rotate(-12deg) translate(-3px, -6.4px)}100%{transform:translate(3px, 6.4px) rotate(0deg) translate(-3px, -6.4px)}}
+    .sf022uke1{transform-box:view-box;transform-origin:0 0;animation:sf022uk_0 3.2s linear 0s infinite}
+  </style>
   <!-- 바다표범 (오른쪽을 향함, 얼음 위에서 쉬는 옆모습): 통통한 회색 몸, 점박이 무늬, 앞지느러미, 꼬리를 살랑 들었다 내린다 -->
   <g stroke="#5b4636" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="0 3 6.4;-12 3 6.4;0 3 6.4" dur="3.2s" repeatCount="indefinite"/>
+    <g class="sf022uke1">
+      
       <path d="M3.4 6.2 C2.4 5.6 1.4 5.2 0.6 5.6 C0.8 6.2 1 6.6 0.6 7.2 C1.6 7.4 2.6 7.2 3.4 6.8 Z" fill="var(--seal, #a9b4bf)"/>
     </g>
     <path d="M2.8 6.6 C3 4.6 5.6 3.2 9 3 C11.6 2.8 13 2 14.4 1.8 C16.2 1.6 17.4 2.8 17.2 4.2 C17 5.6 15.8 6.2 14.6 6.6 C12.6 7.6 6 7.8 2.8 6.6 Z" fill="var(--seal, #a9b4bf)"/>
