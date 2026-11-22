@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 6" data-foot="0.5 0.5">
+  <!-- 달 위의 발자국 (위에서 본 모습): 오른쪽으로 이어지는 우주화 발자국 다섯 개, 가로 줄무늬 밑창 자국. 바람이 없어 오래오래 남는다 -->
+  <g fill="#000" opacity="0.13">
+    <rect x="0.6" y="3.3" width="2.4" height="1.2" rx="0.6"/>
+    <rect x="3.6" y="1.5" width="2.4" height="1.2" rx="0.6"/>
+    <rect x="6.8" y="3.3" width="2.4" height="1.2" rx="0.6"/>
+    <rect x="9.8" y="1.5" width="2.4" height="1.2" rx="0.6"/>
+    <rect x="13" y="3.3" width="2.4" height="1.2" rx="0.6"/>
+  </g>
+  <g stroke="#000" stroke-opacity="0.12" stroke-width="0.2" stroke-linecap="round">
+    <path d="M1.3 3.5 V4.3 M1.9 3.5 V4.3 M2.5 3.5 V4.3"/>
+    <path d="M4.3 1.7 V2.5 M4.9 1.7 V2.5 M5.5 1.7 V2.5"/>
+    <path d="M7.5 3.5 V4.3 M8.1 3.5 V4.3 M8.7 3.5 V4.3"/>
+    <path d="M10.5 1.7 V2.5 M11.1 1.7 V2.5 M11.7 1.7 V2.5"/>
+    <path d="M13.7 3.5 V4.3 M14.3 3.5 V4.3 M14.9 3.5 V4.3"/>
+  </g>
+</svg>

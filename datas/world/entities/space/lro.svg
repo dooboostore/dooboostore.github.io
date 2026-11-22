@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -12 28 22" data-foot="0.5 0.5">
+  <!-- 루나 정찰 궤도선 LRO: 세로로 긴 금박 몸통, 왼쪽에 커다란 태양전지판 한 장, 오른쪽 위로 뻗은 막대 끝에 하얀 접시 안테나 -->
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-3 0 L-4.4 0 M3 -4 L8 -8" stroke="#8b9197" stroke-width="0.7"/>
+    <rect x="-13.4" y="-5" width="9" height="10" rx="1" fill="#3f6fb8"/>
+    <rect x="-3" y="-8" width="6" height="16" rx="1.4" fill="#f2c14e"/>
+    <rect x="-2.2" y="-10.4" width="4.4" height="2.8" rx="0.9" fill="#fbfaf6"/>
+    <ellipse cx="9" cy="-9" rx="3.2" ry="2.2" fill="#fbfaf6"/>
+  </g>
+  <g stroke="#9fc6ea" stroke-width="0.3" opacity="0.8"><path d="M-10.4 -5 L-10.4 5 M-7.4 -5 L-7.4 5 M-13.4 -1.7 L-4.4 -1.7 M-13.4 1.7 L-4.4 1.7"/></g>
+  <circle cx="9" cy="-9" r="0.6" fill="#8b9197"/>
+  <path d="M-2 -6 L-2 5" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" stroke-linecap="round"/>
+  <path d="M-2.4 2 L2.4 2 M-2.4 4 L2.4 4" stroke="#d39a2c" stroke-width="0.3"/>
+  <circle cx="1.2" cy="-5" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</svg>

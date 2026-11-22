@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 아폴로 우주비행사 (front): 흰 A7L 우주복, 흰 헬멧이 정수리를 덮고 금색 바이저가 얼굴 전체를 가림. 어깨 뒤로 생명유지 배낭(PLSS)이 살짝 보이고, 가슴에 조종 상자, 회청색 장갑, 흰 덧신 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="1.7" y="8.2" width="8.6" height="6.6" rx="1.6" fill="#dfe2e5"/>
+    <ellipse cx="4.4" cy="16.9" rx="1.6" ry="0.85" fill="#d4d8dc"/>
+    <ellipse cx="7.6" cy="16.9" rx="1.6" ry="0.85" fill="#d4d8dc"/>
+    <path d="M3.3 16.4 L3.5 14 L8.5 14 L8.7 16.4 Z" fill="var(--suit, #f6f4ee)"/>
+    <ellipse cx="2.4" cy="12.6" rx="1.2" ry="1.65" fill="var(--suit, #f6f4ee)" transform="rotate(14 2.4 12.6)"/>
+    <ellipse cx="9.6" cy="12.6" rx="1.2" ry="1.65" fill="var(--suit, #f6f4ee)" transform="rotate(-14 9.6 12.6)"/>
+    <path d="M2.6 14.6 C2.2 11.6 3.4 9.8 6 9.8 C8.6 9.8 9.8 11.6 9.4 14.6 C8 15.2 4 15.2 2.6 14.6 Z" fill="var(--suit, #f6f4ee)"/>
+    <g fill="#8a97a8"><circle cx="1.9" cy="14.1" r="0.75"/><circle cx="10.1" cy="14.1" r="0.75"/></g>
+    <circle cx="6" cy="6" r="5.2" fill="#fbfaf6"/>
+    <ellipse cx="6" cy="6.7" rx="3.9" ry="3.5" fill="#e6ac3e"/>
+  </g>
+  <path d="M2.6 8.6 Q6 10.8 9.4 8.6" stroke="#b5832a" stroke-width="0.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <ellipse cx="4.6" cy="5.2" rx="1.5" ry="0.9" fill="#fff" opacity="0.55" transform="rotate(-25 4.6 5.2)"/>
+  <circle cx="7.9" cy="8.3" r="0.35" fill="#fff" opacity="0.5"/>
+  <ellipse cx="3.8" cy="1.9" rx="1.3" ry="0.4" fill="#fff" opacity="0.6" transform="rotate(-25 3.8 1.9)"/>
+  <rect x="4.2" y="10.9" width="3.6" height="1.8" rx="0.5" fill="#c9ccd1" stroke="#5b4636" stroke-width="0.3"/>
+  <g fill="#5b6168"><circle cx="5" cy="11.8" r="0.3"/><circle cx="6" cy="11.8" r="0.3"/><circle cx="7" cy="11.8" r="0.3"/></g>
+  <path d="M3 13.6 Q6 14.2 9 13.6" stroke="#000" stroke-opacity="0.1" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M6 14.2 L6 16" stroke="#5b4636" stroke-width="0.3" stroke-linecap="round" opacity="0.5"/>
+  <g stroke="#5b4636" stroke-width="0.15"><rect x="8.6" y="10.6" width="1.2" height="0.8" rx="0.15" fill="#fbfaf6"/></g>
+  <rect x="8.6" y="10.6" width="0.5" height="0.4" fill="#2f5aa8"/>
+  <g stroke="#d6363f" stroke-width="0.12"><path d="M9.1 10.75 H9.8 M8.6 11.15 H9.8"/></g>
+</svg>

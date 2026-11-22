@@ -1,0 +1,21 @@
+{
+  "local": {"size": [960, 738], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "russia/landmark/st-basils.svg", "at": [528, 390], "scale": 0.65},
+    {"use": "russia/landmark/spasskaya-tower.svg", "at": [508, 378], "scale": 0.55},
+    {"use": "russia/building/moscow-house.svg", "count": 12, "area": [320, 395, 90, 60], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#f2d6a2", "#e9c9c9", "#c9dbe9", "#f4ead6", "#d8e6c4"]}},
+    {"use": "russia/building/moscow-house.svg", "count": 8, "area": [470, 280, 80, 60], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#f2d6a2", "#e9c9c9", "#c9dbe9"]}},
+    {"use": "russia/building/moscow-house.svg", "count": 8, "area": [520, 450, 70, 60], "scale": 0.5, "spacing": 12},
+    {"use": "russia/structure/metro-entrance.svg", "at": [[515, 358], [345, 430], [502, 326]], "scale": 0.5},
+    {"use": "russia/nature/birch.svg", "count": 14, "area": [390, 550, 70, 70], "scale": 0.6, "spacing": 10},
+    {"use": "russia/nature/birch.svg", "count": 6, "area": [480, 395, 30, 30], "scale": 0.55, "spacing": 8},
+    {"use": "russia/people/ushanka", "count": 5, "area": [500, 355, 40, 22], "scale": 0.7, "spacing": 6},
+    {"use": "russia/people/babushka", "count": 3, "area": [335, 415, 40, 20], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 3, "area": [505, 362, 30, 18], "scale": 0.7, "spacing": 6},
+    {"use": "animal/pigeon", "count": 4, "area": [505, 362, 30, 18], "spacing": 5},
+    {"use": "russia/vehicle/trolleybus", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M197 64.7 L350.6 189.4 L443.9 284.6 L477.1 337 L485.7 345.2", "dur": 44}},
+    {"use": "russia/vehicle/trolleybus", "count": 1, "scale": 0.5, "behavior": {"type": "route", "path": "M457 407.9 L466.3 413.6 L493.1 477.2 L475.5 529.6 L472 569.4 L460.8 581.9", "dur": 27}},
+    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M6 312 L24 330 L39 348 L45 366 L54 384 L60 402 L66 420 L81 438 L99 444 L117 444 L135 438 L153 432 L171 420 L189 405 L207 387 L225 378 L243 375 L261 378 L279 381 L297 399 L300 417 L300 435 L291 453 L282 471 L270 489 L258 507 L243 525 L225 543 L207 561 L189 576 L171 588 L153 606 L153 624 L153 642 L159 660 L168 678 L186 696 L204 714 L222 717 L240 717 L258 714 L276 708 L294 699 L312 690 L330 672 L348 654 L363 636 L375 618 L387 600 L396 582 L402 564 L408 546 L420 528 L438 510 L453 492 L453 474 L456 456 L468 438 L483 420 L501 414 L507 414", "dur": 240}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
+  ]
+}

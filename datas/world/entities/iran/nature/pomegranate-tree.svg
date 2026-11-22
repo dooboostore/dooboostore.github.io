@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24">
+  <!-- 석류나무: 갈래진 가는 줄기, 짙은 초록 잎 덩어리 사이 왕관 달린 빨간 석류 열매. 열매색은 fruit 변수 -->
+  <ellipse cx="11" cy="23.2" rx="8" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 23.4 C10.4 20 9 18 8 15 L9.2 14.6 C10.2 17 11 18.4 11.2 20 C11.6 18 12.6 16.4 13.8 14.6 L14.8 15.2 C13.4 17.6 12.4 20 12.4 23.4 Z" fill="#8a6650"/>
+    <circle cx="11" cy="9.4" r="7" fill="#4f9a52"/>
+    <circle cx="6" cy="12" r="4" fill="#5aa65a"/>
+    <circle cx="16" cy="11.6" r="4.2" fill="#5aa65a"/>
+    <circle cx="11" cy="13.4" r="3.2" fill="#4f9a52"/>
+  </g>
+  <g fill="#7cc36a" opacity="0.7"><ellipse cx="9" cy="4.6" rx="2" ry="0.7"/><ellipse cx="5" cy="9.8" rx="1.4" ry="0.5"/><ellipse cx="15.4" cy="9.2" rx="1.4" ry="0.5"/></g>
+  <path d="M6.8500000000000005 7.5 L6.800000000000001 6.6 L7.2 7.0 L7.4 6.4 L7.6000000000000005 7.0 L8.0 6.6 L7.95 7.5 Z" fill="#b8343f" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><circle cx="7.4" cy="8.6" r="1.4" fill="var(--fruit, #d8343f)" stroke="#5b4636" stroke-width="0.3"/><circle cx="6.91" cy="8.11" r="0.42" fill="#fff" opacity="0.45"/><path d="M12.049999999999999 5.3 L12.0 4.4 L12.4 4.8 L12.6 4.2 L12.799999999999999 4.8 L13.2 4.4 L13.15 5.3 Z" fill="#b8343f" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><circle cx="12.6" cy="6.4" r="1.4" fill="var(--fruit, #d8343f)" stroke="#5b4636" stroke-width="0.3"/><circle cx="12.11" cy="5.91" r="0.42" fill="#fff" opacity="0.45"/><path d="M14.85 10.6 L14.8 9.7 L15.200000000000001 10.1 L15.4 9.5 L15.6 10.1 L16.0 9.7 L15.950000000000001 10.6 Z" fill="#b8343f" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><circle cx="15.4" cy="11.6" r="1.3" fill="var(--fruit, #d8343f)" stroke="#5b4636" stroke-width="0.3"/><circle cx="14.95" cy="11.14" r="0.39" fill="#fff" opacity="0.45"/><path d="M9.049999999999999 12.0 L9.0 11.1 L9.4 11.5 L9.6 10.9 L9.799999999999999 11.5 L10.2 11.1 L10.15 12.0 Z" fill="#b8343f" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><circle cx="9.6" cy="13" r="1.3" fill="var(--fruit, #d8343f)" stroke="#5b4636" stroke-width="0.3"/><circle cx="9.14" cy="12.54" r="0.39" fill="#fff" opacity="0.45"/><path d="M4.25 12.6 L4.2 11.7 L4.6 12.1 L4.8 11.5 L5.0 12.1 L5.3999999999999995 11.7 L5.35 12.6 Z" fill="#b8343f" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"/><circle cx="4.8" cy="13.4" r="1.1" fill="var(--fruit, #d8343f)" stroke="#5b4636" stroke-width="0.3"/><circle cx="4.42" cy="13.02" r="0.33" fill="#fff" opacity="0.45"/>
+</svg>

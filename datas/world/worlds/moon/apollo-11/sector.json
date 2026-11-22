@@ -1,0 +1,20 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "moon/landmark/eagle.svg", "at": [480, 480], "scale": 1.0},
+    {"use": "moon/structure/us-flag.svg", "at": [450, 488], "scale": 0.8},
+    {"use": "moon/structure/plaque.svg", "at": [496, 486], "scale": 0.6},
+    {"use": "moon/structure/tv-camera.svg", "at": [506, 440], "scale": 0.7},
+    {"use": "moon/structure/seismometer.svg", "at": [466, 522], "scale": 0.7},
+    {"use": "moon/structure/retroreflector.svg", "at": [500, 524], "scale": 0.7},
+    {"use": "moon/nature/footprints.svg", "at": [[460, 500], [510, 500], [525, 492], [490, 512], [455, 470]], "scale": 1.2},
+    {"use": "moon/people/astronaut", "count": 2, "area": [430, 445, 110, 95], "scale": 0.75, "spacing": 10},
+    {"use": "moon/nature/moon-rock.svg", "count": 14, "area": [60, 60, 840, 840], "scale": 0.8, "spacing": 40},
+    {"use": "moon/nature/moon-rock.svg", "count": 6, "area": [120, 350, 200, 180], "scale": 1.1, "spacing": 20}
+  ],
+  "info": {
+    "고요의 기지": {"title": "고요의 기지", "emoji": "🌕", "kind": "지명", "desc": "1969년 7월 20일 아폴로 11호 달 착륙선 이글이 내려앉은 곳이에요. 암스트롱이 \"휴스턴, 여기는 고요의 기지\"라고 처음 알렸답니다."},
+    "웨스트 크레이터": {"title": "웨스트 크레이터", "emoji": "🕳️", "kind": "지명", "desc": "착륙 지점 서쪽 약 400m의 크레이터예요. 암스트롱은 바위가 많은 이 크레이터를 피해 착륙선을 손으로 조종해 더 멀리 내렸어요."},
+    "리틀 웨스트 크레이터": {"title": "리틀 웨스트 크레이터", "emoji": "👣", "kind": "지명", "desc": "착륙선 동쪽 약 60m의 작은 크레이터예요. 암스트롱이 걸어가 안을 들여다본, 아폴로 11호 탐사에서 가장 멀리 간 곳이에요."}
+  }
+}

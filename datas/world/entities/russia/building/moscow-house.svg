@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 30">
+  <!-- 모스크바 고전주의 저택: 파스텔 벽(wall 변수)에 흰 기둥 네 개의 현관과 박공, 흰 창틀 장식, 초록 철판 지붕. 밤엔 창이 환하다 -->
+  <ellipse cx="14" cy="29" rx="13.4" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2" y="11.6" width="24" height="16.4" rx="0.8" fill="var(--wall, #f2d27a)"/>
+    <path d="M1 12.6 Q1 11.6 2 11.4 L6 7.6 Q6.6 7 7.4 7 L20.6 7 Q21.4 7 22 7.6 L26 11.4 Q27 11.6 27 12.6 Z" fill="var(--roof, #7aa08e)"/>
+    <rect x="12.4" y="20.6" width="3.2" height="6.6" rx="0.5" fill="var(--door, #8a5a3f)"/>
+    <rect x="3.4" y="16.2" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="6.2" y="16.2" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="19.8" y="16.2" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="22.6" y="16.2" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="3.4" y="21.6" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="6.2" y="21.6" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="19.8" y="21.6" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="22.6" y="21.6" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/><rect x="13" y="16.4" width="2" height="3.2" rx="0.5" fill="#b9d6ea"/>
+    <path d="M8.2 13.6 L13.2 9.6 Q14 9 14.8 9.6 L19.8 13.6 Q20 14.4 19.2 14.4 L8.8 14.4 Q8 14.4 8.2 13.6 Z" fill="#fbf8f0"/>
+    <path d="M10.6 13.4 L13.6 11 Q14 10.7 14.4 11 L17.4 13.4 Z" fill="var(--wall, #f2d27a)" stroke-width="0.35"/>
+    <rect x="8.4" y="14" width="11.2" height="1.6" rx="0.6" fill="#fbf8f0"/>
+    <rect x="9.4" y="15.4" width="1.2" height="11.4" rx="0.5" fill="#fbf8f0"/><rect x="11.8" y="15.4" width="1.2" height="11.4" rx="0.5" fill="#fbf8f0"/><rect x="15" y="15.4" width="1.2" height="11.4" rx="0.5" fill="#fbf8f0"/><rect x="17.4" y="15.4" width="1.2" height="11.4" rx="0.5" fill="#fbf8f0"/>
+    <rect x="1.6" y="26.6" width="24.8" height="1.8" rx="0.7" fill="#e6e0d4"/>
+    <rect x="8.6" y="27.4" width="10.8" height="1.4" rx="0.6" fill="#d9d2c4"/>
+  </g>
+  <rect x="3.1" y="15.299999999999999" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="5.9" y="15.299999999999999" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="19.5" y="15.299999999999999" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="22.3" y="15.299999999999999" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="3.1" y="20.700000000000003" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="5.9" y="20.700000000000003" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="19.5" y="20.700000000000003" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="22.3" y="20.700000000000003" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/><rect x="12.7" y="15.499999999999998" width="2.6" height="0.8" rx="0.4" fill="#fbf8f0"/>
+  <g fill="#fbf8f0"><rect x="2.4" y="12" width="0.9" height="14.6" rx="0.4"/><rect x="24.7" y="12" width="0.9" height="14.6" rx="0.4"/></g>
+  <path d="M2.4 20.6 L25.6 20.6" stroke="#fbf8f0" stroke-width="0.6"/>
+  <g stroke="#fff" stroke-width="0.3" opacity="0.7"><path d="M4.4 16.2 L4.4 19.4 M7.2 16.2 L7.2 19.4 M20.8 16.2 L20.8 19.4 M23.6 16.2 L23.6 19.4 M4.4 21.6 L4.4 24.8 M7.2 21.6 L7.2 24.8 M20.8 21.6 L20.8 24.8 M23.6 21.6 L23.6 24.8"/></g>
+  <path d="M6.6 8.6 L21.4 8.6" stroke="#fff" stroke-width="0.6" opacity="0.35" stroke-linecap="round"/>
+  <g stroke="#000" stroke-opacity="0.1" stroke-width="0.3"><path d="M9 9.4 L8 11.4 M12 9.4 L11.6 11 M16 9.4 L16.4 11 M19 9.4 L20 11.4"/></g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="3.6" y="16.4" width="1.6" height="2.8" rx="0.4"/><rect x="20.0" y="16.4" width="1.6" height="2.8" rx="0.4"/><rect x="3.6" y="21.8" width="1.6" height="2.8" rx="0.4"/><rect x="20.0" y="21.8" width="1.6" height="2.8" rx="0.4"/><rect x="13.2" y="16.599999999999998" width="1.6" height="2.8" rx="0.4"/></g>
+</svg>

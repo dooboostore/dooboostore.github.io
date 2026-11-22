@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -12.5 12 27.5" data-foot="0.5 0.5">
+  <!-- 아폴로 11호 사령·기계선 컬럼비아: 위쪽(진행 방향)에 은빛 원뿔 사령선, 아래로 흰 원통 기계선, 맨 뒤에 큰 엔진 노즐 -->
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-2.2 8 L-3.2 13.4 Q0 14.6 3.2 13.4 L2.2 8 Z" fill="#8b9197"/>
+    <rect x="-4" y="-3.6" width="8" height="12" rx="1" fill="#fbfaf6"/>
+    <path d="M-4.4 -3.2 L-1.2 -10.4 Q0 -11.6 1.2 -10.4 L4.4 -3.2 Q0 -2.4 -4.4 -3.2 Z" fill="#dfe2e6"/>
+    <rect x="-5" y="1" width="1.2" height="2.4" rx="0.4" fill="#c9ccd1"/>
+    <rect x="3.8" y="1" width="1.2" height="2.4" rx="0.4" fill="#c9ccd1"/>
+  </g>
+  <path d="M-4 -0.6 L4 -0.6 M-4 5 L4 5" stroke="#5b4636" stroke-width="0.25" opacity="0.5"/>
+  <rect x="-3.2" y="1.2" width="2" height="2.6" rx="0.4" fill="#3f6fb8" opacity="0.8"/>
+  <circle cx="-1" cy="-5.8" r="0.6" fill="#8fd0ee" stroke="#5b4636" stroke-width="0.2"/>
+  <circle cx="1" cy="-5.8" r="0.6" fill="#8fd0ee" stroke="#5b4636" stroke-width="0.2"/>
+  <path d="M-1.4 -8.8 L-3 -4" stroke="#fff" stroke-opacity="0.8" stroke-width="0.5" stroke-linecap="round"/>
+  <path d="M-2.8 -2 L-2.8 7" stroke="#fff" stroke-opacity="0.6" stroke-width="0.5" stroke-linecap="round"/>
+  <path d="M3 -2 L3 7.6" stroke="#000" stroke-opacity="0.08" stroke-width="0.9"/>
+</svg>

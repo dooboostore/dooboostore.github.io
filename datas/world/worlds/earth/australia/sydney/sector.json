@@ -1,33 +1,21 @@
 {
-  "local": {"size": [960, 1406], "ground": "ground.svg", "boundary": "boundary.json"},
+  "local": {"size": [960, 1348], "ground": "ground.svg", "boundary": "boundary.json"},
   "placements": [
-    {"use": "australia/landmark/opera-house.svg", "at": [654, 108], "scale": 0.7, "layer": "water"},
-    {"use": "australia/landmark/harbour-bridge.svg", "at": [586, 30], "scale": 0.9, "layer": "water"},
-    {"use": "australia/building/terrace-house.svg", "count": 14, "area": [650, 330, 120, 220], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#e9d7b8", "#f2b8a2", "#c6e0a8", "#a8d5e8", "#f4ead6"]}},
-    {"use": "australia/building/terrace-house.svg", "count": 12, "area": [540, 640, 200, 250], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#e9d7b8", "#f2b8a2", "#c6e0a8", "#a8d5e8"]}},
-    {"use": "australia/nature/eucalyptus.svg", "count": 8, "area": [575, 340, 45, 80], "scale": 0.6, "spacing": 10},
-    {"use": "australia/nature/eucalyptus.svg", "count": 10, "area": [630, 160, 70, 90], "scale": 0.6, "spacing": 10},
-    {"use": "australia/animal/kookaburra.svg", "at": [[648, 205], [596, 365]], "scale": 0.6},
-    {"use": "australia/animal/cockatoo.svg", "at": [[668, 190], [680, 226], [588, 395]], "scale": 0.6},
-    {"use": "people/walker", "count": 8, "area": [560, 170, 80, 220], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e", "#b97f55", "#8d5a3b"]}},
-    {"use": "usa/people/tourist", "count": 6, "area": [590, 150, 70, 60], "scale": 0.7, "spacing": 6},
-    {"use": "usa/people/business", "count": 4, "area": [540, 220, 60, 120], "scale": 0.7, "spacing": 6},
-    {"use": "australia/vehicle/sydney-ferry.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M585 172 L609.6 120.9 L611.6 118.9 L641 99.3 L642.5 92.8 L642.5 89.4 L645.5 86.4 L650 86.4 L651.3 84.9 L658.8 85 L661.3 85.8 L698.5 61 L701.2 59.9 L900 40", "dur": 90}},
-    {"use": "australia/vehicle/sydney-ferry.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M900 40 L701.2 59.9 L698.5 61 L661.3 85.8 L658.8 85 L651.3 84.9 L650 86.4 L645.5 86.4 L642.5 89.4 L642.5 92.8 L641 99.3 L611.6 118.9 L609.6 120.9 L585 172", "dur": 100}},
-    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M405 260 L410 330", "dur": 60}},
-    {"use": "vehicle/bus", "count": 2, "scale": 0.55, "vars": {"--bus": "#2f7fbf"}, "spacing": 10, "behavior": {"type": "route", "path": "M508.8 181.3 L464.9 288.7 L471.4 385.1 L459.6 417.3", "dur": 43}},
-    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
-  ],
-  "info": {
-    "오페라 하우스": {"title": "오페라 하우스", "emoji": "🎭", "kind": "지명", "desc": "돛 모양 지붕이 바다와 어우러진 시드니 오페라 하우스예요. 1973년에 문을 열었고, 2007년 유네스코 세계유산이 되었어요. 매년 수많은 공연이 열려요."},
-    "하버 브리지": {"title": "하버 브리지", "emoji": "🌉", "kind": "지명", "desc": "1932년에 개통한 시드니 하버 브리지예요. 아치 위를 걸어 오르는 '브리지 클라임'으로 꼭대기에서 항구를 내려다볼 수도 있어요."},
-    "서큘러 키": {"title": "서큘러 키", "emoji": "⛴️", "kind": "지명", "desc": "시드니 페리가 출발하는 항구 서큘러 키예요. 오페라 하우스와 하버 브리지 사이에 있어서 거리 공연을 보며 항구 풍경을 즐기기 좋아요."},
-    "더 록스": {"title": "더 록스", "emoji": "🏚️", "kind": "지명", "desc": "1788년 영국 함대가 도착해 정착을 시작한 곳 근처의 오래된 동네예요. 사암 건물과 좁은 골목, 주말 시장이 옛 시드니의 분위기를 전해 줘요."},
-    "달링 하버": {"title": "달링 하버", "emoji": "🎆", "kind": "지명", "desc": "시드니 도심 서쪽의 항구 놀이 공간이에요. 수족관과 박물관, 식당이 물가를 따라 늘어서 있고, 주말 밤엔 불꽃놀이가 열리기도 해요."},
-    "하이드 파크": {"title": "하이드 파크", "emoji": "🌳", "kind": "지명", "desc": "1810년에 조성된 호주에서 가장 오래된 공원이에요. 무화과나무 가로수 길이 시원한 그늘을 만들고, 아치볼드 분수가 공원을 꾸며요."},
-    "왕립 식물원": {"title": "왕립 식물원", "emoji": "🌺", "kind": "지명", "desc": "1816년에 문을 연 시드니 왕립 식물원이에요. 오페라 하우스 바로 옆 바닷가에 있어서, 잔디밭에 앉아 항구를 바라보며 쉬기 좋아요."},
-    "차이나타운": {"title": "차이나타운", "emoji": "🏮", "kind": "지명", "desc": "시드니 도심 남쪽의 차이나타운이에요. 붉은 패루 문을 지나면 아시아 음식점과 금요일 밤 야시장이 반겨 줘요. 다양한 아시아 문화가 어우러져 늘 맛있는 냄새가 가득해요."},
-    "센트럴역": {"title": "센트럴역", "emoji": "🚉", "kind": "지명", "desc": "시드니 교통의 중심인 센트럴역이에요. 사암으로 지은 시계탑이 상징이고, 장거리 기차와 지하철, 트램이 이곳에서 만나요. 1906년 문을 연 오래된 역이에요."},
-    "울루물루": {"title": "울루물루", "emoji": "⚓", "kind": "지명", "desc": "시드니 항구 안쪽의 바닷가 동네예요. 옛 부두를 고쳐 만든 긴 나무 부두 '핑거 와프'가 유명하고, 항구 앞 파이 가게도 사랑받아요."}
-  }
+    {"use": "australia/landmark/opera-house.svg", "at": [613, 218.6], "scale": 0.7, "layer": "water"},
+    {"use": "australia/landmark/harbour-bridge.svg", "at": [561, 159], "scale": 0.9, "layer": "water"},
+    {"use": "australia/building/terrace-house.svg", "count": 14, "area": [610, 388.3, 91.7, 168.1], "scale": 0.5, "spacing": 9.2, "vars": {"--wall": ["#e9d7b8", "#f2b8a2", "#c6e0a8", "#a8d5e8", "#f4ead6"]}},
+    {"use": "australia/building/terrace-house.svg", "count": 12, "area": [525.9, 625.1, 152.9, 191], "scale": 0.5, "spacing": 9.2, "vars": {"--wall": ["#e9d7b8", "#f2b8a2", "#c6e0a8", "#a8d5e8"]}},
+    {"use": "australia/nature/eucalyptus.svg", "count": 8, "area": [552.6, 395.9, 34.4, 61.1], "scale": 0.6, "spacing": 7.6},
+    {"use": "australia/nature/eucalyptus.svg", "count": 10, "area": [594.7, 258.4, 53.5, 68.8], "scale": 0.6, "spacing": 7.6},
+    {"use": "australia/animal/kookaburra.svg", "at": [[608.4, 292.7], [568.7, 415]], "scale": 0.6},
+    {"use": "australia/animal/cockatoo.svg", "at": [[623.7, 281.3], [632.9, 308.8], [562.6, 437.9]], "scale": 0.6},
+    {"use": "people/walker", "count": 8, "area": [541.2, 266, 61.2, 168.1], "scale": 0.7, "spacing": 4.6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e", "#b97f55", "#8d5a3b"]}},
+    {"use": "usa/people/tourist", "count": 6, "area": [564.1, 250.7, 53.5, 45.8], "scale": 0.7, "spacing": 4.6},
+    {"use": "usa/people/business", "count": 4, "area": [525.9, 304.2, 45.9, 91.7], "scale": 0.7, "spacing": 4.6},
+    {"use": "australia/vehicle/sydney-ferry.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M560.3 267.5 L579.1 228.5 L580.6 226.9 L603.1 212.0 L604.2 207.0 L604.2 204.4 L606.5 202.1 L610.0 202.1 L611.0 201.0 L616.7 201.0 L618.6 201.7 L647.1 182.7 L649.1 181.9 L801.1 166.7", "dur": 90}},
+    {"use": "australia/vehicle/sydney-ferry.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M801.1 166.7 L649.1 181.9 L647.1 182.7 L618.6 201.7 L616.7 201.0 L611.0 201.0 L610.0 202.1 L606.5 202.1 L604.2 204.4 L604.2 207.0 L603.1 212.0 L580.6 226.9 L579.1 228.5 L560.3 267.5", "dur": 100}},
+    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M422.7 334.8 L426.5 388.3", "dur": 60}},
+    {"use": "vehicle/bus", "count": 2, "scale": 0.55, "vars": {"--bus": "#2f7fbf"}, "spacing": 7.6, "behavior": {"type": "route", "path": "M502 274.7 L468.9 354.3 L470.6 390.3", "dur": 28}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M67.1 365.3 C296.5 334.8 541.2 426.5 892.9 365.3", "dur": 76}}
+  ]
 }

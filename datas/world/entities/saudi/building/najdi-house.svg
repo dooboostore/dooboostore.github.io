@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 28">
+  <!-- 나즈드 전통 흙집(디리야 앗투라이프 양식): 흙벽돌 벽(wall 변수), 둥글게 다듬은 톱니 지붕선과 흰 테두리, 줄지어 뚫린 세모 환기창, 알록달록 기하무늬 나무 문, 나무 물받이 -->
+  <ellipse cx="13" cy="27.2" rx="12.4" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round" fill="var(--wall, #d6ad78)">
+    <path d="M2 6.2 L3.0 4.9 L4 6.2 Z"/><path d="M4 6.2 L5.0 4.9 L6 6.2 Z"/><path d="M6 6.2 L7.0 4.9 L8 6.2 Z"/><path d="M8 6.2 L9.0 4.9 L10 6.2 Z"/><path d="M10 6.2 L11.0 4.9 L12 6.2 Z"/><path d="M12 6.2 L13.0 4.9 L14 6.2 Z"/><path d="M14 6.2 L15.0 4.9 L16 6.2 Z"/><path d="M16 6.2 L17.0 4.9 L18 6.2 Z"/><path d="M18 6.2 L19.0 4.9 L20 6.2 Z"/><path d="M20 6.2 L21.0 4.9 L22 6.2 Z"/><path d="M22 6.2 L23.0 4.9 L24 6.2 Z"/>
+    <rect x="2" y="6" width="22" height="20.6" rx="0.8"/>
+  </g>
+  <rect x="2.4" y="6.4" width="21.2" height="1" rx="0.5" fill="#f4ead8"/>
+  <rect x="2.4" y="15.4" width="21.2" height="0.9" rx="0.45" fill="#f4ead8"/>
+  <g fill="#6b4a3a" stroke="#5b4636" stroke-width="0.25" stroke-linejoin="round"><path d="M4.35 10.05 L5 8.75 L5.65 10.05 Z"/><path d="M6.1499999999999995 10.05 L6.8 8.75 L7.45 10.05 Z"/><path d="M7.949999999999999 10.05 L8.6 8.75 L9.25 10.05 Z"/><path d="M16.75 10.05 L17.4 8.75 L18.049999999999997 10.05 Z"/><path d="M18.55 10.05 L19.2 8.75 L19.849999999999998 10.05 Z"/><path d="M20.35 10.05 L21 8.75 L21.65 10.05 Z"/><path d="M4.35 19.25 L5 17.950000000000003 L5.65 19.25 Z"/><path d="M6.1499999999999995 19.25 L6.8 17.950000000000003 L7.45 19.25 Z"/><path d="M18.55 19.25 L19.2 17.950000000000003 L19.849999999999998 19.25 Z"/><path d="M20.35 19.25 L21 17.950000000000003 L21.65 19.25 Z"/></g>
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round">
+    <rect x="11" y="9.6" width="4" height="4" rx="0.5" fill="#8a5a3f"/>
+    <rect x="10" y="18" width="6" height="8.6" rx="0.5" fill="var(--door, #3f7fb0)"/>
+    <rect x="4.6" y="21.4" width="3.4" height="2.8" rx="0.4" fill="#8a5a3f"/>
+    <rect x="18" y="21.4" width="3.4" height="2.8" rx="0.4" fill="#8a5a3f"/>
+    <rect x="0.6" y="12" width="2.4" height="0.9" rx="0.4" fill="#9a6e4a"/>
+    <rect x="23" y="12" width="2.4" height="0.9" rx="0.4" fill="#9a6e4a"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width="0.25" stroke="#5b4636"><path d="M13 18.8 L15 21 L13 23.2 L11 21 Z" fill="#f2c14e"/><path d="M13 20 L13.9 21 L13 22 L12.1 21 Z" fill="#e9574a"/></g>
+  <g fill="#f4ead8"><rect x="10.6" y="24.2" width="4.8" height="0.6" rx="0.3"/><rect x="10.6" y="18.8" width="1" height="0.6" rx="0.3"/><rect x="14.4" y="18.8" width="1" height="0.6" rx="0.3"/></g>
+  <path d="M13 9.6 L13 13.6 M11 11.6 L15 11.6" stroke="#5b4636" stroke-width="0.3" opacity="0.6"/>
+  <g stroke="#000" stroke-opacity="0.07" stroke-width="0.35"><path d="M2.4 12.6 L10.6 12.6 M15.4 12.6 L23.6 12.6 M2.4 22.6 L4.4 22.6 M8.2 22.6 L9.8 22.6 M16.2 22.6 L17.8 22.6 M21.6 22.6 L23.6 22.6"/></g>
+  <circle cx="14.8" cy="22.6" r="0.3" fill="#e8b64a"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="11.4" y="10" width="3.2" height="3.2" rx="0.4"/><rect x="5" y="21.8" width="2.6" height="2" rx="0.3"/></g>
+</svg>

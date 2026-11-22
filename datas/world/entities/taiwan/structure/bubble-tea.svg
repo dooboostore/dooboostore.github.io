@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 22">
+  <!-- 버블티 노점: 지붕 위 커다란 밀크티 컵 간판(빨대와 검은 타피오카 펄), 줄무늬 차양, 계산대 위 작은 컵들. 밤엔 간판과 창이 환하다 -->
+  <ellipse cx="10" cy="21" rx="9" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M11.6 1 L10.4 4.4" stroke-width="1.3"/>
+    <path d="M6.6 3.6 Q10 2.2 13.4 3.6 L13.8 4.8 L6.2 4.8 Z" fill="#f4f1ea"/>
+    <path d="M6.4 4.6 L13.6 4.6 L12.8 10.8 Q10 11.4 7.2 10.8 Z" fill="var(--tea, #d9a873)"/>
+    <rect x="2" y="12.6" width="16" height="7.6" rx="1" fill="var(--stall, #f3e6d0)"/>
+    <rect x="4" y="14" width="12" height="3.8" rx="0.8" fill="#b9d6ea"/>
+    <path d="M1.2 12.4 L1.2 11.4 Q1.2 10.4 2.2 10.4 L17.8 10.4 Q18.8 10.4 18.8 11.4 L18.8 12.4 Q17.4 13.6 16 12.4 Q14.6 13.6 13.2 12.4 Q11.8 13.6 10.4 12.4 Q9 13.6 7.6 12.4 Q6.2 13.6 4.8 12.4 Q3.4 13.6 2 12.4 Q1.6 12.8 1.2 12.4 Z" fill="var(--awning, #8fc9b8)"/>
+    <rect x="1.4" y="17.4" width="17.2" height="1.4" rx="0.7" fill="#e4e8eb"/>
+  </g>
+  <path d="M11.6 1 L10.4 4.4" stroke="var(--straw, #e9574a)" stroke-width="0.6" stroke-linecap="round"/>
+  <g fill="#3e3430"><circle cx="8.4" cy="9.6" r="0.55"/><circle cx="9.8" cy="10" r="0.55"/><circle cx="11.2" cy="9.6" r="0.55"/><circle cx="12.2" cy="9.2" r="0.5"/><circle cx="9.2" cy="8.8" r="0.5"/><circle cx="10.6" cy="8.8" r="0.5"/></g>
+  <path d="M7.4 5.8 L7.9 9.6" stroke="#fff" stroke-width="0.5" opacity="0.5" stroke-linecap="round"/>
+  <g fill="#fff" opacity="0.7"><rect x="3.4" y="10.8" width="1.6" height="1.2" rx="0.4"/><rect x="7" y="10.8" width="1.6" height="1.2" rx="0.4"/><rect x="10.6" y="10.8" width="1.6" height="1.2" rx="0.4"/><rect x="14.2" y="10.8" width="1.6" height="1.2" rx="0.4"/></g>
+  <g stroke="#5b4636" stroke-width="0.3" stroke-linejoin="round"><path d="M5 15.6 L6.8 15.6 L6.6 17.4 L5.2 17.4 Z" fill="#d9a873"/><path d="M8 15.6 L9.8 15.6 L9.6 17.4 L8.2 17.4 Z" fill="#f2b8c6"/><path d="M13.6 15.6 L15.4 15.6 L15.2 17.4 L13.8 17.4 Z" fill="#c9e3a8"/></g>
+  <path d="M6.4 15.6 L6.8 14.6 M9.4 15.6 L9.8 14.6 M15 15.6 L15.4 14.6" stroke="#e9574a" stroke-width="0.3" stroke-linecap="round"/>
+  <rect x="2" y="19.2" width="16" height="1" rx="0.5" fill="#000" opacity="0.1"/>
+  <path d="M4.6 14.6 L6 14.6" stroke="#fff" stroke-width="0.5" opacity="0.8" stroke-linecap="round"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="4.2" y="14.2" width="11.6" height="3.2" rx="0.7" opacity="0.7"/><path d="M6.6 4.8 L13.4 4.8 L12.7 10.6 Q10 11.1 7.3 10.6 Z" opacity="0.45"/></g>
+</svg>

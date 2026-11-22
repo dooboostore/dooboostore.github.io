@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+  <!-- 예제로 삼각주 뷰트 (코디악 같은 탁자 언덕): 평평한 꼭대기와 둥근 비탈, 옛 강물이 실어 온 퇴적물이 붉은 층층 줄무늬로 쌓여 있고 발치에 부스러진 돌무더기 -->
+  <defs><clipPath id="b"><path d="M2 28 C4 24.4 8 20.6 12 18 C13 12.6 15.4 8.2 20 6.8 Q30 5 40 6.4 C45 7.4 47.2 11.6 48 16.4 C52 19 56 24 58 28 Q30 29.4 2 28 Z"/></clipPath></defs>
+  <ellipse cx="30" cy="28.4" rx="29" ry="1.4" fill="#3a3632" opacity="0.18"/>
+  <g clip-path="url(#b)">
+    <rect x="0" y="0" width="60" height="30" fill="var(--rock, #c4734c)"/>
+    <g fill="#a85a3a" opacity="0.55">
+      <path d="M0 9.6 Q15 8.8 30 9.8 T60 9.4 V11.6 Q45 12 30 11.4 T0 11.8 Z"/>
+      <path d="M0 14.4 Q15 13.6 30 14.6 T60 14.2 V16.4 Q45 16.8 30 16.2 T0 16.6 Z"/>
+      <path d="M0 20 Q15 19.2 30 20.2 T60 19.8 V22 Q45 22.4 30 21.8 T0 22.2 Z"/>
+    </g>
+    <g fill="#e09a6e" opacity="0.5">
+      <path d="M0 12.2 Q15 11.6 30 12.4 T60 12 V13 Q45 13.4 30 12.8 T0 13.2 Z"/>
+      <path d="M0 17.4 Q15 16.8 30 17.6 T60 17.2 V18.2 Q45 18.6 30 18 T0 18.4 Z"/>
+    </g>
+    <path d="M44 6 C47 8 48 12 48.6 17 C52 19.6 56 24 58 28 H40 C44 22 46 14 44 6 Z" fill="#000" opacity="0.1"/>
+    <path d="M14 8 Q30 4.6 42 6.8 L42 8 Q30 6.4 14 9.4 Z" fill="#fff" opacity="0.25"/>
+  </g>
+  <path d="M2 28 C4 24.4 8 20.6 12 18 C13 12.6 15.4 8.2 20 6.8 Q30 5 40 6.4 C45 7.4 47.2 11.6 48 16.4 C52 19 56 24 58 28 Q30 29.4 2 28 Z" fill="none" stroke="#5b4636" stroke-width="0.7" stroke-linejoin="round"/>
+  <g fill="var(--rock, #c4734c)" stroke="#5b4636" stroke-width="0.4">
+    <ellipse cx="8" cy="27.4" rx="1.6" ry="0.9"/><ellipse cx="51" cy="27.6" rx="1.8" ry="1"/><ellipse cx="54.4" cy="27.8" rx="1" ry="0.6"/><ellipse cx="11" cy="27.8" rx="0.9" ry="0.55"/>
+  </g>
+</svg>

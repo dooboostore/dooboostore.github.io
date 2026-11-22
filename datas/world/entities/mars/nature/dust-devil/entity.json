@@ -1,0 +1,8 @@
+{
+  "svg": "base.svg",
+  "foot": [0.5, 1],
+  "parts": [
+    { "use": "mars/nature/dust-devil/swirl.svg", "at": [7, 22] }
+  ],
+  "behavior": { "type": "wander", "speed": 4, "pause": [1, 5], "avoid": [] }
+}

@@ -1,0 +1,21 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "mars/landmark/delta-butte.svg", "at": [292, 700], "scale": 1.2},
+    {"use": "mars/structure/backshell.svg", "at": [812.8, 580], "scale": 0.8},
+    {"use": "mars/structure/sample-tube.svg", "at": [[302.8, 520], [314.8, 532], [324.8, 516], [296.8, 540]], "scale": 0.8},
+    {"use": "mars/nature/mars-rock.svg", "count": 18, "area": [160, 40, 780, 880], "scale": 0.8, "spacing": 40},
+    {"use": "mars/nature/mars-rock.svg", "count": 6, "area": [100, 60, 200, 840], "scale": 1.0, "spacing": 40},
+    {"use": "mars/nature/dust-devil", "count": 2, "area": [300, 100, 600, 700], "scale": 1.0, "spacing": 100},
+    {"use": "mars/vehicle/perseverance", "count": 1, "scale": 0.9, "behavior": {"type": "route", "path": "M652.8 480 L592.8 520 L472.8 560 L312.8 520 L472.8 560 L592.8 520 L652.8 480", "dur": 300}},
+    {"use": "mars/vehicle/ingenuity.svg", "count": 1, "z": 30, "scale": 0.9, "behavior": {"type": "route", "path": "M672.8 470 L732.8 480 L717.8 525 L672.8 470", "dur": 40}}
+  ],
+  "info": {
+    "옥타비아 E. 버틀러 착륙지": {"title": "옥타비아 E. 버틀러 착륙지", "emoji": "🚀", "kind": "지명", "desc": "2021년 2월 18일 퍼서비어런스가 내려앉은 곳이에요. SF 작가 옥타비아 E. 버틀러의 이름을 따서 붙였어요."},
+    "라이트 형제 비행장": {"title": "라이트 형제 비행장", "emoji": "🚁", "kind": "지명", "desc": "2021년 4월 19일 인저뉴어티가 다른 행성에서 처음으로 동력 비행을 한 곳이에요. 라이트 형제를 기려 이렇게 불러요."},
+    "스리포크스 샘플 보관소": {"title": "스리포크스 샘플 보관소", "emoji": "🧪", "kind": "지명", "desc": "퍼서비어런스가 모은 암석 시료 튜브 일부를 땅 위에 나란히 내려놓은 곳이에요. 언젠가 지구로 가져올 날을 기다리고 있어요."},
+    "삼각주": {"title": "예제로 삼각주", "emoji": "🏞️", "kind": "지명", "desc": "아주 먼 옛날 강물이 호수로 흘러들며 쌓은 삼각주예요. 생명의 흔적을 찾기 좋은 곳이라 착륙지로 골랐어요."},
+    "세이타": {"title": "세이타", "emoji": "🌬️", "kind": "지명", "desc": "모래 물결이 겹겹이 이어진 지대예요. 나바호어로 \"모래 한가운데\"라는 뜻이에요."},
+    "코디액": {"title": "코디액", "emoji": "⛰️", "kind": "지명", "desc": "삼각주 앞에 홀로 남은 층진 언덕이에요. 옛 호숫가 퇴적층이 고스란히 드러나 있어요."}
+  }
+}

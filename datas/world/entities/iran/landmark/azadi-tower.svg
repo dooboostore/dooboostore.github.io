@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 50">
+  <!-- 아자디 타워: 두 다리가 위로 모여 하나가 되는 뒤집힌 Y자 흰 대리석 탑, 가운데 큰 아치와 위쪽 작은 아치 창, 아치 안쪽 청록 타일 천장. 밤엔 아치가 환하다 -->
+  <ellipse cx="22" cy="48.8" rx="21" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <clipPath id="body"><path d="M3 48.4 C7 40 11.6 30 13.6 20 C14 16 13.4 11 12.6 8.2 Q12.4 7 13.6 6.6 Q22 3.4 30.4 6.6 Q31.6 7 31.4 8.2 C30.6 11 30 16 30.4 20 C32.4 30 37 40 41 48.4 Q22 49.2 3 48.4 Z"/></clipPath>
+  <clipPath id="arch"><path d="M11.6 48.6 C12.4 40 15.4 32 19.6 27 Q22 24.6 24.4 27 C28.6 32 31.6 40 32.4 48.6 Z"/></clipPath>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M3 48.4 C7 40 11.6 30 13.6 20 C14 16 13.4 11 12.6 8.2 Q12.4 7 13.6 6.6 Q22 3.4 30.4 6.6 Q31.6 7 31.4 8.2 C30.6 11 30 16 30.4 20 C32.4 30 37 40 41 48.4 Q22 49.2 3 48.4 Z" fill="var(--stone, #f3efe6)"/>
+  </g>
+  <g clip-path="url(#body)"><path d="M4 24 L20 4 M4 4 L20 24 M7 24 L23 4 M7 4 L23 24 M10 24 L26 4 M10 4 L26 24 M13 24 L29 4 M13 4 L29 24 M16 24 L32 4 M16 4 L32 24 M19 24 L35 4 M19 4 L35 24 M22 24 L38 4 M22 4 L38 24 M25 24 L41 4 M25 4 L41 24 M28 24 L44 4 M28 4 L44 24 M31 24 L47 4 M31 4 L47 24 M34 24 L50 4 M34 4 L50 24 M37 24 L53 4 M37 4 L53 24" stroke="#c9c0b0" stroke-width="0.3" fill="none" opacity="0.7"/></g>
+  <path d="M11.6 48.6 C12.4 40 15.4 32 19.6 27 Q22 24.6 24.4 27 C28.6 32 31.6 40 32.4 48.6 Z" fill="#e9e3d7"/>
+  <g clip-path="url(#arch)">
+    <rect x="10" y="24" width="24" height="21" fill="#8fc7c6"/>
+    <g fill="none" stroke="#5f9fa3" stroke-width="0.35"><path d="M13 45 L22 27 L31 45 M16.4 45 L22 32 L27.6 45 M19.6 45 L22 38 L24.4 45 M12 36 L22 26 M32 36 L22 26"/></g>
+    <rect x="10" y="44.6" width="24" height="4.4" fill="#e9e3d7"/>
+  </g>
+  <path d="M11.6 48.6 C12.4 40 15.4 32 19.6 27 Q22 24.6 24.4 27 C28.6 32 31.6 40 32.4 48.6" fill="none" stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round"/>
+  <path d="M19.6 18.4 L19.6 14.8 Q19.6 12 22 10.8 Q24.4 12 24.4 14.8 L24.4 18.4 Z" fill="#8fc7c6" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+  <path d="M22 11.4 L22 18.2 M19.8 15.2 L24.2 15.2" stroke="#5f9fa3" stroke-width="0.3"/>
+  <g fill="none" stroke="#000" stroke-opacity="0.1" stroke-width="0.35" stroke-linecap="round">
+    <path d="M8 48 C11 39 14.4 31 16.6 24 M36 48 C33 39 29.6 31 27.4 24 M16.8 22.6 Q22 20.6 27.2 22.6 M15 8.6 Q22 6.4 29 8.6"/>
+  </g>
+  <path d="M6.2 46 C9.4 38 12.6 30 14.4 21 C14.8 17 14.4 12 13.8 8.6" fill="none" stroke="#fff" stroke-width="0.9" opacity="0.5" stroke-linecap="round"/>
+  <rect x="1" y="47.6" width="42" height="1.6" rx="0.8" fill="#e6e0d4" stroke="#5b4636" stroke-width="0.45"/>
+  <g style="opacity: var(--night, 0)"><path d="M12.2 48 C13 40 15.8 32.4 19.8 27.6 Q22 25.4 24.2 27.6 C28.2 32.4 31 40 31.8 48 Z" fill="#9fd8ff" opacity="0.5"/><path d="M20 18 L20 14.8 Q20 12.4 22 11.4 Q24 12.4 24 14.8 L24 18 Z" fill="#ffd77a"/></g>
+</svg>

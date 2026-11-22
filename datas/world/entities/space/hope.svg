@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -12 28 24" data-foot="0.5 0.5">
+  <!-- 아랍에미리트 화성 탐사선 아말(희망): 금박 육각형 몸통, 세 방향으로 뻗은 파란 태양전지판 세 장, 가운데 하얀 접시 안테나 -->
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <g fill="#3f6fb8">
+      <rect x="-2.4" y="-11.6" width="4.8" height="7.4" rx="0.8"/>
+      <rect x="-2.4" y="-11.6" width="4.8" height="7.4" rx="0.8" transform="rotate(120)"/>
+      <rect x="-2.4" y="-11.6" width="4.8" height="7.4" rx="0.8" transform="rotate(240)"/>
+    </g>
+    <path d="M0 -5 L4.33 -2.5 L4.33 2.5 L0 5 L-4.33 2.5 L-4.33 -2.5 Z" fill="#f2c14e"/>
+    <circle cx="0" cy="0" r="3" fill="#fbfaf6"/>
+  </g>
+  <g stroke="#9fc6ea" stroke-width="0.3" opacity="0.8">
+    <path d="M0 -11.6 L0 -4.2 M-2.4 -7.9 L2.4 -7.9"/>
+    <path d="M0 -11.6 L0 -4.2 M-2.4 -7.9 L2.4 -7.9" transform="rotate(120)"/>
+    <path d="M0 -11.6 L0 -4.2 M-2.4 -7.9 L2.4 -7.9" transform="rotate(240)"/>
+  </g>
+  <circle cx="0" cy="0" r="0.6" fill="#8b9197"/>
+  <path d="M-1.8 -1.4 Q-0.8 -2.4 0.6 -2.4" stroke="#8fd0ee" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <circle cx="3.2" cy="1.6" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</svg>

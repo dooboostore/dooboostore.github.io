@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -9 30 18" data-foot="0.5 0.5">
+  <!-- 화성 정찰 궤도선 MRO: 작은 금박 몸통, 양쪽에 커다란 파란 태양전지판 두 장, 몸통을 거의 덮는 커다란 하얀 접시 안테나 -->
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-5 1.6 L-6 1.6 M5 1.6 L6 1.6" stroke="#8b9197" stroke-width="0.7"/>
+    <rect x="-14.4" y="-2.4" width="8.4" height="8" rx="1" fill="#3f6fb8"/>
+    <rect x="6" y="-2.4" width="8.4" height="8" rx="1" fill="#3f6fb8"/>
+    <rect x="-3.2" y="-1" width="6.4" height="7" rx="1.2" fill="#f2c14e"/>
+    <circle cx="0" cy="-2.6" r="5.6" fill="#fbfaf6"/>
+    <circle cx="0" cy="-2.6" r="3" fill="none" stroke-width="0.25" opacity="0.6"/>
+  </g>
+  <g stroke="#9fc6ea" stroke-width="0.3" opacity="0.8"><path d="M-11.6 -2.4 L-11.6 5.6 M-8.8 -2.4 L-8.8 5.6 M-14.4 1.6 L-6 1.6 M8.8 -2.4 L8.8 5.6 M11.6 -2.4 L11.6 5.6 M6 1.6 L14.4 1.6"/></g>
+  <circle cx="0" cy="-2.6" r="0.7" fill="#8b9197"/>
+  <path d="M-3.4 -5.4 Q-1.8 -7.2 0.4 -7.4" stroke="#fff" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <circle cx="0" cy="5" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</svg>

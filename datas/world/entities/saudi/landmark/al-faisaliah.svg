@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 110">
+  <!-- 알 파이살리아 타워: 네 모서리가 위로 모이는 뾰족한 피라미드형 유리 탑, 위쪽에 박힌 금빛 유리 공, 꼭대기 첨탑. 밤엔 금빛 공이 환하다 -->
+  <ellipse cx="15" cy="108.4" rx="13" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14.6 4 Q15 2.8 15.4 4 L16 20 L14 20 Z" fill="#d9dde0"/>
+    <path d="M6 106 L13.6 16 Q15 13.6 16.4 16 L24 106 Z" fill="var(--glass, #9fb6c4)"/>
+    <path d="M12.4 106 L14.4 40 L15.6 40 L17.6 106 Z" fill="#c9d6de"/>
+    <circle cx="15" cy="30" r="4.6" fill="#e8b64a"/>
+    <rect x="1.4" y="99" width="27.2" height="8.6" rx="1.6" fill="#d6dde2"/>
+  </g>
+  <path d="M11.94 40 L18.06 40 M11.4 46 L18.6 46 M10.86 52 L19.14 52 M10.32 58 L19.68 58 M9.78 64 L20.22 64 M9.24 70 L20.76 70 M8.7 76 L21.3 76 M8.16 82 L21.84 82 M7.62 88 L22.38 88 M7.08 94 L22.92 94" stroke="#2f4f6a" stroke-opacity="0.18" stroke-width="0.35"/>
+  <path d="M8 100 L13.4 24" stroke="#fff" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+  <path d="M12.4 27.6 Q13.4 26 15 25.8" stroke="#fff" stroke-width="0.9" opacity="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M10.6 30 L19.4 30 M15 25.4 L15 34.6 M11.6 27 Q15 28 18.4 27 M11.6 33 Q15 32 18.4 33" stroke="#b8862a" stroke-width="0.3" fill="none" opacity="0.7"/>
+  <path d="M12.6 107.6 L12.6 103.4 C12.6 101.6 17.4 101.6 17.4 103.4 L17.4 107.6 Z" fill="var(--door, #4f6f7a)" stroke="#5b4636" stroke-width="0.4"/>
+  <g style="opacity: var(--night, 0)"><circle cx="15" cy="30" r="4.2" fill="#ffd77a"/><rect x="2.6" y="101" width="8" height="2" rx="1" fill="#ffd77a"/><rect x="19.4" y="101" width="8" height="2" rx="1" fill="#ffd77a"/></g>
+  <circle cx="15" cy="3" r="0.6" fill="#ff5a4e" stroke="#5b4636" stroke-width="0.25"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
+</svg>

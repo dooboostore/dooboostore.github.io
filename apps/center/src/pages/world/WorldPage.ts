@@ -3,6 +3,7 @@ import { Router } from '@dooboostore/core-web';
 import { geoArea, geoCentroid, geoCircle, geoContains, geoDistance, geoGraticule10, geoOrthographic, geoPath } from 'd3-geo';
 import { EntityRegistry, SVGNS, Win } from './entity';
 import { mountScene, Picked, Scene } from './scene';
+import { liveClouds, liveStorms, liveWeather } from './live';
 import { distanceKm, Station, stationsNear } from './radio';
 import { Route, Traffic } from './traffic';
 
@@ -13,7 +14,7 @@ type LL = [number, number];
 type LonLat = { lon: number; lat: number };
 type View = LonLat & { k: number };
 type Bounds = [[number, number], [number, number]]; // [[서경, 남위], [동경, 북위]]
-type Sector = { id: string; name: string; geo: LonLat; zoom: [number, number]; local?: boolean; bounds?: Bounds; focus?: Bounds; country?: string };
+type Sector = { id: string; name: string; geo: LonLat; zoom: [number, number]; local?: boolean; bounds?: Bounds; focus?: Bounds; country?: string; outline?: LL[] }; // outline: 미리 줄여 둔 경계 실루엣 (tools/build-outlines.py)
 type WorldMeta = { id: string; name: string; icon: string; sectors: Sector[] };
 type Style = { fill?: string; stroke?: string; opacity?: number };
 type WorldJson = {
@@ -68,12 +69,15 @@ const PHASES: Record<Phase, { tint: string; op: number; night: number; icon: str
   dusk: { tint: '#5d4fb0', op: 0.4, night: 0.85, icon: '🌆', label: '저녁' },
   night: { tint: '#1c2a78', op: 0.55, night: 1, icon: '🌙', label: '밤' },
 };
-type WeatherMode = Weather | 'random';
+type WeatherMode = Weather | 'random' | 'live'; // live: 화면 중심의 지금 실제 날씨 (Open-Meteo)
 const ENV_KEY = 'world.env';
 const ENV_SHUFFLE_MS = 30000; // 랜덤 시간·날씨가 바뀌는 간격
 const TOUR_STAY_MS = 25000; // 자동 여행: 한 지역에 머무는 시간
+// 가만히 둘 때 지구본이 도는 빠르기 = world.json 의 spin × 배율. 슬라이더 0~100 → 배율 0~3 (제곱: 느린 쪽을 섬세하게)
+const spinX = (v: number) => 3 * (v / 100) ** 2;
+const spinLabel = (v: number) => (v <= 0 ? '⏸️ 멈춤' : `${spinX(v) < 0.35 ? '🐌' : spinX(v) < 1.3 ? '🐢' : '🐇'} ×${spinX(v).toFixed(2)}`);
 const isTime = (t: unknown): t is TimeMode => t === 'auto' || t === 'random' || (typeof t === 'string' && t in PHASES);
-const isWeather = (x: unknown): x is WeatherMode => x === 'random' || (typeof x === 'string' && x in WEATHERS);
+const isWeather = (x: unknown): x is WeatherMode => x === 'random' || x === 'live' || (typeof x === 'string' && x in WEATHERS);
 const pickOther = <T>(a: T[], cur: T) => pick(a.filter((x) => x !== cur)) ?? cur;
 const solarHour = (lon: number, now = new Date()) => (((now.getUTCHours() + now.getUTCMinutes() / 60 + lon / 15) % 24) + 24) % 24;
 const phaseOf = (h: number): Phase => (h < 5 ? 'night' : h < 6.5 ? 'dawn' : h < 9 ? 'morning' : h < 17 ? 'day' : h < 18.5 ? 'sunset' : h < 20 ? 'dusk' : 'night');
@@ -135,7 +139,8 @@ export default (win: Window) => {
     private me?: LonLat;
     private toastTimer = 0;
     private timeMode: TimeMode = 'auto';
-    private weather: WeatherMode = 'clear';
+    private weather: WeatherMode = 'live';
+    private liveWx?: { key: string; at: number; wx: Weather }; // 실시간 날씨 (1° 칸 · 15분 캐시)
     private rndPhase: Phase = 'day'; // random 일 때 지금 고른 값
     private rndWeather: Weather = 'clear';
     private proj = geoOrthographic().clipAngle(90).precision(0.6);
@@ -156,6 +161,7 @@ export default (win: Window) => {
     private listCountry = '';
     private listToken = 0; // 늦게 도착한 이전 요청 결과는 버린다
     private radioTimer = 0;
+    private radioWant?: string; // 맞추려고 기다리는 나라 코드
     private failCount = 0;
 
     // 요소는 SWC @query 로 (shadow root 에서 찾는 getter)
@@ -163,6 +169,9 @@ export default (win: Window) => {
     @query('#boundaries') private boundariesEl!: SVGGElement;
     @query('#btn-env') private btnEnvEl!: HTMLElement;
     @query('#btn-tour') private btnTourEl!: HTMLElement;
+    @query('#env-globe') private envGlobeEl!: HTMLElement;
+    @query('#spin') private spinEl!: HTMLInputElement;
+    @query('#spin-label') private spinLabelEl!: HTMLElement;
     @query('#btn-fab') private btnFabEl!: HTMLElement;
     @query('#btn-pin') private btnPinEl!: HTMLElement;
     @query('#btn-radio') private btnRadioEl!: HTMLElement;
@@ -225,6 +234,8 @@ export default (win: Window) => {
         const saved = JSON.parse(w.localStorage.getItem(ENV_KEY) ?? 'null');
         if (isTime(saved?.time)) this.timeMode = saved.time;
         if (isWeather(saved?.weather)) this.weather = saved.weather;
+        if (typeof saved?.globe === 'boolean') this.globeWx = saved.globe;
+        if (typeof saved?.spin === 'number') this.spin = clamp(saved.spin, 0, 100);
       } catch {
         /* 기본값 */
       }
@@ -369,7 +380,9 @@ export default (win: Window) => {
         this.markerEls.set(s.id, m);
       }
 
-      this.traffic?.set(world.traffic ?? [], world.radiusKm);
+      this.live = {};
+      this.traffic?.set(id === 'earth' && !this.globeWx ? (world.traffic ?? []).filter((r) => r.use !== 'globe/cloud.svg' && r.use !== 'globe/typhoon') : world.traffic ?? [], world.radiusKm);
+      if (id === 'earth') this.loadLive();
       const v = view ?? { lon: id === 'earth' ? 127.5 : this.lon, lat: id === 'earth' ? 28 : 15, k: 1 };
       Object.assign(this, { lon: v.lon, lat: v.lat, k: v.k, target: null });
       this.renderWorldMenu();
@@ -391,6 +404,8 @@ export default (win: Window) => {
       const dt = Math.min(0.05, (t - (this.last || t)) / 1000);
       this.last = t;
       if (this.follow) this.followStep(dt);
+      // 자동 여행: 다음 지역까지 남은 시간을 버튼 테두리 링으로 (1 → 0)
+      if (this.touring) this.btnTourEl.style.setProperty('--p', String(clamp(1 - (w.performance.now() - this.lastInteract) / TOUR_STAY_MS, 0, 1)));
       if (this.target) {
         const f = 1 - Math.exp(-dt * 3.2);
         this.lon += wrap(this.target.lon - this.lon) * f;
@@ -402,14 +417,18 @@ export default (win: Window) => {
         }
         this.dirty = true;
       } else if (this.world && !this.pointers.size && this.k < 2.2 && t - this.lastInteract > 5000) {
-        this.lon = wrap(this.lon + this.world.spin * dt); // 아무것도 안 하면 천천히 자전
+        this.lon = wrap(this.lon + this.world.spin * (spinX(this.spin)) * dt); // 아무것도 안 하면 천천히 자전
         this.dirty = true;
       }
       if (this.dirty) {
         this.dirty = false;
         this.render();
-        w.clearTimeout(this.placeTimer);
-        this.placeTimer = w.setTimeout(() => this.updatePlace(), 250);
+        // 스로틀: 지구본이 계속 돌면(자전·비행) 디바운스는 영영 안 불린다 → 250ms 마다 한 번은 갱신
+        if (!this.placeTimer)
+          this.placeTimer = w.setTimeout(() => {
+            this.placeTimer = 0;
+            this.updatePlace();
+          }, 250);
       } else if (this.world?.traffic) {
         this.syncProj(); // 교통은 카메라가 멈춰 있어도 움직인다
       }
@@ -550,9 +569,10 @@ export default (win: Window) => {
         this.scenesEl.appendChild(wrapEl);
         const dir = `${DATA}worlds/${this.worldId}/${s.id}/`;
         const line = ns('path') as SVGPathElement;
-        line.setAttribute('class', 'boundary');
+        // 불러오는 동안: 색인에 들어 있는 실루엣(outline)을 바로 그려 숨 쉬듯 깜빡인다 → 받는 대로 정확한 경계로, 장면이 붙으면 평소 선으로
+        line.setAttribute('class', 'boundary ghost');
         this.boundariesEl.appendChild(line);
-        const pend: { line: SVGPathElement; boundary?: any } = { line };
+        const pend: { line: SVGPathElement; boundary?: any } = { line, boundary: s.outline ? { type: 'Polygon', coordinates: [s.outline] } : undefined };
         this.pending.set(s.id, pend);
         w.fetch(dir + 'boundary.json').then((r) => (r.ok ? r.json() : undefined)).then((b) => {
           pend.boundary = b;
@@ -571,6 +591,7 @@ export default (win: Window) => {
           this.sceneDefsEl.appendChild(clip);
           if (scene.boundary) wrapEl.setAttribute('clip-path', `url(#${clip.id})`);
           this.pending.delete(s.id);
+          line.classList.remove('ghost');
           this.mounted.set(s.id, { scene, wrap: wrapEl, clip, line, at: w.performance.now() });
           this.dirty = true;
           return scene;
@@ -637,16 +658,25 @@ export default (win: Window) => {
         }
         place = here ? `${flagOf(here.properties.iso)} ${here.properties.name}${sub ? ' · ' + sub.name : ''}` : '🌊 바다 위';
         soon = !!here && this.k >= 6 && !sceneShown;
-        w.clearTimeout(this.radioTimer);
-        if (this.radioOn && !this.pinned && here && here.properties.iso !== this.playing?.iso && /^[A-Z]{2}$/.test(here.properties.iso))
-          this.radioTimer = w.setTimeout(() => this.autoTune(here.properties.iso, here.properties.name), 1200);
+        if (this.weather === 'live') this.fetchLiveWeather();
+        // 1.2초 머문 나라로 라디오를 맞춘다. 같은 나라를 이미 기다리는 중이면 타이머를 다시 걸지 않는다 (계속 갱신돼도 맞춰지게)
+        const want = this.radioOn && !this.pinned && here && here.properties.iso !== this.playing?.iso && /^[A-Z]{2}$/.test(here.properties.iso) ? here : undefined;
+        if (want?.properties.iso !== this.radioWant) {
+          w.clearTimeout(this.radioTimer);
+          this.radioWant = want?.properties.iso;
+          if (want)
+            this.radioTimer = w.setTimeout(() => {
+              this.radioWant = undefined;
+              this.autoTune(want.properties.iso, want.properties.name);
+            }, 1200);
+        }
       } else {
         // 이름 있는 지형 중 화면 중심을 품은 가장 작은 것
         const hit = this.feats
           .filter(({ f, geo }) => f.name && f.circle && geoContains(geo, center))
           .sort((a, b) => a.f.circle![2] - b.f.circle![2])[0];
         this.hereFeat = hit?.f;
-        place = `${this.meta.icon} ${this.meta.name}${hit ? ' · ' + hit.f.name : ''}`;
+        place = `${this.meta.icon} ${this.meta.name}${sub ? ' · ' + sub.name : hit ? ' · ' + hit.f.name : ''}`;
         soon = this.k >= 4 && !sceneShown;
       }
       this.soonTextEl.textContent = this.worldId === 'earth' ? '🚧 아직 준비 중인 곳이에요' : '🚧 아직 아무도 살지 않는 곳이에요';
@@ -663,7 +693,7 @@ export default (win: Window) => {
       q.set('z', this.k < 10 ? this.k.toFixed(2) : this.k.toFixed(0));
       if (this.timeMode !== 'auto') q.set('t', this.timeMode);
       else q.delete('t');
-      if (this.weather !== 'clear') q.set('wx', this.weather);
+      if (this.weather !== 'live') q.set('wx', this.weather);
       else q.delete('wx');
       const url = `${w.location.pathname}?${q.toString()}`;
       if (url === this.lastUrl) return;
@@ -869,6 +899,13 @@ export default (win: Window) => {
       this.lastInteract = w.performance.now();
     }
 
+    // 가로로 끌 때 경도 배율: 위도 φ 에서는 경도 1° 가 cos φ 만큼 짧아서, 그대로 두면 극지(다산기지 79°N)에서 손가락보다 5배 덜 움직였다.
+    // 가까이 볼 때(지역 지도)는 1/cos φ 로 손가락 아래 땅이 그대로 따라오게, 지구본 전체를 볼 때는 원래대로(공 굴리듯) — k 2→6 사이에서 섞는다
+    private get lonStretch() {
+      const t = clamp((this.k - 2) / 4, 0, 1);
+      return 1 + t * (1 / Math.max(0.08, Math.cos((this.lat * Math.PI) / 180)) - 1);
+    }
+
     // 화면 점 (px, py) 아래의 땅이 그대로 그 자리에 있도록 줌 (핀치·휠)
     private zoomAround(px: number, py: number, factor: number) {
       const r = this.stageEl.getBoundingClientRect();
@@ -880,7 +917,7 @@ export default (win: Window) => {
       const p2 = ll && !isNaN(ll[0]) ? this.proj(ll as LL) : null;
       if (p2 && geoDistance(ll as LL, [this.lon, this.lat]) < 1.4) {
         const deg = 180 / Math.PI / (this.R0 * this.k);
-        this.lon = wrap(this.lon + (p2[0] - pt[0]) * deg);
+        this.lon = wrap(this.lon + (p2[0] - pt[0]) * deg * this.lonStretch);
         this.lat = clamp(this.lat - (p2[1] - pt[1]) * deg, -85, 85);
       }
       this.target = null;
@@ -898,10 +935,14 @@ export default (win: Window) => {
     @event('#stage', 'pointerdown')
     onDown(e: PointerEvent) {
       this.lastPointerType = e.pointerType;
-      if ((e.target as Element).closest('.marker')) return; // 캡처하면 마커 click 이 svg 로 빠진다
+      // 마커 위에서 시작해도 드래그·핀치로 받는다 (마커 누르기는 onUp 의 탭에서 처리 — 예전엔 여기서 빠져서 모바일 핀치가 마커 click 에 먹혔다)
       this.onSheetClose();
-      (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
       this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, moved: 0, t: w.performance.now() });
+      try {
+        (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
+      } catch {
+        /* 이미 끝난 포인터 등 — 캡처 없이도 stage 에서 이벤트를 받는다 */
+      }
       this.target = null;
       this.wantId = undefined;
       this.stopFollow();
@@ -922,7 +963,7 @@ export default (win: Window) => {
         if (before > 0) this.zoomAround((c.x + d.x) / 2, (c.y + d.y) / 2, after / before);
       } else {
         const deg = 180 / Math.PI / (this.R0 * this.k);
-        this.lon = wrap(this.lon - (e.clientX - prev.x) * deg);
+        this.lon = wrap(this.lon - (e.clientX - prev.x) * deg * this.lonStretch);
         this.lat = clamp(this.lat + (e.clientY - prev.y) * deg, -85, 85);
         this.pointers.set(e.pointerId, { ...prev, x: e.clientX, y: e.clientY, moved });
       }
@@ -970,12 +1011,18 @@ export default (win: Window) => {
     // 손가락 끝은 크다: 누른 점과 주변 몇 점을 훑어 처음 걸리는 것 (장면 개체·지명, 지구본 교통)
     private tapPick(x: number, y: number) {
       const root = this.shadowRoot ?? w.document;
+      // 마커(나라·지역 이름)가 먼저
+      const marker = root.elementFromPoint(x, y)?.closest('.marker');
+      const ms = marker && this.sectors.find((it) => it.id === marker.getAttribute('data-id'));
+      if (ms) return void this.flyTo(ms);
       for (const [dx, dy] of [[0, 0], [7, 0], [-7, 0], [0, 7], [0, -7], [10, 10], [-10, 10], [10, -10], [-10, -10]]) {
-        for (const el of root.elementsFromPoint(x + dx, y + dy)) {
+        // WebKit(iOS) 의 elementsFromPoint 는 <use> 를 빼고 돌려준다 → 맨 위 하나(elementFromPoint)를 먼저 본다
+        const top = root.elementFromPoint(x + dx, y + dy);
+        for (const el of [...(top ? [top] : []), ...root.elementsFromPoint(x + dx, y + dy)]) {
           for (const [id, m] of this.mounted) {
             if (!m.wrap.contains(el) || this.sceneOpacity(id) < 0.5) continue;
-            const picked = m.scene.pick(el);
-            if (picked) return void this.showInfo(this.sceneDex(id, picked));
+            // const picked = m.scene.pick(el);
+            // if (picked) return void this.showInfo(this.sceneDex(id, picked));
           }
           const tr = this.trafficEl.contains(el) ? this.traffic?.locate(el) : undefined;
           if (tr) return void this.showInfo({ use: tr.route.use, place: tr.route.name, moving: true, geo: tr.geo });
@@ -1052,12 +1099,6 @@ export default (win: Window) => {
       this.dirty = true;
     }
 
-    @eventDelegate('.marker', 'click')
-    onMarker(e: MouseEvent) {
-      const id = (e.target as Element).closest('.marker')?.getAttribute('data-id');
-      const s = this.sectors.find((it) => it.id === id);
-      if (s) this.flyTo(s);
-    }
 
     // ---------------- 🔍 지역 검색 · 목록 (만들어진 지역만, 모든 세계) ----------------
     private isoOf = new Map<string, string>(); // 지구 sector → 국가 코드 (국기 표시용, 지구를 불러올 때 채움)
@@ -1229,6 +1270,52 @@ export default (win: Window) => {
       this.applyTime();
     }
 
+    // ---------------- 📡 실시간 지구 (live.ts: Open-Meteo 날씨·구름, GDACS 태풍) ----------------
+    // 화면 중심의 지금 날씨. 1° 칸이 바뀌었거나 15분이 지났을 때만 묻는다
+    private async fetchLiveWeather() {
+      const key = `${Math.round(this.lat)},${Math.round(this.lon)}`;
+      const now = w.performance.now();
+      if (this.liveWx && this.liveWx.key === key && now - this.liveWx.at < 15 * 60000) return;
+      this.liveWx = { key, at: now, wx: this.liveWx?.wx ?? 'clear' }; // 묻는 동안 중복 요청 막기
+      const wx = await liveWeather(w, this.lon, this.lat);
+      if (!wx || this.liveWx.key !== key) return;
+      this.liveWx.wx = wx;
+      this.applyTime();
+    }
+
+    // 지구본 구름·태풍을 실제 것으로 (실패한 쪽은 world.json 의 그림용 것을 그대로 쓴다)
+    private globeWx = true; // ⛅ 시트의 "지구" 토글: 지구본 구름·태풍 보이기
+    private spin = 58; // ⛅ 시트의 "자전" 슬라이더 (58 ≈ 배율 1)
+    private live: { clouds?: Route[]; storms?: Route[] } = {};
+
+    // 구름·태풍은 각자 도착하는 대로 반영한다 (한쪽이 느리거나 멈춰도 다른 쪽은 바로 보이게)
+    private loadLive() {
+      liveClouds(w).then((clouds) => {
+        if (this.worldId !== 'earth' || !clouds) return;
+        this.live = { ...this.live, clouds };
+        this.applyTraffic();
+      });
+      liveStorms(w).then((storms) => {
+        if (this.worldId !== 'earth' || !storms) return;
+        this.live = { ...this.live, storms };
+        this.applyTraffic();
+      });
+    }
+
+    private applyTraffic() {
+      if (this.worldId !== 'earth' || !this.world) return;
+      const { clouds, storms } = this.live;
+      const weatherish = (r: Route) => r.use === 'globe/cloud.svg' || r.use === 'globe/typhoon';
+      const base = (this.world.traffic ?? []).filter((r) => !(clouds && r.use === 'globe/cloud.svg') && !(storms && r.use === 'globe/typhoon'));
+      const all = [...base, ...(clouds ?? []), ...(storms ?? [])];
+      this.traffic?.set(this.globeWx ? all : all.filter((r) => !weatherish(r)), this.world.radiusKm);
+    }
+
+    @setInterval(30 * 60000)
+    onLiveRefresh() {
+      if (this.worldId === 'earth') this.loadLive();
+    }
+
     // 랜덤 시간·날씨: 고른 쪽만 일정 간격으로 다른 값으로 바뀐다
     @setInterval(ENV_SHUFFLE_MS)
     onEnvShuffle() {
@@ -1242,7 +1329,7 @@ export default (win: Window) => {
     private applyTime() {
       const h = solarHour(this.lon);
       const key = this.timeMode === 'auto' ? phaseOf(h) : this.timeMode === 'random' ? this.rndPhase : this.timeMode;
-      const weather = this.weather === 'random' ? this.rndWeather : this.weather;
+      const weather = this.weather === 'random' ? this.rndWeather : this.weather === 'live' ? (this.liveWx?.wx ?? 'clear') : this.weather;
       const ph = PHASES[key];
       const air = this.world?.atmosphere !== false;
       const near = air ? clamp((this.k - 4) / 6, 0, 1) : 0;
@@ -1260,6 +1347,10 @@ export default (win: Window) => {
     }
 
     private renderEnv(current: Phase, weather: Weather, h: number, air: boolean) {
+      this.spinLabelEl.textContent = spinLabel(this.spin);
+      if (+this.spinEl.value !== this.spin) this.spinEl.value = String(this.spin);
+      this.envGlobeEl.innerHTML =
+        this.worldId === 'earth' ? `<button class="chip${this.globeWx ? ' on' : ''}" data-globe>${this.globeWx ? '🌍 지구본 구름·태풍 보임' : '🌍 지구본 구름·태풍 숨김'}</button>` : '';
       if (!air) {
         this.envTimeEl.innerHTML = `<div class="st-empty">🌌 ${esc(this.meta?.name ?? '')}에는 대기가 없어 하늘빛·날씨가 없어요</div>`;
         this.envWeatherEl.innerHTML = '';
@@ -1270,8 +1361,10 @@ export default (win: Window) => {
       this.envTimeEl.innerHTML = (['auto', 'random', 'dawn', 'morning', 'day', 'sunset', 'dusk', 'night'] as TimeMode[])
         .map((m) => `<button class="chip${this.timeMode === m ? ' on' : ''}" data-time="${m}">${label(m)}</button>`)
         .join('');
-      this.envWeatherEl.innerHTML = (['random', ...Object.keys(WEATHERS)] as WeatherMode[])
-        .map((k) => `<button class="chip${this.weather === k ? ' on' : ''}" data-weather="${k}">${k === 'random' ? `🔀 랜덤${this.weather === 'random' ? ` (${WEATHERS[weather].icon})` : ''}` : `${WEATHERS[k].icon} ${WEATHERS[k].label}`}</button>`)
+      const wl = (k: WeatherMode) =>
+        k === 'live' ? `📡 실시간${this.weather === 'live' ? ` (${WEATHERS[weather].icon})` : ''}` : k === 'random' ? `🔀 랜덤${this.weather === 'random' ? ` (${WEATHERS[weather].icon})` : ''}` : `${WEATHERS[k].icon} ${WEATHERS[k].label}`;
+      this.envWeatherEl.innerHTML = (['live', 'random', ...Object.keys(WEATHERS)] as WeatherMode[])
+        .map((k) => `<button class="chip${this.weather === k ? ' on' : ''}" data-weather="${k}">${wl(k)}</button>`)
         .join('');
     }
 
@@ -1281,28 +1374,50 @@ export default (win: Window) => {
       this.openSheet(this.envEl);
     }
 
+    // 자전 빠르기 슬라이더: 움직이는 동안 바로 적용, 손을 떼면 저장
+    @event('#spin', 'input')
+    onSpinInput() {
+      this.spin = +this.spinEl.value;
+      this.spinLabelEl.textContent = spinLabel(this.spin);
+      this.lastInteract = -Infinity; // 바로 돌아가는 걸 보이게
+    }
+
+    @event('#spin', 'change')
+    onSpinChange() {
+      this.saveEnv();
+    }
+
+    private saveEnv() {
+      try {
+        w.localStorage.setItem(ENV_KEY, JSON.stringify({ time: this.timeMode, weather: this.weather, globe: this.globeWx, spin: this.spin }));
+      } catch {
+        /* 저장 못 해도 이번 화면에는 적용 */
+      }
+    }
+
     @eventDelegate('#env button', 'click')
     onEnvPick(e: MouseEvent) {
       const b = (e.target as Element).closest<HTMLElement>('button');
-      if (!b?.dataset.time && !b?.dataset.weather) return;
+      if (b?.dataset.globe != null) {
+        this.globeWx = !this.globeWx;
+        this.applyTraffic();
+      } else if (!b?.dataset.time && !b?.dataset.weather) return;
       const changed = (b.dataset.time && b.dataset.time !== this.timeMode) || (b.dataset.weather && b.dataset.weather !== this.weather);
       if (isTime(b.dataset.time)) this.timeMode = b.dataset.time;
       if (isWeather(b.dataset.weather)) this.weather = b.dataset.weather;
       if (changed) this.onEnvShuffle(); // 랜덤을 고르면 바로 한 번 바뀐다
-      try {
-        w.localStorage.setItem(ENV_KEY, JSON.stringify({ time: this.timeMode, weather: this.weather }));
-      } catch {
-        /* 저장 못 해도 이번 화면에는 적용 */
-      }
+      this.saveEnv();
       this.applyTime();
       this.writeUrl();
     }
 
     @event('#btn-soon', 'click')
-    async onSoon() {
-      if (this.worldId !== 'earth') await this.loadWorld('earth');
-      const s = this.sectors.find((it) => it.local);
-      if (s) this.flyTo(s);
+    onSoon() {
+      // 준비 중인 곳에 왔다면: 만들어진 지역(모든 세계) 중 하나로 무작위로 데려간다
+      const r = pick(this.regions().filter((it) => !(it.wm.id === this.worldId && this.sceneOpacity(it.s.id) > 0.5)));
+      if (!r) return;
+      this.toast(`🎲 ${r.wm.icon} ${r.s.name}(으)로 가요`);
+      this.goRegion(r.wm.id, r.s.id);
     }
 
     @event('#btn-back', 'click')
@@ -1333,6 +1448,8 @@ export default (win: Window) => {
           .marker.top text { font-size: 15px; }
           .marker .soon-tag { font-size: 10px; font-weight: 700; fill: #9a7b3c; }
           /* 경계: 칼선 대신 동글동글한 크림색 점선 (힐링 그림체) */
+          .boundary.ghost { fill: #fff6df; animation: ghost 1.4s ease-in-out infinite alternate; }
+          @keyframes ghost { from { fill-opacity: 0.12; } to { fill-opacity: 0.5; } }
           .boundary { fill: none; stroke: #fff6df; stroke-opacity: 0.95; stroke-width: 4.2; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 0.1 9; }
           /* ---- 날씨 (HTML 레이어, 합성 스레드 애니메이션) ---- */
           #weather { position: absolute; inset: 0; overflow: hidden; pointer-events: none; transition: opacity .6s; opacity: 0; }
@@ -1386,7 +1503,8 @@ export default (win: Window) => {
           .hud { position: absolute; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 6px; pointer-events: none; max-width: calc(100vw - 32px); }
           #place { align-self: flex-start; font-size: 17px; font-weight: 800; padding: 7px 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
           .hint { align-self: flex-start; font-size: 12px; font-weight: 600; color: #8a6d52; padding: 4px 10px; border-radius: 10px; background: rgba(255,248,236,0.85); }
-          .fab { position: absolute; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 46px; height: 46px; border-radius: 50%; font-size: 20px; }
+          .fabs { position: absolute; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 10px; }
+          .fab { position: relative; width: 46px; height: 46px; border-radius: 50%; font-size: 20px; }
           .fab .eq { position: absolute; right: -3px; top: -4px; display: none; gap: 1.5px; align-items: flex-end; height: 12px; padding: 2px 3px; border-radius: 8px; background: #ffe7a8; border: 1.5px solid #f0c96a; }
           .fab.on .eq { display: flex; }
           .fab .eq i { width: 2.5px; background: #c2523f; border-radius: 2px; animation: eq 0.9s ease-in-out infinite alternate; }
@@ -1407,6 +1525,11 @@ export default (win: Window) => {
           #toast.show, #soon.show, #loading.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
           #btn-soon, .chip, .st { width: auto; height: 34px; padding: 0 12px; font-size: 13px; font-weight: 800; border-radius: 12px; box-shadow: 0 2px 0 #dcc29b; }
           #btn-soon { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; white-space: nowrap; }
+          #btn-tour { position: relative; }
+          /* 남은 시간 링: 테두리 자리에 원뿔 그라디언트를 깔고 가운데를 마스크로 뚫는다 */
+          #btn-tour.on::before { content: ''; position: absolute; inset: -2px; border-radius: inherit; padding: 3px; pointer-events: none;
+            background: conic-gradient(#e0844f calc(var(--p, 1) * 1turn), transparent 0);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
           #btn-tour.on, .chip.on, .st.on { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; }
           /* 시트: 데스크톱은 오른쪽 위 패널, 모바일은 아래에서 올라오는 시트 */
           .sheet { position: absolute; top: calc(70px + env(safe-area-inset-top, 0px)); right: 16px; width: min(400px, calc(100vw - 32px)); max-height: min(70vh, 560px); overflow: hidden;
@@ -1419,6 +1542,9 @@ export default (win: Window) => {
           .sheet-head { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 14px; gap: 8px; }
           .sheet-close { width: 32px; height: 32px; font-size: 14px; border-radius: 10px; box-shadow: 0 2px 0 #dcc29b; flex: none; }
           .env-row { display: flex; gap: 10px; align-items: flex-start; }
+          .spin-row { display: flex; align-items: center; gap: 10px; flex: 1; padding-top: 4px; }
+          .spin-row input { flex: 1; accent-color: #e0a84f; height: 28px; }
+          #spin-label { font-size: 13px; font-weight: 800; min-width: 64px; color: #6b4f3a; }
           .env-label { font-size: 13px; font-weight: 800; padding-top: 8px; min-width: 28px; }
           .chips { display: flex; flex-wrap: wrap; gap: 6px; }
           #stations-list { display: flex; flex-direction: column; gap: 6px; }
@@ -1439,7 +1565,8 @@ export default (win: Window) => {
             button { width: 40px; height: 40px; border-radius: 12px; font-size: 17px; }
             .hud { left: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); max-width: calc(100vw - 80px); }
             #place { font-size: 15px; padding: 6px 12px; }
-            .fab { right: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); width: 42px; height: 42px; font-size: 19px; }
+            .fabs { right: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); gap: 8px; }
+            .fab { width: 42px; height: 42px; font-size: 19px; }
             #soon { bottom: calc(60px + env(safe-area-inset-bottom, 0px)); font-size: 13px; padding: 8px 10px; gap: 8px; }
             #toast { top: calc(60px + env(safe-area-inset-top, 0px)); font-size: 13px; }
             .sheet { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-height: 62vh; border-radius: 20px 20px 0 0; border-bottom: 0;
@@ -1491,7 +1618,6 @@ export default (win: Window) => {
               <button id="btn-random" title="랜덤 여행">🎲</button>
               <button id="btn-tour" title="만들어진 지역 자동 여행 켜기">▶️</button>
               <button id="btn-me" title="내 위치로">📍</button>
-              <button id="btn-share" title="지금 보는 곳 공유">🔗</button>
               <button id="btn-search" title="지역 찾기">🔍</button>
               <button id="btn-world" title="세계 고르기">🌏</button>
             </div>
@@ -1509,6 +1635,8 @@ export default (win: Window) => {
             <div class="sheet-body">
               <div class="env-row"><span class="env-label">시간</span><div id="env-time" class="chips"></div></div>
               <div class="env-row" style="margin-top:10px"><span class="env-label">날씨</span><div id="env-weather" class="chips"></div></div>
+              <div class="env-row" style="margin-top:10px"><span class="env-label">지구</span><div id="env-globe" class="chips"></div></div>
+              <div class="env-row" style="margin-top:10px"><span class="env-label">자전</span><div class="spin-row"><input id="spin" type="range" min="0" max="100" step="1" aria-label="지구본 자전 빠르기"/><span id="spin-label"></span></div></div>
             </div>
           </div>
           <div id="search" class="sheet panel">
@@ -1527,12 +1655,15 @@ export default (win: Window) => {
           </div>
           <div id="toast" class="panel"></div>
           <div id="loading" class="panel"><i></i><span>불러오는 중…</span></div>
-          <div id="soon" class="panel"><span id="soon-text">🚧 아직 준비 중인 곳이에요</span><button id="btn-soon">서울 가기 →</button></div>
+          <div id="soon" class="panel"><span id="soon-text">🚧 아직 준비 중인 곳이에요</span><button id="btn-soon">🎲 다른 지역 가기 →</button></div>
           <div class="hud">
             <div id="place" class="panel">지구</div>
             <div class="hint">드래그로 돌리고 · 스크롤/핀치로 다가가고 · 이름을 누르면 날아가요</div>
           </div>
-          <button id="btn-fab" class="fab" title="라디오">📻<span class="eq"><i></i><i></i><i></i></span></button>
+          <div class="fabs">
+            <button id="btn-fab" class="fab" title="라디오">📻<span class="eq"><i></i><i></i><i></i></span></button>
+            <button id="btn-share" class="fab" title="지금 보는 곳 공유">🔗</button>
+          </div>
           <audio id="audio" preload="none"></audio>
         </div>
       `;

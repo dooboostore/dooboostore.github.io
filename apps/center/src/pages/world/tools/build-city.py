@@ -47,7 +47,7 @@ CITIES = {
     # 카이로: OSM 에 구(qism) 경계가 없어 카이로시 ∪ 기자주 를 피라미드~시타델 사각형으로 자른다 (나일강이 두 행정구역 경계)
     'egypt/cairo': {'name': '카이로', 'queries': ['Cairo Governorate, Egypt', 'Giza Governorate, Egypt'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005,
                     'clip': (31.115, 29.965, 31.275, 30.075), 'palette': 'desert'},
-    'australia/sydney': {'name': '시드니', 'queries': ['City of Sydney, Australia'], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.005, 'simplify': 0.0001, 'join_water': True},
+    'australia/sydney': {'name': '시드니', 'queries': ['City of Sydney, Australia'], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.005, 'simplify': 0.0001, 'sea_margin': 1.0},
     'china/beijing': {'name': '베이징', 'queries': ['Dongcheng District, Beijing, China', 'Xicheng District, Beijing, China'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005},
     'turkey/istanbul': {'name': '이스탄불', 'queries': ['Fatih, Istanbul, Turkey', 'Beyoğlu, Istanbul, Turkey', 'Üsküdar, Istanbul, Turkey'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'simplify': 0.0001, 'join_water': True},
     'brazil/rio': {'name': '리우데자네이루', 'queries': ['Botafogo, Rio de Janeiro, Brazil', 'Copacabana, Rio de Janeiro, Brazil', 'Urca, Rio de Janeiro, Brazil', 'Laranjeiras, Rio de Janeiro, Brazil', 'Cosme Velho, Rio de Janeiro, Brazil'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
@@ -58,7 +58,12 @@ CITIES = {
                                'clip': (-58.90, -62.27, -58.62, -62.17), 'palette': 'snow', 'coast_margin': 1.2, 'simplify': 0.0002},
     'spain/barcelona': {'name': '바르셀로나', 'queries': ['Barcelona, Spain'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'germany/berlin': {'name': '베를린', 'queries': ['Berlin, Germany'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
-    'russia/moscow': {'name': '모스크바', 'queries': ['Moscow, Russia'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
+    'russia/moscow': {'name': '모스크바', 'queries': ['Central Administrative Okrug, Moscow'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},  # 크렘린·붉은광장이 있는 중심 행정구 (모스크바시 전체는 남서쪽으로 길게 뻗어 너무 크다)
+    'taiwan/taipei': {'name': '타이베이', 'queries': ['Taipei, Taiwan'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
+    # 리야드: 시 경계가 1,800 km² 로 너무 커서, 킹덤 센터·마스막 요새·디리야(앗투라이프)가 들어오는 중심 사각형으로 자른다
+    'saudi/riyadh': {'name': '리야드', 'queries': ['محافظة الرياض, السعودية', 'محافظة الدرعية, السعودية'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01,
+                     'clip': (46.55, 24.6, 46.78, 24.78), 'palette': 'desert'},
+    'iran/tehran': {'name': '테헤란', 'queries': ['Tehran, Iran'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01, 'palette': 'desert'},
     'greece/athens': {'name': '아테네', 'queries': ['Athens, Greece'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'netherlands/amsterdam': {'name': '암스테르담', 'queries': ['Amsterdam, Netherlands'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
     'canada/toronto': {'name': '토론토', 'queries': ['Toronto, Canada'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
@@ -218,6 +223,9 @@ def main():
             boundary = Polygon(list(box(w0, s0, e0, n0).exterior.coords)[::-1])  # d3 구면 권선 방향
     else:
         w0, s0, e0, n0 = boundary.bounds
+    if cfg.get('sea_margin') and not a.keep_bounds:  # 해안 도시: 앞바다 여백이 들어오게 영역을 넓힌다
+        m = cfg['sea_margin'] / 111.0
+        w0, s0, e0, n0 = w0 - m, s0 - m, e0 + m, n0 + m
     if cfg.get('island') and not a.keep_bounds:  # 섬: 해안선 둘레로 다시 자른다 (여백 바다 포함)
         m = cfg['island'] / 111.0
         w0, s0, e0, n0 = w0 - m * 2, s0 - m * 2, e0 + m * 2, n0 + m * 2
@@ -244,6 +252,10 @@ def main():
         boundary = max(boundary.geoms, key=lambda q: q.area) if boundary.geom_type == 'MultiPolygon' else boundary
     water = [p for p in osm_water((s0, w0, n0, e0)) if km2(p, lat0) >= cfg['min_water_km2']]
     allwater = unary_union([sea] + water).intersection(big).simplify(cfg.get('simplify', 0.00035))
+    if cfg.get('sea_margin'):  # 행정경계가 해안에서 끝나는 도시(시드니시): 해안을 따라 앞바다를 붙인다 (해안선 바다 + OSM 수면: 시드니 항은 수면 면으로 온다) — 항구가 장면 밖 거친 지구본 땅으로 보이지 않게
+        m = cfg['sea_margin'] / 111.0
+        boundary = unary_union([boundary, boundary.buffer(m, quad_segs=12).intersection(allwater)]).buffer(0)
+        boundary = max(boundary.geoms, key=lambda q: q.area) if boundary.geom_type == 'MultiPolygon' else boundary
     roads = osm_roads((s0, w0, n0, e0), cfg['roads'])
 
     def xy(lon, lat):

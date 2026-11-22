@@ -1,0 +1,20 @@
+{
+  "local": {"size": [960, 595], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "iran/landmark/azadi-tower.svg", "at": [463, 296], "scale": 0.65},
+    {"use": "iran/landmark/milad-tower.svg", "at": [528, 199], "scale": 0.6},
+    {"use": "iran/landmark/golestan-palace.svg", "at": [607, 338], "scale": 0.5},
+    {"use": "iran/structure/carpet-stall.svg", "at": [[600, 355], [616, 353], [630, 358]], "scale": 0.5},
+    {"use": "iran/structure/tea-house.svg", "at": [[588, 348]], "scale": 0.5},
+    {"use": "iran/building/tehran-house.svg", "count": 14, "area": [550, 240, 130, 80], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#e8d2b0", "#dcc093", "#efe3cf"]}},
+    {"use": "iran/building/tehran-house.svg", "count": 8, "area": [380, 300, 80, 60], "scale": 0.5, "spacing": 12},
+    {"use": "iran/nature/plane-tree.svg", "count": 12, "area": [450, 190, 200, 140], "scale": 0.6, "spacing": 12},
+    {"use": "iran/nature/pomegranate-tree.svg", "count": 6, "area": [570, 100, 50, 35], "scale": 0.6, "spacing": 8},
+    {"use": "iran/people/local", "count": 4, "area": [596, 330, 40, 30], "scale": 0.7, "spacing": 6},
+    {"use": "iran/people/chador-woman", "count": 3, "area": [596, 335, 40, 30], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 2, "area": [455, 300, 25, 15], "scale": 0.7, "spacing": 6},
+    {"use": "iran/vehicle/paykan", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M459.1 337.5 L452.2 339.1 L441 347.6 L436.4 348.1 L345 343.1 L289.5 332.8 L279.9 329.3", "dur": 20}},
+    {"use": "iran/vehicle/paykan", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M684.2 357.2 L677.3 348.9 L675.4 343.5 L677.1 331.4 L671.9 317.2 L670.9 304.3 L673 283.2 L671 263.9 L672.6 259.9 L676.8 255.4 L698.8 240.2 L715.4 219.6 L717.3 213.2", "dur": 29}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 250 C240 210 560 330 1020 250", "dur": 76}}
+  ]
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- 타이베이 출퇴근 스쿠터 (오른쪽을 향함): 발판이 낮은 스텝스루 차체(변수 scooter), 앞 방풍판과 거울, 반헬멧 쓴 라이더(변수 helmet, jacket). 밤엔 전조등 -->
+  <path d="M14.8 8.4 L22 6.4 L22 12.2 L14.8 10 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0.8 13.4 C0.6 11.2 1.8 9.8 4 9.6 L8 9.8 L9 12.6 L9 13.6 Q5 14.2 0.8 13.4 Z" fill="var(--scooter, #e8eef2)"/>
+    <rect x="1.8" y="8.6" width="6.2" height="1.6" rx="0.8" fill="#4a3a32"/>
+    <path d="M8.4 12.6 L11.8 12.6 C12.6 12.6 13 12 13.2 11 L13.4 9 L14.8 8.6 L14.6 11 C14.4 12.8 13.4 13.8 11.8 13.8 L8.4 13.8 Z" fill="var(--scooter, #e8eef2)"/>
+    <path d="M12.8 12.6 C13.8 11.4 13.9 9.4 13.4 7.4 L14.4 7 C15.4 8.6 15.6 11.2 14.6 13 Z" fill="var(--trim, #5fa8d3)"/>
+    <path d="M6.4 11.8 C6.4 10.2 7 9.4 8.4 9.4 L9.6 9.6 C10.4 10 10.8 11.2 10.8 12.4 L9.6 12.6 Z" fill="var(--pants, #4a5a7a)"/>
+    <ellipse cx="11" cy="12.5" rx="1" ry="0.5" fill="#f4f1ea"/>
+    <path d="M5.6 10.2 C5.2 8 5.8 6.4 7.8 6.4 C9.4 6.4 10 7.6 9.8 9.6 L6.2 10.4 Z" fill="var(--jacket, #7cbf9e)"/>
+    <circle cx="8.6" cy="3.8" r="3.1" fill="var(--skin, #ffe0c7)"/>
+    <path d="M5.5 4.6 Q5.2 6.6 6.9 6.8 Q7 5.8 6.8 5.2 Z" fill="var(--hair, #2f2622)"/>
+    <path d="M5.4 4.8 A3.35 3.35 0 1 1 11.9 3 L10.4 3 C9.6 3 9 3.6 8.4 4.4 L6.8 5.4 Z" fill="var(--helmet, #f29a7a)"/>
+    <path d="M13.6 7.2 L14 5.8" stroke-width="0.4"/>
+    <ellipse cx="14.1" cy="5.4" rx="0.7" ry="0.5" fill="#c9ced3" stroke-width="0.3"/>
+  </g>
+  <path d="M8.8 7.4 L13 7.6" stroke="#5b4636" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M8.8 7.4 L13 7.6" stroke="var(--jacket, #7cbf9e)" stroke-width="0.85" stroke-linecap="round"/>
+  <circle cx="13.2" cy="7.6" r="0.55" fill="var(--skin, #ffe0c7)" stroke="#5b4636" stroke-width="0.3"/>
+  <circle cx="14.8" cy="9.2" r="0.6" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <circle cx="1" cy="11.4" r="0.4" fill="#ef6a5e" stroke="#5b4636" stroke-width="0.2"/>
+  <path d="M2 10.6 Q4.6 10.2 7.6 10.6" stroke="#fff" stroke-opacity="0.5" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M6.2 1.4 Q8 0.6 9.8 1" stroke="#fff" stroke-opacity="0.5" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M1.6 13.2 Q5 13.8 8.6 13.2" stroke="#000" stroke-opacity="0.1" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="10.4" cy="4.4" rx="0.45" ry="0.6" fill="#3d2b22"/>
+  <ellipse cx="10.6" cy="5.4" rx="0.6" ry="0.35" fill="#ff9e9e" opacity="0.6"/>
+</svg>

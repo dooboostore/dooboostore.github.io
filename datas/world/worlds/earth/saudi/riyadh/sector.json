@@ -1,0 +1,19 @@
+{
+  "local": {"size": [960, 827], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "saudi/landmark/kingdom-centre.svg", "at": [517, 322], "scale": 0.65},
+    {"use": "saudi/landmark/al-faisaliah.svg", "at": [560, 414], "scale": 0.65},
+    {"use": "saudi/landmark/masmak.svg", "at": [670, 670], "scale": 0.55},
+    {"use": "saudi/building/najdi-house.svg", "count": 10, "area": [95, 205, 60, 50], "scale": 0.5, "spacing": 12},
+    {"use": "saudi/building/najdi-house.svg", "count": 8, "area": [640, 640, 70, 60], "scale": 0.5, "spacing": 12},
+    {"use": "saudi/nature/date-palm.svg", "count": 10, "area": [90, 250, 90, 80], "scale": 0.6, "spacing": 12},
+    {"use": "saudi/nature/date-palm.svg", "count": 8, "area": [600, 570, 100, 100], "scale": 0.6, "spacing": 12},
+    {"use": "saudi/structure/dallah-stand.svg", "at": [[668, 692], [522, 342]], "scale": 0.5},
+    {"use": "saudi/people/thobe", "count": 4, "area": [650, 650, 50, 40], "scale": 0.7, "spacing": 6},
+    {"use": "saudi/people/abaya", "count": 3, "area": [650, 650, 50, 40], "scale": 0.7, "spacing": 6},
+    {"use": "saudi/people/thobe", "count": 3, "area": [500, 330, 40, 30], "scale": 0.7, "spacing": 6},
+    {"use": "saudi/vehicle/suv", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M341.9 395.3 L506.6 318.6", "dur": 20}},
+    {"use": "saudi/vehicle/suv", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M520.3 311.9 L597.9 274.4 L641.1 258.4", "dur": 20}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
+  ]
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- 모스크바 지하철 입구: 기둥 위 빨간 M 표지판, 난간 두른 내려가는 계단. 밤엔 M 표지판이 환하다 -->
+  <ellipse cx="12.4" cy="23" rx="11" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M7.6 11.6 L21.8 11.6" stroke-width="1.1"/>
+    <path d="M7.8 11.6 L7.8 15 M11.4 11.6 L11.4 15 M15 11.6 L15 15 M18.6 11.6 L18.6 15 M21.6 11.6 L21.6 15" stroke-width="0.9"/>
+    <rect x="6.4" y="14.6" width="16.6" height="7.6" rx="1.2" fill="#cfc8be"/>
+    <rect x="7.6" y="15.6" width="14.2" height="5.8" rx="0.8" fill="#4f4a58"/>
+    <rect x="3.3" y="6.6" width="1.4" height="15.8" rx="0.7" fill="#8c939a"/>
+    <rect x="2.4" y="21.4" width="3.2" height="1.4" rx="0.6" fill="#8c939a"/>
+    <rect x="0.6" y="0.6" width="6.8" height="6.4" rx="1.6" fill="#fbf6ea"/>
+  </g>
+  <path d="M7.6 11.6 L21.8 11.6 M7.8 11.6 L7.8 15 M11.4 11.6 L11.4 15 M15 11.6 L15 15 M18.6 11.6 L18.6 15 M21.6 11.6 L21.6 15" stroke="#9aa0a6" stroke-width="0.4" stroke-linecap="round"/>
+  <rect x="7.9" y="15.9" width="13.6" height="1.1" rx="0.5" fill="#c9c2cc"/><rect x="8.6" y="16.95" width="12.2" height="1.1" rx="0.5" fill="#ada6b4"/><rect x="9.3" y="18.0" width="10.8" height="1.1" rx="0.5" fill="#918a9a"/><rect x="10.0" y="19.05" width="9.4" height="1.1" rx="0.5" fill="#766f80"/><rect x="10.7" y="20.1" width="8.0" height="1.1" rx="0.5" fill="#5e5868"/>
+  <rect x="11.4" y="20.2" width="6.6" height="0.9" rx="0.45" fill="#ffd77a" opacity="0.6"/>
+  <rect x="0.6" y="0.6" width="6.8" height="6.4" rx="1.6" fill="#ffe9a3" style="opacity: var(--night, 0)"/>
+  <path d="M2 5.6 L2.3 2.2 L4 4.4 L5.7 2.2 L6 5.6" fill="none" stroke="#d8342c" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1.4 1.4 L3.2 1.4" stroke="#fff" stroke-width="0.4" opacity="0.8" stroke-linecap="round"/>
+  <path d="M3.6 8 L3.6 20" stroke="#fff" stroke-width="0.35" opacity="0.5" stroke-linecap="round"/>
+</svg>

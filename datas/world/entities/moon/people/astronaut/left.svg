@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
+  <!-- 아폴로 우주비행사 (left, 왼쪽을 향함): 흰 우주복, 등에 큰 생명유지 배낭(PLSS)과 그 위 산소 상자(OPS), 흰 헬멧이 정수리를 덮고 금색 바이저가 앞쪽 얼굴을 가림 -->
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="4.2" cy="16.9" rx="1.7" ry="0.85" fill="#d4d8dc"/>
+    <ellipse cx="7" cy="16.9" rx="1.7" ry="0.85" fill="#d4d8dc"/>
+    <path d="M3.8 16.4 L4 14 L8 14 L8.2 16.4 Z" fill="var(--suit, #f6f4ee)"/>
+    <path d="M3 14.6 C2.6 11.6 3.8 9.8 6 9.8 C8.2 9.8 9.4 11.6 9 14.6 C7.6 15.2 4.4 15.2 3 14.6 Z" fill="var(--suit, #f6f4ee)"/>
+    <rect x="7.6" y="6.2" width="3.9" height="8.6" rx="1.3" fill="#e6e8ea"/>
+    <rect x="8" y="4.4" width="3.2" height="2.4" rx="0.9" fill="#d4d8dc"/>
+    <circle cx="5.9" cy="6" r="5" fill="#fbfaf6"/>
+    <path d="M4.4 2.6 C2.4 2.8 1.2 4.6 1.2 6.6 C1.2 8.6 2.4 10 4.4 10.2 C5.6 10.2 6 8.6 6 6.4 C6 4.2 5.6 2.6 4.4 2.6 Z" fill="#e6ac3e"/>
+  </g>
+  <ellipse cx="2.9" cy="5" rx="0.6" ry="1.3" fill="#fff" opacity="0.55" transform="rotate(20 2.9 5)"/>
+  <path d="M6.6 1.6 Q9 1.4 10.2 3.4" stroke="#fff" stroke-opacity="0.6" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M8.4 9 H10.8 M8.4 11 H10.8" stroke="#5b4636" stroke-width="0.25" stroke-linecap="round" opacity="0.5"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"><ellipse cx="5.8" cy="12.4" rx="1.2" ry="1.75" fill="var(--suit, #f6f4ee)" transform="rotate(-18 5.8 12.4)"/><circle cx="5" cy="14" r="0.75" fill="#8a97a8"/></g>
+  <rect x="2.6" y="10.8" width="1.6" height="1.6" rx="0.4" fill="#c9ccd1" stroke="#5b4636" stroke-width="0.3"/>
+  <path d="M4 14.4 L4 16" stroke="#5b4636" stroke-width="0.3" stroke-linecap="round" opacity="0.5"/>
+</svg>

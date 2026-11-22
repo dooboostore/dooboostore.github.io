@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 30">
+  <!-- 자작나무: 검은 무늬가 드문드문 있는 하얀 줄기, 가볍게 흔들리는 연두빛 잎 무리 -->
+  <ellipse cx="9" cy="29" rx="5" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M7.8 29.2 C8 23 8.4 16 9 8 L10.2 8 C10.4 16 10.6 23 10.4 29.2 Z" fill="#f4f1ea" stroke-width="0.5"/>
+    <path d="M9.4 15 C7.6 13.6 6 13.4 4.6 12" fill="none" stroke-width="0.9"/>
+    <path d="M9.4 15 C7.6 13.6 6 13.4 4.6 12" fill="none" stroke="#f4f1ea" stroke-width="0.4"/>
+    <path d="M9.8 12 C11.4 11 12.6 10.4 13.8 9" fill="none" stroke-width="0.9"/>
+    <path d="M9.8 12 C11.4 11 12.6 10.4 13.8 9" fill="none" stroke="#f4f1ea" stroke-width="0.4"/>
+  </g>
+  <g fill="#3e3430"><rect x="8.2" y="26" width="1.4" height="0.5" rx="0.25"/><rect x="9.2" y="23.4" width="1.1" height="0.45" rx="0.22"/><rect x="8.2" y="20.6" width="1.6" height="0.5" rx="0.25"/><rect x="9.4" y="18" width="0.9" height="0.4" rx="0.2"/><rect x="8.5" y="15.8" width="1.2" height="0.45" rx="0.22"/><rect x="9.3" y="12.6" width="0.8" height="0.4" rx="0.2"/></g>
+  <path d="M8.6 28 C8.8 22 9 16 9.4 9" stroke="#fff" stroke-width="0.4" opacity="0.8" fill="none" stroke-linecap="round"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="7s" repeatCount="indefinite"/>
+    <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
+      <ellipse cx="9.6" cy="6.4" rx="4.4" ry="5" fill="#8cc46a"/>
+      <ellipse cx="5" cy="11.4" rx="3.2" ry="3.6" fill="#9ccf78"/>
+      <ellipse cx="14" cy="9.4" rx="3.4" ry="3.8" fill="#86be64"/>
+      <ellipse cx="5.8" cy="16" rx="2.4" ry="2.6" fill="#94c870"/>
+      <ellipse cx="13" cy="15" rx="2.4" ry="2.6" fill="#9ccf78"/>
+      <ellipse cx="10.4" cy="12.6" rx="2.8" ry="2.6" fill="#94c870"/>
+    </g>
+    <g fill="#c8e6a4" opacity="0.8"><ellipse cx="8.4" cy="3.8" rx="1.6" ry="0.7"/><ellipse cx="4.4" cy="9.8" rx="1.2" ry="0.5"/><ellipse cx="13.4" cy="7.6" rx="1.2" ry="0.5"/></g>
+    <g fill="#6aa84f"><circle cx="11" cy="7.4" r="0.5"/><circle cx="6.2" cy="12.6" r="0.4"/><circle cx="14.8" cy="10.8" r="0.45"/><circle cx="9" cy="9" r="0.4"/></g>
+  </g>
+</svg>

@@ -593,3 +593,25 @@ lazycollect 의 기존 SubLayer 데이터(비둘기 등)를 재사용하려면 *
 - **극지:** `arctic/ny-alesund` (다산과학기지), `antarctica/king-george` (세종과학기지).
   - 생성기 옵션 `palette: snow`, `coast_margin`(사각형으로 자른 섬에 해안을 따라 바다 여백만 붙임).
   - 생성기는 sector.json 이 이미 있어도 `local.size` 를 새 지면에 맞춘다.
+
+### 8.16 실시간 지구 (live.ts, 2026-11-22)
+
+- 둘 다 키 없이 CORS 로 바로 받는다. 실패하면 world.json 의 그림용 구름·태풍을 그대로 쓴다.
+  - 날씨·구름: Open-Meteo. 비상업 무료, 하루 약 1만 회. 여러 지점을 한 요청에 물을 수 있지만, 지점 수만큼 호출로 센다.
+  - 열대저기압: GDACS `EVENTS4APP`. 지진 등이 섞여 오므로 `eventtype === 'TC' && iscurrent` 만 쓴다.
+- 날씨 모드 `📡 실시간`(새 기본값): 화면 중심의 WMO 날씨 코드를 맑음·흐림·비·뇌우·눈·안개로 바꾼다. 1° 칸이 바뀌거나 15분이 지나면 다시 묻는다.
+- 지구본 구름: 12° 격자 330 지점(지점마다 고정 흔들림)의 구름양이 60% 이상인 곳에만 구름을 둔다. 30분마다 다시 받는다.
+- 태풍: 지금 활동 중인 것만, 실제 위치에 이름·최대 풍속과 함께 둔다 (도감 팝업에 항로 이름으로 나온다).
+- (갱신) 지구 구름은 NASA GIBS 위성 영상으로 바꿨다 (Open-Meteo 시간당 한도 초과 때문).
+  - MODIS Terra·Aqua 일일 구름양을 WMS 360×180 PNG 두 장으로 받아 캔버스에서 픽셀을 읽는다. 호출 한도가 없다.
+  - 받는 것은 어제(UTC) 낮 영상이다. 구름양 95% 이상인 곳에만 구름을 둔다.
+- 한 지점 날씨: Open-Meteo 를 localStorage 에 30분 캐시한다. 실패하거나 한도 초과로 쉬는 중이면 MET Norway(api.met.no, CORS)로 대신 받는다.
+- 불러오는 중 실루엣: `tools/build-outlines.py` 가 경계를 수십 점으로 줄여 worlds.json `outline` 에 넣는다. 지역을 누르는 즉시 그 실루엣이 숨 쉬듯 깜빡인다.
+- 비행기(air, z 1~100 km): 땅에 그림자를 남기고 몸체를 왼쪽 위로 띄운다.
+- CORS 프록시(사용자 Cloudflare Worker, TossService 의 CORS_PROXY)는 허용된 Origin(localhost:3002, dooboostore.github.io)에서 동작을 확인했다.
+  - 지금 쓰는 출처는 모두 CORS 를 열어 두어서 프록시가 필요 없다.
+  - Open-Meteo 를 프록시로 부르면 모든 방문자가 Worker IP 하나로 묶여 한도가 더 빨리 찬다 → 쓰지 않는다.
+- (갱신) 날씨 캐시 Worker `https://world-weather.visualkhh.workers.dev/` (코드: `tools/cloudflares/world-weather.js`, KV 바인딩 `WX`).
+  - Open-Meteo·GDACS 는 Worker 만 부르고 KV 에 둔다. 방문자 수와 상관없이 호출은 칸마다 30분 1번, 구름·태풍은 1시간 1번.
+  - 사이트는 Worker 를 먼저 부른다. 실패하면 날씨는 MET Norway, 구름은 NASA GIBS(어제 위성 영상), 태풍은 GDACS 직접.
+  - 구름과 태풍은 도착하는 대로 따로 반영한다 (GDACS 가 멈춰도 구름은 보이게). 요청에 15초 시간 제한을 둔다.

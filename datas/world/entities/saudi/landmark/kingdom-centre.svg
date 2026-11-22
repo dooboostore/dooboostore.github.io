@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 120">
+  <!-- 킹덤 센터: 위로 갈수록 포물선처럼 좁아지는 은빛 유리 탑, 꼭대기의 뒤집힌 포물선 구멍(병따개 모양)과 그 위를 잇는 하늘 다리, 아래 넓은 상가 건물. 밤엔 구멍 테두리와 다리가 환하다 -->
+  <ellipse cx="15" cy="118.4" rx="14" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M5 108 L5.6 60 C6 40 10 16 13.4 6.4 Q15 3.2 16.6 6.4 C20 16 24 40 24.4 60 L25 108 Z" fill="var(--glass, #a9c0cf)"/>
+    <path d="M8.8 44 C9.8 30 12.2 19 15 11.6 C17.8 19 20.2 30 21.2 44 Q15 42.6 8.8 44 Z" fill="#d6ecf6"/>
+    <rect x="10.4" y="17.6" width="9.2" height="1.8" rx="0.9" fill="#d9dde0"/>
+    <rect x="1" y="103.6" width="28" height="14" rx="1.6" fill="#d6dde2"/>
+    <rect x="0.4" y="102.8" width="29.2" height="1.6" rx="0.8" fill="#eef1f3"/>
+  </g>
+  <path d="M9 50 L9 104 M12 50 L12 104 M15 50 L15 104 M18 50 L18 104 M21 50 L21 104 M6 60 L24 60 M5.8 72 L24.2 72 M5.6 84 L24.4 84 M5.4 96 L24.6 96 M7.4 48 L22.6 48" stroke="#2f4f6a" stroke-opacity="0.18" stroke-width="0.35"/>
+  <path d="M7.2 100 L7.4 56 C7.8 40 10.4 24 13 10" stroke="#fff" stroke-width="0.9" opacity="0.4" fill="none" stroke-linecap="round"/>
+  <g fill="#b9d6ea" stroke="#5b4636" stroke-width="0.3"><rect x="3" y="106.4" width="5.6" height="4" rx="0.8"/><rect x="21.4" y="106.4" width="5.6" height="4" rx="0.8"/></g>
+  <path d="M11.4 117.6 L11.4 112.6 C11.4 110.6 18.6 110.6 18.6 112.6 L18.6 117.6 Z" fill="var(--door, #4f6f7a)" stroke="#5b4636" stroke-width="0.4"/>
+  <g style="opacity: var(--night, 0)"><path d="M8.8 44 C9.8 30 12.2 19 15 11.6 C17.8 19 20.2 30 21.2 44" fill="none" stroke="#7fd0ff" stroke-width="0.9" stroke-linecap="round"/><rect x="10.8" y="18" width="8.4" height="1" rx="0.5" fill="#ffd77a"/><g fill="#ffd77a"><rect x="3.2" y="106.6" width="5.2" height="3.6" rx="0.7"/><rect x="21.6" y="106.6" width="5.2" height="3.6" rx="0.7"/></g></g>
+  <g fill="#6db85e" stroke="#5b4636" stroke-width="0.4"><circle cx="1.6" cy="116.4" r="1.8"/><circle cx="28.4" cy="116.4" r="1.8"/></g>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "svg": "body.svg",
+  "foot": [0.5, 1],
+  "parts": [
+    { "use": "parts/shadow.svg", "at": [15, 21.7], "scale": 2.9, "under": true },
+    { "use": "mars/vehicle/perseverance/wheel.svg", "at": [6, 19.8], "anim": "spin" },
+    { "use": "mars/vehicle/perseverance/wheel.svg", "at": [14.4, 19.8], "anim": "spin" },
+    { "use": "mars/vehicle/perseverance/wheel.svg", "at": [23, 19.8], "anim": "spin" }
+  ]
+}

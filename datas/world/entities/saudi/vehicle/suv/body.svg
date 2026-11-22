@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 14">
+  <!-- 사막 SUV (오른쪽을 향함): 키 큰 각진 흰 차체(색 변수 car), 지붕 짐받이, 아래쪽 회색 몰딩과 넓은 바퀴 아치. 밤엔 전조등 -->
+  <path d="M24.4 7.6 L34 5.4 L34 12 L24.4 9.6 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4.6 1.6 L4.6 0.8 M14.2 1.6 L14.2 0.8" stroke-width="0.5"/>
+    <rect x="3.4" y="0.4" width="12.2" height="0.8" rx="0.4" fill="#8c939a"/>
+    <path d="M1.2 11.4 L1.2 5.2 C1.2 4.4 1.6 3.8 2.2 3.6 L3.6 2 Q4 1.6 4.6 1.6 L16.4 1.6 Q17 1.6 17.4 2 L19.8 5 L23.6 5.6 C24.4 5.8 24.8 6.4 24.8 7.2 L24.8 11.4 C24.8 12 24.4 12.4 23.8 12.4 L2.2 12.4 C1.6 12.4 1.2 12 1.2 11.4 Z" fill="var(--car, #f7f6f0)"/>
+    <path d="M1.2 9.6 L24.8 9.6 L24.8 11.4 C24.8 12 24.4 12.4 23.8 12.4 L2.2 12.4 C1.6 12.4 1.2 12 1.2 11.4 Z" fill="#9aa0a6"/>
+    <path d="M4.2 12.4 C4.2 9.6 5.4 8.6 6.6 8.6 C7.8 8.6 9 9.6 9 12.4 Z M17.4 12.4 C17.4 9.6 18.6 8.6 19.8 8.6 C21 8.6 22.2 9.6 22.2 12.4 Z" fill="#6b7076"/>
+    <path d="M2.6 5 L3.8 2.8 Q4.1 2.4 4.6 2.4 L7.2 2.4 L7.2 5 Z" fill="#cfe6f4"/>
+    <rect x="8" y="2.4" width="4.6" height="2.6" rx="0.4" fill="#cfe6f4"/>
+    <path d="M13.4 2.4 L16.2 2.4 Q16.7 2.4 17 2.8 L18.8 5 L13.4 5 Z" fill="#cfe6f4"/>
+  </g>
+  <path d="M7.6 5.4 L7.6 9.4 M13 5.4 L13 9.4" stroke="#5b4636" stroke-width="0.3" opacity="0.5"/>
+  <g fill="#8c939a"><rect x="10.8" y="6" width="1.1" height="0.35" rx="0.17"/><rect x="16" y="6" width="1.1" height="0.35" rx="0.17"/></g>
+  <path d="M2.6 6.2 L6 6.2 M8.6 3 L10 3 M20.4 6.4 L23 6.8" stroke="#fff" stroke-width="0.5" opacity="0.8" stroke-linecap="round"/>
+  <rect x="23.6" y="6.6" width="1" height="1.4" rx="0.4" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <rect x="1.2" y="6" width="0.7" height="1.6" rx="0.3" fill="#ef6a5e"/>
+  <rect x="1.6" y="8.8" width="22.8" height="0.8" rx="0.4" fill="#000" opacity="0.08"/>
+</svg>

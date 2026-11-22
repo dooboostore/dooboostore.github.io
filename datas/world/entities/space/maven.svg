@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -11 30 18" data-foot="0.5 0.5">
+  <!-- 메이븐 MAVEN: 금박 네모 몸통 위에 하얀 접시 안테나, 양쪽 태양전지판이 갈매기 날개처럼 바깥 끝에서 위로 꺾여 올라간다 -->
+  <g stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-3.4 1 L-4.4 1 M3.4 1 L4.4 1" stroke="#8b9197" stroke-width="0.7"/>
+    <path d="M-4.4 -1.4 L-9 -1.4 L-9 3.4 L-4.4 3.4 Z" fill="#3f6fb8"/>
+    <path d="M-9 -1.4 L-11.6 -7.6 Q-12.2 -8.4 -12.8 -7.6 L-14.6 -4.4 Q-14.6 -3.8 -14.2 -3.2 L-9 3.4 Z" fill="#335d9e"/>
+    <path d="M4.4 -1.4 L9 -1.4 L9 3.4 L4.4 3.4 Z" fill="#3f6fb8"/>
+    <path d="M9 -1.4 L11.6 -7.6 Q12.2 -8.4 12.8 -7.6 L14.6 -4.4 Q14.6 -3.8 14.2 -3.2 L9 3.4 Z" fill="#335d9e"/>
+    <rect x="-3.4" y="-2.4" width="6.8" height="6.8" rx="1.3" fill="#f2c14e"/>
+    <ellipse cx="0" cy="-5.4" rx="4.6" ry="3.4" fill="#fbfaf6"/>
+  </g>
+  <g stroke="#9fc6ea" stroke-width="0.3" opacity="0.8"><path d="M-6.7 -1.4 L-6.7 3.4 M6.7 -1.4 L6.7 3.4 M-10.6 -4.6 L-11.8 0.2 M10.6 -4.6 L11.8 0.2"/></g>
+  <circle cx="0" cy="-5.4" r="0.6" fill="#8b9197"/>
+  <path d="M-2.8 -6.8 Q-1.4 -8.2 0.6 -8.2" stroke="#fff" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M-2.6 1.6 L2.6 1.6 M-2.6 2.8 L2.6 2.8" stroke="#d39a2c" stroke-width="0.3"/>
+  <circle cx="2" cy="-1.2" r="0.45" fill="#ff5d55"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</svg>

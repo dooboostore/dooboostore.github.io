@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10">
+  <!-- 달 바위: 둥글둥글한 회색 바위(변수 rock)에 작은 운석 구덩이 몇 개. 바람이 없어 수십억 년 모습 그대로 -->
+  <ellipse cx="8" cy="9.2" rx="7.4" ry="0.8" fill="#3a3632" opacity="0.2"/>
+  <path d="M1.4 8.6 C0.6 6.4 1.6 3.6 4 2.6 C5.6 1.2 8.6 1 10.6 2 C13.2 2.6 15 5 14.6 7.6 C14.4 8.8 13 9.2 11 9.2 L4 9.2 C2.6 9.2 1.8 9.2 1.4 8.6 Z" fill="var(--rock, #a6a5a1)" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+  <path d="M3.4 3.6 C5 2.2 8.4 1.8 10.6 2.8" stroke="#fff" stroke-opacity="0.35" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M2 8 Q8 9.4 14.2 7.6 L14 8.6 Q8 9.6 2.2 8.8 Z" fill="#000" opacity="0.12"/>
+  <g fill="#000" opacity="0.18"><ellipse cx="5.4" cy="5.2" rx="1.1" ry="0.7"/><ellipse cx="10.4" cy="4.6" rx="0.8" ry="0.5"/><ellipse cx="11.6" cy="6.8" rx="0.6" ry="0.4"/></g>
+  <g fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="0.25" stroke-linecap="round"><path d="M4.4 5.6 Q5.4 6.2 6.4 5.6"/><path d="M9.7 4.9 Q10.4 5.3 11.1 4.9"/></g>
+</svg>

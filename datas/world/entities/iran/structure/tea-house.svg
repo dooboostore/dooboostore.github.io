@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 22">
+  <!-- 차이하네(전통 찻집): 페르시아 카펫을 덮은 나무 평상(타흐트)과 둥근 등받이 쿠션, 김 나는 놋쇠 사모바르와 찻주전자, 유리잔의 붉은 차, 줄무늬 차양. 밤엔 등이 켜진다 -->
+  <ellipse cx="15" cy="21" rx="14" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2" y="3" width="1.1" height="13" rx="0.5" fill="#a8784e"/>
+    <rect x="19.4" y="3" width="1.1" height="13" rx="0.5" fill="#a8784e"/>
+    <path d="M0.8 4.4 L0.8 2.6 Q0.8 1.4 2 1.4 L20.6 1.4 Q21.8 1.4 21.8 2.6 L21.8 4.4 Q20.6 5.4 19.4 4.4 Q18.2 5.4 17 4.4 Q15.8 5.4 14.6 4.4 Q13.4 5.4 12.2 4.4 Q11 5.4 9.8 4.4 Q8.6 5.4 7.4 4.4 Q6.2 5.4 5 4.4 Q3.8 5.4 2.6 4.4 Q1.6 5.2 0.8 4.4 Z" fill="var(--awning, #3f9a80)"/>
+    <rect x="3.2" y="15" width="1.4" height="4.8" rx="0.5" fill="#8a5a3f"/>
+    <rect x="17.8" y="15" width="1.4" height="4.8" rx="0.5" fill="#8a5a3f"/>
+    <rect x="3" y="9.6" width="5" height="3.2" rx="1.5" fill="var(--cushion, #d9a441)"/>
+    <rect x="8.8" y="9.6" width="5" height="3.2" rx="1.5" fill="#b8403a"/>
+    <rect x="14.6" y="9.6" width="5" height="3.2" rx="1.5" fill="var(--cushion, #d9a441)"/>
+    <rect x="1.8" y="12.4" width="19" height="2.2" rx="0.8" fill="#a8784e"/>
+    <path d="M2.4 12.2 L20.2 12.2 L20.2 17.8 Q11.3 18.4 2.4 17.8 Z" fill="var(--carpet, #b8403a)"/>
+    <rect x="22.4" y="14" width="6.6" height="1.2" rx="0.6" fill="#a8784e"/>
+    <path d="M23.6 15 L23.2 19.8 M27.8 15 L28.2 19.8" stroke-width="0.7"/>
+    <path d="M24.2 14 L24.2 12.8 Q23 11.6 23 10 Q23 7.6 25.6 7.6 Q28.2 7.6 28.2 10 Q28.2 11.6 27 12.8 L27 14 Z" fill="#e0a84a"/>
+    <path d="M24.6 7.8 Q24.6 6.4 25.6 6.4 Q26.6 6.4 26.6 7.8 Z" fill="#e0a84a"/>
+    <path d="M24.4 6.4 Q24.2 4.8 25.6 4.8 Q27 4.8 26.8 6.4 Z" fill="#f4f1ea"/>
+    <path d="M28.2 10.6 L29.2 10.6 L29.2 11.2" fill="none" stroke-width="0.4"/>
+  </g>
+  <rect x="3.6" y="13.4" width="15.4" height="3.6" rx="0.4" fill="none" stroke="#f2c14e" stroke-width="0.35"/>
+  <ellipse cx="11.3" cy="15.2" rx="2.6" ry="1.2" fill="#2f4a7a" stroke="#f2c14e" stroke-width="0.3"/>
+  <circle cx="11.3" cy="15.2" r="0.45" fill="#f2c14e"/>
+  <g fill="#2f4a7a"><circle cx="5" cy="15.2" r="0.4"/><circle cx="17.6" cy="15.2" r="0.4"/></g>
+  <path d="M3 18 L3 18.6 M4.4 18.1 L4.4 18.7 M5.8 18.1 L5.8 18.7 M7.2 18.2 L7.2 18.8 M8.6 18.2 L8.6 18.8 M10 18.2 L10 18.8 M11.4 18.2 L11.4 18.8 M12.8 18.2 L12.8 18.8 M14.2 18.2 L14.2 18.8 M15.6 18.1 L15.6 18.7 M17 18.1 L17 18.7 M18.4 18 L18.4 18.6 M19.8 18 L19.8 18.6" stroke="#f4f1ea" stroke-width="0.3" stroke-linecap="round"/>
+  <g fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="0.3"><path d="M4 11.2 L7 11.2 M15.6 11.2 L18.6 11.2"/></g>
+  <path d="M9.6 12.2 L14.6 12.2" stroke="#d3d8dd" stroke-width="0.6" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.25"><path d="M10.2 12 L10.4 10.6 L11.4 10.6 L11.6 12 Z" fill="#c0502a"/><path d="M12.6 12 L12.8 10.6 L13.8 10.6 L14 12 Z" fill="#c0502a"/></g>
+  <path d="M10.5 10.9 L11.3 10.9 M12.9 10.9 L13.7 10.9" stroke="#fff" stroke-width="0.25" opacity="0.7"/>
+  <path d="M23.8 9 Q24.2 8.2 25 8" stroke="#fff" stroke-width="0.5" opacity="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M1.6 2.4 L21 2.4" stroke="#fff" stroke-width="0.5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M25.4 5.6 Q24.799999999999997 4.6 25.4 3.8 Q26.0 3 25.4 2.2" fill="none" stroke="#fff" stroke-width="0.6" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;0.85;0" dur="2.6s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0.6;0 -1.2" dur="2.6s" begin="0.0s" repeatCount="indefinite"/></path><path d="M26.4 5.6 Q25.799999999999997 4.6 26.4 3.8 Q27.0 3 26.4 2.2" fill="none" stroke="#fff" stroke-width="0.6" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;0.85;0" dur="2.6s" begin="1.3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0.6;0 -1.2" dur="2.6s" begin="1.3s" repeatCount="indefinite"/></path>
+  <g><animateTransform attributeName="transform" type="rotate" values="-4 11.2 4.8;4 11.2 4.8;-4 11.2 4.8" dur="3.6s" repeatCount="indefinite"/><line x1="11.2" y1="4.8" x2="11.2" y2="5.6" stroke="#5b4636" stroke-width="0.3"/><rect x="10.2" y="5.5" width="2" height="2" rx="0.9" fill="#e8b64a" stroke="#5b4636" stroke-width="0.35"/><rect x="10.2" y="5.5" width="2" height="2" rx="0.9" fill="#ffd77a" style="opacity: var(--night, 0)"/></g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 120">
+  <!-- 밀라드 타워: 팔각 콘크리트 기둥, 유리로 감싼 둥근 전망 머리, 그 위 격자 안테나와 깜빡이는 항공등, 아래 넓은 로비 건물. 밤엔 머리가 띠처럼 환하다 -->
+  <ellipse cx="15" cy="118.4" rx="12" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <clipPath id="pod"><path d="M7.4 44.6 C5.4 42.6 5 38.6 6.8 35.6 C8.6 32.6 11.4 31.4 15 31.4 C18.6 31.4 21.4 32.6 23.2 35.6 C25 38.6 24.6 42.6 22.6 44.6 Q15 46.6 7.4 44.6 Z"/></clipPath>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="14.5" y="2.4" width="1" height="6.6" rx="0.5" fill="#e9e4dc"/>
+    <rect x="13.9" y="8.4" width="2.2" height="20" rx="0.6" fill="#e9e4dc"/>
+    <path d="M10.6 110.4 C12 104 12.8 90 13.4 46 L16.6 46 C17.2 90 18 104 19.4 110.4 Z" fill="#dcd7cf"/>
+    <rect x="9.2" y="45" width="11.6" height="2.6" rx="1.3" fill="#cfd6da"/>
+    <path d="M10 32.2 C11.6 29.8 13.2 28.6 14 27.6 L16 27.6 C16.8 28.6 18.4 29.8 20 32.2 Z" fill="#dcd7cf"/>
+    <path d="M7.4 44.6 C5.4 42.6 5 38.6 6.8 35.6 C8.6 32.6 11.4 31.4 15 31.4 C18.6 31.4 21.4 32.6 23.2 35.6 C25 38.6 24.6 42.6 22.6 44.6 Q15 46.6 7.4 44.6 Z" fill="var(--glass, #6f9fbf)"/>
+    <rect x="4" y="109.4" width="22" height="8.4" rx="2" fill="#cfdce2"/>
+  </g>
+  <g clip-path="url(#pod)" stroke="#2f4f6a" stroke-opacity="0.45" stroke-width="0.35" fill="none"><path d="M4 34.2 L26 34.2 M4 37.2 L26 37.2 M4 40.2 L26 40.2 M4 43 L26 43 M11 31 Q9.4 38 10.4 46 M19 31 Q20.6 38 19.6 46 M15 31 L15 46"/></g>
+  <path d="M8.2 36.6 Q8.6 33.6 11.6 32.4" stroke="#fff" stroke-width="0.8" opacity="0.45" fill="none" stroke-linecap="round"/>
+  <g stroke="#a8a29a" stroke-width="0.3"><path d="M14 10 L16 13 M16 10 L14 13 M14 13 L16 16 M16 13 L14 16 M14 16 L16 19 M16 16 L14 19 M14 19 L16 22 M16 19 L14 22 M14 22 L16 25 M16 22 L14 25 M14 25 L16 28 M16 25 L14 28"/></g>
+  <path d="M15 48 L15 109" stroke="#000" stroke-opacity="0.08" stroke-width="0.5"/>
+  <path d="M13.9 50 C13.6 80 13 98 12 108" stroke="#fff" stroke-width="0.6" opacity="0.4" fill="none" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.3" stroke-opacity="0.5"><path d="M8 109.6 L8 117.6 M12 109.6 L12 117.6 M18 109.6 L18 117.6 M22 109.6 L22 117.6"/></g>
+  <path d="M12.8 117.6 L12.8 114.2 C12.8 112.6 17.2 112.6 17.2 114.2 L17.2 117.6 Z" fill="var(--door, #4f6f7a)" stroke="#5b4636" stroke-width="0.4"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><path d="M6 37.2 L24 37.2 L24 40.2 L6 40.2 Z" opacity="0.8"/><rect x="9.4" y="45.4" width="11.2" height="1.6" rx="0.8"/><rect x="5" y="111" width="20" height="2" rx="1" opacity="0.6"/></g>
+  <circle cx="15" cy="2" r="0.8" fill="#ff5a4e" stroke="#5b4636" stroke-width="0.3"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
+  <g fill="#6db85e" stroke="#5b4636" stroke-width="0.4"><circle cx="3" cy="116.4" r="2"/><circle cx="27" cy="116.4" r="2"/></g>
+</svg>
