@@ -7,7 +7,7 @@
     {"use": "mars/nature/mars-rock.svg", "count": 18, "area": [160, 40, 780, 880], "scale": 0.8, "spacing": 40},
     {"use": "mars/nature/mars-rock.svg", "count": 6, "area": [100, 60, 200, 840], "scale": 1.0, "spacing": 40},
     {"use": "mars/nature/dust-devil", "count": 2, "area": [300, 100, 600, 700], "scale": 1.0, "spacing": 100},
-    {"use": "mars/vehicle/perseverance", "count": 1, "scale": 0.9, "behavior": {"type": "route", "path": "M652.8 480 L592.8 520 L472.8 560 L312.8 520 L472.8 560 L592.8 520 L652.8 480", "dur": 300}},
+    {"use": "mars/vehicle/perseverance.svg", "count": 1, "scale": 0.9, "behavior": {"type": "route", "path": "M652.8 480 L592.8 520 L472.8 560 L312.8 520 L472.8 560 L592.8 520 L652.8 480", "dur": 300}},
     {"use": "mars/vehicle/ingenuity.svg", "count": 1, "z": 30, "scale": 0.9, "behavior": {"type": "route", "path": "M672.8 470 L732.8 480 L717.8 525 L672.8 470", "dur": 40}}
   ],
   "labels": [

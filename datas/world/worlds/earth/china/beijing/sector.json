@@ -17,9 +17,9 @@
     {"use": "china/people/student", "count": 4, "area": [640, 540, 40, 70], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 4, "area": [536, 645, 42, 40], "scale": 0.7, "spacing": 6},
     {"use": "animal/pigeon", "count": 4, "area": [540, 650, 30, 30], "spacing": 5},
-    {"use": "china/vehicle/taxi", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M397.4 640.2 L702.3 630.3", "dur": 31}},
-    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#d9443a"}, "behavior": {"type": "route", "path": "M470.1 799.5 L399.9 801.1 L399.3 707.4", "dur": 20}},
-    {"use": "china/vehicle/tricycle", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M580 348 L650 348", "dur": 40}},
+    {"use": "china/vehicle/taxi.svg", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M397.4 640.2 L702.3 630.3", "dur": 31}},
+    {"use": "vehicle/bus.svg", "count": 1, "scale": 0.55, "vars": {"--bus": "#d9443a"}, "behavior": {"type": "route", "path": "M470.1 799.5 L399.9 801.1 L399.3 707.4", "dur": 20}},
+    {"use": "china/vehicle/tricycle.svg", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M580 348 L650 348", "dur": 40}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 420 C240 380 560 500 1020 420", "dur": 76}}
   ],
   "labels": [

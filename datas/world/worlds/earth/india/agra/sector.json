@@ -11,8 +11,8 @@
     {"use": "india/people/sari", "count": 4, "area": [315, 386, 80, 50], "scale": 0.7, "spacing": 6},
     {"use": "india/people/kurta", "count": 4, "area": [315, 386, 80, 50], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 4, "area": [539.6, 512.3, 100, 40], "scale": 0.7, "spacing": 6},
-    {"use": "india/vehicle/auto-rickshaw", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M539.1 558.9 L568.6 613.8 L631.4 655.2 L690 656.9 L761 647.4 L783.5 653.2 L864.2 727.4 L938.4 773.1", "dur": 41}},
-    {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M525 6 L525 24 L525 42 L525 60 L525 78 L525 96 L525 114 L522 132 L519 150 L516 168 L510 186 L498 204 L486 222 L480 240 L471 258 L471 276 L471 294 L471 312 L468 330 L468 348 L471 366 L474 384 L480 402 L495 420 L513 438 L531 456 L549 465 L567 465 L585 462 L603 459 L621 447 L639 432 L657 417 L675 399 L693 381 L711 363 L729 345 L747 327 L765 309 L783 291 L801 276 L819 267 L837 258 L855 252 L873 243 L891 237 L909 231 L927 231 L945 231 L954 231", "dur": 160}},
+    {"use": "india/vehicle/auto-rickshaw.svg", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M539.1 558.9 L568.6 613.8 L631.4 655.2 L690 656.9 L761 647.4 L783.5 653.2 L864.2 727.4 L938.4 773.1", "dur": 41}},
+    {"use": "vehicle/boat.svg", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M525 6 L525 24 L525 42 L525 60 L525 78 L525 96 L525 114 L522 132 L519 150 L516 168 L510 186 L498 204 L486 222 L480 240 L471 258 L471 276 L471 294 L471 312 L468 330 L468 348 L471 366 L474 384 L480 402 L495 420 L513 438 L531 456 L549 465 L567 465 L585 462 L603 459 L621 447 L639 432 L657 417 L675 399 L693 381 L711 363 L729 345 L747 327 L765 309 L783 291 L801 276 L819 267 L837 258 L855 252 L873 243 L891 237 L909 231 L927 231 L945 231 L954 231", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],
   "labels": [

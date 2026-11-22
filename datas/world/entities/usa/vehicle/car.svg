@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 10">
+  <!-- car — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
+  <g transform="translate(10 10) translate(0 0) scale(2)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <!-- 승용차 (오른쪽을 향함): 앞은 짧고 둥근 노즈, 뒤로 길게 흐르는 지붕. 색은 car 변수. 밤엔 전조등 -->
+  <path d="M18.8 5.4 L28 4 L28 9.4 L18.8 7.6 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M18.8 8.4 L18.8 6.5 Q18.8 5.1 17.2 4.9 L14.6 4.5 L12.3 1.8 Q11.8 1.1 10.8 1.1 L7 1.1 Q6.1 1.1 5.5 1.9 L3.1 4.3 L1.5 4.75 Q0.9 5.1 0.85 6.3 L1 7.6 Q1.1 8.4 2.1 8.4 Z" fill="var(--car, #5d8fd6)"/>
+  </g>
+  <g fill="#d8eff9" stroke="#5b4636" stroke-width="0.35"><path d="M14.1 4.5 L12.1 2.1 Q11.75 1.7 11.1 1.7 L9.6 1.7 L9.6 4.5 Z"/><path d="M8.8 4.5 L8.8 1.7 L7 1.7 Q6.45 1.7 6.05 2.2 L4.45 4.5 Z"/></g>
+  <rect x="1.4" y="6.7" width="17.2" height="1.5" rx="0.75" fill="#000" opacity="0.12"/>
+  <path d="M11.4 2.6 L10.2 2.6" stroke="#fff" stroke-width="0.4" stroke-linecap="round"/>
+  <!-- 트렁크 크리스: 뒤로 갈수록 낮게 떨어지는 선 -->
+  <path d="M4.3 4.42 L1.5 4.82" stroke="#fff" stroke-width="0.3" opacity="0.4" stroke-linecap="round"/>
+  <!-- 전조등: 앞 노즈 모서리에 납작하게 -->
+  <rect x="18.1" y="5.4" width="0.85" height="0.75" rx="0.32" fill="#fff4b8" stroke="#5b4636" stroke-width="0.2"/>
+  <!-- 뒤끝으로 흐르는 테일램프 -->
+  <path d="M1.55 5.05 L0.58 5.95 L1.2 6.45 L1.9 5.55 Z" fill="#ef6a5e" stroke="#5b4636" stroke-width="0.2"/>
+  <g transform="translate(5 8.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.8)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(15.2 8.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.8)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

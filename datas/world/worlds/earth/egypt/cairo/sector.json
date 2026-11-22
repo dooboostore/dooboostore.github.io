@@ -18,8 +18,8 @@
     {"use": "egypt/people/galabeya", "count": 2, "area": [690, 200, 40, 40], "scale": 0.7, "spacing": 6},
     {"use": "egypt/vehicle/felucca.svg", "count": 2, "scale": 0.6, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M643.5 30 L648 50 L652.5 100 L659 130 L667 160 L674.5 190 L677 215 L672 240 L661.5 260 L643.5 280 L635 300 L627.5 320 L624 340 L623 370 L622.5 400 L623.5 430 L628 450 L641 470 L643 490 L634.5 500 L632 520 L627.5 540 L624 560 L618 580 L619.5 600 L618 610 L620 640 L625 660 L634 680 L647 700 L666 720 L695.5 740", "dur": 150}},
     {"use": "egypt/vehicle/felucca.svg", "count": 2, "scale": 0.55, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M695.5 740 L666 720 L647 700 L634 680 L625 660 L620 640 L618 610 L619.5 600 L618 580 L624 560 L627.5 540 L632 520 L634.5 500 L643 490 L641 470 L628 450 L623.5 430 L622.5 400 L623 370 L624 340 L627.5 320 L635 300 L643.5 280 L661.5 260 L672 240 L677 215 L674.5 190 L667 160 L659 130 L652.5 100 L648 50 L643.5 30", "dur": 170}},
-    {"use": "egypt/vehicle/taxi", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M529.9 413.8 L513.3 416.3 L320.9 503.9", "dur": 22}},
-    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#3f7fbf"}, "behavior": {"type": "route", "path": "M529.9 413.8 L513.3 416.3 L320.9 503.9", "dur": 30}},
+    {"use": "egypt/vehicle/taxi.svg", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M529.9 413.8 L513.3 416.3 L320.9 503.9", "dur": 22}},
+    {"use": "vehicle/bus.svg", "count": 1, "scale": 0.55, "vars": {"--bus": "#3f7fbf"}, "behavior": {"type": "route", "path": "M529.9 413.8 L513.3 416.3 L320.9 503.9", "dur": 30}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 380 C240 340 560 460 1020 380", "dur": 76}}
   ],
   "labels": [

@@ -9,9 +9,9 @@
     {"use": "northkorea/nature/willow.svg", "count": 16, "area": [360, 250, 180, 220], "scale": 0.6, "spacing": 12},
     {"use": "northkorea/people/local", "count": 5, "area": [350, 400, 90, 60], "scale": 0.7, "spacing": 6},
     {"use": "northkorea/people/student", "count": 4, "area": [260, 520, 60, 50], "scale": 0.7, "spacing": 6},
-    {"use": "northkorea/vehicle/tram", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M756.2 626.6 L716.8 566.9 L691.3 550.7 L522.6 511.4", "dur": 30}},
-    {"use": "northkorea/vehicle/trolleybus", "count": 1, "scale": 0.5, "behavior": {"type": "route", "path": "M412.1 373.3 L396.5 388 L371.5 485.5", "dur": 20}},
-    {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M471.2 210.8 L464.2 221.3 L458.1 245.1 L457.5 250.5 L459.3 286.1 L457.4 305.1 L461.4 322.1 L466.5 432.2 L449.9 496", "dur": 100}},
+    {"use": "northkorea/vehicle/tram.svg", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M756.2 626.6 L716.8 566.9 L691.3 550.7 L522.6 511.4", "dur": 30}},
+    {"use": "northkorea/vehicle/trolleybus.svg", "count": 1, "scale": 0.5, "behavior": {"type": "route", "path": "M412.1 373.3 L396.5 388 L371.5 485.5", "dur": 20}},
+    {"use": "vehicle/boat.svg", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M471.2 210.8 L464.2 221.3 L458.1 245.1 L457.5 250.5 L459.3 286.1 L457.4 305.1 L461.4 322.1 L466.5 432.2 L449.9 496", "dur": 100}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],
   "labels": [

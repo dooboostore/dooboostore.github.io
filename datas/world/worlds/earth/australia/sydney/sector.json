@@ -14,8 +14,8 @@
     {"use": "usa/people/business", "count": 4, "area": [525.9, 304.2, 45.9, 91.7], "scale": 0.7, "spacing": 4.6},
     {"use": "australia/vehicle/sydney-ferry.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M560.3 267.5 L579.1 228.5 L580.6 226.9 L603.1 212.0 L604.2 207.0 L604.2 204.4 L606.5 202.1 L610.0 202.1 L611.0 201.0 L616.7 201.0 L618.6 201.7 L647.1 182.7 L649.1 181.9 L801.1 166.7", "dur": 90}},
     {"use": "australia/vehicle/sydney-ferry.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M801.1 166.7 L649.1 181.9 L647.1 182.7 L618.6 201.7 L616.7 201.0 L611.0 201.0 L610.0 202.1 L606.5 202.1 L604.2 204.4 L604.2 207.0 L603.1 212.0 L580.6 226.9 L579.1 228.5 L560.3 267.5", "dur": 100}},
-    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M422.7 334.8 L426.5 388.3", "dur": 60}},
-    {"use": "vehicle/bus", "count": 2, "scale": 0.55, "vars": {"--bus": "#2f7fbf"}, "spacing": 7.6, "behavior": {"type": "route", "path": "M502 274.7 L468.9 354.3 L470.6 390.3", "dur": 28}},
+    {"use": "vehicle/boat.svg", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M422.7 334.8 L426.5 388.3", "dur": 60}},
+    {"use": "vehicle/bus.svg", "count": 2, "scale": 0.55, "vars": {"--bus": "#2f7fbf"}, "spacing": 7.6, "behavior": {"type": "route", "path": "M502 274.7 L468.9 354.3 L470.6 390.3", "dur": 28}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M67.1 365.3 C296.5 334.8 541.2 426.5 892.9 365.3", "dur": 76}}
   ],
   "labels": [

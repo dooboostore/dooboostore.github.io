@@ -10,7 +10,7 @@
     {"use": "russia/people/ushanka", "count": 5, "area": [491, 420, 60, 30], "scale": 0.7, "spacing": 6},
     {"use": "russia/people/babushka", "count": 3, "area": [557, 456, 60, 30], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 3, "area": [491, 420, 60, 30], "scale": 0.7, "spacing": 6},
-    {"use": "russia/vehicle/trolleybus", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M613.5 478.9 L508.2 453.5 L508 442 L480.8 405.8", "dur": 31}},
+    {"use": "russia/vehicle/trolleybus.svg", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M613.5 478.9 L508.2 453.5 L508 442 L480.8 405.8", "dur": 31}},
     {"use": "russia/vehicle/canal-boat.svg", "count": 2, "scale": 0.5, "layer": "water", "behavior": {"type": "route", "path": "M915 495 L921 477 L924 459 L924 441 L924 423 L924 405 L924 387 L924 369 L924 351 L924 333 L918 315 L906 297 L888 279 L870 267 L852 270 L834 282 L816 297 L798 309 L780 318 L762 327 L744 327 L726 327 L708 327 L690 327 L672 330 L654 336 L636 342 L618 348 L600 357 L582 366 L564 375 L546 384 L528 396 L510 411 L492 423 L474 435 L456 450 L438 462 L420 474 L402 486 L384 495 L366 504 L348 510 L330 525 L312 543 L300 561 L297 579 L291 597 L285 615 L267 633 L249 651", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],

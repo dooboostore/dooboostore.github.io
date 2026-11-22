@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- scooter — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
+  <g transform="translate(8 16) translate(0 0) scale(1.5)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <!-- 배달 스쿠터 (오른쪽을 향함): 헬멧 쓴 라이더, 뒤에 배달통. 밤엔 전조등 -->
+  <path d="M14.4 8.6 L22 6.4 L22 12.4 L14.4 10.2 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="0.6" y="5.4" width="5" height="4.8" rx="1" fill="var(--box, #3fb8a8)"/>
+    <path d="M1 13.6 C1 11.4 2.4 10.2 5 10.2 L8.4 10.4 L9 12.6 L9 13.6 Q5 14.2 1 13.6 Z" fill="var(--scooter, #f4f1ea)"/>
+    <path d="M8.4 12.6 L11.2 12.6 C12.4 12.6 12.8 11.6 13 10.4 L13.6 7.4 L14.6 7.4 L14.2 10.6 C14 12.8 13 13.8 11.4 13.8 L8.4 13.8 Z" fill="var(--scooter, #f4f1ea)"/>
+    <path d="M6.4 11.8 C6.4 10.2 7 9.4 8.4 9.4 L9.6 9.6 C10.4 10 10.6 11 10.4 12.2 L9.6 12.6 Z" fill="var(--pants, #3f4a5a)"/>
+    <path d="M5.6 10.2 C5.2 8 5.8 6.4 7.8 6.4 C9.4 6.4 10 7.6 9.8 9.6 L6.2 10.4 Z" fill="var(--jacket, #3f9ad6)"/>
+    <circle cx="8.6" cy="3.8" r="3.1" fill="var(--skin, #ffe0c7)"/>
+    <path d="M5.4 4 C5.2 1.2 6.8 0.4 8.6 0.4 C10.6 0.4 11.8 1.6 11.8 3.4 L9.6 3.4 C9 3.4 8.8 4.4 8.2 5.2 L6.8 5.6 Z" fill="var(--helmet, #f6cf4a)"/>
+  </g>
+  <path d="M8.8 7.6 L12.6 8.2" stroke="#5b4636" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M8.8 7.6 L12.6 8.2" stroke="var(--jacket, #3f9ad6)" stroke-width="0.85" stroke-linecap="round"/>
+  <path d="M13.2 7.2 L12.6 8.6" stroke="#5b4636" stroke-width="0.6" stroke-linecap="round"/>
+  <circle cx="12.8" cy="8.3" r="0.55" fill="var(--skin, #ffe0c7)" stroke="#5b4636" stroke-width="0.3"/>
+  <circle cx="14.4" cy="8.4" r="0.55" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <rect x="1" y="5.8" width="4.2" height="1" rx="0.5" fill="#fff" opacity="0.35"/>
+  <rect x="1.6" y="7.4" width="3" height="1.4" rx="0.5" fill="#fff" opacity="0.75"/>
+  <path d="M6.2 1.4 Q8 0.8 9.8 1.2" stroke="#fff" stroke-opacity="0.45" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <path d="M2 13 Q5 13.6 8.6 13.2" stroke="#000" stroke-opacity="0.1" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="10.4" cy="4.2" rx="0.45" ry="0.6" fill="#3d2b22"/>
+  <ellipse cx="10.6" cy="5.2" rx="0.6" ry="0.35" fill="#ff9e9e" opacity="0.6"/>
+  <g transform="translate(3.6 14.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.7)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(12.6 14.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.7)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

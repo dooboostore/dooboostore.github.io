@@ -12,7 +12,7 @@
     {"use": "polar/nature/iceberg.svg", "at": [[60, 700], [90, 850], [300, 950], [120, 444]], "scale": 0.8, "layer": "water"},
     {"use": "polar/nature/ice-floe.svg", "at": [[80, 600], [200, 880]], "scale": 0.8, "layer": "water"},
     {"use": "polar/vehicle/icebreaker.svg", "count": 1, "scale": 0.7, "layer": "water", "behavior": {"type": "route", "path": "M0 900 L80 720 L130 600", "dur": 120}},
-    {"use": "polar/vehicle/snowmobile", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M190 560 L260 520 L330 500", "dur": 40}},
+    {"use": "polar/vehicle/snowmobile.svg", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M190 560 L260 520 L330 500", "dur": 40}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 400 C240 360 560 480 1020 400", "dur": 76}}
   ],
   "labels": [

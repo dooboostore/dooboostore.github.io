@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+  <!-- kei-truck — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
+  <g transform="translate(11 11.6) translate(0 0) scale(2.2)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <!-- 경트럭 (오른쪽을 향함): 앞이 납작한 작은 캡(색 변수 truck), 짐칸에 귤 상자. 밤엔 전조등 -->
+  <path d="M20.8 7 L30 5 L30 11 L20.8 9.2 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2.4" y="3.4" width="4.2" height="3.6" rx="0.6" fill="#e9a65a"/>
+    <rect x="6.8" y="3.4" width="4.2" height="3.6" rx="0.6" fill="#e9a65a"/>
+    <rect x="4.6" y="0.8" width="4.2" height="2.8" rx="0.6" fill="#e9a65a"/>
+    <rect x="1" y="6.4" width="12.6" height="4.4" rx="0.8" fill="#e4e1da"/>
+    <path d="M13.2 10.8 L13.2 3 C13.2 2 13.8 1.6 14.8 1.6 L19 1.6 C20.2 1.6 21 2.4 21 3.6 L21 9.8 C21 10.4 20.6 10.8 20 10.8 Z" fill="var(--truck, #f4f2ec)"/>
+    <path d="M15.4 2.8 L19.2 2.8 C19.8 2.8 20 3.2 20 3.8 L20 6 L15.4 6 Z" fill="#cfe6f4"/>
+  </g>
+  <g fill="#f08a3c"><circle cx="3.6" cy="3.2" r="0.7"/><circle cx="5.2" cy="3.1" r="0.7"/><circle cx="8.2" cy="3.2" r="0.7"/><circle cx="9.8" cy="3.1" r="0.7"/><circle cx="6.7" cy="0.7" r="0.6"/></g>
+  <g fill="#fff" opacity="0.4"><rect x="3" y="4.4" width="3" height="0.5" rx="0.25"/><rect x="7.4" y="4.4" width="3" height="0.5" rx="0.25"/></g>
+  <rect x="1.4" y="9" width="19.4" height="1.4" rx="0.6" fill="#000" opacity="0.1"/>
+  <path d="M16 3.4 L17.4 3.4" stroke="#fff" stroke-width="0.5" opacity="0.8" stroke-linecap="round"/>
+  <circle cx="20.4" cy="7.6" r="0.55" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <g transform="translate(5 10.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.8)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(17 10.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.8)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

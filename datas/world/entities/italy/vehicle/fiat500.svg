@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 12">
+  <!-- fiat500 — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
+  <g transform="translate(10 11.4) translate(0 0) scale(2)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <!-- 피아트 500 (오른쪽을 향함): 공처럼 둥근 차체(변수 car), 캔버스 지붕, 동그란 눈 전조등. 밤엔 전조등 -->
+  <path d="M18.6 6.4 L27 4.6 L27 9.6 L18.6 8.2 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M1.2 9.6 L1.2 7 C1.2 5.8 1.8 5.2 3 5 C3.6 2.6 5.6 1.2 9.6 1.2 C13.6 1.2 15.6 2.6 16.4 5 C18 5.2 18.8 6 18.8 7.4 L18.8 9.6 Q10 10.6 1.2 9.6 Z" fill="var(--car, #a8dccb)"/>
+    <path d="M4.2 5 C4.8 3.2 6 2.4 8.6 2.4 L8.6 5 Z" fill="#d8eff9"/>
+    <path d="M9.8 2.4 C12.4 2.4 13.8 3.2 14.8 5 L9.8 5 Z" fill="#d8eff9"/>
+    <rect x="6" y="0.9" width="6.6" height="1.1" rx="0.55" fill="#e9e1cf"/>
+  </g>
+  <path d="M1.4 7.6 L18.6 7.6" stroke="#f4f1ea" stroke-width="0.5" stroke-linecap="round"/>
+  <rect x="1.6" y="8.2" width="16.8" height="1.4" rx="0.7" fill="#000" opacity="0.1"/>
+  <path d="M4.6 3.4 Q7 2.2 9 2.2" stroke="#fff" stroke-width="0.5" opacity="0.7" fill="none" stroke-linecap="round"/>
+  <line x1="9.2" y1="5.2" x2="9.2" y2="8.6" stroke="#5b4636" stroke-width="0.3"/>
+  <rect x="7.6" y="6" width="1" height="0.4" rx="0.2" fill="#c9ced3"/>
+  <circle cx="18.1" cy="6.4" r="0.8" fill="#fff4b8" stroke="#5b4636" stroke-width="0.3"/>
+  <rect x="1.2" y="6" width="0.7" height="1" rx="0.3" fill="#ef6a5e"/>
+  <g transform="translate(5 9.8)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.75)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(15 9.8)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.75)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

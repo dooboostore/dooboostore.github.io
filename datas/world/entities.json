@@ -5,10 +5,6 @@
       "name": "그림자"
     },
     {
-      "id": "parts/wheel.svg",
-      "name": "바퀴"
-    },
-    {
       "id": "nature/ginkgo.svg",
       "name": {
         "ko": "은행나무",
@@ -149,7 +145,7 @@
       }
     },
     {
-      "id": "vehicle/bus",
+      "id": "vehicle/bus.svg",
       "name": {
         "ko": "시내버스",
         "en": "City bus",
@@ -164,7 +160,7 @@
       }
     },
     {
-      "id": "vehicle/boat",
+      "id": "vehicle/boat.svg",
       "name": {
         "ko": "한강 유람선",
         "en": "Han River cruise boat",
@@ -544,7 +540,7 @@
       }
     },
     {
-      "id": "korea/vehicle/taxi",
+      "id": "korea/vehicle/taxi.svg",
       "name": {
         "ko": "서울 택시",
         "en": "Seoul taxi",
@@ -559,7 +555,7 @@
       }
     },
     {
-      "id": "korea/vehicle/scooter",
+      "id": "korea/vehicle/scooter.svg",
       "name": {
         "ko": "배달 스쿠터",
         "en": "Delivery scooter",
@@ -574,7 +570,7 @@
       }
     },
     {
-      "id": "korea/vehicle/bicycle",
+      "id": "korea/vehicle/bicycle.svg",
       "name": {
         "ko": "한강 자전거",
         "en": "Han River bicycle",
@@ -1069,7 +1065,7 @@
       }
     },
     {
-      "id": "usa/vehicle/school-bus",
+      "id": "usa/vehicle/school-bus.svg",
       "name": {
         "ko": "스쿨버스",
         "en": "School bus",
@@ -1084,7 +1080,7 @@
       }
     },
     {
-      "id": "usa/vehicle/city-bus",
+      "id": "usa/vehicle/city-bus.svg",
       "name": {
         "ko": "시내버스 (서큘레이터·메트로버스)",
         "en": "City bus (Circulator & Metrobus)",
@@ -1104,7 +1100,7 @@
       }
     },
     {
-      "id": "usa/vehicle/car",
+      "id": "usa/vehicle/car.svg",
       "name": {
         "ko": "승용차",
         "en": "Car",
@@ -1119,7 +1115,7 @@
       }
     },
     {
-      "id": "usa/vehicle/food-truck",
+      "id": "usa/vehicle/food-truck.svg",
       "name": {
         "ko": "푸드트럭",
         "en": "Food truck",
@@ -1589,7 +1585,7 @@
       }
     },
     {
-      "id": "uk/vehicle/double-decker",
+      "id": "uk/vehicle/double-decker.svg",
       "name": {
         "ko": "빨간 2층 버스",
         "en": "Red double-decker bus",
@@ -1604,7 +1600,7 @@
       }
     },
     {
-      "id": "uk/vehicle/black-cab",
+      "id": "uk/vehicle/black-cab.svg",
       "name": {
         "ko": "블랙캡 택시",
         "en": "Black cab",
@@ -2099,7 +2095,7 @@
       }
     },
     {
-      "id": "france/vehicle/car",
+      "id": "france/vehicle/car.svg",
       "name": {
         "ko": "파리 소형차",
         "en": "Little Paris car",
@@ -2114,7 +2110,7 @@
       }
     },
     {
-      "id": "france/vehicle/bus",
+      "id": "france/vehicle/bus.svg",
       "name": {
         "ko": "RATP 버스",
         "en": "RATP bus",
@@ -2129,7 +2125,7 @@
       }
     },
     {
-      "id": "france/vehicle/velib",
+      "id": "france/vehicle/velib.svg",
       "name": {
         "ko": "벨리브 자전거",
         "en": "Vélib' bike",
@@ -2144,7 +2140,7 @@
       }
     },
     {
-      "id": "france/vehicle/bateau-mouche",
+      "id": "france/vehicle/bateau-mouche.svg",
       "name": {
         "ko": "바토무슈 유람선",
         "en": "Bateau-Mouche cruise boat",
@@ -2549,7 +2545,7 @@
       }
     },
     {
-      "id": "japan/vehicle/taxi",
+      "id": "japan/vehicle/taxi.svg",
       "name": {
         "ko": "도쿄 택시",
         "en": "Tokyo taxi",
@@ -2564,7 +2560,7 @@
       }
     },
     {
-      "id": "japan/vehicle/toei-bus",
+      "id": "japan/vehicle/toei-bus.svg",
       "name": {
         "ko": "도에이 버스",
         "en": "Toei Bus",
@@ -2579,7 +2575,7 @@
       }
     },
     {
-      "id": "japan/vehicle/kei-truck",
+      "id": "japan/vehicle/kei-truck.svg",
       "name": {
         "ko": "경트럭",
         "en": "Kei truck",
@@ -2594,7 +2590,7 @@
       }
     },
     {
-      "id": "japan/vehicle/train",
+      "id": "japan/vehicle/train.svg",
       "name": {
         "ko": "전철 (주오·야마노테)",
         "en": "Train (Chūō & Yamanote Lines)",
@@ -2609,7 +2605,7 @@
       }
     },
     {
-      "id": "japan/vehicle/water-bus",
+      "id": "japan/vehicle/water-bus.svg",
       "name": {
         "ko": "수상버스",
         "en": "Water bus",
@@ -2699,7 +2695,7 @@
       }
     },
     {
-      "id": "usa/vehicle/taxi",
+      "id": "usa/vehicle/taxi.svg",
       "name": {
         "ko": "옐로 캡",
         "en": "Yellow cab",
@@ -3344,7 +3340,7 @@
       }
     },
     {
-      "id": "brazil/vehicle/bonde",
+      "id": "brazil/vehicle/bonde.svg",
       "name": {
         "ko": "산타 테레자 전차",
         "en": "Santa Teresa Tram",
@@ -3464,7 +3460,7 @@
       }
     },
     {
-      "id": "china/vehicle/taxi",
+      "id": "china/vehicle/taxi.svg",
       "name": {
         "ko": "베이징 택시",
         "en": "Beijing Taxi",
@@ -3479,7 +3475,7 @@
       }
     },
     {
-      "id": "china/vehicle/tricycle",
+      "id": "china/vehicle/tricycle.svg",
       "name": {
         "ko": "후퉁 인력거",
         "en": "Hutong Pedicab",
@@ -3599,7 +3595,7 @@
       }
     },
     {
-      "id": "egypt/vehicle/taxi",
+      "id": "egypt/vehicle/taxi.svg",
       "name": {
         "ko": "카이로 택시",
         "en": "Cairo Taxi",
@@ -3719,7 +3715,7 @@
       }
     },
     {
-      "id": "italy/vehicle/fiat500",
+      "id": "italy/vehicle/fiat500.svg",
       "name": {
         "ko": "피아트 500",
         "en": "Fiat 500",
@@ -3734,7 +3730,7 @@
       }
     },
     {
-      "id": "italy/vehicle/vespa",
+      "id": "italy/vehicle/vespa.svg",
       "name": {
         "ko": "베스파",
         "en": "Vespa",
@@ -4104,7 +4100,7 @@
       }
     },
     {
-      "id": "polar/vehicle/snowmobile",
+      "id": "polar/vehicle/snowmobile.svg",
       "name": {
         "ko": "스노모빌",
         "en": "Snowmobile",
@@ -4442,7 +4438,7 @@
       }
     },
     {
-      "id": "mars/vehicle/perseverance",
+      "id": "mars/vehicle/perseverance.svg",
       "name": {
         "ko": "퍼서비어런스 로버",
         "en": "Perseverance Rover",
@@ -4454,14 +4450,6 @@
         "ko": "2021년 2월 18일 화성의 예제로 크레이터에 내려앉은 자동차만 한 탐사 로버예요. 여섯 바퀴와 로커보기 서스펜션으로 울퉁불퉁한 땅을 천천히 넘고, 돛대 위 카메라와 레이저로 바위를 살펴요. 옛 호수 바닥에서 생명의 흔적을 찾으며 바위 시료를 작은 관에 모으고 있어요.",
         "en": "A car-sized exploring rover that touched down in Mars's Jezero Crater on February 18, 2021. With six wheels and a rocker-bogie suspension, it slowly rolls over bumpy ground, and it studies rocks with the camera and laser on top of its mast. While searching for signs of life on an old lake bed, it is collecting rock samples in little tubes.",
         "zh": "这是一辆像汽车那么大的探测车，2021年2月18日降落在火星的耶泽罗陨石坑。它靠六个轮子和摇臂-转向架悬挂系统，慢慢翻越坑坑洼洼的地面，还用桅杆顶上的相机和激光仔细观察岩石。它在古老的湖底寻找生命的痕迹，并把岩石样本收集进小小的管子里。"
-      }
-    },
-    {
-      "id": "mars/vehicle/perseverance/wheel.svg",
-      "name": {
-        "ko": "로버 바퀴 (부품)",
-        "en": "Rover wheel (part)",
-        "zh": "探测车车轮（部件）"
       }
     },
     {
@@ -4788,7 +4776,7 @@
       }
     },
     {
-      "id": "taiwan/vehicle/scooter",
+      "id": "taiwan/vehicle/scooter.svg",
       "name": {
         "ko": "타이베이 스쿠터",
         "en": "Taipei scooter",
@@ -4908,7 +4896,7 @@
       }
     },
     {
-      "id": "russia/vehicle/trolleybus",
+      "id": "russia/vehicle/trolleybus.svg",
       "name": {
         "ko": "트롤리버스",
         "en": "Trolleybus",
@@ -5103,7 +5091,7 @@
       }
     },
     {
-      "id": "iran/vehicle/paykan",
+      "id": "iran/vehicle/paykan.svg",
       "name": {
         "ko": "페이칸",
         "en": "Paykan",
@@ -5208,7 +5196,7 @@
       }
     },
     {
-      "id": "saudi/vehicle/suv",
+      "id": "saudi/vehicle/suv.svg",
       "name": {
         "ko": "사막 SUV",
         "en": "Desert SUV",
@@ -5358,7 +5346,7 @@
       }
     },
     {
-      "id": "india/vehicle/auto-rickshaw",
+      "id": "india/vehicle/auto-rickshaw.svg",
       "name": {
         "ko": "오토릭샤",
         "en": "Auto rickshaw",
@@ -5508,7 +5496,7 @@
       }
     },
     {
-      "id": "germany/vehicle/tram",
+      "id": "germany/vehicle/tram.svg",
       "name": {
         "ko": "베를린 트램",
         "en": "Berlin tram",
@@ -5523,7 +5511,7 @@
       }
     },
     {
-      "id": "germany/vehicle/bicycle",
+      "id": "germany/vehicle/bicycle.svg",
       "name": {
         "ko": "베를린 자전거",
         "en": "Berlin bicycle",
@@ -5643,7 +5631,7 @@
       }
     },
     {
-      "id": "thailand/vehicle/tuk-tuk",
+      "id": "thailand/vehicle/tuk-tuk.svg",
       "name": {
         "ko": "툭툭",
         "en": "Tuk-tuk",
@@ -5868,7 +5856,7 @@
       }
     },
     {
-      "id": "northkorea/vehicle/tram",
+      "id": "northkorea/vehicle/tram.svg",
       "name": {
         "ko": "평양 전차",
         "en": "Pyongyang tram",
@@ -5883,7 +5871,7 @@
       }
     },
     {
-      "id": "northkorea/vehicle/trolleybus",
+      "id": "northkorea/vehicle/trolleybus.svg",
       "name": {
         "ko": "평양 무궤도전차",
         "en": "Pyongyang trolleybus",
@@ -6078,7 +6066,7 @@
       }
     },
     {
-      "id": "mexico/vehicle/vocho-taxi",
+      "id": "mexico/vehicle/vocho-taxi.svg",
       "name": {
         "ko": "보초 택시",
         "en": "Vocho Taxi",

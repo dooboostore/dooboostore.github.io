@@ -8,7 +8,7 @@
     {"use": "korea/people/hiker", "count": 1, "area": [545, 735, 60, 35], "scale": 0.55},
     {"use": "usa/people/tourist", "count": 2, "area": [545, 735, 60, 35], "scale": 0.55},
     {"use": "korea/vehicle/ferry.svg", "count": 1, "scale": 0.5, "layer": "water", "behavior": {"type": "route", "path": "M957.4 984.5 L957.3 971 L955.3 969.1 L927.8 957.2 L858.6 928.5 L777.5 897.1 L718.3 875.8 L641.4 850.4 L621 845.8 L606.2 843.5 L585.2 842 L570.3 842.5 L552.5 845.2 L541 848.7 L530.1 853.6 L520 860", "dur": 90}},
-    {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M160 820 Q300 880 480 880 Q720 900 820 760 Q860 620 760 560 Q620 470 500 440 Q300 400 200 520 Q140 640 160 820", "dur": 160}},
+    {"use": "vehicle/boat.svg", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M160 820 Q300 880 480 880 Q720 900 820 760 Q860 620 760 560 Q620 470 500 440 Q300 400 200 520 Q140 640 160 820", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 540 C240 500 560 620 1020 540", "dur": 70}}
   ],
   "labels": [

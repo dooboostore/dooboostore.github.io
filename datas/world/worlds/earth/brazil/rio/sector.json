@@ -12,8 +12,8 @@
     {"use": "brazil/vehicle/bondinho.svg", "count": 2, "z": 40, "scale": 0.6, "behavior": {"type": "route", "path": "M656 484 L695 436 L779 383", "dur": 60}},
     {"use": "people/walker", "count": 12, "area": [280, 520, 320, 240], "scale": 0.9, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e", "#b97f55", "#8d5a3b"], "--hair": ["#2a2421", "#3d302a", "#6b4a35", "#a7a29d"], "--shirt": ["#e9785a", "#8cbfdc", "#f3d38a", "#a8d5b0", "#c6b2e3"], "--pants": ["#3d4a6b", "#56627e", "#c9b48a"]}},
     {"use": "usa/people/tourist", "count": 8, "area": [340, 690, 120, 60], "scale": 0.9, "spacing": 6, "vars": {"--skin": ["#f7e0cc", "#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#3d302a", "#2a2421", "#6b4a35"], "--shirt": ["#f3d38a", "#a8d5b0", "#f1f1f1"], "--cap": ["#d6453d", "#4f6fb0"], "--pants": ["#c9b48a", "#8d8f94"]}},
-    {"use": "vehicle/boat", "count": 3, "scale": 0.45, "layer": "water", "spacing": 30, "vars": {"--sail": "#fbf8f2"}, "behavior": {"type": "route", "path": "M525 412.5 L554.1 429.8 L574.4 429 L575.9 427.5 L580.6 427.4 L586.3 425.7 L600 420", "dur": 80}},
-    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M680 480 Q710 495 740 485", "dur": 90}},
+    {"use": "vehicle/boat.svg", "count": 3, "scale": 0.45, "layer": "water", "spacing": 30, "vars": {"--sail": "#fbf8f2"}, "behavior": {"type": "route", "path": "M525 412.5 L554.1 429.8 L574.4 429 L575.9 427.5 L580.6 427.4 L586.3 425.7 L600 420", "dur": 80}},
+    {"use": "vehicle/boat.svg", "count": 2, "scale": 0.4, "layer": "water", "spacing": 30, "behavior": {"type": "route", "path": "M680 480 Q710 495 740 485", "dur": 90}},
     {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 460 C240 400 560 560 1020 480", "dur": 80}}
   ],
   "labels": [

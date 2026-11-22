@@ -14,7 +14,7 @@
     {"use": "korea/structure/cafe.svg", "at": [[752, 582]], "scale": 0.6},
     {"use": "korea/structure/convenience-store.svg", "at": [[766, 572]], "scale": 0.55},
     {"use": "korea/vehicle/ferry.svg", "count": 1, "scale": 0.7, "layer": "water", "behavior": {"type": "route", "path": "M957.2 821.1 L957.4 818.4 L954.4 813 L918.5 769.4 L889.4 735.6 L841.4 682.7 L800 640", "dur": 90}},
-    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M850 440 Q890 500 860 570", "dur": 70}},
+    {"use": "vehicle/boat.svg", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M850 440 Q890 500 860 570", "dur": 70}},
     {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M40 500 C285 436 547 567 923 486", "dur": 80}}
   ],
   "labels": [

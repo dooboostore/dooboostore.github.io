@@ -1,9 +1,0 @@
-{
-  "svg": "body.svg",
-  "foot": [0.5, 1],
-  "parts": [
-    { "use": "parts/shadow.svg", "at": [8, 17.4], "scale": 1.4, "under": true },
-    { "use": "parts/wheel.svg", "at": [3.4, 15.2], "scale": 1.05, "anim": "spin" },
-    { "use": "parts/wheel.svg", "at": [12.6, 15.2], "scale": 1.05, "anim": "spin" }
-  ]
-}

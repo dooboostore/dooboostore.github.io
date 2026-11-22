@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12">
+  <!-- taxi — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
+  <g transform="translate(12 11.6) translate(0 0) scale(2.4)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <!-- 카이로 흰 택시 (오른쪽을 향함): 흰 세단(변수 taxi), 옆구리 검정·흰 체크 띠, 지붕 표시등. 밤엔 표시등·전조등 -->
+  <path d="M22.6 7 L32 5 L32 11 L22.6 9.2 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="10.6" y="0.6" width="3.4" height="1.6" rx="0.7" fill="#fbf8f0"/>
+    <path d="M1.2 10 L1.2 6.8 C1.2 5.8 1.8 5.2 3 5.2 L5.4 5.2 L7.4 2.8 C7.9 2.2 8.6 2 9.4 2 L14.6 2 C15.4 2 16 2.3 16.6 3 L18.6 5.2 L21.6 5.6 C22.6 5.8 23.2 6.4 23.2 7.4 L23.2 10 C23.2 10.6 22.8 11 22.2 11 L2.2 11 C1.6 11 1.2 10.6 1.2 10 Z" fill="var(--taxi, #f6f4ee)"/>
+    <path d="M6.4 5.2 L7.9 3.4 Q8.4 3 9 3 L11.6 3 L11.6 5.2 Z" fill="#cfe6f4"/>
+    <path d="M12.8 3 L15 3 Q15.6 3 16 3.4 L17.6 5.2 L12.8 5.2 Z" fill="#cfe6f4"/>
+    <rect x="1.4" y="6.6" width="21.6" height="1.2" rx="0.3" fill="#2f2a2a" stroke-width="0.3"/>
+  </g>
+  <g fill="#f6f4ee"><rect x="2.2" y="6.6" width="0.9" height="0.6"/><rect x="4" y="7.2" width="0.9" height="0.6"/><rect x="5.8" y="6.6" width="0.9" height="0.6"/><rect x="7.6" y="7.2" width="0.9" height="0.6"/><rect x="9.4" y="6.6" width="0.9" height="0.6"/><rect x="11.2" y="7.2" width="0.9" height="0.6"/><rect x="13" y="6.6" width="0.9" height="0.6"/><rect x="14.8" y="7.2" width="0.9" height="0.6"/><rect x="16.6" y="6.6" width="0.9" height="0.6"/><rect x="18.4" y="7.2" width="0.9" height="0.6"/><rect x="20.2" y="6.6" width="0.9" height="0.6"/></g>
+  <rect x="10.6" y="0.6" width="3.4" height="1.6" rx="0.7" fill="#ffcf5e" style="opacity: calc(0.15 + var(--night, 0) * 0.85)"/>
+  <rect x="1.6" y="9.2" width="21.4" height="1.4" rx="0.6" fill="#000" opacity="0.1"/>
+  <path d="M8 3.6 L9.4 3.6" stroke="#fff" stroke-width="0.5" opacity="0.8" stroke-linecap="round"/>
+  <line x1="12.2" y1="3" x2="12.2" y2="9" stroke="#5b4636" stroke-width="0.3" opacity="0.6"/>
+  <circle cx="22.5" cy="8.6" r="0.55" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <rect x="1.2" y="8.2" width="0.8" height="0.9" rx="0.3" fill="#ef6a5e"/>
+  <g transform="translate(6 10.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.85)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(18.4 10.4)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(0.85)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

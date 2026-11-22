@@ -271,16 +271,20 @@ lazycollect 의 기존 SubLayer 데이터(비둘기 등)를 재사용하려면 *
 | 형태 | id 예 | 파일 |
 |---|---|---|
 | svg 하나 | `nature/ginkgo.svg` | `entities/nature/ginkgo.svg` |
-| 조립형 | `vehicle/bus` | `entities/vehicle/bus/entity.json` + `body.svg` |
+| 조립형 (사람·동물: 앞/뒤/옆 view, 부품 교체) | `people/walker` | `entities/people/walker/entity.json` + `*.svg` |
+
+**탈것은 조립형을 쓰지 않는다** — 바퀴·그림자를 `body.svg` 안에 직접 넣어 `<이름>.svg` 하나로 둔다 (`vehicle/bus.svg`).
+탈것은 view 가 하나뿐이고 부품을 갈아 끼울 일이 없어서, 폴더로 쪼개면 파일만 4배가 된다.
+바퀴 회전은 합친 svg 안에서 `<animateTransform>` 으로 그대로 살린다.
+기존 조립형 탈것은 `tools/merge-vehicles.mjs` 로 한 번에 합친다 (사람·동물은 그대로 둔다).
 
 ```jsonc
-// entities/vehicle/bus/entity.json
+// entities/people/walker/entity.json  ← 조립형은 사람·동물처럼 view/부품 조합이 필요할 때만
 {
   "svg": "body.svg",                // 자기 폴더 기준 상대경로. 크기 = viewBox
   "foot": [0.5, 1],                 // 기준점(viewBox 비율): 배치 좌표·y정렬 기준
   "parts": [                        // 조립: 다른 entity 참조 (entities/ 루트 기준 id)
-    { "use": "parts/shadow.svg", "at": [16, 13], "scale": 3.2, "under": true },
-    { "use": "parts/wheel.svg",  "at": [8, 11], "anim": "spin" }
+    { "use": "parts/shadow.svg", "at": [6, 17.6], "scale": 1, "under": true }
   ],
   "behavior": { "type": "wander", "speed": 5, "pause": [2, 9] }   // 선택, 배치에서 덮어씀
 }
@@ -316,7 +320,7 @@ lazycollect 의 기존 SubLayer 데이터(비둘기 등)를 재사용하려면 *
     { "use": "nature/ginkgo.svg", "at": [[20, 136], [60, 136]] },                // 여러 개
     { "use": "people/walker", "count": 14, "area": [150, 130, 230, 56],          // 영역 안에 무작위 + 배회
       "vars": { "--shirt": ["#8cbfdc", "#e9a6a1"] } },                           // 배열이면 무작위로 고름
-    { "use": "vehicle/bus", "count": 2, "flip": true, "vars": { "--bus": "#5d8fd6" },
+    { "use": "vehicle/bus.svg", "count": 2, "flip": true, "vars": { "--bus": "#5d8fd6" },
       "behavior": { "type": "route", "path": "M520 124 H-40", "dur": 48 } }     // 경로 순환 (SMIL animateMotion)
   ]
 }

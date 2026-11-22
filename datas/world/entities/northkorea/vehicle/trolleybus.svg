@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 18">
+  <!-- trolleybus — 바퀴·그림자를 body 안에 합친 단일 SVG (tools/merge-vehicles.mjs) -->
+  <g transform="translate(17 17.6) translate(0 0) scale(3.4)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <!-- 평양 무궤도전차 (오른쪽을 향함): 크림색 윗몸과 파란 아랫몸(bus 변수) 사이의 가는 빨간 줄, 지붕에서 뒤로 뻗어 전선에 닿는 집전봉 두 개, 반듯한 앞유리. 밤엔 실내등·전조등 -->
+  <path d="M33 11.4 L44 9 L44 17 L33 14.4 Z" fill="#fff2b0" style="opacity: calc(var(--night, 0) * 0.5)"/>
+  <path d="M22 4.2 L5.4 0.8 M23.8 4.2 L7.6 1" fill="none" stroke="#5b4636" stroke-width="1" stroke-linecap="round"/>
+  <path d="M22 4.2 L5.4 0.8 M23.8 4.2 L7.6 1" fill="none" stroke="#6b737a" stroke-width="0.45" stroke-linecap="round"/>
+  <g fill="#3e4348" stroke="#5b4636" stroke-width="0.3"><circle cx="5.4" cy="0.8" r="0.5"/><circle cx="7.6" cy="1" r="0.5"/></g>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round">
+    <rect x="20.8" y="3.4" width="4.2" height="1.6" rx="0.6" fill="#8c939a"/>
+    <rect x="1" y="4.8" width="32" height="11.2" rx="1.6" fill="#f4ecd8"/>
+    <path d="M1 11 L33 11 L33 14.4 C33 15.3 32.3 16 31.4 16 L2.6 16 C1.7 16 1 15.3 1 14.4 Z" fill="var(--bus, #4a8fb8)"/>
+    <rect x="2.6" y="6.4" width="7" height="3.6" rx="0.8" fill="#d8eff9"/>
+    <rect x="13.4" y="6.4" width="11.6" height="3.6" rx="0.8" fill="#d8eff9"/>
+    <rect x="27.4" y="6.2" width="5.2" height="4.4" rx="0.8" fill="#cbe8f5"/>
+    <rect x="10.2" y="6.2" width="2.6" height="9.2" rx="0.5" fill="#cfe6f4"/>
+    <rect x="25.6" y="6.2" width="1.4" height="9.2" rx="0.5" fill="#cfe6f4"/>
+  </g>
+  <g fill="#ffe9a3" style="opacity: var(--night, 0)"><rect x="2.6" y="6.4" width="7" height="3.6" rx="0.8"/><rect x="13.4" y="6.4" width="11.6" height="3.6" rx="0.8"/></g>
+  <path d="M1.2 10.8 L32.8 10.8" stroke="#d8342c" stroke-width="0.5"/>
+  <g stroke="#f4ecd8" stroke-width="0.6"><line x1="6" y1="6.4" x2="6" y2="10"/><line x1="19.2" y1="6.4" x2="19.2" y2="10"/></g>
+  <path d="M3.4 7 L6 7 M14 7 L17 7" stroke="#fff" stroke-width="0.5" opacity="0.8" stroke-linecap="round"/>
+  <rect x="27.8" y="5.2" width="4" height="0.8" rx="0.4" fill="#3e3a3a"/>
+  <rect x="1.4" y="14.2" width="31.2" height="1.4" rx="0.6" fill="#000" opacity="0.1"/>
+  <circle cx="32.2" cy="13.2" r="0.7" fill="#fff4b8" stroke="#5b4636" stroke-width="0.25"/>
+  <rect x="1.1" y="12.4" width="0.8" height="1.2" rx="0.3" fill="#ef6a5e"/>
+  <g transform="translate(8 16)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(26 16)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.9s" repeatCount="indefinite"/><g transform="translate(0 0) scale(1)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

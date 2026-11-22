@@ -11,7 +11,7 @@
     {"use": "thailand/people/monk", "count": 4, "area": [347, 302, 40, 30], "scale": 0.7, "spacing": 6},
     {"use": "thailand/people/local", "count": 6, "area": [376, 156, 80, 40], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 3, "area": [332, 268, 50, 30], "scale": 0.7, "spacing": 6},
-    {"use": "thailand/vehicle/tuk-tuk", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M495.6 251.7 L543.1 254.7 L676.3 299.2", "dur": 22}},
+    {"use": "thailand/vehicle/tuk-tuk.svg", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M495.6 251.7 L543.1 254.7 L676.3 299.2", "dur": 22}},
     {"use": "thailand/vehicle/longtail-boat.svg", "count": 2, "scale": 0.5, "layer": "water", "behavior": {"type": "route", "path": "M411 42 L402 60 L393 78 L381 96 L363 114 L345 132 L327 150 L315 168 L315 186 L315 204 L315 222 L315 240 L318 258 L321 276 L324 294 L333 312 L342 330 L357 348 L372 366 L390 384 L408 399 L426 405 L444 408 L462 414 L480 417 L498 423 L516 429 L534 438 L552 456 L570 474 L579 492 L579 510 L579 528 L579 546 L579 564 L579 582 L579 600 L579 618", "dur": 160}},
     {"use": "thailand/vehicle/river-express.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M569.7 473.7 L533.6 437.8 L517.5 429.8 L480.7 417.2 L463 414.2 L443.1 407.8 L428.3 405.4 L408.4 399.1 L389.9 383.9 L373 367 L342.2 330.3 L336.4 320.5 L323.8 292.7 L315 239.6 L315.2 167.8 L326.8 150.3 L379.6 97.4 L385.2 90.6 L393.2 77.7 L408.4 48.2 L420.2 14.5 L421.7 13.2", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 280 C240 240 560 360 1020 280", "dur": 76}}

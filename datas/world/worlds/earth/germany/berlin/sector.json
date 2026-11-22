@@ -12,9 +12,9 @@
     {"use": "germany/people/local", "count": 6, "area": [759, 274, 60, 40], "scale": 0.7, "spacing": 6},
     {"use": "germany/people/local", "count": 4, "area": [436, 365, 50, 30], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 4, "area": [431, 365, 60, 30], "scale": 0.7, "spacing": 6},
-    {"use": "germany/vehicle/tram", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M771.6 265.4 L659.4 357.1 L534.8 369.5", "dur": 47}},
-    {"use": "germany/vehicle/bicycle", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M200 420 L700 420", "dur": 60}},
-    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M687 345 L699 363 L714 381 L732 399 L750 405 L768 405 L786 405 L804 405 L822 408 L840 420 L858 429 L876 438 L894 456 L912 471 L930 486 L948 498 L954 498", "dur": 160}},
+    {"use": "germany/vehicle/tram.svg", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M771.6 265.4 L659.4 357.1 L534.8 369.5", "dur": 47}},
+    {"use": "germany/vehicle/bicycle.svg", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M200 420 L700 420", "dur": 60}},
+    {"use": "vehicle/boat.svg", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M687 345 L699 363 L714 381 L732 399 L750 405 L768 405 L786 405 L804 405 L822 408 L840 420 L858 429 L876 438 L894 456 L912 471 L930 486 L948 498 L954 498", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 250 C240 210 560 330 1020 250", "dur": 76}}
   ],
   "labels": [

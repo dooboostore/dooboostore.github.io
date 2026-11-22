@@ -14,9 +14,9 @@
     {"use": "taiwan/people/local", "count": 4, "area": [295, 620, 50, 30], "scale": 0.7, "spacing": 6},
     {"use": "taiwan/people/elder", "count": 3, "area": [290, 885, 40, 25], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 3, "area": [480, 890, 30, 20], "scale": 0.7, "spacing": 6},
-    {"use": "taiwan/vehicle/scooter", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M374.5 844.2 L550.7 848.4 L561.6 841.2 L579.8 816 L587.4 811.3 L626.4 801 L718 788.7", "dur": 36}},
-    {"use": "taiwan/vehicle/scooter", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M323.5 687.8 L334.1 703.9 L333 793 L338.2 807.6 L346.8 818.5 L346.3 822.7", "dur": 20}},
-    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M3 288 L12 306 L18 324 L21 342 L24 360 L24 378 L27 396 L27 414 L33 432 L39 450 L45 468 L48 486 L57 504 L60 522 L78 540 L96 558 L114 564 L132 570 L150 576 L168 585 L186 600 L204 618 L222 636 L240 654 L240 672 L240 690 L240 708 L237 726 L237 744 L228 762 L210 780 L192 798 L180 816 L162 834 L144 849 L126 849 L108 852 L90 855 L72 861 L54 870 L36 876 L18 888 L3 906", "dur": 240}},
+    {"use": "taiwan/vehicle/scooter.svg", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M374.5 844.2 L550.7 848.4 L561.6 841.2 L579.8 816 L587.4 811.3 L626.4 801 L718 788.7", "dur": 36}},
+    {"use": "taiwan/vehicle/scooter.svg", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M323.5 687.8 L334.1 703.9 L333 793 L338.2 807.6 L346.8 818.5 L346.3 822.7", "dur": 20}},
+    {"use": "vehicle/boat.svg", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M3 288 L12 306 L18 324 L21 342 L24 360 L24 378 L27 396 L27 414 L33 432 L39 450 L45 468 L48 486 L57 504 L60 522 L78 540 L96 558 L114 564 L132 570 L150 576 L168 585 L186 600 L204 618 L222 636 L240 654 L240 672 L240 690 L240 708 L237 726 L237 744 L228 762 L210 780 L192 798 L180 816 L162 834 L144 849 L126 849 L108 852 L90 855 L72 861 L54 870 L36 876 L18 888 L3 906", "dur": 240}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 500 C240 460 560 580 1020 500", "dur": 76}}
   ],
   "labels": [

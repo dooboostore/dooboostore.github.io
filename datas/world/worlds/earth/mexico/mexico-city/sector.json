@@ -17,8 +17,8 @@
     {"use": "mexico/people/local", "count": 6, "area": [830, 282, 60, 40], "scale": 0.7, "spacing": 6},
     {"use": "mexico/people/local", "count": 4, "area": [608, 327, 50, 30], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 4, "area": [513, 372, 50, 30], "scale": 0.7, "spacing": 6},
-    {"use": "mexico/vehicle/vocho-taxi", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M433.1 263.2 L528.1 268.4 L592.6 323.8", "dur": 20}},
-    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#d9443a"}, "behavior": {"type": "route", "path": "M593.3 324.1 L646.3 226.3 L653.5 193.9", "dur": 25}},
+    {"use": "mexico/vehicle/vocho-taxi.svg", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M433.1 263.2 L528.1 268.4 L592.6 323.8", "dur": 20}},
+    {"use": "vehicle/bus.svg", "count": 1, "scale": 0.55, "vars": {"--bus": "#d9443a"}, "behavior": {"type": "route", "path": "M593.3 324.1 L646.3 226.3 L653.5 193.9", "dur": 25}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],
   "labels": [

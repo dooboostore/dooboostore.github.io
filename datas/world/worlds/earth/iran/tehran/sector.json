@@ -13,8 +13,8 @@
     {"use": "iran/people/local", "count": 4, "area": [596, 330, 40, 30], "scale": 0.7, "spacing": 6},
     {"use": "iran/people/chador-woman", "count": 3, "area": [596, 335, 40, 30], "scale": 0.7, "spacing": 6},
     {"use": "usa/people/tourist", "count": 2, "area": [455, 300, 25, 15], "scale": 0.7, "spacing": 6},
-    {"use": "iran/vehicle/paykan", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M459.1 337.5 L452.2 339.1 L441 347.6 L436.4 348.1 L345 343.1 L289.5 332.8 L279.9 329.3", "dur": 20}},
-    {"use": "iran/vehicle/paykan", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M684.2 357.2 L677.3 348.9 L675.4 343.5 L677.1 331.4 L671.9 317.2 L670.9 304.3 L673 283.2 L671 263.9 L672.6 259.9 L676.8 255.4 L698.8 240.2 L715.4 219.6 L717.3 213.2", "dur": 29}},
+    {"use": "iran/vehicle/paykan.svg", "count": 3, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M459.1 337.5 L452.2 339.1 L441 347.6 L436.4 348.1 L345 343.1 L289.5 332.8 L279.9 329.3", "dur": 20}},
+    {"use": "iran/vehicle/paykan.svg", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M684.2 357.2 L677.3 348.9 L675.4 343.5 L677.1 331.4 L671.9 317.2 L670.9 304.3 L673 283.2 L671 263.9 L672.6 259.9 L676.8 255.4 L698.8 240.2 L715.4 219.6 L717.3 213.2", "dur": 29}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 250 C240 210 560 330 1020 250", "dur": 76}}
   ],
   "labels": [
