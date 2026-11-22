@@ -628,3 +628,17 @@ lazycollect 의 기존 SubLayer 데이터(비둘기 등)를 재사용하려면 *
 - **SSR:** 가짜 window 에는 performance 가 없다 → `now()` 헬퍼를 쓴다.
 - **새 지역:** 평양, 베를린, 방콕, 아그라, 상트페테르부르크. 지구본 북극곰·펭귄·물범도 추가.
 - **build-city `nominatim()`:** 첫 결과가 점(도시 노드)이면 다음 결과 중 면을 쓴다.
+
+### 8.18 다국어 · 지명 라벨 분리 · 부드러운 비행 (2026-11-22)
+
+- **지명은 지도 요소가 아니라 라벨이다.** `ground.svg` 의 `<text>` 를 `sector.json` 의 `labels` 로 옮겼다 (`tools/move-labels.py`).
+  - 형식: `{ text, at, size, color?, info? }`. 지명 도감도 같은 항목에 둔다.
+  - 장면이 그리고, 언어를 바꾸면 `relabel()` 로 다시 쓴다.
+- **다국어(`i18n.ts`):**
+  - 데이터 글자는 문자열이거나 `{ ko, en, zh }` 이고 `tr()` 로 고른다. 화면 문구는 `t(키)`, 정적 HTML 은 `data-t` / `data-t-title` / `data-t-placeholder`.
+  - 언어 고르는 순서: 주소 `lang=` → localStorage `world.lang` → 브라우저 언어 → 한국어.
+  - 버튼: 📍 위 동그란 버튼(지금 언어)을 누르면 한/EN/中 이 펼쳐진다.
+- **번역 범위:**
+  - entities(이름·도감), 라벨·지명 도감, 지역·세계 이름, 교통 이름, 달·화성 지형 이름.
+  - 나라 이름은 Natural Earth NAME_EN / NAME_ZH (`build-countries.mjs` 출력 `name: { ko, en, zh }`).
+- **비행:** van Wijk & Nuij 부드러운 줌·이동 (d3.interpolateZoom 과 같은 식). 줌 아웃하는 동안에도 목적지로 계속 움직인다.

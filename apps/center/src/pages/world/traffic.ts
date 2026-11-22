@@ -12,7 +12,7 @@ import { EntityRegistry, SVGNS, useAt, Win } from './entity';
 type LL = [number, number];
 // upright: 진행 방향으로 돌리지 않고 늘 세워 둔다 (구름). opacity: 그림 자체 투명도
 // period: 이 초마다 한 번만 지나간다 (유성처럼 가끔 스치는 것). 지나가는 데는 dur 초, 나머지 시간은 안 보임
-export type Route = { use: string; kind: 'sea' | 'air' | 'space'; name?: string; upright?: boolean; opacity?: number; period?: number; path: LL[]; dur: number; count?: number; pingpong?: boolean; z?: number; size?: number; vars?: Record<string, string> };
+export type Route = { use: string; kind: 'sea' | 'air' | 'space'; name?: import('./i18n').Text; upright?: boolean; opacity?: number; period?: number; path: LL[]; dur: number; count?: number; pingpong?: boolean; z?: number; size?: number; vars?: Record<string, string> };
 
 // body: 진행 방향으로 돌고 크기가 붙는 그림 · shadow: 비행기처럼 낮게 나는 것의 땅 그림자 (몸체를 위로 띄워 고도가 느껴지게)
 const flyer = (r: Route) => r.kind === 'air' && (r.z ?? 0) > 0 && (r.z ?? 0) <= 100;

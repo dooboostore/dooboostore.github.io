@@ -18,10 +18,10 @@
     {"use": "polar/vehicle/snowmobile", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M440 500 L520 540 L600 560", "dur": 40}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],
-  "info": {
-    "다산과학기지": {"title": "다산과학기지", "emoji": "🇰🇷", "kind": "지명", "desc": "2002년 노르웨이 스발바르 뉘올레순에 문을 연 우리나라 첫 북극 과학기지예요. 북극의 바다·대기·생물을 연구해요."},
-    "뉘올레순": {"title": "뉘올레순", "emoji": "🏘️", "kind": "지명", "desc": "북위 79도 가까이에 있는 작은 연구 마을이에요. 여러 나라의 연구기지가 모여 있어 북극 연구의 마을로 불려요."},
-    "콩스피오르": {"title": "콩스피오르", "emoji": "🌊", "kind": "지명", "desc": "뉘올레순 앞에 길게 들어온 피오르예요. 빙하가 바다로 흘러들어 빙산이 둥둥 떠다니곤 해요."},
-    "블롬스트란 반도": {"title": "블롬스트란 반도", "emoji": "🏔️", "kind": "지명", "desc": "콩스피오르 건너편의 땅이에요. 빙하가 물러나면서 섬처럼 드러난 곳이랍니다."}
-  }
+  "labels": [
+    {"text": {"ko": "다산과학기지", "en": "Dasan Station", "zh": "茶山科学站"}, "at": [440.0, 548.0], "size": 11.0, "color": "#5f7a8c", "info": {"emoji": "🇰🇷", "kind": "지명", "title": {"ko": "다산과학기지", "en": "Dasan Station", "zh": "茶山科学站"}, "desc": {"ko": "2002년 노르웨이 스발바르 뉘올레순에 문을 연 우리나라 첫 북극 과학기지예요. 북극의 바다·대기·생물을 연구해요.", "en": "Korea's first Arctic research station, opened in 2002 in Ny-Ålesund, Svalbard, Norway. It studies the Arctic sea, air and living things.", "zh": "这是2002年在挪威斯瓦尔巴群岛新奥尔松开设的韩国第一座北极科考站。这里研究北极的海洋、大气和生物。"}}},
+    {"text": {"ko": "뉘올레순", "en": "Ny-Ålesund", "zh": "新奥尔松"}, "at": [400.0, 430.0], "size": 9.0, "color": "#5f7a8c", "info": {"emoji": "🏘️", "kind": "지명", "title": {"ko": "뉘올레순", "en": "Ny-Ålesund", "zh": "新奥尔松"}, "desc": {"ko": "북위 79도 가까이에 있는 작은 연구 마을이에요. 여러 나라의 연구기지가 모여 있어 북극 연구의 마을로 불려요.", "en": "A tiny research village close to 79° north. Research stations from many countries gather here, so it's called the village of Arctic research.", "zh": "一个靠近北纬79度的小小科研村。许多国家的科考站聚集在这里，所以被称为北极科研村。"}}},
+    {"text": {"ko": "콩스피오르", "en": "Kongsfjorden", "zh": "孔斯峡湾"}, "at": [560.0, 250.0], "size": 12.0, "color": "#5f7a8c", "info": {"emoji": "🌊", "kind": "지명", "title": {"ko": "콩스피오르", "en": "Kongsfjorden", "zh": "孔斯峡湾"}, "desc": {"ko": "뉘올레순 앞에 길게 들어온 피오르예요. 빙하가 바다로 흘러들어 빙산이 둥둥 떠다니곤 해요.", "en": "A long fjord stretching in front of Ny-Ålesund. Glaciers flow into the sea here, and icebergs often bob along on the water.", "zh": "新奥尔松前方长长伸入陆地的峡湾。冰川流入大海，冰山常常在水面上漂来漂去。"}}},
+    {"text": {"ko": "블롬스트란 반도", "en": "Blomstrandhalvøya", "zh": "布洛姆斯特兰半岛"}, "at": [650.0, 90.0], "size": 9.0, "color": "#5f7a8c", "info": {"emoji": "🏔️", "kind": "지명", "title": {"ko": "블롬스트란 반도", "en": "Blomstrandhalvøya", "zh": "布洛姆斯特兰半岛"}, "desc": {"ko": "콩스피오르 건너편의 땅이에요. 빙하가 물러나면서 섬처럼 드러난 곳이랍니다.", "en": "The land across Kongsfjorden. As the glacier retreated, it was revealed to be almost like an island.", "zh": "孔斯峡湾对岸的陆地。随着冰川后退，它像一座岛一样显露了出来。"}}}
+  ]
 }

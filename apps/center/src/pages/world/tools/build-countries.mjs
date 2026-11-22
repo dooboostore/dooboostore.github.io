@@ -10,7 +10,8 @@ const round = (c) => (typeof c[0] === 'number' ? [+c[0].toFixed(2), +c[1].toFixe
 const features = ne.features.map((f) => ({
   type: 'Feature',
   // ISO_A2 는 프랑스·노르웨이가 -99 라서 _EH 사용
-  properties: { iso: f.properties.ISO_A2_EH, name: f.properties.NAME_KO || f.properties.NAME },
+  // 이름은 다국어 { ko, en, zh } (Natural Earth 의 NAME_KO · NAME_EN · NAME_ZH)
+  properties: { iso: f.properties.ISO_A2_EH, name: { ko: f.properties.NAME_KO || f.properties.NAME, en: f.properties.NAME_EN || f.properties.NAME, zh: f.properties.NAME_ZH || f.properties.NAME } },
   geometry: { type: f.geometry.type, coordinates: round(f.geometry.coordinates) },
 }));
 

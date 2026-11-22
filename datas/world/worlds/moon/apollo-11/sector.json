@@ -12,9 +12,9 @@
     {"use": "moon/nature/moon-rock.svg", "count": 14, "area": [60, 60, 840, 840], "scale": 0.8, "spacing": 40},
     {"use": "moon/nature/moon-rock.svg", "count": 6, "area": [120, 350, 200, 180], "scale": 1.1, "spacing": 20}
   ],
-  "info": {
-    "고요의 기지": {"title": "고요의 기지", "emoji": "🌕", "kind": "지명", "desc": "1969년 7월 20일 아폴로 11호 달 착륙선 이글이 내려앉은 곳이에요. 암스트롱이 \"휴스턴, 여기는 고요의 기지\"라고 처음 알렸답니다."},
-    "웨스트 크레이터": {"title": "웨스트 크레이터", "emoji": "🕳️", "kind": "지명", "desc": "착륙 지점 서쪽 약 400m의 크레이터예요. 암스트롱은 바위가 많은 이 크레이터를 피해 착륙선을 손으로 조종해 더 멀리 내렸어요."},
-    "리틀 웨스트 크레이터": {"title": "리틀 웨스트 크레이터", "emoji": "👣", "kind": "지명", "desc": "착륙선 동쪽 약 60m의 작은 크레이터예요. 암스트롱이 걸어가 안을 들여다본, 아폴로 11호 탐사에서 가장 멀리 간 곳이에요."}
-  }
+  "labels": [
+    {"text": {"ko": "웨스트 크레이터", "en": "West Crater", "zh": "西陨石坑"}, "at": [160.0, 390.0], "size": 13.0, "color": "#6f6a7a", "info": {"emoji": "🕳️", "kind": "지명", "title": {"ko": "웨스트 크레이터", "en": "West Crater", "zh": "西陨石坑"}, "desc": {"ko": "착륙 지점 서쪽 약 400m의 크레이터예요. 암스트롱은 바위가 많은 이 크레이터를 피해 착륙선을 손으로 조종해 더 멀리 내렸어요.", "en": "A crater about 400 m west of the landing site. Armstrong steered the lander by hand to avoid this boulder-filled crater and set it down farther away.", "zh": "位于着陆点西边约400米的陨石坑。阿姆斯特朗为了避开这个满是岩石的陨石坑，手动操纵登月舱降落到了更远的地方。"}}},
+    {"text": {"ko": "리틀 웨스트 크레이터", "en": "Little West Crater", "zh": "小西陨石坑"}, "at": [548.0, 510.0], "size": 10.0, "color": "#6f6a7a", "info": {"emoji": "👣", "kind": "지명", "title": {"ko": "리틀 웨스트 크레이터", "en": "Little West Crater", "zh": "小西陨石坑"}, "desc": {"ko": "착륙선 동쪽 약 60m의 작은 크레이터예요. 암스트롱이 걸어가 안을 들여다본, 아폴로 11호 탐사에서 가장 멀리 간 곳이에요.", "en": "A small crater about 60 m east of the lander. Armstrong walked over and peered inside — the farthest point reached on the Apollo 11 mission.", "zh": "位于登月舱东边约60米的小陨石坑。阿姆斯特朗走过去往里看了看，这是阿波罗11号探索中走得最远的地方。"}}},
+    {"text": {"ko": "고요의 기지", "en": "Tranquility Base", "zh": "静海基地"}, "at": [480.0, 412.0], "size": 14.0, "color": "#6f6a7a", "info": {"emoji": "🌕", "kind": "지명", "title": {"ko": "고요의 기지", "en": "Tranquility Base", "zh": "静海基地"}, "desc": {"ko": "1969년 7월 20일 아폴로 11호 달 착륙선 이글이 내려앉은 곳이에요. 암스트롱이 \"휴스턴, 여기는 고요의 기지\"라고 처음 알렸답니다.", "en": "Where the Apollo 11 lunar module Eagle landed on July 20, 1969. Armstrong first announced, \"Houston, Tranquility Base here.\"", "zh": "1969年7月20日阿波罗11号登月舱“鹰”号降落的地方。阿姆斯特朗第一次报告：“休斯敦，这里是静海基地。”"}}}
+  ]
 }

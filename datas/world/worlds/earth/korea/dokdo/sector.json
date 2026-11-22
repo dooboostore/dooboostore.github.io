@@ -11,9 +11,9 @@
     {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M160 820 Q300 880 480 880 Q720 900 820 760 Q860 620 760 560 Q620 470 500 440 Q300 400 200 520 Q140 640 160 820", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 540 C240 500 560 620 1020 540", "dur": 70}}
   ],
-  "info": {
-    "서도": {"title": "서도", "emoji": "🏝️", "kind": "지명", "desc": "독도의 두 큰 섬 가운데 서쪽 섬이에요. 동도보다 조금 더 크고 높으며, 주민 숙소가 자리하고 있어요. 가파른 봉우리에 바닷새들이 둥지를 틀어요."},
-    "동도": {"title": "동도", "emoji": "🏝️", "kind": "지명", "desc": "독도의 동쪽 섬이에요. 독도경비대와 등대가 있어서 늘 바다를 지켜보고 있어요. 배가 접안하는 선착장도 동도에 있답니다. 바위틈에는 괭이갈매기가 둥지를 틀고 살아요."},
-    "독도": {"title": "독도", "emoji": "🇰🇷", "kind": "지명", "desc": "대한민국 동쪽 끝의 섬 독도예요. 화산 활동으로 생겨났고, 동도와 서도, 여러 바위섬으로 이루어져 있어요. 괭이갈매기의 소중한 번식지이기도 해요."}
-  }
+  "labels": [
+    {"text": {"ko": "서도", "en": "Seodo", "zh": "西岛"}, "at": [383.0, 470.0], "size": 16.0, "info": {"emoji": "🏝️", "kind": "지명", "title": {"ko": "서도", "en": "Seodo", "zh": "西岛"}, "desc": {"ko": "독도의 두 큰 섬 가운데 서쪽 섬이에요. 동도보다 조금 더 크고 높으며, 주민 숙소가 자리하고 있어요. 가파른 봉우리에 바닷새들이 둥지를 틀어요.", "en": "The western of Dokdo's two large islands. It's a little bigger and taller than Dongdo, and the residents' lodging is here. Seabirds nest on its steep peaks.", "zh": "独岛两座大岛中西边的一座。它比东岛稍大稍高，居民宿舍就在这里。陡峭的山峰上有海鸟筑巢。"}}},
+    {"text": {"ko": "동도", "en": "Dongdo", "zh": "东岛"}, "at": [596.0, 850.0], "size": 16.0, "info": {"emoji": "🏝️", "kind": "지명", "title": {"ko": "동도", "en": "Dongdo", "zh": "东岛"}, "desc": {"ko": "독도의 동쪽 섬이에요. 독도경비대와 등대가 있어서 늘 바다를 지켜보고 있어요. 배가 접안하는 선착장도 동도에 있답니다. 바위틈에는 괭이갈매기가 둥지를 틀고 살아요.", "en": "The eastern island of Dokdo. The Dokdo Guard and a lighthouse are here, always keeping watch over the sea. The dock where boats come in is on Dongdo too. Black-tailed gulls nest and live in the cracks of the rocks.", "zh": "这是独岛东边的岛。这里有独岛警备队和灯塔，时刻守望着大海。船只靠岸的码头也在东岛。岩石缝隙里住着筑巢的黑尾鸥。"}}},
+    {"text": {"ko": "독도", "en": "Dokdo", "zh": "独岛"}, "at": [480.0, 300.0], "size": 22.0, "info": {"emoji": "🇰🇷", "kind": "지명", "title": {"ko": "독도", "en": "Dokdo", "zh": "独岛"}, "desc": {"ko": "대한민국 동쪽 끝의 섬 독도예요. 화산 활동으로 생겨났고, 동도와 서도, 여러 바위섬으로 이루어져 있어요. 괭이갈매기의 소중한 번식지이기도 해요.", "en": "Dokdo, the island at the eastern end of the Republic of Korea. It was formed by volcanic activity and is made up of Dongdo, Seodo and many rocky islets. It's also a precious breeding ground for black-tailed gulls.", "zh": "这是大韩民国最东端的岛屿独岛。它由火山活动形成，由东岛、西岛和许多岩石小岛组成。这里也是黑尾鸥珍贵的繁殖地。"}}}
+  ]
 }

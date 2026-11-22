@@ -17,13 +17,13 @@
     {"use": "iran/vehicle/paykan", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M684.2 357.2 L677.3 348.9 L675.4 343.5 L677.1 331.4 L671.9 317.2 L670.9 304.3 L673 283.2 L671 263.9 L672.6 259.9 L676.8 255.4 L698.8 240.2 L715.4 219.6 L717.3 213.2", "dur": 29}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 250 C240 210 560 330 1020 250", "dur": 76}}
   ],
-  "info": {
-    "아자디 탑": {"title": "아자디 탑", "emoji": "🕌", "kind": "지명", "desc": "1971년에 완성된 테헤란의 상징 탑이에요. 흰 대리석으로 지었고 \"아자디\"는 자유라는 뜻이에요."},
-    "밀라드 탑": {"title": "밀라드 탑", "emoji": "📡", "kind": "지명", "desc": "높이 약 435m의 통신탑이에요. 꼭대기 전망대에서 알보르즈 산맥과 도시가 한눈에 보여요."},
-    "골레스탄 궁전": {"title": "골레스탄 궁전", "emoji": "🏯", "kind": "지명", "desc": "파란색과 노란색 타일로 화려하게 꾸민 옛 궁전이에요. 2013년 유네스코 세계유산이 되었어요."},
-    "테헤란 그랜드 바자르": {"title": "테헤란 그랜드 바자르", "emoji": "🧺", "kind": "지명", "desc": "지붕 덮인 골목이 미로처럼 이어진 큰 시장이에요. 카펫, 향신료, 금붙이 가게가 끝없이 늘어서 있어요."},
-    "타비아트 다리": {"title": "타비아트 다리", "emoji": "🌉", "kind": "지명", "desc": "두 공원을 잇는 보행자 다리예요. 층층이 쉴 곳이 있어서 밤 산책 명소로 사랑받아요."},
-    "시민 공원": {"title": "시민 공원", "emoji": "🌳", "kind": "지명", "desc": "도시 북쪽의 큰 공원이에요. 호수와 나무 그늘이 있어 가족들이 소풍을 즐겨요."},
-    "이맘 호메이니 광장": {"title": "이맘 호메이니 광장", "emoji": "🚇", "kind": "지명", "desc": "테헤란의 옛 중심 광장이에요. 지하철 두 노선이 만나는 곳이라 늘 사람들로 붐벼요."}
-  }
+  "labels": [
+    {"text": {"ko": "아자디 탑", "en": "Azadi Tower", "zh": "自由塔"}, "at": [463.0, 280.5], "size": 12.0, "info": {"emoji": "🕌", "kind": "지명", "title": {"ko": "아자디 탑", "en": "Azadi Tower", "zh": "自由塔"}, "desc": {"ko": "1971년에 완성된 테헤란의 상징 탑이에요. 흰 대리석으로 지었고 \"아자디\"는 자유라는 뜻이에요.", "en": "Tehran's landmark tower, completed in 1971. It's built of white marble, and \"Azadi\" means freedom.", "zh": "这是1971年建成的德黑兰标志性塔。它用白色大理石建造，“阿扎迪”的意思是自由。"}}},
+    {"text": {"ko": "밀라드 탑", "en": "Milad Tower", "zh": "米拉德塔"}, "at": [528.2, 183.5], "size": 12.0, "info": {"emoji": "📡", "kind": "지명", "title": {"ko": "밀라드 탑", "en": "Milad Tower", "zh": "米拉德塔"}, "desc": {"ko": "높이 약 435m의 통신탑이에요. 꼭대기 전망대에서 알보르즈 산맥과 도시가 한눈에 보여요.", "en": "A telecommunications tower about 435 m tall. From the observation deck at the top, the Alborz Mountains and the city are all in view.", "zh": "高约435米的通信塔。从塔顶观景台，厄尔布尔士山脉和城市尽收眼底。"}}},
+    {"text": {"ko": "골레스탄 궁전", "en": "Golestan Palace", "zh": "古列斯坦宫"}, "at": [607.6, 322.2], "size": 9.0, "info": {"emoji": "🏯", "kind": "지명", "title": {"ko": "골레스탄 궁전", "en": "Golestan Palace", "zh": "古列斯坦宫"}, "desc": {"ko": "파란색과 노란색 타일로 화려하게 꾸민 옛 궁전이에요. 2013년 유네스코 세계유산이 되었어요.", "en": "An old palace splendidly decorated with blue and yellow tiles. It became a UNESCO World Heritage Site in 2013.", "zh": "用蓝色和黄色瓷砖华丽装饰的古老宫殿。2013年成为联合国教科文组织世界遗产。"}}},
+    {"text": {"ko": "테헤란 그랜드 바자르", "en": "Grand Bazaar", "zh": "德黑兰大巴扎"}, "at": [609.0, 330.5], "size": 9.0, "info": {"emoji": "🧺", "kind": "지명", "title": {"ko": "테헤란 그랜드 바자르", "en": "Grand Bazaar", "zh": "德黑兰大巴扎"}, "desc": {"ko": "지붕 덮인 골목이 미로처럼 이어진 큰 시장이에요. 카펫, 향신료, 금붙이 가게가 끝없이 늘어서 있어요.", "en": "A big market of covered lanes that wind like a maze. Carpet, spice and gold shops stretch on endlessly.", "zh": "有顶棚的小巷像迷宫一样相连的大市场。地毯、香料和金饰店一家接一家，望不到头。"}}},
+    {"text": {"ko": "타비아트 다리", "en": "Tabiat Bridge", "zh": "塔比亚特桥"}, "at": [605.7, 163.1], "size": 9.0, "info": {"emoji": "🌉", "kind": "지명", "title": {"ko": "타비아트 다리", "en": "Tabiat Bridge", "zh": "塔比亚特桥"}, "desc": {"ko": "두 공원을 잇는 보행자 다리예요. 층층이 쉴 곳이 있어서 밤 산책 명소로 사랑받아요.", "en": "A pedestrian bridge linking two parks. With resting spots on several levels, it's a beloved place for evening walks.", "zh": "连接两座公园的步行桥。桥上有多层休憩空间，是深受喜爱的夜间散步胜地。"}}},
+    {"text": {"ko": "시민 공원", "en": "Mellat Park", "zh": "人民公园"}, "at": [589.0, 111.6], "size": 9.0, "info": {"emoji": "🌳", "kind": "지명", "title": {"ko": "시민 공원", "en": "Mellat Park", "zh": "人民公园"}, "desc": {"ko": "도시 북쪽의 큰 공원이에요. 호수와 나무 그늘이 있어 가족들이 소풍을 즐겨요.", "en": "A big park in the north of the city. With a lake and shady trees, families love to picnic here.", "zh": "城市北部的大公园。有湖泊和树荫，家庭们喜欢在这里野餐。"}}},
+    {"text": {"ko": "이맘 호메이니 광장", "en": "Imam Khomeini Sq.", "zh": "伊玛目霍梅尼广场"}, "at": [609.3, 310.8], "size": 9.0, "info": {"emoji": "🚇", "kind": "지명", "title": {"ko": "이맘 호메이니 광장", "en": "Imam Khomeini Sq.", "zh": "伊玛目霍梅尼广场"}, "desc": {"ko": "테헤란의 옛 중심 광장이에요. 지하철 두 노선이 만나는 곳이라 늘 사람들로 붐벼요.", "en": "The old central square of Tehran. Two metro lines meet here, so it's always bustling with people.", "zh": "德黑兰旧时的中心广场。两条地铁线在这里交汇，总是人来人往。"}}}
+  ]
 }

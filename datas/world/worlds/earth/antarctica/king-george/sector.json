@@ -15,10 +15,10 @@
     {"use": "polar/vehicle/snowmobile", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M190 560 L260 520 L330 500", "dur": 40}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 400 C240 360 560 480 1020 400", "dur": 76}}
   ],
-  "info": {
-    "세종과학기지": {"title": "세종과학기지", "emoji": "🇰🇷", "kind": "지명", "desc": "1988년 킹조지섬 바톤 반도에 세운 우리나라 첫 남극 과학기지예요. 연구원들이 일 년 내내 머물며 남극을 연구해요."},
-    "바톤 반도": {"title": "바톤 반도", "emoji": "🐧", "kind": "지명", "desc": "세종기지가 자리한 반도예요. 해안에는 젠투펭귄과 턱끈펭귄이 모여 사는 곳이 있어요."},
-    "마리안 소만": {"title": "마리안 소만", "emoji": "🧊", "kind": "지명", "desc": "세종기지 옆으로 들어온 작은 만이에요. 안쪽 빙하가 해마다 조금씩 물러나는 모습이 관측돼요."},
-    "맥스웰 만": {"title": "맥스웰 만", "emoji": "🌊", "kind": "지명", "desc": "킹조지섬과 넬슨섬 사이의 넓은 만이에요. 여러 나라 기지가 이 만을 둘러싸고 있어요."}
-  }
+  "labels": [
+    {"text": {"ko": "세종과학기지", "en": "King Sejong Station", "zh": "世宗科学站"}, "at": [160.0, 595.0], "size": 11.0, "color": "#5f7a8c", "info": {"emoji": "🇰🇷", "kind": "지명", "title": {"ko": "세종과학기지", "en": "King Sejong Station", "zh": "世宗科学站"}, "desc": {"ko": "1988년 킹조지섬 바톤 반도에 세운 우리나라 첫 남극 과학기지예요. 연구원들이 일 년 내내 머물며 남극을 연구해요.", "en": "Korea's first Antarctic research station, built in 1988 on the Barton Peninsula of King George Island. Researchers stay all year round to study Antarctica.", "zh": "这是1988年在乔治王岛巴顿半岛建成的韩国第一座南极科考站。研究人员一年四季都住在这里研究南极。"}}},
+    {"text": {"ko": "바톤 반도", "en": "Barton Peninsula", "zh": "巴顿半岛"}, "at": [400.0, 450.0], "size": 11.0, "color": "#5f7a8c", "info": {"emoji": "🐧", "kind": "지명", "title": {"ko": "바톤 반도", "en": "Barton Peninsula", "zh": "巴顿半岛"}, "desc": {"ko": "세종기지가 자리한 반도예요. 해안에는 젠투펭귄과 턱끈펭귄이 모여 사는 곳이 있어요.", "en": "The peninsula where Sejong Station sits. Along the coast there are spots where gentoo and chinstrap penguins gather and live.", "zh": "世宗站所在的半岛。海岸边有巴布亚企鹅和帽带企鹅聚居的地方。"}}},
+    {"text": {"ko": "마리안 소만", "en": "Marian Cove", "zh": "玛丽安湾"}, "at": [330.0, 330.0], "size": 9.0, "color": "#5f7a8c", "info": {"emoji": "🧊", "kind": "지명", "title": {"ko": "마리안 소만", "en": "Marian Cove", "zh": "玛丽安湾"}, "desc": {"ko": "세종기지 옆으로 들어온 작은 만이에요. 안쪽 빙하가 해마다 조금씩 물러나는 모습이 관측돼요.", "en": "A small cove right next to Sejong Station. Scientists watch the glacier at its head retreat a little more every year.", "zh": "世宗站旁边伸进来的一个小海湾。人们观测到湾内的冰川每年都在一点点后退。"}}},
+    {"text": {"ko": "맥스웰 만", "en": "Maxwell Bay", "zh": "麦克斯韦尔湾"}, "at": [80.0, 800.0], "size": 11.0, "color": "#5f7a8c", "info": {"emoji": "🌊", "kind": "지명", "title": {"ko": "맥스웰 만", "en": "Maxwell Bay", "zh": "麦克斯韦尔湾"}, "desc": {"ko": "킹조지섬과 넬슨섬 사이의 넓은 만이에요. 여러 나라 기지가 이 만을 둘러싸고 있어요.", "en": "A wide bay between King George Island and Nelson Island. Research stations from many countries line its shores.", "zh": "乔治王岛和纳尔逊岛之间的宽阔海湾。许多国家的科考站环绕着这片海湾。"}}}
+  ]
 }

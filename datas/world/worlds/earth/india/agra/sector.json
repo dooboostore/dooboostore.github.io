@@ -15,12 +15,12 @@
     {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M525 6 L525 24 L525 42 L525 60 L525 78 L525 96 L525 114 L522 132 L519 150 L516 168 L510 186 L498 204 L486 222 L480 240 L471 258 L471 276 L471 294 L471 312 L468 330 L468 348 L471 366 L474 384 L480 402 L495 420 L513 438 L531 456 L549 465 L567 465 L585 462 L603 459 L621 447 L639 432 L657 417 L675 399 L693 381 L711 363 L729 345 L747 327 L765 309 L783 291 L801 276 L819 267 L837 258 L855 252 L873 243 L891 237 L909 231 L927 231 L945 231 L954 231", "dur": 160}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],
-  "info": {
-    "타지마할": {"title": "타지마할", "emoji": "🕌", "kind": "지명", "desc": "무굴 황제 샤 자한이 왕비를 기리며 1632년부터 지은 흰 대리석 영묘예요. 1983년 유네스코 세계유산이 되었어요."},
-    "아그라 요새": {"title": "아그라 요새", "emoji": "🏰", "kind": "지명", "desc": "붉은 사암으로 지은 무굴 제국의 성이에요. 성벽 위에서 야무나강 건너 타지마할이 보여요."},
-    "야무나강": {"title": "야무나강", "emoji": "🌊", "kind": "지명", "desc": "타지마할 뒤로 흐르는 강이에요. 강 건너편에서 보는 타지마할의 노을 풍경이 유명해요."},
-    "메타브 바그": {"title": "메타브 바그", "emoji": "🌙", "kind": "지명", "desc": "타지마할 맞은편 강가의 정원이에요. 이름은 \"달빛 정원\"이라는 뜻이에요."},
-    "이티마드 우드 다울라": {"title": "이티마드 우드 다울라", "emoji": "🏛️", "kind": "지명", "desc": "\"작은 타지\"라 불리는 대리석 영묘예요. 돌에 보석을 박아 넣은 섬세한 무늬로 유명해요."},
-    "자마 마스지드": {"title": "자마 마스지드", "emoji": "🕌", "kind": "지명", "desc": "아그라 요새 앞의 큰 모스크예요. 둘레로 오래된 시장 골목이 이어져요."}
-  }
+  "labels": [
+    {"text": {"ko": "타지마할", "en": "Taj Mahal", "zh": "泰姬陵"}, "at": [589.6, 468.3], "size": 12.0, "info": {"emoji": "🕌", "kind": "지명", "title": {"ko": "타지마할", "en": "Taj Mahal", "zh": "泰姬陵"}, "desc": {"ko": "무굴 황제 샤 자한이 왕비를 기리며 1632년부터 지은 흰 대리석 영묘예요. 1983년 유네스코 세계유산이 되었어요.", "en": "A white marble mausoleum the Mughal emperor Shah Jahan began building in 1632 in memory of his queen. It became a UNESCO World Heritage Site in 1983.", "zh": "这是莫卧儿皇帝沙贾汗为纪念王后，从1632年开始修建的白色大理石陵墓。1983年成为联合国教科文组织世界遗产。"}}},
+    {"text": {"ko": "아그라 요새", "en": "Agra Fort", "zh": "阿格拉堡"}, "at": [396.9, 419.3], "size": 9.0, "info": {"emoji": "🏰", "kind": "지명", "title": {"ko": "아그라 요새", "en": "Agra Fort", "zh": "阿格拉堡"}, "desc": {"ko": "붉은 사암으로 지은 무굴 제국의 성이에요. 성벽 위에서 야무나강 건너 타지마할이 보여요.", "en": "A Mughal Empire fortress built of red sandstone. From its walls you can see the Taj Mahal across the Yamuna River.", "zh": "用红砂岩建造的莫卧儿帝国城堡。从城墙上可以隔着亚穆纳河看到泰姬陵。"}}},
+    {"text": {"ko": "메타브 바그", "en": "Mehtab Bagh", "zh": "月光花园"}, "at": [589.4, 427.2], "size": 9.0, "info": {"emoji": "🌙", "kind": "지명", "title": {"ko": "메타브 바그", "en": "Mehtab Bagh", "zh": "月光花园"}, "desc": {"ko": "타지마할 맞은편 강가의 정원이에요. 이름은 \"달빛 정원\"이라는 뜻이에요.", "en": "A riverside garden across from the Taj Mahal. Its name means \"Moonlight Garden\".", "zh": "泰姬陵对岸河边的花园。它的名字意思是“月光花园”。"}}},
+    {"text": {"ko": "이티마드 우드 다울라", "en": "Itimad-ud-Daulah", "zh": "伊蒂默德-乌德-达乌拉陵"}, "at": [496.3, 289.1], "size": 9.0, "info": {"emoji": "🏛️", "kind": "지명", "title": {"ko": "이티마드 우드 다울라", "en": "Itimad-ud-Daulah", "zh": "伊蒂默德-乌德-达乌拉陵"}, "desc": {"ko": "\"작은 타지\"라 불리는 대리석 영묘예요. 돌에 보석을 박아 넣은 섬세한 무늬로 유명해요.", "en": "A marble mausoleum called the \"Baby Taj\". It's famous for its delicate patterns of gemstones inlaid into the stone.", "zh": "被称为“小泰姬”的大理石陵墓。它以在石头上镶嵌宝石的精美图案而闻名。"}}},
+    {"text": {"ko": "자마 마스지드", "en": "Jama Masjid", "zh": "贾玛清真寺"}, "at": [354.6, 396.9], "size": 9.0, "info": {"emoji": "🕌", "kind": "지명", "title": {"ko": "자마 마스지드", "en": "Jama Masjid", "zh": "贾玛清真寺"}, "desc": {"ko": "아그라 요새 앞의 큰 모스크예요. 둘레로 오래된 시장 골목이 이어져요.", "en": "A large mosque in front of Agra Fort. Old market lanes wind all around it.", "zh": "阿格拉堡前的大清真寺。周围环绕着古老的市场小巷。"}}},
+    {"text": {"ko": "야무나강", "en": "Yamuna River", "zh": "亚穆纳河"}, "at": [560.0, 438.0], "size": 9.0, "info": {"emoji": "🌊", "kind": "지명", "title": {"ko": "야무나강", "en": "Yamuna River", "zh": "亚穆纳河"}, "desc": {"ko": "타지마할 뒤로 흐르는 강이에요. 강 건너편에서 보는 타지마할의 노을 풍경이 유명해요.", "en": "The river flowing behind the Taj Mahal. The sunset view of the Taj Mahal from the far bank is famous.", "zh": "流经泰姬陵后方的河。从对岸看泰姬陵的晚霞景色很有名。"}}}
+  ]
 }

@@ -13,6 +13,7 @@
 // 지형 구역: 지면 svg 요소의 data-zone="water|road|bridge" 를 장면을 붙일 때 캔버스 비트맵으로 한 번 구워 픽셀로 판정한다.
 //   - 무작위 배치(count+area)와 wander 는 avoid 구역(기본 water)에 들어가지 않는다. allow 구역(기본 bridge)은 예외.
 //   - wander 는 목적지뿐 아니라 가는 길 전체를 검사한다 → 강 건너편으로는 다리로만 건넌다.
+import { Text, tr } from './i18n';
 import { Behavior, Entity, EntityRegistry, parseSvg, prefixIds, SVGNS, useAt, Win } from './entity';
 
 type XY = [number, number];
@@ -36,10 +37,14 @@ export type SectorJson = {
   // 위치(bounds)는 색인(worlds.json)에 있고, 여기는 내용만: 로컬 좌표 크기 · 지면 · 행정 경계(경위도 GeoJSON)
   local: { size: XY; ground: string; boundary?: string };
   placements: Placement[];
+  labels?: Label[]; // 지명: 지도(ground.svg) 가 아니라 여기 — 언어마다 다시 그린다
 };
+// 지명 라벨: 지면 로컬 좌표 at 에 글자 (글자 크기 size, 색 color). info 는 누르면 뜨는 도감
+export type LabelInfo = { emoji?: string; kind?: string; title?: Text; desc?: Text };
+export type Label = { text: Text; at: XY; size?: number; color?: string; info?: LabelInfo };
 // pick: 화면에서 누른 요소 → 무엇인가 (도감 팝업·카메라 따라가기용). 개체면 use, 지면 지명 라벨이면 label. pos 는 로컬 좌표 (움직이면 계속 바뀜)
-export type Picked = { use?: string; label?: string; pos: () => XY; moving: boolean };
-export type Scene = { pick: (target: Element) => Picked | undefined; el: SVGGElement; size: XY; boundary?: any; stop: () => void; issues: string[]; inZone: (x: number, y: number, z: string) => boolean; setCamera: (altitude: number) => void; setView: (view: [number, number, number, number], pxPerUnit: number) => void; walkable: (x: number, y: number, avoid?: string[], allow?: string[]) => boolean };
+export type Picked = { use?: string; label?: Label; pos: () => XY; moving: boolean };
+export type Scene = { relabel: () => void; pick: (target: Element) => Picked | undefined; el: SVGGElement; size: XY; boundary?: any; stop: () => void; issues: string[]; inZone: (x: number, y: number, z: string) => boolean; setCamera: (altitude: number) => void; setView: (view: [number, number, number, number], pxPerUnit: number) => void; walkable: (x: number, y: number, avoid?: string[], allow?: string[]) => boolean };
 
 const DEFAULT_AVOID = ['water'];
 const DEFAULT_ALLOW = ['bridge'];
@@ -71,6 +76,23 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
     const node = doc.importNode(n, true);
     ((node as Element).getAttribute?.('data-layer') === 'over' ? overL : groundL).appendChild(node);
   });
+
+  // 지명 라벨: 지면 위·개체 아래 (예전 ground.svg 안 글자와 같은 자리·모양)
+  const labelL = g('labels');
+  Object.entries({ 'font-family': "'Apple SD Gothic Neo', 'Noto Sans KR', 'PingFang SC', 'Microsoft YaHei', sans-serif", 'font-weight': '800', fill: '#7a5a3f', 'text-anchor': 'middle', stroke: '#fffaf0', 'stroke-width': '3', 'paint-order': 'stroke', 'stroke-linejoin': 'round' }).forEach(([k, v]) => labelL.setAttribute(k, v));
+  groundL.appendChild(labelL);
+  const labelEls = (sector.labels ?? []).map((lb) => {
+    const t = doc.createElementNS(SVGNS, 'text');
+    t.setAttribute('class', 'label');
+    t.setAttribute('x', String(lb.at[0]));
+    t.setAttribute('y', String(lb.at[1]));
+    t.setAttribute('font-size', String(lb.size ?? 10));
+    if (lb.color) t.setAttribute('fill', lb.color);
+    labelL.appendChild(t);
+    return { t, lb };
+  });
+  const relabel = () => labelEls.forEach(({ t, lb }) => (t.textContent = tr(lb.text)));
+  relabel();
 
   // ---- 지형 구역 → 비트맵으로 한 번 굽는다 (R=물, G=도로, B=다리)
   // isPointInFill/Stroke 를 큰 OSM path 에 매번 부르면 한 번에 수 ms — 사람들이 경로를 고를 때 수천 번 불러서 프레임이 수백 ms 로 늘었다.
@@ -393,19 +415,14 @@ export async function mountScene(w: Win, reg: EntityRegistry, dir: string, idPre
     const inst = target.closest('.inst');
     const it = inst && items.find((x) => x.el === inst);
     if (it) return { use: it.use, pos: it.pos, moving: it.moving };
-    const text = target.closest('text');
-    if (text && groundL.contains(text)) {
-      // 라벨이 장식 그룹 transform 안에 있을 수 있어 화면 좌표 → 지면 로컬 좌표로 바꾼다
-      const b = (text as SVGTextElement).getBBox();
-      const m = groundL.getCTM()?.inverse().multiply((text as SVGTextElement).getCTM()!);
-      const pt = new w.DOMPoint(b.x + b.width / 2, b.y + b.height).matrixTransform(m);
-      const at: XY = [pt.x, pt.y];
-      return { label: text.textContent?.trim(), pos: () => at, moving: false };
-    }
+    const text = target.closest('text.label');
+    const hit = text && labelEls.find((it) => it.t === text);
+    if (hit) return { label: hit.lb, pos: () => hit.lb.at, moving: false };
     return undefined;
   };
 
   return {
+    relabel,
     pick: pickAt,
     el: root,
     size: sector.local.size,

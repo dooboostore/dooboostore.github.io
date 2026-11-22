@@ -2,11 +2,19 @@
   "worlds": [
     {
       "id": "earth",
-      "name": "지구",
+      "name": {
+        "ko": "지구",
+        "en": "Earth",
+        "zh": "地球"
+      },
       "sectors": [
         {
           "id": "brazil",
-          "name": "브라질",
+          "name": {
+            "ko": "브라질",
+            "en": "Brazil",
+            "zh": "巴西"
+          },
           "geo": {
             "lat": -14.2,
             "lon": -51.9
@@ -19,7 +27,11 @@
         },
         {
           "id": "turkey",
-          "name": "튀르키예",
+          "name": {
+            "ko": "튀르키예",
+            "en": "Turkey",
+            "zh": "土耳其"
+          },
           "geo": {
             "lat": 39,
             "lon": 35.2
@@ -32,7 +44,11 @@
         },
         {
           "id": "china",
-          "name": "중화인민공화국",
+          "name": {
+            "ko": "중화인민공화국",
+            "en": "People's Republic of China",
+            "zh": "中华人民共和国"
+          },
           "geo": {
             "lat": 35.9,
             "lon": 104.2
@@ -45,7 +61,11 @@
         },
         {
           "id": "australia",
-          "name": "호주",
+          "name": {
+            "ko": "호주",
+            "en": "Australia",
+            "zh": "澳大利亚"
+          },
           "geo": {
             "lat": -25.3,
             "lon": 133.8
@@ -58,7 +78,11 @@
         },
         {
           "id": "egypt",
-          "name": "이집트",
+          "name": {
+            "ko": "이집트",
+            "en": "Egypt",
+            "zh": "埃及"
+          },
           "geo": {
             "lat": 26.8,
             "lon": 30.8
@@ -71,7 +95,11 @@
         },
         {
           "id": "italy",
-          "name": "이탈리아",
+          "name": {
+            "ko": "이탈리아",
+            "en": "Italy",
+            "zh": "意大利"
+          },
           "geo": {
             "lat": 42.8,
             "lon": 12.5
@@ -84,7 +112,11 @@
         },
         {
           "id": "usa",
-          "name": "미국",
+          "name": {
+            "ko": "미국",
+            "en": "United States of America",
+            "zh": "美国"
+          },
           "geo": {
             "lat": 39.8,
             "lon": -98.5
@@ -97,7 +129,11 @@
         },
         {
           "id": "uk",
-          "name": "영국",
+          "name": {
+            "ko": "영국",
+            "en": "United Kingdom",
+            "zh": "英国"
+          },
           "geo": {
             "lat": 54,
             "lon": -2
@@ -110,7 +146,11 @@
         },
         {
           "id": "france",
-          "name": "프랑스",
+          "name": {
+            "ko": "프랑스",
+            "en": "France",
+            "zh": "法国"
+          },
           "geo": {
             "lat": 46.2,
             "lon": 2.2
@@ -123,7 +163,11 @@
         },
         {
           "id": "japan",
-          "name": "일본",
+          "name": {
+            "ko": "일본",
+            "en": "Japan",
+            "zh": "日本"
+          },
           "geo": {
             "lat": 36.2,
             "lon": 138.2
@@ -136,7 +180,11 @@
         },
         {
           "id": "korea",
-          "name": "대한민국",
+          "name": {
+            "ko": "대한민국",
+            "en": "South Korea",
+            "zh": "大韩民国"
+          },
           "geo": {
             "lat": 36.4,
             "lon": 127.9
@@ -149,7 +197,11 @@
         },
         {
           "id": "canada",
-          "name": "캐나다",
+          "name": {
+            "ko": "캐나다",
+            "en": "Canada",
+            "zh": "加拿大"
+          },
           "geo": {
             "lat": 60.32,
             "lon": -101.91
@@ -162,7 +214,11 @@
         },
         {
           "id": "chile",
-          "name": "칠레",
+          "name": {
+            "ko": "칠레",
+            "en": "Chile",
+            "zh": "智利"
+          },
           "geo": {
             "lat": -38.15,
             "lon": -72.32
@@ -175,7 +231,11 @@
         },
         {
           "id": "germany",
-          "name": "독일",
+          "name": {
+            "ko": "독일",
+            "en": "Germany",
+            "zh": "德国"
+          },
           "geo": {
             "lat": 50.96,
             "lon": 9.68
@@ -188,7 +248,11 @@
         },
         {
           "id": "greenland",
-          "name": "그린란드",
+          "name": {
+            "ko": "그린란드",
+            "en": "Greenland",
+            "zh": "格陵兰"
+          },
           "geo": {
             "lat": 74.32,
             "lon": -39.34
@@ -201,7 +265,11 @@
         },
         {
           "id": "india",
-          "name": "인도",
+          "name": {
+            "ko": "인도",
+            "en": "India",
+            "zh": "印度"
+          },
           "geo": {
             "lat": 22.69,
             "lon": 79.36
@@ -214,7 +282,11 @@
         },
         {
           "id": "indonesia",
-          "name": "인도네시아",
+          "name": {
+            "ko": "인도네시아",
+            "en": "Indonesia",
+            "zh": "印度尼西亚"
+          },
           "geo": {
             "lat": -0.95,
             "lon": 101.89
@@ -227,7 +299,11 @@
         },
         {
           "id": "kenya",
-          "name": "케냐",
+          "name": {
+            "ko": "케냐",
+            "en": "Kenya",
+            "zh": "肯尼亚"
+          },
           "geo": {
             "lat": 0.55,
             "lon": 37.91
@@ -240,7 +316,11 @@
         },
         {
           "id": "nigeria",
-          "name": "나이지리아",
+          "name": {
+            "ko": "나이지리아",
+            "en": "Nigeria",
+            "zh": "尼日利亚"
+          },
           "geo": {
             "lat": 9.44,
             "lon": 7.5
@@ -253,7 +333,11 @@
         },
         {
           "id": "russia",
-          "name": "러시아",
+          "name": {
+            "ko": "러시아",
+            "en": "Russia",
+            "zh": "俄罗斯"
+          },
           "geo": {
             "lat": 58.25,
             "lon": 44.69
@@ -266,7 +350,11 @@
         },
         {
           "id": "saudi-arabia",
-          "name": "사우디아라비아",
+          "name": {
+            "ko": "사우디아라비아",
+            "en": "Saudi Arabia",
+            "zh": "沙特阿拉伯"
+          },
           "geo": {
             "lat": 23.81,
             "lon": 44.7
@@ -279,7 +367,11 @@
         },
         {
           "id": "south-africa",
-          "name": "남아프리카 공화국",
+          "name": {
+            "ko": "남아프리카 공화국",
+            "en": "South Africa",
+            "zh": "南非"
+          },
           "geo": {
             "lat": -29.71,
             "lon": 23.67
@@ -292,7 +384,11 @@
         },
         {
           "id": "argentina",
-          "name": "아르헨티나",
+          "name": {
+            "ko": "아르헨티나",
+            "en": "Argentina",
+            "zh": "阿根廷"
+          },
           "geo": {
             "lat": -33.5,
             "lon": -64.17
@@ -305,7 +401,11 @@
         },
         {
           "id": "democratic-republic-of-the-congo",
-          "name": "콩고 민주 공화국",
+          "name": {
+            "ko": "콩고 민주 공화국",
+            "en": "Democratic Republic of the Congo",
+            "zh": "刚果民主共和国"
+          },
           "geo": {
             "lat": -1.86,
             "lon": 23.46
@@ -318,7 +418,11 @@
         },
         {
           "id": "ethiopia",
-          "name": "에티오피아",
+          "name": {
+            "ko": "에티오피아",
+            "en": "Ethiopia",
+            "zh": "埃塞俄比亚"
+          },
           "geo": {
             "lat": 8.03,
             "lon": 39.09
@@ -331,7 +435,11 @@
         },
         {
           "id": "iceland",
-          "name": "아이슬란드",
+          "name": {
+            "ko": "아이슬란드",
+            "en": "Iceland",
+            "zh": "冰岛"
+          },
           "geo": {
             "lat": 64.78,
             "lon": -18.67
@@ -344,7 +452,11 @@
         },
         {
           "id": "mexico",
-          "name": "멕시코",
+          "name": {
+            "ko": "멕시코",
+            "en": "Mexico",
+            "zh": "墨西哥"
+          },
           "geo": {
             "lat": 23.92,
             "lon": -102.29
@@ -357,7 +469,11 @@
         },
         {
           "id": "new-zealand",
-          "name": "뉴질랜드",
+          "name": {
+            "ko": "뉴질랜드",
+            "en": "New Zealand",
+            "zh": "新西兰"
+          },
           "geo": {
             "lat": -39.76,
             "lon": 172.79
@@ -370,7 +486,11 @@
         },
         {
           "id": "peru",
-          "name": "페루",
+          "name": {
+            "ko": "페루",
+            "en": "Peru",
+            "zh": "秘鲁"
+          },
           "geo": {
             "lat": -12.98,
             "lon": -72.9
@@ -383,7 +503,11 @@
         },
         {
           "id": "spain",
-          "name": "스페인",
+          "name": {
+            "ko": "스페인",
+            "en": "Spain",
+            "zh": "西班牙"
+          },
           "geo": {
             "lat": 40.09,
             "lon": -3.46
@@ -396,7 +520,11 @@
         },
         {
           "id": "sweden",
-          "name": "스웨덴",
+          "name": {
+            "ko": "스웨덴",
+            "en": "Sweden",
+            "zh": "瑞典"
+          },
           "geo": {
             "lat": 65.86,
             "lon": 19.02
@@ -409,7 +537,11 @@
         },
         {
           "id": "vietnam",
-          "name": "베트남",
+          "name": {
+            "ko": "베트남",
+            "en": "Vietnam",
+            "zh": "越南"
+          },
           "geo": {
             "lat": 21.72,
             "lon": 105.39
@@ -422,7 +554,11 @@
         },
         {
           "id": "algeria",
-          "name": "알제리",
+          "name": {
+            "ko": "알제리",
+            "en": "Algeria",
+            "zh": "阿尔及利亚"
+          },
           "geo": {
             "lat": 27.4,
             "lon": 2.81
@@ -435,7 +571,11 @@
         },
         {
           "id": "costa-rica",
-          "name": "코스타리카",
+          "name": {
+            "ko": "코스타리카",
+            "en": "Costa Rica",
+            "zh": "哥斯达黎加"
+          },
           "geo": {
             "lat": 10.07,
             "lon": -84.08
@@ -448,7 +588,11 @@
         },
         {
           "id": "iran",
-          "name": "이란",
+          "name": {
+            "ko": "이란",
+            "en": "Iran",
+            "zh": "伊朗"
+          },
           "geo": {
             "lat": 32.17,
             "lon": 54.93
@@ -461,7 +605,11 @@
         },
         {
           "id": "ivory-coast",
-          "name": "코트디부아르",
+          "name": {
+            "ko": "코트디부아르",
+            "en": "Ivory Coast",
+            "zh": "科特迪瓦"
+          },
           "geo": {
             "lat": 7.49,
             "lon": -5.57
@@ -474,7 +622,11 @@
         },
         {
           "id": "papua-new-guinea",
-          "name": "파푸아뉴기니",
+          "name": {
+            "ko": "파푸아뉴기니",
+            "en": "Papua New Guinea",
+            "zh": "巴布亚新几内亚"
+          },
           "geo": {
             "lat": -5.7,
             "lon": 143.91
@@ -487,7 +639,11 @@
         },
         {
           "id": "philippines",
-          "name": "필리핀",
+          "name": {
+            "ko": "필리핀",
+            "en": "Philippines",
+            "zh": "菲律宾"
+          },
           "geo": {
             "lat": 11.2,
             "lon": 122.47
@@ -500,7 +656,11 @@
         },
         {
           "id": "poland",
-          "name": "폴란드",
+          "name": {
+            "ko": "폴란드",
+            "en": "Poland",
+            "zh": "波兰"
+          },
           "geo": {
             "lat": 51.99,
             "lon": 19.49
@@ -513,7 +673,11 @@
         },
         {
           "id": "sudan",
-          "name": "수단",
+          "name": {
+            "ko": "수단",
+            "en": "Sudan",
+            "zh": "苏丹"
+          },
           "geo": {
             "lat": 16.33,
             "lon": 29.26
@@ -526,7 +690,11 @@
         },
         {
           "id": "venezuela",
-          "name": "베네수엘라",
+          "name": {
+            "ko": "베네수엘라",
+            "en": "Venezuela",
+            "zh": "委内瑞拉"
+          },
           "geo": {
             "lat": 7.18,
             "lon": -64.6
@@ -539,7 +707,11 @@
         },
         {
           "id": "zimbabwe",
-          "name": "짐바브웨",
+          "name": {
+            "ko": "짐바브웨",
+            "en": "Zimbabwe",
+            "zh": "津巴布韦"
+          },
           "geo": {
             "lat": -18.91,
             "lon": 29.93
@@ -552,7 +724,11 @@
         },
         {
           "id": "cuba",
-          "name": "쿠바",
+          "name": {
+            "ko": "쿠바",
+            "en": "Cuba",
+            "zh": "古巴"
+          },
           "geo": {
             "lat": 21.33,
             "lon": -77.98
@@ -565,7 +741,11 @@
         },
         {
           "id": "ghana",
-          "name": "가나",
+          "name": {
+            "ko": "가나",
+            "en": "Ghana",
+            "zh": "加纳"
+          },
           "geo": {
             "lat": 7.72,
             "lon": -1.04
@@ -578,7 +758,11 @@
         },
         {
           "id": "greece",
-          "name": "그리스",
+          "name": {
+            "ko": "그리스",
+            "en": "Greece",
+            "zh": "希腊"
+          },
           "geo": {
             "lat": 39.49,
             "lon": 21.73
@@ -591,7 +775,11 @@
         },
         {
           "id": "kazakhstan",
-          "name": "카자흐스탄",
+          "name": {
+            "ko": "카자흐스탄",
+            "en": "Kazakhstan",
+            "zh": "哈萨克斯坦"
+          },
           "geo": {
             "lat": 49.05,
             "lon": 68.69
@@ -604,7 +792,11 @@
         },
         {
           "id": "madagascar",
-          "name": "마다가스카르",
+          "name": {
+            "ko": "마다가스카르",
+            "en": "Madagascar",
+            "zh": "马达加斯加"
+          },
           "geo": {
             "lat": -18.63,
             "lon": 46.7
@@ -617,7 +809,11 @@
         },
         {
           "id": "morocco",
-          "name": "모로코",
+          "name": {
+            "ko": "모로코",
+            "en": "Morocco",
+            "zh": "摩洛哥"
+          },
           "geo": {
             "lat": 31.65,
             "lon": -7.19
@@ -630,7 +826,11 @@
         },
         {
           "id": "pakistan",
-          "name": "파키스탄",
+          "name": {
+            "ko": "파키스탄",
+            "en": "Pakistan",
+            "zh": "巴基斯坦"
+          },
           "geo": {
             "lat": 29.33,
             "lon": 68.55
@@ -643,7 +843,11 @@
         },
         {
           "id": "senegal",
-          "name": "세네갈",
+          "name": {
+            "ko": "세네갈",
+            "en": "Senegal",
+            "zh": "塞内加尔"
+          },
           "geo": {
             "lat": 15.14,
             "lon": -14.78
@@ -656,7 +860,11 @@
         },
         {
           "id": "thailand",
-          "name": "태국",
+          "name": {
+            "ko": "태국",
+            "en": "Thailand",
+            "zh": "泰国"
+          },
           "geo": {
             "lat": 15.46,
             "lon": 101.07
@@ -669,7 +877,11 @@
         },
         {
           "id": "ukraine",
-          "name": "우크라이나",
+          "name": {
+            "ko": "우크라이나",
+            "en": "Ukraine",
+            "zh": "乌克兰"
+          },
           "geo": {
             "lat": 49.72,
             "lon": 32.14
@@ -682,7 +894,11 @@
         },
         {
           "id": "afghanistan",
-          "name": "아프가니스탄",
+          "name": {
+            "ko": "아프가니스탄",
+            "en": "Afghanistan",
+            "zh": "阿富汗"
+          },
           "geo": {
             "lat": 34.16,
             "lon": 66.5
@@ -695,7 +911,11 @@
         },
         {
           "id": "angola",
-          "name": "앙골라",
+          "name": {
+            "ko": "앙골라",
+            "en": "Angola",
+            "zh": "安哥拉"
+          },
           "geo": {
             "lat": -12.18,
             "lon": 17.98
@@ -708,7 +928,11 @@
         },
         {
           "id": "austria",
-          "name": "오스트리아",
+          "name": {
+            "ko": "오스트리아",
+            "en": "Austria",
+            "zh": "奥地利"
+          },
           "geo": {
             "lat": 47.52,
             "lon": 14.13
@@ -721,7 +945,11 @@
         },
         {
           "id": "bangladesh",
-          "name": "방글라데시",
+          "name": {
+            "ko": "방글라데시",
+            "en": "Bangladesh",
+            "zh": "孟加拉国"
+          },
           "geo": {
             "lat": 24.21,
             "lon": 89.68
@@ -734,7 +962,11 @@
         },
         {
           "id": "belarus",
-          "name": "벨라루스",
+          "name": {
+            "ko": "벨라루스",
+            "en": "Belarus",
+            "zh": "白俄罗斯"
+          },
           "geo": {
             "lat": 53.82,
             "lon": 28.42
@@ -747,7 +979,11 @@
         },
         {
           "id": "bolivia",
-          "name": "볼리비아",
+          "name": {
+            "ko": "볼리비아",
+            "en": "Bolivia",
+            "zh": "玻利维亚"
+          },
           "geo": {
             "lat": -16.67,
             "lon": -64.59
@@ -760,7 +996,11 @@
         },
         {
           "id": "burkina-faso",
-          "name": "부르키나파소",
+          "name": {
+            "ko": "부르키나파소",
+            "en": "Burkina Faso",
+            "zh": "布基纳法索"
+          },
           "geo": {
             "lat": 12.67,
             "lon": -1.36
@@ -773,7 +1013,11 @@
         },
         {
           "id": "cambodia",
-          "name": "캄보디아",
+          "name": {
+            "ko": "캄보디아",
+            "en": "Cambodia",
+            "zh": "柬埔寨"
+          },
           "geo": {
             "lat": 12.65,
             "lon": 104.5
@@ -786,7 +1030,11 @@
         },
         {
           "id": "cameroon",
-          "name": "카메룬",
+          "name": {
+            "ko": "카메룬",
+            "en": "Cameroon",
+            "zh": "喀麦隆"
+          },
           "geo": {
             "lat": 4.59,
             "lon": 12.47
@@ -799,7 +1047,11 @@
         },
         {
           "id": "chad",
-          "name": "차드",
+          "name": {
+            "ko": "차드",
+            "en": "Chad",
+            "zh": "乍得"
+          },
           "geo": {
             "lat": 15.14,
             "lon": 18.65
@@ -812,7 +1064,11 @@
         },
         {
           "id": "colombia",
-          "name": "콜롬비아",
+          "name": {
+            "ko": "콜롬비아",
+            "en": "Colombia",
+            "zh": "哥伦比亚"
+          },
           "geo": {
             "lat": 3.37,
             "lon": -73.17
@@ -825,7 +1081,11 @@
         },
         {
           "id": "denmark",
-          "name": "덴마크",
+          "name": {
+            "ko": "덴마크",
+            "en": "Denmark",
+            "zh": "丹麦"
+          },
           "geo": {
             "lat": 55.97,
             "lon": 9.02
@@ -838,7 +1098,11 @@
         },
         {
           "id": "ecuador",
-          "name": "에콰도르",
+          "name": {
+            "ko": "에콰도르",
+            "en": "Ecuador",
+            "zh": "厄瓜多尔"
+          },
           "geo": {
             "lat": -1.26,
             "lon": -78.19
@@ -851,7 +1115,11 @@
         },
         {
           "id": "estonia",
-          "name": "에스토니아",
+          "name": {
+            "ko": "에스토니아",
+            "en": "Estonia",
+            "zh": "爱沙尼亚"
+          },
           "geo": {
             "lat": 58.72,
             "lon": 25.87
@@ -864,7 +1132,11 @@
         },
         {
           "id": "fiji",
-          "name": "피지",
+          "name": {
+            "ko": "피지",
+            "en": "Fiji",
+            "zh": "斐济"
+          },
           "geo": {
             "lat": -17.83,
             "lon": 177.98
@@ -877,7 +1149,11 @@
         },
         {
           "id": "finland",
-          "name": "핀란드",
+          "name": {
+            "ko": "핀란드",
+            "en": "Finland",
+            "zh": "芬兰"
+          },
           "geo": {
             "lat": 63.25,
             "lon": 27.28
@@ -890,7 +1166,11 @@
         },
         {
           "id": "gabon",
-          "name": "가봉",
+          "name": {
+            "ko": "가봉",
+            "en": "Gabon",
+            "zh": "加蓬"
+          },
           "geo": {
             "lat": -0.44,
             "lon": 11.84
@@ -903,7 +1183,11 @@
         },
         {
           "id": "guatemala",
-          "name": "과테말라",
+          "name": {
+            "ko": "과테말라",
+            "en": "Guatemala",
+            "zh": "危地马拉"
+          },
           "geo": {
             "lat": 14.98,
             "lon": -90.5
@@ -916,7 +1200,11 @@
         },
         {
           "id": "guinea",
-          "name": "기니",
+          "name": {
+            "ko": "기니",
+            "en": "Guinea",
+            "zh": "几内亚"
+          },
           "geo": {
             "lat": 10.62,
             "lon": -10.02
@@ -929,7 +1217,11 @@
         },
         {
           "id": "iraq",
-          "name": "이라크",
+          "name": {
+            "ko": "이라크",
+            "en": "Iraq",
+            "zh": "伊拉克"
+          },
           "geo": {
             "lat": 33.09,
             "lon": 43.26
@@ -942,7 +1234,11 @@
         },
         {
           "id": "ireland",
-          "name": "아일랜드",
+          "name": {
+            "ko": "아일랜드",
+            "en": "Ireland",
+            "zh": "爱尔兰"
+          },
           "geo": {
             "lat": 53.08,
             "lon": -7.8
@@ -955,7 +1251,11 @@
         },
         {
           "id": "israel",
-          "name": "이스라엘",
+          "name": {
+            "ko": "이스라엘",
+            "en": "Israel",
+            "zh": "以色列"
+          },
           "geo": {
             "lat": 30.91,
             "lon": 34.85
@@ -968,7 +1268,11 @@
         },
         {
           "id": "kyrgyzstan",
-          "name": "키르기스스탄",
+          "name": {
+            "ko": "키르기스스탄",
+            "en": "Kyrgyzstan",
+            "zh": "吉尔吉斯斯坦"
+          },
           "geo": {
             "lat": 41.67,
             "lon": 74.53
@@ -981,7 +1285,11 @@
         },
         {
           "id": "libya",
-          "name": "리비아",
+          "name": {
+            "ko": "리비아",
+            "en": "Libya",
+            "zh": "利比亚"
+          },
           "geo": {
             "lat": 26.64,
             "lon": 18.01
@@ -994,7 +1302,11 @@
         },
         {
           "id": "malaysia",
-          "name": "말레이시아",
+          "name": {
+            "ko": "말레이시아",
+            "en": "Malaysia",
+            "zh": "马来西亚"
+          },
           "geo": {
             "lat": 2.53,
             "lon": 113.84
@@ -1007,7 +1319,11 @@
         },
         {
           "id": "mali",
-          "name": "말리",
+          "name": {
+            "ko": "말리",
+            "en": "Mali",
+            "zh": "马里"
+          },
           "geo": {
             "lat": 18.69,
             "lon": -2.04
@@ -1020,7 +1336,11 @@
         },
         {
           "id": "mauritania",
-          "name": "모리타니",
+          "name": {
+            "ko": "모리타니",
+            "en": "Mauritania",
+            "zh": "毛里塔尼亚"
+          },
           "geo": {
             "lat": 19.59,
             "lon": -9.74
@@ -1033,7 +1353,11 @@
         },
         {
           "id": "mongolia",
-          "name": "몽골",
+          "name": {
+            "ko": "몽골",
+            "en": "Mongolia",
+            "zh": "蒙古国"
+          },
           "geo": {
             "lat": 46.0,
             "lon": 104.15
@@ -1046,7 +1370,11 @@
         },
         {
           "id": "mozambique",
-          "name": "모잠비크",
+          "name": {
+            "ko": "모잠비크",
+            "en": "Mozambique",
+            "zh": "莫桑比克"
+          },
           "geo": {
             "lat": -13.94,
             "lon": 37.84
@@ -1059,7 +1387,11 @@
         },
         {
           "id": "myanmar",
-          "name": "미얀마",
+          "name": {
+            "ko": "미얀마",
+            "en": "Myanmar",
+            "zh": "缅甸"
+          },
           "geo": {
             "lat": 21.57,
             "lon": 95.8
@@ -1072,7 +1404,11 @@
         },
         {
           "id": "namibia",
-          "name": "나미비아",
+          "name": {
+            "ko": "나미비아",
+            "en": "Namibia",
+            "zh": "纳米比亚"
+          },
           "geo": {
             "lat": -20.58,
             "lon": 17.11
@@ -1085,7 +1421,11 @@
         },
         {
           "id": "nepal",
-          "name": "네팔",
+          "name": {
+            "ko": "네팔",
+            "en": "Nepal",
+            "zh": "尼泊尔"
+          },
           "geo": {
             "lat": 28.3,
             "lon": 83.64
@@ -1098,7 +1438,11 @@
         },
         {
           "id": "niger",
-          "name": "니제르",
+          "name": {
+            "ko": "니제르",
+            "en": "Niger",
+            "zh": "尼日尔"
+          },
           "geo": {
             "lat": 17.45,
             "lon": 9.5
@@ -1111,7 +1455,11 @@
         },
         {
           "id": "north-korea",
-          "name": "조선민주주의인민공화국",
+          "name": {
+            "ko": "조선민주주의인민공화국",
+            "en": "North Korea",
+            "zh": "朝鲜民主主义人民共和国"
+          },
           "geo": {
             "lat": 39.89,
             "lon": 126.44
@@ -1124,7 +1472,11 @@
         },
         {
           "id": "norway",
-          "name": "노르웨이",
+          "name": {
+            "ko": "노르웨이",
+            "en": "Norway",
+            "zh": "挪威"
+          },
           "geo": {
             "lat": 61.36,
             "lon": 9.68
@@ -1137,7 +1489,11 @@
         },
         {
           "id": "paraguay",
-          "name": "파라과이",
+          "name": {
+            "ko": "파라과이",
+            "en": "Paraguay",
+            "zh": "巴拉圭"
+          },
           "geo": {
             "lat": -21.67,
             "lon": -60.15
@@ -1150,7 +1506,11 @@
         },
         {
           "id": "portugal",
-          "name": "포르투갈",
+          "name": {
+            "ko": "포르투갈",
+            "en": "Portugal",
+            "zh": "葡萄牙"
+          },
           "geo": {
             "lat": 39.61,
             "lon": -8.27
@@ -1163,7 +1523,11 @@
         },
         {
           "id": "puerto-rico",
-          "name": "푸에르토리코",
+          "name": {
+            "ko": "푸에르토리코",
+            "en": "Puerto Rico",
+            "zh": "波多黎各"
+          },
           "geo": {
             "lat": 18.23,
             "lon": -66.48
@@ -1176,7 +1540,11 @@
         },
         {
           "id": "romania",
-          "name": "루마니아",
+          "name": {
+            "ko": "루마니아",
+            "en": "Romania",
+            "zh": "罗马尼亚"
+          },
           "geo": {
             "lat": 45.73,
             "lon": 24.97
@@ -1189,7 +1557,11 @@
         },
         {
           "id": "rwanda",
-          "name": "르완다",
+          "name": {
+            "ko": "르완다",
+            "en": "Rwanda",
+            "zh": "卢旺达"
+          },
           "geo": {
             "lat": -1.9,
             "lon": 30.1
@@ -1202,7 +1574,11 @@
         },
         {
           "id": "solomon-islands",
-          "name": "솔로몬 제도",
+          "name": {
+            "ko": "솔로몬 제도",
+            "en": "Solomon Islands",
+            "zh": "所罗门群岛"
+          },
           "geo": {
             "lat": -8.03,
             "lon": 159.17
@@ -1215,7 +1591,11 @@
         },
         {
           "id": "south-sudan",
-          "name": "남수단",
+          "name": {
+            "ko": "남수단",
+            "en": "South Sudan",
+            "zh": "南苏丹"
+          },
           "geo": {
             "lat": 7.23,
             "lon": 30.39
@@ -1228,7 +1608,11 @@
         },
         {
           "id": "sri-lanka",
-          "name": "스리랑카",
+          "name": {
+            "ko": "스리랑카",
+            "en": "Sri Lanka",
+            "zh": "斯里兰卡"
+          },
           "geo": {
             "lat": 7.58,
             "lon": 80.7
@@ -1241,7 +1625,11 @@
         },
         {
           "id": "syria",
-          "name": "시리아",
+          "name": {
+            "ko": "시리아",
+            "en": "Syria",
+            "zh": "叙利亚"
+          },
           "geo": {
             "lat": 35.01,
             "lon": 38.28
@@ -1254,7 +1642,11 @@
         },
         {
           "id": "tanzania",
-          "name": "탄자니아",
+          "name": {
+            "ko": "탄자니아",
+            "en": "Tanzania",
+            "zh": "坦桑尼亚"
+          },
           "geo": {
             "lat": -6.05,
             "lon": 34.96
@@ -1267,7 +1659,11 @@
         },
         {
           "id": "tunisia",
-          "name": "튀니지",
+          "name": {
+            "ko": "튀니지",
+            "en": "Tunisia",
+            "zh": "突尼斯"
+          },
           "geo": {
             "lat": 33.69,
             "lon": 9.01
@@ -1280,7 +1676,11 @@
         },
         {
           "id": "turkmenistan",
-          "name": "투르크메니스탄",
+          "name": {
+            "ko": "투르크메니스탄",
+            "en": "Turkmenistan",
+            "zh": "土库曼斯坦"
+          },
           "geo": {
             "lat": 39.86,
             "lon": 58.68
@@ -1293,7 +1693,11 @@
         },
         {
           "id": "uganda",
-          "name": "우간다",
+          "name": {
+            "ko": "우간다",
+            "en": "Uganda",
+            "zh": "乌干达"
+          },
           "geo": {
             "lat": 1.97,
             "lon": 32.95
@@ -1306,7 +1710,11 @@
         },
         {
           "id": "uruguay",
-          "name": "우루과이",
+          "name": {
+            "ko": "우루과이",
+            "en": "Uruguay",
+            "zh": "乌拉圭"
+          },
           "geo": {
             "lat": -32.96,
             "lon": -55.97
@@ -1319,7 +1727,11 @@
         },
         {
           "id": "uzbekistan",
-          "name": "우즈베키스탄",
+          "name": {
+            "ko": "우즈베키스탄",
+            "en": "Uzbekistan",
+            "zh": "乌兹别克斯坦"
+          },
           "geo": {
             "lat": 41.69,
             "lon": 64.01
@@ -1332,7 +1744,11 @@
         },
         {
           "id": "yemen",
-          "name": "예멘",
+          "name": {
+            "ko": "예멘",
+            "en": "Yemen",
+            "zh": "也门"
+          },
           "geo": {
             "lat": 15.33,
             "lon": 45.87
@@ -1345,7 +1761,11 @@
         },
         {
           "id": "zambia",
-          "name": "잠비아",
+          "name": {
+            "ko": "잠비아",
+            "en": "Zambia",
+            "zh": "赞比亚"
+          },
           "geo": {
             "lat": -14.66,
             "lon": 26.4
@@ -1358,7 +1778,11 @@
         },
         {
           "id": "antarctica",
-          "name": "남극",
+          "name": {
+            "ko": "남극",
+            "en": "Antarctica",
+            "zh": "南极洲"
+          },
           "geo": {
             "lat": -79.84,
             "lon": 35.89
@@ -1371,7 +1795,11 @@
         },
         {
           "id": "azerbaijan",
-          "name": "아제르바이잔",
+          "name": {
+            "ko": "아제르바이잔",
+            "en": "Azerbaijan",
+            "zh": "阿塞拜疆"
+          },
           "geo": {
             "lat": 40.4,
             "lon": 47.21
@@ -1384,7 +1812,11 @@
         },
         {
           "id": "belgium",
-          "name": "벨기에",
+          "name": {
+            "ko": "벨기에",
+            "en": "Belgium",
+            "zh": "比利时"
+          },
           "geo": {
             "lat": 50.79,
             "lon": 4.8
@@ -1397,7 +1829,11 @@
         },
         {
           "id": "benin",
-          "name": "베냉",
+          "name": {
+            "ko": "베냉",
+            "en": "Benin",
+            "zh": "贝宁"
+          },
           "geo": {
             "lat": 10.32,
             "lon": 2.35
@@ -1410,7 +1846,11 @@
         },
         {
           "id": "bhutan",
-          "name": "부탄",
+          "name": {
+            "ko": "부탄",
+            "en": "Bhutan",
+            "zh": "不丹"
+          },
           "geo": {
             "lat": 27.54,
             "lon": 90.04
@@ -1423,7 +1863,11 @@
         },
         {
           "id": "botswana",
-          "name": "보츠와나",
+          "name": {
+            "ko": "보츠와나",
+            "en": "Botswana",
+            "zh": "博茨瓦纳"
+          },
           "geo": {
             "lat": -22.1,
             "lon": 24.18
@@ -1436,7 +1880,11 @@
         },
         {
           "id": "brunei",
-          "name": "브루나이",
+          "name": {
+            "ko": "브루나이",
+            "en": "Brunei",
+            "zh": "文莱"
+          },
           "geo": {
             "lat": 4.45,
             "lon": 114.55
@@ -1449,7 +1897,11 @@
         },
         {
           "id": "bulgaria",
-          "name": "불가리아",
+          "name": {
+            "ko": "불가리아",
+            "en": "Bulgaria",
+            "zh": "保加利亚"
+          },
           "geo": {
             "lat": 42.51,
             "lon": 25.16
@@ -1462,7 +1914,11 @@
         },
         {
           "id": "burundi",
-          "name": "부룬디",
+          "name": {
+            "ko": "부룬디",
+            "en": "Burundi",
+            "zh": "布隆迪"
+          },
           "geo": {
             "lat": -3.33,
             "lon": 29.92
@@ -1475,7 +1931,11 @@
         },
         {
           "id": "central-african-republic",
-          "name": "중앙아프리카 공화국",
+          "name": {
+            "ko": "중앙아프리카 공화국",
+            "en": "Central African Republic",
+            "zh": "中非共和国"
+          },
           "geo": {
             "lat": 6.99,
             "lon": 20.91
@@ -1488,7 +1948,11 @@
         },
         {
           "id": "croatia",
-          "name": "크로아티아",
+          "name": {
+            "ko": "크로아티아",
+            "en": "Croatia",
+            "zh": "克罗地亚"
+          },
           "geo": {
             "lat": 45.81,
             "lon": 16.37
@@ -1501,7 +1965,11 @@
         },
         {
           "id": "czech-republic",
-          "name": "체코",
+          "name": {
+            "ko": "체코",
+            "en": "Czech Republic",
+            "zh": "捷克"
+          },
           "geo": {
             "lat": 49.88,
             "lon": 15.38
@@ -1514,7 +1982,11 @@
         },
         {
           "id": "djibouti",
-          "name": "지부티",
+          "name": {
+            "ko": "지부티",
+            "en": "Djibouti",
+            "zh": "吉布提"
+          },
           "geo": {
             "lat": 11.98,
             "lon": 42.5
@@ -1527,7 +1999,11 @@
         },
         {
           "id": "east-timor",
-          "name": "동티모르",
+          "name": {
+            "ko": "동티모르",
+            "en": "East Timor",
+            "zh": "东帝汶"
+          },
           "geo": {
             "lat": -8.8,
             "lon": 125.85
@@ -1540,7 +2016,11 @@
         },
         {
           "id": "equatorial-guinea",
-          "name": "적도 기니",
+          "name": {
+            "ko": "적도 기니",
+            "en": "Equatorial Guinea",
+            "zh": "赤道几内亚"
+          },
           "geo": {
             "lat": 2.33,
             "lon": 8.99
@@ -1553,7 +2033,11 @@
         },
         {
           "id": "eritrea",
-          "name": "에리트레아",
+          "name": {
+            "ko": "에리트레아",
+            "en": "Eritrea",
+            "zh": "厄立特里亚"
+          },
           "geo": {
             "lat": 15.79,
             "lon": 38.29
@@ -1566,7 +2050,11 @@
         },
         {
           "id": "eswatini",
-          "name": "에스와티니",
+          "name": {
+            "ko": "에스와티니",
+            "en": "Eswatini",
+            "zh": "斯威士兰"
+          },
           "geo": {
             "lat": -26.53,
             "lon": 31.47
@@ -1579,7 +2067,11 @@
         },
         {
           "id": "french-southern-and-antarctic-lands",
-          "name": "프랑스령 남방 및 남극",
+          "name": {
+            "ko": "프랑스령 남방 및 남극",
+            "en": "French Southern and Antarctic Lands",
+            "zh": "法属南部和南极领地"
+          },
           "geo": {
             "lat": -49.3,
             "lon": 69.12
@@ -1592,7 +2084,11 @@
         },
         {
           "id": "georgia",
-          "name": "조지아",
+          "name": {
+            "ko": "조지아",
+            "en": "Georgia",
+            "zh": "格鲁吉亚"
+          },
           "geo": {
             "lat": 41.87,
             "lon": 43.74
@@ -1605,7 +2101,11 @@
         },
         {
           "id": "guyana",
-          "name": "가이아나",
+          "name": {
+            "ko": "가이아나",
+            "en": "Guyana",
+            "zh": "圭亚那"
+          },
           "geo": {
             "lat": 5.12,
             "lon": -58.94
@@ -1618,7 +2118,11 @@
         },
         {
           "id": "haiti",
-          "name": "아이티",
+          "name": {
+            "ko": "아이티",
+            "en": "Haiti",
+            "zh": "海地"
+          },
           "geo": {
             "lat": 19.26,
             "lon": -72.22
@@ -1631,7 +2135,11 @@
         },
         {
           "id": "hungary",
-          "name": "헝가리",
+          "name": {
+            "ko": "헝가리",
+            "en": "Hungary",
+            "zh": "匈牙利"
+          },
           "geo": {
             "lat": 47.09,
             "lon": 19.45
@@ -1644,7 +2152,11 @@
         },
         {
           "id": "jamaica",
-          "name": "자메이카",
+          "name": {
+            "ko": "자메이카",
+            "en": "Jamaica",
+            "zh": "牙买加"
+          },
           "geo": {
             "lat": 18.14,
             "lon": -77.32
@@ -1657,7 +2169,11 @@
         },
         {
           "id": "jordan",
-          "name": "요르단",
+          "name": {
+            "ko": "요르단",
+            "en": "Jordan",
+            "zh": "约旦"
+          },
           "geo": {
             "lat": 30.81,
             "lon": 36.38
@@ -1670,7 +2186,11 @@
         },
         {
           "id": "laos",
-          "name": "라오스",
+          "name": {
+            "ko": "라오스",
+            "en": "Laos",
+            "zh": "老挝"
+          },
           "geo": {
             "lat": 19.43,
             "lon": 102.53
@@ -1683,7 +2203,11 @@
         },
         {
           "id": "latvia",
-          "name": "라트비아",
+          "name": {
+            "ko": "라트비아",
+            "en": "Latvia",
+            "zh": "拉脱维亚"
+          },
           "geo": {
             "lat": 57.07,
             "lon": 25.46
@@ -1696,7 +2220,11 @@
         },
         {
           "id": "lebanon",
-          "name": "레바논",
+          "name": {
+            "ko": "레바논",
+            "en": "Lebanon",
+            "zh": "黎巴嫩"
+          },
           "geo": {
             "lat": 34.13,
             "lon": 35.99
@@ -1709,7 +2237,11 @@
         },
         {
           "id": "lesotho",
-          "name": "레소토",
+          "name": {
+            "ko": "레소토",
+            "en": "Lesotho",
+            "zh": "莱索托"
+          },
           "geo": {
             "lat": -29.48,
             "lon": 28.25
@@ -1722,7 +2254,11 @@
         },
         {
           "id": "liberia",
-          "name": "라이베리아",
+          "name": {
+            "ko": "라이베리아",
+            "en": "Liberia",
+            "zh": "利比里亚"
+          },
           "geo": {
             "lat": 6.45,
             "lon": -9.46
@@ -1735,7 +2271,11 @@
         },
         {
           "id": "lithuania",
-          "name": "리투아니아",
+          "name": {
+            "ko": "리투아니아",
+            "en": "Lithuania",
+            "zh": "立陶宛"
+          },
           "geo": {
             "lat": 55.1,
             "lon": 24.09
@@ -1748,7 +2288,11 @@
         },
         {
           "id": "malawi",
-          "name": "말라위",
+          "name": {
+            "ko": "말라위",
+            "en": "Malawi",
+            "zh": "马拉维"
+          },
           "geo": {
             "lat": -13.39,
             "lon": 33.61
@@ -1761,7 +2305,11 @@
         },
         {
           "id": "netherlands",
-          "name": "네덜란드",
+          "name": {
+            "ko": "네덜란드",
+            "en": "Netherlands",
+            "zh": "荷兰"
+          },
           "geo": {
             "lat": 52.42,
             "lon": 5.61
@@ -1774,7 +2322,11 @@
         },
         {
           "id": "nicaragua",
-          "name": "니카라과",
+          "name": {
+            "ko": "니카라과",
+            "en": "Nicaragua",
+            "zh": "尼加拉瓜"
+          },
           "geo": {
             "lat": 12.67,
             "lon": -85.07
@@ -1787,7 +2339,11 @@
         },
         {
           "id": "oman",
-          "name": "오만",
+          "name": {
+            "ko": "오만",
+            "en": "Oman",
+            "zh": "阿曼"
+          },
           "geo": {
             "lat": 22.12,
             "lon": 57.34
@@ -1800,7 +2356,11 @@
         },
         {
           "id": "panama",
-          "name": "파나마",
+          "name": {
+            "ko": "파나마",
+            "en": "Panama",
+            "zh": "巴拿马"
+          },
           "geo": {
             "lat": 8.72,
             "lon": -80.35
@@ -1813,7 +2373,11 @@
         },
         {
           "id": "qatar",
-          "name": "카타르",
+          "name": {
+            "ko": "카타르",
+            "en": "Qatar",
+            "zh": "卡塔尔"
+          },
           "geo": {
             "lat": 25.24,
             "lon": 51.14
@@ -1826,7 +2390,11 @@
         },
         {
           "id": "republic-of-the-congo",
-          "name": "콩고 공화국",
+          "name": {
+            "ko": "콩고 공화국",
+            "en": "Republic of the Congo",
+            "zh": "刚果共和国"
+          },
           "geo": {
             "lat": 0.14,
             "lon": 15.9
@@ -1839,7 +2407,11 @@
         },
         {
           "id": "serbia",
-          "name": "세르비아",
+          "name": {
+            "ko": "세르비아",
+            "en": "Serbia",
+            "zh": "塞尔维亚"
+          },
           "geo": {
             "lat": 44.19,
             "lon": 20.79
@@ -1852,7 +2424,11 @@
         },
         {
           "id": "sierra-leone",
-          "name": "시에라리온",
+          "name": {
+            "ko": "시에라리온",
+            "en": "Sierra Leone",
+            "zh": "塞拉利昂"
+          },
           "geo": {
             "lat": 8.62,
             "lon": -11.76
@@ -1865,7 +2441,11 @@
         },
         {
           "id": "slovakia",
-          "name": "슬로바키아",
+          "name": {
+            "ko": "슬로바키아",
+            "en": "Slovakia",
+            "zh": "斯洛伐克"
+          },
           "geo": {
             "lat": 48.73,
             "lon": 19.05
@@ -1878,7 +2458,11 @@
         },
         {
           "id": "somalia",
-          "name": "소말리아",
+          "name": {
+            "ko": "소말리아",
+            "en": "Somalia",
+            "zh": "索马里"
+          },
           "geo": {
             "lat": 3.57,
             "lon": 45.19
@@ -1891,7 +2475,11 @@
         },
         {
           "id": "suriname",
-          "name": "수리남",
+          "name": {
+            "ko": "수리남",
+            "en": "Suriname",
+            "zh": "苏里南"
+          },
           "geo": {
             "lat": 4.14,
             "lon": -55.91
@@ -1904,7 +2492,11 @@
         },
         {
           "id": "switzerland",
-          "name": "스위스",
+          "name": {
+            "ko": "스위스",
+            "en": "Switzerland",
+            "zh": "瑞士"
+          },
           "geo": {
             "lat": 46.72,
             "lon": 7.46
@@ -1917,7 +2509,11 @@
         },
         {
           "id": "tajikistan",
-          "name": "타지키스탄",
+          "name": {
+            "ko": "타지키스탄",
+            "en": "Tajikistan",
+            "zh": "塔吉克斯坦"
+          },
           "geo": {
             "lat": 38.2,
             "lon": 72.59
@@ -1930,7 +2526,11 @@
         },
         {
           "id": "the-bahamas",
-          "name": "바하마",
+          "name": {
+            "ko": "바하마",
+            "en": "The Bahamas",
+            "zh": "巴哈马"
+          },
           "geo": {
             "lat": 26.4,
             "lon": -77.15
@@ -1943,7 +2543,11 @@
         },
         {
           "id": "united-arab-emirates",
-          "name": "아랍에미리트",
+          "name": {
+            "ko": "아랍에미리트",
+            "en": "United Arab Emirates",
+            "zh": "阿拉伯联合酋长国"
+          },
           "geo": {
             "lat": 23.47,
             "lon": 54.55
@@ -1956,7 +2560,11 @@
         },
         {
           "id": "vanuatu",
-          "name": "바누아투",
+          "name": {
+            "ko": "바누아투",
+            "en": "Vanuatu",
+            "zh": "瓦努阿图"
+          },
           "geo": {
             "lat": -15.37,
             "lon": 166.91
@@ -1969,7 +2577,11 @@
         },
         {
           "id": "bosnia-and-herzegovina",
-          "name": "보스니아 헤르체고비나",
+          "name": {
+            "ko": "보스니아 헤르체고비나",
+            "en": "Bosnia and Herzegovina",
+            "zh": "波斯尼亚和黑塞哥维那"
+          },
           "geo": {
             "lat": 44.09,
             "lon": 18.07
@@ -1982,7 +2594,11 @@
         },
         {
           "id": "cyprus",
-          "name": "키프로스",
+          "name": {
+            "ko": "키프로스",
+            "en": "Cyprus",
+            "zh": "塞浦路斯"
+          },
           "geo": {
             "lat": 34.91,
             "lon": 33.08
@@ -1995,7 +2611,11 @@
         },
         {
           "id": "dominican-republic",
-          "name": "도미니카 공화국",
+          "name": {
+            "ko": "도미니카 공화국",
+            "en": "Dominican Republic",
+            "zh": "多米尼加"
+          },
           "geo": {
             "lat": 19.1,
             "lon": -70.65
@@ -2008,7 +2628,11 @@
         },
         {
           "id": "falkland-islands",
-          "name": "포클랜드 제도",
+          "name": {
+            "ko": "포클랜드 제도",
+            "en": "Falkland Islands",
+            "zh": "福克兰群岛"
+          },
           "geo": {
             "lat": -51.61,
             "lon": -58.74
@@ -2021,7 +2645,11 @@
         },
         {
           "id": "honduras",
-          "name": "온두라스",
+          "name": {
+            "ko": "온두라스",
+            "en": "Honduras",
+            "zh": "洪都拉斯"
+          },
           "geo": {
             "lat": 14.79,
             "lon": -86.89
@@ -2034,7 +2662,11 @@
         },
         {
           "id": "palestine",
-          "name": "팔레스타인",
+          "name": {
+            "ko": "팔레스타인",
+            "en": "Palestine",
+            "zh": "巴勒斯坦"
+          },
           "geo": {
             "lat": 32.05,
             "lon": 35.29
@@ -2047,7 +2679,11 @@
         },
         {
           "id": "taiwan",
-          "name": "중화민국",
+          "name": {
+            "ko": "중화민국",
+            "en": "Taiwan",
+            "zh": "中华民国"
+          },
           "geo": {
             "lat": 23.65,
             "lon": 120.87
@@ -2060,7 +2696,11 @@
         },
         {
           "id": "trinidad-and-tobago",
-          "name": "트리니다드 토바고",
+          "name": {
+            "ko": "트리니다드 토바고",
+            "en": "Trinidad and Tobago",
+            "zh": "特立尼达和多巴哥"
+          },
           "geo": {
             "lat": 11.0,
             "lon": -60.92
@@ -2073,7 +2713,11 @@
         },
         {
           "id": "new-caledonia",
-          "name": "누벨칼레도니",
+          "name": {
+            "ko": "누벨칼레도니",
+            "en": "New Caledonia",
+            "zh": "新喀里多尼亚"
+          },
           "geo": {
             "lat": -21.06,
             "lon": 165.08
@@ -2086,7 +2730,11 @@
         },
         {
           "id": "albania",
-          "name": "알바니아",
+          "name": {
+            "ko": "알바니아",
+            "en": "Albania",
+            "zh": "阿尔巴尼亚"
+          },
           "geo": {
             "lat": 40.65,
             "lon": 20.11
@@ -2099,7 +2747,11 @@
         },
         {
           "id": "armenia",
-          "name": "아르메니아",
+          "name": {
+            "ko": "아르메니아",
+            "en": "Armenia",
+            "zh": "亚美尼亚"
+          },
           "geo": {
             "lat": 40.46,
             "lon": 44.8
@@ -2112,7 +2764,11 @@
         },
         {
           "id": "belize",
-          "name": "벨리즈",
+          "name": {
+            "ko": "벨리즈",
+            "en": "Belize",
+            "zh": "伯利兹"
+          },
           "geo": {
             "lat": 17.2,
             "lon": -88.71
@@ -2125,7 +2781,11 @@
         },
         {
           "id": "el-salvador",
-          "name": "엘살바도르",
+          "name": {
+            "ko": "엘살바도르",
+            "en": "El Salvador",
+            "zh": "萨尔瓦多"
+          },
           "geo": {
             "lat": 13.69,
             "lon": -88.89
@@ -2138,7 +2798,11 @@
         },
         {
           "id": "guinea-bissau",
-          "name": "기니비사우",
+          "name": {
+            "ko": "기니비사우",
+            "en": "Guinea-Bissau",
+            "zh": "几内亚比绍"
+          },
           "geo": {
             "lat": 12.16,
             "lon": -14.52
@@ -2151,7 +2815,11 @@
         },
         {
           "id": "kosovo",
-          "name": "코소보",
+          "name": {
+            "ko": "코소보",
+            "en": "Kosovo",
+            "zh": "科索沃"
+          },
           "geo": {
             "lat": 42.59,
             "lon": 20.86
@@ -2164,7 +2832,11 @@
         },
         {
           "id": "kuwait",
-          "name": "쿠웨이트",
+          "name": {
+            "ko": "쿠웨이트",
+            "en": "Kuwait",
+            "zh": "科威特"
+          },
           "geo": {
             "lat": 29.41,
             "lon": 47.31
@@ -2177,7 +2849,11 @@
         },
         {
           "id": "moldova",
-          "name": "몰도바",
+          "name": {
+            "ko": "몰도바",
+            "en": "Moldova",
+            "zh": "摩尔多瓦"
+          },
           "geo": {
             "lat": 47.43,
             "lon": 28.49
@@ -2190,7 +2866,11 @@
         },
         {
           "id": "montenegro",
-          "name": "몬테네그로",
+          "name": {
+            "ko": "몬테네그로",
+            "en": "Montenegro",
+            "zh": "黑山"
+          },
           "geo": {
             "lat": 42.8,
             "lon": 19.14
@@ -2203,7 +2883,11 @@
         },
         {
           "id": "north-macedonia",
-          "name": "북마케도니아",
+          "name": {
+            "ko": "북마케도니아",
+            "en": "North Macedonia",
+            "zh": "北马其顿"
+          },
           "geo": {
             "lat": 41.56,
             "lon": 21.56
@@ -2216,7 +2900,11 @@
         },
         {
           "id": "slovenia",
-          "name": "슬로베니아",
+          "name": {
+            "ko": "슬로베니아",
+            "en": "Slovenia",
+            "zh": "斯洛文尼亚"
+          },
           "geo": {
             "lat": 46.06,
             "lon": 14.92
@@ -2229,7 +2917,11 @@
         },
         {
           "id": "the-gambia",
-          "name": "감비아",
+          "name": {
+            "ko": "감비아",
+            "en": "The Gambia",
+            "zh": "冈比亚"
+          },
           "geo": {
             "lat": 13.64,
             "lon": -15.0
@@ -2242,7 +2934,11 @@
         },
         {
           "id": "togo",
-          "name": "토고",
+          "name": {
+            "ko": "토고",
+            "en": "Togo",
+            "zh": "多哥"
+          },
           "geo": {
             "lat": 8.81,
             "lon": 1.06
@@ -2255,7 +2951,11 @@
         },
         {
           "id": "luxembourg",
-          "name": "룩셈부르크",
+          "name": {
+            "ko": "룩셈부르크",
+            "en": "Luxembourg",
+            "zh": "卢森堡"
+          },
           "geo": {
             "lat": 49.73,
             "lon": 6.08
@@ -2268,7 +2968,11 @@
         },
         {
           "id": "western-sahara",
-          "name": "서사하라",
+          "name": {
+            "ko": "서사하라",
+            "en": "Western Sahara",
+            "zh": "西撒哈拉"
+          },
           "geo": {
             "lat": 23.97,
             "lon": -12.63
@@ -2281,7 +2985,11 @@
         },
         {
           "id": "korea/seoul",
-          "name": "서울",
+          "name": {
+            "ko": "서울",
+            "en": "Seoul",
+            "zh": "首尔"
+          },
           "geo": {
             "lat": 37.56,
             "lon": 126.98
@@ -2463,7 +3171,11 @@
         },
         {
           "id": "japan/tokyo",
-          "name": "도쿄",
+          "name": {
+            "ko": "도쿄",
+            "en": "Tokyo",
+            "zh": "东京"
+          },
           "geo": {
             "lat": 35.681,
             "lon": 139.767
@@ -2621,7 +3333,11 @@
         },
         {
           "id": "france/paris",
-          "name": "파리",
+          "name": {
+            "ko": "파리",
+            "en": "Paris",
+            "zh": "巴黎"
+          },
           "geo": {
             "lat": 48.857,
             "lon": 2.352
@@ -2747,7 +3463,11 @@
         },
         {
           "id": "uk/london",
-          "name": "런던",
+          "name": {
+            "ko": "런던",
+            "en": "London",
+            "zh": "伦敦"
+          },
           "geo": {
             "lat": 51.507,
             "lon": -0.128
@@ -2873,7 +3593,11 @@
         },
         {
           "id": "usa/washington",
-          "name": "워싱턴 D.C.",
+          "name": {
+            "ko": "워싱턴 D.C.",
+            "en": "Washington, D.C.",
+            "zh": "华盛顿特区"
+          },
           "geo": {
             "lat": 38.895,
             "lon": -77.036
@@ -2955,7 +3679,11 @@
         },
         {
           "id": "korea/busan",
-          "name": "부산",
+          "name": {
+            "ko": "부산",
+            "en": "Busan",
+            "zh": "釜山"
+          },
           "geo": {
             "lat": 35.1,
             "lon": 129.04
@@ -3079,7 +3807,11 @@
         },
         {
           "id": "usa/new-york",
-          "name": "뉴욕",
+          "name": {
+            "ko": "뉴욕",
+            "en": "New York",
+            "zh": "纽约"
+          },
           "geo": {
             "lat": 40.7128,
             "lon": -74.006
@@ -3207,7 +3939,11 @@
         },
         {
           "id": "korea/jeju",
-          "name": "제주",
+          "name": {
+            "ko": "제주",
+            "en": "Jeju",
+            "zh": "济州"
+          },
           "geo": {
             "lat": 33.3805,
             "lon": 126.5535
@@ -3331,7 +4067,11 @@
         },
         {
           "id": "korea/ulleungdo",
-          "name": "울릉도",
+          "name": {
+            "ko": "울릉도",
+            "en": "Ulleungdo",
+            "zh": "郁陵岛"
+          },
           "geo": {
             "lat": 37.5011,
             "lon": 130.8562
@@ -3457,7 +4197,11 @@
         },
         {
           "id": "korea/dokdo",
-          "name": "독도",
+          "name": {
+            "ko": "독도",
+            "en": "Dokdo",
+            "zh": "独岛"
+          },
           "geo": {
             "lat": 37.2429,
             "lon": 131.8671
@@ -3567,7 +4311,11 @@
         },
         {
           "id": "italy/rome",
-          "name": "로마",
+          "name": {
+            "ko": "로마",
+            "en": "Rome",
+            "zh": "罗马"
+          },
           "geo": {
             "lat": 41.903,
             "lon": 12.479
@@ -3717,7 +4465,11 @@
         },
         {
           "id": "egypt/cairo",
-          "name": "카이로",
+          "name": {
+            "ko": "카이로",
+            "en": "Cairo",
+            "zh": "开罗"
+          },
           "geo": {
             "lat": 30.02,
             "lon": 31.195
@@ -3763,7 +4515,11 @@
         },
         {
           "id": "australia/sydney",
-          "name": "시드니",
+          "name": {
+            "ko": "시드니",
+            "en": "Sydney",
+            "zh": "悉尼"
+          },
           "geo": {
             "lat": -33.889,
             "lon": 151.204
@@ -3929,7 +4685,11 @@
         },
         {
           "id": "china/beijing",
-          "name": "베이징",
+          "name": {
+            "ko": "베이징",
+            "en": "Beijing",
+            "zh": "北京"
+          },
           "geo": {
             "lat": 39.915,
             "lon": 116.3798
@@ -4107,7 +4867,11 @@
         },
         {
           "id": "turkey/istanbul",
-          "name": "이스탄불",
+          "name": {
+            "ko": "이스탄불",
+            "en": "Istanbul",
+            "zh": "伊斯坦布尔"
+          },
           "geo": {
             "lat": 41.0328,
             "lon": 29.0058
@@ -4237,7 +5001,11 @@
         },
         {
           "id": "brazil/rio",
-          "name": "리우데자네이루",
+          "name": {
+            "ko": "리우데자네이루",
+            "en": "Rio de Janeiro",
+            "zh": "里约热内卢"
+          },
           "geo": {
             "lat": -22.957,
             "lon": -43.1775
@@ -4447,7 +5215,11 @@
         },
         {
           "id": "arctic/ny-alesund",
-          "name": "북극 다산과학기지",
+          "name": {
+            "ko": "북극 다산과학기지",
+            "en": "Arctic Dasan Station",
+            "zh": "北极茶山科学站"
+          },
           "geo": {
             "lat": 78.93,
             "lon": 11.95
@@ -4493,7 +5265,11 @@
         },
         {
           "id": "antarctica/king-george",
-          "name": "남극 세종과학기지",
+          "name": {
+            "ko": "남극 세종과학기지",
+            "en": "Antarctic King Sejong Station",
+            "zh": "南极世宗科学站"
+          },
           "geo": {
             "lat": -62.22,
             "lon": -58.7178
@@ -4571,7 +5347,11 @@
         },
         {
           "id": "taiwan/taipei",
-          "name": "타이베이",
+          "name": {
+            "ko": "타이베이",
+            "en": "Taipei",
+            "zh": "台北"
+          },
           "geo": {
             "lat": 25.0854,
             "lon": 121.5615
@@ -4729,7 +5509,11 @@
         },
         {
           "id": "russia/moscow",
-          "name": "모스크바",
+          "name": {
+            "ko": "모스크바",
+            "en": "Moscow",
+            "zh": "莫斯科"
+          },
           "geo": {
             "lat": 55.754,
             "lon": 37.6137
@@ -4903,7 +5687,11 @@
         },
         {
           "id": "iran/tehran",
-          "name": "테헤란",
+          "name": {
+            "ko": "테헤란",
+            "en": "Tehran",
+            "zh": "德黑兰"
+          },
           "geo": {
             "lat": 35.6984,
             "lon": 51.3478
@@ -5029,7 +5817,11 @@
         },
         {
           "id": "saudi/riyadh",
-          "name": "리야드",
+          "name": {
+            "ko": "리야드",
+            "en": "Riyadh",
+            "zh": "利雅得"
+          },
           "geo": {
             "lat": 24.69,
             "lon": 46.665
@@ -5075,7 +5867,11 @@
         },
         {
           "id": "northkorea/pyongyang",
-          "name": "평양",
+          "name": {
+            "ko": "평양",
+            "en": "Pyongyang",
+            "zh": "平壤"
+          },
           "geo": {
             "lat": 39.0237,
             "lon": 125.7638
@@ -5225,7 +6021,11 @@
         },
         {
           "id": "germany/berlin",
-          "name": "베를린",
+          "name": {
+            "ko": "베를린",
+            "en": "Berlin",
+            "zh": "柏林"
+          },
           "geo": {
             "lat": 52.5196,
             "lon": 13.3797
@@ -5351,7 +6151,11 @@
         },
         {
           "id": "thailand/bangkok",
-          "name": "방콕",
+          "name": {
+            "ko": "방콕",
+            "en": "Bangkok",
+            "zh": "曼谷"
+          },
           "geo": {
             "lat": 13.7454,
             "lon": 100.5031
@@ -5453,7 +6257,11 @@
         },
         {
           "id": "india/agra",
-          "name": "아그라",
+          "name": {
+            "ko": "아그라",
+            "en": "Agra",
+            "zh": "阿格拉"
+          },
           "geo": {
             "lat": 27.18,
             "lon": 78.03
@@ -5499,7 +6307,11 @@
         },
         {
           "id": "russia/saint-petersburg",
-          "name": "상트페테르부르크",
+          "name": {
+            "ko": "상트페테르부르크",
+            "en": "Saint Petersburg",
+            "zh": "圣彼得堡"
+          },
           "geo": {
             "lat": 59.9395,
             "lon": 30.3066
@@ -5628,12 +6440,20 @@
     },
     {
       "id": "moon",
-      "name": "달",
+      "name": {
+        "ko": "달",
+        "en": "Moon",
+        "zh": "月球"
+      },
       "icon": "🌕",
       "sectors": [
         {
           "id": "apollo-11",
-          "name": "아폴로 11호 · 고요의 기지",
+          "name": {
+            "ko": "아폴로 11호 · 고요의 기지",
+            "en": "Apollo 11 · Tranquility Base",
+            "zh": "阿波罗11号 · 静海基地"
+          },
           "geo": {
             "lat": 0.674,
             "lon": 23.473
@@ -5726,7 +6546,11 @@
         },
         {
           "id": "apollo-15",
-          "name": "아폴로 15호 · 해들리 열구",
+          "name": {
+            "ko": "아폴로 15호 · 해들리 열구",
+            "en": "Apollo 15 · Hadley Rille",
+            "zh": "阿波罗15号 · 哈德利沟纹"
+          },
           "geo": {
             "lat": 26.13,
             "lon": 3.63
@@ -5738,7 +6562,11 @@
         },
         {
           "id": "apollo-17",
-          "name": "아폴로 17호 · 타우루스-리트로",
+          "name": {
+            "ko": "아폴로 17호 · 타우루스-리트로",
+            "en": "Apollo 17 · Taurus-Littrow",
+            "zh": "阿波罗17号 · 金牛-利特罗"
+          },
           "geo": {
             "lat": 20.19,
             "lon": 30.77
@@ -5750,7 +6578,11 @@
         },
         {
           "id": "change-4",
-          "name": "창어 4호 · 폰 카르만 크레이터",
+          "name": {
+            "ko": "창어 4호 · 폰 카르만 크레이터",
+            "en": "Chang'e 4 · Von Kármán Crater",
+            "zh": "嫦娥四号 · 冯·卡门撞击坑"
+          },
           "geo": {
             "lat": -45.46,
             "lon": 177.6
@@ -5764,12 +6596,20 @@
     },
     {
       "id": "mars",
-      "name": "화성",
+      "name": {
+        "ko": "화성",
+        "en": "Mars",
+        "zh": "火星"
+      },
       "icon": "🔴",
       "sectors": [
         {
           "id": "jezero",
-          "name": "퍼서비어런스 · 예제로 크레이터",
+          "name": {
+            "ko": "퍼서비어런스 · 예제로 크레이터",
+            "en": "Perseverance · Jezero Crater",
+            "zh": "毅力号 · 耶泽罗撞击坑"
+          },
           "geo": {
             "lat": 18.44,
             "lon": 77.45
@@ -5862,7 +6702,11 @@
         },
         {
           "id": "gale",
-          "name": "큐리오시티 · 게일 크레이터",
+          "name": {
+            "ko": "큐리오시티 · 게일 크레이터",
+            "en": "Curiosity · Gale Crater",
+            "zh": "好奇号 · 盖尔撞击坑"
+          },
           "geo": {
             "lat": -4.59,
             "lon": 137.44
@@ -5874,7 +6718,11 @@
         },
         {
           "id": "viking-1",
-          "name": "바이킹 1호 · 크리세 평원",
+          "name": {
+            "ko": "바이킹 1호 · 크리세 평원",
+            "en": "Viking 1 · Chryse Planitia",
+            "zh": "海盗1号 · 克律塞平原"
+          },
           "geo": {
             "lat": 22.27,
             "lon": -47.95
@@ -5886,7 +6734,11 @@
         },
         {
           "id": "olympus",
-          "name": "올림푸스 산",
+          "name": {
+            "ko": "올림푸스 산",
+            "en": "Olympus Mons",
+            "zh": "奥林匹斯山"
+          },
           "geo": {
             "lat": 18.65,
             "lon": -133.8

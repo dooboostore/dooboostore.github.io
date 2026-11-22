@@ -16,12 +16,12 @@
     {"use": "saudi/vehicle/suv", "count": 2, "scale": 0.5, "behavior": {"type": "route", "path": "M520.3 311.9 L597.9 274.4 L641.1 258.4", "dur": 20}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
   ],
-  "info": {
-    "킹덤 센터": {"title": "킹덤 센터", "emoji": "🏙️", "kind": "지명", "desc": "2002년에 완성된 높이 302m의 빌딩이에요. 꼭대기의 병따개 모양 구멍 위로 하늘 다리가 걸려 있어요."},
-    "알 파이살리아 타워": {"title": "알 파이살리아 타워", "emoji": "🌐", "kind": "지명", "desc": "2000년에 완성된 리야드의 첫 초고층 빌딩이에요. 꼭대기 근처에 금빛 유리 공이 반짝여요."},
-    "마스막 요새": {"title": "마스막 요새", "emoji": "🏰", "kind": "지명", "desc": "흙벽돌로 지은 오래된 요새예요. 1902년 리야드를 되찾은 일과 이어진 곳이라 지금은 박물관이 되었어요."},
-    "디리야 앗투라이프": {"title": "디리야 앗투라이프", "emoji": "🧱", "kind": "지명", "desc": "흙벽돌 마을이 남아 있는 옛 도읍지예요. 2010년 유네스코 세계유산이 되었어요."},
-    "국립 박물관": {"title": "국립 박물관", "emoji": "🏛️", "kind": "지명", "desc": "아라비아반도의 역사와 자연을 보여 주는 박물관이에요. 사막을 닮은 곡선 벽이 인상적이에요."},
-    "와디 하니파": {"title": "와디 하니파", "emoji": "🏞️", "kind": "지명", "desc": "리야드 서쪽을 흐르는 마른 골짜기예요. 비가 오면 물이 흐르고, 지금은 푸른 산책로로 가꿔졌어요."}
-  }
+  "labels": [
+    {"text": {"ko": "킹덤 센터", "en": "Kingdom Centre", "zh": "王国中心"}, "at": [516.8, 306.8], "size": 12.0, "info": {"emoji": "🏙️", "kind": "지명", "title": {"ko": "킹덤 센터", "en": "Kingdom Centre", "zh": "王国中心"}, "desc": {"ko": "2002년에 완성된 높이 302m의 빌딩이에요. 꼭대기의 병따개 모양 구멍 위로 하늘 다리가 걸려 있어요.", "en": "A 302 m building completed in 2002. A sky bridge spans the bottle-opener-shaped opening at the top.", "zh": "2002年建成、高302米的大楼。顶部开瓶器形状的开口上方架着一座天桥。"}}},
+    {"text": {"ko": "디리야 앗투라이프", "en": "At-Turaif, Diriyah", "zh": "德拉伊耶古城"}, "at": [119.2, 213.1], "size": 9.0, "info": {"emoji": "🧱", "kind": "지명", "title": {"ko": "디리야 앗투라이프", "en": "At-Turaif, Diriyah", "zh": "德拉伊耶古城"}, "desc": {"ko": "흙벽돌 마을이 남아 있는 옛 도읍지예요. 2010년 유네스코 세계유산이 되었어요.", "en": "An old capital where a mud-brick town still remains. It became a UNESCO World Heritage Site in 2010.", "zh": "保留着泥砖村落的古都旧址。2010年成为联合国教科文组织世界遗产。"}}},
+    {"text": {"ko": "국립 박물관", "en": "National Museum", "zh": "国家博物馆"}, "at": [660.0, 585.3], "size": 9.0, "info": {"emoji": "🏛️", "kind": "지명", "title": {"ko": "국립 박물관", "en": "National Museum", "zh": "国家博物馆"}, "desc": {"ko": "아라비아반도의 역사와 자연을 보여 주는 박물관이에요. 사막을 닮은 곡선 벽이 인상적이에요.", "en": "A museum that shows the history and nature of the Arabian Peninsula. Its curved walls, shaped like the desert, are striking.", "zh": "展示阿拉伯半岛历史与自然的博物馆。形似沙漠的曲线墙令人印象深刻。"}}},
+    {"text": {"ko": "와디 하니파", "en": "Wadi Hanifa", "zh": "哈尼法干谷"}, "at": [90.0, 276.0], "size": 9.0, "info": {"emoji": "🏞️", "kind": "지명", "title": {"ko": "와디 하니파", "en": "Wadi Hanifa", "zh": "哈尼法干谷"}, "desc": {"ko": "리야드 서쪽을 흐르는 마른 골짜기예요. 비가 오면 물이 흐르고, 지금은 푸른 산책로로 가꿔졌어요.", "en": "A dry valley running along the west of Riyadh. Water flows when it rains, and today it has been turned into a green walking trail.", "zh": "流经利雅得西边的干河谷。下雨时会有水流，如今已被打造成绿色的散步道。"}}},
+    {"text": {"ko": "알 파이살리아 타워", "en": "Al Faisaliah Tower", "zh": "费萨里亚大厦"}, "at": [559.9, 398.2], "size": 9.0, "info": {"emoji": "🌐", "kind": "지명", "title": {"ko": "알 파이살리아 타워", "en": "Al Faisaliah Tower", "zh": "费萨里亚大厦"}, "desc": {"ko": "2000년에 완성된 리야드의 첫 초고층 빌딩이에요. 꼭대기 근처에 금빛 유리 공이 반짝여요.", "en": "Riyadh's first skyscraper, completed in 2000. A golden glass ball sparkles near the top.", "zh": "2000年建成的利雅得第一座摩天大楼。顶部附近有一颗闪闪发光的金色玻璃球。"}}},
+    {"text": {"ko": "마스막 요새", "en": "Masmak Fortress", "zh": "马斯马克城堡"}, "at": [670.2, 654.4], "size": 9.0, "info": {"emoji": "🏰", "kind": "지명", "title": {"ko": "마스막 요새", "en": "Masmak Fortress", "zh": "马斯马克城堡"}, "desc": {"ko": "흙벽돌로 지은 오래된 요새예요. 1902년 리야드를 되찾은 일과 이어진 곳이라 지금은 박물관이 되었어요.", "en": "An old fortress built of mud brick. It's linked to the recapture of Riyadh in 1902, and today it's a museum.", "zh": "用泥砖建造的古老城堡。它与1902年夺回利雅得的事件有关，如今已成为博物馆。"}}}
+  ]
 }
