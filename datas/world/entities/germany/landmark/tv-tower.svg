@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 80">
+  <!-- 베를린 TV 타워(페른제투름): 가늘고 긴 콘크리트 기둥 위에 반짝이는 은빛 구슬 전망대와 창 띠, 그 위로 빨강·흰 줄무늬 안테나. 밤엔 창 띠와 꼭대기 빨간 등이 빛난다 -->
+  <ellipse cx="12" cy="78.8" rx="10" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <clipPath id="ball"><circle cx="12" cy="26" r="7.4"/></clipPath>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2.6" y="73.4" width="18.8" height="5.2" rx="1.4" fill="#e9ecef"/>
+    <path d="M9.4 74 L10.4 31 L13.6 31 L14.6 74 Z" fill="#f2f3f2"/>
+    <path d="M10.8 20 L11 9.6 L13 9.6 L13.2 20 Z" fill="#f2f3f2"/>
+    <rect x="11.3" y="2" width="1.4" height="8.4" rx="0.7" fill="#f4f1ea"/>
+    <circle cx="12" cy="26" r="7.4" fill="#cdd5dc"/>
+  </g>
+  <g fill="#e2483c"><rect x="11.35" y="3.4" width="1.3" height="1.2"/><rect x="11.35" y="5.8" width="1.3" height="1.2"/><rect x="11.35" y="8.2" width="1.3" height="1.1"/></g>
+  <g clip-path="url(#ball)" fill="none" stroke="#8c99a6" stroke-width="0.3" opacity="0.8">
+    <path d="M4 21 Q12 23 20 21 M4 30.6 Q12 32.6 20 30.6 M4 33.4 Q12 35 20 33.4 M4 18.6 Q12 20 20 18.6"/>
+    <path d="M12 18 L12 34 M8.4 18.6 Q7.2 26 8.4 33.4 M15.6 18.6 Q16.8 26 15.6 33.4 M5.6 20.6 Q4 26 5.6 31.4 M18.4 20.6 Q20 26 18.4 31.4"/>
+  </g>
+  <rect x="4.4" y="24.6" width="15.2" height="2.6" rx="1.2" fill="#3f5468" stroke="#5b4636" stroke-width="0.35"/>
+  <g fill="#9fc6e0"><rect x="5.6" y="25.2" width="1.4" height="1.4" rx="0.4"/><rect x="7.8" y="25.2" width="1.4" height="1.4" rx="0.4"/><rect x="10" y="25.2" width="1.4" height="1.4" rx="0.4"/><rect x="12.2" y="25.2" width="1.4" height="1.4" rx="0.4"/><rect x="14.4" y="25.2" width="1.4" height="1.4" rx="0.4"/><rect x="16.6" y="25.2" width="1.4" height="1.4" rx="0.4"/></g>
+  <circle cx="12" cy="26" r="7.4" fill="none" stroke="#5b4636" stroke-width="0.5"/>
+  <path d="M7 21.4 Q8.4 19.6 10.4 19" stroke="#fff" stroke-width="0.9" opacity="0.7" fill="none" stroke-linecap="round"/>
+  <path d="M6.4 29.4 Q8.6 32.6 12 33" stroke="#000" stroke-opacity="0.08" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M11.2 34 L10.6 72" stroke="#fff" stroke-width="0.6" opacity="0.6" stroke-linecap="round"/>
+  <path d="M13.6 36 L14 72" stroke="#000" stroke-opacity="0.07" stroke-width="0.8" stroke-linecap="round"/>
+  <g fill="#9fc6e0" stroke="#5b4636" stroke-width="0.3"><rect x="4.4" y="75" width="3" height="2" rx="0.5"/><rect x="16.6" y="75" width="3" height="2" rx="0.5"/></g>
+  <circle cx="12" cy="1.6" r="0.7" fill="#d8342c" stroke="#5b4636" stroke-width="0.25"/>
+  <g style="opacity: var(--night, 0)"><rect x="5.2" y="25" width="13.6" height="1.8" rx="0.8" fill="#ffd77a"/><circle cx="12" cy="1.6" r="1.3" fill="#ff6b5e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle></g>
+</svg>

@@ -84,6 +84,8 @@ const phaseOf = (h: number): Phase => (h < 5 ? 'night' : h < 6.5 ? 'dawn' : h < 
 
 export default (win: Window) => {
   const w = win as Win;
+  // SSR(dom-parser 의 가짜 window)에는 performance 가 없다 → 빌드 때 페이지를 미리 그리다 죽지 않게 Date 로 대신
+  const now = () => (w.performance ? w.performance.now() : Date.now());
   const existing = w.customElements.get(tagName);
   if (existing) return tagName;
 
@@ -264,7 +266,7 @@ export default (win: Window) => {
         this.renderWorldMenu();
         const id = this.worlds.some((it) => it.id === q.get('w')) ? q.get('w')! : 'earth';
         await this.loadWorld(id, view);
-        if (view) this.lastInteract = w.performance.now() + 25000; // 공유 링크로 들어왔으면 한동안 자전하지 않고 그 자리를 보여준다
+        if (view) this.lastInteract = now() + 25000; // 공유 링크로 들어왔으면 한동안 자전하지 않고 그 자리를 보여준다
       } catch (e) {
         console.error('[world] 데이터 로드 실패', e);
         this.setPlace('데이터를 불러오지 못했어요');
@@ -405,7 +407,7 @@ export default (win: Window) => {
       this.last = t;
       if (this.follow) this.followStep(dt);
       // 자동 여행: 다음 지역까지 남은 시간을 버튼 테두리 링으로 (1 → 0)
-      if (this.touring) this.btnTourEl.style.setProperty('--p', String(clamp(1 - (w.performance.now() - this.lastInteract) / TOUR_STAY_MS, 0, 1)));
+      if (this.touring) this.btnTourEl.style.setProperty('--p', String(clamp(1 - (now() - this.lastInteract) / TOUR_STAY_MS, 0, 1)));
       if (this.target) {
         const f = 1 - Math.exp(-dt * 3.2);
         this.lon += wrap(this.target.lon - this.lon) * f;
@@ -548,7 +550,7 @@ export default (win: Window) => {
       m.clip.firstElementChild!.setAttribute('d', d);
       m.line.setAttribute('d', d);
       // 붙은 직후에는 0.6초 동안 서서히 나타난다 (뚝 하고 생기지 않게)
-      const age = clamp((w.performance.now() - m.at) / 600, 0, 1);
+      const age = clamp((now() - m.at) / 600, 0, 1);
       if (age < 1) this.dirty = true;
       const op = String(Math.min(clamp((px - 80) / 220, 0, 1), age));
       // 카메라 높이를 장면 로컬 단위로: bounds 실제 폭(km) / 로컬 폭
@@ -592,7 +594,7 @@ export default (win: Window) => {
           if (scene.boundary) wrapEl.setAttribute('clip-path', `url(#${clip.id})`);
           this.pending.delete(s.id);
           line.classList.remove('ghost');
-          this.mounted.set(s.id, { scene, wrap: wrapEl, clip, line, at: w.performance.now() });
+          this.mounted.set(s.id, { scene, wrap: wrapEl, clip, line, at: now() });
           this.dirty = true;
           return scene;
         });
@@ -896,7 +898,7 @@ export default (win: Window) => {
 
     // ---------------- 입력 ----------------
     private touch() {
-      this.lastInteract = w.performance.now();
+      this.lastInteract = now();
     }
 
     // 가로로 끌 때 경도 배율: 위도 φ 에서는 경도 1° 가 cos φ 만큼 짧아서, 그대로 두면 극지(다산기지 79°N)에서 손가락보다 5배 덜 움직였다.
@@ -937,7 +939,7 @@ export default (win: Window) => {
       this.lastPointerType = e.pointerType;
       // 마커 위에서 시작해도 드래그·핀치로 받는다 (마커 누르기는 onUp 의 탭에서 처리 — 예전엔 여기서 빠져서 모바일 핀치가 마커 click 에 먹혔다)
       this.onSheetClose();
-      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, moved: 0, t: w.performance.now() });
+      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, moved: 0, t: now() });
       try {
         (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
       } catch {
@@ -976,14 +978,14 @@ export default (win: Window) => {
       const p = this.pointers.get(e.pointerId);
       this.pointers.delete(e.pointerId);
       this.touch();
-      if (p && e.type === 'pointerup' && p.moved < 8 && w.performance.now() - p.t < 450 && !this.pointers.size) this.tapPick(e.clientX, e.clientY);
+      if (p && e.type === 'pointerup' && p.moved < 8 && now() - p.t < 450 && !this.pointers.size) this.tapPick(e.clientX, e.clientY);
       // 터치 더블탭 → 그 자리로 확대 (모바일은 dblclick 이 안정적으로 오지 않는다)
-      if (!p || e.type !== 'pointerup' || e.pointerType !== 'touch' || p.moved > 10 || w.performance.now() - p.t > 300) return;
-      const now = w.performance.now();
-      if (this.lastTap && now - this.lastTap.t < 330 && Math.hypot(e.clientX - this.lastTap.x, e.clientY - this.lastTap.y) < 30) {
+      if (!p || e.type !== 'pointerup' || e.pointerType !== 'touch' || p.moved > 10 || now() - p.t > 300) return;
+      const t = now();
+      if (this.lastTap && t - this.lastTap.t < 330 && Math.hypot(e.clientX - this.lastTap.x, e.clientY - this.lastTap.y) < 30) {
         this.lastTap = undefined;
         this.zoomInAt(e.clientX, e.clientY);
-      } else this.lastTap = { x: e.clientX, y: e.clientY, t: now };
+      } else this.lastTap = { x: e.clientX, y: e.clientY, t };
     }
 
     @event('#stage', 'wheel', { passive: false })
@@ -1021,8 +1023,8 @@ export default (win: Window) => {
         for (const el of [...(top ? [top] : []), ...root.elementsFromPoint(x + dx, y + dy)]) {
           for (const [id, m] of this.mounted) {
             if (!m.wrap.contains(el) || this.sceneOpacity(id) < 0.5) continue;
-            // const picked = m.scene.pick(el);
-            // if (picked) return void this.showInfo(this.sceneDex(id, picked));
+            const picked = m.scene.pick(el);
+            if (picked) return void this.showInfo(this.sceneDex(id, picked));
           }
           const tr = this.trafficEl.contains(el) ? this.traffic?.locate(el) : undefined;
           if (tr) return void this.showInfo({ use: tr.route.use, place: tr.route.name, moving: true, geo: tr.geo });
@@ -1206,7 +1208,7 @@ export default (win: Window) => {
 
     @setInterval(1000)
     onTourTick() {
-      if (!this.touring || w.performance.now() - this.lastInteract < TOUR_STAY_MS) return;
+      if (!this.touring || now() - this.lastInteract < TOUR_STAY_MS) return;
       const r = pick(this.regions().filter((it) => !(it.wm.id === this.worldId && this.sceneOpacity(it.s.id) > 0.5)));
       if (!r) return;
       this.touch();
@@ -1274,9 +1276,9 @@ export default (win: Window) => {
     // 화면 중심의 지금 날씨. 1° 칸이 바뀌었거나 15분이 지났을 때만 묻는다
     private async fetchLiveWeather() {
       const key = `${Math.round(this.lat)},${Math.round(this.lon)}`;
-      const now = w.performance.now();
-      if (this.liveWx && this.liveWx.key === key && now - this.liveWx.at < 15 * 60000) return;
-      this.liveWx = { key, at: now, wx: this.liveWx?.wx ?? 'clear' }; // 묻는 동안 중복 요청 막기
+      const t = now();
+      if (this.liveWx && this.liveWx.key === key && t - this.liveWx.at < 15 * 60000) return;
+      this.liveWx = { key, at: t, wx: this.liveWx?.wx ?? 'clear' }; // 묻는 동안 중복 요청 막기
       const wx = await liveWeather(w, this.lon, this.lat);
       if (!wx || this.liveWx.key !== key) return;
       this.liveWx.wx = wx;

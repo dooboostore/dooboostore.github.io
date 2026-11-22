@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 32">
+  <!-- 보리수(린덴): 곧은 짙은 줄기, 달걀꼴로 둥글게 솟은 잎 지붕, 하트 모양 잎과 연노랑 꽃송이. 바람에 살랑인다 -->
+  <ellipse cx="11" cy="31.2" rx="6.4" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M9.6 31.4 C10 26 9.8 22 10 17 L12 17 C12.2 22 12 26 12.4 31.4 Z" fill="#6b5a4e" stroke-width="0.5"/>
+    <path d="M10.8 20 C9.4 18.6 8 18.2 6.8 17.2" fill="none" stroke-width="1.2"/>
+    <path d="M10.8 20 C9.4 18.6 8 18.2 6.8 17.2" fill="none" stroke="#6b5a4e" stroke-width="0.6"/>
+  </g>
+  <path d="M10.4 30 C10.6 26 10.4 22 10.6 18" stroke="#fff" stroke-width="0.35" opacity="0.3" fill="none" stroke-linecap="round"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0.3 0;0 0" dur="7.5s" repeatCount="indefinite"/>
+    <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round">
+      <ellipse cx="11" cy="10.4" rx="8.6" ry="9.4" fill="#5f9e55"/>
+      <ellipse cx="6" cy="14" rx="4.4" ry="4.4" fill="#6aaa5c"/>
+      <ellipse cx="16" cy="13.4" rx="4.6" ry="4.8" fill="#6aaa5c"/>
+      <ellipse cx="11" cy="16.6" rx="4.6" ry="3.4" fill="#64a458"/>
+      <ellipse cx="11" cy="5.4" rx="5.4" ry="4.6" fill="#6aaa5c"/>
+    </g>
+    <g fill="#9fd082" opacity="0.75"><ellipse cx="9.4" cy="2.8" rx="2.2" ry="0.7"/><ellipse cx="4.8" cy="11.6" rx="1.4" ry="0.5"/><ellipse cx="15.2" cy="10.4" rx="1.4" ry="0.5"/></g>
+    <g fill="#8cc46a" stroke="#4f8a46" stroke-width="0.2"><path d="M7 6.5 C6.1 5.8 6.4 5 7 5.5 C7.6 5 7.9 5.8 7 6.5 Z"/><path d="M14.4 8.9 C13.5 8.200000000000001 13.8 7.4 14.4 7.9 C15.0 7.4 15.3 8.200000000000001 14.4 8.9 Z"/><path d="M10.6 12.5 C9.7 11.8 10.0 11 10.6 11.5 C11.2 11 11.5 11.8 10.6 12.5 Z"/><path d="M5.4 15.1 C4.5 14.4 4.800000000000001 13.6 5.4 14.1 C6.0 13.6 6.300000000000001 14.4 5.4 15.1 Z"/><path d="M16.4 15.5 C15.499999999999998 14.8 15.799999999999999 14 16.4 14.5 C17.0 14 17.299999999999997 14.8 16.4 15.5 Z"/></g>
+    <g fill="#efe59a"><circle cx="9" cy="8.4" r="0.45"/><circle cx="13.4" cy="5.4" r="0.45"/><circle cx="12.8" cy="12.8" r="0.45"/><circle cx="7.2" cy="16.4" r="0.45"/><circle cx="17.4" cy="12.4" r="0.45"/><circle cx="5" cy="10" r="0.4"/></g>
+  </g>
+</svg>
