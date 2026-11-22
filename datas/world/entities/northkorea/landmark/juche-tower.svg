@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 86">
+  <!-- 대동강 가의 높은 돌탑: 위로 갈수록 가늘어지는 하얀 화강암 사각 탑, 꼭대기의 전망대와 붉은 횃불 모양 장식, 넓은 계단 기단. 밤엔 횃불이 은은하게 빛난다 -->
+  <ellipse cx="11" cy="85" rx="10.6" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <clipPath id="shaft"><path d="M6 76.6 L8.4 20.4 L13.6 20.4 L16 76.6 Z"/></clipPath>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="1" y="80" width="20" height="5.2" rx="1" fill="#d9d4cc"/>
+    <rect x="3.4" y="76" width="15.2" height="4.6" rx="0.8" fill="#e6e1d8"/>
+    <path d="M6 76.6 L8.4 20.4 L13.6 20.4 L16 76.6 Z" fill="#efe9dc"/>
+  </g>
+  <g clip-path="url(#shaft)">
+    <path d="M11 20 L11 77 L17 77 L17 20 Z" fill="#000" opacity="0.06"/>
+    <g stroke="#cfc6b6" stroke-width="0.35"><path d="M0 24 L22 24"/><path d="M0 28 L22 28"/><path d="M0 32 L22 32"/><path d="M0 36 L22 36"/><path d="M0 40 L22 40"/><path d="M0 44 L22 44"/><path d="M0 48 L22 48"/><path d="M0 52 L22 52"/><path d="M0 56 L22 56"/><path d="M0 60 L22 60"/><path d="M0 64 L22 64"/><path d="M0 68 L22 68"/><path d="M0 72 L22 72"/></g>
+    <path d="M8.2 74 L9.4 22" stroke="#fff" stroke-width="0.6" opacity="0.6" stroke-linecap="round"/>
+  </g>
+  <path d="M6 76.6 L8.4 20.4 L13.6 20.4 L16 76.6 Z" fill="none" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="6.6" y="17.4" width="8.8" height="3.4" rx="0.8" fill="#e6e1d8"/>
+    <rect x="8.2" y="15" width="5.6" height="2.8" rx="0.8" fill="#efe9dc"/>
+    <path d="M10.3 2 Q11 0.6 11.7 2 C13.1 4.2 14.8 6 14.8 9.2 C14.8 12.6 13 14.8 11 14.8 C9 14.8 7.2 12.6 7.2 9.2 C7.2 6 9 4 10.6 1.6 Z" fill="#e9574a"/>
+  </g>
+  <path d="M10.8 6 C12 7.6 13 9 13 10.8 C13 12.6 12 13.6 11 13.6 C10 13.6 9 12.6 9 10.8 C9 9 9.8 7.6 10.8 6 Z" fill="#f6a04a">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="2.4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M9 6.4 Q9.6 4.8 10.6 3.6" stroke="#fff" stroke-width="0.5" opacity="0.5" fill="none" stroke-linecap="round"/>
+  <g fill="#9fc6e0" stroke="#5b4636" stroke-width="0.25"><rect x="7.6" y="18.4" width="1.4" height="1.4" rx="0.4"/><rect x="10.3" y="18.4" width="1.4" height="1.4" rx="0.4"/><rect x="13" y="18.4" width="1.4" height="1.4" rx="0.4"/></g>
+  <g stroke="#000" stroke-opacity="0.08" stroke-width="0.3"><path d="M1.4 82.6 L20.6 82.6 M3.8 78.2 L18.2 78.2"/></g>
+  <g style="opacity: var(--night, 0)"><circle cx="11" cy="9.6" r="6" fill="#ffb84d" opacity="0.4"/></g>
+</svg>

@@ -1,0 +1,26 @@
+{
+  "local": {"size": [960, 758], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "northkorea/landmark/ryugyong.svg", "at": [232.9, 252.2], "scale": 0.7},
+    {"use": "northkorea/landmark/juche-tower.svg", "at": [478.8, 437.7], "scale": 0.6},
+    {"use": "northkorea/landmark/arch-of-triumph.svg", "at": [400, 173.9], "scale": 0.5},
+    {"use": "northkorea/building/apartment.svg", "count": 14, "area": [280, 380, 180, 160], "scale": 0.5, "spacing": 14, "vars": {"--wall": ["#f2d6c9", "#cfe3ee", "#e3eed6", "#f4ead6"]}},
+    {"use": "northkorea/building/apartment.svg", "count": 8, "area": [200, 200, 90, 90], "scale": 0.5, "spacing": 14},
+    {"use": "northkorea/nature/willow.svg", "count": 16, "area": [360, 250, 180, 220], "scale": 0.6, "spacing": 12},
+    {"use": "northkorea/people/local", "count": 5, "area": [350, 400, 90, 60], "scale": 0.7, "spacing": 6},
+    {"use": "northkorea/people/student", "count": 4, "area": [260, 520, 60, 50], "scale": 0.7, "spacing": 6},
+    {"use": "northkorea/vehicle/tram", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M756.2 626.6 L716.8 566.9 L691.3 550.7 L522.6 511.4", "dur": 30}},
+    {"use": "northkorea/vehicle/trolleybus", "count": 1, "scale": 0.5, "behavior": {"type": "route", "path": "M412.1 373.3 L396.5 388 L371.5 485.5", "dur": 20}},
+    {"use": "vehicle/boat", "count": 1, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M471.2 210.8 L464.2 221.3 L458.1 245.1 L457.5 250.5 L459.3 286.1 L457.4 305.1 L461.4 322.1 L466.5 432.2 L449.9 496", "dur": 100}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
+  ],
+  "info": {
+    "류경호텔": {"title": "류경호텔", "emoji": "🏨", "kind": "지명", "desc": "높이 330m의 피라미드 모양 105층 건물이에요. 1987년에 짓기 시작했고, 바깥 유리벽은 2011년에 덮였어요."},
+    "주체사상탑": {"title": "주체사상탑", "emoji": "🗼", "kind": "지명", "desc": "대동강 동쪽 강변에 선 높이 170m의 돌탑이에요. 꼭대기 전망대에서 강 건너 도심이 내려다보여요."},
+    "개선문": {"title": "개선문", "emoji": "🏛️", "kind": "지명", "desc": "1982년에 세워진 높이 60m의 돌 개선문이에요. 모란봉 아래 큰길에 서 있어요."},
+    "대동강": {"title": "대동강", "emoji": "🌊", "kind": "지명", "desc": "평양 한가운데를 흐르는 강이에요. 강변에 버드나무가 늘어서서 평양은 옛날부터 류경(버드나무 도읍)이라 불렸어요."},
+    "모란봉": {"title": "모란봉", "emoji": "⛰️", "kind": "지명", "desc": "대동강 북쪽 강변의 낮은 언덕이에요. 오래된 정자와 숲길이 있어 산책하기 좋은 곳이에요."},
+    "릉라도": {"title": "릉라도", "emoji": "🏝️", "kind": "지명", "desc": "대동강 가운데 떠 있는 섬이에요. 큰 경기장과 강변 공원이 있어요."},
+    "평양역": {"title": "평양역", "emoji": "🚉", "kind": "지명", "desc": "평양의 중앙 기차역이에요. 국경 너머 베이징으로 가는 국제 열차도 이곳을 지나요."}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "local": {"size": [960, 862], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "russia/landmark/hermitage.svg", "at": [527, 432], "scale": 0.6},
+    {"use": "russia/landmark/savior-on-blood.svg", "at": [563, 426], "scale": 0.55},
+    {"use": "russia/landmark/peter-paul.svg", "at": [518, 335], "scale": 0.6},
+    {"use": "russia/structure/drawbridge.svg", "at": [486.8, 414.8], "scale": 0.5, "layer": "water"},
+    {"use": "russia/building/moscow-house.svg", "count": 16, "area": [520, 440, 180, 140], "scale": 0.5, "spacing": 14, "vars": {"--wall": ["#f2d6a2", "#e9c9c9", "#c9dbe9", "#f4ead6", "#d8e6c4"]}},
+    {"use": "russia/nature/birch.svg", "count": 10, "area": [580, 360, 60, 50], "scale": 0.55, "spacing": 10},
+    {"use": "russia/people/ushanka", "count": 5, "area": [491, 420, 60, 30], "scale": 0.7, "spacing": 6},
+    {"use": "russia/people/babushka", "count": 3, "area": [557, 456, 60, 30], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 3, "area": [491, 420, 60, 30], "scale": 0.7, "spacing": 6},
+    {"use": "russia/vehicle/trolleybus", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M613.5 478.9 L508.2 453.5 L508 442 L480.8 405.8", "dur": 31}},
+    {"use": "russia/vehicle/canal-boat.svg", "count": 2, "scale": 0.5, "layer": "water", "behavior": {"type": "route", "path": "M915 495 L921 477 L924 459 L924 441 L924 423 L924 405 L924 387 L924 369 L924 351 L924 333 L918 315 L906 297 L888 279 L870 267 L852 270 L834 282 L816 297 L798 309 L780 318 L762 327 L744 327 L726 327 L708 327 L690 327 L672 330 L654 336 L636 342 L618 348 L600 357 L582 366 L564 375 L546 384 L528 396 L510 411 L492 423 L474 435 L456 450 L438 462 L420 474 L402 486 L384 495 L366 504 L348 510 L330 525 L312 543 L300 561 L297 579 L291 597 L285 615 L267 633 L249 651", "dur": 160}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
+  ],
+  "info": {
+    "에르미타주": {"title": "에르미타주", "emoji": "🖼️", "kind": "지명", "desc": "1764년에 시작된 세계적인 미술관이에요. 민트색 겨울 궁전을 비롯한 여러 건물에 소장품이 가득해요."},
+    "피의 구세주 성당": {"title": "피의 구세주 성당", "emoji": "⛪", "kind": "지명", "desc": "1907년에 완성된 성당이에요. 안팎이 알록달록한 모자이크로 덮여 있어요."},
+    "페트로파블롭스크 요새": {"title": "페트로파블롭스크 요새", "emoji": "🏰", "kind": "지명", "desc": "도시가 시작된 토끼섬 위의 요새예요. 높고 가는 금빛 첨탑이 멀리서도 보여요."},
+    "성 이삭 대성당": {"title": "성 이삭 대성당", "emoji": "⛪", "kind": "지명", "desc": "금빛 둥근 지붕을 이고 있는 큰 성당이에요. 지붕 둘레 전망대에서 도시가 한눈에 보여요."},
+    "궁전 광장": {"title": "궁전 광장", "emoji": "🏛️", "kind": "지명", "desc": "겨울 궁전 앞의 넓은 광장이에요. 가운데에 높은 알렉산드르 기둥이 서 있어요."},
+    "넵스키 대로": {"title": "넵스키 대로", "emoji": "🛍️", "kind": "지명", "desc": "도시를 가로지르는 가장 큰 거리예요. 성당, 서점, 카페가 길게 이어져요."},
+    "네바강": {"title": "네바강", "emoji": "🌊", "kind": "지명", "desc": "도시를 흐르는 넓은 강이에요. 여름밤에는 배가 지나가도록 다리들이 차례로 들어 올려져요."},
+    "궁전 다리": {"title": "궁전 다리", "emoji": "🌉", "kind": "지명", "desc": "네바강을 건너는 도개교예요. 밤에 양쪽 다리가 들어 올려지는 모습이 이 도시의 명물이에요."}
+  }
+}

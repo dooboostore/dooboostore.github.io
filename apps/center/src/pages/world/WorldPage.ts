@@ -1,6 +1,6 @@
 import { attribute, elementDefine, event, eventDelegate, innerHtml, onConnectedAfter, onConnectedBefore, onConnectedBodyShadow, onDisconnected, query, requestAnimationFrame, resizeObserver, setInterval } from '@dooboostore/simple-web-component';
 import { Router } from '@dooboostore/core-web';
-import { geoArea, geoCentroid, geoCircle, geoContains, geoDistance, geoGraticule10, geoOrthographic, geoPath } from 'd3-geo';
+import { geoArea, geoCentroid, geoInterpolate, geoCircle, geoContains, geoDistance, geoGraticule10, geoOrthographic, geoPath } from 'd3-geo';
 import { EntityRegistry, SVGNS, Win } from './entity';
 import { mountScene, Picked, Scene } from './scene';
 import { liveClouds, liveStorms, liveWeather } from './live';
@@ -407,8 +407,14 @@ export default (win: Window) => {
       this.last = t;
       if (this.follow) this.followStep(dt);
       // 자동 여행: 다음 지역까지 남은 시간을 버튼 테두리 링으로 (1 → 0)
+      if ((this.timeMode === 'random' || this.weather === 'random') && this.envEl.classList.contains('show')) {
+        const p = String(clamp(1 - (now() - this.shuffleAt) / ENV_SHUFFLE_MS, 0, 1));
+        this.envEl.querySelectorAll<HTMLElement>('[data-time="random"].on, [data-weather="random"].on').forEach((el) => el.style.setProperty('--p', p));
+      }
       if (this.touring) this.btnTourEl.style.setProperty('--p', String(clamp(1 - (now() - this.lastInteract) / TOUR_STAY_MS, 0, 1)));
-      if (this.target) {
+      if (this.flight) {
+        this.flightStep();
+      } else if (this.target) {
         const f = 1 - Math.exp(-dt * 3.2);
         this.lon += wrap(this.target.lon - this.lon) * f;
         this.lat += (this.target.lat - this.lat) * f;
@@ -630,16 +636,55 @@ export default (win: Window) => {
       return Math.min(this.W / wpx, this.H / hpx) * 0.92;
     }
 
-    private flyTo(s: Sector) {
+    private flyTo(s: Sector, ratio = 1) {
       this.wantId = s.local ? s.id : undefined;
       const b = s.focus ?? s.bounds;
       if (b) {
         const [[w0, s0], [e0, n0]] = b;
-        this.target = { lon: (w0 + e0) / 2, lat: (s0 + n0) / 2, k: clamp(this.fitK(b), K_MIN, K_MAX) };
+        this.target = { lon: (w0 + e0) / 2, lat: (s0 + n0) / 2, k: clamp(this.fitK(b) * ratio, K_MIN, K_MAX) };
       } else {
         this.target = { lon: s.geo.lon, lat: s.geo.lat, k: clamp(s.zoom[0] * 3, K_MIN, K_MAX) };
       }
+      this.startFlight();
       this.touch();
+    }
+
+    // ✈️ 비행 (사용자가 보던 줌 → 목적지 줌)
+    //   ① 떠오르기: 거의 제자리에서 줌 아웃 (멀리 갈수록 지구 전체가 보일 만큼, 가까우면 조금만)
+    //   ② 날기: 대권을 따라 옮겨 가며 목적지 줌까지 내려앉는다
+    private flight?: { from: LL; to: LL; l0: number; lm: number; l1: number; up: number; t0: number; dur: number; interp: (t: number) => [number, number]; done?: () => void };
+    private startFlight(onDone?: () => void) {
+      const tg = this.target;
+      if (!tg) return onDone?.();
+      const from: LL = [this.lon, this.lat], to: LL = [tg.lon, tg.lat];
+      const d = geoDistance(from, to); // 라디안
+      const kMid = Math.min(this.k, tg.k, clamp(1.6 / (d + 0.02), K_MIN, K_MAX));
+      const l0 = Math.log(this.k), l1 = Math.log(tg.k), lm = Math.log(kMid);
+      if (d < 1e-4 && Math.abs(l1 - l0) < 0.01) {
+        this.target = null;
+        return onDone?.();
+      }
+      const climb = Math.abs(l0 - lm) + Math.abs(l1 - lm); // 줌으로 오르내리는 양
+      const up = d < 1e-3 && Math.abs(l1 - lm) < 1e-3 ? 1 : 0.35; // 제자리 줌 아웃만이면 처음부터 끝까지 떠오르기
+      this.flight = { from, to, l0, lm, l1, up, t0: now(), dur: (up === 1 ? 900 : 1200) + 2600 * Math.min(1, Math.sqrt(d / Math.PI) * 0.7 + climb / (up === 1 ? 30 : 14)), interp: geoInterpolate(from, to) as (t: number) => [number, number], done: onDone };
+    }
+    private flightStep() {
+      const f = this.flight!;
+      const u = clamp((now() - f.t0) / f.dur, 0, 1);
+      const ease = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+      const UP = f.up; // 앞부분(기본 35%)은 떠오르기
+      const lz = u < UP || UP >= 1 ? f.l0 + (f.lm - f.l0) * ease(Math.min(1, u / UP)) : f.lm + (f.l1 - f.lm) * ease((u - UP) / (1 - UP));
+      const pos = ease(clamp((u - UP * 0.6) / (1 - UP * 0.6), 0, 1)); // 떠오르는 끝무렵부터 움직이기 시작
+      const [lon, lat] = f.interp(pos);
+      this.lon = lon;
+      this.lat = lat;
+      this.k = Math.exp(lz);
+      this.dirty = true;
+      if (u >= 1) {
+        this.flight = undefined;
+        this.target = null;
+        f.done?.();
+      }
     }
 
     // ---------------- 현재 위치 · URL ----------------
@@ -684,6 +729,7 @@ export default (win: Window) => {
       this.soonTextEl.textContent = this.worldId === 'earth' ? '🚧 아직 준비 중인 곳이에요' : '🚧 아직 아무도 살지 않는 곳이에요';
       this.soonEl.classList.toggle('show', soon && !this.loadingShown);
       this.setPlace(place);
+      this.syncOpenSheets(); // 하늘과 날씨 시트는 위의 applyTime 이 매번 다시 그린다
       this.writeUrl();
     }
 
@@ -844,6 +890,12 @@ export default (win: Window) => {
 
     @event('#btn-fab', 'click')
     onList() {
+      this.syncStations();
+      this.openSheet(this.stationsEl);
+    }
+
+    // 방송 목록을 지금 있는 곳에 맞춘다: 나라가 바뀌었으면 그 나라 목록을 받고, 아니면 거리순만 다시
+    private syncStations() {
       const here = this.here;
       const iso = here?.properties.iso;
       if (this.worldId === 'earth' && iso && /^[A-Z]{2}$/.test(iso) && iso !== this.listIso) this.loadList(iso, here!.properties.name);
@@ -851,7 +903,17 @@ export default (win: Window) => {
         this.resortStations();
         this.renderStations();
       }
-      this.openSheet(this.stationsEl);
+    }
+
+    // 열려 있는 시트를 지금 위치에 맞춰 다시 그린다 (자동 여행·비행·자전으로 장소가 바뀌어도 따라가게).
+    // 같은 곳이면 다시 그리지 않는다 — 목록 스크롤이 튀지 않게
+    private sheetKey = '';
+    private syncOpenSheets() {
+      const key = `${this.worldId}|${this.here?.properties.iso ?? ''}|${[...this.mounted.keys()].filter((id) => this.sceneOpacity(id) > 0.5).join(',')}`;
+      if (key === this.sheetKey) return;
+      this.sheetKey = key;
+      if (this.stationsEl.classList.contains('show')) this.syncStations();
+      if (this.searchEl.classList.contains('show')) this.renderSearch();
     }
 
     @eventDelegate('#stations-list .st', 'click')
@@ -892,7 +954,9 @@ export default (win: Window) => {
         this.touch();
         return;
       }
-      await this.loadWorld(id);
+      await this.travelToWorld(id);
+      this.target = { lon: this.lon, lat: 15, k: 1 }; // 새 세계 전체가 화면에 차게 다가간다
+      this.startFlight();
       this.toast(`${this.meta.icon} ${this.meta.name}에 왔어요`);
     }
 
@@ -946,6 +1010,7 @@ export default (win: Window) => {
         /* 이미 끝난 포인터 등 — 캡처 없이도 stage 에서 이벤트를 받는다 */
       }
       this.target = null;
+      this.flight = undefined;
       this.wantId = undefined;
       this.stopFollow();
       this.touch();
@@ -991,6 +1056,7 @@ export default (win: Window) => {
     @event('#stage', 'wheel', { passive: false })
     onWheel(e: WheelEvent) {
       e.preventDefault();
+      this.flight = undefined;
       this.wantId = undefined;
       this.stopFollow();
       this.zoomAround(e.clientX, e.clientY, Math.exp(-e.deltaY * 0.0018));
@@ -1128,10 +1194,36 @@ export default (win: Window) => {
         : `<div class="st-empty">'${esc(this.searchInputEl.value)}' 에 맞는 지역이 아직 없어요</div>`;
     }
 
-    private async goRegion(worldId: string, sectorId: string) {
-      if (worldId !== this.worldId) await this.loadWorld(worldId);
+    // keepZoom: 자동·무작위 이동은 지금 확대 정도를 이어 간다.
+    //   지역마다 크기가 달라(독도 ↔ 도쿄) 줌 숫자 대신 '지역 전체가 꼭 차는 줌'에 대한 배율로 옮긴다. 지구본에서 출발하면 기본(지역 전체)
+    private async goRegion(worldId: string, sectorId: string, keepZoom = false) {
+      const ratio = keepZoom ? this.zoomRatio() : 1;
+      if (worldId !== this.worldId) await this.travelToWorld(worldId);
       const s = this.sectors.find((it) => it.id === sectorId);
-      if (s) this.flyTo(s);
+      if (s) this.flyTo(s, ratio);
+    }
+
+    // 다른 세계(달·화성)로: 지금 세계를 끝까지 줌 아웃 → 화면이 스르륵 바뀜 → 새 세계 전체 모습에서 시작
+    private async travelToWorld(worldId: string) {
+      if (this.k > K_MIN * 1.05) {
+        this.target = { lon: this.lon, lat: this.lat, k: K_MIN };
+        await new Promise<void>((r) => this.startFlight(r));
+      }
+      const st = this.stageEl;
+      st.style.transition = 'opacity .45s ease';
+      st.style.opacity = '0';
+      await new Promise((r) => w.setTimeout(r, 450));
+      await this.loadWorld(worldId, { lon: this.lon, lat: 15, k: K_MIN });
+      st.style.opacity = '1';
+      await new Promise((r) => w.setTimeout(r, 300));
+    }
+
+    // 지금 보고 있는 지역 기준 확대 배율 (지역 밖이면 1)
+    private zoomRatio() {
+      const id = [...this.mounted.keys()].find((it) => this.sceneOpacity(it) > 0.5);
+      const s = id && this.sectors.find((it) => it.id === id);
+      const b = s && (s.focus ?? s.bounds);
+      return b ? clamp(this.k / this.fitK(b), 0.6, 12) : 1;
     }
 
     @event('#btn-search', 'click')
@@ -1154,24 +1246,38 @@ export default (win: Window) => {
       this.goRegion(b.dataset.world!, b.dataset.sector!);
     }
 
+    // 모든 무작위 이동의 공통 규칙: 지금 보고 있는 곳, 방금 가려던 곳은 빼고 고른다 (남는 게 없을 때만 그대로)
+    private lastDest?: string;
+    private pickNew<T>(list: T[], key: (x: T) => string): T | undefined {
+      const here = new Set<string>([this.lastDest ?? '', ...[...this.mounted.keys()].filter((id) => this.sceneOpacity(id) > 0.5).map((id) => `${this.worldId}/${id}`)]);
+      if (this.wantId) here.add(`${this.worldId}/${this.wantId}`);
+      const place = this.placeEl.textContent ?? '';
+      const fresh = list.filter((x) => !here.has(key(x)) && !place.includes(key(x)));
+      const r = pick(fresh.length ? fresh : list);
+      if (r) this.lastDest = key(r);
+      return r;
+    }
+    private pickRegion(list = this.regions()) {
+      return this.pickNew(list, (it) => `${it.wm.id}/${it.s.id}`);
+    }
+
     // 검색 결과 안에서 랜덤 (검색어가 없으면 만들어진 지역 전체에서)
     @event('#btn-search-random', 'click')
     onSearchRandom() {
-      const list = this.regions(this.searchInputEl.value);
-      const r = pick(list);
+      const r = this.pickRegion(this.regions(this.searchInputEl.value));
       if (!r) return this.toast('🎲 고를 지역이 없어요');
       this.onSheetClose();
       this.toast(`🎲 ${r.wm.icon} ${r.s.name}(으)로 떠나요`);
-      this.goRegion(r.wm.id, r.s.id);
+      this.goRegion(r.wm.id, r.s.id, true);
     }
 
     @event('#btn-random', 'click')
     onRandom() {
       // 현재 세계 안에서: 만들어진 마을(가중치 높게) · 준비 중 마커 · 나라(지구) / 이름 있는 지형(달·화성)
-      type Dest = { name: string; go: () => void };
+      type Dest = { key: string; name: string; go: () => void };
       const dests: Dest[] = [];
       for (const s of this.sectors) {
-        const d = { name: s.name, go: () => this.flyTo(s) };
+        const d = { key: `${this.worldId}/${s.id}`, name: s.name, go: () => this.flyTo(s) };
         dests.push(d);
         if (s.local) dests.push(d, d, d);
       }
@@ -1179,12 +1285,12 @@ export default (win: Window) => {
         .filter((c) => geoArea(c) > 0.002)
         .forEach((c) => {
           const [lon, lat] = geoCentroid(c);
-          dests.push({ name: `${flagOf(c.properties.iso)} ${c.properties.name}`, go: () => (this.target = { lon, lat, k: clamp(1.4 / Math.sqrt(geoArea(c)), 3, 14) }) });
+          dests.push({ key: c.properties.name, name: `${flagOf(c.properties.iso)} ${c.properties.name}`, go: () => (this.target = { lon, lat, k: clamp(1.4 / Math.sqrt(geoArea(c)), 3, 14) }) });
         });
       this.feats
         .filter(({ f }) => f.name && f.circle)
-        .forEach(({ f }) => dests.push({ name: f.name, go: () => (this.target = { lon: f.circle![0], lat: f.circle![1], k: clamp(40 / f.circle![2], 2, 20) }) }));
-      const d = pick(dests);
+        .forEach(({ f }) => dests.push({ key: f.name!, name: f.name!, go: () => (this.target = { lon: f.circle![0], lat: f.circle![1], k: clamp(40 / f.circle![2], 2, 20) }) }));
+      const d = this.pickNew(dests, (it) => it.key);
       if (!d) return;
       d.go();
       this.touch();
@@ -1209,11 +1315,11 @@ export default (win: Window) => {
     @setInterval(1000)
     onTourTick() {
       if (!this.touring || now() - this.lastInteract < TOUR_STAY_MS) return;
-      const r = pick(this.regions().filter((it) => !(it.wm.id === this.worldId && this.sceneOpacity(it.s.id) > 0.5)));
+      const r = this.pickRegion();
       if (!r) return;
       this.touch();
       this.toast(`▶️ ${r.wm.icon} ${r.s.name}(으)로 가요`);
-      this.goRegion(r.wm.id, r.s.id);
+      this.goRegion(r.wm.id, r.s.id, true);
     }
 
     @event('#btn-share', 'click')
@@ -1318,9 +1424,16 @@ export default (win: Window) => {
       if (this.worldId === 'earth') this.loadLive();
     }
 
-    // 랜덤 시간·날씨: 고른 쪽만 일정 간격으로 다른 값으로 바뀐다
-    @setInterval(ENV_SHUFFLE_MS)
+    private shuffleAt = 0; // 돌아가며 바뀐 마지막 시각 (버튼 테두리 링 = 다음 바뀜까지 남은 시간)
+    // 돌아가며 보기(시간·날씨): 고른 쪽만 일정 간격으로 다른 값으로 바뀐다
+    // 1초마다 보고, 마지막으로 바뀐 지 ENV_SHUFFLE_MS 가 지나면 바꾼다 (칩을 눌러 바로 바꾸면 거기서부터 다시 센다 — 링과 맞게)
+    @setInterval(1000)
+    onEnvTick() {
+      if ((this.timeMode === 'random' || this.weather === 'random') && now() - this.shuffleAt >= ENV_SHUFFLE_MS) this.onEnvShuffle();
+    }
+
     onEnvShuffle() {
+      this.shuffleAt = now();
       if (this.timeMode !== 'random' && this.weather !== 'random') return;
       if (this.timeMode === 'random') this.rndPhase = pickOther(Object.keys(PHASES) as Phase[], this.rndPhase);
       if (this.weather === 'random') this.rndWeather = pickOther(Object.keys(WEATHERS) as Weather[], this.rndWeather);
@@ -1359,12 +1472,12 @@ export default (win: Window) => {
         return;
       }
       const t = `${String(Math.floor(h)).padStart(2, '0')}:${String(Math.floor((h % 1) * 60)).padStart(2, '0')}`;
-      const label = (m: TimeMode) => (m === 'auto' ? `🕐 현지 ${t} (${PHASES[current].icon})` : m === 'random' ? `🔀 랜덤${this.timeMode === 'random' ? ` (${PHASES[current].icon})` : ''}` : `${PHASES[m].icon} ${PHASES[m].label}`);
+      const label = (m: TimeMode) => (m === 'auto' ? `🕐 현지 ${t} (${PHASES[current].icon})` : m === 'random' ? (this.timeMode === 'random' ? `⏸️ 돌아가며 ${PHASES[current].icon}` : '▶️ 돌아가며') : `${PHASES[m].icon} ${PHASES[m].label}`);
       this.envTimeEl.innerHTML = (['auto', 'random', 'dawn', 'morning', 'day', 'sunset', 'dusk', 'night'] as TimeMode[])
         .map((m) => `<button class="chip${this.timeMode === m ? ' on' : ''}" data-time="${m}">${label(m)}</button>`)
         .join('');
       const wl = (k: WeatherMode) =>
-        k === 'live' ? `📡 실시간${this.weather === 'live' ? ` (${WEATHERS[weather].icon})` : ''}` : k === 'random' ? `🔀 랜덤${this.weather === 'random' ? ` (${WEATHERS[weather].icon})` : ''}` : `${WEATHERS[k].icon} ${WEATHERS[k].label}`;
+        k === 'live' ? `📡 실시간${this.weather === 'live' ? ` (${WEATHERS[weather].icon})` : ''}` : k === 'random' ? (this.weather === 'random' ? `⏸️ 돌아가며 ${WEATHERS[weather].icon}` : '▶️ 돌아가며') : `${WEATHERS[k].icon} ${WEATHERS[k].label}`;
       this.envWeatherEl.innerHTML = (['live', 'random', ...Object.keys(WEATHERS)] as WeatherMode[])
         .map((k) => `<button class="chip${this.weather === k ? ' on' : ''}" data-weather="${k}">${wl(k)}</button>`)
         .join('');
@@ -1405,8 +1518,14 @@ export default (win: Window) => {
         this.applyTraffic();
       } else if (!b?.dataset.time && !b?.dataset.weather) return;
       const changed = (b.dataset.time && b.dataset.time !== this.timeMode) || (b.dataset.weather && b.dataset.weather !== this.weather);
-      if (isTime(b.dataset.time)) this.timeMode = b.dataset.time;
-      if (isWeather(b.dataset.weather)) this.weather = b.dataset.weather;
+      // 돌아가며를 켜는 순간 지금 화면에 보이는 값과 다른 것이 나오게: 지금 보이는 값을 '직전 값'으로 둔다
+      if (this.timeMode !== 'random') this.rndPhase = this.timeMode === 'auto' ? phaseOf(solarHour(this.lon)) : this.timeMode;
+      if (this.weather !== 'random') this.rndWeather = this.weather === 'live' ? (this.liveWx?.wx ?? 'clear') : this.weather;
+      // 켜져 있는 '돌아가며'를 다시 누르면 멈춤 → 시간은 현지 시각, 날씨는 실시간으로 돌아간다
+      if (b.dataset.time === 'random' && this.timeMode === 'random') this.timeMode = 'auto';
+      else if (isTime(b.dataset.time)) this.timeMode = b.dataset.time;
+      if (b.dataset.weather === 'random' && this.weather === 'random') this.weather = 'live';
+      else if (isWeather(b.dataset.weather)) this.weather = b.dataset.weather;
       if (changed) this.onEnvShuffle(); // 랜덤을 고르면 바로 한 번 바뀐다
       this.saveEnv();
       this.applyTime();
@@ -1416,10 +1535,10 @@ export default (win: Window) => {
     @event('#btn-soon', 'click')
     onSoon() {
       // 준비 중인 곳에 왔다면: 만들어진 지역(모든 세계) 중 하나로 무작위로 데려간다
-      const r = pick(this.regions().filter((it) => !(it.wm.id === this.worldId && this.sceneOpacity(it.s.id) > 0.5)));
+      const r = this.pickRegion();
       if (!r) return;
       this.toast(`🎲 ${r.wm.icon} ${r.s.name}(으)로 가요`);
-      this.goRegion(r.wm.id, r.s.id);
+      this.goRegion(r.wm.id, r.s.id, true);
     }
 
     @event('#btn-back', 'click')
@@ -1503,7 +1622,10 @@ export default (win: Window) => {
           .btns { display: flex; gap: 8px; align-items: center; }
           .title { font-weight: 800; font-size: 15px; padding: 8px 14px; white-space: nowrap; }
           .hud { position: absolute; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 6px; pointer-events: none; max-width: calc(100vw - 32px); }
-          #place { align-self: flex-start; font-size: 17px; font-weight: 800; padding: 7px 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+          /* 왼쪽 아래: 📍 내 위치로 · 지금 보는 곳 (둘 다 '어디' 에 관한 것이라 나란히) */
+          .here-row { display: flex; align-items: center; gap: 8px; pointer-events: auto; align-self: flex-start; max-width: 100%; }
+          .here-row #btn-me { flex: none; width: 40px; height: 40px; border-radius: 50%; }
+          #place { min-width: 0; font-size: 17px; font-weight: 800; padding: 7px 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
           .hint { align-self: flex-start; font-size: 12px; font-weight: 600; color: #8a6d52; padding: 4px 10px; border-radius: 10px; background: rgba(255,248,236,0.85); }
           .fabs { position: absolute; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 10px; }
           .fab { position: relative; width: 46px; height: 46px; border-radius: 50%; font-size: 20px; }
@@ -1527,9 +1649,9 @@ export default (win: Window) => {
           #toast.show, #soon.show, #loading.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
           #btn-soon, .chip, .st { width: auto; height: 34px; padding: 0 12px; font-size: 13px; font-weight: 800; border-radius: 12px; box-shadow: 0 2px 0 #dcc29b; }
           #btn-soon { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; white-space: nowrap; }
-          #btn-tour { position: relative; }
+          #btn-tour, #env .chip { position: relative; }
           /* 남은 시간 링: 테두리 자리에 원뿔 그라디언트를 깔고 가운데를 마스크로 뚫는다 */
-          #btn-tour.on::before { content: ''; position: absolute; inset: -2px; border-radius: inherit; padding: 3px; pointer-events: none;
+          #btn-tour.on::before, #env .chip.on[data-time="random"]::before, #env .chip.on[data-weather="random"]::before { content: ''; position: absolute; inset: -2px; border-radius: inherit; padding: 3px; pointer-events: none;
             background: conic-gradient(#e0844f calc(var(--p, 1) * 1turn), transparent 0);
             -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
           #btn-tour.on, .chip.on, .st.on { background: #ffe7a8; border-color: #f0c96a; box-shadow: 0 2px 0 #e0b04f; }
@@ -1619,7 +1741,6 @@ export default (win: Window) => {
               <button id="btn-env" title="시간·날씨">⛅</button>
               <button id="btn-random" title="랜덤 여행">🎲</button>
               <button id="btn-tour" title="만들어진 지역 자동 여행 켜기">▶️</button>
-              <button id="btn-me" title="내 위치로">📍</button>
               <button id="btn-search" title="지역 찾기">🔍</button>
               <button id="btn-world" title="세계 고르기">🌏</button>
             </div>
@@ -1659,7 +1780,7 @@ export default (win: Window) => {
           <div id="loading" class="panel"><i></i><span>불러오는 중…</span></div>
           <div id="soon" class="panel"><span id="soon-text">🚧 아직 준비 중인 곳이에요</span><button id="btn-soon">🎲 다른 지역 가기 →</button></div>
           <div class="hud">
-            <div id="place" class="panel">지구</div>
+            <div class="here-row"><button id="btn-me" title="내 위치로">📍</button><div id="place" class="panel">지구</div></div>
             <div class="hint">드래그로 돌리고 · 스크롤/핀치로 다가가고 · 이름을 누르면 날아가요</div>
           </div>
           <div class="fabs">

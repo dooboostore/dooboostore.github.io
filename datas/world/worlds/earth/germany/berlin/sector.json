@@ -1,0 +1,31 @@
+{
+  "local": {"size": [960, 661], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "germany/landmark/brandenburg-gate.svg", "at": [461.3, 379.7], "scale": 0.55},
+    {"use": "germany/landmark/reichstag.svg", "at": [446.7, 337.9], "scale": 0.5},
+    {"use": "germany/landmark/tv-tower.svg", "at": [750.5, 311.3], "scale": 0.7},
+    {"use": "germany/structure/berlin-wall.svg", "at": [[596.9, 512.1], [462.1, 476.6]], "scale": 0.5},
+    {"use": "germany/building/altbau.svg", "count": 16, "area": [600, 360, 220, 180], "scale": 0.5, "spacing": 14, "vars": {"--wall": ["#f2d6a2", "#e9c9c9", "#c9dbe9", "#f4ead6", "#d8e6c4"]}},
+    {"use": "germany/building/altbau.svg", "count": 8, "area": [500, 450, 100, 100], "scale": 0.5, "spacing": 14},
+    {"use": "germany/nature/linden.svg", "count": 20, "area": [150, 360, 280, 120], "scale": 0.6, "spacing": 12},
+    {"use": "germany/structure/currywurst-stand.svg", "at": [[803.9, 304.1], [480, 390]], "scale": 0.5},
+    {"use": "germany/people/local", "count": 6, "area": [759, 274, 60, 40], "scale": 0.7, "spacing": 6},
+    {"use": "germany/people/local", "count": 4, "area": [436, 365, 50, 30], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 4, "area": [431, 365, 60, 30], "scale": 0.7, "spacing": 6},
+    {"use": "germany/vehicle/tram", "count": 2, "scale": 0.5, "spacing": 10, "behavior": {"type": "route", "path": "M771.6 265.4 L659.4 357.1 L534.8 369.5", "dur": 47}},
+    {"use": "germany/vehicle/bicycle", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M200 420 L700 420", "dur": 60}},
+    {"use": "vehicle/boat", "count": 2, "scale": 0.4, "layer": "water", "behavior": {"type": "route", "path": "M687 345 L699 363 L714 381 L732 399 L750 405 L768 405 L786 405 L804 405 L822 408 L840 420 L858 429 L876 438 L894 456 L912 471 L930 486 L948 498 L954 498", "dur": 160}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 250 C240 210 560 330 1020 250", "dur": 76}}
+  ],
+  "info": {
+    "브란덴부르크 문": {"title": "브란덴부르크 문", "emoji": "🏛️", "kind": "지명", "desc": "1791년에 완성된 문으로, 꼭대기에 네 마리 말이 끄는 전차 조각이 있어요. 베를린 장벽이 무너진 뒤 하나 된 독일의 상징이 되었어요."},
+    "베를린 TV탑": {"title": "베를린 TV탑", "emoji": "🗼", "kind": "지명", "desc": "1969년에 문을 연 높이 368m의 탑이에요. 동그란 구 안의 전망대와 회전 레스토랑에서 도시 전체가 보여요."},
+    "국회의사당": {"title": "국회의사당", "emoji": "🏛️", "kind": "지명", "desc": "독일 연방의회가 열리는 건물이에요. 유리 돔 안의 나선 길을 따라 올라가면 회의장도 내려다볼 수 있어요."},
+    "박물관섬": {"title": "박물관섬", "emoji": "🏺", "kind": "지명", "desc": "슈프레강 가운데 섬에 박물관 다섯 곳이 모여 있어요. 1999년 유네스코 세계유산이 되었어요."},
+    "알렉산더 광장": {"title": "알렉산더 광장", "emoji": "🕰️", "kind": "지명", "desc": "TV탑 아래의 큰 광장이에요. 세계 여러 도시의 시간을 보여 주는 세계시계가 만남의 장소예요."},
+    "티어가르텐": {"title": "티어가르텐", "emoji": "🌳", "kind": "지명", "desc": "도심 한가운데 펼쳐진 아주 큰 공원이에요. 숲길과 호수가 있어 시민들이 산책과 자전거를 즐겨요."},
+    "체크포인트 찰리": {"title": "체크포인트 찰리", "emoji": "🚧", "kind": "지명", "desc": "베를린이 나뉘어 있던 시절 동서를 오가던 검문소 자리예요. 지금은 작은 초소 모형과 박물관이 남아 있어요."},
+    "슈프레강": {"title": "슈프레강", "emoji": "🌊", "kind": "지명", "desc": "베를린을 가로지르는 강이에요. 유람선을 타면 박물관섬과 국회의사당 옆을 지나가요."},
+    "포츠담 광장": {"title": "포츠담 광장", "emoji": "🏙️", "kind": "지명", "desc": "장벽이 있던 빈터에 새로 지은 빌딩 거리예요. 영화제가 열리는 극장과 쇼핑몰이 모여 있어요."}
+  }
+}

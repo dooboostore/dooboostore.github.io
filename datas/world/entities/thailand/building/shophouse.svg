@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 34">
+  <!-- 방콕 숍하우스: 색 바른 벽(wall 변수)의 좁은 3층 가게집, 반쯤 올린 셔터 아래 과일 상자를 내놓은 가게, 초록 천 차양과 간판, 위층의 나무 덧창과 화분 놓인 발코니, 에어컨 실외기. 밤엔 가게와 창이 환하다 -->
+  <ellipse cx="11" cy="33" rx="10.4" ry="0.9" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="2" y="3.6" width="18" height="29" rx="0.6" fill="var(--wall, #f2d6a2)"/>
+    <rect x="1.4" y="2.6" width="19.2" height="1.8" rx="0.8" fill="#fbf8f0"/>
+    <rect x="1.6" y="12.6" width="18.8" height="1.2" rx="0.6" fill="#fbf8f0"/>
+    <rect x="3.6" y="5.4" width="6" height="5.6" rx="0.5" fill="#b9d6ea"/>
+    <rect x="12.4" y="5.4" width="6" height="5.6" rx="0.5" fill="#b9d6ea"/>
+    <rect x="2.6" y="5.4" width="1.4" height="5.6" rx="0.4" fill="#3f9a8a"/><rect x="9.2" y="5.4" width="1.4" height="5.6" rx="0.4" fill="#3f9a8a"/>
+    <rect x="11.4" y="5.4" width="1.4" height="5.6" rx="0.4" fill="#3f9a8a"/><rect x="18" y="5.4" width="1.4" height="5.6" rx="0.4" fill="#3f9a8a"/>
+    <rect x="4" y="15" width="14" height="5.4" rx="0.5" fill="#b9d6ea"/>
+    <rect x="3.4" y="20" width="15.2" height="1" rx="0.5" fill="#8c939a"/>
+    <rect x="14.6" y="9.4" width="3.4" height="2.4" rx="0.5" fill="#e9ecef"/>
+    <rect x="3" y="21.6" width="16" height="2.6" rx="0.6" fill="#c2523f"/>
+    <path d="M1.6 25.4 L20.4 25.4 L19.4 23.8 L2.6 23.8 Z" fill="var(--awning, #4f9a6a)"/>
+    <rect x="3" y="25.4" width="16" height="7.2" rx="0.4" fill="#5e5868"/>
+    <rect x="3" y="25.4" width="16" height="2.6" rx="0.4" fill="#aab0b6"/>
+    <rect x="4" y="29.6" width="3.4" height="2.8" rx="0.4" fill="#c98d5a"/>
+    <rect x="8.4" y="30" width="3.4" height="2.4" rx="0.4" fill="#c98d5a"/>
+  </g>
+  <circle cx="16.3" cy="10.6" r="0.75" fill="none" stroke="#8c939a" stroke-width="0.35"/>
+  <g stroke="#8c939a" stroke-width="0.25"><path d="M3.2 26.2 L18.8 26.2 M3.2 27 L18.8 27"/></g>
+  <g fill="#f29a3a" stroke="#5b4636" stroke-width="0.2"><circle cx="4.9" cy="29.4" r="0.6"/><circle cx="6.4" cy="29.4" r="0.6"/></g>
+  <g fill="#8fcf5a" stroke="#5b4636" stroke-width="0.2"><circle cx="9.3" cy="29.8" r="0.6"/><circle cx="10.8" cy="29.8" r="0.6"/></g>
+  <g fill="#e9574a" stroke="#5b4636" stroke-width="0.2"><circle cx="5.6" cy="28.8" r="0.5"/></g>
+  <g fill="none" stroke="#fbf6ea" stroke-width="0.4" stroke-linecap="round"><path d="M4.4 22.9 Q5.2 22.2 6 22.9 T7.6 22.9 M9 22.9 Q9.8 22.2 10.6 22.9 T12.2 22.9 T13.8 22.9 M15 22.4 L17.4 22.4 M15 23.2 L16.6 23.2"/></g>
+  <g stroke="#5b4636" stroke-width="0.35"><path d="M5.6 19.8 Q5.4 18.6 6.4 18.4 Q7.4 18.6 7.2 19.8 Z" fill="#c8734a"/><circle cx="6.4" cy="17.8" r="0.9" fill="#6aa84f"/><path d="M14.4 19.8 Q14.2 18.6 15.2 18.4 Q16.2 18.6 16 19.8 Z" fill="#c8734a"/><circle cx="15.2" cy="17.6" r="1" fill="#6aa84f"/><circle cx="15.6" cy="17.2" r="0.3" fill="#f2a7c4" stroke-width="0.15"/></g>
+  <g stroke="#fff" stroke-width="0.3" opacity="0.6"><path d="M6.6 5.4 L6.6 11 M15.4 5.4 L15.4 11 M11 15 L11 20"/></g>
+  <g stroke="#5b4636" stroke-opacity="0.4" stroke-width="0.25"><path d="M2.8 6.4 L3.8 6.4 M2.8 7.6 L3.8 7.6 M2.8 8.8 L3.8 8.8 M2.8 10 L3.8 10 M18.2 6.4 L19.2 6.4 M18.2 7.6 L19.2 7.6 M18.2 8.8 L19.2 8.8 M18.2 10 L19.2 10"/></g>
+  <path d="M2.4 4.6 L19.6 4.6" stroke="#fff" stroke-width="0.4" opacity="0.4"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="3.2" y="28.2" width="15.6" height="4.2" rx="0.4" opacity="0.6"/><rect x="4.2" y="5.6" width="4.8" height="5.2" rx="0.4"/><rect x="4.2" y="15.2" width="13.6" height="4.8" rx="0.4" opacity="0.7"/><rect x="3" y="21.6" width="16" height="2.6" rx="0.6" opacity="0.4"/></g>
+</svg>

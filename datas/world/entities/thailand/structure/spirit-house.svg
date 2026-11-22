@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 24">
+  <!-- 산 프라 품(정령의 집): 기둥 받침 위에 올린 작은 태국식 집, 주황·초록 겹지붕과 금빛 초파, 앞에 걸린 금잔화·재스민 화환과 작은 공양 그릇, 피어오르는 향 연기 -->
+  <ellipse cx="7" cy="23.2" rx="4.4" ry="0.7" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="4.4" y="21.4" width="5.2" height="1.8" rx="0.7" fill="#e9e1d3"/>
+    <rect x="6" y="13.4" width="2" height="8.4" rx="0.6" fill="#f4efe4"/>
+    <rect x="1.6" y="12.6" width="10.8" height="1.6" rx="0.7" fill="#e8b64a"/>
+    <rect x="3.6" y="8" width="6.8" height="4.8" rx="0.4" fill="#c2523f"/>
+    <path d="M6 12.8 L6 10.5 C6 9.7 6.64 9.4 7.0 9.4 C7.36 9.4 8 9.7 8 10.5 L8 12.8 Z" fill="#e8b64a"/>
+    <path d="M2.6 8.4 Q3.2 7.800000000000001 4.4 6.4 L9.6 6.4 Q10.8 7.800000000000001 11.4 8.4 Z" fill="#e07a3a"/><path d="M3.0 8.0 L11.0 8.0" stroke="#3f9a6a" stroke-width="0.8"/><path d="M4.4 6.4 Q3.6 4.8 4.8 4.4" fill="none" stroke="#e8b64a" stroke-width="0.7"/><path d="M9.6 6.4 Q10.4 4.8 9.2 4.4" fill="none" stroke="#e8b64a" stroke-width="0.7"/>
+    <path d="M4.2 6.2 Q4.8 5.6000000000000005 5.82 4.4 L8.18 4.4 Q9.200000000000001 5.6000000000000005 9.8 6.2 Z" fill="#3f9a6a"/><path d="M4.6 5.8 L9.4 5.8" stroke="#e07a3a" stroke-width="0.8"/><path d="M5.82 4.4 Q5.02 2.8 6.22 2.4" fill="none" stroke="#e8b64a" stroke-width="0.7"/><path d="M8.18 4.4 Q8.98 2.8 7.78 2.4" fill="none" stroke="#e8b64a" stroke-width="0.7"/>
+    <path d="M6.2 4.6 L6.7 1.6 Q7 1 7.3 1.6 L7.8 4.6 Z" fill="#e8b64a"/>
+  </g>
+  <g fill="#e8b64a"><rect x="3.8" y="8.2" width="0.5" height="4.4" rx="0.2"/><rect x="9.7" y="8.2" width="0.5" height="4.4" rx="0.2"/></g>
+  <path d="M2.6 13 Q4 15 5.4 13" fill="none" stroke="#f28c28" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="0.1 0.7"/>
+  <path d="M8.6 13 Q10 15 11.4 13" fill="none" stroke="#fbf6ea" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="0.1 0.7"/>
+  <g stroke="#5b4636" stroke-width="0.2"><circle cx="4" cy="14.6" r="0.35" fill="#e9574a"/><circle cx="10" cy="14.6" r="0.35" fill="#e9574a"/></g>
+  <g fill="#fbf6ea" stroke="#5b4636" stroke-width="0.25"><rect x="2.2" y="11.6" width="1" height="1" rx="0.3"/><rect x="10.8" y="11.6" width="1" height="1" rx="0.3"/></g>
+  <path d="M11.4 12.6 L11.4 10.6" stroke="#8a6650" stroke-width="0.3"/>
+  <path d="M11.4 10.4 Q10.8 9.4 11.4 8.4 Q12 7.4 11.4 6.4" fill="none" stroke="#fff" stroke-width="0.35" stroke-linecap="round" opacity="0.7"><animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/></path>
+  <path d="M6.4 14.4 L6.4 21" stroke="#fff" stroke-width="0.4" opacity="0.6" stroke-linecap="round"/>
+  <path d="M6.2 12.6 L6.2 10.48 C6.2 9.84 6.71 9.6 7.0 9.6 C7.29 9.6 7.8 9.84 7.8 10.48 L7.8 12.6 Z" fill="#ffd77a" style="opacity: var(--night, 0)"/>
+</svg>

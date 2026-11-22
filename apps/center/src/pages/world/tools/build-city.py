@@ -57,22 +57,25 @@ CITIES = {
     'antarctica/king-george': {'name': '남극 세종과학기지', 'queries': ['King George Island'], 'roads': 'unclassified|service|track', 'min_water_km2': 0.01,
                                'clip': (-58.90, -62.27, -58.62, -62.17), 'palette': 'snow', 'coast_margin': 1.2, 'simplify': 0.0002},
     'spain/barcelona': {'name': '바르셀로나', 'queries': ['Barcelona, Spain'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
-    'germany/berlin': {'name': '베를린', 'queries': ['Berlin, Germany'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
+    'germany/berlin': {'name': '베를린', 'queries': ['Mitte, Berlin', 'Tiergarten, Berlin'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005},  # 베를린 전체(890 km²) 대신 미테(문·TV탑·박물관섬) + 티어가르텐(국회의사당·공원)
     'russia/moscow': {'name': '모스크바', 'queries': ['Central Administrative Okrug, Moscow'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},  # 크렘린·붉은광장이 있는 중심 행정구 (모스크바시 전체는 남서쪽으로 길게 뻗어 너무 크다)
     'taiwan/taipei': {'name': '타이베이', 'queries': ['Taipei, Taiwan'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
     # 리야드: 시 경계가 1,800 km² 로 너무 커서, 킹덤 센터·마스막 요새·디리야(앗투라이프)가 들어오는 중심 사각형으로 자른다
     'saudi/riyadh': {'name': '리야드', 'queries': ['محافظة الرياض, السعودية', 'محافظة الدرعية, السعودية'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01,
                      'clip': (46.55, 24.6, 46.78, 24.78), 'palette': 'desert'},
+    # 평양: 시 전체(1,900 km²)는 너무 커서 대동강 양안 중심 4개 구역 (류경호텔=보통강, 주체사상탑=동대원, 개선문=모란봉)
+    'northkorea/pyongyang': {'name': '평양', 'queries': [f'{d}, 평양시' for d in ['중구역', '보통강구역', '모란봉구역', '대동강구역', '동대원구역']], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.01},
+    'russia/saint-petersburg': {'name': '상트페테르부르크', 'queries': [f'{d}, Saint Petersburg' for d in ['Tsentralny District', 'Admiralteysky District', 'Petrogradsky District']], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'join_water': True},  # 에르미타주·피의 구세주(중앙·해군성)·페트로파블롭스크(페트로그라드)
     'iran/tehran': {'name': '테헤란', 'queries': ['Tehran, Iran'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01, 'palette': 'desert'},
     'greece/athens': {'name': '아테네', 'queries': ['Athens, Greece'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'netherlands/amsterdam': {'name': '암스테르담', 'queries': ['Amsterdam, Netherlands'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
     'canada/toronto': {'name': '토론토', 'queries': ['Toronto, Canada'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'uae/dubai': {'name': '두바이', 'queries': ['Dubai, United Arab Emirates'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
-    'thailand/bangkok': {'name': '방콕', 'queries': ['Bangkok, Thailand'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
+    'thailand/bangkok': {'name': '방콕', 'queries': [f'{d}, Bangkok' for d in ['Phra Nakhon District', 'Pom Prap Sattru Phai District', 'Samphanthawong District', 'Bangkok Yai District', 'Bang Rak District']], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.003},  # 왕궁(프라나콘)·왓 아룬(방콕야이)·차이나타운을 짜오프라야강 양안으로
     'singapore/singapore': {'name': '싱가포르', 'queries': ['Singapore'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
     'mexico/mexico-city': {'name': '멕시코시티', 'queries': ['Mexico City, Mexico'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
     'south-africa/cape-town': {'name': '케이프타운', 'queries': ['Cape Town, South Africa'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
-    'india/agra': {'name': '아그라', 'queries': ['Agra, India'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
+    'india/agra': {'name': '아그라', 'queries': ['Agra, India'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01, 'clip': (77.98, 27.14, 78.08, 27.22), 'palette': 'desert'},  # 시 전체는 넓어 타지마할·아그라 요새·야무나강 둘레만
 }
 
 def get(url, data=None, tries=5):
@@ -87,12 +90,14 @@ def get(url, data=None, tries=5):
             time.sleep(15 * (t + 1))
 
 def nominatim(q):
-    url = 'https://nominatim.openstreetmap.org/search?' + urllib.parse.urlencode({'q': q, 'format': 'json', 'polygon_geojson': 1, 'limit': 1})
+    # 첫 결과가 도시 '점'(place=city)인 경우가 많아서, 몇 개 받아 첫 번째 면(경계)을 쓴다
+    url = 'https://nominatim.openstreetmap.org/search?' + urllib.parse.urlencode({'q': q, 'format': 'json', 'polygon_geojson': 1, 'limit': 5})
     res = get(url)
     time.sleep(1.1)
-    if not res or res[0]['geojson']['type'] not in ('Polygon', 'MultiPolygon'):
+    hit = next((r for r in res or [] if r['geojson']['type'] in ('Polygon', 'MultiPolygon')), None)
+    if not hit:
         sys.exit(f'경계 없음: {q}')
-    return shape(res[0]['geojson'])
+    return shape(hit['geojson'])
 
 OVERPASS = [
     'https://overpass-api.de/api/interpreter',

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32">
+  <!-- 류경 버드나무: 강가 쪽으로 비스듬히 기운 굽은 줄기, 가는 가지가 실처럼 땅 가까이까지 길게 늘어지고 작은 잎이 조롱조롱 달린 수양버들. 바람에 가지가 살랑 -->
+  <ellipse cx="12" cy="31.2" rx="7" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8.4 31.4 C9.6 27 8.6 22 10.4 17 C11.6 13.6 13.6 11 15.6 8.6 L17.4 9.6 C15.4 12.4 13.8 15 13 18 C12 22 12.6 27 11.8 31.4 Z" fill="#7a6250" stroke-width="0.5"/>
+    <path d="M11.6 18.6 C9.6 16 7.6 13.4 6.4 10.6" fill="none" stroke-width="1.2"/>
+    <path d="M11.6 18.6 C9.6 16 7.6 13.4 6.4 10.6" fill="none" stroke="#7a6250" stroke-width="0.6"/>
+  </g>
+  <g fill="none" stroke="#5a4636" stroke-width="0.35" stroke-linecap="round" opacity="0.6"><path d="M10.2 28 C10.6 24 10.4 21 11.4 18 M14.4 13 Q15.2 11.4 16.2 10.2"/></g>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
+    <ellipse cx="14" cy="7.4" rx="11" ry="5.4" fill="#a8d47a"/>
+    <ellipse cx="8.6" cy="5.6" rx="4" ry="2.6" fill="#b4da86"/>
+    <ellipse cx="14.4" cy="4.2" rx="4.4" ry="2.6" fill="#b4da86"/>
+    <ellipse cx="20" cy="5.6" rx="4" ry="2.6" fill="#b4da86"/>
+  </g>
+  <g fill="#d8eeb4" opacity="0.8"><ellipse cx="13.6" cy="2.6" rx="2" ry="0.5"/><ellipse cx="8" cy="4" rx="1.4" ry="0.45"/></g>
+  <g>
+    <animateTransform attributeName="transform" type="skewX" values="-2;2;-2" dur="5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="none" stroke-linecap="round"><g stroke="#5b4636" stroke-width="1.1"><path d="M4 9.6 C3.4 14.8 4.0 17 3.2 20"/><path d="M6.4 8 C5.800000000000001 15.5 6.3999999999999995 20 5.6 23"/><path d="M8.8 7 C8.200000000000001 15.7 9.200000000000001 21.4 8.4 24.4"/><path d="M11.4 6.4 C10.8 15.7 12.0 22 11.2 25"/><path d="M14 6.2 C13.4 15.8 15.0 22.4 14.2 25.4"/><path d="M16.6 6.6 C16.0 15.8 17.8 22 17 25"/><path d="M19.2 7.4 C18.599999999999998 15.5 20.6 20.6 19.8 23.6"/><path d="M21.6 8.6 C21.0 15.1 23.2 18.6 22.4 21.6"/><path d="M23.6 10.2 C23.0 14.4 25.2 15.6 24.4 18.6"/></g><g stroke="var(--leaf, #9ccc6a)" stroke-width="0.55"><path d="M4 9.6 C3.4 14.8 4.0 17 3.2 20"/><path d="M6.4 8 C5.800000000000001 15.5 6.3999999999999995 20 5.6 23"/><path d="M8.8 7 C8.200000000000001 15.7 9.200000000000001 21.4 8.4 24.4"/><path d="M11.4 6.4 C10.8 15.7 12.0 22 11.2 25"/><path d="M14 6.2 C13.4 15.8 15.0 22.4 14.2 25.4"/><path d="M16.6 6.6 C16.0 15.8 17.8 22 17 25"/><path d="M19.2 7.4 C18.599999999999998 15.5 20.6 20.6 19.8 23.6"/><path d="M21.6 8.6 C21.0 15.1 23.2 18.6 22.4 21.6"/><path d="M23.6 10.2 C23.0 14.4 25.2 15.6 24.4 18.6"/></g></g>
+    <g fill="#b4da86" stroke="#5b4636" stroke-width="0.15"><ellipse cx="3.32" cy="18.44" rx="0.35" ry="0.6"/><ellipse cx="3.52" cy="15.84" rx="0.35" ry="0.6"/><ellipse cx="3.72" cy="13.24" rx="0.35" ry="0.6"/><ellipse cx="5.72" cy="20.75" rx="0.35" ry="0.6"/><ellipse cx="5.92" cy="17.0" rx="0.35" ry="0.6"/><ellipse cx="6.12" cy="13.25" rx="0.35" ry="0.6"/><ellipse cx="8.46" cy="21.79" rx="0.35" ry="0.6"/><ellipse cx="8.56" cy="17.44" rx="0.35" ry="0.6"/><ellipse cx="8.66" cy="13.09" rx="0.35" ry="0.6"/><ellipse cx="11.23" cy="22.21" rx="0.35" ry="0.6"/><ellipse cx="11.28" cy="17.56" rx="0.35" ry="0.6"/><ellipse cx="11.33" cy="12.91" rx="0.35" ry="0.6"/><ellipse cx="14.17" cy="22.52" rx="0.35" ry="0.6"/><ellipse cx="14.12" cy="17.72" rx="0.35" ry="0.6"/><ellipse cx="14.07" cy="12.92" rx="0.35" ry="0.6"/><ellipse cx="16.94" cy="22.24" rx="0.35" ry="0.6"/><ellipse cx="16.84" cy="17.64" rx="0.35" ry="0.6"/><ellipse cx="16.74" cy="13.04" rx="0.35" ry="0.6"/><ellipse cx="19.71" cy="21.17" rx="0.35" ry="0.6"/><ellipse cx="19.56" cy="17.12" rx="0.35" ry="0.6"/><ellipse cx="19.41" cy="13.07" rx="0.35" ry="0.6"/><ellipse cx="22.28" cy="19.65" rx="0.35" ry="0.6"/><ellipse cx="22.08" cy="16.4" rx="0.35" ry="0.6"/><ellipse cx="21.88" cy="13.15" rx="0.35" ry="0.6"/><ellipse cx="24.28" cy="17.34" rx="0.35" ry="0.6"/><ellipse cx="24.08" cy="15.24" rx="0.35" ry="0.6"/><ellipse cx="23.88" cy="13.14" rx="0.35" ry="0.6"/></g>
+  </g>
+</svg>

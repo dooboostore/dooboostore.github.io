@@ -54,6 +54,7 @@ export class Traffic {
   }
   private disk: SVGCircleElement;
   private sky: SVGGElement;
+  private setToken = 0;
 
   // 지금 시각의 위치 (경위도) · 진행 방향 부호
   private where(v: Vehicle, nowSec: number) {
@@ -82,6 +83,11 @@ export class Traffic {
   }
 
   async set(routes: Route[], radiusKm = 6371) {
+    // 여러 번 겹쳐 불려도(기본 → 구름 도착 → 태풍 도착) 마지막 것만 그린다. 그림 불러오기를 기다린 뒤에 비우고 채워야
+    // 앞선 호출이 뒤늦게 덧붙여 같은 교통이 두세 겹 생기지 않는다
+    const token = ++this.setToken;
+    const entities = await Promise.all(routes.map((r) => this.reg.load(r.use)));
+    if (token !== this.setToken) return;
     this.radiusKm = radiusKm;
     RADIUS_REF = radiusKm;
     this.sea.replaceChildren();
@@ -89,7 +95,6 @@ export class Traffic {
     this.sky.replaceChildren();
     this.space.replaceChildren();
     this.vehicles = [];
-    const entities = await Promise.all(routes.map((r) => this.reg.load(r.use)));
     routes.forEach((route, ri) => {
       const pts = route.path;
       const segs = pts.slice(1).map((p, i) => ({ f: geoInterpolate(pts[i], p), d: geoDistance(pts[i], p) }));

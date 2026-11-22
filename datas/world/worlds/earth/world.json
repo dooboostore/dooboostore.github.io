@@ -72,6 +72,15 @@
     {"use": "globe/satellite.svg", "kind": "space", "z": 1400, "name": "통신위성", "dur": 260, "count": 2, "size": 24, "path": [[120.0, 0.0], [142.5, 10.3], [165.0, 19.4], [-172.5, 25.7], [-150.0, 28.0], [-127.5, 25.7], [-105.0, 19.4], [-82.5, 10.3], [-60.0, 0.0], [-37.5, -10.3], [-15.0, -19.4], [7.5, -25.7], [30.0, -28.0], [52.5, -25.7], [75.0, -19.4], [97.5, -10.3], [120.0, -0.0]]},
     {"use": "globe/ufo.svg", "kind": "space", "z": 700, "name": "UFO (상상)", "dur": 120, "count": 1, "pingpong": true, "size": 30, "path": [[-115.8, 37.2], [-90, 45], [-40, 52], [10, 48], [60, 40], [127, 37]]},
     {"use": "globe/comet.svg", "kind": "space", "z": 9000, "name": "혜성", "dur": 300, "count": 1, "size": 64, "path": [[-160.0, 0.0], [-137.5, 12.7], [-115.0, 23.9], [-92.5, 32.0], [-70.0, 35.0], [-47.5, 32.0], [-25.0, 23.9], [-2.5, 12.7], [20.0, 0.0], [42.5, -12.7], [65.0, -23.9], [87.5, -32.0], [110.0, -35.0], [132.5, -32.0], [155.0, -23.9], [177.5, -12.7], [-160.0, -0.0]]},
-    {"use": "globe/rocket.svg", "kind": "space", "z": 500, "name": "나로우주센터 로켓", "dur": 110, "count": 1, "size": 28, "path": [[127.5, 34.4], [140, 33], [160, 29], [180, 24], [-160, 18]]}
+    {"use": "globe/rocket.svg", "kind": "space", "z": 500, "name": "나로우주센터 로켓", "dur": 110, "count": 1, "size": 28, "path": [[127.5, 34.4], [140, 33], [160, 29], [180, 24], [-160, 18]]},
+    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": "스발바르 북극곰", "dur": 300, "count": 2, "pingpong": true, "size": 24, "path": [[15, 78.2], [19, 78.9], [24, 79.6]]},
+    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": "그린란드 북극곰", "dur": 320, "count": 1, "pingpong": true, "size": 24, "path": [[-25, 72], [-21, 75], [-19, 78]]},
+    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": "허드슨만 북극곰", "dur": 300, "count": 2, "pingpong": true, "size": 24, "path": [[-94, 58.8], [-92, 61], [-87, 63.5]]},
+    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": "알래스카 북극곰", "dur": 320, "count": 1, "pingpong": true, "size": 22, "path": [[-160, 71], [-152, 70.8], [-145, 70.2]]},
+    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": "캐나다 북극 제도 북극곰", "dur": 340, "count": 1, "pingpong": true, "size": 22, "path": [[-100, 74.5], [-90, 75.5], [-80, 74]]},
+    {"use": "polar/animal/emperor-penguin", "kind": "air", "z": 0, "upright": true, "name": "남극 황제펭귄", "dur": 360, "count": 2, "pingpong": true, "size": 22, "path": [[0, -70.2], [20, -69.8], [40, -69.5]]},
+    {"use": "polar/animal/emperor-penguin", "kind": "air", "z": 0, "upright": true, "name": "로스해 황제펭귄", "dur": 360, "count": 1, "pingpong": true, "size": 22, "path": [[165, -77.5], [175, -77.8], [-175, -78]]},
+    {"use": "polar/animal/penguin", "kind": "air", "z": 0, "upright": true, "name": "남극반도 젠투펭귄", "dur": 280, "count": 2, "pingpong": true, "size": 20, "path": [[-62, -64.3], [-59, -63], [-57, -62.3]]},
+    {"use": "polar/animal/seal", "kind": "air", "z": 0, "upright": true, "name": "웨들해 물범", "dur": 400, "count": 1, "pingpong": true, "size": 20, "path": [[-50, -74], [-40, -75], [-30, -76]]}
   ]
 }

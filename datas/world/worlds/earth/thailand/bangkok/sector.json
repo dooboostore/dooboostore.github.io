@@ -1,0 +1,29 @@
+{
+  "local": {"size": [960, 654], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "thailand/landmark/grand-palace.svg", "at": [357.1, 283.1], "scale": 0.6},
+    {"use": "thailand/landmark/wat-arun.svg", "at": [300, 350], "scale": 0.6},
+    {"use": "thailand/structure/spirit-house.svg", "at": [[378.7, 324.9], [600, 430]], "scale": 0.5},
+    {"use": "thailand/building/shophouse.svg", "count": 14, "area": [507, 373, 160, 80], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#f2b8a2", "#f6d38a", "#a8d5e8", "#e9e3d7"]}},
+    {"use": "thailand/building/shophouse.svg", "count": 8, "area": [366, 146, 100, 60], "scale": 0.5, "spacing": 12},
+    {"use": "thailand/structure/street-food-cart.svg", "at": [[586.7, 418.6], [416.3, 181.5]], "scale": 0.5},
+    {"use": "thailand/nature/coconut-palm.svg", "count": 14, "area": [340, 180, 180, 160], "scale": 0.6, "spacing": 12},
+    {"use": "thailand/people/monk", "count": 4, "area": [347, 302, 40, 30], "scale": 0.7, "spacing": 6},
+    {"use": "thailand/people/local", "count": 6, "area": [376, 156, 80, 40], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 3, "area": [332, 268, 50, 30], "scale": 0.7, "spacing": 6},
+    {"use": "thailand/vehicle/tuk-tuk", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M495.6 251.7 L543.1 254.7 L676.3 299.2", "dur": 22}},
+    {"use": "thailand/vehicle/longtail-boat.svg", "count": 2, "scale": 0.5, "layer": "water", "behavior": {"type": "route", "path": "M411 42 L402 60 L393 78 L381 96 L363 114 L345 132 L327 150 L315 168 L315 186 L315 204 L315 222 L315 240 L318 258 L321 276 L324 294 L333 312 L342 330 L357 348 L372 366 L390 384 L408 399 L426 405 L444 408 L462 414 L480 417 L498 423 L516 429 L534 438 L552 456 L570 474 L579 492 L579 510 L579 528 L579 546 L579 564 L579 582 L579 600 L579 618", "dur": 160}},
+    {"use": "thailand/vehicle/river-express.svg", "count": 1, "scale": 0.55, "layer": "water", "behavior": {"type": "route", "path": "M569.7 473.7 L533.6 437.8 L517.5 429.8 L480.7 417.2 L463 414.2 L443.1 407.8 L428.3 405.4 L408.4 399.1 L389.9 383.9 L373 367 L342.2 330.3 L336.4 320.5 L323.8 292.7 L315 239.6 L315.2 167.8 L326.8 150.3 L379.6 97.4 L385.2 90.6 L393.2 77.7 L408.4 48.2 L420.2 14.5 L421.7 13.2", "dur": 160}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 280 C240 240 560 360 1020 280", "dur": 76}}
+  ],
+  "info": {
+    "왕궁": {"title": "왕궁", "emoji": "👑", "kind": "지명", "desc": "1782년부터 지어진 태국 왕실의 궁전이에요. 금빛 탑과 겹겹 지붕이 햇빛에 반짝여요."},
+    "왓 아룬": {"title": "왓 아룬", "emoji": "🛕", "kind": "지명", "desc": "짜오프라야강 서쪽의 \"새벽 사원\"이에요. 탑 표면이 도자기 조각으로 꾸며져 노을에 특히 아름다워요."},
+    "왓 포": {"title": "왓 포", "emoji": "🧘", "kind": "지명", "desc": "길이 46m의 누워 있는 불상으로 유명한 사원이에요. 태국 전통 마사지를 가르치는 곳이기도 해요."},
+    "카오산 로드": {"title": "카오산 로드", "emoji": "🎒", "kind": "지명", "desc": "세계 여행자들이 모이는 거리예요. 밤이 되면 노점과 음악으로 북적여요."},
+    "차이나타운": {"title": "차이나타운", "emoji": "🏮", "kind": "지명", "desc": "야오와랏 거리를 따라 이어진 중국인 거리예요. 밤마다 길거리 음식 노점이 줄지어 들어서요."},
+    "짜오프라야강": {"title": "짜오프라야강", "emoji": "🌊", "kind": "지명", "desc": "방콕을 남북으로 흐르는 큰 강이에요. 수상 버스와 롱테일 보트가 쉴 새 없이 오가요."},
+    "민주기념탑": {"title": "민주기념탑", "emoji": "🗽", "kind": "지명", "desc": "라차담넌 대로 한가운데 선 기념탑이에요. 둥근 광장 위로 날개 모양 탑 네 개가 둘러서 있어요."},
+    "룸피니 공원": {"title": "룸피니 공원", "emoji": "🦎", "kind": "지명", "desc": "도심 속 큰 공원이에요. 호수 둘레에서 커다란 물왕도마뱀이 느긋하게 일광욕을 해요."}
+  }
+}

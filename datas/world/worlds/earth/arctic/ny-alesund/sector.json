@@ -8,11 +8,12 @@
     {"use": "polar/people/researcher", "count": 4, "area": [430, 480, 70, 30], "scale": 0.7, "spacing": 6},
     {"use": "polar/animal/reindeer", "count": 4, "area": [250, 480, 200, 140], "scale": 0.7, "spacing": 12},
     {"use": "polar/animal/arctic-fox", "count": 2, "area": [520, 560, 160, 120], "scale": 0.6, "spacing": 12},
-    {"use": "polar/animal/polar-bear", "count": 2, "area": [100, 650, 250, 150], "scale": 0.8, "spacing": 40},
+    {"use": "polar/animal/polar-bear", "count": 3, "area": [480, 540, 220, 120], "scale": 0.8, "spacing": 30},
     {"use": "polar/animal/walrus", "count": 2, "area": [600, 520, 90, 40], "scale": 0.7, "spacing": 10},
     {"use": "polar/nature/snow-rock.svg", "count": 8, "area": [100, 500, 700, 300], "scale": 0.8, "spacing": 40},
     {"use": "polar/nature/iceberg.svg", "at": [[300, 260], [620, 300], [760, 430], [201, 251]], "scale": 0.8, "layer": "water"},
     {"use": "polar/nature/ice-floe.svg", "at": [[420, 230], [540, 380], [680, 250]], "scale": 0.8, "layer": "water"},
+    {"use": "polar/animal/polar-bear", "at": [[540, 376], [680, 246]], "scale": 0.55, "layer": "water"},
     {"use": "polar/vehicle/icebreaker.svg", "count": 1, "scale": 0.7, "layer": "water", "behavior": {"type": "route", "path": "M957.2 331.1 L957 330.1 L954 330.2 L721.1 340 L560 395", "dur": 120}},
     {"use": "polar/vehicle/snowmobile", "count": 1, "scale": 0.6, "behavior": {"type": "route", "path": "M440 500 L520 540 L600 560", "dur": 40}},
     {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
