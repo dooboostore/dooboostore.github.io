@@ -73,7 +73,8 @@ CITIES = {
     'uae/dubai': {'name': '두바이', 'queries': ['Dubai, United Arab Emirates'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'thailand/bangkok': {'name': '방콕', 'queries': [f'{d}, Bangkok' for d in ['Phra Nakhon District', 'Pom Prap Sattru Phai District', 'Samphanthawong District', 'Bangkok Yai District', 'Bang Rak District']], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.003},  # 왕궁(프라나콘)·왓 아룬(방콕야이)·차이나타운을 짜오프라야강 양안으로
     'singapore/singapore': {'name': '싱가포르', 'queries': ['Singapore'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
-    'mexico/mexico-city': {'name': '멕시코시티', 'queries': ['Mexico City, Mexico'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
+    # 멕시코시티: 역사지구(쿠아우테모크) + 차풀테펙(미겔 이달고). 소치밀코는 남쪽 20 km 라 따로
+    'mexico/mexico-city': {'name': '멕시코시티', 'queries': ['Cuauhtémoc, Ciudad de México', 'Miguel Hidalgo, Ciudad de México'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.003, 'smallest': True},
     'south-africa/cape-town': {'name': '케이프타운', 'queries': ['Cape Town, South Africa'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'india/agra': {'name': '아그라', 'queries': ['Agra, India'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01, 'clip': (77.98, 27.14, 78.08, 27.22), 'palette': 'desert'},  # 시 전체는 넓어 타지마할·아그라 요새·야무나강 둘레만
 }
@@ -89,12 +90,14 @@ def get(url, data=None, tries=5):
                 raise
             time.sleep(15 * (t + 1))
 
-def nominatim(q):
+def nominatim(q, smallest=False):
     # 첫 결과가 도시 '점'(place=city)인 경우가 많아서, 몇 개 받아 첫 번째 면(경계)을 쓴다
     url = 'https://nominatim.openstreetmap.org/search?' + urllib.parse.urlencode({'q': q, 'format': 'json', 'polygon_geojson': 1, 'limit': 5})
     res = get(url)
     time.sleep(1.1)
-    hit = next((r for r in res or [] if r['geojson']['type'] in ('Polygon', 'MultiPolygon')), None)
+    polys = [r for r in res or [] if r['geojson']['type'] in ('Polygon', 'MultiPolygon')]
+    # smallest: 같은 이름의 시 전체·구가 함께 나올 때 구(가장 작은 면)를 고른다 (예: 멕시코시티 쿠아우테모크)
+    hit = min(polys, key=lambda r: shape(r['geojson']).area) if smallest and polys else (polys[0] if polys else None)
     if not hit:
         sys.exit(f'경계 없음: {q}')
     return shape(hit['geojson'])
@@ -209,7 +212,7 @@ def main():
     a = ap.parse_args()
     cfg = CITIES[a.id]
 
-    boundary = unary_union([nominatim(q) for q in cfg['queries']]).buffer(0.0004).buffer(-0.0004).simplify(0.0006)
+    boundary = unary_union([nominatim(q, cfg.get('smallest', False)) for q in cfg['queries']]).buffer(0.0004).buffer(-0.0004).simplify(0.0006)
     if boundary.geom_type == 'MultiPolygon':  # 행정구역 데이터에 섞인 먼 조각 (예: 시청구 관계에 딸린 톈진 쪽 면) 버림
         main_part = max(boundary.geoms, key=lambda q: q.area)
         boundary = unary_union([q for q in boundary.geoms if q.distance(main_part) < 0.1])

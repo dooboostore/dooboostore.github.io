@@ -1,0 +1,36 @@
+{
+  "local": {"size": [960, 647], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "mexico/landmark/cathedral.svg", "at": [860.5, 290], "scale": 0.6},
+    {"use": "mexico/landmark/bellas-artes.svg", "at": [807.4, 282.3], "scale": 0.55},
+    {"use": "mexico/landmark/angel.svg", "at": [633.4, 341.7], "scale": 0.6},
+    {"use": "mexico/landmark/chapultepec-castle.svg", "at": [530, 370], "scale": 0.6},
+    {"use": "mexico/building/colonial-house.svg", "count": 16, "area": [790, 250, 120, 110], "scale": 0.5, "spacing": 12, "vars": {"--wall": ["#f2b8a2", "#f6d38a", "#a8d5e8", "#e9a6a1", "#c6e0a8"]}},
+    {"use": "mexico/building/colonial-house.svg", "count": 10, "area": [640, 280, 120, 90], "scale": 0.5, "spacing": 12},
+    {"use": "mexico/structure/papel-picado.svg", "at": [[860.5, 314.2], [789.4, 292.8]], "scale": 0.5},
+    {"use": "mexico/structure/taco-stand.svg", "at": [[860.5, 328.2], [633.4, 361.7]], "scale": 0.5},
+    {"use": "mexico/nature/jacaranda.svg", "count": 14, "area": [620, 300, 180, 60], "scale": 0.6, "spacing": 12},
+    {"use": "mexico/nature/jacaranda.svg", "count": 10, "area": [769, 271, 40, 20], "scale": 0.55, "spacing": 8},
+    {"use": "nature/round-tree.svg", "count": 24, "area": [430, 360, 140, 80], "scale": 0.6, "spacing": 12},
+    {"use": "mexico/nature/cactus.svg", "at": [[860.5, 332.2], [807.4, 304.3], [510.7, 358.7]], "scale": 0.6},
+    {"use": "mexico/people/mariachi", "count": 4, "area": [836, 287, 50, 30], "scale": 0.7, "spacing": 6},
+    {"use": "mexico/people/local", "count": 6, "area": [830, 282, 60, 40], "scale": 0.7, "spacing": 6},
+    {"use": "mexico/people/local", "count": 4, "area": [608, 327, 50, 30], "scale": 0.7, "spacing": 6},
+    {"use": "usa/people/tourist", "count": 4, "area": [513, 372, 50, 30], "scale": 0.7, "spacing": 6},
+    {"use": "mexico/vehicle/vocho-taxi", "count": 3, "scale": 0.5, "spacing": 8, "behavior": {"type": "route", "path": "M433.1 263.2 L528.1 268.4 L592.6 323.8", "dur": 20}},
+    {"use": "vehicle/bus", "count": 1, "scale": 0.55, "vars": {"--bus": "#d9443a"}, "behavior": {"type": "route", "path": "M593.3 324.1 L646.3 226.3 L653.5 193.9", "dur": 25}},
+    {"use": "animal/birds.svg", "count": 2, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 380 1020 300", "dur": 76}}
+  ],
+  "labels": [
+    {"text": {"ko": "소칼로", "en": "Zócalo", "zh": "宪法广场"}, "at": [860.5, 288.2], "size": 13, "info": {"emoji": "🇲🇽", "kind": "지명", "title": {"ko": "소칼로", "en": "Zócalo", "zh": "宪法广场"}, "desc": {"ko": "도시 한가운데의 아주 넓은 광장이에요. 커다란 국기가 휘날리고, 대성당과 국립궁전이 광장을 둘러싸고 있어요.", "en": "A vast square in the heart of the city. A giant flag flies in the middle, framed by the cathedral and the National Palace.", "zh": "城市中心非常宽阔的广场。中央飘扬着巨大的国旗，周围环绕着大教堂和国家宫。"}}},
+    {"text": {"ko": "메트로폴리탄 대성당", "en": "Metropolitan Cathedral", "zh": "大都会主教座堂"}, "at": [860.5, 276], "size": 9, "info": {"emoji": "⛪", "kind": "지명", "title": {"ko": "메트로폴리탄 대성당", "en": "Metropolitan Cathedral", "zh": "大都会主教座堂"}, "desc": {"ko": "소칼로 북쪽의 큰 대성당이에요. 오랜 세월에 걸쳐 지어져 여러 시대의 건축 양식이 함께 담겨 있어요.", "en": "The great cathedral on the north side of the Zócalo. Built over a long time, it mixes styles from several eras.", "zh": "宪法广场北侧的大教堂。历经很长时间建成，融合了多个时代的建筑风格。"}}},
+    {"text": {"ko": "예술궁전", "en": "Palacio de Bellas Artes", "zh": "国家艺术宫"}, "at": [807.4, 268.3], "size": 9, "info": {"emoji": "🎭", "kind": "지명", "title": {"ko": "예술궁전", "en": "Palacio de Bellas Artes", "zh": "国家艺术宫"}, "desc": {"ko": "흰 대리석과 주황빛 돔이 아름다운 공연장이에요. 안에는 유명한 벽화들이 걸려 있어요.", "en": "A concert hall of white marble with a glowing orange dome. Famous murals hang inside.", "zh": "由白色大理石和橙色穹顶构成的美丽剧院，里面挂着著名的壁画。"}}},
+    {"text": {"ko": "독립 천사상", "en": "Angel of Independence", "zh": "独立天使纪念碑"}, "at": [633.4, 327.7], "size": 9, "info": {"emoji": "👼", "kind": "지명", "title": {"ko": "독립 천사상", "en": "Angel of Independence", "zh": "独立天使纪念碑"}, "desc": {"ko": "레포르마 대로 한가운데 높은 기둥 위에 금빛 천사가 서 있어요. 기쁜 일이 있으면 사람들이 이곳에 모여요.", "en": "A golden angel stands on a tall column in the middle of Paseo de la Reforma. People gather here to celebrate.", "zh": "金色天使矗立在改革大道中央的高柱上，人们庆祝时会聚在这里。"}}},
+    {"text": {"ko": "차풀테펙 성", "en": "Chapultepec Castle", "zh": "查普尔特佩克城堡"}, "at": [538.4, 373.3], "size": 9, "info": {"emoji": "🏰", "kind": "지명", "title": {"ko": "차풀테펙 성", "en": "Chapultepec Castle", "zh": "查普尔特佩克城堡"}, "desc": {"ko": "차풀테펙 언덕 위의 성이에요. 지금은 역사 박물관이라 테라스에서 도시를 내려다볼 수 있어요.", "en": "A castle on Chapultepec Hill. Today it is a history museum, and its terraces look out over the city.", "zh": "坐落在查普尔特佩克山上的城堡，如今是历史博物馆，可以从露台俯瞰城市。"}}},
+    {"text": {"ko": "차풀테펙 공원", "en": "Chapultepec Park", "zh": "查普尔特佩克公园"}, "at": [484, 381], "size": 11, "info": {"emoji": "🌳", "kind": "지명", "title": {"ko": "차풀테펙 공원", "en": "Chapultepec Park", "zh": "查普尔特佩克公园"}, "desc": {"ko": "도시 서쪽의 아주 큰 숲 공원이에요. 호수에서 보트를 타고, 박물관과 동물원도 둘러볼 수 있어요.", "en": "A huge forest park on the west side of the city. You can row on the lake and visit museums and a zoo.", "zh": "城市西边的大型森林公园。可以在湖上划船，还能参观博物馆和动物园。"}}},
+    {"text": {"ko": "국립인류학박물관", "en": "National Museum of Anthropology", "zh": "国家人类学博物馆"}, "at": [510.7, 334.7], "size": 8, "info": {"emoji": "🗿", "kind": "지명", "title": {"ko": "국립인류학박물관", "en": "National Museum of Anthropology", "zh": "国家人类学博物馆"}, "desc": {"ko": "멕시코의 오래된 문명을 보여 주는 박물관이에요. 거대한 아즈텍 태양의 돌이 유명해요.", "en": "A museum of Mexico's ancient civilizations, famous for the giant Aztec Sun Stone.", "zh": "展示墨西哥古代文明的博物馆，以巨大的阿兹特克太阳石闻名。"}}},
+    {"text": {"ko": "레포르마 대로", "en": "Paseo de la Reforma", "zh": "改革大道"}, "at": [690, 304], "size": 9, "info": {"emoji": "🛣️", "kind": "지명", "title": {"ko": "레포르마 대로", "en": "Paseo de la Reforma", "zh": "改革大道"}, "desc": {"ko": "나무가 늘어선 넓은 큰길이에요. 일요일엔 차가 다니지 않아 자전거와 산책하는 사람들로 가득해요.", "en": "A wide, tree-lined avenue. On Sundays it closes to cars and fills with cyclists and walkers.", "zh": "绿树成荫的宽阔大道。周日禁止汽车通行，满是骑车和散步的人。"}}},
+    {"text": {"ko": "알라메다 공원", "en": "Alameda Central", "zh": "阿拉米达中央公园"}, "at": [789.4, 266.8], "size": 8, "info": {"emoji": "🌸", "kind": "지명", "title": {"ko": "알라메다 공원", "en": "Alameda Central", "zh": "阿拉米达中央公园"}, "desc": {"ko": "예술궁전 옆의 오래된 공원이에요. 봄이면 자카란다가 보랏빛으로 피어나요.", "en": "An old park beside the Palacio de Bellas Artes. In spring the jacarandas bloom purple.", "zh": "国家艺术宫旁的古老公园，春天蓝花楹开出紫色的花。"}}},
+    {"text": {"ko": "템플로 마요르", "en": "Templo Mayor", "zh": "大神庙"}, "at": [872.2, 271.3], "size": 8, "info": {"emoji": "🏛️", "kind": "지명", "title": {"ko": "템플로 마요르", "en": "Templo Mayor", "zh": "大神庙"}, "desc": {"ko": "아즈텍 수도 테노치티틀란의 큰 신전 터예요. 소칼로 바로 옆에서 옛 유적을 볼 수 있어요.", "en": "The ruins of the great temple of Tenochtitlan, the Aztec capital, right next to the Zócalo.", "zh": "阿兹特克首都特诺奇蒂特兰大神庙的遗址，就在宪法广场旁边。"}}}
+  ]
+}

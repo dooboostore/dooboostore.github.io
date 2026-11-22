@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34">
+  <!-- 자카란다 나무: 봄마다 거리를 보랏빛으로 물들이는 나무, 두 갈래로 갈라진 갈색 줄기 위에 동글동글 뭉친 연보라 꽃구름, 바닥에 떨어진 꽃잎과 살랑 떨어지는 꽃잎 -->
+  <ellipse cx="15" cy="33" rx="9" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g fill="#b79be8" opacity="0.6"><ellipse cx="9" cy="33" rx="1" ry="0.4"/><ellipse cx="21" cy="32.8" rx="1" ry="0.4"/><ellipse cx="13" cy="33.4" rx="0.8" ry="0.35"/><ellipse cx="18.6" cy="33.5" rx="0.8" ry="0.35"/></g>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13.4 33.2 C13.8 28 13.6 24 11 19 L12.6 18.4 C14.6 21.6 15 23.4 15.2 24.8 C15.8 22 17 20 18.8 18 L20.2 19 C17.4 22.6 16.6 27 16.8 33.2 Z" fill="#8a6650"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="-1.2 15 22;1.2 15 22;-1.2 15 22" dur="6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <g fill="var(--bloom, #a98be0)" stroke="#5b4636" stroke-width="0.5"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="8" r="6.6"/><circle cx="21" cy="12" r="6"/><circle cx="12" cy="16" r="5.6"/><circle cx="19" cy="16" r="5.6"/><circle cx="5.6" cy="15.6" r="4"/><circle cx="24.4" cy="15.6" r="4"/><circle cx="15" cy="13" r="6"/></g>
+    <g fill="var(--bloom, #a98be0)"><circle cx="9" cy="12" r="5.75"/><circle cx="15" cy="8" r="6.35"/><circle cx="21" cy="12" r="5.75"/><circle cx="12" cy="16" r="5.35"/><circle cx="19" cy="16" r="5.35"/><circle cx="5.6" cy="15.6" r="3.75"/><circle cx="24.4" cy="15.6" r="3.75"/><circle cx="15" cy="13" r="5.75"/></g>
+    <g fill="#8f6fd0" opacity="0.55"><circle cx="12.8" cy="17.4" r="3.08"/><circle cx="19.8" cy="17.4" r="3.08"/><circle cx="15" cy="17" r="3.4"/></g>
+    <g fill="#d6c4f6"><circle cx="7" cy="10.4" r="0.6"/><circle cx="10.4" cy="9.4" r="0.6"/><circle cx="11.2" cy="12.4" r="0.6"/><circle cx="13" cy="6.4" r="0.6"/><circle cx="16.4" cy="5.4" r="0.6"/><circle cx="17.2" cy="8.4" r="0.6"/><circle cx="19" cy="10.4" r="0.6"/><circle cx="22.4" cy="9.4" r="0.6"/><circle cx="23.2" cy="12.4" r="0.6"/><circle cx="10" cy="14.4" r="0.6"/><circle cx="13.4" cy="13.4" r="0.6"/><circle cx="14.2" cy="16.4" r="0.6"/><circle cx="17" cy="14.4" r="0.6"/><circle cx="20.4" cy="13.4" r="0.6"/><circle cx="21.2" cy="16.4" r="0.6"/><circle cx="3.6" cy="14.0" r="0.6"/><circle cx="7.0" cy="13.0" r="0.6"/><circle cx="7.8" cy="16.0" r="0.6"/><circle cx="22.4" cy="14.0" r="0.6"/><circle cx="25.8" cy="13.0" r="0.6"/><circle cx="26.6" cy="16.0" r="0.6"/><circle cx="13" cy="11.4" r="0.6"/><circle cx="16.4" cy="10.4" r="0.6"/><circle cx="17.2" cy="13.4" r="0.6"/></g>
+    <g fill="#fff" opacity="0.35"><ellipse cx="12.4" cy="5" rx="2.4" ry="1.1" transform="rotate(-20 12.4 5)"/><ellipse cx="6.6" cy="9.6" rx="1.6" ry="0.8" transform="rotate(-30 6.6 9.6)"/></g>
+  </g>
+  <g fill="#c2a8f0">
+    <ellipse cx="8" cy="22" rx="0.5" ry="0.35"><animateMotion path="M0 0 Q1.5 4 0 8 Q-1 10 0 11" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="22" cy="21" rx="0.5" ry="0.35"><animateMotion path="M0 0 Q-1.5 4 0 8 Q1 10 0 11.6" dur="6s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="6s" begin="-2.4s" repeatCount="indefinite"/></ellipse>
+  </g>
+</svg>
