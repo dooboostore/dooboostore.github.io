@@ -1,0 +1,13 @@
+{
+  "local": {"size": [960, 1029], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "vietnam/landmark/one-pillar-pagoda.svg", "at": [86, 314], "scale": 0.9},
+    {"use": "vietnam/nature/lotus.svg", "count": 5, "area": [460, 500, 150, 80], "scale": 0.9, "spacing": 12, "layer": "water"},
+    {"use": "people/walker", "count": 10, "area": [350, 450, 300, 180], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#191410", "#2a2421"], "--shirt": ["#e9785a", "#8cbfdc", "#f3d38a"], "--pants": ["#3d4a6b", "#56627e"]}},
+    {"use": "animal/butterfly", "count": 3, "area": [400, 480, 200, 140], "spacing": 5, "vars": {"--wing": ["#ffc4e0", "#ffffff"]}}
+  ],
+  "labels": [
+    {"text": {"ko": "한기둥 사원", "en": "One-Pillar Pagoda", "zh": "独柱寺"}, "at": [86, 280], "size": 9, "info": {"emoji": "🛕", "kind": "지명", "title": {"ko": "한기둥 사원", "en": "One-Pillar Pagoda", "zh": "独柱寺"}, "desc": {"ko": "연꽃 위에 핀 한 칸 절이에요. 한 기둥으로 서 있어요.", "en": "A one-room temple blooming like a lotus. It stands on a single pillar.", "zh": "像莲花一样绽放的单间寺庙。只靠一根柱子立着。"}}},
+    {"text": {"ko": "호안끼엠 호수", "en": "Hoan Kiem Lake", "zh": "还剑湖"}, "at": [533, 590], "size": 10.5, "info": {"emoji": "🐢", "kind": "지명", "title": {"ko": "호안끼엠 호수", "en": "Hoan Kiem Lake", "zh": "还剑湖"}, "desc": {"ko": "칼을 돌려줬다는 전설의 호수예요. 아침이면 태극권 하는 사람들로 가득해요.", "en": "The lake of the legend about the returned sword. In the morning it's full of people doing tai chi.", "zh": "还剑传说的湖泊。早晨满是打太极的人。"}}}
+  ]
+}

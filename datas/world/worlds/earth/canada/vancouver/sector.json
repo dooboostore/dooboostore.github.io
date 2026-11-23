@@ -1,0 +1,127 @@
+{
+  "local": {
+    "size": [
+      960,
+      1138
+    ],
+    "ground": "ground.svg",
+    "boundary": "boundary.json"
+  },
+  "placements": [
+    {
+      "use": "canada/landmark/totem-pole.svg",
+      "at": [
+        640,
+        620
+      ],
+      "scale": 1
+    },
+    {
+      "use": "canada/nature/douglas-fir.svg",
+      "count": 12,
+      "area": [
+        200,
+        700,
+        300,
+        200
+      ],
+      "scale": 0.9,
+      "spacing": 20
+    },
+    {
+      "use": "people/walker",
+      "count": 8,
+      "area": [
+        300,
+        620,
+        350,
+        150
+      ],
+      "scale": 0.7,
+      "spacing": 6,
+      "vars": {
+        "--skin": [
+          "#f4d6bd",
+          "#eac3a2"
+        ],
+        "--hair": [
+          "#2a2421",
+          "#6b4a35"
+        ],
+        "--shirt": [
+          "#8cbfdc",
+          "#a8d5b0",
+          "#f3d38a"
+        ],
+        "--pants": [
+          "#3d4a6b"
+        ]
+      }
+    },
+    {
+      "use": "usa/animal/squirrel",
+      "count": 4,
+      "area": [
+        250,
+        650,
+        300,
+        150
+      ],
+      "spacing": 8
+    }
+  ],
+  "labels": [
+    {
+      "text": {
+        "ko": "토템폴",
+        "en": "Totem Pole",
+        "zh": "图腾柱"
+      },
+      "at": [
+        640,
+        578
+      ],
+      "size": 9,
+      "info": {
+        "emoji": "🗿",
+        "kind": "지명",
+        "title": {
+          "ko": "토템폴",
+          "en": "Totem Pole",
+          "zh": "图腾柱"
+        },
+        "desc": {
+          "ko": "곰·까마귀·연어가 쌓인 하이다 토템이에요. 이야기를 담고 있어요.",
+          "en": "A Haida totem stacked with bear, raven and salmon. It holds stories.",
+          "zh": "叠着熊、乌鸦和鲑鱼的海达图腾。里面藏着故事。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "스탠리공원",
+        "en": "Stanley Park",
+        "zh": "斯坦利公园"
+      },
+      "at": [
+        350,
+        780
+      ],
+      "size": 9,
+      "info": {
+        "emoji": "🌲",
+        "kind": "지명",
+        "title": {
+          "ko": "스탠리공원",
+          "en": "Stanley Park",
+          "zh": "斯坦利公园"
+        },
+        "desc": {
+          "ko": "도심 옆 거대한 숲 공원이에요. 바닷가 산책로가 10km나 이어져요.",
+          "en": "A huge forest park beside downtown. Its seaside walk stretches 10 km.",
+          "zh": "市中心旁边的巨大森林公园。海滨步道绵延10公里。"
+        }
+      }
+    }
+  ]
+}

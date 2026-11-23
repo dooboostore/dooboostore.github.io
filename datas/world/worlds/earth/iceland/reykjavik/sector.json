@@ -1,0 +1,12 @@
+{
+  "local": {"size": [960, 1077], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "iceland/landmark/hallgrimskirkja.svg", "at": [103, 647], "scale": 1.0},
+    {"use": "iceland/nature/blue-lagoon.svg", "at": [500, 500], "scale": 0.7},
+    {"use": "people/walker", "count": 8, "area": [250, 450, 350, 200], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f7e0cc", "#f4d6bd"], "--hair": ["#a7a29d", "#6b4a35", "#2a2421"], "--shirt": ["#8cbfdc", "#f1f1f1", "#d6453d"], "--pants": ["#3d4a6b"]}}
+  ],
+  "labels": [
+    {"text": {"ko": "할그림스키르캬", "en": "Hallgrímskirkja", "zh": "哈尔格林姆斯教堂"}, "at": [103, 590], "size": 9, "info": {"emoji": "⛪", "kind": "지명", "title": {"ko": "할그림스키르캬", "en": "Hallgrímskirkja", "zh": "哈尔格林姆斯教堂"}, "desc": {"ko": "현무암 기둥 교회예요. 날개 모양 탑이 하늘을 찔러요.", "en": "A basalt-column church. Its wing-shaped tower pierces the sky.", "zh": "玄武岩柱教堂。翅膀形的塔直插云霄。"}}},
+    {"text": {"ko": "지열 풀", "en": "Geothermal Pool", "zh": "地热泳池"}, "at": [500, 545], "size": 8.4, "info": {"emoji": "♨️", "kind": "지명", "title": {"ko": "지열 풀", "en": "Geothermal Pool", "zh": "地热泳池"}, "desc": {"ko": "땅속 열기로 데운 파란 풀이에요. 수영하며 오로라를 기다려요.", "en": "A blue pool heated from underground. Swim while waiting for the aurora.", "zh": "地下热能加热的蓝色泳池。一边游泳一边等极光。"}}}
+  ]
+}

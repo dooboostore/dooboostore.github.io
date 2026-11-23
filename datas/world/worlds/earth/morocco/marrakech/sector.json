@@ -1,0 +1,13 @@
+{
+  "local": {"size": [960, 916], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "morocco/landmark/koutoubia.svg", "at": [450, 472], "scale": 0.9},
+    {"use": "morocco/structure/lantern.svg", "count": 6, "area": [300, 420, 300, 150], "scale": 0.9, "spacing": 20},
+    {"use": "people/walker", "count": 10, "area": [280, 430, 350, 180], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#eac3a2", "#d9a77e", "#b97f55"], "--hair": ["#191410", "#2a2421"], "--shirt": ["#f1f1f1", "#e9785a", "#4f6fb0"], "--pants": ["#56627e", "#6b5a4e"]}},
+    {"use": "animal/pigeon", "count": 4, "area": [350, 450, 200, 120], "spacing": 5}
+  ],
+  "labels": [
+    {"text": {"ko": "쿠투비아", "en": "Koutoubia", "zh": "库图比亚"}, "at": [450, 430], "size": 10.5, "info": {"emoji": "🕌", "kind": "지명", "title": {"ko": "쿠투비아", "en": "Koutoubia", "zh": "库图比亚"}, "desc": {"ko": "마라케시 분홍 미나렛이에요. 밤이면 꼭대기가 빛나요.", "en": "A pink minaret of Marrakech. Its top glows at night.", "zh": "马拉喀什的粉色宣礼塔。夜晚塔顶发光。"}}},
+    {"text": {"ko": "제마엘프나 광장", "en": "Jemaa el-Fna", "zh": "杰马艾夫纳广场"}, "at": [450, 600], "size": 9, "info": {"emoji": "🏮", "kind": "지명", "title": {"ko": "제마엘프나 광장", "en": "Jemaa el-Fna", "zh": "杰马艾夫纳广场"}, "desc": {"ko": "낮엔 주스 가판대, 밤엔 야시장이 열리는 광장이에요. 이야기꾼과 악사가 모여요.", "en": "A square with juice stalls by day and a night market after dark. Storytellers and musicians gather.", "zh": "白天是果汁摊、夜晚变夜市的广场。说书人和乐手聚在这里。"}}}
+  ]
+}

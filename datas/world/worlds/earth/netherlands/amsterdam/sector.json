@@ -1,0 +1,151 @@
+{
+  "local": {
+    "size": [
+      960,
+      686
+    ],
+    "ground": "ground.svg",
+    "boundary": "boundary.json"
+  },
+  "placements": [
+    {
+      "use": "netherlands/landmark/windmill.svg",
+      "at": [
+        528,
+        293
+      ],
+      "scale": 1
+    },
+    {
+      "use": "netherlands/building/canal-house.svg",
+      "count": 8,
+      "area": [
+        220,
+        330,
+        420,
+        180
+      ],
+      "scale": 0.55,
+      "spacing": 18,
+      "vars": {
+        "--wall": [
+          "#c98a7a",
+          "#e8b878",
+          "#a8c4c4",
+          "#e8a2a2"
+        ],
+        "--shutter": [
+          "#3e6b5a",
+          "#3e6b8a"
+        ]
+      }
+    },
+    {
+      "use": "netherlands/vehicle/canal-boat.svg",
+      "count": 2,
+      "scale": 0.8,
+      "behavior": {
+        "type": "route",
+        "path": "M120 105 Q300 60 480 85 Q660 110 830 75",
+        "dur": 110
+      }
+    },
+    {
+      "use": "people/walker",
+      "count": 10,
+      "area": [
+        250,
+        400,
+        400,
+        150
+      ],
+      "scale": 0.7,
+      "spacing": 6,
+      "vars": {
+        "--skin": [
+          "#f4d6bd",
+          "#eac3a2"
+        ],
+        "--hair": [
+          "#a7a29d",
+          "#6b4a35",
+          "#2a2421"
+        ],
+        "--shirt": [
+          "#8cbfdc",
+          "#f3d38a",
+          "#e9785a"
+        ],
+        "--pants": [
+          "#3d4a6b",
+          "#56627e"
+        ]
+      }
+    },
+    {
+      "use": "france/animal/ducks.svg",
+      "count": 3,
+      "area": [
+        300,
+        420,
+        300,
+        100
+      ],
+      "spacing": 8
+    }
+  ],
+  "labels": [
+    {
+      "text": {
+        "ko": "데호이어 풍차",
+        "en": "De Gooyer Windmill",
+        "zh": "德霍耶尔风车"
+      },
+      "at": [
+        528,
+        250
+      ],
+      "size": 9,
+      "info": {
+        "emoji": "🌬️",
+        "kind": "지명",
+        "title": {
+          "ko": "데호이어 풍차",
+          "en": "De Gooyer Windmill",
+          "zh": "德霍耶尔风车"
+        },
+        "desc": {
+          "ko": "날개가 빙글빙글 도는 풍차예요. 옆 양조장에서 맥주를 만들어요.",
+          "en": "A windmill with whirling sails. The brewery next door makes beer.",
+          "zh": "翼板呼呼旋转的风车。旁边的啤酒厂酿造啤酒。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "운하 벨트",
+        "en": "Canal Belt",
+        "zh": "运河带"
+      },
+      "at": [
+        480,
+        420
+      ],
+      "size": 9,
+      "info": {
+        "emoji": "🛶",
+        "kind": "지명",
+        "title": {
+          "ko": "운하 벨트",
+          "en": "Canal Belt",
+          "zh": "运河带"
+        },
+        "desc": {
+          "ko": "동심원으로 번진 운하들이에요. 집들은 물 위에 비친 모습이 더 예뻐요.",
+          "en": "Canals spreading in concentric rings. The houses look prettier reflected in the water.",
+          "zh": "呈同心圆散开的运河。房子倒映在水中的样子更美。"
+        }
+      }
+    }
+  ]
+}

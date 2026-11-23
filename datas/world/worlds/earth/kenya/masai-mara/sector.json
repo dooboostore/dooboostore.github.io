@@ -1,0 +1,14 @@
+{
+  "local": {"size": [960, 823], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "kenya/animal/lion.svg", "count": 3, "area": [300, 300, 250, 150], "scale": 0.9, "spacing": 25},
+    {"use": "kenya/animal/elephant.svg", "count": 2, "area": [500, 400, 250, 150], "scale": 0.9, "spacing": 30},
+    {"use": "kenya/animal/giraffe.svg", "count": 3, "area": [350, 200, 300, 150], "scale": 0.9, "spacing": 25},
+    {"use": "kenya/nature/acacia.svg", "count": 8, "area": [100, 100, 760, 600], "scale": 0.9, "spacing": 40},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 200 C240 160 560 260 1020 180", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "마라강", "en": "Mara River", "zh": "马拉河"}, "at": [200, 420], "size": 9, "info": {"emoji": "🌊", "kind": "지명", "title": {"ko": "마라강", "en": "Mara River", "zh": "马拉河"}, "desc": {"ko": "누떼가 줄지어 건너는 강이에요. 악어가 기다리고 있어요.", "en": "The river wildebeest cross in lines. Crocodiles are waiting.", "zh": "角马排着队渡过的河。鳄鱼在等着。"}}},
+    {"text": {"ko": "사바나", "en": "Savanna", "zh": "萨凡纳"}, "at": [550, 200], "size": 9, "info": {"emoji": "🦁", "kind": "지명", "title": {"ko": "사바나", "en": "Savanna", "zh": "萨凡纳"}, "desc": {"ko": "끝없이 펼쳐진 풀밭이에요. 사자·코끼리·기린이 함께 살아요.", "en": "Endless grassland. Lions, elephants and giraffes live together here.", "zh": "一望无际的草原。狮子、大象、长颈鹿生活在一起。"}}}
+  ]
+}

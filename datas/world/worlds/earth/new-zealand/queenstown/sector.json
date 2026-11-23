@@ -1,0 +1,12 @@
+{
+  "local": {"size": [960, 1019], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "new-zealand/animal/kiwi.svg", "count": 4, "area": [350, 350, 250, 150], "scale": 0.9, "spacing": 15},
+    {"use": "new-zealand/vehicle/jetboat.svg", "count": 2, "scale": 0.8, "behavior": {"type": "route", "path": "M60 620 L200 650 L120 800", "dur": 70}},
+    {"use": "people/walker", "count": 8, "area": [400, 480, 250, 140], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2"], "--hair": ["#2a2421", "#6b4a35"], "--shirt": ["#8cbfdc", "#a8d5b0", "#f2c641"], "--pants": ["#3d4a6b"]}}
+  ],
+  "labels": [
+    {"text": {"ko": "퀸스타운", "en": "Queenstown", "zh": "皇后镇"}, "at": [540, 585], "size": 10.5, "info": {"emoji": "🏔️", "kind": "지명", "title": {"ko": "퀸스타운", "en": "Queenstown", "zh": "皇后镇"}, "desc": {"ko": "모험의 수도예요. 호수와 산 사이에서 번지점프와 제트보트를 즐겨요.", "en": "The adventure capital. Enjoy bungee jumping and jet boats between lake and mountains.", "zh": "冒险之都。在湖光山色间体验蹦极和喷射快艇。"}}},
+    {"text": {"ko": "와카티푸호", "en": "Lake Wakatipu", "zh": "瓦卡蒂普湖"}, "at": [150, 720], "size": 9, "info": {"emoji": "🏞️", "kind": "지명", "title": {"ko": "와카티푸호", "en": "Lake Wakatipu", "zh": "瓦卡蒂普湖"}, "desc": {"ko": "번개 모양의 긴 호수예요. 마오리 전설 속 거인의 심장 박동에 따라 수면이 오른내린대요.", "en": "A long lightning-shaped lake. They say its surface rises and falls with a giant's heartbeat from Maori legend.", "zh": "细长的闪电形湖。据说湖面随毛利传说中巨人的心跳起伏。"}}}
+  ]
+}

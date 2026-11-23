@@ -65,7 +65,7 @@ CITIES = {
     'greece/athens': {'name': '아테네', 'queries': ['Athens, Greece'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
     'peru/machu-picchu': {'name': '마추픽추', 'queries': ['Cusco Region, Peru'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.5},
     'vietnam/hanoi': {'name': '하노이', 'queries': ['Hanoi, Vietnam'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
-    'south-africa/cape-town': {'name': '케이프타운', 'queries': ['Cape Town, South Africa'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'south-africa/cape-town': {'name': '케이프타운', 'queries': ['City of Cape Town, Western Cape, South Africa'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
     'morocco/marrakech': {'name': '마라케시', 'queries': ['Marrakech, Morocco'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'palette': 'desert'},
     'canada/vancouver': {'name': '밴쿠버', 'queries': ['Vancouver, British Columbia, Canada'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
     'netherlands/amsterdam': {'name': '암스테르담', 'queries': ['Amsterdam, Netherlands'], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.01},
@@ -92,7 +92,7 @@ CITIES = {
     'singapore/singapore': {'name': '싱가포르', 'queries': ['Singapore'], 'roads': 'motorway|trunk', 'min_water_km2': 0.005},
     # 멕시코시티: 역사지구(쿠아우테모크) + 차풀테펙(미겔 이달고). 소치밀코는 남쪽 20 km 라 따로
     'mexico/mexico-city': {'name': '멕시코시티', 'queries': ['Cuauhtémoc, Ciudad de México', 'Miguel Hidalgo, Ciudad de México'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.003, 'smallest': True},
-    'south-africa/cape-town': {'name': '케이프타운', 'queries': ['Cape Town, South Africa'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
+    'south-africa/cape-town': {'name': '케이프타운', 'queries': ['City of Cape Town, Western Cape, South Africa'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
     'india/agra': {'name': '아그라', 'queries': ['Agra, India'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01, 'clip': (77.98, 27.14, 78.08, 27.22), 'palette': 'desert'},  # 시 전체는 넓어 타지마할·아그라 요새·야무나강 둘레만
 }
 
@@ -230,9 +230,10 @@ def main():
     a = ap.parse_args()
     cfg = CITIES[a.id]
 
-    if a.no_osm and not a.bbox:
-        sys.exit('--no-osm 은 --bbox 와 함께 (내륙 장면용)')
-    boundary = unary_union([nominatim(q, cfg.get('smallest', False)) for q in cfg['queries']]).buffer(0.0004).buffer(-0.0004).simplify(0.0006) if not a.no_osm else box(*[float(v) for v in a.bbox.split(',')])
+    if a.no_osm and a.bbox:
+        boundary = box(*[float(v) for v in a.bbox.split(',')])
+    else:
+        boundary = unary_union([nominatim(q, cfg.get('smallest', False)) for q in cfg['queries']]).buffer(0.0004).buffer(-0.0004).simplify(0.0006)
     if boundary.geom_type == 'MultiPolygon':  # 행정구역 데이터에 섞인 먼 조각 (예: 시청구 관계에 딸린 톈진 쪽 면) 버림
         main_part = max(boundary.geoms, key=lambda q: q.area)
         boundary = unary_union([q for q in boundary.geoms if q.distance(main_part) < 0.1])

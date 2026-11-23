@@ -1,0 +1,13 @@
+{
+  "local": {"size": [960, 591], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "peru/landmark/machu-terrace.svg", "at": [528, 522], "scale": 1.0},
+    {"use": "peru/animal/llama.svg", "count": 3, "area": [350, 300, 250, 120], "scale": 0.9, "spacing": 20},
+    {"use": "people/walker", "count": 8, "area": [350, 380, 300, 120], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#eac3a2", "#d9a77e", "#b97f55"], "--hair": ["#191410", "#2a2421"], "--shirt": ["#e9785a", "#f2c641", "#a8d5b0"], "--pants": ["#3d4a6b", "#56627e"]}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 200 C240 160 560 260 1020 180", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "마추픽추", "en": "Machu Picchu", "zh": "马丘比丘"}, "at": [528, 480], "size": 10.5, "info": {"emoji": "🏔️", "kind": "지명", "title": {"ko": "마추픽추", "en": "Machu Picchu", "zh": "马丘比丘"}, "desc": {"ko": "돌 테라스 마을과 뒤의 와이나픽추 봉우리예요. 공중 도시라 불려요.", "en": "A stone-terrace village with Huayna Picchu behind. It is called the city in the sky.", "zh": "石头梯田村落身后是华纳比丘峰。被称为天空之城。"}}},
+    {"text": {"ko": "인티푼쿠 (태양의 문)", "en": "Inti Punku (Sun Gate)", "zh": "因蒂彭库（太阳门）"}, "at": [672, 580], "size": 8.4, "info": {"emoji": "🌅", "kind": "지명", "title": {"ko": "인티푼쿠", "en": "Inti Punku", "zh": "因蒂彭库"}, "desc": {"ko": "잉카 트레일 끝에 있는 돌문이에요. 여기서 보면 마추픽추가 한눈에 보여요.", "en": "A stone gate at the end of the Inca Trail. Machu Picchu opens up before you here.", "zh": "印加古道尽头的石门。在这里马丘比丘尽收眼底。"}}}
+  ]
+}

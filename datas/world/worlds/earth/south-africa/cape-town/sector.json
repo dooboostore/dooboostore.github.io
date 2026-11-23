@@ -1,0 +1,12 @@
+{
+  "local": {"size": [960, 964], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "south-africa/landmark/table-mountain.svg", "at": [398, 602], "scale": 1.2},
+    {"use": "south-africa/nature/protea.svg", "count": 8, "area": [200, 650, 350, 150], "scale": 0.9, "spacing": 16},
+    {"use": "people/walker", "count": 8, "area": [250, 600, 300, 180], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#d9a77e", "#b97f55", "#8a5a3f", "#f4d6bd"], "--hair": ["#191410", "#2a2421"], "--shirt": ["#f2c641", "#e9785a", "#a8d5b0"], "--pants": ["#3d4a6b", "#56627e"]}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 360 1020 280", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "테이블마운틴", "en": "Table Mountain", "zh": "桌山"}, "at": [398, 540], "size": 10.5, "info": {"emoji": "⛰️", "kind": "지명", "title": {"ko": "테이블마운틴", "en": "Table Mountain", "zh": "桌山"}, "desc": {"ko": "평평한 정상과 흘러내리는 구름의 산이에요. 케이프타운의 상징이에요.", "en": "A mountain with a flat top and pouring clouds. The symbol of Cape Town.", "zh": "平顶上流淌着云的山。是开普敦的象征。"}}}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "local": {"size": [960, 740], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "cambodia/landmark/angkor-wat.svg", "at": [564, 345], "scale": 0.9},
+    {"use": "cambodia/nature/banyan.svg", "count": 4, "area": [700, 100, 200, 200], "scale": 0.9, "spacing": 20},
+    {"use": "cambodia/nature/banyan.svg", "count": 3, "area": [100, 400, 200, 200], "scale": 0.8, "spacing": 20},
+    {"use": "people/walker", "count": 8, "area": [400, 450, 250, 150], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#eac3a2", "#d9a77e"], "--hair": ["#191410"], "--shirt": ["#f2c641", "#e9785a", "#a8d5b0"], "--pants": ["#56627e"]}}
+  ],
+  "labels": [
+    {"text": {"ko": "앙코르와트", "en": "Angkor Wat", "zh": "吴哥窟"}, "at": [564, 285], "size": 10.5, "info": {"emoji": "🛕", "kind": "지명", "title": {"ko": "앙코르와트", "en": "Angkor Wat", "zh": "吴哥窟"}, "desc": {"ko": "5개 봉우리 사원이에요. 해자를 품고 아침 해를 받아요.", "en": "A five-towered temple. It holds a moat and greets the morning sun.", "zh": "五座塔的寺庙。怀抱护城河迎接朝阳。"}}},
+    {"text": {"ko": "타프롬", "en": "Ta Prohm", "zh": "塔布茏"}, "at": [830, 140], "size": 8.4, "info": {"emoji": "🌳", "kind": "지명", "title": {"ko": "타프롬", "en": "Ta Prohm", "zh": "塔布茏"}, "desc": {"ko": "거대한 반얀 나무가 사원을 감싼 곳이에요. 돌보다 강해요.", "en": "Where giant banyans embrace the temple. Stronger than stone.", "zh": "巨大榕树抱住寺庙的地方。比石头还坚固。"}}}
+  ]
+}

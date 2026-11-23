@@ -1,0 +1,14 @@
+{
+  "local": {"size": [960, 974], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "greece/landmark/parthenon.svg", "at": [447, 590], "scale": 0.9},
+    {"use": "greece/nature/olive.svg", "count": 10, "area": [150, 650, 500, 200], "scale": 0.9, "spacing": 20},
+    {"use": "people/walker", "count": 10, "area": [280, 620, 350, 200], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#2a2421", "#3d302a"], "--shirt": ["#f1f1f1", "#8cbfdc", "#a8d5b0"], "--pants": ["#3d4a6b", "#56627e"]}},
+    {"use": "animal/pigeon", "count": 5, "area": [350, 600, 250, 150], "spacing": 5},
+    {"use": "animal/butterfly", "count": 3, "area": [350, 600, 250, 150], "spacing": 5, "vars": {"--wing": ["#ffffff", "#ffd36e", "#ffc4e0"]}}
+  ],
+  "labels": [
+    {"text": {"ko": "파르테논", "en": "Parthenon", "zh": "帕特农神庙"}, "at": [447, 555], "size": 10.5, "info": {"emoji": "🏛️", "kind": "지명", "title": {"ko": "파르테논", "en": "Parthenon", "zh": "帕特农神庙"}, "desc": {"ko": "아크로폴리스 위 도리아식 신전이에요. 기둥과 박공이 멋져요.", "en": "A Doric temple atop the Acropolis. Its columns and pediment are magnificent.", "zh": "卫城上的多立克式神庙。柱子和三角楣很壮观。"}}},
+    {"text": {"ko": "아크로폴리스", "en": "Acropolis", "zh": "卫城"}, "at": [447, 640], "size": 9, "info": {"emoji": "🏛️", "kind": "지명", "title": {"ko": "아크로폴리스", "en": "Acropolis", "zh": "卫城"}, "desc": {"ko": "도시 위 바위 언덕이에요. 2,500년 전 아테네의 중심이었어요.", "en": "A rocky hill above the city. It was the heart of Athens 2,500 years ago.", "zh": "城市上方的岩石山丘。2500年前雅典的中心。"}}}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "local": {"size": [960, 611], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "switzerland/landmark/matterhorn.svg", "at": [254, 400], "scale": 1.2},
+    {"use": "switzerland/vehicle/cog-train.svg", "count": 1, "scale": 0.8, "behavior": {"type": "route", "path": "M100 500 L860 480", "dur": 90}},
+    {"use": "people/walker", "count": 8, "area": [350, 420, 300, 120], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2"], "--hair": ["#2a2421", "#a7a29d"], "--shirt": ["#d6453d", "#8cbfdc", "#f3d38a"], "--pants": ["#3d4a6b"]}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 200 C240 160 560 240 1020 180", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "마터호른", "en": "Matterhorn", "zh": "马特洪峰"}, "at": [254, 300], "size": 10.5, "info": {"emoji": "🏔️", "kind": "지명", "title": {"ko": "마터호른", "en": "Matterhorn", "zh": "马特洪峰"}, "desc": {"ko": "뿔처럼 솟은 피라미드 봉우리예요. 알프스의 상징이에요.", "en": "A pyramid peak jutting like a horn. The symbol of the Alps.", "zh": "像角一样耸立的金字塔峰。是阿尔卑斯的象征。"}}},
+    {"text": {"ko": "고르너그라트 철도", "en": "Gornergrat Railway", "zh": "戈尔内格拉特铁路"}, "at": [480, 530], "size": 8.4, "info": {"emoji": "🚂", "kind": "지명", "title": {"ko": "고르너그라트 철도", "en": "Gornergrat Railway", "zh": "戈尔内格拉特铁路"}, "desc": {"ko": "빨간 톱니열차가 가파른 산을 올라요. 창밖으로 마터호른이 보여요.", "en": "The red cog train climbs the steep mountain. The Matterhorn shows through the window.", "zh": "红色齿轨火车爬上陡峭的山。窗外能看到马特洪峰。"}}}
+  ]
+}
