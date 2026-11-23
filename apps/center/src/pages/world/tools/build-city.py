@@ -56,7 +56,12 @@ CITIES = {
                           'clip': (11.55, 78.86, 12.35, 79.0), 'palette': 'snow', 'simplify': 0.0002},
     'antarctica/king-george': {'name': '남극 세종과학기지', 'queries': ['King George Island'], 'roads': 'unclassified|service|track', 'min_water_km2': 0.01,
                                'clip': (-58.90, -62.27, -58.62, -62.17), 'palette': 'snow', 'coast_margin': 1.2, 'simplify': 0.0002},
-    'spain/barcelona': {'name': '바르셀로나', 'queries': ['Barcelona, Spain'], 'roads': 'motorway|trunk', 'min_water_km2': 0.01},
+    'spain/barcelona': {'name': '바르셀로나', 'queries': ['Barcelona, Spain'], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.01},
+    'usa/san-francisco': {'name': '샌프란시스코', 'queries': ['San Francisco, California, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'usa/honolulu': {'name': '호놀룰루', 'queries': ['Honolulu, Hawaii, United States'], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'usa/grand-canyon': {'name': '그랜드캐니언', 'queries': ['Grand Canyon National Park, Arizona, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.5, 'palette': 'desert'},
+    'usa/yellowstone': {'name': '옐로스톤', 'queries': ['Yellowstone National Park, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.05},
+    'usa/new-orleans': {'name': '뉴올리언스', 'queries': ['New Orleans, Louisiana, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
     'germany/berlin': {'name': '베를린', 'queries': ['Mitte, Berlin', 'Tiergarten, Berlin'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005},  # 베를린 전체(890 km²) 대신 미테(문·TV탑·박물관섬) + 티어가르텐(국회의사당·공원)
     'russia/moscow': {'name': '모스크바', 'queries': ['Central Administrative Okrug, Moscow'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},  # 크렘린·붉은광장이 있는 중심 행정구 (모스크바시 전체는 남서쪽으로 길게 뻗어 너무 크다)
     'taiwan/taipei': {'name': '타이베이', 'queries': ['Taipei, Taiwan'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
@@ -209,10 +214,13 @@ def main():
     ap.add_argument('--bbox', help='w,s,e,n — 행정경계 대신 이 사각형으로 장면을 자른다')
     ap.add_argument('--rect', action='store_true', help='--bbox 영역을 그대로 행정경계(사각형)로 쓴다')
     ap.add_argument('--keep-bounds', action='store_true', help='worlds.json 의 bounds 를 그대로 쓰고 ground.svg 의 손 장식을 보존한다')
+    ap.add_argument('--no-osm', action='store_true', help='OSM 을 쓰지 않는다 (차단·장애 시 내륙용): 경계는 bbox, 물·도로 없음, 육지는 NE')
     a = ap.parse_args()
     cfg = CITIES[a.id]
 
-    boundary = unary_union([nominatim(q, cfg.get('smallest', False)) for q in cfg['queries']]).buffer(0.0004).buffer(-0.0004).simplify(0.0006)
+    if a.no_osm and not a.bbox:
+        sys.exit('--no-osm 은 --bbox 와 함께 (내륙 장면용)')
+    boundary = unary_union([nominatim(q, cfg.get('smallest', False)) for q in cfg['queries']]).buffer(0.0004).buffer(-0.0004).simplify(0.0006) if not a.no_osm else box(*[float(v) for v in a.bbox.split(',')])
     if boundary.geom_type == 'MultiPolygon':  # 행정구역 데이터에 섞인 먼 조각 (예: 시청구 관계에 딸린 톈진 쪽 면) 버림
         main_part = max(boundary.geoms, key=lambda q: q.area)
         boundary = unary_union([q for q in boundary.geoms if q.distance(main_part) < 0.1])
@@ -247,7 +255,7 @@ def main():
     big = area.buffer(0.02, join_style=2)
 
     ne = unary_union([shape(f['geometry']).intersection(big.buffer(0.2)) for f in json.load(open(a.land))['features'] if shape(f['geometry']).intersects(big)])
-    coasts = osm_coast((s0 - 0.02, w0 - 0.02, n0 + 0.02, e0 + 0.02))
+    coasts = [] if a.no_osm else osm_coast((s0 - 0.02, w0 - 0.02, n0 + 0.02, e0 + 0.02))
     land = coast_land(big, coasts, ne) if coasts else ne
     if cfg.get('island'):  # 경계 = 섬(해안선) + 여백. 행정경계 쪽 섬만 (먼 섬 제외)
         m = cfg['island'] / 111.0
@@ -258,13 +266,13 @@ def main():
     if cfg.get('join_water'):  # 바다로 떨어진 여러 구(이스탄불: 해협 양안)를 그 사이 바다까지 한 장면으로
         boundary = unary_union([boundary, boundary.convex_hull.intersection(sea)]).buffer(0.0005).buffer(-0.0005).simplify(0.0003)
         boundary = max(boundary.geoms, key=lambda q: q.area) if boundary.geom_type == 'MultiPolygon' else boundary
-    water = [p for p in osm_water((s0, w0, n0, e0)) if km2(p, lat0) >= cfg['min_water_km2']]
+    water = [] if a.no_osm else [p for p in osm_water((s0, w0, n0, e0)) if km2(p, lat0) >= cfg['min_water_km2']]
     allwater = unary_union([sea] + water).intersection(big).simplify(cfg.get('simplify', 0.00035))
     if cfg.get('sea_margin'):  # 행정경계가 해안에서 끝나는 도시(시드니시): 해안을 따라 앞바다를 붙인다 (해안선 바다 + OSM 수면: 시드니 항은 수면 면으로 온다) — 항구가 장면 밖 거친 지구본 땅으로 보이지 않게
         m = cfg['sea_margin'] / 111.0
         boundary = unary_union([boundary, boundary.buffer(m, quad_segs=12).intersection(allwater)]).buffer(0)
         boundary = max(boundary.geoms, key=lambda q: q.area) if boundary.geom_type == 'MultiPolygon' else boundary
-    roads = osm_roads((s0, w0, n0, e0), cfg['roads'])
+    roads = None if a.no_osm else osm_roads((s0, w0, n0, e0), cfg['roads'])
 
     def xy(lon, lat):
         return f'{(lon - w0) / (e0 - w0) * W:.1f} {(n0 - lat) / (n0 - s0) * H:.1f}'

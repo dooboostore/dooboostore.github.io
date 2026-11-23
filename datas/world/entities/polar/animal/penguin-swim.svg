@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 20">
+  <!-- 헤엄치는 펭귄: 물 위로 등과 머리를 내밀고 미끄러진다 -->
+  <ellipse cx="20" cy="16.6" rx="18" ry="2.6" fill="#7cc6ea"/>
+  <ellipse cx="20" cy="15.8" rx="18" ry="2.2" fill="#a8dcf5"/>
+  <path d="M4 16.6 Q20 18.4 36 16.6" stroke="#fff" stroke-width="0.7" opacity="0.7" fill="none" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 14.6 Q20 16.4 32 13.6 Q30 11.4 24 11 Q16 10.4 10 12.4 Z" fill="#3d3d44"/>
+    <ellipse cx="30.5" cy="10" rx="2.4" ry="2.8" fill="#3d3d44"/>
+    <path d="M28.6 8.2 Q30.5 5.6 32.6 8 Q33 10 31 10.4 Q29.4 10.4 28.6 8.2 Z" fill="#fdfbf4"/>
+    <circle cx="31.2" cy="8.2" r="0.45" fill="#2a2421"/>
+    <path d="M32.6 8.6 L34 9 L32.6 9.4 Z" fill="#e8913f"/>
+    <path d="M12 11.6 Q10 12.6 9 14.4 Q11.4 14.2 13 13 Z" fill="#3d3d44"/>
+    <path d="M6 14.8 Q3.4 15 2.4 16.4 Q4.6 16.8 6.6 16 Z" fill="#dff1fb"/>
+    <g fill="#dff1fb"><circle cx="5" cy="12.4" r="0.8"/><circle cx="7.4" cy="11.4" r="0.6"/><circle cx="35" cy="12.2" r="0.7"/></g>
+  </g>
+  <path d="M14 12.4 Q20 11.6 26 12.2" stroke="#fff" stroke-width="0.5" opacity="0.4" fill="none" stroke-linecap="round"/>
+</svg>

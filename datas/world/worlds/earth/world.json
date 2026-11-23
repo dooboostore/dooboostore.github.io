@@ -1,86 +1,3361 @@
 {
-  "radiusKm": 6371,
-  "surface": ["#9fdcf5", "#5fb0e0"],
-  "glow": "#9fd3ff",
-  "countries": "countries.json",
-  "land": ["#c8eaa6", "#bfe59c", "#cdeeb0", "#d5f0b8", "#c2e6a0"],
-  "border": "#8fbd76",
-  "spin": 2.5,
-  "radio": true,
-  "atmosphere": true,
-  "traffic": [
-    {"use": "vehicle/container-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "부산 → LA 컨테이너선", "en": "Busan → LA container ship", "zh": "釜山 → 洛杉矶 集装箱船"}, "dur": 260, "count": 2, "pingpong": true, "size": 30, "path": [[129.2, 34.8], [129.0, 33.6], [128.6, 32.3], [129.6, 30.6], [132.2, 30.6], [135.8, 32.4], [140.5, 33.4], [150, 36], [165, 40], [180, 42], [-165, 41], [-145, 37], [-128, 34], [-118.4, 33.6]]},
-    {"use": "vehicle/container-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "상하이 → 홍해 컨테이너선", "en": "Shanghai → Red Sea container ship", "zh": "上海 → 红海 集装箱船"}, "dur": 300, "count": 2, "pingpong": true, "size": 30, "vars": {"--hull": "#2f5f8f"}, "path": [[122.6, 30.8], [123.2, 26.5], [122.4, 22.5], [120.8, 20.4], [116, 15], [110, 9], [106, 4.5], [104.9, 2.0], [104.6, 0.6], [103.6, 1.1], [102.9, 1.45], [102.45, 1.8], [102.0, 2.1], [101.2, 2.4], [100.4, 2.9], [100.2, 3.3], [97.5, 5.6], [94, 6.2], [86, 5.6], [80.6, 5.3], [70, 9.5], [60, 13], [51.5, 12.6], [45, 12.2], [43.6, 12.0], [43.3, 12.6], [42.9, 13.3], [42.2, 14.2], [38.5, 20], [36, 24.5], [35.3, 26.0]]},
-    {"use": "vehicle/container-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "로테르담 → 뉴욕 컨테이너선", "en": "Rotterdam → New York container ship", "zh": "鹿特丹 → 纽约 集装箱船"}, "dur": 220, "count": 1, "pingpong": true, "size": 30, "vars": {"--hull": "#3f8f5f"}, "path": [[3.8, 52.0], [2.6, 51.6], [1.6, 51.0], [0.5, 50.3], [-1.5, 49.9], [-6, 49.2], [-20, 48], [-40, 45], [-60, 42], [-70, 40.2], [-73.8, 40.3]]},
-    {"use": "vehicle/carrier.svg", "kind": "sea", "z": 0, "name": {"ko": "항공모함 (필리핀해 순찰)", "en": "Aircraft carrier (Philippine Sea patrol)", "zh": "航空母舰（菲律宾海巡逻）"}, "dur": 180, "count": 1, "size": 40, "path": [[134, 24], [138, 26.5], [142, 24.5], [141, 20.5], [136, 20], [134, 24]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "인천 ↔ LA", "en": "Incheon ↔ LA", "zh": "仁川 ↔ 洛杉矶"}, "dur": 140, "count": 2, "pingpong": true, "size": 26, "path": [[126.45, 37.46], [-118.41, 33.94]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "인천 ↔ 파리", "en": "Incheon ↔ Paris", "zh": "仁川 ↔ 巴黎"}, "dur": 130, "count": 2, "pingpong": true, "size": 26, "vars": {"--tail": "#e8655a"}, "path": [[126.45, 37.46], [2.55, 49.0]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "인천 ↔ 도쿄", "en": "Incheon ↔ Tokyo", "zh": "仁川 ↔ 东京"}, "dur": 40, "count": 2, "pingpong": true, "size": 24, "vars": {"--tail": "#f2c14e"}, "path": [[126.45, 37.46], [140.39, 35.77]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "뉴욕 ↔ 런던", "en": "New York ↔ London", "zh": "纽约 ↔ 伦敦"}, "dur": 90, "count": 2, "pingpong": true, "size": 26, "vars": {"--tail": "#9b7fd1"}, "path": [[-73.78, 40.64], [-0.45, 51.47]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "싱가포르 ↔ 시드니", "en": "Singapore ↔ Sydney", "zh": "新加坡 ↔ 悉尼"}, "dur": 100, "count": 1, "pingpong": true, "size": 26, "vars": {"--tail": "#5fb37a"}, "path": [[103.99, 1.36], [151.18, -33.94]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "두바이 ↔ 뉴욕", "en": "Dubai ↔ New York", "zh": "迪拜 ↔ 纽约"}, "dur": 150, "count": 1, "pingpong": true, "size": 26, "vars": {"--tail": "#c2433a"}, "path": [[55.36, 25.25], [-73.78, 40.64]]},
-    {"use": "vehicle/jumbo.svg", "kind": "air", "z": 11, "name": {"ko": "인천 ↔ 뉴욕 점보기", "en": "Incheon ↔ New York jumbo jet", "zh": "仁川 ↔ 纽约 大型客机"}, "dur": 170, "count": 2, "pingpong": true, "size": 32, "vars": {"--stripe": "#2f5f8f", "--tail": "#2f5f8f"}, "path": [[126.45, 37.46], [-73.78, 40.64]]},
-    {"use": "vehicle/jumbo.svg", "kind": "air", "z": 11, "name": {"ko": "프랑크푸르트 ↔ 싱가포르 점보기", "en": "Frankfurt ↔ Singapore jumbo jet", "zh": "法兰克福 ↔ 新加坡 大型客机"}, "dur": 150, "count": 1, "pingpong": true, "size": 32, "vars": {"--stripe": "#f2c14e", "--tail": "#3f8f5f"}, "path": [[8.57, 50.03], [103.99, 1.36]]},
-    {"use": "vehicle/turboprop.svg", "kind": "air", "z": 6, "name": {"ko": "김포 ↔ 제주 프로펠러기", "en": "Gimpo ↔ Jeju propeller plane", "zh": "金浦 ↔ 济州 螺旋桨飞机"}, "dur": 30, "count": 2, "pingpong": true, "size": 20, "vars": {"--tail": "#f29a3a"}, "path": [[126.8, 37.56], [126.49, 33.51]]},
-    {"use": "vehicle/turboprop.svg", "kind": "air", "z": 6, "name": {"ko": "오슬로 ↔ 베르겐 프로펠러기", "en": "Oslo ↔ Bergen propeller plane", "zh": "奥斯陆 ↔ 卑尔根 螺旋桨飞机"}, "dur": 30, "count": 1, "pingpong": true, "size": 20, "vars": {"--tail": "#c2433a"}, "path": [[11.1, 60.19], [5.22, 60.29]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "시드니 ↔ 멜버른", "en": "Sydney ↔ Melbourne", "zh": "悉尼 ↔ 墨尔本"}, "dur": 34, "count": 2, "pingpong": true, "size": 24, "vars": {"--tail": "#e8655a", "--stripe": "#e8655a"}, "path": [[151.18, -33.94], [144.84, -37.67]]},
-    {"use": "vehicle/airplane.svg", "kind": "air", "z": 10, "name": {"ko": "샌프란시스코 ↔ 호놀룰루", "en": "San Francisco ↔ Honolulu", "zh": "旧金山 ↔ 火奴鲁鲁"}, "dur": 70, "count": 1, "pingpong": true, "size": 24, "vars": {"--tail": "#9b7fd1", "--stripe": "#9b7fd1", "--body": "#f4f0ff"}, "path": [[-122.38, 37.62], [-157.92, 21.32]]},
-    {"use": "vehicle/cruise-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "카리브 크루즈", "en": "Caribbean cruise", "zh": "加勒比海邮轮"}, "dur": 160, "count": 1, "pingpong": true, "size": 34, "vars": {"--funnel": "#5aa0d8"}, "path": [[-79.9, 25.75], [-79.0, 25.6], [-77.6, 25.2], [-76.6, 24.0], [-75.5, 23.3]]},
-    {"use": "vehicle/cruise-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "지중해 크루즈", "en": "Mediterranean cruise", "zh": "地中海邮轮"}, "dur": 170, "count": 1, "pingpong": true, "size": 34, "path": [[2.3, 41.25], [3.6, 41.6], [4.6, 42.6], [5.3, 42.95], [6.5, 42.9], [7.4, 43.35], [8.2, 43.7], [8.8, 44.15]]},
-    {"use": "vehicle/tanker.svg", "kind": "sea", "z": 0, "name": {"ko": "호르무즈 유조선", "en": "Hormuz oil tanker", "zh": "霍尔木兹油轮"}, "dur": 220, "count": 2, "pingpong": true, "size": 32, "path": [[51.6, 25.6], [54, 26.2], [56.4, 26.6], [57.2, 25.6], [59, 24], [64, 22], [70, 19.5], [72.6, 18.8]]},
-    {"use": "vehicle/fishing-boat.svg", "kind": "sea", "z": 0, "name": {"ko": "남해 어선", "en": "South Sea fishing boat", "zh": "南海渔船"}, "dur": 90, "count": 3, "size": 16, "vars": {"--hull": "#3f7fbf"}, "path": [[128.6, 34.2], [129.3, 34.4], [129.6, 33.8], [128.9, 33.6], [128.6, 34.2]]},
-    {"use": "vehicle/fishing-boat.svg", "kind": "sea", "z": 0, "name": {"ko": "북해 어선", "en": "North Sea fishing boat", "zh": "北海渔船"}, "dur": 110, "count": 2, "size": 16, "vars": {"--hull": "#c2433a"}, "path": [[2, 56], [3.5, 56.5], [4, 55.5], [2.5, 55.2], [2, 56]]},
-    {"use": "vehicle/sailboat.svg", "kind": "sea", "z": 0, "name": {"ko": "에게해 요트", "en": "Aegean Sea yacht", "zh": "爱琴海游艇"}, "dur": 120, "count": 3, "size": 16, "path": [[24.5, 37.5], [25.4, 37.6], [25.6, 36.9], [24.8, 36.7], [24.5, 37.5]]},
-    {"use": "vehicle/sailboat.svg", "kind": "sea", "z": 0, "name": {"ko": "시드니 요트", "en": "Sydney yacht", "zh": "悉尼游艇"}, "dur": 90, "count": 2, "size": 16, "vars": {"--sail": "#ffe7a8"}, "path": [[151.4, -33.9], [151.6, -33.7], [151.6, -34.1], [151.4, -33.9]]},
-    {"use": "animal/whale.svg", "kind": "sea", "z": 0, "name": {"ko": "하와이 혹등고래", "en": "Hawaii humpback whale", "zh": "夏威夷座头鲸"}, "dur": 260, "count": 2, "size": 30, "path": [[-154.4, 19.0], [-153.8, 20.0], [-155.4, 21.0], [-156.4, 21.7], [-154.9, 21.4], [-154.4, 19.0]]},
-    {"use": "animal/whale.svg", "kind": "sea", "z": 0, "name": {"ko": "아이슬란드 고래", "en": "Iceland whale", "zh": "冰岛鲸鱼"}, "dur": 300, "count": 2, "size": 30, "path": [[-24.5, 67.2], [-20, 67.8], [-15, 67.4], [-13, 66.8], [-17, 67.1], [-24.5, 67.2]]},
-    {"use": "animal/whale.svg", "kind": "sea", "z": 0, "name": {"ko": "남극해 고래", "en": "Southern Ocean whale", "zh": "南大洋鲸鱼"}, "dur": 360, "count": 2, "size": 30, "path": [[-60, -60], [-45, -58], [-30, -59], [-45, -61], [-60, -60]]},
-    {"use": "animal/whale.svg", "kind": "sea", "z": 0, "name": {"ko": "동해 고래", "en": "East Sea whale", "zh": "东海鲸鱼"}, "dur": 280, "count": 1, "size": 28, "path": [[130.6, 36.8], [131.6, 38.2], [133, 37.4], [131.8, 36.2], [130.6, 36.8]]},
-    {"use": "animal/dolphins.svg", "kind": "sea", "z": 0, "name": {"ko": "제주 남방큰돌고래", "en": "Jeju Indo-Pacific bottlenose dolphin", "zh": "济州印太瓶鼻海豚"}, "dur": 120, "count": 1, "size": 26, "pingpong": true, "path": [[126.12, 33.42], [126.06, 33.3], [126.12, 33.18], [126.3, 33.12], [126.55, 33.17]]},
-    {"use": "animal/dolphins.svg", "kind": "sea", "z": 0, "name": {"ko": "지중해 돌고래", "en": "Mediterranean dolphin", "zh": "地中海海豚"}, "dur": 140, "count": 2, "size": 26, "path": [[3.2, 39.0], [4.8, 39.4], [5.2, 38.4], [3.6, 38.2], [3.2, 39.0]]},
-    {"use": "animal/dolphins.svg", "kind": "sea", "z": 0, "name": {"ko": "플로리다 돌고래", "en": "Florida dolphin", "zh": "佛罗里达海豚"}, "dur": 130, "count": 1, "size": 26, "path": [[-80.6, 24.4], [-79.6, 24.8], [-79.4, 24.2], [-80.4, 24.0], [-80.6, 24.4]]},
-    {"use": "animal/dolphins.svg", "kind": "sea", "z": 0, "name": {"ko": "뉴질랜드 돌고래", "en": "New Zealand dolphin", "zh": "新西兰海豚"}, "dur": 130, "count": 1, "size": 26, "path": [[175.0, -34.6], [175.8, -34.8], [175.6, -35.5], [174.9, -35.2], [175.0, -34.6]]},
-    {"use": "structure/oil-rig.svg", "kind": "sea", "z": 0, "name": {"ko": "북해 석유 시추선 1", "en": "North Sea oil rig 1", "zh": "北海石油钻井平台 1"}, "dur": 1, "size": 22, "path": [[1.8, 57.6]]},
-    {"use": "structure/oil-rig.svg", "kind": "sea", "z": 0, "name": {"ko": "북해 석유 시추선 2", "en": "North Sea oil rig 2", "zh": "北海石油钻井平台 2"}, "dur": 1, "size": 22, "path": [[2.6, 56.6]]},
-    {"use": "structure/oil-rig.svg", "kind": "sea", "z": 0, "name": {"ko": "멕시코만 석유 시추선 1", "en": "Gulf of Mexico oil rig 1", "zh": "墨西哥湾石油钻井平台 1"}, "dur": 1, "size": 22, "path": [[-90.4, 28.0]]},
-    {"use": "structure/oil-rig.svg", "kind": "sea", "z": 0, "name": {"ko": "멕시코만 석유 시추선 2", "en": "Gulf of Mexico oil rig 2", "zh": "墨西哥湾石油钻井平台 2"}, "dur": 1, "size": 22, "path": [[-92.2, 27.6]]},
-    {"use": "structure/oil-rig.svg", "kind": "sea", "z": 0, "name": {"ko": "페르시아만 석유 시추선", "en": "Persian Gulf oil rig", "zh": "波斯湾石油钻井平台"}, "dur": 1, "size": 22, "path": [[52.6, 26.6]]},
-    {"use": "structure/wind-farm.svg", "kind": "sea", "z": 0, "name": {"ko": "영국 북해 해상풍력", "en": "UK North Sea offshore wind", "zh": "英国北海海上风电"}, "dur": 1, "size": 30, "path": [[1.9, 53.9]]},
-    {"use": "structure/wind-farm.svg", "kind": "sea", "z": 0, "name": {"ko": "덴마크 해상풍력", "en": "Denmark offshore wind", "zh": "丹麦海上风电"}, "dur": 1, "size": 30, "path": [[7.6, 55.5]]},
-    {"use": "structure/wind-farm.svg", "kind": "sea", "z": 0, "name": {"ko": "서남해 해상풍력", "en": "Korea southwest coast offshore wind", "zh": "韩国西南海海上风电"}, "dur": 1, "size": 28, "path": [[125.9, 35.4]]},
-    {"use": "structure/wind-farm.svg", "kind": "sea", "z": 0, "name": {"ko": "대만 해협 해상풍력", "en": "Taiwan Strait offshore wind", "zh": "台湾海峡海上风电"}, "dur": 1, "size": 28, "path": [[120.1, 24.2]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 52°", "en": "Cloud band 52°", "zh": "云带 52°"}, "dur": 900, "count": 3, "size": 52, "path": [[0, 52.0], [30, 56.0], [60, 52.0], [90, 48.0], [120, 52.0], [150, 56.0], [-180, 52.0], [-150, 48.0], [-120, 52.0], [-90, 56.0], [-60, 52.0], [-30, 48.0], [0, 52.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 38°", "en": "Cloud band 38°", "zh": "云带 38°"}, "dur": 800, "count": 3, "size": 46, "path": [[70, 38.0], [100, 42.0], [130, 38.0], [160, 34.0], [-170, 38.0], [-140, 42.0], [-110, 38.0], [-80, 34.0], [-50, 38.0], [-20, 42.0], [10, 38.0], [40, 34.0], [70, 38.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 24°", "en": "Cloud band 24°", "zh": "云带 24°"}, "dur": 1000, "count": 2, "size": 42, "path": [[140, 24.0], [170, 28.0], [-160, 24.0], [-130, 20.0], [-100, 24.0], [-70, 28.0], [-40, 24.0], [-10, 20.0], [20, 24.0], [50, 28.0], [80, 24.0], [110, 20.0], [140, 24.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 8°", "en": "Cloud band 8°", "zh": "云带 8°"}, "dur": 1100, "count": 3, "size": 48, "path": [[20, 8.0], [50, 12.0], [80, 8.0], [110, 4.0], [140, 8.0], [170, 12.0], [-160, 8.0], [-130, 4.0], [-100, 8.0], [-70, 12.0], [-40, 8.0], [-10, 4.0], [20, 8.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 -8°", "en": "Cloud band -8°", "zh": "云带 -8°"}, "dur": 1000, "count": 2, "size": 44, "path": [[-160, -8.0], [-130, -4.0], [-100, -8.0], [-70, -12.0], [-40, -8.0], [-10, -4.0], [20, -8.0], [50, -12.0], [80, -8.0], [110, -4.0], [140, -8.0], [170, -12.0], [-160, -8.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 -24°", "en": "Cloud band -24°", "zh": "云带 -24°"}, "dur": 900, "count": 3, "size": 46, "path": [[90, -24.0], [120, -20.0], [150, -24.0], [-180, -28.0], [-150, -24.0], [-120, -20.0], [-90, -24.0], [-60, -28.0], [-30, -24.0], [0, -20.0], [30, -24.0], [60, -28.0], [90, -24.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 -40°", "en": "Cloud band -40°", "zh": "云带 -40°"}, "dur": 850, "count": 3, "size": 52, "path": [[-110, -40.0], [-80, -36.0], [-50, -40.0], [-20, -44.0], [10, -40.0], [40, -36.0], [70, -40.0], [100, -44.0], [130, -40.0], [160, -36.0], [-170, -40.0], [-140, -44.0], [-110, -40.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 -55°", "en": "Cloud band -55°", "zh": "云带 -55°"}, "dur": 950, "count": 2, "size": 56, "path": [[30, -55.0], [60, -51.0], [90, -55.0], [120, -59.0], [150, -55.0], [-180, -51.0], [-150, -55.0], [-120, -59.0], [-90, -55.0], [-60, -51.0], [-30, -55.0], [0, -59.0], [30, -55.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 62°", "en": "Cloud band 62°", "zh": "云带 62°"}, "dur": 1000, "count": 2, "size": 50, "path": [[-180, 62.0], [-150, 66.0], [-120, 62.0], [-90, 58.0], [-60, 62.0], [-30, 66.0], [0, 62.0], [30, 58.0], [60, 62.0], [90, 66.0], [120, 62.0], [150, 58.0], [-180, 62.0]]},
-    {"use": "globe/cloud.svg", "kind": "air", "z": 600, "upright": true, "opacity": 0.55, "name": {"ko": "구름 띠 45°", "en": "Cloud band 45°", "zh": "云带 45°"}, "dur": 700, "count": 2, "size": 44, "path": [[-60, 45.0], [-30, 49.0], [0, 45.0], [30, 41.0], [60, 45.0], [90, 49.0], [120, 45.0], [150, 41.0], [-180, 45.0], [-150, 49.0], [-120, 45.0], [-90, 41.0], [-60, 45.0]]},
-    {"use": "globe/typhoon", "kind": "air", "z": 300, "name": {"ko": "북서태평양 태풍", "en": "Northwest Pacific typhoon", "zh": "西北太平洋台风"}, "dur": 420, "count": 1, "size": 60, "path": [[142, 11], [135, 16], [129, 22], [126.5, 27], [128, 32], [133, 37]]},
-    {"use": "globe/typhoon", "kind": "air", "z": 300, "name": {"ko": "대서양 허리케인", "en": "Atlantic hurricane", "zh": "大西洋飓风"}, "dur": 460, "count": 1, "size": 60, "path": [[-40, 13], [-52, 16], [-63, 20], [-70, 25], [-73, 31], [-66, 38]]},
-    {"use": "globe/submarine.svg", "kind": "sea", "z": 0, "name": {"ko": "태평양 잠수함", "en": "Pacific submarine", "zh": "太平洋潜艇"}, "dur": 320, "count": 1, "size": 24, "path": [[150, 20], [165, 15], [175, 22], [160, 28], [150, 20]]},
-    {"use": "globe/submarine.svg", "kind": "sea", "z": 0, "name": {"ko": "대서양 잠수함", "en": "Atlantic submarine", "zh": "大西洋潜艇"}, "dur": 300, "count": 1, "size": 24, "path": [[-40, 40], [-30, 35], [-25, 42], [-35, 46], [-40, 40]]},
-    {"use": "globe/pirate-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "카리브해 해적선 (상상)", "en": "Caribbean pirate ship (imaginary)", "zh": "加勒比海盗船（想象）"}, "dur": 260, "count": 1, "size": 28, "path": [[-76, 14.5], [-70, 13.5], [-66, 14.5], [-70, 16], [-76, 14.5]]},
-    {"use": "vehicle/tanker.svg", "kind": "sea", "z": 0, "name": {"ko": "알래스카 → 샌프란시스코 유조선", "en": "Alaska → San Francisco oil tanker", "zh": "阿拉斯加 → 旧金山 油轮"}, "dur": 240, "count": 1, "pingpong": true, "size": 28, "path": [[-150, 58.5], [-142, 54], [-132, 45], [-124.5, 38], [-122.8, 37.7]]},
-    {"use": "vehicle/cruise-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "하와이 → LA 크루즈", "en": "Hawaii → LA cruise", "zh": "夏威夷 → 洛杉矶 邮轮"}, "dur": 260, "count": 1, "pingpong": true, "size": 30, "path": [[-157.9, 21.1], [-150, 25], [-140, 30], [-128, 33], [-118.4, 33.6]]},
-    {"use": "vehicle/container-ship.svg", "kind": "sea", "z": 0, "name": {"ko": "싱가포르 → 시드니 컨테이너선", "en": "Singapore → Sydney container ship", "zh": "新加坡 → 悉尼 集装箱船"}, "dur": 260, "count": 1, "pingpong": true, "size": 30, "path": [[104.2, 1.1], [106.5, -3], [110, -5], [115, -6.5], [116.0, -8.0], [116.2, -9.5], [120, -11.5], [128, -11], [135, -9.5], [141, -9.8], [144, -11], [147, -15], [153, -20], [155, -27], [154, -32], [152, -34.2]]},
-    {"use": "globe/iss.svg", "kind": "space", "z": 420, "name": {"ko": "국제우주정거장", "en": "International Space Station", "zh": "国际空间站"}, "dur": 160, "count": 1, "size": 34, "path": [[0.0, 0.0], [22.5, 17.5], [45.0, 33.7], [67.5, 46.4], [90.0, 51.6], [112.5, 46.4], [135.0, 33.7], [157.5, 17.5], [-180.0, 0.0], [-157.5, -17.5], [-135.0, -33.7], [-112.5, -46.4], [-90.0, -51.6], [-67.5, -46.4], [-45.0, -33.7], [-22.5, -17.5], [0.0, -0.0]]},
-    {"use": "globe/satellite.svg", "kind": "space", "z": 900, "name": {"ko": "극궤도 기상위성", "en": "Polar-orbiting weather satellite", "zh": "极轨气象卫星"}, "dur": 200, "count": 2, "size": 26, "path": [[40.0, 0.0], [62.5, 22.3], [85.0, 44.4], [107.5, 66.2], [130.0, 82.0], [152.5, 66.2], [175.0, 44.4], [-162.5, 22.3], [-140.0, 0.0], [-117.5, -22.3], [-95.0, -44.4], [-72.5, -66.2], [-50.0, -82.0], [-27.5, -66.2], [-5.0, -44.4], [17.5, -22.3], [40.0, -0.0]]},
-    {"use": "globe/satellite.svg", "kind": "space", "z": 1400, "name": {"ko": "통신위성", "en": "Communications satellite", "zh": "通信卫星"}, "dur": 260, "count": 2, "size": 24, "path": [[120.0, 0.0], [142.5, 10.3], [165.0, 19.4], [-172.5, 25.7], [-150.0, 28.0], [-127.5, 25.7], [-105.0, 19.4], [-82.5, 10.3], [-60.0, 0.0], [-37.5, -10.3], [-15.0, -19.4], [7.5, -25.7], [30.0, -28.0], [52.5, -25.7], [75.0, -19.4], [97.5, -10.3], [120.0, -0.0]]},
-    {"use": "globe/ufo.svg", "kind": "space", "z": 700, "name": {"ko": "UFO (상상)", "en": "UFO (imaginary)", "zh": "UFO（想象）"}, "dur": 120, "count": 1, "pingpong": true, "size": 30, "path": [[-115.8, 37.2], [-90, 45], [-40, 52], [10, 48], [60, 40], [127, 37]]},
-    {"use": "globe/comet.svg", "kind": "space", "z": 9000, "name": {"ko": "혜성", "en": "Comet", "zh": "彗星"}, "dur": 300, "count": 1, "size": 64, "path": [[-160.0, 0.0], [-137.5, 12.7], [-115.0, 23.9], [-92.5, 32.0], [-70.0, 35.0], [-47.5, 32.0], [-25.0, 23.9], [-2.5, 12.7], [20.0, 0.0], [42.5, -12.7], [65.0, -23.9], [87.5, -32.0], [110.0, -35.0], [132.5, -32.0], [155.0, -23.9], [177.5, -12.7], [-160.0, -0.0]]},
-    {"use": "globe/rocket.svg", "kind": "space", "z": 500, "name": {"ko": "나로우주센터 로켓", "en": "Naro Space Center rocket", "zh": "罗老宇航中心火箭"}, "dur": 110, "count": 1, "size": 28, "path": [[127.5, 34.4], [140, 33], [160, 29], [180, 24], [-160, 18]]},
-    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": {"ko": "스발바르 북극곰", "en": "Svalbard polar bear", "zh": "斯瓦尔巴北极熊"}, "dur": 300, "count": 2, "pingpong": true, "size": 24, "path": [[15, 78.2], [19, 78.9], [24, 79.6]]},
-    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": {"ko": "그린란드 북극곰", "en": "Greenland polar bear", "zh": "格陵兰北极熊"}, "dur": 320, "count": 1, "pingpong": true, "size": 24, "path": [[-25, 72], [-21, 75], [-19, 78]]},
-    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": {"ko": "허드슨만 북극곰", "en": "Hudson Bay polar bear", "zh": "哈德逊湾北极熊"}, "dur": 300, "count": 2, "pingpong": true, "size": 24, "path": [[-94, 58.8], [-92, 61], [-87, 63.5]]},
-    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": {"ko": "알래스카 북극곰", "en": "Alaska polar bear", "zh": "阿拉斯加北极熊"}, "dur": 320, "count": 1, "pingpong": true, "size": 22, "path": [[-160, 71], [-152, 70.8], [-145, 70.2]]},
-    {"use": "polar/animal/polar-bear", "kind": "air", "z": 0, "upright": true, "name": {"ko": "캐나다 북극 제도 북극곰", "en": "Canadian Arctic Archipelago polar bear", "zh": "加拿大北极群岛北极熊"}, "dur": 340, "count": 1, "pingpong": true, "size": 22, "path": [[-100, 74.5], [-90, 75.5], [-80, 74]]},
-    {"use": "polar/animal/emperor-penguin", "kind": "air", "z": 0, "upright": true, "name": {"ko": "남극 황제펭귄", "en": "Antarctic emperor penguin", "zh": "南极帝企鹅"}, "dur": 360, "count": 2, "pingpong": true, "size": 22, "path": [[0, -70.2], [20, -69.8], [40, -69.5]]},
-    {"use": "polar/animal/emperor-penguin", "kind": "air", "z": 0, "upright": true, "name": {"ko": "로스해 황제펭귄", "en": "Ross Sea emperor penguin", "zh": "罗斯海帝企鹅"}, "dur": 360, "count": 1, "pingpong": true, "size": 22, "path": [[165, -77.5], [175, -77.8], [-175, -78]]},
-    {"use": "polar/animal/penguin", "kind": "air", "z": 0, "upright": true, "name": {"ko": "남극반도 젠투펭귄", "en": "Antarctic Peninsula gentoo penguin", "zh": "南极半岛巴布亚企鹅"}, "dur": 280, "count": 2, "pingpong": true, "size": 20, "path": [[-62, -64.3], [-59, -63], [-57, -62.3]]},
-    {"use": "polar/animal/seal", "kind": "air", "z": 0, "upright": true, "name": {"ko": "웨들해 물범", "en": "Weddell Sea seal", "zh": "威德尔海海豹"}, "dur": 400, "count": 1, "pingpong": true, "size": 20, "path": [[-50, -74], [-40, -75], [-30, -76]]}
-  ]
+ "radiusKm": 6371,
+ "surface": [
+  "#9fdcf5",
+  "#5fb0e0"
+ ],
+ "glow": "#9fd3ff",
+ "countries": "countries.json",
+ "land": [
+  "#c8eaa6",
+  "#bfe59c",
+  "#cdeeb0",
+  "#d5f0b8",
+  "#c2e6a0"
+ ],
+ "border": "#8fbd76",
+ "spin": 2.5,
+ "radio": true,
+ "atmosphere": true,
+ "traffic": [
+  {
+   "use": "vehicle/container-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "부산 → LA 컨테이너선",
+    "en": "Busan → LA container ship",
+    "zh": "釜山 → 洛杉矶 集装箱船"
+   },
+   "dur": 260,
+   "count": 2,
+   "pingpong": true,
+   "size": 30,
+   "path": [
+    [
+     129.2,
+     34.8
+    ],
+    [
+     129,
+     33.6
+    ],
+    [
+     128.6,
+     32.3
+    ],
+    [
+     129.6,
+     30.6
+    ],
+    [
+     132.2,
+     30.6
+    ],
+    [
+     135.8,
+     32.4
+    ],
+    [
+     140.5,
+     33.4
+    ],
+    [
+     150,
+     36
+    ],
+    [
+     165,
+     40
+    ],
+    [
+     180,
+     42
+    ],
+    [
+     -165,
+     41
+    ],
+    [
+     -145,
+     37
+    ],
+    [
+     -128,
+     34
+    ],
+    [
+     -118.4,
+     33.6
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/container-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "상하이 → 홍해 컨테이너선",
+    "en": "Shanghai → Red Sea container ship",
+    "zh": "上海 → 红海 集装箱船"
+   },
+   "dur": 300,
+   "count": 2,
+   "pingpong": true,
+   "size": 30,
+   "vars": {
+    "--hull": "#2f5f8f"
+   },
+   "path": [
+    [
+     122.6,
+     30.8
+    ],
+    [
+     123.2,
+     26.5
+    ],
+    [
+     122.4,
+     22.5
+    ],
+    [
+     120.8,
+     20.4
+    ],
+    [
+     116,
+     15
+    ],
+    [
+     110,
+     9
+    ],
+    [
+     106,
+     4.5
+    ],
+    [
+     104.9,
+     2
+    ],
+    [
+     104.6,
+     0.6
+    ],
+    [
+     103.6,
+     1.1
+    ],
+    [
+     102.9,
+     1.45
+    ],
+    [
+     102.45,
+     1.8
+    ],
+    [
+     102,
+     2.1
+    ],
+    [
+     101.2,
+     2.4
+    ],
+    [
+     100.4,
+     2.9
+    ],
+    [
+     100.2,
+     3.3
+    ],
+    [
+     97.5,
+     5.6
+    ],
+    [
+     94,
+     6.2
+    ],
+    [
+     86,
+     5.6
+    ],
+    [
+     80.6,
+     5.3
+    ],
+    [
+     70,
+     9.5
+    ],
+    [
+     60,
+     13
+    ],
+    [
+     51.5,
+     12.6
+    ],
+    [
+     45,
+     12.2
+    ],
+    [
+     43.6,
+     12
+    ],
+    [
+     43.3,
+     12.6
+    ],
+    [
+     42.9,
+     13.3
+    ],
+    [
+     42.2,
+     14.2
+    ],
+    [
+     38.5,
+     20
+    ],
+    [
+     36,
+     24.5
+    ],
+    [
+     35.3,
+     26
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/container-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "로테르담 → 뉴욕 컨테이너선",
+    "en": "Rotterdam → New York container ship",
+    "zh": "鹿特丹 → 纽约 集装箱船"
+   },
+   "dur": 220,
+   "count": 1,
+   "pingpong": true,
+   "size": 30,
+   "vars": {
+    "--hull": "#3f8f5f"
+   },
+   "path": [
+    [
+     3.8,
+     52
+    ],
+    [
+     2.6,
+     51.6
+    ],
+    [
+     1.6,
+     51
+    ],
+    [
+     0.5,
+     50.3
+    ],
+    [
+     -1.5,
+     49.9
+    ],
+    [
+     -6,
+     49.2
+    ],
+    [
+     -20,
+     48
+    ],
+    [
+     -40,
+     45
+    ],
+    [
+     -60,
+     42
+    ],
+    [
+     -70,
+     40.2
+    ],
+    [
+     -73.8,
+     40.3
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/carrier.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "항공모함 (필리핀해 순찰)",
+    "en": "Aircraft carrier (Philippine Sea patrol)",
+    "zh": "航空母舰（菲律宾海巡逻）"
+   },
+   "dur": 180,
+   "count": 1,
+   "size": 40,
+   "path": [
+    [
+     134,
+     24
+    ],
+    [
+     138,
+     26.5
+    ],
+    [
+     142,
+     24.5
+    ],
+    [
+     141,
+     20.5
+    ],
+    [
+     136,
+     20
+    ],
+    [
+     134,
+     24
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "인천 ↔ LA",
+    "en": "Incheon ↔ LA",
+    "zh": "仁川 ↔ 洛杉矶"
+   },
+   "dur": 140,
+   "count": 2,
+   "pingpong": true,
+   "size": 26,
+   "path": [
+    [
+     126.45,
+     37.46
+    ],
+    [
+     -118.41,
+     33.94
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "인천 ↔ 파리",
+    "en": "Incheon ↔ Paris",
+    "zh": "仁川 ↔ 巴黎"
+   },
+   "dur": 130,
+   "count": 2,
+   "pingpong": true,
+   "size": 26,
+   "vars": {
+    "--tail": "#e8655a"
+   },
+   "path": [
+    [
+     126.45,
+     37.46
+    ],
+    [
+     2.55,
+     49
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "인천 ↔ 도쿄",
+    "en": "Incheon ↔ Tokyo",
+    "zh": "仁川 ↔ 东京"
+   },
+   "dur": 40,
+   "count": 2,
+   "pingpong": true,
+   "size": 24,
+   "vars": {
+    "--tail": "#f2c14e"
+   },
+   "path": [
+    [
+     126.45,
+     37.46
+    ],
+    [
+     140.39,
+     35.77
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "뉴욕 ↔ 런던",
+    "en": "New York ↔ London",
+    "zh": "纽约 ↔ 伦敦"
+   },
+   "dur": 90,
+   "count": 2,
+   "pingpong": true,
+   "size": 26,
+   "vars": {
+    "--tail": "#9b7fd1"
+   },
+   "path": [
+    [
+     -73.78,
+     40.64
+    ],
+    [
+     -0.45,
+     51.47
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "싱가포르 ↔ 시드니",
+    "en": "Singapore ↔ Sydney",
+    "zh": "新加坡 ↔ 悉尼"
+   },
+   "dur": 100,
+   "count": 1,
+   "pingpong": true,
+   "size": 26,
+   "vars": {
+    "--tail": "#5fb37a"
+   },
+   "path": [
+    [
+     103.99,
+     1.36
+    ],
+    [
+     151.18,
+     -33.94
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "두바이 ↔ 뉴욕",
+    "en": "Dubai ↔ New York",
+    "zh": "迪拜 ↔ 纽约"
+   },
+   "dur": 150,
+   "count": 1,
+   "pingpong": true,
+   "size": 26,
+   "vars": {
+    "--tail": "#c2433a"
+   },
+   "path": [
+    [
+     55.36,
+     25.25
+    ],
+    [
+     -73.78,
+     40.64
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/jumbo.svg",
+   "kind": "air",
+   "z": 11,
+   "name": {
+    "ko": "인천 ↔ 뉴욕 점보기",
+    "en": "Incheon ↔ New York jumbo jet",
+    "zh": "仁川 ↔ 纽约 大型客机"
+   },
+   "dur": 170,
+   "count": 2,
+   "pingpong": true,
+   "size": 32,
+   "vars": {
+    "--stripe": "#2f5f8f",
+    "--tail": "#2f5f8f"
+   },
+   "path": [
+    [
+     126.45,
+     37.46
+    ],
+    [
+     -73.78,
+     40.64
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/jumbo.svg",
+   "kind": "air",
+   "z": 11,
+   "name": {
+    "ko": "프랑크푸르트 ↔ 싱가포르 점보기",
+    "en": "Frankfurt ↔ Singapore jumbo jet",
+    "zh": "法兰克福 ↔ 新加坡 大型客机"
+   },
+   "dur": 150,
+   "count": 1,
+   "pingpong": true,
+   "size": 32,
+   "vars": {
+    "--stripe": "#f2c14e",
+    "--tail": "#3f8f5f"
+   },
+   "path": [
+    [
+     8.57,
+     50.03
+    ],
+    [
+     103.99,
+     1.36
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/turboprop.svg",
+   "kind": "air",
+   "z": 6,
+   "name": {
+    "ko": "김포 ↔ 제주 프로펠러기",
+    "en": "Gimpo ↔ Jeju propeller plane",
+    "zh": "金浦 ↔ 济州 螺旋桨飞机"
+   },
+   "dur": 30,
+   "count": 2,
+   "pingpong": true,
+   "size": 20,
+   "vars": {
+    "--tail": "#f29a3a"
+   },
+   "path": [
+    [
+     126.8,
+     37.56
+    ],
+    [
+     126.49,
+     33.51
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/turboprop.svg",
+   "kind": "air",
+   "z": 6,
+   "name": {
+    "ko": "오슬로 ↔ 베르겐 프로펠러기",
+    "en": "Oslo ↔ Bergen propeller plane",
+    "zh": "奥斯陆 ↔ 卑尔根 螺旋桨飞机"
+   },
+   "dur": 30,
+   "count": 1,
+   "pingpong": true,
+   "size": 20,
+   "vars": {
+    "--tail": "#c2433a"
+   },
+   "path": [
+    [
+     11.1,
+     60.19
+    ],
+    [
+     5.22,
+     60.29
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "시드니 ↔ 멜버른",
+    "en": "Sydney ↔ Melbourne",
+    "zh": "悉尼 ↔ 墨尔本"
+   },
+   "dur": 34,
+   "count": 2,
+   "pingpong": true,
+   "size": 24,
+   "vars": {
+    "--tail": "#e8655a",
+    "--stripe": "#e8655a"
+   },
+   "path": [
+    [
+     151.18,
+     -33.94
+    ],
+    [
+     144.84,
+     -37.67
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/airplane.svg",
+   "kind": "air",
+   "z": 10,
+   "name": {
+    "ko": "샌프란시스코 ↔ 호놀룰루",
+    "en": "San Francisco ↔ Honolulu",
+    "zh": "旧金山 ↔ 火奴鲁鲁"
+   },
+   "dur": 70,
+   "count": 1,
+   "pingpong": true,
+   "size": 24,
+   "vars": {
+    "--tail": "#9b7fd1",
+    "--stripe": "#9b7fd1",
+    "--body": "#f4f0ff"
+   },
+   "path": [
+    [
+     -122.38,
+     37.62
+    ],
+    [
+     -157.92,
+     21.32
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/cruise-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "카리브 크루즈",
+    "en": "Caribbean cruise",
+    "zh": "加勒比海邮轮"
+   },
+   "dur": 160,
+   "count": 1,
+   "pingpong": true,
+   "size": 34,
+   "vars": {
+    "--funnel": "#5aa0d8"
+   },
+   "path": [
+    [
+     -79.9,
+     25.75
+    ],
+    [
+     -79,
+     25.6
+    ],
+    [
+     -77.6,
+     25.2
+    ],
+    [
+     -76.6,
+     24
+    ],
+    [
+     -75.5,
+     23.3
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/cruise-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "지중해 크루즈",
+    "en": "Mediterranean cruise",
+    "zh": "地中海邮轮"
+   },
+   "dur": 170,
+   "count": 1,
+   "pingpong": true,
+   "size": 34,
+   "path": [
+    [
+     2.3,
+     41.25
+    ],
+    [
+     3.6,
+     41.6
+    ],
+    [
+     4.6,
+     42.6
+    ],
+    [
+     5.3,
+     42.95
+    ],
+    [
+     6.5,
+     42.9
+    ],
+    [
+     7.4,
+     43.35
+    ],
+    [
+     8.2,
+     43.7
+    ],
+    [
+     8.8,
+     44.15
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/tanker.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "호르무즈 유조선",
+    "en": "Hormuz oil tanker",
+    "zh": "霍尔木兹油轮"
+   },
+   "dur": 220,
+   "count": 2,
+   "pingpong": true,
+   "size": 32,
+   "path": [
+    [
+     51.6,
+     25.6
+    ],
+    [
+     54,
+     26.2
+    ],
+    [
+     56.4,
+     26.6
+    ],
+    [
+     57.2,
+     25.6
+    ],
+    [
+     59,
+     24
+    ],
+    [
+     64,
+     22
+    ],
+    [
+     70,
+     19.5
+    ],
+    [
+     72.6,
+     18.8
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/fishing-boat.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "남해 어선",
+    "en": "South Sea fishing boat",
+    "zh": "南海渔船"
+   },
+   "dur": 90,
+   "count": 3,
+   "size": 16,
+   "vars": {
+    "--hull": "#3f7fbf"
+   },
+   "path": [
+    [
+     128.6,
+     34.2
+    ],
+    [
+     129.3,
+     34.4
+    ],
+    [
+     129.6,
+     33.8
+    ],
+    [
+     128.9,
+     33.6
+    ],
+    [
+     128.6,
+     34.2
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/fishing-boat.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "북해 어선",
+    "en": "North Sea fishing boat",
+    "zh": "北海渔船"
+   },
+   "dur": 110,
+   "count": 2,
+   "size": 16,
+   "vars": {
+    "--hull": "#c2433a"
+   },
+   "path": [
+    [
+     2,
+     56
+    ],
+    [
+     3.5,
+     56.5
+    ],
+    [
+     4,
+     55.5
+    ],
+    [
+     2.5,
+     55.2
+    ],
+    [
+     2,
+     56
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/sailboat.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "에게해 요트",
+    "en": "Aegean Sea yacht",
+    "zh": "爱琴海游艇"
+   },
+   "dur": 120,
+   "count": 3,
+   "size": 16,
+   "path": [
+    [
+     24.5,
+     37.5
+    ],
+    [
+     25.4,
+     37.6
+    ],
+    [
+     25.6,
+     36.9
+    ],
+    [
+     24.8,
+     36.7
+    ],
+    [
+     24.5,
+     37.5
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/sailboat.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "시드니 요트",
+    "en": "Sydney yacht",
+    "zh": "悉尼游艇"
+   },
+   "dur": 90,
+   "count": 2,
+   "size": 16,
+   "vars": {
+    "--sail": "#ffe7a8"
+   },
+   "path": [
+    [
+     151.4,
+     -33.9
+    ],
+    [
+     151.6,
+     -33.7
+    ],
+    [
+     151.6,
+     -34.1
+    ],
+    [
+     151.4,
+     -33.9
+    ]
+   ]
+  },
+  {
+   "use": "animal/whale.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "하와이 혹등고래",
+    "en": "Hawaii humpback whale",
+    "zh": "夏威夷座头鲸"
+   },
+   "dur": 260,
+   "count": 2,
+   "size": 30,
+   "path": [
+    [
+     -154.4,
+     19
+    ],
+    [
+     -153.8,
+     20
+    ],
+    [
+     -155.4,
+     21
+    ],
+    [
+     -156.4,
+     21.7
+    ],
+    [
+     -154.9,
+     21.4
+    ],
+    [
+     -154.4,
+     19
+    ]
+   ]
+  },
+  {
+   "use": "animal/whale.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "아이슬란드 고래",
+    "en": "Iceland whale",
+    "zh": "冰岛鲸鱼"
+   },
+   "dur": 300,
+   "count": 2,
+   "size": 30,
+   "path": [
+    [
+     -24.5,
+     67.2
+    ],
+    [
+     -20,
+     67.8
+    ],
+    [
+     -15,
+     67.4
+    ],
+    [
+     -13,
+     66.8
+    ],
+    [
+     -17,
+     67.1
+    ],
+    [
+     -24.5,
+     67.2
+    ]
+   ]
+  },
+  {
+   "use": "animal/whale.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "남극해 고래",
+    "en": "Southern Ocean whale",
+    "zh": "南大洋鲸鱼"
+   },
+   "dur": 360,
+   "count": 2,
+   "size": 30,
+   "path": [
+    [
+     -60,
+     -60
+    ],
+    [
+     -45,
+     -58
+    ],
+    [
+     -30,
+     -59
+    ],
+    [
+     -45,
+     -61
+    ],
+    [
+     -60,
+     -60
+    ]
+   ]
+  },
+  {
+   "use": "animal/whale.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "동해 고래",
+    "en": "East Sea whale",
+    "zh": "东海鲸鱼"
+   },
+   "dur": 280,
+   "count": 1,
+   "size": 28,
+   "path": [
+    [
+     130.6,
+     36.8
+    ],
+    [
+     131.6,
+     38.2
+    ],
+    [
+     133,
+     37.4
+    ],
+    [
+     131.8,
+     36.2
+    ],
+    [
+     130.6,
+     36.8
+    ]
+   ]
+  },
+  {
+   "use": "animal/dolphins.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "제주 남방큰돌고래",
+    "en": "Jeju Indo-Pacific bottlenose dolphin",
+    "zh": "济州印太瓶鼻海豚"
+   },
+   "dur": 120,
+   "count": 1,
+   "size": 26,
+   "pingpong": true,
+   "path": [
+    [
+     126.12,
+     33.42
+    ],
+    [
+     126.06,
+     33.3
+    ],
+    [
+     126.12,
+     33.18
+    ],
+    [
+     126.3,
+     33.12
+    ],
+    [
+     126.55,
+     33.17
+    ]
+   ]
+  },
+  {
+   "use": "animal/dolphins.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "지중해 돌고래",
+    "en": "Mediterranean dolphin",
+    "zh": "地中海海豚"
+   },
+   "dur": 140,
+   "count": 2,
+   "size": 26,
+   "path": [
+    [
+     3.2,
+     39
+    ],
+    [
+     4.8,
+     39.4
+    ],
+    [
+     5.2,
+     38.4
+    ],
+    [
+     3.6,
+     38.2
+    ],
+    [
+     3.2,
+     39
+    ]
+   ]
+  },
+  {
+   "use": "animal/dolphins.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "플로리다 돌고래",
+    "en": "Florida dolphin",
+    "zh": "佛罗里达海豚"
+   },
+   "dur": 130,
+   "count": 1,
+   "size": 26,
+   "path": [
+    [
+     -80.6,
+     24.4
+    ],
+    [
+     -79.6,
+     24.8
+    ],
+    [
+     -79.4,
+     24.2
+    ],
+    [
+     -80.4,
+     24
+    ],
+    [
+     -80.6,
+     24.4
+    ]
+   ]
+  },
+  {
+   "use": "animal/dolphins.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "뉴질랜드 돌고래",
+    "en": "New Zealand dolphin",
+    "zh": "新西兰海豚"
+   },
+   "dur": 130,
+   "count": 1,
+   "size": 26,
+   "path": [
+    [
+     175,
+     -34.6
+    ],
+    [
+     175.8,
+     -34.8
+    ],
+    [
+     175.6,
+     -35.5
+    ],
+    [
+     174.9,
+     -35.2
+    ],
+    [
+     175,
+     -34.6
+    ]
+   ]
+  },
+  {
+   "use": "structure/oil-rig.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "북해 석유 시추선 1",
+    "en": "North Sea oil rig 1",
+    "zh": "北海石油钻井平台 1"
+   },
+   "dur": 1,
+   "size": 22,
+   "path": [
+    [
+     1.8,
+     57.6
+    ]
+   ]
+  },
+  {
+   "use": "structure/oil-rig.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "북해 석유 시추선 2",
+    "en": "North Sea oil rig 2",
+    "zh": "北海石油钻井平台 2"
+   },
+   "dur": 1,
+   "size": 22,
+   "path": [
+    [
+     2.6,
+     56.6
+    ]
+   ]
+  },
+  {
+   "use": "structure/oil-rig.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "멕시코만 석유 시추선 1",
+    "en": "Gulf of Mexico oil rig 1",
+    "zh": "墨西哥湾石油钻井平台 1"
+   },
+   "dur": 1,
+   "size": 22,
+   "path": [
+    [
+     -90.4,
+     28
+    ]
+   ]
+  },
+  {
+   "use": "structure/oil-rig.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "멕시코만 석유 시추선 2",
+    "en": "Gulf of Mexico oil rig 2",
+    "zh": "墨西哥湾石油钻井平台 2"
+   },
+   "dur": 1,
+   "size": 22,
+   "path": [
+    [
+     -92.2,
+     27.6
+    ]
+   ]
+  },
+  {
+   "use": "structure/oil-rig.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "페르시아만 석유 시추선",
+    "en": "Persian Gulf oil rig",
+    "zh": "波斯湾石油钻井平台"
+   },
+   "dur": 1,
+   "size": 22,
+   "path": [
+    [
+     52.6,
+     26.6
+    ]
+   ]
+  },
+  {
+   "use": "structure/wind-farm.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "영국 북해 해상풍력",
+    "en": "UK North Sea offshore wind",
+    "zh": "英国北海海上风电"
+   },
+   "dur": 1,
+   "size": 30,
+   "path": [
+    [
+     1.9,
+     53.9
+    ]
+   ]
+  },
+  {
+   "use": "structure/wind-farm.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "덴마크 해상풍력",
+    "en": "Denmark offshore wind",
+    "zh": "丹麦海上风电"
+   },
+   "dur": 1,
+   "size": 30,
+   "path": [
+    [
+     7.6,
+     55.5
+    ]
+   ]
+  },
+  {
+   "use": "structure/wind-farm.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "서남해 해상풍력",
+    "en": "Korea southwest coast offshore wind",
+    "zh": "韩国西南海海上风电"
+   },
+   "dur": 1,
+   "size": 28,
+   "path": [
+    [
+     125.9,
+     35.4
+    ]
+   ]
+  },
+  {
+   "use": "structure/wind-farm.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "대만 해협 해상풍력",
+    "en": "Taiwan Strait offshore wind",
+    "zh": "台湾海峡海上风电"
+   },
+   "dur": 1,
+   "size": 28,
+   "path": [
+    [
+     120.1,
+     24.2
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 52°",
+    "en": "Cloud band 52°",
+    "zh": "云带 52°"
+   },
+   "dur": 900,
+   "count": 3,
+   "size": 52,
+   "path": [
+    [
+     0,
+     52
+    ],
+    [
+     30,
+     56
+    ],
+    [
+     60,
+     52
+    ],
+    [
+     90,
+     48
+    ],
+    [
+     120,
+     52
+    ],
+    [
+     150,
+     56
+    ],
+    [
+     -180,
+     52
+    ],
+    [
+     -150,
+     48
+    ],
+    [
+     -120,
+     52
+    ],
+    [
+     -90,
+     56
+    ],
+    [
+     -60,
+     52
+    ],
+    [
+     -30,
+     48
+    ],
+    [
+     0,
+     52
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 38°",
+    "en": "Cloud band 38°",
+    "zh": "云带 38°"
+   },
+   "dur": 800,
+   "count": 3,
+   "size": 46,
+   "path": [
+    [
+     70,
+     38
+    ],
+    [
+     100,
+     42
+    ],
+    [
+     130,
+     38
+    ],
+    [
+     160,
+     34
+    ],
+    [
+     -170,
+     38
+    ],
+    [
+     -140,
+     42
+    ],
+    [
+     -110,
+     38
+    ],
+    [
+     -80,
+     34
+    ],
+    [
+     -50,
+     38
+    ],
+    [
+     -20,
+     42
+    ],
+    [
+     10,
+     38
+    ],
+    [
+     40,
+     34
+    ],
+    [
+     70,
+     38
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 24°",
+    "en": "Cloud band 24°",
+    "zh": "云带 24°"
+   },
+   "dur": 1000,
+   "count": 2,
+   "size": 42,
+   "path": [
+    [
+     140,
+     24
+    ],
+    [
+     170,
+     28
+    ],
+    [
+     -160,
+     24
+    ],
+    [
+     -130,
+     20
+    ],
+    [
+     -100,
+     24
+    ],
+    [
+     -70,
+     28
+    ],
+    [
+     -40,
+     24
+    ],
+    [
+     -10,
+     20
+    ],
+    [
+     20,
+     24
+    ],
+    [
+     50,
+     28
+    ],
+    [
+     80,
+     24
+    ],
+    [
+     110,
+     20
+    ],
+    [
+     140,
+     24
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 8°",
+    "en": "Cloud band 8°",
+    "zh": "云带 8°"
+   },
+   "dur": 1100,
+   "count": 3,
+   "size": 48,
+   "path": [
+    [
+     20,
+     8
+    ],
+    [
+     50,
+     12
+    ],
+    [
+     80,
+     8
+    ],
+    [
+     110,
+     4
+    ],
+    [
+     140,
+     8
+    ],
+    [
+     170,
+     12
+    ],
+    [
+     -160,
+     8
+    ],
+    [
+     -130,
+     4
+    ],
+    [
+     -100,
+     8
+    ],
+    [
+     -70,
+     12
+    ],
+    [
+     -40,
+     8
+    ],
+    [
+     -10,
+     4
+    ],
+    [
+     20,
+     8
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 -8°",
+    "en": "Cloud band -8°",
+    "zh": "云带 -8°"
+   },
+   "dur": 1000,
+   "count": 2,
+   "size": 44,
+   "path": [
+    [
+     -160,
+     -8
+    ],
+    [
+     -130,
+     -4
+    ],
+    [
+     -100,
+     -8
+    ],
+    [
+     -70,
+     -12
+    ],
+    [
+     -40,
+     -8
+    ],
+    [
+     -10,
+     -4
+    ],
+    [
+     20,
+     -8
+    ],
+    [
+     50,
+     -12
+    ],
+    [
+     80,
+     -8
+    ],
+    [
+     110,
+     -4
+    ],
+    [
+     140,
+     -8
+    ],
+    [
+     170,
+     -12
+    ],
+    [
+     -160,
+     -8
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 -24°",
+    "en": "Cloud band -24°",
+    "zh": "云带 -24°"
+   },
+   "dur": 900,
+   "count": 3,
+   "size": 46,
+   "path": [
+    [
+     90,
+     -24
+    ],
+    [
+     120,
+     -20
+    ],
+    [
+     150,
+     -24
+    ],
+    [
+     -180,
+     -28
+    ],
+    [
+     -150,
+     -24
+    ],
+    [
+     -120,
+     -20
+    ],
+    [
+     -90,
+     -24
+    ],
+    [
+     -60,
+     -28
+    ],
+    [
+     -30,
+     -24
+    ],
+    [
+     0,
+     -20
+    ],
+    [
+     30,
+     -24
+    ],
+    [
+     60,
+     -28
+    ],
+    [
+     90,
+     -24
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 -40°",
+    "en": "Cloud band -40°",
+    "zh": "云带 -40°"
+   },
+   "dur": 850,
+   "count": 3,
+   "size": 52,
+   "path": [
+    [
+     -110,
+     -40
+    ],
+    [
+     -80,
+     -36
+    ],
+    [
+     -50,
+     -40
+    ],
+    [
+     -20,
+     -44
+    ],
+    [
+     10,
+     -40
+    ],
+    [
+     40,
+     -36
+    ],
+    [
+     70,
+     -40
+    ],
+    [
+     100,
+     -44
+    ],
+    [
+     130,
+     -40
+    ],
+    [
+     160,
+     -36
+    ],
+    [
+     -170,
+     -40
+    ],
+    [
+     -140,
+     -44
+    ],
+    [
+     -110,
+     -40
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 -55°",
+    "en": "Cloud band -55°",
+    "zh": "云带 -55°"
+   },
+   "dur": 950,
+   "count": 2,
+   "size": 56,
+   "path": [
+    [
+     30,
+     -55
+    ],
+    [
+     60,
+     -51
+    ],
+    [
+     90,
+     -55
+    ],
+    [
+     120,
+     -59
+    ],
+    [
+     150,
+     -55
+    ],
+    [
+     -180,
+     -51
+    ],
+    [
+     -150,
+     -55
+    ],
+    [
+     -120,
+     -59
+    ],
+    [
+     -90,
+     -55
+    ],
+    [
+     -60,
+     -51
+    ],
+    [
+     -30,
+     -55
+    ],
+    [
+     0,
+     -59
+    ],
+    [
+     30,
+     -55
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 62°",
+    "en": "Cloud band 62°",
+    "zh": "云带 62°"
+   },
+   "dur": 1000,
+   "count": 2,
+   "size": 50,
+   "path": [
+    [
+     -180,
+     62
+    ],
+    [
+     -150,
+     66
+    ],
+    [
+     -120,
+     62
+    ],
+    [
+     -90,
+     58
+    ],
+    [
+     -60,
+     62
+    ],
+    [
+     -30,
+     66
+    ],
+    [
+     0,
+     62
+    ],
+    [
+     30,
+     58
+    ],
+    [
+     60,
+     62
+    ],
+    [
+     90,
+     66
+    ],
+    [
+     120,
+     62
+    ],
+    [
+     150,
+     58
+    ],
+    [
+     -180,
+     62
+    ]
+   ]
+  },
+  {
+   "use": "globe/cloud.svg",
+   "kind": "air",
+   "z": 600,
+   "upright": true,
+   "opacity": 0.55,
+   "name": {
+    "ko": "구름 띠 45°",
+    "en": "Cloud band 45°",
+    "zh": "云带 45°"
+   },
+   "dur": 700,
+   "count": 2,
+   "size": 44,
+   "path": [
+    [
+     -60,
+     45
+    ],
+    [
+     -30,
+     49
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     30,
+     41
+    ],
+    [
+     60,
+     45
+    ],
+    [
+     90,
+     49
+    ],
+    [
+     120,
+     45
+    ],
+    [
+     150,
+     41
+    ],
+    [
+     -180,
+     45
+    ],
+    [
+     -150,
+     49
+    ],
+    [
+     -120,
+     45
+    ],
+    [
+     -90,
+     41
+    ],
+    [
+     -60,
+     45
+    ]
+   ]
+  },
+  {
+   "use": "globe/typhoon",
+   "kind": "air",
+   "z": 300,
+   "name": {
+    "ko": "북서태평양 태풍",
+    "en": "Northwest Pacific typhoon",
+    "zh": "西北太平洋台风"
+   },
+   "dur": 420,
+   "count": 1,
+   "size": 60,
+   "path": [
+    [
+     142,
+     11
+    ],
+    [
+     135,
+     16
+    ],
+    [
+     129,
+     22
+    ],
+    [
+     126.5,
+     27
+    ],
+    [
+     128,
+     32
+    ],
+    [
+     133,
+     37
+    ]
+   ]
+  },
+  {
+   "use": "globe/typhoon",
+   "kind": "air",
+   "z": 300,
+   "name": {
+    "ko": "대서양 허리케인",
+    "en": "Atlantic hurricane",
+    "zh": "大西洋飓风"
+   },
+   "dur": 460,
+   "count": 1,
+   "size": 60,
+   "path": [
+    [
+     -40,
+     13
+    ],
+    [
+     -52,
+     16
+    ],
+    [
+     -63,
+     20
+    ],
+    [
+     -70,
+     25
+    ],
+    [
+     -73,
+     31
+    ],
+    [
+     -66,
+     38
+    ]
+   ]
+  },
+  {
+   "use": "globe/submarine.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "태평양 잠수함",
+    "en": "Pacific submarine",
+    "zh": "太平洋潜艇"
+   },
+   "dur": 320,
+   "count": 1,
+   "size": 24,
+   "path": [
+    [
+     150,
+     20
+    ],
+    [
+     165,
+     15
+    ],
+    [
+     175,
+     22
+    ],
+    [
+     160,
+     28
+    ],
+    [
+     150,
+     20
+    ]
+   ]
+  },
+  {
+   "use": "globe/submarine.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "대서양 잠수함",
+    "en": "Atlantic submarine",
+    "zh": "大西洋潜艇"
+   },
+   "dur": 300,
+   "count": 1,
+   "size": 24,
+   "path": [
+    [
+     -40,
+     40
+    ],
+    [
+     -30,
+     35
+    ],
+    [
+     -25,
+     42
+    ],
+    [
+     -35,
+     46
+    ],
+    [
+     -40,
+     40
+    ]
+   ]
+  },
+  {
+   "use": "globe/pirate-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "카리브해 해적선 (상상)",
+    "en": "Caribbean pirate ship (imaginary)",
+    "zh": "加勒比海盗船（想象）"
+   },
+   "dur": 260,
+   "count": 1,
+   "size": 28,
+   "path": [
+    [
+     -76,
+     14.5
+    ],
+    [
+     -70,
+     13.5
+    ],
+    [
+     -66,
+     14.5
+    ],
+    [
+     -70,
+     16
+    ],
+    [
+     -76,
+     14.5
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/tanker.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "알래스카 → 샌프란시스코 유조선",
+    "en": "Alaska → San Francisco oil tanker",
+    "zh": "阿拉斯加 → 旧金山 油轮"
+   },
+   "dur": 240,
+   "count": 1,
+   "pingpong": true,
+   "size": 28,
+   "path": [
+    [
+     -150,
+     58.5
+    ],
+    [
+     -142,
+     54
+    ],
+    [
+     -132,
+     45
+    ],
+    [
+     -124.5,
+     38
+    ],
+    [
+     -122.8,
+     37.7
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/cruise-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "하와이 → LA 크루즈",
+    "en": "Hawaii → LA cruise",
+    "zh": "夏威夷 → 洛杉矶 邮轮"
+   },
+   "dur": 260,
+   "count": 1,
+   "pingpong": true,
+   "size": 30,
+   "path": [
+    [
+     -157.9,
+     21.1
+    ],
+    [
+     -150,
+     25
+    ],
+    [
+     -140,
+     30
+    ],
+    [
+     -128,
+     33
+    ],
+    [
+     -118.4,
+     33.6
+    ]
+   ]
+  },
+  {
+   "use": "vehicle/container-ship.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "싱가포르 → 시드니 컨테이너선",
+    "en": "Singapore → Sydney container ship",
+    "zh": "新加坡 → 悉尼 集装箱船"
+   },
+   "dur": 260,
+   "count": 1,
+   "pingpong": true,
+   "size": 30,
+   "path": [
+    [
+     104.2,
+     1.1
+    ],
+    [
+     106.5,
+     -3
+    ],
+    [
+     110,
+     -5
+    ],
+    [
+     115,
+     -6.5
+    ],
+    [
+     116,
+     -8
+    ],
+    [
+     116.2,
+     -9.5
+    ],
+    [
+     120,
+     -11.5
+    ],
+    [
+     128,
+     -11
+    ],
+    [
+     135,
+     -9.5
+    ],
+    [
+     141,
+     -9.8
+    ],
+    [
+     144,
+     -11
+    ],
+    [
+     147,
+     -15
+    ],
+    [
+     153,
+     -20
+    ],
+    [
+     155,
+     -27
+    ],
+    [
+     154,
+     -32
+    ],
+    [
+     152,
+     -34.2
+    ]
+   ]
+  },
+  {
+   "use": "globe/iss.svg",
+   "kind": "space",
+   "z": 420,
+   "name": {
+    "ko": "국제우주정거장",
+    "en": "International Space Station",
+    "zh": "国际空间站"
+   },
+   "dur": 160,
+   "count": 1,
+   "size": 34,
+   "path": [
+    [
+     0,
+     0
+    ],
+    [
+     22.5,
+     17.5
+    ],
+    [
+     45,
+     33.7
+    ],
+    [
+     67.5,
+     46.4
+    ],
+    [
+     90,
+     51.6
+    ],
+    [
+     112.5,
+     46.4
+    ],
+    [
+     135,
+     33.7
+    ],
+    [
+     157.5,
+     17.5
+    ],
+    [
+     -180,
+     0
+    ],
+    [
+     -157.5,
+     -17.5
+    ],
+    [
+     -135,
+     -33.7
+    ],
+    [
+     -112.5,
+     -46.4
+    ],
+    [
+     -90,
+     -51.6
+    ],
+    [
+     -67.5,
+     -46.4
+    ],
+    [
+     -45,
+     -33.7
+    ],
+    [
+     -22.5,
+     -17.5
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "use": "globe/satellite.svg",
+   "kind": "space",
+   "z": 900,
+   "name": {
+    "ko": "극궤도 기상위성",
+    "en": "Polar-orbiting weather satellite",
+    "zh": "极轨气象卫星"
+   },
+   "dur": 200,
+   "count": 2,
+   "size": 26,
+   "path": [
+    [
+     40,
+     0
+    ],
+    [
+     62.5,
+     22.3
+    ],
+    [
+     85,
+     44.4
+    ],
+    [
+     107.5,
+     66.2
+    ],
+    [
+     130,
+     82
+    ],
+    [
+     152.5,
+     66.2
+    ],
+    [
+     175,
+     44.4
+    ],
+    [
+     -162.5,
+     22.3
+    ],
+    [
+     -140,
+     0
+    ],
+    [
+     -117.5,
+     -22.3
+    ],
+    [
+     -95,
+     -44.4
+    ],
+    [
+     -72.5,
+     -66.2
+    ],
+    [
+     -50,
+     -82
+    ],
+    [
+     -27.5,
+     -66.2
+    ],
+    [
+     -5,
+     -44.4
+    ],
+    [
+     17.5,
+     -22.3
+    ],
+    [
+     40,
+     0
+    ]
+   ]
+  },
+  {
+   "use": "globe/satellite.svg",
+   "kind": "space",
+   "z": 1400,
+   "name": {
+    "ko": "통신위성",
+    "en": "Communications satellite",
+    "zh": "通信卫星"
+   },
+   "dur": 260,
+   "count": 2,
+   "size": 24,
+   "path": [
+    [
+     120,
+     0
+    ],
+    [
+     142.5,
+     10.3
+    ],
+    [
+     165,
+     19.4
+    ],
+    [
+     -172.5,
+     25.7
+    ],
+    [
+     -150,
+     28
+    ],
+    [
+     -127.5,
+     25.7
+    ],
+    [
+     -105,
+     19.4
+    ],
+    [
+     -82.5,
+     10.3
+    ],
+    [
+     -60,
+     0
+    ],
+    [
+     -37.5,
+     -10.3
+    ],
+    [
+     -15,
+     -19.4
+    ],
+    [
+     7.5,
+     -25.7
+    ],
+    [
+     30,
+     -28
+    ],
+    [
+     52.5,
+     -25.7
+    ],
+    [
+     75,
+     -19.4
+    ],
+    [
+     97.5,
+     -10.3
+    ],
+    [
+     120,
+     0
+    ]
+   ]
+  },
+  {
+   "use": "globe/ufo.svg",
+   "kind": "space",
+   "z": 700,
+   "name": {
+    "ko": "UFO (상상)",
+    "en": "UFO (imaginary)",
+    "zh": "UFO（想象）"
+   },
+   "dur": 120,
+   "count": 1,
+   "pingpong": true,
+   "size": 30,
+   "path": [
+    [
+     -115.8,
+     37.2
+    ],
+    [
+     -90,
+     45
+    ],
+    [
+     -40,
+     52
+    ],
+    [
+     10,
+     48
+    ],
+    [
+     60,
+     40
+    ],
+    [
+     127,
+     37
+    ]
+   ]
+  },
+  {
+   "use": "globe/comet.svg",
+   "kind": "space",
+   "z": 9000,
+   "name": {
+    "ko": "혜성",
+    "en": "Comet",
+    "zh": "彗星"
+   },
+   "dur": 300,
+   "count": 1,
+   "size": 64,
+   "path": [
+    [
+     -160,
+     0
+    ],
+    [
+     -137.5,
+     12.7
+    ],
+    [
+     -115,
+     23.9
+    ],
+    [
+     -92.5,
+     32
+    ],
+    [
+     -70,
+     35
+    ],
+    [
+     -47.5,
+     32
+    ],
+    [
+     -25,
+     23.9
+    ],
+    [
+     -2.5,
+     12.7
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     42.5,
+     -12.7
+    ],
+    [
+     65,
+     -23.9
+    ],
+    [
+     87.5,
+     -32
+    ],
+    [
+     110,
+     -35
+    ],
+    [
+     132.5,
+     -32
+    ],
+    [
+     155,
+     -23.9
+    ],
+    [
+     177.5,
+     -12.7
+    ],
+    [
+     -160,
+     0
+    ]
+   ]
+  },
+  {
+   "use": "globe/rocket.svg",
+   "kind": "space",
+   "z": 500,
+   "name": {
+    "ko": "나로우주센터 로켓",
+    "en": "Naro Space Center rocket",
+    "zh": "罗老宇航中心火箭"
+   },
+   "dur": 110,
+   "count": 1,
+   "size": 28,
+   "path": [
+    [
+     127.5,
+     34.4
+    ],
+    [
+     140,
+     33
+    ],
+    [
+     160,
+     29
+    ],
+    [
+     180,
+     24
+    ],
+    [
+     -160,
+     18
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/polar-bear",
+   "kind": "air",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "스발바르 북극곰",
+    "en": "Svalbard polar bear",
+    "zh": "斯瓦尔巴北极熊"
+   },
+   "dur": 300,
+   "count": 2,
+   "pingpong": true,
+   "size": 24,
+   "path": [
+    [
+     15,
+     78.2
+    ],
+    [
+     19,
+     78.9
+    ],
+    [
+     24,
+     79.6
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/polar-bear",
+   "kind": "air",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "그린란드 북극곰",
+    "en": "Greenland polar bear",
+    "zh": "格陵兰北极熊"
+   },
+   "dur": 320,
+   "count": 1,
+   "pingpong": true,
+   "size": 24,
+   "path": [
+    [
+     -25,
+     72
+    ],
+    [
+     -21,
+     75
+    ],
+    [
+     -19,
+     78
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/polar-bear",
+   "kind": "air",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "허드슨만 북극곰",
+    "en": "Hudson Bay polar bear",
+    "zh": "哈德逊湾北极熊"
+   },
+   "dur": 300,
+   "count": 2,
+   "pingpong": true,
+   "size": 24,
+   "path": [
+    [
+     -94,
+     58.8
+    ],
+    [
+     -92,
+     61
+    ],
+    [
+     -87,
+     63.5
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/polar-bear",
+   "kind": "air",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "알래스카 북극곰",
+    "en": "Alaska polar bear",
+    "zh": "阿拉斯加北极熊"
+   },
+   "dur": 320,
+   "count": 1,
+   "pingpong": true,
+   "size": 22,
+   "path": [
+    [
+     -160,
+     71
+    ],
+    [
+     -152,
+     70.8
+    ],
+    [
+     -145,
+     70.2
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/polar-bear",
+   "kind": "air",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "캐나다 북극 제도 북극곰",
+    "en": "Canadian Arctic Archipelago polar bear",
+    "zh": "加拿大北极群岛北极熊"
+   },
+   "dur": 340,
+   "count": 1,
+   "pingpong": true,
+   "size": 22,
+   "path": [
+    [
+     -100,
+     74.5
+    ],
+    [
+     -90,
+     75.5
+    ],
+    [
+     -80,
+     74
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/penguin-swim.svg",
+   "kind": "sea",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "남극 황제펭귄",
+    "en": "Antarctic emperor penguin",
+    "zh": "南极帝企鹅"
+   },
+   "dur": 360,
+   "count": 2,
+   "pingpong": true,
+   "size": 22,
+   "path": [
+    [
+     0,
+     -66
+    ],
+    [
+     20,
+     -65.5
+    ],
+    [
+     40,
+     -65
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/penguin-swim.svg",
+   "kind": "sea",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "로스해 황제펭귄",
+    "en": "Ross Sea emperor penguin",
+    "zh": "罗斯海帝企鹅"
+   },
+   "dur": 360,
+   "count": 1,
+   "pingpong": true,
+   "size": 22,
+   "path": [
+    [
+     165,
+     -77.5
+    ],
+    [
+     175,
+     -77.8
+    ],
+    [
+     -175,
+     -78
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/penguin-swim.svg",
+   "kind": "sea",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "남극반도 젠투펭귄",
+    "en": "Antarctic Peninsula gentoo penguin",
+    "zh": "南极半岛巴布亚企鹅"
+   },
+   "dur": 280,
+   "count": 2,
+   "pingpong": true,
+   "size": 20,
+   "path": [
+    [
+     -62,
+     -64.3
+    ],
+    [
+     -59,
+     -63
+    ],
+    [
+     -57,
+     -62.3
+    ]
+   ]
+  },
+  {
+   "use": "polar/animal/seal-swim.svg",
+   "kind": "sea",
+   "z": 0,
+   "upright": true,
+   "name": {
+    "ko": "웨들해 물범",
+    "en": "Weddell Sea seal",
+    "zh": "威德尔海海豹"
+   },
+   "dur": 400,
+   "count": 1,
+   "pingpong": true,
+   "size": 20,
+   "path": [
+    [
+     -50,
+     -74
+    ],
+    [
+     -40,
+     -75
+    ],
+    [
+     -30,
+     -76
+    ]
+   ]
+  },
+  {
+   "use": "animal/turtle.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "카리브 바다거북",
+    "en": "Caribbean Sea Turtle",
+    "zh": "加勒比海龟"
+   },
+   "dur": 260,
+   "size": 26,
+   "path": [
+    [
+     -110,
+     10
+    ],
+    [
+     -115,
+     12
+    ],
+    [
+     -112,
+     15
+    ],
+    [
+     -108,
+     12
+    ],
+    [
+     -110,
+     10
+    ]
+   ]
+  },
+  {
+   "use": "animal/shark.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "남대서양 상어",
+    "en": "South Atlantic Shark",
+    "zh": "南大西洋鲨鱼"
+   },
+   "dur": 240,
+   "size": 30,
+   "path": [
+    [
+     15,
+     -35
+    ],
+    [
+     20,
+     -38
+    ],
+    [
+     15,
+     -40
+    ],
+    [
+     10,
+     -37
+    ],
+    [
+     15,
+     -35
+    ]
+   ]
+  },
+  {
+   "use": "animal/marlin.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "바하 돛새치",
+    "en": "Baja Marlin",
+    "zh": "下加利福尼亚旗鱼"
+   },
+   "dur": 220,
+   "size": 28,
+   "path": [
+    [
+     -115,
+     22
+    ],
+    [
+     -120,
+     24
+    ],
+    [
+     -118,
+     28
+    ],
+    [
+     -113,
+     25
+    ],
+    [
+     -115,
+     22
+    ]
+   ]
+  },
+  {
+   "use": "animal/tuna.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "북태평양 참치",
+    "en": "North Pacific Tuna",
+    "zh": "北太平洋金枪鱼"
+   },
+   "dur": 240,
+   "size": 26,
+   "path": [
+    [
+     170,
+     35
+    ],
+    [
+     175,
+     38
+    ],
+    [
+     170,
+     40
+    ],
+    [
+     165,
+     37
+    ],
+    [
+     170,
+     35
+    ]
+   ]
+  },
+  {
+   "use": "animal/sunfish.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "일본 근해 개복치",
+    "en": "Offshore Japan Sunfish",
+    "zh": "日本近海翻车鱼"
+   },
+   "dur": 280,
+   "size": 28,
+   "path": [
+    [
+     145,
+     32
+    ],
+    [
+     150,
+     34
+    ],
+    [
+     148,
+     38
+    ],
+    [
+     143,
+     35
+    ],
+    [
+     145,
+     32
+    ]
+   ]
+  },
+  {
+   "use": "animal/orca.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "노르웨이해 범고래",
+    "en": "Norwegian Sea Orca",
+    "zh": "挪威海虎鲸"
+   },
+   "dur": 260,
+   "size": 30,
+   "path": [
+    [
+     0,
+     68
+    ],
+    [
+     5,
+     70
+    ],
+    [
+     0,
+     72
+    ],
+    [
+     -5,
+     70
+    ],
+    [
+     0,
+     68
+    ]
+   ]
+  },
+  {
+   "use": "animal/giant-squid.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "대서양 대왕오징어",
+    "en": "Atlantic Giant Squid",
+    "zh": "大西洋大王乌贼"
+   },
+   "dur": 300,
+   "size": 30,
+   "path": [
+    [
+     -20,
+     -20
+    ],
+    [
+     -25,
+     -18
+    ],
+    [
+     -22,
+     -15
+    ],
+    [
+     -18,
+     -17
+    ],
+    [
+     -20,
+     -20
+    ]
+   ]
+  },
+  {
+   "use": "animal/manta.svg",
+   "kind": "sea",
+   "z": 0,
+   "name": {
+    "ko": "인도양 만타가오리",
+    "en": "Indian Ocean Manta",
+    "zh": "印度洋蝠鲼"
+   },
+   "dur": 260,
+   "size": 30,
+   "path": [
+    [
+     65,
+     -5
+    ],
+    [
+     70,
+     -3
+    ],
+    [
+     68,
+     0
+    ],
+    [
+     63,
+     -2
+    ],
+    [
+     65,
+     -5
+    ]
+   ]
+  }
+ ]
 }

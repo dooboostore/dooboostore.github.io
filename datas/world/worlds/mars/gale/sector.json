@@ -1,0 +1,13 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "mars/vehicle/perseverance.svg", "count": 1, "scale": 0.9, "behavior": {"type": "route", "path": "M560 480 L480 520 L403 429 L480 520 L560 480", "dur": 200}},
+    {"use": "mars/structure/sample-tube.svg", "at": [[420, 450], [432, 462], [410, 470]], "scale": 0.8},
+    {"use": "mars/nature/mars-rock.svg", "count": 14, "area": [80, 80, 800, 800], "scale": 0.8, "spacing": 60}
+  ],
+  "labels": [
+    {"text": {"ko": "게일 크레이터", "en": "Gale Crater", "zh": "盖尔撞击坑"}, "at": [480, 140], "size": 14, "color": "#6f6a7a", "info": {"emoji": "🔴", "kind": "지명", "title": {"ko": "게일 크레이터", "en": "Gale Crater", "zh": "盖尔撞击坑"}, "desc": {"ko": "지름 154km의 크레이터예요. 한가운데 샤프산이 우뚝 서 있어요.", "en": "A crater 154 km across, with Mount Sharp standing tall in the middle.", "zh": "直径154公里的撞击坑。正中央矗立着夏普山。"}}},
+    {"text": {"ko": "샤프산", "en": "Mount Sharp", "zh": "夏普山"}, "at": [480, 480], "size": 12, "color": "#6f6a7a", "info": {"emoji": "⛰️", "kind": "지명", "title": {"ko": "샤프산", "en": "Mount Sharp", "zh": "夏普山"}, "desc": {"ko": "크레이터 한가운데 높이 5.5km의 산이에요. 큐리오시티가 층층이 쌓인 지층을 오르며 옛 환경을 읽고 있어요.", "en": "A 5.5 km mountain in the middle of the crater. Curiosity is climbing its layered strata, reading the ancient environment.", "zh": "撞击坑正中央高5.5公里的山。好奇号正沿着层层岩层向上爬解读着远古环境。"}}},
+    {"text": {"ko": "브래드버리 착륙지", "en": "Bradbury Landing", "zh": "布雷德伯里着陆点"}, "at": [403, 460], "size": 10, "color": "#6f6a7a", "info": {"emoji": "🚀", "kind": "지명", "title": {"ko": "브래드버리 착륙지", "en": "Bradbury Landing", "zh": "布雷德伯里着陆点"}, "desc": {"ko": "2012년 큐리오시티가 내려앉은 곳이에요. SF 작가 레이 브래드버리의 이름을 따서 붙였어요.", "en": "Where Curiosity touched down in 2012. It's named after the science fiction writer Ray Bradbury.", "zh": "2012年好奇号降落的地方。以科幻作家雷·布雷德伯里的名字命名。"}}}
+  ]
+}

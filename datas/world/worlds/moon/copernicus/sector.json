@@ -1,0 +1,10 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "moon/nature/moon-rock.svg", "count": 12, "area": [80, 80, 800, 800], "scale": 0.9, "spacing": 60}
+  ],
+  "labels": [
+    {"text": {"ko": "코페르니쿠스 크레이터", "en": "Copernicus Crater", "zh": "哥白尼环形山"}, "at": [480, 120], "size": 14, "color": "#6f6a7a", "info": {"emoji": "🌕", "kind": "지명", "title": {"ko": "코페르니쿠스 크레이터", "en": "Copernicus Crater", "zh": "哥白尼环形山"}, "desc": {"ko": "계단식 절벽과 중앙 봉우리가 멋진 크레이터예요. 지름이 93km나 돼요.", "en": "A crater with splendid terraced walls and central peaks. It's 93 km across.", "zh": "有着漂亮阶梯状峭壁和中央峰的环形山。直径达93公里。"}}},
+    {"text": {"ko": "중앙 봉우리", "en": "Central Peaks", "zh": "中央峰"}, "at": [498, 520], "size": 10, "color": "#6f6a7a", "info": {"emoji": "⛰️", "kind": "지명", "title": {"ko": "중앙 봉우리", "en": "Central Peaks", "zh": "中央峰"}, "desc": {"ko": "충돌의 반동으로 바닥이 솟아오른 봉우리예요. 3개가 나란히 서 있어요.", "en": "Peaks pushed up from the floor by the rebound of the impact. Three stand in a row.", "zh": "因撞击反弹从底部隆起的山峰。三个并排而立。"}}}
+  ]
+}

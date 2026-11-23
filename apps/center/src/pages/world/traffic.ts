@@ -12,7 +12,7 @@ import { EntityRegistry, SVGNS, useAt, Win } from './entity';
 type LL = [number, number];
 // upright: 진행 방향으로 돌리지 않고 늘 세워 둔다 (구름). opacity: 그림 자체 투명도
 // period: 이 초마다 한 번만 지나간다 (유성처럼 가끔 스치는 것). 지나가는 데는 dur 초, 나머지 시간은 안 보임
-export type Route = { use: string; kind: 'sea' | 'air' | 'space'; name?: import('./i18n').Text; upright?: boolean; opacity?: number; period?: number; path: LL[]; dur: number; count?: number; pingpong?: boolean; z?: number; size?: number; vars?: Record<string, string> };
+export type Route = { use: string; kind: 'sea' | 'air' | 'space'; name?: import('./i18n').Text; upright?: boolean; opacity?: number; period?: number; path: LL[]; dur: number; count?: number; pingpong?: boolean; z?: number; size?: number; vars?: Record<string, string>; orbitR?: number };
 
 // body: 진행 방향으로 돌고 크기가 붙는 그림 · shadow: 비행기처럼 낮게 나는 것의 땅 그림자 (몸체를 위로 띄워 고도가 느껴지게)
 const flyer = (r: Route) => r.kind === 'air' && (r.z ?? 0) > 0 && (r.z ?? 0) <= 100;
@@ -24,18 +24,20 @@ const altScale = (r: Route) => {
   return 1 + 0.045 * (1 - Math.exp(-z / 6));
 };
 let RADIUS_REF = 6371;
-type Vehicle = { el: SVGGElement; body: SVGGElement; shadow?: SVGGElement; route: Route; offset: number; at: (u: number) => LL; total: number };
+type Vehicle = { el: SVGGElement; body: SVGGElement; shadow?: SVGGElement; route: Route; offset: number; at: (u: number) => LL; total: number; born: number; wx: boolean };
 
 export class Traffic {
   private vehicles: Vehicle[] = [];
   private sea: SVGGElement;
   private air: SVGGElement;
+  private wx: SVGGElement; // 구름·태풍 전용층: 실시간 도착·토글 때 여기만 갈아끼워 배·비행기는 안 깜빡인다
   private space: SVGGElement;
   private radiusKm = 6371;
 
   constructor(private w: Win, private reg: EntityRegistry, parent: SVGGElement) {
     this.sea = w.document.createElementNS(SVGNS, 'g');
     this.air = w.document.createElementNS(SVGNS, 'g');
+    this.wx = w.document.createElementNS(SVGNS, 'g');
     this.space = w.document.createElementNS(SVGNS, 'g');
     // 지표의 것(배·구름·태풍)은 지구 원판 밖으로 삐져나오지 않게 원으로 자른다
     // 그림자 색: 그림의 알파만 남겨 옅은 남색으로
@@ -48,7 +50,7 @@ export class Traffic {
     clip.appendChild(this.disk);
     const surface = w.document.createElementNS(SVGNS, 'g');
     surface.setAttribute('clip-path', `url(#${clip.id})`);
-    surface.append(this.sea, this.air);
+    surface.append(this.sea, this.air, this.wx);
     this.sky = w.document.createElementNS(SVGNS, 'g'); // 비행기 몸체: 지구 원판 밖으로도 나간다 (그림자는 air 에서 원판 안으로 잘림)
     parent.replaceChildren(shade, clip, surface, this.sky, this.space);
   }
@@ -83,7 +85,7 @@ export class Traffic {
   }
 
   async set(routes: Route[], radiusKm = 6371) {
-    // 여러 번 겹쳐 불려도(기본 → 구름 도착 → 태풍 도착) 마지막 것만 그린다. 그림 불러오기를 기다린 뒤에 비우고 채워야
+    // 여러 번 겹쳐 불려도 마지막 것만 그린다. 그림 불러오기를 기다린 뒤에 비우고 채워야
     // 앞선 호출이 뒤늦게 덧붙여 같은 교통이 두세 겹 생기지 않는다
     const token = ++this.setToken;
     const entities = await Promise.all(routes.map((r) => this.reg.load(r.use)));
@@ -92,9 +94,28 @@ export class Traffic {
     RADIUS_REF = radiusKm;
     this.sea.replaceChildren();
     this.air.replaceChildren();
+    this.wx.replaceChildren();
     this.sky.replaceChildren();
     this.space.replaceChildren();
     this.vehicles = [];
+    this.add(routes, entities, false);
+  }
+
+  private wxToken = 0;
+
+  // 구름·태풍만 갈아끼운다 (실시간 도착·토글·실패 fallback). 배·비행기 DOM 은 손대지 않아 깜빡이지 않는다
+  async setWeather(routes: Route[], radiusKm = 6371) {
+    const token = ++this.wxToken;
+    const entities = await Promise.all(routes.map((r) => this.reg.load(r.use)));
+    if (token !== this.wxToken) return;
+    this.radiusKm = radiusKm;
+    RADIUS_REF = radiusKm;
+    this.wx.replaceChildren();
+    this.vehicles = this.vehicles.filter((v) => !v.wx);
+    this.add(routes, entities, true);
+  }
+
+  private add(routes: Route[], entities: Awaited<ReturnType<EntityRegistry['load']>>[], wx: boolean) {
     routes.forEach((route, ri) => {
       const pts = route.path;
       const segs = pts.slice(1).map((p, i) => ({ f: geoInterpolate(pts[i], p), d: geoDistance(pts[i], p) }));
@@ -129,8 +150,9 @@ export class Traffic {
           this.air.appendChild(shadow);
         }
         el.appendChild(body);
-        (route.kind === 'space' ? this.space : flyer(route) ? this.sky : route.kind === 'air' ? this.air : this.sea).appendChild(el);
-        this.vehicles.push({ el, body, shadow, route, offset: i / n + ri * 0.137, at, total });
+        if (wx) this.wx.appendChild(el);
+        else (route.kind === 'space' ? this.space : flyer(route) ? this.sky : route.kind === 'air' ? this.air : this.sea).appendChild(el);
+        this.vehicles.push({ el, body, shadow, route, offset: i / n + ri * 0.137, at, total, born: this.w.performance.now() / 1000, wx });
       }
     });
   }
@@ -172,7 +194,7 @@ export class Traffic {
         continue;
       }
       const ahead = v.at(Math.min(1, Math.max(0, t + dir * 0.0015)));
-      const sAlt = altScale(r);
+      const sAlt = r.orbitR ?? altScale(r);
       const p = lifted ? orbit(ll, sAlt) : proj(ll);
       const q = lifted ? orbit(ahead, sAlt) : proj(ahead);
       // 화면 밖이면 숨기고 아무것도 쓰지 않는다 (쓸 때마다 다시 그리기 비용)
@@ -181,8 +203,10 @@ export class Traffic {
         continue;
       }
       const ang = r.upright ? 0 : (Math.atan2(q[0] - p[0], -(q[1] - p[1])) * 180) / Math.PI; // 기수(위쪽) 기준 진행 방향
+      // 새로 붙은 것은 1.2초에 걸쳐 스르륵 나타난다 (실시간 구름이 팍 튀던 문제)
+      const appear = Math.min(1, Math.max(0, (nowSec - v.born) / 1.2));
       v.el.style.display = '';
-      v.el.style.opacity = String(fade * (r.opacity ?? 1));
+      v.el.style.opacity = String(fade * (r.opacity ?? 1) * appear);
       // 지표의 것은 구면에 붙어 있으므로 가장자리로 갈수록 반지름 방향으로 납작해진다 (정사영 단축). 태풍이 우주로 삐져나와 보이던 문제
       let squash = '';
       if (!space) {
@@ -200,7 +224,7 @@ export class Traffic {
         const g = proj(ll);
         if (g && geoDistance(ll, center) < 1.5) {
           v.shadow.style.display = '';
-          v.shadow.style.opacity = String(fade);
+          v.shadow.style.opacity = String(fade * appear);
           v.shadow.setAttribute('transform', `translate(${g[0].toFixed(1)} ${g[1].toFixed(1)})${squash}`);
           (v.shadow.firstElementChild as SVGGElement).setAttribute('transform', turn);
         } else v.shadow.style.display = 'none';

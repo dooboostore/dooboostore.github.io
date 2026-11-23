@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 26">
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
+  <!-- 케이블카: 언덕 전차, 종과 운전수, 밤엔 실내등 -->
+  <ellipse cx="17" cy="24.6" rx="15" ry="1.3" fill="#3b5a2e" opacity="0.22"/>
+  <g transform="translate(17 24.6) translate(0 0) scale(1.4)">
+  <ellipse rx="5" ry="1.5" fill="#3b5a2e" opacity="0.22"/>
+</g>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="4" y="8" width="26" height="13" rx="2" fill="var(--car, #8a3d3d)"/>
+    <rect x="4" y="8" width="26" height="4" rx="2" fill="#000" opacity="0.12"/>
+    <rect x="11" y="2.4" width="12" height="6.4" rx="1.4" fill="var(--roof, #e8dcc0)"/>
+    <path d="M14 2.4 L14 0.8 M20 2.4 L20 0.8" fill="none"/>
+    <g fill="#d8eff9"><rect x="6" y="10" width="4.4" height="4.6" rx="0.8"/><rect x="11.4" y="10" width="4.4" height="4.6" rx="0.8"/><rect x="18.2" y="10" width="4.4" height="4.6" rx="0.8"/><rect x="23.6" y="10" width="4" height="4.6" rx="0.8"/></g>
+    <rect x="6" y="16" width="22" height="3.4" rx="1" fill="var(--trim, #e8b64a)"/>
+    <circle cx="17" cy="6" r="1.3" fill="#e8b64a"/>
+    <rect x="16.6" y="3.4" width="0.8" height="1.4" fill="#8a5a3f"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="6.4" y="10.4" width="3.6" height="3.8" rx="0.6"/><rect x="18.6" y="10.4" width="3.6" height="3.8" rx="0.6"/>
+  </g>
+  <g transform="translate(9 21)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(0.7)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+  <g transform="translate(25 21)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin .9s linear infinite;"><g transform="translate(0 0) scale(0.7)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #d3d8dd)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#8b9197"/>
+</g></g></g>
+</svg>

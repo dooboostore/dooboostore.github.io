@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5">
+  <!-- 파커 탐사선 (위에서 본 모습, 머리가 위쪽): 하얀 방열판과 파란 태양전지 날개 -->
+  <ellipse cx="0" cy="2" rx="6" ry="10" fill="#fff" opacity="0.25"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-7 -1 L-3.4 -1 L-3.4 3 L-7 3 Z" fill="#4f6fb0"/>
+    <path d="M-7 -1 L-4.5 -1 M-7 0.4 L-4.5 0.4 M-7 1.8 L-4.5 1.8" stroke="#a8c4e8" stroke-width="0.3"/>
+    <path d="M7 -1 L3.4 -1 L3.4 3 L7 3 Z" fill="#4f6fb0"/>
+    <path d="M7 -1 L4.5 -1 M7 0.4 L4.5 0.4 M7 1.8 L4.5 1.8" stroke="#a8c4e8" stroke-width="0.3"/>
+    <path d="M0 -9.4 L3.4 -5.4 L2.2 2.4 L0 5 L-2.2 2.4 L-3.4 -5.4 Z" fill="#f2f4f6"/>
+    <path d="M0 -9.4 L3.4 -5.4 L2.2 2.4 L0 5 L-2.2 2.4 L-3.4 -5.4 Z" fill="none"/>
+    <path d="M0 -9.4 L1.4 -5.8 L0.8 1.4 L0 3.4 L-0.8 1.4 L-1.4 -5.8 Z" fill="#d8dce2"/>
+    <rect x="-1.2" y="4.6" width="2.4" height="2.6" rx="0.5" fill="#8a8f98"/>
+    <path d="M0 7.2 L0 9.4" fill="none"/>
+    <path d="M-1.6 8.2 L1.6 8.2 L1 9.6 L-1 9.6 Z" fill="#e8b64a"/>
+    <circle cx="0" cy="-3" r="0.9" fill="#4f6fb0"/>
+  </g>
+</svg>

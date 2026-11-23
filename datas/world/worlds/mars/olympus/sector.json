@@ -1,0 +1,11 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "mars/nature/mars-rock.svg", "count": 14, "area": [80, 80, 800, 800], "scale": 0.9, "spacing": 60},
+    {"use": "mars/nature/dust-devil", "count": 1, "area": [200, 200, 560, 560], "scale": 1.0, "spacing": 100}
+  ],
+  "labels": [
+    {"text": {"ko": "올림푸스 칼데라", "en": "Olympus Caldera", "zh": "奥林匹斯破火山口"}, "at": [480, 300], "size": 14, "color": "#6f6a7a", "info": {"emoji": "🌋", "kind": "지명", "title": {"ko": "올림푸스 칼데라", "en": "Olympus Caldera", "zh": "奥林匹斯破火山口"}, "desc": {"ko": "화구 3개가 포개진 정상이에요. 높이가 21.9km로 태양계에서 가장 높은 산이랍니다.", "en": "The summit where three craters overlap. At 21.9 km high, it's the tallest mountain in the solar system.", "zh": "三个火山口叠在一起的山顶。高21.9公里是太阳系最高的山。"}}},
+    {"text": {"ko": "화산 옆면", "en": "Volcano Flank", "zh": "火山侧翼"}, "at": [240, 700], "size": 11, "color": "#6f6a7a", "info": {"emoji": "⛰️", "kind": "지명", "title": {"ko": "화산 옆면", "en": "Volcano Flank", "zh": "火山侧翼"}, "desc": {"ko": "너비가 600km나 되는 완만한 옆면이에요. 경사가 완만해서 걸어 올라갈 수 있을 정도래요.", "en": "A gentle flank 600 km wide. The slope is so mild they say you could walk right up it.", "zh": "宽达600公里的平缓侧翼。据说坡度平缓走都能走上去。"}}}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+ "radiusKm": 69911,
+ "surface": [
+  "#e8c8a0",
+  "#b98a5e"
+ ],
+ "glow": "#f0d0a0",
+ "features": "features.json",
+ "styles": {
+  "banda": {
+   "stroke": "#f4e2c4",
+   "opacity": 0.85
+  },
+  "bandb": {
+   "stroke": "#d9a06a",
+   "opacity": 0.85
+  },
+  "bandc": {
+   "stroke": "#c98a5a",
+   "opacity": 0.8
+  },
+  "spot": {
+   "fill": "#d95f3c",
+   "stroke": "#a53e20"
+  }
+ },
+ "spin": 2.5,
+ "radio": false,
+ "atmosphere": false,
+ "traffic": []
+}

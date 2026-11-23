@@ -1,0 +1,15 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "moon/landmark/eagle.svg", "at": [480, 480], "scale": 1.0},
+    {"use": "moon/structure/us-flag.svg", "at": [450, 488], "scale": 0.8},
+    {"use": "moon/vehicle/rover.svg", "at": [560, 545], "scale": 0.9},
+    {"use": "moon/people/astronaut", "count": 2, "area": [430, 445, 120, 100], "scale": 0.75, "spacing": 10},
+    {"use": "moon/nature/footprints.svg", "at": [[460, 500], [540, 560], [500, 430]], "scale": 1.2},
+    {"use": "moon/nature/moon-rock.svg", "count": 12, "area": [60, 60, 840, 840], "scale": 0.8, "spacing": 50}
+  ],
+  "labels": [
+    {"text": {"ko": "챌린저", "en": "Challenger", "zh": "挑战者号"}, "at": [480, 412], "size": 14, "color": "#6f6a7a", "info": {"emoji": "🌕", "kind": "지명", "title": {"ko": "챌린저", "en": "Challenger", "zh": "挑战者号"}, "desc": {"ko": "1972년 아폴로 17호 착륙선 챌린저가 내린 곳이에요. 마지막으로 달에 간 사람들의 발자국이 남아 있어요.", "en": "Where the Apollo 17 lander Challenger touched down in 1972. The footprints of the last people to visit the Moon remain here.", "zh": "1972年阿波罗17号登月舱“挑战者”号降落的地方。最后一批登月者的脚印留在这里。"}}},
+    {"text": {"ko": "쇼티 크레이터", "en": "Shorty Crater", "zh": "肖蒂陨石坑"}, "at": [672, 640], "size": 10, "color": "#6f6a7a", "info": {"emoji": "🟠", "kind": "지명", "title": {"ko": "쇼티 크레이터", "en": "Shorty Crater", "zh": "肖蒂陨石坑"}, "desc": {"ko": "주황색 화산 유리 구슬이 나온 크레이터예요. 달에도 화산이 있었다는 증거랍니다.", "en": "A crater where orange volcanic glass beads were found. Proof that the Moon once had volcanoes.", "zh": "发现橙色火山玻璃珠的陨石坑。是月球曾经有过火山的证据。"}}}
+  ]
+}

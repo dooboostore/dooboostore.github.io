@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 36">
+  <!-- 알카트라즈: 만 한가운데 바위섬, 등대와 감옥. 밤엔 등대 불빛이 빙빙 돈다 -->
+  <ellipse cx="28" cy="34" rx="25" ry="1.6" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 34 Q6 26 14 24 Q22 22 30 23 Q40 24 48 28 Q52 30 52 34 Z" fill="#8a8a72"/>
+    <path d="M10 29 Q18 26 28 26.4 Q38 26.8 46 29" fill="none" opacity="0.4"/>
+    <rect x="16" y="14" width="22" height="11" rx="1.4" fill="#d8d2c2"/>
+    <rect x="16" y="14" width="22" height="3" rx="1.4" fill="#000" opacity="0.08"/>
+    <g fill="#7d8a96"><rect x="18.6" y="17.4" width="2" height="3" rx="0.5"/><rect x="22.4" y="17.4" width="2" height="3" rx="0.5"/><rect x="26.4" y="17.4" width="2" height="3" rx="0.5"/><rect x="30.4" y="17.4" width="2" height="3" rx="0.5"/><rect x="34.4" y="17.4" width="2" height="3" rx="0.5"/><rect x="18.6" y="21.4" width="2" height="2.6" rx="0.5"/><rect x="22.4" y="21.4" width="2" height="2.6" rx="0.5"/><rect x="26.4" y="21.4" width="2" height="2.6" rx="0.5"/><rect x="30.4" y="21.4" width="2" height="2.6" rx="0.5"/><rect x="34.4" y="21.4" width="2" height="2.6" rx="0.5"/></g>
+    <rect x="24" y="4" width="6" height="11" rx="1" fill="#f1ece0"/>
+    <path d="M23 4 L31 4 L29.6 0.8 L24.4 0.8 Z" fill="#5f7a8a"/>
+    <rect x="26" y="7" width="2" height="3" rx="0.5" fill="#4f6fb0"/>
+    <rect x="25" y="12.6" width="4" height="1.6" rx="0.6" fill="#8a5a3f"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="26" y="7" width="2" height="3" rx="0.5"/>
+    <rect x="18.9" y="17.7" width="1.4" height="2.4" rx="0.4"/><rect x="26.7" y="17.7" width="1.4" height="2.4" rx="0.4"/>
+  </g>
+  <path d="M8 31 Q18 29 28 29.4" stroke="#fff" stroke-width="0.6" opacity="0.4" fill="none" stroke-linecap="round"/>
+</svg>

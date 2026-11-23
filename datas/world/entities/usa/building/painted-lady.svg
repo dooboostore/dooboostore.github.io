@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 40">
+  <!-- 페인티드 레이디: 빅토리아식 주택, 뾰족 박공과 둥근 창, 화려한 장식 몰딩. 밤엔 창 불빛 -->
+  <ellipse cx="15" cy="39" rx="13.5" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="20" y="1.4" width="2.2" height="3.4" rx="0.6" fill="#d98a6a"/>
+    <path d="M4 12 L10 3.4 Q10.6 2.6 11.6 2.6 L18.4 2.6 Q19.4 2.6 20 3.4 L26 12 Z" fill="var(--roof, #5f7a8a)"/>
+    <path d="M6 10 L10 4.6 L20 4.6 L24 10 Z" fill="#fff" opacity="0.2"/>
+    <rect x="4" y="12" width="22" height="26.4" rx="0.9" fill="var(--wall, #e8b7c4)"/>
+    <rect x="4" y="32.4" width="22" height="6" rx="0.6" fill="var(--base, #9a6a8a)"/>
+    <rect x="3.4" y="31.8" width="23.2" height="1.2" rx="0.6" fill="#f6e3e8"/>
+    <path d="M4 13.4 Q15 14.2 26 13.4 L25.6 12 L4.4 12 Z" fill="#fff" opacity="0.25"/>
+    <g fill="#fdfbf4"><circle cx="15" cy="8.6" r="2.2"/><path d="M12.8 8.6 L15 6.4 L17.2 8.6 L17.2 10.4 L12.8 10.4 Z"/></g>
+    <g fill="#a9c4d6"><rect x="6.4" y="15" width="3" height="3.6" rx="0.7"/><rect x="11.4" y="15" width="3" height="3.6" rx="0.7"/><rect x="16.4" y="15" width="3" height="3.6" rx="0.7"/><rect x="6.4" y="20.4" width="3" height="3.6" rx="0.7"/><rect x="20.6" y="20.4" width="3" height="3.6" rx="0.7"/><rect x="11.4" y="25.8" width="3" height="3.6" rx="0.7"/><rect x="16.4" y="25.8" width="3" height="3.6" rx="0.7"/></g>
+    <g fill="none"><path d="M5.4 23 L11.4 23 M19.6 23 L24.6 23" stroke-width="0.7"/><path d="M5.4 24.4 L8 24.4 M6.4 24.4 L6.4 23 M11.4 24.4 L11.4 23 M19.6 24.4 L19.6 23 M24.6 24.4 L24.6 23" stroke-width="0.4"/></g>
+    <g fill="#8a5a3f"><path d="M5.2 24.4 L8.4 24.4 L8 25.4 L5.6 25.4 Z"/><path d="M21.6 24.4 L24.8 24.4 L24.4 25.4 L22 25.4 Z"/></g>
+    <path d="M13 38.4 L13 35.4 C13 33.4 17 33.4 17 35.4 L17 38.4 Z" fill="var(--door, #6b4a3a)"/>
+    <circle cx="16" cy="37" r="0.32" fill="#e8b64a"/>
+    <g fill="#b9c7d4"><path d="M6.4 37.6 L6.4 35.8 C6.4 34.4 9.6 34.4 9.6 35.8 L9.6 37.6 Z"/><path d="M20.4 37.6 L20.4 35.8 C20.4 34.4 23.6 34.4 23.6 35.8 L23.6 37.6 Z"/></g>
+  </g>
+  <g fill="var(--flower, #e9574a)"><circle cx="5.8" cy="24.1" r="0.5"/><circle cx="7" cy="23.9" r="0.45"/><circle cx="22.2" cy="24.1" r="0.5"/><circle cx="23.4" cy="23.9" r="0.45"/></g>
+  <g fill="#7cb366"><circle cx="6.4" cy="24.3" r="0.35"/><circle cx="22.8" cy="24.3" r="0.35"/></g>
+  <g fill="#fff" opacity="0.25"><rect x="4.6" y="13.8" width="0.9" height="17" rx="0.45"/></g>
+  <rect x="24.4" y="13.6" width="1.2" height="24.2" rx="0.6" fill="#000" opacity="0.08"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="6.7" y="15.3" width="2.4" height="3" rx="0.5"/><rect x="16.7" y="15.3" width="2.4" height="3" rx="0.5"/><rect x="11.7" y="26.1" width="2.4" height="3" rx="0.5"/><circle cx="15" cy="8.6" r="2.2"/></g>
+</svg>

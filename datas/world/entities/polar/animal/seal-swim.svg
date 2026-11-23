@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 20">
+  <!-- 헤엄치는 물범: 등을 둥글게 내밀고 물결을 가른다 -->
+  <ellipse cx="22" cy="16.8" rx="20" ry="2.6" fill="#7cc6ea"/>
+  <ellipse cx="22" cy="16" rx="20" ry="2.2" fill="#a8dcf5"/>
+  <path d="M4 16.8 Q22 18.6 40 16.8" stroke="#fff" stroke-width="0.7" opacity="0.7" fill="none" stroke-linecap="round"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 15 Q14 9.4 22 9.6 Q30 9.8 36 13.4 Q30 15.4 22 15.2 Q14 15.6 8 15 Z" fill="#8a7a68"/>
+    <path d="M34 12.6 Q37.4 10.4 38.6 7.6 Q39 6.4 37.9 6.2 Q36.8 6 36.2 7.4 Q35 9.8 33 11 Z" fill="#8a7a68"/>
+    <circle cx="37.4" cy="8.6" r="0.45" fill="#2a2421"/>
+    <path d="M38.6 9.8 L40.2 10.4 M38.4 11 L39.8 11.8" fill="none" stroke-width="0.3"/>
+    <path d="M8 15 Q5.4 15.2 4 16.6 Q6.4 17 8.6 16.2 Z" fill="#7a6a58"/>
+    <path d="M14 9.8 Q18 8.8 22 9" fill="none" opacity="0.4"/>
+    <g fill="#dff1fb"><circle cx="6" cy="12.4" r="0.8"/><circle cx="9" cy="11.2" r="0.6"/><circle cx="40" cy="12.6" r="0.7"/></g>
+  </g>
+</svg>

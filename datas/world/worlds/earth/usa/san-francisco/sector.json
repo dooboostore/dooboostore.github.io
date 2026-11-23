@@ -1,0 +1,244 @@
+{
+  "local": {
+    "size": [
+      960,
+      825
+    ],
+    "ground": "ground.svg",
+    "boundary": "boundary.json"
+  },
+  "placements": [
+    {
+      "use": "usa/landmark/golden-gate.svg",
+      "at": [
+        418,
+        472
+      ],
+      "scale": 0.85,
+      "layer": "water"
+    },
+    {
+      "use": "usa/landmark/alcatraz.svg",
+      "at": [
+        546,
+        387
+      ],
+      "scale": 0.9,
+      "layer": "water"
+    },
+    {
+      "use": "usa/animal/sealion.svg",
+      "at": [
+        560,
+        462
+      ],
+      "scale": 1
+    },
+    {
+      "use": "usa/building/painted-lady.svg",
+      "at": [
+        500,
+        551
+      ],
+      "scale": 0.9
+    },
+    {
+      "use": "usa/building/painted-lady.svg",
+      "at": [
+        543,
+        551
+      ],
+      "scale": 0.9,
+      "vars": {
+        "--wall": "#b7d4e8",
+        "--roof": "#8a5f7a"
+      }
+    },
+    {
+      "use": "people/walker",
+      "count": 10,
+      "area": [
+        480,
+        480,
+        140,
+        120
+      ],
+      "scale": 0.7,
+      "spacing": 6,
+      "vars": {
+        "--skin": [
+          "#f4d6bd",
+          "#eac3a2",
+          "#d9a77e"
+        ],
+        "--hair": [
+          "#2a2421",
+          "#3d302a",
+          "#6b4a35"
+        ],
+        "--shirt": [
+          "#e9785a",
+          "#8cbfdc",
+          "#f3d38a"
+        ],
+        "--pants": [
+          "#3d4a6b",
+          "#56627e"
+        ]
+      }
+    },
+    {
+      "use": "animal/pigeon",
+      "count": 5,
+      "area": [
+        480,
+        480,
+        140,
+        120
+      ],
+      "spacing": 5
+    },
+    {
+      "use": "animal/birds.svg",
+      "count": 1,
+      "z": 30,
+      "behavior": {
+        "type": "route",
+        "path": "M-60 380 C240 340 560 460 1020 400",
+        "dur": 80
+      }
+    }
+  ],
+  "labels": [
+    {
+      "text": {
+        "ko": "금문교",
+        "en": "Golden Gate Bridge",
+        "zh": "金门大桥"
+      },
+      "at": [
+        370,
+        440
+      ],
+      "size": 10.5,
+      "info": {
+        "emoji": "🌉",
+        "kind": "지명",
+        "title": {
+          "ko": "금문교",
+          "en": "Golden Gate Bridge",
+          "zh": "金门大桥"
+        },
+        "desc": {
+          "ko": "주황색 현수교예요. 안개 사이로 탑이 삐죽 나오면 모두가 카메라를 들어요.",
+          "en": "The orange suspension bridge. When its towers peek through the fog, everyone raises their camera.",
+          "zh": "橙色的悬索桥。当桥塔从雾中探出来时人人都会举起相机。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "알카트라즈",
+        "en": "Alcatraz",
+        "zh": "恶魔岛"
+      },
+      "at": [
+        604,
+        368
+      ],
+      "size": 9,
+      "info": {
+        "emoji": "🗼",
+        "kind": "지명",
+        "title": {
+          "ko": "알카트라즈",
+          "en": "Alcatraz",
+          "zh": "恶魔岛"
+        },
+        "desc": {
+          "ko": "만 한가운데 바위섬 감옥이에요. 탈출 불가능하다던 곳, 지금은 갈매기들의 섬이에요.",
+          "en": "A rock-island prison in the middle of the bay. Said to be inescapable, now it belongs to the seagulls.",
+          "zh": "海湾中央岩石岛上的监狱。曾号称无法逃脱如今是海鸥们的岛。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "피어39",
+        "en": "Pier 39",
+        "zh": "39号码头"
+      },
+      "at": [
+        560,
+        472
+      ],
+      "size": 8.4,
+      "info": {
+        "emoji": "🦭",
+        "kind": "지명",
+        "title": {
+          "ko": "피어39",
+          "en": "Pier 39",
+          "zh": "39号码头"
+        },
+        "desc": {
+          "ko": "바다사자들이 낮잠 자는 부두예요. 낑낑거리는 소리가 끊이지 않아요.",
+          "en": "The pier where sea lions nap. Their barking never stops.",
+          "zh": "海狮们睡午觉的码头。嗷嗷的叫声不断。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "페인티드 레이디",
+        "en": "Painted Ladies",
+        "zh": "彩绘女士"
+      },
+      "at": [
+        521,
+        585
+      ],
+      "size": 8.4,
+      "info": {
+        "emoji": "🏠",
+        "kind": "지명",
+        "title": {
+          "ko": "페인티드 레이디",
+          "en": "Painted Ladies",
+          "zh": "彩绘女士"
+        },
+        "desc": {
+          "ko": "알록달록 빅토리아식 주택이에요. 파스텔 벽과 하얀 장식이 예뻐요.",
+          "en": "Colourful Victorian houses, pretty in pastel with white trim.",
+          "zh": "五颜六色的维多利亚式住宅粉彩墙面配白色装饰很漂亮。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "차이나타운",
+        "en": "Chinatown",
+        "zh": "唐人街"
+      },
+      "at": [
+        610,
+        540
+      ],
+      "size": 7.7,
+      "info": {
+        "emoji": "🏮",
+        "kind": "지명",
+        "title": {
+          "ko": "차이나타운",
+          "en": "Chinatown",
+          "zh": "唐人街"
+        },
+        "desc": {
+          "ko": "북미에서 가장 오래된 차이나타운이에요. 용 문패가 반겨줘요.",
+          "en": "The oldest Chinatown in North America. A dragon gate welcomes you.",
+          "zh": "北美最古老的唐人街。龙门牌楼迎接着你。"
+        }
+      }
+    }
+  ]
+}

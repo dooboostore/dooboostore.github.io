@@ -1,0 +1,27 @@
+{
+ "radiusKm": 24622,
+ "surface": [
+  "#5f7fe8",
+  "#2c3fa0"
+ ],
+ "glow": "#7f9ff0",
+ "features": "features.json",
+ "styles": {
+  "band": {
+   "stroke": "#8fa8f0",
+   "opacity": 0.6
+  },
+  "spot": {
+   "fill": "#1c2a6e",
+   "stroke": "#101a4e"
+  },
+  "streak": {
+   "stroke": "#dfe8ff",
+   "opacity": 0.8
+  }
+ },
+ "spin": 2,
+ "radio": false,
+ "atmosphere": false,
+ "traffic": []
+}

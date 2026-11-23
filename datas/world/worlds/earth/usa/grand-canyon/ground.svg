@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 324">
+  <!-- 그랜드캐니언 지면 — tools/build-city.py 로 생성한 기본 틀 + 아래 '도시 장식' 손그림.
+       로컬 좌표 = bounds [[-112.35,35.95],[-111.8,36.1]] 등장방형. 물: OSM 수면 + Natural Earth 10m 바다. 도로: OSM (motorway|trunk|primary) -->
+  <defs>
+    <pattern id="grass" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="6" fill="#f4e8c8" opacity="0.45"/>
+      <path d="M3 8 l1.2 -2.4 l1.2 2.4 M11 17 l1 -2 l1 2 M17 5 l0.9 -1.8 l0.9 1.8" stroke="#c9ad7a" stroke-width="0.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="8" cy="13" r="0.7" fill="#fff8d6"/>
+      <circle cx="19.5" cy="11" r="0.6" fill="#e8c99a"/>
+    </pattern>
+    <pattern id="ripple" width="30" height="22" patternUnits="userSpaceOnUse">
+      <path d="M4 8 q3 -2.4 6 0 q3 2.4 6 0 M17 18 q2.4 -2 4.8 0 q2.4 2 4.8 0" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </pattern>
+  </defs>
+  <rect x="-20" y="-20" width="1000" height="364" fill="#ecdcb4"/>
+  <rect x="-20" y="-20" width="1000" height="364" fill="url(#grass)"/>
+
+  <!-- 물 (강·호수·바다): 공원 녹지 → 외곽선 → 모래 → 물(+물거품 테두리) → 잔물결 -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="" fill="#b9de98" stroke="#b9de98" stroke-width="14" fill-rule="evenodd"/>
+    <path d="" fill="#f3e4bf" stroke="#5b4636" stroke-width="7.2" fill-rule="evenodd"/>
+    <path d="" fill="#f3e4bf" stroke="#f3e4bf" stroke-width="5.6" fill-rule="evenodd"/>
+    <path d="" fill="#7cc6ea" stroke="#ffffff" stroke-width="1.6" fill-rule="evenodd" data-zone="water"/>
+    <path d="" fill="url(#ripple)" fill-rule="evenodd"/>
+  </g>
+
+  <!-- 큰 도로 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+    <path d="" stroke="#ffffff" stroke-width="0.6" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- ==== 도시 장식 (손으로: 산·공원·광장·지명 라벨 등, 그림체 가이드 §8.6) ==== -->
+  <!-- 협곡 (손으로): 층층 바위 + 콜로라도강 -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-20 78 Q120 70 240 78 Q360 86 480 78 Q600 70 720 78 Q840 86 980 78 L980 210 Q840 218 720 210 Q600 202 480 210 Q360 218 240 210 Q120 202 -20 210 Z" fill="#f2e3c8" stroke="#5b4636" stroke-width="1.6"/>
+    <path d="M-20 96 Q120 88 240 96 Q360 104 480 96 Q600 88 720 96 Q840 104 980 96 L980 112 Q840 120 720 112 Q600 104 480 112 Q360 120 240 112 Q120 104 -20 112 Z" fill="#e8c98f"/>
+    <path d="M-20 118 Q120 110 240 118 Q360 126 480 118 Q600 110 720 118 Q840 126 980 118 L980 140 Q840 148 720 140 Q600 132 480 140 Q360 148 240 140 Q120 132 -20 140 Z" fill="#c2523f" opacity="0.85"/>
+    <path d="M-20 144 Q120 136 240 144 Q360 152 480 144 Q600 136 720 144 Q840 152 980 144 L980 162 Q840 170 720 162 Q600 154 480 162 Q360 170 240 162 Q120 154 -20 162 Z" fill="#8a4a3a"/>
+    <path d="M-20 166 Q120 158 240 166 Q360 174 480 166 Q600 158 720 166 Q840 174 980 166 L980 196 Q840 202 720 196 Q600 190 480 196 Q360 202 240 196 Q120 190 -20 196 Z" fill="#5d4a3c"/>
+    <path d="M-20 178 Q120 172 240 178 Q360 184 480 178 Q600 172 720 178 Q840 184 980 178" fill="none" stroke="#7cc6ea" stroke-width="5" data-zone="water"/>
+    <path d="M-20 178 Q120 172 240 178 Q360 184 480 178 Q600 172 720 178 Q840 184 980 178" fill="none" stroke="#fff" stroke-width="0.8" opacity="0.6"/>
+  </g>
+</svg>

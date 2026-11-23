@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+  <!-- 노새: 협곡 등산로의 일꾼, 짐을 지고 뚜벅뚜벅 -->
+  <ellipse cx="18" cy="22.6" rx="15" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 20 L8 12 M14 20 L14 12" fill="none"/>
+    <path d="M26 20 L26 12 M31 20 L30 12.4" fill="none"/>
+    <path d="M6 8 Q18 6 32 8 L30 14 Q18 15.4 8 14 Z" fill="#9a7a5e"/>
+    <path d="M6 8 Q18 6 32 8 L31.4 10 Q18 8.4 6.6 10 Z" fill="#000" opacity="0.1"/>
+    <path d="M4 6 Q6 2 9 3 Q10 6 8 8 Z M32 6 Q32 2 29 2.4 Q28 5 30 7 Z" fill="#9a7a5e"/>
+    <path d="M5 5.4 Q6 4 7.4 4.4 M31 5.4 Q30 4 28.6 4.4" fill="none" stroke="#e8b7a0" stroke-width="0.4"/>
+    <rect x="13" y="4.6" width="10" height="5" rx="1.4" fill="var(--pack, #c2523f)"/>
+    <path d="M13 7.4 L23 7.4" stroke="#f6e3bf" stroke-width="0.5"/>
+    <path d="M18 4.6 L18 2.4 M18 2.4 Q18 1 19.4 1.2" fill="none"/>
+    <circle cx="19.8" cy="1.6" r="0.7" fill="#e8b64a"/>
+    <path d="M31 8 Q33 7 33.6 5.4 Q34 4.4 33.2 4.2 Q32.4 4 32 5 Q31.4 6.4 30.4 7 Z" fill="#9a7a5e"/>
+    <circle cx="32.8" cy="6.4" r="0.4" fill="#2a2421"/>
+  </g>
+</svg>

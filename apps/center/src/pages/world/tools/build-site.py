@@ -15,13 +15,55 @@
 import json, math, os, random, re, sys
 
 SITES = {
+    # 티코 (남위 43.37, 서경 11.36, 지름 85km): 젊고 밝은 크레이터, 달 전체로 뻗는 광선
+    'moon/tycho': {
+        'name': '티코 크레이터', 'radiusKm': 1737.4, 'center': (-11.36, -43.37), 'spanKm': 140, 'seed': 31,
+        'palette': {'base': '#d3d1d9', 'spot': '#dedce3', 'dot': '#bebcc7', 'rim': '#e6e4ea', 'floor': '#b9b7c3', 'shade': '#a9a7b4', 'edge': '#8c8a98'},
+        'craters': [('티코 크레이터', 0, 0, 85000), ('서베이어 7호', 28000, 12000, 300), ('', -35000, 25000, 9000), ('', 40000, -30000, 12000)],
+        'small': 70, 'rays': 60,
+    },
+    # 코페르니쿠스 (북위 9.62, 서경 20.08, 지름 93km): 계단식 절벽과 중앙 봉우리
+    'moon/copernicus': {
+        'name': '코페르니쿠스 크레이터', 'radiusKm': 1737.4, 'center': (-20.08, 9.62), 'spanKm': 160, 'seed': 32,
+        'palette': {'base': '#d3d1d9', 'spot': '#dedce3', 'dot': '#bebcc7', 'rim': '#e6e4ea', 'floor': '#b9b7c3', 'shade': '#a9a7b4', 'edge': '#8c8a98'},
+        'craters': [('코페르니쿠스 크레이터', 0, 0, 93000), ('중앙 봉우리', 3000, -2000, 12000), ('', -45000, 30000, 8000), ('', 50000, -35000, 10000)],
+        'small': 70, 'rays': 36,
+    },
+    # 아폴로 17호 챌린저 착륙 지점 20.19N 30.77E. 쇼티 크레이터(주황색 흙!)는 동쪽 약 300m,
+    # LRV 로버로 사우스 매시프까지 다녀옴
+    'moon/apollo-17': {
+        'name': '타우루스-리트로', 'radiusKm': 1737.4, 'center': (30.77, 20.19), 'spanKm': 1.5, 'seed': 17,
+        'palette': {'base': '#d3d1d9', 'spot': '#dedce3', 'dot': '#bebcc7', 'rim': '#e6e4ea', 'floor': '#b9b7c3', 'shade': '#a9a7b4', 'edge': '#8c8a98'},
+        'craters': [('쇼티 크레이터', 300, -200, 110), ('스텐오 크레이터', -250, 150, 80), ('', 450, 250, 50)],
+        'small': 90,
+    },
     # 아폴로 11호 이글 착륙 지점 0.67416N 23.47314E. 웨스트 크레이터(지름 약 180m)는 서쪽 약 400m,
     # 리틀 웨스트(약 30m)는 동쪽 약 60m — 암스트롱이 걸어가 본 가장 먼 곳
-    'moon/apollo-11': {
-        'name': '고요의 기지', 'radiusKm': 1737.4, 'center': (23.47314, 0.67416), 'spanKm': 1.2, 'seed': 11,
+    'moon/apollo-11': {        'name': '고요의 기지', 'radiusKm': 1737.4, 'center': (23.47314, 0.67416), 'spanKm': 1.2, 'seed': 11,
         'palette': {'base': '#d3d1d9', 'spot': '#dedce3', 'dot': '#bebcc7', 'rim': '#e6e4ea', 'floor': '#b9b7c3', 'shade': '#a9a7b4', 'edge': '#8c8a98'},
         'craters': [('웨스트 크레이터', -400, 10, 185), ('리틀 웨스트 크레이터', 60, -5, 30), ('', -150, 160, 40), ('', 230, 300, 70), ('', 330, -260, 90), ('', -320, -330, 60)],
         'small': 90,
+    },
+    # 올림푸스 산 (북위 18.65, 서경 133.8): 태양계 최고 화산, 칼데라 3개 포개짐
+    'mars/olympus': {
+        'name': '올림푸스 산', 'radiusKm': 3389.5, 'center': (-133.8, 18.65), 'spanKm': 300, 'seed': 41,
+        'palette': {'base': '#e2ad86', 'spot': '#ebbd9a', 'dot': '#d39a72', 'rim': '#efc4a2', 'floor': '#cf9670', 'shade': '#bd825d', 'edge': '#9c6446'},
+        'craters': [('올림푸스 칼데라', 0, 0, 80000), ('', 22000, 12000, 60000), ('', -18000, -6000, 55000), ('', 60000, -40000, 9000)],
+        'small': 60,
+    },
+    # 게일 크레이터 (남위 4.59, 동경 137.44, 지름 154km): 한가운데 샤프산, 큐리오시티가 오르고 있음
+    'mars/gale': {
+        'name': '게일 크레이터', 'radiusKm': 3389.5, 'center': (137.44, -4.59), 'spanKm': 150, 'seed': 42,
+        'palette': {'base': '#e2ad86', 'spot': '#ebbd9a', 'dot': '#d39a72', 'rim': '#efc4a2', 'floor': '#cf9670', 'shade': '#bd825d', 'edge': '#9c6446'},
+        'craters': [('게일 크레이터', 0, 0, 150000), ('브래드버리 착륙지', -12000, 8000, 400), ('', 30000, -25000, 8000)],
+        'small': 60,
+    },
+    # 밸리스 매리너리스 (멜라스 협곡 중심): 태양계 최대 협곡
+    'mars/valles-marineris': {
+        'name': '밸리스 매리너리스', 'radiusKm': 3389.5, 'center': (-68, -10.5), 'spanKm': 350, 'seed': 43,
+        'palette': {'base': '#e2ad86', 'spot': '#ebbd9a', 'dot': '#d39a72', 'rim': '#efc4a2', 'floor': '#cf9670', 'shade': '#bd825d', 'edge': '#9c6446'},
+        'craters': [('멜라스 협곡', 0, 0, 20000), ('', -90000, 60000, 15000), ('', 100000, -70000, 12000)],
+        'small': 50, 'canyon': {'north': 10000, 'half': 65000},
     },
     # 퍼서비어런스 착륙 지점(옥타비아 E. 버틀러 착륙지) 18.4447N 77.4508E. 서쪽 약 2km 에 옛 강 삼각주 절벽,
     # 남서쪽에 모래 물결 지대(세이타)
@@ -91,6 +133,25 @@ def main():
             extra += f'    <path d="M{x - wdt:.1f} {yy:.1f} q{wdt / 4:.1f} -6 {wdt / 2:.1f} 0 t{wdt / 2:.1f} 0 t{wdt / 2:.1f} 0 t{wdt / 2:.1f} 0"/>\n'
         extra += '  </g>\n'
         labels.append(('세이타', x, round(y - rr * 0.2, 1)))
+    if 'rays' in cfg:
+        # 밝은 광선 (티코·코페르니쿠스): 중심에서 사방으로 뻗는 가는 줄
+        n = cfg['rays']
+        extra += '  <!-- 밝은 광선 -->\n  <g stroke="#ffffff" stroke-width="1.6" opacity="0.35" stroke-linecap="round">\n'
+        for i in range(n):
+            a = 2 * math.pi * (i + 0.5 * ((i * 37) % 3)) / n
+            x1, y1 = cx + 40 * math.cos(a), cy + 40 * math.sin(a)
+            x2, y2 = cx + 700 * math.cos(a), cy + 700 * math.sin(a)
+            extra += f'    <path d="M{x1:.1f} {y1:.1f} L{x2:.1f} {y2:.1f}"/>\n'
+        extra += '  </g>\n'
+    if 'canyon' in cfg:
+        # 협곡 (밸리스 매리너리스): 가로로 긴 바닥 + 양쪽 층진 절벽
+        yc = cy - cfg['canyon']['north'] * upm
+        hw = cfg['canyon']['half'] * upm
+        top = ' '.join(f'L{x:.1f} {yc - hw + 14 * math.sin(x / 60):.1f}' for x in range(-20, W + 40, 40))
+        bot = ' '.join(f'L{x:.1f} {yc + hw + 14 * math.sin(x / 55 + 2):.1f}' for x in range(-20, W + 40, 40))
+        extra += (f'  <!-- 협곡 바닥과 절벽 -->\n  <path d="M-20 {yc - hw:.1f} {top} L{W + 20} {yc - hw:.1f} L{W + 20} {yc + hw:.1f} {bot} L-20 {yc + hw:.1f} Z" fill="{p["floor"]}" opacity="0.85"/>\n'
+                  + ''.join(f'  <path d="M-20 {yc - hw + o:.1f} Q{W / 4:.1f} {yc - hw + o - 8:.1f} {W / 2:.1f} {yc - hw + o:.1f} T{W + 20:.1f} {yc - hw + o:.1f}" stroke="{p["edge"]}" stroke-width="1.6" fill="none" opacity="0.45"/>\n' for o in (10, 26, 42))
+                  + ''.join(f'  <path d="M-20 {yc + hw - o:.1f} Q{W / 4:.1f} {yc + hw - o + 8:.1f} {W / 2:.1f} {yc + hw - o:.1f} T{W + 20:.1f} {yc + hw - o:.1f}" stroke="{p["edge"]}" stroke-width="1.6" fill="none" opacity="0.45"/>\n' for o in (10, 26, 42)))
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">
   <!-- {cfg['name']} 지면 — tools/build-site.py 로 생성. 로컬 좌표 = bounds [[{w0:.5f},{s0:.5f}],[{e0:.5f},{n0:.5f}]] 등장방형,

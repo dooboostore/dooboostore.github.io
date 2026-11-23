@@ -1,0 +1,10 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "mars/nature/mars-rock.svg", "count": 14, "area": [80, 80, 800, 800], "scale": 0.9, "spacing": 60}
+  ],
+  "labels": [
+    {"text": {"ko": "멜라스 협곡", "en": "Melas Chasma", "zh": "梅拉斯峡谷"}, "at": [480, 453], "size": 14, "color": "#6f6a7a", "info": {"emoji": "🏞️", "kind": "지명", "title": {"ko": "멜라스 협곡", "en": "Melas Chasma", "zh": "梅拉斯峡谷"}, "desc": {"ko": "밸리스 매리너리스 한가운데 깊은 골짜기예요. 깊이가 7km로 지구 그랜드캐니언의 4배랍니다.", "en": "A deep valley in the middle of Valles Marineris. At 7 km deep, it's four times Earth's Grand Canyon.", "zh": "水手谷正中间的深谷。深7公里是地球大峡谷的4倍。"}}},
+    {"text": {"ko": "밸리스 매리너리스", "en": "Valles Marineris", "zh": "水手谷"}, "at": [480, 150], "size": 12, "color": "#6f6a7a", "info": {"emoji": "🔴", "kind": "지명", "title": {"ko": "밸리스 매리너리스", "en": "Valles Marineris", "zh": "水手谷"}, "desc": {"ko": "길이 4,000km의 태양계 최대 협곡이에요. 미국 대륙을 가로지를 정도랍니다.", "en": "The largest canyon in the solar system at 4,000 km long. Long enough to stretch across the United States.", "zh": "长4000公里的太阳系最大峡谷。长到能横贯美国大陆。"}}}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+ "radiusKm": 2440,
+ "surface": [
+  "#c9b8a6",
+  "#8a7563"
+ ],
+ "glow": "#d8c4ae",
+ "features": "features.json",
+ "styles": {
+  "plain": {
+   "fill": "#d4c2ae",
+   "opacity": 0.6
+  },
+  "crater": {
+   "fill": "#b09a84",
+   "stroke": "#7a6552"
+  },
+  "basin": {
+   "fill": "#cbb89f",
+   "opacity": 0.8
+  }
+ },
+ "spin": 2,
+ "radio": false,
+ "atmosphere": false,
+ "traffic": []
+}

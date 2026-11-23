@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5"><style>
+    @keyframes sun0{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+    .sune1{animation:sun0 2.6s ease-in-out 0s infinite;transform-box:fill-box;transform-origin:50% 50%}
+  </style>
+  <!-- 아기 개복치 (위에서 본 모습, 머리가 위쪽): 동그란 몸으로 둥실둥실 -->
+  <g class="sune1">
+    <ellipse cx="0" cy="0.4" rx="5" ry="7" fill="#a8b6c4" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+    <path d="M-3 -2.6 Q0 -4.4 3 -2.6 Q2.2 2.6 0 5.4 Q-2.2 2.6 -3 -2.6 Z" fill="#c2cdd8" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+    <path d="M-1.6 -8.6 C-2.6 -6.6 -2.4 -4.8 0 -4 Q2.4 -4.8 2.6 -6.6 C1.8 -8.4 -1.8 -8.4 -1.6 -8.6 Z" fill="#98a6b8" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+    <path d="M-1.6 8.6 C-2.6 6.6 -2.4 4.8 0 4 Q2.4 4.8 2.6 6.6 C1.8 8.4 -1.8 8.4 -1.6 8.6 Z" fill="#98a6b8" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+    <circle cx="-1.7" cy="-4.4" r="1" fill="#fff"/><circle cx="1.7" cy="-4.4" r="1" fill="#fff"/>
+    <circle cx="-1.7" cy="-4.3" r="0.5" fill="#2a2421"/><circle cx="1.7" cy="-4.3" r="0.5" fill="#2a2421"/>
+    <circle cx="-1.4" cy="-4.6" r="0.18" fill="#fff"/><circle cx="2" cy="-4.6" r="0.18" fill="#fff"/>
+    <ellipse cx="-2.9" cy="-3" rx="0.6" ry="0.4" fill="#f4a08a" opacity="0.8"/><ellipse cx="2.9" cy="-3" rx="0.6" ry="0.4" fill="#f4a08a" opacity="0.8"/>
+    <ellipse cx="0" cy="-1.8" rx="0.7" ry="0.9" fill="#5b6a7a" stroke="#5b4636" stroke-width="0.3"/>
+  </g>
+</svg>

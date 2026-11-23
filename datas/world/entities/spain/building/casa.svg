@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 52">
+  <!-- 바르셀로나 아파트: 황토벽(변수 wall), 옥상 난간과 굴뚝, 덧창(변수 shutter), 철제 발코니와 화분, 아치 대문과 가로등. 밤엔 창 불빛 -->
+  <ellipse cx="24" cy="50.9" rx="22" ry="1.1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="17" y="1" width="2.4" height="3.6" rx="0.6" fill="#d98a6a"/>
+    <rect x="29" y="1.6" width="2.2" height="3" rx="0.6" fill="#d98a6a"/>
+    <g fill="none"><path d="M6 7.4 L42 7.4 M6 7.4 L6 5.6 M12 7.4 L12 5.6 M18 7.4 L18 5.6 M24 7.4 L24 5.6 M30 7.4 L30 5.6 M36 7.4 L36 5.6 M42 7.4 L42 5.6"/></g>
+    <rect x="5" y="7.4" width="38" height="42.2" rx="0.9" fill="var(--wall, #e8b878)"/>
+    <rect x="5" y="43" width="38" height="6.6" rx="0.6" fill="var(--wall2, #cf9a5e)"/>
+    <rect x="4.4" y="42.4" width="39.2" height="1.2" rx="0.6" fill="#f6e3bf"/>
+    <path d="M5 9 Q24 9.8 43 9 L42.6 7.4 L5.4 7.4 Z" fill="#8a5a3f"/>
+    <g fill="#a9c4d6"><rect x="8.6" y="11" width="2.4" height="3.2" rx="0.6"/><rect x="16.8" y="11" width="2.4" height="3.2" rx="0.6"/><rect x="25" y="11" width="2.4" height="3.2" rx="0.6"/><rect x="33.2" y="11" width="2.4" height="3.2" rx="0.6"/><rect x="8.6" y="16.4" width="2.4" height="3.2" rx="0.6"/><rect x="16.8" y="16.4" width="2.4" height="3.2" rx="0.6"/><rect x="25" y="16.4" width="2.4" height="3.2" rx="0.6"/><rect x="33.2" y="16.4" width="2.4" height="3.2" rx="0.6"/><rect x="8.6" y="21.8" width="2.4" height="3.2" rx="0.6"/><rect x="25" y="21.8" width="2.4" height="3.2" rx="0.6"/><rect x="33.2" y="21.8" width="2.4" height="3.2" rx="0.6"/><rect x="8.6" y="27.2" width="2.4" height="3.2" rx="0.6"/><rect x="16.8" y="27.2" width="2.4" height="3.2" rx="0.6"/><rect x="25" y="27.2" width="2.4" height="3.2" rx="0.6"/><rect x="33.2" y="27.2" width="2.4" height="3.2" rx="0.6"/><rect x="8.6" y="32.6" width="2.4" height="3.2" rx="0.6"/><rect x="16.8" y="32.6" width="2.4" height="3.2" rx="0.6"/><rect x="25" y="32.6" width="2.4" height="3.2" rx="0.6"/><rect x="33.2" y="32.6" width="2.4" height="3.2" rx="0.6"/></g>
+    <g fill="var(--shutter, #5f9a6e)"><rect x="7.2" y="11" width="1.3" height="3.2" rx="0.4"/><rect x="11.1" y="11" width="1.3" height="3.2" rx="0.4"/><rect x="23.6" y="11" width="1.3" height="3.2" rx="0.4"/><rect x="27.5" y="11" width="1.3" height="3.2" rx="0.4"/><rect x="7.2" y="16.4" width="1.3" height="3.2" rx="0.4"/><rect x="11.1" y="16.4" width="1.3" height="3.2" rx="0.4"/><rect x="31.8" y="16.4" width="1.3" height="3.2" rx="0.4"/><rect x="35.7" y="16.4" width="1.3" height="3.2" rx="0.4"/><rect x="15.4" y="21.8" width="1.3" height="3.2" rx="0.4"/><rect x="19.3" y="21.8" width="1.3" height="3.2" rx="0.4"/><rect x="7.2" y="27.2" width="1.3" height="3.2" rx="0.4"/><rect x="11.1" y="27.2" width="1.3" height="3.2" rx="0.4"/><rect x="31.8" y="32.6" width="1.3" height="3.2" rx="0.4"/><rect x="35.7" y="32.6" width="1.3" height="3.2" rx="0.4"/></g>
+    <g fill="none"><path d="M15 25 L22 25 M15 23.6 L22 23.6 M15 25 L15 20.4 M22 25 L22 20.4"/></g>
+    <g fill="#8a5a3f"><path d="M7.6 31 L12 31 L11.6 32.2 L8 32.2 Z"/><path d="M31.6 31 L36 31 L35.6 32.2 L32 32.2 Z"/></g>
+    <path d="M21 49.6 L21 45.6 C21 43.4 27 43.4 27 45.6 L27 49.6 Z" fill="var(--door, #6b4a3a)"/>
+    <circle cx="25.8" cy="47.4" r="0.35" fill="#e8b64a"/>
+    <g fill="#b9c7d4"><path d="M9 41.6 L9 39.6 C9 38 12.4 38 12.4 39.6 L12.4 41.6 Z"/><path d="M35.6 41.6 L35.6 39.6 C35.6 38 39 38 39 39.6 L39 41.6 Z"/></g>
+  </g>
+  <g fill="var(--flower, #e9574a)"><circle cx="8.2" cy="30.7" r="0.55"/><circle cx="9.4" cy="30.5" r="0.5"/><circle cx="10.6" cy="30.7" r="0.45"/><circle cx="32.2" cy="30.7" r="0.55"/><circle cx="33.4" cy="30.5" r="0.5"/><circle cx="34.6" cy="30.7" r="0.45"/></g>
+  <g fill="#7cb366"><circle cx="8.8" cy="30.9" r="0.4"/><circle cx="32.8" cy="30.9" r="0.4"/></g>
+  <g fill="#3d3d44"><rect x="6" y="20.6" width="14" height="0.7" rx="0.35"/><rect x="28" y="20.6" width="14" height="0.7" rx="0.35"/><rect x="6" y="31.4" width="36" height="0.7" rx="0.35"/></g>
+  <g stroke="#3d3d44" stroke-width="0.28"><path d="M7 20.8 L7 20 M9 20.8 L9 20 M11 20.8 L11 20 M13 20.8 L13 20 M15 20.8 L15 20 M17 20.8 L17 20 M19 20.8 L19 20 M29 20.8 L29 20 M31 20.8 L31 20 M33 20.8 L33 20 M35 20.8 L35 20 M37 20.8 L37 20 M39 20.8 L39 20 M41 20.8 L41 20"/></g>
+  <g fill="#fff" opacity="0.25"><rect x="5.6" y="9" width="0.9" height="27" rx="0.45"/></g>
+  <rect x="41.4" y="9.4" width="1.2" height="33.4" rx="0.6" fill="#000" opacity="0.08"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="8.9" y="11.3" width="1.8" height="2.6" rx="0.4"/><rect x="25.3" y="11.3" width="1.8" height="2.6" rx="0.4"/><rect x="33.5" y="16.7" width="1.8" height="2.6" rx="0.4"/><rect x="8.9" y="22.1" width="1.8" height="2.6" rx="0.4"/><rect x="17.1" y="27.5" width="1.8" height="2.6" rx="0.4"/><rect x="33.5" y="27.5" width="1.8" height="2.6" rx="0.4"/><rect x="8.9" y="32.9" width="1.8" height="2.6" rx="0.4"/><rect x="25.3" y="32.9" width="1.8" height="2.6" rx="0.4"/></g>
+</svg>

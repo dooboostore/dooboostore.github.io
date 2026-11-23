@@ -1,0 +1,141 @@
+{
+ "radiusKm": 695700,
+ "surface": [
+  "#ffb13c",
+  "#c22e04"
+ ],
+ "glow": "#ffcf5e",
+ "features": "features.json",
+ "styles": {
+  "spot": {
+   "fill": "url(#spot-grad)"
+  },
+  "hole": {
+   "fill": "#e86a2a",
+   "opacity": 0.55
+  }
+ },
+ "spin": 0.4,
+ "radio": false,
+ "atmosphere": false,
+ "traffic": [
+  {
+   "use": "space/parker-probe.svg",
+   "kind": "space",
+   "z": 6000000,
+   "name": {
+    "ko": "파커 탐사선 (태양에 가장 가까이 간 탐사선)",
+    "en": "Parker Solar Probe (closest spacecraft to the Sun)",
+    "zh": "帕克太阳探测器（离太阳最近的探测器）"
+   },
+   "dur": 120,
+   "count": 1,
+   "size": 34,
+   "path": [
+    [
+     0,
+     0
+    ],
+    [
+     30,
+     25
+    ],
+    [
+     60,
+     40
+    ],
+    [
+     90,
+     45
+    ],
+    [
+     120,
+     40
+    ],
+    [
+     150,
+     25
+    ],
+    [
+     180,
+     0
+    ],
+    [
+     -150,
+     -25
+    ],
+    [
+     -120,
+     -40
+    ],
+    [
+     -90,
+     -45
+    ],
+    [
+     -60,
+     -40
+    ],
+    [
+     -30,
+     -25
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "use": "globe/comet.svg",
+   "kind": "space",
+   "z": 20000000,
+   "name": {
+    "ko": "선그레이저 혜성 (태양을 스치고 가는 혜성)",
+    "en": "Sungrazer comet (a comet grazing the Sun)",
+    "zh": "掠日彗星（擦过太阳的彗星）"
+   },
+   "dur": 90,
+   "count": 1,
+   "size": 30,
+   "path": [
+    [
+     -140,
+     30
+    ],
+    [
+     -100,
+     18
+    ],
+    [
+     -60,
+     8
+    ],
+    [
+     -20,
+     2
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     20,
+     -2
+    ],
+    [
+     60,
+     -8
+    ],
+    [
+     100,
+     -18
+    ],
+    [
+     140,
+     -30
+    ]
+   ]
+  }
+ ]
+}

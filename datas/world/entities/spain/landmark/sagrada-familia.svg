@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 72">
+  <!-- 사그라다 파밀리아: 가우디의 성당, 탄생 파사드 조각과 8개 첨탑, 짓는 중 크레인, 양쪽 사이프러스. 밤엔 장미창과 문이 빛난다 -->
+  <ellipse cx="48" cy="70.2" rx="44" ry="1.8" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14 44 Q16 34 24 30 Q30 26 34 18 M82 44 Q80 34 72 30 Q66 26 62 18" fill="none"/>
+    <g fill="#2f5b3a"><ellipse cx="13" cy="40" rx="3.4" ry="7"/><ellipse cx="83" cy="40" rx="3.4" ry="7"/><ellipse cx="19" cy="46" rx="2.6" ry="5"/><ellipse cx="77" cy="46" rx="2.6" ry="5"/></g>
+    <rect x="22" y="46" width="52" height="22" rx="2" fill="#d9c7a8"/>
+    <path d="M22 48 Q36 44 48 48 Q60 52 74 48 L74 46 L22 46 Z" fill="#ffffff" opacity="0.25"/>
+    <g fill="#c4b08c"><rect x="24" y="60" width="6" height="8" rx="0.6"/><rect x="66" y="60" width="6" height="8" rx="0.6"/></g>
+    <g fill="#cbb894"><rect x="30" y="34" width="6" height="34" rx="0.8"/><rect x="60" y="34" width="6" height="34" rx="0.8"/></g>
+    <g fill="#d9c7a8"><rect x="37" y="28" width="6.4" height="40" rx="0.8"/><rect x="52.6" y="28" width="6.4" height="40" rx="0.8"/></g>
+    <g fill="#cbb894"><rect x="44.8" y="20" width="6.4" height="48" rx="0.8"/></g>
+    <path d="M24 34 L27 22 L30 34 Z M30 34 L33 20 L36 34 Z M37 28 L40.2 14 L43.4 28 Z M44.8 20 L48 6 L51.2 20 Z M52.6 28 L55.8 14 L59 28 Z M60 34 L63 20 L66 34 Z M66 34 L69 22 L72 34 Z" fill="#b8a482"/>
+    <g><path d="M24.6 32 L27 22.6 L29.4 32 Z" fill="#c2523f"/><path d="M30.6 32 L33 20.6 L35.4 32 Z" fill="#f2c641"/><path d="M37.6 26 L40.2 14.6 L42.8 26 Z" fill="#3f9a80"/><path d="M45.4 18 L48 6.6 L50.6 18 Z" fill="#e9785a"/><path d="M53.2 26 L55.8 14.6 L58.4 26 Z" fill="#4f6fb0"/><path d="M60.6 32 L63 20.6 L65.4 32 Z" fill="#f2c641"/><path d="M66.6 32 L69 22.6 L71.4 32 Z" fill="#c2523f"/></g>
+    <g fill="#fff4b8"><circle cx="27" cy="21" r="1"/><circle cx="33" cy="19" r="1"/><circle cx="40.2" cy="13" r="1"/><circle cx="48" cy="5.4" r="1.2"/><circle cx="55.8" cy="13" r="1"/><circle cx="63" cy="19" r="1"/><circle cx="69" cy="21" r="1"/></g>
+    <g stroke-width="0.4"><path d="M31 40 L35 40 M31 46 L35 46 M31 52 L35 46 M61 40 L65 40 M61 46 L65 46 M61 52 L65 52 M38 34 L42.4 34 M38 40 L42.4 40 M53.6 34 L58 34 M53.6 40 L58 40" fill="none" opacity="0.5"/></g>
+    <rect x="22" y="52" width="52" height="2.4" rx="1" fill="#b8a482"/>
+    <g fill="#8a7a62"><path d="M40 68 L40 58 Q40 52 48 52 Q56 52 56 58 L56 68 Z"/></g>
+    <path d="M42 68 L42 59 Q42 54.6 48 54.6 Q54 54.6 54 59 L54 68 Z" fill="#5d4a3c"/>
+    <g fill="#a9c4d6"><circle cx="48" cy="44" r="5"/><path d="M48 40.4 L48 47.6 M44.4 44 L51.6 44 M45.5 41.5 L50.5 46.5 M50.5 41.5 L45.5 46.5" fill="none" stroke-width="0.4"/></g>
+    <g fill="#8a7a62"><path d="M27 58 L27 55 Q27 53 29 53 Q31 53 31 55 L31 58 Z"/><path d="M65 58 L65 55 Q65 53 67 53 Q69 53 69 55 L69 58 Z"/></g>
+    <g fill="#6db85e"><circle cx="24" cy="52" r="0.9"/><circle cx="72" cy="52" r="0.9"/></g>
+    <g>
+      <rect x="78" y="30" width="2.4" height="38" rx="0.8" fill="#e8b64a"/>
+      <path d="M66 32 L90 32 L90 34.4 L66 34.4 Z" fill="#e8b64a"/>
+      <path d="M70 34.4 L70 44 L73 44 L73 34.4 Z" fill="#c2523f"/>
+      <path d="M66 32 L66 28 M90 32 L90 28" fill="none"/>
+      <rect x="64.8" y="26.4" width="2.4" height="2" rx="0.5" fill="#3d3d44"/>
+    </g>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <circle cx="48" cy="44" r="5"/>
+    <path d="M42 68 L42 59 Q42 54.6 48 54.6 Q54 54.6 54 59 L54 68 Z"/>
+    <rect x="24.4" y="60.4" width="5.2" height="7.2" rx="0.6"/>
+    <rect x="66.4" y="60.4" width="5.2" height="7.2" rx="0.6"/>
+    <rect x="64.8" y="26.4" width="2.4" height="2" rx="0.5"/>
+  </g>
+  <path d="M22 56 Q36 53 48 56 Q60 59 74 56" stroke="#fff" stroke-width="0.6" opacity="0.3" fill="none" stroke-linecap="round"/>
+  <rect x="22" y="65" width="52" height="3" rx="1.5" fill="#000" opacity="0.08"/>
+</svg>

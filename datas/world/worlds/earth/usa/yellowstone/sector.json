@@ -1,0 +1,15 @@
+{
+  "local": {"size": [960, 1153], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "usa/nature/geyser.svg", "at": [493, 860], "scale": 1.0},
+    {"use": "usa/nature/hotspring.svg", "at": [424, 240], "scale": 1.2},
+    {"use": "usa/animal/bison.svg", "count": 5, "area": [250, 450, 450, 300], "scale": 0.9, "spacing": 20},
+    {"use": "people/walker", "count": 8, "area": [300, 650, 350, 250], "scale": 0.7, "spacing": 8, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#2a2421", "#3d302a", "#6b4a35"], "--shirt": ["#e9785a", "#8cbfdc", "#a8d5b0"], "--pants": ["#3d4a6b", "#56627e"]}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 500 C240 460 560 560 1020 480", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "올드페이스풀", "en": "Old Faithful", "zh": "老忠实泉"}, "at": [493, 895], "size": 10.5, "info": {"emoji": "⛲", "kind": "지명", "title": {"ko": "올드페이스풀", "en": "Old Faithful", "zh": "老忠实泉"}, "desc": {"ko": "시간 맞춰 뜨거운 물을 뿜는 간헐천이에요. 수증기 기둥이 하늘 높이 올라가요.", "en": "A geyser that erupts hot water right on schedule. Its steam column rises high into the sky.", "zh": "按时喷出热水的间歇泉。水蒸气柱直冲云霄。"}}},
+    {"text": {"ko": "그랜드프리즈매틱", "en": "Grand Prismatic Spring", "zh": "大棱镜温泉"}, "at": [424, 275], "size": 9, "info": {"emoji": "🌈", "kind": "지명", "title": {"ko": "그랜드프리즈매틱", "en": "Grand Prismatic Spring", "zh": "大棱镜温泉"}, "desc": {"ko": "무지갯빛으로 물든 미국 최대 온천이에요. 열을 좋아하는 미생물들이 색을 입혔어요.", "en": "The biggest hot spring in the US, dyed rainbow colours by heat-loving microbes.", "zh": "美国最大的温泉，被喜热微生物染成了彩虹色。"}}},
+    {"text": {"ko": "들소 무리", "en": "Bison Herd", "zh": "野牛群"}, "at": [475, 640], "size": 8.4, "info": {"emoji": "🦬", "kind": "지명", "title": {"ko": "들소 무리", "en": "Bison Herd", "zh": "野牛群"}, "desc": {"ko": "옐로스톤의 터줏감 들소예요. 커다란 어깨 혹이 멋져요.", "en": "The boss of Yellowstone. Its big shoulder hump looks magnificent.", "zh": "黄石的主人野牛。宽大的肩峰很威风。"}}}
+  ]
+}

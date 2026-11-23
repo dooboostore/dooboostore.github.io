@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5"><style>
+    @keyframes turt0{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+    .turte1{animation:turt0 3.2s ease-in-out 0s infinite;transform-box:fill-box;transform-origin:50% 50%}
+  </style>
+  <!-- 아기 바다거북 (위에서 본 모습, 머리가 위쪽): 앞지느러미로 퐁퐁 젓는다 -->
+  <g class="turte1">
+    <ellipse cx="0" cy="3" rx="4.6" ry="6.4" fill="#7fae6a" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+    <path d="M-3 0.4 Q0 -1.4 3 0.4 Q2.2 4.6 0 7 Q-2.2 4.6 -3 0.4 Z" fill="#c4e2a4" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+    <path d="M-1.4 1.6 Q0 1 1.4 1.6 M-1.6 4 Q0 3.4 1.6 4" stroke="#5b4636" stroke-width="0.3" fill="none" opacity="0.5"/>
+    <path d="M-3.8 -1.6 C-7.4 -2.6 -8.4 -0.4 -7.4 1.6 C-5.2 0.8 -4 0 -3.2 -0.4 Z" fill="#9ccb86" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <path d="M3.8 -1.6 C7.4 -2.6 8.4 -0.4 7.4 1.6 C5.2 0.8 4 0 3.2 -0.4 Z" fill="#9ccb86" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <path d="M-3.4 -5 C-5 -6 -5.2 -8 -3.8 -8.8 C-2.4 -8 -2 -6 -1.8 -4.6 Z" fill="#9ccb86" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <path d="M3.4 -5 C5 -6 5.2 -8 3.8 -8.8 C2.4 -8 2 -6 1.8 -4.6 Z" fill="#9ccb86" stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round"/>
+    <circle cx="0" cy="-7" r="3.1" fill="#9ccb86" stroke="#5b4636" stroke-width="0.5"/>
+    <circle cx="-1.2" cy="-7.2" r="0.85" fill="#fff"/><circle cx="1.2" cy="-7.2" r="0.85" fill="#fff"/>
+    <circle cx="-1.2" cy="-7.1" r="0.45" fill="#2a2421"/><circle cx="1.2" cy="-7.1" r="0.45" fill="#2a2421"/>
+    <circle cx="-0.95" cy="-7.35" r="0.16" fill="#fff"/><circle cx="1.45" cy="-7.35" r="0.16" fill="#fff"/>
+    <ellipse cx="-2.1" cy="-5.9" rx="0.55" ry="0.35" fill="#f4a08a" opacity="0.8"/><ellipse cx="2.1" cy="-5.9" rx="0.55" ry="0.35" fill="#f4a08a" opacity="0.8"/>
+    <path d="M-0.7 -5.6 Q0 -5.1 0.7 -5.6" stroke="#5b4636" stroke-width="0.35" fill="none" stroke-linecap="round"/>
+    <path d="M-2.6 8.2 L0 10.6 L2.6 8.2" fill="#9ccb86" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+  </g>
+</svg>

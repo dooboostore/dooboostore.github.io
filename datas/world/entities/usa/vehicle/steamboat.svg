@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 30">
+  <!-- 미시시피 외륜선: 하얀 증기선, 빨간 외륜과 쌍둥이 굴뚝. 밤엔 창 불빛 -->
+  <ellipse cx="28" cy="28.4" rx="26" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 24 Q28 27 54 22 L52 16 Q28 19 4 17 Z" fill="var(--hull, #f1ece0)"/>
+    <path d="M2 24 Q28 27 54 22" fill="none" stroke="#c2523f" stroke-width="0.8"/>
+    <rect x="10" y="10" width="32" height="8" rx="1.4" fill="#fdfbf4"/>
+    <g fill="#a9c4d6"><rect x="12" y="11.4" width="3" height="3" rx="0.6"/><rect x="16.4" y="11.4" width="3" height="3" rx="0.6"/><rect x="20.8" y="11.4" width="3" height="3" rx="0.6"/><rect x="25.2" y="11.4" width="3" height="3" rx="0.6"/><rect x="29.6" y="11.4" width="3" height="3" rx="0.6"/><rect x="34" y="11.4" width="3" height="3" rx="0.6"/><rect x="12" y="15" width="3" height="2.4" rx="0.6"/><rect x="16.4" y="15" width="3" height="2.4" rx="0.6"/><rect x="20.8" y="15" width="3" height="2.4" rx="0.6"/><rect x="25.2" y="15" width="3" height="2.4" rx="0.6"/><rect x="29.6" y="15" width="3" height="2.4" rx="0.6"/><rect x="34" y="15" width="3" height="2.4" rx="0.6"/></g>
+    <rect x="16" y="4" width="20" height="6.4" rx="1.2" fill="#fdfbf4"/>
+    <g fill="#a9c4d6"><rect x="18" y="5.2" width="2.4" height="2.4" rx="0.5"/><rect x="22" y="5.2" width="2.4" height="2.4" rx="0.5"/><rect x="26" y="5.2" width="2.4" height="2.4" rx="0.5"/><rect x="30" y="5.2" width="2.4" height="2.4" rx="0.5"/></g>
+    <g fill="#3d3d44"><rect x="19" y="0.6" width="2.6" height="4" rx="0.6"/><rect x="27" y="0.6" width="2.6" height="4" rx="0.6"/></g>
+    <g fill="#8a8a90" opacity="0.9"><ellipse cx="20.3" cy="0.2" rx="1.4" ry="0.6"/><ellipse cx="28.3" cy="0.2" rx="1.4" ry="0.6"/></g>
+    <circle cx="47" cy="20" r="4.6" fill="#c2523f"/>
+    <circle cx="47" cy="20" r="2.8" fill="#fdfbf4"/>
+    <g stroke="#8a5a3f" stroke-width="0.5"><path d="M47 15.4 L47 24.6 M42.4 20 L51.6 20 M43.7 16.7 L50.3 23.3 M50.3 16.7 L43.7 23.3"/></g>
+    <circle cx="47" cy="20" r="0.9" fill="#e8b64a"/>
+  </g>
+  <path d="M6 20 Q28 22.4 50 20.4" stroke="#fff" stroke-width="0.5" opacity="0.5" fill="none" stroke-linecap="round"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="12.3" y="11.7" width="2.4" height="2.4" rx="0.5"/><rect x="21.1" y="11.7" width="2.4" height="2.4" rx="0.5"/><rect x="29.9" y="11.7" width="2.4" height="2.4" rx="0.5"/>
+    <rect x="12.3" y="15.3" width="2.4" height="1.8" rx="0.5"/><rect x="25.5" y="15.3" width="2.4" height="1.8" rx="0.5"/>
+  </g>
+</svg>

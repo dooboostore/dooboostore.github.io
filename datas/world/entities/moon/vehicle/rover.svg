@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 22">
+  <style>@keyframes whspin{to{transform:rotate(360deg)}}</style>
+  <!-- 달 버기 (LRV): 아폴로 17호의 월면차, 접이식 의자와 파라볼라 안테나 -->
+  <ellipse cx="22" cy="20.4" rx="19" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="10" y="10" width="24" height="5" rx="1.4" fill="#9aa0ac"/>
+    <path d="M10 10 L12 6.4 L14 6.4 L13 10 Z M20 10 L21 5.6 L24 5.6 L24 10 Z" fill="#7d8492"/>
+    <rect x="12" y="6.4" width="2" height="1.6" rx="0.4" fill="#5f6a7a"/>
+    <rect x="21" y="5.6" width="3" height="1.8" rx="0.4" fill="#5f6a7a"/>
+    <path d="M32 10 L36 3.4" fill="none"/>
+    <path d="M33.4 5.4 A2.6 2.6 0 0 1 38.6 5.4 L36 5.4 Z" fill="#d8dce3"/>
+    <rect x="8" y="9" width="3" height="2.4" rx="0.5" fill="#e8b64a"/>
+    <g fill="#7d8492"><rect x="14" y="14.6" width="4" height="1" rx="0.5"/><rect x="26" y="14.6" width="4" height="1" rx="0.5"/></g>
+  </g>
+  <g transform="translate(12 17.4)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin 1.1s linear infinite;"><g transform="translate(0 0) scale(0.62)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #8a8f98)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#6a6f78"/>
+</g></g></g>
+  <g transform="translate(32 17.4)"><g class="w" style="transform-box:fill-box;transform-origin:50% 50%;animation:whspin 1.1s linear infinite;"><g transform="translate(0 0) scale(0.62)">
+  <circle r="2" fill="#3e4348" stroke="#5b4636" stroke-width="0.4"/>
+  <circle r="1" fill="var(--hub, #8a8f98)"/>
+  <rect x="-0.25" y="-1" width="0.5" height="2" fill="#6a6f78"/>
+</g></g></g>
+</svg>

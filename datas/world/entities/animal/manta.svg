@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 24 24" data-foot="0.5 0.5"><style>
+    @keyframes mnt0{0%,100%{transform:scaleY(1)}50%{transform:scaleY(0.86)}}
+    .mnte1{animation:mnt0 2.4s ease-in-out 0s infinite;transform-box:fill-box;transform-origin:50% 50%}
+  </style>
+  <!-- 아기 만타가오리 (위에서 본 모습, 머리가 위쪽): 별 무늬 날개로 훨훨 -->
+  <g class="mnte1">
+    <path d="M0 -10.6 C1 -8.8 1 -7 -0.2 -5.6 L-1.2 -6.8 C-1.8 -8.4 -1.2 -9.8 0 -10.6 Z" fill="#6a7a8a" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+    <path d="M0 -10.6 C-1 -8.8 -1 -7 0.2 -5.6 L1.2 -6.8 C1.8 -8.4 1.2 -9.8 0 -10.6 Z" fill="#6a7a8a" stroke="#5b4636" stroke-width="0.4" stroke-linejoin="round"/>
+    <path d="M0 -7.4 C3.8 -7.4 7.6 -5 10.6 -1.2 C7.8 0.8 3.8 2 0 2.4 C-3.8 2 -7.8 0.8 -10.6 -1.2 C-7.6 -5 -3.8 -7.4 0 -7.4 Z" fill="#5a6a7a" stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round"/>
+    <g fill="#f2f6f9"><circle cx="-4.8" cy="-3" r="0.8"/><circle cx="-2.2" cy="-4.2" r="0.6"/><circle cx="0.6" cy="-3.4" r="0.7"/><circle cx="3" cy="-4.4" r="0.55"/><circle cx="5.4" cy="-2.6" r="0.7"/><circle cx="-6.4" cy="-1.2" r="0.6"/><circle cx="6.4" cy="-1.2" r="0.6"/><circle cx="-2.8" cy="-1" r="0.6"/><circle cx="2.4" cy="-0.6" r="0.7"/></g>
+    <circle cx="-1.5" cy="-5" r="0.85" fill="#fff"/><circle cx="1.5" cy="-5" r="0.85" fill="#fff"/>
+    <circle cx="-1.5" cy="-4.9" r="0.42" fill="#2a2421"/><circle cx="1.5" cy="-4.9" r="0.42" fill="#2a2421"/>
+    <circle cx="-1.2" cy="-5.2" r="0.15" fill="#fff"/><circle cx="1.8" cy="-5.2" r="0.15" fill="#fff"/>
+    <ellipse cx="-2.6" cy="-3.6" rx="0.5" ry="0.35" fill="#f4a08a" opacity="0.85"/><ellipse cx="2.6" cy="-3.6" rx="0.5" ry="0.35" fill="#f4a08a" opacity="0.85"/>
+    <path d="M-0.7 -2.8 Q0 -2.3 0.7 -2.8" stroke="#5b4636" stroke-width="0.3" fill="none" stroke-linecap="round"/>
+    <path d="M0 2.4 L0 11.6" stroke="#5b4636" stroke-width="0.5" stroke-linecap="round"/>
+  </g>
+</svg>

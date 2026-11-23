@@ -217,6 +217,9 @@ export default (win: Window) => {
     @query('#stations-list') private stationsListEl!: HTMLElement;
     @query('#stations-title') private stationsTitleEl!: HTMLElement;
     @query('#surface') private surfaceEl!: SVGCircleElement;
+    @query('#sunrim-a') private sunrimAEl!: SVGCircleElement;
+    @query('#sunrim-b') private sunrimBEl!: SVGCircleElement;
+    @query('#corona') private coronaEl!: SVGGElement;
     @query('#surface-a') private surfaceAEl!: SVGStopElement;
     @query('#surface-b') private surfaceBEl!: SVGStopElement;
     @query('#tint') private tintEl!: SVGRectElement;
@@ -404,7 +407,11 @@ export default (win: Window) => {
       }
 
       this.live = {};
-      this.traffic?.set(id === 'earth' && !this.globeWx ? (world.traffic ?? []).filter((r) => r.use !== 'globe/cloud.svg' && r.use !== 'globe/typhoon') : world.traffic ?? [], world.radiusKm);
+      // 지구: 장식 구름·태풍은 그리지 않고, 실시간이 오면 그리고 실패해야 장식을 깐다 (처음부터 있으면 한국 근처 장식이 팍 튐)
+      const weatherish = (r: Route) => r.use === 'globe/cloud.svg' || r.use === 'globe/typhoon';
+      this.traffic?.set(id === 'earth' ? (world.traffic ?? []).filter((r) => !weatherish(r)) : world.traffic ?? [], world.radiusKm);
+      // 실시간이 캐시로 먼저 와 있으면 Traffic 보다 먼저 도착해 유실된다 → 여기서 한 번 깔아 둔다
+      this.applyTraffic();
       if (id === 'earth') this.loadLive();
       const v = view ?? { lon: id === 'earth' ? 127.5 : this.lon, lat: id === 'earth' ? 28 : 15, k: 1 };
       Object.assign(this, { lon: v.lon, lat: v.lat, k: v.k, target: null });
@@ -467,9 +474,7 @@ export default (win: Window) => {
     }
 
     private renderWorldMenu() {
-      this.worldListEl.innerHTML =
-        this.worlds.map((it) => `<button class="chip${it.id === this.worldId ? ' on' : ''}" data-world="${it.id}">${it.icon} ${esc(tr(it.name))}</button>`).join('') +
-        `<button class="chip" data-world="__overview">${t('overview')}</button>`;
+      this.worldListEl.innerHTML = this.worlds.map((it) => `<button class="chip${it.id === this.worldId ? ' on' : ''}" data-world="${it.id}">${it.icon} ${esc(tr(it.name))}</button>`).join('');
     }
 
     // ---------------- 프레임 ----------------
@@ -544,6 +549,17 @@ export default (win: Window) => {
       glow.setAttribute('cy', String(H / 2));
       glow.setAttribute('r', String(R * 1.12));
       glow.style.display = k > 3 ? 'none' : '';
+      // 태양: 코로나·림라이트 (지구의 구름·경위선 대신)
+      const isSun = this.worldId === 'sun';
+      for (const [el, wdt] of [[this.sunrimAEl, 0.09], [this.sunrimBEl, 0.03]] as const) {
+        el.setAttribute('cx', String(W / 2));
+        el.setAttribute('cy', String(H / 2));
+        el.setAttribute('r', String(Math.max(1, R * 0.985)));
+        el.setAttribute('stroke-width', String(Math.max(1, R * wdt)));
+        el.style.display = isSun ? '' : 'none';
+      }
+      this.coronaEl.style.display = isSun ? '' : 'none';
+      if (isSun) this.coronaEl.setAttribute('transform', `translate(${W / 2} ${H / 2}) scale(${R})`);
       this.graticuleEl.setAttribute('d', k < 12 ? this.path(geoGraticule10()) ?? '' : '');
       this.countryEls.forEach((el, i) => el.setAttribute('d', this.path(this.countries[i]) ?? ''));
       this.countriesEl.style.strokeWidth = String(clamp(0.6 + Math.log(k) * 0.25, 0.6, 1.6));
@@ -1051,7 +1067,8 @@ export default (win: Window) => {
       const id = (e.target as Element).closest<HTMLElement>('[data-world]')?.dataset.world;
       if (!id) return;
       this.onSheetClose();
-      if (id === '__overview' || id === this.worldId) {
+      // 지금 세계를 다시 누르면 전체 보기로 (줌 아웃)
+      if (id === this.worldId) {
         this.target = { lon: this.lon, lat: clamp(this.lat, -30, 30), k: 1 };
         this.touch();
         return;
@@ -1493,21 +1510,30 @@ export default (win: Window) => {
       this.applyTime();
     }
 
-    // 지구본 구름·태풍을 실제 것으로 (실패한 쪽은 world.json 의 그림용 것을 그대로 쓴다)
+    // 지구본 구름·태풍을 실제 것으로 — 오기 전엔 안 그리고, 실패한 쪽만 world.json 의 그림용 것을 깐다
     private globeWx = true; // ⛅ 시트의 "지구" 토글: 지구본 구름·태풍 보이기
     private spin = 58; // ⛅ 시트의 "자전" 슬라이더 (58 ≈ 배율 1)
-    private live: { clouds?: Route[]; storms?: Route[] } = {};
+    private live: { clouds?: Route[] | null; storms?: Route[] | null } = {}; // undefined = 오는 중, null = 실패(장식)
 
     // 구름·태풍은 각자 도착하는 대로 반영한다 (한쪽이 느리거나 멈춰도 다른 쪽은 바로 보이게)
+    // 10초 안에 안 오면 실패로 치고 장식을 깐다 (그대로 두면 구름 없는 지구가 된다)
     private loadLive() {
-      liveClouds(w).then((clouds) => {
-        if (this.worldId !== 'earth' || !clouds) return;
-        this.live = { ...this.live, clouds };
+      const timed = async <T>(p: Promise<T | undefined>, ms: number): Promise<T | undefined> => {
+        let t: ReturnType<typeof setTimeout> | undefined;
+        try {
+          return await Promise.race([p, new Promise<undefined>((res) => { t = setTimeout(() => res(undefined), ms); })]);
+        } finally {
+          if (t !== undefined) clearTimeout(t);
+        }
+      };
+      timed(liveClouds(w), 10000).then((clouds) => {
+        if (this.worldId !== 'earth') return;
+        this.live = { ...this.live, clouds: clouds === undefined ? null : clouds };
         this.applyTraffic();
       });
-      liveStorms(w).then((storms) => {
-        if (this.worldId !== 'earth' || !storms) return;
-        this.live = { ...this.live, storms };
+      timed(liveStorms(w), 10000).then((storms) => {
+        if (this.worldId !== 'earth') return;
+        this.live = { ...this.live, storms: storms === undefined ? null : storms };
         this.applyTraffic();
       });
     }
@@ -1515,10 +1541,11 @@ export default (win: Window) => {
     private applyTraffic() {
       if (this.worldId !== 'earth' || !this.world) return;
       const { clouds, storms } = this.live;
-      const weatherish = (r: Route) => r.use === 'globe/cloud.svg' || r.use === 'globe/typhoon';
-      const base = (this.world.traffic ?? []).filter((r) => !(clouds && r.use === 'globe/cloud.svg') && !(storms && r.use === 'globe/typhoon'));
-      const all = [...base, ...(clouds ?? []), ...(storms ?? [])];
-      this.traffic?.set(this.globeWx ? all : all.filter((r) => !weatherish(r)), this.world.radiusKm);
+      // 오는 중(undefined)은 아무것도 안 깔고, 실패(null)는 장식을 깐다. 배·비행기는 loadWorld 때 깔아 그대로 둔다
+      const wx = [...(clouds ?? []), ...(storms ?? [])];
+      if (clouds === null) wx.push(...(this.world.traffic ?? []).filter((r) => r.use === 'globe/cloud.svg'));
+      if (storms === null) wx.push(...(this.world.traffic ?? []).filter((r) => r.use === 'globe/typhoon'));
+      this.traffic?.setWeather(this.globeWx ? wx : [], this.world.radiusKm);
     }
 
     @setInterval(30 * 60000)
@@ -1673,6 +1700,12 @@ export default (win: Window) => {
           #stars circle { fill: #fff; }
           #stars .tw { animation: tw 6s ease-in-out infinite; }
           @keyframes tw { 50% { opacity: 0.1; } }
+          #corona-rot { animation: coronaspin 140s linear infinite; transform-box: fill-box; transform-origin: center; }
+          @keyframes coronaspin { to { transform: rotate(360deg); } }
+          #corona-fx { animation: coronapulse 5s ease-in-out infinite alternate; }
+          @keyframes coronapulse { from { opacity: 0.75; } to { opacity: 1; } }
+          #sun-flare { animation: sunflare 9s linear infinite; }
+          @keyframes sunflare { 0%, 88% { opacity: 0; } 90% { opacity: 0.9; } 93% { opacity: 0.1; } 95% { opacity: 0.6; } 100% { opacity: 0; } }
           #graticule { fill: none; stroke: #fff; stroke-opacity: 0.18; stroke-width: 0.5; }
           .country { stroke-linejoin: round; transition: fill 1.2s ease; vector-effect: non-scaling-stroke; }
           .country.here { fill: #e9f5d9; }
@@ -1838,12 +1871,30 @@ export default (win: Window) => {
                 <stop id="glow-a" offset="0.82" stop-color="#9fd3ff" stop-opacity="0.35"/>
                 <stop id="glow-b" offset="1" stop-color="#9fd3ff" stop-opacity="0"/>
               </radialGradient>
+              <radialGradient id="spot-grad">
+                <stop offset="0" stop-color="#2e0e02"/>
+                <stop offset="0.28" stop-color="#5e2408"/>
+                <stop offset="0.52" stop-color="#a34d1e"/>
+                <stop offset="0.74" stop-color="#d37b33" stop-opacity="0.55"/>
+                <stop offset="1" stop-color="#d37b33" stop-opacity="0"/>
+              </radialGradient>
             </defs>
             <defs id="entity-defs"></defs>
             <defs id="scene-defs"></defs>
             <g id="stars"></g>
             <circle id="glow" fill="url(#glow-grad)"/>
+            <g id="corona" style="display:none">
+              <g id="corona-rot">
+                <circle cx="0" cy="0" r="1.1" fill="none" stroke="#ff3d00" stroke-width="0.1" opacity="0.2"/>
+                <circle cx="0" cy="0" r="1.22" fill="none" stroke="#ff3d00" stroke-width="0.16" opacity="0.09"/>
+              </g>
+              <g id="corona-fx">
+                <ellipse id="sun-flare" cx="0.5" cy="-0.6" rx="0.12" ry="0.07" fill="#fffbe8"/>
+              </g>
+            </g>
             <circle id="surface" fill="url(#surface-grad)"/>
+            <circle id="sunrim-a" style="display:none" fill="none" stroke="#ff5a1a" opacity="0.55"/>
+            <circle id="sunrim-b" style="display:none" fill="none" stroke="#ffd27a" opacity="0.8"/>
             <g id="features"></g>
             <path id="graticule"/>
             <g id="countries"></g>

@@ -1,0 +1,23 @@
+{
+  "local": {"size": [960, 1098], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "spain/landmark/sagrada-familia.svg", "at": [655, 472], "scale": 0.7},
+    {"use": "spain/landmark/guell-lizard.svg", "at": [543, 398], "scale": 0.9},
+    {"use": "spain/landmark/casa-batllo.svg", "at": [606, 554], "scale": 0.6},
+    {"use": "spain/building/casa.svg", "count": 7, "area": [550, 490, 110, 160], "scale": 0.55, "spacing": 18, "vars": {"--wall": ["#e8b878", "#efc98f", "#e3a86f", "#f0d4a0", "#d99a62"], "--shutter": ["#5f9a6e", "#4f6fb0", "#8a6a4e"], "--wall2": ["#d9a05c", "#c98f4e"]}},
+    {"use": "spain/building/casa-shop.svg", "count": 5, "area": [655, 500, 100, 140], "scale": 0.55, "spacing": 18, "vars": {"--wall": ["#efc98f", "#e8b878", "#f0d4a0"], "--awning": ["#e9785a", "#4f6fb0", "#3f9a80"], "--sign": ["#c2523f", "#3e6b8a", "#8a5a3f"]}},
+    {"use": "spain/nature/palm.svg", "count": 10, "area": [620, 590, 160, 90], "scale": 0.7, "spacing": 12},
+    {"use": "people/walker", "count": 10, "area": [540, 480, 220, 180], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#2a2421", "#3d302a", "#6b4a35"], "--shirt": ["#e9785a", "#f2c641", "#8cbfdc", "#a8d5b0"], "--pants": ["#3d4a6b", "#56627e", "#6b5a4e"]}},
+    {"use": "animal/pigeon", "count": 5, "area": [560, 500, 180, 150], "spacing": 5},
+    {"use": "animal/butterfly", "count": 3, "area": [560, 500, 180, 150], "spacing": 5, "vars": {"--wing": ["#ffc4e0", "#ffffff", "#ffd36e"]}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 640 C240 600 560 720 1020 620", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "사그라다 파밀리아", "en": "Sagrada Família", "zh": "圣家族大教堂"}, "at": [655, 440], "size": 10.5, "info": {"emoji": "⛪", "kind": "지명", "title": {"ko": "사그라다 파밀리아", "en": "Sagrada Família", "zh": "圣家族大教堂"}, "desc": {"ko": "가우디가 설계한 거대한 성당이에요. 1882년에 짓기 시작해 100년이 넘게 지금도 공사 중이에요. 뾰족한 첨탑이 18개까지 올라갈 예정이래요.", "en": "A giant church designed by Gaudí. Construction started in 1882 and is still going on after more than 100 years. There will be 18 spires when finished.", "zh": "高迪设计的巨大教堂。1882年开工，100多年后的今天仍在建造中。完工时将有18座尖塔。"}}},
+    {"text": {"ko": "구엘공원", "en": "Park Güell", "zh": "奎尔公园"}, "at": [543, 372], "size": 9, "info": {"emoji": "🦎", "kind": "지명", "title": {"ko": "구엘공원", "en": "Park Güell", "zh": "奎尔公园"}, "desc": {"ko": "가우디가 만든 동화 같은 공원이에요. 모자이크 도마뱀과 구불구불한 벤치, 도시가 내려다보이는 테라스가 있어요.", "en": "A fairy-tale park built by Gaudí. It has a mosaic lizard, curvy benches, and a terrace overlooking the city.", "zh": "高迪打造的童话般的公园。有马赛克蜥蜴、蜿蜒的长椅和俯瞰城市的露台。"}}},
+    {"text": {"ko": "카사 바트요", "en": "Casa Batlló", "zh": "巴特罗之家"}, "at": [606, 582], "size": 8.4, "info": {"emoji": "🏠", "kind": "지명", "title": {"ko": "카사 바트요", "en": "Casa Batlló", "zh": "巴特罗之家"}, "desc": {"ko": "파도처럼 굽은 외벽의 집이에요. 발코니는 가면을 닮았고, 지붕은 용의 등을 닮았대요.", "en": "A house with wave-like walls. Its balconies look like masks, and its roof like a dragon's back.", "zh": "有着波浪形外墙的房子。阳台像面具，屋顶像龙背。"}}},
+    {"text": {"ko": "람블라스", "en": "La Rambla", "zh": "兰布拉大道"}, "at": [560, 668], "size": 7.7, "info": {"emoji": "🚶", "kind": "지명", "title": {"ko": "람블라스", "en": "La Rambla", "zh": "兰布拉大道"}, "desc": {"ko": "사람들로 항상 붐비는 산책 거리예요. 가로수와 꽃 가판대, 거리 공연으로 가득해요.", "en": "A promenade always full of people, with plane trees, flower stalls, and street performers.", "zh": "总是挤满人的步行街，有悬铃木、花摊和街头表演。"}}},
+    {"text": {"ko": "바르셀로네타 해변", "en": "Barceloneta Beach", "zh": "巴塞罗那塔海滩"}, "at": [748, 672], "size": 7.7, "info": {"emoji": "🏖️", "kind": "지명", "title": {"ko": "바르셀로네타 해변", "en": "Barceloneta Beach", "zh": "巴塞罗那塔海滩"}, "desc": {"ko": "도심 바로 옆의 모래 해변이에요. 여름이면 수영과 일광욕을 즐기는 사람들로 가득해요.", "en": "A sandy beach right next to the city centre, full of swimmers and sunbathers in summer.", "zh": "市中心旁边的沙滩夏天满是游泳和晒太阳的人。"}}},
+    {"text": {"ko": "고딕지구", "en": "Gothic Quarter", "zh": "哥特区"}, "at": [640, 640], "size": 7, "info": {"emoji": "🏛️", "kind": "지명", "title": {"ko": "고딕지구", "en": "Gothic Quarter", "zh": "哥特区"}, "desc": {"ko": "좁은 골목이 미로처럼 얽힌 옛 동네예요. 대성당과 작은 광장이 숨어 있어요.", "en": "An old neighbourhood of narrow maze-like lanes, hiding a cathedral and little squares.", "zh": "狭窄小巷如迷宫般交错的老街区藏着大教堂和小广场。"}}}
+  ]
+}

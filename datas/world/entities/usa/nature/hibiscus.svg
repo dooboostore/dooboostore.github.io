@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-foot="0.5 0.9">
+  <!-- 하이비스커스: 하와이의 꽃, 큰 꽃잎과 긴 수술 -->
+  <ellipse cx="12" cy="22.2" rx="8" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M12 22 L12 12" fill="none"/>
+    <g fill="#7cb366"><path d="M12 18 Q8 17 6 14 Q10 14 12 16 Z"/><path d="M12 20 Q16 19 18 16 Q14 16 12 18 Z"/></g>
+    <g fill="var(--petal, #e9577a)">
+      <path d="M12 12 Q9 6 4 5 Q5 10 9 12 Q6 12 4 15 Q8 17 12 12 Z"/>
+      <path d="M12 12 Q15 6 20 5 Q19 10 15 12 Q18 12 20 15 Q16 17 12 12 Z"/>
+      <path d="M12 12 Q12 6 12 3 Q10 6 10.4 12 Q8 10 6 11 Q8.4 13.4 12 12 Z"/>
+    </g>
+    <path d="M12 12 L15.5 8.5" fill="none"/>
+    <g fill="#f2c641"><circle cx="15.8" cy="8.2" r="0.9"/><circle cx="15" cy="7.4" r="0.4"/><circle cx="16.4" cy="7.6" r="0.4"/><circle cx="15.4" cy="9" r="0.4"/></g>
+  </g>
+</svg>

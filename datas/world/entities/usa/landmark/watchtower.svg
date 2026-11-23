@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 44">
+  <!-- 데저트뷰 전망탑: 협곡 절벽 위 돌탑, 둥근 창과 전망대. 밤엔 창 불빛 -->
+  <ellipse cx="13" cy="42.8" rx="11.5" ry="1" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 42.8 L6 30 Q12 28 13 20 Q14 12 11 6 L15 6 L14 0 L16 0 L16 6 L21 6 Q18 12 19 20 Q20 28 26 30 L28 42.8 Z" fill="#a88968"/>
+    <path d="M8 36 Q14 34 24 36 M9 30 Q16 28 23 30" fill="none" opacity="0.4"/>
+    <rect x="6" y="26" width="20" height="2.4" rx="0.8" fill="#7c6a52"/>
+    <rect x="7" y="20" width="18" height="2" rx="0.7" fill="#7c6a52"/>
+    <rect x="8" y="12" width="16" height="2" rx="0.7" fill="#7c6a52"/>
+    <g fill="#3d3d44"><rect x="10.6" y="11" width="1.2" height="2" rx="0.4"/><rect x="14" y="11" width="1.2" height="2" rx="0.4"/><rect x="11.6" y="26.6" width="1.2" height="3" rx="0.4"/><rect x="15" y="26.6" width="1.2" height="3" rx="0.4"/></g>
+    <g fill="#7cc6ea"><circle cx="16" cy="6" r="1.6"/><path d="M16 8.4 L16 10.4 M14 7.6 L14 10 M18 7.6 L18 10" stroke-width="0.3"/></g>
+  </g>
+  <g fill="#7cb366"><circle cx="4" cy="41" r="1.6"/><circle cx="28" cy="41" r="1.6"/></g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><circle cx="16" cy="6" r="1.6"/><rect x="10.6" y="11" width="1.2" height="2" rx="0.4"/><rect x="14" y="11" width="1.2" height="2" rx="0.4"/></g>
+</svg>

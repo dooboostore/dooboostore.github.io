@@ -1,0 +1,12 @@
+{
+  "local": {"size": [960, 960], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "moon/landmark/surveyor.svg", "at": [673, 397], "scale": 0.9},
+    {"use": "moon/nature/moon-rock.svg", "count": 12, "area": [80, 80, 800, 800], "scale": 0.8, "spacing": 60}
+  ],
+  "labels": [
+    {"text": {"ko": "티코 크레이터", "en": "Tycho Crater", "zh": "第谷环形山"}, "at": [480, 130], "size": 14, "color": "#6f6a7a", "info": {"emoji": "🌕", "kind": "지명", "title": {"ko": "티코 크레이터", "en": "Tycho Crater", "zh": "第谷环形山"}, "desc": {"ko": "젊고 밝은 크레이터예요. 달 전체로 뻗는 밝은 광선의 주인공이랍니다.", "en": "A young, bright crater. It's the source of the bright rays stretching across the whole Moon.", "zh": "年轻明亮的环形山。是向整个月面伸展的明亮射纹的源头。"}}},
+    {"text": {"ko": "서베이어 7호", "en": "Surveyor 7", "zh": "勘测者7号"}, "at": [673, 430], "size": 10, "color": "#6f6a7a", "info": {"emoji": "🛰️", "kind": "지명", "title": {"ko": "서베이어 7호", "en": "Surveyor 7", "zh": "勘测者7号"}, "desc": {"ko": "1968년 티코 북쪽에 내려앉은 무인 착륙선이에요. 달 흙을 파헤치고 사진을 보내왔어요.", "en": "An uncrewed lander that touched down north of Tycho in 1968. It dug into the lunar soil and sent back photos.", "zh": "1968年在第谷北边着陆的无人着陆器。它挖掘月壤并发回了照片。"}}},
+    {"text": {"ko": "밝은 광선", "en": "Bright Rays", "zh": "明亮射纹"}, "at": [760, 700], "size": 10, "color": "#6f6a7a", "info": {"emoji": "✨", "kind": "지명", "title": {"ko": "밝은 광선", "en": "Bright Rays", "zh": "明亮射纹"}, "desc": {"ko": "충돌 때 튄 밝은 물질이 달 전체로 뻗어 있어요. 보름달에 가장 잘 보여요.", "en": "Bright material splashed out by the impact stretches across the Moon. It shows best at full moon.", "zh": "撞击溅出的明亮物质向整个月面伸展。满月时看得最清楚。"}}}
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40">
+  <!-- 다이아몬드헤드: 호놀룰루의 분화구, 초승달 능선과 푸른 바다. 밤엔 등대 불빛 -->
+  <ellipse cx="40" cy="38.2" rx="37" ry="1.5" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 38 L2 30 Q10 28 16 22 Q22 16 32 14 Q44 11 54 14 Q64 17 70 24 Q75 29 78 30 L78 38 Z" fill="#7a8a5a"/>
+    <path d="M16 22 Q22 16 32 14 Q44 11 54 14 Q60 15.4 64 18 Q50 16 38 19 Q28 21.4 20 26 Z" fill="#9aa86e"/>
+    <path d="M32 14 Q34 8 40 6 Q46 8 48 14 Q44 12.4 40 12.4 Q36 12.4 32 14 Z" fill="#6e7a4e"/>
+    <path d="M2 38 L2 32 Q20 30 40 32 Q60 34 78 32 L78 38 Z" fill="#7cc6ea"/>
+    <path d="M2 32.4 Q20 30.4 40 32.4 Q60 34.4 78 32.4" fill="none" stroke="#fff" stroke-width="0.7" opacity="0.7"/>
+    <path d="M40 6 L40 2 M38.6 2.6 L41.4 2.6" fill="none"/>
+    <rect x="39" y="0.8" width="2" height="2.2" rx="0.5" fill="#e8b64a"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.4" fill="#5da85f">
+    <path d="M10 32 Q12 26 14 24 Q15 28 13 32 Z"/><path d="M66 32 Q68 26 70 24 Q71 28 69 32 Z"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)"><rect x="39" y="0.8" width="2" height="2.2" rx="0.5"/></g>
+</svg>
