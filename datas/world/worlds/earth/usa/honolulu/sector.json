@@ -1,0 +1,15 @@
+{
+  "local": {"size": [960, 652], "ground": "ground.svg", "boundary": "boundary.json"},
+  "placements": [
+    {"use": "usa/landmark/diamond-head.svg", "at": [428, 498], "scale": 1.0, "layer": "water"},
+    {"use": "usa/nature/hibiscus.svg", "count": 8, "area": [180, 230, 280, 130], "scale": 0.8, "spacing": 12},
+    {"use": "people/walker", "count": 10, "area": [230, 360, 450, 55], "scale": 0.7, "spacing": 6, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#2a2421", "#3d302a", "#6b4a35"], "--shirt": ["#e9785a", "#8cbfdc", "#f3d38a", "#4f9ab0"], "--pants": ["#c9b48a", "#8d8f94", "#5d7aa6"]}},
+    {"use": "usa/vehicle/outrigger-canoe.svg", "count": 2, "scale": 0.8, "behavior": {"type": "route", "path": "M200 480 L500 480 L800 480", "dur": 110}},
+    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 300 C240 260 560 340 1020 280", "dur": 80}}
+  ],
+  "labels": [
+    {"text": {"ko": "와이키키 해변", "en": "Waikiki Beach", "zh": "威基基海滩"}, "at": [351, 448], "size": 10.5, "info": {"emoji": "🏖️", "kind": "지명", "title": {"ko": "와이키키 해변", "en": "Waikiki Beach", "zh": "威基基海滩"}, "desc": {"ko": "하얀 모래 해변이에요. 초보자도 타기 좋은 잔잔한 파도로 유명해요.", "en": "A white-sand beach, famous for gentle waves even beginners can surf.", "zh": "白色沙滩。以连初学者都能冲浪的平静海浪而闻名。"}}},
+    {"text": {"ko": "다이아몬드헤드", "en": "Diamond Head", "zh": "钻石头山"}, "at": [428, 548], "size": 9, "info": {"emoji": "⛰️", "kind": "지명", "title": {"ko": "다이아몬드헤드", "en": "Diamond Head", "zh": "钻石头山"}, "desc": {"ko": "호놀룰루의 분화구예요. 초승달 모양 능선을 한 바퀴 돌면 태평양이 쫙 보여요.", "en": "The crater of Honolulu. Walk the crescent ridge and the Pacific opens up wide.", "zh": "火奴鲁鲁的火山口。沿着新月形山脊走一圈太平洋尽收眼底。"}}},
+    {"text": {"ko": "이올라니 궁전", "en": "Iolani Palace", "zh": "伊奥拉尼宫"}, "at": [223, 318], "size": 8.4, "info": {"emoji": "🏰", "kind": "지명", "title": {"ko": "이올라니 궁전", "en": "Iolani Palace", "zh": "伊奥拉尼宫"}, "desc": {"ko": "하와이 왕국의 궁전이에요. 미국 땅에서 유일한 왕궁이랍니다.", "en": "The palace of the Kingdom of Hawaii — the only royal palace on US soil.", "zh": "夏威夷王国的宫殿。是美国土地上唯一的王宫。"}}}
+  ]
+}

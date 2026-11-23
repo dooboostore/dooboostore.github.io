@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" data-foot="0.5 0.92">
+  <!-- 프로테아: 케이프타운의 왕꽃, 분홍 꽃잎 겹겹 -->
+  <ellipse cx="12" cy="28.4" rx="9" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M12 28 L12 16" fill="none"/>
+    <path d="M12 24 Q8 22 6 18 Q10 19 12 22 Z" fill="#7cb366"/>
+    <path d="M12 26 Q16 24 18 20 Q14 21 12 24 Z" fill="#7cb366"/>
+    <g fill="var(--petal, #e9788a)">
+      <path d="M12 16 Q7 12 7 6 Q11 8 12 12 Q13 8 17 6 Q17 12 12 16 Z"/>
+      <path d="M12 16 Q6 15 3 11 Q7 10 10 13 Q8 10 9 7 Q11 10 12 13 Q13 10 15 7 Q16 10 14 13 Q17 10 21 11 Q18 15 12 16 Z"/>
+    </g>
+    <g fill="#f2c641"><circle cx="10.4" cy="10.4" r="0.6"/><circle cx="12" cy="9.6" r="0.6"/><circle cx="13.6" cy="10.4" r="0.6"/><circle cx="11.2" cy="11.6" r="0.6"/><circle cx="12.8" cy="11.6" r="0.6"/></g>
+  </g>
+</svg>

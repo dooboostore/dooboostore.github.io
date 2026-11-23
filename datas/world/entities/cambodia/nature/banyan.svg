@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 52" data-foot="0.5 0.97">
+  <!-- 반얀나무: 앙코르를 감싼 거대한 뿌리 기둥 -->
+  <ellipse cx="18" cy="50.6" rx="15" ry="1.2" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M15 50 L15.6 30 L20.4 30 L21 50 Z" fill="#8a7a62"/>
+    <path d="M8 50 Q9 38 7 28 Q6 20 9 14 M28 50 Q27 38 29 28 Q30 20 27 14" fill="none"/>
+    <path d="M12 50 Q12 40 10 32 M24 50 Q24 40 26 32" fill="none" stroke-width="0.4" opacity="0.7"/>
+    <g fill="#4e7a45">
+      <path d="M18 30 Q6 26 2 14 Q12 14 17 24 Z"/>
+      <path d="M18 28 Q30 24 34 12 Q24 12 19 22 Z"/>
+      <path d="M18 22 Q12 10 14 2 Q20 8 19 22 Z"/>
+      <path d="M18 22 Q24 10 22 2 Q16 8 17 22 Z"/>
+    </g>
+    <g fill="#5da85f"><circle cx="8" cy="18" r="1"/><circle cx="28" cy="16" r="1"/><circle cx="14" cy="8" r="0.8"/><circle cx="22" cy="8" r="0.8"/></g>
+  </g>
+</svg>

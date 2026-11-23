@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26" data-foot="0.5 0.9">
+  <!-- 연꽃: 하노이 호수 위 분홍 연꽃 -->
+  <ellipse cx="15" cy="23.6" rx="12" ry="1.6" fill="#3b5a2e" opacity="0.2"/>
+  <ellipse cx="15" cy="21.4" rx="11" ry="2.2" fill="#7cc6ea"/>
+  <ellipse cx="15" cy="20.8" rx="11" ry="1.9" fill="#a8dcf5"/>
+  <g stroke="#5b4636" stroke-width="0.45" stroke-linejoin="round">
+    <path d="M15 20 Q15 12 15 9" fill="none"/>
+    <g fill="var(--petal, #f2a4c0)">
+      <path d="M15 20 Q11 14 11 8 Q14 10 15 14 Q16 10 19 8 Q19 14 15 20 Z"/>
+      <path d="M15 20 Q9 16 5 16 Q8 19 13 20 Q9 20 7 23 Q11 23.4 15 20 Z"/>
+      <path d="M15 20 Q21 16 25 16 Q22 19 17 20 Q21 20 23 23 Q19 23.4 15 20 Z"/>
+    </g>
+    <circle cx="15" cy="13.4" r="1.6" fill="#f2c641"/>
+    <circle cx="13.8" cy="13" r="0.5" fill="#e8913f"/><circle cx="15.4" cy="12.6" r="0.5" fill="#e8913f"/><circle cx="16" cy="13.8" r="0.5" fill="#e8913f"/>
+    <path d="M15 21 Q10 19 6 21 Q10 23 15 22.4 Q20 23 24 21 Q20 19 15 21" fill="#5da85f"/>
+  </g>
+</svg>

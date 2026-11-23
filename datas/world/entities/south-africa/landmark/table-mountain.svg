@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40">
+  <!-- 테이블마운틴: 평평한 정상과 흘러내리는 구름 -->
+  <ellipse cx="40" cy="38.4" rx="37" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 38 Q8 26 18 22 Q22 14 30 14 Q38 14 42 22 Q52 26 56 38 Z" fill="#8a9a7a"/>
+    <path d="M6 38 L10 30 L14 30 L12 38 M26 38 L28 26 L34 26 L34 38 M48 38 L50 30 L54 30 L52 38" fill="#7a8a6a" opacity="0.7"/>
+    <path d="M22 14 L58 14 L56 10 L24 10 Z" fill="#9aab8a"/>
+    <g fill="#fff" opacity="0.85"><ellipse cx="30" cy="10" rx="12" ry="2.6"/><ellipse cx="46" cy="8.6" rx="10" ry="2.2"/><ellipse cx="58" cy="10.4" rx="8" ry="2"/></g>
+    <path d="M24 10 Q30 12 36 10.4 M40 9.4 Q48 11 56 10" fill="none" stroke="#dfe8ea" stroke-width="0.5" opacity="0.8"/>
+    <g fill="#7cb366"><circle cx="8" cy="36" r="1.6"/><circle cx="72" cy="36" r="1.6"/></g>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 52">
+  <!-- 한기둥 사원: 연꽃 위에 핀 한 칸 절. 밤엔 등불 -->
+  <ellipse cx="18" cy="50.4" rx="15" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="18" cy="44" rx="13" ry="4" fill="#7cc6ea"/>
+    <ellipse cx="18" cy="43.2" rx="13" ry="3.4" fill="#a8dcf5"/>
+    <path d="M8 43 Q18 45 28 43" fill="none" stroke="#fff" stroke-width="0.6" opacity="0.7"/>
+    <path d="M15 43 L15 30 L21 30 L21 43 Z" fill="#8a7a62"/>
+    <path d="M15 36 Q18 35 21 36 M15 32 Q18 31 21 32" fill="none" opacity="0.5" stroke-width="0.4"/>
+    <g fill="#c9b896"><path d="M10 30 L12 22 L24 22 L26 30 Z"/></g>
+    <path d="M10 30 L26 30 M12 22 L24 22" stroke-width="0.8" fill="none"/>
+    <g fill="#a9c4d6"><rect x="16.4" y="24" width="3.2" height="4" rx="0.6"/></g>
+    <path d="M6 22 Q18 26 30 22 L28 12 Q24 8 18 8 Q12 8 8 12 Z" fill="var(--roof, #5f7a6a)"/>
+    <path d="M6 22 Q18 26 30 22" fill="none" stroke-width="0.8"/>
+    <path d="M10 13.4 Q18 10 26 13.4 M13 9.8 Q18 7.6 23 9.8" fill="none" opacity="0.5"/>
+    <circle cx="18" cy="6.4" r="1.4" fill="#e8b64a"/>
+    <path d="M18 8 L18 9.4" fill="none"/>
+    <g fill="#7cb366"><circle cx="8" cy="46" r="1.6"/><circle cx="28" cy="46" r="1.6"/></g>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="16.7" y="24.3" width="2.6" height="3.4" rx="0.5"/>
+    <circle cx="18" cy="6.4" r="1.4"/>
+  </g>
+</svg>

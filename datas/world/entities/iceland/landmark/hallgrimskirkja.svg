@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 60">
+  <!-- 할그림스키르캬: 현무암 기둥 교회, 날개 모양 탑. 밤엔 창 불빛 -->
+  <ellipse cx="22" cy="58.4" rx="20" ry="1.4" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="8" y="36" width="28" height="21" rx="1" fill="#e6e2d8"/>
+    <g fill="#d5d0c2"><rect x="10" y="28" width="5" height="10" rx="0.8"/><rect x="29" y="28" width="5" height="10" rx="0.8"/><rect x="10" y="18" width="5" height="12" rx="0.8"/><rect x="29" y="18" width="5" height="12" rx="0.8"/></g>
+    <path d="M16 40 L16 18 Q16 10 22 4 Q28 10 28 18 L28 40 Z" fill="#efebe0"/>
+    <path d="M18.4 40 L18.4 20 Q18.4 12 22 6.4 Q25.6 12 25.6 20 L25.6 40 Z" fill="#d5d0c2"/>
+    <g fill="none" opacity="0.5" stroke-width="0.4"><path d="M17 36 L17 22 M20 36 L20 14 M23 36 L23 22 M26 36 L26 22"/></g>
+    <rect x="20.4" y="0.8" width="3.2" height="6" rx="0.6" fill="#8a8f98"/>
+    <path d="M22 0.8 L22 0" fill="none"/>
+    <g fill="#7d8a96"><rect x="11" y="40" width="3" height="6" rx="0.8"/><rect x="30" y="40" width="3" height="6" rx="0.8"/><rect x="11" y="30" width="3" height="4" rx="0.7"/><rect x="30" y="30" width="3" height="4" rx="0.7"/><rect x="11" y="20" width="3" height="3.4" rx="0.6"/><rect x="30" y="20" width="3" height="3.4" rx="0.6"/></g>
+    <g fill="#4f6fb0"><circle cx="22" cy="30" r="2.6"/><path d="M22 28 L22 32 M20 30 L24 30" stroke="#fdfbf4" stroke-width="0.4"/></g>
+    <path d="M19 57 L19 50.4 C19 48.4 25 48.4 25 50.4 L25 57 Z" fill="#6b5a4e"/>
+  </g>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <circle cx="22" cy="30" r="2.6"/>
+    <rect x="11.3" y="40.3" width="2.4" height="5.4" rx="0.6"/><rect x="30.3" y="40.3" width="2.4" height="5.4" rx="0.6"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 652">
+  <!-- 호놀룰루 지면 — tools/build-city.py 로 생성한 기본 틀 + 아래 '도시 장식' 손그림.
+       로컬 좌표 = bounds [[-157.90900900900903,21.23099099099099],[-157.69099099099097,21.36900900900901]] 등장방형. 물: OSM 수면 + Natural Earth 10m 바다. 도로: OSM (motorway|trunk|primary|secondary) -->
+  <defs>
+    <pattern id="grass" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="6" fill="#c3e8a2" opacity="0.45"/>
+      <path d="M3 8 l1.2 -2.4 l1.2 2.4 M11 17 l1 -2 l1 2 M17 5 l0.9 -1.8 l0.9 1.8" stroke="#86c069" stroke-width="0.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="8" cy="13" r="0.7" fill="#fff8d6"/>
+      <circle cx="19.5" cy="11" r="0.6" fill="#ffc4d6"/>
+    </pattern>
+    <pattern id="ripple" width="30" height="22" patternUnits="userSpaceOnUse">
+      <path d="M4 8 q3 -2.4 6 0 q3 2.4 6 0 M17 18 q2.4 -2 4.8 0 q2.4 2 4.8 0" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </pattern>
+  </defs>
+  <rect x="-20" y="-20" width="1000" height="692" fill="#b3de92"/>
+  <rect x="-20" y="-20" width="1000" height="692" fill="url(#grass)"/>
+
+  <!-- 물 (강·호수·바다): 공원 녹지 → 외곽선 → 모래 → 물(+물거품 테두리) → 잔물결 -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M16.6 299.4L-27.2 248.2L30.5 191.9L62.2 176.3L61.8 220.7L80.4 265.3L127.1 335.6L199.6 371.4L344.8 433.4L379.1 484.6L400.8 526.1L432.4 542.4L502.2 540.2L559.8 493.4L639.3 453.1L734.9 441.9L852.8 411.8L890.6 444.1L886.9 488.4L902.4 517.2L950.2 502.0L992.1 455.0L1048.1 403.9L1048.1 746.5L-88.1 746.5L-88.1 307.2L16.6 299.4ZM1048.1 225.8L937.3 154.1L890.3 80.4L875.0 26.2L894.8 -27.9L879.4 -68.9L854.3 -94.5L1048.1 -94.5L1048.1 225.8Z" fill="#cdeead" stroke="#cdeead" stroke-width="14" fill-rule="evenodd"/>
+    <path d="M16.6 299.4L-27.2 248.2L30.5 191.9L62.2 176.3L61.8 220.7L80.4 265.3L127.1 335.6L199.6 371.4L344.8 433.4L379.1 484.6L400.8 526.1L432.4 542.4L502.2 540.2L559.8 493.4L639.3 453.1L734.9 441.9L852.8 411.8L890.6 444.1L886.9 488.4L902.4 517.2L950.2 502.0L992.1 455.0L1048.1 403.9L1048.1 746.5L-88.1 746.5L-88.1 307.2L16.6 299.4ZM1048.1 225.8L937.3 154.1L890.3 80.4L875.0 26.2L894.8 -27.9L879.4 -68.9L854.3 -94.5L1048.1 -94.5L1048.1 225.8Z" fill="#f3e4bf" stroke="#5b4636" stroke-width="7.2" fill-rule="evenodd"/>
+    <path d="M16.6 299.4L-27.2 248.2L30.5 191.9L62.2 176.3L61.8 220.7L80.4 265.3L127.1 335.6L199.6 371.4L344.8 433.4L379.1 484.6L400.8 526.1L432.4 542.4L502.2 540.2L559.8 493.4L639.3 453.1L734.9 441.9L852.8 411.8L890.6 444.1L886.9 488.4L902.4 517.2L950.2 502.0L992.1 455.0L1048.1 403.9L1048.1 746.5L-88.1 746.5L-88.1 307.2L16.6 299.4ZM1048.1 225.8L937.3 154.1L890.3 80.4L875.0 26.2L894.8 -27.9L879.4 -68.9L854.3 -94.5L1048.1 -94.5L1048.1 225.8Z" fill="#f3e4bf" stroke="#f3e4bf" stroke-width="5.6" fill-rule="evenodd"/>
+    <path d="M16.6 299.4L-27.2 248.2L30.5 191.9L62.2 176.3L61.8 220.7L80.4 265.3L127.1 335.6L199.6 371.4L344.8 433.4L379.1 484.6L400.8 526.1L432.4 542.4L502.2 540.2L559.8 493.4L639.3 453.1L734.9 441.9L852.8 411.8L890.6 444.1L886.9 488.4L902.4 517.2L950.2 502.0L992.1 455.0L1048.1 403.9L1048.1 746.5L-88.1 746.5L-88.1 307.2L16.6 299.4ZM1048.1 225.8L937.3 154.1L890.3 80.4L875.0 26.2L894.8 -27.9L879.4 -68.9L854.3 -94.5L1048.1 -94.5L1048.1 225.8Z" fill="#7cc6ea" stroke="#ffffff" stroke-width="1.6" fill-rule="evenodd" data-zone="water"/>
+    <path d="M16.6 299.4L-27.2 248.2L30.5 191.9L62.2 176.3L61.8 220.7L80.4 265.3L127.1 335.6L199.6 371.4L344.8 433.4L379.1 484.6L400.8 526.1L432.4 542.4L502.2 540.2L559.8 493.4L639.3 453.1L734.9 441.9L852.8 411.8L890.6 444.1L886.9 488.4L902.4 517.2L950.2 502.0L992.1 455.0L1048.1 403.9L1048.1 746.5L-88.1 746.5L-88.1 307.2L16.6 299.4ZM1048.1 225.8L937.3 154.1L890.3 80.4L875.0 26.2L894.8 -27.9L879.4 -68.9L854.3 -94.5L1048.1 -94.5L1048.1 225.8Z" fill="url(#ripple)" fill-rule="evenodd"/>
+  </g>
+
+  <!-- 큰 도로 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+    <path d="" stroke="#ffffff" stroke-width="0.6" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- ==== 도시 장식 (손으로: 산·공원·광장·지명 라벨 등, 그림체 가이드 §8.6) ==== -->
+  <!-- 와이키키 앞바다 (손으로: OSM 차단 중이라 직접 그림) -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-20 430 Q120 412 260 420 Q400 428 480 416 Q600 404 720 414 Q840 424 980 410 L980 672 L-20 672 Z" fill="#b9de98"/>
+    <path d="M-20 430 Q120 412 260 420 Q400 428 480 416 Q600 404 720 414 Q840 424 980 410" fill="none" stroke="#b9de98" stroke-width="14"/>
+    <path d="M-20 436 Q120 418 260 426 Q400 434 480 422 Q600 410 720 420 Q840 430 980 416 L980 672 L-20 672 Z" fill="#f3e4bf"/>
+    <path d="M-20 436 Q120 418 260 426 Q400 434 480 422 Q600 410 720 420 Q840 430 980 416 L980 672 L-20 672 Z" fill="#7cc6ea" data-zone="water"/>
+    <path d="M-20 436 Q120 418 260 426 Q400 434 480 422 Q600 410 720 420 Q840 430 980 416" fill="none" stroke="#ffffff" stroke-width="1.4" opacity="0.7"/>
+    <g fill="#fff" opacity="0.5"><path d="M60 480 q10 -8 20 0 t20 0 M300 540 q10 -8 20 0 t20 0 M600 520 q10 -8 20 0 t20 0 M820 480 q10 -8 20 0 t20 0 M150 580 q10 -8 20 0 t20 0 M700 590 q10 -8 20 0 t20 0"/></g>
+  </g>
+  <!-- 와이키키 거리 (손으로) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M240 396 L940 386" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="M240 396 L940 386" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+    <path d="M350 396 L350 320 M600 392 L600 310" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="M350 396 L350 320 M600 392 L600 310" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+  </g>
+</svg>

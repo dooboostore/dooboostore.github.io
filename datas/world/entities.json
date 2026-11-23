@@ -6679,6 +6679,411 @@
         "en": "An icy pebble in Saturn’s rings. Countless pebbles together make the shining rings.",
         "zh": "土星环中的冰砾。无数砾石聚在一起成了闪亮的光环。"
       }
+    },
+    {
+      "id": "greece/landmark/parthenon.svg",
+      "name": {
+        "ko": "파르테논",
+        "en": "Parthenon",
+        "zh": "帕特农神庙"
+      },
+      "emoji": "🏛️",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "아크로폴리스 위 도리아식 신전이에요. 기둥과 박공이 멋져요.",
+        "en": "A Doric temple atop the Acropolis. Its columns and pediment are magnificent.",
+        "zh": "卫城上的多立克式神庙。柱子和三角楣很壮观。"
+      }
+    },
+    {
+      "id": "greece/nature/olive.svg",
+      "name": {
+        "ko": "올리브 나무",
+        "en": "Olive Tree",
+        "zh": "橄榄树"
+      },
+      "emoji": "🫒",
+      "kind": "자연",
+      "desc": {
+        "ko": "은빛 잎과 검은 열매의 올리브 나무예요. 평화의 상징이랍니다.",
+        "en": "An olive tree with silvery leaves and black fruit. A symbol of peace.",
+        "zh": "长着银色叶子和黑色果实的橄榄树。是和平的象征。"
+      }
+    },
+    {
+      "id": "peru/landmark/machu-terrace.svg",
+      "name": {
+        "ko": "마추픽추",
+        "en": "Machu Picchu",
+        "zh": "马丘比丘"
+      },
+      "emoji": "🏔️",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "돌 테라스 마을과 뒤의 와이나픽추 봉우리예요. 공중 도시라 불려요.",
+        "en": "A stone-terrace village with Huayna Picchu behind. It is called the city in the sky.",
+        "zh": "石头梯田村落身后是华纳比丘峰。被称为天空之城。"
+      }
+    },
+    {
+      "id": "peru/animal/llama.svg",
+      "name": {
+        "ko": "라마",
+        "en": "Llama",
+        "zh": "羊驼"
+      },
+      "emoji": "🦙",
+      "kind": "동물",
+      "desc": {
+        "ko": "안데스의 털뭉치예요. 알록달록 담요를 두르고 짐을 날라요.",
+        "en": "A fluffy animal of the Andes. It carries packs wearing a colourful blanket.",
+        "zh": "安第斯山的毛茸茸动物。披着花毯子驮运行李。"
+      }
+    },
+    {
+      "id": "vietnam/landmark/one-pillar-pagoda.svg",
+      "name": {
+        "ko": "한기둥 사원",
+        "en": "One-Pillar Pagoda",
+        "zh": "独柱寺"
+      },
+      "emoji": "🛕",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "연꽃 위에 핀 한 칸 절이에요. 한 기둥으로 서 있어요.",
+        "en": "A one-room temple blooming like a lotus. It stands on a single pillar.",
+        "zh": "像莲花一样绽放的单间寺庙。只靠一根柱子立着。"
+      }
+    },
+    {
+      "id": "vietnam/nature/lotus.svg",
+      "name": {
+        "ko": "연꽃",
+        "en": "Lotus",
+        "zh": "荷花"
+      },
+      "emoji": "🪷",
+      "kind": "자연",
+      "desc": {
+        "ko": "하노이 호수 위 분홍 연꽃이에요. 새벽에 피어 향기를 퍼뜨려요.",
+        "en": "A pink lotus on a Hanoi lake. It blooms at dawn and spreads its scent.",
+        "zh": "河内湖上粉红的荷花。清晨绽放散发香气。"
+      }
+    },
+    {
+      "id": "south-africa/landmark/table-mountain.svg",
+      "name": {
+        "ko": "테이블마운틴",
+        "en": "Table Mountain",
+        "zh": "桌山"
+      },
+      "emoji": "⛰️",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "평평한 정상과 흘러내리는 구름의 산이에요. 케이프타운의 상징이에요.",
+        "en": "A mountain with a flat top and pouring clouds. The symbol of Cape Town.",
+        "zh": "平顶上流淌着云的山。是开普敦的象征。"
+      }
+    },
+    {
+      "id": "south-africa/nature/protea.svg",
+      "name": {
+        "ko": "프로테아",
+        "en": "Protea",
+        "zh": "帝王花"
+      },
+      "emoji": "🌸",
+      "kind": "자연",
+      "desc": {
+        "ko": "케이프타운의 왕꽃이에요. 분홍 꽃잎이 겹겹이 피어요.",
+        "en": "The king flower of Cape Town. Its pink petals bloom layer upon layer.",
+        "zh": "开普敦的王花。粉色花瓣层层绽放。"
+      }
+    },
+    {
+      "id": "morocco/landmark/koutoubia.svg",
+      "name": {
+        "ko": "쿠투비아",
+        "en": "Koutoubia",
+        "zh": "库图比亚"
+      },
+      "emoji": "🕌",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "마라케시 분홍 미나렛이에요. 밤이면 꼭대기가 빛나요.",
+        "en": "A pink minaret of Marrakech. Its top glows at night.",
+        "zh": "马拉喀什的粉色宣礼塔。夜晚塔顶发光。"
+      }
+    },
+    {
+      "id": "morocco/structure/lantern.svg",
+      "name": {
+        "ko": "모로코 등불",
+        "en": "Moroccan Lantern",
+        "zh": "摩洛哥灯笼"
+      },
+      "emoji": "🏮",
+      "kind": "구조물",
+      "desc": {
+        "ko": "밤이면 따뜻하게 빛나는 등불이에요. 메디나 골목을 밝혀줘요.",
+        "en": "A lantern glowing warmly at night. It lights up the medina lanes.",
+        "zh": "夜晚温暖发光的灯笼。照亮麦地那的小巷。"
+      }
+    },
+    {
+      "id": "canada/landmark/totem-pole.svg",
+      "name": {
+        "ko": "토템폴",
+        "en": "Totem Pole",
+        "zh": "图腾柱"
+      },
+      "emoji": "🗿",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "곰·까마귀·연어가 쌓인 하이다 토템이에요. 이야기를 담고 있어요.",
+        "en": "A Haida totem stacked with bear, raven and salmon. It holds stories.",
+        "zh": "叠着熊、乌鸦和鲑鱼的海达图腾。里面藏着故事。"
+      }
+    },
+    {
+      "id": "canada/nature/douglas-fir.svg",
+      "name": {
+        "ko": "더글러스전나무",
+        "en": "Douglas Fir",
+        "zh": "花旗松"
+      },
+      "emoji": "🌲",
+      "kind": "자연",
+      "desc": {
+        "ko": "곧게 뻗은 바늘잎 거목이에요. 밴쿠버 숲의 주인공이에요.",
+        "en": "A straight, towering needle-leaf giant. The star of Vancouver forests.",
+        "zh": "笔直高大的针叶巨树。是温哥华森林的主角。"
+      }
+    },
+    {
+      "id": "netherlands/landmark/windmill.svg",
+      "name": {
+        "ko": "풍차",
+        "en": "Windmill",
+        "zh": "风车"
+      },
+      "emoji": "🌬️",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "날개가 빙글빙글 도는 풍차예요. 밤엔 창에 불이 켜져요.",
+        "en": "A windmill with whirling sails. Its windows light up at night.",
+        "zh": "翼板呼呼旋转的风车。夜晚窗户亮起灯。"
+      }
+    },
+    {
+      "id": "netherlands/building/canal-house.svg",
+      "name": {
+        "ko": "운하주택",
+        "en": "Canal House",
+        "zh": "运河屋"
+      },
+      "emoji": "🏠",
+      "kind": "건물",
+      "desc": {
+        "ko": "가늘고 높은 박공지붕 집이에요. 들보 갈고리가 달려 있어요.",
+        "en": "A tall, narrow gabled house. It has a hoist beam on top.",
+        "zh": "又细又高的山墙房子。顶上有起重梁。"
+      }
+    },
+    {
+      "id": "netherlands/vehicle/canal-boat.svg",
+      "name": {
+        "ko": "운하보트",
+        "en": "Canal Boat",
+        "zh": "运河船"
+      },
+      "emoji": "🛶",
+      "kind": "탈것",
+      "desc": {
+        "ko": "운하의 납작 배예요. 꽃상자를 가득 싣고 다녀요.",
+        "en": "A flat boat of the canals, loaded with flower boxes.",
+        "zh": "运河上的扁平小船。满载花箱来来往往。"
+      }
+    },
+    {
+      "id": "switzerland/landmark/matterhorn.svg",
+      "name": {
+        "ko": "마터호른",
+        "en": "Matterhorn",
+        "zh": "马特洪峰"
+      },
+      "emoji": "🏔️",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "뿔처럼 솟은 피라미드 봉우리예요. 알프스의 상징이에요.",
+        "en": "A pyramid peak jutting like a horn. The symbol of the Alps.",
+        "zh": "像角一样耸立的金字塔峰。是阿尔卑斯的象征。"
+      }
+    },
+    {
+      "id": "switzerland/vehicle/cog-train.svg",
+      "name": {
+        "ko": "톱니열차",
+        "en": "Cog Railway",
+        "zh": "齿轨火车"
+      },
+      "emoji": "🚂",
+      "kind": "탈것",
+      "desc": {
+        "ko": "빨간 산악열차예요. 톱니바퀴로 가파른 산을 올라가요.",
+        "en": "A red mountain train. It climbs steep slopes on cogwheels.",
+        "zh": "红色山地火车。靠齿轮爬上陡峭的山。"
+      }
+    },
+    {
+      "id": "new-zealand/animal/kiwi.svg",
+      "name": {
+        "ko": "키위",
+        "en": "Kiwi",
+        "zh": "几维鸟"
+      },
+      "emoji": "🐦",
+      "kind": "동물",
+      "desc": {
+        "ko": "뉴질랜드의 통통한 밤새예요. 긴 부리로 땅을 콕콕 찔러요.",
+        "en": "A plump night bird of New Zealand. It pokes the ground with its long bill.",
+        "zh": "新西兰胖乎乎的夜行鸟。用长喙笃笃地啄地。"
+      }
+    },
+    {
+      "id": "new-zealand/vehicle/jetboat.svg",
+      "name": {
+        "ko": "제트보트",
+        "en": "Jet Boat",
+        "zh": "喷射快艇"
+      },
+      "emoji": "🛥️",
+      "kind": "탈것",
+      "desc": {
+        "ko": "협곡 강을 쌩쌩 달리는 노란 보트예요. 물보라가 시원해요.",
+        "en": "A yellow boat dashing through canyon rivers. Its spray feels cool.",
+        "zh": "在峡谷江面飞驰的黄色快艇。水花很凉爽。"
+      }
+    },
+    {
+      "id": "iceland/landmark/hallgrimskirkja.svg",
+      "name": {
+        "ko": "할그림스키르캬",
+        "en": "Hallgrímskirkja",
+        "zh": "哈尔格林姆斯教堂"
+      },
+      "emoji": "⛪",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "현무암 기둥 교회예요. 날개 모양 탑이 하늘을 찔러요.",
+        "en": "A basalt-column church. Its wing-shaped tower pierces the sky.",
+        "zh": "玄武岩柱教堂。翅膀形的塔直插云霄。"
+      }
+    },
+    {
+      "id": "iceland/nature/blue-lagoon.svg",
+      "name": {
+        "ko": "블루라군",
+        "en": "Blue Lagoon",
+        "zh": "蓝湖"
+      },
+      "emoji": "♨️",
+      "kind": "자연",
+      "desc": {
+        "ko": "하얀 실리카 바닥의 파란 온천이에요. 김이 모락모락 올라요.",
+        "en": "A blue hot spring over a white silica floor. Steam curls up.",
+        "zh": "白色硅藻土底的蓝色温泉。热气袅袅上升。"
+      }
+    },
+    {
+      "id": "cambodia/landmark/angkor-wat.svg",
+      "name": {
+        "ko": "앙코르와트",
+        "en": "Angkor Wat",
+        "zh": "吴哥窟"
+      },
+      "emoji": "🛕",
+      "kind": "랜드마크",
+      "desc": {
+        "ko": "5개 봉우리 사원이에요. 해자를 품고 아침 해를 받아요.",
+        "en": "A five-towered temple. It holds a moat and greets the morning sun.",
+        "zh": "五座塔的寺庙。怀抱护城河迎接朝阳。"
+      }
+    },
+    {
+      "id": "cambodia/nature/banyan.svg",
+      "name": {
+        "ko": "반얀나무",
+        "en": "Banyan Tree",
+        "zh": "榕树"
+      },
+      "emoji": "🌳",
+      "kind": "자연",
+      "desc": {
+        "ko": "앙코르를 감싼 거대한 뿌리 기둥이에요. 돌보다 강해요.",
+        "en": "Giant root pillars embracing Angkor. Stronger than stone.",
+        "zh": "抱住吴哥的巨大根柱。比石头还坚固。"
+      }
+    },
+    {
+      "id": "kenya/animal/lion.svg",
+      "name": {
+        "ko": "사자",
+        "en": "Lion",
+        "zh": "狮子"
+      },
+      "emoji": "🦁",
+      "kind": "동물",
+      "desc": {
+        "ko": "마사이마라의 왕이에요. 풍성한 갈기가 멋져요.",
+        "en": "The king of the Maasai Mara. Its lush mane looks magnificent.",
+        "zh": "马赛马拉的王。浓密的鬃毛很威风。"
+      }
+    },
+    {
+      "id": "kenya/animal/elephant.svg",
+      "name": {
+        "ko": "코끼리",
+        "en": "Elephant",
+        "zh": "大象"
+      },
+      "emoji": "🐘",
+      "kind": "동물",
+      "desc": {
+        "ko": "커다란 귀를 펄럭이는 초원의 거인이에요. 가족을 소중히 여겨요.",
+        "en": "A prairie giant flapping its big ears. It treasures its family.",
+        "zh": "扇动大耳朵的草原巨人。珍惜家人。"
+      }
+    },
+    {
+      "id": "kenya/animal/giraffe.svg",
+      "name": {
+        "ko": "기린",
+        "en": "Giraffe",
+        "zh": "长颈鹿"
+      },
+      "emoji": "🦒",
+      "kind": "동물",
+      "desc": {
+        "ko": "목 긴 점박이예요. 아카시아 잎을 뜯어 먹어요.",
+        "en": "A long-necked spotted animal. It nibbles acacia leaves.",
+        "zh": "脖子长长的斑点动物。啃食金合欢叶。"
+      }
+    },
+    {
+      "id": "kenya/nature/acacia.svg",
+      "name": {
+        "ko": "아카시아",
+        "en": "Acacia",
+        "zh": "金合欢"
+      },
+      "emoji": "🌳",
+      "kind": "자연",
+      "desc": {
+        "ko": "사바나의 우산 나무예요. 기린의 밥상이에요.",
+        "en": "The umbrella tree of the savanna. The giraffe's dining table.",
+        "zh": "萨凡纳的伞树。是长颈鹿的餐桌。"
+      }
     }
   ]
 }

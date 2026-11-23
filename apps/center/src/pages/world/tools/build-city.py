@@ -62,6 +62,18 @@ CITIES = {
     'usa/grand-canyon': {'name': '그랜드캐니언', 'queries': ['Grand Canyon National Park, Arizona, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.5, 'palette': 'desert'},
     'usa/yellowstone': {'name': '옐로스톤', 'queries': ['Yellowstone National Park, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.05},
     'usa/new-orleans': {'name': '뉴올리언스', 'queries': ['New Orleans, Louisiana, United States'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
+    'greece/athens': {'name': '아테네', 'queries': ['Athens, Greece'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'peru/machu-picchu': {'name': '마추픽추', 'queries': ['Cusco Region, Peru'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.5},
+    'vietnam/hanoi': {'name': '하노이', 'queries': ['Hanoi, Vietnam'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
+    'south-africa/cape-town': {'name': '케이프타운', 'queries': ['Cape Town, South Africa'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'morocco/marrakech': {'name': '마라케시', 'queries': ['Marrakech, Morocco'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'palette': 'desert'},
+    'canada/vancouver': {'name': '밴쿠버', 'queries': ['Vancouver, British Columbia, Canada'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'netherlands/amsterdam': {'name': '암스테르담', 'queries': ['Amsterdam, Netherlands'], 'roads': 'motorway|trunk|primary|secondary', 'min_water_km2': 0.01},
+    'switzerland/zermatt': {'name': '체르마트', 'queries': ['Zermatt, Switzerland'], 'roads': 'primary|secondary|tertiary', 'min_water_km2': 0.005},
+    'new-zealand/queenstown': {'name': '퀸스타운', 'queries': ['Queenstown, New Zealand'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
+    'iceland/reykjavik': {'name': '레이캬비크', 'queries': ['Reykjavik, Iceland'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005, 'sea_margin': 1.0},
+    'cambodia/angkor': {'name': '앙코르', 'queries': ['Siem Reap, Cambodia'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},
+    'kenya/masai-mara': {'name': '마사이마라', 'queries': ['Narok County, Kenya'], 'roads': 'primary|secondary|tertiary', 'min_water_km2': 0.5},
     'germany/berlin': {'name': '베를린', 'queries': ['Mitte, Berlin', 'Tiergarten, Berlin'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.005},  # 베를린 전체(890 km²) 대신 미테(문·TV탑·박물관섬) + 티어가르텐(국회의사당·공원)
     'russia/moscow': {'name': '모스크바', 'queries': ['Central Administrative Okrug, Moscow'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},  # 크렘린·붉은광장이 있는 중심 행정구 (모스크바시 전체는 남서쪽으로 길게 뻗어 너무 크다)
     'taiwan/taipei': {'name': '타이베이', 'queries': ['Taipei, Taiwan'], 'roads': 'motorway|trunk|primary', 'min_water_km2': 0.01},

@@ -1,16 +1,193 @@
 {
-  "local": {"size": [960, 324], "ground": "ground.svg", "boundary": "boundary.json"},
+  "local": {
+    "size": [
+      960,
+      324
+    ],
+    "ground": "ground.svg",
+    "boundary": "boundary.json"
+  },
   "placements": [
-    {"use": "usa/landmark/watchtower.svg", "at": [910, 122], "scale": 0.7},
-    {"use": "usa/animal/condor.svg", "count": 3, "area": [250, 30, 450, 90], "scale": 0.9, "spacing": 30},
-    {"use": "usa/animal/mule.svg", "count": 3, "area": [280, 210, 350, 80], "scale": 0.9, "spacing": 20},
-    {"use": "people/walker", "count": 8, "area": [250, 20, 550, 60], "scale": 0.7, "spacing": 8, "vars": {"--skin": ["#f4d6bd", "#eac3a2", "#d9a77e"], "--hair": ["#2a2421", "#3d302a", "#6b4a35"], "--shirt": ["#e9785a", "#8cbfdc", "#f3d38a"], "--pants": ["#3d4a6b", "#56627e"]}},
-    {"use": "animal/birds.svg", "count": 1, "z": 30, "behavior": {"type": "route", "path": "M-60 120 C240 80 560 160 1020 100", "dur": 80}}
+    {
+      "use": "usa/landmark/watchtower.svg",
+      "at": [
+        910,
+        122
+      ],
+      "scale": 0.7
+    },
+    {
+      "use": "usa/animal/condor.svg",
+      "count": 3,
+      "area": [
+        250,
+        30,
+        450,
+        90
+      ],
+      "scale": 0.9,
+      "spacing": 30
+    },
+    {
+      "use": "usa/animal/mule.svg",
+      "count": 3,
+      "area": [
+        280,
+        210,
+        350,
+        80
+      ],
+      "scale": 0.9,
+      "spacing": 20
+    },
+    {
+      "use": "people/walker",
+      "count": 8,
+      "area": [
+        250,
+        20,
+        550,
+        60
+      ],
+      "scale": 0.7,
+      "spacing": 8,
+      "vars": {
+        "--skin": [
+          "#f4d6bd",
+          "#eac3a2",
+          "#d9a77e"
+        ],
+        "--hair": [
+          "#2a2421",
+          "#3d302a",
+          "#6b4a35"
+        ],
+        "--shirt": [
+          "#e9785a",
+          "#8cbfdc",
+          "#f3d38a"
+        ],
+        "--pants": [
+          "#3d4a6b",
+          "#56627e"
+        ]
+      }
+    },
+    {
+      "use": "animal/birds.svg",
+      "count": 1,
+      "z": 30,
+      "behavior": {
+        "type": "route",
+        "path": "M-60 120 C240 80 560 160 1020 100",
+        "dur": 80
+      }
+    }
   ],
   "labels": [
-    {"text": {"ko": "매더포인트", "en": "Mather Point", "zh": "马瑟角"}, "at": [419, 52], "size": 9, "info": {"emoji": "🏞️", "kind": "지명", "title": {"ko": "매더포인트", "en": "Mather Point", "zh": "马瑟角"}, "desc": {"ko": "남쪽 림에서 가장 유명한 전망대예요. 협곡과 콜로라도강이 한눈에 보여요.", "en": "The most famous viewpoint on the South Rim. The canyon and the Colorado River lie before you.", "zh": "南缘最有名的观景点。峡谷和科罗拉多河尽收眼底。"}}},
-    {"text": {"ko": "그랜드캐니언 빌리지", "en": "Grand Canyon Village", "zh": "大峡谷村"}, "at": [368, 130], "size": 7.7, "info": {"emoji": "🏘️", "kind": "지명", "title": {"ko": "그랜드캐니언 빌리지", "en": "Grand Canyon Village", "zh": "大峡谷村"}, "desc": {"ko": "협곡 기슭의 마을이에요. 노새를 타고 협곡 아래로 내려가는 길이 여기서 시작해요.", "en": "A village at the canyon's edge. The mule trail down into the canyon starts here.", "zh": "峡谷边的村庄。骑骡子下到峡谷底的小路从这里开始。"}}},
-    {"text": {"ko": "데저트뷰", "en": "Desert View", "zh": "沙漠景观"}, "at": [910, 155], "size": 8.4, "info": {"emoji": "🗼", "kind": "지명", "title": {"ko": "데저트뷰", "en": "Desert View", "zh": "沙漠景观"}, "desc": {"ko": "동쪽 끝 돌탑 전망대예요. 올라가면 협곡과 콜로라도강이 한눈에 보여요.", "en": "The stone watchtower at the east end. Climb up and the canyon and the Colorado River lie before you.", "zh": "东端的石塔观景点。爬上去峡谷和科罗拉多河尽收眼底。"}}},
-    {"text": {"ko": "콜로라도강", "en": "Colorado River", "zh": "科罗拉多河"}, "at": [620, 200], "size": 7.7, "info": {"emoji": "🌊", "kind": "지명", "title": {"ko": "콜로라도강", "en": "Colorado River", "zh": "科罗拉多河"}, "desc": {"ko": "협곡을 깎아 만든 강이에요. 600만 년 동안 파내려가 지금의 협곡이 됐어요.", "en": "The river that carved the canyon. It has been cutting down for six million years.", "zh": "切出峡谷的河。用600万年时间向下切割形成了如今的峡谷。"}}}
+    {
+      "text": {
+        "ko": "매더포인트",
+        "en": "Mather Point",
+        "zh": "马瑟角"
+      },
+      "at": [
+        419,
+        52
+      ],
+      "size": 9,
+      "info": {
+        "emoji": "🏞️",
+        "kind": "지명",
+        "title": {
+          "ko": "매더포인트",
+          "en": "Mather Point",
+          "zh": "马瑟角"
+        },
+        "desc": {
+          "ko": "남쪽 림에서 가장 유명한 전망대예요. 협곡과 콜로라도강이 한눈에 보여요.",
+          "en": "The most famous viewpoint on the South Rim. The canyon and the Colorado River lie before you.",
+          "zh": "南缘最有名的观景点。峡谷和科罗拉多河尽收眼底。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "야바파이 포인트",
+        "en": "Yavapai Point",
+        "zh": "亚瓦帕伊角"
+      },
+      "at": [
+        442,
+        55
+      ],
+      "size": 7.7,
+      "info": {
+        "emoji": "🏘️",
+        "kind": "지명",
+        "title": {
+          "ko": "야바파이 포인트",
+          "en": "Yavapai Point",
+          "zh": "亚瓦帕伊角"
+        },
+        "desc": {
+          "ko": "남쪽 림의 전망대예요. 협곡의 지층이 책장처럼 보여요.",
+          "en": "A viewpoint on the South Rim. The canyon strata look like bookshelves.",
+          "zh": "南缘的观景点。峡谷岩层像书架一样。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "데저트뷰",
+        "en": "Desert View",
+        "zh": "沙漠景观"
+      },
+      "at": [
+        910,
+        155
+      ],
+      "size": 8.4,
+      "info": {
+        "emoji": "🗼",
+        "kind": "지명",
+        "title": {
+          "ko": "데저트뷰",
+          "en": "Desert View",
+          "zh": "沙漠景观"
+        },
+        "desc": {
+          "ko": "동쪽 끝 돌탑 전망대예요. 올라가면 협곡과 콜로라도강이 한눈에 보여요.",
+          "en": "The stone watchtower at the east end. Climb up and the canyon and the Colorado River lie before you.",
+          "zh": "东端的石塔观景点。爬上去峡谷和科罗拉多河尽收眼底。"
+        }
+      }
+    },
+    {
+      "text": {
+        "ko": "콜로라도강",
+        "en": "Colorado River",
+        "zh": "科罗拉多河"
+      },
+      "at": [
+        620,
+        200
+      ],
+      "size": 7.7,
+      "info": {
+        "emoji": "🌊",
+        "kind": "지명",
+        "title": {
+          "ko": "콜로라도강",
+          "en": "Colorado River",
+          "zh": "科罗拉多河"
+        },
+        "desc": {
+          "ko": "협곡을 깎아 만든 강이에요. 600만 년 동안 파내려가 지금의 협곡이 됐어요.",
+          "en": "The river that carved the canyon. It has been cutting down for six million years.",
+          "zh": "切出峡谷的河。用600万年时间向下切割形成了如今的峡谷。"
+        }
+      }
+    }
   ]
 }

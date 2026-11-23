@@ -107,6 +107,34 @@
         "path": "M-60 380 C240 340 560 460 1020 400",
         "dur": 80
       }
+    },
+    {
+      "use": "usa/vehicle/cable-car.svg",
+      "count": 1,
+      "scale": 0.8,
+      "vars": {
+        "car": "#8a3d3d",
+        "trim": "#e8b64a"
+      },
+      "behavior": {
+        "type": "route",
+        "path": "M614 501 L556 501",
+        "dur": 40
+      }
+    },
+    {
+      "use": "usa/vehicle/cable-car.svg",
+      "count": 1,
+      "scale": 0.8,
+      "vars": {
+        "car": "#3e6b5a",
+        "trim": "#f2c641"
+      },
+      "behavior": {
+        "type": "route",
+        "path": "M585 523 L585 490",
+        "dur": 36
+      }
     }
   ],
   "labels": [

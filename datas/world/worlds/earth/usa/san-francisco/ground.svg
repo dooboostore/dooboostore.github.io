@@ -32,4 +32,13 @@
   </g>
 
   <!-- ==== 도시 장식 (손으로: 산·공원·광장·지명 라벨 등, 그림체 가이드 §8.6) ==== -->
+  <!-- 캘리포니아·파웰 거리 (손으로: 케이블카 길) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M556 501 L614 501" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="M556 501 L614 501" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+    <path d="M556 501 L614 501" stroke="#ffffff" stroke-width="0.6" stroke-dasharray="4 4"/>
+    <path d="M585 490 L585 523" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="M585 490 L585 523" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+    <path d="M585 490 L585 523" stroke="#ffffff" stroke-width="0.6" stroke-dasharray="4 4"/>
+  </g>
 </svg>

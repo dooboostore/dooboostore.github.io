@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 44">
+  <!-- 파르테논: 아크로폴리스 위 도리아식 신전, 기둥과 박공. 밤엔 기둥 사이 불빛 -->
+  <ellipse cx="40" cy="42.4" rx="37" ry="1.6" fill="#3b5a2e" opacity="0.2"/>
+  <g stroke="#5b4636" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14 42 L14 30 L66 30 L66 42 Z" fill="#c9b896"/>
+    <path d="M12 30 L68 30 L66 27 L14 27 Z" fill="#b8a482"/>
+    <path d="M12 27 L68 27 L66 24 L14 24 Z" fill="#c9b896"/>
+    <g fill="#e3d3b4">
+      <rect x="15" y="12" width="4" height="12" rx="0.6"/><rect x="22" y="12" width="4" height="12" rx="0.6"/><rect x="29" y="12" width="4" height="12" rx="0.6"/><rect x="36" y="12" width="4" height="12" rx="0.6"/><rect x="43" y="12" width="4" height="12" rx="0.6"/><rect x="50" y="12" width="4" height="12" rx="0.6"/><rect x="57" y="12" width="4" height="12" rx="0.6"/><rect x="61" y="12" width="4" height="12" rx="0.6"/>
+    </g>
+    <g stroke-width="0.4"><path d="M16.5 12.6 L16.5 23.4 M20.5 12.6 L20.5 23.4 M17.5 12.6 L17.5 23.4 M19.5 12.6 L19.5 23.4" opacity="0.5"/></g>
+    <path d="M10 12 Q40 13 70 12 L66 4 Q54 -0.5 40 2 Q26 -0.5 14 4 Z" fill="#d9c7a8"/>
+    <path d="M10 12 L14 12 M66 12 L70 12" stroke-width="1"/>
+    <path d="M22 9.4 Q40 10.4 58 9.4 L56 6.4 Q48 4.6 40 5.8 Q32 4.6 24 6.4 Z" fill="#c4b08c"/>
+    <g fill="#8a7a62"><path d="M28 8.2 L30 8.2 L29.8 6.4 L28.2 6.4 Z"/><path d="M50 8.2 L52 8.2 L51.8 6.4 L50.2 6.4 Z"/></g>
+  </g>
+  <path d="M14 24.5 L66 24.5" stroke="#fff" stroke-width="0.6" opacity="0.3"/>
+  <g fill="#ffd77a" style="opacity: var(--night, 0)">
+    <rect x="20.4" y="12.4" width="1.6" height="11.2" rx="0.5"/><rect x="34.4" y="12.4" width="1.6" height="11.2" rx="0.5"/><rect x="48.4" y="12.4" width="1.6" height="11.2" rx="0.5"/><rect x="62.4" y="12.4" width="1.6" height="11.2" rx="0.5"/>
+  </g>
+  <g stroke="#5b4636" stroke-width="0.4" fill="#7cb366"><path d="M6 40 Q4 34 6 30 Q8 34 7 40 Z"/><path d="M74 40 Q72 34 74 30 Q76 34 75 40 Z"/></g>
+</svg>

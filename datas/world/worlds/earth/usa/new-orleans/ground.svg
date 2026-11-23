@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 886">
+  <!-- 뉴올리언스 지면 — tools/build-city.py 로 생성한 기본 틀 + 아래 '도시 장식' 손그림.
+       로컬 좌표 = bounds [[-90.1,29.9],[-89.95,30.02]] 등장방형. 물: OSM 수면 + Natural Earth 10m 바다. 도로: OSM (motorway|trunk|primary) -->
+  <defs>
+    <pattern id="grass" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="6" fill="#c3e8a2" opacity="0.45"/>
+      <path d="M3 8 l1.2 -2.4 l1.2 2.4 M11 17 l1 -2 l1 2 M17 5 l0.9 -1.8 l0.9 1.8" stroke="#86c069" stroke-width="0.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="8" cy="13" r="0.7" fill="#fff8d6"/>
+      <circle cx="19.5" cy="11" r="0.6" fill="#ffc4d6"/>
+    </pattern>
+    <pattern id="ripple" width="30" height="22" patternUnits="userSpaceOnUse">
+      <path d="M4 8 q3 -2.4 6 0 q3 2.4 6 0 M17 18 q2.4 -2 4.8 0 q2.4 2 4.8 0" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </pattern>
+  </defs>
+  <rect x="-20" y="-20" width="1000" height="926" fill="#b3de92"/>
+  <rect x="-20" y="-20" width="1000" height="926" fill="url(#grass)"/>
+
+  <!-- 물 (강·호수·바다): 공원 녹지 → 외곽선 → 모래 → 물(+물거품 테두리) → 잔물결 -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M381.0 -147.7L-28.7 -111.2L-128.0 -79.6L-128.0 -147.7L381.0 -147.7Z" fill="#cdeead" stroke="#cdeead" stroke-width="14" fill-rule="evenodd"/>
+    <path d="M381.0 -147.7L-28.7 -111.2L-128.0 -79.6L-128.0 -147.7L381.0 -147.7Z" fill="#f3e4bf" stroke="#5b4636" stroke-width="7.2" fill-rule="evenodd"/>
+    <path d="M381.0 -147.7L-28.7 -111.2L-128.0 -79.6L-128.0 -147.7L381.0 -147.7Z" fill="#f3e4bf" stroke="#f3e4bf" stroke-width="5.6" fill-rule="evenodd"/>
+    <path d="M381.0 -147.7L-28.7 -111.2L-128.0 -79.6L-128.0 -147.7L381.0 -147.7Z" fill="#7cc6ea" stroke="#ffffff" stroke-width="1.6" fill-rule="evenodd" data-zone="water"/>
+    <path d="M381.0 -147.7L-28.7 -111.2L-128.0 -79.6L-128.0 -147.7L381.0 -147.7Z" fill="url(#ripple)" fill-rule="evenodd"/>
+  </g>
+
+  <!-- 큰 도로 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="" stroke="#5b4636" stroke-width="5.6"/>
+    <path d="" stroke="#ece6da" stroke-width="4.2" data-zone="road"/>
+    <path d="" stroke="#ffffff" stroke-width="0.6" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- ==== 도시 장식 (손으로: 산·공원·광장·지명 라벨 등, 그림체 가이드 §8.6) ==== -->
+  <!-- 미시시피강 (손으로: OSM 차단 중이라 직접 그림) -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M400 -20 Q390 150 360 280 Q330 380 300 450 Q280 520 310 600 Q340 700 310 800 Q300 850 300 906 L400 -20 Q430 150 400 280 Q370 380 340 450 Q320 520 350 600 Q380 700 350 800 Q340 850 340 906 Z" fill="#b9de98"/>
+    <path d="M400 -20 Q390 150 360 280 Q330 380 300 450 Q280 520 310 600 Q340 700 310 800 Q300 850 300 906" fill="none" stroke="#b9de98" stroke-width="14"/>
+    <path d="M390 -20 Q380 150 350 280 Q320 380 290 450 Q270 520 300 600 Q330 700 300 800 Q290 850 290 906 L350 -20 Q380 150 350 280 Q320 380 290 450 Q270 520 300 600 Q330 700 300 800 Q290 850 290 906 Z" fill="#f3e4bf"/>
+    <path d="M390 -20 Q380 150 350 280 Q320 380 290 450 Q270 520 300 600 Q330 700 300 800 Q290 850 290 906 L350 -20 Q380 150 350 280 Q320 380 290 450 Q270 520 300 600 Q330 700 300 800 Q290 850 290 906 Z" fill="#7cc6ea" data-zone="water"/>
+    <path d="M390 -20 Q380 150 350 280 Q320 380 290 450 Q270 520 300 600 Q330 700 300 800 Q290 850 290 906" fill="none" stroke="#fff" stroke-width="1.2" opacity="0.5"/>
+  </g>
+</svg>
